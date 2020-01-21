@@ -4,18 +4,18 @@ description: Различные способы использования обр
 author: vin-yu
 ms.author: vinsonyu
 ms.reviewer: vanto
-ms.date: 11/04/2019
+ms.date: 01/08/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 74168c8cd846f48fdaa87568b85c124ff755489a
-ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
+ms.openlocfilehash: a184a6e19154d0e8534fe843cf65c1afc9d2f547
+ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75721579"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776413"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Настройка образов контейнеров с SQL Server в Docker
 
@@ -56,20 +56,17 @@ ms.locfileid: "75721579"
 
 ## <a id="rhel"></a> Запуск образов контейнеров на основе RHEL
 
-Документация по образам контейнеров с Linux для SQL Server содержит информацию о контейнерах на основе Ubuntu. Начиная с SQL Server 2019 вы можете использовать контейнеры на основе Red Hat Enterprise Linux (RHEL). Во всех командах Docker измените репозиторий контейнера с **mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04** на **mcr.microsoft.com/mssql/rhel/server:2019-RC1**.
+Документация по образам контейнеров с Linux для SQL Server содержит информацию о контейнерах на основе Ubuntu. Начиная с SQL Server 2019 вы можете использовать контейнеры на основе Red Hat Enterprise Linux (RHEL). Во всех командах Docker измените репозиторий контейнера с **mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04** на **mcr.microsoft.com/mssql/rhel/server:2019-CU1-rhel-8**.
 
-Например, следующая команда извлекает последнюю версию контейнера с SQL Server 2019, в которой используется RHEL:
+Например, следующая команда извлекает последнюю версию контейнера с накопительным обновлением 1 для SQL Server 2019, в которой используется RHEL 8:
 
 ```bash
-sudo docker pull mcr.microsoft.com/mssql/rhel/server:2019-RC1
+sudo docker pull mcr.microsoft.com/mssql/rhel/server:2019-CU1-rhel-8
 ```
 
 ```PowerShell
-docker pull mcr.microsoft.com/mssql/rhel/server:2019-RC1
+docker pull mcr.microsoft.com/mssql/rhel/server:2019-CU1-rhel-8
 ```
-
-> [!NOTE]
-> Начиная с общедоступного выпуска SQL Server 2019 последний образ контейнера RHEL по-прежнему является версией RC1. Эта версия не предназначена для использования в рабочей среде. Эта статья будет обновлена, когда будет доступен более новый образ контейнера RHEL.
 
 ::: moniker-end
 

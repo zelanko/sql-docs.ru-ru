@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 11ed5aa2ddcd675d201fc86abf595055828d7621
-ms.sourcegitcommit: 3511da65d7ebc788e04500bbef3a3b4a4aeeb027
+ms.openlocfilehash: 4cf79aade8e74277ef7b5cbaa6e1bd3ae612e94b
+ms.sourcegitcommit: 909b69dd1f918f00b9013bb43ea66e76a690400a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75681775"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75924923"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools-preview"></a>Средства DevOps для служб SQL Server Integration Services (SSIS) (предварительная версия)
 
@@ -132,6 +132,13 @@ ms.locfileid: "75681775"
 - развертывание пакетов в хранилище пакетов MSDB или SSIS.
 
 ## <a name="release-notes"></a>Заметки о выпуске
+
+### <a name="version-012-preview"></a>Версия 0.1.2 — предварительная версия
+
+Дата выпуска: 13 января 2020 г.
+
+- В журнал задач развертывания служб SSIS добавляются более подробные сведения об исключении, если целевой тип — SSISDB.
+- Исправлен пример целевого пути в тексте справки для свойства целевого пути у задачи развертывания служб SSIS.
 
 ### <a name="version-011-preview"></a>Предварительная версия 0.1.1
 

@@ -5,17 +5,17 @@ ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.date: 03/12/2019
+ms.date: 01/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: 6976d81994dbc8db154b285da03bed2397e9fee1
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.openlocfilehash: bf888d42215f3a4ee7c44b782b82c55f85afa041
+ms.sourcegitcommit: 21e6a0c1c6152e625712a5904fce29effb08a2f9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75558502"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75884036"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Настройка кластера RHEL для группы доступности SQL Server
 
@@ -163,7 +163,10 @@ pcs resource update ag_cluster meta failure-timeout=60s
 
 ```bash
 sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s master notify=true
-``` 
+```
+
+> [!NOTE]
+> С выходом **RHEL 8** был изменен синтаксис Create. Если вы используете **RHEL 8**, терминология `master` изменилась на `promotable`. Используйте следующую команду Create вместо приведенной выше команды: `sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s promotable notify=true`
 
 [!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
 
@@ -187,8 +190,20 @@ sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=<10.128.16.240>
 
 Чтобы убедиться, что первичная реплика и ресурсы виртуального IP-адреса выполняются на одном узле, определите ограничение совместного размещения с оценкой INFINITY. Чтобы добавить ограничение совместного размещения, выполните приведенную ниже команду на одном узле.
 
+### <a name="rhel-7"></a>RHEL 7
+
+При создании ресурса `ag_cluster` в RHEL 7 он создает ресурс как `ag_cluster-master`. Используйте следующий формат команды в RHEL 7:
+
 ```bash
 sudo pcs constraint colocation add virtualip ag_cluster-master INFINITY with-rsc-role=Master
+```
+
+### <a name="rhel-8"></a>RHEL 8
+
+При создании ресурса `ag_cluster` в RHEL 8 он создает ресурс как `ag_cluster-clone`. Используйте следующий формат команды в RHEL 8:
+
+```bash
+sudo pcs constraint colocation add virtualip with master ag_cluster-clone INFINITY with-rsc-role=Master
 ```
 
 ## <a name="add-ordering-constraint"></a>Добавление ограничения упорядочения
@@ -209,8 +224,16 @@ sudo pcs constraint colocation add virtualip ag_cluster-master INFINITY with-rsc
 
 Чтобы добавить ограничение упорядочения, выполните приведенную ниже команду в одном узле.
 
+### <a name="rhel-7"></a>RHEL 7
+
 ```bash
 sudo pcs constraint order promote ag_cluster-master then start virtualip
+```
+
+### <a name="rhel-8"></a>RHEL 8
+
+```bash
+sudo pcs constraint order promote ag_cluster-clone then start virtualip
 ```
 
 >[!IMPORTANT]

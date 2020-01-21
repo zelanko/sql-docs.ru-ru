@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL TABLE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 01/03/2020
+ms.date: 01/10/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 362111a7e0bf74c9732ea79582fdee34019f7536
-ms.sourcegitcommit: 34d28d49e8d0910cf06efda686e2d73059569bf8
+ms.openlocfilehash: 123b395fe54000b34b509637e5a0568340598edb
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/04/2020
-ms.locfileid: "75656641"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952378"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -44,7 +44,7 @@ ms.locfileid: "75656641"
 
 ||||||
 |---|---|---|---|---|
-|**_\* SQL Server \*_** &nbsp;|[База данных SQL](create-external-table-transact-sql.md?view=azuresqldb-current)|[Хранилище данных<br />SQL](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
+|**_\* SQL Server \*_** &nbsp;|[База данных SQL](create-external-table-transact-sql.md?view=azuresqldb-current)|[Azure Synapse<br />Analytics](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -105,7 +105,7 @@ LOCATION = '*путь к файлу или папке*'. Указывает пу
 
 В этом примере, если указано LOCATION='/webdata/', запрос PolyBase вернет строки из mydata.txt и mydata2.txt. Он не вернет файл mydata3.txt, который вложен в скрытую папку. Он также не вернет файл _hidden.txt, так как тот является скрытым.
 
-![Рекурсивные данные для внешних таблиц](../../t-sql/statements/media/aps-polybase-folder-traversal.png "Рекурсивные данные для внешних таблиц")
+![Рекурсивные данные для внешних таблиц](../../t-sql/statements/media/aps-polybase-folder-traversal.png "|::ref1::|")
 
 Чтобы изменить значение по умолчанию и только для чтения в корневой папке, установите для атрибута \<polybase.recursive.traversal> значение 'false' в файле конфигурации core-site.xml. Этот файл находится в папке `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. Например, `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.
 
@@ -187,7 +187,7 @@ PolyBase может передать некоторые вычисления з�
 
 ## <a name="limitations-and-restrictions"></a>Ограничения
 
-Поскольку данные внешней таблицы хранятся вне SQL Server, они не находятся под контролем PolyBase и могут быть в любое время изменены или удалены внешним процессом. По этой причине результаты запроса к внешней таблице необязательно будут детерминированными. Один и то же запрос может возвращать разные результаты при каждом обращении к внешней таблице. Аналогичным образом, запрос может завершиться ошибкой, если внешние данные удалены или перемещены.
+Поскольку данные внешней таблицы не находятся под прямым контролем SQL Server, они могут быть в любое время изменены или удалены внешним процессом. По этой причине результаты запроса к внешней таблице необязательно будут детерминированными. Один и то же запрос может возвращать разные результаты при каждом обращении к внешней таблице. Аналогичным образом, запрос может завершиться ошибкой, если внешние данные удалены или перемещены.
 
 Вы можете создать несколько внешних таблиц, которые ссылаются на разные внешние источники данных. Если же вы одновременно выполняете запросы к различным источникам данных Hadoop, каждый источник Hadoop должен иметь одинаковый параметр конфигурации сервера hadoop connectivity. Например, невозможно одновременно выполнить запрос к кластеру Cloudera Hadoop и кластеру Hortonworks Hadoop, поскольку они используют разные параметры конфигурации. Сведения о параметрах конфигурации и поддерживаемых сочетаниях см. в разделе [Конфигурация подключения к PolyBase](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).
 
@@ -389,7 +389,7 @@ WITH
     * CREDENTIAL: the database scoped credential, created above.
     */
     CREATE EXTERNAL DATA SOURCE SQLServerInstance
-    WITH ( 
+    WITH (
     LOCATION = 'sqlserver://SqlServer',
     -- PUSHDOWN = ON | OFF,
       CREDENTIAL = SQLServerCredentials
@@ -431,14 +431,14 @@ WITH
    CREATE DATABASE SCOPED CREDENTIAL credential_name
    WITH IDENTITY = 'username', Secret = 'password';
 
-   /* 
+   /*
    * LOCATION: Location string should be of format '<vendor>://<server>[:<port>]'.
    * PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
    * CONNECTION_OPTIONS: Specify driver location
    * CREDENTIAL: the database scoped credential, created above.
    */
    CREATE EXTERNAL DATA SOURCE external_data_source_name
-   WITH ( 
+   WITH (
      LOCATION = 'oracle://<server address>[:<port>]',
      -- PUSHDOWN = ON | OFF,
      CREDENTIAL = credential_name)
@@ -484,7 +484,7 @@ WITH
     * CREDENTIAL: the database scoped credential, created above.
     */
     CREATE EXTERNAL DATA SOURCE external_data_source_name
-    WITH ( 
+    WITH (
     LOCATION = teradata://<server address>[:<port>],
    -- PUSHDOWN = ON | OFF,
     CREDENTIAL =credential_name
@@ -571,7 +571,7 @@ WITH
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|**_\* База данных SQL \*_** &nbsp;|[Хранилище данных<br />SQL](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|**_\* База данных SQL \*_** &nbsp;|[Azure Synapse<br />Analytics](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -666,15 +666,15 @@ DISTRIBUTION Предложение DISTRIBUTION определяет распр
 Во внешний источник данных могут быть переданы только литеральные предикаты, определенные в запросе. В отличие от этого при доступе к связанным серверам могут использоваться предикаты, определенные во время выполнения запроса, то есть используемые в сочетании с вложенным циклом в плане запроса. Это часто приводит к тому, что создается локальная копия всей внешней таблицы, после чего к ней производится присоединение.
 
 ```sql
-  \\ Assuming External.Orders is an external table and Customer is a local table. 
+  \\ Assuming External.Orders is an external table and Customer is a local table.
   \\ This query  will copy the whole of the external locally as the predicate needed
   \\ to filter isn't known at compile time. Its only known during execution of the query
   
-  SELECT Orders.OrderId, Orders.OrderTotal 
+  SELECT Orders.OrderId, Orders.OrderTotal
     FROM External.Orders
-   WHERE CustomerId in (SELECT TOP 1 CustomerId 
-                          FROM Customer 
-                         WHERE CustomerName = 'MyCompany')
+   WHERE CustomerId in (SELECT TOP 1 CustomerId
+                          FROM Customer
+                          WHERE CustomerName = 'MyCompany')
 ```
 
 Использование внешних таблиц не позволяет реализовывать параллелизм в плане запроса.
@@ -709,18 +709,18 @@ WITH
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[База данных SQL](create-external-table-transact-sql.md?view=azuresqldb-current)|**_\* Хранилище данных<br /> SQL \*_** &nbsp;|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[База данных SQL](create-external-table-transact-sql.md?view=azuresqldb-current)|**_\* Azure Synapse<br />Analytics \*_** &nbsp;|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
 
-## <a name="overview-azure-sql-data-warehouse"></a>Общие сведения. Хранилище данных SQL Azure
+## <a name="overview-azure-synapse-analytics"></a>Общие сведения. Azure Synapse Analytics
 
-В хранилище данных SQL Azure используйте внешнюю таблицу для следующих целей.
+Внешняя таблица используется в следующих целях:
 
 - Запрос к Hadoop или хранилищу больших двоичных объектов Azure с помощью инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)].
-- Импорт и хранение данных из Hadoop или хранилища больших двоичных объектов Azure в вашем хранилище данных SQL Azure.
-- Импорт и сохранение данных из хранилища Azure Data Lake Store в хранилище данных SQL Azure.
+- Импорт и хранение данных из Hadoop или хранилища больших двоичных объектов Azure.
+- Импорт и хранение данных из хранилища Azure Data Lake Store.
 
 См. также [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) и [DROP EXTERNAL TABLE](../../t-sql/statements/drop-external-table-transact-sql.md).  
 
@@ -754,7 +754,7 @@ column_name <data_type>
 
 ## <a name="arguments"></a>Аргументы
 
-*{им_базы.имя_схемы.имя_таблицы | имя_схемы.имя_таблицы | имя_таблицы}*  Одно-, двух- или трехсоставное имя для создаваемой таблицы. Если речь идет о внешней таблице, в хранилище данных SQL хранятся только метаданные таблицы, а также базовая статистика о файле или папке, на которые ссылается Azure Data Lake, Hadoop и хранилище больших двоичных объектов Azure. Никакие данные не перемещаются и не хранятся в хранилище данных SQL.
+*{им_базы.имя_схемы.имя_таблицы | имя_схемы.имя_таблицы | имя_таблицы}*  Одно-, двух- или трехсоставное имя для создаваемой таблицы. Если речь идет о внешней таблице, хранятся только метаданные таблицы, а также базовая статистика о файле или папке, на которые ссылается Azure Data Lake, Hadoop и хранилище больших двоичных объектов Azure. При создании внешних таблиц фактические данные не перемещаются и не сохраняются.
 
 \<column_definition > [,... *n* ] CREATE EXTERNAL TABLE поддерживает возможность настроить имя столбца, тип данных, допустимость значений NULL и параметры сортировки. Параметр DEFAULT CONSTRAINT нельзя использовать с внешними таблицами.
 
@@ -852,7 +852,7 @@ PolyBase может передать некоторые вычисления з�
 
 ## <a name="limitations-and-restrictions"></a>Ограничения
 
-Поскольку данные внешней таблицы находятся под контролем хранилища данных SQL, они могут быть в любое время изменены или удалены внешним процессом. По этой причине результаты запроса к внешней таблице необязательно будут детерминированными. Один и то же запрос может возвращать разные результаты при каждом обращении к внешней таблице. Аналогичным образом, запрос может завершиться ошибкой, если внешние данные удалены или перемещены.
+Поскольку данные внешней таблицы не находятся под прямым контролем Azure Synapse, они могут быть в любое время изменены или удалены внешним процессом. По этой причине результаты запроса к внешней таблице необязательно будут детерминированными. Один и то же запрос может возвращать разные результаты при каждом обращении к внешней таблице. Аналогичным образом, запрос может завершиться ошибкой, если внешние данные удалены или перемещены.
 
 Вы можете создать несколько внешних таблиц, которые ссылаются на разные внешние источники данных.
 
@@ -898,7 +898,7 @@ WITH (TYPE = HADOOP,
 CREATE EXTERNAL FILE FORMAT TextFileFormat
 WITH
 (
-    FORMAT_TYPE = DELIMITEDTEXT 
+    FORMAT_TYPE = DELIMITEDTEXT
     , FORMAT_OPTIONS ( FIELD_TERMINATOR = '|'
        , STRING_DELIMITER = ''
       , DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fff'
@@ -930,14 +930,14 @@ AS SELECT * FROM
 - [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)
 - [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)
 - [CREATE EXTERNAL TABLE AS SELECT](../../t-sql/statements/create-external-table-as-select-transact-sql.md)
-- [CREATE TABLE AS SELECT (хранилище данных SQL Azure)](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
+- [CREATE TABLE AS SELECT (Azure Synapse Analytics)](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
 
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[База данных SQL](create-external-table-transact-sql.md?view=azuresqldb-current)|[Хранилище данных<br />SQL](create-external-table-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
+|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[База данных SQL](create-external-table-transact-sql.md?view=azuresqldb-current)|[Azure Synapse<br />Analytics](create-external-table-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
 ||||||
 
 &nbsp;
@@ -1070,7 +1070,7 @@ PolyBase может передать некоторые вычисления з�
 
 ## <a name="limitations-and-restrictions"></a>Ограничения
 
-Поскольку данные внешней таблицы хранятся вне устройства, они не находятся под контролем PolyBase и могут быть в любое время изменены или удалены внешним процессом. По этой причине результаты запроса к внешней таблице необязательно будут детерминированными. Один и то же запрос может возвращать разные результаты при каждом обращении к внешней таблице. Аналогичным образом, запрос может завершиться ошибкой, если внешние данные удалены или перемещены.
+Поскольку данные внешней таблицы не находятся под прямым контролем устройства, они могут быть в любое время изменены или удалены внешним процессом. По этой причине результаты запроса к внешней таблице необязательно будут детерминированными. Один и то же запрос может возвращать разные результаты при каждом обращении к внешней таблице. Аналогичным образом, запрос может завершиться ошибкой, если внешние данные удалены или перемещены.
 
 Вы можете создать несколько внешних таблиц, которые ссылаются на разные внешние источники данных. Если же вы одновременно выполняете запросы к различным источникам данных Hadoop, каждый источник Hadoop должен иметь одинаковый параметр конфигурации сервера hadoop connectivity. Например, невозможно одновременно выполнить запрос к кластеру Cloudera Hadoop и кластеру Hortonworks Hadoop, поскольку они используют разные параметры конфигурации. Сведения о параметрах конфигурации и поддерживаемых сочетаниях см. в разделе [Конфигурация подключения к PolyBase](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).
 
@@ -1093,7 +1093,7 @@ PolyBase может обработать не более 33 тысяч файл
 
 В PolyBase в SQL Server 2016 ширина строки должна составлять не более 32 КБ в связи с максимальным размером допустимой строки в определении таблицы. Если схема суммы столбцов превышает 32 КБ, PolyBase не сможет запросить данные.
 
-В хранилище данных SQL это ограничение увеличено до 1 МБ.
+В Azure Synapse Analytics это ограничение было увеличено до 1 МБ.
 
 ## <a name="locking"></a>Блокировка
 
@@ -1138,6 +1138,6 @@ FROM ClickStream
 - [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)
 - [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)
 - [CREATE EXTERNAL TABLE AS SELECT](../../t-sql/statements/create-external-table-as-select-transact-sql.md)
-- [CREATE TABLE AS SELECT (хранилище данных SQL Azure)](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
+- [CREATE TABLE AS SELECT (Azure Synapse Analytics)](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
 
 ::: moniker-end

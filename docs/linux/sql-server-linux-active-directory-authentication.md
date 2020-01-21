@@ -12,12 +12,12 @@ ms.custom: seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 72a1a554203349e9e6bd8cee43d2a6fe9d093ad8
-ms.sourcegitcommit: a02727aab143541794e9cfe923770d019f323116
+ms.openlocfilehash: 90c0023c0de69c03f64d33ff64866b0e5ff4f5ba
+ms.sourcegitcommit: 909b69dd1f918f00b9013bb43ea66e76a690400a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75755863"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75924954"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Руководство. Использование проверки подлинности Active Directory с SQL Server на Linux
 
@@ -64,7 +64,7 @@ ms.locfileid: "75755863"
    ```
 
    > [!NOTE]
-   > В целях безопасности рекомендуется использовать для SQL Server выделенную учетную запись Active Directory, чтобы учетные данные SQL Server не использовались другими службами. Однако при необходимости можно выбрать существующую учетную запись Active Directory, если вы знаете ее пароль (он потребуется для создания файла KEYTAB в следующем шаге).
+   > В целях безопасности рекомендуется использовать для SQL Server выделенную учетную запись Active Directory, чтобы учетные данные SQL Server не использовались другими службами. Однако при необходимости можно выбрать существующую учетную запись Active Directory, если вы знаете ее пароль (он потребуется для создания файла KEYTAB в следующем шаге). Кроме того, учетная запись должна быть включена для поддержки 128-разрядного и 256-разрядного шифрования Kerberos (атрибут **msDS-SupportedEncryptionTypes**) в учетной записи пользователя.
 
 2. Укажите значение ServicePrincipalName (имя субъекта-службы) для этой учетной записи с помощью средства **setspn.exe**. Формат имени субъекта-службы должен быть в точности таким же, как в приведенном ниже примере. Чтобы определить полное доменное имя хост-компьютера [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], выполните команду `hostname --all-fqdns` в узле [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. TCP-портом должен быть порт 1433, если вы не настроили для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] другой номер порта.
 
@@ -114,13 +114,13 @@ ms.locfileid: "75755863"
 
    ktpass /princ MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM /ptype KRB5_NT_PRINCIPAL /crypto rc4-hmac-nt /mapuser <DomainName>\<UserName> /in mssql.keytab /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
 
-   ktpass /princ MSSQLSvc/**<netbios name of the host machine>**:**<tcp port>**@CONTOSO.COM /ptype KRB5_NT_PRINCIPAL /crypto aes256-sha1 /mapuser <DomainName>\<UserName> /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
+   ktpass /princ MSSQLSvc/**<netbios name of the host machine>**:**<tcp port>**@CONTOSO.COM /ptype KRB5_NT_PRINCIPAL /crypto aes256-sha1 /mapuser <DomainName>\<UserName> /in mssql.keytab /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
 
    ktpass /princ MSSQLSvc/**<netbios name of the host machine>**:**<tcp port>**@CONTOSO.COM /ptype KRB5_NT_PRINCIPAL /crypto rc4-hmac-nt /mapuser <DomainName>\<UserName> /in mssql.keytab /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
 
-   ktpass /princ <UserName>@<DomainName.com> /ptype KRB5_NT_PRINCIPAL /crypto aes256-sha1 /mapuser <DomainName>\<UserName> /in mssql.keytab /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
+   ktpass /princ <UserName>@CONTOSO.COM /ptype KRB5_NT_PRINCIPAL /crypto aes256-sha1 /mapuser <DomainName>\<UserName> /in mssql.keytab /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
 
-   ktpass /princ <UserName>@<DomainName.com> /ptype KRB5_NT_PRINCIPAL /crypto rc4-hmac-nt /mapuser <DomainName>\<UserName> /in mssql.keytab /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
+   ktpass /princ <UserName>@CONTOSO.COM /ptype KRB5_NT_PRINCIPAL /crypto rc4-hmac-nt /mapuser <DomainName>\<UserName> /in mssql.keytab /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
    ```
 
    > [!NOTE]
