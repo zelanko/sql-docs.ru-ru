@@ -46,12 +46,12 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1afd61f86bf6b7f7f93fdbcade77fd3118ff7781
-ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
+ms.openlocfilehash: 35ce03a8619eada5480d0cd656f20946bb11a11c
+ms.sourcegitcommit: 909b69dd1f918f00b9013bb43ea66e76a690400a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72517926"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75924962"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -474,7 +474,7 @@ ALLOW_PAGE_LOCKS **=** { **ON** | OFF }
 
  OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** }
 
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]).
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Определяет, следует ли выполнять оптимизацию, связанную с состязанием при операциях вставки на последнюю страницу. Значение по умолчанию — OFF. См. подробнее раздел о [последовательных ключах](./create-index-transact-sql.md#sequential-keys) в документации по CREATE INDEX.
 
@@ -642,10 +642,10 @@ ABORT
 На компьютерах с несколькими процессорами инструкция `ALTER INDEX REBUILD`, как и другие запросы, использует больше процессоров для операций просмотра и сортировки, связанных с изменением индекса. При выполнении инструкции `ALTER INDEX REORGANIZE` без предложения LOB_COMPACTION или с ним значение аргумента **max degree of parallelism** представляет собой однопотоковую операцию. Дополнительные сведения см. в статье [Настройка параллельных операций с индексами](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
 > [!IMPORTANT]
-> Индекс нельзя реорганизовать или перестроить, если файловая группа, в которой он находится, размещена вне сети или предназначена только для чтения. Если указывается ключевое слово ALL, а один или несколько индексов находятся в файловой группе, которая размещена вне сети или предназначена только для чтения, то выполнить инструкцию не удастся.  
+> Индекс нельзя реорганизовать или перестроить, если файловая группа, в которой он расположен, находится в автономном режиме или предназначена только для чтения. Если указывается ключевое слово ALL, а один или несколько индексов размещены в файловой группе, которая находится в автономном режиме или предназначена только для чтения, то выполнить инструкцию не удастся.  
   
 ## <a name="rebuilding-indexes"></a> Перестроение индексов  
-При перестроении старый индекс удаляется и создается новый. Таким образом, устраняется фрагментация, восстанавливается место на диске путем сжатия страниц с учетом указанного или существующего коэффициента заполнения, переупорядочиваются индексные строки в последовательных страницах. Если указывается ключевое слово ALL, то все индексы для таблицы удаляются и перестраиваются в одной транзакции. Ограничения FOREIGN KEY не обязательно отменять заранее. Если перестраиваются индексы с 128 или большим числом экстентов, то компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] откладывает процедуры освобождения страниц и связанные с ними блокировки до фиксации транзакции.  
+При перестроении старый индекс удаляется, и создается новый. Таким образом, устраняется фрагментация, восстанавливается место на диске путем сжатия страниц с учетом указанного или существующего коэффициента заполнения, переупорядочиваются индексные строки в последовательных страницах. Если указывается ключевое слово ALL, то все индексы для таблицы удаляются и перестраиваются в одной транзакции. Ограничения FOREIGN KEY не обязательно отменять заранее. Если перестраиваются индексы с 128 или большим числом экстентов, то компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] откладывает процедуры освобождения страниц и связанные с ними блокировки до фиксации транзакции.  
  
 Дополнительные сведения см. в статье [Реорганизация и перестроение индексов](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md). 
   
@@ -763,7 +763,7 @@ ABORT
   
 -  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] не использует параметры файловой группы и файлового потока.  
 -  Индексы columnstore недоступны до [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. 
--  Возобновляемые операции с индексами будут доступны начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
+-  Возобновляемые операции с индексами будут доступны начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
   
 ## <a name="basic-syntax-example"></a>Пример основного синтаксиса:   
   
@@ -899,7 +899,7 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE;
 ```  
   
 ### <a name="e-rebuild-a-clustered-columnstore-index-offline"></a>Д. Перестроение кластеризованного индекса columnstore в режиме "вне сети"  
-Применимо для следующих объектов: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])   
+Область применения: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])   
   
 > [!TIP]
 > Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], рекомендуется использовать инструкцию ALTER INDEX REORGANIZE вместо инструкции ALTER INDEX REBUILD.  

@@ -1,6 +1,5 @@
 ---
-title: Использование SELECT и JOIN в системных представлениях для расширенных событий в SQL Server | Документация Майкрософт
-ms.custom: ''
+title: Использование SELECT и JOIN в системных представлениях для расширенных событий
 ms.date: 08/02/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,20 +9,21 @@ ms.topic: tutorial
 ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4194c869574812d9035a9b51ed44b6aa62efdbcc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d3bcb7e272c1a5120b65018aab781546ba8d0f2b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903463"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242902"
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>Использование SELECT и JOIN в системных представлениях для расширенных событий в SQL Server
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
-В этой статье описывается два набора системных представлений, имеющих отношение к расширенным событиям в Microsoft SQL Server и в облачной службе базы данных SQL Azure. В статье рассматриваются следующие вопросы:
+В этой статье описываются два набора системных представлений, связанных с расширенными событиями в SQL Server и в Базе данных SQL Azure. В статье рассматриваются следующие вопросы:
 
 - Присоединение (JOIN) различных системных представлений.
 - Выбор (SELECT) определенного рода сведений из системных представлений.
@@ -345,7 +345,7 @@ ORDER BY
 ```
 
 
-#### <a name="output"></a>Вывод
+#### <a name="output"></a>Выходные данные
 
 
 Ниже приведены фактические выходные данные выполнения предыдущей конструкции SELECT JOIN UNION. Имена и значения выходных параметров соответствуют результату предыдущей инструкции CREATE EVENT SESSION.
@@ -419,7 +419,7 @@ SELECT  --C.1
 ```
 
 
-#### <a name="output"></a>Вывод
+#### <a name="output"></a>Выходные данные
 
 Ниже приведен список пакетов.
 
@@ -477,7 +477,7 @@ SELECT  --C.2
 ```
 
 
-#### <a name="output"></a>Вывод
+#### <a name="output"></a>Выходные данные
 
 Ниже приведено количество объектов по типу объекта. Здесь около 1915 объектов.
 
@@ -532,7 +532,7 @@ SELECT  --C.3
 ```
 
 
-#### <a name="output"></a>Вывод
+#### <a name="output"></a>Выходные данные
 
 Чтобы удовлетворить ваш интерес, далее приводится произвольная выборка объектов, возвращенных предыдущей инструкцией SELECT.
 
@@ -605,7 +605,7 @@ SELECT  -- C.4
 ```
 
 
-#### <a name="output"></a>Вывод
+#### <a name="output"></a>Выходные данные
 
 Предыдущая инструкция SELECT, WHERE `o.name = 'lock_deadlock'`возвратила следующие строки параметров:
 
@@ -644,7 +644,7 @@ sqlserver   lock_deadlock   transaction_id
 
 <a name="section_C_5_map_values_fields"></a>
 
-### <a name="c5-sysdmxemapvalues-and-event-fields"></a>В.5. *sys.dm_xe_map_values* и поля событий
+### <a name="c5-sysdm_xe_map_values-and-event-fields"></a>В.5. *sys.dm_xe_map_values* и поля событий
 
 
 Следующая инструкция SELECT содержит оператор JOIN для сложного представления с именем *sys.dm_xe_map_values*.
@@ -693,7 +693,7 @@ SELECT  --C.5
 ```
 
 
-#### <a name="output"></a>Вывод
+#### <a name="output"></a>Выходные данные
 
 <a name="resource_type_dmv_actual_row"></a>
 
@@ -765,7 +765,7 @@ SELECT  --C.6
 ```
 
 
-#### <a name="output"></a>Вывод
+#### <a name="output"></a>Выходные данные
 
 Приведенные ниже строки параметров являются подмножеством данных, возвращенных предыдущей инструкцией SELECT в SQL Server 2016.
 
@@ -786,7 +786,7 @@ package0   event_file   metadatafile         unicode_string_ptr   Not_mandatory 
 
 <a name="section_C_7_dmv_select_target_data_column"></a>
 
-### <a name="c7-dmv-select-casting-targetdata-column-to-xml"></a>В.7. Инструкция SELECT DMV, приводящая столбец target_data к формату XML
+### <a name="c7-dmv-select-casting-target_data-column-to-xml"></a>В.7. Инструкция SELECT DMV, приводящая столбец target_data к формату XML
 
 
 Эта инструкция DMV SELECT возвращает строки данных из целевого объекта открытого сеанса событий. Данные приведены к формату XML, поэтому возвращенную ячейку можно активировать щелчком мыши для простоты отображения в среде.
@@ -854,7 +854,7 @@ checkpoint_session_ring_buffer2   ring_buffer   <RingBufferTarget truncated="0" 
 
 <a name="section_C_8_select_function_disk"></a>
 
-### <a name="c8-select-from-a-function-to-retrieve-eventfile-data-from-disk-drive"></a>В.8. Использование SELECT в функции для получения данных event_file с диска
+### <a name="c8-select-from-a-function-to-retrieve-event_file-data-from-disk-drive"></a>В.8. Использование SELECT в функции для получения данных event_file с диска
 
 
 Предположим, что сеанс событий собрал некоторые данные и позднее был остановлен. Если сеанс был определен для использования целевого объекта event_file, вы по-прежнему можете получать данные путем вызова функции *sys.fn_xe_target_read_file*.

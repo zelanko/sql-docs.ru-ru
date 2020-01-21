@@ -13,12 +13,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 06f3568ac1bf3305628583934549d4334c4eedc4
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 8d2e2cc75046d9da6ce3e4c8188136f6b6f03945
+ms.sourcegitcommit: 650a25eb54eeb9ddfe3c8f12b5f8804cc07bf5e5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710474"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75623242"
 ---
 # <a name="polybase-scale-out-groups"></a>Масштабируемые группы PolyBase
 
@@ -28,7 +28,7 @@ ms.locfileid: "71710474"
   
 См. разделы [Приступая к работе с PolyBase](../../relational-databases/polybase/get-started-with-polybase.md) и [Руководство по PolyBase](../../relational-databases/polybase/polybase-guide.md).
   
-![Масштабируемые группы PolyBase](../../relational-databases/polybase/media/polybase-scale-out-groups.png "Масштабируемые группы PolyBase")  
+![группы горизонтального масштабирования PolyBase](../../relational-databases/polybase/media/polybase-scale-out-groups.png "Масштабируемые группы PolyBase")  
   
 ## <a name="head-node"></a>Головной узел  
 
@@ -47,7 +47,7 @@ ms.locfileid: "71710474"
 > [!NOTE]
 >  Процесс отличается от масштабируемого чтения в Hadoop. 
 
-![Масштабируемые группы PolyBase](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "Масштабируемые группы PolyBase")
+![группы горизонтального масштабирования PolyBase](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "Масштабируемые группы PolyBase")
   
 ## <a name="distributed-query-processing"></a>Распределенная обработка запросов  
 
@@ -61,8 +61,15 @@ ms.locfileid: "71710474"
 
 После установки SQL Server экземпляр можно назначить как головным, так и вычислительным узлом. Выбор зависит от того, на какой версии SQL Server работает PolyBase. Экземпляр с установленным выпуском Enterprise Еdition можно назначить как головным, так и вычислительным узлом. Экземпляр с выпуском Standard Еdition можно назначить только вычислительным узлом.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Чтобы настроить масштабируемую группу PolyBase, обратитесь к следующему руководству:
 
 [Улучшение масштабируемых групп PolyBase в Windows](configure-scale-out-groups-windows.md)
+
+## <a name="see-also"></a>См. также:
+
+ [sys-dm-exec-compute-nodes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)   
+ [sys-dm-exec-compute-node-status](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-status-transact-sql.md)   
+ [sys.dm_exec_compute_node_errors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md)   
+

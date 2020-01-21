@@ -10,12 +10,12 @@ ms.author: alayu
 ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 08/02/2019
-ms.openlocfilehash: a218c2afa89c8798c46b305e80e677693509e7ab
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 7398d918a027b28513b3f12a5101628cf1158e49
+ms.sourcegitcommit: 21e6a0c1c6152e625712a5904fce29effb08a2f9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810783"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75884051"
 ---
 # <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Краткое руководство. Подключение и отправка запроса к SQL Server с помощью [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -37,17 +37,17 @@ ms.locfileid: "68810783"
 
 1. Запустите **[!INCLUDE[name-sos](../includes/name-sos-short.md)]** .
 
-2. При первом запуске [!INCLUDE[name-sos](../includes/name-sos-short.md)] должна открыться страница **приветствия**. Если она не отображается, выберите **Справка** > **Приветствие**. Выберите **Создать подключение**, чтобы открыть панель **Подключение**.
+2. При первом запуске [!INCLUDE[name-sos](../includes/name-sos-short.md)] должна открыться страница **приветствия**. Если вы не видите **страницу приветствия** , выберите **Справка** > **Добро** пожаловать. Выберите **Создать подключение**, чтобы открыть панель **Подключение**.
 
    ![Значок нового подключения](media/quickstart-sql-server/new-connection-icon.png)
 
 3. В этой статье используется *имя входа SQL*, но поддерживается *проверка подлинности Windows*. Заполните поля следующим образом:
 
-- В поле **Имя сервера** введите имя SQL Server. Например: localhost.
+- **Имя сервера:** введите здесь имя сервера. Например: localhost.
 - **Тип проверки подлинности:** Имя входа SQL
 - **Имя пользователя:** имя пользователя SQL Server
 - **Пароль:** пароль для SQL Server
-- **Имя базы данных:** оставьте это поле пустым
+- **Имя базы данных:** \<по умолчанию\>
 - **Группа серверов:** \<по умолчанию\>
 
    ![Экран нового подключения](media/quickstart-sql-server/new-connection-screen.png)
@@ -138,6 +138,6 @@ ms.locfileid: "68810783"
 
    ![Выбор результатов](media/quickstart-sql-server/select-results.png)
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 После успешного подключения к SQL Server и выполнения запроса можно перейти к руководству по [редактору кода](tutorial-sql-editor.md).

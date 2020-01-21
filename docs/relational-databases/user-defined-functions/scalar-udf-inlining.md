@@ -2,7 +2,7 @@
 title: Встраивание скалярных пользовательских функций в базах данных Microsoft SQL | Документация Майкрософт
 description: Функция встраивания скалярных пользовательских функций для повышения производительности запросов, вызывающих скалярные пользовательские функции, в SQL Server (2019 и более поздних версиях) и базе данных SQL Azure.
 ms.custom: ''
-ms.date: 09/13/2019
+ms.date: 01/09/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 90aa97c7a5dc2f21007c52ac8ebfc6d100e6d178
-ms.sourcegitcommit: b7618a2a7c14478e4785b83c4fb2509a3e23ee68
+ms.openlocfilehash: fa881a12ad04c5613aced89771ebc31e1cdaa5a2
+ms.sourcegitcommit: 365a919e3f0b0c14440522e950b57a109c00a249
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926051"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75831772"
 ---
 # <a name="scalar-udf-inlining"></a>Встраивание скалярных пользовательских функций
 
@@ -154,6 +154,7 @@ SELECT C_NAME, dbo.customer_category(C_CUSTKEY) FROM CUSTOMER;
 - Функция не ссылается на пользовательские типы.
 - В функцию не добавлены сигнатуры.
 - Функция не является функцией секционирования.
+- Определяемая пользователем функция не содержит ссылок на обобщенные табличные выражения (CTE).
 
 <sup>1</sup> Встраивание инструкций `SELECT` с накоплением или агрегированием переменных (например, `SELECT @val += col1 FROM table1`) не поддерживается.
 

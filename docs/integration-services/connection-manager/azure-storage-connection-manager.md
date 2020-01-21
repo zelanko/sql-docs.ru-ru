@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8fd8b9b94d809a304e2f9347edba67d5ff7d9b85
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 6d3912e2b5cbf8051348191cf3efb6ed2d20d551
+ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71294464"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74687194"
 ---
 # <a name="azure-storage-connection-manager"></a>Диспетчер подключений службы хранилища Azure
 
@@ -64,6 +64,9 @@ ms.locfileid: "71294464"
 
 > [!NOTE]
 >  Чтобы настроить проверку подлинности с помощью управляемого удостоверения для существующих пакетов, рекомендуем как минимум однократно перестроить проект SSIS с использованием [конструктора SSIS последней версии](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt). Повторно разверните этот проект служб SSIS в среде Azure-SSIS Integration Runtime, чтобы новое свойство `ConnectUsingManagedIdentity` диспетчера подключений автоматически добавилось во все диспетчеры подключений хранилища Azure в проекте SSIS. Кроме того, можно непосредственно переопределить свойство, указав при выполнении путь **\Package.Connections[{имя_диспетчера_подключений}].Properties[ConnectUsingManagedIdentity]** .
+
+## <a name="secure-network-traffic-to-your-storage-account"></a>Защита сетевого трафика в учетной записи хранения
+Фабрика данных Azure теперь является [доверенной службой Майкрософт](https://docs.microsoft.com/azure/storage/common/storage-network-security#trusted-microsoft-services) для службы хранилища Azure. При использовании проверки подлинности на основе управляемого удостоверения можно защитить учетную запись хранения, [предоставив доступ к выбранным сетям](https://docs.microsoft.com/azure/storage/common/storage-network-security#change-the-default-network-access-rule), в то же время предоставив фабрике данных доступ к вашей учетной записи. Инструкции см. в разделе об [управлении исключениями](https://docs.microsoft.com/azure/storage/common/storage-network-security#managing-exceptions).
 
 ## <a name="see-also"></a>См. также раздел  
  [Соединения в службах Integration Services (SSIS)](../../integration-services/connection-manager/integration-services-ssis-connections.md)

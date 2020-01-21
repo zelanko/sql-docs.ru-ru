@@ -1,6 +1,7 @@
 ---
-title: Подписка, вкладка "Журнал операций от издателя к распространителю" (транзакционная подписка) | Документация Майкрософт
-ms.custom: ''
+title: Журнал операций от издателя к распространителю (транзакционный — SSMS)
+description: Здесь описывается вкладка "Журнал операций от издателя к распространителю" монитора репликации для публикации транзакций в SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: d5a4c697-1342-49fd-8b7b-b059af32556a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 30e5a68dcd22b0f73f88ce6151ef46e02bbf81f1
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 350866a6a574469ef87586cd10f932bfcc201859
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768315"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322191"
 ---
 # <a name="subscription-publisher-to-distributor-history-transactional-subscription"></a>Подписка, журнал издателя для распространителя (подписка на публикацию транзакций)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "68768315"
 ## <a name="options"></a>Параметры  
  В меню **Вид** выберите сеансы какого агента чтения журнала необходимо просмотреть, а затем в сетке **Сеансы агента чтения журнала**выберите определенный сеанс. Подробные сведения об этом сеансе отображаются в сетке, помеченной как **Действия в выбранном сеансе**. Если выбранный сеанс закончен с ошибкой, также выводится на экран текстовое поле, помеченное как **Описание ошибки или сообщение выбранного сеанса** .  
   
- **Вид**  
+ **View** (Вид)  
  Выберите агента чтения журнала, сеансы которого необходимо просмотреть. Обычно агент чтения журнала работает постоянно, поэтому просмотреть можно только один сеанс.  
   
  **Состояние**  
@@ -35,7 +36,7 @@ ms.locfileid: "68768315"
   
 -   Ошибка  
   
--   Завершен  
+-   Завершено  
   
 -   Повтор  
   

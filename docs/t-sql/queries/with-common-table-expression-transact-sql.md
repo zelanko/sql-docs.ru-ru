@@ -27,14 +27,14 @@ ms.assetid: 27cfb819-3e8d-4274-8bbe-cbbe4d9c2e23
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a62fe54a6bbdd7287c46f103f9963302727a1077
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7cedcec468c061d38225ab4cbb24b8f5320a4f13
+ms.sourcegitcommit: 03884a046aded85c7de67ca82a5b5edbf710be92
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948082"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564814"
 ---
-# <a name="with-commontableexpression-transact-sql"></a>WITH обобщенное_табличное_выражение (Transact-SQL)
+# <a name="with-common_table_expression-transact-sql"></a>WITH обобщенное_табличное_выражение (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Задается временно именованный результирующий набор, называемый обобщенным табличным выражением (ОТВ). Он получается при выполнении простого запроса и определяется в области выполнения одиночной инструкции SELECT, INSERT, UPDATE, DELETE или MERGE. Это предложение может использоваться также в инструкции CREATE VIEW как часть определяющей ее инструкции SELECT. Обобщенное табличное выражение может включать ссылки на само себя. Такое выражение называется рекурсивным обобщенным табличным выражением.  
@@ -288,9 +288,7 @@ INSERT INTO dbo.MyEmployees VALUES
 ,(23,  N'Mary', N'Gibson', N'Marketing Specialist', 4, 16);  
 ```  
   
-```sql  
-USE AdventureWorks2012;  
-GO  
+```sql
 WITH DirectReports(ManagerID, EmployeeID, Title, EmployeeLevel) AS   
 (  
     SELECT ManagerID, EmployeeID, Title, 0 AS EmployeeLevel  
@@ -307,12 +305,10 @@ FROM DirectReports
 ORDER BY ManagerID;   
 ```  
   
-### <a name="e-using-a-recursive-common-table-expression-to-display-two-levels-of-recursion"></a>Д. Использование рекурсивного обобщенного табличного выражения для отображения двух уровней рекурсии  
+#### <a name="using-a-recursive-common-table-expression-to-display-two-levels-of-recursion"></a>Использование рекурсивного обобщенного табличного выражения для отображения двух уровней рекурсии  
  В следующем примере представлены руководители и отчитывающиеся перед ними служащие. Количество возвращаемых уровней ограничено двумя.  
   
-```sql  
-USE AdventureWorks2012;  
-GO  
+```sql
 WITH DirectReports(ManagerID, EmployeeID, Title, EmployeeLevel) AS   
 (  
     SELECT ManagerID, EmployeeID, Title, 0 AS EmployeeLevel  
@@ -329,12 +325,10 @@ FROM DirectReports
 WHERE EmployeeLevel <= 2 ;  
 ```  
   
-### <a name="f-using-a-recursive-common-table-expression-to-display-a-hierarchical-list"></a>Е. Использование рекурсивного обобщенного табличного выражения для отображения иерархического списка  
- Следующий пример строится на примере D с добавлением имен руководителей и служащих и соответствующих им должностей. Иерархия руководителей и служащих дополнительно выделяется с помощью соответствующих отступов на каждом уровне.  
+#### <a name="using-a-recursive-common-table-expression-to-display-a-hierarchical-list"></a>Использование рекурсивного обобщенного табличного выражения для отображения иерархического списка  
+ В следующем примере добавляются имена руководителя и сотрудников, а также соответствующие им должности. Иерархия руководителей и служащих дополнительно выделяется с помощью соответствующих отступов на каждом уровне.  
   
-```sql  
-USE AdventureWorks2012;  
-GO  
+```sql
 WITH DirectReports(Name, Title, EmployeeID, EmployeeLevel, Sort)  
 AS (SELECT CONVERT(varchar(255), e.FirstName + ' ' + e.LastName),  
         e.Title,  
@@ -359,12 +353,10 @@ FROM DirectReports
 ORDER BY Sort;  
 ```  
   
-### <a name="g-using-maxrecursion-to-cancel-a-statement"></a>Ж. Использование подсказки MAXRECURSION для отмены инструкции  
+#### <a name="using-maxrecursion-to-cancel-a-statement"></a>Использование подсказки MAXRECURSION для отмены инструкции  
  Подсказка `MAXRECURSION` может использоваться для предотвращения входа в бесконечный цикл из-за неверно сформированного рекурсивного CTE-выражения. В следующем примере преднамеренно формируется бесконечный цикл и используется указание `MAXRECURSION` для ограничения числа уровней рекурсии двумя.  
   
-```sql  
-USE AdventureWorks2012;  
-GO  
+```sql
 --Creates an infinite loop  
 WITH cte (EmployeeID, ManagerID, Title) as  
 (  
@@ -385,9 +377,7 @@ OPTION (MAXRECURSION 2);
   
  После исправления ошибки в коде подсказка MAXRECURSION больше не нужна. В следующем примере приводится правильный код.  
   
-```sql  
-USE AdventureWorks2012;  
-GO  
+```sql
 WITH cte (EmployeeID, ManagerID, Title)  
 AS  
 (  
@@ -403,7 +393,7 @@ SELECT EmployeeID, ManagerID, Title
 FROM cte;  
 ```  
   
-### <a name="h-using-a-common-table-expression-to-selectively-step-through-a-recursive-relationship-in-a-select-statement"></a>З. Использование обобщенного табличного выражения для выборочного прохождения рекурсивной связи в инструкции SELECT  
+### <a name="e-using-a-common-table-expression-to-selectively-step-through-a-recursive-relationship-in-a-select-statement"></a>Д. Использование обобщенного табличного выражения для выборочного прохождения рекурсивной связи в инструкции SELECT  
  В следующем примере показана иерархия узлов и компонентов продукции, необходимых для создания велосипеда для `ProductAssemblyID = 800`.  
   
 ```sql  
@@ -432,7 +422,7 @@ FROM Parts AS p
 ORDER BY ComponentLevel, AssemblyID, ComponentID;  
 ```  
   
-### <a name="i-using-a-recursive-cte-in-an-update-statement"></a>И. Использование рекурсивного обобщенного табличного выражения в инструкции UPDATE  
+### <a name="f-using-a-recursive-cte-in-an-update-statement"></a>Е. Использование рекурсивного обобщенного табличного выражения в инструкции UPDATE  
  В следующем примере обновляется значение `PerAssemblyQty` для всех деталей, используемых при сборке продукта Road-550-W Yellow, 44 `(ProductAssemblyID``800`). Обобщенное табличное выражение возвращает иерархический список деталей, которые непосредственно используются для сборки `ProductAssemblyID 800`, и компонентов, которые используются для сборки этих деталей и т. д. Изменяются только строки, возвращенные обобщенным табличным выражением.  
   
 ```sql  
@@ -460,7 +450,7 @@ JOIN Parts AS d ON c.ProductAssemblyID = d.AssemblyID
 WHERE d.ComponentLevel = 0;  
 ```  
   
-### <a name="j-using-multiple-anchor-and-recursive-members"></a>К. Использование нескольких привязок и рекурсивных элементов  
+### <a name="h-using-multiple-anchor-and-recursive-members"></a>З. Использование нескольких привязок и рекурсивных элементов  
  В следующем примере несколько членов указателя и рекурсивных элементов используются для возврата всех предков указанного лица. Создается и заполняется значениями таблица для формирования генеалогии семьи, возвращаемой рекурсивным обобщенным табличным выражением.  
   
 ```sql  
@@ -507,7 +497,7 @@ WHERE Generation.ID = Person.ID;
 GO  
 ```  
   
-###  <a name="bkmkUsingAnalyticalFunctionsInARecursiveCTE"></a> K. Использование аналитических функций в рекурсивном обобщенном табличном выражении  
+###  <a name="bkmkUsingAnalyticalFunctionsInARecursiveCTE"></a> I. Использование аналитических функций в рекурсивном обобщенном табличном выражении  
  Следующий пример демонстрирует проблему, которая может возникнуть при использовании аналитической или агрегатной функции в рекурсивной части обобщенного табличного выражения.  
   
 ```sql  
@@ -580,7 +570,7 @@ Lvl  N
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="l-using-a-common-table-expression-within-a-ctas-statement"></a>М. Использование обобщенного табличного выражения в инструкции CTAS  
+### <a name="j-using-a-common-table-expression-within-a-ctas-statement"></a>К. Использование обобщенного табличного выражения в инструкции CTAS  
  В следующем примере создается новая таблица, содержащая общее количество заказов на продажу в год для каждого коммерческого представителя в [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].  
   
 ```sql  
@@ -609,7 +599,7 @@ AS
 GO  
 ```  
   
-### <a name="m-using-a-common-table-expression-within-a-cetas-statement"></a>Н. Использование обобщенного табличного выражения в инструкции CETAS  
+### <a name="k-using-a-common-table-expression-within-a-cetas-statement"></a>Л. Использование обобщенного табличного выражения в инструкции CETAS  
  В следующем примере создается новая внешняя таблица, содержащая общее количество заказов на продажу в год для каждого коммерческого представителя в [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].  
   
 ```sql  
@@ -639,7 +629,7 @@ AS
 GO  
 ```  
   
-### <a name="n-using-multiple-comma-separated-ctes-in-a-statement"></a>О. Использование нескольких разделенных запятыми обобщенных табличных выражений в инструкции  
+### <a name="l-using-multiple-comma-separated-ctes-in-a-statement"></a>М. Использование нескольких разделенных запятыми обобщенных табличных выражений в инструкции  
  В следующем примере показано включение двух обобщенных табличных выражений в одну инструкцию. Обобщенные табличные выражения не поддерживают вложение (рекурсию).  
   
 ```sql  

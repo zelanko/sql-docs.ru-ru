@@ -1,6 +1,7 @@
 ---
-title: Вопросы, часто задаваемые администраторам репликации | Документация Майкрософт
-ms.custom: ''
+title: Вопросы, часто задаваемые администраторам репликации
+description: Список часто задаваемых вопросов, касающихся администраторов репликации для SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7ff8009136f95247bc13c213d9b656abfab28ae0
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
+ms.openlocfilehash: 99be52de235c676137981021b9e926aba7320f43
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72041197"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322039"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Вопросы, часто задаваемые администраторам репликации
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -105,7 +106,7 @@ ms.locfileid: "72041197"
   
 -   Параметр веб-синхронизации для репликации слиянием. Дополнительные сведения см. в статье [Web Synchronization for Merge Replication](../../../relational-databases/replication/web-synchronization-for-merge-replication.md).  
   
- Репликации [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] всех типов могут реплицировать данные через виртуальную частную сеть, но для репликации слиянием необходимо предусмотреть веб-синхронизацию.  
+ Репликации [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] всех типов могут реплицировать данные через виртуальную частную сеть, но для репликации слиянием необходимо предусмотреть веб-синхронизацию.  
   
 ### <a name="does-replication-resume-if-a-connection-is-dropped"></a>Возобновляется ли репликация при разрыве соединения?  
  Да. Обработка репликации возобновляется с места, на котором она остановилась при разрыве соединения. При использовании репликации слиянием в сети с низкой надежностью стоит рассмотреть использование логических записей, гарантирующих, что соответствующие изменения будут обрабатываться в виде блока. Дополнительные сведения см. в статье [Группирование изменений в связанных строках с помощью логических записей](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  

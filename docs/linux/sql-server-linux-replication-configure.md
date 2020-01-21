@@ -1,6 +1,7 @@
 ---
-title: Настройка репликации SQL Server в Linux
+title: Настройка репликации (SSMS)
 description: В этой статье описывается настройка репликации SQL Server в Linux.
+ms.custom: seo-dt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,21 +10,22 @@ ms.topic: article
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: linux
+titleSuffix: SQL Server on Linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d7e3f4d81b5b40db2be1e45fbf28d27411492f83
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 0979f05808c59336dec7a6e4a664b2e970029dd6
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67895938"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952498"
 ---
 # <a name="configure-sql-server-replication-on-linux"></a>Настройка репликации SQL Server в Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-В версии [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] реализована возможность репликации SQL Server для экземпляров SQL Server на Linux.
+В версии [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] реализована возможность репликации SQL Server для экземпляров SQL Server на Linux.
 
-Дополнительные сведения о репликации см. в разделе [Документация по репликации SQL Server](../relational-databases/replication/sql-server-replication.md).
+Дополнительные сведения о репликации см. в разделе [Документация по репликации SQL Server](../relational-databases/replication/sql-server-replication.md).
 
 Для настройки репликации в Linux используйте хранимые процедуры SQL Server Management Studio (SSMS) или Transact-SQL.
 
@@ -93,7 +95,7 @@ ms.locfileid: "67895938"
 
 В обозревателе объектов щелкните правой кнопкой мыши **Репликация** и выберите **Запустить монитор репликации**.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Основные понятия. Репликация SQL Server в Linux](sql-server-linux-replication.md)
 

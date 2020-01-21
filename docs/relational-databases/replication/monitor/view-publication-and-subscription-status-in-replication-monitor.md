@@ -1,6 +1,7 @@
 ---
-title: Просмотр состояний публикаций и подписок в мониторе репликации | Документация Майкрософт
-ms.custom: ''
+title: Просмотр состояний публикаций и подписок в мониторе репликации
+description: Узнайте, как просматривать состояние публикации и подписки с помощью монитора репликации в SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -22,16 +23,16 @@ ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 51dafccba54e66ff9f6ed9d7fd6c7e4159c8ef19
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: bc233524eed394001b0b3fb087d7273c8ead8009
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770543"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322280"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>Просмотр состояний публикаций и подписок в мониторе репликации
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  Монитор репликации[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] отображает сведения о состоянии публикаций и подписок:  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Монитор репликации отображает сведения о состоянии публикаций и подписок:  
   
 -   Состояние публикации определяется наиболее приоритетным состоянием ее подписок. Например, если в одной подписке на публикацию содержится ошибка, в другой — проблема с производительностью, для публикации отображается состояние ошибки.  
   
@@ -66,9 +67,9 @@ ms.locfileid: "68770543"
   
 |Состояние|Значок|  
 |------------|----------|  
-|Ошибка|![Значок интерфейса пользователя: ошибка](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "Значок интерфейса пользователя: ошибка")|  
-|Критическая производительность|![Значок интерфейса пользователя: предупреждение](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Значок интерфейса пользователя: предупреждение")|  
-|Повтор последней невыполненной команды|![Значок интерфейса пользователя: повторное выполнение агента репликации](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "Значок интерфейса пользователя: повторное выполнение агента репликации")|  
+|Ошибка|![Значок пользовательского интерфейса: ошибка](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "Значок пользовательского интерфейса: ошибка")|  
+|Критическая производительность|![Значок пользовательского интерфейса: предупреждение](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Значок пользовательского интерфейса: предупреждение")|  
+|Повтор последней невыполненной команды|![Значок пользовательского интерфейса: повторная попытка агента репликации](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "Значок пользовательского интерфейса: повторная попытка агента репликации")|  
 |OK|none|  
   
 ## <a name="subscription-status-values"></a>Значения состояния подписки  
@@ -80,37 +81,37 @@ ms.locfileid: "68770543"
   
 |Состояние|Значок|  
 |------------|----------|  
-|Ошибка|![Значок интерфейса пользователя: ошибка](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "Значок интерфейса пользователя: ошибка")|  
-|Критическая производительность|![Значок интерфейса пользователя: предупреждение](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Значок интерфейса пользователя: предупреждение")|  
-|Срок действия скоро истекает или истек|![Значок интерфейса пользователя: предупреждение](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Значок интерфейса пользователя: предупреждение")|  
-|Неинициализированная подписка|![Значок интерфейса пользователя: предупреждение](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Значок интерфейса пользователя: предупреждение")|  
-|Повтор последней невыполненной команды|![Значок интерфейса пользователя: повторное выполнение агента репликации](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "Значок интерфейса пользователя: повторное выполнение агента репликации")|  
-|Не выполняется|![Значок интерфейса пользователя: остановка агента репликации](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "Значок интерфейса пользователя: остановка агента репликации")|  
-|Запущен|![Значок интерфейса пользователя: выполнение агента репликации](../../../relational-databases/replication/monitor/media/repl-icon-running.gif "Значок интерфейса пользователя: выполнение агента репликации")|  
+|Ошибка|![Значок пользовательского интерфейса: ошибка](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "Значок пользовательского интерфейса: ошибка")|  
+|Критическая производительность|![Значок пользовательского интерфейса: предупреждение](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Значок пользовательского интерфейса: предупреждение")|  
+|Срок действия скоро истекает или истек|![Значок пользовательского интерфейса: предупреждение](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Значок пользовательского интерфейса: предупреждение")|  
+|Неинициализированная подписка|![Значок пользовательского интерфейса: предупреждение](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Значок пользовательского интерфейса: предупреждение")|  
+|Повтор последней невыполненной команды|![Значок пользовательского интерфейса: повторная попытка агента репликации](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "Значок пользовательского интерфейса: повторная попытка агента репликации")|  
+|Не выполняется|![Значок пользовательского интерфейса: агент репликации остановлен](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "Значок пользовательского интерфейса: агент репликации остановлен")|  
+|Запущен|![Значок пользовательского интерфейса: агент репликации запущен](../../../relational-databases/replication/monitor/media/repl-icon-running.gif "Значок пользовательского интерфейса: агент репликации запущен")|  
   
 ### <a name="merge-subscriptions"></a>Подписки на публикацию слиянием  
   
 |Состояние|Значок|  
 |------------|----------|  
-|Ошибка|![Значок интерфейса пользователя: ошибка](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "Значок интерфейса пользователя: ошибка")|  
-|Критическая производительность|![Значок интерфейса пользователя: предупреждение](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Значок интерфейса пользователя: предупреждение")|  
-|Длительное слияние|![Значок интерфейса пользователя: предупреждение](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Значок интерфейса пользователя: предупреждение")|  
-|Срок действия скоро истекает или истек|![Значок интерфейса пользователя: предупреждение](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Значок интерфейса пользователя: предупреждение")|  
-|Неинициализированная подписка|![Значок интерфейса пользователя: предупреждение](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Значок интерфейса пользователя: предупреждение")|  
-|Повтор последней невыполненной команды|![Значок интерфейса пользователя: повторное выполнение агента репликации](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "Значок интерфейса пользователя: повторное выполнение агента репликации")|  
-|Синхронизация|![Значок интерфейса пользователя: выполнение агента репликации](../../../relational-databases/replication/monitor/media/repl-icon-running.gif "Значок интерфейса пользователя: выполнение агента репликации")|  
-|Не синхронизируется|![Значок интерфейса пользователя: остановка агента репликации](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "Значок интерфейса пользователя: остановка агента репликации")|  
+|Ошибка|![Значок пользовательского интерфейса: ошибка](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "Значок пользовательского интерфейса: ошибка")|  
+|Критическая производительность|![Значок пользовательского интерфейса: предупреждение](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Значок пользовательского интерфейса: предупреждение")|  
+|Длительное слияние|![Значок пользовательского интерфейса: предупреждение](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Значок пользовательского интерфейса: предупреждение")|  
+|Срок действия скоро истекает или истек|![Значок пользовательского интерфейса: предупреждение](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Значок пользовательского интерфейса: предупреждение")|  
+|Неинициализированная подписка|![Значок пользовательского интерфейса: предупреждение](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Значок пользовательского интерфейса: предупреждение")|  
+|Повтор последней невыполненной команды|![Значок пользовательского интерфейса: повторная попытка агента репликации](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "Значок пользовательского интерфейса: повторная попытка агента репликации")|  
+|Синхронизация|![Значок пользовательского интерфейса: агент репликации запущен](../../../relational-databases/replication/monitor/media/repl-icon-running.gif "Значок пользовательского интерфейса: агент репликации запущен")|  
+|Не синхронизируется|![Значок пользовательского интерфейса: агент репликации остановлен](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "Значок пользовательского интерфейса: агент репликации остановлен")|  
   
 ### <a name="snapshot-subscriptions"></a>Подписки моментальных снимков  
   
 |Состояние|Значок|  
 |------------|----------|  
-|Ошибка|![Значок интерфейса пользователя: ошибка](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "Значок интерфейса пользователя: ошибка")|  
-|Срок действия скоро истекает или истек|![Значок интерфейса пользователя: предупреждение](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Значок интерфейса пользователя: предупреждение")|  
-|Неинициализированная подписка|![Значок интерфейса пользователя: предупреждение](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Значок интерфейса пользователя: предупреждение")|  
-|Повтор последней невыполненной команды|![Значок интерфейса пользователя: повторное выполнение агента репликации](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "Значок интерфейса пользователя: повторное выполнение агента репликации")|  
-|Синхронизация|![Значок интерфейса пользователя: выполнение агента репликации](../../../relational-databases/replication/monitor/media/repl-icon-running.gif "Значок интерфейса пользователя: выполнение агента репликации")|  
-|Не синхронизируется|![Значок интерфейса пользователя: остановка агента репликации](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "Значок интерфейса пользователя: остановка агента репликации")|  
+|Ошибка|![Значок пользовательского интерфейса: ошибка](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "Значок пользовательского интерфейса: ошибка")|  
+|Срок действия скоро истекает или истек|![Значок пользовательского интерфейса: предупреждение](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Значок пользовательского интерфейса: предупреждение")|  
+|Неинициализированная подписка|![Значок пользовательского интерфейса: предупреждение](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Значок пользовательского интерфейса: предупреждение")|  
+|Повтор последней невыполненной команды|![Значок пользовательского интерфейса: повторная попытка агента репликации](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "Значок пользовательского интерфейса: повторная попытка агента репликации")|  
+|Синхронизация|![Значок пользовательского интерфейса: агент репликации запущен](../../../relational-databases/replication/monitor/media/repl-icon-running.gif "Значок пользовательского интерфейса: агент репликации запущен")|  
+|Не синхронизируется|![Значок пользовательского интерфейса: агент репликации остановлен](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "Значок пользовательского интерфейса: агент репликации остановлен")|  
   
 ## <a name="see-also"></a>См. также:  
  [Наблюдение за репликацией](../../../relational-databases/replication/monitor/monitoring-replication.md)  

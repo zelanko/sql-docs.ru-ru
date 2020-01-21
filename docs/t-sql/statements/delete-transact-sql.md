@@ -1,9 +1,8 @@
 ---
 title: DELETE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 05/10/2017
+ms.date: 12/30/2019
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -26,14 +25,15 @@ ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca3a44c1829cc05eac5a412a2b2292e84d3d1bc1
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: ee54971547e141d06fb2688ab4a69b65bda4c00a
+ms.sourcegitcommit: 4933934fad9f3c3e16406952ed964fbd362ee086
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73983241"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75548282"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Удаляет одну или несколько строк из таблицы или представления в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -82,7 +82,8 @@ DELETE
 ```  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
-DELETE FROM [database_name . [ schema ] . | schema. ] table_name    
+DELETE 
+    [ FROM [database_name . [ schema ] . | schema. ] table_name ]   
     [ WHERE <search_condition> ]   
     [ OPTION ( <query_options> [ ,...n ]  ) ]  
 [; ]  
@@ -228,7 +229,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
 ###  <a name="BasicSyntax"></a> Базовый синтаксис  
  В примерах в этом разделе описывается базовая функциональность инструкции DELETE с помощью минимального необходимого синтаксиса.  
   
-#### <a name="a-using-delete-with-no-where-clause"></a>А. Использование инструкции DELETE без предложения WHERE  
+#### <a name="a-using-delete-with-no-where-clause"></a>A. Использование инструкции DELETE без предложения WHERE  
  Следующий пример удаляет все строки из таблицы `SalesPersonQuotaHistory` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] , поскольку не указано предложение WHERE, ограничивающее количество удаляемых строк.  
   
 ```sql
@@ -258,7 +259,7 @@ PRINT 'Number of rows deleted is ' + CAST(@@ROWCOUNT as char(3));
 ```  
   
 #### <a name="c-using-a-cursor-to-determine-the-row-to-delete"></a>В. Использование курсора для определения удаляемой строки  
- Следующий пример удаляет одну строку из таблицы `EmployeePayHistory` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] с помощью курсора `my_cursor`. Операция удаления затрагивает только одну строку, выбранную в данный момент курсором.  
+ Следующий пример удаляет одну строку из таблицы `EmployeePayHistory` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] с помощью курсора `complex_cursor`. Операция удаления затрагивает только одну строку, выбранную в данный момент курсором.  
   
 ```sql
 DECLARE complex_cursor CURSOR FOR  
@@ -470,6 +471,16 @@ WHERE ProductKey IN (
     WHERE T2.EnglishProductSubcategoryName = 'Road Bikes' )  
 OPTION ( LABEL = N'CustomJoin', HASH JOIN ) ;  
 ```  
+
+### <a name="o-delete-using-a-where-clause"></a>П. Удаление с помощью предложения WHERE
+
+В этом запросе показано, как удалить с помощью предложения WHERE вместо предложения FROM.
+
+```sql
+DELETE tableA WHERE EXISTS (
+SELECT TOP 1 1 FROM tableB tb WHERE tb.col1 = tableA.col1
+)
+```
   
 ## <a name="see-also"></a>См. также:  
  [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)   

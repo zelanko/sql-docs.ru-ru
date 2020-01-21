@@ -1,7 +1,7 @@
 ---
 title: Предложение OUTPUT (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 08/09/2017
+ms.date: 01/14/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 13afbab4c154b39fe7762d39c0d431ce17848213
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2122954c2ce126441eba6d5d05db69e9a8bfa30e
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901875"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952438"
 ---
 # <a name="output-clause-transact-sql"></a>Предложение OUTPUT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -228,7 +228,7 @@ DELETE Sales.ShoppingCartItem
 ## <a name="data-types"></a>Типы данных  
  Предложение OUTPUT поддерживает типы данных больших объектов: **nvarchar(max)** , **varchar(max)** , **varbinary(max)** , **text**, **ntext**, **image** и **xml**. Если в инструкции UPDATE указано предложение .WRITE для изменения столбца **nvarchar(max)** , **varchar(max)** или **varbinary(max)** , то возвращаются полные образы значений до и после изменения, если на них есть ссылки. Функция TEXTPTR( ) не может входить в выражение, определенное в предложении OUTPUT для столбца, имеющего тип **text**, **ntext** или **image**.  
   
-## <a name="queues"></a>Очереди;  
+## <a name="queues"></a>Очереди  
  Предложение OUTPUT может применяться в приложениях, которые применяют таблицы в качестве очередей или для хранения промежуточных результирующих наборов, то есть в приложениях, которые постоянно добавляют и удаляют строки из таблиц. В следующем примере предложение OUTPUT указано в инструкции DELETE и возвращает удаленную строку вызывающему приложению.  
   
 ```  
@@ -421,7 +421,7 @@ GO
   
 ```  
   
-### <a name="e-using-output-into-with-fromtablename-in-an-update-statement"></a>Д. Применение предложения OUTPUT INTO с from_table_name в инструкции UPDATE  
+### <a name="e-using-output-into-with-from_table_name-in-an-update-statement"></a>Д. Применение предложения OUTPUT INTO с from_table_name в инструкции UPDATE  
  В приведенном ниже примере производится обновление столбца `ScrapReasonID` таблицы `WorkOrder` для всех заказов на производство с указанными значениями `ProductID` и `ScrapReasonID`. Предложение `OUTPUT INTO` возвращает значения из обновляемой таблицы (`WorkOrder`), а также из таблицы `Product`. Таблица `Product` в предложении `FROM` указывает, какие строки следует обновлять. Для таблицы `WorkOrder` определен триггер `AFTER UPDATE`, поэтому требуется ключевое слово `INTO`.  
   
 ```  
@@ -455,7 +455,7 @@ GO
   
 ```  
   
-### <a name="f-using-output-into-with-fromtablename-in-a-delete-statement"></a>Е. Применение предложения OUTPUT INTO с from_table_name в инструкции DELETE  
+### <a name="f-using-output-into-with-from_table_name-in-a-delete-statement"></a>Е. Применение предложения OUTPUT INTO с from_table_name в инструкции DELETE  
  В следующем примере производится удаление строк из таблицы `ProductProductPhoto` на основе критерия поиска, определенного в предложении `FROM` инструкции `DELETE`. Предложение `OUTPUT` возвращает столбцы из таблицы, из которой производится удаление (`deleted.ProductID`, `deleted.ProductPhotoID`) и столбцы из таблицы `Product`. Эта таблица, указанная в предложении `FROM`, определяет, какие строки следует удалять.  
   
 ```  
@@ -576,9 +576,11 @@ DECLARE @MyTableVar table(
   );  
   
 INSERT INTO dbo.EmployeeSales (LastName, FirstName, CurrentSales)  
-  OUTPUT INSERTED.LastName,   
+  OUTPUT INSERTED.EmployeeID,
+         INSERTED.LastName,   
          INSERTED.FirstName,   
-         INSERTED.CurrentSales  
+         INSERTED.CurrentSales,
+         INSERTED.ProjectedSales
   INTO @MyTableVar  
     SELECT c.LastName, c.FirstName, sp.SalesYTD  
     FROM Sales.SalesPerson AS sp  

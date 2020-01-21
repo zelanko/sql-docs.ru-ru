@@ -1,6 +1,6 @@
 ---
-title: Вызов хранимых процедур, скомпилированных в собственном коде, из приложений для доступа к данным | Документация Майкрософт
-ms.custom: ''
+title: Хранимые процедуры, скомпилированные в собственном коде, — приложения для доступа к данным
+ms.custom: seo-dt-2019
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c05ef1b9807e6786e73c2e772703463adf6818c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: abc9aa1f61d241f3fe24196ad9d8ad4244b951f2
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951086"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412768"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>Вызов хранимых процедур, скомпилированных в собственном коде, из приложений для доступа к данным
 
@@ -44,11 +44,11 @@ ms.locfileid: "67951086"
 - Версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client до [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] не позволяют получить данные только схемы (обнаружение метаданных) о результирующих наборах, возвращенных скомпилированной в собственном коде хранимой процедурой.
   - Используйте вместо этого процедуру [sp_describe_first_result_set (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).
 
-### <a name="odbc"></a>интерфейс ODBC
+### <a name="odbc"></a>ODBC
 
 Следующие рекомендации применимы к вызовам хранимой процедуры, скомпилированным в собственном коде, с помощью драйвера ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.
 
-*Однократный вызов.* Наиболее эффективный способ однократного вызова хранимой процедуры — выполнить прямой вызов RPC с помощью предложений **SQLExecDirect** и ODBC CALL. Не используйте инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXECUTE**. Если хранимая процедура вызывается более одного раза, подготовленное выполнение более эффективно.
+*Однократный вызов.* Наиболее эффективный способ однократного вызова хранимой процедуры — выполнить прямой вызов RPC с помощью предложений **SQLExecDirect** и ODBC CALL. Не используйте инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)]**EXECUTE**. Если хранимая процедура вызывается более одного раза, подготовленное выполнение более эффективно.
 
 *Многократный вызов.* Наиболее эффективный способ неоднократного вызова хранимой процедуры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — через подготовленные вызовы процедур RPC. Подготовленные вызовы RPC выполняются следующим образом с помощью драйвера ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.
 

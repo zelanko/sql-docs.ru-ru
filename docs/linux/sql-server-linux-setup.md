@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: a6cd31b1f67d37f1316db9db5d4356bbb5e31d3b
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 57041b528186bde743abfeec293e696b0155d0e1
+ms.sourcegitcommit: 21e6a0c1c6152e625712a5904fce29effb08a2f9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593665"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75884009"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Руководство по установке SQL Server на Linux
 
@@ -59,7 +59,7 @@ SQL Server поддерживается на платформах Red Hat Enterp
 
 | Платформа | Поддерживаемые версии | Получить
 |-----|-----|-----
-| **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6 | [Получить RHEL 7.6](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
+| **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6, 8.0 | [Получить RHEL 8.0](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
 | **SUSE Linux Enterprise Server** | v12 SP2, SP3, SP4 | [Получить SLES v12](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [Получить Ubuntu 16.04](http://releases.ubuntu.com/xenial/)
 | **Подсистема Docker** | 1.8 и выше | [Получить Docker](https://www.docker.com/get-started)
@@ -88,7 +88,7 @@ SQL Server поддерживается на платформах Red Hat Enterp
 
 - Версия NFS должна быть **4.2 или более поздняя**. Более старые версии NFS не поддерживают необходимые функции, такие как использование команды fallocate и создание разреженных файлов, общие для современных файловых систем.
 - При подключении NFS следует указать только каталоги **/var/opt/mssql**. Другие файлы, например системные двоичные файлы SQL Server, не поддерживаются.
-- При подключении удаленной общей папки клиенты NFS должны использовать параметр "nolock" .
+- При подключении удаленной общей папки клиенты NFS должны использовать параметр nolock.
 
 ## <a id="repositories"></a> Настройка исходных репозиториев
 

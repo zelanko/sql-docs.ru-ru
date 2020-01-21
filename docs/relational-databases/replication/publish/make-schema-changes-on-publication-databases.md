@@ -18,16 +18,16 @@ ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: f69d57fd4d81e150df3694386ebe44650a13a9a8
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 3d0d6fd90b9ec4c933da13d2a3780213095de721
+ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769871"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74542061"
 ---
-# <a name="make-schema-changes-on-publication-databases"></a>Внесение изменений в схемы баз данных публикации
+# <a name="make-schema-changes-on-publication-databases"></a>Внесение изменений схем в базы данных публикации
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  Репликация поддерживает широкий диапазон изменений схем для опубликованных объектов. Когда вы вносите любое из следующих изменений схемы в соответствующий опубликованный объект в издателе [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], это изменение распространяется по умолчанию на всех подписчиков [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
+  Репликация поддерживает широкий диапазон изменений схем для опубликованных объектов. При внесении любого из следующих изменений схемы в соответствующий опубликованный объект на издателе [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] это изменение распространяется по умолчанию на все подписчики [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
 -   ALTER TABLE  
   
@@ -73,7 +73,7 @@ ms.locfileid: "68769871"
   
 -   Любой объект на подписчике, на который имеются ссылки, при добавлении внешнего ключа должен иметь то же имя и того же владельца, что и соответствующий объект на издателе.  
   
--   Явное добавление, удаление и изменение индексов не поддерживаются. Поддерживается неявное создание индексов для ограничений (например, для ограничения первичного ключа).  
+-   Явное добавление, удаление или изменение индексов не реплицируются, и любое изменение, включающее явный индекс, должно выполняться отдельно для каждого набора реплик. Поддерживается неявное создание индексов для ограничений (например, для ограничения первичного ключа).  
   
 -   Изменение или удаление столбцов идентификаторов, управляемых репликацией, не поддерживается. Дополнительные сведения об автоматическом управлении столбцами идентификаторов см. в статье [Репликация столбцов идентификаторов](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
   

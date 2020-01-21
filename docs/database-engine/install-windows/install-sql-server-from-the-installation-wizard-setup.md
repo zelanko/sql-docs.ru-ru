@@ -1,7 +1,7 @@
 ---
-title: Установка SQL Server 2016 с помощью мастера установки (программа установки) | Документы Майкрософт
-ms.custom: ''
-ms.date: 07/26/2019
+title: Установка с помощью графического пользовательского интерфейса
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -14,12 +14,12 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 32f7c238a08a7da31d455421ca9fc00d0f8d6bdb
-ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
+ms.openlocfilehash: c183b1830bc5625171cfbb3372b0dbbb6c99e236
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73962374"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75259024"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Установка SQL Server с помощью мастера установки (программа установки)
 
@@ -27,7 +27,7 @@ ms.locfileid: "73962374"
 
 Эта статья описывает установку SQL Server с помощью мастера установки. Она применима к [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)] и [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)].
 
-В этой статье приведена пошаговая процедура установки нового экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью мастера установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В мастере установки доступно единое дерево для установки всех компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], поэтому их не требуется устанавливать по отдельности. Сведения об установке отдельных компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Установка отдельных компонентов](../../database-engine/install-windows/install-sql-server.md#how-to-install-individual-components).  
+В этой статье приведена пошаговая процедура установки нового экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью мастера установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В мастере установки доступно единое дерево для установки всех компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], поэтому их не требуется устанавливать по отдельности. Сведения об установке отдельных компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Установка отдельных компонентов](../../database-engine/install-windows/install-sql-server.md#individual-component-installation).  
 
 Другие способы установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в следующих статьях.  
 
@@ -83,7 +83,7 @@ ms.locfileid: "73962374"
 
 1. Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на этом компьютере устанавливается впервые, программа установки пропускает страницу **Тип установки** и переходит сразу к странице **Выбор компонентов**. Если в системе уже установлен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], выберите на экране **Тип установки** новую установку или добавьте компоненты в существующую. Чтобы продолжить работу, щелкните **Далее**.
   
-1. Выберите компоненты для установки на странице **Выбор компонентов**. Например, чтобы установить новый экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)], установите флажок **Службы ядра СУБД**.
+1. Выберите компоненты для установки на странице **Выбор компонентов**. Например, чтобы установить новый экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)], установите флажок **Службы ядра СУБД**.
 
     После выбора имени компонента описание его группы отображается на панели **Описание компонентов** . Можно установить любое сочетание компонентов (устанавливаемые компоненты отмечаются флажками). Дополнительные сведения см. в статьях о выпусках и компонентах [SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md) и [SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
   
@@ -149,7 +149,7 @@ ms.locfileid: "73962374"
      На странице **Конфигурация ядра СУБД — каталоги данных** укажите каталоги установки, отличающиеся от заданных по умолчанию. Чтобы произвести установку в каталог по умолчанию, щелкните **Далее**.  
   
     > [!IMPORTANT]  
-    > Если при установке были указаны каталоги, отличающиеся от каталогов по умолчанию, проверьте их уникальность для этого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ни один из каталогов, заданных в этом диалоговом окне, не должен совпадать с каталогами, указанными для других экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+    > Если при установке были указаны каталоги, отличающиеся от каталогов по умолчанию, проверьте их уникальность для данного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ни один из каталогов, заданных в этом диалоговом окне, не должен совпадать с каталогами, указанными для других экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
      Дополнительные сведения см. в разделе [Настройка ядра СУБД — каталоги данных](../../sql-server/install/instance-configuration.md#datadir).
 
@@ -175,7 +175,7 @@ ms.locfileid: "73962374"
     > [!IMPORTANT]  
     > Если при установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вы укажете одинаковые пути в параметрах INSTANCEDIR и SQLUSERDBDIR, агент SQL Server и полнотекстовый поиск не будут запускаться из-за отсутствия разрешений.  
     >  
-    > Если при установке были указаны каталоги, отличающиеся от каталогов по умолчанию, проверьте их уникальность для этого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ни один из каталогов, заданных в этом диалоговом окне, не должен совпадать с каталогами, указанными для других экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+    > Если при установке были указаны каталоги, отличающиеся от каталогов по умолчанию, проверьте их уникальность для данного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ни один из каталогов, заданных в этом диалоговом окне, не должен совпадать с каталогами, указанными для других экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
     Дополнительные сведения см. в разделе [Настройка служб Analysis Services — страница каталогов данных](../../sql-server/install/instance-configuration.md#analysis-services-configuration---data-directories-page).  
 
@@ -249,7 +249,7 @@ ms.locfileid: "73962374"
 
 1. Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на этом компьютере устанавливается впервые, программа установки пропускает страницу **Тип установки** и переходит сразу к странице **Выбор компонентов**. Если в системе уже установлен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], выберите на экране **Тип установки** новую установку или добавьте компоненты в существующую. Чтобы продолжить работу, щелкните **Далее**.
   
-1. Выберите компоненты для установки на странице **Выбор компонентов**. Например, чтобы установить новый экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)], установите флажок **Службы ядра СУБД**.
+1. Выберите компоненты для установки на странице **Выбор компонентов**. Например, чтобы установить новый экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)], установите флажок **Службы ядра СУБД**.
 
     После выбора имени компонента описание его группы отображается на панели **Описание компонентов** . Можно установить любое сочетание компонентов (устанавливаемые компоненты отмечаются флажками). Дополнительные сведения см. в статьях о выпусках и компонентах [SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md) и [SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
   
@@ -312,7 +312,7 @@ ms.locfileid: "73962374"
      На странице **Конфигурация ядра СУБД — каталоги данных** укажите каталоги установки, отличающиеся от заданных по умолчанию. Чтобы произвести установку в каталог по умолчанию, щелкните **Далее**.  
   
     > [!IMPORTANT]  
-    > Если при установке были указаны каталоги, отличающиеся от каталогов по умолчанию, проверьте их уникальность для этого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ни один из каталогов, заданных в этом диалоговом окне, не должен совпадать с каталогами, указанными для других экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+    > Если при установке были указаны каталоги, отличающиеся от каталогов по умолчанию, проверьте их уникальность для данного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ни один из каталогов, заданных в этом диалоговом окне, не должен совпадать с каталогами, указанными для других экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
      Дополнительные сведения см. в разделе [Настройка ядра СУБД — каталоги данных](../../sql-server/install/instance-configuration.md#datadir).
 
@@ -351,7 +351,7 @@ ms.locfileid: "73962374"
     > [!IMPORTANT]  
     > Если при установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вы укажете одинаковые пути в параметрах INSTANCEDIR и SQLUSERDBDIR, агент SQL Server и полнотекстовый поиск не будут запускаться из-за отсутствия разрешений.  
     >  
-    > Если при установке были указаны каталоги, отличающиеся от каталогов по умолчанию, проверьте их уникальность для этого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ни один из каталогов, заданных в этом диалоговом окне, не должен совпадать с каталогами, указанными для других экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+    > Если при установке были указаны каталоги, отличающиеся от каталогов по умолчанию, проверьте их уникальность для данного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ни один из каталогов, заданных в этом диалоговом окне, не должен совпадать с каталогами, указанными для других экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
     Дополнительные сведения см. в разделе [Настройка служб Analysis Services — страница каталогов данных](../../sql-server/install/instance-configuration.md#analysis-services-configuration---data-directories-page).  
 

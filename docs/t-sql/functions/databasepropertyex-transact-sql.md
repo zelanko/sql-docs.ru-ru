@@ -20,12 +20,12 @@ ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 033756cb65cc217e6c9d915715f5740596694147
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 91301fcfb0376e1bd256ac60c59c1c0b65dfbbe4
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982176"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75256096"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,10 +41,10 @@ DATABASEPROPERTYEX ( database , property )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-*базой данных*  
+*database*  
 Выражение, указывающее имя базы данных, для которой `DATABASEPROPERTYEX` возвращает значение именованного свойства. Аргумент *database* имеет тип данных **nvarchar(128)** .  
 
-Для [!INCLUDE[ssSDS](../../includes/sssds-md.md)] `DATABASEPROPERTYEX` должно быть именем текущей базы данных. Возвращает значение NULL для всех свойств, если указано другое имя базы данных.
+Для [!INCLUDE[ssSDS](../../includes/sssds-md.md)]`DATABASEPROPERTYEX` должно быть именем текущей базы данных. Возвращает значение NULL для всех свойств, если указано другое имя базы данных.
   
 *property*  
 Выражение, которое задает имя возвращаемого свойства базы данных. Аргумент *property* имеет тип данных **varchar(128)** и может принимать одно из значений, приведенных в таблице ниже.
@@ -52,11 +52,11 @@ DATABASEPROPERTYEX ( database , property )
 > [!NOTE]  
 >  Если база данных еще не запущена, то вызовы `DATABASEPROPERTYEX` возвращают значения NULL, если `DATABASEPROPERTYEX` получает эти значения путем прямого доступа к базе данных, а не из метаданных. База данных, для которой параметр AUTO_CLOSE имеет значение ON или которая находится вне сети по иной причине, определяется как "незапущенная".  
   
-|Свойство|Описание|Возвращенное значение|  
+|Свойство|Description|Возвращенное значение|  
 |---|---|---|
 |Параметры сортировки|Имя параметров сортировки, установленных для базы данных по умолчанию.|Имя параметров сортировки.<br /><br /> NULL: база данных не запущена.<br /><br /> Базовый тип данных: **nvarchar(128)**|  
 |ComparisonStyle|Стиль сравнения Windows для параметров сортировки. Используйте приведенные ниже значения стиля с целью построения битовой карты для готового значения ComparisonStyle.<br /><br /> Игнорировать регистр: 1<br /><br /> Не учитывать диакритические знаки: 2<br /><br /> Не учитывать тип японской азбуки: 65536<br /><br /> Не учитывать ширину: 131072<br /><br /> <br /><br /> Например, значение по умолчанию — 196609 — образуется в результате сочетания параметров «Без учета регистра», «Без учета типа японской азбуки» и «Без учета ширины».|Возвращает стиль сравнения.<br /><br /> Возвращает значение 0 для всех двоичных параметров сортировки.<br /><br /> Базовый тип данных: **int**|  
-|Выпуск|Уровень выпуска или службы базы данных.|**Применимо к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br /> <br /><br /> Общее назначение<br /><br /> Критические задачи для бизнеса<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium<br /><br /> Системный (для базы данных master)<br /><br /> NULL: база данных не запущена.<br /><br /> Базовый тип данных: **nvarchar**(64)|  
+|Выпуск|Уровень выпуска или службы базы данных.|**Применимо к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br /> <br /><br /> Общее назначение<br /><br /> Критически важный для бизнеса<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium<br /><br /> Системный (для базы данных master)<br /><br /> NULL: база данных не запущена.<br /><br /> Базовый тип данных: **nvarchar**(64)|  
 |IsAnsiNullDefault|База данных следует правилам ISO по разрешению значений NULL.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные<br /><br /> Базовый тип данных: **int**|  
 |IsAnsiNullsEnabled|При всех сравнениях со значением NULL результат не определен.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные<br /><br /> Базовый тип данных: **int**|  
 |IsAnsiPaddingEnabled|Строки перед сравнением или вставкой дополняются до одной и той же длины.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные<br /><br /> Базовый тип данных: **int**|  
@@ -92,7 +92,7 @@ DATABASEPROPERTYEX ( database , property )
 |ServiceObjective|Описывает уровень производительности базы данных в [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] или [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].|Это может быть:<br /><br /> NULL = база данных не запущена<br /><br /> Общий (для выпусков Web или Business)<br /><br /> Basic<br /><br /> S0<br /><br /> S1<br /><br /> S2<br /><br /> S3<br /><br /> P1<br /><br /> P2<br /><br /> P3<br /><br /> ElasticPool<br /><br /> Системный (для базы данных master)<br /><br /> Базовый тип данных: **nvarchar(32)**|  
 |ServiceObjectiveId|Идентификатор цели службы в [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|**uniqueidentifier**, определяющий цель службы.|  
 |SQLSortOrder|Идентификатор порядка сортировки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], поддерживаемого в предыдущих версиях SQL Server.|0: в базе данных используются параметры сортировки Windows<br /><br /> >0: идентификатор порядка сортировки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> NULL: недопустимые входные данные, или база данных не запущена<br /><br /> Базовый тип данных: **tinyint**|  
-|Состояние|Состояние базы данных.|ONLINE: база данных доступна для запросов.<br /><br /> **Примечание.** Состояние базы данных ONLINE может быть возвращено, когда база открывается и еще не восстановилась. Чтобы определить, может ли база данных принимать соединения, запросите свойство Collation функции **DATABASEPROPERTYEX**. База данных может принимать соединения, если параметры сортировки базы данных возвращают значение, отличное от NULL. Применительно к базам данных AlwaysOn выполните запрос к столбцу database_state или database_state_desc представления `sys.dm_hadr_database_replica_states`.<br /><br /> OFFLINE: база данных явным образом переведена в режим "вне сети".<br /><br /> RESTORING: началось восстановление базы данных.<br /><br /> RECOVERING: восстановление базы данных началось, и она еще не готова к запросам.<br /><br /> SUSPECT: база данных не восстанавливалась.<br /><br /> EMERGENCY: база данных находится в аварийном состоянии и доступна только для чтения. Доступ ограничен членами роли sysadmin.<br /><br /> Базовый тип данных: **nvarchar(128)**|  
+|Состояние|Состояние базы данных.|ONLINE: база данных доступна для запросов.<br /><br /> **Примечание.** Функция может вернуть состояние ONLINE, пока база данных открывается и еще не восстановлена. Чтобы определить, может ли база данных в состоянии ONLINE принимать соединения, запросите свойство Collation функции **DATABASEPROPERTYEX**. База данных в состоянии ONLINE может принимать соединения, если параметры сортировки базы данных возвращают значение, отличное от NULL. Применительно к базам данных AlwaysOn выполните запрос к столбцу database_state или database_state_desc представления `sys.dm_hadr_database_replica_states`.<br /><br /> OFFLINE: база данных явным образом переведена в режим "вне сети".<br /><br /> RESTORING: началось восстановление базы данных.<br /><br /> RECOVERING: восстановление базы данных началось, и она еще не готова к запросам.<br /><br /> SUSPECT: база данных не восстанавливалась.<br /><br /> EMERGENCY: база данных находится в аварийном состоянии и доступна только для чтения. Доступ ограничен членами роли sysadmin.<br /><br /> Базовый тип данных: **nvarchar(128)**|  
 |Updateability|Указывает, можно ли изменять данные.|READ_ONLY: база данных поддерживает операции чтения, но не изменения данных.<br /><br /> READ_WRITE: база данных поддерживает операции чтения и изменения данных.<br /><br /> Базовый тип данных: **nvarchar(128)**|  
 |UserAccess|Указывает пользователей, имеющих доступ к базе данных.|SINGLE_USER: в каждый момент времени доступ имеет только один пользователь db_owner, dbcreator или sysadmin<br /><br /> RESTRICTED_USER: только члены ролей db_owner, dbcreator или sysadmin<br /><br /> MULTI_USER: все пользователи<br /><br /> Базовый тип данных: **nvarchar(128)**|  
 |Версия|Внутренний номер версии того кода [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], с которым была создана база данных. [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|Номер версии: база данных открыта.<br /><br /> NULL: база данных не запущена.<br /><br /> Базовый тип данных: **int**| 
