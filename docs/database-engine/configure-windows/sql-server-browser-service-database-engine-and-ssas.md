@@ -24,7 +24,7 @@ ms.locfileid: "68028629"
 ---
 # <a name="sql-server-browser-service-database-engine-and-ssas"></a>Служба обозревателя SQL Server (компонент Database Engine и SSAS)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Браузер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]выполняется как служба Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] прослушивает входящие запросы к ресурсам [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и предоставляет сведения об экземплярах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , установленных на компьютере. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предназначен для выполнения трех задач:  
+  Браузер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется как служба Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] прослушивает входящие запросы к ресурсам [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и предоставляет сведения об экземплярах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], установленных на компьютере. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предназначен для выполнения трех задач:  
   
 -   просмотра списка доступных серверов;  
   
@@ -32,15 +32,15 @@ ms.locfileid: "68028629"
   
 -   соединения с конечными точками через выделенное административное соединение (DAC).  
   
- Для каждого экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и служб [!INCLUDE[ssAS](../../includes/ssas-md.md)]служба « [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , браузер» (sqlbrowser) выдает имя и номер версии экземпляра. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устанавливается вместе с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] и [!INCLUDE[ssAS](../../includes/ssas-md.md)] получают от службы "Браузер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]" (sqlbrowser) имя и номер версии для каждого экземпляра. Браузер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устанавливается вместе с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настраивается в ходе установки или с помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . По умолчанию служба « [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , браузер» запускается автоматически:  
+ Браузер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настраивается в ходе установки или с помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. По умолчанию служба "Браузер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]" запускается автоматически:  
   
 -   при обновлении установки;  
   
 -   при установке в кластере;  
   
--   при установке именованного экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , включая все экземпляры SQL Server Express;  
+-   при установке именованного экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], включая все экземпляры SQL Server Express;  
   
 -   при установке именованного экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
