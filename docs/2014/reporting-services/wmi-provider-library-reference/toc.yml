@@ -38,7 +38,7 @@
       href: configurationsetting-property-databaselogontimeout.md
     - name: DatabaseLogonType
       href: configurationsetting-property-databaselogontype.md
-    - name: DatabaseName
+    - name: имя_базы_данных
       href: configurationsetting-property-databasename.md
     - name: DatabaseQueryTimeout
       href: configurationsetting-property-databasequerytimeout.md

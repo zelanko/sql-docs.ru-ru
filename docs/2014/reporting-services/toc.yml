@@ -43,7 +43,7 @@
       items:
         - name: RSReportServer Configuration File
           href: report-server/rsreportserver-config-configuration-file.md
-        - name: Файл конфигурации ReportingServicesService
+        - name: 'ReportingServicesService, файл конфигурации'
           href: report-server/reportingservicesservice-configuration-file.md
         - name: 'RSReportDesigner, файл конфигурации'
           href: report-server/rsreportdesigner-configuration-file.md
@@ -79,7 +79,7 @@
       href: what-s-new-in-report-builder-for-sql-server-2014.md
     - name: Запуск построителя отчетов
       href: report-builder/start-report-builder.md
-    - name: Руководство. Создание стандартного отчета с диаграммой в режиме "вне сети"
+    - name: Учебник. Создание стандартного отчета с диаграммой в режиме "вне сети"
       href: report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md
     - name: Планирование отчета
       href: report-design/planning-a-report-report-builder.md

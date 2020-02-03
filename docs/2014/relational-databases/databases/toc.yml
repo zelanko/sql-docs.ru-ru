@@ -22,7 +22,7 @@
       href: modified-features-contained-database.md
     - name: Параметры сортировки автономной базы данных
       href: contained-database-collations.md
-    - name: Security Best Practices with Contained Databases
+    - name: Рекомендации по обеспечению безопасности автономных баз данных
       href: security-best-practices-with-contained-databases.md
     - name: Migrate to a Partially Contained Database
       href: migrate-to-a-partially-contained-database.md

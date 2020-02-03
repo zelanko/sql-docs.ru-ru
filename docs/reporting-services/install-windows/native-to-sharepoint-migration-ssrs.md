@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9a13b2a72e66d069d0a3161bab4af8ce4d430157
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570708"
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>Миграция из собственного режима в режим интеграции с SharePoint (SSRS)
@@ -37,7 +37,7 @@ ms.locfileid: "65570708"
   
     -   Пример rss-скрипта на сайте CodePlex см. здесь: [Скрипт программы RS.exe служб Reporting Services, который переносит содержимое с одного сервера отчетов на другой](https://azuresql.codeplex.com/releases/view/115207)  
   
-    -   [Сценарии и PowerShell со службами Reporting Services](../../reporting-services/tools/scripting-and-powershell-with-reporting-services.md)  
+    -   [Работа с отчетами и PowerShell в Reporting Services](../../reporting-services/tools/scripting-and-powershell-with-reporting-services.md)  
   
  В следующей таблице перечислены объекты служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , которые можно перенести с помощью скриптов.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "65570708"
 |Наборы данных|Да||  
 |Элементы отчетов||После миграции проверьте или обновите путь к элементам отчета.|  
 |Расписания|Да|См. метод ListSchedules в разделе [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md).|  
-|Подписки|Да|См. метод List Subscriptions [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md) и метод <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A> .|  
+|Подписки|да|См. метод List Subscriptions [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md) и метод <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A> .|  
 |Моментальные снимки|||
 
 Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

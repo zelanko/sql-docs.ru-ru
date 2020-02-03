@@ -27,24 +27,24 @@
 - name: Инструкции по работе с помощником по обновлению
   href: upgrade-advisor-how-to-topics.md
   items:
-    - name: Руководство. Установка помощника по обновлению
+    - name: Установка помощника по обновлению
       href: how-to-install-upgrade-advisor.md
-    - name: Руководство. Запуск помощника по обновлению
+    - name: Запуск помощника по обновлению
       href: how-to-launch-upgrade-advisor.md
-    - name: Руководство. Запуск мастера анализа помощника по обновлению
+    - name: Как запустить мастер анализа помощника по обновлению
       href: how-to-run-the-upgrade-advisor-analysis-wizard.md
-    - name: Руководство. Просмотр отчета помощника по обновлению
+    - name: Просмотр отчета помощника по обновлению
       href: how-to-view-an-upgrade-advisor-report.md
-    - name: Руководство. Фильтрация отчетов
+    - name: Фильтрация отчетов
       href: how-to-filter-reports.md
-    - name: Руководство. Export Reports
+    - name: Экспорт отчетов
       href: how-to-export-reports.md
 - name: Справочник по пользовательскому интерфейсу
   href: upgrade-advisor-user-interface-reference.md
   items:
     - name: Компоненты SQL Server
       href: sql-server-components.md
-    - name: Параметры соединения
+    - name: Параметры подключения
       href: connection-parameters.md
     - name: Параметры SQL Server
       href: sql-server-parameters.md
@@ -349,9 +349,9 @@
       href: full-text-search-upgrade-options.md
     - name: Завершение — установка
       href: complete-installation.md
-    - name: 'Компоненты, необходимые для установки'
+    - name: Предварительные требования для установки
       href: installation-prerequisites.md
-    - name: Ход выполнения установки
+    - name: Ход установки
       href: installation-progress.md
     - name: Тип установки
       href: installation-type.md
@@ -424,11 +424,11 @@
   items:
     - name: Установка обновлений из командной строки
       href: ../../database-engine/install-windows/installing-updates-from-the-command-prompt.md
-    - name: Руководство. Проверка успешности установки обновления SQL Server
+    - name: Инструкции. Проверка успешности установки обновления SQL Server
       href: how-to-validate-successful-installation-of-a-sql-server-update.md
     - name: Общие сведения об обслуживании установки SQL Server
       href: overview-of-sql-server-servicing-installation.md
-    - name: Добро пожаловать
+    - name: Экран приветствия
       href: welcome.md
     - name: Условия лицензии
       href: license-terms.md

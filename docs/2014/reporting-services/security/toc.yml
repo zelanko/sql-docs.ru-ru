@@ -44,7 +44,7 @@
           href: secure-my-reports.md
         - name: Создание роли RSExecRole
           href: create-the-rsexecrole.md
-        - name: Определение ролей
+        - name: Определения ролей
           href: role-definitions.md
           items:
             - name: 'Создание, удаление и изменение ролей'

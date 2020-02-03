@@ -1,23 +1,24 @@
 ---
-title: Руководство. Изменение существующих таблиц с помощью запросов | Документация Майкрософт
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: изменить существующую таблицу с помощью запросов
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 58f4de8e-97b4-4bcb-953f-f3d428432491
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 69a3486c837959cf4a92a7ee663225df16918928
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 56411bfffbaebeb07adf23b456a20523342db21d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929605"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241405"
 ---
-# <a name="how-to-edit-an-existing-table-using-queries"></a>Руководство. изменить существующую таблицу с помощью запросов
+# <a name="how-to-edit-an-existing-table-using-queries"></a>Как изменять существующие таблицы с помощью запросов
+
 Вы можете вносить изменения в определение таблицы или ее данные, написав запрос Transact\-SQL. Для просмотра или ввода данных в таблицу с помощью пользовательского интерфейса служит редактор данных, как описано в руководстве по [разработке подключенной базы данных](../ssdt/connected-database-development.md).  
   
 > [!WARNING]  
@@ -31,7 +32,7 @@ ms.locfileid: "67929605"
   
 3.  Установите флажок **Разрешить значения NULL** для столбца **Адрес**. Обратите внимание, что соответствующий код в области скриптов немедленно изменится на `NULL`.  
   
-4.  Обновите базу данных, выполнив шаги, приведенные в разделе [Как обновить подключенную базу данных с помощью Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md).  
+4.  [Обновите подключенную базу данных с помощью Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md).  
   
 ### <a name="to-populate-data-in-new-tables-using-a-transact-sql-query"></a>Заполнение данными новых таблиц с использованием запроса Transact\-SQL  
   

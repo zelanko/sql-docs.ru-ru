@@ -1,6 +1,6 @@
 ---
-title: Свойства служб SQL Server Integration Services (вкладка "Дополнительно") | Документы Майкрософт
-ms.custom: ''
+title: Свойства служб SQL Server Integration Services (вкладка «Дополнительно»)
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: d89cc01f-084b-41b0-8c60-3c6b964d7ad4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: fbed914d8167c320ea36b17a539592e1403085b9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 83928938d5ba9e25909f7d4171630b43fcde0f49
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024074"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306860"
 ---
 # <a name="sql-server-integration-services-properties-advanced-tab"></a>Свойства служб SQL Server Integration Services (вкладка «Дополнительно»)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

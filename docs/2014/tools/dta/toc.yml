@@ -80,7 +80,7 @@
       href: xml-input-file-sample-with-inline-workload-dta.md
     - name: Образец входного XML-файла с пользовательской конфигурацией (DTA)
       href: xml-input-file-sample-with-user-specified-configuration-dta.md
-- name: Руководство. Database Engine Tuning Advisor
+- name: Учебник. помощник по настройке ядра СУБД
   href: tutorial-database-engine-tuning-advisor.md
   items:
     - name: Урок 1. Основы перемещения в помощнике по настройке ядра СУБД
@@ -90,7 +90,7 @@
           href: lesson-1-1-launching-database-engine-tuning-advisor.md
         - name: Настройка параметров и вида средств
           href: lesson-1-2-setting-tool-options-and-layout.md
-    - name: Урок 2. Использование помощника по настройке ядра СУБД
+    - name: Занятие 2. Применение помощника по настройке ядра СУБД
       href: lesson-2-using-database-engine-tuning-advisor.md
       items:
         - name: Настройка рабочей нагрузки
@@ -99,7 +99,7 @@
           href: lesson-1-2-viewing-tuning-recommendations.md
         - name: Просмотр отчетов настройки
           href: lesson-1-3-viewing-tuning-reports.md
-    - name: Урок 3. Использование программы командной строки dta
+    - name: Занятие 3. Использование программы командной строки dta
       href: lesson-3-using-the-dta-command-prompt-utility.md
       items:
         - name: Начало работы с программой командной строки dta и настройка рабочей нагрузки

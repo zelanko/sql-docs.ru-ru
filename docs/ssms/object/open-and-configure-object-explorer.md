@@ -1,6 +1,6 @@
 ---
-title: Открытие и настройка обозревателя объектов | Документация Майкрософт
-ms.custom: ''
+title: Открытие и настройка обозревателя объектов
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: a138ba3d-d00b-420c-917e-e586d590d30f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8e09772c895fd2c5008c9d32d777919092bcd72b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 07a21139575c3eedfddec9f22254fe82a5b5659c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264054"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257135"
 ---
 # <a name="open-and-configure-object-explorer"></a>Открытие и настройка обозревателя объектов
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,6 +31,6 @@ ms.locfileid: "68264054"
 [Обозреватель объектов](../../ssms/object/object-explorer.md)  
 [Подключение к экземпляру из обозревателя объектов](../../ssms/object/connect-to-an-instance-from-object-explorer.md)  
 [Управление объектами с помощью обозревателя объектов](../../ssms/object/manage-objects-by-using-object-explorer.md)  
-[Область сведений обозревателя объектов](../../ssms/object/object-explorer-details-pane.md)  
+[Область сведений в обозревателе объектов](../../ssms/object/object-explorer-details-pane.md)  
 [Пользовательские отчеты в среде Management Studio](../../ssms/object/custom-reports-in-management-studio.md)  
   

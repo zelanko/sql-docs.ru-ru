@@ -108,7 +108,7 @@
           href: ../analytics-platform-system/master-database.md
     - name: Сеансы пользователей
       href: ../analytics-platform-system/user-sessions.md
-    - name: Управление рабочими нагрузками
+    - name: Управление рабочей нагрузкой
       href: ../analytics-platform-system/workload-management.md
       items:
         - name: Задача управления рабочими нагрузками
@@ -142,7 +142,7 @@
           href: ../analytics-platform-system/launch-the-configuration-manager.md
         - name: Топология устройства
           href: ../analytics-platform-system/appliance-topology.md
-        - name: Сброс пароля
+        - name: Сброс паролей
           href: ../analytics-platform-system/password-reset.md
         - name: Конфигурация часового пояса устройства
           href: ../analytics-platform-system/appliance-time-zone-configuration.md

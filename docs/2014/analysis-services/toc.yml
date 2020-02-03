@@ -298,7 +298,7 @@
           href: power-pivot-sharepoint/add-bi-semantic-model-connection-content-type-to-library.md
         - name: Создание соединения семантической модели бизнес-аналитики с книгой PowerPivot
           href: power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md
-        - name: Создание соединения семантической модели бизнес-аналитики с табличным шаблоном базы данных
+        - name: Create a BI Semantic Model Connection to a Tabular Model Database
           href: power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md
         - name: Использование соединения семантической модели бизнес-аналитики в службах Excel или Reporting Services
           href: power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md
@@ -307,7 +307,7 @@
 - name: Справочник по ошибкам и событиям (PowerPivot для SharePoint)
   href: power-pivot-sharepoint/errors-and-events-reference-power-pivot-for-sharepoint.md
   items:
-    - name: 'При попытке установить соединение с внешним источником данных произошла ошибка. Следующие соединения не удалось обновить: данные PowerPivot'
+    - name: 'При попытке установить соединение с внешним источником данных произошла ошибка. Следующие соединения не удалось обновить: Данные PowerPivot'
       href: power-pivot-sharepoint/an-error-occurred-during-an-attempt-to-establish-a-connection.md
     - name: Не удалось загрузить файл или assembly «Microsoft.Data.Services
       href: power-pivot-sharepoint/could-not-load-file-or-assembly-microsoft-data-services.md
@@ -315,7 +315,7 @@
       href: power-pivot-sharepoint/could-not-load-microsoft-analysisservices-sharepoint-integration.md
     - name: 'В книге путь подключения к данным указывает на файл, находящийся на локальном жестком диске, или является недопустимым URI'
       href: power-pivot-sharepoint/the-data-connection-path-is-invalid.md
-    - name: 'Подключение к данным использует проверку подлинности Windows, а учетные данные нельзя делегировать. Следующие соединения не удалось обновить: данные PowerPivot'
+    - name: 'Подключение к данным использует проверку подлинности Windows, а учетные данные нельзя делегировать. Следующие соединения не удалось обновить: Данные PowerPivot'
       href: power-pivot-sharepoint/the-data-connection-user-could-not-be-delegated.md
     - name: 'Следующие объекты не поддерживаются службой Excel Services и могут не отображаться совсем или отображаться лишь частично: комментарии, фигуры или другие объекты.'
       href: power-pivot-sharepoint/comments-shapes-other-objects-not-supported-by-excel-services.md
@@ -344,33 +344,33 @@
     - name: Табличное моделирование (учебник по Adventure Works)
       href: tabular-modeling-adventure-works-tutorial.md
       items:
-        - name: Урок 1. Создание нового проекта табличной модели
+        - name: Занятие 1. Создание нового проекта табличной модели
           href: lesson-1-create-a-new-tabular-model-project.md
-        - name: Урок 2. Добавление данных
+        - name: Занятие 2. Добавление данных
           href: lesson-2-add-data.md
-        - name: Урок 3. Переименование столбцов
+        - name: Занятие 3. Переименование столбцов
           href: rename-columns.md
-        - name: 'Занятие 4: Пометить как таблицу дат'
+        - name: Занятие 4. Диалоговое окно "Пометить как таблицу данных"
           href: lesson-3-mark-as-date-table.md
-        - name: "Занятие\_5.: Создание связей"
+        - name: Занятие 5. Создание связей
           href: lesson-4-create-relationships.md
-        - name: 'Занятие 6: Создание вычисляемых столбцов'
+        - name: Занятие 6. Создание вычисляемых столбцов
           href: lesson-5-create-calculated-columns.md
-        - name: 'Занятие 7: Создание мер'
+        - name: Занятие 7. Создание мер
           href: lesson-6-create-measures.md
-        - name: "Урок\_8. Создание ключевых показателей эффективности"
+        - name: Занятие 8. Создание ключевых показателей эффективности
           href: lesson-7-create-key-performance-indicators.md
-        - name: "Урок\_9. Создание перспектив"
+        - name: Занятие 9. Создание перспектив
           href: lesson-8-create-perspectives.md
-        - name: "Урок\_10. Создание иерархий"
+        - name: Занятие 10. Создание иерархий
           href: lesson-9-create-hierarchies.md
-        - name: "Урок\_11. Создание секций"
+        - name: Занятие 11. Создание секций
           href: lesson-10-create-partitions.md
-        - name: "Урок\_12. Создание ролей"
+        - name: Занятие 12. Создание ролей
           href: lesson-11-create-roles.md
-        - name: "Урок\_13. Анализ в Excel"
+        - name: Занятие 13. Анализ в Excel
           href: lesson-12-analyze-in-excel.md
-        - name: "Урок\_14. Развертывание"
+        - name: Занятие 14. Развертывание
           href: lesson-13-deploy.md
         - name: Дополнительные занятия
           href: ../tutorials/supplemental-lessons.md
@@ -386,7 +386,7 @@
           href: analysis-services-tutorial-scenario.md
         - name: Установка образцов данных и проектов для учебника по многомерному моделированию в службах Analysis Services
           href: install-sample-data-and-projects.md
-        - name: "Урок 1. Определение представления источника данных в проекте Analysis\_Services"
+        - name: Занятие 1. Определение представления источников данных в проекте служб Analysis Services
           href: lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md
           items:
             - name: Создание проекта служб Analysis Services
@@ -397,7 +397,7 @@
               href: lesson-1-3-defining-a-data-source-view.md
             - name: Изменение имен таблиц по умолчанию
               href: lesson-1-4-modifying-default-table-names.md
-        - name: Урок 2. Определение и развертывание куба
+        - name: Занятие 2. Определение и развертывание куба
           href: lesson-2-defining-and-deploying-a-cube.md
           items:
             - name: Определение измерения
@@ -425,7 +425,7 @@
               href: lesson-3-4-modifying-the-date-dimension.md
             - name: Просмотр развернутого куба
               href: lesson-3-5-browsing-the-deployed-cube.md
-        - name: 'Занятие 4: Определение расширенных свойств атрибутов и измерений'
+        - name: Урок 4. Определение расширенных свойств атрибутов и измерений
           href: lesson-4-defining-advanced-attribute-and-dimension-properties.md
           items:
             - name: Использование измененной версии проекта Analysis Services Tutorial
@@ -442,7 +442,7 @@
               href: 4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md
             - name: Определение свойств Unknown Member и Null Processing
               href: lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md
-        - name: "Занятие\_5.: Определение связей между измерениями и группами мер"
+        - name: Занятие 5. Определение связей между измерениями и группами мер
           href: lesson-5-defining-relationships-between-dimensions-and-measure-groups.md
           items:
             - name: Определение ссылочной связи
@@ -453,31 +453,31 @@
               href: lesson-5-3-defining-a-many-to-many-relationship.md
             - name: Определение степени гранулярности измерения в группе мер
               href: lesson-5-4-defining-dimension-granularity-within-a-measure-group.md
-        - name: 'Занятие 6: Определение вычислений'
+        - name: Занятие 6. Определение вычислений
           href: lesson-6-defining-calculations.md
           items:
             - name: Определение вычисляемых элементов
               href: lesson-6-1-defining-calculated-members.md
             - name: Определение именованных наборов
               href: lesson-6-2-defining-named-sets.md
-        - name: 'Занятие 7: Определение ключевых показателей эффективности'
+        - name: Занятие 7. Определение ключевых показателей эффективности
           href: lesson-7-defining-key-performance-indicators-kpis.md
           items:
             - name: Определение и поиск ключевых показателей эффективности
               href: lesson-7-1-defining-and-browsing-kpis.md
-        - name: "Урок\_8. Определение действий"
+        - name: Занятие 8. Определение действий
           href: lesson-8-defining-actions.md
           items:
             - name: Определение и использование действия детализации
               href: lesson-8-1-defining-and-using-a-drillthrough-action.md
-        - name: "Урок\_9. Определение перспектив и преобразований"
+        - name: Занятие 9. Определение перспектив и переводов
           href: lesson-9-defining-perspectives-and-translations.md
           items:
             - name: Определение и поиск перспектив
               href: lesson-9-1-defining-and-browsing-perspectives.md
             - name: Определение и просмотр переводов
               href: lesson-9-2-defining-and-browsing-translations.md
-        - name: "Урок\_10. Определение административных ролей"
+        - name: Занятие 10. Определение ролей администрирования
           href: lesson-10-defining-administrative-roles.md
           items:
             - name: Предоставление разрешений на обработку базы данных

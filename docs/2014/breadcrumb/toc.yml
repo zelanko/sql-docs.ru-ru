@@ -23,7 +23,7 @@
                 - name: Параметры сортировки
                   tocHref: /sql/relational-databases/collations/
                   topicHref: /sql/relational-databases/collations/collation-and-unicode-support
-                - name: Написание скриптов
+                - name: Написание сценариев
                   tocHref: /sql/relational-databases/scripting/
                   topicHref: /sql/relational-databases/scripting/database-engine-scripting
                   items:
@@ -260,10 +260,10 @@
                 - name: XML
                   tocHref: /sql/relational-databases/xml/
                   topicHref: /sql/relational-databases/xml/xml-data-sql-server
-                - name: Пространственный
+                - name: пространственный индекс
                   tocHref: /sql/relational-databases/spatial/
                   topicHref: /sql/relational-databases/spatial/spatial-data-sql-server
-                - name: Большие двоичные объекты
+                - name: BLOB-объект
                   tocHref: /sql/relational-databases/blob/
                   topicHref: /sql/relational-databases/blob/binary-large-object-blob-data-sql-server
                 - name: Приложения уровня данных
@@ -309,10 +309,10 @@
                     - name: "Не относящееся к\_SQL"
                       tocHref: /sql/relational-databases/replication/non-sql/
                       topicHref: /sql/relational-databases/replication/non-sql/heterogeneous-database-replication
-                    - name: Опубликовать
+                    - name: Публикация
                       tocHref: /sql/relational-databases/replication/publish/
                       topicHref: /sql/relational-databases/replication/publish/publish-data-and-database-objects
-                    - name: Транзакционная
+                    - name: Транзакционную
                       tocHref: /sql/relational-databases/replication/transactional/
                       topicHref: /sql/relational-databases/replication/transactional/transactional-replication
                     - name: безопасность
@@ -325,7 +325,7 @@
                     - name: OLE DB
                       tocHref: /sql/relational-databases/native-client/ole-db/
                       topicHref: /sql/relational-databases/native-client/ole-db/sql-server-native-client-ole-db
-                    - name: интерфейс ODBC
+                    - name: ODBC
                       tocHref: /sql/relational-databases/native-client/odbc/
                       topicHref: /sql/relational-databases/native-client/odbc/sql-server-native-client-odbc
                       items:
@@ -403,7 +403,7 @@
                 - name: Наборы строк схемы
                   tocHref: /sql/analysis-services/schema-rowsets/
                   topicHref: /sql/analysis-services/schema-rowsets/analysis-services-schema-rowsets
-                - name: Написание скриптов
+                - name: Написание сценариев
                   tocHref: /sql/analysis-services/scripting/
                   topicHref: /sql/analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla
                   items:

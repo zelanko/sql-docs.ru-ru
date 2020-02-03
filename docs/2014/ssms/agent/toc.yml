@@ -259,7 +259,7 @@
       href: job-properties-new-job-steps-page.md
     - name: 'Свойства задания: создание задания (страница "Расписания")'
       href: job-properties-new-job-schedules-page.md
-    - name: 'Свойства задания: создание задания (страница "Оповещения")'
+    - name: 'Свойства задания: создание задания (страница "Предупреждения")'
       href: job-properties-new-job-alerts-page.md
     - name: 'Свойства задания: создание задания (страница "Уведомления")'
       href: job-properties-new-job-notifications-page.md
@@ -267,11 +267,11 @@
       href: job-properties-new-job-targets-page.md
     - name: Свойства категории заданий и создание категории заданий
       href: job-categories-properties-new-job-category.md
-    - name: 'Категории задания: Управление категориями заданий'
+    - name: 'Категории заданий: управление категориями заданий'
       href: job-categories-manage-job-categories.md
     - name: 'Свойства шага задания: создание шага задания (страница "Общие")'
       href: job-step-properties-new-job-step-general-page.md
-    - name: 'Свойства шага задания: создание шага задания (страница "Расширенные")'
+    - name: 'Свойства шага задания: создание шага задания (страница "Дополнительно")'
       href: job-step-properties-new-job-step-advanced-page.md
     - name: Выбор расписания для задания
       href: pick-schedule-for-job.md
@@ -289,7 +289,7 @@
       href: alert-properties-new-alert-general-page.md
     - name: Свойства предупреждения/Создать предупреждение (страница «Ответ»)
       href: alert-properties-new-alert-response-page.md
-    - name: 'Свойства оповещения: создание оповещения (страница "Параметры")'
+    - name: "Свойства предупреждения\_— создание предупреждения (страница \"Параметры\")"
       href: alert-properties-new-alert-options-page.md
     - name: Свойства предупреждения (страница журнала)
       href: alert-properties-history-page.md
@@ -307,7 +307,7 @@
       href: operators-node-sql-server-agent-f1-help.md
     - name: Свойства оператора и создание оператора (страница "Общие")
       href: operator-properties-new-operator-general-page.md
-    - name: 'Свойства оператора: Создание оператора (страница "Уведомления")'
+    - name: 'Свойства оператора: создание оператора (страница "Уведомления")'
       href: operator-properties-new-operator-notifications-page.md
     - name: Свойства оператора (страница «Журнал»)
       href: operator-properties-history-page.md

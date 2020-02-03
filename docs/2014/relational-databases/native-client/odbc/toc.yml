@@ -148,7 +148,7 @@
 - name: Управление столбцами text и image
   href: ../../native-client-odbc-text-image-columns/managing-text-and-image-columns.md
   items:
-    - name: Привязанные и непривязанные столбцы text и image
+    - name: Привязанные и непривязанные столбцы типа Text и Image
       href: ../../native-client-odbc-text-image-columns/bound-vs-unbound-text-and-image-columns.md
     - name: Изменения с ведением журнала и без ведения журнала
       href: ../../native-client-odbc-text-image-columns/logged-vs-unlogged-modifications.md
@@ -309,7 +309,7 @@
       href: ../../native-client-odbc-how-to/support-for-large-udts.md
     - name: Вызов SQLColumns для таблиц с разреженными столбцами
       href: ../../native-client-odbc-how-to/call-sqlcolumns-on-a-table-with-sparse-columns.md
-    - name: Руководство. Вставка строк в столбец Geography (ODBC)
+    - name: Как вставлять строки в столбец Geography (ODBC)
       href: ../../native-client-odbc-how-to/how-to-insert-rows-into-geography-column-odbc.md
     - name: Выполнение взаимной проверки подлинности Kerberos
       href: ../../native-client-odbc-how-to/get-mutual-kerberos-authentication.md

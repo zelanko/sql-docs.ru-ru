@@ -1,6 +1,6 @@
 ---
-title: Добавление фрагментов кода Transact-SQL | Документация Майкрософт
-ms.custom: ''
+title: Добавление фрагментов кода Transact-SQL
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: 901c7995-8eb5-4d12-8bb0-de0a922b48f8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 255fb72bea9ac6d967a69576804c2d70748f22d0
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 6f2878a93f241235bb725cd40afd169f4c7d31aa
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256874"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246470"
 ---
 # <a name="add-transact-sql-snippets"></a>Добавление фрагментов кода Transact-SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "68256874"
   
 2.  Выберите меню **Сервис** и нажмите кнопку **Диспетчер фрагментов кода**.  
   
-3.  Нажмите кнопку **Импорт** .  
+3.  Нажмите кнопку **Import** (Импортировать).  
   
 4.  Перейдите к папке, содержащей собственный фрагмент кода, выберите файл с расширением SNIPPET и нажмите кнопку **Открыть** .  
   
@@ -108,7 +108,7 @@ ms.locfileid: "68256874"
   
 3.  Выберите меню **Сервис** и нажмите кнопку **Диспетчер фрагментов кода**.  
   
-4.  Нажмите кнопку **Импорт** .  
+4.  Нажмите кнопку **Import** (Импортировать).  
   
 5.  Перейдите к папке, содержащей файл TryCatch.snippet, щелкните файл TryCatch.snippet и нажмите кнопку **Открыть** . В папке **Мои фрагменты кода** не должно быть фрагмента TryCatch.  
   

@@ -1,10 +1,7 @@
 ---
-title: Автоматическое изменение размера выбранных таблиц в диаграммах (визуальные инструменты для баз данных) | Документация Майкрософт
-ms.custom: ''
-ms.date: 01/19/2017
+title: Автоматическое изменение размера выбранных таблиц в диаграммах
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,23 +12,29 @@ helpviewer_keywords:
 ms.assetid: eaf2b862-6649-410e-ba8a-2d92ca159a16
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 54077b13125463c276d115b4786a26c4bb9197d5
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: 608a0831ca71b1c468457b92afc961bc5df5d031
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263705"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245328"
 ---
 # <a name="autosize-selected-tables-in-diagrams-visual-database-tools"></a>Автоматическое изменение размера выбранных таблиц в диаграммах (визуальные инструменты для баз данных)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
 Таблицы в диаграмме можно быстро преобразовать к наименьшему размеру, при котором будут видны все поля.  
   
-### <a name="to-automatically-size-selected-tables-in-diagrams"></a>Автоматическое масштабирование выбранных таблиц в диаграммах  
+## <a name="to-automatically-size-selected-tables-in-diagrams"></a>Автоматическое масштабирование выбранных таблиц в диаграммах  
   
-1.  Выберите таблицы, размер которых необходимо изменить.  
+1. Выберите таблицы, размер которых необходимо изменить.  
   
-2.  Щелкните правой кнопкой мыши выбранную таблицу, затем выберите **Автомасштабировать выделенные таблицы**в контекстном меню.  
+2. Щелкните правой кнопкой мыши выбранную таблицу, затем выберите **Автомасштабировать выделенные таблицы**в контекстном меню.  
   
-## <a name="see-also"></a>См. также:  
-[Работа с диаграммами баз данных (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
-  
+## <a name="see-also"></a>См. также:
+
+[Работа с диаграммами баз данных (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)

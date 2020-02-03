@@ -19,7 +19,7 @@
       href: formatting/server-side-xml-formatting-sqlxml-4-0.md
     - name: Форматирование XML на стороне клиента (SQLXML 4.0)
       href: formatting/client-side-xml-formatting-sqlxml-4-0.md
-    - name: Сравнение запроса XPath на стороне клиента и Форматирование XML-кода на сервере (SQLXML 4.0)
+    - name: Форматирование XML-кода на клиенте и на сервере (SQLXML 4.0)
       href: formatting/client-side-vs-server-side-xml-formatting-sqlxml-4-0.md
 - name: Схемы XSD с заметками в SQLXML 4.0
   href: annotated-xsd-schemas/annotated-xsd-schemas-in-sqlxml-4-0.md

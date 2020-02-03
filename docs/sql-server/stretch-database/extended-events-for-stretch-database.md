@@ -9,17 +9,17 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: be1cc04f4ee684fd2c97dd638038c6ce79d666fd
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73844580"
 ---
 # <a name="extended-events-for-stretch-database"></a>Расширенные события для Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
 
-База данных Stretch предоставляет набор расширенных событий для поиска и устранения неполадок.  
+Stretch Database предоставляет набор расширенных событий для поиска и устранения неполадок.  
   
 Дополнительные сведения см. в статье [Расширенные события](../../relational-databases/extended-events/extended-events.md). Сведения о запуске сеанса расширенных событий для поиска и устранения неполадок см. в статье [Создание сеанса расширенных событий](https://msdn.microsoft.com/library/34b1e95a-a80e-4aca-9201-abde47f2ca74).  
   

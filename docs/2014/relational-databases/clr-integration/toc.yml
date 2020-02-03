@@ -102,7 +102,7 @@
     - name: Контекстное соединение
       href: data-access/context-connection.md
       items:
-        - name: Обычные и Контекстные соединения
+        - name: Обычные и контекстные соединения
           href: data-access/context-connections-vs-regular-connections.md
         - name: Ограничения обычных и контекстных соединений
           href: data-access/context-connections-and-regular-connections-restrictions.md

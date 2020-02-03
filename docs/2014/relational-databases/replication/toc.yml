@@ -316,7 +316,7 @@
           href: publish/specify-data-type-mappings-for-an-oracle-publisher.md
         - name: Задание настройки транзакции для издателя Oracle
           href: administration/configure-the-transaction-set-job-for-an-oracle-publisher.md
-        - name: Предоставление разрешений
+        - name: Предоставление разрешения
           href: non-sql/script-to-grant-oracle-permissions.md
         - name: Управление табличными пространствами Oracle
           href: non-sql/manage-oracle-tablespaces.md
