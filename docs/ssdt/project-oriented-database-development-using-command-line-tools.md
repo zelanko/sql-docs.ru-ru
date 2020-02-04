@@ -1,23 +1,24 @@
 ---
-title: Разработка баз данных с учетом проекта при помощи программ командной строки | Документация Майкрософт
-ms.custom:
-- SSDT
-ms.date: 04/26/2017
+title: Разработка баз, ориентированная на проекты, с помощью программ командной строки
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 9a26def9-8fbd-43e4-9e57-414840b73ed8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4df947eec003f171fd962299ad116972bd798151
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 04/26/2017
+ms.openlocfilehash: 321c0988603f7c31460d1c95791d57e5945c2b07
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110814"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243752"
 ---
 # <a name="project-oriented-database-development-using-command-line-tools"></a>Разработка баз, ориентированная на проекты, с помощью программ командной строки
+
 В состав SQL Server Data Tools входят программы командной строки, при помощи которых можно реализовать ряд сценариев разработки баз данных с учетом проекта.  
   
 ## <a name="in-this-section"></a>в этом разделе  

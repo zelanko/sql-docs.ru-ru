@@ -1,10 +1,9 @@
 ---
-title: Создание внешних соединений (визуальные инструменты для баз данных) | Документация Майкрософт
-ms.custom: ''
+title: Создание внешних соединений
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,18 +12,20 @@ helpviewer_keywords:
 ms.assetid: 18de47b1-f936-427d-b852-fe6d20334f71
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d107e8c4f7bd148bc4dddc3b598636bfcd7a635e
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 5c1a8b952d0723c4fd1c54ab2b841ed818017c9f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264343"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254307"
 ---
 # <a name="create-outer-joins-visual-database-tools"></a>Создание внешних соединений (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 По умолчанию [Конструктор запросов и представлений](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) создает внутреннее соединение таблиц. Внутренние соединения исключают строки, не соответствующие строке из другой таблицы. Однако внешние соединения возвращают все строки хотя бы из одной таблицы или представления, упомянутых в предложении FROM, если эти строки удовлетворяют условиям поиска WHERE или HAVING. Если необходимо включить строки данных, которые не имеют совпадений в соединяемой таблице, в результирующий набор, можно создать внешнее соединение.  
   
-При создании внешнего соединения имеет значение порядок, в котором указывают таблицы в инструкции SQL (как показано на панели SQL). Первая таблица становится «левой» таблицей, а вторая — «правой» (Реальный порядок, в котором указываются таблицы на [панели диаграммы](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md), несущественен.) При указании левого или правого внешнего соединения указывается порядок, в котором таблицы были добавлены в запрос, и порядок, в котором они появляются в инструкции SQL на [панели SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md).  
+При создании внешнего соединения имеет значение порядок, в котором указывают таблицы в инструкции SQL (как показано на панели SQL). Первая таблица становится «левой» таблицей, а вторая — «правой» (Реальный порядок, в котором указываются таблицы на [панели диаграммы](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md) , несущественен.) При указании левого или правого внешнего соединения указывается порядок, в котором таблицы были добавлены в запрос, и порядок, в котором они появляются в инструкции SQL на [панели SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md).  
   
 ### <a name="to-create-an-outer-join"></a>Создание внешнего соединения  
   

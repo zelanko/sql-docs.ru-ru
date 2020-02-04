@@ -16,10 +16,10 @@ ms.assetid: f81dde01-d328-4b32-8871-1efac645b68e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f474b2a15667df10bff8652239e8e00f1c923ba5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979380"
 ---
 # <a name="getstring-method-sqlserverresultset"></a>Метод getString (SQLServerResultSet)
@@ -29,7 +29,7 @@ ms.locfileid: "67979380"
   
 ## <a name="overload-list"></a>Список перегрузок  
   
-|Имя|Описание|  
+|Имя|Description|  
 |----------|-----------------|  
 |[getString (int)](../../../connect/jdbc/reference/getstring-method-int-sqlserverresultset.md)|Получает значение индекса заданного столбца в текущей строке этого объекта [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) в виде значения типа **String** на языке программирования Java.|  
 |[getString (java.lang.String))](../../../connect/jdbc/reference/getstring-method-java-lang-string-sqlserverresultset.md)|Извлекает значение имени заданного столбца в текущей строке этого объекта [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) в виде значения **String** на языке программирования Java.|  

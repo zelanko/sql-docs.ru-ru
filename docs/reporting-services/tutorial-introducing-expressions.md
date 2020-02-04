@@ -9,10 +9,10 @@ ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7a26065cc1d65e5c187123ead990888aa4de0e60
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63295675"
 ---
 # <a name="tutorial-introducing-expressions"></a>Учебник. Общие сведения о выражениях
@@ -56,7 +56,7 @@ ms.locfileid: "63295675"
     > [!NOTE]  
     > При наличии необходимых разрешений не имеет существенного значения, какой источник данных вы выбираете. Этот источник данных не будет использоваться для получения данных. Дополнительные сведения см. в разделе [Альтернативные способы создания подключения к данным &#40;построитель отчетов&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
-7.  Нажмите кнопку **Далее**.  
+7.  Щелкните **Далее**.  
   
 8.  На странице **Проектирование запроса** нажмите кнопку **Изменить как текст**.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "63295675"
 
     ![руководство-по-выражениям-построителя-отчетов-запрос-как-текст](../reporting-services/media/report-builder-expression-tutorial-query-as-text.png)
   
-11. Нажмите кнопку **Далее**.  
+11. Щелкните **Далее**.  
   
 12. На странице **Размещение полей** перетащите следующие поля в указанном порядке из списка **Доступные поля** в список **Значения** .  
   
@@ -114,7 +114,7 @@ ms.locfileid: "63295675"
     
     ![руководство-по-выражениям-построителя-отчетов-без-суммы](../reporting-services/media/report-builder-expression-not-sum.png)
   
-15. Нажмите кнопку **Далее**.  
+15. Щелкните **Далее**.  
   
 16. На странице **Выбор макета** оставьте параметры по умолчанию и нажмите кнопку **Далее**.  
 

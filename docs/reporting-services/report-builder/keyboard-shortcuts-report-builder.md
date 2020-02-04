@@ -12,10 +12,10 @@ ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 963c225d70429a9f1f45902f9edf554753a78c15
-ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67037859"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>Сочетания клавиш (построитель отчетов)
@@ -30,7 +30,7 @@ ms.locfileid: "67037859"
   
 ## <a name="keyboard-shortcuts-in-report-builder"></a>Сочетания клавиш в построителе отчетов  
   
-|Описание|Сочетание клавиш|  
+|Description|Сочетание клавиш|  
 |-----------------|---------------------|  
 |Открытие меню построителя отчетов.|ALT+F|  
 |Создание отчета.|CTRL+N|  

@@ -20,10 +20,10 @@ ms.assetid: fe718939-7efe-4c7f-87cb-5f5b09caeff4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4171fcbc01b7dfd36003bef6c4fa5d90c74600d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63128882"
 ---
 # <a name="passing-device-information-settings-to-rendering-extensions"></a>Передача настроек сведений об устройстве модулям подготовки отчетов к просмотру
@@ -40,7 +40,7 @@ ms.locfileid: "63128882"
 </DeviceInfo>  
 ```  
   
- При подготовке отчета в виде фрагмента HTML содержимое отчета находится в элементе TABLE, а элементы HTML и BODY не используются. Фрагмент HTML можно использовать для внедрения отчета в существующий HTML-документ. Дополнительные сведения о настройках сведений об устройстве для вывода в формате HTML см. в разделе [HTML Device Information Settings](../../../reporting-services/html-device-information-settings.md).  
+ При подготовке отчета в виде фрагмента HTML содержимое отчета находится в элементе TABLE, а элементы HTML и BODY не используются. Фрагмент HTML можно использовать для внедрения отчета в существующий HTML-документ. Дополнительные сведения о параметрах сведений об устройстве для вывода в формате HTML см. в разделе [Настройки сведений об устройстве HTML](../../../reporting-services/html-device-information-settings.md).  
   
 ## <a name="passing-device-information-using-url-access"></a>Передача сведений об устройстве с помощью доступа через URL-адрес  
  Настройки сведений об устройстве можно также передать с помощью доступа по URL-адресу. Настройки сведений об устройстве передаются как параметры URL-адреса. Чтобы создать готовый для просмотра отчет без панели инструментов средства просмотра HTML-страниц, можно передать серверу отчетов следующую строку доступа к URL-адресу:  

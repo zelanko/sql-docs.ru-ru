@@ -13,10 +13,10 @@ ms.assetid: d2dc75d3-9bf7-481c-85f2-8b6310b21461
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 150addd664870e5441c888b6bc357f8fb4d92b20
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015157"
 ---
 # <a name="configuring-iis-for-the-microsoft-drivers-for-php-for-sql-server"></a>Настройка служб IIS для драйверов Майкрософт для PHP для SQL Server
@@ -30,13 +30,13 @@ ms.locfileid: "68015157"
 -   [FastCGI с PHP](https://docs.microsoft.com/iis/web-hosting/web-server-for-shared-hosting/fastcgi-with-php)  
 -   [Использование FastCGI для размещения приложений PHP в службах IIS 7.0](https://docs.microsoft.com/iis/application-frameworks/install-and-configure-php-applications-on-iis/using-fastcgi-to-host-php-applications-on-iis)  
 -   [Использование FastCGI для размещения приложений PHP в службах IIS 6.0](https://docs.microsoft.com/iis/application-frameworks/install-and-configure-php-applications-on-iis/using-fastcgi-to-host-php-applications-on-iis-60)  
--   [Настройка расширения FastCGI для служб IIS 6.0](https://docs.microsoft.com/iis/application-frameworks/install-and-configure-php-on-iis/configuring-the-fastcgi-extension-for-iis-60)  
+-   [Настройка расширения FastCGI для служб IIS 6.0](https://docs.microsoft.com/iis/application-frameworks/install-and-configure-php-on-iis/configuring-the-fastcgi-extension-for-iis-60)  
   
 ## <a name="video-presentations"></a>Видеопрезентации  
 Ниже представлены ссылки на видеопрезентации о настройке FastCGI для PHP и использовании функций служб IIS 7.0 для размещения приложений PHP:  
   
 -   [Настройка FastCGI для PHP](https://docs.microsoft.com/iis/application-frameworks/running-php-applications-on-iis/set-up-fastcgi-for-php)  
--   [Использование PHP в службах IIS](https://docs.microsoft.com/iis/application-frameworks/running-php-applications-on-iis/mix08-partying-with-php-on-microsoft-internet-information-services-7-and-above)  
+-   [Использование PHP в службах Microsoft IIS 7](https://docs.microsoft.com/iis/application-frameworks/running-php-applications-on-iis/mix08-partying-with-php-on-microsoft-internet-information-services-7-and-above)  
   
 ## <a name="support-resources"></a>Ресурсы поддержки  
 Указанные ниже форумы предоставляют поддержку сообщества по использованию FastCGI в службах IIS:  

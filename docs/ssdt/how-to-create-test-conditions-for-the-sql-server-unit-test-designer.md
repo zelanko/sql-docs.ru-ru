@@ -1,23 +1,24 @@
 ---
-title: Руководство. Создание условий теста для конструктора модульных тестов SQL Server | Документация Майкрософт
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: создать условия теста для конструктора модульных тестов SQL Server
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 48076062-1ef5-419a-8a55-3c7b4234cc35
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6406c2e2ff709e163057163424719169cb2b9787
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 75d65bb7b30a8a48a35ada0c929ddf4698ad8408
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67911791"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241477"
 ---
-# <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>Руководство. создать условия теста для конструктора модульных тестов SQL Server
+# <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>Практическое руководство. Создание условия теста для конструктора модульных тестов SQL Server
+
 Создавать условия теста можно с помощью расширяемого класса [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx). Например, можно создать новое условие теста, которое проверяет число столбцов или значений в результирующем наборе.  
   
 ## <a name="to-create-a-test-condition"></a>Создание условия теста  
@@ -48,7 +49,7 @@ ms.locfileid: "67911791"
   
 10. Создайте класс производный от класса [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx).  
   
-11. Подпишите сборку строгим именем. Дополнительные сведения см. в разделе [Как подписать сборку строгим именем](https://msdn.microsoft.com/library/xc31ft41.aspx).  
+11. Подпишите сборку строгим именем. Дополнительные сведения см. в статье [Практическое руководство. Подписание сборки строгим именем](https://msdn.microsoft.com/library/xc31ft41.aspx).  
   
 12. Постройте библиотеку классов.  
   
@@ -175,7 +176,7 @@ namespace Ssdt.Samples.SqlUnitTesting
   
 [ExportTestConditionAttribute](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx) необходимо добавить во все классы, являющиеся расширением [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx). Этот атрибут позволяет SQL Server Data Tools обнаруживать этот класс и использовать его при проектировании и выполнении модульных тестов. Этот атрибут принимает два параметра.  
   
-|Параметр атрибута|Положение|Описание|  
+|Параметр атрибута|Положение|Description|  
 |-----------------------|------------|---------------|  
 |DisplayName|1|Определяет строку в поле со списком "Условия теста". Имя должно быть уникальным. Если у двух условий одинаковое отображаемое имя, пользователю будет показано первое условие, при этом в диспетчере ошибок Visual Studio будет показано предупреждение.|  
 |ImplementingType|2|Используется для уникального определения расширения. Это значение необходимо изменить, чтобы оно совпадало с типом, которому задается этот атрибут. В этом примере используется тип **ResultSetColumnCountCondition**, поэтому нужно указать **typeof(ResultSetColumnCountCondition)** . Если вы используете тип **NewTestCondition**, укажите вместо этого **typeof(NewTestCondition)** .|  
