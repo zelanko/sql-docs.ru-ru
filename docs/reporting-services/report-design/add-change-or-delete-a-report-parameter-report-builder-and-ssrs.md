@@ -9,10 +9,10 @@ ms.assetid: d44a8e0a-10cf-4502-9391-09743ffc9bad
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: eb0d29f62a3751f0b8b6acd1c33c7b7f7eb10ff2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65582063"
 ---
 # <a name="add-change-or-delete-a-report-parameter-report-builder-and-ssrs"></a>Добавление, изменение или удаление параметра отчета (построитель отчетов и службы SSRS)
@@ -20,14 +20,14 @@ ms.locfileid: "65582063"
   
  После публикации отчета на сервере отчетов можно изменить значения по умолчанию, доступные значения и другие свойства параметров отчета. Для параметра можно предоставить несколько наборов значений по умолчанию, создав связанные отчеты. Дополнительные сведения см. в разделе [Параметры отчета (построитель отчетов и конструктор отчетов)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
- Эта статья содержит сведения о добавлении параметров отчета для разбитого на страницы отчета в [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] или конструктор отчетов в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Кроме того, можно добавлять параметры отчета для мобильных отчетов в  [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]. Подробнее см. в разделе [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) .  
+ Эта статья содержит сведения о добавлении параметров отчета для разбитого на страницы отчета в [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] или конструкторе отчетов в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Кроме того, можно добавлять параметры отчета для мобильных отчетов в [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]. Подробнее см. в разделе [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) .  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ### <a name="to-add-or-edit-a-report-parameter"></a>Добавление или изменение параметра отчета  
   
-1.  В области [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] Данные отчета [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] **или конструктора отчетов в** щелкните правой кнопкой мыши узел **Параметры** и выберите **Добавить параметр**. Откроется диалоговое окно **Свойства параметра отчета** .  
+1.  В области [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] или конструкторе отчетов в области **Данные отчета** щелкните правой кнопкой мыши узел **Параметры** и выберите команду **Добавить параметр**. Откроется диалоговое окно **Свойства параметра отчета** .  
   
 2.  В поле **Имя**введите имя параметра или примите имя по умолчанию.  
   

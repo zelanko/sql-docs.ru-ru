@@ -9,10 +9,10 @@ ms.assetid: ae1775f7-9919-48ca-8bd7-cc16df274e2c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 84ca5db4b8979b1b49ffc25b809638defc40fe1e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65572116"
 ---
 # <a name="troubleshoot-reporting-services-subscriptions-and-delivery"></a>Устранение неполадок, связанных с подписками и доставкой служб Reporting Services
@@ -46,7 +46,7 @@ ms.locfileid: "65572116"
   
 здесь \<сообщение_об_ошибке> заменяется дополнительными сведениями об ошибке, возвращенными объектами данных совместной работы (CDO).  
   
-### <a name="to-resolve-this-problem"></a>Чтобы разрешить эту проблему:  
+### <a name="to-resolve-this-problem"></a>Для решения этой проблемы сделайте следующее:  
 * Установите значение элемента `SendUsing` в файле **RSReportServer.config** равным 1.  
 * Очистите значение свойства `SMTPServer` , чтобы оно стало пустым. Кроме того, задайте значение свойства `SMTPServerPickupDirectory` .   
   

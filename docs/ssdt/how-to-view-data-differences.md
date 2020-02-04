@@ -1,25 +1,26 @@
 ---
-title: Руководство. Просмотр различий между данными | Документация Майкрософт
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: просмотреть различия данных
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.datacompare.f1
 ms.assetid: f88d3350-2eaf-44cc-96a8-84008b6cd071
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ec641fc027bae18a09e81d5cf14eee1bd8ab3ee3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 5c9e80f6289ff3313a3eeb7cec0601fb2c651aa2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930344"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75226754"
 ---
-# <a name="how-to-view-data-differences"></a>Руководство. просмотреть различия данных
+# <a name="how-to-view-data-differences"></a>Практическое руководство. Просмотр различий данных
+
 Сравнив данные в двух базах данных, вы увидите все сравниваемые *объекты базы данных* и их состояние. Можно также просматривать результаты, относящиеся к записям в каждом объекте, сгруппированные по состояниям.  
   
 После просмотра различий можно обновить *целевую* бауы данных для согласования с *исходной* базой данных применительно к некоторым или всем объектам или записям, которые являются различающимися, недостающими или новыми.  
@@ -35,5 +36,5 @@ ms.locfileid: "67930344"
     -   Чтобы просмотреть результаты, относящихся к записям определенного объекта, щелкните объект в основной области результатов, затем откройте вкладку на панели "Просмотр записей". На каждой вкладке отображаются все записи данного объекта, имеющие определенное состояние: «различающиеся», «только в базе данных-источнике», «только в целевой базе данных» и «идентичные». Данные отображаются по записям и столбцам.  
   
 ## <a name="see-also"></a>См. также:  
-[Руководство. использовать сравнение схем для сопоставления различных определений баз данных](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
+[Как использовать сравнение схем для сопоставления различных определений баз данных](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
   

@@ -11,20 +11,20 @@ ms.assetid: 49ea6a6e-78d4-40f8-85eb-180b527f0537
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c62c2a35123e77f5366dd5348fd51b3c50c85605
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993687"
 ---
-# <a name="cursor-types-pdosqlsrv-driver"></a>Типы курсоров (драйвер PDO_SQLSRV)
+# <a name="cursor-types-pdo_sqlsrv-driver"></a>Типы курсоров (драйвер PDO_SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Драйвер PDO_SQLSRV позволяет создавать прокручиваемые результаты с помощью одного из нескольких курсоров.
 
 Сведения об указании курсоров для драйвера PDO_SQLSRV и примеры кода вы найдете в описании [PDO::prepare](../../connect/php/pdo-prepare.md).
 
-## <a name="pdosqlsrv-and-server-side-cursors"></a>PDO_SQLSRV и курсоры на стороне сервера
+## <a name="pdo_sqlsrv-and-server-side-cursors"></a>PDO_SQLSRV и курсоры на стороне сервера
 До выхода [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] версии 3.0 драйвер PDO_SQLSRV позволял использовать для получения результатов только последовательный или статический курсор на стороне сервера. Начиная с [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] версии 3.0, стали доступны наборы ключей и динамические курсоры.
 
 Тип курсора на стороне сервера вы можете указать с помощью [PDO::prepare](../../connect/php/pdo-prepare.md) из следующего списка типов:
@@ -41,7 +41,7 @@ ms.locfileid: "67993687"
 
 -   `PDO::SQLSRV_CURSOR_KEYSET`
 
-## <a name="pdosqlsrv-and-client-side-cursors"></a>PDO_SQLSRV и курсоры на стороне клиента
+## <a name="pdo_sqlsrv-and-client-side-cursors"></a>PDO_SQLSRV и курсоры на стороне клиента
 Курсоры на стороне клиента были добавлены в [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] версии 3.0. Они позволяют кэшировать в памяти весь результирующий набор. Одним из их преимуществ является то, что после выполнения запроса доступно количество строк.
 
 Курсоры на стороне клиента следует использовать только для малых и средних результирующих наборов. Для больших результирующих наборов следует использовать курсоры на стороне сервера.

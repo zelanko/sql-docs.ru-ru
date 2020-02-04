@@ -16,10 +16,10 @@ ms.assetid: 22cfbeb8-4ea3-4182-8f54-3341c771e87b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bbce09bb5c76d29bf56defb3c5403665e5226558
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576761"
 ---
 # <a name="access-the-reporting-services-wmi-provider"></a>Доступ к поставщику WMI для служб Reporting Services
@@ -28,7 +28,7 @@ ms.locfileid: "65576761"
 > [!IMPORTANT]  
 >  Начиная с выпуска [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , поставщик WMI поддерживается только для серверов отчетов, работающих в собственном режиме. Серверы отчетов служб в режиме интеграции с SharePoint могут управляться со страниц центра администрирования SharePoint и с помощью скриптов PowerShell.  
   
-|Class|Пространство имен|Описание|  
+|Class|Пространство имен|Description|  
 |-----------|---------------|-----------------|  
 |MSReportServer_Instance|root\Microsoft\SqlServer\ReportServer\RS_ *\<EncodedInstanceName>* \v13|Основные сведения, необходимые клиенту для подключения к установленному серверу отчетов.|  
 |MSReportServer_ConfigurationSetting|root\Microsoft\SqlServer\ReportServer\RS_ *\<EncodedInstanceName>* \v13\Admin|Представляет установочные параметры и параметры времени выполнения для экземпляра сервера отчетов. Эти параметры хранятся в файле конфигурации для сервера отчетов.<br /><br /> **\*\* Важно. \*\*** Этот класс доступен только для пользователей с правами администратора.|  

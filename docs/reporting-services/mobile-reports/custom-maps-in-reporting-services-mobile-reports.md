@@ -11,10 +11,10 @@ ms.assetid: 59a4ebad-587a-4770-afcd-c69216b8afd9
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 17975defea6029e4077acbe45fd3f8b0d7495267
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62759649"
 ---
 # <a name="custom-maps-in-reporting-services-mobile-reports"></a>Custom maps in Reporting Services mobile reports
@@ -49,7 +49,7 @@ ms.locfileid: "62759649"
 Многие существующие файлы фигур можно скачать с веб-сайтов, таких как Diva-GIS: [https://www.diva-gis.org/Data](https://www.diva-gis.org/Data).  
 
 ## <a name="see-also"></a>См. также раздел  
-- [Maps in Reporting Services mobile reports](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)  
+- [Карты в мобильных отчетах служб Reporting Services](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)  
 - [Создание и публикация мобильных отчетов с помощью издателя мобильных отчетов SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)   
   
   

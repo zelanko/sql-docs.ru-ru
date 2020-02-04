@@ -19,10 +19,10 @@ ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4c323a03752ea7b9e0c7450dc53446191f3c3315
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578448"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data"></a>Изменение параметров отображения многоугольников, линий и точек с помощью правил и аналитических данных
@@ -119,7 +119,7 @@ ms.locfileid: "65578448"
   
  В следующей таблице показаны примеры различных доступных форматов.  
   
-|Ключевое слово и формат|Описание|Пример отображения текста в условных обозначениях|  
+|Ключевое слово и формат|Description|Пример отображения текста в условных обозначениях|  
 |------------------------|-----------------|---------------------------------------------------|  
 |`#FROMVALUE {C0}`|Отображает итоговое значение в формате валюты без десятичных разрядов|$400|  
 |`#FROMVALUE {C2}`|Отображает итоговое значение в формате валюты с двумя десятичными разрядами.|$400,55|  

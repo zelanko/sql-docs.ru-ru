@@ -9,10 +9,10 @@ ms.assetid: faddd29d-4cc1-4c2c-8e29-d3d9918fe22a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ed869c3aa283dbede50b37e74b7c8c4ee5580bc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579160"
 ---
 # <a name="empty-and-null-data-points-in-charts-report-builder-and-ssrs"></a>Точки данных со значением NULL и пустые точки в диаграммах (построитель отчетов и службы SSRS)
@@ -40,7 +40,7 @@ ms.locfileid: "65579160"
   
  Такое поведение отличается от поведения в случае, когда возвращаемый набор данных содержит нулевые строки; такое происходит, если отчет имеет параметры, а выбранное значение возвращает пустой результирующий набор. Если запрос набора данных возвращает нулевые строки данных, то во время выполнения отображается сообщение, оповещающее об отсутствии данных для отображения. Это сообщение можно настроить, изменив заголовок NoDataMessage для отчета на панели **Свойства** . Дополнительные сведения см. в разделе [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Диаграммы](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
 [Форматирование диаграммы](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   

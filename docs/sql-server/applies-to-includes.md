@@ -10,10 +10,10 @@ ms.author: mathoma
 ms.topic: conceptual
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5d9b834d94469adf8394dc12f3b812a0dfd1fbbc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68067584"
 ---
 # <a name="sql-server-include-files-for-versioning-and-applies-to"></a>Включаемые файлы SQL Server для управления версиями и области применения
@@ -26,7 +26,7 @@ ms.locfileid: "68067584"
 
 Авторам содержимого SQL часто нужно указывать имя продукта и версию SQL Server. Если в имя вносятся изменения, можно не обновлять значения в каждой статье вручную. Вместо этого вы можете обновить включаемый файл. Такие включаемые файлы используются в качестве заполнителей для названий продуктов. Но они применяются не во всей документации по SQL. SQL Server vNext относится к будущему выпуску SQL, которому еще не присвоен номер версии, и является исключением.  
 
-|Версия SQL| Имя файла| Пример разметки Markdown |Текст|
+|Версия SQL| Имя файла| Пример разметки Markdown |текст|
 | :------------  | :-------------| :----------| :-------------------|
 | SQL | ssnoversion-md.md | `[!INCLUDE[ssSQL11](../includes/ssnoversion-md.md)]` | SQL Server |
 | SQL2000 | ssversion2000-md.md | `[!INCLUDE[ssSQL11](../includes/ssversion2000-md.md)]` | SQL Server 2000 (8.x) |
@@ -34,9 +34,9 @@ ms.locfileid: "68067584"
 | SQL 2012 | sssql11-md.md | `[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]` | SQL Server 2012 (11.x) |
 | SQL 2012 с пакетом обновления 1 (SP1) | sssql11sp1-md.md | `[!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]` | SQL Server 2012 с пакетом обновлений 1 (SP1) версии 11.0.3x |
 | SQL 2014 | sssql14-md.md | `[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]` | SQL Server 2014 (12.x) |
-| SQL 2016 | sssql15-md.md | `[!INCLUDE[sssql15-md](../includes/sssql15-md.md)]` | SQL Server 2016 (13.x) |
-| SQL 2017 | sssql17-md.md | `[!INCLUDE[sssql17-md](../includes/sssql17-md.md)]` | SQL Server 2017 (14.x) |
-| SQL 2017 | sssqlv14-md.md | `[!INCLUDE[sssqlv14](../includes/sssqlv14-md.md)]` | SQL Server 2017 (14.x) |
+| SQL 2016 | sssql15-md.md | `[!INCLUDE[sssql15-md](../includes/sssql15-md.md)]` | SQL Server 2016 (13.x); |
+| SQL 2017 | sssql17-md.md | `[!INCLUDE[sssql17-md](../includes/sssql17-md.md)]` | SQL Server 2017 (14.x); |
+| SQL 2017 | sssqlv14-md.md | `[!INCLUDE[sssqlv14](../includes/sssqlv14-md.md)]` | SQL Server 2017 (14.x); |
 | SQL vNext | sssqlv15-md.md | `[!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]` | SQL Server vNext |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; |  
 
@@ -44,7 +44,7 @@ ms.locfileid: "68067584"
 
 Эти включаемые файлы области применения не указывают версии SQL Server.
 
-| Имя файла| Пример разметки Markdown |image|
+| Имя файла| Пример разметки Markdown |Образ —|
 | :-------------| :----------| :-------------------|
 | appliesto-ss-asdb-asdw-xxx-md.md | `[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]` | [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)] |
 | appliesto-ss-asdb-asdw-pdw-md.md | `[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]` | [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] |
@@ -66,7 +66,7 @@ ms.locfileid: "68067584"
 
 В этих файлах области применения указывается, к каким версиям SQL относится документация.
 
-| Имя файла| Пример разметки Markdown |image|
+| Имя файла| Пример разметки Markdown |Образ —|
 | :-------------| :----------| :-------------------|
 | tsql-appliesto-ss2008-all-md.md | `[!INCLUDE[tsql-appliesto-ss2008-all-md.md](../includes/tsql-appliesto-ss2008-all-md.md)]` | [!INCLUDE[tsql-appliesto-ss2008-all-md.md](../includes/tsql-appliesto-ss2008-all-md.md)] |
 | tsql-appliesto-ss2008-all-md.md | `[!INCLUDE[tsql-appliesto-ss2008-all-md.md](../includes/tsql-appliesto-ss2008-all-md.md)]` | [!INCLUDE[tsql-appliesto-ss2008-all-md.md](../includes/tsql-appliesto-ss2008-all-md.md)] |
@@ -110,7 +110,7 @@ ms.locfileid: "68067584"
 
 Эти включаемые файлы области применения используются в документации по службам Analysis Services.
 
-| Имя файла| Пример разметки Markdown |image|
+| Имя файла| Пример разметки Markdown |Образ —|
 | :-------------| :----------| :-------------------|
 | ssas-appliesto-sql2016.md | `[!INCLUDE[ssas-appliesto-sql2016.md](../includes/ssas-appliesto-sql2016.md)]` | [!INCLUDE[ssas-appliesto-sql2016.md](../includes/ssas-appliesto-sql2016.md)] |
 | ssas-appliesto-sql2016-later.md | `[!INCLUDE[ssas-appliesto-sql2016-later.md](../includes/ssas-appliesto-sql2016-later.md)]` | [!INCLUDE[ssas-appliesto-sql2016-later.md](../includes/ssas-appliesto-sql2016-later.md)] |
@@ -127,7 +127,7 @@ ms.locfileid: "68067584"
 
 Эти включаемые файлы области применения используются в документации по службам Reporting Services.
 
-| Имя файла| Пример разметки Markdown |image|
+| Имя файла| Пример разметки Markdown |Образ —|
 | :-------------| :----------| :-------------------|
 | ssrs-appliesto-2017-and-later.md | `[!INCLUDE[ssrs-appliesto-2017-and-later.md](../includes/ssrs-appliesto-2017-and-later.md)]` | [!INCLUDE[ssrs-appliesto-2017-and-later.md](../includes/ssrs-appliesto-2017-and-later.md)] |
 | ssrs-appliesto-not-pbirs.md | `[!INCLUDE[ssrs-appliesto-not-pbirs.md](../includes/ssrs-appliesto-not-pbirs.md)]` | [!INCLUDE[ssrs-appliesto-not-pbirs.md](../includes/ssrs-appliesto-not-pbirs.md)] |
@@ -136,7 +136,7 @@ ms.locfileid: "68067584"
 | ssrs-appliesto-sql2016-preview.md | `[!INCLUDE[ssrs-appliesto-sql2016-preview.md](../includes/ssrs-appliesto-sql2016-preview.md)]` | [!INCLUDE[ssrs-appliesto-sql2016-preview.md](../includes/ssrs-appliesto-sql2016-preview.md)] |
 |&nbsp; | &nbsp; | &nbsp; |  
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Дополнительные сведения о том, как использовать включаемые файлы, см. в разделе [Включаемые файлы области применения](sql-server-docs-contribute.md#applies-to-includes).
 

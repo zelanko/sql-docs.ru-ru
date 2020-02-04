@@ -9,10 +9,10 @@ ms.assetid: dda91d4f-77cc-4898-ad03-810ece5f8e74
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 92c0943b17f22c63481f1dbfb0f76977a4b71381
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66500231"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>зарегистрировать имя участника-службы для сервера отчетов
@@ -50,7 +50,7 @@ Setspn -s http/<computername>.<domainname> <domain-user-account>
   
 2.  Войдите на контроллер домена как администратор домена.  
   
-3.  Откройте окно командной строки.  
+3.  Откройте окно командной строки и  
   
 4.  Скопируйте следующую команду, заменив заполнители значениями для конкретной сети:  
   

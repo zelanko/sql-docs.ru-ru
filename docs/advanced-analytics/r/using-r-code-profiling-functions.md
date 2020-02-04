@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: e03ae1a8c4cdab87f46f63da6271886b4518b5e3
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68715015"
 ---
 # <a name="use-r-code-profiling-functions-to-improve-performance"></a>Использование функций профилирования кода R для повышения производительности
@@ -21,7 +21,7 @@ ms.locfileid: "68715015"
 Помимо использования средств и ресурсов SQL Server для отслеживания выполнения скрипта R можно использовать средства обеспечения производительности, входящие в другие пакеты R, чтобы получить дополнительные сведения о внутренних вызовах функций. 
 
 > [!TIP]
-> В этой статье приводятся основные ресурсы, которые помогут вам приступить к работе. Чтобы ознакомиться с рекомендациями экспертов, мы рекомендуем изучить раздел о *производительности* [книги Хедли Уикема (Hadley Wickham) "Advanced R", посвященной структурам данных R](http://adv-r.had.co.nz).
+> В этой статье приводятся основные ресурсы, которые помогут вам приступить к работе. Чтобы ознакомиться с рекомендациями экспертов, мы рекомендуем изучить раздел о *производительности*[книги Хедли Уикема (Hadley Wickham) "Advanced R", посвященной структурам данных R](http://adv-r.had.co.nz).
 
 ## <a name="using-rprof"></a>Использование функции rprof
 

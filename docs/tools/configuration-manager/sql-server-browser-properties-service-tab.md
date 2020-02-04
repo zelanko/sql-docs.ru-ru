@@ -1,6 +1,6 @@
 ---
-title: Свойства обозревателя SQL Server (вкладка "Служба") | Документы Майкрософт
-ms.custom: ''
+title: Свойства браузер SQL Server (вкладка «Службы»)
+ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,16 +11,16 @@ ms.assetid: 98ace9b0-72d5-4b72-9b7b-11fbc490981a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7df01d7953229f657abff968a2b53f00a53f9b0e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 9c9e5cb32206a2a2b81970a43308058dc2ad1c52
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024128"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307098"
 ---
 # <a name="sql-server-browser-properties-service-tab"></a>Свойства браузер SQL Server (вкладка «Службы»)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  Программа браузера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] работает в качестве службы на сервере. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] прослушивает входящие запросы к ресурсам [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и предоставляет сведения об экземплярах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , установленных на компьютере.  
+  Программа браузера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] работает в качестве службы на сервере. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] прослушивает входящие запросы к ресурсам [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и предоставляет сведения об экземплярах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], установленных на компьютере.  
   
  Используйте вкладку **Службы** в диалоговом окне **Свойства браузера SQL Server** , чтобы просмотреть следующие параметры. Все свойства, кроме свойства **Режим запуска** , доступны только для чтения.  
   

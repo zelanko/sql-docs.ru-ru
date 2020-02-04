@@ -1,36 +1,42 @@
 ---
-title: Окно "Локальные переменные" | Документация Майкрософт
-ms.custom: ''
-ms.date: 03/14/2017
+title: окно локальных переменных
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Locals Window [Transact-SQL]
 ms.assetid: 59bea640-7823-4b4d-832c-f384d83cca2f
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cac6d8c5a231d51f89661baf57bec2fd0d9471fd
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 70ee1eee120c94e7f851bc37c3becf1983a57d09
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68253516"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253053"
 ---
 # <a name="transact-sql-debugger---locals-window"></a>Отладчик Transact-SQL, окно локальных переменных
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  В окне **Локальные переменные** отображаются сведения о локальных выражениях в текущей области отладчика [!INCLUDE[tsql](../../includes/tsql-md.md)] . Областью является текущий кадр стека вызова, выбранный в окне **Стек вызовов** . Чтобы иметь возможность просматривать локальные выражения, необходимо находиться в режиме отладки.  
-  
-## <a name="task-list"></a>Список задач  
- **Доступ к окну «Локальные переменные»**  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+В окне **Локальные переменные** отображаются сведения о локальных выражениях в текущей области отладчика [!INCLUDE[tsql](../../includes/tsql-md.md)] . Областью является текущий кадр стека вызова, выбранный в окне **Стек вызовов** . Чтобы иметь возможность просматривать локальные выражения, необходимо находиться в режиме отладки.  
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
+
+## <a name="task-list"></a>Список задач
+
+**Доступ к окну «Локальные переменные»**
   
 -   В меню **Отладка** выберите пункт **Окна**, а затем пункт **Локальные переменные**.  
   
  **Изменение значения выражения**  
   
--   Щелкните правой кнопкой мыши выражение и выберите **Изменить значение**.  
+-   Щелкните правой кнопкой мыши выражение и выберите команду **Изменить значение**.  
   
 ## <a name="columns"></a>Столбцы  
  **Название**  

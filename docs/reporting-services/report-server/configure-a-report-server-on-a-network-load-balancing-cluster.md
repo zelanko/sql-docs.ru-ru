@@ -6,13 +6,13 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
-ms.date: 07/16/2019
-ms.openlocfilehash: cd8f8e05e9be4bcd7a48c5e2fb800c2ebbc9e308
-ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
-ms.translationtype: MTE75
+ms.date: 12/11/2019
+ms.openlocfilehash: 09ccccf33047bb59d3097ff1bb304d3874335ade
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68329271"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244403"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>настроить сервер отчетов в кластере с балансированием сетевой нагрузки
 
@@ -30,7 +30,7 @@ ms.locfileid: "68329271"
 
  Используйте следующие рекомендации для установки и настройки развертывания.  
   
-|Шаг|Описание|Дополнительные сведения|  
+|Шаг|Description|Дополнительные сведения|  
 |----------|-----------------|----------------------|  
 |1|Прежде чем установить службы Reporting Services на серверных узлах в NLB-кластере, проверьте требования к масштабному развертыванию.|[Настройка масштабного развертывания сервера отчетов, работающего в собственном режиме](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)|  
 |2|Настройте NLB-кластер и убедитесь в его правильной работе.<br /><br /> Не забудьте сопоставить имя заголовка узла IP-адресу виртуального сервера NLB-кластера. Имя заголовка узла используется в URL-адресе сервера отчетов; его проще запомнить и ввести, чем IP-адрес.|Дополнительные сведения см. в документации по продукту Windows Server для соответствующей версии операционной системы Windows.|  
@@ -56,21 +56,21 @@ ms.locfileid: "68329271"
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
-1. Создайте ключ проверки и ключ дешифрования с помощью функции автоформирования, доступной в [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. В результате будет сформирована одна запись <`MachineKey`>, которую можно добавить в файл Web.config для каждого экземпляра сервера отчетов, входящего в конфигурацию масштабного развертывания.  
+1. Создайте ключ проверки и ключ дешифрования с помощью функции автоформирования, доступной в [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. В результате будет сформирована одна запись <`machineKey`>, которую можно добавить в файл Web.config для каждого экземпляра сервера отчетов, входящего в конфигурацию масштабного развертывания.  
   
     В следующем примере приведено значение, которое должно быть получено. Не нужно вставлять в файл конфигурации данные из этого примера; значения ключа недопустимы.  
   
     ```xml
-    <MachineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>  
+    <machineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>  
     ```  
   
-2. Откройте файл конфигурации Web.config для сервера отчетов и вставьте в раздел <`system.web`> полученный элемент <`MachineKey`>. Файл Web.config для диспетчера отчетов по умолчанию находится в папке \Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.  
+2. Откройте файл конфигурации Web.config для сервера отчетов и вставьте в раздел <`system.web`> полученный элемент <`machineKey`>. Файл Web.config для диспетчера отчетов по умолчанию находится в папке \Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.  
   
 3. Сохраните файл.  
   
 4. Повторите предыдущий шаг для каждого сервера отчетов в конфигурации масштабного развертывания.  
   
-5. Убедитесь, что все файлы Web.Config в папках \Reporting Services\Reportserver содержат идентичные элементы <`MachineKey`> в разделе <`system.web`>.  
+5. Убедитесь, что все файлы Web.Config в папках \Reporting Services\Reportserver содержат идентичные элементы <`machineKey`> в разделе <`system.web`>.  
 
 ::: moniker-end
 
@@ -145,4 +145,4 @@ ms.locfileid: "68329271"
  [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [Настройка URL-адреса (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [Настройка масштабного развертывания сервера отчетов в основном режиме (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
- [Управление сервером отчетов служб Reporting Services в собственном режиме](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)
+ [Управление сервером отчетов Reporting Services в собственном режиме](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)

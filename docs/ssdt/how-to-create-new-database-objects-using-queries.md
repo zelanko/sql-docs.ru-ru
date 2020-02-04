@@ -1,29 +1,30 @@
 ---
-title: Руководство. Создание объектов базы данных с помощью запросов | Документация Майкрософт
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: создать объекты базы данных с помощью запросов
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: ac983ac7-f9c4-495d-8a99-e1ba370fb271
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 778783c61be2d3b9cfac784d271bce584ef37f68
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 38a7165eb1145c6da08902d06a8483b0e26abf5b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897190"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241493"
 ---
-# <a name="how-to-create-new-database-objects-using-queries"></a>Руководство. создать объекты базы данных с помощью запросов
+# <a name="how-to-create-new-database-objects-using-queries"></a>Как создавать новые объекты базы данных с помощью запросов
+
 Если вы предпочитаете использовать скрипты для создания или изменения представлений, хранимых процедур, функций, триггеров и определяемых пользователем типов, то для этого можно пользоваться редактором Transact\-SQL. Редактор Transact\-SQL поддерживает технологии IntelliSense и другие языки. Дополнительные сведения см. в статье [Использование редактора Transact-SQL для изменения и выполнения скриптов](../ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md).  
   
 Редактор Transact\-SQL вызывается, когда через контекстное меню **Просмотр кода** вы открываете любую сущность базы данных в подключенной базе данных или проекте. Кроме того, он автоматически открывается при использовании контекстного меню **Создать запрос** в окне обозревателя объектов SQL Server или при добавлении нового объекта скрипта в проект базы данных. Если подключение к базе данных не установлено, но нужно выполнить к ней запрос, можно воспользоваться диалоговым окном **Создать подключение для запроса**, выбрав пункт **Редактор Transact-SQL** в меню **SQL** для подключения к базе данных и запуска редактора Transact\-SQL.  
   
 > [!WARNING]  
-> В следующих процедурах используются сущности, созданные в процедурах, которые ранее описывались в разделе [Разработка подключенной базы данных](../ssdt/connected-database-development.md).  
+> В следующих процедурах используются сущности, созданные ранее с помощью руководства по [разработке подключенной базы данных](../ssdt/connected-database-development.md).  
   
 ### <a name="to-create-a-new-table-using-a-transact-sql-query"></a>Создание таблицы с помощью запроса Transact\-SQL  
   

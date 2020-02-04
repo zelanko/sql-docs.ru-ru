@@ -1,23 +1,24 @@
 ---
-title: Пошаговое руководство. Расширение процесса развертывания проекта базы данных для анализа плана развертывания | Документация Майкрософт
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Расширение процесса развертывания проекта базы данных для анализа плана развертывания
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 9ead8470-93ba-44e3-8848-b59322e37621
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 167667590df0b2172e05674c462cfa9833d45acd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 5e51dddb7635ba0f50dfdd7566722b170be9f48a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912787"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242676"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>Пошаговое руководство. Расширение процесса развертывания проекта базы данных для анализа плана развертывания
+
 Можно создать участников развертывания для выполнения специализированных действий при развертывании проекта SQL. Предусмотрена возможность создать участников DeploymentPlanModifier и DeploymentPlanExecutor. Используйте DeploymentPlanModifier для изменения плана до его выполнения и DeploymentPlanExecutor для осуществления операций в ходе выполнения плана. В данном пошаговом руководстве будет создан DeploymentPlanExecutor с именем DeploymentUpdateReportContributor, который будет формировать отчет о действиях, выполненных при развертывании проекта. Поскольку данный участник сборки принимает параметр, управляющий формированием отчета, необходимо выполнить дополнительное действие.  
   
 В этом пошаговом руководстве показано выполнение следующих основных задач:  
@@ -63,7 +64,7 @@ ms.locfileid: "67912787"
   
 4.  Выберите **System.ComponentModel.Composition** на вкладке "Платформы".  
   
-5.  Добавьте необходимые ссылки SQL — щелкните правой кнопкой мыши узел проекта и выберите пункт **Добавить ссылку**. Щелкните **Обзор** и перейдите к папке **C:\Program Files (x86)\Microsoft SQL Server\110\DAC\Bin**. Выберите записи **Microsoft.SqlServer.Dac.dll**, **Microsoft.SqlServer.Dac.Extensions.dll** и **Microsoft.Data.Tools.Schema.Sql.dll**, затем щелкните **Добавить** и **ОК**.  
+5.  Добавьте необходимые ссылки SQL. Для этого щелкните правой кнопкой мыши узел проекта и выберите **Добавить ссылку**. Щелкните **Обзор** и перейдите к папке **C:\Program Files (x86)\Microsoft SQL Server\110\DAC\Bin**. Выберите записи **Microsoft.SqlServer.Dac.dll**, **Microsoft.SqlServer.Dac.Extensions.dll** и **Microsoft.Data.Tools.Schema.Sql.dll**, затем щелкните **Добавить** и **ОК**.  
   
     После этого приступите к добавлению кода к классу.  
   
@@ -250,7 +251,7 @@ ms.locfileid: "67912787"
   
     Методу OnExecute передается объект [DeploymentPlanContributorContext](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx), который предоставляет доступ ко всем указанным аргументам, модели базы данных-источника и базы данных-получателя, свойствам сборки и файлам расширения. В данном примере мы получаем модель, затем вызываем вспомогательные функции, чтобы вывести сведения о модели. Мы используем вспомогательный метод PublishMessage в базовом классе для вывода всех произошедших ошибок.  
   
-    Дополнительные типы и методы, представляющие интерес, включают [TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx), [ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx), [DeploymentPlanHandle](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanhandle.aspx) и [SqlDeploymentOptions](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqldeploymentoptions.aspx).  
+    Также нам интересны такие типы и методы: [TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx), [ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx), [DeploymentPlanHandle](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanhandle.aspx) и [SqlDeploymentOptions](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqldeploymentoptions.aspx).  
   
     Далее определяем вспомогательный класс, который работает с планом развертывания.  
   
@@ -525,7 +526,7 @@ ms.locfileid: "67912787"
     |-----------------|--------------------|  
     |Члены класса|[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx), [ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx), [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx)|  
     |Метод WriteReport|XmlWriter и XmlWriterSettings|  
-    |Метод ReportPlanOperations|Типы, представляющие интерес, включают [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx), [SqlRenameStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlrenamestep.aspx), [SqlMoveSchemaStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlmoveschemastep.aspx), [SqlTableMigrationStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqltablemigrationstep.aspx), [CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx), [AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx), [DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx).<br /><br />Есть и некоторые другие действия — см. полный список в документации по API.|  
+    |Метод ReportPlanOperations|Интересующие нас типы: [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx), [SqlRenameStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlrenamestep.aspx), [SqlMoveSchemaStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlmoveschemastep.aspx), [SqlTableMigrationStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqltablemigrationstep.aspx), [CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx), [AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx), [DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx).<br /><br />Есть и некоторые другие действия — см. полный список в документации по API.|  
     |GetElementCategory|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
     |GetElementName|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
   
@@ -740,7 +741,7 @@ ms.locfileid: "67912787"
 Можно создать дополнительные средства для обработки выходных XML-файлов. Это лишь один пример применения [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx). Также можно создать [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx), чтобы изменить план развертывания до его выполнения.  
   
 ## <a name="see-also"></a>См. также:  
-[Пошаговое руководство. Расширение сборки проекта базы данных для формирования статистики модели](https://msdn.microsoft.com/library/ee461508(v=vs.100).aspx)  
+[Walkthrough: Extend Database Project Build to Generate Model Statistics](https://msdn.microsoft.com/library/ee461508(v=vs.100).aspx) (Пошаговое руководство. Расширение сборки для проекта базы данных для создания статистики модели)  
 [Пошаговое руководство. Расширение процесса развертывания проекта базы данных для изменения плана развертывания](https://msdn.microsoft.com/library/ee461507(v=vs.100).aspx)  
 [Изменение процесса сборки и развертывания базы данных с помощью участников сборки и развертывания](https://msdn.microsoft.com/library/ee461505(v=vs.100).aspx)  
   

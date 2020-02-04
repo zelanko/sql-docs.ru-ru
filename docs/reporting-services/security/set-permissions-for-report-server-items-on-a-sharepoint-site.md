@@ -12,10 +12,10 @@ ms.assetid: 2467c657-a3bf-4ec3-a88c-8877df19823d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8bdd50291a009189bf894300cdea4633fdd952f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570619"
 ---
 # <a name="set-permissions-for-report-server-items-on-a-sharepoint-site"></a>задать разрешения для элементов сервера отчетов на сайте SharePoint
@@ -59,7 +59,7 @@ ms.locfileid: "65570619"
   
 7.  Нажмите кнопку **Создать**.  
   
-8.  Нажмите кнопку **Добавить пользователей**.  
+8.  Щелкните **Добавить пользователей**.  
   
 9. В поле «Пользователи и группы» введите имя учетной записи пользователя.  
   

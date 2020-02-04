@@ -9,10 +9,10 @@ ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: cbfbc1b1d26f53e5ee8d3e04fc506048d76b3d28
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73593676"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>Создание схемы документа (построитель отчетов и службы SSRS)
@@ -64,7 +64,7 @@ ms.locfileid: "73593676"
   
 2.  На панели "Группы строк" щелкните правой кнопкой мыши группу и выберите пункт **Изменить группу**. Откроется страница **Общие** диалогового окна **Свойства группы табликсов** .  
   
-3.  Перейдите на вкладку **Дополнительно**.  
+3.  Щелкните **Дополнительно**.  
   
 4.  В списке **Схема документа** введите или выберите выражение, совпадающее с выражением группы.  
   

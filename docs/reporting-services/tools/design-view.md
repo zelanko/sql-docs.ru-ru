@@ -13,13 +13,13 @@ ms.assetid: 6fa378aa-442f-4d2f-beab-02a0fb5cd3ce
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e0e69efeb8f0b7bd0bdd4fbcb1bcb8a934ffdf6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577872"
 ---
-# <a name="design-view"></a>Конструктор
+# <a name="design-view"></a>Представление конструктора
 В конструкторе отчетов [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] расположить элементы в отчете можно в режиме конструктора. Конструктор иногда называют областью конструктора или макетом.  
   ![ssrs_ssdt_preview](../../reporting-services/media/ssrs-ssdt-preview.png)
 ## <a name="report-design-surface"></a>Область конструктора отчетов  

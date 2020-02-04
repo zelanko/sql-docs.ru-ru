@@ -1,6 +1,6 @@
 ---
-title: Диалоговое окно "Выбор папок поиска" (Visual Studio) | Документация Майкрософт
-ms.custom: ''
+title: Диалоговое окно «Выбор папок поиска» (Visual Studio)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dfe3339bfe2b965c46e2abd212a09b50021814ad
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: a31e9e898101c15c032db1be5f348bf28267d52c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265025"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253290"
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>Диалоговое окно «Выбор папок поиска» (Visual Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "68265025"
 **Применить**  
 Сохраните набор папок поиска, приведенный в списке **Выбранные папки** , в виде именованного набора папок. Затем этот набор папок можно выбирать в поле **Папка** на всех вкладках окна **Найти и заменить** . Диалоговое окно «Выбор папок поиска» не закрывается.  
   
-**Удалить**  
+**Удаление**  
 Удаляет выбранный набор папок из поля **Набор папок** , а также из поля **Папка** на всех вкладках окна **Найти и заменить** .  
   
 **Доступные папки**  

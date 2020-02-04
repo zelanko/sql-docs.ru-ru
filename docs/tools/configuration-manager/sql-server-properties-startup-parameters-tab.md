@@ -1,6 +1,6 @@
 ---
-title: Свойства SQL Server (вкладка «Параметры запуска») | Документация Майкрософт
-ms.custom: ''
+title: Свойства SQL Server (вкладка «Параметры запуска»)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a95a90271c6196c68a23d0ba416c5157c90ae9c4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 2d5a4c5cb279cb4cfd4bbe1baa63f89dc1289436
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023911"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306775"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>Свойства SQL Server (вкладка «Параметры запуска»)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "68023911"
   
 -   Каждый параметр запуска начинается с символа "—" (тире), вторым символом является буква.  
   
-## <a name="required-parameters"></a>Обязательные параметры  
+## <a name="required-parameters"></a>Необходимые параметры  
  Следующие параметры обязательны: Их можно изменять, но не удалять.  
   
 -   -d представляет путь к файлу **master.mdf** (файл данных базы данных master).  
@@ -71,7 +71,7 @@ ms.locfileid: "68023911"
 > [!CAUTION]  
 >  Некоторые необязательные параметры могут изменить поведение сервера и повлиять на его производительность.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Доступ к этой странице имеют только пользователи, уполномоченные изменять соответствующие записи в реестре. Это следующие пользователи.  
   
 -   Члены локальной группы администраторов.  

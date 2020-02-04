@@ -1,6 +1,6 @@
 ---
-title: Перемещение или удаление элемента или проекта | Документация Майкрософт
-ms.custom: ''
+title: Перемещение или удаление элемента или проекта
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3fd92434-70f5-466e-bef0-7e0fd73ddb1c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a19a4bf8c91eb118af246a0e0bc0b3458833af7c
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 299b99a06666b42e45d63d920370aac30444bf65
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265365"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242832"
 ---
 # <a name="remove-or-delete-an-item-or-project"></a>Перемещение или удаление элемента или проекта
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,6 +55,6 @@ ms.locfileid: "68265365"
   
 ## <a name="see-also"></a>См. также:  
 [Обозреватель решений](../../ssms/solution/solution-explorer.md)  
-[Добавление в проект новые элементы](../../ssms/solution/add-new-items-to-a-project.md)  
+[Добавление новых элементов в проект](../../ssms/solution/add-new-items-to-a-project.md)  
 [Добавление существующих элементов в проект](../../ssms/solution/add-existing-items-to-a-project.md)  
   

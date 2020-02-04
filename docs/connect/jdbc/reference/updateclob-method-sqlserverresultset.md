@@ -16,10 +16,10 @@ ms.assetid: e841f9a6-e94f-4552-a0e2-aefe3d84faf0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5f5f5c65d8ce86ac0f48c3a2a459e0cffec3096b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67999258"
 ---
 # <a name="updateclob-method-sqlserverresultset"></a>Метод updateClob (SQLServerResultSet)
@@ -29,7 +29,7 @@ ms.locfileid: "67999258"
   
 ## <a name="overload-list"></a>Список перегрузок  
   
-|Имя|Описание|  
+|Имя|Description|  
 |----------|-----------------|  
 |[updateClob (int, java.sql.Clob)](../../../connect/jdbc/reference/updateclob-method-int-java-sql-clob.md)|Обновляет указанный столбец значением java.sql.Clob по заданному индексу.|  
 |[Метод updateClob (int, java.io.Reader)](../../../connect/jdbc/reference/updateclob-method-int-java-io-reader.md)|Обновляет указанный столбец заданным объектом Reader.|  

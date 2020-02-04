@@ -9,10 +9,10 @@ ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0f9e826ff115183180ad42a1c065619f2196cd3e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580883"
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>Отображение номеров страниц или других свойств отчета (построитель отчетов и службы SSRS)
@@ -20,7 +20,7 @@ ms.locfileid: "65580883"
   
 -   Время выполнения;  
   
--   Номер страницы;  
+-   Номер страницы  
   
 -   Папка отчета;  
   
@@ -30,7 +30,7 @@ ms.locfileid: "65580883"
   
 -   Всего страниц  
   
--   Идентификатор пользователя  
+-   Идентификатор пользователя.  
   
 -   Язык  
   

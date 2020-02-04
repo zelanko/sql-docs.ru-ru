@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: a78074b7e32df18de1308d2354d98079d074f9bf
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73531942"
 ---
 # <a name="manage-big-data-clusters-for-sql-server-controller-dashboard"></a>Управление кластерами больших данных для информационной панели контроллера SQL Server
@@ -22,7 +22,7 @@ ms.locfileid: "73531942"
 
 Для просмотра состояния кластера больших данных SQL Server можно воспользоваться и другими способами, помимо **azdata** и записной книжки состояния кластера. Теперь контроллер кластера больших данных SQL Server можно добавить с помощью мини-приложения обозревателя **Подключения**. Так вы получите информационную панель для просмотра состояния кластера.
 
-![панель мониторинга](media/manage-with-controller-dashboard/controller-dashboard.png)
+!["Веб-транзакции"](media/manage-with-controller-dashboard/controller-dashboard.png)
 ## <a name="prerequisites"></a>предварительные требования
 
 Для запуска записной книжки требуются следующие компоненты:

@@ -1,23 +1,24 @@
 ---
-title: Использование операторов утверждений Transact-SQL в модульных тестах SQL Server | Документация Майкрософт
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Использование проверочных утверждений Transact-SQL в модульных тестах SQL Server
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 55d8be9c-9282-47d3-be7f-e2c26f00c95e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b4ff76e7d980081208f310dcae2a498f857151df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: b8feb69dc25d55b279d65904126afd2733160d6f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140962"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243511"
 ---
 # <a name="using-transact-sql-assertions-in-sql-server-unit-tests"></a>Использование проверочных утверждений Transact-SQL в модульных тестах SQL Server
+
 При выполнении модульного теста SQL Server запускается тестовый скрипт Transact\-SQL и возвращается его результат. Иногда результаты возвращаются в виде результирующего набора. Результаты можно проверить с помощью условий теста. Например, по тестовому условию можно проверить число возвращенных строк в результирующем наборе. Можно также проверить время, которое заняло выполнение конкретного теста. Дополнительные сведения об условиях теста см. в статье [Использование условий теста в модульных тестах SQL Server](../ssdt/using-test-conditions-in-sql-server-unit-tests.md).  
   
 Вместо условий теста можно воспользоваться утверждениями Transact\-SQL, которые определяются с помощью инструкций THROW или RAISERROR в скрипте Transact\-SQL. В определенных обстоятельствах утверждения Transact\-SQL будут более предпочтительны, чем условия теста.  
@@ -56,7 +57,7 @@ ms.locfileid: "68140962"
   
 Любые неуказанные параметры не используются. Эти параметры передаются инструкции RAISERROR в коде базы данных. Если указано MatchFirstError = true, то атрибут будет в исключении соответствовать любой из SqlErrors. По умолчанию (MatchFirstError = true) сопоставление происходит только с первой возникшей ошибкой.  
   
-Пример использования ожидаемых исключений и отрицательного модульного теста SQL Server см. в разделе [Пошаговое руководство. Создание и запуск модульного теста SQL Server](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md).  
+Пример использования ожидаемых исключений и отрицательного модульного теста SQL Server см. в статье [Пошаговое руководство. Создание и запуск модульного теста SQL Server](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md).  
   
 ## <a name="the-raiserror-statement"></a>Инструкция RAISERROR  
   
@@ -78,11 +79,11 @@ ms.locfileid: "68140962"
   
 @ErrorState — произвольное целое число в диапазоне от 1 до 127. Оно служит для различения повторений одной и той же ошибки, возникшей в разных местах кода.  
   
-Дополнительные сведения см. в разделе справки [RAISERROR (Transact-SQL)](https://msdn.microsoft.com/library/ms178592.aspx). Пример использования RAISERROR в модульном тесте SQL Server приведен в разделе [Как написать модульный тест SQL Server, который выполняется в области действия одной транзакции](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md).  
+Дополнительные сведения см. в разделе справки [RAISERROR (Transact-SQL)](https://msdn.microsoft.com/library/ms178592.aspx). Пример использования RAISERROR в модульном тесте SQL Server приведен в статье [Практическое руководство. Написание модульного теста SQL Server, который выполняется в области действия одной транзакции](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md).  
   
 ## <a name="see-also"></a>См. также:  
 [Создание и определение модульных тестов SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [Использование условий теста в модульных тестах SQL Server](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)  
 [Проверка кода базы данных с помощью модульных тестов SQL Server](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
-[Как открыть модульный тест SQL Server для изменения](../ssdt/how-to-open-a-sql-server-unit-test-to-edit.md)  
+[Практическое руководство. Открытие модульного теста SQL Server для изменения](../ssdt/how-to-open-a-sql-server-unit-test-to-edit.md)  
   

@@ -9,10 +9,10 @@ ms.assetid: 9b8346a6-f4f4-4ad3-bc98-8f2be342ef2d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 450a490e5c4f54f9fec2e88c1c73bfbf8502869a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66499991"
 ---
 # <a name="prerequisites-for-tutorials-report-builder"></a>Предварительные условия для использования учебников (построитель отчетов)
@@ -41,7 +41,7 @@ ms.locfileid: "66499991"
   
 Администратор сервера отчетов может предоставить необходимые разрешения на сервере отчетов, настроить папки для служб [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] , а также параметры по умолчанию для построителя отчетов. Дополнительные сведения см. в разделе [Install Report Builder](install-windows/install-report-builder.md).  
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Учебники по построителю отчетов](../reporting-services/report-builder-tutorials.md)  
 

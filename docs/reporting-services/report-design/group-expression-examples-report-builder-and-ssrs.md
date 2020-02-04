@@ -14,10 +14,10 @@ ms.assetid: 34cd0249-fc74-4cf2-ba11-7b072992bfd2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: abfb9f445b52550caf63cc440143e6b008df1d62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580269"
 ---
 # <a name="group-expression-examples-report-builder-and-ssrs"></a>Примеры выражений групп (построитель отчетов и службы SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "65580269"
 ## <a name="examples-of-group-expressions"></a>Примеры выражений группы  
  В следующей таблице приведены примеры выражений группы, которые можно использовать для определения группы.  
   
-|Описание|Выражение|  
+|Description|Выражение|  
 |-----------------|----------------|  
 |Группирование по полю `Region` .|`=Fields!Region.Value`|  
 |Группирование по фамилии и имени.|`=Fields!LastName.Value`<br /><br /> `=Fields!FirstName.Value`|  

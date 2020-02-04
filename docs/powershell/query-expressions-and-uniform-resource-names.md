@@ -14,10 +14,10 @@ ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 0eca650c1e499c54715204637306485280938707
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68049108"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>Выражения запросов и универсальные имена ресурсов
@@ -28,7 +28,7 @@ ms.locfileid: "68049108"
 
 > [!NOTE]
 > Существует два модуля SQL Server PowerShell — **SqlServer** и **SQLPS**. Модуль **SQLPS** входит в состав установки SQL Server (для обеспечения обратной совместимости), но больше не обновляется. Самым актуальным модулем PowerShell является модуль **SqlServer**. Модуль **SqlServer** содержит обновленные версии командлетов в **SQLPS**, а также новые командлеты для поддержки последних функций SQL.  
-> Предыдущие версии модуля **SqlServer** *входили* в состав среды SQL Server Management Studio (SSMS), но только с SSMS версий 16.x. Для работы PowerShell с SSMS 17.0 и более поздних версий необходимо установить модуль **SqlServer** из коллекции PowerShell.
+> Предыдущие версии модуля **SqlServer***входили* в состав среды SQL Server Management Studio (SSMS), но только с SSMS версий 16.x. Для работы PowerShell с SSMS 17.0 и более поздних версий необходимо установить модуль **SqlServer** из коллекции PowerShell.
 > Сведения об установке модуля **SqlServer** см. в статье [Установка компонентов SQL Server PowerShell](download-sql-server-ps-module.md).
 
   
@@ -97,7 +97,7 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
 |гггг|Год из четырех цифр.|  
 |ММ|Месяц из двух цифр (от 01 до 12).|  
 |дд|День из двух цифр (от 01 до 31).|  
-|чч|Час из двух цифр в 24-часовом формате (от 01 до 23).|  
+|hh|Час из двух цифр в 24-часовом формате (от 01 до 23).|  
 |ми|Минута из двух цифр (от 01 до 59).|  
 |сс|Секунда из двух цифр (от 01 до 59).|  
 |ммм|Количество миллисекунд (от 001 до 999).|  
@@ -161,7 +161,7 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[@Schema='S
 Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[@CreateDate=datetime('2008-03-21 19:49:32.647')]  
 ```  
   
-### <a name="f-enumerating-objects-using-isnull"></a>Е. Перечисление объектов при помощи функции is_null  
+### <a name="f-enumerating-objects-using-is_null"></a>Е. Перечисление объектов при помощи функции is_null  
  Следующее выражение запроса перечисляет все таблицы в базе данных [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] , значение свойства «Дата последнего изменения» в которых не равно NULL:  
   
 ```  

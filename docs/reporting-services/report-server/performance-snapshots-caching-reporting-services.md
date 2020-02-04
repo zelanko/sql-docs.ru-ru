@@ -12,10 +12,10 @@ ms.assetid: 85afd00f-e8d7-4ef7-9174-2ff84d82f960
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8cab49b0f07caff685bd216ec9090f9e851a1d38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581489"
 ---
 # <a name="performance-snapshots-caching-reporting-services"></a>Производительность, моментальные снимки, кэширование (службы Reporting Services)
@@ -38,10 +38,10 @@ ms.locfileid: "65581489"
 -   Дополнительные сведения о снижении остроты проблем производительности путем настройки конфигурации управления памятью см. в разделе [Настройка доступной памяти для приложений сервера отчетов](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md).  
   
 ## <a name="in-this-section"></a>в этом разделе  
- [Наблюдение за производительностью сервера отчетов](../../reporting-services/report-server/monitoring-report-server-performance.md)  
+ [Мониторинг производительности сервера отчетов](../../reporting-services/report-server/monitoring-report-server-performance.md)  
  Описывает объекты производительности, которые можно использовать для слежения за рабочей нагрузкой сервера.  
   
- [Установка свойств обработки отчетов](../../reporting-services/report-server/set-report-processing-properties.md)  
+ [Определение свойств обработки отчетов](../../reporting-services/report-server/set-report-processing-properties.md)  
  Описывает способы настройки отчета для запуска по запросу, из кэша или по расписанию в качестве моментального снимка отчета.  
   
  [Настройка доступной памяти для приложений сервера отчетов](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)  
