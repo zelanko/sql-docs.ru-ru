@@ -1,6 +1,6 @@
 ---
-title: Параметры ("Конструкторы" — "Конструкторы таблиц и баз данных") | Документация Майкрософт
-ms.custom: ''
+title: Параметры ("Конструкторы" — страница "Конструкторы таблиц и баз данных")
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,14 +12,14 @@ f1_keywords:
 ms.assetid: b43f4b97-17b9-4004-a824-f77b9e145741
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 04204d6d6c83411d1a47caa8f573bdbc2601d9f0
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 09df28c2bcd304733250a90813773ede3a29c2ed
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262746"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245712"
 ---
-# <a name="options-designers---table-and-database-designers-page"></a>Параметры ("Конструкторы" — "Конструкторы таблиц и баз данных")
+# <a name="options-designers---table-and-database-designers-page"></a>Параметры ("Конструкторы" — страница "Конструкторы таблиц и баз данных")
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Эта страница используется для определения поведения конструктора по умолчанию. Для доступа к параметрам в меню **Сервис** выберите **Параметры**, откройте папку **Конструкторы** и щелкните **Конструктор таблиц**.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "68262746"
 **Представление таблицы по умолчанию**  
 Выбор способа отображения таблиц в конструкторах.  
   
--   **Standard Edition Edition**  
+-   **Standard Edition**  
   
     Отображается заголовок таблицы, имена всех столбцов, типы данных и установка разрешения значений NULL.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "68262746"
   
     Отображается только заголовок таблицы с его именем.  
   
--   **Другой**  
+-   **Custom**  
   
     Возможен выбор столбцов для отображения.  
   

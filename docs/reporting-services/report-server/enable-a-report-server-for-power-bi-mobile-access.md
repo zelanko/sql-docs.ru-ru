@@ -9,10 +9,10 @@ ms.assetid: c1a71522-394b-46a7-b9ec-f964bdd81d82
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d14c8e092a030c88dbc4d0b5d4375bb56a8eb82c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63308179"
 ---
 # <a name="enable-a-report-server-for-power-bi-mobile-access"></a>Включение доступа к серверу отчетов для мобильного приложения Power BI
@@ -49,9 +49,9 @@ ms.locfileid: "63308179"
   
 ## <a name="see-also"></a>См. также раздел  
   
-[Настройка проверки подлинности Windows на сервере отчетов](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)  
+[Настройка обычной аутентификации на сервере отчетов](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)  
 [Настройка подключений SSL для сервера отчетов в собственном режиме](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)  
-[Настройка брандмауэра для доступа к серверу отчетов](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
+[настроить брандмауэр для доступа к серверу отчетов](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
   
   
   

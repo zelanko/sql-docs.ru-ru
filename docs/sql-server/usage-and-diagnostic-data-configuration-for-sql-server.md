@@ -9,10 +9,10 @@ ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
 ms.openlocfilehash: d5248f97b044cb688174171fdb6ef79943851a92
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028927"
 ---
 # <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-ceip"></a>Настройка сбора данных об использовании и данных диагностики для SQL Server (CEIP)
@@ -84,7 +84,7 @@ AND instance_name = '_Total'
     
     Имя записи = CustomerFeedback
     
-    Тип записи DWORD: 0 — не участвовать; 1 — участвовать
+    тип записи DWORD: 0 — не участвовать; 1 — участвовать.
     
     {InstanceID} указывает тип экземпляра и сам экземпляр, как показано в следующих примерах:
 
@@ -98,7 +98,7 @@ AND instance_name = '_Total'
     
     Имя записи = CustomerFeedback
     
-    Тип записи DWORD: 0 — не участвовать; 1 — участвовать
+    тип записи DWORD: 0 — не участвовать; 1 — участвовать.
 
 > [!NOTE]
 > {Major Version} обозначает основную версию SQL Server, например 140 для SQL Server 2017.
@@ -115,7 +115,7 @@ AND instance_name = '_Total'
 
     имя RegEntry = EnableErrorReporting;
 
-    Тип записи DWORD: 0 — не участвовать; 1 — участвовать
+    тип записи DWORD: 0 — не участвовать; 1 — участвовать.
  
     {InstanceID} указывает тип экземпляра и сам экземпляр, как показано в следующих примерах: 
 
@@ -130,7 +130,7 @@ AND instance_name = '_Total'
 
     имя RegEntry = EnableErrorReporting;
 
-    Тип записи DWORD: 0 — не участвовать; 1 — участвовать
+    тип записи DWORD: 0 — не участвовать; 1 — участвовать.
 
 > [!NOTE]
 > {Major Version} обозначает основную версию SQL Server. Например, 140 соответствует версии SQL Server 2017.

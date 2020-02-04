@@ -1,29 +1,28 @@
 ---
-title: Воспроизвести до курсора (SQL Server Profiler) | Документация Майкрософт
-ms.custom: ''
-ms.date: 03/01/2017
+title: Воспроизведение до курсора
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- replaying cursors
-- traces [SQL Server], replaying
-- replaying traces
 ms.assetid: 89eadc41-4424-4a1c-ba61-0b52c851cdb1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c4a6a02576ac5c58c88cf1b2b489106d6cf8013e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 9df4fe8bf442fae11aefeb2b3d4e3c95aa13037e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928854"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74957790"
 ---
 # <a name="replay-to-a-cursor-sql-server-profiler"></a>воспроизвести до курсора (приложение SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  В этом подразделе описывается воспроизведение файлов или таблиц трассировки, которые были приостановлены по достижении курсора при помощи приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Приостановка трассировок курсоров поддерживает отладку, так как существует возможность разбиения воспроизведения длинных скриптов трассировки на короткие сегменты, которые могут анализироваться по шагам.  
+
+В этом подразделе описывается воспроизведение файлов или таблиц трассировки, которые были приостановлены по достижении курсора при помощи приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Приостановка трассировок курсоров поддерживает отладку, так как существует возможность разбиения воспроизведения длинных скриптов трассировки на короткие сегменты, которые могут анализироваться по шагам.  
   
 ### <a name="to-replay-to-the-cursor"></a>Воспроизведение до курсора  
   

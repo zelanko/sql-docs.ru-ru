@@ -1,6 +1,6 @@
 ---
-title: Связь запроса с подключением в проекте | Документация Майкрософт
-ms.custom: ''
+title: Связь запроса с соединением в проекте
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c9625ae0-29c1-4179-a709-51b7e2f9e23d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 247258298acbe8af4a68c0cd0b981cd04deb26ba
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: f5e26bcc445f563c08a8d0dcc933918ded7057aa
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68258145"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241880"
 ---
 # <a name="associate-a-query-with-a-connection-in-a-project"></a>Связь запроса с соединением в проекте
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,6 +34,6 @@ ms.locfileid: "68258145"
   
 ## <a name="see-also"></a>См. также:  
 [Обозреватель решений](../../ssms/solution/solution-explorer.md)  
-[Изменение соединение, связанное с запросом](../../ssms/solution/change-the-connection-associated-with-a-query.md)  
+[Изменение соединения, связанного с запросом](../../ssms/solution/change-the-connection-associated-with-a-query.md)  
 [Просмотр или изменение свойств соединения в проекте](../../ssms/solution/view-or-change-the-properties-of-a-connection-in-a-project.md)  
   

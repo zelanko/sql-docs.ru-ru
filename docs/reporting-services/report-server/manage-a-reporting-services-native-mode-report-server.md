@@ -13,10 +13,10 @@ ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 26b5bdacbdcf799ffc6c22113ebaec4fce2293b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66499586"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>Управление сервером отчетов служб Reporting Services в собственном режиме
@@ -57,7 +57,7 @@ ms.locfileid: "66499586"
  [настроить сервер отчетов для удаленного администрирования](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)  
  Описывает, как настроить экземпляр удаленного сервера отчетов для удаленного соединения и настройки с другого компьютера.  
   
- [включать и отключать компоненты служб Reporting Services](../../reporting-services/report-server/turn-reporting-services-features-on-or-off.md)  
+ [Включение и отключение компонентов Reporting Services](../../reporting-services/report-server/turn-reporting-services-features-on-or-off.md)  
  Объясняет, как удалить неиспользуемые компоненты после установки служб Reporting Services.  
   
  [Включение отслеживания удаленных ошибок (службы Reporting Services)](../../reporting-services/report-server/enable-remote-errors-reporting-services.md)  
@@ -65,6 +65,6 @@ ms.locfileid: "66499586"
   
 ## <a name="see-also"></a>См. также:  
  [Настройка и администрирование сервера отчетов (службы Reporting Services в собственном режиме)](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
- [Настройка и администрирование сервера отчетов (режим интеграции с SharePoint служб Reporting Services)](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)  
+ [Настройка и администрирование сервера отчетов (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)  
   
   

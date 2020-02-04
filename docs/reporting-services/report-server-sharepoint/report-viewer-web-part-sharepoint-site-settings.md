@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: jt000
 ms.author: jasontre
 ms.openlocfilehash: 738908549caa157557a16b1ae05575231a15c734
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580591"
 ---
 # <a name="sharepoint-site-settings-for-the-report-viewer-web-part---reporting-services"></a>Параметры сайта SharePoint для веб-части "Средство просмотра отчетов" (службы Reporting Services)
@@ -35,7 +35,7 @@ ms.locfileid: "65580591"
 
 ## <a name="report-viewer-web-part-settings"></a>Параметры веб-части "Средство просмотра отчетов"
 
-|Настройка|Комментарии|  
+|Параметр|Комментарии|  
 |-------------|--------------|  
 |Сбор данных об использовании|Позволяет отправлять сведения об ошибках и использовании в корпорацию Майкрософт для улучшения продуктов. Правила Майкрософт в отношении сбора данных и сообщений об ошибках см. в [заявлении о конфиденциальности Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=868444).|  
 |Включение для отчетов метаданных о специальных возможностях|Задает [сведения об устройстве `AccessibleTablix`](../html-device-information-settings.md) для отчетов, подготавливаемых к просмотру.| 

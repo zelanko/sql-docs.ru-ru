@@ -9,10 +9,10 @@ ms.assetid: df7720a1-d178-45bb-8d6f-63e208cae7fe
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6e3a96e3eef90778b0e7877b88ba79cb4e0dd43e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573864"
 ---
 # <a name="troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server"></a>Устранение неполадок с публикацией и просмотром отчетов на сервере отчетов, работающем в основном режиме
@@ -53,7 +53,7 @@ ms.locfileid: "65573864"
 [Поддержка браузера для служб Reporting Services и Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
 [Справочник по ошибкам и событиям (службы Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
 [Устранение неполадок с извлечением данных с помощью отчетов служб Reporting Services](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
-[Устранение неполадок, связанных с подписками и доставкой служб Reporting Services](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)  
+[Устранение неполадок с подписками и доставкой служб Reporting Services](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)  
   
   
 

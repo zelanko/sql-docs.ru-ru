@@ -1,10 +1,9 @@
 ---
-title: Настройка объема сведений, отображаемых в диаграммах | Документация Майкрософт
-ms.custom: ''
+title: Настройка объема сведений, отображаемых в диаграммах
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +14,14 @@ helpviewer_keywords:
 ms.assetid: 31bb6772-7974-4329-bca0-c16d5875483d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 41f9bab43db4a32372fb0bbede662c5dbba126cc
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 2634805d9940ce43ff2ccdd3d08b49022bf3df16
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263894"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242790"
 ---
 # <a name="customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools"></a>Настройка объема сведений, отображаемых в диаграммах (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

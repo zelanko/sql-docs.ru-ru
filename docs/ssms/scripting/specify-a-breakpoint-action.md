@@ -1,10 +1,8 @@
 ---
-title: Указание действия в точке останова | Документация Майкрософт
-ms.custom: ''
-ms.date: 03/14/2017
+title: Задание действия в точке останова
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint action
@@ -12,22 +10,30 @@ helpviewer_keywords:
 ms.assetid: f97f0097-6f51-40c1-b2e0-294a93ce1e1b
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5209a5cd5d80529a71c545a11d8b59b46248bc96
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: d4bffc7742a9833d8715c9479e051cdd732d7596
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267735"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253653"
 ---
 # <a name="specify-a-breakpoint-action"></a>Задание действия в точке останова
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Действие точки останова **При попадании** задает пользовательское действие, которое отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] выполняет для точки останова. Если достигнуто указанное число попаданий или удовлетворяется любое из указанных условий для точки останова, то отладчик выполняет действие, заданное для точки останова.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+Действие точки останова **При попадании** задает пользовательское действие, которое отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] выполняет для точки останова. Если достигнуто указанное число попаданий или удовлетворяется любое из указанных условий для точки останова, то отладчик выполняет действие, заданное для точки останова.
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
   
-##  <a name="BKMK_ActionConsiderations"></a> Обзор действий  
- Действие для точки останова по умолчанию — прекращение выполнения, если достигнуто число попаданий и удовлетворяется условие для точки останова. А действие **При попадании** в отладчике [!INCLUDE[tsql](../../includes/tsql-md.md)] , напротив, главным образом используется для вывода информации в окне отладчика **Вывод** в виде сообщения.  
+##  <a name="BKMK_ActionConsiderations"></a> Обзор действий
+
+Действие для точки останова по умолчанию — прекращение выполнения, если достигнуто число попаданий и удовлетворяется условие для точки останова. А действие **При попадании** в отладчике [!INCLUDE[tsql](../../includes/tsql-md.md)] , напротив, главным образом используется для вывода информации в окне отладчика **Вывод** в виде сообщения.  
   
- Сообщение указывается в параметре **Вывод сообщения** в виде текстовой строки, которая включает выражения с данными из кода [!INCLUDE[tsql](../../includes/tsql-md.md)] , отладка которого выполняется. Выражения могут включать следующие элементы.  
+Сообщение указывается в параметре **Вывод сообщения** в виде текстовой строки, которая включает выражения с данными из кода [!INCLUDE[tsql](../../includes/tsql-md.md)] , отладка которого выполняется. Выражения могут включать следующие элементы.  
   
 -   Выражение [!INCLUDE[tsql](../../includes/tsql-md.md)] , заключенное в фигурные скобки ({}). В выражении могут использоваться переменные, параметры и встроенные функции [!INCLUDE[tsql](../../includes/tsql-md.md)] . Например: {@MyVariable}, {@NameParameter}, {@@SPID} или {SERVERPROPERTY(ProcessID)}.  
   

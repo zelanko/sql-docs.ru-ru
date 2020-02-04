@@ -9,10 +9,10 @@ ms.assetid: 628c8775-c62d-45ac-b349-23db86fa4e6c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 21de137cefcfc61e91739ff33b2a9f0de4c3a05f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63194373"
 ---
 # <a name="create-drillthrough-rdlc-report-with-parameters---reportviewer"></a>Создание детализированного (RDLC) отчета с параметрами с помощью ReportViewer
@@ -34,7 +34,7 @@ ms.locfileid: "63194373"
 [Урок 6. Добавление в приложение элемента управления ReportViewer](../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md)  
 [Урок 7. Добавление операции детализации к родительскому отчету](../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md)  
 [Урок 8. Создание фильтра данных](../reporting-services/lesson-8-create-a-data-filter.md)  
-[Lesson 9: Build and Run the Application](../reporting-services/lesson-9-build-and-run-the-application.md)  
+[Урок 9. Сборка и запуск приложения](../reporting-services/lesson-9-build-and-run-the-application.md)  
   
 ## <a name="see-also"></a>См. также:  
 [Учебники по службам Reporting Services (SSRS)](../reporting-services/reporting-services-tutorials-ssrs.md)  

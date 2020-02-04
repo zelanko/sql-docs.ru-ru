@@ -1,10 +1,7 @@
 ---
-title: Элемент Database для сервера (DTA) | Документация Майкрософт
-ms.custom: ''
-ms.date: 03/01/2017
+title: Элемент Database описания сервера (DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: 5cd9a87a-af4b-45f3-8c18-f7fd7e7d3064
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5817a6d32ff94aaba7e4c0a573e6cd6a5fd586dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 832cdff550f29bc498ea1cdcbc24fb88b0172729
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116935"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306609"
 ---
 # <a name="database-element-for-server-dta"></a>Элемент Database описания сервера (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Позволяет задать базу данных, которую необходимо настроить на конкретном сервере.  
+
+Позволяет задать базу данных, которую необходимо настроить на конкретном сервере.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,7 +39,7 @@ ms.locfileid: "68116935"
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |Тип данных и длина|Нет.|  
 |Значение по умолчанию|Нет.|  

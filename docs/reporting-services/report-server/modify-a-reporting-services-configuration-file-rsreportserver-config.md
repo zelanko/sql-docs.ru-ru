@@ -9,10 +9,10 @@ ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e97dff2a6d08207d95b28ce2f9a0cedafd9b6fff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581129"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Изменение файла конфигурации служб Reporting Services (RSreportserver.config)
@@ -100,7 +100,7 @@ ms.locfileid: "65581129"
 6.  Проверьте файлы журнала трассировки, чтобы убедиться в том, что не возникли ошибки. Найденные ошибки означают, что какой-то параметр или его значение указаны неправильно. Просмотрите раздел [Файл конфигурации RSReportServer](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) , чтобы определить допустимые значения для каждого из параметров, ставшего причиной ошибки. Дополнительные сведения о просмотре журнала трассировки см. в разделе [Журнал трассировки службы сервера отчетов](../../reporting-services/report-server/report-server-service-trace-log.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Файл конфигурации RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
+ [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Файл конфигурации ReportingServicesService](../../reporting-services/report-server/reportingservicesservice-configuration-file.md)   
  [Файл конфигурации RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
  [Развертывание модуля обработки данных](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)   

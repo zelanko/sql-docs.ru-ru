@@ -1,30 +1,28 @@
 ---
-title: Параметры воспроизведения (SQL Server Profiler) | Документация Майкрософт
-ms.custom: ''
-ms.date: 03/14/2017
+title: Параметры воспроизведения
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- traces [SQL Server], replaying
-- replaying traces
-- health monitor [SQL Server]
-- Replay Configuration dialog box
 ms.assetid: 58761a25-a84f-4a90-9c61-97700bc5ad9c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4a79c932739fa8d9d5d9125cdd93cc3564d16f55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 649bf543417c0772c23c6338862e33b6bac9bad1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031440"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307497"
 ---
 # <a name="replay-options-sql-server-profiler"></a>Параметры воспроизведения (приложение SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Перед воспроизведением захваченной трассировки с помощью приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]задайте параметры воспроизведения в диалоговом окне **Конфигурация воспроизведения** . Чтобы открыть его, откройте файл трассировки воспроизведения в приложении [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]и в меню **Воспроизведение** выберите **Запуск**. Сведения о разрешениях, необходимых для воспроизведения трассировки, см. в разделе [Permissions Required to Run SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md).  
+
+Перед воспроизведением захваченной трассировки с помощью приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]задайте параметры воспроизведения в диалоговом окне **Конфигурация воспроизведения** . Чтобы открыть его, откройте файл трассировки воспроизведения в приложении [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]и в меню **Воспроизведение** выберите **Запуск**. Сведения о разрешениях, необходимых для воспроизведения трассировки, см. в разделе [Permissions Required to Run SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md).  
   
  В этом разделе приводится описание параметров, которые задаются в диалоговом окне **Конфигурация воспроизведения** .  
   
@@ -80,7 +78,7 @@ ms.locfileid: "68031440"
   
 ## <a name="see-also"></a>См. также:  
  [Воспроизведение трассировок](../../tools/sql-server-profiler/replay-traces.md)   
- [Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md)   
+ [Требования к воспроизведению](../../tools/sql-server-profiler/replay-requirements.md)   
  [Вопросы воспроизведения трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/considerations-for-replaying-traces-sql-server-profiler.md)  
   
   

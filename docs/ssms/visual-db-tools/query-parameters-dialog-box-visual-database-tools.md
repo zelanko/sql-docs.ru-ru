@@ -1,10 +1,9 @@
 ---
-title: Диалоговое окно "Параметры запроса" (визуальные инструменты для баз данных) | Документация Майкрософт
-ms.custom: ''
+title: Диалоговое окно "Параметры запроса"
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +12,14 @@ f1_keywords:
 ms.assetid: 31cdaee2-d7cd-4d64-a45f-924b27e8b1f0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8bea7f04d7a0275b035879dabcb1da8b3952c849
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 05e99d2fc2365ab39b68ad6211889047a1564113
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266303"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255371"
 ---
 # <a name="query-parameters-dialog-box-visual-database-tools"></a>Диалоговое окно «Параметры запроса» (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "68266303"
 **Название**  
 Список параметров, определенных для выполняемого запроса. Если запрос содержит именованные параметры, то имена отобразятся в списке. Если запрос содержит неименованные параметры, то для каждого параметра запроса в списке будут приведены имена параметров, определенные системой.  
   
-**Значение**  
+**Value**  
 Введите значение для каждого параметра, приведенного в списке **Имя**. Значение, использованное в последний раз, будет отображено в качестве значения параметра по умолчанию.  
   
 ## <a name="example"></a>Пример  

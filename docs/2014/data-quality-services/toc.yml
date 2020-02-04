@@ -51,7 +51,7 @@
       items:
         - name: Создание домена
           href: create-a-domain.md
-        - name: Управление доменами. Список доменов
+        - name: 'Управление доменами: список доменов'
           href: domain-management-domain-list.md
         - name: Установка свойств домена
           href: set-domain-properties.md

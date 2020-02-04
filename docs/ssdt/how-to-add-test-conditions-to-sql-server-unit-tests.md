@@ -1,23 +1,24 @@
 ---
-title: Руководство. Добавление условий теста в модульные тесты SQL Server | Документация Майкрософт
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: добавить условия теста в модульные тесты SQL Server
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 85ba2e56-a0b2-489c-aea2-fb135cce0cfc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: afc0e433a7d39dffa2e4d31d03292d2aee07a4a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 4216358a4b8b541ed724b70fe68245a16235664b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67899171"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241626"
 ---
-# <a name="how-to-add-test-conditions-to-sql-server-unit-tests"></a>Руководство. добавить условия теста в модульные тесты SQL Server
+# <a name="how-to-add-test-conditions-to-sql-server-unit-tests"></a>Практическое руководство. Добавление условий теста в модульные тесты SQL Server
+
 Условия теста можно добавить в модульный тест SQL Server с помощью **конструктора модульных тестов SQL Server**. При сохранении тестового класса условия теста автоматически сохраняются в тестовом проекте в виде файлов, содержащих исходный код на языке Visual C\# или Visual Basic. После сохранения условие теста можно изменить в **конструкторе модульных тестов SQL Server** или в файле с исходным кодом.  
   
 ### <a name="to-add-test-conditions-to-a-sql-server-unit-test"></a>Добавление условий теста в модульные тесты SQL Server  
@@ -48,10 +49,10 @@ ms.locfileid: "67899171"
   
 ## <a name="see-also"></a>См. также:  
 [Создание и определение модульных тестов SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
-[Руководство. Создание пустого модульного теста SQL Server](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)  
-[Руководство. создавать модульные тесты SQL Server для функций, триггеров и хранимых процедур](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md)  
+[Практическое руководство. Создание пустого модульного теста SQL Server](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)  
+[Практическое руководство. Создание модульных тестов SQL Server для функций, триггеров и хранимых процедур](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md)  
 [Использование условий теста в модульных тестах SQL Server](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)  
 [Скрипты в модульных тестах SQL Server](../ssdt/scripts-in-sql-server-unit-tests.md)  
 [Интерпретация результатов модульного теста SQL Server](../ssdt/interpreting-sql-server-unit-test-results.md)  
-[Руководство. выполнять модульные тесты SQL Server](../ssdt/how-to-run-sql-server-unit-tests.md)  
+[Практическое руководство. Выполнение модульных тестов SQL Server](../ssdt/how-to-run-sql-server-unit-tests.md)  
   

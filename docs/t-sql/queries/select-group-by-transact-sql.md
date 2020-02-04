@@ -46,7 +46,7 @@ ms.locfileid: "75258293"
   
 ## <a name="syntax"></a>Синтаксис  
 
- ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "|::ref1::|") [Синтаксические обозначения в Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ```  
 -- Syntax for SQL Server and Azure SQL Database   
@@ -159,7 +159,7 @@ INSERT INTO sales VALUES (N'United States', N'Montana', 100);
 | Canada | Alberta | 100 |
 | Canada | British Columbia | 200 |
 | Canada | British Columbia | 300 |
-| United States | Montana | 100 |
+| США | Montana | 100 |
 
 Этот запрос группирует значения столбцов Country и Region и возвращает общую сумму по каждому сочетанию значений.  
  
@@ -174,7 +174,7 @@ GROUP BY Country, Region;
 |---------|--------|-------|
 | Canada | Alberta | 100 |
 | Canada | British Columbia | 500 |
-| United States | Montana | 100 |
+| США | Montana | 100 |
 
 ### <a name="group-by-rollup"></a>GROUP BY ROLLUP
 
@@ -205,8 +205,8 @@ GROUP BY ROLLUP (Country, Region);
 | Canada | Alberta | 100 |
 | Canada | British Columbia | 500 |
 | Canada | NULL | 600 |
-| United States | Montana | 100 |
-| United States | NULL | 100 |
+| США | Montana | 100 |
+| США | NULL | 100 |
 | NULL | NULL | 700 |
 
 ### <a name="group-by-cube--"></a>GROUP BY CUBE ( )  
@@ -229,11 +229,11 @@ GROUP BY CUBE (Country, Region);
 | NULL | Alberta | 100 |
 | Canada | British Columbia | 500 |
 | NULL | British Columbia | 500 |
-| United States | Montana | 100 |
+| США | Montana | 100 |
 | NULL | Montana | 100 |
 | NULL | NULL | 700
 | Canada | NULL | 600 |
-| United States | NULL | 100 |
+| США | NULL | 100 |
    
  ### <a name="group-by-grouping-sets--"></a>GROUP BY GROUPING SETS ( )  
  
@@ -354,7 +354,7 @@ GROUP BY ALL
 |Компонент|SQL Server Integration Services|Уровень совместимости SQL Server — 100 или более|Уровень совместимости SQL Server 2008 или более поздней версии — 90.|  
 |-------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------|  
 |Статистические функции DISTINCT|Не поддерживаются для конструкций WITH CUBE или WITH ROLLUP.|Поддерживаются для конструкций WITH CUBE, WITH ROLLUP, GROUPING SETS, CUBE или ROLLUP.|Аналогично уровню совместимости 100.|  
-|Определяемая пользователем функция с именем CUBE или ROLLUP в предложении GROUP BY|Определяемая пользователем функция **dbo.cube(**_arg1_**,**_...argN_**)** or **dbo.rollup(**_arg1_**,**..._argN_**)** в предложении GROUP BY недопустима.<br /><br /> Например: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|Определяемая пользователем функция **dbo.cube (**_arg1_**,**...argN **)** or **dbo.rollup(** arg1 **,**_...argN_**)** в предложении GROUP BY недопустима.<br /><br /> Например: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> Выдается следующее сообщение об ошибке: "Применение неверного синтаксиса недалеко от ключевого слова 'cube'&#124;'rollup'".<br /><br /> Чтобы избежать этой проблемы, замените конструкцию `dbo.cube` на `[dbo].[cube]` или конструкцию `dbo.rollup` на `[dbo].[rollup]`.<br /><br /> Следующий пример является допустимым: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`.|Определяемая пользователем функция **dbo.cube (**_arg1_**,**_...argN_) or **dbo.rollup(**_arg1_**,**_...argN_**)** в предложении GROUP BY недопустима.<br /><br /> Например: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
+|Определяемая пользователем функция с именем CUBE или ROLLUP в предложении GROUP BY|Определяемая пользователем функция **dbo.cube(** _arg1_ **,** _...argN_ **)** or **dbo.rollup(** _arg1_ **,** ..._argN_ **)** в предложении GROUP BY недопустима.<br /><br /> Например: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|Определяемая пользователем функция **dbo.cube (** _arg1_ **,** ...argN **)** or **dbo.rollup(** arg1 **,** _...argN_ **)** в предложении GROUP BY недопустима.<br /><br /> Например: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> Выдается следующее сообщение об ошибке: "Применение неверного синтаксиса недалеко от ключевого слова 'cube'&#124;'rollup'".<br /><br /> Чтобы избежать этой проблемы, замените конструкцию `dbo.cube` на `[dbo].[cube]` или конструкцию `dbo.rollup` на `[dbo].[rollup]`.<br /><br /> Следующий пример является допустимым: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`.|Определяемая пользователем функция **dbo.cube (** _arg1_ **,** _...argN_) or **dbo.rollup(** _arg1_ **,** _...argN_ **)** в предложении GROUP BY недопустима.<br /><br /> Например: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
 |GROUPING SETS|Не поддерживается|Поддерживается|Поддерживается|  
 |CUBE|Не поддерживается|Поддерживается|Не поддерживается|  
 |ROLLUP|Не поддерживается|Поддерживается|Не поддерживается|  

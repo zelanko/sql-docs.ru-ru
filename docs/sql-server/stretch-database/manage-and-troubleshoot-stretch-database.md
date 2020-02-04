@@ -1,5 +1,5 @@
 ---
-title: Управление и устранение неполадок
+title: Управление и устранение неисправностей
 ms.date: 06/27/2016
 ms.service: sql-server-stretch-database
 ms.reviewer: ''
@@ -14,13 +14,13 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 786ebc0529d9af47c34840e0e2cb11bf2a448fec
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73844611"
 ---
-# <a name="manage-and-troubleshoot-stretch-database"></a>Управление Stretch Database и устранение связанных с ней неполадок
+# <a name="manage-and-troubleshoot-stretch-database"></a>Управление службой Stretch Database и устранение неполадок, связанных с ее использованием
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
 
@@ -41,11 +41,11 @@ GO
    
 ## <a name="manage-data-migration"></a>Управление переносом данных  
   
-### <a name="check-the-filter-function-applied-to-a-table"></a>Проверка функции фильтра, примененного к таблице  
- Откройте представление каталога **sys.remote_data_archive_tables** и проверьте значение столбца **filter_predicate** , чтобы определить, какую функцию использует Stretch Database для выбора строк, которые нужно перенести. Если значение равно NULL, всю таблицу можно переносить. Дополнительные сведения см. в статье [sys.remote_data_archive_tables (Transact-SQL)](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-tables.md) и [Выбор строк для переноса с помощью функции фильтра](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).  
+### <a name="check-the-filter-function-applied-to-a-table"></a>Проверка функции фильтров, примененной к таблице  
+ Откройте представление каталога **sys.remote_data_archive_tables** и проверьте значение столбца **filter_predicate** , чтобы определить, какую функцию использует Stretch Database для выбора строк, которые нужно перенести. Если значение равно null, то всю таблицу можно перенести. Дополнительные сведения см. в статье [sys.remote_data_archive_tables (Transact-SQL)](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-tables.md) и [Выбор строк для переноса с помощью функции фильтра](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).  
   
 ###  <a name="Migration"></a> Проверка состояния переноса данных  
- В SQL Server Management Studio выберите **Задачи | Stretch | Монитор** для базы данных, чтобы отслеживать перенос данных в мониторе Stretch Database. Дополнительные сведения см. в статьях [Мониторинг переноса данных и устранение неполадок при этой операции (Stretch Database)](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md).  
+ Выберите **Задачи | Stretch Database | Мониторинг** для базы данных в SQL Server Management Studio, чтобы отслеживать перенос данных в мониторе Stretch Database. Дополнительные сведения см. в статьях [Мониторинг переноса данных и устранение неполадок при этой операции (Stretch Database)](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md).  
   
  Или откройте динамическое административное представление **sys.dm_db_rda_migration_status** , чтобы увидеть, сколько разделов и строк данных были перенесены.  
   
@@ -72,7 +72,7 @@ GO
 ## <a name="manage-table-schema"></a>Управление схемой таблицы
 
 ### <a name="dont-change-the-schema-of-the-remote-table"></a>Не изменяйте схему удаленной таблицы  
- Не изменяйте схему удаленной таблицы Azure, связанной с таблицей SQL Server, которая настроена для использования с Stretch Database. В частности, не следует изменять имя или тип данных столбца. При использовании Stretch Database нужно учитывать некоторые моменты, связанные со схемой удаленной таблицы в отношении схемы таблицы SQL Server. Если вы измените удаленную схему, Stretch Database не будет работать с измененной таблицей.  
+ Не изменяйте схему удаленной таблицы Azure, связанной с таблицей SQL Server, которая настроена для использования со Stretch Database. В частности, не следует изменять имя или тип данных столбца. При использовании Stretch Database нужно учитывать некоторые моменты, связанные со схемой удаленной таблицы в отношении схемы таблицы SQL Server. Если вы измените удаленную схему, Stretch Database не будет работать с измененной таблицей.  
 
 ### <a name="reconcile-table-columns"></a>Согласование столбцов таблицы  
 Если вы случайно стерли столбцы из удаленной таблицы, выполните инструкцию **sp_rda_reconcile_columns** — она добавляет в удаленную таблицу столбцы, существующие в таблице SQL Server с поддержкой Stretch, но отсутствующие в удаленной таблице. Дополнительные сведения см. в статье [sys.sp_rda_reconcile_columns](../../relational-databases/system-stored-procedures/sys-sp-rda-reconcile-columns-transact-sql.md).  
@@ -80,21 +80,21 @@ GO
   > [!IMPORTANT]
   > Воссоздавая столбцы, случайно стертые из удаленной таблицы, процедура **sp_rda_reconcile_columns** не восстанавливает данные, которые прежде присутствовали в стертых столбцах.
   
-Процедура**sp_rda_reconcile_columns** не стирает столбцы из удаленной таблицы, существующие в удаленной таблице, но отсутствующие в таблице SQL Server с поддержкой Stretch. Если в удаленной таблице Azure есть столбцы, больше не существующие в таблице SQL Server с поддержкой Stretch, они не мешают нормальной работе Stretch Database. При желании вы можете удалить такие столбцы вручную.  
+Процедура**sp_rda_reconcile_columns** не стирает столбцы из удаленной таблицы, существующие в удаленной таблице, но отсутствующие в таблице SQL Server с поддержкой Stretch. Если в удаленной таблице Azure есть столбцы, которых больше нет в таблице SQL Server с поддержкой Stretch Database, эти лишние столбцы не препятствуют нормальной работе службы Stretch Database. При желании вы можете удалить такие столбцы вручную.  
  
 ## <a name="manage-performance-and-costs"></a>Управление производительностью и затратами  
   
-### <a name="troubleshoot-query-performance"></a>Устранение неполадок с производительностью запросов  
-  После включения в таблицах поддержки растяжения запросы, которые включают такие таблицы, выполняются гораздо медленнее. Если производительность запросов снизилась значительно, обратите внимание на следующие моменты.  
+### <a name="troubleshoot-query-performance"></a>Решение проблем с производительностью запросов  
+  После включения в таблицах поддержки растяжения запросы, которые включают такие таблицы, выполняются гораздо медленнее. Если производительность запросов значительно снизилась, просмотрите следующие возможные проблемы.  
   
 -   Сервер Azure находится не в одном географическом регионе с SQL Server? Сервер Azure и SQL Server должны находиться в одном географическом регионе для уменьшения задержек в сети.  
   
 -   Проблемы с используемой сетью. Обратитесь к администратору сети, чтобы узнать о возможных неполадках или простоях.  
   
 ### <a name="increase-azure-performance-level-for-resource-intensive-operations-such-as-indexing"></a>Повышение уровня производительности Azure для таких ресурсоемких операций, как индексирование  
- Если вы выполняете сборку, повторную сборку или реорганизацию индекса для большой таблицы, настроенной для использования с Stretch Database, и предполагаете, что при этом в Azure будут активно запрашиваться перенесенные данные, увеличьте уровень производительности соответствующей удаленной базы данных на время операции. Дополнительные сведения об уровнях производительности и ценах см. на странице с [ценами на использование SQL Server Stretch Database](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/).  
+ При сборке, повторной сборке или реорганизации индекса для большой таблицы, настроенной для Stretch Database, если предполагается большое количество запросов к перенесенным данным в Azure в этот период, необходимо увеличить уровень производительности соответствующей удаленной базы данных Azure на период этой операции. Дополнительные сведения об уровнях производительности и ценах см. на странице с [ценами на использование SQL Server Stretch Database](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/).  
   
-### <a name="you-cant-pause-the-sql-server-stretch-database-service-on-azure"></a>Не удается приостановить службу SQL Server Stretch Database в Azure  
+### <a name="you-cant-pause-the-sql-server-stretch-database-service-on-azure"></a>Вы не можете приостановить службу SQL Server Stretch Database в Azure  
  Проверьте выбранные уровень производительности и цен. В случае временного увеличения производительности для выполнения ресурсоемкой операции не забудьте вернуть ее к прежнему уровню по завершении операции. Дополнительные сведения об уровнях производительности и ценах см. на странице с [ценами на использование SQL Server Stretch Database](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/).  
    
  ## <a name="change-the-scope-of-queries"></a>Изменение области запросов  
@@ -109,7 +109,7 @@ GO
    
  -   **REMOTE_ONLY**. Запрашиваются только удаленные данные.  
    
- -   **STAGE_ONLY**. Запрашиваются только данные в таблицах, где Stretch Database подготавливает строки, подходящие для переноса, и хранит перенесенные строки в течение заданного периода времени. Указание запроса — единственный способ запроса промежуточной таблицы.  
+ -   **STAGE_ONLY**. Запрос только данных в таблице, где Stretch Database размещает строки, пригодные для миграции, и сохраняет перенесенные строки в течение указанного периода после миграции. Указание запроса — единственный способ запроса промежуточной таблицы.  
   
 Например, следующий запрос возвращает только локальные результаты.  
   
@@ -126,7 +126,7 @@ GO
    
  -   **REMOTE_ONLY**. Обновляются или удаляются только удаленные данные.  
    
- -   **STAGE_ONLY**. Обновляются или удаляются только данные в таблице, где Stretch Database подготавливает строки, подходящие для переноса, и хранит перенесенные строки в течение заданного периода времени.  
+ -   **STAGE_ONLY**. Обновление или удаление только данных в таблице, где служба Stretch Database размещает строки, пригодные для миграции, и сохраняет перенесенные строки в течение указанного периода после миграции.  
   
 ## <a name="see-also"></a>См. также:  
  [Мониторинг переноса данных и устранение неполадок при этой операции (Stretch Database)](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)   

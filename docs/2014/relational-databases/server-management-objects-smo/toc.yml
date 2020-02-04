@@ -96,7 +96,7 @@
       href: tasks/scheduling-automatic-administrative-tasks-in-sql-server-agent.md
     - name: Резервное копирование и восстановление баз данных и журналов транзакций
       href: tasks/backing-up-and-restoring-databases-and-transaction-logs.md
-    - name: Написание скриптов
+    - name: Написание сценариев
       href: tasks/scripting.md
     - name: Передача данных
       href: tasks/transferring-data.md

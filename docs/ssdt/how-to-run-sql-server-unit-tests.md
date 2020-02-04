@@ -1,23 +1,24 @@
 ---
-title: Руководство. Выполнение модульных тестов SQL Server | Документация Майкрософт
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: выполнить модульные тесты SQL Server
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 34fe2d1e-d47b-4808-af56-8cc0fdae6518
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d17120b0c13ab1910d4636a376963f5ec74813eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 3ee95885dc1696fd7fba80342dc8c582a79056cc
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035018"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244280"
 ---
-# <a name="how-to-run-sql-server-unit-tests"></a>Руководство. выполнить модульные тесты SQL Server
+# <a name="how-to-run-sql-server-unit-tests"></a>Практическое руководство. Выполнение модульных тестов SQL Server
+
 Модульный тест SQL Server можно запустить несколькими способами, например из разных окон или из окна командной строки.  
   
 > [!NOTE]  
@@ -33,7 +34,7 @@ ms.locfileid: "68035018"
   
 2.  В окне **Представление теста** выберите один или несколько тестов, которые необходимо выполнить. Используя клавиши CTRL или SHIFT, можно выбирать последовательные или непоследовательные блоки тестов.  
   
-3.  Выполните любое из следующих действий.  
+3.  Выполните одно из приведенных ниже действий.  
   
     -   Щелкните правой кнопкой мыши в пределах окна **Представление теста** и выберите пункт **Выполнить выбранное**.  
   
@@ -57,7 +58,7 @@ ms.locfileid: "68035018"
   
 ## <a name="see-also"></a>См. также:  
 [Выполнение модульных тестов SQL Server](../ssdt/running-sql-server-unit-tests.md)  
-[Как запускать автоматические тесты из Microsoft Visual Studio 2010](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)  
+[Практическое руководство. Запуск автоматических тестов из Microsoft Visual Studio](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)  
 [Запуск автоматических тестов из командной строки](https://msdn.microsoft.com/library/ms182486(VS.100).aspx)  
 [Testing the Application (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182409.aspx) (Тестирование приложения (Visual Studio 2012))  
   

@@ -1,11 +1,7 @@
 ---
-title: Руководство. Удаление объектов и разрешение зависимостей | Документация Майкрософт
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: удалить объекты и разрешить зависимости
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - Microsoft.VisualStudio.Data.Tools.Project.HelpKeywords.SqlProjectDropDatabaseConfirmationDialog
@@ -14,14 +10,19 @@ f1_keywords:
 ms.assetid: fb31c2b1-ca4f-4e11-a0b6-5c26430f1c8c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ae25dbc584e564130348507e5aef657823502923
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: c9f2bd6ed462004d76750fb2328d1615a51c2c84
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026612"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241430"
 ---
-# <a name="how-to-delete-objects-and-resolve-dependencies"></a>Руководство. удалить объекты и разрешить зависимости
+# <a name="how-to-delete-objects-and-resolve-dependencies"></a>Как удалять объекты и разрешать зависимости
+
 При переименовании или удалении объекта в **обозревателе объектов SQL Server** средства SQL Server Data Tools автоматически определяют все зависимые объекты и подготавливают скрипт ALTER для переименования или удаления зависимости.  
   
 > [!WARNING]  
@@ -46,13 +47,13 @@ ms.locfileid: "68026612"
     > [!WARNING]  
     > В SSDT зависимости на основе скриптов, например ссылки на таблицу из представления, или хранимые процедуры автоматически не обновляются. После переименования все другие зависимости можно найти с помощью области **Список ошибок**, чтобы вручную исправить их.  
   
-5.  Примените изменения следующих шагов в предыдущей процедуре [Как обновить подключенную базу данных с помощью Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md).  
+5.  Примените изменения, выполнив действия из предыдущей процедуры, описанной в [практическом руководстве по обновлению подключенной базы данных с помощью Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md).  
   
 6.  Еще раз щелкните правой кнопкой мыши таблицу **Customers** в **обозревателе объектов SQL Server** и выберите пункт **Просмотр данных**. Обратите внимание, что данные таблицы остаются неизменными после операции переименования.  
   
 7.  Щелкните правой кнопкой мыши таблицу **Products** и выберите **Просмотр кода**. Обратите внимание, что ссылка на внешний ключ обновилась автоматически на `REFERENCES [dbo].[Customers] ([Id])` в соответствии с переименованием.  
   
-### <a name="to-delete-a-table"></a>Удаление таблицы  
+### <a name="to-delete-a-table"></a>для удаления таблицы.  
   
 1.  Щелкните правой кнопкой мыши таблицу **Customers** в **обозревателе объектов SQL Server** и выберите пункт **Удалить**.  
   

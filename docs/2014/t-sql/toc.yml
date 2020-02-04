@@ -1,4 +1,4 @@
-- name: Руководство. Написание инструкций Transact-SQL
+- name: Учебник. Составление инструкций Transact-SQL
   href: tutorial-writing-transact-sql-statements.md
   items:
     - name: Урок 1. Создание объектов базы данных
@@ -14,7 +14,7 @@
           href: lesson-1-4-reading-the-data-in-a-table.md
         - name: Сводка. Создание объектов базы данных
           href: lesson-1-5-summary-creating-database-objects.md
-    - name: Урок 2. Настройка разрешений для объектов базы данных
+    - name: Занятие 2. Настройка разрешений на объекты базы данных
       href: lesson-2-configuring-permissions-on-database-objects.md
       items:
         - name: Создание имени входа
@@ -25,7 +25,7 @@
           href: lesson-2-3-creating-views-and-stored-procedures.md
         - name: Предоставление доступа к объекту базы данных
           href: lesson-2-4-granting-access-to-a-database-object.md
-        - name: Сводка. Настройка разрешений для объектов базы данных
+        - name: Сводка. Настройка разрешений на объекты базы данных
           href: lesson-2-5-summary-configuring-permissions-on-database-objects.md
     - name: Урок 3. Удаление объектов базы данных
       href: lesson-3-1-deleting-database-objects.md

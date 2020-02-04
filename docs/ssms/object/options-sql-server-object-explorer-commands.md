@@ -1,6 +1,6 @@
 ---
-title: Параметры (обозреватель объектов SQL Server — меню "Команды") | Документация Майкрософт
-ms.custom: ''
+title: Параметры (обозреватель объектов SQL Server — меню "Команды")
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,14 +12,14 @@ f1_keywords:
 ms.assetid: 0e5afdb3-488c-4ea9-9e38-d42085ec00b1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6dc85a3ab4dcb5dff673e9e3dd893d529ebb6a69
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 5b0d34ac6849f47f841a26736ebc0c0224073c42
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264036"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257123"
 ---
-# <a name="options-sql-server-object-explorer---commands"></a>Параметры (обозреватель объектов SQL Server — меню "Команды")
+# <a name="options-sql-server-object-explorer---commands"></a>Параметры (обозреватель объектов SQL Server — меню "Команды")
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 При щелчке правой кнопкой мыши таблицы или представления в обозревателе объектов, выводятся два следующих параметра для отображения строк в таблице:  
   
@@ -44,5 +44,5 @@ ms.locfileid: "68264036"
 Назначает число возвращаемых строк, указанное в создаваемом скрипте редактора запросов. Значение по умолчанию составляет 1000 строк.  
   
 ## <a name="see-also"></a>См. также:  
-[Подсистема аудита SQL Server (ядро СУБД)](https://msdn.microsoft.com/0c1fca2e-f22b-4fe8-806f-c87806664f00)  
+[Подсистема аудита SQL Server (Database Engine)](https://msdn.microsoft.com/0c1fca2e-f22b-4fe8-806f-c87806664f00)  
   

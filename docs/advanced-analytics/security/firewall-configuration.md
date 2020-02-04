@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: c55f68a1134fee6477c52182ad66b8705e363296
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68715596"
 ---
 # <a name="firewall-configuration-for-sql-server-machine-learning-services"></a>Настройка брандмауэра для Служб машинного обучения SQL Server
@@ -39,6 +39,6 @@ ms.locfileid: "68715596"
 
 Мы настоятельно советуем включить брандмауэр Windows (или другой брандмауэр), чтобы блокировать неограниченный доступ к сети для среды выполнения R или Python.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Настройка брандмауэра Windows для входящих подключений](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)

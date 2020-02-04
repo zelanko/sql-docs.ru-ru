@@ -1,6 +1,6 @@
 ---
-title: Формирование скриптов (SQL Server Management Studio) | Документация Майкрософт
-ms.custom: ''
+title: Формирование скриптов (среда SQL Server Management Studio)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,18 +11,18 @@ ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 800153a20651b649d644fecfeacf11d48958fab8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: abdbbd7659221fb27df12ff03995b2d246241463
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265447"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253860"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>Формирование скриптов (среда SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] предоставляет два механизма формирования скриптов [!INCLUDE[tsql](../../includes/tsql-md.md)] . Создать скрипты для нескольких объектов можно с помощью **мастера формирования и публикации скриптов**. Можно также создать скрипты для отдельных или нескольких объектов с помощью меню **Сформировать скрипт как** в **обозревателе объектов**.  
 
-Подробное руководство по созданию скриптов для различных объектов с использованием SQL Server Management Studio (SSMS) см. в статье [Учебник. Создание скриптов для объектов в среде SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms).
+Подробный учебник по созданию скриптов для различных объектов с использованием SQL Server Management Studio (SSMS) см. в разделе [Учебник. Создание скриптов SSMS](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms).
 
   
 ## <a name="before-you-begin"></a>Перед началом  

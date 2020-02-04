@@ -9,10 +9,10 @@ ms.assetid: b9642af3-b3ae-4f78-b0be-8f96b79fc313
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3b20b95586e387484d536ad8005c6f57c1de4698
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580167"
 ---
 # <a name="insert-or-delete-a-row-report-builder-and-ssrs"></a>Вставка или удаление строки (построитель отчетов и службы SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "65580167"
   
 -   В конструкторе щелкните левый верхний угол области данных табликса, чтобы поверх и рядом с ней появились маркеры столбца и строки.  
   
-     Дополнительные сведения об областях данных см. в разделе [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
+     Дополнительные сведения об областях данных см. в разделе [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
 ## <a name="to-insert-a-row-in-a-selected-data-region"></a>Вставка строки в выделенную область данных  
   

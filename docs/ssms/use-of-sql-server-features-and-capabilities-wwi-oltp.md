@@ -1,6 +1,6 @@
 ---
-title: Аргументы для внешних средств | Документация Майкрософт
-ms.custom: ''
+title: Аргументы для внешних средств
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3991c13a-f23f-450b-a2ba-19391c399735
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b1f1cff589dfe005011c025b6083821d259f6e9f
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 80b7d5e3eec617f82cb49b67a80d928cb3df9328
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267062"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252226"
 ---
 # <a name="arguments-for-external-tools"></a>Аргументы для внешних средств
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "68267062"
   
 В следующей таблице приведены возможные аргументы для внешних программ.  
   
-|Имя|Аргумент|Описание|  
+|Имя|Аргумент|Description|  
 |--------|------------|---------------|  
 |**Путь элемента**|$(ItemPath)|Полное имя файла текущего источника (определяемое как диск + путь + имя файла); пусто, если окно источника не активно.|  
 |**Каталог элемента**|$(ItemDir)|Каталог текущего источника (определяемое как диск + путь); пусто, если окно источника не активно.|  
@@ -48,5 +48,5 @@ ms.locfileid: "68267062"
   
 ## <a name="see-also"></a>См. также:  
 [Диалоговое окно «Внешние средства»](../ssms/external-tools-dialog-box.md)  
-[Общие элементы интерфейса пользователя](../ssms/general-user-interface-elements.md)  
+[Общие элементы пользовательского интерфейса](../ssms/general-user-interface-elements.md)  
   

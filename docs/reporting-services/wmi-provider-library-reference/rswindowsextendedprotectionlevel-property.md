@@ -9,10 +9,10 @@ ms.assetid: 162ffe86-69c3-49d2-b9ed-49d097c05551
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7854821a9f43bc234490d915ff75339e250f6c39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571076"
 ---
 # <a name="rswindowsextendedprotectionlevel-property"></a>Свойство RSWindowsExtendedProtectionLevel

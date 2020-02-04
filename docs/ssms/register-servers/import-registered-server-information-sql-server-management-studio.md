@@ -1,10 +1,7 @@
 ---
-title: Импорт сведений о зарегистрированном сервере (среда SQL Server Management Studio) | Документация Майкрософт
-ms.custom: ''
-ms.date: 03/14/2017
+title: Импорт сведений о зарегистрированном сервере
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -16,16 +13,22 @@ helpviewer_keywords:
 ms.assetid: cc497a14-1360-4887-b70c-002f042823b6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9ccbcc8465f713d23922fc10dfe483bb3cfbb774
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: d65ed04166e8b3d10559c46c2f17301e9646a484
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267109"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256287"
 ---
 # <a name="import-registered-server-information-sql-server-management-studio"></a>Импорт сведений о зарегистрированном сервере (среда SQL Server Management Studio)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  В этом разделе описывается, как импортировать сохраненные сведения о зарегистрированных серверах в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Экспорт и импорт файлов зарегистрированных серверов позволяет легко настроить для нескольких компьютеров одинаковые зарегистрированные серверы. Это удобно при управлении большим количеством серверов с компьютеров, расположенных в различных местах, или если требуется сконфигурировать базовые настройки соединения для менее опытных пользователей.  
+
+В этом разделе описывается, как импортировать сохраненные сведения о зарегистрированных серверах в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Экспорт и импорт файлов зарегистрированных серверов позволяет легко настроить для нескольких компьютеров одинаковые зарегистрированные серверы. Это удобно при управлении большим количеством серверов с компьютеров, расположенных в различных местах, или если требуется сконфигурировать базовые настройки соединения для менее опытных пользователей.  
   
 > [!NOTE]  
 >  В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] нельзя импортировать сведения о зарегистрированных серверах из более ранних версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

@@ -1,0 +1,123 @@
+- name: mySQL
+  href: sql-server-migration-assistant-for-mysql-mysqltosql.md
+- name: "Установка\_SSMA"
+  href: installing-ssma-for-mysql-mysqltosql.md
+- name: Начало работы с SSMA для MySQL
+  href: getting-started-with-ssma-for-mysql-mysqltosql.md
+- name: Юридическая информация
+  href: legal-notice-mysqltosql.md
+- name: Параметры преобразования
+  href: conversion-settings-mysqltosql.md
+- name: "Установка клиента SSMA для\_MySQL"
+  href: installing-ssma-for-mysql-client-mysqltosql.md
+- name: "Выполнение команд консоли\_SSMA"
+  href: executing-the-ssma-console-mysqltosql.md
+- name: Создание файлов подключения к серверу
+  href: creating-the-server-connection-files-mysqltosql.md
+- name: Режимы SQL
+  href: sql-modes-mysqltosql.md
+- name: Подключение к SQL Server
+  href: connect-to-sql-server-mysqltosql.md
+- name: "Подключение к базе данных\_SQL Azure"
+  href: connecting-to-azure-sql-db-mysqltosql.md
+- name: Создание файлов сценария
+  href: creating-script-files-mysqltosql.md
+- name: "Загрузка преобразованных объектов базы данных в SQL\_Server"
+  href: loading-converted-database-objects-into-sql-server-mysqltosql.md
+- name: "Преобразование баз данных\_MySQL"
+  href: converting-mysql-databases-mysqltosql.md
+- name: "Миграция в SQL\_Server\_— база данных\_SQL Azure"
+  href: migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md
+- name: "Параметры командной строки в консоли\_SSMA"
+  href: command-line-options-in-ssma-console-mysqltosql.md
+- name: "Работа с проектами\_SSMA"
+  href: working-with-ssma-projects-mysqltosql.md
+- name: Параметры миграции данных
+  href: data-migration-settings-mysqltosql.md
+- name: Сохранение метаданных
+  href: save-metadata-mysqltosql.md
+- name: Команды меню и другие сочетания клавиш
+  href: menu-commands-and-other-shortcut-keys-mysqltosql.md
+- name: Устранение неполадок
+  href: troubleshooting-mysqltosql.md
+- name: Подключение к MySQL
+  href: connect-to-mysql-mysqltosql.md
+- name: "Удаление компонентов SSMA для\_MySQL"
+  href: removing-the-ssma-for-mysql-components-mysqltosql.md
+- name: "Подключение к базе данных\_SQL Azure"
+  href: connect-to-azure-sql-db-mysqltosql.md
+- name: "Миграция баз данных\_MySQL в базу данных\_SQL Azure"
+  href: migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md
+- name: Работа с образцами файлов сценария консоли
+  href: working-with-the-sample-console-script-files-mysqltosql.md
+- name: Создать проект
+  href: new-project-ssma-mysqltosql.md
+- name: "Установка компонентов\_SSMA в SQL\_Server"
+  href: installing-ssma-components-on-sql-server-mysqltosql.md
+- name: "Сопоставление баз данных\_MySQL со схемами SQL\_Server"
+  href: mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md
+- name: Обновление из базы данных
+  href: refresh-from-database-mysqltosql.md
+- name: Сочетания клавиш
+  href: shortcut-keys-mysqltosql.md
+- name: Отчет об оценке
+  href: assessment-report-mysqltosql.md
+- name: Отчет о миграции данных
+  href: data-migration-report-mysqltosql.md
+- name: Управление паролями
+  href: managing-passwords-mysqltosql.md
+- name: Расширенный выбор объектов
+  href: advanced-object-selection-mysqltosql.md
+- name: Справочник по пользовательскому интерфейсу
+  href: user-interface-reference-mysqltosql.md
+- name: "Приложение\_1"
+  href: appendix-1-mysqltosql.md
+- name: "Оценка баз данных\_MySQL для преобразования"
+  href: assessing-mysql-databases-for-conversion-mysqltosql.md
+- name: "Работа с консолью SSMA для\_MySQL"
+  href: working-with-ssma-for-mysql-console-mysqltosql.md
+- name: "Начало работы с консолью SSMA для\_MySQL"
+  href: getting-started-with-ssma-for-mysql-console-mysqltosql.md
+- name: "Сопоставление кодировок MySQL и SQL\_Server"
+  href: mapping-mysql-and-sql-server-character-set-mysqltosql.md
+- name: Создание файлов переменных значений
+  href: creating-variable-value-files-mysqltosql.md
+- name: Создание отчетов
+  href: generating-reports-mysqltosql.md
+- name: Изменение сопоставления типов
+  href: edit-type-mapping-mysqltosql.md
+- name: "Сопоставление типов данных MySQL и SQL\_Server"
+  href: mapping-mysql-and-sql-server-data-types-mysqltosql.md
+- name: "Новые возможности в SSMA для\_MySQL"
+  href: what-s-new-in-ssma-for-mysql-mysqltosql.md
+- name: "Новые возможности графического пользовательского интерфейса в SSMA для\_MySQL"
+  href: new-gui-features-in-ssma-for-mysql-mysqltosql.md
+- name: Настройка параметров проекта
+  href: setting-project-options-mysqltosql.md
+- name: Подключение к MySQL
+  href: connecting-to-mysql-mysqltosql.md
+- name: "Подключение к SQL\_Server"
+  href: connecting-to-sql-server-mysqltosql.md
+- name: Параметры проекта
+  items:
+    - name: Графический пользовательский интерфейс
+      href: project-settings-gui-mysqltosql.md
+    - name: БД SQL Azure
+      href: project-settings-azure-sql-db-mysqltosql.md
+    - name: Сопоставление типов
+      href: project-settings-type-mapping-mysqltosql.md
+    - name: Миграция
+      href: project-settings-migration-mysqltosql.md
+    - name: Синхронизация
+      href: project-settings-synchronization-mysqltosql.md
+    - name: Преобразование
+      href: project-settings-conversion-mysqltosql.md
+- name: Глобальные параметры
+  href: global-settings-output-window-mysqltosql.md
+  items:
+    - name: Диалоговые окна
+      href: global-settings-dialogs-mysqltosql.md
+    - name: Logging
+      href: global-settings-logging-mysqltosql.md
+    - name: Редактор
+      href: global-settings-editor-mysqltosql.md

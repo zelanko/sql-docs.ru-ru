@@ -1,10 +1,9 @@
 ---
-title: Конструкторы визуальных инструментов для баз данных | Документация Майкрософт
-ms.custom: ''
+title: Конструкторы визуальных инструментов для баз данных
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,14 @@ helpviewer_keywords:
 ms.assetid: bd0ca68e-6f69-42dd-bcb5-ce511673769c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 02e08bcdc7050a9f7332f7f55226951aed49bf26
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 183ea6523015835a49e3b9d6c5f3db8786d15551
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68261381"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246259"
 ---
 # <a name="visual-database-tool-designers"></a>Конструкторы визуальных инструментов для баз данных
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,7 +74,7 @@ ms.locfileid: "68261381"
   
 -   Конструктор запросов позволяет проектировать инструкции языка манипулирования данными SELECT, INSERT, UPDATE и DELETE, а представления могут содержать только инструкции SELECT.  
   
-### <a name="view-designer"></a>конструктор представлений  
+### <a name="view-designer"></a>Конструктор представлений  
 Конструктор представлений позволяет проектировать и наглядно отображать существующие представления или создавать новые в базе данных Microsoft SQL Server, к которой подключен пользователь.  
   
 Окно конструктора содержит четыре панели: панель диаграмм, панель критериев, панель «SQL» и панель результатов. Дополнительные сведения о каждой из этих панелей см. в разделе [Инструменты конструктора запросов и представлений (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md).  

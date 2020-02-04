@@ -1,10 +1,9 @@
 ---
-title: Выполнение основных операций с запросами (визуальные инструменты для баз данных) | Документация Майкрософт
-ms.custom: ''
+title: Выполнение основных операций с запросами
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +12,14 @@ helpviewer_keywords:
 ms.assetid: 88dbdbfe-bc60-4e11-b338-dbe7f26566d5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 01fd079810c59cd1b7f17d3c5503ed5083ee6998
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 7fc8c17fc24ee9567e355a42dfae875d30335e49
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266355"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255397"
 ---
 # <a name="perform-basic-operations-with-queries-visual-database-tools"></a>Выполнение основных операций с запросами (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

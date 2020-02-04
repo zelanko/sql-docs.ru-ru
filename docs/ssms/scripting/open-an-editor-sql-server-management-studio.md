@@ -1,6 +1,6 @@
 ---
-title: Открытие редактора (среда SQL Server Management Studio) | Документация Майкрософт
-ms.custom: ''
+title: Открытие редактора (среда SQL Server Management Studio)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.technology: scripting
@@ -10,12 +10,12 @@ ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 31c2a9419105f1ee8435b3c1b7e0d7dc7728e0d8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 478f48cbea6bccb1cb66838a34d12689a94cf05a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267020"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253781"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Открытие редактора (среда SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "68267020"
 ### <a name="permissions"></a>Разрешения  
  Операции, выполняемые в редакторе кода, контролируются разрешениями, предоставленными учетной записи проверки подлинности, которая использовалась для входа. Например, если открыть окно редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , используя проверку подлинности Windows, то будет невозможно выполнять инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] , ссылающиеся на объекты, для которых у учетной записи входа Windows нет разрешений на доступ.  
   
-## <a name="how-to-open-editors"></a>Руководство. Открытие редакторов  
+## <a name="how-to-open-editors"></a>Инструкции. Открытие редакторов  
  В этом разделе объясняется, как открыть различные редакторы в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ### <a name="using-the-filenew-menu"></a>С помощью меню «Файл/Создать»  

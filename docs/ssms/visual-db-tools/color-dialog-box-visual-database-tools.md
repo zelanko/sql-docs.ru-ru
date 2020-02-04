@@ -1,10 +1,9 @@
 ---
-title: Диалоговое окно "Цвет" (визуальные инструменты для баз данных) | Документация Майкрософт
-ms.custom: ''
+title: Диалоговое окно "Цвет"
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: 89a19608-f24c-41fa-a1a9-6e2e2cd952fa
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fae0c136b1561aa93ff6f83f0bb0f7c7c69a8744
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 0a2d44934958703a0cadbf01ac975b7a60ab4da6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262551"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241263"
 ---
 # <a name="color-dialog-box-visual-database-tools"></a>Диалоговое окно «Цвет» (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "68262551"
 **Color**  
 Отображает выбранный цвет.  
   
-**Оттенок**  
+**Hue**  
 Значение оттенка выбранного цвета.  
   
 **Насыщенность**  

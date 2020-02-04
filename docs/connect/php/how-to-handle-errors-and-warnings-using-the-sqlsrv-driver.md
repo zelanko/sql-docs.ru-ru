@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fa231d60-4c06-4137-89e8-097c28638c5d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 18e50d7344fb5d3d16c4fc0978137e169ba487ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: eb1af89c0641a50be503d1283f1f85a735a153f1
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67936497"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76929420"
 ---
 # <a name="how-to-handle-errors-and-warnings-using-the-sqlsrv-driver"></a>Практическое руководство. Обработка ошибок и предупреждений с помощью драйвера SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "67936497"
   
 Также обратите внимание, что код примера проверяет наличие ошибок после каждого вызова функции **sqlsrv** . Именно такой подход и рекомендуется использовать.  
   
-В примере предполагается, что SQL Server и базы данных [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль. При запуске примера для вновь установленной базы данных AdventureWorks он выдает три предупреждения и две ошибки. Первые два предупреждения являются стандартными и выдаются при подключении к базе данных. Третье предупреждение возникает из-за того, что количество доступных часов отпуска сотрудника принимает значение меньше нуля. Ошибки возникают потому, что количество доступных часов отпуска сотрудника принимает значение меньше −40 часов, что является нарушением ограничения для таблицы.  
+В примере предполагается, что SQL Server и база данных [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль. При запуске примера для вновь установленной базы данных AdventureWorks он выдает три предупреждения и две ошибки. Первые два предупреждения являются стандартными и выдаются при подключении к базе данных. Третье предупреждение возникает из-за того, что количество доступных часов отпуска сотрудника принимает значение меньше нуля. Ошибки возникают потому, что количество доступных часов отпуска сотрудника принимает значение меньше −40 часов, что является нарушением ограничения для таблицы.  
   
 ```  
 <?php  
@@ -130,7 +130,7 @@ $params = array(
                  array(&$vacationHrs, SQLSRV_PARAM_INOUT)  
                 );  
   
-/* Define and prepare the query to substract used vacation hours. */  
+/* Define and prepare the query to subtract used vacation hours. */  
 $tsql3 = "{call SubtractVacationHours(?, ?)}";  
 $stmt3 = sqlsrv_prepare($conn, $tsql3, $params);  
   

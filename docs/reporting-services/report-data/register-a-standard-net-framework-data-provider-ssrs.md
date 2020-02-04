@@ -16,10 +16,10 @@ ms.assetid: d92add64-e93c-4598-8508-55d1bc46acf6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: badeb4de20aa885a77fa61ec3a261a8c09c79506
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571249"
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>Регистрация стандартного поставщика данных .NET Framework (службы SSRS)
@@ -42,7 +42,7 @@ ms.locfileid: "65571249"
   
 1.  Создайте резервную копию файла RSReportServer.config в папке ReportServer, в которую вложен каталог bin.  
   
-2.  Откройте RSReportServer.config. Файл конфигурации можно открыть с помощью [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] или воспользоваться простым текстовым редактором (таким, как Блокнот).  
+2.  Откройте файл RSReportServer.config. Это можно сделать в среде [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] или в любом текстовом редакторе (например в Блокноте).  
   
 3.  Найдите в файле RSReportServer.config элемент **Data** . Элемент для поставщика данных [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] необходимо создать в месте, указанном ниже.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "65571249"
   
 4.  Добавьте элемент для поставщика данных [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
-    |attribute|Описание|  
+    |attribute|Description|  
     |---------------|-----------------|  
     |**Название**|Уникальное имя поставщика данных, например **MyNETDataProvider**. Длина атрибута **Name** не должна превышать 255 символов. Имя должно быть уникальным среди всех элементов, вложенных в элемент **Extension** файла конфигурации. Указываемое здесь значение выводится в раскрывающемся списке типов источников данных при создании нового источника данных.|  
     |**Тип**|Список с разделителями-запятыми, включающий полное имя пространства имен для класса, реализующего интерфейс <xref:System.Data.IDbConnection> , а затем имя сборки поставщика [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] (без расширения DLL).|  
@@ -77,7 +77,7 @@ ms.locfileid: "65571249"
   
 1.  Создайте резервную копию файла rssrvpolicy.config в папке ReportServer, в которую вложен каталог bin.  
   
-2.  Откройте rssrvpolicy.config. Файл конфигурации можно открыть с помощью [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] или воспользоваться простым текстовым редактором (таким, как Блокнот).  
+2.  Откройте файл rssrvpolicy.config. Это можно сделать в среде [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] или в любом текстовом редакторе (например, в Блокноте).  
   
 3.  Найдите в файле rssrvpolicy.config элемент **CodeGroup** .  
   
@@ -129,7 +129,7 @@ ms.locfileid: "65571249"
   
 4.  Добавьте элемент для поставщика данных.  
   
-    |attribute|Описание|  
+    |attribute|Description|  
     |---------------|-----------------|  
     |**Название**|Уникальное имя поставщика данных, например **MyNETDataProvider**. Длина атрибута **Name** не должна превышать 255 символов. Имя должно быть уникальным среди всех элементов, вложенных в элемент **Extension** файла конфигурации. Указанное здесь значение отображается в раскрывающемся списке типов источников данных при создании нового источника данных.|  
     |**Тип**|Список с разделителями-запятыми, включающий полное имя пространства имен для класса, реализующего интерфейс <xref:System.Data.IDbConnection> , а затем имя сборки поставщика [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] (без расширения DLL).|  

@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 3a84c906df921bf4702d47e57400b7ad7b9e127f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579446"
 ---
 # <a name="activate-the-report-server-file-sync-feature-in-sharepoint"></a>Активация функции синхронизации файлов на сервере отчетов в SharePoint
@@ -32,7 +32,7 @@ ms.locfileid: "65579446"
 
  Надстройка служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для SharePoint должна быть установлена. Если надстройка не установлена, функция синхронизации файлов не будет отображаться в списке функций сайта.  
   
- Чтобы проверить установку, просмотрите список установленных приложений на [!INCLUDE[msCoName](../../includes/msconame-md.md)] **панели управления** Windows. Если надстройка служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] установлена, следуйте инструкциям в этом разделе для активации функции синхронизации файлов сервера отчетов.  
+ Чтобы проверить установку, просмотрите список установленных приложений на [!INCLUDE[msCoName](../../includes/msconame-md.md)]**панели управления** Windows. Если надстройка служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] установлена, следуйте инструкциям в этом разделе для активации функции синхронизации файлов сервера отчетов.  
   
 ### <a name="to-activate-or-deactivate-the-reporting-services-file-sync-feature-on-a-site"></a>Активация и деактивация функции синхронизации файлов служб Reporting Services на сайте
   

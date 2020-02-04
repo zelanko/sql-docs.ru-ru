@@ -1,10 +1,9 @@
 ---
-title: Диалоговое окно "Параметры страницы" | Документация Майкрософт
-ms.custom: ''
+title: Диалоговое окно «Параметры страницы»
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,25 +11,27 @@ f1_keywords:
 ms.assetid: 03deb946-34c6-48b1-b639-5e888f47bddb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2a3354661aa51978bce2381553c978cac9a8fec9
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: bc09dffbff93e45ded3ed3fa4689ad88eb780f46
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263270"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252123"
 ---
 # <a name="page-setup-dialog-box"></a>Диалоговое окно «Параметры страницы»
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Структуру страницы можно настроить, выбирая параметры в диалоговом окне **Параметры страницы** . Доступность некоторых параметров зависит от языков, установленных и применяемых для изменения.  
   
-## <a name="paper"></a>Бумага  
+## <a name="paper"></a>Документ  
 **Размер**  
 Выберите размер из списка.  
   
 **Source**  
 Указывает, какая бумага должна использоваться. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] приводит перечень доступных источников для выбранного принтера.  
   
-## <a name="orientation"></a>Orientation  
+## <a name="orientation"></a>Ориентация  
 **Книжная**  
 Печатает документ с коротким краем бумаги вверху страницы.  
   
@@ -41,7 +42,7 @@ ms.locfileid: "68263270"
 Слева  
 Устанавливает расстояние между левым краем страницы и левым краем выровненных влево строк без отступов.  
   
-Справа  
+Right  
 Устанавливает расстояние между правым краем страницы и правым краем выровненных вправо строк без отступов.  
   
 TOP  
@@ -50,7 +51,7 @@ TOP
 Нижнее  
 Устанавливает расстояние между низом страницы и нижней кромкой последней строки страницы.  
   
-## <a name="other"></a>Другое  
+## <a name="other"></a>Другие  
 **Предварительный просмотр**  
 Изображение предварительного просмотра отображает результат применения выбранных параметров.  
   

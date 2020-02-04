@@ -11,10 +11,10 @@ ms.reviewer: dphansen
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: c7fa36db48a7912951f0232136945798caf6f7f7
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727598"
 ---
 # <a name="loopback-connection-to-sql-server-from-a-python-or-r-script"></a>Подключение к SQL Server из скрипта Python или R с замыканием на себя
@@ -22,7 +22,7 @@ ms.locfileid: "73727598"
 
 Узнайте, как использовать подключение с замыканием на себя для обратного соединения с SQL Server через [ODBC](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md) с целью чтения или записи данных из скрипта Python или R, выполняемого с помощью процедуры `sp_execute_external_script`. Его можно применять, если нельзя использовать аргументы **InputDataSet** и **OutputDataSet** процедуры `sp_execute_external_script`.
 
-## <a name="connection-string"></a>Строка соединения
+## <a name="connection-string"></a>Строка подключения
 
 Чтобы установить подключение с замыканием на себя, необходимо использовать правильную строку подключения. Обычно обязательными аргументами являются имя [драйвера ODBC](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md), адрес сервера и имя базы данных.
 
@@ -56,7 +56,7 @@ ms.locfileid: "73727598"
 
 Он принимает следующие аргументы:
 
-| Аргумент | Описание |
+| Аргумент | Description |
 |-|-|
 | name_of_database | Имя базы данных, к которой устанавливается подключение |
 | odbc_driver | Имя драйвера ODBC |
@@ -104,7 +104,7 @@ GO
 
 Он принимает следующие аргументы:
 
-| Аргумент | Описание |
+| Аргумент | Description |
 |-|-|
 | nameOfDatabase | Имя базы данных, к которой устанавливается подключение |
 | odbcDriver | Имя драйвера ODBC |

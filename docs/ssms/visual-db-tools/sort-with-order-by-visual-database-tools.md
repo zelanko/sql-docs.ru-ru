@@ -1,10 +1,9 @@
 ---
-title: Сортировка с помощью предложения ORDER BY (визуальные инструменты для баз данных) | Документация Майкрософт
-ms.custom: ''
+title: Сортировка с помощью предложения ORDER BY
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +11,14 @@ helpviewer_keywords:
 ms.assetid: 459f5640-8058-4c24-97e7-7bbd6168bc39
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7d14acc5485bb3037f769784ee4daf012a5944e2
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 7bdc069c09322b15141d9a8cc6bf00b4926aad06
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263601"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254978"
 ---
 # <a name="sort-with-order-by-visual-database-tools"></a>Произведение сортировки с помощью предложения ORDER BY (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "68263601"
 Обратите внимание, что во время работы с панелью критериев предложение UNION запроса изменяется в соответствии с последними действиями.  
   
 > [!NOTE]  
-> При сортировке результатов по нескольким столбцам в столбце **Порядок сортировки** укажите порядок, в котором будут просматриваться столбцы при сортировке. Дополнительные сведения см. в разделе **Как сортировать по нескольким столбцам в запросах**  
+> При сортировке результатов по нескольким столбцам в столбце **Порядок сортировки** укажите порядок, в котором будут просматриваться столбцы при сортировке. Дополнительные сведения см. в разделе **Как производить сортировку нескольких столбцов в запросе**.  
   
 ## <a name="see-also"></a>См. также:  
 [Результаты запросов сортировки и группирования (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  

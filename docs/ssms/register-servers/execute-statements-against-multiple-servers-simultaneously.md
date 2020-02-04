@@ -1,10 +1,7 @@
 ---
-title: Выполнение инструкций на нескольких серверах одновременно | Документы Майкрософт
-ms.custom: ''
-ms.date: 07/18/2016
+title: Выполнение инструкций на нескольких серверах одновременно
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,17 +11,23 @@ helpviewer_keywords:
 ms.assetid: 197760f3-0a06-43de-8162-69c27d3fbe56
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: abf087363c4e4cc17356882322643b6fae0da553
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 07/18/2016
+ms.openlocfilehash: 89e6e64f4e4dc5f3ae7c8f9adf1db3a392530989
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68260578"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246563"
 ---
 # <a name="execute-statements-against-multiple-servers-simultaneously"></a>Выполнение инструкций на нескольких серверах одновременно
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  В этом разделе описывается, как в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]выполнить запросы к нескольким серверам одновременно путем создания локальной группы серверов либо создать сервер централизованного управления и одну или несколько групп серверов, затем создать один или несколько зарегистрированных серверов в группах и выполнить запрос ко всей группе. 
-  
+
+В этом разделе описывается, как в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]выполнить запросы к нескольким серверам одновременно путем создания локальной группы серверов либо создать сервер централизованного управления и одну или несколько групп серверов, затем создать один или несколько зарегистрированных серверов в группах и выполнить запрос ко всей группе. 
+
 Результаты, возвращенные запросом, можно объединить в одну панель результатов или вернуть в отдельные панели результатов. Набор результатов может включать дополнительные столбцы для имени сервера и имени входа, используемые для запроса к каждому серверу. Центральные серверы управления и подчиненные серверы могут быть зарегистрированы с применением проверки подлинности Windows. Серверы в локальных группах серверов можно зарегистрировать с использованием проверки подлинности Windows или проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > **Примечание.** Перед выполнением следующих процедур создайте центральный сервер управления и группы серверов. Дополнительные сведения см. в разделе [Создание центрального сервера управления и группы серверов (среда SQL Server Management Studio)](../../tools/sql-server-management-studio/create-a-central-management-server-and-server-group.md).  

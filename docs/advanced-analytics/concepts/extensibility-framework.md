@@ -11,10 +11,10 @@ ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: fcdb92f92ffb8239a6cf20b0f39dfb8f546b521a
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727687"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>Архитектура расширяемости в службах машинного обучения SQL Server. 
@@ -112,7 +112,7 @@ BxlServer использует вспомогательное соединени
 
   Для внутренней передачи данных между BxlServer и через вспомогательное соединение SQL используется внутренний формат сжатых данных для оптимизации производительности. Данные передаются между временем языкового запуска и BxlServer в формате BXL с использованием именованных каналов.
 
-+ **интерфейс ODBC**
++ **ODBC**
 
   Взаимодействие между внешними клиентами обработки и анализа данных и удаленным экземпляром SQL Server происходит с помощью ODBC. Учетная запись, отправляющая задания в рамках сценариев в SQL Server, должна иметь разрешения и для подключения к экземпляру, и для выполнения внешних скриптов.
 

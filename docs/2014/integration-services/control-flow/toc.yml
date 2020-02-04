@@ -185,7 +185,7 @@
           href: select-a-package.md
     - name: задача «Уведомление оператора»
       href: notify-operator-task.md
-    - name: Задача «Перестроение индекса»
+    - name: задача «Перестроение индекса»
       href: rebuild-index-task.md
     - name: Задача «Реорганизация индекса»
       href: reorganize-index-task.md

@@ -1,5 +1,5 @@
 ---
-title: Политика поддержки SQL Server Management Studio (SSMS) | Документация Майкрософт
+title: Политика поддержки SQL Server Management Studio (SSMS)
 ms.date: 11/13/2018
 ms.prod: sql
 ms.technology: ssms
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
 author: dnethi
 ms.author: dinethi
-ms.openlocfilehash: 2be5846150a28ea76b48bab0434ab01ee9eee1d7
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 2b46da30a4ea3c7548ca4696f144373feea7b986
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267036"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245666"
 ---
 # <a name="sql-server-management-studio-ssms-support-policy"></a>Политика поддержки SQL Server Management Studio (SSMS)
 
@@ -35,7 +35,7 @@ ms.locfileid: "68267036"
 
 Для достижения максимально эффективного уровня работы рекомендуется, чтобы клиенты установили самую последнюю версию со страницы https://aka.ms/ssms.  
 
-Этап обслуживания **Полная поддержка**: при использовании последней версии Current Branch среды SQL Server Management Studio вы получаете все обновления — обновления для системы безопасности, критические обновления, новые возможности и т. д.
+Этап обслуживания **Полная поддержка**: при использовании последней версии Current Branch среды SQL Server Management Studio вы получаете все обновления — обновления для системы безопасности, критические обновления, новые возможности т. д.
 
 
 

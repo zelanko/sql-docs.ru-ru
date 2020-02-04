@@ -1,6 +1,6 @@
 ---
-title: Параметры (обозреватель объектов SQL Server — страница "Скрипты") | Документация Майкрософт
-ms.custom: ''
+title: Параметры (обозреватель объектов SQL Server — страница "Скрипты")
+ms.custom: seo-lt-2019
 ms.date: 08/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0f2d5a92fb3359f1c6d63d9ca1dee0f265a8aee1
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 0991ab88cb37ab2f4decb67194ae78ed62d2c13d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73844530"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251085"
 ---
 # <a name="options-sql-server-object-explorer---scripting-page"></a>Параметры (обозреватель объектов SQL Server — страница "Скрипты")
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

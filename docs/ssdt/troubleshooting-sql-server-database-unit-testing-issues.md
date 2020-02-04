@@ -1,23 +1,24 @@
 ---
-title: Устранение неполадок с модульными тестами базы данных SQL Server | Документация Майкрософт
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Устранение неполадок модульных тестов базы данных SQL Server
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: cf4c9cd1-7e73-4c3b-922a-68b9247e7b33
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1b7203572d01ca9f344b96a7008dd78b2e35bcdb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: fd1b41a9744c112fcafc8968bad7abc5ac9aa4c4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110614"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256310"
 ---
 # <a name="troubleshooting-sql-server-database-unit-testing-issues"></a>Устранение неполадок модульных тестов базы данных SQL Server
+
 При работе с тестированиями модулей SQL Server для базы данных у вас могут возникнуть проблемы, описанные в этом разделе:  
   
 -   [Изменения тестирования модулей и файла App.Config не учитываются при выполнении тестирований модулей](#UnitTestingAndAppConfigChanges)  
@@ -48,6 +49,6 @@ ms.locfileid: "68110614"
 ```  
   
 ## <a name="see-also"></a>См. также:  
-[Как создавать модульные тесты SQL Server для функций, триггеров и хранимых процедур](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md)  
-[Как Настройка запуска модульного теста SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md)  
+[Практическое руководство. Создание модульных тестов SQL Server для функций, триггеров и хранимых процедур](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md)  
+[Практическое руководство. Настройка запуска модульного теста SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md)  
   

@@ -11,10 +11,10 @@ ms.assetid: 72fecf28-f02e-4338-b50f-0b21f520302d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c6e59ea3edb968182091b1b6496d47e9adb4d4be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63151114"
 ---
 # <a name="best-practices-for-reporting-services-exception-handling"></a>Рекомендации по обработке исключений в службах Reporting Services
@@ -30,7 +30,7 @@ ms.locfileid: "63151114"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Описание|  
+|Раздел|Description|  
 |-----------|-----------------|  
 |[Предотвращение использования недопустимых запросов](../../../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/preventing-invalid-requests.md)|Описывает методики предотвращения отправки недопустимых запросов на сервер отчетов.|  
 |[Использование блоков Try-Catch](../../../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/using-try-and-catch-blocks.md)|Описывает, как можно увеличить надежность приложения с использованием блоков TRY и CATCH.|  

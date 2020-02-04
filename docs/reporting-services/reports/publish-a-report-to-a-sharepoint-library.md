@@ -13,10 +13,10 @@ ms.assetid: 3f6dfc28-50d8-4231-bd25-871b5f77cce6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1b10c9dbfa67a632ce007c1406f8b806a03475b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571051"
 ---
 # <a name="publish-a-report-to-a-sharepoint-library"></a>опубликовать отчет в библиотеке SharePoint
@@ -28,7 +28,7 @@ ms.locfileid: "65571051"
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]откройте существующий или новый проект сервера отчетов.  
   
-2.  В меню **Проект** выберите пункт **Свойства**. Откроется диалоговое окно _Страницы свойств_ **\<проекта>** .  
+2.  В меню **Проект** выберите пункт **Свойства**. Откроется диалоговое окно _Страницы свойств\<_ **проекта>** .  
   
 3.  В списке **Конфигурация** выберите имя конфигурации сборки решения, предназначенной для формирования и публикации отчета. Текущая конфигурация представлена в списке как **Активная**( *\<конфигурация>* ).  
   

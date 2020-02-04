@@ -31,11 +31,11 @@ ms.locfileid: "68028629"
 -   соединения с нужным экземпляром сервера;  
   
 -   соединения с конечными точками через выделенное административное соединение (DAC).  
+
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] и [!INCLUDE[ssAS](../../includes/ssas-md.md)] получают от службы "Браузер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]" (sqlbrowser) имя и номер версии для каждого экземпляра. Браузер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устанавливается вместе с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Для каждого экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и служб [!INCLUDE[ssAS](../../includes/ssas-md.md)] служба «Браузер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]» (sqlbrowser) выдает имя и номер версии экземпляра. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устанавливается вместе с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настраивается в ходе установки или с помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. По умолчанию служба «Браузер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]» запускается автоматически:  
-  
+ Браузер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настраивается в ходе установки или с помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. По умолчанию служба "Браузер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]" запускается автоматически:  
+
 -   при обновлении установки;  
   
 -   при установке в кластере;  

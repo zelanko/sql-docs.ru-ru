@@ -23,7 +23,7 @@
   items:
     - name: Параметры ("Среда" — "Общие")
       href: options-environment-general-page.md
-    - name: "Параметры (страница \"Среда\"\_— \"Шрифты и цвета\")"
+    - name: Параметры ("Среда" — "Шрифты и цвета")
       href: options-environment-fonts-and-colors-page.md
     - name: Options (Environment/Keyboard Page)
       href: options-environment-keyboard-page.md
@@ -37,7 +37,7 @@
       href: options-designers-maintenance-plans-page.md
     - name: Параметры (Конструкторы/Конструкторы служб Analysis Services/Общие)
       href: options-designers-analysis-services-designers-general.md
-- name: Диалоговое окно Windows (справка по обозревателю документов Майкрософт)
+- name: Диалоговое окно Windows (справка по обозревателю документов)
   href: windows-dialog-box-microsoft-document-explorer-help.md
 - name: О среде SQL Server Management Studio
   href: about-sql-server-management-studio.md

@@ -1,6 +1,6 @@
 ---
-title: Добавление пользовательского отчета в среду Management Studio | Документация Майкрософт
-ms.custom: ''
+title: Добавление пользовательского отчета в среду Management Studio
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3cf8d726-0a90-4f80-98d0-352a2a59be0f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 84aee831cb03ebf419849fca8bf653803e5d5ced
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: a7a287cad9b674c55f032a04490a0518f723a797
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263465"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251364"
 ---
 # <a name="add-a-custom-report-to-management-studio"></a>Добавление пользовательского отчета в среду Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "68263465"
   
 ## <a name="see-also"></a>См. также:  
 [Пользовательские отчеты в среде Management Studio](../../ssms/object/custom-reports-in-management-studio.md)  
-[Использование пользовательских отчетов совместно со свойствами узлов обозревателя объектов](../../ssms/object/use-custom-reports-with-object-explorer-node-properties.md)  
-[Отмена подавления предупреждений для пользовательских отчетов](../../ssms/object/unsuppress-run-custom-report-warnings.md)  
-[службы службы SQL Server Reporting Services](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
+[Использование пользовательских отчетов для свойств узлов обозревателя объектов](../../ssms/object/use-custom-reports-with-object-explorer-node-properties.md)  
+[Отмена скрытия предупреждений для пользовательских отчетов](../../ssms/object/unsuppress-run-custom-report-warnings.md)  
+[Службы Reporting Services (SSRS)](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
   

@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: e0846442abce6dd598c6318e4ba7cf9e74685066
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727469"
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>Создание хранимой процедуры с помощью sqlrutils
@@ -21,7 +21,7 @@ ms.locfileid: "73727469"
 
 В этой статье описывается преобразование кода R для запуска в качестве хранимой процедуры T-SQL. Для достижения наилучших результатов может потребоваться немного изменить код, чтобы обеспечить возможность параметризации всех входных данных.
 
-## <a name="bkmk_rewrite"></a>Шаг 1. Переписывание кода для сценария R
+## <a name="bkmk_rewrite"></a>Шаг 1. Переписывание кода для сценария R
 
 Для получения наилучших результатов следует переписать код R, чтобы инкапсулировать его как единую функцию.
 

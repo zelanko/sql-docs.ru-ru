@@ -3,7 +3,7 @@
   items:
     - name: Заголовок и сведения о версии SQL Server Express LocalDB
       href: sql-server-express-localdb-header-and-version-information.md
-    - name: 'Программа командной строки: SqlLocalDB.exe'
+    - name: Программа командной строки SqlLocalDB.exe
       href: command-line-management-tool-sqllocaldb-exe.md
     - name: Функция LocalDBCreateInstance
       href: localdbcreateinstance-function.md

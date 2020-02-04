@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: b853d764d1cf7a6aa7252aa181b70dbcccc265fe
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73844544"
 ---
 # <a name="pause-and-resume-data-migration-stretch-database"></a>Приостановка и возобновление переноса данных (Stretch Database)
@@ -68,7 +68,7 @@ ALTER TABLE <Stretch-enabled table name>
 ## <a name="check-whether-migration-is-active-or-paused"></a>Проверьте, активна миграция или приостановлена
 
 ### <a name="use-sql-server-management-studio-to-check-whether-migration-is-active-or-paused"></a>С помощью среды SQL Server Management Studio проверьте, активна миграция или приостановлена.
-В SQL Server Management Studio откройте **монитор Stretch Database** и проверьте значение в столбце **Состояние миграции** . Дополнительные сведения см. в статье [Мониторинг переноса данных и устранение неполадок](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md).
+В SQL Server Management Studio откройте **монитор Stretch Database** и проверьте значение столбца **Состояние миграции**. Дополнительные сведения см. в статье [Мониторинг переноса данных и устранение неполадок](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md).
 
 ### <a name="use-transact-sql-to-check-whether-migration-is-active-or-paused"></a>С помощью Transact-SQL проверьте, активна миграция или приостановлена.
 Запросите представление каталога **sys.remote_data_archive_tables** и проверьте значение в столбце **is_migration_paused** . Дополнительные сведения см. в разделе [sys.remote_data_archive_tables](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-tables.md).

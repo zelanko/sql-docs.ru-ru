@@ -1,29 +1,28 @@
 ---
-title: Упорядочивание столбцов, отображаемых в трассировке (приложение SQL Server Profiler) | Документы Майкрософт
-ms.custom: ''
-ms.date: 03/01/2017
+title: Упорядочивание столбцов, отображаемых в трассировке
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- organizing trace columns displayed [SQL Server]
-- arranging trace columns displayed
-- traces [SQL Server], data columns
 ms.assetid: 6b923f94-0eb1-467e-82f6-ceed43f77017
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: aba356e951abc0fd63b28a7247e8319d860c99ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 52fc0c568a3880be3ace28f9f0a65f6bfd6a1225
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67911724"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307550"
 ---
 # <a name="organize-columns-displayed-in-a-trace-sql-server-profiler"></a>упорядочить столбцы, отображаемые в трассировке (приложение SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Столбцы данных трассировки можно сгруппировать, нажав кнопку **Систематизировать столбцы** в таблице трассировки или в диалоговом окне **Свойства трассировочного файла** или при определении трассировки. Группировка столбцов данных упрощает анализ результатов трассировки в приложении [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] . Дополнительные сведения см. в статье [Просмотр и анализ трассировок с помощью приложения SQL Server Profiler](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md).  
+
+Столбцы данных трассировки можно сгруппировать, нажав кнопку **Систематизировать столбцы** в таблице трассировки или в диалоговом окне **Свойства трассировочного файла** или при определении трассировки. Группировка столбцов данных упрощает анализ результатов трассировки в приложении [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] . Дополнительные сведения см. в статье [Просмотр и анализ трассировок с помощью приложения SQL Server Profiler](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md).  
   
  Окно**Систематизация столбцов** позволяет просто сгруппировать события трассировки или сгруппировать и посчитать количество их количество по выбранным столбцам данных.  
   

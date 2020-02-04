@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 897f748c5aeab43c7e3ef98f6dbfff84b9da69d7
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73843826"
 ---
 # <a name="backup-stretch-enabled-databases-stretch-database"></a>Резервное копирование баз данных с поддержкой Stretch (Stretch Database)
@@ -26,7 +26,7 @@ ms.locfileid: "73843826"
   
  -   Резервные копии необходимо создавать для баз данных SQL Server с поддержкой Stretch.  
       
- -   Microsoft Azure автоматически создает резервную копию удаленных данных, переносимых Stretch Database из SQL Server в Azure.  
+ -   Microsoft Azure автоматически архивирует удаленные данные, которые служба Stretch Database перенесла из SQL Server в Azure.  
 
 > [!TIP]
 > Резервная копия — только часть комплексного решения обеспечения высокой доступности и бесперебойной работы. Дополнительные сведения о высокой доступности см. в статье [Решения высокого уровня доступности](../../database-engine/sql-server-business-continuity-dr.md).
@@ -39,27 +39,27 @@ ms.locfileid: "73843826"
   
 ## <a name="back-up-your-remote-azure-data"></a>Резервное копирование удаленных данных Azure   
   
-Microsoft Azure автоматически создает резервную копию удаленных данных, переносимых Stretch Database из SQL Server в Azure.    
+Microsoft Azure автоматически архивирует удаленные данные, которые служба Stretch Database перенесла из SQL Server в Azure.    
 ### <a name="azure-reduces-the-risk-of-data-loss-with-automatic-backup"></a>Azure уменьшает риск потери данных за счет автоматического создания резервных копий  
-Служба SQL Server Stretch Database в Azure защищает удаленные базы данных, создавая автоматические моментальные снимки хранилища не реже, чем через каждые 8 часов. Каждый снимок хранится в течение 7 дней, что позволяет выбрать удобную точку восстановления.  
+Служба SQL Server Stretch Database в Azure защищает удаленные базы данных с помощью автоматического создания моментальных снимков хранилища по крайней мере каждые 8 часов. Каждый снимок хранится в течение 7 дней, что позволяет выбрать удобную точку восстановления.  
   
 ### <a name="azure-reduces-the-risk-of-data-loss-with-geo-redundancy"></a>Azure уменьшает риск потери данных за счет геоизбыточности  
 Резервные копии баз данных Azure хранятся в геоизбыточном хранилище Azure (RA-GRS), а значит, по умолчанию геоизбыточны. Геоизбыточное хранилище реплицирует данные в дополнительный регион, который находится в сотнях километров от основного региона. И в основном, и в дополнительном регионах данные реплицируются по три раза в отдельные домены сбоя и обновления. Это гарантирует, что данные будут сохранены даже в случае региональной аварии или сбоя, в результате которых один из регионов Azure станет недоступен.
 
 ### <a name="stretchRPO"></a>Stretch Database снижает риск потери данных Azure за счет временного хранения перенесенных строк
-Выполнив перенос доступных строк с SQL Server в Azure, Stretch Database сохраняет эти строки в промежуточной таблице не меньше чем на 8 часов. При восстановлении резервной копии базы данных Azure база данных Stretch Database использует строки, сохраненные в промежуточной таблице, для согласования баз данных SQL Server и Azure.
+После того, как Stretch Database перенесет пригодные строки из SQL Server в Azure, она хранит их в промежуточной таблице не менее 8 часов. В случае восстановления резервной копии базы данных Azure служба Stretch Database использует строки, сохраненные в промежуточной таблице, для согласования баз данных SQL Server и Azure.
 
-После восстановления резервной копии данных Azure необходимо выполнить хранимую процедуру [sys.sp_rda_reauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) , чтобы восстановить подключение базы данных SQL Server с поддержкой Stretch к удаленной базе данных Azure. При запуске процедуры **sys.sp_rda_reauthorize_db**Stretch Database автоматически согласовывает базы данных SQL Server и Azure.
+После восстановления резервной копии данных Azure необходимо выполнить хранимую процедуру [sys.sp_rda_reauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) , чтобы восстановить подключение базы данных SQL Server с поддержкой Stretch к удаленной базе данных Azure. При выполнении **sys.sp_rda_reauthorize_db** Stretch Database автоматически согласовывает базы данных SQL Server и Azure.
 
-Чтобы увеличить длительность хранения перенесенных данных в промежуточной таблице Stretch Database, выполните хранимую процедуру [sys.sp_rda_set_rpo_duration](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md), указав число часов больше 8. Определить объем данных для хранения помогут следующие факторы:
+Чтобы увеличить период временного хранения в промежуточной таблице данных, перенесенных службой Stretch Database, выполните хранимую процедуру [sys.sp_rda_set_rpo_duration](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md) и укажите число часов больше 8. Определить объем данных для хранения помогут следующие факторы:
 -   Частота автоматического резервного копирования Azure (не реже, чем раз в 8 часов).
 -   Время, необходимое для распознавания возникшей проблемы и принятия решения о восстановлении базы данных из резервной копии.
 -   Длительность операции восстановления Azure.
 
 > [!NOTE]
-> С увеличением объема данных, временно сохраняемых базой данных Stretch Database в промежуточной таблице, увеличивается объем необходимого места в SQL Server.
+> Увеличение объема данных, которые служба Stretch Database временно хранит в промежуточной таблице, увеличивает требуемый объем пространства SQL Server.
 
-Чтобы проверить длительность хранения данных, хранящихся в промежуточной таблице Stretch Database в текущий момент, выполните хранимую процедуру [sys.sp_rda_set_rpo_duration](../../relational-databases/system-stored-procedures/sys-sp-rda-get-rpo-duration-transact-sql.md).
+Чтобы узнать, сколько часов данные, перенесенные службой Stretch Database, хранятся в промежуточной таблице в настоящее время, выполните хранимую процедуру [sys.sp_rda_get_rpo_duration](../../relational-databases/system-stored-procedures/sys-sp-rda-get-rpo-duration-transact-sql.md).
 
 ## <a name="see-also"></a>См. также:  
 [Восстановление баз данных с поддержкой Stretch](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)  

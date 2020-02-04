@@ -3,19 +3,19 @@ title: Установка новых пакетов R
 description: Сведения об использовании пакета sqlmlutils для установки новых пакетов R в экземпляре служб машинного обучения SQL Server или служб SQL Server R Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/15/2019
+ms.date: 11/20/2019
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 827e83a0d1b363d3b91477b9ae85fec156ee4fc9
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: e9435c52cc0bf318291d38a2511f496c818c2fd6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727497"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74479427"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>Установка новых пакетов R с помощью sqlmlutils
 
@@ -146,7 +146,7 @@ R CMD INSTALL c:\temp\packages\sqlmlutils_0.7.1.zip
 ### <a name="add-the-package-offline"></a>Добавление пакета в автономном режиме
 
 Если у клиентского компьютера нет подключения к Интернету, воспользуйтесь **miniCRAN**, чтобы скачать пакет **glue** на компьютере, имеющем доступ к Интернету. Затем пакет копируется на клиентский компьютер для установки в автономном режиме.
-Сведения об установке **miniCRAN** см. в разделе [Установка miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran).
+Сведения об установке [miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran) см. в разделе **Установка miniCRAN**.
 
 На компьютере с доступом к Интернету
 

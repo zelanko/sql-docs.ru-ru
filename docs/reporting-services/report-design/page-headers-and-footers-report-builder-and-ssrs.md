@@ -22,10 +22,10 @@ ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 217b1ea42ae7af0aef2ece4c6c345b2fac7be89e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576340"
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>Верхние и нижние колонтитулы страницы (построитель отчетов и службы SSRS)
@@ -60,7 +60,7 @@ ms.locfileid: "65576340"
 |&TotalPages|Да|нет|  
 |Агрегатная функция|Да. Например,<br /><br /> `=First(ReportItems!TXT_LastName.Value)`|Да. Например,<br /><br /> `=Max(Quantity.Value,"DataSet1")`|  
 |Коллекция полей для элементов на странице|Косвенно. Например,<br /><br /> `=Sum(ReportItems!Textbox1.Value)`|Да. Например,<br /><br /> `=Sum(Fields!Quantity.Value,"DataSet1")`|  
-|Изображение, привязанное к данным|Косвенно. Например: `=ReportItems!TXT_Photo.Value`|Да. Например,<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  
+|Изображение, привязанное к данным|Косвенно. Например `=ReportItems!TXT_Photo.Value`.|Да. Например,<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  
   
  Следующие подразделы этого раздела содержат готовые к использованию выражения, получающие переменные данные, обычно используемые в колонтитулах. Этот раздел также содержит сведения о том, как модуль подготовки отчетов в формате Excel обрабатывает верхние и нижние колонтитулы. Дополнительные сведения о выражениях см. в разделе [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   

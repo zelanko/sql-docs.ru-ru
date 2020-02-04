@@ -9,10 +9,10 @@ ms.assetid: 90c94a91-8fb2-42cb-b998-563691f30d2d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7c67ddcb48847d3618c9544c50868b555e263fd7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580149"
 ---
 # <a name="linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs"></a>Связывание нескольких областей данных с одним набором данных (построитель отчетов и службы SSRS)
@@ -28,7 +28,7 @@ ms.locfileid: "65580149"
   
  Матрицу с несколькими группами строк или столбцов лучше всего отображать в диаграмме с областями, линейчатой диаграмме или гистограмме одновременно с группами категорий и группами рядов. Для групп столбцов в матрице и групп категорий в диаграмме, а также для групп строк в матрице и групп рядов в диаграмме следует использовать одинаковые выражения. Помните, что количество экземпляров групп влияет на удобочитаемость диаграммы. Чтобы уменьшить число экземпляров групп в отчете, можно определять группы на основе значений диапазонов. Дополнительные сведения см. в разделе [Примеры выражений групп](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md).  
   
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Диаграммы](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
 [Таблицы, матрицы и списки](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   

@@ -9,10 +9,10 @@ ms.assetid: 08e6d8b5-d88c-4ed2-9c05-55c757e00014
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a51e261d06933a30bf1c59adffa6963c9826f360
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570672"
 ---
 # <a name="secure-shared-dataset-items"></a>Защита элементов общего набора данных
@@ -48,7 +48,7 @@ ms.locfileid: "65570672"
   
 ## <a name="see-also"></a>См. также:  
  [Управление общими наборами данных](../../reporting-services/report-data/manage-shared-datasets.md)   
- [Обеспечение защиты папок](../../reporting-services/security/secure-folders.md)   
+ [Защита папок](../../reporting-services/security/secure-folders.md)   
  [Защищенные отчеты и ресурсы](../../reporting-services/security/secure-reports-and-resources.md)   
  [Предоставление разрешений на сервер отчетов в собственном режиме](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [Предоставление разрешений на сервер отчетов в собственном режиме](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  

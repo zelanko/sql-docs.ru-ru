@@ -17,10 +17,10 @@ ms.author: maghan
 ms.custom: ''
 ms.date: 07/31/2019
 ms.openlocfilehash: 1017620181ac127576f02fc792e3c4b85213a6d9
-ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68731118"
 ---
 # <a name="sql-server-powershell-provider"></a>SQL Server PowerShell, поставщик
@@ -31,7 +31,7 @@ ms.locfileid: "68731118"
   
 > [!NOTE]
 > Существует два модуля SQL Server PowerShell — **SqlServer** и **SQLPS**. Модуль **SQLPS** входит в состав установки SQL Server (для обеспечения обратной совместимости), но больше не обновляется. Самым актуальным модулем PowerShell является модуль **SqlServer**. Модуль **SqlServer** содержит обновленные версии командлетов в **SQLPS**, а также новые командлеты для поддержки последних функций SQL.  
-> Предыдущие версии модуля **SqlServer** *входили* в состав среды SQL Server Management Studio (SSMS), но только с SSMS версий 16.x. Для работы PowerShell с SSMS 17.0 и более поздних версий необходимо установить модуль **SqlServer** из коллекции PowerShell.
+> Предыдущие версии модуля **SqlServer***входили* в состав среды SQL Server Management Studio (SSMS), но только с SSMS версий 16.x. Для работы PowerShell с SSMS 17.0 и более поздних версий необходимо установить модуль **SqlServer** из коллекции PowerShell.
 > Сведения об установке модуля **SqlServer** см. в статье [Установка компонентов SQL Server PowerShell](download-sql-server-ps-module.md).
 
 ## <a name="benefits-of-the-sql-server-powershell-provider"></a>Преимущества поставщика SQL Server PowerShell
@@ -69,7 +69,7 @@ SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.
   
  Узлы коллекций в пути связаны с классом коллекций в связанной объектной модели. Узлы имен объектов связаны с классом объектов в связанной модели объектов, как показано в следующей таблице.  
   
-|Путь|Класс SMO|  
+|путь|Класс SMO|  
 |----------|---------------|  
 |`SQLSERVER:\SQL\MyComputer\DEFAULT\Databases`|<xref:Microsoft.SqlServer.Management.Smo.DatabaseCollection>|  
 |`SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012`|<xref:Microsoft.SqlServer.Management.Smo.Database>|  
@@ -79,10 +79,10 @@ SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.
 |Описание задачи|Статья|  
 |----------------------|-----------|  
 |Описано, как использовать командлеты Windows PowerShell для перехода по узлам пути и получения в каждом узле списка объектов этого узла.|[Перемещение путей SQL Server PowerShell](navigate-sql-server-powershell-paths.md)|  
-|Описано, как использовать методы и свойства объектов SMO для получения отчета и выполнения работы над объектом, представленным узлом пути. Кроме того, описано, как получить список методов и свойств объектов SMO для этого узла.|[Работа с  путями SQL Server PowerShell](work-with-sql-server-powershell-paths.md)|  
-|Описывает, как преобразовать универсальное имя ресурса объекта SMO в путь поставщика SQL Server.|[Преобразование универсальных имен ресурса в пути поставщика SQL Server](https://docs.microsoft.com/powershell/module/sqlserver/Convert-UrnToPath)|  
+|Описано, как использовать методы и свойства объектов SMO для получения отчета и выполнения работы над объектом, представленным узлом пути. Кроме того, описано, как получить список методов и свойств объектов SMO для этого узла.|[Работа с путями SQL Server PowerShell](work-with-sql-server-powershell-paths.md)|  
+|Описывает, как преобразовать универсальное имя ресурса объекта SMO в путь поставщика SQL Server.|[Преобразование URNs в пути поставщика SQL Server](https://docs.microsoft.com/powershell/module/sqlserver/Convert-UrnToPath)|  
 |Описано, как открывать соединения проверки подлинности SQL Server с использованием поставщика [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . По умолчанию поставщик использует соединения проверки подлинности Windows, установленные с помощью учетных данных той учетной записи Windows, которая используется в сеансе Windows PowerShell.|[Управление проверкой подлинности в PowerShell ядра СУБД ](manage-authentication-in-database-engine-powershell.md)|  
   
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [SQL Server PowerShell](sql-server-powershell.md)

@@ -1,11 +1,7 @@
 ---
-title: Руководство. Сравнение и синхронизация данных из двух баз данных | Документация Майкрософт
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: сравнить и синхронизировать данные из двух баз данных
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.datacompare.connection.datasources.f1
@@ -14,14 +10,19 @@ f1_keywords:
 ms.assetid: 2148e517-ed42-41c6-b753-1ac625f594c8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0d7654d02cfc35b0dfbaa82b100b9a82a8edacb0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: c53dc1e11d242d6864525aba677e78c67671277c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929478"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241582"
 ---
-# <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>Руководство. сравнить и синхронизировать данные из двух баз данных
+# <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>Практическое руководство. Сравнение и синхронизация данных из двух баз данных
+
 Предусмотрена возможность сравнивать данные, содержащиеся в двух базах данных. Сравниваемые базы данных принято называть *базой данных-источником* и *целевой базой данных*.  
   
 > [!NOTE]  
@@ -38,7 +39,7 @@ ms.locfileid: "67929478"
 Дополнительные сведения см. в статье [Сравнение и синхронизация данных из одной или нескольких таблиц с данными из эталонной базы данных](../ssdt/compare-and-synchronize-data-in-tables-with-data-in-reference-database.md).  
   
 > [!NOTE]  
-> Можно также сравнивать *схемы* двух баз данных или две версии одной и той же базы данных. Дополнительные сведения см. в разделе [Как использовать сравнение схем для сопоставления различных определений баз данных](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md).  
+> Можно также сравнивать *схемы* двух баз данных или две версии одной и той же базы данных. Дополнительные сведения см. в практическом руководстве по [использованию сравнения схем для сопоставления разных определений баз данных](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md).  
   
 ## <a name="CompareDatabaseData"></a>Сравнение данных базы данных  
   

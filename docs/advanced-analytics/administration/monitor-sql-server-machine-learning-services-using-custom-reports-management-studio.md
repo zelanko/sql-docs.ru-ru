@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: afc90985fc7c0c6d7a04cb575ee9e93a4b7b4c51
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727746"
 ---
 # <a name="monitor-python-and-r-script-execution-using-custom-reports-in-sql-server-management-studio"></a>Мониторинг выполнения скриптов Python и R с помощью пользовательских отчетов в SQL Server Management Studio
@@ -65,7 +65,7 @@ ms.locfileid: "73727746"
 
 [В репозитории пользовательских отчетов SSMS на сайте GitHub](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/machine-learning-services/ssms-custom-reports) находятся перечисленные далее отчеты.
 
-| Отчет | Описание |
+| Report | Description |
 |-|-|
 | Активные сеансы | Текущие пользователи, которые подключены к экземпляру SQL Server и выполняют скрипт Python или R. |
 | Конфигурация | Параметры установки служб машинного обучения и свойства среды выполнения Python или R. |
@@ -75,7 +75,7 @@ ms.locfileid: "73727746"
 | Пакеты | Список пакетов R или Python, установленных в экземпляре SQL Server, и их свойств, таких как версия и имя. |
 | Использование ресурсов | Просмотр использования ресурсов ЦП, памяти, операций ввода-вывода в SQL Server и выполнения внешних скриптов. Кроме того, можно просмотреть настройки памяти для внешних пулов ресурсов. |
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 - [Мониторинг служб машинного обучения SQL Server с помощью динамических административных представлений](monitor-sql-server-machine-learning-services-using-dynamic-management-views.md)
 - [Расширенные события для служб R](../r/extended-events-for-sql-server-r-services.md)

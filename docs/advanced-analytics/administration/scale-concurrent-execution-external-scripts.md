@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
 ms.openlocfilehash: c10f92bcb0f8b64441ad4b088c4b8b3e2f62236b
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727700"
 ---
 # <a name="scale-concurrent-execution-of-external-scripts-in-sql-server-machine-learning-services"></a>Масштабирование параллельного выполнения внешних сценариев в Службах машинного обучения SQL Server
@@ -21,7 +21,7 @@ ms.locfileid: "73727700"
 
 Узнайте о рабочих учетных записях для Служб машинного обучения SQL Server и о том, как изменить конфигурацию по умолчанию, чтобы масштабировать количество параллельных выполнений внешних сценариев.
 
-Чтобы [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] могла выполнять задачи, в процессе установки Служб машинного обучения создается новый *пул учетных записей пользователей* Windows. Эти рабочие учетные записи предназначены для того, чтобы изолировать работу пользователей SQL Server, которые одновременно выполняют внешние сценарии.
+Чтобы *могла выполнять задачи, в процессе установки Служб машинного обучения создается новый*пул учетных записей пользователей[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] Windows. Эти рабочие учетные записи предназначены для того, чтобы изолировать работу пользователей SQL Server, которые одновременно выполняют внешние сценарии.
 
 > [!Note]
 > В SQL Server 2019 в группе **SQLRUserGroup** теперь содержится только один член, которым является единственная учетная запись службы панели запуска SQL Server, а не несколько рабочих учетных записей. В этой статье описываются рабочие учетные записи для SQL Server 2016 и 2017.

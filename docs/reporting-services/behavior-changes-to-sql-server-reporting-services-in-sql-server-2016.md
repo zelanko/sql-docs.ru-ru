@@ -22,10 +22,10 @@ ms.assetid: 2a767f0f-84f2-4099-8784-1e37790f858e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c0288f0ed1bad041e05068512cec88538977acde
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65503943"
 ---
 # <a name="behavior-changes-to-sql-server-reporting-services-in-sql-server-2016"></a>Изменения в работе служб SQL Server Reporting Services в SQL Server 2016
@@ -38,7 +38,7 @@ ms.locfileid: "65503943"
 
 Изменения в работе отсутствуют.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Новые возможности служб Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)    
 [Нерекомендуемые функции SQL Server Reporting Services в SQL Server 2016](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)  

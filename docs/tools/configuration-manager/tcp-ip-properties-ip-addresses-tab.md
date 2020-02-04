@@ -1,6 +1,6 @@
 ---
-title: Свойства TCP/IP (вкладка «IP-адреса») | Документация Майкрософт
-ms.custom: ''
+title: Свойства TCP/IP (вкладка "IP-адреса")
+ms.custom: seo-lt-2019
 ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 927f732d4f04c43b5e2973a82509e4da7970a448
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: f1afdb9d25d599f32b2efb9d5339ef4afffd6f31
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023808"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307568"
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>Свойства TCP/IP (вкладка "IP-адреса")
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68023808"
  При запуске, когда экземпляр SQL Server настроен для прослушивания динамических портов, он проверяет наличие в операционной системе доступного порта и открывает для него конечную точку. Входящие соединения должны указывать этот номер порта. Так как номер порта может меняться при каждом запуске SQL Server, в состав SQL Server входит служба обозревателя SQL Server, которая обеспечивает наблюдение за портами для контроля портов и направляет входящие соединения на текущий порт этого экземпляра. Использование динамических портов усложняет соединение SQL Server через брандмауэр, т. к. при перезапуске SQL Server номер порта может измениться и параметры брандмауэра потребуется изменить. Чтобы предотвратить проблемы при соединении через брандмауэр, настройте SQL Server для использования статического порта.  
   
 ## <a name="options"></a>Параметры  
- **Активен**  
+ **Активно**  
  Указывает на то, что IP-адрес активен на компьютере. Недоступно для параметра **Все IP**.  
   
  **Enabled**  
@@ -63,6 +63,6 @@ ms.locfileid: "68023808"
 ## <a name="see-also"></a>См. также:  
  [Выбор сетевого протокола](https://msdn.microsoft.com/library/ms187892(v=sql.120).aspx)   
  [Создание допустимой строки подключения с использованием протокола TCP/IP](creating-a-valid-connection-string-using-tcp-ip.md)   
- [Служба браузера SQL Server](sql-server-browser-service.md)  
+ [Служба обозревателя SQL Server](sql-server-browser-service.md)  
   
   

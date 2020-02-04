@@ -15,10 +15,10 @@ ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0628f715be90586e851fee55301e8c82032739c3
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73593920"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
@@ -65,11 +65,11 @@ ms.locfileid: "73593920"
   
 2.  Нажмите кнопку **Создать документ** и выберите пункт **Отчет в построителе отчетов**. Если этот пункт не виден, изучите предыдущую процедуру по добавлению в библиотеку типов содержимого сервера отчетов.  
   
-### <a name="create-a-basic-report"></a>Создание базового отчета  
+### <a name="create-a-basic-report"></a>Создание простого отчета  
   
 1.  В библиотеке документов SharePoint создайте базовый отчет служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , который содержит только одно текстовое поле, например заголовок. Отчет не содержит никаких источников данных и наборов данных. Цель — проверить, что можно будет открыть построитель отчетов и просмотреть базовый отчет.  
   
-2.  Сохраните отчет в библиотеке документов и запустите отчет из библиотеки. Дополнительные сведения о создании отчетов с помощью построителя отчетов см. в разделе [Запуск построителя отчетов](../report-builder/start-report-builder.md).  
+2.  Сохраните отчет в библиотеке документов и запустите отчет из библиотеки. Дополнительные сведения о создании отчетов с помощью построителя отчетов см. в руководстве по [запуску построителя отчетов](../report-builder/start-report-builder.md).  
   
 ### <a name="reporting-services-samples"></a>Образцы служб Reporting Services  
   

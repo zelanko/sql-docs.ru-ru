@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 069736c17191e3583e5a6868c90e640acb6585b2
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73658874"
 ---
 # <a name="extensibility-architecture-in-sql-server-language-extensions"></a>Архитектура расширяемости в расширениях языка SQL Server
@@ -72,7 +72,7 @@ The following diagram visually describes opportunities and benefits of the exten
 
   По умолчанию для внутренней связи между SQL Server и вспомогательным соединением SQL используется протокол TCP/IP.
 
-+ **интерфейс ODBC**
++ **ODBC**
 
   Взаимодействие между внешними клиентами обработки и анализа данных и удаленным экземпляром SQL Server происходит с помощью ODBC. Учетная запись, отправляющая задания в рамках сценариев в SQL Server, должна иметь разрешения и для подключения к экземпляру, и для выполнения внешних скриптов.
 

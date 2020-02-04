@@ -23,9 +23,9 @@
       href: ../wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md
     - name: Поставщик инструментария WMI для классов событий и свойств сервера
       href: ../wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md
-    - name: Образец. Создание предупреждения агента SQL Server с помощью поставщика WMI для событий сервера
+    - name: Создание предупреждения агента SQL Server при помощи поставщика WMI для событий сервера
       href: ../wmi-provider-server-events/sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md
-    - name: Образец. Использование поставщика событий WMI с платформой .NET Framework
+    - name: Пример. Использование поставщика событий WMI с платформой .NET Framework
       href: ../wmi-provider-server-events/sample-using-the-wmi-event-provider-with-the-net-framework.md
 - name: Ошибки и события поставщика WMI
   href: ../../database-engine/dev-guide/wmi-provider-events-and-errors.md

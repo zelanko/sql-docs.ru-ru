@@ -9,10 +9,10 @@ ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 090729625991e3a1aaa6fb1ada3012a15ff20dce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63043044"
 ---
 # <a name="tutorial-format-text-report-builder"></a>Учебник. Форматирование текста (построитель отчетов)
@@ -339,7 +339,7 @@ ms.locfileid: "63043044"
   
 4.  В поле **Имя**замените имя по умолчанию на произвольное имя.
 
-5.  Нажмите кнопку **Сохранить**.  
+5.  Выберите команду **Сохранить**.  
   
 Отчет будет сохранен на сервере отчетов. Имя сервера отчетов, с которым установлено соединение, будет отображено в строке состояния в нижней части окна.  
   
@@ -351,7 +351,7 @@ ms.locfileid: "63043044"
   
 3.  В поле **Имя**замените имя по умолчанию на произвольное имя. 
   
-4.  Нажмите кнопку **Сохранить**.  
+4.  Выберите команду **Сохранить**.  
 
 ## <a name="next-steps"></a>Next Steps
 

@@ -1,10 +1,7 @@
 ---
-title: Работа с таблицами в схемах базы данных (визуальные инструменты для баз данных) | Документация Майкрософт
-ms.custom: ''
-ms.date: 01/19/2017
+title: Работа с таблицами в диаграммах базы данных
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,21 +12,27 @@ helpviewer_keywords:
 ms.assetid: ee2c5d84-22bf-4597-ac70-a27ed8cc94f4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 358d9940227e9034cdd3155d521d1782abb95360
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: 81611e2968dcf60bbf4d20a07364dc8fdd91a072
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262478"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246193"
 ---
 # <a name="work-with-tables-in-database-diagram-visual-database-tools"></a>Работа с таблицами в диаграммах базы данных (визуальные инструменты для баз данных)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Можно изменять и создавать таблицы баз данных либо в конструкторе таблиц, либо в конструкторе диаграмм баз данных.  
   
 > [!NOTE]  
 > Если таблица опубликована для репликации, то изменения схемы следует проводить при помощи инструкции языка Transact-SQL [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) или объектов SMO. При изменении схемы с помощью конструктора таблиц или конструктора диаграмм баз данных конструктор пытается удалить и затем вновь создать таблицу. Но поскольку удалять опубликованные объекты нельзя, изменения схемы не будут применены.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>в этом разделе
+
 [Добавление таблиц в диаграммы (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/add-tables-to-diagrams-visual-database-tools.md)  
   
 [Добавление связанных таблиц в диаграммы (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/add-related-tables-to-diagrams-visual-database-tools.md)  
@@ -44,7 +47,8 @@ ms.locfileid: "68262478"
   
 [Извлечение рефлексивных связей (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/draw-reflexive-relationships-visual-database-tools.md)  
   
-## <a name="reference"></a>Справочник  
-[Диалоговое окно "Добавление таблицы" (конструктор базы данных) (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/add-table-dialog-box-database-designer-visual-database-tools.md)  
-  
-## <a name="related-sections"></a>См. также  
+## <a name="reference"></a>Справочник
+
+[Диалоговое окно "Добавление таблицы" (конструктор базы данных) (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/add-table-dialog-box-database-designer-visual-database-tools.md)
+
+## <a name="related-sections"></a>См. также

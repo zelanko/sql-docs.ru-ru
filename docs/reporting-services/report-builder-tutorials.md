@@ -9,10 +9,10 @@ ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8e9d481e03efdcfb7ff109998eda3f4b2f6f3a3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "64330633"
 ---
 # <a name="report-builder-tutorials"></a>Учебники по построителю отчетов
@@ -68,7 +68,7 @@ ms.locfileid: "64330633"
 [Учебник. Общие сведения о выражениях](../reporting-services/tutorial-introducing-expressions.md)  
 Следуйте шагам в данном учебнике, чтобы узнать, как с помощью выражений производить сцепления и вычисления значений полей поиска и выводить их в отчете. Кроме того, вы научитесь по условию отображать различные изображения и состояния индикаторов с помощью выражений.  
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Представление конструктора отчетов](../reporting-services/report-builder/report-design-view-report-builder.md)  
 [Построитель отчетов в SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  

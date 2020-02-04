@@ -1,27 +1,28 @@
 ---
-title: Задание определения трассировки по умолчанию (приложение SQL Server Profiler) | Документы Майкрософт
-ms.custom: ''
-ms.date: 03/14/2017
+title: Установка параметров по умолчанию для определения трассировки
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- traces [SQL Server], defaults
 ms.assetid: ab9fc570-797d-411e-814f-1c46d2d5feae
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a3e8f627e7aeac05d418345ded1a069e63e8d116
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 76144d1e3b115bca73683b198abb328ac72fae8a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104158"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307414"
 ---
 # <a name="set-trace-definition-defaults-sql-server-profiler"></a>установить определения трассировки по умолчанию (приложение SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Определение трассировки по умолчанию — это шаблон трассировки по умолчанию, используемый для каждого поставщика или сервера. Для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]можно выбирать шаблоны трассировки по умолчанию.  
+
+Определение трассировки по умолчанию — это шаблон трассировки по умолчанию, используемый для каждого поставщика или сервера. Для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]можно выбирать шаблоны трассировки по умолчанию.  
   
 ### <a name="to-set-trace-definition-defaults"></a>Установка определения трассировки по умолчанию  
   
@@ -35,7 +36,7 @@ ms.locfileid: "68104158"
   
 5.  При необходимости перейдите на вкладку **Выбор событий**, чтобы изменить шаблон.  
   
-6.  Нажмите кнопку **Сохранить**.  
+6.  Выберите команду **Сохранить**.  
   
 ## <a name="see-also"></a>См. также:  
  [Шаблоны приложения SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates.md)   

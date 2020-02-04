@@ -1,6 +1,6 @@
 ---
-title: Окна инструментов в среде SQL Server Management Studio | Документация Майкрософт
-ms.custom: ''
+title: Окна инструментов в среде SQL Server Management Studio
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d3be5062-234c-43a8-8d47-cce111dd3c25
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dbb2464faa8620b7642dbd01affe3f9de318a8eb
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 025a4a9ecb00e9827524652047970db0031dfc43
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266707"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243894"
 ---
 # <a name="tool-windows-in-sql-server-management-studio"></a>Окна инструментов в среде SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "68266707"
 |[Обозреватель шаблонов](../ssms/template/template-explorer.md)|Создание запросов на основе существующих шаблонов. Также можно создавать пользовательские запросы или изменять существующие шаблоны в соответствии с текущими задачами. Доступ к этому средству осуществляется из меню **Вид** .|  
 |[Динамическая справка](../ssms/user-assistance-in-sql-server-management-studio.md)|Показывает список связанных разделов справки после щелчка по компоненту или при печати кода.|  
   
-Все средства в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] взаимодействуют друг с другом. Например, можно:  
+Все средства в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] взаимодействуют друг с другом. Например, администратор может сделать следующее:  
   
 -   зарегистрировать сервер с помощью обозревателя объектов;  
   

@@ -11,10 +11,10 @@ ms.assetid: 0b6b65a1-8e62-4cd5-ab28-6231c3e20d81
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 068e9d4b633a7d958224e99c64001e880f847b2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998540"
 ---
 # <a name="updatenstring-method-sqlserverresultset"></a>Метод updateNString (SQLServerResultSet)
@@ -24,7 +24,7 @@ ms.locfileid: "67998540"
   
 ## <a name="overload-list"></a>Список перегрузок  
   
-|Имя|Описание|  
+|Имя|Description|  
 |----------|-----------------|  
 |[Метод updateNString (int, java.lang.String)](../../../connect/jdbc/reference/updatenstring-method-int-java-lang-string.md)|Обновляет значение **String** с помощью указанного индекса столбцов в заданном столбце.|  
 |[Метод updateNString (java.lang.String, java.lang.String)](../../../connect/jdbc/reference/updatenstring-method-java-lang-string-java-lang-string.md)|Обновляет значение **String** с помощью указанной метки столбцов в заданном столбце.|  

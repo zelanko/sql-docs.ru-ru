@@ -10,10 +10,10 @@ ms.assetid: 8ca42b69-da5a-47f4-9085-34e443f0e389
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 2262de78691c14b14bf9177306c0eb7526ef290b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67951696"
 ---
 # <a name="load-the-smo-assemblies-in-windows-powershell"></a>Загрузка сборки объектов SMO в Windows PowerShell
@@ -23,7 +23,7 @@ ms.locfileid: "67951696"
   
 > [!NOTE]
 > Существует два модуля SQL Server PowerShell — **SqlServer** и **SQLPS**. Модуль **SQLPS** входит в состав установки SQL Server (для обеспечения обратной совместимости), но больше не обновляется. Самым актуальным модулем PowerShell является модуль **SqlServer**. Модуль **SqlServer** содержит обновленные версии командлетов в **SQLPS**, а также новые командлеты для поддержки последних функций SQL.  
-> Предыдущие версии модуля **SqlServer** *входили* в состав среды SQL Server Management Studio (SSMS), но только с SSMS версий 16.x. Для работы PowerShell с SSMS 17.0 и более поздних версий необходимо установить модуль **SqlServer** из коллекции PowerShell.
+> Предыдущие версии модуля **SqlServer***входили* в состав среды SQL Server Management Studio (SSMS), но только с SSMS версий 16.x. Для работы PowerShell с SSMS 17.0 и более поздних версий необходимо установить модуль **SqlServer** из коллекции PowerShell.
 > Сведения об установке модуля **SqlServer** см. в статье [Установка компонентов SQL Server PowerShell](download-sql-server-ps-module.md).
 
 
@@ -35,7 +35,7 @@ ms.locfileid: "67951696"
   
 -   Код объектов SMO переносится из другого языка, такого как C# или Visual Basic, который не использует этот поставщик или командлеты.  
   
-## <a name="example-loading-the-sql-server-management-objects"></a>Пример Загрузка управляющих объектов SQL Server  
+## <a name="example-loading-the-sql-server-management-objects"></a>Пример. Загрузка управляющих объектов SQL Server  
  Следующий код загружает сборки объектов SMO:  
   
 ```  

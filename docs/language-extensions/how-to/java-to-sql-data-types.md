@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: d1df57079acd79fc5370d0f2f198dc2d624d6983
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73658838"
 ---
 # <a name="java-and-sql-server-supported-data-types"></a>Типы данных, поддерживаемые Java и SQL Server
@@ -25,10 +25,10 @@ ms.locfileid: "73658838"
 
 | Тип данных SQL        | Тип данных Java | Комментарий | |
 | ------------- |-------------|-|-|
-| bit      | boolean | | |
+| bit      | Логическое | | |
 | Tinyint      | short      | | |
 | Smallint | short      | | |
-| int | INT      | | |
+| Int | INT      | | |
 | Real | FLOAT      | | |
 | Bigint | long      | | |
 | FLOAT | double      | | |
@@ -46,7 +46,7 @@ ms.locfileid: "73658838"
 | NUMERIC | java.math.BigDecimal  | | |
 | Decimal | java.math.BigDecimal  | | |
 | money | java.math.BigDecimal  | | |
-| SMALLMONEY | java.math.BigDecimal  | | |
+| smallmoney | java.math.BigDecimal  | | |
 | smalldatetime | java.sql.timestamp  | | |
 | DATETIME | java.sql.timestamp  | | |
 | datetime2 | java.sql.timestamp  | | |

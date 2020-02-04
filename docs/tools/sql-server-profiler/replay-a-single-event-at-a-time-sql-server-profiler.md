@@ -1,29 +1,28 @@
 ---
-title: Воспроизведение одного события за раз (приложение SQL Server Profiler) | Документы Майкрософт
-ms.custom: ''
-ms.date: 03/01/2017
+title: Воспроизведение одиночного события за раз
+titleSuffix: (SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- events [SQL Server], replaying single event at a time
-- traces [SQL Server], replaying
-- replaying traces
 ms.assetid: 220fb192-9636-41a2-b15c-62af6cab8fff
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 405debdbf84a3f7746754e2e2cf088fa1b76522b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: e8f217e2117e22edbd5f763b71c51cb078d49301
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031481"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307509"
 ---
 # <a name="replay-a-single-event-at-a-time-sql-server-profiler"></a>воспроизвести одиночное событие за раз (приложение SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  В данном разделе описывается, как с помощью приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]воспроизвести одно событие за раз в файл трассировки воспроизведения или таблицу.  
+
+В данном разделе описывается, как с помощью приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]воспроизвести одно событие за раз в файл трассировки воспроизведения или таблицу.  
   
 ### <a name="to-replay-a-single-event-at-a-time"></a>Вспроизведение одиночное события за раз  
   

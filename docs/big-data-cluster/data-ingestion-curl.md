@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 970c4f51535395a940a9c47e77d864d00c1f403c
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73706629"
 ---
 # <a name="use-curl-to-load-data-into-hdfs-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Загрузка данных в HDFS с помощью curl в [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
@@ -35,7 +35,7 @@ kubectl get service gateway-svc-external -n <big data cluster name> -o json | jq
 ```
 
 > [!NOTE]
-> `<big data cluster name>` — это имя кластера, указанное в файле конфигурации развертывания. Имя по умолчанию — `mssql-cluster`.
+> `<big data cluster name>` — это имя кластера, указанное в файле конфигурации развертывания. Имя по умолчанию имеет значение `mssql-cluster`.
 
 ## <a name="construct-the-url-to-access-webhdfs"></a>Создание URL-адреса для доступа к WebHDFS
 
@@ -71,6 +71,6 @@ curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP ext
 curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/test?op=MKDIRS'
 ```
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Дополнительные сведения о кластерах больших данных SQL Server см. в [этой статье](big-data-cluster-overview.md).

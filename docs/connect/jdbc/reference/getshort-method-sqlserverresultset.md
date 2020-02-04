@@ -16,10 +16,10 @@ ms.assetid: 5dd39c40-e7cc-4ff9-8491-7e20e25a9d17
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9136c379793f4f66fcc4c69b11da9a0ea49d294d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979760"
 ---
 # <a name="getshort-method-sqlserverresultset"></a>Метод getShort (SQLServerResultSet)
@@ -29,7 +29,7 @@ ms.locfileid: "67979760"
   
 ## <a name="overload-list"></a>Список перегрузок  
   
-|Имя|Описание|  
+|Имя|Description|  
 |----------|-----------------|  
 |[getShort (int)](../../../connect/jdbc/reference/getshort-method-int-sqlserverresultset.md)|Получает значение индекса заданного столбца в текущей строке этого объекта [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) в виде значения типа **short** на языке программирования Java.|  
 |[getShort (java.lang.String)](../../../connect/jdbc/reference/getshort-method-java-lang-string-sqlserverresultset.md)|Получает значение имени заданного столбца в текущей строке этого объекта [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) в виде значения типа **short** на языке программирования Java.|  

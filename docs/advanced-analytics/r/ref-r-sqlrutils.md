@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 3de8d438691afb7ebf1aabe15265227b7876b837
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68715032"
 ---
 # <a name="sqlrutils-r-library-in-sql-server"></a>sqlrutils (библиотека R в SQL Server)
@@ -41,7 +41,7 @@ ms.locfileid: "68715032"
 
 Ниже представлен обзор функций, которые можно вызывать из пакета **sqlrutils** в целях разработки хранимой процедуры, содержащей встроенный код R. Сведения о параметрах для каждого метода или каждой функции см. в справке R для этого пакета: `help(package="sqlrutils")`
 
-|Компонент | Описание |
+|Компонент | Description |
 |------|-------------|
 |[executeStoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/executestoredprocedure)| Выполнение хранимой процедуры SQL.|
 |[getInputParameters](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/getinputparameters)| Получение списка входных параметров в хранимой процедуре.| 

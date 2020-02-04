@@ -83,7 +83,7 @@
       href: greater-than-or-equal-to-ssis-expression.md
     - name: <= (меньше или равно) (выражение служб SSIS)
       href: less-than-or-equal-to-ssis-expression.md
-    - name: '? , перечислены ниже. (условный оператор) (выражение служб SSIS)'
+    - name: '? : (условный) (выражение служб SSIS)'
       href: conditional-ssis-expression.md
 - name: Функции (выражение служб SSIS)
   href: functions-ssis-expression.md

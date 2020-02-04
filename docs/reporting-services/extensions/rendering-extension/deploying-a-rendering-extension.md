@@ -12,21 +12,21 @@ ms.assetid: 9fb8c887-5cb2-476e-895a-7b0e2dd11398
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 10c822b8cd292c975309443f9196fb7ceb66cbc5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63193698"
 ---
 # <a name="deploying-a-rendering-extension"></a>Развертывание модуля подготовки отчетов
-  После того как модуль подготовки отчетов служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] был написан и скомпилирован в библиотеку [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] , необходимо сделать его видимым для сервера отчетов и конструктора отчетов. Это можно сделать, скопировав модуль в подходящий каталог и добавив записи в подходящие файлы конфигурации служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .  
+  После того как модуль подготовки отчетов служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] был написан и скомпилирован в библиотеку [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], необходимо сделать его видимым для сервера отчетов и конструктора отчетов. Это можно сделать, скопировав модуль в подходящий каталог и добавив записи в подходящие файлы конфигурации служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .  
   
 ## <a name="configuration-file-rendering-extension-element"></a>Настройка элемента модуля подготовки отчетов в файле  
  После компиляции модуля подготовки отчетов в формат .DLL в файл rsreportserver.config добавляется запись. По умолчанию этот файл находится в папке %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<имя_экземпляра>\Reporting Services\ReportServer. Родительским элементом является \<Render>. В элементе Render находятся элементы Extension для каждого модуля подготовки отчетов. Элемент **Extension** содержит два атрибута — Name и Type.  
   
  В следующей таблице описываются атрибуты элемента **Extension** для модулей подготовки отчетов.  
   
-|attribute|Описание|  
+|attribute|Description|  
 |---------------|-----------------|  
 |**Название**|Уникальное имя элемента Extension. Длина атрибута **Name** не должна превышать 255 символов. Имя должно быть уникальным среди всех элементов, вложенных в элемент **Extensions** файла конфигурации. Если присутствует повторяющееся имя, сервер отчетов возвращает ошибку.|  
 |**Тип**|Список с разделителями-запятыми, содержащий полное пространство имен и имя сборки.|  
