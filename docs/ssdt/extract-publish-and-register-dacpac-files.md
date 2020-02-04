@@ -1,11 +1,7 @@
 ---
-title: Извлечение, публикация и регистрация DACPAC-файлов | Документация Майкрософт
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Извлечение, публикация и регистрация DACPAC-файлов
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.DacTableChooser
@@ -16,14 +12,19 @@ f1_keywords:
 ms.assetid: ed900f93-d3df-40f5-8e62-4d722595e041
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2aee0f145c2ef2b82b929a8f6358a764a10050f5
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 67cb0321ebc1bdfa345b7bb6670ca31a4418d6e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154801"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241652"
 ---
 # <a name="extract-publish-and-register-dacpac-files"></a>Извлечение, публикация и регистрация DACPAC-файлов
+
 В этом разделе описаны четыре процедуры, которые можно выполнить, щелкнув правой кнопкой мыши подключенную базу данных в обозревателе объектов SQL Server:  
   
 -   Публикация приложения уровня данных  
