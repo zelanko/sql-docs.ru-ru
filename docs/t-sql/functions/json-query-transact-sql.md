@@ -19,13 +19,13 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 09b1f1036f298179033c9ab1ba2e7c3ffed1ce06
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109376"
 ---
-# <a name="jsonquery-transact-sql"></a>JSON_QUERY (Transact-SQL)
+# <a name="json_query-transact-sql"></a>JSON_QUERY (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
@@ -92,7 +92,7 @@ JSON_QUERY ( expression [ , path ] )
   
  В следующей таблице сравнивается поведение **JSON_QUERY** в нестрогом и в строгом режиме. Дополнительные сведения о необязательном режиме пути (строгий или нестрогий) см. в статье [Выражения пути JSON (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md).  
   
-|Путь|Возвращаемое значение в нестрогом режиме|Возвращаемое значение в строгом режиме|Дополнительные сведения|  
+|путь|Возвращаемое значение в нестрогом режиме|Возвращаемое значение в строгом режиме|Дополнительные сведения|  
 |----------|------------------------------|---------------------------------|---------------|  
 |$|Возвращает весь текст JSON.|Возвращает весь текст JSON.|Недоступно|  
 |$.info.type|NULL|Ошибка|Значение не является объектом или массивом.<br /><br /> Используйте **JSON_VALUE**.|  
@@ -102,7 +102,7 @@ JSON_QUERY ( expression [ , path ] )
 |$.info.type[0]|NULL|Ошибка|Не является массивом.|  
 |$.info.none|NULL|Ошибка|Свойство не существует.|  
 
-### <a name="using-jsonquery-with-for-json"></a>Использование JSON_QUERY с FOR JSON
+### <a name="using-json_query-with-for-json"></a>Использование JSON_QUERY с FOR JSON
 
 **JSON_QUERY** возвращает допустимый фрагмент JSON. Поэтому **FOR JSON** не экранирует специальные символы в возвращаемом значении **JSON_QUERY**.
 
