@@ -14,10 +14,10 @@ ms.assetid: 4da73ca1-6c06-4e96-8ab8-2ecba30b6c86
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f5433d6082f2860805368f636383eb2e17959e77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68048859"
 ---
 # <a name="event-notifications"></a>Уведомления о событиях
@@ -69,7 +69,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |Триггеры DML принадлежат тому же владельцу, что и таблицы, к которым они применяются.|Уведомление о событии для очереди может принадлежать владельцу, отличному от владельца объекта, к которому оно применяется.|  
 |Триггеры поддерживают предложение EXECUTE AS.|Уведомления о событиях не поддерживают предложение EXECUTE AS.|  
 |Сведения о событии триггера DDL могут быть захвачены с использованием функции EVENTDATA, которая возвращает тип данных **xml** .|Уведомления о событиях направляют данные о событии в формате **XML** службе Service Broker. Данные форматируются по той же схеме, что и функция EVENTDATA.|  
-|Метаданные о триггерах отображаются в представлениях каталога **sys.triggers** и **sys.server_triggers** .|Метаданные об уведомлениях о событиях отображаются в представлениях каталога **sys.event_notifications** и **sys.server_event_notifications**.|  
+|Метаданные о триггерах отображаются в представлениях каталога **sys.triggers** и **sys.server_triggers** .|Метаданные об уведомлениях о событиях отображаются в представлениях каталога **sys.event_notifications** и **sys.server_event_notifications** .|  
   
 ### <a name="event-notifications-vs-sql-trace"></a>Сравнение уведомлений о событиях и Трассировка SQL  
  В следующей таблице сравниваются способы мониторинга серверных событий, основанные на уведомлениях о событиях и использовании инструмента трассировки SQL.  
