@@ -11,10 +11,10 @@ ms.assetid: 84bf4654-3ef7-4d7f-a269-c8bb4ed4acad
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 2920b0f21cca13272b8d8678106d0d231ad56e41
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67947824"
 ---
 # <a name="sql-server-xtp-cursors"></a>Курсоры XTP SQL Server
@@ -24,7 +24,7 @@ ms.locfileid: "67947824"
   
  В следующей таблице описаны счетчики **XTP Cursors SQL Server** .  
   
-|Счетчик|Описание|  
+|Счетчик|Description|  
 |-------------|-----------------|  
 |**Удалений курсоров/с**|Число удалений курсоров (в среднем), в секунду.|  
 |**Вставок курсоров/с**|Число вставок курсоров (в среднем), в секунду.|  

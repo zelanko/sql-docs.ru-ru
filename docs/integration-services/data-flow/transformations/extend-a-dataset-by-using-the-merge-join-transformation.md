@@ -16,10 +16,10 @@ ms.assetid: 9e512c3c-f89b-45f3-8281-cdb8f35a2b1f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c3e144b1e866bd4bce8b7f8709c11f5b125b1f84
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291441"
 ---
 # <a name="extend-a-dataset-by-using-the-merge-join-transformation"></a>Расширение набора данных при помощи преобразования «Соединение слиянием»
@@ -65,7 +65,7 @@ ms.locfileid: "71291441"
 11. Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
 ## <a name="see-also"></a>См. также:  
- [Merge Join Transformation](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
+ [Преобразование «Соединение слиянием»](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
  [Преобразования служб Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Пути служб Integration Services](../../../integration-services/data-flow/integration-services-paths.md)   
  [Задача потока данных](../../../integration-services/control-flow/data-flow-task.md)  

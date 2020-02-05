@@ -18,10 +18,10 @@ ms.assetid: e98a56c2-8496-4dfd-9b37-7f3c4ca9b2b5
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: f7a525dedd8f5cbfbf881da63b7bb40f461bc802
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120930"
 ---
 # <a name="stnumcurves-geography-data-type"></a>STNumCurves (тип данных geography)
@@ -39,7 +39,7 @@ ms.locfileid: "68120930"
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Тип возвращаемого значения CLR: **SqlGeography**  
+ Тип возвращаемых данных CLR: **SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
  К одномерным пространственным типам данных относятся **LineString**, **CircularString** и **CompoundCurve**. Пустой одномерный экземпляр **geography** возвращает значение 0.  

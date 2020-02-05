@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: bc5a4def5c32ffc39c0df58d5a7927a24c90860d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68135545"
 ---
 # <a name="native-compilation-advisor"></a>Помощник по собственной компиляции
@@ -30,7 +30,7 @@ ms.locfileid: "68135545"
   
  NCA позволяет определить для конкретной интерпретируемой хранимой процедуры все функции, которые не поддерживаются в собственных модулях. NCA предложит вам ссылки на документы, в которых описаны решения или обходные варианты.  
   
- Дополнительные сведения о методологиях миграции см. в разделе [In-Memory OLTP — стандартные шаблоны рабочей нагрузки и вопросы миграции](https://msdn.microsoft.com/library/dn673538.aspx).  
+ Дополнительные сведения о методологиях миграции см. в разделе [Выполняемая в памяти OLTP — стандартные шаблоны рабочей нагрузки и вопросы миграции](https://msdn.microsoft.com/library/dn673538.aspx).  
   
 ## <a name="walkthrough-using-the-native-compilation-advisor"></a>Пошаговое руководство по использованию помощника по собственной компиляции  
  В **обозревателе объектов**щелкните правой кнопкой мыши хранимую процедуру, которую необходимо преобразовать, и выберите пункт **Помощник по собственной компиляции**. Появится стартовая страница для **помощника по собственной компиляции хранимых процедур**. Чтобы продолжить, нажмите кнопку **Далее** .  

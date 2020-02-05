@@ -18,10 +18,10 @@ ms.assetid: 39fe8559-c4c2-4d61-8508-86eb0a103807
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: dd96ae317c4f40a8b530bbc20ec64d5e3e2dccaa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68030851"
 ---
 # <a name="stmlinefromtext-geometry-data-type"></a>STMLineFromText (тип данных geometry)
@@ -46,7 +46,7 @@ STMLineFromText ( 'multilinestring_tagged_text' , SRID )
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Тип возвращаемого значения CLR: **SqlGeometry**  
+ Тип возвращаемых данных CLR: **SqlGeometry**  
   
  Тип OGC: **MultiLineString**  
   
@@ -63,7 +63,7 @@ SET @g = geometry::STMLineFromText('MULTILINESTRING ((100 100, 200 200), (3 4, 7
   
  `SELECT @g.ToString();`  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Статические геометрические методы OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

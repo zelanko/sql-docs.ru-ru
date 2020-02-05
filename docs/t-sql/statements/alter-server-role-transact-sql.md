@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2307a80d3a40599aed4762077b188baac0533967
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68070274"
 ---
 # <a name="alter-server-role-transact-sql"></a>ALTER SERVER ROLE (Transact-SQL)
@@ -105,14 +105,14 @@ GO
 ```  
   
 ### <a name="b-adding-a-domain-account-to-a-server-role"></a>Б. Добавление учетной записи домена к роли сервера  
-В следующем примере к определяемой пользователем роли сервера с именем `Production` добавляется учетная запись домена с именем `adventure-works\roberto0`.  
+В следующем примере к определяемой пользователем роли сервера с именем `adventure-works\roberto0` добавляется учетная запись домена с именем `Production`.  
   
 ```  
 ALTER SERVER ROLE Production ADD MEMBER [adventure-works\roberto0] ;  
 ```  
   
 ### <a name="c-adding-a-sql-server-login-to-a-server-role"></a>В. Добавление имени входа SQL Server к роли сервера  
-В следующем примере к предопределенной роли сервера `diskadmin` добавляется имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `Ted`.  
+В следующем примере к предопределенной роли сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] добавляется имя входа `Ted``diskadmin`.  
   
 ```  
 ALTER SERVER ROLE diskadmin ADD MEMBER Ted ;  
@@ -127,7 +127,7 @@ ALTER SERVER ROLE Production DROP MEMBER [adventure-works\roberto0] ;
 ```  
   
 ### <a name="e-removing-a-sql-server-login-from-a-server-role"></a>Д. Удаление имени входа SQL Server из роли сервера  
-В следующем примере имя входа `Ted` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] удаляется из предопределенной роли сервера `diskadmin`.  
+В следующем примере имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`Ted` удаляется из предопределенной роли сервера `diskadmin`.  
   
 ```  
 ALTER SERVER ROLE Production DROP MEMBER Ted ;  
@@ -159,7 +159,7 @@ ORDER BY  SP.name,  SP2.name
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="h-basic-syntax"></a>З. Базовый синтаксис  
-В следующем примере к роли сервера `LargeRC` добавляется имя входа `Anna`.  
+В следующем примере к роли сервера `Anna` добавляется имя входа `LargeRC`.  
   
 ```  
 ALTER SERVER ROLE LargeRC ADD MEMBER Anna;  

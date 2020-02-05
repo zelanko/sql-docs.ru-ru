@@ -18,10 +18,10 @@ ms.assetid: 77270245-a24b-4a20-b481-e6a5ea05b499
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 7b7c9706f3b2943780e48ba5fe99769ddc059c94
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065531"
 ---
 # <a name="grant-certificate-permissions-transact-sql"></a>GRANT, предоставление разрешений на сертификаты (Transact-SQL)
@@ -74,7 +74,7 @@ AS *granting_principal*
 -   пользователь базы данных, сопоставленный с асимметричным ключом;  
 -   пользователь базы данных, не сопоставленный с участником на уровне сервера.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Сертификат является защищаемым объектом уровня базы данных, содержащимся в базе данных, являющейся его родительским элементом в иерархии разрешений. Наиболее специфичные и ограниченные разрешения, которые можно предоставлять на сертификат, перечислены ниже вместе с более общими разрешениями, неявно содержащими их.  
   
 |Разрешение сертификата|Содержится в разрешении сертификата|Содержится в разрешении базы данных|  
@@ -110,7 +110,7 @@ AS *granting_principal*
  [Разрешения (ядро СУБД)](../../relational-databases/security/permissions-database-engine.md)   
  [Участники (ядро СУБД)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)   
- [CREATE ASYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
+ [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [CREATE APPLICATION ROLE (Transact-SQL)](../../t-sql/statements/create-application-role-transact-sql.md)   
  [Иерархия средств шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   

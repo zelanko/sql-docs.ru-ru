@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 472a654a0bee8b386c6573c8ab1ed8fdb0b4cf8d
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74412522"
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>Поддерживаемые функции для модулей, скомпилированных в собственном коде T-SQL
@@ -48,7 +48,7 @@ ms.locfileid: "74412522"
 
 Здесь приведены поддерживаемые конструкции запросов.  
 
-CASE, выражение: Выражение CASE может использоваться в любой инструкции или предложении, которые допускают допустимые выражения.
+Выражение CASE: выражение CASE можно включать в любую инструкцию или предложение, которые позволяют использовать допустимые выражения.
    - **Область применения**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
     Начиная с версии [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], для модулей, скомпилированных в собственном коде T-SQL, поддерживаются выражения CASE.
 
@@ -191,7 +191,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 -   Битовые операторы ~, &, |, и ^  
 
 -   APPLY, оператор
-    - **Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
+    - **Область применения**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
       Начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], оператор APPLY поддерживается в модулях, скомпилированных в машинном коде.
 
 ##  <a name="bfncsp"></a> Встроенные функции в модулях, скомпилированных в собственном коде  
@@ -202,20 +202,20 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 -   Функции для работы с датами: CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME и YEAR.  
 
 -   Строковые функции: LEN, LTRIM, RTRIM и SUBSTRING.  
-    - **Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
-      Начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] также поддерживаются следующие встроенные функции: TRIM, TRANSLATE и CONCAT_WS.  
+    - **Область применения**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
+      Начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], также поддерживаются следующие встроенные функции: TRIM, TRANSLATE и CONCAT_WS.  
 
--   Функции идентификации: SCOPE_IDENTITY  
+-   Функции идентификации: SCOPE_IDENTITY.  
 
--   Функции для работы со значением NULL: ISNULL  
+-   NULL-функции: ISNULL  
 
 -   Функции уникальных идентификаторов: NEWID и NEWSEQUENTIALID  
 
 -   Функции JSON  
-    - **Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
+    - **Область применения**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
       Начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], функции JSON поддерживаются в модулях, скомпилированных в машинном коде.
 
--   Функции ошибок: ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY и ERROR_STATE  
+-   Функции обработки ошибок: ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY и ERROR_STATE.  
 
 -   Системные функции: @@rowcount. Инструкции в хранимых процедурах, скомпилированных в собственном коде, обновляют @@rowcount, и вы можете использовать @@rowcount в таких процедурах для определения числа строк, затронутых последней инструкцией, выполненной в пределах этой хранимой процедуры. Но @@rowcount сбрасывается до 0 в начале и в конце выполнения каждой хранимой процедуры, скомпилированной в собственном коде.  
 
@@ -244,7 +244,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 ##  <a name="los"></a> Ограничения на сортировку  
  В запросе с использованием [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md) и [предложения ORDER BY (Transact-SQL)](../../t-sql/queries/select-order-by-clause-transact-sql.md) можно сортировать более 8 000 строк. Без [предложения ORDER BY (Transact-SQL)](../../t-sql/queries/select-order-by-clause-transact-sql.md)[TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md) позволяет сортировать не более 8 000 строк (меньше, если есть соединения).  
 
- Если в запросе используется как оператор [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md), так и [предложение ORDER BY (Transact-SQL)](../../t-sql/queries/select-order-by-clause-transact-sql.md), для оператора TOP можно указать не более 8192 строк. Если указано больше 8192 строк, возникает следующее сообщение об ошибке: **Сообщение 41398, уровень 16, состояние 1, процедура *\<имя_процедуры>* , строка *\<номер_строки>* . Оператор TOP может возвратить не более 8192 строк; запрошенное число: *\<число>* .**  
+ Если в запросе используется как оператор [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md), так и [предложение ORDER BY (Transact-SQL)](../../t-sql/queries/select-order-by-clause-transact-sql.md), для оператора TOP можно указать не более 8192 строк. Если строк будет больше, чем 8192, вы получите такое сообщение об ошибке: **сообщение 41398, уровень 16, состояние 1, процедура *\<имя_процедуры>* , строка *\<номер_строки>* . Оператор TOP может возвратить не более 8192 строк; запрошенное число: *\<число>* .**  
 
  Если отсутствует предложение TOP, то можно отсортировать любое количество строк с помощью предложения ORDER BY.  
 
@@ -263,7 +263,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```
 
- Пример для оператора TOP с числом значений > 8192: сбой компиляции.  
+ Пример для оператора TOP с числом значений > 8192: сбой компиляции.  
 
 ```sql  
 CREATE PROCEDURE testTop  
@@ -292,7 +292,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```
 
- **Ограничения возвращаемых строк:** Существует два варианта, когда возможно уменьшение числа строк, возвращаемых оператором TOP.  
+ **Ограничения возвращаемых строк:** существует два варианта, когда возможно уменьшение числа строк, возвращаемых оператором TOP:  
 
 -   Использование соединений в запросе.  Влияние соединений на ограничения зависит от плана запроса.  
 

@@ -22,10 +22,10 @@ ms.assetid: 4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c1bee651b2dd74564ebaff47add5acd4b62c5018
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121683"
 ---
 # <a name="slash-star-block-comment-transact-sql"></a>Косая черта-звездочка (блочный комментарий) (Transact-SQL)

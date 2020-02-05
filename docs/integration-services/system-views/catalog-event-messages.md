@@ -11,10 +11,10 @@ ms.assetid: a31a654f-31e9-4da1-aabf-182b07848e36
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ebd5c1cc320426ea0ae3ff1b0b9832fb2ca76f1b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296651"
 ---
 # <a name="catalogevent_messages"></a>catalog.event_messages 
@@ -26,7 +26,7 @@ ms.locfileid: "71296651"
 
   Показывает сведения о сообщениях, которые были зарегистрированы в ходе операций.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |Event_message_ID|BIGINT|Уникальный идентификатор сообщения о событии.|  
 |Operation_id|BIGINT|Тип операции.<br /><br /> Список типов операций см. в разделе [catalog.operations (база данных SSISDB)](../../integration-services/system-views/catalog-operations-ssisdb-database.md).|  
@@ -48,7 +48,7 @@ ms.locfileid: "71296651"
 ## <a name="remarks"></a>Remarks  
  В этом представлении отображаются следующие типы источников сообщений.  
   
-|**message_source_type**|Описание|  
+|**message_source_type**|Description|  
 |-------------------------------|-----------------|  
 |10|Начальные API-интерфейсы, такие как T-SQL и хранимые процедуры CLR|  
 |20|Внешний процесс, используемый для запуска пакета (ISServerExec.exe)|  

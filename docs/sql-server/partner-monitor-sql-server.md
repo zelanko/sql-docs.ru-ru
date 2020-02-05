@@ -8,26 +8,20 @@ ms.date: 11/02/2017
 ms.prod: sql
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: bbf66098bcc2b091ffd97a3f3aebf73c599fbf17
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: 8012c6a4fecf4155615460da8bd568eb4007aa48
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68974465"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75656977"
 ---
 # <a name="sql-server-monitoring-partners"></a>Партнеры по мониторингу SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 В отрасли доступно множество передовых средств для мониторинга служб SQL Server. В этой статье указаны партнеры корпорации Майкрософт, которые предлагают решения мониторинга, поддерживающие Microsoft SQL Server.
 
-<!--
-
-|![PartnerShortName][1] |**PartnerShortName**<br>PartnerShortName Brief description of the type of products that partner provides. <br><br>List of supported versions of SQL Server, OS, OS platforms/distros Server 2005 SP4 - SQL Server 2016 on Windows |[Datasheet][PartnerShortName_datasheet]<br>[Marketplace][PartnerShortName_marketplace]<br>[Website][PartnerShortName_website]<br>[Twitter][PartnerShortName_twitter]<br>[Video][PartnerShortName_youtube]|[![veem_video](./media/partner-hadr-sql-server/PartnerShortName_video.png)](https://www.youtube.com/channel/**************)
-
--->
-
 ## <a name="microsoft-monitoring-partners"></a>Партнеры Майкрософт по решениям мониторинга
 
-| Партнер | Описание | Ссылки |
+| Партнер | Description | Ссылки |
 | --- | --- | --- | --- |
 |[![idera][1]][idera_website] |**IDERA**<br>SQL Diagnostic Manager — это мощное решение для диагностики и мониторинга производительности, которое заранее предупреждает администраторов о проблемах с работоспособностью, производительностью и доступностью в средах SQL Server через централизованную консоль.<br><br>[Требования к системе][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Веб-сайт][idera_website]<br>[Twitter][idera_twitter]<br>[Видео][idera_youtube] | |
 |[![quest][3]][quest_website] |**Quest**<br>Решение Spotlight on SQL Server позволяет круглосуточно обеспечивать максимальную производительность за счет непревзойденных возможностей мониторинга, диагностики и оптимизации сред SQL Server. Spotlight предоставляет доступ к сведениям, необходимым для оптимальной работы баз данных SQL Server. Воспользуйтесь интуитивно понятной функцией обзора работоспособности и производительности, возможностью автоматической выдачи предупреждений и автоматического выполнения действий, а также поддержкой мобильных устройств.|[Marketplace][quest_marketplace]<br>[Веб-сайт][quest_website]<br>[Видео][quest_video] | |
@@ -37,11 +31,11 @@ ms.locfileid: "68974465"
 
 
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 Дополнительные сведения о некоторых других партнерах см. в разделах, посвященных [партнерам по обеспечению высокой доступности и аварийного восстановления][hadr_partners], [партнерам по управлению][management_partners] и [партнерам по разработке][dev_partners].
 
 <!--Image references-->
-[1]: ./media/partner-hadr-sql-server/idera_logo.png
+[1]: ./media/partner-hadr-sql-server/idera-logo.png
 [2]: ./media/partner-hadr-sql-server/sentryone.png
 [3]: ./media/partner-hadr-sql-server/quest.png
 [4]: ./media/partner-hadr-sql-server/redgate.png

@@ -9,10 +9,10 @@ ms.assetid: c87e16fe-c12a-4c9d-a9df-7a94e229fd04
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c3f1e0f0364eebbd0861edb931b0ee7f46954a7d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577133"
 ---
 # <a name="report-builder-functions---union-function"></a>Функции построителя отчетов — функция Union

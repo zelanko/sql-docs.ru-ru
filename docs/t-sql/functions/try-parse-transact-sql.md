@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions||=azure-sqldw-latest
 ms.openlocfilehash: 3533d69ebaac7cf535de0e835bdbfdef9c5fbb4b
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70152049"
 ---
 # <a name="try_parse-transact-sql"></a>TRY_PARSE (Transact-SQL)
@@ -48,7 +48,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
  *data_type*  
  Литерал, представляющий тип данных, запрошенный в качестве результата.  
   
- *culture*  
+ *Язык и региональные параметры*  
  Дополнительная строка, идентифицирующая культуру, в которой форматируется *string_value*.  
   
  Если аргумент *culture* не указан, то используется язык текущего сеанса. Язык может быть задан неявно или явно с использованием инструкции SET LANGUAGE. Значение *culture* принимает любую культуру, поддерживаемую .NET Framework; его применение не ограничивается языками, явно поддерживаемыми [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если аргумент *culture* недопустим, то PARSE выдаст ошибку.  
@@ -72,18 +72,18 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
 |Числовой|BIGINT|Int64|NumberStyles.Number|  
 |Числовой|INT|Int32|NumberStyles.Number|  
 |Числовой|smallint|Int16|NumberStyles.Number|  
-|Числовой|TINYINT|Byte|NumberStyles.Number|  
+|Числовой|tinyint|Byte|NumberStyles.Number|  
 |Числовой|Decimal|Decimal|NumberStyles.Number|  
 |Числовой|NUMERIC|Decimal|NumberStyles.Number|  
 |Числовой|FLOAT|Double|NumberStyles.Float|  
-|Числовой|REAL|Один|NumberStyles.Float|  
-|Числовой|SMALLMONEY|Decimal|NumberStyles.Currency|  
+|Числовой|real|Один|NumberStyles.Float|  
+|Числовой|smallmoney|Decimal|NumberStyles.Currency|  
 |Числовой|money|Decimal|NumberStyles.Currency|  
-|Дата и время|Дата|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|Дата и время|Дата|Дата и время|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |Дата и время|time|TimeSpan|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
-|Дата и время|DATETIME|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
-|Дата и время|smalldatetime|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
-|Дата и время|datetime2|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|Дата и время|DATETIME|Дата и время|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|Дата и время|smalldatetime|Дата и время|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|Дата и время|datetime2|Дата и время|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |Дата и время|datetimeoffset|DateTimeOffset|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
   
  **Дополнительные сведения о параметре культуры**  
@@ -92,11 +92,11 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
   
 |Полное имя|Псевдоним|LCID|Конкретная культура|  
 |---------------|-----------|----------|----------------------|  
-|us_english|Английский|1033|en-US|  
+|us_english|Английский|1033|ru-RU|  
 |Deutsch|Немецкий|1031|de-DE|  
 |Français|Французский|1036|fr-FR|  
 |日本語|Японский|1041|ja-JP|  
-|Dansk|Danish|1030|da-DK|  
+|Dansk|Датский|1030|da-DK|  
 |Español|Испанский|3082|es-ES|  
 |Italiano|Итальянский|1040|it-IT|  
 |Nederlands|Нидерландский|1043|nl-NL|  
@@ -104,14 +104,14 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
 |Português|Португальский|2070|pt-PT|  
 |Suomi|Финский|1035|fi-FI|  
 |Svenska|Шведский|1053|sv-SE|  
-|čeština|Czech|1029|Cs-CZ|  
+|čeština|Чешский|1029|Cs-CZ|  
 |magyar|Венгерский|1038|Hu-HU|  
 |polski|Польский|1045|Pl-PL|  
 |română|Румынский|1048|Ro-RO|  
 |hrvatski|Хорватский|1050|hr-HR|  
 |slovenčina|Словацкий|1051|Sk-SK|  
 |slovenski|Словенский|1060|Sl-SI|  
-|ελληνικά|Greek|1032|El-GR|  
+|ελληνικά|Греческий|1032|El-GR|  
 |български|Болгарский|1026|bg-BG|  
 |русский|Русский|1049|Ru-RU|  
 |Türkçe|Турецкий|1055|Tr-TR|  

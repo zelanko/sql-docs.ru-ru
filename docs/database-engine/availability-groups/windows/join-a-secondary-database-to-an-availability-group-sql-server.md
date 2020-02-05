@@ -19,10 +19,10 @@ ms.assetid: fd7efe79-c1f9-497d-bfe7-b2a2b2321cf5
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: cf57aa52ce1ca216a8cd88ba310dcee5310b6a7b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68019692"
 ---
 # <a name="join-a-secondary-database-to-an-always-on-availability-group"></a>Присоединение базы данных-получателя к группе доступности Always On
@@ -36,7 +36,7 @@ ms.locfileid: "68019692"
   
 -   Необходимо подключиться к экземпляру сервера, на котором находится дополнительная реплика.  
   
--   Дополнительная реплика уже должна быть присоединена к группе доступности. Дополнительные сведения см. в статье [Присоединение вторичной реплики к группе доступности (SQL Server)](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md).  
+-   Дополнительная реплика уже должна быть присоединена к группе доступности. Дополнительные сведения см. в разделе [Присоединение вторичной реплики к группе доступности (SQL Server)](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
 -   База данных-получатель должна быть подготовлена заранее. Дополнительные сведения см. в статье [Ручная подготовка базы данных-получателя для присоединения к группе доступности (SQL Server)](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   

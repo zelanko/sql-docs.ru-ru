@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4786c512850d161d9b7ab33f2a12cd0bd077b2bd
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73593824"
 ---
 # <a name="configure-the-enclave-type-for-always-encrypted-server-configuration-option"></a>Настройка типа анклава для параметра конфигурации сервера Always Encrypted
@@ -24,7 +24,7 @@ ms.locfileid: "73593824"
 
 Параметр конфигурации сервера **тип анклава для шифрования столбцов** определяет тип безопасного анклава, используемого для Always Encrypted. Параметр может принимать одно из следующих значений:  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-------------------|-----------------| 
 |0|**Без безопасного анклава**. [!INCLUDE[ssDE](../../includes/ssde-md.md)] не удается инициализировать безопасный анклав для Always Encrypted. Таким образом, функция Always Encrypted с безопасными анклавами недоступна.|  
 |1|**Безопасность на базе виртуализации (VBS)** . [!INCLUDE[ssDE](../../includes/ssde-md.md)] попытается инициализировать анклав с безопасностью на базе виртуализации.

@@ -16,10 +16,10 @@ ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 09850707b83481909a881dcefdf00e710e6a8790
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291238"
 ---
 # <a name="ole-db-command-transformation"></a>преобразование «Команда OLE DB»
@@ -47,7 +47,7 @@ ms.locfileid: "71291238"
   
  Это преобразование содержит один вход, один обычный вывод и один вывод ошибок.  
   
-## <a name="logging"></a>Ведение журнала  
+## <a name="logging"></a>Logging  
  В журнал можно записывать вызовы, сделанные преобразованием «Команда OLE DB» к внешним источникам данных. Эта возможность протоколирования может быть использована для устранения неполадок соединений и выполнения команд для внешних источников данных, которые выполняются преобразованием «Команда OLE DB». Для протоколирования вызовов, которые преобразование «Команда OLE DB» совершает к внешним поставщикам данных, необходимо разрешить ведение журнала пакета и выбрать событие **Диагностика** на уровне пакета. Дополнительные сведения см. в разделе [Инструменты устранения неполадок при выполнении пакетов](../../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
 ## <a name="related-tasks"></a>Связанные задачи  

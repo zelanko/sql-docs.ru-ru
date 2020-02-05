@@ -9,10 +9,10 @@ ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 466415ebd4075afd5dda83e95a498a32b50af453
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62651741"
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
@@ -49,7 +49,7 @@ ms.locfileid: "62651741"
     
 9. Нажмите кнопку **Проверить соединение** , чтобы проверить соединение с источником данных.  
   
-10. Нажмите кнопку **Сохранить**.
+10. Выберите команду **Сохранить**.
 11. Нажмите кнопку **Отмена**.  
   
 11. Просмотрите отчет, чтобы убедиться, что он выполняется с указанными учетными данными. .  
@@ -115,7 +115,7 @@ ms.locfileid: "62651741"
   
 ## <a name="see-also"></a>См. также:  
 [Управление источниками данных отчета](../reporting-services/report-data/manage-report-data-sources.md)  
-[Определение учетных данных и сведениях о подключении для источников данных отчета](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
+[Задание учетных данных и сведениях о соединении для источников данных отчета](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
 [Создание управляемой данными подписки (учебник по службам SSRS)](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)  
 [Создание простого табличного отчета (учебник по службам SSRS)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
   

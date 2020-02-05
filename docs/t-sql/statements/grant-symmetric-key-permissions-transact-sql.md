@@ -20,10 +20,10 @@ ms.assetid: 5c61557f-67ae-4e55-b86d-713575b27cea
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: a7c592af7f2971cc637c9049b8ca06a92a2f3c05
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050776"
 ---
 # <a name="grant-symmetric-key-permissions-transact-sql"></a>Разрешения GRANT на симметричный ключ (Transact-SQL)
