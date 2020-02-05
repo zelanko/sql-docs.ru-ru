@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 11354683f94b5805255ddd5b2b5c73ec2c1aa5ba
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727413"
 ---
 # <a name="data-type-mappings-between-r-and-sql-server"></a>Сопоставления типов данных между R и SQL Server
@@ -106,7 +106,7 @@ Microsoft SQL Server 2016 и база данных SQL Microsoft Azure соде
 
 ## <a name="examples"></a>Примеры
 
-### <a name="example-1-implicit-conversion"></a>Пример 1. Неявное преобразование
+### <a name="example-1-implicit-conversion"></a>Пример 1. Неявное преобразование
 
 В следующем примере показано преобразование данных при выполнении цикла приема-передачи между SQL Server и R.
 
@@ -168,7 +168,7 @@ outputDataSet <- inputDataSet'
 -   **Столбец C4**. Этого столбца нет в исходных данных. Он содержит значения, созданные сценарием R.
 
 
-## <a name="example-2-dynamic-column-selection-using-r"></a>Пример 2. Динамический выбор столбцов с помощью R
+## <a name="example-2-dynamic-column-selection-using-r"></a>Пример 2. Динамический выбор столбцов с помощью R
 
 В следующем примере показано, как использовать код R для проверки на наличие недопустимых типов столбцов. Приведенный ниже код получает схему указанной таблицы с помощью системных представлений SQL Server и удаляет все столбцы с заданным недопустимым типом.
 

@@ -18,10 +18,10 @@ ms.assetid: 049917db-3f76-4053-8cd2-bc54158e89bc
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: ede5ca7a0037eabee9c1588057fd18c45460e812
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066291"
 ---
 # <a name="ststartpoint-geometry-data-type"></a>STStartPoint (тип данных geometry)
@@ -39,9 +39,9 @@ ms.locfileid: "68066291"
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Тип возвращаемого значения CLR: **SqlGeometry**  
+ Тип возвращаемых данных CLR: **SqlGeometry**  
   
- Тип OGC (открытый геопространственный консорциум): **Point**  
+ Тип открытого геопространственного консорциума (OGC): **Point**  
   
 ## <a name="remarks"></a>Remarks  
  Метод `STStartPoint()` является эквивалентом метода [STPointN](../../t-sql/spatial-geometry/stpointn-geometry-data-type.md) (1).  

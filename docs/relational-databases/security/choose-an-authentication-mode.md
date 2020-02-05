@@ -26,15 +26,15 @@ ms.assetid: ff7a6a48-3d38-4209-aa0f-7d6c0a8c64ef
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: caee3b1fab893e456a5a781641b6cf70222b16ff
-ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75721359"
 ---
 # <a name="choose-an-authentication-mode"></a>Выбор режима проверки подлинности
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Во время процесса установки следует выбрать режим проверки подлинности для компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Существует два возможных режима: режим проверки подлинности Windows и смешанный режим. Режим проверки подлинности Windows включает проверку подлинности Windows и отключает проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В смешанном режиме включены как проверка подлинности Windows, так и проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Проверка подлинности Windows доступна всегда, и отключить ее нельзя.  
+  Во время процесса установки следует выбрать режим проверки подлинности для компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Существует два возможных режима: проверка подлинности Windows и смешанный режим. Режим проверки подлинности Windows включает проверку подлинности Windows и отключает проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В смешанном режиме включены как проверка подлинности Windows, так и проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Проверка подлинности Windows доступна всегда, и отключить ее нельзя.  
   
 ## <a name="configuring-the-authentication-mode"></a>Настройка режима проверки подлинности  
  Если во время установки был выбран смешанный режим проверки подлинности, необходимо задать и подтвердить надежный пароль для встроенной учетной записи системного администратора [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с именем sa. Учетная запись sa устанавливает соединения с помощью проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

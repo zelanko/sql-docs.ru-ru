@@ -12,10 +12,10 @@ ms.assetid: dcfbd1c5-c001-4fb7-b9ae-916e49ab6a96
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4b4a5b5f27f959f3a04bb3cf5468d198d3ef5267
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295655"
 ---
 # <a name="integration-services-ssis-scale-out"></a>Масштабное развертывание служб Integration Services (SSIS)
@@ -32,7 +32,7 @@ ms.locfileid: "71295655"
 
 -   Рабочие роли Scale Out получают задачи на выполнение от мастера Scale Out и выполняют пакеты. Дополнительные сведения см. в разделе [Рабочая роль Scale Out](integration-services-ssis-scale-out-worker.md).
 
-## <a name="configuration-options"></a>Параметры конфигурации
+## <a name="configuration-options"></a>Варианты настройки
 Компонент Scale Out можно настроить в следующих конфигурациях:
 
 -   **с одним компьютером**: мастер Scale Out и рабочая роль Scale Out выполняются на одном компьютере;
@@ -46,7 +46,7 @@ ms.locfileid: "71295655"
 
 -   Управлять топологией Scale Out в диспетчере Scale Out. Дополнительные сведения см. в статье [Диспетчер Integration Services Scale Out](integration-services-ssis-scale-out-manager.md).
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 -   [Начало работы с SSIS Scale Out на одном компьютере](get-started-with-ssis-scale-out-onebox.md)
 
--   [Пошаговое руководство. Настройка Integration Services Scale Out](walkthrough-set-up-integration-services-scale-out.md)
+-   [Пошаговое руководство. Настройка масштабного развертывания Integration Services](walkthrough-set-up-integration-services-scale-out.md)

@@ -13,10 +13,10 @@ ms.author: mikeray
 ms.reviewer: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eba0e28d8f2d5587a07308a4ffcbf5f7eaedf278
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68119853"
 ---
 # <a name="nondeterministic-conversion-of-literal-date-strings-into-date-values"></a>Недетерминированное преобразование строк дат литералов в значения DATE
@@ -27,7 +27,7 @@ ms.locfileid: "68119853"
 
 
 
-## <a name="set-language-example-month-name-in-polish"></a>Пример SET LANGUAGE: название месяца на польском.
+## <a name="set-language-example-month-name-in-polish"></a>Пример SET LANGUAGE: название месяца на польском языке
 
 - `SET LANGUAGE Polish;`
 
@@ -119,12 +119,12 @@ YMD-Interpretation--?--NotGuaranteed
 
 В предыдущем примере кода в последнем примере есть несоответствие между форматом **ГМД** и входной строкой. Третий узел входной строки представляет числовое значение, слишком большое для дня. Корпорация Майкрософт не гарантирует выходное значение в таких случаях.
 
-#### <a name="convert-offers-explicit-codes-for-deterministic-control-of-date-formats"></a>CONVERT предлагает явные коды для _детерминированного_ управления форматами даты
+#### <a name="convert-offers-explicit-codes-for-_deterministic_-control-of-date-formats"></a>CONVERT предлагает явные коды для _детерминированного_ управления форматами даты
 
 В нашей документации по CAST и CONVERT приводятся явные коды, которые можно использовать с функцией CONVERT для _детерминированного_ управления преобразованиями даты. Каждый месяц эта статья имеет наибольшее количество просмотров.
 
-- [Функции CAST и CONVERT (Transact-SQL): стили даты и времени](../functions/cast-and-convert-transact-sql.md#date-and-time-styles)
-- [Функции CAST и CONVERT (Transact-SQL): некоторые преобразования типа данных даты и времени являются недетерминированными](../functions/cast-and-convert-transact-sql.md#certain-datetime-conversions-are-nondeterministic)
+- [CAST и CONVERT (Transact-SQL): стили даты и времени](../functions/cast-and-convert-transact-sql.md#date-and-time-styles)
+- [CAST и CONVERT (Transact-SQL): некоторые преобразования типа данных даты и времени являются недетерминированными](../functions/cast-and-convert-transact-sql.md#certain-datetime-conversions-are-nondeterministic)
 
 
 

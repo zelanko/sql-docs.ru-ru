@@ -1,5 +1,5 @@
 ---
-title: 'Устранение неполадок: превышение RTO (SQL Server) в группе доступности | Документация Майкрософт'
+title: 'Устранение неполадок: превышение RTO в группе доступности (SQL Server) | Документы Майкрософт'
 ms.custom: ag-guide
 ms.date: 06/13/2017
 ms.prod: sql
@@ -10,10 +10,10 @@ ms.assetid: e83e4ef8-92f0-406f-bd0b-dc48dc210517
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9b62bcc1eebe8371bc45ae7f565d9aa712f1b1d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68013751"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rto"></a>Устранение неполадок: превышение RTO в группе доступности
@@ -62,7 +62,7 @@ from sys.dm_hadr_database_replica_states
   
  Если поток повтора на самом деле запаздывает, нужно исследовать первопричину снижения производительности на вторичной реплике. Если присутствует состязание ввода-вывода с рабочей нагрузкой отчетов, можно использовать [Resource Governor](~/relational-databases/resource-governor/resource-governor.md) для управления циклами ЦП, которые рабочая нагрузка отчетов использует для косвенного управления использованными циклами ввода-вывода. Например, если рабочая нагрузка отчетов использует 10 процентов ресурсов ЦП, но она привязана к вводу-выводу, можно с помощью Resource Governor ограничить использование ресурсов ЦП на 5 процентов для регулирования рабочей нагрузки чтения, что минимизирует влияние на операции ввода-вывода.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Дальнейшие действия  
  [Устранение проблем с производительностью в SQL Server (применяется к SQL Server 2012)](https://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx)  
   
   

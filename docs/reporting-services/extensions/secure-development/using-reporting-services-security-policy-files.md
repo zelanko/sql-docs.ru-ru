@@ -17,10 +17,10 @@ ms.assetid: 2280fff6-3de7-44b1-87da-5db0ec975928
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ae971989342ca6d3fda121b0559bebb681f07fb0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63193312"
 ---
 # <a name="using-reporting-services-security-policy-files"></a>Использование файлов политики безопасности служб Reporting Services
@@ -34,7 +34,7 @@ ms.locfileid: "63193312"
 ## <a name="policy-files-in-reporting-services"></a>Файлы политик в службах Reporting Services  
  В следующей таблице приводится список файлов конфигурации в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], их расположение (предполагается установка по умолчанию) и соответствующие функции.  
   
-|Имя файла|Расположение (установка по умолчанию)|Описание|  
+|Имя файла|Расположение (установка по умолчанию)|Description|  
 |---------------|---------------------------------------|-----------------|  
 |rssrvpolicy.config|C:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer|Файл конфигурации политики безопасности сервера отчетов. Эти политики безопасности в первую очередь касаются выражений отчетов и пользовательских сборок после развертывания отчета на сервере отчетов. Этот файл также влияет на пользовательские данные, доставку, модули подготовки отчета и безопасности, развернутые на сервере отчетов.|  
 |rsmgrpolicy.config|C:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportManager|Файл конфигурации политики диспетчера отчетов. Эти политики безопасности касаются всех сборок, расширяющих функции диспетчера отчетов, например расширения подписки для пользовательских модулей доставки.|  

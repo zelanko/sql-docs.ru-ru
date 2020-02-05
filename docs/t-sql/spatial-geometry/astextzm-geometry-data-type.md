@@ -20,10 +20,10 @@ ms.assetid: 08ac8aa0-aff7-4b22-87e0-1a1d55dcbc04
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 437859afd1f21cba5c47f93c86173d71e3ae89d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68027638"
 ---
 # <a name="astextzm-geometry-data-type"></a>AsTextZM (тип данных geometry)
@@ -41,7 +41,7 @@ ms.locfileid: "68027638"
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **nvarchar(max)**  
   
- Тип возвращаемого значения CLR: **SqlChars**  
+ Тип возвращаемых данных CLR: **SqlChars**  
   
 ## <a name="remarks"></a>Remarks  
   

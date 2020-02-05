@@ -13,10 +13,10 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b57d3443ab83ead35d92615ad6c718cde6977097
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000220"
 ---
 # <a name="create-a-domain-independent-availability-group"></a>Создание группы доступности, независимой от домена
@@ -160,7 +160,7 @@ ms.locfileid: "68000220"
 14. После настройки базовых сертификатов и защиты конечной точки создайте группу доступности любым удобным способом. Рекомендуем создать резервную копию, скопировать ее и применить для инициализации вторичной реплики вручную либо воспользоваться [автоматическим заполнением](automatically-initialize-always-on-availability-group.md). Инициализация вторичных реплик с помощью мастера предполагает обращение к файлам SMB, что может не сработать при использовании кластера рабочей группы, не присоединенного к домену.
 15. При создании прослушивателя убедитесь, что его имя и IP-адрес зарегистрированы в DNS.
 
-### <a name="next-steps"></a>Следующие шаги 
+### <a name="next-steps"></a>Дальнейшие действия 
 
 - [Использование мастера добавления базы данных в группу доступности (среда SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md)
 

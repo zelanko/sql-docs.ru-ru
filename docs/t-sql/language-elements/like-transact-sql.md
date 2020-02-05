@@ -32,10 +32,10 @@ author: juliemsft
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f13bbee1fdde92c55c98a0c2478d0dec4db5e96a
-ms.sourcegitcommit: 21e6a0c1c6152e625712a5904fce29effb08a2f9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75884008"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
@@ -343,7 +343,7 @@ ORDER by LastName;
 ```  
   
 ### <a name="g-using-like-with-the-_-wildcard-character"></a>Ж. Применение оператора LIKE с символом-шаблоном _  
- В следующем примере в таблице `DimEmployee` выполняется поиск всех телефонных номеров, начинающихся с `2` и заканчивающихся на `6`. Подстановочный знак "%" добавлен в конце шаблона поиска, что соответствует любым следующим символам в значениях столбца с телефонными номерами.  
+ В следующем примере в таблице `6` выполняется поиск всех телефонных номеров, начинающихся с `2` и заканчивающихся на `DimEmployee`. Подстановочный знак "%" добавлен в конце шаблона поиска, что соответствует любым следующим символам в значениях столбца с телефонными номерами.  
   
 ```sql  
 -- Uses AdventureWorks  

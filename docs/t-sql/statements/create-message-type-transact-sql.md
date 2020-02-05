@@ -29,10 +29,10 @@ ms.assetid: 98fe0fff-1a2e-4ca2-b37f-83a06fdf098e
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: de98dffe77940c6b8a6b66d0ce1a8b3b7565349d
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70745462"
 ---
 # <a name="create-message-type-transact-sql"></a>CREATE MESSAGE TYPE (Transact-SQL)
@@ -82,7 +82,7 @@ CREATE MESSAGE TYPE message_type_name
   
  Обе стороны диалога должны задать одинаковые имена типа сообщений. В целях оказания помощи при поиске и устранении неполадок, обе стороны диалога обычно указывают одинаковые проверки для типа сообщений, хотя компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] не требует использования обеими сторонами одинаковой проверки.  
   
- Тип сообщений не может быть временным объектом. Имена типов сообщений могут начинаться с символа **#**, но они должны быть постоянными объектами.  
+ Тип сообщений не может быть временным объектом. Имена типов сообщений могут начинаться с символа **#** , но они должны быть постоянными объектами.  
   
 ## <a name="permissions"></a>Разрешения  
  Разрешения на создание типа сообщений по умолчанию есть у предопределенных ролей базы данных **db_ddladmin** или **db_owner** и у предопределенной роли сервера **sysadmin**.  

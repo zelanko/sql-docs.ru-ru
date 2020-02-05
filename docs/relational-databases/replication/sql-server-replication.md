@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 427367994418ea7e82288541c89b47cc8bb7ea75
-ms.sourcegitcommit: d1bc0dd1ac626ee7034a36b81554258994d72c15
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: eb45cf400b0fe8318d0bef5a99b36f20bff8ef21
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958344"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287125"
 ---
 # <a name="sql-server-replication"></a>Репликация SQL Server
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -53,13 +53,13 @@ ms.locfileid: "70958344"
 -   [Просмотр и изменение свойств публикации](publish/view-and-modify-publication-properties.md)   
 -   [View and Modify Article Properties (Просмотр и изменение свойств статьи)](publish/view-and-modify-article-properties.md)    
 -   [Delete a Publication (Удаление публикации)](publish/delete-a-publication.md)   
--   [Delete an Article (Удаление статьи)](publish/delete-an-article.md)    
+-   [Delete an Article](publish/delete-an-article.md) (Удаление статьи)    
 -   [Создание публикации из базы данных Oracle](publish/create-a-publication-from-an-oracle-database.md)   
--   [Set the Expiration Period for Subscriptions](publish/set-the-expiration-period-for-subscriptions.md) (Установка срока действия подписок)  
+-   [Установка срока действия подписок](publish/set-the-expiration-period-for-subscriptions.md)  
 -   [Specify Schema Options (Указание параметров схемы)](publish/specify-schema-options.md)  
 -   [Replicate Schema Changes (Репликация изменений схемы)](publish/replicate-schema-changes.md)    
 -   [Manage Identity Columns (Управление столбцами идентификаторов)](publish/manage-identity-columns.md)   
--   [Set the Compatibility Level for Merge Publications](publish/set-the-compatibility-level-for-merge-publications.md) (Задание уровня совместимости для публикаций слиянием)  
+-   [Задание уровня совместимости для публикаций слиянием](publish/set-the-compatibility-level-for-merge-publications.md)  
   
 ### <a name="snapshot-options"></a>Параметры моментального снимка  
   
@@ -76,8 +76,8 @@ ms.locfileid: "70958344"
   
 ### <a name="transactional-replication-options"></a>Параметры репликации транзакций  
   
--   [Set the Propagation Method for Data Changes to Transactional Articles](publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md) (Задание метода распространения изменений данных в транзакционные статьи)    
--   [Enable Updating Subscriptions for Transactional Publications](publish/enable-updating-subscriptions-for-transactional-publications.md) (Включение обновляемых подписок для публикаций транзакций)  
+-   [Задание метода распространения для изменений данных в транзакционных статьях](publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md)    
+-   [Включение обновляемых подписок для публикации транзакций](publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
 ### <a name="merge-replication-options"></a>Параметры репликации слиянием  
   
@@ -91,10 +91,10 @@ ms.locfileid: "70958344"
 -   [Создание подписки по запросу](create-a-pull-subscription.md)    
 -   [Просмотр и изменение свойств подписки по запросу](view-and-modify-pull-subscription-properties.md)    
 -   [Удаление подписки по запросу](delete-a-pull-subscription.md)    
--   [Create a Push Subscription](create-a-push-subscription.md) (Создание принудительной подписки)   
+-   [Создание принудительной подписки](create-a-push-subscription.md)   
 -   [Просмотр и изменение свойств принудительной подписки](view-and-modify-push-subscription-properties.md)   
--   [Delete a Push Subscription](delete-a-push-subscription.md) (Удаление принудительной подписки)   
--   [Specify Synchronization Schedules](specify-synchronization-schedules.md) (Указание расписаний синхронизации)    
+-   [Удаление принудительной подписки](delete-a-push-subscription.md)   
+-   [Указание расписаний синхронизации](specify-synchronization-schedules.md)    
 -   [Создание обновляемой подписки для публикации транзакций](publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
 -   [Создание подписки для подписчика, отличного от подписчика SQL Server](create-a-subscription-for-a-non-sql-server-subscriber.md)  
   
@@ -103,7 +103,7 @@ ms.locfileid: "70958344"
 -   [Создание и применение исходного моментального снимка](create-and-apply-the-initial-snapshot.md)   
 -   [Создание моментального снимка для публикации слиянием с параметризованными фильтрами](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)    
 -   [Инициализация транзакционной подписки из резервной копии](initialize-a-transactional-subscription-from-a-backup.md)    
--   [Initialize a Subscription Manually](initialize-a-subscription-manually.md) (Инициализация подписки вручную)    
+-   [Инициализация подписки вручную](initialize-a-subscription-manually.md)    
 -   [Синхронизация подписки по запросу](synchronize-a-pull-subscription.md)    
 -   [Синхронизация принудительной подписки](synchronize-a-push-subscription.md)   
 -   [Повторная инициализация подписки](reinitialize-a-subscription.md)    

@@ -1,10 +1,9 @@
 ---
-title: Создание и присоединение расписаний к заданиям | Документация Майкрософт
-ms.custom: ''
+title: Создание и присоединение расписаний к заданиям
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,13 +17,15 @@ helpviewer_keywords:
 ms.assetid: 079c2984-0052-4a37-a2b8-4ece56e6b6b5
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2213390f252fdd07f1c8aacc6570940f759e7579
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 5e515bcf14eff0ce4d4b6c5913803ee8e322365d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267260"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252142"
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>Создание и присоединение расписаний к заданиям
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -44,13 +45,13 @@ ms.locfileid: "68267260"
   
 Расписание может быть основано на времени или на событии. Например, можно спланировать выполнение задания при следующих условиях:  
   
--   При каждом запуске агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+-   при каждом запуске агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)];  
   
 -   каждый раз, когда использование ЦП компьютера будет достигать уровня, который определен как уровень простоя;  
   
 -   однажды, в указанные дату и время;  
   
--   согласно повторяющемуся расписанию;  
+-   Для повторяющегося расписания.  
   
 В качестве альтернативы расписаниям заданий можно также создать предупреждение, отвечающее на событие выполнением задания.  
   

@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 543b28f5980c8126a9475a54557a05964718c707
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68056133"
 ---
 # <a name="dml-triggers"></a>Триггеры DML
@@ -60,10 +60,10 @@ ms.locfileid: "68056133"
 |Сущности, к которым применяется триггер|Таблицы|Таблицы и представления|  
 |Количество триггеров на таблицу или представление|Несколько триггеров на одно запускающее триггеры действие (UPDATE, DELETE или INSERT).|Один триггер на одно запускающее триггеры действие (UPDATE, DELETE или INSERT).|  
 |Каскадные ссылки|Нет ограничений.|Триггеры INSTEAD OF UPDATE и DELETE нельзя определять для таблиц, на которые распространяются каскадные ограничения ссылочной целостности.|  
-|Выполнение|После следующих операций.<br /><br /> Обработка ограничений.<br /><br /> Декларативные ссылочные действия.<br /><br /> Создание таблиц**inserted** и **deleted** .<br /><br /> Действие, запускающее триггер.|Перед следующей операцией. Обработка ограничений.<br /><br /> Вместо следующей операции:  Действие, запускающее триггер.<br /><br /> После: создание таблиц  **inserted** и **deleted**|  
+|Выполнение|После следующих операций.<br /><br /> Обработка ограничений.<br /><br /> Декларативные ссылочные действия.<br /><br /> Создание таблиц**inserted** и **deleted** .<br /><br /> Действие, запускающее триггер.|До: обработка ограничений<br /><br /> Вместо: действие, запускающее триггер<br /><br /> После: создание таблиц  **inserted** и **deleted**|  
 |Порядок выполнения|Можно задать выполнение в первую и в последнюю очередь.|Неприменимо|  
 |Ссылки на столбцы**varchar(max)** , **nvarchar(max)** и **varbinary(max)** в таблицах **inserted** и **deleted**|Разрешено|Разрешено|  
-|Ссылки на столбцы**text**, **ntext**и **image** в таблицах **inserted** и **deleted**|Не допускается|Разрешено|  
+|Ссылки на столбцы**text**, **ntext**и **image** в таблицах **inserted** и **deleted**|Не разрешено|Разрешено|  
   
  Триггеры CLR  
  Триггер CLR может быть либо триггером AFTER, либо триггером INSTEAD OF. Триггер CLR может также являться триггером DDL. Вместо вызова хранимой процедуры на языке [!INCLUDE[tsql](../../includes/tsql-md.md)] триггер CLR вызывает один или несколько методов управляемого кода, являющихся членами сборки, созданной с помощью среды .NET Framework и загружены в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -77,7 +77,7 @@ ms.locfileid: "68056133"
 |Описывает, как создать триггер DML для выполнения и однострочных, и многострочных операций модификации данных.|[Создание триггеров DML для обработки нескольких строк данных](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md)|  
 |Описывает, как вкладывать триггеры.|[Создание вложенных триггеров](../../relational-databases/triggers/create-nested-triggers.md)|  
 |Описывает, как указывать порядок, в котором активируются триггеры AFTER.|[Указание первого и последнего триггеров](../../relational-databases/triggers/specify-first-and-last-triggers.md)|  
-|Описывает, как использовать специальные таблицы inserted и deleted в коде триггера.|[Использование таблиц inserted и deleted](../../relational-databases/triggers/use-the-inserted-and-deleted-tables.md)|  
+|Описывает, как использовать специальные таблицы inserted и deleted в коде триггера.|[Использование вставленных и удаленных таблиц](../../relational-databases/triggers/use-the-inserted-and-deleted-tables.md)|  
 |Описывает, как изменить или переименовать триггер DML.|[Изменение или переименование триггеров DML](../../relational-databases/triggers/modify-or-rename-dml-triggers.md)|  
 |Описывает, как просматривать сведения о триггерах DML.|[Получение сведений о триггерах DML](../../relational-databases/triggers/get-information-about-dml-triggers.md)|  
 |Описывает, как удалять или отключать триггеры DML.|[Удаление или отключение триггеров DML](../../relational-databases/triggers/delete-or-disable-dml-triggers.md)|  

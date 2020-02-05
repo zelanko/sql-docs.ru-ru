@@ -24,13 +24,13 @@ ms.assetid: 4d284ae9-3f5f-465a-b0dd-1328a4832a03
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0d94799898517b2d75ce6a1add308f0831b112ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68132824"
 ---
-# <a name="set-remoteproctransactions-transact-sql"></a>SET REMOTE_PROC_TRANSACTIONS (Transact-SQL)
+# <a name="set-remote_proc_transactions-transact-sql"></a>SET REMOTE_PROC_TRANSACTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Указывает, что в момент, когда активна локальная транзакция, выполнение удаленной хранимой процедуры запускает распределенную транзакцию [!INCLUDE[tsql](../../includes/tsql-md.md)], управляемую координатором распределенных транзакций (MS DTC) [!INCLUDE[msCoName](../../includes/msconame-md.md)].  

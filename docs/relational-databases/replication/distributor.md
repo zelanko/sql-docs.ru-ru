@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 787f0e9c-09dd-438a-bc04-5b8f99c127b8
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 22770207bd0c6da38f88680313d8da433e1da286
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 664ceea195e327b9c301ed1206eba014c8adf2a8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768520"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287886"
 ---
 # <a name="distributor"></a>Распространитель
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "68768520"
  **Использовать следующий сервер в качестве распространителя. (Примечание. Выбранный сервер должен быть уже настроен в качестве распространителя.)**  
  Выберите этот параметр, а затем щелкните имя сервера ниже, чтобы настроить другой сервер для работы в качестве распространителя.  
   
- **Добавить**  
+ **Добавление**  
  Если сервер, который следует использовать в качестве распространителя, отсутствует в списке, нажмите кнопку **Добавить** , чтобы найти нужный сервер и добавить его в список.  
   
 > [!NOTE]  

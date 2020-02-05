@@ -16,10 +16,10 @@ ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b64985281c98d15399e7cd561a05746e0634f057
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75322026"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Создание подписки для подписчика, отличного от подписчика SQL Server
@@ -47,7 +47,7 @@ ms.locfileid: "75322026"
   
          Моментальный снимок создается после включения публикации для подписчиков, не относящихся к[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы гарантировать, что агент моментальных снимков создаст скрипты моментального снимка и инициализации, пригодные для подписчиков, отличных от[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-3.  В диалоговом окне **Свойства публикации — \<имя_публикации>** разрешите публикацию для подписчиков, отличных от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения об этом шаге см. в разделе [Publication Properties, Subscription Options](../../relational-databases/replication/publication-properties-subscription-options.md) .  
+3.  В диалоговом окне [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Свойства публикации — **имя_публикации>\< разрешите публикацию для подписчиков, отличных от** . Дополнительные сведения об этом шаге см. в разделе [Publication Properties, Subscription Options](../../relational-databases/replication/publication-properties-subscription-options.md) .  
   
 4.  Создайте подписку с помощью мастера создания подписок. В этом разделе содержатся дополнительные сведения об этом шаге.  
   

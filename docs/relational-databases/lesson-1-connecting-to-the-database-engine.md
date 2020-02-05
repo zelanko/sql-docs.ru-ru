@@ -1,5 +1,5 @@
 ---
-title: Урок 1. Подключение к ядру СУБД | Документация Майкрософт
+title: Занятие 1. Подключение к ядру СУБД | Документация Майкрософт
 ms.custom: ''
 ms.date: 02/05/2018
 ms.prod: sql
@@ -11,13 +11,13 @@ ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1bc950a7d0a576338bea9a614193ab3edaee7c96
-ms.sourcegitcommit: 82b70c39550402a2b0b327db32bf5ecf88b50d3c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73032994"
 ---
-# <a name="lesson-1-connecting-to-the-database-engine"></a>Урок 1. Подключение к ядру СУБД
+# <a name="lesson-1-connecting-to-the-database-engine"></a>Урок 1. Соединение с компонентом Database Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Набор средств, устанавливаемых с компонентом [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], зависит от выпуска и от параметров, заданных при установке. На этом уроке рассматриваются важнейшие средства, а также показываются способы подключения и выполнения одной из базовых функций (разрешение входа дополнительным пользователям).  
@@ -72,7 +72,7 @@ ms.locfileid: "73032994"
 1.  В среде [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]в меню **Файл** выберите **Подключить к обозревателю объектов**. 
 - Будет открыто диалоговое окно **Соединение с сервером** . В поле **Тип сервера** отобразится тип компонента, использованный в прошлой сессии.  
 
-2.  Выберите **Компонент Database Engine**.
+2.  Выберите **Ядро СУБД**.
 
 ![object-explorer](../relational-databases/media/object-explorer.png)
 
@@ -109,5 +109,5 @@ ms.locfileid: "73032994"
 > Это базовые сведения, позволяющие начать работу. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] предоставляет безопасную среду; безопасность безусловно важна при выполнении операций с базой данных.  
 
 ## <a name="next-lesson"></a>Следующее занятие  
-[Занятие 2. Подключение с другого компьютера](../relational-databases/lesson-2-connecting-from-another-computer.md)    
+[Занятие 2. Соединение с другого компьютера](../relational-databases/lesson-2-connecting-from-another-computer.md)    
   

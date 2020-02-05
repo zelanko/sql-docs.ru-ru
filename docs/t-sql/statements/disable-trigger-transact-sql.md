@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: e6529f06-e442-437e-a7bf-41790bc092c5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d658b63e8c2b80c277ed9d8c3647717d07c96c48
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 8e426d6af578cd822befdeab928c522a55f98d7e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982980"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76259422"
 ---
 # <a name="disable-trigger-transact-sql"></a>DISABLE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
 Приведенные ниже примеры описаны в базе данных AdventureWorks2012.
   
 ### <a name="a-disabling-a-dml-trigger-on-a-table"></a>A. Отключение триггера DML в таблице  
- В следующем примере показано отключение триггера `uAddress`, созданного для таблицы `Address`.  
+ В следующем примере показано отключение триггера `uAddress`, созданного для таблицы `Person`.  
   
 ```sql  
 DISABLE TRIGGER Person.uAddress ON Person.Address;  

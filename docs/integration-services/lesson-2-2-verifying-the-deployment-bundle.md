@@ -1,5 +1,5 @@
 ---
-title: Шаг 2. Проверка пакета развертывания | Документация Майкрософт
+title: Шаг 2. Проверка пакета развертывания | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 6c13f5c9-c75e-4e52-94dc-2d2db2c578fe
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ba8767f4d1b4f8c38638dc1d12adb1a351511fc7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283597"
 ---
 # <a name="lesson-2-2---verifying-the-deployment-bundle"></a>Занятие 2–2. Проверка пакета развертывания
@@ -59,7 +59,7 @@ ms.locfileid: "71283597"
 5.  Закройте обозреватель Internet Explorer или текстовый редактор.  
   
 ## <a name="next-lesson"></a>Следующее занятие  
-[Занятие 3. Установка пакетов SSIS](../integration-services/lesson-3-install-ssis-packages.md)  
+[Занятие 3. Установка пакетов SSIS](../integration-services/lesson-3-install-ssis-packages.md)  
   
   
   

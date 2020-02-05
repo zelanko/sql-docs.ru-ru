@@ -26,10 +26,10 @@ ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b71c6f867bcc03b220b99ac1e28e930dbe8ea89d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907195"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>Сравнение типизированного и нетипизированного XML
@@ -64,18 +64,18 @@ ms.locfileid: "72907195"
  В типизированных XML-столбцах, параметрах и переменных можно хранить XML-документы или содержимое. Во время объявления необходимо указать при помощи флага, что хранится: документ или содержимое. Кроме того, необходимо предоставить системе коллекцию XML-схем. Укажите флаг DOCUMENT, если каждый экземпляр XML имеет ровно один элемент верхнего уровня. В противном случае укажите флаг CONTENT. Компилятор запросов использует флаг DOCUMENT при проверке типов во время компиляции запросов для определения одинарных элементов верхнего уровня.  
   
 ## <a name="creating-typed-xml"></a>Создание типизированного XML  
- Перед созданием типизированных переменных, параметров или столбцов **xml** сначала необходимо зарегистрировать коллекцию схем XML, как описано в разделе [CREATE XML SCHEMA COLLECTION (Transact-SQL)](../../t-sql/statements/create-xml-schema-collection-transact-sql.md). Затем коллекцию схем XML можно связать с переменными, параметрами или столбцами типа **xml**.  
+ Перед созданием типизированных переменных, параметров или столбцов **xml** сначала необходимо зарегистрировать коллекцию схем XML, как описано в разделе [CREATE XML SCHEMA COLLECTION (Transact-SQL)](../../t-sql/statements/create-xml-schema-collection-transact-sql.md). Затем коллекцию схем XML можно связать с переменными, параметрами или столбцами типа **xml** .  
   
  В следующих примерах для указания имени коллекции XML-схем используется обозначение, состоящее из двух частей. Первая часть — это имя схемы, вторая часть — имя коллекции XML-схем.  
   
-### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>Пример Связывание коллекции схем с переменными типа xml  
+### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>Пример. Связывание коллекции схем с переменными типа xml  
  В приведенном ниже примере создается переменная типа **xml**, с которой затем связывается коллекция схем. Коллекция схем, указанная в примере, уже импортирована в базу данных **AdventureWorks** .  
   
 ```  
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   
 ```  
   
-### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>Пример Указание схемы для столбца типа xml  
+### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>Пример. Указание схемы для столбца типа xml  
  В приведенном ниже примере создается таблица со столбцом типа **xml** и указывается схема для этого столбца.  
   
 ```  
@@ -84,7 +84,7 @@ CREATE TABLE T1(
  Col2 xml (Production.ProductDescriptionSchemaCollection)) ;  
 ```  
   
-### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>Пример Передача параметра типа xml в хранимую процедуру  
+### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>Пример. Передача параметра типа xml в хранимую процедуру  
  В приведенном ниже примере параметр типа **xml** передается хранимой процедуре и указывается схема для переменной.  
   
 ```  
@@ -106,7 +106,7 @@ AS
   
  В иерархии типов данных данные **xml** отображаются ниже **sql_variant** и определенных пользователем типов, но выше всех встроенных типов.  
   
-### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>Пример Указание аспектов для ограничения типизированного XML-столбца  
+### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>Пример. Указание аспектов для ограничения типизированного XML-столбца  
  На типизированные столбцы **xml** можно наложить ограничение, допускающее в них только отдельные элементы высшего уровня для каждого сохраненного в них экземпляра. , для указания дополнительного аспекта `DOCUMENT` при создании таблицы, как показано в следующем примере:  
   
 ```  
@@ -158,7 +158,7 @@ declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);
   
 ## <a name="see-also"></a>См. также:  
  [Создание экземпляров XML-данных](../../relational-databases/xml/create-instances-of-xml-data.md)   
- [Методы типа данных XML](../../t-sql/xml/xml-data-type-methods.md)   
+ [методов типа данных xml](../../t-sql/xml/xml-data-type-methods.md)   
  [Язык модификации XML-данных (XML DML)](../../t-sql/xml/xml-data-modification-language-xml-dml.md)   
  [Данные XML (SQL Server)](../../relational-databases/xml/xml-data-sql-server.md)  
   

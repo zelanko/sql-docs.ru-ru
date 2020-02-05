@@ -17,10 +17,10 @@ ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6eae33bebd834a79a62bd94c5dbe75f4c431b0ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68014825"
 ---
 # <a name="always-on-availability-groups-a-high-availability-and-disaster-recovery-solution"></a>Группы доступности Always On: решение для обеспечения высокой доступности и аварийного восстановления
@@ -55,15 +55,15 @@ ms.locfileid: "68014825"
   
 -   Позволяет настроить данную реплику доступности для поддержки одной или обеих возможностей активных вторичных реплик.  
   
-    -   Доступ с подключением только для чтения, который позволяет использовать подключения только для чтения для доступа и чтения баз данных во время работы в качестве вторичной реплики. Дополнительные сведения см. в статье [Активные вторичные реплики: вторичные реплики для чтения (группы доступности Always On)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+    -   Доступ с подключением только для чтения, который позволяет использовать подключения только для чтения для доступа и чтения баз данных во время работы в качестве вторичной реплики. Дополнительные сведения см. в разделе [Активные вторичные реплики: доступные только для чтения вторичные реплики (группы доступности AlwaysOn)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
-    -   Выполнение операций резервного копирования для своих баз данных во время работы в качестве вторичной реплики. Дополнительные сведения см. в статье [Активные вторичные реплики: резервное копирование во вторичных репликах (группы доступности Always On)](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+    -   Выполнение операций резервного копирования для своих баз данных во время работы в качестве вторичной реплики. Дополнительные сведения см. в статье [Активные вторичные реплики, резервное копирование во вторичных репликах (группы доступности Always On)](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
      Использование возможностей активных вторичных реплик позволяет улучшить эффективность использования информационных технологий и снизить стоимость за счет более рационального использования ресурсов вторичного аппаратного обеспечения. Кроме того, перевод приложений с намерением чтения и заданий резервного копирования на вторичные реплики позволяет повысить производительность работы основной реплики.  
   
--   Поддерживает прослушиватель группы доступности для каждой группы доступности. *Прослушиватель группы доступности* — это сервер, к которому могут подключаться клиенты, чтобы получить доступ к базе данных из первичной или вторичной реплики группы доступности AlwaysOn. Прослушиватели группы доступности направляют входящие соединения на первичную реплику или на доступную только для чтения вторичную реплику. Прослушиватель обеспечивает быструю отработку отказа приложений после отработки отказа группы доступности. Дополнительные сведения см. в статье [Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
+-   Поддерживает прослушиватель группы доступности для каждой группы доступности. *Прослушиватель группы доступности* — это сервер, к которому могут подключаться клиенты, чтобы получить доступ к базе данных из первичной или вторичной реплики группы доступности AlwaysOn. Прослушиватели группы доступности направляют входящие соединения на первичную реплику или на доступную только для чтения вторичную реплику. Прослушиватель обеспечивает быструю отработку отказа приложений после отработки отказа группы доступности. Дополнительные сведения см. в разделе [Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   
--   Поддерживает гибкую политику отработки отказа для обеспечения большего контроля над отработкой отказа группы доступности. Дополнительные сведения см. в статье [Отработка отказа и режимы отработки отказа (группы доступности AlwaysOn)](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).  
+-   Поддерживает гибкую политику отработки отказа для обеспечения большего контроля над отработкой отказа группы доступности. Дополнительные сведения см. далее в подразделе [Отработка отказа и режимы отработки отказа (группы доступности AlwaysOn)](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).  
   
 -   Поддерживает автоматическое восстановление страниц для защиты от повреждения. Дополнительные сведения см. в статье [Автоматическое восстановление страниц (группы доступности: зеркальное отображение баз данных)](../../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md).  
   
@@ -81,11 +81,11 @@ ms.locfileid: "68014825"
   
         -   [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] добавляет одну или несколько баз данных-получателей к существующей группе доступности. В некоторых средах этот мастер также может автоматически подготавливать базы данных-получатели и запускать синхронизацию данных для каждой из них. Дополнительные сведения см. в разделе [Использование мастера добавления реплики в группу доступности (среда SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md).  
   
-        -   [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] запускает переход на другой ресурс вручную для группы доступности. В зависимости от конфигурации и состояния вторичной реплики, указанной в качестве целевой реплики отработки отказа, мастер может выполнить запланированный или принудительный переход на другой ресурс вручную. Дополнительные сведения см. в статье [Использование мастера отработки отказа группы доступности (среда SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md).  
+        -   [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] запускает переход на другой ресурс вручную для группы доступности. В зависимости от конфигурации и состояния вторичной реплики, указанной в качестве целевой реплики отработки отказа, мастер может выполнить запланированный или принудительный переход на другой ресурс вручную. Дополнительные сведения см. в подразделе [Использование мастера отработки отказа группы доступности (среда SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md).  
   
     -   [!INCLUDE[ssAoDash](../../../includes/ssaodash-md.md)] отслеживает группы доступности AlwaysOn, реплики доступности и базы данных доступности и оценивает результаты политик AlwaysOn. Дополнительные сведения см. в статье [Использование панели мониторинга AlwaysOn (среда SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md).  
   
-    -   В области сведений обозревателя объектов отображаются основные сведения о существующих группах доступности. Дополнительные сведения см. в статье [Использование раздела "Подробности обозревателя объектов" для мониторинга групп доступности (среда SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-object-explorer-details-to-monitor-availability-groups.md).  
+    -   В области сведений обозревателя объектов отображаются основные сведения о существующих группах доступности. Дополнительные сведения см. в разделе [Использование раздела "Подробности обозревателя объектов" для мониторинга групп доступности (среда SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-object-explorer-details-to-monitor-availability-groups.md).  
   
     -   Командлеты PowerShell Дополнительные сведения см. в статье [Обзор командлетов PowerShell для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md).  
   
@@ -134,20 +134,20 @@ ms.locfileid: "68014825"
   
 -   [FileTable](../../../relational-databases/blob/filetables-sql-server.md)  
   
--   [доставка журналов;](../../../database-engine/log-shipping/about-log-shipping-sql-server.md)  
+-   [Доставка журналов](../../../database-engine/log-shipping/about-log-shipping-sql-server.md)  
   
 -   [Удаленное хранилище больших двоичных объектов](../../../relational-databases/blob/remote-blob-store-rbs-sql-server.md)  
   
 -   [Репликация](../../../relational-databases/replication/sql-server-replication.md)  
   
--   [Компонент Service Broker](../../../database-engine/configure-windows/sql-server-service-broker.md)  
+-   [Service Broker](../../../database-engine/configure-windows/sql-server-service-broker.md)  
   
--   [SQL Server, агент](../../../ssms/agent/sql-server-agent.md)  
+-   [Агент SQL Server](../../../ssms/agent/sql-server-agent.md)  
   
 -   [службы Reporting Services](../../../database-engine/availability-groups/windows/reporting-services-with-always-on-availability-groups-sql-server.md)  
   
 > [!WARNING]  
->  Дополнительные сведения об ограничениях на использование других компонентов с [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] см. в статье [Группы доступности Always On: взаимодействие (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md).  
+>  Дополнительные сведения об ограничениях на использование других компонентов с [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] см. в статье [Группы доступности AlwaysOn: взаимодействие (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md).  
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
   
@@ -157,15 +157,15 @@ ms.locfileid: "68014825"
   
 -   **Блоги**  
   
-     [Блоги команды разработчиков SQL Server Always On: официальный блог по SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [Блоги команды разработчиков SQL Server AlwaysOn: официальный блог по SQL Server AlwaysOn](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
      [Блоги инженеров CSS SQL Server](https://blogs.msdn.com/b/psssql/)  
   
 -   **Видеоролики**  
   
-     [Microsoft SQL Server с рабочим названием Denali Always On, часть 1: вводные сведения о решении следующего поколения по обеспечению высокого уровня доступности](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server с рабочим названием Denali AlwaysOn, часть 1. Вводные сведения о решении следующего поколения по обеспечению высокого уровня доступности](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
-     [Microsoft SQL Server с рабочим названием Denali Always On, часть 2: создание критически важного решения по обеспечению высокого уровня доступности с использованием Always On](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server с рабочим названием Denali AlwaysOn, часть 2. Создание критически важного решения по обеспечению высокого уровня доступности с использованием AlwaysOn](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **Технические документы**  
   

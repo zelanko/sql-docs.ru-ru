@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 2ab65d61abb497c1930b94868f0a8b3433b44c95
-ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70212294"
 ---
 # <a name="secure-the-subscriber"></a>Организация безопасности подписчика
@@ -57,7 +57,7 @@ ms.locfileid: "70212294"
  Дополнительные сведения см. в статьях [Создание обновляемых подписок для публикаций транзакций](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md) и [Просмотр и изменение параметров безопасности репликации](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
 > [!IMPORTANT]  
->  Учетная запись, заданная для соединения, должна предоставлять только разрешения для вставки, обновления и удаления данных в представлениях, которые репликация создает в базе данных публикации. Она не должна иметь никаких дополнительных разрешений. Предоставьте разрешения на представления, которые имеют имена в виде **syncobj_**_\<<шестнадцатеричный_номер>_, для учетной записи, настроенной на каждом подписчике.  
+>  Учетная запись, заданная для соединения, должна предоставлять только разрешения для вставки, обновления и удаления данных в представлениях, которые репликация создает в базе данных публикации. Она не должна иметь никаких дополнительных разрешений. Предоставьте разрешения на представления, которые имеют имена в виде **syncobj_** _\<<шестнадцатеричный_номер>_ , для учетной записи, настроенной на каждом подписчике.  
   
 ## <a name="queued-updating-subscriptions"></a>Подписки, обновляемые посредством очередей  
  При настройке обновляемых посредством очередей подписок необходимо учитывать два аспекта, касающихся безопасности:  
@@ -75,7 +75,7 @@ ms.locfileid: "70212294"
     > [!IMPORTANT]  
     >  Используйте проверку подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для подключений к подписчикам, и задавайте разные учетные записи для подключения к каждому подписчику. При использовании подписки по запросу репликация всегда устанавливает соединение для использования проверки подлинности Windows (для подписок по запросу репликация не может обратиться к метаданным на подписчике, необходимым для использования проверки подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ). В этом случае измените соединение таким образом, чтобы использовать проверку подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] после настройки подписки.  
   
-     Дополнительные сведения см. в разделе "Как Создание обновляемых подписок для публикаций транзакций (среда SQL Server Management Studio)" и [Просмотр и изменение параметров безопасности репликации](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
+     Дополнительные сведения см. в статьях "Инструкции. Создание обновляемых подписок для публикаций транзакций (среда SQL Server Management Studio)" и [Просмотр и изменение параметров безопасности репликации](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Включение шифрования соединений в ядре СУБД (диспетчер конфигурации SQL Server)](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   

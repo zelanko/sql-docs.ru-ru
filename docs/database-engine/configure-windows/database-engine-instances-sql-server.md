@@ -11,10 +11,10 @@ ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2d5f89f5e3aa801386642bfb75470cef15db6e96
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012052"
 ---
 # <a name="database-engine-instances-sql-server"></a>Экземпляры компонента Database Engine (SQL Server)
@@ -39,7 +39,7 @@ ms.locfileid: "68012052"
 |Описывает выполнение задач сетевой конфигурации клиента, например настройку протоколов клиента и создание или удаление псевдонимов сервера.|[Конфигурация клиентской сети](../../database-engine/configure-windows/client-network-configuration.md)|  
 |Описывает редакторы среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , которые могут использоваться для разработки, отладки и запуска скриптов, например скриптов [!INCLUDE[tsql](../../includes/tsql-md.md)] . Также описывает, как кодировать скрипты Windows PowerShell для работы с компонентами SQL Server.|[Работа со сценариями компонента Database Engine](../../relational-databases/scripting/database-engine-scripting.md)|  
 |Описывает, как с помощью планов обслуживания задать рабочие процессы часто выполняемых задач администрирования для экземпляра. Рабочие процессы включают такие задачи, как резервное копирование баз данных и обновление статистики для повышения производительности.|[Планы обслуживания](../../relational-databases/maintenance-plans/maintenance-plans.md)|  
-|Описывает, как использовать регулятор ресурсов для управления потреблением ресурсов и рабочими нагрузками путем ограничения времени ЦП и объема памяти, которые могут использоваться запросами приложений.|[регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)|  
+|Описывает, как использовать регулятор ресурсов для управления потреблением ресурсов и рабочими нагрузками путем ограничения времени ЦП и объема памяти, которые могут использоваться запросами приложений.|[Регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)|  
 |Описывает, как приложения базы данных могут использовать компонент Database Mail для отправки сообщений электронной почты из компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].|[Database Mail](../../relational-databases/database-mail/database-mail.md)|  
 |Описывает, как использовать расширенные события для перехвата данных о производительности, которые могут использоваться для расчета базовых уровней производительности или диагностирования проблем производительности. Расширенные события — это упрощенная, легко масштабируемая система сбора данных о производительности.|[Расширенные события](../../relational-databases/extended-events/extended-events.md)|  
 |Описывает, как использовать SQL-трассировку для создания пользовательской системы сбора и регистрации событий в компоненте [!INCLUDE[ssDE](../../includes/ssde-md.md)].|[Трассировка SQL](../../relational-databases/sql-trace/sql-trace.md)|  
@@ -49,7 +49,7 @@ ms.locfileid: "68012052"
 |Описывает, как использовать помощник по настройке компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] для анализа работы баз данных и подготовки рекомендаций по устранению потенциальных проблем производительности.|[Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)|  
 |Описывает, как администраторы рабочей базы данных могут устанавливать диагностическое соединение с экземплярами, если запросы на стандартное подключение не принимаются.|[Диагностическое соединение для администраторов баз данных](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)|  
 |Описывает, как использовать устаревшую функцию удаленных серверов, чтобы обеспечить доступ из одного экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] в другой. Для этих функций лучше всего использовать связанный сервер.|[Удаленные серверы](../../database-engine/configure-windows/remote-servers.md)|  
-|Описывает возможности компонента Service Broker для обмена сообщениями и очередей приложений и предоставляет ссылки на документацию по компоненту Service Broker.|[Компонент Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)|  
+|Описывает возможности компонента Service Broker для обмена сообщениями и очередей приложений и предоставляет ссылки на документацию по компоненту Service Broker.|[Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)|  
 |Описание того, как можно использовать расширение буферного пула для обеспечения легкой интеграции энергонезависимого хранилища с произвольной выборкой (SSD-дисков) с буферным пулом компонента Database Engine, что позволяет значительно повысить пропускную способность ввода-вывода.|[Файл расширения буферного пула](../../database-engine/configure-windows/buffer-pool-extension.md)|  
   
 ## <a name="see-also"></a>См. также:  

@@ -1,5 +1,5 @@
 ---
-title: Пример Получение сведений о модели продукта в формате XML | Документация Майкрософт
+title: Пример. Получение сведений о модели продукта в формате XML | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,13 +13,13 @@ ms.assetid: 3828b4ca-3ab2-444f-9c58-8be6e7f064a6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6e5fd12b1de0f2c1cb792d5d764d6fb5917cc837
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006763"
 ---
-# <a name="example-retrieving-product-model-information-as-xml"></a>Пример Получение сведений о модели продукта в формате XML
+# <a name="example-retrieving-product-model-information-as-xml"></a>Пример. Получение сведений о модели продукта в формате XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Приведенный ниже пример запроса выводит сведения о модели продукта. `RAW` указывается в приложении `FOR XML` .  
   
@@ -79,6 +79,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Использование с RAW Mode для FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)  
+ [Использование RAW Mode с FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)  
   
   

@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
 ms.openlocfilehash: 584bf33201cab5d0f57205de0fed181725187d52
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077414"
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>Как приступить к разработке приложений для SQL Server на Linux
@@ -62,7 +62,7 @@ ms.locfileid: "68077414"
 
 Вы можете использовать новое [расширение mssql](https://aka.ms/mssql-marketplace) для [Visual Studio Code](https://code.visualstudio.com) в Linux, macOS и Windows. Пошаговые инструкции см. в следующем руководстве:
 
-- [Использование Visual Studio Code](sql-server-linux-develop-use-vscode.md)
+- [Использование Visual Studio Code](sql-server-linux-develop-use-vscode.md)
 
 Кроме того, можно использовать новые программы командной строки, предназначенные для Linux. К ним относятся следующие программы:
 
@@ -70,7 +70,7 @@ ms.locfileid: "68077414"
 - [bcp](sql-server-linux-migrate-bcp.md)
 - [mssql-conf](sql-server-linux-configure-mssql-conf.md)
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Чтобы начать работу, установите SQL Server на Linux, используя любое из следующих кратких руководств:
 

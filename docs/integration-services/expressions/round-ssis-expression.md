@@ -14,10 +14,10 @@ ms.assetid: 376f1947-4fc5-4611-ad86-823e4db1b468
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 74b18ed725b70e1086b22515a0a051d2521383b7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71288323"
 ---
 # <a name="round-ssis-expression"></a>ROUND (выражение служб SSIS)
@@ -38,7 +38,7 @@ ROUND(numeric_expression,length)
  *numeric_expression*  
  Является выражением допустимого числового типа. Дополнительные сведения см. в разделе [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
- *длина*  
+ *length*  
  Является целочисленным выражением. Это точность, до которой должно быть округлено значение *numeric_expression* .  
   
 ## <a name="result-types"></a>Типы результата  

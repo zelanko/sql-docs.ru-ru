@@ -25,13 +25,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 75e3664517ac0ce66f2a56499286303df81513ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68094681"
 ---
-# <a name="errorprocedure-transact-sql"></a>ERROR_PROCEDURE (Transact-SQL)
+# <a name="error_procedure-transact-sql"></a>ERROR_PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Эта функция возвращает имя хранимой процедуры или триггера, в которых произошла ошибка, вызвавшая выполнение блока CATCH конструкции TRY…CATCH.  
@@ -61,7 +61,7 @@ ERROR_PROCEDURE ( )
    
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
   
-### <a name="a-using-errorprocedure-in-a-catch-block"></a>A. Использование функции ERROR_PROCEDURE в блоке CATCH  
+### <a name="a-using-error_procedure-in-a-catch-block"></a>A. Использование функции ERROR_PROCEDURE в блоке CATCH  
 В приведенном ниже примере показана хранимая процедура, которая создает ошибку деления на 0. Функция `ERROR_PROCEDURE` возвращает имя хранимой процедуры, в которой произошла ошибка.  
   
 ```  
@@ -98,7 +98,7 @@ usp_ExampleProc
 
 ```  
   
-### <a name="b-using-errorprocedure-in-a-catch-block-with-other-error-handling-tools"></a>Б. Использование функции ERROR_PROCEDURE в блоке CATCH вместе с другими средствами обработки ошибок  
+### <a name="b-using-error_procedure-in-a-catch-block-with-other-error-handling-tools"></a>Б. Использование функции ERROR_PROCEDURE в блоке CATCH вместе с другими средствами обработки ошибок  
 В приведенном ниже примере показана хранимая процедура, которая создает ошибку деления на 0. Наряду с именем хранимой процедуры, в которой произошла ошибка, возвращаются сведения об ошибке.  
   
 ```  

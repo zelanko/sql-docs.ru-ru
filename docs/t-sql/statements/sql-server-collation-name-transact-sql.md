@@ -18,10 +18,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e867584c9c9a0e50022d0964a1772ac2c3a1b1e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099970"
 ---
 # <a name="sql-server-collation-name-transact-sql"></a>Имя параметров сортировки SQL Server (Transact-SQL)
@@ -70,7 +70,7 @@ WHERE name LIKE 'SQL%';
 ```
 
 > [!NOTE]
-> Для идентификатора порядка сортировки 80 используйте любые из параметров сортировки Windows с кодовой страницей 1250 и двоичный порядок. Пример: Albanian_BIN, Croatian_BIN, Czech_BIN, Romanian_BIN, Slovak_BIN, Slovenian_BIN.
+> Для идентификатора порядка сортировки 80 используйте любые из параметров сортировки Windows с кодовой страницей 1250 и двоичный порядок. Примеры: Albanian_BIN, Croatian_BIN, Czech_BIN, Romanian_BIN, Slovak_BIN, Slovenian_BIN.
 
 ## <a name="see-also"></a>См. также:
 

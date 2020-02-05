@@ -1,6 +1,6 @@
 ---
-title: Свойства SQL Server (вкладка "Вход в систему") | Документация Майкрософт
-ms.custom: ''
+title: Свойства сервера отчетов (вкладка «Вход в систему»)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: f54be594-f290-4db2-bf18-fd2521728a4a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 85b62a07b691492f9980574f1607fbb302071497
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 1dda864021df72f2e45e2db08fec0c66765fb0a4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058393"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306346"
 ---
 # <a name="report-server-properties-log-on-tab"></a>Свойства сервера отчетов (вкладка «Вход в систему»)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "68058393"
  **Эта учетная запись**  
  Укажите локальную или доменную учетную запись пользователя, использующую проверку подлинности [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендует использовать доменную учетную запись пользователя с минимальными правами. Дополнительные сведения о выборе учетной записи см. в разделе «Настройка учетных записей служб Windows» электронной документации.  
   
- **Имя учетной записи**  
+ **Account Name** (Имя учетной записи)  
  Укажите имя локальной или доменной учетной записи.  
   
  **Пароль**  
@@ -38,7 +38,7 @@ ms.locfileid: "68058393"
  **Подтверждение пароля**  
  Введите пароль для учетной записи еще раз.  
   
- **Запуск**  
+ **Начало**  
  Запускает службу.  
   
  **Остановить**  

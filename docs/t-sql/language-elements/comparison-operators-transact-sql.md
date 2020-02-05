@@ -21,10 +21,10 @@ ms.assetid: b0cc68ef-3029-484c-a917-0c15dcbc230d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a1cc6427e01055a3aa97f8f79f9270dc22579255
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140257"
 ---
 # <a name="comparison-operators-transact-sql"></a>Операторы сравнения (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68140257"
 |Оператор|Значение|  
 |--------------|-------------|  
 |[= (равно)](../../t-sql/language-elements/equals-transact-sql.md)|Равно|  
-|[> (больше)](../../t-sql/language-elements/greater-than-transact-sql.md)|Больше чем|  
+|[> (больше)](../../t-sql/language-elements/greater-than-transact-sql.md)|Больше|  
 |[< (меньше)](../../t-sql/language-elements/less-than-transact-sql.md)|Меньше чем|  
 |[>= (больше или равно)](../../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)|Больше или равно|  
 |[<= (меньше или равно)](../../t-sql/language-elements/less-than-or-equal-to-transact-sql.md)|Меньше или равно|  
@@ -45,7 +45,7 @@ ms.locfileid: "68140257"
 |[\!> (не больше чем)](../../t-sql/language-elements/not-greater-than-transact-sql.md)|Не больше (не определено стандартом ISO)|  
   
 ## <a name="boolean-data-type"></a>Тип данных Boolean  
- Результат выполнения оператора сравнения имеет тип данных **Boolean**. Он может иметь одно из трех значений: TRUE, FALSE и UNKNOWN. Выражения, возвращающие значения типа **Boolean**, называются логическими.  
+ Результат выполнения оператора сравнения имеет тип данных **Boolean**. Он имеет три значения: TRUE, FALSE и UNKNOWN. Выражения, возвращающие значения типа **Boolean**, называются логическими.  
   
  В отличие от других типов данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], тип **Boolean** не может быть типом столбца таблицы или переменной и не может быть возвращен в результирующем наборе.  
   

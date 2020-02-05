@@ -13,10 +13,10 @@ ms.assetid: 1d6e4b10-4a23-47d7-9918-c417992f09d3
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 329eda4ba3c0bdabc355242d626a3d0ac89e6033
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006432"
 ---
 # <a name="database-mirroring-history"></a>Журнал зеркального отображения базы данных
@@ -66,7 +66,7 @@ ms.locfileid: "68006432"
  **Журнал**  
  Отображает список журнала. Щелкните заголовок столбца для сортировки сетки по этому столбцу. Список содержит следующие столбцы.  
   
-|Имя столбца|Описание|  
+|Имя столбца|Description|  
 |-----------------|-----------------|  
 |**Время записи**|Отметка времени строки журнала.|  
 |**Роль**|Текущая роль в зеркальном отображении, выполняемая экземпляром сервера применительно к этой базе данных, либо «Основной», либо «Зеркальный».|  
@@ -84,7 +84,7 @@ ms.locfileid: "68006432"
   
 ## <a name="see-also"></a>См. также:  
  [Запуск монитора зеркального отображения баз данных (среда SQL Server Management Studio)](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
- [Наблюдение за зеркальным отображением базы данных (SQL Server)](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
+ [Мониторинг зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [Запуск мастера настройки безопасности зеркального отображения баз данных (среда SQL Server Management Studio)](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
   

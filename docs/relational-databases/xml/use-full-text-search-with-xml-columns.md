@@ -14,10 +14,10 @@ ms.assetid: 8096cfc6-1836-4ed5-a769-a5d63b137171
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f101051d924c1fca0bfbcd131ea8544ea4781e12
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909110"
 ---
 # <a name="use-full-text-search-with-xml-columns"></a>Полнотекстовый поиск в XML-столбцах
@@ -36,7 +36,7 @@ ms.locfileid: "72909110"
   
 2.  Затем запросите XML-значения, которые используют XML-индекс, связанный с XML-столбцом.  
 
-## <a name="example-combining-full-text-search-with-xml-querying"></a>Пример Комбинирование полнотекстового поиска с запросами XML-данных  
+## <a name="example-combining-full-text-search-with-xml-querying"></a>Пример. Комбинирование полнотекстового поиска с XML-запросами  
  После создания полнотекстового индекса для XML-столбца следующий запрос проверяет, что название книги содержит слово «custom»:  
   
 ```sql
@@ -52,7 +52,7 @@ AND    xCol.exist('/book/title/text()[contains(.,"custom")]') =1
   
  Кроме того, при полнотекстовом поиске выполняется лемматизация, а метод **contains()** языка XQuery осуществляет буквальное сопоставление. Это различие поясняет следующий пример.  
   
-## <a name="example-full-text-search-on-xml-values-using-stemming"></a>Пример Полнотекстовый поиск XML-значений с использованием парадигматического модуля  
+## <a name="example-full-text-search-on-xml-values-using-stemming"></a>Пример. Полнотекстовый поиск XML-значений с использованием выделения корней  
  Проверку **contains()** языка XQuery, выполненную в предыдущем примере, обычно устранить нельзя. Рассмотрим следующий запрос:  
   
 ```sql

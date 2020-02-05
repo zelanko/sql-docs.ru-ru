@@ -12,20 +12,20 @@ ms.assetid: 1aa7e6a5-7ccb-43c8-a1fd-d50e92e0a798
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 676d7845afebb9385419b7d2eed2fcdca69ed85e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68122925"
 ---
-# <a name="mssqlserver5235"></a>MSSQLSERVER_5235
+# <a name="mssqlserver_5235"></a>MSSQLSERVER_5235
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|5235|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
@@ -50,7 +50,7 @@ ms.locfileid: "68122925"
 ## <a name="user-action"></a>Действие пользователя  
 В следующей таблице приведены действия пользователя, соответствующие указанному состоянию ошибки.  
   
-|Состояние ошибки|Действие пользователя|  
+|Состояние ошибки|Рекомендуемые действия|  
 |---------------|---------------|  
 |Состояние 1|Выполните восстановление из резервной копии.|  
 |Состояние 2|Обратитесь в службу поддержки пользователей [!INCLUDE[msCoName](../../includes/msconame-md.md)] (CSS).|  

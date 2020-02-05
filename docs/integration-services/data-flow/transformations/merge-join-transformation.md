@@ -20,10 +20,10 @@ ms.assetid: cd8b0412-f83b-4bd2-b227-e53dcfd941a8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f963a3f8bf82ed3de76e31b6872ac6475d6dfd83
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297851"
 ---
 # <a name="merge-join-transformation"></a>Merge Join Transformation
@@ -60,7 +60,7 @@ ms.locfileid: "71297851"
   
  Дополнительные сведения об установке свойств этого преобразования см. в следующих разделах:  
   
--   [Расширение набора данных при помощи преобразования «Соединение слиянием»](../../../integration-services/data-flow/transformations/extend-a-dataset-by-using-the-merge-join-transformation.md)  
+-   [Расширение набора данных с помощью преобразования "Соединение слиянием"](../../../integration-services/data-flow/transformations/extend-a-dataset-by-using-the-merge-join-transformation.md)  
   
 -   [Установление свойств компонента потока данных](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   

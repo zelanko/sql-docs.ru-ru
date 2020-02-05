@@ -15,10 +15,10 @@ ms.assetid: aa2b6bde-e76d-4fea-a560-54a63745d9b1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fa56e918238d3f6b5309e923f899ce00b2ab5749
-ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70212421"
 ---
 # <a name="scm-services---set-an-instance-to-start-automatically"></a>Службы SCM. Настройка автоматического запуска экземпляра
@@ -43,7 +43,7 @@ ms.locfileid: "70212421"
   
 3.  В области сведений щелкните правой кнопкой имя экземпляра, который должен запускаться автоматически, и выберите пункт **Свойства**.  
   
-4.  В диалоговом окне **Свойства SQL Server \<**_имя_экземпляра_**>** установите для параметра **Режим запуска** значение **Автоматически**.  
+4.  В диалоговом окне **Свойства SQL Server \<** _имя_экземпляра_ **>** установите для параметра **Режим запуска** значение **Автоматически**.  
   
 5.  Нажмите кнопку **ОК**и закройте диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

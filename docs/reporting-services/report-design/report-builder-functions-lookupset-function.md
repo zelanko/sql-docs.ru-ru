@@ -9,10 +9,10 @@ ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9b4de3e21a214a9894f93b8aa2fcd8fd8c6328eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577403"
 ---
 # <a name="report-builder-functions---lookupset-function"></a>Функции построителя отчетов — функция LookupSet
@@ -59,7 +59,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
  Для извлечения единственного значения для указанного имени из набора данных, состоящего из пар "имя-значение" со связью "один к одному", используйте [функцию Lookup (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-builder-functions-lookup-function.md). Для вызова функции **Lookup** для набора значений используйте [функцию Multilookup (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-builder-functions-multilookup-function.md).  
   
- Существуют следующие ограничения.  
+ Применяются следующие ограничения:  
   
 -   Функция**LookupSet** вычисляется после применения всех выражений фильтров.  
   
@@ -97,7 +97,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
 ## <a name="example"></a>Пример  
  Поскольку функция **LookupSet** возвращает коллекцию объектов, результирующее выражение невозможно непосредственно отобразить в текстовом поле. Значения объектов коллекции можно склеить в одну строку.  
   
- Функция [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **Join** позволяет создать из набора объектов строку с разделителями. Для объединения объектов в одну строку используйте в качестве разделителя запятую. В некоторых модулях подготовки можно использовать в качестве разделителя перевод строки [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] (`vbCrLF`).  
+ Функция [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]**Join** позволяет создать из набора объектов строку с разделителями. Для объединения объектов в одну строку используйте в качестве разделителя запятую. В некоторых модулях подготовки можно использовать в качестве разделителя перевод строки [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] (`vbCrLF`).  
   
  Следующее выражение при использовании в качестве свойства Value текстового поля использует для создания списка функцию **Join** .  
   

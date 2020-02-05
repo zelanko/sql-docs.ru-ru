@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c28efd8106056ea900fef0cd57791837cf79e21a
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "69553225"
 ---
 # <a name="microsoft-connector-for-oracle-data-type-support"></a>Типы данных, поддерживаемые соединителем для Oracle (Майкрософт)
@@ -48,7 +48,7 @@ ms.locfileid: "69553225"
 |ROWID|Не поддерживается||
 |Пользовательский тип (тип объекта, VARRAY, вложенная таблица)|Не поддерживается||
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 - Настройка [диспетчера подключений Oracle](oracle-connection-manager.md).
 - Настройка [источника Oracle](oracle-source.md).

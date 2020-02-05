@@ -26,13 +26,13 @@ author: rothja
 ms.author: jroth
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||= azure-sqldw-latest||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 6a274535d53b7eec57fdf257425f855eded5d046
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121779"
 ---
-# <a name="select-localvariable-transact-sql"></a>SELECT @local_variable (Transact-SQL)
+# <a name="select-local_variable-transact-sql"></a>SELECT @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Присваивает локальную переменную значению выражения.  
@@ -56,7 +56,7 @@ SELECT { @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expressio
 Присвоить значение справа переменной слева.  
   
 Составной оператор присваивания:  
-  |оператор |действие |   
+  |оператор |action |   
   |-----|-----|  
   | = | Присваивает следующее за ним выражение переменной. |  
   | += | Сложение и присваивание |   
@@ -83,7 +83,7 @@ SELECT { @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expressio
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-use-select-localvariable-to-return-a-single-value"></a>A. Используйте инструкцию SELECT @local_variable для возвращения одиночного значения  
+### <a name="a-use-select-local_variable-to-return-a-single-value"></a>A. Используйте инструкцию SELECT @local_variable для возвращения одиночного значения  
  В следующем примере переменной `@var1` присвоено значение `Generic Name`. Запрос к таблице `Store` не возвращает строк, потому что в ней отсутствует значение, указанное для `CustomerID`. Переменная сохраняет значение `Generic Name`.  
   
 ```sql  
@@ -105,7 +105,7 @@ SELECT @var1 AS 'Company Name';
  Generic Name  
  ```  
   
-### <a name="b-use-select-localvariable-to-return-null"></a>Б. Используйте инструкцию SELECT @local_variable для возвращения значения NULL  
+### <a name="b-use-select-local_variable-to-return-null"></a>Б. Используйте инструкцию SELECT @local_variable для возвращения значения NULL  
  В следующем примере вложенный запрос используется для присвоения значения `@var1`. Так как значение, заданное для `CustomerID`, не существует, вложенный запрос не возвращает значение и переменная принимает значение `NULL`.  
   
 ```sql  

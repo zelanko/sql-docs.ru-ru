@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: c553e650dcbcfabc8ad2d18ce490221c0d2439ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68054603"
 ---
 # <a name="schedule-the-execution-of-ssis-packages-deployed-in-azure-with-sql-server-management-studio-ssms"></a>Планирование выполнения пакетов SQL Server Integration Services, развернутых в Azure, с помощью SQL Server Management Studio (SSMS)
@@ -38,7 +38,7 @@ ms.locfileid: "68054603"
 
 ## <a name="prerequisites"></a>предварительные требования
 
-Для функции, описываемой в этой статье, требуется SQL Server Management Studio версии 17.7 или более поздней. Чтобы получить последнюю версию SSMS, перейдите на страницу [скачивания SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
+Для функции, описываемой в этой статье, требуется SQL Server Management Studio версии 17.7 или более поздней. Чтобы получить последнюю версию SSMS, перейдите на страницу [скачивания SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
 
 ## <a name="schedule-a-package-in-ssms"></a>Планирование выполнения пакета в SSMS
 
@@ -70,10 +70,10 @@ ms.locfileid: "68054603"
 
     ![Изменить триггер](media/ssis-azure-schedule-packages-ssms/schedule-ssms-image7-edit2.png)
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Сведения о других способах запланировать выполнение пакета SQL Server Integration Services см. в статье [Планирование выполнения пакета служб SSIS в Azure](ssis-azure-schedule-packages.md).
 
 Дополнительные сведения о конвейерах, действиях и триггерах фабрики данных Azure см. в следующих статьях:
--   [Конвейеры и действия в фабрике данных Azure](https://docs.microsoft.com/azure/data-factory/concepts-pipelines-activities)
--   [Выполнение конвейера и триггеры в фабрике данных Azure](https://docs.microsoft.com/azure/data-factory/concepts-pipeline-execution-triggers)
+-   [Конвейеры и действия в Фабрике данных Azure](https://docs.microsoft.com/azure/data-factory/concepts-pipelines-activities)
+-   [Выполнение конвейера и триггеры в Фабрике данных Azure](https://docs.microsoft.com/azure/data-factory/concepts-pipeline-execution-triggers)

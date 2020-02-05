@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 ms.openlocfilehash: 2b34fb6b368f042e39776a25628472c336e21392
-ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75721829"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Восстановление базы данных SQL Server в контейнере Docker на базе Linux
@@ -461,7 +461,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
    ```
 
    > [!NOTE]
-   > Пароль системного администратора не является паролем `MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>`, указанным для контейнера **sql2**. Все данные SQL Server были восстановлены из **sql1**, включая измененный пароль, описанный ранее в этом руководстве. По сути, некоторые параметры, подобные этому, игнорируются из-за восстановления данных в /var/opt/mssql. По этой причине пароль имеет значение `<YourNewStrong!Passw0rd>`, как показано здесь.
+   > Пароль системного администратора не является паролем **, указанным для контейнера** sql2`MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>`. Все данные SQL Server были восстановлены из **sql1**, включая измененный пароль, описанный ранее в этом руководстве. По сути, некоторые параметры, подобные этому, игнорируются из-за восстановления данных в /var/opt/mssql. По этой причине пароль имеет значение `<YourNewStrong!Passw0rd>`, как показано здесь.
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
@@ -516,7 +516,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
    ```
 
    > [!NOTE]
-   > Пароль системного администратора не является паролем `MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>`, указанным для контейнера **sql2**. Все данные SQL Server были восстановлены из **sql1**, включая измененный пароль, описанный ранее в этом руководстве. По сути, некоторые параметры, подобные этому, игнорируются из-за восстановления данных в /var/opt/mssql. По этой причине пароль имеет значение `<YourNewStrong!Passw0rd>`, как показано здесь.
+   > Пароль системного администратора не является паролем **, указанным для контейнера** sql2`MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>`. Все данные SQL Server были восстановлены из **sql1**, включая измененный пароль, описанный ранее в этом руководстве. По сути, некоторые параметры, подобные этому, игнорируются из-за восстановления данных в /var/opt/mssql. По этой причине пароль имеет значение `<YourNewStrong!Passw0rd>`, как показано здесь.
 
 ::: moniker-end
 

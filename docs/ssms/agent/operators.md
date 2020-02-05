@@ -1,10 +1,9 @@
 ---
-title: Операторы | Документация Майкрософт
-ms.custom: ''
+title: Операторы
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,13 +22,15 @@ helpviewer_keywords:
 ms.assetid: 38e8488f-2669-4cea-b9c3-5f394a663678
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c4059bda6f761171292f2977f7d8e6a3f6896451
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 3e5ecdc830550570f43484c61a87e315e9fc7661
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68260084"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247633"
 ---
 # <a name="operators"></a>Операторы
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "68260084"
   
 -   имя оператора;  
   
--   контактная информация.  
+-   Контактные данные  
   
 ### <a name="naming-an-operator"></a>Присвоение имени оператору  
 Каждый оператор должен иметь имя. Имена операторов должны быть уникальны в пределах экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и не могут иметь длину более **128** символов.  
@@ -77,11 +78,11 @@ ms.locfileid: "68260084"
   
         Если все операторы обслуживаются одним оператором услуг пейджинговой связи, можно с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] указывать все особые элементы форматирования электронной почты, необходимые для функционирования системы преобразования пейджинговых сообщений в сообщения электронной почты. Этими особыми элементами форматирования могут быть префиксы или суффиксы, которые могут быть включены в следующие строки сообщения электронной почты:  
   
-        **Тема:**  
+        **Subject**:  
   
         **Копия**:  
   
-        **Кому**:  
+        **Кому**.  
   
     > [!NOTE]  
     > Пользователи маломощных буквенно-цифровых пейджинговых систем могут сократить объем пересылаемых текстов за счет исключения из пейджинговых уведомлений текстов об ошибках. Примером маломощной буквенно-цифровой пейджинговой системы может служить система, ограниченная 64 символами на страницу.  
@@ -123,7 +124,7 @@ ms.locfileid: "68260084"
   
 |||  
 |-|-|  
-|**Задания**|**Раздел**|  
+|**Задачи**|**Раздел**|  
 |Задачи, связанные с созданием оператора|[Создание оператора](../../ssms/agent/create-an-operator.md)<br /><br />[Designate a Fail-Safe Operator](../../ssms/agent/designate-a-fail-safe-operator.md)|  
 |Задачи, связанные с назначением предупреждений|[Назначение предупреждений оператору](../../ssms/agent/assign-alerts-to-an-operator.md)<br /><br />[Определение реакция на предупреждение (среда SQL Server Management Studio)](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br />[sp_add_notification (Transact-SQL)](https://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)<br /><br />[Назначение предупреждений оператору](../../ssms/agent/assign-alerts-to-an-operator.md)|  
   

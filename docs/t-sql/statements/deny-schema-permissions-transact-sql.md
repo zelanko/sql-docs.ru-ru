@@ -18,10 +18,10 @@ ms.assetid: 300a67c4-d226-4653-9e9f-7ae4d53fcf33
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: bd439e528cc30c0971d1b4c824ab2375856d26e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68114793"
 ---
 # <a name="deny-schema-permissions-transact-sql"></a>DENY, запрет разрешений на схему (Transact-SQL)
@@ -53,7 +53,7 @@ ON SCHEMA **::** schema *_name*
   
 -   пользователь базы данных;  
 -   роль базы данных;  
--   роль приложения;  
+-   Роль приложения  
 -   пользователь базы данных, сопоставленный с именем входа Windows;  
 -   пользователь базы данных, сопоставленный с группой Windows;  
 -   пользователь базы данных, сопоставленный с сертификатом;  
@@ -68,7 +68,7 @@ CASCADE
   
 -   пользователь базы данных;  
 -   роль базы данных;  
--   роль приложения;  
+-   Роль приложения  
 -   пользователь базы данных, сопоставленный с именем входа Windows;  
 -   пользователь базы данных, сопоставленный с группой Windows;  
 -   пользователь базы данных, сопоставленный с сертификатом;  
