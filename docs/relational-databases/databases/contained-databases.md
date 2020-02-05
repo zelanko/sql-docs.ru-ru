@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e42d7dbfe00ff957511d9853e39febd29b7aab66
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68137331"
 ---
 # <a name="contained-databases"></a>Автономные базы данных
@@ -74,7 +74,7 @@ ms.locfileid: "68137331"
  Пользователям, использующим имена входа базы данных **master** , можно предоставить доступ к автономной базе данных, но это приведет к зависимости от экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Таким образом при создании пользователей на основе имен входа требуется частичная автономность.
   
 > [!IMPORTANT]  
->  Включение частично автономных баз данных передает управление над доступом к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] владельцам базы данных. Дополнительные сведения см. в статье [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
+>  Включение частично автономных баз данных передает управление над доступом к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] владельцам базы данных. Дополнительные сведения см. в разделе [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
   
  Граница базы данных  
  Поскольку частично автономные базы данных отделяют функции базы данных от функций экземпляра, между этими элементами имеется явно определенная разграничительная линия, называемая *границей базы данных*.  
@@ -143,17 +143,17 @@ ms.locfileid: "68137331"
 ##  <a name="Identifying"></a> Определение состояния включения базы данных  
  Для определения состояния автономности базы данных можно использовать два средства. Представление [sys.dm_db_uncontained_entities (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md) показывает все потенциально неавтономные сущности в базе данных. Событие database_uncontained_usage происходит, если во время выполнения найдена любая фактическая неавтономная сущность.  
   
-### <a name="sysdmdbuncontainedentities"></a>sys.dm_db_uncontained_entities  
+### <a name="sysdm_db_uncontained_entities"></a>sys.dm_db_uncontained_entities  
  Это представление содержит все сущности базы данных, которые потенциально могут быть неавтономными, например пересекающие границу базы данных. К ним относятся пользовательские сущности, которые могут использовать объекты вне модели базы данных. Однако, так как включение некоторых сущностей (например, использующих динамический SQL) невозможно определить до времени выполнения, в представлении могут отображаться некоторые сущности, которые фактически не являются неавтономными. Дополнительные сведения см. в разделе [sys.dm_db_uncontained_entities (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md).  
   
-### <a name="databaseuncontainedusage-event"></a>событие database_uncontained_usage  
+### <a name="database_uncontained_usage-event"></a>событие database_uncontained_usage  
  Это событие XEvent возникает, когда во время выполнения обнаруживается любая фактически неавтономная сущность. Учитываются и сущности, формируемые в клиентском коде. Это событие XEvent возникает только для фактически неавтономных сущностей. Однако это событие происходит только во время выполнения. Поэтому любые неавтономные пользовательские сущности, которые не будут запущены, не обнаруживаются данным событием Xevent.  
   
 ## <a name="see-also"></a>См. также:  
  [Измененные функции (автономная база данных)](../../relational-databases/databases/modified-features-contained-database.md)   
- [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md)   
- [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md)   
+ [Параметры сортировки автономной базы данных](../../relational-databases/databases/contained-database-collations.md)   
+ [Рекомендации по обеспечению безопасности автономных баз данных](../../relational-databases/databases/security-best-practices-with-contained-databases.md)   
  [Migrate to a Partially Contained Database](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)   
- [Пользователи автономной базы данных — создание переносимой базы данных](../../relational-databases/security/contained-database-users-making-your-database-portable.md)  
+ [Пользователи автономной базы данных: создание переносимой базы данных](../../relational-databases/security/contained-database-users-making-your-database-portable.md)  
   
   

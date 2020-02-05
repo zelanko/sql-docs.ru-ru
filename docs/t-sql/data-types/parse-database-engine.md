@@ -18,10 +18,10 @@ ms.assetid: b37e28b6-6e2e-470a-945b-ce5252da743a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8f7160513cd23e16f06dbba27851920b66bf72c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68119820"
 ---
 # <a name="parse-database-engine"></a>Parse (компонент Database Engine)
@@ -46,7 +46,7 @@ static SqlHierarchyId Parse ( SqlString input )
   
 ## <a name="arguments"></a>Аргументы  
 *input*  
-[!INCLUDE[tsql](../../includes/tsql-md.md)]: преобразуемое значение символьного типа данных.
+[!INCLUDE[tsql](../../includes/tsql-md.md)]: значение типа данных символа, которые было конвертировано.
   
 CLR: оцениваемое значение типа String.
   

@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8e3fbbeed1224c6cd67c4292a6e263fb079d3ad5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68107138"
 ---
 # <a name="disable-indexes-and-constraints"></a>Отключение индексов и ограничений
@@ -42,7 +42,7 @@ ms.locfileid: "68107138"
   
      [Ограничения](#Restrictions)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Отключение индекса с использованием следующих средств:**  
   
@@ -130,7 +130,7 @@ ms.locfileid: "68107138"
  Отображает имя таблицы или представления, для которых был создан индекс.  
   
  **Тип индекса**  
- Отображает тип индекса: **кластеризованный**, **некластеризованный**, **пространственный** или **XML**.  
+ Отображает тип индекса: **кластеризованный**, **некластеризованный**, **пространственный**или **XML**.  
   
  **Состояние**  
  Отображает состояние операции отключения. Возможные значения после выполнения.  

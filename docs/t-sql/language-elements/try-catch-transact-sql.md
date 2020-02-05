@@ -30,10 +30,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1ccb51c6934a60fa60fa7fbcb12967928d63de92
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121561"
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH (Transact-SQL)
@@ -200,7 +200,7 @@ BEGIN CATCH
 END CATCH;  
 ```  
   
-## <a name="uncommittable-transactions-and-xactstate"></a>Нефиксируемые транзакции и XACT_STATE  
+## <a name="uncommittable-transactions-and-xact_state"></a>Нефиксируемые транзакции и XACT_STATE  
  Если ошибка, возникшая в блоке TRY, приведет к неправильному состоянию транзакции, то транзакция будет классифицироваться как нефиксированная транзакция. Ошибка, которая обычно останавливает выполнение транзакции за пределами блока TRY, приводит к тому, что транзакция входит в нефиксируемое состояние, когда ошибка возникает внутри блока TRY. Нефиксированные транзакции могут только выполнять операции чтения или ROLLBACK TRANSACTION. Транзакция не может выполнить инструкцию на языке [!INCLUDE[tsql](../../includes/tsql-md.md)], которая будет выполнять операции записи для COMMIT TRANSACTION. Функция XACT_STATE возвращает значение -1, если транзакция была классифицирована как нефиксированная транзакция. Когда выполнение пакета заканчивается, компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)], будет выполнен откат любых активных нефиксируемых транзакций. Если при переходе транзакции в нефиксируемое состояние не было отправлено сообщение об ошибке, после завершения выполнения пакета сообщение об ошибке будет отправлено клиентскому приложению. Это указывает на то, что была обнаружена нефиксируемая транзакция и выполнен ее откат.  
   
  Дополнительные сведения о нефиксированных транзакциях и функции XACT_STATE см. в разделе [XACT_STATE (Transact-SQL)](../../t-sql/functions/xact-state-transact-sql.md).  
@@ -256,7 +256,7 @@ IF @@TRANCOUNT > 0
 GO  
 ```  
   
-### <a name="c-using-trycatch-with-xactstate"></a>В. Использование TRY...CATCH с XACT_STATE  
+### <a name="c-using-trycatch-with-xact_state"></a>В. Использование TRY...CATCH с XACT_STATE  
  В следующем примере показано, как использовать конструкцию `TRY...CATCH` для обработки ошибок, возникших внутри транзакции. Функция `XACT_STATE` определяет, должна ли транзакция быть зафиксирована или откачена. В данном примере параметр `SET XACT_ABORT` находится в состоянии `ON`. В результате, если произойдет ошибка нарушения ограничения, транзакция станет нефиксируемой.  
   
 ```sql  

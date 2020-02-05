@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b12d35d27fd4c90603cce6d798d8011ad1e65b81
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 2b66307976381ceb8085f72e553e010ee60e2974
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710836"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287568"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>Репликация секционированных таблиц и индексов
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "71710836"
   
  Репликация копирует объекты на подписчик во время начальной синхронизации. Если схема секционирования использует файловые группы, отличные от PRIMARY, эти файловые группы должны существовать на подписчике до начальной синхронизации.  
   
- После инициализации подписчика изменения данных распространяются на подписчик и применяются к соответствующим секциям. Однако изменения схемы секционирования не поддерживаются. Репликация транзакций и репликация слиянием не поддерживают репликацию следующих команд: ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME и инструкцию REBUILD WITH PARTITION команды ALTER INDEX. Изменения, связанные с ними, не будут автоматически реплицироваться на подписчика. Пользователь должен вручную внести соответствующие изменения.  
+ После инициализации подписчика изменения данных распространяются на подписчик и применяются к соответствующим секциям. Однако изменения схемы секционирования не поддерживаются. Репликация транзакций и репликация слиянием не поддерживают репликацию следующих команд: ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME, а также инструкции REBUILD WITH PARTITION команды ALTER INDEX. Изменения, связанные с ними, не будут автоматически реплицироваться на подписчика. Пользователь должен вручную внести соответствующие изменения.  
   
 ## <a name="replication-support-for-partition-switching"></a>Поддержка переключения секций при репликации  
  Одно из главных преимуществ секционирования — способность быстро и эффективно перемещать подмножества данных между секциями. Данные перемещаются командой SWITCH PARTITION. По умолчанию, если таблица включена для репликации, операции SWITCH PARTITION блокированы по следующим причинам.  

@@ -16,10 +16,10 @@ ms.assetid: a5f6bdce-2b13-4924-aaeb-b50b57d624d8
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 89d2da02b841edd85d58798ca4c7c1745332d536
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68093640"
 ---
 # <a name="sql-server-database-replica"></a>SQL Server, реплика базы данных
@@ -27,7 +27,7 @@ ms.locfileid: "68093640"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Объект производительности **SQLServer:Database Replica** содержит счетчики производительности, которые сообщают сведения о базах данных-получателях групп доступности AlwaysOn в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Этот объект действителен только на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на котором размещена вторичная реплика.  
   
-|Имя счетчика|Описание|Просмотр в…|  
+|Имя счетчика|Description|Просмотр в…|  
 |------------------|-----------------|--------------|  
 |**Получено файлов, байт/с**|Объем данных FILESTREAM, полученный вторичной репликой для базы данных-получателя в течение последней секунды.|Вторичная реплика|  
 |**Очередь ожидания применения для журнала**|Число блоков журнала, ожидающих применения к реплике базы данных.|Вторичная реплика|

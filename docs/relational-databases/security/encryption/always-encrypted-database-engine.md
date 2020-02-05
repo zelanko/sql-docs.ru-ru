@@ -18,16 +18,16 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ef8514d7d18478c7fcb78cb5197c5b39602c9610
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75254834"
 ---
 # <a name="always-encrypted"></a>Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  ![Always Encrypted](../../../relational-databases/security/encryption/media/always-encrypted.png "|::ref1::|")  
+  ![Always Encrypted](../../../relational-databases/security/encryption/media/always-encrypted.png "Always Encrypted")  
   
  Always Encrypted — это функция, предназначенная для защиты конфиденциальных данных, таких как номера кредитных карт или номера документов (например, номеров социального страхования в США), которые хранятся в базах данных [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Постоянное шифрование позволяет клиентам шифровать конфиденциальные данные в клиентских приложениях, не раскрывая ключи шифрования [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] или [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). Таким образом, постоянное шифрование позволяет разделить пользователей на тех, кто владеет данными или имеет право их просматривать, и тех, кто управляет данными, но не должен иметь к ним доступа. У локальных администраторов баз данных, операторов облачных баз данных и других неавторизованных пользователей с высоким уровнем привилегий нет доступа к зашифрованным данным, поэтому постоянное шифрование позволяет клиентам хранить конфиденциальные данные вне сферы их непосредственного контроля. При этом организации могут хранить данные в Azure, делегировать права администратора локальной базы данных третьим лицам или упростить требования к безопасности для собственных администраторов базы данных.
 

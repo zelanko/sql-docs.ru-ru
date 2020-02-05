@@ -22,13 +22,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e73d13927ff4618f0c0ea0b7246df0d722340a1a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68095383"
 ---
-# <a name="rownumber-transact-sql"></a>ROW_NUMBER (Transact-SQL)
+# <a name="row_number-transact-sql"></a>ROW_NUMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Нумерует выходные данные результирующего набора. В частности, возвращает последовательный номер строки в секции результирующего набора, 1 соответствует первой строке в каждой из секций. 
@@ -87,10 +87,10 @@ ORDER BY name ASC;
    
 |name    |recovery_model_desc |  
 |-----------  |------------ |  
-|master |SIMPLE |
+|master |ПРОСТОЙ |
 |model |FULL |
-|msdb |SIMPLE |
-|tempdb |SIMPLE |
+|msdb |ПРОСТОЙ |
+|tempdb |ПРОСТОЙ |
 
 Чтобы добавить столбец с номерами строк перед каждой строкой, добавьте столбец с помощью функции `ROW_NUMBER`, в данном случае с именем `Row#`. Предложение `ORDER BY` необходимо переместить к предложению `OVER`.
 
@@ -106,10 +106,10 @@ WHERE database_id < 5;
    
 |Номер строки |name    |recovery_model_desc |  
 |------- |-----------  |------------ |  
-|1 |master |SIMPLE |
+|1 |master |ПРОСТОЙ |
 |2 |model |FULL |
-|3 |msdb |SIMPLE |
-|4 |tempdb |SIMPLE |
+|3 |msdb |ПРОСТОЙ |
+|4 |tempdb |ПРОСТОЙ |
 
 Добавление предложения `PARTITION BY` для столбца `recovery_model_desc` приведет к тому, что нумерация начнется заново при изменении значения `recovery_model_desc`. 
  
@@ -126,9 +126,9 @@ FROM sys.databases WHERE database_id < 5;
 |Номер строки |name    |recovery_model_desc |  
 |------- |-----------  |------------ |  
 |1 |model |FULL |
-|1 |master |SIMPLE |
-|2 |msdb |SIMPLE |
-|3 |tempdb |SIMPLE |
+|1 |master |ПРОСТОЙ |
+|2 |msdb |ПРОСТОЙ |
+|3 |tempdb |ПРОСТОЙ |
 
 
 ### <a name="b-returning-the-row-number-for-salespeople"></a>Б. Возврат номера строки для salespeople  
@@ -182,7 +182,7 @@ FROM OrderedOrders
 WHERE RowNumber BETWEEN 50 AND 60;  
 ```  
   
-### <a name="d-using-rownumber-with-partition"></a>Г. Использование ROW_NUMBER() с PARTITION  
+### <a name="d-using-row_number-with-partition"></a>Г. Использование ROW_NUMBER() с PARTITION  
  В следующем примере аргумент `PARTITION BY` используется для секционирования результирующего набора запроса по столбцу `TerritoryName`. Предложение `ORDER BY`, указанное в предложении `OVER`, упорядочивает строки каждой секции по столбцу `SalesYTD`. Предложение `ORDER BY` в инструкции `SELECT` упорядочивает полный результирующий набор запроса по `TerritoryName`.  
   
 ```sql  
@@ -249,7 +249,7 @@ RowNumber  FirstName  LastName            SalesQuota
 4          Jae        Pak                 10,514,000.00  
 ```
 
-### <a name="f-using-rownumber-with-partition"></a>Е. Использование ROW_NUMBER() с PARTITION  
+### <a name="f-using-row_number-with-partition"></a>Е. Использование ROW_NUMBER() с PARTITION  
  Следующий пример демонстрирует использование функции `ROW_NUMBER` с аргументом `PARTITION BY`. В результате функция `ROW_NUMBER` нумерует строки в каждой секции.  
   
 ```sql  

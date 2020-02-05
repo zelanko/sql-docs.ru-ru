@@ -15,10 +15,10 @@ ms.assetid: ec59b75d-ba09-44ac-9039-9d593bb462d9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a14ae64026443324f7a5dc3f47dcea15f9907f5f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295722"
 ---
 # <a name="managing-packages-and-folders-programmatically"></a>Программное управление пакетами и папками
@@ -43,7 +43,7 @@ ms.locfileid: "71295722"
 |Хранилище пакетов служб SSIS|<xref:Microsoft.SqlServer.Dts.Runtime.Application.FolderExistsOnDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.FolderExistsOnSqlServer%2A>|    
     
- [В начало](#top)    
+ [Вверх](#top)    
     
 ##  <a name="managing"></a> Управление пакетами и папками    
  Класс <xref:Microsoft.SqlServer.Dts.Runtime.Application> пространства имен <xref:Microsoft.SqlServer.Dts.Runtime> предоставляет дополнительные методы для управления пакетами и папками, в которых эти пакеты хранятся.    
@@ -56,7 +56,7 @@ ms.locfileid: "71295722"
 |Хранилище пакетов служб SSIS|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RemoveFromDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RemoveFromSqlServer%2A>|    
     
- [В начало](#top)    
+ [Вверх](#top)    
     
 ###  <a name="managing_create"></a> Создание папки    
  Для создания папки хранения программным способом вызовите один из следующих методов:    
@@ -66,7 +66,7 @@ ms.locfileid: "71295722"
 |Хранилище пакетов служб SSIS|<xref:Microsoft.SqlServer.Dts.Runtime.Application.CreateFolderOnDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.CreateFolderOnSqlServer%2A>|    
     
- [В начало](#top)    
+ [Вверх](#top)    
     
 ###  <a name="managing_remfldr"></a> Удаление папки    
  Для удаления папки хранения программным способом вызовите один из следующих методов:    
@@ -76,7 +76,7 @@ ms.locfileid: "71295722"
 |Хранилище пакетов служб SSIS|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RemoveFolderFromDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RemoveFolderFromSqlServer%2A>|    
     
- [В начало](#top)    
+ [Вверх](#top)    
     
 ###  <a name="managing_rename"></a> Переименование папки    
  Для переименования папки хранения программным способом вызовите один из следующих методов:    
@@ -86,7 +86,7 @@ ms.locfileid: "71295722"
 |Хранилище пакетов служб SSIS|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RenameFolderOnDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RenameFolderOnSqlServer%2A>|    
     
- [В начало](#top)    
+ [Вверх](#top)    
     
 ## <a name="see-also"></a>См. также:    
  [Управление пакетами (службы SSIS)](../../integration-services/service/package-management-ssis-service.md)     

@@ -35,10 +35,10 @@ ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 613dc7c05707d9a432ec6f8f7eab7b8b3bce2cce
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982825"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
@@ -159,7 +159,7 @@ CONTAINS (
 >  Чтобы запрос вернул строки, значение *property_name* должно быть указано в списке свойств поиска полнотекстового индекса, а сам полнотекстовый индекс должен содержать связанные со свойствами записи для *property_name*. Дополнительные сведения см. в статье [Поиск свойств документа с использованием списков свойств поиска](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
  LANGUAGE *language_term*  
- Язык, используемый для разбиения по словам, морфологического поиска, расширения и замены тезауруса, а также для удаления пропускаемых слов (или [стоп-слов](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) в ходе запроса. Этот параметр является необязательным.  
+ Язык, используемый для разбиения по словам, морфологического поиска, расширения и замены тезауруса, а также для удаления пропускаемых слов (или [стоп-слов](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) в ходе запроса. Это необязательный параметр.  
   
  Если в одном столбце хранятся документы на различных языках в виде больших двоичных объектов, то код локали (LCID) заданного документа определяет, какой язык должен использоваться для индексирования его содержимого. Указание аргумента LANGUAGE *language_term* при запросе к такому столбцу может повысить вероятность хорошего соответствия.  
   

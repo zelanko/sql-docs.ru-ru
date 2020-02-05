@@ -21,10 +21,10 @@ ms.assetid: 0e11f8c5-f79d-46c1-ab11-b68ef05d6787
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 94f179d9c1b8342e5c1cdfd7fcb62e6673634e7a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68135847"
 ---
 # <a name="encryptbykey-transact-sql"></a>ENCRYPTBYKEY (Transact-SQL)
@@ -95,7 +95,7 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
 >  Использование функций шифрования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] совместно с параметром ANSI_PADDING OFF может привести к потере данных из-за неявных преобразований. Дополнительные сведения об ANSI_PADDING см. в статье [SET ANSI_PADDING (Transact-SQL)](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
   
 ## <a name="examples"></a>Примеры  
- Возможности, продемонстрированные в следующих примерах, работают с ключами и сертификатами, созданными в разделе [Как зашифровать столбец данных](../../relational-databases/security/encryption/encrypt-a-column-of-data.md).  
+ Возможности, продемонстрированные в следующих примерах, работают с ключами и сертификатами, созданными в разделе [Шифрование столбца данных](../../relational-databases/security/encryption/encrypt-a-column-of-data.md).  
   
 ### <a name="a-encrypting-a-string-with-a-symmetric-key"></a>A. Шифрование строки симметричным ключом  
  Следующий пример показывает, как добавить столбец к таблице `Employee`, а затем зашифровать значение номера социального страхования, который хранится в столбце `NationalIDNumber`.  

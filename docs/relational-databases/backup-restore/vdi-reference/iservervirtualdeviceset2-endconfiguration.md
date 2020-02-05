@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 5060a862f61f005c83296235bcef5a2851bcaeca
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847305"
 ---
 # <a name="iservervirtualdeviceset2endconfiguration-vdi"></a>IServerVirtualDeviceSet2::EndConfiguration (VDI)
@@ -37,6 +37,6 @@ HRESULT IServerVirtualDeviceSet2::EndConfiguration ();
 | VD_E_PROTOCOL | Набор не находится в настраиваемом состоянии. |
 | VD_E_MEMORY | Не удалось получить память, запрошенную посредством вызовов RequestBuffers. Набор остается в настраиваемом состоянии без свободного места в буфере. Сервер может либо уменьшить требования к буферу, либо прервать операцию. |
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Дополнительные сведения см. в [справке по интерфейсу виртуальных устройств SQL Server](reference-virtual-device-interface.md).

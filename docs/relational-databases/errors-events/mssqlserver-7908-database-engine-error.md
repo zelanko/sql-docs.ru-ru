@@ -12,25 +12,25 @@ ms.assetid: 470045b0-ebe9-44a7-b456-480e7a516a2c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 72cab4cc129690b5e544a979f0b18892454dfcef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67951428"
 ---
-# <a name="mssqlserver7908"></a>MSSQLSERVER_7908
+# <a name="mssqlserver_7908"></a>MSSQLSERVER_7908
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|7908|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC2_FS_INVALID_COLUMN_LEVEL_FILE|  
-|Текст сообщения|Ошибка таблицы: файл "имя_файла" в секции с идентификатором "ид_секции" не является допустимым файлом Filestream.|  
+|Текст сообщения|Ошибка в таблице. Файл "FILE" в секции с идентификатором PN_ID не является допустимым файлом FILESTREAM.|  
   
 ## <a name="explanation"></a>Объяснение  
 Имя файла FILESTREAM в каталоге столбцов имеет тип ROWGUID. Если имя файла в каталоге столбцов не может быть преобразовано в тип ROWGUID, этот файл не является допустимым.  

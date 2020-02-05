@@ -15,10 +15,10 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: 9bf75c2d176c4ea2c596f29f1ddda910e794ae12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68232020"
 ---
 # <a name="execution-plans"></a>Планы выполнения
@@ -52,7 +52,7 @@ ms.locfileid: "68232020"
 -   [Руководства планов](../../relational-databases/performance/plan-guides.md)  
 
 ## <a name="see-also"></a>См. также:  
- [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
+ [Наблюдение и настройка производительности](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [Средства контроля и настройки производительности](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
  [Руководство по архитектуре обработки запросов](../../relational-databases/query-processing-architecture-guide.md)    
  [Динамическая статистика запросов](../../relational-databases/performance/live-query-statistics.md)     

@@ -11,10 +11,10 @@ ms.assetid: 26bf8f71-c2b8-45ef-b3a3-372b96c9e6e3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 6a48450322a8552720a119ea325ed720669fe5a8
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75245652"
 ---
 # <a name="evaluate-health-of-the-always-on-availability-group-using-group-policies"></a>Определение работоспособности группы доступности Always On с помощью групповых политик
@@ -33,6 +33,6 @@ ms.locfileid: "75245652"
 3.  Чтобы просмотреть все системные политики групп доступности, в области **Выбор страницы** щелкните элемент **Выбор политики**.  
   
 ## <a name="next-steps"></a>Дальнейшие действия  
- [Модель работоспособности Always On, часть 2. Расширение модели работоспособности](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx).   
+ [Модель работоспособности AlwaysOn, часть 2. Расширение модели работоспособности](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)   
   
   

@@ -9,10 +9,10 @@ ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2aa2fefb5df874b08a34c4a7091d450afdfd4828
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62513166"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>Занятие 1. Создание образца базы данных подписчика
@@ -55,7 +55,7 @@ ms.locfileid: "62513166"
     GO  
     ```  
   
-7.  Щелкните **! Выполнить** на панели инструментов.  
+7.  Нажмите кнопку **! Выполнить** на панели инструментов.  
   
 8.  С помощью инструкции SELECT удостоверьтесь, что создано три строки данных. Например: `select * from OrderInfo`  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62513166"
 + Далее предстоит изменить свойства источника данных отчета так, чтобы использовались хранимые учетные данные. 
 + Вы также измените конструкцию отчета, включив в нее параметр, который будет использоваться подпиской с данными подписчика. [Занятие 2. Изменение свойств источника данных отчета](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md).  
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Создание управляемой данными подписки](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)  
 [Создание базы данных](../relational-databases/databases/create-a-database.md)  

@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: fea109e55b9efa5619bdccb11d692ffebd1a6847
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847485"
 ---
 # <a name="iservervirtualdeviceset2beginconfiguration-vdi"></a>IServerVirtualDeviceSet2::BeginConfiguration (VDI)
@@ -59,6 +59,6 @@ HRESULT IServerVirtualDeviceSet2::BeginConfiguration (
 После вызова этой функции набор виртуальных устройств переходит в настраиваемое состояние, в котором выбирается макет буфера.
 После задания базовой конфигурации (согласно параметрам) эти значения сохраняются в течение всего времени существования набора виртуальных устройств. Свойство выравнивания для набора виртуальных устройств служит для управления выравниванием буферов данных. Это значение определяет минимальное выравнивание, которое можно переопределять для отдельных буферов.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Дополнительные сведения см. в [справке по интерфейсу виртуальных устройств SQL Server](reference-virtual-device-interface.md).

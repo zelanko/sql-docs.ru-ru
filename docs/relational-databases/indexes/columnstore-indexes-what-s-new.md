@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 690455f8dba76b45643ac4971c988059c56e33f9
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70009422"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Новые возможности индексов columnstore
@@ -53,13 +53,13 @@ ms.locfileid: "70009422"
 ## [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 
  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] добавляет указанные новые возможности.
 
-### <a name="functional"></a>Функции
+### <a name="functional"></a>Функциональные
 - [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] поддерживает нематериализованные вычисляемые столбцы в кластеризованных индексах columnstore. Не поддерживает материализованные вычисляемые столбцы в кластеризованных индексах columnstore. Невозможно создать некластеризованный индекс в индексе columnstore, где есть вычисляемый столбец. 
 
 ## [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
  В[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] реализованы ключевые усовершенствования для повышения производительности и гибкости индексов columnstore. Эти улучшения расширяют возможности хранения данных и обеспечивают поддержку операционной аналитики в реальном времени.  
   
-### <a name="functional"></a>Функции  
+### <a name="functional"></a>Функциональные  
   
 -   Таблица rowstore может включать один обновляемый некластеризованный индекс columnstore. Ранее некластеризованный индекс columnstore был доступен только для чтения.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "70009422"
 -   Однопоточные запросы, выполняемые с `MAXDOP 1` или последовательным планом запроса, выполняются в пакетном режиме. Ранее в пакетном режиме могли выполняться только многопоточные запросы.  
 -   Запросы к таблицам, оптимизированным для памяти, могут иметь параллельные планы в режиме взаимодействия SQL при доступе к данным как в индексе rowstore, так и в индексе columnstore.  
   
-### <a name="supportability"></a>Поддержка  
+### <a name="supportability"></a>Возможности поддержки  
 Следующие системные представления являются новыми для columnstore:  
 
 ||| 

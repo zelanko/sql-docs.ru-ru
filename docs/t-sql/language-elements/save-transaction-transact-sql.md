@@ -26,10 +26,10 @@ ms.assetid: b953c3f1-f96d-42f1-95a2-30e314292b35
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 46a6f7c08b540b6180326350a6e0aadb933a7ef5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121812"
 ---
 # <a name="save-transaction-transact-sql"></a>SAVE TRANSACTION (Transact-SQL)
@@ -54,7 +54,7 @@ SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }
  @*savepoint_variable*  
  Имя определяемой пользователем переменной, содержащей допустимое имя точки сохранения. Переменная должна быть объявлена с типом данных **char**, **varchar**, **nchar** или **nvarchar**. В переменную может быть передано более 32 символов, но будут использованы только 32 первых символа.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Пользователь может установить точку сохранения или маркер внутри транзакции. Точка сохранения определяет место, к которому может возвратиться транзакция, если часть транзакции условно отменена. Если транзакция откатывается к точке сохранения, то ее выполнение должно быть продолжено до завершения с обработкой дополнительных инструкций языка [!INCLUDE[tsql](../../includes/tsql-md.md)], если необходимо, и инструкции COMMIT TRANSACTION, либо транзакция должна быть полностью отменена откатом к началу. Для отмены всей транзакции используйте инструкцию ROLLBACK TRANSACTION *transaction_name*. Отменяются все инструкции или процедуры транзакции.  
   
  В транзакции разрешены дублирующие имена точек сохранения, но инструкция ROLLBACK TRANSACTION, содержащая имя точки сохранения, откатывает транзакцию к точке сохранения последней инструкции SAVE TRANSACTION, использовавшей это имя.  
@@ -160,7 +160,7 @@ AS
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [BEGIN TRANSACTION (Transact-SQL)](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION (Transact-SQL)](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
  [COMMIT WORK (Transact-SQL)](../../t-sql/language-elements/commit-work-transact-sql.md)   

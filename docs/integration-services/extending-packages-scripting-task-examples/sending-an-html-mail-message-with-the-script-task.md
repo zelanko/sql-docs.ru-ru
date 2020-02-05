@@ -17,10 +17,10 @@ ms.assetid: dd2b1eef-b04f-4946-87ab-7bc56bb525ce
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: eb1de7efdc8592551343a9424e4ab3b1dd1f69f9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71286747"
 ---
 # <a name="sending-an-html-mail-message-with-the-script-task"></a>Отправка почтового сообщения в формате HTML с помощью задачи «Скрипт»
@@ -33,7 +33,7 @@ ms.locfileid: "71286747"
 > [!NOTE]  
 >  Если нужно создать задачу, которую будет удобно использовать в нескольких пакетах, рекомендуется начать разработку пользовательской задачи с этого образца задачи «Скрипт». Дополнительные сведения см. в разделе [Разработка пользовательской задачи](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Description  
  В следующем примере пространство имен **System.Net.Mail** используется для настройки и передачи почтового сообщения в формате HTML. Скрипт извлекает значения полей "Кому", "От кого", "Тема" и текст сообщения электронной почты из переменных пакета, использует их для создания нового сообщения **MailMessag**e и присваивает его свойству **IsBodyHtml** значение **True**. Затем сценарий получает имя SMTP-сервера из другой переменной пакета, инициализирует экземпляр клиента **System.Net.Mail.SmtpClient** и вызывает его метод **Send**, чтобы отправить сообщение в формате HTML. В образце функциональность отправки сообщений инкапсулируется в подпрограмме, которая может быть использована повторно в других скриптах.  
   
 #### <a name="to-configure-this-script-task-example-without-an-smtp-connection-manager"></a>Настройка этого примера задачи «Скрипт» без диспетчера соединений SMTP  

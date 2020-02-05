@@ -11,10 +11,10 @@ ms.assetid: 64ae91e5-b420-44b4-af1a-f8bca83d7f41
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: ced667fb99f412a4891d3e3e53f788430ee9112d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67947787"
 ---
 # <a name="sql-server-xtp-garbage-collection"></a>SQL Server XTP Garbage Collection
@@ -24,7 +24,7 @@ ms.locfileid: "67947787"
   
  Эта таблица описывает счетчики **XTP garbage Collection SQL Server** .  
   
-|Счетчик|Описание|  
+|Счетчик|Description|  
 |-------------|-----------------|  
 |**Число попыток сканирования «пыльных углов»/с (от сборщика мусора)**|Число повторных попыток сканирования из-за конфликтов записи при обработке «пыльных углов», выданное сборщиком мусора (в среднем), в секунду Это счетчик очень низкого уровня, не предназначенный для пользователей.|  
 |**Рабочие элементы основной сборки мусора/с**|Число рабочих элементов в секунду, обрабатываемых основным потоком сборки мусора.|  

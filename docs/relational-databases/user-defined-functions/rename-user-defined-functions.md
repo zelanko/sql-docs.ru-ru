@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 274c79dabe90098094423b2994edb93603e649e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68123571"
 ---
 # <a name="rename-user-defined-functions"></a>Переименование определяемых пользователем функций
@@ -28,7 +28,7 @@ ms.locfileid: "68123571"
   
      [Ограничения](#Restrictions)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Для переименования определяемой пользователем функции используются.**  
   
@@ -79,7 +79,7 @@ ms.locfileid: "68123571"
  Дополнительные сведения см. в разделах [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md) и [DROP FUNCTION (Transact-SQL)](../../t-sql/statements/drop-function-transact-sql.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Представление каталога sys.sql_expression_dependencies (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
- [Просмотр определяемых пользователем функций](../../relational-databases/user-defined-functions/view-user-defined-functions.md)  
+ [sys.sql_expression_dependencies (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
+ [Просмотр пользовательских функций](../../relational-databases/user-defined-functions/view-user-defined-functions.md)  
   
   
