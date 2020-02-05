@@ -18,10 +18,10 @@ ms.assetid: a30581f2-e1b1-4996-93e6-527ff96b7c42
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: de7e95ab26102c0b3bbe1e33c57ae9491a5b9a2c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "65945886"
 ---
 # <a name="asymkeyproperty-transact-sql"></a>ASYMKEYPROPERTY (Transact-SQL)
@@ -45,7 +45,7 @@ ASYMKEYPROPERTY (Key_ID , 'algorithm_desc' | 'string_sid' | 'sid')
 Указывает, что в выходных данных возвращается описание алгоритма асимметричного ключа. Доступно только для асимметричных ключей, созданных с помощью модуля расширенного управления ключами.
   
 **'** string_sid **'**  
-Указывает, что в выходных данных возвращается идентификатор безопасности асимметричного ключа в формате **nvarchar()**.
+Указывает, что в выходных данных возвращается идентификатор безопасности асимметричного ключа в формате **nvarchar()** .
   
 **'** sid **'**  
 Указывает, что в выходных данных возвращается идентификатор безопасности асимметричного ключа в двоичном формате.

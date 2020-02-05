@@ -9,10 +9,10 @@ ms.assetid: e60e5bab-b286-4897-9685-9ff12703517d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 333c75f3ca10d1ed6ecd738a3dc76a32a53305c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579572"
 ---
 # <a name="report-builder-functions---lookup-function"></a>Функции построителя отчетов — функция Lookup
@@ -59,7 +59,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
  Для получения множества значений по одному имени или ключевому полю, если существует отношение связь "один ко многим", пользуйтесь [функцией LookupSet (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-builder-functions-lookupset-function.md). Для вызова функции **Lookup** для набора значений используйте [функцию Multilookup (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-builder-functions-multilookup-function.md).  
   
- Существуют следующие ограничения.  
+ Применяются следующие ограничения:  
   
 -   Функция**Lookup** вычисляется после применения всех выражений фильтров.  
   

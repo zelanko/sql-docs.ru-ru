@@ -17,10 +17,10 @@ ms.assetid: 826f513e-9ad0-46b9-87ad-7525713638c8
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: db85df99a2b37e2d92997dce579d77d0f31f7c0e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082278"
 ---
 # <a name="revoke-endpoint-permissions-transact-sql"></a>REVOKE, отмена разрешений на конечные точки (Transact-SQL)
@@ -104,7 +104,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-revoking-view-definition-permission-on-an-endpoint"></a>A. Отмена разрешения VIEW DEFINITION в конечной точке  
- В следующем примере отменяется разрешение `VIEW DEFINITION` в конечной точке `Mirror7` из имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `ZArifin`.  
+ В следующем примере отменяется разрешение `VIEW DEFINITION` в конечной точке `Mirror7` из имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`ZArifin`.  
   
 ```  
 USE master;  
@@ -113,7 +113,7 @@ GO
 ```  
   
 ### <a name="b-revoking-take-ownership-permission-with-the-cascade-option"></a>Б. Отмена разрешения TAKE OWNERSHIP с параметром CASCADE  
- В следующем примере отменяется разрешение `TAKE OWNERSHIP` в конечной точке `Shipping83` из пользователя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `PKomosinski` и из всех участников, которым пользователь `PKomosinski` предоставил разрешение `TAKE OWNERSHIP` для `Shipping83`.  
+ В следующем примере отменяется разрешение `TAKE OWNERSHIP` в конечной точке `Shipping83` из пользователя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`PKomosinski` и из всех участников, которым пользователь `PKomosinski` предоставил разрешение `TAKE OWNERSHIP` для `Shipping83`.  
   
 ```  
 USE master;  

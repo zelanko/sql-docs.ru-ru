@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2d674bf516dbdf25f940e9b14792d71c01d44806
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940664"
 ---
 # <a name="preconnectcompleted-event-class"></a>PreConnect:Completed, класс событий
@@ -25,7 +25,7 @@ ms.locfileid: "67940664"
   
 ## <a name="preconnectcompleted-event-class-data-columns"></a>Столбцы данных класса событий PreConnect:Completed  
   
-|Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
+|Имя столбца данных|Тип данных|Description|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |EventClass|**int**|216|27|нет|  
 |SPID|**int**|Идентификатор процесса сервера, создающего это событие.|12|Да|  
@@ -35,17 +35,17 @@ ms.locfileid: "67940664"
 |Duration|**bigint**|Количество времени (в миллисекундах), затраченного функцией-классификатором.|13|Да|  
 |ObjectID|**int**|Идентификатор определяемого пользователем объекта-классификатора.|22|Да|  
 |ЦП|**int**|Использование ЦП в миллисекундах.|18|Да|  
-|Reads|**int**|Количество операций логического считывания.|16|Да|  
-|Writes|**int**|Количество операций логической записи.|17|Да|  
+|Операции чтения|**int**|Количество операций логического считывания.|16|Да|  
+|Запись|**int**|Количество операций логической записи.|17|Да|  
 |GroupID|**int**|Идентификатор классифицированной группы рабочей нагрузки.|66|Да|  
 |Ошибка|**int**|Номер последней ошибки в случае, если выполнение определяемой пользователем функции-классификатора завершилось с ошибкой.|31|Да|  
-|Состояние|**int**|Состояние последней ошибки.|30|Да|  
+|Штат|**int**|Состояние последней ошибки.|30|Да|  
 |TargetUserName|**sysname**|Возвращаемое значение (имя группы рабочей нагрузки) для определяемой пользователем функции-классификатора, если системе не удается найти соответствующую активную группу. В противном случае этот столбец содержит значение NULL.|39|Да|  
 |ObjectName|**nvarchar(256)**|Двухкомпонентное имя определяемой пользователем функции-классификатора. Например, dbo.classifier.|34|Да|  
   
 ## <a name="see-also"></a>См. также:  
  [Расширенные события](../../relational-databases/extended-events/extended-events.md)   
  [PreConnect:Starting, класс событий](../../relational-databases/event-classes/preconnect-starting-event-class.md)   
- [регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)  
+ [Регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)  
   
   

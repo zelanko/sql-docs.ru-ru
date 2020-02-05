@@ -22,10 +22,10 @@ ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
 ms.openlocfilehash: dbf87499f1bc5c23ae272daa393ef981a97e66d5
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68892559"
 ---
 # <a name="upgrade-analysis-services"></a>Обновление служб Analysis Services
@@ -43,7 +43,7 @@ ms.locfileid: "68892559"
 > Уровни совместимости баз данных, подключенных к данному серверу, остаются прежними, если вы не изменили их вручную.
    
   
-### <a name="in-place-upgrade"></a>Обновление на месте  
+### <a name="in-place-upgrade"></a>Обновление «на месте»  
  Обновление автоматически переносит существующие базы данных из старого экземпляра в новый. Поскольку метаданные и двоичные данные между двумя версиями совместимы, после обновления данные сохраняются и их не нужно переносить вручную.  
   
  Чтобы обновить существующий экземпляр, запустите программу установки и укажите имя существующего экземпляра в качестве имени нового экземпляра.  
@@ -79,12 +79,12 @@ ms.locfileid: "68892559"
   
 ||||  
 |-|-|-|  
-|Табличный|1400|SQL Server 2017|
-|Табличный|1200|SQL Server 2016|  
-|Табличный|1103|SQL Server 2014|  
-|Табличный|1100|SQL Server 2012|  
-|Multidimensional|1100|SQL Server 2012 и более поздней версии|  
-|Multidimensional|1050|SQL Server 2005, 2008, 2008 R2|  
+|Таблица|1400|SQL Server 2017|
+|Таблица|1200|SQL Server 2016|  
+|Таблица|1103|SQL Server 2014|  
+|Таблица|1100|SQL Server 2012|  
+|Многомерная|1100|SQL Server 2012 и более поздней версии|  
+|Многомерная|1050|SQL Server 2005, 2008, 2008 R2|  
   
  Дополнительные сведения см. в статьях [Уровень совместимости многомерной базы данных &#40;службы Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services) и [Уровень совместимости табличных моделей служб Analysis Services](https://docs.microsoft.com/analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services).  
   

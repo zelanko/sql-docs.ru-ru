@@ -17,10 +17,10 @@ ms.assetid: 9d4e89f4-478f-419a-8b50-b096771e3880
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: cd783ac6f5f6d8c7a9e561614dbe2c06053f758a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050667"
 ---
 # <a name="grant-system-object-permissions-transact-sql"></a>GRANT, предоставление разрешений на системный объект (Transact-SQL)
@@ -47,7 +47,7 @@ GRANT { SELECT | EXECUTE } ON [ sys.]system_object TO principal
  *principal*  
  Участник, которому предоставляется разрешение.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Данная инструкция может быть использована для предоставления разрешений на доступ к определенным хранимым процедурам, расширенным хранимым процедурам, функциям с табличным значением, скалярным функциям, представлениям, представлениям каталогов и совместимостей, представлениям INFORMATION_SCHEMA, динамическим административным представлениям, а также системным таблицам, установленным [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Каждый из этих системных объектов существует в виде уникальной записи в базе данных ресурсов сервера (mssqlsystemresource). Она доступна только для чтения. Ссылка на объект представляется в виде записи в схеме sys для каждой базы данных. Разрешение на выполнение или выбор системного объекта может быть предоставлено, запрещено или отозвано.  
   
  Предоставление разрешения на выполнение или выбор объекта не подразумевает обязательного наличия других разрешений на использование данного объекта. В большинстве случаев для действий над объектами необходимо обладать дополнительными разрешениями. Например, пользователь, обладающий разрешением EXECUTE на процедуру sp_addlinkedserver, но при этом не являющийся членом предопределенной роли сервера sysadmin, не имеет права создавать связанные серверы.  
@@ -93,7 +93,7 @@ GRANT EXECUTE ON xp_readmail TO Sylvester1;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sys.system_objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)   
  [sys.database_permissions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
  [REVOKE, отмена разрешений на системный объект (Transact-SQL)](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md)   

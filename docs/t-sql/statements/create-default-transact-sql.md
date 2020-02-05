@@ -22,10 +22,10 @@ ms.assetid: 08475db4-7d90-486a-814c-01a99d783d41
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0d6b786725dfb50fceb1376fd104a4b5e5afbc76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67902849"
 ---
 # <a name="create-default-transact-sql"></a>CREATE DEFAULT (Transact-SQL)
@@ -104,7 +104,7 @@ CREATE DEFAULT phonedflt AS 'unknown';
  > [!Note] 
  >  Пропуск записи отличается от явного указания значения NULL в инструкции INSERT.  
   
- Выполнение следующей инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] заканчивается сбоем, так как не существует значения по умолчанию `phonedflt`. Данный пример служит только для демонстрационных целей.  
+ Выполнение следующей инструкции `phonedflt` заканчивается сбоем, так как не существует значения по умолчанию [!INCLUDE[tsql](../../includes/tsql-md.md)]. Данный пример служит только для демонстрационных целей.  
   
 ```sql  
 USE AdventureWorks2012;  

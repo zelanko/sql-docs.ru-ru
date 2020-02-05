@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: 05356cc815fdba22d55ee339d60994f2c9423373
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67959180"
 ---
 # <a name="sql-server-agent-extension-preview"></a>Расширение агента SQL Server (предварительная версия)
@@ -46,7 +46,7 @@ ms.locfileid: "67959180"
 
    ![Просмотр заданий](media/extensions/sql-server-agent-extension/job-view.png)
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Дополнительные сведения об агенте SQL Server см. в [нашей документации](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent?view=sql-server-2017).
 

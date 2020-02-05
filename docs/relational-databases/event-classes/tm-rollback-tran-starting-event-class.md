@@ -1,5 +1,5 @@
 ---
-title: 'Класс событий TM: Rollback Tran Starting | Документация Майкрософт'
+title: 'Класс событий TM: Rollback Tran Starting | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,24 +13,24 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4b0a702203dfbab242965fdb4b729e6f1c73f0cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68049020"
 ---
-# <a name="tm-rollback-tran-starting-event-class"></a>TM. Класс события Rollback Tran Starting
+# <a name="tm-rollback-tran-starting-event-class"></a>Класс событий TM: Rollback Tran Starting
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  События класса TM: Rollback Tran Starting указывают на выполнение запроса ROLLBACK TRANSACTION. Клиент направляет этот запрос через интерфейс управления транзакциями. Столбец EventSubClass указывает, будет ли начата новая транзакция после отката текущей транзакции.  
+  Класс событий "TM:Rollback Tran Starting" указывает на начало выполнения запроса ROLLBACK TRANSACTION. Клиент направляет этот запрос через интерфейс управления транзакциями. Столбец EventSubClass указывает, будет ли начата новая транзакция после отката текущей транзакции.  
   
 ## <a name="tm-rollback-tran-starting-event-class-data-columns"></a>Столбцы данных класса событий TM: Rollback Tran Starting  
   
-|Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
+|Имя столбца данных|Тип данных|Description|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Имя клиентского приложения, установившего соединение с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот столбец заполняется значениями, передаваемыми приложением, а не отображаемым именем программы.|10|Да|  
 |ClientProcessID|**int**|Идентификатор, присвоенный главным компьютером сервера процессу, в котором работает клиентское приложение. Этот столбец данных заполняется в том случае, если клиент вводит идентификатор клиентского процесса.|9|Да|  
 |DatabaseID|**int**|Идентификатор базы данных, указанной в инструкции USE *database* , или базы данных по умолчанию, если для данного экземпляра инструкция USE *database* не выполнялась. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] отображает имя базы данных, если столбец данных ServerName захвачен при трассировке и сервер доступен. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
-|DatabaseName|**nvarchar**|Имя базы данных, в которой выполняется пользовательская инструкция.|35|Да|  
+|имя_базы_данных|**nvarchar**|Имя базы данных, в которой выполняется пользовательская инструкция.|35|Да|  
 |EventClass|**int**|Тип события = 187.|27|нет|  
 |EventSequence|**int**|Порядковый номер данного события в запросе.|51|нет|  
 |EventSubClass|**int**|Тип подкласса события.<br /><br /> 1 = откат;<br /><br /> 2 = откат и начало.|21|Да|  

@@ -18,10 +18,10 @@ ms.assetid: 5e0de983-a0fe-48b7-9e08-30588d7271e2
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: f1119c0c906e3a3825882e3fe1043e9bdaceb0f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066302"
 ---
 # <a name="stsrid-geometry-data-type"></a>STSrid (тип данных geometry)

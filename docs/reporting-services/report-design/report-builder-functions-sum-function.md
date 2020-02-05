@@ -9,10 +9,10 @@ ms.assetid: 2b45a024-398d-43b8-9948-b8b23fb674c9
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8f2b86d4fe54943ccc3f4c0f06243b72af5779ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577220"
 ---
 # <a name="report-builder-functions---sum-function"></a>Функции построителя отчетов — функция Sum

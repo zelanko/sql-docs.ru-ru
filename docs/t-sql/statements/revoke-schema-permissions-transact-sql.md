@@ -17,10 +17,10 @@ ms.assetid: a1fabf35-1f42-48db-b0b8-7181f413ba3a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: eb41f051eca6a837abb61c308b67167a1874a44d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914282"
 ---
 # <a name="revoke-schema-permissions-transact-sql"></a>REVOKE, отмена разрешений на схему (Transact-SQL)

@@ -18,10 +18,10 @@ ms.assetid: 6c55032c-7f5e-4181-8e67-c0265032db63
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 09e6d37f95832ed2b3e9a51ef351e6f62e464b74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67950216"
 ---
 # <a name="stgeomcollfromwkb-geometry-data-type"></a>STGeomCollFromWKB (тип данных geometry)
@@ -38,7 +38,7 @@ STGeomCollFromWKB ( 'WKB_geometrycollection' , SRID )
   
 ## <a name="arguments"></a>Аргументы  
  *WKB_geometrycollection*  
- Представление в формате WKB возвращаемого экземпляра **geometrycollection**. *WKB_geometrycollection* — это выражение **varbinary(max)** .  
+ Представление в формате WKB возвращаемого экземпляра **geometrycollection**. *WKB_geometrycollection* — это выражение **varbinary(max)** .  
   
  *SRID*  
  Выражение типа **int**, представляющее идентификатор пространственной ссылки (SRID) возвращаемого экземпляра **geometry**.  
@@ -46,7 +46,7 @@ STGeomCollFromWKB ( 'WKB_geometrycollection' , SRID )
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Тип возвращаемого значения CLR: **SqlGeometry**  
+ Тип возвращаемых данных CLR: **SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
  В зависимости от соответствующих входных данных WKB типу OGC экземпляра **geometry**, возвращаемого `STGeomCollFromWKB()`, задается значение **GeomCollection**, **MultiPolygon**, **MultiLineString** или **MultiPoint**.  

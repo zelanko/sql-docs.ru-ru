@@ -1,5 +1,5 @@
 ---
-title: '? , перечислены ниже. (условный) (выражение служб SSIS) | Документация Майкрософт'
+title: '? : (условный) (выражение служб SSIS) | Документы Майкрософт'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,13 +14,13 @@ ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 758cd90c3932d59e725f6a8a9bf829e59ecf5474
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290166"
 ---
-# <a name="--conditional-ssis-expression"></a>? , перечислены ниже. (условный оператор) (выражение служб SSIS)
+# <a name="--conditional-ssis-expression"></a>? : (условный) (выражение служб SSIS)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -61,9 +61,9 @@ boolean_expression?expression1:expression2
   
 -   **Числовой** Как *expression1* , так и *expression2* должны иметь числовой тип данных. В соответствии с правилами неявных числовых преобразований, выполняемых средством оценки выражений, пересечением типов данных должен быть числовой тип данных. NULL не может быть значением пересечения двух числовых типов данных. Дополнительные сведения см. в разделе [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
   
--   **Строковый**. Значения выражений *expression1* и *expression2* должны иметь строковый тип: DT_STR или DT_WSTR. Вычисленные значения этих двух выражений могут иметь различные строковые типы данных. Результат будет иметь тип данных DT_WSTR с длиной более длинного аргумента.  
+-   **Строковый** . Значения выражений *expression1* и *expression2* должны иметь строковый тип: DT_STR или DT_WSTR. Вычисленные значения этих двух выражений могут иметь различные строковые типы данных. Результат будет иметь тип данных DT_WSTR с длиной более длинного аргумента.  
   
--   **Дата, время или дата и время**. Значения выражений *expression1* и *expression2* должны иметь один из следующих типов данных: DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET или DT_FILETIME.  
+-   **Дата, время или дата-время** . Значения выражений *expression1* и *expression2* должны иметь один из следующих типов данных: DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET и DT_FILETIME.  
   
     > [!NOTE]  
     >  Система не поддерживает сравнения выражений, значения которых имеют тип данных даты, времени или даты-времени. Возникнет ошибка.  

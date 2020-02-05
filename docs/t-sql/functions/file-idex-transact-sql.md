@@ -23,13 +23,13 @@ ms.assetid: 7532fea5-ee5e-4edd-b98b-111a7ba56c8e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 59b44b3356a0f71074543eb35107040ff8c47982
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071504"
 ---
-# <a name="fileidex-transact-sql"></a>FILE_IDEX (Transact-SQL)
+# <a name="file_idex-transact-sql"></a>FILE_IDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Эта функция возвращает номер идентификатора файла для указанного логического имени файла данных, файла журнала, или полнотекстового файла в текущей базе данных. 

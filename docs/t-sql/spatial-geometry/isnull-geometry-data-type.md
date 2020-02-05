@@ -17,10 +17,10 @@ ms.assetid: f95813a5-26c0-48aa-bfb8-56d2a0980788
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: d0b05e5d73c75e340535c3323a8219dedf5be76d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101228"
 ---
 # <a name="isnull-geometry-data-type"></a>IsNull (тип данных geometry)

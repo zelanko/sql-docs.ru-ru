@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 980b179f39edc3e93e5cb0bc105b6b2f8d12bb58
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903745"
 ---
 # <a name="create-a-database-schema"></a>Создание схемы базы данных
@@ -65,7 +65,7 @@ ms.locfileid: "72903745"
 > Диалоговое окно не будет отображаться, если вы создаете схему с помощью SSMS для **базы данных SQL Azure** или **хранилища данных SQL Azure**. Потребуется создать схему шаблона T-SQL.
   
 ### <a name="additional-options"></a>Дополнительные параметры  
- Диалоговое окно **Схема — создать** также содержит параметры на двух дополнительных страницах: **Разрешения** и **Расширенные свойства**.  
+ Диалоговое окно **Схема — создание** также содержит параметры на двух дополнительных страницах: **Разрешения** и **Расширенные свойства**.  
   
 -   На странице **Разрешения** перечислены все возможные защищаемые объекты и разрешения на эти объекты, которые могут быть предоставлены для имени входа.  
   

@@ -10,19 +10,16 @@ ms.topic: language-reference
 ms.assetid: 1b38e8e3-c560-4b6e-b60e-bfd7cfcd4fdf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 957d0fa1d5b311fbecfd76340e443e8f2f3f81f5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: b5de8c538d0ee91f8d176637beceabdf9352177a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71296424"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76037054"
 ---
 # <a name="functions---dm_execution_performance_counters"></a>Функции — dm_execution_performance_counters
 
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
-
-
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   Возвращает статистику производительности для выполнения на сервере [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
@@ -42,7 +39,7 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 ## <a name="remarks"></a>Remarks  
  В следующей таблице перечислены значения имени счетчика, возвращаемые функцией dm_execution_performance_counter.  
   
-|Имя счетчика|Описание|  
+|Имя счетчика|Description|  
 |------------------|-----------------|  
 |Считано байтов BLOB|Число байтов данных большого двоичного объекта (BLOB), которое подсистема обработки потока данных считывает из всех источников.|  
 |Записано байтов BLOB|Число байтов данных BLOB, которые подсистема обработки потока данных записывает во все назначения.|  
@@ -60,7 +57,7 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 ## <a name="return"></a>Возвращает  
  Функция dm_execution_performance_counters возвращает таблицу со следующими столбцами для запущенного выполнения. Возвращаемые данные относятся ко всем пакетам, содержащимся в выполнении. Если отсутствуют активные выполнения, то возвращается пустая таблица.  
   
-|Имя столбца|Тип столбца|Описание|Remarks|  
+|Имя столбца|Тип столбца|Description|Remarks|  
 |-----------------|-----------------|-----------------|-------------|  
 |execution_id|**BigInt**<br /><br /> **NULL** не является допустимым значением.|Уникальный идентификатор выполнения, содержащего пакет.||  
 |counter_name|**nvarchar(128)**|Имя счетчика.|См. раздел **Примечания** в описании значений.|  

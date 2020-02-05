@@ -13,27 +13,27 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 92d7ba023176aabd08179638fbccfd37540d345f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68085356"
 ---
-# <a name="spcacheremove-event-class"></a>SP:CacheRemove, класс событий
+# <a name="spcacheremove-event-class"></a>Класс событий SP:CacheRemove
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Класс событий SP:CacheRemove указывает на то, что хранимая процедура была удалена из кэша планов.  
   
 ## <a name="spcacheremove-event-class-data-columns"></a>Столбцы данных класса событий SP:CacheRemove  
   
-|Имя столбца данных|**Data type**|Описание|Идентификатор столбца|Фильтруемый|  
+|Имя столбца данных|**Data type**|Description|Идентификатор столбца|Фильтруемый|  
 |----------------------|-------------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Имя клиентского приложения, установившего соединение с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот столбец заполняется значениями, передаваемыми приложением, а не отображаемым именем программы.|10|Да|  
 |ClientProcessID|**int**|Идентификатор, присвоенный главным компьютером сервера процессу, в котором работает клиентское приложение. Этот столбец данных заполняется в том случае, если клиент предоставляет идентификатор клиентского процесса.|9|Да|  
 |DatabaseID|**int**|Идентификатор базы данных, в которой выполняется хранимая процедура. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
-|DatabaseName|**nvarchar**|Имя базы данных, в которой выполняется хранимая процедура.|35|Да|  
+|имя_базы_данных|**nvarchar**|Имя базы данных, в которой выполняется хранимая процедура.|35|Да|  
 |EventClass|**int**|Тип события = 36.|27|нет|  
 |EventSequence|**int**|Последовательность данного события в запросе.|51|нет|  
-|EventSubClass|**int**|Тип подкласса события.<br /><br /> 1 = удаление из плана Compplan. Скомпилированный план запроса был удален из кэша.<br /><br /> 2 = сброс кэша процедур. Все записи были удалены из кэша процедур.|21|Да|  
+|EventSubClass|**int**|Тип подкласса события.<br /><br /> 1 = удаление из плана Comppla: скомпилированный план запроса был удален из кэша.<br /><br /> 2 = сброс кэша процедур: все записи были удалены из кэша процедур.|21|Да|  
 |GroupID|**int**|Идентификатор группы рабочей нагрузки, в которой запускается событие трассировки SQL.|66|Да|  
 |HostName|**nvarchar**|Имя компьютера, на котором выполняется клиентская программа. Этот столбец данных заполняется, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
 |IsSystem|**int**|Указывает, произошло событие в системном или в пользовательском процессе. 1 = системный, 0 = пользовательский.|60|Да|  
@@ -42,7 +42,7 @@ ms.locfileid: "68085356"
 |NTDomainName|**nvarchar**|Домен Windows, к которому принадлежит пользователь.|7|Да|  
 |NTUserName|**nvarchar**|Имя пользователя Windows.|6|Да|  
 |ObjectID|**int**|Назначенный системой идентификатор хранимой процедуры.|22|Да|  
-|ObjectType|**int**|Значение, представляющее тип объекта, связанного с событием. Это значение соответствует столбцу типа в представлении каталога sys.objects. Значения см. в разделе [Столбец события трассировки ObjectType](../../relational-databases/event-classes/objecttype-trace-event-column.md).|28|Да|  
+|ObjectType|**int**|Значение, представляющее тип объекта, связанного с событием. Это значение соответствует столбцу типа в представлении каталога sys.objects. Значения см. в разделе [Столбец события ObjectType Trace](../../relational-databases/event-classes/objecttype-trace-event-column.md).|28|Да|  
 |RequestID|**int**|Идентификатор запроса, содержащего инструкцию.|49|Да|  
 |ServerName|**nvarchar**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26|нет|  
 |SessionLoginName|**nvarchar**|Имя входа пользователя, создавшего этот сеанс. Например, при соединении с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под именем Login1 и при выполнении инструкции под именем Login2 SessionLoginName будет содержать значение Login1, а LoginName — значение Login2. В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  

@@ -1,5 +1,5 @@
 ---
-title: Руководство. Подписывание хранимых процедур с помощью сертификата
+title: Учебник. Подписывание хранимых процедур с помощью сертификата
 ms.custom: seo-dt-2019
 ms.date: 08/23/2018
 ms.prod: sql
@@ -13,13 +13,13 @@ ms.assetid: a4b0f23b-bdc8-425f-b0b9-e0621894f47e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d6d95dc22b557b24cb2ab3a5b4515a0adfa8c605
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095667"
 ---
-# <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>Руководство. Подписывание хранимых процедур с помощью сертификата
+# <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>Учебник. Подписывание хранимых процедур с помощью сертификата
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 В этом учебнике демонстрируется подписание хранимых процедур с помощью сертификата, созданного [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
@@ -37,7 +37,7 @@ ms.locfileid: "74095667"
 ## <a name="prerequisites"></a>предварительные требования
 Для работы с этим учебником требуется среда SQL Server Management Studio, доступ к серверу SQL Server и база данных AdventureWorks.
 
-- Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Установите выпуск [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 - Скачайте [примеры баз данных AdventureWorks2017](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
 
@@ -74,7 +74,7 @@ GO
 ```  
   
 ## <a name="3-create-and-sign-a-stored-procedure-using-the-certificate"></a>3. Создание и подписывание хранимой процедуры с помощью сертификата  
-Используйте следующий код, чтобы создать хранимую процедуру, которая выбирает данные из таблицы `Vendor` в схеме базы данных `Purchasing`, ограничивая доступ и предоставляя его только для компаний с уровнем кредитоспособности 1. В первом разделе хранимой процедуры в целях демонстрации основных принципов работы выводится контекст учетной записи пользователя, с которой работает процедура. Удовлетворять требованиям не обязательно.  
+Используйте следующий код, чтобы создать хранимую процедуру, которая выбирает данные из таблицы `Vendor` в схеме базы данных `Purchasing` , ограничивая доступ и предоставляя его только для компаний с уровнем кредитоспособности 1. В первом разделе хранимой процедуры в целях демонстрации основных принципов работы выводится контекст учетной записи пользователя, с которой работает процедура. Удовлетворять требованиям не обязательно.  
   
 ```sql  
 CREATE PROCEDURE TestCreditRatingSP  
@@ -138,7 +138,7 @@ GO
 Дополнительные сведения о предоставлении разрешений объектам см. в разделе [GRANT (Transact-SQL)](../t-sql/statements/grant-transact-sql.md).  
   
 ## <a name="6-display-the-access-context"></a>6. Отображение контекста доступа  
-Для отображения прав, связанных с доступом хранимой процедуры, запустите следующий код, чтобы предоставить права на запуск хранимой процедуры пользователю `TestCreditRatingUser`.  
+Для отображения прав, связанных с доступом хранимой процедуры, запустите следующий код, чтобы предоставить права на запуск хранимой процедуры пользователю `TestCreditRatingUser` .  
   
 ```sql  
 GRANT EXECUTE   
@@ -285,7 +285,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
-[Центр обеспечения безопасности для базы данных Azure SQL и SQL Server Database Engine](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+[Центр безопасности для ядра СУБД SQL Server и Базы данных Azure SQL](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
   

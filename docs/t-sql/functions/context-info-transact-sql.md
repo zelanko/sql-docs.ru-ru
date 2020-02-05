@@ -22,13 +22,13 @@ ms.assetid: 571320f5-7228-4b0e-9d01-ab732d2d1eab
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b6278faa80721ce500257650db70359dcc740ee8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68132066"
 ---
-# <a name="contextinfo--transact-sql"></a>CONTEXT_INFO (Transact-SQL)
+# <a name="context_info--transact-sql"></a>CONTEXT_INFO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Эта функция возвращает значение **context_info**, установленное для текущего сеанса или пакета либо полученное с помощью инструкции [SET CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md).

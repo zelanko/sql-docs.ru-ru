@@ -19,10 +19,10 @@ ms.assetid: dc224f4f-b339-4eb6-a008-1b4fe0ea4fd2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 23cea7d670916db9dfd13fa37170967a3c19d11c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297131"
 ---
 # <a name="coding-a-custom-task"></a>Создание кода пользовательской задачи
@@ -167,7 +167,7 @@ End Class
   
  В следующей таблице перечислены параметры, передаваемые задаче в методе <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>.  
   
-|Параметр|Описание|  
+|Параметр|Description|  
 |---------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Connections>|Содержит коллекцию объектов <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>, доступных для задачи.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.VariableDispenser>|Содержит переменные, доступные для задачи. Переменные используются задачами через свойство VariableDispenser, а не напрямую. Свойство VariableDispenser осуществляет блокировку и разблокирование переменных, а также предотвращает взаимоблокировки или перезаписи.|  

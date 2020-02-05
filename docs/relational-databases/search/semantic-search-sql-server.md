@@ -15,10 +15,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 70798b0e967d62b51879cc694c8eb43363d364c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67912949"
 ---
 # <a name="semantic-search-sql-server"></a>Семантический поиск (SQL Server)
@@ -101,17 +101,17 @@ SELECT @SourceTitle AS SourceTitle, @MatchedTitle AS MatchedTitle, keyphrase, sc
  [Включение семантического поиска по таблицам и столбцам](../../relational-databases/search/enable-semantic-search-on-tables-and-columns.md)  
  Описывает способ включения или отключения статистического семантического индексирования в выбранных столбцах, содержащих документы или текст.  
   
- [Поиск ключевых фраз в документах с использованием семантического поиска](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md)  
+ [Поиск ключевых фраз в документах с помощью семантического поиска](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md)  
  Описывает способ поиска ключевых фраз в документах или текстовых столбцах, настроенных для статистического семантического индексирования.  
   
- [Поиск похожих и связанных документов с использованием семантического поиска](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)  
+ [Поиск похожих и связанных документов с помощью семантического поиска](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)  
  Описывает процесс поиска схожих или связанных документов или текстовых значений и сведений об их сходстве или связи в столбцах, настроенных для статистического семантического индексирования.  
   
- [Управление и наблюдение за семантическим поиском](../../relational-databases/search/manage-and-monitor-semantic-search.md)  
+ [Управление семантическим поиском и наблюдение за ним](../../relational-databases/search/manage-and-monitor-semantic-search.md)  
  Описывается процесс семантического индексирования и задачи, связанные с наблюдением за индексами и управлением ими.  
   
 ##  <a name="relcontent"></a> Related content  
- [Инструкции семантического поиска DDL, функции, хранимые процедуры и представления](../../relational-databases/search/semantic-search-ddl-functions-stored-procedures-and-views.md)  
+ [Инструкции DDL, функции, хранимые процедуры и представления для семантического поиска](../../relational-databases/search/semantic-search-ddl-functions-stored-procedures-and-views.md)  
  Содержит список инструкций Transact-SQL и объектов базы данных SQL Server, добавленных или измененных для поддержки статистического семантического поиска.  
   
   

@@ -13,10 +13,10 @@ ms.assetid: 61243c87-bd62-4510-863f-2a8f347caf1f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 44328d275c962c1f6315e56e763c3a8550318ffb
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74821809"
 ---
 # <a name="view-availability-group-properties-sql-server"></a>Просмотр свойств группы доступности (SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "74821809"
   
 3.  Щелкните правой кнопкой мыши группу доступности, свойства которой нужно просмотреть, и выберите команду **Свойства** .  
   
-4.  В диалоговом окне **Свойства группы доступности** просмотреть и в некоторых случаях изменить свойства выбранной группы доступности можно на страницах **Общие** и **Настройки резервного копирования** . Дополнительные сведения см. в разделе [Свойства группы доступности. Создание группы доступности (страница "Общие")](../../../database-engine/availability-groups/windows/availability-group-properties-new-availability-group-general-page.md) и [Свойства группы доступности. Создание группы доступности (страница настроек резервного копирования)](../../../database-engine/availability-groups/windows/availability-group-properties-new-availability-group-backup-preferences-page.md).  
+4.  В диалоговом окне **Свойства группы доступности** просмотреть и в некоторых случаях изменить свойства выбранной группы доступности можно на страницах **Общие** и **Настройки резервного копирования** . Дополнительные сведения см. в статье [Свойства группы доступности: создание групп доступности (страница "Общие")](../../../database-engine/availability-groups/windows/availability-group-properties-new-availability-group-general-page.md) и [Свойства группы доступности: создание группы доступности (страница "Настройки резервного копирования")](../../../database-engine/availability-groups/windows/availability-group-properties-new-availability-group-backup-preferences-page.md).  
   
      На странице **Разрешения** можно просмотреть текущие имена входа, роли и явные разрешения, связанные с группой доступности. Дополнительные сведения см. в статье [Permissions or Securables Page](../../../relational-databases/security/permissions-or-securables-page.md).  
   

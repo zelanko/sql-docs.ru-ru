@@ -11,10 +11,10 @@ ms.assetid: 8fa82822-ac99-48ef-a18d-f4f3a77105b4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 595af36a5eb19ff6fd019df8a2b9203537350c5a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298908"
 ---
 # <a name="cdc-instance-deployment-script"></a>Скрипт развертывания экземпляра CDC
@@ -37,7 +37,7 @@ ms.locfileid: "71298908"
  **Сохранить как**  
  Сохранение скрипта в текстовый файл, который можно разместить в любом каталоге. Файл со скриптом можно скопировать на любой другой сервер, чтобы выполнить его там.  
   
- **Копировать**  
+ **Copy**.  
  Копирует скрипт в буфер обмена. Затем скрипт можно будет вставить в среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или любой текстовый редактор для последующего выполнения.  
   
 ## <a name="see-also"></a>См. также:  
