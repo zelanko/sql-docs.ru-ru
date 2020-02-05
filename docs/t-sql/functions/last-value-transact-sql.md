@@ -20,13 +20,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 53053b4f2176a01970f433072634a49ec0d21eb3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109189"
 ---
-# <a name="lastvalue-transact-sql"></a>LAST_VALUE (Transact-SQL)
+# <a name="last_value-transact-sql"></a>LAST_VALUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
   Возвращает последнее значение из упорядоченного набора значений в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -58,7 +58,7 @@ LAST_VALUE ( [ scalar_expression ] )
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-using-lastvalue-over-partitions"></a>A. Использование LAST_VALUE для секций  
+### <a name="a-using-last_value-over-partitions"></a>A. Использование LAST_VALUE для секций  
  В следующем примере показано возвращение даты найма последнего сотрудника каждого отдела для указанной заработной платы (Rate). Предложение PARTITION BY разделяет сотрудников по отделам, а функция LAST_VALUE применяется к каждой секции в отдельности. Предложение ORDER BY, указанное в предложении OVER, определяет логический порядок, в котором функция LAST_VALUE применяется к строкам каждой секции.  
   
 ```  
@@ -99,7 +99,7 @@ Information Services        Trenary                 50.4808      2003-01-12   20
   
 ```  
   
-### <a name="b-using-firstvalue-and-lastvalue-in-a-computed-expression"></a>Б. Использование функций FIRST_VALUE и LAST_VALUE в вычисляемом выражении  
+### <a name="b-using-first_value-and-last_value-in-a-computed-expression"></a>Б. Использование функций FIRST_VALUE и LAST_VALUE в вычисляемом выражении  
  В следующем примере с помощью функций FIRST_VALUE и LAST_VALUE, указанных в вычисляемых выражениях, показывается разница между значением квоты продаж для текущего квартала и для первого и последнего квартала года соответственно для данного числа сотрудников. Функция FIRST_VALUE возвращает значение квоты продаж за первый квартал года, затем вычитает его из значения квоты продаж за текущий квартал. Итог возвращается в производном столбце с именем DifferenceFromFirstQuarter. За первый квартал года значение столбца DifferenceFromFirstQuarter составляет 0. Функция LAST_VALUE возвращает значение квоты продаж за последний квартал года, затем вычитает его из значения квоты продаж за текущий квартал. Итог возвращается в производном столбце с именем DifferenceFromLastQuarter. За последний квартал года значение столбца DifferenceFromLastQuarter составляет 0.  
   
  Предложение RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING необходимо в этом примере для ненулевых значений, возвращаемых в столбце DifferenceFromLastQuarter, как показано ниже. Диапазоном по умолчанию является RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW. В этом примере результатом использования указанного диапазона по умолчанию (если не включать диапазон, будет использоваться диапазон по умолчанию) будет возврат нулей в столбце DifferenceFromLastQuarter. Дополнительные сведения см. в статье [Предложение OVER (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md).  

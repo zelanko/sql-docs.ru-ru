@@ -22,10 +22,10 @@ ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4a334b4a02126023b94e5623b45050b067b48ce6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68096820"
 ---
 # <a name="xml-schema-collections-sql-server"></a>Коллекции XML-схем (SQL Server)
@@ -36,9 +36,9 @@ ms.locfileid: "68096820"
   
 -   типизация XML-данных, хранимых в базе данных.  
   
- Коллекция XML-схем — это сущность класса метаданных, подобная таблице в базе данных. Можно создавать, изменять и удалять эти схемы. Схемы, указанные в инструкции [CREATE XML SCHEMA COLLECTION (Transact-SQL)](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) , автоматически импортируются в создаваемую коллекцию XML-схем. Можно импортировать дополнительные схемы или компоненты схем в существующую в базе данных коллекцию при помощи инструкции [ALTER XML SCHEMA COLLECTION (Transact-SQL)](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md).  
+ Коллекция XML-схем — это сущность класса метаданных, подобная таблице в базе данных. Можно создавать, изменять и удалять эти схемы. Схемы, указанные в инструкции [CREATE XML SCHEMA COLLECTION (Transact-SQL)](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) , автоматически импортируются в создаваемую коллекцию XML-схем. Можно импортировать дополнительные схемы или компоненты схем в существующую в базе данных коллекцию при помощи инструкции [ALTER XML SCHEMA COLLECTION (Transact-SQL)](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md) .  
   
- Как описано в разделе [Сравнение типизированного и нетипизированного XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md), код XML, хранимый в столбце или переменной, с которой связана схема, называется **типизированным**, потому что схема предоставляет необходимую информацию о типах данных экземпляра. В SQL Server эта информация о типах используется для оптимизации хранения данных.  
+ Как описано в разделе [Сравнение типизированного и нетипизированного XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md), код XML, хранимый в столбце или переменной, с которой связана схема, называется **типизированным** , потому что схема предоставляет необходимую информацию о типах данных экземпляра. В SQL Server эта информация о типах используется для оптимизации хранения данных.  
   
  Механизм обработки запросов применяет схемы для проверки типов, а также оптимизации запросов и изменения данных.  
   
@@ -156,7 +156,7 @@ ms.locfileid: "68096820"
   
      В этом подразделе речь идет о том, каким образом можно использовать отмену разрешений для предотвращения создания коллекции XML-схем и как отменять разрешения на объекты коллекции XML-схем.  
   
--   [Запрещает разрешения на коллекцию схем XML.](../../relational-databases/xml/deny-permissions-on-an-xml-schema-collection.md)  
+-   [Запрет разрешения на коллекцию схем XML](../../relational-databases/xml/deny-permissions-on-an-xml-schema-collection.md)  
   
      В этом подразделе речь идет о том, каким образом запрещаются разрешения на создание коллекции XML-схем и разрешения на объекты коллекции схем XML.  
   
@@ -173,7 +173,7 @@ ms.locfileid: "68096820"
   
  Все это поясняют следующие примеры.  
   
-### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>Пример Перечисление пространств имен XML, входящих в коллекцию XML-схем  
+### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>Пример: перечисление пространств имен XML, входящих в коллекцию схем XML  
  Выполните следующий запрос для коллекции XML-схем «myCollection»:  
   
 ```sql
@@ -183,7 +183,7 @@ FROM    sys.xml_schema_collections XSC JOIN sys.xml_schema_namespaces XSN
 WHERE    XSC.name = 'myCollection'     
 ```  
   
-### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>Пример Перечисление содержимого коллекции XML-схем  
+### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>Пример: перечисление содержимого коллекции схем XML  
  Следующая инструкция перебирает содержимое коллекции XML-схем «myCollection» реляционной схемы dbo.  
   
 ```sql
@@ -192,7 +192,7 @@ SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')
   
  Отдельные XML-схемы из коллекции можно получить как экземпляры типа данных **xl** , указав целевое пространство имен в качестве третьего аргумента функции **XML_SCHEMA_NAMESPACE()** . Это показано в следующем примере.  
   
-### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>Пример Вывод конкретной схемы из коллекции XML-схем  
+### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>Пример: вывод конкретной схемы из коллекции схем XML  
  Следующая инструкция выводит XML-схему с _симулированным_ целевым пространством имен https/\/www.microsoft.com/was-books из коллекции XML-схем myCollection реляционной схемы dbo.  
   
 ```sql

@@ -13,10 +13,10 @@ ms.assetid: 47b9c236-66a3-4c42-97ee-da5555bdc046
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: fff8aa7a2e37f66470798b2772ed00d0298708a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68093414"
 ---
 # <a name="sql-server-memory-broker-clerks-object"></a>SQL Server, объект клерков брокера памяти
@@ -25,7 +25,7 @@ ms.locfileid: "68093414"
 
 В следующей таблице представлены объекты производительности **Memory Broker Clerks** SQL Server.
 
-|**SQL Server, счетчики клерков брокера памяти**|Описание|  
+|**SQL Server, счетчики клерков брокера памяти**|Description|  
 |-------------|-----------------|  
 |**Внутреннее преимущество**|Внутреннее значение нехватки памяти в миллисекундах на страницу, умноженное на 10 миллиардов и округленное до целого числа.|
 |**Размер клерка брокера памяти**|Размер клерка памяти в страницах.|

@@ -19,10 +19,10 @@ ms.assetid: 92eabe4b-24e2-43b1-978c-31a199964b90
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b408b030a27b1e6ebe0fc94db8b6ee32cbb837ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67898047"
 ---
 # <a name="drop-event-session-transact-sql"></a>DROP EVENT SESSION (Transact-SQL)
@@ -43,7 +43,7 @@ ON SERVER
  *event_session_name*  
  Имя существующего сеанса событий.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  При удалении сеанса событий полностью удаляются все сведения о конфигурации, такие как цели и параметры сеанса.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -57,7 +57,7 @@ DROP EVENT SESSION evt_spin_lock_diagnosis ON SERVER;
 GO
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [CREATE EVENT SESSION (Transact-SQL)](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION (Transact-SQL)](../../t-sql/statements/alter-event-session-transact-sql.md)   
  [sys.server_event_sessions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql.md)  

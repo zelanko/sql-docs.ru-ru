@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 77a9ade2-cdc0-4ae9-a02d-6e29d7c2ada0
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 68be2c5a44777bb62a594cf2ab612e46a078d0eb
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 3624d1eef64f10ae93802c4a7514fd54edcc0e74
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68767846"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287931"
 ---
 # <a name="initialize-a-subscription-with-a-snapshot"></a>Инициализация подписки с помощью моментального снимка
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "68767846"
  Если передача моментального снимка прерывается в любой точке, она автоматически возобновляется, не передавая повторно файлы, которые уже были переданы полностью. Единицей доставки для агента моментальных снимков является BCP-файл статьи публикации, поэтому файлы, доставленные частично, должны быть повторно доставлены полностью. Однако возобновление моментального снимка может значительно снизить объем передаваемых данных и гарантировать своевременную доставку снимка, даже если соединение ненадежно.  
   
 ## <a name="snapshot-options"></a>Параметры моментального снимка  
- При инициализации подписки с помощью моментального снимка есть несколько возможностей. Возможные действия:  
+ При инициализации подписки с помощью моментального снимка есть несколько возможностей. Вы можете:  
   
 -   Указать другое расположение папки моментальных снимков вместо или дополнительно к папке по умолчанию. Дополнительные сведения см. в разделе [Изменение параметров моментального снимка](../../relational-databases/replication/snapshot-options.md).  
   

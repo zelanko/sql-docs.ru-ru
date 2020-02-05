@@ -11,10 +11,10 @@ ms.assetid: 273a54f8-b107-4f36-9461-2b475644760d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9026edfafeb24eae766e9d42634512a565b6934b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296679"
 ---
 # <a name="catalogevent_message_context"></a>catalog.event_message_context 
@@ -26,7 +26,7 @@ ms.locfileid: "71296679"
 
   Отображает сведения об условиях, которые связаны с сообщениями о событиях выполнения, для выполнений на сервере [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |Context_id|BIGINT|Уникальный идентификатор контекста ошибки.|  
 |Event_message_id|BIGINT|Уникальный идентификатор сообщения, к которому относится контекст.|  
@@ -43,7 +43,7 @@ ms.locfileid: "71296679"
   
 ||||  
 |-|-|-|  
-|Значение типа контекста|Имя типа|Описание|  
+|Значение типа контекста|Имя типа|Description|  
 |10|Задача|Состояние задачи при возникновении ошибки.|  
 |20|Pipeline|Ошибка компонента конвейера: компонент источника, назначения или преобразования.|  
 |30|Последовательность|Состояние последовательности.|  

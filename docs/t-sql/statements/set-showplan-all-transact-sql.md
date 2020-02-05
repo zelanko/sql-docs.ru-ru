@@ -27,13 +27,13 @@ ms.assetid: a500b682-bae4-470f-9e00-47de905b851b
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 063c4c94fc457b6b9bb69fa0395398c62bf49516
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67941692"
 ---
-# <a name="set-showplanall-transact-sql"></a>SET SHOWPLAN_ALL (Transact-SQL)
+# <a name="set-showplan_all-transact-sql"></a>SET SHOWPLAN_ALL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Приводит к тому, что Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не выполняет инструкции языка [!INCLUDE[tsql](../../includes/tsql-md.md)]. Вместо этого [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает подробные сведения о выполнении инструкций и предоставляет оценку требований к ресурсам для выполнения этих инструкций.  
@@ -58,7 +58,7 @@ SET SHOWPLAN_ALL { ON | OFF }
   
  Инструкция SET SHOWPLAN_ALL возвращает информацию в виде набора строк, формирующих дерево шагов, которые обработчик запросов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] совершает для выполнения каждой инструкции. Каждой инструкции, отраженной в выходных данных, соответствует одна строка с текстом инструкции, за которой следуют несколько строк с подробными описаниями шагов выполнения. В таблице ниже приведены столбцы, содержащиеся в выводе.  
   
-|Имя столбца|Описание|  
+|Имя столбца|Description|  
 |-----------------|-----------------|  
 |**StmtText**|В строках, не относящихся к типу PLAN_ROW, этот столбец содержит текст инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)]. В строках типа PLAN_ROW этот столбец содержит описание операции. Этот столбец содержит физический оператор и может также, при необходимости, содержать логический оператор. За этим столбцом может идти описание, зависящее от физического оператора. Дополнительные сведения см. в разделе [Справочник по логическим и физическим операторам Showplan](../../relational-databases/showplan-logical-and-physical-operators-reference.md).|  
 |**StmtId**|Номер инструкции в текущем пакете.|  

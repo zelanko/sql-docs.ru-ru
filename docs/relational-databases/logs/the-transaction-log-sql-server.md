@@ -15,10 +15,10 @@ ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: cd975ed830f9a0b705e516707d550697fbf34325
-ms.sourcegitcommit: 93012fddda7b778be414f31a50c0f81fe42674f4
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75493583"
 ---
 # <a name="the-transaction-log-sql-server"></a>Журнал транзакций (SQL Server)
@@ -133,7 +133,7 @@ ms.locfileid: "75493583"
   
  Следующие операции, выполняемые с полным протоколированием в модели полного восстановления, осуществляются с минимальным протоколированием в простой модели восстановления и модели восстановления с неполным протоколированием:  
   
--   Операции массового импорта ([bcp](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) и [INSERT... SELECT](../../t-sql/statements/insert-transact-sql.md)). Дополнительные сведения о том, когда массовый импорт в таблицу подлежит минимальному протоколированию, см. в разделе [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
+-   Операции массового импорта ([bcp](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)и [INSERT... SELECT](../../t-sql/statements/insert-transact-sql.md)). Дополнительные сведения о том, когда массовый импорт в таблицу подлежит минимальному протоколированию, см. в разделе [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   
 Если включена репликация транзакций, операции `BULK INSERT` протоколируются полностью даже в модели восстановления с неполным протоколированием.  
   

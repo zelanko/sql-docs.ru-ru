@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 543488eada46a088f3c634ce2326c7e2db2a97a5
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68105442"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>Рекомендации по производительности и конфигурации для SQL Server на Linux
@@ -31,7 +31,7 @@ ms.locfileid: "68105442"
 
 - **Использование PROCESS AFFINITY для узла и ЦП**
 
-   Рекомендуется использовать инструкцию `ALTER SERVER CONFIGURATION`, чтобы задать `PROCESS AFFINITY` для всех узлов **NUMANODE** или ЦП, используемых для SQL Server в операционной системе Linux (то есть обычно для всех узлов и ЦП). Соответствие процессоров помогает эффективно планировать работу Linux и SQL. Использование параметра **NUMANODE** — простейший метод. Имейте в виду, что **PROCESS AFFINITY** следует использовать, даже если на вашем компьютере всего один узел NUMA.  Дополнительные сведения о задании **PROCESS AFFINITY** см. в документации по [ALTER SERVER CONFIGURATION](../t-sql/statements/alter-server-configuration-transact-sql.md).
+   Рекомендуется использовать инструкцию `ALTER SERVER CONFIGURATION`, чтобы задать `PROCESS AFFINITY` для всех узлов **NUMANODE** или ЦП, используемых для SQL Server в операционной системе Linux (то есть обычно для всех узлов и ЦП). Соответствие процессоров помогает эффективно планировать работу Linux и SQL. Использование параметра **NUMANODE** — простейший метод. Имейте в виду, что **PROCESS AFFINITY** следует использовать, даже если на вашем компьютере всего один узел NUMA.  Дополнительные сведения о задании [PROCESS AFFINITY](../t-sql/statements/alter-server-configuration-transact-sql.md) см. в документации по **ALTER SERVER CONFIGURATION**.
 
 - **Настройка нескольких файлов данных tempdb**
 
@@ -61,7 +61,7 @@ ms.locfileid: "68105442"
 
 В приведенной ниже таблице представлены рекомендации по параметрам ЦП.
 
-| Настройка | Значение | Дополнительные сведения |
+| Параметр | Значение | Дополнительные сведения |
 |---|---|---|
 | Регулятор частоты ЦП | производительность | См. описание команды **cpupower** |
 | ENERGY_PERF_BIAS | производительность | См. описание команды **x86_energy_perf_policy** |
@@ -70,7 +70,7 @@ ms.locfileid: "68105442"
 
 В приведенной ниже таблице представлены рекомендации по параметрам дисков.
 
-| Настройка | Значение | Дополнительные сведения |
+| Параметр | Значение | Дополнительные сведения |
 |---|---|---|
 | Упреждающее чтение с диска | 4096 | См. описание команды **blockdev** |
 | Параметры sysctl | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness = 10 | См. описание команды **sysctl** |
@@ -107,7 +107,7 @@ sysctl -w vm.max_map_count=262144
 
 Если SQL Server на Linux выполняется в виртуальной машине, настройте фиксированный размер памяти, резервируемой для виртуальной машины. Не используйте такие функции, как динамическая память Hyper-V.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Дополнительные сведения о функциях SQL Server, повышающих производительность, см. в статье о [начале работы с функциями производительности](sql-server-linux-performance-get-started.md).
 

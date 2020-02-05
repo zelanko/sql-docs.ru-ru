@@ -15,10 +15,10 @@ ms.assetid: 1547db08-4329-4781-91c2-36898ed71b15
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d98782b0c007f584c5d013c49dafe47a01106a38
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71288635"
 ---
 # <a name="sign-ssis-expression"></a>SIGN (выражение служб SSIS)

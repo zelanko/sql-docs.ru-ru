@@ -14,10 +14,10 @@ ms.assetid: 3e590094-fc49-4144-805f-fdc1bf2fe509
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e85eb7e41a3211f132ea32858bf859c153f15de7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290285"
 ---
 # <a name="datepart-ssis-expression"></a>DATEPART (выражение служб SSIS)
@@ -35,7 +35,7 @@ DATEPART(datepart, date)
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *часть_даты*  
+ *datepart*  
  Параметр, который указывает, для какой части даты вернуть новое значение.  
   
  *date*  
@@ -62,7 +62,7 @@ DATEPART(datepart, date)
 |День недели|dw|  
 |Час|Hh|  
 |Минута|mi, n|  
-|Вторая|ss, s|  
+|Секунда|ss, s|  
 |Миллисекунда|Ms|  
   
 ## <a name="ssis-expression-examples"></a>Примеры выражений служб SSIS  
