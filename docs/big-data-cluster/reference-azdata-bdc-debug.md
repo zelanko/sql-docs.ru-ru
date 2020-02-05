@@ -9,18 +9,18 @@ ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: dd6f6b81f7cd42e666459460a0f11c23b07d4b27
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: cccdc543a572df19849afec16d0a2a71413ed19e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531859"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74820896"
 ---
 # <a name="azdata-bdc-debug"></a>azdata bdc debug
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-В следующей статье приводятся справочные сведения по командам `sql` в средстве `azdata`. Дополнительные сведения о других командах `azdata` см. в [справочнике по azdata](reference-azdata.md)
+В следующей статье приводятся справочные сведения по командам `bdc debug` в средстве `azdata`. Дополнительные сведения о других командах `azdata` см. в [справочнике по azdata](reference-azdata.md)
 
 ## <a name="commands"></a>Команды
 |     |     |
@@ -38,7 +38,7 @@ azdata bdc debug copy-logs --namespace -n
                            [--skip-compress -sc]  
                            [--exclude-dumps -ed]
 ```
-### <a name="required-parameters"></a>Обязательные параметры
+### <a name="required-parameters"></a>Необходимые параметры
 #### `--namespace -n`
 Имя кластера больших данных, используемого для пространства имен Kubernetes.
 ### <a name="optional-parameters"></a>Необязательные параметры
@@ -72,7 +72,7 @@ azdata bdc debug dump --namespace -n
                       --container -c  
                       [--target-folder -d]
 ```
-### <a name="required-parameters"></a>Обязательные параметры
+### <a name="required-parameters"></a>Необходимые параметры
 #### `--namespace -n`
 Имя кластера больших данных, используемого для пространства имен Kubernetes.
 #### `--container -c`
@@ -94,4 +94,4 @@ azdata bdc debug dump --namespace -n
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-Дополнительные сведения о других командах `azdata` см. в [справочнике по azdata](reference-azdata.md). Дополнительные сведения об установке средства `azdata` см. в статье [Установка azdata для управления кластерами больших данных SQL Server 2019](deploy-install-azdata.md).
+Дополнительные сведения о других командах `azdata` см. в [справочнике по azdata](reference-azdata.md). Дополнительные сведения об установке средства `azdata` см. в статье [Установка azdata для управления кластерами больших данных SQL Server 2019](deploy-install-azdata.md).

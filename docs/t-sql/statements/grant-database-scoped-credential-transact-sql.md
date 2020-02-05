@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3d820e8740740335a576385a7c971d1e0fe5eb5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67942943"
 ---
 # <a name="grant-database-scoped-credential-permissions-transact-sql"></a>GRANT, предоставление разрешений на учетные данные для базы данных (Transact-SQL)
@@ -78,7 +78,7 @@ AS *granting_principal*
 -   пользователь базы данных, сопоставленный с асимметричным ключом;  
 -   пользователь базы данных, не сопоставленный с участником на уровне сервера.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Учетные данные для базы данных — это защищаемый объект уровня базы данных, содержащийся в базе данных, являющейся родительским элементом в иерархии разрешений. Ниже перечислены наиболее специфичные и ограниченные разрешения (вместе с наиболее общими разрешениями, куда они входят неявно), которые могут быть предоставлены для учетных данных для базы данных.  
   
 |Разрешения на учетные данные для базы данных|Содержится в разрешении на учетные данные для базы данных|Содержится в разрешении базы данных|  

@@ -22,10 +22,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 393b6e248962fa496dcdac9fe5def556b766a2bd
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056259"
 ---
 # <a name="configure--manage-word-breakers--stemmers-for-search-sql-server"></a>Настройка средств разбиения текста на слова и парадигматических модулей и управление ими для поиска (SQL Server)
@@ -70,7 +70,7 @@ GO
 При добавлении, удалении или изменении средства разбиения по словам следует обновить список кодов локалей, поддерживаемых в Microsoft Windows для полнотекстового индексирования и для выполнения запросов. Дополнительные сведения см. в статье [Просмотр или изменение зарегистрированных фильтры и разделители слов](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md).  
   
 ##  <a name="default"></a> Установка параметра "Язык полнотекстового поиска по умолчанию"  
- Для локализованной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] программа установки задает в качестве значения параметра **default full-text language** язык сервера, если для него существует совпадение. Для нелокализованной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]параметр **default full-text language** по умолчанию имеет значение, соответствующее английскому языку.  
+ Для локализованной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] задает в качестве значения параметра **default full-text language** язык сервера, если для него существует совпадение. Для нелокализованной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]параметр **default full-text language** по умолчанию имеет значение, соответствующее английскому языку.  
   
  При создании или изменении полнотекстового индекса для каждого отдельного полнотекстового индексированного столбца можно указать отдельный язык. Если для столбца не указан язык, по умолчанию используется значение параметра конфигурации **язык полнотекстового поиска по умолчанию**.  
   
@@ -97,7 +97,7 @@ SELECT language_id AS 'LCID' FROM sys.fulltext_index_columns;
   
 |Свойство|Значение|
 |-|-|
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|30053|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
@@ -122,7 +122,7 @@ SELECT language_id AS 'LCID' FROM sys.fulltext_index_columns;
 #### <a name="user-action"></a>Действие пользователя  
  Выберите по следующей таблице действие пользователя, подходящее для устранения предполагаемой причины превышения времени ожидания.  
   
-|Вероятная причина|Действие пользователя|  
+|Возможные причины|Рекомендуемые действия|  
 |--------------------|-----------------|  
 |Неправильно настроено средство разбиения по словам для языка запросов.|Если используется средство разбиения по словам сторонних разработчиков, оно может быть неправильно зарегистрировано в операционной системе. В этом случае повторно зарегистрируйте средство разбиения по словам. Дополнительные сведения см. в статье [Восстановление предыдущих версий средств разбиения текста на слова, используемых поиском](revert-the-word-breakers-used-by-search-to-the-previous-version.md).|  
 |Средство разбиения по словам неправильно обрабатывает определенную строку запроса.|Если средство разбиения по словам поддерживается [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], обратитесь в службу поддержки пользователей Майкрософт.|  
@@ -138,5 +138,5 @@ SELECT language_id AS 'LCID' FROM sys.fulltext_index_columns;
 ## <a name="see-also"></a>См. также:  
  [CREATE FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/create-fulltext-index-transact-sql.md)    
  [ALTER FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/alter-fulltext-index-transact-sql.md)   
- [Настройка и управление стоп-словами и списками стоп-слов для полнотекстового поиска](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
+ [Настройка стоп-слов, списков стоп-слов и управление ими для полнотекстового поиска](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
 

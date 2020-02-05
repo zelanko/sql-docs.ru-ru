@@ -18,10 +18,10 @@ ms.assetid: 21784c66-2725-471b-9e2d-a8c2e3695197
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: b973e39b4e402bbe5fb970a57478587ac240daf0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066535"
 ---
 # <a name="convexhullaggregate-geography-data-type"></a>ConvexHullAggregate (тип данных geography)

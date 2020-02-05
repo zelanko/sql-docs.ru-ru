@@ -20,10 +20,10 @@ ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e605c4fb62e56113a5cc36e418d5648ed6ba3031
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297957"
 ---
 # <a name="derived-column-transformation"></a>Преобразование «Производный столбец»
@@ -55,7 +55,7 @@ ms.locfileid: "71297957"
     > [!NOTE]  
     >  Если выражение ссылается на входной столбец, перезаписанный преобразованием «Производный столбец», то выражение использует первоначальное, а не производное значение столбца.  
   
--   Добавляя результаты в новые столбцы с типом данных **string**, укажите кодовую страницу. Дополнительные сведения см. в разделе [Comparing String Data](../../../integration-services/data-flow/comparing-string-data.md).  
+-   Добавляя результаты в новые столбцы с типом данных **string**, укажите кодовую страницу. Дополнительные сведения см. в статье [Comparing String Data](../../../integration-services/data-flow/comparing-string-data.md).  
   
  Преобразование "Производный столбец" содержит пользовательское свойство FriendlyExpression. Это свойство может быть обновлено выражением свойства при загрузке пакета. Дополнительные сведения см. в разделах [Использование выражений свойств в пакетах](../../../integration-services/expressions/use-property-expressions-in-packages.md)и [Пользовательские свойства преобразований](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
   
@@ -98,7 +98,7 @@ ms.locfileid: "71297957"
   
  Значение этого свойства можно задать с помощью выражения свойства.  
   
- **См. также:** [Выражения служб Integration Services (SSIS)](../../../integration-services/expressions/integration-services-ssis-expressions.md), [Операторы (выражение служб SSIS)](../../../integration-services/expressions/operators-ssis-expression.md) и [Функции (выражение служб SSIS)](../../../integration-services/expressions/functions-ssis-expression.md).  
+ **См. также**: [Выражения служб Integration Services (SSIS)](../../../integration-services/expressions/integration-services-ssis-expressions.md), [Операторы (выражение служб SSIS)](../../../integration-services/expressions/operators-ssis-expression.md) и [Функции (выражение служб SSIS)](../../../integration-services/expressions/functions-ssis-expression.md).  
   
  **Тип данных**  
  При добавлении данных в новый столбец диалоговое окно **Редактор преобразования "Производный столбец"** автоматически оценивает выражение и задает соответствующий тип данных. Значение этого столбца доступно только для чтения. Дополнительные сведения см. в разделе [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md).  
@@ -109,7 +109,7 @@ ms.locfileid: "71297957"
  **Точность**  
  При добавлении данных в новый столбец диалоговое окно **Редактор преобразования "Производный столбец"** автоматически задает точность для числовых данных, основываясь на типе данных. Значение этого столбца доступно только для чтения.  
   
- **Масштаб**  
+ **Масштабирование**  
  При добавлении данных в новый столбец диалоговое окно **Редактор преобразования "Производный столбец"** автоматически задает масштаб для числовых данных, основываясь на типе данных. Значение этого столбца доступно только для чтения.  
   
  **Кодовая страница**  
