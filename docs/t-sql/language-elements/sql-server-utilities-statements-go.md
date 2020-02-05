@@ -20,10 +20,10 @@ ms.assetid: b2ca6791-3a07-4209-ba8e-2248a92dd738
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 48bca691f10822176c5169cf6bf9a052d7675478
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072297"
 ---
 # <a name="sql-server-utilities-statements---go"></a>Инструкции служебных программ SQL Server — GO
@@ -31,7 +31,7 @@ ms.locfileid: "68072297"
 
   В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляются команды, которые не являются инструкциями [!INCLUDE[tsql](../../includes/tsql-md.md)], но распознаются программами **sqlcmd** и **osql**, а также редактором кода в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Эти команды используются для повышения удобочитаемости и упрощения выполнения пакетов и скриптов.  
   
-  GO информирует программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] об окончании пакета инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  GO информирует программы [!INCLUDE[tsql](../../includes/tsql-md.md)] об окончании пакета инструкций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

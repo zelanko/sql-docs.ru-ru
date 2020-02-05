@@ -14,10 +14,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e8f345576db61768d9afe8243dfe41801f68b2ac
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095734"
 ---
 # <a name="json-path-expressions-sql-server"></a>Выражения пути JSON (SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "74095734"
   
 -   При вызове **OPENJSON** для создания реляционного представления данных JSON. Дополнительные сведения см. в разделе [OPENJSON (Transact-SQL)](../../t-sql/functions/openjson-transact-sql.md).  
   
--   При вызове **JSON_VALUE** с целью извлечения значения из текста JSON. Дополнительные сведения см. в разделе [JSON_VALUE &#40;Transact-SQL&#41;](../../t-sql/functions/json-value-transact-sql.md).  
+-   При вызове **JSON_VALUE** с целью извлечения значения из текста JSON. Дополнительные сведения см. в разделе [JSON_VALUE (Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md).  
   
 -   При вызове **JSON_QUERY** для извлечения объекта JSON или массива. Дополнительные сведения см. в разделе [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md).  
   
@@ -65,11 +65,11 @@ SELECT * FROM OPENJSON(@json, N'lax $.info')
   
 -   Путь свойства — это набор действий пути. Действия пути могут содержать следующие элементы и операторы.  
   
-    -   Имена ключей. Например, `$.name` или `$."first name"`. Если имя ключа начинается со знака доллара или содержит специальные символы, например пробелы, заключите его в кавычки.   
+    -   Имена ключей. Например, `$.name` и `$."first name"`. Если имя ключа начинается со знака доллара или содержит специальные символы, например пробелы, заключите его в кавычки.   
   
     -   Элементы массива. Например, `$.product[3]`. Массивы отсчитываются от нуля.  
   
-    -   Оператор "точка" (`.`) указывает на элемент объекта. Например, в `$.people[1].surname` `surname` является дочерним элементом `people`.
+    -   Оператор "точка" (`.`) указывает на элемент объекта. Например, в `$.people[1].surname``surname` является дочерним элементом `people`.
   
 ## <a name="examples"></a>Примеры  
  В примерах этого раздела используется следующий текст JSON.  
@@ -92,7 +92,7 @@ SELECT * FROM OPENJSON(@json, N'lax $.info')
 |Выражение пути|Значение|  
 |---------------------|-----------|  
 |$.people[0].name|Джон|  
-|$.people[1]|{ "name": "Jane",  "surname": null, "active": true }|  
+|$.people[1]|{ "name": "Jane", "surname": null, "active": true }|  
 |$.people[1].surname|null|  
 |$|{ "people": [ { "name": "John",  "surname": "Doe" },<br />   { "name": "Jane",  "surname": null, "active": true } ] }|  
   

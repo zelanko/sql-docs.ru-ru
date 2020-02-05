@@ -16,31 +16,31 @@ ms.assetid: 5c236ddc-766d-4a30-af1e-cc6176eca690
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fade5e48340e8cc2b51b354f9717a561c632e4d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68028629"
 ---
 # <a name="sql-server-browser-service-database-engine-and-ssas"></a>Служба обозревателя SQL Server (компонент Database Engine и SSAS)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Браузер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется как служба Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] прослушивает входящие запросы к ресурсам [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и предоставляет сведения об экземплярах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], установленных на компьютере. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предназначен для выполнения трех задач:  
+  Браузер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]выполняется как служба Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] прослушивает входящие запросы к ресурсам [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и предоставляет сведения об экземплярах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], установленных на компьютере. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предназначен для выполнения трех задач:  
   
 -   просмотра списка доступных серверов;  
   
 -   соединения с нужным экземпляром сервера;  
   
 -   соединения с конечными точками через выделенное административное соединение (DAC).  
-
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] и [!INCLUDE[ssAS](../../includes/ssas-md.md)] получают от службы "Браузер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]" (sqlbrowser) имя и номер версии для каждого экземпляра. Браузер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устанавливается вместе с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
   
- Браузер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настраивается в ходе установки или с помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. По умолчанию служба "Браузер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]" запускается автоматически:  
-
+ Для каждого экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и служб [!INCLUDE[ssAS](../../includes/ssas-md.md)]служба « [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , браузер» (sqlbrowser) выдает имя и номер версии экземпляра. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устанавливается вместе с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настраивается в ходе установки или с помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . По умолчанию служба « [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , браузер» запускается автоматически:  
+  
 -   при обновлении установки;  
   
 -   при установке в кластере;  
   
--   при установке именованного экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], включая все экземпляры SQL Server Express;  
+-   при установке именованного экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , включая все экземпляры SQL Server Express;  
   
 -   при установке именованного экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
@@ -57,9 +57,9 @@ ms.locfileid: "68028629"
  Дополнительные сведения о запуске и остановке браузера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в статье [Запуск, остановка, приостановка, возобновление и перезапуск ядра СУБД, агента SQL Server и обозревателя SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 ## <a name="using-sql-server-browser"></a>Применение обозревателя SQL Server  
- Если служба обозревателя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не работает, вы все равно можете подключиться к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], указав корректный номер порта или именованный канал. Например, вы можете подключиться к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию по протоколу TCP/IP, если он работает на порту 1433. 
+ Если служба « [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , браузер» не запущена, то возможность соединения с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] остается только при указании верного номера порта или именованного канала. Например, к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию можно подключиться по порту TCP/IP, если он прослушивает порт 1433.  
   
- Однако если служба обозревателя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не запущена, следующие соединения невозможны.  
+ Однако если служба « [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , браузер» не запущена, следующие соединения невозможны.  
   
 -   Если какой-либо компонент пытается подключиться к именованному экземпляру без полного указания всех параметров (номера порта TCP/IP или именованного канала).  
   
@@ -73,7 +73,7 @@ ms.locfileid: "68028629"
   
 -   При перечислении серверов в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], программе Enterprise Manager или Query Analizer.  
   
- В клиент-серверном режиме работы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (например, если приложения обращаются к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по сети) при остановке или отключении службы обозревателя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] необходимо назначить каждому экземпляру определенные номера портов и указывать их в коде клиентских приложений. Такой подход приводит к следующим проблемам. 
+ В клиент-серверном режиме работы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (например, если приложения обращаются к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по сети) при остановке или отключении службы « [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , браузер» необходимо назначить каждому экземпляру определенные номера портов и указывать их в коде клиентских приложений. Такой подход приводит к следующим проблемам.  
   
 -   Необходимо обновлять и поддерживать код клиентских приложений, чтобы они соединялись по соответствующим номерам портов.  
   
@@ -126,8 +126,9 @@ ms.locfileid: "68028629"
  Скрытые экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — это экземпляры, которые поддерживают только соединения через общую память. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]установите флаг `HideInstance` , чтобы браузер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не выдавал сведения об этом экземпляре сервера.  
   
 ### <a name="using-a-firewall"></a>Применение брандмауэра  
- Для связи со службой браузера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на сервере, защищенном брандмауэром, в дополнение к TCP-порту [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (например 1433) откройте UDP-порт 1434. Сведения о работе с брандмауэром см. в разделе "Практическое руководство. Настройка брандмауэра для доступа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]" в документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Для связи со службой браузера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на сервере, защищенном брандмауэром, в дополнение к TCP-порту [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (например 1433) откройте UDP-порт 1434. Сведения о работе с брандмауэром см. в статье "Как настроить брандмауэр Windows для доступа к компоненту [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] " в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>См. также:  
  [Сетевые протоколы и библиотеки](../../sql-server/install/network-protocols-and-network-libraries.md)  
- [Скрытие экземпляра компонента SQL Server Database Engine](../../database-engine/configure-windows/hide-an-instance-of-sql-server-database-engine.md)
+ [Скрытие экземпляра компонента SQL Server Database Engine](../../database-engine/configure-windows/hide-an-instance-of-sql-server-database-engine.md)  
+  

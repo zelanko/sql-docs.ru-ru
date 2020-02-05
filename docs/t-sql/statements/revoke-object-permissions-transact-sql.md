@@ -18,10 +18,10 @@ ms.assetid: 99c7146e-d2e7-4f1a-80ff-21a05bc5e8bb
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0e374b0042ec4b46b8c64e71b86d45d1f4cd3062
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140900"
 ---
 # <a name="revoke-object-permissions-transact-sql"></a>REVOKE, отмена разрешения (Transact-SQL)
@@ -64,7 +64,7 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
   
  Разрешения на скалярные функции: EXECUTE, REFERENCES.  
   
- Разрешения на функции с табличным значением: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
+ Разрешения на возвращающую табличное значение функцию: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
   
  Разрешения на хранимые процедуры: EXECUTE.  
   

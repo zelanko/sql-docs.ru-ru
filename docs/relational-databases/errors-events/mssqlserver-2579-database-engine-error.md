@@ -12,25 +12,25 @@ ms.assetid: 8f929d69-8eb4-4fe9-be52-b9680a7820db
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6a38a5470c51145141eda81d30eaadd8ff9f72e6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68002025"
 ---
-# <a name="mssqlserver2579"></a>MSSQLSERVER_2579
+# <a name="mssqlserver_2579"></a>MSSQLSERVER_2579
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|2579|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC_EXTENT_OUT_OF_RANGE|  
-|Текст сообщения|Ошибка таблицы: экстент P_ID в объекте с идентификатором O_ID, идентификатором индекса I_ID, идентификатором секции PN_ID, идентификатором единицы распределения A_ID (тип TYPE) выходит за пределы диапазона для этой базы данных.|  
+|Текст сообщения|Ошибка таблицы: экстент P_ID в объекте с идентификатором O_ID, идентификатор индекса I_ID, идентификатор секции PN_ID, идентификатор единицы размещения A_ID (тип TYPE) выходит за пределы диапазона для этой базы данных.|  
   
 ## <a name="explanation"></a>Объяснение  
 *P_ID* является идентификатором страницы в формате *(номер_файла:страница_в_файле)* . Значение параметра *страница_в_файле* для этой области памяти превышает физический размер файла базы данных (*номер_файла*). Экстент отмечен как выделенный на IAM-странице для указанного идентификатора единицы распределения.  

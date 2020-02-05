@@ -17,10 +17,10 @@ ms.assetid: e9a41a31-94f4-46a4-b737-c707dd59ce48
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a271b9dd9da2a4b21040a89145d9f2ab1fe84b68
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297583"
 ---
 # <a name="functions-ssis-expression"></a>Функции (выражение служб SSIS)
@@ -42,7 +42,7 @@ ms.locfileid: "71297583"
   
  Язык выражений содержит следующие математические функции.  
   
-|Компонент|Описание|  
+|Компонент|Description|  
 |--------------|-----------------|  
 |[ABS (выражение служб SSIS)](../../integration-services/expressions/abs-ssis-expression.md)|Возвращает абсолютное положительное значение числового выражения.|  
 |[EXP (выражение служб SSIS)](../../integration-services/expressions/exp-ssis-expression.md)|Возвращает число «е» в степени, определяемой данным выражением.|  
@@ -58,7 +58,7 @@ ms.locfileid: "71297583"
   
  Средство оценки выражений содержит следующие строковые функции.  
   
-|Компонент|Описание|  
+|Компонент|Description|  
 |--------------|-----------------|  
 |[CODEPOINT (выражение служб SSIS)](../../integration-services/expressions/codepoint-ssis-expression.md)|Возвращает значение кода Юникод самого первого символа в символьном выражении.|  
 |[FINDSTRING (выражение служб SSIS)](../../integration-services/expressions/findstring-ssis-expression.md)|Возвращает однократный индекс указанного вхождения символьной строки в выражение.|  
@@ -78,7 +78,7 @@ ms.locfileid: "71297583"
   
  Средство оценки выражений содержит следующие функции для работы с датой и временем.  
   
-|Компонент|Описание|  
+|Компонент|Description|  
 |--------------|-----------------|  
 |[DATEADD (выражение служб SSIS)](../../integration-services/expressions/dateadd-ssis-expression.md)|Возвращает новое значение типа DT_DBTIMESTAMP, образованное добавлением интервала времени или даты к указанной дате.|  
 |[DATEDIFF (выражение служб SSIS)](../../integration-services/expressions/datediff-ssis-expression.md)|Возвращает числовое значение границ дат или времени между двумя указанными датами.|  
@@ -91,7 +91,7 @@ ms.locfileid: "71297583"
   
  Средство оценки выражений содержит следующие функции для значения NULL.  
   
-|Компонент|Описание|  
+|Компонент|Description|  
 |--------------|-----------------|  
 |[ISNULL (выражение служб SSIS)](../../integration-services/expressions/isnull-ssis-expression.md)|Возвращает результат в виде логического выражения, в зависимости от того, имеет ли выражение значение NULL.|  
 |[NULL (выражение служб SSIS)](../../integration-services/expressions/null-ssis-expression.md)|Возвращает значение NULL запрошенного типа данных.|  

@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 21e6d25305bd6abf4a3dc4555f2148a2fe385187
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121586"
 ---
 # <a name="transactions-sql-data-warehouse"></a>Транзакции (хранилище данных SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68121586"
   
 -   *Транзакции с автофиксацией* автоматически запускаются в рамках сеанса и не начинаются с инструкции BEGIN TRANSACTION. Если для параметра AUTOCOMMIT установлено значение ON, каждая инструкция выполняется в транзакции, и явные инструкции COMMIT или ROLLBACK не требуются. Если для параметра AUTOCOMMIT установлено значение OFF, для определения результата транзакции требуется инструкция COMMIT или ROLLBACK. В [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] транзакции с автофиксацией начинаются сразу после инструкции COMMIT или ROLLBACK или после инструкции SET AUTOCOMMIT OFF.  
   
- ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   

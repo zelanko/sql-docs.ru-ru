@@ -11,10 +11,10 @@ ms.assetid: b5817b5a-f39a-4faf-b11e-a47b54fd9f32
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: fda2594b2dc61a78eb5900ef6d1b735dac5b44e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012329"
 ---
 # <a name="configure-the-remote-data-archive-server-configuration-option"></a>Настройка параметра конфигурации сервера remote data archive
@@ -24,7 +24,7 @@ ms.locfileid: "68012329"
   
  Параметр **remote data archive** может иметь следующие значения:  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |0|Stretch нельзя использовать для баз данных и таблиц на сервере.|  
 |1|Stretch можно использовать для баз данных и таблиц на сервере.|  
@@ -46,8 +46,8 @@ GO
  Чтобы отключить этот параметр, задайте значение 0.  
   
 ## <a name="see-also"></a>См. также:  
- [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
- [База данных Stretch](../../sql-server/stretch-database/stretch-database.md)   
+ [Включение Stretch Database для базы данных](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
+ [Stretch Database](../../sql-server/stretch-database/stretch-database.md)   
  [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   

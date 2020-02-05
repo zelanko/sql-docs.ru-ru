@@ -14,10 +14,10 @@ ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fa53478ba653961d255ee3a03038d44fcbd15f3e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67943250"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>Поддержка FOR XML для XML-данных
@@ -72,7 +72,7 @@ FOR XML AUTO, TYPE;
 ...  
 ```  
   
- Если для XML-столбца, сформированного средствами языка XQuery, указывается псевдоним, этот псевдоним используется для добавления элемента оболочки вокруг кода XML, сформированного с помощью XQuery. Так, в следующем запросе в качестве псевдонима столбца указывается `MorePhoneNumbers`:  
+ Если для XML-столбца, сформированного средствами языка XQuery, указывается псевдоним, этот псевдоним используется для добавления элемента оболочки вокруг кода XML, сформированного с помощью XQuery. Так, в следующем запросе в качестве псевдонима столбца указывается `MorePhoneNumbers` :  
   
 ```  
 SELECT BusinessEntityID, FirstName, LastName, AdditionalContactInfo.query('  

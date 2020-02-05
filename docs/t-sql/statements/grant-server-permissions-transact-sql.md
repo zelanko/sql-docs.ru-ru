@@ -18,10 +18,10 @@ ms.assetid: 7e880a5a-3bdc-491f-a167-7a9ed338be7f
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 5eeda80431c403fd1178399b4c2c3500154acd48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050792"
 ---
 # <a name="grant-server-permissions-transact-sql"></a>GRANT, предоставление разрешений на сервер (Transact-SQL)
@@ -145,7 +145,7 @@ GRANT permission [ ,...n ]
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-granting-a-permission-to-a-login"></a>A. Предоставление разрешения имени входа  
- В следующем примере разрешение `CONTROL SERVER` предоставляется имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `TerryEminhizer`.  
+ В следующем примере разрешение `CONTROL SERVER` предоставляется имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`TerryEminhizer`.  
   
 ```  
 USE master;  
@@ -154,7 +154,7 @@ GO
 ```  
   
 ### <a name="b-granting-a-permission-that-has-grant-permission"></a>Б. Предоставление разрешения, имеющего разрешение GRANT  
- В следующем примере разрешение `ALTER ANY EVENT NOTIFICATION` предоставляется имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `JanethEsteves` с правом предоставлять разрешения другому имени входа.  
+ В следующем примере разрешение `ALTER ANY EVENT NOTIFICATION` предоставляется имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`JanethEsteves` с правом предоставлять разрешения другому имени входа.  
   
 ```  
 USE master;  

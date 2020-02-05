@@ -23,10 +23,10 @@ ms.assetid: 2e6e4eeb-b70b-4f45-a253-28ac4e595d75
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 6ee52f585af8930afcba301a5aba12df4eb47173
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072382"
 ---
 # <a name="reconfigure-transact-sql"></a>RECONFIGURE (Transact-SQL)
@@ -52,7 +52,7 @@ RECONFIGURE [ WITH OVERRIDE ]
     
  Практически любой параметр конфигурации можно перенастроить с помощью параметра WITH OVERRIDE, однако некоторые неустранимые ошибки по-прежнему блокируются. Например, параметр **min server memory** может принимать значения большие, чем предусмотрено параметром **max server memory**.
       
-## <a name="remarks"></a>Примечания    
+## <a name="remarks"></a>Remarks    
  При использовании процедуры **sp_configure** недопустимо, чтобы новые значения параметров конфигурации выходили за пределы установленных в документации диапазонов для каждого параметра.    
     
  Недопустимо использование RECONFIGURE в явной или неявной транзакции. При одновременной перенастройке нескольких параметров в случае сбоя какой-либо из операций перенастройки ни одна из этих операций не вступит в силу.    
@@ -63,7 +63,7 @@ RECONFIGURE [ WITH OVERRIDE ]
  Разрешения для RECONFIGURE по умолчанию предоставляются участникам, которым предоставлено разрешение ALTER SETTINGS. Этим разрешением неявно обладают встроенные роли сервера **sysadmin** и **serveradmin**.    
     
 ## <a name="examples"></a>Примеры    
- Следующий пример устанавливает верхний предел для параметра `recovery interval` в `75` минут с помощью разрешения `RECONFIGURE WITH OVERRIDE`. Интервалы восстановления более 60 минут нежелательны и по умолчанию запрещены. Однако из-за параметра `WITH OVERRIDE` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не проверяет, является ли указанное значение (`75`) параметра `recovery interval` допустимым.    
+ Следующий пример устанавливает верхний предел для параметра `recovery interval` в `75` минут с помощью разрешения `RECONFIGURE WITH OVERRIDE`. Интервалы восстановления более 60 минут нежелательны и по умолчанию запрещены. Однако из-за параметра `WITH OVERRIDE`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не проверяет, является ли указанное значение (`75`) параметра `recovery interval` допустимым.    
     
 ```    
 EXEC sp_configure 'recovery interval', 75    
@@ -71,7 +71,7 @@ RECONFIGURE WITH OVERRIDE;
 GO    
 ```    
     
-## <a name="see-also"></a>См. также    
+## <a name="see-also"></a>См. также:    
  [Параметры конфигурации сервера (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)     
  [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)    
     

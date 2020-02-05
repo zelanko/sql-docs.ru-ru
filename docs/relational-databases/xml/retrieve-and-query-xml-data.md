@@ -14,10 +14,10 @@ ms.assetid: 24a28760-1225-42b3-9c89-c9c0332d9c51
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3fd1505bbbfc03308cbdbf6a5fc9fba122c4da24
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67995265"
 ---
 # <a name="retrieve-and-query-xml-data"></a>Получение и запрос XML-данных
@@ -104,6 +104,6 @@ GO
   
   
 ## <a name="see-also"></a>См. также:  
- [Создание экземпляров XML-данных](../../relational-databases/xml/create-instances-of-xml-data.md)  
+ [Создание экземпляров данных XML](../../relational-databases/xml/create-instances-of-xml-data.md)  
   
   

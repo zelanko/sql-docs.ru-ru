@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: f63cb12399efd7417f9b00695d54b1356f681fb8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934460"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>Оценка размера некластеризованного индекса
@@ -46,7 +46,7 @@ ms.locfileid: "67934460"
   
 1.  Укажите количество строк в новой таблице:  
   
-     ***Num_Rows***  возвращает число строк в таблице.  
+     ***Num_Rows***  = число строк в таблице  
   
 2.  Укажите количество столбцов переменной и фиксированной длины в ключе индекса и рассчитайте объем необходимого места для их хранения:  
   

@@ -13,10 +13,10 @@ ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d1cdc6947c97052660dea3be9d6013a8e61a090d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908778"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>Доступ к таблицам FileTable с помощью API-интерфейсов ввода-вывода файлов
@@ -64,7 +64,7 @@ ms.locfileid: "72908778"
 ##  <a name="supported"></a> Поддерживаемые операции файловой системы  
  Таблицы FileTable поддерживают API-интерфейсы файловой системы, связанные со следующими операциями файловой системы:  
   
--   Управление каталогами  
+-   Управление каталогом  
   
 -   Управление файлами  
   
@@ -103,7 +103,7 @@ ms.locfileid: "72908778"
   
 ##  <a name="funclist"></a> Функции файловой системы, поддерживаемые в таблицах FileTable  
   
-|Capability|Поддерживается|Комментарии|  
+|Функция|Поддерживается|Комментарии|  
 |----------------|---------------|--------------|  
 |**Операционные блокировки**|Да|Поддерживаются операционные блокировки уровня 2, уровня 1, пакетные операционные блокировки и операционные блокировки фильтров.|  
 |**Расширенные атрибуты**|нет||  

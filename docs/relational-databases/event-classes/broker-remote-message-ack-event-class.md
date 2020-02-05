@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1992d071079e5ecb1912abb1014becca35a339b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67999613"
 ---
 # <a name="brokerremote-message-ack-event-class"></a>Broker:Remote Message Ack, класс событий
@@ -27,7 +27,7 @@ ms.locfileid: "67999613"
   
 ## <a name="brokerremote-message-ack-event-class-data-columns"></a>Столбцы данных класса событий Broker:Remote Message Ack  
   
-|Столбец данных|Тип|Описание|Номер столбца|Фильтруемый|  
+|Столбец данных|Тип|Description|Номер столбца|Фильтруемый|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|Имя клиентского приложения, установившего соединение с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот столбец заполняется значениями, передаваемыми приложением, а не отображаемым именем программы.|10|Да|  
 |**BigintData1**|**bigint**|Последовательный номер сообщения, содержащего подтверждение.|52|нет|  
@@ -38,7 +38,7 @@ ms.locfileid: "67999613"
 |**EventSequence**|**int**|Порядковый номер этого события.|51|нет|  
 |**EventSubClass**|**nvarchar**|Тип подкласса события, предоставляющий дополнительные сведения о каждом классе событий. Этот столбец может содержать следующие значения.<br /><br /> **Message With Acknowledgement Sent**:<br />                    [!INCLUDE[ssSB](../../includes/sssb-md.md)] отправил подтверждение как часть обычного последовательного сообщения.<br /><br /> **Acknowledgement Sent**:<br />                    [!INCLUDE[ssSB](../../includes/sssb-md.md)] отправил подтверждение вне обычного последовательного сообщения.<br /><br /> **Message With Acknowledgement Received**:<br />                  [!INCLUDE[ssSB](../../includes/sssb-md.md)] получил подтверждение как часть обычного последовательного сообщения.<br /><br /> **Acknowledgement Received**:<br />                  [!INCLUDE[ssSB](../../includes/sssb-md.md)] получил подтверждение вне обычного последовательного сообщения.|21|Да|  
 |**GUID**|**uniqueidentifier**|Идентификатор диалога. Этот идентификатор передается в составе сообщения и является общим для обоих участников диалога.|54|нет|  
-|**HonorBrokerPriority**|**Int**|Текущее значение параметра базы данных HONOR_BROKER_PRIORITY: 0 = отключен, 1 = включен.|32|Да|  
+|**HonorBrokerPriority**|**Int**|Текущее значение параметра базы данных HONOR_BROKER_PRIORITY: 0 — отключено, 1 — включено.|32|Да|  
 |**HostName**|**nvarchar**|Имя компьютера, на котором выполняется клиентская программа. Заполнение этого столбца данных производится в том случае, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
 |**IntegerData**|**int**|Номер фрагмента сообщения, содержащего подтверждение.|25|нет|  
 |**IntegerData2**|**int**|Номер фрагмента подтверждаемого сообщения.|55|нет|  
@@ -51,7 +51,7 @@ ms.locfileid: "67999613"
 |**ServerName**|**nvarchar**|Имя отслеживаемого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|26|нет|  
 |**SPID**|**int**|Идентификатор процесса сервера, который [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] присвоил процессу, связанному с клиентом.|12|Да|  
 |**StartTime**|**datetime**|Время начала события, если доступно.|14|Да|  
-|**StarvationElevation**|**int**|Сообщение было отправлено с более высоким приоритетом, чем приоритет, настроенный для диалога: 0 = false, 1 = true.|33|Да|  
+|**StarvationElevation**|**int**|Сообщение было отправлено с более высоким приоритетом, чем приоритет, настроенный для диалога: 0 — нет, 1 — да.|33|Да|  
 |**TransactionID**|**bigint**|Назначенный системой идентификатор транзакции.|4|нет|  
   
   

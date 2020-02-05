@@ -22,10 +22,10 @@ ms.assetid: 70f1d938-97e2-48a4-9bc0-8be9f2f2c36d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 4ed6e67bbf6f3fcda872650c2d3394d6311802b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914219"
 ---
 # <a name="revoke-service-broker-permissions-transact-sql"></a>REVOKE, отмена разрешений для компонента Service Broker (Transact-SQL)
@@ -84,7 +84,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
   
 -   роль базы данных;  
   
--   роль приложения;  
+-   Роль приложения  
   
 -   пользователь базы данных, сопоставленный с именем входа Windows;  
   
@@ -109,7 +109,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
   
 -   роль базы данных;  
   
--   роль приложения;  
+-   Роль приложения  
   
 -   пользователь базы данных, сопоставленный с именем входа Windows;  
   

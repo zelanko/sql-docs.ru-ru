@@ -31,10 +31,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6dc5c823a69d348e3206d55c3c49f8954204a794
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67910079"
 ---
 # <a name="begin-transaction-transact-sql"></a>BEGIN TRANSACTION (Transact-SQL)
@@ -66,17 +66,17 @@ BEGIN { TRAN | TRANSACTION }
   
 ## <a name="arguments"></a>Аргументы  
  *transaction_name*  
- **ПРИМЕНИМО К:** SQL Server (начиная с версии 2008), база данных SQL Azure
+ **ПРИМЕНИМО К**: SQL Server (начиная с версии 2008), база данных SQL Azure
  
  Имя, присвоенное транзакции. Аргумент *transaction_name* должен соответствовать правилам для идентификаторов, однако не допускаются идентификаторы длиннее 32 символов. Имена транзакций используются только для самых внешних вложенных инструкций BEGIN...COMMIT или BEGIN...ROLLBACK. Аргумент *transaction_name* всегда учитывает регистр, даже если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] регистр не учитывает.  
   
  @*tran_name_variable*  
- **ПРИМЕНИМО К:** SQL Server (начиная с версии 2008), база данных SQL Azure
+ **ПРИМЕНИМО К**: SQL Server (начиная с версии 2008), база данных SQL Azure
  
  Имя определенной пользователем переменной, содержащей допустимое имя транзакции. Переменная должна быть объявлена с типом данных **char**, **varchar**, **nchar** или **nvarchar**. Если переменной передается больше 32 символов, используются только 32 первых символа, а остальные усекаются.  
   
  WITH MARK [ '*description*' ]  
-**ПРИМЕНИМО К:** SQL Server (начиная с версии 2008), база данных SQL Azure
+**ПРИМЕНИМО К**: SQL Server (начиная с версии 2008), база данных SQL Azure
 
 Указывает, что транзакция отмечается в журнале. Значение аргумента *description* — это строка, описывающая отметку. Значения аргумента *description* длиннее 128 символов усекаются до 128 символов перед сохранением в таблице msdb.dbo.logmarkhistory.  
   
@@ -133,7 +133,7 @@ COMMIT TRAN T1;
   
  BEGIN TRAN M2 WITH MARK ...;  
   
- "Сервер: сообщение 3920, уровень 16, состояние 1, строка 3"  
+ "Сервер: сообщение 3920, уровень 16, состояние 1, строка 3"  
   
  «Параметр WITH MARK применяется только к первой инструкции BEGIN TRAN WITH MARK.»  
   
@@ -145,7 +145,7 @@ COMMIT TRAN T1;
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-using-an-explicit-transaction"></a>A. Использование явной транзакции
-**ПРИМЕНИМО К:** SQL Server (начиная с версии 2008), база данных SQL Azure, хранилище данных SQL Azure, Parallel Data Warehouse
+**ПРИМЕНИМО К**: SQL Server (начиная с версии 2008), база данных SQL Azure, хранилище данных SQL Azure, Parallel Data Warehouse
 
 В примере используется база данных AdventureWorks. 
 
@@ -157,7 +157,7 @@ COMMIT;
 ```
 
 ### <a name="b-rolling-back-a-transaction"></a>Б. Откат транзакции
-**ПРИМЕНИМО К:** SQL Server (начиная с версии 2008), база данных SQL Azure, хранилище данных SQL Azure, Parallel Data Warehouse
+**ПРИМЕНИМО К**: SQL Server (начиная с версии 2008), база данных SQL Azure, хранилище данных SQL Azure, Parallel Data Warehouse
 
 В приведенном ниже примере демонстрируется результат отката транзакции. В этом примере инструкция ROLLBACK приведет к откату инструкции INSERT, но созданная таблица будет по-прежнему существовать.
 
@@ -172,7 +172,7 @@ ROLLBACK;
 ```
 
 ### <a name="c-naming-a-transaction"></a>В. Присвоение транзакции имени 
-**ПРИМЕНИМО К:** SQL Server (начиная с версии 2008), база данных SQL Azure
+**ПРИМЕНИМО К**: SQL Server (начиная с версии 2008), база данных SQL Azure
 
 В следующем примере показано, как присвоить транзакции имя.  
   
@@ -190,7 +190,7 @@ GO
 ```  
   
 ### <a name="d-marking-a-transaction"></a>Г. Пометка транзакции  
-**ПРИМЕНИМО К:** SQL Server (начиная с версии 2008), база данных SQL Azure
+**ПРИМЕНИМО К**: SQL Server (начиная с версии 2008), база данных SQL Azure
 
 В следующем примере показано, как пометить транзакцию. Транзакция `CandidateDelete` помечена.  
   

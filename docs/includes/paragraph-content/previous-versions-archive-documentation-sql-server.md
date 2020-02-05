@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 28835571ef6bd3690884ea3e2b916d0c0d237eab
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73057336"
----
 
 Мы накапливаем и храним документацию по очень старым версиям Microsoft SQL Server в наборе архивных веб-страниц. Архивные веб-страницы не обрабатываются поисковыми системами, такими как Bing.com и Google.com. Эти архивы доступны в нашей документации по адресу _previous-versions/sql/_ :
 

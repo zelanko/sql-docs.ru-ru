@@ -12,10 +12,10 @@ ms.assetid: aa4d3188-6927-43de-a3e3-90fc16eeaca7
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 97725acacdd4486ebd92a4424704288c5e4efd3e
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907481"
 ---
 # <a name="delete-a-plan-guide"></a>Удаление структуры плана
@@ -26,7 +26,7 @@ ms.locfileid: "72907481"
   
 -   **Перед началом работы**  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Удаление структуры плана с помощью различных средств.**  
   

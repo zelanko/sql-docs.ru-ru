@@ -11,10 +11,10 @@ ms.assetid: 00bfa716-5390-48e3-b30c-d954d5e0be47
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3ce06430094825bf3268836657661930fea058e4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296625"
 ---
 # <a name="catalogmaster_properties-ssisdb-database"></a>catalog.master_properties (база данных SSISDB)
@@ -26,7 +26,7 @@ ms.locfileid: "71296625"
 
 Отображает свойства мастера [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out.
 
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |property_name|**nvarchar(256)**|Имя свойства мастера Scale Out.|  
 |property_value|**nvarchar(max)**|Значение свойства мастера Scale Out.|
@@ -34,7 +34,7 @@ ms.locfileid: "71296625"
 ## <a name="remarks"></a>Remarks
 В этом представлении отображается строка для каждого свойства мастера Scale Out. Это представление выводит, в частности, следующие свойства.
 
-|Имя свойства|Описание|  
+|Имя свойства|Description|  
 |-------------------|-----------------| 
 |**CLUSTER_LOGDB_SERVER**|SQL Server, где находится база данных журналов.|
 |**LAST_ONLINE_TIME**|Время последнего подключения мастера Scale Out к сети.|

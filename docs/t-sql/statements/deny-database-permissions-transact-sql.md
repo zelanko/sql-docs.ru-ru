@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1b78ebdd157afe35a78900e8ceb3c2bad40bb04d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73983228"
 ---
 # <a name="deny-database-permissions-transact-sql"></a>DENY, запрет разрешений на базу данных (Transact-SQL)
@@ -58,7 +58,7 @@ DENY <permission> [ ,...n ]
 
 *permission* — указывает отзываемое разрешение для базы данных. Список разрешений см. в подразделе "Примечания" далее в этом разделе.
 
-ALL — этот параметр запрещает не все возможные разрешения. Указание аргумента ALL эквивалентно запрету следующих разрешений: BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE и CREATE VIEW.
+ALL — этот параметр запрещает не все возможные разрешения. Аргумент ALL эквивалентен запрету следующих разрешений: BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE и CREATE VIEW.
 
 PRIVILEGES — включено для обеспечения совместимости с требованиями ISO. Не изменяет работу ALL.
 
@@ -91,7 +91,7 @@ AS \<database_principal> указывает участника, от котор�
 
 |Разрешение в базе данных|Содержится в разрешении базы данных|Подразумевается в разрешении сервера|
 |-------------------------|------------------------------------|----------------------------------|
-|ADMINISTER DATABASE BULK OPERATIONS<br/>**Применимо к:** [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].|CONTROL|CONTROL SERVER|
+|ADMINISTER DATABASE BULK OPERATIONS<br/>**Область применения**: [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].|CONTROL|CONTROL SERVER|
 |ALTER|CONTROL|ALTER ANY DATABASE|
 |ALTER ANY APPLICATION ROLE|ALTER|CONTROL SERVER|
 |ALTER ANY ASSEMBLY|ALTER|CONTROL SERVER|
@@ -179,7 +179,7 @@ AS \<database_principal> указывает участника, от котор�
 
 ### <a name="a-denying-permission-to-create-certificates"></a>A. Запрет разрешения на создание сертификатов
 
-Следующий код отказывает в разрешении `CREATE CERTIFICATE` пользователю `MelanieK` базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].
+Следующий код отказывает в разрешении `CREATE CERTIFICATE` пользователю [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] базы данных `MelanieK`.
 
 ```sql
 USE AdventureWorks2012;

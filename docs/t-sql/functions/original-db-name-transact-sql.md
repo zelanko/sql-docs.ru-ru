@@ -18,13 +18,13 @@ ms.assetid: 7dadc40a-1287-4f31-8487-434ee477144d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: dba855440971ba74ce15fb108e1ac88ebeb1cd24
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914577"
 ---
-# <a name="originaldbname-transact-sql"></a>ORIGINAL_DB_NAME (Transact-SQL)
+# <a name="original_db_name-transact-sql"></a>ORIGINAL_DB_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Возвращает имя базы данных, указанное пользователем в строке подключения к базе данных. Эта база данных указывается с помощью параметра **sqlcmd-d** (использование *базы данных*). Ее также можно указать с помощью выражения источника данных ODBC (исходный каталог =*databasename*).  

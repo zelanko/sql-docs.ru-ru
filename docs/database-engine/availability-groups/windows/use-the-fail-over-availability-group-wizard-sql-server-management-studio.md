@@ -21,10 +21,10 @@ ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5a98049201636bf521ae7162bd4ac0de71d74725
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74821945"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>Использование мастера отработки отказа группы доступности (Среда SQL Server Management Studio)
@@ -34,7 +34,7 @@ ms.locfileid: "74821945"
 ##  <a name="BeforeYouBegin"></a> Перед началом  
  Перед первым выполнением запланированного перехода на другой ресурс вручную ознакомьтесь с пунктом "Перед началом" в разделе [Выполнение запланированного перехода на другой ресурс вручную для группы доступности (SQL Server)](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md).  
   
- Перед первой принудительной отработкой отказа впервые см. разделы "Перед началом работы" и "Дальнейшие действия. Основные задачи после принудительной отработки отказа" статьи [Выполнение принудительного перехода на другой ресурс вручную для группы доступности &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
+ Перед первым выполнением принудительной отработки отказа ознакомьтесь с разделами "Перед началом работы" и "Дальнейшие действия. Основные задачи после принудительной отработки отказа" статьи [Выполнение принудительного перехода на другой ресурс вручную для группы доступности (SQL Server)](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
   
 ###  <a name="Restrictions"></a> Ограничения  
   
@@ -78,7 +78,7 @@ ms.locfileid: "74821945"
   
      Дополнительные сведения см. в статье [Страница "Результаты" (мастера групп доступности AlwaysOn)](../../../database-engine/availability-groups/windows/results-page-always-on-availability-group-wizards.md).  
   
-11. После принудительной отработки отказа см. раздел "Дальнейшие действия. После принудительной отработки отказа" статьи [Выполнение принудительного перехода на другой ресурс вручную для группы доступности &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
+11. После принудительной отработки отказа обратитесь к разделу "Дальнейшие действия. После принудительной отработки отказа" статьи [Выполнение принудительного перехода на другой ресурс вручную для группы доступности (SQL Server)](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
   
 ## <a name="help-for-pages-that-are-exclusive-to-this-wizard"></a>Помощь для страниц, которые имеются только в этом мастере  
  В этом разделе описываются страницы, которые являются уникальными для [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)].  

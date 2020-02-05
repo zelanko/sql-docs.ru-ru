@@ -12,20 +12,20 @@ ms.assetid: ef4df75d-0f36-4c8b-b36c-e427f65f91ca
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1b581fd45021820039b09edc69151ebea34a913e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67908609"
 ---
-# <a name="mssqlserver1505"></a>MSSQLSERVER_1505
+# <a name="mssqlserver_1505"></a>MSSQLSERVER_1505
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|1505|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
@@ -59,7 +59,7 @@ SELECT LastName, FirstName, count(*) FROM dbo.Employee GROUP BY LastName, FirstN
   
 -   Выбирайте столбцы, определенные как NOT NULL, при определении столбцов для уникального индекса или ограничения уникальности. При этом исключается возможность возникновения нарушения уникальности, когда больше чем в одной строке содержится значение NULL в значениях ключа.  
   
--   Если дублирование значений является результатом ошибок ввода данных, исправьте данные вручную и затем создайте индекс или ограничение. Дополнительные сведения об удалении повторяющихся строк в таблице см. в статье 139444 базы знаний Майкрософт: [Удаление повторяющихся строк из таблицы в SQL Server](https://support.microsoft.com/kb/139444).  
+-   Если дублирование значений является результатом ошибок ввода данных, исправьте данные вручную и затем создайте индекс или ограничение. Дополнительные сведения об удалении повторяющихся строк из таблицы вы найдете в статье базы знаний 139444: [Удаление повторяющихся строк из таблицы в SQL Server](https://support.microsoft.com/kb/139444).  
   
 ## <a name="see-also"></a>См. также:  
 [CREATE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-index-transact-sql.md)  

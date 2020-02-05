@@ -1,5 +1,5 @@
 ---
-title: 'Progress Report: класс события Online Index Operation'
+title: 'Класс событий Progress Report: Online Index Operation'
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,26 +13,26 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c87be1a2a80f9bd2f31077e6b6154720c58193b0
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056121"
 ---
-# <a name="progress-report-online-index-operation-event-class"></a>Progress Report: класс события Online Index Operation
+# <a name="progress-report-online-index-operation-event-class"></a>Класс событий Progress Report: Online Index Operation
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Класс событий Progress Report: Online Index Operation указывает ход операции оперативного построения индекса.  
+  Класс событий Progress Report: класс событий Online Index Operation указывает ход операции оперативного построения индекса.  
   
-## <a name="progress-report-online-index-operation-event-class-data-columns"></a>Progress Report: Online Index Operation  
+## <a name="progress-report-online-index-operation-event-class-data-columns"></a>Столбцы данных класса событий Progress Report: Online Index Operation  
   
-|Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
+|Имя столбца данных|Тип данных|Description|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Имя клиентского приложения, установившего соединение с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот столбец заполняется значениями, передаваемыми приложением, а не отображаемым именем программы.|10|Да|  
 |BigintData1|**bigint**|Количество вставленных строк.|52|Да|  
 |BigintData2|**bigint**|0 = последовательный план, в противном случае — идентификатор потока при параллельном выполнении.|53|Да|  
 |ClientProcessID|**int**|Идентификатор, присвоенный главным компьютером сервера процессу, в котором работает клиентское приложение. Этот столбец данных заполняется в том случае, если клиент предоставляет идентификатор клиентского процесса.|9|Да|  
 |DatabaseID|**int**|Идентификатор базы данных, указанной в инструкции USE *database* , или базы данных по умолчанию, если для данного экземпляра инструкция USE *database* не выполнялась. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] отображает имя базы данных, если столбец данных ServerName захвачен при трассировке и сервер доступен. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
-|DatabaseName|**nvarchar**|Имя базы данных, в которой выполняется пользовательская инструкция.|35|Да|  
+|имя_базы_данных|**nvarchar**|Имя базы данных, в которой выполняется пользовательская инструкция.|35|Да|  
 |Duration|**bigint**|Длительность события (в микросекундах).|13|Да|  
 |EndTime|**datetime**|Время завершения операции с индексами в сети.|15|Да|  
 |EventClass|**int**|Тип события = 190.|27|нет|  

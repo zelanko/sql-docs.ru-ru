@@ -22,10 +22,10 @@ ms.assetid: 6efbc87c-1c92-4e43-96a7-e0f30f1db185
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 709ba2af4cc06f1a1ff2314115f163032bd4227e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68044021"
 ---
 # <a name="drop-partition-scheme-transact-sql"></a>DROP PARTITION SCHEME (Transact-SQL)
@@ -46,13 +46,13 @@ DROP PARTITION SCHEME partition_scheme_name [ ; ]
  *partition_scheme_name*  
  Имя схемы секционирования, подлежащей удалению.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Схему секционирования можно удалить только при условии, если она в данный момент не используется какими-либо таблицами или индексами. Если имеются таблицы или индексы, в которых задействована данная схема секционирования, инструкция DROP PARTITION SCHEME возвращает ошибку. Инструкция DROP PARTITION SCHEME не удаляет собственно файловые группы.  
   
 ## <a name="permissions"></a>Разрешения  
  Для выполнения инструкции DROP PARTITION SCHEME могут использоваться следующие разрешения:  
   
--   Разрешение ALTER ANY DATASPACE. Это разрешение назначено по умолчанию членам предопределенной роли сервера **sysadmin** и предопределенных ролей базы данных **db_owner** и **db_ddladmin**.  
+-   Разрешение ALTER ANY DATASPACE. Это разрешение назначено по умолчанию членам предопределенной роли сервера **sysadmin** и предопределенных ролей базы данных **db_owner** и **db_ddladmin** .  
   
 -   Разрешение CONTROL или ALTER на базу данных, в которой была создана схема секционирования.  
   
@@ -65,7 +65,7 @@ DROP PARTITION SCHEME partition_scheme_name [ ; ]
 DROP PARTITION SCHEME myRangePS1;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [CREATE PARTITION SCHEME (Transact-SQL)](../../t-sql/statements/create-partition-scheme-transact-sql.md)   
  [ALTER PARTITION SCHEME (Transact-SQL)](../../t-sql/statements/alter-partition-scheme-transact-sql.md)   
  [sys.partition_schemes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-partition-schemes-transact-sql.md)   

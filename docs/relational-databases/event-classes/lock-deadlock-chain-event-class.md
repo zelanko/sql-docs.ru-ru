@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1f9677502f863f63f26cc2e922d14663cd1c3878
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68062601"
 ---
 # <a name="lockdeadlock-chain-event-class"></a>Класс событий Lock:Deadlock Chain
@@ -27,11 +27,11 @@ ms.locfileid: "68062601"
   
 ## <a name="lockdeadlock-chain-event-class-data-columns"></a>Столбцы класса событий Lock:Deadlock Chain  
   
-|Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
+|Имя столбца данных|Тип данных|Description|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BinaryData|**image**|Идентификатор ресурса блокировки.|2|Да|  
 |DatabaseID|**int**|Идентификатор базы данных, к которой относится ресурс. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] отображает имя базы данных, если столбец данных ServerName захвачен при трассировке и сервер доступен. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
-|DatabaseName|**nvarchar**|Имя базы данных, к которой относится ресурс.|35|Да|  
+|имя_базы_данных|**nvarchar**|Имя базы данных, к которой относится ресурс.|35|Да|  
 |EventClass|**int**|Тип события = 59.|27|нет|  
 |EventSequence|**int**|Последовательность данного события в запросе.|51|нет|  
 |EventSubClass|**int**|Тип подкласса события.<br /><br /> 101 = блокировка типа ресурса<br /><br /> 102 = обмен типа ресурса|21|Да|  

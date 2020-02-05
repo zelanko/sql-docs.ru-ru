@@ -14,10 +14,10 @@ ms.assetid: 449b327f-47c7-4709-8bc6-4ee9a35cc330
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 86bf6dc67143ea539ea0329fc1783629b26aa802
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297657"
 ---
 # <a name="datediff-ssis-expression"></a>DATEDIFF (выражение служб SSIS)
@@ -50,7 +50,7 @@ DATEDIFF(datepart, startdate, endate)
 ## <a name="remarks"></a>Remarks  
  В следующей таблице перечислены части дат и сокращения, распознаваемые средством оценки выражений.  
   
-|datepart|Сокращения|  
+|часть_даты|Сокращения|  
 |--------------|-------------------|  
 |Год|yy, yyyy|  
 |Квартал|qq, q|  
@@ -61,7 +61,7 @@ DATEDIFF(datepart, startdate, endate)
 |День недели|dw, w|  
 |Час|Hh|  
 |Минута|mi, n|  
-|Вторая|ss, s|  
+|Секунда|ss, s|  
 |Миллисекунда|Ms|  
   
  DATEDIFF возвращает NULL, если хотя бы один аргумент имеет значение NULL.  

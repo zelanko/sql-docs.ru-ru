@@ -12,20 +12,20 @@ ms.assetid: 12c1096f-d120-439b-85f3-f794859503c9
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 493513f21fbf61dd516160e61a7afb9e71e477fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67908438"
 ---
-# <a name="mssqlserver33128"></a>MSSQLSERVER_33128
+# <a name="mssqlserver_33128"></a>MSSQLSERVER_33128
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|33128|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
@@ -42,7 +42,7 @@ ms.locfileid: "67908438"
 > [!NOTE]  
 > Кольцевой буфер является внутренним компонентом, который не полностью документирован и не предназначен для использования клиентами. Сообщения из кольцевого буфера полезны при связи со службой поддержки клиентов [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Чтобы просмотреть кольцевой буфер, выполните запрос в динамическом административном представлении sys.dm_os_ring_buffers.  
   
-|Штат|Описание|  
+|Штат|Description|  
 |---------|---------------|  
 |1|Ключ RC4 используется во встроенной функции encryptbykey(). Встроенная функция возвращает значение NULL. Это сообщение встречается только в кольцевом буфере.|  
 |2|Ключ RC4 используется во встроенной функции decryptbykey(). Это сообщение встречается только в кольцевом буфере.|  

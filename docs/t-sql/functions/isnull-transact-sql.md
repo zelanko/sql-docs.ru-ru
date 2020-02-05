@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b49310a633c822f8c57f66cc36951dfebe2c0707
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843636"
 ---
 # <a name="isnull-transact-sql"></a>Функция ISNULL (Transact-SQL)
@@ -93,7 +93,7 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|  Описание       |  DiscountPct    |   MinQty    |   Максимальное количество       |
+|  Description       |  DiscountPct    |   MinQty    |   Максимальное количество       |
 |  ---------------   |  -------------  |   --------  |   ---------------    |
 |  Без скидки       |  0,00           |   0         |   0                  |
 |  Оптовая скидка   |  0,02           |   11        |   14                 |

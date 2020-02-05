@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ebccd45c54a3f5abb745f7c3028e0438c9ed5d2e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68056016"
 ---
 # <a name="modify-or-rename-dml-triggers"></a>Изменение или переименование триггеров DML
@@ -33,7 +33,7 @@ ms.locfileid: "68056016"
   
      [Рекомендации](#Recommendations)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Для изменения или переименования триггера DML используется:**  
   
@@ -57,7 +57,7 @@ ms.locfileid: "68056016"
   
 -   Для просмотра зависимостей триггера можно использовать среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или следующую функцию и представления каталога:  
   
-    -   [Представление каталога sys.sql_expression_dependencies (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  
+    -   [sys.sql_expression_dependencies (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  
   
     -   [Функция динамического управления sys.dm_sql_referenced_entities (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)  
   
@@ -94,7 +94,7 @@ ms.locfileid: "68056016"
   
 2.  На панели «Стандартная» нажмите **Создать запрос**.  
   
-3.  Скопируйте следующие примеры в запрос. Выполните первый пример, чтобы создать триггер DML, который выводит на клиент определяемое пользователем сообщение, когда пользователь пытается добавить или изменить данные в таблице `SalesPersonQuotaHistory` . Выполните инструкцию [ALTER TRIGGER](../../t-sql/statements/alter-trigger-transact-sql.md) , чтобы изменить триггер так, чтобы он срабатывал только на операции `INSERT` . Этот триггер полезен, так как он напоминает пользователям, что при обновлениях и вставках строк в эту таблицу необходимо направить уведомление в отдел `Compensation` .  
+3.  Скопируйте следующие примеры в запрос. Выполните первый пример, чтобы создать триггер DML, который выводит на клиент определяемое пользователем сообщение, когда пользователь пытается добавить или изменить данные в таблице `SalesPersonQuotaHistory` . Выполните инструкцию [ALTER TRIGGER](../../t-sql/statements/alter-trigger-transact-sql.md) , чтобы изменить триггер так, чтобы он срабатывал только на операции `INSERT` . Этот триггер полезен, так как он напоминает пользователям, что при обновлениях и вставках строк в эту таблицу необходимо направить уведомление в отдел `Compensation`.  
   
 ```sql  
 USE AdventureWorks2012;  

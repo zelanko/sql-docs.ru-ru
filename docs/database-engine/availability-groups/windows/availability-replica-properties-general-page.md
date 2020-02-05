@@ -13,10 +13,10 @@ ms.assetid: 8318fefb-e045-4fab-8507-e1951fc7cec6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1b708c987f1e9d0bbaf069a5d105e6feab57b9b9
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75241741"
 ---
 # <a name="availability-replica-properties-general-page-for-always-on-availability-groups"></a>Свойства реплики доступности (страница "Общие") для групп доступности Always On
@@ -88,7 +88,7 @@ ms.locfileid: "75241741"
  **Да**  
  Для баз данных-получателей этой реплики разрешены все соединения, но только с доступом для чтения. Для всех баз данных-получателей разрешен доступ для чтения.  
   
- Дополнительные сведения см. в статье [Активные вторичные реплики: вторичные реплики для чтения (группы доступности Always On)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+ Дополнительные сведения см. в разделе [Активные вторичные реплики: доступные только для чтения вторичные реплики (группы доступности AlwaysOn)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  **Время ожидания сеанса (секунды)**  
  Интервал времени ожидания в секундах. Интервал времени ожидания — это максимальное время, в течение которого реплика ожидает получения сообщения от другой реплики перед тем, как соединение между первичной и вторичной репликой будет признано несостоявшимся. Время ожидания сеанса определяет, связаны ли вторичные реплики с первичной. При обнаружении ошибки соединения с вторичной репликой первичная реплика признает вторичную как NOT_SYNCHRONIZED. При обнаружении ошибки соединения с первичной репликой вторичная реплика просто пытается установить соединение повторно.  

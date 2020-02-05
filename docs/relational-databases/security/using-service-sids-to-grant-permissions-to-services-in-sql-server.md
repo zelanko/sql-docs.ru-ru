@@ -8,10 +8,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.openlocfilehash: 18ac490c514703d890f2a1075602494fff81749a
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095591"
 ---
 # <a name="using-service-sids-to-grant-permissions-to-services-in-sql-server"></a>Использование идентификаторов безопасности для предоставления разрешений службам в SQL Server

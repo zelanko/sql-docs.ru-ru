@@ -14,10 +14,10 @@ ms.assetid: 4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d0692421ca7e63b419c99ecc835516af4cbd5af0
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095777"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>Настройка почты агента SQL Server на использование компонента Database Mail
@@ -28,7 +28,7 @@ ms.locfileid: "74095777"
   
 -   [Предварительные требования](#Prerequisites)  
   
--   [безопасность](#Security)  
+-   [Безопасность](#Security)  
   
 -   [Настройка агента SQL Server на использование компонента Database Mail с помощью среды SQL Server Management Studio](#SSMSProcedure)  
   
@@ -74,7 +74,7 @@ ms.locfileid: "74095777"
 ##  <a name="Follow_Up"></a> Задачи дополнительной работы  
  Следующие задачи необходимо выполнить для завершения конфигурации агента на отправку предупреждений и уведомлений.  
   
--   [Предупреждения](../../ssms/agent/alerts.md)  
+-   [Оповещения](../../ssms/agent/alerts.md)  
   
      Предупреждения могут быть настроены на уведомление оператора о возникновении в базе данных определенного события или о формировании в операционной системе определенных условий.  
   

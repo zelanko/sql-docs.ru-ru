@@ -21,10 +21,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dd632c012e6859da004e105d2311c9c21d3dec02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67902696"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "67902696"
   
  PolyBase поддерживает следующие форматы файлов:
   
--   Текстовый файл с разделителями  
+-   Текст с разделителями  
   
 -   Hive RCFile  
   
@@ -182,10 +182,10 @@ PolyBase использует пользовательский формат да
   
 -   Указание времени суток (tt) не является обязательным. По умолчанию используется время AM (до полудня).
   
-|Тип данных|Пример|Описание|  
+|Тип данных|Пример|Description|  
 |---------------|-------------|-----------------|  
-|DateTime|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fff'|Кроме года, месяца и дня этот формат данных включает 00-24 часа, 00-59 минут, 00-59 секунд и трехзначное обозначение миллисекунд.|  
-|DateTime|DATE_FORMAT = 'yyyy-MM-dd hh:mm:ss.ffftt'|Кроме года, месяца и дня этот формат данных включает 00-12 часов, 00-59 минут, 00-59 секунд и трехзначное обозначение миллисекунд и указание времени суток: AM, am, PM или pm. |  
+|Дата и время|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fff'|Кроме года, месяца и дня этот формат данных включает 00-24 часа, 00-59 минут, 00-59 секунд и трехзначное обозначение миллисекунд.|  
+|Дата и время|DATE_FORMAT = 'yyyy-MM-dd hh:mm:ss.ffftt'|Кроме года, месяца и дня этот формат данных включает 00-12 часов, 00-59 минут, 00-59 секунд и трехзначное обозначение миллисекунд и указание времени суток: AM, am, PM или pm. |  
 |SmallDateTime|DATE_FORMAT =  'yyyy-MM-dd HH:mm'|Кроме года, месяца и дня этот формат данных включает 00-23 часа, 00-59 минут.|  
 |SmallDateTime|DATE_FORMAT =  'yyyy-MM-dd hh:mmtt'|Кроме года, месяца и дня этот формат данных включает 00-11 часов, 00-59 минут и указание времени суток: AM, am, PM или pm. Секунды не указаны.|  
 |Дата|DATE_FORMAT =  'yyyy-MM-dd'|Год, месяц и день. Элемент времени не включен.|  

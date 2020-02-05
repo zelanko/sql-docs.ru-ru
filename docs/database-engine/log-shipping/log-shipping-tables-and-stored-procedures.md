@@ -16,10 +16,10 @@ ms.assetid: 03420810-4c38-4c0c-adf0-913eb044c50a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 25424e7e41a2d1fdf1efb88f01c53f24902e7072
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68030723"
 ---
 # <a name="log-shipping-tables-and-stored-procedures"></a>Log Shipping Tables and Stored Procedures
@@ -28,7 +28,7 @@ ms.locfileid: "68030723"
   
 ## <a name="primary-server-tables"></a>Таблицы сервера-источника  
   
-|Таблица|Описание|  
+|Таблица|Description|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|Содержит идентификатор задания предупреждения. Данная таблица используется на сервере-источнике только в том случае, если удаленный сервер мониторинга не настроен.|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|Сохраняет описание ошибки заданий доставки журналов, связанных с сервером-источником.|  
@@ -39,7 +39,7 @@ ms.locfileid: "68030723"
   
 ## <a name="primary-server-stored-procedures"></a>Хранимые процедуры сервера-источника  
   
-|Хранимая процедура|Описание|  
+|Хранимая процедура|Description|  
 |----------------------|-----------------|  
 |[sp_add_log_shipping_primary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md)|Настраивает базу данных-источник для конфигурации доставки журналов, включая задания резервного копирования, запись локального монитора и запись удаленного монитора.|  
 |[sp_add_log_shipping_primary_secondary, хранимая процедура](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-secondary-transact-sql.md)|Добавляет имя базы данных-получателя к существующей базе данных-источнику.|  
@@ -53,7 +53,7 @@ ms.locfileid: "68030723"
   
 ## <a name="secondary-server-tables"></a>Таблицы сервера-получателя  
   
-|Таблица|Описание|  
+|Таблица|Description|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|Содержит идентификатор задания предупреждения. Данная таблица используется на сервере-получателе только в том случае, если удаленный сервер мониторинга не настроен.|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|Сохраняет описание ошибки задач доставки журналов, связанных с сервером-получателем.|  
@@ -67,7 +67,7 @@ ms.locfileid: "68030723"
   
 ## <a name="secondary-server-stored-procedures"></a>Хранимые процедуры сервера-получателя  
   
-|Хранимая процедура|Описание|  
+|Хранимая процедура|Description|  
 |----------------------|-----------------|  
 |[sp_add_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md)|Устанавливает базу данных-получателя для доставки журналов.|  
 |[sp_add_log_shipping_secondary_primary, хранимая процедура](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-primary-transact-sql.md)|Настраивает первичные данные, добавляет ссылки на локальные и удаленные мониторы, а также создает задания копирования и восстановления на сервере-получателе для указанной базы данных-источника.|  
@@ -82,7 +82,7 @@ ms.locfileid: "68030723"
   
 ## <a name="monitor-server-tables"></a>Таблицы сервера мониторинга  
   
-|Таблица|Описание|  
+|Таблица|Description|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|Содержит идентификатор задания предупреждения.|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|Сохраняет подробное описание ошибок для заданий доставки журналов.|  
@@ -92,7 +92,7 @@ ms.locfileid: "68030723"
   
 ## <a name="monitor-server-stored-procedures"></a>Хранимые процедуры сервера мониторинга  
   
-|Хранимая процедура|Описание|  
+|Хранимая процедура|Description|  
 |----------------------|-----------------|  
 |[sp_add_log_shipping_alert_job](../../relational-databases/system-stored-procedures/sp-add-log-shipping-alert-job-transact-sql.md)|Создает задание предупреждения доставки журналов, если оно еще не создано.|  
 |[sp_delete_log_shipping_alert_job](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-alert-job-transact-sql.md)|Удаляет задание предупреждения доставки журналов, если отсутствуют соответствующие базы данных-получатели.|  

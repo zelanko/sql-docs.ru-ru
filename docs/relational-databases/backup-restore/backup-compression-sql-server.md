@@ -18,15 +18,15 @@ ms.assetid: 05bc9c4f-3947-4dd4-b823-db77519bd4d2
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: cc94b300f007a09aef2c16f11015b39765f5e37a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940836"
 ---
 # <a name="backup-compression-sql-server"></a>Сжатие резервных копий (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  В этом разделе описывается сжатие резервных копий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , в том числе ограничения, влияние сжатия резервных копий на производительность, настройка конфигурации сжатия резервных копий и коэффициент сжатия.  Сжатие резервной копии поддерживается в следующих выпусках [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]: Enterprise, Standard и Developer.  Сжатую резервную копию можно восстановить в любом выпуске [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздней версии. 
+  В этом разделе описывается сжатие резервных копий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , в том числе ограничения, влияние сжатия резервных копий на производительность, настройка конфигурации сжатия резервных копий и коэффициент сжатия.  Сжатие резервной копии поддерживается в следующих выпусках [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] : Enterprise, Standard и Developer.  Сжатую резервную копию можно восстановить в любом выпуске [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздней версии. 
  
   
 ##  <a name="Benefits"></a> Преимущества  

@@ -22,10 +22,10 @@ ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: e555a51cc4ab7c628dc75469aa1cfe4d7c01edcc
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70211437"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE (Transact-SQL)
@@ -105,7 +105,7 @@ ms.locfileid: "70211437"
  TIMEOUT *timeout*  
  Указывает количество времени, в миллисекундах, в течение которого инструкция должна ожидать сообщение. Это предложение может быть использовано только вместе с предложением WAITFOR. Если данное предложение не указано или время ожидания равно –**1**, время ожидания будет неограниченно. По истечении времени ожидания инструкция RECEIVE возвращает пустой результирующий набор.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
 >  Если инструкция RECEIVE не является первой в пакете или хранимой процедуре, то предшествующая инструкция должна заканчиваться точкой с запятой (;).  
@@ -155,7 +155,7 @@ ms.locfileid: "70211437"
 ## <a name="queue-columns"></a>Столбцы очереди  
  В следующей таблице указаны столбцы в очереди.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |**status**|**tinyint**|Состояние сообщения. Состояние сообщений, возвращаемых командой RECEIVE, всегда **0**. Сообщения в очереди могут иметь одно из следующих значений:<br /><br /> **0**= готово**1**= получено сообщение**2**= еще не завершено**3**= отправленное сообщение сохранено.|  
 |**priority**|**tinyint**|Уровень приоритета диалога, распространяющийся на сообщение.|  
@@ -327,7 +327,7 @@ WAITFOR(
 ), TIMEOUT 60000 ;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [BEGIN DIALOG CONVERSATION (Transact-SQL)](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
  [BEGIN CONVERSATION TIMER (Transact-SQL)](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
  [END CONVERSATION (Transact-SQL)](../../t-sql/statements/end-conversation-transact-sql.md)   

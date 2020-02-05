@@ -15,10 +15,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: feac4a3e00164837373f9b3024c322dbf7c49818
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095828"
 ---
 # <a name="parse-and-transform-json-data-with-openjson-sql-server"></a>Анализ и преобразование данных JSON с помощью OPENJSON (SQL Server)
@@ -116,7 +116,7 @@ WITH (
   
 **Результаты**
   
-|Количество|Дата|Customer|количество|  
+|Number|Дата|Customer|Количество|  
 |------------|----------|--------------|--------------|  
 |SO43659|2011-05-31T00:00:00|AW29825|1|  
 |SO43661|2011-06-01T00:00:00|AW73565|3|  
@@ -135,7 +135,7 @@ WITH (
 
 ## <a name="openjson-requires-compatibility-level-130"></a>OPENJSON необходим уровень совместимости 130.
 
-Функция **OPENJSON** доступна только при **уровне совместимости 130**. Если уровень совместимости вашей базы данных меньше 130, SQL Server не сможет найти и выполнить функцию **OPENJSON** . Другие встроенные функции JSON доступны на всех уровнях совместимости.
+Функция **OPENJSON** доступна только при **уровне совместимости 130**. Если уровень совместимости вашей базы данных меньше 130, SQL Server не сможет найти и выполнить функцию **OPENJSON**. Другие встроенные функции JSON доступны на всех уровнях совместимости.
 
 Проверить уровень совместимости можно в представлении `sys.databases` или в свойствах базы данных.
 

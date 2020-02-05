@@ -21,10 +21,10 @@ ms.assetid: c45e1086-c25b-48bb-a764-4a893e983db2
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0353ff7b9e0778a7ef59107f5ba2876e72bbdd69
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75243343"
 ---
 # <a name="revoke-database-principal-permissions-transact-sql"></a>REVOKE, отмена разрешений на участника базы данных (Transact-SQL)
@@ -180,7 +180,7 @@ GO
 ```  
   
 ### <a name="c-revoking-impersonate-permission-on-a-user-from-an-application-role"></a>В. Отмена разрешения IMPERSONATE на пользователя у роли приложения  
- В следующем примере у роли приложения `IMPERSONATE` отменяется разрешение `HamithaL` на пользователя `AccountsPayable17` базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+ В следующем примере у роли приложения `IMPERSONATE` отменяется разрешение `HamithaL` на пользователя [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] базы данных `AccountsPayable17`.  
   
 **Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   

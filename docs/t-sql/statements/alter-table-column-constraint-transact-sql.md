@@ -21,10 +21,10 @@ ms.assetid: 8119b7c7-e93b-4de5-8f71-c3b7c70b993c
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: f45cb5b270bff9b2609ca0228c4e37a06314d368
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982005"
 ---
 # <a name="alter-table-column_constraint-transact-sql"></a>ALTER TABLE column_constraint (Transact-SQL)
@@ -170,7 +170,7 @@ ms.locfileid: "73982005"
  *logical_expression*  
  Логическое выражение, используемое в ограничении CHECK и возвращающее значения TRUE или FALSE. Аргумент *logical_expression*, используемый в ограничениях CHECK, не может содержать ссылок на другие таблицы, но может ссылаться на другие столбцы той же таблицы в той же строке. Выражение не может ссылаться на псевдоним типа данных.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  При добавлении новых ограничений FOREIGN KEY или CHECK все существующие данные проверяются на соответствие ограничениям, если не указан параметр WITH NOCHECK. В том случае, если обнаруживаются нарушения, выполнение ALTER TABLE завершается с ошибкой. При добавлении к существующему столбцу ограничений PRIMARY KEY или UNIQUE все данные в столбце должны быть уникальны. Если будут обнаружены повторяющиеся значения, ALTER TABLE завершится неудачно. При добавлении ограничения PRIMARY KEY или UNIQUE наличие параметра WITH NOCHECK не имеет значения.  
   
  Каждое ограничение PRIMARY KEY и UNIQUE создает индекс. Число ограничений UNIQUE и PRIMARY KEY не может вызвать превышение предельного количества индексов в таблице (999 некластеризованных и 1 кластеризованный). Ограничения внешнего ключа не вызывают автоматического создания индекса. Однако столбцы внешних ключей часто используются в критериях соединения запросов посредством сопоставления столбца или столбцов из ограничения внешнего ключа одной таблицы со столбцом или столбцами первичного или уникального ключей в другой таблице. Индекс по столбцам таблицы внешнего ключа позволяет компоненту [!INCLUDE[ssDE](../../includes/ssde-md.md)] быстро находить связанные данные в таблице внешних ключей.  
@@ -178,7 +178,7 @@ ms.locfileid: "73982005"
 ## <a name="examples"></a>Примеры  
  Примеры см. в статье [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   
  [column_definition (Transact-SQL)](../../t-sql/statements/alter-table-column-definition-transact-sql.md)  
   

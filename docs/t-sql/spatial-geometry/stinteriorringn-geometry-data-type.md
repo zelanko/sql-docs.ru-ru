@@ -18,10 +18,10 @@ ms.assetid: 47310f9f-2cdb-41e0-a6da-7c3cfbf139ac
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 328e77c0a5be561f795d1892512e7a72fd21340a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67950156"
 ---
 # <a name="stinteriorringn-geometry-data-type"></a>STInteriorRingN (тип данных geometry)
@@ -43,9 +43,9 @@ ms.locfileid: "67950156"
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Тип возвращаемого значения CLR: **SqlGeometry**  
+ Тип возвращаемых данных CLR: **SqlGeometry**  
   
- Тип OGC (открытый геопространственный консорциум): **LineString**  
+ Тип открытого геопространственного консорциума (OGC): **LineString**  
   
 ## <a name="remarks"></a>Remarks  
  Этот метод возвращает значение **NULL**, если экземпляр **geometry** не является многоугольником. Этот метод также вызывает исключение **ArgumentOutOfRangeException**, если значение выражения больше количества колец. Количество колец можно получить с помощью метода `STNumInteriorRing``()`.  

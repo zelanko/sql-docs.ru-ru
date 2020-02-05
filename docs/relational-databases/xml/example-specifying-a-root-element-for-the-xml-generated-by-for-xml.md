@@ -14,13 +14,13 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 6ce63dc5a35b9359e24bc410be2a0d53f80cfc99
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75246902"
 ---
-# <a name="example-specifying-a-root-element-for-the-xml-generated-by-for-xml"></a>Пример Определение корневого элемента для XML-документа, созданного предложением FOR XML
+# <a name="example-specifying-a-root-element-for-the-xml-generated-by-for-xml"></a>Пример. Задание корневого элемента для XML-документа, сформированного предложением FOR XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Путем определения параметра `ROOT` в запросе `FOR XML` можно выполнить запрос одного элемента высшего уровня для итогового XML-документа, как показано в этом запросе. Данный аргумент, определенный для директивы `ROOT` , задает имя корневого элемента.  
   

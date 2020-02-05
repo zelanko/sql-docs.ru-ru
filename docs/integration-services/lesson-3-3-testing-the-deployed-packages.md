@@ -1,5 +1,5 @@
 ---
-title: Шаг 3. Тестирование развернутых пакетов | Документация Майкрософт
+title: Шаг 3. Тестирование развернутых пакетов | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 9159da3f-c9ca-4015-9e85-3bf4373a1349
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ac260f2c3703260e5472d5be399333a93574f2c9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283257"
 ---
 # <a name="lesson-3-3---testing-the-deployed-packages"></a>Занятие 3–3. Тестирование развернутых пакетов
@@ -50,7 +50,7 @@ ms.locfileid: "71283257"
   
 ### <a name="to-run-the-packages-using-the-execute-package-utility"></a>Выполнение пакета с помощью программы выполнения пакетов  
   
-1.  В обозревателе объектов разверните папку "Сохраненные пакеты".  
+1.  В обозревателе объектов разверните папку «Сохраненные пакеты».  
   
 2.  Разверните папку "MSDB". Поскольку пакеты были развернуты на [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], все развернутые пакеты хранятся в базе данных msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и все развернутые пакеты появляются в папке MSDB. Папка "Файловая систем" остается пустой, пока вы не развернете пакеты в файловую систему вне папки "Deployment Tutorial".  
   

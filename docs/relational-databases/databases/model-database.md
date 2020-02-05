@@ -15,10 +15,10 @@ ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 81f96fac7ea9021c1f5eb39ad186dcdd35c92127
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68067376"
 ---
 # <a name="model-database"></a>База данных model
@@ -74,7 +74,7 @@ ms.locfileid: "68067376"
 |MIXED_PAGE_ALLOCATION|ON|нет|  
 |NUMERIC_ROUNDABORT|OFF|Да|  
 |PAGE_VERIFY|CHECKSUM|Да|  
-|PARAMETERIZATION|SIMPLE|Да|  
+|PARAMETERIZATION|ПРОСТОЙ|Да|  
 |QUOTED_IDENTIFIER|OFF|Да|  
 |READ_COMMITTED_SNAPSHOT|OFF|Да|  
 |RECOVERY|Зависит от выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *|Да|  

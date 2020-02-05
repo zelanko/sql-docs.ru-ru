@@ -13,17 +13,17 @@ ms.assetid: e1cb3880-cfda-40ac-91fc-d08998287f44
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d5f53246717621e2482a352d25cf2a24fd24f2f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68125184"
 ---
 # <a name="filetable-schema"></a>Схема FileTable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Описывает стандартные и фиксированные схемы таблицы FileTable.  
   
-|Имя атрибута файла|type|Размер|По умолчанию|Описание|Доступность файловой системы|  
+|Имя атрибута файла|type|Размер|По умолчанию|Description|Доступность файловой системы|  
 |-------------------------|----------|----------|-------------|-----------------|-------------------------------|  
 |**path_locator**|**hierarchyid**|переменная|Значение **hierarchyid** , указывающее расположение этого элемента.|Положение этого узла в иерархии FileNamespace.<br /><br /> Первичный ключ для таблицы.|Может быть создан и изменен с помощью задания значения пути Windows.|  
 |**stream_id**|**[uniqueidentifier] rowguidcol**||Значение, возвращаемое функцией **NEWID()** .|Уникальный идентификатор для данных FILESTREAM.|Неприменимо.|  

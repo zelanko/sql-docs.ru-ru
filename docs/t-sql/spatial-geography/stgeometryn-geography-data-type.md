@@ -17,10 +17,10 @@ ms.assetid: 53755f69-cd50-475b-b3b8-a1a9157cf03a
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 249639ef13d9200d1d6cedc189044c30ba8ff7ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042262"
 ---
 # <a name="stgeometryn-geography-data-type"></a>STGeometryN (тип данных geography)
@@ -42,7 +42,7 @@ ms.locfileid: "68042262"
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Тип возвращаемого значения CLR: **SqlGeography**  
+ Тип возвращаемых данных CLR: **SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
  Данный метод возвращает значение NULL, если параметр больше, чем результат [STNumGeometries()](../../t-sql/spatial-geography/stnumgeometries-geography-data-type.md), и вызывает исключение **ArgumentOutOfRangeException**, если параметр *expression* меньше, чем 1.  

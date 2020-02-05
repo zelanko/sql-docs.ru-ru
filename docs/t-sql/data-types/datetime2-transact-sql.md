@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dae7d1e29227484e907c45e8062f90873c10892b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086774"
 ---
 # <a name="datetime2-transact-sql"></a>datetime2 (Transact-SQL)
@@ -66,7 +66,7 @@ ms.locfileid: "68086774"
 |---|---|
 |ГГГГ-ММ-ДДТчч:мм:сс[.nnnnnnn]<br /><br /> ГГГГ-ММ-ДДТчч:мм:сс[.nnnnnnn]|На этот формат не влияют настройки локали сеанса инструкций SET LANGUAGE и SET DATEFORMAT. Символы **T**, двоеточие (:) и точка (.) включаются в строковый литерал, например "2007-05-02T19:58:47.1234567".|  
   
-|интерфейс ODBC|Описание|  
+|ODBC|Description|  
 |---|---|
 |{ ts 'гггг-мм-дд чч:мм:сс[.доли секунды]' }|Зависит от API-интерфейса ODBC.<br /><br /> Можно указать от 0 до 7 знаков (100 наносекунд) справа от десятичной запятой, представляющих доли секунды.|  
   
@@ -196,7 +196,7 @@ SELECT
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-|Тип данных|Вывод|  
+|Тип данных|Выходные данные|  
 |---|---|
 |**time**|12:35:29. 1234567|  
 |**date**|2007-05-08|  

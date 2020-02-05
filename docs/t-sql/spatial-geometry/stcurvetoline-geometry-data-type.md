@@ -15,10 +15,10 @@ ms.assetid: abc80b32-4152-4e10-b816-798b901e0ac5
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 5bc1bdb1ece65113422af1e9a8ebe09de0db1fa1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930301"
 ---
 # <a name="stcurvetoline-geometry-data-type"></a>STCurveToLine (тип данных geometry)
@@ -36,7 +36,7 @@ ms.locfileid: "67930301"
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Тип возвращаемого значения CLR: **SqlGeometry**  
+ Тип возвращаемых данных CLR: **SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
  Возвращает пустой экземпляр **GeometryCollection** для пустых переменных экземпляра **geometry** и возвращает значение **NULL** для неинициализированных переменных **geometry**.  
@@ -54,7 +54,7 @@ ms.locfileid: "67930301"
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-using-an-uninitialized-geometry-variable-and-empty-instance"></a>A. Использование неинициализированной переменной геометрии и пустого экземпляра  
- В приведенном ниже примере первая инструкция **SELECT** вызывает метод `STCurveToLine` с помощью неинициализированного экземпляра **geometry**, а вторая инструкция **SELECT** использует пустой экземпляр **geometry**. Таким образом, метод возвращает значение **NULL** для первой инструкции и коллекцию **GeometryCollection** для второй инструкции.  
+ В приведенном ниже примере первая инструкция **SELECT** вызывает метод **с помощью неинициализированного экземпляра**geometry`STCurveToLine`, а вторая инструкция **SELECT** использует пустой экземпляр **geometry**. Таким образом, метод возвращает значение **NULL** для первой инструкции и коллекцию **GeometryCollection** для второй инструкции.  
   
 ```
  DECLARE @g geometry; 

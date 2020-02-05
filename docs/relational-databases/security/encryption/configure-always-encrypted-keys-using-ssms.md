@@ -16,10 +16,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 13bb5944c5907f3bebc9f01eb969b4b8979f8c97
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595759"
 ---
 # <a name="provision-always-encrypted-keys-using-sql-server-management-studio"></a>Подготовка к работе ключей Always Encrypted с помощью SQL Server Management Studio
@@ -107,15 +107,15 @@ ms.locfileid: "73595759"
 - [Настройка шифрования столбцов с помощью мастера Always Encrypted](always-encrypted-wizard.md)
 - [Настройка шифрования столбцов с помощью Always Encrypted с пакетом приложения уровня данных](configure-always-encrypted-using-dacpac.md)
 - [Ротация ключей Always Encrypted с помощью SQL Server Management Studio](rotate-always-encrypted-keys-using-ssms.md)
-- [Разработка приложений с помощью Always Encrypted](always-encrypted-client-development.md)
+- [Разработка приложений с помощью Always Encrypted](always-encrypted-client-development.md)
 - [Перенос данных в столбцы или из них с помощью Always Encrypted с использованием мастера импорта и экспорта SQL Server](always-encrypted-migrate-using-import-export-wizard.md)
 
 ## <a name="see-also"></a>См. также:
-- [Постоянное шифрование](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Общие сведения об управлении ключами для Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Общие сведения об управлении ключами для Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
 - [Создание и хранение главных ключей столбцов для Always Encrypted](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)
 - [Настройка функции Always Encrypted с помощью SQL Server Management Studio](configure-always-encrypted-using-sql-server-management-studio.md)
-- [Подготовка ключей Always Encrypted с помощью PowerShell](configure-always-encrypted-keys-using-powershell.md)
+- [Подготовка ключей Always Encrypted с помощью PowerShell](configure-always-encrypted-keys-using-powershell.md)
 - [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md)
 - [DROP COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/drop-column-master-key-transact-sql.md)
 - [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md)

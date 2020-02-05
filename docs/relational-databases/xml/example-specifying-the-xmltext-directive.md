@@ -1,5 +1,5 @@
 ---
-title: Пример Указание директивы XMLTEXT | Документация Майкрософт
+title: Пример. Указание директивы XMLTEXT | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/05/2017
 ms.prod: sql
@@ -13,13 +13,13 @@ ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 52e3d6ea8cff9d1984ee11a510a6c21833034c29
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006675"
 ---
-# <a name="example-specifying-the-xmltext-directive"></a>Пример Определение директивы XMLTEXT
+# <a name="example-specifying-the-xmltext-directive"></a>Пример. Указание директивы XMLTEXT
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Этот пример иллюстрирует, как обращение к данным переполненного столбца осуществляется при помощи директивы **XMLTEXT** в инструкции `SELECT` , использующей режим EXPLICIT.  
   
@@ -127,7 +127,7 @@ FOR XML EXPLICIT
  </Parent>
  ```  
   
- В этом элементе запроса значение *directive* задано для атрибута `PersonName`. Это приводит к тому, что элемент `PersonName` добавляется в качестве вложенного элемента в содержащий его элемент <`Parent`>. Атрибуты <`xmltext`> все так же добавляются к окружению элемента <`Parent`>. Содержание элемента <`overflow`> и вложенные элементы добавляются в начало других вложенных элементов содержащих их элементов <`Parent`>.  
+ В этом элементе запроса значение *directive* задано для атрибута `PersonName` . Это приводит к тому, что элемент `PersonName` добавляется в качестве вложенного элемента в содержащий его элемент <`Parent`>. Атрибуты <`xmltext`> все так же добавляются к окружению элемента <`Parent`>. Содержание элемента <`overflow`> и вложенные элементы добавляются в начало других вложенных элементов содержащих их элементов <`Parent`>.  
   
 ```  
 SELECT 1      AS Tag, NULL as parent,  
@@ -175,6 +175,6 @@ FOR XML EXPLICIT, xmldata;
  ```  
   
 ## <a name="see-also"></a>См. также:  
- [Использование режима EXPLICIT совместно с предложением FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
+ [Использование режима EXPLICIT с предложением FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   

@@ -16,10 +16,10 @@ ms.assetid: dd78fd8f-56e3-4582-9abd-6bc25c91e075
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 712665d24946c2826e4ab6c5e53bb853b07642b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68033243"
 ---
 # <a name="join-filters"></a>фильтры соединения
@@ -44,7 +44,7 @@ ms.locfileid: "68033243"
 LoginID = SUSER_SNAME()  
 ```  
   
- Благодаря этому фильтру подписка каждого сотрудника будет содержать только те данные из таблицы **HumanResources.Employee** , которые относятся к этому сотруднику (в этом случае — в одной строке). Дополнительные сведения см. в статье [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+ Благодаря этому фильтру подписка каждого сотрудника будет содержать только те данные из таблицы **HumanResources.Employee** , которые относятся к этому сотруднику (в этом случае — в одной строке). Дополнительные сведения см. в разделе [Параметризованные фильтры строк](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  Следующим этапом является расширение этого фильтра на все связанные таблицы, используя синтаксис, подобный тому, который использовался для указания соединения таблиц. Первое предложение фильтра соединения:  
   

@@ -14,10 +14,10 @@ ms.assetid: 9874a8b2-7ccd-494a-944c-ad33b30b5499
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8723d9750eb03eda14a7983cba8919ea8e92eb81
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68133624"
 ---
 # <a name="management-data-warehouse"></a>хранилище данных управления
@@ -39,7 +39,7 @@ ms.locfileid: "68133624"
   
  В следующей таблице описаны таблицы базы данных в схеме core. Эти таблицы базы данных позволяют сборщику данных отслеживать источники данных, пользователей, вставивших данные, и время передачи в хранилище данных.  
   
-|Имя таблицы|Описание|  
+|Имя таблицы|Description|  
 |----------------|-----------------|  
 |core.performance_counter_report_group_items|Хранит сведения о группировке отчетов из хранилища данных управления, а также статистику счетчиков производительности.|  
 |core.snapshots_internal|Определяет каждый новый моментальный снимок. Новая строка вставляется в эту таблицу каждый раз, когда пакет передачи начинает передачу нового пакета данных.|  
