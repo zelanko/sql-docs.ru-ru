@@ -15,10 +15,10 @@ ms.assetid: 15540837-c4bf-4d18-b380-13ae31f3226f
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 8e1600c9cf6ea4dbd540137ac53b9d34b65ea125
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101261"
 ---
 # <a name="hasm-geometry-datatype"></a>HasМ (тип данных geometry)
@@ -36,7 +36,7 @@ ms.locfileid: "68101261"
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Тип возвращаемого значения CLR: **Boolean**  
+ Тип возвращаемых данных CLR: **Boolean**  
   
 ## <a name="remarks"></a>Remarks  
   

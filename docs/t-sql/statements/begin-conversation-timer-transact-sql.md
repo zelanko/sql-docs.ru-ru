@@ -33,10 +33,10 @@ ms.assetid: 98e49b3f-a38f-4180-8171-fa9cb30db4cb
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 65fbd94bac320994f9c1917e634210febd2ba878
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70211215"
 ---
 # <a name="begin-conversation-timer-transact-sql"></a>BEGIN CONVERSATION TIMER (Transact-SQL)
@@ -56,10 +56,10 @@ BEGIN CONVERSATION TIMER ( conversation_handle )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- BEGIN CONVERSATION TIMER **(**_conversation\_handle_**)**  
+ BEGIN CONVERSATION TIMER **(** _conversation\_handle_ **)**  
  Указывает диалог, длительность которого нужно проконтролировать. *conversation_handle* должен иметь тип **uniqueidentifier**.  
   
- TIMEOUT   
+ TIMEOUT  
  Указывает время ожидания (в секундах) перед добавлением сообщения в очередь.  
   
 ## <a name="remarks"></a>Remarks  

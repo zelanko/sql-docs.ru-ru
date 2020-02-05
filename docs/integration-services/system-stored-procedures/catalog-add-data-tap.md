@@ -11,10 +11,10 @@ ms.assetid: a25ebcc7-535e-4619-adf6-4e2b5a62ba37
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 513e4874c858d6ce83b65a9a846aa05617229481
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295577"
 ---
 # <a name="catalogadd_data_tap"></a>catalog.add_data_tap 
@@ -126,7 +126,7 @@ Exec SSISDB.Catalog.start_execution @execution_id
 ## <a name="requirements"></a>Требования  
   
 ## <a name="external-resources"></a>Внешние ресурсы  
- Запись в блоге [SSIS 2012: A Peek to Data Taps](https://go.microsoft.com/fwlink/?LinkId=239983) (Службы SSIS 2012. Взгляд на отвод данных) в блоге rafael-salas.com.  
+ Запись [Службы SSIS 2012. Взгляд на отвод данных](https://go.microsoft.com/fwlink/?LinkId=239983) в блоге rafael-salas.com.  
   
 ## <a name="see-also"></a>См. также:  
  [catalog.add_data_tap_by_guid](../../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md)  

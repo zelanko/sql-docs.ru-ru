@@ -16,10 +16,10 @@ ms.assetid: 0b8d3ddc-38c0-4241-b7bb-ee654a5081aa
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 05f0d6d99ca4e5274882ec5d4e751ba658b62a1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68114799"
 ---
 # <a name="deny-object-permissions-transact-sql"></a>DENY, запрет разрешений на объект (Transact-SQL)
@@ -61,7 +61,7 @@ DENY <permission> [ ,...n ] ON
  Запрет разрешения ALL не запрещает все возможные разрешения. Запрет ALL эквивалентен запрету всех разрешений ANSI-92, применимых к данному объекту. Значение ALL различается для разных типов объектов  
   
  - Разрешения на скалярные функции: EXECUTE, REFERENCES.  
- - Разрешения на функции с табличным значением: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
+ - Разрешения на возвращающую табличное значение функцию: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
  - Разрешения на хранимые процедуры: EXECUTE.  
  - Разрешения на таблицы: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
  - Разрешения на представления: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  

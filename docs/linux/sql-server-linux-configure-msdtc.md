@@ -8,10 +8,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: a39e0a743053db694efc2d0e8176e659d7e376d1
-ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68995869"
 ---
 # <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>Сведения о настройке координатора распределенных транзакций (Майкрософт) (MSDTC) в Linux
@@ -29,7 +29,7 @@ ms.locfileid: "68995869"
 
 Координатор распределенных транзакций использует два параметра конфигурации для служебной программы mssql-conf.
 
-| Параметр mssql-conf | Описание |
+| Параметр mssql-conf | Description |
 |---|---|
 | **network.rpcport** | TCP-порт, к которому привязан процесс сопоставителя конечных точек RPC. |
 | **distributedtransaction.servertcpport** | Порт, который прослушивает сервер MSDTC. Если параметр не задан, служба MSDTC использует случайный временный порт при перезапуске службы и потребуется перенастроить исключения брандмауэра, чтобы служба MSDTC могла продолжить взаимодействие. |
@@ -184,7 +184,7 @@ tcp6 0 0 :::51999 :::* LISTEN 13911/sqlservr
 
 По умолчанию MSDTC для SQL Server на Linux не использует проверку подлинности для RPC-взаимодействия. Однако если хост-компьютер присоединен к домену Active Directory (AD), можно настроить MSDTC для использования RPC-взаимодействия с проверкой подлинности, используя следующие параметры **mssql-conf**.
 
-| Настройка | Описание |
+| Параметр | Description |
 |---|---|
 | **distributedtransaction.allowonlysecurerpccalls**          | Настройка только безопасных удаленных вызовов процедур (RPC) для распределенных транзакций. Значение по умолчанию — 0. |
 | **distributedtransaction.fallbacktounsecurerpcifnecessary** | Настройка только безопасных удаленных вызовов процедур (RPC) для распределенных транзакций. Значение по умолчанию — 0. |
@@ -205,6 +205,6 @@ tcp6 0 0 :::51999 :::* LISTEN 13911/sqlservr
 | [Windows Server](https://docs.microsoft.com/windows-server/get-started/windows-server-release-info) | 1903 | 18362.30.190401-1528 |
 | [Windows 10](https://docs.microsoft.com/windows/release-information/) | 1903 | 18362.267 |
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Дополнительные сведения об SQL Server на Linux см. в статье [SQL Server на Linux](sql-server-linux-overview.md).

@@ -16,13 +16,13 @@ f1_keywords:
 ms.assetid: 1f499277-7f12-42ba-8cf4-52b683434944
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 043a13a84eebe9fc1c2cac96628ce6303653e8ac
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 91e4ceeba2e8ec18569c22a886623977402e478a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768593"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76284115"
 ---
 # <a name="distributor-information-publications"></a>Сведения о распространителе, публикации
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "68768593"
  Состояние агента. Возможные значения состояния показаны в следующем списке:  
   
 -   Ошибка    
--   Повтор    
+-   Повторить попытку    
 -   Запущен    
 -   Не выполняется   
 -   Запуск не выполнялся  
@@ -67,7 +67,7 @@ ms.locfileid: "68768593"
  **Публикация**  
  Имя публикации, с которой связан агент.  
   
- **Подписка**  
+ **подписка**  
  Имя подписки, представленное в форме: [*SubscriberName*].[*Database*].  
   
  **Тип**  
@@ -103,7 +103,7 @@ ms.locfileid: "68768593"
   
 -   Ошибка  
   
--   Повтор  
+-   Повторить попытку  
   
 -   Запущен  
   
@@ -117,7 +117,7 @@ ms.locfileid: "68768593"
  **Публикация**  
  Имя публикации, с которой связан агент.  
   
- **Подписка**  
+ **подписка**  
  Имя подписки, представленное в форме: [*SubscriberName*].[*Database*].  
   
  **Тип**  
