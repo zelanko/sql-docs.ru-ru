@@ -14,17 +14,17 @@ ms.assetid: 72eb4fc1-7af4-4ec6-9e02-11a69e02748e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1cb488b6ce3dc21567b4f64738f9c26910c61f17
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68037162"
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>Запуск SQL Server в однопользовательском режиме
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   При определенных обстоятельствах экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] нужно запустить в однопользовательском режиме (используется **параметр запуска -m**). Например, может понадобиться изменить параметры конфигурации сервера, восстановить поврежденную базу данных master или другую системную базу данных. Для обоих этих действий необходим запуск экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в однопользовательском режиме.  
   
- После запуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в однопользовательском режиме каждый член локальной группы администраторов на компьютере сможет подключаться к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] от имени члена предопределенной роли сервера sysadmin. Дополнительные сведения см. в разделе [Подключение к SQL Server в случае, если доступ системных администраторов заблокирован](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md).  
+ После запуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в однопользовательском режиме каждый член локальной группы администраторов на компьютере сможет подключаться к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] от имени члена предопределенной роли сервера sysadmin. Дополнительные сведения см. в статье [Подключение к SQL Server в случае, если доступ системных администраторов заблокирован](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md).  
   
  При запуске экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в однопользовательском режиме необходимо обратить внимание на следующее:  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68037162"
   
 4.  Уточните у администратора кластера или с помощью консоли управления отказоустойчивым кластером, остается ли ресурс [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в режиме «вне сети».  
   
-5.  Подключитесь к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], используя теперь следующую команду, и выполните необходимую операцию: SQLCMD -E -S\<имя сервера>.  
+5.  Теперь подключитесь к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и выполните необходимую операцию: SQLCMD -E -S\<имя_сервера>.  
   
 6.  После завершения операции закройте командную строку и переведите SQL и другие ресурсы обратно в режим «в сети», обратившись к администратору кластера.  
   

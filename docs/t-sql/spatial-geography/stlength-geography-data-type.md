@@ -18,10 +18,10 @@ ms.assetid: 774560ab-4a4a-4058-b043-1e67cf6fb9eb
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 61487b976322f8725f9398e54f8292919ff0ca58
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68139109"
 ---
 # <a name="stlength-geography-data-type"></a>STLength (тип данных geography)
@@ -39,7 +39,7 @@ ms.locfileid: "68139109"
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
- Тип возвращаемого значения CLR: **SqlDouble**  
+ Тип возвращаемых данных CLR: **SqlDouble**  
   
 ## <a name="remarks"></a>Remarks  
  Если экземпляр **geography** замкнут, его длина вычисляется как общая длина пути обхода экземпляра; длина любого многоугольника есть его периметр, а длина точки — 0. Длина коллекции **GeometryCollection** находится путем вычисления суммы длин всех экземпляров **geography**, содержащихся в коллекции.  

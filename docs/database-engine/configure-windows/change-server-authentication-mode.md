@@ -16,10 +16,10 @@ ms.assetid: 79babcf8-19fd-4495-b8eb-453dc575cac0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a688bae85e0ea6bd30bbde50df0151a97fd6f505
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012988"
 ---
 # <a name="change-server-authentication-mode"></a>Изменение режима проверки подлинности сервера
@@ -32,7 +32,7 @@ ms.locfileid: "68012988"
   
 -   **Перед началом работы**  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Изменение режима проверки подлинности сервера с помощью:**  
   
@@ -97,7 +97,7 @@ ms.locfileid: "68012988"
 ## <a name="see-also"></a>См. также:  
  [Надежные пароли](../../relational-databases/security/strong-passwords.md)   
  [Вопросы безопасности при установке SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)   
- [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
+ [ALTER LOGIN (Transact-SQL)](../../t-sql/statements/alter-login-transact-sql.md)   
  [Подключение к SQL Server в случае, если доступ системных администраторов заблокирован](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)  
   
   

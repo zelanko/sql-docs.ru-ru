@@ -20,10 +20,10 @@ ms.assetid: 52d4b12d-17be-4cbd-aa78-65332a4883b0
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: b4be2767bd0ae3a2486e598678e7654a50b1dc93
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67984417"
 ---
 # <a name="deny-symmetric-key-permissions-transact-sql"></a>DENY, запрет разрешений на симметричный ключ (Transact-SQL)

@@ -18,10 +18,10 @@ ms.assetid: 20cace39-02e5-46c1-a9a5-841d04d0da16
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 7850a3fec40dcdd6606086d44e626e2e5f57ea93
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67950175"
 ---
 # <a name="stgeomfromtext-geometry-data-type"></a>STGeomFromText (тип данных geometry)
@@ -46,7 +46,7 @@ STGeomFromText ( 'geometry_tagged_text' , SRID )
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Тип возвращаемого значения CLR: **SqlGeometry**  
+ Тип возвращаемых данных CLR: **SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
  Тип OGC экземпляра **geometry**, возвращаемый методом `STGeomFromText()`, получает значение в зависимости от соответствующих входных данных WKT.  
@@ -62,7 +62,7 @@ SET @g = geometry::STGeomFromText('LINESTRING (100 100, 20 180, 180 180)', 0);
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Статические геометрические методы OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

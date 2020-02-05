@@ -18,10 +18,10 @@ ms.assetid: 19e757b3-cb2e-4852-87b9-40a815ab707e
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 7b4398107b11ff0bb1764dc70e4af24af082aeb4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68107708"
 ---
 # <a name="stgeomcollfromtext-geometry-data-type"></a>STGeomCollFromText (тип данных geometry)
@@ -46,7 +46,7 @@ STGeomCollFromText ( 'geometrycollection_tagged_text' , SRID )
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Тип возвращаемого значения CLR: **SqlGeometry**  
+ Тип возвращаемых данных CLR: **SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
  Тип OGC экземпляра **geometry**, возвращаемый методом `STGeomCollFromText()`, получает значение в зависимости от соответствующих входных данных WKT.  

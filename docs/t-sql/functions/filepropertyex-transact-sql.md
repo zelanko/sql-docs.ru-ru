@@ -20,10 +20,10 @@ helpviewer_keywords:
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 955cfe87f93bedc41c6aeb29951ee1c81d0a4d6e
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68425936"
 ---
 # <a name="filepropertyex-transact-sql"></a>FILEPROPERTYEX (Transact-SQL)
@@ -48,7 +48,7 @@ FILEPROPERTYEX ( name , property )
 
 
   
-|Значение|Описание|
+|Значение|Description|
 |-----------|-----------------|  
 |**BlobTier**|Уровень целевого страничного BLOB-объекта Azure. Применяется только к базам данных категорий "Стандартный" или "Общего назначения", использующим хранилище страничных BLOB-объектов Azure.|
 |**AccountType**|Тип учетной записи хранения, указывающий, является ли она учетной записью хранения BLOB-объектов или файлов, а также является ли она учетной записью хранения класса Premium или Standard.|

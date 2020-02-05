@@ -18,10 +18,10 @@ ms.assetid: a3f2c84b-a49f-4ce3-ba25-b903fb0c99b4
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: e48cea62df1e0828a583cfccf35fc4bedf7358cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101275"
 ---
 # <a name="geomfromgml-geometry-data-type"></a>GeomFromGML (тип данных geometry)
@@ -50,7 +50,7 @@ GeomFromGml ( GML_input, SRID )
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Тип возвращаемого значения CLR: **SqlGeometry**  
+ Тип возвращаемых данных CLR: **SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
  Этот метод вызывает исключение **FormatException**, если входные данные представлены в неверном формате.  

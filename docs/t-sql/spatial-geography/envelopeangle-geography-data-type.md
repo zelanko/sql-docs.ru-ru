@@ -18,10 +18,10 @@ ms.assetid: 14a7ba15-168c-4b08-ba3d-951d73092ac7
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: e3289956dd79c852eef6534ad1f72623ad4dcaa6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066462"
 ---
 # <a name="envelopeangle-geography-data-type"></a>EnvelopeAngle (тип данных geography)
@@ -41,7 +41,7 @@ EnvelopeAngle( )
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
- Тип возвращаемого значения CLR: **SqlDouble**  
+ Тип возвращаемых данных CLR: **SqlDouble**  
   
 ## <a name="remarks"></a>Remarks  
  Этот метод возвращает точку в экземпляре **geography** в градусах. При использовании с функцией EnvelopeCenter() `EnvelopeAngle()` возвращает ограничивающую окружность экземпляра **geography**.  
@@ -57,7 +57,7 @@ DECLARE @g geography = 'LINESTRING(-120 45, -120 0, -90 0)';
 SELECT @g.EnvelopeAngle();  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширенные методы в экземплярах Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
  [EnvelopeCenter (тип данных geography)](../../t-sql/spatial-geography/envelopecenter-geography-data-type.md)  
   

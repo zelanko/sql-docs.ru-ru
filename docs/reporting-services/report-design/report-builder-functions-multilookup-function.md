@@ -9,10 +9,10 @@ ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1631f5f07c26e8b57cf8bc977ef6d6ccf4b3ae48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577149"
 ---
 # <a name="report-builder-functions---multilookup-function"></a>Функции построителя отчетов — функция Multilookup
@@ -57,7 +57,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  Для извлечения единственного значения для указанного имени из набора данных, состоящего из пар "имя-значение" со связью "один к одному", используйте [функцию Lookup (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-builder-functions-lookup-function.md). Для извлечения нескольких значений для имени из набора данных, состоящего из пар "имя-значение" со связью "один ко многим", используйте [функцию LookupSet (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-builder-functions-lookupset-function.md).  
   
- Существуют следующие ограничения.  
+ Применяются следующие ограничения:  
   
 -   Функция**Multilookup** вычисляется после применения всех критериев фильтра.  
   

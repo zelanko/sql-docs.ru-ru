@@ -26,10 +26,10 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a3b2d2ff81fddaae0b0ae68da9d4477819a61073
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101932"
 ---
 # <a name="dbcc-dropcleanbuffers-transact-sql"></a>DBCC DROPCLEANBUFFERS (Transact-SQL)
@@ -74,11 +74,11 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
   
 ## <a name="permissions"></a>Разрешения  
 
-Применимо для следующих объектов: SQL Server, Parallel Data Warehouse 
+Область применения: SQL Server, Parallel Data Warehouse 
 
 - Необходимо членство в предопределенной роли сервера **sysadmin** .  
 
-Применимо для следующих объектов: Хранилище данных SQL Azure
+Область применения этой статьи: Хранилище данных SQL Azure
 
 - Необходимо членство в предопределенной роли сервера DB_OWNER.  
   

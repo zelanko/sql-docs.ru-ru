@@ -13,10 +13,10 @@ ms.assetid: d695690a-923b-4036-945e-7621e8651deb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3651359a836f78c7f962ae571c89d8efc23f574b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71286308"
 ---
 # <a name="general-page-of-integration-services-designers-options"></a>Параметры конструкторов служб Integration Services: страница "Общие"
@@ -50,7 +50,7 @@ ms.locfileid: "71286308"
   
 -   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Поставщик OLE DB  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Собственный клиент  
+-   Собственный клиент [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
   
  Мастер обновления пакетов [!INCLUDE[ssIS](../includes/ssis-md.md)] обновляет только те строки подключения, которые хранятся в диспетчерах соединений. Мастер не обновляет строки соединения, которые формируются динамически с помощью языка выражений служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] или программно в задаче «Скрипт».  
   

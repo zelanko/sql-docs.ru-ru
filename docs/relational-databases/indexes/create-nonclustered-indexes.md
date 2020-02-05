@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 98ab53220b995c0c94aa2eb25d509bd67f7090b5
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908042"
 ---
 # <a name="create-nonclustered-indexes"></a>Создание некластеризованных индексов
@@ -57,7 +57,7 @@ ms.locfileid: "72908042"
   
 1.  В обозревателе объектов разверните базу данных, содержащую таблицу, в которой необходимо создать некластеризованный индекс.  
   
-2.  Разверните папку **Таблицы** .  
+2.  Разверните папку **Таблицы**.  
   
 3.  Щелкните правой кнопкой мыши таблицу, в которой нужно создать некластеризованный индекс, и выберите пункт **Конструктор**.  
   
