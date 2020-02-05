@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 94f5ccf6d7983a25bb8cafe084dbca103f966255
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095428"
 ---
 # <a name="track-data-changes-sql-server"></a>Отслеживание измененных данных (SQL Server)
@@ -62,7 +62,7 @@ ms.locfileid: "74095428"
 |Изменение столбца|Да|Да|  
 |Тип DML|Да|Да|  
   
-##  <a name="Capture"></a> Change Data Capture  
+##  <a name="Capture"></a> Система отслеживания измененных данных  
  Система отслеживания измененных данных регистрирует в журнале данные об изменении пользовательских таблиц, отслеживая как сам факт DML-изменений, так и фактически измененные данные. Изменения отслеживаются с помощью асинхронного процесса, который считывает журнал транзакций и слабо влияет на систему.  
   
  Как показано на следующем рисунке, изменения в пользовательской таблице записываются в соответствующих таблицах изменений. Эти таблицы изменений обеспечивают журнальное представление изменений, распределенных во времени. Функции [отслеживания измененных данных](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md), предоставляемые [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], обеспечивают простую систематическую обработку данных об изменениях.  
@@ -91,7 +91,7 @@ ms.locfileid: "74095428"
 |Разреженные столбцы|Да|Не поддерживает отслеживание изменений при использовании набора столбцов.|  
 |Вычисляемые столбцы|нет|Изменения в вычисляемых столбцах не отслеживаются. Столбец появится в таблице изменений с подходящим типом, но в нем будет содержаться значение NULL.|  
 |XML|Да|Изменения в индивидуальных XML-элементах не отслеживаются.|  
-|timestamp|Да|Тип данных в таблице изменений будет преобразован в двоичный.|  
+|Отметка времени|Да|Тип данных в таблице изменений будет преобразован в двоичный.|  
 |Типы данных BLOB|Да|Предыдущий снимок столбца BLOB будет сохранен только при изменении самого столбца.|  
   
 ### <a name="change-data-capture-and-other-sql-server-features"></a>Система отслеживания измененных данных и другие функции SQL Server  
@@ -135,9 +135,9 @@ ms.locfileid: "74095428"
   
      `SQL Server cannot load database '%.*ls' because change data capture is enabled. The currently installed edition of SQL Server does not support change data capture. Either disable change data capture in the database by using a supported edition of SQL Server, or upgrade the instance to one that supports change data capture.`  
   
- Системную хранимую процедуру [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) можно использовать для отключения отслеживания измененных данных в восстановленной или присоединенной базе данных.  
+ Процедуру [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) можно использовать для отключения отслеживания измененных данных в восстановленной или присоединенной базе данных.  
   
-##  <a name="Tracking"></a> Change Tracking  
+##  <a name="Tracking"></a> Отслеживание изменений  
  Система отслеживания изменений отслеживает факт изменения строк таблицы, но не отслеживает изменившиеся данные. Это позволяет приложениям определять изменившиеся строки, получая последние данные изменений непосредственно из пользовательских таблиц. Поэтому журнал системы отслеживания изменений более ограничен по сравнению с системой отслеживания измененных данных. Однако приложениям, которые не нуждаются в данных предыстории, требуется меньше пространства хранения, поскольку не отслеживаются измененные данные. Для отслеживания изменений используется синхронное средство отслеживания. Оно было разработано, чтобы снизить до минимума объем служебных данных для операций DML.  
   
  На следующем рисунке показан сценарий синхронизации, при котором оптимальным является отслеживание изменений. В этом сценарии приложению требуются следующие данные: все строки таблицы, измененные с момента последней синхронизации, и только текущие данные строк. Поскольку для отслеживания изменений используется синхронный механизм, приложение может выполнить двустороннюю синхронизацию и уверенно определить возможные конфликты.  
@@ -155,7 +155,7 @@ ms.locfileid: "74095428"
   
 -   [Центр разработки Microsoft Sync Framework](https://go.microsoft.com/fwlink/?LinkId=108054)  
   
-     Содержит полную документацию по [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] и [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]. В документации по [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)] раздел «Как использовать отслеживание изменений SQL Server" содержит подробные сведения и примеры программного кода.  
+     Содержит полную документацию по [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] и [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]. В документации по [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]раздел "Как использовать отслеживание изменений SQL Server" содержит подробные сведения и примеры программного кода.  
   
 ## <a name="related-tasks-required"></a>Связанные задачи (обязательно)  
   

@@ -13,19 +13,19 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f559d5e46f06e8bdf33687713ce2dc0c5c49cb78
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68089338"
 ---
 # <a name="ftcrawl-started-event-class"></a>Класс событий FT:Crawl Started
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Класс событий **FT:Crawl Started** показывает, что запущен процесс полнотекстового сканирования (или заполнения). Данный класс событий используется для определения наличия среди выполняемых задач запроса на сканирование.  
   
-## <a name="ft-crawl-started-event-class-data-columns"></a>Столбцы данных  класса событий FT:Crawl Started  
+## <a name="ft-crawl-started-event-class-data-columns"></a>Столбцы с данными класса событий FT:Crawl Started  
   
-|Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
+|Имя столбца данных|Тип данных|Description|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|Идентификатор базы данных, в которой запущено полнотекстовое сканирование. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
 |**EventClass**|**int**|Тип события = 155.|27|нет|  

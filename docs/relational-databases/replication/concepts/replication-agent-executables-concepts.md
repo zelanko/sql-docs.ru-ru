@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: cba476df-d4ea-44c9-bb86-81488971e328
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: d2df5c3df512c60c38caeb2f2d0240a3cf2daa6e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 0ba452caea108e24e86bffc0e89bfbc85dd2ed3e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768719"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76285918"
 ---
 # <a name="replication-agent-executables-concepts"></a>Основные понятия исполняемых файлов агента репликации
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "68768719"
   
  С применением исполняемых файлов можно запускать экземпляры следующих агентов репликации.  
   
--   [Агент распространения репликации](../../../relational-databases/replication/agents/replication-distribution-agent.md)  
+-   [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)  
   
 -   [Агент чтения журнала репликации](../../../relational-databases/replication/agents/replication-log-reader-agent.md)  
   

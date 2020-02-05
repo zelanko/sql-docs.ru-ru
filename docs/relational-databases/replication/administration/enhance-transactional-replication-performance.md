@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: f50978c19295f5973e787bdaab46efea6367308a
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 8ed18a3ea7ce4804146d448765d9f18e8b2a7f73
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710380"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288181"
 ---
 # <a name="enhance-transactional-replication-performance"></a>Повышение производительности репликации транзакций
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "71710380"
   
      Настройка агентов на непрерывное выполнение вместо создания часто выполняемых расписаний (например, ежеминутных) позволяет повысить производительность репликации за счет экономии времени на запусках и остановках агента. Если агент распространителя настроен на непрерывную работу, изменения пересылаются на другие серверы, соединенные в топологии, с малой задержкой. Дополнительные сведения см. в разделе:  
   
-    -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. [Указание расписаний синхронизации](../../../relational-databases/replication/specify-synchronization-schedules.md)  
+    -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Указание расписаний синхронизации](../../../relational-databases/replication/specify-synchronization-schedules.md)  
   
 ## <a name="distribution-agent-and-log-reader-agent-parameters"></a>Параметры агента распространителя и агента чтения журнала  
 Параметры профиля агента часто изменяют, чтобы увеличить пропускную способность агентов чтения журнала и распространения в системах OLTP с высоким трафиком. 
@@ -144,9 +144,9 @@ ms.locfileid: "71710380"
 
 - Значение счетчика производительности **Дист.: доставлено команд в секунду** всегда равно 0.
 - Значение счетчика производительности **Дист.: доставлено транз. в секунду** всегда равно 0.
-- Значение счетчика производительности **Дист.: задержка при доставке** увеличивается вплоть до устранения взаимоблокировки потоков.
+- Значение счетчика производительности **Дист.: задержка при доставке** увеличивается вплоть до устранения взаимоблокировки.
 
-В разделе "Агент распространения репликации" в электронной документации по SQL Server приводится следующее описание параметра *SubscriptionStreams*: "Если одному из соединений не удается осуществить выполнение или фиксацию, все подключения прекратят выполнение текущего пакета, и агент будет использовать одиночный поток для повторных попыток выполнения поврежденных пакетов".
+В разделе "Агент распространения репликации" в электронной документации на SQL Server приводится следующее описание параметра *SubscriptionStreams*: "Если одно из подключений не удается выполнить или зафиксировать, будут прерваны все подключения, текущий пакет команд не будет выполнен и агент будет использовать один поток для повторного выполнения пакетов со сбоями".
 
 Агент распространения воспользуется одним сеансом, чтобы повторить попытку выполнения пакета команд. После успешного применения пакета команд агент распространения возобновит использование нескольких сеансов без перезапуска.
 
@@ -159,7 +159,7 @@ ms.locfileid: "71710380"
 ## <a name="see-more"></a>Подробнее
   
 [Работа с профилями агента репликации](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
-[Просмотр и изменение параметров командной строки агента репликации (SQL Server Management Studio)](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
+[Просмотр и изменение параметров командной строки агента репликации (среда SQL Server Management Studio)](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
 [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
   

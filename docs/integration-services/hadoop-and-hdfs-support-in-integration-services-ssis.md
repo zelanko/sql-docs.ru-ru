@@ -13,10 +13,10 @@ ms.assetid: fea03c62-9361-4b6f-b4ce-8fe0f94b34f2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dc008fc1f59d8ea6b5f015f2028779aa270d3b2a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285862"
 ---
 # <a name="hadoop-and-hdfs-support-in-integration-services-ssis"></a>Поддержка Hadoop и HDFS в службах Integration Services (SSIS)
@@ -24,7 +24,7 @@ ms.locfileid: "71285862"
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  Службы SQL Server 2016 Integration Services (SSIS) включают в себя приведенные ниже компоненты, обеспечивающие поддержку Hadoop и HDFS в локальной среде.  
+  Службы SQL Server 2016 Integration Services (SSIS) включают в себя приведенные ниже компоненты, обеспечивающие поддержку Hadoop и HDFS в локальной среде.  
   
  Сведения о компонентах служб Integration Services, поддерживающих HDInsight и другие компоненты Microsoft Azure, см. в разделе [Пакет дополнительных компонентов Azure для служб Integration Services (SSIS)](../integration-services/azure-feature-pack-for-integration-services-ssis.md).  
   
@@ -42,8 +42,8 @@ ms.locfileid: "71285862"
   
 -   Поток данных — источник данных и назначение  
   
-    -   [Источник "Файл HDFS"](../integration-services/data-flow/hdfs-file-source.md)  
+    -   [Источник «Файл HDFS»](../integration-services/data-flow/hdfs-file-source.md)  
   
-    -   [Назначение HDFS-файлов](../integration-services/data-flow/hdfs-file-destination.md)  
+    -   [Назначение «Файл HDFS»](../integration-services/data-flow/hdfs-file-destination.md)  
   
   

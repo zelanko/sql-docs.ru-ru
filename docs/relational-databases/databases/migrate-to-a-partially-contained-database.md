@@ -13,10 +13,10 @@ ms.assetid: 90faac38-f79e-496d-b589-e8b2fe01c562
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6674cb5f457b634682da90a2b7a2dff27a171da7
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908088"
 ---
 # <a name="migrate-to-a-partially-contained-database"></a>Migrate to a Partially Contained Database
@@ -44,7 +44,7 @@ ms.locfileid: "72908088"
   
 -   Просмотрите список функций базы данных, которые изменились для частично автономных баз данных. Дополнительные сведения см. в разделе [Измененные функции (автономная база данных)](../../relational-databases/databases/modified-features-contained-database.md).  
   
--   Выполнив запрос к представлению [sys.dm_db_uncontained_entities (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md), найдите в базе данных неавтономные объекты или функции. Дополнительные сведения см. в разделе  
+-   Выполнив запрос к представлению [sys.dm_db_uncontained_entities (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md) , найдите в базе данных неавтономные объекты или функции. Дополнительные сведения см. в разделе  
   
 -   Мониторьте XEvent **database_uncontained_usage** , чтобы определить, когда используются неавтономные функции.  
   
@@ -119,7 +119,7 @@ DEALLOCATE user_cursor ;
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Contained Databases](../../relational-databases/databases/contained-databases.md)   
+ [Автономные базы данных](../../relational-databases/databases/contained-databases.md)   
  [sp_migrate_user_to_contained (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)   
  [sys.dm_db_uncontained_entities (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)  
   

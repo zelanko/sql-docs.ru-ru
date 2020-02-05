@@ -12,13 +12,13 @@ ms.assetid: 45e47831-9cbc-406d-9e23-5f1f8569b304
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5c981a4a2bd74fe7cfa374310c4bbe240b4846a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68123184"
 ---
-# <a name="mssqlserver41350"></a>MSSQLSERVER_41350
+# <a name="mssqlserver_41350"></a>MSSQLSERVER_41350
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Сведения  
@@ -30,7 +30,7 @@ ms.locfileid: "68123184"
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|HK_CREATE_TABLE_WITH_ENCRYPTION|  
-|Текст сообщения|Предупреждение. Оптимизированная для памяти таблица со стойкостью SCHEMA_AND_DATA, созданная в базе данных, в которой включено шифрование. Данные в оптимизированной для памяти таблице зашифрованы не будут.|  
+|Текст сообщения|Предупреждение. Оптимизированная для памяти таблица с долговечностью SCHEMA_AND_DATA была создана в базе данных, для которой включено шифрование. Данные в оптимизированной для памяти таблице зашифрованы не будут.|  
   
 ## <a name="see-also"></a>См. также:  
 [Выполняющаяся в памяти OLTP (оптимизация в памяти)](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  

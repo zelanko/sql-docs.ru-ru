@@ -13,10 +13,10 @@ ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9d6933f45d70636b2c7ea8b2ca20f71e1ab2fd02
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298887"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Конструктор системы отслеживания измененных данных для Oracle компании Attunity
@@ -26,7 +26,7 @@ ms.locfileid: "71298887"
 
   Консоль конструктора CDC служит для разработки и обслуживания экземпляров Oracle CDC. Консоль конструктора CDC ― это надстройка консоли управления (MMC), состоящая из следующих элементов.  
   
--   Мастер создания экземпляра. Этот мастер создает новый экземпляр CDC Oracle Instance. Дополнительные сведения об использовании мастера создания экземпляра см. в разделе [Use the New Instance Wizard](../../integration-services/change-data-capture/use-the-new-instance-wizard.md).  
+-   Мастер создания экземпляра. Этот мастер создает экземпляр CDC Oracle. Дополнительные сведения об использовании мастера создания экземпляра см. в разделе [Use the New Instance Wizard](../../integration-services/change-data-capture/use-the-new-instance-wizard.md).  
   
 -   Средство просмотра свойств экземпляра CDC. Это закрепленное представление, в котором отображаются состояние и конфигурация выбранного экземпляра CDC. Дополнительные сведения о средстве просмотра свойств см. в разделе [Как управлять экземпляром CDC](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md).  
   
@@ -46,9 +46,9 @@ ms.locfileid: "71298887"
   
 -   [Базы данных CDC Oracle](../../integration-services/change-data-capture/the-oracle-cdc-databases.md)  
   
--   [Справка F1 конструктора системы отслеживания измененных данных для Oracle компании Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-f1-help-reference.md)  
+-   [Справка F1 по конструктору системы отслеживания информации об изменениях данных для Oracle компании Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-f1-help-reference.md)  
   
--   [Руководство по конструктору системы отслеживания измененных данных для Oracle компании Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-how-to-guide.md)  
+-   [Руководство по конструктору системы отслеживания информации об изменениях данных для Oracle компании Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-how-to-guide.md)  
   
 -   [Соединение с SQL Server для создания экземпляров](../../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md)  
   

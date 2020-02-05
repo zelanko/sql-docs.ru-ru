@@ -1,10 +1,7 @@
 ---
-title: Элемент EventString (DTA) | Документация Майкрософт
-ms.custom: ''
-ms.date: 03/14/2017
+title: Элемент EventString (DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: f76c37b4-2f6e-4274-8ee2-87e89d98e8a2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 157c50f419b7003a9dde862c3a2c74c4033fe794
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: a0bf4fe2b768fd0a9f714540946a84c126aa1679
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68008798"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307696"
 ---
 # <a name="eventstring-element-dta"></a>Элемент EventString (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Задает скрипт рабочей нагрузки [!INCLUDE[tsql](../../includes/tsql-md.md)] непосредственно во входном XML-файле.  
+
+Задает скрипт рабочей нагрузки [!INCLUDE[tsql](../../includes/tsql-md.md)] непосредственно во входном XML-файле.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,13 +41,13 @@ ms.locfileid: "68008798"
   
 ## <a name="element-attributes"></a>Атрибуты элемента  
   
-|attribute|Описание|  
+|attribute|Description|  
 |---------------|-----------------|  
-|**Weight**|Необязательно. Задает весовой коэффициент запроса (коэффициент важности) для указанного события. Для указания весового коэффициента используется тип данных **float** . Например, **Weight**="100.01". Минимальное значение, которое можно задать для коэффициента **Weight** , равно 0.|  
+|**Weight**|Необязательный параметр. Задает весовой коэффициент запроса (коэффициент важности) для указанного события. Для указания весового коэффициента используется тип данных **float** . Например, **Weight**="100.01". Минимальное значение, которое можно задать для коэффициента **Weight** , равно 0.|  
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |**Тип данных и длина**|**string**, неограниченная длина|  
 |**Значение по умолчанию**|Нет.|  

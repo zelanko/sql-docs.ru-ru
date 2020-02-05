@@ -11,10 +11,10 @@ ms.date: 08/09/2018
 ms.author: chugu
 author: chugugrace
 ms.openlocfilehash: 3609de02157637ec30f7e21ad4426c5001f31a6e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71282660"
 ---
 # <a name="load-data-into-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>Загрузка данных в Хранилище данных SQL Azure с помощью SQL Server Integration Services (SSIS)
@@ -98,7 +98,7 @@ Visual Studio открывает и создает проект служб Integ
 
 1. Используйте задачу передачи BLOB-объектов Azure для размещения данных в хранилище BLOB-объектов Azure. Чтобы получить задачу отправки больших двоичных объектов Azure, скачайте [Пакет дополнительных компонентов Microsoft SQL Server Integration Services для Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure].
 
-2. После этого используйте задачу "Выполнить SQL" служб SSIS, чтобы запустить скрипт PolyBase, который загружает данные в хранилище данных SQL. Пример, который загружает данные из хранилища BLOB-объектов Azure в хранилище данных SQL (но без использования SSIS), см. в разделе [Учебник. Загрузка данных в хранилище данных SQL Azure](/azure/sql-data-wAREHOUSE/load-data-wideworldimportersdw).
+2. После этого используйте задачу "Выполнить SQL" служб SSIS, чтобы запустить скрипт PolyBase, который загружает данные в хранилище данных SQL. Пример, который загружает данные из хранилища BLOB-объектов Azure в Хранилище данных SQL (но без использования SSIS), см. в [Руководстве по загрузке данных в Хранилище данных SQL Azure](/azure/sql-data-wAREHOUSE/load-data-wideworldimportersdw).
 
 ## <a name="option-2---use-a-source-and-destination"></a>Вариант 2. Использование источника и получателя
 
@@ -213,11 +213,11 @@ Visual Studio открывает и создает проект служб Integ
 
 Поздравляем! Вы успешно использовали службы SQL Server Integration Services для загрузки данных в хранилище данных SQL Azure.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
-- Сведения об отладке пакетов и устранении их неполадок прямо в среде разработки. Начните здесь: [Инструменты устранения неполадок при разработке пакета][Troubleshooting Tools for Package Development].
+- Сведения об отладке пакетов и устранении их неполадок прямо в среде разработки. Начните со статьи [Инструменты устранения неполадок при разработке пакета][Troubleshooting Tools for Package Development].
 
-- Сведения о развертывании пакетов и проектов служб SSIS на сервере служб Integration Services или в другом хранилище. Начните здесь: [Развертывание проектов и пакетов][Deployment of Projects and Packages].
+- Сведения о развертывании пакетов и проектов служб SSIS на сервере служб Integration Services или в другом хранилище. Вам поможет статья [Развертывание проектов и пакетов][Deployment of Projects and Packages].
 
 <!-- Image references -->
 [01]:  ./media/load-data-to-sql-data-warehouse/ssis-designer-01.png

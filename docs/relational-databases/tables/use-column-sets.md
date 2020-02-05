@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1877f653244100126226b85b29a24ca458c1cf74
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71326138"
 ---
 # <a name="use-column-sets"></a>Использование наборов столбцов
@@ -112,7 +112,7 @@ GO
 ## <a name="using-the-sql_variant-data-type"></a>Использование типа данных sql_variant  
  Тип данных **sql_variant** может хранить несколько разных типов данных, например **int**, **char**и **date**. Наборы столбцов выводят сведения о типе данных (например, масштаб, точность или сведения о локали), связанном со значением **sql_variant** , в виде атрибутов в формируемом XML-столбце. Если нужно предоставить эти атрибуты в сформированной пользователем XML-инструкции в качестве входных данных для операции вставки или обновления в наборе столбцов, то некоторые из этих атрибутов будут обязательными, а для некоторых других атрибутов будут назначены значения по умолчанию. В следующей таблице перечисляются типы данных и значения по умолчанию, которые формирует сервер, если значения предоставлены не были.  
   
-|Тип данных|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|Максимальная длина|Точность|Масштаб|  
+|Тип данных|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|Максимальная длина|Точность|Масштабирование|  
 |---------------|----------------|-----------------------|-------------------------|---------------|--------------------|---------------|-----------|  
 |**char**, **varchar**, **binary**|-1|'Default'|0|0|8000|Неприменимо**|Неприменимо|  
 |**nvarchar**|-1|'Default'|0|0|4000|Неприменимо|Неприменимо|  

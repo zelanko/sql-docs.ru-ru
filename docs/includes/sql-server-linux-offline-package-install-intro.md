@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 6c9aedf258e25f1705cf9287ac348757403d73b3
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68214897"
----
 Если компьютер Linux не имеет доступа к онлайн-хранилищам, которые используются в предыдущих разделах, вы можете загрузить файлы пакетов напрямую. Эти пакеты находятся в репозитории Майкрософт по адресу [https://packages.microsoft.com](https://packages.microsoft.com).
 
 > [!TIP]

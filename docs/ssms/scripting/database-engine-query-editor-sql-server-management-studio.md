@@ -1,6 +1,6 @@
 ---
-title: Редактор запросов ядра СУБД (среда SQL Server Management Studio) | Документация Майкрософт
-ms.custom: ''
+title: Редактор запросов компонента Database Engine (среда SQL Server Management Studio)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -23,12 +23,12 @@ ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 26a6e67287c7a2effdd62604fa492a532ed636bf
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 1a21b567232bf24b561e014de231268632cc4b32
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263503"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253941"
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>Редактор запросов компонента Database Engine (среда SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

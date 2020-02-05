@@ -1,5 +1,5 @@
 ---
-title: Шаг 1. Создание рабочих папок и переменных среды | Документация Майкрософт
+title: Шаг 1. Создание рабочих папок и переменных среды | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 08de88d45b31e4c00c9ce5a7790405c6da1542a2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71284138"
 ---
 # <a name="lesson-1-1---creating-working-folders-and-environment-variables"></a>Занятие 1–1. Создание рабочих папок и переменных среды

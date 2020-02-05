@@ -23,13 +23,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 085832fdb8d0918c76dbbcadb759c2fdf1169b5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68094716"
 ---
-# <a name="errornumber-transact-sql"></a>ERROR_NUMBER (Transact-SQL)
+# <a name="error_number-transact-sql"></a>ERROR_NUMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Эта функция возвращает номер ошибки, которая вызвала выполнение блока CATCH конструкции TRY...CATCH.  
@@ -59,7 +59,7 @@ ERROR_NUMBER ( )
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-using-errornumber-in-a-catch-block"></a>A. Использование функции ERROR_NUMBER в блоке CATCH  
+### <a name="a-using-error_number-in-a-catch-block"></a>A. Использование функции ERROR_NUMBER в блоке CATCH  
 В приведенном ниже примере показана инструкция `SELECT`, вызывающая ошибку деления на ноль. Блок `CATCH` возвращает номер ошибки.  
   
 ```sql  
@@ -86,7 +86,7 @@ ErrorNumber
 
 ```  
   
-### <a name="b-using-errornumber-in-a-catch-block-with-other-error-handling-tools"></a>Б. Использование функции ERROR_NUMBER в блоке CATCH с другими средствами обработки ошибок  
+### <a name="b-using-error_number-in-a-catch-block-with-other-error-handling-tools"></a>Б. Использование функции ERROR_NUMBER в блоке CATCH с другими средствами обработки ошибок  
 В приведенном ниже примере показана инструкция `SELECT`, вызывающая ошибку деления на ноль. Вместе с номером ошибки блок `CATCH` возвращает сведения о ней.  
 
 ```sql  

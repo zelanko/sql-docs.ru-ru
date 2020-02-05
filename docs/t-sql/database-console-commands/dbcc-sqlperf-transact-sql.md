@@ -23,10 +23,10 @@ ms.assetid: ec9225ce-e20f-4b03-8b3a-7bcad8a649df
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 8cb409823bad1370c38b6dc99f04c7e49d58796a
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982410"
 ---
 # <a name="dbcc-sqlperf-transact-sql"></a>DBCC SQLPERF (Transact-SQL)
@@ -77,7 +77,7 @@ WITH NO_INFOMSGS
 |**Состояние**|Состояние файла журнала. Всегда равно 0.|  
   
 ## <a name="Remarks"></a> Замечания  
-Начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] используйте динамическое административное представление [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md) `DBCC SQLPERF(LOGSPACE)` для просмотра сведений об использовании пространства для журнала транзакций в каждой базе данных.    
+Начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] используйте динамическое административное представление [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)`DBCC SQLPERF(LOGSPACE)` для просмотра сведений об использовании пространства для журнала транзакций в каждой базе данных.    
  
 В журнале транзакций записывается каждая транзакция, выполненная в базе данных. Дополнительные сведения см. в разделах [Журнал транзакций (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md) и [Руководство по архитектуре журнала транзакций SQL Server и управлению им](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md).
   

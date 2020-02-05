@@ -22,10 +22,10 @@ ms.assetid: 59767e52-f732-4b3f-8602-be50d0a64ef2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c51d65dabef5efa4de7ecb4c62b633e62ed0b082
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297889"
 ---
 # <a name="percentage-sampling-transformation"></a>преобразование «Процентная выборка»
@@ -45,7 +45,7 @@ ms.locfileid: "71297889"
 ## <a name="configuration-the-percentage-sampling-transformation"></a>Настройка преобразования «Процентная выборка»  
  Можно изменить начальное значение генератора случайных чисел, используемого для выборки строк. Если всегда использовать одинаковое начальное значение для генератора, то результирующая выборка, при прочих равных условиях, будет тоже всегда одинаковая. Если начальное значение для создания случайного номера не указано, преобразование использует счетчик тактов операционной системы. Поэтому можно выбрать постоянное начальное значение для генератора во время отладки и случайное значение при передаче пакета в производственную эксплуатацию.  
   
- Это преобразование немного схоже с преобразованием «Выборка строк», которое создает выборку с заданным количеством строк. Дополнительные сведения см. в статье [Row Sampling Transformation](../../../integration-services/data-flow/transformations/row-sampling-transformation.md).  
+ Это преобразование немного схоже с преобразованием «Выборка строк», которое создает выборку с заданным количеством строк. Дополнительные сведения см. в разделе [Row Sampling Transformation](../../../integration-services/data-flow/transformations/row-sampling-transformation.md).  
   
  Преобразование «Процентная выборка» содержит пользовательское свойство **SamplingValue** . Это свойство может быть обновлено выражением свойства при загрузке пакета. Дополнительные сведения см. в разделах [Выражения служб Integration Services (SSIS)](../../../integration-services/expressions/integration-services-ssis-expressions.md), [Использование выражений свойств в пакетах](../../../integration-services/expressions/use-property-expressions-in-packages.md) и [Пользовательские свойства преобразований](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
   

@@ -19,13 +19,13 @@ ms.assetid: c1050658-b19f-42ee-9a05-ecd6a73b896c
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 13680aea1d34b83d76647d39d0f40b84609b2e8c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67910656"
 ---
-# <a name="groupingid-transact-sql"></a>GROUPING_ID (Transact-SQL)
+# <a name="grouping_id-transact-sql"></a>GROUPING_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Представляет собой функцию, которая вычисляет уровень группирования. Если задано предложение GROUP BY, функция GROUPING_ID может использоваться только в предложениях SELECT \<select>, HAVING или ORDER BY.  
@@ -49,7 +49,7 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
 ## <a name="remarks"></a>Remarks  
  Аргумент \<column_expression> функции GROUPING_ID должен точно соответствовать выражению в списке GROUP BY. Например, если группирование осуществляется с помощью функции DATEPART (yyyy, \<*имя столбца*>), то следует использовать функцию GROUPING_ID (DATEPART (yyyy, \<*имя столбца*>)), а если для группирования служит аргумент \<*имя столбца*>, следует использовать функцию GROUPING_ID (\<*имя столбца*>).  
   
-## <a name="comparing-groupingid--to-grouping-"></a>Сравнение функций GROUPING_ID () и GROUPING ()  
+## <a name="comparing-grouping_id--to-grouping-"></a>Сравнение функций GROUPING_ID () и GROUPING ()  
  GROUPING_ID (\<column_expression> [ **,** ...*n* ]) вводит эквивалент возвращаемого значения GROUPING (\<column_expression>) для каждого столбца в списке столбцов в каждой строке вывода как строку единиц и нулей. Функция GROUPING_ID интерпретирует эту строку как двоичное число и выполняет возврат эквивалентного целого числа. Рассмотрим, например, следующую инструкцию: `SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>`. В следующей таблице показаны входные и выходные значения функции GROUPING_ID ().  
   
 |Статистически обработанные столбцы|Входные данные GROUPING_ID (a, b, c) = GROUPING(a) + GROUPING(b) + GROUPING(c)|Выходные данные GROUPING_ID ()|  
@@ -62,10 +62,10 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
 |`bc`|`011`|`3`|  
 |`abc`|`111`|`7`|  
   
-## <a name="technical-definition-of-groupingid-"></a>Техническое определение функции GROUPING_ID ()  
- Каждый аргумент функции GROUPING_ID должен быть элементом списка GROUP BY. Функция GROUPING_ID () возвращает битовую карту типа **integer**, в которой N самых младших битов могут быть установлены. Установленный **bit** означает, что соответствующий аргумент не является столбцом группирования для указанной выходной строки. Самый младший **bit** соответствует аргументу N, а самый младший N-1<sup>й</sup> **bit** соответствует аргументу 1.  
+## <a name="technical-definition-of-grouping_id-"></a>Техническое определение функции GROUPING_ID ()  
+ Каждый аргумент функции GROUPING_ID должен быть элементом списка GROUP BY. Функция GROUPING_ID () возвращает битовую карту типа **integer**, в которой N самых младших битов могут быть установлены. Установленный **bit** означает, что соответствующий аргумент не является столбцом группирования для указанной выходной строки. Самый младший **bit** соответствует аргументу N, а самый младший N-1<sup>й</sup>**bit** соответствует аргументу 1.  
   
-## <a name="groupingid--equivalents"></a>Функции, эквивалентные функции GROUPING_ID ()  
+## <a name="grouping_id--equivalents"></a>Функции, эквивалентные функции GROUPING_ID ()  
  Применительно к одиночному запросу группирования функция GROUPING (\<column_expression>) эквивалентна GROUPING_ID (\<column_expression>), и обе эти функции возвращают 0.  
   
  Например, следующие инструкции эквивалентны.  
@@ -92,7 +92,7 @@ SELECT 0 FROM T GROUP BY A,B
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-using-groupingid-to-identify-grouping-levels"></a>A. Использование функции GROUPING_ID для обозначения уровней группирования  
+### <a name="a-using-grouping_id-to-identify-grouping-levels"></a>A. Использование функции GROUPING_ID для обозначения уровней группирования  
  В следующем примере показано, как определить итоговое значение количества сотрудников по столбцам `Name` и `Title`, `Name,` а также как вычислить общее количество сотрудников во всей компании в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. В этом примере функция `GROUPING_ID()` используется для создания значения, обозначающего уровень агрегирования, в каждой строке столбца `Title`.  
   
 ```  
@@ -114,7 +114,7 @@ WHERE DH.EndDate IS NULL
 GROUP BY ROLLUP(D.Name, E.JobTitle);  
 ```  
   
-### <a name="b-using-groupingid-to-filter-a-result-set"></a>Б. Использование функции GROUPING_ID для фильтрации результирующего набора  
+### <a name="b-using-grouping_id-to-filter-a-result-set"></a>Б. Использование функции GROUPING_ID для фильтрации результирующего набора  
   
 #### <a name="simple-example"></a>Простой пример  
  Чтобы воспользоваться следующим кодом для получения только тех строк, в которых подсчитаны данные о количестве сотрудников с разными должностями, удалите символы комментария из предложения `HAVING GROUPING_ID(D.Name, E.JobTitle); = 0` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Чтобы получить только строки с данными о количестве сотрудников в разных отделах, удалите символы комментария из предложения `HAVING GROUPING_ID(D.Name, E.JobTitle) = 1;`.  
@@ -235,7 +235,7 @@ ORDER BY
     ,(H.SalesPersonID))ASC;  
 ```  
   
-### <a name="c-using-groupingid--with-rollup-and-cube-to-identify-grouping-levels"></a>В. Использование функции GROUPING_ID () с операторами ROLLUP и CUBE для обозначения уровней группирования  
+### <a name="c-using-grouping_id--with-rollup-and-cube-to-identify-grouping-levels"></a>В. Использование функции GROUPING_ID () с операторами ROLLUP и CUBE для обозначения уровней группирования  
  В следующих примерах приведен код, который показывает, как использовать функцию `GROUPING()` для вычисления столбца `Bit Vector(base-2)`. Функция `GROUPING_ID()` служит для вычисления соответствующего столбца `Integer Equivalent`. Порядок столбцов в функции `GROUPING_ID()` противоположен порядку столбцов, для объединения которых применяется функция `GROUPING()`.  
   
  В этих примерах функция `GROUPING_ID()` используется для создания значения, обозначающего уровень группирования, в каждой строке столбца `Grouping Level`. Уровни группирования не всегда представляют собой последовательный список целых чисел, который начинается с 1 (0, 1, 2,...*n*).  
@@ -310,16 +310,16 @@ ORDER BY GROUPING_ID(DATEPART(mm,OrderDate)
 |2007 г.|1|2|21772,3494|000|0|Year Month Day|  
 |2007 г.|2|1|2705653,5913|000|0|Year Month Day|  
 |2007 г.|2|2|21684,4068|000|0|Year Month Day|  
-|2008 г.|1|1|1908122,0967|000|0|Year Month Day|  
-|2008 г.|1|2|46458,0691|000|0|Year Month Day|  
-|2008 г.|2|1|3108771,9729|000|0|Year Month Day|  
-|2008 г.|2|2|54598,5488|000|0|Year Month Day|  
+|2008|1|1|1908122,0967|000|0|Year Month Day|  
+|2008|1|2|46458,0691|000|0|Year Month Day|  
+|2008|2|1|3108771,9729|000|0|Year Month Day|  
+|2008|2|2|54598,5488|000|0|Year Month Day|  
 |2007 г.|1|NULL|1519224,956|100|1|Year Month|  
 |2007 г.|2|NULL|2727337,9981|100|1|Year Month|  
-|2008 г.|1|NULL|1954580,1658|100|1|Year Month|  
-|2008 г.|2|NULL|3163370,5217|100|1|Year Month|  
+|2008|1|NULL|1954580,1658|100|1|Year Month|  
+|2008|2|NULL|3163370,5217|100|1|Year Month|  
 |2007 г.|NULL|NULL|4246562,9541|110|3|Год|  
-|2008 г.|NULL|NULL|5117950,6875|110|3|Год|  
+|2008|NULL|NULL|5117950,6875|110|3|Год|  
 |NULL|NULL|NULL|9364513,6416|111|7|Grand Total|  
   
 #### <a name="cube-example"></a>Пример применения предложения CUBE  
@@ -391,20 +391,20 @@ ORDER BY GROUPING_ID(DATEPART(yyyy,OrderDate)
 |2007 г.|1|2|21772,3494|000|0|Year Month Day|  
 |2007 г.|2|1|2705653,5913|000|0|Year Month Day|  
 |2007 г.|2|2|21684,4068|000|0|Year Month Day|  
-|2008 г.|1|1|1908122,0967|000|0|Year Month Day|  
-|2008 г.|1|2|46458,0691|000|0|Year Month Day|  
-|2008 г.|2|1|3108771,9729|000|0|Year Month Day|  
-|2008 г.|2|2|54598,5488|000|0|Year Month Day|  
+|2008|1|1|1908122,0967|000|0|Year Month Day|  
+|2008|1|2|46458,0691|000|0|Year Month Day|  
+|2008|2|1|3108771,9729|000|0|Year Month Day|  
+|2008|2|2|54598,5488|000|0|Year Month Day|  
 |2007 г.|1|NULL|1519224,956|100|1|Year Month|  
 |2007 г.|2|NULL|2727337,9981|100|1|Year Month|  
-|2008 г.|1|NULL|1954580,1658|100|1|Year Month|  
-|2008 г.|2|NULL|3163370,5217|100|1|Year Month|  
+|2008|1|NULL|1954580,1658|100|1|Year Month|  
+|2008|2|NULL|3163370,5217|100|1|Year Month|  
 |2007 г.|NULL|1|4203106,1979|010|2|Year Day|  
 |2007 г.|NULL|2|43456,7562|010|2|Year Day|  
-|2008 г.|NULL|1|5016894,0696|010|2|Year Day|  
-|2008 г.|NULL|2|101056,6179|010|2|Year Day|  
+|2008|NULL|1|5016894,0696|010|2|Year Day|  
+|2008|NULL|2|101056,6179|010|2|Year Day|  
 |2007 г.|NULL|NULL|4246562,9541|110|3|Год|  
-|2008 г.|NULL|NULL|5117950,6875|110|3|Год|  
+|2008|NULL|NULL|5117950,6875|110|3|Год|  
 |NULL|1|1|3405574,7033|001|4|Month Day|  
 |NULL|1|2|68230,4185|001|4|Month Day|  
 |NULL|2|1|5814425,5642|001|4|Month Day|  

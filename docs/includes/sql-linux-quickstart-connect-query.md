@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 549224ae30b710292324a178aa48432bde7d34ca
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68215638"
----
 ## <a name="connect-locally"></a>Локальное подключение
 
 В следующих шагах выполняется локальное подключение к новому экземпляру SQL Server с помощью **sqlcmd**.
@@ -52,9 +44,9 @@ ms.locfileid: "68215638"
    ```
 
 > [!TIP]
-> Дополнительные сведения о написании инструкций и запросов на языке Transact-SQL см. в разделе [Руководство. Составление инструкций Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md).
+> Подробнее о написании инструкций и запросов на языке Transact-SQL см. учебник [Tutorial: Writing Transact-SQL Statements](../t-sql/tutorial-writing-transact-sql-statements.md).
 
-### <a name="insert-data"></a>Вставка данных
+### <a name="insert-data"></a>Добавление данных
 
 Теперь создайте таблицу `Inventory` и вставьте две новых строки.
 
@@ -117,7 +109,7 @@ QUIT
 |||
 |---|---|
 | [Azure Data Studio](../azure-data-studio/index.md) | Кроссплатформенная служебная программа управления базами данных с графическим пользовательским интерфейсом. |
-| [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md); | Кроссплатформенный редактор кода с графическим пользовательским интерфейсом, позволяющий выполнять инструкции Transact-SQL в выражениях mssql. |
+| [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | Кроссплатформенный редактор кода с графическим пользовательским интерфейсом, позволяющий выполнять инструкции Transact-SQL в выражениях mssql. |
 | [PowerShell Core](../linux/sql-server-linux-manage-powershell-core.md) | Кроссплатформенное средство для автоматизации и настройки на основе командлетов. |
 | [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | Кроссплатформенный интерфейс командной строки для выполнения команд Transact-SQL. |
 
@@ -147,7 +139,7 @@ QUIT
 > [!TIP]
 > Ответы на часто задаваемые вопросы об SQL Server на Linux см. в [этой статье](../linux/sql-server-linux-faq.md).
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 > [!div class="nextstepaction"]
 > [Руководства по SQL Server на Linux](../linux/sql-server-linux-migrate-restore-database.md)

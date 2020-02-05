@@ -18,10 +18,10 @@ ms.assetid: 3ac40457-7529-4eda-95a4-5247345cc8cf
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: b7bb0f690305320f5ae0f5d4ecdeb8f59b33cb01
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68114848"
 ---
 # <a name="deny-endpoint-permissions-transact-sql"></a>DENY, запрет разрешений на конечную точку (Transact-SQL)
@@ -105,7 +105,7 @@ GO
 ```  
   
 ### <a name="b-denying-take-ownership-permission-with-cascade-option"></a>Б. Запрет разрешения TAKE OWNERSHIP с аргументом CASCADE  
- Следующий код запрещает разрешение `TAKE OWNERSHIP`, связанное с конечной точкой `Shipping83`, для пользователя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `PKomosinski` и всех участников, которым `PKomosinski` предоставил разрешение `TAKE OWNERSHIP`.  
+ Следующий код запрещает разрешение `TAKE OWNERSHIP`, связанное с конечной точкой `Shipping83`, для пользователя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`PKomosinski` и всех участников, которым `PKomosinski` предоставил разрешение `TAKE OWNERSHIP`.  
   
 ```  
 USE master;  

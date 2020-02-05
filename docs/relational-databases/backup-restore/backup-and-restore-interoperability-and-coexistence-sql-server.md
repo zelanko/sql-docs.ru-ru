@@ -17,13 +17,13 @@ ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 5af79e93104530b3027133ba68026cfd914f5fe5
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75247454"
 ---
-# <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Резервное копирование и восстановление. Взаимодействие и сосуществование (SQL Server)
+# <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Резервное копирование и восстановление: взаимодействие и сосуществование
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   В этом разделе описываются вопросы резервного копирования и восстановления для нескольких функций [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Это восстановление файлов и запуск базы данных, оперативное восстановление и отключенные индексы, зеркальное отображение базы данных, поэтапное восстановление и полнотекстовые индексы.  
@@ -134,6 +134,6 @@ ms.locfileid: "75247454"
 ## <a name="see-also"></a>См. также:  
  [Резервное копирование и восстановление баз данных SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Создание резервной копии и восстановление из копий реплицируемых баз данных](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
-[Активные вторичные реплики: резервное копирование во вторичных репликах \(группы доступности Always On\)](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
+[Активные вторичные реплики: резервное копирование во вторичных репликах \(группы доступности AlwaysOn\)](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
   
   

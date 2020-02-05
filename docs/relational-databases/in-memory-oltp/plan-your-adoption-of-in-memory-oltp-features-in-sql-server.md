@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f899a8fc1ad5a316784a83cb13f29acb84a01b2b
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74412546"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>Планирование освоения возможностей выполняющейся в памяти OLTP в SQL Server
@@ -204,7 +204,7 @@ ms.locfileid: "74412546"
 
 Зачастую целесообразно и удобно использовать при первоначальной реализации оптимизированной для обработки в памяти таблицы традиционный некластеризованный индекс сбалансированного дерева. Впоследствии, проанализировав работу приложения, можно перейти на индекс другого типа.
 
-Два специальных типа индексов требуют дополнительного обсуждения в контексте оптимизированных для памяти таблиц: хэш-индексы и индексы columnstore.
+Два специальных типа индексов требуют дополнительного обсуждения в контексте оптимизированных для обработки в памяти таблиц: хэш-индексы и индексы Columnstore.
 
 Обзорную информацию об индексах в оптимизированных для обработки в памяти таблицах см. в следующих источниках:
 

@@ -15,10 +15,10 @@ ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b6382de8778e5f11e76f4481519284d50b7b52e0
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71282166"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>Программная загрузка и запуск удаленного пакета
@@ -50,7 +50,7 @@ ms.locfileid: "71282166"
   
  Сведения об устранении неполадок в пакетах, запускаемых из агента заданий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье базы знаний [Пакет служб SSIS не выполняется при вызове пакета из шага задания агента SQL Server](https://support.microsoft.com/kb/918760).  
   
-### <a name="sample-code"></a>Образец кода  
+### <a name="sample-code"></a>Пример кода  
   
 ```vb  
 Imports System.Data  
@@ -156,7 +156,7 @@ namespace LaunchSSISPackageAgent_CS
 > [!IMPORTANT]  
 >  Методы класса <xref:Microsoft.SqlServer.Dts.Runtime.Application> для работы с хранилищем пакетов служб SSIS поддерживают только имена «.», localhost и имя сервера для локального сервера. Нельзя использовать имя «(local)».  
   
-### <a name="sample-code"></a>Образец кода  
+### <a name="sample-code"></a>Пример кода  
  В следующем образце кода демонстрируется, как создать и проверить веб-службу.  
   
 #### <a name="creating-the-web-service"></a>Создание веб-службы  
@@ -420,7 +420,7 @@ namespace LaunchSSISPackageSvcTestCS
   
 ## <a name="external-resources"></a>Внешние ресурсы  
   
--   Видео с руководством по [ автоматизации выполнения пакета служб SSIS с помощью агента SQL Server (видеоматериалы по SQL Server)](https://technet.microsoft.com/sqlserver/ff686764.aspx) на сайте technet.microsoft.com.  
+-   Видеоролик [Как автоматизировать выполнение пакета служб SSIS с помощью агента SQL Server (видеоматериалы по SQL Server)](https://technet.microsoft.com/sqlserver/ff686764.aspx) на сайте technet.microsoft.com  
   
 ## <a name="see-also"></a>См. также:  
  [Основные сведения об отличиях между локальным и удаленным выполнением](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
