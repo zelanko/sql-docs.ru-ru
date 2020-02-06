@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 47d4cb0991bde851fbc6c6f3273a673dfdecf919
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082566"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>Указание вычисляемых столбцов в таблице
@@ -32,7 +32,7 @@ ms.locfileid: "68082566"
 
    [Ограничения](#Limitations)
 
-   [безопасность](#Security)
+   [Безопасность](#Security)
 
 - **Задание вычисляемого столбца с использованием:**
 
@@ -67,7 +67,7 @@ ms.locfileid: "68082566"
 
 5. Выберите **Да** или **Нет** в раскрывающемся списке для дочернего свойства **Материализованный** , чтобы указать, следует ли сохранять данные.
 
-6. В меню **Файл** выберите пункт **Сохранить** _имя_таблицы_.
+6. В меню **Файл** выберите команду **Сохранить** _имя_таблицы_.
 
 #### <a name="to-add-a-computed-column-definition-to-an-existing-column"></a>Добавление определения вычисляемого столбца к существующему столбцу
 

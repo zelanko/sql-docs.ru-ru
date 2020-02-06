@@ -17,10 +17,10 @@ ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 660ac899b1cf649bcc431bf10e2f9b18ca12cbc4
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73637941"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Устранение неполадок инструментов с помощью отчетов
@@ -81,11 +81,11 @@ ms.locfileid: "73637941"
   
     1.  **Создайте родительскую таблицу, в которой регистрируется каждое выполнение пакета**. В этой родительской таблице предусматривается одна строка для каждого выполнения пакета, а идентификатор ExecutionID используется для связи с дочерними записями в таблице журналов службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Для создания новой строки и регистрации времени начала можно использовать задачу «Выполнение SQL». Затем при завершении пакета можно обновить строку временем окончания, продолжительностью и состоянием;  
   
-    2.  **Добавьте к потоку данных данные аудита**. Преобразование «Аудит» можно использовать для добавления к строкам в потоке данных сведений о выполнении пакета, который создал или изменил каждую строку. Преобразование «Аудит» предоставляет девять разделов сведений, в том числе PackageName и ExecutionInstanceGUID. Дополнительные сведения см. в разделе [Audit Transformation](../../integration-services/data-flow/transformations/audit-transformation.md). Если в каждую строку в целях аудита требуется включить пользовательские данные, их можно добавить в поток данных с помощью преобразования "Производный столбец". Дополнительные сведения см. в статье [Derived Column Transformation](../../integration-services/data-flow/transformations/derived-column-transformation.md).  
+    2.  **Добавьте к потоку данных данные аудита**. Преобразование «Аудит» можно использовать для добавления к строкам в потоке данных сведений о выполнении пакета, который создал или изменил каждую строку. Преобразование «Аудит» предоставляет девять разделов сведений, в том числе PackageName и ExecutionInstanceGUID. Дополнительные сведения см. в разделе [Audit Transformation](../../integration-services/data-flow/transformations/audit-transformation.md). Если в каждую строку в целях аудита требуется включить пользовательские данные, их можно добавить в поток данных с помощью преобразования "Производный столбец". Дополнительные сведения см. в разделе [Derived Column Transformation](../../integration-services/data-flow/transformations/derived-column-transformation.md).  
   
     3.  **Рассмотрите возможность захвата данных счетчика строк**. Создайте отдельную таблицу для данных счетчика строк, в которой каждый экземпляр выполнения пакета определяется идентификатором ExecutionID. Используйте преобразование «Счетчик строк» для сохранения числа строк в последовательность переменных в критических точках потока данных. После окончания потока данных используйте задачу «Выполнение SQL» для вставки этой последовательности значений в строку таблицы для последующего анализа и отчета.  
   
-     Дополнительные сведения об этом подходе см. в статье "ETL Auditing and Logging" (ETL: аудит и ведение журналов), входящей в технический документ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [Project REAL: Business Intelligence ETL Design Practices](https://www.microsoft.com/download/details.aspx?id=14582) (Project REAL. Рекомендации по разработке ETL-решения для бизнес-аналитики).  
+     Дополнительные сведения об этом подходе см. в статье "ETL Auditing and Logging" (ETL: аудит и ведение журналов), входящей в технический документ [!INCLUDE[msCoName](../../includes/msconame-md.md)][Project REAL: Business Intelligence ETL Design Practices](https://www.microsoft.com/download/details.aspx?id=14582)(Проект REAL: методы разработки бизнес-аналитики ETL).  
   
 ## <a name="troubleshoot-package-execution-by-using-debug-dump-files"></a>Устранение неполадок выполнения пакетов с помощью отладочных файлов дампа  
  Службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]позволяют создавать отладочные файлы дампа с информацией о выполнении пакета. Дополнительные сведения см. в статье [Generating Dump Files for Package Execution](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md).  
@@ -98,7 +98,7 @@ ms.locfileid: "73637941"
      Свойство **DelayValidation** устанавливается в задаче потока данных, но не в отдельных компонентах потока данных. Тех же результатов можно добиться, присвоив свойству <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> отдельного компонента потока данных значение **false**. Однако если значение этого свойства равно **false**, компонент не узнает об изменениях метаданных внешних источников данных. Если свойству **true**присвоено значение <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> , это может помочь избежать критических препятствий, возникающих из-за блокировки базы данных, особенно при использовании пакетом транзакций.  
   
 ## <a name="troubleshoot-run-time-permissions-issues"></a>Устранение проблем с разрешениями во время выполнения  
- Если возникают ошибки при попытке выполнения развернутых пакетов с использованием агента служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , их причина может заключаться в отсутствии нужных разрешений у учетных записей агента. Сведения о решении проблем с пакетами, запускаемыми из агента заданий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Пакет служб SSIS не выполняется при вызове пакета из шага задания агента SQL Server](https://support.microsoft.com/kb/918760). Дополнительные сведения о запуске пакетов из заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Пакеты служб из заданий агента SQL Server](../../integration-services/packages/sql-server-agent-jobs-for-packages.md).  
+ Если возникают ошибки при попытке выполнения развернутых пакетов с использованием агента служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , их причина может заключаться в отсутствии нужных разрешений у учетных записей агента. Сведения о решении проблем с пакетами, запускаемыми из агента заданий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , см. в статье [Пакет служб SSIS не выполняется при вызове пакета из шага задания агента SQL Server](https://support.microsoft.com/kb/918760). Дополнительные сведения о запуске пакетов из заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Пакеты служб из заданий агента SQL Server](../../integration-services/packages/sql-server-agent-jobs-for-packages.md).  
   
  Чтобы подключиться к источникам данных Excel или Access, агенту [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] требуется учетная запись с разрешениями на чтение, запись, создание и удаление временных файлов в папке, заданной переменными среды TEMP и TMP.  
   

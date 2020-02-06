@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
 ms.openlocfilehash: fe60b00654d93c6362a8671318a4b7b88ae90a5f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67896165"
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Пошаговое руководство по функциям повышения производительности в SQL Server на Linux
@@ -22,7 +22,7 @@ ms.locfileid: "67896165"
 Если вы работаете с Linux и еще не знакомы с SQL Server, ознакомьтесь со следующими задачами, которые демонстрируют некоторые функции повышения производительности. Они не являются уникальными для Linux и лишь задают общие направления для дальнейшего изучения. В каждом примере приводится ссылка на подробную документацию по соответствующей теме.
 
 > [!NOTE]
-> Ниже приводятся примеры базы данных AdventureWorks. Инструкции по получению и установке этого примера базы данных см. в статье [Восстановление базы данных SQL Server из Windows в Linux](sql-server-linux-migrate-restore-database.md).
+> Ниже приводятся примеры базы данных AdventureWorks. Инструкции по получению и установке этого образца базы данных см. в статье [Восстановление базы данных SQL Server из Windows в Linux](sql-server-linux-migrate-restore-database.md).
 
 ## <a name="create-a-columnstore-index"></a>создать индекс columnstore
 Индекс columnstore — это технология хранения и запроса больших объемов данных с использованием формата хранения данных в столбцах, называемого columnstore.  

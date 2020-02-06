@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 0d4148e002ba84677e13e101a4830f0b6da10915
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68088977"
 ---
 # <a name="create-diagnostics-session-transact-sql"></a>CREATE DIAGNOSTICS SESSION (Transact-SQL)
@@ -77,7 +77,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
  *property_name*  
  Свойство, связанное с событием.  Имена свойств могут быть частью тега записи или использоваться как часть условия фильтрации.  
   
-|Имя свойства|Описание|  
+|Имя свойства|Description|  
 |-------------------|-----------------|  
 |UserName|Имя пользователя (имя для входа).|  
 |SessionId|Идентификатор сеанса.|  

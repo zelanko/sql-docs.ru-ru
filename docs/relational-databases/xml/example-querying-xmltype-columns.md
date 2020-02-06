@@ -1,5 +1,5 @@
 ---
-title: Пример Запросы к столбцам XMLType | Документация Майкрософт
+title: Пример. Запросы к столбцам XMLType | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,13 +13,13 @@ ms.assetid: d9f3710d-7a2e-4abe-9c02-3e3c0df4d620
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fa648babb6c6ba6ae9578921833d2c2201fb4c95
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006821"
 ---
-# <a name="example-querying-xmltype-columns"></a>Пример Запросы к столбцам XMLType
+# <a name="example-querying-xmltype-columns"></a>Пример. Запросы к столбцам XMLType
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   В следующий запрос включены столбцы типа **xml** . Запрос возвращает идентификатор модели продукта, имя и шаги производства в первом месте из столбца `Instructions` типа **xml** .  
   
@@ -49,7 +49,7 @@ GO
  </ProductModelData>  
 ```  
   
- Если в запросе задано имя столбца для XML-документа, возвращаемого XQuery, так как это задано в следующей инструкции `SELECT`, то шаги производства помещаются в элемент, имеющий указанное имя.  
+ Если в запросе задано имя столбца для XML-документа, возвращаемого XQuery, так как это задано в следующей инструкции `SELECT` , то шаги производства помещаются в элемент, имеющий указанное имя.  
   
 ```  
 USE AdventureWorks2012;  
@@ -115,6 +115,6 @@ go
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Использование с RAW Mode для FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)  
+ [Использование RAW Mode с FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)  
   
   

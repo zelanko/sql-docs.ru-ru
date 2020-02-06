@@ -13,10 +13,10 @@ ms.assetid: 1a4de41f-f38d-40ea-ba1b-6c0ef67ea52a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: cbaf50dc98962e1053477b0535054917c3719f19
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294244"
 ---
 # <a name="column-length-distribution-profile-request-options-data-profiling-task"></a>Параметры запроса профиля распределения длины столбцов (задача «Профилирование данных»)
@@ -49,7 +49,7 @@ ms.locfileid: "71294244"
   
  Дополнительные сведения см. в подразделе «Параметры TableorView» данного раздела.  
   
- **Column**  
+ **Столбец**  
  Выберите существующий столбец для профилирования. Выберите **(\*)** , чтобы выполнить профилирование всех столбцов.  
   
  Дополнительные сведения см. в подразделе «Параметры столбца» данного раздела.  

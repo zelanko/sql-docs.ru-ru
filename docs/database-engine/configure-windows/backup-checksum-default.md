@@ -11,10 +11,10 @@ ms.assetid: eef42653-85d0-4eaf-94bd-2ea1b024cd23
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: eb631212791a80fbcf32bd461a2ef476eebe8703
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68013130"
 ---
 # <a name="backup-checksum-default"></a>Контрольная сумма резервной копии: значение по умолчанию
@@ -26,11 +26,11 @@ ms.locfileid: "68013130"
   
 |||  
 |-|-|  
-|**Значение**|**Значение**|  
+|**Value**|**Значение**|  
 |0|Отключено. Это параметр по умолчанию.|  
 |1|Активировано|  
   
- Изменение этой настройки вступает в силу немедленно.  
+ Изменение параметров вступает в силу немедленно.  
   
 ## <a name="see-also"></a>См. также:  
  [Включение или отключение вычисления контрольных сумм резервных копий во время резервного копирования или восстановления (SQL Server)](../../relational-databases/backup-restore/enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)  

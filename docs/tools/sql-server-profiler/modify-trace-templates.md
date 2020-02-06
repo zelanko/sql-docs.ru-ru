@@ -1,27 +1,22 @@
 ---
-title: Изменение шаблонов трассировки | Документация Майкрософт
-ms.custom: ''
-ms.date: 07/12/2017
+title: Изменение шаблонов трассировки
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- templates [SQL Server], SQL Server Profiler
-- Profiler [SQL Server Profiler], templates
-- trace templates [SQL Server]
-- modifying trace templates
-- SQL Server Profiler, templates
 ms.assetid: 75b62a54-8d16-4599-bd2d-c42cfcc209f4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 55a7cdf539a675fd6d3c86ace8cc837ed1e92358
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 07/12/2017
+ms.openlocfilehash: 71716d1a9a50a29e1f574fb292d078d21e34a9a6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074868"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307161"
 ---
 # <a name="modify-trace-templates"></a>Изменение шаблонов трассировки
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +40,7 @@ ms.locfileid: "68074868"
   
 4.  Нажмите кнопку **Сохранить** или кнопку **Сохранить как** для сохранения шаблона трассировки под другим именем.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Дальнейшие действия  
 [Запуск трассировки](../../tools/sql-server-profiler/start-a-trace.md)  
 [Создание трассировки](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)  
 [Изменение существующей трассировки с помощью Transact-SQL](../../relational-databases/sql-trace/modify-an-existing-trace-transact-sql.md)  

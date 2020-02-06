@@ -28,10 +28,10 @@ ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 652e8448eb5e4de9b39f9e399d1f2a709ef8cf47
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68100465"
 ---
 # <a name="move-system-databases"></a>Перемещение системных баз данных
@@ -69,7 +69,7 @@ ms.locfileid: "68100465"
   
 3.  Переместите файл или файлы в новое расположение.  
 
-4.  Перезапустите экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или сервер. Дополнительные сведения см. в статье [Запуск, остановка, приостановка, возобновление и перезапуск ядра СУБД, агента SQL Server и обозревателя SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+4.  Перезапустите экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или сервер. Дополнительные сведения см. в статье [Iniciar, parar, pausar, retomar e reiniciar os serviços SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 5.  Проверьте изменения в файле с помощью следующего запроса.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "68100465"
         NET START MSSQL$instancename /f /T3608
         ```  
   
-     Дополнительные сведения см. в статье [Запуск, остановка, приостановка, возобновление и перезапуск ядра СУБД, агента SQL Server и обозревателя SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+     Дополнительные сведения см. в статье [Iniciar, parar, pausar, retomar e reiniciar os serviços SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 3.  Для каждого перемещаемого файла используйте команды **sqlcmd** или [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] для выполнения следующей инструкции.  
   
@@ -191,7 +191,7 @@ ms.locfileid: "68100465"
 ##  <a name="Resource"></a> Перемещение базы данных Resource  
  База данных Resource находится в каталоге \<*диск*>:\Program Files\Microsoft SQL Server\MSSQL\<версия.\<*имя_экземпляра*>\MSSQL\Binn\\. Эту базу данных нельзя переместить.  
   
-##  <a name="Follow"></a> Дальнейшие действия. После перемещения всех системных баз данных  
+##  <a name="Follow"></a> Продолжение: после перемещения всех системных баз данных  
  Если все системные базы данных перемещаются на новый диск или том либо на другой сервер с другой буквой диска, выполните следующие обновления.  
   
 -   Измените путь к журналу агента SQL Server. Если этого не сделать, то агент SQL Server не сможет запуститься.  

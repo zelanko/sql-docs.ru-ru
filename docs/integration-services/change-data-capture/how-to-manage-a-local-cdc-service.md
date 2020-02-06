@@ -11,10 +11,10 @@ ms.assetid: 7f9be649-cd93-40c1-bc48-0480106f207c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 722db3a272c99ba6733551f4fa1a4131971e2416
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298734"
 ---
 # <a name="how-to-manage-a-local-cdc-service"></a>Как управлять локальной службой CDC
@@ -34,7 +34,7 @@ ms.locfileid: "71298734"
   
      Также можно щелкнуть правой кнопкой мыши службу CDC, с которой требуется начать работу, и выбрать нужное действие.  
   
-     **или**  
+     **OR**  
   
      На левой панели консоли настройки службы CDC выберите пункт **Локальные службы CDC** и в средней части консоли настройки службы CDC выберите службу, с которой необходимо начать работу.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "71298734"
   
          Можно также щелкнуть правой кнопкой мыши службу CDC, которую необходимо удалить, и выбрать команду **Удалить**.  
   
-         **Примечание.** Если на момент удаления службы она запущена, перед удалением выполняется ее остановка.  
+         **Примечание**. Если на момент удаления службы она запущена, перед удалением выполняется ее остановка.  
   
          Чтобы удалить определение службы Windows для Oracle CDC, программе нужен доступ в режиме UPDATE к базе данных MSXDBCDC в соответствующем экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . После нажатия кнопки **ОК** для удаления службы программа попытается выполнить удаление регистрации службы Oracle CDC в базе данных MSXDBCDC. При ошибке, возникающей из-за отсутствия необходимых разрешений, отображается диалоговое окно ввода имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с правами доступа к базе данных MSXDBCDC.  
   
@@ -61,6 +61,6 @@ ms.locfileid: "71298734"
          Также можно щелкнуть правой кнопкой мыши службу CDC, свойства которой требуется изменить, и выбрать команду **Свойства**.  
   
 ## <a name="see-also"></a>См. также:  
- [Manage an Oracle CDC Service](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
+ [Управление службой CDC Oracle](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
   
   

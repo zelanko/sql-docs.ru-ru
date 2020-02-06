@@ -14,10 +14,10 @@ ms.assetid: 879f13b0-331d-4dee-a079-edfaca11ae5b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9daa6cf4c788c4ca63a9cc394c9a814a8c27cb5b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295211"
 ---
 # <a name="catalogexecutions-ssisdb-database"></a>catalog.executions (база данных SSISDB)
@@ -29,7 +29,7 @@ ms.locfileid: "71295211"
 
   Отображает экземпляры выполнения пакета в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Пакеты, которые выполняются с помощью задачи «Выполнение пакета», запускаются в том же экземпляре выполнения, что и родительский пакет.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |execution_id|**bigint**|Уникальный идентификатор для экземпляра выполнения.|  
 |folder_name|**sysname(nvarchar(128))**|Имя папки, которая содержит проект.|  

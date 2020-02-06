@@ -21,13 +21,13 @@ ms.assetid: eef24670-059b-4f10-91d4-a67bc1ed12ab
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 86afd9bb2036edb77934f6ae622fafe93bd2d5a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68111335"
 ---
-# <a name="scopeidentity-transact-sql"></a>SCOPE_IDENTITY (Transact-SQL)
+# <a name="scope_identity-transact-sql"></a>SCOPE_IDENTITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Возвращает последнее значение идентификатора, вставленное в столбец идентификаторов в той же области. Областью является модуль, что подразумевает хранимую процедуру, триггер, функцию или пакет. Таким образом, две инструкции принадлежат одной и той же области, если они находятся в одной и той же хранимой процедуре, функции или пакете.  
@@ -58,7 +58,7 @@ SCOPE_IDENTITY()
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-using-identity-and-scopeidentity-with-triggers"></a>A. Использование функций @@IDENTITY и SCOPE_IDENTITY с триггерами  
+### <a name="a-using-identity-and-scope_identity-with-triggers"></a>A. Использование функций @@IDENTITY и SCOPE_IDENTITY с триггерами  
  В следующем примере показано создание двух таблиц, `TZ` и `TY`, и триггера INSERT для таблицы `TZ`. Когда в таблицу `TZ` добавляется строка, триггер (`Ztrig`) срабатывает и добавляет строку в таблицу `TY`.  
   
 ```sql  
@@ -73,7 +73,7 @@ INSERT TZ
   
 SELECT * FROM TZ;  
 ```     
-Результирующий набор: вот как выглядит таблица TZ.  
+Результирующий набор: вот как выглядит таблица TZ:  
   
 ```  
 Z_id   Z_name  
@@ -92,7 +92,7 @@ INSERT TY (Y_name)
   
 SELECT * FROM TY;  
 ```   
-Результирующий набор: вот как выглядит таблица TY.  
+Результирующий набор: вот как выглядит таблица TY:  
 ```  
 Y_id  Y_name  
 ---------------  
@@ -132,7 +132,7 @@ SCOPE_IDENTITY
 115  
 ```  
   
-### <a name="b-using-identity-and-scopeidentity-with-replication"></a>Б. Использование функций @@IDENTITY и SCOPE_IDENTITY() с репликацией  
+### <a name="b-using-identity-and-scope_identity-with-replication"></a>Б. Использование функций @@IDENTITY и SCOPE_IDENTITY() с репликацией  
  В следующем примере показано, как использовать системную переменную `@@IDENTITY` и функцию `SCOPE_IDENTITY()`, чтобы вставить данные в базу данных, опубликованную для репликации слиянием. Обе таблицы из примера находятся в образце базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]: таблица `Person.ContactType` не опубликована, а таблица `Sales.Customer` опубликована. При репликации слиянием в опубликованные таблицы добавляются триггеры. Таким образом, инструкция `@@IDENTITY` может возвращать значение из вставки в системную таблицу репликации, а не в пользовательскую таблицу.  
   
  Максимальное значение идентификатора в таблице `Person.ContactType` равно 20. При вставке строки в таблицу `@@IDENTITY` и `SCOPE_IDENTITY()` возвращают одно и тоже значение.  

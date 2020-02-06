@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 45e5d9b36b6fd75db7bbc3c5ea397ee9226e2771
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68032230"
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>Ограничения и известные проблемы для служб SSIS в Linux
@@ -26,7 +26,7 @@ ms.locfileid: "68032230"
 Следующие функции не поддерживаются в этом выпуске SSIS на Linux:
   - Каталог базы данных SSIS
   - Выполнение пакета агентом SQL по расписанию
-  - Проверка подлинности Windows.
+  - Проверка подлинности Windows
   - Сторонние компоненты
   - Система отслеживания измененных данных (CDC)
   - SSIS Scale Out
@@ -113,17 +113,17 @@ ms.locfileid: "68032230"
 - Нечеткое группирование
 - Нечеткий уточняющий запрос
 - Импорт столбцов
-- Уточняющий запрос
+- Поиск
 - Объединить
 - Merge Join
 - Многоадресная рассылка
 - Сведение
 - Количество строк
 - Медленно изменяющееся измерение
-- Sort
+- Сортировка
 - Уточняющий запрос термина
 - Объединить все
-- отмена свертывания
+- Отмена свертывания
 
 ## <a name="data-flow-transformations-supported-with-limitations"></a>Преобразования потока данных, поддерживаемые с ограничениями
 
@@ -146,4 +146,4 @@ ms.locfileid: "68032230"
 -   [Извлечение, преобразование и загрузка данных в Linux с помощью служб SSIS](sql-server-linux-migrate-ssis.md)
 -   [Установка служб SQL Server Integration Services (SSIS) в Linux](sql-server-linux-setup-ssis.md)
 -   [Настройка SQL Server Integration Services в Linux с помощью ssis-conf](sql-server-linux-configure-ssis.md)
--   [Планирование выполнения пакетов SQL Server Integration Services в Linux с помощью cron](sql-server-linux-schedule-ssis-packages.md)
+-   [Планирование выполнения пакетов SQL Server Integration Services в Linux с помощью cron](sql-server-linux-schedule-ssis-packages.md)

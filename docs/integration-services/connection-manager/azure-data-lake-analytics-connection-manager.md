@@ -15,10 +15,10 @@ ms.assetid: f4c44553-0f08-4731-ac47-7534990b8c8d
 author: yanancai
 ms.author: yanacai
 ms.openlocfilehash: c2ae186aa7d7fe9ee4ef7da26ed0f5e667b8e2d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67904808"
 ---
 # <a name="azure-data-lake-analytics-connection-manager"></a>Диспетчер подключений Azure Data Lake Analytics
@@ -41,7 +41,7 @@ ms.locfileid: "67904808"
   
 3. В поле **Проверка подлинности** выберите подходящий тип проверки подлинности для получения доступа к данным в Data Lake Analytics.
 
-   A. Если вы выбрали вариант **Удостоверение пользователя Azure AD**, сделайте следующее:
+   а. Если вы выбрали вариант **Удостоверение пользователя Azure AD**, сделайте следующее:
    
       i. Укажите значения в полях **Имя пользователя** и **Пароль**.    
       ii. Чтобы проверить подключение, нажмите кнопку **Проверить подключение**. Если вы или администратор клиента ранее не давали согласия на доступ к учетной записи Data Lake Analytics из SSIS,при появлении соответствующего запроса щелкните **Принять**. Дополнительные сведения о предоставлении согласия см. в разделе [Интеграция приложений с Azure Active Directory](https://docs.microsoft.com/azure/active-directory/manage-apps/plan-an-application-integration#integrating-applications-with-azure-ad).
@@ -49,7 +49,7 @@ ms.locfileid: "67904808"
    > [!NOTE] 
    > При выборе варианта проверки подлинности **Удостоверение пользователя Azure AD** многофакторная проверка подлинности и проверка подлинности учетной записи Майкрософт не поддерживаются.
     
-   Б. Если вы выбрали вариант **Удостоверение службы Azure AD**, сделайте следующее.
+   b. Если вы выбрали вариант **Удостоверение службы Azure AD**, сделайте следующее.
    
       i. Создайте приложение и субъект-службу Azure AD для получения доступа к учетной записи Data Lake Analytics. Дополнительные сведения об этом параметре проверки подлинности см. в разделе [Использовать портал для создания приложения и службы-участника, который имеет доступ к ресурсам Active Directory](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal).    
       ii. Назначьте приложению Azure AD соответствующие разрешения на доступ к учетной записи Data Lake Analytics. Узнайте, как предоставить права доступа к учетной записи Data Lake Analytics с помощью [мастера добавления пользователей](https://docs.microsoft.com/azure/data-lake-analytics/data-lake-analytics-manage-use-portal#add-a-new-user).    

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3804c83c328a7fc067d2aed964eb7b9635cfb386
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68089328"
 ---
 # <a name="ftcrawl-stopped-event-class"></a>Класс событий FT:Crawl Stopped
@@ -25,7 +25,7 @@ ms.locfileid: "68089328"
   
 ## <a name="ftcrawl-stopped-event-class-data-columns"></a>Столбцы данных класса событий FT:Crawl Stopped  
   
-|Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
+|Имя столбца данных|Тип данных|Description|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|Идентификатор базы данных, в которой было остановлено полнотекстовое сканирование. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
 |**EventClass**|**int**|Тип события = 156.|27|нет|  

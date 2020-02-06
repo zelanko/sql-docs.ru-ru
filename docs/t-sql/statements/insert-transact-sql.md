@@ -33,10 +33,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 327992369ca07d77eb349cb83fb74c4ecd4e622e
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982227"
 ---
 # <a name="insert-transact-sql"></a>Инструкция INSERT (Transact-SQL)
@@ -940,7 +940,7 @@ SELECT EmployeeID, LastName, FirstName, CurrentSales, ProjectedSales
 FROM dbo.EmployeeSales;  
 ```  
   
-#### <a name="v-inserting-data-returned-from-an-output-clause"></a>Х. Вставка данных, возвращенных предложением OUTPUT  
+#### <a name="v-inserting-data-returned-from-an-output-clause"></a>V. Вставка данных, возвращенных предложением OUTPUT  
  В следующем примере производится отслеживание данных, возвращаемых предложением OUTPUT инструкции MERGE, а затем производится вставка этих данных в другую таблицу. В инструкции MERGE ежедневно обновляется столбец `Quantity` таблицы `ProductInventory` на основе заказов, обработанных в таблице `SalesOrderDetail` базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Инструкция также удаляет строки с продуктами, запас которых сократился до 0. В примере собираются удаленные строки и вставляются в другую таблицу, `ZeroInventory`, в которой ведется учет закончившихся продуктов.  
   
 ```sql

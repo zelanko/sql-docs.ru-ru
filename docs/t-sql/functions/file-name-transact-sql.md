@@ -26,13 +26,13 @@ ms.assetid: 68b298aa-ce47-4af5-b59f-9a1b46d48326
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ead8278841f3eafa97f31b91480cb8464ce77dd4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071492"
 ---
-# <a name="filename-transact-sql"></a>FILE_NAME (Transact-SQL)
+# <a name="file_name-transact-sql"></a>FILE_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Эта функция возвращает логическое имя файла, соответствующее указанному идентификатору файла.  

@@ -10,20 +10,20 @@ ms.assetid: 8ad23889-e243-4bd7-bc3e-150403399d89
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2773c43695f67cc6d3878f1885686e74e84e67c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68039307"
 ---
-# <a name="mssqlserver30053"></a>MSSQLSERVER_30053
+# <a name="mssqlserver_30053"></a>MSSQLSERVER_30053
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|30053|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
@@ -48,7 +48,7 @@ ms.locfileid: "68039307"
 ## <a name="user-action"></a>Действие пользователя  
 Выберите по следующей таблице действие пользователя, подходящее для устранения предполагаемой причины превышения времени ожидания.  
   
-|Вероятная причина|Действие пользователя|  
+|Возможные причины|Рекомендуемые действия|  
 |------------------|---------------|  
 |Неправильно настроено средство разбиения по словам для языка запросов.|Если используется средство разбиения по словам сторонних разработчиков, оно может быть неправильно зарегистрировано в операционной системе. В этом случае повторно зарегистрируйте средство разбиения по словам. Дополнительные сведения см. в статье [Восстановление предыдущих версий средств разбиения текста на слова, используемых поиском](~/relational-databases/search/revert-the-word-breakers-used-by-search-to-the-previous-version.md).|  
 |Средство разбиения по словам неправильно обрабатывает определенную строку запроса.|Если средство разбиения по словам поддерживается [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], обратитесь в службу поддержки пользователей Майкрософт.|  
@@ -60,6 +60,6 @@ ms.locfileid: "68039307"
 [Настройка учетной записи службы средства запуска управляющей программы полнотекстовой фильтрации](~/relational-databases/search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)  
 [Полнотекстовый поиск](~/relational-databases/search/full-text-search.md)  
 [sp_help_fulltext_system_components (Transact-SQL)](~/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md)  
-[Настройка средств разбиения текста на слова и парадигматических модулей и управление ими для поиска](~/relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)  
+[Настройка и управление средством разбиения на слова и парадигматические модули для поиска](~/relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)  
 [Настройка и управление фильтрами для поиска](~/relational-databases/search/configure-and-manage-filters-for-search.md)  
   

@@ -16,17 +16,17 @@ ms.assetid: a27b51ee-7637-4525-9424-bcc16947dc13
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 639d661dd9a7196119bbb34f11f0ed5a9161a978
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67986676"
 ---
 # <a name="sql-server-database-mirroring-object"></a>SQL Server, объект Database Mirroring
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Объект производительности **SQLServer:Database Mirroring** содержит счетчики производительности, сообщающие сведения о зеркальном отображении базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В следующей таблице перечислены счетчики этого объекта.  
   
-|Имя|Описание|  
+|Имя|Description|  
 |----------|-----------------|  
 |**Получено байт/с**|Число байт, получаемых в секунду.|  
 |**Отправлено байт/с**|Число байт, отправляемых в секунду.|  

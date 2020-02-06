@@ -18,13 +18,13 @@ ms.assetid: 7b693e5d-2325-4bf9-9b45-ad6a23374b41
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: bd2246ed1a6c2c03e3a9f5c1989ce9e544c8b199
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109335"
 ---
-# <a name="keyname-transact-sql"></a>KEY_NAME (Transact-SQL)
+# <a name="key_name-transact-sql"></a>KEY_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Возвращает имя симметричного ключа из идентификатора GUID симметричного ключа или зашифрованного текста.  
@@ -53,7 +53,7 @@ KEY_NAME ( ciphertext | key_guid )
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-displaying-the-name-of-a-symmetric-key-using-the-keyguid"></a>A. Отображение имени симметричного ключа, полученное с помощью идентификатора key_guid  
+### <a name="a-displaying-the-name-of-a-symmetric-key-using-the-key_guid"></a>A. Отображение имени симметричного ключа, полученное с помощью идентификатора key_guid  
  База данных **master** содержит симметричный ключ с именем ##MS_ServiceMasterKey##. В следующем примере показано, как получить идентификатор GUID ключа из динамического административного представления sys.symmetric_keys, присвоить его переменной, а затем передать эту переменную в функцию KEY_NAME, чтобы вернуть имя, соответствующее идентификатору GUID.  
   
 ```  

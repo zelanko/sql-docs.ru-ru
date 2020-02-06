@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 0e980725-e42f-4283-94cb-d8a6dba5df62
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 3a329c8d8564e92319be773250761085f34643df
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: a752b21460c2dd337d12ee43acdd981dadd4335b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770787"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288281"
 ---
 # <a name="replication-agent-profiles"></a>Профили агента репликации
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "68770787"
   
 ||значение по умолчанию|  
 |-|-------------|  
-|**-BcpBatchSize**|100000|  
+|**-BcpBatchSize**|100 000|  
 |**-HistoryVerboseLevel**|2|  
 |**-LoginTimeout**|15|  
 |**-QueryTimeout**|1800|  
@@ -70,7 +70,7 @@ ms.locfileid: "68770787"
   
 ||значение по умолчанию|подробный журнал|диспетчер синхронизации Windows|продолжать при возникновении ошибок согласованности данных|профиль распространителя для потоковой передачи данных OLEDB|  
 |-|-------------|---------------------|-------------------------------------|-----------------------------------------|----------------------------------------------|  
-|**-BcpBatchSize**|100000|100000|1000|100000|2147473647|  
+|**-BcpBatchSize**|100 000|100 000|1000|100 000|2147473647|  
 |**-CommitBatchSize**|100|100|100|100|100|  
 |**-CommitBatchThreshold**|1000|1000|1000|1000|1000|  
 |**-HistoryVerboseLevel**|1|2|1|1|1|  
@@ -91,7 +91,7 @@ ms.locfileid: "68770787"
   
 ||значение по умолчанию|подробный журнал|диспетчер синхронизации Windows|проверка правильности количества строк|проверка правильности количества строк и контрольной суммы|медленная линия связи|межсерверный большого объема|  
 |-|-------------|---------------------|-------------------------------------|-------------------------|--------------------------------------|---------------|------------------------------------|  
-|**-BcpBatchSize**|100000|100000|1000|100000|100000|100000|100000|  
+|**-BcpBatchSize**|100 000|100 000|1000|100 000|100 000|100 000|100 000|  
 |**-ChangesPerHistory**|100|50|50|100|100|100|1000|  
 |**-DestThreads**|2|1|1|1|1|1|4|  
 |**-DownloadGenerationsPerBatch**|50|50|50|50|50|1|500|  

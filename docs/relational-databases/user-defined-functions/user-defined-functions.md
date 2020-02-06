@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8a659583df74cdc2e5100fcc25aa25e90af3bf22
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843842"
 ---
 # <a name="user-defined-functions"></a>Определяемые пользователем функции
@@ -133,7 +133,7 @@ ms.locfileid: "73843842"
 |||  
 |-|-|  
 |**Описание задачи**|**Раздел**|  
-|Описывает, как создать определяемую пользователем функцию Transact-SQL.|[Создание определяемых пользователем функций (ядро СУБД)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)|  
+|Описывает, как создать определяемую пользователем функцию Transact-SQL.|[Создание определяемых пользователем функций (компонент Database Engine)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)|  
 |Описывает, как создать функции CLR.|[Создание функций CLR](../../relational-databases/user-defined-functions/create-clr-functions.md)|  
 |Описывает, как создать определяемую пользователем агрегатную функцию.|[Создание пользовательских агрегатных функций](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md)|  
 |Описывает, как изменить определяемую пользователем функцию Transact-SQL.|[Изменение пользовательских функций](../../relational-databases/user-defined-functions/modify-user-defined-functions.md)|  

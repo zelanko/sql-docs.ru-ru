@@ -24,10 +24,10 @@ ms.assetid: 3222a1ed-83eb-421c-b299-a53b67bba740
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 45e97657bf70bdf023388f97497f9c2a8c5dd0f4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294935"
 ---
 # <a name="enabling-logging-programmatically"></a>Программное включение ведения журнала
@@ -47,7 +47,7 @@ ms.locfileid: "71294935"
   
  В следующей таблице перечислены доступные регистраторы и приведено их описание и значения их свойства <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider.ConfigString%2A>.  
   
-|Поставщик|Описание|Свойство ConfigString|  
+|Поставщик|Description|Свойство ConfigString|  
 |--------------|-----------------|---------------------------|  
 |Приложение SQL Server Profiler|Создает трассировки SQL, которые могут перехватываться и просматриваться в приложении [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler. По умолчанию для имени файла данного регистратора используется расширение TRC.|Настройка не требуется.|  
 |SQL Server|Записывает записи журнала событий в таблицу **sysssislog** любой базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Регистратор [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] требует указания соединения с базой данных, а также имени базы данных-получателя.|  

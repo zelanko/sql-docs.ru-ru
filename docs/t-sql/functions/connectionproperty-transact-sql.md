@@ -18,10 +18,10 @@ ms.assetid: 6bd9ccae-af77-4a05-b97f-f8ab41cfde42
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 53b447b2a13c68c2c87536bc3c1f14f9efd74cfd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68132089"
 ---
 # <a name="connectionproperty-transact-sql"></a>CONNECTIONPROPERTY (Transact-SQL)
@@ -41,9 +41,9 @@ CONNECTIONPROPERTY ( property )
 *property*  
 Свойство подключения. Аргумент *property* может иметь одно из следующих значений:
   
-|Значение|Тип данных|Описание|  
+|Значение|Тип данных|Description|  
 |---|---|---|
-|net_transport|**nvarchar(40)**|Возвращает описание физического транспортного протокола, используемого этим соединением. Значение NULL не допускается. Возможные возвращаемые значения:<br /><br /> **HTTP**<br /> **Именованный канал**<br /> **Session**<br /> **Общая память**<br /> **SSL**<br /> **TCP**<br /><br /> и<br /><br /> **VIA**<br /><br /> Примечание. Всегда возвращает значение **Session**, если при подключении используется множественный активный результирующий набор (функция MARS), а также включено использование пулов подключений.|  
+|net_transport|**nvarchar(40)**|Возвращает описание физического транспортного протокола, используемого этим соединением. Значение NULL не допускается. Возможные возвращаемые значения:<br /><br /> **HTTP**<br /> **Именованный канал**<br /> **Согласованность сеанса**<br /> **Общая память**<br /> **SSL**<br /> **TCP**<br /><br /> и<br /><br /> **VIA**<br /><br /> Примечание. Всегда возвращает значение **Session**, если при подключении используется множественный активный результирующий набор (функция MARS), а также включено использование пулов подключений.|  
 |protocol_type|**nvarchar(40)**|Возвращает тип протокола передачи полезных данных. В настоящее время различаются протоколы TDS (TSQL) и SOAP. Допускает значение NULL.|  
 |auth_scheme|**nvarchar(40)**|Возвращает схему аутентификации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для подключения. Схема проверки подлинности предусматривает использование проверки подлинности Windows (NTLM, KERBEROS, DIGEST, BASIC, NEGOTIATE) либо проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Не допускает значение NULL.|  
 |local_net_address|**varchar(48)**|Возвращает IP-адрес сервера, с которым установлено определенное подключение. Можно использовать только для подключений, которые в качестве транспорта данных используют протокол TCP. Допускает значение NULL.|  

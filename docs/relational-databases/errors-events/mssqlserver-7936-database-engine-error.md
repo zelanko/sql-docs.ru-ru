@@ -12,25 +12,25 @@ ms.assetid: d78fc8a9-d173-4801-bb32-ed6a29257f08
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e094c571498c315ec57471f216b65376f76eb2aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987746"
 ---
-# <a name="mssqlserver7936"></a>MSSQLSERVER_7936
+# <a name="mssqlserver_7936"></a>MSSQLSERVER_7936
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|7936|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC2_FS_ORPHANED_COLUMN_DIRECTORY|  
-|Текст сообщения|Ошибка таблицы: каталог Filestream существует для идентификатора столбца C_ID, идентификатора объекта O_ID с идентификатором индекса I_ID и идентификатором секции PN_ID, однако данный столбец не является столбцом Filestream.|  
+|Текст сообщения|Ошибка таблицы: существует каталог FILESTREAM для столбца с идентификатором C_ID объекта с идентификатором O_ID, идентификатором индекса I_ID, идентификатором секции PN_ID, однако этот столбец имеет тип, отличный от FILESTREAM.|  
   
 ## <a name="explanation"></a>Объяснение  
 Во время выполнения команды DBCC CHECKDB для указанного столбца был найден каталог файловых потоков, но этот столбец не является столбцом **FILESTREAM**.  

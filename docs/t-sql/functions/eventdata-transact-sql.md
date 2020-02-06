@@ -25,10 +25,10 @@ ms.assetid: 03a80e63-6f37-4b49-bf13-dc35cfe46c44
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 73e0c8737a65b040552029717bf6848e1fc0cb63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68094568"
 ---
 # <a name="eventdata-transact-sql"></a>EVENTDATA (Transact-SQL)
@@ -73,7 +73,7 @@ EVENTDATA( )
 Пароли не отображаются при выполнении инструкций `CREATE LOGIN` и `ALTER LOGIN`. Это сделано для безопасности входа.  
   
 ## <a name="schemas-returned"></a>Возвращаемые схемы  
-Функция EVENTDATA возвращает значение с типом данных **xml**. По умолчанию определение схемы для всех событий устанавливается в следующем каталоге: [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd.  
+Функция EVENTDATA возвращает значение с типом данных **xml**. По умолчанию определение схемы для всех событий устанавливается в каталог [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd.  
   
 Кроме того, схема событий опубликована на веб-странице [Microsoft SQL Server XML Schemas](https://go.microsoft.com/fwlink/?LinkID=31850) (Схемы XML Microsoft SQL Server).  
   

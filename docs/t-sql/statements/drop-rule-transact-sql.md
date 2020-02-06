@@ -22,10 +22,10 @@ ms.assetid: 8370b730-7fd5-43fe-a7f6-8300b3caa16d
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: cce8533a1ac74feb95577d28f73cb6f87c15aa31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68223602"
 ---
 # <a name="drop-rule-transact-sql"></a>DROP RULE (Transact-SQL)
@@ -46,7 +46,7 @@ DROP RULE [ IF EXISTS ] { [ schema_name . ] rule_name } [ ,...n ] [ ; ]
   
 ## <a name="arguments"></a>Аргументы  
  *IF EXISTS*  
- **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  Условное удаление правила только в том случае, если оно уже существует.  
   
@@ -56,7 +56,7 @@ DROP RULE [ IF EXISTS ] { [ schema_name . ] rule_name } [ ,...n ] [ ; ]
  *rule*  
  Удаляемое правило. Имена правил должны соответствовать требованиям, предъявляемым к [идентификаторам](../../relational-databases/databases/database-identifiers.md). Указание имени схемы для правил необязательно.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Если правило привязано к столбцу или псевдониму типа данных, то перед его удалением необходимо удалить привязку при помощи хранимой процедуры **sp_unbindrule**. Если в момент удаления правило привязано, то выводится сообщение об ошибке, и инструкция DROP RULE отменяется.  
   
  После удаления правила новые данные, вводимые в столбцы, ранее управлявшиеся этим правилом, больше им не ограничиваются. На существующие данные удаление правила не влияет.  
@@ -75,7 +75,7 @@ DROP RULE VendorID_rule
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [CREATE RULE (Transact-SQL)](../../t-sql/statements/create-rule-transact-sql.md)   
  [sp_bindrule (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)   
  [sp_help (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   

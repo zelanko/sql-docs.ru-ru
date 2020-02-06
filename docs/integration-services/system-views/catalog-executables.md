@@ -11,10 +11,10 @@ ms.assetid: bae22d0c-e190-426f-a074-c1d1170e8dd8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 687e6940b9674cdff852d8aff3e0f6c05423cc70
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296619"
 ---
 # <a name="catalogexecutables"></a>catalog.executables 
@@ -28,7 +28,7 @@ ms.locfileid: "71296619"
   
  Исполняемый объект ― это задача или контейнер, добавленный в поток управления пакетом.  
   
-|Имя столбца|**Data type**|Описание|  
+|Имя столбца|**Data type**|Description|  
 |-----------------|-------------------|-----------------|  
 |executable_id|**bigint**|Уникальный идентификатор исполняемого объекта.|  
 |execution_id|**bigint**|Уникальный идентификатор для экземпляра выполнения.|  

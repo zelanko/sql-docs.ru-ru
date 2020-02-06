@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: af5cd09c9c00c0b250f1b51c72ce642be01dc9a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67996077"
 ---
 # <a name="tsql-event-category"></a>Категория событий TSQL
@@ -27,7 +27,7 @@ ms.locfileid: "67996077"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Описание|  
+|Раздел|Description|  
 |-----------|-----------------|  
 |[Класс событий Exec Prepared SQL](../../relational-databases/event-classes/exec-prepared-sql-event-class.md)|Указывает, что SqlClient, ODBC, OLE DB или DB-Library выполнили подготовленные инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
 |[Класс событий Prepare SQL](../../relational-databases/event-classes/prepare-sql-event-class.md)|Указывает, что SqlClient, ODBC, OLE DB или DB-Library подготовили для использования инструкции языка [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  

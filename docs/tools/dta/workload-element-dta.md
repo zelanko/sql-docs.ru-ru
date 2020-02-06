@@ -1,10 +1,7 @@
 ---
-title: Элемент рабочей нагрузки (DTA) | Документация Майкрософт
-ms.custom: ''
-ms.date: 03/14/2017
+title: Элемент Workload (DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: 68ffd473-6546-4015-98d0-3763165de65c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fb526f31bb36ca7d4dd046f8a0f3a4f7962c6ea8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 22331332715639b12f7a2cc82d8b71d723a1fecd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105945"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307896"
 ---
 # <a name="workload-element-dta"></a>Элемент Workload (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Позволяет задать рабочую нагрузку для использования в сеансе настройки.  
+
+Позволяет задать рабочую нагрузку для использования в сеансе настройки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,7 +40,7 @@ ms.locfileid: "68105945"
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |**Тип данных и длина**|Нет.|  
 |**Значение по умолчанию**|Нет.|  

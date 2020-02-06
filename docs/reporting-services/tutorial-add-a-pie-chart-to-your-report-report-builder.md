@@ -9,10 +9,10 @@ ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b25a2f955ddd630c7093a1dc82a22c2cd0ba41b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63041339"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Учебник. Добавление круговой диаграммы к отчету (построитель отчетов)
@@ -75,7 +75,7 @@ ms.locfileid: "63041339"
   
 8.  Нажмите кнопку "Выполнить" ( **!** ), чтобы просмотреть данные, на основе которых будет создана диаграмма (необязательно).  
   
-9. Нажмите кнопку **Далее**.  
+9. Щелкните **Далее**.  
   
 ## <a name="ChartType"></a>2. Выбор типа диаграммы  
 Можно выбрать один из различных стандартных типов диаграмм.  
@@ -207,7 +207,7 @@ ms.locfileid: "63041339"
   
 3.  В поле **Имя**введите **Круговая диаграмма продаж**.  
   
-4.  Нажмите кнопку **Сохранить**.  
+4.  Выберите команду **Сохранить**.  
   
 Отчет будет сохранен на сервере отчетов.  
   

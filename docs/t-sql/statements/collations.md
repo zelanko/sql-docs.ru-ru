@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 883256cfaad3c23133b5db520f5d9ef92f4546d3
-ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71271915"
 ---
 # <a name="collate-transact-sql"></a>COLLATE (Transact-SQL)
@@ -150,7 +150,7 @@ Chiapas
 
 ### <a name="b-additional-examples"></a>Б. Дополнительные примеры
 
-Дополнительные примеры, в которых используется **COLLATE**, приведены в разделе **Ж. Создание базы данных и назначение имени и параметров сортировки** статьи [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017#examples) и в разделе **Ф. Изменение параметров сортировки столбца** статьи [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#alter_column).
+Дополнительные примеры, в которых используется **COLLATE**, приведены в разделе [Ж. Создание базы данных и назначение имени и параметров сортировки](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017#examples) статьи **CREATE DATABASE** и в разделе [Ф. Изменение параметров сортировки столбца](../../t-sql/statements/alter-table-transact-sql.md#alter_column) статьи **ALTER TABLE**.
 
 ## <a name="see-also"></a>См. также:
 

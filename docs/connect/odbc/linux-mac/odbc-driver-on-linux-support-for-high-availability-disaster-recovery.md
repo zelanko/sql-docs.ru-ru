@@ -11,10 +11,10 @@ ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 08fb8cc6e54fff4b315a0a98ace046a49b2673a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68008772"
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Поддержка высокой доступности и аварийного восстановления в драйвере ODBC для Linux и macOS
@@ -55,7 +55,7 @@ ms.locfileid: "68008772"
   
 -   Нельзя подключиться к экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], для которого настроено более 64 IP-адресов.
 
--   С параметром **MultiSubnetFailover=Yes** можно использовать как проверку подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], так и проверку подлинности Kerberos — на работу приложения это не повлияет.
+-   С параметром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]MultiSubnetFailover=Yes**можно использовать как проверку подлинности**, так и проверку подлинности Kerberos — на работу приложения это не повлияет.
 
 -   Значение **loginTimeout** можно увеличить с учетом времени отработки отказа, это уменьшит количество попыток повторного соединения в приложении.
 
@@ -93,7 +93,7 @@ ms.locfileid: "68008772"
   
 Приложение ODBC, которое использует [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], может использовать одну из двух указанных далее функций для установки соединения.  
   
-|Компонент|Описание|  
+|Компонент|Description|  
 |------------|---------------|  
 |[Функция SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)|**SQLConnect** поддерживает как **ApplicationIntent**, так и **MultiSubnetFailover**, через имя источника данных (DSN) или атрибут соединения.|  
 |[Функция SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|**SQLDriverConnect** поддерживает **ApplicationIntent** и **MultiSubnetFailover** через ключевое слово строки подключения, атрибут соединения или имя DSN.|

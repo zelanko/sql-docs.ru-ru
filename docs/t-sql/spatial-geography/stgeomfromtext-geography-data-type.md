@@ -19,10 +19,10 @@ ms.assetid: 3717987b-77d8-4ccf-a1db-5a8016ac1083
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 90359259bb7ba85377e72c40a8eece79de44cbf2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042118"
 ---
 # <a name="stgeomfromtext-geography-data-type"></a>STGeomFromText (географический тип данных)
@@ -49,7 +49,7 @@ STGeomFromText ( 'geography_tagged_text' , SRID )
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Тип возвращаемого значения CLR: **SqlGeography**  
+ Тип возвращаемых данных CLR: **SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
  Тип OGC экземпляра **geography**, возвращаемый методом STGeomFromText(), получает значение в зависимости от соответствующих входных данных WKT.  

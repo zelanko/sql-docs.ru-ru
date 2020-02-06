@@ -14,10 +14,10 @@ ms.assetid: 670abd41-d204-4cd7-a371-7664e603a0ce
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 478e6b9bb6f8300a845ae8fe9e3202f750f525eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68106116"
 ---
 # <a name="article-options-for-merge-replication"></a>Параметры статьи для репликации слиянием
@@ -34,7 +34,7 @@ ms.locfileid: "68106116"
   
 -   Указать, что набор взаимосвязанных записей должен обрабатываться в виде блока (по умолчанию репликация слиянием обрабатывает изменения в таблицах построчно). Дополнительные сведения см. в статье [Группирование изменений в связанных строках с помощью логических записей](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
--   Использовать обнаружение и разрешение конфликтов для случаев, когда одни и те же данные могут быть изменены в нескольких узлах топологии. Дополнительные сведения см. в статье [Detect and Resolve Merge Replication Conflicts](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
+-   Использовать обнаружение и разрешение конфликтов для случаев, когда одни и те же данные могут быть изменены в нескольких узлах топологии. Дополнительные сведения см. в статье [Обнаружение и разрешение конфликтов репликации слиянием](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
 -   Укажите параметры схемы, например копируются ли ограничения и триггеры на подписчик. Дополнительные сведения см. в разделе [Указание параметров схемы](../../../relational-databases/replication/publish/specify-schema-options.md).  
   

@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 64da74cc-14bf-4636-a55e-8cc1fce2aaff
 ms.openlocfilehash: 8a9094977597fd7c2d76f2c80a1773c176b9c6dc
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70929810"
 ---
 # <a name="security-limitations-for-sql-server-on-linux"></a>Ограничения системы безопасности для SQL Server на Linux
@@ -28,6 +28,6 @@ SQL Server на Linux в настоящее время имеет указанн
 
 Дополнительные сведения о функциях безопасности, доступных в SQL Server, см. в статье [Центр обеспечения безопасности для базы данных Azure SQL и SQL Server Database Engine](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md).
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Описание стандартных задач по обеспечению безопасности см. в статье [Начало работы с функциями безопасности SQL Server на Linux](sql-server-linux-security-get-started.md). Скрипт для изменения номера TCP-порта и каталогов SQL Server, а также настройки флагов трассировки или параметров сортировки можно найти в статье [Настройка SQL Server в Linux с помощью средства mssql-conf](sql-server-linux-configure-mssql-conf.md).

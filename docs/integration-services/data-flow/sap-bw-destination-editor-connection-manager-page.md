@@ -13,10 +13,10 @@ ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 66365c942bc3f996d834f0217f29bd82cc911457
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298109"
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>Редактор назначений SAP BW (страница «Диспетчер соединений»)
@@ -65,12 +65,12 @@ ms.locfileid: "71298109"
  **Тип**  
  Введите один символ, который определяет тип InfoSource. В следующей таблице перечислены допустимые значения, состоящие из одного символа.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |**D**|Данные транзакций|  
 |**M**|Основные данные|  
 |**T**|Тексты|  
-|**З**|Данные иерархии|  
+|**H**|Данные иерархии|  
   
  **Логическая система**  
  Введите имя логической системы, связанной с InfoPackage.  

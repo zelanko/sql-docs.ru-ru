@@ -10,10 +10,10 @@ ms.assetid: 816fb1bd-7bb9-450d-ad65-e4c2d02eaff8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0a6fb370c80af6221812b88d3694a230dc206f7b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296209"
 ---
 # <a name="steps-in-the-sql-server-import-and-export-wizard"></a>Шаги в мастере импорта и экспорта SQL Server
@@ -32,10 +32,10 @@ ms.locfileid: "71296209"
 
 |Шаг|Страницы мастера|  
 |----------|------------------|  
-|**Начальная страница документации**<br />На этой странице никакие действия не требуются.|[Вас приветствует мастер импорта и экспорта SQL Server](../../integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md)|  
+|**Добро пожаловать!**<br />На этой странице никакие действия не требуются.|[Вас приветствует мастер импорта и экспорта SQL Server](../../integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md)|  
 |**Выберите источник** данных.|[Выбор источника данных](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)|  
 |**Выберите назначение** для данных.|[Выбор назначения](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)|  
-|**Настройка назначения**. (необязательные шаги)<br /><br /> Создание целевой базы данных.<br />Если вы копируете данные в текстовый файл, настройте дополнительные параметры.|[Создание базы данных](../../integration-services/import-export-data/create-database-sql-server-import-and-export-wizard.md)<br /><br />[Настройка назначения "Неструктурированный файл"](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md)|  
+|**Настройка назначения**. (необязательные шаги)<br /><br /> Создание целевой базы данных.<br />Если вы копируете данные в текстовый файл, настройте дополнительные параметры.|[Create Database](../../integration-services/import-export-data/create-database-sql-server-import-and-export-wizard.md)<br /><br />[Настройка назначения "Неструктурированный файл"](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md)|  
 |**Выбор копируемых данных.**|[Выбор копирования таблицы или запроса](../../integration-services/import-export-data/specify-table-copy-or-query-sql-server-import-and-export-wizard.md)<br /><br />[Выбор исходных таблиц и представлений](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md)<br /><br />[Определение исходного запроса](../../integration-services/import-export-data/provide-a-source-query-sql-server-import-and-export-wizard.md)|  
 |**Настройка операции копирования**. (необязательные шаги)<br /><br /> Создание целевой таблицы.<br />— Определение действий на случай, если в мастере отсутствуют сведения о сопоставлениях типов данных между выбранными источником и назначением.<br />Проверка сопоставлений столбцов между источником и назначением.<br />Решение проблем с преобразованием типов данных между источником и назначением.<br />Просмотр данных для копирования.|[Инструкция SQL Create Table](../../integration-services/import-export-data/create-table-sql-statement-sql-server-import-and-export-wizard.md)<br /><br />[Преобразование типов без проверки](../../integration-services/import-export-data/convert-types-without-conversion-checking-sql-server-import-and-export-wizard.md)<br /><br />[Сопоставления столбцов](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md)<br /><br />[Просмотр сопоставления типов данных](../../integration-services/import-export-data/review-data-type-mapping-sql-server-import-and-export-wizard.md)<br /><br />[Диалоговое окно "Сведения о преобразовании столбца"](../../integration-services/import-export-data/column-conversion-details-dialog-box-sql-server-import-and-export-wizard.md)<br /><br />[Диалоговое окно "Просмотр данных"](../../integration-services/import-export-data/preview-data-dialog-box-sql-server-import-and-export-wizard.md)|  
 |**Копирование данных.**<br /><br /> При необходимости сохраните их в виде пакета SQL Server Integration Services (SSIS).|[Сохранение и выполнение пакета](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md)<br /><br />[Сохранить пакет служб SSIS](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md)<br /><br />[Завершение работы мастера](../../integration-services/import-export-data/complete-the-wizard-sql-server-import-and-export-wizard.md)<br /><br />[Выполнение операции](../../integration-services/import-export-data/performing-operation-sql-server-import-and-export-wizard.md)|  
@@ -59,6 +59,6 @@ ms.locfileid: "71296209"
 
 -   **Запуск мастера.** Если вы готовы запустить мастер и хотите знать, как это сделать, см. раздел [Запуск мастера экспорта и импорта SQL Server](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md).
 
--     **Запустите мастер.** Если вы хотите запустить мастер, но на вашем компьютере не установлен [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно установить с помощью SQL Server Data Tools (SSDT). Дополнительные сведения см. в разделе [Скачивание SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
+-     **Запустите мастер.** Если вы хотите запустить мастер, но на вашем компьютере не установлен [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно установить с помощью SQL Server Data Tools (SSDT). Дополнительные сведения см. в разделе [Скачивание SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
 
 

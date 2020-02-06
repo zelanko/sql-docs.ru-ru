@@ -15,13 +15,13 @@ ms.assetid: c147c9e1-b81d-49c8-b800-3019f4d86a13
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 40efe03850259a3b900375e3a47c12d80a448b39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040074"
 ---
-# <a name="xpcmdshell-server-configuration-option"></a>Параметр конфигурации сервера «xp_cmdshell»
+# <a name="xp_cmdshell-server-configuration-option"></a>Параметр конфигурации сервера «xp_cmdshell»
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Параметр **xp_cmdshell** — это параметр конфигурации сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , который позволяет системным администраторам контролировать, можно ли выполнять в системе расширенную хранимую процедуру **xp_cmdshell** . По умолчанию параметр **xp_cmdshell** отключен в новых установках. Перед его включением важно учесть возможные проблемы безопасности, связанные с использованием этого параметра. В новом коде этот параметр не используется, так как обычно он отключен. Его требуется включать в некоторых нерекомендуемых приложениях. Если этого невозможно избежать, можно включить параметр с помощью управления на основе политик или путем запуска хранимой процедуры системы **sp_configure**, как показано в следующем примере кода.  

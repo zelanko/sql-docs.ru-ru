@@ -22,10 +22,10 @@ ms.assetid: a4bb055a-a538-4db9-a6fb-550d1eabfa18
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: ad8f9e49ea1dd22184384b337d036991d9dc7f9d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68044114"
 ---
 # <a name="drop-partition-function-transact-sql"></a>DROP PARTITION FUNCTION (Transact-SQL)
@@ -52,7 +52,7 @@ DROP PARTITION FUNCTION partition_function_name [ ; ]
 ## <a name="permissions"></a>Разрешения  
  Для выполнения инструкции DROP PARTITION FUNCTION требуется одно из следующих разрешений.  
   
--   Разрешение ALTER ANY DATASPACE. Это разрешение назначено по умолчанию членам предопределенной роли сервера **sysadmin** и предопределенных ролей базы данных **db_owner** и **db_ddladmin**.  
+-   Разрешение ALTER ANY DATASPACE. Это разрешение назначено по умолчанию членам предопределенной роли сервера **sysadmin** и предопределенных ролей базы данных **db_owner** и **db_ddladmin** .  
   
 -   Разрешение CONTROL или ALTER в базе данных, в которой была создана функция секционирования.  
   

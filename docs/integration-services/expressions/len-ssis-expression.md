@@ -14,10 +14,10 @@ ms.assetid: d961398b-e4d0-4936-be17-8f4c5882a640
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4f84bb32435afe7cbe52cea6ed25f59940dbd42c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297524"
 ---
 # <a name="len-ssis-expression"></a>LEN (выражение служб SSIS)

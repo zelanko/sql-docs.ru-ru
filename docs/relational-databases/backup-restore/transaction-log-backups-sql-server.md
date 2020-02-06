@@ -16,15 +16,15 @@ ms.assetid: f4a44a35-0f44-4a42-91d5-d73ac658a3b0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 491016d02dfdb890914633333e19a3138c01779d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68041351"
 ---
 # <a name="transaction-log-backups-sql-server"></a>Резервные копии журналов транзакций (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Этот раздел относится только к тем базам данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которые используют модель полного восстановления или модель восстановления с неполным протоколированием. В этом разделе рассматривается создание резервной копии журнала транзакций базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  Этот раздел относится только к тем базам данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые используют модель полного восстановления или модель восстановления с неполным протоколированием. В этом разделе рассматривается создание резервной копии журнала транзакций базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Перед созданием любой резервной копии журнала необходимо создать как минимум одну полную резервную копию. После этого резервное копирование журнала транзакций может выполняться в любое время, кроме времени другого резервного копирования журнала. 
  

@@ -19,10 +19,10 @@ ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 32f1363901d06e8e3551c8f161c38d48fc190921
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981789"
 ---
 # <a name="guidelines-for-online-index-operations"></a>Рекомендации по операциям с индексами в режиме "в сети"
@@ -84,7 +84,7 @@ ms.locfileid: "73981789"
   
 Поскольку на финальной фазе удерживаются блокировки S-lock и Sch-M, будьте внимательны при выполнении операций с индексами в сети внутри явно объявленных пользовательских транзакций (например: в блоке BEGIN TRANSACTION...COMMIT), поскольку в этом случае блокировка будет удерживаться до окончания транзакции, мешая одновременной работе пользователей.  
   
-Перестроение индекса в сети может привести к увеличению фрагментации, когда оно выполняется с параметрами `MAX DOP > 1` и `ALLOW_PAGE_LOCKS = OFF` . Дополнительные сведения см. в разделе [Как это работает: Перестроение индекса в сети может привести к увеличению фрагментации](https://blogs.msdn.com/b/psssql/archive/2012/09/05/how-it-works-online-index-rebuild-can-cause-increased-fragmentation.aspx).  
+Перестроение индекса в сети может привести к увеличению фрагментации, когда оно выполняется с параметрами `MAX DOP > 1` и `ALLOW_PAGE_LOCKS = OFF` . Дополнительные сведения см. в статье [Как это работает. Перестроение индекса в сети может привести к увеличению фрагментации](https://blogs.msdn.com/b/psssql/archive/2012/09/05/how-it-works-online-index-rebuild-can-cause-increased-fragmentation.aspx).  
   
 ## <a name="transaction-log-considerations"></a>Рекомендации по журналу транзакций
 
@@ -131,6 +131,6 @@ ms.locfileid: "73981789"
 ## <a name="related-content"></a>См. также
 
 - [Об операциях с индексами в сети](../../relational-databases/indexes/how-online-index-operations-work.md)  
-- [Выполнение операции с индексами в сети](../../relational-databases/indexes/perform-index-operations-online.md)  
+- [Выполнение операций с индексами в оперативном режиме](../../relational-databases/indexes/perform-index-operations-online.md)  
 - [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)  
 - [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)  

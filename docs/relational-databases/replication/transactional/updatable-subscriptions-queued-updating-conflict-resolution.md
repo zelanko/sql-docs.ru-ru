@@ -17,10 +17,10 @@ ms.assetid: 084ac587-25e7-4bd0-a385-556bbe07d02f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b2bc4cf6348180e52dea28698e90cafda4f32f79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67895492"
 ---
 # <a name="updatable-subscriptions---queued-updating-conflict-resolution"></a>Обновляемые подписки. Разрешение конфликтов для обновления посредством очередей
@@ -55,13 +55,13 @@ ms.locfileid: "67895492"
   
  **Установка политики устранения конфликтов обновления посредством очередей**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. [Настройка параметров разрешения конфликтов для обновления посредством очередей (среда SQL Server Management Studio)](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Настройка параметров разрешения конфликтов для обновления посредством очередей (среда SQL Server Management Studio)](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
   
--   Программирование репликации на Transact-SQL: [Включение обновляемых подписок для публикации транзакций](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  
+-   Программирование репликации на Transact-SQL: [Enable Updating Subscriptions for Transactional Publications](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
  **Просмотр конфликтов данных**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. [Просмотр конфликтов данных для публикаций транзакций (среда SQL Server Management Studio)](../../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Просмотр конфликтов данных для публикаций транзакций (среда SQL Server Management Studio)](../../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
   
 ### <a name="publisher-wins"></a>Побеждает издатель  
  Когда параметр устранения конфликтов имеет значение «Побеждает издатель», согласованность транзакций поддерживается на основании данных издателя. Происходит откат конфликтной транзакции у инициировавшего ее подписчика.  

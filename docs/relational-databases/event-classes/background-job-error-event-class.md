@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4e3560501061819b3911d7dd628d29e5dda09f79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67999872"
 ---
 # <a name="background-job-error-event-class"></a>Background Job Error, класс событий
@@ -25,7 +25,7 @@ ms.locfileid: "67999872"
   
 ## <a name="background-job-error-event-class-data-columns"></a>Столбцы данных класса событий Background Job Error  
   
-|Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
+|Имя столбца данных|Тип данных|Description|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|Идентификатор базы данных, указанной заданием. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
 |**DatabaseName**|**nvarchar**|Имя базы данных, в которой выполняется пользовательская инструкция.|35|Да|  
@@ -37,7 +37,7 @@ ms.locfileid: "67999872"
 |**IntegerData**|**int**|Число попыток, предпринятых заданием (только**EventSubClass** 1).|25|Да|  
 |**IntegerData2**|**int**|Последовательный номер задания.|55|Да|  
 |**ObjectID**|**int**|Идентификатор объекта, назначенный системой.|22|Да|  
-|**SessionLoginName**|**nvarchar**|Имя входа пользователя, создавшего сеанс. Например, при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по имени Имя_входа1 и при выполнении инструкции под именем Имя_входа2 **SessionLoginName** содержит значение «Имя_входа1», а **LoginName** содержит значение «Имя_входа2». В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.|64|Да|  
+|**SessionLoginName**|**nvarchar**|Имя входа пользователя, создавшего сеанс. Например, при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по имени "Имя_входа1" и при выполнении инструкции под именем "Имя_входа2" **SessionLoginName** содержит значение "Имя_входа1", а **LoginName** — значение "Имя_входа2". В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.|64|Да|  
 |**Severity**|**int**|Серьезность ошибки последней попытки (только**EventSubClass** 1).|20|Да|  
 |**StartTime**|**datetime**|Время создания задания.|14|Да|  
 |**Состояние**|**int**|Состояние ошибки последней попытки (только**EventSubClass** 1).|30|Да|  

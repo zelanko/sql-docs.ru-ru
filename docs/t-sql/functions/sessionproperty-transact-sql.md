@@ -20,10 +20,10 @@ ms.assetid: 1f3730b4-1495-4d3a-af43-e57952812df9
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: e22d0c36c3a5ce614357566079ec81dc54b7c70e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68022191"
 ---
 # <a name="sessionproperty-transact-sql"></a>SESSIONPROPERTY (Transact-SQL)
@@ -44,7 +44,7 @@ SESSIONPROPERTY (option)
  *Параметр*  
  Текущий параметр для данного сеанса. Аргумент *option* может принимать любое из указанных ниже значений.  
   
-|Параметр|Описание|  
+|Параметр|Description|  
 |------------|-----------------|  
 |ANSI_NULLS|Позволяет задать поведение по стандарту ISO оператора сравнения "равно" (=) и "не равно" (<>) при использовании со значениями NULL.<br /><br /> 1 = включен;<br /><br /> 0 = выключен.|  
 |ANSI_PADDING|Определяет, как в столбце сохраняются более короткие значения, чем заданный размер столбца, а также символьные и двоичные значения с завершающими пробелами.<br /><br /> 1 = включен;<br /><br /> 0 = выключен.|  
