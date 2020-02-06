@@ -11,10 +11,10 @@ ms.assetid: 0bd0d827-e2f1-44fe-aa90-6bf922d68d16
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f2678853d13436811b53b40473a04191625535db
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295137"
 ---
 # <a name="catalogworker_agents-ssisdb-database"></a>catalog.worker_agents (база данных SSISDB)
@@ -26,12 +26,12 @@ ms.locfileid: "71295137"
 
 Отображает сведения для рабочей роли [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out.
 
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |WorkerAgentId|**uniqueidentifier**|Идентификатор агента рабочей роли для рабочей роли Scale Out.|
 |IsEnabled|**bit**|Указывает, включена ли рабочая роль Scale Out.|
 |DisplayName|**nvarchar(256)**|Отображаемое имя рабочей роли Scale Out.|
-|Описание|**nvarchar(256)**|Описание рабочей роли Scale Out.|
+|Description|**nvarchar(256)**|Описание рабочей роли Scale Out.|
 |MachineName|**nvarchar(256)**|Имя компьютера рабочей роли Scale Out.|
 |Теги|**nvarchar(max)**|Теги рабочей роли Scale Out.|
 |UserAccount|**nvarchar(256)**|Учетная запись, под которой выполняется служба рабочей роли Scale Out.|

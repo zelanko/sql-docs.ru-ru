@@ -14,10 +14,10 @@ ms.assetid: 6ea068b0-4cd8-45b5-b89d-09b8f25040c0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e903de279e4373e234dab18401465edd997e7407
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298426"
 ---
 # <a name="azure-blob-upload-task"></a>Задача передачи больших двоичных объектов Azure
@@ -40,5 +40,5 @@ ms.locfileid: "71298426"
 |BlobDirectory|Указывает каталог больших двоичных объектов, где загруженный файл хранится в виде блочного BLOB-объекта. Каталог больших двоичных объектов — это виртуальная иерархическая структура. Если большой двоичный объект уже существует, он заменяется.|  
 |LocalDirectory|Укажите локальный каталог, который содержит файлы для отправки.|  
 |SearchRecursively|Указывает, следует ли выполнять рекурсивный поиск в подкаталогах.|  
-|FileName|Указывает фильтр имен для выбора файлов с указанным шаблоном имен. Например, `MySheet*.xls\*` включает такие файлы, как `MySheet001.xls` и `MySheetABC.xlsx`.|  
-|TimeRangeFrom/TimeRangeTo|Указывает фильтр по диапазону времени. Включаются файлы, измененные после **TimeRangeFrom** и до **TimeRangeTo**.|  
+|FileName|Указывает имя фильтра для выбора файлов с указанным шаблоном имени. Например, `MySheet*.xls\*` включает такие файлы, как `MySheet001.xls` и `MySheetABC.xlsx`.|  
+|TimeRangeFrom/TimeRangeTo|Задает фильтр диапазона времени. Включаются файлы, измененные после **TimeRangeFrom** и до **TimeRangeTo**.|  

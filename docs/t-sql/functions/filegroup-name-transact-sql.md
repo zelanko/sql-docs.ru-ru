@@ -25,13 +25,13 @@ ms.assetid: 26add1c0-56e5-47a8-b489-ae56784a7ee9
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fb566c311d57f9ba04f79798f0d4f50e910456bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071451"
 ---
-# <a name="filegroupname-transact-sql"></a>FILEGROUP_NAME (Transact-SQL)
+# <a name="filegroup_name-transact-sql"></a>FILEGROUP_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Эта функция возвращает имя файловой группы для указанного идентификатора.  
