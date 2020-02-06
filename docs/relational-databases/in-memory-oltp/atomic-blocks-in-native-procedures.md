@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 329fb8644219d750595ff8a9cb2ddb5a6b804e4d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67951225"
 ---
 # <a name="atomic-blocks-in-native-procedures"></a>Атомарные блоки в собственных процедурах
@@ -133,14 +133,14 @@ GO
   
  Требуются следующие параметры с **BEGIN ATOMIC**.  
   
-|Обязательный параметр|Описание|  
+|Обязательный параметр|Description|  
 |----------------------|-----------------|  
 |**TRANSACTION ISOLATION LEVEL**|Поддерживаются значения **SNAPSHOT**, **REPEATABLEREAD**и **SERIALIZABLE**.|  
 |**LANGUAGE**|Определяет форматы даты и времени и системных сообщений. Все языки и псевдонимы в [sys.syslanguages & #40; Transact-SQL & #41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)поддерживаются.|  
   
  Следующие параметры являются необязательными.  
   
-|Необязательный параметр|Описание|  
+|Необязательный параметр|Description|  
 |----------------------|-----------------|  
 |**DATEFORMAT**|Поддерживаются все форматы даты, отличные от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Если он указан, параметр **DATEFORMAT** переопределяет формат даты по умолчанию, связанный с объектом **LANGUAGE**.|  
 |**DATEFIRST**|Если он указан, параметр **DATEFIRST** переопределяет значение по умолчанию, связанное с **LANGUAGE**.|  

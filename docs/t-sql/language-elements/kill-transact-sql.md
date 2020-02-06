@@ -35,10 +35,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 23c27d4d8eafac26b33af45f95377ced5dd0f7ec
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981923"
 ---
 # <a name="kill-transact-sql"></a>KILL (Transact-SQL)
@@ -123,7 +123,7 @@ WITH STATUSONLY
 Аналогичный отчет о состоянии может быть получен при повторном выполнении инструкции KILL _ИД сеанса_|_UOW_ без использования параметра WITH STATUSONLY. Однако не рекомендуется повторно выполнять эту инструкцию таким образом. Повторный вызов инструкции KILL _ИД сеанса_ может прервать новый процесс в случае, если процесс отката был завершен, а значение идентификатора сеанса было присвоено другой задаче до запуска новой инструкции KILL. Указание параметра WITH STATUSONLY предотвращает указанные последствия.  
   
 ## <a name="permissions"></a>Разрешения  
-**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:** Необходимо разрешение ALTER ANY CONNECTION. Разрешение ALTER ANY CONNECTION включено с членством в предопределенных ролях сервера sysadmin или processadmin.  
+**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:** необходимо разрешение ALTER ANY CONNECTION. Разрешение ALTER ANY CONNECTION включено с членством в предопределенных ролях сервера sysadmin или processadmin.  
   
 **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]:** необходимо разрешение KILL DATABASE CONNECTION. Имя входа субъекта серверного уровня имеет разрешение KILL DATABASE CONNECTION.  
   

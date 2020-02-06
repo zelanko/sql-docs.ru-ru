@@ -34,10 +34,10 @@ ms.assetid: b8752ecc-db45-4e23-aee7-13b8bc3cbae2
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 7d983f2e7e370ec9fe385e6d46602c4703ca6d1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040462"
 ---
 # <a name="dbcc-updateusage-transact-sql"></a>DBCC UPDATEUSAGE (Transact-SQL)
@@ -67,7 +67,7 @@ DBCC UPDATEUSAGE
 *index_id* | *index_name*  
 Имя или идентификатор используемого индекса. Если этот аргумент не указан, инструкция обрабатывает все индексы для указанной таблицы или представления.  
   
-на  
+WITH  
 Позволяет указывать параметры.  
   
 NO_INFOMSGS  

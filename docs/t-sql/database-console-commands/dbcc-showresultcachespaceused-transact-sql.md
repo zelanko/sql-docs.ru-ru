@@ -13,10 +13,10 @@ author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 4a701a56ba5a71037317f6c404fa394a466febba
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73729886"
 ---
 # <a name="dbcc-showresultcachespaceused-transact-sql"></a>DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)
@@ -43,7 +43,7 @@ DBCC SHOWRESULTCACHESPACEUSED
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Столбец|Тип данных|Описание|  
+|Столбец|Тип данных|Description|  
 |------------|---------------|-----------------|  
 |reserved_space|BIGINT|Общий размер пространства, используемого для базы данных, в КБ. Это число будет меняться по мере увеличения кэшированного результирующего набора.|  
 |data_space|BIGINT|Пространство, используемое для данных, в КБ.|  
@@ -53,7 +53,7 @@ DBCC SHOWRESULTCACHESPACEUSED
 
 ## <a name="see-also"></a>См. также раздел
 
-[Настройка производительности — кэширование результирующего набора](/azure/sql-data-warehouse/performance-tuning-result-set-caching)</br>
+[Performance tuning with result set caching](/azure/sql-data-warehouse/performance-tuning-result-set-caching) (Настройка производительности путем кэширования результирующего набора)</br>
 [Параметры ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azure-sqldw-latest)</br>
 [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest)</br>
 [SET RESULT SET CACHING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-result-set-caching-transact-sql)</br>

@@ -14,10 +14,10 @@ ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
 author: Lingxi-Li
 ms.author: lingxl
 ms.openlocfilehash: 584bd3a22c24dfccf8fab562202d66ce8689b55b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67947200"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Задача отправки информации в хранилище данных SQL Azure
@@ -46,7 +46,7 @@ ms.locfileid: "67947200"
 
 ### <a name="filesystem"></a>FileSystem
 
-Поле|Описание
+Поле|Description
 -----|-----------
 LocalDirectory|Указывает локальный каталог с файлами данных для отправки.
 Рекурсивно|Указывает, выполнять ли рекурсивный поиск в подкаталогах.
@@ -67,7 +67,7 @@ HashColumnName|Указывает столбец, используемый дл�
 
 ### <a name="blobstorage"></a>BlobStorage
 
-Поле|Описание
+Поле|Description
 -----|-----------
 AzureStorageConnection|Указывает диспетчер подключений службы хранилища Azure.
 BlobContainer|Указывает имя контейнера больших двоичных объектов, в котором находится источник данных.

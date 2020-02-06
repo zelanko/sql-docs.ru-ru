@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: d1cfd06fd881c4749879365feda14e3cfcb877a9
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727512"
 ---
 # <a name="r-scripting-errors-in-sql-server"></a>Ошибки скриптов R в SQL Server
@@ -65,7 +65,7 @@ ms.locfileid: "73727512"
 
 1. Откройте [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] с правами администратора в экземпляре, в котором будет выполняться код R.
 
-2. Выполните приведенный ниже скрипт. Измените имя группы пользователей, если вы изменили имя по умолчанию, а также имена компьютера и экземпляра.
+2. Выполните следующий сценарий. Измените имя группы пользователей, если вы изменили имя по умолчанию, а также имена компьютера и экземпляра.
 
     ```sql
     USE [master]
@@ -92,7 +92,7 @@ remove('name1', 'name2', ...)
 
 
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Устранение неполадок и известные проблемы Служб машинного обучения](machine-learning-troubleshooting-faq.md)
 

@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: bbcf7c136bfe9ff80b1ea9129e5c6d453aec9e01
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68114856"
 ---
 # <a name="deny-database-scoped-credential-transact-sql"></a>DENY, запрет разрешений на учетные данные для базы данных (Transact-SQL)
@@ -93,7 +93,7 @@ DENY permission  [ ,...n ]
   
 -   пользователь базы данных, не сопоставленный с участником на уровне сервера.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Учетные данные для базы данных — это защищаемый объект уровня базы данных, содержащийся в базе данных, являющейся родительским элементом в иерархии разрешений. Ниже перечислены наиболее специфичные и ограниченные разрешения (вместе с наиболее общими разрешениями, куда они входят неявно), которые могут быть запрещены для учетных данных для базы данных.  
   
 |Разрешения на учетные данные для базы данных|Содержится в разрешении на учетные данные для базы данных|Содержится в разрешении базы данных|  
@@ -107,7 +107,7 @@ DENY permission  [ ,...n ]
 ## <a name="permissions"></a>Разрешения  
  Требует разрешения CONTROL на учетные данные для базы данных. При использовании предложения AS указанный участник должен являться владельцем учетных данных для базы данных.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [DENY (Transact-SQL)](../../t-sql/statements/deny-transact-sql.md)   
  [GRANT, предоставление разрешений на учетные данные для базы данных (Transact-SQL)](../../t-sql/statements/grant-database-scoped-credential-transact-sql.md)   
  [REVOKE, отмена учетных данных для базы данных (Transact-SQL)](../../t-sql/statements/revoke-database-scoped-credential-transact-sql.md)   

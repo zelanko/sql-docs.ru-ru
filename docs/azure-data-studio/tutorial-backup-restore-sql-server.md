@@ -11,17 +11,17 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 11/04/2019
 ms.openlocfilehash: bdf3bb3151cfac9f68a9765a2c59232b9fb59f56
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73532490"
 ---
 # <a name="backup-and-restore-databases-using-includename-sosincludesname-sos-shortmd"></a>Резервное копирование и восстановление баз данных с помощью [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 В этом руководстве вы узнаете, как с помощью [!INCLUDE[name-sos](../includes/name-sos-short.md)] выполнять следующие задачи:
 > [!div class="checklist"]
-> * резервное копирование базы данных; 
+> * Резервное копирование базы данных 
 > * просмотр состояния резервного копирования;
 > * создание скрипта для резервного копирования;
 > * Восстановление базы данных
@@ -72,8 +72,8 @@ ms.locfileid: "73532490"
 
 5. В разделе **Целевой объект** в поле **Целевая база данных** введите **TutorialDB_Restored**, чтобы восстановить файл резервной копии в новую базу данных. Затем выберите **Восстановить**.
 
-   ![восстановление](./media/tutorial-backup-restore-sql-server/restore.png)
+   ![Восстановление](./media/tutorial-backup-restore-sql-server/restore.png)
 
 6. Чтобы просмотреть состояние операции восстановления, нажмите клавиши **CTRL+T** для открытия **журнала задач**.
 
-   ![восстановление](./media/tutorial-backup-restore-sql-server/task-history-restore.png)
+   ![Восстановление](./media/tutorial-backup-restore-sql-server/task-history-restore.png)

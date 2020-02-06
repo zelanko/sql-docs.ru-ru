@@ -11,10 +11,10 @@ ms.assetid: a612ed91-b89b-4173-a0b1-0bce381e1e28
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 62b781351b406aadc1b7516cd70dc0d11e7c5a16
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291887"
 ---
 # <a name="sap-bw-destination"></a>Назначение SAP BW
@@ -83,7 +83,7 @@ ms.locfileid: "71291887"
   
 -   Проверьте загрузку данных с выбранными параметрами.  
   
- Можно также включить ведение журнала вызовов функций RFC целевым объектом. (Это ведение журнала отделено от дополнительного ведения журналов, которое можно включить для пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].) Ведение журнала вызовов функций RFC включается при настройке диспетчера соединений SAP BW, используемого целевым объектом. Дополнительные сведения о настройке диспетчера соединений см. в разделе [SAP BW Connection Manager](../../integration-services/connection-manager/sap-bw-connection-manager.md).  
+ Можно также включить ведение журнала вызовов функций RFC целевым объектом. (Это ведение журнала отделено от дополнительного ведения журналов, которое можно включить для пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .) Ведение журнала вызовов функций RFC включается при настройке диспетчера соединений SAP BW, используемого целевым объектом. Дополнительные сведения о настройке диспетчера соединений см. в разделе [SAP BW Connection Manager](../../integration-services/connection-manager/sap-bw-connection-manager.md).  
   
  Если вы не знаете все значения, необходимые для настройки назначения, может потребоваться связаться с администратором SAP.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "71291887"
   
 -   [Создание InfoSource для основных данных](../../integration-services/data-flow/create-infosource-for-master-data.md)  
   
--   [Создать InfoPackage](../../integration-services/data-flow/create-infopackage.md)  
+-   [Создание InfoPackage](../../integration-services/data-flow/create-infopackage.md)  
   
 ## <a name="see-also"></a>См. также:  
  [Компоненты Microsoft Connector для SAP BW](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
