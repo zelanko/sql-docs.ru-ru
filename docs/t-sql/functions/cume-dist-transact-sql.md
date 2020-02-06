@@ -20,13 +20,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 05906cfd0e72531bf332ebca4215df047eb8e3fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026456"
 ---
-# <a name="cumedist-transact-sql"></a>CUME_DIST (Transact-SQL)
+# <a name="cume_dist-transact-sql"></a>CUME_DIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
 Для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] эта функция вычисляет интегральное распределение значений в группе значений. Другими словами, `CUME_DIST` вычисляет относительное положение указанного значения в группе значений. Исходя из восходящего порядка сортировки, `CUME_DIST` значения для строки _r_ — это число строк со значениями, меньшими или равными значению _r_, деленное на число строк, полученных в секции или результирующем наборе запроса. Функция `CUME_DIST` подобна функции `PERCENT_RANK`.

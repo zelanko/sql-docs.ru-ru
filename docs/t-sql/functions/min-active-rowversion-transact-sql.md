@@ -18,13 +18,13 @@ ms.assetid: 87c89547-8ea1-4820-b75e-36be683e4e10
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8fcd041edda3e8575e3dfc05615d2e23f6da20fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68130272"
 ---
-# <a name="minactiverowversion-transact-sql"></a>MIN_ACTIVE_ROWVERSION (Transact-SQL)
+# <a name="min_active_rowversion-transact-sql"></a>MIN_ACTIVE_ROWVERSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Возвращает наименьшее активное значение **rowversion** в текущей базе данных. Значение **rowversion** является активным, если оно используется в незафиксированной транзакции. Дополнительные сведения см. в статье [rowversion (Transact-SQL)](../../t-sql/data-types/rowversion-transact-sql.md).  

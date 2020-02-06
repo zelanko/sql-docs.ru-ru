@@ -1,10 +1,7 @@
 ---
-title: Элемент FILEGROUP для index (DTA) | Документация Майкрософт
-ms.custom: ''
-ms.date: 03/01/2017
+title: Элемент Filegroup описания индекса (DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: 7078d2fb-fa77-44fc-beb3-c095088fcb85
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8ea26368dacd6cfc3a81245fe95eef27ec94b9a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: d08931e613cb32b961e6bbd8f848abb42c0de67b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034890"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307669"
 ---
 # <a name="filegroup-element-for-index-dta"></a>Элемент Filegroup описания индекса (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Определяет группу файлов, по которой будет создан индекс в пользовательской конфигурации.  
+
+Определяет группу файлов, по которой будет создан индекс в пользовательской конфигурации.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,7 +41,7 @@ ms.locfileid: "68034890"
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |**Тип данных и длина**|**string**, неограниченная длина|  
 |**Значение по умолчанию**|Нет.|  

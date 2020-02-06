@@ -11,10 +11,10 @@ ms.assetid: 7e81f7e1-fac0-4b57-b145-8f1b9e4720bf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8347b0b1860041c6bd2a9241e015e2bfd71e5135
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298150"
 ---
 # <a name="raw-file-custom-properties"></a>Пользовательские свойства необработанного файла
@@ -28,7 +28,7 @@ ms.locfileid: "71298150"
   
  В следующей таблице описаны пользовательские свойства источника «Необработанный файл». Все свойства доступны для чтения и записи.  
   
-|Имя свойства|Тип данных|Описание|  
+|Имя свойства|Тип данных|Description|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer (перечисление)|Режим, используемый для доступа к необработанным данным. Допустимые значения: **File name** (0) и **File name from variable** (1). Значение по умолчанию — **File name** (0).|  
 |FileName|String|Полный путь и имя исходного файла.|  
@@ -43,7 +43,7 @@ ms.locfileid: "71298150"
   
  В следующей таблице описаны пользовательские свойства назначения «Необработанный файл». Все свойства доступны для чтения и записи.  
   
-|Имя свойства|Тип данных|Описание|  
+|Имя свойства|Тип данных|Description|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer (перечисление)|Значение, указывающее, содержит ли свойство FileName имя файла, или указывающее переменную, которая содержит имя файла. Возможные варианты: **File name** (0) и **File name from variable** (1).|  
 |FileName|String|Имя файла, в который назначение «Необработанный файл» осуществляет запись.|  
@@ -57,6 +57,6 @@ ms.locfileid: "71298150"
  Дополнительные сведения см. в статье [Raw File Destination](../../integration-services/data-flow/raw-file-destination.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Общие свойства](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

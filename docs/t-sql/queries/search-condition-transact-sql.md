@@ -38,10 +38,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c7d18395321a6ea4c077b251b1a838646af9b2a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68027648"
 ---
 # <a name="search-condition-transact-sql"></a>Условие поиска (Transact-SQL)
@@ -200,7 +200,7 @@ ms.locfileid: "68027648"
  EXISTS  
  Используется во вложенном запросе для проверки существования строк, возвращенных вложенным запросом. Дополнительные сведения см. в статье [EXISTS (Transact-SQL)](../../t-sql/language-elements/exists-transact-sql.md).  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Приоритеты выполнения логических операторов распределяются следующим образом: NOT (наивысший приоритет), AND, OR (низший приоритет). Для перераспределения указанных приоритетов в условии поиска используются скобки. Порядок выполнения логических операторов может меняться в зависимости от настроек оптимизатора запросов. Дополнительные сведения о работе логических операторов с логическими значениями см. в статьях [AND (Transact-SQL)](../../t-sql/language-elements/and-transact-sql.md), [OR (Transact-SQL)](../../t-sql/language-elements/or-transact-sql.md) и [NOT (Transact-SQL)](../../t-sql/language-elements/not-transact-sql.md).  
   
 ## <a name="examples"></a>Примеры  
@@ -253,7 +253,7 @@ FROM DimEmployee
 WHERE LastName LIKE N'%and%';  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Агрегатные функции (Transact-SQL)](../../t-sql/functions/aggregate-functions-transact-sql.md)   
  [CASE (Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md)   
  [CONTAINSTABLE (Transact-SQL)](../../relational-databases/system-functions/containstable-transact-sql.md)   

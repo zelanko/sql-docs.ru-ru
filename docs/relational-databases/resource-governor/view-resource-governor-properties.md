@@ -14,10 +14,10 @@ ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 2250030405a0c6bb2512e3b8446cb76e11a7080e
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903908"
 ---
 # <a name="view-resource-governor-properties"></a>Просмотр свойств регулятора ресурсов
@@ -26,9 +26,9 @@ ms.locfileid: "72903908"
   На странице свойств регулятора ресурсов в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]предусмотрена возможность создания и настройки сущности регуляторов ресурсов — пулов ресурсов и групп рабочей нагрузки.  
   
  ##  <a name="BeforeYouBegin"></a> Связанные разделы 
- Кроме просмотра свойств сущностей регулятора ресурсов, на странице **Свойства регулятора ресурсов** можно выполнить некоторые задачи настройки. Дополнительные сведения см. в разделах:  
+ Кроме просмотра свойств сущностей регулятора ресурсов, на странице **Свойства регулятора ресурсов** можно выполнить некоторые задачи настройки. Дополнительные сведения см. в следующих статьях:  
   
--   [Активация регулятора ресурсов](../../relational-databases/resource-governor/enable-resource-governor.md)  
+-   [Включение регулятора ресурсов](../../relational-databases/resource-governor/enable-resource-governor.md)  
   
 -   [Отключение регулятора ресурсов](../../relational-databases/resource-governor/disable-resource-governor.md)  
   
@@ -66,7 +66,7 @@ ms.locfileid: "72903908"
  **Имя функции-классификатора**  
  Укажите функцию-классификатор, выбрав ее из списка.  
   
- **Активация регулятора ресурсов**  
+ **Включение регулятора ресурсов**  
  Включите или отключите регулятор ресурсов путем установки или снятия флажка.  
   
  **Пулы ресурсов**  
@@ -123,7 +123,7 @@ ms.locfileid: "72903908"
 2.  Для просмотра текущей конфигурации сущностей регулятора ресурсов используются [динамические административные представления регулятора ресурсов (Transact-SQL)](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md).  
   
 ## <a name="more-information"></a>Дополнительные сведения
- [Регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)   
+ [регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)   
  [Активация регулятора ресурсов](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Пул ресурсов регулятора ресурсов](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [Группа рабочей нагрузки регулятора ресурсов](../../relational-databases/resource-governor/resource-governor-workload-group.md)   

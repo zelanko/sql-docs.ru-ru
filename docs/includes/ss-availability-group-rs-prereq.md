@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 336162ea06533901107c83dd47f062fc94fdd869
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68213322"
----
 ## <a name="prerequisites"></a>предварительные требования
 
 Перед созданием группы доступности необходимо выполнить следующие действия:
@@ -24,7 +16,7 @@ ms.locfileid: "68213322"
 Enable-SqlAlwaysOn -ServerInstance <server\instance> -Force
 ```
 
-## <a name="enable-an-alwaysonhealth-event-session"></a>Включение сеанса событий AlwaysOn_health
+## <a name="enable-an-alwayson_health-event-session"></a>Включение сеанса событий AlwaysOn_health
 
  При необходимости вы можете включить сеанс расширенных событий (XEvents) групп доступности AlwaysOn, что может помочь в устранении их неполадок. Для этого в каждом экземпляре SQL Server выполните следующую команду:
 

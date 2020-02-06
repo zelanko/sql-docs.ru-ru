@@ -12,20 +12,20 @@ ms.assetid: adc78c59-a6f2-432b-9a07-fdd1dc2b9026
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 546d3e40d8b925d88344f6074d577b1b14c31092
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68033436"
 ---
-# <a name="mssqlserver1458"></a>MSSQLSERVER_1458
+# <a name="mssqlserver_1458"></a>MSSQLSERVER_1458
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|1458|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
@@ -39,5 +39,5 @@ ms.locfileid: "68033436"
 В большинстве случаев ошибка устраняется без вмешательства пользователя. Если проблема будет повторяться, то рекомендуется перезапустить базу данных или экземпляр сервера. Дополнительные сведения см. в журнале ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на всех участниках, где произошла ошибка, предшествующая сообщению.  
   
 ## <a name="see-also"></a>См. также:  
-[Мониторинг зеркального отображения базы данных (SQL Server)](~/database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)  
+[Наблюдение за зеркальным отображением базы данных (SQL Server)](~/database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)  
   

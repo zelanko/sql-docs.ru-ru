@@ -18,10 +18,10 @@ ms.assetid: 781d22e9-38df-4c23-836f-6dd0bdef49c5
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: de184826e93903629679c273b226cb1e143f850e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042069"
 ---
 # <a name="stenvelope-geometry-data-type"></a>STEnvelope (тип данных geometry)
@@ -39,7 +39,7 @@ STEnvelope ( )
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Тип возвращаемого значения CLR: **SqlGeometry**  
+ Тип возвращаемых данных CLR: **SqlGeometry**  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере с помощью метода `STGeomFromText()` создается экземпляр `LineString` с координатами от (0,0) до (2,3), а метод `STEnvelope()` возвращает ограничивающий прямоугольник для экземпляра `LineString`.  

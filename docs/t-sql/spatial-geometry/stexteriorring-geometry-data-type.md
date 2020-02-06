@@ -18,10 +18,10 @@ ms.assetid: b402b36f-05bf-4c6d-8cd6-76c0fff19db2
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 5c79a6aea1042649d688b52d124f9b661d4a5b7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68107724"
 ---
 # <a name="stexteriorring-geometry-data-type"></a>STExteriorRing (тип данных geometry)
@@ -39,9 +39,9 @@ ms.locfileid: "68107724"
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Тип возвращаемого значения CLR: **SqlGeometry**  
+ Тип возвращаемых данных CLR: **SqlGeometry**  
   
- Тип OGC (открытый геопространственный консорциум): **LineString**  
+ Тип открытого геопространственного консорциума (OGC): **LineString**  
   
 ## <a name="remarks"></a>Remarks  
  Этот метод возвращает значение **NULL**, если экземпляр **geometry** не является многоугольником.  

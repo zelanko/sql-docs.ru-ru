@@ -11,10 +11,10 @@ ms.assetid: cf751f1e-2348-4a77-904c-bd92c0d7d0ae
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e7035802b5b4e13c2696af9d76c6a2904547ea25
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292284"
 ---
 # <a name="odbc-flow-components"></a>Компоненты потока ODBC
@@ -36,7 +36,7 @@ ms.locfileid: "71292284"
 ## <a name="getting-started-with-the-odbc-source-and-destination"></a>Приступая к работе с источником и назначением ODBC  
  Прежде чем появится возможность настройки пакетов, в которых используется [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)], необходимо обеспечить соблюдение следующих требований.  
   
--   [ODBC-источник](../../integration-services/data-flow/odbc-source.md)  
+-   [Источник «ODBC»](../../integration-services/data-flow/odbc-source.md)  
   
 -   [Назначение «ODBC»](../../integration-services/data-flow/odbc-destination.md)  
   
@@ -137,6 +137,6 @@ ms.locfileid: "71292284"
   
 -   [Источник «ODBC»](../../integration-services/data-flow/odbc-source.md)  
   
--   [Назначение ODBC](../../integration-services/data-flow/odbc-destination.md)  
+-   [Назначение «ODBC»](../../integration-services/data-flow/odbc-destination.md)  
   
  
