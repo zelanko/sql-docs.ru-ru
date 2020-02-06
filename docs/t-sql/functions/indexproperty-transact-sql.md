@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3bfdfb5c3579b43ada97c9ef72b72dbaf3d29308
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982939"
 ---
 # <a name="indexproperty-transact-sql"></a>INDEXPROPERTY (Transact-SQL)
@@ -53,7 +53,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
 > [!NOTE]  
 >  Если не указано иное, значение NULL возвращается в следующих случаях: если аргумент *property* не является допустимым именем свойства, если аргумент *object_ID* не является допустимым идентификатором объекта, если аргумент *object_ID* не является поддерживаемым типом объекта для указанного свойства или если вызывающий объект не имеет разрешения на просмотр метаданных объекта.  
   
-|Свойство|Описание|Значение|  
+|Свойство|Description|Значение|  
 |--------------|-----------------|-----------|  
 |**IndexDepth**|Глубина индекса.|Количество уровней индекса.<br /><br /> NULL = Неверный XML-индекс или вход.|  
 |**IndexFillFactor**|Значение коэффициента заполнения, использованное при создании индекса или при его последней перестройке.|Коэффициент заполнения.|  

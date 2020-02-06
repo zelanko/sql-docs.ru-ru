@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: fb063b3af008ad7e734197a0d4360c9d83535cd3
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74094558"
 ---
 # <a name="general-database-mail-troubleshooting-steps"></a>Общие действия по устранению неполадок компонента Database Mail 
@@ -139,7 +139,7 @@ EXEC msdb.dbo.sysmail_start_sp;
     ```
 
    > [!NOTE]
-   > Компонент Database Mail считает почтовое сообщение отправленным, когда оно успешно доставлено на почтовый SMTP-сервер. Успешной доставке сообщения могут помешать и другие ошибки, возникшие при дальнейшей обработке (например, неверный адрес получателя), но они уже не отражаются в журнале компонента Database Mail.
+   > Компонент Database Mail считает почтовое сообщение отправленным, когда оно успешно доставлено на почтовый SMTP-сервер. Успешной доставке сообщения могут помешать и другие ошибки, возникшие при дальнейшей обработке (например неверный адрес получателя), но они уже не отражаются в журнале компонента Database Mail.
 
 ## <a name="retry-mail-delivery"></a>Повторите попытку доставки сообщения
 

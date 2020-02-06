@@ -14,10 +14,10 @@ ms.assetid: 8a63bf44-71be-456d-9a5c-be7c31aff065
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fc83e4d8e39c5521fd897ceeec07755f62b5765d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294320"
 ---
 # <a name="azure-blob-download-task"></a>Задача скачивания BLOB-объектов Azure
@@ -40,5 +40,5 @@ ms.locfileid: "71294320"
 |BlobDirectory|Указывает каталог больших двоичных объектов, который содержит скачиваемые файлы BLOB-объектов. Каталог больших двоичных объектов — это виртуальная иерархическая структура.|  
 |SearchRecursively|Указывает, следует ли выполнять рекурсивный поиск в подкаталогах.|  
 |LocalDirectory|Указывает локальный каталог для хранения скачанных файлов BLOB-объектов.|  
-|FileName|Указывает фильтр имен для выбора файлов с указанным шаблоном имен. Например, `MySheet*.xls\*` включает такие файлы, как `MySheet001.xls` и `MySheetABC.xlsx`.|  
-|TimeRangeFrom/TimeRangeTo|Указывает фильтр по диапазону времени. Включаются файлы, измененные после **TimeRangeFrom** и до **TimeRangeTo**.|  
+|FileName|Указывает имя фильтра для выбора файлов с указанным шаблоном имени. Например, `MySheet*.xls\*` включает такие файлы, как `MySheet001.xls` и `MySheetABC.xlsx`.|  
+|TimeRangeFrom/TimeRangeTo|Задает фильтр диапазона времени. Включаются файлы, измененные после **TimeRangeFrom** и до **TimeRangeTo**.|  

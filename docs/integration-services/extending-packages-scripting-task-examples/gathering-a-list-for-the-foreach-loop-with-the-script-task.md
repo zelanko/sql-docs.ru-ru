@@ -16,10 +16,10 @@ ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0001806e1a8f0cba9a879297b4dab49367dd84a8
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297016"
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>Составление списка для цикла по каждому элементу в задаче «Скрипт»
@@ -32,11 +32,11 @@ ms.locfileid: "71297016"
 > [!NOTE]  
 >  Если нужно создать задачу, которую будет удобно использовать в нескольких пакетах, рекомендуется начать разработку пользовательской задачи с этого образца задачи «Скрипт». Дополнительные сведения см. в разделе [Разработка пользовательской задачи](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Description  
  В следующем примере для получения списка книг Excel на компьютере, которые новее или старше, чем указанное пользователем в переменной число дней, используются методы из пространства имен **System.IO**. В примере выполняется рекурсивный поиск в каталогах на диске С для нахождения файлов, имеющих расширение XLS, и проверяется дата последнего изменения каждого файла, чтобы определить, должен ли файл быть в списке. В примере файлы добавляются в массив **ArrayList**, и массив **ArrayList** сохраняется в переменной для дальнейшего использования в контейнере "Цикл по каждому элементу". Контейнер «цикл по каждому элементу» настроен для использования перечислителя по объекту из переменной.  
   
 > [!NOTE]  
->  Переменная, используемая с перечислителем по объекту из переменной, должна иметь тип **Object**. Объект, помещаемый в переменную, должен реализовывать один из следующих интерфейсов: **System.Collections.IEnumerable**, **System.Runtime.InteropServices.ComTypes.IEnumVARIANT**, **System.ComponentModel IListSource** или **Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost**. Как правило, используется **Array** или **ArrayList**. Для **ArrayList** требуются ссылка и инструкция **Imports** для пространства имен **System.Collections**.  
+>  Переменная, используемая с перечислителем по объекту из переменной, должна иметь тип **Object**. Объект, который помещается в переменную, должен реализовывать один из следующих интерфейсов: **System.Collections.IEnumerable**, **System.Runtime.InteropServices.ComTypes.IEnumVARIANT**, **System.ComponentModel IListSource** или **Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost**. Как правило, используется **Array** или **ArrayList**. Для **ArrayList** требуются ссылка и инструкция **Imports** для пространства имен **System.Collections**.  
   
  Можно поэкспериментировать с этой задачей, используя различные положительные и отрицательные значения для переменной пакета `FileAge`. Например, можно ввести 5 для поиска файлов, созданных за последние пять дней, или ввести -3 для поиска файлов, созданных более трех дней назад. Для этой задачи потребуется минута или две, чтобы выполнить поиск на диске с большим количеством папок.  
   
