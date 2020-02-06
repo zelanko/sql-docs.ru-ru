@@ -26,10 +26,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e23c4794b00daca7a228a3cd189835fcdf32628a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050651"
 ---
 # <a name="grant-transact-sql"></a>Инструкция GRANT (Transact-SQL)
@@ -181,7 +181,7 @@ GRANT EXECUTE ON TestMe TO User2 AS TesterRole;
 |Привязка удаленной службы|[GRANT, предоставление разрешений на Service Broker (Transact-SQL)](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
 |Роль|[GRANT, предоставление разрешений на участника базы данных (Transact-SQL)](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)|  
 |Маршрут|[GRANT, предоставление разрешений на Service Broker (Transact-SQL)](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
-|Схема|[GRANT, предоставление разрешений на схему (Transact-SQL)](../../t-sql/statements/grant-schema-permissions-transact-sql.md)|  
+|схема|[GRANT, предоставление разрешений на схему (Transact-SQL)](../../t-sql/statements/grant-schema-permissions-transact-sql.md)|  
 |Список свойств поиска|[GRANT, предоставление разрешений на список свойств поиска (Transact-SQL)](../../t-sql/statements/grant-search-property-list-permissions-transact-sql.md)|  
 |Сервер|[GRANT, предоставление разрешений на сервер (Transact-SQL)](../../t-sql/statements/grant-server-permissions-transact-sql.md)|  
 |Служба|[GRANT, предоставление разрешений на Service Broker (Transact-SQL)](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  

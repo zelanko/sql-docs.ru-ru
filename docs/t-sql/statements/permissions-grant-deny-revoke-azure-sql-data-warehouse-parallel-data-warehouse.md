@@ -15,10 +15,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 43292a665583962694974f524786356c747b7e9d
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75255470"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>Разрешения: Разрешения: GRANT, DENY, REVOKE (хранилище данных SQL Azure, Parallel Data Warehouse)
@@ -36,7 +36,7 @@ ms.locfileid: "75255470"
   
 -   **REVOKE** удаляет существующие разрешения **GRANT** или **DENY**.  
   
- ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "|::ref1::|") [Синтаксические обозначения в Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -242,7 +242,7 @@ REVOKE
 ### <a name="chart-of-permissions"></a>Диаграмма разрешений  
  На этой диаграмме графически представлены все разрешения. Это самый простой способ просмотра вложенной иерархии разрешений. Например, разрешение **ALTER ON LOGIN** можно предоставить само по себе, но оно также включается, если имени входа предоставляется разрешение **CONTROL** или **ALTER ANY LOGIN**.  
   
- ![Плакат о разрешениях безопасности APS](../../t-sql/statements/media/aps-security-perms-poster.png "|::ref2::|")  
+ ![Плакат о разрешениях безопасности APS](../../t-sql/statements/media/aps-security-perms-poster.png "Плакат о разрешениях безопасности APS")  
   
  Полноразмерную версию этой диаграммы можно скачать в разделе [Разрешения SQL Server PDW](https://go.microsoft.com/fwlink/?LinkId=244249) в разделе "Файлы" на сайте APS Yammer (или запросить ее по электронной почте **apsdoc\@microsoft.com**).  
   

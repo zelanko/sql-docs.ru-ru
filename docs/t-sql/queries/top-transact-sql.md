@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 51bb7288f620e479d818598cf28d357b6e4e479d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948240"
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
@@ -137,7 +137,7 @@ GO
   
 Использование TOP и ORDER BY во вложенной операции выбора гарантирует, что результаты предложения ORDER BY применяются к предложению TOP, а не к сортировке результата операции UNION.  
   
- Ниже приводится результирующий набор.  
+ Результирующий набор:  
   
  ```
  Model         Color      Price  
@@ -228,7 +228,7 @@ GO
 ###  <a name="DML"></a> Ограничение числа строк, обрабатываемых инструкциями DELETE, INSERT и UPDATE  
   
 #### <a name="a-using-top-to-limit-the-number-of-rows-deleted"></a>A. Ограничение числа удаляемых строк с помощью ключевого слова TOP  
-Если с инструкцией DELETE применяется предложение TOP (*n*), операция удаления производится с произвольной выборкой из *n* строк. Таким образом, инструкция DELETE выбирает любое число (*n*) строк, которые удовлетворяют условию, указанному в предложении WHERE. Следующий пример удаляет из таблицы `PurchaseOrderDetail` `20` строк с датой завершения до 1 июля 2002 г.  
+Если с инструкцией DELETE применяется предложение TOP (*n*), операция удаления производится с произвольной выборкой из *n* строк. Таким образом, инструкция DELETE выбирает любое число (*n*) строк, которые удовлетворяют условию, указанному в предложении WHERE. Следующий пример удаляет из таблицы `PurchaseOrderDetail``20` строк с датой завершения до 1 июля 2002 г.  
   
 ```sql  
 USE AdventureWorks2012;  
