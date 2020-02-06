@@ -10,10 +10,10 @@ ms.assetid: e6255f8e-a25e-4b3d-9310-c5da2f9c9333
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a47a4d6efa06e94f62c572eed562f96ba1f2102a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68045757"
 ---
 # <a name="uninstall-sql-server"></a>Удаление SQL Server 
@@ -48,6 +48,6 @@ ms.locfileid: "68045757"
 ## <a name="see-also"></a>См. также:  
  [Планирование установки SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)   
  [Установка SQL Server 2016](../../database-engine/install-windows/install-sql-server.md)   
- [Обновление до SQL Server 2016](../../database-engine/install-windows/upgrade-sql-server.md)  
+ [Обновление до SQL Server 2016](../../database-engine/install-windows/upgrade-sql-server.md)  
   
   

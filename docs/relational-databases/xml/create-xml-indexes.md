@@ -14,10 +14,10 @@ ms.assetid: 6ecac598-355d-4408-baf7-1b2e8d4cf7c1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8115350b3ead26a28c03fce975d058f393e0411b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67984780"
 ---
 # <a name="create-xml-indexes"></a>Создание XML-индексов
@@ -100,7 +100,7 @@ FROM    sys.xml_indexes;
   
  Столбец **secondary_type_desc** может возвращать значения NULL, PATH, VALUE или PROPERTY. Для первичного XML-индекса всегда возвращается значение NULL.  
   
-### <a name="example-creating-secondary-xml-indexes"></a>Пример создание вторичных XML-индексов  
+### <a name="example-creating-secondary-xml-indexes"></a>Пример. Создание вторичных XML-индексов  
  В следующем примере иллюстрируется создание вторичных XML-индексов. Здесь также выводятся сведения о созданных XML-индексах.  
   
 ```  

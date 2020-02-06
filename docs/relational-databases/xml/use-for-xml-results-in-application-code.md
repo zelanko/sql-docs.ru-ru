@@ -19,10 +19,10 @@ ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 754b7a4baaff71cf0abe7193e5ba9c9cbd0a943a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68039182"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>Использование результатов FOR XML в коде приложений
@@ -291,7 +291,7 @@ SqlConnection closed.
 ```  
   
 > [!NOTE]  
->  Поддержка типа данных **xml** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет реализовать требование, согласно которому результат запроса FOR XML должен быть возвращен в качестве типа данных **xml**, а не типов данных string или image, с помощью задания [директивы TYPE](../../relational-databases/xml/type-directive-in-for-xml-queries.md). Если в запросе FOR XML указана директива TYPE, она предоставляет программный доступ к результатам FOR XML, как описано в разделе [Использование XML-данных в приложениях](../../relational-databases/xml/use-xml-data-in-applications.md).  
+>  Поддержка типа данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]xml**в** позволяет реализовать требование, согласно которому результат запроса FOR XML должен быть возвращен в качестве типа данных **xml**, а не типов данных string или image, с помощью задания [директивы TYPE](../../relational-databases/xml/type-directive-in-for-xml-queries.md). Если в запросе FOR XML указана директива TYPE, она предоставляет программный доступ к результатам FOR XML, как описано в разделе [Использование XML-данных в приложениях](../../relational-databases/xml/use-xml-data-in-applications.md).  
   
 ## <a name="see-also"></a>См. также:  
  [FOR XML (SQL Server)](../../relational-databases/xml/for-xml-sql-server.md)  

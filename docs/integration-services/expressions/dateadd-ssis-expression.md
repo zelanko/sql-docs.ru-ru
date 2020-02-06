@@ -15,10 +15,10 @@ ms.assetid: fa5c37b1-2ddc-4857-8f8e-f6d5643b654f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 66733b12bbf3b4723449eb09f93182efb1f6462c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290178"
 ---
 # <a name="dateadd-ssis-expression"></a>DATEADD (выражение служб SSIS)
@@ -62,7 +62,7 @@ DATEADD(datepart, number, date)
 |День недели|dw, w|  
 |Час|Hh|  
 |Минута|mi, n|  
-|Вторая|ss, s|  
+|Секунда|ss, s|  
 |Миллисекунда|Ms|  
   
  Аргумент *number* должен быть доступен при синтаксическом анализе выражения. Он может быть константой или переменной. Нельзя использовать значения столбцов, поскольку они неизвестны при синтаксическом анализе выражения.  

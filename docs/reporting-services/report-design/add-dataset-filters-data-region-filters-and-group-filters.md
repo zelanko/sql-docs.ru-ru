@@ -9,10 +9,10 @@ ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d3ab6708212ce429f2abacae4353670235a687cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65582056"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>Добавление фильтров набора данных, фильтров области данных и групповых фильтров
@@ -70,7 +70,7 @@ ms.locfileid: "65582056"
 |--------------------------------------------|-----------------------|  
 |**Boolean**|**Boolean**|  
 |**DateTime**|**DateTime**, **DateTimeOffset**|  
-|**Integer**|**Int16**, **Int32**, **UInt16**, **Byte**, **SByte**|  
+|**Целое число**|**Int16**, **Int32**, **UInt16**, **Byte**, **SByte**|  
 |**Число с плавающей запятой**|**Single**, **Double**, **Decimal**|  
 |**Текст**|**String**, **Char**, **GUID**, **Timespan**|  
   
@@ -85,7 +85,7 @@ ms.locfileid: "65582056"
 |**TopN, BottomN**|Сравнивает выражение с одним значением типа **Integer** .|  
 |**TopPercent, BottomPercent**|Сравнивает выражение с одним значением типа **Integer** или **Float** .|  
 |**Между**|Проверяет, лежит ли выражение в диапазоне двух значений включительно.|  
-|**In**|Проверяет, содержится ли выражение в наборе значений.|  
+|**Где**|Проверяет, содержится ли выражение в наборе значений.|  
   
 ### <a name="value"></a>Значение  
  Выражение Value указывает конечную часть уравнения фильтра. Обработчик отчетов преобразует оцененное выражение в указанный тип данных и затем оценивает все уравнение фильтра, чтобы определить, проходят ли через фильтр данные, указанные в части «Выражение».  

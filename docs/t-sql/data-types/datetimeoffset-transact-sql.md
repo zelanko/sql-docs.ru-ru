@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 699d7779c3409a69d4389a96b93feab1cae3f9e0
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70148834"
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
@@ -71,7 +71,7 @@ ms.locfileid: "70148834"
 ## <a name="supported-string-literal-formats-for-datetimeoffset"></a>Поддерживаемые форматы строковых литералов для типа данных datetimeoffset
 В приведенной ниже таблице перечислены поддерживаемые форматы строковых литералов ISO 8601 для типа данных **datetimeoffset**. Сведения об алфавитных и числовых форматах, форматах строки без разделителей и форматах времени для частей даты и времени типа **datetimeoffset** см. в статьях [date (Transact-SQL)](../../t-sql/data-types/date-transact-sql.md) и [time (Transact-SQL)](../../t-sql/data-types/time-transact-sql.md).
   
-|ISO 8601|Описание|  
+|ISO 8601|Description|  
 |---|---|
 |ГГГГ-ММ-ДДТчч:мм:сс[.ннннннн] [{+&#124;-}чч:мм]|На эти два формата не влияют настройки локали сеанса инструкций SET LANGUAGE и SET DATEFORMAT. Между частями **datetimeoffset** и **datetime** не должно быть пробелов.|  
 |ГГГГ-ММ-ДДТчч:мм:сс[.ннннннн]Z (в формате UTC)|Этот формат по определению ISO указывает, что компонент **datetime** должен выражаться во времени в формате UTC. Например, дата и время 1999-12-12 12:30:30.12345 -07:00 должны представляться как 1999-12-12 19:30:30.12345Z.|  
@@ -95,7 +95,7 @@ ms.locfileid: "70148834"
 Сведения о преобразовании даты в соответствующее значение **datetimeoffset** в целевом часовом поясе см. в статье [AT TIME ZONE (Transact-SQL)](../../t-sql/queries/at-time-zone-transact-sql.md).
   
 ## <a name="ansi-and-iso-8601-compliance"></a>Соответствие стандартам ANSI и ISO 8601  
-Тип данных **datetimeoffset** соответствует стандартам [date](../../t-sql/data-types/date-transact-sql.md) и [time](../../t-sql/data-types/time-transact-sql.md) ANSI и ISO 8601.
+Тип данных [datetimeoffset](../../t-sql/data-types/date-transact-sql.md) соответствует стандартам [date](../../t-sql/data-types/time-transact-sql.md) и **time** ANSI и ISO 8601.
   
 ## <a name="backward-compatibility-for-down-level-clients"></a>Обратная совместимость для клиентов нижнего уровня
 Некоторые клиенты нижнего уровня не поддерживают типы данных **time**, **date**, **datetime2** и **datetimeoffset**. В следующей таблице показано сопоставление типов экземпляра более высокого уровня [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и клиентов низкого уровня.
@@ -208,7 +208,7 @@ SELECT @datetimeoffset AS '@datetimeoffset', @datetime2 AS '@datetime2';
 |только TIME|Компонент DATE по умолчанию имеет значение 1900-1-1. Компонент TIMEZONE по умолчанию будет иметь значение +00:00.|  
 |только TIMEZONE|Указаны значения по умолчанию|  
 |DATE + TIME|Компонент TIMEZONE по умолчанию имеет значение +00:00.|  
-|DATE + TIMEZONE|Не допускается|  
+|DATE + TIMEZONE|Не разрешено|  
 |TIME + TIMEZONE|Компонент DATE по умолчанию имеет значение 1900-1-1.|  
 |DATE + TIME + TIMEZONE|Простейший.|  
   
@@ -232,7 +232,7 @@ SELECT
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-|Тип данных|Вывод|  
+|Тип данных|Выходные данные|  
 |---|---|
 |**Time**|12:35:29. 1234567|  
 |**Дата**|2007-05-08|  

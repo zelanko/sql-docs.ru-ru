@@ -1,10 +1,7 @@
 ---
-title: Элемент Create (DTA) | Документация Майкрософт
-ms.custom: ''
-ms.date: 03/01/2017
+title: элемент Create (DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: 9d076c90-f933-45f4-b6d9-447793f6528b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3541a007b51d5813a6bc42a977ec31fedf5bab87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: c12803dc07617012a6da22b130c2cd954a82c04e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104988"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307991"
 ---
 # <a name="create-element-dta"></a>элемент Create (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Содержит сведения об индексах, статистике или структурах кучи в указанной пользователем конфигурации.  
+
+Содержит сведения об индексах, статистике или структурах кучи в указанной пользователем конфигурации.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,7 +41,7 @@ ms.locfileid: "68104988"
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |**Тип данных и длина**|Нет.|  
 |**Значение по умолчанию**|Нет.|  

@@ -1,5 +1,5 @@
 ---
-title: Создание проекта | Документация Майкрософт
+title: Создание проекта
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 7897be19-365b-4b06-bcf0-8a669f67a673
 author: markingmyname
 ms.author: maghan
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 35d326a7820cb8c002dd08b7176f8dc4e30f4c80
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 2ad58a10987050bcd89e17e2a3dbef4fd39586d1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264807"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251937"
 ---
 # <a name="create-a-project"></a>Создание проекта
 
@@ -71,7 +71,7 @@ ms.locfileid: "68264807"
   
     -   Имена, зарезервированные для Microsoft Windows или MS-DOS, такие как ("nul", "aux", "con", "com1", "lpt1" и так далее)  
   
-    **Расположение**  
+    **Местоположение**  
     Укажите расположение, где нужно создать проект, либо выберите его из списка.  
   
     **Обзор**  
@@ -93,14 +93,14 @@ ms.locfileid: "68264807"
   
 4.  Нажмите кнопку **ОК**.  
   
-Проекту скрипта можно назначить имя, но имена папок задаются средой [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] и не могут быть изменены. Можно определить букву диска и путь для общего набора папок, используя диалоговое окно **Добавить новый проект** . Щелкните правой кнопкой мыши значок решения в **обозревателе решений**, а затем щелкните **Добавить**. По умолчанию папка проекта скриптов размещена по пути: C:\Documents and Settings\\*имя пользователя*\My Documents\SQL Server Management Studio\Projects\\.  
+Проекту скрипта можно назначить имя, но имена папок задаются средой [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] и не могут быть изменены. Можно определить букву диска и путь для общего набора папок, используя диалоговое окно **Добавить новый проект** . Щелкните правой кнопкой мыши значок решения в **обозревателе решений**, а затем щелкните **Добавить**. По умолчанию папка проекта скриптов размещена по пути: "C:\Documents and Settings\\*имя_пользователя*\My Documents\SQL Server Management Studio\Projects\\\".  
   
 ## <a name="see-also"></a>См. также:
 
-[обозревателе решений](../../ssms/solution/solution-explorer.md)  
+[Обозреватель решений](../../ssms/solution/solution-explorer.md)  
 [Добавление к решению существующий проект](../../ssms/solution/add-an-existing-project-to-a-solution.md)  
 [Добавление новых элементов в проект](../../ssms/solution/add-new-items-to-a-project.md)  
 [Добавление существующих элементов в проект](../../ssms/solution/add-existing-items-to-a-project.md)  
-[Изменение местоположения проектов по умолчанию](../../ssms/solution/change-the-default-location-for-projects.md)  
+[Изменение расположения проектов по умолчанию](../../ssms/solution/change-the-default-location-for-projects.md)  
 [Перемещение или удаление элемента или проекта](../../ssms/solution/remove-or-delete-an-item-or-project.md)  
 [Удаление решения](../../ssms/solution/delete-a-solution.md)  

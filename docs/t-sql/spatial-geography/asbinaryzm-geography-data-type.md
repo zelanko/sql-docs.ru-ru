@@ -19,10 +19,10 @@ ms.assetid: 37246adb-814d-4113-9983-4d336de8182c
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: c617d4303593588b6e86a5b9b7662a5ec690c577
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948079"
 ---
 # <a name="asbinaryzm-geography-data-type"></a>AsBinaryZM (тип данных geography)
@@ -40,7 +40,7 @@ ms.locfileid: "67948079"
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **varbinary(max)**  
   
- Тип возвращаемого значения CLR: **SqlBytes**  
+ Тип возвращаемых данных CLR: **SqlBytes**  
   
 ## <a name="remarks"></a>Remarks  
   
@@ -56,7 +56,7 @@ SELECT @g1.AsBinaryZM();
 --Returns: 0x01B90B0000000000000000F03F000000000000F03F00000000000000400000000000000840  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширенные методы в экземплярах Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
  [M (тип данных geography)](../../t-sql/spatial-geography/m-geography-data-type.md)   
  [Z (тип данных geography)](../../t-sql/spatial-geography/z-geography-data-type.md)  

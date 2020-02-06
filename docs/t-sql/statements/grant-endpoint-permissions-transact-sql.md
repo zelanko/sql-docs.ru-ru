@@ -18,10 +18,10 @@ ms.assetid: 9eda885c-fc3a-4c9d-8de6-ce07fb35a934
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 53cac5548d231896b72e0786516c1e32c994869a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050838"
 ---
 # <a name="grant-endpoint-permissions-transact-sql"></a>GRANT, предоставление разрешений на конечные точки (Transact-SQL)
@@ -96,7 +96,7 @@ GRANT permission  [ ,...n ] ON ENDPOINT :: endpoint_name
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-granting-view-definition-permission-on-an-endpoint"></a>A. Предоставление разрешения VIEW DEFINITION на конечную точку  
- В следующем примере предоставлено разрешение `VIEW DEFINITION` на конечную точку `Mirror7` для учетной записи `ZArifin` от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ В следующем примере предоставлено разрешение `VIEW DEFINITION` на конечную точку `Mirror7` для учетной записи [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] от `ZArifin`.  
   
 ```  
 USE master;  
@@ -105,7 +105,7 @@ GO
 ```  
   
 ### <a name="b-granting-take-ownership-permission-with-the-grant-option"></a>Б. Предоставление разрешения TAKE OWNERSHIP с параметром GRANT OPTION  
- В следующем примере предоставляется разрешение `TAKE OWNERSHIP` на конечную точку `Shipping83` для пользователя `PKomosinski` от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с `GRANT OPTION`.  
+ В следующем примере предоставляется разрешение `TAKE OWNERSHIP` на конечную точку `Shipping83` для пользователя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] от `PKomosinski` с `GRANT OPTION`.  
   
 ```  
 USE master;  

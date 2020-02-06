@@ -1,10 +1,7 @@
 ---
-title: Элемент Table для Schema (DTA) | Документация Майкрософт
-ms.custom: ''
-ms.date: 03/01/2017
+title: Элемент Table описания схемы (DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: a59e8319-05d1-47f3-af39-7d970ab8e7dc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0064376a229e2fe9f87fe09048c9e923810d4172
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 419420c9d1ecec501ca8a7d92ef6a23a658db713
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105961"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307861"
 ---
 # <a name="table-element-for-schema-dta"></a>Элемент Table описания схемы (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Указывает таблицу для настройки.  
+
+Указывает таблицу для настройки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,13 +39,13 @@ ms.locfileid: "68105961"
   
 ## <a name="element-attributes"></a>Атрибуты элемента  
   
-|attribute|Описание|  
+|attribute|Description|  
 |---------------|-----------------|  
 |**NumberOfRows**|Необязательный параметр. Целое число, позволяющее имитировать таблицы различных размеров.|  
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |**Тип данных и длина**|**string**, от 1 до 255 символов|  
 |**Значение по умолчанию**|Нет.|  

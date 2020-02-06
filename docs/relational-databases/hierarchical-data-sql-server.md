@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 089de803bee02d241e1d7b56578c7e8bf8b15649
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72304955"
 ---
 # <a name="hierarchical-data-sql-server"></a>Иерархические данные (SQL Server)
@@ -163,7 +163,7 @@ GO
   
      В индексе преимущественно в ширину все прямые потомки узла хранятся в одном месте. Поэтому индекс преимущественно в ширину эффективен для запросов по прямым потомкам. Например: «найти всех прямых подчиненных этого начальника».  
   
- Выбор стратегии индексирования (в глубину, в ширину или обе) и ключа кластеризации зависит от того, какие из вышеуказанных типов запросов обрабатываются чаще и какие операции более важны (SELECT или DML). Пример использования стратегий индексирования см. в разделе [Учебник. Использование типа данных hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
+ Выбор стратегии индексирования (в глубину, в ширину или обе) и ключа кластеризации зависит от того, какие из вышеуказанных типов запросов обрабатываются чаще и какие операции более важны (SELECT или DML). Пример использования стратегий индексирования см. в разделе [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
   
   
 ### <a name="creating-indexes"></a>Создание индексов  
@@ -271,7 +271,7 @@ INSERT SimpleDemo
 ##  <a name="tasks"></a> Связанные задачи  
   
 ###  <a name="migrating"></a> Переход со структуры «родители-потомки» на тип hierarchyid  
- Большинство деревьев представлены методом «родители-потомки». Для перехода со структуры "родители-потомки" на тип **hierarchyid** проще всего создать временный столбец или временную таблицу для хранения количества узлов на каждом уровне иерархии. Пример преобразования таблицы с организацией "родители-потомки" см. в уроке 1 из раздела [Учебник. Использование типа данных hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
+ Большинство деревьев представлены методом «родители-потомки». Для перехода со структуры "родители-потомки" на тип **hierarchyid** проще всего создать временный столбец или временную таблицу для хранения количества узлов на каждом уровне иерархии. Пример преобразования таблицы с организацией "родители-потомки" см. в статье [Учебник. Использование типа данных hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)(урок 1).  
   
   
 ###  <a name="BKMK_ManagingTrees"></a> Управление древовидной структурой с помощью hierarchyid  
@@ -540,7 +540,7 @@ GO
   
 ## <a name="see-also"></a>См. также:  
  [Справочник по методам типа данных hierarchyid](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)   
- [Учебник. Использование типа данных hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
+ [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid (Transact-SQL)](../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
   
   

@@ -9,10 +9,10 @@ ms.assetid: 7b50b101-daf8-4fb0-ae04-57384755779f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9cdf7cc51563de96e20e188a7fca2fb0f1ac9631
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579717"
 ---
 # <a name="report-builder-functions---count-function"></a>Функции построителя отчетов — функция Count
@@ -60,13 +60,13 @@ Count(expression, scope, recursive)
   
  Пример  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Description  
  В следующем примере кода показано выражение, вычисляющее число значений `Size` , отличных от NULL, для области по умолчанию и для области родительской группы. Выражение добавляется в ячейку строки, относящуюся к дочерней группе `GroupbySubcategory`. Родительской группой является `GroupbyCategory`. Выражение отображает результаты для группы `GroupbySubcategory` (область по умолчанию) и затем для группы `GroupbyCategory` (область родительской группы).  
   
 > [!NOTE]  
 >  Выражения не должны содержать действительные возвраты каретки и разрывы строк; эти символы включены в пример для поддержки модулей подготовки отчетов документации. При копировании следующего примера удалите возвраты каретки изо всех строк.  
   
-## <a name="code"></a>код  
+## <a name="code"></a>Код  
   
 ```  
 ="Count (Subcategory): " & Count(Fields!Size.Value) &   

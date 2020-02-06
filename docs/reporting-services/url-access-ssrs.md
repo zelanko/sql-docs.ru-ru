@@ -16,10 +16,10 @@ ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a18ad4fd1d79bc7eae5f45318cece55037c78010
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574249"
 ---
 # <a name="url-access-ssrs"></a>Доступ по URL-адресу (SSRS)
@@ -108,17 +108,17 @@ https://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
   
 |Описания задач|Ссылки|  
 |-----------------------|-----------|  
-|Доступ к элементам сервера отчетов, например, отчетам, общим источникам данных и ресурсам.|[Доступ к элементам сервера отчетов с использованием URL-адреса](../reporting-services/access-report-server-items-using-url-access.md)|  
-|Передача отчету параметров отчета.|[Pass a Report Parameter Within a URL](../reporting-services/pass-a-report-parameter-within-a-url.md)|  
-|Задание локали для параметров отчета в строке доступа по URL-адресу, определяющей уникальные для локали форматы дат, валют и т.п.|[Задать язык для параметров отчета в URL-адресе](../reporting-services/set-the-language-for-report-parameters-in-a-url.md)|  
-|Отправка настроек, уникальных для модуля подготовки отчетов, которые влияют на процесс подготовки.|[Указание настройки сведений об устройстве в URL-адресе](../reporting-services/specify-device-information-settings-in-a-url.md)|  
-|Экспорт отчета непосредственно в формате файла, без просмотра в браузере.|[Экспорт отчета с применением доступа по URL-адресу](../reporting-services/export-a-report-using-url-access.md)|  
+|Доступ к элементам сервера отчетов, например, отчетам, общим источникам данных и ресурсам.|[Доступ к элементам сервера отчетов с использованием URL-адресов](../reporting-services/access-report-server-items-using-url-access.md)|  
+|Передача отчету параметров отчета.|[Передача параметра отчета в URL-адрес](../reporting-services/pass-a-report-parameter-within-a-url.md)|  
+|Задание локали для параметров отчета в строке доступа по URL-адресу, определяющей уникальные для локали форматы дат, валют и т.п.|[Выбранный язык для параметров отчета в URL-адресе](../reporting-services/set-the-language-for-report-parameters-in-a-url.md)|  
+|Отправка настроек, уникальных для модуля подготовки отчетов, которые влияют на процесс подготовки.|[Указание настроек сведений об устройстве в URL-адресе](../reporting-services/specify-device-information-settings-in-a-url.md)|  
+|Экспорт отчета непосредственно в формате файла, без просмотра в браузере.|[Export a Report Using URL Access](../reporting-services/export-a-report-using-url-access.md)|  
 |Открытие отчета и переход непосредственно к месту расположения строки.|[Поиск отчета с использованием URL-адресов](../reporting-services/search-a-report-using-url-access.md)|  
-|Подготовка определенного моментального снимка журнала отчета.|[Обработка моментального снимка журнала отчета с использованием доступа по URL-адресу](../reporting-services/render-a-report-history-snapshot-using-url-access.md)|  
+|Подготовка определенного моментального снимка журнала отчета.|[Обработка моментального снимка журнала отчета с помощью URL-адресов](../reporting-services/render-a-report-history-snapshot-using-url-access.md)|  
   
 ## <a name="see-also"></a>См. также:  
  [Pass a Report Parameter Within a URL](../reporting-services/pass-a-report-parameter-within-a-url.md)   
- [Ссылка на параметр доступа по URL-адресу](../reporting-services/url-access-parameter-reference.md)   
+ [Справочник по параметрам доступа по URL-адресу](../reporting-services/url-access-parameter-reference.md)   
  [Интеграция служб Reporting Services с помощью доступа по URL-адресу](../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
  [Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   

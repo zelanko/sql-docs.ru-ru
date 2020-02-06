@@ -18,10 +18,10 @@ ms.assetid: 4368b0f6-0678-4ade-87dc-b43d8b2e8d92
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: ac39de3b0fe0d85aa65ef59661a512988acd4a36
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042328"
 ---
 # <a name="stdimension-geography-data-type"></a>Метод STDimension (тип данных geography)
@@ -39,7 +39,7 @@ ms.locfileid: "68042328"
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **int**  
   
- Тип возвращаемого значения CLR: **SqlInt32**  
+ Тип возвращаемых данных CLR: **SqlInt32**  
   
 ## <a name="remarks"></a>Remarks  
  STDimension() возвращает значение –1, если экземпляр **geography** пуст.  
@@ -64,7 +64,7 @@ FROM @temp;
 |----------|---------|  
 |Точка|0|  
 |LineString|1|  
-|Polygon|2|  
+|Многоугольник|2|  
   
 ## <a name="see-also"></a>См. также:  
  [Методы OGC в экземплярах Geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  

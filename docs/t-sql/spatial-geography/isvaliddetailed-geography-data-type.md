@@ -18,10 +18,10 @@ ms.assetid: f5f0b753-c825-43ce-987d-98655d8d8702
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: c769b2e5fa5de94770d556264b82c81e28d43363
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930219"
 ---
 # <a name="isvaliddetailed-geography-data-type"></a>IsValidDetailed (тип данных geography)
@@ -41,10 +41,10 @@ ms.locfileid: "67930219"
   
  Тип возвращаемых данных CLR: **string**  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Возможные возвращаемые значения содержатся в следующей таблице:  
   
-|Возвращаемое значение|Описание|  
+|Возвращаемое значение|Description|  
 |------------------|-----------------|  
 |24400|Допустимо|  
 |24401|Не является допустимым, причины неизвестны.|  
@@ -73,7 +73,7 @@ SELECT @p.IsValidDetailed()
 --Returns: 24409: Not valid because some portion of polygon ring (1) lies in the interior of a polygon.  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширенные методы в экземплярах Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

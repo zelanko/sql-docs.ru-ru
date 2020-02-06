@@ -1,10 +1,7 @@
 ---
-title: Свойства оператора — создание оператора (страница "Уведомления") | Документация Майкрософт
-ms.custom: ''
-ms.date: 01/19/2017
+title: Создание оператора (страница "Уведомления")
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,15 +9,20 @@ f1_keywords:
 ms.assetid: d10a381e-b567-4701-aa2d-2db09f62ad81
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a7eab713ea833832b46b36bbd8a7e4af17d33124
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 5bad4791f749e8932b4a4ccfe84ff0522476f694
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68260053"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247651"
 ---
 # <a name="operator-properties---new-operator-notifications-page"></a>Свойства оператора — создание оператора (страница "Уведомления")
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -29,7 +31,7 @@ ms.locfileid: "68260053"
 Используйте эту страницу, чтобы определить предупреждения и задания, уведомляющие оператора.  
   
 ## <a name="options"></a>Параметры  
-**Предупреждения**  
+**Оповещения**  
 Просмотреть предупреждения в экземпляре.  
   
 **Задания**  
@@ -49,7 +51,7 @@ ms.locfileid: "68260053"
 **Пейджер**  
 Уведомить этого оператора, отправив сообщение электронной почты на адрес пейджера.  
   
-**Net send**  
+**Команда Net send**  
 Уведомить этого оператора, используя **net send**.  
   
 ## <a name="see-also"></a>См. также:  

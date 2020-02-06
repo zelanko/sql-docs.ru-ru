@@ -29,10 +29,10 @@ ms.assetid: c97fbb20-3d12-4d0b-9b52-62a229bc83c0
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 54e1dcd9735610f7cc8f109f00aa56fa7728ce04
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68495434"
 ---
 # <a name="backslash-line-continuation-transact-sql"></a>Обратная косая черта (продолжение строки) (Transact-SQL)
@@ -57,7 +57,7 @@ ms.locfileid: "68495434"
  \<continued section of string>  
  Продолжение строки.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
 Эта команда возвращает первую и последующие секции строки как одну строку без символов обратной косой черты. Новая строка после символа обратной косой черты должна представлять собой символ перевода строки (U+000A) или сочетание символов возврата каретки (U+000D) и перевода строки (U+000A) в указанном порядке. 
 
 ## <a name="examples"></a>Примеры  
@@ -98,7 +98,7 @@ def AS [ColumnResult];
  0xABCDEF
  ```    
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
  [Встроенные функции (Transact-SQL)](~/t-sql/functions/functions.md)   
  [Операторы (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)   

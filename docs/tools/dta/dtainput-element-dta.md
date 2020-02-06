@@ -1,10 +1,7 @@
 ---
-title: Элемент DTAInput (DTA) | Документация Майкрософт
-ms.custom: ''
-ms.date: 03/01/2017
+title: Элемент DTAInput (DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: 40c19abf-ded5-43de-be96-5b43b1b81b03
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cb75df038dd0108b930af25fad9177ec9a437145
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 6801f3d8ce45ba41d24d1062ad9979e80e76b38a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68132754"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307710"
 ---
 # <a name="dtainput-element-dta"></a>Элемент DTAInput (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Содержит определение входных XML-данных для помощника по настройке ядра СУБД.  
+
+Содержит определение входных XML-данных для помощника по настройке ядра СУБД.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,7 +40,7 @@ ms.locfileid: "68132754"
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристики|Описание|  
+|Характеристики|Description|  
 |---------------------|-----------------|  
 |**Тип данных и длина**|Нет.|  
 |**Значение по умолчанию**|Нет.|  

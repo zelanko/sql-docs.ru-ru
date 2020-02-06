@@ -1,10 +1,9 @@
 ---
-title: Изменение оператора | Документация Майкрософт
-ms.custom: ''
+title: Изменение оператора
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,13 +14,15 @@ helpviewer_keywords:
 ms.assetid: b2ba2168-ca0b-4b59-9007-4e1e4c30679e
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 918bb57b0798645ea3968247e1182d22b2de6df3
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 1b69797d3a308d6fe34fa96751143cbaa480f3ea
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69552898"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242409"
 ---
 # <a name="edit-an-operator"></a>Изменение оператора
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -58,7 +59,7 @@ ms.locfileid: "69552898"
   
 4.  Щелкните правой кнопкой оператора, данные которого нужно изменить, и выберите пункт **Свойства**.  
   
-    Дополнительные сведения о доступных параметрах, содержащихся в диалоговом окне _Свойства_**имя\_оператора**, см. в следующих статьях:  
+    Дополнительные сведения о доступных параметрах, содержащихся в диалоговом окне _Свойства\__ имя**оператора**, см. в следующих статьях:  
   
     -   [Свойства оператора — создание оператора (страница "Общие")](../../ssms/agent/operator-properties-new-operator-general-page.md)  
   

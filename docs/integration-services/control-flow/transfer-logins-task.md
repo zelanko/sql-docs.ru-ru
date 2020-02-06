@@ -17,10 +17,10 @@ ms.assetid: 1df60fd6-c019-405d-8155-c330dbac2cc1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9d82f3ef27525ad918ef01e9cb2e0600ef85ae0a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293862"
 ---
 # <a name="transfer-logins-task"></a>Задача «Передача имен входа»
@@ -114,7 +114,7 @@ ms.locfileid: "71293862"
  **LoginsToTransfer**  
  Выберите имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для копирования их с исходного сервера на целевой. Параметры этого свойства приведены в следующей таблице.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |**AllLogins**|Все имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на исходном сервере будут скопированы на целевой сервер.|  
 |**SelectedLogins**|На целевой сервер будут скопированы только имена входа, заданные списком **LoginsList** .|  
@@ -131,7 +131,7 @@ ms.locfileid: "71293862"
   
  Параметры этого свойства приведены в следующей таблице.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |**FailTask**|Задача не выполняется, если такое же имя входа уже существует на целевом сервере.|  
 |**Overwrite**|Задача перезаписывает имя входа на целевом сервере.|  

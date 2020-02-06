@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
 ms.openlocfilehash: 89987a3b9f202eb1125a08438bb3943b65aaef74
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710530"
 ---
 # <a name="install-polybase-on-linux"></a>Установка PolyBase на компьютере под управлением Linux
@@ -153,12 +153,12 @@ sudo systemctl restart mssql-server
 >[!NOTE]
 >После установки необходимо [включить компонент PolyBase](#enable).
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Для PolyBase в Linux доступны следующие источники данных. Следуйте указанным ссылкам, чтобы получить дополнительные сведения о создании внешних таблиц из этих источников в PolyBase. 
 
 - [SQL Server (а также база данных SQL, хранилище данных SQL Azure)](../../relational-databases/polybase/polybase-configure-sql-server.md)
-- [Oracle;](../../relational-databases/polybase/polybase-configure-oracle.md)
+- [Oracle](../../relational-databases/polybase/polybase-configure-oracle.md)
 - [Teradata](../../relational-databases/polybase/polybase-configure-teradata.md)
 - [MongoDB (а также Cosmos DB)](../../relational-databases/polybase/polybase-configure-mongodb.md)
 

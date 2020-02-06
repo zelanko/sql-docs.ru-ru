@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 02bd8c4d017d391755eb9d61ef7685883a5ade51
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115904"
 ---
 # <a name="objects-event-category"></a>Категория событий Objects
@@ -27,10 +27,10 @@ ms.locfileid: "68115904"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Описание|  
+|Раздел|Description|  
 |-----------|-----------------|  
 |[Класс событий Auto Stats](../../relational-databases/event-classes/auto-stats-event-class.md)|Указывает, что произошло автоматическое обновление статистики индекса и столбца.|  
-|[Object:Altered, класс событий](../../relational-databases/event-classes/object-altered-event-class.md)|Указывает, что объект изменен (например, инструкциями ALTER DATABASE или ALTER TABLE).|  
+|[Класс событий Object:Altered](../../relational-databases/event-classes/object-altered-event-class.md)|Указывает, что объект изменен (например, инструкциями ALTER DATABASE или ALTER TABLE).|  
 |[Класс событий Object:Created](../../relational-databases/event-classes/object-created-event-class.md)|Указывает, что объект создан (например, инструкциями CREATE INDEX, CREATE TABLE или CREATE DATABASE).|  
 |[Класс событий Object:Deleted](../../relational-databases/event-classes/object-deleted-event-class.md)|Указывает, что объект удален (например, инструкциями DROP INDEX или DROP TABLE).|  
   

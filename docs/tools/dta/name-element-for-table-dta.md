@@ -1,10 +1,7 @@
 ---
-title: Элемент Name для Table (DTA) | Документация Майкрософт
-ms.custom: ''
-ms.date: 03/01/2017
+title: Элемент Name описания таблицы (DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: 422a755f-ee52-4863-b1aa-f4ef1b8fd0bb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cde36fc8bc0ffb442d641abb49f842ead832fc57
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: d8c2cedbf969975504b29f00832a4ae3722b29c8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034587"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307957"
 ---
 # <a name="name-element-for-table-dta"></a>Элемент Name описания таблицы (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Позволяет задать имя настраиваемой таблицы.  
+
+Позволяет задать имя настраиваемой таблицы.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,17 +39,17 @@ ms.locfileid: "68034587"
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |**Тип данных и длина**|**string**, от 1 до 255 символов|  
 |**Значение по умолчанию**|Нет.|  
-|**Наличие**|Обязательный. Один раз для каждого элемента **Table** .|  
+|**Наличие**|Обязательный элемент. Один раз для каждого элемента **Table** .|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
 |Связь|Элементы|  
 |------------------|--------------|  
-|**Родительский элемент**|[Элемент Table описания схемы (DTA)](../../tools/dta/table-element-for-schema-dta.md)|  
+|**Родительский элемент**|[Элемент Table для схемы (DTA)](../../tools/dta/table-element-for-schema-dta.md)|  
 |**Дочерние элементы**|Нет.|  
   
 ## <a name="example"></a>Пример  

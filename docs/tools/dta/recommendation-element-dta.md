@@ -1,10 +1,7 @@
 ---
-title: Элемент рекомендаций (DTA) | Документация Майкрософт
-ms.custom: ''
-ms.date: 03/01/2017
+title: Элемент Recommendation (DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: 679ea535-865a-4633-a4d3-5b3090515158
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4fb9df2d769161213090b33755e1f2ecb018afef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: a6ad8f298dc633959a3da16376c3e2a486ee807c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034568"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306032"
 ---
 # <a name="recommendation-element-dta"></a>Элемент Recommendation (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Содержит данные о гипотетических индексах, являющихся частью пользовательской конфигурации.  
+
+Содержит данные о гипотетических индексах, являющихся частью пользовательской конфигурации.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,7 +43,7 @@ ms.locfileid: "68034568"
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |**Тип данных и длина**|Нет.|  
 |**Значение по умолчанию**|Нет.|  
@@ -50,7 +53,7 @@ ms.locfileid: "68034568"
   
 |Связь|Элементы|  
 |------------------|--------------|  
-|**Родительский элемент**|[Элемент Table описания схемы (DTA)](../../tools/dta/table-element-for-schema-dta.md)|  
+|**Родительский элемент**|[Элемент Table для схемы (DTA)](../../tools/dta/table-element-for-schema-dta.md)|  
 |**Дочерние элементы**|[Элемент Create (DTA)](../../tools/dta/create-element-dta.md)<br /><br /> Элемент**Drop** . Дополнительные сведения см. в статье [XML-схема помощника по настройке ядра СУБД](https://go.microsoft.com/fwlink/?linkid=43100).|  
   
 ## <a name="remarks"></a>Remarks  

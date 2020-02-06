@@ -1,29 +1,32 @@
 ---
-title: Окно "Точки останова" | Документация Майкрософт
+title: Окно точек останова
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ''
-ms.custom: ''
-ms.date: 11/04/2019
 helpviewer_keywords:
 - Breakpoints Window [Transact-SQL]
 ms.assetid: bad88d10-fdd5-4d3d-b5ea-a4f063847485
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>= sql-server-2014 || = sqlallproducts-allversions'
-ms.openlocfilehash: cc5600a7cd9e933046700204a8dac916199832c6
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: a80750a9885bd3cd61afd6b6719f5839b5503eac
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73638015"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243373"
 ---
 # <a name="transact-sql-debugger---breakpoints-window"></a>Отладчик Transact-SQL, окно точек останова
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 В окне **Точки останова** перечисляются все точки останова, которые заданы в текущем редакторе запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Чтобы управлять точками останова, используйте панель инструментов в окне **Точки останова** . Точки останова представляют собой точки кода, где выполнение в режиме отладке приостанавливается, чтобы можно было просматривать отладочные данные.
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
 
 ## <a name="task-list"></a>Список задач
 
@@ -38,7 +41,7 @@ ms.locfileid: "73638015"
 **Название**  
 Отображается имя точки останова. Имена точек останова предоставляются отладчиком. Это имя включает имя окна редактора запросов компонента Database Engine, которое содержит точку останова, и номер строки в редакторе запросов, на которой задана точка останова.  
 
-**Условие**  
+**Condition**  
 Отображает **(нет условия)** . Отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] не поддерживает задание условий точки останова.
 
 **Число попаданий**  
@@ -53,7 +56,7 @@ ms.locfileid: "73638015"
 Отображает **Останов**.
 
 **Язык**  
-Отображает значение **Transact-SQL** для [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+Для языка **отображается значение** Transact-SQL [!INCLUDE[tsql](../../includes/tsql-md.md)].  
 
 **Компонент**  
 Отображается номер строки, на которой задана точка останова.  

@@ -18,10 +18,10 @@ ms.assetid: ca6bf2dc-1d38-4503-b87e-f2ea033d36ba
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 01d7b5277e0711f5297e00d7b08b12e105b7f78b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930365"
 ---
 # <a name="stbuffer-geometry-data-type"></a>STBuffer (тип данных geometry)
@@ -43,12 +43,12 @@ ms.locfileid: "67930365"
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Тип возвращаемого значения CLR: **SqlGeometry**  
+ Тип возвращаемых данных CLR: **SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
  Метод `STBuffer()` вычисляет буфер аналогично методу [BufferWithTolerance](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md), задавая аргументы *tolerance* = distance \* 0,001 и *relative* = **false**.  
   
- Когда *distance* > 0, возвращается экземпляр **Polygon** или **MultiPolygon**.  
+ Когда *distance* > 0, возвращается экземпляр **Polygon** или **MultiPolygon**.  
   
 > [!NOTE]  
 >  Поскольку аргумент distance относится к типу **float**, в расчетах очень маленькое значение может быть приравнено к нулю.  Когда это происходит, возвращается экземпляр **geometry**.  См. раздел [Типы данных float и real (Transact-SQL)](../../t-sql/data-types/float-and-real-transact-sql.md).  
@@ -70,7 +70,7 @@ ms.locfileid: "67930365"
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-calling-stbuffer-with-parametervalue--0-on-one-dimensional-geometry-instance"></a>A. Вызов метода STBuffer() с parameter_value < 0 для экземпляра одномерного геометрического объекта  
+### <a name="a-calling-stbuffer-with-parameter_value--0-on-one-dimensional-geometry-instance"></a>A. Вызов метода STBuffer() с parameter_value < 0 для экземпляра одномерного геометрического объекта  
  В следующем примере возвращается пустой экземпляр `GeometryCollection`:  
   
 ```
@@ -78,7 +78,7 @@ ms.locfileid: "67930365"
  SELECT @g.STBuffer(-1).ToString();
  ```  
   
-### <a name="b-calling-stbuffer-with-parametervalue--0-on-a-polygon-instance"></a>Б. Вызов метода STBuffer() с parameter_value < 0 для экземпляра объекта Polygon  
+### <a name="b-calling-stbuffer-with-parameter_value--0-on-a-polygon-instance"></a>Б. Вызов метода STBuffer() с parameter_value < 0 для экземпляра объекта Polygon  
  В следующем примере возвращается экземпляр `Polygon` с отрицательным буфером:  
   
 ```
@@ -86,7 +86,7 @@ ms.locfileid: "67930365"
  SELECT @g.STBuffer(-1).ToString();
  ```  
   
-### <a name="c-calling-stbuffer-with-parametervalue--0-on-a-curvepolygon-instance"></a>В. Вызов метода STBuffer() с parameter_value < 0 для экземпляра объекта CurvePolygon  
+### <a name="c-calling-stbuffer-with-parameter_value--0-on-a-curvepolygon-instance"></a>В. Вызов метода STBuffer() с parameter_value < 0 для экземпляра объекта CurvePolygon  
  В следующем примере возвращается экземпляр `Polygon` с отрицательным буфером из экземпляра `CurvePolygon`:  
   
 ```
@@ -107,7 +107,7 @@ ms.locfileid: "67930365"
   
  Эта инструкция **SELECT** возвращает значение `GEOMETRYCOLLECTION EMPTY.`.  
   
-### <a name="e-calling-stbuffer-with-parametervalue--0"></a>Д. Вызов метода STBuffer() с parameter_value = 0  
+### <a name="e-calling-stbuffer-with-parameter_value--0"></a>Д. Вызов метода STBuffer() с parameter_value = 0  
  В следующем примере возвращается копия вызывающего экземпляра `geometry`:  
   
 ```
@@ -124,7 +124,7 @@ ms.locfileid: "67930365"
  SELECT @g.STBuffer(@distance).ToString();
  ```  
   
-### <a name="g-calling-stbuffer-with-parametervalue--0"></a>Ж. Вызов метода STBuffer() с parameter_value > 0  
+### <a name="g-calling-stbuffer-with-parameter_value--0"></a>Ж. Вызов метода STBuffer() с parameter_value > 0  
  В следующем примере возвращается экземпляр `Polygon`:  
   
 ```

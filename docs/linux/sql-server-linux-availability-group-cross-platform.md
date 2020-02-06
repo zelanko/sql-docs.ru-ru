@@ -11,10 +11,10 @@ ms.technology: linux
 ms.assetid: ''
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: f6758760d8ea73d9ec0ac95a0e824a0fd46a6dbb
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68045196"
 ---
 # <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>Настройка группы доступности Always On SQL Server в Windows и Linux (кроссплатформенная конфигурация)
@@ -23,7 +23,7 @@ ms.locfileid: "68045196"
 
 В этой статье описаны действия по созданию группы доступности Always On с одной репликой на сервере Windows Server и другой репликой на сервере Linux. Такая конфигурация является кроссплатформенной, так как реплики находятся в разных операционных системах. Используйте эту конфигурацию для миграции с одной платформы на другую или аварийного восстановления. Такая конфигурация не поддерживает высокую доступность, так как отсутствуют решения кластера для управления кроссплатформенной конфигурацией. 
 
-![Гибридный, None](./media/sql-server-linux-availability-group-overview/image1.png)
+![Гибридный режим None](./media/sql-server-linux-availability-group-overview/image1.png)
 
 Прежде чем продолжить, нужно ознакомиться с установкой и настройкой экземпляров SQL Server в Windows и Linux. 
 
@@ -245,7 +245,7 @@ ms.locfileid: "68045196"
 
 В этой статье рассмотрены действия по созданию кроссплатформенной группы доступности для поддержки миграции или рабочих нагрузок с масштабированием для чтения. Ее можно использовать для ручного аварийного восстановления. Также объяснено, как выполнить отработку отказа группы доступности. Кроссплатформенная группа доступности использует тип кластера `NONE` и не поддерживает высокую доступность из-за отсутствия кроссплатформенного средства управления кластерами. 
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Обзор групп доступности Always On](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
 

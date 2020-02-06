@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 1696860fd97d1622389cd7ac02ed96919663b5d6
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 3d8792020e540e67bc81aa1bba7453084fa8a65f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908530"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286114"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "72908530"
     > [!NOTE]  
     >  Чтобы выбрать несколько файлов, удерживайте клавишу CTRL.  
   
-8.  (Необязательно) Повторите шаг 6. Щелкните вкладку **Обзор[!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)], перейдите в каталог** COM, выберите файл Microsoft.SqlServer.Replication.BusinessLogicSupport.dll и нажмите кнопку **ОК**.  
+8.  (Необязательно) Повторите шаг 6. Щелкните вкладку **Обзор**, перейдите в каталог [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM, выберите файл Microsoft.SqlServer.Replication.BusinessLogicSupport.dll и нажмите кнопку **ОК**.  
   
 9. В меню **Вид** выберите пункт **Код**.  
   
@@ -127,7 +127,7 @@ ms.locfileid: "72908530"
     > [!NOTE]  
     >  Чтобы выбрать несколько файлов, удерживайте клавишу CTRL.  
   
-8.  (Необязательно) Повторите шаг 6. Щелкните вкладку **Обзор[!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)], перейдите в каталог** COM, выберите файл Microsoft.SqlServer.Replication.BusinessLogicSupport.dll и нажмите кнопку **ОК**.  
+8.  (Необязательно) Повторите шаг 6. Щелкните вкладку **Обзор**, перейдите в каталог [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM, выберите файл Microsoft.SqlServer.Replication.BusinessLogicSupport.dll и нажмите кнопку **ОК**.  
   
 9. В меню **Вид** выберите пункт **Код**.  
   

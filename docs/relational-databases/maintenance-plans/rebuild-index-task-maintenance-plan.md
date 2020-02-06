@@ -16,10 +16,10 @@ ms.assetid: 33e2940b-139f-4563-b0cb-5683f08bd879
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b5eba7d655d0c6ee047d59f3cd14ea39a6ad4ec3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115582"
 ---
 # <a name="rebuild-index-task-maintenance-plan"></a>Задача «Перестроение индекса» (план обслуживания)
@@ -79,7 +79,7 @@ ms.locfileid: "68115582"
  Параметр `ONLINE` дает пользователям возможность получать доступ к базовой таблице или данным кластеризованного индекса, а также к любым связанным с ними некластеризованным индексам при операциях с индексами.  
   
 > [!NOTE]
->  Операции с индексами в режиме "в сети" доступны не во всех выпусках [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+>  Операции с индексами в сети доступны не во всех выпусках [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  **Не перестраивать индексы | Перестроить индексы в режиме "вне сети"**  
  Укажите, что нужно делать для типов индексов, которые невозможно перестроить, пока они находятся в сети.  
@@ -138,6 +138,6 @@ ms.locfileid: "68115582"
  [Параметр SORT_IN_TEMPDB для индексов](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)   
  [Руководящие принципы для операций с индексами](../../relational-databases/indexes/guidelines-for-online-index-operations.md)   
  [Об операциях с индексом в сети](../../relational-databases/indexes/how-online-index-operations-work.md)   
- [Выполнение операции с индексами в сети](../../relational-databases/indexes/perform-index-operations-online.md)  
+ [Выполнение операций с индексами в оперативном режиме](../../relational-databases/indexes/perform-index-operations-online.md)  
   
   

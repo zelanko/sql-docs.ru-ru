@@ -14,10 +14,10 @@ ms.assetid: 0b3cbe38-ce24-47ca-83ef-6538a5299d1a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bfad11f3bcba41160fcb46ede37f6e7ea3c5ece4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295164"
 ---
 # <a name="catalogoperation_messages-ssisdb-database"></a>catalog.operation_messages (база данных SSISDB)
@@ -29,7 +29,7 @@ ms.locfileid: "71295164"
 
   Отображает сообщения, которые заносятся в журнал при выполнении операций в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |operation_message_id|**bigint**|Уникальный идентификатор сообщения.|  
 |operation_id|**bigint**|Уникальный идентификатор операции.|  
@@ -44,7 +44,7 @@ ms.locfileid: "71295164"
   
  В этом представлении отображаются следующие типы сообщений:  
   
-|Значение **message_type**|Описание|  
+|Значение **message_type**|Description|  
 |-----------------------------|-----------------|  
 |-1|Неизвестно|  
 |120|Ошибка|  
@@ -66,7 +66,7 @@ ms.locfileid: "71295164"
   
  В этом представлении отображаются следующие типы источников сообщений.  
   
-|**message_source_type**|Описание|  
+|**message_source_type**|Description|  
 |-------------------------------|-----------------|  
 |10|Начальные API-интерфейсы, такие как T-SQL и хранимые процедуры CLR|  
 |20|Внешний процесс, используемый для запуска пакета (ISServerExec.exe)|  

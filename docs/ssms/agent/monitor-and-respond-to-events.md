@@ -1,10 +1,9 @@
 ---
-title: Наблюдение за событиями и их обработка | Документация Майкрософт
-ms.custom: ''
+title: Наблюдение и обработка событий
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,13 +20,15 @@ helpviewer_keywords:
 ms.assetid: f7fbe155-5b68-4777-bc71-a47637471f32
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fae6e419838ef4de06e778665c98df023e7eb707
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: aa5b1b5e09972de8b5b945cdfd41893070ded3a0
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267509"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245202"
 ---
 # <a name="monitor-and-respond-to-events"></a>Наблюдение и обработка событий
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "68267509"
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Агент производит мониторинг и автоматическую обработку различных *событий*: сообщений от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], некоторых условий производительности и событий инструментария управления Windows (WMI).  
   
 ## <a name="in-this-section"></a>в этом разделе  
-[Предупреждения](../../ssms/agent/alerts.md)  
+[Оповещения](../../ssms/agent/alerts.md)  
 Содержит сведения об именовании предупреждений и о выборе событий или условий производительности, которые обрабатываются предупреждениями.  
   
 [Создание пользовательского события](../../ssms/agent/create-a-user-defined-event.md)  

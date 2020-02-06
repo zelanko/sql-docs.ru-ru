@@ -15,10 +15,10 @@ ms.assetid: 254ec7ee-d3ff-4361-8995-46e9b9c4dc95
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 80bf829afcbc93e397e8ea797f22905b3b55c0cd
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295769"
 ---
 # <a name="enumerating-available-packages-programmatically"></a>Программное перечисление доступных пакетов
@@ -43,7 +43,7 @@ ms.locfileid: "71295769"
 |Хранилище пакетов служб SSIS|<xref:Microsoft.SqlServer.Dts.Runtime.Application.FolderExistsOnDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.FolderExistsOnSqlServer%2A>|    
     
- [В начало](#top)    
+ [Вверх](#top)    
     
 ##  <a name="listing"></a> Перечисление доступных пакетов    
  Чтобы получить программным путем список сохраненных пакетов, вызовите один из следующих методов.    
@@ -159,7 +159,7 @@ namespace EnumeratePackagesSSIS_CS
 }    
 ```    
     
- [В начало](#top)    
+ [Вверх](#top)    
     
 ###  <a name="listing_sql"></a> Пример (SQL Server)    
  Используйте метод <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetPackageInfos%2A> для перечисления пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], хранящихся в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].    
@@ -240,7 +240,7 @@ namespace EnumeratePackagesSql_CS
 }    
 ```    
     
- [В начало](#top)    
+ [Вверх](#top)    
    
 ## <a name="see-also"></a>См. также:    
  [Управление пакетами (службы SSIS)](../../integration-services/service/package-management-ssis-service.md)    

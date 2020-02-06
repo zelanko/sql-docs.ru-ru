@@ -12,20 +12,20 @@ ms.assetid: 1cef90ef-9c39-44e6-bc7f-316c8f53c10c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: bc2b1094a4ea7f8f6c2d2d60c804260286c5f237
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68085996"
 ---
-# <a name="mssqlserver2527"></a>MSSQLSERVER_2527
+# <a name="mssqlserver_2527"></a>MSSQLSERVER_2527
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|2527|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
@@ -42,6 +42,6 @@ ms.locfileid: "68085996"
   
 ## <a name="see-also"></a>См. также:  
 [sys.database_files (Transact-SQL)](~/relational-databases/system-catalog-views/sys-database-files-transact-sql.md)  
-[sys.master_files &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
+[sys.master_files (Transact-SQL)](~/relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
 [RESTORE (Transact-SQL)](~/t-sql/statements/restore-statements-transact-sql.md)  
   

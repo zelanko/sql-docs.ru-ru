@@ -13,10 +13,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3e4aac74ac35fc5d75320b420e85b130be110340
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74096040"
 ---
 # <a name="use-openjson-with-the-default-schema-sql-server"></a>Использование OPENJSON со схемой по умолчанию (SQL Server)
@@ -36,7 +36,7 @@ FROM OPENJSON('{"name":"John","surname":"Doe","age":45}')
   
  **Результаты**  
   
-|Key|Значение|  
+|Клавиши|Значение|  
 |---------|-----------|  
 |name|Джон|  
 |surname|Doe|  
@@ -52,7 +52,7 @@ FROM OPENJSON('["en-GB", "en-UK","de-AT","es-AR","sr-Cyrl"]')
   
  **Результаты**  
   
-|Key|Значение|  
+|Клавиши|Значение|  
 |---------|-----------|  
 |0|en-GB|  
 |1|en-UK|  
@@ -85,9 +85,9 @@ FROM OPENJSON(@json,N'lax $.info')
   
  **Результаты**  
   
-|Key|Значение|Тип|  
+|Клавиши|Значение|Тип|  
 |---------|-----------|----------|  
-|Тип|1|0|  
+|type|1|0|  
 |address|{ "town":"Bristol", "county":"Avon", "country":"England" }|5|  
 |tags|[ "Sport", "Water polo" ]|4|  
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fb5389bd711a9427a0487e7d7374d899a8ac2c67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67903539"
 ---
 # <a name="audit-broker-conversation-event-class"></a>Audit Broker Conversation, класс событий
@@ -25,7 +25,7 @@ ms.locfileid: "67903539"
   
 ## <a name="audit-broker-conversation-event-class-data-columns"></a>Столбцы данных класса события Audit Broker Conversation  
   
-|Столбец данных|Тип|Описание|Номер столбца|Фильтруемый|  
+|Столбец данных|Тип|Description|Номер столбца|Фильтруемый|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|Имя клиентского приложения, установившего соединение с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот столбец заполняется значениями, передаваемыми приложением, а не отображаемым именем программы.|10|Да|  
 |**BigintData1**|**bigint**|Последовательный номер сообщения.|52|нет|  
@@ -51,7 +51,7 @@ ms.locfileid: "67903539"
   
  Следующая таблица содержит список значений подклассов события для этого класса событий.  
   
-|ID|Подкласс|Описание|  
+|ID|Подкласс|Description|  
 |--------|--------------|-----------------|  
 |1|Отсутствует заголовок безопасности|Во время защищенного диалога компонента Service Broker получил сообщение, которое не содержит ключа сеанса. Протокол требует, чтобы после установления защищенного диалога каждое сообщение содержало ключ сеанса.|  
 |2|Отсутствует сертификат|Компонент Service Broker не смог найти подходящего сертификата для одного из участников диалога. Для защиты диалога база данных должна содержать сертификаты как отправителя, так и получателя.|  

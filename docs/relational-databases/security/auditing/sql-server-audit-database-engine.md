@@ -17,10 +17,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 4d9319ef90263e6513661c4d9a24be7f530b917f
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903850"
 ---
 # <a name="sql-server-audit-database-engine"></a>Подсистема аудита SQL Server (Database Engine)
@@ -112,7 +112,7 @@ ms.locfileid: "72903850"
 
  Дополнительные сведения об аудите см. в разделах [Создание аудита сервера и спецификации аудита сервера](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md) и [Создание спецификации аудита для сервера и базы данных](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md).  
   
-## <a name="considerations"></a>Замечания  
+## <a name="considerations"></a>Рекомендации  
  В случае ошибки при инициализации аудита сервер не будет запущен. В этом случае его можно запустить, если в командную строку включить параметр **-f**.  
   
  Если ошибка аудита вызывает отключение сервера или не дает ему запуститься, поскольку для аудита был задан режим ON_FAILURE=SHUTDOWN, то в журнал будет записано событие MSG_AUDIT_FORCED_SHUTDOWN. Поскольку выключение происходит при первом возникновении этого события, это событие будет записано один раз. Это событие записывается после получения сообщения об ошибке, означающего, что аудит вызвал отключение. Администратор может обойти завершения работы, вызываемые аудитом, запустив [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в однопользовательском режиме с использованием флага **-m**. При запуске в однопользовательском режиме будет произведено изменение настроек любого аудита, запускающегося в этом сеансе, для которого было задано условие ON_FAILURE=SHUTDOWN. Такие аудиты будут запускаться с условием ON_FAILURE=CONTINUE. Если [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] запускается с использованием флага **-m**, то в журнал ошибок будет записано сообщение MSG_AUDIT_SHUTDOWN_BYPASSED.  
@@ -142,7 +142,7 @@ ms.locfileid: "72903850"
 ### <a name="data-definition-language-statements"></a>Инструкции языка определения данных DDL  
  Чтобы создать, изменить или удалить спецификацию аудита, можно использовать следующие инструкции DDL.  
   
-|Инструкции DDL|Описание| 
+|Инструкции DDL|Description| 
 |-|-|  
 |[ALTER AUTHORIZATION](../../../t-sql/statements/alter-authorization-transact-sql.md)|Изменяет владельца защищаемой сущности.|  
 |[ALTER DATABASE AUDIT SPECIFICATION](../../../t-sql/statements/alter-database-audit-specification-transact-sql.md)|Изменяет объект спецификации аудита базы данных с помощью компонента аудита SQL Server.|  
@@ -158,7 +158,7 @@ ms.locfileid: "72903850"
 ### <a name="dynamic-views-and-functions"></a>Динамические представления и функции  
  В следующей таблице перечисляются динамические представления и функции, которые можно использовать в подсистеме аудита [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-|Динамические представления и функции|Описание|  
+|Динамические представления и функции|Description|  
 |---------------------------------|-----------------|  
 |[sys.dm_audit_actions](../../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)|Возвращает строку для каждого действия аудита, которое может быть зарегистрировано в журнале аудита, и каждой группы действий аудита, которая может быть настроена в составе аудита [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
 |[sys.dm_server_audit_status](../../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)|Предоставляет сведения о текущем состоянии аудита.|  
@@ -168,7 +168,7 @@ ms.locfileid: "72903850"
 ### <a name="catalog-views"></a>Представления каталога  
  В следующей таблице перечисляются представления каталога, которые можно использовать в подсистеме аудита [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-|Представления каталога|Описание|  
+|Представления каталога|Description|  
 |-------------------|-----------------|  
 |[sys.database_audit_specifications](../../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)|Содержит сведения о спецификациях аудита базы данных в аудите [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на экземпляре сервера.|  
 |[sys.database_audit_specification_details](../../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)|Содержит сведения о спецификациях аудита базы данных в аудите [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на экземпляре сервера для всех баз данных.|  
@@ -214,7 +214,7 @@ ms.locfileid: "72903850"
  [Триггеры DDL](../../../relational-databases/triggers/ddl-triggers.md)  
  Объясняется, как можно использовать триггеры языка DDL для отслеживания изменения в базах данных.  
   
- [Microsoft TechNet: технический центр SQL Server: безопасность и защита SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=101152)  
+ [Microsoft TechNet, технический центр SQL Server: "SQL Server 2005 — безопасность и защита"](https://go.microsoft.com/fwlink/?LinkId=101152)  
  Содержит актуальные сведения о безопасности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>См. также:  

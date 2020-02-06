@@ -26,10 +26,10 @@ ms.assetid: f2993a28-0b81-46f2-aec0-6877fe990387
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 02d42e48116e893c6bf7d04c2027762555be06f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68091002"
 ---
 # <a name="monitor-resource-usage-system-monitor"></a>Наблюдение за использованием ресурсов (системный монитор)
@@ -81,9 +81,9 @@ ms.locfileid: "68091002"
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
 |Описываются случаи применения системного монитора и обсуждается снижение производительности при использовании системного монитора.|[Запуск системного монитора](../../relational-databases/performance-monitor/run-system-monitor.md)|  
-|Описаны способы отслеживания счетчиков дискового пространства для определения активности диска и количества операций ввода-вывода, создаваемых компонентами SQL Server.|[Наблюдение за использованием диска](../../relational-databases/performance-monitor/monitor-disk-usage.md)|  
-|Описаны способы отслеживания экземпляра Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы определить, находятся ли уровни загрузки ЦП в стандартных диапазонах.|[Мониторинг использования ЦП](../../relational-databases/performance-monitor/monitor-cpu-usage.md)|  
-|Описаны способы мониторинга экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для подтверждения того, что память используется в допустимых пределах.|[Наблюдение за использованием памяти](../../relational-databases/performance-monitor/monitor-memory-usage.md)|  
+|Описаны способы отслеживания счетчиков дискового пространства для определения активности диска и количества операций ввода-вывода, создаваемых компонентами SQL Server.|[Отслеживание использования диска](../../relational-databases/performance-monitor/monitor-disk-usage.md)|  
+|Описаны способы отслеживания экземпляра Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы определить, находятся ли уровни загрузки ЦП в стандартных диапазонах.|[Отслеживание использования ЦП](../../relational-databases/performance-monitor/monitor-cpu-usage.md)|  
+|Описаны способы мониторинга экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для подтверждения того, что память используется в допустимых пределах.|[Отслеживание использования памяти](../../relational-databases/performance-monitor/monitor-memory-usage.md)|  
 |Описаны способы создания предупреждения, которое будет выводиться, когда счетчик системного монитора достигает порогового значения.|[Создание предупреждения для базы данных SQL Server](../../relational-databases/performance-monitor/create-a-sql-server-database-alert.md)|  
 |Описаны способы создания диаграмм, предупреждений, журналов и отчетов для отслеживания экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Создание диаграмм, предупреждений, журналов и отчетов](../../relational-databases/performance-monitor/create-charts-alerts-logs-and-reports.md)|  
 |Приводится список объектов и счетчиков, используемых системным монитором для отслеживания деятельности на компьютерах, где установлены экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Использование объектов SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md)|  

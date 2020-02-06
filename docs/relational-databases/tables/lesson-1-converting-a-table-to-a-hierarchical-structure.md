@@ -1,5 +1,5 @@
 ---
-title: Урок 1. Преобразование таблицы в иерархическую структуру | Документация Майкрософт
+title: Занятие 1. Преобразование таблицы в иерархическую структуру | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/22/2018
 ms.prod: sql
@@ -13,13 +13,13 @@ ms.assetid: 5ee6f19a-6dd7-4730-a91c-bbed1bd77e0b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 05906db66c2bf4948e91dddafa2cdd54aaf936ec
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907297"
 ---
-# <a name="lesson-1-converting-a-table-to-a-hierarchical-structure"></a>Урок 1. Преобразование таблицы в иерархическую структуру
+# <a name="lesson-1-converting-a-table-to-a-hierarchical-structure"></a>Урок 1. преобразование таблицы в иерархическую структуру
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 Если у клиентов имеются таблицы, в которых для выражения иерархических связей используются самосоединения, то эти таблицы можно преобразовать в иерархическую структуру, руководствуясь указаниями из данного занятия. Миграция от старого метода представления к методу представления, использующему тип данных **hierarchyid**, проходит относительно легко. После миграции пользователи получат компактное и легкое для понимания иерархическое представление, которое может быть проиндексировано несколькими способами для обеспечения эффективного поиска.  
   
@@ -29,11 +29,11 @@ ms.locfileid: "72907297"
 ## <a name="prerequisites"></a>предварительные требования  
 Для работы с этим учебником требуется среда SQL Server Management Studio, доступ к серверу SQL Server и база данных AdventureWorks.
 
-- Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Установите выпуск [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 - Скачайте [примеры баз данных AdventureWorks2017](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
 
-См. инструкции по восстановлению резервной копии базы данных с помощью SSMS см. в статье: [Восстановление базы данных](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).  
+Инструкции по восстановлению баз данных в SSMS см. в статье [Восстановление базы данных](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).  
 
 ## <a name="examine-the-current-structure-of-the-employee-table"></a>Изучение текущей структуры таблицы сотрудников
 Образец базы данных Adventureworks2017 (или более поздней версии) содержит таблицу **Employee** в схеме **HumanResources**. Чтобы не изменять исходную таблицу, на этом шаге создается копия таблицы **Employee** , называющаяся **EmployeeDemo**. Для упрощения этого примера копируется только пять столбцов из исходной таблицы. Затем выполняется запрос к таблице **HumanResources.EmployeeDemo** , позволяющий просмотреть структуру данных в таблице без использования типа данных **hierarchyid** .  
@@ -223,7 +223,7 @@ ms.locfileid: "72907297"
     ```  
   
 ## <a name="optimizing-the-neworg-table"></a>Оптимизация таблицы NewOrg
-Таблица **NewOrd**, созданная в задании [Заполнение таблицы существующими иерархическими данными](../../relational-databases/tables/lesson-1-2-populating-a-table-with-existing-hierarchical-data.md), содержит все сведения о сотрудниках и представляет иерархическую структуру с использованием типа данных **hierarchyid**. Эта задача добавляет новые индексы для поддержки поиска по столбцу **hierarchyid** .  
+Таблица **NewOrd** , созданная в задании [Заполнение таблицы существующими иерархическими данными](../../relational-databases/tables/lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) , содержит все сведения о сотрудниках и представляет иерархическую структуру с использованием типа данных **hierarchyid** . Эта задача добавляет новые индексы для поддержки поиска по столбцу **hierarchyid** .  
   
 
 Столбец **hierarchyid** (**OrgNode**) является первичным ключом таблицы **NewOrg** . После создания таблицы в ней содержался кластеризованный индекс **PK_NewOrg_OrgNode** , обеспечивающий уникальность значений в столбце **OrgNode** . Кластеризованный индекс также поддерживает поиск по таблице по глубине.  
@@ -289,7 +289,7 @@ ms.locfileid: "72907297"
     /1/1/5/ 0x5AE3  3   11  adventure-works\ovidiu0
     ```
 
-    Индекс с приоритетом значений в столбце **EmployeeID**: строки хранятся в соответствии с последовательностью значений **EmployeeID**.  
+    Индекс преимущественно по**EmployeeID**: строки хранятся в соответствии с последовательностью значений **EmployeeID** .  
 
     ```
     LogicalNode OrgNode H_Level EmployeeID  LoginID
@@ -351,4 +351,4 @@ ms.locfileid: "72907297"
 
 Дополнительные сведения см. в следующей статье:
 > [!div class="nextstepaction"]
-> [Следующие шаги](lesson-2-creating-and-managing-data-in-a-hierarchical-table.md)
+> [Дальнейшие действия](lesson-2-creating-and-managing-data-in-a-hierarchical-table.md)

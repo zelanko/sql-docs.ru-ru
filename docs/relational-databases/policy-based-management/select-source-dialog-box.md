@@ -13,10 +13,10 @@ ms.assetid: d664c2e5-dd0c-4da8-b27d-aa4ee4fc0ffd
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: dc505c0fe87a298ba4a9015f467119c1b7d6d3f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68021722"
 ---
 # <a name="select-source-dialog-box"></a>Диалоговое окно «Выбор источника»
@@ -37,7 +37,7 @@ ms.locfileid: "68021722"
  **Файлы**  
  Выберите один или несколько XML-файлов, содержащих политики.  
   
- **Сервер**  
+ **Server**  
  Позволяет выбрать сервер, содержащий политики, которые следует запустить.  
   
  **Тип сервера**  
@@ -46,7 +46,7 @@ ms.locfileid: "68021722"
  **Имя сервера**  
  Выберите экземпляр сервера для подключения. По умолчанию отображается экземпляр сервера, с которым в последний раз устанавливалось соединение.  
   
- **Проверка подлинности**  
+ **Аутентификация**  
  При подключении к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]доступны два режима проверки подлинности.  
   
  **Режим проверки подлинности Windows (проверка подлинности Windows)**  

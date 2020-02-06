@@ -15,10 +15,10 @@ ms.assetid: 048ae16d-31c3-489a-9f1e-1400a3bacd39
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a6f5e2b2bcd92c0a17ccada2ca755cbc14b9d647
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68032491"
 ---
 # <a name="sql-server-monitor-overview"></a>Обзор монитора SQL Server
@@ -51,7 +51,7 @@ ms.locfileid: "68032491"
  **Действие**  
  Содержит контекстное меню узла, выбранного в дереве навигации.  
   
- **Перейти**  
+ **GO**  
  Содержит перечень компонентов мониторинга:  
   
 -   Зеркальное отображение базы данных  
@@ -63,6 +63,6 @@ ms.locfileid: "68032491"
 -   [Запуск монитора зеркального отображения баз данных (среда SQL Server Management Studio)](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
 ## <a name="see-also"></a>См. также:  
- [Мониторинг зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)  
+ [Наблюдение за зеркальным отображением базы данных (SQL Server)](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)  
   
   

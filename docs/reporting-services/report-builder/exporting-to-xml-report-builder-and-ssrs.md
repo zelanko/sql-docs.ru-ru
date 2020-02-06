@@ -9,10 +9,10 @@ ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 52d83c17a1cfe79f8add7f0764216d404c14cfd9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580760"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>Экспорт в XML (построитель отчетов и службы SSRS)
@@ -26,7 +26,7 @@ ms.locfileid: "65580760"
   
 |Элемент|Поведение при подготовке к просмотру|  
 |----------|------------------------|  
-|Отчет|Готовится к просмотру как элемент высшего уровня XML-документа.|  
+|Report|Готовится к просмотру как элемент высшего уровня XML-документа.|  
 |Области данных|Готовятся к просмотру как элементы в пределах элемента для своего контейнера. Области данных включают таблицу, матрицу и список, отображающие данные в виде текста и диаграммы, гистограмм, инфокривых, датчиков и индикаторов, визуализирующих данные.|  
 |Области группирования и подробностей|Каждый экземпляр готовится к просмотру как элемент в пределах элемента для своего контейнера.|  
 |Текстовое поле|Готовится к просмотру как атрибут или элемент в пределах своего контейнера.|  
@@ -65,7 +65,7 @@ ms.locfileid: "65580760"
 |**Time**|**xsd:string**|  
 |**Boolean**|**xsd:boolean**|  
 |**String**, **Char**|**xsd:string**|  
-|Другое|**xsd:string**|  
+|Другие|**xsd:string**|  
   
   
 ##  <a name="XMLSpecificRenderingRules"></a> Правила подготовки отчетов в формате XML  
@@ -82,7 +82,7 @@ ms.locfileid: "65580760"
   
 |Имя|Значение|  
 |----------|-----------|  
-|Отчет|Report.DataElementName|  
+|Report|Report.DataElementName|  
 |ReportURL|URLEncoded — абсолютный URL-адрес отчета на сервере.|  
 |SchemaName|Report.SchemaName. Если значение равно NULL, то Report.Name. Если используется значение Report.Name, оно сначала шифруется с помощью параметра XmlConvert.EncodeLocalName.|  
 |ReportName|Имя отчета.|  
@@ -191,6 +191,6 @@ ms.locfileid: "65580760"
  [Поведение при подготовке к просмотру (построитель отчетов и службы SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Интерактивные возможности различных модулей подготовки отчетов к просмотру (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Подготовка к просмотру элементов отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [Таблицы, матрицы, списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
