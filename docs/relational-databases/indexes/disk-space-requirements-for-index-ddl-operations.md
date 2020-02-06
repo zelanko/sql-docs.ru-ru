@@ -17,10 +17,10 @@ ms.assetid: 35930826-c870-44c1-a966-a6a4638f62ef
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e49ef1ad379f675ca457f8cd9c82a5e4ecc3fd04
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68107134"
 ---
 # <a name="disk-space-requirements-for-index-ddl-operations"></a>Disk Space Requirements for Index DDL Operations
@@ -80,7 +80,7 @@ ms.locfileid: "68107134"
  Для действий с индексами в оперативном режиме применяется управление версиями строк, позволяющее изолировать действия с индексами от воздействия изменений, внесенных другими транзакциями. Это исключает необходимость запрашивать общую блокировку уже считанных записей. Для одновременных операций обновления и удаления, выполняемых пользователями во время операций с индексами в сети, требуется место в базе данных **tempdb**для сохранения записей версий. Дополнительные сведения см. в статье [Выполнение операции с индексами в сети](../../relational-databases/indexes/perform-index-operations-online.md) .  
   
 ## <a name="related-tasks"></a>Связанные задачи  
- [Index Disk Space Example](../../relational-databases/indexes/index-disk-space-example.md)  
+ [Пример использования места на диске для индекса](../../relational-databases/indexes/index-disk-space-example.md)  
   
  [Место на диске журнала транзакций для операций обработки индекса](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md)  
   
@@ -99,7 +99,7 @@ ms.locfileid: "68107134"
   
  [DROP INDEX (Transact-SQL)](../../t-sql/statements/drop-index-transact-sql.md)  
   
- [Укажите коэффициент заполнения для индекса](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)  
+ [Указание коэффициента заполнения для индекса](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)  
   
  [Реорганизация и перестроение индексов](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)  
   

@@ -13,10 +13,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 3ee3baa843aee101e5cbea425582a96e32bcd92b
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056511"
 ---
 # <a name="find-similar-and-related-documents-with-semantic-search"></a>Поиск похожих и связанных документов с использованием семантического поиска
@@ -28,14 +28,14 @@ ms.locfileid: "74056511"
   
  Функция**SEMANTICSIMILARITYTABLE** возвращает таблицу, состоящую из нуля, одной или нескольких строк, содержимое которых в указанном столбце семантически схоже с заданным документом. На эту функцию набора строк можно ссылаться в предложении FROM инструкции SELECT как на обычное имя таблицы.  
   
- Искать схожие документы по разным столбцам невозможно. Функция **SEMANTICSIMILARITYTABLE** извлекает результаты только из столбца, совпадающего с исходным столбцом, определяемым аргументом **source_key**.  
+ Искать схожие документы по разным столбцам невозможно. Функция **SEMANTICSIMILARITYTABLE** извлекает результаты только из столбца, совпадающего с исходным столбцом, определяемым аргументом **source_key** .  
   
  Подробные сведения о параметрах функции **SEMANTICSIMILARITYTABLE** и о возвращаемой таблице результатов см. в статье [semanticsimilaritytable (Transact-SQL)](../../relational-databases/system-functions/semanticsimilaritytable-transact-sql.md).  
   
 > [!IMPORTANT]  
 >  Для целевых столбцов должно быть включено полнотекстовое и семантическое индексирование.  
   
-###  <a name="HowToIdentifySimilar"></a> Пример. Поиск наиболее важных документов, больше всего схожих с другим документом  
+###  <a name="HowToIdentifySimilar"></a> Example: Find the top documents that are similar to another document  
  В следующем примере извлекается до 10 кандидатов, подобных указанному кандидату, обозначенному *\@CandidateID* из таблицы HumanResources.JobCandidateHumanResources.JobCandidate в примере базы данных AdventureWorks2012.  
   
 ```scr  
@@ -60,7 +60,7 @@ GO
 > [!IMPORTANT]  
 >  Для целевых столбцов должно быть включено полнотекстовое и семантическое индексирование.  
   
-###  <a name="HowToSimilarPhrases"></a> Пример. Поиск ключевых фраз, которые больше всего схожи в разных документах  
+###  <a name="HowToSimilarPhrases"></a> Example: Find the top key phrases that are similar between documents  
  В следующем примере производится извлечение 5 ключевых фраз, имеющих высший показатель подобия среди указанных кандидатов в таблице **HumanResources.JobCandidate** образца базы данных AdventureWorks2012.  
   
 ```sql  

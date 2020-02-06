@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ee5e7fd6511a624b05b4d6c7d03c1f2dcd288054
-ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70228431"
 ---
 # <a name="common-errors-with-database-mail"></a>Распространенные ошибки при работе с компонентом Database Mail 
@@ -33,7 +33,7 @@ ms.locfileid: "70228431"
 EXEC msdb.dbo.sp_send_dbmail ...
 ```
 
-или:
+Или сделайте так:
 
 ```sql
 USE msdb;
@@ -43,7 +43,7 @@ EXEC dbo.sp_send_dbmail ...
 
 Для включения и настройки компонента Database Mail используется [Мастер настройки компонента Database Mail](configure-database-mail.md).
 
-## <a name="profile-not-valid"></a>Недопустимый профиль
+## <a name="profile-not-valid"></a>недопустимый профиль
 Есть две возможные причины возникновения этого сообщения. Указанный профиль не существует или пользователь, выполняющий процедуру [sp_send_dbmail (Transact-SQL)](../system-stored-procedures/sp-send-dbmail-transact-sql.md), не имеет разрешения на доступ к этому профилю.
 
 Чтобы проверить разрешения для профиля, выполните хранимую процедуру [sysmail_help_principalprofile_sp (Transact-SQL)](../system-stored-procedures/sysmail-help-principalprofile-sp-transact-sql.md) с именем профиля. Используйте хранимую процедуру [sysmail_add_principalprofile_sp (Transact-SQL)](../system-stored-procedures/sysmail-help-principalprofile-sp-transact-sql.md) или [мастер настройки компонента Database Mail](configure-database-mail.md), чтобы дать пользователю или группе msdb доступ к профилю.
@@ -109,7 +109,7 @@ EXECUTE dbo.sysmail_help_status_sp;
 EXECUTE dbo.sysmail_start_sp;
 ```
 
-В момент активации компонент Service Broker проверяет продолжительность диалога для сообщений; сообщениям, которые находились в очереди передачи компонента Service Broker дольше, чем установлено настройками продолжительности диалога, немедленно назначается состояние ошибки. Компонент Database Mail обновляет состояние сообщений с ошибками в таблице [sysmail_allitems](../system-catalog-views/sysmail-allitems-transact-sql.md) и связанных представлениях. Вам следует принять решение о целесообразности повторной отправки сообщений. Дополнительные сведения о настройке продолжительности диалога, которая используется компонентом Database Mail, см. в разделе [sysmail_configure_sp (Transact-SQL)](../system-stored-procedures/sysmail-configure-sp-transact-sql.md).
+В момент активации компонент Service Broker проверяет продолжительность диалога для сообщений; сообщениям, которые находились в очереди передачи компонента Service Broker дольше, чем установлено настройками продолжительности диалога, немедленно назначается состояние ошибки. Компонент Database Mail обновляет состояние сообщений с ошибками в таблице [sysmail_allitems](../system-catalog-views/sysmail-allitems-transact-sql.md) и связанных представлениях. После этого пользователь может принять решение о целесообразности новой отправки сообщений. Дополнительные сведения о настройке продолжительности диалога, которая используется компонентом Database Mail, см. в разделе [sysmail_configure_sp (Transact-SQL)](../system-stored-procedures/sysmail-configure-sp-transact-sql.md).
 
 
 

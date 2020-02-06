@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 ms.openlocfilehash: 24a9d3d9ee0fd65b08e30f40a0597eadf47c6b76
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67916039"
 ---
 # <a name="operate-always-on-availability-groups-on-linux"></a>Управление группами доступности Always On на Linux
@@ -76,13 +76,13 @@ ms.locfileid: "67916039"
 
    Если тип кластера группы доступности — `NONE`, нужна отработка отказа вручную. Последовательно выполните следующие шаги.
 
-      A. Выполните следующую команду, чтобы превратить первичную реплику во вторичную. Замените `AG1` на имя группы доступности. Выполните команду Transact-SQL на экземпляре SQL Server, на котором размещена первичная реплика.
+      а. Выполните следующую команду, чтобы превратить первичную реплику во вторичную. Замените `AG1` на имя группы доступности. Выполните команду Transact-SQL на экземпляре SQL Server, на котором размещена первичная реплика.
 
       ```transact-sql
       ALTER AVAILABILITY GROUP [ag1] SET (ROLE = SECONDARY);
       ```
 
-      Б. Выполните следующую команду, чтобы превратить синхронную вторичную реплику в первичную. Выполните следующую команду Transact-SQL на целевом экземпляре SQL Server — экземпляре, на котором размещена синхронная вторичная реплика.
+      b. Выполните следующую команду, чтобы превратить синхронную вторичную реплику в первичную. Выполните следующую команду Transact-SQL на целевом экземпляре SQL Server — экземпляре, на котором размещена синхронная вторичная реплика.
 
       ```transact-sql
       ALTER AVAILABILITY GROUP [ag1] FAILOVER;
@@ -134,7 +134,7 @@ ms.locfileid: "67916039"
    ```
  
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Настройка кластера Red Hat Enterprise Linux для ресурсов кластера группы доступности SQL Server](sql-server-linux-availability-group-cluster-rhel.md)
 

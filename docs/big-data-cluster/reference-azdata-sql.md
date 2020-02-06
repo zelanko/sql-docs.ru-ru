@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 951598c895fe322ee1a8b32cbbc2dc29b20c8e1a
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: f8fa1ca8df7f4d72c6df9b252d639f8771dee30c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531661"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74908740"
 ---
 # <a name="azdata-sql"></a>azdata sql
 
@@ -25,10 +25,10 @@ ms.locfileid: "73531661"
 ## <a name="commands"></a>Команды
 |     |     |
 | --- | --- |
-[azdata sql shell](#azdata-sql-shell) | Интерфейс командной строки (CLI) баз данных SQL позволяет пользователю взаимодействовать с SQL Server с помощью T-SQL.
+[azdata sql shell](#azdata-sql-shell) | Интерфейс командной строки (CLI) баз данных SQL позволяет пользователю взаимодействовать с SQL Server с помощью T-SQL.
 [azdata sql query](#azdata-sql-query) | Команда query разрешает выполнение запроса T-SQL.
 ## <a name="azdata-sql-shell"></a>azdata sql shell
-Интерфейс командной строки (CLI) баз данных SQL позволяет пользователю взаимодействовать с SQL Server с помощью T-SQL.
+Интерфейс командной строки (CLI) баз данных SQL позволяет пользователю взаимодействовать с SQL Server с помощью T-SQL.
 ```bash
 azdata sql shell 
 ```
@@ -51,15 +51,14 @@ azdata sql shell
 ## <a name="azdata-sql-query"></a>azdata sql query
 Команда query разрешает выполнение запроса T-SQL.
 ```bash
-azdata sql query --database -d 
-                 -q
+azdata sql query -q --database -d
 ```
 ### <a name="examples"></a>Примеры
 Выбор списка имен таблиц.  По умолчанию используется база данных master.
 ```bash
-azdata sql query 'SELECT name FROM SYS.TABLES'
+azdata sql query -q 'SELECT name FROM SYS.TABLES'
 ```
-### <a name="required-parameters"></a>Обязательные параметры
+### <a name="required-parameters"></a>Необходимые параметры
 #### `--database -d`
 База данных, в которой нужно выполнить запрос.  По умолчанию используется база данных master.
 #### `-q`
@@ -76,6 +75,6 @@ azdata sql query 'SELECT name FROM SYS.TABLES'
 #### `--verbose`
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
-Дополнительные сведения о других командах `azdata` см. в [справочнике по azdata](reference-azdata.md). Дополнительные сведения об установке средства `azdata` см. в статье [Установка azdata для управления кластерами больших данных SQL Server 2019](deploy-install-azdata.md).
+Дополнительные сведения о других командах `azdata` см. в [справочнике по azdata](reference-azdata.md). Дополнительные сведения об установке средства `azdata` см. в статье [Установка azdata для управления кластерами больших данных SQL Server 2019](deploy-install-azdata.md).

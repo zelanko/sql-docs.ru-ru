@@ -18,10 +18,10 @@ ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 08c4877b4fc3280826100cdfe7f0dfcad716ca22
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115307"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>Функции и задачи служебной программы SQL Server
@@ -43,7 +43,7 @@ ms.locfileid: "68115307"
 |-|-|  
 |**Описание**|**Раздел**|  
 |Описывает замечания по настройке сервера для выполнения программы и настройке не относящихся к программе наборов элементов сбора на одном и том же экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Замечания по выполнению программы, не относящиеся к прочим наборам элементов сбора на том же экземпляре SQL Server](../../relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md)|  
-|Описывает, как создать точку управления служебной программой SQL Server.|[Создать точку управления служебной программы SQL Server (служебная программа SQL Server)](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md)|  
+|Описывает, как создать точку управления служебной программой SQL Server.|[Создание точки управления служебной программы SQL Server (служебная программа SQL Server)](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md)|  
 |Описывает, как подключиться к служебной программе SQL Server.|[Подключение к служебной программе SQL Server](../../relational-databases/manage/connect-to-a-sql-server-utility.md)|  
 |Описывает, как зарегистрировать экземпляр SQL Server с помощью точки управления служебной программой.|[Регистрация экземпляра SQL Server (служебная программа SQL Server)](../../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)|  
 |Описывает, как использовать обозреватель программ для управления служебной программой SQL Server.|[Использование проводника служебных программ для управления служебной программой SQL Server](../../relational-databases/manage/use-utility-explorer-to-manage-the-sql-server-utility.md)|  

@@ -15,10 +15,10 @@ ms.assetid: 022b679c-6799-4c13-9185-814224a20412
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bd0f58fc45889bfef8701538bebc4ec94af85944
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115753"
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>Задача «Очистка после обслуживания» (план обслуживания)

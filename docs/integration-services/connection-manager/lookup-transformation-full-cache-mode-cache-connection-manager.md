@@ -13,10 +13,10 @@ ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1ae22daf218c65bc0aa95068d6162a7b966c838c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298520"
 ---
 # <a name="lookup-transformation-full-cache-mode---cache-connection-manager"></a>Преобразование "Уточняющий запрос" в режиме полного кэширования — диспетчер подключений кэша
@@ -29,7 +29,7 @@ ms.locfileid: "71298520"
 > [!NOTE]  
 >  Диспетчер соединений с кэшем не поддерживает типы данных больших двоичных объектов: DT_TEXT, DT_NTEXT и DT_IMAGE. Если ссылочный набор данных содержит данные типа BLOB, то при попытке выполнения пакета компонент завершится сбоем. **Редактор диспетчера соединений с кэшем** можно использовать для изменения типов данных столбцов. Дополнительные сведения см. в разделе [Cache Connection Manager Editor](../../integration-services/connection-manager/cache-connection-manager-editor.md).  
   
- Преобразование «Уточняющий запрос» выполняет уточняющие запросы, соединяя данные из входных столбцов подключенного источника данных и данные из столбцов в эталонном наборе данных. Дополнительные сведения см. в статье [Lookup Transformation](../../integration-services/data-flow/transformations/lookup-transformation.md).  
+ Преобразование «Уточняющий запрос» выполняет уточняющие запросы, соединяя данные из входных столбцов подключенного источника данных и данные из столбцов в эталонном наборе данных. Дополнительные сведения см. в разделе [Lookup Transformation](../../integration-services/data-flow/transformations/lookup-transformation.md).  
   
  Чтобы создать эталонный набор данных, используется один из следующих методов.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "71298520"
   
 -   [Контейнер последовательности](../../integration-services/control-flow/sequence-container.md)  
   
- Видео, в котором показано, как реализовать преобразование "Уточняющий запрос" в режиме полного кэширования с помощью диспетчера подключений к кэшу, см. в статье [Как реализовать преобразование "Уточняющий запрос" в режиме полного кэширования (видеоматериал по SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131031).  
+ Видеоматериал, в котором показано, как реализовать преобразование "Уточняющий запрос" в режиме полного кэширования с помощью диспетчера подключений с кэшем, см. в статье [Как реализовать преобразование "Уточняющий запрос" в режиме полного кэширования (видеоматериал по SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131031).  
   
 ### <a name="to-implement-a-lookup-transformation-in-full-cache-mode-in-one-package-by-using-cache-connection-manager-and-a-data-source-in-the-data-flow"></a>Реализация преобразования «Уточняющий запрос» в режиме полного кэширования в одном пакете с использованием диспетчера соединений с кэшем и источника данных в потоке данных  
   
@@ -284,7 +284,7 @@ ms.locfileid: "71298520"
 9. Запустите пакет.  
   
 ## <a name="see-also"></a>См. также:  
- [Реализация преобразования «Уточняющий запрос» в режиме полного кэширования с помощью диспетчера соединений OLE DB](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
+ [Реализация преобразования "Уточняющий запрос" в режиме полного кэширования с помощью диспетчера подключений OLE DB](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
  [Реализация уточняющего запроса в режиме "Частичное кэширование" или "Без кэширования"](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Преобразования служб Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

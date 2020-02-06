@@ -14,10 +14,10 @@ ms.assetid: a634e94d-f492-4dfd-9611-a35f545106a1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: aea0d3c07482c7c54dc5adb8956b290791f29111
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295170"
 ---
 # <a name="catalogpackages-ssisdb-database"></a>catalog.packages (база данных SSISDB)
@@ -29,7 +29,7 @@ ms.locfileid: "71295170"
 
   Отображает подробные сведения для всех пакетов, которые появляются в каталоге служб **SSISDB**.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |package_id|**bigint**|Уникальный идентификатор (ID) пакета.|  
 |name|**nvarchar(256)**|Уникальное имя пакета.|  

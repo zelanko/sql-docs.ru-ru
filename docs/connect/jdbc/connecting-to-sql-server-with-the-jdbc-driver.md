@@ -11,10 +11,10 @@ ms.assetid: 94bcfbe3-f00e-4774-bda8-bb7577518fec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c8dbf7a415d413e0a9fad431013255ff48417687
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028182"
 ---
 # <a name="connecting-to-sql-server-with-the-jdbc-driver"></a>Подключение к SQL Server с помощью JDBC Driver
@@ -32,7 +32,7 @@ System.setProperty("java.net.preferIPv6Addresses", "true");
   
 ## <a name="in-this-section"></a>В этом разделе  
   
-|Раздел|Описание|  
+|Раздел|Description|  
 |-----------|-----------------|  
 |[Создание URL-адреса подключения](../../connect/jdbc/building-the-connection-url.md)|Описывает, как создать URL-адрес подключения к базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Также описывает подключение к именованным экземплярам базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Настройка свойств подключения](../../connect/jdbc/setting-the-connection-properties.md)|Описывает различные свойства подключения и их применение при подключении к базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  

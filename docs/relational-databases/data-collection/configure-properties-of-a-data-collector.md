@@ -13,10 +13,10 @@ ms.assetid: cf98f57d-5a6d-4bc3-bf10-783e460fc63d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1da1a6aa4b7a98a7ac76c32effc116efdc7020d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140783"
 ---
 # <a name="configure-properties-of-a-data-collector"></a>Настройка свойств сборщика данных
@@ -45,7 +45,7 @@ ms.locfileid: "68140783"
  Эта страница используется для настройки параметров повторных попыток соединения с хранилищем данных управления.  
   
  **Количество повторных попыток в случае ошибки передачи**  
- Указывает число повторных попыток передачи в хранилище управляющих данных, если передача завершается ошибкой. Значение по умолчанию равно 1.  
+ Указывает число повторных попыток передачи в хранилище управляющих данных, если передача завершается ошибкой. Значение по умолчанию — 1.  
   
 ## <a name="see-also"></a>См. также:  
  [Управление сбором данных](../../relational-databases/data-collection/manage-data-collection.md)   
