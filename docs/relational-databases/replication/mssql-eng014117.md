@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: e5906a76-9511-4c47-8826-8c765b58a39d
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 2d6a7318c8d45da6c6c029dcacc315fdd1b36460
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 1fa2265ec7f53372eac007ecb668cb6801e50d21
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809958"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287732"
 ---
 # <a name="mssql_eng014117"></a>MSSQL_ENG014117
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "68809958"
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|14117|  
 |Источник события|MSSQLSERVER|  
 |Компонент|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
@@ -48,7 +48,7 @@ ms.locfileid: "68809958"
 ## <a name="user-action"></a>Действие пользователя  
  Убедитесь, что экземпляр распространителя зарегистрирован правильно. Если сетевое имя компьютера отличается от имени экземпляра SQL Server.  
   
--   Добавьте уникальное имя данного экземпляра SQL Server в качестве допустимого сетевого имени. Один из методов установки альтернативного сетевого имени — это добавление имени в локальный файл hosts. Файл локальных узлов по умолчанию расположен в каталоге WINDOWS\system32\drivers\etc или WINNT\system32\drivers\etc. Дополнительные сведения см. в документации по Windows.  
+-   Добавьте уникальное имя данного экземпляра SQL Server в качестве допустимого сетевого имени. Один из методов установки альтернативного сетевого имени — это добавление имени в локальный файл hosts. Локальный файл hosts по умолчанию расположен в каталоге WINDOWS\system32\drivers\etc или WINNT\system32\drivers\etc. Дополнительные сведения см. в документации Windows.  
   
      Например, если имя компьютера — comp1, IP-адрес компьютера — 10.193.17.129, имя экземпляра — inst1/instname, то следует добавить в файл hosts следующую запись:  
   
@@ -69,9 +69,9 @@ ms.locfileid: "68809958"
   
  После проверки верности регистрации экземпляра распространителя убедитесь в том, что база данных распространителя содержится в списке **msdb..MSdistributiondbs**. Если базы данных в списке нет:  
   
-1.  Создайте скрипт конфигурации распространения. Дополнительные сведения см. в статье [Scripting Replication](../../relational-databases/replication/scripting-replication.md).  
+1.  Создайте скрипт конфигурации распространения. Дополнительные сведения см. в разделе [Scripting Replication](../../relational-databases/replication/scripting-replication.md).  
   
-2.  Отключите распространение, а затем включите его снова. Дополнительные сведения см. в статье [Настройка распространителя](../../relational-databases/replication/configure-distribution.md).  
+2.  Отключите распространение, а затем включите его снова. Дополнительные сведения см. в разделе [Configure Distribution](../../relational-databases/replication/configure-distribution.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Справочник по ошибкам и событиям (репликация)](../../relational-databases/replication/errors-and-events-reference-replication.md)  

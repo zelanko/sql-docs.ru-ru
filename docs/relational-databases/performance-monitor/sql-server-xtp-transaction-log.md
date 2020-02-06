@@ -11,10 +11,10 @@ ms.assetid: d16491ef-4a25-4e02-88a7-ab7c0812904a
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: bc88a64348879c6fb25c8949a829698319c7f618
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113960"
 ---
 # <a name="sql-server-xtp-transaction-log"></a>Журнал XTP-транзакций SQL Server
@@ -24,7 +24,7 @@ ms.locfileid: "68113960"
   
  В этой таблице перечислены счетчики **журналов транзакций XTP SQL Server** .  
   
-|Счетчик|Описание|  
+|Счетчик|Description|  
 |-------------|-----------------|  
 |**Записанные байты журнала/с**|Число байтов, записанное в журнал транзакций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] механизмом In-Memory OLTP (в среднем), в секунду.|  
 |**Записанные записи журнала/с**|Число записей в журнале транзакций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , создаваемых механизмом In-Memory OLTP (в среднем), в секунду.|  

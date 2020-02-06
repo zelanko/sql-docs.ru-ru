@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1020bb9dff821471f33ba3af9285249a93980133
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68055990"
 ---
 # <a name="specify-first-and-last-triggers"></a>Указание первого и последнего триггеров
@@ -29,7 +29,7 @@ ms.locfileid: "68055990"
   
  Задать порядок срабатывания для триггера AFTER можно с помощью хранимой процедуры **sp_settriggerorder** . Хранимая процедура**sp_settriggerorder** имеет следующие параметры.  
   
-|Параметр|Описание|  
+|Параметр|Description|  
 |------------|-----------------|  
 |**Первая**|Указывает, что триггер DML является первым триггером AFTER, срабатывающим для запускающего действия.|  
 |**Последняя**|Указывает, что триггер DML является последним триггером AFTER, срабатывающим для запускающего действия.|  
@@ -52,7 +52,7 @@ sp_settriggerorder @triggername = 'MyTrigger', @order = 'first', @stmttype = 'UP
   
  Если инструкция ALTER TRIGGER изменяет первый или последний триггер, атрибут **First** или **Last** удаляется и в качестве значения порядка указывается **None**. Порядок должен быть изменен с использованием свойства **sp_settriggerorder**.  
   
- Функция OBJECTPROPERTY сообщает, является ли триггер первым или последним триггером, используя следующие свойства: **ExecIsFirstInsertTrigger**, **ExecIsFirstUpdateTrigger**, **ExecIsFirstDeleteTrigger**, **ExecIsLastInsertTrigger**, **ExecIsLastUpdateTrigger** и **ExecIsLastDeleteTrigger**.  
+ Функция OBJECTPROPERTY сообщает, является ли триггер первым или последним, используя следующие свойства: **ExecIsFirstInsertTrigger**, **ExecIsFirstUpdateTrigger**, **ExecIsFirstDeleteTrigger**, **ExecIsLastInsertTrigger**, **ExecIsLastUpdateTrigger** и **ExecIsLastDeleteTrigger**.  
   
  Репликация автоматически создает первый триггер для любой таблицы, включенной в подписку немедленным обновлением или обновлением с постановкой в очередь. Репликация требует, чтобы ее триггер был первым. При попытке вставить таблицу с указанным первым триггером в немедленно обновляемую подписку или подписку, обновляемую посредством очередей, репликация инициирует ошибку. При попытке сделать триггер первым триггером после включения таблицы в подписку **sp_settriggerorder** возвращает ошибку. В случае использования ALTER для триггера репликации или использования **sp_settriggerorder** , чтобы сделать триггер репликации последним или триггером вне порядка, подписка не будет функционировать должным образом.  
   

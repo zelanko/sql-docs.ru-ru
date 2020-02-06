@@ -20,13 +20,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d5954a1b090be1749c07c09a83d4c2cfbf441f6a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071386"
 ---
-# <a name="firstvalue-transact-sql"></a>FIRST_VALUE (Transact-SQL)
+# <a name="first_value-transact-sql"></a>FIRST_VALUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   Возвращает первое значение из упорядоченного набора значений в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -56,7 +56,7 @@ FIRST_VALUE ( [scalar_expression ] )
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-using-firstvalue-over-a-query-result-set"></a>A. Использование FIRST_VALUE по результирующему набору запроса  
+### <a name="a-using-first_value-over-a-query-result-set"></a>A. Использование FIRST_VALUE по результирующему набору запроса  
  В следующем примере FIRST_VALUE использоваться для получения имени самого дешевого продукта в заданной категории продуктов.  
   
 ```  
@@ -88,7 +88,7 @@ HL Mountain Tire        35.00                 Patch Kit/8 Patches
   
 ```  
   
-### <a name="b-using-firstvalue-over-partitions"></a>Б. Использование FIRST_VALUE для секций  
+### <a name="b-using-first_value-over-partitions"></a>Б. Использование FIRST_VALUE для секций  
  В следующем примере FIRST_VALUE используется для получения сотрудника с наименьшим количеством часов отпуска по сравнению с другими сотрудниками, занимающими такую же должность. Предложение PARTITION BY разделяет сотрудников по должностям, а функция FIRST_VALUE применяется к каждой из секций по отдельности. Предложение ORDER BY, указанное в предложении OVER, определяет логический порядок, в котором функция FIRST_VALUE применяется к строкам каждой секции. Предложение ROWS UNBOUNDED PRECEDING задает начальную точку окна в качестве первой строки каждой секции.  
   
 ```  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 75c8c1f8-60bc-44a8-944b-d18d1f6bda11
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: d1f5e9afbc79aa83493507088fe1323b3733058b
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: df4463bf1ebfcc981c2828966c58e7fd0193f19f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75321609"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287974"
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>Initialize a Transactional Subscription Without a Snapshot
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "75321609"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Включение инициализации из резервной копии для публикаций транзакций (SQL Server Management Studio)](../../relational-databases/replication/enable-initialization-with-backup-for-transactional-publications.md)  
   
--   Программирование репликации на Transact-SQL: [Инициализация транзакционной подписки из резервной копии](../../relational-databases/replication/initialize-a-transactional-subscription-from-a-backup.md)  
+-   Программирование репликации на Transact-SQL: [Инициализация транзакционной подписки из резервной копии (программирование репликации на языке Transact-SQL)](../../relational-databases/replication/initialize-a-transactional-subscription-from-a-backup.md)  
   
 > [!NOTE]  
 >  Если подписка инициализируется без использования моментального снимка, то учетной записи, под которой выполняется служба SQL Server на издателе, должны быть предоставлены разрешения на запись в папку моментальных снимков на распространителе. Дополнительные сведения о разрешениях см. в разделе [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  

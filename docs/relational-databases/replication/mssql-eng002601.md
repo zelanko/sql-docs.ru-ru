@@ -12,22 +12,22 @@ helpviewer_keywords:
 ms.assetid: 657c3ae6-9e4b-4c60-becc-4caf7435c1dc
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 4384164d7baa79559d8810114494473435894f8c
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 96de733839deb644968303e58bcf069894aae160
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770512"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286337"
 ---
-# <a name="mssqleng002601"></a>MSSQL_ENG002601
+# <a name="mssql_eng002601"></a>MSSQL_ENG002601
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>Сведения о сообщении  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|2601|  
 |Источник события|MSSQLSERVER|  
 |Компонент|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
@@ -43,7 +43,7 @@ ms.locfileid: "68770512"
   
 -   Используется таблица со столбцом идентификаторов, однако управление столбцом осуществляется неверно.  
   
--   В публикации слиянием эта ошибка также может возникнуть во время вставки в системную таблицу **MSmerge_contents**. Возникающая ошибка подобна следующей: Невозможно вставить повторяющуюся ключевую строку в объект "MSmerge_contents" с уникальным индексом "ucl1SycContents".  
+-   В публикации слиянием эта ошибка также может возникнуть во время вставки в системную таблицу **MSmerge_contents**. Возникающая ошибка подобна следующей: Не удается вставить повторяющуюся строку ключа в объект MSmerge_contents с уникальным индексом ucl1SycContents.  
   
 ## <a name="user-action"></a>Действие пользователя  
  Действие по устранению проблемы зависит от причины, по которой она возникла:  

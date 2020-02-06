@@ -19,10 +19,10 @@ ms.assetid: cf03d1b1-724c-48bf-a8df-3fe2586b150a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ac25131e24aa89253abfc13eac69a4a60d0b7aee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040289"
 ---
 # <a name="assemblyproperty-transact-sql"></a>ASSEMBLYPROPERTY (Transact-SQL)
@@ -45,7 +45,7 @@ ASSEMBLYPROPERTY('assembly_name', 'property_name')
 *property_name*  
 Имя свойства, о котором будут получены данные. *property_name* может иметь одно из следующих значений:
   
-|Значение|Описание|  
+|Значение|Description|  
 |---|---|
 |**CultureInfo**|Локаль сборки.|  
 |**PublicKey**|Открытый ключ или токен открытого ключа сборки.|  

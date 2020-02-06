@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: bcdf5cee07666509722a591410431b00f82dc27b
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 43e3c343bc3947e6cfd0be4886e9d369b55758b8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75321468"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287031"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager"></a>Синхронизация подписки с помощью диспетчера синхронизации Windows
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Диспетчер синхронизации[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows можно использовать только для синхронизации подписок на публикации Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется на том же самом компьютере, что и диспетчер синхронизации (кроме того, его можно использовать для синхронизации файлов и веб-страниц в режиме «вне сети»). Чтобы использовать диспетчер синхронизации, необходимо выполнить следующие действия:  
   
-1.  Включите синхронизацию подписок по запросу с помощью диспетчера синхронизации Windows в диалоговом окне **Свойства подписки — \<подписчик>: \<база_данных_подписки>** . Дополнительные сведения о доступе к этому диалоговому окну см. в статье [Просмотр и изменение свойств подписки по запросу](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
+1.  Синхронизацию подписки по запросу с помощью диспетчера синхронизации Windows можно включить в диалоговом окне **Свойства подписки — \<подписчик>:\<база_данных_подписки>** . Дополнительные сведения о доступе к этому диалоговому окну см. в статье [Просмотр и изменение свойств подписки по запросу](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
   
 2.  Запустите диспетчер синхронизации из меню **Пуск** операционной системы Windows.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "75321468"
   
 ### <a name="to-enable-the-synchronization-of-pull-subscriptions-with-windows-synchronization-manager"></a>Включение синхронизации подписок по запросу с помощью диспетчера синхронизации Windows  
   
-1.  На странице **Общие** в диалоговом окне **Свойства подписки — \<подписчик>: \<база_данных_подписки>** выберите значение **Включить** для параметра **Использовать диспетчер синхронизации Windows**.  
+1.  На странице **Общие** диалогового окна **Свойства подписки — \<подписчик>: \<база_данных_подписки>** выберите значение **Включить** для параметра **Использовать диспетчер синхронизации Windows**.  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -61,7 +61,7 @@ ms.locfileid: "75321468"
   
 2.  В диалоговом окне **Свойства подписки SQL Server** выберите **Повторно инициализировать подписку**.  
   
-3.  Нажмите кнопку **Да**.  
+3.  Щелкните **Да**.  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

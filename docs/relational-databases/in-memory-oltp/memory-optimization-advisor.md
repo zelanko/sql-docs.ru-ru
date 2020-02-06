@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0a148e1725d1ce74d206e85cd9a8fd2b88f18eb0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050192"
 ---
 # <a name="memory-optimization-advisor"></a>Помощник по оптимизации памяти
@@ -32,7 +32,7 @@ ms.locfileid: "68050192"
   
 -   Перенос таблицы и данных в среду, оптимизированную для памяти (при отсутствии неподдерживаемых компонентов).  
     
- Дополнительные сведения о методологиях миграции см. в разделе [In-Memory OLTP — стандартные шаблоны рабочей нагрузки и вопросы миграции](https://msdn.microsoft.com/library/dn673538.aspx).  
+ Дополнительные сведения о методологиях миграции см. в разделе [Выполняемая в памяти OLTP — стандартные шаблоны рабочей нагрузки и вопросы миграции](https://msdn.microsoft.com/library/dn673538.aspx).  
   
 ## <a name="walkthrough-using-the-memory-optimization-advisor"></a>Пошаговое руководство по помощнику по оптимизации памяти  
  В **обозревателе объектов**щелкните правой кнопкой мыши таблицу для преобразования и выберите пункт **Помощник по оптимизации памяти**. Появится стартовая страница **помощника по оптимизации памяти таблицы**.  

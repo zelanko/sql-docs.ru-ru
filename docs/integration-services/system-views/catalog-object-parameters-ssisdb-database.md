@@ -11,10 +11,10 @@ ms.assetid: d7b04903-2d61-4159-9456-475942d1f732
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c462eb1957f1c8014dd9220f86cb9ae3e32ea65f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295186"
 ---
 # <a name="catalogobject_parameters-ssisdb-database"></a>catalog.object_parameters (база данных SSISDB)
@@ -26,7 +26,7 @@ ms.locfileid: "71295186"
 
   Отображает параметры для всех пакетов и проектов в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |parameter_id|**bigint**|Уникальный идентификатор (ID) параметра.|  
 |project_id|**bigint**|Уникальный идентификатор проекта.|  
@@ -34,7 +34,7 @@ ms.locfileid: "71295186"
 |object_name|**sysname**|Имя соответствующего проекта или пакета.|  
 |parameter_name|**sysname(nvarchar(128))**|Имя параметра.|  
 |Тип данных|**nvarchar(128)**|Тип данных параметра.|  
-|required|**bit**|Если значение равно `1`, то значение параметра необходимо для начала выполнения. Если значение равно `0`, то значение параметра не является необходимым для начала выполнения.|  
+|обязательно|**bit**|Если значение равно `1`, то значение параметра необходимо для начала выполнения. Если значение равно `0`, то значение параметра не является необходимым для начала выполнения.|  
 |sensitive|**bit**|Если значение равно `1`, значение параметра конфиденциально. Если значение равно `0`, то значение параметра не конфиденциально.|  
 |description|**nvarchar(1024)**|Необязательное описание пакета.|  
 |design_default_value|**sql_variant**|Стандартное значение параметра, назначенное во время проектирования проекта или пакета.|  

@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 63be7df50b6dd590d0ec90346d27f6601e15cf45
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75557843"
 ---
 # <a name="create-and-store-column-master-keys-for-always-encrypted"></a>Создание и хранение главных ключей столбцов для Always Encrypted
@@ -206,7 +206,7 @@ $cngKey = [System.Security.Cryptography.CngKey]::Create($cngAlgorithm, $cngKeyNa
 
 CSP должен поддерживать алгоритм RSA, используемый с постоянным шифрованием.
 
-В состав Windows входят следующие программные (не поддерживаемые модулем HSM) поставщики CSP, которые поддерживают RSA и могут использоваться для тестирования: Microsoft Enhanced RSA и AES Cryptographic Provider.
+В состав Windows входят следующие программные (не поддерживаемые модулем HSM) поставщики CSP, которые поддерживают RSA и могут использоваться в целях тестирования: Microsoft Enhanced RSA и AES Cryptographic Provider.
 
 ### <a name="creating-column-master-keys-in-a-key-store-using-capicsp"></a>Создание главных ключей столбцов в хранилище ключей с помощью CAPI или CSP
 

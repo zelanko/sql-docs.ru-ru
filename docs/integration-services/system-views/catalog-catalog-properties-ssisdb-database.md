@@ -11,10 +11,10 @@ ms.assetid: e604a382-95c8-4764-b268-742eb5c6d4cf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9b5f7628f0284cb4662f0cf88bff1fd80cb2014e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295231"
 ---
 # <a name="catalogcatalog_properties-ssisdb-database"></a>catalog.catalog_properties (база данных SSISDB)
@@ -26,7 +26,7 @@ ms.locfileid: "71295231"
 
   Отображает свойства каталога служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |property_name|**nvarchar(256)**|Имя свойства каталога.|  
 |property_value|**nvarchar(256)**|Значение свойства каталога.|  
@@ -34,7 +34,7 @@ ms.locfileid: "71295231"
 ## <a name="remarks"></a>Remarks  
  В этом представлении отображается строка для каждого свойства каталога.
   
-|Имя свойства|Описание|  
+|Имя свойства|Description|  
 |-------------------|-----------------|  
 |**DEFAULT_EXECUTION_MODE**|Режим выполнения пакетов, установленный по умолчанию на уровне сервера: `Server` (0) или `Scale Out` (1). |
 |**ENCRYPTION_ALGORITHM**|Тип алгоритма шифрования конфиденциальных данных. Допустимыми значениями являются `DES`, `TRIPLE_DES`, `TRIPLE_DES_3KEY`, `DESX`, `AES_128`, `AES_192` и `AES_256`. Примечание. Для изменения этого свойства база данных каталога должна работать в однопользовательском режиме.|

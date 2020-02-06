@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 0b8720bd-f339-4842-bc8f-b35a46f6d3ee
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 0d582af912f94fe0e0755340eb4d5ace892e72da
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: d5c50143bd5bb9e7891e92b6b539446e9df6b652
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75320051"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288365"
 ---
 # <a name="upgrade-replication-scripts-replication-transact-sql-programming"></a>обновить скрипты репликации (программирование репликации на языке Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "75320051"
   
 -   **sp_addpublication_snapshot**:  
   
-     Теперь при вызове хранимой процедуры [sp_addpublication_snapshot (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) для формирования задания пользователь должен в параметрах `@job_login` и `@job_password` передать учетные данные Windows, с которыми будет запускаться агент моментальных снимков на распространителе.  
+     Теперь при вызове хранимой процедуры `@job_login`sp_addpublication_snapshot (Transact-SQL)`@job_password` для формирования задания пользователь должен в параметрах [ и ](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) передать учетные данные Windows, с которыми будет запускаться агент моментальных снимков на распространителе.  
   
 -   **sp_addpushsubscription_agent**:  
   
@@ -51,11 +51,11 @@ ms.locfileid: "75320051"
   
 -   **sp_addpullsubscription_agent**:  
   
-     Теперь при вызове хранимой процедуры [sp_addpullsubscription_agent (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) для формирования задания пользователь должен в параметрах `@job_login` и `@job_password` передать учетные данные Windows, с которыми будет запускаться агент распространителя на подписчике.  
+     Теперь при вызове хранимой процедуры `@job_login`sp_addpullsubscription_agent (Transact-SQL)`@job_password` для формирования задания пользователь должен в параметрах [ и ](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) передать учетные данные Windows, с которыми будет запускаться агент распространителя на подписчике.  
   
 -   **sp_addmergepullsubscription_agent**:  
   
-     Теперь при вызове хранимой процедуры [sp_addmergepullsubscription_agent (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) для формирования задания пользователь должен в параметрах `@job_login` и `@job_password` передать учетные данные Windows, с которыми будет запускаться агент слияния на подписчике.  
+     Теперь при вызове хранимой процедуры `@job_login`sp_addmergepullsubscription_agent (Transact-SQL)`@job_password` для формирования задания пользователь должен в параметрах [ и ](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) передать учетные данные Windows, с которыми будет запускаться агент слияния на подписчике.  
   
 -   **sp_addlogreader_agent**:  
   

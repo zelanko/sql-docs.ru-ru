@@ -34,10 +34,10 @@ ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b9cfd2d1e81d3778653a59b697dc740680169071
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68096908"
 ---
 # <a name="xml-indexes-sql-server"></a>XML-индексы (SQL Server)
@@ -104,7 +104,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
  Обработчик запросов использует первичный XML-индекс для запросов, задействующих [xml Data Type Methods](../../t-sql/xml/xml-data-type-methods.md) , и возвращает либо скалярные значения, либо XML-поддеревья из самого первичного индекса. (В этом индексе хранятся все необходимые данные для реконструкции экземпляра XML.)  
   
- Например, следующий запрос возвращает сводные данные, содержащиеся в столбце типа данных **xml**`CatalogDescription` таблицы `ProductModel`. Запрос возвращает данные <`Summary`> только для тех изделий, описания каталога которых содержат также описание <`Features`>.  
+ Например, следующий запрос возвращает сводные данные, содержащиеся в столбце типа данных `CatalogDescription`**xml** таблицы `ProductModel` . Запрос возвращает данные <`Summary`> только для тех изделий, описания каталога которых содержат также описание <`Features`>.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")SELECT CatalogDescription.query('  /PD:ProductDescription/PD:Summary') as ResultFROM Production.ProductModelWHERE CatalogDescription.exist ('/PD:ProductDescription/PD:Features') = 1  

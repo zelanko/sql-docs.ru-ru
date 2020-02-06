@@ -13,10 +13,10 @@ ms.assetid: a2942509-39a2-4903-b504-ae80a300a9de
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3c85d6e423c63337be4d2eaf2f96c420a4f6ad33
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68067341"
 ---
 # <a name="modified-features-contained-database"></a>Измененные функции (автономная база данных)
@@ -46,13 +46,13 @@ ms.locfileid: "68067341"
  Временные таблицы не могут ссылаться на определяемые пользователем типы, коллекции схем XML или определяемые пользователем функции.  
   
 ## <a name="collation"></a>Параметры сортировки  
- В модели неавтономной базы данных есть три раздельных типа параметров сортировки: параметры сортировки базы данных, экземпляра и tempdb. В автономных базах данных используются только два набора параметров сортировки: параметры сортировки базы данных и параметры сортировки новых каталогов. Дополнительные сведения о параметрах сортировки в автономных базах данных см. в разделе [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md) .  
+ В модели неавтономной базы данных имеется три раздельных типа параметров сортировки: параметры сортировки базы данных, параметры сортировки экземпляра и параметры сортировки tempdb. В автономных базах данных используются только два набора параметров сортировки: параметры сортировки базы данных и параметры сортировки новых каталогов. Дополнительные сведения о параметрах сортировки в автономных базах данных см. в разделе [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md) .  
   
 ## <a name="user-options"></a>Пользовательские параметры  
  При включении поддержки автономных баз данных необходимо установить [параметр «пользовательские параметры»](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md) в значение 0 для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>См. также:  
- [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md)   
- [Contained Databases](../../relational-databases/databases/contained-databases.md)  
+ [Параметры сортировки автономной базы данных](../../relational-databases/databases/contained-database-collations.md)   
+ [Автономные базы данных](../../relational-databases/databases/contained-databases.md)  
   
   

@@ -14,10 +14,10 @@ ms.assetid: 20075fbe-0b48-42c8-b747-690f1aa23dcf
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 84e9e7577f74aa3ea43d99bc6b3c12cd5637c9ec
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558220"
 ---
 # <a name="evaluate-policies-dialog-box-policy-selection-page"></a>Диалоговое окно «Выполнение политик», страница «Выбор политики»
@@ -34,13 +34,13 @@ ms.locfileid: "75558220"
  **Server**  
  Выберите, чтобы подключиться к экземпляру компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , содержащего нужную политику.  
   
- **Политики: Политика**  
+ **Политики: политика**  
  Нажмите, чтобы открыть диалоговое окно для указанной политики.  
   
- **Политики: Категория**  
+ **Политики: категория**  
  Категория политики. Поле доступно только для чтения.  
   
- **Политики: Аспект**  
+ **Политики: аспект**  
  Аспект, реализуемый политикой. Поле доступно только для чтения.  
   
  **Вычислить**  

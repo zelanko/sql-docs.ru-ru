@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 85f666f6-14ee-4f19-b385-e5cc508aabe4
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 38570e910994e77084777bcc4245ccbb6033d39b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: ba656a13c71792a176b7f625a2f561f1f422e4b3
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769430"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287076"
 ---
 # <a name="subscription-synchronization-history"></a>Журнал синхронизации (подписки)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "68769430"
 ## <a name="options"></a>Параметры  
  Выберите сеансы агента слияния для просмотра из меню **Вид** , а затем выберите конкретный сеанс в сетке с названием **Сеансы агента слияния**. Подробные сведения об этом сеансе отображаются в сетке с названием **Статьи, обработанные в выбранном сеансе**.  
   
- **Вид**  
+ **View** (Вид)  
  Выберите сеансы агента слияния для просмотра.  
   
  **Состояние**  
@@ -36,7 +36,7 @@ ms.locfileid: "68769430"
   
 -   Ошибка  
   
--   Завершен  
+-   Завершено  
   
 -   Повтор  
   
@@ -82,7 +82,7 @@ ms.locfileid: "68769430"
  **Вставки**  
  Число строк, вставленных в этой фазе выбранного сеанса.  
   
- **Updates**  
+ **Обновления**  
  Число строк, обновленных в этой фазе выбранного сеанса.  
   
  **Deletes**  

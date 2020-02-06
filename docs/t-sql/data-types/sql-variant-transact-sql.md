@@ -21,13 +21,13 @@ ms.assetid: 01229779-8bc1-4c7d-890a-8246d4899250
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6a417d8240bb3360a13367230f0017762b51d659
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000503"
 ---
-# <a name="sqlvariant-transact-sql"></a>sql_variant (Transact-SQL)
+# <a name="sql_variant-transact-sql"></a>sql_variant (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Тип данных, хранящий значения различных типов данных, поддерживаемых [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
@@ -59,7 +59,7 @@ sql_variant
   
 Протокол ODBC поддерживает тип **sql_variant** не полностью. Поэтому столбцы типа **sql_variant**, запрашиваемые через поставщик Microsoft OLE DB для ODBC (MSDASQL), возвращаются в виде двоичных данных. Например, столбец типа **sql_variant**, содержащий строку "PS2091", возвращается в виде 0x505332303931.
   
-## <a name="comparing-sqlvariant-values"></a>Сравнение значений sql_variant  
+## <a name="comparing-sql_variant-values"></a>Сравнение значений sql_variant  
 Тип **sql_variant** находится на вершине иерархического списка преобразования типов данных. Для сравнения данных типа **sql_variant** иерархия типов данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] разбивается на семейства типов.
   
 |Иерархия типов данных|Семейство типов данных|  
@@ -85,17 +85,17 @@ sql_variant
 |**nchar**|Юникод|  
 |**varchar**|Юникод|  
 |**char**|Юникод|  
-|**varbinary**|Двоичный|  
-|**binary**|Двоичный|  
+|**varbinary**|Двоичные данные|  
+|**binary**|Двоичные данные|  
 |**uniqueidentifier**|Уникальный идентификатор |  
   
 К сравнениям типов **sql_variant** применяются указанные ниже правила.
 -   При сравнении значений **sql_variant** различных базовых типов данных, находящихся в разных семействах типов данных, большим из двух значений считается то, семейство типа данных которого находится выше в иерархии.  
 -   При сравнении значений **sql_variant** различных базовых типов данных, находящихся в одном семействе типов данных, значение, базовый тип данных которого находится ниже в иерархии, неявно приводится к другому типу данных, после чего производится сравнение.  
--   При сравнении значений **sql_variant** с типами данных **char**, **varchar**, **nchar** или **nvarchar** их параметры сортировки сначала сравниваются на основе следующих критериев: код языка, версия кода языка, флаги сравнения и идентификатор сортировки. Каждый из этих критериев сравнивается как целочисленное значение в приведенном порядке. Если все эти критерии равны, то сами строковые значения сравниваются в соответствии с параметрами сортировки.  
+-   При сравнении значений **sql_variant** типа данных **char**, **varchar**, **nchar** или **nvarchar** их параметры сортировки сначала сравниваются на основе следующих критериев: код языка, версия кода языка, флаги сравнения и идентификатор сортировки. Каждый из этих критериев сравнивается как целочисленное значение в приведенном порядке. Если все эти критерии равны, то сами строковые значения сравниваются в соответствии с параметрами сортировки.  
   
-## <a name="converting-sqlvariant-data"></a>Преобразование данных типа sql_variant  
-При обработке типа **sql_variant** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает неявное преобразование объектов других типов данных в тип **sql_variant**. Однако [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживает неявные преобразования типа **sql_variant** в объекты с другим типом данных.
+## <a name="converting-sql_variant-data"></a>Преобразование данных типа sql_variant  
+При обработке типа **sql_variant**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает неявное преобразование объектов других типов данных в тип **sql_variant**. Однако [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживает неявные преобразования типа **sql_variant** в объекты с другим типом данных.
   
 ## <a name="restrictions"></a>Ограничения  
 В приведенной ниже таблице перечислены типы значений, которые не могут сохраняться с помощью типа данных **sql_variant**.
@@ -114,8 +114,8 @@ sql_variant
 
 ## <a name="examples"></a>Примеры  
 
-### <a name="a-using-a-sqlvariant-in-a-table"></a>A. Использование sql_variant в таблице  
- В приведенном ниже примере создается таблица с типом данных sql_variant. Затем извлекаются сведения `SQL_VARIANT_PROPERTY` о значении `colA` `46279.1`, где `colB` =`1689`, при условии, что `tableA` имеет `colA` типа `sql_variant` и `colB`.  
+### <a name="a-using-a-sql_variant-in-a-table"></a>A. Использование sql_variant в таблице  
+ В приведенном ниже примере создается таблица с типом данных sql_variant. Затем извлекаются сведения `SQL_VARIANT_PROPERTY` о значении `colA``46279.1`, где `colB` =`1689`, при условии, что `tableA` имеет `colA` типа `sql_variant` и `colB`.  
   
 ```sql    
 CREATE   TABLE tableA(colA sql_variant, colB int)  
@@ -137,7 +137,7 @@ decimal      8           2
 (1 row(s) affected)  
 ```  
   
-### <a name="b-using-a-sqlvariant-as-a-variable"></a>Б. Использование типа sql_variant в качестве переменной   
+### <a name="b-using-a-sql_variant-as-a-variable"></a>Б. Использование типа sql_variant в качестве переменной   
  В приведенном ниже примере создается переменная с помощью типа данных sql_variant, а затем извлекаются сведения `SQL_VARIANT_PROPERTY` о переменной с именем @v1.  
   
 ```sql    

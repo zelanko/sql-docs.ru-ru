@@ -10,12 +10,12 @@ ms.author: maghan
 ms.custom: seodec18
 ms.date: 12/26/2019
 ms.reviewer: alayu; sstein
-ms.openlocfilehash: e0094ffaaa1be646b470547277026385c9dae24e
-ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
+ms.openlocfilehash: c5c75b2fda96d970b243161636d791029e311330
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75727031"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76516496"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Скачивание и установка Azure Data Studio
 
@@ -43,12 +43,12 @@ ms.locfileid: "75727031"
 
 **Пользовательский установщик** (рекомендуется)
 
-1. Скачайте и запустите [*пользовательский* установщик [!INCLUDE[name-sos](../includes/name-sos-short.md)] для Windows](https://go.microsoft.com/fwlink/?linkid=2113530).
+1. Скачайте и запустите [[!INCLUDE[name-sos](../includes/name-sos-short.md)]пользовательский*установщик* для Windows](https://go.microsoft.com/fwlink/?linkid=2113530).
 2. Запустите приложение [!INCLUDE[name-sos-short](../includes/name-sos-short.md)].
 
 **Системный установщик**
 
-1. Скачайте и запустите [*системный* установщик [!INCLUDE[name-sos](../includes/name-sos-short.md)] для Windows](https://go.microsoft.com/fwlink/?linkid=2113628).
+1. Скачайте и запустите [[!INCLUDE[name-sos](../includes/name-sos-short.md)]системный*установщик* для Windows](https://go.microsoft.com/fwlink/?linkid=2113628).
 2. Запустите приложение [!INCLUDE[name-sos-short](../includes/name-sos-short.md)].
 
 **ZIP-файл**
@@ -57,13 +57,11 @@ ms.locfileid: "75727031"
 2. Перейдите к скачанному файлу и извлеките его содержимое.
 3. Выполнить `\azuredatastudio-windows\azuredatastudio.exe`
 
-
 ## <a name="get-azure-data-studio-for-macos"></a>Получение Azure Data Studio для macOS
 
 1. Скачайте [[!INCLUDE[name-sos](../includes/name-sos-short.md)] для macOS](https://go.microsoft.com/fwlink/?linkid=2113528).
 2. Чтобы извлечь содержимое ZIP-файла, дважды щелкните его.
 3. Чтобы сделать [!INCLUDE[name-sos](../includes/name-sos-short.md)] доступным на *панели запуска*, перетащите *Azure Data Studio.app* в папку *Приложения*.
-
 
 ## <a name="get-azure-data-studio-for-linux"></a>Получение Azure Data Studio для Linux
 
@@ -146,10 +144,12 @@ ms.locfileid: "75727031"
 - Windows Server 2008 R2 (64-разрядная версия)
 
 ### <a name="macos"></a>macOS
+
 - macOS 10.13 High Sierra
 - macOS 10.12 Sierra
 
 ### <a name="linux"></a>Linux
+
 - Red Hat Enterprise Linux 7.4
 - Red Hat Enterprise Linux 7.3
 - SUSE Linux Enterprise Server версии 12 с пакетом обновления 2 (SP2)
@@ -164,6 +164,7 @@ ms.locfileid: "75727031"
 |             |           |            |
 
 ## <a name="check-for-updates"></a>Проверка обновлений
+
 Чтобы проверить наличие последних обновлений, щелкните значок шестеренки в левом нижнем углу окна и нажмите кнопку **Проверить наличие обновлений.**
 
 ## <a name="supported-sql-offerings"></a>Поддерживаемые предложения SQL
@@ -173,9 +174,8 @@ ms.locfileid: "75727031"
 ## <a name="upgrade-from-sql-operations-studio"></a>Обновление с SQL Operations Studio
 
 Если вы по-прежнему используете SQL Operations Studio, необходимо выполнить обновление до Azure Data Studio. SQL Operations Studio — это предварительное имя предварительной версии Azure Data Studio. В сентябре 2018 г. мы [изменили имя на Azure Data Studio](https://cloudblogs.microsoft.com/sqlserver/2018/09/25/azure-data-studio-for-sql-server/) и выпустили общедоступную версию. Поскольку SQL Operations Studio больше не обновляется и не поддерживается, мы просим всех пользователей SQL Operations Studio скачать последнюю версию Azure Data Studio, чтобы получить новейшие функции, обновления для системы безопасности и исправления.
- 
-При обновлении старой предварительной версии до последней Azure Data Studio будут потеряны текущие параметры и расширения. Чтобы переместить параметры, следуйте инструкциям в разделе *Перемещение параметров пользователя*.
 
+При обновлении старой предварительной версии до последней Azure Data Studio будут потеряны текущие параметры и расширения. Чтобы переместить параметры, следуйте инструкциям в разделе *Перемещение параметров пользователя*.
 
 ## <a name="move-user-settings"></a>Перемещение параметров пользователя
 
@@ -203,6 +203,7 @@ ms.locfileid: "75727031"
 ## <a name="next-steps"></a>Next Steps
 
 Чтобы приступить к работе, ознакомьтесь со следующими краткими руководствами.
+
 - [Подключение и отправка запроса к SQL Server](quickstart-sql-server.md)
 - [Подключение и отправка запроса к базе данных SQL Azure](quickstart-sql-database.md)
 - [Подключение и отправка запроса к хранилищу данных Azure](quickstart-sql-dw.md)

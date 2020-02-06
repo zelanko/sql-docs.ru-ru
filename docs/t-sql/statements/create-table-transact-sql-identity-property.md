@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8cf672f9aefc4b9fa0444c73596d2fac67089474
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67938933"
 ---
 # <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE (Transact-SQL) IDENTITY (Свойство)
@@ -77,7 +77,7 @@ IDENTITY [ (seed , increment) ]
   
  Для каждой таблицы можно создать только один столбец идентификаторов.  
   
- В таблицах, оптимизированных для памяти, в качестве начального значения и значения приращения должно быть задано 1,1. Указание для начального значения или значения приращения числа, отличного от 1, приведет к следующей ошибке: "Использование начального или добавочного значения, отличного от 1, не поддерживается в оптимизированных для памяти таблицах".  
+ В таблицах, оптимизированных для памяти, в качестве начального значения и значения приращения должно быть задано 1,1. Установка для параметров seed или increment значения, отличного от 1, приводит к следующей ошибке: "Использование для параметров seed и increment значений, отличных от 1, не поддерживается в таблицах, оптимизированных для памяти".  
   
 ## <a name="examples"></a>Примеры  
   

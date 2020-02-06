@@ -1,10 +1,9 @@
 ---
-title: Диалоговое окно "Открытие файла" | Документация Майкрософт
-ms.custom: ''
+title: Диалоговое окно «Открытие файла»
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: 3e01b9f5-2b0a-4fb3-9da8-984d27d17b8a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 869af839389aec533f132f6e2174d8495ffe1f20
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 61a0a699c7d754d3b21b671da5cd29ea0ec0f240
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263322"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251456"
 ---
 # <a name="open-file-dialog-box"></a>Диалоговое окно «Открытие файла»
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "68263322"
 > Прежде чем открыть проект или компонент в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], определите, заслуживает ли его код доверия. Даже само действие по открытию проекта или компонента в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] может привести к выполнению его кода в доверенном процессе на локальном компьютере.  
   
 ## <a name="option"></a>Параметр  
-**Папка**  
+**Look in**  
 Найти существующую папку проектов в выпадающем меню. Если выбрать папку в этом списке, в основной панели отображается содержимое папки.  
   
 ## <a name="my-places-bar"></a>Моя панель позиций  

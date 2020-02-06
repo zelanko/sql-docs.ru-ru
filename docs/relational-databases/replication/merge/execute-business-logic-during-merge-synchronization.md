@@ -19,10 +19,10 @@ ms.assetid: 9d4da2ef-c17f-4a31-a1f6-5c3b7ca85f71
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a3f1e7f07b95c71eeddc65fed6db3f10cc31ee32
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321504"
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>Выполнение бизнес-логики при синхронизации слиянием
@@ -31,7 +31,7 @@ ms.locfileid: "75321504"
   
 -   Справочник по программным интерфейсам (API): <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>  
   
--   Инструкции по реализации обработчика бизнес-логики: [Реализация обработчика бизнес-логики для статьи публикации слиянием](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
+-   Инструкции по реализации обработчика бизнес-логики: [Реализация обработчика бизнес-логики для статьи слияния](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
   
 ## <a name="uses-for-business-logic-handlers"></a>Применения обработчиков бизнес-логики  
  Процесс синхронизации слиянием может вызывать обработчики бизнес-логики для выполнения следующих задач:  

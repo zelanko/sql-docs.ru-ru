@@ -15,10 +15,10 @@ ms.assetid: 5a31e88a-ad7b-4ef7-b773-e2571f1cb3aa
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: f67b291da8de3dcb0ec84891ac69789d132b420b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101225"
 ---
 # <a name="isvaliddetailed-geometry-datatype"></a>IsValidDetailed (тип данных geometry)
@@ -38,10 +38,10 @@ ms.locfileid: "68101225"
   
  Тип возвращаемых данных CLR: **string**  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Возможные возвращаемые значения содержатся в следующей таблице:  
   
-|Возвращаемое значение|Описание|  
+|Возвращаемое значение|Description|  
 |------------------|-----------------|  
 |24400|Допустимо|  
 |24401|Не является допустимым, причины неизвестны.|  
@@ -70,7 +70,7 @@ SELECT @p.IsValidDetailed()
 --Returns: 24404: Not valid because polygon ring (1) intersects itself or some other ring.  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширенные методы экземпляров Geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   

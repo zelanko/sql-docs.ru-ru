@@ -18,10 +18,10 @@ ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 47b924754f221b93e8f9e661a1b12afb5f07fcd4
-ms.sourcegitcommit: 8c1c6232a4f592f6bf81910a49375f7488f069c4
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70026233"
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "70026233"
 
   Изменяет существующую конфигурацию группы рабочей нагрузки Resource Governor и при необходимости назначает ее пулу ресурсов Resource Governor.  
   
- ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -156,7 +156,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  При выполнении инструкций DDL рекомендуется иметь представление о состояниях Resource Governor. Дополнительные сведения см. в разделе [Resource Governor](../../relational-databases/resource-governor/resource-governor.md) (Регулятор ресурсов).  
   
- REQUEST_MEMORY_GRANT_PERCENT: в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] при создании индексов разрешено использовать больший объем памяти рабочего пространства, чем было предоставлено изначально, в целях повышения быстродействия. Эта специальная обработка поддерживается регулятором ресурсов в более поздних версиях, однако изначально предоставленная память и любая дополнительная выделенная память ограничены настройками группы рабочей нагрузки и пула ресурсов.  
+ REQUEST_MEMORY_GRANT_PERCENT: в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] разрешено создание индексов для использования большего объема памяти рабочей области, чем было предоставлено изначально, в целях повышения быстродействия. Эта специальная обработка поддерживается регулятором ресурсов в более поздних версиях, однако изначально предоставленная память и любая дополнительная выделенная память ограничены настройками группы рабочей нагрузки и пула ресурсов.  
   
  **Создание индексов для секционированной таблицы**  
   

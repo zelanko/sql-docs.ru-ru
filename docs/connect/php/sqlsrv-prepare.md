@@ -18,13 +18,13 @@ ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b16e58b8535d91fd29281aa986ab5ba26875dc38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68014984"
 ---
-# <a name="sqlsrvprepare"></a>sqlsrv_prepare
+# <a name="sqlsrv_prepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Создает ресурс инструкции, связанный с указанным соединением. Эта функция удобна для выполнения нескольких запросов.  
@@ -58,7 +58,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
     Эти элементы массива описаны в следующей таблице:  
   
-    |Элемент|Описание|  
+    |Элемент|Description|  
     |-----------|---------------|  
     |*&$value*|Буквенное значение или ссылка на переменную PHP.|  
     |*$direction*(необязательно)|Одна из следующих констант **SQLSRV_PARAM_\*** , используемая для указания направления параметра: **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. Значение по умолчанию — **SQLSRV_PARAM_IN**.<br /><br />Дополнительные сведения о константах PHP см. в статье [Константы &#40;драйверы Майкрософт для PHP для SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
@@ -67,7 +67,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
 *$options* (необязательно): ассоциативный массив, который задает <a name="properties">свойства запроса</a>. В приведенной ниже таблице содержится перечень поддерживаемых ключей и соответствующих значений.
 
-|Key|Поддерживаемые значения|Описание|  
+|Клавиши|Поддерживаемые значения|Description|  
 |-------|--------------------|---------------|  
 |ClientBufferMaxKBSize|Положительное целое число|Задает размер буфера, который содержит результирующий набор для клиентского курсора.<br /><br />Значение по умолчанию — 10 240 КБ. Дополнительные сведения см. в статье [Указание типа курсора и выбор строк](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).|
 |DecimalPlaces|Целое число от 0 до 4 (включительно)|Указывает число десятичных знаков при форматировании полученных денежных значений.<br /><br />Любое отрицательное целое число или значение больше 4 будет игнорироваться.<br /><br />Этот параметр работает, только если параметру FormatDecimals установлено значение **true**.|

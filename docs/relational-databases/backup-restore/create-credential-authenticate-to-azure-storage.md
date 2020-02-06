@@ -13,10 +13,10 @@ ms.assetid: 0622619d-27c5-4ff0-83e5-cde31648c27a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d22e7dda1575f1861ad5a86d735e26ec0afd7efc
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70176244"
 ---
 # <a name="create-credential---authenticate-to-azure-storage"></a>Создание учетных данных — проверка подлинности в хранилище Azure
@@ -32,7 +32,7 @@ ms.locfileid: "70176244"
  **Сертификат управления**  
  Используйте этот параметр, чтобы указать сертификат из локального хранилища сертификатов, соответствующий сертификату управления из Azure. Дополнительные сведения о сертификате управления Azure см. в статье [Create and Upload a Management Certificate for Azure](https://go.microsoft.com/fwlink/?LinkId=320781) (Создание и передача сертификата управления для Azure).  
   
- **Подписка**  
+ **подписка**  
  Выберите, введите или вставьте идентификатор подписки Azure, который соответствует сертификату управления из локального хранилища сертификатов.  
   
  **Профиль публикации**  

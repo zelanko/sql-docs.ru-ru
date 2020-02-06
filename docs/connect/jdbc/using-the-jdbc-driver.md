@@ -11,10 +11,10 @@ ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 828f58249f525a7c694b15eb85f051d80ba2211a
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69025775"
 ---
 # <a name="using-the-jdbc-driver"></a>Использование JDBC Driver
@@ -227,7 +227,7 @@ Connection con = DriverManager.getConnection(connectionUrl);
 При вызове метода getConnection класса DriverManager подходящий драйвер выбирается из набора зарегистрированных драйверов JDBC. Файлы sqljdbc4.JAR, sqljdbc41.jar и sqljdbc42.jar содержат файл META-INF/services/java.sql.Driver, который содержит **com.microsoft.sqlserver.jdbc.SQLServerDriver** в качестве зарегистрированного драйвера. Существующие приложения, которые загружают драйверы с помощью метода Class.forName, продолжат работать, не требуя изменений.  
   
 > [!NOTE]  
-> Библиотеку классов sqljdbc4.JAR, sqljdbc41.jar или sqljdbc42.jar нельзя использовать с более старыми версиями среды выполнения Java. Список версий JRE-файлов, поддерживаемых [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], см. в описании [требований к системе для JDBC Driver](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
+> Библиотеку классов sqljdbc4.JAR, sqljdbc41.jar или sqljdbc42.jar нельзя использовать с более старыми версиями среды выполнения Java. Список версий JRE-файлов, поддерживаемых [, см. в описании ](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)требований к системе для JDBC Driver[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].  
 
 Дополнительные сведения о подключении к источникам данных и использовании URL-адреса подключения см. в руководствах по [созданию URL-адреса подключения](../../connect/jdbc/building-the-connection-url.md) и [настройке свойств подключения](../../connect/jdbc/setting-the-connection-properties.md).  
   
