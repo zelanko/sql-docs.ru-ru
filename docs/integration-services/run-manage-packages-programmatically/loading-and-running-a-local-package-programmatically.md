@@ -21,10 +21,10 @@ ms.assetid: 2f9fc1a8-a001-4c54-8c64-63b443725422
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d8f9264a456464b40cfce4382cb7d70cbb7ce4cf
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295756"
 ---
 # <a name="loading-and-running-a-local-package-programmatically"></a>Программная загрузка и запуск локального пакета
@@ -72,7 +72,7 @@ ms.locfileid: "71295756"
   
 5.  Запустите проект. В образце кода выполняется пакет образца CalculatedColumns, который устанавливается вместе с образцами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Результат выполнения пакета отображается в консольном окне.  
   
-### <a name="sample-code"></a>Образец кода  
+### <a name="sample-code"></a>Пример кода  
   
 ```vb  
 Imports Microsoft.SqlServer.Dts.Runtime  
@@ -140,7 +140,7 @@ namespace RunFromClientAppCS
   
 3.  Запустите проект. В образце кода выполняется пакет образца CalculatedColumns, который устанавливается вместе с образцами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Результат выполнения пакета отображается в консольном окне вместе с сообщениями о любых возникших ошибках.  
   
-### <a name="sample-code"></a>Образец кода  
+### <a name="sample-code"></a>Пример кода  
   
 ```vb  
 Imports Microsoft.SqlServer.Dts.Runtime  

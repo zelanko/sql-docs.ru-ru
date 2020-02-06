@@ -30,10 +30,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6ef49eaecad32c4564fb75d05df1a20ff12c15f3
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72278107"
 ---
 # <a name="commit-transaction-transact-sql"></a>COMMIT TRANSACTION (Transact-SQL)
@@ -62,17 +62,17 @@ COMMIT [ TRAN | TRANSACTION ]
   
 ## <a name="arguments"></a>Аргументы  
  *transaction_name*  
- **ПРИМЕНИМО К:** SQL Server и База данных SQL Azure
+ **ПРИМЕНИМО К**: SQL Server и база данных SQL Azure
  
  Не учитывается компонентом [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. *transaction_name* указывает имя транзакции, присвоенное предыдущей инструкцией BEGIN TRANSACTION. Аргумент *transaction_name* должен соответствовать правилам для идентификаторов, но его длина не может превышать 32 символа. *transaction_name* сообщает программистам, с какой вложенной инструкцией BEGIN TRANSACTION связана инструкция COMMIT TRANSACTION.  
   
  *\@tran_name_variable*  
- **ПРИМЕНИМО К:** SQL Server и База данных SQL Azure  
+ **ПРИМЕНИМО К**: SQL Server и база данных SQL Azure  
  
 Имя определенной пользователем переменной, содержащей допустимое имя транзакции. Переменная должна быть объявлена с типом данных char, varchar, nchar или nvarchar. Если переменной присваивается значение длиной более 32 символов, используются только первые 32, остальные усекаются.  
   
  DELAYED_DURABILITY  
- **ПРИМЕНИМО К:** SQL Server и База данных SQL Azure   
+ **ПРИМЕНИМО К**: SQL Server и база данных SQL Azure   
 
  Параметр, который запрашивает эту транзакцию, должен фиксироваться с задержанной устойчивостью. Этот запрос пропускается, если база данных была изменена с использованием `DELAYED_DURABILITY = DISABLED` или `DELAYED_DURABILITY = FORCED`. Дополнительные сведения см. в разделе [Управление устойчивостью транзакций](../../relational-databases/logs/control-transaction-durability.md).  
   
@@ -95,7 +95,7 @@ COMMIT [ TRAN | TRANSACTION ]
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-committing-a-transaction"></a>A. Фиксация транзакции  
-**ПРИМЕНИМО К:** SQL Server, База данных SQL Azure, Хранилище данных SQL Azure и Parallel Data Warehouse   
+**ОБЛАСТЬ ПРИМЕНЕНИЯ:** SQL Server, база данных SQL Azure, хранилище данных SQL Azure и Parallel Data Warehouse   
 
 В следующем примере удаляется кандидат на вакансию. В нем используется база данных AdventureWorks. 
   
@@ -107,7 +107,7 @@ COMMIT TRANSACTION;
 ```  
   
 ### <a name="b-committing-a-nested-transaction"></a>Б. Фиксация вложенной транзакции  
-**ПРИМЕНИМО К:** SQL Server и База данных SQL Azure    
+**ПРИМЕНИМО К**: SQL Server и база данных SQL Azure    
 
 В следующем примере создается таблица и формируется три уровня вложенных транзакций, которые затем фиксируются. Хотя каждая инструкция `COMMIT TRANSACTION` имеет параметр *transaction_name*, связи между инструкциями `COMMIT TRANSACTION` и `BEGIN TRANSACTION` не существует. Параметры *transaction_name* позволяют программисту удостовериться в том, что закодировано правильное количество фиксаций, необходимое для того, чтобы уменьшить значение `@@TRANCOUNT` до 0 и таким образом зафиксировать внешнюю транзакцию. 
   

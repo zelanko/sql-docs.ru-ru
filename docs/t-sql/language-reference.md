@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 46ce5f22f38b9854be8161aa3d104a60e41886ab
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73844353"
 ---
 # <a name="transact-sql-reference-database-engine"></a>Справочник по Transact-SQL (компонент Database Engine)
@@ -87,7 +87,7 @@ ms.locfileid: "73844353"
 
 Теперь, когда вы знаете, как найти справочные разделы T-SQL, можно:
 
-- пройти краткий учебник по разработке на T-SQL в разделе [Учебник. Составление инструкций Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md). 
+- пройти краткий учебник по разработке на T-SQL в разделе [Учебник: написание инструкций Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md). 
 - См. раздел [Синтаксические обозначения в Transact-SQL &#40;Transact-SQL&#41;](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
 
   

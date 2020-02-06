@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.openlocfilehash: 2f99310a1eaa240db15b4db5f686a4d6cc49c186
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70874765"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Установка полнотекстового поиска SQL Server в Linux
@@ -88,7 +88,7 @@ sudo zypper update mssql-server-fts
 
 | Язык | Идентификатор языка |
 |---|---|
-| Нейтральный | 0 |
+| нейтральное выражение. | 0 |
 | Арабский | 1025 |
 | Bengali (India) | 1093 |
 | Букмол | 1044 |
@@ -100,13 +100,13 @@ sudo zypper update mssql-server-fts
 | Chinese (Macao SAR) | 5124 |
 | Chinese (Singapore) | 4100 |
 | Хорватский | 1050 |
-| Czech | 1029 |
-| Danish | 1030 |
+| Чешский | 1029 |
+| Датский | 1030 |
 | Нидерландский | 1043 |
 | Английский | 1033 |
 | Французский | 1036 |
 | Немецкий | 1031 |
-| Greek | 1032 |
+| Греческий | 1032 |
 | Гуджарати | 1095 |
 | Иврит | 1037 |
 | Hindi | 1081 |
@@ -119,15 +119,15 @@ sudo zypper update mssql-server-fts
 | Латышский | 1062 |
 | Литовский | 1063 |
 | Malay - Malaysia | 1086 |
-| Малайялам | 1100 |
+| Малаялам | 1100 |
 | Маратхи | 1102 |
 | Польский | 1045 |
 | Португальский | 2070 |
-| Панджабский | 1094 |
+| Панджаби | 1094 |
 | Румынский | 1048 |
 | Русский | 1049 |
-| Serbian (Cyrillic) | 3098 |
-| Serbian (Latin) | 2074 |
+| Сербский (кириллица) | 3098 |
+| Сербский (латиница) | 2074 |
 | Китайский (упрощенный) | 2052 |
 | Словацкий | 1051 |
 | Словенский | 1060 |
@@ -146,7 +146,7 @@ sudo zypper update mssql-server-fts
 
 Полнотекстовый поиск также работает с текстом, хранящимся в двоичных файлах. Но в этом случае для обработки файла требуется установленный фильтр. Дополнительные сведения о фильтрах см. в статье [Настройка поисковых фильтров и управление ими](../relational-databases/search/configure-and-manage-filters-for-search.md).
 
-Чтобы просмотреть список установленных фильтров, вызовите **sp_help_fulltext_system_components 'filter'**. Для SQL Server установлены указанные далее фильтры.
+Чтобы просмотреть список установленных фильтров, вызовите **sp_help_fulltext_system_components 'filter'** . Для SQL Server установлены указанные далее фильтры.
 
 | Название компонента | Идентификатор класса | Версия |
 |---|---|---|
@@ -280,6 +280,6 @@ sudo zypper update mssql-server-fts
     GO
     ```
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Дополнительные сведения о полнотекстовом поиске см. в [этой статье](../relational-databases/search/full-text-search.md). 

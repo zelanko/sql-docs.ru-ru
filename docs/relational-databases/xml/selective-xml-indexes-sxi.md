@@ -11,10 +11,10 @@ ms.assetid: 598ecdcd-084b-4032-81b2-eed6ae9f5d44
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f176ba79cc42610d706bb56896a8ca073ea8185a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000707"
 ---
 # <a name="selective-xml-indexes-sxi"></a>Выборочный XML-индекс (SXI)
@@ -120,7 +120,7 @@ FOR
   
 -   Индексирование узлов с двоичными типами XS: например, base64Binary и hexBinary.  
   
--   Указание узлов для индексирования с выражениями XPath, которые содержат подстановочный знак `*` в конце. Например, `/a/b/c/*`, `/a//b/*` или `/a/b/*:c`.  
+-   Указание узлов для индексирования с помощью выражений XPath, которые содержат подстановочный знак `*` в конце: например,  `/a/b/c/*`, `/a//b/*`или `/a/b/*:c`.  
   
 -   Индексирование любых осей, отличных от осей дочерних элементов, атрибутов или объектов-потомков. Вариант `//<step>` допускается как исключение.  
   
@@ -196,7 +196,7 @@ FOR
 |||  
 |-|-|  
 |**Задача**|**Раздел**|  
-|При создании или изменении селективного XML-индекса необходимо указать пути узлов, которые нужно индексировать, а также необязательные указания по оптимизации.|[Задайте путь и указания по оптимизации для селективных XML-индексов](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)|  
+|При создании или изменении селективного XML-индекса необходимо указать пути узлов, которые нужно индексировать, а также необязательные указания по оптимизации.|[Задание путей и указания по оптимизации для селективных XML-индексов](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)|  
 |Создание, изменение и удаление селективного XML-индекса.|[Создание, изменение и удаление селективных XML-индексов](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)|  
 |Создание, изменение и удаление вторичного селективного XML-индекса.|[Создание, изменение и удаление вторичных селективных XML-индексов](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md)|  
   

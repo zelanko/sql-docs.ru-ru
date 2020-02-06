@@ -18,10 +18,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8808dc2befdcb2c31218e7dc155921bb10947e14
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68419585"
 ---
 # <a name="joins-sql-server"></a>Joins (SQL Server)
@@ -173,7 +173,7 @@ WHERE pv.BusinessEntityID=v.BusinessEntityID
 Дополнительные сведения об аварийных остановках хэша см. в разделе [Класс событий Hash Warning](../../relational-databases/event-classes/hash-warning-event-class.md).    
 
 ## <a name="adaptive"></a> Основные сведения об адаптивных соединениях
-Адаптивные соединения в [пакетном режиме](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) позволяют отложить выбор метода [Хэш-соединение](#hash) или [Соединение вложенными циклами](#nested_loops) **до** завершения сканирования первых входных данных. Оператор адаптивного соединения определяет пороговое значение, по которому принимается решение о переключении на план вложенного цикла. Таким образом, во время выполнения план запроса может динамически переключаться на более эффективную стратегию соединения без перекомпиляции. 
+Адаптивные соединения в [пакетном режиме](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) позволяют отложить выбор метода [Хэш-соединение](#hash) или [Соединение вложенными циклами](#nested_loops)**до** завершения сканирования первых входных данных. Оператор адаптивного соединения определяет пороговое значение, по которому принимается решение о переключении на план вложенного цикла. Таким образом, во время выполнения план запроса может динамически переключаться на более эффективную стратегию соединения без перекомпиляции. 
 
 > [!TIP]
 > Наиболее полезной эта функция будет для рабочих нагрузок с частыми переключениями между просмотрами входных данных мелких и крупных соединений.
@@ -229,7 +229,7 @@ WHERE [fo].[Quantity] = 361;
 ### <a name="tracking-adaptive-join-activity"></a>Отслеживание операций адаптивного соединения
 Оператор адаптивного соединения имеет следующие атрибуты оператора плана:
 
-|Атрибут плана|Описание|
+|Атрибут плана|Description|
 |---|---|
 |AdaptiveThresholdRows|Показывает пороговое значение, используемое для переключения с хэш-соединения на соединение вложенными циклами.|
 |EstimatedJoinType|К какому типу, вероятнее всего, относится соединение.|

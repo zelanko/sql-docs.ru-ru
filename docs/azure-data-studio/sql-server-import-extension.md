@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: 012c2c880e81c095e90086cf26ebffd6117d534e
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67959123"
 ---
 # <a name="sql-server-import-extension-preview"></a>Расширение "Импорт SQL Server" (предварительная версия)
@@ -58,6 +58,6 @@ ms.locfileid: "67959123"
     ![открытие мастера импорта](media/sql-server-import-extension/import-wizard-summary.png)
 1. Чтобы проверить, успешно ли импортировалась таблица, обновите целевую базу данных или выполните запрос SELECT по имени таблицы.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 - Дополнительные сведения о мастере импорта см. в [этой записи блога](https://cloudblogs.microsoft.com/sqlserver/2018/08/30/the-august-release-of-sql-operations-studio-is-now-available/).
 - Дополнительные сведения о PROSE см. в [документации](https://microsoft.github.io/prose/).

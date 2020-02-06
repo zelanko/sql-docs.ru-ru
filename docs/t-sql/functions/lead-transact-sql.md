@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1eaed4b8cc26cd1705aacb74e102be2e33b443e6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68059938"
 ---
 # <a name="lead-transact-sql"></a>Предложение LEAD (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68059938"
 
   Обращается к данным из последующей строки того же результирующего набора данных без использования самосоединения начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Функция LEAD обеспечивает доступ к строке на заданном физическом смещении после текущей строки. Используйте данную аналитическую функцию в инструкции SELECT для сравнения значений текущей строки со значениями из последующей.  
   
- ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -47,7 +47,7 @@ LEAD ( scalar_expression [ ,offset ] , [ default ] )
  *offset*  
  Количество строк перед текущей строкой, из которых необходимо получить значение. Если значение аргумента не указано, то по умолчанию принимается 1. *offset* может быть столбцом, вложенным запросом или другим выражением, с помощью которого вычисляется целая положительная величина, или другим типом, который может быть неявно преобразован в **bigint**. *offset* не может быть отрицательным значением или аналитической функцией.  
   
- *default*  
+ *значение по умолчанию*  
  Возвращаемое значение, когда *offset* находится за пределами секции. Если значение по умолчанию не задано, то возвращается NULL. *default* может быть столбцом, вложенным запросом или другим выражением, но не может быть аналитической функцией. Аргумент *default* должен быть совместим по типу с аргументом *scalar_expression*.
   
  OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_ **)**  

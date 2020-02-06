@@ -1,10 +1,9 @@
 ---
-title: Использование объектов производительности | Документация Майкрософт
-ms.custom: ''
+title: Использование объектов производительности
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,13 +19,15 @@ helpviewer_keywords:
 ms.assetid: 830b843a-6b2a-4620-a51b-98358e9fc54b
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 73e36b4d0ee10d42ec7774e20693d217ee274344
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: ee697990c729a28872f8562241cd5dbfdc3225b2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68260903"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257825"
 ---
 # <a name="use-performance-objects"></a>Использование объектов производительности
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -43,11 +44,11 @@ ms.locfileid: "68260903"
 |Тип экземпляра|Имя объекта|  
 |-----------------|---------------|  
 |По умолчанию|**SQLAgent:** _объект_:_счетчик_|  
-|Именованный|**SQLAgent$**<br /> **&#42;имя_экземпляра&#42; :** _объект_:_счетчик_|  
+|именованная|**SQLAgent$**<br /> **&#42;имя_экземпляра&#42; :** _объект_:_счетчик_|  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] содержит следующие объекты производительности для агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-|Имя объекта|Описание|  
+|Имя объекта|Description|  
 |---------------|---------------|  
 |[SQLAgent:Jobs](../../relational-databases/performance-monitor/sql-server-agent-jobs-object.md)|Сведения о производительности запущенных заданий, проценте успешных попыток и текущем состоянии.|  
 |[SQLAgent:JobSteps](../../relational-databases/performance-monitor/sql-server-agent-jobsteps-object.md)|Сведения о состоянии шагов заданий.|  
@@ -56,5 +57,5 @@ ms.locfileid: "68260903"
   
 ## <a name="see-also"></a>См. также:  
 [Наблюдение и настройка производительности](../../relational-databases/performance/monitor-and-tune-for-performance.md)  
-[Руководство. Запуск системного монитора (Windows)](https://msdn.microsoft.com/5e51bb79-5737-470b-9c47-fac330c001c5)  
+[Практическое руководство. Запуск системного монитора (Windows)](https://msdn.microsoft.com/5e51bb79-5737-470b-9c47-fac330c001c5)  
   

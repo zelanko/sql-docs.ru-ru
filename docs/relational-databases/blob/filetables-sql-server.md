@@ -16,10 +16,10 @@ ms.assetid: a57b629c-e9ed-48fd-9a48-ed3787d80c8f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8993c5e9ea1334b5bb8a002f1991041886a9f282
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68125172"
 ---
 # <a name="filetables-sql-server"></a>Таблицы FileTable (SQL Server)
@@ -111,7 +111,7 @@ ms.locfileid: "68125172"
  [Создание, изменение и удаление таблиц FileTable](../../relational-databases/blob/create-alter-and-drop-filetables.md)  
  Описывает способы создания новых таблиц FileTable и изменения или удаления существующих таблиц FileTable.  
   
- [выполнить загрузку файлов в таблицу FileTables](../../relational-databases/blob/load-files-into-filetables.md)  
+ [Загрузка файлов в таблицы FileTable](../../relational-databases/blob/load-files-into-filetables.md)  
  Описывает процедуру загрузки или переноса файлов в таблицы FileTable.  
   
  [Работа с каталогами и путями в таблицах FileTable](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
@@ -127,7 +127,7 @@ ms.locfileid: "68125172"
  Описывает стандартные административные задачи по управлению таблицами FileTables.  
   
 ##  <a name="relcontent"></a> См. также  
- [FileTable Schema](../../relational-databases/blob/filetable-schema.md)  
+ [Схема FileTable](../../relational-databases/blob/filetable-schema.md)  
  Описывает стандартные и фиксированные схемы таблицы FileTable.  
   
  [Совместимость FileTable с другими компонентами SQL Server](../../relational-databases/blob/filetable-compatibility-with-other-sql-server-features.md)  

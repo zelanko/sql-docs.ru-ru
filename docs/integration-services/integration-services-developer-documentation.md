@@ -19,10 +19,10 @@ ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9fdcc10cd21714681578489fd1c71db607226086
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71284398"
 ---
 # <a name="integration-services-developer-documentation"></a>Документация для разработчиков служб Integration Services
@@ -89,6 +89,6 @@ ms.locfileid: "71284398"
 -   Образцы CodePlex, [Образцы продуктов служб Integration Services](https://go.microsoft.com/fwlink/?LinkID=131204)на сайте www.codeplex.com/MSFTISProdSamples  
   
 ## <a name="see-also"></a>См. также:  
- [службы SQL Server Integration Services](../integration-services/sql-server-integration-services.md)  
+ [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)  
   
   

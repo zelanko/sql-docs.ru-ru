@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: azure-data-studio
 ms.date: 09/24/2018
 ms.openlocfilehash: 2a1f62ed9266b0575f037dfe9541a026a4c1ed29
-ms.sourcegitcommit: db715cad313055c8b42d547be686de8755342d65
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73801137"
 ---
 # <a name="explore-and-manage-azure-sql-resources-with-azure-resource-explorer"></a>Просмотр ресурсов SQL Azure и управление ими с помощью обозревателя ресурсов Azure
@@ -33,7 +33,7 @@ ms.locfileid: "73801137"
 
 1. Откройте диалоговое окно **Связанные учетные записи** с помощью значка управления учетной записью в левом нижнем углу или ссылки **Войти в Azure...** в обозревателе ресурсов Azure.
 
-    ![Войти в Azure](media/azure-resource-explorer/sign-in-to-azure.png)
+    ![Вход в Azure](media/azure-resource-explorer/sign-in-to-azure.png)
 
 2. В диалоговом окне **Связанные учетные записи** щелкните **Добавить учетную запись**.
 
@@ -98,7 +98,7 @@ ms.locfileid: "73801137"
    ![Диалоговое окно подключения SQL](media/azure-resource-explorer/sql-connection-dialog.png)
 4. После установки подключения автоматически открывается окно **Серверы** с новым подключенным сервером или базой данных SQL.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 - [Использование [!INCLUDE[Azure Data Studio](../includes/name-sos-short.md)] для подключения и отправки запроса к базе данных SQL Azure](quickstart-sql-database.md)
 - [Подключение к Хранилищу данных SQL Azure и запрос данных с помощью [!INCLUDE[Azure Data Studio](../includes/name-sos-short.md)]](quickstart-sql-dw.md)

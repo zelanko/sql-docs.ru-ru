@@ -15,10 +15,10 @@ ms.assetid: d7da14d3-848c-44d4-8e49-d536a1158a61
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 840e34dcad069ccd6dc2c4102c6a2a85b7e4fbf5
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74822231"
 ---
 # <a name="manage-logins-for-jobs-using-databases-in-an-always-on-availability-group"></a>Управление именами входа для заданий, использующих базы данных в группе доступности Always On
@@ -31,7 +31,7 @@ ms.locfileid: "74822231"
   
      Экземпляры серверов, на которых размещены реплики доступности для группы доступности, могут быть настроены по-разному, например с использованием других букв дисков ленточных накопителей и т. д. Задания для каждой группы доступности должны допускать подобные различия.  
   
-     Обратите внимание, что задания резервного копирования могут использовать функцию [sys.fn_hadr_is_preferred_backup_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) , чтобы определить, является ли локальная реплика предпочтительной для выполнения резервного копирования согласно настройкам резервного копирования группы доступности. Задания резервного копирования, созданные с помощью [мастера планов обслуживания](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) , изначально используют эту функцию. Для других заданий резервного копирования рекомендуется использовать эту функцию в качестве условия в заданиях резервного копирования, чтобы они выполнялись только для предпочитаемой реплики. Дополнительные сведения см. в статье [Активные вторичные реплики: резервное копирование во вторичных репликах (группы доступности Always On)](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+     Обратите внимание, что задания резервного копирования могут использовать функцию [sys.fn_hadr_is_preferred_backup_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) , чтобы определить, является ли локальная реплика предпочтительной для выполнения резервного копирования согласно настройкам резервного копирования группы доступности. Задания резервного копирования, созданные с помощью [мастера планов обслуживания](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) , изначально используют эту функцию. Для других заданий резервного копирования рекомендуется использовать эту функцию в качестве условия в заданиях резервного копирования, чтобы они выполнялись только для предпочитаемой реплики. Дополнительные сведения см. в статье [Активные вторичные реплики, резервное копирование во вторичных репликах (группы доступности Always On)](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
 -   **Имена входа**  
   

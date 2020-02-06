@@ -19,10 +19,10 @@ ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 337b2ee6d7edffeb49c2cee6291d30100b4c1df0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68070335"
 ---
 # <a name="alter-sequence-transact-sql"></a>ALTER SEQUENCE (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68070335"
   
  Объекты последовательностей создаются с помощью инструкции [CREATE SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md). Последовательность — это целочисленное значение, она может иметь любой тип данных, возвращающий целое число. Тип данных нельзя изменить с помощью инструкции ALTER SEQUENCE. Чтобы изменить тип данных, удалите и заново создайте объект последовательности.  
   
- Последовательность представляет собой определяемый пользователем объект, привязанный к схеме, который формирует последовательность числовых значений в соответствии со спецификацией. Новые значения формируются из последовательности функцией NEXT VALUE FOR. Получить несколько значений из последовательности за один раз можно с помощью функции **sp_sequence_get_range** . Сведения и сценарии использования CREATE SEQUENCE, **sp_sequence_get_range[ и функции NEXT VALUE FOR см. в разделе ](../../relational-databases/sequence-numbers/sequence-numbers.md)Порядковые номера**.  
+ Последовательность представляет собой определяемый пользователем объект, привязанный к схеме, который формирует последовательность числовых значений в соответствии со спецификацией. Новые значения формируются из последовательности функцией NEXT VALUE FOR. Получить несколько значений из последовательности за один раз можно с помощью функции **sp_sequence_get_range** . Сведения и сценарии использования CREATE SEQUENCE, **sp_sequence_get_range** и функции NEXT VALUE FOR см. в разделе [Порядковые номера](../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

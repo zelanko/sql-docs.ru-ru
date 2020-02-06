@@ -13,10 +13,10 @@ ms.assetid: 92d1881a-1ef1-43ae-b1ca-48d0536bdbc2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 990797242acb57f36530315c416011325cce6358
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71286429"
 ---
 # <a name="using-variables-in-the-script-component"></a>Использование переменных в компоненте скрипта
@@ -33,7 +33,7 @@ ms.locfileid: "71286429"
   
  Дополнительные сведения о странице **Скрипт** окна **Редактор преобразования "Скрипт"** см. в разделах [Настройка компонента скрипта в редакторе компонента скрипта](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md) и [Редактор преобразования "Скрипт" (страница "Скрипт")](../../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md).  
   
- Компонент скрипта создает класс коллекции **Variables** в элементе проекта **ComponentWrapper** со строго типизированным свойством метода доступа для значения каждой предварительно настроенной переменной, в которой свойство имеет то же самое имя, что и сама переменная. Эта коллекция доступна с помощью свойства **Variables** класса **ScriptMain**. Свойство метода доступа предоставляет разрешения только для чтения или для чтения и записи значения этой переменной, в зависимости от ситуации. Например, если к списку **ReadOnlyVariables** добавлена целочисленная переменная с именем `MyIntegerVariable`, ее значение можно получить в скрипте с помощью следующего кода:  
+ Компонент скрипта создает класс коллекции **Variables** в элементе проекта **ComponentWrapper** со строго типизированным свойством метода доступа для значения каждой предварительно настроенной переменной, в которой свойство имеет то же самое имя, что и сама переменная. Эта коллекция доступна с помощью свойства **Variables** класса **ScriptMain**. Свойство метода доступа предоставляет разрешения только для чтения или для чтения и записи значения этой переменной, в зависимости от ситуации. Например, если к списку `MyIntegerVariable`ReadOnlyVariables**добавлена целочисленная переменная с именем**, ее значение можно получить в скрипте с помощью следующего кода:  
   
  `Dim myIntegerVariableValue As Integer = Me.Variables.MyIntegerVariable`  
   

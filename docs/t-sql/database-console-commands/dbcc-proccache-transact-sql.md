@@ -22,10 +22,10 @@ ms.assetid: 7a4f9f8a-13ff-4bf2-ba29-c17012a23659
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 7720324915ea147cf5cac938c196957a6cb04c51
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68116459"
 ---
 # <a name="dbcc-proccache-transact-sql"></a>DBCC PROCCACHE (Transact-SQL)
@@ -42,7 +42,7 @@ DBCC PROCCACHE [ WITH NO_INFOMSGS ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- на  
+ WITH  
  Позволяет указывать параметры.  
   
  NO_INFOMSGS  
@@ -58,7 +58,7 @@ DBCC PROCCACHE [ WITH NO_INFOMSGS ]
 ## <a name="result-sets"></a>Результирующие наборы  
 В следующей таблице описаны столбцы в результирующем наборе.
   
-|Имя столбца|Описание|  
+|Имя столбца|Description|  
 |-----------------|-----------------|  
 |**num proc buffs**|Общее количество страниц, используемое всеми записями кэша процедур.|  
 |**num proc buffs used**|Общее число страниц, занятых всеми используемыми в данный момент записями.|  

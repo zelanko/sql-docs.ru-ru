@@ -1,10 +1,9 @@
 ---
-title: Диалоговое окно "XML-индексы" (визуальные инструменты для баз данных) | Документация Майкрософт
-ms.custom: ''
+title: Диалоговое окно "XML-индексы"
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: eef38310-4498-4ccc-bb77-5bbd1c7cc477
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c2526d2facc494dc102ac6674ac01ab851b0a40c
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 38be046b5c99e56a76c716117708d4eeb88ac9fd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262456"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246175"
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>Диалоговое окно «XML-индексы» (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "68262456"
 **Выбранный XML-индекс**  
 Отображает список существующих XML-индексов. Выберите параметр, чтобы отобразить его свойства в сетке, которая находится справа. Если этот список пустой, для таблицы не определено ни одного индекса.  
   
-**Добавить**  
+**Добавление**  
 Создать новый XML-индекс.  
   
 **Удаление**  
@@ -54,7 +55,7 @@ ms.locfileid: "68262456"
 **Категория «Идентификатор»**  
 При развертывании показывает поля свойств **Имя** и **Описание** .  
   
-**Имя**  
+**Название**  
 Отображает имя XML-индекса. Если создается новый индекс, ему присваивается имя по умолчанию, в зависимости от таблицы, отображаемой в окне конструктора таблиц. Имя можно изменить в любой момент.  
   
 **Описание**  

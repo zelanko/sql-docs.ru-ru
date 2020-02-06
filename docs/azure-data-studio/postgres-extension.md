@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: rachel-msft
 ms.author: raagyema
 ms.openlocfilehash: 2ecdd3cb918013a4ae26869679576bafd003756e
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67959488"
 ---
 # <a name="postgresql-extension-preview"></a>Расширение PostgreSQL (предварительная версия)
@@ -44,7 +44,7 @@ ms.locfileid: "67959488"
 3. Выберите пункт **Установить**. После установки выберите **Перезагрузить**, чтобы активировать расширение в Azure Data Studio.
 
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Сведения о [подключении к Postgres из Azure Data Studio и выполнении запросов](quickstart-postgres.md).
 

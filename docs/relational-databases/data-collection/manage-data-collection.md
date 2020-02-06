@@ -16,10 +16,10 @@ ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 53869016813d3950f35fa5b926cbba295df63237
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68133612"
 ---
 # <a name="manage-data-collection"></a>Управление сбором данных
@@ -71,7 +71,7 @@ ms.locfileid: "68133612"
   
  В следующей таблице описаны хранимые процедуры, используемые при работе со сборщиком данных.  
   
-|Имя процедуры|Описание|  
+|Имя процедуры|Description|  
 |--------------------|-----------------|  
 |[sp_syscollector_enable_collector](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md)|Включить сборщик данных.|  
 |[sp_syscollector_disable_collector](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)|Выключить сборщик данных.|  
@@ -80,7 +80,7 @@ ms.locfileid: "68133612"
   
  В следующей таблице описаны хранимые процедуры, используемые при работе с наборами сбора.  
   
-|Имя процедуры|Описание|  
+|Имя процедуры|Description|  
 |--------------------|-----------------|  
 |[sp_syscollector_run_collection_set (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syscollector-run-collection-set-transact-sql.md)|Запускает набор сбора по запросу.|  
 |[sp_syscollector_start_collection_set (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syscollector-start-collection-set-transact-sql.md)|Запуск набора сбора.|  
@@ -94,7 +94,7 @@ ms.locfileid: "68133612"
   
  В следующей таблице описаны хранимые процедуры, используемые при работе с элементами сбора.  
   
-|Имя процедуры|Описание|  
+|Имя процедуры|Description|  
 |--------------------|-----------------|  
 |[sp_syscollector_create_collection_item (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)|Создание элемента коллекции.|  
 |[sp_syscollector_delete_collection_item (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syscollector-delete-collection-item-transact-sql.md)|Удаление элемента коллекции.|  
@@ -104,7 +104,7 @@ ms.locfileid: "68133612"
   
  В следующей таблице описаны хранимые процедуры, используемые при работе с типами сборщиков.  
   
-|Имя процедуры|Описание|  
+|Имя процедуры|Description|  
 |--------------------|-----------------|  
 |[sp_syscollector_create_collector_type (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syscollector-create-collector-type-transact-sql.md)|Создание типа сборщика.|  
 |[sp_syscollector_update_collector_type (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syscollector-update-collector-type-transact-sql.md)|Обновление типа сборщика.|  
@@ -114,7 +114,7 @@ ms.locfileid: "68133612"
   
  В следующей таблице описаны представления, используемые для получения сведений о конфигурации и данных журнала выполнения.  
   
-|Имя представления|Описание|  
+|Имя представления|Description|  
 |---------------|-----------------|  
 |[syscollector_config_store (Transact-SQL)](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md)|Получение конфигурации сборщика данных.|  
 |[syscollector_collection_items (Transact-SQL)](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)|Получение сведений об элементе коллекции.|  
@@ -128,7 +128,7 @@ ms.locfileid: "68133612"
   
  В следующей таблице описаны хранимые процедуры, используемые для настройки доступа к хранилищу данных управления.  
   
-|Имя процедуры|Описание|  
+|Имя процедуры|Description|  
 |--------------------|-----------------|  
 |[sp_syscollector_set_warehouse_database_name (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-database-name-transact-sql.md)|Укажите имя базы данных, определенное в строке соединения с хранилищем управляющих данных.|  
 |[sp_syscollector_set_warehouse_instance_name (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-instance-name-transact-sql.md)|Укажите экземпляр, определенный в строке соединения с хранилищем управляющих данных.|  
@@ -137,7 +137,7 @@ ms.locfileid: "68133612"
   
  В следующей таблице описаны хранимые процедуры, используемые при работе с конфигурацией хранилища данных управления.  
   
-|Имя процедуры|Описание|  
+|Имя процедуры|Description|  
 |--------------------|-----------------|  
 |[core.sp_create_snapshot (Transact-SQL)](../../relational-databases/system-stored-procedures/core-sp-create-snapshot-transact-sql.md)|Создание моментального снимка сбора в хранилище управляющих данных.|  
 |[core.sp_update_data_source (Transact-SQL)](../../relational-databases/system-stored-procedures/core-sp-update-data-source-transact-sql.md)|Обновление источника данных для сбора данных.|  
@@ -149,7 +149,7 @@ ms.locfileid: "68133612"
   
  В следующей таблице описаны хранимые процедуры, используемые при работе с пакетами передачи.  
   
-|Имя процедуры|Описание|  
+|Имя процедуры|Description|  
 |--------------------|-----------------|  
 |[sp_syscollector_set_cache_window (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-window-transact-sql.md)|Настройка количества попыток передачи данных.|  
 |[sp_syscollector_set_cache_directory (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-directory-transact-sql.md)|Указание временного хранилища данных между попытками передачи.|  
@@ -158,14 +158,14 @@ ms.locfileid: "68133612"
   
  В следующей таблице описаны хранимые процедуры, используемые при работе с журналом выполнения сбора данных.  
   
-|Имя процедуры|Описание|  
+|Имя процедуры|Description|  
 |--------------------|-----------------|  
 |[sp_syscollector_delete_execution_log_tree (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syscollector-delete-execution-log-tree-transact-sql.md)|Удаление записей о наборах сбора из журнала выполнения.|  
   
 ### <a name="functions"></a>Функции  
  В следующей таблице описаны функции, используемые для получения сведений о выполнении и трассировке.  
   
-|Имя функции|Описание|  
+|Имя функции|Description|  
 |-------------------|-----------------|  
 |[fn_syscollector_get_execution_details (Transact-SQL)](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md)|Получение данных журнала выполнения служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] для определенного пакета.|  
 |[fn_syscollector_get_execution_stats (Transact-SQL)](../../relational-databases/system-functions/fn-syscollector-get-execution-stats-transact-sql.md)|Получение статистики выполнения для пакета или набора сбора. Эти сведения включают записанные в журнал ошибки.|  

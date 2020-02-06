@@ -14,10 +14,10 @@ ms.assetid: 088314ec-7d0b-4a05-8a33-f35da5bfe59c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fcabc89e268e9ce5ed93211ccf89eed53e245c07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68029348"
 ---
 # <a name="canonical-forms-and-pattern-restrictions"></a>Канонические формы и ограничения шаблона
@@ -33,6 +33,6 @@ ms.locfileid: "68029348"
  Неточная сериализация значений с плавающей запятой вызывает подобную проблему. Из-за алгоритма сериализации с плавающей запятой, используемого [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], для подобных значений можно совместно использовать одну каноническую форму. Когда значение с плавающей запятой сериализовано и затем повторно вставлено, его значение может немного измениться. В редких случаях это может привести к значению, нарушающему любой из следующих аспектов для его типа при повторной вставке: **enumeration**, **minInclusive**, **minExclusive**, **maxInclusive**или **maxExclusive**. Чтобы это предотвратить, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отклоняет любые значения типов, полученных из `xs:float` или `xs:double` , которые не могут быть сериализованы и повторно вставлены.  
   
 ## <a name="see-also"></a>См. также:  
- [Требования и ограничения для коллекций XML-схем на сервере](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
+ [Требования и ограничения для коллекций схем XML на сервере](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

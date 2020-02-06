@@ -25,10 +25,10 @@ ms.assetid: 1d9c8247-fd89-4544-be9c-01c95b745db0
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7e16193e0bf6a9596a17f767b157fc825ff3e0a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072374"
 ---
 # <a name="return-transact-sql"></a>RETURN (Transact-SQL)

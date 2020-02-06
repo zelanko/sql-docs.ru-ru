@@ -13,10 +13,10 @@ ms.assetid: 0877fb38-f1a2-43d8-86cf-4754be224dc1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3a282e3e9493bb1cfbcc57186a8e1b9f53faf22f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68095459"
 ---
 # <a name="add-business-logic-to-xml-data"></a>Добавление бизнес-логики для XML-данных
@@ -31,7 +31,7 @@ ms.locfileid: "68095459"
   
 -   Можно создать хранимые процедуры и функции Transact-SQL, инициирующие обработку XML-столбца в соответствии с бизнес-потребностями.  
   
-## <a name="example-applying-xsl-transformation"></a>Пример Применение преобразования XSL  
+## <a name="example-applying-xsl-transformation"></a>Пример. Применение преобразования XSL  
  Рассмотрим функцию CLR **TransformXml()** , которая принимает экземпляр типа данных **xml** и находящееся в файле преобразование XSL, применяет преобразование к XML-данным и возвращает результат преобразования. Вот ее основа, написанная на C#:  
   
 ```  
@@ -52,7 +52,7 @@ public static SqlXml TransformXml (SqlXml XmlData, string xslPath) {
 }   
 ```  
   
- После регистрации сборки и создания пользовательской функции [!INCLUDE[tsql](../../includes/tsql-md.md)] **SqlXslTransform()** , соответствующей **TransformXml()** , эту функцию можно вызывать из кода Transact-SQL, как показано в следующем запросе:  
+ После регистрации сборки и создания пользовательской функции [!INCLUDE[tsql](../../includes/tsql-md.md)]**SqlXslTransform()** , соответствующей **TransformXml()** , эту функцию можно вызывать из кода Transact-SQL, как показано в следующем запросе:  
   
 ```  
 SELECT SqlXslTransform (xCol, 'C:\MyFile\xsltransform.xsl')  

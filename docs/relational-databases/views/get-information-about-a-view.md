@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f5e660301620a98e7ea6b93b4242da1a0d852ce9
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909883"
 ---
 # <a name="get-information-about-a-view"></a>Получение сведений о представлении
@@ -40,7 +40,7 @@ ms.locfileid: "72909883"
   
 -   **Перед началом работы**  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Получение сведений о представлении с помощью следующих средств:**  
   
@@ -111,7 +111,7 @@ ms.locfileid: "72909883"
      **(Имя)**  
      Имя текущего представления.  
   
-     **Database Name**  
+     **Имя базы данных**  
      Имя базы данных, содержащей это представление.  
   
      **Описание**  

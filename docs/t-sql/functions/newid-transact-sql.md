@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3f9324ee324188fd8cf70f97280b5e613ffd1178
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843651"
 ---
 # <a name="newid-transact-sql"></a>NEWID (Transact-SQL)
@@ -109,7 +109,7 @@ GO
 ```  
   
 ### <a name="c-using-uniqueidentifier-and-variable-assignment"></a>В. Использование типа uniqueidentifier и присвоение значения переменной  
- В приведенном ниже примере объявляется локальная переменная типа данных **uniqueidentifier** с именем `@myid`. Затем переменной присваивается значение с помощью оператора `SET`.  
+ В приведенном ниже примере объявляется локальная переменная типа данных `@myid`uniqueidentifier**с именем**. Затем переменной присваивается значение с помощью оператора `SET`.  
   
 ```  
 DECLARE @myid uniqueidentifier ;  

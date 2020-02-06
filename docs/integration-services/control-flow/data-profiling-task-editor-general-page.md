@@ -15,10 +15,10 @@ ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 46eb7c7f0834f864aba8e3951f4caf9092f5bb7b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294201"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>Редактор задачи «Профилирование данных» (страница «Общие»)
@@ -54,7 +54,7 @@ ms.locfileid: "71294201"
  **DestinationType**  
  Указывает, сохранять ли выходные данные профиля в файле или в переменной.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |**FileConnection**|Сохранение выходных данных профиля в файле, расположение которого указано в диспетчере соединения файлов.<br /><br /> Примечание. С помощью параметра **Назначение** можно указать, какой диспетчер подключений файлов следует использовать.|  
 |**Переменная**|Сохранение выходных данных профиля в переменной пакета.<br /><br /> Примечание. С помощью параметра **Назначение** можно указать, какую переменную пакета следует использовать.|  

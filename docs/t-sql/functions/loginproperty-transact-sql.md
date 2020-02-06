@@ -33,10 +33,10 @@ ms.assetid: b34df777-79b0-49a5-88db-b99998479a5d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 7fb31db6e9b438fbab74a8b23462d8c7dc897d46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68059762"
 ---
 # <a name="loginproperty-transact-sql"></a>LOGINPROPERTY (Transact-SQL)
@@ -60,7 +60,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
  *propertyname*  
  Выражение, содержащее сведения о свойстве, возвращаемые для имени входа. *propertyname* может иметь одно из указанных ниже значений.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |**BadPasswordCount**|Возвращает число последовательных попыток входа в систему с неверным паролем.|  
 |**BadPasswordTime**|Возвращает время последней попытки входа в систему с неверным паролем.|  
@@ -76,7 +76,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
 |**PasswordLastSetTime**|Возвращает дату установки текущего пароля.|  
 |**PasswordHashAlgorithm**|Возвращает алгоритм, используемый для хэширования пароля.|  
   
-## <a name="returns"></a>Возвращает  
+## <a name="returns"></a>Результаты  
  Тип данных зависит от запрошенного значения.  
   
  Аргументы **IsLocked**, **IsExpired** и **IsMustChange** имеют тип **int**.  
@@ -120,7 +120,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-checking-whether-a-login-must-change-its-password"></a>A. Проверка необходимости изменения пароля для имени входа  
- В приведенном ниже примере выполняется проверка необходимости изменения пароля для имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `John3` при следующем подключении к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ В приведенном ниже примере выполняется проверка необходимости изменения пароля для имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`John3` при следующем подключении к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```  
 SELECT LOGINPROPERTY('John3', 'IsMustChange');  
@@ -128,7 +128,7 @@ GO
 ```  
   
 ### <a name="b-checking-whether-a-login-is-locked-out"></a>Б. Проверка блокировки имени входа  
- В следующем примере выполняется проверка блокировки имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `John3`.  
+ В следующем примере выполняется проверка блокировки имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`John3`.  
   
 ```  
 SELECT LOGINPROPERTY('John3', 'IsLocked');  

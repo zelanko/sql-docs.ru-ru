@@ -19,10 +19,10 @@ ms.assetid: d2d3af25-8877-46ba-95d9-1844961d97ee
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 885336e48d7b8820ac7c1015be6d770b851978af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67898081"
 ---
 # <a name="drop-default-transact-sql"></a>DROP DEFAULT (Transact-SQL)
@@ -53,7 +53,7 @@ DROP DEFAULT [ IF EXISTS ] { [ schema_name . ] default_name } [ ,...n ] [ ; ]
  *default_name*  
  Имя существующего значения по умолчанию. Для просмотра списка значений по умолчанию выполните процедуру **sp_help**. Имена значений по умолчанию должны соответствовать требованиям к именам [идентификаторов](../../relational-databases/databases/database-identifiers.md). Задание имени схемы значения по умолчанию необязательно.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Перед удалением значения по умолчанию отвяжите его, выполнив процедуру **sp_unbindefault**, если это значение по умолчанию в настоящее время привязано к столбцу или псевдониму типа данных.  
   
  После удаления значения по умолчанию из столбца, в котором допускаются значения NULL, везде на место значения вставляется NULL, если добавляются строки и явно не предоставляется никакое значение. После удаления значения по умолчанию из столбца со свойством NOT NULL, если добавляются строки и явно не предоставляется никакое значение, возвращается сообщение об ошибке. Эти строки добавляются позже как часть обычных действий инструкции INSERT.  
@@ -96,7 +96,7 @@ GO
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [CREATE DEFAULT (Transact-SQL)](../../t-sql/statements/create-default-transact-sql.md)   
  [sp_helptext (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
  [sp_help (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   

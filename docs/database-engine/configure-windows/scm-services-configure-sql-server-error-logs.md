@@ -13,10 +13,10 @@ ms.assetid: 03f0d463-9b0b-4af9-a853-da936d75e5af
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8e746861ef30305a901c388f7574a4a27e2edab4
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74127481"
 ---
 # <a name="scm-services---configure-sql-server-error-logs"></a>Службы SCM. Настройка журналов ошибок SQL Server
@@ -30,7 +30,7 @@ ms.locfileid: "74127481"
 
 2. В диалоговом окне **Настройка журналов ошибок SQL Server** выберите один из следующих параметров.
 
-    A. Число файлов журнала
+    а. Число файлов журнала
 
       **Ограничить количество файлов журнала ошибок перед очисткой**
 
@@ -40,7 +40,7 @@ ms.locfileid: "74127481"
 
       Укажите максимальное количество архивированных файлов журнала ошибок, создаваемых до их очистки. Значение по умолчанию — 6, не включая текущий. Это значение определяет число предыдущих резервных копий журналов, которые [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] хранит, прежде чем их очистить.
 
-    Б. Размер файла журнала
+    b. Размер файла журнала
 
       **Максимальный размер файла журнала ошибок в КБ**
 

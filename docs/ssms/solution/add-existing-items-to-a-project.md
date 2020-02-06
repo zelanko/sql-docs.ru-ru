@@ -1,6 +1,6 @@
 ---
-title: Добавление существующих элементов в проект | Документация Майкрософт
-ms.custom: ''
+title: Добавление существующих элементов в проект
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 084b3879-e96b-45a7-b421-6a4b0db2b92b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cfdc8405fd958efb34a607736648eddf5f4732dc
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 9f17139dfae9a04fe71c8b4d493b0be24d875c4b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68252835"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241893"
 ---
 # <a name="add-existing-items-to-a-project"></a>Добавление существующих элементов в проект
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Для расширения возможностей приложения в проект можно добавлять новые элементы. Существующий элемент может быть запросом или произвольным файлом. Среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] имеет два типа проектов: проект скрипта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и проект скрипта служб Analysis Services. Тип проекта определяет типы файлов запросов, которые могут быть добавлены в проект. Например, запрос [!INCLUDE[tsql](../../includes/tsql-md.md)] (SQL-файл) можно добавить в проект скрипта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , но нельзя добавить в проект скрипта служб Analysis Services. См. дополнительные сведения о [связывании расширений файла с редактором кода](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md).  
+Для расширения возможностей приложения в проект можно добавлять новые элементы. Существующий элемент может быть запросом или произвольным файлом. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] имеет два типа проектов: проект скрипта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и проект скрипта служб Analysis Services. Тип проекта определяет типы файлов запросов, которые могут быть добавлены в проект. Например, запрос [!INCLUDE[tsql](../../includes/tsql-md.md)] (SQL-файл) можно добавить в проект скрипта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , но нельзя добавить в проект скрипта служб Analysis Services. О том, как связать расширения файлов с типами проектов, см. в разделе [Практическое руководство. Связывание расширения файла с редактором кода](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md).  
   
 ### <a name="to-add-an-existing-query-or-a-miscellaneous-file-to-a-project"></a>Добавление существующего запроса или произвольного файла в проект  
   
@@ -51,10 +51,10 @@ ms.locfileid: "68252835"
     **Тип файлов**  
     Используйте этот параметра для фильтрации файлов по расширению. Предлагается список из наиболее употребляемых типов файлов.  
   
-    **Добавить**  
+    **Добавление**  
     Используйте эту кнопку, чтобы добавить элемент в проект и открыть его в редакторе по умолчанию.  
   
-    -   **Добавить**  
+    -   **Добавление**  
   
         Происходит копирование существующего элемента в каталог проекта на диске и добавление элемента в выбранный проект в обозревателе решений. Все изменения, выполняемые над элементом, не отражаются на элементе в исходном расположении. Это редактор, используемый по умолчанию для заданного типа файлов.  
   
@@ -68,6 +68,6 @@ ms.locfileid: "68252835"
   
 ## <a name="see-also"></a>См. также:  
 [Обозреватель решений](../../ssms/solution/solution-explorer.md)  
-[Добавление в проект новые элементы](../../ssms/solution/add-new-items-to-a-project.md)  
+[Добавление новых элементов в проект](../../ssms/solution/add-new-items-to-a-project.md)  
 [Перемещение или удаление элемента или проекта](../../ssms/solution/remove-or-delete-an-item-or-project.md)  
   

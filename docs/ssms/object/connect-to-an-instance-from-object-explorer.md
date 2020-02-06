@@ -1,6 +1,6 @@
 ---
-title: Подключение к SQL Server или базе данных SQL Azure | Microsoft Docs
-ms.custom: ''
+title: Подключение к SQL Server или базе данных SQL Azure
+ms.custom: seo-lt-2019
 ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: aeb46551b33f40ba6c42de705559e20d8c7b0315
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 8241bb0edff2a424d42d79ad3e6aa514519e79b3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264615"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257215"
 ---
 # <a name="connect-to-a-sql-server-or-azure-sql-database"></a>Подключение к SQL Server или базе данных SQL Azure
 
@@ -28,7 +28,7 @@ ms.locfileid: "68264615"
 
 1. В **Обозревателе объектов** щелкните **Подключиться > Ядро СУБД…** .
 
-   ![connect](../media/connect-to-server/connect-db-engine.png)
+   ![подключение](../media/connect-to-server/connect-db-engine.png)
 
 1. Заполните форму **Подключение к серверу** и щелкните **Подключиться**.
 
@@ -46,7 +46,7 @@ ms.locfileid: "68264615"
 
 1. После подключения сервер появится в **Обозревателе объектов**.
 
-   ![подключение установлено](../media/connect-to-server/connected.png)
+   ![connected](../media/connect-to-server/connected.png)
 
 ## <a name="next-steps"></a>Next Steps
 
@@ -60,4 +60,4 @@ ms.locfileid: "68264615"
 [Службы Analysis Services](https://docs.microsoft.com/sql/analysis-services/instances/connect-to-analysis-services)  
 [Службы интеграции](https://docs.microsoft.com/sql/integration-services/sql-server-integration-services)  
 [службы Reporting Services](https://docs.microsoft.com/sql/reporting-services/tools/connect-to-a-report-server-in-management-studio)  
-[Служба хранилища Azure](../f1-help/connect-to-microsoft-azure-storage.md)  
+[Хранилище Azure](../f1-help/connect-to-microsoft-azure-storage.md)  

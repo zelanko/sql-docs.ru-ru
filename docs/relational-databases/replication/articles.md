@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 7c743dc6-6c6d-4c92-b711-842e1b0b273e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b70f8c24ed54a6f36a2c224a0fb3ea5182bf3c30
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 851f298d9a2b19a1f8a3bf3fc1ef415ac4a5e288
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770656"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288124"
 ---
 # <a name="articles"></a>Статьи
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -68,14 +68,14 @@ ms.locfileid: "68770656"
     >  Изменения свойств, внесенные в диалоговом окне **Свойства всех статей \<тип_объекта>** переопределяют изменения, сделанные ранее в диалоговом окне **Свойства статьи — \<имя_объекта>** . Например, если нужно установить некоторое количество значений по умолчанию для всех статей типа объекта, но при этом задать некоторые свойства для отдельных объектов, сначала установите значения по умолчанию для всех статей. Затем установите свойства для отдельных объектов.  
   
  **Выделенная таблица предназначена только для загрузки**  
- Только репликация слиянием. Только для[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий. Выберите, чтобы указать, что при использовании клиентской подписки вносить изменения на подписчике не допускается. Учитывая то, что статьи только для загрузки не могут обновляться у подписчика, отслеживаемые метаданные подписчикам не отправляются. Это может привести к уменьшению объема хранилища на подписчиках и увеличению производительности, особенно в условиях медленного сетевого соединения. Этот параметр соответствует значению **Только для загрузки на подписчик, запретить изменения на стороне подписчика** для параметра **Направление синхронизации** в диалоговом окне **Свойства статьи** . Дополнительные сведения см. в статье [Оптимизация производительности репликации слиянием при работе со статьями, доступными только для загрузки](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md).  
+ Только репликация слиянием. Только для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий. Выберите, чтобы указать, что при использовании клиентской подписки вносить изменения на подписчике не допускается. Учитывая то, что статьи только для загрузки не могут обновляться у подписчика, отслеживаемые метаданные подписчикам не отправляются. Это может привести к уменьшению объема хранилища на подписчиках и увеличению производительности, особенно в условиях медленного сетевого соединения. Этот параметр соответствует значению **Только для загрузки на подписчик, запретить изменения на стороне подписчика** для параметра **Направление синхронизации** в диалоговом окне **Свойства статьи** . Дополнительные сведения см. в статье [Оптимизация производительности репликации слиянием при работе со статьями, доступными только для загрузки](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md).  
   
  **Показывать в списке только отмеченные объекты**  
  Установите этот флажок, чтобы показать только те статьи, которые выбраны на панели объектов.  
   
 ## <a name="see-also"></a>См. также:  
  [Публикация данных и объектов базы данных](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Создание публикации](../../relational-databases/replication/publish/create-a-publication.md)   
+ [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Просмотр и изменение свойств публикации](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)  
   
   

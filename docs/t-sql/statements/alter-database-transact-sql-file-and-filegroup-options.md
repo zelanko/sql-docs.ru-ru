@@ -45,10 +45,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 0eae7e7f1a0a673138b58440ee9c5c8d0b6f20bc
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75244429"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>Параметры инструкции ALTER DATABASE для файлов и файловых групп (Transact-SQL)
@@ -398,7 +398,7 @@ GO
 
 ### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>Б. Добавление файловой группы с двумя файлами к базе данных
 
-В следующем примере в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] создается файловая группа `Test1FG1` и добавляется два файла по 5 МБ в эту файловую группу.
+В следующем примере в базе данных `Test1FG1` создается файловая группа [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] и добавляется два файла по 5 МБ в эту файловую группу.
 
 ```sql
 USE master
@@ -879,7 +879,7 @@ GO
 
 ### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>Б. Добавление файловой группы с двумя файлами к базе данных
 
-В следующем примере в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] создается файловая группа `Test1FG1` и добавляется два файла по 5 МБ в эту файловую группу.
+В следующем примере в базе данных `Test1FG1` создается файловая группа [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] и добавляется два файла по 5 МБ в эту файловую группу.
 
 ```sql
 USE master
@@ -969,7 +969,7 @@ GO
 
 ### <a name="f-adding-a-filegroup-using-alter-database"></a>Е. Добавление файловой группы с помощью инструкции ALTER DATABASE
 
-В следующем примере к базе данных `MyDB` добавляется `FILEGROUP`.
+В следующем примере к базе данных `FILEGROUP` добавляется `MyDB`.
 
 ```sql
 --Create and add a FILEGROUP

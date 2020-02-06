@@ -14,10 +14,10 @@ ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 0fc954228aff75940e66f976f19d1414118e1a8e
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558519"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>Использование Соединителя SQL Server с компонентами шифрования SQL
@@ -215,7 +215,7 @@ ms.locfileid: "75558519"
     
     Чтобы восстановить резервную копию базы данных, зашифрованную методом TDE, целевой экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] должен иметь копию асимметричного ключа Key Vault, используемого для шифрования. Это можно сделать так:  
     
-    - Если исходный асимметричный ключ, используемый для TDE, больше не находится в Key Vault, восстановите резервную копию ключа Key Vault или повторно импортируйте ключ из локального модуля HSM. **Внимание!** Чтобы отпечаток ключа совпал с записанным в резервной копии базы данных, ключ должен иметь **исходное имя ключа Key Vault**.
+    - Если исходный асимметричный ключ, используемый для TDE, больше не находится в Key Vault, восстановите резервную копию ключа Key Vault или повторно импортируйте ключ из локального модуля HSM. **Важно!** Чтобы отпечаток ключа совпал с записанным в резервной копии базы данных, ключ должен иметь **исходное имя ключа Key Vault**.
     
     - Выполните шаги 1 и 2 на целевом экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
     

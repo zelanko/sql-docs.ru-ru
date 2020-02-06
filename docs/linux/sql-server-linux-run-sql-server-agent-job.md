@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
 ms.openlocfilehash: 5abd2db590a89350f45497d7f94b81940a0ec5bc
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065156"
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>Создание и запуск заданий агента SQL Server в Linux
@@ -189,7 +189,7 @@ ms.locfileid: "68065156"
 
 ## <a name="next-steps"></a>Next Steps
 
-В этом руководстве вы узнали, как выполнять следующие задачи.
+В этом руководстве вы узнали, как выполнять следующие задачи:
 
 > [!div class="checklist"]
 > * Установка агента SQL Server в Linux

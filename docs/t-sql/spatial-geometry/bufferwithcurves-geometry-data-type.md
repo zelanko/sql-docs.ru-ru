@@ -16,10 +16,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 608b6cc3ee887a8d17b30a027a7669d51c8822ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929317"
 ---
 # <a name="bufferwithcurves-geometry-data-type"></a>BufferWithCurves (тип данных geometry)
@@ -41,7 +41,7 @@ ms.locfileid: "67929317"
 ## <a name="return-types"></a>Типы возвращаемых данных  
 Тип возвращаемых данных SQL Server: **geometry**  
   
- Тип возвращаемого значения CLR: **SqlGeometry**  
+ Тип возвращаемых данных CLR: **SqlGeometry**  
   
 ## <a name="exceptions"></a>Исключения  
  Следующие критерии вызовут исключение **ArgumentException**.  

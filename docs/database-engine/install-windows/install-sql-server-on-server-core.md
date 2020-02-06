@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 19437198d7f65d640ea4501e97e149670a0a95fa
-ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75325466"
 ---
 # <a name="install-sql-server-on-server-core"></a>Установка SQL Server в Server Core
@@ -324,7 +324,7 @@ Setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERV
  
 1.  Нажмите CTRL+SHIFT+ESC, чтобы отобразить диспетчер задач.  
 2.  На вкладке **Приложения** нажмите **Создать задачу**.  
-3.  В диалоговом окне **Создание новой задачи** введите **cmd**в поле**Открыть[!INCLUDE[clickOK](../../includes/clickok-md.md)], а затем**.  
+3.  В диалоговом окне **Создание новой задачи** введите **cmd** в поле **Открыть**, а затем[!INCLUDE[clickOK](../../includes/clickok-md.md)].  
   
 ## <a name="see-also"></a>См. также раздел  
  [Установка SQL Server с помощью файла конфигурации](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)   

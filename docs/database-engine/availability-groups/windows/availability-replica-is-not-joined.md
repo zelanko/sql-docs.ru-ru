@@ -15,10 +15,10 @@ ms.assetid: 9c0d10b1-9e12-430c-83b9-ca2bd0a3afc4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: da14149b9518a14fa4b7a50072ba35c0b8dcefe2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67991367"
 ---
 # <a name="availability-replica-is-not-joined-to-an-always-on-availability-group"></a>Реплика доступности не присоединена к группе доступности Always On
@@ -33,7 +33,7 @@ ms.locfileid: "67991367"
 |**Категория**|**Предупреждение**|  
 |**Аспект**|Реплика доступности|  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Description  
  Эта политика проверяет состояние присоединения реплики доступности. Политика находится в состоянии неисправности, когда реплика доступности добавлена в группу доступности, но она не присоединена с соблюдением всех требований. В остальном политика находится в рабочем состоянии.  
   
 > [!NOTE]  

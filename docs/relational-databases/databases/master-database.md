@@ -14,10 +14,10 @@ ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e8c1447bfb5a4776430d24959267c7ec29aa48e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68133604"
 ---
 # <a name="master-database"></a>База данных master
@@ -73,10 +73,10 @@ ms.locfileid: "68133604"
 |MIXED_PAGE_ALLOCATION|ON|нет|  
 |NUMERIC_ROUNDABORT|OFF|Да|  
 |PAGE_VERIFY|CHECKSUM|Да|  
-|PARAMETERIZATION|SIMPLE|Да|  
+|PARAMETERIZATION|ПРОСТОЙ|Да|  
 |QUOTED_IDENTIFIER|OFF|Да|  
 |READ_COMMITTED_SNAPSHOT|OFF|нет|  
-|RECOVERY|SIMPLE|Да|  
+|RECOVERY|ПРОСТОЙ|Да|  
 |RECURSIVE_TRIGGERS|OFF|Да|  
 |Параметры компонента Service Broker|DISABLE_BROKER|нет|  
 |TRUSTWORTHY|OFF|Да|  
@@ -122,7 +122,7 @@ ms.locfileid: "68133604"
   
 - Перестроить базу данных **master** с нуля.  
   
-  Если серьезное повреждение базы данных **master** не позволяет запустить экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], базу данных **master**нужно перестроить. Дополнительные сведения см. в статье [Перестроение системных баз данных](../../relational-databases/databases/rebuild-system-databases.md).  
+  Если серьезное повреждение базы данных **master** не позволяет запустить экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], базу данных **master**нужно перестроить. Дополнительные сведения см. в разделе [Перестроение системных баз данных](../../relational-databases/databases/rebuild-system-databases.md).  
   
   > [!IMPORTANT]  
   >  При перестроении базы данных **master** все системные базы данных также перестраиваются.  

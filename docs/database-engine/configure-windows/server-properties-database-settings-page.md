@@ -13,10 +13,10 @@ ms.author: mikeray
 ms.custom: ''
 ms.date: 05/23/2019
 ms.openlocfilehash: bdefcbbfe6d5987de4ac69ab60d1e80b004a5db6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68025450"
 ---
 # <a name="server-properties---database-settings-page"></a>Свойства сервера (страница "Параметры базы данных")
@@ -81,7 +81,7 @@ ms.locfileid: "68025450"
   
 Указывает расположение файлов журналов по умолчанию. Нажмите кнопку «Обзор», чтобы перейти к новому размещению по умолчанию. Вступит в действие только после перезапуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-### <a name="configured-values"></a>Настроенные значения
+### <a name="configured-values"></a>Значения настроек
 
 Отображает настроенные значения для параметров на этой панели. В случае изменения этих значений выберите пункт **Текущие значения** и посмотрите, вступили ли в силу внесенные изменения. В противном случае сначала должен быть перезапущен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

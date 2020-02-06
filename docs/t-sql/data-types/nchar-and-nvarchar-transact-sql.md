@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8a8baa16e2b2d7e22bfd3d4045ff77483e198aec
-ms.sourcegitcommit: 67261229b93f54f9b3096890b200d1aa0cc884ac
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68354597"
 ---
 # <a name="nchar-and-nvarchar-transact-sql"></a>nchar и nvarchar (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68354597"
 Строковые данные переменного размера. *n* определяет размер строки в парах байтов и может иметь значение от 1 до 4000. Значение **max** указывает, что максимальный размер при хранении составляет 2^30-1 символов (2 ГБ). Размер при хранении определяется как дважды *n* байт + 2 байта. В случае с кодировкой [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) размер при хранении определяется как дважды *n* байт + 2 байта, а количество хранимых символов равно *n*. Для кодировки UTF-16 размер при хранении также равен дважды *n* байт + 2 байта, но количество хранимых символов может быть меньше *n*, так как дополнительные символы используют две пары байтов (также называются [суррогатными парами](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF)). Синонимами типа **nvarchar** по стандарту ISO являются типы **national char varying** и **national character varying**.
   
 ## <a name="remarks"></a>Remarks  
-Часто ошибочно считают, что в типах данных [NCHAR(*n*) и NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) число *n* указывает на количество символов. Однако на самом деле число *n* в [NCHAR(*n*) и NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) — это длина строки в **парах байтов** (0–4000). *n* никогда не определяет количество хранимых символов. То же самое верно и в отношении типов [CHAR(*n*) и VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md).   
+Часто ошибочно считают, что в типах данных [NCHAR(*n*) и NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) число *n* указывает на количество символов. Однако на самом деле число [n*в*NCHAR(*n*) и NVARCHAR(](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)n *)*  — это длина строки в **парах байтов** (0–4000). *n* никогда не определяет количество хранимых символов. То же самое верно и в отношении типов [CHAR(*n*) и VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md).   
 Заблуждение возникает из-за того, что при использовании символов, определенных в диапазоне Юникода 0–65 535, на каждую пару байтов приходится один хранимый символ. Однако в старших диапазонах Юникода (65 536–1 114 111) один символ может занимать две пары байтов. Например, в столбце, определенном как NCHAR(10), [!INCLUDE[ssde_md](../../includes/ssde_md.md)] может хранить 10 символов, занимающих одну пару байтов (диапазон Юникода 0–65 535), но меньше 10 символов, занимающих две пары байтов (диапазон Юникода 65 536–1 114 111). Дополнительные сведения о хранении символов Юникода и их диапазонах см. в разделе [Различия в хранении UTF-8 и UTF-16](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences).     
 
 Если значение *n* в определении данных или в инструкции объявления переменной не указано, то длина по умолчанию равна 1. Когда *n* не задано функцией CAST, длина по умолчанию равняется 30.

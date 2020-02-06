@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cf3fd2a6cd222320e55b7336272bf9f662b81694
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68009571"
 ---
 # <a name="database-event-category"></a>Категория событий Database
@@ -27,11 +27,11 @@ ms.locfileid: "68009571"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Описание|  
+|Раздел|Description|  
 |-----------|-----------------|  
 |[Класс событий Data File Auto Grow](../../relational-databases/event-classes/data-file-auto-grow-event-class.md)|Указывает на то, что размер файла данных увеличивается автоматически. Это событие не происходит при явном увеличении файла данных с помощью инструкции ALTER DATABASE.|  
 |[Класс событий Data File Auto Shrink](../../relational-databases/event-classes/data-file-auto-shrink-event-class.md)|Указывает на то, что файл данных был сжат.|  
-|[Соединение зеркального отображения базы данных, класс событий](../../relational-databases/event-classes/database-mirroring-connection-event-class.md)|Событие, формируемое для уведомления о состоянии транспортного соединения для зеркального отображения базы данных.|  
+|[Класс событий Database Mirroring Connection](../../relational-databases/event-classes/database-mirroring-connection-event-class.md)|Событие, формируемое для уведомления о состоянии транспортного соединения для зеркального отображения базы данных.|  
 |[Класс событий Database Mirroring State Change](../../relational-databases/event-classes/database-mirroring-state-change-event-class.md)|Указывает, когда изменяется состояние зеркальной базы данных.|  
 |[Класс событий Database Suspect Data Page](../../relational-databases/event-classes/database-suspect-data-page-event-class.md)|Указывает, что страница добавлена в таблицу **suspect_pages** базы данных **msdb** .|  
 |[Класс событий Log File Auto Grow](../../relational-databases/event-classes/log-file-auto-grow-event-class.md)|Указывает на то, что размер файла журнала был сжат автоматически. Это событие не происходит при явном увеличении файла журнала с помощью инструкции ALTER DATABASE.|  

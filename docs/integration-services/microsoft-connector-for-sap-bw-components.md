@@ -11,10 +11,10 @@ ms.assetid: bdf81735-dba7-45ef-8794-0eb67c01475a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ba6298d5ead650b5e6f6bc3cb68d0c5926624741
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295871"
 ---
 # <a name="microsoft-connector-for-sap-bw-components"></a>Компоненты Microsoft Connector для SAP BW
@@ -37,13 +37,13 @@ ms.locfileid: "71295871"
 >  Документация по Microsoft Connector 1.1 для SAP BW предполагает, что читатель знаком со средой SAP Netweaver BW. Дополнительные сведения о SAP Netweaver BW или сведения о настройке объектов и процессов SAP Netweaver BW см. в документации SAP.  
   
 ## <a name="in-this-section"></a>в этом разделе  
- [SAP BW Connection Manager](../integration-services/connection-manager/sap-bw-connection-manager.md)  
+ [Диспетчер подключений SAP BW](../integration-services/connection-manager/sap-bw-connection-manager.md)  
  Описывает диспетчер соединений SAP BW. Диспетчер соединений подключает источник SAP BW или назначение SAP BW к системе SAP Netweaver BW версии 7.  
   
- [SAP BW Source](../integration-services/data-flow/sap-bw-source.md)  
+ [Источник «SAP BW»](../integration-services/data-flow/sap-bw-source.md)  
  Описывает источник SAP BW, который позволяет извлекать данные из системы SAP Netweaver BW.  
   
- [SAP BW Destination](../integration-services/data-flow/sap-bw-destination.md)  
+ [Назначение «SAP BW»](../integration-services/data-flow/sap-bw-destination.md)  
  Описывает назначение SAP BW, позволяющее загружать данные в систему SAP Netweaver BW.  
   
   

@@ -14,10 +14,10 @@ ms.assetid: 94195797-ad7a-4962-a8e3-b259cd13aa38
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 96716d694a44003105190e287cfc7a4662924663
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68033420"
 ---
 # <a name="advanced-merge-replication-conflict---com-based-custom-resolvers"></a>Конфликт расширенной репликации слиянием: пользовательские сопоставители на основе технологии COM
@@ -42,7 +42,7 @@ ms.locfileid: "68033420"
  Чтобы указать пользовательский сопоставитель, см. раздел [Определение сопоставителя статей публикации слиянием](../../../relational-databases/replication/publish/specify-a-merge-article-resolver.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Расширенное обнаружение и разрешение конфликтов репликации слиянием](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Microsoft COM-Based Resolvers](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)  
   
   

@@ -14,10 +14,10 @@ ms.assetid: 635ea361-a797-4971-bd05-e3415862bc5c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 218389eaf76336e33d866f16c6b79ef54661be0b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68011947"
 ---
 # <a name="default-sql-server-network-protocol-configuration"></a>Конфигурация сетевого протокола SQL Server по умолчанию
@@ -35,7 +35,7 @@ ms.locfileid: "68011947"
 | -------- | -- | -- | -- | --  |  
 |Enterprise | Новая установка | Активировано | Активировано | Отключено для сетевых подключений.|
 |Standard | Новая установка | Активировано | Активировано | Отключено для сетевых подключений.|
-|Web Edition | Новая установка | Активировано | Активировано | Отключено для сетевых подключений.|
+|Интернет | Новая установка | Активировано | Активировано | Отключено для сетевых подключений.|
 |Разработчик | Новая установка | Активировано | Выключено | Отключено для сетевых подключений.|
 |Ознакомительная версия | Новая установка | Активировано | Активировано | Отключено для сетевых подключений.|
 |SQL Server Express | Новая установка | Активировано | Выключено | Отключено для сетевых подключений.|
@@ -57,7 +57,7 @@ ms.locfileid: "68011947"
 
 
 
-## <a name="includessnoversionmdincludesssnoversion-mdmd-browser-settings"></a>[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Параметры браузера
+## <a name="includessnoversion_mdincludesssnoversion-mdmd-browser-settings"></a>[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Параметры браузера
 
 Во время установки можно настроить автоматический запуск службы браузера [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] . По умолчанию служба запускается автоматически при выполнении следующих условий:
 

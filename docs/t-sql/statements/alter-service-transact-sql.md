@@ -21,10 +21,10 @@ ms.assetid: 2b4608f7-bb2e-4246-aa29-b52c55995b3a
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 3b18eb0d8f848bb57015aa78797d1222b9d92194
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70745297"
 ---
 # <a name="alter-service-transact-sql"></a>ALTER SERVICE (Transact-SQL)
@@ -51,7 +51,7 @@ ALTER SERVICE service_name
  *service_name*  
  Имя службы, которую необходимо изменить. Не могут быть указаны имена сервера, базы данных и схемы.  
   
- ON QUEUE [ _schema_name_**.** ] *queue_name*  
+ ON QUEUE [ _schema_name_ **.** ] *queue_name*  
  Указывает новую очередь для этой службы. [!INCLUDE[ssSB](../../includes/sssb-md.md)] перемещает все сообщения этой службы из текущей очереди в новую очередь.  
   
  ADD CONTRACT *contract_name*  
@@ -60,7 +60,7 @@ ALTER SERVICE service_name
  DROP CONTRACT *contract_name*  
  Указывает контракт, удаляемый из набора контрактов, предоставляемых этой службе. [!INCLUDE[ssSB](../../includes/sssb-md.md)] отправляет сообщение об ошибке всем существующим диалогам с этой службой, использующим этот контракт.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Когда инструкция ALTER SERVICE удаляет контракт из службы, служба перестает быть возможной целью диалогов, использующих этот контракт. Поэтому компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] не допускает начало новых диалогов с этой службой по данному контракту. На уже существующие диалоги, использующие этот контракт, изменение не влияет.  
   
  Чтобы изменить свойство AUTHORIZATION для службы, используйте инструкцию ALTER AUTHORIZATION.  
@@ -95,7 +95,7 @@ ALTER SERVICE [//Adventure-Works.com/Expenses]
      DROP CONTRACT [//Adventure-Works.com/Expenses/ExpenseSubmission]) ;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [CREATE SERVICE (Transact-SQL)](../../t-sql/statements/create-service-transact-sql.md)   
  [DROP SERVICE (Transact-SQL)](../../t-sql/statements/drop-service-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  

@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 90165738dfcea8818353d602f72390bb08eea792
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847355"
 ---
 # <a name="iclientvirtualdeviceset2createex-vdi"></a>IClientVirtualDeviceSet2::CreateEx (VDI)
@@ -58,6 +58,6 @@ HRESULT IClientVirtualDeviceSet2::CreateEx (
 
 Метод CreateEx заменяет метод Create, определенный в исходном интерфейсе IClientVirtualDeviceSet. Исходный метод Create является устаревшим, и его не следует использовать в будущем. Исходный метод Create реализует поддержку имен экземпляров с помощью переменной среды _VIRTUAL_SERVER_NAME_. Если эта переменная задана в среде, то метод Create автоматически вызывает метод CreateEx, передавая значение переменной _VIRTUAL_SERVER_NAME_ в качестве имени экземпляра.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Дополнительные сведения см. в [справке по интерфейсу виртуальных устройств SQL Server](reference-virtual-device-interface.md).

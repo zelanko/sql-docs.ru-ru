@@ -11,10 +11,10 @@ ms.assetid: a6b595e1-5227-47ce-8ee2-a28c1e1d5645
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4102ee4dc551a02a8b6853062e19d448ab414e7b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296527"
 ---
 # <a name="catalogprojects-ssisdb-database"></a>catalog.projects (база данных SSISDB)
@@ -26,7 +26,7 @@ ms.locfileid: "71296527"
 
   Отображает подробные сведения для всех проектов, которые находятся в каталоге служб **SSISDB**.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |project_id|**bigint**|Уникальный идентификатор (ID) проекта.|  
 |folder_id|**bigint**|Уникальный идентификатор папки, в которой хранится проект.|  

@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 4badf632e87404b0c3496564abec6ca9a56e3747
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67909526"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>Укажите коэффициент заполнения для индекса
@@ -39,7 +39,7 @@ ms.locfileid: "67909526"
   
      [Вопросы производительности](#Performance)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Указание коэффициента заполнения для индекса с помощью следующих средств:**  
   

@@ -18,10 +18,10 @@ ms.assetid: 348c7047-3442-4590-8879-fe841e79058c
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 8eb3644652d826744b50b6980b0dbe0a42ae2d55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67950201"
 ---
 # <a name="stgeometryn-geometry-data-type"></a>STGeometryN (тип данных geometry)
@@ -43,7 +43,7 @@ ms.locfileid: "67950201"
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Тип возвращаемого значения CLR: **SqlGeometry**  
+ Тип возвращаемых данных CLR: **SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
  Данный метод возвращает значение **NULL**, если параметр больше, чем результат `STNumGeometries()`, и вызывает исключение **ArgumentOutOfRangeException**, если параметр *expression* меньше, чем 1.  

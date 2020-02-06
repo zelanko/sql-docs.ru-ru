@@ -12,13 +12,13 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 68cb4e95046ca2fb071ecf2ba7c713cf57646690
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74412726"
 ---
-# <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Демонстрация. Повышение производительности In-Memory OLTP
+# <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Демонстрация. Улучшение производительности выполняющейся в памяти OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Пример кода в этом разделе демонстрирует повышение производительности оптимизированных для памяти таблиц. Повышение производительности наблюдается, когда доступ к данным в оптимизированных для памяти таблицах осуществляется из традиционного интерпретированного [!INCLUDE[tsql](../../includes/tsql-md.md)]. Улучшение производительности будет даже заметнее, если доступ к данным в оптимизированной для памяти таблице выполняется из хранимой процедуры, скомпилированной в собственном коде (NCSProc).  
@@ -58,7 +58,7 @@ USE imoltp;
 go  
 ```  
   
-### <a name="step-1b-prerequisite-if-using-includesssdsfullincludessssdsfull-mdmd"></a>Шаг 1б. Предварительные требования при использовании [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]  
+### <a name="step-1b-prerequisite-if-using-includesssdsfullincludessssdsfull-mdmd"></a>Шаг 1b. Предварительные требования при использовании [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]  
  Описанные здесь действия применяются только в случае использования [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Выполните следующие действия.  
   
 1.  Выберите существующую тестовую базу данных, которая будет использоваться для примера кода.  
@@ -67,7 +67,7 @@ go
   
  Инструкции по созданию базы данных на портале Azure см. в [руководстве по началу работы с базами данных SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-get-started).  
   
-### <a name="step-2-create-memory-optimized-tables-and-ncsproc"></a>Шаг 2. Создание оптимизированных для памяти таблиц и NCSProc  
+### <a name="step-2-create-memory-optimized-tables-and-ncsproc"></a>Шаг 2. Создание оптимизированных для памяти таблиц и NCSProc  
  На этом шаге создаются оптимизированные для памяти таблицы и хранимая процедура, скомпилированная в собственном коде (NCSProc). Выполните следующие действия.  
   
 1.  Подключитесь к новой базе данных с помощью SSMS.exe.  
@@ -117,7 +117,7 @@ END;
 go  
 ```  
   
-### <a name="step-3-run-the-code"></a>Шаг 3. Запуск кода  
+### <a name="step-3-run-the-code"></a>Шаг 3. Запуск кода  
  Затем можно выполнить запросы, которые продемонстрируют производительность оптимизированных для памяти таблиц. Выполните следующие действия.  
   
 1.  Запустите приведенный ниже код T-SQL в базе данных с помощью SSMS.exe.  

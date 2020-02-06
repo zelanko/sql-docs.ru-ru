@@ -19,10 +19,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 872f5207f673c5047475220b1da01a41678c1c6d
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056140"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>Настройка и управление стоп-словами и списками стоп-слов для полнотекстового поиска
@@ -97,7 +97,7 @@ ms.locfileid: "74056140"
   
 5.  В диалоговом окне [Свойства полнотекстового списка стоп-слов](https://msdn.microsoft.com/library/2e907f5b-0cf9-484a-afcf-a4e7f1e2f87f) выполните указанные ниже действия.  
   
-    1.  В списке **Действие** выберите одно из следующих действий: **Добавить стоп-слово**, **Удалить стоп-слово**, **Удалить все стоп-слова** или **Очистить список стоп-слов**.  
+    1.  В списке **Действия** выберите одно из следующих действий: **Добавить стоп-слово**, **Удалить стоп-слово**, **Удалить все стоп-слова**или **Очистить список стоп-слов**.  
   
     2.  Если для выбранного действия доступно текстовое поле **Стоп-слово** , введите одно стоп-слово. Это стоп-слово должно быть уникальным; иными словами, оно еще не должно присутствовать в списке стоп-слов для выбранного языка.  
   
@@ -127,7 +127,7 @@ ms.locfileid: "74056140"
 |Instructions|1|  
 |are|2|  
 |applicable|3|  
-|в|4|  
+|значение|4|  
 |these|5|  
 |Adventure|6|  
 |Works|7|  

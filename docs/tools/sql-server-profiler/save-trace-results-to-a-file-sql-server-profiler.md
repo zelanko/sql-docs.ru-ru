@@ -1,28 +1,28 @@
 ---
-title: Сохранение результатов трассировки в файл (приложение SQL Server Profiler) | Документы Майкрософт
-ms.custom: ''
-ms.date: 03/14/2017
+title: Сохранение результатов трассировки в файл
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- saving traces
-- traces [SQL Server], saving
 ms.assetid: ac528747-0c19-4f3d-96f5-44c762a4abed
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 264443f7c994b598446385876500c28c42737bfa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: dc77ef698496e79e56d818ab00a63f38e0ad7c38
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928791"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307450"
 ---
 # <a name="save-trace-results-to-a-file-sql-server-profiler"></a>сохранить результаты трассировки в файл (приложение SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  В данном разделе описано сохранение результатов трассировки в файл с помощью [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+
+В данном разделе описано сохранение результатов трассировки в файл с помощью [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
 ### <a name="to-save-trace-results-to-a-file"></a>Сохранение результатов трассировки в файл  
   
@@ -39,7 +39,7 @@ ms.locfileid: "67928791"
   
      Отображается диалоговое окно **Сохранить как**.  
   
-4.  Укажите путь и имя файла в диалоговом окне **Сохранить как**. Нажмите кнопку **Сохранить.**  
+4.  Укажите путь и имя файла в диалоговом окне **Сохранить как**. Нажмите кнопку **Сохранить**.  
   
     > [!NOTE]  
     >  Убедитесь, что служба SQL Server обладает достаточными разрешениями для записи в файл в указанном каталоге.  

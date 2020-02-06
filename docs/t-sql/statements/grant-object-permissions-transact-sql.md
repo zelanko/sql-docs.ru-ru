@@ -17,10 +17,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a90add62cdda0e127d84a60fadf7f1f1578c7a0f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050818"
 ---
 # <a name="grant-object-permissions-transact-sql"></a>GRANT, предоставление разрешений на объект (Transact-SQL)
@@ -63,7 +63,7 @@ GRANT <permission> [ ,...n ] ON
  Предоставление ALL не включает все возможные разрешения, оно эквивалентно предоставлению всех разрешений [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92, применимых к указанному объекту. Значение ALL различается для разных типов объектов  
   
 - Разрешения на скалярные функции: EXECUTE, REFERENCES.  
-- Разрешения на функции с табличным значением: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
+- Разрешения на возвращающую табличное значение функцию: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
 - Разрешения на хранимые процедуры: EXECUTE.  
 - Разрешения на таблицы: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
 - Разрешения на представления: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
@@ -115,7 +115,7 @@ PRIVILEGES
 ## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
->  Сочетание разрешений ALTER и REFERENCE в некоторых случаях может позволить просматривать данные или выполнять несанкционированные функции. Пример: Пользователь с разрешением ALTER на таблицу и разрешением REFERENCE на функцию может создавать вычисляемый столбец на основе функции и в результате — выполнять ее. В этом случае пользователю также требуется разрешение SELECT на вычисляемый столбец.  
+>  Сочетание разрешений ALTER и REFERENCE в некоторых случаях может позволить просматривать данные или выполнять несанкционированные функции. Пример. Пользователь с разрешением ALTER на таблицу и разрешением REFERENCE на функцию может создавать вычисляемый столбец на основе функции и в результате выполнять ее. В этом случае пользователю также требуется разрешение SELECT на вычисляемый столбец.  
   
  Сведения об объектах доступны через различные представления каталога. Дополнительные сведения см. в разделе [Представления каталога объектов (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md).  
   

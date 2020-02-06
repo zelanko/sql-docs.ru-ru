@@ -24,10 +24,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 276e7a88d7cd10f6ee98a6dde80d3f86c39b2c08
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981985"
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
@@ -128,7 +128,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
   
 -   Двоичный файл сборки является верным с правильными метаданными и сегментами кода, и сегменты кода содержат правильные инструкции промежуточного языка корпорации Майкрософт (MSIL).  
   
--   Набор системных сборок, на которые она ссылается, является одной из поддерживаемых сборок в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: Microsoft.Visualbasic.dll, Mscorlib.dll, System.Data.dll, System.dll, System.Xml.dll, Microsoft.Visualc.dll, Custommarshallers.dll, System.Security.dll, System.Web.Services.dll, System.Data.SqlXml.dll, System.Core.dll и System.Xml.Linq.dll. Можно ссылаться и на другие системные сборки, но они должны быть явно зарегистрированы в базе данных.  
+-   Ссылаться можно на следующие поддерживаемые типы системных сборок в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: Microsoft.Visualbasic.dll, Mscorlib.dll, System.Data.dll, System.dll, System.Xml.dll, Microsoft.Visualc.dll, Custommarshallers.dll, System.Security.dll, System.Web.Services.dll, System.Data.SqlXml.dll, System.Core.dll и System.Xml.Linq.dll. Можно ссылаться и на другие системные сборки, но они должны быть явно зарегистрированы в базе данных.  
   
 -   Для сборок, созданных с наборами разрешений SAFE или EXTERNAL ACCESS должны быть соблюдены следующие условия.  
   
@@ -167,7 +167,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="example-a-creating-an-assembly-from-a-dll"></a>Пример А. Создание сборки из DLL-библиотеки  
+### <a name="example-a-creating-an-assembly-from-a-dll"></a>Пример А. Создание сборки из библиотеки dll  
   
 **Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.  
   

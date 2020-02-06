@@ -24,10 +24,10 @@ ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 53ca4d2631e41e0a815dbf240fc0a7006ec8ce8b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75252862"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Включение зашифрованных соединений для ядра СУБД
@@ -89,7 +89,7 @@ ms.locfileid: "75252862"
   > [!INCLUDE[ssnoteregistry_md](../../includes/ssnoteregistry-md.md)]  
 
 ## <a name="to-provision-install-a-certificate-on-a-single-server"></a>Подготовка (установка) сертификата на одном сервере  
-В [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] управление сертификатами интегрировано в диспетчер конфигурации SQL Server. Диспетчер конфигурации SQL Server для [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] можно использовать с более ранними версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о добавлении сертификата в одном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в статье [Управление сертификатами (диспетчер конфигурации SQL Server)](../../database-engine/configure-windows/manage-certificates.md).
+В [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] управление сертификатами интегрировано в диспетчер конфигурации SQL Server. Диспетчер конфигурации SQL Server для [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] можно использовать с более ранними версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о добавлении сертификата в одном экземпляре [ см. в статье ](../../database-engine/configure-windows/manage-certificates.md)Управление сертификатами (диспетчер конфигурации SQL Server)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 Если вы используете версию от [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] и диспетчер конфигурации SQL Server для [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] недоступен, выполните указанные ниже действия.
 

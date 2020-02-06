@@ -15,10 +15,10 @@ ms.assetid: ebb2c9f4-2097-4688-b4fb-8f0571047317
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 91b73682ffd7d626592193c5b729896ec3d593a2
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75241765"
 ---
 # <a name="availability-replica-does-not-have-a-healthy-role-for-an-always-on-availability-group"></a>Реплике доступности не назначена допустимая роль для группы доступности Always On
@@ -42,7 +42,7 @@ ms.locfileid: "75241765"
 ## <a name="possible-causes"></a>Возможные причины  
  Роль этой реплики доступности неисправна. Реплике не назначена роль первичной или вторичной.  
   
-## <a name="possible-solution-information_still_to_come"></a>Возможное решение: информация готовится  
+## <a name="possible-solution-information_still_to_come"></a>Возможное решение: Information_still_to_come  
   
 ## <a name="see-also"></a>См. также:  
  [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

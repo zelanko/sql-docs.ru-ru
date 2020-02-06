@@ -12,25 +12,25 @@ ms.assetid: 017a0113-2b17-40b3-a419-30bbc43d46b8
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8638d205ba3958a88096d12e001a9362bb3d59cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67951411"
 ---
-# <a name="mssqlserver7910"></a>MSSQLSERVER_7910
+# <a name="mssqlserver_7910"></a>MSSQLSERVER_7910
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|7910|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC2_REPAIR_PAGE_ALLOCATED|  
-|Текст сообщения|Исправление: страница P_ID выделена объекту с идентификатором O_ID, идентификатором индекса I_ID, идентификатором секции PN_ID, идентификатором единицы распределения A_ID (тип TYPE).|  
+|Текст сообщения|Исправление: выделена страница P_ID объекту с идентификатором O_ID, идентификатором индекса I_ID, идентификатором секции PN_ID, идентификатором единицы распределения A_ID (тип TYPE).|  
   
 ## <a name="explanation"></a>Объяснение  
 Это информационное сообщение инструкции REPAIR, указывающее, что страница была размещена в карте распределения индекса (IAM)-страницы.  

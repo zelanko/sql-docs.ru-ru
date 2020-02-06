@@ -23,13 +23,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e38e57bf64d20dcc4e16a8d7b31c372d877c038f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67904397"
 ---
-# <a name="errormessage-transact-sql"></a>ERROR_MESSAGE (Transact-SQL)
+# <a name="error_message-transact-sql"></a>ERROR_MESSAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Эта функция возвращает текст сообщения об ошибке, которая вызвала выполнение блока CATCH конструкции TRY...CATCH.  
@@ -59,7 +59,7 @@ ERROR_MESSAGE ( )
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-using-errormessage-in-a-catch-block"></a>A. Использование функции ERROR_MESSAGE в блоке CATCH  
+### <a name="a-using-error_message-in-a-catch-block"></a>A. Использование функции ERROR_MESSAGE в блоке CATCH  
 В приведенном ниже примере показана инструкция `SELECT`, вызывающая ошибку деления на ноль. Блок `CATCH` возвращает сообщение об ошибке.  
   
 ```sql   
@@ -86,7 +86,7 @@ Divide by zero error encountered.
 
 ```  
   
-### <a name="b-using-errormessage-in-a-catch-block-with-other-error-handling-tools"></a>Б. Использование функции ERROR_MESSAGE в блоке CATCH с другими средствами обработки ошибок  
+### <a name="b-using-error_message-in-a-catch-block-with-other-error-handling-tools"></a>Б. Использование функции ERROR_MESSAGE в блоке CATCH с другими средствами обработки ошибок  
 В приведенном ниже примере показана инструкция `SELECT`, вызывающая ошибку деления на ноль. Вместе с сообщением об ошибке блок `CATCH` возвращает сведения о ней.  
   
 ```sql  
