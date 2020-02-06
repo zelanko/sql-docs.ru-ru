@@ -22,10 +22,10 @@ ms.assetid: 2351bba7-0f2a-4cda-b3b2-6a88b8747c53
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: c23b3895afaae2e474898a617c2fbabee4df2abe
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73791307"
 ---
 # <a name="drop-service-transact-sql"></a>DROP SERVICE (Transact-SQL)
@@ -47,7 +47,7 @@ DROP SERVICE service_name
  *service_name*  
  Имя удаляемой службы. Не могут быть указаны имена сервера, базы данных и схемы.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Нельзя удалить службу, если на нее ссылаются какие-либо приоритеты диалогов.  
   
  При завершении работы службы из очереди, используемой службой, удаляются все сообщения, относящиеся к этой службе. Компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] отправляет сообщение об ошибке на удаленную сторону всех открытых диалогов, которые используют службу.  
@@ -62,7 +62,7 @@ DROP SERVICE service_name
 DROP SERVICE [//Adventure-Works.com/Expenses] ;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [ALTER BROKER PRIORITY (Transact-SQL)](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
  [ALTER SERVICE (Transact-SQL)](../../t-sql/statements/alter-service-transact-sql.md)   
  [CREATE SERVICE (Transact-SQL)](../../t-sql/statements/create-service-transact-sql.md)   

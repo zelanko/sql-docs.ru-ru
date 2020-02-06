@@ -13,10 +13,10 @@ ms.assetid: da45efed-55eb-4c71-be34-ac2589dfce8d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 43c964db4c0231d15101f58b7af088bc239fe152
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68048096"
 ---
 # <a name="setting-up-database-mirroring-sql-server"></a>Настройка зеркального отображения базы данных (SQL Server)
@@ -32,13 +32,13 @@ ms.locfileid: "68048096"
   
 1.  Основной, зеркальный и следящий (если есть) сервера должны быть отдельными экземплярами сервера, размещенными на отдельных системных узлах. Каждый экземпляр сервера должен иметь конечную точку зеркального отображения базы данных. Если нужно создать конечную точку зеркального отображения базы данных, убедитесь, что она доступна для других экземпляров сервера.  
   
-     Метод проверки подлинности, применяемый экземпляром сервера при зеркальном отображении базы данных, является свойством его конечной точки зеркального отображения базы данных. Для зеркального отображения базы данных доступны два типа защиты транспорта: проверка подлинности Windows или проверка подлинности на основе сертификата. Дополнительные сведения см. в статье [Безопасность транспорта для зеркального отображения баз данных и групп доступности AlwaysOn (SQL Server)](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md).  
+     Метод проверки подлинности, применяемый экземпляром сервера при зеркальном отображении базы данных, является свойством его конечной точки зеркального отображения базы данных. Для зеркального отображения базы данных доступны два типа защиты передаваемых данных: проверка подлинности Windows или проверка подлинности на основе сертификатов. Дополнительные сведения см. в статье [Безопасность транспорта для зеркального отображения баз данных и групп доступности AlwaysOn (SQL Server)](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md).  
   
      Требования к сетевому доступу зависят от типа проверки подлинности.  
   
     -   **При использовании проверки подлинности Windows**  
   
-         Если экземпляры участников запущены под другими учетными записями пользователей домена, для каждой требуется имя входа в базе данных **master** . Если имя входа отсутствует, его необходимо создать. Дополнительные сведения см. в разделе [Разрешение сетевого доступа к конечной точке зеркального отображения базы данных с использованием проверки подлинности Windows (SQL Server)](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md).  
+         Если экземпляры участников запущены под другими учетными записями пользователей домена, для каждой требуется имя входа в базе данных **master** . Если имя входа отсутствует, его необходимо создать. Дополнительные сведения см. в разделе [Allow Network Access to a Database Mirroring Endpoint Using Windows Authentication &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md).  
   
     -   **При использовании сертификатов**  
   
@@ -48,7 +48,7 @@ ms.locfileid: "68048096"
   
 3.  На экземпляре сервера, где будет размещена зеркальная база данных, настройте остальные компоненты среды, необходимые для зеркального отображения базы данных. Дополнительные сведения см. в статье [Управление метаданными при обеспечении доступности базы данных на другом экземпляре сервера (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
-##  <a name="EstablishUsingWinAuthentication"></a> Общие сведения. Установление сеанса зеркального отображения базы данных  
+##  <a name="EstablishUsingWinAuthentication"></a> Обзор. Установление сеанса зеркального отображения базы данных  
  Ниже приведены основные действия по установлению сеанса зеркального отображения.  
   
 1.  Создайте зеркальную базу данных, восстановив следующие резервные копии с помощью RESTORE WITH NONRECOVERY для каждой операции восстановления.  
@@ -90,12 +90,12 @@ ms.locfileid: "68048096"
          С другой стороны, если автоматическая отработка отказа нежелательна или важней производительность, а не высокий уровень доступности, можно выключить безопасность транзакций. Дополнительные сведения см. в разделе [Изменение безопасности транзакций в сеансах зеркального отображения базы данных (Transact-SQL)](../../database-engine/database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md).  
   
         > [!NOTE]  
-        >  В режиме высокой производительности параметр WITNESS должен быть установлен в OFF. Дополнительные сведения см. в статье [Кворум. Как следящий сервер влияет на доступность базы данных &#40;зеркальное отображение базы данных&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+        >  В режиме высокой производительности параметр WITNESS должен быть установлен в OFF. Дополнительные сведения см. в разделе [Кворум: как следящий сервер влияет на доступность базы данных (зеркальное отображение базы данных)](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 > [!NOTE]  
->  Пример использования [!INCLUDE[tsql](../../includes/tsql-md.md)] для настройки зеркального отображения базы данных с проверкой подлинности Microsoft Windows см. в разделе [Пример. Настройка зеркального отображения базы данных с помощью проверки подлинности Windows (Transact-SQL)](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)  
+>  Пример использования [!INCLUDE[tsql](../../includes/tsql-md.md)] для настройки зеркального отображения базы данных с проверкой подлинности Microsoft Windows см. в разделе [Пример. Настройка зеркального отображения базы данных с помощью проверки подлинности Windows (язык Transact-SQL)](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md).  
 >   
->  Пример использования [!INCLUDE[tsql](../../includes/tsql-md.md)] для настройки зеркального отображения базы данных с проверкой подлинности на основе сертификата см. в разделе [Пример. Настройка зеркального отображения с помощью сертификатов (Transact-SQL)](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md).  
+>  Пример использования [!INCLUDE[tsql](../../includes/tsql-md.md)] для настройки зеркального отображения базы данных с проверкой подлинности на основе сертификата см. в разделе [Пример. Настройка зеркального отображения базы данных с помощью сертификатов (Transact-SQL)](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md).  
   
   
 ##  <a name="InThisSection"></a> в этом разделе  
@@ -114,7 +114,7 @@ ms.locfileid: "68048096"
  [Пример. Настройка зеркального отображения базы данных с помощью проверки подлинности Windows (Transact-SQL)](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)  
  Пример всех этапов создания сеанса зеркального отображения базы данных со следящим сервером, использующим проверку подлинности Windows.  
   
- [Пример. Настройка зеркального отображения с помощью сертификатов (Transact-SQL)](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
+ [Пример. Настройка зеркального отображения базы данных с помощью сертификатов (Transact-SQL)](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
  Пример всех этапов создания сеанса зеркального отображения базы данных со следящим сервером, использующим проверку подлинности на основе сертификатов.  
   
  [Настройка учетных записей входа для зеркального отображения баз данных или групп доступности AlwaysOn (SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md)  
@@ -145,7 +145,7 @@ ms.locfileid: "68048096"
   
  **Transact-SQL/SQL Server Management Studio**  
   
--   [Обновление зеркальных экземпляров](../../database-engine/database-mirroring/upgrading-mirrored-instances.md)  
+-   [Upgrading Mirrored Instances](../../database-engine/database-mirroring/upgrading-mirrored-instances.md)  
   
 -   [Подготовка зеркальной базы данных к зеркальному отображению (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
   
@@ -154,7 +154,7 @@ ms.locfileid: "68048096"
   
 ## <a name="see-also"></a>См. также:  
  [Зеркальное отображение базы данных (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
- [Зеркальное отображение базы данных: взаимодействие и совместимость &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)   
+ [Зеркальное отображение базы данных: взаимодействие и сосуществание (SQL Server)](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)   
  [Безопасность транспорта для зеркального отображения баз данных и групп доступности AlwaysOn (SQL Server)](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [Указание сетевого адреса сервера (зеркальное отображение базы данных)](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)  
   

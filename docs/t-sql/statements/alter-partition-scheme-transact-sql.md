@@ -22,10 +22,10 @@ ms.assetid: f01d6880-9800-4cfb-8d11-d4be21efc8ca
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 593c2d8bf9cff3e10aaafc339aa82ef16c4bc09f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071241"
 ---
 # <a name="alter-partition-scheme-transact-sql"></a>ALTER PARTITION SCHEME (Transact-SQL)
@@ -60,13 +60,13 @@ NEXT USED [ filegroup_name ] [ ; ]
   
  Если аргумент *filegroup_name* не указан и ни одна файловая группа не отмечена как NEXT USED, инструкция ALTER PARTITION SCHEME возвращает предупреждение.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Все файловые группы, на которые действует инструкция ALTER PARTITION SCHEME, должны быть в режиме "в сети".  
   
 ## <a name="permissions"></a>Разрешения  
  Для выполнения инструкции ALTER PARTITION SCHEME необходимы следующие разрешения.  
   
--   Разрешение ALTER ANY DATASPACE. Это разрешение назначено по умолчанию членам предопределенной роли сервера **sysadmin** и предопределенных ролей базы данных **db_owner** и **db_ddladmin**.  
+-   Разрешение ALTER ANY DATASPACE. Это разрешение назначено по умолчанию членам предопределенной роли сервера **sysadmin** и предопределенных ролей базы данных **db_owner** и **db_ddladmin** .  
   
 -   Разрешение CONTROL или ALTER на базу данных, в которой была создана схема секционирования.  
   
@@ -82,7 +82,7 @@ NEXT USED test5fg;
   
  Файловая группа `test5fg` получает любые дополнительные секции из секционированной таблицы или индекс как результат выполнения инструкции ALTER PARTITION FUNCTION.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [CREATE PARTITION SCHEME (Transact-SQL)](../../t-sql/statements/create-partition-scheme-transact-sql.md)   
  [DROP PARTITION SCHEME (Transact-SQL)](../../t-sql/statements/drop-partition-scheme-transact-sql.md)   
  [CREATE PARTITION FUNCTION (Transact-SQL)](../../t-sql/statements/create-partition-function-transact-sql.md)   

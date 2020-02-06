@@ -21,13 +21,13 @@ ms.assetid: 31bd7a97-7f28-42a8-ba24-24d16d22973d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ec6830916132a87a7beb50a8509f2f46bd2d1d74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026272"
 ---
-# <a name="x40x40cursorrows-transact-sql"></a>&#x40;&#x40;CURSOR_ROWS (Transact-SQL)
+# <a name="x40x40cursor_rows-transact-sql"></a>&#x40;&#x40;CURSOR_ROWS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Возвращает число выбранных строк, имеющихся в последнем открытом курсоре в данном соединении. Для повышения производительности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может выполнять заполнение большого набора ключей и статических курсоров асинхронно. Функцию `@@CURSOR_ROWS` можно вызвать для определения того, получено ли количество строк, определенных для курсора, во время вызова @@CURSOR_ROWS.
@@ -45,7 +45,7 @@ ms.locfileid: "68026272"
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
-|Возвращаемое значение|Описание|  
+|Возвращаемое значение|Description|  
 |---|---|
 |-*m*|Курсор заполняется асинхронно. Возвращаемое значение (–*m*) является текущим числом строк в наборе ключей.|  
 |-1|Курсор является динамическим. Так как динамический курсор отражает все изменения, количество строк для курсора постоянно изменяется. Курсор не обязательно извлекает все определенные строки.|  

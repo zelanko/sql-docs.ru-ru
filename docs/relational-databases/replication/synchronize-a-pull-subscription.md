@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 3ca24b23-fdc3-408e-8208-a2ace48fc8e3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e0606b6a6895ffd63c219e312a727157d1e2ad86
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 79f24f3115f61b088fce684d0b7ada0bc1d39697
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769402"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287056"
 ---
 # <a name="synchronize-a-pull-subscription"></a>Синхронизация подписки по запросу
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "68769402"
   
      [Среда SQL Server Management Studio](#SSMSProcedure)  
   
-     [Replication Agents](#ReplProg)  
+     [Агенты репликации](#ReplProg)  
   
      [объекты RMO;](#RMOProcedure)  
   
@@ -831,7 +831,7 @@ End Try
   
 ## <a name="see-also"></a>См. также:  
  [Синхронизация данных](../../relational-databases/replication/synchronize-data.md)   
- [Создание подписки по запросу](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Рекомендации по защите репликации](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   

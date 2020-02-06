@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 759fab42-66c7-4541-a7a3-bb6fb868493c
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 81816333d8933e91d78c811a43293b5ca2452106
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 9d44a77a95b8b6a46fbc37a21a8abbd5ee75dfce
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75321698"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287170"
 ---
 # <a name="modify-snapshot-initialization-options-for-sql-replication"></a>Изменение параметров инициализации моментальных снимков для репликации SQL 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "75321698"
   
 ### <a name="to-modify-the-default-snapshot-location"></a>Изменение местоположения моментальных снимков по умолчанию  
   
-1.  В диалоговом окне **Свойства распространителя — \<распространитель>** на странице **Издатели** нажмите кнопку свойств ( **...** ) рядом с издателем, для которого нужно изменить расположение моментальных снимков по умолчанию.    
+1.  В диалоговом окне **Свойства распространителя —** распространитель> **на странице \<Издатели** нажмите кнопку свойств ( **...** ) рядом с издателем, для которого нужно изменить расположение моментальных снимков по умолчанию.    
 2.  В диалоговом окне **Свойства издателя — \<издатель>** введите значение для свойства **Папка моментальных снимков по умолчанию**.  
   
     > [!NOTE]  

@@ -19,17 +19,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions||=azure-sqldw-latest
 ms.openlocfilehash: fd44673ce62d74349e83b09b020c9e20ab6957de
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70155795"
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
-Возвращает значение, отформатированное с использованием указанного формата и (необязательно) языка и региональных параметров. Для выполнения форматирования значения даты, времени и чисел с учетом локали в виде строк используется функция FORMAT. Для общих преобразований типов данных продолжайте использовать CAST и CONVERT.  
+Возвращает значение в указанных формате и культуре (не обязательно). Для выполнения форматирования значения даты, времени и чисел с учетом локали в виде строк используется функция FORMAT. Для общих преобразований типов данных продолжайте использовать CAST и CONVERT.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,7 +49,7 @@ FORMAT ( value, format [, culture ] )
   
  Аргумент *format* должен содержать допустимую строку формата .NET Framework в виде стандартной строки формата (например, "C" или "D") либо в виде шаблона пользовательских символов, обозначающих даты и числовые значения (например, "ММММ ДД, гггг (дддд)"). Составное форматирование не поддерживается. Полные сведения об этих шаблонах форматирования приведены в разделах документации по .NET Framework, посвященных форматированию строк в целом, пользовательским форматам даты и времени, а также пользовательским форматам чисел. Хорошей отправной точкой является раздел [Типы форматирования](https://go.microsoft.com/fwlink/?LinkId=211776).  
   
- *culture*  
+ *Язык и региональные параметры*  
  Необязательный аргумент **nvarchar**, обозначающий язык и региональные параметры.  
   
  Если аргумент *culture* не указан, то используется язык текущего сеанса. Язык может быть задан неявно или явно с использованием инструкции SET LANGUAGE. В качестве аргумента *culture* принимает любой язык и региональные параметры, поддерживаемые .NET Framework; его применение не ограничивается языками, поддерживаемыми [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если аргумент *culture* недопустим, то FORMAT выдаст ошибку.  
@@ -79,18 +79,18 @@ FORMAT ( value, format [, culture ] )
 |Числовой|BIGINT|Int64|  
 |Числовой|INT|Int32|  
 |Числовой|smallint|Int16|  
-|Числовой|TINYINT|Byte|  
+|Числовой|tinyint|Byte|  
 |Числовой|Decimal|SqlDecimal|  
 |Числовой|NUMERIC|SqlDecimal|  
 |Числовой|FLOAT|Double|  
-|Числовой|REAL|Один|  
-|Числовой|SMALLMONEY|Decimal|  
+|Числовой|real|Один|  
+|Числовой|smallmoney|Decimal|  
 |Числовой|money|Decimal|  
-|Дата и время|Дата|DateTime|  
+|Дата и время|Дата|Дата и время|  
 |Дата и время|time|TimeSpan|  
-|Дата и время|DATETIME|DateTime|  
-|Дата и время|smalldatetime|DateTime|  
-|Дата и время|datetime2|DateTime|  
+|Дата и время|DATETIME|Дата и время|  
+|Дата и время|smalldatetime|Дата и время|  
+|Дата и время|datetime2|Дата и время|  
 |Дата и время|datetimeoffset|DateTimeOffset|  
   
 ## <a name="examples"></a>Примеры  

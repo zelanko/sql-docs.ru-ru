@@ -19,10 +19,10 @@ ms.assetid: 69b756e0-a1df-45b3-8a24-6ded8658aefe
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 122630048b7e4ff9cef34c49bfde68177020630f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077914"
 ---
 # <a name="hierarchyid-data-type-method-reference"></a>Справочник по методам типа данных hierarchyid
@@ -59,8 +59,8 @@ ms.locfileid: "68077914"
   
 ## <a name="data-type-conversion"></a>Преобразование типов данных
 Тип данных **hierarchyid** можно преобразовывать в другие типы описанным ниже образом.
--   Для преобразования значения типа **hierarchyid** в логическое представление типа данных **nvarchar(4000)** используется метод [ToString()](../../t-sql/data-types/tostring-database-engine.md).  
--   Для преобразования типа данных **hierarchyid** в тип **varbinary** используются методы [Read ()](../../t-sql/data-types/read-database-engine.md) и [Write ()](../../t-sql/data-types/write-database-engine.md).  
+-   Для преобразования значения типа [hierarchyid](../../t-sql/data-types/tostring-database-engine.md) в логическое представление типа данных **nvarchar(4000)** используется метод **ToString()** .  
+-   Для преобразования типа данных [hierarchyid](../../t-sql/data-types/read-database-engine.md) в тип [varbinary](../../t-sql/data-types/write-database-engine.md) используются методы **Read ()** и **Write ()** .  
 -   Чтобы передать параметры типа **hierarchyid** по протоколу SOAP, сначала нужно преобразовать их в строки.  
   
 ## <a name="upgrading-databases"></a>Обновление баз данных

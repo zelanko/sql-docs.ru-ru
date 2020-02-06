@@ -13,10 +13,10 @@ ms.assetid: 9fba1139-82cb-4244-a41f-4337a7d0c132
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 1d0086a6698c45d5c24d89f8e6a681d14051e11f
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74166003"
 ---
 # <a name="columnstore-index-recommendations-in-database-engine-tuning-advisor-dta"></a>Рекомендации по индексам сolumnstore в помощнике по настройке ядра СУБД
@@ -55,7 +55,7 @@ ms.locfileid: "74166003"
 ## <a name="see-also"></a>См. также:
 [Руководство по индексам columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md)       
 [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)     (Помощник по настройке ядра СУБД)  
-[Руководство. Помощник по настройке ядра СУБД](Tutorial:%20Database%20Engine%20Tuning%20Advisor.md)
+[Руководство по помощнику по настройке ядра СУБД](Tutorial:%20Database%20Engine%20Tuning%20Advisor.md)
 
 
 

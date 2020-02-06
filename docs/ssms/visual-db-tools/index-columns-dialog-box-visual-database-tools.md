@@ -1,10 +1,9 @@
 ---
-title: Диалоговое окно "Столбцы индексы" (визуальные инструменты для баз данных) | Документация Майкрософт
-ms.custom: ''
+title: Диалоговое окно "Столбцы индекса"
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: 855860ae-528f-48ab-80e3-f53e7cb8c33f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b66e60835d0f74c30752dfc6917098d7b0c29332
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: d0e419703d83e0881912be76c58467db4bc83ceb
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68254150"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257997"
 ---
 # <a name="index-columns-dialog-box-visual-database-tools"></a>Диалоговое окно «Столбцы индекса» (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

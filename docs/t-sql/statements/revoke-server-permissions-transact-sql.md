@@ -17,10 +17,10 @@ ms.assetid: 7b9a56b3-face-452e-a655-147dac306ba1
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: eada4b2dbd5a76418ec8de9f988a6291e175da5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914274"
 ---
 # <a name="revoke-server-permissions-transact-sql"></a>REVOKE, отмена разрешений сервера (Transact-SQL)
@@ -146,7 +146,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-revoking-a-permission-from-a-login"></a>A. Отмена разрешения у имени входа  
- В следующем примере разрешение `VIEW SERVER STATE` отменяется у имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `WanidaBenshoof`.  
+ В следующем примере разрешение `VIEW SERVER STATE` отменяется у имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`WanidaBenshoof`.  
   
 ```  
 USE master;  
@@ -155,7 +155,7 @@ GO
 ```  
   
 ### <a name="b-revoking-the-with-grant-option"></a>Б. Отмена параметра WITH GRANT  
- В следующем примере разрешение `CONNECT SQL` отменяется у имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `JanethEsteves`.  
+ В следующем примере разрешение `CONNECT SQL` отменяется у имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`JanethEsteves`.  
   
 ```  
 USE master;  

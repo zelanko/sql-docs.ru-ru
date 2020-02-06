@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f3fb28ddb5e910c70c8f5e72f34703d18fc4c38c
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70874465"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Имя параметров сортировки Windows (Transact-SQL)
@@ -72,12 +72,12 @@ CollationDesignator_<ComparisonStyle>
 Пропуск этого параметра означает, что ширина символов не учитывается, **WS** означает, что ширина символов учитывается.
 
 *VariationSelectorSensitivity*  
-- **Область применения**: Начиная с [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
+- **Применимо к**: начиная с [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
 
 - Пропуск этого параметра означает, что знаки выбора варианта не учитываются, **VSS** означает, что знаки выбора варианта учитываются.
 
 **UTF8**  
-- **Область применения**: Начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
+- **Применимо к**: начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
 
 - Указывает кодировку UTF-8, используемую для допустимых типов данных. Дополнительные сведения см. в статье [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).
 
@@ -223,7 +223,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 |Уйгурский (КНР)|Uighur_100_|Недоступно|
 |Верхний Сорбский (Германия)|Upper_Sorbian_100_|Недоступно|
 |Урду (Пакистан)|Urdu_100_|Недоступно|
-|Валлийский (Соединенное Королевство)|Welsh_100_|Недоступно|
+|Валлийский (Великобритания)|Welsh_100_|Недоступно|
 |Волоф (Сенегал)|French_100_|Недоступно|
 |Коса/исиКоса (Южная Африка)|Latin1_General_100_|Недоступно|
 |Саха (Россия)|Yakut_100_|Недоступно|

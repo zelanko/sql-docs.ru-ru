@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a95168f9c932b187a77d0d8e97511fd0070ea8ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68035686"
 ---
 # <a name="humanresourcesmyteam-sample-table-sql-server"></a>Образец таблицы HumanResources.myTeam (SQL Server)
@@ -31,12 +31,12 @@ ms.locfileid: "68035686"
   
  Таблица **myTeam** содержит следующие столбцы.  
   
-|Столбец|Тип данных|Допускает значения NULL|Описание|  
+|Столбец|Тип данных|Допускает значения NULL|Description|  
 |------------|---------------|-----------------|-----------------|  
 |**EmployeeID**|**smallint**|Нет|Первичный ключ для строк таблицы. Идентификатор сотрудника — члена команды.|  
 |**Название**|**nvarchar(50)**|Нет|Имя члена команды.|  
 |**Title**|**nvarchar(50)**|Допускает значения NULL|Должность, которую сотрудник занимает в команде.|  
-|**Историческая справка**|**nvarchar(50)**|Нет|Дата и время последнего обновления строки (по умолчанию)|  
+|**Вводная информация**|**nvarchar(50)**|Нет|Дата и время последнего обновления строки (по умолчанию)|  
   
 **Для создания таблицы HumanResources.myTeam**  
   

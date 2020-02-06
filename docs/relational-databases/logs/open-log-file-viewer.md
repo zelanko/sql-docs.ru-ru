@@ -13,10 +13,10 @@ ms.assetid: a86b89cb-0432-4648-895a-05ecc5450e45
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9e76c7eb85306f63e9be230c76159efbab25444a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68083983"
 ---
 # <a name="open-log-file-viewer"></a>Открытие средства просмотра файла журнала
@@ -33,7 +33,7 @@ ms.locfileid: "68083983"
   
 -   SQL Server  
   
--   SQL Server, агент  
+-   Агент SQL Server  
   
 -   События Windows (К ним можно получить доступ с помощью программы просмотра событий Windows.)  
   
@@ -55,7 +55,7 @@ ms.locfileid: "68083983"
   
 1.  В обозревателе объектов разверните узел **Управление**.  
   
-2.  Выполните любое из следующих действий.  
+2.  Выполните одно из приведенных ниже действий.  
   
     -   Щелкните правой кнопкой мыши **Журналы SQL Server**, выберите **Просмотр**, а затем **Журнал SQL Server** или **Журнал SQL Server и Windows**.  
   
