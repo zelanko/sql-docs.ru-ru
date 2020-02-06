@@ -16,10 +16,10 @@ ms.assetid: 6fc0f9b6-d3ea-4971-9f27-d0195d1ff718
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3cd81ad5125b6822dd59205bad32cb39194712d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075977"
 ---
 # <a name="deferred-transactions-sql-server"></a>Отложенные транзакции (SQL Server)
@@ -41,7 +41,7 @@ ms.locfileid: "68075977"
 |------------|-----------------------------------------------------------------------|  
 |Запуск сервера|Отложенная транзакция|  
 |Восстановить|Отложенная транзакция|  
-|Присоединить|Присоединение завершается с ошибкой|  
+|Attach|Присоединение завершается с ошибкой|  
 |Автоматический перезапуск|Отложенная транзакция|  
 |Создание базы данных или моментального снимка базы данных|Создание завершается с ошибкой|  
 |Повтор при зеркальном отображении базы данных|Отложенная транзакция|  
@@ -85,7 +85,7 @@ ms.locfileid: "68075977"
   
          Сведения об аварийном режиме см. в разделе [Database States](../../relational-databases/databases/database-states.md).  
   
-    -   Затем восстановите базу данных, используя параметр DBCC REPAIR_ALLOW_DATA_LOSS в одной из следующих инструкций DBCC: [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md), [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md) или [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md).  
+    -   Затем восстановите базу данных, используя параметр DBCC REPAIR_ALLOW_DATA_LOSS в одной из следующих инструкций DBCC: [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md), [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md)или [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md).  
   
          При возникновении страницы с поврежденными данными DBCC освобождает эту страницу и исправляет связанные с ней ошибки. Такой подход дает возможность возвратить базу данных в режиме «в сети» в физически согласованное состояние. Но при этом могут быть также потеряны дополнительные данные, поэтому этот подход должен применяться только в исключительных случаях.  
   

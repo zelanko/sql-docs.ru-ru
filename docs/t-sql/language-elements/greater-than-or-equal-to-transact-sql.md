@@ -25,10 +25,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8a661006b04f5af7116d03bf736bdabc70cf421c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075158"
 ---
 # <a name="gt-greater-than-or-equal-to-transact-sql"></a>&gt;= (больше или равно) (Transact-SQL)
@@ -49,9 +49,9 @@ expression >= expression
  Любое допустимое выражение [expression](../../t-sql/language-elements/expressions-transact-sql.md). Оба выражения должны иметь типы данных, допускающие неявное преобразование. Преобразование зависит от правил [приоритетов типов данных](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
 ## <a name="result-types"></a>Типы результата  
- Логическое значение  
+ Логическое  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  При сравнении выражений, чьи значения отличны от NULL, результат будет равен TRUE, если левый операнд имеет значение, большее или равное значению правого операнда; иначе результат равен FALSE.  
   
  В отличие от оператора сравнения = (равенство) результат сравнения >= двух значений, равных NULL, не зависит от свойства ANSI_NULLS.  
@@ -85,7 +85,7 @@ DepartmentID Name
   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
  [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)   
  [= (равно) (Transact-SQL)](../../t-sql/language-elements/equals-transact-sql.md)   

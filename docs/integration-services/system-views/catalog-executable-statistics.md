@@ -11,10 +11,10 @@ ms.assetid: 3dda28d6-10d8-4294-9b5e-a6048c07faf9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 85f24df15c968aa7a5848519f4c118a96bc3534c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296633"
 ---
 # <a name="catalogexecutable_statistics"></a>catalog.executable_statistics 
@@ -28,7 +28,7 @@ ms.locfileid: "71296633"
   
  Исполняемый объект ― это задача или контейнер, добавленный в поток управления пакетом.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |Statistics_id|BIGINT|Уникальный идентификатор данных.|  
 |Execution_id|BIGINT|Уникальный идентификатор для экземпляра выполнения.<br /><br /> Представление catalog.executions предоставляет дополнительные сведения о выполнении. Дополнительные сведения см. в разделе [catalog.executions (база данных SSISDB)](../../integration-services/system-views/catalog-executions-ssisdb-database.md).|  

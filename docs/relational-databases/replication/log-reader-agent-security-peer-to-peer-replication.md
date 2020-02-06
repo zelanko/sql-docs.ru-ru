@@ -14,10 +14,10 @@ ms.assetid: 6575e2a8-16bb-449c-bdca-4a4202d0972f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5caaa59fd28f3557a6ae7edf90c6a53497d24a1a
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321605"
 ---
 # <a name="log-reader-agent-security-peer-to-peer-replication"></a>Безопасность агента чтения журнала (одноранговая репликация)
@@ -42,7 +42,7 @@ ms.locfileid: "75321605"
  Контекст, в котором устанавливается соединение с распространителем. Локальное соединение с распространителем всегда устанавливается в контексте учетной записи Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)], под которой запущен агент; таким образом, в этом поле всегда будет отображаться следующее: **Impersonate '\<домен>\\<имя_для_входа\>'** или **Impersonate '\<компьютер>\\<имя_для_входа\>'** .  
   
  **Соединение с издателем**  
- Контекст, в котором осуществляется соединение с издателем. Устанавливать соединение с издателем можно при помощи имени входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или в контексте учетной записи Windows, под которой запущен агент. В поле отображается одна из следующих строк: **Use login '\<имя_для_входа>'** , **Impersonate '\<домен>\\<имя_для_входа\>'** или **Impersonate '\<компьютер>\\<имя_для_входа\>'** . [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендует выполнять соединение в контексте учетной записи Windows.  
+ Контекст, в котором осуществляется соединение с издателем. Устанавливать соединение с издателем можно при помощи имени входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или в контексте учетной записи Windows, под которой запущен агент. В поле отображается одна из следующих строк: **Use login '\<Имя_для_входа>'** , **Impersonate '\<Домен>\\<Имя_для_входа\>'** или **Impersonate '\<Компьютер>\\<Имя_для_входа\>'** . [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендует выполнять соединение в контексте учетной записи Windows.  
   
 ## <a name="see-also"></a>См. также:  
  [Администрирование одноранговой топологии (программирование репликации на языке Transact-SQL)](../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   

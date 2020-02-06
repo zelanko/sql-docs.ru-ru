@@ -18,10 +18,10 @@ ms.assetid: 4947797f-edb8-490f-beca-37df9ec06954
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 896a328f0f11570034b71f57e912ec3f460d73e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066454"
 ---
 # <a name="envelopeaggregate-geography-data-type"></a>EnvelopeAggregate (тип данных geography)

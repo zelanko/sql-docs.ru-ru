@@ -18,10 +18,10 @@ ms.assetid: 3fefdf7b-f931-404c-821c-82c0375eaf51
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: a2b65decea6d737801ef1b0b37e44b0c8ae028af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101008"
 ---
 # <a name="spatial-types---geometry-transact-sql"></a>Пространственные типы — geometry (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "68101008"
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-showing-how-to-add-and-query-geometry-data"></a>A. Отображение добавления и запроса данных типа geometry  
- В следующих двух примерах иллюстрируется добавление и запрос данных типа geometry. В первом примере создается таблица со столбцом идентификаторов и столбцом `geometry` типа `GeomCol1`. Третий столбец обрабатывает столбец `geometry` для представления в формате известного текста (WKT) OGC, используя метод `STAsText()`. Затем вставляются две строки: одна строка содержит экземпляр `LineString` типа `geometry`, а другая — экземпляр `Polygon`.  
+ В следующих двух примерах иллюстрируется добавление и запрос геометрических данных. В первом примере создается таблица со столбцом идентификаторов и столбцом `geometry` типа `GeomCol1`. Третий столбец обрабатывает столбец `geometry` для представления в формате известного текста (WKT) OGC, используя метод `STAsText()` . Затем вставляются две строки: одна строка содержит объект `LineString` типа `geometry`, а другая — объект `Polygon` .  
   
 ```sql 
 IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
@@ -61,7 +61,7 @@ GO
 ```  
   
 ### <a name="b-returning-the-intersection-of-two-geometry-instances"></a>Б. Возвращение пересечения двух экземпляров geometry  
- Во втором примере метод `STIntersection()` используется для получения точек, в которых пересекаются два вставленных ранее экземпляра `geometry`.  
+ Во втором примере метод `STIntersection()` используется для получения точек, в которых пересекаются два вставленные ранее объекта `geometry` .  
   
 ```sql  
 DECLARE @geom1 geometry;  
@@ -90,7 +90,7 @@ CREATE TABLE SpatialTable
 )  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
   [Пространственные данные (SQL Server)](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
   

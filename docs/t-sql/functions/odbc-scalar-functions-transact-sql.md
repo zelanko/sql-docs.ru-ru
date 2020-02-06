@@ -52,17 +52,17 @@ ms.assetid: a0df1ac2-6699-4ac0-8f79-f362f23496f1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0a58f211c1a838cb0089cbc2f3e5e156936d1c7e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5fd8173f0c29855fc4553dedcd9ac47ddc909f57
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914742"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909834"
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>Скалярные функции ODBC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  В инструкциях [!INCLUDE[tsql](../../includes/tsql-md.md)] можно использовать [скалярные функции ODBC](https://go.microsoft.com/fwlink/?LinkID=88579). Эти инструкции интерпретируются средой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Они могут использоваться в хранимых процедурах и других определяемых пользователем функциях. Они включают строковые, числовые и системные функции, а также функции даты, времени и интервалов.  
+  В инструкциях [ можно использовать ](https://go.microsoft.com/fwlink/?LinkID=88579)скалярные функции ODBC[!INCLUDE[tsql](../../includes/tsql-md.md)]. Эти инструкции интерпретируются средой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Они могут использоваться в хранимых процедурах и других определяемых пользователем функциях. Они включают строковые, числовые и системные функции, а также функции даты, времени и интервалов.  
   
 ## <a name="usage"></a>Использование  
  `SELECT {fn <function_name> [ (<argument>,....n) ] }`  
@@ -72,7 +72,7 @@ ms.locfileid: "67914742"
   
 ### <a name="string-functions"></a>Строковые функции  
   
-|Компонент|Описание|  
+|Компонент|Description|  
 |--------------|-----------------|  
 |BIT_LENGTH( строковое_выражение ) (ODBC 3.0)|Возвращает длину строкового выражения в битах.<br /><br /> Возвращает внутренний размер заданного типа данных без преобразования "строкового_выражения" в строку.|  
 |CONCAT( строковое_выражение1,строковое_выражение2) (ODBC 1.0)|Возвращает символьную строку, являющуюся результатом сцепления строк строковое_выражение2 и строковое_выражение1. Полученная в результате строка зависит от СУБД. Например, если столбец, представленный строкой строковое_выражение1, объединяется со значением NULL, DB2 возвратит NULL, а [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвратит строку со значением, отличным от NULL.|  
@@ -80,13 +80,13 @@ ms.locfileid: "67914742"
   
 ### <a name="numeric-function"></a>Числовые функции  
   
-|Компонент|Описание|  
+|Компонент|Description|  
 |--------------|-----------------|  
 |TRUNCATE( числовое_выражение, целое_выражение) (ODBC 2.0)|Возвращает выражение «числовое_выражение», усеченное до целого числа позиций «целое_выражение» справа от десятичной запятой. Если значение "целое_выражение" отрицательное, выражение "числовое_выражение" усекается до &#124;целое_выражение&#124; позиций слева от десятичной запятой.|  
   
 ### <a name="time-date-and-interval-functions"></a>Функции даты, времени и интервалов  
   
-|Компонент|Описание|  
+|Компонент|Description|  
 |--------------|-----------------|  
 |CURRENT_DATE( ) (ODBC 3.0)|Возвращает текущую дату.|  
 |CURDATE( ) (ODBC 3.0)|Возвращает текущую дату.|  
@@ -223,7 +223,7 @@ SELECT {fn BIT_LENGTH( @string_exp )};
 SELECT {fn CONCAT( 'CONCAT ','returns a character string')};  
 -- Returns CONCAT returns a character string  
 SELECT {fn CURRENT_DATE( )};  
--- Returns todays date  
+-- Returns today's date  
 SELECT {fn CURRENT_TIME(6)};  
 -- Returns the time  
   

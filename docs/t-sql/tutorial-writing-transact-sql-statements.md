@@ -1,5 +1,5 @@
 ---
-title: Руководство. Составление инструкций Transact-SQL | Документация Майкрософт
+title: Учебник. Составление инструкций Transact-SQL | Документы Майкрософт
 ms.custom: ''
 ms.date: 08/03/2016
 ms.prod: sql
@@ -15,17 +15,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ae6f97bd7aeea2bb587f5c572204d76f7167aafa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68051344"
 ---
-# <a name="tutorial-writing-transact-sql-statements"></a>Руководство. Написание инструкций Transact-SQL
+# <a name="tutorial-writing-transact-sql-statements"></a>Учебник. Составление инструкций Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 Учебник «Составление инструкций [!INCLUDE[tsql](../includes/tsql-md.md)] ». Этот учебник предназначен для пользователей, не умеющих составлять инструкции SQL. Он поможет новым пользователям начать обучение с просмотра некоторых простых инструкций по созданию таблиц и вставке данных. Этот учебник использует язык [!INCLUDE[tsql](../includes/tsql-md.md)], [!INCLUDE[msCoName](../includes/msconame-md.md)] -реализацию стандарта SQL. Он представляет собой краткое введение в язык [!INCLUDE[tsql](../includes/tsql-md.md)] и не заменяет обучение языку [!INCLUDE[tsql](../includes/tsql-md.md)] . Инструкции в учебнике намеренно простые и не представляют всей сложности типичной производственной базы данных.  
   
->**ПРИМЕЧАНИЕ.** Если вы новичок, возможно, вам будет проще использовать [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], а не создавать инструкции [!INCLUDE[tsql](../includes/tsql-md.md)].  
+>**ПРИМЕЧАНИЕ** . Если вы новичок, то, возможно, вам будет проще использовать [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , а не создавать инструкции [!INCLUDE[tsql](../includes/tsql-md.md)] .  
   
 ## <a name="finding-more-information"></a>Дополнительные сведения  
 Дополнительные сведения об отдельных инструкциях см. в электронной документации по SQL Server либо по имени инструкции, либо используя вкладку "Содержание" для просмотра 1800 языковых элементов, перечисленных в алфавитном порядке в разделе [Справочник по Transact-SQL (компонент Database Engine)](../t-sql/transact-sql-reference-database-engine.md). Еще одной хорошей стратегией нахождения информации является ее поиск по ключевым словам, относящимся к интересующей вас тематике. Например, чтобы узнать, как возвратить часть даты (например, месяц), выполните поиск в индексе по **датам [SQL Server]** , а затем используйте **функции извлечения частей даты**. Это приведет к разделу [DATEPART (Transact-SQL)](../t-sql/functions/datepart-transact-sql.md). В качестве другого примера, чтобы выяснить, как работать со строками, ищите **строковые функции**. Это приведет к разделу [Строковые функции (Transact-SQL)](../t-sql/functions/string-functions-transact-sql.md).  
@@ -35,13 +35,13 @@ ms.locfileid: "68051344"
   
 Учебник разделен на три занятия.  
   
-[Занятие 1. Создание объектов базы данных](../t-sql/lesson-1-creating-database-objects.md)  
+[Урок 1. Создание объектов базы данных](../t-sql/lesson-1-creating-database-objects.md)  
 В этом занятии будет создана база данных, таблица в ней, вставлены данные в таблицу, затем данные будут обновлены и прочитаны.  
   
-[Занятие 2. Настройка разрешений для объектов базы данных](../t-sql/lesson-2-configuring-permissions-on-database-objects.md)  
+[Урок 2. Настройка разрешений для объектов базы данных](../t-sql/lesson-2-configuring-permissions-on-database-objects.md)  
 В этом занятии будут созданы имя входа и пользователь. Также будут созданы представление и хранимая процедура, и пользователю будет предоставлено разрешение на нее.  
   
-[Занятие 3. Удаление объектов базы данных](../t-sql/lesson-3-deleting-database-objects.md)  
+[Урок 3. Удаление объектов базы данных](../t-sql/lesson-3-deleting-database-objects.md)  
 В этом занятии доступ к данным будет запрещен, данные из таблицы удалены, сама таблица тоже удалена вместе с базой данных.  
   
 ## <a name="requirements"></a>Требования  

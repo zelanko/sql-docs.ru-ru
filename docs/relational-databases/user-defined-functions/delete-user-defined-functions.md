@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: aa54440c5b1a506ce9c218dc7213383e0ff43ca0
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72906869"
 ---
 # <a name="delete-user-defined-functions"></a>Удаление определенных пользователем функций
@@ -28,7 +28,7 @@ ms.locfileid: "72906869"
   
      [Ограничения](#Restrictions)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Для удаления определяемой пользователем функции используются**  
   
@@ -70,7 +70,7 @@ ms.locfileid: "72906869"
 5.  В диалоговом окне **Удаление объекта** нажмите кнопку **ОК**.  
 
     > [!IMPORTANT]  
-    >  Щелкните **Показать зависимости** в диалоговом окне **Удаление объекта**, чтобы открыть диалоговое окно _Зависимости_**имя\_функции**. При этом будут отображены все объекты, зависящие от функции, и все объекты, от которых зависит функция.  
+    >  Щелкните **Показать зависимости** в диалоговом окне **Удаление объекта**, чтобы открыть диалоговое окно _Зависимости\__ имя**функции**. При этом будут отображены все объекты, зависящие от функции, и все объекты, от которых зависит функция.  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   

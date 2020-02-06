@@ -31,10 +31,10 @@ ms.assetid: 9b9caa3d-e7d0-42e1-b60b-a5572142186c
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: e3d7c9b661a69f4a575a18aae03f9eb5e601b69b
-ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74191089"
 ---
 # <a name="select-examples-transact-sql"></a>Примеры использования инструкции SELECT (Transact-SQL)
@@ -89,7 +89,7 @@ ms.locfileid: "74191089"
   
  [!code-sql[Select#SelectExamples10](../../t-sql/queries/codesnippet/tsql/select-examples-transact_10.sql)]  
   
- Предыдущий вложенный запрос данной инструкции не может быть выполнен независимо от внешнего запроса. Требуется значение параметра `Employee.EmployeeID`, однако в процессе обработки строк `Employee` компонентом [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] указанное значение меняется.  
+ Предыдущий вложенный запрос данной инструкции не может быть выполнен независимо от внешнего запроса. Требуется значение параметра `Employee.EmployeeID`, однако в процессе обработки строк [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] компонентом `Employee` указанное значение меняется.  
   
  Коррелированный вложенный запрос также может использоваться в предложении `HAVING` внешнего запроса. В данном примере осуществляется поиск моделей продуктов, для которых максимальная цена в каталоге в два раза превышает среднюю цену по нему.  
   

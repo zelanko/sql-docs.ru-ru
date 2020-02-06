@@ -1,10 +1,9 @@
 ---
-title: Запуск заданий | Документация Майкрософт
-ms.custom: ''
+title: Запуск заданий
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,13 +14,15 @@ helpviewer_keywords:
 ms.assetid: cd445949-dc10-42fc-8785-4db74c9723ad
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6da38bdcfcf69fc0859b1ba54a9b1e049598bd11
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: f89cd4c1d292ee75e094743ed3d2ab75706a2ae7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266853"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247581"
 ---
 # <a name="run-jobs"></a>Запуск заданий
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "68266853"
 |**Описание**|**Раздел**|  
 |Описывает запуск задания агента [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Start a Job](../../ssms/agent/start-a-job.md)|  
 |Описывает остановку задания агента [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Stop a Job](../../ssms/agent/stop-a-job.md)|  
-|Описывает включение и отключение задания агента [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Отключение или включение задания](../../ssms/agent/disable-or-enable-a-job.md)|  
+|Описывает включение и отключение задания агента [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)|  
   
 ## <a name="see-also"></a>См. также:  
 [sysdownloadlist](../../relational-databases/system-tables/dbo-sysdownloadlist-transact-sql.md)  

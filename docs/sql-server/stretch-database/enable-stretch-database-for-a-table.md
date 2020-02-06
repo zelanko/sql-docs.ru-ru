@@ -1,5 +1,5 @@
 ---
-title: Настройка Stretch Database для таблицы
+title: Включение Stretch Database для таблицы
 ms.date: 08/05/2016
 ms.service: sql-server-stretch-database
 ms.reviewer: ''
@@ -12,13 +12,13 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 49d3f7fa266be69c767b0fb0450cc6898351f39b
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73843809"
 ---
-# <a name="enable-stretch-database-for-a-table"></a>Настройка Stretch Database для таблицы
+# <a name="enable-stretch-database-for-a-table"></a>Включение Stretch Database для таблицы
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
 
@@ -28,12 +28,12 @@ ms.locfileid: "73843809"
   
 -   Если таблица содержит как горячие, так и холодные данные, строки для переноса можно выбрать с помощью функции фильтров.    
  
- **Предварительные требования**. Если для таблицы выбрать команду **Растяжение | Включить** , предварительно не настроив Stretch Database для всей базы данных, мастер сначала настроит базу данных для Stretch Database. Следуйте указаниям в статье [Запуск мастера включения растяжения для базы данных](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md) вместо пошаговых инструкций в этой статье.  
+ **Предварительные требования**. Если при выборе **Растяжение | Включить** для таблицы вы не включили Stretch Database для базы данных, то мастер сначала настроит базу данных для Stretch Database. Следуйте указаниям в статье [Запуск мастера включения растяжения для базы данных](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md) вместо пошаговых инструкций в этой статье.  
   
  **Разрешения**. Чтобы настроить Stretch Database для таблицы или базы данных, требуются разрешения db_owner. Чтобы включить Stretch Database в таблице, нужно обладать правами на изменение таблицы.  
 
  > [!NOTE]
- > Если позднее вы решите отключить Stretch Database, помните, что ее отключение для таблицы или базы данных не ведет к удалению удаленного объекта. Если вы хотите удалить удаленную таблицу или базу данных, это нужно сделать с помощью портала управления Azure. Пока удаленные объекты не будут удалены вручную, их хранение будет сопровождаться затратами в Azure.
+ > В случае последующего отключения Stretch Database для таблицы или базы данных помните, что такое отключение не приводит к удалению дистанционного объекта. Если вы хотите удалить удаленную таблицу или базу данных, это нужно сделать с помощью портала управления Azure. Пока удаленные объекты не будут удалены вручную, их хранение будет сопровождаться затратами в Azure.
  
 ##  <a name="EnableWizardTable"></a> Настройка Stretch Database для таблицы в с помощью мастера  
  **Запуск мастера**  
@@ -62,20 +62,20 @@ ms.locfileid: "73843809"
  Просмотрите результаты операции.  
   
 ##  <a name="EnableTSQLTable"></a> Настройка Stretch Database для таблицы с помощью Transact-SQL  
- Вы можете настроить Stretch Database для существующей таблицы либо создать новую таблицу, для которой уже настроена Stretch Database. Обе операции можно выполнить с помощью Transact-SQL.  
+ Вы можете включить Stretch Database для существующей таблицы или создать новую таблицу с поддержкой Stretch Database с помощью Transact-SQL.  
   
 ### <a name="options"></a>Параметры  
- Чтобы настроить Stretch Database для таблицы, используйте в инструкциях CREATE TABLE и ALTER TABLE следующие параметры.  
+ При выполнении CREATE TABLE или ALTER TABLE для включения Stretch Database для таблицы используйте следующие параметры.  
   
 -   Если в таблице содержатся горячие и холодные данные, можно использовать предложение `FILTER_PREDICATE = <function>` , чтобы задать функцию для выбора переносимых строк. Этот предикат должен вызывать встроенную функцию с табличным значением. Дополнительные сведения см. в разделе [Выбор строк для миграции с использованием функции фильтров](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md). Если функция фильтров не указана, переносится вся таблица.  
   
     > [!IMPORTANT]  
-    > Если указать плохо оптимизированную функцию фильтров, перенос данных будет выполняться медленно. Stretch Database применяет функцию фильтров к таблице с помощью оператора CROSS APPLY.  
+    > Если указать плохо оптимизированную функцию фильтров, перенос данных будет выполняться медленно. База данных Stretch применяет функцию фильтров к таблице с помощью оператора CROSS APPLY.  
   
 -   Укажите `MIGRATION_STATE = OUTBOUND` , чтобы немедленно запустить перенос данных, либо  `MIGRATION_STATE = PAUSED` , чтобы отложить его.  
   
-### <a name="enable-stretch-database-for-an-existing-table"></a>Настройка Stretch Database для существующей таблицы  
- Чтобы настроить Stretch Database для существующей таблицы, выполните команду ALTER TABLE.  
+### <a name="enable-stretch-database-for-an-existing-table"></a>Включение Stretch Database для существующей таблицы  
+ Чтобы настроить существующую таблицу для использования со службой Stretch Database, выполните инструкцию ALTER TABLE.  
   
  Ниже приведен пример, в котором переносится вся таблица и перенос данных начинается немедленно.  
   
@@ -87,7 +87,7 @@ ALTER TABLE <table name>
 GO
 ```  
   
- Ниже приведен пример, в котором переносятся только строки, возвращаемые встроенной функцией с табличным значением `dbo.fn_stretchpredicate` . Начало переноса откладывается. Дополнительные сведения о функции фильтров см. в разделе [Выбор строк для миграции с использованием функции фильтров](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).  
+ Ниже приведен пример, в котором переносятся только строки, возвращаемые встроенной функцией с табличным значением `dbo.fn_stretchpredicate` . Начало переноса откладывается. Дополнительные сведения о функции фильтров см. в статье [Выбор строк для миграции с использованием функции фильтров](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).  
   
 ```sql  
 USE <Stretch-enabled database name>;
@@ -101,8 +101,8 @@ ALTER TABLE <table name>
   
  Дополнительные сведения см. в разделе [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md).  
   
-### <a name="create-a-new-table-with-stretch-database-enabled"></a>Создание новой таблицы, для которой уже настроена Stretch Database  
- Чтобы создать новую таблицу с уже настроенной Stretch Database, выполните команду CREATE TABLE.  
+### <a name="create-a-new-table-with-stretch-database-enabled"></a>Создание новой таблицы с поддержкой Stretch Database  
+ Чтобы создать новую таблицу с поддержкой Stretch Database, выполните команду CREATE TABLE.  
   
  Ниже приведен пример, в котором переносится вся таблица и перенос данных начинается немедленно.  
   
@@ -115,7 +115,7 @@ CREATE TABLE <table name>
 GO
 ```  
   
- Ниже приведен пример, в котором переносятся только строки, возвращаемые встроенной функцией с табличным значением `dbo.fn_stretchpredicate` . Начало переноса откладывается. Дополнительные сведения о функции фильтров см. в разделе [Выбор строк для миграции с использованием функции фильтров](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).  
+ Ниже приведен пример, в котором переносятся только строки, возвращаемые встроенной функцией с табличным значением `dbo.fn_stretchpredicate` . Начало переноса откладывается. Дополнительные сведения о функции фильтров см. в статье [Выбор строк для миграции с использованием функции фильтров](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).  
   
 ```sql  
 USE <Stretch-enabled database name>;

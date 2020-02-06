@@ -15,10 +15,10 @@ ms.assetid: d3fed73d-e0d4-4c67-9355-fb7083a72dd6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 183761474b6841e092f1bc40da4ee2473e13bab6
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297368"
 ---
 # <a name="string-padding-ssis"></a>Дополнение строк (службы SSIS)
@@ -26,7 +26,7 @@ ms.locfileid: "71297368"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  Средство оценки выражений не проверяет, содержит ли строка начальные и конечные пробелы, и не приводит строки к одинаковой длине перед их сравнением. Если выражения требуют дополнения строк, можно использовать оператор + для сцепления значений столбцов и пустых строк. Дополнительные сведения см. в разделе [+ (объединение) (выражение SSIS)](../../integration-services/expressions/concatenate-ssis-expression.md).  
+  Средство оценки выражений не проверяет, содержит ли строка начальные и конечные пробелы, и не приводит строки к одинаковой длине перед их сравнением. Если выражения требуют дополнения строк, можно использовать оператор + для сцепления значений столбцов и пустых строк. Дополнительные сведения см. в разделе [+ (Объединение) (выражение SSIS)](../../integration-services/expressions/concatenate-ssis-expression.md).  
   
  С другой стороны, если надо удалить лишние пробелы, средство оценки выражений предоставляет функции LTRIM, RTRIM и TRIM, которые удаляют начальные либо конечные пробелы, либо и те и другие. Дополнительные сведения см. в разделах [LTRIM (выражение служб SSIS)](../../integration-services/expressions/ltrim-ssis-expression.md), [RTRIM (выражение служб SSIS)](../../integration-services/expressions/rtrim-ssis-expression.md) и [TRIM (выражение служб SSIS)](../../integration-services/expressions/trim-ssis-expression.md).  
   

@@ -24,10 +24,10 @@ ms.assetid: 7c6de71b-865c-41db-9413-ad9b3562e579
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 346044530087c40c468abe9d304231ce06220845
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67984433"
 ---
 # <a name="deny-service-broker-permissions-transact-sql"></a>DENY, запрет разрешений компонента Service Broker (Transact-SQL)
@@ -77,7 +77,7 @@ DENY permission  [ ,...n ] ON
   
 -   пользователь базы данных;  
 -   роль базы данных;  
--   роль приложения;  
+-   Роль приложения  
 -   пользователь базы данных, сопоставленный с именем входа Windows;  
 -   пользователь базы данных, сопоставленный с группой Windows;  
 -   пользователь базы данных, сопоставленный с сертификатом;  
@@ -92,7 +92,7 @@ CASCADE
   
 -   пользователь базы данных;  
 -   роль базы данных;  
--   роль приложения;  
+-   Роль приложения  
 -   пользователь базы данных, сопоставленный с именем входа Windows;  
 -   пользователь базы данных, сопоставленный с группой Windows;  
 -   пользователь базы данных, сопоставленный с сертификатом;  

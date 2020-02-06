@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f3614b1f9c058405c041aa2b4de27d97caadb8fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68111763"
 ---
 # <a name="scalar-user-defined-functions-for-in-memory-oltp"></a>Скалярные определяемые пользователем функции для выполняющейся в памяти OLTP
@@ -75,7 +75,7 @@ END
   
  Эти функции можно использовать в режиме взаимодействия при условии поддержки интерпретируемых скалярных определяемых пользователем функций. В этом случае есть ограничения для транзакций между контейнерами, как описано в разделе **Поддерживаемые уровни изоляции для транзакций между контейнерами** статьи [Операции с таблицами, оптимизированными для памяти](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md). Дополнительные сведения о режиме взаимодействия см. в статье [Доступ к таблицам, оптимизированным для памяти, с помощью интерпретируемых инструкций Transact-SQL](../../relational-databases/in-memory-oltp/accessing-memory-optimized-tables-using-interpreted-transact-sql.md).  
   
- Скомпилированным в собственном коде скалярным определяемым пользователем функциям требуется явно выраженный контекст выполнения. Дополнительные сведения см. в разделе [EXECUTE AS Clause (Transact-SQL)](../../t-sql/statements/execute-as-clause-transact-sql.md). Инструкция EXECUTE AS CALLER не поддерживается. Дополнительные сведения см. в разделе [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md).  
+ Скомпилированным в собственном коде скалярным определяемым пользователем функциям требуется явно выраженный контекст выполнения. Дополнительные сведения см. в разделе [Предложение EXECUTE AS (Transact-SQL)](../../t-sql/statements/execute-as-clause-transact-sql.md). Инструкция EXECUTE AS CALLER не поддерживается. Дополнительные сведения см. в разделе [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md).  
   
  Сведения о поддерживаемом синтаксисе инструкций EXECUTE Transact-SQL для скомпилированных в собственном коде определяемых пользователем скалярных функций см. в статье [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md). Сведения о поддерживаемом синтаксисе для выполнения определяемых пользователем функций в скомпилированной в собственном коде хранимой процедуре см. в статье [Поддерживаемые функции для модулей, скомпилированных в собственном коде T-SQL](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).  
   
@@ -91,7 +91,7 @@ END
   
 -   Функцию нельзя удалить или изменить, если на нее ссылается хранимая процедура с привязкой к схеме или определяемая пользователем функция.  
   
-## <a name="showplanxml"></a>SHOWPLAN_XML  
+## <a name="showplan_xml"></a>SHOWPLAN_XML  
  Скомпилированные в собственном коде скалярные определяемые пользователем функции поддерживают инструкцию SHOWPLAN_XML. Она соответствует общей схеме SHOWPLAN_XML, как и в случае со скомпилированными в собственном коде хранимыми процедурами. Базовый элемент определяемых пользователем функций — это `<UDF>`.  
   
  Скомпилированные в собственном коде скалярные определяемые пользователем функции не поддерживают STATISTICS XML. При выполнении запроса со ссылкой на определяемую пользователем функцию с заданной инструкцией STATISTICS XML содержимое XML возвращается без части, отвечающей за определяемую пользователем функцию.  
