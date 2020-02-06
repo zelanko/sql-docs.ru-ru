@@ -19,10 +19,10 @@ ms.author: jaszymas
 ms.reviewer: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 498fe2391cd3e8109aed3f6e1e02436234ffe6f7
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74957331"
 ---
 # <a name="transparent-data-encryption-tde"></a>Прозрачное шифрование данных (TDE)
@@ -244,7 +244,7 @@ ALTER DATABASE <db_name> SET ENCRYPTION SUSPEND;
 ALTER DATABASE <db_name> SET ENCRYPTION RESUME;
 ```
 
-Для определения текущего состояния сканирования шифрования в динамическое административное представление `sys.dm_database_encryption_keys` добавлен столбец `encryption_scan_state`. Кроме того, появился столбец `encryption_scan_modify_date`, который содержит дату и время последнего изменения состояния сканирования шифрования. Кроме того, обратите внимание на то, что если экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] перезапускается, когда сканирование шифрования приостановлено, при запуске в журнал ошибок записывается сообщение о том, что имеется приостановленное сканирование.
+Для определения текущего состояния сканирования шифрования в динамическое административное представление `encryption_scan_state` добавлен столбец `sys.dm_database_encryption_keys`. Кроме того, появился столбец `encryption_scan_modify_date`, который содержит дату и время последнего изменения состояния сканирования шифрования. Кроме того, обратите внимание на то, что если экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] перезапускается, когда сканирование шифрования приостановлено, при запуске в журнал ошибок записывается сообщение о том, что имеется приостановленное сканирование.
   
 ## <a name="transparent-data-encryption-and-buffer-pool-extension"></a>Прозрачное шифрование и расширение буферного пула  
  Файлы, касающиеся расширения буферного пула, не шифруются, если база данных зашифрована с помощью прозрачного шифрования данных. Необходимо использовать средства шифрования на уровне файловой системы, такие как BitLocker или файловая система EFS для файлов с расширением BPE.  

@@ -14,10 +14,10 @@ ms.assetid: 529bd43e-3f8a-4682-a33e-569176aa7fc4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bb899229cf38697ea7abf25fb82dddb7d2826842
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297388"
 ---
 # <a name="rtrim-ssis-expression"></a>RTRIM (выражение служб SSIS)

@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1c0dea1eff86506021907b184c80b3f28f74ab5a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72905944"
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
@@ -141,7 +141,7 @@ ms.locfileid: "72905944"
   
  Если таблица не содержит данных FILESTREAM, то это поле пусто.  
   
-### <a name="general"></a>Общие  
+### <a name="general"></a>Общие сведения  
  **Включен формат хранения Vardecimal**  
  Если задано **True**, это доступное только для чтения значение указывает, что типы данных **decimal** и **numeric** хранятся в формате vardecimal. Изменить его можно параметром **vardecimal storage format** хранимой процедуры [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Формат хранения Vardecimal устарел. Вместо этого используйте сжатие ROW.  
   

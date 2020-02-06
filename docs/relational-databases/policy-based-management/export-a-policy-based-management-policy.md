@@ -13,10 +13,10 @@ ms.assetid: f0001b33-9078-4432-8460-496736fb325a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 241cd0e4ec225c6627bb47ff6a4312f42aba26d1
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908631"
 ---
 # <a name="export-a-policy-based-management-policy"></a>Экспорт политики управления на основе политик
@@ -27,7 +27,7 @@ ms.locfileid: "72908631"
   
 -   **Перед началом работы**  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Экспорт политики с помощью:**  
   
@@ -56,5 +56,5 @@ ms.locfileid: "72908631"
   
 6.  В диалоговом окне **Экспорт политики** введите в адресной строке имя файла и путь к нему. Также можно найти подходящее расположение для файла в области панели навигации диалогового окна, а затем ввести имя XML-файла в поле **Имя файла** .  
   
-7.  После завершения нажмите кнопку **Сохранить**.  
+7.  По завершении щелкните **Сохранить**.  
 

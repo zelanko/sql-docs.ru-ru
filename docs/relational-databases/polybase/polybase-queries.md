@@ -18,10 +18,10 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.openlocfilehash: a8912a290723e3f0e1d0a0b951a6a5d1ce04b725
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710518"
 ---
 # <a name="polybase-query-scenarios"></a>Сценарии запросов PolyBase
@@ -60,7 +60,7 @@ ORDER BY SensorData.Speed DESC
   
 ```  
 
-## <a name="import-data"></a>импорт данных
+## <a name="import-data"></a>Импорт данных
 
 Вы можете импортировать данные из Hadoop или службы хранилища Azure в SQL Server для постоянного хранения. Чтобы импортировать данные, на которые ссылается внешняя таблица, следует использовать инструкцию SELECT INTO. Оперативно создайте реляционную таблицу, а затем индекс хранилища столбцов на основе таблицы, описанной на втором шаге.
 
@@ -133,6 +133,6 @@ SELECT * FROM sys.external_tables;
 SELECT name, type, is_external FROM sys.tables WHERE name='myTableName'   
 ```  
 
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Дальнейшие действия  
 
 Дополнительные сведения об устранении неполадок см. в статье [Устранение неполадок с PolyBase](../../relational-databases/polybase/polybase-troubleshooting.md).

@@ -11,10 +11,10 @@ ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 045444c2141027854e54480483f09ab8eb9a04b6
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75244375"
 ---
 # <a name="generate-and-analyze-the-clusterlog-for-an-always-on-availability-group"></a>Создание и анализ журнала CLUSTER.LOG для группы доступности Always On
@@ -69,7 +69,7 @@ Get-ClusterLog -TimeSpan 15 -Destination .
   
  Чтобы изолировать группу доступности от других библиотек ресурсов кластера, включая другие группы доступности, сделайте следующее для запуска hadrres.dll внутри отдельного процесса rhs.exe:  
   
-1.  Откройте **редактор реестра** и перейдите к следующему разделу: HKEY_LOCAL_MACHINE\Cluster\Resources. Этот раздел содержит ключи для всех ресурсов, каждый из которых имеет собственный GUID.  
+1.  Откройте **редактора реестра** и перейдите к следующему разделу: HKEY_LOCAL_MACHINE\Cluster\Resources. Этот раздел содержит ключи для всех ресурсов, каждый из которых имеет собственный GUID.  
   
 2.  Найдите ключ ресурса, содержащий значение **Name**, совпадающее с именем группы доступности.  
   

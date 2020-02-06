@@ -13,10 +13,10 @@ ms.assetid: e4d62b73-77c5-4b26-9b6d-d5f245768fc8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 85f97f8e7fe754a4c52b34f52ecb45d142a43c4b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297777"
 ---
 # <a name="slowly-changing-dimension-wizard-f1-help"></a>Справка F1 мастера медленно меняющихся измерений
@@ -28,7 +28,7 @@ ms.locfileid: "71297777"
   
  Дополнительные сведения о работе этого мастера см. в разделе [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md).  
   
- [Приветствие мастера медленно меняющихся измерений](../../../integration-services/data-flow/transformations/welcome-to-the-slowly-changing-dimension-wizard.md)  
+ [Приветствие мастера медленно изменяющихся измерений](../../../integration-services/data-flow/transformations/welcome-to-the-slowly-changing-dimension-wizard.md)  
  Приветствие мастера медленно изменяющихся измерений.  
   
  [Выбор таблицы измерения и ключей (мастер медленно изменяющихся измерений)](../../../integration-services/data-flow/transformations/select-a-dimension-table-and-keys-slowly-changing-dimension-wizard.md)  
@@ -46,11 +46,11 @@ ms.locfileid: "71297777"
  [Выводимые элементы измерения (мастер медленно изменяющихся измерений)](../../../integration-services/data-flow/transformations/inferred-dimension-members-slowly-changing-dimension-wizard.md)  
  Укажите параметры для элементов выводимых элементов измерения.  
   
- [Завершение работы мастера медленно меняющихся измерений](../../../integration-services/data-flow/transformations/finish-the-slowly-changing-dimension-wizard.md)  
+ [Завершение работы мастера медленно изменяющихся измерений](../../../integration-services/data-flow/transformations/finish-the-slowly-changing-dimension-wizard.md)  
  Отображает параметры конфигурации, выбранные пользователем.  
   
 ## <a name="see-also"></a>См. также:  
  [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)   
- [Настройка выходов при помощи мастера медленно изменяющихся измерений](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
+ [Настройка выходов с помощью мастера медленно изменяющихся измерений](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   

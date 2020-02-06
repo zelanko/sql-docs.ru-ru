@@ -8,10 +8,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 6874c34c70b562ef726bda5abbda2aebe615cc08
-ms.sourcegitcommit: bb56808dd81890df4f45636b600aaf3269c374f2
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72890542"
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>Новые возможности SQL Server 2017 на Linux
@@ -39,7 +39,7 @@ ms.locfileid: "72890542"
 - Включена поддержка [агента SQL Server](sql-server-linux-setup-sql-agent.md) для следующих задач:
   - [Задания Transact-SQL](sql-server-linux-run-sql-server-agent-job.md)
   - [Почта базы данных](sql-server-linux-db-mail-sql-agent.md)
-  - [доставка журналов;](sql-server-linux-use-log-shipping.md)
+  - [Доставка журналов](sql-server-linux-use-log-shipping.md)
 
 ## <a name="sql-server-integration-services-ssis"></a>Службы SQL Server Integration Services (SSIS)
 

@@ -17,10 +17,10 @@ ms.assetid: ef617436-1e86-4573-900a-702e27a202b9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1f52dd565f634061468a0eee4fbfbb2855da99c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082226"
 ---
 # <a name="revoke-full-text-permissions-transact-sql"></a>REVOKE, отмена разрешений на полнотекстовые объекты (Transact-SQL)

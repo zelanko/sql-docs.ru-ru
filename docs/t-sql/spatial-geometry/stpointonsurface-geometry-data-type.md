@@ -18,10 +18,10 @@ ms.assetid: 23b2b8eb-4176-49fb-ace0-92398928d60e
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: b1a820bc4f951fcbe294060825979d83a34f8969
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066376"
 ---
 # <a name="stpointonsurface-geometry-data-type"></a>STPointOnSurface (тип данных geometry)
@@ -39,9 +39,9 @@ ms.locfileid: "68066376"
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Тип возвращаемого значения CLR: **SqlGeometry**  
+ Тип возвращаемых данных CLR: **SqlGeometry**  
   
- Тип OGC (открытый геопространственный консорциум): **Point**  
+ Тип открытого геопространственного консорциума (OGC): **Point**  
   
 ## <a name="remarks"></a>Remarks  
  Этот метод возвращает значение NULL, если экземпляр пуст.  

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 86d0ae46f4b75caa8bf5967d8936fe8cb815c04f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68095373"
 ---
 # <a name="transactionlog-event-class"></a>TransactionLog, класс событий
@@ -25,13 +25,13 @@ ms.locfileid: "68095373"
   
 ## <a name="transactionlog-event-class-data-columns"></a>Столбцы данных класса событий TransactionLog  
   
-|Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
+|Имя столбца данных|Тип данных|Description|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Имя клиентского приложения, установившего соединение с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот столбец заполняется значениями, передаваемыми приложением, а не отображаемым именем программы.|10|Да|  
 |BinaryData|**image**|Значение типа Binary, зависящее от класса событий, фиксируемых при трассировке.|2|Да|  
 |ClientProcessID|**int**|Идентификатор, присвоенный главным компьютером сервера процессу, в котором работает клиентское приложение. Этот столбец данных заполняется в том случае, если клиент предоставляет идентификатор клиентского процесса.|9|Да|  
 |DatabaseID|**int**|Идентификатор базы данных, где регистрируются данные.|3|Да|  
-|DatabaseName|**nvarchar**|Имя базы данных, в которой выполняется пользовательская инструкция.|35|Да|  
+|имя_базы_данных|**nvarchar**|Имя базы данных, в которой выполняется пользовательская инструкция.|35|Да|  
 |EventClass|**int**|Тип события = 54.|27|нет|  
 |EventSequence|**int**|Последовательность данного события в запросе.|51|нет|  
 |EventSubClass|**int**|Тип подкласса события.|21|Да|  

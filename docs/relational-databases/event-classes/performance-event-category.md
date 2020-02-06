@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 42eb4676454f71bbc7b1dd1def4ec5de3d0b3867
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050413"
 ---
 # <a name="performance-event-category"></a>Категория событий Performance
@@ -27,10 +27,10 @@ ms.locfileid: "68050413"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Описание|  
+|Раздел|Description|  
 |-----------|-----------------|  
 |[Класс событий Auto Stats](../../relational-databases/event-classes/auto-stats-event-class.md)|Указывает, что произошло автоматическое обновление статистики индекса и столбца.|  
-|[Класс событий Degree of Parallelism (используется с версией 7.0)](../../relational-databases/event-classes/degree-of-parallelism-7-0-insert-event-class.md)|Указывает, что в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] инструкции SELECT, INSERT, UPDATE или DELETE были выполнены с использованием последовательного или параллельного плана. В отчет также включается количество ЦП, использованных для выполнения операции.|  
+|[Класс событий Degree of Parallelism (7.0 Insert)](../../relational-databases/event-classes/degree-of-parallelism-7-0-insert-event-class.md)|Указывает, что в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] инструкции SELECT, INSERT, UPDATE или DELETE были выполнены с использованием последовательного или параллельного плана. В отчет также включается количество ЦП, использованных для выполнения операции.|  
 |[Класс событий Performance Statistics](../../relational-databases/event-classes/performance-statistics-event-class.md)|Наблюдает за производительностью выполняемых запросов.|  
 |[Класс событий Showplan All](../../relational-databases/event-classes/showplan-all-event-class.md)|Идентифицирует операторы **Showplan** в инструкции SQL.|  
 |[Класс событий Showplan All for Query Compile](../../relational-databases/event-classes/showplan-all-for-query-compile-event-class.md)|Отображает данные компиляции для операторов **Showplan** .|  

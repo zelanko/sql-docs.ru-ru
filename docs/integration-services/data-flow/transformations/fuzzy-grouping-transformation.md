@@ -29,10 +29,10 @@ ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e8cec010923591d3fc05ef2920578bdebc4f9f5c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297938"
 ---
 # <a name="fuzzy-grouping-transformation"></a>преобразование «Нечеткое группирование»
@@ -148,7 +148,7 @@ ms.locfileid: "71297938"
  **Цифры**  
  Задайте значимость начальных и конечных цифр при сравнении данных столбцов. Например, если начальные цифры являются значимыми, группировка строк «123 Main Street» и «456 Main Street» не выполняется.  
   
-|Value|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |**Нет**|Начальные и конечные цифры не являются значимыми.|  
 |**Начальные**|Значимыми являются только начальные цифры.|  
