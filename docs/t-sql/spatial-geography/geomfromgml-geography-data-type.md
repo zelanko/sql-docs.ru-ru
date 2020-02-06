@@ -19,10 +19,10 @@ ms.assetid: 470d0997-3cb0-4d34-9a45-b332fe432b14
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: bc8173d8be0c5f5c3194667935e3cc7af4f1cca9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930733"
 ---
 # <a name="geomfromgml-geography-data-type"></a>GeomFromGML (тип данных geography)
@@ -30,7 +30,7 @@ ms.locfileid: "67930733"
 
 Создает экземпляр **geography** по заданному представлению в используемом в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подмножестве языка GML.
   
-Дополнительные сведения о языке GML см. в следующей спецификации консорциума OGC: [Спецификации OGC, язык GML](https://go.microsoft.com/fwlink/?LinkId=93629)
+Дополнительные сведения о языке GML см. в следующих документах открытого геопространственного консорциума (OGC): [Спецификации OGC, язык GML](https://go.microsoft.com/fwlink/?LinkId=93629)
   
 Этот метод типа данных **geography** поддерживает экземпляры **FullGlobe** или пространственные экземпляры, размер которых больше полушария.
   
@@ -51,7 +51,7 @@ GeomFromGml ( GML_input, SRID )
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Тип возвращаемого значения CLR: **SqlGeography**  
+ Тип возвращаемых данных CLR: **SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
  Если входные данные имеют неверный формат, метод вызовет исключение **FormatException**.  

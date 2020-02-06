@@ -11,10 +11,10 @@ ms.assetid: f151c3e8-3811-457d-a3d3-6158ca65a646
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5b2e9ebcf8464b17712d36fc43c86b7785de9ae7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292997"
 ---
 # <a name="datareader-destination-custom-properties"></a>Пользовательские свойства назначения «Модуль чтения данных»
@@ -26,17 +26,17 @@ ms.locfileid: "71292997"
   
  В следующей таблице описаны пользовательские свойства назначения «Модуль чтения данных». Все свойства, за исключением **DataReader** , доступны для чтения и записи.  
   
-|Имя свойства|Тип данных|Описание|  
+|Имя свойства|Тип данных|Description|  
 |-------------------|---------------|-----------------|  
 |DataReader|String|Имя класса назначения «Модуль чтения данных».|  
-|FailOnTimeout|Логическое значение|Показывает, завершать ли работу с ошибкой, когда истекает время ожидания чтения ( **ReadTimeout** ). Это свойство имеет значение по умолчанию **False**.|  
-|ReadTimeout|Целочисленный|Количество миллисекунд до истечения времени ожидания. По умолчанию для этого свойства устанавливается значение 30000 (30 секунд).|  
+|FailOnTimeout|Логическое|Показывает, завершать ли работу с ошибкой, когда истекает время ожидания чтения ( **ReadTimeout** ). Это свойство имеет значение по умолчанию **False**.|  
+|ReadTimeout|Целое число|Количество миллисекунд до истечения времени ожидания. По умолчанию для этого свойства устанавливается значение 30000 (30 секунд).|  
   
  Ввод и входные столбцы назначения «Модуль чтения данных» не обладают пользовательскими свойствами.  
   
  Дополнительные сведения см. в статье [DataReader Destination](../../integration-services/data-flow/datareader-destination.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Общие свойства](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

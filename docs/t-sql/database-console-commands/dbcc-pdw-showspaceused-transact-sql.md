@@ -13,18 +13,18 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: f8c5d7ac822546d8334f1a174684f35733d9571b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68116491"
 ---
-# <a name="dbcc-pdwshowspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
+# <a name="dbcc-pdw_showspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 Отображает число строк, зарезервированное место на диске и используемое место на диске для определенной таблицы или всех таблиц в базе данных [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
   
-![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -48,7 +48,7 @@ DBCC PDW_SHOWSPACEUSED ( " [ database_name . [ schema_name ] . ] | [ schema_name
 ## <a name="result-sets"></a>Результирующие наборы  
 Это результирующий набор для всех таблиц.
   
-|Столбец|Тип данных|Описание|  
+|Столбец|Тип данных|Description|  
 |------------|---------------|-----------------|  
 |reserved_space|BIGINT|Общий размер пространства, используемого для базы данных, в КБ.|  
 |data_space|BIGINT|Пространство, используемое для данных, в КБ.|  
@@ -58,7 +58,7 @@ DBCC PDW_SHOWSPACEUSED ( " [ database_name . [ schema_name ] . ] | [ schema_name
   
 Это результирующий набор для одной таблицы.
   
-|Столбец|Тип данных|Описание|Диапазон|  
+|Столбец|Тип данных|Description|Диапазон|  
 |------------|---------------|-----------------|-----------|  
 |rows|BIGINT|Число строк.||  
 |reserved_space|BIGINT|Общий размер пространства, зарезервированного для объекта, в КБ.||  
@@ -69,7 +69,7 @@ DBCC PDW_SHOWSPACEUSED ( " [ database_name . [ schema_name ] . ] | [ schema_name
 |distribution_id|INT|Распределение, которое применяется для предоставления сведений об использовании пространства.|Для реплицированных таблиц значение равно –1.|  
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-### <a name="a-dbcc-pdwshowspaceused-basic-syntax"></a>A. Базовый синтаксис DBCC PDW_SHOWSPACEUSED  
+### <a name="a-dbcc-pdw_showspaceused-basic-syntax"></a>A. Базовый синтаксис DBCC PDW_SHOWSPACEUSED  
 В приведенных ниже примерах показаны различные способы отображения числа строк, зарезервированного и используемого места на диске для таблицы FactInternetSales в базе данных [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)].
   
 ```sql

@@ -30,10 +30,10 @@ ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: ac274000ffdb1bcd29ebad2a2e0d0395b8daba0c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930328"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "67930328"
 
 Эта инструкция позволяет сжать указанный файл данных или журнала в текущей базе данных. С помощью инструкции можно переместить данные из одного файла в другие файлы в той же файловой группе, одновременно очищая файл и разрешая его удаление из базы данных. Вы можете сжать файл до меньшего размера, чем при создании, указав новое значение для минимального размера файла.
   
-![Значок ссылки на статью](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на статью") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Значок ссылки на статью](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -96,7 +96,7 @@ WITH NO_INFOMSGS
 ## <a name="result-sets"></a>Результирующие наборы  
 В приведенной ниже таблице описаны столбцы результирующего набора.
   
-|Имя столбца|Описание|  
+|Имя столбца|Description|  
 |---|---|
 |**DbId**|Идентификатор базы данных, файл которой компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] пытался сжать.|  
 |**FileId**|Идентификационный номер файла, сжатие которого было предпринято компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  

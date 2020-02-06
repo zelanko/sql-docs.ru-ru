@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fb5211a2d45ef1a5495d1df57143190f1d5f6419
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927372"
 ---
 # <a name="and-transact-sql"></a>AND (Transact-SQL)
@@ -44,7 +44,7 @@ boolean_expression AND boolean_expression
   
 ## <a name="arguments"></a>Аргументы  
  *boolean_expression*  
- Любое допустимое [выражение](../../t-sql/language-elements/expressions-transact-sql.md), возвращающее логическое значение: **TRUE**, **FALSE** или **UNKNOWN**.  
+ Любое допустимое [выражение](../../t-sql/language-elements/expressions-transact-sql.md), результатом которого являются логические значения **TRUE**, **FALSE** или **UNKNOWN**.  
   
 ## <a name="result-types"></a>Типы результата  
  **Boolean**  

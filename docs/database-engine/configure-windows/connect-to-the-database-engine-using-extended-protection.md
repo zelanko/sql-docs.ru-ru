@@ -18,10 +18,10 @@ ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 5216b324477f1af7fb727af3462ccce8d64e6a64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012102"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Соединение с компонентом Database Engine с использованием расширенной защиты

@@ -18,10 +18,10 @@ ms.assetid: 66dfd722-a9bd-45d3-9788-f1946dd23e17
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 57d0edaed1d26de79813939c9606b9934646e5f7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68223649"
 ---
 # <a name="stmlinefromtext-geography-data-type"></a>STMLineFromText (географический тип данных)
@@ -46,7 +46,7 @@ STMLineFromText ( 'multilinestring_tagged_text' , SRID )
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Тип возвращаемого значения CLR: **SqlGeography**  
+ Тип возвращаемых данных CLR: **SqlGeography**  
   
  Тип OGC: **MultiLineString**  
   

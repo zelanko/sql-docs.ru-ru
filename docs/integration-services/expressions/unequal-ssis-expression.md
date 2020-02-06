@@ -14,10 +14,10 @@ ms.assetid: fad20e85-c0e6-42bf-af70-2bc80ee09be5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 67aa61e65bc89246cfb0c685d08a32371a5fc4df
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71287906"
 ---
 # <a name="-unequal-ssis-expression"></a>!= (не равно) (выражение служб SSIS)
@@ -56,7 +56,7 @@ expression1 != expression2
     > [!NOTE]  
     >  Сравнения строк производятся с учетом регистра, диакритических знаков, японской азбуки и ширины символов.  
   
--   **Дата, время или дата и время**. Значения выражений *expression1* и *expression2* должны иметь один из следующих типов данных: DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET или DT_FILETIME.  
+-   **Дата, время или дата-время** . Значения выражений *expression1* и *expression2* должны иметь один из следующих типов данных: DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET и DT_FILETIME.  
   
     > [!NOTE]  
     >  Система не поддерживает сравнения выражений, значения которых имеют тип данных даты, времени или даты-времени. Возникнет ошибка.  
@@ -85,7 +85,7 @@ expression1 != expression2
   
 -   **Двоичный** . Значения выражений *expression1* и *expression2* должны иметь тип данных DT_BYTES.  
   
--   **Большой двоичный объект**. Значения выражений *expression1* и *expression2* должны иметь один и тот же тип данных больших двоичных объектов (BLOB): DT_TEXT, DT_NTEXT или DT_IMAGE.  
+-   **BLOB** . Значения *expression1* и *expression2* должны иметь один и тот же тип данных больших двоичных объектов (BLOB): DT_TEXT, DT_NTEXT или DT_IMAGE.  
   
  Дополнительные сведения о типах данных см. в разделе [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   

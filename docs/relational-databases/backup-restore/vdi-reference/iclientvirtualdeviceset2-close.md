@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 5f87b375773b9c81b29b3b5cac11ea97121c45df
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847385"
 ---
 # <a name="iclientvirtualdeviceset2close-vdi"></a>IClientVirtualDeviceSet2::Close (VDI)
@@ -44,6 +44,6 @@ HRESULT IClientVirtualDeviceSet2::Close ();
 
 Если функция Close вызывается, когда открыты одно или несколько виртуальных устройств, возвращается VD_E_OPEN. В этом случае инициируется SignalAbort, чтобы при возможности обеспечить правильное завершение работы. Высвобождаются ресурсы VDI. Перед вызовом функции IClientVirtualDeviceSet2::Close клиент должен дождаться указания VD_E_CLOSE на каждом устройстве. Если клиент знает, что набор виртуальных устройств уже находится в состоянии аварийного завершения, он не должен ждать указания VD_E_CLOSE от команды GetCommand и может вызвать функцию IClientVirtualDeviceSet2::Close сразу же после завершения действия в общих буферах.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Дополнительные сведения см. в [справке по интерфейсу виртуальных устройств SQL Server](reference-virtual-device-interface.md).

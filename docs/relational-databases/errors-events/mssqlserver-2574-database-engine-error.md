@@ -12,25 +12,25 @@ ms.assetid: efba507a-b5ad-4f1d-b0c8-f73b663a0562
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 80529814a7933ef2e9310872fdfc63cb339355fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68023074"
 ---
-# <a name="mssqlserver2574"></a>MSSQLSERVER_2574
+# <a name="mssqlserver_2574"></a>MSSQLSERVER_2574
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|2574|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC_EMPTY_INDEX_TREE_LEVEL_PAGE|  
-|Текст сообщения|Ошибка таблицы: страница P_ID пуста в объекте с идентификатором O_ID, идентификатором индекса I_ID, идентификатором секции PN_ID, идентификатором единицы распределения A_ID (тип TYPE). Это недопустимо на LEVEL уровне сбалансированного дерева.|  
+|Текст сообщения|Ошибка в таблице. Страница P_ID пуста в объекте с идентификатором O_ID, идентификатором индекса I_ID, идентификатором секции PN_ID, идентификатором единицы распределения A_ID (тип TYPE). Это недопустимо на LEVEL уровне сбалансированного дерева.|  
   
 ## <a name="explanation"></a>Объяснение  
 Страница сбалансированного дерева над конечным уровнем указанного индекса пуста, следовательно, не содержит строк. В [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] такое поведение возможно для страниц конечного уровня, но невозможно на уровнях дерева.  

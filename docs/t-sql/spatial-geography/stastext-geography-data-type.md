@@ -18,10 +18,10 @@ ms.assetid: d3d2635d-ca6c-4205-9d6c-eb939ee314fd
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 9050e529cd851d5b6785e3e167c1c081a2079dd5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042499"
 ---
 # <a name="stastext-geography-data-type"></a>STAsText (тип данных geography)
@@ -41,7 +41,7 @@ ms.locfileid: "68042499"
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **nvarchar(max)**  
   
- Тип возвращаемого значения CLR: **SqlChars**  
+ Тип возвращаемых данных CLR: **SqlChars**  
   
 ## <a name="remarks"></a>Remarks  
  Тип OGC экземпляра **geography** можно определить с помощью метода [STGeometryType()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md).  
@@ -57,7 +57,7 @@ SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)
 SELECT @g.STAsText();  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы OGC в экземплярах Geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

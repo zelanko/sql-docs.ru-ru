@@ -21,10 +21,10 @@ ms.assetid: 5823ba29-a75d-4b3e-ba7b-421c07ab3ac1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 27f6d8f947dc0ad5e25ddf53ac63e5f40b332c2e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68013209"
 ---
 # <a name="affinity-mask-server-configuration-option"></a>Параметр конфигурации сервера «affinity mask»
@@ -129,7 +129,7 @@ GO
 ### <a name="startup"></a>Запуск  
  Если применение заданного значения affinity mask приводит к нарушению политики лицензирования во время запуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или во время присоединения базы данных, то уровень ядра завершает процесс запуска либо операцию присоединения или восстановления базы данных, а затем сбрасывает текущее значение sp_configure для параметра affinity mask в нуль, передавая сообщение об ошибке в журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-### <a name="reconfigure"></a>Повторная настройка  
+### <a name="reconfigure"></a>Перенастройка  
  Если применение указанного значения affinity mask приводит к нарушению политики лицензирования при выполнении команды [!INCLUDE[tsql](../../includes/tsql-md.md)] RECONFIGURE, то сообщение об ошибке с требованием к администратору базы данных перенастроить значение affinity mask отправляется в сеанс клиента и в журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В этом случае команда RECONFIGURE WITH OVERRIDE принята не будет.  
   
 ## <a name="see-also"></a>См. также:  

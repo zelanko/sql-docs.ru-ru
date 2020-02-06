@@ -13,10 +13,10 @@ ms.assetid: 4e542b70-2d56-4a65-8a39-96a1ed477ca6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5d2cdfdf47aad32c9fc669ae054cf84c061c0ee5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000763"
 ---
 # <a name="revoke-permissions-on-an-xml-schema-collection"></a>Отмена разрешений на коллекцию схем XML
@@ -146,6 +146,6 @@ Go
  [Данные XML (SQL Server)](../../relational-databases/xml/xml-data-sql-server.md)   
  [Сравнение типизированного и нетипизированного XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Коллекции XML-схем (SQL Server)](../../relational-databases/xml/xml-schema-collections-sql-server.md)   
- [Требования и ограничения для коллекций XML-схем на сервере](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
+ [Требования и ограничения для коллекций схем XML на сервере](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

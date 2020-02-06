@@ -10,12 +10,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: c131954cce8e65cd7f309b59f3780bbd214cb228
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 721347cd8b61497f5ff2c1beeb058a6457c37708
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74055933"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76761868"
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>Импорт и экспорт данных в SQL Server и базе данных SQL Azure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "74055933"
 Вы можете импортировать данные с помощью команд `BULK INSERT` или `OPENROWSET(BULK...)`. Обычно эти команды выполняются в SQL Server Management Studio (SSMS). Дополнительные сведения см. в разделе [Массовый импорт данных с помощью инструкции BULK INSERT или OPENROWSET(BULK...)](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).
 
 ### <a name="use-bcp-from-the-command-prompt"></a>Используйте BCP в командной строке
-Вы можете импортировать и экспортировать данные с помощью служебной программы командной строки BCP. Дополнительные сведения см. в разделе [Массовый импорт и экспорт данных с использованием программы BCP](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).
+Вы можете импортировать и экспортировать данные с помощью служебной программы командной строки BCP. Дополнительные сведения см. в разделе [Массовый импорт и экспорт данных с использованием программы BCP](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md).
 
 ### <a name="use-the-import-flat-file-wizard"></a>Использование мастера импорта неструктурированных файлов
 Если вам не нужны все параметры конфигурации, доступные в окне мастера экспорта и импорта (а также другие средства), вы можете импортировать текстовый файл в SQL Server с помощью **мастера импорта неструктурированных файлов** в SQL Server Management Studio (SSMS). Дополнительные сведения см. в следующих статьях:
@@ -62,5 +62,5 @@ ms.locfileid: "74055933"
 -   сведения об XML см. в разделе [Импорт и экспорт XML-документов](examples-of-bulk-import-and-export-of-xml-documents-sql-server.md);
 -   сведения о хранилище BLOB-объектов Azure см. в разделе [Импорт и экспорт данных из хранилища BLOB-объектов Azure](examples-of-bulk-access-to-data-in-azure-blob-storage.md).
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 Если вы не знаете, с чего начать импорт или экспорт, попробуйте запустить мастер импорта и экспорта SQL Server. Краткие сведения см. в разделе [Приступая к работе с простым примером мастера импорта и экспорта](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md).

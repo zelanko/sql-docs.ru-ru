@@ -20,10 +20,10 @@ ms.assetid: da006ac9-f914-4995-a2fb-25b5d971cd90
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 795ef4c95981636eec2e95bc6f85c24d7da27eb9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065662"
 ---
 # <a name="alter-event-session-transact-sql"></a>ALTER EVENT SESSION (Transact-SQL)
@@ -168,7 +168,7 @@ ADD EVENT sqlserver.database_transaction_end;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [CREATE EVENT SESSION (Transact-SQL)](../../t-sql/statements/create-event-session-transact-sql.md)   
  [DROP EVENT SESSION (Transact-SQL)](../../t-sql/statements/drop-event-session-transact-sql.md)   
  [Цели расширенных событий SQL Server](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)   

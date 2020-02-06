@@ -19,10 +19,10 @@ ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4593a57ab3d6b0c4b5cfff067c0f34b87f50796c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68137323"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>Копирование баз данных путем создания и восстановления резервных копий
@@ -136,7 +136,7 @@ ms.locfileid: "68137323"
 ## <a name="see-also"></a>См. также раздел  
  [Копирование баз данных на другие серверы](../../relational-databases/databases/copy-databases-to-other-servers.md)   
  [Расположение файлов для экземпляра по умолчанию и именованных экземпляров SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)   
- [RESTORE FILELISTONLY (Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)   
+ [Инструкция RESTORE FILELISTONLY (Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)   
  [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)  
   
   

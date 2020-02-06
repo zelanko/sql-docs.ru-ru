@@ -19,10 +19,10 @@ ms.assetid: 3c387c6e-9a67-4daa-b64a-c87f6b3c9c4f
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 828ff285606fcd1f0daf1c7dd2343a1c3cfed9e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67898174"
 ---
 # <a name="drop-database-audit-specification-transact-sql"></a>DROP DATABASE AUDIT SPECIFICATION (Transact-SQL)
@@ -44,7 +44,7 @@ DROP DATABASE AUDIT SPECIFICATION audit_specification_name
  *audit_specification_name*  
  Имя существующего объекта спецификации аудита.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Инструкция DROP DATABASE AUDIT SPECIFICATION удаляет метаданные спецификации аудита, но не удаляет данные аудита, собранные до вызова команды DROP. Чтобы удалить спецификацию аудита базы данных, ее состояние необходимо установить в положение OFF при помощи инструкции `ALTER DATABASE AUDIT SPECIFICATION`.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -62,7 +62,7 @@ GO
   
  Полный пример создания аудита см. в разделе [Подсистема аудита SQL Server (ядро СУБД)](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [CREATE SERVER AUDIT (Transact-SQL)](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT (Transact-SQL)](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT (Transact-SQL)](../../t-sql/statements/drop-server-audit-transact-sql.md)   

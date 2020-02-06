@@ -18,10 +18,10 @@ ms.assetid: abf0a11c-c99c-4faa-bf80-3ae8e04d7bfb
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 6f0e5927216d6bc0ff1acbb2146d7f23c31012ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066554"
 ---
 # <a name="bufferwithcurves-geography-data-type"></a>BufferWithCurves (тип данных geography)
@@ -43,7 +43,7 @@ ms.locfileid: "68066554"
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Тип возвращаемого значения CLR: **SqlGeography**  
+ Тип возвращаемых данных CLR: **SqlGeography**  
   
 ## <a name="exceptions"></a>Исключения  
  Следующие критерии вызовут исключение **ArgumentException**.  
