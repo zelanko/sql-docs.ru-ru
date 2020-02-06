@@ -9,10 +9,10 @@ ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 964fdf4d4abb58d7baf27ee9e2f8b6900a7d0bbb
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295713"
 ---
 # <a name="run-an-ssis-package-from-the-command-prompt-with-dtexecexe"></a>Выполнение пакета служб SSIS из командной строки
@@ -43,7 +43,7 @@ ms.locfileid: "71295713"
 
 При значениях параметров, используемых в следующем примере, программа выполняет пакет по указанному пути к папке на сервере SSIS, на котором размещается база данных каталога служб SSIS (SSISDB). Параметр `/Server` задает имя сервера. Программа подключается в качестве текущего пользователя с помощью встроенной проверки подлинности Windows. Чтобы использовать проверку подлинности SQL, укажите параметры `/User` и `Password` с соответствующими значениями.
 
-1. Откройте окно командной строки.
+1. Откройте окно командной строки и
 
 2. Запустите `DTExec.exe` и укажите как минимум значения параметров `ISServer` и `Server`, как показано в следующем примере:
 

@@ -13,10 +13,10 @@ ms.assetid: a945cb65-ba7a-42f4-bbd9-6ec675745523
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1dc50611e1497d84335f29d763c280cb09e9d41b
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70874738"
 ---
 # <a name="create-a-maintenance-plan"></a>Создание плана обслуживания
@@ -31,7 +31,7 @@ ms.locfileid: "70874738"
      
      [Предварительные требования](#Prerequisite)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Для создания плана обслуживания используется:**  
   
@@ -70,7 +70,7 @@ ms.locfileid: "70874738"
   
 2.  Щелкните знак «плюс», чтобы развернуть папку **Управление** .  
   
-3.  Щелкните правой кнопкой мыши папку **Планы обслуживания** и выберите пункт **Создать план обслуживания**.  
+3.  Щелкните правой кнопкой мыши папку **Планы обслуживания** и выберите команду **Создать план обслуживания**.  
   
 4.  Создайте план обслуживания, выполнив действия, описанные в разделе [Создание планов обслуживания (область конструктора планов обслуживания)](../../relational-databases/maintenance-plans/create-a-maintenance-plan-maintenance-plan-design-surface.md).  
   

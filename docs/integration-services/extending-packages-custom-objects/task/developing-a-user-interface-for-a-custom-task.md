@@ -22,10 +22,10 @@ ms.assetid: 1e940cd1-c5f8-4527-b678-e89ba5dc398a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e12088669f56dce1b6dee69202284f3cc044e274
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71286958"
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>Разработка пользовательского интерфейса для пользовательской задачи
@@ -37,7 +37,7 @@ ms.locfileid: "71286958"
   
  Разработка собственного пользовательского интерфейса задачи требует использования двух важных классов. Эти классы описываются в следующей таблице.  
   
-|Class|Описание|  
+|Class|Description|  
 |-----------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>|Атрибут, который идентифицирует управляемую задачу и предоставляет через свои свойства информацию времени разработки, определяющую, каким образом конструктор служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)] выводит объект и взаимодействует с ним.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI>|Интерфейс, используемый задачей для того, чтобы связать ее с собственным пользовательским интерфейсом.|  
@@ -53,7 +53,7 @@ ms.locfileid: "71286958"
   
  В следующей таблице приводится описание свойств атрибута <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>.  
   
-|Свойство|Описание|  
+|Свойство|Description|  
 |--------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.DisplayName%2A>|Выводит имя задачи в области элементов потока управления.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.Description%2A>|Описание задачи (наследуется от <xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute>). Это свойство показывается во всплывающей подсказке.|  
@@ -119,7 +119,7 @@ End Class 'MyTask
 ## <a name="the-idtstaskui-interface"></a>Интерфейс IDTSTaskUI  
  Интерфейс <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI> определяет коллекцию методов и свойств, вызываемых конструктором служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)] для инициализации и вывода пользовательского интерфейса, связанного с данной задачей. При вызове пользовательского интерфейса задачи конструктор вызывает метод <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI.Initialize%2A>, реализованный в пользовательском интерфейсе задачи во время разработки, а затем передает коллекции <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> и <xref:Microsoft.SqlServer.Dts.Runtime.Connections> задачи и пакета соответственно в качестве параметров. Коллекции хранятся локально и последовательно используются методом <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI.GetView%2A>.  
   
- Конструктор служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)] вызывает метод <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI.GetView%2A>, чтобы запросить окно, выводимое в конструкторе. Задача создает экземпляр окна, содержащего пользовательский интерфейс задачи, и возвращает пользовательский интерфейс конструктору для вывода. Обычно окну через перегруженный конструктор предоставляются объекты <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> и <xref:Microsoft.SqlServer.Dts.Runtime.Connections>, чтобы их можно было использовать для настройки задачи.  
+ Конструктор служб <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI.GetView%2A> вызывает метод [!INCLUDE[ssIS](../../../includes/ssis-md.md)], чтобы запросить окно, выводимое в конструкторе. Задача создает экземпляр окна, содержащего пользовательский интерфейс задачи, и возвращает пользовательский интерфейс конструктору для вывода. Обычно окну через перегруженный конструктор предоставляются объекты <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> и <xref:Microsoft.SqlServer.Dts.Runtime.Connections>, чтобы их можно было использовать для настройки задачи.  
   
  Конструктор служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)] вызывает метод <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI.GetView%2A> пользовательского интерфейса задачи, чтобы вывести пользовательский интерфейс данной задачи. Пользовательский интерфейс задачи возвращает после вызова данного метода форму Windows, и конструктор служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)] выводит эту форму как модальное диалоговое окно. После закрытия формы конструктор служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)] исследует значение свойства **DialogResult** формы, чтобы определить, была ли задача изменена и следует ли сохранить эти изменения. Если значение свойства **DialogResult** равно **OK**, конструктор служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)] вызывает методы сохранения задачи, чтобы сохранить изменения; в противном случае изменения отменяются.  
   

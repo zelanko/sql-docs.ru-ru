@@ -9,18 +9,18 @@ ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 36b670ee8485c2e8db58847e9439dfb5fa9920ce
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: f2716a8176124539aa7caf382193359ff5435aa6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531680"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74820993"
 ---
 # <a name="azdata-context"></a>Контекст azdata
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-В следующей статье приводятся справочные сведения по командам `sql` в средстве `azdata`. Дополнительные сведения о других командах `azdata` см. в [справочнике по azdata](reference-azdata.md)
+В следующей статье приводятся справочные сведения по командам `context` в средстве `azdata`. Дополнительные сведения о других командах `azdata` см. в [справочнике по azdata](reference-azdata.md)
 
 ## <a name="commands"></a>Команды
 |     |     |
@@ -66,7 +66,7 @@ Deletes contextNamespace from the user profile.
 ```bash
 azdata context delete -n contextNamespace
 ```
-### <a name="required-parameters"></a>Обязательные параметры
+### <a name="required-parameters"></a>Необходимые параметры
 #### `--namespace -n`
 Пространство имен контекста, который нужно удалить.
 ### <a name="global-arguments"></a>Глобальные аргументы
@@ -90,7 +90,7 @@ azdata context set --namespace -n
 ```bash
 azdata context set -n contextNamespace
 ```
-### <a name="required-parameters"></a>Обязательные параметры
+### <a name="required-parameters"></a>Необходимые параметры
 #### `--namespace -n`
 Пространство имен контекста, который нужно установить.
 ### <a name="global-arguments"></a>Глобальные аргументы
@@ -105,6 +105,6 @@ azdata context set -n contextNamespace
 #### `--verbose`
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
-Дополнительные сведения о других командах `azdata` см. в [справочнике по azdata](reference-azdata.md). Дополнительные сведения об установке средства `azdata` см. в статье [Установка azdata для управления кластерами больших данных SQL Server 2019](deploy-install-azdata.md).
+Дополнительные сведения о других командах `azdata` см. в [справочнике по azdata](reference-azdata.md). Дополнительные сведения об установке средства `azdata` см. в статье [Установка azdata для управления кластерами больших данных SQL Server 2019](deploy-install-azdata.md).

@@ -13,10 +13,10 @@ ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f9e3a8be595188b0eef11a78826c7447af40bec4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294394"
 ---
 # <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>Преобразование "Уточняющий запрос" в режиме полного кэширования — диспетчер подключений OLE DB
@@ -26,7 +26,7 @@ ms.locfileid: "71294394"
 
   Можно настроить преобразование «Уточняющий запрос», чтобы использовать режим полного кэширования и диспетчер соединений OLE DB. В режиме полного кэширования эталонный набор данных загружается в кэш еще до запуска преобразования «Уточняющий запрос».  
   
- Преобразование «Уточняющий запрос» выполняет уточняющие запросы, соединяя данные из входных столбцов подключенного источника данных и данные из столбцов в эталонном наборе данных. Дополнительные сведения см. в статье [Lookup Transformation](../../integration-services/data-flow/transformations/lookup-transformation.md).  
+ Преобразование «Уточняющий запрос» выполняет уточняющие запросы, соединяя данные из входных столбцов подключенного источника данных и данные из столбцов в эталонном наборе данных. Дополнительные сведения см. в разделе [Lookup Transformation](../../integration-services/data-flow/transformations/lookup-transformation.md).  
   
  При настройке преобразования «Уточняющий запрос» для использования диспетчера соединений OLE DB, нужно выбрать таблицу, представление или SQL-запрос для создания эталонного набора данных.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "71294394"
   
 7.  В списке **Укажите метод обработки строк без совпадающих элементов** выберите параметр обработки ошибок для строк без совпадающих элементов.  
   
-8.  На странице «Соединение» выберите диспетчер соединений из списка **Диспетчер соединений OLE DB** или нажмите кнопку **Создать** , чтобы создать новый диспетчер соединений. Дополнительные сведения см. в разделе [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
+8.  На странице «Соединение» выберите диспетчер соединений из списка **Диспетчер соединений OLE DB** или нажмите кнопку **Создать** , чтобы создать новый диспетчер соединений. Дополнительные сведения см. в разделе [Диспетчер соединений OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
 9. Выполните следующие действия.  
   
@@ -86,8 +86,8 @@ ms.locfileid: "71294394"
 13. Нажмите кнопку **ОК** , чтобы сохранить изменения в преобразовании «Уточняющий запрос», а затем запустите пакет.  
   
 ## <a name="see-also"></a>См. также:  
- [реализовать преобразование «Уточняющий запрос» в режиме полного кэширования с помощью диспетчера соединений с кэшем](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)   
- [Реализация уточняющего запроса в режиме «Частичное кэширование» или «Без кэширования»](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
+ [Реализация преобразования "Уточняющий запрос" в режиме полного кэширования с помощью преобразования диспетчера подключений с кэшем](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)   
+ [Реализация уточняющего запроса в режиме "Частичное кэширование" или "Без кэширования"](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Преобразования служб Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   

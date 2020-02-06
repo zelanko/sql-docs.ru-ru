@@ -13,10 +13,10 @@ ms.assetid: 2686fe84-1ecc-48b8-9160-e7122274bd84
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4dff74cd1e21ba743fa425bb632c736ee1cce158
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295008"
 ---
 # <a name="working-with-connection-managers-programmatically"></a>Работа с диспетчерами соединений программным образом
@@ -48,7 +48,7 @@ ms.locfileid: "71295008"
 |EXCEL|Диспетчер соединений с Excel|  
 |FTP|диспетчер FTP-соединений|  
 |HTTP|диспетчер HTTP-соединений|  
-|интерфейс ODBC|диспетчер соединений ODBC|  
+|ODBC|диспетчер соединений ODBC|  
 |OLEDB|диспетчер соединений OLE DB|  
   
  Как правило, для соединения с источником данных ADO, Excel, ODBC и OLE DB в управляемом коде можно использовать диспетчер соединений [!INCLUDE[vstecado](../includes/vstecado-md.md)].  

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: e67d1bab-47b6-441d-ab9c-251a2ca499e1
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: a42dc8a023e1d44e911907cc96a77017dfc69eaf
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 813607ed006fb38120fd4a6f565fb9d6280f10b5
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768504"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286421"
 ---
 # <a name="errors-and-events-reference-replication"></a>Справочник по ошибкам и событиям (репликация)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "68768504"
   
 |Ошибка|Сообщение|  
 |-----------|-------------|  
-|[MSSQL_ENG002601](../../relational-databases/replication/mssql-eng002601.md)|Не удается вставить повторяющуюся строку ключа в объект "%.*ls" с уникальным индексом "%.\*ls".|  
+|[MSSQL_ENG002601](../../relational-databases/replication/mssql-eng002601.md)|Не удается вставить повторяющуюся строку ключа в объект '%.*ls' с уникальным индексом '%.\*ls'.|  
 |[MSSQL_ENG002627](../../relational-databases/replication/mssql-eng002627.md)|Нарушение ограничения "%.*ls" для %ls. Не удается вставить повторяющийся ключ в объект "%.\*ls".|  
 |[MSSQL_ENG003165](../../relational-databases/replication/mssql-eng003165.md)|База данных "%ls" была восстановлена, однако во время восстановления или удаления репликации обнаружена ошибка. База данных находится в режиме «вне сети». См. раздел MSSQL_ENG003165 в электронной документации по SQL Server.|  
 |[MSSQL_ENG003724](../../relational-databases/replication/mssql-eng003724.md)|Невозможно %S_MSG %S_MSG "%.*ls", так как она используется для репликации.|  

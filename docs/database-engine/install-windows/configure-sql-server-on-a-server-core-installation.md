@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: ce38e546aa77e375d65a9f95f708718d283a53b0
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75251594"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Настройка SQL Server на установке Server Core
@@ -39,7 +39,7 @@ ms.locfileid: "75251594"
   
 - [Установка ролей и компонентов в Windows Server 2012 R2 с Server Core](https://technet.microsoft.com/library/jj574158(v=ws.11).aspx)
   
-- [Управление установкой Server Core. Обзор](https://go.microsoft.com/fwlink/?LinkId=245962)  
+- [Управление установкой Server Core: обзор](https://go.microsoft.com/fwlink/?LinkId=245962)  
   
 - [Администрирование установки Server Core](https://go.microsoft.com/fwlink/?LinkId=245963)
   
@@ -225,7 +225,7 @@ $Tcp
 ##  <a name="BKMK_troubleshoot"></a> Использование средств устранения неполадок  
  Программа [SQLdiag](../../tools/sqldiag-utility.md) позволяет выполнять сбор журналов и файлов данных с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и других типов серверов, а также мониторинг серверов и устранение определенных неполадок на серверах. SQLdiag предназначена для исследования и упрощения сбора диагностической информации для Microsoft Customer Support Services.  
   
- Служебную программу можно запустить в командной строке администратора в Server Core, используя синтаксис, описанный в статье [Программа SQLdiag](../../tools/sqldiag-utility.md).  
+ Служебную программу можно запустить в командной строке администратора в Server Core, используя синтаксис, описанный в статье [Служебная программа SQLdiag](../../tools/sqldiag-utility.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Установка SQL Server в Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md)   

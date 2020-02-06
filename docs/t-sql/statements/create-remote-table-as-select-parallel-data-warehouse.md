@@ -11,10 +11,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 1b6b024507d06149efc0bc2693b5bde2f67d482b
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74401706"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
@@ -24,7 +24,7 @@ ms.locfileid: "74401706"
   
  Сведения о настройке удаленного сервера см. в разделе "Копирование удаленной таблицы" в статье [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
- ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "|::ref1::|") [Синтаксические обозначения в Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -67,7 +67,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
  Имя удаленного сервера или IPv4-адрес удаленного сервера. IPv6-адреса не поддерживаются. Можно указать именованный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в формате **Computer_Name\Instance_Name** или **IP_address\Instance_Name**. Сервер должен быть удаленным и не может быть указан как (локальный).  
   
  Номер TCP-*порта*  
- Номер TCP-порта, используемого для соединения. Для экземпляра SQL Server, который не ожидает передачи данных через порт по умолчанию 1433, можно указать номер TCP-порта от 0 до 65535. Пример: **ServerA,1450** или **10.192.14.27,1435**  
+ Номер TCP-порта, используемого для соединения. Для экземпляра SQL Server, который не ожидает передачи данных через порт по умолчанию 1433, можно указать номер TCP-порта от 0 до 65535. Например: **ServerA,1450** или **10.192.14.27,1435**  
   
 > [!NOTE]  
 >  Рекомендуем подключаться к удаленному серверу через IP-адрес. В зависимости от конфигурации сети подключение по имени компьютера может потребовать дополнительных шагов, чтобы использовать не являющийся устройством DNS-сервер для разрешения имени для правильного сервера. Этот шаг необязателен при соединении через IP-адрес. Дополнительные сведения см. в разделе "Использование DNS-сервера пересылки для разрешения имен DNS, не являющегося устройством (Analytics Platform System)" в статье [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  

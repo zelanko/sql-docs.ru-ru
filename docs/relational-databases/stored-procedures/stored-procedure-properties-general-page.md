@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3c78124b3836026ced3f36500ed5558b58009fe5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68136628"
 ---
 # <a name="stored-procedure-properties-general-page"></a>Свойства хранимой процедуры (страница «Общие»)
@@ -58,11 +58,11 @@ ms.locfileid: "68136628"
  **Заключенный в кавычки идентификатор**  
  Показывает, был ли объект создан с параметром «заключенный в кавычки идентификатор».  
   
- **Перекомпилировать**  
+ **Повторная компиляция**  
  Показывает, был ли создан объект с параметром RECOMPILE.  
   
 ## <a name="see-also"></a>См. также:  
- [Хранимые процедуры (компонент Database Engine)](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)   
+ [Хранимые процедуры (ядро СУБД)](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)   
  [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)   
  [ALTER PROCEDURE (Transact-SQL)](../../t-sql/statements/alter-procedure-transact-sql.md)  
   

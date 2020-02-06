@@ -9,18 +9,18 @@ ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e20e7574109ccce4caa6b4d9fd84a4fef65cf0fa
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 74af88306288adaa584e26c943bd8c6c743fa315
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531776"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74821418"
 ---
 # <a name="azdata-bdc-hdfs"></a>azdata bdc hdfs
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-В следующей статье приводятся справочные сведения по командам `sql` в средстве `azdata`. Дополнительные сведения о других командах `azdata` см. в [справочнике по azdata](reference-azdata.md)
+В следующей статье приводятся справочные сведения по командам `bdc hdfs` в средстве `azdata`. Дополнительные сведения о других командах `azdata` см. в [справочнике по azdata](reference-azdata.md)
 
 ## <a name="commands"></a>Команды
 |     |     |
@@ -70,7 +70,7 @@ azdata bdc hdfs ls --path -p
 ```bash
 azdata bdc hdfs ls --path '/tmp'
 ```
-### <a name="required-parameters"></a>Обязательные параметры
+### <a name="required-parameters"></a>Необходимые параметры
 #### `--path -p`
 Путь к перечислению состояния.
 ### <a name="global-arguments"></a>Глобальные аргументы
@@ -94,7 +94,7 @@ Check for file or directory existance.
 ```bash
 azdata bdc hdfs exists --path '/tmp'
 ```
-### <a name="required-parameters"></a>Обязательные параметры
+### <a name="required-parameters"></a>Необходимые параметры
 #### `--path -p`
 Путь для проверки существования.
 ### <a name="global-arguments"></a>Глобальные аргументы
@@ -118,7 +118,7 @@ Make directory.
 ```bash
 azdata bdc hdfs mkdir --path '/tmp'
 ```
-### <a name="required-parameters"></a>Обязательные параметры
+### <a name="required-parameters"></a>Необходимые параметры
 #### `--path -p`
 Имя создаваемого каталога.
 ### <a name="global-arguments"></a>Глобальные аргументы
@@ -143,7 +143,7 @@ azdata bdc hdfs mv --source-path -s
 ```bash
 azdata bdc hdfs mv --source-path '/tmp' --target-path '/dest'
 ```
-### <a name="required-parameters"></a>Обязательные параметры
+### <a name="required-parameters"></a>Необходимые параметры
 #### `--source-path -s`
 Перемещаемый каталог.
 #### `--target-path -t`
@@ -170,7 +170,7 @@ azdata bdc hdfs create --path -p
 ```bash
 azdata bdc hdfs create --path '/tmp/test.txt' --data "This is a test."
 ```
-### <a name="required-parameters"></a>Обязательные параметры
+### <a name="required-parameters"></a>Необходимые параметры
 #### `--path -p`
 Имя создаваемого файла.
 #### `--data -d`
@@ -198,7 +198,7 @@ azdata bdc hdfs cat --path -p
 ```bash
 azdata bdc hdfs cat --path '/tmp/test.txt'
 ```
-### <a name="required-parameters"></a>Обязательные параметры
+### <a name="required-parameters"></a>Необходимые параметры
 #### `--path -p`
 Имя считываемого файла.
 #### `--offset`
@@ -226,7 +226,7 @@ azdata bdc hdfs rm --path -p
 ```bash
 azdata bdc hdfs rm --path '/tmp'
 ```
-### <a name="required-parameters"></a>Обязательные параметры
+### <a name="required-parameters"></a>Необходимые параметры
 #### `--path -p`
 Имя удаляемого файла.
 ### <a name="global-arguments"></a>Глобальные аргументы
@@ -250,7 +250,7 @@ azdata bdc hdfs rmr --path -p
 ```bash
 azdata bdc hdfs rmr --path '/tmp'
 ```
-### <a name="required-parameters"></a>Обязательные параметры
+### <a name="required-parameters"></a>Необходимые параметры
 #### `--path -p`
 Имя рекурсивно удаляемого файла.
 ### <a name="global-arguments"></a>Глобальные аргументы
@@ -275,7 +275,7 @@ azdata bdc hdfs chmod --path -p
 ```bash
 azdata bdc hdfs chmod --permission 775 --path '/tmp/test.txt'
 ```
-### <a name="required-parameters"></a>Обязательные параметры
+### <a name="required-parameters"></a>Необходимые параметры
 #### `--path -p`
 Имя файла или каталога, для которого нужно задать разрешения.
 #### `--permission`
@@ -303,7 +303,7 @@ azdata bdc hdfs chown --path -p
 ```bash
 azdata bdc hdfs chown --owner hdfs --group superusergroup --path '/tmp/test.txt'
 ```
-### <a name="required-parameters"></a>Обязательные параметры
+### <a name="required-parameters"></a>Необходимые параметры
 #### `--path -p`
 Имя файла или каталога, для которого нужно изменить владельца.
 #### `--owner`
@@ -332,7 +332,7 @@ azdata bdc hdfs cp --from-path -f
 ```bash
 azdata bdc hdfs cp --from_path '/tmp/test.txt --to-path 'hdfs:/user/me/test.txt'
 ```
-### <a name="required-parameters"></a>Обязательные параметры
+### <a name="required-parameters"></a>Необходимые параметры
 #### `--from-path -f`
 Имя пути, из которого производится копирование.  Добавьте к пути префикс "hdfs:", чтобы указать путь HDFS.
 #### `--to-path -t`
@@ -351,4 +351,4 @@ azdata bdc hdfs cp --from_path '/tmp/test.txt --to-path 'hdfs:/user/me/test.txt'
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-Дополнительные сведения о других командах `azdata` см. в [справочнике по azdata](reference-azdata.md). Дополнительные сведения об установке средства `azdata` см. в статье [Установка azdata для управления кластерами больших данных SQL Server 2019](deploy-install-azdata.md).
+Дополнительные сведения о других командах `azdata` см. в [справочнике по azdata](reference-azdata.md). Дополнительные сведения об установке средства `azdata` см. в статье [Установка azdata для управления кластерами больших данных SQL Server 2019](deploy-install-azdata.md).

@@ -15,10 +15,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 72b34355a11e87540bc8a298d0144988cdbeb17c
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056182"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>Управление и наблюдение за полнотекстовым поиском для экземпляра сервера
@@ -58,23 +58,23 @@ ms.locfileid: "74056182"
   
          Если полнотекстовый каталог недоступен, перестраиваются связанные полнотекстовые индексы. Этот параметр доступен только для баз данных [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
-         **Rebuild**  
+         **Перестроение**  
          Полнотекстовые каталоги перестраиваются с помощью новых и улучшенных средств разбиения по словам. Перестроение индексов может занять длительное время, а после обновления может потребоваться значительный объем ресурсов ЦП и памяти.  
   
          **Сброс**  
          Полнотекстовые каталоги сбрасываются. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Полнотекстовые файлы каталога удалены, но метаданные для полнотекстовых каталогов и полнотекстовых индексов сохранены. После обновления для всех полнотекстовых индексов отключается отслеживание изменений и сканирование не запускается автоматически. После завершения обновления каталог останется пустым, пока не будет вручную запущено полное заполнение.  
   
-         Сведения о выборе параметра полнотекстового обновления см. в статье [Обновление полнотекстового поиска](../../relational-databases/search/upgrade-full-text-search.md).  
+         Сведения о выборе параметра полнотекстового обновления см. в статье[Обновление полнотекстового поиска](../../relational-databases/search/upgrade-full-text-search.md).  
   
         > [!NOTE]  
-        >  Режим полнотекстового обновления также можно задать с помощью действия **upgrade_option** процедуры [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).  
+        >  Режим полнотекстового обновления также можно задать с помощью действия [upgrade_option](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md) процедуры **sp_fulltext_service**.  
   
 ##  <a name="metadata"></a> Просмотр дополнительных свойств сервера полнотекстового поиска  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] Функции могут использоваться для получения значений различных свойств полнотекстового поиска уровня сервера. Данные сведения касаются прежде всего администрирования и устранения неполадок в полнотекстовом поиске.  
   
  В следующей таблице перечислены полнотекстовые свойства экземпляра сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и соответствующие функции [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
-|Свойство|Описание|Компонент|  
+|Свойство|Description|Компонент|  
 |--------------|-----------------|--------------|  
 |**IsFullTextInstalled**|Указывает, установлен ли компонент Full-Text Search в текущем экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[FULLTEXTSERVICEPROPERTY](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)<br /><br /> [SERVERPROPERTY](../../t-sql/functions/serverproperty-transact-sql.md)|  
 ||||  

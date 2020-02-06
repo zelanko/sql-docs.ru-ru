@@ -11,10 +11,10 @@ ms.assetid: 48069bea-31cb-4a0e-9849-a07edc94088f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1e66d14c0a80317738296cd16a5bbbca44b79c8f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281057"
 ---
 # <a name="catalogcreate_environment_reference-ssisdb-database"></a>catalog.create_environment_reference (база данных SSISDB)
@@ -54,7 +54,7 @@ catalog.create_environment_reference [ @folder_name = ] folder_name
  Имя папки, в которой находится среда, на которую указывает ссылка. Это значение требуется для абсолютных ссылок. Параметр *environment_folder_name* имеет тип **nvarchar(128)** .  
   
  [ @reference_id = ] *reference_id*  
- Возвращает уникальный идентификатор для новой ссылки. Этот параметр является необязательным. Параметр *reference_id* имеет тип **bigint**.  
+ Возвращает уникальный идентификатор для новой ссылки. Это необязательный параметр. Параметр *reference_id* имеет тип **bigint**.  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
  0 (успешное завершение)  
