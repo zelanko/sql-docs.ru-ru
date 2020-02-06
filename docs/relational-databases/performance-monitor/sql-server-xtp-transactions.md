@@ -11,10 +11,10 @@ ms.assetid: 443d67e4-1c7f-41d7-b18d-2d657f58c22a
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: c00e408454b4bf5b4b907e517fa430212739734e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006992"
 ---
 # <a name="sql-server-xtp-transactions"></a>XTP-транзакции SQL Server
@@ -24,7 +24,7 @@ ms.locfileid: "68006992"
   
  В этой таблице перечислены счетчики **транзакций XTP SQL Server** .  
   
-|Счетчик|Описание|  
+|Счетчик|Description|  
 |-------------|-----------------|  
 |**Каскадных прерываний/с**|Количество транзакций, для которых был сделан откат из-за отката зависимостей фиксации (в среднем), в секунду.|  
 |**Зависимостей фиксации принято/с**|Общее число зависимостей фиксации, принятых транзакциями (в среднем) в секунду.|  

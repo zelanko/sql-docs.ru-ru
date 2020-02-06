@@ -18,10 +18,10 @@ ms.assetid: 8e8f0c41-0c62-4919-9d4c-d37c93fdd31c
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 358553f62952c9bea60076ea34e85387b95bf543
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066330"
 ---
 # <a name="stpolyfromwkb-geometry-data-type"></a>STPolyFromWKB (тип данных geometry)
@@ -46,9 +46,9 @@ STPolyFromWKB ( 'WKB_polygon' , SRID )
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Тип возвращаемого значения CLR: **SqlGeometry**  
+ Тип возвращаемых данных CLR: **SqlGeometry**  
   
- Тип OGC: **Многоугольник**  
+ Тип OGC: **Polygon**  
   
 ## <a name="remarks"></a>Remarks  
  Этот метод вызывает исключение **FormatException**, если входные данные представлены в неверном формате.  
@@ -62,7 +62,7 @@ SET @g = geometry::STPolyFromWKB(0x010300000001000000040000000000000000001440000
 SELECT @g.STAsText();  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Статические геометрические методы OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

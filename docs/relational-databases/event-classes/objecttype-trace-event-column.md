@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 76675cf49ba1ac19e18b3bb4b96980aa30c4f6c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115889"
 ---
 # <a name="objecttype-trace-event-column"></a>Столбец события ObjectType Trace
@@ -38,7 +38,7 @@ ms.locfileid: "68115889"
 |8275|Системная таблица|  
 |8276|Триггер сервера|  
 |8277|(Пользовательская) таблица|  
-|8278|Просмотр|  
+|8278|Представление|  
 |8280|Расширенная хранимая процедура|  
 |16724|Триггер CLR|  
 |16964|База данных|  

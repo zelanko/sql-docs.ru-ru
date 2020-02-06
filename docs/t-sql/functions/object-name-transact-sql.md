@@ -25,13 +25,13 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a18b99d8e4700a840fa3cdc98af492bc0193bbaa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914728"
 ---
-# <a name="objectname-transact-sql"></a>OBJECT_NAME (Transact-SQL)
+# <a name="object_name-transact-sql"></a>OBJECT_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Возвращает имя объекта базы данных в области схемы. Список объектов области схемы см. в статье [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).  
@@ -89,7 +89,7 @@ GO
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-using-objectname-in-a-where-clause"></a>A. Использование параметра OBJECT_NAME в предложении WHERE  
+### <a name="a-using-object_name-in-a-where-clause"></a>A. Использование параметра OBJECT_NAME в предложении WHERE  
  Следующий пример возвращает столбцы из представления каталога `sys.objects` для объекта, указанного параметром `OBJECT_NAME` в предложении `WHERE` инструкции `SELECT`.  
   
 ```  
@@ -134,7 +134,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-using-objectname-in-a-where-clause"></a>Г. Использование параметра OBJECT_NAME в предложении WHERE  
+### <a name="d-using-object_name-in-a-where-clause"></a>Г. Использование параметра OBJECT_NAME в предложении WHERE  
  Следующий пример возвращает столбцы из представления каталога `sys.objects` для объекта, указанного параметром `OBJECT_NAME` в предложении `WHERE` инструкции `SELECT`. (В вашем случае номер объекта (274100017 в примере ниже) будет иным.  Чтобы выполнить пример, найдите допустимый номер объекта, выполнив `SELECT name, object_id FROM sys.objects;` в базе данных.)  
   
 ```  

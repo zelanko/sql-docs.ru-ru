@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 786729a6bfcae37e3c2fb1aa9a9e85839ca9c127
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68119109"
 ---
 # <a name="datetimeoffsetfromparts-transact-sql"></a>DATETIMEOFFSETFROMPARTS (Transact-SQL)
@@ -75,7 +75,7 @@ DATETIMEOFFSETFROMPARTS ( year, month, day, hour, minute, seconds, fractions, ho
   
 ## <a name="remarks"></a>Remarks  
 
-Функция `DATETIMEOFFSETFROMPARTS` возвращает полностью инициализированный тип данных **datetimeoffset**. Аргументы смещения представляют смещение часового пояса. Если аргументы смещения пропущены, в `DATETIMEOFFSETFROMPARTS` предполагается, что смещение часового пояса равно `00:00`, то есть отсутствует. Если аргументы смещения указаны, `DATETIMEOFFSETFROMPARTS` требует наличия значений обоих аргументов, причем оба должны быть или положительными, или отрицательными. Если *minute_offset* указывается без значения *hour_offset*, `DATETIMEOFFSETFROMPARTS` вызывает ошибку. Если другие аргументы имеют недопустимые значения, `DATETIMEOFFSETFROMPARTS` вызывает ошибку. `DATETIMEOFFSETFROMPARTS` возвращает `NULL`, если хотя бы один обязательный аргумент имеет значение `NULL`. Но если *precision* имеет значение `NULL`, `DATETIMEOFFSETFROMPARTS` вызывает ошибку.  
+Функция `DATETIMEOFFSETFROMPARTS` возвращает полностью инициализированный тип данных **datetimeoffset**. Аргументы смещения представляют смещение часового пояса. Если аргументы смещения пропущены, в `DATETIMEOFFSETFROMPARTS` предполагается, что смещение часового пояса равно `00:00`, то есть отсутствует. Если аргументы смещения указаны, `DATETIMEOFFSETFROMPARTS` требует наличия значений обоих аргументов, причем оба должны быть или положительными, или отрицательными. Если *minute_offset* указывается без значения *hour_offset*, `DATETIMEOFFSETFROMPARTS` вызывает ошибку. Если другие аргументы имеют недопустимые значения, `DATETIMEOFFSETFROMPARTS` вызывает ошибку. `NULL` возвращает `DATETIMEOFFSETFROMPARTS`, если хотя бы один обязательный аргумент имеет значение `NULL`. Но если *precision* имеет значение `NULL`, `DATETIMEOFFSETFROMPARTS` вызывает ошибку.  
   
 Аргумент *fractions* зависит от аргумента precision. Например, если значение precision равно 7, каждая дробная часть представляет 100 наносекунд, а если значение precision равно 3, каждая дробная часть представляет миллисекунду. Если значение precision равно нулю, значение fractions также должно быть равно нулю. В противном случае `DATETIMEOFFSETFROMPARTS` вызывает ошибку.  
   

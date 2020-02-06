@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3330b9b44f2794daf8e9cd45e9806991a6a815de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67999768"
 ---
 # <a name="brokerconversation-event-class"></a>Broker:Conversation, класс событий
@@ -27,7 +27,7 @@ ms.locfileid: "67999768"
   
 ## <a name="brokerconversation-event-class-data-columns"></a>Столбцы данных класса событий Broker:Conversation  
   
-|Столбец данных|Тип|Описание|Номер столбца|Фильтруемый|  
+|Столбец данных|Тип|Description|Номер столбца|Фильтруемый|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|Имя клиентского приложения, установившего соединение с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот столбец заполняется значениями, передаваемыми приложением, а не отображаемым именем программы.|10|Да|  
 |**ClientProcessID**|**int**|Идентификатор, присвоенный компьютером сервера процессу, в котором работает клиентское приложение. Этот столбец данных заполняется в том случае, если клиент вводит идентификатор клиентского процесса.|9|Да|  
@@ -61,7 +61,7 @@ ms.locfileid: "67999768"
   
  В представленной ниже таблице перечислены значения подклассов для данного класса событий.  
   
-|ID|Подкласс|Описание|  
+|ID|Подкласс|Description|  
 |--------|--------------|-----------------|  
 |1|SEND Message|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] формирует событие **SEND Message** , когда [!INCLUDE[ssDE](../../includes/ssde-md.md)] выполняет инструкцию SEND.|  
 |2|END CONVERSATION|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] формирует событие **END CONVERSATION** , когда [!INCLUDE[ssDE](../../includes/ssde-md.md)] выполняет инструкцию END CONVERSATION, в которую не входит предложение WITH ERROR.|  

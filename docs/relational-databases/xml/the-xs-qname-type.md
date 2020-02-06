@@ -13,10 +13,10 @@ ms.assetid: 72c5bfde-b0b2-4372-bf36-97ba930dea06
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fd21cae531e41359c797bc3197e3e5bacce65a0f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68078130"
 ---
 # <a name="the-xsqname-type"></a>Тип xs:QName
@@ -51,6 +51,6 @@ GO
  Обе инструкции потерпят неудачу с сообщением об ошибке.  
   
 ## <a name="see-also"></a>См. также:  
- [Требования и ограничения для коллекций XML-схем на сервере](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
+ [Требования и ограничения для коллекций схем XML на сервере](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

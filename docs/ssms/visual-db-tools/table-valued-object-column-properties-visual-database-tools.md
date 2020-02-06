@@ -1,10 +1,9 @@
 ---
-title: Свойства объектов (столбцов) с табличными значениями (визуальные инструменты для баз данных) | Документация Майкрософт
-ms.custom: ''
+title: Свойства табличного объекта (столбца)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,14 +11,16 @@ f1_keywords:
 ms.assetid: 212d9bcd-aded-4313-a6b9-d7e2270e5954
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 020c695ecd85de811586b55f2b739caab1590b8f
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: d5c82466168714f6a58055e1ed50959602318ef3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68261468"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242156"
 ---
-# <a name="table-valued-object-column-properties-visual-database-tools"></a>Свойства объектов (столбцов) с табличными значениями (визуальные инструменты для баз данных)
+# <a name="table-valued-object-column-properties-visual-database-tools"></a>Свойства табличного объекта (столбца) (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Эти свойства отображаются при выборе столбца в табличном объекте на панели **Диаграмма** конструктора запросов и представлений.  
   
@@ -56,7 +57,7 @@ ms.locfileid: "68261468"
 **Точность**  
 Указывает максимальное число разрядов, допустимых для числовых типов данных. Для нечисловых типов данных в этом свойстве отображается **0** .  
   
-**Масштаб**  
+**Масштабирование**  
 Указывает максимальное количество цифр справа от запятой в числовых типах данных. Это значение должно быть меньше или равно указанной точности. Для нечисловых типов данных в этом свойстве отображается **0** .  
   
 **Размер**  

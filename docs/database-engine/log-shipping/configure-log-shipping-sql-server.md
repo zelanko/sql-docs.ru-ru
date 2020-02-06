@@ -13,10 +13,10 @@ ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4a262ba4daf1a54e4a57a71baa0b97308d473720
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68057889"
 ---
 # <a name="configure-log-shipping-sql-server"></a>Настройка доставки журналов (SQL Server)
@@ -28,11 +28,11 @@ ms.locfileid: "68057889"
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Предварительные требования](#Prerequisites)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Настройка доставки журналов с помощью:**  
   
@@ -78,7 +78,7 @@ ms.locfileid: "68057889"
   
 8.  Обратите внимание на расписание в поле **Расписание** в разделе **Задание резервного копирования**. Если нужно изменить расписание, нажмите кнопку **Расписание** и задайте расписание для агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по своему усмотрению.  
   
-9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] поддерживает [сжатие резервных копий](../../relational-databases/backup-restore/backup-compression-sql-server.md). При создании конфигурации доставки журналов можно управлять поведением сжатия резервных копий журналов, выбрав один из следующих параметров. **Использовать параметр сервера по умолчанию**, **Сжимать резервные копии** и **Не сжимать резервные копии**. Дополнительные сведения см. в статье [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md).  
+9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] поддерживает [сжатие резервных копий](../../relational-databases/backup-restore/backup-compression-sql-server.md). При создании конфигурации доставки журналов можно управлять поведением сжатия резервных копий журналов, выбрав один из следующих параметров: **Использовать параметр сервера по умолчанию**, **Сжимать резервные копии**или **Не сжимать резервные копии**. Дополнительные сведения см. в статье [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md).  
   
 10. Нажмите кнопку **ОК**.  
   

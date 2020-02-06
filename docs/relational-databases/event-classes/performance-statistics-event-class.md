@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c6dff2998686c73693f73ecbcad0b9b7f360ca86
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940715"
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics, класс событий
@@ -24,11 +24,11 @@ ms.locfileid: "67940715"
   Класс событий Performance Statistics можно использовать для наблюдения за производительностью выполняемых запросов, хранимых процедур и триггеров. Каждый из шести подклассов событий обозначает событие, относящееся ко времени существования запросов, хранимых процедур и триггеров в системе. Сочетая эти подклассы событий и связанные с ними динамические административные представления sys.dm_exec_query_stats, sys.dm_exec_procedure_stats и sys.dm_exec_trigger_stats, можно восстановить историю производительности любого заданного запроса, хранимой процедуры или триггера.  
   
 ## <a name="performance-statistics-event-class-data-columns"></a>Столбцы данных класса событий Performance Statistics  
- Следующие таблицы описывают столбцы данных класса событий, связанные с каждым из следующих подклассов событий: EventSubClass 0, EventSubClass 1, EventSubClass 2, EventSubClass 3, EventSubClass 4 и EventSubClass 5.  
+ Следующие таблицы описывают столбцы данных класса событий, связанные с каждым из следующих подклассов событий: EventSubClass 0, EventSubClass 1,EventSubClass 2,EventSubClass 3, EventSubClass 4 и EventSubClass 5.  
   
 ### <a name="eventsubclass-0"></a>EventSubClass 0  
   
-|Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
+|Имя столбца данных|Тип данных|Description|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|NULL|52|Да|  
 |BinaryData|**image**|NULL|2|Да|  
@@ -38,7 +38,7 @@ ms.locfileid: "67940715"
 |IntegerData2|**int**|NULL|55|Да|  
 |ObjectID|**int**|NULL|22|Да|  
 |Offset|**int**|NULL|61|Да|  
-|PlanHandle|**Image**|NULL|65|Да|  
+|PlanHandle|**Изображение**|NULL|65|Да|  
 |SessionLoginName|**nvarchar**|Имя входа пользователя, создавшего этот сеанс. Например, при соединении с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под именем Login1 и при выполнении инструкции под именем Login2 SessionLoginName будет содержать значение Login1, а LoginName — значение Login2. В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
 |SPID|**int**|Идентификатор сеанса, в котором произошло событие.|12|Да|  
 |SqlHandle|**image**|Дескриптор SQL, который можно использовать для получения текста SQL пакета с помощью динамического административного представления sys.dm_exec_sql_text.|63|Да|  
@@ -47,7 +47,7 @@ ms.locfileid: "67940715"
   
 ### <a name="eventsubclass-1"></a>EventSubClass 1  
   
-|Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
+|Имя столбца данных|Тип данных|Description|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|Совокупное количество повторных компиляций данного плана.|52|Да|  
 |BinaryData|**image**|Двоичный XML скомпилированного плана.|2|Да|  
@@ -71,7 +71,7 @@ ms.locfileid: "67940715"
   
 ### <a name="eventsubclass-2"></a>EventSubClass 2  
   
-|Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
+|Имя столбца данных|Тип данных|Description|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|Совокупное количество повторных компиляций данного плана.|52|Да|  
 |BinaryData|**image**|Двоичный XML скомпилированного плана.|2|Да|  
@@ -94,7 +94,7 @@ ms.locfileid: "67940715"
   
 ### <a name="eventsubclass-3"></a>EventSubClass 3  
   
-|Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
+|Имя столбца данных|Тип данных|Description|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|Совокупное количество повторных компиляций данного плана.|52|Да|  
 |BinaryData|**image**|NULL|2|Да|  
@@ -114,7 +114,7 @@ ms.locfileid: "67940715"
   
 ### <a name="eventsubclass-4"></a>EventSubClass 4  
   
-|Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
+|Имя столбца данных|Тип данных|Description|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|NULL|52|Да|  
 |BinaryData|**image**|NULL|2|Да|  
@@ -134,7 +134,7 @@ ms.locfileid: "67940715"
   
 ### <a name="eventsubclass-5"></a>EventSubClass 5  
   
-|Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
+|Имя столбца данных|Тип данных|Description|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|NULL|52|Да|  
 |BinaryData|**image**|NULL|2|Да|  

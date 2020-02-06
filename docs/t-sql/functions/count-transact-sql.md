@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e4cec9afec24b1ef184b9f37795903017c6d3b00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026489"
 ---
 # <a name="count-transact-sql"></a>Функция COUNT (Transact-SQL)
@@ -136,7 +136,7 @@ GO
 ```
   
 ### <a name="d-using-the-over-clause"></a>Г. Использование предложения OVER  
-В этом примере функции `MIN`, `MAX`, `AVG` и `COUNT` используются с предложением `OVER`, чтобы получить статистические значения для каждого из отделов в таблице `HumanResources.Department` базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
+В этом примере функции `MIN`, `MAX`, `AVG` и `COUNT` используются с предложением `OVER`, чтобы получить статистические значения для каждого из отделов в таблице [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] базы данных `HumanResources.Department`.
   
 ```sql
 SELECT DISTINCT Name  

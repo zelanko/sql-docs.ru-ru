@@ -18,10 +18,10 @@ ms.assetid: a70e2ee6-59b0-4543-b883-e9cbae6199be
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: f128cbf86d30cabe0aa00ce7033b7cd5b04c93e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065605"
 ---
 # <a name="grant-asymmetric-key-permissions-transact-sql"></a>GRANT, предоставление разрешения на ассиметричный ключ (Transact-SQL)
@@ -75,7 +75,7 @@ AS *granting_principal*
 -   пользователь базы данных, сопоставленный с асимметричным ключом;  
 -   пользователь базы данных, не сопоставленный с участником на уровне сервера.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Асимметричный ключ — защищаемое на уровне базы данных содержимое базы данных, являющееся его родителем в иерархии разрешений. Ниже перечислены наиболее специфичные и ограниченные разрешения (вместе с наиболее общими разрешениями, куда они входят по импликации), которые могут быть предоставлены для асимметричного ключа.  
   
 |Разрешение асимметричного ключа|Содержится в разрешении асимметричного ключа|Содержится в разрешении базы данных|  
