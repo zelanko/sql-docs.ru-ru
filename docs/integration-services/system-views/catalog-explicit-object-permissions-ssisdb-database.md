@@ -11,10 +11,10 @@ ms.assetid: 49b09e0f-06e8-451f-b979-a0d91000bfe3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: aa3c4060f0d82ff590b6307bc35a3c11a86b3201
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296597"
 ---
 # <a name="catalogexplicit_object_permissions-ssisdb-database"></a>catalog.explicit_object_permissions (база данных SSISDB)
@@ -26,7 +26,7 @@ ms.locfileid: "71296597"
 
   Отображает только разрешения, которые были явно назначены пользователю.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |object_type|**smallint**|Тип защищаемого объекта. Типы защищаемых объектов включают папку (`1`), проект (`2`), среду (`3`) и операцию (`4`).|  
 |object_id|**bigint**|Уникальный идентификатор первичного ключа защищенного объекта.|  

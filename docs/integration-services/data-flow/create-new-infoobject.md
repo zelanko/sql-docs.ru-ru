@@ -11,10 +11,10 @@ ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9691deb08bdc6bce05945e1210edd91273f1bc61
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293176"
 ---
 # <a name="create-new-infoobject"></a>Создание InfoObject
@@ -24,7 +24,7 @@ ms.locfileid: "71293176"
 
   Используйте диалоговое окно **Создание нового InfoObject** для создания нового InfoObject в системе SAP Netweaver BW.  
   
- Диалоговое окно **Создать InfoObject** можно открыть на странице **Диспетчер соединений** **Редактора назначений SAP BW**. Дополнительные сведения о назначении SAP BW см. в разделе [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  
+ Диалоговое окно **Создать InfoObject** можно открыть на странице **Диспетчер соединений** **Редактора назначений SAP BW**. Дополнительные сведения о назначении SAP BW см. в статье [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  
   
 > [!IMPORTANT]  
 >  Документация по Microsoft Connector 1.1 для SAP BW предполагает, что читатель знаком со средой SAP Netweaver BW. Дополнительные сведения о SAP Netweaver BW или сведения о настройке объектов и процессов SAP Netweaver BW см. в документации SAP.  
@@ -133,17 +133,17 @@ ms.locfileid: "71293176"
  **Тип InfoObject**  
  Просмотрите тип InfoObject. В следующей таблице приводятся возможные значения типа.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |CHA|Характеристики|  
 |KYF|Ключевые цифры|  
-|UNI|Единицы измерения|  
+|UNI|Units|  
 |TIM|Характеристики времени|  
   
 ### <a name="attributes-options"></a>Параметры атрибутов  
  Можно использовать следующие параметры для добавления и удаления атрибутов для создаваемого InfoObject.  
   
- **Добавить**  
+ **Добавление**  
  Добавляет существующий InfoObject как атрибут.  
   
  Чтобы добавить существующий InfoObject, щелкните «Добавить» и затем используйте диалоговое окно **Поиск InfoObject** для поиска InfoObject. Дополнительные сведения об этом диалоговом окне см. в разделе [Look Up InfoObject](../../integration-services/data-flow/look-up-infoobject.md).  

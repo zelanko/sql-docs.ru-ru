@@ -1,5 +1,5 @@
 ---
-title: Пример Конструирование одноуровневых элементов в режиме EXPLICIT | Документация Майкрософт
+title: Пример. Конструирование одноуровневых элементов в режиме EXPLICIT | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,13 +13,13 @@ ms.assetid: 8a57b765-a890-46a3-8b5f-5754e921ea6e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 606c83c59147bf6ef171d4fa4f802d13f55f8219
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006831"
 ---
-# <a name="example-constructing-siblings-with-explicit-mode"></a>Пример Конструирование одноуровневых элементов в режиме EXPLICIT
+# <a name="example-constructing-siblings-with-explicit-mode"></a>Пример: конструирование одноуровневых элементов в режиме EXPLICIT
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Предположим, что требуется создать XML, который предоставляет сведения о заказах на продажу. Обратите внимание на то, что элементы <`SalesPerson`> и <`OrderDetail`> имеют одного и того же родителя. Каждый заказ имеет один элемент <`OrderHeader`>, один элемент <`SalesPerson`> или один или несколько элементов <`OrderDetail`>.  
   
@@ -101,6 +101,6 @@ FOR XML EXPLICIT;
 ```
   
 ## <a name="see-also"></a>См. также:  
- [Использование режима EXPLICIT совместно с предложением FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
+ [Использование режима EXPLICIT с предложением FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   
