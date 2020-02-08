@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 068b7aa3c068b10b787b99bba26c12a2b680bcd3
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727406"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>Производительность служб R Services: результаты и ресурсы
@@ -92,12 +92,12 @@ metric time pct
 
 В первом тесте сравнивалось применение сжатия и таблицы столбцов для уменьшения объема данных.
 
-| Имя таблицы            | Строки     | Зарезервировано   | Данные       | index_size | Не используется  | Процент сохранения (зарезервировано) |
+| Имя таблицы            | Строки     | Reserved   | Данные       | index_size | Не используется  | Процент сохранения (зарезервировано) |
 |-----------------------|----------|------------|------------|------------|---------|---------------------|
 | *airlineWithIndex*    | 10 000 000 | 2 978 816 КБ | 2 972 160 КБ | 6128 КБ    | 528 КБ  | 0                   |
 | *airlineWithPageComp* | 10 000 000 | 625 784 КБ  | 623 744 КБ  | 1352 КБ    | 688 КБ  | 79 %                 |
 | *airlineWithRowComp*  | 10 000 000 | 1 262 520 КБ | 1 258 880 КБ | 2552 КБ    | 1088 КБ | 58 %                 |
-| *airlineColumnar*     | 9 999 999  | 201 992 КБ  | 201 624 КБ  | н/д        | 368 КБ  | 93 %                 |
+| *airlineColumnar*     | 9 999 999  | 201 992 КБ  | 201 624 КБ  | Недоступно        | 368 КБ  | 93 %                 |
 
 **Заключения**
 
@@ -154,7 +154,7 @@ metric time pct
 | IntCol    | 1      | 3,89 с |              |
 |           | 2      | 4,15 с |              |
 |           | 3      | 3,77 с |              |
-|           | 4      | 5 с    |              |
+|           | 4      | 5 с    |              |
 |           | 5      | 3,92 с |              |
 |           | 6      | 3,8 с  |              |
 |           |        |              | 3,91         |
@@ -238,7 +238,7 @@ ArrDelay ~ Origin:DayOfWeek + Month + DayofMonth + CRSDepTime
 | CubeArgEffect | `cube = F`     | 1        | 91,0725      | 9,959204                        |
 |               |                | 4        | 44,09        | 9,959204                        |
 |               | `cube = T`     | 1        | 21,1125      | 9,959204                        |
-|               |                | 4        | 8,08         | 9,959204                        |
+|               |                | 4        | 8.08         | 9,959204                        |
 
 **Заключения**
 
@@ -268,8 +268,8 @@ ArrDelay ~ Origin:DayOfWeek + Month + DayofMonth + CRSDepTime
 
 | Имя таблицы | Имя теста | Среднее время (для обучения модели) | Время сохранения и загрузки модели|
 |------------|------------|------------|------------|
-| airline    | SaveModel| 21,59| 2,08|
-| airline    | LoadModelAndPredict | | 2,09 (со временем для прогнозирования) |
+| авиакомпания    | SaveModel| 21,59| 2,08|
+| авиакомпания    | LoadModelAndPredict | | 2,09 (со временем для прогнозирования) |
 
 **Заключения**
 
@@ -400,10 +400,10 @@ ArrDelay ~ Origin:DayOfWeek + Month + DayofMonth + CRSDepTime
 
 ## <a name="other-articles-in-this-series"></a>Другие статьи в этой серии
 
-[Настройка производительности для R — введение](sql-server-r-services-performance-tuning.md)
+[Настройка производительности для R — введение](sql-server-r-services-performance-tuning.md)
 
-[Настройка производительности для R — конфигурация SQL Server](sql-server-configuration-r-services.md)
+[Настройка производительности для R — конфигурация SQL Server](sql-server-configuration-r-services.md)
 
-[Настройка производительности для R — код R и оптимизация данных](r-and-data-optimization-r-services.md)
+[Настройка производительности для R — код R и оптимизация данных](r-and-data-optimization-r-services.md)
 
 [Настройка производительности — результаты примеров использования](performance-case-study-r-services.md)

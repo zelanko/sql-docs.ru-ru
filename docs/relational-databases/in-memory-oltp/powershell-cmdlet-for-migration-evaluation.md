@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5272203fb1a1c0ac2f755a4da99c654b2595a7f0
-ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68698304"
 ---
 # <a name="powershell-cmdlet-for-migration-evaluation"></a>Командлет PowerShell для оценки миграции
@@ -60,7 +60,7 @@ Save-SqlMigrationReport
 | Имя параметра | Описание |
 | :------------- | :---------- |
 | База данных | Имя целевой базы данных SQL Server. Обязателен, если является обязательным `-Server`.<br/><br/> Необязателен в sqlps. |
-| FolderPath | Папка, в которую командлету следует поместить созданные отчеты.<br/><br/> Обязательный. |
+| FolderPath | Папка, в которую командлету следует поместить созданные отчеты.<br/><br/> Обязательный элемент. |
 | InputObject | Целевой объект SMO для командлета.<br/><br/> Обязателен в среде Windows PowerShell, если не указан параметр `-Server`.<br/><br/> Необязателен в sqlps. |
 | MigrationType | Тип сценария миграции для командлета. В настоящее время единственным является значение по умолчанию — **OLTP**.<br/><br/> Необязательный параметр. |
 | Объект | Имя объекта, по которому требуется отчет. Это может быть таблица или хранимая процедура. |
@@ -70,7 +70,7 @@ Save-SqlMigrationReport
 | Имя пользователя | Требуется при подключении через проверку подлинности SQL Server, в отличие от проверки подлинности Windows. В противном случае не указывается. |
 | &nbsp; | &nbsp; |
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Перед запуском этого командлета необходимо сначала установить модуль с именем **SqlServer**:
 

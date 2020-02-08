@@ -1,23 +1,24 @@
 ---
-title: Руководство. Отладка объектов базы данных | Документация Майкрософт
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: выполнить отладку объектов базы данных
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: f5d4584f-e85f-4558-b056-83681c365978
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 57854937595ba57dee8c36bd4877fd05362f2e40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: ba04eba5107968f1be11c62fbac0f57ca5733b3f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035205"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241463"
 ---
-# <a name="how-to-debug-database-objects"></a>Руководство. выполнить отладку объектов базы данных
+# <a name="how-to--debug-database-objects"></a>Руководство.  выполнить отладку объектов базы данных
+
 Модульный тест SQL Server содержит следующие элементы.  
   
 -   Код модульного теста на языке Visual Basic или Visual C\#. Этот код, который формируется конструктором модульных тестов SQL Server, отвечает за передачу скрипта Transact\-SQL, составляющего основу теста.  

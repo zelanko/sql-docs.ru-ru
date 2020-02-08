@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL TABLE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 01/10/2020
+ms.date: 01/27/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 123b395fe54000b34b509637e5a0568340598edb
-ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
+ms.openlocfilehash: 61c8728fede661a91090d5cb15ee4feed5816e7c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75952378"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831976"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -105,7 +105,7 @@ LOCATION = '*путь к файлу или папке*'. Указывает пу
 
 В этом примере, если указано LOCATION='/webdata/', запрос PolyBase вернет строки из mydata.txt и mydata2.txt. Он не вернет файл mydata3.txt, который вложен в скрытую папку. Он также не вернет файл _hidden.txt, так как тот является скрытым.
 
-![Рекурсивные данные для внешних таблиц](../../t-sql/statements/media/aps-polybase-folder-traversal.png "|::ref1::|")
+![Рекурсивные данные для внешних таблиц](../../t-sql/statements/media/aps-polybase-folder-traversal.png "Рекурсивные данные для внешних таблиц")
 
 Чтобы изменить значение по умолчанию и только для чтения в корневой папке, установите для атрибута \<polybase.recursive.traversal> значение 'false' в файле конфигурации core-site.xml. Этот файл находится в папке `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. Например, `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.
 
@@ -416,7 +416,7 @@ WITH
       LOCATION='tpch_10.dbo.customer',
       DATA_SOURCE=SqlServerInstance
      );
- ```
+```
 
 ### <a name="i-create-an-external-table-for-oracle"></a>И. Создание внешней таблицы для Oracle
 
@@ -444,7 +444,7 @@ WITH
      CREDENTIAL = credential_name)
 
    /*
-   * LOCATION: Oracle table/view in '<database_name>.<schema_name>.<object_name>' format
+   * LOCATION: Oracle table/view in '.<schema_name>.<object_name>' format
    * DATA_SOURCE: the external data source, created above.
    */
    CREATE EXTERNAL TABLE customers(
@@ -459,10 +459,10 @@ WITH
    [O_COMMENT] VARCHAR(79) COLLATE Latin1_General_BIN NOT NULL
    )
    WITH (
-    LOCATION='customer',
+    LOCATION='.mySchema.customer',
     DATA_SOURCE= external_data_source_name
    );
-   ```
+```
 
 ### <a name="j-create-an-external-table-for-teradata"></a>К. Создание внешней таблицы для Teradata
 
@@ -604,7 +604,7 @@ column_name <data_type>
         [DISTRIBUTION  = SHARDED(sharding_column_name) | REPLICATED | ROUND_ROBIN]]  
     )  
 [;]  
-```  
+```
 
 ## <a name="arguments"></a>Аргументы
 
@@ -750,7 +750,7 @@ column_name <data_type>
     | REJECTED_ROW_LOCATION = '/REJECT_Directory'
   
 }  
-```  
+```
 
 ## <a name="arguments"></a>Аргументы
 
@@ -817,7 +817,7 @@ REJECT_SAMPLE_VALUE = *значение отклоняемого образца*
 REJECTED_ROW_LOCATION = *расположение каталога*
 
 Указывает каталог во внешнем источнике данных, в который должны записываться строки и соответствующий файл ошибок.
-Если указанный файл не существует, PolyBase создаст его от вашего имени. Создается дочерний каталог с именем "_rejectedrows". Благодаря символу "_ " каталог исключается из других процессов обработки данных, если он явно не указан в параметре LOCATION. В этом каталоге создается папка, имя которой соответствует времени отправки загруженных данных в формате "ГодМесяцДень-ЧасМинутаСекунда" (например, 20180330-173205). В эту папку записываются файлы двух типов: файлы причин и файлы данных.
+Если указанный файл не существует, PolyBase создаст его от вашего имени. Создается дочерний каталог с именем "\_rejectedrows". Благодаря символу "\_" каталог исключается из других процессов обработки данных, если он явно не указан в параметре LOCATION. В этом каталоге создается папка, имя которой соответствует времени отправки загруженных данных в формате "ГодМесяцДень-ЧасМинутаСекунда" (например, 20180330-173205). В эту папку записываются файлы двух типов: файлы причин и файлы данных.
 
 Как файлы причин, так и файлы данных имеют идентификаторы queryID, связанные с инструкцией CTAS. Так как данные и причины хранятся в отдельных файлах, эти файлы имеют соответствующие суффиксы.
 
@@ -945,7 +945,7 @@ AS SELECT * FROM
 ## <a name="overview-analytics-platform-system"></a>Общие сведения. Система платформы аналитики
 
 Внешняя таблица используется в следующих целях:
-  
+
 - Запрос к Hadoop или хранилищу больших двоичных объектов Azure с помощью инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)].
 - Импорт и хранение данных из Hadoop или хранилища больших двоичных объектов Azure в вашей Системе платформы аналитики.
 
@@ -976,7 +976,7 @@ column_name <data_type>
     | REJECT_SAMPLE_VALUE = reject_sample_value,
   
 }  
-```  
+```
 
 ## <a name="arguments"></a>Аргументы
 

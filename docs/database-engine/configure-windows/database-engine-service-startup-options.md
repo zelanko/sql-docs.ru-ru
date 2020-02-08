@@ -26,10 +26,10 @@ ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4518428d6dd583e5d9fe2a4da06f052b8b75da70
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75252872"
 ---
 # <a name="database-engine-service-startup-options"></a>Параметры запуска службы Database Engine
@@ -41,7 +41,7 @@ ms.locfileid: "75252872"
 > [!WARNING]  
 >  Неправильное использование параметров запуска может повлиять на производительность сервера или помешать запуску [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 >
->  Чтобы избежать проблем с запуском в дальнейшем, SQL Server в Linux следует запускать с указанием пользователя "mssql". Пример: `sudo -u mssql /opt/mssql/bin/sqlservr [STARTUP OPTIONS]` 
+>  Чтобы избежать проблем с запуском в дальнейшем, SQL Server в Linux следует запускать с указанием пользователя "mssql". Например, `sudo -u mssql /opt/mssql/bin/sqlservr [STARTUP OPTIONS]`. 
   
 ## <a name="about-startup-options"></a>О параметрах запуска  
  При установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]программа установки сохраняет набор параметров запуска в реестр [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. С помощью этих параметров можно указать альтернативный файл базы данных master, файл журнала базы данных master и файл журнала ошибок. Если компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] не удается найти необходимые файлы, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на запустится.  
@@ -51,7 +51,7 @@ ms.locfileid: "75252872"
 ## <a name="list-of-startup-options"></a>Список параметров запуска  
 ### <a name="default-startup-options"></a>Параметры запуска по умолчанию  
 
-|Параметры|Description|  
+|Параметры|Описание|  
 |-----------------------------|-----------------|  
 |**-d**  *master_file_path*|Полный путь к файлу базы данных master (обычно это "C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Data\Master.mdf"). Если этот параметр не задан, используются параметры из реестра.|  
 |**-e**  *error_log_path*|Полный путь к файлу журнала ошибок (обычно это "C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Log\Errorlog"). Если этот параметр не задан, используются параметры из реестра.|  
@@ -59,7 +59,7 @@ ms.locfileid: "75252872"
   
 ### <a name="other-startup-options"></a>Дополнительные параметры запуска   
 
-|Параметры |Description|   
+|Параметры |Описание|   
 |---------------------------|-----------------|  
 |**-c**|Ускоряет запуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из командной строки. Обычно компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] запускается в виде службы путем вызова диспетчера управления службами. Так как [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] не запускается как служба при запуске из командной строки, используйте параметр **-c** , чтобы пропустить этот шаг.|  
 |**-f**|Запускает экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с минимальной конфигурацией. Эта функция полезна в случае, если установленные значения конфигурации (например, слишком большой объем выделяемой памяти) не позволяют выполнить запуск сервера. При запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в режиме минимальной конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] переходит в однопользовательский режим. Дополнительные сведения см. в описании параметра **-m** далее.|  

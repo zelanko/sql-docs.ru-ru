@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: b73d24edb139e36f11e05c854c9d10d885994e18
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595489"
 ---
 # <a name="tutorial-develop-a-net-framework-application-using-always-encrypted-with-secure-enclaves"></a>Руководство. Разработка приложения .NET Framework с помощью Always Encrypted с безопасными анклавами
@@ -24,7 +24,7 @@ ms.locfileid: "73595489"
 
 В этом руководстве содержатся сведения о разработке простого приложения, которое выполняет запросы к базе данных, использующие безопасный анклав на стороне сервера для [Always Encrypted с защищенными анклавами](encryption/always-encrypted-enclaves.md). 
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 Это руководство представляет собой продолжение статьи [Руководство. Начало работы с Always Encrypted с безопасными анклавами с использованием SSMS](./tutorial-getting-started-with-always-encrypted-enclaves.md). Убедитесь, что вы полностью изучили его, прежде чем выполнять действия ниже.
 
 Кроме того, требуется среда Visual Studio (рекомендуется версия 2019), которую можно скачать на странице [https://visualstudio.microsoft.com/](https://visualstudio.microsoft.com). На компьютере для разработки приложений должна быть установлена платформа .NET Framework 4.7.2 или более поздней версии.
@@ -56,14 +56,14 @@ ms.locfileid: "73595489"
 
 8. В разделе \<configuration\> добавьте или обновите разделы \<configSections\>.
 
-   A. Если в разделе \<configuration\> **нет** раздела \<configSections\>, добавьте приведенное ниже содержимое сразу после раздела \<configuration\>.
+   а. Если в разделе \<configuration\>**нет** раздела \<configSections\>, добавьте приведенное ниже содержимое сразу после раздела \<configuration\>.
    
       ```xml
       <configSections>
          <section name="SqlColumnEncryptionEnclaveProviders" type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
       </configSections>
       ```
-   Б. Если в разделе \<configuration\> уже есть раздел \<configSections\>, добавьте следующую строку в раздел \<configSections\>:
+   b. Если в разделе \<configuration\> уже есть раздел \<configSections\>, добавьте следующую строку в раздел \<configSections\>:
 
    ```xml
    <section name="SqlColumnEncryptionEnclaveProviders"  type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data,  Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" /\>

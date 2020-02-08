@@ -14,10 +14,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: 636b304d99ee244ef7a367fb8a474ebe8df312a0
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75557777"
 ---
 # <a name="tutorial-create-and-use-indexes-on-enclave-enabled-columns-using-randomized-encryption"></a>Руководство. Создание и использование индексов в столбцах с поддержкой анклава с помощью случайного шифрования
@@ -28,7 +28,7 @@ ms.locfileid: "75557777"
 - создание индекса, если у вас есть доступ к ключам (главный ключ столбца и ключ шифрования столбца), которые обеспечивают защиту столбца.
 - создание индекса, если у вас нет доступа к ключам, которые обеспечивают защиту столбца.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Это руководство представляет собой продолжение статьи [Руководство. Начало работы с Always Encrypted с безопасными анклавами с использованием SSMS](./tutorial-getting-started-with-always-encrypted-enclaves.md). Убедитесь, что вы полностью изучили его, прежде чем выполнять действия ниже.
 
@@ -65,7 +65,7 @@ ms.locfileid: "75557777"
    2. Выберите **Параметры**.
    3. Выберите **Выполнение запроса** > **SQL Server** > **Дополнительно**.
    4. Убедитесь, что установлен флажок **Включить параметризацию для Always Encrypted**.
-   5. Нажмите кнопку **ОК**.
+   5. Щелкните **ОК**.
 1. Откройте окно запроса и выполните инструкции ниже, чтобы зашифровать столбец **LastName** в таблице **Employees**. Вы создадите и будете использовать индекс в таком столбце на следующих шагах.
 
    ```sql

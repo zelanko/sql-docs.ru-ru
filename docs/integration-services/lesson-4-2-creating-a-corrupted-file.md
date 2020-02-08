@@ -11,10 +11,10 @@ ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: cd9266512675c4127a99903e6de0d1da5ccaec70
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295957"
 ---
 # <a name="lesson-4-2-create-a-corrupted-file"></a>Занятие 4-2. Создание поврежденного файла
@@ -59,8 +59,8 @@ ms.locfileid: "71295957"
     > [!NOTE]  
     > Число 27 представляет собой идентификатор компонента. Это значение присваивается при создании потока данных, так что в пакете оно может отличаться от приведенного в учебнике.  
   
-## <a name="go-to-next-task"></a>Перейти к следующему шагу  
-[Шаг 3. Добавление перенаправления потока ошибок](../integration-services/lesson-4-3-adding-error-flow-redirection.md)  
+## <a name="go-to-next-task"></a>Переход к следующей задаче  
+[Шаг 3. Добавление перенаправления потока ошибок](../integration-services/lesson-4-3-adding-error-flow-redirection.md)  
   
   
   

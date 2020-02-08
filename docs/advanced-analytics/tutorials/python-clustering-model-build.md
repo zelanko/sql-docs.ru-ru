@@ -12,10 +12,10 @@ ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 9669686d0163b9ce1c362e7cdf2814c7a95bfaa8
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727112"
 ---
 # <a name="tutorial-build-a-model-in-python-to-categorize-customers-with-sql-server-machine-learning-services"></a>Руководство. Создание модели для категоризации клиентов в Python с использованием служб машинного обучения SQL Server
@@ -37,7 +37,7 @@ ms.locfileid: "73727112"
 
 В [четвертой части](python-clustering-model-deploy.md) вы узнаете, как создать хранимую процедуру в базе данных SQL, которая может выполнять кластеризацию в Python на основе новых данных.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 * В третьей части этого учебника предполагается, что вы уже выполнили предварительные требования [**первой части**](python-clustering-model.md), а также действия, указанные во [**второй части**](python-clustering-model-prepare-data.md).
 
@@ -147,9 +147,9 @@ cluster
 
 ## <a name="clean-up-resources"></a>Очистка ресурсов
 
-Если вы не собираетесь продолжать работу с этим учебником, удалите базу данных tpcxbb_1gb из SQL Server.
+Если вы не собираетесь продолжать работу с этим учебником, удалите базу данных tpcxbb_1gb из SQL Server.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 В третьей части этого учебника вы выполнили следующие действия:
 
@@ -160,4 +160,4 @@ cluster
 Чтобы развернуть созданную модель машинного обучения, перейдите к четвертой части этого учебника:
 
 > [!div class="nextstepaction"]
-> [Учебник. Развертывание модели кластеризации в Python с помощью служб машинного обучения SQL Server](python-clustering-model-deploy.md)
+> [Руководство. Развертывание модели кластеризации в Python с помощью служб машинного обучения SQL Server](python-clustering-model-deploy.md)

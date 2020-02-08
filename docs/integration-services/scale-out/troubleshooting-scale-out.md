@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: 87f5ab815fc7d3a5df23aa3675e92ffa206bfcdf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67896152"
 ---
 # <a name="troubleshoot-scale-out"></a>Устранение неполадок Scale Out
@@ -224,7 +224,7 @@ WHERE executions.execution_id = *Your Execution Id* AND tasks.JobId = executions
 > [!WARNING]
 > Этот запрос предназначен исключительно для устранения неполадок. Внутренние представления, указанные в запросе, будут изменены в будущем. 
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 Дополнительные сведения см. в следующих статьях, посвященных установке и настройке SSIS Scale Out:
 -   [Начало работы с SSIS Scale Out на одном компьютере](get-started-with-ssis-scale-out-onebox.md)
 -   [Пошаговое руководство. Настройка Integration Services Scale Out](walkthrough-set-up-integration-services-scale-out.md)

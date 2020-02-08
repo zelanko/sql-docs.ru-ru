@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 561d1d32cef9102200bcc3b0730c96afed06d91a
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727478"
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r-in-sql-server"></a>Изучение данных и прогнозное моделирование с помощью R в SQL Server
@@ -21,7 +21,7 @@ ms.locfileid: "73727478"
 
 В этой статье описываются улучшения процесса обработки и анализа данных, которые становятся возможными благодаря интеграции с SQL Server.
 
-Применимо для следующих объектов: Службы SQL Server 2016 R Services, Службы машинного обучения SQL Server 2017
+Область применения: Службы SQL Server 2016 R Services, Службы машинного обучения SQL Server 2017
 
 ## <a name="the-data-science-process"></a>Процесс обработки и анализа данных
 
@@ -54,7 +54,7 @@ ms.locfileid: "73727478"
   
   Для платформы Windows пакеты R предоставляются в виде ZIP-файлов, которые можно скачать и установить по лицензии GPL.  
   
-  Дополнительные сведения об установке пакетов сторонних разработчиков для использования с [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] см. в статье [Установка дополнительных пакетов R на SQL Server](../../advanced-analytics/r/install-additional-r-packages-on-sql-server.md).  
+  Дополнительные сведения об установке пакетов сторонних разработчиков для использования с [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]см. в статье [Install Additional R Packages on SQL Server](../../advanced-analytics/r/install-additional-r-packages-on-sql-server.md)  
   
 + Дополнительные пакеты и библиотеки, предоставляемые [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].   
   

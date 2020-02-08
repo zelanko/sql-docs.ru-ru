@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 4b8e516d2e96c1cc4812a36800fd22371729445d
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73724864"
 ---
 # <a name="lesson-4-run-predictions-using-r-embedded-in-a-stored-procedure"></a>Занятие 4: Прогнозирование с помощью кода R, внедренного в хранимую процедуру
@@ -195,4 +195,4 @@ GO
 
 ## <a name="previous-lesson"></a>Предыдущее занятие
 
-[Занятие 3. Обучение и сохранение модели R с помощью T-SQL](sqldev-train-and-save-a-model-using-t-sql.md)
+[Урок 3. Обучение и сохранение модели R с помощью T-SQL](sqldev-train-and-save-a-model-using-t-sql.md)

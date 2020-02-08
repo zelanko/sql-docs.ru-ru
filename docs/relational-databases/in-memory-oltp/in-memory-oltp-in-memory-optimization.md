@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 87ad093d5be6f4fa394e934e6c0d88796a22e196
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74401656"
 ---
 # <a name="in-memory-oltp-and-memory-optimization"></a>Выполняющаяся в памяти OLTP и оптимизация памяти
@@ -47,7 +47,7 @@ ms.locfileid: "74401656"
 ## <a name="in-this-section"></a>В этом разделе  
  Здесь приведен список статей с описанием.  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Краткое руководство 1. Технологии выполнения OLTP в памяти для повышения производительности службы Transact-SQL](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)|Подробные сведения о выполняющейся в памяти OLTP.|
 |[Общие сведения и сценарии использования](../../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md)|Общие сведения о выполняющейся в памяти OLTP и сценарии, в которых эта технология может улучшать производительность.|

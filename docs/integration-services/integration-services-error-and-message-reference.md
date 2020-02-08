@@ -15,10 +15,10 @@ ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7d55050b132a3367ecc495d0afedcad6f0d2351b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71284427"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Справочник по сообщениям об ошибках служб Integration Services
@@ -1463,7 +1463,7 @@ ms.locfileid: "71284427"
 |0xC0204010|-1071628272|DTS_E_CANONLYSETCOMPFLAGSONSOURCE|Свойство ComparisonFlags не может иметь ненулевое значение для "%1", так как "%2" не является выходом источника. Выходной столбец "colname" (идентификатор) не может иметь ненулевое значение свойства ComparisonFlags, так как его выход "outputname" (идентификатор) не является выходом источника.|  
 |0xC0204011|-1071628271|DTS_E_NONSTRINGCOMPARISONFLAGSNOTZERO|Флаги сравнения для "%1" должны быть равны нулю, так как они имеют нестроковый тип. Свойство ComparisonFlags может содержать ненулевое значение только для строковых столбцов.|  
 |0xC0204012|-1071628270|DTS_E_COMPFLAGSONLYONSORTCOL|"%1" не может иметь ненулевое значение свойства ComparisonFlags, так как значение его свойства SortKeyPosition равно нулю. Свойство ComparisonFlags выходного столбца может содержать ненулевое значение только в случае, если значение его свойства SortKeyPosition также не равно нулю.|  
-|0xC0204013|-1071628269|DTS_E_READONLYSTOCKPROPERTY|Свойство доступно только для чтения.|  
+|0xC0204013|-1071628269|DTS_E_READONLYSTOCKPROPERTY|свойство доступно только для чтения.|  
 |0xC0204014|-1071628268|DTS_E_INVALIDDATATYPE|%1 присвоено недопустимое значение типа данных (%2!ld!).|  
 |0xC0204015|-1071628267|DTS_E_CODEPAGEREQUIRED|"%1" необходима установка кодовой страницы, но переданное значение равно нулю.|  
 |0xC0204016|-1071628266|DTS_E_INVALIDSTRINGLENGTH|"%1" имеет недопустимую длину. Длина должна лежать в диапазоне от %2!ld! до %3!ld!.|  
@@ -1926,7 +1926,7 @@ ms.locfileid: "71284427"
 |0xC02090BE|-1071607618|DTS_E_TXFILEINSERTERSTATIC_FILEOPENERR_FORREAD_PATHNOTFOUND|Ошибка при открытии файла для чтения. Путь не найден.|  
 |0xC02090BF|-1071607617|DTS_E_FILEOPENERR_FORREAD_TOOMANYOPENFILES|Ошибка при открытии файла "%1" для чтения. Слишком много открытых файлов.|  
 |0xC02090C0|-1071607616|DTS_E_TXFILEINSERTERSTATIC_FILEOPENERR_FORREAD_TOOMANYOPENFILES|Ошибка при открытии файла для чтения. Слишком много открытых файлов.|  
-|0xC02090C1|-1071607615|DTS_E_FILEOPENERR_FORREAD_ACCESSDENIED|Ошибка при открытии файла "%1" для чтения. Доступ запрещен.|  
+|0xC02090C1|-1071607615|DTS_E_FILEOPENERR_FORREAD_ACCESSDENIED|Ошибка при открытии файла "%1" для чтения. Отказано в доступе".|  
 |0xC02090C2|-1071607614|DTS_E_TXFILEINSERTERSTATIC_FILEOPENERR_FORREAD_ACCESSDENIED|Ошибка при открытии файла для чтения. Отсутствуют надлежащие разрешения.|  
 |0xC02090C3|-1071607613|DTS_E_INSERTERINVALIDBOM|Значение отметки порядка байтов (BOM) для файла "%1" равно 0x%2!4.4X!, а ожидалось значение 0x%3!4.4X!. Свойство ExpectBOM задано для данного файла, но значение BOM отсутствует в файле или является недопустимым.|  
 |0xC02090C4|-1071607612|DTS_E_TXFILEINSERTERSTATIC_INSERTERINVALIDBOM|Недопустимое значение отметки порядка байтов (BOM). Свойство ExpectBOM задано для данного файла, но значение BOM отсутствует в файле или является недопустимым.|  
@@ -2272,7 +2272,7 @@ ms.locfileid: "71284427"
 |Шестнадцатеричный формат|Десятичный формат|Символическое имя|Описание|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x1|1|DTS_MSG_CATEGORY_SERVICE_CONTROL|Неверная функция.|  
-|0x2|2|DTS_MSG_CATEGORY_RUNNING_PACKAGE_MANAGEMENT|Система не может найти указанный файл.|  
+|0x2|2|DTS_MSG_CATEGORY_RUNNING_PACKAGE_MANAGEMENT|Системе не удается найти указанный файл.|  
 |0x100|256|DTS_MSG_SERVER_STARTING|Запуск службы Microsoft SSIS.<br /><br /> Версия сервера %1|  
 |0x101|257|DTS_MSG_SERVER_STARTED|Служба Microsoft SSIS запущена.<br /><br /> Версия сервера %1|  
 |0x102|258|DTS_MSG_SERVER_STOPPING|Время операции ожидания истекло.|  

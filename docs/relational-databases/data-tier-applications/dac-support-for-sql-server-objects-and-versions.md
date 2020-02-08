@@ -13,10 +13,10 @@ ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c0e0f85e21898ccf61d7c205305fc9179edc2af4
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68810588"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>Поддержка приложений уровня данных для объектов и версий SQL Server
@@ -50,7 +50,7 @@ ms.locfileid: "68810588"
 |DATABASE ROLE|ФУНКЦИЯ: встроенная, возвращающая табличное значение|  
 |ФУНКЦИЯ: многооператорная, возвращающая табличное значение|ФУНКЦИЯ: скалярная|  
 |ИНДЕКС: Кластеризованный|ИНДЕКС: Некластеризованный|  
-|ИНДЕКС: пространственный|ИНДЕКС: Уникальный|  
+|ИНДЕКС: пространственный|ИНДЕКС: Уникальная идентификация|  
 |Имя_для_входа|Разрешения|  
 |Данные членства в роли|SCHEMA|  
 |Статистика|ХРАНИМАЯ ПРОЦЕДУРА: Transact-SQL|  

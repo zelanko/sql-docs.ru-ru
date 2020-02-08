@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: 6c90b71ed61deeadbc0af2592f137893fa676a05
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67896963"
 ---
 # <a name="manage-certificates-for-sql-server-integration-services-scale-out"></a>Управление сертификатами для SQL Server Integration Services Scale Out
@@ -88,13 +88,13 @@ netsh http add sslcert ipport=0.0.0.0:8391 certhash=01d207b300ca662f479beb884efe
 #### <a name="5-reconnect-scale-out-workers-to-scale-out-master"></a>5. Повторное подключение рабочих ролей Scale Out к мастеру Scale Out
 Для каждой рабочей роли Scale Out либо удалите рабочую роль и снова добавьте ее с помощью [диспетчера Scale Out](integration-services-ssis-scale-out-manager.md), либо выполните указанные ниже действия.
 
-A.  Установите SSL-сертификат клиента в корневое хранилище локального компьютера в узле рабочей роли.
+а.  Установите SSL-сертификат клиента в корневое хранилище локального компьютера в узле рабочей роли.
 
-Б.  Обновите файл конфигурации для службы рабочей роли Scale Out.
+b.  Обновите файл конфигурации для службы рабочей роли Scale Out.
 
 Обновите файл конфигурации для службы рабочей роли Scale Out (`\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`) в узле рабочей роли. Обновите **MasterHttpsCertThumbprint**, используя отпечаток нового SSL-сертификата.
 
-в.  Перезапустите службу рабочей роли Scale Out.
+c.  Перезапустите службу рабочей роли Scale Out.
 
 ## <a name="scale-out-worker-certificate"></a>Сертификат рабочей роли Scale Out
 
@@ -141,7 +141,7 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s WorkerMachine -a SSISScaleOutWorker
 
 #### <a name="6-restart-the-scale-out-worker-service"></a>6. Перезапуск службы рабочей роли Scale Out
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 Дополнительные сведения см. в следующих статьях:
 -   [Главная роль масштабного развертывания служб Integration Services (SSIS)](integration-services-ssis-scale-out-master.md)
 -   [Рабочая роль масштабного развертывания служб Integration Services (SSIS)](integration-services-ssis-scale-out-worker.md)

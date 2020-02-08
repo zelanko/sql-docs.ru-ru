@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: abc14f78a969abd4adbbb2dcf12b4ee316614d23
-ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69634551"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>Обновление компонентов машинного обучения (R и Python) в экземплярах SQL Server
@@ -194,9 +194,9 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 1. Загрузите CAB-файлы. Ниже приведены ссылки на выпуск 9.3. Если требуются более ранние версии, дополнительные ссылки можно найти в [R Server 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows-offline#download-required-components). Вспомним, что Python/Anaconda можно добавить только в экземпляр Служб машинного обучения SQL Server. Предварительно обученные модели существуют как для R, так и для Python; CAB-файл предоставляет модели на языках, которые вы используете.
 
-    | Компонент | Загрузить |
+    | Компонент | Скачивание |
     |---------|----------|
-    | Чтение       | [SRO_3.4.3.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=867186&clcid=1033) |
+    | R       | [SRO_3.4.3.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=867186&clcid=1033) |
     | Python  | [SPO_9.3.0.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=859054) | 
     | Предварительно обученная модель | [MLM_9.3.0.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=859053) |
 
@@ -239,7 +239,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 <a name="step-1-unbind"></a> 
 
-### <a name="step-1-unbind"></a>Шаг 1. Отменить привязку
+### <a name="step-1-unbind"></a>Шаг 1. Unbind
 
 Существует два варианта отката привязки: повторно запустите программу установки или используйте служебную программу командной строки SqlBindR.
 
@@ -272,7 +272,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 <a name="step-3-reinstall-packages"></a> 
 
-### <a name="step-3-add-any-third-party-packages"></a>Шаг 3. Добавление сторонних пакетов
+### <a name="step-3-add-any-third-party-packages"></a>Шаг 3. Добавление сторонних пакетов
 
 Вы могли добавить в библиотеку пакетов другие пакеты с открытым кодом или сторонние пакеты. Так как отмена привязки меняет расположение библиотеки пакетов по умолчанию, необходимо переустановить пакеты в библиотеку, которую теперь используют R и Python. Дополнительные сведения см. в статьях [Сведения о пакете R](../package-management/r-package-information.md) и [Установка пакета R](../package-management/install-additional-r-packages-on-sql-server.md) и [Сведения о пакете Python](../package-management/python-package-information.md) и [Установка пакета Python](../package-management/install-additional-python-packages-on-sql-server.md).
 

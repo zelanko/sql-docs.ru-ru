@@ -12,17 +12,17 @@ ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 1bff30a7270be7b47e5bf718d07d5386951042f1
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558009"
 ---
 # <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>Урок 1. Создание и применение политики, отключенной по умолчанию
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 С помощью политик управления на основе политик можно администрировать один или несколько экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], один или несколько объектов экземпляра, экземпляров сервера, баз данных, а также один или несколько объектов базы данных. Администратор базы данных должен убедиться, что определенные серверы компонента Database Mail отключены. На этом занятии создаются условие и политика, задающие этот параметр сервера. Выполняется проверка сервера на предмет соответствия политике. Затем используется политика для изменения настройки сервера с целью приведения его в соответствие.  
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 Для работы с этим учебником требуется среда SQL Server Management Studio и доступ к серверу SQL Server. 
 
 - Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).

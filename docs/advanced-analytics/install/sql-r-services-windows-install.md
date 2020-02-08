@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 6fcb4245d4efff00002dea9b490312792e0d83d6
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73706998"
 ---
 # <a name="install-sql-server-2016-r-services"></a>Установка SQL Server 2016 R Services
@@ -257,7 +257,7 @@ ms.locfileid: "73706998"
 
 Разработчики на языке R могут ознакомиться с простыми примерами, а также узнать, как код R работает с SQL Server. Дополнительные сведения см. в следующих статьях.
 
-+ [Учебник. Запуск R в T-SQL](../tutorials/quickstart-r-create-script.md)
-+ [Учебник. Аналитические функции в базе данных для разработчиков R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Руководство. Запуск R в T-SQL](../tutorials/quickstart-r-create-script.md)
++ [Руководство. Аналитические функции в базе данных для разработчиков R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 Примеры машинного обучения, основанные на реальных сценариях, см. в разделе [руководствах по машинному обучению](../tutorials/machine-learning-services-tutorials.md).

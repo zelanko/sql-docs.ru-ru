@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 9740e8c93fbac0d7727ba9922342df96d9190e10
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73658790"
 ---
 # <a name="tutorial-search-for-a-string-using-regular-expressions-regex-in-java"></a>Руководство. Поиск строки с использованием регулярных выражений (regex) в Java
@@ -24,7 +24,7 @@ ms.locfileid: "73658790"
 
 В данном примере кода используется регулярное выражение, которое проверяет, содержит ли текст слово "Java" или "java".
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 + Экземпляр ядра СУБД SQL Server 2019 с платформой расширяемости и расширением программирования Java [в Windows](../install/install-sql-server-language-extensions-on-windows.md) или [в Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-language-extensions). Дополнительные сведения см. в статье [Расширения языка в SQL Server 2019](../language-extensions-overview.md). Дополнительные сведения о требованиях к программированию см. в разделе [Как вызывать Java в SQL Server](../how-to/call-java-from-sql.md).
 

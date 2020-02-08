@@ -12,10 +12,10 @@ ms.assetid: fdcc9c58-3bad-45b3-ba8e-c7816d64f14c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a24b1a2f008c23adc5445ec5ed36c51ade181486
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581338"
 ---
 # <a name="rsreportdesigner-configuration-file"></a>RSReportDesigner, файл конфигурации
@@ -23,7 +23,7 @@ ms.locfileid: "65581338"
   
  Конструктор отчетов использует такую функцию сервера, как внедренный отчет, для предварительного просмотра отчетов. Серверные установки могут быть указаны для поддержки предварительного просмотра операций на стороне местного сервера. Дополнительные сведения о параметрах конфигурации сервера отчетов см. в разделе [Файл конфигурации RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
   
-## <a name="file-location"></a>Размещение файла  
+## <a name="file-location"></a>Расположение файла  
  Этот файл находится в каталоге \Program Files\Microsoft Visual Studio 8\Common7\IDE\PrivateAssemblies.  
   
 ## <a name="editing-guidelines"></a>Рекомендации по изменению  
@@ -52,13 +52,13 @@ ms.locfileid: "65581338"
   
 ## <a name="configuration-settings"></a>Параметры конфигурации  
   
-|Настройка|Описание|  
+|Параметр|Описание|  
 |-------------|-----------------|  
 |**SecureConnectionLevel**|Определяет уровень безопасности подключения в веб-службе. Диапазон допустимых значений от 0 до 3, где 0 — минимальный уровень. Дополнительные сведения см. в статье [Using Secure Web Service Methods](../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md).|  
 |**InstanceName**|Идентификатор сервера предварительного просмотра. Не изменяйте это значение.|  
 |**SessionCookies**|Указывает, использует ли сервер отчетов куки-файлы браузера для сохранения сведений о сеансах. Допустимые значения включают **true** и **false**. Значение по умолчанию — **true**. Если значение указано как false, данные о сеансе настройки хранятся в базе данных **reportservertempdb** .|  
 |**SessionTimeoutMinutes**|Указывает период, в течение которого для сеанса действительны куки-файлы. Значение по умолчанию равно 3 минутам.|  
-|**PolicyLevel**|Определяет файл конфигурации политики безопасности. Допустимым значением является Rspreviewpolicy.config. Дополнительные сведения см. в статье [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md).|  
+|**PolicyLevel**|Определяет файл конфигурации политики безопасности. Допустимым значением является Rspreviewpolicy.config. Дополнительные сведения см. в разделе [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md).|  
 |**CacheDataForPreview**|При установке значения **True**конструктор отчетов сохраняет данные в кэш-файле на локальном компьютере. Допустимые значения: **True** (по умолчанию) и **False**. Дополнительные сведения см. в статье [Previewing Reports](../../reporting-services/reports/previewing-reports.md).|  
 |**Render**|Перечисляет модули предварительного просмотра, доступные конструктору отчетов для организации предварительного просмотра. Набор модулей подготовки отчетов, используемых для предварительного просмотра, должен совпадать с набором, установленным сервером отчетов.<br /><br /> **Name** указывает модуль предварительного просмотра. Если модуль предварительного просмотра вызывается через код, используйте это значение для вызова определенного модуля.<br /><br /> **Type** задает полное имя класса для класса модуля, а также дополнительно имя библиотеки, разделенные запятыми.<br /><br /> **Visible** указывает, появляется ли имя в каком-либо из пользовательских интерфейсов. Значение может быть **True** (по умолчанию) или **False**. Если **True**, оно появляется в пользовательском интерфейсе.|  
 |**Data**|Перечисляет модули обработки данных, доступные конструктору отчетов для подключения к источникам данных, которые предоставляют данные для отчетов. Набор модулей предварительного просмотра, используемых конструктором отчетов, может совпадать с набором, установленным сервером отчетов. При добавлении или удалении пользовательского модуля см. раздел [Deploying a Data Processing Extension](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md).<br /><br /> **Name** указывает модуль обработки данных.<br /><br /> **Type** задает полное имя класса для класса модуля, а также дополнительно имя библиотеки, разделенные запятыми.|  

@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
 ms.openlocfilehash: 89f8616b13f80642a62922d9a1e1023f153b23cb
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558449"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Настройка кластера SLES для группы доступности SQL Server
@@ -48,7 +48,7 @@ ms.locfileid: "75558449"
 
 5. [Добавьте группу доступности в виде ресурса в кластере](sql-server-linux-availability-group-cluster-sles.md#configure-the-cluster-resources-for-sql-server). 
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Для выполнения описанного ниже сценария нужны три компьютера для развертывания кластера с тремя узлами. Ниже описаны общие действия по настройке этих серверов.
 

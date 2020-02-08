@@ -11,17 +11,17 @@ ms.author: alayu
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
 ms.openlocfilehash: f07d13bc9110b5b9ec96aa17169687f471aeb197
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74957111"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>Краткое руководство. Подключение к Хранилищу данных SQL Azure и запрос данных с помощью [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 В этом кратком руководстве показано, как использовать [!INCLUDE[name-sos](../includes/name-sos-short.md)] для подключения к Хранилищу данных SQL Azure, а затем с помощью инструкций Transact-SQL создать, вставить и выбрать данные. 
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 Для работы с этим кратким руководством потребуется [!INCLUDE[name-sos](../includes/name-sos-short.md)] и Хранилище данных SQL Azure.
 
 - [Установите [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md).
@@ -41,7 +41,7 @@ ms.locfileid: "74957111"
 
 2. В этой статье используется *имя входа SQL*, но также поддерживается *проверка подлинности Windows*. Заполните поля, указав имя сервера, имя пользователя и пароль для *вашего* сервера SQL Azure.
 
-   | Параметр       | Рекомендуемое значение | Description |
+   | Параметр       | Рекомендуемое значение | Описание |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Имя сервера** | Полное имя сервера | Имя должно быть в следующем формате: **sqldwsample.database.windows.net** |
    | **Аутентификация** | Имя входа SQL| В этом руководстве используется проверка подлинности SQL. |

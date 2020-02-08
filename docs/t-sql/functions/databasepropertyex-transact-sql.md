@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 91301fcfb0376e1bd256ac60c59c1c0b65dfbbe4
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75256096"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
@@ -52,7 +52,7 @@ DATABASEPROPERTYEX ( database , property )
 > [!NOTE]  
 >  Если база данных еще не запущена, то вызовы `DATABASEPROPERTYEX` возвращают значения NULL, если `DATABASEPROPERTYEX` получает эти значения путем прямого доступа к базе данных, а не из метаданных. База данных, для которой параметр AUTO_CLOSE имеет значение ON или которая находится вне сети по иной причине, определяется как "незапущенная".  
   
-|Свойство|Description|Возвращенное значение|  
+|Свойство|Описание|Возвращенное значение|  
 |---|---|---|
 |Параметры сортировки|Имя параметров сортировки, установленных для базы данных по умолчанию.|Имя параметров сортировки.<br /><br /> NULL: база данных не запущена.<br /><br /> Базовый тип данных: **nvarchar(128)**|  
 |ComparisonStyle|Стиль сравнения Windows для параметров сортировки. Используйте приведенные ниже значения стиля с целью построения битовой карты для готового значения ComparisonStyle.<br /><br /> Игнорировать регистр: 1<br /><br /> Не учитывать диакритические знаки: 2<br /><br /> Не учитывать тип японской азбуки: 65536<br /><br /> Не учитывать ширину: 131072<br /><br /> <br /><br /> Например, значение по умолчанию — 196609 — образуется в результате сочетания параметров «Без учета регистра», «Без учета типа японской азбуки» и «Без учета ширины».|Возвращает стиль сравнения.<br /><br /> Возвращает значение 0 для всех двоичных параметров сортировки.<br /><br /> Базовый тип данных: **int**|  

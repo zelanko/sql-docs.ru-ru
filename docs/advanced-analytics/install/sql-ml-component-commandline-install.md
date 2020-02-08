@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 2bc231a064862c5e2a16f60d85a5166fd4765566
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727592"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>Установка компонентов машинного обучения R и Python SQL Server из командной строки
@@ -220,12 +220,12 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR
 
 Разработчики на языке R могут ознакомиться с простыми примерами, а также узнать, как код R работает с SQL Server. Дополнительные сведения см. в следующих статьях.
 
-+ [Учебник. Запуск R в T-SQL](../tutorials/quickstart-r-create-script.md)
-+ [Учебник. Аналитические функции в базе данных для разработчиков R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Руководство. Запуск R в T-SQL](../tutorials/quickstart-r-create-script.md)
++ [Руководство. Аналитические функции в базе данных для разработчиков R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 Разработчики на языке Python могут узнать, как использовать Python с SQL Server, изучив следующие руководства.
 
-+ [Учебник. Запуск Python в T-SQL](../tutorials/run-python-using-t-sql.md)
-+ [Учебник. Аналитические функции в базе данных для разработчиков Python](../tutorials/sqldev-in-database-python-for-sql-developers.md)
++ [Руководство. Запуск Python в T-SQL](../tutorials/run-python-using-t-sql.md)
++ [Руководство. Аналитические функции в базе данных для разработчиков Python](../tutorials/sqldev-in-database-python-for-sql-developers.md)
 
 Примеры машинного обучения, основанные на реальных сценариях, см. в разделе [руководствах по машинному обучению](../tutorials/machine-learning-services-tutorials.md).

@@ -22,10 +22,10 @@ ms.assetid: 859affa7-0567-47d1-9490-57c1abbd619b
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2fc90354abf3c18a5eba7a92b7a5ffa54a84ce3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67984499"
 ---
 # <a name="deny-server-principal-permissions-transact-sql"></a>DENY, запрет разрешения участника на уровне сервера (Transact-SQL)
@@ -116,7 +116,7 @@ DENY permission [ ,...n ] }
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-denying-impersonate-permission-on-a-login"></a>A. Запрещение разрешения IMPERSONATE на имя входа  
- В следующем примере производится запрет разрешения `IMPERSONATE` на имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `WanidaBenshoof` для имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], созданного из пользователя Windows `AdvWorks\YoonM`.  
+ В следующем примере производится запрет разрешения `IMPERSONATE` на имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`WanidaBenshoof` для имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], созданного из пользователя Windows `AdvWorks\YoonM`.  
   
 ```  
 USE master;  
@@ -125,7 +125,7 @@ GO
 ```  
   
 ### <a name="b-denying-view-definition-permission-with-cascade"></a>Б. Запрещение разрешения VIEW DEFINITION с параметром CASCADE  
- В следующем примере производится запрещение разрешения `VIEW DEFINITION` на имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]	`EricKurjan` для имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]	`RMeyyappan`. Параметр `CASCADE` указывает, что разрешение `VIEW DEFINITION` на `EricKurjan` будет также запрещено участникам, которым `RMeyyappan` его предоставил ранее.  
+ В следующем примере производится запрещение разрешения `VIEW DEFINITION` на имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`EricKurjan` для имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`RMeyyappan`. Параметр `CASCADE` указывает, что разрешение `VIEW DEFINITION` на `EricKurjan` будет также запрещено участникам, которым `RMeyyappan` его предоставил ранее.  
   
 ```  
 USE master;  

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f918fea905451aed787416aff0e2c22cae9e2bf5
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 31a443e7a3a1e7dedf9efb0742cfad5862804945
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75258084"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831933"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Предварительные требования, ограничения и рекомендации для групп доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -157,17 +157,14 @@ ms.locfileid: "75258084"
     -   Если заданный поток в течение определенного периода времени простаивает, то он возвращается в общий пул потоков [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Обычно неактивный поток освобождается примерно через 15 секунд неактивности. Однако в зависимости от последней активности бездействующий поток может сохраняться дольше.  
 
     -   Экземпляр SQL Server использует до 100 потоков параллельного повтора для вторичных реплик. Каждая база данных использует до половины от общего числа ядер ЦП, но не более 16 потоков на базу данных. Если общее число требуемых потоков для одного экземпляра превышает 100, SQL Server использует один поток повтора для каждой из оставшихся баз данных. Последовательные потоки повторов освобождаются примерно через 15 секунд неактивности. 
-    
-    > [!NOTE]
-    > Базы данных выбираются для однопоточного выполнения на основе идентификаторов, упорядоченных по возрастанию. Таким образом для экземпляров SQL Server, на которых размещено больше баз данных групп доступности, чем доступно рабочих потоков, лучше учитывать порядок создания баз данных. Например, в системе с 32 или более ядрами ЦП первые шесть баз данных (упорядоченные по идентификатору базы данных) в группе или группах доступности будут использовать режим параллельного повтора, а все последующие базы данных будут использовать режим однократного повтора.
-  
+     
 -   Кроме того, группы доступности используют неразделенные потоки следующим образом.  
   
     -   Каждая первичная реплика использует по одному потоку для записи журнала в каждой базе данных-источнике. Кроме того, она использует по одному потоку для отправки журнала в каждой из баз данных-получателей. Потоки отправки журнала освобождаются примерно через 15 секунд неактивности.    
   
     -   Резервное копирование на вторичной реплике удерживает поток на первичной реплике на время операции резервного копирования.  
   
- Дополнительные сведения см. в разделе [Обучающая серия Always On — HADRON: использование рабочих пулов для баз данных с HADRON](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (блог инженеров CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]).  
+ Дополнительные сведения см. в разделе [Обучающая серия Always On — HADRON: использование рабочих пулов для баз данных с HADRON](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/) (блог инженеров CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]).  
   
 ###  <a name="PermissionsSI"></a> Разрешения (экземпляр сервера)  
   
@@ -186,7 +183,7 @@ ms.locfileid: "75258084"
   
 ###  <a name="RelatedContentSI"></a> См. также (экземпляр сервера)  
   
--   [Обучающая серия Always ON — HADRON. Использование рабочего пула для баз данных с HADRON](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [Обучающая серия Always ON — HADRON. Использование рабочего пула для баз данных с HADRON](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/)  
   
 ##  <a name="NetworkConnect"></a> Рекомендации по сетевым возможностям подключения  
  Настоятельно рекомендуется использовать одни и те же сетевые соединения для обмена данными между узлами WSFC и репликами доступности.  Использование отдельных сетевых соединений может привести к непредвиденному поведению в случае отказа даже некоторых из них.  
@@ -279,7 +276,7 @@ ms.locfileid: "75258084"
 ###  <a name="RequirementsAG"></a> Предварительные условия (группы доступности)  
  При создании или повторной настройке конфигурации групп доступности обязательно следуйте описанным ниже требованиям.  
   
-||Предварительные требования|Description|  
+||Предварительные требования|Описание|  
 |-|------------------|-----------------|  
 |![Флажок](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Если вы планируете использовать экземпляр отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для размещения реплики доступности, убедитесь, что понимаете ограничения, связанные с использованием отказоустойчивых кластеров, и что требования для создания такого кластера удовлетворены.|[Предварительные условия и ограничения, связанные с использованием экземпляра отказоустойчивого кластера SQL Server для размещения реплики доступности](#FciArLimitations) (ранее в этой статье)|  
   
@@ -386,7 +383,7 @@ ms.locfileid: "75258084"
   
 -   [Блог команды разработчиков SQL Server Always On: официальный блог по SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
--   [Обучающая серия Always ON — HADRON. Использование рабочего пула для баз данных с HADRON](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [Обучающая серия Always ON — HADRON. Использование рабочего пула для баз данных с HADRON](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/)  
   
 ## <a name="see-also"></a>См. также:  
  [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 949e3c3cfc14082ef2093dfdd11baa01218ccb2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68076620"
 ---
 # <a name="permissions-or-securables-page"></a>Страница «Разрешения» или «Защищаемые объекты»
@@ -36,7 +36,7 @@ ms.locfileid: "68076620"
 ## <a name="upper-grid"></a>Верхняя сетка  
  Верхняя сетка содержит один или несколько элементов, для которых могут быть установлены разрешения. В этом диалоговом окне есть кнопка **Поиск** для выбора объектов или участников, добавляемых в верхнюю сетку. Имя верхней сетки может содержать **Защищаемые объекты** , или один или более типов защищаемых объектов или участников. Отображаемые в верхней сетке столбцы меняются в зависимости от участника или защищаемого объекта.  
   
- **Название**  
+ **имя**;  
  Имя каждого участника или защищаемого объекта, добавляемого в сетку.  
   
  **Тип**  
@@ -74,6 +74,6 @@ ms.locfileid: "68076620"
   
 ## <a name="see-also"></a>См. также:  
  [Роли уровня базы данных](../../relational-databases/security/authentication-access/database-level-roles.md)   
- [Центр обеспечения безопасности для базы данных Azure SQL и SQL Server Database Engine](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+ [Центр безопасности для ядра СУБД SQL Server и Базы данных Azure SQL](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

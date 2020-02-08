@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: 436d65965fa0fa114f1891293972141f1373a696
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68037169"
 ---
 # <a name="connect-to-the-ssis-catalog-ssisdb-in-azure"></a>Подключение к каталогу SSIS (SSISDB) в Azure
@@ -31,7 +31,7 @@ ms.locfileid: "68037169"
 > [!IMPORTANT]
 > Сейчас невозможно создать базу данных каталога SSISDB в базе данных SQL Azure независимо от создания среды выполнения интеграции Azure-SSI в Фабрике данных Azure. Среда Azure-SSIS IR — это среда выполнения, в которой выполняются пакеты SSIS в Azure. Пошаговые инструкции см. в статье [Развертывание и запуск пакета служб SSIS в Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal). 
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 Прежде чем начать, убедитесь в наличии SQL Server Management Studio (SSMS) версии 17.2 или более поздней. Если база данных каталога SSISDB размещается в Управляемом экземпляре Базы данных SQL, убедитесь в наличии SSMS версии 17.6 или более поздней. Чтобы скачать последнюю версию SSMS, перейдите на страницу [скачивания SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 ## <a name="get-the-connection-info-from-the-azure-portal"></a>Получение сведений о подключении с портала Azure
@@ -48,13 +48,13 @@ ms.locfileid: "68037169"
 
 2. **Подключение к серверу**. В диалоговом окне **Соединение с сервером** введите следующие данные:
 
-   | Настройка       | Предлагаемое значение | Описание | 
+   | Параметр       | Рекомендуемое значение | Описание | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Тип сервера** | Компонент Database Engine | Это значение обязательно. |
    | **Имя сервера** | Полное имя сервера | Имя должно быть в следующем формате: **mysqldbserver.database.windows.net**. |
-   | **Проверка подлинности** | Проверка подлинности SQL Server | |
+   | **Аутентификация** | Проверка подлинности SQL Server | |
    | **Имя входа** | Учетная запись администратора сервера | Это учетная запись, которая была указана при создании сервера. |
-   | **Пароль** | Пароль для учетной записи администратора сервера | Это пароль, который был указан при создании сервера. |
+   | **Пароль** | Пароль для учетной записи администратора сервера | Это пароль, указанный при создании сервера. |
 
     ![Подключение к серверу с помощью SSMS](media/ssis-azure-connect-to-catalog-database/ssisdb-connect-1.png)
 
@@ -71,7 +71,7 @@ ms.locfileid: "68037169"
 
     ![Поиск базы данных SSISDB в обозревателе объектов в SSMS](media/ssis-azure-connect-to-catalog-database/ssisdb-connect-3.png)
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 - Разверните пакет. Дополнительные сведения см. в разделе [Развертывание проекта служб SSIS с помощью SQL Server Management Studio (SSMS)](../ssis-quickstart-deploy-ssms.md).
 - Запустите пакет. Дополнительные сведения см. в разделе [Выполнение пакета служб SSIS с помощью SQL Server Management Studio (SSMS)](../ssis-quickstart-run-ssms.md).
 - Создайте расписание для пакета. Дополнительные сведения см. в разделе [Планирование выполнения пакетов служб SSIS в Azure](ssis-azure-schedule-packages.md).

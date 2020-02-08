@@ -13,10 +13,10 @@ ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
 ms.openlocfilehash: 90c0023c0de69c03f64d33ff64866b0e5ff4f5ba
-ms.sourcegitcommit: 909b69dd1f918f00b9013bb43ea66e76a690400a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75924954"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Руководство. Использование проверки подлинности Active Directory с SQL Server на Linux
@@ -36,7 +36,7 @@ ms.locfileid: "75924954"
 > * создание имен входа на основе Active Directory в Transact-SQL;
 > * подключение к [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с помощью проверки подлинности Active Directory.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Прежде чем настраивать проверку подлинности Active Directory, необходимо сделать следующее:
 

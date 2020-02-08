@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 3e4f3a84e5001d7485ab590a66ee497522042824
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73658848"
 ---
 # <a name="install-sql-server-language-extensions-on-windows"></a>Установка расширений языка для SQL Server в Windows
@@ -39,7 +39,7 @@ ms.locfileid: "73658848"
 
 + Не устанавливайте расширения языка SQL Server на контроллере домена. Часть программы установки, связанная с расширением языка, выполнена не будет.
 
-+ Расширения языка и [службы машинного обучения](../../advanced-analytics/index.yml) устанавливаются по умолчанию в кластерах больших данных SQL Server. Если вы используете кластеры больших данных, нет необходимости выполнять действия, описанные в этой статье. Дополнительные сведения см. в разделе [Использование служб машинного обучения (Python и R) в кластерах больших данных](../../big-data-cluster/machine-learning-services.md).
++ Расширения языка и [службы машинного обучения](../../advanced-analytics/index.yml) устанавливаются по умолчанию в кластерах больших данных SQL Server. Если вы используете кластеры больших данных, нет необходимости выполнять действия, описанные в этой статье. Дополнительные сведения см. в разделе [Использование служб машинного обучения (Python и R) в кластерах больших данных](../../big-data-cluster/machine-learning-services.md).
 
 > [!IMPORTANT]
 > После завершения установки обязательно выполните действия после конфигурации, описанные в этой статье. В их число входят включение SQL Server для использования внешнего кода и добавление учетных записей, необходимых для того, чтобы SQL Server выполнял код Java от вашего имени. Изменения в конфигурации обычно требуют перезапуска экземпляра или службы панели элементов.
@@ -263,4 +263,4 @@ GO
 
 Разработчики на языке Java могут ознакомиться с простыми примерами, а также узнать, как код Java работает с SQL Server. Сведения о следующем шаге см. по ссылке:
 
-+ [Учебник. Регулярные выражения с Java](../tutorials/search-for-string-using-regular-expressions-in-java.md)
++ [Руководство. Регулярные выражения с Java](../tutorials/search-for-string-using-regular-expressions-in-java.md)

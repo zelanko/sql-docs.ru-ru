@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: dc37a110b82113f2a96bd46be914c06a43c1a0ea
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558650"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>Образец. Скрипт автоматической установки SQL Server для Red Hat Enterprise Linux
@@ -25,7 +25,7 @@ ms.locfileid: "75558650"
 > [!TIP]
 > Если вам не требуется скрипт автоматической установки, можно воспользоваться самым простым способом установки SQL Server, который описывается в [кратком руководстве для Red Hat](quickstart-install-connect-red-hat.md). Дополнительные сведения об установке см. в разделе [Руководство по установке SQL Server на Linux](sql-server-linux-setup.md).
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 - Для работы с SQL Server на Linux потребуется не менее 2 ГБ памяти.
 - Должна использоваться файловая система **XFS** или **EXT4**. Другие файловые системы, например **BTRFS**, не поддерживаются.

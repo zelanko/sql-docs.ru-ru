@@ -18,10 +18,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: d16b152bed2a0ed774ea443ada13201e4416f173
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74055927"
 ---
 # <a name="specify-compatibility-data-formats-when-using-bcp-sql-server"></a>Указание форматов данных для совместимости с помощью программы bcp (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "74055927"
 ##  <a name="bcpDataFormatAttr"></a> Атрибуты формата данных в инструкции bcp  
  Команда **bcp** позволяет указать структуру каждого поля в файле данных в виде указанных ниже атрибутов формата данных.  
   
--   Тип файлового хранилища  
+-   Тип файла хранилища  
   
      *Тип файла хранилища* описывает, каким образом данные хранятся в файле данных. Данные можно экспортировать в файл данных в формате таблиц баз данных (собственный формат), в символьном представлении (символьный формат) или в любом формате данных, поддерживающем неявное преобразование, например копирование данных типа **smallint** как **int**. Пользовательские типы данных экспортируются так же, как их базовые типы. Дополнительные сведения см. в разделе [Указание типа файлового хранилища с помощью программы bcp (SQL Server)](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md).  
   
@@ -93,7 +93,7 @@ bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T
 > [!NOTE]  
 >  Файл форматирования можно использовать для массового импорта данных из файла данных в экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или для массового экспорта данных из таблицы, чтобы не указывать формат повторно. Дополнительные сведения см в разделе [Файлы форматирования для импорта или экспорта данных (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).  
   
- В следующем примере создается файл форматирования в формате,`myFormatFile.fmt` отличном от XML:  
+ В следующем примере создается файл форматирования в формате, `myFormatFile.fmt`отличном от XML:  
   
  `Do you want to save this format information in a file? [Y/n] y`  
   

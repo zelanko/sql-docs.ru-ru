@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 68c731767a83acbd4b7df84843f2c140c5a63d3e
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727711"
 ---
 # <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>Распространенные проблемы со службой панели запуска и выполнением внешних скриптов в SQL Server
@@ -131,11 +131,11 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
 4. Перезапуск службы обычно устраняет проблему и позволяет запускать скрипты машинного обучения. Если перезапуск не устраняет проблему, запишите путь и аргументы в свойстве **Путь к двоичным файлам** и сделайте следующее:
 
-    A. Просмотрите файл CONFIG средства запуска и убедитесь, что рабочий каталог допустим.
+    а. Просмотрите файл CONFIG средства запуска и убедитесь, что рабочий каталог допустим.
 
-    Б. Убедитесь, что группа Windows, используемая панелью запуска, может подключаться к экземпляру SQL Server.
+    b. Убедитесь, что группа Windows, используемая панелью запуска, может подключаться к экземпляру SQL Server.
 
-    в. При изменении любых свойств службы перезапустите службу панели запуска.
+    c. При изменении любых свойств службы перезапустите службу панели запуска.
 
 ## <a name="fatal-error-creation-of-tmpfile-failed"></a>"Неустранимая ошибка: сбой при создании tmpFile"
 
@@ -234,7 +234,7 @@ EXEC sp_execute_external_script @language = N'R',
 4. Измените файл конфигурации, указав тот же рабочий каталог, который вы указали в свойстве WORKING_DIRECTORY. Кроме того, можно указать другой рабочий каталог и выбрать существующий путь, который уже совместим с нотацией 8dot3.
 ::: moniker-end
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Устранение неполадок и известные проблемы Служб машинного обучения](machine-learning-troubleshooting-faq.md)
 

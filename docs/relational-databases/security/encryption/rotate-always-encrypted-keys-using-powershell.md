@@ -12,10 +12,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b5b5246dabbe205554b45cee91be93c4485a60f6
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594124"
 ---
 # <a name="rotate-always-encrypted-keys-using-powershell"></a>Смена ключей Always Encrypted с помощью PowerShell
@@ -105,7 +105,7 @@ Remove-SqlColumnMasterKey -Name $oldCmkName -InputObject $database
 |Шаг 2. Соединение с сервером и базой данных. | [Соединение с базой данных](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | нет | Да
 |Шаг 3. Получение метаданных о старом главном ключе столбца.| [Get-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/get-sqlcolumnmasterkey) | нет | Да
 |Шаг 4. Получение метаданных о ключах шифрования столбцов, защищенных старым главным ключом столбца, включая их зашифрованные значения. | [Get-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/get-sqlcolumnencryptionkey) | нет | Да
-|Шаг 5. Предоставление данных о расположении главного ключа столбца (имени поставщика и пути к главному ключу столбца) и зашифрованных значений соответствующих ключей шифрования столбцов, защищенных при помощи старого главного ключа столбца| См. примеры ниже. | нет | нет
+|Шаг 5. Предоставление данных о расположении главного ключа столбца (имени поставщика и пути к главному ключу столбца) и зашифрованных значений соответствующих ключей шифрования столбцов, защищенных при помощи старого главного ключа столбца| Ознакомьтесь с указанными ниже примерами. | нет | нет
 
 ### <a name="part-2-security-administrator"></a>Часть 2. Администратор безопасности
 
@@ -113,14 +113,14 @@ Remove-SqlColumnMasterKey -Name $oldCmkName -InputObject $database
 
 | Задача | Статья | Доступ к ключам с открытым текстом или хранилищу ключей| Доступ к базе данных
 |:---|:---|:---|:---
-|Шаг 1. Получение от администратора баз данных сведений о расположении старого главного ключа столбца и зашифрованных значений соответствующих ключей шифрования столбцов, защищенных с помощью старого главного ключа столбца.|Недоступно<br>См. примеры ниже.|нет| нет
+|Шаг 1. Получение от администратора баз данных сведений о расположении старого главного ключа столбца и зашифрованных значений соответствующих ключей шифрования столбцов, защищенных с помощью старого главного ключа столбца.|Недоступно<br>Ознакомьтесь с указанными ниже примерами.|нет| нет
 |Шаг 2. Создание нового главного ключа столбца в хранилище ключей.<br><br>**Примечание.** Этот шаг не поддерживается в модуле SqlServer. Для выполнения этой задачи из командной строки используйте средства, поддерживаемые выбранным хранилищем ключей.|[Создание и хранение главных ключей столбцов для Always Encrypted](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)| Да | нет
 |Шаг 3. Запуск среды PowerShell и импорт модуля SqlServer. | [Импорт модуля SqlServer](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | нет | нет
 |Шаг 4. Создание объекта SqlColumnMasterKeySettings, содержащего сведения о расположении **старого** главного ключа столбца. SqlColumnMasterKeySettings — это объект, который существует в памяти (PowerShell). |New-SqlColumnMasterKeySettings| нет | нет
 |Шаг 5. Создание объекта SqlColumnMasterKeySettings, содержащего сведения о расположении **нового** главного ключа столбца. SqlColumnMasterKeySettings — это объект, который существует в памяти (PowerShell). Для его создания используйте командлет, поддерживаемый хранилищем ключей. | [New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)| нет | нет
 |Шаг 6. Проверка подлинности в Azure, если старый (текущий) главный ключ столбца или новый главный ключ столбца хранится в хранилище ключей Azure. | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | Да | нет
 |Шаг 7. Повторное шифрование каждого значения ключа шифрования столбца, который в данный момент защищен с помощью старого главного ключа столбца, с использованием нового главного ключа столбца. | [New-SqlColumnEncryptionKeyEncryptedValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkeyencryptedvalue)<br><br>**Примечание.** При вызове этого командлета передайте объекты SqlColumnMasterKeySettings для старого и нового главных ключей столбцов вместе со значением ключа шифрования столбца, которое нужно зашифровать повторно.|Да|нет
-|Шаг 8. Предоставление администратору баз данных информации о расположении нового главного ключа столбца (имени поставщика и пути к главному ключу столбца) и набора новых зашифрованных значений ключей шифрования столбцов.| См. примеры ниже. | нет | нет
+|Шаг 8. Предоставление администратору баз данных информации о расположении нового главного ключа столбца (имени поставщика и пути к главному ключу столбца) и набора новых зашифрованных значений ключей шифрования столбцов.| Ознакомьтесь с указанными ниже примерами. | нет | нет
 
 > [!NOTE]
 > Настоятельно рекомендуется не удалять старый главный ключ столбца после смены без возможности восстановления. Старый главный ключ столбца следует сохранить в его текущем хранилище ключей или скопировать в другое надежное место. Старый ключ потребуется для доступа к данным при восстановлении базы данных из файла резервной копии на момент времени, *предшествующий* настройке нового главного ключа столбца.
@@ -131,7 +131,7 @@ Remove-SqlColumnMasterKey -Name $oldCmkName -InputObject $database
 
 | Задача | Статья | Доступ к ключам с открытым текстом или хранилищу ключей| Доступ к базе данных
 |:---|:---|:---|:---
-|Шаг 1. Получение от администратора безопасности сведений о расположении нового главного ключа столбца и нового набора зашифрованных значений соответствующих ключей шифрования столбцов, защищенных с помощью старого главного ключа столбца.| См. примеры ниже. | нет | нет
+|Шаг 1. Получение от администратора безопасности сведений о расположении нового главного ключа столбца и нового набора зашифрованных значений соответствующих ключей шифрования столбцов, защищенных с помощью старого главного ключа столбца.| Ознакомьтесь с указанными ниже примерами. | нет | нет
 |Шаг 2. Запуск среды PowerShell и импорт модуля SqlServer. | [Импорт модуля SqlServer](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | нет | нет
 |Шаг 3. Соединение с сервером и базой данных. | [Подключение к базе данных](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | нет | Да
 |Шаг 4. Создание объекта SqlColumnMasterKeySettings, содержащего сведения о расположении нового главного ключа столбца. SqlColumnMasterKeySettings — это объект, который существует в памяти (PowerShell). |New-SqlColumnMasterKeySettings| нет| нет
@@ -349,7 +349,7 @@ Remove-SqlColumnEncryptionKey -Name $oldCekName -InputObject $database
 - [Разработка приложений с помощью Always Encrypted](always-encrypted-client-development.md)
   
 ## <a name="see-also"></a>См. также:
-- [Постоянное шифрование](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Общие сведения об управлении ключами для Always Encrypted](overview-of-key-management-for-always-encrypted.md) 
 - [Настройка постоянного шифрования с помощью PowerShell](configure-always-encrypted-using-powershell.md)
 - [Ротация ключей Always Encrypted с помощью SQL Server Management Studio](rotate-always-encrypted-keys-using-ssms.md)

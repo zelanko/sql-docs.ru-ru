@@ -11,10 +11,10 @@ ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ff31579a425f9e86fed11811c9d0a42c3113ee15
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75257074"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>Урок 1. Создание проекта и простого пакета с помощью служб SSIS
@@ -27,7 +27,7 @@ ms.locfileid: "75257074"
   
 Перед созданием пакета необходимо ознакомиться с форматированием в источнике данных и назначении. После этого можно определить преобразования, необходимые для сопоставления источника данных с назначением.  
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Для выполнения упражнений в этом учебнике требуются средства Microsoft SQL Server Data Tools, набор примеров пакетов и образец базы данных.
 

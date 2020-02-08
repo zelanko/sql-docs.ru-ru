@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 7822cd56a52e47493fe175c293dbfe491a9524af
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727435"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>Принципы формирования прогнозов с помощью моделей машинного обучения в SQL Server
@@ -25,7 +25,7 @@ ms.locfileid: "73727435"
 
 В следующей таблице перечислены платформы оценки для прогнозирования. 
 
-| Метод           | Интерфейс         | Требования к библиотекам | Скорость обработки |
+| Методика           | Интерфейс         | Требования к библиотекам | Скорость обработки |
 |-----------------------|-------------------|----------------------|----------------------|
 | Платформа расширяемости | [rxPredict (R)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) <br/>[rx_predict (Python)](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | Нет. Модели могут строиться на основе любой функции R или Python | Сотни миллисекунд. <br/>Загрузка среды выполнения занимает фиксированное время, в среднем от 300 до 600 миллисекунд до начала оценки каких-либо новых данных. |
 | [Расширение среды CLR для оценки в реальном времени](../real-time-scoring.md) | [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) в сериализованной модели | R: RevoScaleR, MicrosoftML <br/>Python: revoscalepy, microsoftml | В среднем десятки миллисекунд. |
@@ -69,7 +69,7 @@ _Оценка_ представляет собой двухэтапный про
 
 Зачастую выбор используемого метода оценки определяется требованиями платформы.
 
-| Платформа и версия продукта | Метод |
+| Платформа и версия продукта | Методика |
 |------------------------------|-------------|
 | SQL Server 2017 в Windows, SQL Server 2017 в Linux и база данных SQL Azure | **Собственная оценка** с помощью PREDICT T-SQL |
 | SQL Server 2017 (только Windows), SQL Server 2016 R Services c пакетом обновления 1 (SP1) или последующих версий | **Оценка в реальном времени** с помощью хранимой процедуры sp\_rxPredict |
@@ -97,7 +97,7 @@ _Оценка_ представляет собой двухэтапный про
 
 ## <a name="scoring-in-related-products"></a>Оценка в связанных продуктах
 
-При использовании [отдельного сервера](r-server-standalone.md) или [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server) для быстрого создания прогнозов помимо хранимых процедур и функций T-SQL существуют и другие возможности. Как отдельный сервер, так и Machine Learning Server поддерживают концепцию *веб-службы* для развертывания кода. Вы можете объединить в пакет предварительно обученную модель R или Python в качестве веб-службы, которая вызывается во время выполнения для оценки новых входных данных. Дополнительные сведения см. в следующих статьях:
+При использовании [отдельного сервера](r-server-standalone.md) или [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server) для быстрого создания прогнозов помимо хранимых процедур и функций T-SQL существуют и другие возможности. Как отдельный сервер, так и Machine Learning Server поддерживают концепцию *веб-службы* для развертывания кода. Вы можете объединить в пакет предварительно обученную модель R или Python в качестве веб-службы, которая вызывается во время выполнения для оценки новых входных данных. Дополнительные сведения вы найдете в следующих статьях:
 
 + [Что такое веб-службы в Machine Learning Server?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-what-are-web-services)
 + [Что такое ввод в эксплуатацию?](https://docs.microsoft.com/machine-learning-server/what-is-operationalization)

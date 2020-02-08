@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9192afa87b3a035bbc048fa2476c18c1673a7a39
-ms.sourcegitcommit: 3ec48823bee1c092ce2aba6011b95174de03fb65
+ms.openlocfilehash: 71864b1670d61448b48e3acdc89d9c2d231c782d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926951"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244408"
 ---
 # <a name="sql-server-help-and-feedback"></a>Справка и отзывы по SQL Server
 
@@ -22,7 +22,7 @@ ms.locfileid: "68926951"
 
 ## <a name="contact-microsoft-support"></a>Обращение в службу поддержки Майкрософт
 
-Клиенты с планом поддержки могут [отправить запрос](https://support.microsoft.com/en-us/hub/4343728/support-for-business) в службу поддержки Майкрософт.  Дополнительные сведения см. в [вариантах поддержки для предприятий](https://support.microsoft.com/en-us/help/4341255/support-for-business). 
+Клиенты с планом поддержки могут [отправить запрос](https://support.microsoft.com/hub/4343728/support-for-business) в службу поддержки Майкрософт.  Дополнительные сведения см. в [вариантах поддержки для предприятий](https://support.microsoft.com/help/4341255/support-for-business). 
 
 Клиенты без плана поддержки могут обратиться за помощью в сообщество или отправить информацию об ошибке через UserVoice по адресу [https://aka.ms/sqlfeedback](https://aka.ms/sqlfeedback).
 
@@ -36,9 +36,9 @@ ms.locfileid: "68926951"
 Также есть много форумов MSDN, на которых вы найдете ответ на вопросы по SQL Server. 
 - [Ядро СУБД SQL Server](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqldatabaseengine&filter=alltypes&sort=lastpostdesc)
 - [Установка и обновление](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc)
-- [Высокий уровень доступности и аварийное восстановление](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqldisasterrecovery%2Csqldatabasemirroring&filter=alltypes&sort=lastpostdesc)
-- [Средства SQL Server](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools%2Cssdt&filter=alltypes&sort=lastpostdesc) 
-- [безопасность](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsecurity&filter=alltypes&sort=lastpostdesc)
+- [Высокая доступность и аварийное восстановление](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqldisasterrecovery%2Csqldatabasemirroring&filter=alltypes&sort=lastpostdesc)
+- [Инструменты SQL Server](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools%2Cssdt&filter=alltypes&sort=lastpostdesc) 
+- [Безопасность](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsecurity&filter=alltypes&sort=lastpostdesc)
 - [Репликация](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlreplication&filter=alltypes&sort=lastpostdesc)
 - [Transact-SQL (T-SQL)](https://social.msdn.microsoft.com/Forums/en-US/home?forum=transactsql)
 - [Службы SQL Server Integration Services](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlintegrationservices&filter=alltypes&sort=lastpostdesc)
@@ -50,7 +50,7 @@ ms.locfileid: "68926951"
 
 Есть несколько сообществ, которые помогут вам решить проблемы с SQL Server. 
 
-- [Stack Overflow](https://stackoverflow.com/questions/tagged/sql-server)
+- [Stack Overflow](https://stackoverflow.com/questions/tagged/sql-server)
 - [Stack Exchange DBA](https://dba.stackexchange.com/questions/tagged/sql-server)
 - [Reddit](https://www.reddit.com/r/SQLServer/)
 - [Получение помощи от сообщества путем добавления хэштега #sqlhelp в Twitter](https://twitter.com/hashtag/sqlhelp?src=hash) 
@@ -63,7 +63,7 @@ ms.locfileid: "68926951"
 - **Проблемы с Azure Data Studio**: [Репозиторий Azure Data Studio на GitHub](https://github.com/microsoft/azuredatastudio/issues)
  
 
-###  <a name="sql-server-documentation"></a>Документация по SQL Server
+###  <a name="sql-server-documentation"></a>документация по SQL Server
 
 Лучше всего связаться с командой разработки содержимого по SQL Server в разделе "Проблемы Git". Вы также найдете параметр для отправки проблемы Git в нижней части большинства наших страниц: 
 

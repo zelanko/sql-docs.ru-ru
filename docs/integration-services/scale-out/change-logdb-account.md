@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: 92cf3e13f1e386a77ba4621b817567af95b42884
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67896977"
 ---
 # <a name="change-the-account-for-scale-out-logging"></a>Изменение учетной записи для ведения журнала служб SSIS Scale Out
@@ -32,7 +32,7 @@ ms.locfileid: "67896977"
 ## <a name="1-create-a-user-for-ssisdb"></a>1. Создание пользователя SSISDB
 Инструкции по созданию пользователя базы данных см. в разделе [Создание пользователя базы данных](../../relational-databases/security/authentication-access/create-a-database-user.md).
 
-## <a name="2-add-the-user-to-the-database-role-ssisclusterworker"></a>2. Добавление пользователя в роль базы данных ssis_cluster_worker
+## <a name="2-add-the-user-to-the-database-role-ssis_cluster_worker"></a>2. Добавление пользователя в роль базы данных ssis_cluster_worker
 
 Инструкции по присоединению роли базы данных см. в разделе [Присоединение к роли](../../relational-databases/security/authentication-access/join-a-role.md).
 
@@ -49,5 +49,5 @@ ms.locfileid: "67896977"
 ## <a name="4-restart-the-scale-out-worker-service"></a>4. Перезапуск службы рабочей роли Scale Out
 Перезапустите службу рабочей роли Scale Out, чтобы изменение вступило в силу.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 -   [Диспетчер Integration Services Scale Out](integration-services-ssis-scale-out-manager.md)

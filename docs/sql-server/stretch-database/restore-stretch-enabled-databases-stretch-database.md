@@ -9,10 +9,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4b53e333802af9bd70e51ad320300c6f868dea43
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73843772"
 ---
 # <a name="restore-stretch-enabled-databases-stretch-database"></a>Восстановление баз данных с поддержкой Stretch (Stretch Database)
@@ -34,7 +34,7 @@ ms.locfileid: "73843772"
 ## <a name="restore-your-remote-azure-data"></a>Восстановление удаленных данных Azure
 
 ### <a name="recover-a-live-azure-database"></a>Восстановление активной базы данных Azure
-Служба SQL Server Stretch Database в Azure делает моментальные снимки всех активных данных не реже, чем каждые 8 часов, используя моментальные снимки хранилища Azure. Эти снимки хранятся в течение 7 дней. Это позволяет восстановить данные до одного из как минимум 21 момента времени за прошедшие 7 дней вплоть до времени последнего моментального снимка.
+Служба SQL Server Stretch Database в Azure создает моментальные снимки всех актуальных данных минимум каждые 8 часов, используя для этого моментальные снимки службы хранилища Azure. Эти снимки хранятся в течение 7 дней. Это позволяет восстановить данные до одного из как минимум 21 момента времени за прошедшие 7 дней вплоть до времени последнего моментального снимка.
 
 Для восстановления активной базы данных Azure до наиболее раннего момента времени с помощью портала Azure необходимо выполнить указанные ниже действия.
 
@@ -46,7 +46,7 @@ ms.locfileid: "73843772"
 6. Начнется процесс восстановления базы данных, который можно отслеживать с помощью области **УВЕДОМЛЕНИЯ**.
 
 ### <a name="recover-a-deleted-azure-database"></a>Восстановление удаленной базы данных Azure
-Перед удалением базы данных служба SQL Server Stretch Database в Azure делает ее моментальный снимок и хранит его в течение 7 дней. После этого моментальные снимки активной базы данных сохраняться не будут. Это позволяет восстановить удаленную базу данных до момента ее удаления.
+Служба SQL Server Stretch Database в Azure создает моментальный снимок базы данных перед ее удалением и хранит его в течение 7 дней. После этого моментальные снимки активной базы данных сохраняться не будут. Это позволяет восстановить удаленную базу данных до момента ее удаления.
 
 Для восстановления удаленной базы данных Azure до момента ее удаления с помощью портала Azure необходимо выполнить указанные ниже действия.
 
@@ -84,5 +84,5 @@ ms.locfileid: "73843772"
  [sys.sp_rda_deauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)  
  [Резервное копирование и восстановление баз данных SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
  
- [портал Azure]: https://portal.azure.com/
+ [Портал Azure]: https://portal.azure.com/
  

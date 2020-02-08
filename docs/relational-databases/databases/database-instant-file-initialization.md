@@ -18,17 +18,17 @@ ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 87257431940b527fda01bc1704a519b37b6d4e05
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982449"
 ---
 # <a name="database-file-initialization"></a>Инициализация файлов базы данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Файлы данных и журналов инициализируются, чтобы перезаписать все существующие данные на диске, оставшиеся после удаленных файлов. Файлы данных и журналов сначала инициализируются путем обнуления (заполнения нулями) при выполнении одной из следующих операций:  
   
-- Создание базы данных.  
+- создавать базу данных;  
 - Добавление файлов данных и журналов к существующей базе данных.  
 - Увеличение размера существующего файла (включая операции автоувеличения).  
 - Восстановление базы данных или файловой группы.  
@@ -74,7 +74,7 @@ ms.locfileid: "73982449"
 
 `Database Instant File Initialization: enabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.`
 
-Если учетной записи запуска службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **не предоставлено** разрешение *SE_MANAGE_VOLUME_NAME*, во время запуска в журнале ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] регистрируется подобное информационное сообщение. 
+Если учетной записи запуска службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**не предоставлено** разрешение *SE_MANAGE_VOLUME_NAME*, во время запуска в журнале ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] регистрируется подобное информационное сообщение. 
 
 `Database Instant File Initialization: disabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.`
 

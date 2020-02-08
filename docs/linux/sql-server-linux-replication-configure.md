@@ -13,10 +13,10 @@ ms.technology: linux
 titleSuffix: SQL Server on Linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 0979f05808c59336dec7a6e4a664b2e970029dd6
-ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75952498"
 ---
 # <a name="configure-sql-server-replication-on-linux"></a>Настройка репликации SQL Server в Linux
@@ -35,7 +35,7 @@ ms.locfileid: "75952498"
   
 * Пример с использованием хранимых процедур см. в руководстве [Настройка репликации SQL Server в Linux](sql-server-linux-replication-tutorial-tsql.md).
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Прежде чем настраивать издателей, распространителей и подписчиков, необходимо задать определенную конфигурацию для экземпляра SQL Server.
 

@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 474533a69d74512e3e305f44d96f90009aa64e00
-ms.sourcegitcommit: 34d28d49e8d0910cf06efda686e2d73059569bf8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/04/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75656614"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Основные сведения о доступности SQL Server для развертываний Linux
@@ -84,7 +84,7 @@ scp MyAGCert.cer username@servername:/folder/subfolder
 ### <a name="configure-the-firewall"></a>Настройка брандмауэра
 Как и в Windows, дистрибутивы Linux имеют встроенный брандмауэр. Если ваша организация использует для серверов внешний брандмауэр, в Linux допускается отключение брандмауэров. Однако независимо от того, на какой платформе включен брандмауэр, необходимо открыть порты. В следующей таблице приводятся стандартные порты, необходимые для высокодоступных развертываний [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] на Linux.
 
-| Номер порта | Тип     | Description                                                                                                                 |
+| Номер порта | Тип     | Описание                                                                                                                 |
 |-------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
 | 111         | TCP/UDP  | NFS — `rpcbind/sunrpc`                                                                                                    |
 | 135         | TCP      | Samba (если используется) — сопоставитель конечных точек                                                                                          |

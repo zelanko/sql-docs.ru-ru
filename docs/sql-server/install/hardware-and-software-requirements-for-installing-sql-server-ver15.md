@@ -44,12 +44,12 @@ helpviewer_keywords:
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 88ed55a3c2890864e3e9623f3fa53ca3e747350c
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: aca31d10c030c360dcd82d6c4851df700bc3c4fe
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73536182"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74319051"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>Требования к оборудованию и программному обеспечению для установки SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "73536182"
 - Установку не удастся выполнить, если запустить программу установки через удаленный рабочий стол, но носитель при этом будет расположен на клиенте RDC. Чтобы выполнить установку удаленно, установочный носитель должен быть расположен на общем сетевом ресурсе или в локальной папке физической или виртуальной машины. Установочный носитель[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может быть расположен на общем сетевом ресурсе, сопоставленном диске, локальном диске, или он может быть представлен в виде ISO-образа на виртуальной машине.
 - Программа установки[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устанавливает следующие компоненты, необходимые для продукта:  
   
-    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client  
+    - Собственный клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
     - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Файлы поддержки программы установки  
 
@@ -100,8 +100,8 @@ ms.locfileid: "73536182"
   
 |Компонент|Требование|  
 |---------------|-----------------|  
-|Память \*|**Минимальные:**<br/><br/> Экспресс-выпуски: 512 МБ<br/><br/> Все другие выпуски: 1 ГБ<br/><br/> **Рекомендуемые:**<br/><br/> Экспресс-выпуски: 1 ГБ<br/><br/> Все другие выпуски: Для обеспечения оптимальной производительности требуется не менее 4 ГБ с последующим увеличением по мере роста размера базы данных.|  
-|Быстродействие процессора|**Минимум**: процессор x64 с тактовой частотой 1,4 ГГц<br/><br/> **Рекомендуемые:** 2,0 ГГц и выше|  
+|Память \*|**Минимальные:**<br/><br/> Экспресс-выпуски: 512 МБ<br/><br/> Все другие выпуски: 1 ГБ<br/><br/> **Рекомендуется:**<br/><br/> Экспресс-выпуски: 1 ГБ<br/><br/> Все другие выпуски: Для обеспечения оптимальной производительности требуется не менее 4 ГБ с последующим увеличением по мере роста размера базы данных.|  
+|Быстродействие процессора|**Минимум**: процессор x64 с тактовой частотой 1,4 ГГц<br/><br/> **Рекомендуется:** 2,0 ГГц и выше|  
 |Тип процессора|Процессор x64: AMD Opteron, AMD Athlon 64, Intel Xeon с поддержкой Intel EM64T, Intel Pentium IV с поддержкой EM64T.|  
   
 > [!NOTE]  
@@ -126,14 +126,17 @@ ms.locfileid: "73536182"
 В следующей таблице показано, какие версии SQL Server 2019 совместимы с различными версиями Windows:  
   
 
-| Выпуск SQL Server:               | Enterprise | Разработчик | Standard | Web Edition | Express |  
-| :------------------------       | :--------- | :-------- | :------- | :-- | :------ | 
+| Выпуск SQL Server:               | Enterprise | Разработчик | Standard | Интернет | Express |  
+| :------------------------         | :--------- | :-------- | :------- | :-- | :------ | 
 | Windows Server 2019 Datacenter    |    Да     |    Да    |    Да   | Да |   Да   |
 | Windows Server 2019 Standard      |    Да     |    Да    |    Да   | Да |   Да   |
 | Windows Server 2019 Essentials    |    Да     |    Да    |    Да   | Да |   Да   |
 | Windows Server 2016 Datacenter    |    Да     |    Да    |    Да   | Да |   Да   |
 | Windows Server 2016 Standard      |    Да     |    Да    |    Да   | Да |   Да   |
 | Windows Server 2016 Essentials    |    Да     |    Да    |    Да   | Да |   Да   |
+| Windows 10 Корпоративная             |    нет      |    Да    |    Да   | нет  |   Да   |
+| Windows 10 Профессиональная           |    нет      |    Да    |    Да   | нет  |   Да   |
+| Windows 10 Домашняя                   |    нет      |    Да    |    Да   | нет  |   Да   |
 | &nbsp; | &nbsp; |
 
 

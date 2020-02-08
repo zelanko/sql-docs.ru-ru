@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 392d8d477a2e136d54e6f0f06608eb0ebeda12a5
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73593518"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>Образец. Скрипт автоматической установки SQL Server для SUSE Linux Enterprise Server
@@ -24,7 +24,7 @@ ms.locfileid: "73593518"
 > [!TIP]
 > Если вам не требуется скрипт автоматической установки, можно воспользоваться самым простым способом установки SQL Server, который описывается в [кратком руководстве для SLES](quickstart-install-connect-suse.md). Дополнительные сведения об установке см. в разделе [Руководство по установке SQL Server на Linux](sql-server-linux-setup.md).
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 - Для работы с SQL Server на Linux потребуется не менее 2 ГБ памяти.
 - Должна использоваться файловая система **XFS** или **EXT4**. Другие файловые системы, например **BTRFS**, не поддерживаются.
@@ -206,7 +206,7 @@ echo Done!
 
 1. Если одновременно заданы переменные ```SQL_INSTALL_USER``` и ```SQL_INSTALL_USER_PASSWORD```, создайте нового пользователя с правами администратора сервера.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Чтобы оптимизировать многократную автоматическую установку, создайте автономный скрипт Bash, который будет задавать нужные переменные среды. Вы можете удалить любые переменные из этого примера скрипта и поместить их в отдельный скрипт Bash.
 

@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 766adecbc91f88ed0796e4214b7e4074fc564f01
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727283"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>Собственная оценка с использованием функции PREDICT T-SQL
@@ -34,7 +34,7 @@ ms.locfileid: "73727283"
 
 Функция возвращает прогнозы для входных данных вместе со всеми столбцами исходных данных, которые необходимо передать.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Функция PREDICT доступна во всех выпусках ядра СУБД SQL Server 2017, в том числе в Службах машинного обучения SQL Server в Windows, SQL Server 2017 (в Windows), SQL Server 2017 (в Linux) и в Базе данных SQL Azure и включена по умолчанию. Вам не нужно устанавливать R, Python или включать дополнительные функции.
 
@@ -165,7 +165,7 @@ go
 > [!NOTE]
 > Поскольку столбцы и значения, возвращаемые функцией **PREDICT**, могут зависеть от типа модели, необходимо определить схему возвращаемых данных с помощью предложения **WITH**.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Полное решение, включающее собственную оценку, см. в следующих примерах от команды разработчиков SQL Server:
 

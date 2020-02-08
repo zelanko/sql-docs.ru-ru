@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 34ebcae99f096d095839cb533fb6efe58b113050
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75234601"
 ---
 # <a name="extended-events-overview"></a>Общие сведения о расширенных событиях
@@ -41,7 +41,7 @@ ms.locfileid: "75234601"
   
  В следующей таблице даны определения понятий, применяемых в расширенной подсистеме событий.  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Пакеты обработки расширенных событий SQL Server](../../relational-databases/extended-events/sql-server-extended-events-packages.md)|Описывает пакеты расширенных событий, которые содержат объекты. Эти объекты используются для получения и обработки данных во время сеанса расширенных событий.|  
 |[Цели расширенных событий SQL Server](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)|Описывает объекты-получатели событий, получающие данные во время сеанса событий.|  

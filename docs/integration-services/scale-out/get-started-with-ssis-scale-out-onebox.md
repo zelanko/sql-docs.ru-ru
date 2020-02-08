@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: a2d6929277b7d024e45daaefd5cb41dccd495c63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082162"
 ---
 # <a name="get-started-with-integration-services-ssis-scale-out-on-a-single-computer"></a>Начало работы с SSIS Scale Out на одном компьютере
@@ -45,7 +45,7 @@ ms.locfileid: "68082162"
 
 Завершите работу мастера установки SQL Server.
 
-## <a name="2-install-sql-server-management-studio"></a>2. Установка SQL Server Management Studio
+## <a name="2-install-sql-server-management-studio"></a>2. Установите SQL Server Management Studio
 
 Скачайте и установите [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
 
@@ -67,5 +67,5 @@ ms.locfileid: "68082162"
 ## <a name="5-run-packages-in-scale-out"></a>5. Выполнение пакетов в масштабном развертывании
 Теперь пакеты служб SSIS можно запускать в Scale Out. Дополнительные сведения см. в статье [Выполнение пакетов в масштабном развертывании служб Integration Services (SSIS)](run-packages-in-integration-services-ssis-scale-out.md).
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 -   [Добавление рабочей роли Scale Out с помощью диспетчера Scale Out](add-scale-out-worker.md)

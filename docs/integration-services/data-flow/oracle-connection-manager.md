@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 092760fdd99a6840e77278fce96e2d321ea4edc9
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "69553247"
 ---
 # <a name="oracle-connection-manager"></a>Диспетчер подключений Oracle
@@ -36,7 +36,7 @@ ms.locfileid: "69553247"
 
 Введите данные о подключении Oracle.
 
-**Название**
+**имя**;
 
 Введите имя для подключения Oracle. Имя по умолчанию — Oracle Connection Manager. 
 
@@ -88,7 +88,7 @@ ms.locfileid: "69553247"
 
 2. На панели **Свойства** задайте свойство **OracleHome** или **OracleHome64** и укажите полный путь к корневому каталогу Oracle.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 - Настройка [источника Oracle](oracle-source.md).
 - Настройка [назначения Oracle](oracle-destination.md).

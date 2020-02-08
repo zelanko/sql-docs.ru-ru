@@ -1,5 +1,5 @@
 ---
-title: Шаг 3. Изменение диспетчера подключений с неструктурированными файлами | Документация Майкрософт
+title: Шаг 3. Изменение диспетчера подключений с неструктурированными файлами | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/03/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5f09ac0b6b7a1d0536205596a553eddb06765b93
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296030"
 ---
 # <a name="lesson-2-3-modify-the-flat-file-connection-manager"></a>Занятие 2-3. Изменение диспетчера подключений с неструктурированными файлами
@@ -47,7 +47,7 @@ ms.locfileid: "71296030"
   
 9.  Еще раз нажмите кнопку **ОК**, чтобы закрыть диалоговое окно **Редактор выражений свойств**.  
   
-## <a name="go-to-next-task"></a>Перейти к следующему шагу  
+## <a name="go-to-next-task"></a>Переход к следующей задаче  
 [Шаг 4. Тестирование учебного пакета занятия 2](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
   
   

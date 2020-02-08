@@ -19,10 +19,10 @@ ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 38af7d056eab840a5cf83eefa96ec2731e58bc67
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292773"
 ---
 # <a name="excel-source"></a>Источник Excel
@@ -104,7 +104,7 @@ ms.locfileid: "71292773"
  **Параметры**  
  Если введен параметризованный запрос, где в тексте запроса в качестве заполнителя параметра использовался знак ?, воспользуйтесь диалоговым окном **Установка параметров запроса** для сопоставления входных параметров запроса и переменных пакета.  
   
- **Build query**  
+ **Создать запрос**  
  Воспользуйтесь диалоговым окном **Построитель запросов** для визуального конструирования SQL-запроса.  
   
  **Обзор**  

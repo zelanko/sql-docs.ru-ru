@@ -10,10 +10,10 @@ author: chugugrace
 ms.author: chugu
 ms.reviewer: ''
 ms.openlocfilehash: ac10ace82a38110d2038f95c3514aa8271d5b88c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283749"
 ---
 # <a name="lesson-1-6-add-and-configure-the-lookup-transformations"></a>Занятие 1-6. Добавление и настройка преобразований "Уточняющий запрос"
@@ -112,7 +112,7 @@ ms.locfileid: "71283749"
   
 12. В окне **Свойства** убедитесь в том, что свойство **LocaleID** установлено в значение **Английский (США)** , а свойство **DefaultCodePage** — в значение **1252**.  
   
-## <a name="go-to-next-task"></a>Перейти к следующему шагу
+## <a name="go-to-next-task"></a>Переход к следующей задаче
 [Шаг 7. Добавление и настройка назначения OLE DB](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
 ## <a name="see-also"></a>См. также раздел  

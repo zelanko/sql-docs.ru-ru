@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 239d7ee532f4052caa067be7a20022720740ff3d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000455"
 ---
 # <a name="time-transact-sql"></a>time (Transact-SQL)
@@ -79,7 +79,7 @@ ms.locfileid: "68000455"
 |--------------|-----------|  
 |чч:мм:сс<br /><br /> чч:мм[:сс][.доли секунды]|чч — двузначное число от 0 до 23, представляющее количество часов в смещении часового пояса.<br /><br /> обозначение мм состоит из двух цифр, представляющих дополнительное смещение часового пояса в минутах, и принимает значения от 0 до 59;|  
   
-|интерфейс ODBC|Примечания|  
+|ODBC|Примечания|  
 |----------|-----------|  
 |{ t 'чч-мм-сс[.доли секунды]'}|Зависит от API-интерфейса ODBC.|  
   
@@ -232,7 +232,7 @@ SELECT
         'datetimeoffset';  
 ```  
   
-|Тип данных|Вывод|  
+|Тип данных|Выходные данные|  
 |---------------|------------|  
 |**time**|12:35:29. 1234567|  
 |**date**|2007-05-08|  

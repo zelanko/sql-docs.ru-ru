@@ -13,10 +13,10 @@ ms.assetid: e69207a0-c5c4-44e4-ae9a-4afbb67251d1
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6277498bd66e2659e0a692d2e62d66501ca1fac8
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74822215"
 ---
 # <a name="enter-passwords-page-add-replica-wizard-for-always-on-availability-groups"></a>Страница ввода паролей (мастер добавления реплики) для групп доступности Always On
@@ -28,7 +28,7 @@ ms.locfileid: "74822215"
 ## <a name="enter-passwords-options"></a>Параметры ввода паролей  
  В сетке **Пользовательские базы данных в этом экземпляре SQL Server** перечислены все локальные пользовательские базы данных. Существуют следующие столбцы.  
   
- **Название**  
+ **имя**;  
  Отображает имя локальной пользовательской базы данных.  
   
  **Размер**  

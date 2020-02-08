@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: e3e52a854224210ed4561dbce12877fbb4c0f6fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082125"
 ---
 # <a name="integration-services-ssis-scale-out-master"></a>Главная роль масштабного развертывания служб Integration Services (SSIS)
@@ -59,7 +59,7 @@ ms.locfileid: "68082125"
 |SqlServerName|Имя [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], содержащего каталог SSISDB. Например, ServerName\\InstanceName.|Имя SQL Server, устанавливаемого вместе с мастером Scale Out.|
 |CleanupCompletedJobsIntervalInMs|Интервал очистки завершенных заданий выполнения в миллисекундах.|43200000|
 |DealWithExpiredTasksIntervalInMs|Интервал обработки завершенных заданий выполнения в миллисекундах.|300000|
-|MasterHeartbeatIntervalInMs|Интервал для пульса главной роли масштабного развертывания в миллисекундах. Это свойство указывает интервал, с которым мастер Scale Out обновляет свое состояние в каталоге SSISDB.|30 000|
+|MasterHeartbeatIntervalInMs|Интервал для пульса главной роли масштабного развертывания в миллисекундах. Это свойство указывает интервал, с которым мастер Scale Out обновляет свое состояние в каталоге SSISDB.|30 000|
 |SqlConnectionTimeoutInSecs|Время ожидания соединения SQL в секундах при подключении к SSISDB.|15|
 ||||    
 
@@ -69,6 +69,6 @@ ms.locfileid: "68082125"
 
 Параметр *[account]* соответствует учетной записи, с помощью которой выполняется служба мастера Scale Out. По умолчанию это учетная запись `SSISScaleOutMaster140`.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Рабочая роль масштабного развертывания служб Integration Services (SSIS)](integration-services-ssis-scale-out-worker.md)

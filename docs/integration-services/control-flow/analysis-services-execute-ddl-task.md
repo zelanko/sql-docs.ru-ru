@@ -18,10 +18,10 @@ ms.assetid: 7f25c8c6-b601-41f2-9553-be0a2ee0751a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a160e61e390f58dc640a5d1da265cdb77d5d9be1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294343"
 ---
 # <a name="analysis-services-execute-ddl-task"></a>Задача «Выполнение инструкции DDL служб Analysis Services»
@@ -239,7 +239,7 @@ ms.locfileid: "71294343"
   Используйте страницу **Общие** диалогового окна **Редактор задачи " Выполнение инструкции DDL служб Analysis Services"** для назначения имени и описания задания выполнения DDL служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
 ### <a name="options"></a>Параметры  
- **Название**  
+ **имя**;  
  Задает уникальное имя задаче Execute DDL служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Это имя используется в качестве метки для значка задачи.  
   
 > [!NOTE]  

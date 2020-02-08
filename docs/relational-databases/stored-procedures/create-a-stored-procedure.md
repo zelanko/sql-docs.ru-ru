@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 73aee045b57ca7fde08c24adca4a3d4267d06c61
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934073"
 ---
 # <a name="create-a-stored-procedure"></a>Создание хранимой процедуры
@@ -79,7 +79,7 @@ ms.locfileid: "67934073"
         AND EndDate IS NULL;  
     ```  
   
-8.  Для проверки синтаксиса выберите пункт **Синтаксический анализ** в меню **Запрос**. Если возвращается сообщение об ошибке, сравните инструкции с приведенными выше и при необходимости внесите исправления.  
+8.  Для проверки синтаксиса выберите пункт **Выполнить анализ** в меню **Запрос**. Если возвращается сообщение об ошибке, сравните инструкции с приведенными выше и при необходимости внесите исправления.  
   
 9. Чтобы создать процедуру, в меню **Запрос** выберите пункт **Выполнить**. Процедура создается как объект в базе данных.  
   

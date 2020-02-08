@@ -15,10 +15,10 @@ ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 09b3759af6fc956d83daee464b5120fa80462dcf
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72278313"
 ---
 # <a name="create-a-database-mail-profile"></a>Создание профиля компонента Database Mail
@@ -33,7 +33,7 @@ ms.locfileid: "72278313"
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Prerequisites"></a> необходимые компоненты  
+###  <a name="Prerequisites"></a> Предварительные требования  
  Создайте одну или несколько учетных записей компонента Database Mail для профиля. Дополнительные сведения о создании компонента Database Mail см. в разделе [Создание учетной записи компонента Database Mail](../../relational-databases/database-mail/create-a-database-mail-account.md).  
   
 ###  <a name="Security"></a> безопасность  
@@ -97,7 +97,7 @@ ms.locfileid: "72278313"
   
      *\@description* = '*Описание*'  
   
-     *\@profile_name* — имя профиля, а *\@description* — описание профиля. Этот параметр является необязательным.  
+     *\@profile_name* — имя профиля, а *\@description* — описание профиля. Это необязательный параметр.  
   
 -   Для каждой учетной записи выполните хранимую процедуру [sysmail_add_profileaccount_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md), как показано ниже.  
   
@@ -165,7 +165,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      *\@description* = '*Описание*'  
   
-     *\@profile_name* — имя профиля, а *\@description* — описание профиля. Этот параметр является необязательным.  
+     *\@profile_name* — имя профиля, а *\@description* — описание профиля. Это необязательный параметр.  
   
 -   Для каждой учетной записи выполните хранимую процедуру [sysmail_add_profileaccount_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md), как показано ниже.  
   

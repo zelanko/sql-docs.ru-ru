@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: 5c4d5cc303d297a21b730abc30e10b85c65cc3d2
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68811197"
 ---
 # <a name="scale-out-support-for-high-availability-via-sql-server-failover-cluster-instance"></a>Поддержка Scale Out для обеспечения высокой доступности с помощью экземпляра отказоустойчивого кластера SQL Server
@@ -25,7 +25,7 @@ ms.locfileid: "68811197"
 
 Чтобы обеспечить высокий уровень доступности на стороне мастера Scale Out с использованием экземпляра отказоустойчивого кластера SQL Server, выполните следующие действия:
 
-## <a name="1-prerequisites"></a>1. предварительные требования
+## <a name="1-prerequisites"></a>1. Предварительные требования
 Настроить отказоустойчивый кластер Windows. Инструкции см. в записи блога [Установка компонента и средств отказоустойчивого кластера для Windows Server 2012](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx). Установите компоненты и средства на всех узлах кластера.
 
 ## <a name="2-install-sql-server-failover-cluster"></a>2. Установка отказоустойчивого кластера SQL Server
@@ -75,7 +75,7 @@ ms.locfileid: "68811197"
 > [!NOTE]
 > Диспетчер Scale Out не поддерживает отказоустойчивый кластер SQL Server. Если для добавления рабочей роли Scale Out вы используете диспетчер Scale Out, вам по-прежнему требуется вручную установить сертификат рабочей роли на все узлы мастера.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 Дополнительные сведения см. в следующих статьях:
 -   [Главная роль масштабного развертывания служб Integration Services (SSIS)](integration-services-ssis-scale-out-master.md)
 -   [Рабочая роль масштабного развертывания служб Integration Services (SSIS)](integration-services-ssis-scale-out-worker.md)

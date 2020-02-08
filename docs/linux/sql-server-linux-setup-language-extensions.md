@@ -6,17 +6,17 @@ author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 11/05/2019
+ms.date: 02/03/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2b5a8c83f827f574698d2e9b37a19cdb29e1ba80
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 561a683f6b4c9489121c8fe9910ca798c50ecd82
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73660781"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971226"
 ---
 # <a name="install-sql-server-language-extensions-on-linux"></a>Установка расширений языка для SQL Server в Linux
 
@@ -70,7 +70,7 @@ ls /opt/microsoft/mssql/bin
    + [Ubuntu](#ubuntu)
    + [SUSE](#suse)
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 + Версия Linux должна [поддерживаться SQL Server](sql-server-linux-release-notes-2019.md#supported-platforms), но не включает в себя подсистему Docker. Поддерживаемые версии
 
@@ -262,19 +262,19 @@ GO
 
 |||
 |--|----|
-| Пакеты mssql/extensibility-java | [https://packages.microsoft.com/rhel/7/mssql-server-preview/](https://packages.microsoft.com/rhel/7/mssql-server-preview/) |
+| Пакеты mssql/extensibility-java | [https://packages.microsoft.com/rhel/7/mssql-server-2019/](https://packages.microsoft.com/rhel/7/mssql-server-2019/) |
 
 #### <a name="ubuntu1604-paths"></a>Пути Ubuntu/16.04
 
 |||
 |--|----|
-| Пакеты mssql/extensibility-java | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/) |
+| Пакеты mssql/extensibility-java | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/) |
 
 #### <a name="suse12-paths"></a>Пути SUSE/12
 
 |||
 |--|----|
-| Пакеты mssql/extensibility-java | [https://packages.microsoft.com/sles/12/mssql-server-preview/](https://packages.microsoft.com/sles/12/mssql-server-preview/) |
+| Пакеты mssql/extensibility-java | [https://packages.microsoft.com/sles/12/mssql-server-2019/](https://packages.microsoft.com/sles/12/mssql-server-2019/) |
 
 #### <a name="package-list"></a>Список пакетов
 
@@ -308,6 +308,6 @@ mssql-server-extensibility-java-15.0.1000
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-Разработчики на языке Java могут ознакомиться с простыми примерами, а также узнать, как код Java работает с SQL Server. Дополнительные сведения см. в следующих статьях:
+Разработчики на языке Java могут ознакомиться с простыми примерами, а также узнать, как код Java работает с SQL Server. Дополнительные сведения см. в следующих статьях.
 
-+ [Учебник. Регулярные выражения с Java](../language-extensions/tutorials/search-for-string-using-regular-expressions-in-java.md)
++ [Руководство. Регулярные выражения с Java](../language-extensions/tutorials/search-for-string-using-regular-expressions-in-java.md)

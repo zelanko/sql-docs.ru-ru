@@ -11,17 +11,17 @@ ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 24847d7b14341e9a1d5a4d874eb0046f53261fea
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165521"
 ---
 # <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>Краткое руководство. Резервное копирование и восстановление SQL с помощью службы хранилища BLOB-объектов Azure
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 С помощью этого краткого руководства вы научитесь создавать и восстанавливать резервные копии, используя службу хранилища BLOB-объектов Azure.  В этой статье описывается создание контейнера больших двоичных объектов Azure, запись резервной копии в службу BLOB-объектов и выполнение восстановления.
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
 Чтобы выполнить задания этого руководства, необходимо владеть основными понятиями резервного копирования и восстановления [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и синтаксисом T-SQL.  Вам потребуется учетная запись хранения Azure, среда SQL Server Management Studio (SSMS), доступ к серверу SQL Server или управляемому экземпляру Базы данных SQL Azure. Кроме того, учетная запись, используемая для выдачи команд резервного копирования и восстановления, должна находиться в роли базы данных **db_backupoperator** с разрешениями **изменение любых учетных данных**. 
 
 - Получите бесплатную [учетную запись Azure](https://azure.microsoft.com/offers/ms-azr-0044p/).
@@ -40,7 +40,7 @@ ms.locfileid: "74165521"
 1. Выберите учетную запись хранения, прокрутите вниз до раздела **Службы BLOB-объектов**.
 1. Выберите **BLOB-объекты**, а затем щелкните **+ Контейнер**, чтобы добавить новый контейнер. 
 1. Введите имя контейнера и запишите его. Эти сведения используются в URL-адресе (пути к файлу резервной копии) в инструкциях T-SQL далее в этом руководстве. 
-1. Нажмите кнопку **ОК**. 
+1. Щелкните **ОК**. 
     
     ![Создание контейнера](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/new-container.png)
 

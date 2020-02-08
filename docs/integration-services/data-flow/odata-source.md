@@ -16,10 +16,10 @@ ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2177b4d1c4454aca803f11980340407362236c8c
-ms.sourcegitcommit: 94f6a4b506dfda242fc3efb2403847e22a36d340
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75546534"
 ---
 # <a name="odata-source"></a>Источник OData
@@ -85,7 +85,7 @@ ms.locfileid: "75546534"
  **Использование пути к коллекции или ресурсу**  
  Укажите метод выбора данных из источника.  
   
-|Параметр|Description|  
+|Параметр|Описание|  
 |------------|-----------------|  
 |Коллекция|Извлечение данных из источника OData с помощью имени коллекции.|  
 |Путь к ресурсу|Извлечение данных из источника OData с помощью пути к ресурсу.|  

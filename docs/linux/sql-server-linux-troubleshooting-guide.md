@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
 ms.openlocfilehash: 6ff5c1c5944e1313d6c95cd35be288ad4d2154c8
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68032215"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Устранение неполадок в SQL Server на Linux
@@ -22,7 +22,7 @@ ms.locfileid: "68032215"
 Этот документ описывает устранение неполадок в Microsoft SQL Server, работающих в Linux или контейнере Docker. При устранении неполадок SQL Server на Linux не забудьте ознакомиться с поддерживаемыми функциями и известными ограничениями в [заметках о выпуске SQL Server на Linux](sql-server-linux-release-notes.md).
 
 > [!TIP]
-> Ответы на часто задаваемые вопросы об SQL Server на Linux см. в [этой статье](sql-server-linux-faq.md).
+> Ответы на часто задаваемые вопросы об SQL Server на Linux см. в [этой статье](sql-server-linux-faq.md).
 
 ## <a id="connection"></a> Устранение неполадок при сбоях подключения
 Если у вас возникли трудности при подключении к SQL Server на базе Linux, нужно проверить следующее.
@@ -239,7 +239,7 @@ ms.locfileid: "68032215"
    sqlcmd -S myserver -U sa -P Test\$\$
    ```
 
-   Ресурсы: [Специальные знаки](https://tldp.org/LDP/abs/html/special-chars.html) 
-    [Экранирование](https://tldp.org/LDP/abs/html/escapingsection.html)
+   Ресурсы: [Специальные знаки](https://tldp.org/LDP/abs/html/special-chars.html)
+   [Экранирование](https://tldp.org/LDP/abs/html/escapingsection.html)
 
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]
