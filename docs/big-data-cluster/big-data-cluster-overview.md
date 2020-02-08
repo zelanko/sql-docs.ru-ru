@@ -5,22 +5,37 @@ description: Сведения о кластерах больших данных 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6bbb185936b2a388014a16ae0a6ecc6c52c5d29a
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 23eb15b1f7b763688a3657406bab12106a18f977
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706659"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75720939"
 ---
 # <a name="what-are-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Что такое [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Начиная с версии [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)], [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] обеспечивают развертывание масштабируемых кластеров SQL Server, Spark и контейнеров HDFS, работающих в Kubernetes. Эти компоненты работают параллельно, позволяя считывать, записывать и обрабатывать большие данные в Transact-SQL или Spark, благодаря чему вы можете с легкостью объединять и анализировать важные реляционные данные с объемными большими данными.
+
+В [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] впервые представлены кластеры больших данных SQL Server.
+
+Используйте кластеры больших данных SQL Server для решения следующих задач:
+
+- [Развертывание масштабируемых кластеров](../big-data-cluster/deploy-get-started.md) SQL Server, Spark и контейнеров HDFS, выполняемых в Kubernetes. 
+- Чтение, запись и обработка больших данных из Transact-SQL или Spark.
+- Простое объединение и анализ ценных реляционных данных и больших данных крупного объема.
+- Запрос внешних источников данных.
+- Хранение больших данных в HDFS под управлением SQL Server.
+- Запрос данных из нескольких внешних источников данных через кластер.
+- Использование данных для искусственного интеллекта, машинного обучения и других задач анализа.
+- [Развертывание и запуск приложений](../big-data-cluster/concept-application-deployment.md) в [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)].
+- Виртуализация данных с помощью [Polybase](../relational-databases/polybase/polybase-guide.md). Теперь вы можете запрашивать данные из внешних источников SQL Server, Oracle, Teradata, MongoDB и источников данных ODBC с внешними таблицами.
+- Обеспечение высокой доступности для основного экземпляра SQL Server и всех баз данных с использованием технологии групп доступности Always On.
 
 Дополнительные сведения о новых возможностях и известных проблемах в последнем выпуске см. в [заметках о выпуске](release-notes-big-data-cluster.md).
 
@@ -30,7 +45,7 @@ ms.locfileid: "73706659"
 
 ### <a name="data-virtualization"></a>Виртуализация данных
 
-С помощью [SQL Server PolyBase](../relational-databases/polybase/polybase-guide.md) [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] могут выполнять запросы к внешним источникам данных, не прибегая при этом к перемещению или копированию данных. В [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] применяются новые соединители с источниками данных.
+С помощью [SQL Server PolyBase](../relational-databases/polybase/polybase-guide.md)[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] могут выполнять запросы к внешним источникам данных, не прибегая при этом к перемещению или копированию данных. В [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] применяются новые соединители с источниками данных.
 
 ![Виртуализация данных](media/big-data-cluster-overview/data-virtualization.png)
 

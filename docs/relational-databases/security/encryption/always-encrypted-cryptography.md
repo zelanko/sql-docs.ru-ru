@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b0fe0e861e8139416250ffc2677230dbc2aeab6d
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594406"
 ---
 # <a name="always-encrypted-cryptography"></a>Шифрование Always Encrypted
@@ -38,7 +38,7 @@ ms.locfileid: "73594406"
   
  **AEAD_AES_256_CBC_HMAC_SHA_256** является производным от проекта спецификации, расположенного по адресу [https://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05](https://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05). В нем используется схема аутентифицированного шифрования с присоединенными данными, при которой сначала выполняется шифрование сообщения, а затем проверка подлинности. То есть открытый текст сначала шифруется, а затем на основе полученного зашифрованного текста создается имитовставка MAC.  
   
- Чтобы скрыть шаблоны, в алгоритме **AEAD_AES_256_CBC_HMAC_SHA_256** используется метод применения блочного шифра, в котором исходные значения шифруются с использованием вектора инициализации (IV). Полное описание режима CBC можно найти по адресу [ https://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf ](https://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf).  
+ Чтобы скрыть шаблоны, в алгоритме **AEAD_AES_256_CBC_HMAC_SHA_256** используется метод применения блочного шифра, в котором исходные значения шифруются с использованием вектора инициализации (IV). Полное описание режима CBC можно найти по адресу [https://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf](https://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf).  
   
  Алгоритм**AEAD_AES_256_CBC_HMAC_SHA_256** вычисляет значение зашифрованного текста для заданного значения открытого текста с помощью следующих шагов.  
   
@@ -85,7 +85,7 @@ aes_256_cbc_ciphertext = AES-CBC-256(enc_key, IV, cell_data) with PKCS7 padding.
 enc_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell encryption key" + algorithm + CEK_length )  
 ```  
   
-### <a name="step-3-computing-mac"></a>Шаг 3. Вычисление имитовставки  
+### <a name="step-3-computing-mac"></a>Шаг 3. Вычисление имитовставки  
  Вычисление имитовставки происходит с помощью следующего алгоритма:  
   
 ```  
@@ -99,7 +99,7 @@ versionbyte = 0x01 and versionbyte_length = 1
 mac_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell MAC key" + algorithm + CEK_length)  
 ```  
   
-### <a name="step-4-concatenation"></a>Шаг 4. Concatenation  
+### <a name="step-4-concatenation"></a>Шаг 4. Объединение  
  Зашифрованное значение создается путем объединения байтовой версии алгоритма, кода проверки подлинности сообщения, значения вектора инициализации и зашифрованного текста AES_256_CBC.  
   
 ```  
@@ -178,7 +178,7 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
  Дополнительные сведения об алгоритмах, описанных в этой статье, см. в файлах **SqlAeadAes256CbcHmac256Algorithm.cs**, **SqlColumnEncryptionCertificateStoreProvider.cs** и **SqlColumnEncryptionCertificateStoreProvider.cs** в [справочнике по .NET](https://referencesource.microsoft.com/).  
   
 ## <a name="see-also"></a>См. также:  
- - [Постоянное шифрование](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+ - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  - [Разработка приложений с помощью Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
   
   

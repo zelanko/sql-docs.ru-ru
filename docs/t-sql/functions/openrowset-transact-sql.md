@@ -25,12 +25,12 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: d50c8c83ebba970a847c5a2db70ca0268637d3e8
-ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
+ms.openlocfilehash: a20b058d187f7c1ddade6b609b0002f7bbcbdb60
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74542286"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910147"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 
@@ -124,7 +124,7 @@ CODEPAGE = { 'ACP'| 'OEM'| 'RAW'| '*code_page*' }. Задает кодовую �
 > [!NOTE]
 > Рекомендуется указывать имя параметра сортировки для каждого столбца в файле форматирования, кроме случаев, когда параметр 65001 должен иметь приоритет над спецификацией параметров сортировки или кодовой страницы.
 
-|Значение аргумента CODEPAGE|Description|
+|Значение аргумента CODEPAGE|Описание|
 |--------------------|-----------------|
 |ACP|Столбцы типа **char**, **varchar** или **text** преобразуются из кодовой страницы ANSI или [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows (ISO 1252) в кодовую страницу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|
 |OEM (по умолчанию)|Столбцы типа **char**, **varchar** или **text** преобразуются из системной кодовой страницы OEM в кодовую страницу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|
@@ -422,7 +422,7 @@ SELECT * FROM OPENROWSET(
 В приведенном ниже примере показано, как с помощью команды OPENROWSET загрузить данные из CSV-файла в расположение хранилища BLOB-объектов Azure, для которого был создан ключ SAS. Расположение хранилища BLOB-объектов Azure настроено как внешний источник данных. Для этого требуются учетные данные для базы с подписанным URL-адресом, зашифрованным с помощью главного ключа в пользовательской базе данных.
 
 ```sql
---> Optional - a MASTER KEY is not requred if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
+--> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1';
 GO
 --> Optional - a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!

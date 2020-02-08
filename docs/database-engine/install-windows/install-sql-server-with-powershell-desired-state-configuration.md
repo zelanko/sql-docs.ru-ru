@@ -12,10 +12,10 @@ author: randomnote1
 ms.author: dareist
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 7e7b3f2d8673972100e01413e5688353cb7c87a6
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75258982"
 ---
 # <a name="install-sql-server-with-powershell-desired-state-configuration"></a>Установка SQL Server с помощью PowerShell Desired State Configuration
@@ -38,7 +38,7 @@ ms.locfileid: "75258982"
 - Установочный носитель SQL Server 2017.
 - DSC-ресурс **SqlServerDsc**.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 В большинстве случаев для обработки предварительных требований будет использоваться служба DSC. Однако в целях демонстрации мы делаем это вручную.
 

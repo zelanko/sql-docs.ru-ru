@@ -16,10 +16,10 @@ ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 603846718e4e21c7af8ee81d94210d12242c35c7
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321931"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>Руководство. Настройка репликации между двумя полностью подключенными серверами (репликация транзакций)
@@ -38,7 +38,7 @@ ms.locfileid: "75321931"
 > * проверка подписки и измерение задержки.
   
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
 Это руководство для пользователей, которые умеют выполнять основные операции с базами данных и которые имеют ограниченный опыт репликации. Перед тем как приступить к работе с этим учебником, необходимо освоить [Учебник. Подготовка SQL Server к репликации](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md).  
   
 Для работы с этим учебником требуется SQL Server, среда SQL Server Management Studio (SSMS) и база данных AdventureWorks.  

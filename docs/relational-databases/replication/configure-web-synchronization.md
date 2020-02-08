@@ -33,10 +33,10 @@ ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 95acac097d1c3ec5ffd4989058db0c2927441554
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907238"
 ---
 # <a name="configure-web-synchronization"></a>Настроить веб-синхронизацию
@@ -86,9 +86,9 @@ ms.locfileid: "72907238"
   
  **Настройка служб IIS для веб-синхронизации**  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. [Настройка сервера IIS для веб-синхронизации](../../relational-databases/replication/configure-iis-for-web-synchronization.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Настройка сервера IIS для веб-синхронизации](../../relational-databases/replication/configure-iis-for-web-synchronization.md)  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. [Настройка сервера IIS 7 для веб-синхронизации](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Настройка сервера IIS 7 для веб-синхронизации](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)  
   
 ## <a name="creating-a-web-garden"></a>Создание веб-сада  
  Средство прослушивания репликации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает две параллельные операции синхронизации в каждом потоке. При превышении этого ограничения средство прослушивания репликации может перестать отвечать на запросы. Количество потоков, выделенных replisapi.dll, определяется свойством пула приложения «Максимальное число рабочих процессов». Значением этого свойства по умолчанию является 1.  
@@ -175,6 +175,6 @@ ms.locfileid: "72907238"
 >  Открытие портов на брандмауэре может привести к незащищенности сервера от вредоносных атак. Перед открытием портов убедитесь в том, что знаете принципы работы брандмауэров. Дополнительные сведения см. в разделе [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Веб-синхронизация для репликации слиянием](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
+ [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
   
   

@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
 ms.openlocfilehash: c1def0c2cfbdc4b3feed191e9eb2673b8e788f82
-ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75776384"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>Настройка репозиториев для установки и обновления SQL Server на Linux
@@ -38,7 +38,7 @@ ms.locfileid: "75776384"
 
 При установке SQL Server на Linux необходимо настроить репозиторий Майкрософт. Он используется для получения пакета ядра СУБД (**mssql-server**) и связанных с ним пакетов SQL Server. В настоящее время существует пять основных репозиториев:
 
-| Хранилище | Имя | Description |
+| Хранилище | Имя | Описание |
 |---|---|---|
 | **2019** | **mssql-server-2019** | Репозиторий для SQL Server 2019 с накопительным пакетом обновления. |
 | **2019 GDR** | **mssql-server-2019-gdr** | Репозиторий выпуска SQL Server 2019 для общего распространения, предназначенный только для критических обновлений. |

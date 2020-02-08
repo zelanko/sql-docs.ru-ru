@@ -24,10 +24,10 @@ ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 4fb6bc14742d4aa25c47af59bc1be72ebfffa5a4
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982400"
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS (Transact-SQL)
@@ -57,7 +57,7 @@ DBCC CHECKCONSTRAINTS
  Проверяемая таблица или ограничение. Если указан аргумент *table_name* или *table_id*, проверяются все включенные ограничения в данной таблице. Если указан аргумент *constraint_name* или *constraint_id*, проверяется только это ограничение. Если не указаны ни идентификатор таблицы, ни идентификатор ограничения, проверяются все включенные ограничения всех таблиц в текущей базе данных.  
  Имя ограничения однозначно определяет таблицу, к которой оно принадлежит. Дополнительные сведения см. в разделе [Идентификаторы баз данных](../../relational-databases/databases/database-identifiers.md).  
   
- на  
+ WITH  
  Позволяет задавать параметры.  
   
  ALL_CONSTRAINTS  

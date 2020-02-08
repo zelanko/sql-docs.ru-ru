@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: 06708cc6770779f22bea45eddacba5a5d29f9092
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082130"
 ---
 # <a name="integration-services-scale-out-manager"></a>Диспетчер Integration Services Scale Out
@@ -57,7 +57,7 @@ ms.locfileid: "68082130"
 ### <a name="view-scale-out-master-status"></a>Просмотр состояния мастера Scale Out
 Сведения о состоянии мастера Scale Out отображаются на странице **Панель мониторинга**.
 
-![Панель мониторинга на портале](media/portal-dashboard-new.PNG)
+![Панель мониторинга портала](media/portal-dashboard-new.PNG)
 
 ### <a name="view-scale-out-worker-status"></a>Просмотр состояния рабочей роли Scale Out
 Состояние рабочей роли Scale Out отображается на странице **Диспетчер рабочих ролей**. Чтобы просмотреть состояние отдельной рабочей роли, выберите ее.
@@ -102,7 +102,7 @@ ms.locfileid: "68082130"
 
 ![Сохранение рабочей роли на портале](media/portal-save-worker-new.PNG)
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 Дополнительные сведения см. в следующих статьях:
 -   [Главная роль масштабного развертывания служб Integration Services (SSIS)](integration-services-ssis-scale-out-master.md)
 -   [Рабочая роль масштабного развертывания служб Integration Services (SSIS)](integration-services-ssis-scale-out-worker.md)

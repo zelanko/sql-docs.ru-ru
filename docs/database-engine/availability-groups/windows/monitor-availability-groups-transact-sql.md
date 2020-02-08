@@ -18,10 +18,10 @@ ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6a95082cd732b644105c14c4ba598f859f48456e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68014705"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>Отслеживание групп доступности (Transact-SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "68014705"
  Функция[SERVERPROPERTY](../../../t-sql/functions/serverproperty-transact-sql.md)  
  Возвращает сведения о свойствах сервера о том, включен ли [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , а также (если включен) был ли он запущен на экземпляре сервера.  
   
- **Имена столбцов**: IsHadrEnabled, HadrManagerStatus  
+ **Имена столбцов**. IsHadrEnabled, HadrManagerStatus  
   
 ##  <a name="WSFC"></a> Мониторинг групп доступности на кластере WSFC  
  Для мониторинга отказоустойчивой кластеризации Windows Server (WSFC), на котором размещается локальный экземпляр сервера с поддержкой [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], используются следующие представления:  
@@ -82,7 +82,7 @@ ms.locfileid: "68014705"
   
  Сведения о кластерах WSFC и [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] см. в разделах [Отказоустойчивая кластеризация Windows Server (WSFC) с SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md) и [Отказоустойчивая кластеризация и группы доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md).  
   
-##  <a name="AvGroups"></a> Мониторинг групп доступности  
+##  <a name="AvGroups"></a> Monitoring Availability Groups  
  Для мониторинга групп доступности, для которых на экземпляре сервера размещена реплика доступности, используются следующие представления.  
   
  [sys.availability_groups](../../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)  
@@ -264,7 +264,7 @@ ms.locfileid: "68014705"
   
 -   [SQL Server, реплика базы данных](../../../relational-databases/performance-monitor/sql-server-database-replica.md)  
   
--   [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md)  
+-   [SQL Server, объект Databases](../../../relational-databases/performance-monitor/sql-server-databases-object.md)  
   
  **Управление на основе политик для групп доступности AlwaysOn**  
   

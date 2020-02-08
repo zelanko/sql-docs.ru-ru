@@ -10,16 +10,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
 ms.openlocfilehash: f03c9999471f1f196263cfab43960008c7d26aaf
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "74096116"
 ---
 # <a name="includesql-server-2019includessssqlv15-mdmd-release-notes"></a>Заметки о выпуске [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-В статье описаны ограничения и известные проблемы, связанные с [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]. Дополнительные сведения см. в следующих статьях:
+В статье описаны ограничения и известные проблемы, связанные с [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]. Связанные сведения:
 
 > [Новые возможности версии [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]](../sql-server/what-s-new-in-sql-server-ver15.md)
 
@@ -45,7 +45,7 @@ ms.locfileid: "74096116"
   1. SQL Server Management Studio (SSMS) версии 18.0, 18.1, 18.2 или 18.3 установлена на сервере.
   1. Предпринята попытка установки [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] со съемного носителя. Например, с установочного носителя DVD.
 
-- **Обходной путь**:
+- **Возможное решение**:
   1. Удалите любую версию SSMS выше, чем SSMS 18.3.1.
   1. Установите более новую версию SSMS (18.3.1 или новее). Для получения последней версии обратитесь к статье [Скачивание SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
   1. Установите [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] как обычно.
@@ -72,7 +72,7 @@ ms.locfileid: "74096116"
 
    `The view 'Index' or its master was not found or no view engine supports the searched locations.`
 
-- **Обходной путь**: Откройте портал MDS и перейдите к ресурсу вручную.
+- **Возможное решение**: Откройте портал MDS и перейдите к ресурсу вручную.
 
 - **Область применения**: RTM-версия [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]
 
@@ -80,7 +80,7 @@ ms.locfileid: "74096116"
 
 - [Требования к оборудованию и программному обеспечению для установки SQL Server](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md)
 
-## <a name="machine-learning-services"></a>Службы машинного обучения
+## <a name="machine-learning-services"></a>Служба машинного обучения
 
 Сведения о проблемах в Службах машинного обучения SQL Server см. в статье [Known issues in SQL Server Machine Learning Services](../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md) (Известные проблемы в Службах машинного обучения SQL Server).
 

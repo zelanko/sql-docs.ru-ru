@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
 ms.openlocfilehash: a652bc56a826469017ba4de643c9d3e1822d4c22
-ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75952531"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Выпуски и поддерживаемые функции SQL Server 2017 в Linux
@@ -68,7 +68,7 @@ ms.locfileid: "75952531"
 
 SQL Server 2017 на Linux поддерживает ядро СУБД SQL Server. В приведенной ниже таблице описаны функции ядра СУБД.   
   
-|Компоненты сервера|Description|  
+|Компоненты сервера|Описание|  
 |-----------------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] включает компонент [!INCLUDE[ssDE](../includes/ssde-md.md)], основную службу для хранения, обработки и обеспечения безопасности данных, репликации, полнотекстового поиска, а также средства управления реляционными и XML-данными и возможности интеграции с системами аналитики данных.|  
 

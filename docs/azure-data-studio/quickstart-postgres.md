@@ -11,16 +11,16 @@ ms.topic: quickstart
 author: rachel-msft
 ms.author: raagyema
 ms.openlocfilehash: ac4d1a3ae93310475c284661e1b8dff1d9a9f523
-ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71127244"
 ---
 # <a name="quickstart-connect-and-query-postgresql-using-includename-sosincludesname-sos-shortmd"></a>Краткое руководство. Подключение и отправка запроса PostgreSQL с помощью [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 В этом кратком руководстве показано, как использовать [!INCLUDE[name-sos](../includes/name-sos-short.md)] для подключения к Postgres и как с помощью инструкций SQL создать базу данных *tutorialdb* и выполнять к ней запросы.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Для работы с этим кратким руководством вам потребуется [!INCLUDE[name-sos](../includes/name-sos-short.md)], расширение PostgreSQL для [!INCLUDE[name-sos](../includes/name-sos-short.md)], а также доступ к серверу PostgreSQL.
 
@@ -43,12 +43,12 @@ ms.locfileid: "71127244"
 
    ![Экран нового подключения](media/quickstart-postgresql/new-connection-screen.png)  
 
-   | Настройка       | Пример значения | Описание |
+   | Параметр       | Пример значения | Описание |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Имя сервера** | localhost | Полное имя сервера |
    | **User name** | postgres | Имя пользователя, которое требуется использовать для входа. |
    | **Пароль (имя входа SQL)** | *password* | Пароль для учетной записи, используемой для входа. |
-   | **Пароль** | *Проверить* | Установите этот флажок, если не хотите вводить пароль при каждом подключении. |
+   | **Пароль** | *Проверка* | Установите этот флажок, если не хотите вводить пароль при каждом подключении. |
    | **Имя базы данных** | \<Default\> | Укажите этот параметр, если нужно, чтобы соединение указывало на базу данных. |
    | **Группа серверов** | \<Default\> | Этот параметр позволяет назначить данное подключение определенной группе серверов, которую вы создаете. | 
    | **Имя (необязательно)** | *Оставьте пустым* | Этот параметр позволяет указать понятное имя для сервера. | 
@@ -127,7 +127,7 @@ ms.locfileid: "71127244"
    SELECT * FROM customers; 
    ```
 
-2. Отображаются результаты запроса.
+2. Будут отображены результаты запроса:
 
    ![Просмотр результатов](media/quickstart-postgresql/view-results.png)
 

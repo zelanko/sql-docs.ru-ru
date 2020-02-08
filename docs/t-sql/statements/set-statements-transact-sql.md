@@ -26,10 +26,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azure-sqldw-latest ||= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: 20cf6e1c3c98a99898a7b302980d76cef327be5d
-ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70228493"
 ---
 # <a name="set-statements-transact-sql"></a>Инструкции SET (Transact-SQL)
@@ -92,4 +92,4 @@ ms.locfileid: "70228493"
   Если обязательное значение любого из этих параметров не задано, инструкции INSERT, UPDATE, DELETE, DBCC CHECKDB и DBCC CHECKTABLE для индексированных представлений или таблиц с индексами на основе вычисляемых столбцов не смогут быть выполнены. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сформирует ошибку с указанием всех неправильно заданных параметров. Также [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет выполнять инструкции SELECT в этих таблицах или индексных представлениях, как будто индексы в вычисляемых столбцах или представлениях не существуют. 
 
 - Если для SET RESULT_SET_CACHING указать значение ON, будет включена функция кэширования результатов для текущего сеанса клиента.   Для RESULT_SET_CACHING нельзя указать значение ON для сеанса, если на уровне базы данных указано значение OFF.    Если для SET RESULT_SET_CACHING указать значение OFF, будет отключена функция кэширования результатов для текущего сеанса клиента. Для изменения этого параметра требуется членство в роли public.
-Применимо для следующих объектов: Хранилище данных SQL Azure 2-го поколения
+Область применения: Хранилище данных SQL Azure 2-го поколения

@@ -18,10 +18,10 @@ ms.assetid: 430508ad-207b-4dee-a4d1-4ddf25e6b4a9
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: a0a912e4ab228617537e9c28e9a5cecc4a0278fe
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72278138"
 ---
 # <a name="stlinefromtext-geometry-data-type"></a>STLineFromText (тип данных geometry)
@@ -56,7 +56,7 @@ STLineFromText ( 'linestring_tagged_text' , SRID )
 ## <a name="examples"></a>Примеры  
  В следующих примерах метод `STLineFromText()` применяется для создания экземпляра `geometry`.
 
-### <a name="example-1-two-dimension-geometry-wkt"></a>Пример 1. Двумерная геометрия WKT
+### <a name="example-1-two-dimension-geometry-wkt"></a>Пример 1: Двумерная геометрия WKT
 ```  
 DECLARE @g geometry;  
 SET @g = geometry::STLineFromText('LINESTRING (100 100, 200 200)', 0);  

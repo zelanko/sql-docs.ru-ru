@@ -11,10 +11,10 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 08/02/2019
 ms.openlocfilehash: 3f940f0f18df676eae2ca101a2eccaa2be7169e2
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74957048"
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>Руководство. Добавление примера мини-приложения *Пять самых медленных запросов* на панель мониторинга базы данных
@@ -29,7 +29,7 @@ ms.locfileid: "74957048"
 
 В [!INCLUDE[name-sos](../includes/name-sos-short.md)] есть несколько готовых аналитических мини-приложений. В этом руководстве демонстрируется добавление мини-приложения *query-data-store-db-insight*, однако инструкции в основном одинаковы для любого мини-приложения.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Для работы с этим руководством требуется SQL Server или база данных SQL Azure *TutorialDB*. Чтобы создать базу данных *TutorialDB*, выполните инструкции, приведенные в одном из следующих кратких руководств:
 

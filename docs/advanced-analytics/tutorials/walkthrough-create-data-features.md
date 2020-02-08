@@ -1,5 +1,5 @@
 ---
-title: Учебник по R. Формирование признаков
+title: Учебник по R. Проектирование признаков
 description: Учебник, показывающий, как создавать признаки данных с помощью функций SQL Server для аналитики в базе данных.
 ms.prod: sql
 ms.technology: machine-learning
@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 67d2c0bf73e24bc3f70e94cd6cf7ce94d13e5297
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73723857"
 ---
 # <a name="create-data-features-using-r-and-sql-server-walkthrough"></a>Создание признаков данных с помощью R и SQL Server (пошаговое руководство)
@@ -31,7 +31,7 @@ ms.locfileid: "73723857"
 
 Целью является создание нового набора данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], включающего в себя исходные столбцы и новый числовой признак — *direct_distance*.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Для этого этапа требуется продолжение сеанса R из предыдущих этапов этого пошагового руководства. В нем используются строки подключения и объекты источников данных, созданные на этих этапах. Для запуска скрипта используются следующие средства и пакеты.
 
@@ -248,7 +248,7 @@ print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds, 
 > [!TIP]
 > Зачастую формирование признаков с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)] выполняется быстрее, чем с помощью языка R. Например, T-SQL включает агрегатные и ранжирующие функции, которые можно применять в распространенных вычислениях для обработки и анализа данных, например вычисление скользящих средних и *n*-tile. Выберите наиболее эффективный способ в зависимости от особенностей данных и поставленной задачи.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 > [!div class="nextstepaction"]
 > [Создание модели R и ее сохранение в SQL](walkthrough-build-and-save-the-model.md)

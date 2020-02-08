@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 7ecbfd2edd20a312fc8a6d451938f1407585ded5
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73706957"
 ---
 # <a name="microsoftml-python-module-in-sql-server"></a>microsoftml (модуль Python в SQL Server)
@@ -30,7 +30,7 @@ ms.locfileid: "73706957"
 
 Модуль **microsoftml** основан на Python 3.5 и доступен только при установке одного из следующих продуктов или скачиваемых файлов Майкрософт:
 
-+ [Изучение служб машины SQL Server](../install/sql-machine-learning-services-windows-install.md)
++ [Службы машинного обучения SQL Server](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 или более поздней версии](https://docs.microsoft.com/machine-learning-server/)
 + [Клиентские библиотеки Python для клиента обработки и анализа данных](setup-python-client-tools-sql.md)
 
@@ -138,6 +138,6 @@ from revoscalepy.etl.RxImport import rx_import_datasource
 ## <a name="see-also"></a>См. также раздел
 
 + [Учебники по Python](../tutorials/sql-server-python-tutorials.md)
-+ [Учебник. Внедрение кода Python в T-SQL](../tutorials/run-python-using-t-sql.md)
++ [Руководство. Внедрение кода Python в T-SQL](../tutorials/run-python-using-t-sql.md)
 + [Справочник по Python (Microsoft Machine Learning Server)](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference)
 

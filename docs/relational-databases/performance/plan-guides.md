@@ -20,10 +20,10 @@ ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 595ef410a631da1eb1d71e7b2d20c75fd09e4bb2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113482"
 ---
 # <a name="plan-guides"></a>Руководства планов
@@ -161,13 +161,13 @@ where SalesOrderID =  @so_id',
 |Задача|Раздел|  
 |----------|-----------|  
 |Описано, как создать структуру плана.|[Создание структуры плана](../../relational-databases/performance/create-a-new-plan-guide.md)|  
-|Описано, как создать структуру плана для параметризованных запросов.|[Создание руководства плана для параметризованных запросов](../../relational-databases/performance/create-a-plan-guide-for-parameterized-queries.md)|  
+|Описано, как создать структуру плана для параметризованных запросов.|[Создание структуры плана для параметризованных запросов](../../relational-databases/performance/create-a-plan-guide-for-parameterized-queries.md)|  
 |Описано, как управлять режимом параметризации запроса с использованием структур планов.|[Указание механизма параметризации запросов с помощью структур плана](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)|  
 |Описано, как включить постоянный план запроса в структуру плана.|[Применение фиксированного плана запроса к структуре плана](../../relational-databases/performance/apply-a-fixed-query-plan-to-a-plan-guide.md)|  
 |Описано, как задать указания запросов в структуре плана.|[Присоединение указаний запросов к структуре плана](../../relational-databases/performance/attach-query-hints-to-a-plan-guide.md)|  
 |Описано, как просматривать свойства структуры плана.|[Просмотр свойств структуры плана](../../relational-databases/performance/view-plan-guide-properties.md)|  
-|Описано, как использовать профилировщик SQL Server для создания и проверки структур планов.|[Использование приложения SQL Server Profiler для создания и проверки руководств планов](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md)|  
-|Описано, как проверять структуры планов.|[Проверка руководств плана после обновления](../../relational-databases/performance/validate-plan-guides-after-upgrade.md)|  
+|Описано, как использовать профилировщик SQL Server для создания и проверки структур планов.|[Использование приложения SQL Server Profiler для создания и проверки структур плана](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md)|  
+|Описано, как проверять структуры планов.|[Проверка структур плана после обновления](../../relational-databases/performance/validate-plan-guides-after-upgrade.md)|  
   
 ## <a name="see-also"></a>См. также:  
  [sp_create_plan_guide (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   

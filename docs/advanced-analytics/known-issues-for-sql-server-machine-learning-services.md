@@ -7,19 +7,19 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1f5627a5e35039420725795f53a7fc63d5582ab9
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: da725efe691aae60bf9776bbe73f80227067d2e2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706846"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74200400"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>Известные проблемы служб машинного обучения SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 В этой статье описаны известные проблемы или ограничения для компонентов машинного обучения, предоставляемых в [Службах машинного обучения SQL Server](what-is-sql-server-machine-learning.md) и [SQL Server 2016 R Services](r/sql-server-r-services.md).
 
-## <a name="setup-and-configuration-issues"></a>Проблемы установки и конфигурации
+## <a name="setup-and-configuration-issues"></a>Проблемы с установкой и настройкой
 
 Описание процессов и часто задаваемые вопросы, связанные с начальной установкой и конфигурацией, см. в разделе [Часто задаваемые вопросы об обновлении и установке](r/upgrade-and-installation-faq-sql-server-r-services.md). Он содержит сведения об обновлениях, параллельной установке и установке новых компонентов R или Python.
 
@@ -703,7 +703,7 @@ sudo cp /opt/mssql/lib/libc++abi.so.1 /opt/mssql-extensibility/lib/
 
 Некоторые предварительные версии [!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)] включали в себя среду разработки R для Windows, которая была создана с помощью Revolution Analytics. Это средство больше не предоставляется и не поддерживается.
 
-Для совместимости с [!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)] рекомендуется установить Microsoft R Client. [Инструменты R для Visual Studio](https://www.visualstudio.com/vs/rtvs/) и [Visual Studio Code](https://code.visualstudio.com/) также поддерживают решения Microsoft R.
+Для совместимости с [!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)] рекомендуется установить Microsoft R Client. [Инструменты R для Visual Studio](https://marketplace.visualstudio.com/items?itemName=MikhailArkhipov007.RTVS2019) и [Visual Studio Code](https://code.visualstudio.com/) также поддерживают решения Microsoft R.
 
 ### <a name="2-compatibility-issues-with-sqlite-odbc-driver-and-revoscaler"></a>2. Проблемы совместимости с драйвером SQLite ODBC и RevoScaleR
 

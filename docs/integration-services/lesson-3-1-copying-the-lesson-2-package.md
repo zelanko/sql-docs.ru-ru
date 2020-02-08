@@ -11,10 +11,10 @@ ms.assetid: 4bd91402-4e37-41de-ab78-8ca5a1948a37
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4f30cba22276d467c218da4d09749fccb464ac5d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295992"
 ---
 # <a name="lesson-3-1-copy-the-lesson-2-package"></a>Урок 3-1. Копирование пакета занятия 2
@@ -59,6 +59,6 @@ ms.locfileid: "71295992"
 
 5.  Скопируйте и вставьте пакет занятия 3, как описано в шагах 3–8 в предыдущем разделе.  
   
-## <a name="go-to-next-task"></a>Перейти к следующему шагу
+## <a name="go-to-next-task"></a>Переход к следующей задаче
 [Шаг 2. Добавление и настройка ведения журнала](../integration-services/lesson-3-2-adding-and-configuring-logging.md)  
   

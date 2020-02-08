@@ -24,10 +24,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 00f139a5fa608f40f7979f74b187efcb68bcf2ff
-ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75776392"
 ---
 # <a name="create-a-login"></a>Создание имени входа
@@ -182,7 +182,7 @@ ms.locfileid: "75776392"
   
 4.  При выборе параметра **Все объекты типов…** в диалоговом окне **Выбор типов объектов** выберите любые или все из следующих типов объектов: **Конечные точки**, **Имена входа**, **Серверы**, **Группы доступности** и **Роли сервера**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- **Название**  
+ **имя**;  
  Имя каждого участника или защищаемого объекта, добавляемого в сетку.  
   
  **Тип**  

@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: 36f4dce1559df59a61ee25d26b76d0ddd4dda3c1
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "69028751"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Поддержка высокого уровня доступности в Scale Out
@@ -31,7 +31,7 @@ ms.locfileid: "69028751"
 
 Чтобы настроить высокий уровень доступности на стороне мастера Scale Out с использованием функций AlwaysOn для каталога служб SSIS, выполните указанные ниже действия:
 
-## <a name="1-prerequisites"></a>1. предварительные требования
+## <a name="1-prerequisites"></a>1. Предварительные требования
 Настроить отказоустойчивый кластер Windows. Инструкции см. в записи блога [Установка компонента и средств отказоустойчивого кластера для Windows Server 2012](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx). Установите компоненты и средства на всех узлах кластера.
 
 ## <a name="2-install-scale-out-master-on-the-primary-node"></a>2. Установка мастера Scale Out в основном узле
@@ -113,7 +113,7 @@ ms.locfileid: "69028751"
 ## <a name="upgrade-scale-out-in-high-availability-environment"></a>Обновление Scale Out в среде высокого уровня доступности
 Чтобы обновить Scale Out в среде высокого уровня доступности, выполните [инструкции по обновлению из AlwaysOn для каталога служб SSIS](../catalog/ssis-catalog.md#Upgrade), обновите Scale Out и рабочие роли Scale Out на каждом компьютере, а также повторно создайте роль отказоустойчивого кластера Windows Server в шаге 7 выше с помощью новой версии службы мастера Scale Out.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 Дополнительные сведения см. в следующих статьях:
 -   [Главная роль масштабного развертывания служб Integration Services (SSIS)](integration-services-ssis-scale-out-master.md)
 -   [Рабочая роль масштабного развертывания служб Integration Services (SSIS)](integration-services-ssis-scale-out-worker.md)

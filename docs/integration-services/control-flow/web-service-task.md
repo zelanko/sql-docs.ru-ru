@@ -18,10 +18,10 @@ ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 343d3d0d16a19e6d7e1610eff84f6e1aa8ff860a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293801"
 ---
 # <a name="web-service-task"></a>Задача «Веб-служба»
@@ -115,7 +115,7 @@ ms.locfileid: "71293801"
   
  Если нужно загрузить WSDL-файл с помощью кнопки **Загрузить язык WSDL** , установите это свойство в значение **True**.  
   
- **Название**  
+ **имя**;  
  Введите уникальное имя задачи веб-службы. Это имя используется в качестве метки для значка задачи.  
   
 > [!NOTE]  
@@ -142,7 +142,7 @@ ms.locfileid: "71293801"
  **WebMethodDocumentation**  
  Введите описание веб-метода или нажмите кнопку обзора **(...)** , а затем введите описание в диалоговом окне **Документация веб-метода**.  
   
- **Название**  
+ **имя**;  
  Перечисляет имена входных данных веб-метода.  
   
  **Тип**  
@@ -154,7 +154,7 @@ ms.locfileid: "71293801"
  **Переменная**  
  Установите флажки, чтобы использовать переменные для входных данных.  
   
- **Value**  
+ **Значение**  
  Если установлены флажки «Переменная», выберите переменные из списка для входных данных; в противном случае введите значения входных данных вручную.  
   
 ## <a name="web-service-task-editor-output-page"></a>Редактор задачи «Веб-служба» (страница «Вывод»)
@@ -181,7 +181,7 @@ ms.locfileid: "71293801"
  **Переменная**  
  Выберите переменную в списке или щелкните \<**Создать переменную...** >, чтобы создать ее.  
   
- **См. также:**  подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) и о [добавлении переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **См. также:**  подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) и о [добавлении переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
 ## <a name="related-content"></a>См. также  
  Видео с руководством по [ вызвать веб-службу с помощью задачи "Веб-служба" (видеоматериал по SQL Server)](https://go.microsoft.com/fwlink/?LinkId=259642) на портале technet.microsoft.com.  

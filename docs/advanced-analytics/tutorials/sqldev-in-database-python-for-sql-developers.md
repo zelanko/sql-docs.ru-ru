@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b67be59da71667167594ef82e67dfef6f8118fbb
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 3bafc3a524ec854dc9bf1669660827d5a6bc80f7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73725221"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74901894"
 ---
 # <a name="tutorial-python-data-analytics-for-sql-developers"></a>Руководство. Аналитика данных Python для разработчиков SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +45,13 @@ ms.locfileid: "73725221"
 
 + [Занятие 2. Формирование характеристик данных с помощью пользовательских функций SQL](sqldev-py4-create-data-features-using-t-sql.md)
 
-+ [Занятие 3. Обучение и сохранение модели Python с помощью T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
++ [Урок 3. Обучение и сохранение модели Python с помощью T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
 + [Занятие 4. Прогнозирование возможных результатов с помощью модели Python в хранимой процедуре](sqldev-py6-operationalize-the-model.md)
 
 После сохранения модели в базе данных, можно вызвать ее для получения прогноза из [!INCLUDE[tsql](../../includes/tsql-md.md)] с помощью хранимых процедур.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 + [Службы машинного обучения SQL Server с использованием Python](../install/sql-machine-learning-services-windows-install.md#verify-installation)
 
@@ -63,7 +63,7 @@ ms.locfileid: "73725221"
 
 В этом руководстве предполагается, что вы уже знакомы с основными операциями с базой данных, такими как создание баз данных и таблиц, импорт данных и написание запросов SQL. Это не включает знание языка Python. Поэтому весь код на Python предоставляется. 
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 > [!div class="nextstepaction"]
 > [Анализ и визуализация данных при помощи Python](sqldev-py3-explore-and-visualize-the-data.md)

@@ -1,5 +1,5 @@
 ---
-title: Учебник по R. Анализ данных
+title: Учебник по R. Анализ данных
 description: В этом учебнике показано, как визуализировать и формировать статистические сводки с помощью функций R для аналитики в базе данных в SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: f279be39a9edc91dd9d8cd6b72183988a607ce31
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73723746"
 ---
 # <a name="view-and-summarize-sql-server-data-using-r-walkthrough"></a>Просмотр и сведение данных SQL Server с помощью R (пошаговое руководство)
@@ -116,7 +116,7 @@ ms.locfileid: "73723746"
       )
     ```
     
-    + Аргумент  *colClasses* определяет типы столбцов, используемые при переносе данных между [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и средой R. Это важно, так как в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используются типы данных, отличные от типов данных R, и этих типов больше. Дополнительные сведения см. в разделе [Библиотеки R и типы данных](../r/r-libraries-and-data-types.md).
+    + Аргумент  *colClasses* определяет типы столбцов, используемые при переносе данных между [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и средой R. Это важно, так как в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используются типы данных, отличные от типов данных R, и этих типов больше. Дополнительные сведения см. в разделе [Библиотеки R и типы данных](../r/r-libraries-and-data-types.md).
   
     + Аргумент *rowsPerRead* важен для управления использованием памяти и обеспечения эффективных вычислений.  Большинство расширенных аналитических функций в[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] обрабатывают данные блоками и накапливают промежуточные результаты, возвращая итоговые результаты вычислений после считывания всех данных.  С помощью параметра *rowsPerRead* можно управлять количеством строк данных, считываемых в каждый блок для обработки.  Если значение этого параметра слишком велико, доступ к данным может замедлиться из-за нехватки памяти для эффективной обработки такого большого блока данных.  В некоторых системах слишком низкое значение параметра *rowsPerRead* также может снизить производительность.
 

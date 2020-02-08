@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 810dfbc7230171f59cb8f1df04ab1c7f4774e044
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907247"
 ---
 # <a name="modify-a-stored-procedure"></a>Изменение хранимой процедуры
@@ -33,7 +33,7 @@ ms.locfileid: "72907247"
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
 ###  <a name="Restrictions"></a> Ограничения  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] нельзя преобразовать в хранимые процедуры CLR и наоборот.  
+ Хранимые процедуры [!INCLUDE[tsql](../../includes/tsql-md.md)] нельзя преобразовать в хранимые процедуры CLR, и наоборот.  
   
  Если предыдущее определение процедуры было создано с параметрами WITH ENCRYPTION или WITH RECOMPILE, эти параметры будут включены только в случае, если они указаны в инструкции ALTER PROCEDURE.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "72907247"
   
 5.  В меню **Файл** выберите команду **Создать запрос**.  
   
-6.  Скопируйте и вставьте следующий пример в редактор запросов. В следующем примере изменяется процедура `uspVendorAllInfo` . Предложение EXECUTE AS CALLER удаляется, и изменяется текст процедуры, чтобы возвращать только поставщиков, предлагающих конкретный товар. Содержимое результирующего набора определяется при помощи функций `LEFT` и `CASE` .  
+6.  Скопируйте и вставьте следующий пример в редактор запросов. В следующем примере изменяется процедура `uspVendorAllInfo` . Предложение EXECUTE AS CALLER удаляется, и изменяется текст процедуры, чтобы возвращать только поставщиков, предлагающих конкретный товар. Содержимое результирующего набора определяется при помощи функций `LEFT` и `CASE`.  
   
     ```  
     ALTER PROCEDURE Purchasing.uspVendorAllInfo  

@@ -5,17 +5,17 @@ author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 11/04/2019
+ms.date: 02/03/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4f32f4219e438a3f6dc390d11b50e6487c47ee49
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 71ab699e99a3d22b6b04299b8de1ccb18e5f0708
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531250"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971377"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-linux"></a>Установка Служб машинного обучения SQL Server (Python, R) в Linux
 
@@ -35,7 +35,7 @@ ms.locfileid: "73531250"
 
 Службы машинного обучения также поддерживаются в контейнерах Linux. Мы не предоставляем готовые контейнеры со Службами машинного обучения, однако вы можете создать такой контейнер для SQL Server, используя [шаблон, доступный в GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
 
-Службы машинного обучения устанавливаются по умолчанию в кластерах больших данных SQL Server, и вам не нужно в этом случае выполнять шаги. Дополнительные сведения см. в разделе [Использование Служб машинного обучения (Python и R) в кластерах больших данных](../big-data-cluster/machine-learning-services.md).
+Службы машинного обучения устанавливаются по умолчанию в кластерах больших данных SQL Server, и вам не нужно в этом случае выполнять шаги. Дополнительные сведения см. в разделе [Использование служб машинного обучения (Python и R) в кластерах больших данных](../big-data-cluster/machine-learning-services.md).
 
 ## <a name="uninstall-preview-release"></a>Удаление предварительной версии
 
@@ -53,10 +53,10 @@ ls /opt/microsoft/mssql/bin
 
 Выполняйте удаление на самом низком уровне пакета. Любой вышестоящий пакет, зависящий от пакета более низкого уровня, удаляется автоматически.
 
-  + Для интеграции с R удалите **microsoft-r-open** *.
+  + Для интеграции с R удалите **microsoft-r-open***.
   + Для интеграции с Python удалите **mssql-mlservices-python**.
 
-Команды для удаления пакетов приведены в следующей таблице.
+Команды для удаления пакетов приведены в таблице ниже.
 
 | Платформа  | Команды для удаления пакетов | 
 |-----------|----------------------------|
@@ -76,7 +76,7 @@ ls /opt/microsoft/mssql/bin
 
 Выполните установку на самом верхнем уровне пакета, следуя инструкциям из этой статьи для вашей операционной системы.
 
-Для каждого набора инструкций по установке, относящихся к определенной ОС, *наивысшим уровнем пакета* является **Пример 1. Полная установка** для полного набора пакетов либо **Пример 2. Минимальная установка** для минимального количества пакетов, необходимого для выполнения установки.
+Для каждого набора инструкций по установке, относящихся к определенной ОС, *наивысшим уровнем пакета* является **Пример 1. Полная установка** для полного набора пакетов либо **Пример 2. Минимальная установка** для минимального количества пакетов, необходимого для выполнения установки.
 
 1. Для интеграции с R начните с [MRO](#mro), так как это обязательный компонент. Без него интеграция с R не будет устанавливаться.
 
@@ -86,7 +86,7 @@ ls /opt/microsoft/mssql/bin
    + [Ubuntu](#ubuntu)
    + [SUSE](#suse)
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 + Версия Linux должна [поддерживаться SQL Server](sql-server-linux-release-notes-2019.md#supported-platforms), но не включает в себя подсистему Docker. Поддерживаемые версии
 
@@ -177,9 +177,9 @@ zypper update
 | mssql-mlservices-python | Python | Дистрибутив Anaconda и Python с открытым кодом. |
 |mssql-mlservices-mlm-py  | Python | *Полная установка*. Предоставляет revoscalepy, microsoftml, предварительно обученные модели для выделения признаков изображений и анализа тональности текста.| 
 |mssql-mlservices-packages-py  | Python | *Минимальная установка*. Предоставляет revoscalepy и microsoftml. <br/>Не включает в себя предварительно обученные модели. | 
-| [microsoft-r-open *](#mro) | Чтение | Дистрибутив R с открытым исходным кодом, состоящий из трех пакетов. |
-|mssql-mlservices-mlm-r  | Чтение | *Полная установка*. Предоставляет RevoScaleR, MicrosoftML, sqlRUtils, olapR, предварительно обученные модели для выделения признаков изображений и анализа тональности текста.| 
-|mssql-mlservices-packages-r  | Чтение | *Минимальная установка*. Предоставляет RevoScaleR, sqlRUtils, MicrosoftML, olapR. <br/>Не включает в себя предварительно обученные модели. | 
+| [microsoft-r-open *](#mro) | R | Дистрибутив R с открытым исходным кодом, состоящий из трех пакетов. |
+|mssql-mlservices-mlm-r  | R | *Полная установка*. Предоставляет RevoScaleR, MicrosoftML, sqlRUtils, olapR, предварительно обученные модели для выделения признаков изображений и анализа тональности текста.| 
+|mssql-mlservices-packages-r  | R | *Минимальная установка*. Предоставляет RevoScaleR, sqlRUtils, MicrosoftML, olapR. <br/>Не включает в себя предварительно обученные модели. | 
 
 <a name="RHEL"></a>
 
@@ -298,7 +298,7 @@ sudo zypper install mssql-mlservices-packages-r-9.4.7*
 
    Альтернативная процедура заключается в том, что если вы еще не приняли условия соглашения о лицензировании ядра СУБД SQL Server, то программа установки обнаружит пакеты mssql-mlservices и выведет запрос на принятие условий лицензионного соглашения при запуске `mssql-conf setup`. Дополнительные сведения о параметрах лицензионного соглашения см. в статье [Настройка SQL Server с помощью средства mssql-conf](sql-server-linux-configure-mssql-conf.md#mlservices-eula).
 
-3. Включите исходящий сетевой доступ. По умолчанию исходящий сетевой доступ отключен. Чтобы включить исходящие запросы, задайте логическое свойство outboundnetworkaccess с помощью средства mssql-conf. Дополнительные сведения см. в статье [Настройка SQL Server на Linux с помощью средства mssql-conf](sql-server-linux-configure-mssql-conf.md#mlservices-outbound-access).
+3. Включите исходящий сетевой доступ. По умолчанию исходящий сетевой доступ отключен. Чтобы включить исходящие запросы, задайте логическое свойство outboundnetworkaccess с помощью средства mssql-conf. Дополнительные сведения см. в статье [Настройка SQL Server на Linux с помощью средства mssql-conf](sql-server-linux-configure-mssql-conf.md#mlservices-outbound-access).
 
    ```bash
    # Run as SUDO or root
@@ -312,7 +312,7 @@ sudo zypper install mssql-mlservices-packages-r-9.4.7*
 
    + Выполните этот файл, введя команду `source .bash_profile` в командной строке bash.
 
-5. Перезапустите службу панели запуска SQL Server и экземпляр ядра СУБД, чтобы считать обновленные значения из INI-файла. При изменении любого свойства, связанного с расширяемостью, появляется сообщение с напоминанием о необходимости перезапуска.  
+5. Перезапустите службу панели запуска SQL Server и экземпляр ядра СУБД, чтобы считать обновленные значения из INI-файла. При изменении любого свойства, связанного с расширяемостью, появляется сообщение с напоминанием о необходимости перезапуска.  
 
    ```bash
    systemctl restart mssql-launchpadd
@@ -426,7 +426,7 @@ sudo /opt/mssql/bin/mssql-conf setup accept-eula-ml
 
 |||
 |--|----|
-| Пакеты mssql/mlservices | [https://packages.microsoft.com/rhel/7/mssql-server-preview/](https://packages.microsoft.com/rhel/7/mssql-server-preview/) |
+| Пакеты mssql/mlservices | [https://packages.microsoft.com/rhel/7/mssql-server-2019/](https://packages.microsoft.com/rhel/7/mssql-server-2019/) |
 | Пакеты microsoft-r-open | [https://packages.microsoft.com/rhel/7/prod/](https://packages.microsoft.com/rhel/7/prod/) | 
 
 
@@ -434,14 +434,14 @@ sudo /opt/mssql/bin/mssql-conf setup accept-eula-ml
 
 |||
 |--|----|
-| Пакеты mssql/mlservices | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/) |
+| Пакеты mssql/mlservices | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/) |
 | Пакеты microsoft-r-open | [https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/) | 
 
 #### <a name="sles12-paths"></a>Пути SLES/12
 
 |||
 |--|----|
-| Пакеты mssql/mlservices | [https://packages.microsoft.com/sles/12/mssql-server-preview/](https://packages.microsoft.com/sles/12/mssql-server-preview/) |
+| Пакеты mssql/mlservices | [https://packages.microsoft.com/sles/12/mssql-server-2019/](https://packages.microsoft.com/sles/12/mssql-server-2019/) |
 | Пакеты microsoft-r-open | [https://packages.microsoft.com/sles/12/prod/](https://packages.microsoft.com/sles/12/prod/) | 
 
 #### <a name="package-list"></a>Список пакетов
@@ -519,7 +519,7 @@ mssql-mlservices-mlm-py-9.4.7.64
 
 Выполните следующие действия, чтобы создать и запустить Службы машинного обучения SQL Server в контейнере Docker. Дополнительные сведения см. в статье [Настройка образов контейнеров SQL Server в Docker](sql-server-linux-configure-docker.md).
 
-### <a name="prerequisites"></a>предварительные требования
+### <a name="prerequisites"></a>Предварительные требования
 
 - Интерфейс командной строки Git.
 - Docker Engine 1.8 или более поздней версии на любом поддерживаемом дистрибутиве Linux или Docker для Mac или Windows. Дополнительные сведения см. в разделе [Установка Docker](https://docs.docker.com/engine/installation/).
@@ -597,16 +597,16 @@ mssql-mlservices-mlm-py-9.4.7.64
     941e1bdf8e1d        mcr.microsoft.com/mssql/server/mssql-server-linux   "/bin/sh -c /opt/m..."   About an hour ago   Up About an hour     0.0.0.0:1401->1433/tcp   sql1
     ```
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Разработчики на языке R могут ознакомиться с простыми примерами, а также узнать, как код R работает с SQL Server. Дополнительные сведения см. в следующих статьях.
 
-+ [Учебник. Запуск R в T-SQL](../advanced-analytics/tutorials/quickstart-r-create-script.md)
-+ [Учебник. Аналитические функции в базе данных для разработчиков R](../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Руководство. Запуск R в T-SQL](../advanced-analytics/tutorials/quickstart-r-create-script.md)
++ [Руководство. Аналитические функции в базе данных для разработчиков R](../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 Разработчики на языке Python могут узнать, как использовать Python с SQL Server, изучив следующие руководства.
 
-+ [Учебник. Запуск Python в T-SQL](../advanced-analytics/tutorials/run-python-using-t-sql.md)
-+ [Учебник. Аналитические функции в базе данных для разработчиков Python](../advanced-analytics/tutorials/sqldev-in-database-python-for-sql-developers.md)
++ [Руководство. Запуск Python в T-SQL](../advanced-analytics/tutorials/run-python-using-t-sql.md)
++ [Руководство. Аналитические функции в базе данных для разработчиков Python](../advanced-analytics/tutorials/sqldev-in-database-python-for-sql-developers.md)
 
 Примеры машинного обучения, основанные на реальных сценариях, см. в разделе [руководствах по машинному обучению](../advanced-analytics/tutorials/machine-learning-services-tutorials.md).

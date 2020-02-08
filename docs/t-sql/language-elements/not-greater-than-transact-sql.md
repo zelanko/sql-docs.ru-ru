@@ -22,10 +22,10 @@ ms.assetid: 71a413ed-64f1-4ab9-9c52-c5959a77d00f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: ddc661b856767c140091e662118f3d5198318266
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072454"
 ---
 # <a name="gt-not-greater-than-transact-sql"></a>!&gt; (Не больше) (Transact-SQL)

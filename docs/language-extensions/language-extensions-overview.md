@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 57755782f2907eff25db942600cebc63f09598e0
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73658820"
 ---
 # <a name="what-is-sql-server-language-extensions"></a>Что такое расширения языка для SQL Server?
@@ -54,11 +54,11 @@ ms.locfileid: "73658820"
 
 + **Используйте системную хранимую процедуру [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)** для выполнения кода Java на SQL Server.
 
-### <a name="step-3-write-your-first-code"></a>Шаг 3. Напишите свой первый код
+### <a name="step-3-write-your-first-code"></a>Шаг 3. Напишите свой первый код
 
 Выполните код Java в сценарии T-SQL:
 
-+ [Учебник. Регулярные выражения с Java](tutorials/search-for-string-using-regular-expressions-in-java.md)
++ [Руководство. Регулярные выражения с Java](tutorials/search-for-string-using-regular-expressions-in-java.md)
 
 ## <a name="limitations"></a>Ограничения
 

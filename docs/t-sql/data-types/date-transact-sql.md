@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ae7ab885ced505ccf7da03d388e8063c276fc0d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113714"
 ---
 # <a name="date-transact-sql"></a>date (Transact-SQL)
@@ -73,7 +73,7 @@ ms.locfileid: "68113714"
 |-----------------|-----------------|  
 |[гг]ггммдд<br /><br /> гггг[мм][дд]|Данные типа **date** могут быть определены с помощью четырех, шести или восьми цифр. Строка из шести или восьми цифр всегда интерпретируется как **гмд**. На месяц и день всегда должно приходиться по две цифры. Строка из четырех цифр воспринимается как значение года.|  
   
-|интерфейс ODBC|Описание|  
+|ODBC|Описание|  
 |----------|-----------------|  
 |{ д 'гггг-мм-дд' }|Зависит от API-интерфейса ODBC.|  
   
@@ -206,7 +206,7 @@ SELECT
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-|Тип данных|Вывод|  
+|Тип данных|Выходные данные|  
 |---------------|------------|  
 |**time**|12:35:29. 1234567|  
 |**date**|2007-05-08|  

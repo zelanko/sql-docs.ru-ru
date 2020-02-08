@@ -12,10 +12,10 @@ ms.technology: backup-restore
 ms.prod_service: backup-restore
 ms.assetid: ''
 ms.openlocfilehash: 97993d621de9b10d930feb2fc54f53bc83f00293
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75258643"
 ---
 # <a name="quickstart-backup-and-restore-a-sql-server-database-on-premises"></a>Краткое руководство. Локальное резервное копирование и восстановление баз данных SQL Server
@@ -25,7 +25,7 @@ ms.locfileid: "75258643"
 
 Более подробные инструкции см. в разделе [Создание полной резервной копии базы данных](create-a-full-database-backup-sql-server.md) и [Восстановление резервной копии с помощью среды SSMS](restore-a-database-backup-using-ssms.md).
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 Для работы с этим кратким руководством вам потребуется следующее: 
 
 - [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)

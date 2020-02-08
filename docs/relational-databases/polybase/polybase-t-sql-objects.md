@@ -13,10 +13,10 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
 ms.openlocfilehash: e1e07db85220c9312ab71bb5fb020b9a9d611a5f
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710528"
 ---
 # <a name="polybase-transact-sql-reference"></a>Справочник по PolyBase Transact-SQL
@@ -38,13 +38,13 @@ ms.locfileid: "71710528"
 >[!NOTE]
 >Чтобы использовать PolyBase, необходимо иметь роль системного администратора или разрешения на управление сервером базы данных.
 
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
 
 Настройте PolyBase. См. раздел [PolyBase configuration](../../relational-databases/polybase/polybase-configuration.md).  
   
 ## <a name="create-external-tables-for-hadoop"></a>Создание внешних таблиц для Hadoop
 
-Применимо для следующих объектов: SQL Server (начиная с версии 2016), Parallel Data Warehouse
+Область применения: SQL Server (начиная с версии 2016), Parallel Data Warehouse
 
 **1. Создание учетных данных области базы данных**
 
@@ -120,7 +120,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ```  
 
 ## <a name="create-external-tables-for-azure-blob-storage"></a>Создание внешней таблицы для хранилища BLOB-объектов Azure  
-Применимо для следующих объектов: SQL Server (начиная с 2016), хранилище данных SQL Azure, Parallel Data Warehouse
+Область применения: SQL Server (начиная с 2016), хранилище данных SQL Azure, Parallel Data Warehouse
 
 **1. Создание учетных данных области базы данных**  
 
@@ -195,7 +195,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ```  
 
 ## <a name="create-external-tables-for-azure-data-lake-store"></a>Создание внешних таблиц для Azure Data Lake Store
-Применимо для следующих объектов: Хранилище данных SQL Azure
+Область применения: Хранилище данных SQL Azure
 
 Дополнительные сведения см. в разделе [Загрузка с помощью Azure Data Lake Store](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store).
 

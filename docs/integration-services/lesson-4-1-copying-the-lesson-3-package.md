@@ -11,10 +11,10 @@ ms.assetid: 0d053786-5203-43f3-a613-27a8dd2bc44a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5fb38e4be2b7d7c780dae3ee819e146958541c9f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295970"
 ---
 # <a name="lesson-4-1-copy-the-lesson-3-package"></a>Занятие 4-1. Копирование пакета занятия 3
@@ -60,6 +60,6 @@ ms.locfileid: "71295970"
 5.  Скопируйте и вставьте пакет занятия 3, как описано в шагах 3–8 в предыдущем разделе.
 
   
-## <a name="go-to-next-task"></a>Перейти к следующему шагу  
+## <a name="go-to-next-task"></a>Переход к следующей задаче  
 [Шаг 2. Создание поврежденного файла](../integration-services/lesson-4-2-creating-a-corrupted-file.md)  
   

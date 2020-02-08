@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 34ec0c2814dda7d2cf4bada10e5e53c05f8e08b9
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73724016"
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>Создание диаграмм и графиков с использованием SQL и R (пошаговое руководство)
@@ -21,7 +21,7 @@ ms.locfileid: "73724016"
 
 В этой части пошагового руководства вы ознакомитесь с методами создания графиков и карт с использованием R на основе данных SQL Server. В рамках этого руководства вы создадите простую гистограмму, а затем разработаете более сложную диаграмму-карту.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Для этого этапа требуется продолжение сеанса R из предыдущих этапов этого пошагового руководства. В нем используются строки подключения и объекты источников данных, созданные на этих этапах. Для запуска скрипта используются следующие средства и пакеты.
 
@@ -33,7 +33,7 @@ ms.locfileid: "73724016"
 
 ## <a name="create-a-histogram"></a>Создание гистограммы
 
-1. Создайте первую диаграмму с помощью функции [rxHistogram](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatasource) .  Функция rxHistogram предоставляет возможности, аналогичные возможностям пакетов R с открытым исходным кодом, однако она может работать в контексте удаленного выполнения.
+1. Создайте первую диаграмму с помощью функции [rxHistogram](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatasource).  Функция rxHistogram предоставляет возможности, аналогичные возможностям пакетов R с открытым исходным кодом, однако она может работать в контексте удаленного выполнения.
 
     ```R
     # Plot fare amount on SQL Server and return the plot

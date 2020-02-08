@@ -13,10 +13,10 @@ author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 65b88c890dc16adf1a1b626dd0ddc91ad359505b
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74821974"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Интеллектуальная обработка запросов в базах данных SQL
@@ -139,7 +139,7 @@ OPTION (USE HINT ('DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'));
 
 *LastRequestedMemory* позволяет просмотреть предоставленный в результате выполнения предыдущего запроса объем памяти в килобайтах (КБ). Атрибут *IsMemoryGrantFeedbackAdjusted* позволяет проверить состояние обратной связи с временно предоставляемым буфером памяти для инструкции в рамках фактического плана выполнения запроса. Ниже приведены значения, отображаемые в этом атрибуте:
 
-| Значение IsMemoryGrantFeedbackAdjusted | Description |
+| Значение IsMemoryGrantFeedbackAdjusted | Описание |
 |---|---|
 | Нет: первое выполнение | Обратная связь с временно предоставляемым буфером памяти не настраивает память для первой компиляции и связанной с ней операции выполнения.  |
 | Нет: точное предоставление | Если не выполняется временная запись на диск и в инструкции используется не менее 50 % объема предоставленной памяти, обратная связь с временно предоставляемым буфером памяти не активируется. |
@@ -212,14 +212,14 @@ OPTION (USE HINT ('DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK'));
 ### <a name="tracking-interleaved-execution-activity"></a>Отслеживание операций выполнения с чередованием
 Вы можете просмотреть атрибуты использования в фактическом плане выполнения запроса:
 
-| Атрибут плана выполнения | Description |
+| Атрибут плана выполнения | Описание |
 | --- | --- |
 | ContainsInterleavedExecutionCandidates | Применяется к узлу *QueryPlan*. Значение *true* означает, что план содержит кандидаты на выполнение с чередованием. |
 | IsInterleavedExecuted | Атрибут элемента *RuntimeInformation* под RelOp для узла TVF. Если значение равно *true*, значит, операция была материализована как часть операции выполнения с чередованием. |
 
 Вы также можете отслеживать случаи выполнения с чередованием с помощью следующих событий xEvents:
 
-| xEvent | Description |
+| xEvent | Описание |
 | ---- | --- |
 | interleaved_exec_status | Это событие возникает, когда происходит выполнение с чередованием. |
 | interleaved_exec_stats_update | Это событие описывает оценки кратности, обновленные выполнением с чередованием. |

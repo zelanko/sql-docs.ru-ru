@@ -12,10 +12,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f010a9fbd77d3b6a65103f3ed85a7cc521c279c9
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70009429"
 ---
 # <a name="columnstore-indexes---design-guidance"></a>Руководство по проектированию индексов columnstore
@@ -23,7 +23,7 @@ ms.locfileid: "70009429"
 
 Общие рекомендации по проектированию индексов columnstore. Немногие принципы проектирования позволяют добиться такого же высокого уровня сжатия данных и производительности запросов, как индексы columnstore. 
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 В этой статье предполагается, что вы уже знакомы с архитектурой и терминологией columnstore. Дополнительные сведения см. в статьях, посвященных [обзору индексов columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md) и [их архитектуре](../../relational-databases/sql-server-index-design-guide.md#columnstore_index).
 
@@ -185,7 +185,7 @@ ms.locfileid: "70009429"
 |Дефрагментация индекса columnstore|[ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)|ALTER INDEX ... REORGANIZE дефрагментирует индексы columnstore в оперативном режиме.|  
 |Слияние таблиц с индексами columnstore.|[MERGE (Transact-SQL)](../../t-sql/statements/merge-transact-sql.md)|
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 Чтобы создать пустой индекс columnstore для:
 
 * [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssSDS](../../includes/sssds-md.md)] — см. статью [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md);

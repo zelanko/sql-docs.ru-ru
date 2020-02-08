@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4cf6e85cef8d95e2b1bb167d482f36ec540196f6
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75255935"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Руководство по архитектуре и разработке индексов SQL Server
@@ -675,7 +675,7 @@ deltastore состоит из одной или нескольких групп
 
 Каждый столбец содержит несколько собственных значений в каждой группе строк. Эти значения называются **сегментами столбцов**. Каждая rowgroup содержит один сегмент столбца для каждого столбца в таблице. Каждый столбец содержит один сегмент столбца в каждой группе строк.
 
-![Сегмент столбца](../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "|::ref2::|") 
+![Сегмент столбца](../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "Сегмент столбца") 
  
 Когда индекс columnstore сжимает группу строк, он отдельно сжимает каждый сегмент столбца. Чтобы распаковать целый столбец, индексу columnstore необходимо распаковать только один сегмент столбца из каждой группы строк.   
 

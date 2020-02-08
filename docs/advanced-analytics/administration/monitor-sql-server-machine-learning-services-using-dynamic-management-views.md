@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: ddaca1490782c8fd3a88b941fbabe6af48531726
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727757"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>Мониторинг служб машинного обучения SQL Server с помощью динамических административных представлений
@@ -122,7 +122,7 @@ ON s.session_id = r.session_id;
 | reads | Число операций чтения, выполненных данным запросом. |
 | logical_reads | Число логических операций чтения, выполненных данным запросом. |
 | writes | Число операций записи, выполненных данным запросом. |
-| language | Ключевое слово, которое представляет поддерживаемый язык скриптов. |
+| Язык | Ключевое слово, которое представляет поддерживаемый язык скриптов. |
 | degree_of_parallelism | Число, указывающее количество созданных параллельных процессов. Это значение может отличаться от количества запрошенных параллельных процессов. |
 | external_user_name | Рабочая учетная запись Windows, под которой был выполнен скрипт. |
 
@@ -145,7 +145,7 @@ ORDER BY language, counter_name;
 
 | Столбец | Описание |
 |--------|-------------|
-| language | Имя зарегистрированного языка внешних скриптов. |
+| Язык | Имя зарегистрированного языка внешних скриптов. |
 | counter_name | Имя зарегистрированной функции внешних скриптов. |
 | counter_value | Общее количество экземпляров, где вызывалась зарегистрированная функция внешних скриптов на сервере. Данное значение является совокупным (подсчет ведется с момента установки компонента на экземпляре) и не может быть сброшено. |
 
@@ -229,7 +229,7 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 ## <a name="resource-pools"></a>Пулы ресурсов
 
-В [регуляторе ресурсов SQL Server](../../relational-databases/resource-governor/resource-governor.md) [пул ресурсов](../../relational-databases/resource-governor/resource-governor-resource-pool.md) представляет подмножество физических ресурсов экземпляра. Вы можете задать ограничения на загрузку ЦП, физические средства ввода-вывода и объем памяти, доступный для входящих запросов приложений, включая выполнение внешних скриптов, в пуле ресурсов. Просмотр пулов ресурсов, используемых для SQL Server и внешних скриптов.
+В [регуляторе ресурсов SQL Server](../../relational-databases/resource-governor/resource-governor.md)[пул ресурсов](../../relational-databases/resource-governor/resource-governor-resource-pool.md) представляет подмножество физических ресурсов экземпляра. Вы можете задать ограничения на загрузку ЦП, физические средства ввода-вывода и объем памяти, доступный для входящих запросов приложений, включая выполнение внешних скриптов, в пуле ресурсов. Просмотр пулов ресурсов, используемых для SQL Server и внешних скриптов.
 
 ![Выходные данные запроса пулов ресурсов](media/dmv-resource-pools.png "Выходные данные запроса пулов ресурсов")
 
@@ -306,9 +306,9 @@ WITH result sets((Package NVARCHAR(128), Version NVARCHAR(128), Location NVARCHA
 |--------|-------------|
 | Пакет | Имя установленного пакета. |
 | Версия | Версия пакета. |
-| Местоположение | Каталог, в котором находится пакет. |
+| Расположение | Каталог, в котором находится пакет. |
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 + [Управление решениями машинного обучения и их мониторинг](../../advanced-analytics/r/managing-and-monitoring-r-solutions.md)
 + [Расширенные события для служб машинного обучения](../../advanced-analytics/r/extended-events-for-sql-server-r-services.md)

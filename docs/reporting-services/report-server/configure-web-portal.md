@@ -11,17 +11,17 @@ ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 962ab17170c69b6225f852f0b625a6cd50fa20d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63308402"
 ---
 # <a name="configure-the-web-portal"></a>Настройка веб-портала
 
 Веб-портал — это клиентский веб-интерфейс, используемый для просмотра отчетов, управления содержимым сервера отчетов и предоставления пользователям доступа к серверу отчетов в собственном режиме. Веб-портал устанавливается вместе с веб-службой сервера отчетов внутри того же экземпляра сервера отчетов и при необходимости настраивается, если в программе установки пользователь выбирает параметр **Установить конфигурацию по умолчанию для работы в собственном режиме**. Кроме того, веб-портал можно настроить как задачу, которая будет выполняться после установки. В этом разделе содержатся сведения о следующих сценариях настройки веб-портала.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Чтобы использовать веб-портал, должны быть выполнены следующие предварительные условия.
 
@@ -66,7 +66,7 @@ ms.locfileid: "63308402"
 
 3. Замените его URL-адресом экземпляра сервера отчетов.
 
-4. Сохраните внесенные изменения и закройте файл.
+4. Сохраните изменения и закройте файл.
 
 Дополнительные сведения о местоположении и изменении файлов конфигурации см. в разделах [Изменение файла конфигурации служб Reporting Services (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) и [Файл конфигурации RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).
 
@@ -88,7 +88,7 @@ ms.locfileid: "63308402"
 
 6. Нажмите кнопку **Применить**.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Веб-портал](../../reporting-services/web-portal-ssrs-native-mode.md)  
 [Поддержка браузера для служб Reporting Services](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)
@@ -96,7 +96,7 @@ ms.locfileid: "63308402"
 [Проверка установки служб Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)   
 [Включение и отключение компонентов служб Reporting Services](../../reporting-services/report-server/turn-reporting-services-features-on-or-off.md)   
 [Управление сервером отчетов служб Reporting Services в собственном режиме](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
-[Файл конфигурации RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
+[RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [Настройка сервера отчетов, работающего в собственном режиме, для локального администрирования](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)
 
  Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

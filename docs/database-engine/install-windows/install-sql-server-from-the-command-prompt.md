@@ -85,10 +85,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: ebf82ec10f01b52b606a1250266884bbcd0a4497
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75557789"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>Установка SQL Server из командной строки
@@ -171,7 +171,7 @@ C:\SQLMedia\SQLServer2019> setup.exe /help
 ##  <a name="Install"></a> Параметры установки  
  При разработке скриптов командной строки для установки можно использовать параметры, приведенные в следующей таблице.  
   
-|Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Параметр|Description|  
+|Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Параметр|Описание|  
 |-----------------------------------------|---------------|-----------------|  
 |Управление программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/ACTION<br /><br /> **Обязательно**|Необходим для указания на рабочий процесс операций установки.<br /><br /> Поддерживаемые значения: **Install**.|  
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SUPPRESSPRIVACYSTATEMENTNOTICE<br /><br /> **Требуется только в том случае, если для автоматической установки указан параметр /Q или /QS.**|Позволяет скрыть заявление о конфиденциальности. Используя этот флаг, вы соглашаетесь с [заявлением о конфиденциальности](../../sql-server/sql-server-privacy.md).  |  
@@ -279,7 +279,7 @@ setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCO
 #### <a name="prepare-image-parameters"></a>Подготовка параметров образа  
  При разработке сценариев командной строки для подготовки экземпляра SQL Server без настройки можно использовать параметры, приведенные в следующей таблице. 
   
-|Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Параметр|Description|  
+|Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Параметр|Описание|  
 |-----------------------------------------|---------------|-----------------|  
 |Управление программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/ACTION<br /><br /> **Обязательно**|Необходим для указания на рабочий процесс операций установки.<br /><br /> Поддерживаемые значения: **PrepareImage**|  
 |Управление программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **Требуется только в том случае, если для автоматической установки указан параметр /Q или /QS.**|Требуется для подтверждения принятия условий лицензии.|  
@@ -312,7 +312,7 @@ setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 #### <a name="complete-image-parameters"></a>Параметры завершения образа  
  При разработке сценариев командной строки для завершения и настройки подготовленного экземпляра SQL Server можно использовать параметры, приведенные в следующей таблице. 
   
-|Компонент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Параметр|Description|  
+|Компонент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Параметр|Описание|  
 |-----------------------------------------|---------------|-----------------|  
 |Управление программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/ACTION<br /><br /> **Обязательно**|Необходим для указания на рабочий процесс операций установки.<br /><br /> Поддерживаемые значения: **CompleteImage**|  
 |Управление программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **Требуется только в том случае, если для автоматической установки указан параметр /Q или /QS.**|Требуется для подтверждения принятия условий лицензии.|  
@@ -377,7 +377,7 @@ setup.exe /q /ACTION=CompleteImage /INSTANCENAME=MYNEWINST /INSTANCEID=<MYINST> 
 ##  <a name="Upgrade"></a> Параметры обновления  
  При разработке скриптов командной строки для обновления можно использовать параметры, приведенные в следующей таблице. 
   
-|Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Параметр|Description|  
+|Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Параметр|Описание|  
 |-----------------------------------------|---------------|-----------------|  
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ACTION<br /><br /> **Обязательно**|Необходим для указания на рабочий процесс операций установки. Поддерживаемые значения:<br /><br /> **Обновление**<br /><br /> **EditionUpgrade**<br /><br /> <br /><br /> Значение **EditionUpgrade** используется для обновления существующего выпуска [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] на другой выпуск. Дополнительные сведения о поддерживаемой версии и обновлении выпуском см. в разделе [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).|  
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **Требуется только в том случае, если для автоматической установки указан параметр /Q или /QS.**|Требуется для подтверждения принятия условий лицензии.|  
@@ -415,7 +415,7 @@ setup.exe /q /ACTION=upgrade /INSTANCEID = <INSTANCEID>/INSTANCENAME=MSSQLSERVER
 ##  <a name="Repair"></a> Параметры исправления  
  При разработке скриптов командной строки для исправления можно использовать параметры, приведенные в следующей таблице. 
   
-|Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Параметр|Description|  
+|Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Параметр|Описание|  
 |-----------------------------------------|---------------|-----------------|  
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ACTION<br /><br /> **Обязательно**|Необходим для указания на рабочий процесс операций исправления.<br /><br /> Поддерживаемые значения: **Repair**|  
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ENU<br /><br /> **Необязательно**|Этот параметр используется для установки англоязычной версии [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] в локализованной операционной системе, если на установочном носителе доступны языковые пакеты для английского языка и языка операционной системы.|  
@@ -439,7 +439,7 @@ setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>
 ##  <a name="Rebuild"></a> Параметры перестроения системной базы данных  
  При разработке скриптов, запускаемых из командной строки для перестройки системных баз данных master, model, msdb и tempdb, используются параметры, приведенные в следующей таблице. Дополнительные сведения см. в разделе [Перестроение системных баз данных](../../relational-databases/databases/rebuild-system-databases.md). 
   
-|Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Параметр|Description|  
+|Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Параметр|Описание|  
 |-----------------------------------------|---------------|-----------------|  
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ACTION<br /><br /> **Обязательно**|Необходим для указания на рабочий процесс операций перестроения баз данных.<br /><br /> Поддерживаемые значения: **Rebuilddatabase**|  
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/INSTANCENAME<br /><br /> **Обязательно**|Указывает имя экземпляра [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] .<br /><br /> Дополнительные сведения см. в разделе [Instance Configuration](../../sql-server/install/instance-configuration.md).|  
@@ -458,7 +458,7 @@ setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>
 ##  <a name="Uninstall"></a> Параметры удаления  
  При разработке скриптов командной строки для удаления можно использовать параметры, приведенные в следующей таблице. 
   
-|Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Параметр|Description|  
+|Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Параметр|Описание|  
 |-----------------------------------------|---------------|-----------------|  
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ACTION<br /><br /> **Обязательно**|Необходим для указания на поток операций удаления.<br /><br /> Поддерживаемые значения: **Удаление**|  
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/CONFIGURATIONFILE<br /><br /> **Необязательно**|Указывает используемый файл [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) .|  
@@ -588,7 +588,7 @@ setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEP
 #### <a name="prepare-failover-cluster-parameters"></a>Параметры подготовки отказоустойчивого кластера  
  При разработке скриптов подготовки отказоустойчивого кластера из командной строки можно использовать параметры, приведенные в следующей таблице. В качестве первого шага в расширенной установке отказоустойчивого кластера необходимо подготовить экземпляры отказоустойчивого кластера на всех узлах отказоустойчивого кластера. Дополнительные сведения см. в разделе [Экземпляры отказоустойчивого кластера (режим AlwaysOn) (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md). 
   
-|Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Параметр|Description|  
+|Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Параметр|Описание|  
 |-----------------------------------------|---------------|-----------------|  
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ACTION<br /><br /> **Обязательно**|Необходим для указания на поток операций подготовки отказоустойчивого кластера.<br /><br /> Поддерживаемое значение: **PrepareFailoverCluster**|  
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **Требуется только в том случае, если для автоматической установки указан параметр /Q или /QS.**|Требуется для подтверждения принятия условий лицензии.|  
@@ -653,7 +653,7 @@ setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName="<Insert Instance name
 #### <a name="complete-failover-cluster-parameters"></a>Параметры завершения отказоустойчивого кластера  
  При разработке скриптов завершения отказоустойчивого кластера из командной строки можно использовать параметры, приведенные в следующей таблице. Это действие является вторым шагом в расширенной установке отказоустойчивого кластера. После выполнения подготовки на всех узлах отказоустойчивого кластера необходимо выполнить эту команду на узле, которому принадлежат общие диски. Дополнительные сведения см. в разделе [Экземпляры отказоустойчивого кластера (режим AlwaysOn) (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md). 
   
-|Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Параметр|Description|  
+|Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Параметр|Описание|  
 |-----------------------------------------|---------------|-----------------|  
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ACTION<br /><br /> **Обязательно**|Необходим для указания на поток операций завершения отказоустойчивого кластера.<br /><br /> Поддерживаемое значение: **CompleteFailoverCluster**|  
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ENU<br /><br /> **Необязательно**|Этот параметр используется для установки англоязычной версии SQL Server в локализованной операционной системе, если на установочном носителе доступны языковые пакеты для английского языка и языка операционной системы.|  
@@ -716,7 +716,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 #### <a name="upgrade-failover-cluster-parameters"></a>Параметры обновления отказоустойчивого кластера  
  При разработке скриптов обновления отказоустойчивого кластера из командной строки можно использовать параметры, приведенные в следующей таблице. Дополнительные сведения см. в статьях [Обновление экземпляра отказоустойчивого кластера [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] (программа установки)](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md) и [Экземпляры отказоустойчивого кластера (режим AlwaysOn) (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md). 
   
-|Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Параметр|Description|  
+|Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Параметр|Описание|  
 |-----------------------------------------|---------------|-----------------|  
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ACTION<br /><br /> **Обязательно**|Необходим для указания на рабочий процесс операций установки.<br /><br /> Поддерживаемое значение: **Обновление**|  
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **Требуется только в том случае, если для автоматической установки указан параметр /Q или /QS.**|Требуется для подтверждения принятия условий лицензии.|  
@@ -746,7 +746,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 ####  <a name="AddNode"></a> Параметры добавления узла  
  При разработке скриптов командной строки для добавления узла можно использовать параметры, приведенные в следующей таблице. 
   
-|Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Параметр|Description|  
+|Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Параметр|Описание|  
 |-----------------------------------------|---------------|-----------------|  
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ACTION<br /><br /> **Обязательно**|Необходим для указания на поток операций добавления узла.<br /><br /> Поддерживаемое значение: **AddNode**|  
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **Требуется только в том случае, если для автоматической установки указан параметр /Q или /QS.**|Требуется для подтверждения принятия условий лицензии.|  
@@ -791,7 +791,7 @@ setup.exe /q /ACTION=AddNode /INSTANCENAME="<Insert Instance Name>" /SQLSVCACCOU
 #### <a name="remove-node-parameters"></a>Параметры удаления узла  
  При разработке скриптов удаления узла из командной строки можно использовать параметры, приведенные в следующей таблице. Для удаления отказоустойчивого кластера необходимо выполнить операцию удаления узла на каждом узле отказоустойчивого кластера. Дополнительные сведения см. в разделе [Экземпляры отказоустойчивого кластера (режим AlwaysOn) (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md). 
   
-|Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Параметр|Description|  
+|Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Параметр|Описание|  
 |-----------------------------------------|---------------|-----------------|  
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ACTION<br /><br /> **Обязательно**|Необходим для указания на поток операций удаления узла.<br /><br /> Поддерживаемое значение: **RemoveNode**|  
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/CONFIGURATIONFILE<br /><br /> **Необязательно**|Указывает используемый файл [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) .|  
@@ -833,7 +833,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 ##  <a name="Feature"></a> Параметры компонентов  
  Чтобы установить конкретные компоненты, необходимо использовать параметр /FEATURES и указать родительский компонент или один из компонентов, приведенных в следующей таблице. Сведения о функциях, поддерживаемых различными выпусками SQL Server, см. в статье [Возможности, поддерживаемые различными выпусками [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). 
   
-|Параметр родительского компонента|Параметр компонента|Description|  
+|Параметр родительского компонента|Параметр компонента|Описание|  
 |:---|:---|:---|  
 |SQL||Устанавливает компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], компонент репликации, компонент Fulltext и [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)].|  
 ||SQLEngine|Устанавливает только компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].|  
@@ -873,7 +873,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
   
 ### <a name="feature-parameter-examples"></a>Примеры параметров компонентов  
   
-|Параметр и значения|Description| 
+|Параметр и значения|Описание| 
 |---------------|-----------------|  
 |/FEATURES=SQLEngine|Устанавливает компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] без репликации и без компонента Full-Text Search.|  
 |/FEATURES=SQLEngine, FullText|Устанавливает компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] с компонентом Full-Text Search.|  
@@ -886,7 +886,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
   
  Роль AllFeatures_WithDefaults действует по умолчанию для выпусков [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] и позволяет сократить количество диалоговых окон, показываемых пользователю. Она может быть указана из командной строки при установке выпуска SQL Server, не являющегося [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. 
   
-|Роль|Description|Установка...|  
+|Роль|Описание|Установка...|  
 |----------|-----------------|---------------|  
 |SPI_AS_ExistingFarm|Устанавливает службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в качестве именованного экземпляра [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в существующей ферме [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] или на отдельном сервере.|Модуль вычислений[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , предварительно настроенный для хранения и обработки данных в оперативной памяти.<br /><br /> Пакеты решения[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]<br /><br /> Установщик для [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]<br /><br /> электронная документация по SQL Server|  
 |SPI_AS_NewFarm|Устанавливает службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] как именованный экземпляр [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в новой ненастроенной ферме Office [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] или на отдельном сервере. Программа установки SQL Server настроит ферму при установке роли.|Модуль вычислений[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , предварительно настроенный для хранения и обработки данных в оперативной памяти.<br /><br /> Пакеты решения[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]<br /><br /> электронная документация по SQL Server<br /><br /> [!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> Средства настройки<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  

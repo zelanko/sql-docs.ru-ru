@@ -11,10 +11,10 @@ author: MsSQLGirl
 ms.author: jukoesma
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: bbb8a21ee63e0a14778ee57874ba0ef385ac6cba
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/20/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71150297"
 ---
 # <a name="sql-server-2019-privacy-supplement"></a>Приложение к конфиденциальности в SQL Server 2019
@@ -26,14 +26,14 @@ ms.locfileid: "71150297"
 - База данных SQL Azure
 - [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-telemetry-ssms?view=sql-server-2017)
 - SQL Server Data Tools (SSDT)
-- Azure Data Studio.
-- Помощник по миграции баз данных
-- Помощник миграции SQL Server
+- Azure Data Studio
+- Помощник по переносу баз данных
+- Помощник по миграции SQL Server
 - Расширение MS-SQL
 
 Определение *разрешенных сценариев использования*: В контексте этой статьи "разрешенные сценарии использования" определяются как действия, инициированные корпорацией Майкрософт.
 
-## <a name="access-control"></a>Контроль доступа
+## <a name="access-control"></a>Управление доступом
 
 Связанные с учетными данными сведения, используемые для защиты имен входа, пользователей или учетных записей в установке SQL Server.
 

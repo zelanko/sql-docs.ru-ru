@@ -11,10 +11,10 @@ ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.openlocfilehash: 631cfbf59cedddc699d82f36d4ea42ff23b0119c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909143"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Устранение неполадок с подключением PolyBase к Kerberos
@@ -30,7 +30,7 @@ ms.locfileid: "72909143"
 > Это средство поможет вам исключить проблемы, не связанные с SQL Server, чтобы сосредоточиться на решении проблем установки HDFS Kerberos, а именно — выявлении проблем с неправильной конфигурацией имени пользователя или пароля и неправильной конфигурацией протокола Kerberos для кластера.      
 > Это средство полностью независимо от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Оно доступно в виде Jupyter Notebook и требует Azure Data Studio.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 1. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM CU6, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1) CU3, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] или выше с установленной службой Polybase
 1. Кластер Hadoop (Cloudera или Hortonworks), защищенный с помощью Kerberos (Active Directory или MIT)

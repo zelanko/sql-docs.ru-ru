@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 81e51dfca5692882ec75841f9be1244ef3479c33
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74401569"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Управление хранением данных журнала в темпоральных таблицах с системным управлением версиями
@@ -172,7 +172,7 @@ COMMIT ;
 
 На следующем рисунке показана начальная конфигурация секционирования для сохранения данных за 6 месяцев.
 
-![Секционирование](../../relational-databases/tables/media/partitioning.png "|::ref5::|")
+![Секционирование](../../relational-databases/tables/media/partitioning.png "Секционирование")
 
 > **ПРИМЕЧАНИЕ.** При настройке секционирования изучите вопросы, связанные с производительностью, чтобы понять, как влияет на производительность использование параметров RANGE LEFT и RANGE RIGHT.
 
@@ -180,7 +180,7 @@ COMMIT ;
 
 На следующем рисунке представлены повторяющиеся задачи обслуживания секций (см. инструкции ниже).
 
-![Секционирование2](../../relational-databases/tables/media/partitioning2.png "|::ref6::|")
+![Секционирование2](../../relational-databases/tables/media/partitioning2.png "Секционирование2")
 
 Подробные инструкции для повторяющихся задач обслуживания секций.
 

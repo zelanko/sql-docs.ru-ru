@@ -12,10 +12,10 @@ helpviewer_keywords:
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 237ec09347ab139aabcc9f475f5e3b64aba0f054
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73633002"
 ---
 # <a name="create-a-workload-group"></a>Создание группы рабочей нагрузки
@@ -85,7 +85,7 @@ GO
  [Активация регулятора ресурсов](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Создание пула ресурсов](../../relational-databases/resource-governor/create-a-resource-pool.md)   
  [Изменение параметров группы рабочей нагрузки](../../relational-databases/resource-governor/change-workload-group-settings.md)   
- [Создать и проверить определяемую пользователем функцию-классификатор](../../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md)   
+ [Создание и проверка определяемой пользователем функции-классификатора](../../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md)   
  [CREATE WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/create-workload-group-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR (Transact-SQL)](../../t-sql/statements/alter-resource-governor-transact-sql.md)   
  [CREATE EXTERNAL RESOURCE POOL (Transact-SQL)](../../t-sql/statements/create-external-resource-pool-transact-sql.md)  

@@ -15,10 +15,10 @@ ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a13799d353fcf1e1dff1999009cc2f1e8dcedc76
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294182"
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>Редактор задачи «Профилирование данных» (страница «Запросы профиля»)
@@ -44,7 +44,7 @@ ms.locfileid: "71294182"
 ### <a name="requests-pane-options"></a>Параметры панели запросов  
  Панель запросов имеет следующие параметры.  
   
- **Вид**  
+ **View** (Вид)  
  Укажите, нужно ли просмотреть все профили, настроенные для задачи, или только один из этих профилей.  
   
  Столбцы панели запросов изменились в соответствии с выбранным вами параметром **Просмотр** . Дополнительные сведения о каждом из этих столбцов см. в следующем разделе «Столбцы панели запросов».  

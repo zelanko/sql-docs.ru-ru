@@ -23,12 +23,12 @@ manager: jroth
 ms.custom: seo-lt-2019
 ms.date: 09/25/2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: deaaa783f465c5cfecb940df4b9dd56e10590bc5
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 0fb3a05f08cdf3481b9e2957c35bf6ee48bce6b0
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056393"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909967"
 ---
 # <a name="use-bulk-insert-or-openrowsetbulk-to-import-data-to-sql-server"></a>Импорт данных в SQL Server при помощи инструкции BULK INSERT или OPENROWSET(BULK...)
 
@@ -114,7 +114,7 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 В приведенном ниже примере показано, как с помощью команды BULK INSERT загрузить данные из CSV-файла в расположение хранилища BLOB-объектов Azure, для которого был создан ключ SAS. Расположение хранилища BLOB-объектов Azure настроено как внешний источник данных. Для этого требуются учетные данные для базы с подписанным URL-адресом, зашифрованным с помощью главного ключа в пользовательской базе данных.
 
 ```sql
---> Optional - a MASTER KEY is not requred if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
+--> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1';
 GO
 --> Optional - a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
@@ -145,7 +145,7 @@ WITH (DATA_SOURCE = 'MyAzureBlobStorage');
 В приведенном ниже примере показано, как с помощью команды OPENROWSET загрузить данные из CSV-файла в расположение хранилища BLOB-объектов Azure, для которого был создан ключ SAS. Расположение хранилища BLOB-объектов Azure настроено как внешний источник данных. Для этого требуются учетные данные для базы с подписанным URL-адресом, зашифрованным с помощью главного ключа в пользовательской базе данных.
 
 ```sql
---> Optional - a MASTER KEY is not requred if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
+--> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1';
 GO
 --> Optional - a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!

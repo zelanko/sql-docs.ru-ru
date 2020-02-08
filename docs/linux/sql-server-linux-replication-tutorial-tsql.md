@@ -12,10 +12,10 @@ ms.technology: linux
 titleSuffix: SQL Server on Linux
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
 ms.openlocfilehash: 00ae6ecf66bd52d5415c630dd2b66a1a9ecaebd6
-ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75952510"
 ---
 # <a name="configure-replication-with-t-sql"></a>Настройка репликации с помощью T-SQL
@@ -36,7 +36,7 @@ ms.locfileid: "75952510"
 
 Настройку репликации можно полностью произвести с помощью [хранимых процедур репликации](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 Для выполнения этого руководства потребуется следующее:
 
 - два экземпляра SQL Server с последней версией SQL Server на Linux;

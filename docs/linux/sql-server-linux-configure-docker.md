@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: a184a6e19154d0e8534fe843cf65c1afc9d2f547
-ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
+ms.openlocfilehash: e97f535dedd2b6ee25abfc886d1f08272697c549
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75776413"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76162635"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Настройка образов контейнеров с SQL Server в Docker
 
@@ -96,7 +96,7 @@ docker run --name sqlenterprise `
       -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
       -e "MSSQL_PID=Enterprise" -p 1433:1433 `
       -d "mcr.microsoft.com/mssql/server:2017-latest"
- ```
+```
 
 > [!IMPORTANT]
 > Передавая значение **Y** в переменной среды **ACCEPT_EULA** и значение выпуска в переменной среды **MSSQL_PID**, вы подтверждаете, что у вас есть действительная лицензия на выпуск и версию SQL Server, которые вы хотите использовать. Кроме того, вы соглашаетесь с тем, что использование программного обеспечения SQL Server, выполняющегося в образе контейнера Docker, будет регламентироваться условиями вашей лицензии SQL Server.
@@ -235,11 +235,11 @@ sqlcmd -S 10.3.2.4,1402 -U SA -P "<YourPassword>"
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
 ```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2017-latest
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>/data:/var/opt/mssql/data -v <host directory>/log:/var/opt/mssql/log -v <host directory>/secrets:/var/opt/mssql/secrets -d mcr.microsoft.com/mssql/server:2017-latest
 ```
 
 ```PowerShell
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2017-latest
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>/data:/var/opt/mssql/data -v <host directory>/log:/var/opt/mssql/log -v <host directory>/secrets:/var/opt/mssql/secrets -d mcr.microsoft.com/mssql/server:2017-latest
 ```
 
 ::: moniker-end
@@ -247,11 +247,11 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
 ```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>/data:/var/opt/mssql/data -v <host directory>/log:/var/opt/mssql/log -v <host directory>/secrets:/var/opt/mssql/secrets -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
 ```
 
 ```PowerShell
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>/data:/var/opt/mssql/data -v <host directory>/log:/var/opt/mssql/log -v <host directory>/secrets:/var/opt/mssql/secrets -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
 ```
 
 ::: moniker-end
@@ -536,14 +536,14 @@ docker pull mcr.microsoft.com/mssql/server:<image_tag>
 > Контейнеры SQL Server 2019 автоматически запускаются как не корневые, поэтому следующие шаги применяются только к контейнерам SQL Server 2017, которые по умолчанию запускаются как корневые.
 
 1. Скачайте [образец файла dockerfile для непривилегированного контейнера SQL Server](https://raw.githubusercontent.com/microsoft/mssql-docker/master/linux/preview/examples/mssql-server-linux-non-root/Dockerfile) и сохраните его как `dockerfile`.
- 
+
 2. Выполните следующую команду в контексте каталога dockerfile, чтобы выполнить сборку непривилегированного контейнера SQL Server:
 
 ```bash
 cd <path to dockerfile>
 docker build -t 2017-latest-non-root .
 ```
- 
+
 3. Запустите контейнер.
 
 ```bash
@@ -552,16 +552,16 @@ docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword@" --cap-add SYS_P
 
 > [!NOTE]
 > Флаг `--cap-add SYS_PTRACE` необходим для создания дампов в целях устранения неполадок непривилегированных контейнеров SQL Server.
- 
+
 4. Убедитесь в том, что контейнер запущен от имени пользователя, не являющегося привилегированным:
 
 Войдите в контейнер с помощью команды docker exec.
 ```bash
 docker exec -it sql1 bash
 ```
- 
+
 Выполните команду `whoami`, которая вернет пользователя, от имени которого выполняется контейнер.
- 
+
 ```bash
 whoami
 ```
@@ -569,14 +569,14 @@ whoami
 ## <a id="nonrootuser"></a> Запуск контейнера от имени другого непривилегированного пользователя в узле
 
 Чтобы запустить контейнер SQL Server от имени другого непривилегированного пользователя, добавьте флаг -u в команду docker run. Непривилегированный контейнер должен выполняться в составе привилегированной группы, если только том не подключен к каталогу /var/opt/mssql, к которому есть доступ у непривилегированного пользователя. Привилегированная группа не предоставляет дополнительных привилегированных разрешений пользователю, не являющемуся привилегированным.
- 
+
 **Выполнение от имени пользователя с ИД пользователя 4000**
- 
+
 SQL Server можно запускать с настраиваемым идентификатором пользователя. Например, следующая команда запускает SQL Server с идентификатором пользователя 4000:
 ```bash
 docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" --cap-add SYS_PTRACE -u 4000:0 -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
 ```
- 
+
 > [!Warning]
 > Убедитесь в том, что в контейнере SQL Server есть именованный пользователь, например mssql или root. В противном случае SQLCMD невозможно будет запустить в контейнере. Вы можете проверить, выполняется ли контейнер SQL Server от имени именованного пользователя, запустив `whoami` в контейнере.
 
@@ -587,34 +587,34 @@ docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" --cap-add SYS_PT
 ```bash
 docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" -u 0:0 -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
 ```
- 
+
 **Запуск от имени пользователя на хост-компьютере**
- 
+
 SQL Server можно запустить от имени существующего пользователя на хост-компьютере с помощью следующей команды:
 ```bash
 docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" --cap-add SYS_PTRACE -u $(id -u myusername):0 -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
 ```
- 
+
 **Запуск от имени другого пользователя и группы**
- 
+
 SQL Server можно запускать от имени произвольного пользователя и группы. В этом примере подключенный том имеет разрешения, настроенные для пользователя или группы на хост-компьютере.
- 
+
 ```bash
 docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" --cap-add SYS_PTRACE -u (id -u myusername):(id -g myusername) -v /path/to/mssql:/var/opt/mssql -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
 ```
- 
+
 ## <a id="storagepermissions"></a> Настройка разрешений на постоянное сохранение для непривилегированных контейнеров
 
 Чтобы разрешить непривилегированному пользователю доступ к файлам базы данных в подключенных томах, пользователь или группа, от имени которых выполняется контейнер, должны иметь доступ к постоянному хранилищу файлов.  
 
 Узнать текущего владельца файлов базы данных можно с помощью приведенной ниже команды.
- 
+
 ```bash
 ls -ll <database file dir>
 ```
 
 Если у SQL Server нет доступа к сохраненным файлам базы данных, выполните одну из приведенных ниже команд.
- 
+
 **Предоставление привилегированной группе доступа к файлам базы данных для чтения и записи**
 
 Предоставьте привилегированной группе разрешения на доступ к указанным ниже каталогам, чтобы у непривилегированного контейнера SQL Server был доступ к файлам базы данных.
@@ -698,7 +698,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 
    ```bash
     usermod -aG docker $USER
-    ```
+   ```
 - Проверьте наличие сообщений об ошибках от контейнера.
 
     ```bash

@@ -11,10 +11,10 @@ ms.assetid: 56105f3f-e500-4669-8c8e-acf434527727
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e2b43837de8617af559e2a810c89115e5a3963d3
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283263"
 ---
 # <a name="lesson-3-2-add-and-configure-logging"></a>Занятие 3-2. Добавление и настройка ведения журнала
@@ -60,8 +60,8 @@ ms.locfileid: "71283263"
   
 13. На вкладке **Поставщики и журналы** в столбце **Имя** выберите **Файл журнала занятия 3**. Как только будет создан регистратор для пакета, при желании можно отменить его выбор, чтобы прекратить регистрацию. При этом регистратор не надо удалять и создавать заново.  
   
-14. Нажмите кнопку **ОК**.  
+14. Щелкните **ОК**.  
   
-## <a name="go-to-next-task"></a>Перейти к следующему шагу  
+## <a name="go-to-next-task"></a>Переход к следующей задаче  
 [Шаг 3. Тестирование пакета занятия 3](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
   

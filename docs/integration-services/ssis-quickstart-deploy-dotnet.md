@@ -9,10 +9,10 @@ ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 43820f44e789330ed437c104e385090a8179a2b3
-ms.sourcegitcommit: ef830f565ee07dc7d4388925cc3c86c5d2cfb4c7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74947126"
 ---
 # <a name="deploy-an-ssis-project-with-c-code-in-a-net-app"></a>Развертывание проекта служб SSIS с кодом C# в приложении .NET
@@ -24,7 +24,7 @@ ms.locfileid: "74947126"
 
 Чтобы создать приложение C#, вы можете использовать Visual Studio, Visual Studio Code или другое средство.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Прежде чем начать, убедитесь, что у вас установлено средство Visual Studio или Visual Studio Code. Скачайте бесплатный выпуск Community средства Visual Studio или бесплатное средство Visual Studio Code на странице [скачивания Visual Studio](https://www.visualstudio.com/downloads/).
 

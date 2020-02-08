@@ -18,10 +18,10 @@ ms.assetid: 1eaed0e4-1c72-45a9-9926-5b513335cf33
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 09dc970627cb282ed2597c191727b57c173c7bc9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930632"
 ---
 # <a name="instanceof-geography-data-type"></a>InstanceOf (тип данных geography)

@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3c442568ad7764ba0f9031a02a8080499555d26f
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558085"
 ---
 # <a name="using-always-encrypted-with-the-net-framework-data-provider-for-sql-server"></a>Using Always Encrypted with the .NET Framework Data Provider for SQL Server (Использование Always Encrypted с поставщиком данных .NET Framework для SQL Server)
@@ -26,7 +26,7 @@ ms.locfileid: "75558085"
 
 Функция Always Encrypted позволяет шифровать конфиденциальные данные в клиентских приложениях, не раскрывая данные или ключи шифрования для SQL Server или Базы данных SQL Azure. Драйвер с поддержкой постоянного шифрования, такой как поставщик данных .NET Framework для SQL Server, реализует это за счет прозрачного шифрования и расшифровки конфиденциальных данных в клиентском приложении SQL Server. Драйвер автоматически определяет, какие параметры запроса соответствуют важным столбцам базы данных (защищенным с помощью Always Encrypted), и шифрует значения этих параметров перед передачей данных в SQL Server или Базу данных SQL Azure. Аналогичным образом драйвер прозрачно расшифровывает данные, полученные из зашифрованных столбцов базы в результатах запроса. Дополнительные сведения см. в разделе [Разработка приложений с помощью Always Encrypted](always-encrypted-client-development.md) и [Разработка приложений с помощью Always Encrypted с безопасными анклавами](always-encrypted-enclaves-client-development.md).
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 - Настройте функцию постоянного шифрования в базе данных. В процесс настройки входят действия по подготовке ключей постоянного шифрования и настройке шифрования для выбранных столбцов базы данных. Если в базе данных Always Encrypted еще не настроен, следуйте инструкциям в разделе [Начало работы с Always Encrypted](always-encrypted-database-engine.md#getting-started-with-always-encrypted).
 - Убедитесь, что на компьютере, предназначенном для разработки, установлена платформа .NET Framework 4.6.1 или более поздней версии. Дополнительные сведения см. в разделе [.NET Framework 4.6](https://msdn.microsoft.com/library/w0x726c2(v=vs.110).aspx). Также необходимо убедиться, что в среде разработки в качестве целевой версии платформы установлена платформа .NET Framework 4.6 или более поздней версии. Если вы используете Visual Studio, обратитесь к разделу [Руководство. Определение целевой версии платформы .NET Framework](https://msdn.microsoft.com/library/bb398202.aspx). 
@@ -295,7 +295,7 @@ cmd.ExecuteNonQuery();
 В состав поставщика данных .NET Framework для SQL Server входят следующие встроенные поставщики хранилища главных ключей столбцов, которые предварительно зарегистрированы с конкретными именами поставщиков (используемыми для поиска поставщика).
 
 
-| Class | Description | Имя поставщика |
+| Class | Описание | Имя поставщика |
 |:---|:---|:---|
 |Класс SqlColumnEncryptionCertificateStoreProvider| Поставщик для хранилища сертификатов Windows. | MSSQL_CERTIFICATE_STORE |
 |[Класс SqlColumnEncryptionCngProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx) <br><br>**Примечание.** Этот поставщик доступен в .NET Framework 4.6.1 или более поздней версии. |Поставщик хранилища ключей, поддерживающий [Microsoft Cryptography API: Next Generation (CNG) API](https://msdn.microsoft.com/library/windows/desktop/aa376210.aspx). Как правило, такое хранилище представляет собой аппаратный модуль безопасности — физическое устройство, которое защищает цифровые ключи и управляет ими, а также обеспечивает обработку шифрования.  | MSSQL_CNG_STORE|
@@ -565,7 +565,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 
 
-|Имя|Description|Версия .NET
+|Имя|Описание|Версия .NET
 |:---|:---|:---
 |[Класс SqlColumnEncryptionCertificateStoreProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider.aspx)|Поставщик хранилища ключей для хранилища сертификатов Windows.|  4.6
 |[Класс SqlColumnEncryptionCngProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)|Поставщик хранилища ключей для интерфейса Microsoft Cryptography API: Next Generation (CNG).|  4.6.1

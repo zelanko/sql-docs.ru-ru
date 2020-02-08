@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 97da2ed795d002fa47900eb21ead90b48b525387
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727559"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>Установка предварительно обученных моделей машинного обучения в SQL Server
@@ -30,7 +30,7 @@ ms.locfileid: "73727559"
 | [getSentiment](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](https://docs.microsoft.com//machine-learning-server/python-reference/microsoftml/get-sentiment) | Создает положительную или отрицательную оценку тональности для текстовых входных данных. |
 | [featurizeImage](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizeimage) | [featurize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-image) | Извлекает текстовые данные из входного файла изображения. |
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Алгоритмы машинного обучения обладают высокими требованиями к вычислительным ресурсам. Мы рекомендуем использовать 16 ГБ ОЗУ для рабочих нагрузок с низкой или средней интенсивностью, включая пошаговые руководства со всеми примерами данных.
 
@@ -213,7 +213,7 @@ ms.locfileid: "73727559"
 
 ## <a name="see-also"></a>См. также раздел
 
-+ [Изучение служб машины SQL Server](sql-machine-learning-services-windows-install.md)
++ [Службы машинного обучения SQL Server](sql-machine-learning-services-windows-install.md)
 + [Обновление компонентов R и Python в экземплярах SQL Server](../install/upgrade-r-and-python.md)
 + [Пакет MicrosoftML для R](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
 + [Пакет microsoftml для Python](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)

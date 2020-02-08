@@ -13,10 +13,10 @@ ms.author: haoqian
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
 ms.openlocfilehash: 68a24188a307dd84a28342d89559630efa9a9d80
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72305071"
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>Выполнение пакетов в SQL Server Integration Services (SSIS) Scale Out
@@ -127,5 +127,5 @@ GO
 ## <a name="sql_agent"></a> Выполнение пакета в рамках задания агента SQL Server
 Пакет служб SSIS может выполняться как один из этапов задания агента SQL Server. Чтобы выполнить пакет в Scale Out, задайте **Scale Out** в качестве режима выполнения по умолчанию. После того, как настроен режим выполнения по умолчанию **Scale Out**, пакеты в заданиях агента SQL Server будут выполняться в режиме Scale Out.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 -   [Устранение неполадок Scale Out](troubleshooting-scale-out.md)

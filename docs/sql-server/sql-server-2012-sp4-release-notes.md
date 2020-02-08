@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
 ms.openlocfilehash: 6fba15e73edf14b9bb794012c8fe56ec8264a5b2
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73632954"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>Заметки о выпуске пакетов обновления к SQL Server 2012
@@ -128,14 +128,14 @@ ms.locfileid: "73632954"
 Полный список ошибок и известных проблем, исправленных в этом пакете обновления, см. в [статье базы знаний](https://support.microsoft.com/kb/2674319).   
 
 ### <a name="reinstalling--instances-of-sql-server-failover-cluster-fails-if-you-use-the-same-ip-address"></a>Переустановка экземпляров отказоустойчивого кластера SQL Server завершается ошибкой, если используется один и тот же IP-адрес  
-**Проблема:** при указании неверного IP-адреса во время установки экземпляра отказоустойчивого кластера SQL Server установка завершается сбоем. После удаления сбойного экземпляра при попытке повторной установки экземпляра отказоустойчивого кластера SQL Server с тем же именем экземпляра и правильным IP-адресом установка также завершается сбоем. Сбой возникает в связи с повторяющейся группой ресурсов, которая остается после предыдущей попытки установки.  
+**Проблема**. при указании неверного IP-адреса во время установки экземпляра отказоустойчивого кластера SQL Server установка завершается сбоем. После удаления сбойного экземпляра при попытке повторной установки экземпляра отказоустойчивого кластера SQL Server с тем же именем экземпляра и правильным IP-адресом установка также завершается сбоем. Сбой возникает в связи с повторяющейся группой ресурсов, которая остается после предыдущей попытки установки.  
   
 **Решение:** для решения этой проблемы используйте другое имя экземпляра во время повторной установки или вручную удалите группу ресурсов перед повторной установкой. Дополнительные сведения см. на странице [Добавление и удаление узлов в отказоустойчивом кластере SQL Server](failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md). 
   
 ### <a name="analysis-services-and-powerpivot"></a>Службы Analysis Services и PowerPivot  
   
 ##### <a name="powerpivot-configuration-tool-does-not-create-the-powerpivot-gallery"></a>Средство настройки PowerPivot не создает коллекцию PowerPivot  
-**Проблема:** Средство настройки PowerPivot предоставляет сайт группы, поэтому не создается коллекция PowerPivot.  
+**Проблема**. Средство настройки PowerPivot предоставляет сайт группы, поэтому не создается коллекция PowerPivot.  
   
 **Решение:** Создайте приложение (библиотеку).  
   
@@ -146,14 +146,14 @@ ms.locfileid: "73632954"
 3.  Щелкните **Коллекция PowerPivot**.  
   
 #### <a name="to-use-powerpivot-for-excel-with-excel-2013-you-must-use-the-add-in-that-is-installed-with-excel"></a>Для использования PowerPivot для Excel с Excel 2013 необходимо использовать надстройку, установленную с Excel  
-**Проблема:** Начиная с Office 2010, PowerPivot для Excel представляет собой отдельную надстройку, которую можно скачать по адресу [https://www.microsoft.com/bi/powerpivot.aspx](https://www.microsoft.com/bi/powerpivot.aspx). Ее можно также загрузить из [центра загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=29074). Обратите внимание, что для скачивания доступны две версии надстройки PowerPivot. Одна из них поставляется с SQL Server 2008 R2, а вторая — с SQL Server 2012. Но для Оffice 2013 PowerPivot для Excel поставляется с Оffice и устанавливается при установке Excel. Версии PowerPivot для Excel 2010 в SQL Server 2008 R2 и SQL Server 2012 несовместимы с Excel 2013, но все равно можно установить PowerPivot для Excel 2010 на клиентском компьютере, если есть необходимость эксплуатировать Excel 2010 параллельно с Excel 2013. Другими словами, могут сосуществовать 2 версии Excel, а вместе с ними соответствующие надстройки PowerPivot.  
+**Проблема**. Начиная с Office 2010, PowerPivot для Excel представляет собой отдельную надстройку, которую можно скачать по адресу [https://www.microsoft.com/bi/powerpivot.aspx](https://www.microsoft.com/bi/powerpivot.aspx). Ее можно также загрузить из [центра загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=29074). Обратите внимание, что для скачивания доступны две версии надстройки PowerPivot. Одна из них поставляется с SQL Server 2008 R2, а вторая — с SQL Server 2012. Но для Оffice 2013 PowerPivot для Excel поставляется с Оffice и устанавливается при установке Excel. Версии PowerPivot для Excel 2010 в SQL Server 2008 R2 и SQL Server 2012 несовместимы с Excel 2013, но все равно можно установить PowerPivot для Excel 2010 на клиентском компьютере, если есть необходимость эксплуатировать Excel 2010 параллельно с Excel 2013. Другими словами, могут сосуществовать 2 версии Excel, а вместе с ними соответствующие надстройки PowerPivot.  
   
 **Решение:** Чтобы использовать PowerPivot для Excel 2013, необходимо включить надстройку COM. В Excel 2013 выберите **Файл** | **Параметры** | **Надстройки**. В раскрывающемся списке выберите **Управление** , а затем щелкните **Надстройки COM** и нажмите кнопку **Перейти**. В окне **Надстройки COM**выберите **Microsoft Office PowerPivot для Microsoft Excel 2013** и нажмите кнопку **ОК**.  
   
 ### <a name="reporting-services"></a>Службы Reporting Services  
   
 #### <a name="install-and-configure-sharepoint-server-2013-prior-to-installing-reporting-services"></a>Установка и настройка SharePoint Server 2013 перед установкой служб Reporting Services  
-**Проблема:** Выполните следующие требования **перед** установкой служб SQL Server Reporting Services (SSRS).  
+**Проблема**. Выполните следующие требования **перед** установкой служб SQL Server Reporting Services (SSRS).  
   
 1.  Запустите инструмент подготовки продуктов SharePoint 2013.  
   
@@ -179,14 +179,14 @@ ms.locfileid: "73632954"
 #### <a name="power-view-sheets-in-a-powerpivot-workbook-are-deleted-after-a-scheduled-data-refresh"></a>После планового обновления данных листы Power View в книге PowerPivot удаляются  
 **Проблема**. В надстройке PowerPivot для SharePoint при использовании **планового обновления данных** для книги с Power View удаляются все листы Power View.  
   
-**Обходной путь**: Чтобы использовать **плановое обновление данных** с книгами Power View, создайте книгу PowerPivot, представляющую собой просто модель данных. Создайте отдельную книгу с листами Excel и листами Power View, ссылающимися на книгу PowerPivot с моделью данных. Обновление данных можно планировать только для книги PowerPivot с моделью данных.  
+**Возможное решение**: Чтобы использовать **плановое обновление данных** с книгами Power View, создайте книгу PowerPivot, представляющую собой просто модель данных. Создайте отдельную книгу с листами Excel и листами Power View, ссылающимися на книгу PowerPivot с моделью данных. Обновление данных можно планировать только для книги PowerPivot с моделью данных.  
   
 ### <a name="data-quality-services"></a>Data Quality Services  
   
 #### <a name="dqs-available-in-the-incorrect-edition-of-sql-server-2012"></a>Доступ к DQS в неверном выпуске SQL Server 2012  
-**Проблема:** В версии RTM [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] компонент служб Data Quality Services (DQS) поддерживается в выпусках SQL Server, отличных от Enterprise, Business Intelligence и Developer. После установки SQL Server 2012 с пакетом обновления 1 (SP1) службы DQS будут недоступны во всех выпусках, за исключением Enterprise, Business Intelligence и Developer.  
+**Проблема**. В версии RTM [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] компонент служб Data Quality Services (DQS) поддерживается в выпусках SQL Server, отличных от Enterprise, Business Intelligence и Developer. После установки SQL Server 2012 с пакетом обновления 1 (SP1) службы DQS будут недоступны во всех выпусках, за исключением Enterprise, Business Intelligence и Developer.  
   
-**Обходной путь**: Если службы DQS используются в неподдерживаемом выпуске, выполните обновление до поддерживаемого выпуска или удалите зависимость от этой функции в своих приложениях.  
+**Возможное решение**: Если службы DQS используются в неподдерживаемом выпуске, выполните обновление до поддерживаемого выпуска или удалите зависимость от этой функции в своих приложениях.  
   
 ### <a name="sql-server-express"></a>SQL Server Express  
   
@@ -196,7 +196,7 @@ ms.locfileid: "73632954"
 ### <a name="change-data-capture-service-and-designer-for-oracle-by-attunity"></a>Служба системы отслеживания измененных данных и конструктор для Oracle компании Attunity  
   
 #### <a name="upgrading-the-cdc-service-and-designer"></a>Обновление службы и конструктора CDC  
-**Проблема:** Если Change Data Capture Designer для Oracle и Change Data Capture Service для Oracle от Attunity установлены на компьютере одновременно с установкой SQL Server 2012 с пакетом обновления 1 (SP1), эти компоненты не обновляются при установке пакета обновления 1 (SP1).  
+**Проблема**. Если Change Data Capture Designer для Oracle и Change Data Capture Service для Oracle от Attunity установлены на компьютере одновременно с установкой SQL Server 2012 с пакетом обновления 1 (SP1), эти компоненты не обновляются при установке пакета обновления 1 (SP1).  
   
 **Решение:** Обновление компонентов CDC до последней версии.  
   

@@ -10,10 +10,10 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 91607fd8a7bc7b3b104de6d0ba3e6ce97cab8137
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558356"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Развертывание контейнера SQL Server в Kubernetes с помощью служб Azure Kubernetes (AKS)
@@ -47,7 +47,7 @@ ms.locfileid: "75558356"
 
 ![Схема кластера Kubernetes с SQL Server](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 * **Кластер Kubernetes**
    - Для работы с этим руководством требуется кластер Kubernetes. В шагах для управления кластером используется [kubectl](https://kubernetes.io/docs/user-guide/kubectl/). 

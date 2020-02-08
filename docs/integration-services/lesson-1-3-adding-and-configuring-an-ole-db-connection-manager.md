@@ -1,5 +1,5 @@
 ---
-title: Шаг 3. Добавление и настройка диспетчера подключений OLE DB | Документация Майкрософт
+title: Шаг 3. Добавление и настройка диспетчера подключений OLE DB | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/03/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4bf9a4a922c8aeed7ca344b423193e8b01c19037
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296145"
 ---
 # <a name="lesson-1-3-add-and-configure-an-ole-db-connection-manager"></a>Занятие 1-3. Добавление и настройка диспетчера подключений OLE DB
@@ -45,15 +45,15 @@ ms.locfileid: "71296145"
   
 6. Нажмите **Проверить соединение**, чтобы убедиться в том, что параметры соединения указаны правильно.  
   
-7. Нажмите кнопку **ОК**.  
+7. Щелкните **ОК**.  
   
-8. Нажмите кнопку **ОК**.  
+8. Щелкните **ОК**.  
   
 9. Убедитесь в том, что в области **Диспетчеры подключений** выбрано **localhost.AdventureWorksDW2012**.  
   
 
-## <a name="go-to-next-task"></a>Перейти к следующему шагу
-[Шаг 4. Добавление задачи потока данных к пакету](../integration-services/lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
+## <a name="go-to-next-task"></a>Переход к следующей задаче
+[Шаг 4. Добавление задачи потока данных к пакету](../integration-services/lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
 ## <a name="see-also"></a>См. также раздел  
 [Диспетчер соединений OLE DB](../integration-services/connection-manager/ole-db-connection-manager.md)  

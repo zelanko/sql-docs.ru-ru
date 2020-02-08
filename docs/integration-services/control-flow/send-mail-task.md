@@ -21,10 +21,10 @@ ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f35ec3ad66199e6c13c648c9a2208f5bf88f439a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293929"
 ---
 # <a name="send-mail-task"></a>Задача «Отправка почты»
@@ -92,7 +92,7 @@ ms.locfileid: "71293929"
   Используйте страницу **Общие** диалогового окна **Редактор задачи «Отправка почты»** , чтобы задать имя и описание для задачи «Отправка почты».  
   
 ### <a name="options"></a>Параметры  
- **Название**  
+ **имя**;  
  Укажите уникальное имя для задачи «Отправка почты». Это имя используется в качестве метки для значка задачи.  
   
  **Примечание.** Имена задач должны быть уникальными в пределах пакета.  
@@ -110,7 +110,7 @@ ms.locfileid: "71293929"
 > [!IMPORTANT]  
 >  Диспетчер SMTP-соединений поддерживает только анонимную проверку подлинности и проверку подлинности Windows. Обычная проверка подлинности не поддерживается.  
   
- **См. также:** [Диспетчер соединений SMTP](../../integration-services/connection-manager/smtp-connection-manager.md)  
+ **См. также:** [Диспетчер SMTP-подключений](../../integration-services/connection-manager/smtp-connection-manager.md)  
   
  **От**  
  Задайте адрес электронной почты отправителя.  

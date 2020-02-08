@@ -1,11 +1,7 @@
 ---
-title: Руководство. Изменение целевой платформы и публикация проекта базы данных | Документация Майкрософт
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: изменить целевую платформу и опубликовать проект базы данных
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.publish.dialog
@@ -13,14 +9,19 @@ f1_keywords:
 ms.assetid: 6012e120-5f72-4f4f-ae6e-f9a57ae1dea7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a2dd22b47da751294b60f57aaad246234004e946
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: a2af594db8c4f92028a9a36b8cc54f5f3712c9b4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897370"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241602"
 ---
 # <a name="how-to-change-target-platform-and-publish-a-database-project"></a>Руководство. изменить целевую платформу и опубликовать проект базы данных
+
 В качестве целевой версии SQL Server для проекта базы данных SQL Server Data Tools (SSDT) можно указать любой поддерживаемый экземпляр SQL Server (SQL Server 2005, 2008, 2008 R2, Microsoft SQL Server 2012 или SQL Azure). Это позволяет сосредоточить разработку базы данных в одном проекте, но при необходимости публиковать ее в нескольких экземплярах SQL Server.  
   
 Кроме того, SSDT упрощает эту задачу, учитывая сведения о целевой платформе и автоматически обнаруживая любые ошибки в коде (например, если используются неподдерживаемые функциональные средства в проекте, который должен быть опубликован в SQL Azure).  

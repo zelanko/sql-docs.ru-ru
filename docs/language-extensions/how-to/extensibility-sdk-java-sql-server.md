@@ -10,10 +10,10 @@ ms.author: negust
 ms.reviewer: dphansen
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 66719e8a30b9e7f4e42eaba376c73af9eb9868b2
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73658855"
 ---
 # <a name="microsoft-extensibility-sdk-for-java-for-sql-server"></a>Пакет SDK Майкрософт для расширения возможностей Java в SQL Server
@@ -92,7 +92,7 @@ public void init(String sessionId, int taskId, int numtask) {}
 
 Он предоставляется в пакете SDK как дополнительный, вспомогательный класс. Если этот класс не используется, реализуйте собственный класс, наследующий классу **AbstractSqlServerExtensionDataset**.  
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
-+ [Учебник. Поиск строки с использованием регулярных выражений (regex) в Java](../tutorials/search-for-string-using-regular-expressions-in-java.md)
++ [Руководство. Поиск строки с использованием регулярных выражений (regex) в Java](../tutorials/search-for-string-using-regular-expressions-in-java.md)
 + [Как вызвать код Java в SQL Server](call-java-from-sql.md)

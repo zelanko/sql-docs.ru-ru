@@ -11,10 +11,10 @@ ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 8171a91d18650285c7bcaf4eb780083e958a8789
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908449"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Устранение проблем нехватки памяти
@@ -160,7 +160,7 @@ GO
 ## <a name="see-also"></a>См. также:  
  [Управление памятью для компонента In-Memory OLTP](https://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)   
  [Наблюдение и устранение неисправностей при использовании памяти](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)   
- [см. в разделе](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
+ [Привязка базы данных с таблицами, оптимизированными для памяти, к пулу ресурсов](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
  [Руководство по архитектуре управления памятью](../../relational-databases/memory-management-architecture-guide.md)  
  [Параметры конфигурации сервера «Server Memory»](../../database-engine/configure-windows/server-memory-server-configuration-options.md) 
   

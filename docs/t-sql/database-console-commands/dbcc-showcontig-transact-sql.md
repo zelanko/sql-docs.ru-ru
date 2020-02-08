@@ -24,10 +24,10 @@ ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 0e1fff3c60dab7e8fe055753c125fddf70abb1df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68039060"
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
@@ -68,7 +68,7 @@ DBCC SHOWCONTIG
  *index_name* | *index_id*  
  Индекс, для которого проверяются сведения о фрагментации. Если этот аргумент не задан, инструкция обрабатывает базовый индекс указанной таблицы или представления. Для получения идентификатора индекса используется представление каталога [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
   
- на  
+ WITH  
  Задает параметры типа возвращаемых инструкцией DBCC сведений.  
   
  FAST  
@@ -198,7 +198,7 @@ DBCC SHOWCONTIG ('HumanResources.Employee');
 GO  
 ```  
   
-### <a name="b-using-objectid-to-obtain-the-table-id-and-sysindexes-to-obtain-the-index-id"></a>Б. Использование функции OBJECT_ID для получения идентификатора таблицы и представления sys.indexes для получения идентификатора индекса  
+### <a name="b-using-object_id-to-obtain-the-table-id-and-sysindexes-to-obtain-the-index-id"></a>Б. Использование функции OBJECT_ID для получения идентификатора таблицы и представления sys.indexes для получения идентификатора индекса  
 В следующем примере функция `OBJECT_ID` и представление каталога `sys.indexes` используются для получения идентификаторов таблицы и индекса для индекса `AK_Product_Name` таблицы `Production.Product` в базе данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].
   
 ```sql  

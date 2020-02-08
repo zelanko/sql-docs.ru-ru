@@ -1,5 +1,5 @@
 ---
-title: Учебник по R. Разработка модели в SQL
+title: Учебник по R. Разработка модели в SQL
 description: Учебник, показывающий, как создать комплексное решение R для аналитики в базе данных.
 ms.prod: sql
 ms.technology: machine-learning
@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 9844746d6887c14e5524ed54c39e2de7e0375eb1
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73723799"
 ---
 # <a name="tutorial-sql-development-for-r-data-scientists"></a>Руководство. SQL-разработка на языке R для специалистов по анализу данных
@@ -27,7 +27,7 @@ ms.locfileid: "73723799"
 
 Поскольку это пошаговое руководство призвано познакомить разработчиков на языке R со службами [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], то во всех возможных случаях используется язык R. Однако, это не означает, что он является лучшим средством для выполнения каждой задачи. Во многих случаях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может обеспечивать более высокую производительность, особенно для таких задач, как агрегирование данных и формирование характеристик.  Для выполнения таких задач новые возможности [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], такие как оптимизированные для памяти индексы columnstore, могут быть особенно полезны. Кроме того, мы попытаемся указать возможные пути оптимизации.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 + [Службы машинного обучения SQL Server с интеграцией языка R](../install/sql-machine-learning-services-windows-install.md#verify-installation) или [Службы SQL Server 2016 R](../install/sql-r-services-windows-install.md)
 

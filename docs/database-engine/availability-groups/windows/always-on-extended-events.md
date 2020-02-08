@@ -11,10 +11,10 @@ ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: d6fdf58703d448e07c9be063b616f90c72f2411d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67991565"
 ---
 # <a name="configure-extended-events-for-always-on-availability-groups"></a>Настройка расширенных событий для групп доступности Always On
@@ -97,7 +97,7 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
 |previous_state|availability_replica_state|Роль реплики перед изменением.<br /><br /> **Возможны следующие значения:**<br /><br /> Primary_Normal<br /><br /> Secondary_Normal<br /><br /> Resolving_Pending_Failover<br /><br /> Resolving_Normal<br /><br /> Primary_Pending<br /><br /> Not_Available|  
 |current_state|availability_replica_state|Роль реплики после изменения.<br /><br /> **Возможны следующие значения:**<br /><br /> Primary_Normal<br /><br /> Secondary_Normal<br /><br /> Resolving_Pending_Failover<br /><br /> Resolving_Normal<br /><br /> Primary_Pending<br /><br /> Not_Available|  
   
-#### <a name="alwaysonhealth-session-definition"></a>Определение сеанса alwayson_health  
+#### <a name="alwayson_health-session-definition"></a>Определение сеанса alwayson_health  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -125,7 +125,7 @@ GO
 |availability_group_id|guid|Идентификатор группы доступности.|  
 |availability_group_name|unicode_string|Имя группы доступности.|  
   
-#### <a name="alwaysonhealth-session-definition"></a>Определение сеанса alwayson_health  
+#### <a name="alwayson_health-session-definition"></a>Определение сеанса alwayson_health  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -157,7 +157,7 @@ GO
 |joined_and_synchronized|validation_result_type|Если это значение равно FALSE, то автоматический переход на другой ресурс на этой реплике доступности объявляется недействительным.<br /><br /> TRUE<br /><br /> FALSE|  
 |previous_primary_or_automatic_failover_target|validation_result_type|Если это значение равно FALSE, то автоматический переход на другой ресурс на этой реплике доступности объявляется недействительным.<br /><br /> TRUE<br /><br /> FALSE|  
   
-#### <a name="alwaysonhealth-session-definition"></a>Определение сеанса alwayson_health  
+#### <a name="alwayson_health-session-definition"></a>Определение сеанса alwayson_health  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -204,7 +204,7 @@ GO
 |28091|Запуск конечной точки для %S_MSG без проверки подлинности не поддерживается.|  
 |33309|Не удалось запустить конечную точку кластера, так как конфигурация по умолчанию конечной точки %S_MSG еще не загружена.|  
   
-#### <a name="alwaysonhealth-session-definition"></a>Определение сеанса alwayson_health  
+#### <a name="alwayson_health-session-definition"></a>Определение сеанса alwayson_health  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -243,7 +243,7 @@ GO
 |Столбец|Описание|  
 |------------|-----------------|  
 |Имя|data_movement_suspend_resume|  
-|Категория|Always on|  
+|Категория|Всегда включена|  
 |Channel|Операционный|  
   
 #### <a name="event-fields"></a>Поля событий  
@@ -261,7 +261,7 @@ GO
 |suspend_source|suspend_source_type|Источник действия приостановки или возобновления.|  
 |suspend_reason|unicode_string|Причина приостановки, зарегистрированная диспетчером реплик базы данных.|  
   
-#### <a name="alwaysonhealth-session-definition"></a>Определение сеанса alwayson_health  
+#### <a name="alwayson_health-session-definition"></a>Определение сеанса alwayson_health  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -299,7 +299,7 @@ GO
 |ddl_phase|ddl_opcode|Указывает фазу операции DDL: BEGIN, COMMIT или ROLLBACK.|  
 |.|unicode_string|Текст выполненной инструкции.|  
   
-#### <a name="alwaysonhealth-session-definition"></a>Определение сеанса alwayson_health  
+#### <a name="alwayson_health-session-definition"></a>Определение сеанса alwayson_health  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -328,7 +328,7 @@ GO
 |----------|----------------|-----------------|  
 |current_state|manager_state|Текущее состояние диспетчера реплики доступности.<br /><br /> Справка в Интернете<br /><br /> Вне сети<br /><br /> WaitingForClusterCommunication|  
   
-#### <a name="alwaysonhealth-session-definition"></a>Определение сеанса Alwayson_health  
+#### <a name="alwayson_health-session-definition"></a>Определение сеанса Alwayson_health  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -353,7 +353,7 @@ GO
 |Категория|ошибки|  
 |Channel|Административный|  
   
-#### <a name="alwaysonhealth-session-definition"></a>Определение сеанса alwayson_health  
+#### <a name="alwayson_health-session-definition"></a>Определение сеанса alwayson_health  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -375,5 +375,5 @@ WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPAT
 GO  
 ```  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Дальнейшие действия  
  [Просмотр данных о сеансе событий](https://msdn.microsoft.com/library/hh710068(v=sql.110).aspx)   

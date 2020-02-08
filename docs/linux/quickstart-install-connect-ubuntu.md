@@ -10,10 +10,10 @@ ms.custom: seo-lt-2019
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.openlocfilehash: df3609c5bf4f31ee8a32992127681d42609b9528
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558429"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>Краткое руководство. Установка SQL Server и создание базы данных в Ubuntu
@@ -36,7 +36,7 @@ ms.locfileid: "75558429"
 > [!TIP]
 > Для выполнения этого руководства требуется ввод данных пользователем и подключение к Интернету. Если вас интересуют процедуры автоматической или автономной установки, см. [руководство по установке SQL Server на Linux](sql-server-linux-setup.md).
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Требуется компьютер, на котором установлена ОС Ubuntu 16.04 и имеется **по крайней мере 2 ГБ** памяти.
 

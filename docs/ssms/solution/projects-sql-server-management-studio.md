@@ -1,6 +1,6 @@
 ---
-title: Проекты (среда SQL Server Management Studio) | Документация Майкрософт
-ms.custom: ''
+title: Проекты (среда SQL Server Management Studio)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: c13af859-ca66-4e43-b76a-0650ac6566c0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c994120589a4fa31c5968743a38f89a8ad2d1dfc
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: b1a0df1686543cfe69a998149ede45ea2f845894
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68259448"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251870"
 ---
 # <a name="projects-sql-server-management-studio"></a>Проекты (среда SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,9 +47,9 @@ ms.locfileid: "68259448"
   
 |Описание задачи|Раздел|  
 |--------------------|---------|  
-|Описано создание нового проекта в решении.|[Создание проекта](../../ssms/solution/create-a-project.md)|  
+|Описано создание нового проекта в решении.|[Создать проект](../../ssms/solution/create-a-project.md).|  
 |Описано добавление существующего проекта к решению.|[Добавление к решению существующий проект](../../ssms/solution/add-an-existing-project-to-a-solution.md)|  
-|Описано изменение места сохранения файлов проекта по умолчанию.|[Изменение местоположения проектов по умолчанию](../../ssms/solution/change-the-default-location-for-projects.md)|  
+|Описано изменение места сохранения файлов проекта по умолчанию.|[Изменение расположения проектов по умолчанию](../../ssms/solution/change-the-default-location-for-projects.md)|  
 |Описан просмотр текущих свойств проекта.|[Просмотр свойств проекта](../../ssms/solution/view-project-properties.md)|  
 |Описано добавление новых элементов в проект (соединений, файлов скриптов и т. д).|[Добавление новых элементов в проект](../../ssms/solution/add-new-items-to-a-project.md)|  
 |Описано создание сведений о подключении для запроса.|[Связь запроса с соединением в проекте](../../ssms/solution/associate-a-query-with-a-connection-in-a-project.md)|  

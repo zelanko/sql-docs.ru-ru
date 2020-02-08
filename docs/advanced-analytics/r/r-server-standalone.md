@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 2412bfb8bcd3cacc2db2702879353b92e328b09a
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727383"
 ---
 # <a name="what-are-standalone-machine-learning-server-or-r-server-in-sql-server"></a>Изолированный сервер Machine Learning Server или R Server в SQL Server
@@ -68,7 +68,7 @@ SQL Server 2016 поддерживает только язык R. SQL Server 2
 + [Настройка средств R](set-up-a-data-science-client.md)
 + [Настройка средств Python](../python/setup-python-client-tools-sql.md)
 
-### <a name="step-3-write-your-first-script"></a>Шаг 3. Написание первого скрипта
+### <a name="step-3-write-your-first-script"></a>Шаг 3. Написание первого скрипта
 
 Напишите скрипт R или Python, используя функции из RevoScaleR и revoscalepy, а также алгоритмы машинного обучения.
   
@@ -78,11 +78,11 @@ SQL Server 2016 поддерживает только язык R. SQL Server 2
 
 Выберите оптимальный язык для задачи. R лучше всего подходит для статистических вычислений, проведение которых с помощью SQL может вызывать трудности. Для достижения максимальной производительности операций на основе наборов данных используйте возможности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для очень быстрых вычислений на основе столбцов используйте выполняющееся в памяти ядро СУБД.
 
-### <a name="step-4-operationalize-your-solution"></a>Шаг 4. Ввод решения в эксплуатацию
+### <a name="step-4-operationalize-your-solution"></a>Шаг 4. Ввод решения в эксплуатацию
 
 Изолированные серверы могут использовать функцию [ввода в эксплуатацию](https://docs.microsoft.com//machine-learning-server/what-is-operationalization) сервера [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), не зависящего от языка SQL. Настройка изолированного сервера для ввода в эксплуатацию дает следующие преимущества: развертывание и размещение кода как веб-служб, проведение диагностики и проверка емкости веб-служб.
 
-### <a name="step-5-maintain-your-server"></a>Шаг 5. Обслуживание сервера
+### <a name="step-5-maintain-your-server"></a>Шаг 5. Обслуживание сервера
 
 Для SQL Server регулярно выпускаются накопительные пакеты обновления. Их применение повышает безопасность и расширяет функциональные возможности существующей установки. 
 

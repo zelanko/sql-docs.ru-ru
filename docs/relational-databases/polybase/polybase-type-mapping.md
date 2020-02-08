@@ -8,10 +8,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 ms.openlocfilehash: 34f6b61160b687fa6864a2660b632524188b922c
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710467"
 ---
 # <a name="type-mapping-with-polybase"></a>Сопоставление типов с помощью PolyBase
@@ -33,25 +33,25 @@ ms.locfileid: "71710467"
 
 | Тип данных SQL | Тип данных .NET            | Тип данных Hive | Тип данных Hadoop/Java | Комментарии                       |
 | ------------- | ------------------------- | -------------- | --------------------- | ------------------------------ |
-| TINYINT       | Byte                      | TINYINT        | ByteWritable          | Только для чисел без знака.     |
+| tinyint       | Byte                      | tinyint        | ByteWritable          | Только для чисел без знака.     |
 | smallint      | Int16                     | smallint       | ShortWritable         |
 | INT           | Int32                     | INT            | IntWritable           |
 | BIGINT        | Int64                     | BIGINT         | LongWritable          |
-| bit           | Логическое значение                   | boolean        | BooleanWritable       |
+| bit           | Логическое                   | Логическое        | BooleanWritable       |
 | FLOAT         | Double                    | double         | DoubleWritable        |
-| REAL          | Один                    | FLOAT          | FloatWritable         |
+| real          | Один                    | FLOAT          | FloatWritable         |
 | money         | Decimal                   | double         | DoubleWritable        |
-| SMALLMONEY    | Decimal                   | double         | DoubleWritable        |
-| NCHAR         | String<br /><br /> Char[] | строка         | Varchar               |
-| NVARCHAR      | String<br /><br /> Char[] | строка         | Varchar               |
-| char;          | String<br /><br /> Char[] | строка         | Varchar               |
+| smallmoney    | Decimal                   | double         | DoubleWritable        |
+| nchar         | String<br /><br /> Char[] | строка         | Varchar               |
+| nvarchar      | String<br /><br /> Char[] | строка         | Varchar               |
+| char          | String<br /><br /> Char[] | строка         | Varchar               |
 | varchar       | String<br /><br /> Char[] | строка         | Varchar               |
-| BINARY        | Byte[]                    | BINARY         | BytesWritable         | Применяется к Hive 0.8 и более поздней версии. |
-| varbinary     | Byte[]                    | BINARY         | BytesWritable         | Применяется к Hive 0.8 и более поздней версии. |
-| Дата          | DateTime                  | TIMESTAMP      | TimestampWritable     |
-| smalldatetime | DateTime                  | TIMESTAMP      | TimestampWritable     |
-| datetime2     | DateTime                  | TIMESTAMP      | TimestampWritable     |
-| DATETIME      | DateTime                  | TIMESTAMP      | TimestampWritable     |
+| binary        | Byte[]                    | binary         | BytesWritable         | Применяется к Hive 0.8 и более поздней версии. |
+| varbinary     | Byte[]                    | binary         | BytesWritable         | Применяется к Hive 0.8 и более поздней версии. |
+| Дата          | Дата и время                  | TIMESTAMP      | TimestampWritable     |
+| smalldatetime | Дата и время                  | TIMESTAMP      | TimestampWritable     |
+| datetime2     | Дата и время                  | TIMESTAMP      | TimestampWritable     |
+| DATETIME      | Дата и время                  | TIMESTAMP      | TimestampWritable     |
 | time          | TimeSpan                  | TIMESTAMP      | TimestampWritable     |
 | Decimal       | Decimal                   | Decimal        | BigDecimalWritable    | Применяется к Hive 0.11 и более поздней версии. |
 
@@ -62,11 +62,11 @@ ms.locfileid: "71710467"
 
 | Тип данных Oracle | Тип SQL Server | 
 | -------------    | --------------- |
-|float             |float            |
+|Float             |Float            |
 |NUMBER            |Decimal          |
 |LONG              |nvarchar         |
 |BINARY_FLOAT      |Real             | 
-|BINARY_DOUBLE     |float            | 
+|BINARY_DOUBLE     |Float            | 
 |CHAR              |CHAR             |
 |VARCHAR2          |Varchar          | 
 |NVARCHAR2         |nvarchar         | 
@@ -93,18 +93,18 @@ ms.locfileid: "71710467"
 
 | Тип данных BSON     | Тип SQL Server |
 | ------------------ | --------------- |
-| Double             | float           |
+| Double             | Float           |
 | String             | nvarchar        |
 | Двоичные данные        | nvarchar        |
 | Идентификатор объекта.          | nvarchar        |
-| Логическое значение            | bit             |
+| Логическое            | bit             |
 | Дата               | Datetime2       |
-| 32-разрядное целое число     | int             |
+| 32-разрядное целое число     | Int             |
 | Отметка времени          | nvarchar        |
 | 64-разрядное целое число     | BigInt          |
 |Decimal 128         | Decimal         | 
 | DBPointer          | nvarchar        |
-| Javascript         | nvarchar        |
+| JavaScript         | nvarchar        |
 | Максимальный ключ            | nvarchar        |
 | Минимальный ключ            | nvarchar        |
 | Символ             | nvarchar        |
@@ -119,19 +119,19 @@ MongoDB использует документы BSON для хранения з�
 
 | Тип данных Teradata | Тип SQL Server | 
 | -------------      | -------------   |
-|INTEGER             |int              |
+|INTEGER             |Int              |
 |SMALLINT            |SmallInt         |
 |bigint              |BigInt           |
 |BYTEINT             |SmallInt         |
 |DECIMAL             |Decimal          |
 |FLOAT               |Decimal          |
-|BYTE                |Двоичный           |
+|BYTE                |Двоичные данные           |
 |VARBYTE             |Varbinary        |
 |BLOB                |varbinary        |
 |CHAR                |Nchar            |
 |CLOB                |nvarchar         |
 |VARCHAR             |nvarchar         |
-|Graphic             |Nchar            |
+|GRAPHIC             |Nchar            |
 |JSON                |nvarchar         |
 |VARGRAPHIC          |nvarchar         |
 |DATE                |Дата             |
@@ -142,6 +142,6 @@ MongoDB использует документы BSON для хранения з�
 
 ::: moniker-end
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Дополнительные сведения об использовании сопоставления см. в справочнике по Transact-SQL для [CREATE EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/create-external-table-transact-sql.md).

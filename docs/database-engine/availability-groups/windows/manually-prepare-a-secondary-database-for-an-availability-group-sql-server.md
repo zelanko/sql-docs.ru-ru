@@ -19,10 +19,10 @@ ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 19d9171278bac69eb8b092d6bc7ec69dcbcb71ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68023709"
 ---
 # <a name="prepare-a-secondary-database-for-an-always-on-availability-group"></a>Подготовка базы данных-получателя для присоединения к группе доступности Always On
@@ -107,7 +107,7 @@ ms.locfileid: "68023709"
   
 -   [Восстановление резервной копии журнала транзакций (SQL Server)](../../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
--   [Восстановление базы данных в новое место (SQL Server)](../../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)  
+-   [Восстановление базы данных в новом расположении (SQL Server)](../../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
  **Подготовка базы данных-получателя**  
@@ -239,7 +239,7 @@ ms.locfileid: "68023709"
 4.  Чтобы восстановить резервные копии базы данных и журналов для каждой базы данных-источника, используйте командлет **restore-SqlDatabase** , указывая параметр восстановления **NoRecovery** . Если пути к файлам различны на компьютерах, на которых размещена основная реплика и целевая вторичная реплика, также следует использовать параметр восстановления **RelocateFile** .  
   
     > [!NOTE]  
-    >  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом **Get-Help** в среде [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+    >  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом **Get-Help** в среде PowerShell [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   
 5.  Чтобы завершить настройку базы данных-получателя, необходимо присоединить ее к группе доступности. Дополнительные сведения см. в разделе [Присоединение базы данных-получателя к группе доступности (SQL Server)](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
@@ -262,7 +262,7 @@ Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -R
   
 ```  
   
-##  <a name="FollowUp"></a> Следующие шаги  
+##  <a name="FollowUp"></a> Дальнейшие действия  
  Чтобы завершить настройку базы данных-получателя, необходимо присоединить только что восстановленную базу данных к группе доступности. Дополнительные сведения см. в статье [Присоединение базы данных-получателя к группе доступности (SQL Server)](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
 ## <a name="see-also"></a>См. также раздел  

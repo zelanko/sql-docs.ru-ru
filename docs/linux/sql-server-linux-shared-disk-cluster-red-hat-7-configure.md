@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.openlocfilehash: 3ff0c862e93cd3b552b29c4eec8ab91931c809c7
-ms.sourcegitcommit: 34d28d49e8d0910cf06efda686e2d73059569bf8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/04/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75656631"
 ---
 # <a name="configure-rhel-failover-cluster-instance-fci-cluster-for-sql-server"></a>Настройка экземпляра отказоустойчивого кластера RHEL для SQL Server
@@ -39,7 +39,7 @@ ms.locfileid: "75656631"
 
 В следующих разделах описаны действия по настройке решения отказоустойчивого кластера. 
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Для выполнения следующего законченного сценария нужны два компьютера для развертывания двухузлового кластера и сервера для настройки сервера NFS. Ниже описаны действия по настройке этих серверов.
 

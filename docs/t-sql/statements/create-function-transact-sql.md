@@ -41,10 +41,10 @@ ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 35cf1b37a7c10992e17a52e4a44a473127ffb586
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982785"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
@@ -663,7 +663,7 @@ INLINE = { ON | OFF }
 |[sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)|Отображает базовые объекты, на которые ссылается функция.|  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется разрешение `CREATE FUNCTION` на базу данных и разрешение `ALTER` на схему, в которой создается функция. Если в функции указан определяемый пользователем тип, требуется разрешение `EXECUTE` на этот тип.  
+ Требуется разрешение `CREATE FUNCTION` на базу данных и разрешение `ALTER` для схемы, в которой создается функция. Если в функции указан определяемый пользователем тип, требуется разрешение `EXECUTE` на этот тип.  
   
 ## <a name="examples"></a>Примеры  
 

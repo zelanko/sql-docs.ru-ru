@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 4cb806c0a6286ec8a6608b346d12e666a8e9a09f
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73724527"
 ---
 # <a name="build-an-r-model-and-save-to-sql-server-walkthrough"></a>Создание модели R и ее сохранение в SQL Server (пошаговое руководство)
@@ -21,7 +21,7 @@ ms.locfileid: "73724527"
 
 На этом шаге вы узнаете, как создать модель машинного обучения и сохранить ее в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. После сохранения модели ее можно вызвать непосредственно из кода [!INCLUDE[tsql](../../includes/tsql-md.md)] с помощью системной хранимой процедуры [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) или [функции PREDICT (T-SQL)](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql).
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Для этого этапа требуется продолжение сеанса R из предыдущих этапов этого пошагового руководства. В нем используются строки подключения и объекты источников данных, созданные на этих этапах. Для запуска скрипта используются следующие средства и пакеты.
 
@@ -241,7 +241,7 @@ GO
 
 Для сохранения модели в таблице требуется только инструкция INSERT. Тем не менее, для простоты в большинстве случаев можно выполнить упаковку в хранимую процедуру, например *PersistModel*.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 На следующем и заключительном занятии вы узнаете, как выполнять оценку на основе сохраненной модели с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)].
 

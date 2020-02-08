@@ -14,10 +14,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8ddc5fb198a62374fc43ebacb5fa7423ac9fadd5
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74096067"
 ---
 # <a name="validate-query-and-change-json-data-with-built-in-functions-sql-server"></a>Проверка, построение запросов и изменение данных JSON с помощью встроенных функций (SQL Server)
@@ -105,7 +105,7 @@ ORDER BY JSON_VALUE(f.doc, '$.address.city') DESC, JSON_VALUE(f.doc, '$.address.
 
 | Имя | Город | Округ |
 | --- | --- | --- |
-| AndersenFamily | NY | Manhattan |
+| AndersenFamily | Нью-Йорк | Manhattan |
 
 Дополнительные сведения см. в разделе [JSON_VALUE (Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md).  
   
@@ -145,8 +145,8 @@ FROM Families f
 
 | Имя | Город | givenName | grade |
 | --- | --- | --- | --- |
-| AndersenFamily | NY | Jesse | 1 |
-| AndersenFamily | NY | Lisa | 8 |
+| AndersenFamily | Нью-Йорк | Jesse | 1 |
+| AndersenFamily | Нью-Йорк | Lisa | 8 |
 
 В результате мы получаем две строки, так как одна родительская строка объединена с двумя дочерними строками, созданными путем анализа двух элементов дочернего подмассива. Функция `OPENJSON` анализирует фрагмент `children` из столбца `doc` и возвращает `grade` и `givenName` из каждого элемента в виде набора строк. Этот набор строк можно объединить с родительским документом.
  
@@ -194,7 +194,7 @@ FROM Families f
   
 В приведенном примере элементы "а" и "c" являются строковыми значениями, а элемент "b" — массивом. **JSON_VALUE** и **JSON_QUERY** возвращают следующие результаты:  
   
-|Путь|**JSON_VALUE** возвращает|**JSON_QUERY** возвращает|  
+|путь|**JSON_VALUE** возвращает|**JSON_QUERY** возвращает|  
 |-----------|-----------------------------|-----------------------------|  
 |**$**|NULL или ошибка|`{ "a": "[1,2]", "b": [1,2], "c":"hi"}`|  
 |**$.a**|[1,2]|NULL или ошибка|  

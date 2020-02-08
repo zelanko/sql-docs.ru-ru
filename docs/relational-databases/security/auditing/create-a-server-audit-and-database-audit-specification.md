@@ -17,10 +17,10 @@ ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: d9ab1fa97653513d18c43b916ca5bfbc2105e8e7
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75557879"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>Создание спецификация аудита для сервера и базы данных
@@ -80,7 +80,7 @@ ms.locfileid: "75557879"
   
      В диалоговом окне **Создание спецификации аудита базы данных** доступны следующие параметры.  
   
-     **Название**  
+     **имя**;  
      Имя спецификации аудита базы данных. Этот текст формируется автоматически во время создания новой спецификации аудита сервера, однако он доступен для изменения.  
   
      **Аудит**  

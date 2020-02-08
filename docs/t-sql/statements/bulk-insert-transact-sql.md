@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6b6534e887f890700b69a11b4515d4cf1af4d86a
-ms.sourcegitcommit: c98c6e33d04d4a1888db7dbe89cb0b1bb3a66418
+ms.openlocfilehash: d6802e2f93c4f171797198eda2132e8b0353621f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74249853"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910137"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
@@ -128,7 +128,7 @@ CODEPAGE **=** { **'** ACP **'**  |  **'** OEM **'**  |  **'** RAW **'**  |  **'
 > [!NOTE]
 > [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендует указывать имя параметров сортировки для каждого столбца в [файле форматирования](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md).
 
-|Значение аргумента CODEPAGE|Description|
+|Значение аргумента CODEPAGE|Описание|
 |--------------------|-----------------|
 |ACP|Столбцы типа **char**, **varchar** или **text** преобразуются из кодовой страницы [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows (ISO 1252) в кодовую страницу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|
 |OEM (по умолчанию)|Столбцы типа **char**, **varchar** или **text** преобразуются из кодовой страницы OEM в кодовую страницу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|
@@ -446,7 +446,7 @@ WITH (FORMAT = 'CSV'
 В приведенном ниже примере показано, как загрузить данные из CSV-файла в расположение хранилища BLOB-объектов Azure, для которого был создан ключ SAS. Расположение хранилища BLOB-объектов Azure настроено как внешний источник данных. Для этого требуются учетные данные для базы с подписанным URL-адресом, зашифрованным с помощью главного ключа в пользовательской базе данных.
 
 ```sql
---> Optional - a MASTER KEY is not requred if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
+--> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1';
 GO
 --> Optional - a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!

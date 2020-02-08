@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ef5c610cb71a0f638c2dfba8aad1fbdb77308dfa
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74412816"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Руководство по обработке запросов для таблиц, оптимизированных для памяти
@@ -73,7 +73,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  Предполагаемый план выполнения в соответствии с отображением в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] следующий:  
   
- ![План запроса для соединения дисковых таблиц.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-1.png "|::ref1::|")  
+ ![План запроса для соединения дисковых таблиц.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-1.png "План запроса для соединения дисковых таблиц.")  
 План запроса для соединения дисковых таблиц.  
   
  О данном плане запроса:  
@@ -92,7 +92,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
   
  Предполагаемый план выполнения для этого запроса:  
   
- ![план запроса для хэш-соединений дисковых таблиц.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-2.png "|::ref2::|")  
+ ![план запроса для хэш-соединений дисковых таблиц.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-2.png "план запроса для хэш-соединений дисковых таблиц.")  
 план запроса для хэш-соединений дисковых таблиц.  
   
  В этом запросе строки из таблицы заказов получаются с помощью кластеризованного индекса. Физический оператор **Hash Match** теперь используется для **Inner Join**. Кластеризованный индекс в таблице Order не отсортирован по столбцу CustomerID, поэтому для **Merge Join** потребуется оператор сортировки, который повлияет на производительность запроса. Обратите внимание на относительную стоимость оператора **Hash Match** (75 %) по сравнению с затратами оператора **Merge Join** в предыдущем примере (46 %). Оптимизатором также рассматривался оператор **Hash Match** из предыдущего примера, но оказалось, что оператор **Merge Join** обеспечивает лучшую производительность.  
@@ -100,7 +100,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
 ## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Обработка запросов для дисковых таблиц  
  На следующей диаграмме показан поток обработки запросов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для нерегламентированных запросов:  
   
- ![Канал обработки запросов в SQL Server.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.png "|::ref3::|")  
+ ![Канал обработки запросов в SQL Server.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.png "Канал обработки запросов в SQL Server.")  
 Канал обработки запросов в SQL Server.  
   
  В этом сценарии:  
@@ -203,7 +203,7 @@ END
 ### <a name="compilation-and-query-processing"></a>Компиляция и обработка запросов  
  На следующей диаграмме показан процесс компиляции для скомпилированных в собственном коде хранимых процедур:  
   
- ![Компиляция хранимых процедур в собственном коде.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-6.png "|::ref6::|")  
+ ![Компиляция хранимых процедур в собственном коде.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-6.png "Компиляция хранимых процедур в собственном коде.")  
 Компиляция хранимых процедур в собственном коде.  
   
  Описание процесса  
@@ -220,7 +220,7 @@ END
   
  Вызов хранимой процедуры, скомпилированной в собственном коде, транслируется в вызов функции из библиотеки DLL.  
   
- ![Выполнение хранимых процедур, скомпилированных в собственном коде.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-7.png "|::ref7::|")  
+ ![Выполнение хранимых процедур, скомпилированных в собственном коде.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-7.png "Выполнение хранимых процедур, скомпилированных в собственном коде.")  
 Выполнение хранимых процедур, скомпилированных в собственном коде.  
   
  Описание вызова хранимой процедуры, скомпилированной в собственном коде:  
@@ -294,7 +294,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  После удаления всех строк, кроме одной, в таблице Customer:  
   
- ![Статистика столбцов и соединения.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-9.png "|::ref8::|")  
+ ![Статистика столбцов и соединения.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-9.png "Статистика столбцов и соединения.")  
   
  Относительно этого плана запроса:  
   

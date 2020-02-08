@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: de250fd158bdd02764e992e0ccbb69e072b4c6ab
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907337"
 ---
 # <a name="view-the-definition-of-a-stored-procedure"></a>Просмотр определения хранимой процедуры
@@ -37,7 +37,7 @@ ms.locfileid: "72907337"
   
 ####  <a name="Permissions"></a> Permissions  
  Системная хранимая процедура: **sp_helptext**  
- Необходимо быть членом роли **public** . Определения системных объектов видимы для всех. Определения пользовательских объектов видимы владельцу объекта или получателям, которым предоставлено одно из следующих разрешений: ALTER, CONTROL, TAKE OWNERSHIP или VIEW DEFINITION.  
+ Необходимо быть членом роли **public**. Определения системных объектов видимы для всех. Определения пользовательских объектов видимы владельцу объекта или получателям, которым предоставлено одно из следующих разрешений: ALTER, CONTROL, TAKE OWNERSHIP или VIEW DEFINITION.  
   
  Системная функция: **OBJECT_DEFINITION**  
  Определения системных объектов видимы для всех. Определения пользовательских объектов видимы владельцу объекта или получателям, которым предоставлено одно из следующих разрешений: ALTER, CONTROL, TAKE OWNERSHIP или VIEW DEFINITION. Эти разрешения неявно предоставляются членам предопределенных ролей базы данных **db_owner**, **db_ddladmin**и **db_securityadmin** .  
@@ -61,7 +61,7 @@ ms.locfileid: "72907337"
   
 3.  Разверните пункт **Хранимые процедуры**, щелкните правой кнопкой процедуру, после чего щелкните пункт **Создать скрипт для хранимой процедуры как**, после чего щелкните один из следующих пунктов: **Создать в**, **Изменить на** или **Удалить и создать в**.  
   
-4.  Выберите **Создать окно редактора запросов**. При этом отобразится определение процедуры.  
+4.  Выберите **New Query Editor Window** (Окно редактирования нового запроса). При этом отобразится определение процедуры.  
 
 ###  <a name="TsqlProcedure"></a> Использование Transact-SQL  
  **Просмотр определения процедуры в редакторе запросов**  

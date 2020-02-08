@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
 ms.openlocfilehash: 70701d5c0103da089444177db1143066d0c862cd
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68032220"
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>Настройка кластера общих дисков SLES для SQL Server
@@ -24,7 +24,7 @@ ms.locfileid: "68032220"
 
 Дополнительные сведения о конфигурации кластера, параметрах агента ресурсов, управлении и рекомендациях см. в статье [Расширение высокого уровня доступности для SUSE Linux Enterprise 12 с пакетом обновления 2 (SP2)](https://www.suse.com/documentation/sle-ha-12/index.html).
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Для выполнения следующего законченного сценария нужны два компьютера для развертывания двухузлового кластера и сервера для настройки общего ресурса NFS. Ниже описаны действия по настройке этих серверов.
 
@@ -34,9 +34,9 @@ ms.locfileid: "68032220"
 
 ## <a name="install-and-configure-sql-server-on-each-cluster-node"></a>Установка и настройка SQL Server в каждом узле кластера
 
-1. Установите и настройте SQL Server в обоих узлах. Подробные инструкции см. в статье [Установка SQL Server в Linux](sql-server-linux-setup.md).
+1. Установите и настройте SQL Server в обоих узлах. Подробные инструкции см. в статье [Установка SQL Server в Linux](sql-server-linux-setup.md).
 2. В целях настройки назначьте один узел первичным, а другой — вторичным. Используйте приведенные ниже условия для работы с этим руководством. 
-3. Остановите и отключите SQL Server на вторичном узле. В следующем примере показаны остановка и отключение SQL Server:
+3. Остановите и отключите SQL Server во вторичном узле. В следующем примере показаны остановка и отключение SQL Server:
 
     ```bash
     sudo systemctl stop mssql-server
@@ -44,8 +44,8 @@ ms.locfileid: "68032220"
     ```
 
     > [!NOTE]
-    > Во время установки главный ключ сервера для экземпляра SQL Server создается и помещается в папку `/var/opt/mssql/secrets/machine-key`. На Linux SQL Server всегда выполняется как локальная учетная запись с именем mssql. Так как это локальная учетная запись, ее удостоверение не является общим на всех узлах. Поэтому необходимо скопировать ключ шифрования с первичного узла на каждый вторичный узел, чтобы каждая локальная учетная запись mssql могла получить к нему доступ для расшифровки главного ключа сервера.
-4. В первичном узле создайте имя входа SQL Server для Pacemaker и предоставьте разрешение на выполнение `sp_server_diagnostics`. Pacemaker использует эту учетную запись, чтобы проверить, на каком узле запущен SQL Server.
+    > Во время установки главный ключ сервера для экземпляра SQL Server создается и помещается в папку `/var/opt/mssql/secrets/machine-key`. На Linux SQL Server всегда выполняется как локальная учетная запись с именем mssql. Так как это локальная учетная запись, ее удостоверение не является общим во всех узлах. Поэтому необходимо скопировать ключ шифрования из первичного узла в каждый вторичный узел, чтобы каждая локальная учетная запись mssql могла получить к нему доступ для расшифровки главного ключа сервера.
+4. В первичном узле создайте имя входа SQL Server для Pacemaker и предоставьте разрешение на выполнение `sp_server_diagnostics`. Pacemaker использует эту учетную запись, чтобы проверить, в каком узле запущен SQL Server.
 
     ```bash
     sudo systemctl start mssql-server
@@ -67,7 +67,7 @@ ms.locfileid: "68032220"
     sudo ip addr show
     ```
 
-    Задайте имя компьютера на каждом узле. Присвойте каждому узлу уникальное имя длиной не более 15 символов. Задайте имя компьютера, добавив его к `/etc/hostname` с помощью [yast](https://www.suse.com/documentation/sles11/book_sle_admin/data/sec_basicnet_yast.html) или [вручную](https://www.suse.com/documentation/sled11/book_sle_admin/data/sec_basicnet_manconf.html).
+    Задайте имя компьютера в каждом узле. Присвойте каждому узлу уникальное имя длиной не более 15 символов. Задайте имя компьютера, добавив его к `/etc/hostname` с помощью [yast](https://www.suse.com/documentation/sles11/book_sle_admin/data/sec_basicnet_yast.html) или [вручную](https://www.suse.com/documentation/sled11/book_sle_admin/data/sec_basicnet_manconf.html).
 
     В следующем примере показан файл `/etc/hosts` с дополнениями для двух узлов `SLES1` и `SLES2`.
 
@@ -132,7 +132,7 @@ ms.locfileid: "68032220"
     sudo systemctl stop mssql-server
     ```
 
-На этом этапе оба экземпляра SQL Server настроены для работы с файлами базы данных в общем хранилище. Следующим шагом является настройка SQL Server для Pacemaker. 
+На этом этапе оба экземпляра SQL Server настроены для работы с файлами базы данных в общем хранилище. Следующим шагом является настройка SQL Server для Pacemaker. 
 
 ## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>Установка и настройка Pacemaker в каждом узле кластера
 
@@ -249,7 +249,7 @@ Full list of resources:
 
 Сведения об управлении ресурсами кластера см. в следующем разделе документации по SUSE: [Управление ресурсами кластера](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm )
 
-### <a name="manual-failover"></a>Отработка отказа вручную
+### <a name="manual-failover"></a>Переход на другой ресурс вручную
 
 Хотя ресурсы настроены для автоматической отработки отказа (или миграцию) на другие узлы кластера в случае сбоя оборудования или программного обеспечения, можно также вручную переместить ресурс на другой узел в кластере с помощью графического интерфейса Pacemaker или командной строки. 
 

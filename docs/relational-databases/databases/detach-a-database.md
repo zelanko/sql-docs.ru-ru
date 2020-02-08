@@ -16,10 +16,10 @@ ms.assetid: f63d4107-13e4-4bfe-922d-5e4f712e472d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 35a118575be4ac15cb44588f1773ea1bb4fbc257
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006192"
 ---
 # <a name="detach-a-database"></a>Отсоединение базы данных
@@ -32,7 +32,7 @@ ms.locfileid: "68006192"
   
      [Ограничения](#Restrictions)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Отсоединение базы данных с помощью следующих средств:**  
   
@@ -63,7 +63,7 @@ ms.locfileid: "68006192"
      **Базы данных для отсоединения**  
      Перечисляет базы данных для отсоединения.  
   
-     **Database Name**  
+     **Имя базы данных**  
      Отображает имя базы данных для отсоединения.  
   
      **Удалить соединения**  

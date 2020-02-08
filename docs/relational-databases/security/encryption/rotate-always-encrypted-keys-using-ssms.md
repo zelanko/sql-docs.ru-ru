@@ -16,10 +16,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5d0a96f061f01749194cd3f0d1be1aae5443ff8a
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595709"
 ---
 # <a name="rotate-always-encrypted-keys-using-sql-server-management-studio"></a>Ротация ключей Always Encrypted с помощью SQL Server Management Studio
@@ -54,7 +54,7 @@ ms.locfileid: "73595709"
 > [!NOTE]
 > Убедитесь, что каждый ключ шифрования столбца, зашифрованный старым главным ключом столбца, не зашифрован с помощью какого-либо другого главного ключа столбца. Другими словами, каждый ключ шифрования столбца, затрагиваемый сменой, должен иметь ровно одно зашифрованное значение в базе данных. Если какой-либо из затрагиваемых ключей шифрования столбца имеет несколько зашифрованных значений, необходимо удалить лишние значения, прежде чем продолжать смену (см. *шаг 4* по удалению зашифрованного значения ключа шифрования столбца).
 
-### <a name="step-3-configure-your-applications-with-the-new-column-master-key"></a>Шаг 3. Настройка приложений с помощью нового главного ключа столбца
+### <a name="step-3-configure-your-applications-with-the-new-column-master-key"></a>Шаг 3. Настройка приложений с помощью нового главного ключа столбца
 
 На этом шаге необходимо убедиться, что все клиентские приложения, запрашивающие столбцы базы данных и защищенные с помощью главного ключа столбца, который планируется сменить (то есть столбцы базы данных зашифрованы с помощью ключа шифрования столбца, который зашифрован заменяемым главным ключом столбца), имеют доступ к новому главному ключу столбца. Этот шаг зависит от типа хранилища ключей, используемого для хранения нового главного ключа столбца. Пример:
 
@@ -68,7 +68,7 @@ ms.locfileid: "73595709"
 > [!NOTE]
 > На этом этапе процедуры смены и старый, и новый главные ключи столбца являются действительными и могут использоваться для доступа к данным.
 
-### <a name="step-4-clean-up-column-encryption-key-values-encrypted-with-the-old-column-master-key"></a>Шаг 4. Очистка значений ключа шифрования столбца, зашифрованных с помощью старого главного ключа столбца.
+### <a name="step-4-clean-up-column-encryption-key-values-encrypted-with-the-old-column-master-key"></a>Шаг 4. Очистка значений ключа шифрования столбца, зашифрованных с помощью старого главного ключа столбца.
 
 После настройки использования нового главного ключа столбца во всех приложениях удалите из базы данных значения ключей шифрования столбца, зашифрованные с помощью *старого* главного ключа столбца. После удаления старых значений все будет готово к новой смене (учитывайте, что для смены главного ключа столбца каждый ключ шифрования столбца, защищенный с помощью главного ключа столбца, должен иметь ровно одно зашифрованное значение).
 
@@ -84,7 +84,7 @@ ms.locfileid: "73595709"
 
 Среда SQL Server Management Studio выполнит инструкции [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/alter-column-encryption-key-transact-sql.md) для удаления зашифрованных значений ключей шифрования столбцов, которые зашифрованы с помощью старого главного ключа столбца.
 
-### <a name="step-5-delete-metadata-for-your-old-column-master-key"></a>Шаг 5. Удаление метаданных для старого главного ключа столбца
+### <a name="step-5-delete-metadata-for-your-old-column-master-key"></a>Шаг 5. Удаление метаданных для старого главного ключа столбца
 
 Если вы решили удалить определение старого главного ключа столбца из базы данных, выполните действия, описанные ниже.
 
@@ -146,7 +146,7 @@ ms.locfileid: "73595709"
 - [Разработка приложений с помощью Always Encrypted](always-encrypted-client-development.md)
 
 ## <a name="see-also"></a>См. также:
-- [Постоянное шифрование](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Общие сведения об управлении ключами для Always Encrypted](overview-of-key-management-for-always-encrypted.md) 
 - [Настройка функции Always Encrypted с помощью SQL Server Management Studio](configure-always-encrypted-using-sql-server-management-studio.md)
 - [Настройка постоянного шифрования с помощью PowerShell](configure-always-encrypted-using-powershell.md)

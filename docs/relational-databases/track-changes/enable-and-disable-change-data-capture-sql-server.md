@@ -16,10 +16,10 @@ ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 82ff8e58891d07ccbecfef119c05c0cef1bbb06e
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095261"
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>Включение и отключение отслеживания измененных данных (SQL Server)
@@ -27,7 +27,7 @@ ms.locfileid: "74095261"
   В этом разделе описано, как включить или отключить систему отслеживания измененных данных для базы данных и таблицы.  
   
 ## <a name="enable-change-data-capture-for-a-database"></a>Включение системы отслеживания измененных данных для базы данных  
- Прежде чем можно будет создавать экземпляры отслеживания для отдельных таблиц, член предопределенной роли сервера **sysadmin** должен включить отслеживание измененных данных для базы данных. Это выполняется запуском хранимой процедуры [sys.sp_cdc_enable_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md) в контексте базы данных. Чтобы определить, включено ли отслеживание в базе данных, выполните запрос к столбцу **is_cdc_enabled** в представлении каталога **sys.databases**.  
+ Прежде чем можно будет создавать экземпляры отслеживания для отдельных таблиц, член предопределенной роли сервера **sysadmin** должен включить отслеживание измененных данных для базы данных. Это выполняется запуском хранимой процедуры [sys.sp_cdc_enable_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md) в контексте базы данных. Чтобы определить, включено ли отслеживание в базе данных, выполните запрос к столбцу **is_cdc_enabled** в представлении каталога **sys.databases** .  
   
  Когда для базы данных включается отслеживание измененных данных, для нее создаются: схема **cdc** , пользователь **cdc** , таблицы метаданных и другие системные объекты. Схема **cdc** содержит таблицы метаданных для системы отслеживания измененных данных; после того как для исходных таблиц будет включено отслеживание измененных данных, в этой схеме также будут храниться отдельные таблицы изменений, служащие репозиторием информации об изменениях. Схема **cdc** также содержит связанные системные функции, используемые для выполнения запросов для получения информации об изменениях.  
   
@@ -167,7 +167,7 @@ GO
   
 ## <a name="see-also"></a>См. также:  
  [Отслеживание измененных данных (SQL Server)](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
- [Об отслеживании измененных данных (SQL Server)](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
+ [О фиксации измененных данных (SQL Server)](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [Работа с информацией об изменениях (SQL Server)](../../relational-databases/track-changes/work-with-change-data-sql-server.md)   
  [Администрирование и наблюдение за отслеживанием измененных данных (SQL Server)](../../relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md)  
   

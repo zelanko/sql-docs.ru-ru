@@ -19,10 +19,10 @@ ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b0c755208a5443e4606bdb41a0cbdfdf26a1fa1c
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71680964"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Развертывание проектов и пакетов служб Integration Services (SSIS)
@@ -123,7 +123,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
   
              На странице **Выбор назначения** мастера вы можете создать или выбрать существующий файл.  
   
-             Чтобы обновить файлы пакета при преобразовании проекта, запустите **Мастер преобразования проекта служб Integration Services** из [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Чтобы обновить файлы пакета, не выполняя преобразование проекта, запустите из среды **Мастер преобразования проектов служб Integration Services** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , а затем **Мастер обновления пакетов служб SSIS**. Если выполняется только обновление файлов пакета, следует убедиться в том, что внесенные изменения сохранены. В противном случае при преобразовании проекта в модель развертывания проекта несохраненные изменения в пакете преобразованы не будут.  
+             Чтобы обновить файлы пакета при преобразовании проекта, запустите **Мастер преобразования проекта служб Integration Services** из [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Чтобы обновить файлы пакета, не выполняя преобразование проекта, запустите из среды **Мастер преобразования проектов служб Integration Services**[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , а затем **Мастер обновления пакетов служб SSIS**. Если выполняется только обновление файлов пакета, следует убедиться в том, что внесенные изменения сохранены. В противном случае при преобразовании проекта в модель развертывания проекта несохраненные изменения в пакете преобразованы не будут.  
   
      Дополнительные сведения об обновлении пакетов см. в разделах [Обновление пакетов служб Integration Services](../../integration-services/install-windows/upgrade-integration-services-packages.md) и [Обновление пакетов служб Integration Services с помощью мастера обновления пакетов служб SSIS](../../integration-services/install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md).  
   
@@ -707,13 +707,13 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  Выбор области параметра, пакета или проекта.  
   
 ###  <a name="configureParameters"></a> Задание параметров на странице «Настройка параметров»  
- **Название**  
+ **имя**;  
  Выводит список имен параметра.  
   
  **Область действия**  
  Отображает область действия параметров.  
   
- **Value**  
+ **Значение**  
  Выводит список значений параметра.  
   
  Для настройки свойства параметра нажмите кнопку с многоточием рядом с полем значения.  

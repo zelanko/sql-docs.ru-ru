@@ -17,10 +17,10 @@ ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ca59166f994a0bd982c2f00c5c60c39207e9e02a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293654"
 ---
 # <a name="xml-task"></a>Задача «XML»
@@ -151,7 +151,7 @@ ms.locfileid: "71293654"
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|**Проверить**|Проверяется соответствие XML-документа определению типа документа (DTD) или схеме определения XML-схемы (XSD, XML Schema definition). При выборе этого параметра в разделе отображаются динамические параметры **Проверить**.|  
+|**Проверка**|Проверяется соответствие XML-документа определению типа документа (DTD) или схеме определения XML-схемы (XSD, XML Schema definition). При выборе этого параметра в разделе отображаются динамические параметры **Проверить**.|  
 |**XSLT**|Выполняет преобразование XSL в XML-документах. При выборе этого параметра в разделе отображаются динамические параметры **XSLT**.|  
 |**XPATH**|Выполняет запросы и вычисления XPath. При выборе этого параметра в разделе отображаются динамические параметры **XPATH**.|  
 |**Объединить**|Выполняет слияние двух XML-документов. При выборе этого параметра отображаются динамические параметры в разделе **Слияние**.|  
@@ -364,7 +364,7 @@ ms.locfileid: "71293654"
   
  Если параметр **XPathStringSourceType** имеет значение **Переменная**, выберите существующую переменную или нажмите кнопку \<**Создать переменную...** >, чтобы создать ее.  
   
- **См. также**: подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) и о [добавлении переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **См. также**: подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) и о [добавлении переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
  При использовании инструкции XPath для определения места в исходном документе, куда необходимо вставить данные, ожидается, что инструкция возвратит единственный узел. Если инструкция возвращает несколько узлов, то используется только первый узел. Содержимое второго документа добавляется в первый узел, который возвращается запросом XPath.  
   
@@ -409,7 +409,7 @@ ms.locfileid: "71293654"
   
  Если параметр **SecondOperandType** имеет значение **Переменная**, выберите существующую переменную или нажмите кнопку \<**Создать переменную...** >, чтобы создать ее.  
   
- **См. также**: подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) и о [добавлении переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **См. также**: подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) и о [добавлении переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
 #### <a name="operationtype--diff"></a>OperationType = инструмент сравнения  
  Задайте параметры для операции поиска различий.  
@@ -484,7 +484,7 @@ ms.locfileid: "71293654"
   
  Если параметр **SecondOperandType** имеет значение **Переменная**, выберите существующую переменную или нажмите кнопку \<**Создать переменную...** >, чтобы создать ее.  
   
- **См. также**: подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) и о [добавлении переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **См. также**: подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) и о [добавлении переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
 #### <a name="operationtype--patch"></a>OperationType = Patch  
  Задайте параметры для операции обновления.  
@@ -530,7 +530,7 @@ ms.locfileid: "71293654"
   
  Если параметр **SecondOperandType** имеет значение **Переменная**, выберите существующую переменную или нажмите кнопку \<**Создать переменную...** >, чтобы создать ее.  
   
- **См. также**: подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) и о [добавлении переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **См. также**: подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) и о [добавлении переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
 ## <a name="related-content"></a>См. также  
 

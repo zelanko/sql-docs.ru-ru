@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 84a07ef89bc42538a5043a46ed3bcd23bc588caf
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321859"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>Руководство. Настройка репликации между сервером и мобильными клиентами (репликация слиянием)
@@ -36,7 +36,7 @@ ms.locfileid: "75321859"
 > * Добавление мобильных устройств подписчика для публикации слиянием.
 > * Синхронизация подписки на публикацию слиянием.
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
 Этот учебник предназначен для пользователей, знакомых с основными операциями с базами данных, но имеющих ограниченный опыт работы с репликацией. Перед тем как приступить к работе с этим учебником, необходимо освоить [Учебник. Подготовка SQL Server к репликации](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md).  
   
 Для работы с этим учебником требуется SQL Server, среда SQL Server Management Studio (SSMS) и база данных AdventureWorks. 
@@ -231,7 +231,7 @@ ms.locfileid: "75321859"
     
    ![Выбор для задания имени для входа](media/tutorial-replicating-data-with-mobile-clients/sublogin.png)
   
-1. На странице **Сопоставление пользователей** выберите базу данных **SalesOrdersReplica** и роль **db_owner**. На странице **Защищаемые объекты** предоставьте разрешение **Явное** для элемента **Изменение трассировки**. Нажмите кнопку **ОК**.
+1. На странице **Сопоставление пользователей** выберите базу данных **SalesOrdersReplica** и роль **db_owner**. На странице **Защищаемые объекты** предоставьте разрешение **Явное** для элемента **Изменение трассировки**. Щелкните **ОК**.
 
    ![Страницы "Сопоставление пользователей" и "Защищаемые объекты"](media/tutorial-replicating-data-with-mobile-clients/setdbo.png)
   

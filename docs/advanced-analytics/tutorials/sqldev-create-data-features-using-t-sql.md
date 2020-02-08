@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 6970fd92fc1b655e0df66cdb548a044e3bdc746e
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73725759"
 ---
 # <a name="lesson-2-create-data-features-using-r-and-t-sql"></a>Урок 2. Создание признаков данных с помощью R и T-SQL
@@ -124,7 +124,7 @@ ms.locfileid: "73725759"
 
 ## <a name="next-lesson"></a>Следующее занятие
 
-[Занятие 3. Обучение и сохранение модели с помощью T-SQL](sqldev-train-and-save-a-model-using-t-sql.md)
+[Урок 3. Обучение и сохранение модели с помощью T-SQL](sqldev-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="previous-lesson"></a>Предыдущее занятие
 

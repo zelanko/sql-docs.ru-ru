@@ -23,10 +23,10 @@ ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bfda79efac4e64fbb735e424cad4b8bb9ba93851
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70176266"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
@@ -128,7 +128,7 @@ ms.locfileid: "70176266"
   
  Если операция резервного копирования перекрывается операцией сжатия или управления файлами, то возникает конфликт. Независимо от того, какая из конфликтующих операций начата первой, вторая операция ждет истечения времени ожидания первой (оно зависит от параметров сеанса). Если разблокировка происходит до истечения времени ожидания, работа второй операции продолжается. Если разблокировки за этот период не происходит, вторая операция заканчивается неудачно.  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="RelatedTasks"></a> Related tasks  
  **Устройства резервного копирования и носители резервных копий**  
   
 -   [Определение логического устройства резервного копирования для дискового файла (SQL Server)](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
@@ -149,7 +149,7 @@ ms.locfileid: "70176266"
   
 -   [Восстановление резервной копии с устройства (SQL Server)](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)  
   
--   [Учебник. Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Руководство. Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
  **Создание резервной копии**  
   
@@ -172,7 +172,7 @@ ms.locfileid: "70176266"
   
 -   [Использование регулятора ресурсов для ограничения загрузки ЦП при сжатии резервной копии (Transact-SQL)](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
--   [Учебник. Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Руководство. Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="and-more"></a>См. также 
  [Резервное копирование и восстановление баз данных SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   

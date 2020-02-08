@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9efad50aeb778c4cae01145fb39dd10a71c42ca0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 328f3bc8106cd499326cfce79430fef7886cd9b2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66413566"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75688210"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Экспорт в Microsoft Word (построитель отчетов и службы SSRS)
 
@@ -72,9 +72,9 @@ ms.locfileid: "66413566"
   
  Это происходит потому, что модуль подготовки отчетов Word анализирует отчет для определения наличия таких полей, относящихся к разбиению на страницы, как **PageNumber** и **TotalPages** , и обрабатывает только простые ссылки, а не вызовы функций. В данном случае в выражении вызывается функция **ToString** . Следующие два выражения являются эквивалентными, и оба обеспечивают правильную подготовку к просмотру при предварительном просмотре отчета в построителе отчетов или конструкторе отчетов либо при подготовке к просмотру опубликованного отчета на веб-портале [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] или в библиотеке SharePoint. Но модуль подготовки отчетов Word успешно выполняет синтаксический анализ только второго выражения и правильно подготавливает к просмотру номера страниц.  
   
--   **Сложное выражение:**  выражением является `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
+-   **Сложное выражение**:  выражением является `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
   
--   **Выражение с отрезками текста** : текст **Средний объем продаж**, выражение  `=Avg(Fields!YTDPurchase.Value, "Sales)`, текст **Номер страницы**, выражение `=Globals!PageNumber`  
+-   **Выражение с отрезками текста**: текст **Средний объем продаж**, выражение `=Avg(Fields!YTDPurchase.Value, "Sales)`, текст **Номер страницы**, выражение `=Globals!PageNumber`  
   
  Чтобы избежать этой проблемы, при включении выражений в колонтитулы используйте несколько отрезков текста вместо одного сложного выражения. Следующие два выражения эквивалентны. Первое выражение является сложным, а второй использует отрезки текста. Модуль подготовки отчетов Word успешно выполняет синтаксический анализ только второго выражения.  
   
@@ -151,7 +151,7 @@ ms.locfileid: "66413566"
 > [!IMPORTANT]  
 >  Модуль подготовки отчетов [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 (DOC) устарел. Дополнительные сведения см. в разделе [Нерекомендуемые функции служб SQL Server Reporting Services в SQL Server 2016](~/reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md).  
   
- Модуль подготовки отчетов Word является совместимым с [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003, а также с установленным пакетом совместимости [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office для Word, Excel и PowerPoint. Дополнительные сведения см. в разделе [Пакет совместимости Microsoft Office для Word, Excel и PowerPoint](https://www.microsoft.com/download/details.aspx?id=12439).  
+ Модуль подготовки отчетов Word является совместимым с [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003, а также с установленным пакетом совместимости [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office для Word, Excel и PowerPoint. Дополнительные сведения см. в разделе [Пакет совместимости Microsoft Office для Word, Excel и PowerPoint](https://www.microsoft.com/download/details.aspx?id=1285).
   
  Предыдущая версия модуля подготовки отчетов Word, совместимая с [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003, переименована в Word 2003. По умолчанию доступен только модуль подготовки отчетов Word. Чтобы получить доступ к модулю подготовки отчетов Word 2003, необходимо обновить файлы конфигурации служб Reporting Services. Модуль подготовки Word 2003 создает содержимое файлов типа **application/vnd.ms-word** , имена файлов имеют расширение DOC.  
   
@@ -189,7 +189,7 @@ ms.locfileid: "66413566"
 ##  <a name="DeviceInfo"></a> Настройки сведений об устройстве  
  Некоторые настройки по умолчанию для этого модуля подготовки отчетов можно изменить. Изменив настройки сведений об устройстве можно, например, пропустить все гиперссылки и ссылки детализации, или развернуть все элементы, которые могут быть развернуты, независимо от их состояния на момент подготовки отчета. Это делается с помощью настроек сведений об устройстве. Дополнительные сведения см. в статье [Word Device Information Settings](../../reporting-services/word-device-information-settings.md).  
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Разбиение на страницы в службах Reporting Services](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
 [Поведение при отрисовке](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   

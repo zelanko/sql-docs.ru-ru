@@ -11,10 +11,10 @@ ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7c4a51bfb9da9abe3e50c85896f32269e3fee5ff
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296099"
 ---
 # <a name="lesson-1-7-add-and-configure-the-ole-db-destination"></a>Занятие 1-7. Добавление и настройка назначения OLE DB
@@ -43,7 +43,7 @@ ms.locfileid: "71296099"
   
 7.  В поле **Имя таблицы или представления** введите или выберите значение **[dbo].[FactCurrencyRate]** .  
   
-8.  Чтобы создать таблицу, нажмите кнопку **Создать**.  Измените имя таблицы с **Образец назначения OLE DB** на **NewFactCurrencyRate**.  Нажмите кнопку **ОК**.  
+8.  Чтобы создать таблицу, нажмите кнопку **Создать**.  Измените имя таблицы с **Образец назначения OLE DB** на **NewFactCurrencyRate**.  Щелкните **ОК**.  
   
 9. После нажатия кнопки **ОК** диалоговое окно закроется, а значение **Имя таблицы или представления** автоматически изменится на **NewFactCurrencyRate**.  
   
@@ -51,13 +51,13 @@ ms.locfileid: "71296099"
   
 11. Убедитесь в том, что входные столбцы **AverageRate**, **CurrencyKey**, **EndOfDayRate**и **DateKey** правильно сопоставлены с целевыми столбцами. Если друг с другом сопоставлены столбцы с одинаковыми именами, то сопоставление правильное.  
   
-12. Нажмите кнопку **ОК**.  
+12. Щелкните **ОК**.  
   
 13. Щелкните правой кнопкой мыши назначение **Образец назначения OLE DB** и выберите пункт **Свойства**.  
   
 14. В окне **Свойства** убедитесь в том, что свойство **LocaleID** установлено в значение **Английский (США)** , а свойство **DefaultCodePage** установлено в значение **1252**.  
   
-## <a name="go-to-next-task"></a>Перейти к следующему шагу
+## <a name="go-to-next-task"></a>Переход к следующей задаче
 [Шаг 8. Добавление заметок и форматирование пакета занятия 1](../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
 ## <a name="see-also"></a>См. также раздел  

@@ -11,10 +11,10 @@ ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
 ms.openlocfilehash: 25fae1036d3a07d3cdbfe92ef55fe92e0396497a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75242630"
 ---
 # <a name="configure-polybase-to-access-external-data-in-oracle"></a>Настройка PolyBase для доступа к внешним данным в Oracle
@@ -23,7 +23,7 @@ ms.locfileid: "75242630"
 
 В этой статье описывается использование PolyBase в экземпляре SQL Server для запроса внешних данных в Oracle.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Если вы не установили PolyBase, см. раздел [Установка PolyBase](polybase-installation.md).
 

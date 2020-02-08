@@ -13,10 +13,10 @@ ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f9298d2ff1dc79d14fa5de943d2d7cfccf8bcbd4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298841"
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Создание и изменение службы CDC Oracle
@@ -34,7 +34,7 @@ ms.locfileid: "71298841"
   
  Введите следующие сведения в диалоговом окне «Новая служба Windows для Oracle CDC» или «Свойства службы CDC».  
   
-**Имя службы**  
+**имя службы**;  
  Введите имя новой службы Windows для Oracle CDC. По возможности не следует использовать длинные имена. В имени службы также нельзя использовать символы «/» и «\».  
   
 > [!NOTE]  
@@ -62,7 +62,7 @@ ms.locfileid: "71298841"
   
  **Имя сервера**: выберите целевой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], с которым устанавливается соединение (например, **\\\\<имя_компьютера>\\<имя_экземпляра>** ). По умолчанию выводится экземпляр сервера, к которому подключение выполнялось в последний раз.  
   
- **Проверка подлинности**  
+ **Аутентификация**  
  Выберите один из следующих вариантов:  
   
 -   **Проверка подлинности Windows**. В этом случае служба Oracle CDC будет подключаться к целевому экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], используя учетную запись службы. Если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] работает на другом компьютере, проверку подлинности Windows необходимо использовать с учетными записями домена.  

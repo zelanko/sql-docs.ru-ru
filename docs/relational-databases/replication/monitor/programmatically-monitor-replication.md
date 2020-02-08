@@ -28,13 +28,13 @@ helpviewer_keywords:
 ms.assetid: e8bf8850-8da5-4a4f-a399-64232b4e476d
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 482991f4faad8fff3747556c47166096ae4974ec
-ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 0926264c25affe2f110227fad4c0fb2b113c9590
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69633496"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287866"
 ---
 # <a name="programmatically-monitor-replication"></a>Наблюдение за репликацией программным образом
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -138,7 +138,7 @@ ms.locfileid: "69633496"
   
 1.  Создайте соединение с распространителем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.ReplicationMonitor> .  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.ReplicationMonitor>.  
   
 3.  Укажите для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> в качестве значения соединение <xref:Microsoft.SqlServer.Management.Common.ServerConnection> , созданное в шаге 1.  
   
@@ -174,7 +174,7 @@ ms.locfileid: "69633496"
   
 2.  Получите объект <xref:Microsoft.SqlServer.Replication.PublisherMonitor> одним из следующих способов.  
   
-    -   Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.PublisherMonitor> . Задайте для издателя свойство <xref:Microsoft.SqlServer.Replication.PublisherMonitor.Name%2A> , а также установите созданное на шаге 1 соединение <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> в качестве значения для свойства <xref:Microsoft.SqlServer.Management.Common.ServerConnection> . Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает значение **false**, это означает, что было неправильно задано имя издателя или такой публикации не существует.  
+    -   Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.PublisherMonitor>. Задайте для издателя свойство <xref:Microsoft.SqlServer.Replication.PublisherMonitor.Name%2A> , а также установите созданное на шаге 1 соединение <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> в качестве значения для свойства <xref:Microsoft.SqlServer.Management.Common.ServerConnection> . Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает значение **false**, это означает, что было неправильно задано имя издателя или такой публикации не существует.  
   
     -   Из коллекции <xref:Microsoft.SqlServer.Replication.PublisherMonitorCollection> , доступ к которой был получен с помощью свойства <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.PublisherMonitors%2A> существующего объекта <xref:Microsoft.SqlServer.Replication.ReplicationMonitor> .  
   
@@ -214,7 +214,7 @@ ms.locfileid: "69633496"
   
 2.  Получите объект <xref:Microsoft.SqlServer.Replication.PublicationMonitor> одним из следующих способов.  
   
-    -   Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.PublicationMonitor> . Задайте для публикации свойства <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>и <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> , а также установите созданное на шаге 1 соединение <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> в качестве значения для свойства <xref:Microsoft.SqlServer.Management.Common.ServerConnection> . Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает **false**, то либо свойства публикации были определены неверно, либо публикация не существует.  
+    -   Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.PublicationMonitor>. Задайте для публикации свойства <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>и <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> , а также установите созданное на шаге 1 соединение <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> в качестве значения для свойства <xref:Microsoft.SqlServer.Management.Common.ServerConnection> . Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает **false**, то либо свойства публикации были определены неверно, либо публикация не существует.  
   
     -   Из коллекции <xref:Microsoft.SqlServer.Replication.PublicationMonitorCollection> , доступ к которой был получен с помощью свойства <xref:Microsoft.SqlServer.Replication.PublisherMonitor.PublicationMonitors%2A> существующего объекта <xref:Microsoft.SqlServer.Replication.PublisherMonitor> .  
   
@@ -244,7 +244,7 @@ ms.locfileid: "69633496"
   
 2.  Получите объект <xref:Microsoft.SqlServer.Replication.PublicationMonitor> одним из следующих способов.  
   
-    -   Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.PublicationMonitor> . Задайте для публикации свойства <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>и <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> , а также установите созданное на шаге 1 соединение <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> в качестве значения для свойства <xref:Microsoft.SqlServer.Management.Common.ServerConnection> . Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает **false**, то либо свойства публикации были определены неверно, либо публикация не существует.  
+    -   Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.PublicationMonitor>. Задайте для публикации свойства <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>и <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> , а также установите созданное на шаге 1 соединение <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> в качестве значения для свойства <xref:Microsoft.SqlServer.Management.Common.ServerConnection> . Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает **false**, то либо свойства публикации были определены неверно, либо публикация не существует.  
   
     -   Из коллекции <xref:Microsoft.SqlServer.Replication.PublicationMonitorCollection> , доступ к которой был получен с помощью свойства <xref:Microsoft.SqlServer.Replication.PublisherMonitor.PublicationMonitors%2A> существующего объекта <xref:Microsoft.SqlServer.Replication.PublisherMonitor> .  
   
@@ -258,7 +258,7 @@ ms.locfileid: "69633496"
   
 2.  Получите объект <xref:Microsoft.SqlServer.Replication.PublicationMonitor> одним из следующих способов.  
   
-    -   Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.PublicationMonitor> . Задайте для публикации свойства <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>и <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> , а также установите созданное на шаге 1 соединение <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> в качестве значения для свойства <xref:Microsoft.SqlServer.Management.Common.ServerConnection> . Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает **false**, то либо свойства публикации были определены неверно, либо публикация не существует.  
+    -   Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.PublicationMonitor>. Задайте для публикации свойства <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>и <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> , а также установите созданное на шаге 1 соединение <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> в качестве значения для свойства <xref:Microsoft.SqlServer.Management.Common.ServerConnection> . Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает **false**, то либо свойства публикации были определены неверно, либо публикация не существует.  
   
     -   Из коллекции <xref:Microsoft.SqlServer.Replication.PublicationMonitorCollection> , доступ к которой был получен с помощью свойства <xref:Microsoft.SqlServer.Replication.PublisherMonitor.PublicationMonitors%2A> существующего объекта <xref:Microsoft.SqlServer.Replication.PublisherMonitor> .  
   

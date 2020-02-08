@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 92844b0a512129400e5f676f054fc68c68b26ccc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082585"
 ---
 # <a name="rename-columns-database-engine"></a>Переименование столбцов (компонент Database Engine)
@@ -34,7 +34,7 @@ ms.locfileid: "68082585"
 
    [Ограничения](#Restrictions)
 
-   [безопасность](#Security)
+   [Безопасность](#Security)
 
 - **Переименование столбцов с помощью:**
 
@@ -66,7 +66,7 @@ ms.locfileid: "68082585"
 
 1. В **обозревателе объектов**щелкните правой кнопкой мыши таблицу, в которой нужно переименовать столбцы, и выберите пункт **Конструирование**.
 2. В разделе **Имя столбца**выберите имя, которое нужно изменить, и введите новое.
-3. В меню **Файл** выберите пункт **Сохранить** _имя_таблицы_.
+3. В меню **Файл** выберите команду **Сохранить** _имя_таблицы_.
 
 > [!NOTE]
 > Имя столбца можно также изменить на вкладке **Свойства столбца** . Выберите столбец, имя которого нужно изменить, и введите новое значение в поле **Имя**.

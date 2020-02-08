@@ -22,10 +22,10 @@ ms.assetid: 4cbed281-5e1e-4d8b-b410-4c18a6cd0205
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 81a8422cbab7eb10d0c74ad5cd758817a665eaa6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050785"
 ---
 # <a name="grant-server-principal-permissions-transact-sql"></a>GRANT, предоставление разрешений участникам на уровне сервера (Transact-SQL)
@@ -110,7 +110,7 @@ GRANT permission [ ,...n ] }
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-granting-impersonate-permission-on-a-login"></a>A. Выдача разрешения IMPERSONATE для имени входа  
- В следующем примере разрешение `IMPERSONATE` для имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `WanidaBenshoof` выдается имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], созданному на основе пользователя Windows `AdvWorks\YoonM`.  
+ В следующем примере разрешение `IMPERSONATE` для имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`WanidaBenshoof` выдается имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], созданному на основе пользователя Windows `AdvWorks\YoonM`.  
   
 ```  
 USE master;  
@@ -119,7 +119,7 @@ GO
 ```  
   
 ### <a name="b-granting-view-definition-permission-with-grant-option"></a>Б. Выдача разрешения VIEW DEFINITION с параметром GRANT OPTION  
- В следующем примере разрешение `VIEW DEFINITION` для имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `EricKurjan` выдается имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `RMeyyappan` с параметром `GRANT OPTION`.  
+ В следующем примере разрешение `VIEW DEFINITION` для имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`EricKurjan` выдается имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`RMeyyappan` с параметром `GRANT OPTION`.  
   
 ```  
 USE master;  

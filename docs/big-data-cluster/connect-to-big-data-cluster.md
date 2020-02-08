@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 0c5ba08a492be621e4b1f8871bdfcb49983af26d
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73882394"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Подключение к кластеру больших данных SQL Server с помощью Azure Data Studio
@@ -21,12 +21,12 @@ ms.locfileid: "73882394"
 
 В этой статье описывается, как подключиться к [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] из Azure Data Studio.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 - Развернутый [кластер больших данных SQL Server 2019](deployment-guidance.md).
-- [Средства для работы с большими данными SQL Server 2019](deploy-big-data-tools.md):
+- [Средства для работы с большими данными SQL Server 2019](deploy-big-data-tools.md)
    - **Azure Data Studio**
-   - **Расширение SQL Server 2019**
+   - **Расширение SQL Server 2019**
    - **kubectl**
    - **azdata**
 
@@ -70,6 +70,6 @@ ms.locfileid: "73882394"
 
    ![Узел служб данных Azure Data Studio](./media/connect-to-big-data-cluster/connect-data-services-node.png)
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Дополнительные сведения о [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] см. в статье [Что такое [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md).

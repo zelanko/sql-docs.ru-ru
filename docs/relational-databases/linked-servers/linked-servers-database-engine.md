@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f63e94b8a9ca93d6a1403e17d4a8fa7205938066
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165343"
 ---
 # <a name="linked-servers-database-engine"></a>Связанные серверы (компонент Database Engine)
@@ -64,7 +64,7 @@ ms.locfileid: "74165343"
 ## <a name="linked-server-details"></a>Подробности настройки связанных серверов  
  На следующей иллюстрации показаны основы настройки связанных серверов.  
   
- ![Уровень клиента, уровень сервера и уровень сервера баз данных](../../relational-databases/linked-servers/media/lsvr.gif "|::ref1::|")  
+ ![Уровень клиента, уровень сервера и уровень сервера баз данных](../../relational-databases/linked-servers/media/lsvr.gif "Уровень клиента, уровень сервера и уровень сервера баз данных")  
   
 Обычно связанные серверы используются для обработки распределенных запросов. Если клиентское приложение выполняет распределенный запрос через связанный сервер, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проводит синтаксический анализ команды и передает запросы поставщику OLE DB. Запрос на набор строк может быть в форме выполнения запроса к поставщику или в форме открытия базовой таблицы из поставщика.  
 
