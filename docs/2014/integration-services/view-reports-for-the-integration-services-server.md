@@ -1,5 +1,5 @@
 ---
-title: Просмотр отчетов для сервера служб Integration Services | Документация Майкрософт
+title: Просмотр отчетов для сервера Integration Services | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1cfce32afdb334ecba55f082dce80af580a73178
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054551"
 ---
 # <a name="view-reports-for-the-integration-services-server"></a>Просмотр отчетов для сервера служб Integration Services
@@ -28,7 +28,7 @@ ms.locfileid: "66054551"
   
 3.  Для просмотра отчета выберите один из следующих вариантов.  
   
-    -   **Панель мониторинга служб Integration Services**  
+    -   **Панель мониторинга Integration Services**  
   
     -   **Все выполнения**  
   
@@ -36,10 +36,10 @@ ms.locfileid: "66054551"
   
     -   **Все операции**  
   
-    -   **Все соединения**  
+    -   **Все подключения**  
   
-## <a name="see-also"></a>См. также  
- [Отчеты для сервера служб Integration Services](../../2014/integration-services/reports-for-the-integration-services-server.md)   
- [Развертывание проектов на сервере служб Integration Services](../../2014/integration-services/deploy-projects-to-integration-services-server.md)  
+## <a name="see-also"></a>См. также:  
+ [Отчеты для сервера Integration Services](../../2014/integration-services/reports-for-the-integration-services-server.md)   
+ [Deploy Projects to Integration Services Server](../../2014/integration-services/deploy-projects-to-integration-services-server.md)  
   
   

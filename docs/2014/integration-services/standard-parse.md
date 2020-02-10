@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9837eb1c58facb76eef5885012920b294674f7fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055287"
 ---
 # <a name="standard-parse"></a>Standard Parse
@@ -25,7 +25,7 @@ ms.locfileid: "66055287"
   
  Стандартный синтаксический анализ поддерживает преобразование международных типов данных, которое нужно использовать, если формат данных не поддерживается быстрым синтаксическим анализом. Дополнительные сведения об API-интерфейсе автоматизации преобразования типов данных см. в статье «API-интерфейсы преобразования типов данных» в [библиотеке MSDN](https://go.microsoft.com/fwlink/?LinkId=79427).  
   
-## <a name="see-also"></a>См. также  
- [Быстрый синтаксический анализ](../../2014/integration-services/fast-parse.md)  
+## <a name="see-also"></a>См. также:  
+ [Fast Parse](../../2014/integration-services/fast-parse.md)  
   
   

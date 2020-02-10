@@ -16,18 +16,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9a1d50afde56843942c470017a8534ffa797eb69
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058149"
 ---
 # <a name="import-and-export-packages-ssis-service"></a>Импорт и экспорт пакетов (службы SSIS)
     
 > [!IMPORTANT]  
->  В данном разделе описывается компонент [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] — служба Windows для управления пакетами служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] поддерживает эту службу для обеспечения обратной совместимости с более ранними версиями служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], на сервере служб Integration Services можно управлять пакетами.  
+>  В данном разделе описывается компонент [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] — служба Windows для управления пакетами служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]поддерживает службу для обеспечения обратной совместимости с более ранними выпусками [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], на сервере служб Integration Services можно управлять пакетами.  
   
- Пакеты можно сохранять либо в таблице sysssispackages базы данных msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], либо в файловой системе.  
+ Пакеты можно сохранять либо в таблице sysssispackages базы данных msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , либо в файловой системе.  
   
  Хранилище пакетов, являющееся логическим хранилищем, которое контролируется службой [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , может включать и базу данных msdb, и папки файловой системы, указанные в файле конфигурации для службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
@@ -39,18 +39,20 @@ ms.locfileid: "66058149"
   
 -   База данных msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] предоставляют возможность для импорта и экспорта пакетов и посредством этого изменения формата и места хранения пакетов. С помощью функций импорта и экспорта можно добавлять пакеты в файловую систему, хранилище пакетов или базу данных msdb, а также копировать пакеты из одного формата хранения в другой. Например, пакеты, сохраненные в msdb, можно скопировать в файловую систему и наоборот.  
+ 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] предоставляют возможность для импорта и экспорта пакетов и посредством этого изменения формата и места хранения пакетов. С помощью функций импорта и экспорта можно добавлять пакеты в файловую систему, хранилище пакетов или базу данных msdb, а также копировать пакеты из одного формата хранения в другой. Например, пакеты, сохраненные в msdb, можно скопировать в файловую систему и наоборот.  
   
  Можно также скопировать пакет в другой формат с помощью программы командной строки **dtutil** (dtutil.exe). Дополнительные сведения см. в статье [dtutil Utility](dtutil-utility.md).  
   
 ## <a name="to-import-or-export-a-package"></a>Импорт и экспорт пакетов  
   
 > [!IMPORTANT]  
->  В этом разделе обсуждается служба [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , входящая в состав [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] поддерживает службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] для обеспечения обратной совместимости с [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Сведения об управлении пакетами в [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] см. в разделе [Сервер служб Integration Services (SSIS)](catalog/integration-services-ssis-server-and-catalog.md).  
+>  В этом разделе обсуждается служба [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , входящая в состав [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. 
+  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] поддерживает службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] для обеспечения обратной совместимости с [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Сведения об управлении пакетами в [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] см. в разделе [Сервер служб Integration Services (SSIS)](catalog/integration-services-ssis-server-and-catalog.md).  
   
  Можно выполнять импорт и экспорт пакетов служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] между следующими типами хранилищ.  
   
--   Можно выполнить импорт пакетов, которые хранятся в экземпляре [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], в файловой системе или хранилище пакетов служб [!INCLUDE[ssIS](../includes/ssis-md.md)] . Импортированные пакеты сохраняются в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или в папке хранилища пакетов служб [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
+-   Можно импортировать пакет, хранящийся в экземпляре [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], в файловой системе или в хранилище [!INCLUDE[ssIS](../includes/ssis-md.md)] пакетов. Импортированные пакеты сохраняются в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или в папке хранилища пакетов служб [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
 -   Можно экспортировать пакеты, хранящиеся в экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], в файловой системе или хранилище пакетов служб [!INCLUDE[ssIS](../includes/ssis-md.md)] , в другой формат хранения и в другое расположение.  
   
@@ -66,7 +68,7 @@ ms.locfileid: "66058149"
   
 1.  Нажмите кнопку **Пуск**, укажите пункт **Microsoft** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]и выберите пункт среды **SQL Server Management Studio**.  
   
-2.  В диалоговом окне **Соединение с сервером** установите следующие параметры.  
+2.  В диалоговом окне **соединение с сервером** задайте следующие параметры.  
   
     -   В поле **Тип сервера** выберите **Службы Integration Services**.  
   
@@ -74,7 +76,7 @@ ms.locfileid: "66058149"
   
 3.  Если обозреватель объектов не открыт, в меню **Вид** выберите пункт **Обозреватель объектов**.  
   
-4.  В обозревателе объектов разверните папку **Сохраненные пакеты** .  
+4.  В обозревателе объектов разверните папку « **Сохраненные пакеты** ».  
   
 5.  Разверните вложенные папки и найдите папку, в которую нужно выполнить импорт пакета.  
   
@@ -82,15 +84,15 @@ ms.locfileid: "66058149"
   
     -   Чтобы выполнить импорт из экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], выберите параметр **SQL Server** и укажите сервер и метод проверки подлинности. При выборе проверки подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] укажите имя пользователя и пароль.  
   
-         Нажмите кнопку обзора **(…)** , выберите импортируемый пакет и нажмите кнопку **ОК**.  
+         Нажмите кнопку обзора **(…)**, выберите импортируемый пакет и нажмите кнопку **ОК**.  
   
     -   Чтобы выполнить импорт из файловой системы, выберите параметр **Файловая система** .  
   
-         Нажмите кнопку обзора **(…)** , выберите импортируемый пакет и нажмите кнопку **Открыть**.  
+         Нажмите кнопку обзора **(…)**, выберите импортируемый пакет и нажмите кнопку **Открыть**.  
   
     -   Чтобы выполнить импорт из хранилища пакетов служб [!INCLUDE[ssIS](../includes/ssis-md.md)] , укажите сервер в поле **Хранилище пакетов служб SSIS** .  
   
-         Нажмите кнопку обзора **(…)** , выберите импортируемый пакет и нажмите кнопку **ОК**.  
+         Нажмите кнопку обзора **(…)**, выберите импортируемый пакет и нажмите кнопку **ОК**.  
   
 7.  При необходимости обновите название пакета.  
   
@@ -110,7 +112,7 @@ ms.locfileid: "66058149"
   
 3.  Если обозреватель объектов не открыт, в меню **Вид** выберите пункт **Обозреватель объектов**.  
   
-4.  В обозревателе объектов разверните папку **Сохраненные пакеты** .  
+4.  В обозревателе объектов разверните папку « **Сохраненные пакеты** ».  
   
 5.  Разверните вложенные папки и выберите пакет для экспорта.  
   
@@ -122,17 +124,17 @@ ms.locfileid: "66058149"
   
     -   Чтобы выполнить экспорт в файловую систему, выберите параметр **Файловая система** .  
   
-         Нажмите кнопку обзора **(…)** , чтобы выбрать папку, в которую нужно экспортировать пакет, введите имя файла пакета и нажмите кнопку **Сохранить**.  
+         Нажмите кнопку обзора **(…)**, чтобы выбрать папку, в которую нужно экспортировать пакет, введите имя файла пакета и нажмите кнопку **Сохранить**.  
   
     -   Чтобы выполнить экспорт в хранилище пакетов служб [!INCLUDE[ssIS](../includes/ssis-md.md)] , выберите **Хранилище пакетов служб SSIS** и укажите сервер.  
   
-         Нажмите кнопку обзора **(…)** , разверните папку **Пакеты служб SSIS** и выберите папку, в которую нужно сохранить пакет. Если нужно изменить имя пакета, введите новое имя в текстовое поле **Имя пакета** . [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+         Нажмите кнопку обзора **(…)**, разверните папку **Пакеты служб SSIS** и выберите папку, в которую нужно сохранить пакет. Если нужно изменить имя пакета, введите новое имя в текстовое поле **Имя пакета** . [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 7.  Чтобы обновить уровень защиты пакета, нажмите кнопку обзора **(…)** и выберите иной уровень защиты с помощью диалогового окна **Уровень защиты пакета**. При выборе параметра **Шифровать конфиденциальные данные паролем** или **Шифровать все данные паролем** введите и подтвердите пароль.  
   
 8.  Чтобы завершить экспорт, нажмите кнопку **ОК** .  
   
-## <a name="see-also"></a>См. также  
- [Управление пакетами (службы SSIS)](service/package-management-ssis-service.md)  
+## <a name="see-also"></a>См. также:  
+ [Управление пакетами &#40;служб SSIS&#41;](service/package-management-ssis-service.md)  
   
   

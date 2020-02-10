@@ -1,5 +1,5 @@
 ---
-title: Доступ к функциональным возможностям SQLXML в среде .NET | Документация Майкрософт
+title: Доступ к функциям SQLXML в среде .NET | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,20 +16,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5d4055c52f8d7a9401bf3c9b89754db831d94bb3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012568"
 ---
 # <a name="accessing-sqlxml-functionality-in-the-net-environment"></a>Доступ к функциональным возможностям SQLXML в среде .NET
   В этом примере показано следующее.  
   
--   Как использовать [!INCLUDE[msCoName](../../../includes/msconame-md.md)] управляемых классов SQLXML (Microsoft.Data.SqlXml) для доступа к Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] среды .NET Framework.  
+-   Использование [!INCLUDE[msCoName](../../../includes/msconame-md.md)] управляемых классов SQLXML (Microsoft. Data. SQLXML) для доступа к Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в среде [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework.  
   
 -   Как дельты, сформированные в среде .NET Framework, могут применять изменения данных к таблицам [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- В этом приложении запрос XPath выполняется применительно к схеме XSD. Запрос XPath возвращает XML-документ, содержащий данные контактов (**FirstName**, **LastName**). Приложение загружает XML-документ в набор данных в среде .NET Framework. Данные в наборе данных изменяются: имя первого контакта в наборе данных меняется на «Сьюзен». Из набора данных создается дельта, и обновление, заданное в дельте (изменение имени сотрудника), применяется к таблице Person.Contact.  
+ В этом приложении запрос XPath выполняется применительно к схеме XSD. Выполнение запроса XPath возвращает XML-документ, состоящий из контактных данных (**FirstName**, **LastName**). Приложение загружает XML-документ в набор данных в среде .NET Framework. Данные в наборе данных изменяются: имя первого контакта в наборе данных меняется на «Сьюзен». Из набора данных создается дельта, и обновление, заданное в дельте (изменение имени сотрудника), применяется к таблице Person.Contact.  
   
 > [!NOTE]  
 >  В коде необходимо задать имя экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в строке соединения.  
@@ -70,7 +70,7 @@ class Test
 }  
 ```  
   
- **Чтобы протестировать пример:**  
+ **Проверка этого примера**  
   
  Чтобы проверить этот пример, необходимо установить на компьютер платформу [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework.  
   

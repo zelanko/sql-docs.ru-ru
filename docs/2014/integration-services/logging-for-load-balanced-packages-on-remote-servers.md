@@ -1,5 +1,5 @@
 ---
-title: Ведение журнала для загрузки с балансировкой пакеты на удаленном сервере | Документация Майкрософт
+title: Ведение журнала для пакетов с балансировкой нагрузки на удаленных серверах | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 64dec3a89b883d6b3234f65896bb89d3bfde5305
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057857"
 ---
 # <a name="logging-for-load-balanced-packages-on-remote-servers"></a>Ведение журнала для пакетов с балансировкой нагрузки на удаленных серверах
@@ -27,7 +27,7 @@ ms.locfileid: "66057857"
 ## <a name="related-tasks"></a>Связанные задачи  
  Дополнительные сведения о способах включения ведения журналов в пакете см. в разделе [Включение средств ведения журналов в SQL Server Data Tools](../../2014/integration-services/enable-package-logging-in-sql-server-data-tools.md).  
   
-## <a name="see-also"></a>См. также  
- [Ведение журналов в службах Integration Services (SSIS)](performance/integration-services-ssis-logging.md)  
+## <a name="see-also"></a>См. также:  
+ [Ведение журнала&#41; Integration Services &#40;SSIS](performance/integration-services-ssis-logging.md)  
   
   

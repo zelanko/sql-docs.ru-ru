@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e2eec829c3c8909bd318a86ecf35eedb9ac0f222
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010083"
 ---
 # <a name="filetables-sql-server"></a>Таблицы FileTable (SQL Server)
@@ -82,23 +82,23 @@ ms.locfileid: "66010083"
 -   Кроме того, таблицы FileTable можно запрашивать и обновлять с помощью обычного доступа [!INCLUDE[tsql](../../includes/tsql-md.md)] . Они интегрируются со средствами управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и такими компонентами, как средство резервного копирования.  
   
   
-##  <a name="additional"></a> Дополнительные замечания об использовании таблиц FileTable  
+##  <a name="additional"></a>Дополнительные рекомендации по использованию таблиц FileTable  
   
-###  <a name="DBA"></a> Вопросы управления  
- **О функции FILESTREAM и таблицах FileTable**  
+###  <a name="DBA"></a>Рекомендации по администрированию  
+ **О FILESTREAM и таблицах FileTable**  
   
 -   Можно настроить таблицы FileTable отдельно от FILESTREAM. Таким образом, можно продолжать пользоваться функцией FILESTREAM, не включая нетранзакционный доступ и не создавая таблицы FileTable.  
   
 -   Нетранзакционный доступ к данным FILESTREAM возможен исключительно с помощью таблиц FileTable. Таким образом, при включении нетранзакционного доступа поведение существующих столбцов FILESTREAM и приложений не изменяется.  
   
- **О таблицах FileTable и нетранзакционном доступе**  
+ **Сведения о таблицах FileTable и нетранзакционном доступе**  
   
 -   Можно включить или отключить нетранзакционный доступ на уровне базы данных.  
   
 -   Можно настроить или отрегулировать нетранзакционный доступ на уровне базы данных, отключив или включив доступ только для чтения или полный доступ для чтения и записи.  
   
   
-###  <a name="memory"></a> Таблицы FileTable не поддерживают файлы, отображенные на память  
+###  <a name="memory"></a>Таблицы FileTable не поддерживают файлы, отображенные в памяти  
  Таблицы FileTable не поддерживают файлы, отображенные на память. Двумя распространенными примерами приложений, в которых используются файлы, отображаемые на память, являются Notepad и Paint. Эти приложения нельзя использовать на том же компьютере, что и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для открытия файлов, которые хранятся в FileTable. Но можно использовать эти приложения с удаленного компьютера для открытия файлов, хранящихся в FileTable, поскольку в этих обстоятельствах средство отображения на память не используется.  
   
   
@@ -106,7 +106,7 @@ ms.locfileid: "66010083"
  [Включение необходимых компонентов для таблицы FileTable](enable-the-prerequisites-for-filetable.md)  
  Описывает способ включения компонентов, обязательных для создания и использования таблиц FileTable.  
   
- [Создание, изменение и удаление таблиц FileTable](create-alter-and-drop-filetables.md)  
+ [Создание, изменение и удаление таблиц FileTables](create-alter-and-drop-filetables.md)  
  Описывает способы создания новых таблиц FileTable и изменения или удаления существующих таблиц FileTable.  
   
  [выполнить загрузку файлов в таблицу FileTables](load-files-into-filetables.md)  
@@ -126,7 +126,7 @@ ms.locfileid: "66010083"
   
   
 ##  <a name="relcontent"></a> См. также  
- [FileTable Schema](filetable-schema.md)  
+ [Схема FileTable](filetable-schema.md)  
  Описывает стандартные и фиксированные схемы таблицы FileTable.  
   
  [Совместимость FileTable с другими компонентами SQL Server](filetable-compatibility-with-other-sql-server-features.md)  

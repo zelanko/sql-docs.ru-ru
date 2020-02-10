@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 81c87a7990c6c7125cbccbe99050cd5ee477e6d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483076"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Развертывание пакета развертывания модели при помощи MDSModelDeploy
@@ -29,7 +29,7 @@ ms.locfileid: "65483076"
 > [!IMPORTANT]  
 >  Пакеты могут быть развернуты только в выпуске [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , в котором они были созданы. Это означает, что пакеты, созданные в среде [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] , не могут быть развернуты в [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] или более поздних версиях.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения этой процедуры:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** в целевой среде служб [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ;  
@@ -46,7 +46,7 @@ ms.locfileid: "65483076"
   
 2.  Откройте командную строку и перейдите к MDSModelDeploy.exe.  
   
-    -   Если службы MDS установлены в расположении по умолчанию, средство находится в *диск*: \Program Files\Microsoft SQL Server\120\Master Data Services\Configuration\MDSModelDeploy.exe  
+    -   Если службы MDS установлены в расположение по умолчанию, это средство доступно на *диске*: \PROGRAM Files\Microsoft SQL Server\120\Master Data Services\Configuration\MDSModelDeploy.exe  
   
     -   Если службы MDS не установлены в местоположение по умолчанию, то найдите файл MDSModelDeploy.exe на локальном компьютере.  
   
@@ -91,9 +91,9 @@ ms.locfileid: "65483076"
   
 6.  После успешного развертывания пакета отображается сообщение "Операция MDSModelDeploy успешно завершена".  
   
- **Примечания.**  
+ **Заметки о**  
   
--   Если имя представления подписки в пакете совпадает с именем представления подписки в существующей модели, как создается представление *modelname.subscriptionviewname*. Если это имя уже используется, то представление подписки не создается.  
+-   Если представление подписки в пакете имеет то же имя, что и представление подписки в существующей модели, это представление создается как *modelname. subscriptionviewname*. Если это имя уже используется, то представление подписки не создается.  
   
 -   Процесс развертывания состоит из четырех шагов.  
   
@@ -109,14 +109,14 @@ ms.locfileid: "65483076"
   
      При обновлении в случае неудачного завершения любого из первых трех шагов переход к следующему шагу не производится. Однако откат уже внесенных изменений также не выполняется. Если процесс развертывания завершается неудачей в шаге 4, обновляются те элементы, которые могут обновиться.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
  Определенные пользователем метаданные, атрибуты файлов и разрешения для пользователей и групп не включаются в пакеты развертывания модели. При развертывании модели их нужно обновить вручную. Дополнительные сведения см. в разделе:  
   
--   [Добавить метаданные &#40;службы Master Data Services&#41;](../../2014/master-data-services/add-metadata-master-data-services.md)  
+-   [Добавление Master Data Services &#40;метаданных&#41;](../../2014/master-data-services/add-metadata-master-data-services.md)  
   
--   [Назначение разрешения для объекта модели (службы Master Data Services)](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)  
+-   [Назначение разрешений объекта модели &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)  
   
 ## <a name="see-also"></a>См. также:  
- [Развертывание моделей (службы Master Data Services)](../../2014/master-data-services/deploying-models-master-data-services.md)  
+ [Развертывание моделей &#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
   
   

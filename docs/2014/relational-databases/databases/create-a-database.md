@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d93e6cfa3ce6e958b31c1156cd4fc5fa046ad5ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62872339"
 ---
 # <a name="create-a-database"></a>Создание базы данных
@@ -34,9 +34,9 @@ ms.locfileid: "62872339"
   
      [Рекомендации](#Recommendations)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
--   **Создание базы данных с использованием следующих средств:**  
+-   **Создание базы данных с помощью:**  
   
      [Среда SQL Server Management Studio](#SSMSProcedure)  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62872339"
   
 ###  <a name="Recommendations"></a> Рекомендации  
   
--   Резервную копию базы данных [master](master-database.md) необходимо создавать каждый раз при создании, изменении или удалении пользовательской базы данных.  
+-   Резервная копия [главной](master-database.md) базы данных должна создаваться при каждом создании, изменении или удалении пользовательской базы данных.  
   
 -   При создании базы данных файлы данных следует делать как можно большего размера, в соответствии с максимальным предполагаемым объемом данных в базе данных.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "62872339"
   
 #### <a name="to-create-a-database"></a>Создание базы данных  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] и разверните его.  
+1.  В **обозревателе объектов**подключитесь к экземпляру, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] а затем разверните этот экземпляр.  
   
 2.  Щелкните правой кнопкой мыши элемент **Базы данных**, а затем выберите пункт **Создать базу данных**.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "62872339"
   
 4.  Чтобы создать базу данных, приняв все значения по умолчанию, нажмите кнопку **ОК**; иначе продолжайте выполнение следующих дополнительных шагов.  
   
-5.  Чтобы изменить имя владельца, нажмите ( **…** ) и выберите другого владельца.  
+5.  Чтобы изменить имя владельца, нажмите (**…**) и выберите другого владельца.  
   
     > [!NOTE]  
     >  Параметр **Использовать полнотекстовое индексирование** всегда установлен и недоступен (т. к. начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]все пользовательские базы данных поддерживают полнотекстовый поиск).  
@@ -133,8 +133,8 @@ GO
   
 ## <a name="see-also"></a>См. также:  
  [Файлы и файловые группы базы данных](database-files-and-filegroups.md)   
- [Присоединение и отсоединение базы данных (SQL Server)](database-detach-and-attach-sql-server.md)   
- [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)   
+ [Отсоединение и присоединение базы данных &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)   
+ [&#41;Transact-SQL ALTER DATABASE &#40;](/sql/t-sql/statements/alter-database-transact-sql)   
  [Добавление файлов данных или журналов в базу данных](add-data-or-log-files-to-a-database.md)  
   
   

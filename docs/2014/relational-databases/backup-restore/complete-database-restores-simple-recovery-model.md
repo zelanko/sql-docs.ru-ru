@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e64bf4d4642d8091cd0892283a996e7dccc56e26
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62877148"
 ---
 # <a name="complete-database-restores-simple-recovery-model"></a>Выполнение полного восстановления базы данных (Простая модель восстановления)
@@ -36,7 +36,7 @@ ms.locfileid: "62877148"
 > [!NOTE]  
 >  Сведения о поддержке резервных копий более ранних версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]см. в подразделе "Поддержка совместимости" раздела [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql).  
   
-##  <a name="Overview"></a> Общие сведения о восстановлении баз данных в рамках простой модели восстановления  
+##  <a name="Overview"></a>Общие сведения о восстановлении базы данных в простой модели восстановления  
  Полное восстановление базы данных при использовании простой модели восстановления состоит из одной или двух инструкций [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) , в зависимости от того, нужно ли выполнять восстановление разностной резервной копии базы данных. При использовании только полной резервной копии базы данных просто восстановите последнюю резервную копию, как показано на следующем рисунке.  
   
  ![Восстановление только полной резервной копии базы данных](../../database-engine/media/bnrr-rmsimple1-fulldbbu.gif "Восстановление только полной резервной копии базы данных")  
@@ -48,7 +48,7 @@ ms.locfileid: "62877148"
 > [!NOTE]  
 >  Если база данных восстанавливается на другой экземпляр сервера, см. раздел [Копирование баз данных путем создания и восстановления резервных копий](../databases/copy-databases-with-backup-and-restore.md).  
   
-###  <a name="TsqlSyntax"></a> Базовый синтаксис инструкции Transact-SQL RESTORE  
+###  <a name="TsqlSyntax"></a>Базовый синтаксис инструкции Transact-SQL RESTORE  
  Базовый синтаксис инструкции [!INCLUDE[tsql](../../../includes/tsql-md.md)][RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) для восстановления полной резервной копии базы данных выглядит следующим образом:  
   
  RESTORE DATABASE *имя_базы_данных* FROM *устройство_резервного_копирования* [ WITH NORECOVERY ]  
@@ -60,10 +60,11 @@ ms.locfileid: "62877148"
   
  RESTORE DATABASE *имя_базы_данных* FROM *устройство_резервного_копирования* WITH RECOVERY  
   
-###  <a name="Example"></a> Пример (Transact-SQL)  
+###  <a name="Example"></a> Примеры (Transact-SQL)  
  В следующем примере сначала показано, как использовать инструкцию [BACKUP](/sql/t-sql/statements/backup-transact-sql) , чтобы создать полную резервную копию базы данных и разностную резервную копию базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Затем в примере восстанавливаются резервные копии в последовательности восстановления. База данных восстанавливается к состоянию на момент создания разностной резервной копии базы данных.  
   
- В  примере показаны критически важные параметры в последовательности восстановления для полного восстановления базы данных. *Последовательность восстановления* состоит из одной или нескольких операций восстановления, которые выполняют перемещение данных в одном или нескольких этапах восстановления. Синтаксис и прочие подробности, несущественные для данной цели, опущены. При восстановлении базы данных рекомендуется явно указать параметр RECOVERY, несмотря на то, что он подразумевается по умолчанию.  
+ В  примере показаны критически важные параметры в последовательности восстановления для полного восстановления базы данных. 
+  *Последовательность восстановления* состоит из одной или нескольких операций восстановления, которые выполняют перемещение данных в одном или нескольких этапах восстановления. Синтаксис и прочие подробности, несущественные для данной цели, опущены. При восстановлении базы данных рекомендуется явно указать параметр RECOVERY, несмотря на то, что он подразумевается по умолчанию.  
   
 > [!NOTE]  
 >  Пример начинается с инструкции [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) , которая устанавливает модель восстановления `SIMPLE`.  
@@ -97,29 +98,29 @@ GO
 ##  <a name="RelatedTasks"></a> Связанные задачи  
  **Восстановление полной резервной копии базы данных**  
   
--   [Восстановление резервной копии базы данных в простой модели восстановления (Transact-SQL)](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)  
+-   [Восстановление резервной копии базы данных в простой модели восстановления &#40;Transact-SQL&#41;](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)  
   
 -   [Восстановление резервной копии базы данных &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
   
--   [Восстановление базы данных в новом расположении (SQL Server)](restore-a-database-to-a-new-location-sql-server.md)  
+-   [Восстановление базы данных в новое расположение &#40;SQL Server&#41;](restore-a-database-to-a-new-location-sql-server.md)  
   
  **Восстановление разностной резервной копии базы данных**  
   
--   [Восстановление разностной резервной копии базы данных (SQL Server)](restore-a-differential-database-backup-sql-server.md)  
+-   [Восстановление разностной резервной копии базы данных &#40;SQL Server&#41;](restore-a-differential-database-backup-sql-server.md)  
   
- **Восстановление резервной копии с помощью управляющих объектов SQL Server (SMO)**  
+ **Восстановление резервной копии с помощью управляющие объекты SQL Server (SMO)**  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlRestore%2A>  
   
 
   
-## <a name="see-also"></a>См. также  
- [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql)   
- [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
- [sp_addumpdevice (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
- [Полные резервные копии баз данных (SQL Server)](full-database-backups-sql-server.md)   
- [Разностные резервные копии (SQL Server)](differential-backups-sql-server.md)   
- [Общие сведения о резервном копировании (SQL Server)](backup-overview-sql-server.md)   
- [Обзор процессов восстановления (SQL Server)](restore-and-recovery-overview-sql-server.md)  
+## <a name="see-also"></a>См. также:  
+ [Восстановление &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
+ [&#41;BACKUP &#40;Transact-SQL](/sql/t-sql/statements/backup-transact-sql)   
+ [sp_addumpdevice &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
+ [&#40;SQL Server полного резервного копирования базы данных&#41;](full-database-backups-sql-server.md)   
+ [Разностные резервные копии &#40;SQL Server&#41;](differential-backups-sql-server.md)   
+ [Общие сведения о резервном копировании &#40;SQL Server&#41;](backup-overview-sql-server.md)   
+ [Обзор восстановления и восстановления &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)  
   
   

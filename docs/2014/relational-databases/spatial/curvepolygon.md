@@ -10,19 +10,20 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: ddd07c68d5549ed4cfc7cc3f421168ad968dadda
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014252"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
+  
   `CurvePolygon` является топологически закрытой областью, определенной внешним ограничивающим кольцом, а также нулем или более внутренних колец.  
   
 > [!IMPORTANT]  
->  Подробное описание и примеры использования возможностей обработки пространственных данных в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], в том числе `CurvePolygon` подтипа, загрузив Технический документ, [новые функции обработки пространственных в SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
+>  Подробное описание и примеры пространственных функций, появившихся в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], включая `CurvePolygon` подтип, см. в техническом документе с [новыми пространственными функциями в SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
   
- Следующие критерии определяют атрибуты `CurvePolygon` экземпляр:  
+ Следующие критерии определяют атрибуты `CurvePolygon` экземпляра.  
   
 -   Границы экземпляра `CurvePolygon` определяются внешним кольцом и всеми внутренними кольцами.  
   
@@ -181,7 +182,7 @@ SELECT @g1.STIsValid() AS G1, @g2.STIsValid() AS G2;
   
  И в @g1, и в @g2 используется одинаковое внешнее ограничивающее кольцо: круг с радиусом 5, а в качестве внутреннего кольца в обоих экземплярах используется квадрат.  Но при этом экземпляр @g1 является допустимым, а @g2 ― нет.  Недопустимость @g2 вызвана тем, что внутреннее кольцо делит внутреннее пространство, ограниченное внешним кольцом, на четыре отдельные области.  На следующем чертеже показано, что произошло.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Polygon](polygon.md)   
  [CircularString](circularstring.md)   
  [CompoundCurve](compoundcurve.md)   

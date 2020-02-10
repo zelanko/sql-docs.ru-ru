@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96a37b1b59043079f52ca922f1ab3e7dfc9cc0ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011267"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>Улучшение производительности полнотекстовых запросов
@@ -48,9 +48,9 @@ ms.locfileid: "66011267"
 -   В приложениях, в которых используются предикаты с селективной связью, наилучшей производительности запросов с использованием избирательных реляционных предикатов и неизбирательных полнотекстовых предикатов можно добиться, настроив их на использование оптимизатора запросов. Это позволит оптимизатору запросов определить, может ли он использовать предикат или диапазон для создания эффективного плана запроса. Данный подход более прост и часто более эффективен, чем индексирование реляционных данных в качестве полнотекстовых данных.  
   
 ## <a name="related-resources"></a>Связанные ресурсы  
- [Средство полнотекстового поиска SQL Server 2008: возможности и улучшения](https://go.microsoft.com/fwlink/?LinkId=129544)  
+ [Средство полнотекстового поиска SQL Server 2008: возможности и улучшения](https://go.microsoft.com/fwlink/?LinkId=129544)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sys.dm_fts_memory_buffers (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql)   
  [sys.dm_fts_memory_pools (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql)  
   

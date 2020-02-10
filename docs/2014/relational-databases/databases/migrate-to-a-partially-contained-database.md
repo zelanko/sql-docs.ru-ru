@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0e535935da5c99668e39ab4f84eb98ccd5bab064
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871733"
 ---
 # <a name="migrate-to-a-partially-contained-database"></a>Migrate to a Partially Contained Database
@@ -43,7 +43,7 @@ ms.locfileid: "62871733"
   
 -   Просмотрите список функций базы данных, которые изменились для частично автономных баз данных. Дополнительные сведения см. в разделе [Измененные функции (автономная база данных)](modified-features-contained-database.md).  
   
--   Выполнив запрос к представлению [sys.dm_db_uncontained_entities (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql), найдите в базе данных неавтономные объекты или функции. Дополнительные сведения см. в разделе  
+-   Выполнив запрос к представлению [sys.dm_db_uncontained_entities (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql) , найдите в базе данных неавтономные объекты или функции. Дополнительные сведения см. в разделе  
   
 -   Мониторьте XEvent **database_uncontained_usage** , чтобы определить, когда используются неавтономные функции.  
   
@@ -117,8 +117,8 @@ CLOSE user_cursor ;
 DEALLOCATE user_cursor ;  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Contained Databases](contained-databases.md)   
+## <a name="see-also"></a>См. также:  
+ [Автономные базы данных](contained-databases.md)   
  [sp_migrate_user_to_contained (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql)   
  [sys.dm_db_uncontained_entities (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql)  
   

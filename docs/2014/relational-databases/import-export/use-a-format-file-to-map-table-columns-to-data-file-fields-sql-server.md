@@ -14,17 +14,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd08aaa50f307d107a55c838395677e5692914ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011742"
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>Использование файла форматирования для сопоставления столбцов таблицы с полями файла данных (SQL Server)
   Файл данных может содержать поля, выстроенные в порядке, отличном от порядка соответствующих столбцов в таблице. В этом подразделе описывается изменение файлов форматирования в формате XML и в формате, отличном от XML для импорта файла данных, поля которого выстроены в ином порядке, нежели столбцы таблицы. Измененный файл форматирования сопоставляет поля данных соответствующим столбцам таблицы.  
   
 > [!NOTE]  
->  Файлы форматирования в формате XML и в формате, отличном от XML, могут использоваться для массового импорта файла данных в таблицу командой **bcp**, инструкцией BULK INSERT или инструкцией INSERT... SELECT * FROM OPENROWSET(BULK...). Дополнительные сведения см. в статье [Использование файла форматирования для массового импорта данных (SQL Server)](use-a-format-file-to-bulk-import-data-sql-server.md).  
+>  Файл форматирования в формате, отличном от XML, или XML-файл форматирования можно использовать для выполнения операций импорта файла данных в таблицу с помощью команды **bcp** , BULK INSERT инструкции или INSERT... SELECT * FROM OPENROWSET (BULK...). Дополнительные сведения см. в разделе [Использование файла форматирования для массового импорта данных (SQL Server)](use-a-format-file-to-bulk-import-data-sql-server.md).  
   
 ## <a name="sample-table-and-data-file"></a>Образец таблицы и файла данных  
  В примерах этого подраздела используются следующие таблица и файл данных.  
@@ -138,8 +138,8 @@ GO
   
 ```  
   
-## <a name="see-also"></a>См. также  
- [Пропуск столбца таблицы с помощью файла форматирования (SQL Server)](use-a-format-file-to-skip-a-table-column-sql-server.md)   
- [Использование файла форматирования для пропуска поля данных (SQL Server)](use-a-format-file-to-skip-a-data-field-sql-server.md)  
+## <a name="see-also"></a>См. также:  
+ [Используйте файл форматирования для пропуска столбца таблицы &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)   
+ [Используйте файл форматирования для пропуска поля данных &#40;SQL Server&#41;](use-a-format-file-to-skip-a-data-field-sql-server.md)  
   
   

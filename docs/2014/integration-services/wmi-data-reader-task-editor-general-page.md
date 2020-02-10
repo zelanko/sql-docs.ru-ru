@@ -1,5 +1,5 @@
 ---
-title: Редактор задач модуль чтения данных WMI (страница "Общие") | Документация Майкрософт
+title: Редактор задачи «Модуль чтения данных WMI» (страница «Общие») | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d25a77fd9a3fce701f65eca580647b193a6c0276
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054407"
 ---
 # <a name="wmi-data-reader-task-editor-general-page"></a>Редактор задачи «Модуль чтения данных WMI» (страница «Общие»)
@@ -36,10 +36,10 @@ ms.locfileid: "66054407"
  **Описание**  
  Введите описание задачи «Модуль чтения данных WMI».  
   
-## <a name="see-also"></a>См. также  
- [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор задачи "Модуль чтения данных WMI" (страница "Параметры инструментария WMI")](../../2014/integration-services/wmi-data-reader-task-editor-wmi-options-page.md)   
- [Страница «Выражения»](expressions/expressions-page.md)   
+## <a name="see-also"></a>См. также:  
+ [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор задачи "модуль чтения данных WMI" &#40;странице "параметры WMI"&#41;](../../2014/integration-services/wmi-data-reader-task-editor-wmi-options-page.md)   
+ [Страница "выражения"](expressions/expressions-page.md)   
  [Задача «Отслеживание событий WMI»](control-flow/wmi-event-watcher-task.md)  
   
   

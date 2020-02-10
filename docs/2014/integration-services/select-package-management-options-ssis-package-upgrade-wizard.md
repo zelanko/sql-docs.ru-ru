@@ -1,5 +1,5 @@
 ---
-title: Выбор параметров управления пакетами (мастер обновления пакетов служб SSIS) | Документация Майкрософт
+title: Выбор параметров Управление пакетами (мастер обновления пакетов служб SSIS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c71f254b0d0fb79e3ee8135c10d2d9ed715d3437
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056030"
 ---
 # <a name="select-package-management-options-ssis-package-upgrade-wizard"></a>Выбор параметров управления пакетами (мастер обновления пакетов служб SSIS)
@@ -24,10 +24,10 @@ ms.locfileid: "66056030"
   
  **Запуск мастера обновления пакетов служб SSIS**  
   
--   [Обновление пакетов служб Integration Services с помощью мастера обновления пакетов служб SSIS](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
+-   [обновить пакеты служб Integration Services с помощью мастера обновления пакетов служб SSIS](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   
 ## <a name="options"></a>Параметры  
- **Обновить строки соединения для использования новых имен поставщиков**  
+ **Обновление строк подключения для использования новых имен поставщиков**  
  Обновите строки соединения, чтобы в них использовались имена для следующих поставщиков текущего выпуска служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
 -   Поставщик OLE DB для служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
@@ -63,7 +63,7 @@ ms.locfileid: "66056030"
   
  Эти параметры недоступны, если выбран параметр **Сохранить в исходное расположение** страницы мастера **Выбор целевого расположения** .  
   
- **Игнорировать конфигурации**  
+ **Пропуск конфигураций**  
  Конфигурации пакетов не загружаются во время обновления пакетов. Выбор этого параметра позволяет сократить время, требуемое на обновление пакета.  
   
  **Создать резервную копию исходных пакетов**  
@@ -74,7 +74,7 @@ ms.locfileid: "66056030"
   
  Дополнительные сведения см. в разделе [Обновление пакетов служб Integration Services с помощью мастера обновления пакетов служб SSIS](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Обновление пакетов служб Integration Services](install-windows/upgrade-integration-services-packages.md)  
   
   

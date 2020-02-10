@@ -17,14 +17,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 74dad8dc9795a30637a9ab08c56ce8d0940b6f0e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010477"
 ---
 # <a name="access-filestream-data-with-opensqlfilestream"></a>Доступ к данным FILESTREAM с OpenSqlFilestream
-  OpenSqlFilestream API Получает дескриптор файла, совместимый с Win32 для FILESTREAM большой двоичный объект (BLOB), хранящиеся в файловой системе. Дескриптор может быть передан в любой из следующих API-интерфейсов Win32: [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426) или [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). При передаче этого дескриптора любому другому API Win32 будет возвращена ошибка ERROR_ACCESS_DENIED. Дескриптор следует закрыть, передав его API-интерфейсу Win32 [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428) перед фиксацией или откатом транзакции. Если дескриптор не будет закрыт, то это вызовет утечку ресурсов со стороны сервера.  
+  API OpenSqlFilestream получает файловый обработчик, совместимый с Win32, для большого двоичного объекта FILESTREAM (BLOB), хранящегося в файловой системе. Дескриптор может быть передан в любой из следующих API-интерфейсов Win32: [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426)или [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). При передаче этого дескриптора любому другому API Win32 будет возвращена ошибка ERROR_ACCESS_DENIED. Дескриптор следует закрыть, передав его API-интерфейсу Win32 [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428) перед фиксацией или откатом транзакции. Если дескриптор не будет закрыт, то это вызовет утечку ресурсов со стороны сервера.  
   
  Доступ к контейнеру данных FILESTREAM должен осуществляться в транзакции [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[tsql](../../includes/tsql-md.md)] могут выполняться в ней же. Это обеспечивает согласованность данных SQL и данных FILESTREAM BLOB.  
   
@@ -48,7 +48,7 @@ ULONGOpenOptions,LPBYTEFilestreamTransactionContext,SIZE_TFilestreamTransactionC
   
 #### <a name="parameters"></a>Параметры  
  *FilestreamPath*  
- [in] — `nvarchar(max)` Путь, который возвращается [PathName](/sql/relational-databases/system-functions/pathname-transact-sql) функции. PathName можно вызывать только из контекста учетной записи, которая имеет разрешения SELECT или UPDATE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для таблицы FILESTREAM и столбца.  
+ окне `nvarchar(max)` Путь, возвращаемый функцией [PathName](/sql/relational-databases/system-functions/pathname-transact-sql) . PathName можно вызывать только из контекста учетной записи, которая имеет разрешения SELECT или UPDATE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для таблицы FILESTREAM и столбца.  
   
  *DesiredAccess*  
  [in] Задает режим, используемый при доступе к данным FILESTREAM BLOB. Это значение передается функции [DeviceIoControl Function](https://go.microsoft.com/fwlink/?LinkId=105527).  
@@ -95,10 +95,10 @@ ULONGOpenOptions,LPBYTEFilestreamTransactionContext,SIZE_TFilestreamTransactionC
   
  [!code-cpp[FILESTREAM#FS_CPP_WriteBLOB](../../snippets/tsql/SQL15/tsql/filestream/cpp/filestream.cpp#fs_cpp_writeblob)]  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Чтобы использовать эту функцию API, должен быть установлен собственный клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client устанавливается совместно с клиентскими средствами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в статье [Установка SQL Server Native Client](../native-client/applications/installing-sql-server-native-client.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Большой двоичный объект &#40;BLOB-объект& #41;Данные&#40;SQL Server&#41;](binary-large-object-blob-data-sql-server.md)   
  [Создание частичных обновлений данных FILESTREAM](make-partial-updates-to-filestream-data.md)   
  [Избегание конфликтов в операциях баз данных в приложениях FILESTREAM](avoid-conflicts-with-database-operations-in-filestream-applications.md)  

@@ -1,5 +1,5 @@
 ---
-title: Импортировать политики на одном экземпляре | Документация Майкрософт
+title: Импорт политик в один экземпляр | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 410f3a317a9d3ad2f8cab52d9f57fd4a63c1c36c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62865103"
 ---
 # <a name="import-the-policies-to-a-single-instance"></a>Импорт политик в один экземпляр
   При выполнении этой задачи будет осуществляться импорт рекомендованных политик в состав средств управления на основе политик на одном экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Эту процедуру необходимо выполнять на сервере, на котором запущен [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] или более поздняя версия.  
   
 ### <a name="import-the-best-practices-policies-for-the-database-engine"></a>Импорт рекомендованных политик для компонента Database Engine  
@@ -31,11 +31,11 @@ ms.locfileid: "62865103"
   
 3.  Щелкните правой кнопкой мыши **Политики**и выберите пункт **Импортировать политику**.  
   
-4.  В **импорта** диалоговом окне рядом с полем **файлы, подлежащие импорту** щелкните кнопку с многоточием ( **...** ) кнопку.  
+4.  В диалоговом окне **Импорт** рядом с полем **импортируемые файлы** нажмите кнопку с многоточием (**...**).  
   
 5.  В списке **Искать в** перейдите к следующей папке, которая содержит политики рекомендаций:  
   
-     **C:\Program файлы (x86) \Microsoft SQL Server\110\Tools\Policies\DatabaseEngine\1033**  
+     **C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Policies\DatabaseEngine\1033**  
   
     > [!NOTE]  
     >  Путь к файлу может меняться в зависимости от места установки файлов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , используемой версии (32-разрядной или 64-разрядной) операционной системы и идентификатора языка.  
@@ -50,7 +50,7 @@ ms.locfileid: "62865103"
   
      Политики импортируются в подузел **Политики** узла **Управление политиками**. По умолчанию для импортированных политик задан режим выполнения «По запросу».  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
  [Планирование политик](../../2014/tutorials/schedule-the-policies.md)  
   
   

@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 66224262c88176fe0d0ddd1f4291b12213aed928
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054112"
 ---
 # <a name="consolidated-permissions-master-data-services"></a>Объединенные разрешения (службы основных данных)
@@ -27,32 +27,32 @@ ms.locfileid: "66054112"
   
  Объединенные разрешения применяются только к сущностям, разрешенным для явных иерархий и коллекций.  
   
- **Примечания.**  
+ **Заметки о**  
   
 -   Разрешения конечного элемента применяются только к функциональной области **Обозреватель** пользовательского интерфейса.  
   
 -   Разрешения, назначенные для атрибутов **Имя** и **Код** , не применяются.  
   
-|Разрешение|Описание|  
+|Разрешение|Description|  
 |----------------|-----------------|  
 |**Только для чтения**|Консолидированные элементы отображаются, но пользователь не может добавлять, удалять или изменять их.|  
-|**Update**|Консолидированные элементы отображаются, и пользователь может добавлять, удалять и изменять их.|  
+|**Обновляют**|Консолидированные элементы отображаются, и пользователь может добавлять, удалять и изменять их.|  
 |**Запретить**|Консолидированные элементы для сущности не отображаются.|  
   
 ## <a name="attribute-permissions"></a>Разрешения атрибута  
  Разрешения атрибута применимы только к значениям атрибута указанной сущности. Пользователи с разрешениями только для атрибутов не могут добавлять или удалять элементы.  
   
-|Разрешение|Описание|  
+|Разрешение|Description|  
 |----------------|-----------------|  
 |**Только для чтения**|Атрибут отображается, но пользователь не может изменить его значений.|  
-|**Update**|Атрибут отображается, и пользователь может изменить его значения.|  
-|**Запретить**|Атрибут не отображается.<br /><br /> Примечание. Нельзя явно запретить доступ к атрибуты Name и Code.|  
+|**Обновляют**|Атрибут отображается, и пользователь может изменить его значения.|  
+|**Запретить**|Атрибут не отображается.<br /><br /> Примечание. Нельзя явно запретить доступ к атрибутам "Имя" и "Код".|  
   
-## <a name="see-also"></a>См. также  
- [Назначение разрешения для объекта модели (службы Master Data Services)](assign-model-object-permissions-master-data-services.md)   
- [Разрешения конечного элемента &#40;службы Master Data Services&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)   
- [Разрешения объекта модели (службы Master Data Services)](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
- [Элементы (службы Master Data Services)](../../2014/master-data-services/members-master-data-services.md)   
- [Атрибуты (службы Master Data Services)](../../2014/master-data-services/attributes-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Назначение разрешений объекта модели &#40;Master Data Services&#41;](assign-model-object-permissions-master-data-services.md)   
+ [Конечные разрешения &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)   
+ [Разрешения объекта модели &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
+ [Master Data Services &#40;членов&#41;](../../2014/master-data-services/members-master-data-services.md)   
+ [Master Data Services &#40;атрибутов&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
   
   

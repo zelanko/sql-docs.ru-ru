@@ -15,22 +15,22 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c3132bd65bb6f3092cc950758d4f346b5c4cd8fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059168"
 ---
 # <a name="excel-source-editor-connection-manager-page"></a>Редактор источника Excel (страница «Диспетчер соединений»)
   Используйте раздел **Диспетчер соединений** диалогового окна **Редактор источника «Excel»** , чтобы выбрать используемую рабочую книгу [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] . Источник Excel считывает данные из рабочего листа или из именованного диапазона в существующей рабочей книге.  
   
 > [!NOTE]  
->  `CommandTimeout` Свойство источника Excel недоступно в **Редактор источника «Excel»** , однако его можно установить с помощью **расширенный редактор**. Дополнительные сведения о данном свойстве см. в подразделе «Источник Excel» раздела [Excel Custom Properties](data-flow/excel-custom-properties.md).  
+>  `CommandTimeout` Свойство источника Excel недоступно в **редакторе источника Excel**, но может быть задано с помощью **Расширенный редактор**. Дополнительные сведения о данном свойстве см. в подразделе «Источник Excel» раздела [Excel Custom Properties](data-flow/excel-custom-properties.md).  
   
  Дополнительные сведения об источнике Excel см. в разделе [Excel Source](data-flow/excel-source.md).  
   
 ## <a name="static-options"></a>Статические параметры  
- **Диспетчер соединений OLE DB**  
+ **Диспетчер подключений OLE DB**  
  Выберите из списка существующий диспетчер подключений к Excel или создайте новое соединение, нажав кнопку **Создать**.  
   
  **Создать**  
@@ -39,10 +39,10 @@ ms.locfileid: "66059168"
  **Режим доступа к данным**  
  Укажите метод выбора данных из источника.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |Таблица или представление|Получение данных из электронной таблицы или именованного диапазона файла Excel.|  
-|Переменная, содержащая имя таблицы или представления|Укажите переменную, содержащую имя листа или диапазона.<br /><br /> **Дополнительные сведения.** [Использование переменных в пакетах](../../2014/integration-services/use-variables-in-packages.md)|  
+|Переменная, содержащая имя таблицы или представления|Укажите переменную, содержащую имя листа или диапазона.<br /><br /> **Связанные сведения:** [Использование переменных в пакетах](../../2014/integration-services/use-variables-in-packages.md)|  
 |Команда SQL|Получение данных из файла Excel с использованием SQL-запроса. Дополнительные сведения о синтаксисе запросов см. в разделе [Excel Source](data-flow/excel-source.md).|  
 |Команда SQL из переменной|Задайте текст SQL-запроса в переменную.|  
   
@@ -66,7 +66,7 @@ ms.locfileid: "66059168"
  **Параметры**  
  Если введен параметризованный запрос, где в тексте запроса в качестве заполнителя параметра использовался знак ?, воспользуйтесь диалоговым окном **Установка параметров запроса** для сопоставления входных параметров запроса и переменных пакета.  
   
- **Build query**  
+ **Построить запрос**  
  Воспользуйтесь диалоговым окном **Построитель запросов** для визуального конструирования SQL-запроса.  
   
  **Обзор**  
@@ -79,11 +79,11 @@ ms.locfileid: "66059168"
  **Имя переменной**  
  Выберите переменную, содержащую текст SQL-запроса.  
   
-## <a name="see-also"></a>См. также  
- [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор источника "Excel" (страница "Столбцы")](../../2014/integration-services/excel-source-editor-columns-page.md)   
- [Редактор источника "Excel" (страница "Вывод ошибок")](../../2014/integration-services/excel-source-editor-error-output-page.md)   
- [Диспетчер подключений Excel](connection-manager/excel-connection-manager.md)   
- [Просмотр файлов и таблиц Excel с помощью контейнера «цикл по каждому элементу»](control-flow/foreach-loop-container.md)  
+## <a name="see-also"></a>См. также:  
+ [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор источника "Excel" &#40;столбцы "&#41;](../../2014/integration-services/excel-source-editor-columns-page.md)   
+ [Редактор источника "Excel" &#40;страница "вывод ошибок"&#41;](../../2014/integration-services/excel-source-editor-error-output-page.md)   
+ [Диспетчер соединений с Excel](connection-manager/excel-connection-manager.md)   
+ [Просмотр файлов и таблиц Excel с помощью контейнера "Цикл по каждому элементу"](control-flow/foreach-loop-container.md)  
   
   

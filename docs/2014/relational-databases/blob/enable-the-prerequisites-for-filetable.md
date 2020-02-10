@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b4e4679a6022a37a72ce7083d3467bbbccd69f45
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010169"
 ---
 # <a name="enable-the-prerequisites-for-filetable"></a>Включение необходимых компонентов для таблицы FileTable
@@ -40,12 +40,12 @@ ms.locfileid: "66010169"
 ##  <a name="BasicsFilestream"></a> Включение FILESTREAM на уровне экземпляра  
  Таблицы FileTable расширяют возможности функции FILESTREAM в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Поэтому, прежде чем будет возможно создавать и использовать таблицы FileTable, необходимо включить функцию FILESTREAM для доступа к операциям файлового ввода-вывода на уровне Windows и в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-###  <a name="HowToFilestream"></a> Как включить функцию FILESTREAM на уровне экземпляра  
+###  <a name="HowToFilestream"></a> Инструкции. Включение функции FILESTREAM на уровне экземпляра  
  Сведения о включении FILESTREAM см. в разделе [Включение и настройка FILESTREAM](enable-and-configure-filestream.md).  
   
  При вызове `sp_configure` для включения FILESTREAM на уровне экземпляра необходимо установить параметр filestream_access_level в значение 2. Дополнительные сведения см. в статье [Параметр конфигурации сервера "уровень доступа файлового потока"](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md).  
   
-###  <a name="firewall"></a> Как разрешить FILESTREAM через брандмауэр  
+###  <a name="firewall"></a> Инструкции. Разрешение FILESTREAM через брандмауэр  
  Сведения о разрешении FILESTREAM через брандмауэр см. в разделе [Configure a Firewall for FILESTREAM Access](configure-a-firewall-for-filestream-access.md).  
   
 ##  <a name="filegroup"></a> Предоставление файловой группы FILESTREAM на уровне базы данных  
@@ -54,7 +54,7 @@ ms.locfileid: "66010169"
 ##  <a name="BasicsNTAccess"></a> Включение нетранзакционного доступа на уровне базы данных  
  Таблицы FileTable позволяют приложениям Windows получать дескрипторы файлов Windows для данных FILESTREAM без необходимости транзакции. Чтобы разрешить такой нетранзакционный доступ к файлам, хранящимся в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], необходимо указать нужный уровень нетранзакционного доступа на уровне базы данных, в которой будут содержаться таблицы FileTable.  
   
-###  <a name="HowToCheckAccess"></a> Как проверить состояние нетранзакционного доступа (включен или выключен)  
+###  <a name="HowToCheckAccess"></a> Инструкции. Проверка состояния нетранзакционного доступа (включен или выключен)  
  Выполнить запрос к представлению каталога [sys.database_filestream_options (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql) и проверить столбцы **non_transacted_access** и **non_transacted_access_desc**.  
   
 ```sql  
@@ -63,7 +63,7 @@ SELECT DB_NAME(database_id), non_transacted_access, non_transacted_access_desc
 GO  
 ```  
   
-###  <a name="HowToNTAccess"></a> Как включить нетранзакционный доступ на уровне базы данных  
+###  <a name="HowToNTAccess"></a> Инструкции. Включение нетранзакционного доступа на уровне базы данных  
  Доступными уровнями нетранзакционного доступа являются FULL, READ_ONLY и OFF.  
   
  **Указание уровня нетранзакционного доступа с помощью Transact-SQL**  
@@ -89,7 +89,7 @@ GO
   
  В иерархии папок FileTable этот каталог на уровне базы данных является дочерним по отношению к общему ресурсу для FILESTREAM на уровне экземпляра и родительским по отношению к таблицам FileTable, созданным в базе данных. Дополнительные сведения см. в статье [Work with Directories and Paths in FileTables](work-with-directories-and-paths-in-filetables.md).  
   
-###  <a name="HowToDirectory"></a> Как указать каталог для таблиц FileTable на уровне базы данных  
+###  <a name="HowToDirectory"></a> Инструкции. Указание каталога для таблиц FileTable на уровне базы данных  
  Указанное имя должно быть уникальным в экземпляре для каталогов уровня базы данных.  
   
  **Указание каталога для таблиц FileTable с помощью языка Transact-SQL**  
@@ -128,7 +128,7 @@ GO
  **Задание каталога для таблиц FileTable в среде SQL Server Management Studio**  
  Можно указать имя каталога в поле **Имя каталога FILESTREAM** на странице **Параметры** диалогового окна **Свойства базы данных** . Дополнительные сведения об этом диалоговом окне см. в статье [Свойства базы данных (страница "Параметры")](../databases/database-properties-options-page.md).  
   
-###  <a name="viewnames"></a> Как просмотреть существующие имена каталогов для экземпляра  
+###  <a name="viewnames"></a> Инструкции. Просмотр существующих имен каталогов для экземпляра  
  Чтобы просмотреть список существующих имен каталогов для экземпляра, выполните запрос к представлению каталога [sys.database_filestream_options (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql) и проверьте столбец **filestream_database_directory_name**.  
   
 ```sql  

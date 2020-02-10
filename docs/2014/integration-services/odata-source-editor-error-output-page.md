@@ -1,5 +1,5 @@
 ---
-title: Редактор источника OData (страница "Вывод ошибок") | Документация Майкрософт
+title: Редактор источника OData (страница «вывод ошибок») | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0578dcb98e34f06db155fd5c3f1438209d8b2687
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057284"
 ---
 # <a name="odata-source-editor-error-output-page"></a>Редактор источника OData (страница «Вывод ошибок»)
   Страница **Вывод ошибок** диалогового окна **Редактор источника OData** служит для выбора параметров обработки ошибок, а также для установки свойств выходных столбцов ошибок.  
   
 ## <a name="options"></a>Параметры  
- **Ввод-вывод**  
+ **Входные и выходные данные**  
  Просмотр имени источника данных.  
   
  **Столбец**  
@@ -40,15 +40,15 @@ ms.locfileid: "66057284"
  **Описание**  
  Просмотреть описание ошибки.  
   
- **Присвоить указанное значение выбранным ячейкам**  
+ **Присвоить это значение выбранным ячейкам**  
  Укажите действие, которое необходимо применить ко всем выбранным ячейкам при возникновении ошибки или усечения: пропустить ошибку, перенаправить строку или вызвать сбой компонента.  
   
  **Применить**  
  Применить параметр обработки ошибок к выбранным ячейкам.  
   
-## <a name="see-also"></a>См. также  
- [Редактор источника OData (страница "Подключение")](../../2014/integration-services/odata-source-editor-connection-page.md)   
- [Редактор источника OData (страница "Столбцы")](../../2014/integration-services/odata-source-editor-columns-page.md)   
+## <a name="see-also"></a>См. также:  
+ [Редактор источника OData &#40;страница подключения&#41;](../../2014/integration-services/odata-source-editor-connection-page.md)   
+ [Редактор источника OData — страница &#40;столбцы&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
  [Источник OData](data-flow/odata-source.md)   
  [Диспетчер соединений OData](connection-manager/odata-connection-manager.md)  
   

@@ -17,24 +17,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 13267e732c6eb5eae388ff8e79ed1d6e0be5febc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010760"
 ---
 # <a name="sqlxmlparameter-object-sqlxml-managed-classes"></a>Объект SqlXmlParameter (управляемые классы SQLXML)
   Объект SqlXmlParameter поддерживает следующие свойства:  
   
  Имя  
- Имя параметра. Командам могут быть переданы параметры. Вызывая метод CreateParameter объект SqlXmlCommand создает объект параметра.  
+ Имя параметра. Командам могут быть переданы параметры. При вызове метода CreateParameter объекта SqlXmlCommand создается объект параметра.  
   
  Значение  
- Значение параметра. Работающий пример см. в разделе [выполнение запросов SQL &#40;управляемых классов SQLXML&#41;](sqlxml-4-0-net-framework-support-managed-classes.md).  
+ Значение параметра. Рабочий пример см. в разделе [Выполнение SQL-запросов &#40;управляемых классов SQLXML&#41;](sqlxml-4-0-net-framework-support-managed-classes.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект SqlXmlCommand &#40;управляемые классы SQLXML&#41;](sqlxml-managed-classes-sqlxmlcommand-object.md)   
- [Объект SqlXmlAdapter &#40;управляемые классы SQLXML&#41;](sqlxml-managed-classes-sqlxmladapter-object.md)   
+ [Объект Склксмладаптер &#40;управляемые классы SQLXML&#41;](sqlxml-managed-classes-sqlxmladapter-object.md)   
  [Доступ к функциональным возможностям SQLXML в среде .NET](accessing-sqlxml-functionality-in-the-net-environment.md)  
   
   

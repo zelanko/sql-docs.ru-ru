@@ -1,5 +1,5 @@
 ---
-title: Объект SqlXmlAdapter (управляемые классы SQLXML) | Документация Майкрософт
+title: Объект Склксмладаптер (управляемые классы SQLXML) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,24 +17,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b339e67b07ddb4168f9922c22e620eb2fa10d85e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014930"
 ---
 # <a name="sqlxmladapter-object-sqlxml-managed-classes"></a>Объект SqlXmlAdapter (управляемые классы SQLXML)
-  В этом объекте реализованы методы, облегчающие взаимодействие с набором данных в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. Работающий пример см. в разделе [доступ к функциональным возможностям SQLXML в среде .NET](accessing-sqlxml-functionality-in-the-net-environment.md).  
+  В этом объекте реализованы методы, облегчающие взаимодействие с набором данных в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. Рабочий пример см. в разделе [доступ к функциям SQLXML в среде .NET](accessing-sqlxml-functionality-in-the-net-environment.md).  
   
- Объект SqlXmlAdapter поддерживает следующие методы:  
+ Объект Склксмладаптер поддерживает следующие методы:  
   
- void Fill (DataSet ds)  
+ void Fill (набор данных DS)  
  Заполняет набор данных в .NET Framework XML-данными, полученными от [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- void Update (DataSet ds)  
+ пустое обновление (набор данных DS)  
  Применяет обновления к записям в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] из данных, содержащихся в наборе данных.  
   
- Объект SqlXmlAdapter поддерживает следующие конструкторы:  
+ Объект Склксмладаптер поддерживает следующие конструкторы:  
   
 ```  
 public SqlXmlAdapter(SqlXmlCommand  cmd)   
@@ -52,7 +52,7 @@ public SqlXmlAdapter(
                      )   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект SqlXmlCommand &#40;управляемые классы SQLXML&#41;](sqlxml-4-0-net-framework-support-managed-classes.md)   
  [Объект SqlXmlParameter &#40;управляемые классы SQLXML&#41;](sqlxml-managed-classes-sqlxmlparameter-object.md)  
   

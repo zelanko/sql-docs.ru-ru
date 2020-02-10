@@ -15,16 +15,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1a0cb087f5a0cd429d9bc6f30ea08aaef3d07b3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483107"
 ---
 # <a name="delete-model-object-permissions-master-data-services"></a>Удаление разрешений для объекта модели (службы Master Data Services)
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]удалите разрешения на объект модели для отмены любых существующих назначений.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения этой процедуры:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Разрешения пользователей и групп** ;  
@@ -43,15 +43,15 @@ ms.locfileid: "65483107"
   
 5.  По желанию выберите модель из списка **Модель** .  
   
-6.  В **Сводка по разрешениям модели** области, выберите строку для разрешения, которое требуется удалить.  
+6.  В области **Сводка разрешения модели** выберите строку для разрешения, которое требуется удалить.  
   
-7.  Нажмите кнопку **удалить выбранное разрешение**.  
+7.  Щелкните **Удалить выбранное разрешение**.  
   
     > [!NOTE]  
     >  Нельзя удалить разрешение у пользователя, если разрешение унаследовано от группы. В этом случае нужно отозвать разрешение у группы.  
   
-## <a name="see-also"></a>См. также  
- [Разрешения объекта модели (службы Master Data Services)](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
- [Назначение разрешения для объекта модели (службы Master Data Services)](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Разрешения объекта модели &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
+ [Назначение разрешений объекта модели &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)  
   
   

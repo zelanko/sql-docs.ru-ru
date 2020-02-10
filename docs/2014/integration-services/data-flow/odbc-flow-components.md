@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e42099ede229ef7d0b10cf8d88b4ac92c60d3370
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62901436"
 ---
 # <a name="odbc-flow-components"></a>Компоненты потока ODBC
@@ -32,7 +32,7 @@ ms.locfileid: "62901436"
 ## <a name="getting-started-with-the-odbc-source-and-destination"></a>Приступая к работе с источником и назначением ODBC  
  Прежде чем появится возможность настройки пакетов, в которых используется [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)], необходимо обеспечить соблюдение следующих требований.  
   
--   [ODBC-источник](odbc-source.md)  
+-   [Источник «ODBC»](odbc-source.md)  
   
 -   [Назначение «ODBC»](odbc-destination.md)  
   
@@ -110,8 +110,8 @@ ms.locfileid: "62901436"
 |SQL_DOUBLE|DT_R8|  
 |SQL_FLOAT|DT_R8|  
 |SQL_REAL|DT_R4|  
-|SQL_NUMERIC (p,s)|DT_NUMERIC (p,s)<br /><br />DT_R8<br /><br />DT_CY|Числовой тип данных сопоставляется DT_NUMERIC, если P больше или равно 38 а S больше или равно 0 и S меньше или равно P. Числовой тип данных сопоставляется DT_R8, если верно хотя бы одно из следующих:<br /><br />Точность больше 38<br /><br />Масштаб меньше нуля<br /><br />Масштаб больше 38<br /><br />Масштаб больше точности<br /><br /><br /><br />Обратите внимание на то, что числовой тип данных сопоставляется DT_CY если он объявлен как тип данных money.|  
-|SQL_DECIMAL (p,s)|DT_NUMERIC (p,s)<br /><br />DT_R8<br /><br />DT_CY|Тип данных decimal сопоставляется DT_NUMERIC, если P больше или равно 38 а S больше или равно 0 и S меньше или равно P. Тип данных decimal сопоставляется DT_R8, если верно хотя бы одно из следующих:<br /><br />Точность больше 38<br /><br />Масштаб меньше нуля<br /><br />Масштаб больше 38<br /><br />Масштаб больше точности<br /><br />Обратите внимание на то, что тип данных decimal сопоставляется DT_CY если он объявлен как тип данных money.|  
+|SQL_NUMERIC (p,s)|DT_NUMERIC (p,s)<br /><br />DT_R8<br /><br />DT_CY|Числовой тип данных сопоставляется с DT_NUMERIC, если P больше или равно 38, а S больше или равен 0, а S меньше или равен P. Числовой тип данных сопоставляется с DT_R8, если выполняется по крайней мере одно из следующих условий:<br /><br />Точность больше 38<br /><br />Масштаб меньше нуля<br /><br />Масштаб больше 38<br /><br />Масштаб больше точности<br /><br /><br /><br />Обратите внимание, что числовой тип данных сопоставлен DT_CY, если он объявлен как тип данных money.|  
+|SQL_DECIMAL (p,s)|DT_NUMERIC (p,s)<br /><br />DT_R8<br /><br />DT_CY|Тип данных decimal сопоставляется с DT_NUMERIC, если P больше или равно 38, а S больше или равно 0, а S меньше или равен P. Тип данных decimal сопоставляется с DT_R8, если выполняется хотя бы одно из следующих условий:<br /><br />Точность больше 38<br /><br />Масштаб меньше нуля<br /><br />Масштаб больше 38<br /><br />Масштаб больше точности<br /><br />Обратите внимание, что тип данных decimal сопоставляется с DT_CY, если он объявлен как тип данных money.|  
 |SQL_DATE<br /><br />SQL_TYPE_DATE|DT_DBDATE|  
 |SQL_TIME<br /><br />SQL_TYPE_TIME|DT_DBTIME|  
 |SQL_TIMESTAMP<br /><br />SQL_TYPE_TIMESTAMP|DT_DBTIMESTAMP<br /><br />DT_DBTIMESTAMP2|Типы данных SQL_TIMESTAMP сопоставляются с DT_DBTIMESTAMP2, если масштаб больше 3. Во всех прочих случаях они сопоставляются с DT_DBTIMESTAMP.|  
@@ -127,7 +127,7 @@ ms.locfileid: "62901436"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
--   [Источник «ODBC»](odbc-source.md)  
+-   [ODBC-источник](odbc-source.md)  
   
 -   [Назначение ODBC](odbc-destination.md)  
   

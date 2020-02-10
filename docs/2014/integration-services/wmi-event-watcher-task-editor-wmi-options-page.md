@@ -1,5 +1,5 @@
 ---
-title: Редактор задачи Отслеживание событий WMI (страница «Параметры WMI») | Документация Майкрософт
+title: Редактор задачи «наблюдатель событий WMI» (страница «параметры WMI») | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 52ca90b38975c8db762ec0937b265a91b03c5cb2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054381"
 ---
 # <a name="wmi-event-watcher-task-editor-wmi-options-page"></a>Редактор задачи «Отслеживание событий WMI» (страница «Параметры WMI»)
@@ -27,19 +27,19 @@ ms.locfileid: "66054381"
  Дополнительные сведения об этой задаче см. в разделе [WMI Event Watcher Task](control-flow/wmi-event-watcher-task.md). Дополнительные сведения о языке запросов WQL см. в разделе документации по инструментарию управления Windows [Запросы с использованием языка запросов WQL](https://go.microsoft.com/fwlink/?LinkId=79045)в библиотеке MSDN.  
   
 ## <a name="static-options"></a>Статические параметры  
- **WMIConnectionName**  
- Выберите диспетчер подключений WMI в списке или щелкните \<**Создать WMI-соединение…** >, чтобы создать диспетчер подключений.  
+ **вмиконнектионнаме**  
+ Выберите диспетчер подключений WMI в списке или щелкните \<**Создать WMI-соединение…**>, чтобы создать диспетчер подключений.  
   
- **См. также:** подробные сведения о [диспетчере WMI-соединений](connection-manager/wmi-connection-manager.md) и о [редакторе диспетчера WMI-соединений](../../2014/integration-services/wmi-connection-manager-editor.md).  
+ **См. также:** [Диспетчер WMI Connection](connection-manager/wmi-connection-manager.md)Manager, [Редактор диспетчера WMI](../../2014/integration-services/wmi-connection-manager-editor.md)  
   
  **WQLQuerySourceType**  
  Выберите тип источника для WQL-запроса, выполняемого данной задачей. Это свойство имеет параметры, указанные в следующей таблице.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |**Прямой ввод**|Задайте источник запроса WQL. При выборе этого значения отображается динамический параметр **WQLQuerySource**.|  
 |**Соединение с файлом**|Выберите файл, содержащий запрос WQL. При выборе этого значения отображается динамический параметр **WQLQuerySource**.|  
-|**Переменная**|Задайте источник переменной, определяющей запрос WQL. При выборе этого значения отображается динамический параметр **WQLQuerySource**.|  
+|**Перемен**|Задайте источник переменной, определяющей запрос WQL. При выборе этого значения отображается динамический параметр **WQLQuerySource**.|  
   
  **ActionAtEvent**  
  Укажите, будет ли WMI-событие занесено в журнал, и будет ли оно инициировать действие служб [!INCLUDE[ssIS](../includes/ssis-md.md)] или будет только занесено в журнал.  
@@ -47,16 +47,16 @@ ms.locfileid: "66054381"
  **AfterEvent**  
  Укажите, будет ли задача завершена успешно или неудачно после получения ею WMI-события или она будет продолжать ожидать повторного возникновения события.  
   
- **ActionAtTimeout**  
+ **Перечислении actionattimeout**  
  Укажите, запишет ли задача в журнал истечение времени ожидания WMI-запроса, и инициирует ли в ответ событие служб [!INCLUDE[ssIS](../includes/ssis-md.md)] или только запишет в журнал истечение времени ожидания.  
   
- **AfterTimeout**  
+ **Перечислении aftertimeout**  
  Укажите, будет ли задача выполнена успешно или неудачно в ответ на истечение времени ожидания или она будет продолжать ожидать возникновения повторного истечения времени ожидания.  
   
  **NumberOfEvents**  
  Укажите количество событий для ожидания.  
   
- **Timeout**  
+ **Счетчик**  
  Укажите количество секунд ожидания возникновения события. Значение 0 означает отсутствие времени ожидания.  
   
 ## <a name="wqlquerysource-dynamic-options"></a>Динамические параметры WQLQuerySource  
@@ -67,20 +67,20 @@ ms.locfileid: "66054381"
   
 ### <a name="wqlquerysource--file-connection"></a>WQLQuerySource = Соединение с файлом  
  **WQLQuerySource**  
- Выберите диспетчер подключений файлов в списке или щелкните \<**Создать соединение...** >, чтобы создать его.  
+ Выберите диспетчер подключений файлов в списке или щелкните \<**Создать соединение...**>, чтобы создать его.  
   
- **См. также:** подробные сведения о [диспетчере файловых подключений](connection-manager/file-connection-manager.md) и о [редакторе диспетчера файловых подключений](../../2014/integration-services/file-connection-manager-editor.md).  
+ **См. также:** [Диспетчер соединения файлов](connection-manager/file-connection-manager.md), [Редактор диспетчера подключения файлов](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="wqlquerysource--variable"></a>WQLQuerySource = Переменная  
  **WQLQuerySource**  
- Выберите переменную в списке или щелкните \<**Создать переменную...** >, чтобы создать ее.  
+ Выберите переменную из списка или нажмите кнопку \< **создать переменную...**>, чтобы создать новую переменную.  
   
- **См. также:** подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md) и о [добавлении переменной](../../2014/integration-services/add-variable.md).  
+ **См. также:** [Integration Services &#40;переменные&#41; SSIS](integration-services-ssis-variables.md), [Добавить переменную](../../2014/integration-services/add-variable.md)  
   
-## <a name="see-also"></a>См. также  
- [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор задачи "Отслеживание событий WMI" (страница "Общие")](general-page-of-integration-services-designers-options.md)   
- [Страница «Выражения»](expressions/expressions-page.md)   
+## <a name="see-also"></a>См. также:  
+ [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор задачи "наблюдатель событий WMI" &#40;общие&#41;страницы](general-page-of-integration-services-designers-options.md)   
+ [Страница "выражения"](expressions/expressions-page.md)   
  [Задача «Модуль чтения данных WMI»](control-flow/wmi-data-reader-task.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Задача 6. Задание синонимов | Документация Майкрософт
+title: Задача 6. Настройка синонимов | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 41c11138d00b4aea7332dac9984cbd609eba05e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65489085"
 ---
-# <a name="task-6-setting-synonyms"></a>Задача 6. Задание синонимов
+# <a name="task-6-setting-synonyms"></a>Задача 6. Задание синонимов
   В этой задаче вы зададите два значения, **USA** и **United States**, домена **Страна** как синонимы, при этом **United States** будет начальным значением. Поскольку параметр **Использовать начальные значения** был выбран при создании домена **Страна** , все значения **USA** для домена **Страна** будут выводиться как **United States** (при этом «United States» — начальное значение). Дополнительные сведения см. в разделе [Изменение значений домена](https://msdn.microsoft.com/library/hh510408.aspx) .  
   
 1.  Выберите **Страна** в списке доменов.  
@@ -30,13 +30,13 @@ ms.locfileid: "65489085"
   
 5.  Выберите **United States** и **USA** с помощью клавиш CTRL или SHIFT, щелкните правой кнопкой выделенные элементы и выберите пункт **Установить как синонимы**. Службы DQS сгруппируют эти значения и назначат одно из значений в качестве ведущего, которым будут заменяться другие.  
   
-     ![Задать как синонимы меню](../../2014/tutorials/media/et-settingsynonyms-01.jpg "задать как синонимы меню")  
+     ![Меню «Задать как синонимы»](../../2014/tutorials/media/et-settingsynonyms-01.jpg "Меню «Задать как синонимы»")  
   
 6.  Обратите внимание, что значение **United States** задано как начальное. Если вы хотите, чтобы «USA» было начальным значением, щелкните «USA» правой кнопкой мыши и выберите параметр **Установить в качестве ведущего** . В этом учебнике мы будем использовать значение **United States** как начальное.  
   
-     ![США и США как синонимы](../../2014/tutorials/media/et-settingsynonyms-02.jpg "США и США как синонимы")  
+     ![«United States» и «USA» как синонимы](../../2014/tutorials/media/et-settingsynonyms-02.jpg "«United States» и «USA» как синонимы")  
   
-## <a name="next-step"></a>Следующий шаг  
+## <a name="next-step"></a>Дальнейшее действие  
  [Задача 7. Создание составного домена](../../2014/tutorials/task-7-creating-a-composite-domain.md)  
   
   

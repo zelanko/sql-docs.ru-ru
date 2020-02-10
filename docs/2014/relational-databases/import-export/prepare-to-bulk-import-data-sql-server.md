@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 95deda34b673161bf63c29a912564f39425583a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011856"
 ---
 # <a name="prepare-to-bulk-import-data-sql-server"></a>Подготовка массового импорта данных (SQL Server)
@@ -34,11 +34,11 @@ ms.locfileid: "66011856"
 > [!NOTE]  
 >  Массовый импорт данных в удаленную таблицу не поддерживается.  
   
- При массовом импорте данных из файла данных в экземпляр [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]следует руководствоваться следующими правилами.  
+ При выполнении операций с массовым импортом данных из файла данных в экземпляр [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]необходимо следовать приведенным ниже рекомендациям.  
   
 -   Получите необходимые разрешения для учетной записи пользователя.  
   
-     Учетная запись пользователя, от имени которой выполняются программа **bcp**, инструкции BULK INSERT или INSERT... SELECT * FROM OPENROWSET(BULK...), должна иметь соответствующие разрешения для таблицы (назначаемые владельцем таблицы). Дополнительные сведения о разрешениях, необходимых для каждого метода, см. в разделах [Программа bcp](../../tools/bcp-utility.md), [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql) и [BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql).  
+     Учетная запись пользователя, от имени которой выполняются программа **bcp** , инструкции BULK INSERT или INSERT... SELECT * FROM OPENROWSET(BULK...), должна иметь соответствующие разрешения для таблицы (назначаемые владельцем таблицы). Дополнительные сведения о разрешениях, необходимых для каждого метода, см. в разделах [Программа bcp](../../tools/bcp-utility.md), [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql) и [BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql).  
   
 -   Используйте модель восстановления с неполным протоколированием.  
   
@@ -66,12 +66,12 @@ ms.locfileid: "66011856"
   
      Многие программы и текстовые редакторы отображают скрытые символы, находящиеся обычно в конце файла данных. Во время операции массового импорта скрытые символы в файле данных в формате ASCII могут привести к появлению сообщения об ошибке «Обнаружено непредвиденное значение NULL». Чтобы решить проблему, обычно необходимо найти и удалить все скрытые символы.  
   
-## <a name="see-also"></a>См. также  
- [Массовый импорт и экспорт данных с использованием программы bcp (SQL Server)](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)   
- [Массовый импорт данных при помощи инструкции BULK INSERT или OPENROWSET(BULK...) (SQL Server)](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)   
- [Программа bcp](../../tools/bcp-utility.md)   
+## <a name="see-also"></a>См. также:  
+ [Импорт и экспорт данных с помощью служебной программы bcp &#40;SQL Server&#41;](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)   
+ [Сбор данных BULK с помощью BULK INSERT или OPENROWSET&#40;BULK... &#41; &#40;SQL Server&#41;](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)   
+ [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql)   
- [Форматы данных для массового экспорта или импорта (SQL Server)](data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
- [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql)  
+ [Форматы данных для &#40;SQL Server импорта или экспорта&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
+ [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)  
   
   

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 810b1d36eefb99d6e1bcf855dc7710495429751a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010319"
 ---
 # <a name="create-a-filestream-enabled-database"></a>Создание базы данных с поддержкой FILESTREAM
@@ -28,7 +28,7 @@ ms.locfileid: "66010319"
   
 1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]нажмите кнопку **Создать запрос** , чтобы открыть редактор запросов.  
   
-2.  Копировать [!INCLUDE[tsql](../../includes/tsql-md.md)] код создает базу с поддержкой FILESTREAM, именуемую Archive.  
+2.  Скопируйте [!INCLUDE[tsql](../../includes/tsql-md.md)] код создает базу данных с поддержкой FILESTREAM с именем Archive.  
   
     > [!NOTE]  
     >  Для этого скрипта должен существовать каталог C:\Data.  
@@ -36,7 +36,7 @@ ms.locfileid: "66010319"
 3.  Чтобы построить базу данных, нажмите кнопку **Выполнить**.  
   
 ## <a name="example"></a>Пример  
- В следующем примере кода создается база данных с именем `Archive`. В этой базе данных содержатся три файловые группы: `PRIMARY`, `Arch1`и `FileStreamGroup1`. `PRIMARY` и `Arch1` — это обычные файловые группы, которые не могут содержать данные FILESTREAM. `FileStreamGroup1` — это файловая группа `FILESTREAM` .  
+ В следующем примере кода создается база данных с именем `Archive`. В этой базе данных содержатся три файловые группы: `PRIMARY`, `Arch1`и `FileStreamGroup1`. `PRIMARY`и `Arch1` представляют собой обычные файловые группы, которые не могут содержать данные FILESTREAM. `FileStreamGroup1``FILESTREAM` файловая группа.  
   
 ```sql  
 CREATE DATABASE Archive   
@@ -50,7 +50,7 @@ LOG ON  ( NAME = Archlog1,
 GO  
 ```  
   
- Для файловой группы `FILESTREAM` параметр `FILENAME` содержит путь. Должен существовать путь вплоть до последнего каталога, но последний каталог существовать не должен. В этом примере `c:\data` должен существовать. Но вложенная папка `filestream1` не может существовать, если выполняется инструкция `CREATE DATABASE` . Дополнительные сведения о синтаксисе см. в разделе [CREATE DATABASE (SQL Server Transact-SQL)](/sql/t-sql/statements/create-database-sql-server-transact-sql).  
+ Для файловой группы `FILESTREAM` параметр `FILENAME` содержит путь. Должен существовать путь вплоть до последнего каталога, но последний каталог существовать не должен. В этом примере `c:\data` должен существовать. Но вложенная папка `filestream1` не может существовать, если выполняется инструкция `CREATE DATABASE` . Дополнительные сведения о синтаксисе см. в разделе [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql).  
   
  После запуска предыдущего примера в папке «c:\Data\filestream1» появится файл filestream.hdr и папка $FSLOG. Файл filestream.hdr является файлом заголовка контейнера FILESTREAM.  
   
@@ -59,8 +59,8 @@ GO
   
  Для существующих баз данных файловую группу FILESTREAM можно добавить с помощью инструкции [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) .  
   
-## <a name="see-also"></a>См. также  
- [CREATE DATABASE (SQL Server Transact-SQL)](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
+## <a name="see-also"></a>См. также:  
+ [Создание &#40;базы данных SQL Server&#41;Transact-SQL](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
  [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)  
   
   

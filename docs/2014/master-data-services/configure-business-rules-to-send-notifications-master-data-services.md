@@ -15,16 +15,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b0ea6e215b5192d1b9e84ed252708b188d5c5a59
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483954"
 ---
 # <a name="configure-business-rules-to-send-notifications-master-data-services"></a>Настройка в бизнес-правилах отправки уведомлений (службы Master Data Services)
-  Бизнес-правила для отправки уведомлений в службах [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]настраивают в том случае, если нужно уведомлять пользователей об изменениях значений атрибутов.  
+  Бизнес-правила для отправки уведомлений в службах [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] настраивают в том случае, если нужно уведомлять пользователей об изменениях значений атрибутов.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения этой процедуры:  
   
 -   Необходимо иметь разрешение на доступ к функциональным областям **Администрирование системы** и **Разрешения пользователей и групп** . Если отсутствуют разрешения для функциональной области **Разрешения пользователей и групп** , то пользователь не сможет просмотреть список пользователей и групп, которым необходимо отправить уведомления.  
@@ -47,28 +47,28 @@ ms.locfileid: "65483954"
   
 4.  Выберите сущность из списка **Сущность** .  
   
-5.  Из **тип члена** выберите тип элемента.  
+5.  В списке **тип члена** выберите тип члена.  
   
 6.  Выберите из списка **Атрибут** атрибут или оставьте **Все**по умолчанию.  
   
-7.  В сетке, в строке бизнес-правила, дважды щелкните **уведомления** поля.  
+7.  В сетке в строке для бизнес-правила дважды щелкните поле **уведомления** .  
   
 8.  Во вложенном меню выберите пользователя или группу, куда необходимо отправлять уведомление.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
   
 -   Примените бизнес-правила к данным с помощью одной из следующих процедур:  
   
-    -   [Подтверждение конкретных членов, обнаруженных при проверке на соответствие бизнес-правилам (службы Master Data Services)](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
+    -   [Проверка конкретных членов на соответствие бизнес-правилам &#40;Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
-    -   [Подтверждение исправления проблемы, обнаруженной при проверке на соответствие бизнес-правилам (службы Master Data Services)](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
+    -   [Проверка версии на соответствие бизнес-правилам &#40;Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
 -   Настройте протокол электронной почты следующим образом.  
   
-    -   [Настройка уведомления электронной почты (службы Master Data Services)](../../2014/master-data-services/configure-email-notifications-master-data-services.md)  
+    -   [Настройка уведомлений по электронной почте &#40;Master Data Services&#41;](../../2014/master-data-services/configure-email-notifications-master-data-services.md)  
   
-## <a name="see-also"></a>См. также  
- [Уведомления (службы Master Data Services)](../../2014/master-data-services/notifications-master-data-services.md)   
- [Настройка уведомления электронной почты (службы Master Data Services)](../../2014/master-data-services/configure-email-notifications-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Master Data Services &#40;уведомлений&#41;](../../2014/master-data-services/notifications-master-data-services.md)   
+ [Настройка уведомлений по электронной почте &#40;Master Data Services&#41;](../../2014/master-data-services/configure-email-notifications-master-data-services.md)  
   
   

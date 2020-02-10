@@ -17,17 +17,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2a3646aa6ef61c820ca5512203b0ff1e36894cab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011823"
 ---
 # <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>Указание типа файлового хранилища с помощью программы bcp (SQL Server)
+  
   *Тип файла хранилища* описывает, каким образом данные хранятся в файле данных. Экспорт данных может быть выполнен в файл данных в формате таблиц баз данных (собственный формат), в символьном представлении (символьный формат) или в любом формате данных, поддерживающем неявное преобразование, например копирование данных типа `smallint` как `int`. Пользовательские типы данных экспортируются так же, как их базовые типы.  
   
 ## <a name="the-bcp-prompt-for-file-storage-type"></a>Приглашение bcp указать тип файлового хранилища  
- Если интерактивная команда **bcp** содержит параметр **in** или **out** без параметра файла форматирования ( **-f**) или параметра формата данных ( **-n**, **-c**, **-w**или **-N**), команда запрашивает тип файлового хранилища для каждого поля данных следующим образом:  
+ Если интерактивная команда **bcp** содержит параметр **in** или **out** без параметра файла форматирования (**-f**) или параметра формата данных (**-n**, **-c**, **-w**или **-N**), команда запрашивает тип файлового хранилища для каждого поля данных следующим образом:  
   
  `Enter the file storage type of field <field_name> [<default>]:`  
   
@@ -41,16 +42,16 @@ ms.locfileid: "66011823"
   
     |Тип файла хранилища|Введите в командной строке|  
     |-----------------------|-----------------------------|  
-    |`char` <sup>1</sup>|`c`[`har`]|  
+    |`char`<sup>1</sup>|`c`[`har`]|  
     |`varchar`|`c[har]`|  
     |`nchar`|`w`|  
     |`nvarchar`|`w`|  
-    |`text` <sup>2</sup>|`T`[`ext`]|  
+    |`text`<sup>2</sup>|`T`[`ext`]|  
     |`ntext2`|`W`|  
     |`binary`|`x`|  
     |`varbinary`|`x`|  
-    |`image` <sup>2</sup>|`I`[`mage`]|  
-    |`datetime`|**d[ate]**|  
+    |`image`<sup>2</sup>|`I`[`mage`]|  
+    |`datetime`|**г [ATE]**|  
     |`smalldatetime`|`D`|  
     |`time`|`te`|  
     |`date`|`de`|  
@@ -58,39 +59,39 @@ ms.locfileid: "66011823"
     |`datetimeoffset`|`do`|  
     |`decimal`|`n`|  
     |`numeric`|`n`|  
-    |`float`|**f[loat]**|  
+    |`float`|**f [лоат]**|  
     |`real`|`r`|  
-    |`Int`|**i[nt]**|  
+    |`Int`|**i [NT]**|  
     |`bigint`|`B[igint]`|  
-    |`smallint`|**s[mallint]**|  
-    |`tinyint`|**t[inyint]**|  
-    |`money`|**m[oney]**|  
+    |`smallint`|**s [маллинт]**|  
+    |`tinyint`|**t [ининт]**|  
+    |`money`|**m [Онэй]**|  
     |`smallmoney`|`M`|  
     |`bit`|`b[it]`|  
     |`uniqueidentifier`|`u`|  
     |`sql_variant`|`V[ariant]`|  
     |`timestamp`|`x`|  
-    |`UDT` (пользовательский тип данных)|`U`|  
+    |`UDT`(определяемый пользователем тип данных)|`U`|  
     |`XML`|`X`|  
   
-     <sup>1</sup> взаимосвязь длины поля, длины префикса и признаков конца определяет объем хранилища, выделяемый в файле данных для несимвольных данных, экспортируемых в качестве `char` типа файлового хранилища.  
+     <sup>1</sup> взаимодействие длины поля, длины префикса и признаков конца определяет объем дискового пространства, выделенного в файле данных для несимвольных данных, экспортируемых в качестве типа `char` хранилища файлов.  
   
-     <sup>2</sup> `ntext`, `text`, и `image` типы данных будут удалены в будущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Следует избегать использования этих типов данных при новой разработке и запланировать изменение приложений, использующих их в настоящий момент. Используйте вместо них типы данных `nvarchar(max)`, `varchar(max)` и `varbinary(max)`.  
+     <sup>2</sup> типы `ntext`данных `text`, и `image` будут удалены в следующей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Следует избегать использования этих типов данных при новой разработке и запланировать изменение приложений, использующих их в настоящий момент. Используйте вместо них типы данных `nvarchar(max)`, `varchar(max)` и `varbinary(max)`.  
   
 ## <a name="native-file-storage-types"></a>Собственные типы файловых хранилищ  
  Все собственные типы файловых хранилищ записаны в файле форматирования как соответствующие типы данных основных файлов.  
   
 |Тип файла хранилища|Тип данных файла|  
 |-----------------------|-------------------------|  
-|`char` <sup>1</sup>|SQLCHAR|  
+|`char`<sup>1</sup>|SQLCHAR|  
 |`varchar`|SQLCHAR|  
 |`nchar`|SQLNCHAR|  
 |`nvarchar`|SQLNCHAR|  
-|`text` <sup>2</sup>|SQLCHAR|  
-|`ntext` <sup>2</sup>|SQLNCHAR|  
+|`text`<sup>2</sup>|SQLCHAR|  
+|`ntext`<sup>2</sup>|SQLNCHAR|  
 |`binary`|SQLBINARY|  
 |`varbinary`|SQLBINARY|  
-|`image` <sup>2</sup>|SQLBINARY|  
+|`image`<sup>2</sup>|SQLBINARY|  
 |`datetime`|SQLDATETIME|  
 |`smalldatetime`|SQLDATETIM4|  
 |`decimal`|SQLDECIMAL|  
@@ -109,27 +110,27 @@ ms.locfileid: "66011823"
 |`timestamp`|SQLBINARY|  
 |UDT (определяемый пользователем тип данных)|SQLUDT|  
   
- <sup>1</sup> файлов данных, хранящихся в символьном формате используйте `char` в качестве типа файлового хранилища. Таким образом, для символьных файлов данных SQLCHAR — это единственный тип данных, допустимый в файле форматирования.  
+ <sup>1</sup> файлы данных, хранящиеся в символьном формате `char` , используют в качестве типа хранилища файлов. Таким образом, для символьных файлов данных SQLCHAR — это единственный тип данных, допустимый в файле форматирования.  
   
- <sup>2</sup> невозможно массово импортировать данные в `text`, `ntext`, и `image` столбцы, которые имеют значения по умолчанию.  
+ <sup>2</sup> вы не можете выполнить операции с `text`массовым импортом данных в столбцы, `ntext`и `image` , имеющие значения по умолчанию.  
   
 ## <a name="additional-considerations-for-file-storage-types"></a>Дополнительные замечания относительно типов файловых хранилищ  
  При массовом экспорте данных из экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в файл данных:  
   
 -   можно указать в качестве типа файлового хранилища `char`;  
   
--   При вводе указан тип файлового хранилища, представляющий недопустимое неявное преобразование, **bcp** сбое; например, хотя можно указать `int` для `smallint` данных, если указать `smallint` для `int` данных, Ошибка переполнения.  
+-   При вводе типа файлового хранилища, представляющего Недопустимое неявное преобразование, программа **bcp** завершается с ошибкой. Например, можно `int` указать для `smallint` данных, если указать `smallint` для `int` данных, результат ошибки переполнения.  
   
 -   когда несимвольные типы данных, такие как `float`, `money`, `datetime` или `int`, хранятся с использованием соответствующих типов баз данных, то данные записываются в файл данных в собственном формате [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
     > [!NOTE]  
     >  После интерактивного заполнения всех полей в команде **bcp** появится запрос на сохранение введенных ответов для каждого поля в файле форматирования в формате, отличном от XML. Дополнительные сведения о файлах форматирования в формате, отличном от XML, см. в разделе [Файлы формата, отличные от XML (SQL Server)](xml-format-files-sql-server.md).  
   
-## <a name="see-also"></a>См. также  
- [Программа bcp](../../tools/bcp-utility.md)   
- [Типы данных (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql)   
- [Указание длины поля с помощью программы bcp (SQL Server)](specify-field-length-by-using-bcp-sql-server.md)   
- [Определение признаков конца поля и строки (SQL Server)](specify-field-and-row-terminators-sql-server.md)   
- [Определение длины префикса в файлах данных с помощью программы bcp (SQL Server)](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
+## <a name="see-also"></a>См. также:  
+ [bcp Utility](../../tools/bcp-utility.md)   
+ [Типы данных &#40;&#41;Transact-SQL](/sql/t-sql/data-types/data-types-transact-sql)   
+ [Указание длины поля с помощью программы bcp &#40;SQL Server&#41;](specify-field-length-by-using-bcp-sql-server.md)   
+ [Укажите признаки конца поля и строки &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)   
+ [Указание длины префикса в файлах данных с помощью программы bcp &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
   
   

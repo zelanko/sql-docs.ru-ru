@@ -18,10 +18,10 @@ ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 46176d786314284f4056b58ba351dacee37a06e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574817"
 ---
 # <a name="browser-support-for-reporting-services-and-power-view"></a>Поддержка браузера для служб Reporting Services и Power View
@@ -152,12 +152,12 @@ ms.locfileid: "65574817"
 
 ::: moniker-end
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Поиск и просмотр отчетов на веб-портале](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
 [Инструментальные средства служб Reporting Services](../reporting-services/tools/reporting-services-tools.md)  
-[Веб-портал (основной режим служб SSRS)](https://msdn.microsoft.com/7349e626-6ed5-4d21-b05f-cf042ad9ad70)  
-[HTML Viewer and the Report Toolbar](../reporting-services/html-viewer-and-the-report-toolbar.md)  
+[Веб-портал (собственный режим служб SSRS)](https://msdn.microsoft.com/7349e626-6ed5-4d21-b05f-cf042ad9ad70)  
+[Просмотра HTML-страниц и панель инструментов отчета](../reporting-services/html-viewer-and-the-report-toolbar.md)  
 [Ссылка на параметр доступа по URL-адресу](../reporting-services/url-access-parameter-reference.md)  
 
 Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

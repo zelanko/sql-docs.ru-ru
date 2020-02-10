@@ -13,19 +13,20 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 6bc07f8770e6cd7d1fb1e4b4e6e40ca8b1c5256f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014194"
 ---
 # <a name="linestring"></a>LineString
+  
   `LineString` является одномерным объектом, представляющим последовательность точек и соединяющих их линейных сегментов.  
   
 ## <a name="linestring-instances"></a>Экземпляры LineString  
  На рисунке ниже приведены примеры экземпляров `LineString`.  
   
- ![Примеры геометрических экземпляров LineString](../../database-engine/media/linestring.gif "Примеры геометрических экземпляров LineString")  
+ ![Примеры объектов LineString типа geometry](../../database-engine/media/linestring.gif "Примеры объектов LineString типа geometry")  
   
  На рисунке представлены:  
   
@@ -46,7 +47,8 @@ DECLARE @g2 geometry = 'LINESTRING(1 1,2 3,4 8, -6 3)';
 DECLARE @g3 geometry = 'LINESTRING(1 1, 1 1)';  
 ```  
   
- `@g3` показывает, что, хотя экземпляр `LineString` допустим, он недействителен.  
+ 
+  `@g3` показывает, что, хотя экземпляр `LineString` допустим, он недействителен.  
   
  Следующий экземпляр `LineString` недопустим. Он выдаст исключение `System.FormatException`.  
   
@@ -125,15 +127,15 @@ LINESTRING(1 3, 1 3) is not a valid LineString
 POINT(1 3) is a valid Point.  
 ```  
   
-## <a name="see-also"></a>См. также  
- [STLength (тип данных geometry)](/sql/t-sql/spatial-geometry/stlength-geometry-data-type)   
- [STStartPoint (тип данных geometry)](/sql/t-sql/spatial-geometry/ststartpoint-geometry-data-type)   
- [STEndpoint (тип данных geometry)](/sql/t-sql/spatial-geometry/stendpoint-geometry-data-type)   
- [STPointN (тип данных geometry)](/sql/t-sql/spatial-geometry/stpointn-geometry-data-type)   
- [STNumPoints (тип данных geometry)](/sql/t-sql/spatial-geometry/stnumpoints-geometry-data-type)   
- [STIsRing (тип данных geometry)](/sql/t-sql/spatial-geometry/stisring-geometry-data-type)   
- [STIsClosed (тип данных geometry)](/sql/t-sql/spatial-geometry/stisclosed-geometry-data-type)   
- [STPointOnSurface (тип данных geometry)](/sql/t-sql/spatial-geometry/stpointonsurface-geometry-data-type)   
+## <a name="see-also"></a>См. также:  
+ [STLength &#40;типа данных geometry&#41;](/sql/t-sql/spatial-geometry/stlength-geometry-data-type)   
+ [STStartPoint &#40;типа данных geometry&#41;](/sql/t-sql/spatial-geometry/ststartpoint-geometry-data-type)   
+ [STEndpoint &#40;типа данных geometry&#41;](/sql/t-sql/spatial-geometry/stendpoint-geometry-data-type)   
+ [STPointN &#40;типа данных geometry&#41;](/sql/t-sql/spatial-geometry/stpointn-geometry-data-type)   
+ [STNumPoints &#40;типа данных geometry&#41;](/sql/t-sql/spatial-geometry/stnumpoints-geometry-data-type)   
+ [STIsRing &#40;типа данных geometry&#41;](/sql/t-sql/spatial-geometry/stisring-geometry-data-type)   
+ [STIsClosed &#40;типа данных geometry&#41;](/sql/t-sql/spatial-geometry/stisclosed-geometry-data-type)   
+ [STPointOnSurface &#40;типа данных geometry&#41;](/sql/t-sql/spatial-geometry/stpointonsurface-geometry-data-type)   
  [Пространственные данные (SQL Server)](../spatial/spatial-data-sql-server.md)  
   
   

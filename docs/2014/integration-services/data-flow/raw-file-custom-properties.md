@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fe3f77ac629aab7534077274aa9cf62a50149b57
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900904"
 ---
 # <a name="raw-file-custom-properties"></a>Пользовательские свойства необработанного файла
@@ -24,7 +24,7 @@ ms.locfileid: "62900904"
   
  В следующей таблице описаны пользовательские свойства источника «Необработанный файл». Все свойства доступны для чтения и записи.  
   
-|Имя свойства|Тип данных|Описание|  
+|Имя свойства|Тип данных|Description|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer (перечисление)|Режим, используемый для доступа к необработанным данным. Допустимые значения — `File name` (0) и `File name from variable` (1). Значение по умолчанию — `File name` (0).|  
 |FileName|String|Полный путь и имя исходного файла.|  
@@ -39,7 +39,7 @@ ms.locfileid: "62900904"
   
  В следующей таблице описаны пользовательские свойства назначения «Необработанный файл». Все свойства доступны для чтения и записи.  
   
-|Имя свойства|Тип данных|Описание|  
+|Имя свойства|Тип данных|Description|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer (перечисление)|Значение, указывающее, содержит ли свойство FileName имя файла, или указывающее переменную, которая содержит имя файла. Параметрами являются `File name` (0) и `File name from variable` (1).|  
 |FileName|String|Имя файла, в который назначение «Необработанный файл» осуществляет запись.|  
@@ -52,7 +52,7 @@ ms.locfileid: "62900904"
   
  Дополнительные сведения см. в статье [Raw File Destination](raw-file-destination.md).  
   
-## <a name="see-also"></a>См. также  
- [Common Properties](../common-properties.md)  
+## <a name="see-also"></a>См. также:  
+ [Общие свойства](../common-properties.md)  
   
   

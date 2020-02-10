@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 197a2668beb60acf2473a1f53786d7b553e08cf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058245"
 ---
 # <a name="http-connection-manager-editor-server-page"></a>Редактор диспетчера HTTP-сеансов (страница «Сервер»)
@@ -38,7 +38,7 @@ ms.locfileid: "66058245"
  **Использовать учетные данные**  
  Укажите, должен ли диспетчер HTTP-соединений использовать для проверки подлинности учетные данные безопасности пользователя.  
   
- **Имя пользователя**  
+ **User name**  
  Если диспетчер HTTP-соединений использует учетные данные, необходимо указать имя пользователя, пароль и домен.  
   
  **Пароль**  
@@ -50,7 +50,7 @@ ms.locfileid: "66058245"
  **Использовать сертификат клиента**  
  Укажите, должен ли диспетчер HTTP-соединений использовать для проверки подлинности сертификат клиента.  
   
- **Сертификат**  
+ **Certificate**  
  Выберите сертификат из списка, воспользовавшись диалоговым окном **Выбор сертификата** . Текстовое поле отображает имя, связанное с этим сертификатом.  
   
  **Время ожидания (сек)**  
@@ -59,11 +59,11 @@ ms.locfileid: "66058245"
  **Размер фрагмента данных (КБ)**  
  Укажите размер фрагмента для записи данных.  
   
- **Проверка соединения**  
- После настройки диспетчера HTTP-подключений проверьте работоспособность соединения, нажав кнопку **Проверить соединение**.  
+ **Проверить подключение**  
+ После настройки диспетчера HTTP-соединений проверьте работоспособность соединения, нажав кнопку **Проверить соединение**.  
   
-## <a name="see-also"></a>См. также  
- [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор диспетчера HTTP-сеансов (страница "Прокси-сервер")](../../2014/integration-services/http-connection-manager-editor-proxy-page.md)  
+## <a name="see-also"></a>См. также:  
+ [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор диспетчера HTTP-сеансов &#40;прокси-страница&#41;](../../2014/integration-services/http-connection-manager-editor-proxy-page.md)  
   
   

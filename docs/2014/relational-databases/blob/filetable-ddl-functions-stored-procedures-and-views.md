@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 85e0c761f5dc784698b3aed361ce50488a93e366
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010103"
 ---
 # <a name="filetable-ddl-functions-stored-procedures-and-views"></a>Инструкции FileTable языка DDL, функции, хранимые процедуры и представления
@@ -28,17 +28,17 @@ ms.locfileid: "66010103"
   
 ##  <a name="ddl"></a> Инструкции языка описания данных (DDL) Transact-SQL  
   
-|Object|Состояние|Дополнительные сведения|  
+|Объект|Состояние|Дополнительные сведения|  
 |------------|------------|----------------------|  
-|[ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)<br /><br /> [Параметры ALTER DATABASE SET (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-set-options)|Изменено|[Включение необходимых компонентов для таблицы FileTable](enable-the-prerequisites-for-filetable.md)<br /><br /> [Управление таблицами FileTable](manage-filetables.md)|  
-|[ALTER TABLE (Transact-SQL)](/sql/t-sql/statements/alter-table-transact-sql)|Изменено|[Создание, изменение и удаление таблиц FileTables](create-alter-and-drop-filetables.md)<br /><br /> [Управление таблицами FileTable](manage-filetables.md)|  
+|[ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)<br /><br /> [Параметры ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)|Изменено|[Включение необходимых компонентов для таблицы FileTable](enable-the-prerequisites-for-filetable.md)<br /><br /> [Управление таблицами FileTable](manage-filetables.md)|  
+|[ALTER TABLE (Transact-SQL)](/sql/t-sql/statements/alter-table-transact-sql)|Изменено|[Создание, изменение и удаление таблиц FileTable](create-alter-and-drop-filetables.md)<br /><br /> [Управление таблицами FileTable](manage-filetables.md)|  
 |[CREATE DATABASE (SQL Server Transact-SQL)](/sql/t-sql/statements/create-database-sql-server-transact-sql)|Изменено|[Включение необходимых компонентов для таблицы FileTable](enable-the-prerequisites-for-filetable.md)|  
 |[CREATE TABLE (Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql)|Изменено|[Создание, изменение и удаление таблиц FileTable](create-alter-and-drop-filetables.md)|  
 |[RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql)<br /><br /> [Аргументы инструкции RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-arguments-transact-sql)|Изменено||  
   
 ##  <a name="func"></a> Функции  
   
-|Object|Состояние|Дополнительные сведения|  
+|Объект|Состояние|Дополнительные сведения|  
 |------------|------------|----------------------|  
 |[FileTableRootPath (Transact-SQL)](/sql/relational-databases/system-functions/filetablerootpath-transact-sql)|**Добавлено**|[Работа с каталогами и путями в таблицах FileTable](work-with-directories-and-paths-in-filetables.md)|  
 |[GetFileNamespacePath (Transact-SQL)](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql)|**Добавлено**|[Работа с каталогами и путями в таблицах FileTable](work-with-directories-and-paths-in-filetables.md)|  
@@ -46,26 +46,26 @@ ms.locfileid: "66010103"
   
 ##  <a name="sproc"></a> Хранимые процедуры  
   
-|Object|Состояние|Дополнительные сведения|  
+|Объект|Состояние|Дополнительные сведения|  
 |------------|------------|----------------------|  
 |[sp_kill_filestream_non_transacted_handles (Transact-SQL)](/sql/relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles)|**Добавлено**|[Управление таблицами FileTable](manage-filetables.md)|  
   
 ##  <a name="cv"></a> Представления каталога  
   
-|Object|Состояние|Дополнительные сведения|  
+|Объект|Состояние|Дополнительные сведения|  
 |------------|------------|----------------------|  
 |[sys.database_filestream_options (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql)|**Добавлено**|[Включение необходимых компонентов для таблицы FileTable](enable-the-prerequisites-for-filetable.md)|  
-|[sys.filetable_system_defined_objects (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql)|**Добавлено**|[Создание, изменение и удаление таблиц FileTables](create-alter-and-drop-filetables.md)<br /><br /> [Управление таблицами FileTable](manage-filetables.md)|  
+|[sys.filetable_system_defined_objects (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql)|**Добавлено**|[Создание, изменение и удаление таблиц FileTable](create-alter-and-drop-filetables.md)<br /><br /> [Управление таблицами FileTable](manage-filetables.md)|  
 |[sys.filetables (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-filetables-transact-sql)|**Добавлено**|[Управление таблицами FileTable](manage-filetables.md)|  
 |[sys.tables (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-tables-transact-sql)|Изменено|[Управление таблицами FileTable](manage-filetables.md)|  
   
 ##  <a name="dmv"></a> Динамические административные представления  
   
-|Object|Состояние|Дополнительные сведения|  
+|Объект|Состояние|Дополнительные сведения|  
 |------------|------------|----------------------|  
 |[sys.dm_filestream_non_transacted_handles (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql)|**Добавлено**|[Управление таблицами FileTable](manage-filetables.md)|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Управление таблицами FileTable](manage-filetables.md)  
   
   

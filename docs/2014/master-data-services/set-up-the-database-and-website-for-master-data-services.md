@@ -1,5 +1,5 @@
 ---
-title: Настройка веб-сайта и базы данных для служб Master Data Services | Документация Майкрософт
+title: Настройка базы данных и веб-сайта для Master Data Services | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 478dea9095fe22a437aecf138c22374b5a70885b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054094"
 ---
 # <a name="set-up-the-database-and-website-for-master-data-services"></a>Настройка базы данных и веб-сайта для служб Master Data Services
@@ -24,22 +24,22 @@ ms.locfileid: "66054094"
   
  Чтобы настроить базу данных и веб-сайт, выполните следующие задачи.  
   
-1.  Создание базы данных при помощи **базы данных конфигурации** странице в [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)].  
+1.  Создайте базу данных с помощью страницы **Конфигурация базы данных** в [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]среде.  
   
-     Сведения см. в разделе [страница базы данных конфигурации &#40;диспетчер конфигурации Master Data Services&#41; ](../../2014/master-data-services/database-configuration-page-master-data-services-configuration-manager.md) и [мастер создания базы данных &#40;диспетчер конфигурации Master Data Services&#41; ](../../2014/master-data-services/create-database-wizard-master-data-services-configuration-manager.md).  
+     Дополнительные сведения см. в разделе [&#40;страницы конфигурации базы данных диспетчер конфигурации Master Data Services&#41;](../../2014/master-data-services/database-configuration-page-master-data-services-configuration-manager.md) и [Мастер создания базы данных &#40;Диспетчер конфигурации Master Data Services&#41;](../../2014/master-data-services/create-database-wizard-master-data-services-configuration-manager.md).  
   
-2.  Создайте новый веб-сайт, выберите веб-сайт по умолчанию или выберите другой существующий веб-сайт с помощью **веб-конфигурация** странице в [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]. Затем свяжите базу данных MDS с создаваемым или выбранным веб-приложением.  
+2.  Создайте новый веб-сайт, выберите веб-сайт по умолчанию или выберите другой существующий веб-сайт с помощью [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]страницы **веб-конфигурация** в. Затем свяжите базу данных MDS с создаваемым или выбранным веб-приложением.  
   
-     Сведения см. в разделе [веб-страницы конфигурации &#40;диспетчер конфигурации Master Data Services&#41; ](../../2014/master-data-services/web-configuration-page-master-data-services-configuration-manager.md) и [создать диалоговое окно веб-сайт &#40;диспетчер конфигурации Master Data Services&#41; ](../../2014/master-data-services/create-website-dialog-box-master-data-services-configuration-manager.md).  
+     Дополнительные сведения см. в разделе [веб-страница конфигурации &#40;диспетчер конфигурации Master Data Services&#41;](../../2014/master-data-services/web-configuration-page-master-data-services-configuration-manager.md) и [Создание веб-сайта &#40;Диспетчер конфигурации Master Data Services&#41;](../../2014/master-data-services/create-website-dialog-box-master-data-services-configuration-manager.md).  
   
-3.  (Необязательно) Включение интеграции со службами Data Quality Services с помощью **веб-конфигурация** странице в [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)].  
+3.  Используемых Включите интеграцию со службами Data Quality Services с помощью страницы **веб-конфигурация** в [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)].  
   
-     Дополнительные сведения см. в разделе [веб-страницы конфигурации &#40;диспетчер конфигурации Master Data Services&#41; ](../../2014/master-data-services/web-configuration-page-master-data-services-configuration-manager.md) и [включить службы интеграции служб Data Quality со службами Master Data Services](install-windows/enable-data-quality-services-integration-with-master-data-services.md).  
+     Дополнительные сведения см. в разделе [Web Configuration Page &#40;диспетчер конфигурации Master Data Services&#41;](../../2014/master-data-services/web-configuration-page-master-data-services-configuration-manager.md) и [Включение интеграции служб Data Quality Services с Master Data Services](install-windows/enable-data-quality-services-integration-with-master-data-services.md).  
   
  Также можно использовать [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] для указания параметров веб-приложений и служб, связанных с базой данных MDS. К примеру, можно указать, как часто загружаются данные или как часто отправляются сообщения проверки. Дополнительные сведения см. в разделе [Системные параметры (службы Master Data Services)](../../2014/master-data-services/system-settings-master-data-services.md).  
   
-## <a name="see-also"></a>См. также  
- [База данных служб Master Data Services](../../2014/master-data-services/master-data-services-database.md)   
+## <a name="see-also"></a>См. также:  
+ [База данных Master Data Services](../../2014/master-data-services/master-data-services-database.md)   
  [Веб-приложение диспетчера основных данных](../../2014/master-data-services/master-data-manager-web-application.md)  
   
   

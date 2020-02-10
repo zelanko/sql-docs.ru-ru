@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1b444e554fdaa58f8483a339df83bd59f768cef2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483042"
 ---
 # <a name="derived-hierarchies-with-explicit-caps-master-data-services"></a>Производные иерархии с явными ограничениями (службы Master Data Services)
@@ -49,15 +49,15 @@ ms.locfileid: "65483042"
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Создание производной иерархии.|[Создание производной иерархии (службы Master Data Services)](create-a-derived-hierarchy-master-data-services.md)|  
-|Создание явной иерархии.|[Создание явной иерархии (службы Master Data Services)](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
-|Удаление существующей производной иерархии.|[Удаление производной иерархии (службы Master Data Services)](../../2014/master-data-services/delete-a-derived-hierarchy-master-data-services.md)|  
+|Создание производной иерархии.|[Создание производной иерархии &#40;Master Data Services&#41;](create-a-derived-hierarchy-master-data-services.md)|  
+|Создание явной иерархии.|[Создание явной иерархии &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
+|Удаление существующей производной иерархии.|[Удаление производной иерархии &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-derived-hierarchy-master-data-services.md)|  
 |||  
   
 ## <a name="related-content"></a>См. также  
   
--   [Производные иерархии (службы Master Data Services)](../../2014/master-data-services/derived-hierarchies-master-data-services.md)  
+-   [Производные иерархии &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)  
   
--   [Явные иерархии (службы Master Data Services)](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
+-   [Явные иерархии &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
   
   

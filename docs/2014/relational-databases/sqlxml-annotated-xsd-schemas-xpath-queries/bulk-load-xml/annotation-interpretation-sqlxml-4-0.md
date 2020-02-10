@@ -1,5 +1,5 @@
 ---
-title: Интерпретация заметки (SQLXML 4.0) | Документация Майкрософт
+title: Интерпретация аннотации (SQLXML 4,0) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,32 +17,32 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2db54a2bec501c3422cf19b1efab7cdb581420e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013438"
 ---
 # <a name="annotation-interpretation-sqlxml-40"></a>Интерпретация заметки (SQLXML 4.0)
   В подразделах этого раздела приведено описание того, как осуществляется интерпретация заметок в схеме XSD при массовой загрузке XML. Поведение, описанное здесь, применимо также к заметкам в схеме XDR.  
   
 > [!NOTE]  
->  Сведения в этих разделах описывают только заметки, используемые средствами массовой загрузки XML при обработке. Полный перечень заметок для схемы XSD, поддерживаемых в SQLXML 4.0, см. в разделе [использование заметок в схемах XSD &#40;SQLXML 4.0&#41;](../../sqlxml-annotated-xsd-schemas-using/using-annotations-in-xsd-schemas-sqlxml-4-0.md). Перечень поддерживаемых заметок для XDR-схемы, см. в разделе [аннотированные схемы XDR &#40;в SQLXML 4.0&#41;](../../sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
+>  Сведения в этих разделах описывают только заметки, используемые средствами массовой загрузки XML при обработке. Полный список заметок для схемы XSD, поддерживаемых SQLXML 4,0, см. [в разделе Использование заметок в схемах xsd &#40;sqlxml 4,0&#41;](../../sqlxml-annotated-xsd-schemas-using/using-annotations-in-xsd-schemas-sqlxml-4-0.md). Список поддерживаемых заметок для схем XDR см. [в разделе схемы XDR с Заметками &#40;нерекомендуемые в SQLXML 4,0&#41;](../../sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
 ## <a name="in-this-section"></a>в этом разделе  
- [SQL: Relationship и правило упорядочения ключа &#40;SQLXML 4.0&#41;](annotation-interpretation-sql-relationship-and-key-ordering-rule.md)  
+ [SQL: отношение и правило упорядочивания ключей &#40;SQLXML 4,0&#41;](annotation-interpretation-sql-relationship-and-key-ordering-rule.md)  
  Описывает способ интерпретации заметки `sql:relationship` при массовой загрузке XML.  
   
- [SQL: сопоставлены &#40;SQLXML 4.0&#41;](annotation-interpretation-sql-mapped.md)  
+ [SQL: сопоставленная &#40;SQLXML 4,0&#41;](annotation-interpretation-sql-mapped.md)  
  Описывает способ интерпретации заметки `sql:mapped` при массовой загрузке XML.  
   
- [SQL: Limit-поля и SQL: Limit-значение &#40;SQLXML 4.0&#41;](annotation-interpretation-sql-limit-field-and-sql-limit-value.md)  
+ [SQL: limit-field и SQL: limit-value &#40;SQLXML 4,0&#41;](annotation-interpretation-sql-limit-field-and-sql-limit-value.md)  
  Описывает способ интерпретации заметок `sql:limit-field` и `sql:limit-value` при массовой загрузке XML.  
   
- [SQL: Overflow-поле &#40;SQLXML 4.0&#41;](annotation-interpretation-sql-overflow-field.md)  
+ [SQL: overflow — поле &#40;SQLXML 4,0&#41;](annotation-interpretation-sql-overflow-field.md)  
  Описывает способ интерпретации заметки `sql:overflow` при массовой загрузке XML.  
   
- [Другие аннотации &#40;SQLXML 4.0&#41;](annotation-interpretation-other-annotations.md)  
- Описывает способ интерпретации следующих заметок при массовой загрузке XML: `sql:id-prefix`, `sql:use-cdata`, `sql:url-encode`, `sql:is-mapping-schema`, `sql:key-fields`.  
+ [Другие заметки &#40;SQLXML 4,0&#41;](annotation-interpretation-other-annotations.md)  
+ Описывает интерпретацию следующих аннотаций при выполнении групповой загрузки `sql:id-prefix`XML:, `sql:use-cdata`, `sql:url-encode`, `sql:is-mapping-schema`,. `sql:key-fields`  
   
   

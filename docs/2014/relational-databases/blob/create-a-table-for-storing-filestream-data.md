@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b1a81cd7442e73723b9b1d7c4d0b0cd41101b95b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010329"
 ---
 # <a name="create-a-table-for-storing-filestream-data"></a>Создание таблицы для хранения данных FILESTREAM
@@ -40,7 +40,7 @@ ms.locfileid: "66010329"
   
  [!code-sql[FILESTREAM#FS_CreateTable](../../snippets/tsql/SQL15/tsql/filestream/transact-sql/filestream.sql#fs_createtable)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [CREATE TABLE (Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql)   
  [ALTER TABLE (Transact-SQL)](/sql/t-sql/statements/alter-table-transact-sql)  
   

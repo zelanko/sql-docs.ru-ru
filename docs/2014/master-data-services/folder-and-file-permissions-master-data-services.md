@@ -16,14 +16,14 @@ ms.author: lle
 manager: craigg
 robots: noindex,nofollow
 ms.openlocfilehash: 06ae01a097b164abb1b55267853ee99f7e5bf445
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483837"
 ---
 # <a name="folder-and-file-permissions-master-data-services"></a>Разрешения для папок и файлов (службы Master Data Services)
-  При установке [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]папки и файлы устанавливаются по указанному для общих компонентов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] пути установки в файловой системе. При использовании пути установки по умолчанию для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] общих компонентов, путь установки для [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] — *диск*: \Program Files\Microsoft SQL Server\120\Master Data Services. Хотя путь установки общих компонентов можно изменить, следует учитывать разрешения, наследуемые от родительской папки, а также явно заданные для [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]разрешения.  
+  При установке [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]папки и файлы устанавливаются по указанному для общих компонентов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] пути установки в файловой системе. При использовании пути установки по умолчанию для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] общих компонентов путь установки для [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] — *диск*: \Program Files\Microsoft SQL Server\120\Master Data Services. Хотя путь установки общих компонентов можно изменить, следует учитывать разрешения, наследуемые от родительской папки, а также явно заданные для [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]разрешения.  
   
 ## <a name="inherited-permissions"></a>Наследуемые разрешения  
  Папка **Microsoft SQL Server** , папка **Master Data Services** , а также большинство вложенных папок и файлов наследуют разрешения родительской папки, заданной в программе установки [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Если было выбрано расположение установки по умолчанию, то родительской папкой, от которой наследуются разрешения, будет *диск*:\Program Files. В приведенной далее таблице описаны разрешения по умолчанию для папки **Program Files**.  
@@ -62,7 +62,7 @@ ms.locfileid: "65483837"
   
  Дополнительные сведения о содержимом файла [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web.config см. в разделе [Раздел "Веб-конфигурация" (службы Master Data Services)](web-configuration-reference-master-data-services.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Установка служб Master Data Services](install-windows/install-master-data-services.md)  
   
   

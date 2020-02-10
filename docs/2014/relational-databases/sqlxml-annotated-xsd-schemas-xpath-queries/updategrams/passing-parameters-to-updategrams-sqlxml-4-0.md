@@ -1,5 +1,5 @@
 ---
-title: Передача параметров в диаграммы обновления (SQLXML 4.0) | Документация Майкрософт
+title: Передача параметров в диаграмм обновления (SQLXML 4,0) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 92238e27c364c8f09721a55d00c750022b53a18f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014724"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>Передача параметров для диаграмм обновления (SQLXML 4.0)
-  Диаграммы обновления представляют собой шаблоны; следовательно, им можно передавать параметры. Дополнительные сведения о передаче параметров шаблонам см. в разделе [вопросы безопасности диаграмм обновления &#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md).  
+  Диаграммы обновления представляют собой шаблоны; следовательно, им можно передавать параметры. Дополнительные сведения о передаче параметров в шаблоны см. в разделе [Диаграмма обновления Security соображения &#40;SQLXML 4,0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md).  
   
  Диаграммы обновления позволяют передавать значение NULL в качестве значения параметра. Для передачи значения NULL в качестве значения параметра нужно задать атрибут `nullvalue`. После этого в качестве значения параметра передается значение, присвоенное атрибуту `nullvalue`. В диаграммах обновления это значение рассматривается как NULL.  
   
@@ -32,14 +32,14 @@ ms.locfileid: "66014724"
 >  В `<sql:header>` и `<updg:header>` следует задавать `nullvalue` как неполное имя; однако в `<updg:sync>` следует задавать `nullvalue` в виде полного имени (например, `updg:nullvalue`).  
   
 ## <a name="examples"></a>Примеры  
- Чтобы создать рабочие образцы, используя следующие примеры, должны соответствовать требованиям, указанным в [требования для запуска примеров SQLXML](../../sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Чтобы создать рабочие образцы с помощью следующих примеров, необходимо выполнить требования, указанные в [требованиях к запуску примеров SQLXML](../../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
  При использовании примеров диаграмм обновления необходимо учитывать следующие моменты.  
   
--   В примерах используется сопоставление по умолчанию (т. е. в диаграмме обновления не задана схема сопоставления). Дополнительные примеры диаграмм обновления, которые используются схемы сопоставления, см. в разделе [определение схемы с заметками сопоставления в диаграмме обновления &#40;SQLXML 4.0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+-   В примерах используется сопоставление по умолчанию (т. е. в диаграмме обновления не задана схема сопоставления). Дополнительные примеры диаграмм обновления, в которых используются схемы сопоставления, см. [в разделе Указание схемы сопоставления с заметками в диаграмма обновления &#40;SQLXML 4,0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
 ### <a name="a-passing-parameters-to-an-updategram"></a>A. Передача параметров диаграмме обновления  
- В данном примере диаграмма обновления применяется для изменения фамилии сотрудника в таблице HumanResources.Shift. Диаграмма обновления передаются два параметра: ShiftID, который используется для уникальной идентификации смену и имя.  
+ В данном примере диаграмма обновления применяется для изменения фамилии сотрудника в таблице HumanResources.Shift. Диаграмма обновления передается два параметра: Шифтид, который используется для уникальной идентификации сдвига и имени.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -62,7 +62,7 @@ ms.locfileid: "66014724"
   
 1.  Скопируйте приведенную выше диаграмму обновления в блокнот и сохраните как файл с именем UpdategramWithParameters.xml.  
   
-2.  Подготовьте тестовый скрипт SQLXML 4.0 (Sqlxml4test.vbs) в [использование объектов ADO для выполнения запросов SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) для выполнения диаграммы обновления, добавив следующие строки после `cmd.Properties("Output Stream").Value = outStream`:  
+2.  Подготовка тестового скрипта SQLXML 4,0 (Sqlxml4test. vbs) в [с помощью ADO для выполнения запросов SQLXML 4,0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) для выполнения диаграмма обновления путем добавления следующих строк после `cmd.Properties("Output Stream").Value = outStream`:  
   
     ```  
     cmd.NamedParameters = True  
@@ -97,7 +97,7 @@ ms.locfileid: "66014724"
   
 1.  Скопируйте приведенную выше диаграмму обновления в блокнот и сохраните как файл с именем UpdategramPassingNullvalues.xml.  
   
-2.  Подготовьте тестовый скрипт SQLXML 4.0 (Sqlxml4test.vbs) в [использование объектов ADO для выполнения запросов SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) для выполнения диаграммы обновления, добавив следующие строки после `cmd.Properties("Output Stream").Value = outStream`:  
+2.  Подготовка тестового скрипта SQLXML 4,0 (Sqlxml4test. vbs) в [с помощью ADO для выполнения запросов SQLXML 4,0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) для выполнения диаграмма обновления путем добавления следующих строк после `cmd.Properties("Output Stream").Value = outStream`:  
   
     ```  
     cmd.NamedParameters = True  
@@ -106,7 +106,7 @@ ms.locfileid: "66014724"
     cmd.Parameters.Append cmd.CreateParameter("@ManagerID",  3, 1, 0, Null)  
     ```  
   
-## <a name="see-also"></a>См. также  
- [Вопросы безопасности диаграмм обновления &#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  
+## <a name="see-also"></a>См. также:  
+ [Вопросы безопасности диаграмма обновления &#40;SQLXML 4,0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d682257669753665ac397133fcdec0f52e46dedd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010349"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>Сравнение параметров для хранения больших двоичных объектов (SQL Server)
@@ -38,28 +38,29 @@ ms.locfileid: "66010349"
 -   Приложения Windows требуют совместимости с API-интерфейсами файловой системы для данных из файлов и каталогов.  
   
 ##  <a name="Filestream"></a> FILESTREAM  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] уже имеется функция FILESTREAM, обеспечивающая эффективное хранение, управление и потоковую передачу неструктурированных данных, хранящихся в виде файлов в файловой системе. Тем не менее для решения FILESTREAM требуется дополнительное программирование, оно не удовлетворяет требованиям полной совместимости с приложениями Windows, описанным выше.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] уже имеется функция FILESTREAM, обеспечивающая эффективное хранение, управление и потоковую передачу неструктурированных данных, хранящихся в виде файлов в файловой системе. Тем не менее для решения FILESTREAM требуется дополнительное программирование, оно не удовлетворяет требованиям полной совместимости с приложениями Windows, описанным выше.  
   
-##  <a name="FileTables"></a> Таблицы FileTable  
+##  <a name="FileTables"></a>Таблицы FileTable  
  Функция FileTable строится поверх существующих возможностей FILESTREAM, позволяя корпоративным клиентам хранить неструктурированные данные файлов и иерархии папок в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , и выполняет требования по доступу к данным без транзакций и совместимости приложений Windows с данными, хранящимися в файлах.  
   
-##  <a name="CompareFileTable"></a> Сравнение FILESTREAM и таблиц FileTable  
+##  <a name="CompareFileTable"></a>Сравнение FILESTREAM и FileTable  
   
 |Компонент|Файловый сервер и решение для базы данных|Решение FILESTREAM|Решение FileTable|  
 |-------------|---------------------------------------|-------------------------|------------------------|  
-|**Одно решение для задач управления**|нет|Да|**Да**|  
-|**Один набор служб**: поиск, отчеты, запросы и т. д.|нет|Да|**Да**|  
+|**Единственная история задач управления**|нет|Да|**Да**|  
+|**Единый набор служб**: Поиск, создание отчетов, запросы и т. д.|нет|Да|**Да**|  
 |**Интегрированная модель безопасности**|нет|Да|**Да**|  
-|**Обновление на месте для данных FILESTREAM**|Да|нет|**Да**|  
-|**Иерархия каталогов и файлов сохраняется в базе данных**|нет|нет|**Да**|  
-|**Совместимость с приложениями Windows**|Да|нет|**Да**|  
+|**Обновления данных FILESTREAM на месте**|Да|нет|**Да**|  
+|**Иерархия файлов и каталогов, хранимых в базе данных**|нет|нет|**Да**|  
+|**Совместимость приложений Windows**|Да|нет|**Да**|  
 |**Реляционный доступ к атрибутам файлов**|нет|нет|**Да**|  
   
-##  <a name="CompareRBS"></a> Сравнение FILESTREAM и удаленного хранилища больших двоичных объектов (RBS)  
- Сравнение этих двух средств см. в статье в блоге группы RBS: [Сравнение функций SQL Server Remote BLOB Store and FILESTREAM](https://go.microsoft.com/fwlink/?LinkId=210317).  
+##  <a name="CompareRBS"></a>Сравнение FILESTREAM и Удаленное хранилище больших двоичных объектов (RBS)  
+ Сравнение этих двух средств см. в статье в блоге группы RBS: [SQL Server Remote BLOB Store and FILESTREAM feature comparison](https://go.microsoft.com/fwlink/?LinkId=210317).  
   
-##  <a name="more"></a> Дополнительные сведения  
+##  <a name="more"></a>Дополнительные сведения  
  [FILESTREAM (SQL Server)](filestream-sql-server.md)  
- [FileTables (SQL Server)](filetables-sql-server.md)  
- [Удаленное хранилище больших двоичных объектов (RBS) (SQL Server)](remote-blob-store-rbs-sql-server.md)  
+ [SQL Server &#40;FileTable&#41;](filetables-sql-server.md)  
+ [Удаленное хранилище больших двоичных объектов &#40;&#41; &#40;RBS SQL Server&#41;](remote-blob-store-rbs-sql-server.md)  
   

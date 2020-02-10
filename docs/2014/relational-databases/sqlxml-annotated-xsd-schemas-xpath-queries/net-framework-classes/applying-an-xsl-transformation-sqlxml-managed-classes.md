@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 79f30fdbdd2db468e2dcb3690254463001f0fb12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012594"
 ---
 # <a name="applying-an-xsl-transformation-sqlxml-managed-classes"></a>Применение преобразования XSL (управляемые классы SQLXML)
   В этом примере SQL-запрос выполняется в базе данных AdventureWorks. Преобразование XSL применяется к результату запроса для формирования состоящей из двух столбцов таблицы с именами и фамилиями служащих.  
   
- XslPath, свойство объекта SqlXmlCommand используется для указания файла XSL и его путь к каталогу.  
+ Свойство Ксслпас объекта SqlXmlCommand используется для указания XSL-файла и пути к каталогу.  
   
 > [!NOTE]  
 >  В коде необходимо задать имя экземпляра Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в строке соединения.  

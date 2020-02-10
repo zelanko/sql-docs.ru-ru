@@ -14,32 +14,32 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c832fe601eb7151e438d7f93c3e39e9b249ea246
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483324"
 ---
 # <a name="create-an-attribute-group-master-data-services"></a>Создание группы атрибутов (службы Master Data Services)
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]группы атрибутов создаются, когда нужно отобразить атрибуты на отдельных вкладках сетки **обозревателя** .  
   
 > [!NOTE]  
->  При создании группы атрибутов она автоматически скрыта от всех пользователей, кроме того, кто ее создал. Дополнительные сведения о назначении видимости группе см. в разделе [Превращение группы атрибутов в видимую для пользователей (службы Master Data Services)](make-an-attribute-group-visible-to-users-master-data-services.md).  
+>  При создании группы атрибутов она автоматически скрыта от всех пользователей, кроме того, кто ее создал. Дополнительные сведения о назначении видимости группе см. в разделе [Make an Attribute Group Visible to Users &#40;Master Data Services&#41;](make-an-attribute-group-visible-to-users-master-data-services.md).  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения этой процедуры:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
   
 -   необходимо быть администратором модели. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](../../2014/master-data-services/administrators-master-data-services.md).  
   
--   Требуется хотя бы один атрибут. Дополнительные сведения см. в разделе [Создание текстового атрибута (службы Master Data Services)](../../2014/master-data-services/create-a-text-attribute-master-data-services.md).  
+-   Требуется хотя бы один атрибут. Дополнительные сведения см. в статье [Создание текстового атрибута (службы Master Data Services)](../../2014/master-data-services/create-a-text-attribute-master-data-services.md).  
   
 ### <a name="to-create-an-attribute-group"></a>Создание группы атрибутов  
   
 1.  В [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]щелкните область **Администрирование системы**.  
   
-2.  На **представление модели** страницы, на панели меню наведите указатель мыши на **управление** и нажмите кнопку **группы атрибутов**.  
+2.  На странице **представление модели** в строке меню наведите указатель мыши на пункт **Управление** и щелкните **группы атрибутов**.  
   
 3.  Выберите модель из списка **Модель** .  
   
@@ -47,12 +47,12 @@ ms.locfileid: "65483324"
   
 5.  Выберите **Конечные группы**, **Консолидированные группы**или **Группы коллекций** , чтобы создать группу атрибутов для конечных элементов, объединенных элементов или коллекций соответственно.  
   
-6.  Нажмите кнопку **добавить группу атрибутов**.  
+6.  Нажмите кнопку **Добавить группу атрибутов**.  
   
-7.  В **имя конечной группы** введите имя для группы. Это имя отображается на вкладке с **Explorer**.  
+7.  В поле **имя конечной группы** введите имя группы. Это имя отображается на вкладке в **обозревателе**.  
   
     > [!NOTE]  
-    >  Если вы выбрали **консолидированные группы** или **группы коллекций** на шаге 5, это поле не является **имя объединенной группы** или **имя группы коллекций**, соответственно.  
+    >  Если в шаге 5 были выбраны **консолидированные группы** или **группы коллекций** , это поле будет **объединено в группу** или имя **группы коллекций**соответственно.  
   
 8.  Нажмите кнопку **Сохранить группу**.  
   
@@ -62,22 +62,22 @@ ms.locfileid: "65483324"
   
 11. Нажмите кнопку **изменить выбранный элемент**.  
   
-12. Выберите атрибуты в **доступно** поле и нажмите кнопку **добавить** стрелку. Чтобы добавить все, щелкните стрелку **Добавить все** .  
+12. Щелкните атрибуты в поле **доступно** и щелкните стрелку **Добавить** . Чтобы добавить все, щелкните стрелку **Добавить все** .  
   
-13. При необходимости щелкните **вверх** и **вниз** кнопки со стрелками, чтобы изменить порядок атрибутов слева направо.  
+13. При необходимости можно нажать кнопки со стрелками **вверх** и **вниз** , чтобы изменить порядок атрибутов слева направо.  
   
-14. Нажмите кнопку **Сохранить**.  
+14. Выберите команду **Сохранить**.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
   
--   [Превращение группы атрибутов в видимую для пользователей (службы Master Data Services)](make-an-attribute-group-visible-to-users-master-data-services.md)  
+-   [Сделать группу атрибутов видимой для пользователей &#40;Master Data Services&#41;](make-an-attribute-group-visible-to-users-master-data-services.md)  
   
-## <a name="see-also"></a>См. также  
- [Группы атрибутов (службы Master Data Services)](../../2014/master-data-services/attribute-groups-master-data-services.md)   
- [Атрибуты (службы Master Data Services)](../../2014/master-data-services/attributes-master-data-services.md)   
- [Изменение имени группы атрибутов (службы Master Data Services)](../../2014/master-data-services/change-an-attribute-group-name-master-data-services.md)   
- [Удаление группы атрибутов (службы Master Data Services)](../../2014/master-data-services/delete-an-attribute-group-master-data-services.md)   
- [Разрешения конечного элемента &#40;службы Master Data Services&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)   
- [Объединенные разрешения &#40;службы Master Data Services&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Группы атрибутов &#40;Master Data Services&#41;](../../2014/master-data-services/attribute-groups-master-data-services.md)   
+ [Master Data Services &#40;атрибутов&#41;](../../2014/master-data-services/attributes-master-data-services.md)   
+ [Изменение имени группы атрибутов &#40;Master Data Services&#41;](../../2014/master-data-services/change-an-attribute-group-name-master-data-services.md)   
+ [Удаление группы атрибутов &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-attribute-group-master-data-services.md)   
+ [Конечные разрешения &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)   
+ [Объединенные разрешения &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)  
   
   

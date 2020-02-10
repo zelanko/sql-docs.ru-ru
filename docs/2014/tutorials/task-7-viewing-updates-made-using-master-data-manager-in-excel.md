@@ -1,5 +1,5 @@
 ---
-title: Задача 7. Просмотр изменений, выполненных с помощью диспетчера основных данных в Excel | Документация Майкрософт
+title: Задача 7. Просмотр обновлений, выполненных с помощью диспетчер основных данных в Excel | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -11,26 +11,26 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b3ae997dfc2ea9b601a0d7a41a0d24c4cb9c426b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65489685"
 ---
-# <a name="task-7-viewing-updates-made-using-master-data-manager-in-excel"></a>Задача 7. Просмотр изменений в диспетчере основных данных из Excel
+# <a name="task-7-viewing-updates-made-using-master-data-manager-in-excel"></a>Задача 7. Просмотр изменений, выполненных с помощью диспетчера основных данных в Excel
   В этой задаче вы проверите, что обнаруживаются обновленные данные из MDS в Excel.  
   
-1.  Перейдите в окно excel, который имеет **Cleansed and Matched Suppliers** открыта электронная таблица.  
+1.  Теперь переключитесь в окно Excel, чтобы открыть электронную таблицу Поставщики, которая была **очищена** .  
   
-2.  Нажмите кнопку **обновить** кнопку на ленте.  
+2.  Нажмите кнопку **Обновить** на ленте.  
   
-     ![Excel — "Обновить" на вкладке основных данных](../../2014/tutorials/media/et-viewupdatesmadeusingmdminexcel-01.jpg "Excel — \"Обновить\" на вкладке основных данных")  
+     ![Excel — кнопка «Обновить» на вкладке основных данных](../../2014/tutorials/media/et-viewupdatesmadeusingmdminexcel-01.jpg "Excel — кнопка «Обновить» на вкладке основных данных")  
   
-3.  Обратите внимание, что **имена** отобразить на странице (Калифорния, Нью-Йорк и т. д) **состояние** поле вместе с их **коды**.  
+3.  Обратите внимание, что **имена** отображаются (Калифорния, Нью-Йорк и т. д.) для поля **штат** вместе с их **кодами**.  
   
-     ![Excel — обновленные коды состояния и имена](../../2014/tutorials/media/et-viewupdatesmadeusingmdminexcel-02.jpg "Excel — обновленные коды состояния и имена")  
+     ![Excel — обновленные коды и названия штатов](../../2014/tutorials/media/et-viewupdatesmadeusingmdminexcel-02.jpg "Excel — обновленные коды и названия штатов")  
   
-## <a name="next-step"></a>Следующий шаг  
+## <a name="next-step"></a>Дальнейшее действие  
  [Задача 8. Добавление нового значения для состояния сущности в Excel](../../2014/tutorials/task-8-adding-a-new-value-for-state-entity-in-excel.md)  
   
   

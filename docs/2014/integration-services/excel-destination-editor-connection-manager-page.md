@@ -15,17 +15,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c55b9daba7e8e1823e1ced43fc9958d4fe5892ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059242"
 ---
 # <a name="excel-destination-editor-connection-manager-page"></a>Редактор назначения «Excel» (страница «Диспетчер соединений»)
   Используйте страницу **Диспетчер соединений** в диалоговом окне **Редактор назначения «Excel»** , чтобы задать сведения об источнике данных и просмотреть результаты. Назначение «Excel» загружает данные в лист или именованный диапазон в книге [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] .  
   
 > [!NOTE]  
->  `CommandTimeout` Свойство назначения Excel недоступно в **Редактор назначения Excel**, однако его можно установить с помощью **расширенный редактор**. Кроме того, некоторые параметры быстрой загрузки доступны только в **Расширенном редакторе**. Дополнительные сведения об этих свойствах см. в подразделе «Назначение "Excel"» раздела [Excel Custom Properties](data-flow/excel-custom-properties.md).  
+>  `CommandTimeout` Свойство назначения «Excel» недоступно в **редакторе назначения «Excel**», но может быть задано с помощью **Расширенный редактор**. Кроме того, некоторые параметры быстрой загрузки доступны только в **Расширенный редактор**. Дополнительные сведения об этих свойствах см. в подразделе «Назначение "Excel"» раздела [Excel Custom Properties](data-flow/excel-custom-properties.md).  
   
  Дополнительные сведения о назначении Excel см. в разделе [Excel Destination](data-flow/excel-destination.md).  
   
@@ -39,10 +39,10 @@ ms.locfileid: "66059242"
  **Режим доступа к данным**  
  Укажите метод выбора данных из источника.  
   
-|Параметр|Описание|  
+|Параметр|Description|  
 |------------|-----------------|  
 |Таблица или представление|Загружает данные в лист или именованный диапазон источника данных Excel.|  
-|Переменная, содержащая имя таблицы или представления|Укажите переменную, содержащую имя листа или диапазона.<br /><br /> **Дополнительные сведения** [Использование переменных в пакетах](../../2014/integration-services/use-variables-in-packages.md)|  
+|Переменная, содержащая имя таблицы или представления|Укажите переменную, содержащую имя листа или диапазона.<br /><br /> **Связанные сведения**: [Использование переменных в пакетах](../../2014/integration-services/use-variables-in-packages.md)|  
 |Команда SQL|Загрузка данных в назначение «Excel» с помощью SQL-запроса.|  
   
  **Имя листа Excel**  
@@ -71,7 +71,7 @@ ms.locfileid: "66059242"
  **Текст команды SQL**  
  Введите текст SQL-запроса, создайте запрос, нажав кнопку **Создать запрос**, или выберите файл, содержащий текст запроса, нажав кнопку **Обзор**.  
   
- **Создать запрос**  
+ **Построить запрос**  
  Воспользуйтесь диалоговым окном **Построитель запросов** для визуального конструирования SQL-запроса.  
   
  **Обзор**  
@@ -80,10 +80,10 @@ ms.locfileid: "66059242"
  **Анализ запроса**  
  Проверить синтаксис текста запроса.  
   
-## <a name="see-also"></a>См. также  
- [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор назначения "Excel" (страница "Сопоставления")](../../2014/integration-services/excel-destination-editor-mappings-page.md)   
- [Редактор назначения "Excel" (страница "Вывод ошибок")](../../2014/integration-services/excel-destination-editor-error-output-page.md)   
- [Просмотр файлов и таблиц Excel с помощью контейнера «цикл по каждому элементу»](control-flow/foreach-loop-container.md)  
+## <a name="see-also"></a>См. также:  
+ [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор назначения "Excel" &#40;страниц сопоставления&#41;](../../2014/integration-services/excel-destination-editor-mappings-page.md)   
+ [Редактор назначения "Excel" &#40;страница "вывод ошибок"&#41;](../../2014/integration-services/excel-destination-editor-error-output-page.md)   
+ [Просмотр файлов и таблиц Excel с помощью контейнера "Цикл по каждому элементу"](control-flow/foreach-loop-container.md)  
   
   

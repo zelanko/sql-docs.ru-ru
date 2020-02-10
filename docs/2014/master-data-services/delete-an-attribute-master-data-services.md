@@ -14,16 +14,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6eb278610a8e50effb9c14fd76a13d453c2fb348
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483085"
 ---
 # <a name="delete-an-attribute-master-data-services"></a>Удаление атрибута (службы Master Data Services)
   Операция удаления атрибута в службах [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]без возможности восстановления удаляет атрибут и все связанные с ним значения.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения этой процедуры:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
@@ -42,21 +42,21 @@ ms.locfileid: "65483085"
   
 5.  Щелкните **Изменить выбранную сущность**.  
   
-6.  На **изменение сущности** щелкните атрибут, который требуется удалить.  
+6.  На странице **Изменение сущности** щелкните атрибут, который нужно удалить.  
   
     > [!NOTE]  
     >  Удалить атрибуты «Имя» и «Код» нельзя.  
   
-7.  Нажмите кнопку **удалить выбранный атрибут**.  
+7.  Щелкните **Удалить выбранный атрибут**.  
   
 8.  В диалоговом окне подтверждения нажмите кнопку **ОК**.  
   
 9. В дополнительном диалоговом окне подтверждения нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также  
- [Атрибуты (службы Master Data Services)](../../2014/master-data-services/attributes-master-data-services.md)   
- [Атрибуты на основе домена (службы Master Data Services)](../../2014/master-data-services/domain-based-attributes-master-data-services.md)   
- [Создание текстового атрибута (службы Master Data Services)](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)   
- [Создание атрибута на основе домена (службы Master Data Services)](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Master Data Services &#40;атрибутов&#41;](../../2014/master-data-services/attributes-master-data-services.md)   
+ [Атрибуты на основе домена &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)   
+ [Создание текстового атрибута &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)   
+ [Создание атрибута на основе домена &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)  
   
   

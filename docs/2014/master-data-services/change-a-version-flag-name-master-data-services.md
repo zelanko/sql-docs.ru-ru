@@ -13,16 +13,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6037c1d31b52fba0f961020f1e514b3354e535b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484047"
 ---
 # <a name="change-a-version-flag-name-master-data-services"></a>Изменение имени флага версии (службы Master Data Services)
   В службах [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]можно изменить имя флага версии.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения этой процедуры:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Управление версиями** ;  
@@ -43,8 +43,8 @@ ms.locfileid: "65484047"
   
 6.  Нажмите клавишу ВВОД.  
   
-## <a name="see-also"></a>См. также  
- [Версии (службы Master Data Services)](../../2014/master-data-services/versions-master-data-services.md)   
- [Назначение флага версии (службы Master Data Services)](../../2014/master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Версии &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)   
+ [Назначение флага версии &#40;Master Data Services&#41;](../../2014/master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   
   

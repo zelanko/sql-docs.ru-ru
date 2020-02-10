@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b5bfbff70d29e2b7b18c82b323d3ab34a3c6c60e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835479"
 ---
 # <a name="generate-and-run-the-supplemental-logging-script"></a>Создание и запуск скрипта дополнительного журналирования
@@ -36,7 +36,7 @@ ms.locfileid: "62835479"
   
  Нажмите кнопку **Далее** , чтобы перейти на страницу [Generate Mirror Tables and CDC Capture Instances](generate-mirror-tables-and-cdc-capture-instances.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Как создать экземпляр изменения базы данных SQL Server](how-to-create-the-sql-server-change-database-instance.md)   
  [Обзор и создание скриптов дополнительного журналирования](review-and-generate-supplemental-logging-scripts.md)  
   

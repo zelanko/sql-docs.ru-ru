@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8f41e323faeb898be1f44159760bb1c28b7ab024
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011919"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>Импорт данных в собственном и символьном формате из предыдущих версий SQL Server
@@ -45,42 +45,42 @@ ms.locfileid: "66011919"
 |`nvarchar(max)`|`ntext`|`ntext`|`ntext`|  
 |`varbinary(max)`|`image`|`image`|`image`|  
 |XML|`ntext`|`ntext`|`ntext`|  
-|ОПРЕДЕЛЯЕМЫЙ ПОЛЬЗОВАТЕЛЕМ ТИП<sup>1</sup>|`image`|`image`|`image`|  
+|Определяемый пользователем тип<sup>1</sup>|`image`|`image`|`image`|  
   
- \* Этот тип поддерживается изначально.  
+ \*Этот тип поддерживается изначально.  
   
  <sup>1</sup> UDT обозначает определяемый пользователем тип.  
   
 ## <a name="exporting-using--v-80"></a>Экспорт с ключом -V 80  
- При массовом экспорте данных с помощью **-V80** переключиться, `nvarchar(max)`, `varchar(max)`, `varbinary(max)`, XML и определяемый пользователем тип данных в собственном режиме хранятся с 4-байтовым префиксом, как `text`, `image`и `ntext`данных, вместо 8-байтового префикса, используемого по умолчанию для [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий.  
+ При выполнении операций с массовым экспортом `varbinary(max)`с помощью параметра `text` `image` `ntext` [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] `nvarchar(max)` `varchar(max)` **-V80** данные,,, XML и определяемые пользователем типы данных в собственном режиме сохраняются с помощью 4-байтного префикса, например, и данных, вместо 8-байтного префикса по умолчанию для и более поздних версий.  
   
 ## <a name="copying-date-values"></a>Копирование значений данных  
- Программа**bcp** использует API-интерфейс массового копирования ODBC. Таким образом, для импорта значений дат в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]программа **bcp** использует формат данных ODBC (*гггг-мм-дд чч:мм:сс*[ *.f...* ]).  
+ Программа **bcp** использует API-интерфейс для выполнения операций с массовым копированием ODBC. Таким образом, для импорта значений дат в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]программа **bcp** использует формат данных ODBC (*гггг-мм-дд чч:мм:сс*[*.f...*]).  
   
- **Bcp** команда экспортирует файлы данных символьного формата с помощью формата ODBC по умолчанию для `datetime` и `smalldatetime` значения. Например, столбец типа `datetime`, содержащий дату `12 Aug 1998`, копируется с помощью массового копирования в файл данных в качестве строки символов `1998-08-12 00:00:00.000`.  
+ Команда **bcp** экспортирует файлы данных символьного формата, используя формат ODBC по `datetime` умолчанию `smalldatetime` для значений и. Например, столбец типа `datetime`, содержащий дату `12 Aug 1998`, копируется с помощью массового копирования в файл данных в качестве строки символов `1998-08-12 00:00:00.000`.  
   
 > [!IMPORTANT]  
->  При импорте данных в `smalldatetime` поле с помощью **bcp**, убедитесь, что значение секунд равно 00,000; в противном случае операция завершится ошибкой. Тип данных `smalldatetime` содержит значения только с точностью до минуты. В данном случае инструкции BULK INSERT и INSERT ... SELECT * FROM OPENROWSET(BULK...) не приведут к ошибке, но усекут значение секунд.  
+>  При импорте данных в `smalldatetime` поле с помощью программы **bcp**убедитесь, что значение для секунд равно 00,000; в противном случае операция завершится ошибкой. Тип данных `smalldatetime` содержит значения только с точностью до минуты. В данном случае инструкции BULK INSERT и INSERT ... SELECT * FROM OPENROWSET(BULK...) не приведут к ошибке, но усекут значение секунд.  
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
  **Использование форматов данных для массового импорта или экспорта**  
   
--   [Использование символьного формата для импорта и экспорта данных (SQL Server)](use-character-format-to-import-or-export-data-sql-server.md)  
+-   [Используйте символьный формат для импорта или экспорта &#40;данных SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
   
--   [Использование собственного формата для импорта и экспорта данных (SQL Server)](use-native-format-to-import-or-export-data-sql-server.md)  
+-   [Используйте собственный формат для импорта или экспорта &#40;данных SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
   
--   [Использование символьного формата Юникод для импорта и экспорта данных (SQL Server)](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
+-   [Используйте символьный формат Юникода для импорта или экспорта &#40;данных SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
--   [Использование собственного формата Юникод для импорта и экспорта данных (SQL Server)](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
+-   [Используйте собственный формат Юникода для импорта или экспорта &#40;данных SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
  
   
 ## <a name="see-also"></a>См. также:  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql)   
- [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql)   
- [Типы данных (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql)   
- [Обратная совместимость компонента SQL Server Database Engine](../../database-engine/sql-server-database-engine-backward-compatibility.md)   
+ [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
+ [Типы данных &#40;&#41;Transact-SQL](/sql/t-sql/data-types/data-types-transact-sql)   
+ [SQL Server ядро СУБД обратной совместимости](../../database-engine/sql-server-database-engine-backward-compatibility.md)   
  [Функции CAST и CONVERT (Transact-SQL)](/sql/t-sql/functions/cast-and-convert-transact-sql)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Справочник по пользовательскому Интерфейсу диспетчера соединений ODBC | Документация Майкрософт
+title: Справочник по пользовательскому интерфейсу диспетчера соединений ODBC | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4489dd45616c1f2f8240f53e6a3bb0c59f459580
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057278"
 ---
 # <a name="odbc-connection-manager-ui-reference"></a>Справочник по пользовательскому интерфейсу диспетчера соединений ODBC
@@ -39,7 +39,7 @@ ms.locfileid: "66057278"
  **Удаление**  
  Выберите соединение и затем удалите его, используя кнопку **Удалить** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

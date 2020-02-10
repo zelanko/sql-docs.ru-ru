@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6370b6b08639f57419b08a1c380b440d0d98a591
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871460"
 ---
 # <a name="estimate-the-size-of-a-database"></a>Оценка размера базы данных
@@ -39,7 +39,7 @@ ms.locfileid: "62871460"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Описание|  
+|Раздел|Description|  
 |-----------|-----------------|  
 |[Оценка размера таблицы](estimate-the-size-of-a-table.md)|Определяет шаги и вычисления для оценки места на диске, необходимого для хранения данных в таблице и связанных индексах.|  
 |[Оценка размера кучи](estimate-the-size-of-a-heap.md)|Определяет шаги и вычисления для оценки места на диске, необходимого для хранения данных в куче. Кучей называется таблица, не имеющая кластеризованного индекса.|  

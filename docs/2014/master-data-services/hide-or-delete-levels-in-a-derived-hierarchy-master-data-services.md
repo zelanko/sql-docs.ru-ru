@@ -14,16 +14,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d7e2dd9db5cfc9b86b1c29b165bd817ff5394798
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483019"
 ---
 # <a name="hide-or-delete-levels-in-a-derived-hierarchy-master-data-services"></a>Скрытие или удаление уровней в производной иерархии (службы Master Data Services)
   В службах [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]можно скрыть уровень в производной иерархии, если он необходим для группирования, но отображать этот уровень нежелательно. Если этот уровень не нужен для группирования, то можно удалить его.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения этой процедуры:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
@@ -34,13 +34,13 @@ ms.locfileid: "65483019"
   
 1.  В [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]щелкните область **Администрирование системы**.  
   
-2.  На **представление модели** страницы, на панели меню наведите указатель мыши на **управление** и нажмите кнопку **производные иерархии**.  
+2.  На странице **представление модели** в строке меню наведите указатель мыши на пункт **Управление** и щелкните **производные иерархии**.  
   
 3.  На странице **Обслуживание производной иерархии** выберите модель из списка **Модель** .  
   
 4.  Выберите строку для производной иерархии, которую необходимо изменить.  
   
-5.  Нажмите кнопку **изменить выбранные производную иерархию**.  
+5.  Щелкните **изменить выбранную производную иерархию**.  
   
 6.  На панели **Текущие уровни** :  
   
@@ -48,8 +48,8 @@ ms.locfileid: "65483019"
   
     -   Чтобы удалить верхний уровень, щелкните **Удалить выбранный элемент иерархии**. В диалоговом окне подтверждения нажмите кнопку **ОК**. Можно удалить только верхний уровень.  
   
-## <a name="see-also"></a>См. также  
- [Перемещение элементов в иерархии &#40;службы Master Data Services&#41;](../../2014/master-data-services/move-members-within-a-hierarchy-master-data-services.md)   
- [Производные иерархии (службы Master Data Services)](../../2014/master-data-services/derived-hierarchies-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Перемещение элементов в иерархии &#40;Master Data Services&#41;](../../2014/master-data-services/move-members-within-a-hierarchy-master-data-services.md)   
+ [Производные иерархии &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)  
   
   

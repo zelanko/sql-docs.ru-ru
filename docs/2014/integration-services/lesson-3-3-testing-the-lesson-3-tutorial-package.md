@@ -1,5 +1,5 @@
 ---
-title: Шаг 3. Проверка учебного пакета занятия 3 | Документация Майкрософт
+title: Шаг 3. Проверка учебного пакета, созданного на занятии 3 | Документы Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ac1aa0c45e8201d50ead862dd1631bbb3324c8e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62891592"
 ---
-# <a name="step-3-testing-the-lesson-3-tutorial-package"></a>Шаг 3. Тестирование учебного пакета урока 3
+# <a name="step-3-testing-the-lesson-3-tutorial-package"></a>Шаг 3. Проверка учебного пакета, созданного на занятии 3
   В этой задаче вы выполните пакет Lesson 3.dtsx. После запуска пакета в окне «Журнал событий» отображаются записи, которые заносятся в файл журнала. После завершения выполнения пакета следует проверить, что регистратор сформировал содержимое файла журнала.  
   
 ## <a name="checking-the-package-layout"></a>Проверка макета пакета  
@@ -43,9 +43,9 @@ ms.locfileid: "62891592"
   
 -   В приложении «Блокнот» или другом текстовом редакторе откройте файл TutorialLog.log.  
   
--   Хотя семантика сведений созданный для `PipelineExecutionPlan` и `PipelineExecutionTrees` событий выходят за рамки данного руководства, вы увидите, что в первой строке перечислены поля сведений, указанных в **сведения** вкладке **Настройка журналов служб SSIS** диалоговое окно. Кроме того, можно проверить, что два выбранных события (PipelineExecutionPlan и PipelineExecutionTrees) были занесены в журнал для каждой итерации цикла ForEach.  
+-   Несмотря на то, что `PipelineExecutionPlan` семантика информации, формируемой `PipelineExecutionTrees` для событий и, выходит за рамки данного учебника, можно увидеть, что в первой строке перечислены поля сведений, указанные на вкладке **сведения** диалогового окна **Настройка журналов служб SSIS** . Кроме того, можно проверить, что два выбранных события (PipelineExecutionPlan и PipelineExecutionTrees) были занесены в журнал для каждой итерации цикла ForEach.  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- [Занятие 4. Добавление перенаправления потока ошибок](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  
+ [Урок 4. Добавление перенаправления потока ошибок](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  
   
   

@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c9f022f0ed2ba9b7bc320407526af0c12ce4073b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483922"
 ---
 # <a name="assign-a-flag-to-a-version-master-data-services"></a>Назначение флага версии (службы Master Data Services)
@@ -26,14 +26,14 @@ ms.locfileid: "65483922"
 > [!NOTE]  
 >  Флаг можно назначить только одной версии в каждый момент времени. Если назначить флаг, уже назначенный другой версии, то он переместится к выбранной версии.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения этой процедуры:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Управление версиями** ;  
   
 -   необходимо быть администратором модели. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](administrators-master-data-services.md).  
   
--   Нужно создать флаг версии для назначения. Дополнительные сведения см. в разделе [Создание флага версии (службы Master Data Services)](../../2014/master-data-services/create-a-version-flag-master-data-services.md).  
+-   Нужно создать флаг версии для назначения. Дополнительные сведения см. в статье [Create a Version Flag &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-version-flag-master-data-services.md).  
   
 ### <a name="to-assign-a-flag-to-a-version"></a>Назначение флага версии  
   
@@ -48,8 +48,8 @@ ms.locfileid: "65483922"
   
 4.  Нажмите клавишу ВВОД, чтобы сохранить изменение.  
   
-## <a name="see-also"></a>См. также  
- [Создание флага версии (службы Master Data Services)](../../2014/master-data-services/create-a-version-flag-master-data-services.md)   
- [Версии (службы Master Data Services)](../../2014/master-data-services/versions-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Создание флага версии &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-version-flag-master-data-services.md)   
+ [Версии &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)  
   
   

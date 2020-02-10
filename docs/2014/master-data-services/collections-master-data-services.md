@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0dbf84d6fd3253a3b4d945693090fdad00d077ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483544"
 ---
 # <a name="collections-master-data-services"></a>Коллекции (службы основных данных)
@@ -33,10 +33,10 @@ ms.locfileid: "65483544"
  Пользователь, создающий коллекцию, автоматически вносится в список ее владельцев. Если вы являетесь администратором, то при необходимости можете создавать другие атрибуты коллекции.  
   
 > [!NOTE]  
->  Перед созданием коллекции для сущности необходимо разрешить использование явных иерархий. Дополнительные сведения см. в разделе [активация сущности для явных иерархий и коллекций &#40;службы Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md).  
+>  Перед созданием коллекции для сущности необходимо разрешить использование явных иерархий. Дополнительные сведения см. в разделе [Включение сущности для явных иерархий и коллекций &#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md).  
   
 ## <a name="subscription-views-for-collections"></a>Представления подписки для коллекций  
- Есть два типа представлений подписки, которые отображают коллекции. Формат **Атрибуты коллекций** отображает список коллекций и другие атрибуты, связанные с коллекциями, например описание или владельца. Формат **Коллекции** отображает все элементы во всех коллекциях, а также вес и порядок сортировки каждого элемента. Дополнительные сведения см. в разделе [Экспорт данных &#40;службы Master Data Services&#41;](overview-exporting-data-master-data-services.md).  
+ Есть два типа представлений подписки, которые отображают коллекции. Формат **Атрибуты коллекций** отображает список коллекций и другие атрибуты, связанные с коллекциями, например описание или владельца. Формат **Коллекции** отображает все элементы во всех коллекциях, а также вес и порядок сортировки каждого элемента. Дополнительные сведения см. в разделе [Экспорт данных &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md).  
   
  Если для определенных элементов в коллекции установлены взвешенные значения, такие значения доступны в связанных представлениях подписки.  
   
@@ -44,14 +44,14 @@ ms.locfileid: "65483544"
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Включение сущности для явных иерархий и коллекций.|[Активация сущности для явных иерархий и коллекций &#40;службы Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
-|Создание новой коллекции.|[Создание коллекции (службы Master Data Services)](../../2014/master-data-services/create-a-collection-master-data-services.md)|  
-|Добавление элементов в существующую коллекцию.|[Добавление элементов в коллекцию (службы Master Data Services)](../../2014/master-data-services/add-members-to-a-collection-master-data-services.md)|  
+|Включение сущности для явных иерархий и коллекций.|[Включение сущности для явных иерархий и коллекций &#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
+|Создание новой коллекции.|[Создание Master Data Services &#40;коллекции&#41;](../../2014/master-data-services/create-a-collection-master-data-services.md)|  
+|Добавление элементов в существующую коллекцию.|[Добавление членов в коллекцию &#40;Master Data Services&#41;](../../2014/master-data-services/add-members-to-a-collection-master-data-services.md)|  
   
 ## <a name="related-content"></a>См. также  
   
--   [Явные иерархии (службы Master Data Services)](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
+-   [Явные иерархии &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
   
--   [Экспорт данных &#40;службы Master Data Services&#41;](overview-exporting-data-master-data-services.md)  
+-   [Экспорт Master Data Services &#40;данных&#41;](overview-exporting-data-master-data-services.md)  
   
   

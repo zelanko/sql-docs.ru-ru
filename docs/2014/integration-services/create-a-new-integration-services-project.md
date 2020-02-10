@@ -1,5 +1,5 @@
 ---
-title: Создание нового проекта служб Integration Services | Документация Майкрософт
+title: Создание нового Integration Services проекта | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d3a1d8542ba5cc689cef60fc81641c37c96ea790
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060215"
 ---
 # <a name="create-a-new-integration-services-project"></a>Создание нового проекта служб Integration Services
@@ -27,7 +27,7 @@ ms.locfileid: "66060215"
   
 ### <a name="to-create-a-new-integration-services-project"></a>Создание нового проекта служб Integration Services  
   
-1.  Откройте [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
+1.  Откройте среду [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 2.  В меню **Файл** укажите **Создать**, затем нажмите **Проект**.  
   
@@ -48,10 +48,10 @@ ms.locfileid: "66060215"
     > [!NOTE]  
     >  Чтобы просмотреть и изменить выбранный встраиваемый модуль управления версиями, а также настроить среду управления версиями, выберите пункт **Параметры** в меню **Сервис**, а затем разверните узел **Управление версиями**.  
   
-8.  Нажмите кнопку **ОК** для добавления решения для **обозреватель решений**r и добавить проект в решение.  
+8.  Нажмите кнопку **ОК** , чтобы добавить решение в **проводник решения**r и добавить проект в решение.  
   
-## <a name="see-also"></a>См. также  
- [Службы Integration Services &#40;SSIS&#41; проектов](integration-services-ssis-projects-and-solutions.md)   
+## <a name="see-also"></a>См. также:  
+ [Integration Services &#40;проектов&#41; SSIS](integration-services-ssis-projects-and-solutions.md)   
  [Добавление или удаление проектом служб Integration Services из решения](../../2014/integration-services/add-or-remove-an-integration-services-project-in-a-solution.md)  
   
   

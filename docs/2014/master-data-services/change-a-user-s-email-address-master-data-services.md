@@ -13,16 +13,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1d540c414b1190a045fdb18b4b971e73f348459f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483585"
 ---
 # <a name="change-a-user39s-email-address-master-data-services"></a>Изменение адреса электронной почты пользователя (службы Master Data Services)
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]можно изменить адрес электронной почты, на который отправляются уведомления, и формат по умолчанию для писем с уведомлениями.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения этой процедуры:  
   
 -   Необходимо иметь разрешение на доступ к функциональной области **Пользователи и группы** .  
@@ -39,13 +39,13 @@ ms.locfileid: "65483585"
   
 5.  Обновите адрес электронной почты или формат писем.  
   
-6.  Нажмите кнопку **Сохранить**.  
+6.  Выберите команду **Сохранить**.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
   
--   [Назначение разрешений для функциональной области (службы Master Data Services)](assign-functional-area-permissions-master-data-services.md)  
+-   [Назначение разрешений функциональной области &#40;Master Data Services&#41;](assign-functional-area-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>См. также  
- [Безопасность (службы Master Data Services)](../../2014/master-data-services/security-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Master Data Services &#40;безопасности&#41;](../../2014/master-data-services/security-master-data-services.md)  
   
   

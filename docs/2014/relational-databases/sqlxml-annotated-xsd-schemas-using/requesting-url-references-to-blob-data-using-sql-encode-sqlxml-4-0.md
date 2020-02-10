@@ -1,5 +1,5 @@
 ---
-title: 'Получение URL-адрес ссылок на данные BLOB с использованием sql: encode (SQLXML 4.0) | Документация Майкрософт'
+title: 'Запрос URL-ссылок на данные большого двоичного объекта с помощью SQL: Encoded (SQLXML 4,0) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 153a88bcb31f65d4e6aff007cfbee7d1f7afc6df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013730"
 ---
 # <a name="requesting-url-references-to-blob-data-using-sqlencode-sqlxml-40"></a>Получение URL-ссылок на данные BLOB с использованием sql:encode (SQLXML 4.0)
@@ -35,7 +35,7 @@ ms.locfileid: "66013730"
   
  Заметке `sql:encode` можно назначить значение «url» или «default». Значение «default» возвращает данные в формате Base 64.  
   
- Заметку `sql:encode` нельзя использовать с `sql:use-cdata` или для типов атрибутов ID, IDREF, IDREFS, NMTOKEN и NMTOKENS. Он также не может использоваться с XSD **фиксированной** атрибута.  
+ Заметку `sql:encode` нельзя использовать с `sql:use-cdata` или для типов атрибутов ID, IDREF, IDREFS, NMTOKEN и NMTOKENS. Его также можно использовать с атрибутом **fixed** XSD.  
   
 > [!NOTE]  
 >  Столбцы типа BLOB невозможно использовать, как часть ключа или внешнего ключа.  
@@ -44,7 +44,7 @@ ms.locfileid: "66013730"
  Чтобы создать рабочие образцы на основе следующих примеров, необходимо выполнить определенные требования. Дополнительные сведения см. в разделе [требования для запуска примеров SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-sqlencode-to-obtain-a-url-reference-to-blob-data"></a>A. Указание заметки sql:encode для получения URL-ссылки на данные BLOB  
- В этом примере схема сопоставления задает `sql:encode` на **LargePhoto** атрибут, чтобы получить URI-ссылку на фотографию определенного продукта (вместо извлечения двоичных данных в формате Base 64).  
+ В этом примере схема сопоставления задает `sql:encode` атрибут **LargePhoto** для получения ссылки URI на определенную фотографию продукта (вместо извлечения двоичных данных в формате Base 64).  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -82,9 +82,9 @@ ms.locfileid: "66013730"
   
 3.  Создайте и запустите тестовый скрипт SQLXML 4.0 (Sqlxml4test.vbs), чтобы выполнить шаблон.  
   
-     Дополнительные сведения см. в разделе [использование объектов ADO для выполнения запросов SQLXML 4.0](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Дополнительные сведения см. [в разделе Использование ADO для выполнения запросов SQLXML 4,0](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Это результат:  
+ Результат:  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

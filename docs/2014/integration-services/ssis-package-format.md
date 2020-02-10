@@ -1,5 +1,5 @@
 ---
-title: Формат пакетов служб SSIS | Документация Майкрософт
+title: Формат пакета служб SSIS | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f59ed0eee86f17fdda568caa5c1a1dc7252c6d9c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055353"
 ---
 # <a name="ssis-package-format"></a>Формат пакетов служб SSIS
-  В текущем выпуске служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]внесены серьезные изменения в формат пакетов (файл DTSX), чтобы упростить чтение формата и сравнение пакетов. Также можно надежнее слияния пакетов, которые не содержат конфликтующие изменения или изменений, хранящихся в двоичном формате.  
+  В текущем выпуске служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] внесены серьезные изменения в формат пакетов (файл DTSX), чтобы упростить чтение формата и сравнение пакетов. Кроме того, можно более надежно выполнять слияние пакетов, которые не содержат конфликтующих изменений или изменений, хранящихся в двоичном формате.  
   
- Чтобы просмотреть текущий формат файла пакета DTSX, см. в разделе [ \[MS-DTSX\]: Спецификация формата XML-файла пакета служб DTS](https://go.microsoft.com/fwlink/?LinkId=233251).  
+ Чтобы просмотреть текущий формат файла пакета dtsx, см [ \[. статью MS-\]dtsx: спецификация формата XML-файла пакета служб DTS](https://go.microsoft.com/fwlink/?LinkId=233251).  
   
  В следующем списке перечислены изменения формата файла. Чтобы просмотреть примеры кода этих изменений, см. раздел [Изменения формата пакета в SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=233255).  
   

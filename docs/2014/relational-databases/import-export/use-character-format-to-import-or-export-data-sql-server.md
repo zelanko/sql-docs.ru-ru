@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ab658be26dc8ccbdd4e760d0b1bc835ace3b2c38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011669"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>Использование символьного формата для импорта и экспорта данных (SQL Server)
@@ -31,7 +31,7 @@ ms.locfileid: "66011669"
 ## <a name="considerations-for-using-character-format"></a>Замечания по использованию символьного формата  
  При использовании символьного формата имейте в виду следующее.  
   
--   По умолчанию программа **bcp** разделяет символьные поля данных символом табуляции, а записи — символом перевода строки. Сведения о том, как указать другой признак конца поля, см. в статье [Определение признаков конца поля и строки (SQL Server)](specify-field-and-row-terminators-sql-server.md).  
+-   По умолчанию программа **bcp** разделяет поля символьных данных с помощью символа табуляции и завершает записи символом новой строки. Сведения о том, как указать другой признак конца поля, см. в статье [Определение признаков конца поля и строки (SQL Server)](specify-field-and-row-terminators-sql-server.md).  
   
 -   По умолчанию перед выполнением массового импорта или экспорта символьных данных выполняются следующие преобразования.  
   
@@ -44,21 +44,21 @@ ms.locfileid: "66011669"
   
 -   Значения типа `sql_variant` сохраняются в файле в символьном формате без метаданных. Каждое значение типа данных преобразуется в формат типа `char` в соответствии с правилами неявного преобразования данных. В столбец типа `sql_variant` данные импортируются как тип `char`. При импорте в столбец типа данных, отличного от типа `sql_variant`, данные преобразуются из типа `char` в соответствии с правилами неявного преобразования. Дополнительные сведения о преобразовании данных см. в статье [Преобразование типов данных (ядро СУБД)](/sql/t-sql/data-types/data-type-conversion-database-engine).  
   
--   **Bcp** экспортов программа `money` значений с четырьмя знаками после десятичной запятой и без символов-разделителей запятые-разделители, таких как данных символьного формата. Например: для столбца типа `money`, содержащего значение 1 234 567,123456, будет выполнен массовый экспорт в файл данных в виде символьной строки «1234567,1235».  
+-   Программа **bcp** экспортирует `money` значения в виде файлов данных символьного формата с четырьмя цифрами после десятичной запятой и без символов группирования цифр, таких как разделители-запятые. Например: для столбца типа `money`, содержащего значение 1 234 567,123456, будет выполнен массовый экспорт в файл данных в виде символьной строки «1234567,1235».  
   
 ## <a name="command-options-for-character-format"></a>Параметры команд для символьного формата  
- Для импорта символьных данных в таблицу используются команды **bcp**, BULK INSERT и INSERT... ВЫБЕРИТЕ \* FROM OPENROWSET(BULK...). Для команды **bcp** или инструкции BULK INSERT формат данных можно указать в командной строке. Для инструкции INSERT ... SELECT * FROM OPENROWSET(BULK...) нужно указать формат данных в файле форматирования.  
+ Данные символьного формата можно импортировать в таблицу с помощью программы **bcp**, BULK INSERT или INSERT... Выбор \* из OPENROWSET (BULK...). Для команды **bcp** или инструкции BULK INSERT можно указать формат данных в командной строке. Для инструкции INSERT ... SELECT * FROM OPENROWSET(BULK...) нужно указать формат данных в файле форматирования.  
   
  Символьный формат поддерживается следующими параметрами командной строки.  
   
-|Command|Параметр|Описание|  
+|Get-Help|Параметр|Description|  
 |-------------|------------|-----------------|  
-|**bcp**|**-c**|Вызывает **bcp** использовать символьные данные.<sup> 1</sup>|  
-|BULK INSERT|DATAFILETYPE **='char'**|Использует символьный формат при массовом импорте данных.|  
+|**bcp**|**-c**|Заставляет служебную программу **bcp** использовать символьные данные. <sup>1</sup>|  
+|BULK INSERT|DATAFILETYPE **= ' char '**|Использует символьный формат при массовом импорте данных.|  
   
- <sup>1</sup> Чтобы загрузить символьные ( **- c**) данные в формате, совместимом с более ранними версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] клиентов необходимо использовать **-V** переключения. Дополнительные сведения см. в разделе [Импорт данных в собственном и символьном формате из предыдущих версий SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
+ <sup>1</sup> чтобы загрузить символьные данные (**-c**) в формат, совместимый с предыдущими версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] клиентов, используйте параметр **-V** . Дополнительные сведения см. в разделе [Импорт данных в собственном и символьном формате из предыдущих версий SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
   
- Дополнительные сведения см. в статьях [Программа bcp](../../tools/bcp-utility.md), [BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql) и [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql).  
+ Дополнительные сведения см. в статьях [Программа bcp](../../tools/bcp-utility.md), [BULK INSERT (SQL Server)](/sql/t-sql/statements/bulk-insert-transact-sql) и [OPENROWSET (SQL Server)](/sql/t-sql/functions/openrowset-transact-sql).  
   
 > [!NOTE]  
 >  Также в файле форматирования можно указать форматирование для каждого поля. Дополнительные сведения см в разделе [Файлы форматирования для импорта или экспорта данных (SQL Server)](format-files-for-importing-or-exporting-data-sql-server.md).  
@@ -94,11 +94,11 @@ SELECT Col1,Col2,Col3 FROM myTestCharData
 ### <a name="using-bcp-to-bulk-export-character-data"></a>Использование программы bcp для массового экспорта символьных данных  
  Чтобы экспортировать данные из таблицы в файл данных, используйте команду **bcp** с параметром **out** и следующими квалификаторами:  
   
-|Квалификаторы|Описание|  
+|Квалификаторы|Description|  
 |----------------|-----------------|  
 |**-c**|Указывает символьный формат данных.|  
-|**-t** `,`|Задает запятую (`,`) в качестве признака конца поля.<br /><br /> Примечание. Признак конца поля по умолчанию является символ табуляции (\t). Дополнительные сведения см. в разделе [Определение признаков конца поля и строки (SQL Server)](specify-field-and-row-terminators-sql-server.md).|  
-|**-T**|Указывает, что программа **bcp** устанавливает доверительное соединение с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с использованием встроенной безопасности. Если параметр **-T** не указан, для входа необходимо указать **-U** и **-P**.|  
+|**-t**`,`|Задает запятую (`,`) в качестве признака конца поля.<br /><br /> Примечание. По умолчанию признаком конца поля является символ табуляции (\t). Дополнительные сведения см. в разделе [Определение признаков конца поля и строки (SQL Server)](specify-field-and-row-terminators-sql-server.md).|  
+|**-T**|Указывает, что программа **bcp** устанавливает доверительное соединение с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с использованием встроенной безопасности. Если параметр **-T** не указан, для входа необходимо указать **-U** и **-P** .|  
   
  Следующий пример выполняет массовый экспорт данных из таблицы `myTestCharData` в новый файл данных `myTestCharData-c.Dat` в символьном формате. В качестве признака конца поля используется запятая (,). В командной строке [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows введите:  
   
@@ -108,7 +108,7 @@ bcp AdventureWorks..myTestCharData out C:\myTestCharData-c.Dat -c -t, -T
 ```  
   
 ### <a name="using-bulk-insert-to-bulk-import-character-data"></a>Применение инструкции BULK INSERT для массового импорта символьных данных  
- В следующем примере с помощью инструкции BULK INSERT выполняется импорт данных из файла данных `myTestCharData-c.Dat` в таблицу `myTestCharData`. В редакторе запросов среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] выполните:  
+ В следующем примере с помощью инструкции BULK INSERT выполняется импорт данных из файла данных `myTestCharData-c.Dat` в таблицу `myTestCharData` . В редакторе запросов среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] выполните:  
   
 ```  
 USE AdventureWorks;  
@@ -130,17 +130,17 @@ GO
   
 -   [Импорт данных в собственном и символьном формате из предыдущих версий SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
--   [Использование собственного формата для импорта и экспорта данных (SQL Server)](use-native-format-to-import-or-export-data-sql-server.md)  
+-   [Используйте собственный формат для импорта или экспорта &#40;данных SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
   
--   [Использование символьного формата Юникод для импорта и экспорта данных (SQL Server)](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
+-   [Используйте символьный формат Юникода для импорта или экспорта &#40;данных SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
--   [Использование собственного формата Юникод для импорта и экспорта данных (SQL Server)](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
+-   [Используйте собственный формат Юникода для импорта или экспорта &#40;данных SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
 ## <a name="see-also"></a>См. также:  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql)   
- [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql)   
- [Типы данных (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql)   
+ [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
+ [Типы данных &#40;&#41;Transact-SQL](/sql/t-sql/data-types/data-types-transact-sql)   
  [Импорт данных в собственном и символьном формате из предыдущих версий SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
   

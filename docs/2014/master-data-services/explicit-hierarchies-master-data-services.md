@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: db039658fa292976062426268234d3978c1b32ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483005"
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>Явные иерархии (службы основных данных)
@@ -30,7 +30,7 @@ ms.locfileid: "65483005"
  Явная иерархия может быть неоднородной, то есть одновременно заканчиваться на нескольких разных уровнях. У каждого объединенного элемента может быть неограниченное количество подчиненных объединенных и конечных элементов, в том числе и ни одного. Конечный элемент может принадлежать как к одному консолидированному элементу, так и к нескольким уровням консолидированных элементов.  
   
 > [!NOTE]  
->  Перед созданием явной иерархии для сущности необходимо разрешить использование явных иерархий. Дополнительные сведения см. в разделе [активация сущности для явных иерархий и коллекций &#40;службы Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md).  
+>  Перед созданием явной иерархии для сущности необходимо разрешить использование явных иерархий. Дополнительные сведения см. в разделе [Включение сущности для явных иерархий и коллекций &#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md).  
   
 ## <a name="types-of-explicit-hierarchies"></a>Типы явных иерархий  
  Существует два типа явных иерархий: обязательные и необязательные.  
@@ -69,11 +69,11 @@ ms.locfileid: "65483005"
 |Может быть неоднородной|Всегда содержит согласованное количество уровней.|  
   
 ## <a name="explicit-hierarchy-example"></a>Пример явной иерархии  
- В следующем примере сущность Product содержит конечные элементы: BK-M101 {Mountain-100}, BK-M201 {Mountain-200}, BK-M301 {Mountain-300}, BK-R150 {Road-150}, BK-R450 {Road-450} и BK-R650 {Road-650}.  
+ В следующем примере сущность Product содержит следующие конечные элементы: BK-M101 {Mountain-100}, BK-M201 {Mountain-200}, BK-M301 {Mountain-300}, BK-R150 {Road-150}, BK-R450 {Road-450} и BK-R650 {Road-650}.  
   
  Для объединения этих конечных элементов в заданных точках консолидации можно создать консолидированные элементы для сущности Product. Для этого надо вставить консолидированные элементы на том уровне дерева иерархии, где планируется объединить конечные элементы. Не существует никаких ограничений на то, где именно необходимо вставлять консолидированные элементы, однако каждый из них (и конечный, и объединенный) можно использовать только один раз.  
   
- ![Пример явной иерархии от узла "Горный велосипед"](../../2014/master-data-services/media/mds-conc-explicit-hierarchy.gif "Пример явной иерархии от узла \"Горный велосипед\"")  
+ ![Пример явной иерархии «Горный велосипед»](../../2014/master-data-services/media/mds-conc-explicit-hierarchy.gif "Пример явной иерархии «Горный велосипед»")  
   
  Консолидированные элементы можно использовать для группировки элементов на любом уровне, при этом консолидированные и конечные элементы сортируются в том порядке, который для них определен.  
   
@@ -81,16 +81,16 @@ ms.locfileid: "65483005"
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Включение сущности для явных иерархий и коллекций.|[Активация сущности для явных иерархий и коллекций &#40;службы Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
-|Создание новой явной иерархии.|[Создание явной иерархии (службы Master Data Services)](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
-|Изменение имени существующей явной иерархии.|[Изменение имени явной иерархии (службы Master Data Services)](../../2014/master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)|  
-|Удаление существующей явной иерархии.|[Удаление явной иерархии (службы Master Data Services)](../../2014/master-data-services/delete-an-explicit-hierarchy-master-data-services.md)|  
+|Включение сущности для явных иерархий и коллекций.|[Включение сущности для явных иерархий и коллекций &#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
+|Создание новой явной иерархии.|[Создание явной иерархии &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
+|Изменение имени существующей явной иерархии.|[Измените имя явной иерархии &#40;Master Data Services&#41;](../../2014/master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)|  
+|Удаление существующей явной иерархии.|[Удаление Master Data Services явной иерархии &#40;&#41;](../../2014/master-data-services/delete-an-explicit-hierarchy-master-data-services.md)|  
 |||  
   
 ## <a name="related-content"></a>См. также  
   
--   [Производные иерархии (службы Master Data Services)](../../2014/master-data-services/derived-hierarchies-master-data-services.md)  
+-   [Производные иерархии &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)  
   
--   [Коллекции (службы Master Data Services)](../../2014/master-data-services/collections-master-data-services.md)  
+-   [&#40;коллекций Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  
   
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dff18b4aac5a97e7bfa12daed107662790fa854a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055599"
 ---
 # <a name="smo-connection-manager-editor"></a>редактор диспетчера соединений SMO
@@ -39,16 +39,16 @@ ms.locfileid: "66055599"
  **Использовать проверку подлинности SQL Server**  
  Используйте проверку подлинности сервера [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для подключения к выбранному экземпляру сервера [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- **Имя пользователя**  
+ **User name**  
  При выборе проверки подлинности сервера [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] введите имя пользователя сервера [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  **Пароль**  
  При выборе проверки подлинности сервера [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] введите пароль.  
   
- **Проверка соединения**  
+ **Проверить подключение**  
  Проверка соединения согласно настройке.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

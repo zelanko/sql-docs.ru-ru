@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 34e8f4a5b49c9e023c224e62c23326864ef26f65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011652"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>Использование символьного формата Юникода для импорта и экспорта данных (SQL Server)
@@ -37,14 +37,14 @@ ms.locfileid: "66011652"
  Сведения об использовании признака конца поля или строки, отличного от признака по умолчанию, предоставляемого в символьном формате Юникод, см. в разделе [Определение признаков конца поля и строки (SQL Server)](specify-field-and-row-terminators-sql-server.md).  
   
 ## <a name="command-options-for-unicode-character-format"></a>Параметры команд для символьного формата Юникода  
- Импортировать в таблицу данные в символьном формате Юникод можно при помощи команды **bcp**, инструкций BULK INSERT или INSERT… ВЫБЕРИТЕ \* FROM OPENROWSET(BULK...). Для команды **bcp** или инструкции BULK INSERT формат данных можно указать в командной строке. Для инструкции INSERT ... SELECT * FROM OPENROWSET(BULK...) нужно указать формат данных в файле форматирования.  
+ Данные символьного формата Юникода можно импортировать в таблицу с помощью программы **bcp**, BULK INSERT или INSERT... Выбор \* из OPENROWSET (BULK...). Для команды **bcp** или инструкции BULK INSERT можно указать формат данных в командной строке. Для инструкции INSERT ... SELECT * FROM OPENROWSET(BULK...) нужно указать формат данных в файле форматирования.  
   
  Символьный формат Юникода поддерживается следующими параметрами командной строки.  
   
-|Command|Параметр|Описание|  
+|Get-Help|Параметр|Description|  
 |-------------|------------|-----------------|  
 |**bcp**|**-w**|Использует символьный формат Юникода.|  
-|BULK INSERT|DATAFILETYPE **='** widechar **'**|Использует символьный формат Юникода при массовом импорте данных.|  
+|BULK INSERT|DATAFILETYPE **= '** widechar **'**|Использует символьный формат Юникода при массовом импорте данных.|  
   
  Дополнительные сведения см. в статьях [Программа bcp](../../tools/bcp-utility.md), [BULK INSERT (SQL Server)](/sql/t-sql/statements/bulk-insert-transact-sql) и [OPENROWSET (SQL Server)](/sql/t-sql/functions/openrowset-transact-sql).  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66011652"
  В следующих примерах демонстрируется массовый экспорт символьных данных в Юникоде при помощи команды **bcp** и массовый импорт тех же данных при помощи инструкции BULK INSERT.  
   
 ### <a name="sample-table"></a>Образец таблицы  
- Для работы примеров необходимо, чтобы в образце базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] в схеме `myTestUniCharData` была создана таблица `dbo`. Перед выполнением примеров следует создать эту таблицу. Для создания этой таблицы в редакторе запросов среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] выполните следующий код:  
+ Для работы примеров необходимо, чтобы в образце базы данных `myTestUniCharData` в схеме [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] была создана таблица `dbo`. Перед выполнением примеров следует создать эту таблицу. Для создания этой таблицы в редакторе запросов среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] выполните следующий код:  
   
 ```  
 USE AdventureWorks2012;  
@@ -81,11 +81,11 @@ SELECT Col1,Col2,Col3 FROM myTestUniCharData;
 ### <a name="using-bcp-to-bulk-export-unicode-character-data"></a>Использование программы bcp для массового экспорта символьных данных формата Юникода  
  Чтобы экспортировать данные из таблицы в файл данных, используйте команду **bcp** с параметром **out** и следующими квалификаторами:  
   
-|Квалификаторы|Описание|  
+|Квалификаторы|Description|  
 |----------------|-----------------|  
 |**-w**|Задает символьный формат Юникода.|  
-|**-t** `,`|Задает запятую (`,`) в качестве признака конца поля.<br /><br /> Примечание. Признаком конца поля по умолчанию является символ табуляции Юникода (\t). Дополнительные сведения см. в разделе [Определение признаков конца поля и строки (SQL Server)](specify-field-and-row-terminators-sql-server.md).|  
-|**-T**|Указывает, что программа **bcp** устанавливает доверительное соединение с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с использованием встроенной безопасности. Если параметр **-T** не указан, необходимо указать параметры **-U** и **-P**, чтобы успешно выполнить вход.|  
+|**-t**`,`|Задает запятую (`,`) в качестве признака конца поля.<br /><br /> Примечание. признак конца поля по умолчанию — символ табуляции в Юникоде (\t). Дополнительные сведения см. в разделе [Определение признаков конца поля и строки (SQL Server)](specify-field-and-row-terminators-sql-server.md).|  
+|**-T**|Указывает, что программа **bcp** устанавливает доверительное соединение с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с использованием встроенной безопасности. Если параметр **-T** не указан, для входа необходимо указать **-U** и **-P** .|  
   
  Далее приводится пример массового экспорта символьных данных в Юникоде из таблицы `myTestUniCharData` в новый файл данных `myTestUniCharData-w.Dat`, в котором признаком конца поля служит запятая (`,`). В командной строке [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows введите:  
   
@@ -117,17 +117,17 @@ GO
   
 -   [Импорт данных в собственном и символьном формате из предыдущих версий SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
--   [Использование символьного формата для импорта и экспорта данных (SQL Server)](use-character-format-to-import-or-export-data-sql-server.md)  
+-   [Используйте символьный формат для импорта или экспорта &#40;данных SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
   
--   [Использование собственного формата для импорта и экспорта данных (SQL Server)](use-native-format-to-import-or-export-data-sql-server.md)  
+-   [Используйте собственный формат для импорта или экспорта &#40;данных SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
   
--   [Использование собственного формата Юникод для импорта и экспорта данных (SQL Server)](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
+-   [Используйте собственный формат Юникода для импорта или экспорта &#40;данных SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
 ## <a name="see-also"></a>См. также:  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql)   
- [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql)   
- [Типы данных (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql)   
- [Поддержка параметров сортировки и Юникода](../collations/collation-and-unicode-support.md)  
+ [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
+ [Типы данных &#40;&#41;Transact-SQL](/sql/t-sql/data-types/data-types-transact-sql)   
+ [Collation and Unicode Support](../collations/collation-and-unicode-support.md)  
   
   

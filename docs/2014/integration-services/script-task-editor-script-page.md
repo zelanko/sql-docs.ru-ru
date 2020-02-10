@@ -1,5 +1,5 @@
 ---
-title: Редактор задачи скриптов (страница «скрипт») | Документация Майкрософт
+title: Редактор задачи «Скрипт» (страница «Скрипт») | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 037b176dfacd9420fba64a405d8c851c558e93e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056187"
 ---
 # <a name="script-task-editor-script-page"></a>Редактор задачи «Скрипт» (страница «Скрипт»)
@@ -38,32 +38,32 @@ ms.locfileid: "66056187"
  Чтобы установить значение по умолчанию языка скрипта для задачи «Скрипт», воспользуйтесь параметром **Язык скрипта** страницы **Общие** диалогового окна **Параметры** . Дополнительные сведения см. в разделе [General Page](general-page-of-integration-services-designers-options.md).  
   
  **EntryPoint**  
- Укажите метод, вызываемый средой выполнения служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , в качестве точки входа в код задачи "Скрипт". Этот метод должен быть членом класса ScriptMain проекта [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA). ScriptMain является заданным по умолчанию классом, который создается в шаблонах скриптов.  
+ Укажите метод, вызываемый средой выполнения служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , в качестве точки входа в код задачи "Скрипт". Указанный метод должен находиться в классе [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ScriptMain проекта Tools for Applications (VSTA). класс ScriptMain является классом по умолчанию, созданным шаблонами скриптов.  
   
  Для изменения имени метода в проекте VSTA следует поменять значение свойства **EntryPoint** .  
   
  **ReadOnlyVariables**  
- Введите через запятую список переменных "только для чтения", которые доступны для скрипта, или нажмите кнопку с многоточием ( **...** ) и выберите переменные в диалоговом окне **Выбор переменных**.  
+ Введите через запятую список переменных "только для чтения", которые доступны для скрипта, или нажмите кнопку с многоточием (**...**) и выберите переменные в диалоговом окне **Выбор переменных**.  
   
 > [!NOTE]  
 >  В именах переменных учитывается регистр.  
   
  **ReadWriteVariables**  
- Введите через запятую список переменных "для чтения и записи", которые доступны для скрипта, или нажмите кнопку с многоточием ( **...** ) и выберите переменные в диалоговом окне **Выбор переменных**.  
+ Введите через запятую список переменных "для чтения и записи", которые доступны для скрипта, или нажмите кнопку с многоточием (**...**) и выберите переменные в диалоговом окне **Выбор переменных**.  
   
 > [!NOTE]  
 >  В именах переменных учитывается регистр.  
   
- **Изменение скрипта**  
+ **Изменить скрипт**  
  Открывает среду VSTA IDE, в которой можно создать или изменить скрипт.  
   
-## <a name="see-also"></a>См. также  
- [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [General Page](general-page-of-integration-services-designers-options.md)   
- [Редактор задачи "Скрипт" (страница "Общие")](../../2014/integration-services/script-task-editor-general-page.md)   
- [Страница «Выражения»](expressions/expressions-page.md)   
- [Примеры задачи «Скрипт»](extending-packages-scripting-task-examples/script-task-examples.md)   
- [Переменные в службах Integration Services (SSIS)](integration-services-ssis-variables.md)   
+## <a name="see-also"></a>См. также:  
+ [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Страница "Общие"](general-page-of-integration-services-designers-options.md)   
+ [Редактор задачи "Скрипт" &#40;страница "Общие"&#41;](../../2014/integration-services/script-task-editor-general-page.md)   
+ [Страница "выражения"](expressions/expressions-page.md)   
+ [Примеры задач "Скрипт"](extending-packages-scripting-task-examples/script-task-examples.md)   
+ [Integration Services &#40;переменные&#41; SSIS](integration-services-ssis-variables.md)   
  [Добавление, удаление и изменение области определяемой пользователем переменной в пакете](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
   
   

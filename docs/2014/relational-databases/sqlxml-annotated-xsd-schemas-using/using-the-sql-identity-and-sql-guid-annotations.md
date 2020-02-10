@@ -1,5 +1,5 @@
 ---
-title: 'Использование заметок SQL: IDENTITY и | Документация Майкрософт'
+title: 'Использование заметок SQL: Identity и SQL: GUID | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,14 +24,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c6135f1b46e9b2312f01b9ff7a7ebdd08d2d34a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013639"
 ---
 # <a name="using-the-sqlidentity-and-sqlguid-annotations"></a>Использование заметок sql:identity и sql:guid
-  Можно указать `sql:identity` и `sql:guid` заметок в схеме XSD на любом узле, который сопоставляется со столбцом базы данных в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Хотя формат диаграммы обновления поддерживает атрибуты `updg:at-identity` и `updg:guid`, формат дельты их не поддерживает. Атрибут `updg:at-identity` определяет поведение при обновлении столбца с типом IDENTITY. Атрибут `updg:guid` позволяет получить значение идентификатора GUID из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и использовать его в диаграмме обновления. Дополнительные сведения и рабочие образцы см. в разделе [Вставка данных с помощью диаграмм обновления XML &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
+  `sql:identity` Можно указать заметки `sql:guid` и в схеме XSD на любом узле, сопоставленном со столбцом базы данных в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Хотя формат диаграммы обновления поддерживает атрибуты `updg:at-identity` и `updg:guid`, формат дельты их не поддерживает. Атрибут `updg:at-identity` определяет поведение при обновлении столбца с типом IDENTITY. Атрибут `updg:guid` позволяет получить значение идентификатора GUID из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и использовать его в диаграмме обновления. Дополнительные сведения и рабочие образцы см. в статье [Вставка данных с помощью XML диаграмм обновления &#40;SQLXML 4,0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
   
  Заметки `sql:identity` и `sql:guid` расширяют эту функциональность для дельт.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "66013639"
  Заметки `sql:identity` и `sql:guid` можно определять в элементе со сложным содержимым.  
   
 ## <a name="sqlidentity-annotation"></a>Заметка sql:identity  
- Заметку `sql:identity` в схеме XSD можно задать на любом узле, который сопоставляется со столбцом IDENTITY в базе данных. Значение, заданное для этой аннотации определяет способ обновления столбца IDENTITY (или с помощью значения в диаграмме обновления для изменения этого столбца или пропуском этого значения в этом случае [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-сформированное значение используется для этого столбца).  
+ Заметку `sql:identity` в схеме XSD можно задать на любом узле, который сопоставляется со столбцом IDENTITY в базе данных. Значение, заданное для этой заметки, определяет способ обновления столбца типа IDENTITY (либо с помощью значения, указанного в диаграмма обновления для изменения столбца, либо путем игнорирования значения, в этом случае [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]для этого столбца используется созданное значение).  
   
  Заметке `sql:identity` могут быть присвоены два значения:  
   

@@ -1,5 +1,5 @@
 ---
-title: Параметры и коды возврата в «выполнение SQL» | Документация Майкрософт
+title: Параметры и коды возврата в задаче "Выполнение SQL" | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 49ac4661e533b4c4e56a750f208c3ded09f72d27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056787"
 ---
 # <a name="parameters-and-return-codes-in-the-execute-sql-task"></a>Параметры и коды возврата в задаче «Выполнение SQL»
@@ -32,7 +32,7 @@ ms.locfileid: "66056787"
   
  Однако для работы с параметрами и кодами возврата задачи «Выполнение SQL» необходимо знать больше, чем поддерживаемые задачей типы параметров и как сопоставлены эти параметры. Существуют дополнительные требования и рекомендации для успешного использования параметров и кодов возврата в задаче «Выполнение SQL». В оставшейся части раздела приведены эти требования и рекомендации.  
   
--   [Применение имен и маркеров параметров](#Parameter_names_and_markers)  
+-   [Использование имен и маркеров параметров](#Parameter_names_and_markers)  
   
 -   [Использование параметров с типами данных даты и времени](#Date_and_time_data_types)  
   
@@ -40,22 +40,22 @@ ms.locfileid: "66056787"
   
 -   [Использование параметров с хранимыми процедурами](#Stored_procedures)  
   
--   [Возвращение значений кодов возврата](#Return_codes)  
+-   [Получение значений кодов возврата](#Return_codes)  
   
--   [Настройка параметров и кодов возврата в Execute SQL Task Editor](#Configure_parameters_and_return_codes)  
+-   [Настройка параметров и кодов возврата в редакторе задачи «Выполнение SQL»](#Configure_parameters_and_return_codes)  
   
-##  <a name="Parameter_names_and_markers"></a> С помощью имен и маркеров параметров  
- В зависимости от типа соединения, который использует задача «Выполнение SQL», синтаксис команды SQL использует различные маркеры параметров. Например, для типа диспетчера подключений [!INCLUDE[vstecado](../includes/vstecado-md.md)] требуется, чтобы команда SQL использовала маркер параметра в формате **\@varParameter**, в то время как для типа OLE DB требуется, чтобы в качестве маркера параметра использовался символ вопросительного знака (?).  
+##  <a name="Parameter_names_and_markers"></a>Использование имен и маркеров параметров  
+ В зависимости от типа соединения, который использует задача «Выполнение SQL», синтаксис команды SQL использует различные маркеры параметров. Например, тип диспетчера [!INCLUDE[vstecado](../includes/vstecado-md.md)] соединений требует, чтобы команда SQL использовала маркер параметра в формате ** \@varParameter**, тогда как OLE DB тип соединения требует маркера параметра вопроса (?).  
   
  Имена, которые можно использовать как имена параметров в сопоставлениях между переменными и параметрами, также зависят от типа диспетчера соединений. Например, тип диспетчера подключений [!INCLUDE[vstecado](../includes/vstecado-md.md)] использует определенные пользователем имена, начинающиеся с префикса \@, в то время как для типа OLE DB требуется, чтобы в качестве имени параметра использовалось числовое значение (начинающееся с нуля).  
   
  В следующей таблице подведен итог требованиям для команд SQL для различных типов диспетчеров соединений, которые может использовать задача «Выполнение SQL».  
   
-|Тип соединений|Маркер параметра|Имя параметра|Пример команды SQL|  
+|Тип подключения|Маркер параметра|Имя параметра|Пример команды SQL|  
 |---------------------|----------------------|--------------------|-------------------------|  
 |ADO|?|Param1, Param2, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |[!INCLUDE[vstecado](../includes/vstecado-md.md)]|\@\<имя параметра>|\@\<имя параметра>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
-|интерфейс ODBC|?|1, 2, 3, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
+|ODBC|?|1, 2, 3, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |EXCEL и OLE DB|?|0, 1, 2, 3, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
 ### <a name="using-parameters-with-adonet-and-ado-connection-managers"></a>Использование параметров с ADO.NET и диспетчерами соединений ADO  
@@ -79,12 +79,12 @@ ms.locfileid: "66056787"
   
  При использовании диспетчера соединений OLE DB нельзя применять параметризованные вложенные запросы, поскольку в задаче «Выполнение SQL» нельзя получить путем анализа информацию о параметрах через поставщик OLE DB. Однако можно использовать выражение, чтобы объединить значения параметров в строку запроса и задать свойство SqlStatementSource этой задачи.  
   
-##  <a name="Date_and_time_data_types"></a> Использование параметров с типами даты и времени данных  
+##  <a name="Date_and_time_data_types"></a>Использование параметров с типами данных даты и времени  
   
 ### <a name="using-date-and-time-parameters-with-adonet-and-ado-connection-managers"></a>Использование параметров даты и времени с ADO.NET и диспетчерами соединений ADO  
- При считывании данных типов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] `time` и `datetimeoffset` задача «Выполнение SQL», которая использует диспетчер соединений [!INCLUDE[vstecado](../includes/vstecado-md.md)] или ADO, имеет следующие дополнительные требования.  
+ При считывании данных типов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]`time` и `datetimeoffset` задача «Выполнение SQL», которая использует диспетчер соединений [!INCLUDE[vstecado](../includes/vstecado-md.md)] или ADO, имеет следующие дополнительные требования.  
   
--   Для `time` данных, [!INCLUDE[vstecado](../includes/vstecado-md.md)] диспетчер соединений требует, чтобы хранились в параметре типа `Input` или `Output`, и типом данных `string`.  
+-   Для `time` данных диспетчер [!INCLUDE[vstecado](../includes/vstecado-md.md)] соединений требует, чтобы эти данные хранились в параметре, тип параметра которого — `Input` или `Output`, а тип данных — `string`.  
   
 -   Для данных типа `datetimeoffset` диспетчер соединений [!INCLUDE[vstecado](../includes/vstecado-md.md)] требует, чтобы они хранились в одном из следующих параметров.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "66056787"
   
 -   Выходной параметр соответствующего типа данных, как показано в следующей таблице.  
   
-    |Тип параметра `Output`|Тип данных «date»|  
+    |`Output`тип параметра|Тип данных «date»|  
     |-------------------------------|--------------------|  
     |DBDATE|`date`|  
     |DBTIME2|`time`|  
@@ -119,7 +119,7 @@ ms.locfileid: "66056787"
   
 -   Выходной параметр `output` соответствующего типа данных, как показано в следующей таблице.  
   
-    |Тип параметра `Output`|Тип данных «date»|  
+    |`Output`тип параметра|Тип данных «date»|  
     |-------------------------------|--------------------|  
     |SQL_DATE|`date`|  
     |SQL_SS_TIME2|`time`|  
@@ -128,14 +128,14 @@ ms.locfileid: "66056787"
   
  Если данные не хранятся в соответствующем входном или выходном параметре, выполнение пакета завершается с ошибкой.  
   
-##  <a name="WHERE_clauses"></a> С помощью параметров, где предложения  
+##  <a name="WHERE_clauses"></a>Использование параметров в предложениях WHERE  
  Команды SELECT, INSERT, UPDATE и DELETE часто включают в себя предложение WHERE для задания фильтров, которые определяют условия, которым должна удовлетворять каждая строка в исходной таблице, чтобы попасть под действие команды SQL. Параметры предоставляют значения фильтра в предложениях WHERE.  
   
  Можно использовать маркеры параметров для динамического предоставления значений параметрам. Правила для каждого маркера параметра и имени параметра, которые могут быть использованы в инструкции SQL, зависят от типа диспетчера соединений, который используется задачей «Выполнение SQL».  
   
  В следующей таблице приведен список примеров команды SELECT для разных типов диспетчеров соединений. Те же самые правила относятся и к инструкциям INSERT, UPDATE и DELETE. В примерах инструкции SELECT возвращают из таблицы **Product** базы данных [!INCLUDE[ssSampleDBUserInputNonLocal](../includes/sssampledbuserinputnonlocal-md.md)] продукты, для которых значение **ProductID** больше и меньше значений, указанных двумя параметрами.  
   
-|Тип соединений|Синтаксис SELECT|  
+|Тип подключения|Синтаксис SELECT|  
 |---------------------|-------------------|  
 |EXCEL, ODBC и OLEDB|`SELECT* FROM Production.Product WHERE ProductId > ? AND ProductID < ?`|  
 |ADO|`SELECT* FROM Production.Product WHERE ProductId > ? AND ProductID < ?`|  
@@ -149,44 +149,44 @@ ms.locfileid: "66056787"
   
 -   Для типа соединения [!INCLUDE[vstecado](../includes/vstecado-md.md)] используются имена параметров \@parmMinProductID и \@parmMaxProductID.  
   
-##  <a name="Stored_procedures"></a> Использование параметров с хранимыми процедурами  
+##  <a name="Stored_procedures"></a>Использование параметров с хранимыми процедурами  
  В командах SQL, выполняющих хранимые процедуры, тоже может использоваться сопоставление параметров. Правила использования маркеров и имен параметров зависят от типа диспетчера соединений, который используется задачей «Выполнение SQL», точно так же, как и правила для параметризованных запросов.  
   
- В следующей таблице приведен список примеров команды EXEC для разных типов диспетчеров соединений. Примеры выполняют хранимую процедуру **uspGetBillOfMaterials** в базе данных [!INCLUDE[ssSampleDBUserInputNonLocal](../includes/sssampledbuserinputnonlocal-md.md)]. Хранимая процедура использует `@StartProductID` и `@CheckDate` `input` параметров.  
+ В следующей таблице приведен список примеров команды EXEC для разных типов диспетчеров соединений. Примеры выполняют хранимую процедуру **uspGetBillOfMaterials** в базе данных [!INCLUDE[ssSampleDBUserInputNonLocal](../includes/sssampledbuserinputnonlocal-md.md)]. Хранимая процедура использует параметры `@StartProductID` и `@CheckDate` `input` .  
   
-|Тип соединений|Синтаксис EXEC|  
+|Тип подключения|Синтаксис EXEC|  
 |---------------------|-----------------|  
 |EXCEL и OLEDB|`EXEC uspGetBillOfMaterials ?, ?`|  
-|интерфейс ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> Дополнительные сведения о синтаксисе вызова ODBC см. в разделе [Параметры процедур](https://go.microsoft.com/fwlink/?LinkId=89462)справочника по программированию ODBC в библиотеке MSDN.|  
-|ADO|Если для параметра IsQueryStoredProcedure задано значение `False`, `EXEC uspGetBillOfMaterials ?, ?`<br /><br /> Если для параметра IsQueryStoredProcedure задано значение `True`, `uspGetBillOfMaterials`|  
-|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|Если для параметра IsQueryStoredProcedure задано значение `False`, `EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> Если для параметра IsQueryStoredProcedure задано значение `True`, `uspGetBillOfMaterials`|  
+|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> Дополнительные сведения о синтаксисе вызова ODBC см. в разделе [Параметры процедур](https://go.microsoft.com/fwlink/?LinkId=89462)справочника по программированию ODBC в библиотеке MSDN.|  
+|ADO|Если для `False`для параметра isquerystoredprocedure задано значение,`EXEC uspGetBillOfMaterials ?, ?`<br /><br /> Если для `True`для параметра isquerystoredprocedure задано значение,`uspGetBillOfMaterials`|  
+|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|Если для `False`для параметра isquerystoredprocedure задано значение,`EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> Если для `True`для параметра isquerystoredprocedure задано значение,`uspGetBillOfMaterials`|  
   
  Чтобы использовать выходные параметры, синтаксис требует, чтобы ключевое слово OUTPUT следовало за каждым маркером параметров. Например, следующий синтаксис выходного параметра является верным: `EXEC myStoredProcedure ? OUTPUT`.  
   
  Дополнительные сведения об использовании входных и выходных параметров с хранимыми процедурами Transact-SQL см. в разделе [EXECUTE (Transact-SQL)](/sql/t-sql/language-elements/execute-transact-sql).  
   
-##  <a name="Return_codes"></a> Возвращение значений кодов возврата  
+##  <a name="Return_codes"></a>Получение значений кодов возврата  
  Хранимая процедура может возвращать целочисленное значение, называемое кодом возврата, чтобы указать состояние выполнения процедуры. Чтобы реализовать коды возврата в задаче «Выполнение SQL», используйте параметры типа `ReturnValue`.  
   
- В следующей таблице приведен список типов соединений с примерами команды EXEC, которая реализует коды возврата. Все примеры используют входной параметр `input`. Правила использования маркеров параметров и имен параметров одинаковы для всех типов параметров -`Input`, `Output`, и `ReturnValue`.  
+ В следующей таблице приведен список типов соединений с примерами команды EXEC, которая реализует коды возврата. Все примеры используют входной параметр `input`. Правила использования маркеров параметров и имен параметров одинаковы для всех типов параметров —`Input`, `Output`и. `ReturnValue`  
   
  Некоторые типы синтаксиса не поддерживают литералы параметров. В этом случае необходимо предоставить значение параметра с помощью переменной.  
   
-|Тип соединений|Синтаксис EXEC|  
+|Тип подключения|Синтаксис EXEC|  
 |---------------------|-----------------|  
 |EXCEL и OLEDB|`EXEC ? = myStoredProcedure 1`|  
-|интерфейс ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> Дополнительные сведения о синтаксисе вызова ODBC см. в разделе [Параметры процедур](https://go.microsoft.com/fwlink/?LinkId=89462)справочника по программированию ODBC в библиотеке MSDN.|  
-|ADO|Если для параметра IsQueryStoreProcedure задано значение `False`, `EXEC ? = myStoredProcedure 1`<br /><br /> Если для параметра IsQueryStoreProcedure задано значение `True`, `myStoredProcedure`|  
-|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|Для параметра IsQueryStoreProcedure задано значение `True`.<br /><br /> `myStoredProcedure`|  
+|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> Дополнительные сведения о синтаксисе вызова ODBC см. в разделе [Параметры процедур](https://go.microsoft.com/fwlink/?LinkId=89462)справочника по программированию ODBC в библиотеке MSDN.|  
+|ADO|Если для `False`для параметра isquerystoreprocedure задано значение,`EXEC ? = myStoredProcedure 1`<br /><br /> Если для `True`для параметра isquerystoreprocedure задано значение,`myStoredProcedure`|  
+|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|Для `True`параметра Set для параметра isquerystoreprocedure задано значение.<br /><br /> `myStoredProcedure`|  
   
- В описании синтаксиса, показанном в предыдущей таблице, задача «Выполнение SQL» использует для запуска хранимой процедуры тип источника **Прямой ввод** . Задача «Выполнение SQL» может также пользоваться для выполнения хранимой процедуры типом источника **Соединение с файлом** . Независимо от того, использует ли задача «Выполнение SQL» **прямой ввод** или **соединение с файлом** тип источника, используйте параметр типа `ReturnValue` для реализации кода возврата. Дополнительные сведения о настройке типа источника для инструкции SQL, выполняемой задачей "Выполнение SQL", см. в разделе [Редактор задачи "Выполнение SQL" (страница "Общие")](general-page-of-integration-services-designers-options.md).  
+ В описании синтаксиса, показанном в предыдущей таблице, задача «Выполнение SQL» использует для запуска хранимой процедуры тип источника **Прямой ввод** . Задача «Выполнение SQL» может также пользоваться для выполнения хранимой процедуры типом источника **Соединение с файлом** . Независимо от того, использует ли задача «Выполнение SQL» тип источника « **прямой вход** » или « **соединение с файлом** » `ReturnValue` , используйте параметр типа для реализации кода возврата. Дополнительные сведения о настройке типа источника для инструкции SQL, выполняемой задачей "Выполнение SQL", см. в разделе [Редактор задачи "Выполнение SQL" (страница "Общие")](general-page-of-integration-services-designers-options.md).  
   
  Дополнительные сведения об использовании кодов возврата с хранимыми процедурами Transact-SQL см. в разделе [RETURN (Transact-SQL)](/sql/t-sql/language-elements/return-transact-sql).  
   
-##  <a name="Configure_parameters_and_return_codes"></a> Настройка параметров и кодов возврата в «выполнение SQL»  
+##  <a name="Configure_parameters_and_return_codes"></a>Настройка параметров и кодов возврата в задаче «Выполнение SQL»  
  Дополнительные сведения о свойствах параметров и кодов возврата, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../includes/ssis-md.md)] , см. в следующем разделе:  
   
--   [Редактор задач SQL Выполнение &#40;странице «сопоставление параметров»&#41;](../../2014/integration-services/execute-sql-task-editor-parameter-mapping-page.md)  
+-   [Редактор задачи "Выполнение SQL" &#40;страница "Сопоставление параметров"&#41;](../../2014/integration-services/execute-sql-task-editor-parameter-mapping-page.md)  
   
  Дополнительные сведения об установке этих свойств в конструкторе служб [!INCLUDE[ssIS](../includes/ssis-md.md)] см. в следующем разделе:  
   
@@ -201,8 +201,8 @@ ms.locfileid: "66056787"
   
 -   Образец CodePlex, [Параметры задачи «Выполнение SQL» и результирующие наборы](https://go.microsoft.com/fwlink/?LinkId=157863), на сайте msftisprodsamples.codeplex.com  
   
-## <a name="see-also"></a>См. также  
- [Задача "Выполнение SQL"](control-flow/execute-sql-task.md)   
+## <a name="see-also"></a>См. также:  
+ [Задача «Выполнение SQL»](control-flow/execute-sql-task.md)   
  [Результирующие наборы в задаче "Выполнение SQL"](../../2014/integration-services/result-sets-in-the-execute-sql-task.md)  
   
   

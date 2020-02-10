@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d88b7524874156d219dbb2529c260d8ce3e203bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913741"
 ---
-# <a name="mssqlserver7904"></a>MSSQLSERVER_7904
+# <a name="mssqlserver_7904"></a>MSSQLSERVER_7904
     
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|7904|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC2_FS_MISSING_FILE|  
-|Текст сообщения|Ошибка таблицы: Не найден файл filestream для идентификатора столбца C_ID, ROWGUID RG_ID в объекте с Идентификатором O_ID, Идентификатором индекса I_ID, Идентификатором секции PN_ID.|  
+|Текст сообщения|Ошибка в таблице: не найден файл FILESTREAM для столбца с идентификатором C_ID, ROWGUID RG_ID в объекте с идентификатором O_ID, идентификатором индекса I_ID, идентификатором секции PN_ID.|  
   
 ## <a name="explanation"></a>Объяснение  
  Значение столбца секции не содержит нужного файла FILESTREAM в соответствующем каталоге столбца FILESTREAM.  

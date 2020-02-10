@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 03488e4cfd3a0cc905a58166f381f68eb3292c49
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058525"
 ---
 # <a name="foreach-loop-editor-variable-mappings-page"></a>Редактор циклов по каждому элементу (страница «Сопоставления переменных»)
@@ -24,33 +24,33 @@ ms.locfileid: "66058525"
   
  Сведения об использовании контейнера «цикл по каждому элементу» в пакете служб Integration Services см. в разделе [Foreach Loop Container](control-flow/foreach-loop-container.md) . Сведения о его настройке см. в разделе [Настройка контейнера "цикл по каждому элементу"](../../2014/integration-services/configure-a-foreach-loop-container.md).  
   
- Учебник по службам [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] «Создание простого учебного пакета ETL» содержит занятие, посвященное добавлению и настройке «цикла по каждому элементу».  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] созданию простого пакета ETL содержит урок, позволяющий добавить и настроить цикл [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] foreach.  
   
 ## <a name="options"></a>Параметры  
- **Переменная**  
- Выберите существующую переменную или щелкните \<**Создать переменную...** >, чтобы создать ее.  
+ **Перемен**  
+ Выберите существующую переменную или нажмите кнопку \< **создать переменную...**>, чтобы создать новую переменную.  
   
 > [!NOTE]  
 >  После установки сопоставления переменной новая строка автоматически добавится к списку **Переменная**.  
   
- **См. также**: подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md) и о [добавлении переменной](../../2014/integration-services/add-variable.md)  
+ **См. также**: [Integration Services &#40;переменные&#41; SSIS](integration-services-ssis-variables.md), [Добавить переменную](../../2014/integration-services/add-variable.md)  
   
- **Index**  
+ **Номер**  
  При использовании перечислителя по каждому элементу задайте индекс столбца в значении коллекции, чтобы установить сопоставление переменных. Для других типов перечислителей индекс доступен только для чтения.  
   
 > [!NOTE]  
 >  Индекс отсчитывается от 0.  
   
- **См. также**: [Просмотр файлов и таблиц Excel с помощью контейнера «цикл по каждому элементу»](control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
+ **См. также**: [цикл по файлам и таблицам Excel с помощью контейнера «цикл по каждому элементу»](control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
   
  **Удаление**  
  Выберите переменную и нажмите кнопку **Удалить**.  
   
-## <a name="see-also"></a>См. также  
- [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>См. также:  
+ [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор циклов по каждому элементу &#40;страница "Общие"&#41;](general-page-of-integration-services-designers-options.md)   
  [Редактор циклов по каждому элементу &#40;страница коллекции&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
- [Страница «Выражения»](expressions/expressions-page.md)   
+ [Страница "выражения"](expressions/expressions-page.md)   
  [Контейнер «цикл по элементам»](control-flow/for-loop-container.md)  
   
   

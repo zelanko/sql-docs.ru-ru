@@ -1,5 +1,5 @@
 ---
-title: Передача редактор задачи базы данных (страница "Общие") | Документация Майкрософт
+title: Редактор задачи «перемещение базы данных» (страница «Общие») | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4a78fb3dd052a7e275b91073ccf2089510b97e44
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055094"
 ---
 # <a name="transfer-database-task-editor-general-page"></a>Редактор задачи «Передача базы данных» (страница «Общие»)
@@ -34,10 +34,10 @@ ms.locfileid: "66055094"
  **Описание**  
  Введите описание задачи передачи базы данных.  
   
-## <a name="see-also"></a>См. также  
- [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Задачи служб Integration Services](control-flow/integration-services-tasks.md)   
- [Редактор задачи "Передача базы данных" (страница "Базы данных")](../../2014/integration-services/transfer-database-task-editor-databases-page.md)   
+## <a name="see-also"></a>См. также:  
+ [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Задачи Integration Services](control-flow/integration-services-tasks.md)   
+ [Редактор задачи "Перемещение базы данных" &#40;"базы данных"&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)   
  [Страница «Выражения»](expressions/expressions-page.md)  
   
   

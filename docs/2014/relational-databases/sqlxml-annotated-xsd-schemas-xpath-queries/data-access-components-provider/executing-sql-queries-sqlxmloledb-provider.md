@@ -1,5 +1,5 @@
 ---
-title: Выполнение запросов SQL (поставщик SQLXMLOLEDB) | Документация Майкрософт
+title: Исполнение SQL-запросов (поставщик SQLXMLOLEDB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,25 +16,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 029ba9e05a422648d75487e85f367b3b4f698ebd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013179"
 ---
 # <a name="executing-sql-queries-sqlxmloledb-provider"></a>Выполнение запросов SQL (поставщик SQLXMLOLEDB)
   Этот пример показывает использование следующих свойств SQLXMLOLEDB, определяемых поставщиком.  
   
--   ClientSideXML  
+-   клиентсидексмл  
   
 -   xml root  
   
- В этом образце клиентского приложения ADO на стороне клиента выполняется простой SQL-запрос. Так как ClientSideXML, свойство имеет значение True, на сервер отправляется инструкция SELECT без предложения FOR XML. Сервер выполняет запрос и возвращает клиенту набор строк. Затем клиент применяет к набору строк преобразование FOR XML и создает XML-документ.  
+ В этом образце клиентского приложения ADO на стороне клиента выполняется простой SQL-запрос. Так как свойство Клиентсидексмл имеет значение true, инструкция SELECT без предложения FOR XML отправляется на сервер. Сервер выполняет запрос и возвращает клиенту набор строк. Затем клиент применяет к набору строк преобразование FOR XML и создает XML-документ.  
   
- Корневое свойство xml предоставляет единый корневой элемент для XML-документа, который создается.  
+ Свойство Root XML предоставляет один корневой элемент верхнего уровня для создаваемого XML-документа.  
   
 > [!NOTE]  
->  В коде необходимо задать имя экземпляра Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в строке соединения. Кроме того, в данном примере задается использование собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (SQLNCLI11) для поставщика данных, для которого необходимо установить дополнительное клиентское сетевое ПО. Дополнительные сведения см. в разделе [требования к системе для собственного клиента SQL Server](../../native-client/system-requirements-for-sql-server-native-client.md).  
+>  В коде необходимо задать имя экземпляра Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в строке соединения. Кроме того, в данном примере задается использование собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (SQLNCLI11) для поставщика данных, для которого необходимо установить дополнительное клиентское сетевое ПО. Дополнительные сведения см. в разделе [требования к системе для SQL Server Native Client](../../native-client/system-requirements-for-sql-server-native-client.md).  
   
 ```  
 Option Explicit  

@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 51f45290847444a1400f1d708755c6737a3b3f84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574789"
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>Добавление веб-части "Средство просмотра отчетов" служб SQL Server Reporting Services на страницу SharePoint
@@ -22,7 +22,7 @@ ms.locfileid: "65574789"
 
 ![Веб-часть "Средство просмотра отчетов" на странице SharePoint](media/sharepoint-report-viewer-web-part-on-page.png)
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 * Для успешной загрузки отчетов в службе преобразования утверждений в маркеры безопасности Windows (C2WTS) необходимо настроить ограниченное делегирование Kerberos. Дополнительные сведения о настройке C2WTS см. в разделе [Служба Claims to Windows Token Service (c2WTS) и службы Reporting Services](../install-windows/claims-to-windows-token-service-c2wts-and-reporting-services.md).
 

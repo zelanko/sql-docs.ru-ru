@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b56bba0567a96b7bdd7b75ad191d553ffa019930
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010429"
 ---
 # <a name="access-filetables-with-transact-sql"></a>Доступ к таблицам FileTable с помощью Transact-SQL
@@ -27,7 +27,7 @@ ms.locfileid: "66010429"
   
 -   Все столбцы атрибутов файла имеют ограничения NO NULL. Если значения не заданы явным образом, предоставляются соответствующие значения по умолчанию.  
   
--   Если инструкция INSERT задает значения для параметров **name**, **path_locator**, **parent_path_locator** или атрибуты файлов, то применяются системные ограничения.  
+-   Если инструкция INSERT задает значения для параметров **name**, **path_locator**, **parent_path_locator**или атрибуты файлов, то применяются системные ограничения.  
   
 -   Приложение может получить **path_locator** для файла или каталога, указав путь файловой системы для функции [GetPathLocator (Transact-SQL)](/sql/relational-databases/system-functions/getpathlocator-transact-sql).  
   
@@ -68,9 +68,9 @@ ms.locfileid: "66010429"
   
 -   Значение **last_access_time** не может быть меньше (раньше), чем **last_write_time** и **creation_time**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [выполнить загрузку файлов в таблицу FileTables](load-files-into-filetables.md)   
- [Работа с каталогами и путями в таблицах FileTable](work-with-directories-and-paths-in-filetables.md)   
+ [Work with Directories and Paths in FileTables](work-with-directories-and-paths-in-filetables.md)   
  [Доступ к таблицам FileTable с помощью API-интерфейсов ввода-вывода файлов](access-filetables-with-file-input-output-apis.md)   
  [Инструкции FileTable языка DDL, функции, хранимые процедуры и представления](../views/views.md)  
   

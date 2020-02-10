@@ -1,5 +1,5 @@
 ---
-title: 'Фильтрация значений при помощи SQL: Limit-поля и SQL: Limit-value (SQLXML 4.0) | Документация Майкрософт'
+title: 'Фильтрация значений с помощью SQL: limit-field и SQL: limit-value (SQLXML 4,0) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,16 +19,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f93a60e7b6c1dfa2a0c7577aafbbb68d5068c629
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013810"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>Фильтрация значений при помощи sql:limit-field и sql:limit-value (SQLXML 4.0)
   Количество строк, возвращаемых запросом к базе данных, можно ограничить на основе какого-либо значения. Для указания столбца базы данных, содержащего ограничивающие значения, и задания конкретного ограничивающего значения, которое будет использовано для фильтрации возвращенных данных, используются заметки `sql:limit-field` и `sql:limit-value`.  
   
- Заметка `sql:limit-field` указывает столбец, содержащий ограничивающее значение; эту заметку можно использовать для любого сопоставленного элемента или атрибута.  
+ Заметка `sql:limit-field` указывает столбец, содержащий ограничивающее значение; эту заметку можно использовать для любого сопоставленного элемента или атрибута.   
   
  Заметка `sql:limit-value` используется для задания ограничивающего значения в столбце, заданном заметкой `sql:limit-field`. Заметка `sql:limit-value` является необязательной. Если заметка `sql:limit-value` не указана, предполагается значение NULL.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66013810"
   
  Заказчик может иметь адрес для доставки и адрес для выставления счетов. Столбец AddressType содержит значения Shipping и Billing.  
   
- Это схема сопоставления, в котором **ShipTo** атрибут схемы сопоставляется со столбцом StreetAddress в связи Addresses. Чтобы для этого атрибута возвращались только значения адресов для доставки, нужно задать заметки `sql:limit-field` и `sql:limit-value`. Аналогичным образом **BillTo** атрибут схемы возвращает только адреса для выставления счетов клиента.  
+ Это схема сопоставления, в которой атрибут схемы **шипто** сопоставляется со столбцом streetAddress в связи адресов. Чтобы для этого атрибута возвращались только значения адресов для доставки, нужно задать заметки `sql:limit-field` и `sql:limit-value`. Аналогичным образом атрибут схемы **billTo** возвращает только адрес выставления счета клиента.  
   
  Схема:  
   
@@ -99,7 +99,7 @@ ms.locfileid: "66013810"
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Проверка образца запроса XPath к схеме  
   
-1.  Создайте две таблицы в **tempdb** базы данных:  
+1.  Создайте две таблицы в базе данных **tempdb** :  
   
     ```  
     USE tempdb  
@@ -146,9 +146,9 @@ ms.locfileid: "66013810"
   
 5.  Создайте и запустите тестовый скрипт SQLXML 4.0 (Sqlxml4test.vbs), чтобы выполнить шаблон.  
   
-     Дополнительные сведения см. в разделе [использование объектов ADO для выполнения запросов SQLXML](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Дополнительные сведения см. [в разделе Использование ADO для выполнения запросов SQLXML](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Это результат:  
+ Результат:  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">   
@@ -170,7 +170,7 @@ ms.locfileid: "66013810"
   
 -   OrderDetails (OrderID, ProductID, UnitPrice, Quantity, Price, Discount)  
   
- Это схема сопоставления, в котором **OrderID** атрибут в сведениях о заказе сопоставлен со столбцом OrderID в связи orders. Возвращаемые для этого атрибута значения ограничиваются только те, которые имеют значение равно 2.0000000e-001 (0.2), которое задано для **скидки** атрибуте с помощью `sql:limit-field` и `sql:limit-value` заметок.  
+ Это схема сопоставления, в которой атрибут **OrderID** в сведениях о заказе сопоставляется со столбцом OrderID в связи Orders. Значения, возвращаемые для этого атрибута, ограничиваются только теми, которые имеют значение 2.0000000 e-001 (0,2), как указано для атрибута **скидки** с помощью заметок `sql:limit-field` и. `sql:limit-value`  
   
  Схема:  
   
@@ -216,7 +216,7 @@ ms.locfileid: "66013810"
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Проверка образца запроса XPath к схеме  
   
-1.  Создайте две таблицы в **tempdb** базы данных:  
+1.  Создайте две таблицы в базе данных **tempdb** :  
   
     ```  
     USE tempdb  
@@ -287,7 +287,7 @@ ms.locfileid: "66013810"
   
 5.  Запустите файл TestQuery.vbs, щелкнув его в проводнике Windows.  
   
-     Это результат:  
+     Результат:  
   
     ```  
     <root>  
@@ -304,10 +304,10 @@ ms.locfileid: "66013810"
     </root>  
     ```  
   
-## <a name="see-also"></a>См. также  
- [Типы данных float и real (Transact-SQL)](/sql/t-sql/data-types/float-and-real-transact-sql)   
+## <a name="see-also"></a>См. также:  
+ [&#41;с плавающей запятой и реальным &#40;Transact-SQL](/sql/t-sql/data-types/float-and-real-transact-sql)   
  [nchar и nvarchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)   
  [Установка SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
- [С помощью аннотированные схемы XSD в запросах &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
+ [Использование схем XSD с заметками в запросах &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
   
   

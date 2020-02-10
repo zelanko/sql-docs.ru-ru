@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2a7e507e45d8429312834911b7bef5ae1e784c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62870883"
 ---
 # <a name="view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql"></a>Просмотр размера разреженного файла снимка базы данных (Transact-SQL)
@@ -44,11 +44,11 @@ ms.locfileid: "62870883"
 ## <a name="find-out-the-actual-size-of-a-sparse-file"></a>Определение фактического размера разреженного файла  
   
 > [!NOTE]  
->  Разреженные файлы каждый раз увеличиваются в размере на 64 килобайта (КБ); таким образом, размер разреженного файла на диске всегда кратен 64 КБ.  
+>  Разреженные файлы каждый раз увеличиваются в размере на 64 килобайта (КБ); таким образом, размер разреженного файла на диске всегда кратен 64 КБ.  
   
  Для определения числа байтов, используемых в настоящее время на диске каждым разреженным файлом моментального снимка, необходимо запросить столбец **size_on_disk_bytes** динамического административного представления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sys.dm_io_virtual_file_stats[ в ](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql).  
   
- Чтобы увидеть место на диске, занимаемое разреженным файлом, можно щелкнуть правой кнопкой мыши файл в Microsoft Windows, выбрать пункт **Свойства** и просмотреть значение **Место на диске**.  
+ Чтобы увидеть место на диске, занимаемое разреженным файлом, можно щелкнуть правой кнопкой мыши файл в Microsoft Windows, выбрать пункт **Свойства**и просмотреть значение **Место на диске** .  
   
 ## <a name="find-out-the-maximum-size-of-a-sparse-file"></a>Определение максимального размера разреженного файла  
  Максимальный размер, до которого может увеличиться разреженный файл, равен размеру соответствующего файла базы данных-источника на момент создания моментального снимка. Чтобы узнать этот размер, можно использовать один из следующих способов.  
@@ -63,12 +63,12 @@ ms.locfileid: "62870883"
   
      Выбрать столбец **size** из таблицы **sys.database_files** в моментальном снимке базы данных или из таблицы **sys.master_files**. Значение столбца **size** отражает максимальный объем пространства (в страницах SQL), который может когда-либо использоваться моментальным снимком; это значение эквивалентно значению поля Windows **Size** , за исключением того, что оно представлено в терминах количества страниц SQL в файле; размер в байтах равен:  
   
-     (*число_страниц* * 8192)  
+     ( *число_страниц* * 8192)  
   
-## <a name="see-also"></a>См. также  
- [Моментальные снимки базы данных (SQL Server)](database-snapshots-sql-server.md)   
- [sys.fn_virtualfilestats (Transact-SQL)](/sql/relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql)   
- [sys.database_files (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
- [sys.master_files (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql)  
+## <a name="see-also"></a>См. также:  
+ [Моментальные снимки базы данных &#40;SQL Server&#41;](database-snapshots-sql-server.md)   
+ [sys. fn_virtualfilestats &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql)   
+ [sys. database_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
+ [sys. master_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql)  
   
   

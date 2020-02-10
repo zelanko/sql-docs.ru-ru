@@ -1,5 +1,5 @@
 ---
-title: Указание логических функций в запросах XPath (SQLXML 4.0) | Документация Майкрософт
+title: Указание логических функций в запросах XPath (SQLXML 4,0) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,19 +17,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d0960fa50551b3279f97b289892d7b544c5a9e6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012386"
 ---
 # <a name="specifying-boolean-functions-in-xpath-queries-sqlxml-40"></a>Указание логических функций в запросах XPath (SQLXML 4.0)
-  В следующих примерах показано, как задаются логические функции в запросах XPath. В данных примерах запросы XPath определены в соответствии со схемой сопоставления, которая содержится в файле SampleSchema1.xml. Сведения об этом образце схемы см. в разделе [образец аннотированные схемы XSD для примеров XPath &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  В следующих примерах показано, как задаются логические функции в запросах XPath. В данных примерах запросы XPath определены в соответствии со схемой сопоставления, которая содержится в файле SampleSchema1.xml. Дополнительные сведения об этом образце схемы см. в разделе [Пример схемы XSD с заметками для XPath-примеров &#40;SQLXML 4,0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Примеры  
   
 ## <a name="a-specify-the-not-boolean-function"></a>A. Задание логической функции not()  
- Этот запрос возвращает все  **\<клиента >** дочерние элементы узла контекста, у которых нет  **\<порядок >** дочерние элементы:  
+ Этот запрос возвращает все ** \<клиентские>** дочерние элементы контекстного узла, не имеющие ** \<порядка>** дочерних элементов:  
   
 ```  
 /child::Customer[not(child::Order)]  
@@ -43,7 +43,7 @@ ms.locfileid: "66012386"
   
 #### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Проверка запроса XPath к схеме сопоставления  
   
-1.  Копировать [образец кода схемы](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) и вставьте его в текстовый файл. Сохраните файл с именем SampleSchema1.xml.  
+1.  Скопируйте [пример кода схемы](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) и вставьте его в текстовый файл. Сохраните файл с именем SampleSchema1.xml.  
   
 2.  Создайте следующий шаблон (BooleanFunctionsA.xml) и сохраните его в каталоге, где находится файл SampleSchema1.xml.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "66012386"
   
 3.  Создайте и запустите тестовый скрипт SQLXML 4.0 (Sqlxml4test.vbs), чтобы выполнить шаблон.  
   
-     Дополнительные сведения см. в разделе [использование объектов ADO для выполнения запросов SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Дополнительные сведения см. [в разделе Использование ADO для выполнения запросов SQLXML 4,0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Далее приведен частичный результирующий набор, полученный в результате выполнения этого шаблона.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "66012386"
 ```  
   
 ## <a name="b-specify-the-true-and-false-boolean-functions"></a>Б. Задание логических функций true() и false()  
- Этот запрос возвращает все  **\<клиента >** дочерние элементы узла контекста, у которых нет  **\<порядок >** дочерних элементов. В реляционных терминах этот запрос возвращает всех заказчиков, не разместивших ни одного заказа.  
+ Этот запрос возвращает все ** \<** дочерние элементы>элементов для узла контекста, не имеющие ** \<порядка>** дочерних элементов. В реляционных терминах этот запрос возвращает всех заказчиков, не разместивших ни одного заказа.  
   
 ```  
 /child::Customer[child::Order=false()]  
@@ -109,7 +109,7 @@ ms.locfileid: "66012386"
   
 #### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Проверка запроса XPath к схеме сопоставления  
   
-1.  Копировать [образец кода схемы](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) и вставьте его в текстовый файл. Сохраните файл с именем SampleSchema1.xml.  
+1.  Скопируйте [пример кода схемы](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) и вставьте его в текстовый файл. Сохраните файл с именем SampleSchema1.xml.  
   
 2.  Создайте следующий шаблон (BooleanFunctionsB.xml) и сохраните его в каталоге, где находится файл SampleSchema1.xml.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "66012386"
   
 3.  Создайте и запустите тестовый скрипт SQLXML 4.0 (Sqlxml4test.vbs), чтобы выполнить шаблон.  
   
-     Дополнительные сведения см. в разделе [использование объектов ADO для выполнения запросов SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Дополнительные сведения см. [в разделе Использование ADO для выполнения запросов SQLXML 4,0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Далее приведен частичный результирующий набор, полученный в результате выполнения этого шаблона.  
   

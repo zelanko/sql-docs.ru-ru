@@ -1,5 +1,5 @@
 ---
-title: Редактор назначения OLE DB (страница "сопоставления") | Документация Майкрософт
+title: Редактор назначения OLE DB (страница «сопоставления») | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8c79715803d598b3f30eb5b54bd6ddcb77f1aae2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057093"
 ---
 # <a name="ole-db-destination-editor-mappings-page"></a>Редактор назначения OLE DB (страница «Сопоставления»)
@@ -34,15 +34,15 @@ ms.locfileid: "66057093"
  Просмотрите список доступных целевых столбцов. Чтобы сопоставить доступные целевые столбцы с входными столбцами, воспользуйтесь операцией перетаскивания.  
   
  **Входной столбец**  
- Позволяет просматривать выбранные входные столбцы. Сопоставления можно удалить, выбрав вариант **\<игнорировать>**, чтобы исключить столбцы из выходных данных.  
+ Позволяет просматривать выбранные входные столбцы. Сопоставления можно удалить, выбрав ** \<пропустить>** , чтобы исключить столбцы из выходных данных.  
   
  **Целевой столбец**  
  Позволяет просмотреть каждый из доступных целевых столбцов без учета наличия или отсутствия сопоставления.  
   
-## <a name="see-also"></a>См. также  
- [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор назначения OLE DB (страница "Диспетчер соединений")](../../2014/integration-services/ole-db-destination-editor-connection-manager-page.md)   
- [Редактор назначения "OLE DB" (страница "Вывод ошибок")](../../2014/integration-services/ole-db-destination-editor-error-output-page.md)   
+## <a name="see-also"></a>См. также:  
+ [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор назначения OLE DB &#40;странице Диспетчер соединений&#41;](../../2014/integration-services/ole-db-destination-editor-connection-manager-page.md)   
+ [Редактор назначения OLE DB &#40;странице вывода ошибок&#41;](../../2014/integration-services/ole-db-destination-editor-error-output-page.md)   
  [Загрузка данных с помощью назначения «OLE DB»](data-flow/load-data-by-using-the-ole-db-destination.md)  
   
   

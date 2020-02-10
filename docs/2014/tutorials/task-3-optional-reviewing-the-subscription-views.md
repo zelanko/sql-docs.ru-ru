@@ -1,5 +1,5 @@
 ---
-title: Задача 3 (необязательно). Анализ представлений подписки | Документация Майкрософт
+title: 'Задача 3 (необязательно): Просмотр представлений подписки | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -11,24 +11,24 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5fa153b16e8fd978cab74838c9e0cee8a17cf72f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65489246"
 ---
-# <a name="task-3-optional-reviewing-the-subscription-views"></a>Задача 3 (необязательно). Проверка представлений подписки
+# <a name="task-3-optional-reviewing-the-subscription-views"></a>Задача 3 (дополнительно). Просмотр представлений подписки
   В этой задаче вы ознакомитесь с созданием представлений SQL с помощью среды SQL Server Management Studio.  
   
-1.  Запустите **SQL Server Management Studio**. Нажмите кнопку **запустить** , выберите элемент **все программы**, нажмите кнопку **Microsoft SQL Server 2012**, а затем нажмите кнопку **SQL Server Management Studio**.  
+1.  Запустите **SQL Server Management Studio**. Нажмите кнопку **Пуск** , выберите пункт **все программы**, щелкните **Microsoft SQL Server 2012**, а затем — **SQL Server Management Studio**.  
   
-2.  В **соединение с сервером** окне **тип сервера** для **СУБД**, тип **имя сервера** (или выберите **() Local)** и выберите соответствующую **проверки подлинности**и нажмите кнопку **Connect**.  
+2.  В окне **Подключение к серверу** задайте для параметра **тип сервера** значение **ядро СУБД**, введите **имя сервера** (или выберите **(local)**, выберите соответствующую **проверку подлинности**и нажмите кнопку **подключить**.  
   
-3.  В **обозревателя объектов** панели разверните **баз данных**, разверните **MDS**и затем разверните **представления**.  
+3.  В области **Обозреватель объектов** разверните узел **базы данных**, разверните узел **MDS**, а затем разверните узел **представления**.  
   
-4.  Убедитесь, что вы видите **mdm. Поставщики** представление в списке.  
+4.  Убедитесь, что вы видите **MDM. **Список «поставщики» в списке.  
   
-     ![SQL Server Management Studio - mdm. Просмотр поставщиков](../../2014/tutorials/media/et-reviewingthesubscriptionviews.jpg "SQL Server Management Studio - mdm. Просмотр поставщиков")  
+     ![SQL Server Management Studio — представление mdm.Suppliers](../../2014/tutorials/media/et-reviewingthesubscriptionviews.jpg "SQL Server Management Studio — представление mdm.Suppliers")  
   
-## <a name="next-step"></a>Следующий шаг  
+## <a name="next-step"></a>Дальнейшее действие  
  [Задача 4. Создание проекта служб SSIS с помощью SQL Server Data Tools](../../2014/tutorials/task-4-creating-an-ssis-project-using-sql-server-data-tools.md)

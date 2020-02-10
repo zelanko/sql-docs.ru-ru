@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2cfee31b4167625b4f868d7312abd752a215652c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059548"
 ---
 # <a name="destination-database-files"></a>Файлы базы данных-назначения
@@ -30,21 +30,21 @@ ms.locfileid: "66059548"
   
  Введите имя файла или нажмите имя файла для редактирования.  
   
- **Целевая папка**  
+ **Конечная папка**  
  Папка на целевом сервере, куда должны быть переданы файлы базы данных.  
   
  Введите путь к папке, нажмите путь к папке для редактирования или нажмите кнопку обзора для указания папки, куда необходимо передать файлы базы данных на целевом сервере.  
   
- **Сетевая общая папка**  
+ **Общая сетевая папка**  
  Общая сетевая папка на целевом сервере, куда должны быть переданы файлы базы данных. Используйте **Сетевую общую папку** для передачи базы данных в режиме вне сети, указав значение **DatabaseOffline** параметра **Метод** на странице **Базы данных** диалогового окна **Редактор задачи «Передача базы данных»** .  
   
  Введите размещение сетевой общей папки или нажмите кнопку обзора для ее указания.  
   
  При передаче базы данных в режиме вне сети файлы базы данных копируются в **Сетевую общую папку** перед тем, как они переданы в расположение **Целевая папка** .  
   
-## <a name="see-also"></a>См. также  
- [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор задачи "Передача базы данных" (страница "Общие")](general-page-of-integration-services-designers-options.md)   
- [Редактор задачи "Передача базы данных" (страница "Базы данных")](../../2014/integration-services/transfer-database-task-editor-databases-page.md)  
+## <a name="see-also"></a>См. также:  
+ [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор задачи "Перемещение базы данных" &#40;общие&#41;страницы](general-page-of-integration-services-designers-options.md)   
+ [Редактор задачи "Перемещение базы данных" &#40;"базы данных"&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)  
   
   

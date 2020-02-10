@@ -1,5 +1,5 @@
 ---
-title: Essentials пакета служб SSIS | Документация Майкрософт
+title: Основные сведения о пакете служб SSIS | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8cba1fb860d884b568fe132fc2b38ff50fbd480d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055418"
 ---
 # <a name="ssis-package-essentials"></a>Основы работы с пакетами служб SSIS
-  Пакет представляет собой объект, который реализует функциональность служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] по извлечению, преобразованию и загрузке данных. Пакет создается с помощью конструктора служб [!INCLUDE[ssIS](../includes/ssis-md.md)] в среде [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Его можно также создать с помощью мастера импорта и экспорта [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] либо мастера проекта соединений служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Дополнительные сведения [создание пакетов в SQL Server Data Tools](create-packages-in-sql-server-data-tools.md) в конструкторе служб SSIS и [мастер импорта проекта](../../2014/integration-services/import-project-wizard.md).  
+  Пакет представляет собой объект, который реализует функциональность служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] по извлечению, преобразованию и загрузке данных. Пакет создается с помощью конструктора служб [!INCLUDE[ssIS](../includes/ssis-md.md)] в среде [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Его можно также создать с помощью мастера импорта и экспорта [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] либо мастера проекта соединений служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Для получения дополнительных сведений [Создайте пакеты в SQL Server Data Tools](create-packages-in-sql-server-data-tools.md) в КОНСТРУКТОРЕ служб SSIS и [мастере импорта проектов](../../2014/integration-services/import-project-wizard.md).  
   
  Основной пакет включает следующие элементы.  
   
@@ -34,13 +34,13 @@ ms.locfileid: "66055418"
   
  Дополнительные сведения см. в статье [Поток данных](data-flow/data-flow.md).  
   
- Пример создания основного пакета см. в разделе [занятии 1: Создание проекта и основного пакета](lesson-1-create-a-project-and-basic-package-with-ssis.md).  
+ Пример создания базового пакета см. [в разделе занятие 1. Создание проекта и основного пакета](lesson-1-create-a-project-and-basic-package-with-ssis.md).  
   
 ## <a name="related-tasks"></a>Связанные задачи  
   
 -   [Создание пакетов в SQL Server Data Tools](create-packages-in-sql-server-data-tools.md)  
   
--   [Добавление задачи или контейнера в поток управления или удаление их из него](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+-   [Добавление задачи или контейнера в поток управления или удалить их из него](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 -   [Задание свойств задач или контейнеров](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)  
   
@@ -50,8 +50,8 @@ ms.locfileid: "66055418"
   
 1.  Видеоматериал [Создание основного пакета (видеоматериал SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131023) на сайте MSDN.Microsoft.com  
   
-## <a name="see-also"></a>См. также  
- [Пакеты служб Integration Services (SSIS)](../../2014/integration-services/integration-services-ssis-packages.md)   
+## <a name="see-also"></a>См. также:  
+ [Integration Services &#40;пакетов&#41; SSIS](../../2014/integration-services/integration-services-ssis-packages.md)   
  [Управление очередностью](control-flow/precedence-constraints.md)  
   
   

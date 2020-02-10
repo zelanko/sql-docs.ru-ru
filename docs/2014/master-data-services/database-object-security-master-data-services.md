@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3eafc9720197ffc32cdca2ef58f91725befaaec1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483152"
 ---
 # <a name="database-object-security-master-data-services"></a>Защита объектов базы данных (службы Master Data Services)
@@ -29,7 +29,7 @@ ms.locfileid: "65483152"
   
  Для следующих задач необходим доступ к базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] :  
   
--   [Промежуточное сохранение данных](#Staging)  
+-   [Промежуточные данные](#Staging)  
   
 -   [Проверка данных на соответствие бизнес-правилам](#rules)  
   
@@ -37,26 +37,26 @@ ms.locfileid: "65483152"
   
 -   [Немедленное применение разрешений для элементов иерархии](#Hierarchy)  
   
--   [Изменение учетной записи системного администратора](#SysAdmin)  
+-   [Изменение учетной записи администратора системы](#SysAdmin)  
   
 -   [Настройка параметров системы](#SysSettings)  
   
-##  <a name="Staging"></a> Промежуточное сохранение данных  
- В следующей таблице каждый защищаемый объект имеет строку name в составе имени. Это указывает на имя промежуточной таблицы, которая определена при создании сущности. Дополнительные сведения см. в разделе [импорта данных &#40;службы Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
+##  <a name="Staging"></a>Промежуточные данные  
+ В следующей таблице каждый защищаемый объект имеет строку name в составе имени. Это указывает на имя промежуточной таблицы, которая определена при создании сущности. Дополнительные сведения см. в разделе [Data Import &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
   
 |Действие|Защищаемые объекты|Разрешения|  
 |------------|----------------|-----------------|  
-|Загрузить конечные элементы и их атрибуты в промежуточную таблицу.|stg.name_Leaf|Обязательно: INSERT<br /><br /> Необязательное действие: SELECT и UPDATE|  
+|Загрузить конечные элементы и их атрибуты в промежуточную таблицу.|stg.name_Leaf|Требуется: INSERT<br /><br /> Необязательно: SELECT и UPDATE|  
 |Загрузить данные из конечной промежуточной таблицы в соответствующие таблицы базы данных MDS.|stg.udp_name_Leaf|EXECUTE|  
-|Загрузить консолидированные элементы и их атрибуты в промежуточную таблицу.|stg.name_Consolidated|Обязательно: INSERT<br /><br /> Необязательное действие: SELECT и UPDATE|  
+|Загрузить консолидированные элементы и их атрибуты в промежуточную таблицу.|stg.name_Consolidated|Требуется: INSERT<br /><br /> Необязательно: SELECT и UPDATE|  
 |Загрузить данные из объединенной промежуточной таблицы в соответствующие таблицы базы данных MDS.|stg.udp_name_Consolidated|EXECUTE|  
-|Загрузка в промежуточную таблицу конечных и консолидированных элементов связи друг с другом в явной иерархии.|stg.name_Relationship|Обязательно: INSERT<br /><br /> Необязательное действие: SELECT и UPDATE|  
+|Загрузка связей конечных и консолидированных элементов в явную иерархию в промежуточную таблицу.|stg.name_Relationship|Требуется: INSERT<br /><br /> Необязательно: SELECT и UPDATE|  
 |Загрузить данные из промежуточной таблицы связей в соответствующие таблицы базы данных MDS.|stg.udp_name_Relationship|EXECUTE|  
 |Просмотреть ошибки, которые возникли при вставке данных из промежуточных таблиц в таблицы базы данных MDS.|stg.udp_name_Relationship|SELECT|  
   
  Дополнительные сведения см. в разделе [Импорт данных (службы Master Data Services)](overview-importing-data-from-tables-master-data-services.md).  
   
-##  <a name="rules"></a> Проверка данных на соответствие бизнес-правилам  
+##  <a name="rules"></a>Проверка данных на соответствие бизнес-правилам  
   
 |Действие|Защищаемый объект|Разрешения|  
 |------------|---------------|-----------------|  
@@ -64,7 +64,7 @@ ms.locfileid: "65483152"
   
  Дополнительные сведения см. в разделе [Проверка хранимых процедур (службы Master Data Services)](../../2014/master-data-services/validation-stored-procedure-master-data-services.md).  
   
-##  <a name="Versions"></a> Удаление версий  
+##  <a name="Versions"></a>Удаление версий  
   
 |Действие|Защищаемые объекты|Разрешения|  
 |------------|----------------|-----------------|  
@@ -73,7 +73,7 @@ ms.locfileid: "65483152"
   
  Дополнительные сведения см. в разделе [Удаление версии (службы Master Data Services)](../../2014/master-data-services/delete-a-version-master-data-services.md).  
   
-##  <a name="Hierarchy"></a> Немедленное применение разрешений для элементов иерархии  
+##  <a name="Hierarchy"></a>Немедленное применение разрешений для элементов иерархии  
   
 |Действие|Защищаемые объекты|Разрешения|  
 |------------|----------------|-----------------|  
@@ -81,19 +81,19 @@ ms.locfileid: "65483152"
   
  Дополнительные сведения см. в разделе [Срочное применение разрешений для элемента (службы Master Data Services)](../../2014/master-data-services/immediately-apply-member-permissions-master-data-services.md).  
   
-##  <a name="SysAdmin"></a> Изменение учетной записи системного администратора  
+##  <a name="SysAdmin"></a>Изменение учетной записи системного администратора  
   
 |Действие|Защищаемые объекты|Разрешения|  
 |------------|----------------|-----------------|  
 |Определение идентификатора безопасности (SID) нового администратора|mdm.tblUser|SELECT|  
 |Изменение учетной записи администратора системы|mdm.udpSecuritySetAdministrator|EXECUTE|  
   
- Дополнительные сведения см. в разделе [изменить учетную запись системного администратора &#40;службы Master Data Services&#41;](../../2014/master-data-services/change-the-system-administrator-account-master-data-services.md).  
+ Дополнительные сведения см. [в разделе Изменение учетной записи системного администратора &#40;Master Data Services&#41;](../../2014/master-data-services/change-the-system-administrator-account-master-data-services.md).  
   
-##  <a name="SysSettings"></a> Настройка параметров системы  
+##  <a name="SysSettings"></a>Настройка параметров системы  
  Эти параметры системы можно изменять, настраивая поведение в [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Их можно настроить в [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] или при наличии доступа на выполнение команды UPDATE изменять непосредственно в таблице базы данных mdm.tblSystemSetting. Дополнительные сведения см. в разделе [Системные параметры (службы Master Data Services)](../../2014/master-data-services/system-settings-master-data-services.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Безопасность (службы Master Data Services)](../../2014/master-data-services/security-master-data-services.md)  
+ [Master Data Services &#40;безопасности&#41;](../../2014/master-data-services/security-master-data-services.md)  
   
   

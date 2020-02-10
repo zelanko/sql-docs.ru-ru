@@ -1,5 +1,5 @@
 ---
-title: Выполнение файлов шаблонов с использованием свойства CommandText | Документация Майкрософт
+title: Запуск файлов шаблонов с помощью свойства CommandText | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f1635358fc136c9faba3ce18b1d278ee1e407411
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012513"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>Выполнение файлов шаблонов с использованием свойства CommandText
-  В этом примере показано, как с помощью CommandTextproperty можно указать файлы шаблонов, состоящие из запросов SQL или XPath. Вместо указания запросов SQL или XPath в качестве значение CommandText, можно указать имя файла как значение. В следующем примере свойство CommandType указываются в виде SqlXmlCommandType.TemplateFile.  
+  В этом примере показано, как можно указать файлы шаблонов, состоящие из запросов SQL или XPath, с помощью Коммандтекстпроперти. Вместо указания запроса SQL или XPath в качестве значения CommandText можно указать имя файла в качестве значения. В следующем примере свойство CommandType указано как Склксмлкоммандтипе. TemplateFile.  
   
  Образец приложения выполняет следующий шаблон:  
   
@@ -91,7 +91,7 @@ class Test
   
 5.  Запустите файл DocSample.exe из командной строки.  
   
- Если параметр передается в шаблон, имя параметра должно начинаться с символа (@); Например, p.Name=»@ContactID«, где p — объект SqlXmlParameter.  
+ При передаче параметра в шаблон имя параметра должно начинаться с символа @. Например, p.Name = "@ContactID", где p — это объект SqlXmlParameter.  
   
  Это обновленный шаблон, который принимает один параметр.  
   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 686354531b89a43cb2e9ddc669ff136ef7b87216
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054738"
 ---
 # <a name="upgrading-the-packages-ssis-package-upgrade-wizard"></a>Обновление пакетов (мастер обновления пакетов служб SSIS)
@@ -26,7 +26,7 @@ ms.locfileid: "66054738"
   
 -   В обозревателе объектов среды [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]установите соединение с локальным экземпляром служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], а затем разверните узел **Сохраненные пакеты** , чтобы увидеть обновленные пакеты.  
   
- **Просмотр обновленных пакетов, которые были обновлены из SQL Server Data Tools**  
+ **Просмотр обновленных пакетов из SQL Server Data Tools**  
   
 -   В обозревателе решений среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]откройте проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , а затем разверните узел **Пакеты служб SSIS** , чтобы увидеть обновленные пакеты.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66054738"
  **Сообщение**  
  Просмотр сообщений об ошибках, которые формируются каждым действием.  
   
- **Остановить**  
+ **Позиции**  
  Остановка обновления пакетов.  
   
  **Отчет**  
@@ -57,7 +57,7 @@ ms.locfileid: "66054738"
   
 -   отправка отчета по электронной почте.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Обновление пакетов служб Integration Services](install-windows/upgrade-integration-services-packages.md)  
   
   

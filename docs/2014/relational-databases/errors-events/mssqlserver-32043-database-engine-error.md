@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b8892eb88a943176a5d99bdada398d004e983658
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914299"
 ---
-# <a name="mssqlserver32043"></a>MSSQLSERVER_32043
+# <a name="mssqlserver_32043"></a>MSSQLSERVER_32043
     
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|32043|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
@@ -43,8 +43,8 @@ ms.locfileid: "62914299"
 ## <a name="user-action"></a>Действие пользователя  
  Проверьте, не является ли причиной ошибки уровень нагрузки на экземпляр основного или зеркального серверов или сетевое соединение между ними.  
   
-## <a name="see-also"></a>См. также  
- [Зеркальное отображение базы данных (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
+## <a name="see-also"></a>См. также:  
+ [SQL Server &#40;зеркального отображения базы данных&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Использование пороговых значений предупреждений и оповещений в метриках производительности зеркального отображения (SQL Server)](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)  
   
   
