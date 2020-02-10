@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ef7f15fc1b54d18c71d7fccfd379454911cb8961
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874995"
 ---
 # <a name="restore-database-files-page"></a>Восстановление базы данных (страница «Файлы»)
@@ -31,7 +31,7 @@ ms.locfileid: "62874995"
  **Переместить все файлы в папку**  
  Перемещение восстановленных файлов.  
   
-|Параметр|Описание|  
+|Параметр|Description|  
 |------------|-----------------|  
 |**Папка файла данных**|Введите или выполните поиск имени папки файла данных, в которую нужно переместить восстановленный файл или файлы данных.|  
 |**Папка файлов журнала**|Введите или выполните поиск файла журнала или папки файлов, в которую нужно переместить восстановленный файл журнала.|  
@@ -48,7 +48,7 @@ ms.locfileid: "62874995"
  **Восстановить как**  
  Перечисляет имена файлов, в которых будут сохранены восстанавливаемые файлы. Введите или найдите соответствующее имя файла.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Восстановление базы данных (страница "Общие")](../../integration-services/general-page-of-integration-services-designers-options.md)   
  [Восстановление базы данных (страница "Параметры")](restore-database-options-page.md)   
  [Аргументы инструкции RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-arguments-transact-sql)   

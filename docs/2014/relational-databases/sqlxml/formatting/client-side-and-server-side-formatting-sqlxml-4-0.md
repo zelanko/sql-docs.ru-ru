@@ -1,5 +1,5 @@
 ---
-title: Клиентские и серверные форматирование (SQLXML 4.0) | Документация Майкрософт
+title: Форматирование на стороне клиента и на стороне сервера (SQLXML 4,0) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ab8293cdd0e2d839bb3d850116bf13f0cc0a7f58
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012311"
 ---
 # <a name="client-side-and-server-side-formatting-sqlxml-40"></a>Форматирование XML-кода на клиенте и на сервере (SQLXML 4.0)
@@ -29,19 +29,19 @@ ms.locfileid: "66012311"
   
 -   форматирование на стороне клиента.  
   
- Этот раздел содержит сведения о форматировании XML-документов на стороне клиента или на сервере из наборов строк, которые создаются при выполнении запросов к базе данных в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ В этом разделе содержатся сведения о форматировании XML-документов на стороне клиента или на стороне сервера из наборов строк, созданных запросами, выполняемыми в базе данных в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="in-this-section"></a>в этом разделе  
- [Архитектура форматирования XML, клиентские и серверные &#40;SQLXML 4.0&#41;](server-side-xml-formatting-sqlxml-4-0.md)  
+ [Архитектура форматирования XML на стороне клиента и на стороне сервера &#40;SQLXML 4,0&#41;](server-side-xml-formatting-sqlxml-4-0.md)  
  Содержит диаграммы архитектуры и описывает основы архитектуры форматирования SQLXML на клиенте и на сервере.  
   
- [Форматирование XML на стороне сервера &#40;SQLXML 4.0&#41;](server-side-xml-formatting-sqlxml-4-0.md)  
+ [Форматирование XML на стороне сервера &#40;SQLXML 4,0&#41;](server-side-xml-formatting-sqlxml-4-0.md)  
  Описывает форматирование XML-кода на сервере.  
   
- [Форматирование XML на стороне клиента &#40;SQLXML 4.0&#41;](client-side-xml-formatting-sqlxml-4-0.md)  
+ [Форматирование XML на стороне клиента &#40;SQLXML 4,0&#41;](client-side-xml-formatting-sqlxml-4-0.md)  
  Описывает форматирование XML-кода на стороне клиента, включая сведения об использовании FOR XML на клиенте.  
   
- [Форматирование XML-кода на стороне клиента и Форматирование XML на стороне сервера &#40;SQLXML 4.0&#41;](client-side-vs-server-side-xml-formatting-sqlxml-4-0.md)  
+ [Клиентское и серверное форматирование XML &#40;SQLXML 4,0&#41;](client-side-vs-server-side-xml-formatting-sqlxml-4-0.md)  
  Описывает конкретные различия в форматировании кодов XML на клиенте и на сервере.  
   
   

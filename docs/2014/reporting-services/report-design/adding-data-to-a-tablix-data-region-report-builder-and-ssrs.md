@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f0becc3627ee54158b8beed7c888698c9052ab1b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106498"
 ---
 # <a name="adding-data-to-a-tablix-data-region-report-builder-and-ssrs"></a>Добавление данных в область данных табликса (построитель отчетов и службы SSRS)
@@ -50,7 +50,7 @@ ms.locfileid: "66106498"
 ## <a name="adding-an-existing-tablix-data-region-from-another-report"></a>Добавление существующей области данных табликса из другого отчета  
  Область данных можно скопировать из другого отчета и вставить ее в новый или существующий отчет. После вставки области данных необходимо убедиться, что определен набор данных, используемый областью данных, и что поля набора данных имеют такие же имена и типы данных, что и в исходном отчете. Нельзя скопировать наборы данных из одного отчета в другой, однако если в отчетах используются общие источники данных, то можно быстро продублировать копию набора данных в другом отчете. Также можно импортировать текст запроса для запросов, извлекающих данные для набора данных, что упрощает дублирование запросов в отчетах. Дополнительные сведения см. в разделе [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выражения (построитель отчетов и службы SSRS)](expressions-report-builder-and-ssrs.md)   
  [Параметры отчета (построитель отчетов и конструктор отчетов)](report-parameters-report-builder-and-report-designer.md)   
  [Интерактивная сортировка, схемы документов и ссылки (построитель отчетов и службы SSRS)](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   

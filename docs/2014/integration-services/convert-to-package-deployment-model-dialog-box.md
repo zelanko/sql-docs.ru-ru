@@ -1,5 +1,5 @@
 ---
-title: Преобразовать в пакет развертывания модели диалоговое окно | Документация Майкрософт
+title: Диалоговое окно «преобразовать в модель развертывания пакета» | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dfe1f6e5b752284b6bb0feec96f4f3dfd67cc4f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060350"
 ---
 # <a name="convert-to-package-deployment-model-dialog-box"></a>Преобразовать в модель диалоговое окно "пакет развертывания"
@@ -34,9 +34,9 @@ ms.locfileid: "66060350"
 > [!NOTE]  
 >  Для преобразования проекта в модель развертывания проектов воспользуйтесь **Мастером преобразования проекта служб Integration Services**. Дополнительные сведения см. в статье [Integration Services Project Conversion Wizard](../../2014/integration-services/integration-services-project-conversion-wizard.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Развертывание проектов и пакетов](packages/deploy-integration-services-ssis-projects-and-packages.md)   
- [Развертывания пакета &#40;служб SSIS&#41;](packages/legacy-package-deployment-ssis.md)   
- [Мастер преобразования проекта служб Integration Services](../../2014/integration-services/integration-services-project-conversion-wizard.md)  
+ [Развертывание пакетов &#40;&#41;SSIS](packages/legacy-package-deployment-ssis.md)   
+ [Мастером преобразования проекта служб Integration Services](../../2014/integration-services/integration-services-project-conversion-wizard.md)  
   
   

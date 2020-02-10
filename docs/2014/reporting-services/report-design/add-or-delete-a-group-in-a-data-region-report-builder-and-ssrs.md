@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 66883f42947ba54205a5f272bb6bbfd5a90376f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106579"
 ---
 # <a name="add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs"></a>Добавление или удаление группы в области данных (построитель отчетов и службы SSRS)
@@ -117,7 +117,7 @@ ms.locfileid: "66106579"
     > [!NOTE]  
     >  Убедитесь, что после удаления строки подробностей выражение в каждой ячейке содержит статистическое выражение (там, где это уместно). При необходимости измените выражение, чтобы задать агрегатные функции нужным образом.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Ссылки на коллекции переменных отчета и группы (построитель отчетов и службы SSRS)](built-in-collections-report-and-group-variables-references-report-builder.md)   
  [Примеры выражений групп &#40;построитель отчетов и службы SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](filter-group-and-sort-data-report-builder-and-ssrs.md)   

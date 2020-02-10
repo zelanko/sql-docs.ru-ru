@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2b1c972481b7c4cf614cf0a91b29247c643696d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62868930"
 ---
-# <a name="mssqlserver3156"></a>MSSQLSERVER_3156
+# <a name="mssqlserver_3156"></a>MSSQLSERVER_3156
     
 ## <a name="details"></a>Сведения  
   
@@ -49,8 +49,8 @@ ms.locfileid: "62868930"
   
  Устраните неполадку, связанную с указанным расположением. Для этого, например, предоставьте необходимые права доступа или измените расположение файла с помощью параметра WITH MOVE предложения RESTORE.  
   
-## <a name="see-also"></a>См. также  
- [Восстановление базы данных в новое место (SQL Server)](../backup-restore/restore-a-database-to-a-new-location-sql-server.md)   
+## <a name="see-also"></a>См. также:  
+ [Восстановление базы данных в новое расположение &#40;SQL Server&#41;](../backup-restore/restore-a-database-to-a-new-location-sql-server.md)   
  [Восстановление файлов в новое расположение &#40;SQL Server&#41;](../backup-restore/restore-files-to-a-new-location-sql-server.md)   
  [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql)  
   

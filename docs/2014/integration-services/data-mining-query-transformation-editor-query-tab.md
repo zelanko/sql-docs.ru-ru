@@ -1,5 +1,5 @@
 ---
-title: Редактор преобразования запроса интеллектуального анализа данных (вкладка «запрос») | Документация Майкрософт
+title: Редактор преобразования «Запрос интеллектуального анализа данных» (вкладка «запрос») | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 431e01df40ab3a531af21977b85253d84768118f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059750"
 ---
 # <a name="data-mining-query-transformation-editor-query-tab"></a>Редактор преобразования «Запрос интеллектуального анализа данных» (вкладка «Запрос»)
@@ -33,8 +33,8 @@ ms.locfileid: "66059750"
  **Создать новый запрос**  
  Щелкните **Создать новый запрос** для создания запроса расширения интеллектуального анализа данных, используя графический построитель запросов.  
   
-## <a name="see-also"></a>См. также  
- [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор преобразования "Запрос интеллектуального анализа данных" (вкладка "Модель интеллектуального анализа данных")](../../2014/integration-services/data-mining-query-transformation-editor-mining-model-tab.md)  
+## <a name="see-also"></a>См. также:  
+ [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор преобразования «Запрос интеллектуального анализа данных» &#40;вкладку «модель интеллектуального анализа»&#41;](../../2014/integration-services/data-mining-query-transformation-editor-mining-model-tab.md)  
   
   

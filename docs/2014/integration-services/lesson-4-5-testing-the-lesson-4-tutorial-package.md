@@ -1,5 +1,5 @@
 ---
-title: Шаг 5. Проверка учебного пакета занятия 4 | Документация Майкрософт
+title: Шаг 5. Проверка учебного пакета, созданного на занятии 4 | Документы Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fab91a2df7d0401e8301589b1dd0d21027e579c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62891297"
 ---
-# <a name="step-5-testing-the-lesson-4-tutorial-package"></a>Шаг 5. Тестирование учебного пакета урока 4
+# <a name="step-5-testing-the-lesson-4-tutorial-package"></a>Шаг 5. Проверка учебного пакета, созданного на занятии 4
   На стадии выполнения произойдет ошибка поиска соответствия при работе преобразования «Уточняющий запрос» для Currency Key в поврежденном файле Currency_BAD.txt. Так как вывод ошибок преобразования «Уточняющий запрос» для Currency Key настроен на перенаправление строк новому адресату «неудачные обращения», операция не завершится ошибкой, и пакет будет успешно выполнен. Все ошибочные строки будут записаны в файл ErrorOutput.txt.  
   
  В этой задаче требуется проверить измененную конфигурацию вывода ошибок, запустив пакет на выполнение. После успешного выполнения пакета проверьте содержимое файла ErrorOutput.txt.  

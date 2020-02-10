@@ -11,19 +11,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2b753397b4791d658692a8cb63dbc6a3d779c621
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914361"
 ---
-# <a name="mssqlserver30053"></a>MSSQLSERVER_30053
+# <a name="mssqlserver_30053"></a>MSSQLSERVER_30053
     
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|30053|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
@@ -48,7 +48,7 @@ ms.locfileid: "62914361"
 ## <a name="user-action"></a>Действие пользователя  
  Выберите по следующей таблице действие пользователя, подходящее для устранения предполагаемой причины превышения времени ожидания.  
   
-|Вероятная причина|Действие пользователя|  
+|Возможные причины|Рекомендуемые действия|  
 |--------------------|-----------------|  
 |Неправильно настроено средство разбиения по словам для языка запросов.|Если используется средство разбиения по словам сторонних разработчиков, оно может быть неправильно зарегистрировано в операционной системе. В этом случае повторно зарегистрируйте средство разбиения по словам. Дополнительные сведения см. в статье [Восстановление предыдущих версий средств разбиения текста на слова, используемых поиском](../search/revert-the-word-breakers-used-by-search-to-the-previous-version.md).|  
 |Средство разбиения по словам неправильно обрабатывает определенную строку запроса.|Если средство разбиения по словам поддерживается [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], обратитесь в службу поддержки пользователей Майкрософт.|  
@@ -56,11 +56,11 @@ ms.locfileid: "62914361"
 |Неправильная конфигурация процесса управляющей программы фильтрации.|Убедитесь, что используется текущий пароль, а политика домена не запрещает вход для учетной записи управляющей программы фильтрации.|  
 |В экземпляре сервера обрабатывается рабочая нагрузка запросов очень большого объема.|Попробуйте выполнить запрос еще раз при меньшей загрузке сервера.|  
   
-## <a name="see-also"></a>См. также  
- [Настройка учетной записи службы средства запуска управляющей программы полнотекстовой фильтрации](../search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)   
- [Компонент Full-text Search](../search/full-text-search.md)   
+## <a name="see-also"></a>См. также:  
+ [Настройка учетной записи службы для средства запуска управляющей программы полнотекстовой фильтрации](../search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)   
+ [Полнотекстовый поиск](../search/full-text-search.md)   
  [sp_help_fulltext_system_components &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql)   
- [Настройка и управление средством разбиения на слова и парадигматические модули для поиска](../search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
+ [Настройка средств разбиения по словам и парадигматические модули для поиска и управление ими](../search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Настройка и управление фильтрами для поиска](../search/configure-and-manage-filters-for-search.md)  
   
   

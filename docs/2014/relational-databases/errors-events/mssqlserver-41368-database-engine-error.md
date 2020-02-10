@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a2206980d241d3ef0aa683e4f987a4e337a86855
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913809"
 ---
-# <a name="mssqlserver41368"></a>MSSQLSERVER_41368
+# <a name="mssqlserver_41368"></a>MSSQLSERVER_41368
     
 ## <a name="details"></a>Сведения  
   
@@ -38,9 +38,9 @@ ms.locfileid: "62913809"
  При доступе к оптимизированной для памяти таблицы из явной транзакции, начатой с помощью BEGIN TRANSACTION, или из неявной транзакции, если параметр IMPLICIT_TRANSACTIONS имеет значение ON, уровень изоляции READ COMMITTED не поддерживается.  
   
 ## <a name="user-action"></a>Действие пользователя  
- При доступе к оптимизированной для памяти таблице из явной или неявной транзакции с изоляцией READ COMMITTED, используйте для доступа к таблице моментальный снимок (SNAPSHOT). Это можно сделать с помощью табличной подсказки WITH (SNAPSHOT) (Дополнительные сведения см. в разделе [уровни изоляции транзакций с таблицами, оптимизированными для памяти, касающиеся](../in-memory-oltp/memory-optimized-tables.md)) или установив эту базу данных параметр MEMORY_OPTIMIZED_ELEVATE_TO_ Моментальный СНИМОК в значение ON (Дополнительные сведения см. в разделе [параметры ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)).  
+ При доступе к оптимизированной для памяти таблице из явной или неявной транзакции с изоляцией READ COMMITTED, используйте для доступа к таблице моментальный снимок (SNAPSHOT). Это можно сделать с помощью табличной подсказки WITH (МОМЕНТАЛЬный снимок) (Дополнительные сведения см. в разделе [рекомендации по уровню изоляции транзакций с оптимизированными для памяти таблицами](../in-memory-oltp/memory-optimized-tables.md)) или при установке параметра базы данных MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT в значение On (Дополнительные сведения см. в разделе [Параметры ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выполняющаяся в памяти OLTP (оптимизация в памяти)](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

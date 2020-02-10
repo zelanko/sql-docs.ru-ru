@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b630442c1a47bcd4ebabee75b82cff9b8f64d006
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62901115"
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>Редактор источников SAP BW (страница «Диспетчер соединений»)
@@ -55,7 +55,7 @@ ms.locfileid: "62901115"
  **Режим выполнения**  
  Укажите метод извлечения данных из источника.  
   
-|Параметр|Описание|  
+|Параметр|Description|  
 |------------|-----------------|  
 |**P – запустить цепочку процесса**|Запустите цепочку процессов. В этом случае пакет [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] запустит процесс извлечения.|  
 |**W – ждать уведомления**|Подождите уведомления системы SAP Netweaver BW перед тем, как начать извлечение данных. В этом случае система SAP Netweaver BW запустит процесс извлечения.|  
@@ -121,7 +121,7 @@ ms.locfileid: "62901115"
  **Идентификатор запроса**  
  Введите идентификатор запроса, связанный с извлечением.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Редактор источника SAP BW (страница "Столбцы")](sap-bw-source-editor-columns-page.md)   
  [Редактор источника SAP BW (страница "Вывод ошибок")](sap-bw-source-editor-error-output-page.md)   
  [Редактор источника SAP BW (страница "Дополнительно")](sap-bw-source-editor-advanced-page.md)   

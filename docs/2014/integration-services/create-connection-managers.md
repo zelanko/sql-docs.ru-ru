@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a82ef5c249dd1bc15bc91e9ccc502ebffe3f1728
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060122"
 ---
 # <a name="create-connection-managers"></a>Создание диспетчеров соединений
@@ -45,18 +45,18 @@ ms.locfileid: "66060122"
   
 -   [Добавление, удаление или совместное использование диспетчера соединений в пакете](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md)  
   
--   [Задание свойств диспетчера подключений](../../2014/integration-services/set-the-properties-of-a-connection-manager.md)  
+-   [Задание свойств диспетчера соединений](../../2014/integration-services/set-the-properties-of-a-connection-manager.md)  
   
 ## <a name="32-bit-and-64-bit-providers-for-connection-managers"></a>32-разрядная и 64-разрядная версии поставщиков для диспетчеров соединений  
  Для многих поставщиков, используемых диспетчерами соединений, доступны 32-разрядная и 64-разрядная версии. Среда разработки служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] — это 32-разрядная среда, поэтому в ней содержатся только 32-разрядные поставщики. Поэтому необходимо настроить диспетчер соединений для использования специального 64-разрядного поставщика, если 32-разрядная версия того же поставщика уже установлена.  
   
  Во время выполнения используется подходящая версия поставщика, даже если во время разработки указана 32-разрядная версия. 64-разрядная версия поставщика может быть запущена, даже если пакет запущен в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
- У обеих версий поставщика один идентификатор. Чтобы предписать использование средой выполнения служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] доступной 64-разрядной версии поставщика, установите свойство Run64BitRuntime проекта служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Если свойство Run64BitRuntime имеет значение `true`, среда выполнения находит и использует 64-разрядный поставщик; Если свойство Run64BitRuntime имеет `false`, среда выполнения находит и использует 32-разрядный поставщик. Дополнительные сведения о свойствах, которые можно настраивать в проектах [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], см. в разделе [Службы Integration Services (SSIS) и среды Studio](integration-services-ssis-development-and-management-tools.md).  
+ У обеих версий поставщика один идентификатор. Чтобы предписать использование средой выполнения служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] доступной 64-разрядной версии поставщика, установите свойство Run64BitRuntime проекта служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Если свойство Run64BitRuntime имеет значение `true`, среда выполнения находит и использует 64-разрядный поставщик. Если Run64BitRuntime имеет `false`значение, среда выполнения находит и использует 32-разрядный поставщик. Дополнительные сведения о свойствах, которые можно настраивать в проектах [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], см. в разделе [Службы Integration Services (SSIS) и среды Studio](integration-services-ssis-development-and-management-tools.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Поток управления](control-flow/control-flow.md)   
  [Поток данных](data-flow/data-flow.md)   
- [Обработчики событий в службах Integration Services (SSIS)](integration-services-ssis-event-handlers.md)  
+ [Integration Services &#40;служб SSIS&#41; обработчики событий](integration-services-ssis-event-handlers.md)  
   
   

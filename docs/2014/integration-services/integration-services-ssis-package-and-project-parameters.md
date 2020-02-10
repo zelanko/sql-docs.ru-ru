@@ -1,5 +1,5 @@
 ---
-title: В службах Integration Services (SSIS) параметры | Документация Майкрософт
+title: Параметры Integration Services (SSIS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cfd6a65e1561f252574ff919c8b63b0bbd57876f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62892266"
 ---
 # <a name="integration-services-ssis-parameters"></a>Параметры служб Integration Services (SSIS)
-  Параметры служб[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) могут быть использованы для присвоения значений свойствам внутри пакетов во время выполнения пакетов. Можно создать *параметры проекта* на уровне проекта и *параметры пакета* на уровне пакета. Параметры проекта используются для предоставления любых внешних данных, получаемых проектом, одному пакету в проекте или более. Параметры пакета позволяют изменить выполнение пакета. При этом изменять пакет и развертывать его повторно не придется.  
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]Параметры служб (SSIS) позволяют назначать значения свойствам внутри пакетов во время выполнения пакета. *Параметры проекта* можно создавать на уровне проекта и в *параметрах пакета* на уровне пакета. Параметры проекта используются для предоставления любых внешних данных, получаемых проектом, одному пакету в проекте или более. Параметры пакета позволяют изменить выполнение пакета. При этом изменять пакет и развертывать его повторно не придется.  
   
  В службах [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] можно создавать, изменять и удалять параметры проекта в окне **Project.params** . Создавать, изменять, удалять и параметров пакета можно с помощью вкладки **Параметры** в конструкторе служб [!INCLUDE[ssIS](../includes/ssis-md.md)] . Диалоговое окно **Параметризация** позволяет связать новый или существующий параметр со свойством задачи. Дополнительные сведения об использовании окна **Project.params** и вкладки **Параметры** см. в разделе [Create Parameters](create-parameters.md). Дополнительные сведения о диалоговом окне **Параметризация** см. в разделе [Parameterize Dialog Box](parameterize-dialog-box.md).  
   
@@ -30,20 +30,20 @@ ms.locfileid: "62892266"
 ## <a name="parameters-and-project-deployment-model"></a>Параметры и модели развертывания проекта  
  При развертывании проекта на сервере [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] используются хранимые процедуры, представления и пользовательский интерфейс [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] для управления параметрами проектов и пакетов. Дополнительные сведения см. в следующих разделах:  
   
--   [Представления (каталог служб Integration Services)](/sql/integration-services/system-views/views-integration-services-catalog)  
+-   [Представления &#40;каталога Integration Services&#41;](/sql/integration-services/system-views/views-integration-services-catalog)  
   
--   [Хранимые процедуры (каталог служб Integration Services)](/sql/integration-services/system-stored-procedures/stored-procedures-integration-services-catalog)  
+-   [Хранимые процедуры &#40;Integration Services каталога&#41;](/sql/integration-services/system-stored-procedures/stored-procedures-integration-services-catalog)  
   
 -   [Диалоговое окно «Настройка»](catalog/configure-dialog-box.md)  
   
--   [Диалоговое окно "Выполнение пакета"](../../2014/integration-services/execute-package-dialog-box.md)  
+-   [Execute Package Dialog Box](../../2014/integration-services/execute-package-dialog-box.md)  
   
 ### <a name="parameter-values"></a>Значения параметров  
  Можно назначить до 3 различных значений для параметра. С началом выполнения пакета для параметра используется одно значение, а параметр разрешается в свое последнее литеральное значение.  
   
  В следующей таблице приводятся типы значений.  
   
-|Имя значения|Описание|Тип значения|  
+|Имя значения|Description|Тип значения|  
 |----------------|-----------------|-------------------|  
 |Значение выполнения|Значение, которое назначается определенному экземпляру выполнения пакета. Это значение переопределяет все прочие значения, но применяется только к одному экземпляру выполнения пакета.|Литерал|  
 |Значение сервера|Значение, присваиваемое параметру в области проекта после развертывания проекта на сервере [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Это значение переопределяет значение по умолчанию проекта.|Литерал или ссылка на переменную среды|  
@@ -51,8 +51,9 @@ ms.locfileid: "62892266"
   
  С помощью одного параметра можно присваивать значения нескольким свойствам пакета. Единственному свойству пакета может быть присвоено значение только одного параметра.  
   
-###  <a name="executions"></a> Выполнения и значения параметров  
- *Выполнение* — это объект, который представляет один экземпляр выполнения пакета. При создании выполнения задаются все данные, необходимые для выполнения пакета, например значения параметров выполнения. Можно также изменить значения параметров для текущих выполнений.  
+###  <a name="executions"></a>Выполнение и значения параметров  
+ 
+  *Выполнение* — это объект, который представляет один экземпляр выполнения пакета. При создании выполнения задаются все данные, необходимые для выполнения пакета, например значения параметров выполнения. Можно также изменить значения параметров для текущих выполнений.  
   
  Если значение параметра для параметра выполнения задано явно, то к этому конкретному экземпляру выполнения будет применяться только это значение. Значение выполнения используется вместо значения сервера или значения проекта. Если не задано явно значение выполнения, но задано значение сервера, то используется значение сервера.  
   
@@ -68,19 +69,19 @@ ms.locfileid: "62892266"
 #### <a name="determining-execution-parameter-values"></a>Определение значений параметров выполнения  
  Для отображения и задания значений параметров можно использовать следующие представления и хранимые процедуры Transact-SQL.  
   
- [catalog.execution_parameter_values (база данных SSISDB)](/sql/integration-services/system-views/catalog-execution-parameter-values-ssisdb-database)(представление)  
+ [Catalog. execution_parameter_values &#40;&#41;базы данных SSISDB ](/sql/integration-services/system-views/catalog-execution-parameter-values-ssisdb-database)(представление)  
  Показывает фактические значения параметров, которые будут использоваться определенным выполнением  
   
- [catalog.get_parameter_values (база данных SSISDB)](/sql/integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database) (хранимая процедура)  
+ [Catalog. get_parameter_values &#40;база данных SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database) (хранимая процедура)  
  Разрешает и показывает фактические значения для заданного пакета и ссылки на среду  
   
- [catalog.object_parameters (база данных SSISDB)](/sql/integration-services/system-views/catalog-object-parameters-ssisdb-database) (представление)  
+ [Catalog. object_parameters &#40;&#41;базы данных SSISDB](/sql/integration-services/system-views/catalog-object-parameters-ssisdb-database) (представление)  
  Отображает параметры и свойства для всех пакетов и проектов в каталоге [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , включая значения по умолчанию проекта и значения по умолчанию сервера.  
   
- [catalog.set_execution_parameter_value (база данных SSISDB)](/sql/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database)  
+ [Catalog. set_execution_parameter_value &#40;базы данных SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database)  
  Задает значение параметра для экземпляра выполнения в каталоге служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
- Можно также использовать диалоговое окно **Выполнить пакет** в [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , чтобы изменить значение параметра. Дополнительные сведения см. в разделе [Execute Package Dialog Box](../../2014/integration-services/execute-package-dialog-box.md).  
+ Можно также использовать диалоговое окно **Выполнить пакет** в [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , чтобы изменить значение параметра. Дополнительные сведения см. в разделе [диалоговое окно «Выполнение пакета»](../../2014/integration-services/execute-package-dialog-box.md).  
   
  Также можно использовать параметр dtexec `/Parameter` для изменения значения параметра. Дополнительные сведения см. в статье [dtexec Utility](packages/dtexec-utility.md).  
   
@@ -97,11 +98,11 @@ ms.locfileid: "62892266"
  Во время подготовки определенного экземпляра выполнения пакета параметру **pkgOptions** присваивается значение 5. Это значение называется значением выполнения, поскольку оно применяется к параметру только в этом определенном экземпляре выполнения. При запуске выполнения свойству пакета, соответствующему параметру **pkgOptions** , присваивается значение 5.  
   
 ## <a name="related-tasks"></a>Связанные задачи  
- [Создание параметров](create-parameters.md)  
+ [Create Parameters](create-parameters.md)  
   
- [Настройка значений параметров после развертывания проекта](../../2014/integration-services/set-parameter-values-after-the-project-is-deployed.md)  
+ [Задать значения параметров после развертывания проекта](../../2014/integration-services/set-parameter-values-after-the-project-is-deployed.md)  
   
 ## <a name="related-content"></a>См. также  
- Запись в блоге [SSIS Quick Tip: Required Parameters](https://go.microsoft.com/fwlink/?LinkId=239781) (Краткие рекомендации по службам SSIS. Необходимые параметры) на сайте mattmasson.com.  
+ Запись в блоге [SSIS Quick Tip: Required Parameters](https://go.microsoft.com/fwlink/?LinkId=239781)(Краткая рекомендация по службам SSIS. Необходимые параметры) на mattmasson.com.  
   
   

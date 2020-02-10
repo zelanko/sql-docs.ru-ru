@@ -1,5 +1,5 @@
 ---
-title: Редактор циклов по каждому элементу (страница "Общие") | Документация Майкрософт
+title: Редактор циклов по каждому элементу (страница «Общие») | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 804e8ddca760be8734dd4862aed5c2edd6fc8caa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058519"
 ---
 # <a name="foreach-loop-editor-general-page"></a>Редактор циклов по каждому элементу (страница «Общие»)
@@ -34,12 +34,12 @@ ms.locfileid: "66058519"
  **Описание**  
  Введите описание контейнера «цикл по каждому элементу».  
   
-## <a name="see-also"></a>См. также  
- [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>См. также:  
+ [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор циклов по каждому элементу &#40;страница коллекции&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
- [Редактор циклов по каждому элементу &#40;странице сопоставления переменной&#41;](../../2014/integration-services/foreach-loop-editor-variable-mappings-page.md)   
- [Страница «Выражения»](expressions/expressions-page.md)   
- [Контейнер "Цикл по каждому элементу"](control-flow/foreach-loop-container.md)   
+ [Редактор циклов по каждому элементу &#40;страница сопоставления переменных&#41;](../../2014/integration-services/foreach-loop-editor-variable-mappings-page.md)   
+ [Страница "выражения"](expressions/expressions-page.md)   
+ [Контейнер «цикл по каждому элементу»](control-flow/foreach-loop-container.md)   
  [Контейнер «цикл по элементам»](control-flow/for-loop-container.md)  
   
   

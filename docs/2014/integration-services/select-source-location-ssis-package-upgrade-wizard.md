@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1ba348d3a47945bf9bb4f375310c5c92e6be7705
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055935"
 ---
 # <a name="select-source-location-ssis-package-upgrade-wizard"></a>Выбор расположения источника (мастер обновления пакетов служб SSIS)
@@ -27,13 +27,13 @@ ms.locfileid: "66055935"
   
  **Запуск мастера обновления пакетов служб SSIS**  
   
--   [Обновление пакетов служб Integration Services с помощью мастера обновления пакетов служб SSIS](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
+-   [обновить пакеты служб Integration Services с помощью мастера обновления пакетов служб SSIS](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   
 ## <a name="static-options"></a>Статические параметры  
  **Источник пакета**  
  Укажите место хранения, содержащее обновляемые пакеты. Все возможные значения этого параметра приведены в следующей таблице.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |**Файловая система**|Указывает, что пакеты, подлежащие обновлению, находятся в папке на локальном компьютере.<br /><br /> Чтобы мастер создавал резервные копии исходных пакетов перед их обновлением, исходные пакеты должны храниться в файловой системе. Дополнительные сведения см. в разделе «Как».|  
 |**Хранилище пакетов служб SSIS**|Указывает, что обновляемые пакеты находятся в хранилище пакетов. Хранилище пакетов представляет собой набор папок в файловой системе, управляемый службой Windows служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Дополнительные сведения см. в разделе [Управление пакетами (службы SSIS)](service/package-management-ssis-service.md).<br /><br /> При выборе этого значения отображается соответствующий динамический параметр **Источник пакета** .|  
@@ -48,11 +48,11 @@ ms.locfileid: "66055935"
 ## <a name="package-source-dynamic-options"></a>Динамические параметры источника пакетов  
   
 ### <a name="package-source--ssis-package-store"></a>Источник пакета = хранилище пакетов служб SSIS  
- **Server**  
+ **Сервер**  
  Введите имя сервера, на котором хранятся обновляемые пакеты, или выберите сервер из списка.  
   
 ### <a name="package-source--microsoft-sql-server"></a>Источник пакета = Microsoft SQL Server  
- **Server**  
+ **Сервер**  
  Введите имя сервера, на котором хранятся обновляемые пакеты, или выберите сервер из списка.  
   
  **Использовать проверку подлинности Windows**  
@@ -61,13 +61,13 @@ ms.locfileid: "66055935"
  **Использовать проверку подлинности SQL Server**  
  Выберите использование проверки подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для подключения к серверу. Если используется проверка подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , необходимо ввести имя пользователя и пароль.  
   
- **Имя пользователя**  
+ **User name**  
  Введите имя пользователя, которое будет использовано для проверки подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] при подключении к серверу.  
   
  **Пароль**  
  Введите пароль, который будет использован для проверки подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] при подключении к серверу.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Обновление пакетов служб Integration Services](install-windows/upgrade-integration-services-packages.md)  
   
   

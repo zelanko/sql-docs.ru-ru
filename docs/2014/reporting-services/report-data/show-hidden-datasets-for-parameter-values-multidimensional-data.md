@@ -1,5 +1,5 @@
 ---
-title: Отображение скрытых наборов данных для значений параметра в многомерных данных (построитель отчетов и службы SSRS) | Документация Майкрософт
+title: Отображение скрытых наборов данных для значений параметров в многомерных данные (построитель отчетов и SSRS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 92db49f8f6a112f8466fc81527b214bad7252f82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107058"
 ---
 # <a name="show-hidden-datasets-for-parameter-values-for-multidimensional-data-report-builder-and-ssrs"></a>Отображение скрытых наборов данных для значений параметра в многомерных данных (построитель отчетов и службы SSRS)
@@ -35,10 +35,10 @@ ms.locfileid: "66107058"
   
 -   В области данных отчета щелкните правой кнопкой мыши "Наборы данных" и выберите **Показать скрытые наборы данных**.  
   
-## <a name="see-also"></a>См. также  
- [Конструкторы запросов (построитель отчетов)](../query-designers-report-builder.md)   
+## <a name="see-also"></a>См. также:  
+ [Конструкторы запросов &#40;построитель отчетов&#41;](../query-designers-report-builder.md)   
  [Конструкторы запросов служб Reporting Services](../reporting-services-query-designers.md)   
  [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Добавление данных в отчет &#40;построитель отчетов и службы SSRS&#41;](report-datasets-ssrs.md)  
+ [Добавление данных в построитель отчетов &#40;отчетов и SSRS&#41;](report-datasets-ssrs.md)  
   
   

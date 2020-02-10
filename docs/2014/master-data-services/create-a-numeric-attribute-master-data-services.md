@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 484774165ea1997b98fc9dc0919f5be7450dd4c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483364"
 ---
 # <a name="create-a-numeric-attribute-master-data-services"></a>Создание числового атрибута (службы Master Data Services)
@@ -26,7 +26,7 @@ ms.locfileid: "65483364"
 > [!NOTE]  
 >  На числовые атрибуты налагаются определенные ограничения. Дополнительные сведения см. в разделе [Attributes &#40;Master Data Services&#41;](attributes-master-data-services.md).  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения этой процедуры:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
@@ -65,18 +65,18 @@ ms.locfileid: "65483364"
   
 11. В поле **Знаки после запятой** укажите количество знаков, которые можно ввести после десятичной запятой.  
   
-12. Из **маска ввода** выберите формат отрицательных чисел.  
+12. В списке **Маска ввода** выберите формат отрицательных чисел.  
   
-13. По желанию установите флажок **Включить отслеживание изменений** , чтобы отслеживать изменения в группах атрибутов. Дополнительные сведения см. в разделе [Добавление атрибутов в группу отслеживания изменений (службы Master Data Services)1;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md) .  
+13. По желанию установите флажок **Включить отслеживание изменений** , чтобы отслеживать изменения в группах атрибутов. Дополнительные сведения см. в разделе [Add Attributes to a Change Tracking Group &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md) .  
   
 14. Нажмите кнопку **Сохранить атрибут**.  
   
 15. На странице **Обслуживание сущности** нажмите кнопку **Сохранить сущность**.  
   
-## <a name="see-also"></a>См. также  
- [Атрибуты (службы Master Data Services)](attributes-master-data-services.md)   
- [Изменение имени атрибута &#40;службы Master Data Services&#41;](change-an-attribute-name-and-data-type-master-data-services.md)   
- [Создание атрибута на основе домена (службы Master Data Services)](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)   
- [Создание файлового атрибута (службы Master Data Services)](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Master Data Services &#40;атрибутов&#41;](attributes-master-data-services.md)   
+ [Измените имя атрибута &#40;Master Data Services&#41;](change-an-attribute-name-and-data-type-master-data-services.md)   
+ [Создание атрибута на основе домена &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)   
+ [Создание атрибута файла &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)  
   
   

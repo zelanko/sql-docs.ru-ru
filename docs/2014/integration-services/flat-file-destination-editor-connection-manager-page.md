@@ -1,5 +1,5 @@
 ---
-title: Редактор назначения файла (страница «Диспетчер соединений») с неструктурированными | Документация Майкрософт
+title: Редактор назначения «Неструктурированный файл» (страница «Диспетчер соединений») | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 429ba1f8a12a4bd574a8304d18311a6e6e4efc79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058698"
 ---
 # <a name="flat-file-destination-editor-connection-manager-page"></a>Редактор назначения «Неструктурированный файл» (страница «Диспетчер соединений»)
@@ -27,7 +27,7 @@ ms.locfileid: "66058698"
  Дополнительные сведения о назначении «Неструктурированный файл» см. в разделе [Flat File Destination](data-flow/flat-file-destination.md).  
   
 ## <a name="options"></a>Параметры  
- **диспетчер соединений с неструктурированными файлами**  
+ **Диспетчер соединений с неструктурированными файлами**  
  Выберите из списка существующий диспетчер соединений или создайте новое соединение, нажав **Создать**.  
   
  **Создать**  
@@ -46,8 +46,8 @@ ms.locfileid: "66058698"
  **Предварительный просмотр**  
  Осуществляйте предварительный просмотр результатов в диалоговом окне **Просмотр данных** . В окне «Предварительный просмотр» может отображаться до 200 строк.  
   
-## <a name="see-also"></a>См. также  
- [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор назначения "Неструктурированный файл" (страница "Сопоставления")](../../2014/integration-services/flat-file-destination-editor-mappings-page.md)  
+## <a name="see-also"></a>См. также:  
+ [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор назначения "Неструктурированный файл" &#40;страниц сопоставления&#41;](../../2014/integration-services/flat-file-destination-editor-mappings-page.md)  
   
   

@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1a9740287c211ac6fec7414ef05dd422a28a926b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62869919"
 ---
-# <a name="mssqlserver1462"></a>MSSQLSERVER_1462
+# <a name="mssqlserver_1462"></a>MSSQLSERVER_1462
     
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|1462|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
@@ -41,7 +41,7 @@ ms.locfileid: "62869919"
 ## <a name="user-action"></a>Действие пользователя  
  Просмотрите журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и попытайтесь найти причину этой ошибки. Попробуйте устранить причину неполадки и возобновите зеркальное отображение базы данных.  
   
-## <a name="see-also"></a>См. также  
- [Устранение неполадок в конфигурации зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)  
+## <a name="see-also"></a>См. также:  
+ [Диагностика конфигурации зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)  
   
   

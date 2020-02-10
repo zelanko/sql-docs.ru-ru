@@ -1,5 +1,5 @@
 ---
-title: Export Column Transformation Editor (страница "столбцы") | Документация Майкрософт
+title: Редактор преобразования «Экспорт столбца» (страница «Столбцы») | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0d5e37211471285e971ba29bc3419e759b0c7af7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059011"
 ---
 # <a name="export-column-transformation-editor-columns-page"></a>Редактор преобразования «Экспорт столбца» (страница «Столбцы»)
@@ -34,16 +34,16 @@ ms.locfileid: "66059011"
  Производится выбор из списка входных столбцов, содержащих пути к файлам и имена файлов. Все строки должны иметь определения для параметров **Извлечь столбец** и **Столбец пути к файлу**.  
   
  **Разрешить добавление**  
- Определяет, будет ли преобразование добавлять данные к существующим файлам. Значение по умолчанию — `false`.  
+ Определяет, будет ли преобразование добавлять данные к существующим файлам. Значение по умолчанию — `false`.  
   
  **Принудительное усечение**  
- Определяет, будет ли преобразование удалять содержимое существующих файлов перед записью данных. Значение по умолчанию — `false`.  
+ Определяет, будет ли преобразование удалять содержимое существующих файлов перед записью данных. Значение по умолчанию — `false`.  
   
  **Запись BOM**  
  Определяет, будет ли в файл записываться метка порядка следования байтов (BOM). Метка BOM записывается только в случае, если данные имеют тип данных `DT_NTEXT` или DT_WSTR и не присоединяются к существующему файлу данных.  
   
-## <a name="see-also"></a>См. также  
- [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор преобразования "Экспорт столбца" (страница "Вывод ошибок")](../../2014/integration-services/export-column-transformation-editor-error-output-page.md)  
+## <a name="see-also"></a>См. также:  
+ [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор преобразования "Экспорт столбца" &#40;страница "вывод ошибок"&#41;](../../2014/integration-services/export-column-transformation-editor-error-output-page.md)  
   
   

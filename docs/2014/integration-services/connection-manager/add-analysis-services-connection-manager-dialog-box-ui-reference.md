@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9177dceefb03617a1837f7f051fb52aa805f33aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833759"
 ---
 # <a name="add-analysis-services-connection-manager-dialog-box-ui-reference"></a>Добавление диалогового окна  «Диспетчер соединений со службами Analysis Services" в справочник по пользовательскому интерфейсу
@@ -30,7 +30,7 @@ ms.locfileid: "62833759"
  **Создать соединение с компьютером, на котором выполняются службы Analysis Services**  
  Можно выбрать соединение по умолчанию с сервером, на котором работает экземпляр служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], или создать новое соединение, нажав кнопку **Изменить**.  
   
- **Изменить**  
+ **Edit** (Изменение)  
  Используйте диалоговое окно **Диспетчер соединений** для установки соединения с сервером, на котором выполняется экземпляр служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], и для изменения свойств соединения.  
   
  **Создать соединение с проектом служб Analysis Services в этом решении**  
@@ -42,8 +42,8 @@ ms.locfileid: "62833759"
  **Проект служб Analysis Services**  
  Выберите проект служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] из списка.  
   
-## <a name="see-also"></a>См. также  
- [Справочник по сообщениям об ошибках служб Integration Services](../integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>См. также:  
+ [Справочник по ошибкам и сообщениям Integration Services](../integration-services-error-and-message-reference.md)   
  [Соединения в службах Integration Services (SSIS)](integration-services-ssis-connections.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Выполнение задач редактор SQL (результирующий набор страниц) | Документация Майкрософт
+title: Редактор задачи «Выполнение SQL» (страница «результирующий набор») | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d84f7fe551d83f609b2ffc3da92b51eb36b9a595
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058967"
 ---
 # <a name="execute-sql-task-editor-result-set-page"></a>Редактор задачи «Выполнение SQL» (страница «Результирующий набор»)
@@ -34,21 +34,21 @@ ms.locfileid: "66058967"
   
  Если результирующий набор имеет тип **Полный результирующий набор** или **XML**, то в качестве имени результирующего набора необходимо использовать 0.  
   
- **См. также**: [Результирующие наборы в задаче "Выполнение SQL"](../../2014/integration-services/result-sets-in-the-execute-sql-task.md)  
+ **См. также**: [результирующие наборы в задаче «Выполнение SQL»](../../2014/integration-services/result-sets-in-the-execute-sql-task.md)  
   
  **Имя переменной**  
- Для сопоставления результирующего набора с переменной выберите ее или щелкните \<**Создать переменную...** >, чтобы добавить новую переменную с помощью диалогового окна **Добавление переменной**.  
+ Для сопоставления результирующего набора с переменной выберите ее или щелкните \<**Создать переменную...**>, чтобы добавить новую переменную с помощью диалогового окна **Добавление переменной**.  
   
- **Добавить**  
+ **Добавление**  
  Нажмите кнопку, чтобы добавить сопоставление результирующего набора.  
   
  **Удалить**  
  Выберите в списке сопоставление результирующего набора и нажмите кнопку **Удалить**.  
   
-## <a name="see-also"></a>См. также  
- [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор задач SQL Выполнение &#40;страница "Общие"&#41;](general-page-of-integration-services-designers-options.md)   
- [Редактор задач SQL Выполнение &#40;странице «сопоставление параметров»&#41;](../../2014/integration-services/execute-sql-task-editor-parameter-mapping-page.md)   
- [Справочник по Transact-SQL (компонент Database Engine)](/sql/t-sql/language-reference)  
+## <a name="see-also"></a>См. также:  
+ [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор задачи «Выполнение SQL» &#40;страница «Общие»&#41;](general-page-of-integration-services-designers-options.md)   
+ [Редактор задачи "Выполнение SQL" &#40;страница "Сопоставление параметров"&#41;](../../2014/integration-services/execute-sql-task-editor-parameter-mapping-page.md)   
+ [Справочник по Transact-SQL &#40;ядро СУБД&#41;](/sql/t-sql/language-reference)  
   
   

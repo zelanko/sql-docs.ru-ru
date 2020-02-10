@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8ad75e136c4bef59f24b451b84f03e06d71a32ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62912548"
 ---
-# <a name="mssqlserver8992"></a>MSSQLSERVER_8992
+# <a name="mssqlserver_8992"></a>MSSQLSERVER_8992
     
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|8992|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC3_CHECK_CATALOG|  
-|Текст сообщения|Проверка каталога Msg ошибка уровень LEVEL, состояние STATE: СООБЩЕНИЕ.|  
+|Текст сообщения|Check Catalog Msg ERROR Level LEVEL State STATE: MESSAGE.|  
   
 ## <a name="explanation"></a>Объяснение  
  Инструкции DBCC CHECKCATALOG или DBCC CHECKDB обнаружили несогласованность в системных таблицах метаданных для указанного объекта. То есть существует несогласованность между записанным идентификатором объекта и объектом, указанным в сообщении об ошибке.  
@@ -74,7 +74,7 @@ ms.locfileid: "62912548"
 ### <a name="do-not-manually-update-system-tables"></a>Не обновляйте системные таблицы вручную  
  Не вносите изменения в системные таблицы вручную. SQL Server не поддерживает внесенных вручную каких-либо изменений в системные базы данных. В случае обновления системной таблицы в базе данных SQL Server в журнале регистрируются два события (идентификаторы событий 17659 и 3859). Дополнительные сведения см. в статье базы знаний 2688307 «При обновлении системных таблиц в базе данных SQL Server регистрируются события с идентификаторами 17659 и 3859».  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [При обновлении системных таблиц в базе данных SQL Server в журнале регистрируются события с идентификаторами 17659 и 3859](https://support.microsoft.com/kb/2688307/EN-US).  
   
   

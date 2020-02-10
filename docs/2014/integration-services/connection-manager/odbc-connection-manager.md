@@ -16,16 +16,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c6c7ecd59bcf3a3ece0d61ecbb428bb39a80068f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833766"
 ---
 # <a name="odbc-connection-manager"></a>диспетчер соединений ODBC
   Диспетчер соединений ODBC позволяет пакету подключаться к разнообразным системам управления базами данных, используя открытый интерфейс взаимодействия с базами данных (ODBC).  
   
- При добавлении соединения ODBC к пакету и задании свойств диспетчера соединений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] создают диспетчер соединений и добавляет диспетчер соединений для `Connections` коллекцию пакета. Во время выполнения диспетчер соединений рассматривается как физическое соединение с ODBC.  
+ При добавлении подключения ODBC к пакету и задании свойств [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] диспетчера соединений создает диспетчер соединений и добавляет его в `Connections` коллекцию пакета. Во время выполнения диспетчер соединений рассматривается как физическое соединение с ODBC.  
   
  Свойству `ConnectionManagerType` диспетчера соединений присваивается значение `ODBC`.  
   
@@ -42,11 +42,11 @@ ms.locfileid: "62833766"
   
  Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в одном из последующих разделов.  
   
--   [Справочник по пользовательскому интерфейсу диспетчера подключений ODBC](../odbc-connection-manager-ui-reference.md)  
+-   [Справочник по пользовательскому интерфейсу диспетчера соединений ODBC](../odbc-connection-manager-ui-reference.md)  
   
  Дополнительные сведения о программной настройке диспетчера подключений см. в разделах <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> и [Добавление соединений программным образом](../building-packages-programmatically/adding-connections-programmatically.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Соединения в службах Integration Services (SSIS)](integration-services-ssis-connections.md)  
   
   

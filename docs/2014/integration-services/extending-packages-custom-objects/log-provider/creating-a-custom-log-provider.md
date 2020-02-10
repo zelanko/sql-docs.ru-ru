@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: db5ec327ab7f7672a55fbaa0d2cd086bbcfc67cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62896306"
 ---
 # <a name="creating-a-custom-log-provider"></a>Создание пользовательского регистратора
@@ -33,7 +33,7 @@ ms.locfileid: "62896306"
   
 -   Переопределите реализацию методов и свойств базового класса. Для регистратора это свойство <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A>, методы <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.OpenLog%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> и <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.CloseLog%2A>.  
   
--   Настраиваемые пользовательские интерфейсы для пользовательских регистраторов в службах [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] не реализуются.  
+-   Настраиваемые пользовательские интерфейсы для пользовательских регистраторов не реализуются в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)].  
   
 ## <a name="getting-started-with-a-custom-log-provider"></a>Приступая к работе над пользовательским регистратором  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62896306"
 >  Многие регистраторы служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] имеют собственный пользовательский интерфейс, в котором реализован интерфейс <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI>, а вместо содержимого текстового поля **Конфигурация** в диалоговом окне **Настройка журналов служб SSIS** используется фильтруемый раскрывающийся список доступных диспетчеров соединений. Однако пользовательские интерфейсы для пользовательских регистраторов не реализуются в службах [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)].  
   
 ### <a name="applying-the-dtslogprovider-attribute"></a>Применение атрибута DtsLogProvider  
- Примените к созданному классу атрибут <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute>, чтобы определить его в качестве регистратора. Этот атрибут содержит сведения для времени разработки, например, имя и описание регистратора. `DisplayName` И `Description` свойства атрибута соответствуют **имя** и `Description` столбцов, отображаемых в **Настройка журналов служб SSIS** редактором — отображается, когда Настройка ведения журнала для пакета в [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].  
+ Примените к созданному классу атрибут <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute>, чтобы определить его в качестве регистратора. Этот атрибут содержит сведения для времени разработки, например, имя и описание регистратора. Свойства `DisplayName` и `Description` атрибута соответствуют **имени** и `Description` столбцам, отображаемым в редакторе " **Настройка журналов служб SSIS** ", который отображается при настройке ведения журнала для пакета в [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].  
   
 > [!IMPORTANT]  
 >  Свойство <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute.LogProviderType%2A> атрибута не используется. Однако необходимо ввести значение для него, в противном случае пользовательский регистратор не будет отображаться в списке доступных регистраторов.  
@@ -73,10 +73,10 @@ public class MyLogProvider : LogProviderBase
 ## <a name="building-deploying-and-debugging-a-custom-log-provider"></a>Построение, развертывание и отладка пользовательского регистратора  
  Построение, развертывание и отладка пользовательского регистратора в службах [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] осуществляется за несколько шагов, аналогичных используемым при работе с другими типами пользовательских объектов. Дополнительные сведения см. в разделе [Сборка, развертывание и отладка пользовательских объектов](../building-deploying-and-debugging-custom-objects.md).  
   
-![Значок служб Integration Services (маленький)](../../media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
+![Значок Integration Services (маленький)](../../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
-## <a name="see-also"></a>См. также  
- [Создание кода пользовательского регистратора](coding-a-custom-log-provider.md)   
+## <a name="see-also"></a>См. также:  
+ [Программирование пользовательского регистратора](coding-a-custom-log-provider.md)   
  [Разработка пользовательского интерфейса для пользовательского регистратора](developing-a-user-interface-for-a-custom-log-provider.md)  
   
   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 44245b7e64a1ccb16180fd0ceaa0f1dde0937133
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060399"
 ---
 # <a name="connection-managers-area"></a>Область диспетчеров соединений
@@ -26,8 +26,8 @@ ms.locfileid: "66060399"
   
  Щелкните правой кнопкой мыши в этой области, затем из контекстного меню выберите нужную задачу.  
   
-## <a name="see-also"></a>См. также  
- [Соединения в службах Integration Services (SSIS)](connection-manager/integration-services-ssis-connections.md)   
- [Конструктор служб SSIS](ssis-designer.md)  
+## <a name="see-also"></a>См. также:  
+ [Integration Services &#40;соединений&#41; SSIS](connection-manager/integration-services-ssis-connections.md)   
+ [конструктор служб SSIS](ssis-designer.md)  
   
   

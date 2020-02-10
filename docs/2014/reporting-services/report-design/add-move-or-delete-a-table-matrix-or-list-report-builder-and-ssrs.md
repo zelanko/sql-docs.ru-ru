@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3e98a5c49877f6bc94e9e3ac1e880c90229cd3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106601"
 ---
 # <a name="add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs"></a>Добавление, перемещение или удаление таблицы, матрицы или списка (построитель отчетов и службы SSRS)
@@ -32,7 +32,7 @@ ms.locfileid: "66106601"
   
 1.  На вкладке **Вставка** выберите пункт **Таблица** или **Матрица**, а затем выберите команду **Мастер таблиц** или **Мастер матриц**.  
   
-2.  Выполните действия, описанные в **NewTable** или **новой матрицы** мастера.  
+2.  Выполните действия, описанные в мастере **невтабле** или **new Matrix** .  
   
 3.  На вкладке **Корневая папка** нажмите кнопку **Выполнить** , чтобы вывести отчет, готовый для просмотра.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "66106601"
   
 -   Выделите области данных, щелкните внутри нее правой кнопкой мыши, а затем выберите команду **Удалить**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Область данных табликса (построитель отчетов и службы SSRS)](../tablix-data-region-report-builder-and-ssrs.md)   
  [Таблицы &#40;построитель отчетов и службы SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [Матрицы &#40;построитель отчетов и службы SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   

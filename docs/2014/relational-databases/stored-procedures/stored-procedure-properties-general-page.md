@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5c97c07d34de2b17b6966ab269004612c966b961
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62856444"
 ---
 # <a name="stored-procedure-properties-general-page"></a>Свойства хранимой процедуры (страница «Общие»)
@@ -36,7 +36,7 @@ ms.locfileid: "62856444"
  **Дата создания**  
  Отображает дату создания хранимой процедуры.  
   
- **Name**  
+ **Название**  
  Имя текущей хранимой процедуры.  
   
  **Схема**  
@@ -57,11 +57,11 @@ ms.locfileid: "62856444"
  **Заключенный в кавычки идентификатор**  
  Показывает, был ли объект создан с параметром «заключенный в кавычки идентификатор».  
   
- **Перекомпилировать**  
+ **Повторная компиляция**  
  Показывает, был ли создан объект с параметром RECOMPILE.  
   
-## <a name="see-also"></a>См. также  
- [Хранимые процедуры (компонент Database Engine)](stored-procedures-database-engine.md)   
+## <a name="see-also"></a>См. также:  
+ [Хранимые процедуры (ядро СУБД)](stored-procedures-database-engine.md)   
  [CREATE PROCEDURE (Transact-SQL)](/sql/t-sql/statements/create-procedure-transact-sql)   
  [ALTER PROCEDURE (Transact-SQL)](/sql/t-sql/statements/alter-procedure-transact-sql)  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3ce57aa0ac17a29b9e8f3b0ea7eef3ad1501a60e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107540"
 ---
 # <a name="add-a-filter-to-a-dataset-report-builder-and-ssrs"></a>Добавление фильтра к набору данных (построитель отчетов и службы SSRS)
@@ -71,7 +71,7 @@ ms.locfileid: "66107540"
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Добавление фильтров набора данных, фильтров области данных и групповых фильтров (построитель отчетов и службы SSRS)](../report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](../report-design/expression-examples-report-builder-and-ssrs.md)   
  [Добавление фильтра (построитель отчетов и службы SSRS)](../report-design/add-a-filter-report-builder-and-ssrs.md)  

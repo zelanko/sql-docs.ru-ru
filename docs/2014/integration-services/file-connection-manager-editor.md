@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: df54d7fb7562e6019e581b06fd14b00bdba15376
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058821"
 ---
 # <a name="file-connection-manager-editor"></a>редактор диспетчера подключения файлов
@@ -30,12 +30,12 @@ ms.locfileid: "66058821"
  Дополнительные сведения о диспетчере подключения файлов см. в разделе [File Connection Manager](connection-manager/file-connection-manager.md).  
   
 ## <a name="options"></a>Параметры  
- **Тип применения**  
+ **Тип использования**  
  Укажите, будет ли **Диспетчер подключения файлов** подключаться к существующему файлу или папке или создаст новый файл или папку.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
-|Создать файл|Во время выполнения создается новый файл.|  
+|Создание файла|Во время выполнения создается новый файл.|  
 |Существующий файл|Использовать существующий файл.|  
 |Создать папку|Во время выполнения создается новая папка.|  
 |Существующая папка|Использовать существующую папку.|  
@@ -48,7 +48,7 @@ ms.locfileid: "66058821"
  **Обзор**  
  Выберите файл или папку в диалоговом окне **Выбор файла** или **Выбор папки** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

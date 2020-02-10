@@ -1,5 +1,5 @@
 ---
-title: Редактор назначения обработки измерений (страница «Диспетчер соединений») | Документация Майкрософт
+title: Редактор назначения «Обработка измерений» (страница «Диспетчер соединений») | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2259b19cec6674cdb1f5f4a0064334f78aa5300f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059439"
 ---
 # <a name="dimension-processing-destination-editor-connection-manager-page"></a>Редактор назначения обработки измерений (страница «Диспетчер соединений»)
@@ -39,15 +39,15 @@ ms.locfileid: "66059439"
  **Метод обработки**  
  Выберите метод обработки, применяемый к выбранному в списке измерению. Значение этого параметра по умолчанию — **Полная**.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
-|**Добавление (дополнительное)**|Выполнить добавочную обработку измерения.|  
-|**Полная**|Выполнить полную обработку измерения.|  
-|**Update**|Выполнить обновление обработки измерения.|  
+|**Добавить (добавочное)**|Выполнить добавочную обработку измерения.|  
+|**Полный**|Выполнить полную обработку измерения.|  
+|**Обновляют**|Выполнить обновление обработки измерения.|  
   
-## <a name="see-also"></a>См. также  
- [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор назначения "Обработка измерения" (страница "Сопоставления")](../../2014/integration-services/dimension-processing-destination-editor-mappings-page.md)   
- [Редактор назначения "Обработка измерения" (страница "Дополнительно")](../../2014/integration-services/dimension-processing-destination-editor-advanced-page.md)  
+## <a name="see-also"></a>См. также:  
+ [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор назначения «Обработка измерений» &#40;«сопоставления»&#41;](../../2014/integration-services/dimension-processing-destination-editor-mappings-page.md)   
+ [Редактор назначения "Обработка измерения" &#40;страница "Дополнительно"&#41;](../../2014/integration-services/dimension-processing-destination-editor-advanced-page.md)  
   
   

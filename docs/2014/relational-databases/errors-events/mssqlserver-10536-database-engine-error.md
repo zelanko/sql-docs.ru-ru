@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e5ddb4df0089b488d3a15c76a76abef8be154848
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62870527"
 ---
-# <a name="mssqlserver10536"></a>MSSQLSERVER_10536
+# <a name="mssqlserver_10536"></a>MSSQLSERVER_10536
     
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|10536|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|PG_TOO_MANY_STMTS|  
-|Текст сообщения|Невозможно создать структуру плана "%. \*ls поскольку пакет или модуль, соответствующий указанному `@plan_handle` содержит более 1000 подходящих инструкций. Создайте структуру плана для каждой инструкции в пакете или модуле, указав для каждой инструкции значение `statement_start_offset`.|  
+|Текст сообщения|Не удалось создать структуру плана "%.\*ls", поскольку пакет или модуль, соответствующий указанному параметру `@plan_handle`, содержит более 1000 подходящих инструкций. Создайте структуру плана для каждой инструкции в пакете или модуле, указав для каждой инструкции значение `statement_start_offset`.|  
   
 ## <a name="explanation"></a>Объяснение  
  Пакет или модуль, соответствующий указанному дескриптору `@plan_handle`, содержит больше 1000 подходящих инструкций.  
@@ -38,8 +38,8 @@ ms.locfileid: "62870527"
 ## <a name="user-action"></a>Действие пользователя  
  Создайте структуру плана для каждой инструкции в пакете или модуле, указав для каждой инструкции значение `statement_start_offset`.  
   
-## <a name="see-also"></a>См. также  
- [sp_create_plan_guide (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+## <a name="see-also"></a>См. также:  
+ [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
  [Структуры планов](../performance/plan-guides.md)   
  [sp_create_plan_guide_from_handle (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)  
   

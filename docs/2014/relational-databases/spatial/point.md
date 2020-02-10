@@ -13,10 +13,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: b5027eb9be355348e00b6f17128b821a2bfc2af4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014152"
 ---
 # <a name="point"></a>Точка
@@ -59,10 +59,10 @@ DECLARE @g geometry;
 SET @g = geometry::Parse('POINT(3 4 NULL NULL)');  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [MultiPoint](multipoint.md)   
- [STX (тип данных geometry)](/sql/t-sql/spatial-geometry/stx-geometry-data-type)   
- [STY (тип данных geometry)](/sql/t-sql/spatial-geometry/sty-geometry-data-type)   
+ [STX &#40;типа данных geometry&#41;](/sql/t-sql/spatial-geometry/stx-geometry-data-type)   
+ [STY &#40;типа данных geometry&#41;](/sql/t-sql/spatial-geometry/sty-geometry-data-type)   
  [Пространственные данные (SQL Server)](spatial-data-sql-server.md)  
   
   

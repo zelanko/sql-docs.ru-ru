@@ -1,5 +1,5 @@
 ---
-title: Свойство IsReadOnly (класс SqlServiceAdvancedProperty) | Документация Майкрософт
+title: Свойство IsReadOnly (класс класс sqlserviceadvancedproperty) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: fea64ffe80475bf1dca380c3ca416a9e2a449213
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62911713"
 ---
 # <a name="isreadonly-property-sqlserviceadvancedproperty-class"></a>Свойство IsReadOnly (класс SqlServiceAdvancedProperty)
@@ -37,15 +37,15 @@ object
 ```  
   
 ## <a name="parts"></a>Компоненты  
- *object*  
+ *объектами*  
  Объект [класса SqlServiceAdvancedProperty](sqlserviceadvancedproperty-class.md) , представляющий дополнительное свойство.  
   
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Логическое значение, определяющее, предназначено ли дополнительное свойство только для чтения: `true`, если да; `false`, если дополнительное свойство можно модифицировать.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Запуск и остановка служб](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

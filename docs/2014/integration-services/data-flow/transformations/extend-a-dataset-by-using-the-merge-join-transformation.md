@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d8009dcd369327941004fe220782c38d5602b4dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900307"
 ---
 # <a name="extend-a-dataset-by-using-the-merge-join-transformation"></a>Расширение набора данных при помощи преобразования «Соединение слиянием»
@@ -60,8 +60,8 @@ ms.locfileid: "62900307"
   
 11. Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
-## <a name="see-also"></a>См. также  
- [Merge Join Transformation](merge-join-transformation.md)   
+## <a name="see-also"></a>См. также:  
+ [Преобразование «Соединение слиянием»](merge-join-transformation.md)   
  [Преобразования служб Integration Services](integration-services-transformations.md)   
  [Пути служб Integration Services](../integration-services-paths.md)   
  [Задача потока данных](../../control-flow/data-flow-task.md)  
