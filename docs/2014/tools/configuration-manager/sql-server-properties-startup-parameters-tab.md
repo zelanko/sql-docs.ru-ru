@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5ab3d9e9e4178b1ee2e10e5be63f0ea9252fd4a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62679183"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>Свойства SQL Server (вкладка «Параметры запуска»)
@@ -36,7 +36,7 @@ ms.locfileid: "62679183"
   
 -   Каждый параметр запуска начинается с символа "—" (тире), вторым символом является буква.  
   
-## <a name="required-parameters"></a>Обязательные параметры  
+## <a name="required-parameters"></a>Необходимые параметры  
  Следующие параметры обязательны: Их можно изменять, но не удалять.  
   
 -   -d представляет путь к файлу **master.mdf** (файл данных базы данных master).  
@@ -69,7 +69,7 @@ ms.locfileid: "62679183"
 > [!CAUTION]  
 >  Некоторые необязательные параметры могут изменить поведение сервера и повлиять на его производительность.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Доступ к этой странице имеют только пользователи, уполномоченные изменять соответствующие записи в реестре. Это следующие пользователи.  
   
 -   Члены локальной группы администраторов.  
@@ -77,6 +77,6 @@ ms.locfileid: "62679183"
 -   Учетная запись домена, используемая [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] настроен для работы под определенной учетной записью домена.  
   
 ## <a name="books-online-references"></a>Электронная документация  
- Дополнительные сведения о параметрах запуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе о настроить параметры запуска сервера (диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])» электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Дополнительные сведения о параметрах запуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в статье "Инструкции. Настройка параметров запуска сервера (диспетчер конфигурации[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )" в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
   

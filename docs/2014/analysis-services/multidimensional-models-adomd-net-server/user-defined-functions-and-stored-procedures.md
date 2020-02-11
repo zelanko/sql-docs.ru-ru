@@ -17,14 +17,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c81d64d8aee6bb44451ab8d2e9a7b671af2ac06a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62727860"
 ---
 # <a name="user-defined-functions-and-stored-procedures"></a>Определяемые пользователем функции и хранимые процедуры
-  Серверные объекты ADOMD.NET, можно создать определяемую пользователем функцию (UDF) или хранимых процедур для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , взаимодействующих с метаданные и данные с сервера. Эти внутрипроцессные методы вызываются при помощи инструкций на языке MDX или DMX для предоставления дополнительных функциональных возможностей без задержек, связанных с обменом данными по сети.  
+  С помощью объектов ADOMD.NET Server можно создать определяемую пользователем функцию (UDF) или хранимые процедуры [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для взаимодействия с метаданными и данными с сервера. Эти внутрипроцессные методы вызываются при помощи инструкций на языке MDX или DMX для предоставления дополнительных функциональных возможностей без задержек, связанных с обменом данными по сети.  
   
 ## <a name="udf-examples"></a>Примеры определяемых пользователем функций  
  Определяемая пользователем функция — это метод, который можно вызывать в контексте инструкции MDX или DMX; он может принимать любое количество параметров и возвращать данные любого типа.  
@@ -81,7 +81,7 @@ public Set RandomSample(Set set, int returnCount)
 }  
 ```  
   
- Описанная выше функция вызывается в следующем примере многомерного выражения (MDX). В этом примере многомерных Выражений извлекаются пять случайно выбранных штатов или провинций из **Adventure Works** базы данных.  
+ Описанная выше функция вызывается в следующем примере многомерного выражения (MDX). В этом примере многомерных выражений из базы данных **Adventure Works** извлекаются пять случайных состояний или провинции.  
   
 ```  
 SELECT SampleAssembly.RandomSample([Geography].[State-Province].Members, 5) on ROWS,   

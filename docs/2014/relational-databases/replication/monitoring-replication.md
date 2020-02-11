@@ -19,24 +19,25 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: e2b3441d98bc9226abce3a49fd28820df6ec99ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62666872"
 ---
 # <a name="monitoring-replication"></a>Наблюдение (репликация)
   Наблюдение за топологией репликации является важным аспектом развертывания репликации. Так как активность репликации является распределенной, важно отслеживать активность и состояние всех компьютеров, участвующих в репликации. Для наблюдения за репликацией можно использовать следующие средства:  
   
--   Монитор репликации[!INCLUDE[msCoName](../../includes/msCoName-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]  
+-   [!INCLUDE[msCoName](../../includes/msCoName-md.md)][!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] Монитор репликации  
   
-     Монитор репликации является самым важным средством наблюдения за репликацией, представляющим ориентированное на издателя представление всех действий, связанных с репликацией. Дополнительные сведения см. в разделе [мониторинг производительности с помощью монитора репликации](monitor/monitor-performance-with-replication-monitor.md).  
+     Монитор репликации является самым важным средством наблюдения за репликацией, представляющим ориентированное на издателя представление всех действий, связанных с репликацией. Дополнительные сведения см. в статье [мониторинг производительности с помощью монитора репликации](monitor/monitor-performance-with-replication-monitor.md).  
   
 -   [!INCLUDE[msCoName](../../includes/msCoName-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssManStudioFull-md.md)]  
   
-     Среда[!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] предоставляет доступ к монитору репликации. Кроме того, он дает возможность просмотра текущего состояния и последнего сообщения в журнал следующими агентами, а также можно запускать и останавливать все агенты: Агент чтения журнала, агент моментальных снимков, агент слияния и агент распространителя. Дополнительные сведения см. в статье [Monitor Replication Agents](monitor/monitor-replication-agents.md).  
+     Среда[!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] предоставляет доступ к монитору репликации. Здесь тоже существует возможность просмотра текущего состояния и последнего сообщения, записанного в журнал следующими агентами, и можно запускать и останавливать все агенты: агент чтения журнала, агент моментальных снимков, агент слияния и агент распространителя. Дополнительные сведения см. в статье [Monitor Replication Agents](monitor/monitor-replication-agents.md).  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] и объекты управления репликацией (RMO)  
+-   
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] и объекты управления репликацией (RMO)  
   
      Оба интерфейса позволяют наблюдать с распространителя за репликациями всех типов. Репликация слиянием также предоставляет возможность наблюдения за репликацией с подписчика.  
   
@@ -48,9 +49,9 @@ ms.locfileid: "62666872"
   
      Системный монитор может использоваться для наблюдения за производительностью, предоставляя ряд счетчиков для репликаций. Дополнительные сведения см. в статье [Monitoring Replication with System Monitor](monitor/monitoring-replication-with-system-monitor.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Вопросы и ответы об администрировании репликации](administration/frequently-asked-questions-for-replication-administrators.md)   
- [Рекомендации по администрированию репликации](administration/best-practices-for-replication-administration.md)   
+ [Best Practices for Replication Administration](administration/best-practices-for-replication-administration.md)   
 
   
   

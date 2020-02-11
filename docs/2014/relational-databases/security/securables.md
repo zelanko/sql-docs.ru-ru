@@ -19,16 +19,16 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 7c4a82cfa4d8a82db1e01c49899c3c49c2e01ee9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62745723"
 ---
 # <a name="securables"></a>Защищаемые объекты
   К защищаемым объектами относятся ресурсы, доступ к которым регулируется системой авторизации компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Например, защищаемым объектом является таблица. Некоторые защищаемые объекты могут храниться внутри других, создавая иерархии «областей», которые сами могут защищаться. К областям защищаемых объектов относятся **сервер**, **база данных**и **схема**.  
   
-## <a name="securable-scope-server"></a>Область защищаемых объектов: Сервер  
+## <a name="securable-scope-server"></a>Область защищаемых объектов: сервер  
  Область защищаемых объектов **сервера** содержит следующие защищаемые объекты:  
   
 -   группа доступности  
@@ -41,7 +41,7 @@ ms.locfileid: "62745723"
   
 -   База данных  
   
-## <a name="securable-scope-database"></a>Область защищаемых объектов: База данных  
+## <a name="securable-scope-database"></a>Область защищаемых объектов: база данных  
  Область защищаемых объектов **базы данных** содержит следующие защищаемые объекты:  
   
 -   Роль приложения  
@@ -74,7 +74,7 @@ ms.locfileid: "62745723"
   
 -   Симметричный ключ  
   
--   Пользовательская  
+-   Пользователь  
   
 ## <a name="securable-scope-schema"></a>Область защищаемых объектов: схема  
  Область защищаемых объектов **схемы** содержит следующие защищаемые объекты:  
@@ -108,14 +108,14 @@ ms.locfileid: "62745723"
 ## <a name="related-content"></a>См. также  
  [Обеспечение безопасности SQL Server](securing-sql-server.md)  
   
- [sys.database_principals (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-database-principals-transact-sql)  
+ [sys. database_principals &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-principals-transact-sql)  
   
- [sys.database_role_members (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-database-role-members-transact-sql)  
+ [sys. database_role_members &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-role-members-transact-sql)  
   
- [sys.server_principals (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql)  
+ [sys. server_principals &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql)  
   
- [sys.server_role_members (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-server-role-members-transact-sql)  
+ [sys. server_role_members &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-role-members-transact-sql)  
   
- [sys.sql_logins (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-sql-logins-transact-sql)  
+ [sys. sql_logins &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sql-logins-transact-sql)  
   
   

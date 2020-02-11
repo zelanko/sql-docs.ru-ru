@@ -1,5 +1,5 @@
 ---
-title: Массовая загрузка данных в таблицы в публикации слиянием (Программирование репликации Transact-SQL) | Документация Майкрософт
+title: Выполнить массовый загрузку данных в таблицы в публикации слиянием (программирование репликации на языке Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 09e535057fcf573dfa189b7e5fdc0e0df06e5d4a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721766"
 ---
 # <a name="bulk-load-data-into-tables-in-a-merge-publication-replication-transact-sql-programming"></a>выполнить массовую загрузку данных в таблицы при публикации слиянием (программирование репликации на языке Transact-SQL)
@@ -34,6 +34,6 @@ ms.locfileid: "62721766"
   
     -   Выполните операцию массового копирования с параметром FIRE_TRIGGERS.  
   
-    -   В базе данных, в которую вставлены данные, выполните процедуру [sp_addtabletocontents (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addtabletocontents-transact-sql). Укажите в параметре **@table_name** .  
+    -   В базе данных, в которую вставлены данные, выполните процедуру [sp_addtabletocontents (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addtabletocontents-transact-sql). Укажите имя таблицы, в которую вставляются данные **@table_name**.  
   
   

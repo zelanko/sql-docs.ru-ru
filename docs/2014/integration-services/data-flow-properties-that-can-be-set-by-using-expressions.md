@@ -1,5 +1,5 @@
 ---
-title: Поток данных, которые могут устанавливаться с помощью выражений свойств | Документация Майкрософт
+title: Свойства потока данных, которые могут быть установлены с помощью выражений | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f70a956834108c21dd7b17bb9f3e04db38f29bfa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059943"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>Свойства потока данных, которые можно задавать с помощью выражений
@@ -35,7 +35,7 @@ ms.locfileid: "66059943"
   
  Чтобы задать выражение свойств для одного из свойств объектов потока данных, перечисленных в этом разделе, откройте окно **Свойства** для задачи потока данных, выбрав задачу потока данных в области конструктора **Поток управления** или перейдя в конструкторе на вкладку **Поток данных** , не указывая отдельных компонентов или пути. Выберите свойство **Выражения** и нажмите кнопку с многоточием (...), чтобы отобразить диалоговое окно **Редактор выражений свойств** . Выберите свойство из раскрывающегося списка **Свойство** , затем введите выражение в текстовом поле **Выражение** и нажмите кнопку с многоточием (...), чтобы отобразить диалоговое окно **Построитель выражений** .  
   
- Список **Свойство** содержит доступные свойства только для объектов потока данных, уже помещенных в область **Поток данных** конструктора. Поэтому нельзя использовать список **Свойство** для просмотра всех возможных свойств объектов потока данных, которые поддерживают выражения свойств. Например, если источник ADO NET помещен в рабочей области конструктора **свойство** список содержит запись для `[ADO NET Source].[SqlCommand]` свойство. Список также отображает многие свойства самой задачи потока данных.  
+ Список **Свойство** содержит доступные свойства только для объектов потока данных, уже помещенных в область **Поток данных** конструктора. Поэтому нельзя использовать список **Свойство** для просмотра всех возможных свойств объектов потока данных, которые поддерживают выражения свойств. Например, если вы поместили источник ADO NET в области конструктора, список **свойств** содержит запись для `[ADO NET Source].[SqlCommand]` свойства. Список также отображает многие свойства самой задачи потока данных.  
   
 ## <a name="properties-of-data-flow-objects-that-support-property-expressions"></a>Свойства объектов потока данных, которые поддерживают выражения свойств  
  Значения свойств в следующем списке могут быть заданы с использованием выражений свойств.  
@@ -45,7 +45,7 @@ ms.locfileid: "66059943"
 |Объект потока данных|Свойство|  
 |----------------------|--------------|  
 |источник ADO NET|Свойство TableOrViewName<br /><br /> Свойство SqlCommand|  
-|XML-источник|Свойство XMLData<br /><br /> Свойство XMLSchemaDefinition|  
+|Источник XML|Свойство XMLData<br /><br /> Свойство XMLSchemaDefinition|  
   
 ### <a name="data-flow-transformations"></a>Преобразования потока данных  
  Дополнительные сведения об этих пользовательских свойствах см. в разделе [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md).  
@@ -71,7 +71,7 @@ ms.locfileid: "66059943"
 |Назначение «ADO.NET»|Свойство TableOrViewName<br /><br /> Свойство BatchSize<br /><br /> Свойство CommandTimeout|  
 |назначение «Неструктурированный файл»|Свойство Header|  
 |Назначение [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact|Свойство TableName|  
-|Назначение [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Свойство BulkInsertTableName<br /><br /> Свойство BulkInsertFirstRow<br /><br /> Свойство BulkInsertLastRow<br /><br /> Свойство BulkInsertOrder<br /><br /> Свойство Timeout|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]местоназначение|Свойство BulkInsertTableName<br /><br /> Свойство BulkInsertFirstRow<br /><br /> Свойство BulkInsertLastRow<br /><br /> Свойство BulkInsertOrder<br /><br /> Свойство Timeout|  
   
 ## <a name="related-tasks"></a>Связанные задачи  
   
@@ -80,9 +80,9 @@ ms.locfileid: "66059943"
 ## <a name="related-content"></a>См. также  
  Техническая статья [Памятка выражений служб SSIS](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet)на сайте pragmaticworks.com  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование выражений свойств в пакетах](expressions/use-property-expressions-in-packages.md)   
- [Common Properties](../../2014/integration-services/common-properties.md)   
+ [Общие свойства](../../2014/integration-services/common-properties.md)   
  [Пользовательские свойства преобразования](data-flow/transformations/transformation-custom-properties.md)   
  [Свойства пути](../../2014/integration-services/path-properties.md)  
   

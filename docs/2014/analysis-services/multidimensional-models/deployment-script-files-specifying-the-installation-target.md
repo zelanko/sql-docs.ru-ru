@@ -18,14 +18,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f5a46dc4c6130bb49d973ffc0025388c563c080f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075220"
 ---
 # <a name="specifying-the-installation-target"></a>Указание целевого объекта установки
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Мастер развертывания служб считывает сведения о целевом установки из \< *имя_проекта*> .deploymenttargets файл. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] создает этот файл при построении проекта служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] использует базу данных и сервер, указанные на **развертывания** странице * \<имя проекта >* **страницы свойств** диалоговое окно, чтобы создать \< *имя_проекта*> TARGETS-файле.  
+  Мастер [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] развертывания считывает сведения о целевом объекте установки из \<файла *Project*>. deploymenttargets. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]создает этот файл при сборке [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] проекта. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]использует базу данных и сервер, указанные на странице **развертывание** диалогового окна свойства * \<имя проекта>* диалоговом окне **страницы свойств** , чтобы создать \< *имя проекта*>. targets.  
   
 ## <a name="modifying-the-installation-target-for-deployment"></a>Измерение целевого объекта установки для развертывания  
  В некоторых ситуациях может быть необходимо развернуть проект служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в базу данных или экземпляр служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , отличающийся от указанного на странице **Развертывание** . Например может быть необходимо развернуть проект на сервер для тестирования перед развертыванием, а затем развернуть его на производственный сервер после окончания тестирования. Может также быть необходимо развернуть завершенный и протестированный проект на несколько производственных серверов в кластере балансирования сетевой нагрузки, или на промежуточный сервер и производственный сервер.  
@@ -42,11 +42,11 @@ ms.locfileid: "66075220"
   
      -или-  
   
--   Изменить \< *имя_проекта*> файл .deploymenttargets, используя любой текстовый редактор.  
+-   \<Измените *имя проекта*>. deploymenttargets с помощью любого текстового редактора.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Указание параметров развертывания секций и ролей](deployment-script-files-partition-and-role-deployment-options.md)   
- [Указание настроек конфигурации для развертывания решения](deployment-script-files-solution-deployment-config-settings.md)   
+ [Указание параметров конфигурации для развертывания решения](deployment-script-files-solution-deployment-config-settings.md)   
  [Указание параметров обработки](deployment-script-files-specifying-processing-options.md)  
   
   

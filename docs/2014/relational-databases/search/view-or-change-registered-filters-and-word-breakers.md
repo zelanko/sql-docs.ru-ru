@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 97bf5b2f1838531c305cf663d050201d5f34ce82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010932"
 ---
 # <a name="view-or-change-registered-filters-and-word-breakers"></a>Просмотр или изменение зарегистрированных фильтры и разделители слов
@@ -98,9 +98,9 @@ ms.locfileid: "66010932"
     EXEC sp_fulltext_service 'restart_all_fdhosts';   
     ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Настройка учетной записи службы средства запуска управляющей программы полнотекстовой фильтрации](set-the-service-account-for-the-full-text-filter-daemon-launcher.md)   
- [Настройка поисковых фильтров и управление ими](configure-and-manage-filters-for-search.md)   
+ [Настройка и управление фильтрами для поиска](configure-and-manage-filters-for-search.md)   
  [Настройка и управление средством разбиения на слова и парадигматические модули для поиска](configure-and-manage-word-breakers-and-stemmers-for-search.md)  
   
   

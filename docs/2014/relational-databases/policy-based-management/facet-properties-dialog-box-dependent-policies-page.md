@@ -13,17 +13,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8f6817e1fd906a577801625b4ab4320cc957e539
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62704919"
 ---
 # <a name="facet-properties-dialog-box-dependent-policies-page"></a>Диалоговое окно «Свойства аспекта», вкладка «Зависимые политики»
   Используйте это диалоговое окно для отображения списка политик, которые в данный момент ссылаются на этот аспект управления на основе политик.  
   
 ## <a name="options"></a>Параметры  
- **Name**  
+ **Название**  
  Перечисляет имена всех политик, упоминающих данный текущий аспект.  
   
  **Enabled**  
@@ -32,10 +32,10 @@ ms.locfileid: "62704919"
  **Журнал**  
  Перейдите по гиперссылке **Просмотр журнала** , чтобы отобразить отчет журнала выполнения.  
   
- **Создан**  
+ **Создание**  
  Дата создания политики.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Администрирование серверов с помощью управления на основе политик](administer-servers-by-using-policy-based-management.md)  
   
   

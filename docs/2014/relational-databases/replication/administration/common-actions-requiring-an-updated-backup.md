@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 184bda56568cfcedbc07183bd2be7fdde7a789e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62705038"
 ---
 # <a name="common-actions-requiring-an-updated-backup"></a>Общие действия, для которых необходима обновленная резервная копия
@@ -105,7 +105,7 @@ ms.locfileid: "62705038"
   
 -   Включения или отключения режима издателя на распространяющем издателе (на издателе и на распространителе).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Резервное копирование и восстановление баз данных SQL Server](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Создание резервных копий реплицируемых баз данных и восстановление из них](back-up-and-restore-replicated-databases.md)  
   

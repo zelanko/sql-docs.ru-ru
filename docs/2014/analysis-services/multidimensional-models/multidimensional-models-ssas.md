@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2839ecff951a9f1547a05b60f6957ed5976bee9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073493"
 ---
 # <a name="multidimensional-modeling-ssas"></a>Многомерное моделирование (службы SSAS)
@@ -26,13 +26,13 @@ ms.locfileid: "66073493"
  Другим важным преимуществом использования многомерных баз данных служб Analysis Services является интеграция с распространенными средствами создания отчетов бизнес-аналитики, например Excel, службами Reporting Services и PerformancePoint, а также с пользовательскими приложениями и решениям сторонних производителей.  
   
 ## <a name="in-this-section"></a>в этом разделе  
- [Решения многомерной модели (службы SSAS)](multidimensional-model-solutions-ssas.md)  
+ [Решения многомерной модели &#40;SSAS&#41;](multidimensional-model-solutions-ssas.md)  
   
- [Базы данных многомерных моделей (службы SSAS)](multidimensional-model-databases-ssas.md)  
+ [Базы данных многомерной модели &#40;SSAS&#41;](multidimensional-model-databases-ssas.md)  
   
  [Обработка объектов многомерной модели](processing-a-multidimensional-model-analysis-services.md)  
   
- [Роли и разрешения (службы Analysis Services)](roles-and-permissions-analysis-services.md)  
+ [Роли и разрешения &#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)  
   
  [Power View для многомерных моделей](power-view-for-multidimensional-models.md)  
   

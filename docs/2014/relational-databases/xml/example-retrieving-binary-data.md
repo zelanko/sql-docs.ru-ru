@@ -1,5 +1,5 @@
 ---
-title: Пример Получение двоичных данных | Документация Майкрософт
+title: Пример. Получение двоичных данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c39f508d20e194b0031baecf168851cd300031e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62704846"
 ---
-# <a name="example-retrieving-binary-data"></a>Пример Получение двоичных данных
+# <a name="example-retrieving-binary-data"></a>Пример. Получение двоичных данных
   В следующем запросе возвращается фотография продукта, хранящаяся в столбце с типом данных `varbinary(max)`. Для возвращения двоичных данных в base64-кодированном формате для запроса должен быть определен параметр `BINARY BASE64` .  
   
 ## <a name="example"></a>Пример  
@@ -34,13 +34,13 @@ FOR XML RAW, BINARY BASE64 ;
 GO  
 ```  
   
- Это результат:  
+ Результат:  
   
 ```  
 <row ProductModelID="1" ThumbNailPhoto="base64 encoded binary data"/>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Использование с RAW Mode для FOR XML](use-raw-mode-with-for-xml.md)  
+## <a name="see-also"></a>См. также:  
+ [Использование RAW Mode с FOR XML](use-raw-mode-with-for-xml.md)  
   
   
