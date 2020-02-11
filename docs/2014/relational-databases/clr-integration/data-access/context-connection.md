@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f6334964a58e643ad373aa8fb0599f39bd3ba01c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919233"
 ---
 # <a name="context-connection"></a>Контекстное соединение
@@ -51,10 +51,10 @@ End Using
 ```  
   
 ## <a name="in-this-section"></a>в этом разделе  
- [Сравнение обычных и контекстных подключений](context-connections-vs-regular-connections.md)  
+ [Обычные и контекстные соединения](context-connections-vs-regular-connections.md)  
  Описывает разницу между регулярными и контекстными соединениями.  
   
- [Ограничения обычных и контекстных подключений](context-connections-and-regular-connections-restrictions.md)  
+ [Ограничения обычных и контекстных соединений](context-connections-and-regular-connections-restrictions.md)  
  Описывает ограничения регулярных и контекстных соединений.  
   
   

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 42791ed9e60ad633ee1331dfc8326d58c0546000
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022553"
 ---
 # <a name="administrative-considerations-for-oracle-publishers"></a>Вопросы управления издателями Oracle
@@ -62,9 +62,9 @@ ms.locfileid: "63022553"
   
  Сведения об удалении и повторной настройке издателя см. в подразделе «Изменения, требующие повторной настройки издателя» раздела [Troubleshooting Oracle Publishers](troubleshooting-oracle-publishers.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Настройка издателя Oracle](configure-an-oracle-publisher.md)   
- [Рекомендации по структуре и ограничения для издателей Oracle](design-considerations-and-limitations-for-oracle-publishers.md)   
- [Обзор публикации Oracle](oracle-publishing-overview.md)  
+ [Рекомендации по проектированию и ограничения для издателей Oracle](design-considerations-and-limitations-for-oracle-publishers.md)   
+ [Общие сведения о публикации Oracle](oracle-publishing-overview.md)  
   
   

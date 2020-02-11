@@ -18,10 +18,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e78e31157f62346baf12d58c146ed99aab205408
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482653"
 ---
 # <a name="reactivate-a-member-or-collection-master-data-services"></a>Повторная активация элемента или коллекции (службы Master Data Services)
@@ -39,7 +39,7 @@ ms.locfileid: "65482653"
   
  При повторной активации коллекции или элемента восстанавливаются все предыдущие транзакции.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения этой процедуры:  
   
 -   В [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]необходимо иметь разрешение на доступ к функциональной области **Управление версиями** .  
@@ -62,10 +62,10 @@ ms.locfileid: "65482653"
   
 7.  В диалоговом окне подтверждения нажмите кнопку **ОК**. Будет добавлена новая транзакция со значением **Активный** в столбце **Новое значение** .  
   
-## <a name="see-also"></a>См. также  
- [Отключение или удаление членов с помощью промежуточного процесса &#40;службы Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)   
- [Удаление элемента или коллекции (службы Master Data Services)](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)   
- [Элементы (службы Master Data Services)](../../2014/master-data-services/members-master-data-services.md)   
- [Коллекции (службы Master Data Services)](../../2014/master-data-services/collections-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Отключение или удаление членов с помощью промежуточного процесса &#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)   
+ [Удаление элемента или коллекции &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)   
+ [Master Data Services &#40;членов&#41;](../../2014/master-data-services/members-master-data-services.md)   
+ [&#40;коллекций Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  
   
   

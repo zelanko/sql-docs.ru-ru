@@ -20,16 +20,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 78a9b551ae44348de1c007533be3606b33c974cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62926288"
 ---
 # <a name="view-package-objects"></a>просмотр объектов пакета
   В конструкторе служб [!INCLUDE[ssIS](../includes/ssis-md.md)] вкладка **Обозреватель пакетов** предоставляет режим обозревателя. В данном режиме отображается иерархия контейнеров архитектуры [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Контейнер пакетов стоит на самом верху иерархии. При разворачивании пакета можно просмотреть все соединения, исполняемые объекты, обработчики событий, регистраторы, объекты управления очередностью и переменные.  
   
- Исполняемые объекты, то есть контейнеры и задачи в пакете, могут содержать обработчики событий, элементы управления очередностью и переменные. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] поддерживают вложенную иерархию контейнеров, а контейнеры «цикл по элементам», «цикл по каждому элементу» и контейнер последовательности могут содержать другие исполняемые объекты.  
+ Исполняемые объекты, то есть контейнеры и задачи в пакете, могут содержать обработчики событий, элементы управления очередностью и переменные. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]поддерживает вложенную иерархию контейнеров, а контейнеры «цикл по элементам», «цикл по каждому элементу» и контейнеров последовательности могут включать другие исполняемые объекты.  
   
  Если пакет содержит поток данных, то вкладка **Обозреватель пакетов** содержит задачу потока данных, а также папку **Компоненты** , которая содержит список компонентов потока данных.  
   
@@ -37,18 +37,18 @@ ms.locfileid: "62926288"
   
  На следующей диаграмме показана древовидная структура простого пакета.  
   
- ![Снимок экрана: вкладка "Обозреватель пакетов"](media/packageexplorer.gif "Снимок экрана: вкладка \"Обозреватель пакетов\"")  
+ ![Снимок экрана: вкладка «Обозреватель пакетов»](media/packageexplorer.gif "Снимок экрана: вкладка «Обозреватель пакетов»")  
   
 ### <a name="to-view-package-content"></a>Просмотр содержимого пакета  
   
 -   [Просмотр объектов пакета в обозревателе пакетов](../../2014/integration-services/view-package-objects-in-package-explorer.md)  
   
-## <a name="see-also"></a>См. также  
- [Задачи служб Integration Services](control-flow/integration-services-tasks.md)   
- [Контейнеры служб Integration Services](control-flow/integration-services-containers.md)   
+## <a name="see-also"></a>См. также:  
+ [Задачи Integration Services](control-flow/integration-services-tasks.md)   
+ [Контейнеры Integration Services](control-flow/integration-services-containers.md)   
  [Управление очередностью](control-flow/precedence-constraints.md)   
- [Переменные в службах Integration Services (SSIS)](integration-services-ssis-variables.md)   
- [Обработчики событий в службах Integration Services (SSIS)](integration-services-ssis-event-handlers.md)   
- [Ведение журналов в службах Integration Services (SSIS)](performance/integration-services-ssis-logging.md)  
+ [Integration Services &#40;переменные&#41; SSIS](integration-services-ssis-variables.md)   
+ [Integration Services &#40;служб SSIS&#41; обработчики событий](integration-services-ssis-event-handlers.md)   
+ [Ведение журнала&#41; Integration Services &#40;SSIS](performance/integration-services-ssis-logging.md)  
   
   

@@ -26,10 +26,10 @@ ms.author: genemi
 ms.reviewer: ''
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 670b11e86498116549c395c47364604e72b790a4
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75246864"
 ---
 # <a name="hiding-elements-and-attributes-by-using-sqlhide"></a>Скрытие элементов и атрибутов при помощи sql:hide
@@ -41,7 +41,7 @@ ms.locfileid: "75246864"
 ## <a name="examples"></a>Примеры  
  Чтобы создать рабочие образцы на основе следующих примеров, необходимо выполнить определенные требования. Дополнительные сведения см. в разделе [требования для запуска примеров SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-sqlhide-on-an-attribute"></a>а. Указание sql:hide для атрибута  
+### <a name="a-specifying-sqlhide-on-an-attribute"></a>A. Указание sql:hide для атрибута  
  Схема XSD в этом примере состоит из элемента ** \<Person. Contact>** с атрибутами **ContactID**, **FirstName**и **LastName** .  
   
  Элемент ** \<Person. Contact>** имеет сложный тип и, следовательно, сопоставляется с таблицей с тем же именем (сопоставление по умолчанию). Все атрибуты элемента ** \<Person. Contact>** имеют простой тип и сопоставляются со столбцами с теми же именами в поле Person. контакттабле в базе данных AdventureWorks. В схеме заметка **SQL: Hide** задается для атрибута **ContactID** . Если для этой схемы задан запрос XPath, то объект **ContactID** не возвращается в XML-документе.  

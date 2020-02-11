@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 27d3ff9ef1c6296a6bec2040f9caefd477568bfa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900150"
 ---
 # <a name="percentage-sampling-transformation"></a>преобразование «Процентная выборка»
@@ -40,7 +40,7 @@ ms.locfileid: "62900150"
 ## <a name="configuration-the-percentage-sampling-transformation"></a>Настройка преобразования «Процентная выборка»  
  Можно изменить начальное значение генератора случайных чисел, используемого для выборки строк. Если всегда использовать одинаковое начальное значение для генератора, то результирующая выборка, при прочих равных условиях, будет тоже всегда одинаковая. Если начальное значение для создания случайного номера не указано, преобразование использует счетчик тактов операционной системы. Поэтому можно выбрать постоянное начальное значение для генератора во время отладки и случайное значение при передаче пакета в производственную эксплуатацию.  
   
- Это преобразование немного схоже с преобразованием «Выборка строк», которое создает выборку с заданным количеством строк. Дополнительные сведения см. в статье [Row Sampling Transformation](row-sampling-transformation.md).  
+ Это преобразование немного схоже с преобразованием «Выборка строк», которое создает выборку с заданным количеством строк. Дополнительные сведения см. в разделе [Row Sampling Transformation](row-sampling-transformation.md).  
   
  Преобразование «Процентная выборка» содержит пользовательское свойство `SamplingValue`. Это свойство может быть обновлено выражением свойства при загрузке пакета. Дополнительные сведения см. в разделах [Выражения служб Integration Services (SSIS)](../../expressions/integration-services-ssis-expressions.md), [Использование выражений свойств в пакетах](../../expressions/use-property-expressions-in-packages.md) и [Пользовательские свойства преобразований](transformation-custom-properties.md).  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62900150"
   
 -   [Общие свойства](../../common-properties.md)  
   
--   [Пользовательские свойства преобразований](transformation-custom-properties.md)  
+-   [Transformation Custom Properties](transformation-custom-properties.md)  
   
  Дополнительные сведения о настройке свойств см. в разделе [Установление свойств компонента потока данных](../set-the-properties-of-a-data-flow-component.md).  
   

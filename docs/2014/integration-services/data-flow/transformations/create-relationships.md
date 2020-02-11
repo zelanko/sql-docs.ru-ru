@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 647fa27d872829a60d32c0cdc7686938ae796f2a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770380"
 ---
 # <a name="create-relationships"></a>Создание связей
@@ -31,7 +31,7 @@ ms.locfileid: "62770380"
  **Входной столбец**  
  Выберите входной столбец из списка имеющихся входных столбцов.  
   
- **Столбец подстановок**  
+ **Уточняющий столбец**  
  Выберите из списка доступных столбцов подстановок.  
   
  **Тип сопоставления**  
@@ -48,7 +48,7 @@ ms.locfileid: "62770380"
  **Псевдоним выхода подобия**  
  Укажите имя для нового выходного столбца, который является подобным выбранному столбцу. Если оставить это значение пустым, то выходной столбец не будет создан.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по сообщениям об ошибках служб Integration Services](../../integration-services-error-and-message-reference.md)   
  [Редактор преобразования "Нечеткий уточняющий запрос" (вкладка "Столбцы")](../../fuzzy-lookup-transformation-editor-columns-tab.md)   
  [Редактор преобразования "Уточняющий запрос" (страница "Столбцы")](../../lookup-transformation-editor-columns-page.md)   

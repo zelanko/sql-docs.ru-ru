@@ -11,91 +11,91 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 4551181da22af1244f8083f6df5ea00f63e00e69
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68266585"
 ---
 # <a name="project-settings-type-mapping-oracletosql"></a>Параметры проекта (сопоставление типов) (OracleToSQL)
-На странице сопоставления типов **параметры проекта** диалоговое окно содержит настройки, установленные как SSMA преобразует типы данных Oracle в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типов данных.  
+Страница Сопоставление типов диалогового окна **Параметры проекта** содержит параметры, которые настраивают, как SSMA преобразует типы данных Oracle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в типы данных.  
   
-Страница сопоставления типов доступна в **параметры проекта** и **параметры проекта по умолчанию** диалоговым окнам.  
+Страница Сопоставление типов доступна в диалоговых окнах **Параметры проекта** и **Параметры проекта по умолчанию** .  
   
--   Чтобы указать параметры для всех будущих проектов SSMA на **средства** выберите в меню пункты **параметры проекта по умолчанию**, выберите тип проекта миграции, для которого требуются параметры для просмотра и изменения из **Целевой версии миграции** раскрывающийся список, а затем нажмите кнопку **сопоставления типов** в нижней части левой панели.  
+-   Чтобы указать параметры для всех будущих проектов SSMA, в меню **Сервис** щелкните **Параметры проекта по умолчанию**, выберите тип проекта миграции, для которого необходимо просмотреть или изменить параметры в раскрывающемся списке **версия целевого объекта миграции** , а затем щелкните **Сопоставление типов** в нижней части левой панели.  
   
--   Для задания параметров для текущего проекта на **средства** меню **параметры проекта**и нажмите кнопку **сопоставления типов** в нижней части левой панели.  
+-   Чтобы указать параметры для текущего проекта, в меню **Сервис** выберите пункт **Параметры проекта**, а затем щелкните **Сопоставление типов** в нижней части левой панели.  
   
-Чтобы указать параметры для текущего объекта или класса объектов, используйте **сопоставления типов** вкладки в окне первичной SSMA.  
+Чтобы задать параметры для текущего объекта или класса объектов, используйте вкладку **Сопоставление типов** в главном окне SSMA.  
   
 ## <a name="options"></a>Параметры  
-В следующей таблице показаны **сопоставления типов** вкладке Параметры:  
+В следующей таблице показаны параметры вкладки **Сопоставление типов** .  
   
-**Исходный тип**  
+**Тип источника**  
 Сопоставленный тип данных Oracle.  
   
 **Тип целевого объекта**  
-Целевой объект [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных для указанного типа данных Oracle.  
+Целевой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных для указанного типа данных Oracle.  
   
-См. в таблицах в следующем разделе по умолчанию SSMA для Oracle сопоставления типов.  
+См. таблицы в следующем разделе для сопоставления типов SSMA по умолчанию для Oracle.  
   
-**Добавить**  
-Щелкните, чтобы добавить в список сопоставления типа данных.  
+**Добавление**  
+Нажмите, чтобы добавить тип данных в список сопоставления.  
   
-**Изменить**  
-Щелкните, чтобы изменить тип данных выбранного в списке сопоставление.  
+**Edit** (Изменение)  
+Нажмите, чтобы изменить выбранный тип данных в списке сопоставление.  
   
 **Удалить**  
-Щелкните, чтобы удалить сопоставление типов данных, выбранного в списке сопоставление.  
+Нажмите, чтобы удалить выбранное сопоставление типа данных из списка сопоставления.  
   
-**Сброс до значений по умолчанию**  
-Щелкните, чтобы сбросить список сопоставления типа по умолчанию SSMA.  
+**Восстановить значения по умолчанию**  
+Нажмите, чтобы сбросить список сопоставления типов к значениям по умолчанию SSMA.  
   
 ## <a name="default-type-mappings"></a>Сопоставления типов по умолчанию  
-В SSMA для Oracle можно задать настраиваемые сопоставления типов для аргументов, столбцы, локальные переменные и возвращаемые значения. Сопоставление по умолчанию для аргументов и возвращаемых типов практически идентичны.  
+В SSMA для Oracle можно задать пользовательские сопоставления типов для аргументов, столбцов, локальных переменных и возвращаемых значений. Сопоставление по умолчанию для аргументов и возвращаемых типов практически идентично.  
   
-### <a name="default-argument-type-and-return-value-type-mapping"></a>По умолчанию тип аргумента и возвращают значение сопоставление типов  
+### <a name="default-argument-type-and-return-value-type-mapping"></a>Сопоставление типа аргумента по умолчанию и типа возвращаемого значения  
 Следующая таблица содержит сопоставление типов данных по умолчанию для аргументов и возвращаемых значений.  
   
-|Тип данных Oracle|По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных|  
+|Тип данных Oracle|Тип [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] данных по умолчанию|  
 |--------------------|-------------------------------------------------------------------------|  
-|BFILE|varbinary(max)|  
-|binary_double|число с плавающей запятой [53]|  
-|binary_float|число с плавающей запятой [53]|  
-|binary_integer|ssNoversion|  
-|большой двоичный объект|varbinary(max)|  
-|boolean|bit|  
+|bСведения|varbinary(max)|  
+|binary_double|float [53]|  
+|binary_float|float [53]|  
+|binary_integer|INT|  
+|blob-объект|varbinary(max)|  
+|Логическое|bit|  
 |char|varchar(max)|  
 |char varying|varchar(max)|  
 |character|varchar(max)|  
 |character varying|varchar(max)|  
 |CLOB|varchar(max)|  
-|date|datetime2 [0]|  
-|dec|dec[38][0]|  
-|Decimal|число с плавающей запятой [53]|  
-|двойной точности|число с плавающей запятой [53]|  
-|float|число с плавающей запятой [53]|  
-|ssNoversion|ssNoversion|  
-|integer|ssNoversion|  
+|Дата|datetime2 [0]|  
+|dec|Dec [38] [0]|  
+|Decimal|float [53]|  
+|double precision|float [53]|  
+|FLOAT|float [53]|  
+|INT|INT|  
+|integer|INT|  
 |long|varchar(max)|  
-|Long raw|varbinary(max)|  
-|Long raw [\*.. 8000]<sup>*</sup>|varbinary [*]|  
-|Long raw [8001..\*]<sup>*</sup>|varbinary(max)|  
-|National char|nvarchar(max)|  
-|National char varying|nvarchar(max)|  
-|символов национального алфавита|nvarchar(max)|  
-|изменение символов национального алфавита<sup>**</sup>|nvarchar(max)|  
-|изменение символов национального алфавита<sup>*</sup>|nvarchar(max)|  
+|Long RAW|varbinary(max)|  
+|Long RAW [\*.. 8000]<sup>*</sup>|varbinary [*]|  
+|Long RAW [8001..\*]<sup>*</sup>|varbinary(max)|  
+|Национальный знак|nvarchar(max)|  
+|разные национальные знаки|nvarchar(max)|  
+|Национальный символ|nvarchar(max)|  
+|изменение национального алфавита<sup>**</sup>|nvarchar(max)|  
+|изменение национального алфавита<sup>*</sup>|nvarchar(max)|  
 |nchar|nvarchar(max)|  
 |NCLOB|nvarchar(max)|  
-|number|число с плавающей запятой [53]|  
-|NUMERIC|число с плавающей запятой [53]|  
-|NVARCHAR2|nvarchar(max)|  
-|pls_integer|ssNoversion|  
+|number|float [53]|  
+|NUMERIC|float [53]|  
+|nvarchar2|nvarchar(max)|  
+|pls_integer|INT|  
 |raw|varbinary(max)|  
-|real|число с плавающей запятой [53]|  
-|RowId|UNIQUEIDENTIFIER|  
-|Signtype|smallint|  
+|real;|float [53]|  
+|ROWID|UNIQUEIDENTIFIER|  
+|сигнтипе|smallint|  
 |smallint|smallint|  
 |строка|varchar(max)|  
 |TIMESTAMP|datetime2|  
@@ -104,167 +104,167 @@ ms.locfileid: "68266585"
 |urowid|UNIQUEIDENTIFIER|  
 |varchar|varchar(max)|  
 |VARCHAR2|varchar(max)|  
-|xmltype|Xml|  
+|XmlType|Xml|  
   
-<sup>*</sup> Применяется для возврата значения только сопоставления типов.  
+<sup>*</sup>Применяется только к сопоставлению типов возвращаемых значений.  
   
-<sup>**</sup> Применяется к аргумента только сопоставления типов.  
+<sup>**</sup>Применяется только к сопоставлению типов аргументов.  
   
-### <a name="default-column-type-mapping"></a>По умолчанию сопоставление типа столбца  
+### <a name="default-column-type-mapping"></a>Сопоставление типов столбцов по умолчанию  
 Следующая таблица содержит сопоставление типов по умолчанию для столбцов.  
   
-|Тип данных Oracle|По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных|  
+|Тип данных Oracle|Тип [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] данных по умолчанию|  
 |--------------------|-------------------------------------------------------------------------|  
-|BFILE|varbinary(max)|  
-|binary_double|число с плавающей запятой [53]|  
-|binary_float|число с плавающей запятой [53]|  
-|большой двоичный объект|varbinary(max)|  
+|bСведения|varbinary(max)|  
+|binary_double|float [53]|  
+|binary_float|float [53]|  
+|blob-объект|varbinary(max)|  
 |char|char|  
-|char varying [*.. \*]|varchar [*]|  
-|char [*.. \*]|char [*]|  
+|различные знаки [*.. \*]|varchar [*]|  
+|Char [*.. \*]|Char [*]|  
 |character|char|  
-|Изменение символа [*.. \*]|varchar [*]|  
-|символ [*.. \*]|char [*]|  
+|Разное символов [*.. \*]|varchar [*]|  
+|символ [*.. \*]|Char [*]|  
 |CLOB|varchar(max)|  
-|date|datetime2 [0]|  
-|dec|dec[38][0]|  
-|DEC [*.. \*]|DEC [*] [0]|  
-|dec[*..\*][\*..\*]|DEC [*] [\*]|  
-|Decimal|decimal[38][0]|  
+|Дата|datetime2 [0]|  
+|dec|Dec [38] [0]|  
+|Dec [*.. \*]|Dec [*] [0]|  
+|Dec [*.. \*][\*.. \*]|Dec [*] [\*]|  
+|Decimal|Decimal [38] [0]|  
 |Decimal [*.. \*]|Decimal [*] [0]|  
 |Decimal [*.. \*][\*.. \*]|Decimal [*] [\*]|  
-|двойной точности|число с плавающей запятой [53]|  
-|float|число с плавающей запятой [53]|  
-|число с плавающей запятой [*.. 53]|в число с плавающей запятой [*]|  
-|число с плавающей запятой [54.. *]|число с плавающей запятой [53]|  
-|ssNoversion|ssNoversion|  
-|integer|ssNoversion|  
+|double precision|float [53]|  
+|FLOAT|float [53]|  
+|float [*.. 53]|float [*]|  
+|float [54.. *]|float [53]|  
+|INT|INT|  
+|integer|INT|  
 |long|varchar(max)|  
-|Long raw|varbinary(max)|  
-|Long raw [*.. 8000]|varbinary [*]|  
-|Long raw [8001.. *]|varbinary(max)|  
-|Long varchar|varchar(max)|  
+|Long RAW|varbinary(max)|  
+|Long RAW [*.. 8000]|varbinary [*]|  
+|Long RAW [8001.. *]|varbinary(max)|  
+|long varchar|varchar(max)|  
 |Long [*.. 8000]|varchar [*]|  
 |Long [8001.. *]|varchar(max)|  
-|National char|nchar|  
-|National char varying [*.. \*]|nvarchar [*]|  
-|National char [*.. \*]|nchar [*]|  
-|символов национального алфавита|nchar|  
-|различных национальных символов [*.. \*]|nvarchar [*]|  
-|символов национального алфавита [*.. \*]|nchar [*]|  
+|Национальный знак|nchar|  
+|Национальная кодировка [*.. \*]|nvarchar [*]|  
+|Национальный знак [*.. \*]|nchar [*]|  
+|Национальный символ|nchar|  
+|разный национальный символ [*.. \*]|nvarchar [*]|  
+|Национальный символ [*.. \*]|nchar [*]|  
 |nchar|nchar|  
 |nchar [*]|nchar [*]|  
 |NCLOB|nvarchar(max)|  
-|number|число с плавающей запятой [53]|  
-|Номер [*.. \*]|числовые [*]|  
-|Номер [*.. \*][\*.. \*]|числовые [*] [\*]|  
+|number|float [53]|  
+|Number [*.. \*]|numeric [*]|  
+|Number [*.. \*][\*.. \*]|numeric [*] [\*]|  
 |NUMERIC|NUMERIC|  
-|числовые [*.. \*]|числовые [*]|  
-|numeric[*..\*][\*..\*]|числовые [*] [\*]|  
-|NVARCHAR2 [*.. \*]|nvarchar [*]|  
-|необработанные [*.. \*]|varbinary [*]|  
-|real|число с плавающей запятой [53]|  
-|RowId|UNIQUEIDENTIFIER|  
+|numeric [*.. \*]|numeric [*]|  
+|numeric [*.. \*][\*.. \*]|numeric [*] [\*]|  
+|nvarchar2[*.. \*]|nvarchar [*]|  
+|RAW [*.. \*]|varbinary [*]|  
+|real;|float [53]|  
+|ROWID|UNIQUEIDENTIFIER|  
 |smallint|smallint|  
 |TIMESTAMP|datetime2|  
 |Метка времени с местным часовым поясом|datetimeoffset|  
 |Метка времени с местным часовым поясом [*.. \*]|DateTimeOffset [*]|  
 |Метка времени с часовым поясом|datetimeoffset|  
 |Метка времени с часовым поясом [*.. \*]|DateTimeOffset [*]|  
-|Метка времени [*.. \*]|datetime2 [*]|  
-|urowid|UNIQUEIDENTIFIER|  
+|timestamp [*.. \*]|datetime2 [*]|  
+|Urowid|UNIQUEIDENTIFIER|  
 |urowid [*.. \*]|UNIQUEIDENTIFIER|  
 |varchar [*.. \*]|varchar [*]|  
 |VARCHAR2 [*.. \*]|varchar [*]|  
-|xmltype|Xml|  
+|XmlType|Xml|  
   
-### <a name="default-local-variable-type-mapping"></a>Сопоставление по умолчанию тип локальной переменной  
+### <a name="default-local-variable-type-mapping"></a>Сопоставление типов локальных переменных по умолчанию  
 Следующая таблица содержит сопоставление типов по умолчанию для локальных переменных.  
   
-|Тип данных Oracle|По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных|  
+|Тип данных Oracle|Тип [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] данных по умолчанию|  
 |--------------------|-------------------------------------------------------------------------|  
 |Bfile|varbinary(max)|  
-|binary_double|число с плавающей запятой [53]|  
-|binary_float|число с плавающей запятой [53]|  
-|binary_interger|ssNoversion|  
-|Blob|varbinary(max)|  
-|Логическое значение|bit|  
-|CHAR|char|  
-|char varying [*.. 8000]|varchar [*]|  
-|char varying [8001.. *]|varchar(max)|  
-|char [*.. 8000]|char [*]|  
-|char [8001.. *]|varchar(max)|  
-|Символ|char|  
-|Изменение символа [*.. 8000]|varchar [*]|  
-|Изменение символа [8001.. *]|varchar(max)|  
-|символ [*.. 8000]|char [*]|  
-|символ [8001.. *]|varchar(max)|  
+|binary_double|float [53]|  
+|binary_float|float [53]|  
+|binary_interger|INT|  
+|BLOB-объект|varbinary(max)|  
+|Логическое|bit|  
+|Char|char|  
+|различные знаки [*.. 8000]|varchar [*]|  
+|изменение типа char [8001.. *]|varchar(max)|  
+|Char [*.. 8000]|Char [*]|  
+|Char [8001.. *]|varchar(max)|  
+|Character|char|  
+|Разное символов [*.. 8000]|varchar [*]|  
+|разное начертание [8001.. *]|varchar(max)|  
+|символ [*.. 8000]|Char [*]|  
+|Character [8001.. *]|varchar(max)|  
 |CLOB|varchar(max)|  
-|date|datetime2 [0]|  
-|dec|dec[38][0]|  
-|DEC [*.. \*]|DEC [*] [0]|  
-|dec[*..\*][\*..\*]|DEC [*] [\*]|  
-|Decimal|decimal[38][0]|  
+|Дата|datetime2 [0]|  
+|dec|Dec [38] [0]|  
+|Dec [*.. \*]|Dec [*] [0]|  
+|Dec [*.. \*][\*.. \*]|Dec [*] [\*]|  
+|Decimal|Decimal [38] [0]|  
 |Decimal [*.. \*]|Decimal [*] [0]|  
 |Decimal [*.. \*][\*.. \*]|Decimal [*] [\*]|  
-|двойной точности|число с плавающей запятой [53]|  
-|float|число с плавающей запятой [53]|  
-|число с плавающей запятой [*.. 53]|в число с плавающей запятой [*]|  
-|число с плавающей запятой [54.. *]|число с плавающей запятой [53]|  
-|int|ssNoversion|  
-|Целочисленный|ssNoversion|  
-|целое число [*.. \*]|числовые [*] [0]|  
+|double precision|float [53]|  
+|Float|float [53]|  
+|float [*.. 53]|float [*]|  
+|float [54.. *]|float [53]|  
+|Int|INT|  
+|Целое число|INT|  
+|Integer [*.. \*]|numeric [*] [0]|  
 |Long|varchar(max)|  
-|Long raw|varbinary(max)|  
-|Long raw [*.. 8000]|varbinary [*]|  
-|Long raw [8001.. *]|varbinary(max)|  
-|National char|nchar|  
-|National char varying [*.. 4000]|nvarchar [*]|  
-|National char varying [4001.. *]|nvarchar(max)|  
-|National char [*.. 4000]|nchar [*]|  
-|National char [4001.. *]|nvarchar(max)|  
-|символов национального алфавита|nchar|  
-|символов национального алфавита [*.. 4000]|nvarchar [*]|  
-|символов национального алфавита [4001.. *]|nvarchar(max)|  
-|различных национальных символов [*.. 4000]|nvarchar [*]|  
-|различных национальных символов [4001.. *]|nvarchar(max)|  
+|Long RAW|varbinary(max)|  
+|Long RAW [*.. 8000]|varbinary [*]|  
+|Long RAW [8001.. *]|varbinary(max)|  
+|Национальный знак|nchar|  
+|Национальная кодировка [*.. 4000]|nvarchar [*]|  
+|Национальный символ [4001.. *]|nvarchar(max)|  
+|Национальный знак [*.. 4000]|nchar [*]|  
+|Национальный символ [4001.. *]|nvarchar(max)|  
+|Национальный символ|nchar|  
+|Национальный символ [*.. 4000]|nvarchar [*]|  
+|Национальный символ [4001.. *]|nvarchar(max)|  
+|разный национальный символ [*.. 4000]|nvarchar [*]|  
+|Национальный символ, Разное [4001.. *]|nvarchar(max)|  
 |Nchar|nchar|  
 |nchar [*.. 4000]|nchar [*]|  
 |nchar [4001.. *]|nvarchar(max)|  
-|nchar varying [*.. 4000]|nvarchar [*]|  
-|nchar varying [4001.. *]|nvarchar(max)|  
+|изменение типа nchar [*.. 4000]|nvarchar [*]|  
+|изменение типа nchar [4001.. *]|nvarchar(max)|  
 |NCLOB|nvarchar(max)|  
-|Number|число с плавающей запятой [53]|  
-|Номер [*.. \*]|числовые [*]|  
-|Номер [*.. \*][\*.. \*]|числовые [*] [\*]|  
-|Numeric|numeric[38][0]|  
-|числовые [*.. \*]|числовые [*]|  
-|numeric[*..\*][\*..\*]|числовые [*] [\*]|  
-|NVARCHAR2 [*.. 4000]|nvarchar [*]|  
+|Номер|float [53]|  
+|Number [*.. \*]|numeric [*]|  
+|Number [*.. \*][\*.. \*]|numeric [*] [\*]|  
+|Числовой|numeric [38] [0]|  
+|numeric [*.. \*]|numeric [*]|  
+|numeric [*.. \*][\*.. \*]|numeric [*] [\*]|  
+|nvarchar2[*.. 4000]|nvarchar [*]|  
 |NVARCHAR2 [4001.. *]|nvarchar(max)|  
-|pls_integer|ssNoversion|  
-|необработанные [*.. 8000]|varbinary [*]|  
-|необработанные [8001.. *]|varbinary(max)|  
-|Real|число с плавающей запятой [53]|  
+|pls_integer|INT|  
+|RAW [*.. 8000]|varbinary [*]|  
+|RAW [8001.. *]|varbinary(max)|  
+|Real|float [53]|  
 |Rowid|UNIQUEIDENTIFIER|  
-|Signtype|smallint|  
+|сигнтипе|smallint|  
 |Smallint|smallint|  
-|строки [*.. 8000]|varchar [*]|  
-|string[8001..*]|varchar(max)|  
+|строка [*.. 8000]|varchar [*]|  
+|String [8001.. *]|varchar(max)|  
 |TIMESTAMP|datetime2|  
 |Метка времени с местным часовым поясом|datetimeoffset|  
 |Метка времени с часовым поясом|datetimeoffset|  
 |Метка времени с местным часовым поясом [*.. \*]|DateTimeOffset [*]|  
 |Метка времени с часовым поясом [*.. \*]|DateTimeOffset [*]|  
-|Метка времени [*.. \*]|datetime2 [*]|  
-|urowid|UNIQUEIDENTIFIER|  
+|timestamp [*.. \*]|datetime2 [*]|  
+|Urowid|UNIQUEIDENTIFIER|  
 |urowid [*.. \*]|UNIQUEIDENTIFIER|  
 |varchar [*.. 8000]|varchar [*]|  
 |varchar [8001.. *]|varchar(max)|  
 |VARCHAR2 [*.. 8000]|varchar [*]|  
-|VARCHAR2 [8001.. *]|varcha(max)|  
-|xmltype|Xml|  
+|VARCHAR2 [8001.. *]|Варча (max)|  
+|XmlType|Xml|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Справочник по пользовательскому интерфейсу &#40;OracleToSQL&#41;](../../ssma/oracle/user-interface-reference-oracletosql.md)  
   

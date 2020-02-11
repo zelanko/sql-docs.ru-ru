@@ -19,16 +19,16 @@ ms.assetid: 568e9119-b9b0-4284-9cef-3878c691de5f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bd8c82a401f78f4907bb891ede845017c00ac5ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68032633"
 ---
-# <a name="spsyscollectorcreatecollectortype-transact-sql"></a>sp_syscollector_create_collector_type (Transact-SQL)
+# <a name="sp_syscollector_create_collector_type-transact-sql"></a>sp_syscollector_create_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Создает тип сборщика данных. Тип сборщика — логическая оболочка [!INCLUDE[ssIS](../../includes/ssis-md.md)] пакетов, которые предоставляют реальные механизмы для сбора данных и передачи их в хранилище данных управления.  
+  Создает тип сборщика данных. Тип сборщика — это логическая оболочка [!INCLUDE[ssIS](../../includes/ssis-md.md)] пакетов, которая предоставляет реальный механизм для сбора данных и их передачи в хранилище управляющих данных.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,26 +46,26 @@ sp_syscollector_create_collector_type
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @collector_type_uid =] '*аргумент collector_type_uid*"  
- Идентификатор GUID типа сборщика. *Аргумент collector_type_uid* — **uniqueidentifier** и если он равен NULL, он будет автоматически создается и возвращается как OUTPUT.  
+ [ @collector_type_uid = ] "*collector_type_uid*"  
+ Идентификатор GUID типа сборщика. *collector_type_uid* имеет тип **uniqueidentifier** , и, если он равен null, он будет автоматически создан и возвращен в качестве выходных данных.  
   
- [ @name =] '*имя*"  
- Имя типа сборщика. *имя* — **sysname** и должен быть указан.  
+ [ @name = ] "*имя*"  
+ Имя типа сборщика. Аргумент *Name* имеет тип **sysname** и должен быть указан.  
   
- [ @parameter_schema =] '*parameter_schema*"  
- Схема XML для этого типа сборщика. *parameter_schema* — **xml** значение по умолчанию NULL.  
+ [ @parameter_schema = ] "*parameter_schema*"  
+ Схема XML для этого типа сборщика. *parameter_schema* имеет **Формат XML** и значение по умолчанию NULL.  
   
- [ @parameter_formatter =] '*parameter_formatter*"  
- Шаблон, применяемый для преобразования XML с целью его использования на странице свойств набора элементов сбора. *parameter_formatter* — **xml** значение по умолчанию NULL.  
+ [ @parameter_formatter = ] "*parameter_formatter*"  
+ Шаблон, применяемый для преобразования XML с целью его использования на странице свойств набора элементов сбора. *parameter_formatter* имеет **Формат XML** и значение по умолчанию NULL.  
   
- [@collection_package_id =] *collection_package_id*  
- Локальный уникальный идентификатор, указывающий на пакет сбора [!INCLUDE[ssIS](../../includes/ssis-md.md)], используемый в данном наборе элементов сбора. *collection_package_id* — **uniqueidentifer** и является обязательным.  
+ [@collection_package_id = ] *collection_package_id*  
+ Локальный уникальный идентификатор, указывающий на пакет сбора [!INCLUDE[ssIS](../../includes/ssis-md.md)], используемый в данном наборе элементов сбора. *collection_package_id* является **уникуеидентифер** и является обязательным.  
   
- [@upload_package_id =] *upload_package_id*  
- Локальный уникальный идентификатор, указывающий на пакет передачи [!INCLUDE[ssIS](../../includes/ssis-md.md)], используемый в данном наборе элементов сбора. *upload_package_id* — **uniqueidentifier** и является обязательным.  
+ [@upload_package_id = ] *upload_package_id*  
+ Локальный уникальный идентификатор, указывающий на пакет передачи [!INCLUDE[ssIS](../../includes/ssis-md.md)], используемый в данном наборе элементов сбора. *upload_package_id* имеет тип **uniqueidentifier** и является обязательным.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="permissions"></a>Разрешения  
  Для выполнения этой процедуры требуется членство в предопределенной роли базы данных dc_admin (с разрешением EXECUTE).  
@@ -108,8 +108,8 @@ EXEC sp_syscollector_create_collector_type
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Сбор данных](../../relational-databases/data-collection/data-collection.md)  
   
   

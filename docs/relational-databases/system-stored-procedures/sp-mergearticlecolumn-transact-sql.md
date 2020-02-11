@@ -16,13 +16,13 @@ ms.assetid: b4f2b888-e094-4759-a472-d893638995eb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ff669af64b6aed312481264127d69eee1ad674e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68078159"
 ---
-# <a name="spmergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
+# <a name="sp_mergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Выполняет вертикальное секционирование публикации слиянием. Эта хранимая процедура выполняется на издателе в базе данных публикации.  
@@ -43,35 +43,35 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` — Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @article = ] 'article'` — Имя статьи в публикации. *статья* — **sysname**, не имеет значения по умолчанию.  
+`[ @article = ] 'article'`Имя статьи в публикации. Аргумент *article* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @column = ] 'column'` Указывает столбцы, в которой создается вертикальная секция. *столбец* — **sysname**, значение по умолчанию NULL. Если значение равно NULL и `@operation = N'add'`, все столбцы исходной таблицы по умолчанию добавятся к статье. *столбец* не может иметь значение NULL, если *операции* присваивается **drop**. Чтобы исключить столбцы из статьи, выполните **sp_mergearticlecolumn** и укажите *столбец* и `@operation = N'drop'` для каждого столбца, удаляемый из указанного *статье*.  
+`[ @column = ] 'column'`Определяет столбцы, по которым создается вертикальная секция. *столбец* имеет тип **sysname**и значение по умолчанию NULL. Если значение равно NULL и `@operation = N'add'`, все столбцы исходной таблицы по умолчанию добавятся к статье. *столбец* не может иметь значение null, если для *операции* задано значение **Drop**. Чтобы исключить столбцы из статьи, выполните **sp_mergearticlecolumn** и укажите *Column* и `@operation = N'drop'` для каждого столбца, который необходимо удалить из указанной *статьи*.  
   
-`[ @operation = ] 'operation'` — Состояние репликации. *Операция* — **nvarchar(4)** , значение по умолчанию ADD. **Добавление** столбец для репликации. **DROP** очищает столбец.  
+`[ @operation = ] 'operation'`Состояние репликации. *Операция* имеет тип **nvarchar (4)** и значение по умолчанию Add. **Добавить** помечает столбец для репликации. **Drop** очищает столбец.  
   
-`[ @schema_replication = ] 'schema_replication'` Указывает, что изменения схемы будут распространяться при запуске агента слияния. *schema_replication* — **nvarchar(5)** , значение по умолчанию FALSE.  
+`[ @schema_replication = ] 'schema_replication'`Указывает, что изменение схемы будет распространяться при выполнении агент слияния. *schema_replication* имеет тип **nvarchar (5)** и значение по умолчанию false.  
   
 > [!NOTE]  
->  Только **FALSE** поддерживается для *schema_replication*.  
+>  Для *schema_replication*поддерживается только **значение false** .  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Включает или отключает возможность наличия недействительных моментальных снимков. *подписки потребуют* — **бит**, значение по умолчанию **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`Включает или отключает возможность недействительности моментального снимка. *force_invalidate_snapshot* является **битом**и имеет значение по умолчанию **0**.  
   
- **0** указывает, что изменения статьи слияния не приведут к недействительности моментального снимка.  
+ **0** указывает, что изменения в статье слияния не приведут к недействительности моментального снимка.  
   
- **1** изменения статьи слияния могут привести к недействительности моментального снимка; Если это происходит, значение **1** дает разрешение нового моментального снимка.  
+ **1** указывает, что изменения в статье слияния могут привести к недействительности моментального снимка, и, если это так, значение **1** дает разрешение на создание нового моментального снимка.  
   
-`[ @force_reinit_subscription = ]force_reinit_subscription_` Включает или отключает возможность повторной инициализации подписки. *Этот* имеет тип bit и значение по умолчанию **0**.  
+`[ @force_reinit_subscription = ]force_reinit_subscription_`Включает или отключает возможность повторной инициализации подписки. *force_reinit_subscription* является битом со значением по умолчанию **0**.  
   
- **0** указывает, что изменения статьи слияния не приведут к повторной инициализации подписки.  
+ **0** указывает, что изменения в статье публикации слиянием не приведут к повторной инициализации подписки.  
   
- **1** изменения статьи слияния могут привести к повторной инициализации подписки; Если это происходит, значение **1** дает разрешение произвести повторную инициализацию подписки.  
+ **1** указывает, что изменения в статье слияния могут привести к повторной инициализации подписки, и, если это так, значение **1** дает разрешение на повторную инициализацию подписки.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  **sp_mergearticlecolumn** используется в репликации слиянием.  
   
  Если осуществляется автоматическое управление диапазоном идентификаторов, столбец идентификаторов не может быть сброшен из статьи. Дополнительные сведения см. в статье [Репликация столбцов идентификаторов](../../relational-databases/replication/publish/replicate-identity-columns.md).  
@@ -84,12 +84,12 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
  [!code-sql[HowTo#sp_AddMergeArticle](../../relational-databases/replication/codesnippet/tsql/sp-mergearticlecolumn-tr_1.sql)]  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_mergearticlecolumn**.  
+ Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_mergearticlecolumn**.  
   
-## <a name="see-also"></a>См. также  
- [Определение и изменение фильтра соединения между статьями публикации слиянием](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
+## <a name="see-also"></a>См. также:  
+ [Определение и изменение фильтра соединений между статьями публикации слиянием](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
  [Определение и изменение параметризованного фильтра строк для статьи публикации слиянием](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
- [Фильтрация опубликованных данных](../../relational-databases/replication/publish/filter-published-data.md)   
- [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+ [Фильтровать опубликованные данные](../../relational-databases/replication/publish/filter-published-data.md)   
+ [Хранимые процедуры репликации &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

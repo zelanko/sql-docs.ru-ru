@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 61fb30ea21ea810eab8d30a3a040fac4a1bd2128
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080525"
 ---
 # <a name="import-from-a-relational-data-source-ssas-tabular"></a>Импорт из реляционного источника данных (табличные службы SSAS)
-  С помощью мастера импорта таблиц можно импортировать данные из разных реляционных баз данных: Этот мастер доступен в меню **Модель** [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Для соединения с источником данных на компьютере должен быть установлен соответствующий поставщик. Дополнительные сведения о поддерживаемых источниках данных и поставщиках см. в разделе [Data Sources Supported &#40;SSAS Tabular&#41;](tabular-models/data-sources-supported-ssas-tabular.md).  
+  С помощью мастера импорта таблиц можно импортировать данные из разных реляционных баз данных: Этот мастер доступен в меню [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]Модель **** . Для соединения с источником данных на компьютере должен быть установлен соответствующий поставщик. Дополнительные сведения о поддерживаемых источниках данных и поставщиках см. в разделе [Data Sources Supported &#40;SSAS Tabular&#41;](tabular-models/data-sources-supported-ssas-tabular.md).  
   
  Мастер импорта таблиц поддерживает импорт данных из следующих источников данных:  
   
@@ -58,8 +58,8 @@ ms.locfileid: "66080525"
   
 3.  Выполните шаги мастера импорта таблиц. На последующих страницах можно будет выбрать отдельные таблицы и представления или применить фильтры на странице **Выбор таблиц и представлений** или с помощью создания SQL-запроса на странице **Указание SQL-запроса** .  
   
-## <a name="see-also"></a>См. также  
- [Импорт данных (табличные службы SSAS)](import-data-ssas-tabular.md)   
- [Поддерживаемые источники данных (табличные службы SSAS)](tabular-models/data-sources-supported-ssas-tabular.md)  
+## <a name="see-also"></a>См. также:  
+ [Импорт данных &#40;табличные&#41;SSAS](import-data-ssas-tabular.md)   
+ [Поддерживаемые источники данных &#40;табличные&#41;SSAS](tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

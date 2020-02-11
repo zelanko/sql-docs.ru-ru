@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 015c52194ce17e70a25bfe627aaf6822acda3ce3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63205010"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>Поддержка FOR XML для XML-данных
   Если в предложении SELECT запроса FOR XML указан `xml`-столбец, значения столбца сопоставляются как элементы в возвращенном коде XML, независимо от того, указана ли директива ELEMENTS. XML-декларации в `xml`-столбце не сериализуются.  
   
- Например, следующий запрос извлекает контактные данные заказчика, такие как `BusinessEntityID`, `FirstName`, и `LastName` столбцы, а также телефонные номера в `AdditionalContactInfo` столбец `xml` типа.  
+ Например, следующий запрос получает контактные `BusinessEntityID`данные клиента, такие как столбцы, `FirstName`и `LastName` , а также телефонные номера из `AdditionalContactInfo` столбца `xml` типа.  
   
 ```  
 USE AdventureWorks2012;  
@@ -71,7 +71,7 @@ FOR XML AUTO, TYPE;
 ...  
 ```  
   
- Если для XML-столбца, сформированного средствами языка XQuery, указывается псевдоним, этот псевдоним используется для добавления элемента оболочки вокруг кода XML, сформированного с помощью XQuery. Так, в следующем запросе в качестве псевдонима столбца указывается `MorePhoneNumbers`:  
+ Если для XML-столбца, сформированного средствами языка XQuery, указывается псевдоним, этот псевдоним используется для добавления элемента оболочки вокруг кода XML, сформированного с помощью XQuery. Так, в следующем запросе в качестве псевдонима столбца указывается `MorePhoneNumbers` :  
   
 ```  
 SELECT BusinessEntityID, FirstName, LastName, AdditionalContactInfo.query('  
@@ -203,7 +203,7 @@ SELECT @x= dbo.MyUDF4 (19) ;
 select @x;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Поддержка FOR XML для различных типов данных SQL Server](for-xml-support-for-various-sql-server-data-types.md)  
   
   

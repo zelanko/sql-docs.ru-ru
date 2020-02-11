@@ -1,5 +1,5 @@
 ---
-title: Изменение целевых серверов, связанных с заданием агента главного сервера SQL | Документация Майкрософт
+title: Изменение целевых серверов, связанных с агент SQL Server главным заданием | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 61173f4b9ef6c8f836b3654bdc5b7366a8a54461
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62654070"
 ---
 # <a name="modify-the-target-servers-associated-with-a-sql-server-agent-master-job"></a>Modify the Target Server(s) Associated with a SQL Server Agent Master Job
@@ -26,9 +26,9 @@ ms.locfileid: "62654070"
   
      [Ограничения](#Restrictions)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
--   **Изменение целевых серверов, связанных с главным заданием агента SQL Server, с помощью:**  
+-   **Изменение целевых серверов, связанных с агент SQL Server главным заданием, с помощью:**  
   
      [Среда SQL Server Management Studio](#SSMSProcedure)  
   
@@ -56,7 +56,7 @@ ms.locfileid: "62654070"
   
 4.  Щелкните правой кнопкой мыши задание, для которого требуется изменить целевой сервер, и выберите пункт **Свойства**.  
   
-5.  В диалоговом окне **Свойства задания —** _имя_задания_ в разделе **Выберите страницу** выберите пункт **Цели**. Дополнительные сведения о параметрах, доступных на этой странице, см. в разделе [свойства задания: Новое задание &#40;целью страница&#41;](job-properties-new-job-targets-page.md).  
+5.  В диалоговом окне **Свойства задания —**_Job_name_ в разделе **выберите страницу**выберите **целевые объекты**. Дополнительные сведения о параметрах, доступных на этой странице, см. в разделе [Свойства задания: страница создание &#40;целевые объекты задания&#41;](job-properties-new-job-targets-page.md).  
   
 6.  После завершения нажмите кнопку **ОК**.  
   

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c43cb42cffba31f20b0e9717204f5475b5bb156d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012074"
 ---
 # <a name="data-formats-for-bulk-import-or-bulk-export-sql-server"></a>Форматы данных для массового экспорта или импорта (SQL Server)
@@ -41,7 +41,7 @@ ms.locfileid: "66012074"
 |Массовый экспорт данных в текстовый файл, который должен использоваться другой программой.|-|-|Да|-|  
 |Массовая передача данных между несколькими экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при помощи файла данных, содержащего данные Юникода и не содержащего символы расширенной или двухбайтовой кодировки (DBCS).|-|-|-|Да|  
   
- <sup>1</sup> самый быстрый метод массового экспорта данных из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при использовании **bcp**.  
+ <sup>1</sup> самый быстрый способ для полного экспорта данных из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при использовании программы **bcp**.  
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66012074"
   
 -   [Импорт данных в собственном и символьном формате из предыдущих версий SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Типы данных (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql)   
  [Указание форматов данных для совместимости с помощью программы bcp (SQL Server)](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)  
   

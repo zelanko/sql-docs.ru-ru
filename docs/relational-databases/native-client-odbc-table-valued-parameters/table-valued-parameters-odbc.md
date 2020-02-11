@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f53e1780beaea56ba659c11771d469163a964971
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73790466"
 ---
 # <a name="table-valued-parameters-odbc"></a>Возвращающие табличное значение параметры (ODBC)
@@ -26,7 +26,7 @@ ms.locfileid: "73790466"
 
   Поддержка в ODBC возвращающих табличное значение параметров позволяет клиентским приложениям с большей эффективностью передавать параметризованные данные на сервер за счет передачи нескольких строк в ходе одного вызова.  
   
- Сведения о возвращающих табличное значение параметрах на сервере см. в разделе [использование &#40;возвращающих&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)табличные значения параметров ядро СУБД.  
+ Сведения о возвращающих табличное значение параметрах на сервере см. в разделе [Использование возвращающих табличные значения параметров &#40;ядро СУБД&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
   
  В ODBC существует два способа передачи на сервер возвращающих табличное значение параметров.  
   
@@ -80,8 +80,8 @@ ms.locfileid: "73790466"
  [Примеры программирования с использованием возвращающих табличное значение параметров ODBC](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
  Описывает, как следует выполнять типичные задачи.  
   
-## <a name="see-also"></a>См. также статью  
- [SQL Server Native Client &#40; &#41; ODBC](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
+## <a name="see-also"></a>См. также:  
+ [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
  [Возвращающие табличное значение параметры &#40;SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)  
   
   

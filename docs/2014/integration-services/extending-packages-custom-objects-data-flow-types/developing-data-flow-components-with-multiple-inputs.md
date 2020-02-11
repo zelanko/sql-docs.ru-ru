@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 74bcf1549cdd97752c805f1c6a9cc774ef1a9e52
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62896034"
 ---
 # <a name="developing-data-flow-components-with-multiple-inputs"></a>Разработка компонентов потоков данных с несколькими входами
@@ -54,9 +54,9 @@ public class Shuffler : Microsoft.SqlServer.Dts.Pipeline.PipelineComponent
 > [!NOTE]  
 >  Реализация метода <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> не должна вызывать реализации базового класса. Реализация этого метода по умолчанию в базовом классе просто вызывает исключение `NotImplementedException`.  
   
- Во время реализации этого метода нужно задать состояние элемента в массиве *canProcess* типа Boolean для каждого входа компонента. (Входы определяются значениями идентификаторов в массиве *inputIDs*.) Если задано значение элемента в *canProcess* массив `true` для входа, подсистема обработки потока данных вызывает компонента <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> метод и предоставляет дополнительные данные для указанного входа.  
+ Во время реализации этого метода нужно задать состояние элемента в массиве *canProcess* типа Boolean для каждого входа компонента. (Входные данные идентифицируются по их значениям ИДЕНТИФИКАТОРов в массиве *инпутидс* .) Если для элемента в массиве *canProcess* задано значение `true` для входа, подсистема обработки потока данных вызывает <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> метод компонента и предоставляет дополнительные данные для указанных входных данных.  
   
- Хотя дополнительных восходящих данных доступна, значение *canProcess* элемент массива, по крайней мере для одного входа всегда должен быть `true`, или обработка будет прервана.  
+ Пока доступны более вышестоящий объем данных, значение элемента массива *canProcess* по крайней мере для одного входного параметра всегда должно быть `true`, или обработка останавливается.  
   
  Подсистема обработки потока данных вызывает метод <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> до отправки всех буферов с данными для определения входов, ожидающих получения дополнительных данных. Если возвращаемое значение указывает на блокировку входа, подсистема обработки потока данных временно кэширует дополнительные буферы данных для этого входа вместо отправки их компоненту.  
   
@@ -70,9 +70,9 @@ public class Shuffler : Microsoft.SqlServer.Dts.Pipeline.PipelineComponent
   
 -   В буферах, уже полученных компонентом (`inputBuffers[inputIndex].CurrentRow() == null`), сейчас отсутствуют данные, доступные для обработки для входа.  
   
- Если вход ожидает приема дополнительных данных, компонент потока данных указывает на это путем задания `true` значение элемента в *canProcess* массив, соответствующем этому входу.  
+ Если входные данные ожидают получения дополнительных данных, компонент потока данных показывает это путем установки `true` значения элемента в массиве *canProcess* , соответствующего этому входу.  
   
- И наоборот, если у компонента все еще имеются данные, доступные для обработки, для входа, в примере обработка входа приостанавливается. В примере это выполняется путем задания `false` значение элемента в *canProcess* массив, соответствующем этому входу.  
+ И наоборот, если у компонента все еще имеются данные, доступные для обработки, для входа, в примере обработка входа приостанавливается. В этом примере для `false` этого устанавливается значение элемента в массиве *canProcess* , соответствующее входным данным.  
   
 ```csharp  
 public override void IsInputReady(int[] inputIDs, ref bool[] canProcess)  
@@ -87,7 +87,7 @@ public override void IsInputReady(int[] inputIDs, ref bool[] canProcess)
 }  
 ```  
   
- В предыдущем примере использовался массив `inputEOR` типа Boolean для указания наличия дополнительных восходящих данных, доступных для каждого входа. `EOR` в имени массива представляет «конец набора строк» и ссылается на свойство <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> буферов потока данных. В части примера, не приведенной здесь, метод <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> проверяет значение свойства <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> для всех получаемых буферов данных. Если значение `true` указывает на отсутствие дополнительных данных с предыдущего этапа для входа, значение элемента массива `inputEOR` для этого входа задается в примере равным `true`. Этот пример <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> метод задает значение соответствующего элемента в *canProcess* массив `false` для входа при значение `inputEOR` элемент массива указывает, что больше нет вышестоящих данные, доступные для входных данных.  
+ В предыдущем примере использовался массив `inputEOR` типа Boolean для указания наличия дополнительных восходящих данных, доступных для каждого входа. `EOR` в имени массива представляет «конец набора строк» и ссылается на свойство <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> буферов потока данных. В части примера, не приведенной здесь, метод <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> проверяет значение свойства <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> для всех получаемых буферов данных. Если значение `true` указывает на отсутствие дополнительных данных с предыдущего этапа для входа, значение элемента массива `inputEOR` для этого входа задается в примере равным `true`. В этом примере <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> метода задается значение соответствующего элемента в массиве `false` *canProcess* для входных данных, если значение элемента `inputEOR` массива указывает на то, что для входных данных больше не доступно ни одного вышестоящего объекта.  
   
 ## <a name="implementing-the-getdependentinputs-method"></a>Реализация метода GetDependentInputs  
  Если пользовательский компонент потока данных поддерживает более двух входов, также необходимо обеспечить реализацию для метода <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> класса <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>.  
@@ -95,7 +95,7 @@ public override void IsInputReady(int[] inputIDs, ref bool[] canProcess)
 > [!NOTE]  
 >  Реализация метода <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> не должна вызывать реализации базового класса. Реализация этого метода по умолчанию в базовом классе просто вызывает исключение `NotImplementedException`.  
   
- Подсистема обработки потока данных вызывает метод <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> только в случаях, когда пользователь подключает к компоненту более двух входов. Если у компонента имеется только два входа и <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> метод указывает, что один вход заблокирован (*canProcess* = `false`), то подсистема обработки потока данных известно, что другой вход ожидает приема дополнительных данных. Однако при наличии более двух входов и в случае, если метод <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> указывает на блокировку одного из входов, дополнительный код в <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> указывает входы, ожидающие приема дополнительных данных.  
+ Подсистема обработки потока данных вызывает метод <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> только в случаях, когда пользователь подключает к компоненту более двух входов. Если компонент <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> имеет только два входа, а метод указывает, что один вход заблокирован (*canProcess* = `false`), подсистема обработки потока данных знает, что другие входные данные ожидают получения дополнительных данных. Однако при наличии более двух входов и в случае, если метод <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> указывает на блокировку одного из входов, дополнительный код в <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> указывает входы, ожидающие приема дополнительных данных.  
   
 > [!NOTE]  
 >  Не следует вызывать методы <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> или <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> в собственном коде. Подсистема обработки потока данных вызывает эти методы класса `PipelineComponent`, которые переопределяются при запуске подсистемой обработки потока данных компонента.  

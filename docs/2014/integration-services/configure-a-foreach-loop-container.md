@@ -1,5 +1,5 @@
 ---
-title: Настройка контейнера "цикл по каждому элементу" | Документация Майкрософт
+title: Настройка контейнера «цикл по каждому элементу» | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 461a652999e97907962486cfc05e5b6668f5590d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060879"
 ---
 # <a name="configure-a-foreach-loop-container"></a>Настройка контейнера "цикл по каждому элементу"
@@ -85,7 +85,7 @@ ms.locfileid: "66060879"
   
 9. Нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Контейнер «цикл по каждому элементу»](control-flow/foreach-loop-container.md)  
   
   

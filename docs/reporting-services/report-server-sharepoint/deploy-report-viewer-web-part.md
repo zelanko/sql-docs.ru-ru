@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3dc42904701ce69e762a203e09cb320cc797c15c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579986"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>Развертывание веб-части "Средство просмотра отчетов" служб SQL Server Reporting Services на сайте SharePoint
@@ -161,14 +161,14 @@ Get-SPWebApplication "<web application url>" | Get-SPSite -Limit ALL |
 
 * Ошибка при попытке обновить SharePoint в том случае, если настроен режим интеграции с SharePoint:
 
-    Не удалось загрузить файл или сборку "Microsoft.ReportingServices.Alerting.ServiceContract, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" или одну из ее зависимостей. Система не может найти указанный файл. 00000000-0000-0000-0000-000000000000
+    Не удалось загрузить файл или сборку "Microsoft.ReportingServices.Alerting.ServiceContract, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" или одну из ее зависимостей. Системе не удается найти указанный файл. 00000000-0000-0000-0000-000000000000
     
     Решение.
     1. Удаление веб-части средства просмотра отчетов
     2. Удаление служб SSRS
     3. Переустановка веб-части средства просмотра отчетов
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 После развертывания и активации веб-части "Средство просмотра отчетов" можно добавить ее на страницу SharePoint. Дополнительные сведения см. в разделе [Добавление веб-части "Средство просмотра отчетов" на страницу SharePoint](add-report-viewer-web-part-to-page.md).
 

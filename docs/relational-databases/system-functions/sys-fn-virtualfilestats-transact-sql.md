@@ -1,5 +1,5 @@
 ---
-title: sys.fn_virtualfilestats (Transact-SQL) | Документация Майкрософт
+title: sys. fn_virtualfilestats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/16/2016
 ms.prod: sql
@@ -22,16 +22,16 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: aade9e02515e0d18e4edae188d72e5edafebbd3f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68059179"
 ---
-# <a name="sysfnvirtualfilestats-transact-sql"></a>sys.fn_virtualfilestats (Transact-SQL)
+# <a name="sysfn_virtualfilestats-transact-sql"></a>sys.fn_virtualfilestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Возвращает статистику ввода-вывода для файлов базы данных, включая файлы журналов. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], эта информация также доступна из [sys.dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) динамическое административное представление.  
+  Возвращает статистику ввода-вывода для файлов базы данных, включая файлы журналов. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]эти сведения также доступны в динамическом административном представлении [sys. dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) .  
 
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,31 +43,31 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *database_id* | ЗНАЧЕНИЕ NULL  
- Идентификатор базы данных. Аргумент *database_id* имеет тип **int** и не имеет значения по умолчанию. Укажите значение NULL, чтобы вернуть сведения для всех баз данных в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ *database_id* | ЗАКАНЧИВАЮЩ  
+ Идентификатор базы данных. *database_id* имеет **тип int**и не имеет значения по умолчанию. Укажите значение NULL, чтобы вернуть сведения для всех баз данных в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- *file_id* | ЗНАЧЕНИЕ NULL  
- Идентификатор файла. *file_id* — **int**, не имеет значения по умолчанию. Чтобы получить сведения обо всех файлах в базе данных, укажите значение NULL.  
+ *file_id* | ЗАКАНЧИВАЮЩ  
+ Идентификатор файла. *file_id* имеет **тип int**и не имеет значения по умолчанию. Чтобы получить сведения обо всех файлах в базе данных, укажите значение NULL.  
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |**DbId**|**smallint**|Идентификатор базы данных.|  
-|**FileId**|**smallint**|Идентификатор файла.|  
-|**Метка времени**|**bigint**|Отметка времени базы данных, указывающая, когда была получена информация. **int** в версиях до [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]. |  
-|**Количество запросов на чтение**|**bigint**|Количество считываний для этого файла.|  
-|**BytesRead**|**bigint**|Число считанных из файла байтов.|  
-|**IoStallReadMS**|**bigint**|Общее количество времени, в миллисекундах, затраченного пользователями на ожидание выполнения операций чтения из файла.|  
-|**Количество запросов на запись**|**bigint**|Количество операций записи для этого файла.|  
-|**Записано байт**|**bigint**|Число байтов, записанных в файл.|  
+|**ИД**|**smallint**|Идентификатор файла.|  
+|**TimeStamp**|**bigint**|Отметка времени базы данных, указывающая, когда была получена информация. **int** в версиях до [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]. |  
+|**NumberReads**|**bigint**|Количество считываний для этого файла.|  
+|**битесреад**|**bigint**|Число считанных из файла байтов.|  
+|**иосталлреадмс**|**bigint**|Общее количество времени, в миллисекундах, затраченного пользователями на ожидание выполнения операций чтения из файла.|  
+|**NumberWrites**|**bigint**|Количество операций записи для этого файла.|  
+|**BytesWritten**|**bigint**|Число байтов, записанных в файл.|  
 |**IoStallWriteMS**|**bigint**|Общее количество времени, в миллисекундах, затраченного пользователями на ожидание выполнения операций записи в файл.|  
-|**IoStallMS**|**bigint**|Сумма **IoStallReadMS** и **IoStallWriteMS**.|  
+|**IoStallMS**|**bigint**|Сумма **иосталлреадмс** и **иосталлвритемс**.|  
 |**FileHandle**|**bigint**|Значение дескриптора файла.|  
-|**BytesOnDisk**|**bigint**|Физический размер файла на диске (в байтах).<br /><br /> Для файлов базы данных, это то же значение, что **размер** в **sys.database_files**, но выражается в байтах, а не страницы.<br /><br /> Для разреженных файлов моментального снимка базы данных это пространство, используемое операционной системой для данного файла.|  
+|**BytesOnDisk**|**bigint**|Физический размер файла на диске (в байтах).<br /><br /> Для файлов базы данных это значение совпадает с **размером** в **sys. database_files**, но выражается в байтах, а не на страницах.<br /><br /> Для разреженных файлов моментального снимка базы данных это пространство, используемое операционной системой для данного файла.|  
   
-## <a name="remarks"></a>Примечания  
- **fn_virtualfilestats** — это система, возвращающих табличные значения функция, которая дает статистическую информацию, например общее количество операций ввода-вывода, выполненных над файлом. Эту функцию можно использовать для контроля времени, затрачиваемого пользователями на ожидание выполнения чтения или записи в файл. Эта функция также помогает выявить файлы, над которыми выполняется много операций ввода-вывода.  
+## <a name="remarks"></a>Remarks  
+ **fn_virtualfilestats** — это системная функция, возвращающая табличное значение, которая предоставляет статистические сведения, например общее количество операций ввода-вывода, выполненных над файлом. Эту функцию можно использовать для контроля времени, затрачиваемого пользователями на ожидание выполнения чтения или записи в файл. Эта функция также помогает выявить файлы, над которыми выполняется много операций ввода-вывода.  
   
 ## <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  
@@ -84,7 +84,7 @@ GO
 ```  
   
 ### <a name="b-displaying-statistical-information-for-a-named-database-and-file"></a>Б. Просмотр статистической информации для именованной базы данных и файла  
- В следующем примере выводятся статистические данные для файла журнала в образце базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Системная функция `DB_ID` используется для указания *database_id* параметра.  
+ В следующем примере выводятся статистические данные для файла журнала в образце базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Системная функция `DB_ID` используется для указания параметра *database_id* .  
   
 ```sql  
 SELECT *  
@@ -101,10 +101,10 @@ FROM fn_virtualfilestats(NULL,NULL);
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [DB_ID &#40;Transact-SQL&#41;](../../t-sql/functions/db-id-transact-sql.md)   
- [FILE_IDEX (Transact-SQL)](../../t-sql/functions/file-idex-transact-sql.md)   
- [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
- [sys.master_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
+ [FILE_IDEX &#40;Transact-SQL&#41;](../../t-sql/functions/file-idex-transact-sql.md)   
+ [sys. database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
+ [sys. master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   
   

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9334e4d44663f5d0637d6933eb7a72eae74d4a84
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243650"
 ---
 # <a name="search-an-active-document-incrementally"></a>Выполнение добавочного поиска в активном документе
@@ -47,11 +47,11 @@ ms.locfileid: "75243650"
 > [!NOTE]  
 >  Полный список сочетаний клавиш см. в статье [Сочетания клавиш среды SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Поиск и замена](search-and-replace.md)   
- [Поиск документов в интерактивном режиме](search-documents-interactively.md)   
+ [осуществлять поиск в документах в интерактивном режиме](search-documents-interactively.md)   
  [Поиск документов с помощью списков результатов](search-documents-using-results-lists.md)   
- [Поиск текста с подстановочными знаками](search-text-with-wildcards.md)   
+ [Поиск текста с символами-шаблонами](search-text-with-wildcards.md)   
  [Поиск текста с помощью регулярных выражений](search-text-with-regular-expressions.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_valid_use_hints (Transact-SQL) | Документация Майкрософт
+title: sys. dm_exec_valid_use_hints (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/17/2016
 ms.prod: sql
@@ -19,29 +19,29 @@ ms.assetid: 65d50589-39c2-4046-92b6-0c4587d8c593
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: c6fcaa491f7d42e255ed329a8e16798437aa2c7a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67936795"
 ---
-# <a name="sysdmexecvalidusehints-transact-sql"></a>sys.dm_exec_valid_use_hints (Transact-SQL)
+# <a name="sysdm_exec_valid_use_hints-transact-sql"></a>sys. dm_exec_valid_use_hints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-Возвращает [USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint) поддерживается Указание имен. В ней перечислены одно указание имя каждой строки.  
+Возвращает имена подсказок, поддерживаемые [указанием USE](../../t-sql/queries/hints-transact-sql-query.md#use_hint) . В нем указывается одно имя подсказки для каждой строки.  
   
-Используйте это динамическое административное Представление, чтобы просмотреть список всех поддерживаемых указаний в нотации USE HINT.  
+Используйте это динамическое административное представление для просмотра списка всех поддерживаемых подсказок в нотации указания USE.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|name|**sysname**|Имя подсказки.|
+|name|**имеет sysname**|Имя подсказки.|
 
-См. в разделе [указания запросов](../../t-sql/queries/hints-transact-sql-query.md#use_hint) описания каждого подсказку.
+Описания каждого Совета см. в разделе [указания запросов](../../t-sql/queries/hints-transact-sql-query.md#use_hint) .
 
-Представленные в [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] с пакетом обновления 1.
+Представлено [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] в пакете обновления 1 (SP1).
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
     
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Динамические административные представления, относящиеся к базе данных &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [Динамические административные представления, связанные с базами данных &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
 

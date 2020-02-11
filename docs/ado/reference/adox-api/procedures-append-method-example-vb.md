@@ -1,5 +1,5 @@
 ---
-title: Пример метода (Visual Basic) Append коллекции Procedures | Документация Майкрософт
+title: Пример метода Append для процедур (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: ce83b966-474b-4f57-8eb9-370996dfc5c0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8bacc5dc2d55fb335358ab9ca34248f8e322811a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965428"
 ---
 # <a name="procedures-append-method-example-vb"></a>Пример метода Append коллекции Procedures (Visual Basic)
-Следующий код демонстрирует использование [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта и [процедуры](../../../ado/reference/adox-api/procedures-collection-adox.md) коллекции [Append](../../../ado/reference/adox-api/append-method-adox-procedures.md) метод, чтобы создать новую процедуру в базовом источнике данных.  
+В следующем коде показано, как использовать объект [Command](../../../ado/reference/ado-api/command-object-ado.md) и метод [append](../../../ado/reference/adox-api/append-method-adox-procedures.md) коллекции [процедур](../../../ado/reference/adox-api/procedures-collection-adox.md) для создания новой процедуры в базовом источнике данных.  
   
 ```  
 ' BeginCreateProcedureVB  
@@ -73,9 +73,9 @@ End Sub
 ' EndCreateProcedureVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Append-метод (коллекция Procedures ADOX)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
- [Объект Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Объект Procedure (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
+ [Метод Append (процедуры ADOX)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
+ [Объект каталога (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Объект процедуры (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
  [Коллекция Procedures (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)

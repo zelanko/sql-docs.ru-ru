@@ -19,16 +19,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7e2942f60e1bb41edfcd2d474619867d35806660
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73782334"
 ---
 # <a name="bcp_setcolfmt"></a>bcp_setcolfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Функция **bcp_setcolfmt** заменяет функцию [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md). При указании параметров сортировки столбца необходимо использовать функцию **bcp_setcolfmt** . С помощью[bcp_setbulkmode](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setbulkmode.md) можно задать формат нескольких столбцов.  
+  Функция **bcp_setcolfmt** заменяет функцию [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md). При указании параметров сортировки столбца необходимо использовать функцию **bcp_setcolfmt** . [bcp_setbulkmode](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setbulkmode.md) можно использовать для указания более чем одного формата столбца.  
   
  Эта функция предоставляет гибкий подход к указанию формата столбцов в операции массового копирования. Она используется для установки атрибутов формата отдельного столбца. Каждый вызов функции **bcp_setcolfmt** устанавливает один атрибут формата столбца.  
   
@@ -47,16 +47,16 @@ RETCODE bcp_setcolfmt (
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *хдбк*  
+ *hdbc*  
  Дескриптор соединения ODBC с поддержкой массового копирования.  
   
- *field*  
+ *полями*  
  Это порядковый номер столбца, для которого устанавливается значение свойства.  
   
  *property*  
  Одна из констант свойства. В данной таблице определены константы свойства.  
   
-|Свойство|Значение|Описание|  
+|Свойство|Значение|Description|  
 |--------------|-----------|-----------------|  
 |BCP_FMT_TYPE|BYTE|Тип данных этого столбца в файле пользователя. При отличии от типа данных соответствующего столбца в таблице базы данных массовое копирование преобразует данные, если это возможно.<br /><br /> Параметр BCP_FMT_TYPE перечисляется в токенах типов данных SQL Server в файле sqlncli.h, а не в перечислении типов данных ODBC C. Например, можно указать символьную строку типа SQL_C_CHAR ODBC при помощи типа SQLCHARACTER в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Чтобы задать представление данных по умолчанию для типа данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , установите этот параметр в значение 0.<br /><br /> Для массового копирования из SQL Server в файл, когда BCP_FMT_TYPE — SQLDECIMAL или SQLNUMERIC, если исходный столбец не является **десятичным** или **числовым**, используются точность и масштаб по умолчанию. В противном случае, если исходный столбец имеет тип **Decimal** или **numeric**, используются точность и масштаб исходного столбца.|  
 |BCP_FMT_INDICATOR_LEN|INT|Задает длину признака (префикса) в байтах.<br /><br /> Задает длину в байтах для признака длины или признака NULL в данных столбца. Допустимыми значениями длины признака являются 0 (если признак не используется), 1, 2 и 4.<br /><br /> Чтобы задать для признака массового копирования использование по умолчанию, установите этот параметр в значение SQL_VARLEN_DATA.<br /><br /> Признаки располагаются в памяти непосредственно перед данными, а в файле данных — непосредственно перед данными, к которым они применяются.<br /><br /> Если для столбца файла данных используется несколько способов задания длины (например, признак и максимальная длина столбца или признак и последовательность-признак конца), то для массового копирования выбирается способ, применение которого вызовет копирование данных наименьшего объема.<br /><br /> Если пользователь не изменяет формат данных, то создаваемые при массовом копировании файлы данных содержат признаки, которые определяют, когда столбец может принимать значение NULL или его данные имеют переменную длину.|  
@@ -74,7 +74,7 @@ RETCODE bcp_setcolfmt (
 ## <a name="returns"></a>Возвращает  
  SUCCEED или FAIL.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Эта функция заменяет функцию **bcp_colfmt** . Вся функциональность **bcp_colfmt** реализована в функции **bcp_setcolfmt** . Дополнительно реализована поддержка параметров сортировки столбца. Рекомендуется устанавливать следующие атрибуты формата столбца в данной последовательности:  
   
  BCP_FMT_SERVER_COL  
@@ -97,7 +97,7 @@ RETCODE bcp_setcolfmt (
   
 -   длина дополнительной последовательности байт, служащей признаком конца.  
   
- Каждый вызов функции **bcp_setcolfmt** устанавливает формат для одного столбца пользовательского файла. Например, для изменения параметров по умолчанию для трех столбцов в пользовательском файле данных с пятью столбцами необходимо сначала вызвать функцию [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) **(5)** , а затем пять раз вызвать функцию **bcp_setcolfmt** , при этом три из этих вызовов должны устанавливать пользовательский формат. Для оставшихся двух вызовов необходимо установить для BCP_FMT_TYPE значение 0, а также установить для BCP_FMT_INDICATOR_LENGTH, BCP_FMT_DATA_LEN и *cbValue* значения 0, SQL_VARLEN_DATA и 0 соответственно. Эта процедура копирует все пять столбцов. Для трех применяется заданный измененный формат, а для двух оставшихся — формат по умолчанию.  
+ Каждый вызов функции **bcp_setcolfmt** устанавливает формат для одного столбца пользовательского файла. Например, для изменения параметров по умолчанию для трех столбцов в пользовательском файле данных с пятью столбцами необходимо сначала вызвать функцию [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)**(5)**, а затем пять раз вызвать функцию **bcp_setcolfmt** , при этом три из этих вызовов должны устанавливать пользовательский формат. Для оставшихся двух вызовов необходимо установить для BCP_FMT_TYPE значение 0, а также установить для BCP_FMT_INDICATOR_LENGTH, BCP_FMT_DATA_LEN и *cbValue* значения 0, SQL_VARLEN_DATA и 0 соответственно. Эта процедура копирует все пять столбцов. Для трех применяется заданный измененный формат, а для двух оставшихся — формат по умолчанию.  
   
  Функция **bcp_columns** должна быть вызвана перед вызовом функции **bcp_setcolfmt**.  
   
@@ -108,11 +108,11 @@ RETCODE bcp_setcolfmt (
  Для сохранения спецификации формата можно воспользоваться функцией [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) .  
   
 ## <a name="bcp_setcolfmt-support-for-enhanced-date-and-time-features"></a>Поддержка функции bcp_setcolfmt для улучшенной даты и функций времени  
- Типы, используемые со свойством BCP_FMT_TYPE для типов даты и времени, задаются в изменениях при выполнении [операции копирования для расширенных &#40;типов даты и&#41;времени OLE DB и ODBC](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
+ Типы, используемые со свойством BCP_FMT_TYPE для типов даты и времени, задаются в изменениях при выполнении [операции копирования для расширенных типов даты и времени &#40;OLE DB и&#41;ODBC ](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
   
- Дополнительные сведения см. в разделе [улучшения &#40;даты и времени&#41;ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Дополнительные сведения см. в разделе [улучшения даты и времени &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
-## <a name="see-also"></a>См. также раздел  
- [Функции массового копирования](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
+## <a name="see-also"></a>См. также:  
+ [Bulk Copy Functions](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

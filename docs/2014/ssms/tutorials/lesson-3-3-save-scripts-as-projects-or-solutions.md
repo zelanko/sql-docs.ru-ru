@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6d17dd44f597d7b3ddfce574670e9e6bfd55f908
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62753049"
 ---
 # <a name="save-scripts-as-projects-or-solutions"></a>Сохранение скриптов в виде проектов или решений
@@ -58,7 +58,7 @@ ms.locfileid: "62753049"
     > [!NOTE]  
     >  Если требуется больше места для ввода запроса, нажмите клавиши SHIFT + ALT + ВВОД, чтобы переключиться в полноэкранный режим.  
   
-11. В обозревателе решений щелкните правой кнопкой мыши элемент **SQLQuery1**и выберите команду **Переименовать**. Тип **Check Workorders.sql** качестве нового имени запроса и нажмите клавишу ВВОД.  
+11. В обозревателе решений щелкните правой кнопкой мыши элемент **SQLQuery1**и выберите команду **Переименовать**. Введите **Check заказы. SQL** в качестве нового имени запроса и нажмите клавишу ВВОД.  
   
 12. Чтобы сохранить проект скрипта и решение, в меню **Файл** выберите команду **Сохранить все**.  
   

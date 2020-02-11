@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 663de184c811291c4b583ddbaf2fb6862097c54f
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73882177"
 ---
 # <a name="set-the-expiration-period-for-subscriptions"></a>Установка срока действия подписок
@@ -33,13 +33,13 @@ ms.locfileid: "73882177"
   
 -   **Для установки срока действия подписок используется:**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Среда SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Recommendations"></a> рекомендации  
+###  <a name="Recommendations"></a> Рекомендации  
   
 -   Срок действия подписки также может называться *сроком хранения публикации*. Очистка метаданных репликации слиянием зависит от этой настройки:  
   
@@ -50,7 +50,7 @@ ms.locfileid: "73882177"
     -   Можно задать неограниченный срок действия подписок, но настоятельно рекомендуется не использовать такое значение, так как нельзя будет очистить метаданные.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
- Установите срок действия для подписок на странице **Общее** диалогового окна **Свойства публикации — \<Публикация>** . Дополнительные сведения о доступе к этому диалоговому окну см. в разделе [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
+ Установите срок действия для подписок на странице **Общее** диалогового окна **Свойства публикации — \<Публикация>** . Дополнительные сведения о доступе к этому диалоговому окну см. в разделе [Просмотр и изменение свойств публикации](view-and-modify-publication-properties.md).  
   
 #### <a name="to-set-the-expiration-period-for-subscriptions"></a>Установка срока действия подписок  
   
@@ -63,7 +63,7 @@ ms.locfileid: "73882177"
   
 #### <a name="to-set-the-expiration-period-for-a-subscription-to-a-snapshot-or-transactional-publication"></a>Настройка срока действия подписки на моментальный снимок или публикацию транзакций  
   
-1.  Выполните процедуру [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)на издателе. Укажите нужный срок действия подписки в часах в параметре **\@retention**. По умолчанию срок хранения равен 336 часам. Дополнительные сведения см. в статье [Create a Publication](create-a-publication.md).  
+1.  Выполните процедуру [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)на издателе. Укажите нужный срок действия подписки в часах в параметре **\@retention**. По умолчанию срок хранения равен 336 часам. Дополнительные сведения см. в разделе [Create a Publication](create-a-publication.md).  
   
 #### <a name="to-set-the-expiration-period-for-a-subscription-to-a-merge-publication"></a>Настройка срока действия подписки на публикацию слиянием  
   
@@ -75,7 +75,7 @@ ms.locfileid: "73882177"
   
     -   **3** = Год  
   
-     По умолчанию срок хранения равен 14 дням. Дополнительные сведения см. в статье [Create a Publication](create-a-publication.md).  
+     По умолчанию срок хранения равен 14 дням. Дополнительные сведения см. в разделе [Create a Publication](create-a-publication.md).  
   
 #### <a name="to-change-the-expiration-period-for-a-subscription-to-a-snapshot-or-transactional-publication"></a>Изменение срока действия подписки на моментальный снимок или публикацию транзакций  
   
@@ -97,8 +97,8 @@ ms.locfileid: "73882177"
   
 3.  (Необязательно) На издателе выполните хранимую процедуру [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql). Укажите значение **retention_period_unit** в параметре **\@property** и новую единицу измерения для срока действия подписки в параметре **\@value**.  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
- [Subscription Expiration and Deactivation](../subscription-expiration-and-deactivation.md)  
+ [Окончание срока действия и отключение подписки](../subscription-expiration-and-deactivation.md)  
   
   

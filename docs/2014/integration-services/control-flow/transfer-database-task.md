@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f7ddf838269932c19b0614d5a5219a7f03daed17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830153"
 ---
 # <a name="transfer-database-task"></a>Задача «Передача базы данных»
@@ -71,9 +71,9 @@ ms.locfileid: "62830153"
   
  Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующих разделах:  
   
--   [Редактор задачи "Передача базы данных" (страница "Общие")](../general-page-of-integration-services-designers-options.md)  
+-   [Редактор задачи "Перемещение базы данных" &#40;общие&#41;страницы](../general-page-of-integration-services-designers-options.md)  
   
--   [Редактор задачи "Передача базы данных" (страница "Базы данных")](../transfer-database-task-editor-databases-page.md)  
+-   [Редактор задачи "Перемещение базы данных" &#40;"базы данных"&#41;](../transfer-database-task-editor-databases-page.md)  
   
 -   [Страница «Выражения»](../expressions/expressions-page.md)  
   

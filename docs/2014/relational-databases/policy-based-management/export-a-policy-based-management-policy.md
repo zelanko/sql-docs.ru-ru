@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: dc7067432c46e1d03323ed2a32dab84ebdf72755
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62705330"
 ---
 # <a name="export-a-policy-based-management-policy"></a>Экспорт политики управления на основе политик
@@ -26,7 +26,7 @@ ms.locfileid: "62705330"
   
 -   **Перед началом работы**  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Экспорт политики с помощью:**  
   
@@ -55,6 +55,6 @@ ms.locfileid: "62705330"
   
 6.  В диалоговом окне **Экспорт политики** введите в адресной строке имя файла и путь к нему. Также можно найти подходящее расположение для файла в области панели навигации диалогового окна, а затем ввести имя XML-файла в поле **Имя файла** .  
   
-7.  После завершения нажмите кнопку **Сохранить**.  
+7.  По завершении щелкните **Сохранить**.  
   
   

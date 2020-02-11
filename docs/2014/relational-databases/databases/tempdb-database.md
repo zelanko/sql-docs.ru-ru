@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0b1265d3ef58f6ef0946937b15411b0cb79a3c20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916894"
 ---
 # <a name="tempdb-database"></a>База данных tempdb
@@ -33,7 +33,7 @@ ms.locfileid: "62916894"
   
 -   версии строк, создаваемые транзакциями изменения данных для таких функций, как операции с индексами в сети, функции режима MARS и триггеры AFTER.  
   
- Операции в базе данных **tempdb** регистрируются минимально. Это позволяет откатить транзакцию. База данных**tempdb** пересоздается при каждом запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы система всегда запускалась с чистой копией базы данных. Временные таблицы и хранимые процедуры удаляются автоматически при отключении, и при выключении системы нет активных соединений. Поэтому в базе данных **tempdb** ничего не сохраняется от одного сеанса [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до следующего. Операции резервного копирования и восстановления базы данных **tempdb**запрещены.  
+ Операции в базе данных **tempdb** регистрируются минимально. Это позволяет откатить транзакцию. **база данных tempdb** создается повторно при каждом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запуске, чтобы система всегда начиналась с чистой копией. Временные таблицы и хранимые процедуры удаляются автоматически при отключении, и при выключении системы нет активных соединений. Таким образом, в **базе данных tempdb** нельзя сохранять данные из одного сеанса [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в другой. Операции резервного копирования и восстановления не разрешены в **базе данных tempdb**.  
   
 ## <a name="physical-properties-of-tempdb"></a>Физические свойства базы данных tempdb  
  Следующая таблица описывает исходную конфигурацию данных и файлов журналов базы данных **tempdb** . Размеры этих файлов могут немного изменяться в зависимости от выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -43,7 +43,7 @@ ms.locfileid: "62916894"
 |Первичные данные|tempdev|tempdb.mdf|Автоувеличение на 10 % до заполнения диска.|  
 |Журнал|templog|templog.ldf|Автоувеличение на 10 % до максимального размера в 2 ТБ.|  
   
- Размер **tempdb** может повлиять на производительность системы. Например если **tempdb** размер слишком мал, система может быть слишком занята автоматическим увеличением базы данных для поддержки требований рабочей нагрузки при каждом запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этих затрат можно избежать, увеличив размер **tempdb**.  
+ Размер **базы данных tempdb** может повлиять на производительность системы. Например, если размер базы данных **tempdb** слишком мал, системная обработка может оказаться слишком занятой с автоувеличением базы данных для поддержки требования к рабочей нагрузке при каждом запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эту нагрузку можно избежать, увеличив размер **базы данных tempdb**.  
   
 ## <a name="performance-improvements-in-tempdb"></a>Увеличение производительности базы данных tempdb  
  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]производительность базы данных **tempdb** увеличена следующими способами.  
@@ -54,13 +54,13 @@ ms.locfileid: "62916894"
   
 -   Снижены затраты на ведение журнала базы данных **tempdb** . При этом снижается потребление пропускной способности подсистемы ввода-вывода файлом журнала базы данных **tempdb** .  
   
--   Алгоритм выделения смешанных страниц в **tempdb** повышается.  
+-   Улучшен алгоритм выделения смешанных страниц в **базе данных tempdb** .  
   
 ### <a name="moving-the-tempdb-data-and-log-files"></a>Перемещение данных и файлов журналов базы данных tempdb  
- Сведения о перемещении файлов данных и журналов базы данных **tempdb** см. в разделе [Перемещение системных баз данных](system-databases.md).  
+ Сведения о перемещении файлов данных и журналов **tempdb** см. в разделе [Перемещение системных баз данных](system-databases.md).  
   
 ### <a name="database-options"></a>Параметры базы данных  
- Следующая таблица описывает значения по умолчанию всех параметров базы данных **tempdb** и условия их изменения. Чтобы просмотреть текущие настройки этих параметров, используйте представление каталога [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) .  
+ В следующей таблице приводятся значения по умолчанию для каждого параметра базы данных **tempdb** и указывается, можно ли изменить параметр. Чтобы просмотреть текущие настройки этих параметров, используйте представление каталога [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) .  
   
 |Параметр базы данных|Значение по умолчанию|Можно ли изменить|  
 |---------------------|-------------------|---------------------|  
@@ -85,18 +85,18 @@ ms.locfileid: "62916894"
 |ENCRYPTION|OFF|нет|  
 |NUMERIC_ROUNDABORT|OFF|Да|  
 |PAGE_VERIFY|Значение CHECKSUM для новых установок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Значение NONE для обновлений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Да|  
-|PARAMETERIZATION|SIMPLE|Да|  
+|PARAMETERIZATION|ПРОСТОЙ|Да|  
 |QUOTED_IDENTIFIER|OFF|Да|  
 |READ_COMMITTED_SNAPSHOT|OFF|нет|  
-|RECOVERY|SIMPLE|нет|  
+|RECOVERY|ПРОСТОЙ|нет|  
 |RECURSIVE_TRIGGERS|OFF|Да|  
 |Параметры компонента Service Broker|ENABLE_BROKER|Да|  
-|TRUSTWORTHY|OFF|Нет|  
+|TRUSTWORTHY|OFF|нет|  
   
  Описание этих баз данных см. в статье [Параметры ALTER DATABASE SET (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
 ## <a name="restrictions"></a>Ограничения  
- В базе данных **tempdb** нельзя выполнить следующие операции.  
+ Невозможно выполнить следующие операции с базой данных **tempdb** :  
   
 -   Добавление файловых групп.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "62916894"
   
 -   Изменение параметров сортировки. Параметрами сортировки по умолчанию являются параметры сортировки сервера.  
   
--   Изменение владельца базы данных. Владельцем**tempdb** является **sa**.  
+-   Изменение владельца базы данных. **база данных tempdb** принадлежит **SA**.  
   
 -   Создание моментального снимка базы данных.  
   
@@ -138,7 +138,7 @@ ms.locfileid: "62916894"
   
  [sys.databases (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   
- [sys.master_files (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql)  
+ [sys. master_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql)  
   
  [Перемещение файлов базы данных](move-database-files.md)  
   

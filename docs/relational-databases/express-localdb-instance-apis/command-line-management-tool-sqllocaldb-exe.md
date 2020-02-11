@@ -1,5 +1,5 @@
 ---
-title: 'Программа командной строки: SqlLocalDB.exe | Документация Майкрософт'
+title: 'Средство управления командной строки: SqlLocalDB. exe | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -13,13 +13,13 @@ ms.assetid: dd0882b1-a8a9-447a-8bdf-0f9d7f36d336
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: a41daed808b51df59ba80e0113b84e46c501c9b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68126947"
 ---
-# <a name="command-line-management-tool-sqllocaldbexe"></a>Программа командной строки: SqlLocalDB.exe
+# <a name="command-line-management-tool-sqllocaldbexe"></a>Программа командной строки SqlLocalDB.exe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Программа SqlLocalDB.exe — это простое средство для управления экземплярами LocalDB из командной строки. Оно реализовано как простая оболочка для API экземпляра LocalDB. Как и во многих аналогичных средствах SQL Server (например, SQLCMD), параметры передаются в SqlLocalDB как параметры командной строки, а вывод отправляется на консоль.  
   

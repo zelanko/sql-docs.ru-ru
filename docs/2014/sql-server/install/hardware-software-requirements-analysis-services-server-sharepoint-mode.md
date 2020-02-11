@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 8f645ca9bdb6176505a6277af0f0482be5b62f09
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245612"
 ---
 # <a name="hardware-and-software-requirements-for-analysis-services-server-in-sharepoint-mode-sql-server-2014"></a>Требования к оборудованию и программному обеспечению для сервера служб Analysis Services в режиме интеграции с SharePoint (SQL Server 2014)
@@ -41,7 +41,7 @@ ms.locfileid: "75245612"
 ##  <a name="bkmk_ssas__sharepoint_2013"></a>Analysis Services, установленные на сервере SharePoint 2013  
  Если сервер служб Analysis Services в режиме интеграции SharePoint устанавливается на сервере отдельно, то минимальные требования к системе основываются на требованиях к [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], а не SharePoint Server.  
   
- [Требования к оборудованию и программному обеспечению для установки SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)  
+ [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)  
   
  
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint рекомендуется запускать на бизнес-серверах нового поколения, которые имеют более высокие пороговые значения ОЗУ и обладают большими вычислительными мощностями. Для хранения данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в памяти используются большие объемы ОЗУ. ОЗУ поддерживает возможность адаптироваться к структурным изменениям. Дополнительные процессоры поддерживают выполнение длительных сканирований необработанных и необъединенных данных. Предполагается, что данные формируют свою структуру в динамической среде в ответ на определяемый пользователем анализ данных, который инициируется с помощью клиента или интерфейса Excel для клиентских запросов.  
@@ -56,11 +56,11 @@ ms.locfileid: "75245612"
 |---------------|-------------|-----------------|  
 |Процессор|64-разрядный двухъядерный процессор с тактовой частотой 3 ГГц.|16 ядер|  
 |ОЗУ|8 гигабайт ОЗУ|64 гигабайта ОЗУ|  
-|Служба хранилища|80 ГБ|80 гигабайт или больше|  
+|Память|80 ГБ|80 гигабайт или больше|  
   
  Если сервер служб Analysis Services в режиме интеграции с SharePoint установлен на сервере фермы SharePoint, то сведения о минимальных требованиях к системе для [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и сервера SharePoint см. по следующим ссылкам:  
   
--   [Требования к оборудованию и программному обеспечению для установки SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)  
+-   [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)  
   
 -   [Требования к оборудованию и программному обеспечению для SharePoint 2013](https://technet.microsoft.com/library/cc262485\(office.15\).aspx).  
   

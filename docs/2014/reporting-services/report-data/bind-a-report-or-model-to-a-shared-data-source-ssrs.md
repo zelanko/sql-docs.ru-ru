@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b6d973d4628e9c80b47c4fea0ef3476dbd05131f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107452"
 ---
 # <a name="bind-a-report-or-model-to-a-shared-data-source-ssrs"></a>Привязка отчета или модели к общему источнику данных (SSRS)
@@ -64,12 +64,12 @@ ms.locfileid: "66107452"
   
 10. Щелкните **Закрыть**.  
   
-## <a name="see-also"></a>См. также  
- [Передача файла или отчета (диспетчер отчетов)](../reports/upload-a-file-or-report-report-manager.md)   
- [Загрузка документов в библиотеку SharePoint (службы Reporting Services в режиме SharePoint)](../upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)   
- [Создание общих источников данных и управление ими (службы Reporting Services в режиме интеграции с SharePoint)](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)   
- [Создание, удаление или изменение общего источника данных (диспетчер отчетов)](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [Подключения к данным, источники данных и строки подключения в службах Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Источники данных, поддерживаемые службами Reporting Services (SSRS)](../create-deploy-and-manage-mobile-and-paginated-reports.md)  
+## <a name="see-also"></a>См. также:  
+ [Отправка &#40;диспетчер отчетов файла или отчета&#41;](../reports/upload-a-file-or-report-report-manager.md)   
+ [Отправка документов в библиотеку SharePoint &#40;Reporting Services в режиме интеграции с SharePoint&#41;](../upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)   
+ [Создание общих источников данных и управление ими &#40;Reporting Services в режиме интеграции с SharePoint&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)   
+ [Создание, удаление или изменение общего источника данных &#40;диспетчер отчетов&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [Подключения к данным, источники данных и строки подключения в Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+ [Источники данных, поддерживаемые службами Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
   

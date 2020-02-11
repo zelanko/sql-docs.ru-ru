@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a610f3aed7f520163dc4e2b30651d8b0397ef644
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893929"
 ---
 # <a name="modeling-flags-dmx"></a>Флаги моделирования (расширения интеллектуального анализа данных)
@@ -22,10 +22,10 @@ ms.locfileid: "68893929"
   
  Службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] поддерживают следующие флаги моделирования:  
   
- **NOT NULL**  
+ **НЕ NULL**  
  Значения столбца атрибутов никогда не должны включать значение NULL. Если службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] найдут значение NULL в данном столбце атрибутов в процессе обучения модели, будет выдана ошибка. Данный флаг задается для столбца структуры интеллектуального анализа данных.  
   
- **REGRESSOR**  
+ **РЕГРЕССОР**  
  Указывает, что алгоритм может использовать заданный столбец в формуле регрессии алгоритмов регрессии. Этот флаг поддерживается алгоритмами линейной регрессии [!INCLUDE[msCoName](../includes/msconame-md.md)] и дерева принятия решений [!INCLUDE[msCoName](../includes/msconame-md.md)], и задается для столбца модели интеллектуального анализа данных.  
   
  **MODEL_EXISTENCE_ONLY**  
@@ -44,22 +44,22 @@ WHERE SERVICE_NAME = 'Microsoft_Linear_Regression'
  NOT NULL,REGRESSOR  
   
 ## <a name="specifying-modeling-flags-on-a-mining-model"></a>Указание флагов моделирования в модели интеллектуального анализа данных  
- Примеры синтаксиса, который [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] поддерживает для указания флага в столбце структуры интеллектуального анализа данных, см. в разделе [Создание &#40;расширений&#41;интеллектуального анализа](../dmx/create-mining-structure-dmx.md)данных.  
+ Примеры синтаксиса, который [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] поддерживает для указания флага в столбце структуры интеллектуального анализа данных, см. в разделе [Создание структуры интеллектуального анализа данных &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md).  
   
  Пример синтаксиса для указания флга моделирования в столбце модели интеллектуального анализа данных см. в разделе [ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md).  
   
  Дополнительные сведения о работе с столбцами модели интеллектуального анализа данных см. в разделе [столбцы модели интеллектуального анализа данных](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns).  
   
-## <a name="see-also"></a>См. также  
- [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
- [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../dmx/data-mining-extensions-dmx-reference.md)   
- [Элементы&#41; синтаксиса &#40;расширений интеллектуального анализа данных](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [Справочник по &#40;функциям&#41; DMX расширений интеллектуального анализа данных](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Справочник по &#40;операторам&#41; DMX расширений интеллектуального анализа данных](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Справочник по DMX &#40;&#41; -инструкциям расширений интеллектуального анализа данных](../dmx/data-mining-extensions-dmx-statements.md)   
- [&#41; Синтаксические обозначения расширений &#40;расширений интеллектуального анализа данных](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [DMX-функции &#40;общих прогнозирующих функций&#41;](../dmx/general-prediction-functions-dmx.md)   
- [Структура и методы использования прогнозирующих запросов расширений интеллектуального анализа данных](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
- [Общие сведения об инструкции SELECT в расширении интеллектуального анализа данных](../dmx/understanding-the-dmx-select-statement.md)  
+## <a name="see-also"></a>См. также:  
+ [Алгоритмы интеллектуального анализа данных &#40;Analysis Services — интеллектуальный анализ данных&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
+ [Расширения интеллектуального анализа данных &#40;Справочник по DMX&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Расширения интеллектуального анализа данных &#40;синтаксические&#41; DMX-элементы](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [Расширения интеллектуального анализа данных &#40;Справочник по функциям DMX&#41;](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Ссылки на операторы расширений интеллектуального анализа данных &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Расширения интеллектуального анализа данных &#40;Справочник по инструкции DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Расширения интеллектуального анализа данных &#40;синтаксические обозначения&#41; DMX](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [Общие прогнозирующие функции &#40;&#41;расширений интеллектуального анализа данных](../dmx/general-prediction-functions-dmx.md)   
+ [Структура и использование прогнозирующих запросов расширений интеллектуального анализа данных](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
+ [Общие сведения об инструкции расширения интеллектуального анализа данных SELECT](../dmx/understanding-the-dmx-select-statement.md)  
   
   
