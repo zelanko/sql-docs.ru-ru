@@ -18,13 +18,13 @@ ms.assetid: 18b2c985-47b8-49c8-82d1-8a4af3d7d33a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7a2a4e8a7cf58f8c4519d15ae46e2b278fcd1383
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68008959"
 ---
-# <a name="spdeleteschedule-transact-sql"></a>sp_delete_schedule (Transact-SQL)
+# <a name="sp_delete_schedule-transact-sql"></a>sp_delete_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Удаляет расписание.  
@@ -40,27 +40,27 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @schedule_id = ] schedule_id` Идентификационный номер расписания, следует удалить. *schedule_id* — **int**, значение по умолчанию NULL.  
+`[ @schedule_id = ] schedule_id`Идентификационный номер расписания для удаления. *schedule_id* имеет **тип int**и значение по умолчанию NULL.  
   
-> **ПРИМЕЧАНИЕ.** Либо *schedule_id* или *schedule_name* должен быть указан, но не оба аргумента одновременно.  
+> **Примечание.** Необходимо указать либо *schedule_id* , либо *schedule_name* , но нельзя указать оба значения.  
   
-`[ @schedule_name = ] 'schedule_name'` Имя расписания. *schedule_name* — **sysname**, значение по умолчанию NULL.  
+`[ @schedule_name = ] 'schedule_name'`Имя удаляемого расписания. Аргумент *schedule_name* имеет тип **sysname**и значение по умолчанию NULL.  
   
-> **ПРИМЕЧАНИЕ.** Либо *schedule_id* или *schedule_name* должен быть указан, но не оба аргумента одновременно.  
+> **Примечание.** Необходимо указать либо *schedule_id* , либо *schedule_name* , но нельзя указать оба значения.  
   
-`[ @force_delete = ] force_delete` Указывает, является ли процедура завершаться с ошибкой, если расписание прикреплено к заданию. *Force_delete* имеет тип bit и значение по умолчанию **0**. Когда *force_delete* — **0**, хранимая процедура завершается неудачей, если расписание прикреплено к заданию. Когда *force_delete* — **1**, расписание удаляется независимо от того, прикреплено ли оно к заданию.  
+`[ @force_delete = ] force_delete`Указывает, должна ли процедура завершаться ошибкой, если расписание присоединено к заданию. *Force_delete* имеет бит и значение по умолчанию **0**. Если *force_delete* равен **0**, хранимая процедура завершается ошибкой, если расписание присоединено к заданию. Если *force_delete* равен **1**, расписание удаляется независимо от того, присоединено ли к заданию расписание.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  None  
   
-## <a name="remarks"></a>Примечания  
- По умолчанию расписание нельзя удалить, если оно прикреплено к заданию. Удаление расписания, прикрепленного к заданию, укажите значение **1** для *force_delete*. Удаление расписания не приведет к остановке запущенных заданий.  
+## <a name="remarks"></a>Remarks  
+ По умолчанию расписание нельзя удалить, если оно прикреплено к заданию. Чтобы удалить расписание, присоединенное к заданию, укажите значение **1** для *force_delete*. Удаление расписания не приведет к остановке запущенных заданий.  
   
 ## <a name="permissions"></a>Разрешения  
- По умолчанию эту хранимую процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
+ По умолчанию эта хранимая процедура может выполняться членами предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
   
 -   **SQLAgentUserRole**  
   
@@ -72,7 +72,7 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
   
  Дополнительные сведения о разрешениях этих ролей см. в разделе [Предопределенные роли базы данных агента SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Только члены **sysadmin** роли можно удалять расписание заданий, которая принадлежит другому пользователю.  
+ Только члены роли **sysadmin** могут удалять расписание заданий, принадлежащее другому пользователю.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -101,8 +101,8 @@ EXEC dbo.sp_delete_schedule
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Реализация заданий](../../ssms/agent/implement-jobs.md)   
- [sp_add_schedule (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)  
+ [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)  
   
   

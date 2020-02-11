@@ -16,13 +16,13 @@ ms.assetid: f0134448-bc17-4f2f-bd81-619351ce56ac
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 63916a86757877dc6ae601c798ba7a987256580c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68124119"
 ---
-# <a name="spgetdistributor-transact-sql"></a>Хранимая процедура sp_get_distributor (Transact-SQL)
+# <a name="sp_get_distributor-transact-sql"></a>Хранимая процедура sp_get_distributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Определяет, установлен ли на сервере распространитель. Хранимая процедура выполняется на компьютере, где выполняется поиск распространителя, в любой базе данных.  
@@ -38,23 +38,23 @@ sp_get_distributor
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|**установлен**|**int**|**0** = нет; **1** = yes|  
-|**сервер распространения**|**sysname**|Имя сервера распространителя|  
-|**базы данных распространителя установлена**|**int**|**0** = нет; **1** = yes|  
-|**является распространяющий издатель**|**int**|**0** = нет; **1** = yes|  
-|**имеется Удаленный распространяющий издатель**|**int**|**0** = нет; **1** = yes|  
+|**установлено**|**int**|**0** = нет; **1** = да|  
+|**сервер распространения**|**имеет sysname**|Имя сервера распространителя|  
+|**база данных распространителя установлена**|**int**|**0** = нет; **1** = да|  
+|**is distribution publisher**|**int**|**0** = нет; **1** = да|  
+|**есть Удаленный распространяющий издатель**|**int**|**0** = нет; **1** = да|  
   
-## <a name="remarks"></a>Примечания  
- **sp_get_distributor** используется преимущественно средой [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] в моментальных снимков, транзакций и репликации слиянием.  
+## <a name="remarks"></a>Remarks  
+ **sp_get_distributor** используется главным образом [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] в в репликации моментальных снимков, транзакций и слиянием.  
   
 ## <a name="permissions"></a>Разрешения  
- Любой пользователь может выполнить **sp_get_distributor**. Отличное от NULL результирующий набор возвращается, если эта хранимая процедура выполняется членами **db_owner** или **replmonitor** предопределенных ролей базы данных в базу данных распространителя или членами  **db_owner** предопределенной роли базы данных по крайней мере одной опубликованной базы данных. Набор НЕНУЛЕВОЙ результат также возвращается, если эта хранимая процедура выполняется пользователями в списке доступа к публикации (PAL) из по крайней мере одной опубликованной базы данных, либо в список доступа к публикации базы данных распространителя для издателя, отличном от издателя SQL Server, также можно выполнить **sp _get_distributor**.  
+ Любой пользователь может выполнить **sp_get_distributor**. Результирующий набор, отличный от NULL, возвращается при выполнении этой хранимой процедуры членами предопределенной роли базы данных **db_owner** или **replmonitor** в базе данных распространителя или членами предопределенной роли базы данных **db_owner** по крайней мере в одной опубликованной базе данных. Результирующий набор, отличный от NULL, также возвращается при выполнении этой хранимой процедуры пользователями из списка доступа к публикации (PAL) по крайней мере одной опубликованной базы данных или в списке PAL базы данных распространителя для издателя, не являющегося SQL Server, также может выполняться **sp_get_distributor**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Настройка публикации и распространения](../../relational-databases/replication/configure-publishing-and-distribution.md)   
- [Distributor and Publisher Information Script](../../relational-databases/replication/administration/distributor-and-publisher-information-script.md)  (Скрипт вывода сведений о распространителе и издателе)  
- [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+ [Скрипт сведений о распространителе и издателе](../../relational-databases/replication/administration/distributor-and-publisher-information-script.md)   
+ [Хранимые процедуры репликации &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

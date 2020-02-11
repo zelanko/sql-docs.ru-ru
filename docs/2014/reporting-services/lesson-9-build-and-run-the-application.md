@@ -1,5 +1,5 @@
 ---
-title: Урок 9. Сборка и запуск приложения | Документация Майкрософт
+title: Занятие 9. Сборка и запуск приложения | Документы Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 321075631a48570a80e8294f992e8ddb17d50bd3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108374"
 ---
-# <a name="lesson-9-build-and-run-the-application"></a>Урок 9. Сборка и запуск приложения
+# <a name="lesson-9-build-and-run-the-application"></a>Lesson 9: Build and Run the Application
   После создания фильтра данных для таблицы данных далее необходимо построить и запустить приложение веб-сайта.  
   
 ### <a name="to-build-and-run-the-application"></a>Построение и запуск приложения  
@@ -34,7 +34,7 @@ ms.locfileid: "66108374"
   
 4.  Щелкните значок **Возврат к родительскому отчету**на панели инструментов **ReportViewer** , чтобы перейти к **родительскому** отчету.  
   
-     ![Детализация с помощью ReportViewer SSRS](../../2014/tutorials/media/ssrs-drillthrough-report.png "ssrs детализацию с помощью ReportViewer")  
+     ![Детализация служб SSRS с помощью ReportViewer](../../2014/tutorials/media/ssrs-drillthrough-report.png "Детализация служб SSRS с помощью ReportViewer")  
   
 5.  Закройте браузер, чтобы выйти из приложения.  
   

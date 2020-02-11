@@ -1,5 +1,5 @@
 ---
-title: Пример свойства подключения (Visual Basic) | Документация Майкрософт
+title: Пример свойств соединения (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,17 +17,17 @@ ms.assetid: 4de7336a-b5ea-43f1-b750-5fa302b5b756
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1d0cd34b13889ed44e32e29a058ca01d48aea1b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933478"
 ---
-# <a name="connectionstring-connectiontimeout-and-state-properties-example-vb"></a>Пример свойства состояния (Visual Basic), ConnectionString и ConnectionTimeout
-В этом примере рассматриваются различные способы использования [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) свойства, чтобы открыть [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта. Он также использует [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md) свойство, чтобы задать период ожидания соединения и [состояние](../../../ado/reference/ado-api/state-property-ado.md) свойство для проверки состояния подключения. Функция GetState является обязательным для выполнения этой процедуры.  
+# <a name="connectionstring-connectiontimeout-and-state-properties-example-vb"></a>Пример свойств ConnectionString, ConnectionTimeout и State (Visual Basic)
+В этом примере демонстрируются различные способы использования свойства [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) для открытия объекта [соединения](../../../ado/reference/ado-api/connection-object-ado.md) . Он также использует свойство [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md) для установки времени ожидания соединения, а свойство [State](../../../ado/reference/ado-api/state-property-ado.md) — для проверки состояния соединений. Для выполнения этой процедуры требуется функция-состояние.  
   
 > [!NOTE]
->  Если вы подключаетесь к поставщик источника данных, который поддерживает проверку подлинности Windows, следует указать **Trusted_Connection = yes** или **Integrated Security = SSPI** вместо идентификатора пользователя и пароля сведения в строке подключения.  
+>  При подключении к поставщику источника данных, который поддерживает проверку подлинности Windows, следует указать **Trusted_Connection = Yes** или **Integrated Security = SSPI** вместо сведений об идентификаторе пользователя и пароле в строке подключения.  
   
 ```  
 'BeginConnectionStringVB  
@@ -126,7 +126,7 @@ End Function
 'EndConnectionStringVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Свойство ConnectionString (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md)   
  [Свойство ConnectionTimeout (ADO)](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)   

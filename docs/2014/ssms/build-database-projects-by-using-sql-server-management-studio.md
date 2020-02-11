@@ -16,21 +16,21 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 134ac290601e463063f78a59ea8fd5923d095663
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211268"
 ---
 # <a name="build-database-projects-by-using-sql-server-management-studio"></a>Создание проектов баз данных с использованием среды SQL Server Management Studio
-  Проект скрипта базы данных — это организованный набор скриптов, сведений о соединении и шаблонов, связанных с базой данных или одной из частей базы данных. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] предоставляет [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] для администрирования и проектирования баз данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в контексте проекта скрипта. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] включает конструкторы, редакторы, руководства и мастера, помогающие пользователям в разработке, развертывании и обслуживании баз данных.  
+  Проект скрипта базы данных — это организованный набор скриптов, сведений о соединении и шаблонов, связанных с базой данных или одной из частей базы данных. [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] предоставляет [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] для администрирования и проектирования [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] баз данных в контексте проекта скрипта. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]содержит конструкторы, редакторы, руководства и мастера, помогающие пользователям в разработке, развертывании и обслуживании баз данных.  
   
 ## <a name="sql-server-management-studio"></a>SQL Server Management Studio  
- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] — это набор административных средств для управления компонентами, относящимися к [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Эта интегрированная среда позволяет пользователям выполнять разнообразные задачи, например резервное копирование данных, редактирование запросов и автоматизацию общих функций в одном интерфейсе.  
+ [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]— это набор средств администрирования для управления компонентами, принадлежащими [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Эта интегрированная среда позволяет пользователям выполнять разнообразные задачи, например резервное копирование данных, редактирование запросов и автоматизацию общих функций в одном интерфейсе.  
   
- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] включает в себя следующие средства:  
+ [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]включает следующие средства:  
   
--   Редактор кода — богатый возможностями редактор скриптов для написания и редактирования скриптов. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] предоставляет четыре версии редактора кода: редактор запросов [!INCLUDE[ssDE](../includes/ssde-md.md)] для скриптов [!INCLUDE[tsql](../includes/tsql-md.md)] , редактор запросов многомерных выражений, редактор запросов расширения интеллектуального анализа данных и редактор запросов XML/A.  
+-   Редактор кода — богатый возможностями редактор скриптов для написания и редактирования скриптов. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]предоставляет четыре версии редактора кода; Редактор [!INCLUDE[ssDE](../includes/ssde-md.md)] запросов для [!INCLUDE[tsql](../includes/tsql-md.md)] скриптов, редактор DMX-запросов, редактор запросов многомерных выражений и редактор запросов XML/A.  
   
 -   Обозреватель объектов для размещения, изменения, создания скрипта или выполнения объектов, принадлежащих экземплярам [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68211268"
   
 -   Окно свойств для отображения текущих свойств выбранных объектов.  
   
- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] обеспечивает эффективность рабочих процессов, предоставляя:  
+ [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]поддерживает эффективные рабочие процессы, предоставляя:  
   
 -   Отключенный доступ. Можно писать и изменять скрипты, не соединяясь с экземпляром [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
@@ -59,12 +59,12 @@ ms.locfileid: "68211268"
   
 -   Сохранять сведения о соединении со скриптами.  
   
- Обозреватель решений — инструмент для разработчиков, создающих и многократно использующих скрипты, связанные с одним и тем же проектом. Если подобная задача потребуется позже, можно использовать группу скриптов, которые были сохранены в проекте. Те, кто уже имеет опыт разработки приложений с помощью среды [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], сориентируются в обозревателе решений довольно легко.  
+ Обозреватель решений — инструмент для разработчиков, создающих и многократно использующих скрипты, связанные с одним и тем же проектом. Если подобная задача потребуется позже, можно использовать группу скриптов, которые были сохранены в проекте. Если вы создали приложения с помощью [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], вы сможете найти Обозреватель решений очень знакомые.  
   
  Решение состоит из одного или более проектов скриптов. Проект состоит из одного или более скриптов или соединений. Проект может содержать не только файлы сценариев.  
   
-## <a name="see-also"></a>См. также  
- [Использование среды SQL Server Management Studio](../database-engine/use-sql-server-management-studio.md)   
+## <a name="see-also"></a>См. также:  
+ [Использование SQL Server Management Studio](../database-engine/use-sql-server-management-studio.md)   
  [Редакторы запросов и текста &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)   
  [Решения (среда SQL Server Management Studio)](solution/solutions-sql-server-management-studio.md)  
   

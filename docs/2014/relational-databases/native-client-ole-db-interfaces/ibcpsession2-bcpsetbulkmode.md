@@ -1,5 +1,5 @@
 ---
-title: IBCPSession2::BCPSetBulkMode | Документация Майкрософт
+title: 'Метода IBCPSession2:: BCPSetBulkMode | Документация Майкрософт'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2e2ba7f2874cc35fbd662c8696fa999980b52bb6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62989990"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
-  IBCPSession2::BCPSetBulkMode представляет собой альтернативу [IBCPSession::BCPColFmt &#40;OLE DB&#41; ](ibcpsession-bcpcolfmt-ole-db.md) для указания формата столбца. В отличие от IBCPSession::BCPColFmt, который задает отдельные атрибуты формата столбцов, IBCPSession2::BCPSetBulkMode задает все атрибуты.  
+  Метода IBCPSession2:: BCPSetBulkMode предоставляет альтернативу [IBCPSession:: BCPColFmt &#40;OLE DB&#41;](ibcpsession-bcpcolfmt-ole-db.md) для указания формата столбца. В отличие от IBCPSession:: BCPColFmt, который устанавливает атрибуты формата отдельных столбцов, метода IBCPSession2:: BCPSetBulkMode задает все атрибуты.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,7 +39,7 @@ HRESULT BCPSetBulkMode (
  *property*  
  Константа типа BYTE. Список констант см. в таблице в подразделе «Примечания».  
   
- *pField*  
+ *пфиелд*  
  Указатель на значение признака конца поля.  
   
  cbField  
@@ -52,35 +52,35 @@ HRESULT BCPSetBulkMode (
  Длина в байтах значения признака конца строки.  
   
 ## <a name="returns"></a>Возвращает  
- IBCPSession2::BCPSetBulkMode может возвращать одно из следующих значений:  
+ Метода IBCPSession2:: BCPSetBulkMode может возвращать одно из следующих данных:  
   
 |||  
 |-|-|  
 |`S_OK`|Метод выполнен успешно.|  
 |`E_FAIL`|Произошла ошибка, связанная с поставщиком. Подробные сведения можно получить с помощью интерфейса ISQLServerErrorInfo.|  
-|`E_UNEXPECTED`|Непредвиденный вызов метода. Например `IBCPSession2::BCPInit` не был вызван метод перед вызовом IBCPSession2::BCPSetBulkMode.|  
+|`E_UNEXPECTED`|Непредвиденный вызов метода. Например, `IBCPSession2::BCPInit` метод не был вызван до вызова метода IBCPSession2:: BCPSetBulkMode.|  
 |`E_INVALIDARG`|Недопустимое значение аргумента.|  
 |`E_OUTOFMEMORY`|Ошибка, связанная с нехваткой памяти.|  
   
-## <a name="remarks"></a>Примечания  
- IBCPSession2::BCPSetBulkMode можно использовать для массового копирования из таблицы или запроса. При использовании метода IBCPSession2::BCPSetBulkMode для массового копирования из инструкции запроса его необходимо вызывать до вызова метода `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, ...)` для указания инструкции запроса.  
+## <a name="remarks"></a>Remarks  
+ Метода IBCPSession2:: BCPSetBulkMode можно использовать для выполнения полного копирования из запроса или таблицы. При использовании метода IBCPSession2::BCPSetBulkMode для массового копирования из инструкции запроса его необходимо вызывать до вызова метода `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, ...)` для указания инструкции запроса.  
   
- В рамках одной команды не следует сочетать синтаксис вызова RPC с синтаксисом пакетных запросов (например,`{rpc func};SELECT * from Tbl`).  В результате ICommandPrepare::Prepare сообщение об ошибке и не позволит получить метаданные. Если в рамках одной команды требуется объединить выполнение хранимой процедуры и пакетный запрос, то следует использовать синтаксис ODBC CALL (например,`{call func}; SELECT * from Tbl`).  
+ В рамках одной команды не следует сочетать синтаксис вызова RPC с синтаксисом пакетных запросов (например,`{rpc func};SELECT * from Tbl`).  Это вызовет ICommandPrepare::P готовка, чтобы вернуть ошибку и предотвратить получение метаданных. Если в рамках одной команды требуется объединить выполнение хранимой процедуры и пакетный запрос, то следует использовать синтаксис ODBC CALL (например,`{call func}; SELECT * from Tbl`).  
   
  В следующей таблице перечислены константы для параметра *property* .  
   
-|property|Описание|  
+|Свойство|Description|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|Указывает символьный режим вывода.<br /><br /> Соответствует параметру - c в BCP. EXE-файла и чтобы IBCPSession::BCPColFmt с *eUserDataType* свойство значение `BCP_TYPE_SQLCHARACTER`.|  
-|BCP_OUT_WIDE_CHARACTER_MODE|Указывает режим вывода в Юникоде.<br /><br /> Соответствует параметру -w в BCP. EXE-файла и IBCPSession::BCPColFmt с *eUserDataType* свойство значение `BCP_TYPE_SQLNCHAR`.|  
-|BCP_OUT_NATIVE_TEXT_MODE|Указывает собственные типы для несимвольных типов и Юникод для символьных типов.<br /><br /> Соответствует параметру -N в BCP. EXE-файла и IBCPSession::BCPColFmt с *eUserDataType* свойство значение `BCP_TYPE_SQLNCHAR` Если типом столбца является строка или `BCP_TYPE_DEFAULT` Если не является строкой.|  
-|BCP_OUT_NATIVE_MODE|Указывает типы данных базы данных.<br /><br /> Соответствует параметру - n в BCP. EXE-файла и IBCPSession::BCPColFmt с *eUserDataType* свойство значение `BCP_TYPE_DEFAULT`.|  
+|BCP_OUT_CHARACTER_MODE|Указывает символьный режим вывода.<br /><br /> Соответствует параметру-c в BCP. EXE, и для IBCPSession:: BCPColFmt со свойством *еусердататипе* , `BCP_TYPE_SQLCHARACTER`имеющим значение.|  
+|BCP_OUT_WIDE_CHARACTER_MODE|Указывает режим вывода в Юникоде.<br /><br /> Соответствует параметру-w в BCP. EXE и IBCPSession:: BCPColFmt со свойством *еусердататипе* , `BCP_TYPE_SQLNCHAR`имеющим значение.|  
+|BCP_OUT_NATIVE_TEXT_MODE|Указывает собственные типы для несимвольных типов и Юникод для символьных типов.<br /><br /> Соответствует параметру-N в BCP. EXE и IBCPSession:: BCPColFmt со свойством *еусердататипе* , `BCP_TYPE_SQLNCHAR` имеющим значение, если тип столбца является строкой или `BCP_TYPE_DEFAULT` если не является строкой.|  
+|BCP_OUT_NATIVE_MODE|Указывает типы данных базы данных.<br /><br /> Соответствует параметру-n в BCP. EXE и IBCPSession:: BCPColFmt со свойством *еусердататипе* , `BCP_TYPE_DEFAULT`имеющим значение.|  
   
- Можно вызвать IBCPSession::BCPControl и IBCPSession2::BCPSetBulkMode IBCPSession::BCPControl параметров, которые не конфликтуют с IBCPSession2::BCPSetBulkMode. Например, можно вызвать IBCPSession::BCPControl с `BCP_OPTION_FIRST` и IBCPSession2::BCPSetBulkMode.  
+ Можно вызвать IBCPSession:: BCPControl и метода IBCPSession2:: BCPSetBulkMode for IBCPSession:: BCPControl, которые не конфликтуют с метода IBCPSession2:: BCPSetBulkMode. Например, можно вызвать IBCPSession:: BCPControl с `BCP_OPTION_FIRST` и метода IBCPSession2:: BCPSetBulkMode.  
   
- Невозможно вызвать IBCPSession::BCPControl с `BCP_OPTION_TEXTFILE` и IBCPSession2::BCPSetBulkMode.  
+ Нельзя вызывать IBCPSession:: BCPControl с `BCP_OPTION_TEXTFILE` и метода IBCPSession2:: BCPSetBulkMode.  
   
- Если попытаться вызвать IBCPSession2::BCPSetBulkMode с последовательностью вызовов функций, которая включает в себя IBCPSession::BCPColFmt IBCPSession::BCPControl и IBCPSession::BCPReadFmt, один из вызовов функций вернет ошибку последовательности. Если необходимо исправить ошибку, вызовите IBCPSession::BCPInit, чтобы сбросить параметры и начать заново.  
+ При попытке вызвать метода IBCPSession2:: BCPSetBulkMode с последовательностью вызовов функций, включающих IBCPSession:: BCPColFmt, IBCPSession:: BCPControl и IBCPSession:: BCPReadFmt, один из вызовов функции возвратит ошибку последовательности. Если необходимо исправить ошибку, вызовите IBCPSession::BCPInit, чтобы сбросить параметры и начать заново.  
   
  В следующей таблице приведено несколько примеров вызовов функций, которые вызовут ошибку последовательности.  
   
@@ -360,7 +360,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
- [IBCPSession2 &#40;OLE DB&#41;](ibcpsession2-ole-db.md)  
+## <a name="see-also"></a>См. также:  
+ [Метода IBCPSession2 &#40;OLE DB&#41;](ibcpsession2-ole-db.md)  
   
   

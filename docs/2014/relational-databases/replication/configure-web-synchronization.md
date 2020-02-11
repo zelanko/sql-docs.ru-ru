@@ -24,10 +24,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 341066defb122e33e82cfde87a561bc9df1ed762
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721659"
 ---
 # <a name="configure-web-synchronization"></a>Настроить веб-синхронизацию
@@ -75,9 +75,9 @@ ms.locfileid: "62721659"
   
  **Настройка служб IIS для веб-синхронизации**  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. [Настройка сервера IIS для веб-синхронизации](configure-iis-for-web-synchronization.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Настройка сервера IIS для веб-синхронизации](configure-iis-for-web-synchronization.md)  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. [Настройка сервера IIS 7 для веб-синхронизации](configure-iis-7-for-web-synchronization.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Настройка сервера IIS 7 для веб-синхронизации](configure-iis-7-for-web-synchronization.md)  
   
 ## <a name="creating-a-web-garden"></a>Создание веб-сада  
  Средство прослушивания репликации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает две параллельные операции синхронизации в каждом потоке. При превышении этого ограничения средство прослушивания репликации может перестать отвечать на запросы. Количество потоков, выделенных replisapi.dll, определяется свойством пула приложения «Максимальное число рабочих процессов». Значением этого свойства по умолчанию является 1.  
@@ -101,7 +101,8 @@ ms.locfileid: "62721659"
   
  Если издатель используется впервые, необходимо также настроить распространитель и хранилище моментального снимка. Агент слияния на каждом подписчике должен иметь разрешения на чтение данных из хранилища моментального снимка. Дополнительные сведения см. в статьях [Настройка распространения](configure-distribution.md) и [Организация безопасности папки моментальных снимков](security/secure-the-snapshot-folder.md).  
   
- `gen` является зарезервированным словом в XML-файлах websync. Не пытайтесь публиковать таблицы, содержащие столбцы с именем `gen`.  
+ 
+  `gen` является зарезервированным словом в XML-файлах websync. Не пытайтесь публиковать таблицы, содержащие столбцы с именем `gen`.  
   
 ## <a name="configuring-the-subscription"></a>Настройка подписки  
  После включения публикации и настройки служб IIS создайте подписку по запросу и укажите, что она должна синхронизироваться с помощью служб IIS. (Веб-синхронизация поддерживается только для подписок по запросу.)  
@@ -124,7 +125,7 @@ ms.locfileid: "62721659"
   
 -   в случае репликации больших объемов данных может возникнуть необходимость в корректировке размера пакета агента слияния.  
   
- Размер пакета для репликации слиянием измеряется в *поколениях*, которые представляют собой коллекции изменений для статьи. Число поколений в пакете указывается с помощью -`DownloadGenerationsPerBatch` и -`UploadGenerationsPerBatch` параметров агента слияния. Дополнительные сведения см. в статье [Replication Merge Agent](agents/replication-merge-agent.md).  
+ Размер пакета для репликации слиянием измеряется в *поколениях*, которые представляют собой коллекции изменений для статьи. Число поколений в пакете задается с помощью`DownloadGenerationsPerBatch` `UploadGenerationsPerBatch` параметров агент слияния. Дополнительные сведения см. в статье [Replication Merge Agent](agents/replication-merge-agent.md).  
   
  При работе с большими объемами данных рекомендуется указывать небольшие значения для этих параметров пакетов. Рекомендуем начинать со значения, равного 10, и затем корректировать его с учетом потребностей приложений, а также производительности. Обычно эти параметры задаются в профиле агента. Дополнительные сведения о профилях см. в разделе [Replication Agent Profiles](agents/replication-agent-profiles.md).  
   
@@ -144,7 +145,7 @@ ms.locfileid: "62721659"
   
      Дополнительные сведения о разрешениях, необходимых для агентов, см. в разделе [Replication Agent Security Model](security/replication-agent-security-model.md).  
   
--   Укажите учетную запись, используемую агентом слияния при вводе пароля и учетной записи на странице **Данные о веб-сервере** мастера создания подписки или в качестве значений параметров **@internet_url** и **@internet_login** хранимой процедуры [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Для данной учетной записи должно быть предоставлено разрешение на чтение хранилища моментального снимка.  
+-   Укажите ту же учетную запись домена, которая используется агент слияния при указании учетной записи и пароля на странице **сведения о веб-сервере** мастера создания подписки или при указании значений для параметров **@internet_url** и **@internet_login** [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Для данной учетной записи должно быть предоставлено разрешение на чтение хранилища моментального снимка.  
   
 -   Для каждой публикации следует использовать отдельный виртуальный каталог на сервере IIS.  
   
@@ -164,6 +165,6 @@ ms.locfileid: "62721659"
 >  Открытие портов на брандмауэре может привести к незащищенности сервера от вредоносных атак. Перед открытием портов убедитесь в том, что знаете принципы работы брандмауэров. Дополнительные сведения см. в разделе [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Веб-синхронизация для репликации слиянием](web-synchronization-for-merge-replication.md)  
+ [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md)  
   
   

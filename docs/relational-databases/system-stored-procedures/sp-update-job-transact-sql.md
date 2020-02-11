@@ -18,13 +18,13 @@ ms.assetid: cbdfea38-9e42-47f3-8fc8-5978b82e2623
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5428ae9130646db662c6c960f777c6a7dfe25000
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68084895"
 ---
-# <a name="spupdatejob-transact-sql"></a>sp_update_job (Transact-SQL)
+# <a name="sp_update_job-transact-sql"></a>sp_update_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Изменяет атрибуты задания.  
@@ -56,59 +56,59 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @job_id = ] job_id` Идентификационный номер задания, чтобы обновить. *job_id*— **uniqueidentifier**.  
+`[ @job_id = ] job_id`Идентификационный номер обновляемого задания. *job_id*имеет тип **uniqueidentifier**.  
   
-`[ @job_name = ] 'job_name'` Имя задания. *имя_задания* — **nvarchar(128)** .  
+`[ @job_name = ] 'job_name'`Имя задания. *job_name* имеет тип **nvarchar (128)**.  
   
-> **ПРИМЕЧАНИЕ.** Либо *job_id* или *имя_задания* должен быть указан, но не оба аргумента одновременно.  
+> **Примечание.** Необходимо указать либо *job_id* , либо *job_name* , но не указывать оба значения.  
   
-`[ @new_name = ] 'new_name'` Новое имя для задания. *новое_имя* — **nvarchar(128)** .  
+`[ @new_name = ] 'new_name'`Новое имя для задания. *new_name* имеет тип **nvarchar (128)**.  
   
-`[ @enabled = ] enabled` Указывает, включено ли задание (**1**) или не включено (**0**). *включить* — **tinyint**.  
+`[ @enabled = ] enabled`Указывает, включено ли задание (**1**) или не включено (**0**). *Enabled* имеет тип **tinyint**.  
   
-`[ @description = ] 'description'` Описание задания. *Описание* — **nvarchar(512)** .  
+`[ @description = ] 'description'`Описание задания. *Описание* — **nvarchar (512)**.  
   
-`[ @start_step_id = ] step_id` Идентификационный номер первого этапа, выполняемого в ходе задания. *step_id* — **int**.  
+`[ @start_step_id = ] step_id`Идентификационный номер первого шага, выполняемого для задания. *step_id* имеет **тип int**.  
   
-`[ @category_name = ] 'category'` Категория задания. *Категория* — **nvarchar(128)** .  
+`[ @category_name = ] 'category'`Категория задания. *Category имеет тип* **nvarchar (128)**.  
   
-`[ @owner_login_name = ] 'login'` Имя учетной записи владельца задания. *Имя входа* — **nvarchar(128)** только членами **sysadmin** предопределенной роли сервера можно изменить владельца задания.  
+`[ @owner_login_name = ] 'login'`Имя входа, владеющего заданием. *имя для входа* — **nvarchar (128)** . только члены предопределенной роли сервера **sysadmin** могут изменять владельца задания.  
   
-`[ @notify_level_eventlog = ] eventlog_level` Указывает, следует ли помещать запись в журнал приложений Microsoft Windows для этого задания. *eventlog_level*— **int**, и может принимать одно из следующих значений.  
+`[ @notify_level_eventlog = ] eventlog_level`Указывает, когда следует поместить запись в журнал приложений Microsoft Windows для этого задания. *eventlog_level*имеет **тип int**и может принимать одно из следующих значений.  
   
 |Значение|Описание (действие)|  
 |-----------|----------------------------|  
 |**0**|Никогда|  
 |**1**|При успешном завершении|  
 |**2**|При сбое|  
-|**3**|Всегда|  
+|**3-5**|Всегда|  
   
-`[ @notify_level_email = ] email_level` Указывает, нужно ли отправить сообщение электронной почты по завершении этого задания. *email_level*— **int**. *email_level*использует те же значения, что *eventlog_level*.  
+`[ @notify_level_email = ] email_level`Указывает, когда следует отправить сообщение по электронной почте после завершения этого задания. *email_level*имеет **тип int**. *email_level*использует те же значения, что и *eventlog_level*.  
   
-`[ @notify_level_netsend = ] netsend_level` Указывает, нужно ли отправить сетевое сообщение по завершении этого задания. *netsend_level*— **int**. *netsend_level*использует те же значения, что *eventlog_level*.  
+`[ @notify_level_netsend = ] netsend_level`Указывает, когда следует отправить сетевое сообщение после завершения этого задания. *netsend_level*имеет **тип int**. *netsend_level*использует те же значения, что и *eventlog_level*.  
   
-`[ @notify_level_page = ] page_level` Указывает, нужно ли послать страницу по завершении этого задания. *page_level* — **int**. *page_level*использует те же значения, что *eventlog_level*.  
+`[ @notify_level_page = ] page_level`Указывает, когда следует отправить страницу после завершения этого задания. *page_level* имеет **тип int**. *page_level*использует те же значения, что и *eventlog_level*.  
   
-`[ @notify_email_operator_name = ] 'operator_name'` Имя оператора, которому отправляется сообщение электронной почты при *email_level* достижения. *имя_электронной_почты* — **nvarchar(128)** .  
+`[ @notify_email_operator_name = ] 'operator_name'`Имя оператора, которому отправляется сообщение электронной почты при достижении *email_level* . *email_name* имеет тип **nvarchar (128)**.  
   
-`[ @notify_netsend_operator_name = ] 'netsend_operator'` Имя оператора, которому отправляется сетевое сообщение. *netsend_operator* — **nvarchar(128)** .  
+`[ @notify_netsend_operator_name = ] 'netsend_operator'`Имя оператора, которому отправляется сетевое сообщение. *netsend_operator* имеет тип **nvarchar (128)**.  
   
-`[ @notify_page_operator_name = ] 'page_operator'` Имя оператора, которому посылается страница. *page_operator* — **nvarchar(128)** .  
+`[ @notify_page_operator_name = ] 'page_operator'`Имя оператора, которому отправляется страница. *page_operator* имеет тип **nvarchar (128)**.  
   
-`[ @delete_level = ] delete_level` Указывает, нужно ли удалять задание. *delete_value*— **int**. *delete_level*использует те же значения, что *eventlog_level*.  
+`[ @delete_level = ] delete_level`Указывает, когда следует удалять задание. *delete_value*имеет **тип int**. *delete_level*использует те же значения, что и *eventlog_level*.  
   
-`[ @automatic_post = ] automatic_post` Зарезервировано.  
+`[ @automatic_post = ] automatic_post`Процессу.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
- **sp_update_job** должна запускаться из **msdb** базы данных.  
+## <a name="remarks"></a>Remarks  
+ **sp_update_job** должны запускаться из базы данных **msdb** .  
   
- **sp_update_job** изменяет только те установки, о параметрах которого предоставляются значения. Если параметр пропущен, сохраняется текущая настройка.  
+ **sp_update_job** изменяет только те параметры, для которых указаны значения параметров. Если параметр пропущен, сохраняется текущая настройка.  
   
 ## <a name="permissions"></a>Разрешения  
- По умолчанию эту хранимую процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
+ По умолчанию эта хранимая процедура может выполняться членами предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
   
 -   **SQLAgentUserRole**  
   
@@ -118,7 +118,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
   
  Дополнительные сведения о разрешениях этих ролей см. в разделе [Предопределенные роли базы данных агента SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Только члены **sysadmin** можно использовать эту хранимую процедуру для редактирования атрибутов заданий, принадлежащие другим пользователям.  
+ Только члены **роли sysadmin** могут использовать эту хранимую процедуру для изменения атрибутов заданий, принадлежащих другим пользователям.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере изменяются имя, описание и включенное состояние задания `NightlyBackups`.  
@@ -135,10 +135,10 @@ EXEC dbo.sp_update_job
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [sp_add_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [sp_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
  [sp_delete_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
  [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

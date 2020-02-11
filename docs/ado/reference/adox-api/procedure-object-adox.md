@@ -1,5 +1,5 @@
 ---
-title: Объект Procedure (ADOX) | Документация Майкрософт
+title: Объект процедуры (ADOX) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,33 +16,33 @@ ms.assetid: 927bcf3e-32f5-4a80-98d3-600779f0732e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1681001dd42026c1a1fce04814b094047a475a0f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965488"
 ---
 # <a name="procedure-object-adox"></a>Объект Procedure (ADOX)
-Представляет хранимую процедуру. При использовании в сочетании с ADO [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта, **процедуры** объект может использоваться для добавления, удаления или изменения хранимой процедуры.  
+Представляет хранимую процедуру. При использовании в сочетании с объектом [команды](../../../ado/reference/ado-api/command-object-ado.md) ADO объект **процедуры** можно использовать для добавления, удаления или изменения хранимых процедур.  
   
-## <a name="remarks"></a>Примечания  
- **Процедуры** объект позволяет создать хранимую процедуру без необходимости знать или используйте синтаксис «CREATE PROCEDURE» поставщика.  
+## <a name="remarks"></a>Remarks  
+ Объект **процедуры** позволяет создать хранимую процедуру, не зная и не используя синтаксис создания процедуры поставщика.  
   
- Со свойствами данного объекта **процедуры** объекта, вы можете:  
+ Свойства объекта **процедуры** позволяют:  
   
--   Определения процедуры с [имя](../../../ado/reference/adox-api/name-property-adox.md) свойство.  
+-   Найдите процедуру с помощью свойства [Name](../../../ado/reference/adox-api/name-property-adox.md) .  
   
--   Укажите ADO **команда** объект, который может использоваться для создания или выполнения процедуры с [команда](../../../ado/reference/adox-api/command-property-adox.md) свойство.  
+-   Укажите объект **команды** ADO, который можно использовать для создания или выполнения процедуры с помощью свойства [Command](../../../ado/reference/adox-api/command-property-adox.md) .  
   
--   Возвращает сведения о дате с [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) и [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) свойства.  
+-   Возвращает сведения о дате с помощью свойств [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) и [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) .  
   
- Этот раздел содержит следующие подразделы.  
+ Этот раздел содержит следующий раздел.  
   
 -   [Свойства, методы и события объекта Procedure](../../../ado/reference/adox-api/procedure-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
- [Команды и свойства CommandText (Visual Basic)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
- [Примеры коллекции Parameters, команда свойства (Visual Basic)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)   
- [Процедуры добавления пример метода (Visual Basic)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   
- [Процедуры удаления пример метода (Visual Basic)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
+## <a name="see-also"></a>См. также:  
+ [Пример свойств Command и CommandText (Visual Basic)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
+ [Коллекция Parameters, пример свойства Command (Visual Basic)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)   
+ [Пример метода Append для процедур (Visual Basic)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   
+ [Пример метода Delete процедур (Visual Basic)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
  [Коллекция Procedures (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)

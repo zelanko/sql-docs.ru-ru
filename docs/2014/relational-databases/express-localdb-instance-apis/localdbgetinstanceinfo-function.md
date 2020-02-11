@@ -17,16 +17,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 889e5eee49363c71a18808e7c71434110241bc84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63130525"
 ---
 # <a name="localdbgetinstanceinfo-function"></a>Функция LocalDBGetInstanceInfo
   Возвращает сведения об указанном экземпляре среды выполнения экземпляра SQL Server Express LocalDB, в частности существует ли этот экземпляр, версия используемой им LocalDB, запущен ли экземпляр и т. п.  
   
- Сведения возвращаются в `struct` с именем **LocalDBInstanceInfo**, который имеет следующее определение.  
+ Эти сведения возвращаются в `struct` именованном **локалдбинстанцеинфо**, который имеет следующее определение.  
   
 ```  
 typedef struct _LocalDBInstanceInfo  
@@ -73,7 +73,7 @@ typedef struct _LocalDBInstanceInfo
   
 ```  
   
- **Файл заголовка:** sqlncli.h  
+ **Заголовочный файл:** sqlncli. h  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -86,14 +86,14 @@ HRESULT LocalDBGetInstanceInfo(
 ```  
   
 ## <a name="parameters"></a>Параметры  
- *wszInstanceName*  
+ *всзинстанценаме*  
  [Вход] Имя экземпляра.  
   
- *pInstanceInfo*  
+ *пинстанцеинфо*  
  [Выход] Буфер для сохранения сведений об экземпляре LocalDB.  
   
- *dwInstanceInfoSize*  
- [Вход] Содержит размер *InstanceInfo* буфера.  
+ *двинстанцеинфосизе*  
+ Входной Содержит размер буфера *инстанцеинфо* .  
   
 ## <a name="returns"></a>Возвращает  
  S_OK  
@@ -127,11 +127,11 @@ HRESULT LocalDBGetInstanceInfo(
  Произошла непредвиденная ошибка. Подробные сведения см. в журнале событий.  
   
 ## <a name="details"></a>Сведения  
- Обоснование появлением `struct` аргумент размера (*lpInstanceInfoSize*) является возможность API мог возвращать различные версии структуры **LocalDBInstanceInfostruct**, эффективно Включение прямой и обратной совместимости.  
+ Смысл в поведении аргумента `struct` size (*лпинстанцеинфосизе*) заключается в том, чтобы позволить API возвращать различные версии **локалдбинстанцеинфострукт**, эффективно обеспечивая прямую и обратную совместимость.  
   
- Если `struct` аргумент размера (*lpInstanceInfoSize*) соответствует размеру известной версии **LocalDBInstanceInfostruct**, эту версию `struct` возвращается. В противном случае возвращается значение LOCALDB_ERROR_INVALID_PARAMETER.  
+ Если аргумент `struct` size (*лпинстанцеинфосизе*) соответствует размеру известной версии **локалдбинстанцеинфострукт**, возвращается эта версия `struct` . В противном случае возвращается значение LOCALDB_ERROR_INVALID_PARAMETER.  
   
- Типичным примером **LocalDBGetInstanceInfo** использование API выглядит следующим образом:  
+ Типичный пример использования API **LocalDBGetInstanceInfo** выглядит следующим образом:  
   
 ```  
 LocalDBInstanceInfo ii;  
@@ -141,7 +141,7 @@ LocalDBInstanceInfo(L"Test", &ii, sizeof(LocalDBInstanceInfo));
   
  Образец кода, использующего API LocalDB, см. в разделе [SQL Server Express LocalDB Reference](../sql-server-express-localdb-reference.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Заголовок и сведения о версии SQL Server Express LocalDB](sql-server-express-localdb-header-and-version-information.md)  
   
   

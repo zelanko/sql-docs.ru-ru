@@ -1,5 +1,5 @@
 ---
-title: '* (Умножение) (РАСШИРЕНИЯ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ) | Документация Майкрософт'
+title: '* Перемножаемых (РАСШИРЕНИЯ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ) | Документация Майкрософт'
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 840dc41afe689b7beb6af4b2272f1851fdde72e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68008276"
 ---
 # <a name="-multiply-dmx"></a>* (Умножение) (расширения интеллектуального анализа данных)
@@ -34,12 +34,12 @@ Numeric_Expression * Numeric_Expression
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение с типом данных параметра, имеющего более высокий приоритет.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Оба выражения должны иметь одинаковый тип данных, или одно из выражений должно допускать неявное преобразование к типу данных другого выражения. Если результатом вычисления одного выражения является значение NULL, то и оператор возвращает значение NULL.  
   
-## <a name="see-also"></a>См. также  
- [Арифметические операторы &#40;расширений интеллектуального анализа данных&#41;](../dmx/operators-arithmetic.md)   
- [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; Справочник по операторам](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Операторы &#40;расширений интеллектуального анализа данных&#41;](../dmx/operators-dmx.md)  
+## <a name="see-also"></a>См. также:  
+ [Арифметические операторы &#40;&#41;расширений интеллектуального анализа данных](../dmx/operators-arithmetic.md)   
+ [Ссылки на операторы расширений интеллектуального анализа данных &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Операторы &#40;&#41;расширений интеллектуального анализа данных](../dmx/operators-dmx.md)  
   
   

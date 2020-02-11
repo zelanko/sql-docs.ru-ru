@@ -1,5 +1,5 @@
 ---
-title: IsAncestor (многомерные Выражения) | Документация Майкрософт
+title: Ancestor (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 5cc8352b0d087b54a623cce892a05dfed29258b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68105264"
 ---
 # <a name="isancestor-mdx"></a>IsAncestor (многомерные выражения)
@@ -34,11 +34,11 @@ IsAncestor(Member_Expression1, Member_Expression2)
  *Member_Expression2*  
  Допустимое многомерное выражение, возвращающее элемент.  
   
-## <a name="remarks"></a>Примечания  
- **IsAncestor** возвращает **true** Если первый заданный элемент является предком второго заданного элемента. В противном случае функция возвращает **false**.  
+## <a name="remarks"></a>Remarks  
+ Функция **an** возвращает **значение true** , если первый заданный элемент является предком указанного второго элемента. В противном случае функция возвращает **значение false**.  
   
 ## <a name="example"></a>Пример  
- В следующем примере возвращается **true** Если [Date]. [ Fiscal]. CurrentMember является предком января 2003 г.:  
+ В следующем примере возвращается **значение true** , если [DATE]. [Финансовый]. CurrentMember является предком 2003 января.  
   
  `WITH MEMBER MEASURES.ISANCESTORDEMO AS`  
   
@@ -50,8 +50,8 @@ IsAncestor(Member_Expression1, Member_Expression2)
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>См. также  
- [Предок &#40;многомерных Выражений&#41;](../mdx/ancestor-mdx.md)   
- [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также:  
+ [&#40;&#41;многомерных выражений предков](../mdx/ancestor-mdx.md)   
+ [Ссылка на функцию многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-function-reference-mdx.md)  
   
   

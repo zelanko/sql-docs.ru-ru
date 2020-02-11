@@ -1,5 +1,5 @@
 ---
-title: Настройка инструкции SQL Server ODBC драйвер | Документация Майкрософт
+title: Инструкции по настройке драйвера ODBC для SQL Server | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7c2e64b667d0bbdc8dd886dc0e9fef9d260d473b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62753676"
 ---
 # <a name="configuring-the-sql-server-odbc-driver-how-to-topics"></a>Инструкции по настройке драйвера ODBC SQL Server
@@ -26,7 +26,7 @@ ms.locfileid: "62753676"
   
 -   [Удаление источника данных &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-delete-a-data-source.md)  
   
-## <a name="see-also"></a>См. также  
- [Инструкции по ODBC](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
+## <a name="see-also"></a>См. также:  
+ [ODBC How-to Topics](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   
   

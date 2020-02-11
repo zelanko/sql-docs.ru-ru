@@ -15,51 +15,51 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 22d560c8a65d5b9a7cebc4062ddd2d1ce936d5a2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63067750"
 ---
 # <a name="sqldriverconnect"></a>SQLDriverConnect
   Драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяет атрибуты соединения, которые заменяют или расширяют ключевые слова строки соединения. Некоторые ключевые слова строки соединения имеют значения по умолчанию, заданные в драйвере ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Список слов, доступных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйвер ODBC собственного клиента, см. в разделе [Using Connection String Keywords with SQL Server Native Client](../native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+ Список ключевых слов, доступных в драйвере ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для собственного клиента, см. в разделе [Использование ключевых слов строки подключения с SQL Server Native Client](../native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
- Дополнительные сведения о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] атрибуты соединения и поведении драйвера по умолчанию, см. в разделе [SQLSetConnectAttr](sqlsetconnectattr.md).  
+ Дополнительные сведения об [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] атрибутах подключения и поведении драйверов по умолчанию см. в разделе [SQLSetConnectAttr](sqlsetconnectattr.md).  
   
- Описание ключевых слов строки подключения, которые являются допустимыми для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, см. в разделе [Using Connection String Keywords with SQL Server Native Client](../native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+ Описание ключевых слов строки подключения, допустимых для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента, см. в разделе [Использование ключевых слов строки подключения с SQL Server Native Client](../native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
- Когда `SQLDriverConnect` *DriverCompletion* значение параметра является SQL_DRIVER_PROMPT, SQL_DRIVER_COMPLETE или SQL_DRIVER_COMPLETE_REQUIRED, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйвер ODBC собственного клиента получает значения ключевых слов из отображения диалогового окна. Если значение ключевого слова передается в строке соединения и пользователь не изменил значение в диалоговом окне, драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует значение из строки соединения. Если значение не определено в строке соединения, а пользователь не присваивает его в диалоговом окне, драйвер использует значение по умолчанию.  
+ Если параметр DriverCompletion имеет значение SQL_DRIVER_PROMPT, SQL_DRIVER_COMPLETE или SQL_DRIVER_COMPLETE_REQUIRED, драйвер ODBC для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента получает значения ключевых слов из отображаемого диалогового окна. ** `SQLDriverConnect` Если значение ключевого слова передается в строке соединения и пользователь не изменил значение в диалоговом окне, драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует значение из строки соединения. Если значение не определено в строке соединения, а пользователь не присваивает его в диалоговом окне, драйвер использует значение по умолчанию.  
   
- `SQLDriverConnect` должен быть задан допустимый *WindowHandle* при любой *DriverCompletion* значение требует (или, может потребовать) отображения диалогового окна соединения драйвера. Недопустимый дескриптор возвращает ошибку SQL_ERROR.  
+ `SQLDriverConnect`необходимо предоставить допустимый *WindowHandle* , если любое значение *DriverCompletion* требует (или может требовать) Отображение диалогового окна подключения драйвера. Недопустимый дескриптор возвращает ошибку SQL_ERROR.  
   
- Укажите ключевое слово DRIVER или DSN. Драйвер ODBC использует крайнее левое из этих ключевых слов и пропускает другое, если указаны оба. Если ДРАЙВЕР указан или является самым левым узлом из них и `SQLDriverConnect` *DriverCompletion* имеет значение SQL_DRIVER_NOPROMPT, ключевое слово SERVER и соответствующее значение не требуются.  
+ Укажите ключевое слово DRIVER или DSN. Драйвер ODBC использует крайнее левое из этих ключевых слов и пропускает другое, если указаны оба. Если параметр Driver указан или является крайним левым из двух параметров, а `SQLDriverConnect`значение параметра *DriverCompletion* — SQL_DRIVER_NOPROMPT, требуется ключевое слово Server и соответствующее значение.  
   
  Если задано значение SQL_DRIVER_NOPROMPT, необходимо указать ключевые слова проверки подлинности пользователя вместе с их значениями. Драйвер обеспечивает наличие строки «Trusted_Connection=yes» или обоих ключевых слов UID и PWD.  
   
- Если *DriverCompletion* имеет значение SQL_DRIVER_NOPROMPT или SQL_DRIVER_COMPLETE_REQUIRED, а язык или база данных получен из строки подключения и недопустимы, `SQLDriverConnect` возвращает ошибку SQL_ERROR.  
+ Если значение параметра *DriverCompletion* равно SQL_DRIVER_NOPROMPT или SQL_DRIVER_COMPLETE_REQUIRED, а язык или база данных поступают из строки подключения и либо являются недопустимыми, `SQLDriverConnect` и возвращает SQL_ERROR.  
   
- Если *DriverCompletion* имеет значение SQL_DRIVER_NOPROMPT или SQL_DRIVER_COMPLETE_REQUIRED, а язык или база данных поступают из определений источников данных ODBC и недопустимы, `SQLDriverConnect` использует значение по умолчанию язык или база данных для заданного идентификатора пользователя и возвращает значение SQL_SUCCESS_WITH_INFO.  
+ Если значение параметра *DriverCompletion* равно SQL_DRIVER_NOPROMPT или SQL_DRIVER_COMPLETE_REQUIRED и язык или база данных поступают из определений источника данных ODBC и либо являются недопустимыми `SQLDriverConnect` , использует язык по умолчанию или базу данных для указанного идентификатора пользователя и возвращает SQL_SUCCESS_WITH_INFO.  
   
- Если *DriverCompletion* значение параметра является SQL_DRIVER_COMPLETE или SQL_DRIVER_PROMPT, а если язык или база данных является недопустимым, `SQLDriverConnect` повторно отображает диалоговое окно.  
+ Если значение параметра *DriverCompletion* равно SQL_DRIVER_COMPLETE или SQL_DRIVER_PROMPT и если язык или база данных являются недопустимыми `SQLDriverConnect` , повторно отображает диалоговое окно.  
   
 ## <a name="sqldriverconnect-support-for-high-availability-disaster-recovery"></a>Поддержка высокого уровня доступности и аварийного восстановления SQLDriverConnect  
- Дополнительные сведения об использовании `SQLDriverConnect` для подключения к [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] кластера, см. в разделе [SQL Server Native Client Support для высокого уровня доступности и аварийного восстановления](../native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
+ Дополнительные сведения об использовании `SQLDriverConnect` для подключения к [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] кластеру см. в разделе [Поддержка высокой доступности и аварийного восстановления в SQL Server Native Client](../native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
 ## <a name="sqldriverconnect-support-for-service-principal-names-spns"></a>Поддержка SQLDriverConnect для имен участников-служб (SPN)  
- SQLDDriverConnect будет использовать имя входа ODBC, включенном приглашении диалоговое окно. Это позволяет ввести имена участников-служб как для основного сервера, так и для его партнера по обеспечению отработки отказа.  
+ Склддриверконнект будет использовать диалоговое окно входа ODBC боксвхен, в котором включен запрос. Это позволяет ввести имена участников-служб как для основного сервера, так и для его партнера по обеспечению отработки отказа.  
   
- SQLDriverConnect будет принимать новые ключевые слова строки подключения `ServerSPN` и `FailoverPartnerSPN`, а также распознает новые атрибуты соединения SQL_COPT_SS_SERVER_SPN и SQL_COPT_SS_FAILOVER_PARTNER_SPN.  
+ SQLDriverConnect примет новые ключевые слова `ServerSPN` строки подключения и `FailoverPartnerSPN`и будет распознавать новые атрибуты соединения SQL_COPT_SS_SERVER_SPN и SQL_COPT_SS_FAILOVER_PARTNER_SPN.  
   
  Если значение атрибута соединения задано более одного раза, приоритет получает программно установленное значение, а не значение в DSN или строке соединения. Значение DSN имеет приоритет над значением в строке соединения.  
   
  При открытии соединения собственный клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] задает SQL_COPT_SS_MUTUALLY_AUTHENTICATED и SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD метод проверки подлинности, используемый для открытия соединения.  
   
- Дополнительные сведения об именах SPN см. в разделе [имена участников-служб &#40;имена участников-служб&#41; в клиентских соединениях &#40;ODBC&#41;](../native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
+ Дополнительные сведения о SPN см. [в статье имена субъектов-служб &#40;имен участников-служб&#41; в клиентских подключениях &#40;&#41;ODBC ](../native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
   
 ## <a name="examples"></a>Примеры  
- В следующем вызове показан наименьшего объема данных, необходимых для `SQLDriverConnect`:  
+ Следующий вызов иллюстрирует наименьший объем данных, необходимых для `SQLDriverConnect`:  
   
 ```  
 SQLDriverConnect(hdbc, hwnd,  
@@ -67,7 +67,7 @@ SQLDriverConnect(hdbc, hwnd,
     MAX_CONN_OUT, &cbOutConn, SQL_DRIVER_COMPLETE);  
 ```  
   
- Следующей строке соединения показан минимальный объем необходимых данных при *DriverCompletion* имеет значение SQL_DRIVER_NOPROMPT:  
+ Следующие строки подключения иллюстрируют минимальные необходимые данные, если значение параметра *DriverCompletion* равно SQL_DRIVER_NOPROMPT:  
   
 ```  
 "DSN=Human Resources;Trusted_Connection=yes"  
@@ -77,11 +77,11 @@ SQLDriverConnect(hdbc, hwnd,
 "DRIVER={SQL Server Native Client 10};SERVER=(local);Trusted_Connection=yes"  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функция SQLDriverConnect](https://go.microsoft.com/fwlink/?LinkId=59340)   
  [Сведения о реализации API ODBC](odbc-api-implementation-details.md)   
- [SET ANSI_NULLS (Transact-SQL)](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
- [SET ANSI_PADDING (Transact-SQL)](/sql/t-sql/statements/set-ansi-padding-transact-sql)   
- [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql)  
+ [Настройка ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
+ [Настройка ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql)   
+ [Настройка ANSI_WARNINGS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql)  
   
   

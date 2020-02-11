@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4fec86c0f732a4f47d3132be51226b877c428d5f
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782755"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>Выражения запросов и универсальные имена ресурсов
@@ -83,9 +83,9 @@ ms.locfileid: "72782755"
 |||  
 |-|-|  
 |гггг|Год из четырех цифр.|  
-|мм|Месяц из двух цифр (от 01 до 12).|  
+|ММ|Месяц из двух цифр (от 01 до 12).|  
 |дд|День из двух цифр (от 01 до 31).|  
-|чч|Час из двух цифр в 24-часовом формате (от 01 до 23).|  
+|hh|Час из двух цифр в 24-часовом формате (от 01 до 23).|  
 |ми|Минута из двух цифр (от 01 до 59).|  
 |сс|Секунда из двух цифр (от 01 до 59).|  
 |ммм|Количество миллисекунд (от 001 до 999).|  
@@ -121,7 +121,7 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012']/Table[@Name='Sal
 Server[@Name='MYCOMPUTER']/Database[@AutoClose=false()]  
 ```  
   
-### <a name="b-enumerating-objects-using-contains"></a>б. Перечисление объектов при помощи функции contains  
+### <a name="b-enumerating-objects-using-contains"></a>Б. Перечисление объектов при помощи функции contains  
  Следующее выражение запроса перечисляет все базы данных, в которых учитывается регистр и в имени которых имеется символ «m».  
   
 ```  
@@ -156,6 +156,6 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[@CreateDat
 Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[Not(is_null(@DateLastModified))]  
 ```  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
  [Invoke-PolicyEvaluation, командлет](../database-engine/invoke-policyevaluation-cmdlet.md)   
  [Подсистема аудита SQL Server (компонент Database Engine)](../relational-databases/security/auditing/sql-server-audit-database-engine.md)  

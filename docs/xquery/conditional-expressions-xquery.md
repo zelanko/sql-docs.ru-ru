@@ -20,16 +20,16 @@ ms.assetid: b280dd96-c80f-4c51-bc06-a88d42174acb
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: f593455269b8c005a3b4d3725f4360db77ea48f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039015"
 ---
 # <a name="conditional-expressions-xquery"></a>Выражения условий (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  XQuery поддерживает следующий условный **if-then-else** инструкции:  
+  XQuery поддерживает следующую условную инструкцию **if-then-else** :  
   
 ```  
 if (<expression1>)  
@@ -49,13 +49,13 @@ else
   
 -   иначе возникает статическая ошибка.  
   
- Имейте в виду следующее.  
+ Обратите внимание на следующее:  
   
 -   Выражение условия должно быть заключено в скобки.  
   
--   **Else** выражение является обязательным. Если оно не требуется, можно возвратить « ( ) », как показано в примерах, приведенных в этом подразделе.  
+-   Выражение **else** является обязательным. Если оно не требуется, можно возвратить « ( ) », как показано в примерах, приведенных в этом подразделе.  
   
- Например, следующий запрос адресован **xml** переменной типа. **Если** проверяется значение SQL-переменной (@v) внутри выражения XQuery с помощью [функции SQL: variable()](../xquery/xquery-extension-functions-sql-variable.md) функцию расширения. Если значение переменной «FirstName», он возвращает <`FirstName`> элемента. В противном случае возвращается <`LastName`> элемента.  
+ Например, следующий запрос задается для переменной типа **XML** . Условие **If** проверяет значение переменной SQL (@v) в выражении XQuery с помощью функции расширения [функции SQL: variable ()](../xquery/xquery-extension-functions-sql-variable.md) . Если переменная имеет значение FirstName, то возвращается элемент> <`FirstName` . В противном случае возвращается элемент `LastName`> <.  
   
 ```  
 declare @x xml  
@@ -74,13 +74,13 @@ if ( sql:variable("@v")="FirstName" ) then
 ')  
 ```  
   
- Это результат:  
+ Результат:  
   
 ```  
 <FirstName>fname</FirstName>  
 ```  
   
- Следующий запрос получает описания первых двух характеристик конкретной модели продукции из каталога товаров. При наличии большего числа характеристик в документе, он добавляет <`there-is-more`> пустой элемент.  
+ Следующий запрос получает описания первых двух характеристик конкретной модели продукции из каталога товаров. Если в документе больше функций, он добавляет элемент <`there-is-more`> с пустым содержимым.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -104,9 +104,9 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- В предыдущем запросе, то условие в **Если** выражение проверяет наличие более двух дочерних элементов в <`Features`>. Если да, в результат запроса включается элемент `\<there-is-more/>`.  
+ В предыдущем запросе условие в выражении **If** проверяет наличие более двух дочерних элементов в <`Features`>. Если да, в результат запроса включается элемент `\<there-is-more/>`.  
   
- Это результат:  
+ Результат:  
   
 ```  
 <Product ProductModelID="19" ProductModelName="Mountain 100">  
@@ -122,7 +122,7 @@ WHERE ProductModelID = 19
 </Product>  
 ```  
   
- В следующем запросе <`Location`> элемент с атрибутом LocationID возвращается в том случае, если для цеха не задано рабочее время.  
+ В следующем запросе возвращается элемент <`Location`> с атрибутом LocationID, если в расположении рабочего центра не указано время настройки.  
   
 ```  
 SELECT Instructions.query('  
@@ -141,7 +141,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Это результат:  
+ Результат:  
   
 ```  
 <WorkCenterLocation LocationID="30" />  
@@ -149,7 +149,7 @@ where ProductModelID=7
 <WorkCenterLocation LocationID="60" />  
 ```  
   
- Этот запрос может быть записан без **Если** предложения, как показано в следующем примере:  
+ Этот запрос может быть написан без предложения **If** , как показано в следующем примере:  
   
 ```  
 SELECT Instructions.query('  
@@ -164,7 +164,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Выражения XQuery](../xquery/xquery-expressions.md)  
+## <a name="see-also"></a>См. также:  
+ [Выражения языка XQuery](../xquery/xquery-expressions.md)  
   
   

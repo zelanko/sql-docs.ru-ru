@@ -1,5 +1,5 @@
 ---
-title: Пример Указание директивы XMLTEXT | Документация Майкрософт
+title: Пример. Указание директивы XMLTEXT | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 56ccb1e8a25b7d9f138c2900422d301919fef039
-ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67597546"
 ---
-# <a name="example-specifying-the-xmltext-directive"></a>Пример Определение директивы XMLTEXT
+# <a name="example-specifying-the-xmltext-directive"></a>Пример. Указание директивы XMLTEXT
   Этот пример иллюстрирует, как при помощи директивы `XMLTEXT` в инструкции `SELECT`, использующей режим EXPLICIT, осуществляется обращение к данным столбца Overflow.  
   
  Рассмотрим таблицу `Person` . В этой таблице имеется столбец `Overflow` , в котором хранится неиспользуемая часть XML-документа.  
@@ -52,7 +52,7 @@ FOR XML EXPLICIT;
   
 -   Так как атрибут `PersonID` элемента <`xmltext`> конфликтует с атрибутом `PersonID`, извлеченным на том же уровне элемента, атрибут элемента <`xmltext`> не учитывается, даже если `PersonID` имеет значение NULL. Обычно атрибут замещает атрибут с тем же именем при переполнении.  
   
- Это результат:  
+ Результат:  
   
  `<Parent PersonID="P1" PersonName="Joe" attr1="data">content</Parent>`  
   
@@ -86,7 +86,7 @@ FROM Person
 FOR XML EXPLICIT;  
 ```  
   
- Это результат:  
+ Результат:  
   
  `<Parent PersonID="P1" PersonName="Joe" attr1="data">content</Parent>`  
   
@@ -98,9 +98,9 @@ FOR XML EXPLICIT;
   
  `</Parent>`  
   
- Если указано значение *AttributeName* вместе с директивой `xmltext`, атрибуты элемента <`overflow`> добавляются как атрибуты вложенных элементов содержащего его элемента <`Parent`>. Имя, указанное для *AttributeName* становится именем вложенного элемента.  
+ Если указано значение *AttributeName* вместе с директивой `xmltext`, атрибуты элемента <`overflow`> добавляются как атрибуты вложенных элементов содержащего его элемента <`Parent`>. Имя, указанное для *attributeName* , преобразуется в имя подэлемента.  
   
- В этом запросе *AttributeName*, <`overflow`>, указано вместе с `xmltext` директивы:  
+ В этом запросе, *attributeName*, <`overflow`>, указывается вместе с `xmltext` директивой:  
   
 ```  
 SELECT 1 as Tag, NULL as parent,  
@@ -112,7 +112,7 @@ FROM Person
 FOR XML EXPLICIT  
 ```  
   
- Это результат:  
+ Результат:  
   
  `<Parent PersonID="P1" PersonName="Joe">`  
   
@@ -136,7 +136,7 @@ FOR XML EXPLICIT
   
  `</Parent>`  
   
- В этом элементе запроса значение *directive* задано для атрибута `PersonName`. Это приводит к тому, что элемент `PersonName` добавляется в качестве вложенного элемента в содержащий его элемент <`Parent`>. Атрибуты <`xmltext`> все так же добавляются к окружению элемента <`Parent`>. Содержание элемента <`overflow`> и вложенные элементы добавляются в начало других вложенных элементов содержащих их элементов <`Parent`>.  
+ В этом элементе запроса значение *directive* задано для атрибута `PersonName` . Это приводит к тому, что элемент `PersonName` добавляется в качестве вложенного элемента в содержащий его элемент <`Parent`>. Атрибуты <`xmltext`> все так же добавляются к окружению элемента <`Parent`>. Содержание элемента <`overflow`> и вложенные элементы добавляются в начало других вложенных элементов содержащих их элементов <`Parent`>.  
   
 ```  
 SELECT 1      AS Tag, NULL as parent,  
@@ -147,7 +147,7 @@ FROM Person
 FOR XML EXPLICIT;  
 ```  
   
- Это результат:  
+ Результат:  
   
  `<Parent PersonID="P1" attr1="data">content<PersonName>Joe</PersonName>`  
   
@@ -194,7 +194,7 @@ FOR XML EXPLICIT, xmldata;
   
  `</overflow>`  
   
-## <a name="see-also"></a>См. также  
- [Использование режима EXPLICIT совместно с предложением FOR XML](use-explicit-mode-with-for-xml.md)  
+## <a name="see-also"></a>См. также:  
+ [Использование режима EXPLICIT с предложением FOR XML](use-explicit-mode-with-for-xml.md)  
   
   

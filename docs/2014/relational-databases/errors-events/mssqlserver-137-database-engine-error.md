@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2eaaadc4e1cc1f2f360fe3d45e2dea4c082b7b76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915691"
 ---
-# <a name="mssqlserver137"></a>MSSQLSERVER_137
+# <a name="mssqlserver_137"></a>MSSQLSERVER_137
     
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|137|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
@@ -33,13 +33,13 @@ ms.locfileid: "62915691"
 |Текст сообщения|Должна быть объявлена скалярная переменная «%.*ls».|  
   
 ## <a name="explanation"></a>Объяснение  
- Эта ошибка происходит, если переменная используется в скрипте SQL без предварительного объявления этой переменной. Следующий пример возвращает ошибку 137 для обеих инструкций (SET и SELECT), так как переменная **@mycol** не объявлена.  
+ Эта ошибка происходит, если переменная используется в скрипте SQL без предварительного объявления этой переменной. В следующем примере возвращается ошибка 137 для инструкций SET и SELECT, поскольку **@mycol** не объявлено.  
   
  SET @mycol = 'ContactName';  
   
  SELECT @mycol;  
   
- Одной из трудноуловимых причин этой ошибки является использование переменной, которая объявлена вне инструкции EXECUTE. Например, переменная **@mycol**, указанная в инструкции SELECT, является локальной по отношению к инструкции SELECT и поэтому находится вне инструкции EXECUTE.  
+ Одной из трудноуловимых причин этой ошибки является использование переменной, которая объявлена вне инструкции EXECUTE. Например, переменная **@mycol** , указанная в инструкции SELECT, является локальной по отношению к инструкции SELECT. Поэтому он находится за пределами инструкции EXECUTE.  
   
  USE AdventureWorks2012;  
   
@@ -66,9 +66,9 @@ ms.locfileid: "62915691"
   
  EXECUTE ('SELECT ' + @mycol + ' FROM Production.Product';) ;  
   
-## <a name="see-also"></a>См. также  
- [EXECUTE (Transact-SQL)](/sql/t-sql/language-elements/execute-transact-sql)   
- [Инструкции SET (Transact-SQL)](/sql/t-sql/statements/set-statements-transact-sql)   
+## <a name="see-also"></a>См. также:  
+ [ВЫПОЛНЕНИЕ &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/execute-transact-sql)   
+ [Инструкции SET &#40;&#41;Transact-SQL](/sql/t-sql/statements/set-statements-transact-sql)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql)  
   
   

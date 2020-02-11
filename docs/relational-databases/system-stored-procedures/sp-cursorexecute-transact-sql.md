@@ -18,16 +18,16 @@ ms.assetid: 6a204229-0a53-4617-a57e-93d4afbb71ac
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5d0979ba7df97ebc9fc5b79d8fd0cbd34b6a59a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108535"
 ---
-# <a name="spcursorexecute-transact-sql"></a>sp_cursorexecute (Transact-SQL)
+# <a name="sp_cursorexecute-transact-sql"></a>sp_cursorexecute (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Создает и заполняет курсор на основе плана выполнения, который был создан процедурой sp_cursorprepare. Эта процедура в сочетании с sp_cursorprepare, то же самое, что процедура sp_cursoropen, но разбивается на два этапа. sp_cursorexecute вызывается указанием ID = 4 в пакете потока табличных данных.  
+  Создает и заполняет курсор на основе плана выполнения, который был создан процедурой sp_cursorprepare. Эта процедура в сочетании с sp_cursorprepare имеет ту же функцию, что и sp_cursoropen, но разбивается на две фазы. sp_cursorexecute вызывается путем указания ID = 4 в пакете потока табличных данных (TDS).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,32 +43,32 @@ sp_cursorexecute prepared_handle, cursor
   
 ## <a name="arguments"></a>Аргументы  
  *prepared_handle*  
- Подготовленной *обрабатывать* значение, возвращаемое процедурой sp_cursorprepare. *prepared_handle* является обязательным параметром, который вызывает для **int** входного значения.  
+ Значение *обработчика* подготовленной инструкции, возвращаемое sp_cursorprepare. *prepared_handle* является обязательным параметром, который вызывает входное значение **int** .  
   
- *курсор*  
- Идентификатор курсора, созданный SQL Server. *курсор* является обязательным параметром, который должен указываться во всех последующих процедур, работающих с этим курсором, например sp_cursorfetch  
+ *набора*  
+ Идентификатор курсора, созданный SQL Server. *курсор* — это обязательный параметр, который должен быть указан во всех последующих процедурах, действующих для курсора, например sp_cursorfetch  
   
  *scrollopt*  
- Параметр прокрутки. *scrollopt* — это необязательный параметр, который требует **int** входного значения. Sp_cursorexecute*scrollopt* параметр имеет те же параметры значение, что и для sp_cursoropen.  
+ Параметр прокрутки. *scrollopt* — это необязательный параметр, требующий входного значения **int** . Параметр sp_cursorexecute*scrollopt* имеет те же параметры, что и для sp_cursoropen.  
   
 > [!NOTE]  
 >  Значение PARAMETERIZED_STMT не поддерживается.  
   
 > [!IMPORTANT]  
->  Если *scrollopt* значение не указано, значение по умолчанию — KEYSET независимо от *scrollopt* значение, указанное в процедуре sp_cursorprepare.  
+>  Если значение *scrollopt* не указано, значение по умолчанию — KEYSET, независимо от значения *scrollopt* , указанного в sp_cursorprepare.  
   
  *ccopt*  
- Параметр управления параллелизмом. *ccopt* — это необязательный параметр, который требует **int** входного значения. Sp_cursorexecute*ccopt* параметр имеет те же параметры значение, что и для sp_cursoropen.  
+ Параметр управления параллелизмом. *ccopt* — это необязательный параметр, требующий входного значения **int** . Параметр sp_cursorexecute*ccopt* имеет те же параметры, что и для sp_cursoropen.  
   
 > [!IMPORTANT]  
->  Если *ccopt* значение не указано, значение по умолчанию — OPTIMISTIC независимо от *ccopt* значение, указанное в процедуре sp_cursorprepare.  
+>  Если значение *ccopt* не указано, значение по умолчанию — оптимистичный, независимо от значения *ccopt* , указанного в sp_cursorprepare.  
   
- *количество строк*  
- Необязательный параметр, который указывает число строк буфера выборки, которые будут использоваться с AUTO_FETCH. Значение по умолчанию составляет 20 строк. *количество строк* ведет себя по-разному, при назначении значение как входное или как возвращаемое.  
+ *количества*  
+ Необязательный параметр, который указывает число строк буфера выборки, которые будут использоваться с AUTO_FETCH. Значение по умолчанию составляет 20 строк. При назначении в качестве входного значения и возвращаемого значения *ROWCOUNT* ведет себя иначе.  
   
 |Как входное значение|Как возвращаемое значение|  
 |--------------------|---------------------|  
-|При указании AUTO_FETCH с курсорами FAST_FORWARD *rowcount* представляет число строк, чтобы поместить в буфер выборки.|Представляет число строк в результирующем наборе. Когда *scrollopt* указано значение AUTO_FETCH, *rowcount* возвращает количество строк, выбранных в буфер выборки.|  
+|При указании AUTO_FETCH с FAST_FORWARD курсоров *ROWCOUNT* представляет число строк, помещаемых в буфер выборки.|Представляет число строк в результирующем наборе. Если указано значение AUTO_FETCH *scrollopt* , функция *ROWCOUNT* возвращает количество строк, которые были получены в буфер выборки.|  
   
  *bound_param*  
  Означает необязательное использование дополнительных параметров.  
@@ -77,29 +77,29 @@ sp_cursorexecute prepared_handle, cursor
 >  Все параметры после пятого передаются в план инструкции как входные.  
   
 ## <a name="code-return-value"></a>Значение кодов возврата  
- *количество строк* может возвращать следующие значения.  
+ *ROWCOUNT* может возвращать следующие значения.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |-1|Число строк неизвестно.|  
 |-n|Действует асинхронное заполнение.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="scrollopt-and-ccopt-parameters"></a>Параметры scrollopt и ccopt  
- *scrollopt* и *ccopt* полезны, если кэшированные планы вытесняются в серверный кэш, это означает, что подготовленный дескриптор, идентифицирующий инструкцию, должен быть перекомпилирован. *Scrollopt* и *ccopt* значения параметров должны совпадать со значениями, переданными в исходном запросе в процедуру sp_cursorprepare.  
+ *scrollopt* и *ccopt* полезны при прерывании кэшированных планов для кэша сервера, что означает, что подготовленный описатель, идентифицирующий инструкцию, должен быть перекомпилирован. Значения параметров *scrollopt* и *ccopt* должны совпадать со значениями, отправленными в исходном запросе, в sp_cursorprepare.  
   
 > [!NOTE]  
->  PARAMETERIZED_STMT не должен быть назначен *scrollopt*.  
+>  PARAMETERIZED_STMT не следует назначать *scrollopt*.  
   
  При невозможности найти совпадающие значения будет проведена повторная компиляция планов, отрицающая операции подготовки и выполнения.  
   
 ## <a name="rpc-and-tds-considerations"></a>Замечания по RPC и TDS  
  Входной флажок RPC RETURN_METADATA может быть установлен в значение 1, чтобы в потоке TDS возвращались метаданные списка выбора курсора.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_cursoropen &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
- [Хранимая процедура sp_cursorfetch &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [sp_cursorfetch &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

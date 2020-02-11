@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: efbe03a4aab65f792b352eeb5b6c5130c4c32335
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783208"
 ---
 # <a name="access-the-reporting-services-wmi-provider"></a>Доступ к поставщику WMI для служб Reporting Services
@@ -32,10 +32,10 @@ ms.locfileid: "72783208"
 > [!IMPORTANT]  
 >  Начиная с выпуска [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , поставщик WMI поддерживается только для серверов отчетов, работающих в собственном режиме. Серверы отчетов служб в режиме интеграции с SharePoint могут управляться со страниц центра администрирования SharePoint и с помощью скриптов PowerShell.  
   
-|Класс|Пространство имен|Описание|  
+|Class|Пространство имен|Description|  
 |-----------|---------------|-----------------|  
-|MSReportServer_Instance|Рут\микрософт\склсервер\репортсервер\ RS_ *\<енкодединстанценаме >* \v11|Основные сведения, необходимые клиенту для подключения к установленному серверу отчетов.|  
-|MSReportServer_ConfigurationSetting|Рут\микрософт\склсервер\репортсервер\ RS_ *\<енкодединстанценаме >* \v11\Admin|Представляет установочные параметры и параметры времени выполнения для экземпляра сервера отчетов. Эти параметры хранятся в файле конфигурации для сервера отчетов.<br /><br /> **\*\* Важно. \*\*** Этот класс доступен только для пользователей с правами администратора.|  
+|MSReportServer_Instance|рут\микрософт\склсервер\репортсервер\ RS_*\<енкодединстанценаме>* \v11|Основные сведения, необходимые клиенту для подключения к установленному серверу отчетов.|  
+|MSReportServer_ConfigurationSetting|рут\микрософт\склсервер\репортсервер\ RS_*\<енкодединстанценаме>* \v11\Admin|Представляет установочные параметры и параметры времени выполнения для экземпляра сервера отчетов. Эти параметры хранятся в файле конфигурации для сервера отчетов.<br /><br /> **\*\* Важно. \*\*** Этот класс доступен только для пользователей с правами администратора.|  
   
  Экземпляр каждого из перечисленных выше классов создается для каждого экземпляра сервера отчетов. Вы можете использовать любые средства Microsoft или сторонних производителей для получения доступа к объектам WMI, которые отображаются сервером отчетов, включая программные интерфейсы WMI, отображаемые самой платформой .NET Framework. В этом разделе рассматривается процедура получения доступа и использования экземпляров классов WMI с помощью команды PowerShell [Get-WmiObject](https://technet.microsoft.com/library/dd315295.aspx).  
   
@@ -86,6 +86,6 @@ $rsconfig = Get-WmiObject -Namespace "root\Microsoft\SqlServer\ReportServer\RS_M
 $rsconfig.GetAdminSiteUrl()  
 ```  
   
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также:
  [Справочник по библиотеке поставщика WMI служб Reporting Services (SSRS)](../wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)   
- [Файл конфигурации RSReportServer](../report-server/rsreportserver-config-configuration-file.md)  
+ [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)  

@@ -18,10 +18,10 @@ ms.assetid: 0cba908a-c85c-4b09-b16a-df1cb333c629
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 10b4aa19b86530213f852ea90f959a1d7ef6c74f
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72251238"
 ---
 # <a name="filetablerootpath-transact-sql"></a>FileTableRootPath (Transact-SQL)
@@ -38,19 +38,19 @@ FileTableRootPath ( [ '[schema_name.]FileTable_name' ], @option )
   
 ## <a name="arguments"></a>Аргументы  
  *FileTable_name*  
- Имя таблицы FileTable. *FileTable_name* имеет тип **nvarchar**. Этот параметр является необязательным. Значением по умолчанию является текущая база данных. Указывать *schema_name* также необязательно. Для *FileTable_name* можно передать значение null, чтобы использовать значение параметра по умолчанию.  
+ Имя таблицы FileTable. *FileTable_name* имеет тип **nvarchar**. Данный параметр является необязательным. Значением по умолчанию является текущая база данных. Указывать *schema_name* также необязательно. Для *FileTable_name* можно передать значение null, чтобы использовать значение параметра по умолчанию.  
   
- *\@, параметр*  
- Целочисленное выражение, определяющее способ форматирования серверных компонентов пути. *\@параметр* может иметь одно из следующих значений:  
+ *\@функцию*  
+ Целочисленное выражение, определяющее способ форматирования серверных компонентов пути. параметр может иметь одно из следующих значений: * \@*  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |**0**|Возвращает имя сервера, преобразованное в формат NetBIOS, например<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> Это значение по умолчанию.|  
 |**1**|Возвращает имя сервера без преобразования, например:<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDatabase`|  
 |**2**|Возвращает полный путь сервера, например:<br /><br /> `\\ServerName.MyDomain.com\MSSQLSERVER\MyDocumentDatabase`|  
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
- **nvarchar(4000)**  
+ **nvarchar (4000)**  
   
  Когда база данных принадлежит к Always On группе доступности, функция **FileTableRootPath** возвращает имя виртуальной сети (VNN) вместо имени компьютера.  
   
@@ -80,7 +80,7 @@ FROM DocumentStore
 WHERE Name = N'document.docx';  
 ```  
   
-## <a name="security"></a>Безопасность  
+## <a name="security"></a>безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  Функция **FileTableRootPath** требует:  
@@ -104,7 +104,7 @@ SELECT FileTableRootPath(N'dbo.MyFileTable');
 SELECT FileTableRootPath(N'MyFileTable');  
 ```  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
  [Работа с каталогами и путями в таблицах FileTable](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
   
   

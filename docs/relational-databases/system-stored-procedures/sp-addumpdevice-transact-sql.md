@@ -19,16 +19,16 @@ ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ccd72de184115929483a43fd69d133abe0e195af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68117908"
 ---
-# <a name="spaddumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
+# <a name="sp_addumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**Применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (с по [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
 
 Добавляет в экземпляр компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устройство резервного копирования.  
   
@@ -47,36 +47,36 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @devtype = ] 'device_type'` — Тип устройства резервного копирования. *Аргумент device_type* — **varchar(20)** , по умолчанию и может принимать одно из следующих значений.  
+`[ @devtype = ] 'device_type'`— Это тип устройства резервного копирования. *device_type* имеет тип **varchar (20)**, не имеет значения по умолчанию и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
-|**диск**|Файл на жестком диске в качестве устройства резервного копирования.|  
-|**Лента**|Любое ленточное устройство, поддерживаемое [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.<br /><br /> Примечание. Поддержка ленточных устройств резервного копирования будет удалена в одной из будущих версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется.|  
+|**свободного**|Файл на жестком диске в качестве устройства резервного копирования.|  
+|**tape**|Любое ленточное устройство, поддерживаемое [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.<br /><br /> Примечание. Поддержка ленточных устройств резервного копирования будет удалена в одной из будущих версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется.|  
   
-`[ @logicalname = ] 'logical_name'` — Это логическое имя устройства резервного копирования, используемых в инструкциях BACKUP и RESTORE. *logical_name* — **sysname**, не имеет значения по умолчанию и не может иметь значение NULL.  
+`[ @logicalname = ] 'logical_name'`Логическое имя устройства резервного копирования, используемое в инструкциях BACKUP и RESTORE. Аргумент *logical_name* имеет тип **sysname**, не имеет значения по умолчанию и не может иметь значение null.  
   
-`[ @physicalname = ] 'physical_name'` — Это физическое имя устройства резервного копирования. Физические имена должны соответствовать правилам для имен файлов операционной системы или формату UNC для сетевых устройств и должны содержать полный путь. *physical_name* — **nvarchar(260)** , не имеет значения по умолчанию значение, и не может иметь значение NULL.  
+`[ @physicalname = ] 'physical_name'`Физическое имя устройства резервного копирования. Физические имена должны соответствовать правилам для имен файлов операционной системы или формату UNC для сетевых устройств и должны содержать полный путь. *physical_name* имеет тип **nvarchar (260)**, не имеет значения по умолчанию и не может иметь значение null.  
   
  При создании устройства резервного копирования в удаленном сетевом каталоге убедитесь, что имя входа, под которым запущен компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)], имеет на удаленном компьютере необходимые права на запись.  
   
- При добавлении ленточного устройства этот параметр должен быть физическим именем, назначенным для ленточному устройству с Windows; например  **\\ \\. \TAPE0** для первого ленточного устройства на компьютере. Ленточное устройство должно быть подключено к серверному компьютеру и его нельзя использовать удаленно. Имена команд, содержащие символы, отличные от алфавитно-цифровых, следует заключать в кавычки.  
+ При добавлении ленточного устройства этот параметр должен быть физическим именем, назначенным локальному ленточному устройству системой Windows. Например, ** \\ \\.\TAPE0** для первого ленточного устройства на компьютере. Ленточное устройство должно быть подключено к серверному компьютеру и его нельзя использовать удаленно. Имена команд, содержащие символы, отличные от алфавитно-цифровых, следует заключать в кавычки.  
   
 > [!NOTE]  
 >  Эта процедура вносит указанное физическое имя в каталог. Она не пытается создать это устройство или произвести доступ к нему.  
   
-`[ @cntrltype = ] 'controller_type'` Устаревший. Если указан — не обрабатывается. Поддерживается исключительно в целях обратной совместимости. Новых **sp_addumpdevice** следует пропустить этот параметр.  
+`[ @cntrltype = ] 'controller_type'`Устаревшие. Если указан — не обрабатывается. Поддерживается исключительно в целях обратной совместимости. Новые варианты использования **sp_addumpdevice** должны опускать этот параметр.  
   
-`[ @devstatus = ] 'device_status'` Устаревший. Если указан — не обрабатывается. Поддерживается исключительно в целях обратной совместимости. Новых **sp_addumpdevice** следует пропустить этот параметр.  
+`[ @devstatus = ] 'device_status'`Устаревшие. Если указан — не обрабатывается. Поддерживается исключительно в целях обратной совместимости. Новые варианты использования **sp_addumpdevice** должны опускать этот параметр.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или 1 (неуспешное завершение)  
+ 0 (успех) или 1 (сбой).  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  None  
   
-## <a name="remarks"></a>Примечания  
- **sp_addumpdevice** добавляется устройство резервного копирования для **sys.backup_devices** представления каталога. После этого устройство можно указывать в инструкциях BACKUP и RESTORE по логическому имени. **sp_addumpdevice** производит доступ к физическому устройству. Обращение к нему производится только при выполнении инструкций BACKUP и RESTORE. Создание логического устройства резервного копирования упрощает инструкции BACKUP и RESTORE, позволяя вместо пути устройства в предложениях TAPE = и DISK = указывать имена устройств.  
+## <a name="remarks"></a>Remarks  
+ **sp_addumpdevice** добавляет устройство резервного копирования в представление каталога **sys. backup_devices** . После этого устройство можно указывать в инструкциях BACKUP и RESTORE по логическому имени. **sp_addumpdevice** не выполняет никакого доступа к физическому устройству. Обращение к нему производится только при выполнении инструкций BACKUP и RESTORE. Создание логического устройства резервного копирования упрощает инструкции BACKUP и RESTORE, позволяя вместо пути устройства в предложениях TAPE = и DISK = указывать имена устройств.  
   
  При использовании дисковых и файловых устройств резервного копирования проблемы владения и разрешений могут накладываться. Проверьте, даны ли необходимые разрешения на соответствующие файлы учетной записи Windows, от имени которой запущен компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -84,7 +84,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
   
  Пользуйтесь только теми типами лент, которые рекомендованы производителем устройства. Для накопителей на цифровых звуковых лентах (DAT) пользуйтесь лентами компьютерного класса (хранилище цифровых данных — DDS).  
   
- **sp_addumpdevice** не может быть выполнена внутри транзакции.  
+ **sp_addumpdevice** не может выполняться внутри транзакции.  
   
  Чтобы удалить устройство, используйте [sp_dropdevice](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md) или[SQL Server Management Studio](../../relational-databases/backup-restore/delete-a-backup-device-sql-server.md).  
   
@@ -138,14 +138,14 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Устройства резервного копирования (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
- [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
- [Определение логического устройства резервного копирования для дискового файла (SQL Server)](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
- [Определение логического устройства резервного копирования для ленточного накопителя (SQL Server)](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
- [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)   
- [sp_dropdevice (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
- [sys.backup_devices (Transact-SQL)](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Устройства резервного копирования &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
+ [&#41;BACKUP &#40;Transact-SQL](../../t-sql/statements/backup-transact-sql.md)   
+ [Определение логического устройства резервного копирования для дискового файла &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
+ [Определение логического устройства резервного копирования для ленточного накопителя &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
+ [Восстановление &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
+ [sp_dropdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
+ [sys. backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

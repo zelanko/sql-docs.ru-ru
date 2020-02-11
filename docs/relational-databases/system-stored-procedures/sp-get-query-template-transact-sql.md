@@ -1,5 +1,5 @@
 ---
-title: Хранимая процедура sp_get_query_template (Transact-SQL) | Документация Майкрософт
+title: sp_get_query_template (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,16 @@ ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9841e7815f31af26aeeb3ed0f4783d3a36d83030
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68124084"
 ---
-# <a name="spgetquerytemplate-transact-sql"></a>sp_get_query_template (Transact-SQL)
+# <a name="sp_get_query_template-transact-sql"></a>sp_get_query_template (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Возвращает запрос в параметризованной форме. Возвращаемые результаты имитируют параметризованную форму запроса, получаемую в результате принудительной параметризации. Хранимая процедура sp_get_query_template предназначена главным образом при создании структуры плана TEMPLATE.  
+  Возвращает запрос в параметризованной форме. Возвращаемые результаты имитируют параметризованную форму запроса, получаемую в результате принудительной параметризации. sp_get_query_template используется в основном при создании руководств планов шаблонов.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,22 +43,22 @@ sp_get_query_template
   
 ## <a name="arguments"></a>Аргументы  
  "*query_text*"  
- Запрос, для которого создается параметризованная версия. "*query_text*" должны быть заключены в одинарные кавычки и предваряться описателем Юникода n. N'*query_text*"— это значение, присваиваемое @querytext параметра. Тип **nvarchar(max)** .  
+ Запрос, для которого создается параметризованная версия. "*query_text*" необходимо заключать в одинарные кавычки и предшествовать спецификатору N Юникода. N '*query_text*' — это значение, присваиваемое @querytext параметру. Это относится к типу **nvarchar (max)**.  
   
  @templatetext  
- Является выходным параметром типа **nvarchar(max)** , предназначенный для получения параметризованной формы *query_text* как строковый литерал.  
+ Является выходным параметром типа **nvarchar (max)**, предоставленным как указано, для получения параметризованной формы *query_text* в виде строкового литерала.  
   
  @parameters  
- Является выходным параметром типа **nvarchar(max)** , предназначенный для получения параметров имена и типы данных, которые были параметризованы в строковый литерал @templatetext.  
+ Является выходным параметром типа **nvarchar (max)**, который указан как указанный, для получения строкового литерала имен параметров и типов данных, которые были параметризованы в @templatetext.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Процедура sp_get_query_template возвращает ошибку, если:  
   
--   Невозможно параметризовать значения констант в *query_text*.  
+-   Он не выполняет параметризацию значений констант литерала в *query_text*.  
   
--   *query_text* имеет значение NULL, не является строкой Юникода, синтаксически неверен или не удается скомпилировать.  
+-   *query_text* имеет значение null, не является строкой Юникода, синтаксически недопустимым или не может быть скомпилировано.  
   
- Если хранимая процедура sp_get_query_template возвращает ошибку, он не изменяет значения @templatetext и @parameters выходных параметров.  
+ Если sp_get_query_template возвращает ошибку, значения выходных параметров @templatetext и @parameters не изменяются.  
   
 ## <a name="permissions"></a>Разрешения  
  Требует членства в роли базы данных public.  
@@ -112,9 +112,9 @@ SELECT @my_parameters;
 > [!NOTE]  
 >  Порядок и имена параметров, возвращаемых из процедуры sp_get_query_template, могут измениться при наложении исправлений, пакетов обновлений и обновлениях версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Обновление версии может также стать причиной получения отличающегося набора параметризуемых констант для того же запроса и изменения формата выдачи результатов для обоих выходных параметров.  
   
-## <a name="see-also"></a>См. также  
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Хранимым процедурам ядра СУБД &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Указание механизма параметризации запросов с помощью структур плана](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)  
   
   

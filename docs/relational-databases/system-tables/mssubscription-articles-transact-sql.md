@@ -18,28 +18,28 @@ ms.assetid: dbc1737f-261e-4017-b9cd-703b9fc4ac78
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8518c787f876152787ee30a20b9f25f936b9fa86
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68139780"
 ---
-# <a name="mssubscriptionarticles-transact-sql"></a>MSsubscription_articles (Transact-SQL)
+# <a name="mssubscription_articles-transact-sql"></a>MSsubscription_articles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSsubscription_articles** таблица содержит сведения о статьях в подписке с очередями. Данная таблица заполняется только для двух типов репликаций: как обновляемых посредством очередей, так и обновляемых немедленно, но которые стали обновляться через очереди из-за отработки отказа.  
+  Таблица **MSsubscription_articles** содержит сведения о статьях в подписке, поставленной в очередь. Данная таблица заполняется только для двух типов репликаций: как обновляемых посредством очередей, так и обновляемых немедленно, но которые стали обновляться через очереди из-за отработки отказа.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |**agent_id**|**int**|Идентификатор агента, обслуживающего данную статью.|  
-|**artid**|**int**|Идентификатор статьи из **sysarticles** таблицы.|  
-|**Статья**|**sysname**|Имя статьи из **sysarticles** таблицы.|  
-|**dest_table**|**sysname**|Имя целевой таблицы из **sysarticles** таблицы.|  
-|**Владелец**|**sysname**|Владелец подписки.|  
-|**cft_table**|**sysname**|Имя таблицы конфликтов для данной статьи, для типа репликации, обновляемого посредством очередей.|  
+|**artid**|**int**|Идентификатор статьи из таблицы **sysarticles** .|  
+|**рассмотрен**|**имеет sysname**|Имя статьи из таблицы **sysarticles** .|  
+|**dest_table**|**имеет sysname**|Имя целевой таблицы из таблицы **sysarticles** .|  
+|**владельцев**|**имеет sysname**|Владелец подписки.|  
+|**cft_table**|**имеет sysname**|Имя таблицы конфликтов для данной статьи, для типа репликации, обновляемого посредством очередей.|  
   
-## <a name="see-also"></a>См. также  
- [Таблицы репликации &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Представления репликации &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 715a60d4a6f4a138a71e7de6095234a9e0d2a461
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782213"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>Планирование автоматических административных задач в агенте SQL Server
@@ -35,7 +35,7 @@ ms.locfileid: "72782213"
  Объекты агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] находятся в пространстве имен <xref:Microsoft.SqlServer.Management.Smo.Agent>.  
   
 ## <a name="examples"></a>Примеры  
- Чтобы использовать какой-либо из представленных примеров кода, необходимо выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в статьях [Создание проекта Visual Basic SMO в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) или [Создание проекта Visual&#35; C SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в статьях [Создание проекта Visual Basic SMO в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) или [Создание проекта Visual C&#35; SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 1.  В программах, в которых используется агент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], необходимо включать инструкцию `Imports` для определения пространства имен Agent. Вставьте инструкцию после других инструкций `Imports` и перед любыми декларациями в приложении.  
   
@@ -280,6 +280,6 @@ pa.AddSubSystem(AgentSubSystem.CmdExec);
 //Now users logged on as vLogin can run CmdExec job steps with the specified credentials.   
 ```  
   
-## <a name="see-also"></a>См. также статью  
- [Агент SQL Server](../../../ssms/agent/sql-server-agent.md)   
+## <a name="see-also"></a>См. также:  
+ [агент SQL Server](../../../ssms/agent/sql-server-agent.md)   
  [Реализация заданий](../../../ssms/agent/implement-jobs.md)  

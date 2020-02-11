@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_disable_db (Transact-SQL) | Документация Майкрософт
+title: sys. sp_cdc_disable_db (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,18 +22,18 @@ ms.assetid: 420fb99e-e60f-445b-b568-da96471f1e8f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: f8d85103b48b04284966e77595d0cfa927cd6338
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68083766"
 ---
-# <a name="sysspcdcdisabledb-transact-sql"></a>sys.sp_cdc_disable_db (Transact-SQL)
+# <a name="syssp_cdc_disable_db-transact-sql"></a>sys.sp_cdc_disable_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Отключает систему отслеживания измененных данных в текущей базе данных. Система отслеживания измененных данных доступна не во всех выпусках [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**Применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (с по [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,13 +44,13 @@ sys.sp_cdc_disable_db
 ```  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  None  
   
-## <a name="remarks"></a>Примечания  
- **sys.sp_cdc_disable_db** отключает систему отслеживания измененных данных для всех таблиц в текущей включенной базе данных. Удаляются все системные объекты, относящиеся к системе отслеживания измененных данных, например таблицы изменений, задания, хранимые процедуры и функции. **Is_cdc_enabled** столбец записи базы данных в [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) представление каталога имеет значение 0.  
+## <a name="remarks"></a>Remarks  
+ **sys. sp_cdc_disable_db** отключает отслеживание измененных данных для всех таблиц в базе данных, которые в данный момент включены. Удаляются все системные объекты, относящиеся к системе отслеживания измененных данных, например таблицы изменений, задания, хранимые процедуры и функции. Столбцу **is_cdc_enabled** для записи базы данных в представлении каталога [sys. databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) присваивается значение 0.  
   
 > [!NOTE]  
 >  Если для базы данных определено несколько экземпляров системы отслеживания в то время, когда система отслеживания измененных данных отключена, то продолжительное выполнение какой-либо транзакции может вызвать ошибку в работе sys.sp_cdc_disable_db. Эту проблему можно избежать, отключив отдельные экземпляры системы отслеживания с помощью таблицы sys.sp_cdc_disable_table перед запуском процедуры sys.sp_cdc_disable_db.  
@@ -68,8 +68,8 @@ EXECUTE sys.sp_cdc_disable_db;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [sys.sp_cdc_enable_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md)   
- [sys.sp_cdc_disable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [sys. sp_cdc_enable_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md)   
+ [sys. sp_cdc_disable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql.md)  
   
   

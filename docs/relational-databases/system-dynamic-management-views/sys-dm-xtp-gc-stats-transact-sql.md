@@ -1,5 +1,5 @@
 ---
-title: sys.dm_xtp_gc_stats (Transact-SQL) | Документация Майкрософт
+title: sys. dm_xtp_gc_stats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,22 +19,22 @@ ms.assetid: 8287d611-50e3-43e1-ba8d-3e3793d3ba0e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 28d98f7f95d9e9c2af967976b875f61388342583
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68090173"
 ---
-# <a name="sysdmxtpgcstats-transact-sql"></a>sys.dm_xtp_gc_stats (Transact-SQL)
+# <a name="sysdm_xtp_gc_stats-transact-sql"></a>sys.dm_xtp_gc_stats (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Предоставляет сведения (общую статистику) о текущем поведении процесса сборки мусора [!INCLUDE[hek_2](../../includes/hek-2-md.md)].  
   
- Уборка строк производится либо в рамках стандартной обработки транзакций, либо основным потоком сборки мусора, который называется простаивающим исполнителем. После фиксации пользовательской транзакции, он выводит один рабочий элемент из очереди сборки мусора ([sys.dm_xtp_gc_queue_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xtp-gc-queue-stats-transact-sql.md)). Все строки, которые могли быть удалены, но не были затронуты основной пользовательской транзакцией, обрабатываются простаивающим исполнителем в рамках сканирования «пыльных углов» (сканирования областей индекса, которые реже используются).  
+ Уборка строк производится либо в рамках стандартной обработки транзакций, либо основным потоком сборки мусора, который называется простаивающим исполнителем. Когда пользовательская транзакция фиксируется, она вымещает один рабочий элемент из очереди сборки мусора ([sys. dm_xtp_gc_queue_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xtp-gc-queue-stats-transact-sql.md)). Все строки, которые могли быть удалены, но не были затронуты основной пользовательской транзакцией, обрабатываются простаивающим исполнителем в рамках сканирования «пыльных углов» (сканирования областей индекса, которые реже используются).  
   
  Дополнительные сведения см. в разделе [In-Memory OLTP (оптимизация в памяти)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-|Имя столбца|Type|Описание|  
+|Имя столбца|Тип|Description|  
 |-----------------|----------|-----------------|  
 |rows_examined|**bigint**|Число строк, просмотренных подсистемой сборки мусора после запуска сервера.|  
 |rows_no_sweep_needed|**bigint**|Количество строк, которые были удалены без сканирования «пыльных углов».|  
@@ -69,7 +69,7 @@ sweep_rows_expiring  sweep_rows_expired   sweep_rows_expired_removed
                0                 673673  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Оптимизированные для памяти динамические административные представления таблиц &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Динамические административные представления оптимизированной для памяти таблицы &#40;языке Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

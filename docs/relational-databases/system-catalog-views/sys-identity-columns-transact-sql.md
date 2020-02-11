@@ -1,5 +1,5 @@
 ---
-title: sys.identity_columns (Transact-SQL) | Документация Майкрософт
+title: sys. identity_columns (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,22 +21,22 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 49684671c25ea83fa7554bec7f80d0b16c30d4eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68122721"
 ---
-# <a name="sysidentitycolumns-transact-sql"></a>sys.identity_columns (Transact-SQL)
+# <a name="sysidentity_columns-transact-sql"></a>sys.identity_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Содержит по одной строке для каждого столбца, который является столбцом идентификаторов.  
   
- **Sys.identity_columns** наследует строки из **sys.columns** представления. **Sys.identity_columns** возвращает столбцы в **sys.columns** представления, а также **seed_value**, **increment_value**, **last_value**, и **is_not_for_replication** столбцы. Дополнительные сведения см. в разделе [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md).  
+ Представление **sys. identity_columns** наследует строки из представления **sys. Columns** . Представление **sys. identity_columns** возвращает столбцы в представлении **sys. Columns** , а также столбцы **seed_value**, **increment_value**, **LAST_VALUE**и **is_not_for_replication** . Дополнительные сведения см. в разделе [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md).  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|**\<столбцы, наследованные из sys.columns >**||**Sys.identity_columns** представление возвращает все столбцы в **sys.columns** представления. Оно также возвращает дополнительные столбцы, описанные далее. Описание столбцов, **sys.identity_columns** наследует от представления **sys.columns**, см. в разделе [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md).|  
+|**\<столбцы, унаследованные из sys. Columns>**||Представление **sys. identity_columns** возвращает все столбцы в представлении **sys. Columns** . Оно также возвращает дополнительные столбцы, описанные далее. Описание столбцов, наследуемых представлением **sys. identity_columns** из **sys. Columns**, см. в разделе [sys. Columns &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md).|  
 |**seed_value**|**sql_variant**|Начальное значение для столбца идентификаторов. Тип данных начального значения является тем же, что и тип данных самого столбца.|  
 |**increment_value**|**sql_variant**|Значение приращения для столбца идентификаторов. Тип данных начального значения является тем же, что и тип данных самого столбца.|  
 |**last_value**|**sql_variant**|Последнее значение, сформированное для данного столбца идентификаторов. Тип данных начального значения является тем же, что и тип данных самого столбца.|  
@@ -46,11 +46,11 @@ ms.locfileid: "68122721"
 >  Сведения о том, как создать автоматически увеличивающееся числовое значение, которое может использоваться в нескольких таблицах или вызываться из приложений без ссылки на какие-либо таблицы, см. в разделе [Порядковые номера](../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
 ## <a name="permissions"></a>Разрешения  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Дополнительные сведения см. в разделе [Настройка видимости метаданных](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>См. также  
- [Представления каталога объектов (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Представления каталога объектов &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Часто задаваемые вопросы о запросах к системному каталогу SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
+ [Часто задаваемые вопросы о запросах к системному каталогу сервера SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

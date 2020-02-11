@@ -19,13 +19,13 @@ ms.assetid: 4668cfb7-462f-40d0-948c-8f740a792a4d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3e09efe938dabb031e1c57020f051cd5ab03e55a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68010567"
 ---
-# <a name="spsyscollectorstopcollectionset-transact-sql"></a>sp_syscollector_stop_collection_set (Transact-SQL)
+# <a name="sp_syscollector_stop_collection_set-transact-sql"></a>sp_syscollector_stop_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Останавливает набор элементов сбора.  
@@ -43,21 +43,21 @@ sp_syscollector_stop_collection_set
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @collection_set_id =] *collection_set_id*  
- Уникальный локальный идентификатор набора элементов сбора. *collection_set_id* — **int** со значением по умолчанию NULL. *collection_set_id* должен иметь значение, если *имя* имеет значение NULL.  
+ [ @collection_set_id = ] *collection_set_id*  
+ Уникальный локальный идентификатор набора элементов сбора. *collection_set_id* имеет **тип int** и значение по умолчанию NULL. *collection_set_id* должны иметь значение, если *Name* имеет значение null.  
   
- [ @name =] '*имя*"  
- Имя набора элементов сбора. *имя* — **sysname** со значением по умолчанию NULL. *имя* должен иметь значение, если *collection_set_id* имеет значение NULL.  
+ [ @name = ] "*имя*"  
+ Имя набора элементов сбора. Аргумент *Name* имеет тип **sysname** и значение по умолчанию NULL. *имя* должно иметь значение, если *collection_set_id* имеет значение null.  
   
  [ @stop_collection_job = ] *stop_collection_job*  
- Указывает, что задание сбора для набора элементов сбора должно быть остановлено, если оно выполняется. *stop_collection_job* — **бит** значение по умолчанию 1.  
+ Указывает, что задание сбора для набора элементов сбора должно быть остановлено, если оно выполняется. *stop_collection_job* имеет **бит** со значением по умолчанию 1.  
   
- *stop_collection_job* применяется только к наборам элементов сбора с установлен кэшированный режим сбора. Дополнительные сведения см. в разделе [sp_syscollector_create_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
+ *stop_collection_job* применяется только к наборам сбора, для которых установлен режим сбора кэшированный. Дополнительные сведения см. в разделе [sp_syscollector_create_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Функция sp_syscollector_create_collection_set должна выполняться в контексте системной базы данных msdb.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -72,8 +72,8 @@ GO
 EXEC sp_syscollector_stop_collection_set @collection_set_id = 1;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Сбор данных](../../relational-databases/data-collection/data-collection.md)   
- [Хранимые процедуры сборщика данных (Transact-SQL)](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)  
+ [Хранимые процедуры сборщика данных &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)  
   
   

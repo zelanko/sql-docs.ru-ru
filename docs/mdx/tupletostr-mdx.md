@@ -1,5 +1,5 @@
 ---
-title: TupleToStr (многомерные Выражения) | Документация Майкрософт
+title: TupleToStr (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d6cde1f60274d1437517d89e48b111e9e7298b9d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097376"
 ---
 # <a name="tupletostr-mdx"></a>TupleToStr (многомерные выражения)
 
 
-  Возвращает строку в формате Многомерных выражений, соответствующую указанному кортежу.  
+  Возвращает строку в формате МНОГОМЕРных выражений, соответствующую указанному кортежу.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -31,11 +31,11 @@ TupleToStr(Tuple_Expression)
  *Tuple_Expression*  
  Допустимое многомерное выражение, возвращающее кортеж.  
   
-## <a name="remarks"></a>Примечания  
- Эта функция используется для передачи строкового представления кортежа внешней функции для дальнейшего анализа. Возвращаемая строка заключается в фигурные скобки {} и каждого элемента, если более чем один явным образом в кортеже, разделенные запятой.  
+## <a name="remarks"></a>Remarks  
+ Эта функция используется для передачи строкового представления кортежа внешней функции для дальнейшего анализа. Возвращаемая строка заключается в фигурные скобки {} и каждый элемент, если несколько явно определены в кортеже, разделяются запятыми.  
   
 ## <a name="examples"></a>Примеры  
- Следующий пример возвращает строку ([Date]. [ Calendar Year]. & [2001], [Geography]. [Geography]. [Страна]. & [United States]):  
+ В следующем примере возвращается строка ([DATE]. [ Календарный год]. & [2001], [Geography]. [Geography]. [Country]. & [США]):  
   
 ```  
 WITH MEMBER Measures.x AS TupleToStr   
@@ -62,7 +62,7 @@ SELECT Measures.x ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также:  
+ [Ссылка на функцию многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-function-reference-mdx.md)  
   
   

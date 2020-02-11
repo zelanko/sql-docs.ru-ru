@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e615a8e316cb5c8e15056eeaa111b5daf1ef5513
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244947"
 ---
 # <a name="color-coding-in-query-editors"></a>Выделение цветом в редакторах запросов
@@ -34,7 +34,7 @@ ms.locfileid: "75244947"
 |Зеленый|Системная таблица, представление или функция с табличным значением. А также системные схемы sys и INFORMATION_SCHEMA.|  
 |Синий|Ключевое слово|  
 |Бирюзовый|Номера строк или параметр шаблона|  
-|Каштановый|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]хранимая процедура|  
+|Каштановый|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] хранимая процедура|  
 |Темно-серый|Операторы|  
   
 ## <a name="status-bar"></a>Строка состояния  

@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8be3fe8cbf30121ec2895f59306c925a422d5c39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938123"
 ---
-# <a name="ltsource-data-querygt---openrowset"></a>&lt;запрос источника данных&gt; -OPENROWSET
+# <a name="ltsource-data-querygt---openrowset"></a>&lt;запрос&gt; источника данных — OPENROWSET
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Заменяет запрос источника данных на запрос к внешнему поставщику. Инструкции INSERT, SELECT FROM PREDICTION JOIN и SELECT FROM NATURAL PREDICTION JOIN поддерживают **OPENROWSET**.  
+  Заменяет запрос источника данных на запрос к внешнему поставщику. Инструкция INSERT, выбор из ПРОГНОЗИРУЕМого объединения и выбор из операторов ЕСТЕСТВЕННОго ПРОГНОЗИРУЮЩЕГО подключения поддерживают **OPENROWSET**.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,8 +37,8 @@ OPENROWSET(provider_name,provider_string,query_syntax)
  *query_syntax*  
  Синтаксис запроса, возвращающего набор строк.  
   
-## <a name="remarks"></a>Примечания  
- Поставщик интеллектуального анализа данных будет установлено подключение к объекту источника данных с помощью *provider_name* и *provider_string,* и выполнит запрос, указанный в *query_syntax* для извлечения набора строк из источника данных.  
+## <a name="remarks"></a>Remarks  
+ Поставщик интеллектуального анализа данных установит соединение с объектом источника данных с помощью *provider_name* и provider_string и будет выполнять запрос *,* указанный в *query_syntax* , для получения набора строк из исходных данных.  
   
 ## <a name="examples"></a>Примеры  
  Следующий пример можно использовать внутри инструкции PREDICTION JOIN для получения данных от базы данных [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] с помощью инструкции [!INCLUDE[tsql](../includes/tsql-md.md)] SELECT.  
@@ -52,9 +52,9 @@ OPENROWSET
 )  
 ```  
   
-## <a name="see-also"></a>См. также  
- [&#60;запрос источника данных&#62;](../dmx/source-data-query.md)   
- [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; инструкций по обработке данных](../dmx/dmx-statements-data-manipulation.md)   
- [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../dmx/data-mining-extensions-dmx-statements.md)  
+## <a name="see-also"></a>См. также:  
+ [&#62;запроса источника данных&#60;](../dmx/source-data-query.md)   
+ [Расширения интеллектуального анализа данных &#40;инструкции расширений интеллектуального анализа данных&#41;](../dmx/dmx-statements-data-manipulation.md)   
+ [Расширения интеллектуального анализа данных &#40;Справочник по инструкции DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

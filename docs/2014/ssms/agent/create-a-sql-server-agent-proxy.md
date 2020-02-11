@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dfaba668e4f2328610656db6a61f01960814bff0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68189514"
 ---
 # <a name="create-a-sql-server-agent-proxy"></a>Создание учетной записи-посредника агента SQL Server
@@ -30,9 +30,9 @@ ms.locfileid: "68189514"
   
      [Ограничения](#Restrictions)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
--   **Создание учетной записи-посредника агента SQL Server с помощью:**  
+-   **Создание агент SQL Server прокси-сервера с помощью:**  
   
      [Среда SQL Server Management Studio](#SSMSProcedure)  
   
@@ -44,9 +44,10 @@ ms.locfileid: "68189514"
   
 -   Перед созданием учетной записи-посредника необходимо создать учетные данные, если они еще не созданы.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используют учетные данные для хранения сведений об учетных записях пользователей Windows. Указанный в учетных данных пользователь должен иметь разрешение «Вход в систему в качестве пакетного задания» на компьютере, где запущен [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+-   Учетные записи-посредники агента[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используют учетные данные для хранения сведений об учетных записях пользователей Windows. Указанный в учетных данных пользователь должен иметь разрешение «Вход в систему в качестве пакетного задания» на компьютере, где запущен [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверяет действительность доступа к подсистеме учетной записи-посредника и предоставляет ей доступ при каждом выполнении шага задания. Если учетная запись-посредник больше не имеет доступа к подсистеме, шаг задания завершается ошибкой. В противном случае агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] олицетворяет пользователя, указанного в учетной записи-посреднике, и запускает шаг задания.  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверяет действительность доступа к подсистеме учетной записи-посредника и предоставляет ей доступ при каждом выполнении шага задания. Если учетная запись-посредник больше не имеет доступа к подсистеме, шаг задания завершается ошибкой. В противном случае агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] олицетворяет пользователя, указанного в учетной записи-посреднике, и запускает шаг задания.  
   
 -   Создание учетной записи-посредника не влияет на разрешения пользователя, указанного в учетных данных учетной записи-посредника. Например, можно создать учетную запись-посредник для пользователя, не имеющего разрешения на подключение к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В этом случае шаги задания, использующие эту учетную запись-посредник, не смогут соединяться с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -56,7 +57,7 @@ ms.locfileid: "68189514"
   
 ####  <a name="Permissions"></a> Permissions  
   
--   Только члены предопределенной роли сервера **sysadmin** имеют разрешение на создание, изменение или удаление учетных записей-посредников. Пользователи, не являющиеся членами предопределенной роли сервера **sysadmin**, должны быть добавлены к одной из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb**, чтобы использовать записи-посредники: **SQLAgentUserRole**, **SQLAgentReaderRole** или **SQLAgentOperatorRole**.  
+-   Только члены предопределенной роли сервера **sysadmin** имеют разрешение на создание, изменение или удаление учетных записей-посредников. Пользователи, не являющиеся членами предопределенной роли сервера **sysadmin** , должны быть добавлены к одной из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** , чтобы использовать записи-посредники: **SQLAgentUserRole**, **SQLAgentReaderRole**или **SQLAgentOperatorRole**.  
   
 -   При создании учетных данных в дополнение к учетной записи-посреднику требуется разрешение `ALTER ANY CREDENTIAL`.  
   
@@ -117,7 +118,7 @@ ms.locfileid: "68189514"
   
 -   [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)  
   
--   [Хранимая процедура sp_add_proxy &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-proxy-transact-sql)  
+-   [sp_add_proxy &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-proxy-transact-sql)  
   
 -   [sp_grant_proxy_to_subsystem &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql)  
   

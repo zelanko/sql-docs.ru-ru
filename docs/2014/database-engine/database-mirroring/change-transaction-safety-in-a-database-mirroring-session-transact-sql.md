@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a79010a4fa59eaebfc743543799a1e83cc5e687d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754929"
 ---
 # <a name="change-transaction-safety-in-a-database-mirroring-session-transact-sql"></a>Изменение безопасности транзакций в сеансах зеркального отображения базы данных (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "62754929"
     ALTER DATABASE <database> SET PARTNER SAFETY FULL  
     ```  
   
-     где *\<база_данных>*  — имя зеркально отображаемой базы данных.  
+     где * \<>базы данных* — имя зеркальной базы данных.  
   
 ### <a name="to-turn-off-transaction-safety"></a>Выключение безопасности транзакций  
   
@@ -46,10 +46,10 @@ ms.locfileid: "62754929"
     ALTER DATABASE <database> SET PARTNER SAFETY OFF  
     ```  
   
-     где *\<база_данных>*  — зеркально отображаемая база данных.  
+     где * \<>базы данных* — это зеркально отображаемая база данных.  
   
-## <a name="see-also"></a>См. также  
- [Зеркальное отображение базы данных ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
+## <a name="see-also"></a>См. также:  
+ [&#41;Transact-SQL для зеркального отображения базы данных ALTER DATABASE &#40;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
  [Режимы работы зеркального отображения базы данных](database-mirroring-operating-modes.md)  
   
   

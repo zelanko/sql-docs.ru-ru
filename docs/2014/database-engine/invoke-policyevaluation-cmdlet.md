@@ -17,21 +17,21 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 17da45f3e66ed0adc68a40a776bfb8fe1126f330
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797847"
 ---
 # <a name="invoke-policyevaluation-cmdlet"></a>Invoke-PolicyEvaluation, командлет
-  **Invoke-PolicyEvaluation** — это командлет [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , который определяет, соответствует ли набор целей объектов SQL Server условиям, заданным в одной или нескольких политиках в системе управления на основе политик.  
+  **Invoke-PolicyEvaluation** — это [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] командлет, который сообщает, соответствует ли целевой набор SQL Server объектов условиям, указанным в одной или нескольких политиках управления на основе политик.  
   
 ## <a name="using-invoke-policyevaluation"></a>Использование Invoke-PolicyEvaluation  
- Командлет**Invoke-PolicyEvaluation** оценивает одну или несколько политик относительно набора объектов SQL Server, который называется целевым. Набор целевых объектов поступает от целевого сервера. Каждая политика определяет условия, которые являются разрешенными состояниями для целевых объектов. Например, в соответствии с политикой **Доверенная база данных** для свойства базы данных TRUSTWORTHY должно быть указано значение OFF.  
+ **Командлет Invoke-PolicyEvaluation** оценивает одну или несколько политик для набора объектов SQL Server, называемых набором целей. Набор целевых объектов поступает от целевого сервера. Каждая политика определяет условия, которые являются разрешенными состояниями для целевых объектов. Например, в соответствии с политикой **Доверенная база данных** для свойства базы данных TRUSTWORTHY должно быть указано значение OFF.  
   
  Параметр **-AdHocPolicyEvaluationMode** определяет выполняемые действия:  
   
- Проверить  
+ Проверка  
  Сообщает состояние соответствия целевых объектов при помощи учетных данных текущего имени входа. Не проводите повторную настройку каких-либо объектов. Это параметр по умолчанию.  
   
  CheckSqlScriptAsProxy  
@@ -84,11 +84,11 @@ gci "Database Status.xml", "Trustworthy Database.xml" | Invoke-PolicyEvaluation 
 ## <a name="specifying-the-target-set"></a>Указание набора целей  
  Для указания набора целевых объектов используется три параметра.  
   
--   Параметр **-TargetServerName** определяет экземпляр SQL Server, содержащий целевые объекты. Сведения можно указать в строке, для которой используется формат, определенный для свойства ConnectionString класса <xref:System.Data.SqlClient.SqlConnection> . Для построения правильно форматированной строки подключения можно использовать класс <xref:System.Data.SqlClient.SqlConnectionStringBuilder> . Можно также создать объект <xref:Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection> и передать его в параметр **-TargetServer**. При передаче строки, которая содержит только имя сервера, командлет **Invoke-PolicyEvaluation** для подключения к серверу использует проверку подлинности Windows.  
+-   **-TargetServerName** указывает экземпляр SQL Server, содержащий целевые объекты. Сведения можно указать в строке, для которой используется формат, определенный для свойства ConnectionString класса <xref:System.Data.SqlClient.SqlConnection> . Для построения правильно форматированной строки подключения можно использовать класс <xref:System.Data.SqlClient.SqlConnectionStringBuilder> . Можно также создать объект <xref:Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection> и передать его в параметр **-TargetServer**. При передаче строки, которая содержит только имя сервера, командлет **Invoke-PolicyEvaluation** для подключения к серверу использует проверку подлинности Windows.  
   
--   Параметр **-TargetObjects** принимает объект или массив объектов, которые представляют объекты SQL Server в наборе целей. Например, можно создать массив объектов класса <xref:Microsoft.SqlServer.Management.Smo.Database> для передачи параметру **-TargetObjects**.  
+-   **-TargetObjects** принимает объект или массив объектов, представляющих объекты SQL Server в наборе целей. Например, можно создать массив объектов класса <xref:Microsoft.SqlServer.Management.Smo.Database> для передачи параметру **-TargetObjects**.  
   
--   Параметр **-TargetExpressions** принимает строку, содержащую выражение запроса, которое определяет объекты в наборе целей. Это выражение запроса состоит из узлов, разделенных символом «/». Каждый узел имеет вид ObjectType[Filter]. Тип объекта является одним из объектов SQL Server в иерархии объектов SMO. Фильтр — это выражение, которое фильтрует объекты в этом узле. Дополнительные сведения см. в статье [Query Expressions and Uniform Resource Names](../powershell/query-expressions-and-uniform-resource-names.md).  
+-   **-Таржетекспрессионс** принимает строку, содержащую выражение запроса, которое указывает объекты в наборе целей. Это выражение запроса состоит из узлов, разделенных символом «/». Каждый узел имеет вид ObjectType[Filter]. Тип объекта является одним из объектов SQL Server в иерархии объектов SMO. Фильтр — это выражение, которое фильтрует объекты в этом узле. Дополнительные сведения см. в статье [Query Expressions and Uniform Resource Names](../powershell/query-expressions-and-uniform-resource-names.md).  
   
  Укажите либо **-TargetObjects** , либо **-TargetExpression**, но не оба параметра.  
   
@@ -129,12 +129,12 @@ Invoke-PolicyEvaluation -Policy "Surface Area Configuration for Reporting Servic
 ```  
   
 ## <a name="formatting-output"></a>Форматирование выходных данных  
- По умолчанию выходные данные командлета **Invoke-PolicyEvaluation** отображаются в окне командной строки в виде краткого отчета в удобной для чтения форме. С помощью параметра **-OutputXML** можно указать, что командлет должен генерировать подробный отчет в виде XML-файла. Командлет**Invoke-PolicyEvaluation** использует схему SML-IF, поэтому файл смогут читать модули чтения SML-IF.  
+ По умолчанию выходные данные командлета **Invoke-PolicyEvaluation** отображаются в окне командной строки в виде краткого отчета в удобной для чтения форме. С помощью параметра **-OutputXML** можно указать, что командлет должен генерировать подробный отчет в виде XML-файла. **Командлет Invoke-PolicyEvaluation** использует схему языкового моделирования для обмена данными (SML-if), чтобы файл можно было прочитать с помощью SML, если читатели.  
   
 ```powershell
 sl "SQLSERVER:\SQLPolicy\MyComputer\DEFAULT\Policies"  
 Invoke-PolicyEvaluation -Policy "Datbase Status" -TargetServer "MYCOMPUTER" -OutputXML > C:\MyReports\DatabaseStatusReport.xml  
 ```  
   
-## <a name="see-also"></a>См. также статью  
- [Использование командлетов ядра СУБД](../../2014/database-engine/use-the-database-engine-cmdlets.md)  
+## <a name="see-also"></a>См. также:  
+ [Использование командлетов компонента Database Engine](../../2014/database-engine/use-the-database-engine-cmdlets.md)  

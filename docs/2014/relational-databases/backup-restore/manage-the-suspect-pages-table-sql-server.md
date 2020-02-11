@@ -19,20 +19,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0f6c6afc1822e2f56189aace2836a15486d1b73b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62922022"
 ---
-# <a name="manage-the-suspectpages-table-sql-server"></a>Управление таблицей suspect_pages (SQL Server)
+# <a name="manage-the-suspect_pages-table-sql-server"></a>Управление таблицей suspect_pages (SQL Server)
   В этом разделе описывается управление таблицей **suspect_pages** в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с использованием [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Таблица **suspect_pages** содержит сведения о потенциально поврежденных страницах и используется при принятии решений о необходимости восстановления. Таблица [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) находится в [базе данных msdb](../databases/msdb-database.md).  
   
  Страница считается «подозрительной», если при попытке ее чтения компонентом [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] обнаруживается одна из следующих ошибок.  
   
--   [Ошибка 823](../errors-events/mssqlserver-823-database-engine-error.md) , которая вызывается проверкой циклической контрольной суммы (CRC), запущенной операционной системой; например ошибка диска (происходит при некоторых ошибках оборудования)  
+-   [Ошибка 823](../errors-events/mssqlserver-823-database-engine-error.md) , вызванная циклической проверкой избыточности (CRC), выданной операционной системой, например ошибка диска (некоторые ошибки оборудования)  
   
--   [Ошибка 824](../errors-events/mssqlserver-824-database-engine-error.md), например разрыв страницы (или любая другая логическая ошибка)  
+-   [Ошибка 824](../errors-events/mssqlserver-824-database-engine-error.md), например обрыв страницы (любая логическая ошибка)  
   
  Идентификатор каждой "подозрительной" страницы записывается в таблицу **suspect_pages** . В эту таблицу [!INCLUDE[ssDE](../../includes/ssde-md.md)] записывает все подозрительные страницы, которые встретились при обработке, в частности:  
   
@@ -50,7 +50,7 @@ ms.locfileid: "62922022"
   
      [Рекомендации](#Recommendations)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Управление таблицей suspect_pages с помощью:**  
   
@@ -122,7 +122,7 @@ ms.locfileid: "62922022"
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-#### <a name="to-manage-the-suspectpages-table"></a>Управление таблицей suspect_pages  
+#### <a name="to-manage-the-suspect_pages-table"></a>Управление таблицей suspect_pages  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)], разверните его, а затем разверните узел **Базы данных**.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "62922022"
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### <a name="to-manage-the-suspectpages-table"></a>Управление таблицей suspect_pages  
+#### <a name="to-manage-the-suspect_pages-table"></a>Управление таблицей suspect_pages  
   
 1.  Установите соединение с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -160,7 +160,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [DROP DATABASE (Transact-SQL)](/sql/t-sql/statements/drop-database-audit-specification-transact-sql)   
  [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql)   
  [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   

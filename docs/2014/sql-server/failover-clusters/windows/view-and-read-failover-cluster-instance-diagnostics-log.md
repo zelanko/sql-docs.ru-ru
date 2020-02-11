@@ -11,25 +11,25 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 19308ee2838238f0dea6cfdaeb228a250591613b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63049340"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>Просмотр и чтение журнала диагностики экземпляра отказоустойчивого кластера
   Все критические ошибки и события предупреждений для библиотеки ресурсов SQL Server записываются в журнал событий Windows. Диагностические сведения, связанные с SQL Server и записываемые в журнал, перехватываются хранимой процедурой [sp_server_diagnostics (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) и записываются в файлы журнала диагностики отказоустойчивого кластера SQL Server (также называемые журналами *SQLDIAG*).  
   
--   **Перед началом:**  [Рекомендации по](#Recommendations), [безопасности](#Security)  
+-   **Перед началом:**  [рекомендации](#Recommendations), [Безопасность](#Security)  
   
--   **Просмотр журнала диагностики с помощью:**  [среды SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Просмотр журнала диагностики с помощью:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
--   **Чтобы Настройка параметров журнала диагностики, с помощью:** [Transact-SQL](#TsqlConfigure)  
+-   **Настройка параметров журнала диагностики с помощью:** [Transact-SQL](#TsqlConfigure)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
 ###  <a name="Recommendations"></a> Рекомендации  
- По умолчанию SQLDIAG хранятся в локальной папке LOG в каталоге экземпляра SQL Server, например, "C\Program Files\Microsoft SQL Server\MSSQL12. \<Имя_экземпляра > \MSSQL\LOG ", узла-владельца из экземпляра кластера отработки отказа AlwaysOn (FCI). Размер каждого файла журнала SQLDIAG ограничен 100 МБ. На компьютере сохраняются десять таких файлов журнала, после чего они освобождаются для новых журналов.  
+ По умолчанию SQLDIAG хранится в локальной папке журнала SQL Server каталога экземпляра, например C\Program Files\Microsoft SQL Server\MSSQL12. \<InstanceName> \MSSQL\LOG "узла-владельца экземпляра отказоустойчивого кластера ALWAYSON (FCI). Размер каждого файла журнала SQLDIAG ограничен 100 МБ. На компьютере сохраняются десять таких файлов журнала, после чего они освобождаются для новых журналов.  
   
  В журналах используется формат файлов расширенных событий. Для чтения файлов, созданных расширенными событиями, можно использовать системную функцию **sys.fn_xe_file_target_read_file** . Возвращается одно событие в каждой строке в формате XML. Выполните запрос к системному представлению для синтаксического анализа XML-данных в виде результирующего набора. Дополнительные сведения см. в разделе [sys.fn_xe_file_target_read_file (Transact-SQL)](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql).  
   
@@ -41,7 +41,7 @@ ms.locfileid: "63049340"
  Откройте среду SQL Server Management Studio в качестве администратора  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
- **Просмотр файлов журнала диагностики:**  
+ **Чтобы просмотреть файлы журнала диагностики, выполните следующие действия.**  
   
 1.  В меню **Файл** выберите **Открыть**, **Файл**и выберите файл журнала диагностики для просмотра.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "63049340"
 4.  Можно фильтровать и сортировать данные событий, используя меню **ExtendedEvents** и выбирая параметр **Фильтр** .  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
- **Просмотр файлов журнала диагностики:**  
+ **Чтобы просмотреть файлы журнала диагностики, выполните следующие действия.**  
   
  Для просмотра всех записей в файле журнала SQLDIAG используйте следующий запрос.  
   
@@ -93,11 +93,11 @@ ORDER BY Time;
 > [!NOTE]  
 >  Пример этой процедуры см. в подразделе [Примеры (Transact-SQL)](#TsqlExample)далее в этом разделе.  
   
- С помощью инструкции языка описания данных DDL, `ALTER SERVER CONFIGURATION`, можно запускать или останавливать запись в журнал диагностических данных, полученных с [sp_server_diagnostics &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) процедуры, а также журнал SQLDIAG набора параметры конфигурации, такие как количество переключений файлов журнала, размер файла журнала и расположение файла. Дополнительные сведения о синтаксисе см. в разделе [Setting diagnostic log options](/sql/t-sql/statements/alter-server-configuration-transact-sql#Diagnostic).  
+ С помощью инструкции `ALTER SERVER CONFIGURATION`языка описания данных (DDL) можно запускать или прекращать регистрацию диагностических данных, полученных в [sp_server_diagnostics &#40;процедуре&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) , а также ЗАДАВАТЬ параметры конфигурации журнала SQLdiag, такие как число переключений файла журнала, размер файла журнала и расположение файла. Дополнительные сведения о синтаксисе см. в разделе [Setting diagnostic log options](/sql/t-sql/statements/alter-server-configuration-transact-sql#Diagnostic).  
   
-###  <a name="ConfigTsqlExample"></a> Примеры (Transact-SQL)  
+###  <a name="ConfigTsqlExample"></a>Примеры (Transact-SQL)  
   
-####  <a name="TsqlExample"></a> Setting diagnostic log options  
+####  <a name="TsqlExample"></a>Настройка параметров журнала диагностики  
  В примерах этого раздела показана установка значений параметра журнала диагностики.  
   
 ##### <a name="a-starting-diagnostic-logging"></a>A. Запуск регистрации диагностических данных в журнале  
@@ -130,7 +130,7 @@ ALTER SERVER CONFIGURATION
 SET DIAGNOSTICS LOG MAX_SIZE = 10 MB;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Политика отработки отказа для экземпляров отказоустойчивого кластера](failover-policy-for-failover-cluster-instances.md)  
   
   

@@ -18,13 +18,13 @@ ms.assetid: ec3a4a68-b591-431c-9518-053ede522d0c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 63a3d9daa48bb98408c3f0d9b8282e8083849cf0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085076"
 ---
-# <a name="sphelptargetservergroup-transact-sql"></a>sp_help_targetservergroup (Transact-SQL)
+# <a name="sp_help_targetservergroup-transact-sql"></a>sp_help_targetservergroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Перечисляет все целевые серверы в указанной группе. Если группа не указана, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает сведения обо всех группах целевых серверов.  
@@ -40,20 +40,20 @@ sp_help_targetservergroup
 ```  
   
 ## <a name="argument"></a>Аргумент  
-`[ @name = ] 'name'` — Имя группы целевых серверов, для которой возвращаются сведения. *имя* — **sysname**, значение по умолчанию NULL.  
+`[ @name = ] 'name'`Имя группы целевых серверов, для которой возвращаются сведения. Аргумент *Name* имеет тип **sysname**и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |**servergroup_id**|**int**|Идентификационный номер серверной группы|  
-|**name**|**sysname**|Имя группы серверов.|  
+|**name**|**имеет sysname**|Имя группы серверов.|  
   
 ## <a name="permissions"></a>Разрешения  
- Разрешения для выполнения этой процедуры по умолчанию **sysadmin** предопределенной роли сервера.  
+ Разрешения на выполнение этой процедуры по умолчанию зафиксированы для предопределенной роли сервера **sysadmin** .  
   
 ## <a name="examples"></a>Примеры  
   
@@ -80,10 +80,10 @@ EXEC dbo.sp_help_targetservergroup
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_add_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)   
  [sp_delete_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)   
  [sp_update_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

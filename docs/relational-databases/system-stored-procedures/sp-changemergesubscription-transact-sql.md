@@ -16,19 +16,19 @@ ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c205bab104bd81eda3e7d14dc30844352caa7f66
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68124869"
 ---
-# <a name="spchangemergesubscription-transact-sql"></a>sp_changemergesubscription (Transact-SQL)
+# <a name="sp_changemergesubscription-transact-sql"></a>sp_changemergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Изменяет выбранные свойства принудительной подписки слиянием. Эта хранимая процедура выполняется на издателе в базе данных публикации.  
   
 > [!IMPORTANT]  
->  Если издатель настраивается с удаленным распространителем, то значения, передаваемые для всех аргументов, включая *job_login* и *job_password*, передаются распространителю в формате обычного (незашифрованного) текста. Прежде чем выполнять эту хранимую процедуру, необходимо зашифровать соединение между издателем и его удаленным распространителем. Дополнительные сведения см. в разделе [Включение шифрования соединений в компоненте Database Engine (диспетчер конфигураций SQL Server)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+>  Если издатель настраивается с удаленным распространителем, то значения, передаваемые для всех аргументов, включая *job_login* и *job_password*, передаются распространителю в формате обычного (незашифрованного) текста. Прежде чем выполнять эту хранимую процедуру, необходимо зашифровать соединение между издателем и его удаленным распространителем. Дополнительные сведения см. [в разделе Enable encrypted connections to the ядро СУБД &#40;диспетчер конфигурации SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,20 +42,20 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` — Имя публикации, который требуется изменить. *Публикация* — **sysname**, значение по умолчанию NULL. Публикация уже должна существовать и соответствовать правилам для идентификаторов.  
+`[ @publication = ] 'publication'`Имя изменяемой публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию NULL. Публикация уже должна существовать и соответствовать правилам для идентификаторов.  
   
-`[ @subscriber = ] 'subscriber'` — Имя подписчика. *подписчик* — **sysname**, значение по умолчанию NULL.  
+`[ @subscriber = ] 'subscriber'`Имя подписчика. Аргумент *Subscriber* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @subscriber_db = ] 'subscriber_db'` — Имя базы данных подписки. *subscriber_db*— **sysname**, значение по умолчанию NULL.  
+`[ @subscriber_db = ] 'subscriber_db'`Имя базы данных подписки. Аргумент *subscriber_db*имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @property = ] 'property'` — Это свойство, изменяемое для данной публикации. *Свойство* — **sysname**, и может принимать одно из значений в таблице.  
+`[ @property = ] 'property'`Свойство, которое необходимо изменить для данной публикации. Аргумент *Property* имеет тип **sysname**и может принимать одно из значений в таблице.  
   
-`[ @value = ] 'value'` Новое значение для указанного *свойство*. *значение* — **nvarchar(255)** , и может принимать одно из значений в таблице.  
+`[ @value = ] 'value'`Новое значение для указанного *Свойства*. *значение* равно **nvarchar (255)** и может быть одним из значений в таблице.  
   
-|Свойство|Значение|Описание|  
+|Свойство|Значение|Description|  
 |--------------|-----------|-----------------|  
-|**description**||Описание этой подписки слиянием.|  
-|**priority**||Приоритет подписки. При обнаружении конфликтов применяемый по умолчанию сопоставитель выбирает победителя исходя из приоритетов.|  
+|**nописание**||Описание этой подписки слиянием.|  
+|**приоритеты**||Приоритет подписки. При обнаружении конфликтов применяемый по умолчанию сопоставитель выбирает победителя исходя из приоритетов.|  
 |**merge_job_login**||Имя входа учетной записи [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, с которой выполняется агент.|  
 |**merge_job_password**||Пароль учетной записи Windows, от имени которой выполняется агент.|  
 |**publisher_security_mode**|**1**|При подключении к подписчику используется проверка подлинности Windows.|  
@@ -66,27 +66,27 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 ||**0**|При подключении к подписчику используется проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**subscriber_login**||Имя входа на подписчик.|  
 |**subscriber_password**||Надежный пароль для указанного имени входа на подписчик.|  
-|**sync_type**|**Автоматически**|Схема и начальные данные для опубликованных таблиц вначале передаются подписчику.|  
-||**Нет**|Подписчик уже имеет схему и начальные данные для опубликованных таблиц; системные таблицы и данные передаются всегда.|  
-|**use_interactive_resolver**|**true**|Возможно разрешение конфликтов в интерактивном режиме для всех статей, которые позволяют разрешение конфликтов в интерактивном режиме.|  
-||**false**|Конфликты разрешаются в автоматическом режиме с помощью применяемого по умолчанию или пользовательского сопоставителя.|  
+|**sync_type**|**automatic**|Схема и начальные данные для опубликованных таблиц вначале передаются подписчику.|  
+||**None**|Подписчик уже имеет схему и начальные данные для опубликованных таблиц; системные таблицы и данные передаются всегда.|  
+|**use_interactive_resolver**|**условия**|Возможно разрешение конфликтов в интерактивном режиме для всех статей, которые позволяют разрешение конфликтов в интерактивном режиме.|  
+||**IsFalse**|Конфликты разрешаются в автоматическом режиме с помощью применяемого по умолчанию или пользовательского сопоставителя.|  
 |NULL (по умолчанию)|NULL (по умолчанию)||  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  **sp_changemergesubscription** используется в репликации слиянием.  
   
  После изменения имени входа и пароля агента необходимо остановить и повторно запустить агент, чтобы изменения вступили в силу.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_changemergesubscription**.  
+ Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_changemergesubscription**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
  [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
  [sp_helpmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

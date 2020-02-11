@@ -16,13 +16,13 @@ ms.assetid: 6d2b0472-0e1f-4005-833c-735d1940fe93
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0d003cccfa6fdedd0610ea34f15acb6ee1833e5a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68075728"
 ---
-# <a name="spregistercustomresolver-transact-sql"></a>sp_registercustomresolver (Transact-SQL)
+# <a name="sp_registercustomresolver-transact-sql"></a>sp_registercustomresolver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Регистрируют обработчик бизнес-логики или пользовательский сопоставитель на основе COM, которые могут быть вызваны в процессе синхронизации репликации слиянием. Эта хранимая процедура выполняется на распространителе.  
@@ -41,30 +41,30 @@ sp_registercustomresolver [ @article_resolver = ] 'article_resolver'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @article_resolver = ] 'article_resolver'` Указывает понятное имя регистрируемого пользовательского бизнес-логики. *article_resolver* — **nvarchar(255)** , не имеет значения по умолчанию.  
+`[ @article_resolver = ] 'article_resolver'`Указывает понятное имя регистрируемой настраиваемой бизнес-логики. *article_resolver* имеет тип **nvarchar (255)** и не имеет значения по умолчанию.  
   
-`[ @resolver_clsid = ] 'resolver_clsid'` Указывает значение идентификатора CLSID объекта COM, что регистрируется. Пользовательская бизнес-логика *resolver_clsid* — **nvarchar(50)** , значение по умолчанию NULL. Значение этого аргумента должно быть равным допустимому идентификатору CLSID или NULL (в случае регистрации сборки обработчиков бизнес-логики).  
+`[ @resolver_clsid = ] 'resolver_clsid'`Указывает значение CLSID регистрируемого объекта COM. Настраиваемая бизнес-логика *resolver_clsid* имеет тип **nvarchar (50)** и значение по умолчанию NULL. Значение этого аргумента должно быть равным допустимому идентификатору CLSID или NULL (в случае регистрации сборки обработчиков бизнес-логики).  
   
-`[ @is_dotnet_assembly = ] 'is_dotnet_assembly'` Указывает тип пользовательской бизнес-логики регистрируется. *is_dotnet_assembly* — **nvarchar(50)** , значение по умолчанию FALSE. **значение true,** указывает, что регистрируемая пользовательских бизнес-логика обработчика бизнес-логики сборкой. **false** означает, что COM-компонента.  
+`[ @is_dotnet_assembly = ] 'is_dotnet_assembly'`Указывает тип регистрируемой пользовательской бизнес-логики. *is_dotnet_assembly* аргумент имеет тип **nvarchar (50)** и значение по умолчанию false. **значение true** указывает, что регистрируемая настраиваемая бизнес-логика является сборкой обработчика бизнес-логики. **значение false** указывает, что это COM-компонент.  
   
-`[ @dotnet_assembly_name = ] 'dotnet_assembly_name'` — Имя сборки, реализующей обработчик бизнес-логики. *dotnet_assembly_name* — **nvarchar(255)** , со значением по умолчанию NULL. Если полный путь к сборке не описан в том же каталоге, что и исполняемый объект агента слияния, необходимо указать его в каталоге приложения, синхронно запускающего агент слияния, или в глобальном кэше сборок (GAC).  
+`[ @dotnet_assembly_name = ] 'dotnet_assembly_name'`Имя сборки, реализующей обработчик бизнес-логики. *dotnet_assembly_name* имеет тип **nvarchar (255)** и значение по умолчанию NULL.  Если полный путь к сборке не описан в том же каталоге, что и исполняемый объект агента слияния, необходимо указать его в каталоге приложения, синхронно запускающего агент слияния, или в глобальном кэше сборок (GAC).  
   
-`[ @dotnet_class_name = ] 'dotnet_class_name'` Имя класса, переопределяющего <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> для реализации обработчика бизнес-логики. Следует указать имя в форме **пространствоИмен.ИмяКласса**. *dotnet_class_name* — **nvarchar(255)** , со значением по умолчанию NULL.  
+`[ @dotnet_class_name = ] 'dotnet_class_name'`Имя класса, переопределяющего <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> для реализации обработчика бизнес-логики. Имя должно быть указано в формате **Namespace. ClassName**. *dotnet_class_name* имеет тип **nvarchar (255)** и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  **sp_registercustomresolver** используется в репликации слиянием.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_registercustomresolver**.  
+ Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_registercustomresolver**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Реализация обработчика бизнес-логики для статьи публикации слиянием](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   
- [Реализация пользовательского арбитра конфликтов для статьи публикации слиянием](../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)   
+ [Реализация пользовательского сопоставителя конфликтов для статьи публикации слиянием](../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)   
  [sp_lookupcustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lookupcustomresolver-transact-sql.md)   
  [sp_unregistercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

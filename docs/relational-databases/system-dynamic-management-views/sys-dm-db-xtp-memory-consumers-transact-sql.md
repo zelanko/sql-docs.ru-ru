@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_memory_consumers (Transact-SQL) | Документация Майкрософт
+title: sys. dm_db_xtp_memory_consumers (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -21,27 +21,27 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c9579de52a155bd3d5eaa26862f1a7da93d7b19f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68026818"
 ---
-# <a name="sysdmdbxtpmemoryconsumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers (Transact-SQL)
+# <a name="sysdm_db_xtp_memory_consumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  Сообщает о потребителях памяти уровня базы данных в компоненте Database Engine [!INCLUDE[hek_2](../../includes/hek-2-md.md)]. Представление возвращает по строке для каждого потребителя памяти, используемого компонентом Database Engine. Используйте это динамическое административное Представление, чтобы увидеть, как память распределяется между различных внутренних объектов.  
+  Сообщает о потребителях памяти уровня базы данных в компоненте Database Engine [!INCLUDE[hek_2](../../includes/hek-2-md.md)]. Представление возвращает по строке для каждого потребителя памяти, используемого компонентом Database Engine. Используйте это динамическое административное представление, чтобы увидеть, как память распределяется между различными внутренними объектами.  
   
  Дополнительные сведения см. в разделе [In-Memory OLTP (оптимизация в памяти)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |memory_consumer_id|**bigint**|Идентификатор (внутренний) потребителя памяти.|  
 |memory_consumer_type|**int**|Тип потребителя памяти:<br /><br /> 0 = агрегатная функция. (Суммирует использование памяти для двух или более потребителей. Не должен отображаться.)<br /><br /> 2 = VARHEAP (Отслеживает потребление памяти для кучи переменной длины.)<br /><br /> 3 = HASH (Отслеживает потребление памяти для индекса.)<br /><br /> 5 = пул страниц БД (Отслеживает потребление памяти для пула страниц базы данных, используемого для операций времени выполнения. Например, переменных таблиц и некоторых сериализуемых сканирований. Для одной базы данных существует только один потребитель памяти этого типа.)|  
-|memory_consumer_type_desc|**Nvarchar(64)**|Тип потребителя памяти: VARHEAP, HASH или PGPOOL.<br /><br /> 0 — (он не должен отображаться.)<br /><br /> 2 — VARHEAP<br /><br /> 3 — HASH<br /><br /> 5 — PGPOOL|  
-|memory_consumer_desc|**Nvarchar(64)**|Описание экземпляра потребителя памяти.<br /><br /> VARHEAP: <br />Куча базы данных. Используется для выделения данных пользователя для базы данных (строк).<br />Куча системы базы данных. Используется для выделения данных базы данных, которые будут включены в дампы памяти и не содержат пользовательских данных.<br />Куча индекса диапазона. Частная куча, используемая индексом диапазона для выделения страниц BW.<br /><br /> ХЭШ: Описание отсутствует, поскольку object_id указывает таблицу, а index_id сам хэш-индекс.<br /><br /> PGPOOL: Для базы данных имеется только одна страница пула пул страниц Database 64K.|  
+|memory_consumer_type_desc|**nvarchar (64)**|Тип потребителя памяти: VARHEAP, HASH или PGPOOL.<br /><br /> 0 — (оно не должно отображаться.)<br /><br /> 2 — VARHEAP<br /><br /> 3 — HASH<br /><br /> 5 — PGPOOL|  
+|memory_consumer_desc|**nvarchar (64)**|Описание экземпляра потребителя памяти.<br /><br /> VARHEAP <br />Куча базы данных. Используется для выделения данных пользователя для базы данных (строк).<br />Куча системы базы данных. Используется для выделения данных базы данных, которые будут включены в дампы памяти и не содержат пользовательских данных.<br />Куча индекса диапазона. Частная куча, используемая индексом диапазона для выделения страниц BW.<br /><br /> HASH: Описание отсутствует, так как object_id указывает таблицу, а index_id сам хэш-индекс.<br /><br /> PGPOOL: для базы данных существует только один пул страниц для базы данных пула страниц 64 КБ.|  
 |object_id|**bigint**|Идентификатор объекта, к которому относится выделенная память. Для системных объектов значение отрицательное.|  
-|xtp_object_id|**bigint**|Идентификатор объекта для таблицы, оптимизированной для памяти.|  
+|xtp_object_id|**bigint**|Идентификатор объекта для оптимизированной для памяти таблицы.|  
 |index_id|**int**|Идентификатор индекса потребителя (если применимо). Значение NULL для базовых таблиц.|  
 |allocated_bytes|**bigint**|Число байтов, зарезервированных для этого потребителя памяти.|  
 |used_bytes|**bigint**|Число байтов, используемых этим потребителем. Относится только к varheap.|  
@@ -50,10 +50,10 @@ ms.locfileid: "68026818"
 |sizeclass_count|**int**|Только для внутреннего применения.|  
 |min_sizeclass|**int**|Только для внутреннего применения.|  
 |max_sizeclass|**int**|Только для внутреннего применения.|  
-|memory_consumer_address|**varbinary**|Внутренний адрес потребителя памяти. Только для внутреннего применения.|  
-|xtp_object_id|**bigint**|Идентификатор объекта в памяти OLTP, соответствует таблице, оптимизированной для памяти.|  
+|memory_consumer_address|**varbinary**|Внутренний адрес потребителя памяти. Только для внутреннего использования.|  
+|xtp_object_id|**bigint**|Идентификатор объекта выполняющейся в памяти OLTP, соответствующий таблице, оптимизированной для памяти.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  На выходе выделения пространства на уровнях базы данных представляют собой пользовательские таблицы, индексы и системные таблицы. VARHEAP с object_id = NULL относится к памяти, выделенной для таблицы со столбцами переменной длины.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -64,7 +64,7 @@ ms.locfileid: "68026818"
  Системные таблицы возвращаются только для пользователей с разрешением VIEW DATABASE STATE.  
   
 ## <a name="general-remarks"></a>Общие замечания  
- Когда оптимизированных для памяти таблица имеет индекс columnstore, система использует некоторые из внутренних таблиц, которые используют определенный объем памяти, для отслеживания данных для индекса columnstore. Дополнительные сведения об этих внутренних таблицах и примеры запросов, отображающий их показатель потребления памяти см. [sys.memory_optimized_tables_internal_attributes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md).
+ Если оптимизированная для памяти таблица имеет индекс columnstore, система использует некоторые внутренние таблицы, которые потребляют некоторый объем памяти, чтобы отслеживанию данных для индекса columnstore. Дополнительные сведения об этих внутренних таблицах и примерах запросов, демонстрирующих использование памяти, см. в статье [sys. memory_optimized_tables_internal_attributes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md).
  
   
 ## <a name="examples"></a>Примеры  
@@ -111,7 +111,7 @@ NULL       VARHEAP                   NULL        NULL        1405943808         
 (17 row(s) affected)  
 ```  
   
- Общий объем памяти выделенного и используемого из этого динамического административного Представления совпадает с уровнем объекта в [sys.dm_db_xtp_table_memory_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md).  
+ Общий объем памяти, выделенный и используемый в этом динамическом административном представлении, совпадает с уровнем объекта в [sys. dm_db_xtp_table_memory_stats &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md).  
   
 ```  
 select  sum(allocated_bytes)/(1024*1024) as total_allocated_MB,   
@@ -123,7 +123,7 @@ total_allocated_MB   total_used_MB
 1358                 1191  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Оптимизированные для памяти динамические административные представления таблиц &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Динамические административные представления оптимизированной для памяти таблицы &#40;языке Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys.server_audits (Transact-SQL) | Документация Майкрософт
+title: sys. server_audits (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -20,58 +20,58 @@ ms.assetid: c2c4a000-1127-46a8-b1e9-947fd1136e1e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0a00f6843a0ef379c12aa1d1d00df9380efbd139
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68124997"
 ---
-# <a name="sysserveraudits-transact-sql"></a>sys.server_audits (Transact-SQL)
+# <a name="sysserver_audits-transact-sql"></a>sys.server_audits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Содержит по одной строке для каждого аудита [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в экземпляре сервера. Дополнительные сведения см. в статье [Подсистема аудита SQL Server (ядро СУБД)](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |**audit_id**|**int**|Идентификатор аудита.|  
-|**name**|**sysname**|Имя аудита.|  
-|**audit_guid**|**uniqueidentifier**|Идентификатор GUID аудита, который используется для перечисления аудитов со Server&#124;операции присоединения спецификации аудита базы данных во время запуска сервера и базы данных.|  
+|**name**|**имеет sysname**|Имя аудита.|  
+|**audit_guid**|**UNIQUEIDENTIFIER**|Идентификатор GUID для аудита, который используется для перечисления аудитов с&#124;рядовыми серверными спецификациями аудита базы данных во время операций запуска сервера и подключения к базе данных.|  
 |**create_date**|**datetime**|Дата и время создания аудита в формате UTC.|  
 |**modify_date**|**datetime**|Дата и время последнего изменения аудита в формате UTC.|  
 |**principal_id**|**int**|Идентификатор владельца аудита, зарегистрированного на сервере.|  
-|**type**|**char(2)**|Тип аудита:<br /><br /> SL — журнал событий безопасности NT<br /><br /> AL — журнал событий приложений NT<br /><br /> FL — файл в файловой системе|  
-|**type_desc**|**nvarchar(60)**|ЖУРНАЛ БЕЗОПАСНОСТИ<br /><br /> ЖУРНАЛ ПРИЛОЖЕНИЙ<br /><br /> FILE|  
-|**ON_FAILURE**|**tinyint**|В случае ошибки записи данных о действии:<br /><br /> 0 — продолжить<br /><br /> 1 — завершить работу экземпляра сервера<br /><br /> 2 — Ошибка операции|  
-|**on_failure_desc**|**nvarchar(60)**|В случае ошибки записи данных о действии:<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL_OPERATION|  
+|**type**|**char (2)**|Тип аудита:<br /><br /> Журнал событий безопасности SL-NT<br /><br /> AL — журнал событий приложений NT<br /><br /> FL — файл в файловой системе|  
+|**type_desc**|**nvarchar (60)**|ЖУРНАЛ БЕЗОПАСНОСТИ<br /><br /> ЖУРНАЛ ПРИЛОЖЕНИЙ<br /><br /> FILE|  
+|**on_failure**|**tinyint**|В случае ошибки записи данных о действии:<br /><br /> 0 — продолжить<br /><br /> 1. Завершение работы экземпляра сервера<br /><br /> 2 — сбой операции|  
+|**on_failure_desc**|**nvarchar (60)**|В случае ошибки записи данных о действии:<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL_OPERATION|  
 |**is_state_enabled**|**tinyint**|0 — отключено<br /><br /> 1 — включено.|  
 |**queue_delay**|**int**|Максимальное время ожидания перед записью на диск, в миллисекундах. Если 0, то аудит гарантирует запись, прежде чем событие может быть продолжено.|  
-|**предикат**|**nvarchar(3000)**|Выражение предиката, применяемое к событию.|  
+|**предикат**|**nvarchar (3000)**|Выражение предиката, применяемое к событию.|  
   
 ## <a name="permissions"></a>Разрешения  
- Участники с **ALTER ANY SERVER AUDIT** или **VIEW ANY DEFINITION** разрешение имеют доступ к этому представлению каталога. Кроме того, участник не должно быть запрещено **VIEW ANY DEFINITION** разрешение.  
+ Участники с разрешением **ALTER ANY SERVER AUDIT** или **View ANY DEFINITION** имеют доступ к этому представлению каталога. Кроме того, участнику не должно быть запрещено разрешение **View ANY DEFINITION** .  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Дополнительные сведения см. в разделе [Настройка видимости метаданных](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>См. также  
- [CREATE SERVER AUDIT (Transact-SQL)](../../t-sql/statements/create-server-audit-transact-sql.md)   
- [ALTER SERVER AUDIT (Transact-SQL)](../../t-sql/statements/alter-server-audit-transact-sql.md)   
- [DROP SERVER AUDIT (Transact-SQL)](../../t-sql/statements/drop-server-audit-transact-sql.md)   
- [CREATE SERVER AUDIT SPECIFICATION (Transact-SQL)](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
- [ALTER SERVER AUDIT SPECIFICATION (Transact-SQL)](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
- [DROP SERVER AUDIT SPECIFICATION (Transact-SQL)](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   
- [CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL)](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
- [ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL)](../../t-sql/statements/alter-database-audit-specification-transact-sql.md)   
- [DROP DATABASE AUDIT SPECIFICATION (Transact-SQL)](../../t-sql/statements/drop-database-audit-specification-transact-sql.md)   
- [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md)   
- [sys.fn_get_audit_file (Transact-SQL)](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md)   
- [sys.server_file_audits (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)   
- [sys.server_audit_specifications (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql.md)   
- [sys.server_audit_specification_details (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql.md)   
- [sys.database_audit_specifications (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)   
- [sys.database_audit_specification_details (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   
- [sys.dm_server_audit_status (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
- [sys.dm_audit_actions (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
- [sys.dm_audit_class_type_map (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Создание аудита сервера &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
+ [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
+ [Удаление аудита сервера &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
+ [Создание спецификации аудита сервера &#40;&#41;Transact-SQL](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
+ [ALTER SERVER AUDIT SPECIFICATION &#40;&#41;Transact-SQL](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
+ [УДАЛИТЬ СПЕЦИФИКАЦИю аудита сервера &#40;&#41;Transact-SQL](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   
+ [Создание спецификации аудита базы данных &#40;&#41;Transact-SQL](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
+ [&#40;Transact-SQL&#41;спецификации ALTER DATABASE AUDIT](../../t-sql/statements/alter-database-audit-specification-transact-sql.md)   
+ [УДАЛИТЬ СПЕЦИФИКАЦИю аудита базы данных &#40;&#41;Transact-SQL](../../t-sql/statements/drop-database-audit-specification-transact-sql.md)   
+ [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
+ [sys. fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md)   
+ [sys. server_file_audits &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)   
+ [sys. server_audit_specifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql.md)   
+ [sys. server_audit_specification_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql.md)   
+ [sys. database_audit_specifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)   
+ [sys. database_audit_specification_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   
+ [sys. dm_server_audit_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
+ [sys. dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
+ [sys. dm_audit_class_type_map &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
  [Создание аудита сервера и спецификации аудита сервера](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   
   

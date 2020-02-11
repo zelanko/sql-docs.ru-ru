@@ -1,6 +1,6 @@
 ---
-title: Образец базы данных SQL Graph | Документация Майкрософт
-description: Краткий пример, помогут вам начать работу с нового синтаксиса, появившегося в базе данных SQL graph.
+title: Пример базы данных SQL Graph | Документация Майкрософт
+description: Краткий пример, который поможет приступить к работе с новым синтаксисом, представленным в базе данных SQL Graph.
 ms.date: 04/19/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,24 +16,24 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1737ae8427df8d6d9bd6dbb9dea359da09f0c657
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68035872"
 ---
-# <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>Создание базы данных графа и выполнение некоторых шаблоны запросов с помощью T-SQL
+# <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>Создание базы данных Graph и выполнение некоторых запросов сопоставления шаблонов с помощью T-SQL
 
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-В этом примере приведено [!INCLUDE[tsql-md](../../includes/tsql-md.md)] скрипт для создания базы данных графа с узлами и краями и затем использовать новое предложение MATCH, чтобы сопоставить некоторые шаблоны и передавать через graph. Этот пример сценария будет работать на обе базы данных SQL Azure и [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
+Этот пример предоставляет [!INCLUDE[tsql-md](../../includes/tsql-md.md)] скрипт для создания базы данных графа с узлами и краями, а затем использует новое предложение Match для сопоставления некоторых шаблонов и обхода графа. Этот пример скрипта будет работать как в базе данных SQL Azure, так и в[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
 
 ## <a name="sample-schema"></a>Образец схемы
 
-Этот пример создает схему графа, как показано на рис. 1 для гипотетической социальной сети с узлами людей, ресторан и Город. Эти узлы подключены друг к другу с помощью Friends, отметок "нравится", LivesIn и LocatedIn краев.
+Этот пример создает схему графа, как показано на рис. 1, для гипотетических социальных сетей с узлами "люди", "Ресторан" и "город". Эти узлы связаны друг с другом с помощью друзей, нравится и расположенными на краях.
 
-![человек городов рестораны tables](../../relational-databases/graphs/media/person-cities-restaurants-tables.png "образец базы данных Sql graph")  
-Рис. 1. Образец схемы с ресторан, Город, узлов person и LivesIn, LocatedIn, границы, отметок "нравится".
+![Person-городов-рестораны-таблицы](../../relational-databases/graphs/media/person-cities-restaurants-tables.png "Пример базы данных SQL Graph")  
+Рис. 1. Пример схемы с личными и ресторанными узлами, а также расположенными, различнои краями.
 
 ## <a name="sample-script"></a>Образец скрипта
 
@@ -141,8 +141,8 @@ FROM Person, likes, Restaurant, livesIn, City, locatedIn
 WHERE MATCH (Person-(likes)->Restaurant-(locatedIn)->City AND Person-(livesIn)->City);
 ```
 
-## <a name="clean-up"></a>Очистить  
-Удалить схему и база данных, созданная для примера.
+## <a name="clean-up"></a>Очистка  
+Очистите схему и базу данных, созданные для образца.
 
 ```
 USE graphdemo;
@@ -163,10 +163,10 @@ go
 ```
 
 ## <a name="script-explanation"></a>Описание скрипта  
-Этот скрипт использует новый синтаксис T-SQL для создания таблиц узлов и ребер. Демонстрирует вставку данных в таблицы узлов и ребер, с помощью `INSERT` инструкции и также показано, как использовать `MATCH` предложении для сопоставления по шаблону и навигации.
+Этот сценарий использует новый синтаксис T-SQL для создания таблиц node и ребра. Показывает, как вставлять данные в таблицы node и ребра с `INSERT` помощью инструкции, а также показывает, `MATCH` как использовать предложение для сопоставления шаблонов и навигации.
 
-|Command    |Примечания
+|Get-Help    |Заметки
 |---  |---  |
-|[CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-sql-graph.md)  |Создание узлов или граничную таблицу графа  |
-|[INSERT (Transact-SQL)](../../t-sql/statements/insert-sql-graph.md)  |Вставка в таблицу узлов или граничную таблицу  |
-|[СОВПАДЕНИЕ &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)  |Использовать соответствие, или проходить через graph  |
+|[CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-sql-graph.md)  |Создание таблицы узла или граничной диаграммы  |
+|[INSERT (Transact-SQL)](../../t-sql/statements/insert-sql-graph.md)  |Вставить в таблицу узла или ребра  |
+|[СООТВЕТСТВИЕ &#40;&#41;Transact-SQL](../../t-sql/queries/match-sql-graph.md)  |Использование MATCH для сопоставления шаблона или прохода по графу  |

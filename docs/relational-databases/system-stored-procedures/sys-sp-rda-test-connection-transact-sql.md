@@ -17,10 +17,10 @@ ms.assetid: e2ba050c-d7e3-4f33-8281-c9b525b4edb4
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 69b3b9eae6c292b9501dfbe74b84d7399304a291
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72305153"
 ---
 # <a name="syssp_rda_test_connection-transact-sql"></a>sys. sp_rda_test_connection (Transact-SQL)
@@ -42,23 +42,23 @@ EXECUTE sys.sp_rda_test_connection
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- @database_name = N'*db_name*'  
- Имя базы данных SQL Server с поддержкой растяжения. Этот параметр является необязательным.  
+ @database_name= N '*db_name*'  
+ Имя базы данных SQL Server с поддержкой растяжения. Этот параметр необязателен.  
   
- @server_address = N'*azure_server_fully_qualified_address*'  
+ @server_address= N '*azure_server_fully_qualified_address*'  
  Полный адрес сервера Azure.  
   
--   Если вы указали значение для **\@database_name**, но указанная база данных не поддерживает Stretch, необходимо предоставить значение для **\@server_address**.  
+-   Если вы указали значение для ** \@database_name**, но указанная база данных не поддерживает Stretch, необходимо указать значение для ** \@server_address**.  
   
--   Если вы указали значение для **\@database_name**и для указанной базы данных включено растяжение, вам не нужно указывать значение для **\@server_address**. Если указать значение для **\@server_address**, хранимая процедура пропускает ее и использует существующий сервер Azure, уже связанный с базой данных с поддержкой Stretch.  
+-   Если указать значение для ** \@database_name**и для указанной базы данных включено растяжение, то не нужно указывать значение для ** \@server_address**. Если указать значение для ** \@server_address**, хранимая процедура пропускает ее и использует существующий сервер Azure, уже связанный с базой данных с поддержкой Stretch.  
   
- @azure_username = N "*azure_username*  
+ @azure_username= N '*azure_username*  
  Имя пользователя для удаленного сервера Azure.  
   
- @azure_password = N'*azure_password*'  
+ @azure_password= N '*azure_password*'  
  Пароль удаленного сервера Azure.  
   
- @credential_name = N "*credential_name*"  
+ @credential_name= N '*credential_name*'  
  Вместо указания имени пользователя и пароля можно указать имя учетных данных, хранящихся в базе данных с поддержкой Stretch.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -68,10 +68,10 @@ EXECUTE sys.sp_rda_test_connection
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|link_state|INT|Одно из следующих значений, соответствующее значениям для **link_state_desc**.<br /><br /> -   0<br />-   1<br />-   2<br />-   3<br />-   4|  
-|link_state_desc|varchar (32)|Одно из следующих значений, соответствующих приведенным выше значениям для **link_state**.<br /><br /> -ИСПРАВЕН<br />     Между SQL Server и удаленным сервером Azure используется работоспособность.<br />— ERROR_AZURE_FIREWALL<br />     Брандмауэр Azure препятствует связи между SQL Server и удаленным сервером Azure.<br />— ERROR_NO_CONNECTION<br />     SQL Server не удается установить подключение к удаленному серверу Azure.<br />— ERROR_AUTH_FAILURE<br />     Сбой проверки подлинности препятствует связи между SQL Server и удаленным сервером Azure.<br />-Ошибка<br />     Ошибка, не связанная с проверкой подлинности, проблемой подключения или проблемой брандмауэра, препятствует связи между SQL Server и удаленным сервером Azure.|  
+|link_state|INT|Одно из следующих значений, соответствующее значениям для **link_state_desc**.<br /><br /> -0<br />-1<br />-2<br />-3<br />-4|  
+|link_state_desc| varchar(32)|Одно из следующих значений, соответствующих приведенным выше значениям для **link_state**.<br /><br /> -ИСПРАВЕН<br />     Между SQL Server и удаленным сервером Azure используется работоспособность.<br />— ERROR_AZURE_FIREWALL<br />     Брандмауэр Azure препятствует связи между SQL Server и удаленным сервером Azure.<br />— ERROR_NO_CONNECTION<br />     SQL Server не удается установить подключение к удаленному серверу Azure.<br />— ERROR_AUTH_FAILURE<br />     Сбой проверки подлинности препятствует связи между SQL Server и удаленным сервером Azure.<br />-Ошибка<br />     Ошибка, не связанная с проверкой подлинности, проблемой подключения или проблемой брандмауэра, препятствует связи между SQL Server и удаленным сервером Azure.|  
 |error_number|INT|Номер ошибки. Если ошибка отсутствует, это поле имеет значение NULL.|  
 |error_message|nvarchar(1024)|Сообщение об ошибке. Если ошибка отсутствует, это поле имеет значение NULL.|  
   
@@ -92,7 +92,7 @@ GO
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  
-|2|ERROR_NO_CONNECTION|*номер ошибки, связанной с подключением \<>*|*\<сообщение об ошибке, связанное с подключением >*|  
+|2|ERROR_NO_CONNECTION|*\<номер ошибки, связанной с подключением>*|*\<сообщение об ошибке, связанное с подключением>*|  
   
 ### <a name="check-the-azure-firewall"></a>Проверка брандмауэра Azure  
   
@@ -108,7 +108,7 @@ GO
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  
-|1|ERROR_AZURE_FIREWALL|*\<номер ошибки, связанный с брандмауэром >*|*\<сообщение об ошибке, связанное с брандмауэром >*|  
+|1|ERROR_AZURE_FIREWALL|*\<номер ошибки, связанной с брандмауэром>*|*\<сообщение об ошибке, связанное с брандмауэром>*|  
   
 ### <a name="check-authentication-credentials"></a>Проверка учетных данных проверки подлинности  
   
@@ -124,7 +124,7 @@ GO
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  
-|3|ERROR_AUTH_FAILURE|*\<номер ошибки, связанной с проверкой подлинности >*|*\<сообщения об ошибке, связанной с проверкой подлинности >*|  
+|3|ERROR_AUTH_FAILURE|*\<номер ошибки, связанной с проверкой подлинности>*|*\<сообщение об ошибке, связанное с аутентификацией>*|  
   
 ### <a name="check-the-status-of-the-remote-azure-server"></a>Проверка состояния удаленного сервера Azure  
   

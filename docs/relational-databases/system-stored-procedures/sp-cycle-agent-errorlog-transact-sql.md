@@ -18,13 +18,13 @@ ms.assetid: 8aa96182-60b7-4d7b-b2a7-ccce70378c6e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c95cc2db84bdf059437a45e2719bbc63d6eb6829
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108354"
 ---
-# <a name="spcycleagenterrorlog-transact-sql"></a>sp_cycle_agent_errorlog (Transact-SQL)
+# <a name="sp_cycle_agent_errorlog-transact-sql"></a>sp_cycle_agent_errorlog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Закрывает текущий файл журнала ошибок агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и циклически меняет номера расширений журнала ошибок агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], как при перезапуске системы. Новый журнал ошибок агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] содержит строку, указывающую на создание нового журнала.  
@@ -39,18 +39,18 @@ sp_cycle_agent_errorlog
 ```  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  None  
   
-## <a name="remarks"></a>Примечания  
- Каждый раз [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агент запускается, текущий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] журнала ошибок агента переименовывается в **SQLAgent.1**; **SQLAgent.1** становится **SQLAgent.2**, **SQLAgent.2** становится **SQLAgent.3**, и т. д. **sp_cycle_agent_errorlog** позволяет Зацикливать файлы журналов ошибок без остановки и запуска сервера.  
+## <a name="remarks"></a>Remarks  
+ Каждый раз [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , когда запускается агент, текущий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] журнал ошибок агента переименовывается в объект **. 1**; «В». **1** превращается в «а. **2**» **, то есть** «в». **3**и т. д. **sp_cycle_agent_errorlog** позволяет циклически запускать файлы журнала ошибок без остановки и запуска сервера.  
   
- Эта хранимая процедура должна запускаться из **msdb** базы данных.  
+ Эта хранимая процедура должна запускаться из базы данных **msdb** .  
   
 ## <a name="permissions"></a>Разрешения  
- Разрешения на выполнение **sp_cycle_agent_errorlog** , ограничены членами **sysadmin** предопределенной роли сервера.  
+ Разрешения на выполнение **sp_cycle_agent_errorlog** ограничены членами предопределенной роли сервера **sysadmin** .  
   
 ## <a name="examples"></a>Примеры  
  На следующем примере показано, как производится циклическое переименование журнала ошибок агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -63,7 +63,7 @@ EXEC dbo.sp_cycle_agent_errorlog ;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_cycle_errorlog &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cycle-errorlog-transact-sql.md)  
   
   

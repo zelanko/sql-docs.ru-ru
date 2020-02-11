@@ -27,10 +27,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: eec38b5ecc524f0d3decd02c0832efd1909e8f00
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63127895"
 ---
 # <a name="security-considerations-for-a-sql-server-installation"></a>Вопросы безопасности при установке SQL Server
@@ -122,7 +122,7 @@ ms.locfileid: "63127895"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживает экземпляры отказоустойчивого кластера, где узлы кластера являются контроллерами домена.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Программа установки не может создавать группы безопасности или подготавливать учетные записи служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на контроллере домена, доступном только для чтения. В такой ситуации программа установки завершается ошибкой.  
+-   Программа установки[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не может создавать группы безопасности или подготавливать учетные записи служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на контроллере домена, доступном только для чтения. В такой ситуации программа установки завершается ошибкой.  
   
 ## <a name="during-or-after-installation-of-includessnoversionincludesssnoversion-mdmd"></a>Во время или после установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  После установки вы можете повысить безопасность установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , следуя приведенным ниже рекомендациям относительно учетных записей и режимов проверки подлинности.  
@@ -133,7 +133,7 @@ ms.locfileid: "63127895"
   
 -   Связывайте службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с учетными записями локальных пользователей Windows, имеющих наименьшие права доступа, или учетными записями пользователей домена.  
   
--   Дополнительные сведения см. в разделе [Настройка учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+-   Дополнительные сведения см. в статье [Настройка учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
  **Режим проверки подлинности**  
   
@@ -152,9 +152,9 @@ ms.locfileid: "63127895"
 > [!IMPORTANT]  
 >  Во время установки [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] для группы BUILTIN\Users добавляется имя входа. Благодаря этому все прошедшие проверку подлинности пользователи компьютера получают доступ к экземпляру [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] как члены роли public. Имя входа группы BUILTIN\Users можно удалить, чтобы ограничить доступ к компоненту [!INCLUDE[ssDE](../../includes/ssde-md.md)] только пользователям компьютера, у которых есть отдельные имена входа, или членам других групп Windows с именами входа.  
   
-## <a name="see-also"></a>См. также  
- [Оборудованию и программному обеспечению для установки SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)   
+## <a name="see-also"></a>См. также:  
+ [Требования к оборудованию и программному обеспечению для установки SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)   
  [Сетевые протоколы и библиотеки](../../../2014/sql-server/install/network-protocols-and-network-libraries.md)   
- [Регистрация имени участника-службы для соединений Kerberos](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)  
+ [Регистрация имя участника-службы для соединений Kerberos](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)  
   
   

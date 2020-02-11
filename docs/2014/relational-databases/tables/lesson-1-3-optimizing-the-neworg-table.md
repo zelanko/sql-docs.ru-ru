@@ -13,17 +13,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 952043d5d001fe4fe65e6dd1aa7bb2001290429e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66110065"
 ---
 # <a name="optimizing-the-neworg-table"></a>Оптимизация таблицы NewOrg
-  **NewOrd** таблицы, созданной в [заполнение таблицы существующими иерархическими данными](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) содержит все сведения о сотрудниках и представляет иерархическую структуру с помощью `hierarchyid`тип данных. Эта задача добавляет новые индексы для поддержки поиска по столбцу `hierarchyid`.  
+  Таблица **Таблица NewOrd** , созданная в задаче [Заполнение таблицы с существующими иерархическими данными](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) , содержит все сведения о сотрудниках и представляет иерархическую структуру с помощью `hierarchyid` типа данных. Эта задача добавляет новые индексы для поддержки поиска по столбцу `hierarchyid`.  
   
 ## <a name="clustered-index"></a>Кластеризованный индекс  
- `hierarchyid` Столбца (**OrgNode**) является первичным ключом для **NewOrg** таблицы. После создания таблицы в ней содержался кластеризованный индекс **PK_NewOrg_OrgNode** , обеспечивающий уникальность значений в столбце **OrgNode** . Кластеризованный индекс также поддерживает поиск по таблице по глубине.  
+ `hierarchyid` Столбец (**OrgNode**) является первичным ключом для таблицы **NewOrg** . После создания таблицы в ней содержался кластеризованный индекс **PK_NewOrg_OrgNode** , обеспечивающий уникальность значений в столбце **OrgNode** . Кластеризованный индекс также поддерживает поиск по таблице по глубине.  
   
 ## <a name="nonclustered-index"></a>Некластеризованный индекс  
  Во время этого шага создаются два некластеризованных индекса для поддержки работы обычных видов поиска.  
@@ -71,7 +71,7 @@ ms.locfileid: "66110065"
   
      [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-     Индекс преимущественно в глубину: Записи сотрудников хранятся рядом с записью их менеджера.  
+     Индекс преимущественно в глубину: записи сотрудников хранятся рядом с записью их менеджера.  
   
      `LogicalNode OrgNode    H_Level EmployeeID LoginID`  
   
@@ -95,7 +95,7 @@ ms.locfileid: "66110065"
   
      `/2/2/       0x6B40       2         8      norint`  
   
-     **EmployeeID**-индекс с приоритетом: Строки хранятся в **EmployeeID** последовательности.  
+     **КодСотрудника**— первый индекс: строки хранятся в последовательности **EmployeeID** .  
   
      `LogicalNode OrgNode    H_Level EmployeeID LoginID`  
   
@@ -159,6 +159,6 @@ ms.locfileid: "66110065"
     ```  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
- [Сводка. Преобразование таблицы в иерархическую структуру](lesson-1-4-summary-converting-a-table-to-a-hierarchical-structure.md)  
+ [Сводка. преобразование таблицы в иерархическую структуру](lesson-1-4-summary-converting-a-table-to-a-hierarchical-structure.md)  
   
   

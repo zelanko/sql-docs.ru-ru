@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: df9d9e51846e286c67a4773823207524755d15dc
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72278214"
 ---
 # <a name="rename-logins-matching-fixed-server-role-names"></a>Переименование имен входа, которые совпадают с именами предопределенной роли сервера
@@ -28,7 +28,7 @@ ms.locfileid: "72278214"
 ## <a name="component"></a>Компонент  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Description  
  Следующие имена предопределенных ролей сервера зарезервированы и не могут быть использованы как пользовательские имена входа.  
   
 -   **sysadmin**  
@@ -37,11 +37,11 @@ ms.locfileid: "72278214"
   
 -   **setupadmin**  
   
--   **securityadmin**  
+-   **администратора**  
   
 -   **processadmin**  
   
--   **dbcreator**  
+-   **создателя**  
   
 -   **diskadmin**  
   
@@ -60,10 +60,10 @@ ms.locfileid: "72278214"
   
 2.  Удалите имена входа.  
   
-3.  Для создания новых имен входа используйте системную процедуру **sp_addlogin** . Укажите идентификатор безопасности, возвращенный на шаге 1 в параметре **\@ИД безопасности** для каждого соответствующего имени входа.  
+3.  Для создания новых имен входа используйте системную процедуру **sp_addlogin** . Укажите идентификатор безопасности, возвращенный на шаге 1 в параметре ** \@SID** для каждого соответствующего имени входа.  
   
-## <a name="see-also"></a>См. также статью  
- [Проблемы ядро СУБД обновления](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Новый помощник по &#91;обновлению SQL Server 2014&#93;](sql-server-2014-upgrade-advisor.md)  
+## <a name="see-also"></a>См. также:  
+ [Проблемы обновления ядро СУБД](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [Советник по переходу SQL Server 2014 &#91;New&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

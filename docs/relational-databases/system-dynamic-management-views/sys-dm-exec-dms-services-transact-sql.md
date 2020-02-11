@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 11e353af23c2331cd8f2bef5b439c967512e7323
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73532927"
 ---
 # <a name="sysdm_exec_dms_services-transact-sql"></a>sys. dm_exec_dms_services (Transact-SQL)
@@ -34,16 +34,16 @@ ms.locfileid: "73532927"
 
   Содержит сведения обо всех службах DMS, работающих на вычисленных узлах Polybase. В нем отображается одна строка для каждого экземпляра службы.  
   
-|Column Name|Тип данных|Описание|Диапазон|  
+|Имя столбца|Тип данных|Description|Диапазонный индекс|  
 |-----------------|---------------|-----------------|-----------|  
 |dms_core_id|`int`|Уникальный числовой идентификатор, связанный с ядром DMS. Ключ для этого представления.|Уникальный идентификатор.|  
-|compute_node_id|`int`|Идентификатор узла, на котором запущена эта служба DMS|См. *compute_node_id* в разделе [sys &#40;. dm_exec_compute_nodes Transact&#41;-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
+|compute_node_id|`int`|Идентификатор узла, на котором запущена эта служба DMS|См. раздел *compute_node_id* в [sys. Dm_exec_compute_nodes &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
 |status|`nvarchar(32)`|Текущее состояние службы DMS||
 |compute_pool_id|`int`|Уникальный идентификатор пула.|
 
-## <a name="see-also"></a>См. также статью  
- [Устранение неполадок в polybase с помощью динамических административных представлений](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+## <a name="see-also"></a>См. также:  
+ [Устранение неполадок в Polybase с помощью динамических административных представлений](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Динамические административные представления &#40;, связанные с базами данных TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [Динамические административные представления, связанные с базами данных &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

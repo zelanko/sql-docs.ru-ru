@@ -11,13 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 0bb88370db889eac44e3ce71ad498779e55e4d7d
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952055"
 ---
 # <a name="powerpivot-for-sharepoint-2010-installation"></a>Установка PowerPivot для SharePoint 2010
+  
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] представляет собой набор серверных компонентов, которые обеспечивают обработку запросов и административное управление книгами [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], публикуемыми в SharePoint. Набор содержит ядро служб Analysis Services и системную службу [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
 > [!NOTE]  
@@ -25,7 +26,7 @@ ms.locfileid: "71952055"
 >   
 >  -   Раздел "SQL Server 2012 с пакетом обновления 1 (SP1)" в статье [Общие сведения об установке SQL Server обслуживания](../../../2014/sql-server/install/overview-of-sql-server-servicing-installation.md).  
   
- Службы Analysis Services обеспечивают серверную обработку для книг Excel, которые содержат данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Системная служба [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] работает параллельно со службами Analysis Services, обеспечивая дополнительную интеграцию с SharePoint, балансировку нагрузки и возможности управления соединениями. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] расширяет службы Excel, сорабатывая возможности обработки больших объемов данных с помощью служб подготовки данных, предоставляемых Excel.  
+ Службы Analysis Services обеспечивают серверную обработку для книг Excel, которые содержат данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Системная служба [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] работает параллельно со службами Analysis Services, обеспечивая дополнительную интеграцию с SharePoint, балансировку нагрузки и возможности управления соединениями. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]расширяет службы Excel, применяя возможности обработки больших объемов данных с помощью служб подготовки данных, предоставляемых Excel.  
   
  Для установки служб [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]воспользуйтесь установочным носителем [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
@@ -46,9 +47,9 @@ ms.locfileid: "71952055"
   
  [Восстановление PowerPivot для SharePoint](../../../2014/sql-server/install/repair-powerpivot-for-sharepoint.md)  
   
- [PowerPivot для SharePoint начальной &#40;конфигурации&#41;](../../../2014/sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)  
+ [PowerPivot для SharePoint &#40;начальной конфигурации&#41;](../../../2014/sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
  [Настройка и администрирование сервера PowerPivot в центре администрирования](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration)  
   
   

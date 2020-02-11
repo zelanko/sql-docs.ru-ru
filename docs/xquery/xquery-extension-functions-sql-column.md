@@ -1,5 +1,5 @@
 ---
-title: 'SQL: column() (XQuery) | Документация Майкрософт'
+title: 'Функция SQL: column () (XQuery) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,18 +16,18 @@ ms.assetid: e8f67bdf-b489-49a9-9d0f-2069c1750467
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: df46abb8efdd5761797a599cf5a8cdebe02e5158
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946012"
 ---
 # <a name="xquery-extension-functions---sqlcolumn"></a>Функции расширения XQuery — sql:column()
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Как описано в разделе [Привязка реляционных данных внутри XML](../t-sql/xml/binding-relational-data-inside-xml-data.md), можно использовать **SQL: column()** можно использовать функцию [методов типа данных XML](../t-sql/xml/xml-data-type-methods.md) для получения реляционного значения внутри XQuery.  
+  Как описано в разделе [Привязка реляционных данных в XML](../t-sql/xml/binding-relational-data-inside-xml-data.md), можно использовать функцию **SQL: column (()** при использовании [методов типа данных XML](../t-sql/xml/xml-data-type-methods.md) для предоставления реляционного значения в XQuery.  
   
- Например [метода query() (тип данных XML)](../t-sql/xml/query-method-xml-data-type.md) используется для указания запроса к экземпляру XML, который хранится в переменной или столбце типа **xml** типа. Кроме того, иногда для совмещения реляционных данных с XML-данными бывает необходимо, чтобы запрос обрабатывал значения еще одного столбца, отличного от XML. Чтобы сделать это, используйте **SQL: column()** функции.  
+ Например, [метод query () (тип данных XML)](../t-sql/xml/query-method-xml-data-type.md) используется для указания запроса к экземпляру XML, который хранится в переменной или столбце типа **XML** . Кроме того, иногда для совмещения реляционных данных с XML-данными бывает необходимо, чтобы запрос обрабатывал значения еще одного столбца, отличного от XML. Для этого используется функция **SQL: column ()** .  
   
  Значение SQL будет сопоставлено с соответствующим значением XQuery, а в качестве типа этого значения будет присвоен базовый тип XQuery, эквивалентный соответствующему типу SQL.  
   
@@ -38,12 +38,12 @@ ms.locfileid: "67946012"
 sql:column("columnName")  
 ```  
   
-## <a name="remarks"></a>Примечания  
- Обратите внимание, что ссылка на столбец, указанный в **SQL: column()** функции внутри XQuery ссылается на столбец в строке, которая обрабатывается.  
+## <a name="remarks"></a>Remarks  
+ Обратите внимание, что ссылка на столбец, указанный в функции **SQL: column ()** в запросе XQuery, ссылается на столбец в строке, которая обрабатывается.  
   
- В [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], могут ссылаться только на **xml** инструкция insert экземпляр в контексте исходного выражения XML DML; в противном случае — значение не может ссылаться на столбцы, которые относятся к типу **xml** или среды CLR определяемый пользователем тип.  
+ В [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]можно ссылаться только на экземпляр **XML** в контексте ИСХОДНОГО выражения инструкции INSERT XML-DML. в противном случае нельзя ссылаться на столбцы, имеющие тип **XML** или определяемый пользователем тип данных CLR.  
   
- **SQL: column()** функция не поддерживается в операции СОЕДИНЕНИЯ. Вместо этого можно использовать операцию APPLY.  
+ Функция **SQL: column ()** не поддерживается в операциях JOIN. Вместо этого можно использовать операцию APPLY.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -59,11 +59,11 @@ sql:column("columnName")
   
  Обратите внимание на следующие особенности созданного кода XML.  
   
--   **ProductID**, **ProductName**, и **ProductPrice** значения атрибутов извлекаются из **продукта** таблицы.  
+-   Значения атрибутов **ProductID**, **ProductName**и **ProductPrice** получены из таблицы **Product** .  
   
--   **ProductModelID** значение атрибута извлекается из **ProductModel** таблицы.  
+-   Значение атрибута **ProductModelID** извлекается из таблицы **ProductModel** .  
   
--   Чтобы сделать запрос более интересным, **ProductModelName** атрибута значение получается из **CatalogDescription** столбец **тип xml**. Поскольку данные каталога модели продукта XML хранятся не для всех моделей продуктов, с помощью инструкции `if` получаются только существующие значения.  
+-   Чтобы сделать запрос более интересным, значение атрибута **ProductModelName** получается из столбца **CatalogDescription** **типа XML**. Поскольку данные каталога модели продукта XML хранятся не для всех моделей продуктов, с помощью инструкции `if` получаются только существующие значения.  
   
     ```sql
     SELECT P.ProductID, CatalogDescription.query('  
@@ -90,9 +90,9 @@ sql:column("columnName")
   
 -   Поскольку значения получаются из двух разных таблиц, предложение FROM задает пару таблиц. Условие в предложении WHERE фильтрует результаты и получает только те продукты, у которых в каталоге есть описание моделей.  
   
--   **Пространства имен** ключевое слово в [прологе XQuery](../xquery/modules-and-prologs-xquery-prolog.md) определяет префикс пространства имен XML, «pd», который используется в теле запроса. Обратите внимание, что эти псевдонимы таблиц, «P» и «PM», задаются в предложении FROM самого запроса.  
+-   Ключевое слово **Namespace** в [прологе XQuery](../xquery/modules-and-prologs-xquery-prolog.md) определяет префикс пространства имен XML "PD", который используется в теле запроса. Обратите внимание, что эти псевдонимы таблиц, «P» и «PM», задаются в предложении FROM самого запроса.  
   
--   **SQL: column()** функция используется для добавления Реляционного значения внутри XML.  
+-   Функция **SQL: column ()** используется для переноса в XML значений, отличных от XML.  
   
  Частичный результат:  
   
@@ -105,7 +105,7 @@ ProductID               Result
 ...  
 ```  
   
- Следующий запрос создает XML, содержащий сведения о продукте. К этим сведениям относятся ProductID, ProductName, ProductPrice и (если значение доступно) ProductModelName для всех продуктов, относящихся к конкретной модели, ProductModelID=19. Затем присваивается XML @x переменной **xml** типа.  
+ Следующий запрос создает XML, содержащий сведения о продукте. К этим сведениям относятся ProductID, ProductName, ProductPrice и (если значение доступно) ProductModelName для всех продуктов, относящихся к конкретной модели, ProductModelID=19. Затем XML присваивается @x переменной типа **XML** .  
   
 ```sql
 declare @x xml  
@@ -129,12 +129,12 @@ And P.ProductModelID = 19
 select @x  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Функции расширения XQuery для SQL Server](https://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
- [Сравнение типизированного и нетипизированного XML](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
- [Данные XML (SQL Server)](../relational-databases/xml/xml-data-sql-server.md)   
+## <a name="see-also"></a>См. также:  
+ [SQL Server функции расширения XQuery](https://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
+ [Сравнение типизированного XML с нетипизированным XML](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
+ [SQL Server &#40;XML-данных&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Создание экземпляров XML-данных](../relational-databases/xml/create-instances-of-xml-data.md)   
- [методов типа данных xml](../t-sql/xml/xml-data-type-methods.md)   
- [Язык модификации XML-данных (XML DML)](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
+ [Методы типа данных XML](../t-sql/xml/xml-data-type-methods.md)   
+ [Язык изменения XML-данных &#40;XML DML&#41;](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   
