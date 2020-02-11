@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eaefd6e7ae4748505db9bd84601de6166f9d5f98
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830130"
 ---
 # <a name="transfer-error-messages-task"></a>Задача «Передача сообщений об ошибках»
@@ -65,9 +65,9 @@ ms.locfileid: "62830130"
   
  Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующих разделах:  
   
--   [Редактор задачи "Передача сообщений об ошибках" (страница "Общие")](../general-page-of-integration-services-designers-options.md)  
+-   [Редактор задачи "перенаправление сообщений об ошибках" &#40;общие&#41;страницы](../general-page-of-integration-services-designers-options.md)  
   
--   [Редактор задачи "Передача сообщений об ошибках" (страница "Сообщения")](../transfer-error-messages-task-editor-messages-page.md)  
+-   [Редактор задачи "перенаправление сообщений об ошибках" &#40;сообщения&#41;](../transfer-error-messages-task-editor-messages-page.md)  
   
 -   [Страница «Выражения»](../expressions/expressions-page.md)  
   
@@ -80,8 +80,8 @@ ms.locfileid: "62830130"
   
 -   [Задание свойств задач или контейнеров](../set-the-properties-of-a-task-or-container.md)  
   
-## <a name="see-also"></a>См. также  
- [Задачи служб Integration Services](integration-services-tasks.md)   
+## <a name="see-also"></a>См. также:  
+ [Задачи Integration Services](integration-services-tasks.md)   
  [Поток управления](control-flow.md)  
   
   

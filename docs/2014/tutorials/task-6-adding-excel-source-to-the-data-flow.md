@@ -1,5 +1,5 @@
 ---
-title: Задача 6. Добавление источника Excel в поток данных | Документация Майкрософт
+title: Задача 6. Добавление источника Excel в поток данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 92a4c3e650ce375a1e80079bbad83c5ab2b9bcd9
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68495284"
 ---
-# <a name="task-6-adding-excel-source-to-the-data-flow"></a>Задача 6. Добавление в поток данных источника Excel
+# <a name="task-6-adding-excel-source-to-the-data-flow"></a>Задача 6. Добавление источника Excel в поток данных
   В этой задаче источник Excel будет добавлен в поток данных, что позволит считывать данные поставщиков из исходного файла Excel. Источник Excel извлекает данные из листов или диапазонов в книгах Microsoft Excel. Дополнительные сведения см. в разделе [Источник Excel](../integration-services/data-flow/excel-source.md) .  
   
 1.  Перетащите **Источник Excel** из области **Другие источники** на **панели элементов служб SSIS** на вкладке **Поток данных** .  
@@ -32,22 +32,22 @@ ms.locfileid: "68495284"
   
 6.  В диалоговом окне **Диспетчер соединений Excel** выберите **Обзор**и выберите файл **Suppliers.xls** в папке **Учебник EIM** . Убедитесь, что выбрано значение **Microsoft Excel 97-2003** в поле **Версия Excel** и нажмите кнопку **ОК**.  
   
-     ![Диалоговое окно «Диспетчер соединений с Excel»](../../2014/tutorials/media/et-addingexcelsourcetothedataflow-01.jpg "Диалоговое окно «Диспетчер соединений с Excel»")  
+     ![Диалоговое окно «Диспетчер соединений» Excel](../../2014/tutorials/media/et-addingexcelsourcetothedataflow-01.jpg "Диалоговое окно «Диспетчер соединений» Excel")  
   
 7.  В диалоговом окне **Редактор источника «Excel»** выберите **IncomingSuppliers$** в раскрывающемся списке **Имя листа Excel** .  
   
-     ![Имя листа Excel-входящие поставщики $](../../2014/tutorials/media/et-addingexcelsourcetothedataflow-02.jpg "Имя листа Excel-входящие поставщики $")  
+     ![Имя листа Excel — Incoming Suppliers$](../../2014/tutorials/media/et-addingexcelsourcetothedataflow-02.jpg "Имя листа Excel — Incoming Suppliers$")  
   
 8.  Нажмите кнопку **Просмотр** , чтобы просмотреть данные в файле Excel.  
   
-9. Чтобы закрыть диалоговое окно, нажмите кнопку **ОК** .  
+9. Нажмите кнопку **ОК**, чтобы закрыть диалоговое окно.  
   
 10. Перетащите преобразование **Очистка DQS** из области **Другие преобразования** на **панели элементов служб SSIS** на вкладку **Поток данных** в источнике **Считывание данных о поставщиках из файла Excel**. Преобразование «Очистка DQS» использует службы Data Quality Services (DQS) для исправления данных путем применения утвержденных правил в базе знаний. Это преобразование во время выполнения создает проект очистки DQS на сервере служб DQS. Дополнительные сведения см. в разделе [Преобразование «Очистка DQS»](https://msdn.microsoft.com/library/ee677619.aspx) .  
   
-## <a name="next-step"></a>Следующий шаг
+## <a name="next-step"></a>Дальнейшее действие
 
 [Задача 7. Добавление преобразования «Очистка DQS» в поток данных](task-7-adding-dqs-cleansing-transform-to-the-data-flow.md)  
 
-### <a name="see-also"></a>См. также
+### <a name="see-also"></a>См. также:
 
 [Поток данных](../integration-services/data-flow/data-flow.md)  

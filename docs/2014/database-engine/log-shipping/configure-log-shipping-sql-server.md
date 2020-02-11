@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f7533eb253ba32dd8ef2d57c3182096b36a6e47b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774588"
 ---
 # <a name="configure-log-shipping-sql-server"></a>Настройка доставки журналов (SQL Server)
@@ -28,11 +28,11 @@ ms.locfileid: "62774588"
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Предварительные требования](#Prerequisites)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Настройка доставки журналов с помощью:**  
   
@@ -78,7 +78,7 @@ ms.locfileid: "62774588"
   
 8.  Обратите внимание на расписание в поле **Расписание** в разделе **Задание резервного копирования**. Если нужно изменить расписание, нажмите кнопку **Расписание** и задайте расписание для агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по своему усмотрению.  
   
-9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] поддерживает [сжатие резервных копий](../../relational-databases/backup-restore/backup-compression-sql-server.md). При создании конфигурации доставки журналов можно управлять поведением сжатия резервных копий журналов, выбрав один из следующих параметров. **Использовать параметр сервера по умолчанию**, **Сжимать резервные копии** и **Не сжимать резервные копии**. Дополнительные сведения см. в статье [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md).  
+9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] поддерживает [сжатие резервных копий](../../relational-databases/backup-restore/backup-compression-sql-server.md). При создании конфигурации доставки журналов можно управлять поведением сжатия резервных копий журналов, выбрав один из следующих параметров: **Использовать параметр сервера по умолчанию**, **Сжимать резервные копии**или **Не сжимать резервные копии**. Дополнительные сведения см. в статье [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md).  
   
 10. Нажмите кнопку **ОК**.  
   
@@ -138,7 +138,7 @@ ms.locfileid: "62774588"
   
 5.  Включите задание копирования на сервере-источнике.  
   
-6.  На сервере-получателе выполните процедуру [sp_add_log_shipping_secondary_primary](/sql/relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-primary-transact-sql) для обеспечения подробных характеристик сервера-источника и базы данных. Данная хранимая процедура возвращает идентификатор получателя, а также идентификаторы заданий копирования и восстановления.  
+6.  На сервере-получателе выполните процедуру [sp_add_log_shipping_secondary_primary](/sql/relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-primary-transact-sql) , предоставив подробные сведения о сервере-источнике и базе данных. Данная хранимая процедура возвращает идентификатор получателя, а также идентификаторы заданий копирования и восстановления.  
   
 7.  На сервере-получателе выполните процедуру [sp_add_jobschedule](/sql/relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql) для настройки расписания заданий копирования и восстановления.  
   
@@ -152,20 +152,20 @@ ms.locfileid: "62774588"
   
 -   [Обновление доставки журналов до SQL Server 2014 &#40;Transact-SQL&#41;](upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   
--   [Добавление базы данных-получателя в конфигурацию доставки журналов (SQL Server)](add-a-secondary-database-to-a-log-shipping-configuration-sql-server.md)  
+-   [Добавьте базу данных-получатель в конфигурацию доставки журналов &#40;SQL Server&#41;](add-a-secondary-database-to-a-log-shipping-configuration-sql-server.md)  
   
--   [Удаление базы данных-получателя из конфигурации доставки журналов (SQL Server)](remove-a-secondary-database-from-a-log-shipping-configuration-sql-server.md)  
+-   [Удаление базы данных-получателя из конфигурации доставки журналов &#40;SQL Server&#41;](remove-a-secondary-database-from-a-log-shipping-configuration-sql-server.md)  
   
--   [Удаление доставки журналов (SQL Server)](remove-log-shipping-sql-server.md)  
+-   [Удалить SQL Server &#40;доставки журналов&#41;](remove-log-shipping-sql-server.md)  
   
--   [Просмотр отчета о доставке журналов (среда SQL Server Management Studio)](view-the-log-shipping-report-sql-server-management-studio.md)  
+-   [Просмотрите &#40;SQL Server Management Studio отчета о доставке журналов&#41;](view-the-log-shipping-report-sql-server-management-studio.md)  
   
--   [Наблюдение за доставкой журналов (Transact-SQL)](monitor-log-shipping-transact-sql.md)  
+-   [Мониторинг доставки журналов &#40;&#41;Transact-SQL](monitor-log-shipping-transact-sql.md)  
   
--   [Переход на вторичный сервер доставки журналов (SQL Server)](fail-over-to-a-log-shipping-secondary-sql-server.md)  
+-   [Отработка отказа на SQL Server вторичного &#40;доставки журналов&#41;](fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
-## <a name="see-also"></a>См. также  
- [Сведения о доставке журналов (SQL Server)](about-log-shipping-sql-server.md)   
- [Таблицы доставки журналов и хранимые процедуры](log-shipping-tables-and-stored-procedures.md)  
+## <a name="see-also"></a>См. также:  
+ [SQL Server &#40;доставки журналов&#41;](about-log-shipping-sql-server.md)   
+ [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)  
   
   

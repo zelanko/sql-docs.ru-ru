@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a8306fa98194fbf314796b199fea98ddd53cb1fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769430"
 ---
 # <a name="ceiling-ssis-expression"></a>CEILING (выражение служб SSIS)
@@ -37,7 +37,7 @@ CEILING(numeric_expression)
 ## <a name="result-types"></a>Типы результата  
  Тип данных числового выражения, переданного функции.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Функция CEILING возвращает NULL, если аргумент имеет значение NULL.  
   
 ## <a name="expression-examples"></a>Примеры выражений  
@@ -61,7 +61,7 @@ CEILING(0.00)
   
  Возвращает значение 0,00  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [FLOOR (выражение служб SSIS)](floor-ssis-expression.md)   
  [Функции (выражение служб SSIS)](functions-ssis-expression.md)  
   

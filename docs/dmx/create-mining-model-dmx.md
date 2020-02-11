@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: e7215f50705b593130a69cfe076f0878b0ac03d6
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68889079"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (расширения интеллектуального анализа данных)
@@ -22,7 +22,7 @@ ms.locfileid: "68889079"
   
  Имя структуры интеллектуального анализа данных формируется путем добавления строки «_structure» к имени модели, что гарантирует несовпадение имени структуры и модели.  
   
- Чтобы создать модель интеллектуального анализа данных для существующей структуры интеллектуального анализа данных, используйте инструкцию [ALTER MINING STRUCTURE &#40;&#41; DMX](../dmx/alter-mining-structure-dmx.md) .  
+ Чтобы создать модель интеллектуального анализа данных для существующей структуры интеллектуального анализа данных, используйте инструкцию [ALTER MINING structure &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -47,7 +47,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  Имя алгоритма интеллектуального анализа данных, определенное текущим поставщиком.  
   
 > [!NOTE]  
->  Список алгоритмов, поддерживаемых текущим поставщиком, можно получить с помощью [набора строк DMSCHEMA_MINING_SERVICES](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset). Сведения о алгоритмах [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], поддерживаемых в текущем экземпляре, см. в разделе [Свойства интеллектуального анализа данных](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
+>  Список алгоритмов, поддерживаемых текущим поставщиком, можно получить с помощью [DMSCHEMA_MINING_SERVICES набора строк](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset). Сведения о алгоритмах [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], поддерживаемых в текущем экземпляре, см. в разделе [Свойства интеллектуального анализа данных](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
   
  *список параметров*  
  Необязательный параметр. Список параметров, определенных поставщиком для алгоритма и разделенный запятыми.  
@@ -74,9 +74,9 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
 -   Тип содержимого (обязательно)  
   
--   Прогнозирующий запрос, указывающий алгоритму для прогнозирования этого столбца, обозначенное предложением **Predict** или **PREDICT_ONLY**  
+-   Прогнозирующий запрос, указывающий алгоритму для прогнозирования этого столбца, определяемый предложением **Predict** или **PREDICT_ONLY**  
   
--   Связь с столбцом атрибутов (является обязательной только при применении), обозначенной предложением RELATED **to**  
+-   Связь с столбцом атрибутов (является обязательной только при применении), обозначенной предложением **related to**  
   
  Чтобы определить один столбец, используйте следующий синтаксис для списка определений столбцов:  
   
@@ -94,22 +94,22 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  Список типов данных, типов содержимого, распределений столбцов и флагов моделирования, используемых при определении столбца, см. в следующих разделах.  
   
--   [Типы данных (интеллектуальный анализ данных)](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)  
+-   [Типы данных &#40;&#41;интеллектуального анализа данных](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)  
   
--   [Типы содержимого (интеллектуальный анализ данных)](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)  
+-   [Типы содержимого &#40;&#41;интеллектуального анализа данных](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)  
   
--   [Распределения столбцов (интеллектуальный анализ данных)](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)  
+-   [Распределения столбцов &#40;интеллектуального анализа данных&#41;](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)  
   
--   [Флаги моделирования (интеллектуальный анализ данных)](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
+-   [Флаги моделирования &#40;&#41;интеллектуального анализа данных](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
   
- К инструкции можно добавить предложение, описывающее связь между двумя столбцами. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]поддерживает использование следующего \<предложения Column Relationship >.  
+ К инструкции можно добавить предложение, описывающее связь между двумя столбцами. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]поддерживает использование следующего \<предложения Column Relationship>.  
   
  **СВЯЗАНО**  
  Эта форма указывает на иерархию значений. Назначением столбца RELATED TO может быть ключевой столбец вложенной таблицы, столбец с дискретными значениями из строки вариантов или какой-либо другой столбец с предложением RELATED TO, указывающим на более глубокий уровень иерархии.  
   
  Для описания использования прогнозируемого столбца используйте прогнозирующее предложение. В следующей таблице приводится описание двух возможных предложений.  
   
-|\<предложение PREDICTION >|Описание|  
+|\<предложение PREDICTION>|Description|  
 |---------------------------|-----------------|  
 |**PREDICT**|Этот столбец может быть спрогнозирован моделью и может включаться во входные варианты для прогноза значений других прогнозируемых столбцов.|  
 |**PREDICT_ONLY**|Данный столбец может быть спрогнозирован с помощью модели, однако его нельзя использовать во входных вариантах для вычисления значений других прогнозируемых столбцов.|  
@@ -121,9 +121,9 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 [<parameter> = <value>, <parameter> = <value>,...]  
 ```  
   
- Список параметров, связанных с каждым алгоритмом, см. в разделе [алгоритмы &#40;интеллектуального анализа данных Analysis Services —&#41;интеллектуальный анализ данных](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining).  
+ Список параметров, связанных с каждым алгоритмом, см. в разделе [алгоритмы интеллектуального анализа данных &#40;Analysis Services-&#41;интеллектуального анализа данных ](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining).  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Если необходимо создать модель со встроенным набором проверочных данных, следует после ALTER MINING STRUCTURE использовать инструкцию CREATE MINING STRUCTURE. При этом не все типы моделей поддерживают набор контрольных данных. Дополнительные сведения см. в статье [CREATE MINING STRUCTURE (DMX)](../dmx/create-mining-structure-dmx.md).  
   
  Пошаговое руководство по созданию модели интеллектуального анализа данных с помощью инструкции КРЕАТЕМОДЕЛ см. в разделе Учебник по DMX-анализу [временных рядов](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  
@@ -143,7 +143,7 @@ USING Microsoft_Naive_Bayes
 ```  
   
 ## <a name="association-model-example"></a>Пример модели взаимосвязей  
- В следующем примере используется [!INCLUDE[msCoName](../includes/msconame-md.md)] алгоритм взаимосвязей для создания новой модели интеллектуального анализа данных. Преимуществом инструкции является возможность вложения таблицы внутри определения модели с помощью табличного столбца. Модель изменяется с помощью параметров *MINIMUM_PROBABILITY* и *MINIMUM_SUPPORT* .  
+ В следующем примере используется алгоритм [!INCLUDE[msCoName](../includes/msconame-md.md)] взаимосвязей для создания новой модели интеллектуального анализа данных. Преимуществом инструкции является возможность вложения таблицы внутри определения модели с помощью табличного столбца. Модель изменяется с помощью параметров *MINIMUM_PROBABILITY* и *MINIMUM_SUPPORT* .  
   
 ```  
 CREATE MINING MODEL MyAssociationModel (  
@@ -171,10 +171,10 @@ USING Microsoft_Sequence_Clustering
 ```  
   
 ## <a name="time-series-example"></a>Пример алгоритма временных рядов  
- В следующем примере алгоритм временных [!INCLUDE[msCoName](../includes/msconame-md.md)] рядов используется для создания новой модели интеллектуального анализа данных с помощью алгоритма ARTxp. ReportingDate – это ключевой столбец для временного ряда, а ModelRegion – ключевой столбец для ряда данных. В этом примере предполагается, что периодичность данных составляет 12 месяцев. Таким образом, параметр *PERIODICITY_HINT* имеет значение 12.  
+ В следующем примере алгоритм временных [!INCLUDE[msCoName](../includes/msconame-md.md)] рядов используется для создания новой модели интеллектуального анализа данных с помощью алгоритма ARTxp. ReportingDate – это ключевой столбец для временного ряда, а ModelRegion – ключевой столбец для ряда данных. В этом примере предполагается, что периодичность данных составляет 12 месяцев. Таким образом, параметру *PERIODICITY_HINT* присваивается значение 12.  
   
 > [!NOTE]  
->  Параметр *PERIODICITY_HINT* необходимо указывать с помощью фигурных скобок. Более того, поскольку значение является строкой, оно должно быть заключено в одинарные кавычки:\<"{числовое значение >}".  
+>  Параметр *PERIODICITY_HINT* необходимо указать с помощью фигурных скобок. Более того, поскольку значение является строкой, оно должно быть заключено в одинарные кавычки:\<"{числовое значение>}".  
   
 ```  
 CREATE MINING MODEL SalesForecast (  
@@ -186,9 +186,9 @@ CREATE MINING MODEL SalesForecast (
 USING Microsoft_Time_Series (PERIODICITY_HINT = '{12}', FORECAST_METHOD = 'ARTXP')  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Расширения &#40;интеллектуального анализа&#41; данных инструкции расширений интеллектуального анализа данных](../dmx/dmx-statements-data-definition.md)   
- [Расширения &#40;интеллектуального анализа&#41; данных инструкции DMX-операций с данными](../dmx/dmx-statements-data-manipulation.md)   
- [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../dmx/data-mining-extensions-dmx-statements.md)  
+## <a name="see-also"></a>См. также:  
+ [Расширения интеллектуального анализа данных &#40;инструкции расширений интеллектуального анализа данных&#41; DDL](../dmx/dmx-statements-data-definition.md)   
+ [Расширения интеллектуального анализа данных &#40;инструкции расширений интеллектуального анализа данных&#41;](../dmx/dmx-statements-data-manipulation.md)   
+ [Расширения интеллектуального анализа данных &#40;Справочник по инструкции DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

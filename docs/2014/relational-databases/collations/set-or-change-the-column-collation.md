@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4a16794bb2cd61829058d9fac7be11438f563d44
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62918974"
 ---
 # <a name="set-or-change-the-column-collation"></a>Задание или изменение параметров сортировки столбца
@@ -38,7 +38,7 @@ ms.locfileid: "62918974"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Дополнительные сведения см. в разделе [Collation and Unicode Support](collation-and-unicode-support.md).  
   
--   С помощью `Column.Collation` свойство в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] управляющих объектов (SMO).  
+-   Использование `Column.Collation` свойства в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] управляющих объектах (SMO).  
   
  Невозможно изменить параметры сортировки столбца, на который ссылаются:  
   
@@ -55,7 +55,8 @@ ms.locfileid: "62918974"
  При работе с базой данных **tempdb**предложение [COLLATE](/sql/t-sql/statements/collations) содержит параметр *database_default* , указывающий, что столбец, находящийся во временной таблице, использует параметры сортировки по умолчанию для текущей базы данных пользователя для соединения, а не параметра сортировки базы данных **tempdb**.  
   
 ## <a name="collations-and-text-columns"></a>Параметры сортировки и столбцы типа text  
- В столбце типа `text` можно добавлять или обновлять значения, имеющие параметры сортировки, отличные от кодовой страницы параметров сортировки по умолчанию для базы данных. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] неявно преобразует значения в параметры сортировки столбца.  
+ В столбце типа `text` можно добавлять или обновлять значения, имеющие параметры сортировки, отличные от кодовой страницы параметров сортировки по умолчанию для базы данных. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] неявно преобразует значения в параметры сортировки столбца.  
   
 ## <a name="collations-and-tempdb"></a>Параметры сортировки и база данных tempdb  
  База данных **tempdb** создается каждый раз при запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и имеет те же параметры сортировки по умолчанию, что и база данных **model** . Обычно они совпадают с параметрами сортировки экземпляра. Если при создании пользовательской базы данных указываются параметры сортировки, отличные от параметров сортировки базы данных **model**, то параметры сортировки пользовательской базы данных будут отличаться от базы данных **tempdb**. Все временные хранимые процедуры и временные таблицы создаются и сохраняются в базе данных **tempdb**. Это означает, что неявно столбцы временных таблиц и все константы, переменные и параметры хранимых процедур имеют параметры сортировки, отличные от сравниваемых объектов, создаваемых в постоянных таблицах и хранимых процедурах.  
@@ -87,7 +88,7 @@ GO
 SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.Col1;  
 ```  
   
- Так как **tempdb** использует параметры сортировки сервера по умолчанию и `TestPermTab.Col1` использует другие параметры сортировки, SQL Server возвращает эту ошибку: «Не удалось разрешить конфликт параметров сортировки между «Latin1_General_CI_AS_KS_WS» и «Estonian_CS_AS» в равенства для операции».  
+ Поскольку база данных **tempdb** использует параметры сортировки сервера по умолчанию, а `TestPermTab.Col1` — другие параметры сортировки, SQL Server возвратит следующую ошибку: "Не удалось разрешить конфликт параметров сортировки между "Latin1_General_CI_AS_KS_WS" и "Estonian_CS_AS" в операции равенства".  
   
  Избавиться от этой ошибки можно одним из следующих способов:  
   
@@ -109,8 +110,8 @@ SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.
        );  
     ```  
   
-## <a name="see-also"></a>См. также  
- [Задание или изменение параметров сортировки сервера](set-or-change-the-server-collation.md)   
+## <a name="see-also"></a>См. также:  
+ [Установка или изменение параметров сортировки сервера](set-or-change-the-server-collation.md)   
  [Установка и изменение параметров сортировки базы данных](set-or-change-the-database-collation.md)   
  [Collation and Unicode Support](collation-and-unicode-support.md)  
   

@@ -15,16 +15,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5d57a0783c8af0121169f09622b8e5bd8547d1ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833094"
 ---
 # <a name="wmi-connection-manager"></a>Диспетчер WMI-соединений
-  Диспетчер WMI-соединений позволяет использовать в пакетах службу инструментария управления Windows (WMI) для управления данными в корпоративной среде. Задача «Веб-служба», которую включают в себя службы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , использует диспетчер WMI-соединений.  
+  Диспетчер WMI-соединений позволяет использовать в пакетах службу инструментария управления Windows (WMI) для управления данными в корпоративной среде. Задача «веб-служба [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] », которая включает в себя, использует диспетчер соединений WMI.  
   
- При добавлении к пакету диспетчер WMI-соединений [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] создают диспетчер, который будет разрешен в соединение WMI во время выполнения, устанавливает свойства диспетчера соединений и добавляет диспетчер соединений для соединений `Connections` пакета . Свойству `ConnectionManagerType` диспетчера соединений присваивается значение `WMI`.  
+ При добавлении диспетчера WMI-соединений к пакету [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] создает диспетчер соединений, который будет разрешаться в WMI-соединение во время выполнения, устанавливает свойства диспетчера соединений и добавляет его в `Connections` коллекцию пакета. Свойству `ConnectionManagerType` диспетчера соединений присваивается значение `WMI`.  
   
 ## <a name="configuration-of-the-wmi-connection-manager"></a>Настройка диспетчера WMI-соединений  
  Чтобы настроить диспетчер WMI-соединений, выполните следующее:  
@@ -41,8 +41,8 @@ ms.locfileid: "62833094"
   
  Дополнительные сведения о программной настройке диспетчера подключений см. в разделах <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> и [Добавление соединений программным образом](../building-packages-programmatically/adding-connections-programmatically.md).  
   
-## <a name="see-also"></a>См. также  
- [Задача «Веб-служба»](../control-flow/web-service-task.md)   
+## <a name="see-also"></a>См. также:  
+ [Задача «веб-служба»](../control-flow/web-service-task.md)   
  [Соединения в службах Integration Services (SSIS)](integration-services-ssis-connections.md)  
   
   

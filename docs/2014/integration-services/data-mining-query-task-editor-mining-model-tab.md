@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e31e64226d826db1ac41d3411a542d4eac281ad1
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68890772"
 ---
 # <a name="data-mining-query-task-editor-mining-model-tab"></a>Редактор задачи «Запрос интеллектуального анализа данных» (вкладка «Модель интеллектуального анализа данных»)
@@ -27,7 +27,7 @@ ms.locfileid: "68890772"
  Сведения об интеллектуальном анализе данных в пакетах см. в разделах [Задача "Запрос интеллектуального анализа данных"](control-flow/data-mining-query-task.md) и [Решения для интеллектуального анализа данных](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions).  
   
 ## <a name="general-options"></a>Общие параметры  
- **Name**  
+ **Название**  
  Задайте уникальное имя для задачи «Запрос интеллектуального анализа данных». Это имя используется в качестве метки для значка задачи.  
   
 > [!NOTE]  
@@ -37,15 +37,15 @@ ms.locfileid: "68890772"
  Введите описание задачи «Запрос интеллектуального анализа данных».  
   
 ## <a name="mining-model-tab-options"></a>Параметры вкладки «Модель интеллектуального анализа данных»  
- **Соединение**  
+ **Соединен**  
  Выберите из списка диспетчер соединений служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] или нажмите кнопку **Создать** для создания нового диспетчера соединений.  
   
- **См. также:**  [Диспетчер подключений служб Analysis Services](connection-manager/analysis-services-connection-manager.md)  
+ **См. также:**  [Диспетчер соединений Analysis Services](connection-manager/analysis-services-connection-manager.md)  
   
  **Создать**  
  Создает новый диспетчер соединений служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
- **См. также:** [Справочник по пользовательскому интерфейсу: диалоговое окно "Добавление диспетчера подключений служб Analysis Services"](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **См. также:** [диалоговое окно "Добавление Analysis Services диспетчера соединений" Справочник по пользовательскому интерфейсу](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **Структура интеллектуального анализа данных**  
  Выберите структуру интеллектуального анализа из данного списка.  
@@ -53,10 +53,10 @@ ms.locfileid: "68890772"
  **Модели интеллектуального анализа данных**  
  Выберите модель интеллектуального анализа данных, построенную на выбранной структуре интеллектуального анализа данных.  
   
-## <a name="see-also"></a>См. также  
- [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор задачи "Запрос интеллектуального анализа данных" (вкладка "Запрос")](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
- [Редактор задачи "Запрос интеллектуального анализа данных" (вкладка "Вывод")](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
- [конструктор интеллектуального анализа данных](https://docs.microsoft.com/analysis-services/data-mining/data-mining-designer)  
+## <a name="see-also"></a>См. также:  
+ [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор задачи "запрос интеллектуального анализа данных" &#40;вкладка "запрос"&#41;](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
+ [Редактор задачи "запрос интеллектуального анализа данных" &#40;вкладка "выходные данные"&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
+ [Конструктора моделей интеллектуального анализа данных](https://docs.microsoft.com/analysis-services/data-mining/data-mining-designer)  
   
   

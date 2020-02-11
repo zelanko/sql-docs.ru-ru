@@ -16,13 +16,13 @@ ms.assetid: 7ba55e39-05dd-43c7-b5da-b268ed8426dd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c0797b8fe4a2ba496b28f0c347eb5349e77e91e0
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68762762"
 ---
-# <a name="sphelpagentdefault-transact-sql"></a>sp_help_agent_default (Transact-SQL)
+# <a name="sp_help_agent_default-transact-sql"></a>sp_help_agent_default (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Извлекает идентификатор конфигурации по умолчанию для типа агента, переданного в качестве аргумента. Эта хранимая процедура выполняется на распространителе в любой базе данных.  
@@ -42,24 +42,24 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
   
 `[ @agent_type = ] 'agent_type'`Тип агента. *agent_type* имеет **тип int**, не имеет значения по умолчанию и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |**1**|Агент моментальных снимков.|  
 |**2**|Агент чтения журнала.|  
-|**3**|Агент распространителя.|  
+|**3-5**|Агент распространителя.|  
 |**4**|Агент слияния.|  
-|**9**|Агент чтения очереди.|  
+|**8**|Агент чтения очереди.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  **sp_help_agent_default** используется во всех типах репликации.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **replmonitor** могут выполнять **sp_help_agent_default**.  
   
-## <a name="see-also"></a>См. также  
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

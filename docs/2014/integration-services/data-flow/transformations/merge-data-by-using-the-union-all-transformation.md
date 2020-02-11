@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7f5504c6f58d7ff5254d081ea479ca30ed6ca705
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770348"
 ---
 # <a name="merge-data-by-using-the-union-all-transformation"></a>Выполнение слияния данных с помощью преобразования «Объединить все»
@@ -54,8 +54,8 @@ ms.locfileid: "62770348"
   
 9. Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
-## <a name="see-also"></a>См. также  
- [Union All Transformation](union-all-transformation.md)   
+## <a name="see-also"></a>См. также:  
+ [Преобразование «Объединить все»](union-all-transformation.md)   
  [Преобразования служб Integration Services](integration-services-transformations.md)   
  [Пути служб Integration Services](../integration-services-paths.md)   
  [Задача потока данных](../../control-flow/data-flow-task.md)  

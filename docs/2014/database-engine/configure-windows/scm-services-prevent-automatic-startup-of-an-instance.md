@@ -1,5 +1,5 @@
 ---
-title: Отключение автоматического запуска экземпляра SQL Server (диспетчер конфигурации SQL Server) | Документация Майкрософт
+title: Запрет автоматического запуска экземпляра SQL Server (диспетчер конфигурации SQL Server) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6af4597a4ddf802c80bc98cb38363d59348fa0bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62810054"
 ---
 # <a name="prevent-automatic-startup-of-an-instance-of-sql-server-sql-server-configuration-manager"></a>Отключение автоматического запуска экземпляра SQL Server (диспетчер конфигурации SQL Server)
@@ -33,15 +33,15 @@ ms.locfileid: "62810054"
   
 1.  В меню **Пуск** последовательно выберите пункты **Все программы**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Средства настройки**и щелкните **Диспетчер конфигурации SQL Server**.  
   
-2.  В диспетчере конфигурации SQL Server разверните **Службы**, затем выберите **SQL Server**.  
+2.  В диспетчер конфигурации SQL Server разверните узел **службы**и выберите пункт **SQL Server**.  
   
-3.  В области сведений щелкните правой кнопкой мыши **MSSQLServer**и выберите пункт **Свойства**.  
+3.  В области сведений щелкните правой кнопкой мыши **MSSQLServer** и выберите пункт **Свойства**.  
   
-4.  В поле **Свойства** диалогового окна **Свойства SQL Server \<** _имя_экземпляра_ **>** установите для параметра **Режим запуска** значение **Вручную**.  
+4.  В диалоговом окне свойства ** \<SQL Server ** _instanceName_ **>** в поле **Свойства** установите для параметра **режим запуска** значение **вручную**.  
   
-5.  Нажмите кнопку **ОК**, чтобы закрыть диалоговое окно **Свойства SQL Server \<** _имя_экземпляра_ **>** , а затем закройте диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+5.  Нажмите кнопку **ОК** , чтобы закрыть диалоговое окно свойства ** \<SQL Server ** _instanceName_ **>** , а [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] затем закройте Configuration Manager.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Запуск, остановка, приостановка, возобновление и перезапуск компонента Database Engine, агента SQL и службы браузера SQL Server](start-stop-pause-resume-restart-sql-server-services.md)  
   
   

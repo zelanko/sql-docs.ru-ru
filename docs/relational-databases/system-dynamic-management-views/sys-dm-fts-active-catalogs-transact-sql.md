@@ -1,5 +1,5 @@
 ---
-title: sys.dm_fts_active_catalogs (Transact-SQL) | Документация Майкрософт
+title: sys. dm_fts_active_catalogs (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/29/2017
 ms.prod: sql
@@ -21,54 +21,54 @@ author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 31dd240f15d9d778cbab43f6b4b1bfda2e4e1857
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68265968"
 ---
-# <a name="sysdmftsactivecatalogs-transact-sql"></a>sys.dm_fts_active_catalogs (Transact-SQL)
+# <a name="sysdm_fts_active_catalogs-transact-sql"></a>sys.dm_fts_active_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Возвращает сведения о полнотекстовых каталогах, для которых на сервере выполняются те или иные операции по заполнению.  
   
 > [!NOTE]
->  Следующие столбцы будут удалены в будущих версиях [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: is_paused, previous_status, previous_status_description, row_count_in_thousands, status, status_description и worker_count. Избегайте использовать эти столбцы в новых разработках и запланируйте изменение приложений, где они используются в настоящий момент.  
+>  Следующие столбцы будут удалены в следующей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: is_paused, previous_status, previous_status_description, row_count_in_thousands, состояние, status_description и worker_count. Избегайте использовать эти столбцы в новых разработках и запланируйте изменение приложений, где они используются в настоящий момент.  
   
  
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|Идентификатор базы данных, содержащей активный полнотекстовый каталог.|  
 |**catalog_id**|**int**|Идентификатор активного полнотекстового каталога.|  
-|**адрес_памяти**|**varbinary(8)**|Адрес буферов памяти, выделенных для операции заполнения, относящейся к полнотекстовому каталогу.|  
-|**name**|**nvarchar(128)**|Имя активного полнотекстового каталога.|  
+|**memory_address**|**varbinary(8)**|Адрес буферов памяти, выделенных для операции заполнения, относящейся к полнотекстовому каталогу.|  
+|**name**|**nvarchar(128**|Имя активного полнотекстового каталога.|  
 |**is_paused**|**bit**|Указывает, было ли приостановлено заполнение активного полнотекстового каталога.|  
-|**status**|**int**|Текущее состояние полнотекстового каталога. Это может быть:<br /><br /> 0 = инициализация<br /><br /> 1 = готовность<br /><br /> 2 = пауза<br /><br /> 3 = временная ошибка<br /><br /> 4 = необходимость повторного подключения<br /><br /> 5 = выключение<br /><br /> 6 = приостановлен для резервного копирования<br /><br /> 7 = резервное копирование осуществлено через каталог<br /><br /> 8 = каталог поврежден|  
-|**status_description**|**nvarchar(120)**|Описание текущего состояния активного полнотекстового каталога.|  
+|**состояние**|**int**|Текущее состояние полнотекстового каталога. Это может быть:<br /><br /> 0 = инициализация<br /><br /> 1 = готовность<br /><br /> 2 = пауза<br /><br /> 3 = временная ошибка<br /><br /> 4 = необходимость повторного подключения<br /><br /> 5 = выключение<br /><br /> 6 = приостановлен для резервного копирования<br /><br /> 7 = резервное копирование осуществлено через каталог<br /><br /> 8 = каталог поврежден|  
+|**status_description**|**nvarchar (120)**|Описание текущего состояния активного полнотекстового каталога.|  
 |**previous_status**|**int**|Предыдущее состояние полнотекстового каталога. Это может быть:<br /><br /> 0 = инициализация<br /><br /> 1 = готовность<br /><br /> 2 = пауза<br /><br /> 3 = временная ошибка<br /><br /> 4 = необходимость повторного подключения<br /><br /> 5 = выключение<br /><br /> 6 = приостановлен для резервного копирования<br /><br /> 7 = резервное копирование осуществлено через каталог<br /><br /> 8 = каталог поврежден|  
-|**previous_status_description**|**nvarchar(120)**|Описание предыдущего состояния активного полнотекстового каталога.|  
+|**previous_status_description**|**nvarchar (120)**|Описание предыдущего состояния активного полнотекстового каталога.|  
 |**worker_count**|**int**|Количество текущих потоков, работающих в этом полнотекстовом каталоге.|  
 |**active_fts_index_count**|**int**|Количество полнотекстовых индексов, заполняемых в настоящий момент.|  
 |**auto_population_count**|**int**|Количество таблиц, в которых происходит автозаполнение для этого полнотекстового каталога.|  
 |**manual_population_count**|**int**|Количество таблиц с выполняющимся заполнением вручную для этого полнотекстового каталога.|  
 |**full_incremental_population_count**|**int**|Количество таблиц с выполняющимся полным или добавочным заполнением для этого полнотекстового каталога.|  
 |**row_count_in_thousands**|**int**|Оценка числа строк (в тысячах) в полнотекстовых индексах этого полнотекстового каталога.|  
-|**is_importing впервые**|**bit**|Указывает, выполняется ли в настоящее время импорт полнотекстового каталога:<br /><br /> 1 = выполняется импорт каталога.<br /><br /> 2 = импорт каталога не выполняется.|  
+|**is_importing**|**bit**|Указывает, выполняется ли в настоящее время импорт полнотекстового каталога:<br /><br /> 1 = выполняется импорт каталога.<br /><br /> 2 = импорт каталога не выполняется.|  
   
-## <a name="remarks"></a>Примечания  
- Столбец is_importing впервые появился в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
+## <a name="remarks"></a>Remarks  
+ Столбец is_importing был впервые добавлен в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
 ## <a name="permissions"></a>Разрешения  
 
-На [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], требуется `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровней Premium необходимо `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровней Standard и Basic, требует **администратора сервера** или **администратор Azure Active Directory** учетной записи.   
+В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]необходимо `VIEW SERVER STATE` разрешение.   
+На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
    
 ## <a name="physical-joins"></a>Физические соединения  
- ![Существенные соединения данного динамического административного представления](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-active-catalogs-1.gif "существенные соединения данного динамического административного представления")  
+ ![Существенные соединения данного динамического административного представления](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-active-catalogs-1.gif "Существенные соединения данного динамического административного представления")  
   
 ## <a name="relationship-cardinalities"></a>Количество элементов связей  
   
-|От|Чтобы|Связь|  
+|С|Кому|Связь|  
 |----------|--------|------------------|  
 |dm_fts_active_catalogs.database_id|dm_fts_index_population.database_id|Один к одному|  
 |dm_fts_active_catalogs.catalog_id|dm_fts_index_population.catalog_id|Один к одному|  
@@ -91,8 +91,8 @@ AND catalog.database_id = (SELECT dbid FROM sys.sysdatabases WHERE name = DB_NAM
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  
- [Компонент Full-Text Search и семантический поиск динамические административные представления и функции &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
+ [Динамические административные представления и функции полнотекстового поиска и семантического поиска &#40;языке Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
   
   

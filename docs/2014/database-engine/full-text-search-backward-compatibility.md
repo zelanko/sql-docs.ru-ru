@@ -1,5 +1,5 @@
 ---
-title: Полнотекстовый поиск обратная совместимость | Документация Майкрософт
+title: Обратная совместимость полнотекстового поиска | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 5a749bb4da4511f30a231f6ab2dd05a35ebdb11d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779264"
 ---
 # <a name="full-text-search-backward-compatibility"></a>Обратная совместимость компонента Full-Text Search
@@ -26,12 +26,12 @@ ms.locfileid: "62779264"
   
 |См. в подразделе...|Разделы о...|  
 |----------|-----------------------|  
-|[Нерекомендуемые функции полнотекстового поиска в SQL Server 2014](../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md)|Устаревшие функции полнотекстового поиска в этой версии.|  
+|[Устаревшие функции полнотекстового поиска в SQL Server 2014](../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md)|Устаревшие функции полнотекстового поиска в этой версии.|  
 |[Неподдерживаемые функции полнотекстового поиска в SQL Server 2014](../../2014/database-engine/discontinued-full-text-search-features-in-sql-server-2014.md)|Неподдерживаемые функции полнотекстового поиска в этой версии.|  
 |[Критические изменения в полнотекстовом поиске](breaking-changes-to-full-text-search.md)|Изменения в полнотекстовом поиске, которые могут потребовать внесения изменений в приложения.|  
 |[Изменения в функциях полнотекстового поиска](../../2014/database-engine/behavior-changes-to-full-text-search.md)|Другие изменения в поведении полнотекстового поиска.|  
   
-## <a name="see-also"></a>См. также  
- [Обратная совместимость компонента ядра СУБД SQL Server](sql-server-database-engine-backward-compatibility.md)  
+## <a name="see-also"></a>См. также:  
+ [Обратная совместимость компонента SQL Server Database Engine](sql-server-database-engine-backward-compatibility.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Text и image разделы руководства, посвященные столбцов (ODBC) | Документация Майкрософт
+title: Инструкции по управлению столбцами Text и Image (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8645cf56a37e41d681daed2c05c3db9bf34c98e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62780989"
 ---
 # <a name="managing-text-and-image-columns-how-to-topics-odbc"></a>Инструкции по работе со столбцами типа text и image (ODBC)
@@ -22,11 +22,11 @@ ms.locfileid: "62780989"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
--   [Использование параметров данных времени выполнения &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/managing-text-and-image-columns-use-data-at-execution-parameters.md)  
+-   [Использование параметров данных при выполнении &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/managing-text-and-image-columns-use-data-at-execution-parameters.md)  
   
--   [Использование столбцов данных времени выполнения &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/managing-text-and-image-columns-use-data-at-execution-columns.md)  
+-   [Использование столбцов данных на этапе выполнения &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/managing-text-and-image-columns-use-data-at-execution-columns.md)  
   
-## <a name="see-also"></a>См. также  
- [Инструкции по ODBC](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
+## <a name="see-also"></a>См. также:  
+ [ODBC How-to Topics](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   
   

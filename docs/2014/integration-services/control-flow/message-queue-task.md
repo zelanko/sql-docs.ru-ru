@@ -18,14 +18,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e7857294534f1c3c434f43c302cee8864925d953
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831481"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
-  Задача "Очередь сообщений" позволяет использовать службу очередей сообщений Майкрософт для отправки и получения сообщений между пакетами служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] или для отправления сообщений в очередь приложений, которая обрабатывается пользовательским приложением. Эти сообщения могут принимать форму простого текста, файлов или переменных и их значений.  
+  Задача «очередь сообщений» позволяет использовать очередь сообщений (также называемую MSMQ) для отправки и получения сообщений между [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] пакетами, а также для отправки сообщений в очередь приложений, которая обрабатывается пользовательским приложением. Эти сообщения могут принимать форму простого текста, файлов или переменных и их значений.  
   
  Используя задачу «Очередь сообщений», можно координировать операции по всему предприятию. Сообщения могут быть поставлены в очередь и доставляться позже, если назначение недоступно или занято; например, задача может ставить в очередь сообщения для работающих в режиме «вне сети» переносных компьютеров торговых представителей, которые получают сообщения при подключении к сети. Можно использовать задачу очереди сообщений для следующих целей:  
   
@@ -74,7 +74,7 @@ ms.locfileid: "62831481"
 ## <a name="custom-logging-messages-available-on-the-message-queue-task"></a>Пользовательские сообщения для ведения журнала, доступные в задаче «Очередь сообщений»  
  В следующей таблице перечислены пользовательские записи в журнале для задачи «Очередь сообщений». Дополнительные сведения см. в разделах [Ведение журналов в службах Integration Services (SSIS)](../performance/integration-services-ssis-logging.md) и [Пользовательские сообщения для ведения журнала](../custom-messages-for-logging.md).  
   
-|Запись журнала|Описание|  
+|Запись в журнале|Description|  
 |---------------|-----------------|  
 |`MSMQAfterOpen`|Указывает, что задача завершила открытие очереди сообщений.|  
 |`MSMQBeforeOpen`|Указывает, что задача приступила к открытию очереди сообщений.|  
@@ -88,11 +88,11 @@ ms.locfileid: "62831481"
 ## <a name="configuration-of-the-message-queue-task"></a>Настройка задачи «Очередь сообщений»  
  Значения свойств можно задавать с помощью конструктора [!INCLUDE[ssIS](../../includes/ssis-md.md)] или программными средствами. Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующих разделах.  
   
--   [Редактор задачи "Очередь сообщений" (страница "Общие")](../general-page-of-integration-services-designers-options.md)  
+-   [Редактор задачи "очередь сообщений" &#40;страница "Общие"&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Редактор задачи "Очередь сообщений" (страница "Получение")](../message-queue-task-editor-receive-page.md)  
+-   [Редактор задачи "очередь сообщений" &#40;"получить страницу"&#41;](../message-queue-task-editor-receive-page.md)  
   
--   [Редактор задачи "Очередь сообщений" (страница "Отправка")](../message-queue-task-editor-send-page.md)  
+-   [Редактор задачи "очередь сообщений" &#40;"Отправить страницу"&#41;](../message-queue-task-editor-send-page.md)  
   
 -   [Страница «Выражения»](../expressions/expressions-page.md)  
   
@@ -101,8 +101,8 @@ ms.locfileid: "62831481"
 ## <a name="related-tasks"></a>Связанные задачи  
  Дополнительные сведения о настройке свойств этих свойств в конструкторе [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в разделе [Задание свойств задач или контейнеров](../set-the-properties-of-a-task-or-container.md).  
   
-## <a name="see-also"></a>См. также  
- [Задачи служб Integration Services](integration-services-tasks.md)   
+## <a name="see-also"></a>См. также:  
+ [Задачи Integration Services](integration-services-tasks.md)   
  [Поток управления](control-flow.md)  
   
   

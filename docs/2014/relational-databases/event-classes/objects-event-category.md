@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 56a76c3675ceb3cf84c7812b4f9d95d61f9f830a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62661955"
 ---
 # <a name="objects-event-category"></a>Категория событий Objects
@@ -28,14 +28,14 @@ ms.locfileid: "62661955"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Описание|  
+|Раздел|Description|  
 |-----------|-----------------|  
 |[Класс событий Auto Stats](auto-stats-event-class.md)|Указывает, что произошло автоматическое обновление статистики индекса и столбца.|  
-|[Object:Altered, класс событий](object-altered-event-class.md)|Указывает, что объект изменен (например, инструкциями ALTER DATABASE или ALTER TABLE).|  
+|[Класс событий Object:Altered](object-altered-event-class.md)|Указывает, что объект изменен (например, инструкциями ALTER DATABASE или ALTER TABLE).|  
 |[Класс событий Object:Created](object-created-event-class.md)|Указывает, что объект создан (например, инструкциями CREATE INDEX, CREATE TABLE или CREATE DATABASE).|  
 |[Класс событий Object:Deleted](object-deleted-event-class.md)|Указывает, что объект удален (например, инструкциями DROP INDEX или DROP TABLE).|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширенные события](../extended-events/extended-events.md)  
   
   

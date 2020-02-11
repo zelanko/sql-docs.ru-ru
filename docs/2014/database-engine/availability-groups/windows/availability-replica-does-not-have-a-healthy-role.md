@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c5d487965237395da68bbc8ba3134c8d372f90db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62815601"
 ---
 # <a name="availability-replica-does-not-have-a-healthy-role"></a>Доступность репликации не имеет исправной роли
@@ -28,11 +28,11 @@ ms.locfileid: "62815601"
 |||  
 |-|-|  
 |**Имя политики**|Состояние роли реплики доступности|  
-|**Проблема**|Реплике доступности не назначена допустимая роль.|  
-|**Категория**|**Критическая**|  
-|**Аспект**|Реплика доступности|  
+|**Issue**|Реплике доступности не назначена допустимая роль.|  
+|**Категория**|**Critical**|  
+|**Устанавливают**|реплика доступности|  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Description  
  Эта политика проверяет состояние роли реплики доступности. Политика находится в состоянии неисправности, если роль реплики доступности не является первичной или вторичной. В остальном политика находится в рабочем состоянии.  
   
 > [!NOTE]  
@@ -41,10 +41,10 @@ ms.locfileid: "62815601"
 ## <a name="possible-causes"></a>Возможные причины  
  Роль этой реплики доступности неисправна. Реплике не назначена роль первичной или вторичной.  
   
-## <a name="possible-solution-informationstilltocome"></a>Возможное решение: информация готовится  
+## <a name="possible-solution-information_still_to_come"></a>Возможное решение: Information_still_to_come  
   
-## <a name="see-also"></a>См. также  
- [Обзор групп доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Использование панели мониторинга AlwaysOn (среда SQL Server Management Studio)](use-the-always-on-dashboard-sql-server-management-studio.md)  
+## <a name="see-also"></a>См. также:  
+ [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Использование панели мониторинга AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

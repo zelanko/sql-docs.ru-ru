@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2bf1b08abe58c8f46cc8f48d87115281d3d72bad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63070884"
 ---
 # <a name="sort-and-group-query-results-visual-database-tools"></a>Результаты запросов сортировки и группирования (визуальные инструменты для баз данных)
@@ -35,28 +35,28 @@ ms.locfileid: "63070884"
  Подробные сведения о создании таких запросов см. в указанных ниже разделах.  
   
 ## <a name="in-this-section"></a>в этом разделе  
- [Сортировка строк (визуальные инструменты для баз данных)](visual-database-tools.md)  
+ [Сортировка строк &#40;визуальных инструментов для баз данных&#41;](visual-database-tools.md)  
  В этом разделе описываются различные способы сортировки строк и даются советы по их применению.  
   
- [Сворачивание групп строк (визуальные инструменты для баз данных)](collapse-groups-of-rows-visual-database-tools.md)  
+ [Сворачивание групп строк &#40;визуальных инструментов для баз данных&#41;](collapse-groups-of-rows-visual-database-tools.md)  
  В этом разделе описываются разные способы сжатия строк, такие как вычисление или устранение повторов.  
   
- [Произведение сортировки с помощью предложения ORDER BY (визуальные инструменты для баз данных)](sort-with-order-by-visual-database-tools.md)  
+ [Сортировать с помощью &#40;визуальных инструментов для баз данных&#41;](sort-with-order-by-visual-database-tools.md)  
  В этом разделе описываются шаги возврата результатов в указанном порядке.  
   
- [Сортировка данных в порядке убывания и возрастания (визуальные инструменты для баз данных)](sort-in-ascending-or-descending-order-visual-database-tools.md)  
+ [Сортировка в возрастающем или убывающем порядке &#40;визуальных инструментов для баз данных&#41;](sort-in-ascending-or-descending-order-visual-database-tools.md)  
  В этом разделе приводится пошаговое описание изменения или указания направления сортировки.  
   
- [Сортировка по нескольким столбцам в запросах (визуальные инструменты для баз данных)](sort-multiple-columns-in-queries-visual-database-tools.md)  
+ [Сортировка нескольких столбцов в запросах &#40;визуальных инструментов для баз данных&#41;](sort-multiple-columns-in-queries-visual-database-tools.md)  
  В этом разделе рассматриваются шаги указания порядка результирующих наборов для нескольких столбцов.  
   
- [Группирование строк в результатах запроса (визуальные инструменты для баз данных)](group-rows-in-query-results-visual-database-tools.md)  
+ [Группирование строк в результатах запроса &#40;визуальных инструментов для баз данных&#41;](group-rows-in-query-results-visual-database-tools.md)  
  В этом разделе описывается создание сводки путем организации данных в группы.  
   
- [Задание условий для групп (визуальные инструменты для баз данных)](specify-conditions-for-groups-visual-database-tools.md)  
+ [Укажите условия для групп &#40;визуальных инструментов для баз данных&#41;](specify-conditions-for-groups-visual-database-tools.md)  
  В этом разделе описываются определения условий поиска, применяемых к группам строк.  
   
- [Переупорядочение выходных столбцов (визуальные инструменты для баз данных)](reorder-output-columns-visual-database-tools.md)  
+ [Переупорядочение выходных столбцов &#40;визуальных инструментов для баз данных&#41;](reorder-output-columns-visual-database-tools.md)  
  В этом разделе описываются изменения параметров сортировки.  
   
 ## <a name="related-sections"></a>См. также  

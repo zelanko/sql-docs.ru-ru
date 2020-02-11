@@ -1,5 +1,5 @@
 ---
-title: sys.dm_tran_top_version_generators (Transact-SQL) | Документация Майкрософт
+title: sys. dm_tran_top_version_generators (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,19 +21,19 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e8fb59e9cfe636f6cab775fa2cb000c60ba08ad2
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68262610"
 ---
-# <a name="sysdmtrantopversiongenerators-transact-sql"></a>sys.dm_tran_top_version_generators (Transact-SQL)
+# <a name="sysdm_tran_top_version_generators-transact-sql"></a>sys.dm_tran_top_version_generators (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Возвращает виртуальную таблицу для объектов, формирующих большинство версий в хранилище версий. **sys.dm_tran_top_version_generators** возвращает первые 256 значений длины записей, сгруппированных по **database_id** и **rowset_id**. **sys.dm_tran_top_version_generators** извлекает данные, запросив **dm_tran_version_store** виртуальной таблицы. **sys.dm_tran_top_version_generators** является неэффективным, так как в этом представлении запросов в хранилище версий и хранилище версий может быть очень большим. Эту функцию рекомендуется использовать для поиска самых крупных потребителей в хранилище версий.  
+  Возвращает виртуальную таблицу для объектов, формирующих большинство версий в хранилище версий. **sys. dm_tran_top_version_generators** возвращает первые 256 суммарных значений длины записей, сгруппированных по **database_id** и **rowset_id**. **sys. dm_tran_top_version_generators** извлекает данные путем запроса к виртуальной таблице **dm_tran_version_store** . представление **sys. dm_tran_top_version_generators** является неэффективным для выполнения, так как это представление запрашивает хранилище версий, а хранилище версий может быть очень большим. Эту функцию рекомендуется использовать для поиска самых крупных потребителей в хранилище версий.  
   
 > [!NOTE]  
->  Вызывать его из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте имя **sys.dm_pdw_nodes_tran_top_version_generators**.  
+>  Чтобы вызвать эту функцию [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] из [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]или, используйте имя **sys. dm_pdw_nodes_tran_top_version_generators**.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,20 +44,20 @@ sys.dm_tran_top_version_generators
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|Идентификатор базы данных.|  
 |**rowset_id**|**bigint**|Идентификатор набора строк.|  
-|**aggregated_record_length_in_bytes**|**int**|Сумма длин записей для каждого **database_id** и **rowset_id pair** в хранилище версий.|  
-|**pdw_node_id**|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение является на.|  
+|**aggregated_record_length_in_bytes**|**int**|Сумма значений длины записей для каждой пары **database_id** и **rowset_id** в хранилище версий.|  
+|**pdw_node_id**|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
   
 ## <a name="permissions"></a>Разрешения
 
-На [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], требуется `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровней Premium необходимо `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровней Standard и Basic, требует **администратора сервера** или **администратор Azure Active Directory** учетной записи.   
+В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]необходимо `VIEW SERVER STATE` разрешение.   
+На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
 
-## <a name="remarks"></a>Примечания  
- Так как **sys.dm_tran_top_version_generators** может потребоваться считать много страниц, так как он проверяет все хранилище версий, под управлением **sys.dm_tran_top_version_generators** могут мешать работе системы производительность.  
+## <a name="remarks"></a>Remarks  
+ Поскольку **sys. dm_tran_top_version_generators** может потребоваться чтение большого количества страниц при сканировании всего хранилища версий, выполнение **sys. dm_tran_top_version_generators** может повлиять на производительность системы.  
   
 ## <a name="examples"></a>Примеры  
  Следующий пример использует тестовый сценарий, содержащий четыре параллельные транзакции, идентифицированные порядковыми номерами (XSN), который выполняется в базе данных с параметрами ALLOW_SNAPSHOT_ISOLATION и READ_COMMITTED_SNAPSHOT, установленными в значение ON. Следующие транзакции запущены:  
@@ -89,11 +89,11 @@ database_id rowset_id            aggregated_record_length_in_bytes
 9           72057594038386688    33  
 ```  
   
- Выходные данные показывают, что все версии созданы с помощью `database_id``9` и версии, создаваемый из двух таблиц.  
+ Выходные данные показывают, что все версии создаются с `database_id``9` помощью и что версии формируются из двух таблиц.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Динамические административные представления и функции, связанные с транзакциями (Transact-SQL)](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Динамические административные представления и функции, связанные с транзакциями &#40;языке Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
 

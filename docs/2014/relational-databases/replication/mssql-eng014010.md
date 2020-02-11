@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8af9ae77562cb8ece9cb23e32c4e4ce216987715
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811125"
 ---
 # <a name="mssql_eng014010"></a>MSSQL_ENG014010
@@ -25,7 +25,7 @@ ms.locfileid: "68811125"
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|14010|  
 |Источник события|MSSQLSERVER|  
 |Компонент|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
@@ -40,13 +40,13 @@ ms.locfileid: "68811125"
 ## <a name="user-action"></a>Действие пользователя  
  Убедитесь в том, что все экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в топологии должным образом зарегистрированы. Если сетевое имя компьютера отличается от имени экземпляра SQL Server.  
   
--   Добавьте уникальное имя данного экземпляра SQL Server в качестве допустимого сетевого имени. Один из методов установки альтернативного сетевого имени — это добавление имени в локальный файл hosts. Файл локальных узлов по умолчанию расположен в каталоге WINDOWS\system32\drivers\etc или WINNT\system32\drivers\etc. Дополнительные сведения см. в документации по Windows.  
+-   Добавьте уникальное имя данного экземпляра SQL Server в качестве допустимого сетевого имени. Один из методов установки альтернативного сетевого имени — это добавление имени в локальный файл hosts. Локальный файл hosts по умолчанию расположен в каталоге WINDOWS\system32\drivers\etc или WINNT\system32\drivers\etc. Дополнительные сведения см. в документации Windows.  
   
      Например, если имя компьютера — comp1, IP-адрес компьютера — 10.193.17.129, имя экземпляра — inst1/instname, то следует добавить в файл hosts следующую запись:  
   
      10.193.17.129 inst1  
   
--   Удалите репликацию, зарегистрируйте каждый экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , а затем восстановите репликацию. Если значение @@SERVERNAME неверно для некластеризованного экземпляра, выполните следующие действия.  
+-   Удалите репликацию, зарегистрируйте каждый экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , а затем восстановите репликацию. Если значение @@SERVERNAME недопустимо для некластеризованного экземпляра, выполните указанные ниже действия.  
   
     ```  
     sp_dropserver '<old_name>', 'droplogins'  
@@ -57,9 +57,9 @@ ms.locfileid: "68811125"
   
      После выполнения хранимой процедуры [sp_addserver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addserver-transact-sql) необходимо перезапустить службу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], чтобы изменения параметра @@SERVERNAME вступили в силу.  
   
-     Если значение @@SERVERNAME недопустимо для кластеризованного экземпляра, необходимо изменить имя с помощью администратора кластера. Дополнительные сведения см. в разделе [Экземпляры отказоустойчивого кластера (режим AlwaysOn) (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
+     Если значение @@SERVERNAME недопустимо для кластеризованного экземпляра, необходимо изменить имя с помощью администратора кластера. Дополнительные сведения см. в разделе [экземпляры отказоустойчивого кластера AlwaysOn &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [@@SERVERNAME (Transact-SQL)](/sql/t-sql/functions/servername-transact-sql)   
  [Справочник по ошибкам и событиям (репликация)](errors-and-events-reference-replication.md)  
   

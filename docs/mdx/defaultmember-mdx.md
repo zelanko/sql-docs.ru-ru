@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a0b5039ae62eac25d698442d4aeb92ad3c4ebc3a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892902"
 ---
 # <a name="defaultmember-mdx"></a>DefaultMember (многомерные выражения)
@@ -31,7 +31,7 @@ Hierarchy_Expression.DefaultMember
  *Hierarchy_Expression*  
  Допустимое многомерное выражение, возвращающее иерархию.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Элемент по умолчанию атрибута используется для оценки выражений, когда атрибут не включен в запрос.  
   
 ## <a name="example"></a>Пример  
@@ -44,8 +44,8 @@ SELECT Measures.x ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)   
+## <a name="see-also"></a>См. также:  
+ [Ссылка на функцию многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-function-reference-mdx.md)   
  [Определение элемента по умолчанию](https://docs.microsoft.com/analysis-services/multidimensional-models/attribute-properties-define-a-default-member)  
   
   

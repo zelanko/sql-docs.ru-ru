@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ad0e0c5fc4aec54e9da3333994bf25a34d51acd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62828136"
 ---
 # <a name="bulk-load-data-by-using-the-sql-server-destination"></a>Выполнение массовой загрузки данных с помощью назначения «SQL Server»
@@ -54,7 +54,7 @@ ms.locfileid: "62828136"
     > [!NOTE]  
     >  Назначение автоматически сопоставит столбцы с одинаковыми именами.  
   
-9. Нажмите кнопку **Дополнительно** и настройте параметры массовой загрузки: **Сохранять ИД**, **Сохранять значения NULL**, **Блокировка таблицы**, **Проверять ограничения** и **Запускать триггеры**.  
+9. Нажмите кнопку **Дополнительно** и настройте параметры массовой загрузки: **Сохранять ИД**, **Сохранять значения NULL**, **Блокировка таблицы**, **Проверять ограничения**и **Запускать триггеры**.  
   
      При необходимости укажите первую и последнюю входные строки для вставки, максимальное число ошибок до остановки операции вставки, а также столбцы, по которым сортируются вставляемые строки.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "62828136"
   
 11. Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [SQL Server Destination](sql-server-destination.md)   
  [Преобразования служб Integration Services](transformations/integration-services-transformations.md)   
  [Пути служб Integration Services](integration-services-paths.md)   

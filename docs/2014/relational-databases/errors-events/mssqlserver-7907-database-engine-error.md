@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0f2b9006c03ec0d22ab9194c385d95a2829c023e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762405"
 ---
-# <a name="mssqlserver7907"></a>MSSQLSERVER_7907
+# <a name="mssqlserver_7907"></a>MSSQLSERVER_7907
     
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|7907|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC2_FS_INVALID_COLUMN_DIRECTORY|  
-|Текст сообщения|Ошибка таблицы: Каталог «КАТАЛОГ» в секции с Идентификатором PN_ID не является допустимым каталогом Filestream.|  
+|Текст сообщения|Ошибка в таблице: каталог "DIRECTORY" в секции с идентификатором PN_ID не является допустимым каталогом FILESTREAM.|  
   
 ## <a name="explanation"></a>Объяснение  
  Имя каталога столбцов является идентификатором столбцов реляционного механизма секции. Если имя каталога столбцов не может быть преобразовано в идентификатор столбца, то данный каталог не является допустимым каталогом столбцов.  

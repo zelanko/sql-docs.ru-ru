@@ -17,20 +17,23 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fdfaeeb9e8dafe82a1312593df2dd128635b8365
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62766197"
 ---
 # <a name="debugging-data-flow"></a>Отладка потока данных
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и конструктор служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] содержат функции и средства, используемые для исправления ошибок в потоках данных пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и [!INCLUDE[ssIS](../../includes/ssis-md.md)] конструктор служб включают функции и средства, которые можно использовать для устранения неполадок в потоках данных [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] в пакете.  
   
--   [!INCLUDE[ssIS](../../includes/ssis-md.md)] включает средства просмотра данных.  
+-   
+  [!INCLUDE[ssIS](../../includes/ssis-md.md)] включает средства просмотра данных.  
   
--   [!INCLUDE[ssIS](../../includes/ssis-md.md)] и в преобразованиях служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+-   
+  [!INCLUDE[ssIS](../../includes/ssis-md.md)] и в преобразованиях служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
--   [!INCLUDE[ssIS](../../includes/ssis-md.md)] во время выполнения предоставляет отчет о ходе выполнения.  
+-   
+  [!INCLUDE[ssIS](../../includes/ssis-md.md)] во время выполнения предоставляет отчет о ходе выполнения.  
   
 ## <a name="data-viewers"></a>Средства просмотра данных  
  Средства просмотра данных служат для просмотра данных, передаваемых между двумя компонентами потока данных. Средства просмотра данных могут отображать данные при первом попадании в поток после извлечения из источника, до и после обновления данных в ходе преобразования, а также перед загрузкой их в назначения.  
@@ -61,14 +64,14 @@ ms.locfileid: "62766197"
   
  В следующей таблице приводится описание цветового кодирования.  
   
-|Color|Описание|  
+|Color|Description|  
 |-----------|-----------------|  
 |Бесцветный|Ожидание вызова подсистемой обработки потока данных.|  
 |Желтый|Выполнение преобразования, извлечения данных или загрузки данных.|  
 |Зеленый|Успешное завершение.|  
-|красный|Завершение с ошибками.|  
+|red|Завершение с ошибками.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Инструменты устранения неполадок при разработке пакета](troubleshooting-tools-for-package-development.md)  
   
   

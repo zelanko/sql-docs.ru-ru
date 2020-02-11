@@ -16,16 +16,16 @@ ms.assetid: 9333da96-3a1c-4adb-9a74-5dac9ce596df
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 9feddab12ea972ea4d7764fccfdd91a7f9b89cec
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68762251"
 ---
-# <a name="spchangereplicationserverpasswords-transact-sql"></a>sp_changereplicationserverpasswords (Transact-SQL)
+# <a name="sp_changereplicationserverpasswords-transact-sql"></a>sp_changereplicationserverpasswords (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Изменяет сохраненные пароли для [!INCLUDE[msCoName](../../includes/msconame-md.md)] учетной записи Windows или [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имени входа, используемого агентами репликации при подключении к серверам в топологии репликации. Обычно требуется менять пароль для каждого отдельного агента, выполняемого на сервере, даже если все они используют одно и то же имя входа или учетную запись. Эта хранимая процедура позволяет сменить пароль для всех экземпляров данного имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или учетной записи Windows, используемой всеми агентами репликации, выполняемыми на сервере. Эта хранимая процедура выполняется на любом сервере в топологии репликации в базе данных master.  
+  Изменяет сохраненные пароли для учетной записи [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или имени входа, используемого агентами репликации при подключении к серверам в топологии репликации. Обычно требуется менять пароль для каждого отдельного агента, выполняемого на сервере, даже если все они используют одно и то же имя входа или учетную запись. Эта хранимая процедура позволяет сменить пароль для всех экземпляров данного имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или учетной записи Windows, используемой всеми агентами репликации, выполняемыми на сервере. Эта хранимая процедура выполняется на любом сервере в топологии репликации в базе данных master.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,9 +44,9 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
   
  **1** = встроенная проверка подлинности Windows  
   
- 0 =  Проверка[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подлинности  
+ **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверка подлинности  
   
-`[ @login = ] 'login'`Имя изменяемой учетной записи Windows или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имя входа. *имя для входа* — **nvarchar (257)** , без значения по умолчанию  
+`[ @login = ] 'login'`Имя изменяемой учетной записи Windows или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имя входа. *имя для входа* — **nvarchar (257)**, без значения по умолчанию  
   
 `[ @password = ] 'password'`Новый пароль, который будет сохранен для указанного *имени входа*. Аргумент *Password* имеет тип **sysname**и не имеет значения по умолчанию.  
   
@@ -55,23 +55,23 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
   
 `[ @server = ] 'server'`Соединение с сервером, для которого изменяется сохраненный пароль. *Server* имеет тип **sysname**и может принимать одно из следующих значений:  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |**распространение**|Все соединения агентов с распространителем.|  
-|**издатель**|Все соединения агентов с издателем.|  
-|**подписчик**|Все соединения агентов с подписчиком.|  
+|**издателя**|Все соединения агентов с издателем.|  
+|**абонент**|Все соединения агентов с подписчиком.|  
 |**%** параметры|Все соединения агентов со всеми серверами в топологии репликации.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  **sp_changereplicationserverpasswords** используется со всеми типами репликации.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_changereplicationserverpasswords**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Просмотр и изменение параметров безопасности репликации](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  
   
   

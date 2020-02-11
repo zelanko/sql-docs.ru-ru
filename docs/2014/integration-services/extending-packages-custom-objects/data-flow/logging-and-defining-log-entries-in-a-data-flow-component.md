@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e4b328e1e39646f9b47e66bd313940de768ea73c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768650"
 ---
 # <a name="logging-and-defining-log-entries-in-a-data-flow-component"></a>Ведение журнала и определение элементов журнала в компоненте потока данных
@@ -59,11 +59,11 @@ End Sub
   
  Перечисление <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency> подсказывает во время выполнения, как часто событие будет заноситься в журнал.  
   
--   <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_OCCASIONAL>. событие заносится в журнал только иногда, но не во время каждого выполнения.  
+-   <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_OCCASIONAL>: событие заносится в журнал только иногда, но не во время каждого выполнения.  
   
--   <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_CONSISTENT>. событие заносится в журнал определенное количество раз во время каждого выполнения.  
+-   <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_CONSISTENT>: событие заносится в журнал определенное количество раз во время каждого выполнения.  
   
--   <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_PROPORTIONAL>. событие заносится в журнал несколько раз пропорционально объему выполненной работы.  
+-   <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_PROPORTIONAL>: событие заносится в журнал несколько раз пропорционально объему выполненной работы.  
   
  В приведенном выше примере используется значение <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_CONSISTENT>, поскольку ожидается, что компонент будет создавать запись в журнале один раз во время каждого выполнения.  
   
@@ -97,9 +97,9 @@ End Sub
   
  Теперь, когда пользователь запустит пакет, после выбора пункта "Мой собственный формат записи журнала" в диалоговом окне **Ведение журнала** в журнале появится новая запись, явно помеченная как "Пользователь::Мой собственный формат записи журнала". Новая запись в журнале содержит текст инструкции SQL, отметку времени и всю дополнительную информацию, заданную разработчиком.  
   
-![Значок служб Integration Services (маленький)](../../media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
+![Значок Integration Services (маленький)](../../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
-## <a name="see-also"></a>См. также  
- [Ведение журналов в службах Integration Services (SSIS)](../../performance/integration-services-ssis-logging.md)  
+## <a name="see-also"></a>См. также:  
+ [Ведение журнала&#41; Integration Services &#40;SSIS](../../performance/integration-services-ssis-logging.md)  
   
   

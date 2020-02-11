@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5c76fda112acae7b8a9314d217f5c32d197e87f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62775634"
 ---
 # <a name="upgrade-data-quality-services"></a>Обновление служб Data Quality Services
@@ -31,7 +31,7 @@ ms.locfileid: "62775634"
   
 -   Учетная запись пользователя Windows должна входить в предопределенную роль сервера sysadmin на экземпляре SQL Server, где установлен сервер [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] .  
   
-##  <a name="Upgrade"></a> Обновление DQS  
+##  <a name="Upgrade"></a>Обновление DQS  
  Обновление DQS:  
   
 1.  Создайте резервные копии баз данных DQS перед началом процесса обновления. Дополнительные сведения о создании резервной копии баз данных DQS см. в разделе [Backing Up and Restoring DQS Databases](../../data-quality-services/backing-up-and-restoring-dqs-databases.md).  
@@ -42,7 +42,7 @@ ms.locfileid: "62775634"
   
     2.  На панели слева щелкните **Установка**.  
   
-    3.  В области справа щелкните **обновление с SQL Server 2005, SQL Server 2008, SQL Server 2008 R2 или SQL Server 2012**.  
+    3.  На правой панели щелкните **обновить с SQL Server 2005, SQL Server 2008, SQL Server 2008 R2 или SQL Server 2012**.  
   
     4.  Завершите работу мастера установки.  
   
@@ -69,8 +69,8 @@ ms.locfileid: "62775634"
   
     5.  После успешного обновления схемы баз данных DQS отображается сообщение о завершении.  
   
-##  <a name="Verify"></a> Проверка обновления баз данных DQS схемы  
- Для проверки, что схема баз данных DQS обновлена успешно, можно проверить в текущей версии базы данных DQS_MAIN и DQS_PROJECTS с помощью запроса к таблице A_DB_VERSION в каждой базе данных. Для этого сделайте следующее:  
+##  <a name="Verify"></a>Проверка обновления схемы баз данных DQS  
+ Для проверки, что схема баз данных DQS обновлена успешно, можно проверить в текущей версии базы данных DQS_MAIN и DQS_PROJECTS с помощью запроса к таблице A_DB_VERSION в каждой базе данных. Для этого выполните следующие действия:  
   
 1.  Запустите среду SQL Server Management Studio и установите соединение с экземпляром SQL Server, содержащий обновленные базы данных DQS схемы.  
   
@@ -83,14 +83,14 @@ ms.locfileid: "62775634"
   
 3.  Выводится запись для каждой операции обновления, а также дата создания обновления. Максимальное VERSION_ID и ASSEMBLY_VERSION на самой последней даты текущую версию. Значение 2 в столбце STATUS означает успешное выполнение процедуры. Если возникла ошибка, то ОШИБКА перечисляются в столбец. Образец вывода:  
   
-    |ID|UPGRADE_DATE|VERSION_ID|ASSEMBLY_VERSION|USER_NAME|STATUS|ошибка|  
+    |ID|UPGRADE_DATE|VERSION_ID|ASSEMBLY_VERSION|USER_NAME|Состояние|ОШИБКА|  
     |--------|-------------------|-----------------|-----------------------|----------------|------------|-----------|  
-    |1000|2013-08-11 05:26:39.567|1200|11.0.3000.0|\<Домен\имя_пользователя>|2||  
-    |1001|2013-09-19 15:09:37.750|1600|12.0.xxxx.0|\<Домен\имя_пользователя>|2||  
+    |1000|2013-08-11 05:26:39.567|1200|11.0.3000.0|\<Домен \ имя_пользователя>|2||  
+    |1001|2013-09-19 15:09:37.750|1600|12.0.xxxx.0|\<Домен \ имя_пользователя>|2||  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Установка служб Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
- [Удаление объектов сервера служб Data Quality](../../sql-server/install/remove-data-quality-server-objects.md)   
+ [Удаление объектов служб Data Quality Services](../../sql-server/install/remove-data-quality-server-objects.md)   
  [Обновление до SQL Server 2014](upgrade-sql-server.md)  
   
   

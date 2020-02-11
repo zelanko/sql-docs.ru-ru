@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 17591d2420b23c741d988b87a6de2519cbcc4bb2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62826989"
 ---
 # <a name="commands"></a>Команды
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщик OLE DB для собственного клиента предоставляет **ICommand** интерфейса и объекты команд, которые описаны в этом разделе:  
+  Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента предоставляет интерфейс **ICommand** и объекты команд, описанные в этом разделе.  
   
--   [Синтаксис команд](command-syntax.md)  
+-   [Синтаксис команды](command-syntax.md)  
   
 -   [Параметры команд](command-parameters.md)  
   
@@ -31,7 +31,7 @@ ms.locfileid: "62826989"
   
 -   [Команды, формирующие результаты с несколькими наборами строк](commands-generating-multiple-rowset-results.md)  
   
-## <a name="see-also"></a>См. также  
- [SQL Server Native Client (OLE DB)](../native-client/ole-db/sql-server-native-client-ole-db.md)  
+## <a name="see-also"></a>См. также:  
+ [SQL Server Native Client &#40;OLE DB&#41;](../native-client/ole-db/sql-server-native-client-ole-db.md)  
   
   
