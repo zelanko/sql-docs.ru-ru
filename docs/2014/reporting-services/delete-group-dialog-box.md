@@ -16,24 +16,24 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 85b9387b5e60cdcdfd7af17bc3268f5ee475b739
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109319"
 ---
 # <a name="delete-group-dialog-box"></a>Диалоговое окно «Удаление группы»
   Чтобы удалить группу из области данных таблицы, матрицы или списка, используйте диалоговое окно **Удаление группы** . Если с группой связаны строки или столбцы, эти структуры также могут быть удалены.  
   
 ## <a name="options"></a>Параметры  
- **Удалить группу и связанные строки и столбцы**  
+ **Удалить группу, а также связанные с ней строки и столбцы**  
  Этот параметр используется для удаления определения группы вместе со всеми строками и столбцами, связанными с данной группой.  
   
  **Удалить только группу**  
  Этот параметр используется для удаления только определения группы.  
   
-## <a name="see-also"></a>См. также  
- [Справка F1 конструктора отчетов](tools/report-designer-f1-help.md)   
+## <a name="see-also"></a>См. также:  
+ [Справка F1 конструктор отчетов](tools/report-designer-f1-help.md)   
  [Основные сведения о группах (построитель отчетов и службы SSRS)](report-design/understanding-groups-report-builder-and-ssrs.md)   
  [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

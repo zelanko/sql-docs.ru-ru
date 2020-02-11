@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5aebada2f962e2b90f96a9822dbbe76e796f23e5
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811053"
 ---
 # <a name="understanding-the-database-schemas"></a>Основные сведения о схемах баз данных
@@ -94,7 +94,7 @@ ms.locfileid: "68811053"
 |CustomRollupPropertiesColumn|500|  
 |UnaryOperatorColumn|1|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Основные сведения о добавочном создании](understanding-incremental-generation.md)   
  [Управление изменениями в источниках данных и представлениях источников данных](manage-changes-to-data-source-views-and-data-sources.md)  
   

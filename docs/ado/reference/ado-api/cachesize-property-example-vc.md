@@ -1,5 +1,5 @@
 ---
-title: Пример свойства CacheSize (Visual C++) | Документация Майкрософт
+title: Пример свойства CacheSize (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: e0e7b7ba-3943-43cb-a2cd-0e4667187973
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 98670a6f63392a3f208eb7719b0be52a9422d59a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920256"
 ---
 # <a name="cachesize-property-example-vc"></a>Пример свойства CacheSize (Visual C++)
-В этом примере используется [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) свойство показывается разница в производительности для операции выполняется с и без 30 записи кэша.  
+В этом примере используется свойство [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) , чтобы продемонстрировать разницу в производительности для операции, выполняемой с 30-записывающим кэшем и без него.  
   
 ```  
 // CacheSize_Property_Sample.cpp  
@@ -160,6 +160,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Пример свойства CacheSize (ADO)](../../../ado/reference/ado-api/cachesize-property-ado.md)   
+## <a name="see-also"></a>См. также:  
+ [Свойство CacheSize (ADO)](../../../ado/reference/ado-api/cachesize-property-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

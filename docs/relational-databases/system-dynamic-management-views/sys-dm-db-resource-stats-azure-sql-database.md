@@ -20,10 +20,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 1dd66834788896e6952a0352eb2a19fd1a828513
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245955"
 ---
 # <a name="sysdm_db_resource_stats-azure-sql-database"></a>sys.dm_db_resource_stats (база данных SQL Azure)
@@ -31,9 +31,9 @@ ms.locfileid: "75245955"
 
   Возвращает сведения об использовании ЦП, ввода-вывода и памяти для базы данных [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Новая строка создается каждые 15 секунд, даже если в базе данных не выполняется никаких действий. Исторические данные хранятся примерно один час.  
   
-|Столбцы|Тип данных|Описание|  
+|Столбцы|Тип данных|Description|  
 |-------------|---------------|-----------------|  
-|end_time|**DateTime**|Время в формате UTC, указывающее окончание текущего отчетного интервала.|  
+|end_time|**datetime**|Время в формате UTC, указывающее окончание текущего отчетного интервала.|  
 |avg_cpu_percent|**Decimal (5, 2)**|Средний уровень использования вычислительных мощностей в процентах от предела для уровня службы.|  
 |avg_data_io_percent|**Decimal (5, 2)**|Среднее использование операций ввода-вывода данных в процентах от ограничения уровня службы. Сведения о масштабировании баз данных см. [в статье Статистика использования ресурсов при вводе](https://docs.microsoft.com/azure/sql-database/sql-database-hyperscale-performance-diagnostics#data-io-in-resource-utilization-statistics)-выводе.|  
 |avg_log_write_percent|**Decimal (5, 2)**|Среднее число операций записи в журнал транзакций (в Мбит/с) в процентах от пределов уровня службы.|  
@@ -55,7 +55,7 @@ ms.locfileid: "75245955"
 ## <a name="permissions"></a>Разрешения  
  Для этого представления необходимо разрешение VIEW DATABASE STATE.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Данные, возвращаемые **sys. dm_db_resource_stats** , выражаются в процентах от максимально допустимого уровня обслуживания и производительности, который вы используете.
  
  Если база данных переключилась на другой сервер за последние 60 минут, представление будет возвращать только данные за то время, в течение которого она была базой данных-источником с момента отработки отказа.  
@@ -100,7 +100,7 @@ FROM sys.dm_db_resource_stats;
   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sys. resource_stats &#40;базы данных SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
  [Уровни служб](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)   
  [Возможности и ограничения уровней служб](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)  

@@ -1,5 +1,5 @@
 ---
-title: Наследуемые транзакции | Документация Майкрософт
+title: Унаследованные транзакции | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d8e22375e660e6bcd55c8075edaaba067160279d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058057"
 ---
 # <a name="inherited-transactions"></a>Наследуемые транзакции
@@ -37,11 +37,11 @@ ms.locfileid: "66058057"
   
  Пакеты и задачи имеют следующие атрибуты транзакции:  
   
--   Параметру**TransactionOption** присвоено значение **Required** для пакетов A и C  
+-   Для **TransactionOption** задано значение **Required** для пакетов A и C.  
   
--   Параметру**TransactionOption** присвоено значение **Supported** в пакетах B и D, а также в задачах выполнения пакетов B, D и F.  
+-   **TransactionOption** имеет значение **Supported** для пакетов b и D, а в задачах выполняется пакет b, выполнение пакета D и выполнение пакета F.  
   
--   Параметру**TransactionOption** присвоено значение **NotSupported** в пакете E, а также в задачах выполнения пакетов C и E.  
+-   Для **TransactionOption** задано значение **NotSupported** в пакете E, а в задачах выполняется пакет C и выполняется пакет E.  
   
  ![Поток унаследованных транзакций](media/mw-dts-executepack.gif "Поток унаследованных транзакций")  
   

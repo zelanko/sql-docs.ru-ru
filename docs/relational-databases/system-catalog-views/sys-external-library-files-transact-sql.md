@@ -19,25 +19,25 @@ ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d7af0a7fcb639ae3beab6216e77f9b7b95a398da
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68471094"
 ---
-# <a name="sysexternallibraryfiles-transact-sql"></a>sys. external_library_files (Transact-SQL)  
+# <a name="sysexternal_library_files-transact-sql"></a>sys.external_library_files (Transact-SQL)  
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Содержит строку для каждого файла, составляющего внешнюю библиотеку.
 
-|Имя столбца |Тип данных |Описание|
+|Имя столбца |Тип данных |Description|
 |------|------|-----|
-|external_library_id | ssNoversion |Идентификатор объекта внешней библиотеки. |
-|content |varbinary(max) |Содержимое артефакта внешнего файла библиотеки. |
-|платформы |tinyint |Идентификатор платформы узла, на которой установлен SQL Server. |
+|external_library_id | INT |Идентификатор объекта внешней библиотеки. |
+|Содержимое |varbinary(max) |Содержимое артефакта внешнего файла библиотеки. |
+|платформа |tinyint; |Идентификатор платформы узла, на которой установлен SQL Server. |
 |platform_desc | nvarchar(60) |Имя платформы узла. Допустимые значения: "WINDOWS", "LINUX". |
 
-### <a name="see-also"></a>См. также  
+### <a name="see-also"></a>См. также раздел  
 
 [sys.external_libraries](sys-external-libraries-transact-sql.md)  
 [СОЗДАТЬ ВНЕШНЮЮ БИБЛИОТЕКУ](../../t-sql/statements/create-external-library-transact-sql.md)  

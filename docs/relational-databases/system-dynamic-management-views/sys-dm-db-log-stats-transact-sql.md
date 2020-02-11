@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_log_stats (Transact-SQL) | Документация Майкрософт
+title: sys. dm_db_log_stats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 05/17/2017
 ms.prod: sql
@@ -20,16 +20,16 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b23eea391c7de1f02eacec7f8c8625211dfeea3d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68004834"
 ---
-# <a name="sysdmdblogstats-transact-sql"></a>sys.dm_db_log_stats (Transact-SQL)   
+# <a name="sysdm_db_log_stats-transact-sql"></a>sys.dm_db_log_stats (Transact-SQL)   
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
 
-Возвращает сводку атрибутов и сведения о файлах журналов транзакций баз данных. Эти сведения можно используйте для мониторинга и диагностики работоспособности журнала транзакций.   
+Возвращает атрибуты уровня сводки и сведения о файлах журнала транзакций баз данных. Используйте эти сведения для мониторинга и диагностики работоспособности журнала транзакций.   
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,45 +43,45 @@ ms.locfileid: "68004834"
 
 *database_id* | NULL | **По умолчанию**
 
-Идентификатор базы данных. Свойство `database_id` имеет значение `int`. Допустимыми входными значениями являются идентификатор базы данных, `NULL`, или `DEFAULT`. Значение по умолчанию — `NULL`. `NULL` и `DEFAULT` , эквивалентные значения в контексте текущей базы данных.  
-Встроенная функция [DB_ID](../../t-sql/functions/db-id-transact-sql.md) можно указать. При использовании `DB_ID` без указания имени базы данных, уровень совместимости текущей базы данных должен быть равен 90 или выше.
+Идентификатор базы данных. Параметр `database_id` равен `int`. Допустимые входные данные — это ИДЕНТИФИКАЦИОНный номер `NULL`базы данных `DEFAULT`, или. Значение по умолчанию — `NULL`. `NULL`и `DEFAULT` являются эквивалентными значениями в контексте текущей базы данных.  
+Может быть указана встроенная функция [DB_ID](../../t-sql/functions/db-id-transact-sql.md). При использовании `DB_ID` без указания имени базы данных уровень совместимости текущей базы данных должен быть 90 или выше.
 
   
 ## <a name="tables-returned"></a>Возвращаемые таблицы  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |database_id    |**int**    |Идентификатор базы данных |  
-|recovery_model |**nvarchar(60)**   |   Модель восстановления базы данных. Возможные значения. <br /> SIMPLE<br /> BULK_LOGGED <br /> FULL |  
-|log_min_lsn    |**nvarchar(24)**   |   Текущее начало [регистрационный номер транзакции в (журнале LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) в журнале транзакций.|  
-|log_end_lsn    |**nvarchar(24)**   |   [Регистрационный номер транзакции в (журнале LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) последней записи журнала в журнале транзакций.|  
-|current_vlf_sequence_number    |**bigint** |   Текущий [виртуальный файл журнала (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) порядковый номер во время выполнения.|  
-|current_vlf_size_mb    |**float**  |   Текущий [виртуальный файл журнала (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) размер в МБ.|   
+|recovery_model |**nvarchar (60)**   |   Модель восстановления базы данных. Ниже перечислены возможные значения. <br /> ПРОСТОЙ<br /> BULK_LOGGED <br /> FULL |  
+|log_min_lsn    |**nvarchar(24)**   |   Текущий начальный [регистрационный номер транзакции в журнале](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) в журнале транзакций.|  
+|log_end_lsn    |**nvarchar(24)**   |   Регистрационный [номер транзакции в журнале (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) последней записи журнала в журнале транзакций.|  
+|current_vlf_sequence_number    |**bigint** |   Текущий порядковый номер [файла виртуального журнала (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) во время выполнения.|  
+|current_vlf_size_mb    |**float**  |   Текущий размер [виртуального файла журнала (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) в МБ.|   
 |total_vlf_count    |**bigint** |   Общее число [виртуальных файлов журнала (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) в журнале транзакций. |  
-|total_log_size_mb  |**float**  |   Полном размере журнала транзакций в МБ. |  
+|total_log_size_mb  |**float**  |   Общий размер журнала транзакций в МБ. |  
 |active_vlf_count   |**bigint** |   Общее число активных [виртуальных файлов журнала (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) в журнале транзакций.|  
-|active_log_size_mb |**float**  |   Общее активной транзакции размер журнала в МБ.|  
-|log_truncation_holdup_reason   |**nvarchar(60)**   |   Причина задержки усечения журнала. Значение совпадает с `log_reuse_wait_desc` столбец `sys.databases`.  (Более подробные объяснения этих значений, см. в разделе [журнал транзакций](../../relational-databases/logs/the-transaction-log-sql-server.md)). <br />Возможные значения. <br />NOTHING;<br />CHECKPOINT<br />LOG_BACKUP<br />ACTIVE_BACKUP_OR_RESTORE<br />ACTIVE_TRANSACTION<br />DATABASE_MIRRORING<br />REPLICATION<br />DATABASE_SNAPSHOT_CREATION<br />LOG_SCAN<br />AVAILABILITY_REPLICA<br />OLDEST_PAGE<br />XTP_CHECKPOINT<br />НЕСОХРАНЯЕМЫМ ДРУГИХ |  
-|log_backup_time    |**datetime**   |   Время последней транзакции журнала резервного копирования.|   
-|log_backup_lsn |**nvarchar(24)**   |   Последней резервной копии журнала транзакций [регистрационный номер транзакции в (журнале LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch).|   
-|log_since_last_log_backup_mb   |**float**  |   Размер журнала в МБ с момента последней резервной копии журнала транзакций [регистрационный номер транзакции в (журнале LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch).|  
-|log_checkpoint_lsn |**nvarchar(24)**   |   Последней контрольной точки [регистрационный номер транзакции в (журнале LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch).|  
-|log_since_last_checkpoint_mb   |**float**  |   Размер журнала в МБ с момента последней контрольной точки [регистрационный номер транзакции в (журнале LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch).|  
-|log_recovery_lsn   |**nvarchar(24)**   |   Восстановление [регистрационный номер транзакции в (журнале LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) базы данных. Если `log_recovery_lsn` происходит до номера LSN, контрольной точки `log_recovery_lsn` является самой старой активной транзакции номер LSN, в противном случае `log_recovery_lsn` — это номер LSN контрольной точки.|  
-|log_recovery_size_mb   |**float**  |   Размер журнала в МБ с момента восстановления журнала [регистрационный номер транзакции в (журнале LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch).|  
-|recovery_vlf_count |**bigint** |   Общее число [виртуальных файлов журнала (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) для восстановления, если произошла отработка отказа или перезапуск сервера. |  
+|active_log_size_mb |**float**  |   Общий размер журнала активных транзакций в МБ.|  
+|log_truncation_holdup_reason   |**nvarchar (60)**   |   Причина усечения журнала задержки. Значение совпадает со `log_reuse_wait_desc` столбцом `sys.databases`.  (Более подробное объяснение этих значений см. [в журнале транзакций](../../relational-databases/logs/the-transaction-log-sql-server.md)). <br />Ниже перечислены возможные значения. <br />NOTHING;<br />CHECKPOINT<br />LOG_BACKUP<br />ACTIVE_BACKUP_OR_RESTORE<br />ACTIVE_TRANSACTION<br />DATABASE_MIRRORING<br />РЕПЛИКАЦИЯ<br />DATABASE_SNAPSHOT_CREATION<br />LOG_SCAN<br />AVAILABILITY_REPLICA<br />OLDEST_PAGE<br />XTP_CHECKPOINT<br />ДРУГИЕ ВРЕМЕННЫЕ |  
+|log_backup_time    |**datetime**   |   Время последнего резервного копирования журнала транзакций.|   
+|log_backup_lsn |**nvarchar(24)**   |   [Номер LSN](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)последней резервной копии журнала транзакций.|   
+|log_since_last_log_backup_mb   |**float**  |   Размер журнала в МБ с момента последнего резервного копирования журнала транзакций [(номер LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch).|  
+|log_checkpoint_lsn |**nvarchar(24)**   |   [Порядковый номер транзакции в журнале](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)последней контрольной точки (LSN).|  
+|log_since_last_checkpoint_mb   |**float**  |   Размер журнала в МБ с момента последней контрольной точки в [журнале (номер LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch).|  
+|log_recovery_lsn   |**nvarchar(24)**   |   Регистрационный [номер транзакции в журнале (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) базы данных. Если `log_recovery_lsn` происходит перед номером LSN контрольной `log_recovery_lsn` точки, то это самый старый номер LSN `log_recovery_lsn` активной транзакции, в противном случае — номер LSN контрольной точки.|  
+|log_recovery_size_mb   |**float**  |   Размер журнала в МБ, начиная с момента [регистрационного номера транзакции в журнале восстановления журнала (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch).|  
+|recovery_vlf_count |**bigint** |   Общее число [файлов виртуального журнала (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) для восстановления при отработке отказа или перезапуске сервера. |  
 
 
-## <a name="remarks"></a>Примечания
-При выполнении `sys.dm_db_log_stats` в базе данных, участвующих в группе доступности является вторичной, будет возвращаться только подмножество полей, описанных выше.  В настоящее время только `database_id`, `recovery_model`, и `log_backup_time` будет возвращаться при выполнении для базы данных-получателя.   
+## <a name="remarks"></a>Remarks
+При запуске `sys.dm_db_log_stats` базы данных, участвующей в группе доступности в качестве вторичной реплики, будет возвращено только подмножество полей, описанных выше.  В настоящее время `database_id`при `recovery_model`выполнении в `log_backup_time` базе данных-получателе будут возвращаться только, и.   
 
 ## <a name="permissions"></a>Разрешения  
 Требуется `VIEW DATABASE STATE` разрешение в базе данных.   
   
 ## <a name="examples"></a>Примеры  
 
-### <a name="a-determining-databases-in-a-includessnoversionincludesssnoversion-mdmd-instance-with-high-number-of-vlfs"></a>A. Определение баз данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляр с большое количество виртуальных файлов журнала   
-Следующий запрос возвращает баз данных с более чем 100 виртуальных файлов журнала в файлах журнала. Большое количество виртуальных файлов журнала может повлиять на время запуска, восстановления и восстановления базы данных.
+### <a name="a-determining-databases-in-a-includessnoversionincludesssnoversion-mdmd-instance-with-high-number-of-vlfs"></a>A. Определение баз данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляре с большим количеством VLF   
+Следующий запрос возвращает базы данных с более чем 100 VLF в файлах журнала. Большое число VLF может повлиять на время запуска, восстановления и восстановления базы данных.
 
 ```sql  
 SELECT name AS 'Database Name', total_vlf_count AS 'VLF count' 
@@ -90,8 +90,8 @@ CROSS APPLY sys.dm_db_log_stats(s.database_id)
 WHERE total_vlf_count  > 100;
 ```   
 
-### <a name="b-determining-databases-in-a-includessnoversionincludesssnoversion-mdmd-instance-with-transaction-log-backups-older-than-4-hours"></a>Б. Определение баз данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляр резервных копий журналов транзакций старше 4 часа   
-Следующий запрос определяет, последнее время резервного копирования журнала для баз данных в экземпляре.
+### <a name="b-determining-databases-in-a-includessnoversionincludesssnoversion-mdmd-instance-with-transaction-log-backups-older-than-4-hours"></a>Б. Определение баз данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляре с резервными копиями журнала транзакций старше 4 часов   
+Следующий запрос определяет время последнего резервного копирования журнала для баз данных в экземпляре.
 
 ```sql  
 SELECT name AS 'Database Name', log_backup_time AS 'last log backup time' 
@@ -99,9 +99,9 @@ FROM sys.databases AS s
 CROSS APPLY sys.dm_db_log_stats(s.database_id); 
 ```
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Динамические административные представления и функции (Transact-SQL)](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
-[Динамические административные представления, относящиеся к базе данных &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
-[sys.dm_db_log_space_usage (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
-[sys.dm_db_log_info (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)    
+[Динамические административные представления, связанные с базами данных &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
+[sys. dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
+[sys. dm_db_log_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)    
   

@@ -16,10 +16,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8286c918c224b92e1f391931569030a7218252f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68198425"
 ---
 # <a name="sql-server-audit-database-engine"></a>Подсистема аудита SQL Server (Database Engine)
@@ -29,15 +29,16 @@ ms.locfileid: "68198425"
   
  Группы действий аудита сервера можно записывать для всего экземпляра, а также группы действий аудита базы данных либо действия аудита базы данных для каждой базы данных. Событие аудита будет происходить каждый раз при обнаружении действия, подлежащего аудиту.  
   
- Аудит на уровне сервера поддерживается во всех выпусках [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Аудит на уровне базы банных доступен только в выпусках Enterprise Edition, Developer Edition и Evaluation Edition. Дополнительные сведения см. в разделе [Features Supported by the Editions of SQL Server 2014](../../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ Аудит на уровне сервера поддерживается во всех выпусках [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Аудит на уровне базы банных доступен только в выпусках Enterprise Edition, Developer Edition и Evaluation Edition. Дополнительные сведения см. [в разделе функции, поддерживаемые различными Выпусками SQL Server 2014](../../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ## <a name="sql-server-audit-components"></a>Компоненты подсистемы аудита SQL Server  
- *Аудит* — это сочетание в едином пакете нескольких элементов для определенной группы действий сервера или базы данных. Компоненты подсистемы аудита [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] совместно формируют выходные данные, называемые аудитом, аналогично тому, как определение отчета в сочетании с элементами графики и данных формирует отчет.  
+ 
+  *Аудит* — это сочетание в едином пакете нескольких элементов для определенной группы действий сервера или базы данных. Компоненты подсистемы аудита [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] совместно формируют выходные данные, называемые аудитом, аналогично тому, как определение отчета в сочетании с элементами графики и данных формирует отчет.  
   
- Подсистема аудита[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использует *расширенные события* для создания аудита. Дополнительные сведения о расширенных событиях см. в разделе [Расширенные события](../../extended-events/extended-events.md).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Аудит использует *Расширенные события* для создания аудита. Дополнительные сведения о расширенных событиях см. в разделе [Расширенные события](../../extended-events/extended-events.md).  
   
 ### <a name="sql-server-audit"></a>подсистема аудита SQL Server  
- Объект *Подсистема аудита SQL Server* объединяет отдельные экземпляры действий или групп действий уровня сервера или базы данных, за которыми нужно проводить наблюдение. Аудит работает на уровне экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . На одном экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] может существовать несколько аудитов.  
+ Объект *SQL Server Audit* собирает один экземпляр действий и групп действий уровня сервера или базы данных, которые необходимо отслеживать. Аудит работает на уровне экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . На одном экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] может существовать несколько аудитов.  
   
  При определении аудита задается место для вывода результатов. Оно называется назначением аудита. Аудит создается в *отключенном* состоянии и не выполняет автоматический аудит никаких действий. После включения аудита назначение аудита начинает получать от него данные.  
   
@@ -51,7 +52,7 @@ ms.locfileid: "68198425"
 ### <a name="database-audit-specification"></a>Спецификация аудита базы данных  
  Объект *Спецификация аудита базы данных* также принадлежит подсистеме аудита [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Для каждого аудита каждой базы данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] можно создать одну спецификацию аудита базы данных.  
   
- Спецификация аудита базы данных включает действия аудита уровня базы данных, вызываемые компонентом расширенных событий. В спецификацию аудита базы данных можно добавлять либо группы действий аудита, либо события аудита. *События аудита* — это атомарные события, аудит которых может производиться ядром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . *Группы действий аудита* — это стандартные группы действий. Они расположены в области базы данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Эти действия передаются аудиту, который регистрирует их в целевом объекте. Не включайте объекты области сервера, такие как системные представления, в пользовательскую спецификацию аудита базы данных.  
+ Спецификация аудита базы данных включает действия аудита уровня базы данных, вызываемые компонентом расширенных событий. В спецификацию аудита базы данных можно добавлять либо группы действий аудита, либо события аудита. *События аудита* — это атомарные действия, которые могут быть проверены [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ядром. *Группы действий аудита* — это стандартные группы действий. Они расположены в области базы данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Эти действия передаются аудиту, который регистрирует их в целевом объекте. Не включайте объекты области сервера, такие как системные представления, в пользовательскую спецификацию аудита базы данных.  
   
  Группы действий подсистемы аудита уровня базы данных и действия подсистемы аудита описываются в разделе [Действия и группы действий подсистемы аудита SQL Server](sql-server-audit-action-groups-and-actions.md).  
   
@@ -61,7 +62,7 @@ ms.locfileid: "68198425"
 > [!IMPORTANT]  
 >  Любой прошедший проверку пользователь может осуществлять чтение и запись в журнале событий приложений. Для работы с журналом событий приложений необходимо меньше разрешений, чем для работы с журналом событий безопасности Windows; журнал событий приложений менее защищен, чем журнал событий безопасности Windows.  
   
- Для записи в журнал событий безопасности Windows необходимо добавить в политику [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Создание аудитов безопасности **учетную запись службы** . По умолчанию в эту политику входят учетные записи «Локальная система», «Локальная служба» и «Сетевая служба». Этот параметр можно настроить с помощью оснастки политики безопасности (secpol.msc). Кроме того, политика безопасности **Аудит доступа к объектам** должна быть включена для регистрации как **успешных** , так и **неуспешных**действий. Этот параметр можно настроить с помощью оснастки политики безопасности (secpol.msc). В [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] или Windows Server 2008, можно задать более детальную настройку **приложение, созданное** политики из командной строки с помощью программы политики аудита (`AuditPol.exe)`. Дополнительные сведения по включению функции записи в журнал безопасности Windows см. в разделе [Запись событий подсистемы аудита SQL Server в журнал безопасности](write-sql-server-audit-events-to-the-security-log.md). Дополнительные сведения о программе Auditpol.exe см. в статье базы знаний 921469 [Использование групповой политики для детальной настройки аудита безопасности](https://support.microsoft.com/kb/921469/). Журналы событий Windows являются глобальными для операционной системы Windows. Дополнительные сведения о журналах событий Windows см. в разделе [Общие сведения о средстве просмотра событий](https://go.microsoft.com/fwlink/?LinkId=101455). Если для аудита необходимы более точные разрешения, используйте назначение «двоичный файл».  
+ Для записи в журнал событий безопасности Windows необходимо добавить в политику [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Создание аудитов безопасности **учетную запись службы** . По умолчанию в эту политику входят учетные записи «Локальная система», «Локальная служба» и «Сетевая служба». Этот параметр можно настроить с помощью оснастки политики безопасности (secpol.msc). Кроме того, политика безопасности **Аудит доступа к объектам** должна быть включена для регистрации как **успешных** , так и **неуспешных**действий. Этот параметр можно настроить с помощью оснастки политики безопасности (secpol.msc). В [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] или Windows Server 2008 можно задать более детализированную политику, **созданную приложением** , из командной строки с помощью программы политики аудита (`AuditPol.exe)`. Дополнительные сведения по включению функции записи в журнал безопасности Windows см. в разделе [Запись событий подсистемы аудита SQL Server в журнал безопасности](write-sql-server-audit-events-to-the-security-log.md). Дополнительные сведения о программе Auditpol.exe см. в статье базы знаний 921469 [Использование групповой политики для детальной настройки аудита безопасности](https://support.microsoft.com/kb/921469/). Журналы событий Windows являются глобальными для операционной системы Windows. Дополнительные сведения о журналах событий Windows см. в разделе [Общие сведения о средстве просмотра событий](https://go.microsoft.com/fwlink/?LinkId=101455). Если для аудита необходимы более точные разрешения, используйте назначение «двоичный файл».  
   
  Если данные аудита сохраняются в файл, то для предотвращения подмены можно ограничить доступ к файлу следующим образом.  
   
@@ -104,7 +105,7 @@ ms.locfileid: "68198425"
   
  Дополнительные сведения об аудите см. в разделах [Создание аудита сервера и спецификации аудита сервера](create-a-server-audit-and-server-audit-specification.md) и [Создание спецификации аудита для сервера и базы данных](create-a-server-audit-and-database-audit-specification.md).  
   
-## <a name="considerations"></a>Замечания  
+## <a name="considerations"></a>Рекомендации  
  В случае ошибки при инициализации аудита сервер не будет запущен. В этом случае его можно запустить, если в командную строку включить параметр **-f**.  
   
  Если ошибка аудита вызывает отключение сервера или не дает ему запуститься, поскольку для аудита был задан режим ON_FAILURE=SHUTDOWN, то в журнал будет записано событие MSG_AUDIT_FORCED_SHUTDOWN. Поскольку выключение происходит при первом возникновении этого события, это событие будет записано один раз. Это событие записывается после получения сообщения об ошибке, означающего, что аудит вызвал отключение. Администратор может обойти завершения работы, вызываемые аудитом, запустив [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в однопользовательском режиме с использованием флага **-m**. При запуске в однопользовательском режиме будет произведено изменение настроек любого аудита, запускающегося в этом сеансе, для которого было задано условие ON_FAILURE=SHUTDOWN. Такие аудиты будут запускаться с условием ON_FAILURE=CONTINUE. Если [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] запускается с использованием флага **-m**, то в журнал ошибок будет записано сообщение MSG_AUDIT_SHUTDOWN_BYPASSED.  
@@ -119,14 +120,14 @@ ms.locfileid: "68198425"
 ### <a name="database-mirroring-and-sql-server-audit"></a>Зеркальное отображение баз данных и подсистема аудита SQL Server  
  Если для базы данных определена спецификация аудита базы данных и используется зеркальное отображение базы данных, то в нее будет включена спецификация аудита базы данных. Для правильной работы на зеркальном экземпляре SQL необходимо выполнить настройку следующих элементов.  
   
--   Чтобы спецификация аудита базы данных могла создавать записи аудита, на зеркальном сервере должен присутствовать аудит с тем же идентификатором GUID. Это можно настроить с помощью команды CREATE AUDIT WITH GUID`=` *\<GUID из аудита исходного сервера*>.  
+-   Чтобы спецификация аудита базы данных могла создавать записи аудита, на зеркальном сервере должен присутствовать аудит с тем же идентификатором GUID. Это можно настроить с помощью команды создать аудит с`=`GUID*\<GUID из> аудита исходного сервера* .  
   
 -   При использовании в качестве цели двоичного файла учетная запись службы зеркального сервера должна обладать необходимыми разрешениями на место назначения, куда производится запись аудиторского следа.  
   
 -   При использовании в качестве целей журналов событий Windows политика безопасности на компьютере, на котором расположен зеркальный сервер, должна разрешать учетной записи службы доступ к журналу событий безопасности или приложений.  
   
 ### <a name="auditing-administrators"></a>Администраторы аудита  
- Членами `sysadmin` предопределенной роли сервера определены как **dbo** пользователя в каждой базе данных. Действия аудита администраторов выполняются как действия аудита пользователя **dbo** .  
+ Члены `sysadmin` предопределенной роли сервера определяются как пользователь **dbo** в каждой базе данных. Действия аудита администраторов выполняются как действия аудита пользователя **dbo** .  
   
 ## <a name="creating-and-managing-audits-with-transact-sql"></a>Создание аудита и работа с ним на Transact-SQL  
  Для реализации всех аспектов аудита среды [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] можно использовать инструкции DDL, представления каталогов и динамические административные представления и функции.  
@@ -136,16 +137,16 @@ ms.locfileid: "68198425"
   
 |||  
 |-|-|  
-|[ALTER AUTHORIZATION](/sql/t-sql/statements/alter-authorization-transact-sql)|[CREATE SERVER AUDIT](/sql/t-sql/statements/create-server-audit-transact-sql)|  
-|[ALTER DATABASE AUDIT SPECIFICATION](/sql/t-sql/statements/alter-database-audit-specification-transact-sql)|[CREATE SERVER AUDIT SPECIFICATION](/sql/t-sql/statements/create-server-audit-specification-transact-sql)|  
-|[ALTER SERVER AUDIT](/sql/t-sql/statements/alter-server-audit-specification-transact-sql)|[DROP DATABASE AUDIT SPECIFICATION](/sql/t-sql/statements/drop-database-encryption-key-transact-sql)|  
-|[ALTER SERVER AUDIT SPECIFICATION](/sql/t-sql/statements/alter-server-audit-transact-sql)|[DROP SERVER AUDIT](/sql/t-sql/statements/drop-server-audit-transact-sql)|  
-|[CREATE DATABASE AUDIT SPECIFICATION](/sql/t-sql/statements/create-database-audit-specification-transact-sql)|[DROP SERVER AUDIT SPECIFICATION](/sql/t-sql/statements/drop-server-audit-specification-transact-sql)|  
+|[ALTER AUTHORIZATION](/sql/t-sql/statements/alter-authorization-transact-sql)|[СОЗДАТЬ АУДИТ СЕРВЕРА](/sql/t-sql/statements/create-server-audit-transact-sql)|  
+|[ИЗМЕНЕНИЕ СПЕЦИФИКАЦИИ АУДИТА БАЗЫ ДАННЫХ](/sql/t-sql/statements/alter-database-audit-specification-transact-sql)|[СОЗДАТЬ СПЕЦИФИКАЦИЮ АУДИТА СЕРВЕРА](/sql/t-sql/statements/create-server-audit-specification-transact-sql)|  
+|[ALTER SERVER AUDIT](/sql/t-sql/statements/alter-server-audit-specification-transact-sql)|[УДАЛИТЬ СПЕЦИФИКАЦИЮ АУДИТА БАЗЫ ДАННЫХ](/sql/t-sql/statements/drop-database-encryption-key-transact-sql)|  
+|[ALTER SERVER AUDIT SPECIFICATION](/sql/t-sql/statements/alter-server-audit-transact-sql)|[УДАЛИТЬ АУДИТ СЕРВЕРА](/sql/t-sql/statements/drop-server-audit-transact-sql)|  
+|[СОЗДАТЬ СПЕЦИФИКАЦИЮ АУДИТА БАЗЫ ДАННЫХ](/sql/t-sql/statements/create-database-audit-specification-transact-sql)|[УДАЛИТЬ СПЕЦИФИКАЦИЮ АУДИТА СЕРВЕРА](/sql/t-sql/statements/drop-server-audit-specification-transact-sql)|  
   
 ### <a name="dynamic-views-and-functions"></a>Динамические представления и функции  
  В следующей таблице перечисляются динамические представления и функции, которые можно использовать в подсистеме аудита [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-|Динамические представления и функции|Описание|  
+|Динамические представления и функции|Description|  
 |---------------------------------|-----------------|  
 |[sys.dm_audit_actions](/sql/relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql)|Возвращает строку для каждого действия аудита, которое может быть зарегистрировано в журнале аудита, и каждой группы действий аудита, которая может быть настроена в составе аудита [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
 |[sys.dm_server_audit_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql)|Предоставляет сведения о текущем состоянии аудита.|  
@@ -155,13 +156,13 @@ ms.locfileid: "68198425"
 ### <a name="catalog-views"></a>Представления каталога  
  В следующей таблице перечисляются представления каталога, которые можно использовать в подсистеме аудита [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-|Представления каталога|Описание|  
+|Представления каталога|Description|  
 |-------------------|-----------------|  
-|[sys.database_ audit_specifications](/sql/relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql)|Содержит сведения о спецификациях аудита базы данных в аудите [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на экземпляре сервера.|  
+|[sys. database_ audit_specifications](/sql/relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql)|Содержит сведения о спецификациях аудита базы данных в аудите [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на экземпляре сервера.|  
 |[sys.database_audit_specification_details](/sql/relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql)|Содержит сведения о спецификациях аудита базы данных в аудите [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на экземпляре сервера для всех баз данных.|  
 |[sys.server_audits](/sql/relational-databases/system-catalog-views/sys-server-audits-transact-sql)|Содержит по одной строке для каждого аудита [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в экземпляре сервера.|  
 |[sys.server_audit_specifications](/sql/relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql)|Содержит сведения о спецификациях аудита сервера в подсистеме аудита [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на экземпляре сервера.|  
-|[sys.server_audit_specifications_details](/sql/relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql)|Содержит сведения об элементах (действиях) спецификации аудита сервера в подсистеме аудита [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на экземпляре сервера.|  
+|[sys. server_audit_specifications_details](/sql/relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql)|Содержит сведения об элементах (действиях) спецификации аудита сервера в подсистеме аудита [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на экземпляре сервера.|  
 |[sys.server_file_audits](/sql/relational-databases/system-catalog-views/sys-server-file-audits-transact-sql)|Содержит расширенные сведения о типах аудита файлов в подсистеме аудита [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на экземпляре сервера.|  
   
 ## <a name="permissions"></a>Разрешения  
@@ -191,20 +192,20 @@ ms.locfileid: "68198425"
 ## <a name="related-tasks"></a>Связанные задачи  
  [Создание аудита сервера и спецификации аудита сервера](create-a-server-audit-and-server-audit-specification.md)  
   
- [Создание спецификации аудита для сервера и базы данных](create-a-server-audit-and-database-audit-specification.md)  
+ [Создание аудита сервера и спецификации аудита базы данных](create-a-server-audit-and-database-audit-specification.md)  
   
- [Просмотр журнала подсистемы аудита SQL Server](view-a-sql-server-audit-log.md)  
+ [Просмотр журнала аудита SQL Server](view-a-sql-server-audit-log.md)  
   
- [Запись событий подсистемы аудита SQL Server в журнал безопасности](write-sql-server-audit-events-to-the-security-log.md)  
+ [Запись SQL Server событий аудита в журнал безопасности](write-sql-server-audit-events-to-the-security-log.md)  
   
 ## <a name="topics-closely-related-to-auditing"></a>Темы, тесно связанные с аудитом  
- [Свойства сервера (страница "Безопасность")](../../../database-engine/configure-windows/server-properties-security-page.md)  
+ [Свойства сервера &#40;страница "безопасность"&#41;](../../../database-engine/configure-windows/server-properties-security-page.md)  
  Описывает, как включить аудит входа в систему для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Записи аудита хранятся в журнале приложений Windows.  
   
- [Параметр конфигурации сервера "c2 audit mode"](../../../database-engine/configure-windows/c2-audit-mode-server-configuration-option.md)  
+ [Параметр конфигурации сервера «c2 audit mode»](../../../database-engine/configure-windows/c2-audit-mode-server-configuration-option.md)  
  Описывается режим аудита в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], соответствующий стандарту безопасности С2.  
   
- [Категория событий Security Audit (приложение SQL Server Profiler)](../../../relational-databases/event-classes/security-audit-event-category-sql-server-profiler.md)  
+ [Категория событий Security Audit &#40;SQL Server Profiler&#41;](../../../relational-databases/event-classes/security-audit-event-category-sql-server-profiler.md)  
  Описываются события аудита, которые можно использовать в приложении [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]. Дополнительные сведения см. в разделе [Start SQL Server Profiler](../../../tools/sql-server-profiler/sql-server-profiler.md).  
   
  [Трассировка SQL](../../sql-trace/sql-trace.md)  
@@ -213,11 +214,11 @@ ms.locfileid: "68198425"
  [Триггеры DDL](../../triggers/ddl-triggers.md)  
  Объясняется, как можно использовать триггеры языка DDL для отслеживания изменения в базах данных.  
   
- [Microsoft TechNet: технический центр SQL Server: безопасность и защита SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=101152)  
+ [Microsoft TechNet: SQL Server TechCenter: SQL Server 2005 безопасность и защита](https://go.microsoft.com/fwlink/?LinkId=101152)  
  Содержит актуальные сведения о безопасности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>См. также:  
- [Действия и группы действий подсистемы аудита SQL Server](sql-server-audit-action-groups-and-actions.md)   
+ [SQL Server группы действий и действия аудита](sql-server-audit-action-groups-and-actions.md)   
  [Записи подсистемы аудита SQL Server](sql-server-audit-records.md)  
   
   

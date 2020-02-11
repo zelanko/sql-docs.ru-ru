@@ -8,19 +8,19 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3038bd010c5ca76ad26a301bad45ff4e1aa29460
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ea0a9915e062d7b6f15b63e18976e88cc339202d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68008059"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76939498"
 ---
 # <a name="predictassociation-dmx"></a>PredictAssociation (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Прогнозирует ассоциированное членство.  
   
-Например можно использовать функцию PredictAssociation получить набор рекомендаций, учитывая его текущее состояние корзины покупок для клиента. 
+Например, функцию PredictAssociation можно использовать для получения набора рекомендаций по текущему состоянию корзины покупок клиента. 
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -29,30 +29,30 @@ ms.locfileid: "68008059"
 PredictAssociation(<table column reference>, option1, option2, n ...)  
 ```  
   
-## <a name="applies-to"></a>Объект применения  
- Содержащие прогнозируемые вложенные таблицы, включая связи и некоторых алгоритмов классификации. Алгоритмы классификации, которые поддерживают вложенные таблицы: [!INCLUDE[msCoName](../includes/msconame-md.md)] дерева принятия решений, [!INCLUDE[msCoName](../includes/msconame-md.md)] упрощенный алгоритм Байеса и [!INCLUDE[msCoName](../includes/msconame-md.md)] алгоритмов нейронной сети.  
+## <a name="applies-to"></a>Применяется к  
+ Алгоритмы, содержащие прогнозируемые вложенные таблицы, включая ассоциации и некоторые алгоритмы классификации. Алгоритмы классификации, поддерживающие вложенные [!INCLUDE[msCoName](../includes/msconame-md.md)] таблицы, включают [!INCLUDE[msCoName](../includes/msconame-md.md)] в себя деревья принятия [!INCLUDE[msCoName](../includes/msconame-md.md)] решений, алгоритм Байеса (упрощенное и многоалгоритмное).  
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
- \<таблицы выражение >  
+ \<табличное выражение>  
   
-## <a name="remarks"></a>Примечания  
- Параметры для **PredictAssociation** функции включают EXCLUDE_NULL, INCLUDE_NULL, INCLUSIVE, EXCLUSIVE (по умолчанию), INPUT_ONLY, INCLUDE_STATISTICS и INCLUDE_NODE_ID.  
+## <a name="remarks"></a>Remarks  
+ К параметрам функции **PredictAssociation** относятся EXCLUDE_NULL, INCLUDE_NULL, инклюзивные, монопольные (по умолчанию), INPUT_ONLY, INCLUDE_STATISTICS и INCLUDE_NODE_ID.  
   
 > [!NOTE]  
 >  Параметры INCLUSIVE, EXCLUSIVE, INPUT_ONLY и INCLUDE_STATISTICS применяются только к ссылкам на столбцы таблицы, а EXCLUDE_NULL и INCLUDE_NULL — только к ссылкам на скалярные столбцы.  
   
- INCLUDE_STATISTICS возвращаются только **$Probability** и **$AdjustedProbability**.  
+ INCLUDE_STATISTICS возвращает только **$Probability** и **$AdjustedProbability**.  
   
- Если числовой параметр *n* указано, **PredictAssociation** функция возвращает верхних n значений скорее всего, на основе вероятности:  
+ Если указан числовой параметр *n* , функция **PredictAssociation** возвращает первые n наиболее вероятных значений в зависимости от вероятности:  
   
 ```  
 PredictAssociation(colref, [$AdjustedProbability], n)  
 ```  
   
- При включении **$AdjustedProbability**, инструкция возвращает верхние *n* значений на основе **$AdjustedProbability**.  
+ При включении **$AdjustedProbability**инструкция возвращает первые *n* значений на основе **$AdjustedProbability**.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере используется **PredictAssociation** функция возвращает четыре продуктов в Adventure Works базы данных, которые, скорее всего, быть проданы вместе.  
+ В следующем примере функция **PredictAssociation** используется для возврата четырех продуктов в базе данных Adventure Works, которые, скорее всего, будут продаваться вместе.  
   
 ```  
 SELECT  
@@ -60,7 +60,7 @@ SELECT
 From  
   [Association]  
 ```  
-В следующем примере показано, как можно использовать вложенную таблицу в качестве входных данных функции прогнозирования, с помощью предложения SHAPE. Запроса SHAPE создает набор строк с customerId как один столбец и вложенной таблицы в качестве второй столбец, который содержит список продуктов, которые у него уже открыт клиент. 
+В следующем примере показано, как можно использовать вложенную таблицу в качестве входных данных для функции прогнозирования с помощью предложения SHAPE. Запрос SHAPE создает набор строк с customerId как один столбец и вложенную таблицу в качестве второго столбца, содержащего список продуктов, которые уже были добавлены клиентом. 
 
 ~~~~
 SELECT T.[CustomerId], PredictAssociation(MyNestedTable, 5) // returns top 5 associated items
@@ -76,9 +76,9 @@ SHAPE {
 ~~~~  
 
   
-## <a name="see-also"></a>См. также  
- [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; справочнике по функциям](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Функции &#40;расширений интеллектуального анализа данных&#41;](../dmx/functions-dmx.md)   
- [Общие функции прогнозирования &#40;расширений интеллектуального анализа данных&#41;](../dmx/general-prediction-functions-dmx.md)  
+## <a name="see-also"></a>См. также:  
+ [Расширения интеллектуального анализа данных &#40;Справочник по функциям DMX&#41;](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Функции &#40;&#41;расширений интеллектуального анализа данных](../dmx/functions-dmx.md)   
+ [Общие прогнозирующие функции &#40;&#41;расширений интеллектуального анализа данных](../dmx/general-prediction-functions-dmx.md)  
   
   

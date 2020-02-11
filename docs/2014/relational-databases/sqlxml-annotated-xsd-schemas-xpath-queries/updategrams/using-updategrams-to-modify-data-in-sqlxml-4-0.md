@@ -1,5 +1,5 @@
 ---
-title: С помощью диаграмм обновления для изменения данных в SQLXML 4.0 | Документация Майкрософт
+title: Использование диаграмм обновления для изменения данных в SQLXML 4,0 | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -25,46 +25,46 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b615062ae70c5a7b7ee18869aaa20951dec29b2a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014604"
 ---
 # <a name="using-updategrams-to-modify-data-in-sqlxml-40"></a>Использование диаграмм обновления для изменения данных в SQLXML 4.0
-  Можно изменить (вставки, обновления или удаления) базы данных в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] из существующего XML-документа с помощью диаграммы обновления или OPENXML [!INCLUDE[tsql](../../../includes/tsql-md.md)] функции.  
+  Можно изменить (вставить, обновить или удалить) базу данных [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] из существующего XML-документа с помощью функции диаграмма обновления или OPENXML [!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
   
  В этом разделе содержатся сведения о диаграммах обновления и примеры их использования.  
   
 ## <a name="in-this-section"></a>в этом разделе  
- [Общие сведения о диаграммах обновления &#40;SQLXML 4.0&#41;](introduction-to-updategrams-sqlxml-4-0.md)  
+ [Введение в диаграмм обновления &#40;SQLXML 4,0&#41;](introduction-to-updategrams-sqlxml-4-0.md)  
  Содержит основные сведения и примеры диаграмм обновления.  
   
- [Определение схемы с заметками сопоставления в диаграмме обновления &#40;SQLXML 4.0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)  
+ [Указание схемы сопоставления с заметками в диаграмма обновления &#40;SQLXML 4,0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)  
  Содержит объяснение и примеры аннотированных схем сопоставления в диаграммах обновления.  
   
- [Обработка NULL &#40;SQLXML 4.0&#41;](null-handling-sqlxml-4-0.md)  
+ [Обработка значений NULL &#40;SQLXML 4,0&#41;](null-handling-sqlxml-4-0.md)  
  Содержит описание задания значений NULL для значений элементов и атрибутов.  
   
- [Вставка данных с помощью диаграмм обновления XML &#40;SQLXML 4.0&#41;](inserting-data-using-xml-updategrams-sqlxml-4-0.md)  
+ [Вставка данных с помощью XML диаграмм обновления &#40;SQLXML 4,0&#41;](inserting-data-using-xml-updategrams-sqlxml-4-0.md)  
  Содержит описание и примеры использования диаграмм обновления для добавления данных.  
   
- [Удаление данных с помощью диаграмм обновления XML &#40;SQLXML 4.0&#41;](deleting-data-using-xml-updategrams-sqlxml-4-0.md)  
+ [Удаление данных с помощью XML диаграмм обновления &#40;SQLXML 4,0&#41;](deleting-data-using-xml-updategrams-sqlxml-4-0.md)  
  Содержит описание и примеры использования диаграмм обновления для удаления данных.  
   
- [Обновление данных с помощью диаграмм обновления XML &#40;SQLXML 4.0&#41;](updating-data-using-xml-updategrams-sqlxml-4-0.md)  
+ [Обновление данных с помощью XML диаграмм обновления &#40;SQLXML 4,0&#41;](updating-data-using-xml-updategrams-sqlxml-4-0.md)  
  Содержит описание и примеры использования диаграмм обновления для изменения существующих данных.  
   
- [Передача параметров в диаграммы обновления &#40;SQLXML 4.0&#41;](passing-parameters-to-updategrams-sqlxml-4-0.md)  
+ [Передача параметров в диаграмм обновления &#40;SQLXML 4,0&#41;](passing-parameters-to-updategrams-sqlxml-4-0.md)  
  Содержит описание и примеры передачи параметров в диаграммы обновления.  
   
- [Обработка базы данных проблем параллелизма в диаграммах обновления &#40;SQLXML 4.0&#41;](handling-database-concurrency-issues-in-updategrams-sqlxml-4-0.md)  
+ [Обработка проблем параллелизма базы данных в диаграмм обновления &#40;SQLXML 4,0&#41;](handling-database-concurrency-issues-in-updategrams-sqlxml-4-0.md)  
  Содержит описание и примеры возможных уровней защиты для решения проблем параллелизма в диаграммах обновления.  
   
- [Образцы приложений диаграмм обновления &#40;SQLXML 4.0&#41;](../../../database-engine/dev-guide/updategram-sample-applications-sqlxml-4-0.md)  
+ [Примеры приложений диаграмма обновления &#40;SQLXML 4,0&#41;](../../../database-engine/dev-guide/updategram-sample-applications-sqlxml-4-0.md)  
  Содержит образцы приложений, использующих диаграммы обновления.  
   
- [Рекомендации и ограничения диаграмм обновления XML &#40;SQLXML 4.0&#41;](guidelines-and-limitations-of-xml-updategrams-sqlxml-4-0.md)  
+ [Рекомендации и ограничения для XML-диаграмм обновления &#40;SQLXML 4,0&#41;](guidelines-and-limitations-of-xml-updategrams-sqlxml-4-0.md)  
  Содержит перечень фактов, о которых необходимо помнить при работе с диаграммами обновления.  
   
   

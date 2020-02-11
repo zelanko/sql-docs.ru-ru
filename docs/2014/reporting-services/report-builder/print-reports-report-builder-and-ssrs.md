@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7f916e8acf45c822439a116bc5ad1ff40a11d2de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107697"
 ---
 # <a name="print-reports-report-builder-and-ssrs"></a>Печать отчетов (построитель отчетов и службы SSRS)
@@ -46,10 +46,10 @@ ms.locfileid: "66107697"
  Описывает, как напечатать отчеты, экспортированные в другое приложение.  
   
  [Печать отчета (построитель отчетов и службы SSRS)](print-a-report-report-builder-and-ssrs.md)  
- Содержит пошаговые инструкции по печати отчета, как управлять полями страницы и указанию размера бумаги для отчетов, подготавливаемых к просмотру с разрывами страниц: PDF, Image и Print.  
+ Содержит пошаговые инструкции по печати отчета, управлению полями страницы и указанию размера бумаги для отчетов, подготавливаемых к просмотру в модулях подготовки отчетов к печати: "PDF", "Изображение" и "Печать".  
   
-## <a name="see-also"></a>См. также  
- [Экспорт отчетов &#40;построитель отчетов и службы SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>См. также:  
+ [Экспорт отчетов &#40;построитель отчетов и SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
  [Верхние и нижние колонтитулы страницы (построитель отчетов и службы SSRS)](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
  [Изображения (построитель отчетов и службы SSRS)](../report-design/images-report-builder-and-ssrs.md)   
  [Разбиение на страницы в службах Reporting Services (построитель отчетов и службы SSRS)](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)  

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5c5effed34dda946d3c65028aa5834f4fbddf7cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077251"
 ---
 # <a name="modify-the-keycolumn-property-of-an-attribute"></a>Изменение свойства KeyColumn атрибута
@@ -34,7 +34,7 @@ ms.locfileid: "66077251"
   
          -или-  
   
-    -   В конструкторе кубов на **Структура куба** вкладке, разверните измерение куба в **измерения** область и выберите команду **изменить \<измерения >** .  
+    -   В конструкторе кубов на вкладке **Структура куба** разверните измерение куба на панели **измерения** и нажмите кнопку ** \<изменить измерение>**.  
   
 3.  На вкладке **Структура измерения** , на панели **Атрибуты** , щелкните атрибут, для которого нужно изменить свойство **KeyColumns** .  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66077251"
   
 8.  Чтобы изменить порядок ключевых столбцов, выберите столбец и нажмите кнопку **Вверх** или кнопку **Вниз** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по свойствам атрибута измерения](dimension-attribute-properties-reference.md)  
   
   

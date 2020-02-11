@@ -1,5 +1,5 @@
 ---
-title: Сопоставление нерекомендуемых функций | Документация Майкрософт
+title: Сопоставление устаревших функций | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,42 +18,42 @@ ms.assetid: ee462617-1d79-4c88-afeb-b129cff34cc6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 307f0f54434fdcb4ebb19c38256a7a04f4a5c46d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67990710"
 ---
 # <a name="mapping-deprecated-functions"></a>Сопоставление нерекомендуемых функций
-В этом разделе описывается, как устаревшие функции сопоставляются по ODBC *3.x* диспетчера драйверов для обеспечения обратной совместимости из ODBC *3.x* драйверы, которые используются с ODBC *2.x* приложений. Диспетчер драйверов выполняет это сопоставление, независимо от версии приложения. Так как каждый из ODBC *2.x* функции в следующем списке сопоставляется с соответствующей ODBC *3.x* функции при вызове в ODBC *3.x* драйвера ODBC *3.x* драйвер должен реализовывать ODBC *2.x* функции.  
+В этом разделе описывается, как устаревшие функции сопоставляются диспетчером драйверов ODBC *3. x* для обеспечения обратной СОВМЕСТИМОСТИ драйверов ODBC *3. x* , используемых с приложениями ODBC *2. x* . Диспетчер драйверов выполняет это сопоставление независимо от версии приложения. Поскольку каждая из функций ODBC *2. x* в следующем списке сопоставляется с соответствующей функцией ODBC *3. x* при вызове в драйвере ODBC *3. x* , драйверу ODBC *3. x* не требуется реализовывать функции ODBC *2. x* .  
   
- Сопоставление в списке активируется в том случае, когда драйвер ODBC *3.x* драйвер и драйвер не поддерживает функцию, с которым выполняется сопоставление.  
+ Сопоставление в списке активируется, если драйвер является драйвером ODBC *3. x* , а драйвер не поддерживает сопоставляемую функцию.  
   
- В следующей таблице перечислены все повторяющиеся функциональность, которая была введена в ODBC *3.x*.  
+ В следующей таблице перечислены все повторные функциональные возможности, появившиеся в ODBC *3. x*.  
   
-|ODBC *2.x* функции|ODBC *3.x* функции|  
+|Функция ODBC *2. x*|ODBC *3. x,* функция|  
 |-------------------------|-------------------------|  
-|**SQLAllocConnect**|**SQLAllocHandle**|  
-|**SQLAllocEnv**|**SQLAllocHandle**|  
-|**SQLAllocStmt**|**SQLAllocHandle**|  
-|**SQLBindParam**[1]|**SQLBindParameter**|  
+|**SQLAllocConnect**|**Функцию SQLAllocHandle**|  
+|**SQLAllocEnv**|**Функцию SQLAllocHandle**|  
+|**SQLAllocStmt**|**Функцию SQLAllocHandle**|  
+|**Склбиндпарам**[1]|**SQLBindParameter**|  
 |**SQLColAttributes**|**SQLColAttribute**|  
-|**SQLError**|**SQLGetDiagRec**|  
+|**SQLError**|**Функции SQLGetDiagRec**|  
 |**SQLFreeConnect**|**SQLFreeHandle**|  
 |**SQLFreeEnv**|**SQLFreeHandle**|  
-|**SQLFreeStmt** с *параметр* из SQL_DROP|**SQLFreeHandle**|  
+|**SQLFreeStmt** с *возможностью* SQL_DROP|**SQLFreeHandle**|  
 |**SQLGetConnectOption**|**SQLGetConnectAttr**|  
 |**SQLGetStmtOption**|**SQLGetStmtAttr**|  
 |**SQLParamOptions**|**SQLSetStmtAttr**|  
 |**SQLSetConnectOption**|**SQLSetConnectAttr**|  
 |**SQLSetParam**[2]|**SQLBindParameter**|  
-|**SQLSetScrollOption**|**SQLSetStmtAttr**|  
+|**склсетскроллоптион**|**SQLSetStmtAttr**|  
 |**SQLSetStmtOption**|**SQLSetStmtAttr**|  
 |**SQLTransact**|**SQLEndTran**|  
   
- [1] несмотря на то что эта функция не существует в ODBC *2.x*, он находится в стандартах Open Group и ISO.  
+ [1] Несмотря на то, что эта функция не существовала в ODBC *2. x*, она имеет стандарты Open Group и ISO.  
   
- [2] это функция ODBC 1.0.  
+ [2] это функция ODBC 1,0.  
   
  Этот раздел содержит следующие подразделы.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "67990710"
   
 -   [Сопоставление SQLFreeStmt](../../../odbc/reference/appendixes/sqlfreestmt-mapping.md)  
   
--   [Функция SQLGetConnectOption](../../../odbc/reference/appendixes/sqlgetconnectoption-mapping.md)  
+-   [Сопоставление SQLGetConnectOption](../../../odbc/reference/appendixes/sqlgetconnectoption-mapping.md)  
   
 -   [Сопоставление SQLGetStmtOption](../../../odbc/reference/appendixes/sqlgetstmtoption-mapping.md)  
   

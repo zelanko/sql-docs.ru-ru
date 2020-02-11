@@ -1,5 +1,5 @@
 ---
-title: Тема параметры схемы базы данных области (мастер формирования схем) (службы Analysis Services — многомерные данные) | Документация Майкрософт
+title: Параметры схемы базы данных предметной области (мастер формирования схем) (Analysis Services-многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2173255654b9ef02c269ec34bd21f93f8bf629a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067978"
 ---
 # <a name="subject-area-database-schema-options-schema-generation-wizard-analysis-services---multidimensional-data"></a>Параметры схемы базы данных предметной области (мастер формирования схем) (службы Analysis Services — многомерные данные)
@@ -32,7 +32,7 @@ ms.locfileid: "66067978"
 > [!NOTE]  
 >  Если этот флажок не установлен, применяется ссылочная целостность.  
   
- **Создание индексов**  
+ **Создать индексы**  
  Позволяет создать индексы во внешних ключевых столбцах в сформированной схеме.  
   
  **Обязательная целостность ссылок**  
@@ -47,13 +47,13 @@ ms.locfileid: "66067978"
 > [!NOTE]  
 >  Этот параметр доступен, если мастер формирования схем вызван из проекта служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] с помощью среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] в режиме проекта.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |Заполнить|Заполнение предметной области расписаний.|  
 |Не заполнять|Предметная область расписаний не заполняется.|  
 |Заполнить, если пуста|Предметная область расписаний заполняется, если она пуста.|  
   
-## <a name="see-also"></a>См. также  
- [Справка F1 мастера формирования схем &#40;службы Analysis Services — многомерные данные&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>См. также:  
+ [Справка F1 мастера формирования схем &#40;Analysis Services многомерных данных&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)  
   
   

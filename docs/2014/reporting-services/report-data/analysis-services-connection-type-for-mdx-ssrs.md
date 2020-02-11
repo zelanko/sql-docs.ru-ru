@@ -11,20 +11,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dbd62eff94b1a885198c62a9a36cb8eef7ba57c7
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892123"
 ---
 # <a name="analysis-services-connection-type-for-mdx-ssrs"></a>Тип соединения служб Analysis Services для многомерных выражений (службы SSRS)
-  Чтобы включить в отчет данные из куба [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , необходимо иметь набор данных, основанный на источнике данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Этот встроенный тип источника данных основан на модуле обработки данных служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Из куба служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] можно получить метаданные измерений, иерархий, уровней, ключевых показателей эффективности, мер и атрибутов и использовать их в качестве данных отчета.  
+  Чтобы включить данные из [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Куба в отчет, необходимо иметь набор данных, основанный на источнике данных отчета типа. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Этот встроенный тип источника данных основан на модуле обработки данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Вы можете получить метаданные об измерениях, иерархиях, уровнях, ключевых показателях эффективности, мерах и атрибутах из [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Куба для использования в качестве данных отчета.  
   
  Этот модуль обработки данных поддерживает многозначные параметры, серверные агрегатные вычисления и учетные данные, управляемые независимо с помощью строки подключения.  
   
- Используйте сведения в этом разделе для создания источника данных. Пошаговые инструкции см. в разделе [Добавление и проверка подключения к данным или источнику данных &#40;построитель отчетов и службы SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
+ Используйте сведения в этом разделе для создания источника данных. Пошаговые инструкции см. в статьях [Добавление и проверка подключения к данным или источника данных &#40;построитель отчетов и служб SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
-##  <a name="Connection"></a> Строка подключения  
+##  <a name="Connection"></a>Строка подключения  
  При соединении с кубом служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] выполняется соединение с объектом базы данных в экземпляре служб Analysis Services на сервере. База данных может содержать несколько кубов. При построении запроса необходимо указать куб в конструкторе запросов. В следующем примере приведена строка соединения:  
   
 ```  
@@ -35,7 +35,7 @@ data source=<server name>;initial catalog=<database name>
   
   
   
-##  <a name="Credentials"></a> Учетные данные  
+##  <a name="Credentials"></a>Информации  
  Учетные данные необходимы для запуска запросов, локального предварительного просмотра отчетов, а также для предварительного просмотра отчетов на сервере отчетов.  
   
  После публикации отчета может понадобиться изменить учетные данные источника данных, чтобы разрешения, необходимые для получения данных при запуске отчета на сервере отчетов, были допустимыми.  
@@ -54,16 +54,16 @@ data source=<server name>;initial catalog=<database name>
   
   
   
-##  <a name="Query"></a> Запросы  
+##  <a name="Query"></a>Запроса  
  После подключения к источнику данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] создается набор данных и определяется запрос многомерных выражений, указывающий данные для получения из куба. С помощью графического конструктора запросов многомерных выражений можно просматривать и выбирать базовые структуры данных в источнике данных.  
   
  Запрос можно задавать следующими способами.  
   
 -   Интерактивное построение отчета. Конструктор запросов многомерных выражений в службах Analysis Services поддерживает следующие представления.  
   
-    -   **Представление конструктора.** Перетащите измерения, элементы, свойства элементов, меры и ключевые показатели эффективности из браузера метаданных на панель **Данные** для создания запроса многомерных выражений. Перетащите вычисляемые элементы с панели "Вычисляемые элементы" на панель "Данные", чтобы определить дополнительные поля наборов данных.  
+    -   **Режим конструктора** Чтобы построить запрос многомерных выражений, перетащите измерения, элементы, свойства элементов, меры и ключевые показатели эффективности из браузера метаданных в область **данных** . Перетащите вычисляемые элементы с панели "Вычисляемые элементы" на панель "Данные", чтобы определить дополнительные поля наборов данных.  
   
-    -   **Представление запроса.** Перетащите измерения, элементы, свойства элементов, меры и ключевые показатели эффективности из браузера метаданных на панель «Запрос» для создания запроса многомерных выражений. Текст многомерного выражения можно изменять непосредственно на панели запроса. Перетащите вычисляемые элементы из панели "Вычисляемые элементы" в панель "Запрос" для определения дополнительных полей наборов данных.  
+    -   **Представление запросов** Чтобы построить запрос многомерных выражений, перетащите измерения, элементы, свойства элементов, меры и ключевые показатели эффективности из браузера метаданных в панель запросов. Текст многомерного выражения можно изменять непосредственно на панели запроса. Перетащите вычисляемые элементы из панели "Вычисляемые элементы" в панель "Запрос" для определения дополнительных полей наборов данных.  
   
      Дополнительные сведения см. в статье [Пользовательский интерфейс конструктора запросов многомерных выражений служб Analysis Services (построитель отчетов)](../analysis-services-mdx-query-designer-user-interface-report-builder.md).  
   
@@ -71,7 +71,7 @@ data source=<server name>;initial catalog=<database name>
   
  Во время разработки выполните запрос, чтобы просмотреть результирующий набор. Результаты запроса возвращаются автоматически в виде плоского набора строк. Столбцы результирующего набора запроса заполняют коллекцию полей набора данных. После создания запроса просмотрите коллекцию полей набора данных, созданную из метаданных в области данных отчета. При запуске отчета фактические данные возвращаются из внешнего источника данных.  
   
- Модуль обработки данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживает расширенные свойства полей набора данных. Эти значения доступны из внешнего источника данных, но они не отображаются в области данных отчета. В отчете с помощью встроенной коллекции [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] можно использовать расширенные свойства полей, поддерживаемые модулем обработки данных служб `Fields`. Для свойств, значения которых содержатся в источнике данных, можно обращаться к значениям таких стандартных свойств, как `FormattedValue`, `Color` или `UniqueName`. Дополнительные сведения см. в разделе [Extended Field Properties for an Analysis Services Database &#40;SSRS&#41;](extended-field-properties-for-an-analysis-services-database-ssrs.md).  
+ Модуль обработки данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживает расширенные свойства полей набора данных. Эти значения доступны из внешнего источника данных, но они не отображаются в области данных отчета. В отчете с помощью встроенной коллекции [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] можно использовать расширенные свойства полей, поддерживаемые модулем обработки данных служб `Fields`. Для свойств, значения которых содержатся в источнике данных, можно обращаться к значениям таких стандартных свойств, как `FormattedValue`, `Color` или `UniqueName`. Дополнительные сведения см. в разделе [Расширенные свойства полей для базы данных Analysis Services &#40;SSRS&#41;](extended-field-properties-for-an-analysis-services-database-ssrs.md)).  
   
   
   
@@ -87,14 +87,14 @@ data source=<server name>;initial catalog=<database name>
   
  Данные из куба служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] можно также получать с помощью источника данных OLE DB. Дополнительные сведения см. в разделе [Тип соединения OLE DB (службы SSRS)](ole-db-connection-type-ssrs.md).  
   
- Дополнительные сведения о поддержке версий см. в разделе [Источники данных, поддерживаемые службами Reporting Services ( службы SSRS)](../create-deploy-and-manage-mobile-and-paginated-reports.md) документации по [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] в [электронной документации](https://go.microsoft.com/fwlink/?linkid=121312) по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Дополнительные сведения о поддержке версий см. в разделе [Источники данных, поддерживаемые службами Reporting Services ( службы SSRS)](../create-deploy-and-manage-mobile-and-paginated-reports.md) документации по [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] в электронной документации[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [ по ](https://go.microsoft.com/fwlink/?linkid=121312).  
   
   
   
-##  <a name="Related"></a> См. также  
+##  <a name="Related"></a>Связанные разделы  
  В этих разделах документации содержатся подробные сведения о данных отчетов, а также методические сведения об определении, настройке и использовании элементов отчетов, связанных с данными.  
   
- [Добавление данных в построитель отчетов отчетов &#40;и службы SSRS&#41;](report-datasets-ssrs.md)  
+ [Добавление данных в построитель отчетов &#40;отчетов и SSRS&#41;](report-datasets-ssrs.md)  
  Предоставляет общие сведения о доступе к данным отчета.  
   
  [Подключения к данным, источники данных и строки подключения в построителе отчетов](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  
@@ -106,15 +106,15 @@ data source=<server name>;initial catalog=<database name>
  [Коллекция полей набора данных (построитель отчетов и службы SSRS)](dataset-fields-collection-report-builder-and-ssrs.md)  
  Предоставляет сведения о коллекции полей набора данных, создаваемой запросом.  
   
- [Расширенные свойства поля для базы данных служб Analysis Services (службы SSRS)](extended-field-properties-for-an-analysis-services-database-ssrs.md)  
+ [Расширенные свойства полей для базы данных Analysis Services &#40;SSRS&#41;](extended-field-properties-for-an-analysis-services-database-ssrs.md)  
  Предоставляет сведения о расширенных полях, доступных через поставщик данных XMLA.  
   
- [Источники данных, поддерживаемые службами Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md), см. в документации [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] в [электронной документации](https://go.microsoft.com/fwlink/?linkid=121312) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [Источники данных, поддерживаемые Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) в [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] документации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [электронной документации](https://go.microsoft.com/fwlink/?linkid=121312)по.  
  Предоставляет подробные сведения о поддержке платформ и версий для каждого модуля обработки данных.  
   
   
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Параметры отчета (построитель отчетов и конструктор отчетов)](../report-design/report-parameters-report-builder-and-report-designer.md)   
  [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Выражения (построитель отчетов и службы SSRS)](../report-design/expressions-report-builder-and-ssrs.md)  

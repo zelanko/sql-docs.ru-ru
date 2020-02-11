@@ -18,20 +18,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: feca89ac2ac888c2fa9f082595e761e898dea971
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211920"
 ---
 # <a name="programming-languages"></a>Языки программирования
-  В этом разделе описываются способы программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] управляющих объектов (SMO) в [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# .NET, и [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++.  
+  В этом разделе описано, как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] программировать управляющие объекты (SMO [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) в Visual Basic [!INCLUDE[msCoName](../../includes/msconame-md.md)] .net, Visual C# .NET [!INCLUDE[msCoName](../../includes/msconame-md.md)] и Visual C++.  
   
-|Раздел|Описание|  
+|Раздел|Description|  
 |-----------|-----------------|  
-|[Приступая к работе с Visual Basic .NET](../../database-engine/dev-guide/getting-started-in-visual-basic-net.md)|Предоставляет сведения о том, как начать программирование объекта SMO в Visual Basic .NET|  
-|[Приступая к работе в Visual c#&#35; .NET](smo-programming-getting-started-in-visual-csharp-net.md)|Предоставляет сведения о том, как начать программирование объекта SMO в Visual C# .NET|  
+|[Приступая к работе с Visual Basic .NET](../../database-engine/dev-guide/getting-started-in-visual-basic-net.md)|Содержит сведения о том, как начать программирование объекта SMO на языке Visual Basic .NET.|  
+|[Начало работы в Visual C&#35; .NET](smo-programming-getting-started-in-visual-csharp-net.md)|Содержит сведения о том, как начать программирование объекта SMO на языке Visual C# .NET.|  
   
- Объект SMO является сборкой .NET. Для программирования с помощью платформы [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework необходимо выбрать язык, поддерживаемый средой CLR. В справочнике по объектам SMO имеется синтаксис для управляемых языков, таких как Visual Basic .NET и Visual C# .NET.  
+ Объект SMO является сборкой .NET. Для программирования с помощью платформы [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework необходимо выбрать язык, поддерживаемый средой CLR. В справочнике по объектам SMO содержится синтаксис для управляемых языков, например Visual Basic .NET и Visual C# .NET.  
   
   

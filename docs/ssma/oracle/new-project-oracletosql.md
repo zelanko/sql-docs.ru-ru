@@ -1,5 +1,5 @@
 ---
-title: Создание проекта (OracleToSQL) | Документация Майкрософт
+title: Новый проект (OracleToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,34 +11,34 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 02d1d499cb9030b737028e59219fd779bde295c6
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68264674"
 ---
 # <a name="new-project-oracletosql"></a>Создание проекта (OracleToSQL)
-Используйте **новый проект** диалоговое окно для создания нового проекта SSMA. Чтобы получить доступ к **новый проект** диалоговом окне **файл** меню, щелкните **новый проект**.  
+Используйте диалоговое окно **Создание проекта** для создания нового проекта SSMA. Чтобы открыть диалоговое окно **Новый проект** , в меню **файл** выберите команду **создать проект**.  
   
 ## <a name="options"></a>Параметры  
-**Name**  
-Введите имя проекта. SSMA добавляет расширение файла.  
+**Название**  
+Введите имя проекта. SSMA добавит расширение файла.  
   
 **Location**  
-Укажите или перейдите к папке или сетевое расположение для сохранения проекта.  
+Введите или выберите папку или сетевое расположение, чтобы сохранить проект.  
   
-**Перенос в**  
-Выберите один из целевой версии базы данных ниже списка.  
+**Миграция в**  
+Выберите одну из версий целевой базы данных из списка ниже:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016  
   
 -   БД SQL Azure  
   

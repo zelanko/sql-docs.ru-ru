@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8f177f8b2c399be020817ccc4228c58f11976512
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63228350"
 ---
 # <a name="rename-a-database-diagram-visual-database-tools"></a>Переименование диаграммы базы данных (визуальные инструменты для баз данных)
@@ -39,7 +39,7 @@ ms.locfileid: "63228350"
   
      Диаграмма базы данных будет отображаться в обозревателе объектов с новым именем.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Работа с диаграммами баз данных (визуальные инструменты для баз данных)](visual-database-tools.md)  
   
   

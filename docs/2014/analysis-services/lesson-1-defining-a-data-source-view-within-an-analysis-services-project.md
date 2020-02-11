@@ -1,5 +1,5 @@
 ---
-title: Урок 1. Определение представления источника данных в Analysis Services Project | Документация Майкрософт
+title: Занятие 1. определение представления источников данных в проекте Analysis Services | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 08d4d24f9049c2fd68e827664ecb07393262d8bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079211"
 ---
-# <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>Урок 1. Определение представления источника данных в проекте Analysis Services
+# <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>Занятие 1. Определение представления источников данных в проекте служб Analysis Services
   Разработка приложения бизнес-аналитики в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] начинается с создания проекта служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. В этом проекте будут определены все элементы решения, начиная с представления источников данных.  
   
  Это занятие содержит следующие задачи.  
@@ -29,7 +29,7 @@ ms.locfileid: "66079211"
  В этой задаче в качестве источника данных для измерений служб **и кубов, которые определятся на следующих занятиях, будет использоваться база данных** AdventureWorksDW2012 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
  [Определение представления источников данных](lesson-1-3-defining-a-data-source-view.md)  
- В этой задаче будет определено единое представление метаданных из выбранных таблиц базы данных **AdventureWorksDW2012** .  
+ В этой задаче будет определено единое представление метаданных из выбранных таблиц базы данных **AdventureWorksDW2012**.  
   
  [Изменение имен таблиц по умолчанию](lesson-1-4-modifying-default-table-names.md)  
  В этой задаче будут изменены имена таблиц в представлении источников данных, чтобы сделать имена последующих определяемых объектов служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] более понятными для пользователей.  
@@ -39,11 +39,11 @@ ms.locfileid: "66079211"
 ## <a name="next-lesson"></a>Следующее занятие  
  [Занятие 2. Определение и развертывание куба](lesson-2-defining-and-deploying-a-cube.md)  
   
-## <a name="see-also"></a>См. также  
- [Создание проекта служб Analysis Services (среда SSDT)](multidimensional-models/create-an-analysis-services-project-ssdt.md)   
- [Источники данных, поддерживаемые &#40;многомерные службы SSAS&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)   
+## <a name="see-also"></a>См. также:  
+ [Создание проекта Analysis Services &#40;SSDT&#41;](multidimensional-models/create-an-analysis-services-project-ssdt.md)   
+ [Поддерживаемые источники данных &#40;многомерные&#41;SSAS](multidimensional-models/supported-data-sources-ssas-multidimensional.md)   
  [Представления источников данных в многомерных моделях](multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [Сценарий учебника по службам Analysis Services](analysis-services-tutorial-scenario.md)   
- [Многомерное моделирование (учебник по Adventure Works)](multidimensional-modeling-adventure-works-tutorial.md)  
+ [Analysis Services сценарий учебника](analysis-services-tutorial-scenario.md)   
+ [&#40;учебника по Adventure Works в многомерном моделировании&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

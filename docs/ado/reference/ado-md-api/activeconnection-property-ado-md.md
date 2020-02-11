@@ -1,5 +1,5 @@
 ---
-title: Свойство ActiveConnection (многомерные Объекты ADO) | Документация Майкрософт
+title: Свойство ActiveConnection (объекты данных ActiveX (MD)) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,51 +18,51 @@ ms.assetid: 2509b32c-a995-4364-9152-d8c83129bdd8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ae0b32385b98ac1b48688a7f89bbd7c91842a106
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67911595"
 ---
 # <a name="activeconnection-property-ado-md"></a>Свойство ActiveConnection (многомерные объекты ADO)
-Указывает, к какой ADO [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта текущего набора ячеек или каталога в настоящее время принадлежит.  
+Указывает объект [подключения](../../../ado/reference/ado-api/connection-object-ado.md) ADO, к которому в настоящий момент принадлежит текущий набор ячеек или каталог.  
   
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
- Возвращает или задает **Variant** , содержащий строку, определяющую соединение или **подключения** объекта. Значение по умолчанию является пустым.  
+ Задает или возвращает **значение типа Variant** , содержащее строку, определяющую соединение или объект **соединения** . Значение по умолчанию — Empty.  
   
-## <a name="remarks"></a>Примечания  
- Это свойство может быть присвоено допустимое ADO **подключения** объекта или допустимую строку соединения. Если это свойство имеет значение в строку подключения, поставщик создает новую **подключения** с помощью этого определения и открывает соединение.  
+## <a name="remarks"></a>Remarks  
+ Этому свойству можно присвоить допустимый объект **соединения** ADO или допустимую строку подключения. Если для этого свойства задана строка подключения, поставщик создает новый объект **соединения** , используя это определение, и открывает соединение.  
   
- При использовании *ActiveConnection* аргумент [откройте](../../../ado/reference/ado-md-api/open-method-ado-md.md) метод, чтобы открыть [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) объекта, **ActiveConnection** будет свойство Наследовать значение аргумента.  
+ При использовании аргумента *ActiveConnection* метода [Open](../../../ado/reference/ado-md-api/open-method-ado-md.md) для открытия объекта набора [ячеек](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) свойство **ActiveConnection** будет наследовать значение аргумента.  
   
- Установка **ActiveConnection** свойство [каталога](../../../ado/reference/ado-md-api/catalog-object-ado-md.md) объект **ничего не** освобождает связанные данные, включая данные в [CubeDefs](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md) коллекции и все связанные с [измерения](../../../ado/reference/ado-md-api/dimension-object-ado-md.md), [иерархии](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md), [уровень](../../../ado/reference/ado-md-api/level-object-ado-md.md), и [член](../../../ado/reference/ado-md-api/member-object-ado-md.md) объектов. Закрытие **подключения** объект, который использовался для открытия **каталога** имеет тот же эффект, что параметр **ActiveConnection** свойства **Nothing**.  
+ Присвоение свойству **ActiveConnection** объекта [каталога](../../../ado/reference/ado-md-api/catalog-object-ado-md.md) значения **Nothing** приведет к освобождению связанных данных, включая данные из коллекции [кубедефс](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md) и любых связанных [объектов измерения](../../../ado/reference/ado-md-api/dimension-object-ado-md.md), [иерархии](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md), [уровня](../../../ado/reference/ado-md-api/level-object-ado-md.md)и [элемента](../../../ado/reference/ado-md-api/member-object-ado-md.md) . Закрытие объекта **соединения** , который использовался для открытия **каталога** , имеет тот же результат, что и присвоение свойству **ActiveConnection** значения **Nothing**.  
   
- Изменение базы данных по умолчанию соединения ссылается **ActiveConnection** свойство **каталога** объекта делает недействительным содержимое **каталога**.  
+ Изменение базы данных по умолчанию для соединения, на которое ссылается свойство **ActiveConnection** объекта **каталога** , делает недействительным содержимое **каталога**.  
   
- Произойдет ошибка при попытке изменить **ActiveConnection** свойство для открытого **набора ячеек** объекта.  
+ При попытке изменить свойство **ActiveConnection** для открытого объекта набора **ячеек** возникнет ошибка.  
   
 > [!NOTE]
->  В Visual Basic, не забывайте использовать **задать** ключевое слово при задании **ActiveConnection** свойства **подключения** объекта. Если опустить **задать** ключевое слово, вам будет фактически настраиваться **ActiveConnection** равным **подключения** свойство объекта по умолчанию,  **ConnectionString**. Этот код будет работать; Тем не менее вы создадите дополнительное подключение к источнику данных, который может иметь негативное влияние.  
+>  В Visual Basic не забывайте использовать ключевое слово **Set** при задании свойства **ActiveConnection** для объекта **соединения** . Если опустить ключевое слово **Set** , то будет задано свойство **ActiveConnection** , равное свойству по умолчанию объекта **соединения** , **ConnectionString**. Код будет работать; Однако будет создано дополнительное подключение к источнику данных, что может отрицательно сказаться на производительности.  
   
- При использовании поставщика данных MSOLAP, задать источник данных в строке подключения на имя сервера и значение исходного каталога имя каталога из источника данных. Чтобы подключиться к файлу куба, которая отсоединена от сервера, задайте местоположение полный путь. Файл, КУБ. В любом случае установите поставщик для имени поставщика. Например, следующая строка использует поставщик MSOLAP для подключения к каталогу, с именем Store Bobs видео на сервере с именем **Servername**:  
+ При использовании поставщика данных MSOLAP присвойте источнику данных в строке подключения имя сервера и присвойте начальному каталогу имя каталога из источника данных. Чтобы подключиться к файлу куба, отключенному от сервера, задайте в качестве расположения полный путь к. Файл CUB. В любом случае задайте поставщику имя поставщика. Например, следующая строка использует поставщик MSOLAP для подключения к каталогу с именем bobs Video Store на сервере с именем **ServerName**:  
   
 ```  
 "Data Source=Servername;Initial Catalog=Bobs Video Store;Provider=msolap"  
 ```  
   
- Следующая строка подключается к локальному файлу куба в расположении C:\MSDASDK\samples\oledb\olap\data\bobsvid.cub:  
+ Следующая строка подключается к локальному файлу куба в расположении К:\мсдасдк\самплес\оледб\олап\дата\бобсвид.куб:  
   
 ```  
 "Location=C:\MSDASDK\samples\oledb\olap\data\bobsvid.cub;Provider=msolap"  
 ```  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
   
 |||  
 |-|-|  
 |[Объект Catalog (многомерные объекты ADO)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|[Объект Cellset (многомерные объекты ADO)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)|  
   
-## <a name="see-also"></a>См. также  
- [Пример объекта Cellset (Visual Basic)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
+## <a name="see-also"></a>См. также:  
+ [Пример набора ячеек (Visual Basic)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Метод Open (многомерные объекты ADO)](../../../ado/reference/ado-md-api/open-method-ado-md.md)

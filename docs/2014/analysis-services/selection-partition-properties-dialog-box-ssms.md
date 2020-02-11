@@ -1,5 +1,5 @@
 ---
-title: Выбор (диалоговое окно «Свойства секции») (среда SSMS) | Документация Майкрософт
+title: Выбор (диалоговое окно «Свойства секции») (SSMS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,33 +13,33 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7cfc9890bda35f1574c83b339495b996782b79b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069216"
 ---
 # <a name="selection-partition-properties-dialog-box-ssms"></a>Выбор (диалоговое окно «Свойства секции») (среда SSMS)
   Используйте страницу **Выбор** диалогового окна **Свойства секции** в среде SQL Server Management Studio для выбора секции из группы мер, свойства которой на панели **Общие**, **Упреждающее кэширование**или **Конфигурация ошибок** необходимо просмотреть или изменить.  
   
 ## <a name="options"></a>Параметры  
- **Сетка**  
+ **Сетки**  
  Отображает секцию группы мер, которая содержит выбранную секцию.  
   
  Выберите секцию, свойства которой на панели **Общие**, **Упреждающее кэширование**или **Конфигурация ошибок** необходимо просмотреть.  
   
- Сетка содержит следующие столбцы:  
+ Сетка содержит следующие столбцы.  
   
-|Столбец|Описание|  
+|Столбец|Description|  
 |------------|-----------------|  
-|**Name**|Отображает имя секции.|  
+|**Название**|Отображает имя секции.|  
 |**Source**|Отображает таблицу или запрос, являющийся источником данных для секции.|  
 |**Агрегаты**|Отображает строку с описанием агрегата, используемого секцией.|  
   
-## <a name="see-also"></a>См. также  
- [Диалоговое окно свойств секции &#40;SSMS&#41;](partition-properties-dialog-box-ssms.md)   
- [Общие &#40;секционировать диалоговое окно свойств&#41; &#40;SSMS&#41;](general-partition-properties-dialog-box-ssms.md)   
- [Упреждающее кэширование &#40;секционировать диалоговое окно свойств&#41; &#40;SSMS&#41;](proactive-caching-partition-properties-dialog-box-ssms.md)   
- [Конфигурация ошибок при обработке измерения кубов, секции и &#40;службы SSAS — многомерные&#41;](multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md)  
+## <a name="see-also"></a>См. также:  
+ [Диалоговое окно «Свойства секции» &#40;SSMS&#41;](partition-properties-dialog-box-ssms.md)   
+ [Диалоговое окно "Общие &#40;свойства секции"&#41; &#40;SSMS&#41;](general-partition-properties-dialog-box-ssms.md)   
+ [Упреждающее кэширование &#40;диалоговое окно "Свойства секции"&#41; &#40;SSMS&#41;](proactive-caching-partition-properties-dialog-box-ssms.md)   
+ [Конфигурация ошибок при обработке кубов, секций и измерений &#40;SSAS — многомерные&#41;](multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md)  
   
   

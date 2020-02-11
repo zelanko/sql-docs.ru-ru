@@ -14,23 +14,23 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8541dec5d64de7e0e98e30bbc48c5a5c4eeea9fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482597"
 ---
 # <a name="unlock-a-version-master-data-services"></a>Разблокировка версии (службы Master Data Services)
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]разблокирование версии модели позволяет производить изменения элементов модели и их атрибутов.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения этой процедуры:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Управление версиями** ;  
   
 -   необходимо быть администратором модели. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](administrators-master-data-services.md).  
   
--   Версия должна иметь состояние **Заблокирована**. Дополнительные сведения см. в разделе [Блокировка версии (службы Master Data Services)](../../2014/master-data-services/lock-a-version-master-data-services.md).  
+-   Версия должна иметь состояние **Заблокирована**. Дополнительные сведения см. в статье [Lock a Version &#40;Master Data Services&#41;](../../2014/master-data-services/lock-a-version-master-data-services.md).  
   
 ### <a name="to-unlock-a-version"></a>Разблокирование версии  
   
@@ -42,11 +42,11 @@ ms.locfileid: "65482597"
   
 4.  В диалоговом окне подтверждения нажмите кнопку **ОК**.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
   
--   [Блокировка версии (службы Master Data Services)](../../2014/master-data-services/lock-a-version-master-data-services.md)  
+-   [Блокировка &#40;версии Master Data Services&#41;](../../2014/master-data-services/lock-a-version-master-data-services.md)  
   
-## <a name="see-also"></a>См. также  
- [Версии (службы Master Data Services)](../../2014/master-data-services/versions-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Версии &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)  
   
   

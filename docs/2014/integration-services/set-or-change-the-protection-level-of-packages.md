@@ -16,25 +16,25 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ee8ee5b2113d6fda6aaac72b407c899a610960bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055844"
 ---
 # <a name="set-or-change-the-protection-level-of-packages"></a>Установка и изменение уровня защиты пакетов
   Для управления доступом к содержимому пакетов и конфиденциальным данным в них, таким как пароли, необходимо задать значение свойства `ProtectionLevel`. Пакеты, которые содержатся в проекте, должны обладать тем же уровнем защиты, что и сам проект. Это необходимо для создания проекта. При изменении настройки свойства `ProtectionLevel` в проекте потребуется вручную обновить настройку свойства для пакетов.  
   
- Сведения о том, как определить `ProtectionLevel` параметры, подходящие для пакетов на различных этапах жизненного цикла пакета, см. в разделе [контроль доступа для конфиденциальных данных в пакетах](security/access-control-for-sensitive-data-in-packages.md). Общие сведения о средствах безопасности в службах [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] см. в разделе [Общие сведения о безопасности (службы Integration Services)](security/security-overview-integration-services.md).  
+ Сведения о том, как определить `ProtectionLevel` параметры, подходящие для пакетов на разных этапах жизненного цикла пакета, см. в разделе [Управление доступом для конфиденциальных данных в пакетах](security/access-control-for-sensitive-data-in-packages.md). Общие сведения о средствах безопасности в службах [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] см. в разделе [Общие сведения о безопасности (службы Integration Services)](security/security-overview-integration-services.md).  
   
  В приведенной в данном разделе процедуре описано использование [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] или средства командной dtutil для изменения свойства `ProtectionLevel`.  
   
 > [!NOTE]  
->  В дополнение к приведенной в этом разделе процедуре можно, как правило, задать или изменить свойство пакета `ProtectionLevel` при импорте или экспорте пакета. Если сохранение пакета производится с помощью мастера импорта и экспорта [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], то можно также изменить свойство `ProtectionLevel`.  
+>  В дополнение к приведенной в этом разделе процедуре можно, как правило, задать или изменить свойство пакета `ProtectionLevel` при импорте или экспорте пакета. Если сохранение пакета производится с помощью мастера импорта и экспорта `ProtectionLevel`, то можно также изменить свойство [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ### <a name="to-set-or-change-the-protection-level-of-a-package-in-sql-server-data-tools"></a>Установка или изменение уровня защиты пакета в SQL Server Data Tools  
   
-1.  Просмотрите доступные значения для `ProtectionLevel` свойства в разделе [Установка уровня защиты пакетов](security/access-control-for-sensitive-data-in-packages.md)и выберите подходящее значение для пакета.  
+1.  Проверьте доступные значения `ProtectionLevel` свойства в разделе [Настройка уровня защиты пакетов](security/access-control-for-sensitive-data-in-packages.md)и определите соответствующее значение для пакета.  
   
 2.  В среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]откройте проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , содержащий пакет.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66055844"
   
 4.  Если свойства пакета не отображаются в окне свойств, щелкните область конструктора.  
   
-5.  В окне «Свойства» в **безопасности** выберите соответствующее значение в параметре `ProtectionLevel` свойство.  
+5.  В окно свойств в группе **Безопасность** выберите соответствующее значение для `ProtectionLevel` свойства.  
   
      Если выбран уровень защиты, для которого требуется пароль, введите пароль в качестве значения свойства **PackagePassword** .  
   
@@ -50,11 +50,11 @@ ms.locfileid: "66055844"
   
 ### <a name="to-set-or-change-the-protection-level-of-packages-at-the-command-prompt"></a>Установка или изменение уровня защиты пакетов в командной строке  
   
-1.  Просмотрите доступные значения для `ProtectionLevel` свойства в разделе [Установка уровня защиты пакетов](security/access-control-for-sensitive-data-in-packages.md)и выберите подходящее значение для пакета.  
+1.  Проверьте доступные значения `ProtectionLevel` свойства в разделе [Настройка уровня защиты пакетов](security/access-control-for-sensitive-data-in-packages.md)и определите соответствующее значение для пакета.  
   
-2.  Просмотрите сопоставления для `Encrypt` параметр в разделе [программа dtutil](dtutil-utility.md)и определить подходящее целое число для использования в качестве значения выбранных `ProtectionLevel` свойство.  
+2.  Проверьте сопоставления для `Encrypt` параметра в разделе [программа dtutil](dtutil-utility.md)и определите соответствующее целое число, которое будет использоваться в качестве значения выбранного `ProtectionLevel` свойства.  
   
-3.  Откройте окно командной строки.  
+3.  Откройте окно командной строки и  
   
 4.  В командной строке перейдите к папке с пакетом или пакетами, для которых требуется задать свойство `ProtectionLevel`.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "66055844"
   
          Если подобную команду использовать в пакетном файле, то в него необходимо включить заполнитель «%f» в виде «%%f».  
   
-## <a name="see-also"></a>См. также  
- [dtutil Utility](dtutil-utility.md)  
+## <a name="see-also"></a>См. также:  
+ [dtutil, программа](dtutil-utility.md)  
   
   

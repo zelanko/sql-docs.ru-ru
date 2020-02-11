@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3fc62dc5f0e716273df257aba7fdc137391d3055
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196728"
 ---
 # <a name="rename-tables-database-engine"></a>Переименование таблиц (компонент Database Engine)
@@ -34,9 +34,9 @@ ms.locfileid: "68196728"
   
      [Ограничения](#Restrictions)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
--   **Переименование таблицы с использованием:**  
+-   **Переименование таблицы с помощью:**  
   
      [Среда SQL Server Management Studio](#SSMSProcedure)  
   
@@ -64,7 +64,7 @@ ms.locfileid: "68196728"
   
 4.  Чтобы отменить это действие, нажмите клавишу ESC перед тем, как выйти из этого поля.  
   
-5.  В меню **Файл** выберите пункт **Сохранить**_table name_.  
+5.  В меню **Файл** выберите команду **Сохранить**_имя_таблицы_.  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
@@ -74,7 +74,7 @@ ms.locfileid: "68196728"
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
-3.  В следующем примере в схеме `Sales` таблица `SalesTerritory` переименовывается в `SalesTerr`. Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**.  
+3.  В следующем примере столбец `SalesTerritory` в таблице `SalesTerr` переименовывается в `Sales` . Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**.  
   
     ```  
     USE AdventureWorks2012;   

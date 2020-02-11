@@ -1,5 +1,5 @@
 ---
-title: Удаление узла отказоустойчивого кластера SQL Server | Документация Майкрософт
+title: Удаление SQL Server узла отказоустойчивого кластера | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,15 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d17cb2a5713dbe8326259851db346c2edc942215
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093038"
 ---
 # <a name="remove-sql-server-failover-cluster-node"></a>Удаление узла отказоустойчивого кластера SQL Server
   На странице «Удаление узла отказоустойчивого кластера» выбирается компьютер, который является узлом отказоустойчивого кластера [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и должен быть удален из кластера.  
   
-  Эта страница предназначена как ссылка на графическом интерфейсе. Инструкции по удалению узлом кластера, см. в разделе [Добавление или удаление узлов](../failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md#Remove). 
+  Эта страница предназначена в качестве ссылки на графический интерфейс. Инструкции по удалению узла кластера см. в разделе [Добавление или удаление узлов](../failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md#Remove). 
   
   
