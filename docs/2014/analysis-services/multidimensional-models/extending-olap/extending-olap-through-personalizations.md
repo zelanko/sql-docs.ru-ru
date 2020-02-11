@@ -1,5 +1,5 @@
 ---
-title: Расширение OLAP через личные настройки | Документация Майкрософт
+title: Расширение возможностей OLAP с помощью персонализаций | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74c5b777dda06cf70a6afa2e6384eb2a3587d431
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62725988"
 ---
 # <a name="extending-olap-through-personalizations"></a>Расширение OLAP через личные настройки
@@ -30,8 +30,8 @@ ms.locfileid: "62725988"
 ## <a name="personalized-extensions"></a>Модули персонализации  
  Модули персонализации служб SQL Server Analysis Services лежат в основе архитектуры подключаемых модулей. Модули персонализации служб Analysis Services — простое и элегантное изменение существующей архитектуры управляемых сборок. Модули доступны через объектную модель служб Analysis Services <xref:Microsoft.AnalysisServices.AdomdServer>, синтаксис многомерных выражений и наборы строк схемы.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Управление сборками многомерной модели](../multidimensional-model-assemblies-management.md)   
- [Расширения персонализации служб Analysis Services](analysis-services-personalization-extensions.md)  
+ [Модули персонализации служб Analysis Services](analysis-services-personalization-extensions.md)  
   
   

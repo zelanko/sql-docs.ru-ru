@@ -22,16 +22,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ab38ea9b58e891d813a3ca73f43d20a364275da0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62727600"
 ---
 # <a name="processing-objects-xmla"></a>Обработка объектов (XMLA)
-  В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], обработка — это шаг или последовательность шагов, которые преобразуют данные в сведения для бизнес-анализа. Характеристики обработки меняются в зависимости от типа объекта, но обработка всегда является составной частью процесса преобразования данных в сведения.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] В [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]обработка — это шаг или последовательность шагов, которые включают данные в данные для бизнес-анализа. Характеристики обработки меняются в зависимости от типа объекта, но обработка всегда является составной частью процесса преобразования данных в сведения.  
   
- К процессу [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] объекта, можно использовать [процесс](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/process-element-xmla) команды. Команда `Process` в экземпляре служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] может обрабатывать следующие объекты:  
+ Для обработки [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] объекта можно использовать команду [Process](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/process-element-xmla) . Команда `Process` в экземпляре служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] может обрабатывать следующие объекты:  
   
 -   Кубы  
   
@@ -50,11 +50,11 @@ ms.locfileid: "62727600"
  Чтобы можно было управлять обработкой объектов, в команде `Process` предусмотрены различные свойства, которые можно задавать. Команда `Process` имеет свойства, которые определяют, какой объем обработки должен быть выполнен, какие объекты должны быть обработаны, будут ли использоваться внешние привязки, а также способ обработки ошибок и управления таблицами обратной записи.  
   
 ## <a name="specifying-processing-options"></a>Указание параметров обработки  
- [Тип](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla) свойство `Process` команда указывает параметр обработки для использования при обработке объекта. Дополнительные сведения об обработке см. в разделе [Настройка параметров обработки (службы Analysis Services)](../multidimensional-models/processing-options-and-settings-analysis-services.md).  
+ Свойство [Type](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla) `Process` команды задает параметр обработки, используемый при обработке объекта. Дополнительные сведения об обработке см. в разделе [Настройка параметров обработки (службы Analysis Services)](../multidimensional-models/processing-options-and-settings-analysis-services.md).  
   
  В следующей таблице приведены константы для свойства `Type`, а также различные объекты, которые можно обрабатывать при помощи каждой константы.  
   
-|Значение `Type`|Применимые объекты|  
+|`Type`значений|Применимые объекты|  
 |--------------------|------------------------|  
 |*ProcessFull*|Куб, база данных, измерение, группа мер, модель интеллектуального анализа данных, структура интеллектуального анализа данных, секция|  
 |*ProcessAdd*|Измерение, секция|  
@@ -64,28 +64,28 @@ ms.locfileid: "62727600"
 |*ProcessDefault*|Куб, база данных, измерение, группа мер, модель интеллектуального анализа данных, структура интеллектуального анализа данных, секция|  
 |*ProcessClear*|Куб, база данных, измерение, группа мер, модель интеллектуального анализа данных, структура интеллектуального анализа данных, секция|  
 |*ProcessStructure*|Куб, структура интеллектуального анализа данных|  
-|*ProcessClearStructureOnly*|Структура интеллектуального анализа данных|  
+|*процессклеарструктуреонли*|Структура интеллектуального анализа данных|  
 |*ProcessScriptCache*|Cube|  
   
- Дополнительные сведения об обработке [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] объектов, см. в разделе [обработку объекта многомерных моделей](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ Дополнительные сведения об обработке [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] объектов см. в разделе [Обработка объектов многомерной модели](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
 ## <a name="specifying-objects-to-be-processed"></a>Указание объектов для обработки  
- [Объект](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) свойство `Process` команда содержит идентификатор объекта, который должен быть обработан. В команде `Process` можно указать только один объект, однако при его обработке обрабатываются также все дочерние объекты. Например, при обработке группы мер в кубе обрабатываются все секции для этой группы мер, а при обработке базы данных обрабатываются все объекты, включая кубы, измерения и структуры интеллектуального анализа данных, содержащиеся в базе данных.  
+ Свойство [объекта](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) `Process` команды содержит идентификатор объекта для обработки. В команде `Process` можно указать только один объект, однако при его обработке обрабатываются также все дочерние объекты. Например, при обработке группы мер в кубе обрабатываются все секции для этой группы мер, а при обработке базы данных обрабатываются все объекты, включая кубы, измерения и структуры интеллектуального анализа данных, содержащиеся в базе данных.  
   
- Если атрибуту `ProcessAffectedObjects` команды `Process` задать значение TRUE, то все связанные объекты, вовлеченные в обработку указанного объекта, также будут обработаны. Например, если осуществляется добавочное обновление измерения с помощью *ProcessUpdate* параметр в обработки `Process` команды также является любой секции, агрегаты которых становятся недействительными из-за членов, добавляемых или удаляемых обрабатываемые [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Если `ProcessAffectedObjects` задано значение true. В этом случае одна команда `Process` позволяет обрабатывать несколько объектов в экземпляре служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], но службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] определяют, какие объекты также должны обрабатываться, кроме одного объекта, указанного в команде `Process`.  
+ Если атрибуту `ProcessAffectedObjects` команды `Process` задать значение TRUE, то все связанные объекты, вовлеченные в обработку указанного объекта, также будут обработаны. Например, если измерение постепенно обновляется с помощью параметра обработки *ProcessUpdate* в `Process` команде, все секции, агрегаты которых становятся недействительными из-за добавления или удаления элементов, также обрабатываются, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] если `ProcessAffectedObjects` свойство имеет значение true. В этом случае одна команда `Process` позволяет обрабатывать несколько объектов в экземпляре служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], но службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] определяют, какие объекты также должны обрабатываться, кроме одного объекта, указанного в команде `Process`.  
   
- Однако можно обрабатывать одновременно несколько объектов, например измерений, при помощи нескольких команд `Process` в составе команды `Batch`. Пакетные операции позволяют точнее управлять последовательной или параллельной обработкой объектов в экземпляре служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], чем при использовании атрибута `ProcessAffectedObjects`, а также позволяют подстраивать подход к обработке применительно к более крупным базам данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Дополнительные сведения о выполнении пакетных операций, см. в разделе [выполнение пакетных операций &#40;XMLA&#41;](performing-batch-operations-xmla.md).  
+ Однако можно обрабатывать одновременно несколько объектов, например измерений, при помощи нескольких команд `Process` в составе команды `Batch`. Пакетные операции позволяют точнее управлять последовательной или параллельной обработкой объектов в экземпляре служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], чем при использовании атрибута `ProcessAffectedObjects`, а также позволяют подстраивать подход к обработке применительно к более крупным базам данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Дополнительные сведения о выполнении пакетных операций см. в разделе [выполнение пакетных операций &#40;XMLA&#41;](performing-batch-operations-xmla.md).  
   
 ## <a name="specifying-out-of-line-bindings"></a>Указание внешних привязок  
- Если `Process` команды не содержится `Batch` команду, при необходимости можно указать вне строки привязок в [привязки](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/bindings-element-xmla), [DataSource](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla), и [DataSourceView ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/datasourceview-element-xmla) свойства `Process` команду для объектов для обработки. Внешние привязки — это ссылки на источники данных, представления источников данных и другие объекты, в которых привязка существует только во время выполнения команды `Process` и которые переопределяют любые существующие привязки, связанные с обрабатываемыми объектами. Если внешние привязки не указаны, используются привязки, связанные в данный момент с обрабатываемыми объектами.  
+ Если `Process` команда не содержится в `Batch` команде, можно дополнительно указать неиспользуемые привязки в свойствах [Bindings](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/bindings-element-xmla), [DataSource](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla)и [DataSourceView](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/datasourceview-element-xmla) `Process` команды для обрабатываемых объектов. Внешние привязки — это ссылки на источники данных, представления источников данных и другие объекты, в которых привязка существует только во время выполнения команды `Process` и которые переопределяют любые существующие привязки, связанные с обрабатываемыми объектами. Если внешние привязки не указаны, используются привязки, связанные в данный момент с обрабатываемыми объектами.  
   
  Внешние привязки используются в следующих ситуациях.  
   
 -   В случае постепенной обработки секции, в которой должна быть указана альтернативная таблица фактов или фильтр для существующей таблицы фактов с тем, чтобы строки не засчитывались дважды.  
   
--   С помощью задачи потока данных в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] для предоставления данных при обработке измерения, модели интеллектуального анализа данных или секции.  
+-   Использование задачи потока данных в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] для предоставления данных при обработке измерения, модели интеллектуального анализа данных или секции.  
   
- Внешние привязки описаны как часть языка сценариев служб Analysis Services (языка ASSL). Дополнительные сведения о привязках вне строки в языке ASSL см. в разделе [источники данных и привязки &#40;многомерных моделей SSAS&#41;](../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Внешние привязки описаны как часть языка сценариев служб Analysis Services (языка ASSL). Дополнительные сведения о нелинейных привязках в ASSL см. в разделе [Источники данных и привязки &#40;многомерных&#41;SSAS ](../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
 ### <a name="incrementally-updating-partitions"></a>Добавочное обновление секций  
  Для добавочного обновления уже обработанной секции обычно требуется внешняя привязка, так как привязка, указанная для этой секции, ссылается на данные таблицы фактов, которые уже были статистически обработаны в рамках данной секции. При выполнении добавочного обновления уже обработанной секции с помощью команды `Process` службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] выполняют следующие действия.  
@@ -96,10 +96,10 @@ ms.locfileid: "62727600"
   
 -   Объединяют временную секцию с существующей выделенной секцией.  
   
- Дополнительные сведения о слиянии секций с помощью XML для аналитики (XMLA) см. в разделе [слияние секций &#40;XMLA&#41;](merging-partitions-xmla.md).  
+ Дополнительные сведения о слиянии секций с помощью XML для аналитики (XMLA) см. в разделе [Слияние секций &#40;xmla&#41;](merging-partitions-xmla.md).  
   
 ## <a name="handling-processing-errors"></a>Обработка ошибок  
- [ErrorConfiguration](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/errorconfiguration-element-xmla) свойство `Process` команда позволяет задать способ обработки ошибок, возникших при обработке объекта. Например, при обработке измерения службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] обнаруживают повторяющиеся значение в ключевом столбце ключевого атрибута. Поскольку ключи атрибутов должны быть уникальны, службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] удаляют повторяющиеся записи. На основе [KeyDuplicate](https://docs.microsoft.com/bi-reference/assl/properties/keyduplicate-element-assl) свойство `ErrorConfiguration`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] может:  
+ Свойство [ErrorConfiguration](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/errorconfiguration-element-xmla) `Process` команды позволяет указать способ обработки ошибок, обнаруженных при обработке объекта. Например, при обработке измерения службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] обнаруживают повторяющиеся значение в ключевом столбце ключевого атрибута. Поскольку ключи атрибутов должны быть уникальны, службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] удаляют повторяющиеся записи. Основываясь на [](https://docs.microsoft.com/bi-reference/assl/properties/keyduplicate-element-assl) свойстве KeyDuplicate `ErrorConfiguration`объекта [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , может:  
   
 -   Пропустить ошибку и продолжить обработку измерения.  
   
@@ -108,11 +108,11 @@ ms.locfileid: "62727600"
  Существует много схожих условий, для которых предусмотрены параметры свойства `ErrorConfiguration` при выполнении команды `Process`.  
   
 ## <a name="managing-writeback-tables"></a>Управление таблицами обратной записи  
- Если команда `Process` обнаруживает секцию, доступную для записи, куб или группу мер для такой секции, которые еще не полностью обработаны, для этой секции может еще не существовать таблица обратной записи. [WritebackTableCreation](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/writebacktablecreation-element-xmla) свойство `Process` команда определяет ли [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] необходимо создать таблицу обратной записи.  
+ Если команда `Process` обнаруживает секцию, доступную для записи, куб или группу мер для такой секции, которые еще не полностью обработаны, для этой секции может еще не существовать таблица обратной записи. Свойство [WritebackTableCreation](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/writebacktablecreation-element-xmla) `Process` команды определяет, следует ли [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] создавать таблицу обратной записи.  
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="description"></a>Описание  
+### <a name="description"></a>Description  
  В следующем примере производится полная обработка образца базы данных [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ### <a name="code"></a>Код  
@@ -127,8 +127,8 @@ ms.locfileid: "62727600"
 </Process>  
 ```  
   
-### <a name="description"></a>Описание  
- В следующем примере **Internet_Sales_2004** раздел в **Интернет-продажи** группе мер **Adventure Works DW** куба в [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] пример [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базы данных. `Process` Команда добавляет агрегаты для заказа даты позже 31 декабря 2006 г. в раздел при помощи привязки запроса вне строки в `Bindings` свойство `Process` команду, чтобы получить строки таблицы фактов, из которого требуется создать агрегаты для добавления в секцию.  
+### <a name="description"></a>Description  
+ В следующем примере выполняется добавочная обработка **Internet_Sales_2004** секции в группе мер **Internet Sales** Куба **Adventure Works DW** в [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] образце [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базы данных. `Process` Команда добавляет агрегаты для дат заказов позже 31 декабря 2006 в секцию, используя нелинейную привязку запроса в `Bindings` свойстве `Process` команды для получения строк таблицы фактов, из которых формируются агрегаты для добавления в секцию.  
   
 ### <a name="code"></a>Код  
   

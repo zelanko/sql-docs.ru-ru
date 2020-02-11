@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d4c789ea6cececcfacbc428fda393c1c13684765
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62704857"
 ---
 # <a name="facet-properties-dialog-box-general-page"></a>Диалоговое окно «Свойства аспекта», вкладка «Общие»
@@ -26,13 +26,13 @@ ms.locfileid: "62704857"
  **Описание**  
  Предоставляет общее описание аспекта.  
   
- **Применимые типы целевого объекта**  
+ **Применимые типы целевых объектов**  
  Отображает типы целей, которые могут быть отображены или настроены с помощью данного аспекта.  
   
  **Свойства**  
  Отображает имя и описание каждого свойства аспекта.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Администрирование серверов с помощью управления на основе политик](administer-servers-by-using-policy-based-management.md)  
   
   

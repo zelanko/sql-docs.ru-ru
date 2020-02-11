@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 636fe00c73e508363eaab385f6acd9909374166c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62704726"
 ---
 # <a name="view-or-change-the-properties-of-a-connection-in-a-project"></a>Просмотр или изменение свойств соединения в проекте
@@ -32,9 +32,9 @@ ms.locfileid: "62704726"
   
 2.  Просмотрите свойства соединения в окне «Свойства». Можно изменить свойства **Время ожидания выполнения**, **База данных**и **Время ожидания входа** .  
   
-## <a name="see-also"></a>См. также  
- [Обозреватель решений](solution-explorer.md)   
- [Связь запроса с соединением в проекте](associate-a-query-with-a-connection-in-a-project.md)   
+## <a name="see-also"></a>См. также:  
+ [обозреватель решений](solution-explorer.md)   
+ [Связывание запроса с соединением в проекте](associate-a-query-with-a-connection-in-a-project.md)   
  [Изменение соединения, связанного с запросом](change-the-connection-associated-with-a-query.md)  
   
   

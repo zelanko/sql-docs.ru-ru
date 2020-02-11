@@ -1,5 +1,5 @@
 ---
-title: sys.database_mirroring_witnesses (Transact-SQL) | Документация Майкрософт
+title: sys. database_mirroring_witnesses (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,42 +22,42 @@ ms.assetid: 0dd5b794-733b-4a3c-b5a4-62f9f1f0f22d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 10fbd3ac410ee5b6944ffe7b32285008f8b11776
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68033077"
 ---
-# <a name="database-mirroring-witness-catalog-views---sysdatabasemirroringwitnesses"></a>Представления каталога свидетеля зеркального отображения - базы данных sys.database_mirroring_witnesses
+# <a name="database-mirroring-witness-catalog-views---sysdatabase_mirroring_witnesses"></a>Представления каталога следящего сервера зеркального отображения базы данных — sys. database_mirroring_witnesses
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Содержит по одной строке для каждой из следящих ролей, исполняемых сервером при участии в зеркальном отображении базы данных. 
   
-  При зеркальном отображении базы данных для автоматической отработки отказа требуется следящий сервер. Желательно, чтобы следящий сервер находился на компьютере, отдельном от основного и зеркального серверов. Следящий сервер не обслуживает базу данных, а производит мониторинг состояния основного и зеркального серверов. Если основной сервер дает сбой, следящий сервер может инициировать автоматический переход на зеркальный сервер. 
+  При зеркальном отображении базы данных для автоматической отработки отказа требуется следящий сервер. Желательно, чтобы следящий сервер находился на компьютере, отдельном от основного и зеркального серверов. Следящий сервер не обслуживает базу данных, а производит мониторинг состояния основного и зеркального серверов. В случае сбоя основного сервера следящий сервер может инициировать автоматический переход на зеркальный диск. 
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|**database_name**|**sysname**|Имя двух копий базы данных в сеансе зеркального отображения базы данных.|  
-|**principal_server_name**|**sysname**|Имя сервера-участника, копия базы данных которого в настоящее время является основной базой данных.|  
-|**mirror_server_name**|**sysname**|Имя сервера-участника, копия базы данных которого в настоящее время является зеркальной базой данных.|  
+|**database_name**|**имеет sysname**|Имя двух копий базы данных в сеансе зеркального отображения базы данных.|  
+|**principal_server_name**|**имеет sysname**|Имя сервера-участника, копия базы данных которого в настоящее время является основной базой данных.|  
+|**mirror_server_name**|**имеет sysname**|Имя сервера-участника, копия базы данных которого в настоящее время является зеркальной базой данных.|  
 |**safety_level**|**tinyint**|Уровень безопасности транзакции для выполнения изменений в зеркальной базе данных.<br /><br /> 0 = неизвестное состояние.<br /><br /> 1 = выключен (асинхронно).<br /><br /> 2 = полный (синхронно).<br /><br /> Использование слежения для автоматической отработки отказа требует полного уровня безопасности, который включен по умолчанию.|  
-|**safety_level_desc**|**nvarchar(60)**|Описание гарантий безопасности изменений в зеркальной базе данных.<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> FULL|  
-|**safety_sequence_number**|**int**|Последовательный номер обновления для изменения **safety_level**.|  
+|**safety_level_desc**|**nvarchar (60)**|Описание гарантий безопасности изменений в зеркальной базе данных.<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> FULL|  
+|**safety_sequence_number**|**int**|Порядковый номер обновления для изменений в **safety_level**.|  
 |**role_sequence_number**|**int**|Последовательный номер обновления для переключения ролей главного и зеркального сервера, исполняемых каждым из участников зеркального отображения.|  
-|**mirroring_guid**|**uniqueidentifier**|Идентификатор участия зеркального отображения.|  
-|**family_guid**|**uniqueidentifier**|Идентификатор семейства для резервирования базы данных. Используется для выявления совпадающих состояний восстановления.|  
+|**mirroring_guid**|**UNIQUEIDENTIFIER**|Идентификатор участия зеркального отображения.|  
+|**family_guid**|**UNIQUEIDENTIFIER**|Идентификатор семейства для резервирования базы данных. Используется для выявления совпадающих состояний восстановления.|  
 |**is_suspended**|**bit**|Зеркальное отображение базы данных приостановлено.|  
-|**is_suspended_sequence_number**|**int**|Порядковый номер параметра **is_suspended**.|  
-|**partner_sync_state**|**tinyint**|Состояние синхронизации сеанса зеркального отображения базы данных:<br /><br /> 5 = участники синхронизированы. Отработка отказа возможна. Сведения о требованиях к отработке отказа см.в [переключение ролей во время база данных зеркального отображения сеанса &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).<br /><br /> 6 = участники не синхронизированы. Отработка отказа сейчас невозможна;|  
-|**partner_sync_state_desc**|**nvarchar(60)**|Описание состояния синхронизации сеанса зеркального отображения:<br /><br /> SYNCHRONIZED<br /><br /> UNSYNCHRONIZED|  
+|**is_suspended_sequence_number**|**int**|Порядковый номер для параметра **is_suspended**.|  
+|**partner_sync_state**|**tinyint**|Состояние синхронизации сеанса зеркального отображения базы данных:<br /><br /> 5 = партнеры синхронизированы. Отработка отказа возможна. Сведения о требованиях к отработке отказа см. в разделе [Переключение ролей во время сеанса зеркального отображения базы данных &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).<br /><br /> 6 = партнеры не синхронизированы. Отработка отказа сейчас невозможна;|  
+|**partner_sync_state_desc**|**nvarchar (60)**|Описание состояния синхронизации сеанса зеркального отображения:<br /><br /> SYNCHRONIZED<br /><br /> UNSYNCHRONIZED|  
   
 ## <a name="permissions"></a>Разрешения  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Дополнительные сведения см. в разделе [Настройка видимости метаданных](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>См. также  
- [Database Mirroring Witness](../../database-engine/database-mirroring/database-mirroring-witness.md)   
- [sys.database_mirroring &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)   
- [sys.database_mirroring_endpoints (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)   
- [Часто задаваемые вопросы о запросах к системному каталогу SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
+## <a name="see-also"></a>См. также:  
+ [Следящий сервер зеркального отображения базы данных](../../database-engine/database-mirroring/database-mirroring-witness.md)   
+ [sys. database_mirroring &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)   
+ [sys. database_mirroring_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)   
+ [Часто задаваемые вопросы о запросах к системному каталогу сервера SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

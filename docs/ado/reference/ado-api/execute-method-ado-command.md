@@ -1,5 +1,5 @@
 ---
-title: Выполнение метода (объект Command ADO) | Документация Майкрософт
+title: Метод Execute (команда ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: f84a5ff3-0528-4ad7-9bea-9a15103378dd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4ef42c04944f39e0b2d1930cc6520df2b6c5fa5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918849"
 ---
 # <a name="execute-method-ado-command"></a>Метод Execute (объект Command ADO)
-Выполняет запрос, инструкции SQL или хранимой процедуры, которая указана в [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) или [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) свойство [объект команды](../../../ado/reference/ado-api/command-object-ado.md).  
+Выполняет запрос, инструкцию SQL или хранимую процедуру, указанную в свойстве [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) или [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) [объекта Command](../../../ado/reference/ado-api/command-object-ado.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,49 +34,49 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает [записей](../../../ado/reference/ado-api/recordset-object-ado.md) ссылку на объект, поток, или **ничего не**.  
+ Возвращает ссылку на объект [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) , поток или **ничего**.  
   
 #### <a name="parameters"></a>Параметры  
  *RecordsAffected*  
- Необязательный параметр. Объект **Long** переменной, в которой поставщик возвращает количество записей, затронутых операцией. *RecordsAffected* параметр применяется только для запросов или хранимых процедур. *RecordsAffected* не возвращает число записей, возвращенных в возвращающих результат запроса или хранимой процедуры. Чтобы получить эти сведения, используйте [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) свойство. **Execute** метод не возвращает правильные данные при использовании с **adAsyncExecute**, просто потому, что при выполнении команды асинхронно, количество обработанных записей еще неизвестна во время выполнения метода.  
+ Необязательный параметр. **Длинная** переменная, к которой поставщик возвращает количество записей, затронутых операцией. Параметр *рекордсаффектед* применяется только для запросов действий или хранимых процедур. *Рекордсаффектед* не возвращает число записей, возвращенных запросом, возвращающим результат, или хранимой процедурой. Чтобы получить эти сведения, используйте свойство [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) . Метод **EXECUTE** не возвращает правильные сведения при использовании с **адасинцексекуте**, просто потому, что при асинхронном выполнении команды число затронутых записей может еще не быть известно во время возврата метода.  
   
  *Параметры*  
- Необязательный. Объект **Variant** массив значений параметров, используется в сочетании с входную строку или поток, указанный в **CommandText** или **CommandStream**. (Выходные параметры не вернет правильные значения при передаче в этом аргументе.)  
+ Необязательный параметр. Массив **вариантов** значений параметров, используемых в сочетании со входной строкой или потоком, указанным в параметре **CommandText** или **CommandStream**. (Выходные параметры не будут возвращать правильные значения при передаче в этом аргументе.)  
   
  *Параметры*  
- Необязательный. Объект **Long** значение, указывающее, каким образом следует оценить, поставщик [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) или [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) свойство [команда](../../../ado/reference/ado-api/command-object-ado.md) объект. Может представлять собой значение битовой маски, выполненные с помощью [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) и/или [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) значения. Например, можно использовать **adCmdText** и **adExecuteNoRecords** в сочетании, если требуется, чтобы оценить значение ADO **CommandText** свойство как текст, и Укажите, что команда должна отменить и не возвратит никаких записей, которые могут возникнуть при выполнении текст команды.  
+ Необязательный параметр. Значение **типа Long** , указывающее, как поставщик должен оценивать свойство [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) или [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) объекта [Command](../../../ado/reference/ado-api/command-object-ado.md) . Может быть значением битовой маски, сделанным с помощью значений [коммандтипинум](../../../ado/reference/ado-api/commandtypeenum.md) и/или [ексекутеоптионенум](../../../ado/reference/ado-api/executeoptionenum.md) . Например, можно использовать **адкмдтекст** и **адексекутенорекордс** в сочетании, если предполагается, что ADO вычисляет значение свойства **CommandText** как текст и указывает, что команда должна быть удалена и не возвращать записи, которые могут быть созданы при выполнении текста команды.  
   
 > [!NOTE]
->  Используйте **ExecuteOptionEnum** значение **adExecuteNoRecords** для повышения производительности, сводя к минимуму внутренней обработки. Если **adExecuteStream** был указан, параметры **adAsyncFetch** и **adAsynchFetchNonBlocking** игнорируются. Не используйте **CommandTypeEnum** значения **adCmdFile** или **adCmdTableDirect** с **Execute**. Эти значения могут использоваться только как параметры с [откройте](../../../ado/reference/ado-api/open-method-ado-recordset.md) и [Requery](../../../ado/reference/ado-api/requery-method.md) методы **записей**.  
+>  Используйте значение **Ексекутеоптионенум** **адексекутенорекордс** для повышения производительности за счет минимизации внутренней обработки. Если указан параметр **адексекутестреам** , параметры **адасинкфетч** и **адасинчфетчнонблоккинг** игнорируются. Не используйте значения **коммандтипинум** для **адкмдфиле** или **адкмдтабледирект** с **EXECUTE**. Эти значения можно использовать только в качестве параметров с методами [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) и [Requery](../../../ado/reference/ado-api/requery-method.md) **набора записей**.  
   
-## <a name="remarks"></a>Примечания  
- С помощью **Execute** метод **команда** выполняется запрос, указанный в объект **CommandText** свойство или **CommandStream** свойство объекта.  
+## <a name="remarks"></a>Remarks  
+ При использовании метода **EXECUTE** для объекта **Command** выполняется запрос, указанный в свойстве **CommandText** или в свойстве **CommandStream** объекта.  
   
- Результаты возвращаются в **записей** (по умолчанию) или в виде потока двоичных данных. Чтобы получить двоичный поток, задайте **adExecuteStream** в *параметры*, затем указать поток, задав **Command.Properties («выходные данные Stream")** . ADO **Stream** объекта может быть указано для получения результатов, или другой объект stream, такие как объект ответа службы IIS могут быть указаны. Если поток не был указан перед вызовом **Execute** с **adExecuteStream**, возникает ошибка. Позицию в потоке при возврате из **Execute** зависит от поставщика.  
+ Результаты возвращаются в **наборе записей** (по умолчанию) или в виде потока двоичных данных. Чтобы получить двоичный поток, укажите **адексекутестреам** в *параметрах*, а затем укажите поток, задав **команду. Properties ("поток вывода")**. Для получения результатов можно указать объект **потока** ADO или указать другой объект потока, например объект ответа IIS. Если перед вызовом **EXECUTE** с **адексекутестреам**не был указан поток, возникает ошибка. Расположение потока при возврате из **EXECUTE** зависит от конкретного поставщика.  
   
- Если команда не предназначен для возврата результатов (например, запроса SQL UPDATE) поставщик возвращает **ничего не** условии, что параметр **adExecuteNoRecords** указан; в противном случае Execute которого возвращает Закрыто **записей**. В некоторых языках приложения дают возможность игнорировать это возвращаемое значение, если не **записей** требуется.  
+ Если команда не должна возвращать результаты (например, запрос SQL UPDATE), поставщик возвращает **значение Nothing** , если указан параметр **адексекутенорекордс** . в противном случае Execute возвращает закрытый **набор записей**. Некоторые языки приложений позволяют игнорировать это возвращаемое значение, если **набор записей** не требуется.  
   
- **Выполнение** вызывает ошибку, если пользователь указывает значение для **CommandStream** при **CommandType** — **adCmdStoredProc**,  **adCmdTable**, или **adCmdTableDirect**.  
+ **EXECUTE** выдает ошибку, если пользователь указывает значение для **CommandStream** , если **CommandType** — **адкмдсторедпрок**, **адкмдтабле**или **адкмдтабледирект**.  
   
- Если запрос содержит параметры, текущего значения для **команда** объекта параметры используются в том случае, если не переопределено с помощью значения параметров, передаваемые с **Execute** вызова. Подмножество этих параметров можно переопределить, опустив новые значения для некоторых параметров, при вызове **Execute** метод. Порядок, в котором можно задать параметры — это том же порядке, в котором метод передает их. Например, если существуют четыре (или более) параметры и вы хотите передать новые значения для только первый и четвертый параметры, следует передавать `Array(var1,,,var4)` как *параметры* аргумент.  
-  
-> [!NOTE]
->  Выходные параметры не вернет правильные значения при передаче в *параметры* аргумент.  
-  
- [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md) событий будут выдаваться при завершении этой операции.  
+ Если запрос содержит параметры, используются текущие значения параметров **командного** объекта, если только они не переопределены значениями параметров, передаваемыми при вызове **EXECUTE** . Можно переопределить подмножество параметров, опустив новые значения для некоторых параметров при вызове метода **EXECUTE** . Порядок, в котором указываются параметры, совпадает с порядком, в котором метод передает их. Например, при наличии четырех (или более) параметров и необходимости передачи новых значений только для первого и четвертого параметров необходимо передать `Array(var1,,,var4)` в качестве аргумента *параметров* .  
   
 > [!NOTE]
->  При выдаче команды, содержащие URL-адреса, которые используют схему http, автоматически вызывает метод [поставщик Microsoft OLE DB для публикаций в Интернете](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Дополнительные сведения см. в разделе [абсолютные и относительные URL-адреса](../../../ado/guide/data/absolute-and-relative-urls.md).  
+>  Выходные параметры не будут возвращать правильные значения при передаче в аргумент *параметров* .  
   
-## <a name="applies-to"></a>Объект применения  
+ Когда эта операция завершается, будет выдано событие [ексекутекомплете](../../../ado/reference/ado-api/executecomplete-event-ado.md) .  
+  
+> [!NOTE]
+>  При выдаче команд, содержащих URL-адреса, при использовании схемы HTTP автоматически вызывается [поставщик Microsoft OLE DB для публикации в Интернете](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Дополнительные сведения см. в разделе [абсолютные и относительные URL-адреса](../../../ado/guide/data/absolute-and-relative-urls.md).  
+  
+## <a name="applies-to"></a>Применяется к  
  [Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
- [EXECUTE, Requery и Clear методы (Visual Basic)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vb.md)   
- [EXECUTE, Requery и Clear методы (VBScript)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vbscript.md)   
- [EXECUTE, Requery и Clear методы (Visual C++)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vc.md)   
+## <a name="see-also"></a>См. также:  
+ [Примеры методов Execute, Requery и Clear (Visual Basic)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vb.md)   
+ [Пример методов Execute, Requery и Clear (VBScript)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vbscript.md)   
+ [Пример методов Execute, Requery и Clear (Visual c++)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vc.md)   
  [Свойство CommandStream (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md)   
  [Свойство CommandText (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)   
- [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)   
- [Выполнение метода (объект Connection ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
+ [коммандтипинум](../../../ado/reference/ado-api/commandtypeenum.md)   
+ [Метод Execute (соединение ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
  [Событие ExecuteComplete (ADO)](../../../ado/reference/ado-api/executecomplete-event-ado.md)

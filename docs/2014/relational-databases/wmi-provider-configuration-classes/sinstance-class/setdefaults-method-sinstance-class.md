@@ -1,5 +1,5 @@
 ---
-title: Метод SetDefaults (класс SInstance) | Документация Майкрософт
+title: Метод SetDefaults (Класс Класс SInstance) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,14 +19,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ad13821341291a91a989297f29e1459a40de5afe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62720936"
 ---
 # <a name="setdefaults-method-sinstance-class"></a>Метод SetDefaults (класс SInstance)
-  Задает все значения по умолчанию для экземпляра [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с параметром перезаписи существующих данных.  
+  Задает все значения по умолчанию для экземпляра [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с параметром для перезаписи существующих данных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,21 +40,21 @@ OverwriteAll
 ```  
   
 ## <a name="parts"></a>Компоненты  
- *object*  
- [Класс SInstance](sinstance-class.md) объект, представляющий экземпляр сервера.  
+ *объектами*  
+ Объект [класса Класс SInstance](sinstance-class.md) , представляющий экземпляр сервера.  
   
 #### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Description|  
 |---------------|-----------------|  
-|*OverwriteAll*|Логическое значение, указывающее, следует ли перезаписывать существующее значение в экземпляре клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. `true`, если следует; в противном случае — `false`.|  
+|*овервритеалл*|Логическое значение, указывающее, следует ли перезаписывать существующее значение в экземпляре клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. `true`, если следует; в противном случае — `false`.|  
   
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение `uint32`, равное 0, если служба изменена успешно, и 1, если запрос не поддерживается. Любое другое значение указывает на ошибку.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
- [Настройка сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+## <a name="see-also"></a>См. также:  
+ [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

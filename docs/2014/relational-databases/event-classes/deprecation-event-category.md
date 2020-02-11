@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8ba973e51a7d3c86b9f1a15075b0a86ac94502cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62662849"
 ---
 # <a name="deprecation-event-category"></a>Deprecation, категория событий
@@ -26,7 +26,7 @@ ms.locfileid: "62662849"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Описание|  
+|Раздел|Description|  
 |-----------|-----------------|  
 |[Класс событий Deprecation Announcement](deprecation-announcement-event-class.md)|Указывает, что в будущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]функциональная возможность будет удалена.|  
 |[Класс событий Deprecation Final Support](deprecation-final-support-event-class.md)|Указывает, что в будущем выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]функциональная возможность будет удалена.|  

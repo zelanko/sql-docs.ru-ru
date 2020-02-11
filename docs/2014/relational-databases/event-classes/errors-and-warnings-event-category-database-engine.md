@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b86b68b0e7273a275c8dd1bd00fe99a7c462a27d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62662630"
 ---
 # <a name="errors-and-warnings-event-category-database-engine"></a>Категория событий Errors and Warnings (компонент Database Engine)
@@ -28,7 +28,7 @@ ms.locfileid: "62662630"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Описание|  
+|Раздел|Description|  
 |-----------|-----------------|  
 |[Класс событий Attention](attention-event-class.md)|Указывает, что произошло событие **Внимание** .|  
 |[Класс событий Background Job Error](background-job-error-event-class.md)|Указывает, что фоновое задание завершилось ненормально.|  
@@ -46,7 +46,7 @@ ms.locfileid: "62662630"
 |[Класс событий Sort Warnings](sort-warnings-event-class.md)|Указывает, что операциям сортировки не хватает памяти.|  
 |[Класс событий User Error Message](user-error-message-event-class.md)|Отображаются сообщения об ошибках, видимые пользователю.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Хранимая процедура sp_trace_setevent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

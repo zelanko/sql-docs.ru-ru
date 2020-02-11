@@ -14,29 +14,29 @@ ms.assetid: b5e1d26d-b41d-4e35-8c7c-972426473dfb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2a06e51f5c5077a70f9b5a76ecdf4922d8e006f7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921101"
 ---
 # <a name="ado-collections"></a>Коллекции ADO
-Связи между этих коллекций и объектов ADO, представлены в [объектная модель ADO](../../../ado/reference/ado-api/ado-object-model.md).  
+Связи между этими коллекциями и объектами ADO представлены в [объектной модели ADO](../../../ado/reference/ado-api/ado-object-model.md).  
   
- Каждая коллекция может содержать соответствующего объекта. Например [ошибка](../../../ado/reference/ado-api/error-object.md) объекта может содержаться в [ошибки](../../../ado/reference/ado-api/errors-collection-ado.md) коллекции. Дополнительные сведения об объектах см. в разделе [объектов ADO](../../../ado/reference/ado-api/ado-objects-and-interfaces.md) или раздел определенного объекта.  
+ Каждая коллекция может содержать соответствующий объект. Например, объект [ошибки](../../../ado/reference/ado-api/error-object.md) может содержаться в коллекции [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) . Дополнительные сведения об объектах см. в разделе [объекты ADO](../../../ado/reference/ado-api/ado-objects-and-interfaces.md) или конкретный объект.  
   
 |||  
 |-|-|  
-|[ошибки](../../../ado/reference/ado-api/errors-collection-ado.md)|Содержит все **ошибка** объекты, созданные в ответ на сбой одного поставщика.|  
-|[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)|Содержит все **поле** объектов **записей** объекта.|  
-|[Параметры](../../../ado/reference/ado-api/parameters-collection-ado.md)|Содержит все **параметр** объектов **команда** объекта.|  
-|[Свойства](../../../ado/reference/ado-api/properties-collection-ado.md)|Содержит все **свойство** объекты для конкретного экземпляра объекта.|  
+|[ошибки](../../../ado/reference/ado-api/errors-collection-ado.md)|Содержит все объекты **ошибок** , созданные в ответ на одну ошибку, связанную с поставщиком.|  
+|[Поля](../../../ado/reference/ado-api/fields-collection-ado.md)|Содержит все объекты **field** объекта **Recordset** .|  
+|[Параметры](../../../ado/reference/ado-api/parameters-collection-ado.md)|Содержит все объекты **параметров** объекта **Command** .|  
+|[Свойства](../../../ado/reference/ado-api/properties-collection-ado.md)|Содержит все объекты **свойств** для конкретного экземпляра объекта.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по API ADO](../../../ado/reference/ado-api/ado-api-reference.md)   
  [Динамические свойства ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
- [Перечисляемые константы ADO](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [Приложение б. Ошибки ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
+ [Перечислимые константы ADO](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
+ [Приложение б. ошибки ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
  [События ADO](../../../ado/reference/ado-api/ado-events.md)   
  [Методы ADO](../../../ado/reference/ado-api/ado-methods.md)   
  [Объектная модель ADO](../../../ado/reference/ado-api/ado-object-model.md)   

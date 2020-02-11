@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 95692fd0ecf365f1fb54c8c1c3a090227b0d9a38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721756"
 ---
 # <a name="replication-agent-profiles"></a>Профили агента репликации
@@ -46,7 +46,7 @@ ms.locfileid: "62721756"
   
 ||значение по умолчанию|  
 |-|-------------|  
-|**-BcpBatchSize**|100000|  
+|**-BcpBatchSize**|100 000|  
 |**-HistoryVerboseLevel**|2|  
 |**-LoginTimeout**|15|  
 |**-QueryTimeout**|1800|  
@@ -68,7 +68,7 @@ ms.locfileid: "62721756"
   
 ||значение по умолчанию|подробный журнал|диспетчер синхронизации Windows|продолжать при возникновении ошибок согласованности данных|профиль распространителя для потоковой передачи данных OLEDB|  
 |-|-------------|---------------------|-------------------------------------|-----------------------------------------|----------------------------------------------|  
-|**-BcpBatchSize**|100000|100000|1000|100000|2147473647|  
+|**-BcpBatchSize**|100 000|100 000|1000|100 000|2147473647|  
 |**-CommitBatchSize**|100|100|100|100|100|  
 |**-CommitBatchThreshold**|1000|1000|1000|1000|1000|  
 |**-HistoryVerboseLevel**|1|2|1|1|1|  
@@ -89,7 +89,7 @@ ms.locfileid: "62721756"
   
 ||значение по умолчанию|подробный журнал|диспетчер синхронизации Windows|проверка правильности количества строк|проверка правильности количества строк и контрольной суммы|медленная линия связи|межсерверный большого объема|  
 |-|-------------|---------------------|-------------------------------------|-------------------------|--------------------------------------|---------------|------------------------------------|  
-|**-BcpBatchSize**|100000|100000|1000|100000|100000|100000|100000|  
+|**-BcpBatchSize**|100 000|100 000|1000|100 000|100 000|100 000|100 000|  
 |**-ChangesPerHistory**|100|50|50|100|100|100|1000|  
 |**-DestThreads**|2|1|1|1|1|1|4|  
 |**-DownloadGenerationsPerBatch**|50|50|50|50|50|1|500|  
@@ -125,7 +125,7 @@ ms.locfileid: "62721756"
 |**-PollingInterval**|5|  
 |**-QueryTimeout**|1800|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Администрирование агента репликации](replication-agent-administration.md)   
  [Просмотр и изменение параметров командной строки агента репликации (SQL Server Management Studio)](view-and-modify-replication-agent-command-prompt-parameters.md)   
  [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md)  

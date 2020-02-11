@@ -1,5 +1,5 @@
 ---
-title: sys.remote_data_archive_databases (Transact-SQL) | Документация Майкрософт
+title: sys. remote_data_archive_databases (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,24 +19,24 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 339d960a136e9cf939032068c21ec737f4d37ceb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68018206"
 ---
-# <a name="stretch-database-catalog-views---sysremotedataarchivedatabases"></a>Stretch Database представления каталога - sys.remote_data_archive_databases
+# <a name="stretch-database-catalog-views---sysremote_data_archive_databases"></a>Stretch Database представлений каталога — sys. remote_data_archive_databases
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Содержит по одной строке для каждой удаленной базы данных, которая хранит данные из локальной базы данных с поддержкой Stretch.  
+  Содержит по одной строке для каждой удаленной базы данных, в которой хранятся данные из локальной базы данных с поддержкой Stretch.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |**remote_database_id**|**int**|Автоматически созданный локальный идентификатор удаленной базы данных.|  
-|**remote_database_name**|**sysname**|Имя удаленной базы данных.|  
+|**remote_database_name**|**имеет sysname**|Имя удаленной базы данных.|  
 |**data_source_id**|**int**|Источник данных, используемый для подключения к удаленному серверу|  
   
-## <a name="see-also"></a>См. также  
- [База данных Stretch](../../sql-server/stretch-database/stretch-database.md)  
+## <a name="see-also"></a>См. также:  
+ [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
   
   

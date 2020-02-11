@@ -16,14 +16,14 @@ ms.assetid: e492d307-24cb-489c-a5b0-99cdc09b07da
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 675a31ab333a6c2d92e6afcd6a461b3baebd5b3c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926386"
 ---
 # <a name="visual-c-extensions-header"></a>Заголовок расширений Visual C++
-Следующий заголовок **icrsint.h**, подробно интерфейс, позволяющий клиентам для извлечения полей из **записей** в переменные, определенные в классе, производном от **CADORecordBinding**. Необходимо указать макроса привязку ADO для каждого поля, которое необходимо будет получить доступ.  
+В следующем заголовке **икрсинт. h**подробно описывается интерфейс, позволяющий клиентам получать поля из **набора записей** в переменные, определенные в классе, производном от **кадорекордбиндинг**. Необходимо указать макрос привязки ADO для каждого поля, к которому требуется получить доступ.  
   
 ```cpp
 #ifndef _ICRSINT_H_  
@@ -207,6 +207,6 @@ public:
 #endif // !_ICRSINT_H_  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Образец расширения Visual C++](../../../ado/guide/appendixes/visual-c-extensions-example.md)   
+## <a name="see-also"></a>См. также:  
+ [Пример расширений Visual C++](../../../ado/guide/appendixes/visual-c-extensions-example.md)   
  [Использование расширений Visual C++](../../../ado/guide/appendixes/using-visual-c-extensions.md)

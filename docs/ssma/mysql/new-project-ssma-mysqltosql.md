@@ -10,37 +10,37 @@ ms.assetid: 7a3846ee-b221-47a5-ac8c-d08a962931af
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 4ef40fbc5acafeaaba76953940f763c663cb121c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67908855"
 ---
 # <a name="new-project-ssma-mysqltosql"></a>Новый проект (SSMA) (MySQLToSQL)
-Используйте **новый проект** диалоговое окно для создания нового проекта SSMA. Чтобы получить доступ к **новый проект** диалоговом окне **файл** меню, щелкните **новый проект**.  
+Используйте диалоговое окно **Создание проекта** для создания нового проекта SSMA. Чтобы открыть диалоговое окно **Новый проект** , в меню **файл** выберите команду **создать проект**.  
   
 ## <a name="options"></a>Параметры  
-**Name**  
+**Название**  
   
-Введите имя проекта. SSMA добавляет расширение файла.  
+Введите имя проекта. SSMA добавит расширение файла.  
   
 **Location**  
   
-Укажите или перейдите к папке или сетевое расположение для сохранения проекта.  
+Введите или выберите папку или сетевое расположение, чтобы сохранить проект.  
   
-**MigrateTo**  
+**мигратето**  
   
-Выберите один из целевой версии базы данных ниже списка.  
+Выберите одну из версий целевой базы данных из списка ниже:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016  
   
 -   SQL Azure  
   

@@ -19,13 +19,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5bc7caa063d14967e576fd009a23110b9647836b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62689031"
 ---
-# <a name="bcpgettypename"></a>bcp_gettypename
+# <a name="bcp_gettypename"></a>bcp_gettypename
   Возвращает имя типа SQL для указанного токена типа BCP.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -43,60 +43,60 @@ fIsMaxType
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *Маркер*  
+ *token*  
  Значение, указывающее токен типа BCP.  
   
- *field*  
+ *полями*  
  Указывает, запрашивает ли токен тип max.  
   
 ## <a name="returns"></a>Возвращает  
  Строка, содержащая имя типа SQL, соответствующего типу BCP. Если указывается недопустимый тип BCP, возвращается пустая строка.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Токены типа BCP определены в файле заголовка sqlncli.h и библиотеке sqlncli11.lib.  
   
  В следующей таблице указаны возможные типы BCP, независимо от того, являются ли они типами max или нет, а также ожидаемые выходные данные.  
   
-|Имя типа BCP|MaxType|Вывод|  
+|Имя типа BCP|MaxType|Выходные данные|  
 |-------------------|-------------|------------|  
-|`SQLDECIMAL`|Допустим любой вариант|**decimal**|  
-|`SQLNUMERIC`|Допустим любой вариант|**numeric**|  
-|`SQLINT1`|Допустим любой вариант|**tinyint**|  
-|`SQLINT2`|Допустим любой вариант|**smallint**|  
-|`SQLINT4`|Допустим любой вариант|**int**|  
-|`SQLMONEY`|Допустим любой вариант|**money**|  
-|`SQLFLT8`|Допустим любой вариант|**float**|  
-|`SQLDATETIME`|Допустим любой вариант|**datetime**|  
-|`SQLBITN`|Допустим любой вариант|**bit-null**|  
-|`SQLBIT`|Допустим любой вариант|**bit**|  
-|`SQLBIGCHAR`|Нет|**char**|  
-|`SQLCHARACTER`|Нет|**char**|  
-|`SQLBIGVARCHAR`|Нет|**varchar**|  
-|`SQLVARCHAR`|Нет|**varchar**|  
-|`SQLTEXT`|Допустим любой вариант|**text**|  
-|`SQLBIGBINARY`|Нет|**binary**|  
-|`SQLBINARY`|Нет|**Двоичный**|  
-|`SQLBIGVARBINARY`|Нет|**varbinary**|  
-|`SQLVARBINARY`|Нет|**varbinary**|  
-|`SQLIMAGE`|Допустим любой вариант|**Изображение**|  
-|`SQLINTN`|Допустим любой вариант|**int-null**|  
-|`SQLDATETIMN`|Допустим любой вариант|**datetime-null**|  
-|`SQLMONEYN`|Допустим любой вариант|**Money null**|  
-|`SQLFLTN`|Допустим любой вариант|**число с плавающей запятой от null**|  
-|`SQLAOPSUM`|Допустим любой вариант|**Sum**|  
-|`SQLAOPAVG`|Допустим любой вариант|**Avg**|  
-|`SQLAOPCNT`|Допустим любой вариант|**Count**|  
-|`SQLAOPMIN`|Допустим любой вариант|**Min**|  
-|`SQLAOPMAX`|Допустим любой вариант|**Max**|  
-|`SQLDATETIM4`|Допустим любой вариант|**smalldatetime**|  
-|`SQLMONEY4`|Допустим любой вариант|**smallmoney**|  
-|`SQLFLT4`|Допустим любой вариант|**real**|  
-|`SQLUNIQUEID`|Допустим любой вариант|**uniqueidentifier**|  
-|`SQLNCHAR`|Нет|**nchar**|  
-|`SQLNVARCHAR`|Нет|**Nvarchar**|  
-|`SQLNTEXT`|Допустим любой вариант|**ntext**|  
-|`SQLVARIANT`|Допустим любой вариант|**sql_variant**|  
-|`SQLINT8`|Допустим любой вариант|**Bigint**|  
+|`SQLDECIMAL`|Можно использовать|**Decimal**|  
+|`SQLNUMERIC`|Можно использовать|**ISNUMERIC**|  
+|`SQLINT1`|Можно использовать|**tinyint**|  
+|`SQLINT2`|Можно использовать|**smallint**|  
+|`SQLINT4`|Можно использовать|**int**|  
+|`SQLMONEY`|Можно использовать|**money**|  
+|`SQLFLT8`|Можно использовать|**float**|  
+|`SQLDATETIME`|Можно использовать|**datetime**|  
+|`SQLBITN`|Можно использовать|**bit-null**|  
+|`SQLBIT`|Можно использовать|**bit**|  
+|`SQLBIGCHAR`|нет|**типа**|  
+|`SQLCHARACTER`|нет|**типа**|  
+|`SQLBIGVARCHAR`|нет|**varchar**|  
+|`SQLVARCHAR`|нет|**varchar**|  
+|`SQLTEXT`|Можно использовать|**полнотекстовым**|  
+|`SQLBIGBINARY`|нет|**binary**|  
+|`SQLBINARY`|нет|**Двоичный**|  
+|`SQLBIGVARBINARY`|нет|**Varbinary**|  
+|`SQLVARBINARY`|нет|**Varbinary**|  
+|`SQLIMAGE`|Можно использовать|**Изображение**|  
+|`SQLINTN`|Можно использовать|**int-null**|  
+|`SQLDATETIMN`|Можно использовать|**datetime-null**|  
+|`SQLMONEYN`|Можно использовать|**money-null**|  
+|`SQLFLTN`|Можно использовать|**float-null**|  
+|`SQLAOPSUM`|Можно использовать|**Функции**|  
+|`SQLAOPAVG`|Можно использовать|**Обращения**|  
+|`SQLAOPCNT`|Можно использовать|**Расчета**|  
+|`SQLAOPMIN`|Можно использовать|**Минимум**|  
+|`SQLAOPMAX`|Можно использовать|**Максимальной**|  
+|`SQLDATETIM4`|Можно использовать|**smalldatetime**|  
+|`SQLMONEY4`|Можно использовать|**Smallmoney**|  
+|`SQLFLT4`|Можно использовать|**Real**|  
+|`SQLUNIQUEID`|Можно использовать|**UNIQUEIDENTIFIER**|  
+|`SQLNCHAR`|нет|**Nchar**|  
+|`SQLNVARCHAR`|нет|**Nvarchar**|  
+|`SQLNTEXT`|Можно использовать|**Типы**|  
+|`SQLVARIANT`|Можно использовать|**sql_variant**|  
+|`SQLINT8`|Можно использовать|**Bigint**|  
 |`SQLCHARACTER`|Да|**varchar(max)**|  
 |`SQLBIGCHAR`|Да|**varchar(max)**|  
 |`SQLBIGVARCHAR`|Да|**varchar(max)**|  
@@ -107,15 +107,15 @@ fIsMaxType
 |`SQLVARBINARY`|Да|**varbinary(max)**|  
 |`SQLNCHAR`|Да|**nvarchar(max)**|  
 |`SQLNVARCHAR`|Да|**nvarchar(max)**|  
-|`SQLXML`|Да|**Xml**|  
-|`SQLUDT`|Допустим любой вариант|**определяемый пользователем тип**|  
+|`SQLXML`|Да|**Код**|  
+|`SQLUDT`|Можно использовать|**Байт**|  
   
-## <a name="bcpgettypename-support-for-enhanced-date-and-time-features"></a>Поддержка функцией bcp_getcolfmt улучшенных возможностей работы с датой и временем  
- В столбце «Тип в SQLNCLI.h»» в таблице описаны значения параметра токена для типов даты времени [изменения массового копирования для типов усиленной даты и времени &#40;OLE DB и ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md). Возвращенное значение находится в соответствующей строке столбца «Тип хранения файла».  
+## <a name="bcp_gettypename-support-for-enhanced-date-and-time-features"></a>Поддержка функцией bcp_getcolfmt улучшенных возможностей работы с датой и временем  
+ Значения параметров токена для типов даты-времени описаны в столбце "тип в sqlncli. h" таблицы в разделе "изменения при [операции копирования для расширенных типов даты и времени" &#40;OLE DB и ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md). Возвращенное значение находится в соответствующей строке столбца «Тип хранения файла».  
   
- Дополнительные сведения см. в разделе [время улучшения функций даты и &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Дополнительные сведения см. в разделе [улучшения даты и времени &#40;&#41;ODBC ](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
-## <a name="see-also"></a>См. также  
- [Функции массового копирования](sql-server-driver-extensions-bulk-copy-functions.md)  
+## <a name="see-also"></a>См. также:  
+ [Bulk Copy Functions](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

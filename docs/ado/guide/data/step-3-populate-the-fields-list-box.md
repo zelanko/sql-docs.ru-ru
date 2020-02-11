@@ -1,5 +1,5 @@
 ---
-title: Шаг 3. Заполнение списка полей | Документация Майкрософт
+title: Шаг 3. Заполнение поля списка полей | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,14 +11,14 @@ ms.assetid: 315c32dc-aeb1-4629-b30e-87b44e8f84d1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9d7f351b90030e755dde8ad13905ef4533eff08e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924053"
 ---
-# <a name="step-3-populate-the-fields-list-box"></a>Шаг 3. Заполнение списка полей
-Для заполнения списка полей, вставьте следующий код в обработчик событий нажатия `lstMain`:  
+# <a name="step-3-populate-the-fields-list-box"></a>Шаг 3. Заполнение списка полей
+Чтобы заполнить поле списка поля, вставьте следующий код в обработчик событий Click `lstMain`:  
   
 ```  
 Private Sub lstMain_Click()  
@@ -46,17 +46,17 @@ Private Sub lstMain_Click()
 End Sub  
 ```  
   
- Этот код объявляет и создает локальные объекты набора записей и записи, `rec` и `rs`, соответственно.  
+ Этот код объявляет и создает экземпляры локальных записей и объектов Recordset `rec` и `rs`соответственно.  
   
- Строка, соответствующая ресурса, выбранного в `lstMain` становится текущей строке `grs`. Затем очищается поле со списком сведения и `rec` открыт с помощью текущей строке `grs` как источник.  
+ Строка, соответствующая ресурсу, выбранному в `lstMain` , становится текущей строкой. `grs` Затем список сведений удаляется и `rec` открывается с текущей строкой в `grs` качестве источника.  
   
- Если ресурс — это запись коллекции, в соответствии с [RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md), локальный набор записей `rs` открывается на дочерние элементы rec. Затем `lstDetails` заполняется значениями из строки `rs`.  
+ Если ресурс является записью коллекции, как указано в [RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md), локальный набор записей `rs` открывается на дочерних элементах REC. Затем `lstDetails` заполняется значениями из строк `rs`.  
   
- Если ресурс является запись простой `recFields` вызывается. Дополнительные сведения о `recFields`, см. следующий шаг.  
+ Если ресурс является простой записью, `recFields` вызывается. Дополнительные сведения о `recFields`см. в следующем шаге.  
   
- Код не реализуется в том случае, если ресурс структурированного документа.  
+ Если ресурс является структурированным документом, код не реализуется.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Сценарий публикации в Интернете](../../../ado/guide/data/internet-publishing-scenario.md)   
- [Шаг 2. Инициализация главного списка](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)   
- [Шаг 4. Заполнение текстового поля сведений](../../../ado/guide/data/step-4-populate-the-details-text-box.md)
+ [Шаг 2. Инициализация основного списка](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)   
+ [Шаг 4. Заполнение текстового поля сведений](../../../ado/guide/data/step-4-populate-the-details-text-box.md)
