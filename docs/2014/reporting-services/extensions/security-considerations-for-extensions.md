@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 128da8d5bb3b956b5b5661ce47ca6e4b741f0bc5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63282416"
 ---
 # <a name="security-considerations-for-extensions"></a>Вопросы безопасности для модулей
@@ -46,7 +46,7 @@ ms.locfileid: "63282416"
 ## <a name="initialization-of-extension-assemblies"></a>Инициализация сборок модуля  
  При первоначальной загрузке сервером отчетов модулей в память в них используются учетные данные этой службы, поскольку некоторым сборкам модулей требуются специальные разрешения для доступа к системным ресурсам, чтения файлов конфигурации и загрузки других, зависимых сборок. Но после загрузки и инициализации сборки все последующие вызовы сборок модуля осуществляются с использованием учетных данных пользователя, который в данный момент зарегистрирован в системе.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Модули служб Reporting Services](reporting-services-extensions.md)   
  [Библиотека модулей Reporting Services](reporting-services-extension-library.md)  
   

@@ -17,20 +17,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4b91a2848dda5dff2150d80760c7a43680a8f325
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827019"
 ---
 # <a name="progress-report-event-category"></a>Категория событий Progress Report
-  **Отчет о ходе выполнения** Категория событий **Progress Report: Online Index Operation**.  
+  Категория событий **Progress Report** содержит класс событий **Progress Report: Online Index Operation** .  
   
-|Раздел|Описание|  
+|Раздел|Description|  
 |-----------|-----------------|  
 |[Класс событий Progress Report: Online Index Operation](progress-report-online-index-operation-event-class.md)|Показывает процесс выполнения построения индекса «в сети».|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Приложение SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

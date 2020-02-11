@@ -13,26 +13,26 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e07e29c8b200984d5803007f3612f9a43824e261
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055977"
 ---
 # <a name="select-script-component-type"></a>Выбор типа компонента скрипта
   Используйте диалоговое окно **Выбор типа компонента скрипта** , чтобы указать, следует ли создавать преобразование «Скрипт», которое заранее настроено как источник, преобразование или назначение.  
   
- Дополнительные сведения о компоненте скрипта см. в разделе [компонента скрипта](data-flow/transformations/script-component.md) и [Настройка компонента скрипта в редакторе компонента скрипта](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Дополнительные сведения о программировании компонента скрипта, см. в разделе [расширение потока данных в компоненте скрипта](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+ Дополнительные сведения о компоненте скрипта см. в разделах [Script Component](data-flow/transformations/script-component.md) и [Configuring the Script Component in the Script Component Editor](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Дополнительные сведения о программировании компонента скрипта см. в разделе [Расширение потока данных с помощью компонента скрипта](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
 ## <a name="options"></a>Параметры  
  Выбор пункта **Источник**, **Назначение**или **Преобразование** влияет на конфигурацию преобразования «Скрипт» и страницы редактора преобразования «Скрипт».  
   
-## <a name="see-also"></a>См. также  
- [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор преобразования "Скрипт" (страница "Входные столбцы")](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
- [Редактор преобразования "Скрипт" (страница "Входы и выходы")](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
- [Редактор преобразования "Скрипт" (страница "Скрипт")](../../2014/integration-services/script-transformation-editor-script-page.md)   
- [Редактор преобразования "Скрипт" (страница "Диспетчеры соединений")](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
+## <a name="see-also"></a>См. также:  
+ [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор преобразования "Скрипт" &#40;страница "входные столбцы"&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
+ [Редактор преобразования "Скрипт" &#40;страница "входы и выходы"&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
+ [Редактор преобразования "Скрипт" &#40;страница "Скрипт"&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   
+ [Редактор преобразования "Скрипт" &#40;страница "диспетчеры соединений"&#41;](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
  [Дополнительные примеры компонента скрипта](extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
   
   

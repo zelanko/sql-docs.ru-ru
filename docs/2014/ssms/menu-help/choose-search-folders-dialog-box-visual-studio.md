@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6c76fc0d5247d2a9f07fcf97677ac1f24b9635e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62678936"
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>Диалоговое окно «Выбор папок поиска» (Visual Studio)
@@ -31,7 +31,7 @@ ms.locfileid: "62678936"
  **Применить**  
  Сохраните набор папок поиска, приведенный в списке **Выбранные папки** , в виде именованного набора папок. Затем этот набор папок можно выбирать в поле **Папка** на всех вкладках окна **Найти и заменить** . Диалоговое окно «Выбор папок поиска» не закрывается.  
   
- **Удалить**  
+ **Удаление**  
  Удаляет выбранный набор папок из поля **Набор папок** , а также из поля **Папка** на всех вкладках окна **Найти и заменить** .  
   
  **Доступные папки**  

@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 34539c79bc0e2d90841837abef895bdceb2eb20d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250849"
 ---
 # <a name="sql-server-agent-statistics-object"></a>Агент SQL Server, объект Statistics
@@ -25,11 +25,11 @@ ms.locfileid: "63250849"
   
  В таблице ниже перечислены счетчики объекта **SQLAgent:Statistics** .  
   
-|Имя|Описание|  
+|Имя|Description|  
 |----------|-----------------|  
 |**Перезагрузки SQL Server**|Количество успешных перезапусков Microsoft SQL Server, выполненных агентом SQL Server с момента последнего запуска агента SQL Server.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование объектов производительности](../../ssms/agent/use-performance-objects.md)   
  [Наблюдение за использованием ресурсов (системный монитор)](monitor-resource-usage-system-monitor.md)  
   

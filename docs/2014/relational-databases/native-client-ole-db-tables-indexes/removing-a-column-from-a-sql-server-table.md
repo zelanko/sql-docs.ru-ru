@@ -16,18 +16,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 919bd28a82171068349e4019bb1bd5c190d08cd0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63213907"
 ---
 # <a name="removing-a-column-from-a-sql-server-table"></a>Удаление столбца из таблицы SQL Server
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщик OLE DB для собственного клиента предоставляет **ITableDefinition::DropColumn** функции. Она позволяет пользователю удалить столбец из таблицы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DBа собственного клиента предоставляет функцию **ITableDefinition::D ропколумн** . Она позволяет пользователю удалить столбец из таблицы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Пользователь задает имя таблицы в виде символьной строки в Юникоде в элементе *pwszName* объединения *uName* в параметре *pTableID*. Элемент *eKind* параметра *pTableID* должен быть равен DBKIND_NAME.  
   
- Пользователь задает имя столбца в *pwszName*членом *uName* объединения в *pColumnID* параметра. Имя столбца задается в виде символьной строки в Юникоде. Элемент *eKind* параметра *pColumnID* должен быть равен DBKIND_NAME.  
+ Потребитель указывает имя столбца в элементе *pwszName*объединения *uname* в параметре *пколумнид* . Имя столбца задается в виде символьной строки в Юникоде. Элемент *eKind* параметра *pColumnID* должен быть равен DBKIND_NAME.  
   
 ## <a name="example"></a>Пример  
   
@@ -47,7 +47,7 @@ ColumnID.uName.pwszName = L"MyColumnName";
 hr = m_pITableDefinition->DropColumn(&TableID, &ColumnID);  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Таблицы и индексы](tables-and-indexes.md)  
   
   

@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b42fdb9d53a4aa0444a98ee311000fb1c2929ff1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62756159"
 ---
 # <a name="manually-fail-over-a-database-mirroring-session-sql-server-management-studio"></a>Переключение сеанса зеркального отображения базы данных на другой ресурс вручную (среда SQL Server Management Studio)
@@ -54,7 +54,7 @@ ms.locfileid: "62756159"
   
      Диалоговое окно закрывается автоматически.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойства базы данных (страница "Зеркальное отображение")](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [Зеркальное отображение базы данных (SQL Server)](database-mirroring-sql-server.md)   
  [Переключение сеанса зеркального отображения базы данных на другой ресурс вручную (язык Transact-SQL)](manually-fail-over-a-database-mirroring-session-transact-sql.md)   

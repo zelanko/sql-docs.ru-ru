@@ -1,5 +1,5 @@
 ---
-title: Определение конвертации валюты (мастер бизнес-аналитики) | Документация Майкрософт
+title: Определение конвертации валют (мастер бизнес-аналитики) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b463363e2e239c348c626cf1ef1d61e621877814
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082153"
 ---
 # <a name="define-currency-conversion-business-intelligence-wizard"></a>Определение конвертации валюты (мастер бизнес-аналитики)
@@ -44,15 +44,15 @@ ms.locfileid: "66082153"
  **Перезаписать существующий скрипт конвертации валюты**  
  Выберите, чтобы заменить скрипт многомерных выражений, отображаемый в окне **Существующий скрипт конвертации валюты** , скриптом многомерных выражений, отображаемым в окне **Новый скрипт конвертации валюты**.  
   
- **Добавьте после**  
+ **Добавить после**  
  Выберите для добавления скрипта многомерных выражений, отображаемого в окне **Новый скрипт конвертации валюты** , к концу скрипта многомерных выражений, отображаемого в окне **Существующий скрипт конвертации валюты**. Добавленный скрипт отобразится в виде нового раздела.  
   
  **Существующий скрипт конвертации валюты**  
  Выберите раздел существующего скрипта многомерных выражений, содержащий ранее определенную функцию конвертации валюты, который необходимо заменить или дополнить.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справка F1 мастера бизнес-аналитики](business-intelligence-wizard-f1-help.md)   
- [Конструктор кубов &#40;службы Analysis Services — многомерные данные&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Конструктор измерений &#40;службы Analysis Services — многомерные данные&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
+ [Конструктор кубов &#40;Analysis Services многомерных данных&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Конструктор измерений &#40;Analysis Services многомерных данных&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   
   

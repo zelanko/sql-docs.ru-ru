@@ -16,22 +16,22 @@ ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 17c1c2a5ccb7ef9e7c4a3d843f63edde1f134016
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68139897"
 ---
-# <a name="splinkpublication-transact-sql"></a>sp_link_publication (Transact-SQL)
+# <a name="sp_link_publication-transact-sql"></a>sp_link_publication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Задает сведения о конфигурации и безопасности, применяемые триггерами синхронизации немедленно обновляемых подписок при подключении к издателю. Эта хранимая процедура выполняется на подписчике в базе данных подписки.  
   
 > [!IMPORTANT]
->  Если издатель настраивается с удаленным распространителем, то значения, передаваемые для всех аргументов, включая *job_login* и *job_password*, передаются распространителю в формате обычного (незашифрованного) текста. Прежде чем выполнять эту хранимую процедуру, необходимо зашифровать соединение между издателем и его удаленным распространителем. Дополнительные сведения см. в разделе [Включение шифрования соединений в компоненте Database Engine (диспетчер конфигураций SQL Server)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+>  Если издатель настраивается с удаленным распространителем, то значения, передаваемые для всех аргументов, включая *job_login* и *job_password*, передаются распространителю в формате обычного (незашифрованного) текста. Прежде чем выполнять эту хранимую процедуру, необходимо зашифровать соединение между издателем и его удаленным распространителем. Дополнительные сведения см. [в разделе Enable encrypted connections to the ядро СУБД &#40;диспетчер конфигурации SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
 > 
 > [!IMPORTANT]
->  При определенных условиях данная хранимая процедура могут отклоняться на подписчике работает [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] пакетом обновления 1 или более поздней версии, а издатель работает более ранней версии. Если в этом случае хранимая процедура завершается ошибкой, обновите издатель до [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] с пакетом обновления 1 (SP1) или более поздней версии.  
+>  При определенных условиях эта хранимая процедура может завершиться ошибкой, если на [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] подписчике установлен пакет обновления 1 (SP1) или более поздней версии, а на издателе запущена более ранняя версия. Если в этом случае хранимая процедура завершается ошибкой, обновите издатель до [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] с пакетом обновления 1 (SP1) или более поздней версии.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,48 +49,48 @@ sp_link_publication [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publisher = ] 'publisher'` — Имя издателя для связи. *издатель* — **sysname**, не имеет значения по умолчанию.  
+`[ @publisher = ] 'publisher'`Имя издателя для связи. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @publisher_db = ] 'publisher_db'` — Имя базы данных издателя для связи. *publisher_db* — **sysname**, не имеет значения по умолчанию.  
+`[ @publisher_db = ] 'publisher_db'`Имя базы данных издателя для связи. Аргумент *publisher_db* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @publication = ] 'publication'` — Имя публикации для связи. *Публикация* — **sysname**, не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'`Имя публикации, с которой необходимо создать ссылку. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @security_mode = ] security_mode` Режим безопасности, используемый подписчиком для подключения к удаленному издателю для немедленного обновления. *security_mode* — **int**, и может принимать одно из следующих значений. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @security_mode = ] security_mode`Режим безопасности, используемый подписчиком для подключения к удаленному издателю для немедленного обновления. *security_mode* имеет **тип int**и может принимать одно из следующих значений. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
-|**0**|Использует [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверка подлинности с помощью имени входа, заданного в этой хранимой процедуре как *входа* и *пароль*.<br /><br /> Примечание. В предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], этот параметр используется для указания динамического удаленного вызова процедур (RPC).|  
-|**1**|Использует контекст безопасности (проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или Windows) пользователя, редактирующего подписчика.<br /><br /> Примечание. Эта учетная запись также должна существовать на издателе с достаточными правами. В случае использования проверки подлинности Windows должно поддерживаться делегирование учетной записи безопасности.|  
-|**2**|Используется существующее, определенное пользователем связанного сервера имя для входа создан с помощью **sp_link_publication**.|  
+|**0**|Использует [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверку подлинности с именем входа, указанным в этой хранимой процедуре, в качестве *имени входа* и *пароля*.<br /><br /> Примечание. в предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]этот параметр использовался для указания динамического удаленного вызова процедур (RPC).|  
+|**1**|Использует контекст безопасности (проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или Windows) пользователя, редактирующего подписчика.<br /><br /> Примечание. Эта учетная запись также должна существовать у издателя с достаточными привилегиями. В случае использования проверки подлинности Windows должно поддерживаться делегирование учетной записи безопасности.|  
+|**2**|Использует существующее, определяемое пользователем имя входа для связанного сервера, созданное с помощью **sp_link_publication**.|  
   
-`[ @login = ] 'login'` — Это имя. Аргумент *login* имеет тип **sysname** и значение по умолчанию NULL. Этот параметр должен быть указан при *security_mode* — **0**.  
+`[ @login = ] 'login'`Имя входа. Аргумент *Login* имеет тип **sysname**и значение по умолчанию NULL. Этот параметр должен быть указан, если *security_mode* равен **0**.  
   
-`[ @password = ] 'password'` — Пароль. *пароль* — **sysname**, значение по умолчанию NULL. Этот параметр должен быть указан при *security_mode* — **0**.  
+`[ @password = ] 'password'`Пароль. Аргумент *Password* имеет тип **sysname**и значение по умолчанию NULL. Этот параметр должен быть указан, если *security_mode* равен **0**.  
   
-`[ @distributor = ] 'distributor'` — Имя распространителя. *распространитель* — **sysname**, значение по умолчанию NULL.  
+`[ @distributor = ] 'distributor'`Имя распространителя. Аргумент *распространитель* имеет тип **sysname**и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
- **sp_link_publication** используется для немедленного обновления подписок при репликации транзакций.  
+## <a name="remarks"></a>Remarks  
+ **sp_link_publication** используется немедленно обновляемыми подписками в репликации транзакций.  
   
- **sp_link_publication** может использоваться для отправки и извлечения подписок. Ее можно вызывать как до, так и после создания подписки. Запись вставляется или обновляется в [MSsubscription_properties &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md) системная таблица.  
+ **sp_link_publication** можно использовать как для принудительной подписки, так и для подписок по запросу. Ее можно вызывать как до, так и после создания подписки. Запись вставляется или обновляется в MSsubscription_properties &#40;в системной таблице [&#41;Transact-SQL](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md) .  
   
- Для принудительных подписок запись можно очистить с помощью [sp_subscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md). Для подписок по запросу запись можно очистить с помощью [sp_droppullsubscription &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md) или [sp_subscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md). Можно также вызвать **sp_link_publication** с пустым паролем для очистки записи в [MSsubscription_properties &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md) системная таблица, для обеспечения безопасности.  
+ Для принудительных подписок запись может быть очищена с помощью [sp_subscription_cleanup &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md). Для подписок по запросу запись может быть очищена с помощью [sp_droppullsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md) или [sp_subscription_cleanup &#40;transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md). Можно также вызвать **sp_link_publication** с ПАРОЛем null, чтобы очистить запись в [MSsubscription_properties &#40;системной таблице&#41;Transact-SQL](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md) для обеспечения безопасности.  
   
- Режим по умолчанию, применяемый для немедленного обновления подписчика при соединении с издателем, не позволяет устанавливать соединение с проверкой подлинности Windows. Для подключения в режиме с проверкой подлинности Windows на издателе должен быть настроен связанный сервер, и это соединение должно применяться для немедленного обновления подписчика. Для этого требуется **sp_link_publication** для выполнения с *security_mode* = **2**. В случае использования проверки подлинности Windows должно поддерживаться делегирование учетной записи безопасности.  
+ Режим по умолчанию, применяемый для немедленного обновления подписчика при соединении с издателем, не позволяет устанавливать соединение с проверкой подлинности Windows. Для подключения в режиме с проверкой подлинности Windows на издателе должен быть настроен связанный сервер, и это соединение должно применяться для немедленного обновления подписчика. Для этого необходимо, чтобы **sp_link_publication** был запущен с *security_mode* = **2**. В случае использования проверки подлинности Windows должно поддерживаться делегирование учетной записи безопасности.  
   
 ## <a name="example"></a>Пример  
  [!code-sql[HowTo#sp_addtranpullsubscriptionagent_failover](../../relational-databases/replication/codesnippet/tsql/sp-link-publication-tran_1.sql)]  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнять процедуру **sp_link_publication**.  
+ Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_link_publication**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_droppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
  [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)   
  [sp_subscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

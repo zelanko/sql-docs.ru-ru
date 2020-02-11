@@ -13,20 +13,20 @@ ms.assetid: a5320226-a6fc-4999-9b3b-2fdee6bdf7eb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 824942890ef8f6c7a301cc3befddb483ba3cc8be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68053706"
 ---
 # <a name="sqlfreestmt-visual-foxpro-odbc-driver"></a>SQLFreeStmt (драйвер ODBC для Visual FoxPro)
 > [!NOTE]  
->  Этот раздел содержит сведения Visual FoxPro ODBC-драйвером. Общие сведения об этой функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  В этом разделе содержатся сведения, относящиеся к драйверу ODBC для Visual FoxPro. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Поддержка: Полное  
+ Поддержка: полная  
   
- Соответствие API ODBC: Уровня ядра  
+ Соответствие API ODBC: уровень ядра  
   
- Останавливает обработку, связанные с конкретным *hstmt*, закрывает все открытые курсоры, связанные с *hstmt*, отменяет ожидающие результаты и при необходимости освобождает все ресурсы, связанные с инструкцией дескриптор.  
+ Останавливает обработку, связанную с конкретным *хстмт*, закрывает все открытые курсоры, связанные с *хстмт*, отменяет ожидающие результаты и при необходимости освобождает все ресурсы, связанные с этим маркером инструкции.  
   
- Дополнительные сведения см. в разделе [SQLFreeStmt](../../odbc/reference/syntax/sqlfreestmt-function.md) в *Справочник по программированию ODBC*.
+ Дополнительные сведения см. в разделе [SQLFreeStmt](../../odbc/reference/syntax/sqlfreestmt-function.md) в *справочнике программиста по ODBC*.

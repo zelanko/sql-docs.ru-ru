@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e70ab55fedcc5053cf82a78c040c850a23824eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63075202"
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>Собственная компиляция таблиц и хранимых процедур
@@ -115,12 +115,12 @@ go
  Компиляция в собственном коде таблиц и хранимых процедур использует компилятор In-Memory OLTP. Этот компилятор создает файлы, которые записываются на диск и загружаются в память. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует следующие механизмы для ограничения доступа к ним.  
   
 ### <a name="native-compiler"></a>Собственный компилятор  
- Исполняемый файл компилятора, а также двоичные файлы и файлы заголовков, необходимые для компиляции в собственном коде, устанавливаются как часть экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в папке MSSQL\Binn\Xtp. Таким образом, если экземпляр по умолчанию устанавливается в C:\Program Files, то файлы компилятора устанавливаются в папке C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12. MSSQLSERVER\MSSQL\Binn\Xtp.  
+ Исполняемый файл компилятора, а также двоичные файлы и файлы заголовков, необходимые для компиляции в собственном коде, устанавливаются как часть экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в папке MSSQL\Binn\Xtp. Таким образом, если экземпляр по умолчанию установлен в папке c:\Program Files, файлы компилятора устанавливаются в\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]папку c:\Program Files \MSSQL12. мссклсервер\мсскл\бинн\кстп.  
   
  Чтобы ограничить доступ к компилятору, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует списки управления доступом (ACL), ограничивающие доступ к двоичным файлам. Все двоичные файлы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] защищены от изменения и несанкционированного доступа через списки управления доступом. Списки управления доступом собственного компилятора также ограничивают использование компилятора; только учетная запись службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и администраторы имеют разрешения на чтение и выполнение для файлов собственного компилятора.  
   
 ### <a name="files-generated-by-a-native-compilation"></a>Файлы, созданные компиляцией в собственном коде  
- Файлы, создаваемые при компиляции таблицы хранимой процедуры, включают DLL и промежуточные файлы, в том числе файлы со следующими расширениями: C, OBJ, XML и PDB. Созданные файлы сохраняются во вложенной папке папки данных по умолчанию. Вложенная папка называется Xtp. При установке экземпляра по умолчанию с папкой данных по умолчанию, созданные файлы помещаются в C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12. MSSQLSERVER\MSSQL\DATA\Xtp.  
+ Файлы, создаваемые при компиляции таблицы хранимой процедуры, включают DLL и промежуточные файлы, в том числе файлы со следующими расширениями: C, OBJ, XML и PDB. Созданные файлы сохраняются во вложенной папке папки данных по умолчанию. Вложенная папка называется Xtp. При установке экземпляра по умолчанию с папкой данных по умолчанию созданные файлы помещаются в папку\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]C:\Program Files \MSSQL12. мссклсервер\мсскл\дата\кстп.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предотвращает изменение создаваемых библиотек DLL тремя способами.  
   
@@ -132,8 +132,8 @@ go
   
  Взаимодействие с пользователем для управления этими файлами не требуется. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создает и удаляет файлы по мере необходимости.  
   
-## <a name="see-also"></a>См. также  
- [Таблицы, оптимизированные для памяти](memory-optimized-tables.md)   
- [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md)  
+## <a name="see-also"></a>См. также:  
+ [Оптимизированные для памяти таблицы](memory-optimized-tables.md)   
+ [Скомпилированные в собственном коде хранимые процедуры](natively-compiled-stored-procedures.md)  
   
   

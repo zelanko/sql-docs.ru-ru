@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_node_status (Transact-SQL) | Документация Майкрософт
+title: sys. dm_pdw_node_status (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,35 +13,35 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4cd8788d19b06329d0280efc43a13a9a218e056c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67899372"
 ---
-# <a name="sysdmpdwnodestatus-transact-sql"></a>sys.dm_pdw_node_status (Transact-SQL)
+# <a name="sysdm_pdw_node_status-transact-sql"></a>sys. dm_pdw_node_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  Содержит дополнительные сведения (через [sys.dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)) о производительности и состояние всех узлов устройства. В ней перечислены одну строку для каждого узла в устройстве.  
+  Содержит дополнительные сведения (по сравнению с [sys. dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)) о производительности и состоянии всех узлов устройств. В нем отображается одна строка для каждого узла в устройстве.  
   
-|Имя столбца|Тип данных|Описание|Диапазон|  
+|Имя столбца|Тип данных|Description|Диапазонный индекс|  
 |-----------------|---------------|-----------------|-----------|  
-|pdw_node_id|**int**|Уникальный числовой идентификатор, связанный с узлом.<br /><br /> Ключ для этого представления.|UNIQUE на устройстве, независимо от типа.|  
+|pdw_node_id|**int**|Уникальный числовой идентификатор, связанный с узлом.<br /><br /> Ключ для этого представления.|Уникальным для устройства, независимо от типа.|  
 |process_id|**int**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
-|имя_процесса|**nvarchar(255)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
-|allocated_memory|**bigint**|Общий объем выделенной памяти на данном узле.||  
-|available_memory|**bigint**|Общий объем памяти на данном узле.||  
-|process_cpu_usage|**bigint**|Всего ЦП процессом, в тактах.||  
-|total_cpu_usage|**bigint**|Общее использование ЦП, в тактах.||  
-|thread_count|**bigint**|Общее число потоков, используемых на данном узле.||  
-|handle_count|**bigint**|Общее число дескрипторов, используемых на данном узле.||  
-|total_elapsed_time|**bigint**|Общее время, истекшее с момента системы, запуска или перезапуска.|Общее время, истекшее с момента системы, запуска или перезапуска. Если total_elapsed_time превышает максимальное значение для целого числа (24,8 дня в миллисекундах), он вызывает ошибку материализации из-за переполнения.<br /><br /> Максимальное значение в миллисекундах соответствует 24,8 дня.|  
+|process_name|**nvarchar(255)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
+|allocated_memory|**bigint**|Общая выделенная память на этом узле.||  
+|available_memory|**bigint**|Общая объем доступной памяти на этом узле.||  
+|process_cpu_usage|**bigint**|Общее использование ЦП процесса в тактах.||  
+|total_cpu_usage|**bigint**|Общее использование ЦП в тактах.||  
+|thread_count|**bigint**|Общее число потоков, используемых на этом узле.||  
+|handle_count|**bigint**|Общее число используемых дескрипторов на этом узле.||  
+|total_elapsed_time|**bigint**|Общее время, прошедшее с момента запуска или перезапуска системы.|Общее время, прошедшее с момента запуска или перезапуска системы. Если total_elapsed_time превышает максимальное значение для целого числа (24,8 дней в миллисекундах), это приведет к сбою материализации из-за переполнения.<br /><br /> Максимальное значение в миллисекундах эквивалентно 24,8 дням.|  
 |is_available|**bit**|Флаг, указывающий, доступен ли этот узел.||  
-|sent_time|**datetime**|Время последнего пакета сети было отправлено данным узлом.||  
-|received_time|**datetime**|Время последнего пакета сети было получено данным узлом.||  
-|error_id|**nvarchar(36)**|Уникальный идентификатор последней ошибки, возникшей на данном узле.||  
+|sent_time|**datetime**|Время последней отправки сетевого пакета этим узлом.||  
+|received_time|**datetime**|Время последнего получения сетевого пакета этим узлом.||  
+|error_id|**nvarchar (36)**|Уникальный идентификатор последней ошибки, произошедшей на этом узле.||  
   
-## <a name="see-also"></a>См. также  
- [Хранилище данных SQL и параллельные хранилища данных динамические административные представления &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+## <a name="see-also"></a>См. также:  
+ [Динамические административные представления хранилища данных SQL и параллельного хранилища данных &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

@@ -13,10 +13,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: ccb2689b24914a0a953c1b9f7325cd5aa9c75d0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014121"
 ---
 # <a name="multipolygon"></a>MultiPolygon
@@ -25,7 +25,7 @@ ms.locfileid: "66014121"
 ## <a name="polygon-instances"></a>Экземпляры многоугольников  
  На рисунке ниже приведены примеры экземпляров `MultiPolygon`.  
   
- ![Примеры геометрических экземпляров MultiPolygon](../../database-engine/media/multipolygon.gif "Примеры геометрических экземпляров MultiPolygon")  
+ ![Примеры экземпляров MultiPolygon типа geometry](../../database-engine/media/multipolygon.gif "Примеры экземпляров MultiPolygon типа geometry")  
   
  На рисунке представлены:  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66014121"
   
 -   Это пустой экземпляр `MultiPolygon`.  
   
--   Все экземпляры, составляющие экземпляр `MultiPolygon`, являются принимаемыми экземплярами `Polygon`. Дополнительные сведения о принимаемых `Polygon` экземпляров, см. в разделе [многоугольника](../spatial/polygon.md).  
+-   Все экземпляры, составляющие экземпляр `MultiPolygon`, являются принимаемыми экземплярами `Polygon`. Дополнительные сведения о принятых `Polygon` экземплярах см. в разделе [многоугольник](../spatial/polygon.md).  
   
  В следующих примерах показаны принимаемые экземпляры `MultiPolygon`.  
   
@@ -59,7 +59,7 @@ DECLARE @g geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 
 ### <a name="valid-instances"></a>Допустимые экземпляры  
  Экземпляр `MultiPolygon` является допустимым, если это пустой экземпляр `MultiPolygon` или удовлетворяет следующим требованиям.  
   
-1.  Все экземпляры, составляющие экземпляр `MultiPolygon`, являются допустимыми экземплярами `Polygon`. Для допустимых `Polygon` экземпляров, см. в разделе [многоугольника](../spatial/polygon.md).  
+1.  Все экземпляры, составляющие экземпляр `MultiPolygon`, являются допустимыми экземплярами `Polygon`. Допустимые `Polygon` экземпляры см. в разделе [многоугольник](../spatial/polygon.md).  
   
 2.  Никакие экземпляры `Polygon`, составляющие экземпляр `MultiPolygon`, не перекрываются.  
   
@@ -90,11 +90,11 @@ DECLARE @g geometry;
 SET @g = geometry::Parse('MULTIPOLYGON EMPTY');  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Polygon](../spatial/polygon.md)   
- [STArea (тип данных geometry)](/sql/t-sql/spatial-geometry/starea-geometry-data-type)   
- [STCentroid (тип данных geometry)](/sql/t-sql/spatial-geometry/stcentroid-geometry-data-type)   
- [STPointOnSurface (тип данных geometry)](/sql/t-sql/spatial-geometry/stpointonsurface-geometry-data-type)   
+## <a name="see-also"></a>См. также:  
+ [Фигуры](../spatial/polygon.md)   
+ [STArea &#40;типа данных geometry&#41;](/sql/t-sql/spatial-geometry/starea-geometry-data-type)   
+ [STCentroid &#40;типа данных geometry&#41;](/sql/t-sql/spatial-geometry/stcentroid-geometry-data-type)   
+ [STPointOnSurface &#40;типа данных geometry&#41;](/sql/t-sql/spatial-geometry/stpointonsurface-geometry-data-type)   
  [Пространственные данные (SQL Server)](../spatial/spatial-data-sql-server.md)  
   
   

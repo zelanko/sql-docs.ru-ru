@@ -1,5 +1,5 @@
 ---
-title: Изменение адреса электронной&#39;почты пользователя
+title: Изменение адреса электронной почты пользователя&#39;s
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,10 +13,10 @@ ms.assetid: 721277fd-84f0-41aa-8f2d-bc13a7221044
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 6b1941b6be24b926b870ad284b0aa8ce7242fba4
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729691"
 ---
 # <a name="change-a-user39s-email-address-master-data-services"></a>Изменение адреса электронной почты пользователя (службы Master Data Services)
@@ -26,7 +26,7 @@ ms.locfileid: "73729691"
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]можно изменить адрес электронной почты, на который отправляются уведомления, и формат по умолчанию для писем с уведомлениями.  
   
 ## <a name="prerequisites"></a>Предварительные требования  
- Чтобы выполнить эту процедуру:  
+ Для выполнения этой процедуры:  
   
 -   Необходимо иметь разрешение на доступ к функциональной области **Пользователи и группы** .  
   
@@ -42,13 +42,13 @@ ms.locfileid: "73729691"
   
 5.  Обновите адрес электронной почты или формат писем.  
   
-6.  Нажмите кнопку **Сохранить**.  
+6.  Выберите команду **Сохранить**.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
   
--   [Назначение разрешений для функциональной области (службы Master Data Services)](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
+-   [Назначение разрешений функциональной области &#40;Master Data Services&#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>См. также раздел  
- [Безопасность (службы Master Data Services)](../master-data-services/security-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Master Data Services &#40;безопасности&#41;](../master-data-services/security-master-data-services.md)  
   
   

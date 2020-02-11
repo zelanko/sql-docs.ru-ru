@@ -1,5 +1,5 @@
 ---
-title: Другие сведения о программировании текстового файла драйвера | Документация Майкрософт
+title: Другие сведения о программировании драйверов для текстовых файлов | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ ms.assetid: bfa85e91-060e-4d70-88c3-f5c48df634f1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f13193ba437d0da0ee15bd4072fe6f53c7db5b9c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68043781"
 ---
 # <a name="other-text-file-driver-programming-details"></a>Другие сведения о программировании драйверов текстовых файлов
 > [!NOTE]  
->  В этом разделе объясняется текстовый файл драйвера функции ODBC и другие сведения о программировании. Общие сведения о функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  В этом разделе приводятся сведения о драйверах для текстовых файлов, относящиеся к функциям ODBC и другим сведениям о программировании. Общие сведения о функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
  В этом разделе рассматриваются следующие вопросы.  
   

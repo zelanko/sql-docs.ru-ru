@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler — диалоговое окно «Найти» | Документация Майкрософт
+title: Диалоговое окно «SQL Server Profiler-Поиск» | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 81ed454290a5ca62093fe9bdb619179106ca9985
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088857"
 ---
 # <a name="sql-server-profiler---find-dialog-box"></a>Приложение SQL Server Profiler — диалоговое окно «Поиск»
@@ -30,8 +30,8 @@ ms.locfileid: "66088857"
  **Найти**  
  Введите текст, который требуется найти. Условию поиска соответствует любая строка, содержащая заданную строку. Например, условию поиска строки «Completed» соответствует строка «SQL:BatchCompleted». Знаки подстановки (*, ? и т. д.) не поддерживаются.  
   
- **Искать в столбце**  
- Щелкните столбец данных, в котором нужно искать, либо выберите **\<все столбцы>** , чтобы искать во всех столбцах данных трассировки.  
+ **Поиск в столбце**  
+ Щелкните столбец данных для поиска или щелкните ** \<все столбцы>** для поиска всех столбцов данных в трассировке.  
   
  **Учитывать регистр**  
  Поиск текста в том же регистре, что и в поле **Найти** . Чтобы искать в трассировке строки как в верхнем, так и в нижнем регистре, снимите этот флажок.  
@@ -39,15 +39,15 @@ ms.locfileid: "66088857"
  **Слово целиком**  
  Ограничение поиска целыми словами. Чтобы найти символы в слове, снимите флажок **Слово целиком** .  
   
- **Следующий**  
+ **Найти далее**  
  Ищет следующее вхождение символов, указанных в поле **Найти** .  
   
  **Найти ранее**  
  Производит поиск в трассировке в обратном направлении, чтобы найти предыдущее вхождение символов, указанных в поле **Найти** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Поиск значения или столбца данных во время трассировки &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/find-a-value-or-data-column-while-tracing-sql-server-profiler.md)   
- [Создать трассировку &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
+ [Создание трассировки (приложение SQL Server Profiler)](../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
  [Открытие таблицы трассировки (приложение SQL Server Profiler)](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
  [Открытие файла трассировки (приложение SQL Server Profiler)](../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
  [Шаблоны и разрешения приложения SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   

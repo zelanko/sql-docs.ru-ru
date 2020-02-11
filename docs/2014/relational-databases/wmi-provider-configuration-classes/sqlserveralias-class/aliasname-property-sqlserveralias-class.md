@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1115707b08c3068b27d83e3e292e6baf64e6cbeb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035690"
 ---
 # <a name="aliasname-property-sqlserveralias-class"></a>Свойство AliasName (класс SqlServerAlias)
@@ -37,11 +37,11 @@ object
 ```  
   
 ## <a name="parts"></a>Компоненты  
- *object*  
+ *объектами*  
  Объект [класса SqlServerAlias](sqlserveralias-class.md) , представляющий псевдоним [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение `string`, определяющее имя псевдонима соединения сервера.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
   

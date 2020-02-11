@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b2cc984e4e519d9db0c0532ec5b1f917e18b4ec6
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75247412"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>Поддержка высокого уровня доступности и аварийного восстановления собственного клиента SQL Server
@@ -92,7 +92,7 @@ ms.locfileid: "75247412"
   
  Приложение собственного клиента ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для создания соединения может использовать одну из трех функций.  
   
-|Функция|Описание|  
+|Компонент|Description|  
 |--------------|-----------------|  
 |[SQLBrowseConnect](../../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)|Список серверов, возвращаемый **SQLBrowseConnect**, не содержит имен виртуальных сетей. Будет отображен только список серверов без указания того, является ли сервер отдельным, сервером-источником или сервером-получателем в отказоустойчивом кластере, в котором содержатся два экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], включенные для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], или более. При возникновении ошибки подключения к серверу причина может заключаться в несоответствии параметра **ApplicationIntent** конфигурации сервера.<br /><br /> Поскольку **SQLBrowseConnect** не распознает серверы в отказоустойчивых кластерах, содержащих два или более экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], которые были включены для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], **SQLBrowseConnect** не учитывает ключевое слово строки подключения **MultiSubnetFailover**.|  
 |[SQLConnect](../../../relational-databases/native-client-odbc-api/sqlconnect.md)|**SQLConnect** поддерживает как **ApplicationIntent** , так и **MultiSubnetFailover** через имя источника данных (DSN) или свойства соединения.|  
@@ -133,8 +133,8 @@ ms.locfileid: "75247412"
   
  После установки неявных соединений эти подключения будут использовать настройку назначения приложения для родительского подключения. Аналогичным образом несколько сеансов, созданных с использованием одного источника данных, будут наследовать настройки назначения приложения от источника данных.  
   
-## <a name="see-also"></a>См. также  
- [SQL Server Native Client функции](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
- [Использование ключевых слов строки подключения с SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
+## <a name="see-also"></a>См. также:  
+ [Компоненты собственного клиента SQL Server](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
+ [Использование ключевых слов строки подключения с собственным клиентом SQL Server](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
   
   

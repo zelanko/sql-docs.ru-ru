@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a7fcece285a17e158fcdfe77ef00004afe637541
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69494033"
 ---
 # <a name="creating-an-analysis-services-project-basic-data-mining-tutorial"></a>Создание проекта служб Analysis Services (учебник по интеллектуальному анализу данных — начальный уровень)
-  Каждый проект служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] определяет объекты в одной базе данных служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . База данных [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] может содержать множество различных типов объектов  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Каждый [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] проект определяет объекты в одной [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] базе данных. База данных [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] может содержать множество различных типов объектов  
   
 -   Многомерные модели (кубы)  
   
@@ -57,10 +57,10 @@ ms.locfileid: "69494033"
 3.  В правой части панели **Страницы свойств** на панели **Целевой объект**, убедитесь в том, что именем **сервера** является **localhost**. Если используется другой экземпляр, введите имя этого экземпляра. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
- [Учебник по созданию базового &#40;интеллектуального анализа данных в источнике данных&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
+ [Учебник по созданию источника данных &#40;Basic Data Mining&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>См. также  
- [Построение проектов служб Analysis Services (среда SSDT)](https://docs.microsoft.com/analysis-services/multidimensional-models/build-analysis-services-projects-ssdt)   
- [Создание проекта служб Analysis Services (среда SSDT)](https://docs.microsoft.com/analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt)  
+## <a name="see-also"></a>См. также:  
+ [Сборка Analysis Services проектов &#40;SSDT&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/build-analysis-services-projects-ssdt)   
+ [Создание проекта Analysis Services &#40;SSDT&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt)  
   
   

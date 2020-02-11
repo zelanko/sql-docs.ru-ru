@@ -1,5 +1,5 @@
 ---
-title: Устранение неполадок с конфигурацией групп доступности AlwaysOn (SQL Server) | Документация Майкрософт
+title: Устранение неполадок группы доступности AlwaysOn конфигурации (SQL Server) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/31/2017
 ms.prod: sql-server-2014
@@ -15,48 +15,48 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d1756c80b86ec9b8c16792bf488cc1d3d19b590d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62813167"
 ---
 # <a name="troubleshoot-alwayson-availability-groups-configuration-sql-server"></a>Поиск и устранение неисправностей конфигурации групп доступности AlwaysOn (SQL Server)
   Этот раздел содержит сведения об устранении типичных проблем, возникающих при настройке экземпляров сервера для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Примеры типичных проблем настройки: [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] отключен, учетные записи настроены неправильно, конечная точка зеркального отображения баз данных не существует, конечная точка недоступна (ошибка SQL Server 1418), отсутствует сетевой доступ, команда присоединения базы данных завершается с ошибкой (ошибка SQL Server 35250).  
   
 > [!NOTE]  
->  Проверьте, выполняются ли предварительные требования [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Дополнительные сведения см. в разделе [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](prereqs-restrictions-recommendations-always-on-availability.md).  
+>  Проверьте, выполняются ли предварительные требования [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Дополнительные сведения см. в статьях [Предварительные требования, ограничения и рекомендации для группы доступности AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
  **В этом разделе:**  
   
-|Раздел|Описание|  
+|Раздел|Description|  
 |-------------|-----------------|  
-|[Группы доступности AlwaysOn не включена](#IsHadrEnabled)|Если экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не включен для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], то экземпляр не поддерживает создание групп доступности и на нем не могут размещаться реплики доступности.|  
-|[Измерение счетов](#Accounts)|Обсуждаются требования к правильной настройке учетных записей, под которыми работает [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
+|[Функция групп доступности AlwaysOn не включена](#IsHadrEnabled)|Если экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не включен для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], то экземпляр не поддерживает создание групп доступности и на нем не могут размещаться реплики доступности.|  
+|[Учетные записи](#Accounts)|Обсуждаются требования к правильной настройке учетных записей, под которыми работает [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
 |[Конечные точки](#Endpoints)|Описывается диагностика проблем конечной точки зеркального отображения баз данных для экземпляра сервера.|  
 |[Имя системы](#SystemName)|Обобщаются альтернативы указанию системного имени экземпляра сервера в URL-адресе конечной точки.|  
-|[Сетевой доступ](#NetworkAccess)|Документирует требование к каждому экземпляру сервера, на котором размещается реплика доступности, чтобы каждый такой экземпляр имел доступ к порту каждого другого экземпляра сервера по протоколу TCP.|  
+|[Доступ к сети](#NetworkAccess)|Документирует требование к каждому экземпляру сервера, на котором размещается реплика доступности, чтобы каждый такой экземпляр имел доступ к порту каждого другого экземпляра сервера по протоколу TCP.|  
 |[Доступ к конечной точке (ошибка SQL Server 1418)](#Msg1418)|Содержит сведения об этом сообщении об ошибке [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
-|[Ошибка присоединения базы данных (ошибка SQL Server 35250)](#JoinDbFails)|Обсуждаются возможные причины и способы устранения проблемы с присоединением баз данных-получателей к группе доступности, поскольку соединение с первичной репликой неактивно.|  
+|[Сбой присоединение базы данных (ошибка SQL Server 35250)](#JoinDbFails)|Обсуждаются возможные причины и способы устранения проблемы с присоединением баз данных-получателей к группе доступности, поскольку соединение с первичной репликой неактивно.|  
 |[Маршрутизация только для чтения работает неправильно](#ROR)||  
 |[Связанные задачи](#RelatedTasks)|Содержит список разбитых по задачам разделов в электронной документации по [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , особенно важных для устранения неполадок с конфигурацией группы.|  
-|[См. также](#RelatedContent)|Содержит список важных ресурсов, не входящих в состав электронной документации по [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
+|[Связанное содержимое](#RelatedContent)|Содержит список важных ресурсов, не входящих в состав электронной документации по [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
   
-##  <a name="IsHadrEnabled"></a> Группы доступности AlwaysOn не включена  
+##  <a name="IsHadrEnabled"></a>группы доступности AlwaysOn не включена  
  Функция [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] должна быть включена на каждом из экземпляров [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Дополнительные сведения см. в разделе [Включение и отключение групп доступности AlwaysOn (SQL Server)](enable-and-disable-always-on-availability-groups-sql-server.md).  
   
-##  <a name="Accounts"></a> Измерение счетов  
+##  <a name="Accounts"></a>Организаций  
  Учетные записи, под которыми работает [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , должны быть правильно настроены.  
   
 1.  Имеют ли учетные записи нужные разрешения?  
   
     1.  Если участники запущены под одной и той же учетной записью домена, то правильные имена входа существуют в обеих базах данных **master** . Это рекомендовано и упрощает настройку безопасности базы данных.  
   
-    2.  Если два экземпляра сервера выполняются под разными учетными записями, то для каждой учетной записи должно быть создано имя входа в базе данных **master** на удаленном экземпляре сервера и этому имени входа необходимо присвоить разрешения CONNECT для подключения к конечной точке зеркального отображения базы данных на этом экземпляре сервера. Дополнительные сведения см. в разделе[Создание учетных записей для зеркального отображения базы данных или групп доступности AlwaysOn &#40;SQL Server&#41;](../../database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md).  
+    2.  Если два экземпляра сервера выполняются под разными учетными записями, то для каждой учетной записи должно быть создано имя входа в базе данных **master** на удаленном экземпляре сервера и этому имени входа необходимо присвоить разрешения CONNECT для подключения к конечной точке зеркального отображения базы данных на этом экземпляре сервера. Дополнительные сведения см. в разделе[Настройка учетных записей входа для зеркального отображения базы данных или группы доступности AlwaysOn &#40;SQL Server&#41;](../../database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md).  
   
 2.  Если [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] выполняется как встроенная учетная запись, например как учетная запись локальной системы, локальной службы, сетевой службы или как недоменная учетная запись, для проверки подлинности конечных точек следует использовать сертификаты. Если учетные записи служб используют учетные записи доменов в одном домене, вы можете предоставить доступ CONNECT для каждой учетной записи службы на всех расположениях реплики либо воспользоваться сертификатами. Дополнительные сведения см. в разделе [Использование сертификатов для конечной точки зеркального отображения базы данных (Transact-SQL)](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
   
-##  <a name="Endpoints"></a> Конечные точки  
+##  <a name="Endpoints"></a>Конеч  
  Конечные точки должны быть правильно настроены.  
   
 1.  Убедитесь, что каждый экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , на котором планируется размещать реплику доступности (каждое *расположение реплики*), имеет конечную точку зеркального отображения баз данных. Чтобы определить, существует ли конечная точка зеркального отображения баз данных на данном экземпляре сервера, воспользуйтесь представлением каталога [sys.database_mirroring_endpoints](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql). Дополнительные сведения см. в статье [Создание конечной точки зеркального отображения базы данных с проверкой подлинности Windows (Transact-SQL)](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md) или [Включение использования сертификатов для исходящих соединений в конечной точке зеркального отображения базы данных (Transact-SQL)](../../database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md).  
@@ -70,7 +70,7 @@ ms.locfileid: "62813167"
     GO  
     ```  
   
-3.  Если при настройке [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] возникают труднообъяснимые неполадки, рекомендуется на каждом экземпляре сервера проверить, правильный ли порт он прослушивает. Сведения о проверке доступности порта см. в статье [MSSQLSERVER_1418](../../../relational-databases/errors-events/mssqlserver-1418-database-engine-error.md).  
+3.  Если при настройке [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] возникают труднообъяснимые неполадки, рекомендуется на каждом экземпляре сервера проверить, правильный ли порт он прослушивает. Сведения о проверке доступности порта см. в разделе [MSSQLSERVER_1418](../../../relational-databases/errors-events/mssqlserver-1418-database-engine-error.md).  
   
 4.  Убедитесь, что конечные точки запущены (STATE=STARTED). На каждом экземпляре сервера выполните следующую инструкцию [!INCLUDE[tsql](../../../includes/tsql-md.md)]:  
   
@@ -118,54 +118,54 @@ ms.locfileid: "62813167"
 ##  <a name="Msg1418"></a> Доступ к конечной точке (ошибка SQL Server 1418)  
  Это сообщение [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] уведомляет, что сетевой адрес сервера, указанный в URL-адресе конечной точки сервера, недоступен или не существует, и предлагает выполнить проверку имени сетевого адреса и повторно выполнить команду. Дополнительные сведения см. в статье [MSSQLSERVER_1418](../../../relational-databases/errors-events/mssqlserver-1418-database-engine-error.md).  
   
-##  <a name="JoinDbFails"></a> Ошибка присоединения базы данных (ошибка SQL Server 35250)  
+##  <a name="JoinDbFails"></a>Сбой присоединение базы данных (ошибка SQL Server 35250)  
  В этом разделе обсуждаются возможные причины и способы устранения проблемы с присоединением баз данных-получателей к группе доступности, вызванные тем, что соединение с первичной репликой неактивно.  
   
- **Решение.**  
+ **Решение**  
   
 1.  Проверьте настройку брандмауэра: разрешена ли связь для портов конечных точек между экземплярами серверов, на которых размещаются первичная и вторичная реплика (по умолчанию порт 5022).  
   
 2.  Проверьте, обладает ли учетная запись сетевой службы разрешением на подключение к конечной точке.  
   
-##  <a name="ROR"></a> Маршрутизация только для чтения работает неправильно  
+##  <a name="ROR"></a>Маршрутизация только для чтения работает неправильно  
  Проверьте следующие параметры значений конфигурации и исправьте их при необходимости.  
   
 ||Если...|Действие|Комментарии|Ссылка|  
 |------|---------|------------|--------------|----------|  
-|![Флажок](../../media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Текущая первичная реплика|Убедитесь, что прослушиватель группы доступности находится в режиме «в сети».|**Чтобы убедиться, что прослушиватель имеет состояние «в сети», выполните следующие действия.**<br /><br /> `SELECT * FROM sys.dm_tcp_listener_states;`<br /><br /> **Перезапуск прослушивателя с состоянием «вне сети»**<br /><br /> `ALTER AVAILABILITY GROUP myAG RESTART LISTENER 'myAG_Listener';`|[sys.dm_tcp_listener_states (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP (Transact-SQL)](/sql/t-sql/statements/alter-availability-group-transact-sql)|  
-|![Флажок](../../media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Текущая первичная реплика|Убедитесь, что параметр READ_ONLY_ROUTING_LIST содержит только экземпляры сервера, где размещена вторичная реплика.|**Определение доступных для чтения вторичных реплик:** sys.availability_replicas (столбец**secondary_role_allow_connections_desc** )<br /><br /> **Просмотр списка маршрутизации только для чтения:** sys.availability_read_only_routing_lists<br /><br /> **Изменение списка маршрутизации только для чтения.** ALTER AVAILABILITY GROUP|[sys.availability_replicas (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)<br /><br /> [sys.availability_read_only_routing_lists (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP (Transact-SQL)](/sql/t-sql/statements/alter-availability-group-transact-sql)|  
+|![Флажок](../../media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Текущая первичная реплика|Убедитесь, что прослушиватель группы доступности находится в режиме «в сети».|**Чтобы проверить, находится ли прослушиватель в сети, выполните следующие действия.**<br /><br /> `SELECT * FROM sys.dm_tcp_listener_states;`<br /><br /> **Чтобы перезапустить автономный прослушиватель, выполните следующие действия.**<br /><br /> `ALTER AVAILABILITY GROUP myAG RESTART LISTENER 'myAG_Listener';`|[sys. dm_tcp_listener_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP (Transact-SQL)](/sql/t-sql/statements/alter-availability-group-transact-sql)|  
+|![Флажок](../../media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Текущая первичная реплика|Убедитесь, что параметр READ_ONLY_ROUTING_LIST содержит только экземпляры сервера, где размещена вторичная реплика.|**Чтобы найти доступные для чтения вторичные реплики:** sys. availability_replicas (столбец**secondary_role_allow_connections_desc** )<br /><br /> **Просмотр списка маршрутизации только для чтения:** sys. availability_read_only_routing_lists<br /><br /> **Чтобы изменить список маршрутизации только для чтения, выполните следующие действия.** ALTER AVAILABILITY GROUP|[sys. availability_replicas &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)<br /><br /> [sys. availability_read_only_routing_lists &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP (Transact-SQL)](/sql/t-sql/statements/alter-availability-group-transact-sql)|  
 |![Флажок](../../media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Каждая реплика в списке read_only_routing_list|Убедитесь, что брандмауэр Windows не блокирует порт READ_ONLY_ROUTING_URL.|-|[Настройка брандмауэра Windows для доступа к компоненту Database Engine](../../configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
-|![Флажок](../../media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Каждая реплика в списке read_only_routing_list|В диспетчере конфигурации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] убедитесь в следующем.<br /><br /> Удаленное соединение с SQL Server включено.<br /><br /> TCP/IP включен.<br /><br /> IP-адреса настроены правильно.|-|[Просмотр или изменение свойств сервера (SQL Server)](../../configure-windows/view-or-change-server-properties-sql-server.md)<br /><br /> [Настройка сервера для прослушивания указанного TCP-порта (диспетчер конфигурации SQL Server)](../../configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)|  
-|![Флажок](../../media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Каждая реплика в списке read_only_routing_list|Убедитесь, что параметр READ_ONLY_ROUTING_URL (TCP<strong>:// *`system-address`* :</strong>*порт*) содержит правильное полное доменное имя (FQDN) и номер порта.|-|[Вычисление значения read_only_routing_url для AlwaysOn](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx)<br /><br /> [sys.availability_replicas (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP (Transact-SQL)](/sql/t-sql/statements/alter-availability-group-transact-sql)|  
+|![Флажок](../../media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Каждая реплика в списке read_only_routing_list|В диспетчере конфигурации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] убедитесь в следующем.<br /><br /> Удаленное соединение с SQL Server включено.<br /><br /> TCP/IP включен.<br /><br /> IP-адреса настроены правильно.|-|[Просмотр или изменение свойств сервера &#40;SQL Server&#41;](../../configure-windows/view-or-change-server-properties-sql-server.md)<br /><br /> [Настройка сервера на прослушивание определенного TCP-порта &#40;диспетчер конфигурации SQL Server&#41;](../../configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)|  
+|![Флажок](../../media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Каждая реплика в списке read_only_routing_list|Убедитесь, что READ_ONLY_ROUTING_URL (TCP<strong>://*`system-address`*:</strong>*порт*) содержит правильное полное доменное имя (FQDN) и номер порта.|-|[Вычисление для AlwaysOn](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx)<br /><br /> [sys. availability_replicas &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP (Transact-SQL)](/sql/t-sql/statements/alter-availability-group-transact-sql)|  
 |![Флажок](../../media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Система клиента|Убедитесь, что драйвер клиента поддерживает маршрутизацию только для чтения.|-|[Подключение клиента AlwaysOn (SQL Server)](always-on-client-connectivity-sql-server.md)|  
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
   
 -   [Создание и настройка групп доступности (SQL Server)](creation-and-configuration-of-availability-groups-sql-server.md)  
   
--   [Создание конечной точки зеркального отображения базы данных с проверкой подлинности Windows (Transact-SQL)](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
+-   [Создание конечной точки зеркального отображения базы данных для проверки подлинности Windows &#40;Transact-SQL&#41;](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
--   [Укажите URL-адрес конечной точки при добавлении или изменении реплики доступности (SQL Server)](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [Укажите URL-адрес конечной точки при добавлении или изменении &#40;реплики доступности SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
--   [Подготовка базы данных-получателя для присоединения к группе доступности вручную (SQL Server)](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
+-   [Вручную Подготовьте базу данных-получатель для группы доступности &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
--   [Устранение неполадок с операцией добавления файла, завершившейся сбоем &#40;группы доступности AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
+-   [Устранение неполадок при &#40;операции добавления файла группы доступности AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
--   [Управление именами входа и заданиями для баз данных группы доступности (SQL Server)](../../logins-and-jobs-for-availability-group-databases.md)  
+-   [Управление именами входа и заданиями для баз данных группы доступности &#40;SQL Server&#41;](../../logins-and-jobs-for-availability-group-databases.md)  
   
--   [Управление метаданными при обеспечении доступности базы данных на другом экземпляре сервера (SQL Server)](../../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)  
+-   [Управление метаданными при обеспечении доступности базы данных на другом экземпляре сервера &#40;SQL Server&#41;](../../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)  
   
 ##  <a name="RelatedContent"></a> См. также  
   
 -   [Просмотр событий и журналов для отказоустойчивого кластера](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
--   [Командлет Get-ClusterLog отказоустойчивого кластера](https://technet.microsoft.com/library/ee461045.aspx)  
+-   [Командлет Get-ClusterLog для отказоустойчивого кластера](https://technet.microsoft.com/library/ee461045.aspx)  
   
--   [Блог группы AlwaysOn SQL Server: Официальный блог по SQL Server AlwaysOn Team](https://blogs.msdn.com/b/sqlalwayson/)  
+-   [Блог группы разработчиков SQL Server AlwaysOn: официальный блог группы разработчиков SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
   
-## <a name="see-also"></a>См. также  
- [Безопасность транспорта для зеркального отображения базы данных и групп доступности AlwaysOn &#40;SQL Server&#41;](../../database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
+## <a name="see-also"></a>См. также:  
+ [Безопасность транспорта для зеркального отображения базы данных и группы доступности AlwaysOn &#40;SQL Server&#41;](../../database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [Конфигурация клиентской сети](../../configure-windows/client-network-configuration.md)   
- [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
+ [Предварительные требования, ограничения и рекомендации для группы доступности AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
   
   

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ba2550b3d327d392d63aeacf4d6588457cd1aa79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771120"
 ---
 # <a name="look-up-infoobject"></a>Поиск InfoObject
@@ -58,7 +58,7 @@ ms.locfileid: "62771120"
  **Характеристики времени**  
  Поиск объектов InfoObject, которые являются выражением характеристик времени.  
   
- **Name**  
+ **Название**  
  Введите имя InfoObject для поиска или часть имени с символом-шаблоном звездочки (*). Также можно использовать символ-шаблон звездочки для включения всех объектов InfoObject.  
   
  **Описание**  
@@ -78,12 +78,12 @@ ms.locfileid: "62771120"
   
  После открытия списка объектов InfoObject выберите нужный объект InfoObject, после чего целевой объект заполнит связанные параметры необходимыми значениями.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание InfoCube для данных транзакции](create-infocube-for-transaction-data.md)   
  [Создание InfoSource](create-infosource.md)   
  [Создание InfoSource для данных транзакции](create-infosource-for-transaction-data.md)   
  [Создание InfoSource для основных данных](create-infosource-for-master-data.md)   
- [Создание нового InfoObject](create-new-infoobject.md)   
+ [Создание InfoObject](create-new-infoobject.md)   
  [Редактор назначений SAP BW (страница "Диспетчер подключений")](sap-bw-destination-editor-connection-manager-page.md)   
  [Справка F1 по Microsoft Connector 1.1 для SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
   

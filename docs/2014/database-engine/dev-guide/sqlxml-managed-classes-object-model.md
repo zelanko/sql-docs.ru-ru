@@ -1,5 +1,5 @@
 ---
-title: SQLXML объектная модель управляемых классов | Документация Майкрософт
+title: Объектная модель управляемых классов SQLXML | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1f49961a48c096cf01fbf7f09de0d76ac9fd4bfe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781811"
 ---
 # <a name="sqlxml-managed-classes-object-model"></a>Объектная модель управляемых классов SQLXML
@@ -31,7 +31,7 @@ ms.locfileid: "62781811"
  [Объект SqlXmlParameter &#40;управляемые классы SQLXML&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmlparameter-object.md)  
  Представляет имя и значение параметра.  
   
- [Объект SqlXmlAdapter &#40;управляемые классы SQLXML&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmladapter-object.md)  
+ [Объект Склксмладаптер &#40;управляемые классы SQLXML&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmladapter-object.md)  
  Содержит методы для взаимодействия с набором данных платформы [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework.  
   
   

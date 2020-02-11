@@ -18,10 +18,10 @@ ms.assetid: 76e4cfab-4b15-4da4-bb2f-8aac6f927f79
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 86e15376bd56a439e0763e79a5c166d7023125ea
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660275"
 ---
 # <a name="setdefaults-method-serversettings-class"></a>Метод SetDefaults (класс ServerSettings)
@@ -36,21 +36,21 @@ object.SetDefaults(OverwriteAll)
 ```  
   
 ## <a name="parts"></a>Компоненты  
- *object*  
- Объект [класса класс serversettings](../../../relational-databases/wmi-provider-configuration-classes/serversettings-class/serversettings-class.md) , представляющий экземпляр клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ *объектами*  
+ Объект [класса класс serversettings](../../../relational-databases/wmi-provider-configuration-classes/serversettings-class/serversettings-class.md) , представляющий экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] клиента.  
   
 #### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Description|  
 |---------------|-----------------|  
-|*овервритеалл*|Логическое значение, указывающее, следует ли перезаписывать существующие значения на экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: **true** для перезаписи существующих данных, или **false** , если существующие данные не будут перезаписаны.|  
+|*овервритеалл*|Логическое значение, указывающее, следует ли перезаписывать существующие значения на экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: **true** для перезаписи существующих данных, или **значение false** , если существующие данные не будут перезаписаны.|  
   
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
- Значение u**int32** , равное 0, если служба изменена успешно, и 1, если запрос не поддерживается. Любое другое значение указывает на ошибку.  
+ Значение u**Int32** , равное 0, если служба была успешно изменена, 1, если запрос не поддерживается, и любое другое число для указания ошибки.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также раздел  
- [Настройка сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+## <a name="see-also"></a>См. также:  
+ [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

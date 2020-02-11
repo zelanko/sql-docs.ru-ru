@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b7996ed3cc3ea209361790f23f6955f09be035e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770864"
 ---
 # <a name="raw-file-destination"></a>назначение «Необработанный файл»
@@ -53,7 +53,7 @@ ms.locfileid: "62770864"
   
  В следующей таблице описаны доступные значения свойства WriteOption.  
   
-|Параметр|Описание|  
+|Параметр|Description|  
 |------------|-----------------|  
 |Append|Дозаписывает данные в существующий файл. Метаданные присоединенных данных должны соответствовать формату файла.|  
 |Create always|Всегда создает новый файл.|  
@@ -113,7 +113,7 @@ ms.locfileid: "62770864"
   
 1.  Установите для свойства WriteOption значение **CreateOnce** или **CreateAlways**и запустите одну итерацию цикла. Файл будет создан. Это будет гарантией того, что добавляемые метаданные и файл будут соответствовать друг другу.  
   
-2.  Сбросьте свойство WriteOption для **Append** и задайте для свойства ValidateExternalMetadata значение `False`.  
+2.  Сбросьте свойство WriteOption в значение **append** и задайте для `False`свойства ValidateExternalMetadata значение.  
   
  Если используется параметр **TruncateAppend** вместо параметра **Append** , то строки, которые были добавлены в любой предыдущей итерации, будут усечены, и только затем будет добавлена новая строка. Использование параметра **TruncateAppend** также требует, чтобы данные соответствовали формату файла.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "62770864"
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
--   [Common Properties](../common-properties.md)  
+-   [Общие свойства](../common-properties.md)  
   
 -   [Пользовательские свойства необработанного файла](raw-file-custom-properties.md)  
   
@@ -132,8 +132,8 @@ ms.locfileid: "62770864"
 ## <a name="related-content"></a>См. также  
  Запись в блоге [Необработанные файлы ― это здорово](http://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx)на сайте sqlservercentral.com.  
   
-## <a name="see-also"></a>См. также  
- [Источник «Необработанный файл»](raw-file-source.md)   
+## <a name="see-also"></a>См. также:  
+ [Источник необработанного файла](raw-file-source.md)   
  [Поток данных](data-flow.md)  
   
   

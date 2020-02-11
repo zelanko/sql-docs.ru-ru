@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 133d97cc2d4c04e147d5f4a88c13674429f5c784
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63164909"
 ---
 # <a name="creating-a-delivery-extension-library"></a>Создание библиотеки модулей доставки
@@ -50,7 +50,7 @@ csc /t:library /out:CompanyName.ExtensionName.dll *.cs /r:System.dll
 /r:Microsoft.ReportingServices.Interfaces.dll  
 ```  
   
- В следующем примере кода показана команда, которая используется для файлов на [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] с расширением VB.  
+ В следующем примере кода показана команда, которая будет использоваться для [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] файлов с расширением VB.  
   
 ```vb  
 vbc /t:library /out:CompanyName.ExtensionName.dll *.vb /r:System.dll   
@@ -60,7 +60,7 @@ vbc /t:library /out:CompanyName.ExtensionName.dll *.vb /r:System.dll
 > [!NOTE]  
 >  Также можно проектировать, разрабатывать и строить модуль доставки в среде [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]. Дополнительные сведения о разработке сборок в среде [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] см. в документации по среде [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Модули служб Reporting Services](../reporting-services-extensions.md)   
  [Реализация модуля доставки](implementing-a-delivery-extension.md)   
  [Библиотека модулей Reporting Services](../reporting-services-extension-library.md)  
