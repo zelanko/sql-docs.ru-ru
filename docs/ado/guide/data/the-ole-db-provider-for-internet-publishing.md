@@ -17,34 +17,34 @@ ms.assetid: 4869aafa-7401-4ce1-93ce-45406a60274f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 80a373196f98a964bc3e522cc9329907a3392b95
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923906"
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>Поставщик OLE DB для публикации в Интернете
-ADO [записи](../../../ado/reference/ado-api/record-object-ado.md) и [Stream](../../../ado/reference/ado-api/stream-object-ado.md) объектов можно использовать поставщик Microsoft OLE DB для публикаций в Интернете (поставщика Интернет-публикаций) получить доступ и использовать ресурсы, такие как веб-папки или файлы обслуживаемые Microsoft FrontPage. С помощью ADO можно указать источник **записи**, **Stream**, или [записей](../../../ado/reference/ado-api/recordset-object-ado.md) быть URL-адрес. Вы можно отправить, загрузить, переместить, скопировать и удалите ресурсы или напрямую манипулировать свойства ресурса.  
+Объекты [записи](../../../ado/reference/ado-api/record-object-ado.md) и [потока](../../../ado/reference/ado-api/stream-object-ado.md) ADO можно использовать с поставщиком Microsoft OLE DB для публикации в Интернете (поставщик публикации в Интернете) для доступа к ресурсам, таким как веб-папки или файлы, обслуживаемые Microsoft FrontPage, и управления ими. С помощью ADO можно указать источник **записи**, **потока**или [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) в качестве URL-адреса. Затем можно передать, скачать, переместить, скопировать и удалить ресурсы или напрямую управлять свойствами ресурсов.  
   
- Пример кода, который использует **записей** и **потоки** публикации поставщика Интернета, см. в разделе [публикации ситуации Интернета](../../../ado/guide/data/internet-publishing-scenario.md).  
+ Пример кода, в котором используются **записи** и **потоки** с поставщиком публикации в Интернете, см. в статье [сценарий публикации в Интернете](../../../ado/guide/data/internet-publishing-scenario.md).  
   
- Службу публикации в Интернете устанавливается вместе с Microsoft Windows 2000. Более ранних версиях службу публикации в Интернете, также доступны с помощью Microsoft Office 2000 и Microsoft Internet Explorer 5.0.  
+ Поставщик публикации в Интернете устанавливается вместе с Microsoft Windows 2000. Более ранние версии поставщика услуг публикации в Интернете также доступны в Microsoft Office 2000 и Microsoft Internet Explorer 5,0.  
   
- Существует три способа для подключения ADO службу публикации в Интернете:  
+ Существует три способа подключения ADO к поставщику публикации в Интернете:  
   
--   Укажите «URL-адрес =» в строке подключения. Пример:  
+-   В строке подключения укажите "URL =". Пример:  
   
     ```  
     objConn.Open "URL=https://servername"  
     ```  
   
--   Укажите Msdaipp.dso для *поставщика* ключевое слово строки подключения. Пример:  
+-   Укажите Мсдаипп. DSO для ключевого слова *provider* в строке подключения. Пример:  
   
     ```  
     objConn.Open "provider=MSDAIPP.DSO;data source=https://servername"  
     ```  
   
--   Укажите Msdaipp.dso для [поставщика](../../../ado/reference/ado-api/provider-property-ado.md) свойство [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта. Пример:  
+-   Укажите Мсдаипп. DSO для свойства [provider](../../../ado/reference/ado-api/provider-property-ado.md) объекта [Connection](../../../ado/reference/ado-api/connection-object-ado.md) . Пример:  
   
     ```  
     objConn.Provider = "MSDAIPP.DSO"  
@@ -52,6 +52,6 @@ ADO [записи](../../../ado/reference/ado-api/record-object-ado.md) и [Stre
     ```  
   
 > [!NOTE]
->  Если Msdaipp.dso явно не указан для параметра поставщика, с помощью *поставщика* ключевое слово строки подключения или **поставщика** свойство, нельзя использовать «URL-адрес =» в строке подключения. В противном случае произойдет ошибка. Вместо этого просто укажите URL-адрес, как показано выше.  
+>  Если Мсдаипп. DSO явно задан как значение поставщика с помощью ключевого слова строки подключения *поставщика* или свойства **поставщика** , нельзя использовать "URL =" в строке подключения. В противном случае возникнет ошибка. Вместо этого просто укажите URL-адрес, как показано выше.  
   
- Более конкретные сведения о публикации Интернета, см. в разделе [поставщик Microsoft OLE DB для публикаций в Интернете](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md), или поставщик документацию, поставляемую с исходным приложением с помощью которого поставщик OLE DB для Был установлен публикаций в Интернете: Windows 2000, Office 2000 или Internet Explorer 5.0.
+ Дополнительные сведения о поставщике публикации в Интернете см. в разделе [поставщик OLE DB Майкрософт для публикации в Интернете](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)или в документации поставщика, поставляемой с исходным приложением, с которым установлен поставщик OLE DB для публикации в Интернете: Windows 2000, Office 2000 или Internet Explorer 5,0.

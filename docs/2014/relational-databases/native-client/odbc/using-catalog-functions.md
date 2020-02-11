@@ -18,20 +18,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 263df9986df0297c8bf1afdb35d70841835cef4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62667382"
 ---
 # <a name="using-catalog-functions"></a>Использование функций каталога
   Все базы данных имеют структуру, содержащую данные, хранящиеся в базе данных. Определение этой структуры вместе с другими сведениями, например разрешениями, хранится в каталоге (реализованном как набор системных таблиц), который называют словарем данных.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Драйвер ODBC собственного клиента позволяет приложению определять структуру базы данных через вызовы функций каталога ODBC. Функции каталога возвращают сведения в результирующих наборах и реализуются с помощью запросов хранимых процедур каталога к системным таблицам этого каталога. Например, приложение может запросить результирующий набор, содержащий сведения о всех таблицах в системе или всех столбцах в определенной таблице. Стандартные функции каталога ODBC используются для получения сведений о каталоге из [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], к которому подключено приложение.  
+ Драйвер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC для собственного клиента позволяет приложению определить структуру базы данных с помощью вызовов функций каталога ODBC. Функции каталога возвращают сведения в результирующих наборах и реализуются с помощью запросов хранимых процедур каталога к системным таблицам этого каталога. Например, приложение может запросить результирующий набор, содержащий сведения о всех таблицах в системе или всех столбцах в определенной таблице. Стандартные функции каталога ODBC используются для получения сведений о каталоге из [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], к которому подключено приложение.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает распределенные запросы, в которых доступ к нескольким разнородным источникам данных OLE DB осуществляется одним запросом. Одним из методов доступа к удаленному источнику данных OLE DB является определение источника данных как связанного сервера. Это можно сделать с помощью [sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql). После определения связанного сервера на объекты этого сервера могут ссылаться инструкции Transact-SQL, используя четырехкомпонентное имя:  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает распределенные запросы, в которых доступ к нескольким разнородным источникам данных OLE DB осуществляется одним запросом. Одним из методов доступа к удаленному источнику данных OLE DB является определение источника данных как связанного сервера. Это можно сделать с помощью [sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql). После определения связанного сервера на объекты этого сервера могут ссылаться инструкции Transact-SQL, используя четырехкомпонентное имя:  
   
- *linked_server_name.catalog.schema.object_name*.  
+ *linked_server_name. catalog. Schema. object_name*.  
   
  Драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает две зависящие от драйвера функции, помогающие получить сведения о каталоге от связанных серверов.  
   
@@ -43,7 +44,7 @@ ms.locfileid: "62667382"
   
      Возвращает список каталогов, содержащихся на связанном сервере.  
   
- После имени связанного сервера и имя каталога, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] драйвер ODBC собственного клиента поддерживает получение сведений из каталога, используя двухкомпонентное имя _имя_связанного_сервера_ **.** _каталога_ для *CatalogName* на ODBC следующие функции работы с каталогами:  
+ После создания имени связанного сервера и каталога драйвер ODBC для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента поддерживает получение сведений из каталога, используя имя из двух частей _linked_server_name_**.** _Каталог_ для *CatalogName* для следующих функций каталога ODBC:  
   
 -   **SQLColumnPrivileges**  
   
@@ -57,7 +58,7 @@ ms.locfileid: "62667382"
   
 -   **SQLTables**  
   
- В два этапа _имя_связанного_сервера_ **.** _каталога_ также поддерживается для *FKCatalogName* и *PKCatalogName* на [SQLForeignKeys](../../native-client-odbc-api/sqlforeignkeys.md).  
+ Linked_server_name из двух частей __**.** _Каталог_ также поддерживается для *фккаталогнаме* и *пккаталогнаме* на [SQLForeignKeys](../../native-client-odbc-api/sqlforeignkeys.md).  
   
  Использование SQLLinkedServers и SQLLinkedCatalogs требует следующих файлов.  
   
@@ -73,8 +74,8 @@ ms.locfileid: "62667382"
   
      Необходима во время выполнения. Файл sqlncli11.dll поставляется вместе с драйвером ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
-## <a name="see-also"></a>См. также  
- [Собственный клиент SQL Server &#40;ODBC&#41;](sql-server-native-client-odbc.md)   
+## <a name="see-also"></a>См. также:  
+ [SQL Server Native Client &#40;ODBC&#41;](sql-server-native-client-odbc.md)   
  [SQLColumnPrivileges](../../native-client-odbc-api/sqlcolumnprivileges.md)   
  [SQLColumns](../../native-client-odbc-api/sqlcolumns.md)   
  [SQLPrimaryKeys](../../native-client-odbc-api/sqlprimarykeys.md)   

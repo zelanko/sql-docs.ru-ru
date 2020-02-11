@@ -20,16 +20,16 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: b012b118d16b2bf15194eb2fe515936abf6e6f80
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73844390"
 ---
 # <a name="sp_delete_firewall_rule-azure-sql-database"></a>sp_delete_firewall_rule (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
-  Удаляет параметры брандмауэра на уровне сервера с локального сервера [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Эта хранимая процедура доступна только в базе данных master для имени входа субъекта серверного уровня.  
+  Удаляет параметры брандмауэра на уровне сервера с локального сервера [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Эта хранимая процедура доступна только в базе данных master для имени для входа субъекта серверного уровня.  
 
   
 ## <a name="syntax"></a>Синтаксис  
@@ -58,10 +58,10 @@ sp_delete_firewall_rule [@name =] 'name'
 EXEC sp_delete_firewall_rule N'Example setting 1';   
 ```  
   
-## <a name="see-also"></a>См. также статью  
-   [брандмауэра базы данных SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)  
+## <a name="see-also"></a>См. также:  
+ [Брандмауэр базы данных SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)   
  [Как настроить параметры брандмауэра (база данных SQL Azure)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
- [sp_set_firewall_rule &#40;базы данных&#41; SQL Azure](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
+ [sp_set_firewall_rule &#40;базе данных SQL Azure&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
  [sys. firewall_rules &#40;базы данных SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-firewall-rules-azure-sql-database.md)  
   
   

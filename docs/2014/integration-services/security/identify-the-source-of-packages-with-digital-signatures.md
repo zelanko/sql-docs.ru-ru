@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 714ede33a89a3ab4e44dae682887ee0c21c9f363
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62766656"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>Определение источника пакетов с помощью цифровых подписей
@@ -34,16 +34,16 @@ ms.locfileid: "62766656"
   
 -   Чтобы во время разработки перед загрузкой проверялась цифровая подпись всех пакетов, установите параметр **Проверять цифровую подпись при загрузке пакета** в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Этот параметр является глобальной настройкой для всех пакетов в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Дополнительные сведения см. в разделе [General Page](../general-page-of-integration-services-designers-options.md).  
   
--   Чтобы проверить цифровую подпись отдельного пакета, укажите `/VerifyS[igned]` параметр при использовании **dtexec** служебная программа для запуска пакета. Дополнительные сведения см. в статье [dtexec Utility](../packages/dtexec-utility.md).  
+-   Чтобы проверить цифровую подпись отдельного пакета, укажите `/VerifyS[igned]` параметр при использовании программы **dtexec** для запуска пакета. Дополнительные сведения см. в статье [dtexec Utility](../packages/dtexec-utility.md).  
   
 ## <a name="setting-a-registry-value-to-check-the-package-signature"></a>Задание значения реестра для проверки цифровой подписи  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] также поддерживают необязательное значение реестра **BlockedSignatureStates**, которое позволяет управлять политикой организации в отношении загрузки подписанных и неподписанных пакетов. Этот параметр препятствует загрузке пакетов, которые не подписаны либо имеют неверную или ненадежную подпись. Дополнительные сведения о задании этого значения реестра см. в разделе [Реализация политики подписывания путем задания параметра реестра](../implement-a-signing-policy-by-setting-a-registry-value.md).  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]также поддерживает необязательное значение реестра **BlockedSignatureStates**, которое можно использовать для управления политикой Организации по загрузке подписанных и неподписанных пакетов. Этот параметр препятствует загрузке пакетов, которые не подписаны либо имеют неверную или ненадежную подпись. Дополнительные сведения о задании этого значения реестра см. в разделе [Реализация политики подписывания путем задания параметра реестра](../implement-a-signing-policy-by-setting-a-registry-value.md).  
   
 > [!NOTE]  
 >  Дополнительный раздел реестра **BlockedSignatureStates** может задавать значение, накладывающее более строгое ограничение, чем параметр цифровой подписи, задаваемый в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] или программе командной строки **dtexec** . В этом случае значение в реестре переопределяет другие параметры.  
   
-## <a name="see-also"></a>См. также  
- [Пакеты служб Integration Services (SSIS)](../integration-services-ssis-packages.md)   
- [Общие сведения о безопасности (службы Integration Services)](security-overview-integration-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Integration Services &#40;пакетов&#41; SSIS](../integration-services-ssis-packages.md)   
+ [Общие сведения о безопасности &#40;Integration Services&#41;](security-overview-integration-services.md)  
   
   

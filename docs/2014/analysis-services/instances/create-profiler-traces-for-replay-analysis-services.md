@@ -1,5 +1,5 @@
 ---
-title: Создание трассировок Profiler для воспроизведения (службы Analysis Services) | Документация Майкрософт
+title: Создать трассировки профилировщика для воспроизведения (Analysis Services) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,14 +21,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc494fa63064d5c48c94e44cb91db5b1fe0f988d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080136"
 ---
 # <a name="create-profiler-traces-for-replay-analysis-services"></a>Создание трассировки приложения Profiler для воспроизведения (службы Analysis Services)
-  Чтобы воспроизвести запросы, результаты обнаружения и команды, отправляемые пользователями служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] должно собрать требуемые события. Чтобы инициировать сбор этих событий, должны быть выбраны соответствующие классы событий на вкладке **Выбор событий** диалогового окна **Свойства трассировки** . Например, если выбирается класс событий «Начало запроса», то события, содержащие запросы, собираются и используются для воспроизведения. Также файл трассировки содержит достаточное количество сведений для поддержки воспроизведения серверных транзакций в распределенной среде в оригинальной последовательности транзакций.  
+  Чтобы воспроизвести запросы, обнаружения и команды, отправляемые [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]пользователями в, [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] необходимо собрать необходимые события. Чтобы инициировать сбор этих событий, должны быть выбраны соответствующие классы событий на вкладке **Выбор событий** диалогового окна **Свойства трассировки** . Например, если выбирается класс событий «Начало запроса», то события, содержащие запросы, собираются и используются для воспроизведения. Также файл трассировки содержит достаточное количество сведений для поддержки воспроизведения серверных транзакций в распределенной среде в оригинальной последовательности транзакций.  
   
 ## <a name="replay-for-queries"></a>Воспроизведение запросов  
  Чтобы воспроизвести запросы, приложение [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] должно записать следующие события:  
@@ -44,7 +44,7 @@ ms.locfileid: "66080136"
   
 -   Класс событий Audit Login со всеми его столбцами данных. Этот класс событий предоставляет сведения о каждом пользователе, вошедшем в систему, а также о параметрах сеанса. SPID предоставляет ссылку на пользовательский сеанс. Дополнительные сведения см. в статье [Security Audit Data Columns](https://docs.microsoft.com/bi-reference/trace-events/security-audit-data-columns).  
   
--   Класс событий Discover Begin со всеми его столбцами данных. Столбец TextData предоставляет \<RequestType > часть запроса открытия, а столбец RequestProperties предоставляет \<свойства > часть запроса распознавания. Столбец EventSubclass предоставляет тип обнаружения. Дополнительные сведения см. в статье [Discover Events Data Columns](https://docs.microsoft.com/bi-reference/trace-events/discover-events-data-columns).  
+-   Класс событий Discover Begin со всеми его столбцами данных. Столбец TextData предоставляет \<часть запроса Discover>, а столбец RequestProperties предоставляет \<свойства> части запроса Discover. Столбец EventSubclass предоставляет тип обнаружения. Дополнительные сведения см. в статье [Discover Events Data Columns](https://docs.microsoft.com/bi-reference/trace-events/discover-events-data-columns).  
   
 -   Класс событий Discover End со всеми его столбцами данных. Этот класс событий проверяет состояние запроса открытия. Дополнительные сведения см. в статье [Discover Events Data Columns](https://docs.microsoft.com/bi-reference/trace-events/discover-events-data-columns).  
   
@@ -55,8 +55,8 @@ ms.locfileid: "66080136"
   
 -   Класс событий Command End со всеми его столбцами данных. Этот класс событий проверяет состояние команды. Дополнительные сведения см. в статье [Command Events Data Columns](https://docs.microsoft.com/bi-reference/trace-events/command-events-data-columns).  
   
-## <a name="see-also"></a>См. также  
- [События трассировки служб Analysis Services](https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events)   
+## <a name="see-also"></a>См. также:  
+ [События трассировки Analysis Services](https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events)   
  [Введение в мониторинг служб Analysis Services при помощи приложения SQL Server Profiler](introduction-to-monitoring-analysis-services-with-sql-server-profiler.md)  
   
   

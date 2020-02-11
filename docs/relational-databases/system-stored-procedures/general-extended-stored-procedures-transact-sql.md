@@ -20,27 +20,28 @@ ms.assetid: 9129f571-d162-42e6-a66b-340fbbf0acd1
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: daa3dc088a4a448e6b20cdf2ade73e64e86d491d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942198"
 ---
 # <a name="general-extended-stored-procedures-transact-sql"></a>Основные расширенные хранимые процедуры (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает следующие системные хранимые процедуры, которые предоставляют интерфейс экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] внешним программам для различных операций по обслуживанию.  
   
 |||  
 |-|-|  
 |[xp_cmdshell](../../relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md)|[xp_logininfo](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md)|  
-|[xp_enumgroups](../../relational-databases/system-stored-procedures/xp-enumgroups-transact-sql.md)|[xp_msver](../../relational-databases/system-stored-procedures/xp-msver-transact-sql.md)|  
+|[xp_enumgroups](../../relational-databases/system-stored-procedures/xp-enumgroups-transact-sql.md)|[xp_msver, хранимая процедура](../../relational-databases/system-stored-procedures/xp-msver-transact-sql.md)|  
 |[xp_grantlogin](../../relational-databases/system-stored-procedures/xp-grantlogin-transact-sql.md)|[xp_revokelogin](../../relational-databases/system-stored-procedures/xp-revokelogin-transact-sql.md)|  
 |[xp_logevent](../../relational-databases/system-stored-procedures/xp-logevent-transact-sql.md)|[xp_sprintf](../../relational-databases/system-stored-procedures/xp-sprintf-transact-sql.md)|  
 |[xp_loginconfig](../../relational-databases/system-stored-procedures/xp-loginconfig-transact-sql.md)|[xp_sqlmaint](../../relational-databases/system-stored-procedures/xp-sqlmaint-transact-sql.md)|  
 ||[xp_sscanf](../../relational-databases/system-stored-procedures/xp-sscanf-transact-sql.md)|  
   
-## <a name="see-also"></a>См. также  
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

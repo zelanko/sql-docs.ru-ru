@@ -1,5 +1,5 @@
 ---
-title: Экспорт пакета диалоговое окно пользовательского интерфейса в справочник | Документация Майкрософт
+title: Справочник по пользовательскому интерфейсу диалогового окна экспорта пакета | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,18 +15,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c1cca0a2761f87d6f4f3837df1e9a0bdcc5b91a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058911"
 ---
 # <a name="export-package-dialog-box-ui-reference"></a>Диалоговое окно «Экспорт пакета» справочника по пользовательскому интерфейсу
   Диалоговое окно **Экспорт пакета** , доступное в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], используется для экспорта пакета служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] в другое место и, при необходимости, изменения уровня защиты пакета.  
   
 ## <a name="options"></a>Параметры  
- **Размещение пакета**  
- Выберите тип хранилища для экспорта пакета. Доступны следующие параметры:  
+ **Расположение пакета**  
+ Выберите тип хранилища для экспорта пакета. Доступны следующие варианты:  
   
  **SQL Server**  
   
@@ -34,16 +34,16 @@ ms.locfileid: "66058911"
   
  **Хранилище пакетов служб SSIS**  
   
- **Server**  
+ **Сервер**  
  Введите имя сервера или выберите его из списка.  
   
- **Проверка подлинности**  
+ **Аутентификация**  
  Выберите проверку подлинности Windows или проверку подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Этот параметр доступен, только если в качестве места хранения указан [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
 >  При возможности используйте проверку подлинности Windows.  
   
- **Тип проверки подлинности**  
+ **Authentication type (Тип проверки подлинности)**  
  Выберите тип проверки подлинности.  
   
  **User name**  
@@ -52,16 +52,16 @@ ms.locfileid: "66058911"
  **Пароль**  
  При использовании проверки подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] укажите пароль.  
   
- **Путь пакета**  
+ **Путь к пакету**  
  Введите путь модуля или нажмите кнопку обзора **(...)** и выберите папку, в которой должен быть сохранен пакет.  
   
  **Уровень защиты**  
  Нажмите кнопку обзора **(...)** и обновите уровень защиты в диалоговом окне **Уровень защиты пакета**. Дополнительные сведения см. в разделе [Диалоговое окно уровня защиты пакета и проекта](../../2014/integration-services/package-and-project-protection-level-dialog-box.md).  
   
-## <a name="see-also"></a>См. также  
- [Сохранение копии пакета](../../2014/integration-services/save-copy-of-package.md)   
- [Диалоговое окно «Импорт пакета» справочника по пользовательскому интерфейсу](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
+## <a name="see-also"></a>См. также:  
+ [Сохранить копию пакета](../../2014/integration-services/save-copy-of-package.md)   
+ [Справочник по пользовательскому интерфейсу диалогового окна "Импорт пакета"](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
  [Сохранение пакетов](save-packages.md)   
- [Импорт и экспорт пакетов (службы SSIS)](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
+ [Импорт и экспорт пакетов &#40;служб SSIS&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
   
   

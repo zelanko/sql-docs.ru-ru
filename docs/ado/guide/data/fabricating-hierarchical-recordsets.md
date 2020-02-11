@@ -1,5 +1,5 @@
 ---
-title: Составление иерархических наборов записей | Документация Майкрософт
+title: Упорядочение иерархических наборов записей | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,16 +16,16 @@ ms.assetid: a584e642-a4a3-418e-bc20-3aff81a5625a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6fcdb630f2391f685080ac594cfdb537edf626a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925327"
 ---
 # <a name="fabricating-hierarchical-recordsets"></a>Составление иерархических наборов записей
-Приведенный ниже показано, как для создания иерархических наборах записей без базового источника данных с помощью формирования Грамматика для определения столбцов для родительских, дочерних и внучатый данных **наборы записей**.  
+В следующем примере показано, как создать иерархический набор записей без базового источника данных, используя грамматику формирования данных для определения столбцов для родительских, дочерних и внучатый **наборов записей**.  
   
- При изготовлении иерархической **записей**, необходимо указать [службы Microsoft Data Shaping Service для OLE DB (ADO поставщиком услуг)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (MSDataShape), и можно указать значение NONE в поставщик данных параметр строки подключения [откройте](../../../ado/reference/ado-api/open-method-ado-connection.md) метод [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта. Дополнительные сведения см. в разделе [необходимые поставщики для формирования данных](../../../ado/guide/data/required-providers-for-data-shaping.md).  
+ Для формирования иерархического **набора записей**необходимо указать [службу формирования данных Майкрософт для OLE DB (поставщик служб ADO)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (мсдаташапе), а в параметре строки подключения метода [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) объекта [Connection](../../../ado/reference/ado-api/connection-object-ado.md) можно указать значение None для поставщика данных. Дополнительные сведения см. в разделе [необходимые поставщики для формирования данных](../../../ado/guide/data/required-providers-for-data-shaping.md).  
   
 ```  
 Dim cn As New ADODB.Connection  
@@ -52,11 +52,11 @@ strShape = _
 rsCustomers.Open strShape, cn, adOpenStatic, adLockOptimistic, -1  
 ```  
   
- Сразу же **записей** были подделаны, его могут заполняться, управлять или сохраняется в файл.  
+ Как только **набор записей** будет создан, он может быть заполнен, обработан или сохранен в файле.  
   
-## <a name="see-also"></a>См. также  
- [Доступ к строкам в иерархических наборах записей](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
- [Грамматика формального формирования данных](../../../ado/guide/data/formal-shape-grammar.md)   
- [Обязательные поставщики для формирования данных](../../../ado/guide/data/required-providers-for-data-shaping.md)   
- [Предложение APPEND для формирования](../../../ado/guide/data/shape-append-clause.md)   
+## <a name="see-also"></a>См. также:  
+ [Доступ к строкам в иерархическом наборе записей](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
+ [Грамматика формальной фигуры](../../../ado/guide/data/formal-shape-grammar.md)   
+ [Необходимые поставщики для формирования данных](../../../ado/guide/data/required-providers-for-data-shaping.md)   
+ [Предложение APPEND для фигур](../../../ado/guide/data/shape-append-clause.md)   
  [Общие сведения о командах формирования данных](../../../ado/guide/data/shape-commands-in-general.md)

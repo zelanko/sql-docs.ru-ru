@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b5ac09bdbc05f406d8d7925af1c9a45346913151
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242946"
 ---
 # <a name="view-spatial-data-in-object-explorer"></a>Просмотр пространственных данных в обозревателе объектов
@@ -34,13 +34,13 @@ ms.locfileid: "75242946"
 4.  В списке **Выберите проекцию** выберите проекцию для географических данных. По умолчанию используется проекция Equirectangular. Также доступны проекции Mercator, Robinson и Bonne.  
   
     > [!NOTE]  
-    >  **Выбор проекции** недоступен, если пространственный столбец содержит геометрические данные.  
+    >  Список**Выберите проекцию** недоступен, если пространственный столбец содержит геометрические данные.  
   
 5.  Чтобы увеличить отображаемый размер сопоставленных элементов, передвиньте ползунок **Масштаб** . Для фигур-многоугольников метка будет видима только в случае, если фигура достаточно велика, чтобы вместить текст метки.  
   
-## <a name="see-also"></a>См. также  
- [Окно "Пространственные результаты"](spatial-results-window.md)   
- [Редактор запросов ядро СУБД &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)   
- [Редакторы запросов и текста &#40;SQL Server Management Studio&#41;](query-and-text-editors-sql-server-management-studio.md)  
+## <a name="see-also"></a>См. также:  
+ [Окно «Пространственные результаты»](spatial-results-window.md)   
+ [Редактор запросов компонента Database Engine (среда SQL Server Management Studio)](database-engine-query-editor-sql-server-management-studio.md)   
+ [Редакторы запросов и текста (SQL Server Management Studio)](query-and-text-editors-sql-server-management-studio.md)  
   
   

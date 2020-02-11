@@ -1,5 +1,5 @@
 ---
-title: Сопоставление схем Oracle со схемами SQL Server (OracleToSQL) | Документация Майкрософт
+title: Сопоставление схем Oracle с SQL Server схемами (OracleToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,58 +11,58 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: e375c07ceddc995b599930c14f00710af040d6c0
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68262914"
 ---
 # <a name="mapping-oracle-schemas-to-sql-server-schemas-oracletosql"></a>Сопоставление схем Oracle со схемами SQL Server (OracleToSQL)
-В Oracle каждая база данных имеет один или несколько схем. По умолчанию SSMA выполняет миграцию всех объектов в схеме Oracle для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базу данных с именем схемы. Тем не менее, можно настраивать сопоставление схем Oracle и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] баз данных.  
+В Oracle каждая база данных имеет одну или несколько схем. По умолчанию SSMA переносит все объекты в схеме Oracle в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базу данных с именем для схемы. Однако можно настроить сопоставление между схемами и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базами данных Oracle.  
   
-## <a name="oracle-and-sql-server-schemas"></a>Oracle и схемы SQL Server  
-Базы данных Oracle содержит схемы. Экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] содержится несколько баз данных, каждый из которых может быть несколько схем.  
+## <a name="oracle-and-sql-server-schemas"></a>Схемы Oracle и SQL Server  
+База данных Oracle содержит схемы. Экземпляр служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] содержит несколько баз данных, каждый из которых может иметь несколько схем.  
   
-Концепция Oracle схемы сопоставляется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] концепция базы данных и один из его схемы. Например, Oracle может иметь схема с именем **HR**. Экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может иметь базу данных с именем **HR**, а схемы содержат эту базу данных. Одна схема является **dbo** (или владелец базы данных) схемы. По умолчанию в схеме Oracle **HR** будут сопоставлены с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных и схемы **HR.dbo**. SSMA ссылается на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сочетание базы данных и схемы как схема.  
+Концепция Oracle схемы сопоставляется с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] концепцией базы данных и одной из ее схем. Например, Oracle может иметь схему с именем **HR**. Экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может иметь базу данных с именем **HR**, а в этой базе данных — схемы. Одной из схем является схема **dbo** (или владелец базы данных). По умолчанию схема Oracle для схемы **HR** будет сопоставлена [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с базой данных и схемой **HR. dbo**. SSMA ссылается на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сочетание базы данных и схемы в качестве схемы.  
   
-Можно изменить сопоставление между Oracle и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] схемы.  
+Можно изменить сопоставление между Oracle и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] схемами.  
   
 ## <a name="modifying-the-target-database-and-schema"></a>Изменение целевой базы данных и схемы  
-В SSMA, схему Oracle можно сопоставить с любой доступный [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] схемы.  
+В SSMA можно сопоставлять схему Oracle с любой доступной [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] схемой.  
   
-**Для изменения базы данных и схемы**  
+**Изменение базы данных и схемы**  
   
 1.  В обозревателе метаданных Oracle выберите **схемы**.  
   
-    **Сопоставление схемы** вкладка доступна также в случае, при выборе отдельной базы данных, **схемы** папки или отдельные схемы. В списке в **сопоставление схемы** вкладке настраивается для выбранного объекта.  
+    Вкладка **сопоставление схем** доступна также при выборе отдельной базы данных, папки **Schemas** или отдельных схем. Список на вкладке **сопоставление схемы** настроен для выбранного объекта.  
   
-2.  В области справа щелкните **сопоставление схемы** вкладки.  
+2.  На панели справа перейдите на вкладку **сопоставление схем** .  
   
-    Вы увидите список всех схем Oracle, а затем целевое значение. Этот целевой объект обозначается в нотации двух частей (*database.schema*) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] где объекты и данные будут перенесены.  
+    Вы увидите список всех схем Oracle, за которыми следует целевое значение. Этот целевой объект обозначается в нотации с двумя частями (*Database. Schema*), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] где объекты и данные будут перенесены.  
   
-3.  Выберите строку, которая содержит сопоставление, которое вы хотите изменить и нажмите кнопку **изменить**.  
+3.  Выберите строку, содержащую сопоставление, которое необходимо изменить, и нажмите кнопку **изменить**.  
   
-    В **выберите целевую схему** диалоговое окно, вы можете перейти для доступных целевую базу данных и схемы или тип базы данных и схемы, имя в текстовое поле в нотации двух частей (database.schema), а затем выберите **ОК**.  
+    В диалоговом окне **Выбор целевой схемы** можно просмотреть доступную целевую базу данных и схему или ввести имя базы данных и схемы в текстовое поле в нотации с двумя частями (Database. Schema), а затем нажать кнопку **ОК**.  
   
-4.  Целевой объект изменяется на **сопоставление схемы** вкладки.  
+4.  Целевое изменение на вкладке **сопоставление схемы** .  
   
 **Режимы сопоставления**  
   
 -   Сопоставление с SQL Server  
   
-База данных-источник можно сопоставить с любой целевой базы данных. По умолчанию сопоставлено базы данных-источника к целевому объекту [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных, с которым вы подключились, с помощью SSMA. Если целевую базу данных, сопоставляемого несуществующий на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], то появляется сообщение **«базы данных или схемы не существует в целевом объекте [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] метаданных. Он будет создан во время синхронизации. Вы действительно хотите продолжить?»** Нажмите "Да". Аналогичным образом можно сопоставить схемы и схемы не существует в целевой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных, который будет создан во время синхронизации.  
+Базу данных источника можно сопоставлять с любой целевой базой данных. По умолчанию база данных-источник сопоставляется с целевой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базой данных, к которой вы подключены с помощью SSMA. Если сопоставляемая Целевая база данных не является существующей [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], будет выведено сообщение **"база данных и (или) схема не существует в целевых [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] метаданных. Он будет создан во время синхронизации. Вы хотите продолжить?»** Нажмите кнопку "Да". Аналогичным образом можно сопоставлять схему с несуществующей схемой в целевой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базе данных, которая будет создана во время синхронизации.  
   
-## <a name="reverting-to-the-default-database-and-schema"></a>Восстановление базы данных по умолчанию и схемы  
-Если настроить сопоставление между схему Oracle и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] схемы, можно отменить сопоставление значения по умолчанию.  
+## <a name="reverting-to-the-default-database-and-schema"></a>Возврат к базе данных и схеме по умолчанию  
+Если вы настраиваете сопоставление между схемой Oracle и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] схемой, можно вернуть сопоставление к значениям по умолчанию.  
   
-**Чтобы восстановить базу данных по умолчанию и схемы**  
+**Возврат к базе данных и схеме по умолчанию**  
   
-1.  На вкладке схемы сопоставления, щелкните любую строку и нажмите кнопку **восстановить значения по умолчанию** для возврата в базу данных по умолчанию и схему.  
+1.  На вкладке Сопоставление схемы выберите любую строку и нажмите кнопку **восстановить значения по умолчанию** , чтобы вернуться к базе данных и схеме по умолчанию.  
   
-## <a name="next-steps"></a>Следующие шаги  
-Если вы хотите анализировать преобразование объектов Oracle в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объектов, вы можете [создать отчет о преобразовании](assessing-oracle-schemas-for-conversion-oracletosql.md). В противном случае вы можете [преобразовать определения объектов базы данных Oracle](converting-oracle-schemas-oracletosql.md) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определений объекта.  
+## <a name="next-steps"></a>Next Steps  
+Если необходимо проанализировать преобразование объектов Oracle в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объекты, можно [создать отчет о преобразовании](assessing-oracle-schemas-for-conversion-oracletosql.md). В противном случае можно [преобразовать определения объектов базы данных Oracle](converting-oracle-schemas-oracletosql.md) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определения объектов.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Подключение к SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)  
-[Переход с Oracle баз данных в SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+[Перенос баз данных Oracle в SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

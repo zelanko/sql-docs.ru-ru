@@ -9,10 +9,10 @@ ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0516adde38fc7f6e9cc1b4e20bc9beef76a4df22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68222635"
 ---
 # <a name="working-with-paginated-reports-web-portal"></a>Работа с отчетами с разбивкой на страницы (веб-портал)
@@ -188,7 +188,7 @@ ms.locfileid: "68222635"
   
 Выберите, чтобы изменить способ защиты, определенный для текущего элемента.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Веб-портал](../reporting-services/web-portal-ssrs-native-mode.md)  
 [Работа с общими наборами данных](../reporting-services/work-with-shared-datasets-web-portal.md)

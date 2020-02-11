@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2c968cb8c75fc5f1fb8e77cc98d8c6a306a62115
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62727278"
 ---
 # <a name="proactive-caching-partitions"></a>Упреждающее кэширование (секции)
@@ -42,8 +42,8 @@ ms.locfileid: "62727278"
 ### <a name="maximizing-performance"></a>Максимизация производительности  
  Для увеличения производительности при уменьшении задержек кэширование может также использоваться без удаления объектов текущего хранилища MOLAP. После этого запросы отправляются к объектам MOLAP, в то время как данные считываются и обрабатываются в новом кэше. Этот метод обеспечивает лучшую производительность, но может привести к тому, что запросы возвращают старые данные во время перестроения нового кэша.  
   
-## <a name="see-also"></a>См. также  
- [Хранение измерений](../multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)   
- [Определение хранилища секции (Analysis Services — многомерные данные)](../multidimensional-models/set-partition-storage-analysis-services-multidimensional.md)  
+## <a name="see-also"></a>См. также:  
+ [Хранилище измерений](../multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)   
+ [Настройка хранилища секций &#40;Analysis Services-многомерные&#41;](../multidimensional-models/set-partition-storage-analysis-services-multidimensional.md)  
   
   

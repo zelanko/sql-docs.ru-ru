@@ -16,16 +16,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9abaf092d00a8acaf6c0b3ef963c940199068ce9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082710"
 ---
 # <a name="view-and-save-the-results-of-a-prediction-query"></a>Просмотр и сохранение результатов прогнозирующего запроса
-  После создания запроса в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] с помощью построителя прогнозирующих запросов, можно выполнить этот запрос и просмотреть результат, переключившись в представление результатов запроса.  
+  После определения запроса в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] с помощью конструктор запросов прогнозирования можно выполнить запрос и просмотреть результаты, переключившись на представление результатов запроса.  
   
- Можно сохранить результаты прогнозирующего запроса в таблице в любом источнике данных, определенном в проекте служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Можно либо создать новую таблицу, либо сохранить результаты запроса в существующую таблицу. При сохранении результатов в существующую таблицу можно выбрать перезапись данных, хранящихся в таблице в текущий момент, в противном случае результаты будут добавлены к существующим данным в таблице.  
+ Результаты прогнозирующего запроса можно сохранить в таблицу в любом источнике данных, определенном в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] проекте. Можно либо создать новую таблицу, либо сохранить результаты запроса в существующую таблицу. При сохранении результатов в существующую таблицу можно выбрать перезапись данных, хранящихся в таблице в текущий момент, в противном случае результаты будут добавлены к существующим данным в таблице.  
   
 ### <a name="run-a-query-and-view-the-results"></a>Выполните запрос и просмотрите результаты  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66082710"
   
 4.  Выберите представление источника данных из списка **Добавить к представлению источника данных** , если необходимо добавить таблицу к представлению источника данных.  
   
-5.  Нажмите кнопку **Сохранить**.  
+5.  Выберите команду **Сохранить**.  
   
     > [!WARNING]  
     >  Если место назначения не поддерживает иерархические наборы строк, можно добавить в результаты ключевое слово FALTTENED для сохранения результатов в виде плоской таблицы.  

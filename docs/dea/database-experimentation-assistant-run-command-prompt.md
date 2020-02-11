@@ -2,7 +2,7 @@
 title: Запуск Database Experimentation Assistant из командной строки
 description: Запуск Database Experimentation Assistant из командной строки
 ms.custom: seo-lt-2019
-ms.date: 11/22/2019
+ms.date: 01/24/2020
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: f5a0f7441dd17aec2587c772a678a3681fd3b423
-ms.sourcegitcommit: 9e026cfd9f2300f106af929d88a9b43301f5edc2
+ms.openlocfilehash: 8055ae8b66c2f2b59f18b0ee40dcac8753c0eb7c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74317721"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76831752"
 ---
 # <a name="run-database-experimentation-assistant-at-a-command-prompt"></a>Запуск Database Experimentation Assistant из командной строки
 
@@ -29,7 +29,7 @@ ms.locfileid: "74317721"
 
 `Deacmd.exe -o startcapturetrace -s <SQLServerInstance> -e <encryptconnection> -u <trustservercertificate> -d <database name> -p <trace file path> -f <trace file name> -t <Max duration>`
 
-**Например**
+**Пример**
 
 `Deacmd.exe -o startcapturetrace -s localhost -e -d adventureworks -p c:\test -f sql2008capture -t 60`
 
@@ -42,7 +42,7 @@ ms.locfileid: "74317721"
 
 3. Запустите запись трассировки на целевом компьютере, на котором работает SQL Server с помощью Стартреплайкаптуретраце. SQL.
 
-    a.  В SQL Server Management Studio (SSMS) откройте <Dea_InstallPath\>\скриптс\стартреплайкаптуретраце.скл.
+    а.  В SQL Server Management Studio (SSMS) откройте <Dea_InstallPath\>\скриптс\стартреплайкаптуретраце.скл.
 
     b.  Запустите `Set @durationInMins=0` , чтобы запись трассировки не была автоматически прервана через указанное время.
 
@@ -56,7 +56,7 @@ ms.locfileid: "74317721"
 
     `DReplay replay -m "dreplaycontroller" -d "<Folder Path on Dreplay Controller>\IrfFolder" -o -s "SQL2016Target" -w "dreplaychild1,dreplaychild2,dreplaycild3,dreplaychild4"`
 
-    a.  Чтобы отслеживать состояние, в командной строке выполните `DReplay status -f 1`команду.
+    а.  Чтобы отслеживать состояние, в командной строке выполните `DReplay status -f 1`команду.
 
     b.  Чтобы прерывать воспроизведение, например, если вы видите, что уровень прохождения% ниже ожидаемого, в командной строке выполните `DReplay cancel`команду.
 
@@ -71,10 +71,10 @@ ms.locfileid: "74317721"
 
 `Deacmd.exe -o analysis -a <Target1 trace filepath> -b <Target2 trace filepath> -r reportname -s <SQLserverInstance> -e <encryptconnection> -u <trustservercertificate>`
 
-**Например**
+**Пример**
 
 `Deacmd.exe -o analysis -a C:\Trace\SQL2008Source\Trace.trc -b C:\ Trace\SQL2014Trace\Trace.trc -r upgrade20082014 -s localhost -e`
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - Дополнительные сведения об использовании ДЕА см. в разделе [обзор Database experimentation Assistant](database-experimentation-assistant-overview.md).

@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3545732db24865e47853b023233a127695ada894
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62809486"
 ---
 # <a name="server-network-configuration"></a>Сетевая конфигурация сервера
@@ -36,7 +36,7 @@ ms.locfileid: "62809486"
 ### <a name="changing-a-port"></a>Изменение порта  
  Протоколы TCP/IP могут быть настроены на прослушивание определенного порта. По умолчанию экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] по умолчанию прослушивает TCP-порт 1433. Именованные экземпляры компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и [!INCLUDE[ssEW](../../includes/ssew-md.md)] настроены для использования динамических портов. Это означает, что при запуске службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для них выбирается свободный порт. Служба браузера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет клиентам определить порт при подключении.  
   
- При настройке на динамические порты порт, используемый [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , может меняться при каждом запуске. При подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] через брандмауэр необходимо открыть порт, используемый компонентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Следует настраивать компонент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на использование определенного порта, что позволит настроить брандмауэр так, чтобы он разрешал связь с сервером. Дополнительные сведения см. в разделе [Настройка сервера для прослушивания указанного TCP-порта (диспетчер конфигураций SQL Server)](configure-a-server-to-listen-on-a-specific-tcp-port.md).  
+ При настройке на динамические порты порт, используемый [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , может меняться при каждом запуске. При подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] через брандмауэр необходимо открыть порт, используемый компонентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Следует настраивать компонент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на использование определенного порта, что позволит настроить брандмауэр так, чтобы он разрешал связь с сервером. Дополнительные сведения см. в разделе [Настройка сервера для прослушивания указанного TCP-порта (диспетчер конфигурации SQL Server)](configure-a-server-to-listen-on-a-specific-tcp-port.md).  
   
 ### <a name="changing-a-named-pipe"></a>Изменение именованного канала  
  Можно настроить протокол именованного канала на прослушивание определенного именованного канала. По умолчанию экземпляр компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] прослушивает канал \\\\.\pipe\sql\query для экземпляра по умолчанию и \\\\.\pipe\MSSQL$ *\<имя_экземпляра>* \sql\query для именованного экземпляра. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] может прослушивать только один именованный канал, но при желании можно изменить имя канала на другое. Служба браузера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет клиентам определить канал при подключении. Дополнительные сведения см. в разделе [Настройка сервера для прослушивания альтернативного канала (диспетчер конфигураций SQL Server)](configure-a-server-to-listen-on-an-alternate-pipe.md).  

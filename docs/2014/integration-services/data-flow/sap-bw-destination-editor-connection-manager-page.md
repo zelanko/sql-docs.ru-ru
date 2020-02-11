@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e4e23849b50e8cfa0a0e8d3ef6def4fbd159381c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770860"
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>Редактор назначений SAP BW (страница «Диспетчер соединений»)
@@ -59,12 +59,12 @@ ms.locfileid: "62770860"
  **Тип**  
  Введите один символ, который определяет тип InfoSource. В следующей таблице перечислены допустимые значения, состоящие из одного символа.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |**D**|Данные транзакций|  
 |**M**|Основные данные|  
 |**T**|Тексты|  
-|**З**|Данные иерархии|  
+|**H**|Данные иерархии|  
   
  **Логическая система**  
  Введите имя логической системы, связанной с InfoPackage.  
@@ -109,7 +109,7 @@ ms.locfileid: "62770860"
 |**InfoSource**|Создайте новый InfoSource с помощью диалогового окна **Создание InfoSource** , а затем используйте для этого диалоговое окно **Создание InfoSource для данных транзакции** или **Создание InfoSource для основных данных** . Дополнительные сведения об этих диалоговых окнах см. в разделах [Create InfoSource](create-infosource.md), [Create InfoSource for Transaction Data](create-infosource-for-transaction-data.md) и [Create InfoSource for Master Data](create-infosource-for-master-data.md).|  
 |**InfoPackage**|Создайте новый InfoPackage, используя диалоговое окно **Создание InfoPackage** . Дополнительные сведения об этом диалоговом окне см. в разделе [Create InfoPackage](create-infopackage.md).|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Редактор назначений SAP BW (страница "Сопоставления")](sap-bw-destination-editor-mappings-page.md)   
  [Редактор назначений SAP BW (страница "Вывод ошибок")](sap-bw-destination-editor-error-output-page.md)   
  [Редактор назначений SAP BW (страница "Дополнительно")](sap-bw-destination-editor-advanced-page.md)   
