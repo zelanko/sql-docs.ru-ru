@@ -18,29 +18,29 @@ ms.assetid: 2d314e78-9edf-44b2-bd8b-96784236bcbe
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2681ecd0fe6f586954236c4fb5fddcf576b206be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67988056"
 ---
 # <a name="querying-and-updating-visual-foxpro-data-from-microsoft-access"></a>Запрос и обновление данных Visual FoxPro из Microsoft Access
-Можно запрашивать и обновлять данные, хранящиеся в базе данных Visual FoxPro из базы данных Microsoft Access с помощью параметра таблицы ссылок.  
+Вы можете запрашивать и обновлять данные, хранящиеся в базе данных Visual FoxPro, из базы данных Microsoft Access с помощью параметра link Table.  
   
-### <a name="to-link-a-visual-foxpro-database-to-a-microsoft-access-database"></a>Чтобы связать базу данных Visual FoxPro в базу данных Microsoft Access  
+### <a name="to-link-a-visual-foxpro-database-to-a-microsoft-access-database"></a>Связывание базы данных Visual FoxPro с базой данных Microsoft Access  
   
 1.  Откройте базу данных Microsoft Access.  
   
-2.  На вкладке «таблицы» нажмите кнопку "Создать".  
+2.  На вкладке таблицы нажмите кнопку Создать.  
   
-3.  В диалоговом окне новой таблицы выберите таблицу ссылку и нажмите кнопку ОК.  
+3.  В диалоговом окне Новая таблица выберите связать таблицу и нажмите кнопку ОК.  
   
-4.  В диалоговом окне связи выберите базу данных ODBC в списке типов файлов.  
+4.  В диалоговом окне Ссылка выберите База данных ODBC в списке Тип файлов.  
   
-5.  В диалоговом окне источников данных SQL выберите источник данных, который подключается к данным Visual FoxPro для запроса и нажмите кнопку ОК.  
+5.  В диалоговом окне Источники данных SQL выберите источник данных, который подключается к данным Visual FoxPro, к которым требуется выполнить запрос, и нажмите кнопку ОК.  
   
-6.  В диалоговом окне связи таблиц выберите таблицы, которые вы хотите запрашивать и обновлять и нажмите кнопку ОК. Связанные таблицы Visual FoxPro, отображаются на вкладке таблицы базы данных Microsoft Access.  
+6.  В диалоговом окне Связывание таблиц выберите таблицы, которые необходимо запрашивать и обновить, и нажмите кнопку ОК. Связанные таблицы Visual FoxPro отображаются на вкладке таблицы базы данных Microsoft Access.  
   
- Теперь можно использовать Microsoft Access для запроса и обновления данных в связанных таблицах Visual FoxPro. Изменения, вносимые в связанные данные отправляются обратно к источнику данных Visual FoxPro.  
+ Теперь можно использовать Microsoft Access для запроса и обновления данных в связанных таблицах Visual FoxPro. Изменения, вносимые в связанные данные, отправляются обратно в источник данных Visual FoxPro.  
   
- Если не хотите, чтобы изменения, внесенные в Microsoft Access, чтобы повлиять на данные в источнике данных Visual FoxPro, см. в разделе [импорта Visual FoxPro данных в Microsoft Access](../../odbc/microsoft/importing-visual-foxpro-data-into-microsoft-access.md).
+ Если вы не хотите, чтобы изменения, вносимые в Microsoft Access, влияли на данные в источнике данных Visual FoxPro, см. статью [Импорт данных Visual FoxPro в Microsoft Access](../../odbc/microsoft/importing-visual-foxpro-data-into-microsoft-access.md).

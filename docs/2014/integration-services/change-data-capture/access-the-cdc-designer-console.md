@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c552ef16cc2f9502a365ba09c7f8868eccd53396
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62836086"
 ---
 # <a name="access-the-cdc-designer-console"></a>Доступ к консоли конструктора CDC
@@ -31,7 +31,7 @@ ms.locfileid: "62836086"
 ### <a name="server-name"></a>Имя сервера  
  Введите имя сервера, на котором находится экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-### <a name="authentication"></a>Проверка подлинности  
+### <a name="authentication"></a>Аутентификация  
  Выберите один из следующих вариантов:  
   
 -   **Проверка подлинности Windows.**  
@@ -57,7 +57,7 @@ ms.locfileid: "62836086"
   
  Дополнительные сведения о диалоговом окне «Дополнительные свойства подключения» см. в разделе [Advanced Connection Properties](advanced-connection-properties.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Разрешения, необходимые конструктору CDC для соединения с SQL Server](sql-server-connection-required-permissions-for-the-cdc-designer.md)  
   
   

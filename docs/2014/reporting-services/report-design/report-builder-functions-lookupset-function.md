@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5f24c78e82d437ab7e2147122c5065f0b7274d5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105230"
 ---
 # <a name="lookupset-function-report-builder-and-ssrs"></a>Функция LookupSet (построитель отчетов и службы SSRS)
@@ -38,7 +38,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
  (`Variant`) Выражение, вычисляемое для каждой строки в наборе данных и указывающее имя или ключ для сопоставления. Например, `=Fields!CustomerID.Value`.  
   
  *result_expression*  
- (`Variant`) Выражение, вычисляемое для строки в наборе данных где *source_expression* = *destination_expression*, и указывает извлекаемого значения. Например, `=Fields!PhoneNumber.Value`.  
+ (`Variant`) Выражение, которое вычисляется для строки в наборе данных, где *source_expression* = *destination_expression*и указывает извлекаемое значение. Например, `=Fields!PhoneNumber.Value`.  
   
  *набор данных*  
  Константа, задающая имя набора данных в отчете. Например, «ContactInformation».  
@@ -46,7 +46,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
 ## <a name="return"></a>Возвращает  
  Возвращает значение `VariantArray` или `Nothing`, если совпадения нет.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Функция `LookupSet` служит для извлечения набора значений из указанного набора данных, состоящего из пар «имя-значение» со связью «один ко многим». Например, функция `LookupSet` позволяет извлечь по идентификатору пользователя в таблице все связанные с ним телефонные номера из набора данных, не привязанного к этой области данных.  
   
  Функция `LookupSet` выполняет следующие действия.  
@@ -59,9 +59,9 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 -   Возвращает набор результирующих значений выражения.  
   
- Для извлечения единственного значения для указанного имени из набора данных, состоящего из пар "имя-значение" со связью "один к одному", используйте [функцию Lookup (построитель отчетов и службы SSRS)](report-builder-functions-lookup-function.md). Для вызова `Lookup` набор значений, используйте [функцию Multilookup &#40;построитель отчетов и службы SSRS&#41;](report-builder-functions-multilookup-function.md).  
+ Для извлечения единственного значения для указанного имени из набора данных, состоящего из пар "имя-значение" со связью "один к одному", используйте [функцию Lookup (построитель отчетов и службы SSRS)](report-builder-functions-lookup-function.md). Для вызова `Lookup` набора значений используйте [функцию много&#40;ПОСТРОИТЕЛЬ отчетов и службы SSRS&#41;](report-builder-functions-multilookup-function.md).  
   
- Существуют следующие ограничения.  
+ Применяются следующие ограничения:  
   
 -   Функция `LookupSet` вычисляется после применения всех выражений фильтров.  
   
@@ -99,9 +99,9 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
 ## <a name="example"></a>Пример  
  Поскольку функция `LookupSet` возвращает коллекцию объектов, результирующее выражение невозможно непосредственно отобразить в текстовом поле. Значения объектов коллекции можно склеить в одну строку.  
   
- Функция [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] `Join` позволяет создать из набора объектов строку с разделителями. Для объединения объектов в одну строку используйте в качестве разделителя запятую. В некоторых модулях подготовки можно использовать в качестве разделителя перевод строки [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] (`vbCrLF`).  
+ Функция [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]`Join` позволяет создать из набора объектов строку с разделителями. Для объединения объектов в одну строку используйте в качестве разделителя запятую. В некоторых модулях подготовки можно использовать в качестве разделителя перевод строки [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] (`vbCrLF`).  
   
- Следующее выражение, если он используется как свойство Value для текстового поля, использует `Join` для создания списка.  
+ Следующее выражение, когда оно используется как свойство Value для текстового поля, использует `Join` для создания списка.  
   
 ```  
 =Join(LookupSet(Fields!TerritoryGroupID.Value, Fields!ID.Value, Fields!StoreName.Value, "Stores"),",")  
@@ -146,7 +146,7 @@ End Function
 =Code.MakeList(LookupSet(Fields!TerritoryGroupID.Value, Fields!ID.Value, Fields!StoreName.Value, "Stores"))  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование выражений в отчетах (построитель отчетов и службы SSRS)](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [Типы данных в выражениях (построитель отчетов и службы SSRS)](expressions-report-builder-and-ssrs.md)   

@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 088090fe1572c0a7fd2f1165c7bf1cd6f7eb6839
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63020257"
 ---
 # <a name="identifying-execution-state"></a>Определение состояния выполнения
@@ -39,7 +39,7 @@ ms.locfileid: "63020257"
   
  На следующей диаграмме показаны пути обработки отчетов и подготовки их к просмотру.  
   
- ![Путь обработки или отрисовки отчета](../../../2014/reporting-services/media/rs-render-process-diagram.gif "Путь обработки или отрисовки отчета")  
+ ![Путь обработки или подготовки отчета к просмотру](../../../2014/reporting-services/media/rs-render-process-diagram.gif "Путь обработки или подготовки отчета к просмотру")  
   
  Для поддержки описанных выше функций текущий метод Render протокола SOAP был разбит на несколько методов, которые представляют этапы инициализации объекта выполнения, обработки и подготовки к просмотру.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "63020257"
   
  Сеансом отчета также можно управлять с помощь команд для доступа по URL-адресу.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
  [Технический справочник (службы SSRS)](../../../2014/reporting-services/technical-reference-ssrs.md)   
  [Использование заголовков SOAP в службах Reporting Services](../report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)  

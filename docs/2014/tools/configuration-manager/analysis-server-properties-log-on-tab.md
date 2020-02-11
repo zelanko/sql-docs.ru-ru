@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 907840b051a4230a06525e8c3d6574aee4f40bcc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035273"
 ---
 # <a name="analysis-server-properties-log-on-tab"></a>Свойства сервера анализа данных (вкладка «Вход в систему»)
@@ -30,7 +30,7 @@ ms.locfileid: "63035273"
  **Эта учетная запись**  
  Укажите локальную или доменную учетную запись пользователя, использующую проверку подлинности [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендует использовать доменную учетную запись пользователя с минимальными правами. Дополнительные сведения о выборе учетной записи см. в разделе «Настройка учетных записей служб Windows» электронной документации.  
   
- **Имя учетной записи**  
+ **Account Name** (Имя учетной записи)  
  Укажите имя локальной или доменной учетной записи.  
   
  **Пароль**  
@@ -39,7 +39,7 @@ ms.locfileid: "63035273"
  **Подтверждение пароля**  
  Введите пароль для учетной записи еще раз.  
   
- **Запуск**  
+ **Начало**  
  Запускает службу.  
   
  **Остановить**  

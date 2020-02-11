@@ -1,5 +1,5 @@
 ---
-title: функция sys.fn_builtin_permissions (Transact-SQL) | Документация Майкрософт
+title: sys. fn_builtin_permissions (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 12/16/2016
 ms.prod: sql
@@ -28,16 +28,16 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 730508fca6b6f9d3e9515e9ec496971a4b758279
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046521"
 ---
-# <a name="sysfnbuiltinpermissions-transact-sql"></a>sys.fn_builtin_permissions (Transact-SQL)
+# <a name="sysfn_builtin_permissions-transact-sql"></a>sys.fn_builtin_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Функция возвращает описание иерархии встроенных разрешений сервера. `sys.fn_builtin_permissions` может быть вызвана только для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], и возвращает все разрешения, независимо от того, поддерживаются ли они на текущей платформе. Большинство разрешений применяются ко всем платформам, но некоторые из них — только к определенным. Например нельзя предоставить разрешения на уровне сервера в базе данных SQL. Сведения о том, какие платформы поддерживают каждого разрешения, см. в разделе [разрешения &#40;СУБД&#41;](../../relational-databases/security/permissions-database-engine.md).  
+  Функция возвращает описание иерархии встроенных разрешений сервера. `sys.fn_builtin_permissions`может вызываться только для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], и возвращает все разрешения независимо от того, поддерживаются ли они на текущей платформе. Большинство разрешений применяются ко всем платформам, но некоторые из них — только к определенным. Например, разрешения уровня сервера не могут быть предоставлены в базе данных SQL. Сведения о том, какие платформы поддерживают каждое разрешение, см. в разделе [разрешения &#40;ядро СУБД&#41;](../../relational-databases/security/permissions-database-engine.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,7 +59,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
   
 ## <a name="arguments"></a>Аргументы  
  DEFAULT  
- При вызове с параметром по умолчанию (без кавычек), функция вернет полный список встроенных разрешений.  
+ При вызове с параметром по УМОЛЧАНИю (без кавычек) функция возвращает полный список встроенных разрешений.  
   
  NULL  
  Эквивалентен DEFAULT.  
@@ -67,33 +67,33 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
  *empty_string*  
  Эквивалентен DEFAULT.  
   
- **"** < securable_class > **"**  
- При вызове с именем одного из защищаемых классов, функция sys.fn_builtin_permissions возвращает все разрешения, относящиеся к классу. < securable_class > является строковым литералом, требующий кавычек. **nvarchar(60)**  
+ **"**<securable_class>**"**  
+ При вызове с именем одного защищаемого класса Sys. fn_builtin_permissions возвратит все разрешения, которые применяются к классу. <securable_class> — строковый литерал, для которого требуются кавычки. **nvarchar (60)**  
   
 ## <a name="tables-returned"></a>Возвращаемые таблицы  
   
-|Имя столбца|Тип данных|Параметры сортировки|Описание|  
+|Имя столбца|Тип данных|Параметры сортировки|Description|  
 |-----------------|---------------|---------------|-----------------|  
-|class_desc|**nvarchar(60)**|Параметры сортировки сервера|Описание защищаемого класса.|  
-|permission_name|**nvarchar(60)**|Параметры сортировки сервера|Имя разрешения.|  
-|type|**varchar(4)**|Параметры сортировки сервера|Код компактных типов разрешений. См. таблицу далее.|  
-|covering_permission_name|**nvarchar(60)**|Параметры сортировки сервера|Если значение не NULL, то это имя разрешения на данный класс, который содержит в себе другие разрешения данного класса.|  
-|parent_class_desc|**nvarchar(60)**|Параметры сортировки сервера|Если значение не NULL, то это имя родительского класса, который содержит текущий класс.|  
-|parent_covering_permission_name|**nvarchar(60)**|Параметры сортировки сервера|Если значение не NULL, то это имя разрешения на родительский класс, который содержит в себе другие разрешения класса.|  
+|class_desc|**nvarchar (60)**|Параметры сортировки сервера|Описание защищаемого класса.|  
+|permission_name|**nvarchar (60)**|Параметры сортировки сервера|Имя разрешения.|  
+|type|**varchar (4)**|Параметры сортировки сервера|Код компактных типов разрешений. См. таблицу далее.|  
+|covering_permission_name|**nvarchar (60)**|Параметры сортировки сервера|Если значение не NULL, то это имя разрешения на данный класс, который содержит в себе другие разрешения данного класса.|  
+|parent_class_desc|**nvarchar (60)**|Параметры сортировки сервера|Если значение не NULL, то это имя родительского класса, который содержит текущий класс.|  
+|parent_covering_permission_name|**nvarchar (60)**|Параметры сортировки сервера|Если значение не NULL, то это имя разрешения на родительский класс, который содержит в себе другие разрешения класса.|  
   
 ### <a name="permission-types"></a>Типы разрешений  
   
 |Тип разрешения|Имя разрешения|Применяется к защищаемому объекту или классу|  
 |---------------------|---------------------|-----------------------------------|  
-|AADS|ALTER ANY DATABASE EVENT SESSION<br /> **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
+|AADS|ALTER ANY DATABASE EVENT SESSION<br /> **Применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (с по [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
 |AAES|ALTER ANY EVENT SESSION|SERVER|  
-|AAMK|ALTER ANY MASK<br /> **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
+|AAMK|ALTER ANY MASK<br /> **Применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (с по [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
 |ADBO|ADMINISTER BULK OPERATIONS|SERVER|  
-|AEDS|ALTER ANY EXTERNAL DATA SOURCE<br /> **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
-|AEFF|ALTER ANY EXTERNAL FILE FORMAT<br /> **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
+|AEDS|ALTER ANY EXTERNAL DATA SOURCE<br /> **Применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (с по [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
+|AEFF|ALTER ANY EXTERNAL FILE FORMAT<br /> **Применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (с по [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
 |AL|ALTER|APPLICATION ROLE|  
 |AL|ALTER|ASSEMBLY|  
-|AL|ALTER<br />**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|AVAILABILITY GROUP|  
+|AL|ALTER<br />**Применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (с по [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|AVAILABILITY GROUP|  
 |AL|ALTER|ASYMMETRIC KEY|  
 |AL|ALTER|CERTIFICATE|  
 |AL|ALTER|CONTRACT|  
@@ -110,24 +110,24 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |AL|ALTER|ROUTE|  
 |AL|ALTER|SCHEMA|  
 |AL|ALTER|SEARCH PROPERTY LIST|  
-|AL|ALTER<br /> **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER ROLE|  
+|AL|ALTER<br /> **Применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (с по [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER ROLE|  
 |AL|ALTER|SERVICE|  
 |AL|ALTER|SYMMETRIC KEY|  
 |AL|ALTER|Пользователь|  
 |AL|ALTER|XML SCHEMA COLLECTION|  
 |ALAA|ALTER ANY SERVER AUDIT|SERVER|  
-|ALAG|ALTER ANY AVAILABILITY GROUP<br /> **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER|  
+|ALAG|ALTER ANY AVAILABILITY GROUP<br /> **Применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (с по [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER|  
 |ALAK|ALTER ANY ASYMMETRIC KEY|DATABASE|  
 |ALAR|ALTER ANY APPLICATION ROLE|DATABASE|  
 |ALAS|ALTER ANY ASSEMBLY|DATABASE|  
 |ALCD|ALTER ANY CREDENTIAL|SERVER|  
 |ALCF|ALTER ANY CERTIFICATE|DATABASE|  
-|ALCK|ALTER ANY COLUMN ENCRYPTION KEY<br />**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
-|ALCM|ALTER ANY COLUMN MASTER KEY<br />**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
+|ALCK|ALTER ANY COLUMN ENCRYPTION KEY<br />**Применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (с по [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
+|ALCM|ALTER ANY COLUMN MASTER KEY<br />**Применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (с по [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
 |ALCO|ALTER ANY CONNECTION|SERVER|  
 |ALDA|ALTER ANY DATABASE AUDIT|DATABASE|  
 |ALDB|ALTER ANY DATABASE|SERVER|  
-|ALDC|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
+|ALDC|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **Применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (с по [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
 |ALDS|ALTER ANY DATASPACE|DATABASE|  
 |ALED|ALTER ANY DATABASE EVENT NOTIFICATION|DATABASE|  
 |ALES|ALTER ANY EVENT NOTIFICATION|SERVER|  
@@ -143,8 +143,8 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |ALSC|ALTER ANY CONTRACT|DATABASE|  
 |ALSK|ALTER ANY SYMMETRIC KEY|DATABASE|  
 |ALSM|ALTER ANY SCHEMA|DATABASE|  
-|ALSP|ALTER ANY SECURITY POLICY<br />**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
-|ALSR|ALTER ANY SERVER ROLE<br /> **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER|  
+|ALSP|ALTER ANY SECURITY POLICY<br />**Применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (с по [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
+|ALSR|ALTER ANY SERVER ROLE<br /> **Применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (с по [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER|  
 |ALSS|ALTER SERVER STATE|SERVER|  
 |ALST|ALTER SETTINGS|SERVER|  
 |ALSV|ALTER ANY SERVICE|DATABASE|  
@@ -155,15 +155,15 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |AUTH|AUTHENTICATE SERVER|SERVER|  
 |BADB|BACKUP DATABASE|DATABASE|  
 |BALO|BACKUP LOG|DATABASE|  
-|CADB|CONNECT ANY DATABASE<br /> **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER|  
+|CADB|CONNECT ANY DATABASE<br /> **Применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (с по [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER|  
 |CL|CONTROL|APPLICATION ROLE|  
 |CL|CONTROL|ASSEMBLY|  
 |CL|CONTROL|ASYMMETRIC KEY|  
-|CL|CONTROL<br />**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|AVAILABILITY GROUP|  
+|CL|CONTROL<br />**Применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (с по [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|AVAILABILITY GROUP|  
 |CL|CONTROL|CERTIFICATE|  
 |CL|CONTROL|CONTRACT|  
 |CL|CONTROL|DATABASE|  
-|CL|CONTROL<br /> **Применимо к**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] и [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. |DATABASE SCOPED CREDENTIAL|
+|CL|CONTROL<br /> **Применимо к** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] : [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]и. |DATABASE SCOPED CREDENTIAL|
 |CL|CONTROL|ENDPOINT|  
 |CL|CONTROL|FULLTEXT CATALOG|  
 |CL|CONTROL|FULLTEXT STOPLIST|  
@@ -176,18 +176,18 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CL|CONTROL|SCHEMA|  
 |CL|CONTROL|SEARCH PROPERTY LIST|  
 |CL|CONTROL SERVER|SERVER|  
-|CL|CONTROL<br />**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER ROLE|  
+|CL|CONTROL<br />**Применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (с по [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER ROLE|  
 |CL|CONTROL|SERVICE|  
 |CL|CONTROL|SYMMETRIC KEY|  
 |CL|CONTROL|TYPE|  
 |CL|CONTROL|Пользователь|  
 |CL|CONTROL|XML SCHEMA COLLECTION|  
-|CO|CONNECT|DATABASE|  
-|CO|CONNECT|ENDPOINT|  
+|CO|CONNECT.|DATABASE|  
+|CO|CONNECT.|ENDPOINT|  
 |CORP|CONNECT REPLICATION|DATABASE|  
 |COSQ|CONNECT SQL|SERVER|  
 |CP|CHECKPOINT|DATABASE|  
-|CRAC|Создание группы доступности<br /> **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER|  
+|CRAC|Создание группы доступности<br /> **Применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (с по [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER|  
 |CRAG|CREATE AGGREGATE|DATABASE|  
 |CRAK|CREATE ASYMMETRIC KEY|DATABASE|  
 |CRAS|CREATE ASSEMBLY|DATABASE|  
@@ -212,7 +212,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CRSM|CREATE SCHEMA|DATABASE|  
 |CRSN|CREATE SYNONYM|DATABASE|  
 |CRSO|CREATE SEQUENCE|SCHEMA|  
-|CRSR|CREATE SERVER ROLE<br /> **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER|  
+|CRSR|CREATE SERVER ROLE<br /> **Применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (с по [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER|  
 |CRSV|CREATE SERVICE|DATABASE|  
 |CRTB|CREATE TABLE|DATABASE|  
 |CRTE|CREATE TRACE EVENT NOTIFICATION|SERVER|  
@@ -223,13 +223,13 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |DL|DELETE|DATABASE|  
 |DL|DELETE|OBJECT|  
 |DL|DELETE|SCHEMA|  
-|EAES|EXECUTE ANY EXTERNAL SCRIPT<br />**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
+|EAES|EXECUTE ANY EXTERNAL SCRIPT<br />**Применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (с по [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
 |EX|EXECUTE|DATABASE|  
 |EX|EXECUTE|OBJECT|  
 |EX|EXECUTE|SCHEMA|  
 |EX|EXECUTE|TYPE|  
 |EX|EXECUTE|XML SCHEMA COLLECTION|  
-|IAL|IMPERSONATE ANY LOGIN<br /> **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER|  
+|IAL|IMPERSONATE ANY LOGIN<br /> **Применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (с по [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER|  
 |IM|IMPERSONATE|Имя_для_входа|  
 |IM|IMPERSONATE|Пользователь|  
 |IN|INSERT|DATABASE|  
@@ -237,21 +237,21 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |IN|INSERT|SCHEMA|  
 |KIDC|KILL DATABASE CONNECTION<br />**Применимо к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|DATABASE|  
 |RC|RECEIVE|OBJECT|  
-|RF|REFERENCES|ASSEMBLY|  
-|RF|REFERENCES|ASYMMETRIC KEY|  
-|RF|REFERENCES|CERTIFICATE|  
-|RF|REFERENCES|CONTRACT|  
-|RF|REFERENCES|DATABASE|  
-|RF|REFERENCES<br /> **Применимо к**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] и [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. |DATABASE SCOPED CREDENTIAL|
-|RF|REFERENCES|FULLTEXT CATALOG|  
-|RF|REFERENCES|FULLTEXT STOPLIST|  
-|RF|REFERENCES|SEARCH PROPERTY LIST|  
-|RF|REFERENCES|MESSAGE TYPE|  
-|RF|REFERENCES|OBJECT|  
-|RF|REFERENCES|SCHEMA|  
-|RF|REFERENCES|SYMMETRIC KEY|  
-|RF|REFERENCES|TYPE|  
-|RF|REFERENCES|XML SCHEMA COLLECTION|  
+|RF;|REFERENCES|ASSEMBLY|  
+|RF;|REFERENCES|ASYMMETRIC KEY|  
+|RF;|REFERENCES|CERTIFICATE|  
+|RF;|REFERENCES|CONTRACT|  
+|RF;|REFERENCES|DATABASE|  
+|RF;|REFERENCES<br /> **Применимо к** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] : [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]и. |DATABASE SCOPED CREDENTIAL|
+|RF;|REFERENCES|FULLTEXT CATALOG|  
+|RF;|REFERENCES|FULLTEXT STOPLIST|  
+|RF;|REFERENCES|SEARCH PROPERTY LIST|  
+|RF;|REFERENCES|MESSAGE TYPE|  
+|RF;|REFERENCES|OBJECT|  
+|RF;|REFERENCES|SCHEMA|  
+|RF;|REFERENCES|SYMMETRIC KEY|  
+|RF;|REFERENCES|TYPE|  
+|RF;|REFERENCES|XML SCHEMA COLLECTION|  
 |SHDN|SHUTDOWN|SERVER|  
 |SL|SELECT|DATABASE|  
 |SL|SELECT|OBJECT|  
@@ -259,41 +259,41 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |SN|SEND|SERVICE|  
 |SPLN|SHOWPLAN|DATABASE|  
 |SUQN|SUBSCRIBE QUERY NOTIFICATIONS|DATABASE|  
-|SUS|SELECT ALL USER SECURABLES<br /> **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER|  
-|TO|TAKE OWNERSHIP|ASSEMBLY|  
-|TO|TAKE OWNERSHIP|ASYMMETRIC KEY|  
-|TO|TAKE OWNERSHIP<br />**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|AVAILABILITY GROUP|  
-|TO|TAKE OWNERSHIP|CERTIFICATE|  
-|TO|TAKE OWNERSHIP|CONTRACT|  
-|TO|TAKE OWNERSHIP|DATABASE|  
-|TO|TAKE OWNERSHIP<br /> **Применимо к**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] и [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. |DATABASE SCOPED CREDENTIAL|
-|TO|TAKE OWNERSHIP|ENDPOINT|  
-|TO|TAKE OWNERSHIP|FULLTEXT CATALOG|  
-|TO|TAKE OWNERSHIP|FULLTEXT STOPLIST|  
-|TO|TAKE OWNERSHIP|SEARCH PROPERTY LIST|  
-|TO|TAKE OWNERSHIP|MESSAGE TYPE|  
-|TO|TAKE OWNERSHIP|OBJECT|  
-|TO|TAKE OWNERSHIP|REMOTE SERVICE BINDING|  
-|TO|TAKE OWNERSHIP|ROLE|  
-|TO|TAKE OWNERSHIP|ROUTE|  
-|TO|TAKE OWNERSHIP|SCHEMA|  
-|TO|TAKE OWNERSHIP<br /> **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER ROLE|  
-|TO|TAKE OWNERSHIP|SERVICE|  
-|TO|TAKE OWNERSHIP|SYMMETRIC KEY|  
-|TO|TAKE OWNERSHIP|TYPE|  
-|TO|TAKE OWNERSHIP|XML SCHEMA COLLECTION|  
-|UMSK|UNMASK<br /> **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
-|UP|UPDATE|DATABASE|  
-|UP|UPDATE|OBJECT|  
-|UP|UPDATE|SCHEMA|  
+|SUS|SELECT ALL USER SECURABLES<br /> **Применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (с по [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER|  
+|В|TAKE OWNERSHIP|ASSEMBLY|  
+|В|TAKE OWNERSHIP|ASYMMETRIC KEY|  
+|В|TAKE OWNERSHIP<br />**Применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (с по [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|AVAILABILITY GROUP|  
+|В|TAKE OWNERSHIP|CERTIFICATE|  
+|В|TAKE OWNERSHIP|CONTRACT|  
+|В|TAKE OWNERSHIP|DATABASE|  
+|В|TAKE OWNERSHIP<br /> **Применимо к** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] : [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]и. |DATABASE SCOPED CREDENTIAL|
+|В|TAKE OWNERSHIP|ENDPOINT|  
+|В|TAKE OWNERSHIP|FULLTEXT CATALOG|  
+|В|TAKE OWNERSHIP|FULLTEXT STOPLIST|  
+|В|TAKE OWNERSHIP|SEARCH PROPERTY LIST|  
+|В|TAKE OWNERSHIP|MESSAGE TYPE|  
+|В|TAKE OWNERSHIP|OBJECT|  
+|В|TAKE OWNERSHIP|REMOTE SERVICE BINDING|  
+|В|TAKE OWNERSHIP|ROLE|  
+|В|TAKE OWNERSHIP|ROUTE|  
+|В|TAKE OWNERSHIP|SCHEMA|  
+|В|TAKE OWNERSHIP<br /> **Применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (с по [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER ROLE|  
+|В|TAKE OWNERSHIP|SERVICE|  
+|В|TAKE OWNERSHIP|SYMMETRIC KEY|  
+|В|TAKE OWNERSHIP|TYPE|  
+|В|TAKE OWNERSHIP|XML SCHEMA COLLECTION|  
+|UMSK|UNMASK<br /> **Применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (с по [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
+|РАБОТАЕТ|UPDATE|DATABASE|  
+|РАБОТАЕТ|UPDATE|OBJECT|  
+|РАБОТАЕТ|UPDATE|SCHEMA|  
 |VW|VIEW DEFINITION|APPLICATION ROLE|  
 |VW|VIEW DEFINITION|ASSEMBLY|  
 |VW|VIEW DEFINITION|ASYMMETRIC KEY|  
-|VW|VIEW DEFINITION<br />**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|AVAILABILITY GROUP|  
+|VW|VIEW DEFINITION<br />**Применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (с по [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|AVAILABILITY GROUP|  
 |VW|VIEW DEFINITION|CERTIFICATE|  
 |VW|VIEW DEFINITION|CONTRACT|  
 |VW|VIEW DEFINITION|DATABASE|  
-|VW|VIEW DEFINITION<br /> **Применимо к**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] и [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. |DATABASE SCOPED CREDENTIAL|
+|VW|VIEW DEFINITION<br /> **Применимо к** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] : [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]и. |DATABASE SCOPED CREDENTIAL|
 |VW|VIEW DEFINITION|ENDPOINT|  
 |VW|VIEW DEFINITION|FULLTEXT CATALOG|  
 |VW|VIEW DEFINITION|FULLTEXT STOPLIST|  
@@ -305,15 +305,15 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |VW|VIEW DEFINITION|ROUTE|  
 |VW|VIEW DEFINITION|SCHEMA|  
 |VW|VIEW DEFINITION|SEARCH PROPERTY LIST|  
-|VW|VIEW DEFINITION<br /> **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER ROLE|  
+|VW|VIEW DEFINITION<br /> **Применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (с по [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER ROLE|  
 |VW|VIEW DEFINITION|SERVICE|  
 |VW|VIEW DEFINITION|SYMMETRIC KEY|  
 |VW|VIEW DEFINITION|TYPE|  
 |VW|VIEW DEFINITION|Пользователь|  
 |VW|VIEW DEFINITION|XML SCHEMA COLLECTION|  
 |VWAD|VIEW ANY DEFINITION|SERVER|  
-|VWCK|VIEW ANY COLUMN ENCRYPTION KEY DEFINITION<br /> **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
-|VWCM|VIEW ANY COLUMN MASTER KEY DEFINITION<br /> **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
+|VWCK|VIEW ANY COLUMN ENCRYPTION KEY DEFINITION<br /> **Применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (с по [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
+|ввкм|VIEW ANY COLUMN MASTER KEY DEFINITION<br /> **Применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (с по [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
 |VWCT|VIEW CHANGE TRACKING|OBJECT|  
 |VWCT|VIEW CHANGE TRACKING|SCHEMA|  
 |VWDB|VIEW ANY DATABASE|SERVER|  
@@ -322,8 +322,8 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |XA|EXTERNAL ACCESS ASSEMBLY|SERVER|  
 |XU|UNSAFE ASSEMBLY|SERVER|  
   
-## <a name="remarks"></a>Примечания  
- Функция с табличным значением `sys.fn_builtin_permissions` выдает копию стандартной иерархии разрешений. Такая иерархия включает в себя покрытие разрешений. `DEFAULT` Результирующий набор описывает направленный ациклический график иерархии разрешений, из которых является корневой (класс = SERVER, разрешение = CONTROL SERVER).  
+## <a name="remarks"></a>Remarks  
+ Функция с табличным значением `sys.fn_builtin_permissions` выдает копию стандартной иерархии разрешений. Такая иерархия включает в себя покрытие разрешений. `DEFAULT` Результирующий набор описывает направленную ациклический диаграмму иерархии разрешений, для которой корневой каталог имеет значение (класс = сервер, разрешение = сервер управления).  
   
  Функция `sys.fn_builtin_permissions` не принимает связанные параметры.  
   
@@ -337,14 +337,14 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-listing-all-built-in-permissions"></a>A. Листинг всех встроенных разрешений   
-Используйте `DEFAULT` или пустую строку, чтобы вернуть все разрешения.   
+Чтобы `DEFAULT` получить все разрешения, используйте или пустую строку.   
 ```sql  
 SELECT * FROM sys.fn_builtin_permissions(DEFAULT);
 SELECT * FROM sys.fn_builtin_permissions('');  
 ```  
   
 ### <a name="b-listing-permissions-that-can-be-set-on-a-symmetric-key"></a>Б. Листинг разрешений для симметричного ключа   
-Укажите класс, чтобы вернуть все возможные разрешения для этого класса.   
+Укажите класс, чтобы получить все возможные разрешения для этого класса.   
 ```sql  
 SELECT * FROM sys.fn_builtin_permissions(N'SYMMETRIC KEY');  
 ```  
@@ -356,14 +356,14 @@ SELECT * FROM sys.fn_builtin_permissions(DEFAULT)
     WHERE permission_name = 'SELECT';  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Иерархия разрешений (ядро СУБД)](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
- [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)   
- [CREATE SCHEMA (Transact-SQL)](../../t-sql/statements/create-schema-transact-sql.md)   
- [DROP SCHEMA (Transact-SQL)](../../t-sql/statements/drop-schema-transact-sql.md)   
- [Разрешения (ядро СУБД)](../../relational-databases/security/permissions-database-engine.md)   
- [sys.fn_my_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
- [HAS_PERMS_BY_NAME (Transact-SQL)](../../t-sql/functions/has-perms-by-name-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Иерархия разрешений &#40;ядро СУБД&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
+ [ПРЕДОСТАВЛЕНИЕ &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
+ [CREATE SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/create-schema-transact-sql.md)   
+ [УДАЛИТЬ схему &#40;Transact-SQL&#41;](../../t-sql/statements/drop-schema-transact-sql.md)   
+ [Разрешения &#40;ядро СУБД&#41;](../../relational-databases/security/permissions-database-engine.md)   
+ [sys. fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
+ [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)  
   
   
 

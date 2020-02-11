@@ -1,5 +1,5 @@
 ---
-title: dbo.sysproxies (Transact-SQL) | Документация Майкрософт
+title: dbo. sysproxies (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,33 +20,33 @@ ms.assetid: a73da875-be22-45fc-b5e2-ea7ebd48e2d6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1dd486757a912d8f0364f55570a368292cf39ab7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67984903"
 ---
 # <a name="dbosysproxies-transact-sql"></a>dbo.sysproxies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Определяет атрибуты учетной записи-посредника агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эта таблица хранится в **msdb** базы данных.  
+  Определяет атрибуты учетной записи-посредника агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эта таблица хранится в базе данных **msdb** .  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|Идентификатор учетной записи-посредника.|  
-|**name**|**sysname**|Имя учетной записи-посредника.|  
+|**name**|**имеет sysname**|Имя учетной записи-посредника.|  
 |**credential_id**|**int**|Идентификатор учетных данных, используемых учетной записью-посредником.|  
-|**включен**|**tinyint**|Состояние учетной записи-посредника:<br /><br /> **0** = отключено. **1** = включен.|  
-|**description**|**nvarchar(512)**|Описание, введенное пользователем при создании учетной записи-посредника.|  
-|**user_sid**|**varbinary(85)**|Microsoft Windows *security_identifier* пользователя или группы, связанной с учетными данными прокси-сервера.|  
+|**доступной**|**tinyint**|Состояние учетной записи-посредника:<br /><br /> **0** = отключено. **1** = включено.|  
+|**nописание**|**nvarchar(512)**|Описание, введенное пользователем при создании учетной записи-посредника.|  
+|**user_sid**|**varbinary (85)**|*Security_identifier* Microsoft Windows для пользователя или группы, связанных с учетными данными прокси-сервера.|  
 |**credential_date_created**|**datetime**|Дата и время создания учетных данных.|  
   
-## <a name="remarks"></a>Примечания  
- Только члены **sysadmin** предопределенной роли сервера можно получить доступ к **sysproxies** таблицы.  
+## <a name="remarks"></a>Remarks  
+ Только члены предопределенной роли сервера **sysadmin** могут обращаться к таблице **sysproxies** .  
   
-## <a name="see-also"></a>См. также  
- [dbo.sysproxylogin &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysproxylogin-transact-sql.md)   
- [dbo.sysproxysubsystem &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysproxysubsystem-transact-sql.md)   
- [dbo.syssubsystems &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-syssubsystems-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [dbo. сиспроксилогин &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysproxylogin-transact-sql.md)   
+ [dbo. сиспроксисубсистем &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysproxysubsystem-transact-sql.md)   
+ [dbo. заполнения таблицы syssubsystems &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-syssubsystems-transact-sql.md)  
   
   

@@ -18,13 +18,13 @@ ms.assetid: 0bd3ed36-e260-469c-a5ff-b033fb9ea59d
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 885e29f8abbeb185017bc2472566e41596a56900
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68116773"
 ---
-# <a name="xpenumgroups-transact-sql"></a>xp_enumgroups (Transact-SQL)
+# <a name="xp_enumgroups-transact-sql"></a>xp_enumgroups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Предоставляет список локальных групп Microsoft Windows или список глобальных групп, определенных в указанном домене Windows.  
@@ -39,26 +39,26 @@ xp_enumgroups [ 'domain_name' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- **"** *имя_домена* **"**  
- Имя домена Windows, для которого перечисляется список глобальных групп. *имя_домена* — **sysname**, значение по умолчанию NULL.  
+ **"** *domain_name* **"**  
+ Имя домена Windows, для которого перечисляется список глобальных групп. Аргумент *domain_name* имеет тип **sysname**и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или 1 (неуспешное завершение)  
+ 0 (успех) или 1 (сбой).  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|**Группы**|**sysname**|Имя группы Windows|  
-|**Комментарий**|**sysname**|Описание группы Windows, предоставленное Windows|  
+|**сгруппировать**|**имеет sysname**|Имя группы Windows|  
+|**Метки**|**имеет sysname**|Описание группы Windows, предоставленное Windows|  
   
-## <a name="remarks"></a>Примечания  
- Если *имя_домена* — это имя компьютера на базе Windows, экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] находится под управлением, или имя домена не указан, **xp_enumgroups** перечисляет локальные группы с компьютера на котором выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+## <a name="remarks"></a>Remarks  
+ Если *domain_name* — имя компьютера под управлением Windows, на котором выполняется экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , или не указано имя домена, **xp_enumgroups** перечисляет локальные группы на компьютере, где работает. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
- **xp_enumgroups** не может использоваться при создании экземпляра класса [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется в операционной системе Windows 98.  
+ **xp_enumgroups** нельзя использовать, если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] работает под Windows 98.  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется членство в **db_owner** предопределенной роли базы данных в **master** базы данных или членство в **sysadmin** предопределенной роли сервера.  
+ Требуется членство в предопределенной роли базы данных **db_owner** в базе данных **master** или членство в предопределенной роли сервера **sysadmin** .  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере перечисляются группы в домене `sales`.  
@@ -67,10 +67,10 @@ xp_enumgroups [ 'domain_name' ]
 EXEC xp_enumgroups 'sales';  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Хранимая процедура sp_grantlogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
- [Хранимая процедура sp_revokelogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
+ [sp_revokelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Общие расширенные хранимые процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [xp_loginconfig &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-loginconfig-transact-sql.md)   
  [xp_logininfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md)  

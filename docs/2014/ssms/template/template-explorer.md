@@ -20,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 42e52d92d993627129f79f215fa536001f44538d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63074069"
 ---
 # <a name="template-explorer"></a>Template Explorer
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет целый ряд шаблонов. Шаблоны — это файлы со стандартным текстом, содержащие скрипты SQL, которые помогают создавать объекты в базе данных. Первом открытии обозревателя шаблонов копия шаблонов помещается в папке C:\Users, затем AppData\Roaming\Microsoft\SQL Server Management Studio\120\Templates пользователя.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет целый ряд шаблонов. Шаблоны — это файлы со стандартным текстом, содержащие скрипты SQL, которые помогают создавать объекты в базе данных. При первом открытии обозревателя шаблонов копия шаблонов помещается в папку пользователя в C:\Users в разделе AppData\Roaming\Microsoft\SQL Server Management Studio\120\templates»  
   
  Предусмотрена возможность просматривать доступные шаблоны в обозревателе шаблонов, затем открывать шаблон для включения его кода в окно редактора кода. Можно также создавать пользовательские шаблоны.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "63074069"
 ## <a name="related-tasks"></a>Связанные задачи  
  Используйте следующие разделы, чтобы приступить к работе с шаблонами  
   
-|**Description**|**Раздел**|  
+|**Описание**|**Раздел**|  
 |---------------------|---------------|  
 |Описано, как включить код из шаблона в окно редактора кода.|[Открытие шаблона](open-a-template.md)|  
 |Описано, как заменить значения параметров шаблона после открытия шаблона в редакторе кода.|[Замена параметров шаблона](replace-template-parameters.md)|  

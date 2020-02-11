@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 72ac6ac92da531d0f653e0fc03d88d170b7706e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62743220"
 ---
 # <a name="change-the-target-recovery-time-of-a-database-sql-server"></a>Изменение целевого времени восстановления базы данных (SQL Server)
@@ -23,9 +23,9 @@ ms.locfileid: "62743220"
 > [!NOTE]  
 >  Верхняя граница, указываемая для отдельной базы данных посредством настройки целевого времени восстановления, может быть превышена из-за долгой транзакции, которая может вызвать чрезмерное время для отмены действий.  
   
--   **Перед началом:**  [Ограничения](#Restrictions), [Безопасность](#Security)  
+-   **Перед началом:**  [ограничения](#Restrictions), [Безопасность](#Security)  
   
--   **Изменение целевого времени восстановления с помощью**   [SQL Server Management Studio](#SSMSProcedure) или [Transact-SQL](#TsqlProcedure)  
+-   **Изменение целевого времени восстановления с помощью:**  [SQL Server Management Studio](#SSMSProcedure) или [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62743220"
   
 2.  Используйте инструкцию [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options)следующим образом:  
   
-     TARGET_RECOVERY_TIME **=** _target_recovery_time_ { SECONDS | MINUTES }  
+     TARGET_RECOVERY_TIME **=** _TARGET_RECOVERY_TIME_ {Seconds | ТЕЗИС  
   
      *target_recovery_time*  
      Если значение &gt; 0 (0 — значение по умолчанию), то оно указывает значение верхней границы времени восстановления для заданной базы данных в случае сбоя.  
@@ -74,8 +74,8 @@ ms.locfileid: "62743220"
     ALTER DATABASE AdventureWorks2012 SET TARGET_RECOVERY_TIME = 60 SECONDS;  
     ```  
   
-## <a name="see-also"></a>См. также  
- [Контрольные точки базы данных (SQL Server)](database-checkpoints-sql-server.md)   
+## <a name="see-also"></a>См. также:  
+ [Контрольные точки базы данных &#40;SQL Server&#41;](database-checkpoints-sql-server.md)   
  [Параметры ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)  
   
   

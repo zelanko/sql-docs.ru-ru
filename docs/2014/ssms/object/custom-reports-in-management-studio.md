@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e02e5f55032f7a5d4e11e1ee4c908e84a83e00f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68188290"
 ---
 # <a name="custom-reports-in-management-studio"></a>Пользовательские отчеты в среде Management Studio
-  Во многих узлах обозревателя объектов в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] отображается набор стандартных отчетов, созданных в [!INCLUDE[msCoName](../../includes/msconame-md.md)]. В этих отчетах сведены все обычно запрашиваемые данные о серверах. Начиная с версии [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] с пакетом обновления 2 (SP2), администраторы могут запускать настраиваемые отчеты, созданные в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , из среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+  Во многих узлах обозревателя объектов в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]отображается набор стандартных отчетов, созданных в [!INCLUDE[msCoName](../../includes/msconame-md.md)]. В этих отчетах сведены все обычно запрашиваемые данные о серверах. Начиная с версии [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] с пакетом обновления 2 (SP2), администраторы могут запускать настраиваемые отчеты, созданные в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , из среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 ## <a name="implementation"></a>Реализация  
  Пользовательские отчеты создаются на языке определения отчетов и хранятся в виде файлов определения отчетов (RDL). RDL определяет сведения о получении данных и макете отчета в формате XML. Язык RDL представляет собой открытую схему. Это дает разработчикам возможность расширять его, добавляя дополнительные атрибуты и элементы. Внутри отчета могут выполняться любые допустимые инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
@@ -72,9 +72,9 @@ ms.locfileid: "68188290"
   
 
   
-## <a name="see-also"></a>См. также  
- [Добавление пользовательского отчета в среде Management Studio](add-a-custom-report-to-management-studio.md)   
- [Отмена подавления предупреждений для пользовательских отчетов](unsuppress-run-custom-report-warnings.md)   
+## <a name="see-also"></a>См. также:  
+ [Добавление пользовательского отчета в Management Studio](add-a-custom-report-to-management-studio.md)   
+ [Отменить подавление предупреждений о выполнении пользовательских отчетов](unsuppress-run-custom-report-warnings.md)   
  [Использование пользовательских отчетов для свойств узлов обозревателя объектов](use-custom-reports-with-object-explorer-node-properties.md)  
   
   

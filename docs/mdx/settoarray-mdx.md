@@ -1,5 +1,5 @@
 ---
-title: SetToArray (многомерные Выражения) | Документация Майкрософт
+title: SetToArray (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c52c2641d21c20c91ec7548cafc969e506801b08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036991"
 ---
 # <a name="settoarray-mdx"></a>SetToArray (многомерные выражения)
@@ -37,8 +37,8 @@ SetToArray(Set_Expression1 [ ,Set_Expression2,...n ][ ,Numeric_Expression ] )
  *Numeric_Expression*  
  Допустимое числовое выражение (обычно многомерное выражение координат ячейки), возвращающее число.  
   
-## <a name="remarks"></a>Примечания  
- **SetToArray** функция преобразует один или несколько наборов в массив для использования в определяемой пользователем функции. Число измерений результирующего массива равно числу заданных наборов.  
+## <a name="remarks"></a>Remarks  
+ Функция **SetToArray** преобразует один или несколько наборов в массив для использования в определяемой пользователем функции. Число измерений результирующего массива равно числу заданных наборов.  
   
  Необязательное числовое выражение может задавать значения в ячейках массива. Если числовое выражение не указано, то перекрестное соединение наборов определяется в текущем контексте.  
   
@@ -50,7 +50,7 @@ SetToArray(Set_Expression1 [ ,Set_Expression2,...n ][ ,Numeric_Expression ] )
 ```  
   
 > [!NOTE]  
->  Тип возвращаемого значения **SetToArray** функция — это значения типа VARIANT, VT_ARRAY. Таким образом, выходные данные **SetToArray** функция должна использоваться только в качестве входных данных для определяемой пользователем функции.  
+>  Тип возвращаемого значения функции **SetToArray** — это тип VARIANT, VT_ARRAY. Поэтому выходные данные функции **SetToArray** должны использоваться только в качестве входных данных для определяемой пользователем функции.  
   
 ## <a name="example"></a>Пример  
  Следующий пример возвращает массив.  
@@ -59,7 +59,7 @@ SetToArray(Set_Expression1 [ ,Set_Expression2,...n ][ ,Numeric_Expression ] )
 SetToArray([Geography].[Geography].Members, [Measures].[Internet Sales Amount])  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также:  
+ [Ссылка на функцию многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-function-reference-mdx.md)  
   
   

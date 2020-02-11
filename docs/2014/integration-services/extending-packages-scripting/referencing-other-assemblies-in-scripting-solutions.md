@@ -25,17 +25,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a6f942e1afe40467e331519f276b360f87f9a6da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62894738"
 ---
 # <a name="referencing-other-assemblies-in-scripting-solutions"></a>Ссылки на другие сборки в решениях со сценариями
-  Библиотека классов платформы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] предоставляет разработчику скриптов набор эффективных средств для реализации пользовательской функциональности в пакетах служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Задача «Скрипт» и компонент скрипта также могут использовать пользовательские управляемые сборки.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Библиотека классов предоставляет разработчику скриптов мощный набор средств для реализации пользовательских функций в [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] пакетах. Задача «Скрипт» и компонент скрипта также могут использовать пользовательские управляемые сборки.  
   
 > [!NOTE]  
->  Чтобы разрешить пакетам использование объектов и методов из веб-службы, используйте команду **Добавить веб-ссылку**, доступную в средствах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] для приложений (VSTA). В более ранних версиях служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], чтобы использовать веб-службу, приходилось формировать класс-посредник.  
+>  Чтобы разрешить пакетам использовать объекты и методы из веб-службы, используйте команду **Добавить веб-ссылку** , доступную в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] статье средства для приложений (VSTA). В более ранних версиях служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], чтобы использовать веб-службу, приходилось формировать класс-посредник.  
   
 ## <a name="using-a-managed-assembly"></a>Использование управляемой сборки  
  Чтобы во время разработки службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] могли найти управляемую сборку, нужно сделать следующее:  
@@ -62,29 +62,29 @@ ms.locfileid: "62894738"
   
  В следующем списке описываются некоторые из наиболее часто используемых классов платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
--   `System.Data` Содержит архитектуру ADO.NET.  
+-   `System.Data`Содержит архитектуру ADO.NET.  
   
--   `System.IO` Предоставляет интерфейс для файловой системы и файловых потоков.  
+-   `System.IO`Предоставляет интерфейс для файловой системы и потоков.  
   
--   `System.Windows.Forms` Обеспечивает создание форм.  
+-   `System.Windows.Forms`Обеспечивает создание форм.  
   
--   `System.Text.RegularExpressions` Предоставляет классы для работы с регулярными выражениями.  
+-   `System.Text.RegularExpressions`Предоставляет классы для работы с регулярными выражениями.  
   
--   `System.Environment` Возвращает сведения о локальном компьютере, текущий пользователь и параметрами компьютеров и пользователей.  
+-   `System.Environment`Возвращает сведения о локальном компьютере, текущем пользователе, а также о параметрах компьютера и пользователя.  
   
--   `System.Net` Обеспечивает сетевые соединения.  
+-   `System.Net`Обеспечивает сетевую связь.  
   
--   `System.DirectoryServices` Обеспечивает доступ к Active Directory.  
+-   `System.DirectoryServices`Предоставляет Active Directory.  
   
--   `System.Drawing` Предоставляет обширные манипуляции библиотеки изображениями.  
+-   `System.Drawing`Предоставляет обширные библиотеки управления образами.  
   
--   `System.Threading` Обеспечивает возможность многопоточного программирования.  
+-   `System.Threading`Включает многопоточное программирование.  
   
  Дополнительные сведения о платформе [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] см. в библиотеке MSDN.  
   
-![Значок служб Integration Services (маленький)](../media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
+![Значок Integration Services (маленький)](../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширение пакетов с помощью сценариев](extending-packages-with-scripting.md)  
   
   

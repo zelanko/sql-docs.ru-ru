@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_sql_text (Transact-SQL) | Документация Майкрософт
+title: sys. dm_exec_sql_text (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 10/20/2017
 ms.prod: sql
@@ -21,16 +21,16 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4ff8d99bd31e2638aa63393fb5ba052f442bf75f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67936896"
 ---
-# <a name="sysdmexecsqltext-transact-sql"></a>sys.dm_exec_sql_text (Transact-SQL)
+# <a name="sysdm_exec_sql_text-transact-sql"></a>sys.dm_exec_sql_text (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Возвращает текст SQL, то есть пакета определяется указанным *sql_handle*. Эта функция с табличным значением заменяет системную функцию **fn_get_sql**.  
+  Возвращает текст пакета SQL, идентифицируемого указанным *sql_handle*. Функция с табличным значением заменяет системную функцию **fn_get_sql**.  
   
  
 ## <a name="syntax"></a>Синтаксис  
@@ -41,7 +41,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
   
 ## <a name="arguments"></a>Аргументы  
 *sql_handle*  
-— Это маркер, однозначно определяющее пакета, который выполнен или в данный момент. *sql_handle* — **varbinary(64)** . 
+Токен, однозначно определяющий пакет, который был выполнен или в данный момент выполняется. *sql_handle* имеет тип **varbinary (64)**. 
 
 *Sql_handle* можно получить из следующих объектов DMO:  
   
@@ -58,49 +58,49 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
 -   [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)  
   
 *plan_handle*  
-— Это маркер, который уникально идентифицирует план выполнения запроса для запущенного пакета, и ее план находится в кэше планов, или в данный момент. *plan_handle* — **varbinary(64)** .   
+Токен, однозначно определяющий план выполнения запроса для пакета, который был выполнен, а его план находится в кэше планов или в данный момент выполняется. *plan_handle* имеет тип **varbinary (64)**.   
 
 *Plan_handle* можно получить из следующих объектов DMO:    
   
--   [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
+-   [sys. dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   
--   [sys.dm_exec_query_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
+-   [sys. dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
   
--   [sys.dm_exec_requests (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
+-   [sys. dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
 
--   [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
+-   [sys. dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
 
--   [sys.dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)   
+-   [sys. dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)   
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|**dbid**|**smallint**|Идентификатор базы данных.<br /><br /> Для нерегламентированных и подготовленных инструкций SQL это идентификатор базы данных, в которой происходила компиляция инструкции.|  
-|**objectid**|**int**|Идентификатор объекта.<br /><br /> Имеет значение NULL для нерегламентированных и подготовленных инструкций SQL.|  
-|**number**|**smallint**|Для пронумерованной хранимой процедуры этот столбец возвращает ее номер. Дополнительные сведения см. в разделе [sys.numbered_procedures &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md).<br /><br /> Имеет значение NULL для нерегламентированных и подготовленных инструкций SQL.|  
+|**DBID**|**smallint**|Идентификатор базы данных.<br /><br /> Для нерегламентированных и подготовленных инструкций SQL это идентификатор базы данных, в которой происходила компиляция инструкции.|  
+|**ИД**|**int**|Идентификатор объекта.<br /><br /> Имеет значение NULL для нерегламентированных и подготовленных инструкций SQL.|  
+|**number**|**smallint**|Для пронумерованной хранимой процедуры этот столбец возвращает ее номер. Дополнительные сведения см. в разделе [sys. numbered_procedures &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md).<br /><br /> Имеет значение NULL для нерегламентированных и подготовленных инструкций SQL.|  
 |**Шифрование**|**bit**|1 = текст SQL зашифрован.<br /><br /> 0 = текст SQL не зашифрован.|  
-|**text**|**nvarchar (max** **)**|Текст SQL-запроса.<br /><br /> Имеет значение NULL для зашифрованных объектов.|  
+|**полнотекстовым**|**nvarchar (Max** **)**|Текст SQL-запроса.<br /><br /> Имеет значение NULL для зашифрованных объектов.|  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение `VIEW SERVER STATE` на сервере.  
   
-## <a name="remarks"></a>Примечания  
-Для нерегламентированных запросов дескрипторы SQL являются значениями хэша на основе текста SQL, отправляемых на сервер и могут быть получены из любой базы данных. 
+## <a name="remarks"></a>Remarks  
+Для нерегламентированных запросов дескрипторы SQL являются хэш-значениями на основе текста SQL, отправляемого на сервер, и могут исходить из любой базы данных. 
 
 Для таких объектов баз данных, как хранимые процедуры, триггеры или функции, дескрипторы SQL создаются на основе идентификатора базы данных, идентификатора объекта, а также номера объекта. 
 
-Дескриптор плана — это значение хэша, производным от скомпилированного плана всего пакета. 
+Handle Plan — это хэш-значение, полученное из скомпилированного плана всего пакета. 
 
 > [!NOTE]
-> **DBID** не может быть определена по *sql_handle* для нерегламентированных запросов. Чтобы определить **dbid** для нерегламентированных запросов с помощью *plan_handle* вместо этого.
+> невозможно определить **DBID** из *sql_handle* для нерегламентированных запросов. Чтобы определить **DBID** для нерегламентированных запросов, используйте вместо этого *plan_handle* .
   
 ## <a name="examples"></a>Примеры 
 
-### <a name="a-conceptual-example"></a>A. Пример
-Ниже приведен простой пример для иллюстрации передачи **sql_handle** напрямую или с помощью **CROSS APPLY**.
-  1.  Создание действия.  
-Выполните следующий запрос T-SQL в новом окне запроса в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].   
+### <a name="a-conceptual-example"></a>A. Концептуальный пример
+Ниже приведен простой пример, иллюстрирующий передачу **sql_handle** либо напрямую, либо с **ПЕРЕкрестным применением**.
+  1.  Создать действие.  
+Выполните следующий T-SQL в новом окне запроса в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].   
       ```sql
       -- Identify current spid (session_id)
       SELECT @@SPID;
@@ -110,8 +110,8 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
         WAITFOR DELAY '00:02:00';
       ```
       
-    2.  С помощью **CROSS APPLY**.  
-    Sql_handle из **sys.dm_exec_requests** будут переданы **sys.dm_exec_sql_text** с помощью **CROSS APPLY**. Откройте новое окно запроса и передать spid, определенных на шаге 1. В этом примере, может быть идентификатор spid `59`.
+    2.  Использование **CROSS APPLY**.  
+    Sql_handle из **sys. dm_exec_requests** будут переданы в представление **sys. Dm_exec_sql_text** с помощью **CROSS APPLY**. Откройте новое окно запроса и передайте SPID, определенный на шаге 1. В этом примере SPID имеет значение `59`.
 
         ```sql
         SELECT t.*
@@ -121,7 +121,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
          ```      
  
     2.  Передача **sql_handle** напрямую.  
-Получить **sql_handle** из **sys.dm_exec_requests**. Затем передайте **sql_handle** непосредственно к **sys.dm_exec_sql_text**. Откройте новое окно запроса и spid, определенных на шаге 1, чтобы передать **sys.dm_exec_requests**. В этом примере, может быть идентификатор spid `59`. Передать возвращенный **sql_handle** как аргумент **sys.dm_exec_sql_text**.
+Получение **sql_handle** из **sys. dm_exec_requests**. Затем передайте **sql_handle** непосредственно в **sys. dm_exec_sql_text**. Откройте новое окно запроса и передайте SPID, определенный в шаге 1, в **sys. dm_exec_requests**. В этом примере SPID имеет значение `59`. Затем передайте возвращенный **sql_handle** в качестве аргумента в **sys. dm_exec_sql_text**.
 
         ```sql
         -- acquire sql_handle
@@ -132,7 +132,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
          ```      
     
   
-### <a name="b-obtain-information-about-the-top-five-queries-by-average-cpu-time"></a>Б. Получение сведений о первых пяти запросах по среднему времени ЦП  
+### <a name="b-obtain-information-about-the-top-five-queries-by-average-cpu-time"></a>Б. Получение сведений о пяти первых запросах по среднему времени ЦП  
  Следующий пример возвращает текст инструкции SQL и среднее время ЦП для пяти первых запросов.  
   
 ```sql  
@@ -147,7 +147,7 @@ CROSS APPLY sys.dm_exec_sql_text(qs.sql_handle) AS st
 ORDER BY total_worker_time/execution_count DESC;  
 ```  
   
-### <a name="c-provide-batch-execution-statistics"></a>В. Предоставляют статистику выполнения пакетов  
+### <a name="c-provide-batch-execution-statistics"></a>В. Предоставление статистики пакетного выполнения  
  Следующий пример возвращает текст запросов SQL, выполняемых в пакетах, и статистические сведения о них.  
   
 ```sql  
@@ -178,13 +178,13 @@ WHERE s2.objectid is null
 ORDER BY s1.sql_handle, s1.statement_start_offset, s1.statement_end_offset;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Динамические административные представления и функции (Transact-SQL)](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления и функции, связанные с выполнением &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
- [sys.dm_exec_requests (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
- [sys.dm_exec_cursors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)   
- [sys.dm_exec_xml_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)   
- [sys.dm_exec_query_memory_grants &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
- [С помощью применить](../../t-sql/queries/from-transact-sql.md#using-apply)   [sys.dm_exec_text_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)  
+ [sys. dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
+ [sys. dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
+ [sys. dm_exec_cursors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)   
+ [sys. dm_exec_xml_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)   
+ [sys. dm_exec_query_memory_grants &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
+ [Использование инструкции Apply](../../t-sql/queries/from-transact-sql.md#using-apply)   [sys. dm_exec_text_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)  
 

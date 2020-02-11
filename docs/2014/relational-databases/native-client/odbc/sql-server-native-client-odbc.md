@@ -1,5 +1,5 @@
 ---
-title: Собственный клиент SQL Server (ODBC) | Документация Майкрософт
+title: SQL Server Native Client (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -19,14 +19,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 570c0574357d9315f0e6b153f3eeabac79ec673b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63055664"
 ---
 # <a name="sql-server-native-client-odbc"></a>Собственный клиент SQL Server (ODBC)
-  ODBC — это стандартное определение прикладного программного интерфейса (API), который используется для доступа к данным в реляционных базах данных и базах данных с индексно-последовательным методом доступа (ISAM). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает ODBC через драйвер ODBC клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client как один из собственных API для написания приложений на языках C и C++, взаимодействующих с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  ODBC — это стандартное определение прикладного программного интерфейса (API), который используется для доступа к данным в реляционных базах данных и базах данных с индексно-последовательным методом доступа (ISAM). 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает ODBC через драйвер ODBC клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client как один из собственных API для написания приложений на языках C и C++, взаимодействующих с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Программы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], написанные с помощью драйвера ODBC собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], взаимодействуют с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с помощью вызовов функций на языке C. Специфичные для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] версии функций ODBC реализованы в драйвере ODBC собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Драйвер передает инструкции SQL в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и возвращает приложению результаты их выполнения.  
   
@@ -40,7 +41,7 @@ ms.locfileid: "63055664"
   
 -   [Взаимодействие с SQL Server &#40;ODBC&#41;](../../native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
   
--   [Выполнение запросов &#40;ODBC&#41;](../../native-client-odbc-queries/executing-queries-odbc.md)  
+-   [Выполняя запросы &#40;ODBC&#41;](../../native-client-odbc-queries/executing-queries-odbc.md)  
   
 -   [Обработка результатов &#40;ODBC&#41;](../../native-client-odbc-results/processing-results-odbc.md)  
   
@@ -54,30 +55,30 @@ ms.locfileid: "63055664"
   
 -   [Использование функций каталога](using-catalog-functions.md)  
   
--   [Выполнение операций массового копирования &#40;ODBC&#41;](../../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
+-   [Выполнение операций с массовым копированием &#40;ODBC&#41;](../../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
 -   [Управление столбцами text и image](../../native-client-odbc-text-image-columns/managing-text-and-image-columns.md)  
   
 -   [Создание профилей производительности драйвера ODBC](profiling-odbc-driver-performance.md)  
   
--   [Возвращающие табличные значения параметров &#40;ODBC&#41;](../../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+-   [Возвращающие табличное значение параметры &#40;ODBC&#41;](../../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
--   [Дата и время улучшения &#40;ODBC&#41;](../../native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+-   [Улучшения даты и времени &#40;ODBC&#41;](../../native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
--   [Определяемые пользователем типы больших значений CLR &#40;ODBC&#41;](large-clr-user-defined-types-odbc.md)  
+-   [Большие определяемые пользователем типы данных CLR &#40;ODBC&#41;](large-clr-user-defined-types-odbc.md)  
   
 -   [Поддержка FILESTREAM &#40;ODBC&#41;](filestream-support-odbc.md)  
   
--   [Имена участников-служб &#40;имена участников-служб&#41; в клиентских соединениях &#40;ODBC&#41;](service-principal-names-spns-in-client-connections-odbc.md)  
+-   [Имена участника-службы (SPN) в клиентских соединениях (ODBC)](service-principal-names-spns-in-client-connections-odbc.md)  
   
--   [Поддержка разреженных столбцов &#40;ODBC&#41;](sparse-columns-support-odbc.md)  
+-   [Разреженные столбцы поддерживают &#40;ODBC&#41;](sparse-columns-support-odbc.md)  
   
--   [Собственный клиент SQL Server &#40;ODBC&#41; ссылки](../../../database-engine/dev-guide/sql-server-native-client-odbc-reference.md)  
+-   [Справочник по SQL Server Native Client &#40;ODBC&#41;](../../../database-engine/dev-guide/sql-server-native-client-odbc-reference.md)  
   
--   [Инструкции по ODBC](../../native-client-odbc-how-to/odbc-how-to-topics.md)  
+-   [ODBC How-to Topics](../../native-client-odbc-how-to/odbc-how-to-topics.md)  
   
-## <a name="see-also"></a>См. также  
- [Программирование собственного клиента SQL Server](../sql-server-native-client-programming.md)   
- [Установка SQL Server Native Client](../applications/installing-sql-server-native-client.md)  
+## <a name="see-also"></a>См. также:  
+ [SQL Server Native Client программирование](../sql-server-native-client-programming.md)   
+ [Установка собственного клиента SQL Server](../applications/installing-sql-server-native-client.md)  
   
   

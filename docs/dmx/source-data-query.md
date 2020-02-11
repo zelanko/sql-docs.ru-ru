@@ -9,21 +9,21 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: e523d33da502a971b950e33ec0bd935149ed26f7
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892346"
 ---
 # <a name="ltsource-data-querygt"></a>&lt;запрос источника данных&gt;
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Чтобы обучить модель интеллектуального анализа данных и создать прогнозы на основе модели интеллектуального анализа данных, необходимо получить доступ к [!INCLUDE[msCoName](../includes/msconame-md.md)] данным, которые являются внешними по отношению к [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] базе данных. Для определения этих \<внешних данных используется предложение > запроса источника данных в расширениях интеллектуального анализа данных. [Вставка &#40;в расширения интеллектуального анализа данных&#41;](../dmx/insert-into-dmx.md), [Выбор из &#60;прогнозного объединения&#62; &#40;модели DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)и [Выбор из выражений естественного прогнозирующего подключения](../dmx/select-from-model-prediction-join-dmx.md) все используют **\<запрос источника данных >** .  
+  Чтобы обучить модель интеллектуального анализа данных и создать прогнозы на основе модели интеллектуального анализа данных, необходимо получить доступ к [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] данным, которые являются внешними по отношению к базе данных. Для определения этих \<внешних данных используется предложение> запроса источника данных в расширениях интеллектуального анализа данных. [Вставка в &#40;&#41;расширений интеллектуального анализа данных ](../dmx/insert-into-dmx.md), [Выбор из &#60;модель&#62; прогнозирование соединений &#40;расширений интеллектуального анализа ](../dmx/select-from-model-prediction-join-dmx.md)данных&#41;DMX и [Выбор из выражений естественного прогнозирующего подключения](../dmx/select-from-model-prediction-join-dmx.md) все используют ** \<>запросов к исходным данным **.  
   
 ## <a name="query-types"></a>Типы запросов  
- Тремя наиболее распространенными способами указания данных источника являются:  
+ Тремя наиболее распространенными способами указания данных источника являются:   
   
- [РАСШИРЕНИЯ &#40;ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ OPENQUERY&#41;](../dmx/source-data-query-openquery.md)  
+ [OPENQUERY &#40;РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ&#41;](../dmx/source-data-query-openquery.md)  
  Эта инструкция запрашивает данные, являющиеся внешними для экземпляра служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], при помощи существующего источника данных.  
   
  Хотя функция **OPENQUERY** аналогична функции **OPENROWSET**, **OPENQUERY** имеет следующие преимущества:  
@@ -32,10 +32,10 @@ ms.locfileid: "68892346"
   
 -   Администратор имеет больший контроль над доступом к данным на сервере. Например, администратор может управлять загрузкой поставщиков на сервер и доступом к внешним данным.  
   
- [РАСШИРЕНИЯ &#40;ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ OPENROWSET&#41;](../dmx/source-data-query-openrowset.md)  
+ [OPENROWSET &#40;DMX&#41;](../dmx/source-data-query-openrowset.md)  
  Эта инструкция запрашивает данные, являющиеся внешними для экземпляра служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], при помощи существующего источника данных.  
   
- [РАСШИРЕНИЯ &#40;ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ФИГУР&#41;](../dmx/source-data-query-shape.md)  
+ [SHAPE &#40;&#41;РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ](../dmx/source-data-query-shape.md)  
  Эта инструкция запрашивает несколько источников данных для создания вложенной таблицы. С помощью **Shape**можно объединять данные из нескольких источников в одну иерархическую таблицу. Это позволит использовать возможность экземпляра служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] вкладывать таблицы друг в друга.  
   
  Для указания источника данных можно также использовать следующие данные:  
@@ -50,9 +50,9 @@ ms.locfileid: "68892346"
   
 -   Параметр набора строк.  
   
-## <a name="see-also"></a>См. также  
- [Расширения &#40;интеллектуального анализа&#41; данных инструкции DMX-операций с данными](../dmx/dmx-statements-data-manipulation.md)   
- [Справочник по DMX &#40;&#41; -инструкциям расширений интеллектуального анализа данных](../dmx/data-mining-extensions-dmx-statements.md)   
- [Вложенные &#40;таблицы Analysis Services — интеллектуальный анализ данных&#41;](https://docs.microsoft.com/analysis-services/data-mining/nested-tables-analysis-services-data-mining)  
+## <a name="see-also"></a>См. также:  
+ [Расширения интеллектуального анализа данных &#40;инструкции расширений интеллектуального анализа данных&#41;](../dmx/dmx-statements-data-manipulation.md)   
+ [Расширения интеллектуального анализа данных &#40;Справочник по инструкции DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Вложенные таблицы &#40;Analysis Services — интеллектуальный анализ данных&#41;](https://docs.microsoft.com/analysis-services/data-mining/nested-tables-analysis-services-data-mining)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: С помощью осей запроса и среза в простой пример (многомерные Выражения) | Документация Майкрософт
+title: Использование осей запросов и срезов в простом примере (многомерные выражения) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 53f48d8f23ef8809f9392b1a2c7ede65239e4985
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074028"
 ---
 # <a name="using-query-and-slicer-axes-in-a-simple-example-mdx"></a>Оси запроса и среза. Простой пример (многомерные выражения)
@@ -42,13 +42,13 @@ WHERE ( [Measures].[Packages] )
 ## <a name="the-results"></a>Результаты  
  Запрос возвращает таблицу значений меры Packages для каждого пересечения осей измерений COLUMNS и ROWS. Таблица должна выглядеть следующим образом.  
   
-||по воздуху|по морю|  
+||air|по морю|  
 |-|---------|---------|  
 |Первый квартал|60|50|  
 |Второй квартал|45|45|  
   
-## <a name="see-also"></a>См. также  
- [Определение содержимого оси запроса (многомерные выражения)](mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md)   
- [Определение содержимого оси среза (многомерные выражения)](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
+## <a name="see-also"></a>См. также:  
+ [Указание содержимого оси запроса &#40;многомерных выражениях&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md)   
+ [Указание содержимого оси среза &#40;многомерных выражениях&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
   
   

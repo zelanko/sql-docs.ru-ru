@@ -1,5 +1,5 @@
 ---
-title: Файлы резервной копии должен находиться на отдельных устройствах файлы базы данных | Документация Майкрософт
+title: Файлы резервной копии должны находиться на разных устройствах из файлов базы данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 09c54c8229351cf27e0f42c8895f2633b8aa7ccb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62812628"
 ---
 # <a name="backup-files-must-be-on-separate-devices-from-the-database-files"></a>Файлы резервной копии и файлы базы данных должны находиться на отдельных устройствах
@@ -29,11 +29,11 @@ ms.locfileid: "62812628"
 >  Эта политика не может обнаружить отдельные физические устройства посредством точек подключения.  
   
 ## <a name="for-more-information"></a>Дополнительные сведения см. в разделе  
- [Устройства резервного копирования (SQL Server)](../relational-databases/backup-restore/backup-devices-sql-server.md)  
+ [Устройства резервного копирования &#40;SQL Server&#41;](../relational-databases/backup-restore/backup-devices-sql-server.md)  
   
  [Резервное копирование и восстановление баз данных SQL Server](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Наблюдение с помощью управления на основе политик и принудительное применение рекомендаций с помощью управления на основе политик](../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

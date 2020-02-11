@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2f5fc8fdc9b522ad79e67a7769ba2571b7a80af9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63023914"
 ---
-# <a name="mssqleng024070"></a>MSSQL_ENG024070
+# <a name="mssql_eng024070"></a>MSSQL_ENG024070
     
 ## <a name="message-details"></a>Сведения о сообщении  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|24070|  
 |Источник события|MSSQLSERVER|  
 |Компонент|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
@@ -35,7 +35,7 @@ ms.locfileid: "63023914"
 ## <a name="explanation"></a>Объяснение  
  Это общая ошибка, которая может возникнуть независимо от того, реплицируется база данных или нет. Для сервера в топологии репликации эта ошибка обычно означает, что учетная запись службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] была изменена с использованием диспетчера управления службами [!INCLUDE[msCoName](../../includes/msconame-md.md)] , а не с помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Если попытаться выполнить задание агента после изменения учетной записи службы, выполнение задания может закончится выдачей примерно следующего сообщения об ошибке:  
   
- «Выполняется от имени пользователя: \<Учетная_запись_пользователя >. Подсистема моментальных снимков репликации репликации: агент \<Имя_агента > не удалось. Выполняется от имени пользователя: \<Учетная_запись_пользователя >. Клиент не располагает требуемыми правами доступа. Шаг завершился с ошибкой. `[SQLSTATE 42000] (Error 14151)`. Шаг завершился с ошибкой».  
+ "Выполняется от имени пользователя \<: UserAccount>. Репликация — подсистема моментальных снимков \<репликации: сбой агента ажентнаме>. Выполняется от имени пользователя \<: UserAccount>. Клиент не располагает требуемыми правами доступа. Шаг завершился с ошибкой. `[SQLSTATE 42000] (Error 14151)`. Шаг завершился с ошибкой».  
   
  Эта проблема возникает из-за того, что диспетчер управления службами Windows не может предоставить новой учетной записи службы для агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] требуемые разрешения.  
   
@@ -48,9 +48,9 @@ ms.locfileid: "63023914"
   
  Членство в ней предоставляет новой учетной записи разрешения, необходимые для выполнения задания агента репликации.  
   
-## <a name="see-also"></a>См. также  
- [Справочник по ошибкам и событиям (репликация)](errors-and-events-reference-replication.md)   
- [Управление именами для входа и паролями при репликации](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
+## <a name="see-also"></a>См. также:  
+ [Ошибки и события ссылаются на &#40;&#41;репликации](errors-and-events-reference-replication.md)   
+ [Управление именами входа и паролями в репликации](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [Диспетчер конфигурации SQL Server](../sql-server-configuration-manager.md)  
   
   

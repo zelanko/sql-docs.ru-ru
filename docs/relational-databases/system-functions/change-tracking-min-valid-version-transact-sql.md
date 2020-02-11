@@ -20,16 +20,16 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5bb0baec2284d17d84c7a8c3dddd13de3fa69510
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68042942"
 ---
-# <a name="changetrackingminvalidversion-transact-sql"></a>CHANGE_TRACKING_MIN_VALID_VERSION (Transact-SQL)
+# <a name="change_tracking_min_valid_version-transact-sql"></a>CHANGE_TRACKING_MIN_VALID_VERSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Возвращает минимальную версию клиента, которое является допустимым для получения данных отслеживания изменений из указанной таблицы, при использовании [CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md) функции.  
+  Возвращает минимальную версию клиента, которая является допустимой для использования при получении сведений об отслеживании изменений из указанной таблицы при использовании функции [CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md) .  
     
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,13 +42,13 @@ CHANGE_TRACKING_MIN_VALID_VERSION ( table_object_id )
   
 ## <a name="arguments"></a>Аргументы  
  *table_object_id*  
- Объектный идентификатор таблицы. *table_object_id* — **int**.  
+ Объектный идентификатор таблицы. *table_object_id* является типом **int**.  
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
  **bigint**  
   
-## <a name="remarks"></a>Примечания  
- Эта функция используется для проверки значения *last_sync_version* параметра для функции CHANGETABLE. Если *last_sync_version* меньше, чем значения, возвращаемого этой функцией, результаты, возвращаемые последующим вызовом CHANGETABLE могут оказаться недопустимыми.  
+## <a name="remarks"></a>Remarks  
+ Эта функция используется для проверки значения параметра *last_sync_version* для CHANGETABLE. Если *last_sync_version* меньше значения, сообщаемого этой функцией, результаты, возвращаемые из последующего вызова CHANGETABLE, могут быть недействительными.  
   
  Функция CHANGE_TRACKING_MIN_VALID_VERSION использует для определения значения возврата следующие сведения.  
   
@@ -86,8 +86,8 @@ ELSE
 -- Obtain changes using CHANGETABLE(CHANGES ...)  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Функции отслеживания изменений (Transact-SQL)](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
- [sys.change_tracking_tables (Transact-SQL)](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md)  
+## <a name="see-also"></a>См. также:  
+ [Функции Отслеживание изменений &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
+ [sys. change_tracking_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md)  
   
   

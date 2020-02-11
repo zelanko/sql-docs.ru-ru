@@ -1,5 +1,5 @@
 ---
-title: IBCPSession::BCPDone (OLE DB) | Документация Майкрософт
+title: 'IBCPSession:: BCPDone (OLE DB) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ecbf8d8b11e0804c3621163d38e243bd78259e43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62743200"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
@@ -33,8 +33,8 @@ ms.locfileid: "62743200"
 HRESULT BCPDone(void);  
 ```  
   
-## <a name="remarks"></a>Примечания  
- Никакая другая операция не может быть вызвана применительно к интерфейсу [IBCPSession](ibcpsession-ole-db.md) после вызова метода **BCPDone**. Единственной возможностью является вызов метода [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md) для инициализации операции массового копирования. Это аналогично вызову метода [IRowsetFastLoad::Commit](irowsetfastload-commit-ole-db.md) .  
+## <a name="remarks"></a>Remarks  
+ Никакая другая операция не может быть вызвана применительно к интерфейсу [IBCPSession](ibcpsession-ole-db.md) после вызова метода **BCPDone**. Единственной возможностью является вызов метода [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md) для инициализации операции массового копирования. Это аналогично вызову метода [IRowsetFastLoad::Commit](irowsetfastload-commit-ole-db.md).  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  S_OK  
@@ -62,7 +62,7 @@ insert into fltest values (4, 4, 0xFAD)
   
  Чтобы вновь добавить эти данные в таблицу, можно использовать следующую команду BCP:  
   
- **bcp master..fltest in outfile.dat -n -T -S** *server*  
+ **bcp Master.. флтест в файле. dat-n-T-S** *Server*  
   
  Во время компиляции этого образца необходимо будет указать файл sqlncli11.lib.  
   
@@ -461,7 +461,7 @@ void wmain() {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [IBCPSession &#40;OLE DB&#41;](ibcpsession-ole-db.md)   
  [Выполнение операций массового копирования](../native-client/features/performing-bulk-copy-operations.md)  
   

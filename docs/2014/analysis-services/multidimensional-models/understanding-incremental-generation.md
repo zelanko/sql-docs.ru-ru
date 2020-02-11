@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ace9bbbbbc023d14dbce91a176f7d05ad19d699b
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811056"
 ---
 # <a name="understanding-incremental-generation"></a>Основные сведения о добавочном создании
@@ -83,8 +83,8 @@ ms.locfileid: "68811056"
   
  С другой стороны, при изменении строки соединения с источником данных на другую базу данных по сравнению с предыдущим формированием не возникает ошибки. Используется эта новая база данных, а в предыдущую базу данных не вносятся никакие изменения.  
   
-## <a name="see-also"></a>См. также  
- [Управление изменениями в источниках данных и представлениях источников данных](manage-changes-to-data-source-views-and-data-sources.md)   
- [Мастер формирования схем (службы Analysis Services)](schema-generation-wizard-analysis-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Управление изменениями в представлениях источников данных и источниками данных](manage-changes-to-data-source-views-and-data-sources.md)   
+ [Мастер формирования схем &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)  
   
   

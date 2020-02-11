@@ -15,14 +15,14 @@ ms.assetid: 9ba00118-a80d-4a6d-a7d6-4f5492fb7ded
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 95f27c6ad6e4ae7cdfd0938f6c82a9932751fbc4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966402"
 ---
 # <a name="deleterule-property-example-vb"></a>Пример свойства DeleteRule (Visual Basic)
-В этом примере показано [DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md) свойство [ключ](../../../ado/reference/adox-api/key-object-adox.md) объекта. Код добавляет новый [таблицы](../../../ado/reference/adox-api/table-object-adox.md) и затем определяет новый первичный ключ, параметр **DeleteRule** для **adRICascade**.  
+В этом примере демонстрируется свойство [DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md) объекта [Key](../../../ado/reference/adox-api/key-object-adox.md) . Код добавляет новую [таблицу](../../../ado/reference/adox-api/table-object-adox.md) , а затем определяет новый первичный ключ, устанавливая для **DeleteRule** значение **адрикаскаде**.  
   
 ```  
 ' BeginDeleteRuleVB  
@@ -84,6 +84,6 @@ End Sub
 ' EndDeleteRuleVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство DeleteRule (ADOX)](../../../ado/reference/adox-api/deleterule-property-adox.md)   
  [Объект Key (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)

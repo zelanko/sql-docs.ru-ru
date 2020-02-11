@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0fb65d55d2b6b135c562f9dd4b02170de6b7df3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63297871"
 ---
 # <a name="arrange-tables-in-diagrams-visual-database-tools"></a>Размещение таблиц в диаграммах (визуальные инструменты для баз данных)
@@ -30,7 +30,7 @@ ms.locfileid: "63297871"
   
 2.  В контекстном меню выберите **Упорядочить таблицы**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Работа с диаграммами баз данных (визуальные инструменты для баз данных)](visual-database-tools.md)  
   
   

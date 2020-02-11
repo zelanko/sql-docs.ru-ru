@@ -1,5 +1,5 @@
 ---
-title: Доступ к строкам в иерархических наборах записей | Документация Майкрософт
+title: Доступ к строкам в иерархическом наборе записей | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,24 +14,24 @@ ms.assetid: 25f1d2a1-6d5e-4457-aa07-5db5c75dee18
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e73b2ca96cc5e7eb7683b72aa19fd59a318b8596
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926358"
 ---
-# <a name="accessing-rows-in-a-hierarchical-recordset-example"></a>Доступ к строкам в иерархических наборах записей (например)
-В следующем примере показано шаги, необходимые для получают доступ к строкам в иерархической [записей](../../../ado/reference/ado-api/recordset-object-ado.md):
+# <a name="accessing-rows-in-a-hierarchical-recordset-example"></a>Доступ к строкам в иерархическом наборе записей (пример)
+В следующем примере показаны шаги, необходимые для доступа к строкам в иерархическом [наборе записей](../../../ado/reference/ado-api/recordset-object-ado.md).
 
-1.  **Набор записей** объектов из **авторов** и **titleauthor** таблицы связаны по идентификатору автора.
+1.  Объекты **набора записей** из таблиц **authors** и **титлеаусор** связаны по идентификатору автора.
 
-2.  Внешний цикл отображает имя и фамилия каждого автора, состояние и идентификатор.
+2.  Внешний цикл отображает имя и фамилию каждого автора, состояние и идентификацию.
 
-3.  Добавленная коллекция **записей** для каждой строки извлекается из [поля](../../../ado/reference/ado-api/fields-collection-ado.md) коллекции и назначены *rstTitleAuthor*.
+3.  Добавленный **набор записей** для каждой строки извлекается из коллекции [полей](../../../ado/reference/ado-api/fields-collection-ado.md) и назначается *рсттитлеаусор*.
 
-4.  Внутренний цикл отображаются четыре поля из каждой строки в присоединенных **записей**.
+4.  Внутренний цикл отображает четыре поля из каждой строки в присоединенном **наборе записей**.
 
- [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) свойству **false** для иллюстративных целей, чтобы вы могли видеть главу изменяет явно в каждой итерации внешнего цикла. Для повышения эффективности в примере кода, можно переместить назначения на шаге 3 перед первой строкой в шаге 2, таким образом, назначение выполняется только один раз. Затем установите [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) свойства **true**, так что *rstTitleAuthor* неявно и автоматически изменится на соответствующие главы всякий раз, когда *rst* перемещается на новую строку.
+ Для иллюстрации в качестве значения свойства [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) задано **значение false** , чтобы можно было увидеть изменение главы явным образом в каждой итерации внешнего цикла. Чтобы сделать пример кода более эффективным, можно переместить назначение на шаге 3 перед первой строкой шага 2, чтобы назначение выполнялось только один раз. Затем задайте для свойства [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) **значение true**, чтобы *рсттитлеаусор* неявно и автоматически переменялся в соответствующую главу, когда *RST* перейдет в новую строку.
 
 ## <a name="example"></a>Пример
 
@@ -67,5 +67,5 @@ Sub datashape()
 End Sub
 ```
 
-## <a name="see-also"></a>См. также
- [Общие сведения о формировании данных](../../../ado/guide/data/data-shaping-overview.md) [поле объекта](../../../ado/reference/ado-api/field-object.md) [коллекция (ADO) поля](../../../ado/reference/ado-api/fields-collection-ado.md) [Грамматика формального формирования](../../../ado/guide/data/formal-shape-grammar.md) [Майкрософт служба формирования данных для OLE DB (Поставщик услуг ADO) ](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [необходимые поставщики для формирования данных](../../../ado/guide/data/required-providers-for-data-shaping.md) [фигуры предложении APPEND](../../../ado/guide/data/shape-append-clause.md) [фигуры команд в Общие](../../../ado/guide/data/shape-commands-in-general.md) [предложение COMPUTE для формирования](../../../ado/guide/data/shape-compute-clause.md) [Visual Basic для приложений-функций](../../../ado/guide/data/visual-basic-for-applications-functions.md)
+## <a name="see-also"></a>См. также:
+ [Общие сведения об обработке данных](../../../ado/guide/data/data-shaping-overview.md) [поле](../../../ado/reference/ado-api/field-object.md) [коллекции Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md) [формальное описание грамматики фигур](../../../ado/guide/data/formal-shape-grammar.md) [Служба формирования данных Майкрософт для OLE DB (поставщик служб ADO)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) [объекты набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [необходимые поставщики для операций](../../../ado/guide/data/required-providers-for-data-shaping.md) [добавления](../../../ado/guide/data/shape-append-clause.md) формы формирования данных [команды Shape в общем](../../../ado/guide/data/shape-commands-in-general.md) [Visual Basic для приложений](../../../ado/guide/data/visual-basic-for-applications-functions.md) [предложении COMPUTE](../../../ado/guide/data/shape-compute-clause.md)

@@ -1,5 +1,5 @@
 ---
-title: Свойство (RDS) | Документация Майкрософт
+title: Свойство Connect (RDS) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,19 +14,19 @@ ms.assetid: dbad5e77-b213-4eb8-aecf-d60f203fdb59
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ba8b5aa1f59fbb161da878f5930f83d2f6ff0bdd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964567"
 ---
 # <a name="connect-property-rds"></a>Свойство Connect (служба удаленных рабочих столов)
-Указывает имя базы данных, с которого запускаются операции запросов и обновлений.  
+Указывает имя базы данных, из которой выполняются операции запроса и обновления.  
   
- Можно задать **Connect** во время разработки в [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) теги ОБЪЕКТОВ объекта, или во время выполнения в коде (например, VBScript) сценария.  
+ Свойство **Connect** можно задать во время разработки в [RDS. Теги объекта элемента управления](../../../ado/reference/rds-api/datacontrol-object-rds.md) DataObject или во время выполнения в коде скрипта (например, VBScript).  
   
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,22 +37,22 @@ Run time: DataControl.Connect = "ConnectionString"
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *connectionString*  
- Допустимая строка подключения. Дополнительные общие сведения о строках подключения см. в разделе [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) свойства или к документации поставщика.  
+ *ConnectionString*  
+ Допустимая строка подключения. Дополнительные общие сведения о строках подключения см. в описании свойства [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) или документации поставщика.  
   
 > [!NOTE]
->  Указание в качестве поставщика для удаленного MS **RDS. DataControl** создаст сценарий четыре уровня. Сценарии, больше трех уровней не были протестированы и не должно возникнуть необходимости.  
+>  Указание MS Remote в качестве поставщика для **RDS. Элемент управления** "набором событий" создает сценарий из четырех уровней. Сценарии более трех уровней не были протестированы и не должны быть нужны.  
   
  *DataControl*  
- Объектную переменную, которая представляет **RDS. DataControl** объекта.  
+ Объектная переменная, представляющая **RDS. Объект элемента управления** .  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  [Объект DataControl (служба удаленных рабочих столов)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>См. также  
- [Пример свойства (VBScript) Connect](../../../ado/reference/rds-api/connect-property-example-vbscript.md)   
- [Метод запроса (RDS)](../../../ado/reference/rds-api/query-method-rds.md)   
- [Обновите метод (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)   
+## <a name="see-also"></a>См. также:  
+ [Пример свойства Connect (VBScript)](../../../ado/reference/rds-api/connect-property-example-vbscript.md)   
+ [Метод query (RDS)](../../../ado/reference/rds-api/query-method-rds.md)   
+ [Метод Refresh (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)   
  [Метод SubmitChanges (служба удаленных рабочих столов)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
 
 

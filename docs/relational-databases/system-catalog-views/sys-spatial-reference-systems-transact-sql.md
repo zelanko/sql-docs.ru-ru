@@ -1,5 +1,5 @@
 ---
-title: sys.spatial_reference_systems (Transact-SQL) | Документация Майкрософт
+title: sys. spatial_reference_systems (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,25 +22,25 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e6ffd36516fecba70618c79a7bbd0415f6bb2cb3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68073251"
 ---
-# <a name="sysspatialreferencesystems-transact-sql"></a>sys.spatial_reference_systems (Transact-SQL)
+# <a name="sysspatial_reference_systems-transact-sql"></a>sys.spatial_reference_systems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Список систем пространственной ссылки (SRID), поддерживаемых [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |spatial_reference_id|**int**|Идентификаторы SRID, поддерживаемые [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|authority_name|**nvarchar(128)**|Центр сертификации SRID.|  
-|authorized_spatial_reference_id|**int**|Идентификатор SRID, заданный центром сертификации, в **authority_name**.|  
-|well_known_text|**nvarchar(4000)**|Представление SRID в формате WKT.|  
-|unit_of_measure|**nvarchar(128)**|Имя единицы измерения.|  
+|authority_name|**nvarchar(128**|Центр сертификации SRID.|  
+|authorized_spatial_reference_id|**int**|SRID, заданный в центре **authority_name**.|  
+|well_known_text|**nvarchar (4000)**|Представление SRID в формате WKT.|  
+|unit_of_measure|**nvarchar(128**|Имя единицы измерения.|  
 |unit_conversion_factor|**float**|Длина единицы измерения в метрах.|  
   
 ## <a name="permissions"></a>Разрешения  

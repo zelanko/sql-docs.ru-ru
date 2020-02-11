@@ -1,5 +1,5 @@
 ---
-title: Производные Column Transformation Editor | Документация Майкрософт
+title: Редактор преобразования "производный столбец" | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4fc2701ad53cd0071be40100d168d5d5571d2958
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059571"
 ---
 # <a name="derived-column-transformation-editor"></a>редактор преобразования «Производный столбец»
@@ -44,18 +44,18 @@ ms.locfileid: "66059571"
   
  Значение этого свойства можно задать с помощью выражения свойства.  
   
- **См. также:** [Выражения служб Integration Services (SSIS)](expressions/integration-services-ssis-expressions.md), [Операторы (выражение служб SSIS)](expressions/operators-ssis-expression.md) и [Функции (выражение служб SSIS)](expressions/functions-ssis-expression.md).  
+ **См. также**: [Integration Services &#40;выражений&#41; ssis](expressions/integration-services-ssis-expressions.md), [Операторы &#40;&#41;выражений служб SSIS ](expressions/operators-ssis-expression.md)и [функции &#40;выражение служб SSIS&#41;](expressions/functions-ssis-expression.md)  
   
  **Тип данных**  
  При добавлении данных в новый столбец диалоговое окно **Редактор преобразования "Производный столбец"** автоматически оценивает выражение и задает соответствующий тип данных. Значение этого столбца доступно только для чтения. Дополнительные сведения см. в разделе [Integration Services Data Types](data-flow/integration-services-data-types.md).  
   
- **Длина**  
+ **Недопустим**  
  При добавлении данных в новый столбец диалоговое окно **Редактор преобразования "Производный столбец"** автоматически оценивает выражение и задает длину столбца для строковых данных. Значение этого столбца доступно только для чтения.  
   
- **Точность**  
+ **Обеспечивают**  
  При добавлении данных в новый столбец диалоговое окно **Редактор преобразования "Производный столбец"** автоматически задает точность для числовых данных, основываясь на типе данных. Значение этого столбца доступно только для чтения.  
   
- **Масштаб**  
+ **Масштабирование**  
  При добавлении данных в новый столбец диалоговое окно **Редактор преобразования "Производный столбец"** автоматически задает масштаб для числовых данных, основываясь на типе данных. Значение этого столбца доступно только для чтения.  
   
  **Кодовая страница**  
@@ -64,8 +64,8 @@ ms.locfileid: "66059571"
  **Настройка вывода ошибок**  
  Укажите способ обработки ошибок в диалоговом окне [Настройка вывода ошибок](../../2014/integration-services/configure-error-output.md) .  
   
-## <a name="see-also"></a>См. также  
- [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>См. также:  
+ [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Получение значений столбцов с помощью преобразования «Производный столбец»](data-flow/transformations/derive-column-values-by-using-the-derived-column-transformation.md)  
   
   

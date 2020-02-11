@@ -1,5 +1,5 @@
 ---
-title: Ключ объекта (ADOX) | Документация Майкрософт
+title: Ключевой объект (ADOX) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,39 +16,39 @@ ms.assetid: 55f116fe-4d56-4892-bffe-0cdd6fc727c9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f7e405cfdde86a4f19590a87035ff574e1d255c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965902"
 ---
 # <a name="key-object-adox"></a>Объект Key (ADOX)
-Представляет внешний, первичный или уникальный ключевого поля из таблицы базы данных.  
+Представляет первичное, внешнее или уникальное ключевое поле из таблицы базы данных.  
   
-## <a name="remarks"></a>Примечания  
- В следующем коде создается новый **ключ**:  
+## <a name="remarks"></a>Remarks  
+ Следующий код создает новый **ключ**:  
   
 ```  
 Dim obj As New Key  
 ```  
   
- С помощью свойств и коллекций **ключ** объекта, вы можете:  
+ Свойства и коллекции **ключевого** объекта позволяют:  
   
--   Определение ключа с [имя](../../../ado/reference/adox-api/name-property-adox.md) свойство.  
+-   Найдите ключ со свойством [Name](../../../ado/reference/adox-api/name-property-adox.md) .  
   
--   Определить, является ли ключ основной, внешний или уникальными [тип](../../../ado/reference/adox-api/type-property-key-adox.md) свойства.  
+-   Определите, является ли ключ первичным, внешним или уникальным с помощью свойства [Type](../../../ado/reference/adox-api/type-property-key-adox.md) .  
   
--   Доступ к базе данных столбцы ключа с [столбцы](../../../ado/reference/adox-api/columns-collection-adox.md) коллекции.  
+-   Получите доступ к столбцам базы данных ключа с помощью коллекции [Columns](../../../ado/reference/adox-api/columns-collection-adox.md) .  
   
--   Укажите имя связанной таблицы с [RelatedTable](../../../ado/reference/adox-api/relatedtable-property-adox.md) свойство.  
+-   Укажите имя связанной таблицы со свойством [RelatedTable](../../../ado/reference/adox-api/relatedtable-property-adox.md) .  
   
--   Определить действие, выполняемое для удаления или обновления первичного ключа с [DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md) и [UpdateRule](../../../ado/reference/adox-api/updaterule-property-adox.md) свойства.  
+-   Определите действие, выполняемое при удалении или обновлении первичного ключа с помощью свойств [DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md) и [UpdateRule](../../../ado/reference/adox-api/updaterule-property-adox.md) .  
   
- Этот раздел содержит следующие подразделы.  
+ Этот раздел содержит следующий раздел.  
   
 -   [Свойства, методы и события объекта Key](../../../ado/reference/adox-api/key-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
- [Append коллекции Keys метод, тип ключа, RelatedColumn, RelatedTable и UpdateRule свойства (Visual Basic)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+## <a name="see-also"></a>См. также:  
+ [Пример свойств для добавления ключей, типа ключа, RelatedColumn, RelatedTable и UpdateRule (Visual Basic)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Коллекция Columns (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Коллекция Keys (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)

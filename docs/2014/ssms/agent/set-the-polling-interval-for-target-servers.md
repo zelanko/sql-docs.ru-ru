@@ -15,18 +15,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1578bbefc9ae17baae56799d943e5ae6186628ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63033651"
 ---
-# <a name="set-the-polling-interval-for-target-servers"></a>Установка интервала опроса на целевых серверах
-  В этом разделе описывается установка частоты, с которой агент [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обновляет данные с главного сервера на целевых серверах. Задание — это указанная последовательность действий, выполняемых агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Многосерверное задание — это задание, которое главный сервер выполняет на одном или нескольких целевых серверах.  
+# <a name="set-the-polling-interval-for-target-servers"></a>Set the Polling Interval for Target Servers
+  В этом разделе описывается, как задать частоту [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , с которой агент обновляет данные с главного сервера на целевые серверы. Задание — это указанная последовательность действий, выполняемых агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Многосерверное задание — это задание, которое главный сервер выполняет на одном или нескольких целевых серверах.  
   
 -   **Перед началом:**  [Безопасность](#Security)  
   
--   **Для установки интервала опроса на целевых серверах используется:**  [среды SQL Server Management Studio](#SSMS), [Transact-SQL](#TSQL)  
+-   **Установка интервала опроса для целевых серверов с помощью:**  [SQL Server Management Studio](#SSMS), [Transact-SQL](#TSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
  На каждом целевом сервере может одновременно выполняться только один экземпляр одного и того же задания. Каждый целевой сервер периодически опрашивает главный сервер, загружает копию новых назначенных ему заданий и отключается. Целевой сервер выполняет задание локально, а затем снова подключается к главному серверу, чтобы передать результирующее состояние задания.  
@@ -61,11 +61,11 @@ ms.locfileid: "63033651"
   
 1.  В обозревателе объектов подключитесь к экземпляру компонента Database Engine и разверните его.  
   
-2.  На панели инструментов нажмите кнопку **Создать запрос**.  
+2.  На панели инструментов щелкните **Новый запрос**.  
   
-3.  В окне запроса используйте [sp_post_msx_operation &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql) системную хранимую процедуру, чтобы задать интервал опроса на целевых серверах.  
+3.  В окне запроса используйте системную хранимую процедуру [sp_post_msx_operation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql) , чтобы задать интервал опроса для целевых серверов.  
   
-## <a name="see-also"></a>См. также  
- [dbo.sysdownloadlist &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysdownloadlist-transact-sql)  
+## <a name="see-also"></a>См. также:  
+ [dbo. sysdownloadlist &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysdownloadlist-transact-sql)  
   
   

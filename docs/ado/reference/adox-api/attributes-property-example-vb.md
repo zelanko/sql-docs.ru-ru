@@ -1,5 +1,5 @@
 ---
-title: Атрибуты пример свойства (Visual Basic) | Документация Майкрософт
+title: Пример свойства Attributes (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: c0ed8195-09af-42c8-99c7-038ecc8a5c9f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 378fecc379febf3daa6e17ebb2ccad748c40989f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67967136"
 ---
 # <a name="attributes-property-example-vb"></a>Пример свойства Attributes (Visual Basic)
-В этом примере показано [атрибуты](../../../ado/reference/adox-api/attributes-property-adox.md) свойство [столбец](../../../ado/reference/adox-api/column-object-adox.md). Задание значения **adColNullable** позволяет пользователю задать значение [записей](../../../ado/reference/ado-api/recordset-object-ado.md) [поле](../../../ado/reference/ado-api/field-object.md) пустую строку. В этом случае пользователь может различать записи, где данные неизвестны и записи, где данные не применяются.  
+В этом примере демонстрируется свойство [Attributes](../../../ado/reference/adox-api/attributes-property-adox.md) [столбца](../../../ado/reference/adox-api/column-object-adox.md). Задание значения **адколнуллабле** позволяет пользователю задать значение [поля](../../../ado/reference/ado-api/field-object.md) [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) в виде пустой строки. В этом случае пользователь может различать записи, в которых данные не известны, и запись, в которой данные не применяются.  
   
 ```  
 ' BeginAttributesVB  
@@ -125,7 +125,7 @@ End Sub
 ' EndAttributesVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство Attributes (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)   
- [Объект Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Объект каталога (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Объект Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)

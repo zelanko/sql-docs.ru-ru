@@ -1,5 +1,5 @@
 ---
-title: Введите свойства (столбец) (ADOX) | Документация Майкрософт
+title: Свойство Type (Column) (ADOX) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -20,25 +20,25 @@ ms.assetid: 5c6718b6-f728-478a-8afb-5d17b0a91d1f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 190d60fc5724286118a2209a60f8bee1d0835a37
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965021"
 ---
 # <a name="type-property-column-adox"></a>Свойство Type (Column) (ADOX)
 Указывает тип данных столбца.  
   
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
- Возвращает или задает **Long** значение, которое может принимать одно из [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) константы. Значение по умолчанию — **adVarWChar**.  
+ Задает или возвращает **длинное** значение, которое может быть одной из констант [дататипинум](../../../ado/reference/ado-api/datatypeenum.md) . Значение по умолчанию — **адварвчар**.  
   
-## <a name="remarks"></a>Примечания  
- Это свойство доступно для чтения/записи, до [столбец](../../../ado/reference/adox-api/column-object-adox.md) объект добавляется в коллекцию или к другому объекту, после чего она доступна только для чтения.  
+## <a name="remarks"></a>Remarks  
+ Это свойство доступно для чтения и записи до тех пор, пока объект [столбца](../../../ado/reference/adox-api/column-object-adox.md) не будет добавлен к коллекции или другому объекту, после чего он доступен только для чтения.  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  [Объект Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример свойства ParentCatalog (Visual Basic)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
- [Свойство Type (ключ) (ADOX)](../../../ado/reference/adox-api/type-property-key-adox.md)   
+ [Свойство Type (Key) (ADOX)](../../../ado/reference/adox-api/type-property-key-adox.md)   
  [Свойство Type (Table) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)

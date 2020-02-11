@@ -11,18 +11,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 66cbc5b8b54ec2507bb4fbe96443afa25386de96
-ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68670499"
 ---
 # <a name="backup-restore-and-move-the-ssis-catalog"></a>Резервное копирование, восстановление и перемещение каталога служб SSIS
+  
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] включена база данных SSISDB. Создайте запрос представления в базе данных SSISDB для просмотра объектов, настроек и рабочих данных, которые хранятся в каталоге **SSISDB** . Этот раздел содержит инструкции для выполнения резервного копирования и восстановления базы данных.  
   
  В каталоге **SSISDB** хранятся пакеты, которые развернуты на сервере [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Дополнительные сведения о каталоге см. в разделе [Каталог служб SSIS](catalog/ssis-catalog.md).  
   
-##  <a name="backup"></a> Создание резервной копии базы данных служб SSIS  
+##  <a name="backup"></a>Создание резервной копии базы данных служб SSIS  
   
 1.  Откройте среду [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] и установите соединение с экземпляром [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
@@ -38,7 +39,7 @@ ms.locfileid: "68670499"
   
     ```  
   
-3.  Выполните резервное копирование базы данных SSISDB с помощью диалогового окна **Создание резервной копии базы данных** в [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Дополнительные сведения см. в разделе [Как создать резервную копию базы данных (среда SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812).  
+3.  Выполните резервное копирование базы данных SSISDB с помощью диалогового окна **Создание резервной копии базы данных** в [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Дополнительные сведения см. в разделе [Как создать резервную копию базы данных (среда SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812).  
   
 4.  Создайте скрипт CREATE LOGIN для ## MS_SSISServerCleanupJobLogin ##, выполнив следующие действия. Дополнительные сведения см. в разделе [CREATE LOGIN (Transact-SQL)](/sql/t-sql/statements/create-login-transact-sql).  
   
@@ -58,7 +59,7 @@ ms.locfileid: "68670499"
   
     1.  В обозревателе объектов разверните узел **Агент SQL Server** , а затем узел **Задания** .  
   
-    2.  Щелкните правой кнопкой мыши задание по обслуживанию служб SSIS и выберите **Внести в скрипт задание как** > **СОЗДАТЬ в** > **В новом окне редактора запросов**.  
+    2.  Щелкните правой кнопкой мыши задание обслуживания сервера SSIS, а затем выберите создать **Скрипт** > **для задания в** > **новом окне редактора запросов**.  
   
 ### <a name="to-restore-the-ssis-database"></a>Восстановление базы данных служб SSIS  
   
@@ -79,7 +80,8 @@ ms.locfileid: "68670499"
   
     ```  
   
-     [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] требуют предоставления разрешения UNSAFE для имени входа, поскольку имени входа необходим дополнительный доступ к ресурсам, на которые существуют ограничения, например API-интерфейс Microsoft Win32. Дополнительные сведения о коде разрешения UNSAFE см. в разделе [Creating an Assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md).  
+     
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] требуют предоставления разрешения UNSAFE для имени входа, поскольку имени входа необходим дополнительный доступ к ресурсам, на которые существуют ограничения, например API-интерфейс Microsoft Win32. Дополнительные сведения о коде разрешения UNSAFE см. в разделе [Creating an Assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md).  
   
     ```  
     Create Login MS_SQLEnableSystemAssemblyLoadingUser  
@@ -91,11 +93,11 @@ ms.locfileid: "68670499"
   
 3.  Восстановите базу данных SSISDB из резервной копии с помощью диалогового окна **Восстановление базы данных** в [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Дополнительные сведения см. в следующих разделах:  
   
-    -   [Восстановление базы данных (страница "Общие")](general-page-of-integration-services-designers-options.md)  
+    -   [Восстановление базы данных &#40;общую страницу&#41;](general-page-of-integration-services-designers-options.md)  
   
-    -   [Восстановление базы данных (страница "Файлы")](../relational-databases/backup-restore/restore-database-files-page.md)  
+    -   [Страница «Восстановление файлов &#40;базы данных»&#41;](../relational-databases/backup-restore/restore-database-files-page.md)  
   
-    -   [Восстановление базы данных (страница "Параметры")](../relational-databases/backup-restore/restore-database-options-page.md)  
+    -   [Страница "Восстановление параметров &#40;базы данных"&#41;](../relational-databases/backup-restore/restore-database-options-page.md)  
   
 4.  Выполните скрипт, созданный в разделе [Создание резервной копии базы данных служб SSIS](#backup) для ##MS_SSISServerCleanupJobLogin##, sp_ssis_startup и заданий по обслуживанию служб SSIS. Убедитесь, что агент SQL Server запущен.  
   
@@ -127,11 +129,11 @@ ms.locfileid: "68670499"
         > [!NOTE]  
         >  Если главный ключ базы данных еще не зашифрован главным ключом сервера, то в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] отобразится следующее предупреждающее сообщение. Пропустите это предупреждающее сообщение.  
         >   
-        >  **Не удается расшифровать текущий главный ключ. Ошибка пропущена, так как задан параметр FORCE.**  
+        >  **Не удается расшифровать текущий главный ключ. Ошибка пропущена, так как был указан параметр FORCE.**  
         >   
         >  Аргумент FORCE указывает, что следует продолжить процесс восстановления, даже если текущий главный ключ базы данных закрыт. Для каталога SSISDB это сообщение будет отображаться, поскольку главный ключ базы данных не является открытым в экземпляре, где осуществляется восстановление базы данных.  
   
-    -   **Метод 2.**  
+    -   **Метод 2**  
   
          Этот метод следует использовать при наличии исходного пароля, который использовался для создания SSISDB.  
   

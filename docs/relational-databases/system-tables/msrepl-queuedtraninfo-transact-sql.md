@@ -18,28 +18,28 @@ ms.assetid: af7a5baf-32ea-475f-b6b9-68c557b4980c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a94163e2fe4a1ed5be77dd4ae99f43d03cc35121
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68079169"
 ---
-# <a name="msreplqueuedtraninfo-transact-sql"></a>MSrepl_queuedtraninfo (Transact-SQL)
+# <a name="msrepl_queuedtraninfo-transact-sql"></a>MSrepl_queuedtraninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSreplication_queuedtraninfo** таблица используется процессом репликации для хранения сведений об отложенных команд все обновления подписок посредством очередей, которые используют обновление посредством очередей на базе SQL. Эта таблица хранится в базе данных подписки.  
+  Таблица **MSreplication_queuedtraninfo** используется процессом репликации для хранения сведений о командах в очереди, выданных всеми подписками, обновляемыми посредством очередей и использующих обновление посредством очередей на основе SQL. Эта таблица хранится в базе данных подписки.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|**издатель**|**sysname**|Имя издателя.|  
-|**publisher_db**|**sysname**|Имя базы данных публикации.|  
-|**публикации**|**sysname**|Имя публикации.|  
-|**tranid**|**sysname**|Идентификатор транзакции, в которой была выполнена команда из очереди.|  
+|**издателя**|**имеет sysname**|Имя издателя.|  
+|**publisher_db**|**имеет sysname**|Имя базы данных публикации.|  
+|**публикации**|**имеет sysname**|Имя публикации.|  
+|**транид**|**имеет sysname**|Идентификатор транзакции, в которой была выполнена команда из очереди.|  
 |**maxorderkey**|**bigint**|Только для внутреннего использования.|  
 |**commandcount**|**bigint**|Только для внутреннего использования.|  
   
-## <a name="see-also"></a>См. также  
- [Таблицы репликации &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Представления репликации &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

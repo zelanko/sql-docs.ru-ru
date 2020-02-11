@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 201b1496444888b207a1a72be640b9705ff1059d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62960152"
 ---
 # <a name="secure-the-publisher"></a>Организация безопасности издателя
@@ -71,9 +71,9 @@ ms.locfileid: "62960152"
 ## <a name="queue-reader-agent"></a>Агент чтения очереди.  
  Для всех издателей и публикаций (допускающих подписки, обновляемые посредством очередей), связанных с определенным распространителем, существует один агент чтения очереди. Дополнительные сведения см. в статье [Включение обновляемых подписок для публикации транзакций](../publish/enable-updating-subscriptions-for-transactional-publications.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Включение шифрования соединений в ядре СУБД (диспетчер конфигурации SQL Server)](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [Безопасность репликации SQL Server](view-and-modify-replication-security-settings.md)  
+ [Безопасность Репликация SQL Server](view-and-modify-replication-security-settings.md)  
   
   

@@ -16,41 +16,41 @@ ms.assetid: e010e794-7f0f-4026-8b5b-37328e437d63
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 15df27e3dc48decf743a78dd4d147a22dc7cf276
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931665"
 ---
 # <a name="parameter-object"></a>Объект Parameter
-Представляет параметр или аргумент, связанный с [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта на основании параметризованного запроса или хранимой процедуры.  
+Представляет параметр или аргумент, связанный с объектом [Command](../../../ado/reference/ado-api/command-object-ado.md) на основе параметризованного запроса или хранимой процедуры.  
   
-## <a name="remarks"></a>Примечания  
- Многие поставщики поддерживают параметризованные команды. Ниже приведены команды, в которых нужное действие определяется один раз, но переменные (или параметров) используются для изменения некоторые дополнительные сведения о команде. Например инструкцию SQL SELECT использовать параметр для определения условий соответствия предложение WHERE, и другой, чтобы определить имя столбца для СОРТИРОВКИ BY.  
+## <a name="remarks"></a>Remarks  
+ Многие поставщики поддерживают параметризованные команды. Это команды, в которых нужное действие определено один раз, но переменные (или параметры) используются для изменения некоторых сведений о команде. Например, инструкция SQL SELECT может использовать параметр для определения критерия сопоставления предложения WHERE, а другой — для определения имени столбца для предложения сортировки по.  
   
- **Параметр** объекты представляют параметры, связанные с параметризованными запросами или входные/выходные аргументы и возвращаемые значения для хранимых процедур. В зависимости от того, функциональные возможности поставщика, некоторые коллекции, методы или свойства **параметр** могут оказаться недоступными.  
+ Объекты **параметров** представляют параметры, связанные с параметризованными запросами, а также входные и выходные аргументы и возвращаемые значения хранимых процедур. В зависимости от функциональных возможностей поставщика некоторые коллекции, методы или свойства объекта **параметров** могут быть недоступны.  
   
- С помощью коллекций, методы и свойства **параметр** объекта, можно сделать следующее:  
+ С помощью коллекций, методов и свойств объекта **Parameter** можно выполнять следующие действия.  
   
--   Задает или возвращает имя параметра с [имя](../../../ado/reference/ado-api/name-property-ado.md) свойство.  
+-   Задайте или верните имя параметра с помощью свойства [Name](../../../ado/reference/ado-api/name-property-ado.md) .  
   
--   Задание или возврат значения параметра с [значение](../../../ado/reference/ado-api/value-property-ado.md) свойства. **Значение** — свойство по умолчанию **параметр** объекта.  
+-   Задайте или верните значение параметра со свойством [value](../../../ado/reference/ado-api/value-property-ado.md) . **Значение** является свойством по умолчанию для объекта **Parameter** .  
   
--   Задание или возврат характеристики параметров с [атрибуты](../../../ado/reference/ado-api/attributes-property-ado.md), [направление](../../../ado/reference/ado-api/direction-property.md), [точности](../../../ado/reference/ado-api/precision-property-ado.md), [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md), [ Размер](../../../ado/reference/ado-api/size-property-ado-parameter.md), и [тип](../../../ado/reference/ado-api/type-property-ado.md) свойства.  
+-   Установка или возврат характеристик параметров с помощью свойств [Attributes](../../../ado/reference/ado-api/attributes-property-ado.md), [Direction](../../../ado/reference/ado-api/direction-property.md), [Precision](../../../ado/reference/ado-api/precision-property-ado.md), [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md), [size](../../../ado/reference/ado-api/size-property-ado-parameter.md)и [Type](../../../ado/reference/ado-api/type-property-ado.md) .  
   
--   Передайте долго двоичных или символьных данных для параметра с [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) метод.  
+-   Передайте длинные двоичные или символьные данные в параметр с помощью метода [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) .  
   
--   Доступ к особые атрибуты поставщика, используя [свойства](../../../ado/reference/ado-api/properties-collection-ado.md) коллекции.  
+-   Доступ к атрибутам, зависящим от поставщика, с помощью коллекции [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) .  
   
- Если вы знаете имена и свойства параметров, связанные с помощью хранимой процедуры или параметризированного запроса необходимо вызвать, можно использовать [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) метод для создания **параметр** объектов с соответствующими параметрами свойств и используйте [Append](../../../ado/reference/ado-api/append-method-ado.md) метод, чтобы добавить их в [параметры](../../../ado/reference/ado-api/parameters-collection-ado.md) коллекции. Это позволяет задать и получить значения параметров не нужно звонить [обновить](../../../ado/reference/ado-api/refresh-method-ado.md) метод **параметры** коллекции для получения сведений о параметрах от поставщика, потенциально — ресурсоемкая операция.  
+ Если вы знакомы с именами и свойствами параметров, связанных с хранимой процедурой или параметризованным запросом, который необходимо вызвать, можно использовать метод [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) для создания объектов **параметров** с соответствующими параметрами свойств и использовать метод [append](../../../ado/reference/ado-api/append-method-ado.md) для их добавления в коллекцию [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) . Это позволяет задавать и возвращать значения параметров без вызова метода [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) в коллекции **Parameters** для получения сведений о параметрах от поставщика, потенциально требовательных к ресурсам операций.  
   
- **Параметр** объект не является безопасным для использования в сценариях.  
+ Объект **параметра** не является надежным для скриптов.  
   
- Этот раздел содержит следующие подразделы.  
+ Этот раздел содержит следующий раздел.  
   
--   [Параметр свойства объекта, методы и события](../../../ado/reference/ado-api/parameter-object-properties-methods-and-events.md)  
+-   [Свойства, методы и события объекта Parameter](../../../ado/reference/ado-api/parameter-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Метод CreateParameter (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
  [Коллекция Parameters (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   

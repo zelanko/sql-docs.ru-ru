@@ -1,5 +1,5 @@
 ---
-title: --(Комментарий) (многомерные Выражения) | Документация Майкрософт
+title: --(Comment) (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,13 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c848277505dde5fabb10247641ee6b7f955d84e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68006281"
 ---
-# <a name="comment---mdx-operator-reference"></a>Комментарий - Справочник по операторам многомерных Выражений
+# <a name="comment---mdx-operator-reference"></a>Comment-Справочник по операторам многомерных выражений
 
 
   Обозначает текст комментариев пользователя.  
@@ -31,7 +31,7 @@ ms.locfileid: "68006281"
  *Comment_Text*  
  Строка, содержащая текст комментария.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Комментарии могут занимать отдельную строку, добавляться в конец строк скрипта многомерных выражений или входить в инструкцию многомерных выражений. Сервер не обрабатывает комментарий.  
   
  Этот оператор используется для однострочных или вложенных комментариев. Комментарии, вставленные с помощью символов --, продолжаются до символа новой строки.  
@@ -54,9 +54,9 @@ WHERE
     [Measures].[Gross Profit Margin]  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Комментарий (MDX)](../mdx/comment-mdx.md)   
- [&#40;Комментарий&#41; &#40;многомерных Выражений&#41;](../mdx/comment-mdx-double-slash.md)   
- [Справочник по операторам многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>См. также:  
+ [Комментарий &#40;&#41;многомерных выражений](../mdx/comment-mdx.md)   
+ [&#40;комментарий&#41; &#40;&#41;многомерных выражений](../mdx/comment-mdx-double-slash.md)   
+ [Справочник по операторам многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-operator-reference-mdx.md)  
   
   

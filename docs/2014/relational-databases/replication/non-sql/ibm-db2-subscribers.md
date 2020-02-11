@@ -17,21 +17,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 558173381d88eac95fc2b6993e11a1104844abf7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022203"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 Subscribers
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает принудительные подписки на IBM DB2/AS 400, DB2/MVS и DB2/Universal Database через поставщики OLE DB, включенные в состав [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host Integration Server.  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]поддерживает принудительные подписки на IBM DB2/AS 400, DB2/MVS и DB2/универсальную базу данных с помощью поставщиков OLE DB, которые входят [!INCLUDE[msCoName](../../../includes/msconame-md.md)] в состав Host Integration Server.  
   
 ## <a name="configuring-an-ibm-db2-subscriber"></a>Настройка подписчика IBM DB2  
  Чтобы настроить подписчик IBM DB2, выполните следующие шаги:  
   
 1.  Установите последнюю версию поставщика [!INCLUDE[msCoName](../../../includes/msconame-md.md)] OLE DB для DB2 на распространитель:  
   
-    -   Если используется выпуск [!INCLUDE[ssEnterpriseEd11](../../../includes/ssenterpriseed11-md.md)], на веб-странице [Загрузки SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=149256) в разделе **Загружаемые файлы, относящиеся к CTP-версии** щелкните ссылку на последнюю версию пакета дополнительных компонентов Microsoft SQL Server 2008. На веб-странице **Пакет дополнительных компонентов Microsoft SQL Server 2008** найдите раздел **Поставщик данных OLE DB для DB2 (Майкрософт)** .  
+    -   Если используется выпуск [!INCLUDE[ssEnterpriseEd11](../../../includes/ssenterpriseed11-md.md)], на веб-странице [Загрузки SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=149256) в разделе **Загружаемые файлы, относящиеся к CTP-версии** щелкните ссылку на последнюю версию пакета дополнительных компонентов Microsoft SQL Server 2008. На веб-странице **Пакет дополнительных компонентов Microsoft SQL Server 2008** найдите раздел **Поставщик данных OLE DB для DB2 (Майкрософт)**.  
   
     -   При использовании выпуска [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Standard установите последнюю версию сервера служб [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] (HIS), содержащего этот поставщик.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "63022203"
   
 -   Если хотите предварительно создать таблицы на подписчике вместо того, чтобы они были созданы репликацией, используйте параметр только поддержка репликации. Дополнительные сведения см. в статье [Инициализация подписки на публикацию транзакций без моментального снимка](../initialize-a-transactional-subscription-without-a-snapshot.md).  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] допускает наличие более длинных имен таблиц и столбцов, чем DB2:  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]допускает более длинные имена таблиц и столбцов, чем DB2:  
   
     -   Если база данных публикации содержит таблицы с именами длиннее, чем имена, поддерживаемые на подписчике версией DB2, укажите альтернативное имя для свойства статьи destination_table. Дополнительные сведения об установке свойств во время создания публикации см. в статье, посвященной [созданию публикации на SQL Server 2016](../publish/create-a-publication.md), а также в статье об [определении статьи](../publish/define-an-article.md).  
   
@@ -107,52 +107,52 @@ ms.locfileid: "63022203"
 |`char(1-254)`|CHAR(1-254)|  
 |`char(255-8000)`|VARCHAR(255-8000)|  
 |`date`|DATE|  
-|`datetime`|timestamp|  
+|`datetime`|TIMESTAMP|  
 |`datetime2(0-7)`|VARCHAR(27)|  
 |`datetimeoffset(0-7)`|VARCHAR(34)|  
 |`decimal(1-31, 0-31)`|DECIMAL(1-31, 0-31)|  
 |`decimal(32-38, 0-38)`|VARCHAR(41)|  
-|`float(53)`|Double|  
+|`float(53)`|DOUBLE|  
 |`float`|FLOAT|  
 |`geography`|IMAGE|  
 |`geometry`|IMAGE|  
 |`hierarchyid`|IMAGE|  
-|`image`|VARCHAR(0) FOR BIT DATA<sup>1</sup>|  
+|`image`|VARCHAR (0) для БИТОВых данных<sup>1</sup>|  
 |`into`|INT|  
 |`money`|DECIMAL(19,4)|  
 |`nchar(1-4000)`|VARCHAR(1-4000)|  
-|`ntext`|VARCHAR(0)<sup>1</sup>|  
+|`ntext`|VARCHAR (0)<sup>1</sup>|  
 |`numeric(1-31, 0-31)`|DECIMAL(1-31,0-31)|  
 |`numeric(32-38, 0-38)`|VARCHAR(41)|  
 |`nvarchar(1-4000)`|VARCHAR(1-4000)|  
-|`nvarchar(max)`|VARCHAR(0)<sup>1</sup>|  
-|`real`|real|  
-|`smalldatetime`|timestamp|  
+|`nvarchar(max)`|VARCHAR (0)<sup>1</sup>|  
+|`real`|REAL|  
+|`smalldatetime`|TIMESTAMP|  
 |`smallint`|SMALLINT|  
 |`smallmoney`|DECIMAL(10,4)|  
-|`sql_variant`|Н/Д|  
+|`sql_variant`|Недоступно|  
 |`sysname`|VARCHAR(128)|  
-|`text`|VARCHAR(0)<sup>1</sup>|  
+|`text`|VARCHAR (0)<sup>1</sup>|  
 |`time(0-7)`|VARCHAR(16)|  
 |`timestamp`|CHAR(8) FOR BIT DATA|  
 |`tinyint`|SMALLINT|  
 |`uniqueidentifier`|CHAR(38)|  
 |`varbinary(1-8000)`|VARCHAR(1-8000) FOR BIT DATA|  
 |`varchar(1-8000)`|VARCHAR(1-8000)|  
-|`varbinary(max)`|VARCHAR(0) FOR BIT DATA<sup>1</sup>|  
-|`varchar(max)`|VARCHAR(0)<sup>1</sup>|  
-|`xml`|VARCHAR(0)<sup>1</sup>|  
+|`varbinary(max)`|VARCHAR (0) для БИТОВых данных<sup>1</sup>|  
+|`varchar(max)`|VARCHAR (0)<sup>1</sup>|  
+|`xml`|VARCHAR (0)<sup>1</sup>|  
   
- <sup>1</sup> в следующем разделе Дополнительные сведения о сопоставлениях с VARCHAR(0) см. в разделе.  
+ <sup>1</sup> дополнительные сведения о сопоставлениях с varchar (0) см. в следующем разделе.  
   
 ### <a name="data-type-mapping-considerations"></a>Вопросы сопоставления типов данных  
  При репликации на подписчики DB2 учтите следующие вопросы сопоставления типов данных:  
   
--   При сопоставлении [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char`, `varchar`, `binary` и `varbinary` в типы данных DB2 CHAR, VARCHAR, CHAR FOR BIT DATA и VARCHAR FOR BIT DATA, соответственно, репликация задает длину типа данных DB2 должны совпадать как для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] типа.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char`При сопоставлении `binary` , `varbinary` и в DB2 char, varchar, char для битовых данных и varchar для битовых данных соответственно, репликация задает длину типа данных DB2, совпадающую с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] типом. `varchar`  
   
      Это позволяет успешно создавать таблицы на подписчике до тех пор, пока ограничение размера страницы DB2 достаточно велико, чтобы вместить максимальный размер строки. Убедитесь, что имя входа, используемое для доступа к базе данных DB2, имеет разрешения на доступ к табличным пространствам достаточного размера для таблиц, реплицируемых в DB2.  
   
--   DB2 может поддерживать столбцы типа VARCHAR размером до 32 килобайт (КБ), поэтому некоторые столбцы больших объектов [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] могут соответствующим образом сопоставляться со столбцами DB2 типа VARCHAR. Однако поставщик OLE DB, используемый репликацией для DB2, не поддерживает сопоставление больших объектов [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с большими объектами DB2. По этой причине [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `text`, `varchar(max)`, `ntext`, и `nvarchar(max)` сопоставление столбцов с типом VARCHAR(0) в создаваемых скриптах. Значение длины 0 должно меняться на соответствующее значение до применения скрипта к подписчику. Если длина типа данных не изменяется, то при попытке создания таблицы на подписчике DB2 возникает ошибка 604 (ошибка 604 указывает на недопустимую точность или длину атрибута типа данных).  
+-   DB2 может поддерживать столбцы типа VARCHAR размером до 32 килобайт (КБ), поэтому некоторые столбцы больших объектов [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] могут соответствующим образом сопоставляться со столбцами DB2 типа VARCHAR. Однако поставщик OLE DB, используемый репликацией для DB2, не поддерживает сопоставление больших объектов [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с большими объектами DB2. По [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `text`этой причине столбцы, `varchar(max)`, `ntext`и `nvarchar(max)` сопоставляются с varchar (0) в создаваемых скриптах создания. Значение длины 0 должно меняться на соответствующее значение до применения скрипта к подписчику. Если длина типа данных не изменяется, то при попытке создания таблицы на подписчике DB2 возникает ошибка 604 (ошибка 604 указывает на недопустимую точность или длину атрибута типа данных).  
   
      На основе своих знаний исходной реплицируемой таблицы определите, подходит ли она для сопоставления большого объекта [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с элементом DB2 переменной длины, и укажите соответствующую максимальную длину в пользовательском скрипте создания. Сведения об указании пользовательского скрипта создания см. в описании шага 5 в подразделе «Настройка подписчика IBM DB2» данного раздела.  
   
@@ -161,12 +161,12 @@ ms.locfileid: "63022203"
   
      Если не существует соответствующего сопоставления для столбца больших объектов, рассмотрите возможность использования фильтрации для статьи, чтобы столбец не реплицировался. Дополнительные сведения см. в статье [Фильтрация опубликованных данных](../publish/filter-published-data.md).  
   
--   При репликации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `nchar` и `nvarchar` в типы данных DB2 CHAR и VARCHAR репликации используется та же длина для типа DB2, что и для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] типа. Однако длина типа данных может быть слишком мала для созданной таблицы DB2.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `nchar` При репликации и `nvarchar` в DB2 char и varchar репликация использует тот же описатель длины для типа DB2, что и для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] типа. Однако длина типа данных может быть слишком мала для созданной таблицы DB2.  
   
-     В некоторых средах DB2 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char` элемент данных не ограничивается однобайтовыми символами; длина элемента типа CHAR или VARCHAR должны это учитывать. Следует также принять во внимание символы *shift in* (сдвиг внутрь) и *shift out* (сдвиг наружу), если в них есть необходимость. Если при репликации таблиц со `nchar` и `nvarchar` столбцов, может потребоваться указать увеличить максимальную длину для типа данных в пользовательском скрипте создания. Сведения об указании пользовательского скрипта создания см. в описании шага 5 в подразделе «Настройка подписчика IBM DB2» данного раздела.  
+     В некоторых средах [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char` DB2 элемент данных не ограничивается однобайтовыми символами. значение длины элемента типа CHAR или VARCHAR должно учитывать. Следует также принять во внимание символы *shift in* (сдвиг внутрь) и *shift out* (сдвиг наружу), если в них есть необходимость. При репликации таблиц со `nchar` столбцами и `nvarchar` может потребоваться указать более большую максимальную длину для типа данных в пользовательском скрипте создания. Сведения об указании пользовательского скрипта создания см. в описании шага 5 в подразделе «Настройка подписчика IBM DB2» данного раздела.  
   
-## <a name="see-also"></a>См. также  
- [Non-SQL Server Subscribers](non-sql-server-subscribers.md)   
+## <a name="see-also"></a>См. также:  
+ [Подписчики, не относящиеся к SQL Server](non-sql-server-subscribers.md)   
  [Подписка на публикации](../subscribe-to-publications.md)  
   
   

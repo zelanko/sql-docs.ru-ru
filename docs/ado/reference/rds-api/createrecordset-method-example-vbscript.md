@@ -15,17 +15,17 @@ ms.assetid: cce0d8b5-e87b-4f7b-a8a0-37d5025a1f5d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8dde6e14283195ef3b56d545a58a95c307774223
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964521"
 ---
 # <a name="createrecordset-method-example-vbscript"></a>Пример метода CreateRecordset (VBScript)
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- В этом примере кода создается [записей](../../../ado/reference/ado-api/recordset-object-ado.md) на стороне сервера. Он содержит два столбца с четырьмя строками. Вырежьте и вставьте следующий код в блокноте или другом текстовом редакторе и сохраните его как **CreateRecordsetVBS.asp**.  
+ Этот пример кода создает [набор записей](../../../ado/reference/ado-api/recordset-object-ado.md) на стороне сервера. В нем есть два столбца с четырьмя строками. Вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **креатерекордсетвбс. ASP**.  
   
 ```  
 <!-- BeginCreateRecordsetVBS -->  
@@ -167,8 +167,8 @@ End Sub
 <!-- EndCreateRecordsetVBS -->  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Пример метода CreateRecordset (служба удаленных рабочих СТОЛОВ)](../../../ado/reference/rds-api/createrecordset-method-rds.md)   
+## <a name="see-also"></a>См. также:  
+ [Метод CreateRecordset (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
 
 

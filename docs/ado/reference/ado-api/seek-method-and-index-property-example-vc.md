@@ -1,5 +1,5 @@
 ---
-title: Примеры метода Seek и свойства Index (Visual C++) | Документация Майкрософт
+title: Пример метода Seek и свойства Index (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 57bda520-e98b-443c-a8bc-d8430e89a383
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e19a30e60bb953dd8f521699b23fd00406d2d95d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931079"
 ---
 # <a name="seek-method-and-index-property-example-vc"></a>Примеры метода Seek и свойства Index (Visual C++)
-В этом примере используется [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта [Seek](../../../ado/reference/ado-api/seek-method.md) метод и [индекс](../../../ado/reference/ado-api/index-property.md) свойство в сочетании с заданной ***идентификатор сотрудника***, чтобы найти Имя сотрудника в ***сотрудников*** таблицы в базе данных Nwind.mdb.  
+В этом примере используется метод [Seek](../../../ado/reference/ado-api/seek-method.md) объекта [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) и свойство [index](../../../ado/reference/ado-api/index-property.md) в сочетании с данным ***идентификатором сотрудника***, чтобы найти имя сотрудника в таблице ***Employees*** базы данных Nwind. mdb.  
   
 ```  
 // BeginSeekCpp.cpp  
@@ -225,7 +225,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Свойство Index](../../../ado/reference/ado-api/index-property.md)   
+## <a name="see-also"></a>См. также:  
+ [Свойство index](../../../ado/reference/ado-api/index-property.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Метод Seek](../../../ado/reference/ado-api/seek-method.md)

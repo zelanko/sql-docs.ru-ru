@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7da89810a92c14f5b59ebcd546c4fb4cfa256f02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62637764"
 ---
 # <a name="create-xml-indexes"></a>Создание XML-индексов
@@ -44,7 +44,7 @@ ms.locfileid: "62637764"
   
 -   На имена первичных XML-индексов накладываются те же ограничения, что и на имена представлений.  
   
- Не удается создать XML-индекса на `xml` введите столбец в представлении, на **таблицы** переменной со `xml` типа столбцов или `xml` переменных типа.  
+ `xml` Нельзя создать XML-индекс для столбца типа в представлении, на переменную с табличным значением со **** `xml` столбцами типа или `xml` переменные типа.  
   
 -   Для изменения столбца типа `xml` с помощью параметра ALTER TABLE ALTER COLUMN с нетипизированного на типизированный XML (или наоборот) для этого столбца не должно быть определено никаких XML-индексов. Если такой индекс существует, он должен быть сначала удален.  
   
@@ -99,7 +99,7 @@ FROM    sys.xml_indexes;
   
  Столбец **secondary_type_desc** может возвращать значения NULL, PATH, VALUE или PROPERTY. Для первичного XML-индекса всегда возвращается значение NULL.  
   
-### <a name="example-creating-secondary-xml-indexes"></a>Пример Создание вторичных XML-индексов  
+### <a name="example-creating-secondary-xml-indexes"></a>Пример. Создание вторичных XML-индексов  
  В следующем примере иллюстрируется создание вторичных XML-индексов. Здесь также выводятся сведения о созданных XML-индексах.  
   
 ```  
@@ -199,7 +199,7 @@ DROP TABLE T;
 Go  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [XML-индексы (SQL Server)](xml-indexes-sql-server.md)   
  [Данные XML (SQL Server)](xml-data-sql-server.md)  
   

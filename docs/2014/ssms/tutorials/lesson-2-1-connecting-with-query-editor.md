@@ -11,13 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bcb2454d9f6b4a6df465c33ca218c4a960f8099b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68187822"
 ---
 # <a name="connecting-with-query-editor"></a>Соединение с редактором запросов
+  
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] можно писать или изменять код без соединения с сервером. Это может оказаться полезным в том случае, если сервер недоступен или требуется экономить ограниченные ресурсы сервера или сети. Можно заменить соединение с редактором запросов на соединение с новым экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , не открывая нового окна редактора запросов и не вводя код повторно.  
   
 ## <a name="coding-offline"></a>Программирование в режиме «вне сети»  

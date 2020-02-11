@@ -9,12 +9,12 @@ manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 12/15/2019
-ms.openlocfilehash: 3305e682f6ccbbee4ac9710e29ae522eb7339910
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: a5f9e9b52186a2d4569ac30a591ae95acfa36101
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75241213"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "75656591"
 ---
 # <a name="compare-business-intelligence-capabilities-in-different-microsoft-environments"></a>Сравнение возможностей бизнес-аналитики в разных средах Microsoft
 
@@ -26,19 +26,19 @@ ms.locfileid: "75241213"
   
 ||SQL Server 2014 & SharePoint Server 2013|SharePoint Online план 2|Power BI для Office 365|  
 |-|----------------------------------------------|------------------------------|-----------------------------|  
-|Узлы бизнес-аналитики|[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]Галерея|Нет|Сайт Power BI|  
-|Центральное управление данными, совместное использование запросов и управление ими|Нет|Нет|Да ** <sup>1</sup>**|  
-|Интеграция с Master Data Services (MDS) и Data Quality Services (DQS)|Да|Нет|Нет|  
-|Расписание обновления данных|Да, но не поддерживает рабочие книги, содержащие данные Power Query|Нет|Да|  
-|Запрос на естественном языке (Q&A)|Нет|Нет|Да ** <sup>2</sup>**|  
-|Предсказуемое прогнозирование|Нет|Нет|Да ** <sup>3</sup>**|  
-|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]Интеграция|Да|Нет|Нет|  
+|Узлы бизнес-аналитики|[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]Галерея|нет|Сайт Power BI|  
+|Центральное управление данными, совместное использование запросов и управление ими|нет|нет|Да ** <sup>1</sup>**|  
+|Интеграция с Master Data Services (MDS) и Data Quality Services (DQS)|Да|нет|нет|  
+|Расписание обновления данных|Да, но не поддерживает рабочие книги, содержащие данные Power Query|нет|Да|  
+|Запрос на естественном языке (Q&A)|нет|нет|Да ** <sup>2</sup>**|  
+|Предсказуемое прогнозирование|нет|нет|Да ** <sup>3</sup>**|  
+|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]Интеграция|Да|нет|нет|  
 |
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]Интеграция (многомерные и табличные данные)|Да|Нет|Нет|  
-|Экспорт интерактивных панелей мониторинга Power View в презентацию PowerPoint|Да|Нет|Нет|  
-|Создание панели мониторинга в браузере|Да|Нет|Нет|  
-|Отслеживание использования|Да|Нет|Да|  
-|Использование безопасности на основе строк кубов [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|Да|Нет|Нет|  
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]Интеграция (многомерные и табличные данные)|Да|нет|нет|  
+|Экспорт интерактивных панелей мониторинга Power View в презентацию PowerPoint|Да|нет|нет|  
+|Создание панели мониторинга в браузере|Да|нет|нет|  
+|Отслеживание использования|Да|нет|Да|  
+|Использование безопасности на основе строк кубов [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|Да|нет|нет|  
 |||||
 
  **<sup>1</sup>**  [понимание роли администраторы данных в управление данными](https://support.office.com/Article/Understanding-the-Role-of-Data-Stewards-in-Data-Management-ae3352f3-4389-45e8-a682-7fd6edb92524?ui=en-US&rs=en-US&ad=US) и [видео: Управление Power BI информацией и администраторе данных](https://www.youtube.com/watch?v=8dHOj68ts7c).  
@@ -52,15 +52,15 @@ ms.locfileid: "75241213"
 ||SQL Server 2014 & SharePoint Server 2013|SharePoint Online план 2|Power BI для Office 365|  
 |-|----------------------------------------------|------------------------------|-----------------------------|  
 |Просмотр рабочих книг Microsoft Excel в браузере|Да, если размер рабочей книги меньше, чем 2 ГБ|Да, если размер рабочей книги меньше, чем 10 ГБ|Да, если размер рабочей книги меньше, чем 250 МБ|  
-|Просмотр данных в браузере в HTML5|Нет|Нет|Да|  
-|Приложения бизнес-аналитики для удаленного доступа к отчетам и панелям мониторинга|Нет|Нет|Да ** <sup>1</sup>**|  
-|Книга Excel с [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] в качестве источника данных **<sup>2</sup>**|Да|Нет|Нет|  
+|Просмотр данных в браузере в HTML5|нет|нет|Да|  
+|Приложения бизнес-аналитики для удаленного доступа к отчетам и панелям мониторинга|нет|нет|Да ** <sup>1</sup>**|  
+|Книга Excel с [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] в качестве источника данных **<sup>2</sup>**|Да|нет|нет|  
 |Возможность использования функций в различных браузерах и версиях|Да, для визуализации не в Power View **<sup>3</sup>**|Да, для файлов рабочей книги с размером меньше 10 МБ **<sup>3</sup>**|Да ** <sup>3</sup>**|  
 |||||
 
  **<sup>1</sup>**  [Power BI Майкрософт](https://apps.microsoft.com/windows/app/microsoft-power-bi/b7e7c94d-2ea3-4fa6-a277-9d19a1f697ba).  
   
- **<sup>2</sup>**  [книги PowerPivot в качестве источника данных](https://blogs.technet.com/b/excel_services__powerpivot_for_sharepoint_support_blog/archive/2013/02/15/powerpivot-workbook-as-a-data-source.aspx)  
+ **<sup>2</sup>**  [книги PowerPivot в качестве источника данных](https://support.office.com/article/Power-Pivot-Powerful-data-analysis-and-data-modeling-in-Excel-A9C2C6E2-CC49-4976-A7D7-40896795D045)  
   
  **<sup>3</sup>**  [Поддержка мобильных устройств в средствах бизнес-аналитики (BI)](https://msdn.microsoft.com/library/dn151146\(v=sql.110\).aspx) и [Планирование поддержки Reporting Services и Power View браузера (Reporting Services 2014)](https://msdn.microsoft.com/library/ms156511.aspx).  
   

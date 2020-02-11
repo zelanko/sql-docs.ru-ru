@@ -1,6 +1,6 @@
 ---
-title: sys.fn_PageResCracker (Transact-SQL) | Документация Майкрософт
-description: Документация по sys.fn_PageResCracker системной функции.
+title: sys. fn_PageResCracker (Transact-SQL) | Документация Майкрософт
+description: Документация по системной функции sys. fn_PageResCracker.
 ms.custom: ''
 ms.date: 09/18/2018
 ms.prod: sql
@@ -26,16 +26,16 @@ author: bluefooted
 ms.author: pamela
 manager: amitban
 ms.openlocfilehash: 6d8203979a0afdca1ae78b9bd51723c906c40ea2
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68267073"
 ---
-# <a name="sysfnpagerescracker-transact-sql"></a>sys.fn_PageResCracker (Transact-SQL)
+# <a name="sysfn_pagerescracker-transact-sql"></a>sys. fn_PageResCracker (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Возвращает `db_id`, `file_id`, и `page_id` для заданного `page_resource` значение. 
+Возвращает `db_id`, `file_id`и `page_id` для заданного `page_resource` значения. 
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,27 +46,27 @@ sys.fn_PageResCracker ( page_resource )
   
 ## <a name="arguments"></a>Аргументы  
 *page_resource*    
-— Это 8-байтное шестнадцатеричное формат ресурса страницы базы данных.
+Является 8-байтовым шестнадцатеричным форматом ресурса страницы базы данных.
   
 ## <a name="tables-returned"></a>Возвращаемые таблицы  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |db_id|**int**|Идентификатор базы данных|  
 |file_id|**int**|Идентификатор файла|  
 |page_id|**int**|Идентификатор страницы|  
   
-## <a name="remarks"></a>Примечания  
-`sys.fn_PageResCracker` используется для преобразования 8-байтное шестнадцатеричное представление страницы базы данных в набор строк, содержащий идентификатор базы данных, файл, идентификатор и идентификатор страницы.   
+## <a name="remarks"></a>Remarks  
+`sys.fn_PageResCracker`используется для преобразования 8-байтового шестнадцатеричного представления страницы базы данных в набор строк, содержащий идентификатор базы данных, идентификатор файла и идентификатор страницы.   
 
-Вы может получить доступ к ресурсу действительных страниц из `page_resource` столбец [sys.dm_exec_requests &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) динамического административного представления или [sys.sysprocesses &#40;Transact-SQL&#41; ](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) системное представление. Если ресурс Недопустимая страница используется, то возвращается значение NULL.  
-Главным образом используется `sys.fn_PageResCracker` облегчает соединения между этими представлениями и [sys.dm_db_page_info &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md) функции динамического управления, чтобы получить сведения о странице, такие как Объект, к которой он принадлежит.
+Допустимый ресурс страницы можно получить из `page_resource` столбца в динамическом административном представлении [sys. dm_exec_requests &#40;transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) или в системном представлении [sys. sysprocesses &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) . Если используется недопустимый ресурс страницы, возвращается значение NULL.  
+Основное использование функции `sys.fn_PageResCracker` заключается в упрощении соединений между этими представлениями и функцией динамического управления [sys. dm_db_page_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md) для получения сведений о странице, например объекта, которому она принадлежит.
   
 ## <a name="permissions"></a>Разрешения  
-Нужные пользователю `VIEW SERVER STATE` разрешение на сервере.  
+Пользователю требуется `VIEW SERVER STATE` разрешение на сервере.  
   
 ## <a name="examples"></a>Примеры  
-`sys.fn_PageResCracker` Функция может использоваться в сочетании с [sys.dm_db_page_info &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md) для устранения неполадок страница и связанные с ожиданий блокировок в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Следующий сценарий — пример того, как эти функции можно использовать для сбора сведений о всех активных запросов, ожидающих на некоторый тип ресурса страницы страницы базы данных. 
+Функцию можно использовать в сочетании с [sys. dm_db_page_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md) для устранения неполадок, связанных с страницами, и блокировки в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sys.fn_PageResCracker`  Следующий сценарий является примером того, как можно использовать эти функции для сбора сведений о странице базы данных для всех активных запросов, ожидающих некоторого типа ресурса страницы. 
   
 ```sql  
 SELECT page_info.* 
@@ -75,9 +75,9 @@ CROSS APPLY sys.fn_PageResCracker (d.page_resource) AS r
 CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id, 1) AS page_info
 ```  
   
-## <a name="see-also"></a>См. также  
- [sys.dm_db_page_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md)  
- [sys.sysprocesses &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
- [sys.dm_exec_requests (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [sys. dm_db_page_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md)  
+ [sys. sysprocesses &#40;&#41;Transact-SQL](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
+ [sys. dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
   

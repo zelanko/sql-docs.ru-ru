@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 612c39b57682e5b7cfcefd1988e7674f25fb913c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915714"
 ---
-# <a name="mssqlserver1406"></a>MSSQLSERVER_1406
+# <a name="mssqlserver_1406"></a>MSSQLSERVER_1406
     
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|1406|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
@@ -38,8 +38,8 @@ ms.locfileid: "62915714"
 ## <a name="user-action"></a>Действие пользователя  
  Отключите зеркальное отображение базы данных. После этого можно восстановить зеркальную базу данных, чтобы получить к ней доступ.  
   
-## <a name="see-also"></a>См. также  
- [Принудительный запуск службы в сеансе зеркального отображения базы данных (Transact-SQL)](../../database-engine/database-mirroring/force-service-in-a-database-mirroring-session-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Принудительная служба в сеансе зеркального отображения базы данных &#40;&#41;Transact-SQL](../../database-engine/database-mirroring/force-service-in-a-database-mirroring-session-transact-sql.md)   
  [Удаление зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
   
   

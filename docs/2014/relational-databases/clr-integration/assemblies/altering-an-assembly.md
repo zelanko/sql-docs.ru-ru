@@ -16,10 +16,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 780b64f59143d3bf2b8ef99e3da6d32a1fe160cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874113"
 ---
 # <a name="altering-an-assembly"></a>Изменение сборки
@@ -51,10 +51,10 @@ WITH PERMISSION_SET = EXTERNAL_ACCESS
   
  `ADD FILE FROM 'C:\Projects\Point\Point.cs' AS PointSource`  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Управление сборками интеграции со средой CLR](managing-clr-integration-assemblies.md)   
  [Создание сборки](creating-an-assembly.md)   
- [При удалении сборки](dropping-an-assembly.md)   
- [ALTER ASSEMBLY (Transact-SQL)](/sql/t-sql/statements/alter-assembly-transact-sql)  
+ [Удаление сборки](dropping-an-assembly.md)   
+ [ALTER ASSEMBLY &#40;&#41;Transact-SQL](/sql/t-sql/statements/alter-assembly-transact-sql)  
   
   

@@ -14,24 +14,24 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 650fe0fe02841c55caf0cfba864eb739386ca48a
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783149"
 ---
 # <a name="use-my-subscriptions"></a>Использовать «Мои подписки»
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] диспетчер отчетов содержит страницу **«Мои подписки** », которая организует все подписки в одном месте. Можно использовать страницу «Мои подписки» для просмотра, изменения и удаления существующих подписок. Однако ее нельзя использовать для создания подписок.  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]Диспетчер отчетов включает страницу **«Мои подписки** », которая организует все подписки в одном месте. Можно использовать страницу «Мои подписки» для просмотра, изменения и удаления существующих подписок. Однако ее нельзя использовать для создания подписок.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Native mode|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]Собственный режим|  
   
  На странице «Мои подписки» можно сортировать подписки по папкам, отчетам, описаниям, триггерам, дате последнего запуска и состоянию. Все значения сортируются по алфавиту, за исключением даты последнего запуска; по ней выполняется сортировка в хронологическом порядке.  
   
  Страница «Мои подписки» показывает лишь созданные вами подписки. На ней не отображаются ни подписки, принадлежащие другим пользователям (даже если вы на них подписаны), ни управляемые данными подписки.  
   
- В ней нельзя выполнить поиск подписки по имени, по сведениям о триггерах, состоянию и др. Дополнительные сведения см. в статьях [Создание, изменение и удаление стандартных &#40;подписок Reporting Services в&#41;основном режиме](create-and-manage-subscriptions-for-native-mode-report-servers.md).  
+ В ней нельзя выполнить поиск подписки по имени, по сведениям о триггерах, состоянию и др. Дополнительные сведения см. в статьях [Создание, изменение и удаление стандартных подписок &#40;Reporting Services в основном режиме&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md).  
   
 ## <a name="how-to-use-my-subscriptions"></a>Как использовать страницу «Мои подписки»  
  Страница «Мои подписки» доступна в диспетчере отчетов. Чтобы получить доступ к странице «Мои подписки», нажмите кнопку **Мои подписки** на общей панели инструментов диспетчера отчетов.  
@@ -52,7 +52,7 @@ $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastex
 #$subscriptions
 ```  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
  [Data-Driven Subscriptions](data-driven-subscriptions.md)   
  [Подписки и доставка (службы Reporting Services)](subscriptions-and-delivery-reporting-services.md)   
  [Создание подписок для работающих в основном режиме серверов отчетов и управление этими подписками](../create-manage-subscriptions-native-mode-report-servers.md)  

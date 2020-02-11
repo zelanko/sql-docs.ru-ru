@@ -16,16 +16,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6ffcdda8e1c6a3c85703ad7f3d6ed94ca0ca91fe
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70148717"
 ---
 # <a name="setting-properties---smo"></a>Установка свойств в SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  Свойства — это значения, которые хранят описательные сведения об объекте. Например, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Параметрыконфигурации<xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A> представлены свойствами объекта. К свойствам можно получать как прямой, так и косвенный доступ при помощи коллекции свойств. Для прямого доступа к свойствам используется следующий синтаксис:  
+  Свойства — это значения, которые хранят описательные сведения об объекте. Например, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] параметры конфигурации представлены свойствами <xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A> объекта. К свойствам можно получать как прямой, так и косвенный доступ при помощи коллекции свойств. Для прямого доступа к свойствам используется следующий синтаксис:  
   
  `objInstance.PropertyName`  
   
@@ -58,11 +58,11 @@ ms.locfileid: "70148717"
  Метод <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> задает поведение при загрузке свойств для остальной части приложения или до его сброса. Первоначальное поведение можно сохранить с помощью метода <xref:Microsoft.SqlServer.Management.Smo.Server.GetDefaultInitFields%2A> и восстановить его при необходимости.  
   
 ## <a name="examples"></a>Примеры  
-Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. [в разделе Создание проекта Visual&#35; C SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. [в статье Создание проекта Visual C&#35; SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
 
   
 ## <a name="getting-and-setting-a-property-in-visual-basic"></a>Возвращение и задание свойства на языке Visual Basic  
- В этом примере кода показано, как получить <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> свойство <xref:Microsoft.SqlServer.Management.Smo.Information> объекта <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> и как <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> задать свойство свойства равным элементу <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> **ExecuteSQL** перечисляемого типа.  
+ В этом примере кода показано, как получить <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> свойство <xref:Microsoft.SqlServer.Management.Smo.Information> объекта и как <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> задать свойство <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> свойства равным элементу **ExecuteSQL** <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> перечисляемого типа.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -75,7 +75,7 @@ srv.ConnectionContext.SqlExecutionModes = SqlExecutionModes.ExecuteSql
 ```
   
 ## <a name="getting-and-setting-a-property-in-visual-c"></a>Возвращение и задание свойства на языке Visual C#  
- В этом примере кода показано, как получить <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> свойство <xref:Microsoft.SqlServer.Management.Smo.Information> объекта <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> и как <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> задать свойство свойства равным элементу <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> **ExecuteSQL** перечисляемого типа.  
+ В этом примере кода показано, как получить <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> свойство <xref:Microsoft.SqlServer.Management.Smo.Information> объекта и как <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> задать свойство <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> свойства равным элементу **ExecuteSQL** <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> перечисляемого типа.  
   
 ```csharp  
 {   
@@ -154,7 +154,7 @@ tb.Create();
 ```  
   
 ## <a name="iterating-through-all-properties-of-an-object-in-visual-basic"></a>Проход по всем свойствам объекта на языке Visual Basic  
- Этот пример кода просматривает коллекцию <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> **свойств** объекта и [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] отображает их на экране вывода.  
+ Этот пример кода просматривает коллекцию **свойств** <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> объекта и отображает их на экране [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] вывода.  
   
  В этом примере объект <xref:Microsoft.SqlServer.Management.Smo.Property> заключен в квадратные скобки, поскольку он также является ключевым словом [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)].  
   
@@ -178,7 +178,7 @@ Next
 ```
   
 ## <a name="iterating-through-all-properties-of-an-object-in-visual-c"></a>Проход по всем свойствам объекта на языке Visual C#  
- Этот пример кода просматривает коллекцию <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> **свойств** объекта и [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] отображает их на экране вывода.  
+ Этот пример кода просматривает коллекцию **свойств** <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> объекта и отображает их на экране [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] вывода.  
   
 ```csharp  
 {   
@@ -201,7 +201,7 @@ sp.QuotedIdentifierStatus = false;
 ```  
   
 ## <a name="setting-default-initialization-fields-in-visual-basic"></a>Задание полей инициализации по умолчанию на языке Visual Basic  
- Этот пример кода демонстрирует, как свести к минимуму число свойств объекта, инициализируемых в программе SMO. Чтобы использовать объект <xref:System.Collections.Specialized.StringCollection>, необходимо включить инструкцию `using System.Collections.Specialized`.  
+ Этот пример кода демонстрирует, как свести к минимуму число свойств объекта, инициализируемых в программе SMO. Чтобы использовать объект `using System.Collections.Specialized`, необходимо включить инструкцию <xref:System.Collections.Specialized.StringCollection>.  
   
  При помощи приложения [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] можно сравнивать числовые инструкции, оправляемые экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], с этой оптимизацией.  
   
@@ -233,7 +233,7 @@ srv.SetDefaultInitFields(typ, sc)
 ```
   
 ## <a name="setting-default-initialization-fields-in-visual-c"></a>Задание полей инициализации по умолчанию на языке Visual C#  
- Этот пример кода демонстрирует, как свести к минимуму число свойств объекта, инициализируемых в программе SMO. Чтобы использовать объект <xref:System.Collections.Specialized.StringCollection>, необходимо включить инструкцию `using System.Collections.Specialized`.  
+ Этот пример кода демонстрирует, как свести к минимуму число свойств объекта, инициализируемых в программе SMO. Чтобы использовать объект `using System.Collections.Specialized`, необходимо включить инструкцию <xref:System.Collections.Specialized.StringCollection>.  
   
  При помощи приложения [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] можно сравнивать числовые инструкции, оправляемые экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], с этой оптимизацией.  
   

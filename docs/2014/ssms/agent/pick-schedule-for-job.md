@@ -15,20 +15,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 58076b9ad8c32563ae8502de148803ac762b35f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62472934"
 ---
 # <a name="pick-schedule-for-job"></a>Выбор расписания для задания
-  Используйте это диалоговое окно, чтобы выбрать расписание из списка имеющихся расписаний для задания агента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  Это диалоговое окно используется для выбора существующего расписания для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] задания агента.  
   
 ## <a name="options"></a>Параметры  
  **Доступные расписания**  
  Содержит список расписаний, доступных для данного задания. Поскольку задание и расписание должны иметь одного и того же владельца, этот список включает в себя только те расписания, которые принадлежат владельцу задания.  
   
- **Name**  
+ **Название**  
  Отображает имя расписания.  
   
  **Enabled**  
@@ -43,7 +43,7 @@ ms.locfileid: "62472934"
  **Свойства**  
  Открывает диалоговое окно **Свойства расписания задания** , в котором можно просмотреть сведения о расписании.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание и присоединение расписаний к заданиям](create-and-attach-schedules-to-jobs.md)  
   
   

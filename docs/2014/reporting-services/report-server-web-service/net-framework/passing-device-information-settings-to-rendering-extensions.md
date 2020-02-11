@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ea50de3955ab152cbd92d5fd50ef8b2281a67eb7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62518654"
 ---
 # <a name="passing-device-information-settings-to-rendering-extensions"></a>Передача настроек сведений об устройстве модулям подготовки отчетов к просмотру
@@ -42,7 +42,7 @@ ms.locfileid: "62518654"
 </DeviceInfo>  
 ```  
   
- При подготовке отчета в виде фрагмента HTML содержимое отчета находится в элементе TABLE, а элементы HTML и BODY не используются. Фрагмент HTML можно использовать для внедрения отчета в существующий HTML-документ. Дополнительные сведения о настройках сведений об устройстве для вывода в формате HTML см. в разделе [HTML Device Information Settings](../../html-device-information-settings.md).  
+ При подготовке отчета в виде фрагмента HTML содержимое отчета находится в элементе TABLE, а элементы HTML и BODY не используются. Фрагмент HTML можно использовать для внедрения отчета в существующий HTML-документ. Дополнительные сведения о параметрах сведений об устройстве для вывода в формате HTML см. в разделе [Настройки сведений об устройстве HTML](../../html-device-information-settings.md).  
   
 ## <a name="passing-device-information-using-url-access"></a>Передача сведений об устройстве с помощью доступа через URL-адрес  
  Настройки сведений об устройстве можно также передать с помощью доступа по URL-адресу. Настройки сведений об устройстве передаются как параметры URL-адреса. Чтобы создать готовый для просмотра отчет без панели инструментов средства просмотра HTML-страниц, можно передать серверу отчетов следующую строку доступа к URL-адресу:  
@@ -53,7 +53,7 @@ http://<Server Name>/reportserver?/SampleReports/Sales Order Detail&rs:Command=R
   
  Дополнительные сведения см. в разделе [Указание настроек сведений об устройстве в URL-адресе](../../specify-device-information-settings-in-a-url.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Параметры сведений об устройстве для модулей подготовки отчетов (службы Reporting Services)](../../device-information-settings-for-rendering-extensions-reporting-services.md)   
  [Настройка параметров модулей подготовки отчетов в RSReportServer.Config](../../customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [Создание приложений с помощью веб-службы и .NET Framework](building-applications-using-the-web-service-and-the-net-framework.md)  

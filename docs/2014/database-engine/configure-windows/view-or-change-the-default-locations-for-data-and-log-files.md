@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 06d17a4feaec0db614f61fb7761b37ea415efc24
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62808715"
 ---
 # <a name="view-or-change-the-default-locations-for-data-and-log-files-sql-server-management-studio"></a>Просмотр или изменение расположения по умолчанию для файлов данных и журнала (среда SQL Server Management Studio)
@@ -29,11 +29,11 @@ ms.locfileid: "62808715"
   
      [Рекомендации](#Recommendations)  
   
--   **Чтобы просмотреть или изменить расположение данных и журнала файлов по умолчанию, с помощью:**  
+-   **Просмотр или изменение местоположения по умолчанию для файлов данных и журналов с использованием следующих средств:**  
   
      [Среда SQL Server Management Studio](#SSMSProcedure)  
   
--   **Дальнейшие действия.**  [Изменение расположения по умолчанию](#FollowUp)  
+-   **Дальнейшие действия.**  [Изменение расположений по умолчанию](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
@@ -54,11 +54,11 @@ ms.locfileid: "62808715"
   
 3.  В области **Места хранения, используемые базой данных по умолчанию**можно просмотреть текущие расположения, используемые по умолчанию для новых файлов данных и файлов журнала. Чтобы изменить местоположение по умолчанию, введите новый путь по умолчанию в поле **Данные** или **Журнал** или нажмите кнопку обзора, перейдите к нужному пути и выберите его.  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. После изменения расположений по умолчанию  
+##  <a name="FollowUp"></a>Дальнейшие действия. После изменения расположений по умолчанию  
  Необходимо остановить и запустить службу SQL Server для завершения изменения.  
   
-## <a name="see-also"></a>См. также  
- [CREATE DATABASE (SQL Server Transact-SQL)](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
+## <a name="see-also"></a>См. также:  
+ [Создание &#40;базы данных SQL Server&#41;Transact-SQL](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
  [Создание базы данных](../../relational-databases/databases/create-a-database.md)  
   
   

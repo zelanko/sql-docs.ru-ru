@@ -1,5 +1,5 @@
 ---
-title: Динамические административные представления и функции (Transact-SQL), связанные с выполнением | Документация Майкрософт
+title: Динамические административные представления и функции, связанные с выполнением (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/27/2019
 ms.prod: sql
@@ -15,10 +15,10 @@ ms.assetid: aea07b33-f715-4b61-9d1e-8c77b03e9578
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: eaab973d2554e22d9fc7244850dcfbc0e8f3d4e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68130826"
 ---
 # <a name="execution-related-dynamic-management-views-and-functions-transact-sql"></a>Динамические административные представления и функции, связанные с выполнением (Transact-SQL)
@@ -53,11 +53,11 @@ ms.locfileid: "68130826"
 
   
 > [!NOTE]  
->  **Sys.dm_exec_query_transformation_stats** динамическое административное представление определяется только в информационных целях. Не поддерживается. Совместимость с будущими версиями не гарантируется.  
+>  Динамическое административное представление **sys. dm_exec_query_transformation_stats** идентифицируется только в информационных целях. Не поддерживается. Совместимость с будущими версиями не гарантируется.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Системные представления &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [Системные представления &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   
 

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 206ba778a5c131ac4f9260ed37de63b29de86820
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63025683"
 ---
 # <a name="save-trace-results-to-a-file-sql-server-profiler"></a>сохранить результаты трассировки в файл (приложение SQL Server Profiler)
@@ -38,7 +38,7 @@ ms.locfileid: "63025683"
   
      Отображается диалоговое окно **Сохранить как**.  
   
-4.  Укажите путь и имя файла в диалоговом окне **Сохранить как**. Нажмите кнопку **Сохранить.**  
+4.  Укажите путь и имя файла в диалоговом окне **Сохранить как**. Нажмите кнопку **Сохранить**.  
   
     > [!NOTE]  
     >  Убедитесь, что служба SQL Server обладает достаточными разрешениями для записи в файл в указанном каталоге.  
@@ -54,7 +54,7 @@ ms.locfileid: "63025683"
         > [!NOTE]  
         >  Когда флажок **Данные трассировки серверных процессов**снят, сервер не записывает события, если запись событий привела бы к существенному понижению производительности.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Приложение SQL Server Profiler](sql-server-profiler.md)  
   
   

@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 31ba88f3bc49d78dc8c68ac77ba6bda90e63aad0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63028381"
 ---
 # <a name="objecttype-trace-event-column"></a>Столбец события ObjectType Trace
@@ -39,11 +39,11 @@ ms.locfileid: "63028381"
 |8275|Системная таблица|  
 |8276|Триггер сервера|  
 |8277|(Пользовательская) таблица|  
-|8278|Просмотр|  
+|8278|Представление|  
 |8280|Расширенная хранимая процедура|  
 |16724|Триггер CLR|  
 |16964|База данных|  
-|16975|Object|  
+|16975|Объект|  
 |17222|Полнотекстовый каталог|  
 |17232|Хранимая процедура CLR|  
 |17235|схема|  
@@ -88,7 +88,7 @@ ms.locfileid: "63028381"
 |21318|Скалярная функция CLR|  
 |21321|Встроенная скалярная функция CLR|  
 |21328|Схема секционирования|  
-|21333|Пользовательская|  
+|21333|Пользователь|  
 |21571|Контракт службы компонента Service Broker|  
 |21572|Триггер базы данных|  
 |21574|Функция CLR с табличным значением|  
@@ -96,14 +96,14 @@ ms.locfileid: "63028381"
 |21581|Тип сообщения компонента Service Broker|  
 |21586|Маршрут компонента Service Broker|  
 |21587|Статистика|  
-|21825<br /><br /> 21827<br /><br /> 21831<br /><br /> 21843<br /><br /> 21847|Пользовательская|  
+|21825<br /><br /> 21827<br /><br /> 21831<br /><br /> 21843<br /><br /> 21847|Пользователь|  
 |22099|Служба компонента Service Broker|  
 |22601|Индекс|  
 |22604|Имя входа сертификата|  
 |22611|XML-схема|  
 |22868|Тип|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Хранимая процедура sp_trace_setevent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

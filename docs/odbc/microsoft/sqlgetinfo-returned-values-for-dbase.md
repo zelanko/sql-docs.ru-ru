@@ -17,17 +17,17 @@ ms.assetid: af64753c-c758-4b68-954b-2c84e3bbd93f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 247928cfbc7e051853bba0c7f49644a1a6203614
-ms.sourcegitcommit: bcc3b2c7474297aba17b7a63b17c103febdd0af9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68794682"
 ---
 # <a name="sqlgetinfo-returned-values-for-dbase"></a>Возвращаемые значения SQLGetInfo для dBASE
-В следующей таблице перечислены #defines для аргумента языка C и соответствующие значения, возвращаемые **SQLGetInfo**. Эти сведения можно получить, передав перечисленный #defines C-Language в **SQLGetInfo** в аргументе *финфотипе* . Дополнительные сведения о значениях, возвращаемых функцией **SQLGetInfo**, см. в справочнике программиста по *ODBC*.  
+В следующей таблице перечислены #defines *для аргумента* языка C и соответствующие значения, возвращаемые **SQLGetInfo**. Эти сведения можно получить, передав перечисленный #defines C-Language в **SQLGetInfo** в аргументе *финфотипе* . Дополнительные сведения о значениях, возвращаемых функцией **SQLGetInfo**, см. в *справочнике программиста по ODBC*.  
   
 > [!NOTE]  
->  Где **SQLGetInfo** возвращает 32-разрядную битовую маску, вертикальная&#124;черта () представляет побитовое или.  
+>  Где **SQLGetInfo** возвращает 32-разрядную битовую маску, вертикальная черта (&#124;) представляет побитовое или.  
   
 |инфотипе|Возвращаемое значение|  
 |--------------|--------------------|  
@@ -94,7 +94,7 @@ ms.locfileid: "68794682"
 |SQL_DRIVER_HENV|Обрабатывается диспетчером драйверов.|  
 |SQL_DRIVER_HLIB|Обрабатывается диспетчером драйверов.|  
 |SQL_DRIVER_HSTMT|Обрабатывается диспетчером драйверов.|  
-|SQL_DRIVER_NAME|"OdbcJt32.dll"|  
+|SQL_DRIVER_NAME|"OdbcJt32. dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
 |SQL_DRIVER_VER|"4,00.*nnnn*" (*nnnn* указывает дату сборки)|  
 |SQL_DROP_ASSERTION|0|  
@@ -141,7 +141,7 @@ ms.locfileid: "68794682"
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|Несколько значений|  
-|SQL_ODBC_SAG_CLI_ CONFORMANCE|SQL_OSCC_COMPLIANT|  
+|СООТВЕТСТВИЕ SQL_ODBC_SAG_CLI_|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
 |SQL_ODBC_VER|Из диспетчера драйверов|  
 |SQL_OJ_CAPABILITIES|Несколько значений|  
@@ -156,11 +156,11 @@ ms.locfileid: "68794682"
 |SQL_SCROLL_OPTIONS|Несколько значений|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
 |SQL_SERVER_NAME|DBASE|  
-|SQL_SPECIAL_CHARACTERS|"~\`\@}{\?" ";:/<,.!\>"#$%^&\*\_-+=\\ \[]&#124;"|  
+|SQL_SPECIAL_CHARACTERS|\`\@#$%^&"~\*\? / } {\> " ";:<,.!"\_-+=\\ \[] &#124; "|  
 |SQL_STRING_FUNCTIONS|Несколько значений|  
 |SQL_SUBQUERIES|Несколько значений|  
 |SQL_SYSTEM_FUNCTIONS|0|  
-|SQL_TABLE_TERM|ТАБЛИЦА|  
+|SQL_TABLE_TERM|Таблица|  
 |SQL_TIMEDATE_ADD_INTERVALS|0|  
 |SQL_TIMEDATE_DIFF_INTERVALS|0|  
 |SQL_TIMEDATE_FUNCTIONS|Несколько значений|  

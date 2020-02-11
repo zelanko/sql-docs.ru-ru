@@ -19,14 +19,14 @@ ms.assetid: b7f925d7-b05c-4376-bb49-f8d2c17b8b24
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 50a609d0cebe70ea5127ed448e57a70881e35097
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965227"
 ---
 # <a name="setpermissions-method-adox"></a>Метод SetPermissions (ADOX)
-Определяет разрешения для [группы](../../../ado/reference/adox-api/group-object-adox.md) или [пользователя](../../../ado/reference/adox-api/user-object-adox.md) объекта.  
+Задает разрешения для [группы](../../../ado/reference/adox-api/group-object-adox.md) или [пользователя](../../../ado/reference/adox-api/user-object-adox.md) на объекте.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,37 +36,37 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *Name*  
- Объект **строка** значение, указывающее имя объекта, для которого задаются разрешения.  
+ *Название*  
+ **Строковое** значение, указывающее имя объекта, для которого задаются разрешения.  
   
  *ObjectType*  
- Объект **Long** значение, которое может быть одним из [ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md) константы, которое указывает тип объекта, для которого необходимо получить разрешения.  
+ Значение типа **Long** , которое может быть одной из констант [обжекттипинум](../../../ado/reference/adox-api/objecttypeenum.md) , указывающее тип объекта, для которого нужно получить разрешения.  
   
  *Действие*  
- Объект **Long** значение, которое может быть одним из [ActionEnum](../../../ado/reference/adox-api/actionenum.md) константы, указывающее тип действия для выполнения при установке разрешений.  
+ Значение типа **Long** , которое может быть одной из констант [актионенум](../../../ado/reference/adox-api/actionenum.md) , которое указывает тип действия, выполняемого при установке разрешений.  
   
- *Права*  
- Объект **Long** значение, которое может быть битовой маской, из одного или нескольких из [RightsEnum](../../../ado/reference/adox-api/rightsenum.md) констант, указывающих права на установку.  
+ *LiveCycle*  
+ **Длинное** значение, которое может быть битовой маской одной или нескольких констант [ригхтсенум](../../../ado/reference/adox-api/rightsenum.md) , указывающих права на установку.  
   
- *Наследовать*  
- Необязательный параметр. Объект **Long** значение, которое может быть одним из [InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md) констант, определяющих, как объекты наследуют эти разрешения. Значение по умолчанию — **adInheritNone**.  
+ *Следующих*  
+ Необязательный параметр. Значение **типа Long** , которое может быть одной из констант [инхериттипинум](../../../ado/reference/adox-api/inherittypeenum.md) , которое указывает, как объекты будут наследовать эти разрешения. Значение по умолчанию — **адинхеритноне**.  
   
- *ObjectTypeId*  
- Необязательный параметр. Объект **Variant** значение, которое указывает идентификатор GUID для типа объекта поставщика, который не определен в спецификации OLE DB. Этот параметр является обязательным, если *ObjectType* присваивается **adPermObjProviderSpecific**; в противном случае он не используется.  
+ *обжекттипеид*  
+ Необязательный параметр. Значение **типа Variant** , указывающее идентификатор GUID для типа объекта поставщика, который не определен спецификацией OLE DB. Этот параметр является обязательным, если для *ObjectType* задано значение **адпермобжпровидерспеЦифик**. в противном случае он не используется.  
   
-## <a name="remarks"></a>Примечания  
- Если поставщик не поддерживает параметр права доступа для групп или пользователей, произойдет ошибка.  
+## <a name="remarks"></a>Remarks  
+ Если поставщик не поддерживает установку прав доступа для групп или пользователей, возникнет ошибка.  
   
 > [!NOTE]
->  При вызове **SetPermissions**, задавать действия **adAccessRevoke** переопределяет любые параметры *права* параметра. Не устанавливайте *действия* для **adAccessRevoke** Если вы хотите, чтобы права, указанные в *права* параметра вступили в силу.  
+>  При вызове **SetPermissions**Установка действий в **адакцессревоке** переопределяет все параметры параметра *Rights* . Не устанавливайте *действия* в **адакцессревоке** , если вы хотите, чтобы права, указанные в параметре *Rights* , вступили в силу.  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
   
 |||  
 |-|-|  
 |[Объект Group (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)|[Объект User (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)|  
   
-## <a name="see-also"></a>См. также  
- [GetPermissions и SetPermissions методы (Visual Basic)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
- [Метод GetPermissions (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)   
+## <a name="see-also"></a>См. также:  
+ [Примеры методов SetPermissions и Methods (Visual Basic)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
+ [Метод PermissionSet (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)   
  [Свойство Name (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)

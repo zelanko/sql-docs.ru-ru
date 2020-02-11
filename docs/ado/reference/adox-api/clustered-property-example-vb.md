@@ -1,5 +1,5 @@
 ---
-title: Clustered пример свойства (Visual Basic) | Документация Майкрософт
+title: Пример свойства Clustered (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 1cd30769-c8af-43e7-be27-12ed0434daa1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f2eb5e19e166a468a9ee30758da79d503f1b9932
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966952"
 ---
 # <a name="clustered-property-example-vb"></a>Пример свойства Clustered (Visual Basic)
-В этом примере показано [Clustered](../../../ado/reference/adox-api/clustered-property-adox.md) свойство [индекс](../../../ado/reference/adox-api/index-object-adox.md). Обратите внимание, что базы данных Microsoft Jet не поддерживают кластеризованные индексы, поэтому этот пример возвращает **False** для **Clustered** свойства во всех индексах в **Northwind** База данных.  
+В этом примере демонстрируется свойство [Clustered](../../../ado/reference/adox-api/clustered-property-adox.md) [индекса](../../../ado/reference/adox-api/index-object-adox.md). Обратите внимание, что базы данных Microsoft Jet не поддерживают кластеризованные индексы, поэтому в этом примере будет возвращено **значение false** для свойства **Clustered** всех индексов в базе данных **Northwind** .  
   
 ```  
 ' BeginClusteredVB  
@@ -72,8 +72,8 @@ End Sub
 ' EndClusteredVB  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Объект Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+## <a name="see-also"></a>См. также:  
+ [Объект каталога (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Свойство Clustered (ADOX)](../../../ado/reference/adox-api/clustered-property-adox.md)   
- [Объект INDEX (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
+ [Объект index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [Объект Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)

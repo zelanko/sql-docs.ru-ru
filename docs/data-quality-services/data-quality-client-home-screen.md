@@ -12,10 +12,10 @@ ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 8aaf6c9cb9f4c7ed0f006492e6e11ce82ef333f2
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251728"
 ---
 # <a name="data-quality-client-home-screen"></a>Главный экран клиента DQS
@@ -58,10 +58,10 @@ ms.locfileid: "75251728"
  **Мониторинг активности**  
  Отображает состояние всех действий (как текущих, так и прошлых), которые связаны с подключенным [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]. Типы отслеживаемых действий включают управление базами знаний, проекты качества данных и исправление данных на основе служб SSIS.  
   
- **Настройка**  
+ **Конфигурация**  
  Отображение свойств конфигурации для учетных записей службы эталонных данных (как в Azure Marketplace, так и непосредственно в службах эталонных данных), общие параметры (интерактивная очистка, сопоставление и профилирование) и параметры серьезности записи в журнал.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Базы знаний и домены DQS](../data-quality-services/dqs-knowledge-bases-and-domains.md)   
  [Проекты служб Data Quality &#40;DQS&#41;](../data-quality-services/data-quality-projects-dqs.md)   
  [администрирование DQS](../data-quality-services/dqs-administration.md)  

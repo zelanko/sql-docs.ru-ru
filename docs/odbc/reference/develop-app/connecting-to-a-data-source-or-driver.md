@@ -1,5 +1,5 @@
 ---
-title: Подключение к данным источника или драйвер | Документация Майкрософт
+title: Подключение к источнику данных или драйверу | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.assetid: e93027ab-9e60-47b7-ba96-8289dae32a22
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d51d92ae02084ea46c2a8bd2d73a27f0154e1a95
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68083143"
 ---
 # <a name="connecting-to-a-data-source-or-driver"></a>Подключение к источнику данных или драйверу
-Приложение может подключаться ко множеству драйверах и источниках данных. Это могут быть различные драйверы и источники данных, один драйвер и различных источников данных или даже нескольких подключений на один драйвер и источник данных.  
+Приложение может быть подключено к любому числу драйверов и источников данных. Это могут быть разнообразные драйверы и источники данных, один и тот же драйвер и различные источники данных или даже несколько подключений к одному и тому же драйверу и источнику данных.  
   
  Этот раздел содержит следующие подразделы.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "68083143"
   
 -   [Выделение дескриптора соединения](../../../odbc/reference/develop-app/allocating-a-connection-handle-odbc.md)  
   
--   [Атрибуты подключения](../../../odbc/reference/develop-app/connection-attributes.md)  
+-   [Атрибуты соединения](../../../odbc/reference/develop-app/connection-attributes.md)  
   
 -   [Установление подключения](../../../odbc/reference/develop-app/establishing-a-connection.md)  
   

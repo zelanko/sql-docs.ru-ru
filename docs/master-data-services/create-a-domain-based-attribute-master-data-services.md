@@ -15,10 +15,10 @@ ms.assetid: 11c31c9f-e6cc-47b7-b76a-d691f84c93c6
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 72f415b6a814019b99d4e73db482286f9d5560b1
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728531"
 ---
 # <a name="create-a-domain-based-attribute-master-data-services"></a>Создание атрибута на основе домена (службы Master Data Services)
@@ -27,8 +27,8 @@ ms.locfileid: "73728531"
 
   В службах [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]атрибут на основе домена создается, чтобы заполнить значения атрибута элементами сущности.  
   
-## <a name="prerequisites"></a>необходимые компоненты  
- Чтобы выполнить эту процедуру:  
+## <a name="prerequisites"></a>Предварительные требования  
+ Для выполнения этой процедуры:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
   
@@ -39,14 +39,14 @@ ms.locfileid: "73728531"
 -   должна существовать сущность, для которой создается атрибут. Дополнительные сведения см. в разделе [Создание сущности (службы Master Data Services)](../master-data-services/create-an-entity-master-data-services.md).  
   
 ## <a name="attribute-information"></a>Сведения об атрибутах  
- Для каждого созданного атрибута в сетке создается строка с семью столбцами. В следующей таблице приводятся описания этих столбцов.  
+ Для каждого созданного атрибута в сетке создается строка с семью столбцами. В следующей таблице приводится описание этих столбцов.  
   
-|Столбец|Описание|  
+|Столбец|Description|  
 |------------|-----------------|  
-|Состояние|Состояние атрибута.<br /><br /> При нажатии кнопки сохранить отображается ![значок для обновления состояния](../master-data-services/media/mds-statusicon-updating.png "ICon для обновления состояния ") , указывающий на то, что атрибут обновляется.<br /><br /> Если при создании или изменении атрибута возникли ошибки, отображается ![значок изображение состояния ошибки](../master-data-services/media/mds-statusicon-error.png "ICon для состояния ошибки») .<br /><br /> В противном случае отображается состояние ОК, а ![для значка состояния ОК](../master-data-services/media/mds-statusicon-ok.png "ICon для состояния "ОК") — изображение.|  
-|Name|Имя атрибута.|  
+|Состояние|Состояние атрибута.<br /><br /> При нажатии кнопки сохранить отображается ![значок для обновления состояния](../master-data-services/media/mds-statusicon-updating.png "Значок обновления состояния") , указывающий на то, что атрибут обновляется.<br /><br /> Если при создании или изменении атрибута возникли ошибки, отображается ![значок изображение состояния ошибки](../master-data-services/media/mds-statusicon-error.png "Значок состояния ошибки") .<br /><br /> В противном случае отображается состояние ОК, а ![для значка состояния ОК](../master-data-services/media/mds-statusicon-ok.png "Значок состояния "ОК"") — изображение.|  
+|Имя|Имя атрибута.|  
 |Отображаемое имя|Отображаемое имя атрибута.|  
-|Описание|Описание атрибута.|  
+|Description|Описание атрибута.|  
 |Ширина отображаемой области (в пикселях)|Ширина атрибута.|  
 |Тип и свойства|Сведения о типе и типе данных атрибута.|  
 |Включить отслеживание изменений|Определяет, включено ли отслеживание изменений для атрибута, а также отображает номер группы в круглых скобках.|  
@@ -55,11 +55,11 @@ ms.locfileid: "73728531"
   
 -   **Кем создано**: имя пользователя, создавшего атрибут.  
   
--   **Когда создано**: дата и время создания атрибута.  
+-   **On**: Дата и время создания атрибута.  
   
--   **Кем обновлено**: имя пользователя, выполнившего последнее обновление атрибута.  
+-   **Кем Обновлено**: имя пользователя, который последним обновил атрибут.  
   
--   **Когда обновлено**: дата и время последнего обновления атрибута.  
+-   **On**: Дата и время последнего обновления атрибута.  
   
 ### <a name="to-create-a-domain-based-attribute"></a>Создание атрибута на основе домена  
   
@@ -79,7 +79,7 @@ ms.locfileid: "73728531"
   
     -   Если атрибут предназначен для коллекций, в списке **Типы членов** выберите **Коллекция** .  
   
-6.  Введите имя атрибута в поле **Имя** . Список слов, которые не должны использоваться как имена атрибутов, см. в разделе [Зарезервированные слова (службы Master Data Services)](../master-data-services/reserved-words-master-data-services.md).  
+6.  Введите имя атрибута в поле **Имя** . Список слов, которые не должны использоваться в качестве имен атрибутов, см. в разделе [зарезервированные слова &#40;Master Data Services&#41;](../master-data-services/reserved-words-master-data-services.md)  
   
 7.  Также при необходимости можно ввести отображаемое имя и описание в поле **Описание** .  
   
@@ -95,14 +95,14 @@ ms.locfileid: "73728531"
   
      Сведения об ограничении допустимых значений см. в публикации [How to filter Domain Based Attribute drop down lists](https://blogs.msdn.microsoft.com/mds/2015/12/03/in-sql-server-2016-master-data-services-how-to-filter-domain-based-attribute-drop-down-lists/)(Как отфильтровывать раскрывающиеся списки атрибута на основе домена) в блоге, посвященном Master Data Services.  
   
-12. **Необязательно.** Чтобы отслеживать изменения в группах атрибутов, выберите **Enable change tracking** . Дополнительные сведения см. в разделе [Добавление атрибутов в группу отслеживания изменений (службы Master Data Services)](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md).  
+12. **Необязательный параметр.** Чтобы отслеживать изменения в группах атрибутов, выберите **Enable change tracking** . Дополнительные сведения см. в разделе [Добавление атрибутов в группу отслеживания изменений (службы Master Data Services)](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md).  
   
-13. Нажмите кнопку **Сохранить**.  
+13. Выберите команду **Сохранить**.  
   
-## <a name="see-also"></a>См. также статью  
- [Атрибуты на основе домена (службы Master Data Services)](../master-data-services/domain-based-attributes-master-data-services.md)   
- [Создание производной иерархии (службы Master Data Services)](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
- [Изменение имени атрибута и типа данных (службы Master Data Services)](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
- [Удаление атрибута (службы Master Data Services)](../master-data-services/delete-an-attribute-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Атрибуты на основе домена &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)   
+ [Создание производной иерархии &#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
+ [Измените имя атрибута и тип данных &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
+ [Удаление атрибута &#40;Master Data Services&#41;](../master-data-services/delete-an-attribute-master-data-services.md)  
   
   

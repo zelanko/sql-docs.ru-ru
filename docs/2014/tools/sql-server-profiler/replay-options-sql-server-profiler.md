@@ -1,5 +1,5 @@
 ---
-title: Параметры (SQL Server Profiler) воспроизведения | Документация Майкрософт
+title: Параметры воспроизведения (SQL Server Profiler) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e91a501a899a6ba2b18790ac2da6e7c45b270b07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63025742"
 ---
 # <a name="replay-options-sql-server-profiler"></a>Параметры воспроизведения (приложение SQL Server Profiler)
@@ -77,9 +77,9 @@ ms.locfileid: "63025742"
 ## <a name="about-the-health-monitor"></a>О мониторе исправности  
  Монитор исправности — это поток приложения, который контролирует имитируемые процессы воспроизведения трассировки и завершает их, если во время воспроизведения они блокируются. На вкладке **Дополнительные параметры воспроизведения** диалогового окна **Конфигурация воспроизведения** можно указать, как долго (в секундах) монитор исправности будет ждать перед прекращением заблокированного процесса (**Интервал ожидания монитора исправности**). Если задать этому параметру значение 0, монитор исправности никогда не будет прекращать имитируемые процессы воспроизведения трассировки.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Воспроизведение трассировок](replay-traces.md)   
- [Replay Requirements](replay-requirements.md)   
+ [Требования к воспроизведению](replay-requirements.md)   
  [Вопросы воспроизведения трассировки (приложение SQL Server Profiler)](considerations-for-replaying-traces-sql-server-profiler.md)  
   
   

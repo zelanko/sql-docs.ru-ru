@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a041171d9639429196b09b7a1f9254a30907ab2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62814051"
 ---
 # <a name="affinity-mask-server-configuration-option"></a>Параметр конфигурации сервера «affinity mask»
@@ -59,7 +59,7 @@ ms.locfileid: "62814051"
   
  Если указать маску сходства, которая попытается сопоставить поток несуществующему процессору, то команда RECONFIGURE отправит сообщение об ошибке в сеанс клиента и в журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Использование параметра RECONFIGURE WITH OVERRIDE в этом случае ничего не изменит, и будет создано еще одно сообщение об ошибке.  
   
- Можно также исключить работу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на процессорах, получивших специальные рабочие нагрузки от операционной системы Windows 2000 или Windows Server 2003. Если установить значение бита, представляющего процессор, в 1, этот процессор будет выбран ядром СУБД [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для назначения потоков. При задании `affinity mask` задано значение 0 (по умолчанию), Microsoft Windows 2000 или Windows Server 2003, алгоритмов планирования схожесть потоков. Если в качестве `affinity mask` задано любое ненулевое значение, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] интерпретирует это значение схожести как битовую маску, определяющую процессоры, годные для выбора.  
+ Можно также исключить работу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на процессорах, получивших специальные рабочие нагрузки от операционной системы Windows 2000 или Windows Server 2003. Если установить значение бита, представляющего процессор, в 1, этот процессор будет выбран ядром СУБД [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для назначения потоков. Если задано `affinity mask` значение 0 (по умолчанию), алгоритмы планирования Microsoft Windows 2000 или windows Server 2003 устанавливают сходство потоков. Если в качестве `affinity mask` задано любое ненулевое значение, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] интерпретирует это значение схожести как битовую маску, определяющую процессоры, годные для выбора.  
   
  Если потокам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запрещено выполняться на определенных процессорах, ОС Microsoft Windows 2000 или Windows Server 2003 может лучше обрабатывать процессы, характерные для Windows. Например, на сервере с 8 процессорами, на котором работают два экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (экземпляры A и B), системный администратор может использовать параметр affinity mask для назначения первого набора из 4 процессоров экземпляру A и второго набора из 4 процессоров экземпляру B. Чтобы выполнить настройку больше чем для 32 процессоров, задавайте и параметр affinity mask, и параметр affinity64 mask. Возможны следующие значения `affinity mask`.  
   
@@ -114,7 +114,7 @@ GO
 |127|01111111|0, 1, 2, 3, 4, 5 и 6|  
 |255|11111111|0, 1, 2, 3, 4, 5, 6 и 7|  
   
- Параметр affinity mask является дополнительным. При использовании системной хранимой процедуры sp_configure для изменения параметра, можно изменить `affinity mask` только тогда, когда **Показать расширенные параметры** имеет значение 1. После выполнения команды [!INCLUDE[tsql](../../includes/tsql-md.md)] RECONFIGURE изменения параметров вступают в силу немедленно и не требуют перезапуска экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Параметр affinity mask является дополнительным. При использовании системной хранимой процедуры sp_configure для изменения параметра можно изменить `affinity mask` только в том случае, если параметру **Показывать дополнительные параметры** присвоено значение 1. После выполнения команды [!INCLUDE[tsql](../../includes/tsql-md.md)] RECONFIGURE изменения параметров вступают в силу немедленно и не требуют перезапуска экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="non-uniform-memory-access-numa"></a>Доступ к неоднородной памяти (NUMA)  
  При использовании аппаратного доступа к неоднородной памяти (NUMA), если установлена маска сходства, каждый планировщик в узле сопоставляется своему собственному ЦП. Когда маска сходства не установлена, каждый планировщик соответствует группе процессоров в пределах узла NUMA, и планировщик, сопоставленный с узлом NUMA N1, может планировать работу на любом процессоре в узле, но не на процессорах, связанных с другим узлом.  
@@ -127,10 +127,10 @@ GO
 ### <a name="startup"></a>Запуск  
  Если применение заданного значения affinity mask приводит к нарушению политики лицензирования во время запуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или во время присоединения базы данных, то уровень ядра завершает процесс запуска либо операцию присоединения или восстановления базы данных, а затем сбрасывает текущее значение sp_configure для параметра affinity mask в нуль, передавая сообщение об ошибке в журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-### <a name="reconfigure"></a>Повторная настройка  
+### <a name="reconfigure"></a>Перенастройка  
  Если применение указанного значения affinity mask приводит к нарушению политики лицензирования при выполнении команды [!INCLUDE[tsql](../../includes/tsql-md.md)] RECONFIGURE, то сообщение об ошибке с требованием к администратору базы данных перенастроить значение affinity mask отправляется в сеанс клиента и в журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В этом случае команда RECONFIGURE WITH OVERRIDE принята не будет.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Наблюдение за использованием ресурсов (системный монитор)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [RECONFIGURE (Transact-SQL)](/sql/t-sql/language-elements/reconfigure-transact-sql)   
  [Параметры конфигурации сервера (SQL Server)](server-configuration-options-sql-server.md)   

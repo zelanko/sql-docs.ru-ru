@@ -13,10 +13,10 @@ ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 4329f618b812bb566d974c5434ef0362b1383f2d
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729297"
 ---
 # <a name="edit-an-entity-master-data-services"></a>Изменение сущности (Master Data Services)
@@ -25,8 +25,8 @@ ms.locfileid: "73729297"
 
   В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]можно изменить сущность.  
   
-## <a name="prerequisites"></a>необходимые компоненты  
- Чтобы выполнить эту процедуру:  
+## <a name="prerequisites"></a>Предварительные требования  
+ Для выполнения этой процедуры:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
   
@@ -52,11 +52,11 @@ ms.locfileid: "73729297"
   
 8.  Установите или снимите флажок **Автоматически создавать значения кода** .  
   
-     Дополнительные сведения см. в разделе [Автоматическое создание кодов (службы Master Data Services)](../master-data-services/automatic-code-creation-master-data-services.md)  
+     Дополнительные сведения см. в разделе [Автоматическое создание кода &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md)  
   
 9. Установите или снимите флажок **Включить сжатие данных** . Сжатие строк включено по умолчанию.  
   
-     Дополнительные сведения см. в разделе [Data Compression](../relational-databases/data-compression/data-compression.md).  
+     Дополнительные сведения см. в разделе [Сжатие данных](../relational-databases/data-compression/data-compression.md) .  
   
 ## <a name="status"></a>Состояние  
  В столбце состояния в сетке отображается состояние операции с сущностью. После нажатия кнопки **Сохранить сущность**появится следующее изображение, которое указывает на то, что сущность обновляется.  
@@ -71,9 +71,9 @@ ms.locfileid: "73729297"
   
  ![Значок состояния "ОК"](../master-data-services/media/mds-statusicon-ok.png "Значок состояния "ОК"")  
   
-## <a name="see-also"></a>См. также статью  
- [Явные иерархии (службы Master Data Services)](../master-data-services/explicit-hierarchies-master-data-services.md)   
- [Удаление сущности (службы Master Data Services)](../master-data-services/delete-an-entity-master-data-services.md)   
- [Сущности (службы Master Data Services)](../master-data-services/entities-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Явные иерархии &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
+ [Удаление сущности &#40;Master Data Services&#41;](../master-data-services/delete-an-entity-master-data-services.md)   
+ [Сущности &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  
   
   

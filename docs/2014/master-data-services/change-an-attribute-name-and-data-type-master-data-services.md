@@ -13,16 +13,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: de5cc28bfd034001c7bc18da9d934277e01935a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484053"
 ---
 # <a name="change-an-attribute-name-master-data-services"></a>Изменение имени атрибута (службы Master Data Services)
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]можно изменять имя атрибутов.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения этой процедуры:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
@@ -41,17 +41,17 @@ ms.locfileid: "65484053"
   
 5.  Щелкните **Изменить выбранную сущность**.  
   
-6.  На **изменение сущности** щелкните атрибут с именем, вы хотите изменить.  
+6.  На странице **Изменение сущности** щелкните атрибут с именем, которое необходимо изменить.  
   
-7.  Нажмите кнопку **изменить выбранный атрибут**.  
+7.  Щелкните **изменить выбранный атрибут**.  
   
 8.  Введите новое имя атрибута в поле **Имя** . Список слов, которые не должны использоваться как имена атрибутов, см. в разделе [Зарезервированные слова (службы Master Data Services)](reserved-words-master-data-services.md).  
   
 9. Нажмите кнопку **Сохранить атрибут**.  
   
-## <a name="see-also"></a>См. также  
- [Создание текстового атрибута (службы Master Data Services)](create-a-text-attribute-master-data-services.md)   
- [Удаление атрибута (службы Master Data Services)](delete-an-attribute-master-data-services.md)   
- [Атрибуты (службы Master Data Services)](attributes-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Создание текстового атрибута &#40;Master Data Services&#41;](create-a-text-attribute-master-data-services.md)   
+ [Удаление атрибута &#40;Master Data Services&#41;](delete-an-attribute-master-data-services.md)   
+ [Master Data Services &#40;атрибутов&#41;](attributes-master-data-services.md)  
   
   

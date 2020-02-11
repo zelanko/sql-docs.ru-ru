@@ -11,10 +11,10 @@ ms.assetid: 113069c5-12e6-48ec-b443-b42e14f77308
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 4bc3d2a084f7f1ec3abcf9e3d3bbcaf82e4749e8
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729111"
 ---
 # <a name="member-revision-history-master-data-services"></a>Журнал изменений элемента (Master Data Services)
@@ -68,10 +68,10 @@ ms.locfileid: "73729111"
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Откат журнала изменений элемента|[Откат журнала изменений элемента (Master Data Services)](../master-data-services/rollback-member-revision-history-master-data-services.md)|  
+|Откат журнала изменений элемента|[&#40;Master Data Services журнал изменений элемента отката&#41;](../master-data-services/rollback-member-revision-history-master-data-services.md)|  
   
-## <a name="see-also"></a>См. также статью  
- [Создание модели (службы Master Data Services)](../master-data-services/create-a-model-master-data-services.md)   
- [Системные параметры (службы Master Data Services)](../master-data-services/system-settings-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Создание &#40;модели Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)   
+ [Системные параметры &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)  
   
   

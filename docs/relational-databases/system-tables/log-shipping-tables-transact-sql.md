@@ -1,5 +1,5 @@
 ---
-title: Таблицы (Transact-SQL) для доставки журналов | Документация Майкрософт
+title: Таблицы доставки журналов (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: f8910aae-2013-4645-880c-134577cbcbe0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f36b2f6f52b87fb844bbe9ccb5604f2c4056b15d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68095744"
 ---
 # <a name="log-shipping-tables-transact-sql"></a>Таблицы доставки журналов (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Следующие разделы описывают системные таблицы, в которых хранятся сведения, используемые операциями доставки журналов.  
+  В следующих разделах описываются системные таблицы, в которых хранятся сведения, используемые операциями доставки журналов.  
   
 ## <a name="in-this-section"></a>в этом разделе  
  [log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)  
