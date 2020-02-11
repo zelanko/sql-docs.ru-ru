@@ -1,5 +1,5 @@
 ---
-title: sys. DM _pdw_nodes_exec_query_profiles (Transact-SQL) | Документация Майкрософт
+title: sys. dm_pdw_nodes_exec_query_profiles (Transact-SQL) | Документация Майкрософт
 description: Динамическое административное представление, которое можно использовать для мониторинга хода выполнения запросов хранилища данных в реальном времени во время выполнения запроса.
 ms.custom: ''
 ms.date: 10/14/2019
@@ -14,21 +14,21 @@ author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 7237e7f7b49916e09f4a8c5cab0d7d49486cb971
-ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73145659"
 ---
-# <a name="sysdm_pdw_nodes_exec_query_profiles-transact-sql"></a>sys. DM _pdw_nodes_exec_query_profiles (Transact-SQL)
+# <a name="sysdm_pdw_nodes_exec_query_profiles-transact-sql"></a>sys. dm_pdw_nodes_exec_query_profiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
 Отслеживает ход выполнения запросов в хранилище данных в реальном времени, пока запрос выполняется.   
   
 ## <a name="table-returned"></a>Таблица возвращена  
-Возвращаемые счетчики есть на каждом операторе и каждом потоке. Результаты являются динамическими и не соответствуют результатам существующих параметров, таких как `SET STATISTICS XML ON`, которые создают выходные данные только по завершении запроса.  
+Возвращаемые счетчики есть на каждом операторе и каждом потоке.   Результаты являются динамическими и не соответствуют результатам существующих параметров, например `SET STATISTICS XML ON` , которые создают выходные данные только после завершения запроса.  
   
-|Имя столбца|Data type|Description|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |pdw_node_id|**int**|Уникальный числовой идентификатор, связанный с узлом.|
 |session_id|**smallint**|Определяет сеанс, в котором выполняется этот запрос. Ссылка на dm_exec_sessions.session_id.|  
@@ -38,7 +38,7 @@ ms.locfileid: "73145659"
 |physical_operator_name|**nvarchar(256)**|Имя физического оператора.|  
 |node_id|**int**|Определяет узел оператора в дереве запросов.|  
 |thread_id|**int**|Используется для различения потоков (для параллельного запроса), принадлежащих одному узлу оператора запроса.|  
-|task_address|**varbinary (8)**|Определяет задачу SQLOS, используемую этим потоком. Ссылка на dm_os_tasks.task_address.|  
+|task_address|**varbinary(8)**|Определяет задачу SQLOS, используемую этим потоком. Ссылка на dm_os_tasks.task_address.|  
 |row_count|**bigint**|Число строк, возвращенных оператором к настоящему моменту.|  
 |rewind_count|**bigint**|Число сбросов к текущему моменту.|  
 |rebind_count|**bigint**|Число повторных привязок к текущему моменту.|  
@@ -66,17 +66,17 @@ ms.locfileid: "73145659"
 |segment_read_count|**int**|Количество операций упреждающего чтения сегментов к текущему времени.|  
 |segment_skip_count|**int**|Количество сегментов, пропущенных к текущему времени.| 
 |actual_read_row_count|**bigint**|Число строк, считанных оператором перед применением остаточного предиката.| 
-|estimated_read_row_count|**bigint**|**Применимо к:** Начиная с [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1). <br/>Количество строк, которое должно быть считано оператором перед применением остаточного предиката.|  
+|estimated_read_row_count|**bigint**|**Применимо к:** Начиная с [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] с пакетом обновления 1. <br/>Количество строк, которое должно быть считано оператором перед применением остаточного предиката.|  
   
 ## <a name="remarks"></a>Remarks  
-Те же примечания в [представлении sys. DM _exec_query_profiles](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql?view=sql-server-ver15) применяются.  
+Те же примечания в [sys. dm_exec_query_profiles](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql?view=sql-server-ver15) применяются.  
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо разрешение `VIEW SERVER STATE` на сервере.  
 
 ## <a name="see-also"></a>См. также раздел  
- [Динамические административные представления &#40;хранилища данных SQL и параллельного хранилища данных TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [Динамические административные представления хранилища данных SQL и параллельного хранилища данных &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
    
 
- ## <a name="next-steps"></a>Следующие шаги
- Дополнительные советы по разработке см. в статье [Общие сведения о разработке хранилища данных SQL](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-develop).
+ ## <a name="next-steps"></a>Дальнейшие действия
+ Дополнительные советы по разработке см. в статье [Проектные решения и методики программирования для хранилища данных SQL](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-develop).

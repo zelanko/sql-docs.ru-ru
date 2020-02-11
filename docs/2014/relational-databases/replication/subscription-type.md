@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d936c1a1086f13d43bc38758f86a0ab80f757f7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63249379"
 ---
 # <a name="subscription-type"></a>Тип подписки
-  Репликация слиянием реализует два типа подписки: серверную и клиентскую (в предыдущих версиях [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] им соответствуют глобальная и локальная, соответственно). Подписчики с серверной подпиской могут:  
+  Репликация слиянием предлагает два типа подписок: сервер и клиент (в предыдущих версиях [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в качестве глобальных и локальных, соответственно). Подписчики с серверной подпиской могут:  
   
 -   повторно публиковать данные для других подписчиков;  
   
@@ -37,9 +37,9 @@ ms.locfileid: "63249379"
  **Свойства подписки**  
  Выберите **Клиентская** или **Серверная** из раскрывающегося списка в столбце **Тип подписки** для каждого подписчика. Для подписчиков с серверными подписками введите число между 0 и 99,99 в столбце **Приоритет устранения конфликтов** (чем выше число, тем выше приоритет подписчика).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание подписки по запросу](create-a-pull-subscription.md)   
- [Create a Push Subscription](create-a-push-subscription.md)   
+ [Создание принудительной подписки](create-a-push-subscription.md)   
  [Подписка на публикации](subscribe-to-publications.md)  
   
   

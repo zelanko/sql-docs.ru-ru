@@ -1,5 +1,5 @@
 ---
-title: Сортировать пример свойства (Visual Basic) | Документация Майкрософт
+title: Пример свойства Sort (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: fc2fd40b-65d6-4023-90a3-90c9a88ef6cf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7dec17461f44c9e461a010e8a0bf5cf3fe3bbbd9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931022"
 ---
 # <a name="sort-property-example-vb"></a>Пример свойства Sort (Visual Basic)
-В этом примере используется [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта [сортировки](../../../ado/reference/ado-api/sort-property.md) свойство для изменения порядка строк **записей** производным от ***авторы*** таблицы ***Pubs*** базы данных. Вторичный служебной процедуры выводит каждую строку.  
+В этом примере используется свойство [Sort](../../../ado/reference/ado-api/sort-property.md) объекта [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) для изменения порядка строк **набора записей** , производного от таблицы ***authors*** базы данных ***pubs*** . Вторичная служебная программа выводит каждую строку.  
   
 ```  
 'BeginSortVB  
@@ -103,12 +103,12 @@ End Sub
 'EndSortVB  
 ```  
   
- Это дополнительный программа подпрограмму, которая выводит заданный заголовок и содержимое указанного объекта **записей**.  
+ Это вторичная служебная программа, которая выводит заданный заголовок и содержимое указанного **набора записей**.  
   
 ```  
 Attribute VB_Name = "Sort"  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Свойство Sort](../../../ado/reference/ado-api/sort-property.md)

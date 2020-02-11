@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7f9587a5e653d2df8cbe169fe5030542b86d8aaf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63194973"
 ---
 # <a name="specify-the-top-clause-in-queries-visual-database-tools"></a>Указание предложения TOP в запросах (визуальные инструменты для баз данных)
@@ -34,7 +34,7 @@ ms.locfileid: "63194973"
   
 1.  Откройте запрос с помощью обозревателя решений или создайте новый.  
   
-2.  В меню **Вид** выберите **Окно "Свойства"**.  
+2.  В меню **Вид** выберите **Окно "Свойства"** .  
   
 3.  В разделе **Окно "Свойства"** найдите и разверните свойство **Параметр TOP** .  
   
@@ -51,8 +51,8 @@ ms.locfileid: "63194973"
 > [!NOTE]  
 >  Можно также изменить значения дочерних свойств **Параметр TOP** , редактируя предложение TOP на панели SQL.  
   
-## <a name="see-also"></a>См. также  
- [Проектирование запросов и представлений инструкции &#40;визуальных инструментах баз данных&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>См. также:  
+ [Разделы руководства по проектированию запросов и представлений &#40;визуальных инструментов для баз данных&#41;](visual-database-tools.md)   
  [Свойства запроса (визуальные инструменты для баз данных)](query-properties-visual-database-tools.md)  
   
   

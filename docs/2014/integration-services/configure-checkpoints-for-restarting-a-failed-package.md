@@ -1,5 +1,5 @@
 ---
-title: Настройка контрольных точек для повторного запуска неудачном выполнении пакета | Документация Майкрософт
+title: Настройка контрольных точек для перезапуска непройденного пакета | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e22e47af568ecf723b54a35fb6b83bd5ce74e333
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060770"
 ---
 # <a name="configure-checkpoints-for-restarting-a-failed-package"></a>Настройка контрольных точек для повторного запуска пакета, завершившегося с ошибкой
@@ -28,13 +28,13 @@ ms.locfileid: "66060770"
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]откройте проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , содержащий пакет, который нужно настроить.  
   
-2.  Чтобы открыть пакет, дважды щелкните его в **обозревателе решений**.  
+2.  В **Обозреватель решений**дважды щелкните пакет, чтобы открыть его.  
   
 3.  Перейдите на вкладку **Поток управления** .  
   
 4.  Щелкните правой кнопкой мыши в области конструктора потока управления и выберите **Свойства**.  
   
-5.  Присвойте свойству SaveCheckpoints `True`.  
+5.  Задайте для `True`свойства SaveCheckpoints значение.  
   
 6.  Введите имя файла контрольных точек в поле свойства CheckpointFileName.  
   
@@ -51,9 +51,9 @@ ms.locfileid: "66060770"
   
     -   Правой кнопкой мыши щелкните задание или контейнер и выберите пункт **Свойства**.  
   
-    -   Свойство FailPackageOnFailure равно `True` для каждого выбранного задания или контейнера.  
+    -   Задайте `True` для свойства FailPackageOnFailure значение для каждой выбранной задачи и контейнера.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Перезапуск пакетов с помощью контрольных точек](packages/restart-packages-by-using-checkpoints.md)  
   
   

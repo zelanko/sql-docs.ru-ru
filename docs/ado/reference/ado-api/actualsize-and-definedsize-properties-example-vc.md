@@ -1,5 +1,5 @@
 ---
-title: Примеры ActualSize и Definedsize свойства (Visual C++) | Документация Майкрософт
+title: Примеры свойств ActualSize и DefinedSize (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 05f7cc97-b806-41d2-939d-a955d10844c4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 340f471215e9f8ec8bf4f0feaabec5cce559a9a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921474"
 ---
-# <a name="actualsize-and-definedsize-properties-example-vc"></a>Примеры ActualSize и Definedsize свойства (Visual C++)
-В этом примере используется [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) и [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) свойства для отображения определенного размера, а фактический размер поля.  
+# <a name="actualsize-and-definedsize-properties-example-vc"></a>Пример свойств ActualSize и DefinedSize (Visual c++)
+В этом примере используются свойства [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) и [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) для вывода определенного размера и фактического размера поля.  
   
 ## <a name="example"></a>Пример  
   
@@ -128,24 +128,24 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
- **Имя Store: Эрик чтения книги**  
-**Заданный размер: 40**  
+ **Имя хранилища: водосчитывание книги**  
+**Определенный размер: 40**  
 **Фактический размер: 19**  
-**Имя Store: В Barnum**  
-**Заданный размер: 40**  
+**Имя хранилища: Барнум**  
+**Определенный размер: 40**  
 **Фактический размер: 8**  
-**Имя Store: Новости и Brews**  
-**Заданный размер: 40**  
+**Имя хранилища: News & Бревс**  
+**Определенный размер: 40**  
 **Фактический размер: 12**  
-**Имя Store: Doc-U-Mat: Качество стирки и книги**  
-**Заданный размер: 40**  
+**Имя хранилища: doc-U-белье: Quality и книги**  
+**Определенный размер: 40**  
 **Фактический размер: 36**  
-**Имя Store: Fricative Bookshop**  
-**Заданный размер: 40**  
+**Имя хранилища: Фрикативе Букшоп**  
+**Определенный размер: 40**  
 **Фактический размер: 18**  
-**Имя Store: Bookbeat**  
-**Заданный размер: 40**  
+**Имя хранилища: Букбеат**  
+**Определенный размер: 40**  
 **Фактический размер: 8**   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство ActualSize (ADO)](../../../ado/reference/ado-api/actualsize-property-ado.md)   
  [Свойство DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)

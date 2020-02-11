@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6bbbf42106602a25b03072a9c9abfb04f04d3c49
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400334"
 ---
 # <a name="set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode-dsrm---analytics-platform-system"></a>Настройка пароля администратора для входа на узлы AD в режиме восстановления служб каталогов (DSRM) — система платформы аналитики
@@ -39,6 +39,6 @@ ms.locfileid: "74400334"
 > [!NOTE]  
 > Если службы домен Active Directory или виртуальная машина повреждены для конкретной виртуальной машины AD, то рекомендуется выполнить действия по исправлению, запустив **реплацевм** для затронутой ВИРТУАЛЬНОЙ машины AD. Обратитесь в службу поддержки пользователей.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [&#40;&#41;системы аналитики для сброса пароля](password-reset.md)  
   

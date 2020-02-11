@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 56a9c380b8cc88202cdcb4c4dca54aab2d1fa4a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102397"
 ---
 # <a name="upload-a-file-or-report-report-manager"></a>Передача файла или отчета (диспетчер отчетов)
@@ -42,16 +42,16 @@ ms.locfileid: "66102397"
   
 4.  Нажмите кнопку **Обзор** для выбора передаваемого файла. Можно выгружать файл определения отчета, изображение, документ и любой другой файл, который нужно сделать доступным на сервере отчетов.  
   
-5.  Введите имя нового элемента. Имя элемента может включать пробелы, но не может включать зарезервированные символы: ; ? : \@ & = + , $ / * \< > |.  
+5.  Введите имя нового элемента. Имя элемента может включать пробелы, но не может включать зарезервированные символы: ; ? : \@ & = +, $/* \< > |.  
   
 6.  Если нужно заменить существующий элемент новым, установите флажок **Перезаписывать существующие элементы**.  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Создание, удаление или изменение общего источника данных (диспетчер отчетов)](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [Страница "Содержимое" (диспетчер отчетов)](../contents-page-report-manager.md)   
- [Страница "Передача файла" (диспетчер отчетов)](../upload-file-page-report-manager.md)   
+## <a name="see-also"></a>См. также:  
+ [Создание, удаление или изменение общего источника данных &#40;диспетчер отчетов&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [Страница "содержимое" &#40;диспетчер отчетов&#41;](../contents-page-report-manager.md)   
+ [Страница "Отправка файла" &#40;диспетчер отчетов&#41;](../upload-file-page-report-manager.md)   
  [Передача файлов в папку](../report-server/upload-files-to-a-folder.md)  
   
   

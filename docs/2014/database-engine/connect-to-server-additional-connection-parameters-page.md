@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e92fbb8bc29aed54e43925a0670d9a365388df62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62808685"
 ---
 # <a name="connect-to-server-additional-connection-parameters-page"></a>Соединение с сервером (страница «Дополнительные параметры соединения»)
@@ -45,14 +45,14 @@ ms.locfileid: "62808685"
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="example-a-connecting-to-the-database-engine"></a>Пример а. Подключение к ядру СУБД  
+### <a name="example-a-connecting-to-the-database-engine"></a>Пример А. Соединение с ядром СУБД  
  Чтобы подключиться к базе данных [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] на сервере ACCOUNTING, введите следующее на странице **Дополнительные параметры соединения** :  
   
 ```  
 ;SERVER=ACCOUNTING;DATABASE=AdventureWorks2012  
 ```  
   
-### <a name="example-b-connecting-to-analysis-services"></a>Пример б Подключение к службам Analysis Services  
+### <a name="example-b-connecting-to-analysis-services"></a>Пример Б. Соединение со службами Analysis Services  
  Чтобы подключиться к службам Analysis Services, указать, что все секции, прослушивающие уведомления, должны запрашиваться в реальном времени (с обходом кэширования) и задать время ожидания обратной записи равным 5, введите следующее на странице **Дополнительные параметры соединения** :  
   
 ```  

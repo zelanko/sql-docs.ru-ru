@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 21f58cd6991b760edeefb81c37e02c617f8e09cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917011"
 ---
 # <a name="shrink-a-database"></a>Сжатие базы данных
@@ -59,31 +59,31 @@ ms.locfileid: "62917011"
 ###  <a name="Security"></a> безопасность  
   
 ####  <a name="Permissions"></a> Permissions  
- Необходимо быть членом предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** .  
+ Требуется членство в предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-shrink-a-database"></a>Сжатие базы данных  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]и разверните его.  
+1.  В **обозревателе объектов**подключитесь к экземпляру [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], а затем разверните этот экземпляр.  
   
-2.  Разверните узел **Базы данных**и щелкните правой кнопкой мыши базу данных, которую нужно сжать.  
+2.  Разверните узел **базы данных**, а затем щелкните правой кнопкой мыши базу данных, которую необходимо сжать.  
   
 3.  В меню наведите указатель на пункт **Задачи**, **Сжать**и выберите команду **База данных**.  
   
      **База данных**  
      Отображает имя выбранной базы данных.  
   
-     **Выделенное в данный момент место**  
+     **Текущее выделенное место**  
      Отображает суммарное используемое и неиспользуемое пространство для выбранной базы данных.  
   
      **Доступное свободное место**  
      Отображает суммарное свободное место для файлов журналов и данных в выбранной базе данных.  
   
-     **Реорганизовать файлы перед освобождением неиспользованного места**  
+     **Реорганизовать файлы перед освобождением неиспользуемого пространства**  
      Установка данного флажка эквивалентна выполнению инструкции DBCC SHRINKDATABASE с заданием целевого процентного параметра. Снятие этого флажка равнозначно выполнению процедуры DBCC SHRINKDATABASE с параметром TRUNCATEONLY. По умолчанию при открытии диалогового окна этот флажок не установлен. Если этот флажок установлен, то пользователь должен задать целевое процентное значение.  
   
-     **Максимальное свободное пространство в файлах после сжатия**  
+     **Максимальное свободное место в файлах после сжатия**  
      Введите максимальный процент свободного пространства, которое должно остаться в базе данных после ее сжатия. Допустимы значения от 0 до 99.  
   
 4.  Нажмите кнопку **ОК**.  
@@ -100,15 +100,15 @@ ms.locfileid: "62917011"
   
  [!code-sql[DBCC#DBCC_SHRINKDB1](../../snippets/tsql/SQL14/tsql/dbcc/transact-sql/dbcc_other.sql#dbcc_shrinkdb1)]  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. После сжатия базы данных  
+##  <a name="FollowUp"></a>Дальнейшие действия. после сжатия базы данных  
  Данные, перемещаемые в процессе сжатия файла, могут быть разбросаны по любым доступным местам в файле. Это вызывает фрагментацию индекса и может увеличить время выполнения запросов, выполняющих поиск в диапазоне индекса. Чтобы устранить фрагментацию, предусмотрите возможность перестроения индексов файла после сжатия.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Сжатие файла](shrink-a-file.md)   
- [sys.databases (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
- [sys.database_files (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
- [DBCC (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-transact-sql)   
- [DBCC SHRINKFILE (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql)   
+ [sys. databases &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
+ [sys. database_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
+ [DBCC &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-transact-sql)   
+ [DBCC SHRINKFILE &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql)   
  [Файлы и файловые группы базы данных](database-files-and-filegroups.md)  
   
   

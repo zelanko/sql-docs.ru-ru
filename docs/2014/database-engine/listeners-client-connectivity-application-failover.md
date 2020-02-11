@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 5ee2879bc0ef94d8abee20032c83a74d00696ef2
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797839"
 ---
 # <a name="availability-group-listeners-client-connectivity-and-application-failover-sql-server"></a>Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)
@@ -118,7 +118,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;ApplicationIntent=ReadOnly  
 ```  
   
- В этом примере строки подключения клиент пытается подключиться к прослушивателю группы доступности `AGListener` через порт 1433 (номер порта также можно не указывать, если прослушиватель группы доступности отслеживает порт 1433).  В строке подключения для свойства `ApplicationIntent` задано значение `ReadOnly`, что делает *строку подключения с намерением чтения*.  Без этого параметра сервер не стал бы пытаться выполнить для этого подключения маршрутизацию только для чтения.  
+ В этом примере строки подключения клиент пытается подключиться к прослушивателю группы доступности `AGListener` через порт 1433 (номер порта также можно не указывать, если прослушиватель группы доступности отслеживает порт 1433).  Для `ApplicationIntent` `ReadOnly`строки подключения свойство имеет значение, что делает *строку подключения с намерением чтения*.  Без этого параметра сервер не стал бы пытаться выполнить для этого подключения маршрутизацию только для чтения.  
   
  База данных-источник группы доступности обрабатывает входящий запрос на маршрутизацию только для чтения и пытается найти находящуюся в сети и доступную только для чтения реплику, присоединенную к первичной реплике и настроенную для маршрутизации только для чтения.  Клиент получает от сервера первичной реплики данные для подключения и устанавливает соединение с указанной, доступной только для чтения репликой.  
   
@@ -188,11 +188,11 @@ SAN = ServerFQDN,AG1_listener.Adventure-Works.com, AG2_listener.Adventure-Works.
 setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2  
 ```  
   
- Дополнительные сведения о ручной регистрации SPN для SQL Server см. в разделе [Register a Service Principal Name for Kerberos Connections](configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  
+ Дополнительные сведения о ручной регистрации SPN для SQL Server см. в разделе [Регистрация имени участника-службы для соединений Kerberos](configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
   
--   [SQL Server подключения &#40;клиента AlwaysOn&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)
+-   [&#40;SQL Server подключения клиента AlwaysOn&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)
   
 -   [Создание или настройка прослушивателя группы доступности (SQL Server)](availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
   
@@ -206,15 +206,15 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 ##  <a name="RelatedContent"></a> См. также  
   
--   [Microsoft SQL Server рекомендации по решениям AlwaysOn для обеспечения высокого уровня доступности и аварийного восстановления](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Руководство по решениям режима AlwaysOn в Microsoft SQL Server для обеспечения высокой доступности и аварийного восстановления](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [Общие сведения о прослушивателях группы доступности](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/16/introduction-to-the-availability-group-listener.aspx) (блог группы разработчиков SQL Server AlwaysOn)  
+-   [Введение в прослушиватель группы доступности](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/16/introduction-to-the-availability-group-listener.aspx) (блог группы SQL Server AlwaysOn)  
   
--   [Блог группы SQL Server AlwaysOn: Официальный блог группы SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
+-   [Блог группы разработчиков SQL Server AlwaysOn: официальный блог группы разработчиков SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
   
-## <a name="see-also"></a>См. также статью  
- [Общие сведения о &#40;группы доступности AlwaysOn&#41; SQL Server](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [SQL Server подключения &#40;клиента AlwaysOn&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)  
+## <a name="see-also"></a>См. также:  
+ [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [&#40;SQL Server подключения клиента AlwaysOn&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)  
  [Сведения о доступе клиентского подключения к репликам доступности (SQL Server)](availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
- [Активные вторичные реплики: &#40;группы доступности AlwaysOn&#41; , доступные для чтения](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) ,   
+ [Активные вторичные реплики: &#40;группы доступности AlwaysOn для чтения&#41;](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [Подключение клиентов к сеансу зеркального отображения базы данных (SQL Server)](database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)

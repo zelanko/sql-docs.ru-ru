@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: bd09706d1b3de9ebe4a5b333f79be9644c433e7c
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73982343"
 ---
 # <a name="sysdm_sql_referencing_entities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "73982343"
   
 -   триггеры DDL уровня сервера.  
   
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (и более поздней версии), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -60,28 +60,28 @@ sys.dm_sql_referencing_entities (
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *schema_name.referenced*_*entity_name*  
+ *schema_name. ссылки на*_*entity_name*  
  Имя упоминаемой сущности.  
   
  *schema_name* является обязательным, кроме случаев, когда упоминаемый класс PARTITION_FUNCTION.  
   
- *schema_name. referenced_entity_name* имеет тип **nvarchar (517)** .  
+ *schema_name. referenced_entity_name* имеет тип **nvarchar (517)**.  
   
- *< referenced_class >* :: = {Object | ВВЕДИТЕ | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION}  
+ *<referenced_class>* :: = {Object | ВВЕДИТЕ | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION}  
  Класс упоминаемой сущности. В одной инструкции может быть указан только один класс.  
   
- *< referenced_class >* имеет тип **nvarchar**(60).  
+ *<referenced_class>* имеет тип **nvarchar**(60).  
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|referencing_schema_name|**sysname**|Схема, которой принадлежит ссылающаяся сущность. Допускает значение NULL.<br /><br /> Значение NULL для триггеров DDL уровня базы данных или сервера.|  
-|referencing_entity_name|**sysname**|Имя ссылающейся сущности. Не допускает значение NULL.|  
+|referencing_schema_name|**имеет sysname**|Схема, которой принадлежит ссылающаяся сущность. Допускает значение NULL.<br /><br /> Значение NULL для триггеров DDL уровня базы данных или сервера.|  
+|referencing_entity_name|**имеет sysname**|Имя ссылающейся сущности. Не допускает значение NULL.|  
 |referencing_id|**int**|Идентификатор ссылающейся сущности. Не допускает значение NULL.|  
 |referencing_class|**tinyint**|Класс ссылающейся сущности. Не допускает значение NULL.<br /><br /> 1 = объект<br /><br /> 12 = триггер DDL уровня базы данных<br /><br /> 13 = триггер DDL уровня сервера|  
-|referencing_class_desc|**nvarchar(60)**|Описание класса ссылающейся сущности.<br /><br /> OBJECT<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER|  
-|is_caller_dependent|**бит**|Указывает разрешение идентификатора упоминаемой сущности, полученного во время выполнения (так как он зависит от схемы вызывающего объекта).<br /><br /> Значение 1 означает, что ссылающаяся сущность может ссылаться на данный объект. При этом разрешение упоминаемой сущности зависит от вызывающего объекта и не может быть определено. Данная ситуация возможна только при вызове в инструкции EXECUTE не связанной со схемой ссылки на хранимую процедуру, расширенную хранимую процедуру или определяемую пользователем функцию.<br /><br /> Значение 0 означает, что упоминаемая сущность не зависит от вызывающего объекта.|  
+|referencing_class_desc|**nvarchar (60)**|Описание класса ссылающейся сущности.<br /><br /> OBJECT<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER|  
+|is_caller_dependent|**bit**|Указывает разрешение идентификатора упоминаемой сущности, полученного во время выполнения (так как он зависит от схемы вызывающего объекта).<br /><br /> Значение 1 означает, что ссылающаяся сущность может ссылаться на данный объект. При этом разрешение упоминаемой сущности зависит от вызывающего объекта и не может быть определено. Данная ситуация возможна только при вызове в инструкции EXECUTE не связанной со схемой ссылки на хранимую процедуру, расширенную хранимую процедуру или определяемую пользователем функцию.<br /><br /> Значение 0 означает, что упоминаемая сущность не зависит от вызывающего объекта.|  
   
 ## <a name="exceptions"></a>Исключения  
  Возвращает пустой результирующий набор, если выполняется любое из следующих условий.  
@@ -101,24 +101,24 @@ sys.dm_sql_referencing_entities (
   
 |Тип сущности|Ссылающаяся сущность|Упоминаемая сущность|  
 |-----------------|------------------------|-----------------------|  
-|Table|Да*|Да|  
-|Просмотр|Да|Да|  
-|Хранимая процедура [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Да|Да|  
-|Хранимая процедура CLR|Нет|Да|  
-|Определяемая пользователем функция [!INCLUDE[tsql](../../includes/tsql-md.md)]|Да|Да|  
-|Определяемая пользователем функция CLR|Нет|Да|  
-|Триггер CLR (DML и DDL)|Нет|Нет|  
-|Триггер DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Да|Нет|  
-|Триггер DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] уровня базы данных|Да|Нет|  
-|Триггер DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] уровня сервера|Да|Нет|  
-|Расширенные хранимые процедуры|Нет|Да|  
-|Очередь|Нет|Да|  
-|Синоним|Нет|Да|  
-|Тип (псевдоним и определяемый пользователем тип данных CLR)|Нет|Да|  
-|Коллекция схем XML|Нет|Да|  
-|Функция секционирования|Нет|Да|  
+|Таблица|Да*|Да|  
+|Представление|Да|Да|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)]хранимая процедура * *|Да|Да|  
+|Хранимая процедура CLR|нет|Да|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)]определяемая пользователем функция|Да|Да|  
+|Определяемая пользователем функция CLR|нет|Да|  
+|Триггер CLR (DML и DDL)|нет|нет|  
+|Триггер DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Да|нет|  
+|Триггер DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] уровня базы данных|Да|нет|  
+|Триггер DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] уровня сервера|Да|нет|  
+|Расширенные хранимые процедуры|нет|Да|  
+|Очередь|нет|Да|  
+|Синоним|нет|Да|  
+|Тип (псевдоним и определяемый пользователем тип данных CLR)|нет|Да|  
+|Коллекция схем XML|нет|Да|  
+|Функция секционирования|нет|Да|  
   
- \* таблица обрабатывается как ссылающаяся сущность, только если она ссылается на модуль [!INCLUDE[tsql](../../includes/tsql-md.md)], определяемый пользователем тип или коллекцию схем XML в определении вычисляемого столбца, ограничения CHECK или ограничения по УМОЛЧАНИю.  
+ \*Таблица обрабатывается как ссылающаяся сущность, только если она ссылается на [!INCLUDE[tsql](../../includes/tsql-md.md)] модуль, определяемый пользователем тип или коллекцию схем XML в определении вычисляемого СТОЛБЦА, проверочного ограничения или ограничения по умолчанию.  
   
  ** Пронумерованные хранимые процедуры с целочисленным значением больше 1 не отслеживаются в качестве ссылающихся или упоминаемых сущностей.  
   
@@ -153,8 +153,8 @@ FROM sys.dm_sql_referencing_entities ('Production.Product', 'OBJECT');
 GO  
 ```  
   
-### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>б. Получение списка сущностей, ссылающихся на заданный тип  
- В следующем примере возвращается список сущностей, ссылающихся на псевдоним типа `dbo.Flag`. Результирующий набор показывает, что этот тип используется двумя хранимыми процедурами. Тип `dbo.Flag` также используется в определении нескольких столбцов в таблице `HumanResources.Employee`; Однако, поскольку тип не находится в определении вычисляемого столбца, ограничения CHECK или ограничения по УМОЛЧАНИю в таблице, для таблицы `HumanResources.Employee` не возвращаются никакие строки.  
+### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>Б. Получение списка сущностей, ссылающихся на заданный тип  
+ В следующем примере возвращается список сущностей, ссылающихся на псевдоним типа `dbo.Flag`. Результирующий набор показывает, что этот тип используется двумя хранимыми процедурами. `dbo.Flag` Тип также используется в определении нескольких столбцов в `HumanResources.Employee` таблице. Однако, поскольку тип не находится в определении вычисляемого столбца, ограничения CHECK или ограничения по УМОЛЧАНИю в таблице, для `HumanResources.Employee` таблицы не возвращаются никакие строки.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -174,8 +174,8 @@ GO
  (2 row(s) affected)`  
  ``` 
  
-## <a name="see-also"></a>См. также статью  
- [sys.dm_sql_referenced_entities (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
- [sys.sql_expression_dependencies (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [sys. dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
+ [sys. sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  
   
   

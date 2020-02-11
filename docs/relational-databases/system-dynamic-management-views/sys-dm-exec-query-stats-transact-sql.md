@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a4fba10bd080c4b97cd38a7330611bed51f3d225
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73982652"
 ---
 # <a name="sysdm_exec_query_stats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
@@ -34,16 +34,16 @@ ms.locfileid: "73982652"
   
 > [!NOTE]
 > - Результаты **sys. dm_exec_query_stats** могут различаться при каждом выполнении, так как данные отражают только завершенные запросы, а не по-прежнему в полете.
-> - Чтобы вызвать это из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте имя **sys. dm_pdw_nodes_exec_query_stats**.    
+> - Чтобы вызвать эту функцию [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] из [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]или, используйте имя **sys. dm_pdw_nodes_exec_query_stats**.    
 
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |**sql_handle**|**varbinary (64)**  |Токен, однозначно определяющий пакет или хранимую процедуру, частью которой является запрос.<br /><br /> **sql_handle**, а также с **statement_start_offset** и **statement_end_offset**можно использовать для получения текста SQL запроса путем вызова функции динамического управления **sys. dm_exec_sql_text** .|  
 |**statement_start_offset**|**int**|Начальная позиция запроса, описываемого строкой, в соответствующем тексте пакета или сохраняемом объекте, в байтах, начиная с 0.|  
-|**statement_end_offset**|**int**|Конечная позиция запроса, описываемого строкой, в соответствующем тексте пакета или сохраняемом объекте, в байтах, начиная с 0. Для версий, предшествующих [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], значение-1 обозначает конец пакета. Конечные комментарии больше не включаются.|  
+|**statement_end_offset**|**int**|Конечная позиция запроса, описываемого строкой, в соответствующем тексте пакета или сохраняемом объекте, в байтах, начиная с 0. Для версий, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]предшествующих, значение-1 обозначает конец пакета. Конечные комментарии больше не включаются.|  
 |**plan_generation_num**|**bigint**|Порядковый номер, который может использоваться для проведения различия между экземплярами планов после рекомпиляции.|  
-|**plan_handle**|**varbinary (64)**|Токен, однозначно определяющий план выполнения запроса для пакета, который был выполнен, а его план находится в кэше планов или в данный момент выполняется. Это значение может быть передано функции динамического управления [sys. dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md) для получения плана запроса.<br /><br /> Значение всегда равно 0x000, если скомпилированная в собственном коде хранимая процедура запрашивает оптимизированную для памяти таблицу.|  
+|**plan_handle**|**varbinary (64)**|Токен, однозначно определяющий план выполнения запроса для пакета, который был выполнен, а его план находится в кэше планов или в данный момент выполняется. Это значение можно передать функции динамического управления [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md) для получения плана запроса.<br /><br /> Значение всегда равно 0x000, если скомпилированная в собственном коде хранимая процедура запрашивает оптимизированную для памяти таблицу.|  
 |**creation_time**|**datetime**|Время компиляции плана.|  
 |**last_execution_time**|**datetime**|Время начала последнего выполнения плана.|  
 |**execution_count**|**bigint**|Количество выполнений плана с момента последней компиляции.|  
@@ -63,7 +63,7 @@ ms.locfileid: "73982652"
 |**last_logical_reads**|**bigint**|Количество операций логического считывания за время последнего выполнения плана.<br /><br /> Значение всегда равно 0 при запросе оптимизированной для памяти таблицы.|  
 |**min_logical_reads**|**bigint**|Минимальное количество операций логического считывания за одно выполнение плана.<br /><br /> Значение всегда равно 0 при запросе оптимизированной для памяти таблицы.|  
 |**max_logical_reads**|**bigint**|Максимальное количество операций логического считывания за одно выполнение плана.<br /><br /> Значение всегда равно 0 при запросе оптимизированной для памяти таблицы.|  
-|**total_clr_time**|**bigint**|Время, сообщаемое в микросекундах (но с точностью до миллисекунд), затраченное на [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] объектов среды CLR при выполнении плана с момента его компиляции. Объекты среды CLR могут быть хранимыми процедурами, функциями, триггерами, типами и статистическими выражениями.|  
+|**total_clr_time**|**bigint**|Время, сообщаемое в микросекундах (но с точностью до миллисекунд), затраченное [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] на выполнение плана в объектах среды CLR с момента его компиляции. Объекты среды CLR могут быть хранимыми процедурами, функциями, триггерами, типами и статистическими выражениями.|  
 |**last_clr_time**|**bigint**|Время, затраченное на последнее выполнение плана внутри объектов [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] среды CLR в микросекундах (но с точностью до миллисекунды). Объекты среды CLR могут быть хранимыми процедурами, функциями, триггерами, типами и статистическими выражениями.|  
 |**min_clr_time**|**bigint**|Минимальное время, когда-либо затраченное на выполнение плана внутри объектов [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] среды CLR, в микросекундах (но с точностью до миллисекунды). Объекты среды CLR могут быть хранимыми процедурами, функциями, триггерами, типами и статистическими выражениями.|  
 |**max_clr_time**|**bigint**|Максимальное время, когда-либо затраченное на выполнение плана внутри среды CLR [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], в микросекундах (но с точностью до миллисекунды). Объекты среды CLR могут быть хранимыми процедурами, функциями, триггерами, типами и статистическими выражениями.|  
@@ -115,7 +115,7 @@ ms.locfileid: "73982652"
 |**last_spills**|**bigint**|Число страниц, сброшенных при последнем выполнении запроса.<br /><br /> Область **применения**: начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**min_spills**|**bigint**|Минимальное число страниц, которые этот запрос когда-либо был сброшен во время одного выполнения.<br /><br /> Область **применения**: начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**max_spills**|**bigint**|Максимальное количество страниц, которые этот запрос когда-либо был сброшен во время одного выполнения.<br /><br /> Область **применения**: начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**pdw_node_id**|**int**|Идентификатор узла, на котором находится данное распределение.<br /><br /> **Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
+|**pdw_node_id**|**int**|Идентификатор узла, на котором находится данное распределение.<br /><br /> **Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
 |**total_page_server_reads**|**bigint**|Общее число операций чтения с сервера удаленной страницы, выполненных при выполнении плана с момента его компиляции.<br /><br /> **Применимо к:** Масштабирование базы данных SQL Azure |  
 |**last_page_server_reads**|**bigint**|Число операций чтения сервера удаленной страницы, выполненных при последнем выполнении плана.<br /><br /> **Применимо к:** Масштабирование базы данных SQL Azure |  
 |**min_page_server_reads**|**bigint**|Минимальное число операций чтения сервером удаленных страниц, которое этот план выполнял во время одного выполнения.<br /><br /> **Применимо к:** Масштабирование базы данных SQL Azure |  
@@ -125,8 +125,8 @@ ms.locfileid: "73982652"
   
 ## <a name="permissions"></a>Разрешения  
 
-На [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]требуется `VIEW SERVER STATE` разрешение.   
-На уровнях [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium требуется разрешение `VIEW DATABASE STATE` в базе данных. На уровнях [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard и Basic требуется **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
+В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]необходимо `VIEW SERVER STATE` разрешение.   
+На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
    
 ## <a name="remarks"></a>Remarks  
  Статистика в представлении обновляется после завершения выполнения запроса.  
@@ -153,7 +153,7 @@ GROUP BY query_stats.query_hash
 ORDER BY 2 DESC;  
 ```  
   
-### <a name="b-returning-row-count-aggregates-for-a-query"></a>б. Возврат статистического выражения счетчика строк для запроса  
+### <a name="b-returning-row-count-aggregates-for-a-query"></a>Б. Возврат статистического выражения счетчика строк для запроса  
  В следующем примере показан возврат сведений о статистическом выражении счетчика строк (общее число строк, минимальное число строк, максимальное число строк и число строк при последнем выполнении) для запросов.  
   
 ```sql  
@@ -173,13 +173,13 @@ WHERE qt.text like '%SELECT%'
 ORDER BY qs.execution_count DESC;  
 ```  
   
-## <a name="see-also"></a>См. также:  
-[Динамические административные представления и функции &#40;, связанные с выполнением,   Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
-[sys. dm_exec_sql_text &#40;   Transact-&#41; SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  
-[sys. dm_exec_query_plan &#40;   Transact-&#41; SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  
-[sys. dm_exec_procedure_stats &#40;    Transact-&#41; SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
-[sys. dm_exec_trigger_stats &#40;    Transact-&#41; SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
-[sys. dm_exec_cached_plans &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)    
+## <a name="see-also"></a>См. также раздел  
+[Динамические административные представления и функции, связанные с выполнением &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)    
+[sys. dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)    
+[sys. dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
+[sys. dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)     
+[sys. dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)     
+[sys. dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)    
   
 
 

@@ -1,5 +1,5 @@
 ---
-title: sys.fn_get_sql (Transact-SQL) | Документация Майкрософт
+title: sys. fn_get_sql (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,19 +24,19 @@ ms.assetid: d5fe49b5-0813-48f2-9efb-9187716b2fd4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 58cb9c4b35329a24db954460097dca5f7d87e4f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68120261"
 ---
-# <a name="sysfngetsql-transact-sql"></a>sys.fn_get_sql (Transact-SQL)
+# <a name="sysfn_get_sql-transact-sql"></a>sys.fn_get_sql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Возвращает текст инструкции SQL для указанного дескриптора SQL.  
   
 > [!IMPORTANT]  
->  В будущей версии Microsoft SQL Server этот компонент будет удален. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Вместо нее используйте sys.dm_exec_sql_text. Дополнительные сведения см. в разделе [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md).  
+>  В будущей версии Microsoft SQL Server этот компонент будет удален. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Вместо нее используйте sys.dm_exec_sql_text. Дополнительные сведения см. в разделе [sys. dm_exec_sql_text &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md).  
   
  
   
@@ -51,28 +51,28 @@ sys.fn_get_sql ( SqlHandle )
   
 ## <a name="arguments"></a>Аргументы  
  *SqlHandle*  
- Значение дескриптора. *SqlHandle* — **varbinary(64)** не имеет значения по умолчанию.  
+ Значение дескриптора. *SqlHandle* имеет тип **varbinary (64)** и не имеет значения по умолчанию.  
   
 ## <a name="tables-returned"></a>Возвращаемые таблицы  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |dbid|**smallint**|Идентификатор базы данных. Для нерегламентированных и подготовленных инструкций SQL это идентификатор базы данных, в которой происходила компиляция инструкции.|  
 |objectid|**int**|Идентификатор объекта базы данных. Имеет значение NULL для нерегламентированных инструкций SQL.|  
 |number|**smallint**|Указывает на номер группы, если процедуры сгруппированы.<br /><br /> 0 = записи не являются процедурами.<br /><br /> NULL = нерегламентированные инструкции SQL.|  
 |encrypted|**bit**|Указывает, зашифрован ли объект.<br /><br /> 0 = не зашифрована<br /><br /> 1 = зашифрована|  
-|text|**text**|Текст инструкции SQL. Имеет значение NULL для зашифрованных объектов.|  
+|text|**полнотекстовым**|Текст инструкции SQL. Имеет значение NULL для зашифрованных объектов.|  
   
-## <a name="remarks"></a>Примечания  
- Допустимый дескриптор SQL можно получить из столбца sql_handle [sys.dm_exec_requests &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) динамическое административное представление.  
+## <a name="remarks"></a>Remarks  
+ Допустимый обработчик SQL можно получить из столбца sql_handle в динамическом административном представлении [sys. dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) .  
   
- Если передается дескриптор, больше не существует в кэше, функция fn_get_sq**l** возвращает пустой результирующий набор. Если передается недопустимый дескриптор, выполнение пакета прекращается и возвращается сообщение об ошибке.  
+ Если передается обработчик, который больше не существует в кэше, fn_get_sq**l** возвращает пустой результирующий набор. Если передается недопустимый дескриптор, выполнение пакета прекращается и возвращается сообщение об ошибке.  
   
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Не может кэшировать некоторые [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции, такие как инструкции массового копирования и инструкции со строковыми литералами, размер которых превышает 8 КБ. Дескрипторы этих инструкций не могут быть извлечены при помощи функции fn_get_sql.  
+ Инструкция [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] не может кэшировать [!INCLUDE[tsql](../../includes/tsql-md.md)] некоторые инструкции, такие как инструкции и инструкции инструкций Copy с строковыми литералами, размер которых превышает 8 КБ. Дескрипторы этих инструкций не могут быть извлечены при помощи функции fn_get_sql.  
   
- **Текст** столбца результирующего набора фильтруется по тексту, который может содержать пароли. Дополнительные сведения о связанных с безопасностью хранимых процедур, которые не контролируются, см. в разделе [фильтра трассировки](../../relational-databases/sql-trace/filter-a-trace.md).  
+ Столбец **Text** результирующего набора фильтруется по тексту, который может содержать пароли. Дополнительные сведения о хранимых процедурах, связанных с безопасностью, которые не отслеживаются, см. [в разделе Фильтрация трассировки](../../relational-databases/sql-trace/filter-a-trace.md).  
   
- Функция fn_get_sql возвращает сведения, аналогичную [DBCC INPUTBUFFER](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md) команды. Ниже приведены случаи, когда функцию fn_get_sql использовать можно, а команду DBCC INPUTBUFFER — нельзя:  
+ Функция fn_get_sql возвращает сведения, аналогичные команде [DBCC INPUTBUFFER](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md) . Ниже приведены случаи, когда функцию fn_get_sql использовать можно, а команду DBCC INPUTBUFFER — нельзя:  
   
 -   если событие содержит более чем 255 символов;  
   
@@ -82,7 +82,7 @@ sys.fn_get_sql ( SqlHandle )
  Пользователю необходимо разрешение VIEW SERVER STATE на сервере.  
   
 ## <a name="examples"></a>Примеры  
- Администраторы базы данных могут использовать функцию fn_get_sql, как показано в следующем примере, для облегчения диагностики проблемных процессов. После того как администратор находит проблемный идентификатор сеанса, он может получить дескриптор SQL для идентификатора сеанса, вызвать функцию fn_get_sql, используя дескриптор, и после этого определить текст SQL проблемного идентификатора сеанса.  
+ Администраторы базы данных могут использовать функцию fn_get_sql, как показано в следующем примере, для облегчения диагностики проблемных процессов. После того как администратор находит проблемный идентификатор сеанса, он может получить дескриптор SQL для идентификатора сеанса, вызвать функцию n_get_sql, используя дескриптор, и после этого определить текст SQL проблемного идентификатора сеанса.  
   
 ```  
 DECLARE @Handle varbinary(64);  
@@ -93,9 +93,9 @@ SELECT * FROM sys.fn_get_sql(@Handle);
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [DBCC INPUTBUFFER &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)   
- [sys.sysprocesses &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
- [sys.dm_exec_requests (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [DBCC INPUTBUFFER &#40;&#41;Transact-SQL](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)   
+ [sys. sysprocesses &#40;&#41;Transact-SQL](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
+ [sys. dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
   

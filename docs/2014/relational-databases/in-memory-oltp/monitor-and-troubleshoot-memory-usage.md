@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 63c877d9b9275ef482591f6345715569a25c5e2a
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67285016"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>Мониторинг и устранение неполадок с использованием памяти
@@ -23,7 +23,7 @@ ms.locfileid: "67285016"
  В этом разделе описывается процесс мониторинга использования памяти в [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] .  
   
   
-##  <a name="bkmk_CreateDB"></a> Создание образца базы данных с таблицами, оптимизированными для памяти  
+##  <a name="bkmk_CreateDB"></a>Создание образца базы данных с таблицами, оптимизированными для памяти  
  Этот подраздел можно пропустить, если у вас уже есть база данных с таблицами, оптимизированными для памяти.  
   
  Следующие действия создадут базу данных с тремя оптимизированными для памяти таблицами, которые можно использовать в оставшейся части этого раздела. В примере мы сопоставили базы данных с пулом ресурсов, что позволит управлять объемом памяти, который может быть занят таблицами, оптимизированными для памяти.  
@@ -112,8 +112,9 @@ ms.locfileid: "67285016"
   
 ##  <a name="monitoring-memory-usage"></a>Наблюдение за использованием памяти  
   
-###  <a name="using-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>С помощью [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]  
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] поставляется вместе со встроенными стандартными отчетами для наблюдения за объемом памяти, используемым таблицами, хранимыми в памяти. Доступ к этим отчетам можно получить с помощью обозревателя объектов, как описано [здесь](https://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx). Обозреватель объектов также можно использовать для контроля памяти, занятой отдельными таблицами, оптимизированными для памяти.  
+###  <a name="using-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>Использование [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]  
+ 
+  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] поставляется вместе со встроенными стандартными отчетами для наблюдения за объемом памяти, используемым таблицами, хранимыми в памяти. Доступ к этим отчетам можно получить с помощью обозревателя объектов, как описано [здесь](https://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx). Обозреватель объектов также можно использовать для контроля памяти, занятой отдельными таблицами, оптимизированными для памяти.  
   
 #### <a name="consumption-at-the-database-level"></a>Использование на уровне базы данных  
  Можно отслеживать использование памяти на уровне базы данных следующим образом.  
@@ -122,7 +123,7 @@ ms.locfileid: "67285016"
   
 2.  В обозревателе объектов щелкните правой кнопкой мыши базу данных, по которой нужно получить отчеты.  
   
-3.  В контекстном меню выберите **Отчеты** -> **Стандартные отчеты** -> **Использование памяти таблицами, оптимизированными для памяти**  
+3.  В контекстном меню выберите **отчеты** -> **Стандартные отчеты** -> **использование памяти оптимизированными для памяти объектами** .  
   
  ![HK_MM_SSMS](../../database-engine/media/hk-mm-ssms-stdrpt-memuse.gif "HK_MM_SSMS")  
   
@@ -142,7 +143,7 @@ SELECT object_name(object_id) AS Name
    FROM sys.dm_db_xtp_table_memory_stats  
 ```  
   
- **Образец вывода**  
+ **Пример вывода**  
   
 ```  
 Name       object_id   memory_allocated_for_table_kb memory_used_by_table_kb memory_allocated_for_indexes_kb memory_used_by_indexes_kb  
@@ -157,7 +158,7 @@ NULL       -3          0                             0                       2  
 NULL       -2          192                           25                      16                              16  
 ```  
   
- Дополнительные сведения см. в разделе [sys.dm_db_xtp_table_memory_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql?view=sql-server-2016).  
+ Дополнительные сведения см. в разделе [sys. dm_db_xtp_table_memory_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql?view=sql-server-2016).  
   
 #### <a name="memory-consumption-by-internal-system-structures"></a>Использование памяти внутренними системными структурами  
  Память также используется системными объектами, например транзакционными структурами, буферами для разностных файлов и данных, структурами для сборки мусора и другими объектами. Можно узнать объем памяти, используемый для этих системных объектов с помощью запроса `sys.dm_xtp_system_memory_consumers` , как показано ниже.  
@@ -170,7 +171,7 @@ SELECT memory_consumer_desc
    FROM sys.dm_xtp_system_memory_consumers  
 ```  
   
- **Образец вывода**  
+ **Пример вывода**  
   
 ```  
 memory_consumer_ desc allocated_bytes_kb   used_bytes_kb        allocation_count  
@@ -210,7 +211,7 @@ SELECT memory_object_address
    FROM sys.dm_os_memory_objects WHERE type LIKE '%xtp%'  
 ```  
   
- **Образец вывода**  
+ **Пример вывода**  
   
 ```  
 memory_object_address pages_ in_bytes bytes_used type  
@@ -230,9 +231,9 @@ memory_object_address pages_ in_bytes bytes_used type
 0x00000001F813E040    16842752            NULL       MEMOBJ_XTPBLOCKALLOC  
 ```  
   
- Дополнительные сведения см. в разделе [sys.dm_os_memory_objects (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql).  
+ Дополнительные сведения см. в разделе [sys. dm_os_memory_objects (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql).  
   
-#### <a name="memory-consumed-by-includehek2includeshek-2-mdmd-engine-across-the-instance"></a>Память, используемая модулем [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] в памяти в пределах экземпляра  
+#### <a name="memory-consumed-by-includehek_2includeshek-2-mdmd-engine-across-the-instance"></a>Память, используемая модулем [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] в памяти в пределах экземпляра  
  В экземпляре SQL Server память, выделенная для модуля [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] в памяти и оптимизированных для памяти объектов, управляется таким же образом, как и любой другой потребитель памяти в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Клерки типа учетных записей MEMORYCLERK_XTP для всей памяти, выделенной для модуля [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] . Следующий запрос применяется для вычисления объема всей памяти, используемого модулем [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] .  
   
 ```sql  
@@ -246,7 +247,7 @@ SELECT type
   
  Следующий образец вывода показывает, что общий объем выделенной памяти из потребления памяти на уровне системы равен 18 МБ, а 1358 МБ выделено базе данных с идентификатором 5. Поскольку эта база данных сопоставлена с выделенным пулом ресурсов, то эта память учитывается в данном пуле ресурсов.  
   
- **Образец вывода**  
+ **Пример вывода**  
   
 ```  
 type                 name       memory_node_id pages_MB  
@@ -256,7 +257,7 @@ MEMORYCLERK_XTP      DB_ID_5    0              1358
 MEMORYCLERK_XTP      Default    64             0  
 ```  
   
- Дополнительные сведения см. в разделе [sys.dm_os_memory_clerks (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql).  
+ Дополнительные сведения см. в разделе [sys. dm_os_memory_clerks (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql).  
   
 ##   <a name="managing-memory-consumed-by-memory-optimized-objects"></a>Управление памятью, занятой объектами, оптимизированными для памяти.  
  Можно управлять общим объемом памяти, используемым оптимизированными для памяти таблицами, привязав его к указанным пулом ресурсам, как описано в статье [Привязка базы данных с таблицами, оптимизированными для памяти, к пулу ресурсов](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md).  
@@ -268,10 +269,10 @@ MEMORYCLERK_XTP      Default    64             0
   
 2.  Определите, как растет потребление памяти и сколько места для маневра вам останется. Периодически наблюдая за использованием памяти, вы узнаете, как растет использование памяти. Например, если база данных сопоставлена с именованным пулом ресурсов, можно понаблюдать за счетчиком использованной памяти (в КБ), чтобы оценить, как растет потребление памяти.  
   
-3.  Примите меры, чтобы избежать потенциальных проблем с памятью. Дополнительные сведения см. в разделе [решения проблем нехватки памяти](resolve-out-of-memory-issues.md).  
+3.  Примите меры, чтобы избежать потенциальных проблем с памятью. Дополнительные сведения см. в разделе [Устранение проблем нехватки памяти](resolve-out-of-memory-issues.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Привязка базы данных с таблицами, оптимизированными для памяти, к пулу ресурсов](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
- [Измените параметры MIN_MEMORY_PERCENT и MAX_MEMORY_PERCENT для существующего пула](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#change-min-memory-percent-and-max-memory-percent-on-an-existing-pool)
+ [Изменение MIN_MEMORY_PERCENT и MAX_MEMORY_PERCENT в существующем пуле](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#change-min-memory-percent-and-max-memory-percent-on-an-existing-pool)
   
   

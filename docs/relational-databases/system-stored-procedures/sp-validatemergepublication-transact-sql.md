@@ -16,10 +16,10 @@ ms.assetid: 5a862f1a-2be1-4758-9954-4cdc8c77d149
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 02ffdd0facfedd1b9eb6d8eee083f819566d818d
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72006101"
 ---
 # <a name="sp_validatemergepublication-transact-sql"></a>sp_validatemergepublication (Transact-SQL)
@@ -38,16 +38,16 @@ sp_validatemergepublication [@publication=] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **\@publication =** ] **"***Публикация***"**  
+ [**\@publication =**] **"***Публикация***"**  
  Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @level = ] level` — тип выполняемой проверки. *Level* имеет тип **tinyint**и не имеет значения по умолчанию. Уровень может быть одним из значений.  
+`[ @level = ] level`Тип выполняемой проверки. *Level* имеет тип **tinyint**и не имеет значения по умолчанию. Уровень может быть одним из значений.  
   
-|Значение уровня|Описание|  
+|Значение уровня|Description|  
 |-----------------|-----------------|  
 |**1**|Проверка достоверности только количества строк.|  
-|**2**|Проверка по количеству строк и контрольной сумме. Для подписчиков [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]автоматически устанавливается значение **3**.|  
-|**3**|Это рекомендованное значение.|  
+|**2**|Проверка по количеству строк и контрольной сумме. Для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]подписчиков автоматически устанавливается значение **3**.|  
+|**3-5**|Это рекомендованное значение.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -58,9 +58,9 @@ sp_validatemergepublication [@publication=] 'publication'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_validatemergepublication**.  
   
-## <a name="see-also"></a>См. также статью  
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Проверка реплицированных данных](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
- [sp_validatemergesubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md)  
+ [sp_validatemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md)  
   
   

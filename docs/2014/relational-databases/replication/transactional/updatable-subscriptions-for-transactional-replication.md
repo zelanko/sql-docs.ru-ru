@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 81235bf4bf4f1234be3d1ffdc341d3239b8d2b35
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62655499"
 ---
 # <a name="updatable-subscriptions-for-transactional-replication"></a>Updatable Subscriptions for Transactional Replication
@@ -53,10 +53,10 @@ ms.locfileid: "62655499"
   
  Если переключитесь с немедленного обновления на отложенное обновление, то вам не удастся переключиться обратно на немедленное обновление, пока подписчик и издатель не подключатся, а агент чтения очереди не применит все сообщения, находящиеся в очереди, к издателю.  
   
- **Переключение режимов обновления**  
+ **Переключение между режимами обновления**  
   
- Для переключения между режимами обновления необходимо разрешить оба режима обновления для публикации и подписки, а затем можно переключаться между режимами по мере необходимости. Дополнительные сведения см. в разделе  
-[Переключение между режимами обновления для обновляемой подписки на публикацию транзакций](../administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md)  
+ Для переключения между режимами обновления необходимо разрешить оба режима обновления для публикации и подписки, а затем можно переключаться между режимами по мере необходимости. Для получения дополнительных сведений см.  
+[Переключение между режимами обновления для обновляемой подписки на публикацию транзакций](../administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md).  
   
 ### <a name="considerations-for-using-updatable-subscriptions"></a>Вопросы использования обновляемых подписок  
   
@@ -108,9 +108,11 @@ ms.locfileid: "62655499"
   
 -   Для столбцов типа данных `SQL_VARIANT`: при вставке или обновлении данных на подписчике, когда они копируются с подписчика в очередь, агент чтения очереди сопоставляет данные следующим образом.  
   
-    -   `BIGINT`, `DECIMAL`, `NUMERIC`, `MONEY` и `SMALLMONEY` сопоставляются с `NUMERIC`.  
+    -   
+  `BIGINT`, `DECIMAL`, `NUMERIC`, `MONEY` и `SMALLMONEY` сопоставляются с `NUMERIC`.  
   
-    -   `BINARY` и `VARBINARY` сопоставляются с данными `VARBINARY`.  
+    -   
+  `BINARY` и `VARBINARY` сопоставляются с данными `VARBINARY`.  
   
 ### <a name="conflict-detection-and-resolution"></a>Обнаружение и разрешение конфликтов  
   
@@ -122,7 +124,7 @@ ms.locfileid: "62655499"
   
     -   Если ожидаются конфликты: не следует применять ограничения внешних ключей на издателе или подписчике, если используется политика разрешения конфликтов с приоритетом подписчика; не следует применять ограничения внешних ключей на подписчике, если используется политика разрешения конфликтов с приоритетом издателя.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Одноранговая репликация транзакций](peer-to-peer-transactional-replication.md)   
  [Репликация транзакций](transactional-replication.md)   
  [Публикация данных и объектов базы данных](../publish/publish-data-and-database-objects.md)   

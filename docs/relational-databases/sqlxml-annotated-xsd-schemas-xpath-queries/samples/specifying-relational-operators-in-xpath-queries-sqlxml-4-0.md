@@ -17,10 +17,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1961cc90c303e789c4bfbb847cea5e0eb80049ff
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75252552"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>Применение реляционных операторов в запросах XPath (SQLXML 4.0)
@@ -29,7 +29,7 @@ ms.locfileid: "75252552"
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-specify-relational-operator"></a>а. Укажите реляционный оператор  
+### <a name="a-specify-relational-operator"></a>A. Укажите реляционный оператор  
  Этот запрос XPath возвращает дочерние элементы элемента ** \<>Customer** , где значение атрибута **CustomerID** равно 1, и где любой дочерний ** \<порядок элементов>** содержит дочерний элемент ** \<OrderDetail>** с атрибутом **OrderQty** со значением больше 3:  
   
 ```  
@@ -80,7 +80,7 @@ ms.locfileid: "75252552"
 </ROOT>  
 ```  
   
-### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>B. Укажите реляционный оператор в запросе XPath и используйте логическую функцию для сравнения результатов  
+### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>Б. Укажите реляционный оператор в запросе XPath и используйте логическую функцию для сравнения результатов  
  Этот запрос возвращает все элементы ** \<Order>** элементов контекстного узла, у которых значение атрибута **SalesPersonID** меньше 270:  
   
 ```  

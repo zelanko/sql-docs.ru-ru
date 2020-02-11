@@ -16,42 +16,42 @@ ms.assetid: 7caab48e-cbb5-4bbc-a09b-5cf902e5bc45
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 34d2ceb19bce2e466ff5cae7647125e94fdb7c03
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68044996"
 ---
 # <a name="numeric-functions-visual-foxpro-odbc-driver"></a>Числовые функции (драйвер ODBC для Visual FoxPro)
-В следующей таблице описаны числовые функции ODBC, поддерживаемых драйвером Visual FoxPro ODBC; Если Visual FoxPro грамматики для той же функции отличается от синтаксиса ODBC, Visual FoxPro эквивалентное отображаются.  
+В следующей таблице описаны числовые функции ODBC, поддерживаемые драйвером ODBC для Visual FoxPro. Если грамматика Visual FoxPro для той же функции отличается от синтаксиса ODBC, в списке отображается эквивалент Visual FoxPro.  
   
 |Грамматика ODBC|Грамматика Visual FoxPro|  
 |------------------|---------------------------|  
-|ABS *(выражение «числовое_выражение»)*||  
+|ABS *(numeric_exp)*||  
 |ACOS *(float_exp)*||  
 |ASIN *(float_exp)*||  
 |ATAN *(float_exp)*||  
-|ATAN2 *(float_exp1 float_exp2)*|ATN2 (*float_exp1 float_exp2*)|  
-|CEILING *(выражение «числовое_выражение»)*||  
+|ATAN2 *(float_exp1, float_exp2)*|ATN2 (*float_exp1, float_exp2*)|  
+|CEILING *(numeric_exp)*||  
 |COS *(float_exp)*||  
 |COT *(float_exp)*||  
-|ГРАДУСОВ *(выражение «числовое_выражение»)*|RTOD *(выражение «числовое_выражение»)*|  
+|ГРАДУСы *(numeric_exp)*|РТОД *(numeric_exp)*|  
 |EXP *(float_exp)*||  
-|Функция FLOOR *(выражение «числовое_выражение»)*||  
-|ЖУРНАЛ *(float_exp)*||  
+|ЭТАЖ *(numeric_exp)*||  
+|Журнал *(float_exp)*||  
 |LOG10 *(float_exp)*||  
-|MOD *(integer_exp1 integer_exp2)*||  
-|PI *)*||  
-|RADIANS *(выражение «числовое_выражение»)*|DTOR *(выражение «числовое_выражение»)*|  
-|Функция RAND *([целое_выражение])*||  
-|ROUND *(выражение «числовое_выражение», целое_выражение)*||  
-|ЗНАК *(выражение «числовое_выражение»)*||  
+|MOD *(integer_exp1, integer_exp2)*||  
+|PI *()*||  
+|РАДИАНы *(numeric_exp)*|DTOR *(numeric_exp)*|  
+|RAND *([integer_exp])*||  
+|ROUND *(numeric_exp, integer_exp)*||  
+|ЗНАК *(numeric_exp)*||  
 |SIN *(float_exp)*||  
 |SQRT *(float_exp)*||  
 |TAN *(float_exp)*||  
   
  Следующие числовые функции не поддерживаются:  
   
- POWER *(выражение «числовое_выражение», целое_выражение)*  
+ МОЩНОСТЬ *(numeric_exp, integer_exp)*  
   
- УСЕЧЬ *(выражение «числовое_выражение», целое_выражение)*
+ TRUNCATE *(numeric_exp, integer_exp)*

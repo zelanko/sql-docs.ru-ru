@@ -1,5 +1,5 @@
 ---
-title: Аналитика хранилища | Документация Майкрософт
+title: Хранилище измерений | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ce5bf2a376712d603be3099f7ccefa0e6b799219
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62728497"
 ---
 # <a name="dimension-storage"></a>Хранение измерений
@@ -33,7 +33,7 @@ ms.locfileid: "62728497"
   
 -   Многомерный OLAP (MOLAP)  
   
- Режим хранения определяет место и форму данных измерения. MOLAP — режим хранения измерений по умолчанию. **См. также:** [режимы хранения и обработки](../multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)  
+ Режим хранения определяет место и форму данных измерения. MOLAP — режим хранения измерений по умолчанию. **См. также:**[режимы хранения секций и обработка](../multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)  
   
 ## <a name="molap"></a>MOLAP  
  Данные для измерения в режиме MOLAP хранятся в многомерной структуре в экземпляре служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Эта многомерная структура создается и заполняется при обработке измерения. Измерения MOLAP обеспечивают более высокую производительность, чем измерения ROLAP.  
@@ -42,9 +42,9 @@ ms.locfileid: "62728497"
  Данные для измерения, использующего режим ROLAP, фактически хранятся в таблицах, используемых для определения измерения. Режим хранения ROLAP можно использовать для крупных измерений без дублирования больших объемов данных, однако, это приведет к потере производительности запроса. Измерения основаны непосредственно на таблицах в представлении источника данных, используемого для определения измерения, поэтому режим хранения ROLAP также может поддерживать OLAP реального времени.  
   
 > [!IMPORTANT]  
->  Если измерение использует режим хранения ROLAP и при этом входит в состав куба, использующего режим хранения MOLAP, все изменения схемы в исходной таблице должны сопровождаться немедленной обработкой куба. В противном случае может возникнуть несогласованность результатов при запросах к кубу. **См. также:** [автоматизировать административные задачи служб Analysis Services с помощью служб SSIS](../instances/automate-analysis-services-administrative-tasks-with-ssis.md).  
+>  Если измерение использует режим хранения ROLAP и при этом входит в состав куба, использующего режим хранения MOLAP, все изменения схемы в исходной таблице должны сопровождаться немедленной обработкой куба. В противном случае может возникнуть несогласованность результатов при запросах к кубу. **См**. также[в статье Автоматизация Analysis Services административных задач с помощью служб SSIS](../instances/automate-analysis-services-administrative-tasks-with-ssis.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Режимы хранения и обработка секции](../multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Примеры коллекции Parameters, команда свойства (Visual Basic) | Документация Майкрософт
+title: Коллекция Parameters, пример свойства Command (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 7df1089e-69b7-476e-9244-19947c087351
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fd8595cf8089ce6fd15549680da538946414b9c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965623"
 ---
 # <a name="parameters-collection-command-property-example-vb"></a>Примеры коллекции Parameters и свойства Command (Visual Basic)
-Следующий код демонстрирует использование [команда](../../../ado/reference/adox-api/command-property-adox.md) свойство с [команда](../../../ado/reference/ado-api/command-object-ado.md) объект для получения сведений о параметрах для процедуры.  
+В следующем коде показано, как использовать свойство [Command](../../../ado/reference/adox-api/command-property-adox.md) с объектом [Command](../../../ado/reference/ado-api/command-object-ado.md) для получения сведений о параметрах для процедуры.  
   
 ```  
 ' BeginParametersVB  
@@ -75,9 +75,9 @@ End Sub
 ' EndParametersVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Объект Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Объект каталога (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Свойство Command (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
- [Объект Procedure (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
+ [Объект процедуры (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
  [Коллекция Procedures (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)

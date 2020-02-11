@@ -20,24 +20,24 @@ ms.assetid: 3ece37af-db56-47fc-bc9d-6a7d0d8a00ec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 64df7ac6e212d103fab244dfa14ce4f8e932bcb4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039770"
 ---
 # <a name="sqlcolattributes-function"></a>Функция SQLColAttributes
-**Соответствие стандартам**  
- Представленные версии: Соответствие стандартам 1.0 ODBC: Устарело  
+**Соответствия**  
+ Введенная версия: соответствие стандартам ODBC 1,0: не рекомендуется  
   
  **Сводка**  
- В ODBC 3. *x*, функция ODBC 2.0 **SQLColAttributes** был заменен классом **SQLColAttribute**. Дополнительные сведения см. в разделе [функция SQLColAttribute](../../../odbc/reference/syntax/sqlcolattribute-function.md).  
+ В ODBC 3. *x*, функция ODBC 2,0 **SQLColAttributes** была заменена на **SQLColAttribute**. Дополнительные сведения см. в разделе [функция SQLColAttribute](../../../odbc/reference/syntax/sqlcolattribute-function.md).  
   
 > [!NOTE]  
->  Дополнительные сведения о какие диспетчера драйверов сопоставляет эту функцию, чтобы при ODBC 2. *x* при работе с ODBC 3. *x* драйвера, см. в разделе [сопоставление устаревшей функции](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) в приложении G: Рекомендации по драйверов для обеспечения обратной совместимости.  
+>  Дополнительные сведения о том, что диспетчер драйверов сопоставляет эту функцию при использовании ODBC 2. Приложение *x* работает с ODBC 3. драйвер *x* см. в разделе [сопоставление устаревших функций](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) в приложении G: рекомендации по драйверу для обеспечения обратной совместимости.  
   
- См. в разделе [сведения о ODBC 64-разрядном](../../../odbc/reference/odbc-64-bit-information.md), если приложение выполняется в 64-разрядной операционной системе.  
+ Если приложение будет работать в 64-разрядной операционной системе, см. [сведения о ODBC 64-bit](../../../odbc/reference/odbc-64-bit-information.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовков ODBC](../../../odbc/reference/install/odbc-header-files.md)

@@ -1,5 +1,5 @@
 ---
-title: Пример свойства StayInSync | Документация Майкрософт
+title: StayInSync, свойство | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -20,24 +20,24 @@ ms.assetid: 502d69b5-dc9a-455d-b115-a03bd39a552b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 18d17e0a761fe03053ba90b8ff1ef87f3067df76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930745"
 ---
 # <a name="stayinsync-property"></a>Свойство StayInSync
-Указывает, в иерархической [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объект ли ссылку на основные дочерние записи (т. е *глава*) сохранение изменений, если изменения размещения родительской строки.  
+Указывает, изменяется ли ссылка на базовые дочерние записи (то есть *глава*) в иерархическом объекте [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) при изменении позиционирования родительской строки.  
   
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
- Возвращает или задает **логическое** значение. Значение по умолчанию ― **True**. Если **True**, главы будут обновлены, если родительский **записей** позиция; строки изменения объекта, если **False**, глава по-прежнему ссылаются на данные в предыдущей главе Несмотря на то что родительского **записей** объекта изменилось позиции строки.  
+ Задает или возвращает **логическое** значение. Значение по умолчанию ― **True**. Если **значение равно true**, глава будет обновлена, если родительский объект **Recordset** изменяет расположение строки. Если **значение равно false**, глава продолжит ссылаться на данные в предыдущей главе, несмотря на то, что родительский объект **набора записей** изменил расположение строки.  
   
-## <a name="remarks"></a>Примечания  
- Это свойство применяется к иерархических наборов записей, например поддерживаемый [службы Microsoft Data Shaping Service для OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)и должно задаваться в родительском **записей** перед дочерним элементом  **Набор записей** извлекается. Это свойство упрощает перемещение иерархических наборов записей.  
+## <a name="remarks"></a>Remarks  
+ Это свойство применяется к иерархическим наборам записей, таким как поддерживаемые [службой формирования данных Майкрософт для OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md), и должны быть установлены в родительском **наборе записей** до получения дочернего **набора записей** . Это свойство упрощает навигацию по иерархическим наборам записей.  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример свойства StayInSync (Visual Basic)](../../../ado/reference/ado-api/stayinsync-property-example-vb.md)   
- [Служба для OLE DB (ADO поставщиком услуг) формирования данных](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)
+ [Служба формирования данных Майкрософт для OLE DB (поставщик служб ADO)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)

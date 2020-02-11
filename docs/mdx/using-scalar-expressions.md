@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b87fad1b9c568f4ebd5f65ef3705001b12d26693
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038039"
 ---
 # <a name="using-scalar-expressions"></a>Использование скалярных выражений
@@ -68,7 +68,7 @@ ON COLUMNS
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Выражения &#40;многомерных Выражений&#41;](../mdx/expressions-mdx.md)  
+## <a name="see-also"></a>См. также:  
+ [Выражения &#40;&#41;многомерных выражений](../mdx/expressions-mdx.md)  
   
   

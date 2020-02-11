@@ -33,10 +33,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f70e66a02637b65e96cccc6001c9702d5253d5cd
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257368"
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>Примеры массовой загрузки XML (SQLXML 4.0)
@@ -112,7 +112,7 @@ Function ValidateFile(strXmlFile,strUrn,strXsdFile)
 End Function  
 ```  
   
-## <a name="a-bulk-loading-xml-in-a-table"></a>а. Массовая загрузка XML-данных в таблицу  
+## <a name="a-bulk-loading-xml-in-a-table"></a>A. Массовая загрузка XML-данных в таблицу  
  В этом примере устанавливается соединение с экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , указанным в свойстве ConnectionString (MyServer). В примере также указывается свойство Еррорлогфиле. Поэтому ошибочный вывод сохраняется в указанном файле («C:\error.log»), для которого также можно указать другое место. Кроме того, обратите внимание, что метод Execute имеет в качестве параметров файл схемы сопоставления (под SampleSchema. XML) и XML-файл данных (SampleXMLData. XML). При выполнении групповой загрузки таблица Cust, созданная в базе данных **tempdb** , будет содержать новые записи на основе содержимого XML-файла данных.  
   
 #### <a name="to-test-a-sample-bulk-load"></a>Проверка образца массовой загрузки  
@@ -200,7 +200,7 @@ End Function
 </Schema>  
 ```  
   
-## <a name="b-bulk-loading-xml-data-in-multiple-tables"></a>B. Массовая загрузка XML-данных в несколько таблиц  
+## <a name="b-bulk-loading-xml-data-in-multiple-tables"></a>Б. Массовая загрузка XML-данных в несколько таблиц  
  В этом примере XML-документ состоит из ** \<>клиента** и ** \<заказа>** элементов.  
   
 ```xml  
@@ -331,7 +331,7 @@ End Function
 </Schema>  
 ```  
   
-## <a name="c-using-chain-relationships-in-the-schema-to-bulk-load-xml"></a>C. Использование цепочечных связей в схеме для массовой загрузки XML  
+## <a name="c-using-chain-relationships-in-the-schema-to-bulk-load-xml"></a>В. Использование цепочечных связей в схеме для массовой загрузки XML  
  Этот пример показывает, как связь M:N, указанная в схеме сопоставления, используется для массовой XML-загрузки данных, представляющих связь M:N.  
   
  В качестве примера рассмотрим следующую схему XSD.  
@@ -434,7 +434,7 @@ End Function
   
 5.  Выполните код VBScript. Массовая загрузка XML загружает XML-документ в таблицы Ord и Product.  
   
-## <a name="d-bulk-loading-in-identity-type-columns"></a>D. Массовая загрузка в столбцы типа идентификаторов  
+## <a name="d-bulk-loading-in-identity-type-columns"></a>Г. Массовая загрузка в столбцы типа идентификаторов  
  Этот пример показывает, каким образом при массовой загрузке обрабатываются столбцы идентификаторов. В этом примере выполняется массовая загрузка данных в три таблицы (Ord, Product и OrderDetail).  
   
  В таблицах имеются следующие данные.  
@@ -558,7 +558,7 @@ OrderDetail (OrderID, ProductID)
   
 5.  Выполните код VBScript. Массовая загрузка XML загрузит данные в соответствующие таблицы.  
   
-## <a name="e-generating-table-schemas-before-bulk-loading"></a>E. Формирование схем таблиц перед массовой загрузкой  
+## <a name="e-generating-table-schemas-before-bulk-loading"></a>Д. Формирование схем таблиц перед массовой загрузкой  
  При необходимости массовая загрузка XML может создать таблицы, если они не существовали до начала массовой загрузки. Установка для свойства SchemaGen объекта Склксмлбулклоад значения TRUE. При необходимости можно также запросить возможность выполнения групповой загрузки XML, чтобы удалить все существующие таблицы и создать их повторно, задав для свойства Сгдроптаблес значение TRUE. Следующий пример на языке VBScript показывает использование этих свойств.  
   
  Кроме того, в этом примере присваивается значение TRUE двум дополнительным свойствам.  
@@ -594,7 +594,7 @@ Set objBL = Nothing
   
 4.  Выполните код VBScript. Массовая загрузка XML создает необходимые таблицы на основе заданной схемы сопоставления и выполняет массовую загрузку данных в нее.  
   
-## <a name="f-bulk-loading-from-a-stream"></a>F. Массовая загрузка из потока  
+## <a name="f-bulk-loading-from-a-stream"></a>Е. Массовая загрузка из потока  
  Метод Execute модели объектов с массовым загрузкой XML принимает два параметра. Первый параметр — это файл схемы сопоставления. Второй параметр представляет XML-данные, которые предстоит загрузить в базу данных. Существует два способа передачи XML-данных методу Execute при выполнении операции XML-загрузки.  
   
 -   Указать имя файла в качестве параметра.  
@@ -1086,7 +1086,7 @@ set objBL=Nothing
 </Schema>  
 ```  
   
-## <a name="i-using-an-existing-database-connection-with-the-connectioncommand-property"></a>1. Использование существующего подключения к базе данных со свойством ConnectionCommand  
+## <a name="i-using-an-existing-database-connection-with-the-connectioncommand-property"></a>И. Использование существующего подключения к базе данных со свойством ConnectionCommand  
  Для массовой загрузки XML можно использовать существующее соединение ADO. Это может оказаться полезным в том случае, если массовая загрузка XML — лишь одна из многих операций, которые выполняются над источником данных.  
   
  Свойство ConnectionCommand позволяет использовать существующее соединение ADO с помощью объекта команды ADO. Это продемонстрировано в следующем примере на языке Visual Basic.  
@@ -1243,7 +1243,7 @@ End Sub
 </Schema>  
 ```  
   
-## <a name="j-bulk-loading-in-xml-data-type-columns"></a>Дж. Массовая загрузка XML-данных в столбцы типа данных xml  
+## <a name="j-bulk-loading-in-xml-data-type-columns"></a>К. Массовая загрузка XML-данных в столбцы типа данных xml  
  Если схема сопоставления задает столбец [типа данных XML](../../../t-sql/xml/xml-transact-sql.md) с помощью аннотации **SQL: datatype = "XML"** , то при XML-загрузке можно скопировать дочерние элементы XML для сопоставленного поля из исходного документа в этот столбец.  
   
  Рассмотрим следующую схему XSD, которая сопоставляет представление таблицы Production.ProductModel в образце базы данных AdventureWorks. В этой таблице поле CatalogDescription типа данных **XML** сопоставляется с элементом ** \<DESC>** с помощью аннотаций **SQL: field** и **SQL: datatype = "XML"** .  

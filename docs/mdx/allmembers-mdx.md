@@ -1,5 +1,5 @@
 ---
-title: AllMembers (многомерные Выражения) | Документация Майкрософт
+title: AllMembers (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 770d66941af9b42be3c7b26f7e04a60d2a95cac2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68017148"
 ---
 # <a name="allmembers-mdx"></a>AllMembers (многомерные выражения)
@@ -38,17 +38,17 @@ Level_Expression.AllMembers
  *Level_Expression*  
  Допустимое многомерное выражение, возвращающее уровень.  
   
-## <a name="remarks"></a>Примечания  
- **AllMembers** функция возвращает набор, содержащий все элементы, включая вычисляемые, заданной иерархии или уровня. **AllMembers** функция возвращает вычисляемые элементы, даже если заданной иерархии или уровне нет видимых элементов.  
+## <a name="remarks"></a>Remarks  
+ Функция **AllMembers** возвращает набор, содержащий все элементы, включая вычисляемые элементы в указанной иерархии или уровне. Функция **AllMembers** возвращает вычисляемые элементы, даже если указанная иерархия или уровень не содержит видимых элементов.  
   
 > [!IMPORTANT]  
 >  Если измерение содержит единственную видимую иерархию, на нее можно сослаться по имени измерения или по имени иерархии, поскольку имя измерения в этом случае разрешается в единственную видимую иерархию. Например, многомерное выражение `Measures.AllMembers` является допустимым, поскольку измерение Measures разрешается в единственную видимую иерархию.  
   
 > [!NOTE]  
->  **AllMembers** функция семантически аналогична методу [AddCalculatedMembers (многомерные Выражения)](../mdx/addcalculatedmembers-mdx.md) функции.  
+>  Функция **AllMembers** семантически похожа на функцию [AddCalculatedMembers (многомерные выражения)](../mdx/addcalculatedmembers-mdx.md) .  
   
 ## <a name="examples"></a>Примеры  
- Следующий пример возвращает все элементы в [`Date].[Calendar Year]` иерархии атрибута по оси столбцов, это включает в себя вычисляемые элементы и набор всех потомков `[Product].[Model Name]` иерархии на оси строк из атрибута **Adventure Works** куба.  
+ В следующем примере возвращаются все элементы в иерархии атрибутов`Date].[Calendar Year]` [на оси столбцов, включая вычисляемые элементы, а также набор всех дочерних элементов иерархии `[Product].[Model Name]` атрибута на оси строк из куба **Adventure Works** .  
   
 ```  
 SELECT  
@@ -58,7 +58,7 @@ FROM
    [Adventure Works]  
 ```  
   
- Следующий пример возвращает все элементы в **меры** измерения на оси столбцов, сюда входят все вычисляемые элементы и набор всех потомков `[Product].[Model Name]` иерархии на оси строк атрибута из **Adventure Works** куба.  
+ В следующем примере возвращаются все элементы в измерении **Measures** на оси столбцов, включая все Вычисляемые элементы, а также набор всех дочерних элементов иерархии `[Product].[Model Name]` атрибута на оси строк из куба **Adventure Works** .  
   
 ```  
 SELECT  
@@ -68,9 +68,9 @@ FROM
     [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>См. также  
- [AddCalculatedMembers (многомерные выражения)](../mdx/addcalculatedmembers-mdx.md)   
- [Children (многомерные выражения)](../mdx/children-mdx.md)   
- [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также:  
+ [AddCalculatedMembers &#40;&#41;многомерных выражений](../mdx/addcalculatedmembers-mdx.md)   
+ [Дочерние &#40;&#41;многомерных выражений](../mdx/children-mdx.md)   
+ [Ссылка на функцию многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-function-reference-mdx.md)  
   
   

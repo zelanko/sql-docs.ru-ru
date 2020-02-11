@@ -18,14 +18,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8951469279e5c3577aef355e339397b329bb5d63
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206770"
 ---
 # <a name="batches-of-statements"></a>Пакеты инструкций
-  Пакет [!INCLUDE[tsql](../../../includes/tsql-md.md)] инструкций содержит два или более инструкции, разделенные точками с запятой (;), объединенные в одну строку, передаваемый **SQLExecDirect** или [функция SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360). Пример:  
+  Пакет [!INCLUDE[tsql](../../../includes/tsql-md.md)] инструкций содержит две или более инструкции, разделенные точкой с запятой (;), встроенными в одну строку, переданную в функцию **SQLExecDirect** или [SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360). Пример:  
   
 ```  
 SQLExecDirect(hstmt,   
@@ -33,18 +33,18 @@ SQLExecDirect(hstmt,
     SQL_NTS);  
 ```  
   
- Пакеты могут быть более эффективными, чем отправка инструкций по одной, так как они часто уменьшают требуемый сетевой трафик. Используйте [SQLMoreResults](../../native-client-odbc-api/sqlmoreresults.md) для позиционирования к следующему результирующему набору после завершения обработки текущего результирующего набора.  
+ Пакеты могут быть более эффективными, чем отправка инструкций по одной, так как они часто уменьшают требуемый сетевой трафик. Используйте [SQLMoreResults](../../native-client-odbc-api/sqlmoreresults.md) , чтобы перейти к следующему результирующему набору по завершении текущего результирующего набора.  
   
  Пакеты инструкций всегда можно использовать, если атрибуты курсора ODBC установлены по умолчанию (однопроходный курсор только для чтения), а размер набора строк равен 1.  
   
- Если инструкция выполняется в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], с помощью серверных курсоров, то серверный курсор неявно преобразуется в результирующий набор по умолчанию. **SQLExecDirect** или **SQLExecute** возвращают значение SQL_SUCCESS_WITH_INFO, а вызов **SQLGetDiagRec** возвращает:  
+ Если инструкция выполняется в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], с помощью серверных курсоров, то серверный курсор неявно преобразуется в результирующий набор по умолчанию. **SQLExecDirect** или **SQLExecute** возвращают SQL_SUCCESS_WITH_INFO, а вызов **SQLGetDiagRec** возвращает:  
   
 ```  
 szSqlState = "01S02", pfNativeError = 0  
 szErrorMsg = "[Microsoft][SQL Server Native Server Native Client]Cursor type changed."  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Выполнение инструкций &#40;ODBC&#41;](executing-statements-odbc.md)  
+## <a name="see-also"></a>См. также:  
+ [Исполнение инструкций &#40;ODBC&#41;](executing-statements-odbc.md)  
   
   

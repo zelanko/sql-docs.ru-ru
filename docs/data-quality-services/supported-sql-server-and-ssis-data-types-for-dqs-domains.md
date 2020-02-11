@@ -12,10 +12,10 @@ ms.assetid: 4931143a-b84d-478b-9b45-174128d36ed3
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: cff5cf3a2a6095b79537571d63ee428c500789c6
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75558174"
 ---
 # <a name="supported-sql-server-and-ssis-data-types-for-dqs-domains"></a>Поддерживаемые типы данных SQL Server и SSIS для доменов DQS
@@ -32,10 +32,10 @@ ms.locfileid: "75558174"
   
 |Тип данных доменов DQS|Поддерживаемый тип данных SQL Server|  
 |--------------------------|------------------------------------|  
-|Дата|date|  
-|Decimal|decimal<br /><br /> float;<br /><br /> money<br /><br /> numeric<br /><br /> real;<br /><br /> smallmoney|  
-|Целое число|bigint<br /><br /> int<br /><br /> smallint<br /><br /> tinyint;|  
-|Строка|char;<br /><br /> nchar<br /><br /> nvarchar<br /><br /> varchar|  
+|Дата|Дата|  
+|Decimal|Decimal<br /><br /> FLOAT<br /><br /> money<br /><br /> NUMERIC<br /><br /> real;<br /><br /> smallmoney|  
+|Целое число|bigint<br /><br /> INT<br /><br /> smallint<br /><br /> tinyint;|  
+|String|char<br /><br /> nchar<br /><br /> nvarchar<br /><br /> varchar|  
   
  Остальные типы данных SQL Server в DQS не поддерживаются. Дополнительные сведения обо всех типах данных SQL Server см. в статье [Типы данных &#40;Transact-SQL&#41;](../t-sql/data-types/data-types-transact-sql.md).  
   
@@ -47,11 +47,11 @@ ms.locfileid: "75558174"
 |Дата|DT_DATE|  
 |Decimal|DT_DECIMAL<br /><br /> DT_NUMERIC<br /><br /> DT_R4<br /><br /> DT_R8|  
 |Целое число|DT_I1<br /><br /> DT_I2<br /><br /> DT_I4<br /><br /> DT_I8<br /><br /> DT_U1<br /><br /> DT_U2<br /><br /> DT_U4<br /><br /> DT_U8|  
-|Строка|DT_STR<br /><br /> DT_WSTR|  
+|String|DT_STR<br /><br /> DT_WSTR|  
   
  Остальные типы данных служб SSIS в DQS не поддерживаются. Дополнительные сведения обо всех типах данных служб SSIS см. в разделе [Integration Services Data Types](../integration-services/data-flow/integration-services-data-types.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Управление доменом](../data-quality-services/managing-a-domain.md)  
   
   

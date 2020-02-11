@@ -18,13 +18,13 @@ ms.assetid: b2fc4ce1-0a8e-44d2-b206-7dc7b258d8c9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f5a68160c8aee1bcb399513051e1f4cc35cea970
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085216"
 ---
-# <a name="sphelpschedule-transact-sql"></a>sp_help_schedule (Transact-SQL)
+# <a name="sp_help_schedule-transact-sql"></a>sp_help_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Возвращает информацию о расписаниях.  
@@ -43,45 +43,45 @@ sp_help_schedule
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @schedule_id = ] id` Идентификатор расписания, к списку. *schedule_name* — **int**, не имеет значения по умолчанию. Либо *schedule_id* или *schedule_name* может быть указан.  
+`[ @schedule_id = ] id`Идентификатор расписания для перечисления. *schedule_name* имеет **тип int**и не имеет значения по умолчанию. Можно указать либо *schedule_id* , либо *schedule_name* .  
   
-`[ @schedule_name = ] 'schedule_name'` Имя расписания, которые следует возвратить. *schedule_name* — **sysname**, не имеет значения по умолчанию. Либо *schedule_id* или *schedule_name* может быть указан.  
+`[ @schedule_name = ] 'schedule_name'`Имя расписания для перечисления. Аргумент *schedule_name* имеет тип **sysname**и не имеет значения по умолчанию. Можно указать либо *schedule_id* , либо *schedule_name* .  
   
-`[ @attached_schedules_only = ] attached_schedules_only ]` Указывает, следует ли отображать только расписания, что задание присоединяется к. *Этот аргумент* — **бит**, значение по умолчанию **0**. Когда *этот аргумент* — **0**, всех расписаниях. Когда *этот аргумент* — **1**, результирующий набор содержит только те расписания, подключенные к заданию.  
+`[ @attached_schedules_only = ] attached_schedules_only ]`Указывает, следует ли отображать только расписания, к которым присоединено задание. *attached_schedules_only* имеет **бит**и значение по умолчанию **0**. Если значение *attached_schedules_only* равно **0**, отображаются все расписания. Если *attached_schedules_only* равен **1**, результирующий набор содержит только те расписания, которые присоединены к заданию.  
   
-`[ @include_description = ] include_description` Указывает, следует ли включить в результирующий набор описания. *Этот аргумент* — **бит**, значение по умолчанию **0**. Когда *этот аргумент* — **0**, *schedule_description* столбец результирующего набора содержит заполнитель. Когда *этот аргумент* — **1**, в результирующий набор включается описание расписания.  
+`[ @include_description = ] include_description`Указывает, следует ли включать описания в результирующий набор. *include_description* имеет **бит**и значение по умолчанию **0**. Если значение *include_description* равно **0**, столбец *schedule_description* результирующего набора содержит заполнитель. Если *include_description* равен **1**, описание расписания включается в результирующий набор.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  Данная процедура возвращает следующий результирующий набор:  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|Идентификационный номер расписания.|  
-|**schedule_uid**|**uniqueidentifier**|Идентификатор расписания.|  
-|**schedule_name**|**sysname**|Имя расписания.|  
-|**включен**|**int**|Расписание задействовано (**1**) или не включено (**0**).|  
-|**freq_type**|**int**|Значение, указывающее, когда должно выполняться задание.<br /><br /> **1** = однократно<br /><br /> **4** = ежедневно<br /><br /> **8** = еженедельно<br /><br /> **16** = ежемесячно<br /><br /> **32** = ежемесячно, относительно **freq_interval**<br /><br /> **64** = запуск при запуске службы SQLServerAgent.|  
+|**schedule_uid**|**UNIQUEIDENTIFIER**|Идентификатор расписания.|  
+|**schedule_name**|**имеет sysname**|Имя расписания.|  
+|**доступной**|**int**|Включено ли расписание (**1**) или не включено (**0**).|  
+|**freq_type**|**int**|Значение, указывающее, когда должно выполняться задание.<br /><br /> **1** = один раз<br /><br /> **4** = ежедневно<br /><br /> **8** = еженедельно<br /><br /> **16** = ежемесячно<br /><br /> **32** = ежемесячно относительно **freq_interval**<br /><br /> **64** = запуск при запуске службы SQLServerAgent.|  
 |**freq_interval**|**int**|Дни, в которые выполняется задание. Значение зависит от значения **freq_type**. Дополнительные сведения см. в разделе [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
-|**freq_subday_type**|**int**|Единицы измерения для **freq_subday_interval**. Дополнительные сведения см. в разделе [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
-|**freq_subday_interval**|**int**|Число **freq_subday_type** периодов должно пройти между выполнениями задания. Дополнительные сведения см. в разделе [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
-|**freq_relative_interval**|**int**|Запланированные задания **freq_interval** в каждом месяце. Дополнительные сведения см. в разделе [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**freq_subday_type**|**int**|Единицы для **freq_subday_interval**. Дополнительные сведения см. в разделе [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**freq_subday_interval**|**int**|Число периодов **freq_subday_type** , которые должны быть выполнены между выполнением задания. Дополнительные сведения см. в разделе [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**freq_relative_interval**|**int**|Вхождение **freq_interval** запланированного задания в каждый месяц. Дополнительные сведения см. в разделе [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
 |**freq_recurrence_factor**|**int**|Число месяцев между выполнениями задания по расписанию.|  
 |**active_start_date**|**int**|Дата, когда начинает действовать расписание.|  
 |**active_end_date**|**int**|Дата, когда прекращает действовать расписание.|  
 |**active_start_time**|**int**|Время суток, когда начинает действовать расписание.|  
 |**active_end_time**|**int**|Время суток, когда прекращает действовать расписание.|  
 |**date_created**|**datetime**|Дата создания расписания.|  
-|**schedule_description**|**nvarchar(4000)**|Описание расписания на английском языке (если запрошено).|  
+|**schedule_description**|**nvarchar (4000)**|Описание расписания на английском языке (если запрошено).|  
 |**job_count**|**int**|Число заданий, ссылающихся на данное расписание.|  
   
-## <a name="remarks"></a>Примечания  
- Если параметры не указаны, **sp_help_schedule** выводит сведения о всех расписаниях в экземпляре.  
+## <a name="remarks"></a>Remarks  
+ Если параметры не указаны, **sp_help_schedule** выводит сведения обо всех расписаниях в экземпляре.  
   
 ## <a name="permissions"></a>Разрешения  
- По умолчанию эту хранимую процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
+ По умолчанию эта хранимая процедура может выполняться членами предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
   
 -   **SQLAgentUserRole**  
   
@@ -91,7 +91,7 @@ sp_help_schedule
   
  Дополнительные сведения о разрешениях этих ролей см. в разделе [Предопределенные роли базы данных агента SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Членами **SQLAgentUserRole** могут только просматривать принадлежащие им расписания.  
+ Члены **SQLAgentUserRole** могут просматривать только те расписания, которыми они владеют.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -118,10 +118,10 @@ EXEC dbo.sp_help_schedule
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
  [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
  [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
- [процедуру sp_detach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)  
+ [sp_detach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)  
   
   

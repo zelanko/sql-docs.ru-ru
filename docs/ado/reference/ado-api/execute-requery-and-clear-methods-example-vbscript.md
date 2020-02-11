@@ -1,5 +1,5 @@
 ---
-title: EXECUTE, Requery и Clear (VBScript) также пример метода | Документация Майкрософт
+title: Пример методов Execute, Requery и Clear (VBScript) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,18 +17,18 @@ ms.assetid: 3a7bbf07-2fca-4892-95f4-eec93f2d5e91
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 27a177b6a3d23f20790490e1f16fac2be4ec958f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918816"
 ---
-# <a name="execute-requery-and-clear-methods-example-vbscript"></a>EXECUTE, Requery и Clear методы (VBScript)
-В этом примере показано **Execute** метод, при запуске из обоих [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта и [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта. Он также использует [Requery](../../../ado/reference/ado-api/requery-method.md) метод для извлечения текущих данных в [записей](../../../ado/reference/ado-api/recordset-object-ado.md)и [снимите](../../../ado/reference/ado-api/clear-method-ado.md) метод, чтобы удалить содержимое [ошибки](../../../ado/reference/ado-api/errors-collection-ado.md)коллекции. ExecuteCommand и PrintOutput процедуры необходимы для выполнения этой процедуры.  
+# <a name="execute-requery-and-clear-methods-example-vbscript"></a>Пример методов Execute, Requery и Clear (VBScript)
+В этом примере демонстрируется метод **EXECUTE** при запуске из объекта [команды](../../../ado/reference/ado-api/command-object-ado.md) и объекта [соединения](../../../ado/reference/ado-api/connection-object-ado.md) . Он также использует метод [Requery](../../../ado/reference/ado-api/requery-method.md) для получения текущих данных в [наборе записей](../../../ado/reference/ado-api/recordset-object-ado.md)и метод [clear](../../../ado/reference/ado-api/clear-method-ado.md) для очистки содержимого коллекции [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) . Для выполнения этой процедуры требуются процедуры ExecuteCommand и Принтаутпут.  
   
- Используйте следующий пример в Active Server Page (ASP). Чтобы просмотреть этот полностью функциональный код, необходимо иметь данные источника AdvWorks.mdb (в состав примеров из SDK), расположенный в C:\Program Files\Microsoft платформы SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb или изменить путь в примере кода для отражает фактическое расположение этого файла. Это файл базы данных Microsoft Access.  
+ Используйте следующий пример на странице Active Server (ASP). Чтобы просмотреть этот полнофункциональный пример, необходимо иметь источник данных Адвворкс. mdb (установленный с примерами пакета SDK), расположенный в папке C:\Program Files\Microsoft Platform Сдк\самплес\датаакцесс\рдс\рдстест\адвворкс.МДБ, или изменить путь в примере кода на отражает фактическое расположение этого файла. Это файл базы данных Microsoft Access.  
   
- Используйте **найти** найдите файл Adovbs.inc и поместите его в каталог, который вы планируете использовать. Вырезать и вставить следующий код в блокноте или другом текстовом редакторе и сохраните его как **ExecuteVBS.asp**. Результат можно просмотреть в любом браузере клиента.  
+ Используйте **Find** для поиска файла адовбс. Inc и поместите его в каталог, который планируется использовать. Вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **ексекутевбс. ASP**. Результат можно просмотреть в любом клиентском браузере.  
   
 ```  
 <!-- BeginExecuteVBS -->  
@@ -177,13 +177,13 @@ BODY {
 <!-- EndExecuteVBS -->  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод Clear (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
  [Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Объект ошибки](../../../ado/reference/ado-api/error-object.md)   
+ [Объект Error](../../../ado/reference/ado-api/error-object.md)   
  [Коллекция Errors (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [Выполнение метода (объект Command ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)   
- [Выполнение метода (объект Connection ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
+ [Метод Execute (команда ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)   
+ [Метод Execute (соединение ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Метод Requery](../../../ado/reference/ado-api/requery-method.md)

@@ -1,5 +1,5 @@
 ---
-title: Пример набора записей для изучения данных | Документация Майкрософт
+title: Пример набора записей для проверки данных | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,14 +14,14 @@ ms.assetid: e770e626-68b1-4ddf-a217-d7b30311e2ee
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1882c5298d92e17a7ddaa165288fddfab7fdb02b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924309"
 ---
 # <a name="sample-recordset-for-examining-data"></a>Пример набора записей для проверки данных
-Во-первых давайте взглянем на **записей** как возвращаются с помощью следующий запрос SQL, выполняется на основе демонстрационных данных "Борей", в Microsoft SQL Server.  
+Сначала рассмотрим объект **Recordset** , возвращенный с помощью следующего запроса SQL, выполненного для базы данных "Northwind Sample Data" в Microsoft SQL Server.  
   
 ```  
 SELECT ProductID,ProductName,UnitPrice   
@@ -29,16 +29,16 @@ FROM Products
 WHERE CategoryID = 7    
 ```  
   
- Полученный **записей** объект содержит то дает результат в базе данных, показано в следующей таблице.  
+ Результирующий объект **набора записей** содержит все объекты, которые создает в базе данных, показанной в следующей таблице.  
   
 |ProductID|ProductName|UnitPrice|  
 |---------------|-----------------|---------------|  
-|7|Uncle Bob органических высохла Груши|30.0000|  
-|14|Диаграмме|23.2500|  
-|28|Квашеной Rssle|45.6000|  
-|51|Сушеные яблоки|53.0000|  
-|74|Longlife диаграмме|10.0000|  
+|7|Дядюшканые груши Высохнутьы Боба|30,0000|  
+|14|тофу|23,2500|  
+|28|Рссле квашеной|45,6000|  
+|51|Манжимуп высохнуть яблоки|53,0000|  
+|74|Лонглифе тофу|10,0000|  
   
- Если вы заинтересованы в получении этих результатов, самостоятельно, попробуйте в следующем примере JScript:  
+ Если вы хотите получить эти результаты самостоятельно, попробуйте следующий пример в JScript:  
   
--   [Пример JScript, возвращающего набор записей](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md)
+-   [Пример JScript для возврата набора записей](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md)

@@ -10,10 +10,10 @@ ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: f0a79169b3ee192af278aeb4465fb13d7a311783
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251589"
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>Импорт домена из файла .dqs
@@ -26,14 +26,14 @@ ms.locfileid: "75251589"
   
  При импорте домена его имя остается таким же, как и имя изначально экспортированного домена. Если домен с таким именем уже существует, службы DQS добавляют к имени импортируемого домена "_1". Это же действует и при импорте составного домена, который содержит отдельный домен с таким же именем, что и у существующего домена.  
   
-##  <a name="BeforeYouBegin"></a>Перед началом  
+##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Prerequisites"></a>Требований  
+###  <a name="Prerequisites"></a> Предварительные требования  
  Чтобы импортировать домен из файла .dqs, перед этим необходимо экспортировать один отдельный или составной домен, содержащий несколько одиночных доменов, в файл .dqs. Файл .dqs может содержать только один домен. Также необходимо создать и открыть базу знаний, в которую планируется импортировать домен.  
   
-###  <a name="Security"></a>Бюллетеня  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a>Чтение  
+####  <a name="Permissions"></a> Permissions  
  Для импорта домена из файла данных .dqs необходимо быть членом роли dqs_kb_editor или dqs_administrator в базе данных DQS_MAIN.  
   
 ##  <a name="Import"></a>Импорт домена из файла. DQS  

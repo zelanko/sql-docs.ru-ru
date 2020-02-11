@@ -1,5 +1,5 @@
 ---
-title: AddCalculatedMembers (многомерные Выражения) | Документация Майкрософт
+title: AddCalculatedMembers (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 982484b729b59a7106b6195e361110c1d4012653
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68017182"
 ---
 # <a name="addcalculatedmembers-mdx"></a>AddCalculatedMembers (многомерные выражения)
@@ -31,8 +31,8 @@ AddCalculatedMembers(Set_Expression)
  *Set_Expression*  
  Допустимое многомерное выражение, возвращающее набор.  
   
-## <a name="remarks"></a>Примечания  
- По умолчанию в языке многомерных выражений вычисляемые элементы исключаются при вычислении функций набора. **AddCalculatedMembers** функция просматривает выражение набора, указанного в *Set_Expression,* и включает вычисляемые одноуровневые элементы, содержащиеся в пределах этого набора выражение.  
+## <a name="remarks"></a>Remarks  
+ По умолчанию в языке многомерных выражений вычисляемые элементы исключаются при вычислении функций набора. Функция **AddCalculatedMembers** проверяет выражение набора, указанное в *Set_Expression,* и включает вычисляемые элементы, которые являются одноуровневыми элементами, содержащимися в области этого выражения набора.  
   
 > [!NOTE]  
 >  Эту функцию можно использовать только для одномерных выражений наборов.  
@@ -50,7 +50,7 @@ SELECT
 FROM [Adventure Works]   
 ```  
   
- В следующем примере возвращается `Measures.[Unit Price]` члена, а также все вычисляемые элементы в **меры** измерения, от **Adventure Works** куба.  
+ В следующем примере возвращается `Measures.[Unit Price]` элемент в дополнение ко всем вычисляемым элементам в измерении **Measures** из куба **Adventure Works** .  
   
 ```  
 SELECT  
@@ -59,7 +59,7 @@ FROM
    [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также:  
+ [Ссылка на функцию многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-function-reference-mdx.md)  
   
   

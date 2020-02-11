@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5555e49a85d50b6b5a48002a176055605ee06913
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484225"
 ---
 # <a name="enable-or-disable-profiling-notifications-in-dqs"></a>Включение или отключение уведомлений по профилированию в DQS
@@ -31,9 +31,9 @@ ms.locfileid: "65484225"
 ####  <a name="Permissions"></a> Permissions  
  Для включения уведомлений необходимо иметь роль dqs_administrator в базе данных DQS_MAIN.  
   
-##  <a name="Enable"></a> Включение или отключение уведомлений по профилированию  
+##  <a name="Enable"></a>Включение или отключение уведомлений о профилировании  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Запуск клиентского приложения Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Запустите приложение Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  На главном экране клиента [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] нажмите кнопку **Конфигурация**.  
   

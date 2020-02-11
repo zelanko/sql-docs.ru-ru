@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d7c17bf520f1feaf454d784658c8abc423dbe7a0
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75229432"
 ---
 # <a name="understanding-pass-order-and-solve-order-mdx"></a>Основные сведения о порядке этапов и порядке вычисления (многомерные выражения)
@@ -163,7 +163,7 @@ FROM [Adventure Works]
 ((9,770,899.74 - 9,791,060.30) - (5,721,205.24 - 5,718,327.17)) / (9,770,899.74 - 9,791,060.30) = 1.14275744   
 ```  
   
- или  
+ или диспетчер конфигурации служб  
   
 ```  
 (23,038.63) / (20,160.56) = 114.28%  
@@ -212,7 +212,7 @@ FROM [Adventure Works]
 ## <a name="additional-considerations"></a>Дополнительные замечания  
  Работать с порядками вычисления весьма сложно, особенно в кубах с большим количеством измерений, содержащих вычисляемые элементы, пользовательские формулы сверток и вычисляемые ячейки. При выполнении службами [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] запроса многомерных выражений [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] принимает во внимание порядок вычисления всех элементов, рассчитываемых на данном этапе, включая измерения куба, указанные в запросе.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [CalculationCurrentPass &#40;&#41;многомерных выражений](/sql/mdx/calculationcurrentpass-mdx)   
  [CalculationPassValue &#40;&#41;многомерных выражений](/sql/mdx/calculationpassvalue-mdx)   
  [Инструкция CREATE MEMBER &#40;&#41;многомерных выражений](/sql/mdx/mdx-data-definition-create-member)   

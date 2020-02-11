@@ -1,5 +1,5 @@
 ---
-title: Пример свойства Status (объект Recordset) (Visual Basic) | Документация Майкрософт
+title: Пример свойства Status (набор записей) (VB) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: e37b4d46-380d-4615-b4bb-e1a7b0851771
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f1f418ed4c8ac74a023203606ebf3934129525a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67916797"
 ---
 # <a name="status-property-example-recordset-vb"></a>Пример свойства Status (объект Recordset) (Visual Basic)
-В этом примере используется [состояние](../../../ado/reference/ado-api/status-property-ado-recordset.md) свойство для отображения записи, которые были изменены в пакетной операции перед произошла пакетного обновления.  
+В этом примере свойство [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) используется для вывода сведений о том, какие записи были изменены в пакетной операции до того, как произошло пакетное обновление.  
   
 ```  
 'BeginStatusRecordsetVB  
@@ -97,5 +97,5 @@ End Sub
 'EndStatusRecordsetVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство Status (объект Recordset ADO)](../../../ado/reference/ado-api/status-property-ado-recordset.md)

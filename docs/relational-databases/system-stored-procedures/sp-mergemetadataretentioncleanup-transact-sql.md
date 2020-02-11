@@ -16,16 +16,16 @@ ms.assetid: 4e8d6343-2a38-421d-a3f3-c37d437a0f88
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 41c3a6848d71d7ba8f22667c117686485bb569b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019973"
 ---
-# <a name="spmergemetadataretentioncleanup-transact-sql"></a>sp_mergemetadataretentioncleanup (Transact-SQL)
+# <a name="sp_mergemetadataretentioncleanup-transact-sql"></a>sp_mergemetadataretentioncleanup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Выполняет ручную очистку метаданных в [MSmerge_genhistory](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md), [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md), [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md), [MSmerge_past_partition_ сопоставления](../../relational-databases/system-tables/msmerge-past-partition-mappings-transact-sql.md), и [MSmerge_current_partition_mappings](../../relational-databases/system-tables/msmerge-current-partition-mappings.md) системных таблиц. Эта хранимая процедура выполняется на каждом издателе и подписчике в топологии.  
+  Выполняет ручную очистку метаданных в системных таблицах [MSmerge_genhistory](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md), [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md), [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md), [MSmerge_past_partition_mappings](../../relational-databases/system-tables/msmerge-past-partition-mappings-transact-sql.md)и [MSmerge_current_partition_mappings](../../relational-databases/system-tables/msmerge-current-partition-mappings.md) . Эта хранимая процедура выполняется на каждом издателе и подписчике в топологии.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,26 +40,26 @@ sp_mergemetadataretentioncleanup [ [ @num_genhistory_rows = ] num_genhistory_row
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @num_genhistory_rows = ] num_genhistory_rows OUTPUT` Возвращает число строк, очищенных от [MSmerge_genhistory](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md) таблицы. *num_genhistory_rows* — **int**, значение по умолчанию **0**.  
+`[ @num_genhistory_rows = ] num_genhistory_rows OUTPUT`Возвращает число очищенных строк из таблицы [MSmerge_genhistory](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md) . *num_genhistory_rows* имеет **тип int**и значение по умолчанию **0**.  
   
-`[ @num_contents_rows = ] num_contents_rows OUTPUT` Возвращает число строк, очищенных от [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) таблицы. *num_contents_rows* — **int**, значение по умолчанию **0**.  
+`[ @num_contents_rows = ] num_contents_rows OUTPUT`Возвращает число очищенных строк из таблицы [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) . *num_contents_rows* имеет **тип int**и значение по умолчанию **0**.  
   
-`[ @num_tombstone_rows = ] num_tombstone_rows OUTPUT` Возвращает число строк, очищенных от [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) таблицы. *num_tombstone_rows* — **int**, значение по умолчанию **0**.  
+`[ @num_tombstone_rows = ] num_tombstone_rows OUTPUT`Возвращает число очищенных строк из таблицы [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) . *num_tombstone_rows* имеет **тип int**и значение по умолчанию **0**.  
   
-`[ @aggressive_cleanup_only = ] aggressive_cleanup_only` Только для внутреннего использования.  
+`[ @aggressive_cleanup_only = ] aggressive_cleanup_only`Только для внутреннего использования.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
->  Если имеется несколько публикаций в базе данных, и любого из этих публикаций использует бесконечный срок хранения публикации, под управлением **sp_mergemetadataretentioncleanup** не обеспечивает очистки отслеживания изменений репликации слиянием метаданные для базы данных. По этой причине, при использовании неограниченного срока хранения публикации необходимо помнить об осторожности. Чтобы определить, использует ли публикация неограниченный срок хранения, выполните [sp_helpmergepublication &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md) на издателе и обратите внимание любых публикаций в результирующий набор со значением **0** для **хранения**.  
+>  Если в базе данных имеется несколько публикаций, а в любой из этих публикаций используется бесконечный срок хранения публикации, то выполнение **sp_mergemetadataretentioncleanup** не очищает метаданные отслеживания изменений репликации слиянием для базы данных. По этой причине, при использовании неограниченного срока хранения публикации необходимо помнить об осторожности. Чтобы определить, имеет ли публикация бесконечный срок хранения, выполните [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md) на издателе и обратите внимание на все публикации в результирующем наборе со значением **0** для параметра **retention**.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **db_owner** предопределенной роли базы данных или пользователям в списке доступа к публикации для опубликованной базы данных можно выполнить **sp_mergemetadataretentioncleanup**.  
+ Только члены предопределенной роли базы данных **db_owner** или пользователи из списка доступа к публикации для опубликованной базы данных могут выполнять **sp_mergemetadataretentioncleanup**.  
   
-## <a name="see-also"></a>См. также  
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -13,26 +13,26 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 169ab149df11de12e5cf5452b0f8176737fb5dba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62510016"
 ---
-# <a name="windows-dialog-box-microsoft-document-explorer-help"></a>Диалоговое окно Windows (справка по обозревателю документов Майкрософт)
+# <a name="windows-dialog-box-microsoft-document-explorer-help"></a>Диалоговое окно Windows (справка по обозревателю документов)
   Это диалоговое окно позволяет отображать, закрывать и систематизировать документы, открытые в редакторах и конструкторах. Можно отобразить это диалоговое окно, выбрав пункт **Windows** в меню **Окно** .  
   
 ## <a name="options"></a>Параметры  
- **Name**  
+ **Название**  
  Отображает имена окон документов и средств, причем выбран элемент, активный в настоящий момент.  
   
  **Путь**  
  Отображает полный путь к документам. Для Windows обычно не существует пути.  
   
- **Activate**  
+ **Активировать**  
  Делает выбранное окно документа или инструмента активным элементом в проводнике документов [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
- **Сохранять**  
+ **Сохранить**  
  Сохраняет выбранное окно. Не все окна могут быть сохранены.  
   
  **Закрыть окна**  

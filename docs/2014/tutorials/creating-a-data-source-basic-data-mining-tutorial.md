@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3f85320a99c901a2fd71c9048750825569559099
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69494027"
 ---
 # <a name="creating-a-data-source-basic-data-mining-tutorial"></a>Создание источника данных (учебник по интеллектуальному анализу данных — начальный уровень)
@@ -27,9 +27,9 @@ ms.locfileid: "69494027"
   
 1.  В **Обозреватель решений**щелкните правой кнопкой мыши папку **Источники данных** и выберите пункт **создать источник данных**.  
   
-2.  На странице **Добро пожаловать на страницу мастера источников данных** нажмите кнопку **Далее**.  
+2.  На странице **Мастер источников данных** нажмите кнопку **Далее**.  
   
-3.  На странице **Выбор способа определения соединения** нажмите кнопку **создать** , чтобы добавить [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] соединение с базой данных.  
+3.  На странице **Выбор способа определения соединения** нажмите кнопку **создать** , чтобы добавить соединение с [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] базой данных.  
   
 4.  В списке **поставщик** в **диспетчере соединений**выберите **собственный OLE DB \ Server Native Client 11,0**.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "69494027"
   
 7.  В списке **выберите или введите имя базы данных** выберите [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] и нажмите кнопку **ОК**.  
   
-8.  Нажмите кнопку **Далее**.  
+8.  Щелкните **Далее**.  
   
 9. На странице **сведения об олицетворении** щелкните **использовать учетную запись службы**, а затем нажмите кнопку **Далее**.  
   
@@ -55,14 +55,14 @@ ms.locfileid: "69494027"
      Новый источник данных, Adventure Works DW 2012, появится в папке **Источники данных** в Обозреватель решений.  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
- [Учебник по созданию базового интеллектуального анализа данных в представлении &#40;источника данных&#41;](../../2014/tutorials/creating-a-data-source-view-basic-data-mining-tutorial.md)  
+ [Создание представления источника данных &#40;учебник по основам интеллектуального анализа данных&#41;](../../2014/tutorials/creating-a-data-source-view-basic-data-mining-tutorial.md)  
   
 ## <a name="previous-task-in-lesson"></a>Предыдущая задача занятия  
- [Учебник по созданию базового &#40;интеллектуального анализа данных в проекте Analysis Services&#41;](../../2014/tutorials/creating-an-analysis-services-project-basic-data-mining-tutorial.md)  
+ [Учебник по созданию Analysis Services проекта &#40;Basic Data Mining&#41;](../../2014/tutorials/creating-an-analysis-services-project-basic-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>См. также  
- [Создание источника данных (многомерные службы SSAS)](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   
+## <a name="see-also"></a>См. также:  
+ [Создание источника данных &#40;многомерных&#41;SSAS](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   
  [Определение источника данных](../analysis-services/lesson-1-2-defining-a-data-source.md)   
- [Задание параметров олицетворения (службы SSAS — многомерные)](https://docs.microsoft.com/analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional)  
+ [Настройка параметров олицетворения &#40;SSAS — многомерные&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional)  
   
   

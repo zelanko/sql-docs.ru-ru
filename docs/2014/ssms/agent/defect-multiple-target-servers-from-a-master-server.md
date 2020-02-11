@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0123027ac9aa87d616b52ac5cc26f36a20f7e1e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62524018"
 ---
 # <a name="defect-multiple-target-servers-from-a-master-server"></a>Defect Multiple Target Servers from a Master Server
@@ -43,9 +43,9 @@ ms.locfileid: "62524018"
   
     -   щелкните **Эти целевые серверы**, а затем соответствующий пункт **Выбрать** , чтобы отключить от главного сервера некоторые, но не все целевые серверы.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание многосерверной среды](create-a-multiserver-environment.md)   
- [Автоматизация администрирования в масштабах предприятия](automated-administration-across-an-enterprise.md)   
+ [Автоматизированное администрирование в масштабах предприятия](automated-administration-across-an-enterprise.md)   
  [Отключение целевого сервера от главного сервера](defect-a-target-server-from-a-master-server.md)  
   
   

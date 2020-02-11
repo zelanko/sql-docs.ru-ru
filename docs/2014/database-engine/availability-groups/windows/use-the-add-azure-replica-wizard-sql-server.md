@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 90418193ac869641a20f8b0f684fc43dd46712f8
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175996"
 ---
 # <a name="use-the-add-azure-replica-wizard-sql-server"></a>Использование мастера добавления реплики Azure (SQL Server)
@@ -26,12 +26,12 @@ ms.locfileid: "70175996"
   
      [Предварительные требования](#Prerequisites)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
--   **Для добавления реплики воспользуйтесь инструкциями из раздела**  [Мастер добавления реплики Azure (среда SQL Server Management Studio)](#SSMSProcedure)  
+-   **Добавление реплики с помощью:**  [Мастер добавления реплики Azure (SQL Server Management Studio)](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
- Если вы еще не добавили реплику доступности в группу доступности, см. разделы "экземпляры сервера" и "группы доступности и реплики" в разделе [Предварительные требования, ограничения и рекомендации для &#40;группы доступности AlwaysOn&#41;SQL Server](prereqs-restrictions-recommendations-always-on-availability.md).  
+ Если вы еще не добавили реплику доступности в группу доступности, см. разделы "экземпляры сервера" и "группы доступности и реплики" в разделе [Предварительные требования, ограничения и рекомендации для группы доступности AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ###  <a name="Prerequisites"></a> Предварительные требования  
   
@@ -43,21 +43,21 @@ ms.locfileid: "70175996"
   
 -   Клиенты прослушивателя группы доступности должны быть подключены к Интернету, если им нужно поддерживать соединение с прослушивателем при выполнении отработки отказа группы доступности в реплику Azure.  
   
--   **Предварительные условия для использования полной начальной синхронизации данных** Необходимо указать сетевой ресурс, чтобы мастер мог создавать и получать доступ к резервным копиям. Для каждой первичной реплики учетная запись, используемая для запуска [!INCLUDE[ssDE](../../../includes/ssde-md.md)] , должна иметь разрешения в файловой системе на чтение и запись в общей сетевой папке. Для вторичных реплик учетная запись должна иметь разрешение на чтение в сетевой папке.  
+-   **Предварительные требования для использования полной начальной синхронизации данных** Чтобы мастер мог создавать резервные копии и получать доступ к ним, необходимо указать общую сетевую папку. Для каждой первичной реплики учетная запись, используемая для запуска [!INCLUDE[ssDE](../../../includes/ssde-md.md)] , должна иметь разрешения в файловой системе на чтение и запись в общей сетевой папке. Для вторичных реплик учетная запись должна иметь разрешение на чтение в сетевой папке.  
   
-     Если нет возможности воспользоваться мастером для выполнения полной первоначальной синхронизации данных, то базы данных-получатели нужно подготовить вручную. Это можно сделать до или после запуска мастера. Дополнительные сведения см. в статье [Подготовка базы данных-получателя для присоединения к группе доступности вручную (SQL Server)](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
+     Если нет возможности воспользоваться мастером для выполнения полной первоначальной синхронизации данных, то базы данных-получатели нужно подготовить вручную. Это можно сделать до или после запуска мастера. Дополнительные сведения см. в разделе [Подготовка базы данных-получателя для присоединения к группе доступности вручную (SQL Server)](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  См. раздел [Security](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md#Security)  
   
-##  <a name="SSMSProcedure"></a> Работа с мастером добавления реплики Azure (SQL Server Management Studio)  
+##  <a name="SSMSProcedure"></a>Использование мастера добавления реплики Azure (SQL Server Management Studio)  
  Мастер добавления реплики Azure можно запустить на странице [Выбор реплик](specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md). На эту страницу можно перейти двумя способами.  
   
--   [Использование мастера групп доступности (среда SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md)  
+-   [Использование мастера групп доступности &#40;SQL Server Management Studio&#41;](use-the-availability-group-wizard-sql-server-management-studio.md)  
   
--   [Использование мастера добавления реплики в группу доступности (среда SQL Server Management Studio)](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
+-   [Использование мастера добавления реплики в группу доступности &#40;SQL Server Management Studio&#41;](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   
  После того как был запущен мастер добавления реплики Azure, выполните следующие шаги.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "70175996"
   
 4.  Укажите параметры для виртуальной машины Azure, на которой будет размещаться новая вторичная реплика.  
   
-     Изображение  
+     Образ —  
      Имя образа SQL Server, которое будет использоваться для виртуальной машины Azure  
   
      Размер виртуальной машины  
@@ -109,9 +109,9 @@ ms.locfileid: "70175996"
   
 -   [Добавление вторичной реплики к группе доступности (SQL Server)](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
-## <a name="see-also"></a>См. также статью  
- [Общие сведения о &#40;группы доступности AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)   
- [Предварительные требования, ограничения и рекомендации для &#40;группы доступности AlwaysOn&#41; SQL Server](prereqs-restrictions-recommendations-always-on-availability.md)   
- [Добавление вторичной реплики к группе доступности (SQL Server)](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
+## <a name="see-also"></a>См. также:  
+ [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Предварительные требования, ограничения и рекомендации для группы доступности AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
+ [Добавление вторичной реплики в группу доступности &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
   

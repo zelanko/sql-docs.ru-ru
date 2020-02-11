@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 73b71e83f3b0f0f895b2cc5b8fd3495fb4893a32
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059614"
 ---
 # <a name="deploy-packages-by-using-the-deployment-utility"></a>Развертывание пакетов с помощью программы развертывания
@@ -64,7 +64,7 @@ ms.locfileid: "66059614"
   
 8.  Если выбрана функция проверки пакетов после установки, посмотрите результаты проверки развернутых пакетов.  
   
-## <a name="see-also"></a>См. также  
- [Развертывания пакета &#40;служб SSIS&#41;](packages/legacy-package-deployment-ssis.md)  
+## <a name="see-also"></a>См. также:  
+ [Развертывание пакетов &#40;&#41;SSIS](packages/legacy-package-deployment-ssis.md)  
   
   

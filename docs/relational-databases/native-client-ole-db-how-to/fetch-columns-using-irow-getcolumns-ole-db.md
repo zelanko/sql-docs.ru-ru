@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1d95f551a965758db6f6140770d6823543d6922d
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73768236"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Выбор столбцов при помощи метода IRow::GetColumns (OLE DB)
@@ -29,10 +29,10 @@ ms.locfileid: "73768236"
   
 -   Как получить группу столбцов (последовательно).  
   
--   Как дважды получить доступ к столбцу. В первый раз узнается фактическая ширина столбца, а затем осуществляется доступ к данным. Если в структуре DBCOLUMNACCESS **pData** имеет значение NULL, а **cbMaxLen** = 0, вызов **IRow**- **>GetColumns()** возвращает только фактическую длину столбца. В этом случае **IRow->GetColumns()** можно вызвать снова для того же столбца, чтобы получить данные.  
+-   Как дважды получить доступ к столбцу. В первый раз узнается фактическая ширина столбца, а затем осуществляется доступ к данным. Если в структуре DBCOLUMNACCESS **pData** имеет значение NULL, а **cbMaxLen** = 0, вызов **IRow**-**>GetColumns()** возвращает только фактическую длину столбца. В этом случае **IRow->GetColumns()** можно вызвать снова для того же столбца, чтобы получить данные.  
   
 > [!IMPORTANT]  
->  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с помощью [API-интерфейса шифрования Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, следует зашифровать их с помощью [API шифрования Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-fetch-columns-using-irowgetcolumns"></a>Получение столбцов с помощью IRow::GetColumns  
   
@@ -519,7 +519,7 @@ if exists (select name from sysobjects where name = 'MyTable')
 go  
 ```  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Инструкции по OLE DB](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

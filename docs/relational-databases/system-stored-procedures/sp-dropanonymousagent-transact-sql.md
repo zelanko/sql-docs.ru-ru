@@ -16,13 +16,13 @@ ms.assetid: 4cb96efa-9358-44a3-a8ee-a7e181bed089
 ms.author: vanto
 author: VanMSFT
 ms.openlocfilehash: 7e82023ed750c77d87a2536debfb5fceb7321db4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67911955"
 ---
-# <a name="spdropanonymousagent-transact-sql"></a>sp_dropanonymousagent (Transact-SQL)
+# <a name="sp_dropanonymousagent-transact-sql"></a>sp_dropanonymousagent (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
@@ -37,22 +37,22 @@ sp_dropanonymousagent [ @subid= ] sub_id    , [ @type= ] type
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @subid = ] sub_id` — Это глобальный идентификатор для анонимной подписки. *sub_id* — **uniqueidentifier**, не имеет значения по умолчанию. Этот идентификатор можно получить на подписчике с помощью **sp_helppullsubscription**. Значение в **subid** поле возвращенного результирующего набора будет глобальный идентификатор.  
+`[ @subid = ] sub_id`Глобальный идентификатор анонимной подписки. *sub_id* имеет тип **uniqueidentifier**и не имеет значения по умолчанию. Этот идентификатор может быть получен на подписчике с помощью **sp_helppullsubscription**. Значение в поле **subid** возвращенного результирующего набора — это глобальный идентификатор.  
   
-`[ @type = ] type` — Тип подписки. *Тип* — **int**, не имеет значения по умолчанию. Допустимые значения: **1** или **2**. Укажите **1**, если в репликации моментальных снимков или репликации транзакций с использованием агента распространителя. Укажите **2**, если с помощью агента слияния репликации слиянием.  
+`[ @type = ] type`Тип подписки. *Type имеет тип* **int**и не имеет значения по умолчанию. Допустимые значения: **1** или **2**. Укажите значение **1**, если репликация моментальных снимков или репликация транзакций используют агент распространения. Укажите значение **2**, если репликация слиянием использует агент слияния.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  **sp_dropanonymousagent** используется во всех типах репликации.  
   
  Эта хранимая процедура используется только для удаления агентов анонимных подписок и не может быть использована для удаления известных подписок.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **db_owner** предопределенной роли базы данных в базе данных распространителя могут выполнять процедуру **sp_dropanonymousagent**.  
+ Только члены предопределенной роли базы данных **db_owner** в базе данных распространителя могут выполнять **sp_dropanonymousagent**.  
   
-## <a name="see-also"></a>См. также  
- [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Хранимые процедуры репликации &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

@@ -16,14 +16,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: dfee7265529419aecf2b05831503ed134b93f525
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62787064"
 ---
 # <a name="configure-the-min-memory-per-query-server-configuration-option"></a>Настройка параметра конфигурации сервера min memory per query
-  В этом разделе описываются способы настройки `min memory per query` параметр конфигурации сервера в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. `min memory per query` Указывает минимальный объем памяти (в килобайтах), выделяемый для выполнения запроса. Например если `min memory per query` имеет значение 2048 КБ, запрос гарантированно получит указанный объем памяти. Значение по умолчанию — 1 024 КБ. Минимальное значение — 512 КБ, максимальное — 2 147 483 647 KB (2 ГБ).  
+  В этом разделе описывается настройка параметра конфигурации `min memory per query` сервера в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или. [!INCLUDE[tsql](../../includes/tsql-md.md)] `min memory per query` Параметр задает минимальный объем памяти (в килобайтах), который будет выделен для выполнения запроса. Например, если `min memory per query` для задано значение 2 048 КБ, то запрос гарантированно получит по крайней мере такой большой объем памяти. Значение по умолчанию — 1 024 КБ. Минимальное значение — 512 КБ, максимальное — 2 147 483 647 KB (2 ГБ).  
   
  **В этом разделе**  
   
@@ -33,15 +33,15 @@ ms.locfileid: "62787064"
   
      [Рекомендации](#Recommendations)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
--   **Настройка параметра min memory per query с помощью**  
+-   **Настройка параметра мин. памяти на запрос с помощью:**  
   
      [Среда SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Дальнейшие действия.**  [После настройки параметра min memory per query](#FollowUp)  
+-   **Дальнейшие действия.**  [после настройки параметра мин. памяти на запрос](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
@@ -94,13 +94,13 @@ GO
   
 ```  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. После настройки параметра min memory per query  
+##  <a name="FollowUp"></a>Дальнейшие действия. После настройки параметра мин. памяти на запрос  
  Параметр вступает в силу немедленно, без перезапуска сервера.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [RECONFIGURE (Transact-SQL)](/sql/t-sql/language-elements/reconfigure-transact-sql)   
  [Параметры конфигурации сервера (SQL Server)](server-configuration-options-sql-server.md)   
  [sp_configure (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   
- [Configure the index create memory Server Configuration Option](configure-the-index-create-memory-server-configuration-option.md)  
+ [Настройка параметра конфигурации сервера index create memory](configure-the-index-create-memory-server-configuration-option.md)  
   
   

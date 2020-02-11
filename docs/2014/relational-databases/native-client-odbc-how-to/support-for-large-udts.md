@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b5ccacd7bb6fabf6c7eed0cee02ddb34979f14a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68205549"
 ---
 # <a name="support-for-large-udts"></a>Поддержка больших, определяемых пользователем типов
@@ -22,7 +22,7 @@ ms.locfileid: "68205549"
   
  С версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , вышедшими до [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], образец работать не будет.  
   
- Дополнительные сведения о поддержке больших определяемых пользователем типов, см. в разделе [Large CLR User-Defined типы &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ Дополнительные сведения о поддержке больших определяемых пользователем типов см. в разделе [большие определяемые пользователем типы данных CLR &#40;&#41;ODBC ](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="example"></a>Пример  
  Первым листингом кода является исходный код на C#. Вставьте его в файл LargeStringUDT.cs и скомпилируйте его в DLL-библиотеку. Скопируйте файл LargeStringUDT.dll в корневой каталог диска C.  

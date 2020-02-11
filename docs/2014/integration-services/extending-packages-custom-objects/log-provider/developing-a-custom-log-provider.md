@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 25531ce8e4a405b1e52a0f1f8d81fb536087cff7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768610"
 ---
 # <a name="developing-a-custom-log-provider"></a>Разработка пользовательского регистратора
@@ -39,9 +39,9 @@ ms.locfileid: "62768610"
  Описывает реализацию пользовательского регистратора путем перекрытия методов и свойств базового класса.  
   
  [Разработка пользовательского интерфейса для пользовательского регистратора](developing-a-user-interface-for-a-custom-log-provider.md)  
- Пользовательские интерфейсы для пользовательских регистраторов не поддерживаются службами [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)].  
+ Настраиваемые пользовательские интерфейсы для пользовательских регистраторов не поддерживаются в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)].  
   
-## <a name="related-topics"></a>См. также  
+## <a name="related-topics"></a>Связанные темы  
   
 ### <a name="information-common-to-all-custom-objects"></a>Общие сведения для всех пользовательских объектов  
  Сведения, общие для всех типов пользовательских объектов, которые можно создавать в службах [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], см. в следующих разделах.  
@@ -52,7 +52,7 @@ ms.locfileid: "62768610"
  [Сохранение пользовательских объектов](../persisting-custom-objects.md)  
  Описывает пользовательский механизм сохраняемости, при необходимости приводя пояснения.  
   
- [Сборка, развертывание и отладка пользовательских объектов](../building-deploying-and-debugging-custom-objects.md)  
+ [Построение, развертывание и отладка пользовательских объектов](../building-deploying-and-debugging-custom-objects.md)  
  Описывает методы построения, подписывания, развертывания и отладки пользовательских объектов.  
   
 ### <a name="information-about-other-custom-objects"></a>Сведения о других пользовательских объектах  
@@ -70,6 +70,6 @@ ms.locfileid: "62768610"
  [Разработка пользовательского компонента потока данных](../data-flow/developing-a-custom-data-flow-component.md)  
  Описывает вопросы программирования пользовательских источников, преобразований и назначений потока данных.  
   
-![Значок служб Integration Services (маленький)](../../media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
+![Значок Integration Services (маленький)](../../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
   

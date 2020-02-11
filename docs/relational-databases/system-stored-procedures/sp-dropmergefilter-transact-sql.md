@@ -16,16 +16,16 @@ ms.assetid: 798586d7-05f3-4a5e-bea8-a34b7b52d0fd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b952fcd8145a2cf5392308b21d593e8c377761f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933966"
 ---
-# <a name="spdropmergefilter-transact-sql"></a>sp_dropmergefilter (Transact-SQL)
+# <a name="sp_dropmergefilter-transact-sql"></a>sp_dropmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Удаляет фильтр слияния. **sp_dropmergefilter** удаляет все столбцы фильтра слияния, определенные в фильтре слияния, подлежащем удалению. Эта хранимая процедура выполняется на издателе в базе данных публикации.  
+  Удаляет фильтр слияния. **sp_dropmergefilter** удаляет все столбцы фильтра слияния, определенные для удаляемого фильтра слияния. Эта хранимая процедура выполняется на издателе в базе данных публикации.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,38 +39,38 @@ sp_dropmergefilter [ @publication= ] 'publication', [ @article= ] 'article'     
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` — Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @article = ] 'article'` — Имя статьи. *статья* — **sysname**, не имеет значения по умолчанию.  
+`[ @article = ] 'article'`Имя статьи. Аргумент *article* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @filtername = ] 'filtername'` — Имя фильтра для удаления. *FilterName* — **sysname**, не имеет значения по умолчанию.  
+`[ @filtername = ] 'filtername'`Имя удаляемого фильтра. *filtername* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Включает или отключает возможность наличия недействительных моментальных снимков. *подписки потребуют* — **бит**, значение по умолчанию **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`Включает или отключает возможность недействительности моментального снимка. *force_invalidate_snapshot* является **битом**и имеет значение по умолчанию **0**.  
   
- **0** указывает, что изменения статьи слияния не приводят к недействительности моментального снимка.  
+ **0** указывает, что изменения в статье слияния не приводят к недействительности моментального снимка.  
   
- **1** означает, что изменения статьи слияния могут привести к недействительности моментального снимка. Если это так, значение **1** дает разрешение нового моментального снимка.  
+ **1** означает, что изменения в статье слияния могут привести к недействительности моментального снимка. Если это так, значение **1** дает разрешение на создание нового моментального снимка.  
   
-`[ @force_reinit_subscription = ] force_reinit_subscription` Включает или отключает возможность отметки подписки как не является допустимым. *Этот* — **бит**, значение по умолчанию **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription`Включает или отключает возможность пометить подписку как недопустимую. *force_reinit_subscription* является **битом**и имеет значение по умолчанию **0**.  
   
- **0** указывает, что изменения в фильтре статьи слияния не приводят к недействительности подписок.  
+ значение **0** указывает, что изменения в фильтре статей публикации не приводят к недопустимым подпискам.  
   
- **1** обозначает, что изменения в фильтре статьи слияния приведут к недействительности подписок.  
+ **1** означает, что изменения в фильтре статей публикации приводят к недействительности подписок.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  **sp_dropmergefilter** используется в репликации слиянием.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_dropmergefilter**.  
+ Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_dropmergefilter**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Изменение свойств публикации и статьи](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [sp_addmergefilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
- [sp_changemergefilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
+ [sp_addmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
+ [sp_changemergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
  [sp_helpmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

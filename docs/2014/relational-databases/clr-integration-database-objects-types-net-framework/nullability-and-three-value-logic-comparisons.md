@@ -1,5 +1,5 @@
 ---
-title: Допустимость значений NULL и трехзначная логика сравнения | Документация Майкрософт
+title: Допустимость значений NULL и сравнение логики с тремя значениями | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4f1b4823db4ae961024ac2a786c948d8349f31be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919636"
 ---
 # <a name="nullability-and-three-value-logic-comparisons"></a>Допустимость значений NULL и трехзначная логика сравнения
@@ -36,15 +36,15 @@ ms.locfileid: "62919636"
  Пространство имен `System.Data.SqlTypes` вводит тип `SqlBoolean` для представления трехзначной логики. Сравнения каких-либо `SqlTypes` возвращают значения типа `SqlBoolean`. Значение UNKNOWN представлено значением NULL типа `SqlBoolean`. Свойства `IsTrue`, `IsFalse` и `IsNull` обеспечивают возможность проверки значения типа `SqlBoolean`.  
   
 ## <a name="operations-functions-and-null-values"></a>Операции, функции и значения NULL  
- Все арифметические операторы (+, -, \*, /, %), битовые операторы (~ &, и |), и большинство функций возвращают NULL, если какой-либо из операндов или аргументов `SqlTypes` равны NULL. Свойство `IsNull` всегда возвращает значение TRUE или FALSE.  
+ Все арифметические операторы (+,- \*,,/,%), битовые операторы (~, & и |) и большинство функций возвращают значение null, если любой из операндов или аргументов `SqlTypes` имеет значение null. Свойство `IsNull` всегда возвращает значение TRUE или FALSE.  
   
-## <a name="precision"></a>Точность  
+## <a name="precision"></a>Precision  
  Максимальные значения типов данных decimal в среде CLR платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] отличаются от максимальных значений числовых типов и типов decimal в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Кроме того, типы данных decimal в среде CLR платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] предполагают использование максимальной точности. Однако в среде CLR для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип `SqlDecimal` обеспечивает такую же максимальную точность и масштаб, а также такую же семантику, как и у типа данных decimal в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="overflow-detection"></a>Обнаружение переполнений  
  В среде CLR платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] сложение двух очень больших чисел не может вызвать исключение. При этом если не использовался оператор проверки, возвращенный результат может «обернуться по кругу» и превратиться в отрицательное целое число. В `System.Data.SqlTypes` исключения возникают для всех ошибок переполнения и потери точности, а также для ошибок деления на ноль.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Типы данных SQL Server в платформе .NET Framework](sql-server-data-types-in-the-net-framework.md)  
   
   

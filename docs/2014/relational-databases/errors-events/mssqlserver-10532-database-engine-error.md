@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cda3117df524ba90f322bbb99d6db98ee989ab71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62870633"
 ---
-# <a name="mssqlserver10532"></a>MSSQLSERVER_10532
+# <a name="mssqlserver_10532"></a>MSSQLSERVER_10532
     
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|10532|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|PG_NO_ELIGIBLE_STMT|  
-|Текст сообщения|Невозможно создать структуру плана "%. \*ls поскольку пакет или модуль, указанный параметром `@plan_handle` не содержит инструкцию, применимую для структуры плана. Укажите другое значение для параметра `@plan_handle`.|  
+|Текст сообщения|Не удается создать структуру плана '%.\*ls', поскольку пакет или модуль, заданный параметром `@plan_handle`, не содержит инструкций, допустимых для структуры плана. Укажите другое значение для параметра `@plan_handle`.|  
   
 ## <a name="explanation"></a>Объяснение  
  Пакет или модуль, указанный в `@plan_handle`, не содержит инструкцию, подходящую для структуры плана.  
@@ -38,9 +38,9 @@ ms.locfileid: "62870633"
 ## <a name="user-action"></a>Действие пользователя  
  Укажите другое значение для параметра `@plan_handle`.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Структуры планов](../performance/plan-guides.md)   
- [sp_create_plan_guide (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+ [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
  [sp_create_plan_guide_from_handle (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)  
   
   

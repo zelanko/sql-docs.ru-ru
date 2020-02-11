@@ -14,19 +14,19 @@ ms.assetid: 619bc7fd-ad0a-44ea-9678-ad40a662c258
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a74f69947d6d1a1d730d39875f32a0cfc7286705
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963368"
 ---
 # <a name="submitchanges-method-example-vbscript"></a>Пример метода SubmitChanges (VBScript)
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- В следующем фрагменте кода показано, как использовать [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) метод с [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) объекта.  
+ В следующем фрагменте кода показано, как использовать метод [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) с [RDS. Объект элемента управления](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
   
- Чтобы протестировать этот пример, вырезать и вставить этот код в обычном документ ASP и назовите его **SubmitChangesCtrlVBS.asp**. Сценарий ASP будет идентификации сервера.  
+ Чтобы протестировать этот пример, вырежьте и вставьте этот код в нормальный ASP-документ и назовите его **субмитчанжесктрлвбс. ASP**. Сценарий ASP определит ваш сервер.  
   
 ```  
 <!-- BeginCancelUpdateVBS -->  
@@ -116,8 +116,8 @@ End Sub
 <!-- EndCancelUpdateVBS -->  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Объект DataControl (служба удаленных рабочих СТОЛОВ)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
+## <a name="see-also"></a>См. также:  
+ [Объект элемента управления (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [Метод SubmitChanges (служба удаленных рабочих столов)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
 
 

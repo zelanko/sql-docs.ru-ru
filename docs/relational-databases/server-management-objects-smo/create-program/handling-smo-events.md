@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 893fb08f2d32c7ae9d80321c1d849010660cc308
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70148726"
 ---
 # <a name="handling-smo-events"></a>Обработка событий SMO
@@ -40,10 +40,10 @@ ms.locfileid: "70148726"
   
  Для обработки событий необходимо написать класс обработчика события. Класс обработчика события может содержать более одной функции обработки события, и его надо установить для обрабатываемых событий. Функции обработчика событий получают сведения о событии из параметра *серверевентнотификатификатионаргс* , который можно использовать для передачи сведений о событии.  
   
- Типы событий базы данных и сервера, которые могут быть обработаны, перечислены <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> в классе <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>и классе.  
+ Типы событий базы данных и сервера, которые могут быть обработаны, перечислены <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> в классе и <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>классе.  
   
 ## <a name="example"></a>Пример  
-Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. [в разделе Создание проекта Visual&#35; C SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. [в статье Создание проекта Visual C&#35; SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
 
   
 ## <a name="registering-event-handlers-and-subscribing-to-event-handling-in-visual-basic"></a>Регистрация обработчиков событий и подписка на обработку событий на языке Visual Basic  

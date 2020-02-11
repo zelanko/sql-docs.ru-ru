@@ -1,5 +1,5 @@
 ---
-title: Поместите объект (многомерные Объекты ADO) | Документация Майкрософт
+title: Объект расположения (объекты данных ActiveX (MD)) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,29 +16,29 @@ ms.assetid: 91eab784-3ce9-41d6-a840-9b0939ca0608
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 299df229489a9000c1dc2e97f7d7c489c490aed4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949254"
 ---
 # <a name="position-object-ado-md"></a>Объект Position (многомерные объекты ADO)
-Представляет набор из одного или нескольких членов разных размерностей, определяющую точку вдоль оси.  
+Представляет набор из одного или нескольких элементов различных измерений, определяющих точку вдоль оси.  
   
-## <a name="remarks"></a>Примечания  
- С помощью свойств и коллекций **позиции** объекта, можно сделать следующее:  
+## <a name="remarks"></a>Remarks  
+ С помощью свойств и коллекций объекта « **позиционирование** » можно выполнять следующие действия.  
   
--   Используйте **порядковый номер** порядковый номер возвращаемого свойства **позиции** вдоль [оси](../../../ado/reference/ado-md-api/axis-object-ado-md.md).  
+-   Свойство **Ordinal** используется для возвращения порядкового номера **расположения** вдоль [оси](../../../ado/reference/ado-md-api/axis-object-ado-md.md).  
   
--   Используйте [члены](../../../ado/reference/ado-md-api/members-collection-ado-md.md) коллекции, чтобы получить список членов, которые образуют положение вдоль **оси**.  
+-   Коллекция [Members](../../../ado/reference/ado-md-api/members-collection-ado-md.md) используется для возврата элементов, составляющих расположение вдоль **оси**.  
   
- Этот раздел содержит следующие подразделы.  
+ Этот раздел содержит следующий раздел.  
   
 -   [Свойства, методы и события](../../../ado/reference/ado-md-api/position-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
- [Пример объекта Axis (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
- [Объект Axis (многомерные Объекты ADO)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
- [Объект Cell (многомерные Объекты ADO)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
- [Коллекция Members (многомерные Объекты ADO)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)   
+## <a name="see-also"></a>См. также:  
+ [Пример оси (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
+ [Объект Axis (объекты данных ActiveX (MD))](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
+ [Объект Cell (объекты данных ActiveX (MD))](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
+ [Коллекция Members (объекты данных ActiveX (MD))](../../../ado/reference/ado-md-api/members-collection-ado-md.md)   
  [Коллекция Positions (многомерные объекты ADO)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6750456d708d68e57aadd4b1139f6e108a93b9ba
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783019"
 ---
 # <a name="change-the-failover-mode-of-an-availability-replica-sql-server"></a>Изменение режима отработки отказа для реплики доступности (SQL Server)
@@ -35,9 +35,9 @@ ms.locfileid: "72783019"
   
 -   Экземпляры отказоустойчивого кластера SQL Server не поддерживают автоматический переход на другой ресурс с учетом групп доступности, поэтому любая реплика доступности, размещенная в них, должна быть настроена для перехода на другой ресурс вручную.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER AVAILABILITY GROUP для группы доступности, разрешение CONTROL AVAILABILITY GROUP, разрешение ALTER ANY AVAILABILITY GROUP или разрешение CONTROL SERVER.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
@@ -70,21 +70,21 @@ ms.locfileid: "72783019"
   
      }  )  
   
-     где  
+     , где  
   
-    -   *имя_группы* — это имя группы доступности.  
+    -   *group_name* — имя группы доступности.  
   
-    -   { '*системное_имя*[\\*имя_экземпляра*]' | '*сетевое_имя_FCI*[\\*имя_экземпляра*]' }  
+    -   {'*system_name*[\\*instance_name*] ' | "*FCI_network_name*[\\*instance_name*]"}  
   
          Задает адрес экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , на котором размещена изменяемая реплика доступности. Этот адрес состоит из следующих компонентов:  
   
-         *системное_имя*  
+         *system_name*  
          Имя NetBIOS компьютера, на котором расположен изолированный экземпляр сервера.  
   
-         *сетевое_имя_FCI*  
+         *FCI_network_name*  
          Сетевое имя, используемое для доступа к отказоустойчивому кластеру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , в котором целевой экземпляр сервера является партнером по обеспечению отработки отказа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-         *имя_экземпляра*  
+         *instance_name*  
          Имя экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , на котором размещается целевая реплика доступности. Для экземпляра сервера по умолчанию указывать параметр *имя_экземпляра* не обязательно.  
   
      Дополнительные сведения об этих параметрах см. в разделе [ALTER AVAILABILITY GROUP (Transact-SQL)](/sql/t-sql/statements/alter-availability-group-transact-sql).  
@@ -96,7 +96,7 @@ ms.locfileid: "72783019"
        (FAILOVER_MODE = AUTOMATIC);  
     ```  
   
-##  <a name="PowerShellProcedure"></a> Использование PowerShell  
+##  <a name="PowerShellProcedure"></a>Использование PowerShell  
 
 ### <a name="to-change-the-failover-mode-of-an-availability-replica"></a>Изменение режима отработки отказа для реплики доступности
   
@@ -112,11 +112,11 @@ ms.locfileid: "72783019"
     ```  
   
     > [!NOTE]  
-    >  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом `Get-Help` в среде [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Дополнительные сведения см. в статье [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом `Get-Help` в среде [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
 Сведения о настройке и использовании поставщика SQL Server PowerShell см. в разделе [поставщик SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md).
   
-## <a name="see-also"></a>См. также статью  
- [Общие сведения о &#40;группы доступности AlwaysOn SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
- [Режимы &#40;доступности группы доступности AlwaysOn&#41; ](availability-modes-always-on-availability-groups.md)   
- [Отказоустойчивость и режимы &#40;отработки отказа группы доступности AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md) 
+## <a name="see-also"></a>См. также:  
+ [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+ [Режимы доступности &#40;группы доступности AlwaysOn&#41;](availability-modes-always-on-availability-groups.md)   
+ [Отказоустойчивость и режимы отработки отказа &#40;группы доступности AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md) 

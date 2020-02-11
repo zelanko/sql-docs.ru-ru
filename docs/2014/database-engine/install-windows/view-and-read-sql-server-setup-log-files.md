@@ -19,14 +19,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d6a81258e87bf2422f3ae5a55afc5eb6429856b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774326"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>Просмотр и чтение файлов журналов программы установки SQL Server
-  Каждом выполнении программы установки создаются файлы журналов находятся в новой папке журналов с меткой времени в папке % programfiles %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\. Формат папки журналов с меткой времени — ГГГГММДД_ччммсс. При запуске программы установке в автоматическом режиме журналы создаются в % temp%\sqlsetup*.log. Все файлы в папке журналов архивируются в файле Log\*.cab в соответствующей папке журналов.  
+  При каждом выполнении программы установки создаются файлы журнала с новой папкой журнала с меткой времени в папке% ProgramFiles\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]% \120\Setup\\Bootstrap\Log. Формат папки журналов с меткой времени — ГГГГММДД_ччммсс. При запуске программы установке в автоматическом режиме журналы создаются в % temp%\sqlsetup*.log. Все файлы в папке журналов архивируются в файле Log\*.cab в соответствующей папке журналов.  
   
  В процессе выполнения запрос программы установки проходит через три фазы:  
   
@@ -44,11 +44,11 @@ ms.locfileid: "62774326"
   
 -   Datastore_ComponentUpdated  
   
--   Datastore  
+-   Хранилище данных  
   
  В следующих разделах описываются файлы журналов установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="summary-text"></a>Текстовое содержание сводки  
+## <a name="summary-text"></a>Текст сводки  
   
 ### <a name="overview"></a>Обзор  
  В этом файле отображаются компоненты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , обнаруженные на этапе установки, среда операционной системы, значения параметров командной строки (если указаны) и общее состояние всех выполненных MSI/MSP.  
@@ -59,7 +59,7 @@ ms.locfileid: "62774326"
   
 -   Свойства и конфигурация компьютера, на котором была запущена программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ранее установленного на компьютере  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]компоненты продукта, ранее установленные на компьютере  
   
 -   Описание версии установки и свойства пакета установки  
   
@@ -77,62 +77,62 @@ ms.locfileid: "62774326"
   
 -   Местоположение файла отчета о выполнении правил  
   
-### <a name="location"></a>Местоположение  
- Он находится в папке % programfiles %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\.  
+### <a name="location"></a>Location  
+ Он находится в папке% ProgramFiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\.  
   
  Чтобы найти ошибки в текстовом файле сводки, воспользуйтесь поиском с ключевыми словами «error» или «failed».  
   
-## <a name="summaryengine-baseyyyymmddhhmmsstxt"></a>Summary_engine-base_YYYYMMDD_HHMMss.txt  
+## <a name="summary_engine-base_yyyymmdd_hhmmsstxt"></a>Summary_engine-base_YYYYMMDD_HHMMss.txt  
   
 ### <a name="overview"></a>Обзор  
  Базовый файл summary_engine схож с файлом справки и создается при выполнении основного рабочего процесса.  
   
-### <a name="location"></a>Местоположение  
- Он находится в папке % programfiles %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\< ггггммдд_ччмм >\\.  
+### <a name="location"></a>Location  
+ Он находится в папке% ProgramFiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
   
-## <a name="summaryengine-baseyyyymmddhhmmsscomponentupdatetxt"></a>Summary_engine-base_YYYYMMDD_HHMMss_ComponentUpdate.txt  
+## <a name="summary_engine-base_yyyymmdd_hhmmss_componentupdatetxt"></a>Summary_engine-base_YYYYMMDD_HHMMss_ComponentUpdate.txt  
   
 ### <a name="overview"></a>Обзор  
  Базовый файл summary_engine схож с файлом справки и создается при выполнении основного рабочего процесса.  
   
-### <a name="location"></a>Местоположение  
- Он находится в папке % programfiles %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\< ггггммдд_ччмм >\\.  
+### <a name="location"></a>Location  
+ Он находится в папке% ProgramFiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
   
-## <a name="summaryengine-baseversionnumbermmddhhmmssglobalrulestxt"></a>Summary_engine-base_\<номер-версии>ММДД_ЧЧММссs_GlobalRules.txt  
+## <a name="summary_engine-base_versionnumbermmdd_hhmmss_globalrulestxt"></a>Summary_engine-base_\<номер-версии>ММДД_ЧЧММссs_GlobalRules.txt  
   
 ### <a name="overview"></a>Обзор  
  Файл сводного журнала глобальных правил схож с файлом справки и создается при выполнении рабочего процесса глобальных правил.  
   
-### <a name="location"></a>Местоположение  
- Он находится в папке % programfiles %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\< ггггммдд_ччмм >\\.  
+### <a name="location"></a>Location  
+ Он находится в папке% ProgramFiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
   
 ## <a name="detailtxt"></a>Detail.txt  
   
 ### <a name="overview"></a>Обзор  
  Detail.txt создается при выполнении рабочего процесса основных процедур, таких как установка или обновление, и обеспечивает сведения о выполнении. Журналы в файле создаются с учетом времени инициации всех действий, связанных с установкой, и указывают на порядок выполнения действий и их зависимости.  
   
-### <a name="location"></a>Местоположение  
- Он находится в папке % programfiles %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup  
+### <a name="location"></a>Location  
+ Он находится в папке% ProgramFiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup  
   
  Bootstrap\Log\\<ГГГГММДД_ЧЧММ>\Detail.txt.  
   
  При возникновении ошибки во время процесса установки исключение или ошибка регистрируются в конце этого файла. Чтобы найти ошибки в этом файле, сначала проверьте конец файла, а затем воспользуйтесь поиском по файлу с ключевыми словами «ошибка» и «исключение».  
   
-## <a name="detailcomponentupdatetxt"></a>Detail_ComponentUpdate.txt  
+## <a name="detail_componentupdatetxt"></a>Detail_ComponentUpdate.txt  
   
 ### <a name="overview"></a>Обзор  
  Файл Detail_ComponentUpdate.txt создается для рабочего процесса обновлений компонентов и похож на файл Detail.txt.  
   
-### <a name="location"></a>Местоположение  
- Он находится в папке % programfiles %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\< ггггммдд_ччмм >\\.  
+### <a name="location"></a>Location  
+ Он находится в папке% ProgramFiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
   
-## <a name="detailglobalrulestxt"></a>Detail_GlobalRules.txt  
+## <a name="detail_globalrulestxt"></a>Detail_GlobalRules.txt  
   
 ### <a name="overview"></a>Обзор  
  Файл Detail_GlobalRules.txt создается при выполнении глобальных правил и похож на файл Detail.txt.  
   
-### <a name="location"></a>Местоположение  
- Он находится в папке % programfiles %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\< ггггммдд_ччмм >\\.  
+### <a name="location"></a>Location  
+ Он находится в папке% ProgramFiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
   
 ## <a name="msi-log-files"></a>Файлы журнала MSI.  
   
@@ -141,35 +141,38 @@ ms.locfileid: "62774326"
   
  Типы файлов журналов MSI:  
   
--   \<компонент>_\<архитектура>\_\<взаимодействие>.log  
+-   
+  \<компонент>_\<архитектура>\_\<взаимодействие>.log  
   
--   \<компонент>_\<архитектура>\_\<язык>\_\<взаимодействие>.log  
+-   
+  \<компонент>_\<архитектура>\_\<язык>\_\<взаимодействие>.log  
   
--   \<компонент>_\<архитектура>\_\<взаимодействие>\_\<рабочий процесс>.log  
+-   
+  \<компонент>_\<архитектура>\_\<взаимодействие>\_\<рабочий процесс>.log  
   
-### <a name="location"></a>Местоположение  
- Файлы журналов MSI расположены в папке % programfiles %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\< ггггммдд_ччмм >\\< имя\>. log.  
+### <a name="location"></a>Location  
+ Файлы журнала MSI находятся в папке% ProgramFiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\<Name\>. log.  
   
  В конце файла приведена сводка выполнения, в которой указываются общее состояние (успешное или ошибка) и свойства. Для поиска ошибок в файле MSI воспользуйтесь поиском по ключевому выражению «value 3». Обычно ошибки можно найти рядом со строкой.  
   
 ## <a name="configurationfileini"></a>ConfigurationFile.ini  
   
 ### <a name="overview"></a>Обзор  
- В файле конфигурации содержатся входные параметры, указанные при установке. Их можно использовать для повторной установки, что избавит от необходимости их ввода вручную. Однако пароли учетных записей, PID и некоторые параметры не сохраняются в файле конфигурации. Параметры могут либо быть добавлены к файлу или указаны с помощью командной строки или пользовательского интерфейса программы установки. Дополнительные сведения см. в разделе [Установка SQL Server 2014 с помощью файла конфигурации](install-sql-server-using-a-configuration-file.md).  
+ В файле конфигурации содержатся входные параметры, указанные при установке. Их можно использовать для повторной установки, что избавит от необходимости их ввода вручную. Однако пароли учетных записей, PID и некоторые параметры не сохраняются в файле конфигурации. Параметры могут либо быть добавлены к файлу или указаны с помощью командной строки или пользовательского интерфейса программы установки. Дополнительные сведения см. [в разделе Install SQL Server 2014 с помощью файла конфигурации](install-sql-server-using-a-configuration-file.md).  
   
-### <a name="location"></a>Местоположение  
- Он находится в папке % programfiles %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\< ггггммдд_ччмм >\\.  
+### <a name="location"></a>Location  
+ Он находится в папке% ProgramFiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
   
-## <a name="systemconfigurationcheckreporthtm"></a>SystemConfigurationCheck_Report.htm  
+## <a name="systemconfigurationcheck_reporthtm"></a>SystemConfigurationCheck_Report.htm  
   
 ### <a name="overview"></a>Обзор  
  В отчете о проверке конфигурации системы содержится краткое описание всех выполняемых правил и состояния выполнения.  
   
-### <a name="location"></a>Местоположение  
- Он находится в папке % programfiles %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\< ггггммдд_ччмм >\\.  
+### <a name="location"></a>Location  
+ Он находится в папке% ProgramFiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
   
-## <a name="see-also"></a>См. также  
- [Инструкции по установке](../../sql-server/install/installation-how-to-topics.md)   
+## <a name="see-also"></a>См. также:  
+ [Практические руководства по установке](../../sql-server/install/installation-how-to-topics.md)   
  [Установка SQL Server 2014](install-sql-server.md)  
   
   

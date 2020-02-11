@@ -26,10 +26,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: af4229037b9c34bbc9a0316ef073f294209be6d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629650"
 ---
 # <a name="back-up-and-restore-replicated-databases"></a>Создание резервных копий реплицируемых баз данных и восстановление из них
@@ -55,14 +55,14 @@ ms.locfileid: "62629650"
 ## <a name="backup-and-restore-strategies"></a>Стратегии резервного копирования и восстановления  
  Стратегии для резервного копирования и восстановления каждого узла в топологии репликации различаются в соответствии с используемым типом репликации. Сведения о стратегиях резервного копирования и восстановления для каждого типа репликации см. в следующих разделах:  
   
--   [Стратегии архивации и восстановления из копии репликации моментальных снимков и репликации транзакций](strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)  
+-   [Стратегии резервного копирования и восстановления для моментальных снимков и репликации транзакций](strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)  
   
 -   [Стратегии резервного копирования и восстановления для репликации слиянием](strategies-for-backing-up-and-restoring-merge-replication.md)  
   
  В состав любой стратегии восстановления всегда должно входить сохранение текущего скрипта настроек репликации в безопасном расположении. В случае отказа сервера или необходимости создания тестовой среды можно изменить скрипт, изменив ссылки имен серверов, после чего он может использоваться для восстановления настроек репликации. В дополнение к созданию скрипта текущих настроек репликации нужно создать скрипт включения и отключения репликации. Сведения о создании скриптов для объектов репликации см. в разделе [Scripting Replication](../scripting-replication.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Резервное копирование и восстановление баз данных SQL Server](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [Рекомендации по администрированию репликации](best-practices-for-replication-administration.md)  
+ [Best Practices for Replication Administration](best-practices-for-replication-administration.md)  
   
   

@@ -19,33 +19,33 @@ ms.author: vanto
 author: VanMSFT
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7123c1bd3fee61a3d0671a0d8fbe27c2943ba7ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68124852"
 ---
-# <a name="spdroprolemember-transact-sql"></a>sp_droprolemember (Transact-SQL)
+# <a name="sp_droprolemember-transact-sql"></a>sp_droprolemember (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Удаляет в текущей базе данных учетную запись безопасности из роли [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Используйте [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) вместо этого.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Вместо этого используйте [инструкцию ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) .  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
 
-### <a name="syntax-for-both-sql-server-and-azure-sql-database"></a>Синтаксис для SQL Server и база данных Azure SQL
+### <a name="syntax-for-both-sql-server-and-azure-sql-database"></a>Синтаксис как для SQL Server, так и для базы данных SQL Azure
 
 ```  
 sp_droprolemember [ @rolename = ] 'role' ,   
      [ @membername = ] 'security_account'  
 ```  
 
-### <a name="syntax-for-both-azure-sql-data-warehouse-and-parallel-data-warehouse"></a>Синтаксис для хранилища данных Azure SQL и Parallel Data Warehouse
+### <a name="syntax-for-both-azure-sql-data-warehouse-and-parallel-data-warehouse"></a>Синтаксис хранилища данных SQL Azure и параллельного хранилища данных
 
 ```  
 sp_droprolemember 'role' ,  
@@ -53,19 +53,19 @@ sp_droprolemember 'role' ,
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @rolename = ] 'role'` — Имя роли, из которой удаляется член. *роль* — **sysname**, не имеет значения по умолчанию. *роль* должен существовать в текущей базе данных.  
+`[ @rolename = ] 'role'`Имя роли, из которой удаляется элемент. Аргумент *Role* имеет тип **sysname**и не имеет значения по умолчанию. *роль* должна существовать в текущей базе данных.  
   
-`[ @membername = ] 'security_account'` Удаляется имя учетной записи безопасности из роли. *security_account* — **sysname**, не имеет значения по умолчанию. *security_account* может быть пользователем базы данных, другой ролью базы данных, имя входа Windows или группу Windows. *security_account* должен существовать в текущей базе данных.  
+`[ @membername = ] 'security_account'`Имя учетной записи безопасности, удаляемой из роли. Аргумент *security_account* имеет тип **sysname**и не имеет значения по умолчанию. *security_account* может быть пользователь базы данных, другая роль базы данных, имя входа Windows или группа Windows. *security_account* должен существовать в текущей базе данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или 1 (неуспешное завершение)  
+ 0 (успех) или 1 (сбой).  
   
-## <a name="remarks"></a>Примечания  
- sp_droprolemember удаляет члена роли базы данных путем удаления строки из таблицы sysmembers. При удалении члена из роли он теряет все разрешения, которые имел как член этой роли.  
+## <a name="remarks"></a>Remarks  
+ sp_droprolemember исключает члена из роли базы данных, удаляя строку из таблицы sysmembers. При удалении члена из роли он теряет все разрешения, которые имел как член этой роли.  
   
- Чтобы удалить пользователя из предопределенной роли сервера, используйте sp_dropsrvrolemember. Пользователи не могут быть удалены из роли public и невозможно удалить ни из какой роли dbo.  
+ Для удаления пользователя из предопределенной роли сервера пользуйтесь хранимой процедурой sp_dropsrvrolemember. Пользователи не могут быть удалены из роли public, а dbo не может быть удален из какой-либо роли.  
   
- Позволяет просмотреть список членов sp_helpuser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] роли и используйте ALTER ROLE, для добавления члена к роли.  
+ Используйте sp_helpuser для просмотра членов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] роли и с помощью инструкции ALTER ROLE добавьте член в роль.  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение ALTER на эту роль.  
@@ -84,13 +84,13 @@ EXEC sp_droprolemember 'Sales', 'Jonb';
 EXEC sp_droprolemember 'Sales', 'JonB'  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Хранимые процедуры безопасности (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [Хранимая процедура sp_addrolemember (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
- [sp_droprole (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
+ [sp_droprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)   
  [sp_dropsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
  [sp_helpuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
 
