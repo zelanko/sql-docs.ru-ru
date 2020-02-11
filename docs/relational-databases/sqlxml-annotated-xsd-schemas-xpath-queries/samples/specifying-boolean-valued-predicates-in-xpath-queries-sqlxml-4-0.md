@@ -20,10 +20,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: acf43b7fd863690259719a81ec60b136f9f4996d
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75252567"
 ---
 # <a name="specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-40"></a>Определение предикатов с логическим значением в запросах XPath (SQLXML 4.0)
@@ -32,7 +32,7 @@ ms.locfileid: "75252567"
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-specify-multiple-predicates"></a>а. Указание нескольких предикатов  
+### <a name="a-specify-multiple-predicates"></a>A. Указание нескольких предикатов  
  Следующий запрос XPath использует несколько предикатов для поиска сведений о заказе для данного идентификатора заказа и идентификатора клиента:  
   
 ```  
@@ -90,7 +90,7 @@ ms.locfileid: "75252567"
     </ROOT>  
     ```  
   
-### <a name="b-specify-successive-and-nested-predicates"></a>B. Указание последовательных и вложенных предикатов  
+### <a name="b-specify-successive-and-nested-predicates"></a>Б. Указание последовательных и вложенных предикатов  
  В следующем запросе показано использование последовательных предикатов. Запрос возвращает все ** \<клиентские>** дочерние элементы контекстного узла, которые имеют атрибут **SalesPersonID** со значением 277 и атрибутом **территорид** со значением 3:  
   
 ```  
@@ -167,7 +167,7 @@ ms.locfileid: "75252567"
 </ROOT>  
 ```  
   
-### <a name="c-specify-a-top-level-predicate"></a>C. Указание предиката верхнего уровня  
+### <a name="c-specify-a-top-level-predicate"></a>В. Указание предиката верхнего уровня  
  Следующий запрос возвращает ** \<клиентские>** узлы дочерних элементов контекстного узла, которые имеют ** \<** дочерние элементы Order>. В этом запросе проверяется, является ли путь доступа предикатом верхнего уровня:  
   
 ```  

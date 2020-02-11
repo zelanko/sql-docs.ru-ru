@@ -1,5 +1,5 @@
 ---
-title: Редактор преобразований кэша (страница "сопоставления") | Документация Майкрософт
+title: Редактор преобразования "кэш" (страница "сопоставления") | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e236fc3fd55d156dbe9dbf7aebe840541e1bee1a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061178"
 ---
 # <a name="cache-transformation-editor-mappings-page"></a>Редактор преобразования «Кэш» (страница «Сопоставления»)
-  Используйте страницу **Сопоставления** **Редактора преобразования «Кэш»** , чтобы сопоставить входные столбцы в преобразовании «Преобразование кэша» с целевыми столбцами в диспетчере соединений с кэшем.  
+  Используйте страницу **Сопоставления****Редактора преобразования «Кэш»** , чтобы сопоставить входные столбцы в преобразовании «Преобразование кэша» с целевыми столбцами в диспетчере соединений с кэшем.  
   
 > [!NOTE]  
 >  Каждый входной столбец должен быть сопоставлен с целевым, имеющим тот же тип данных. В противном случае конструктор служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] отобразит сообщение об ошибке.  
@@ -46,7 +46,7 @@ ms.locfileid: "66061178"
  **Целевой столбец**  
  Просмотр каждого доступного целевого столбца.  
   
-## <a name="see-also"></a>См. также  
- [Редактор преобразования "Кэш" (страница "Диспетчер соединений")](../../2014/integration-services/cache-transformation-editor-connection-manager-page.md)  
+## <a name="see-also"></a>См. также:  
+ [Редактор преобразования "кэш" &#40;страница "Диспетчер соединений"&#41;](../../2014/integration-services/cache-transformation-editor-connection-manager-page.md)  
   
   

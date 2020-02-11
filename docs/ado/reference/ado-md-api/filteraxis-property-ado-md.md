@@ -1,5 +1,5 @@
 ---
-title: Свойство FilterAxis (многомерные Объекты ADO) | Документация Майкрософт
+title: Свойство Филтераксис (объекты данных ActiveX (MD)) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,27 +17,27 @@ ms.assetid: 9c656963-531e-4cd1-b698-d5f42a9b7ba3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d44ac908c04338f80c18699319f75a068370c3e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938458"
 ---
 # <a name="filteraxis-property-ado-md"></a>Свойство FilterAxis (многомерные объекты ADO)
-Указывает фильтр сведения о текущем [cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md).  
+Указывает данные фильтра о текущем наборе [ячеек](../../../ado/reference/ado-md-api/cellset-object-ado-md.md).  
   
 ## <a name="return-values"></a>Возвращаемые значения  
- Возвращает [оси](../../../ado/reference/ado-md-api/axis-object-ado-md.md) объекта и только для чтения.  
+ Возвращает объект [оси](../../../ado/reference/ado-md-api/axis-object-ado-md.md) и доступен только для чтения.  
   
-## <a name="remarks"></a>Примечания  
- Используйте **FilterAxis** свойство для возврата сведений об измерениях, которые были использованы для создания среза данных. [DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md) свойство **оси** возвращает число измерений среза. На этой оси обычно имеет только одну строку.  
+## <a name="remarks"></a>Remarks  
+ Используйте свойство **филтераксис** , чтобы получить сведения об измерениях, которые использовались для среза данных. Свойство [DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md) **оси** возвращает число измерений среза. Эта ось обычно содержит только одну строку.  
   
- **Оси** возвращаемые **FilterAxis** не содержится в [осей](../../../ado/reference/ado-md-api/axes-collection-ado-md.md) коллекции для [набора ячеек](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) объекта.  
+ **Ось** , возвращенная **филтераксис** , не содержится в коллекции [осей](../../../ado/reference/ado-md-api/axes-collection-ado-md.md) для объекта набора [ячеек](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) .  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  [Объект Cellset (многомерные объекты ADO)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
   
-## <a name="see-also"></a>См. также  
- [Объект Axis (многомерные Объекты ADO)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
- [Объект Dimension (многомерные Объекты ADO)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)   
+## <a name="see-also"></a>См. также:  
+ [Объект Axis (объекты данных ActiveX (MD))](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
+ [Объект Dimension (объекты данных ActiveX (MD))](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)   
  [Свойство DimensionCount (многомерные объекты ADO)](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f014cb37c6c28a0c9a91bd811b9e94d734167e1e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916774"
 ---
 # <a name="rename-a-database"></a>Переименование базы данных
@@ -29,9 +29,9 @@ ms.locfileid: "62916774"
   
      [Ограничения](#Restrictions)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
--   **Переименование базы данных с использованием следующих средств:**  
+-   **Переименование базы данных с помощью:**  
   
      [Среда SQL Server Management Studio](#SSMSProcedure)  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62916774"
   
 #### <a name="to-rename-a-database"></a>Переименование базы данных  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]и разверните его.  
+1.  В **обозревателе объектов**подключитесь к экземпляру [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], а затем разверните этот экземпляр.  
   
 2.  Убедитесь в том, что никто не использует эту базу данных, а затем [переведите ее в однопользовательский режим работы](set-a-database-to-single-user-mode.md).  
   
@@ -81,11 +81,11 @@ GO
 ```  
   
 ###  <a name="TsqlExample"></a>   
-##  <a name="FollowUp"></a> Дальнейшие действия. После переименования базы данных  
+##  <a name="FollowUp"></a>Дальнейшие действия. После переименования базы данных  
  Создавайте резервную копию базы данных **master** после переименования любой базы данных.  
   
-## <a name="see-also"></a>См. также  
- [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)   
+## <a name="see-also"></a>См. также:  
+ [&#41;Transact-SQL ALTER DATABASE &#40;](/sql/t-sql/statements/alter-database-transact-sql)   
  [Идентификаторы баз данных](database-identifiers.md)  
   
   

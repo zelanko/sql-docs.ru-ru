@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4c5c4d515ebe6aa9b4b8120ae909f07dccc74de0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101701"
 ---
 # <a name="securable-items"></a>Защищаемые элементы
@@ -59,7 +59,7 @@ ms.locfileid: "66101701"
 |Общие источники данных|Защита общих источников данных позволяет ограничить доступ к элементу и страницам его свойств. Дополнительные сведения см. в разделе [Защита совместно используемых элементов источника данных](secure-shared-data-source-items.md).|  
 |Общие наборы данных|Общие наборы данных могут быть защищены, чтобы управлять диапазоном действий, которые могут выполнять пользователи, таких как просмотр или смена определения или же изменение свойств данного общего набора данных.<br /><br /> Дополнительные сведения см. в разделе [Защита элементов общего набора данных](secure-shared-dataset-items.md).|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Предоставление разрешений на сервер отчетов в собственном режиме](granting-permissions-on-a-native-mode-report-server.md)   
  [Создание, удаление и изменение ролей (среда Management Studio)](role-definitions-create-delete-or-modify.md)   
  [Предоставление пользователям доступа к серверу отчетов (диспетчер отчетов)](grant-user-access-to-a-report-server.md)   

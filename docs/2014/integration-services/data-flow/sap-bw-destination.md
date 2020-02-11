@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1cac8403327ecf3888439290554f059bb00bce2c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770873"
 ---
 # <a name="sap-bw-destination"></a>Назначение SAP BW
@@ -79,7 +79,7 @@ ms.locfileid: "62770873"
   
 -   Проверьте загрузку данных с выбранными параметрами.  
   
- Можно также включить ведение журнала вызовов функций RFC целевым объектом. (Это ведение журнала отделено от дополнительного ведения журналов, которое можно включить для пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].) Ведение журнала вызовов функций RFC включается при настройке диспетчера соединений SAP BW, используемого целевым объектом. Дополнительные сведения о настройке диспетчера соединений см. в разделе [SAP BW Connection Manager](../connection-manager/sap-bw-connection-manager.md).  
+ Можно также включить ведение журнала вызовов функций RFC целевым объектом. (Это ведение журнала отделено от дополнительного ведения журналов, которое можно включить для пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .) Ведение журнала вызовов функций RFC включается при настройке диспетчера соединений SAP BW, используемого целевым объектом. Дополнительные сведения о настройке диспетчера соединений см. в разделе [SAP BW Connection Manager](../connection-manager/sap-bw-connection-manager.md).  
   
  Если вы не знаете все значения, необходимые для настройки назначения, может потребоваться связаться с администратором SAP.  
   
@@ -112,9 +112,9 @@ ms.locfileid: "62770873"
   
 -   [Создание InfoSource для основных данных](create-infosource-for-master-data.md)  
   
--   [Создать InfoPackage](create-infopackage.md)  
+-   [Создание InfoPackage](create-infopackage.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Компоненты Microsoft Connector 1.1 для SAP BW](../microsoft-connector-for-sap-bw-components.md)  
   
   

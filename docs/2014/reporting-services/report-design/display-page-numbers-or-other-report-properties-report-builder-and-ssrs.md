@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8530a13af0e0ae6f1b769adcaa7cb6e9a3fbc0ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106037"
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>Отображение номеров страниц или других свойств отчета (построитель отчетов и службы SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "66106037"
   
 -   Время выполнения;  
   
--   Номер страницы;  
+-   Номер страницы  
   
 -   Папка отчета;  
   
@@ -32,7 +32,7 @@ ms.locfileid: "66106037"
   
 -   Всего страниц  
   
--   Идентификатор пользователя  
+-   Идентификатор пользователя.  
   
 -   Язык  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66106037"
   
 1.  Щелкните правой кнопкой мыши текстовое поле, содержащее выражение [&PageNumber], и выберите пункт **Выражения**.  
   
-     **Задать выражение для: значение** содержит выражение =Globals!PageNumber.  
+     Текстовое поле **Задать выражение для: значение** содержит выражение =Globals!PageNumber.  
   
 2.  Установите курсор после знака = и введите текст `"Page " &`.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "66106037"
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Верхние и нижние колонтитулы страницы (построитель отчетов и службы SSRS)](page-headers-and-footers-report-builder-and-ssrs.md)   
  [Форматирование текста в текстовом поле (построитель отчетов и службы SSRS)](format-text-in-a-text-box-report-builder-and-ssrs.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Редактор задач веб-служба (страница "Общие") | Документация Майкрософт
+title: Редактор задачи «веб-служба» (страница «Общие») | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c6f993f1f2386782bf8225f22b285b9385e2f8e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054542"
 ---
 # <a name="web-service-task-editor-general-page"></a>Редактор задачи «Веб-служба» (страница «Общие»)
@@ -27,13 +27,13 @@ ms.locfileid: "66054542"
  Дополнительные сведения об этой задаче см. в разделе [Задача "Веб-служба"](control-flow/web-service-task.md).  
   
 ## <a name="options"></a>Параметры  
- **HTTPConnection**  
- Выберите диспетчер подключений файлов в списке или щелкните \<**Создать соединение...** >, чтобы создать его.  
+ **хттпконнектион**  
+ Выберите диспетчер подключений файлов в списке или щелкните \<**Создать соединение...**>, чтобы создать его.  
   
 > [!IMPORTANT]  
 >  Диспетчер HTTP-соединений поддерживает только анонимную проверку подлинности и обычную проверку подлинности. Проверка подлинности Windows не поддерживается.  
   
- **См. также:**  подробные сведения о [диспетчере HTTP-подключений](connection-manager/http-connection-manager.md) и о [редакторе диспетчера HTTP-подключений &#40;страница "Сервер"&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md).  
+ **См. также:**  [Диспетчер HTTP-соединений](connection-manager/http-connection-manager.md), [редактор диспетчера HTTP-сеансов &#40;страница сервера&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
   
  **WSDLFile**  
  Введите полный путь к локальному WSDL-файлу на компьютере или нажмите кнопку обзора **(...)** и выберите файл.  
@@ -44,19 +44,19 @@ ms.locfileid: "66054542"
   
 -   Выберите этот пустой файл для параметра **WSDLFile** .  
   
--   Установите для параметра **OverwriteWSDLFile** для `True` для включения пустой файл по фактическим WSDL-файлом.  
+-   Присвойте параметру **свойство overwritewsdlfile** значение `True` , чтобы разрешить перезапись пустого файла с фактическим WSDL-файлом.  
   
 -   Нажмите кнопку **Загрузить язык WSDL** , чтобы загрузить фактический WSDL-файл и перезаписать пустой файл.  
   
     > [!NOTE]  
     >  Кнопка **Загрузить язык WSDL** недоступна, пока не указано имя существующего локального файла в поле **WSDLFile** .  
   
- **OverwriteWSDLFile**  
+ **Свойство overwritewsdlfile**  
  Укажите, можно ли перезаписать WSDL-файл для задачи веб-службы.  
   
- Если планируется загрузить WSDL-файл с помощью **загрузить язык WSDL** "Кнопка", это значение равно `True`.  
+ Если вы собираетесь загрузить WSDL-файл с помощью кнопки **скачать WSDL** , задайте для `True`этого параметра значение.  
   
- **Name**  
+ **Название**  
  Введите уникальное имя задачи веб-службы. Это имя используется в качестве метки для значка задачи.  
   
 > [!NOTE]  
@@ -65,15 +65,15 @@ ms.locfileid: "66054542"
  **Описание**  
  Введите описание задачи веб-службы.  
   
- **Загрузить язык WSDL**  
+ **Скачать WSDL**  
  Загрузите файл WSDL.  
   
  Эта кнопка недоступна, пока не указано имя существующего локального файла в поле **WSDLFile** .  
   
-## <a name="see-also"></a>См. также  
- [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор задачи "Веб-служба" (страница "Ввод")](../../2014/integration-services/web-service-task-editor-input-page.md)   
- [Редактор задачи "Веб-служба" (страница "Вывод")](../../2014/integration-services/web-service-task-editor-output-page.md)   
+## <a name="see-also"></a>См. также:  
+ [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор задачи "веб-служба" &#40;"входная страница"&#41;](../../2014/integration-services/web-service-task-editor-input-page.md)   
+ [Редактор задачи "веб-служба" &#40;страница "выходные данные"&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
  [Страница «Выражения»](expressions/expressions-page.md)  
   
   

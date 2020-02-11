@@ -1,5 +1,5 @@
 ---
-title: Функции требуется контролировать | Документация Майкрософт
+title: Отслеживаемые функции | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,16 +13,16 @@ ms.assetid: 0fb1693b-11c3-43b1-bb16-c3323b7b2d45
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f48a3c7568a9db8b599f6d5a1997607fb16e6020
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68069886"
 ---
 # <a name="features-to-watch-for"></a>Компоненты, которые требуется контролировать
-В этом разделе описывается ряд функций, которые разработчики часто принимают как должное. На самом деле эти функции существенно различаться поддержки и способ поддержки между СУБД; Сбой в код для них может вызвать проблемы в приложениях с возможностью взаимодействия.  
+В этом разделе описывается ряд функций, которые часто требуется разработчикам приложений для предоставления. На самом деле, эти функции значительно отличаются в поддержке и способе поддержки различных СУБД. невозможность кода для них может вызвать проблемы в взаимодействующих приложениях.  
   
- В этом разделе не включает все функции, которые необходимо учитывать разработчикам приложений. Дополнительные сведения см. в разделе [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md), и [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md) функции описания, [приложение в: Грамматика SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)и разделах данного руководства, посвященные каждого компонента.  
+ В этом разделе не перечислены все функции, которые необходимо учитывать разработчикам приложений. Дополнительные сведения см. в описании функций [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)и [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md) , [Приложение C: грамматика SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)и разделы руководства, посвященные каждому компоненту.  
   
  Этот раздел содержит следующие подразделы.  
   

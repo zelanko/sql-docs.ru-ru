@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 59e6a79d868e4bfa0ec0af7190d54a8bc13bf395
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63136459"
 ---
 # <a name="limit-trace-file-and-table-sizes"></a>Ограничение размеров файла и таблицы трассировки
@@ -42,7 +42,7 @@ ms.locfileid: "63136459"
   
  **Указание максимального размера файла трассировки**  
   
- [Установить максимальный размер для файла трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/set-a-maximum-file-size-for-a-trace-file-sql-server-profiler.md)  
+ [Установка максимального размера для файла трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/set-a-maximum-file-size-for-a-trace-file-sql-server-profiler.md)  
   
 ## <a name="maximum-number-of-rows"></a>Максимальное число строк  
  Трассировка с заданным максимальным числом строк прекращает сохранять трассировочные сведения по достижении таблицей максимального числа строк. Каждое событие создает одну строку, поэтому этот параметр устанавливает границу числа собранных событий. Установка максимального числа строк упрощает выполнение автоматических трассировок. Например, если необходимо запустить трассировку, которая сохраняет данные трассировки в таблицу, но желательно прекратить трассировку, когда таблица становится слишком большой, это может быть сделано автоматически.  
@@ -51,9 +51,9 @@ ms.locfileid: "63136459"
   
  **Установка максимального числа строк для трассировки**  
   
- [Установить максимальный размер для таблицы трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/set-a-maximum-table-size-for-a-trace-table-sql-server-profiler.md)  
+ [Установка максимального размера для таблицы трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/set-a-maximum-table-size-for-a-trace-table-sql-server-profiler.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Хранимая процедура sp_trace_create (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-create-transact-sql)  
   
   

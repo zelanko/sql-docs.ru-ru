@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4d958fa21380272aa770a9880e294a86fede29de
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69493979"
 ---
 # <a name="browsing-the-deployed-cube"></a>Просмотр развернутого куба
@@ -22,7 +22,7 @@ ms.locfileid: "69493979"
   
 ### <a name="to-browse-the-deployed-cube"></a>Просмотр развернутого куба  
   
-1.  Чтобы перейти в конструктор кубов в среде [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], дважды щелкните куб «Учебник по **[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] »** в папке **Кубы** в обозревателе решений.  
+1.  Чтобы переключиться в конструктор [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]кубов в, дважды щелкните куб ** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial** в папке **Кубы** Обозреватель решений.  
   
 2.  Перейдите на вкладку **Браузер** и на панели инструментов конструктора нажмите кнопку **Повторное соединение** .  
   
@@ -42,9 +42,9 @@ ms.locfileid: "69493979"
   
      На экран будут выведены продажи через Интернет по регионам и линейкам продуктов в феврале 2006 г., как показано на следующем рисунке.  
   
-     ![Продажи через Интернет по регионам и линиям продуктов](../../2014/tutorials/media/l3-cube-browser-finish.gif "Продажи через Интернет по регионам и линиям продуктов")  
+     ![«Продажи через Интернет» по регионам и сериям продуктов](../../2014/tutorials/media/l3-cube-browser-finish.gif "«Продажи через Интернет» по регионам и сериям продуктов")  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- [Занятие 4. Определение дополнительных свойств атрибутов и измерений](lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
+ [Урок 4. Определение расширенных свойств атрибутов и измерений](lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
   
   
