@@ -20,21 +20,21 @@ ms.assetid: ee5c90de-3c61-4f63-8b57-1543d1704a0e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6f98bbc393db9b1e1d10fe0f68285f30231c0ef8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68003108"
 ---
 # <a name="sqlerror-function"></a>Функция SQLError
-**Соответствие стандартам**  
- Представленные версии: Соответствие стандартам 1.0 ODBC: Устарело  
+**Соответствия**  
+ Введенная версия: соответствие стандартам ODBC 1,0: не рекомендуется  
   
  **Сводка**  
- **SQLError** возвращает сведения об ошибках и состоянии.  
+ **SqlError** возвращает сведения об ошибке или состоянии.  
   
- Дополнительные сведения о какие диспетчера драйверов сопоставляет эту функцию, чтобы при ODBC 2. *x* при работе с ODBC 3. *x* драйвера, см. в разделе [сопоставление устаревшей функции](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) в приложении G: Рекомендации по драйверов для обеспечения обратной совместимости.  
+ Дополнительные сведения о том, что диспетчер драйверов сопоставляет эту функцию при использовании ODBC 2. Приложение *x* работает с ODBC 3. драйвер *x* см. в разделе [сопоставление устаревших функций](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) в приложении G: рекомендации по драйверу для обеспечения обратной совместимости.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовков ODBC](../../../odbc/reference/install/odbc-header-files.md)

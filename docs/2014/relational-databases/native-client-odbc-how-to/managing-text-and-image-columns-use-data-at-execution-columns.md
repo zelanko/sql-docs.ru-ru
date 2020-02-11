@@ -1,5 +1,5 @@
 ---
-title: Использование столбцов данных времени выполнения (ODBC) | Документация Майкрософт
+title: Использование столбцов данных на этапе выполнения (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: efaf7e38ef829d5250c10902151024e09df1723c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68205623"
 ---
 # <a name="use-data-at-execution-columns-odbc"></a>Использование столбцов данных времени выполнения (ODBC)
@@ -42,7 +42,7 @@ ms.locfileid: "68205623"
 ## <a name="example"></a>Пример  
  В этом образце показано, как с помощью функции SQLGetData считывать символьные данные из переменной типа SQL_LONG. Этот образец не поддерживается на архитектуре IA64.  
   
- Также необходим источник данных ODBC с именем AdventureWorks, для которого базой данных по умолчанию является образец базы данных AdventureWorks. (Образец базы данных AdventureWorks можно скачать с домашней страницы [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (Образцы кода и проекты сообщества Microsoft SQL Server).) Этот источник данных должен быть основан на драйвере ODBC, предоставленном операционной системой (имя драйвера — «SQL Server»). При построении и запуске этого образца как 32-разрядного приложения в 64-разрядной операционной системе необходимо создать источник данных ODBC с помощью программы администрирования ODBC (исполняемый файл %windir%\SysWOW64\odbcad32.exe).  
+ Также необходим источник данных ODBC с именем AdventureWorks, для которого базой данных по умолчанию является образец базы данных AdventureWorks. (Образец базы данных AdventureWorks можно скачать на домашней странице [Microsoft SQL Server примеры и проекты сообщества](https://go.microsoft.com/fwlink/?LinkID=85384) .) Этот источник данных должен быть основан на драйвере ODBC, предоставленном операционной системой (имя драйвера — "SQL Server"). При построении и запуске этого образца как 32-разрядного приложения в 64-разрядной операционной системе необходимо создать источник данных ODBC с помощью программы администрирования ODBC (исполняемый файл %windir%\SysWOW64\odbcad32.exe).  
   
  Этот образец соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию. Чтобы соединиться с именованным экземпляром, измените определение источника данных ODBC, указав экземпляр в следующем формате: Сервер\ИменованныйЭкземпляр. По умолчанию [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] устанавливается на именованный экземпляр.  
   
@@ -183,7 +183,7 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'emp3')
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Инструкции по столбцы text и image управлению &#40;ODBC&#41;](../../database-engine/dev-guide/managing-text-and-image-columns-how-to-topics-odbc.md)  
+## <a name="see-also"></a>См. также:  
+ [Разделы руководства по управлению столбцами Text и Image &#40;ODBC&#41;](../../database-engine/dev-guide/managing-text-and-image-columns-how-to-topics-odbc.md)  
   
   

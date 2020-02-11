@@ -18,30 +18,30 @@ ms.assetid: 5c1becc5-f34e-4869-bf69-dfafab684540
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0674bf993087b349d4e8b6f9947c65167e94df8e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68001799"
 ---
 # <a name="logmarkhistory-transact-sql"></a>logmarkhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Содержит одну строку для каждой зафиксированной помеченной транзакции. Эта таблица хранится в **msdb** базы данных.  
+  Содержит одну строку для каждой зафиксированной помеченной транзакции. Эта таблица хранится в базе данных **msdb** .  
   
 
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|**database_name**|**nvarchar(128)**|Локальная база данных, в которой возникла помеченная транзакция.|  
-|**mark_name**|**nvarchar(128)**|Предоставляемое пользователем имя помеченной транзакции.|  
-|**description**|**nvarchar(255)**|Предоставляемое пользователем описание помеченной транзакции. Может иметь значение NULL.|  
-|**user_name**|**nvarchar(128)**|Имя пользователя базы данных, выполнившего помеченную транзакцию. Может иметь значение NULL.|  
-|**lsn**|**numeric(25,0)**|Номер LSN записи транзакции с пометкой.|  
+|**database_name**|**nvarchar(128**|Локальная база данных, в которой возникла помеченная транзакция.|  
+|**mark_name**|**nvarchar(128**|Предоставляемое пользователем имя помеченной транзакции.|  
+|**nописание**|**nvarchar(255)**|Предоставляемое пользователем описание помеченной транзакции. Может иметь значение NULL.|  
+|**user_name**|**nvarchar(128**|Имя пользователя базы данных, выполнившего помеченную транзакцию. Может иметь значение NULL.|  
+|**lsn**|**numeric (25, 0)**|Номер LSN записи транзакции с пометкой.|  
 |**mark_time**|**datetime**|Время фиксации помеченной транзакции (локальное время).|  
   
-## <a name="see-also"></a>См. также  
- [Восстановление базы данных до помеченной транзакции (среда SQL Server Management Studio)](../../relational-databases/backup-restore/restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)   
- [Использование помеченных транзакций для согласованного восстановления связанных баз данных (модель полного восстановления)](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)   
- [Системные таблицы (Transact-SQL)](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Восстановление базы данных до помеченной транзакции &#40;SQL Server Management Studio&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)   
+ [Используйте помеченные транзакции для согласованного восстановления связанных баз данных &#40;модели полного восстановления&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)   
+ [Системные таблицы &#40;&#41;Transact-SQL](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

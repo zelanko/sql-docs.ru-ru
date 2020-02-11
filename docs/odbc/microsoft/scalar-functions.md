@@ -16,14 +16,14 @@ ms.assetid: 18e1e0c1-b43f-44d9-b310-7d9e1d499e8b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 85511a9997ccbae0ebe4838218d43bc997344085
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67997780"
 ---
 # <a name="scalar-functions"></a>Скалярные функции
-Драйверы для баз данных Microsoft ODBC Desktop поддерживают следующие скалярные функции:  
+Драйверы базы данных Microsoft ODBC для настольных систем поддерживают следующие скалярные функции:  
   
 ||||  
 |-|-|-|  
@@ -35,4 +35,4 @@ ms.locfileid: "67997780"
 |DAYOFMONTH|MOD|YEAR|  
 |DAYOFWEEK|MONTH||  
   
- Сведения об аргументах и возвращаемых значений скалярных функций, см. в разделе приложении F из *Справочник по программированию ODBC.*
+ Дополнительные сведения о аргументах и возвращаемых значениях скалярных функций см. в приложении F *Справочника программиста по ODBC.*
