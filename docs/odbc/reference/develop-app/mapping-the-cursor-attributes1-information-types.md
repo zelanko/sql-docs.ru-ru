@@ -1,5 +1,5 @@
 ---
-title: Сопоставление типов сведений атрибутов1 курсора | Документация Майкрософт
+title: Сопоставление типов сведений Attributes1 курсора | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,19 +17,19 @@ ms.assetid: 9f112449-ca86-45ac-a865-e6174d67f91b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d95d3e67fdcd7159074e2f20ffa558f4c80bbcb2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036355"
 ---
 # <a name="mapping-the-cursor-attributes1-information-types"></a>Сопоставление типов сведений атрибутов1 курсора
-Когда ODBC 3. *x* приложение вызывает **SQLGetInfo** в ODBC 2 *.x* драйвер с типом SQL_XXXX_CURSOR_ATTRIBUTES1 сведения (для динамической, однонаправленные, управляемые набором ключей, или статические курсоры), определяется параметр битов, возвращаемых диспетчером драйверов ODBC 2. *x* драйвер возвращает для соответствующего ODBC 2. *x* типы сведений. Биты установлены в том случае, как показано в следующей таблице.  
+При использовании ODBC 3. Приложение *x* вызывает **SQLGetInfo** в драйвере ODBC 2 *. x* с типом сведений SQL_XXXX_CURSOR_ATTRIBUTES1 (для динамических, однопроходных, набора ключей-драйверов или статических курсоров). Настройка битов, возвращаемых диспетчером драйверов, зависит от того, что такое ODBC 2. драйвер *x* возвращает для соответствующего ODBC 2. *x* сведения о типах данных. Биты задаются, как показано в следующей таблице.  
   
-|Бит в<br /><br /> SQL_XXXX_CURSOR_ATTRIBUTES1|Тип курсора|ODBC 2. *x* сведения<br /><br /> type|  
+|Бит в<br /><br /> SQL_XXXX_CURSOR_ATTRIBUTES1|Тип курсора|ODBC 2. *x* информация<br /><br /> type|  
 |-----------------------------------------------|-----------------|-------------------------------------|  
 |SQL_CA1_NEXT|All|SQL_FETCH_DIRECTION|  
-|SQL_CA1_ABSOLUTE SQL_CA1_RELATIVE SQL_CA1_BOOKMARK|Динамические, управляемые набором ключей, статические|SQL_FETCH_DIRECTION|  
-|SQL_CA1_LOCK_NO_CHANGE SQL_CA1_LOCK_UNLOCK SQL_CA1_LOCK_EXCLUSIVE|Динамические, управляемые набором ключей, статические|SQL_LOCK_TYPES|  
+|SQL_CA1_ABSOLUTE SQL_CA1_RELATIVE SQL_CA1_BOOKMARK|Dynamic, набор ключей-Driver, статический|SQL_FETCH_DIRECTION|  
+|SQL_CA1_LOCK_NO_CHANGE SQL_CA1_LOCK_UNLOCK SQL_CA1_LOCK_EXCLUSIVE|Dynamic, набор ключей-Driver, статический|SQL_LOCK_TYPES|  
 |SQL_CA1_POSITIONED_UPDATE SQL_CA1_POSITIONED_DELETE SQL_CA1_SELECT_FOR_UPDATE|All|SQL_POSITIONED_STATEMENTS|  
-|SQL_CA1_POS_POSITION SQL_CA1_POS_DELETE SQL_CA1_POS_REFRESH SQL_CA1_POS_BULK_ADD|Динамические, управляемые набором ключей, статические|SQL_POS_OPERATIONS|
+|SQL_CA1_POS_POSITION SQL_CA1_POS_DELETE SQL_CA1_POS_REFRESH SQL_CA1_POS_BULK_ADD|Dynamic, набор ключей-Driver, статический|SQL_POS_OPERATIONS|

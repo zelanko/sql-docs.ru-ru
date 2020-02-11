@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ac7730e8437eaed304ed69c40e45fc93ee9b5531
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68888646"
 ---
 # <a name="creating-a-data-source-view-basic-data-mining-tutorial"></a>Создание представления источников данных (учебник по интеллектуальному анализу данных — начальный уровень)
@@ -26,7 +26,7 @@ ms.locfileid: "68888646"
   
 2.  На странице **Мастер представления источника данных** нажмите кнопку **Далее**.  
   
-3.  На странице **Выбор источника данных** в разделе реляционные **Источники данных**выберите источник данных Adventure Works DW 2012, созданный в последней задаче. Нажмите кнопку **Далее**.  
+3.  На странице **Выбор источника данных** в разделе **реляционные источники данных**выберите источник данных Adventure Works DW 2012, созданный в последней задаче. Щелкните **Далее**.  
   
     > [!NOTE]  
     >  Если необходимо создать источник данных, щелкните правой кнопкой мыши элемент **Источники данных** и выберите команду **создать источник данных** , чтобы запустить мастер источников данных.  
@@ -37,19 +37,19 @@ ms.locfileid: "68888646"
   
     -   **vTargetMail (dbo)** — Просмотр исторических данных о последних покупателях велосипедов  
   
-5.  Нажмите кнопку **Далее**.  
+5.  Щелкните **Далее**.  
   
 6.  На странице **Завершение работы мастера** по умолчанию представление источника данных называется Adventure Works DW 2012. Измените имя на `Targeted Mailing`, а затем нажмите кнопку **Готово**.  
   
      Новое представление источника данных откроется на вкладке **Целевая рассылка. DSV [Design]** .  
   
 ## <a name="previous-task-in-lesson"></a>Предыдущая задача занятия  
- [Учебник по созданию базового &#40;интеллектуального анализа данных в источнике данных&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
+ [Учебник по созданию источника данных &#40;Basic Data Mining&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- [Занятие 2. Учебник по созданию структуры &#40;целевой корреспонденции Basic Data Mining&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
+ [Занятие 2. Создание структуры целевой рассылки &#40;учебник по основам интеллектуального анализа данных&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>См. также  
- [Определение представления источников данных (службы Analysis Services)](https://docs.microsoft.com/analysis-services/multidimensional-models/defining-a-data-source-view-analysis-services)  
+## <a name="see-also"></a>См. также:  
+ [Определение представления источников данных &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/defining-a-data-source-view-analysis-services)  
   
   

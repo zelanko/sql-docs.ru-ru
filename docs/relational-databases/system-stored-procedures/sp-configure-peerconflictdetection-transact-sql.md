@@ -16,13 +16,13 @@ ms.assetid: 45117cb2-3247-433f-ba3d-7fa19514b1c3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8a8cc9930ddf85dea60999e3b63dbcebaaf42d8f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68215946"
 ---
-# <a name="spconfigurepeerconflictdetection-transact-sql"></a>sp_configure_peerconflictdetection (Transact-SQL)
+# <a name="sp_configure_peerconflictdetection-transact-sql"></a>sp_configure_peerconflictdetection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Настраивает обнаружение конфликта для публикации, которая участвует в топологии одноранговой репликации транзакций. Дополнительные сведения см. в разделе [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md). Эта хранимая процедура выполняется на издателе в базе данных публикации.  
@@ -44,48 +44,48 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @publication=] '*публикации*"  
- Имя публикации, для которой должна быть выполнена настройка обнаружения конфликтов. *Публикация* — **sysname**, не имеет значения по умолчанию.  
+ [ @publication=] "*Публикация*"  
+ Имя публикации, для которой должна быть выполнена настройка обнаружения конфликтов. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
- [ @action=] '*действие*"  
- Указывает, должно ли быть включено или отключено обнаружение конфликтов применительно к публикации. *Действие* — **nvarchar(5)** , и может принимать одно из следующих значений.  
+ [ @action= ] "*действие*"  
+ Указывает, должно ли быть включено или отключено обнаружение конфликтов применительно к публикации. *Action* имеет тип **nvarchar (5)** и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
-|**enable**|Включает обнаружение конфликтов применительно к публикации.|  
-|**Отключить**|Отключает обнаружение конфликтов применительно к публикации.|  
+|**параметр**|Включает обнаружение конфликтов применительно к публикации.|  
+|**включен**|Отключает обнаружение конфликтов применительно к публикации.|  
 |NULL (по умолчанию)||  
   
- [ @originator_id=] *originator_id*  
- Указывает идентификатор в одноранговой топологии. *originator_id* — **int**, значение по умолчанию NULL. Этот идентификатор используется для обнаружения конфликтов, если *действие* присваивается **включить**. Задайте положительное, ненулевое значение идентификатора, которое никогда не использовалось в топологии. Список использованных идентификаторов запросите в системной таблице [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) .  
+ [ @originator_id= ] *originator_id*  
+ Указывает идентификатор в одноранговой топологии. *originator_id* имеет **тип int**и значение по умолчанию NULL. Этот идентификатор используется для обнаружения конфликтов, если для параметра *Action* задано значение **Enable**. Задайте положительное, ненулевое значение идентификатора, которое никогда не использовалось в топологии. Список использованных идентификаторов запросите в системной таблице [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) .  
   
- [ @conflict_retention=] *conflict_retention*  
+ [ @conflict_retention= ] *conflict_retention*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ @continue_onconflict=] '*continue_onconflict*"]  
- Определяет, продолжает ли агент распространителя обрабатывать изменения после обнаружения конфликта. *continue_onconflict* — **nvarchar(5)** со значением по умолчанию FALSE.  
+ [ @continue_onconflict= ] "*continue_onconflict*"]  
+ Определяет, продолжает ли агент распространителя обрабатывать изменения после обнаружения конфликта. *continue_onconflict* имеет тип **nvarchar (5)** и значение по умолчанию false.  
   
 > [!CAUTION]  
 >  Рекомендуется использовать значение по умолчанию FALSE. Если присвоить этому аргументу значение TRUE, агент распространителя будет пытаться обеспечить конвергентность данных в топологии, применяя конфликтующую строку из узла с наибольшим значением идентификатора инициатора. Этот метод не гарантирует конвергенции. После обнаружения конфликта следует убедиться, что топология остается согласованной. Дополнительные сведения см. в подразделе «Обработка конфликтов» раздела [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
   
- [ @local=] '*локального*"  
+ [ @local= ] "*Local*"  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ @timeout=] *время ожидания*  
+ [ @timeout= ] *время ожидания*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
- Хранимая процедура sp_configure_peerconflictdetection используется для одноранговой репликации транзакций. Для использования обнаружения конфликтов, все узлы должны работать под управлением [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или более поздней версии; и обнаружения необходимо включить для всех узлов.  
+## <a name="remarks"></a>Remarks  
+ Хранимая процедура sp_configure_peerconflictdetection используется для одноранговой репликации транзакций. Чтобы использовать обнаружение конфликтов, на всех узлах должны выполняться [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или более поздние версии. и обнаружение должно быть включено для всех узлов.  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо членство в предопределенной роли сервера sysadmin или предопределенной роли базы данных db_owner.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Обнаружение конфликтов в одноранговой репликации](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)   
  [Одноранговая репликация транзакций](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
- [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+ [Хранимые процедуры репликации &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: MemberToStr (многомерные Выражения) | Документация Майкрософт
+title: MemberToStr (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 9a33aede54557491dea50a557ed581929c5383e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68001464"
 ---
 # <a name="membertostr-mdx"></a>MemberToStr (многомерные выражения)
 
 
-  Возвращает строку в формате Многомерных выражений, соответствующий заданному элементу.  
+  Возвращает строку в формате МНОГОМЕРных выражений, соответствующую указанному элементу.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -31,11 +31,11 @@ MemberToStr(Member_Expression)
  *Member_Expression*  
  Допустимое многомерное выражение, возвращающее элемент.  
   
-## <a name="remarks"></a>Примечания  
- Эта функция возвращает строку, содержащую уникальное имя элемента. Обычно он используется для передачи уникального имени элемента внешней функции.  
+## <a name="remarks"></a>Remarks  
+ Эта функция возвращает строку, содержащую уникальное имя элемента. Обычно он используется для передачи UniqueName элемента в внешнюю функцию.  
   
 ## <a name="example"></a>Пример  
- Следующий пример возвращает строку [Geography]. [Geography]. [Страна]. & [United States]:  
+ В следующем примере возвращается строка [Geography]. [Geography]. [Country]. & [США]:  
   
  `WITH MEMBER Measures.x AS MemberToStr`  
   
@@ -45,7 +45,7 @@ MemberToStr(Member_Expression)
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также:  
+ [Ссылка на функцию многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-function-reference-mdx.md)  
   
   

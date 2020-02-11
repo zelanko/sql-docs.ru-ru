@@ -15,17 +15,17 @@ ms.assetid: edd0a01c-1a1b-4b91-9966-2529e244abae
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1feada03927b1c2359babf7d68d6c9a8ffcba2b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964557"
 ---
 # <a name="converttostring-method-example-vbscript"></a>Пример метода ConvertToString (VBScript)
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- В следующем примере показано, как преобразовать **записей** в строку в кодировке MIME, используя **RDSServer.DataFactory ConvertToString** метод. В нем также показано, как можно преобразовать строку обратно в **записей**. Вырежьте и вставьте следующий код в блокноте или другом текстовом редакторе и сохраните его как **ConvertToString.htm**.  
+ В следующем примере показано, как преобразовать **набор записей** в строку в кодировке MIME с помощью метода **RDSServer. ConvertToString.** Затем показано, как можно преобразовать строку обратно в **набор записей**. Вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **ConvertToString. htm**.  
   
 ```  
 <!-- BeginConvertToStringVBS -->  
@@ -93,8 +93,8 @@ MIME Encoded RS: <BR>
 <!-- EndConvertToStringVBS -->  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Пример метода ConvertToString (служба удаленных рабочих СТОЛОВ)](../../../ado/reference/rds-api/converttostring-method-rds.md)   
+## <a name="see-also"></a>См. также:  
+ [Метод ConvertToString (RDS)](../../../ado/reference/rds-api/converttostring-method-rds.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
 
 

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 21e9b4b0f05b2728ac42bbba96a6227872ceaeec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63015796"
 ---
 # <a name="index-columns-dialog-box-visual-database-tools"></a>Диалоговое окно «Столбцы индекса» (визуальные инструменты для баз данных)
@@ -24,14 +24,14 @@ ms.locfileid: "63015796"
   
 ## <a name="options"></a>Параметры  
  **Имя столбца**  
- Выберите столбцы, которые должны быть включены в этот индекс. Выберите  **\<None >** Чтобы удалить столбец из индекса...  
+ Выберите столбцы, которые должны быть включены в этот индекс. Выберите ** \<нет>** , чтобы удалить этот столбец из индекса.  
   
  **Порядок сортировки**  
  Выберите порядок сортировки для указанного столбца. Доступные параметры: **По возрастанию** и **По убыванию**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание кластеризованных индексов](../../relational-databases/indexes/create-clustered-indexes.md)   
  [Создание некластеризованных индексов](../../relational-databases/indexes/create-nonclustered-indexes.md)   
- [Индексы и ключи диалоговое окно &#40;визуальных инструментах баз данных&#41;](visual-database-tools.md)  
+ [Диалоговое окно "индексы и ключи" &#40;визуальных инструментов для баз данных&#41;](visual-database-tools.md)  
   
   

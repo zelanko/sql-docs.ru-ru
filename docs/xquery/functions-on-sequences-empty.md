@@ -1,5 +1,5 @@
 ---
-title: пустая функция (XQuery) | Документация Майкрософт
+title: Функция empty (XQuery) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 46da89a8-0cd9-4913-8521-4087589a04ba
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 888739807a79163a8188f3b2f27b7f7860032bc4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68004672"
 ---
 # <a name="functions-on-sequences---empty"></a>Функции с последовательностями — empty
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Возвращает значение True, если значение *$arg* представляет собой пустую последовательность. В противном случае функция возвращает значение False.  
+  Возвращает значение true, если значение *$arg* является пустой последовательностью. В противном случае функция возвращает значение False.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,14 +38,14 @@ fn:empty($arg as item()*) as xs:boolean
  *$arg*  
  Последовательность элементов. Если последовательность пуста, функция возвращает значение True. В противном случае функция возвращает значение False.  
   
-## <a name="remarks"></a>Примечания  
- **Fn: EXISTS()** функция не поддерживается. Кроме того **not()** функция может использоваться.  
+## <a name="remarks"></a>Remarks  
+ Функция **fn: Exists ()** не поддерживается. В качестве альтернативы можно использовать функцию **NOT ()** .  
   
 ## <a name="examples"></a>Примеры  
- В этом разделе приведены примеры запросов XQuery к экземплярам XML, которые хранятся в различных **xml** -столбец базы данных AdventureWorks.  
+ В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных столбцах типа **XML** в базе данных AdventureWorks.  
   
 ### <a name="a-using-the-empty-xquery-function-to-determine-if-an-attribute-is-present"></a>A. Использование функции XQuery empty() для определения наличия атрибута  
- В процессе производства модели продукта 7, этот запрос возвращает всех расположений цехов, у которых нет **MachineHours** атрибута.  
+ В процессе производства для модели продукта 7 этот запрос возвращает все расположения рабочих центров, у которых нет атрибута **«MachineHours»** .  
   
 ```  
 SELECT ProductModelID, Instructions.query('  
@@ -64,7 +64,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Это результат:  
+ Результат:  
   
 ```  
 ProductModelID      Result          
@@ -74,7 +74,7 @@ ProductModelID      Result
                <Location LocationID="60" LaborHrs="4"/>  
 ```  
   
- Следующий, слегка измененный запрос возвращает значение «NotFound», если **MachineHour** атрибут не задан:  
+ Следующий, слегка измененный запрос возвращает "NotFound", если отсутствует атрибут **мачинехаур** :  
   
 ```  
 SELECT ProductModelID, Instructions.query('  
@@ -96,7 +96,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Это результат:  
+ Результат:  
   
 ```  
 ProductModelID Result                         
@@ -110,8 +110,8 @@ ProductModelID Result
   <Location LocationID="60" LaborHrs="4" MachineHours="NotFound"/>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Функции XQuery для типа данных xml](../xquery/xquery-functions-against-the-xml-data-type.md)   
- [exist (метод) (тип данных xml)](../t-sql/xml/exist-method-xml-data-type.md)  
+## <a name="see-also"></a>См. также:  
+ [Функции XQuery для типа данных XML](../xquery/xquery-functions-against-the-xml-data-type.md)   
+ [Существует&#40;&#41; метод &#40;типа данных XML&#41;](../t-sql/xml/exist-method-xml-data-type.md)  
   
   

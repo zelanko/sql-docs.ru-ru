@@ -16,13 +16,13 @@ ms.assetid: fbabe1ec-57cf-425c-bae7-af7f5d3198fd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 38b653dcb51f428692401fb87609187a82449393
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771491"
 ---
-# <a name="sphelpsubscriberinfo-transact-sql"></a>sp_helpsubscriberinfo (Transact-SQL)
+# <a name="sp_helpsubscriberinfo-transact-sql"></a>sp_helpsubscriberinfo (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Отображает сведения о подписчике. Эта хранимая процедура выполняется на подписчике в любой базе данных.  
@@ -38,7 +38,7 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @subscriber = ] 'subscriber'`Имя подписчика. Аргумент *Subscriber* имеет **%** тип **sysname**и значение по умолчанию, которое возвращает всю информацию.  
+`[ @subscriber = ] 'subscriber'`Имя подписчика. Аргумент *Subscriber* имеет тип **sysname**и значение по **%** умолчанию, которое возвращает всю информацию.  
   
 `[ @publisher = ] 'publisher'`Имя издателя. параметр *Publisher* имеет тип **sysname**, а значение по умолчанию — имя текущего сервера.  
   
@@ -47,34 +47,34 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|**издатель**|**sysname**|Имя издателя.|  
-|**подписчик**|**sysname**|Имя подписчика.|  
-|**type**|**tinyint**|Тип подписчика:<br /><br /> **0**  = базаданных **1** = источник данных ODBC[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|**пользователей**|**sysname**|Идентификатор входа для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**password**|**sysname**|Пароль для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**издателя**|**имеет sysname**|Имя издателя.|  
+|**абонент**|**имеет sysname**|Имя подписчика.|  
+|**type**|**tinyint**|Тип подписчика:<br /><br /> **** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] база данных 1 = источник данных ODBC **** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|**пользователей**|**имеет sysname**|Идентификатор входа для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**пароль**|**имеет sysname**|Пароль для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**commit_batch_size**|**int**|Не поддерживается.|  
 |**status_batch_size**|**int**|Не поддерживается.|  
 |**flush_frequency**|**int**|Не поддерживается.|  
 |**frequency_type**|**int**|Частота запуска агента распространителя:<br /><br /> **1** = один раз<br /><br /> **2** = по запросу<br /><br /> **4** = ежедневно<br /><br /> **8** = еженедельно<br /><br /> **16** = ежемесячно<br /><br /> **32** = ежемесячное относительное<br /><br /> **64** = Автозапуск<br /><br /> **128** = повторяющаяся|  
-|**frequency_interval**|**int**|Значение, применяемое к частоте, заданной аргументом *frequency_type*.|  
-|**frequency_relative_interval**|**int**|Дата агент распространения, используемой, когда аргумент *frequency_type* имеет значение **32** (ежемесячное относительное):<br /><br /> **1** = сначала<br /><br /> **2** = секунда<br /><br /> **4** = третий<br /><br /> **8** = четвертый<br /><br /> **16** = Последняя|  
-|**frequency_recurrence_factor**|**int**|Коэффициент повторения, используемый в *frequency_type*.|  
+|**frequency_interval**|**int**|Значение, применяемое к частоте, установленной *frequency_type*.|  
+|**frequency_relative_interval**|**int**|Дата агент распространения, используемая, если *frequency_type* имеет значение **32** (ежемесячное относительное):<br /><br /> **1** = сначала<br /><br /> **2** = секунда<br /><br /> **4** = третий<br /><br /> **8** = четвертый<br /><br /> **16** = Последняя|  
+|**frequency_recurrence_factor**|**int**|Коэффициент повторения, используемый *frequency_type*.|  
 |**frequency_subday**|**int**|Частота изменения расписания в течение заданного периода:<br /><br /> **1** = один раз<br /><br /> **2** = секунда<br /><br /> **4** = минута<br /><br /> **8** = час|  
 |**frequency_subday_interval**|**int**|Интервал для *frequency_subday*.|  
 |**active_start_time_of_day**|**int**|Время суток, на которое запланирован первый запуск агента распространителя, в формате ЧЧММСС.|  
 |**active_end_time_of_day**|**int**|Время суток, на которое запланирован останов агента распространителя, в формате ЧЧММСС.|  
 |**active_start_date**|**int**|Дата, когда запланирован первый запуск агента распространителя, в формате ГГГГММДД.|  
 |**active_end_date**|**int**|Дата, когда запланирован останов агента распространителя, в формате ГГГГММДД.|  
-|**ретряттемпт**|**int**|Не поддерживается.|  
-|**ретриделай**|**int**|Не поддерживается.|  
-|**description**|**nvarchar(255)**|Текстовое описание подписчика.|  
-|**security_mode**|**int**|Реализованный режим безопасности:<br /><br /> 0 =  Проверка[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подлинности<br /><br /> **1 Проверка подлинности Windows**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)]|  
+|**retryattempt**|**int**|Не поддерживается.|  
+|**retrydelay**|**int**|Не поддерживается.|  
+|**nописание**|**nvarchar(255)**|Текстовое описание подписчика.|  
+|**security_mode**|**int**|Реализованный режим безопасности:<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверка подлинности<br /><br /> **** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] проверка подлинности Windows|  
 |**frequency_type2**|**int**|Частота запуска агента слияния:<br /><br /> **1** = один раз<br /><br /> **2** = по запросу<br /><br /> **4** = ежедневно<br /><br /> **8** = еженедельно<br /><br /> **16** = ежемесячно<br /><br /> **32** = ежемесячное относительное<br /><br /> **64** = Автозапуск<br /><br /> **128** = повторяющаяся|  
-|**frequency_interval2**|**int**|Значение, применяемое к частоте, заданной аргументом *frequency_type*.|  
-|**frequency_relative_interval2**|**int**|Дата агент слияния, используемой, когда аргумент *frequency_type* имеет значение 32 (ежемесячное относительное):<br /><br /> **1** = сначала<br /><br /> **2** = секунда<br /><br /> **4** = третий<br /><br /> **8** = четвертый<br /><br /> **16** = Последняя|  
-|**frequency_recurrence_factor2**|**int**|Коэффициент повторения, используемый в *frequency_type * *.*|  
+|**frequency_interval2**|**int**|Значение, применяемое к частоте, установленной *frequency_type*.|  
+|**frequency_relative_interval2**|**int**|Дата агент слияния, используемая, когда *frequency_type* имеет значение 32 (ежемесячное относительное):<br /><br /> **1** = сначала<br /><br /> **2** = секунда<br /><br /> **4** = третий<br /><br /> **8** = четвертый<br /><br /> **16** = Последняя|  
+|**frequency_recurrence_factor2**|**int**|Коэффициент повторения, используемый *frequency_type * *.*|  
 |**frequency_subday2**|**int**|Частота изменения расписания в течение заданного периода:<br /><br /> **1** = один раз<br /><br /> **2** = секунда<br /><br /> **4** = минута<br /><br /> **8** = час|  
 |**frequency_subday_interval2**|**int**|Интервал для *frequency_subday*.|  
 |**active_start_time_of_day2**|**int**|Время суток, на которое запланирован первый запуск агента слияния, в формате ЧЧММСС.|  
@@ -85,19 +85,19 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  **sp_helpsubscriberinfo** используется в репликации моментальных снимков, репликации транзакций и репликации слиянием.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** , предопределенной роли базы данных **db_owner** или списка доступа к публикации для публикации могут выполнять **sp_helpsubscriberinfo**.  
   
-## <a name="see-also"></a>См. также  
- [sp_adddistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
- [sp_addpullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
- [sp_changesubscriber &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
- [sp_dropsubscriber &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
- [sp_helpdistributor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
- [sp_helpserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
+ [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
+ [sp_changesubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
+ [sp_dropsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
+ [sp_helpdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
+ [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

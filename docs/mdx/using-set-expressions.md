@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1588d955e728830da4417160591a5c2b6c231473
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893507"
 ---
 # <a name="using-set-expressions"></a>Выражения наборов
@@ -22,7 +22,7 @@ ms.locfileid: "68893507"
   
  Полное выражение набора состоит из нуля или нескольких явно заданных кортежей, заключенных в фигурные скобки.  
   
- {[{ *Tuple_expression* | *Member_Expression* } [, { *Tuple_expression* | *Member_Expression* }]...]}  
+ {[{ *Tuple_expression* | *Member_expression* } [, { *Tuple_expression* | *Member_expression* }]...]}  
   
  Выражения элементов, указанные в выражении набора, преобразуются в выражения одноэлементных кортежей.  
   
@@ -57,9 +57,9 @@ ms.locfileid: "68893507"
   
  состоит из трех кортежей, каждый из которых содержит две явные ссылки на элементы в иерархии «Категории продуктов» измерения «Продукт» и иерархии «Календарь» измерения «Дата».  
   
- Примеры функций, которые возвращают наборы, см. [в разделе Работа с элементами, кортежи &#40;и&#41;установка многомерных выражений](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx).  
+ Примеры функций, которые возвращают наборы, см. [в разделе Работа с элементами, кортежами и наборами &#40;&#41;многомерных выражений ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx).  
   
-## <a name="see-also"></a>См. также  
- [Выражения &#40;многомерных выражений&#41;](../mdx/expressions-mdx.md)  
+## <a name="see-also"></a>См. также:  
+ [Выражения &#40;&#41;многомерных выражений](../mdx/expressions-mdx.md)  
   
   

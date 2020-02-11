@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1bb6f278b18381d1b3d3defdb53a7c40a6f673ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62960287"
 ---
 # <a name="secure-the-distributor"></a>Организация безопасности распространителя
@@ -44,10 +44,10 @@ ms.locfileid: "62960287"
 ## <a name="snapshot-folder-security"></a>Безопасность папки моментальных снимков  
  Убедитесь в том, что учетной записи, под которой выполняется агент слияния (для репликации слиянием) или агент распространителя (для репликации моментальных снимков и репликации транзакций), предоставлен доступ к хранилищу моментальных снимков на чтение, а учетной записи, под которой выполняется агент моментальных снимков, предоставлен доступ к хранилищу моментальных снимков на запись. Дополнительные сведения о папке моментальных снимков см. в статье [Организация безопасности папки моментальных снимков](secure-the-snapshot-folder.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Просмотр и изменение параметров безопасности репликации](view-and-modify-replication-security-settings.md)   
  [Включение шифрования соединений в ядре СУБД (диспетчер конфигурации SQL Server)](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [Безопасность репликации SQL Server](view-and-modify-replication-security-settings.md)  
+ [Безопасность Репликация SQL Server](view-and-modify-replication-security-settings.md)  
   
   

@@ -16,16 +16,16 @@ ms.assetid: b06102d5-4284-4834-b126-bc0baea49be5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8436616ced84892dc7e484a5d83f3f0c3779f244
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771584"
 ---
-# <a name="spscriptpublicationcustomprocs-transact-sql"></a>sp_scriptpublicationcustomprocs (Transact-SQL)
+# <a name="sp_scriptpublicationcustomprocs-transact-sql"></a>sp_scriptpublicationcustomprocs (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Записывает в скрипт пользовательские процедуры INSERT, UPDATE и DELETE для всех статей таблиц из публикации, в которой включен параметр автоматического создания схемы пользовательской процедуры. **sp_scriptpublicationcustomprocs** особенно полезен для настройки подписок, для которых моментальный снимок применяется вручную.  
+  Записывает в скрипт пользовательские процедуры INSERT, UPDATE и DELETE для всех статей таблиц из публикации, в которой включен параметр автоматического создания схемы пользовательской процедуры. **sp_scriptpublicationcustomprocs** особенно удобно использовать для настройки подписок, для которых моментальный снимок применяется вручную.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,39 +45,39 @@ sp_scriptpublicationcustomprocs [ @publication = ] 'publication_name'
 ## <a name="result-sets"></a>Результирующие наборы  
  Возвращает результирующий набор, состоящий из одного столбца **nvarchar (4000)** . Результирующий набор формирует полную инструкцию CREATE PROCEDURE, необходимую для создания пользовательской хранимой процедуры.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Пользовательские процедуры не вносятся в сценарии для статей, для которых не задан параметр автоматического создания схемы пользовательской процедуры (0x2).  
   
  Следующие процедуры используются **sp_scriptpublicationcustomprocs** для создания процедур подписчика и не должны выполняться напрямую:  
   
- **sp_script_reconciliation_delproc**  
+ **sp_script_reconciliation_delproc;**  
   
- **sp_script_reconciliation_insproc**  
+ **sp_script_reconciliation_insproc;**  
   
- **sp_script_reconciliation_vdelproc**  
+ **sp_script_reconciliation_vdelproc;**  
   
- **sp_script_reconciliation_xdelproc**  
+ **sp_script_reconciliation_xdelproc;**  
   
- **sp_scriptdelproc**  
+ **sp_scriptdelproc;**  
   
- **sp_scriptinsproc**  
+ **sp_scriptinsproc;**  
   
- **sp_scriptmappedupdproc**  
+ **sp_scriptmappedupdproc;**  
   
- **sp_scriptupdproc**  
+ **sp_scriptupdproc;**  
   
- **sp_scriptvdelproc**  
+ **sp_scriptvdelproc;**  
   
- **sp_scriptvupdproc**  
+ **sp_scriptvupdproc;**  
   
- **sp_scriptxdelproc**  
+ **sp_scriptxdelproc;**  
   
- **sp_scriptxupdproc**  
+ **sp_scriptxupdproc.**  
   
 ## <a name="permissions"></a>Разрешения  
- Разрешение EXECUTE предоставляется **Public**; в этой хранимой процедуре выполняется процедура проверки безопасности для ограничения доступа к членам предопределенной роли сервера **sysadmin** и предопределенной роли базы данных **db_owner** в текущей базе данных.  
+ Разрешение EXECUTE предоставляется **Public**; в этой хранимой процедуре выполняется процедура проверки безопасности для ограничения доступа к членам предопределенной роли сервера **sysadmin** и **db_owner** предопределенной роли базы данных в текущей базе данных.  
   
-## <a name="see-also"></a>См. также  
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

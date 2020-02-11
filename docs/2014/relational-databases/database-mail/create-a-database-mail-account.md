@@ -14,24 +14,24 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a286c7d4c0ff42389830713a6c42c89a7273f1d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917732"
 ---
 # <a name="create-a-database-mail-account"></a>Создание учетной записи компонента Database Mail
   Для создания учетной записи компонента Database Mail применяется **мастер настройки компонента Database Mail** или [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
--   **Перед началом:**  [Предварительные требования](#Prerequisites)  
+-   **Перед началом работы**  [Предварительные требования](#Prerequisites)  
   
--   **Чтобы создать запись компонента Database Mail, используйте:**  [мастера настройки компонента Database Mail](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Создание учетной записи компонента Database Mail с использованием:**  [мастера настройки компонента Database Mail](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
--   **Дальнейшие действия.**  [Дальнейшие действия по настройке компонента Database Mail](#FollowUp)  
+-   **Дальнейшие действия.**  [Следующие действия по настройке компонента Database Mail](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Prerequisites"></a> необходимые компоненты  
+###  <a name="Prerequisites"></a> Предварительные требования  
   
 -   Определите имя сервера и номер порта для сервера протокола SMTP, который используется для отправки электронной почты. Если SMTP-сервер требует проверки подлинности, определите имя пользователя и пароль для SMTP-сервера.  
   
@@ -84,7 +84,7 @@ EXECUTE msdb.dbo.sysmail_add_account_sp
     @mailserver_name = 'smtp.Adventure-Works.com' ;  
 ```  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. Следующие шаги настройки компонента Database Mail  
+##  <a name="FollowUp"></a> Дальнейшие действия. Следующие действия по настройке компонента Database Mail  
   
 -   [Создание профиля компонента Database Mail](create-a-database-mail-profile.md)  
   

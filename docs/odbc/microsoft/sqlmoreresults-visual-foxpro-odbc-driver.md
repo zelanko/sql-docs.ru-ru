@@ -13,20 +13,20 @@ ms.assetid: dc59b1dd-c158-4b45-ab46-638be1fa49b8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a21e2145e10c5ed9364a392f6cb888b676ec18e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68002249"
 ---
 # <a name="sqlmoreresults-visual-foxpro-odbc-driver"></a>SQLMoreResults (драйвер ODBC для Visual FoxPro)
 > [!NOTE]  
->  Этот раздел содержит сведения Visual FoxPro ODBC-драйвером. Общие сведения об этой функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  В этом разделе содержатся сведения, относящиеся к драйверу ODBC для Visual FoxPro. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Поддержка: Полное  
+ Поддержка: полная  
   
- Соответствие API ODBC: Уровень 2  
+ Соответствие API-интерфейса ODBC: уровень 2  
   
- Определяет, ожидается ли дополнительные результаты на дескриптор инструкции *hstmt*, содержащий инструкции SELECT, UPDATE, INSERT или DELETE и если да, инициализирует обработки для этих результатов.  
+ Определяет, ожидаются ли дополнительные результаты в маркере инструкции, *хстмт*, СОДЕРЖАЩЕМ инструкции SELECT, Update, INSERT или DELETE, и, если это так, инициализирует обработку для этих результатов.  
   
- Дополнительные сведения см. в разделе [SQLMoreResults](../../odbc/reference/syntax/sqlmoreresults-function.md) в *Справочник по программированию ODBC*.
+ Дополнительные сведения см. в разделе [SQLMoreResults](../../odbc/reference/syntax/sqlmoreresults-function.md) в *справочнике программиста по ODBC*.

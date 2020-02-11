@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cb841d187385724ea31b5a7db86fcb323bf10663
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63126246"
 ---
 # <a name="using-url-access-in-a-windows-application"></a>Использование доступа по URL-адресу в приложении Windows
@@ -31,7 +31,7 @@ ms.locfileid: "63126246"
 -   Использование элемента управления <xref:System.Windows.Forms.WebBrowser> на форме Windows Forms для отображения отчета.  
   
 ## <a name="starting-internet-explorer-from-a-windows-form"></a>Запуск обозревателя Internet Explorer из формы Windows Forms  
- С помощью класса <xref:System.Diagnostics.Process> можно получить доступ к процессу, выполняющемуся на компьютере. Класс <xref:System.Diagnostics.Process> является конструкцией [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], которую удобно использовать для запуска и остановки приложений, управления приложениями и наблюдения за приложениями. Чтобы просмотреть определенный отчет в базе данных сервера отчетов, можно запустить процесс **IExplore**, передав URL-адрес отчета. С помощью следующего примера кода можно запустить обозреватель [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer и передать определенный URL-адрес отчета, когда пользователь нажимает кнопку на форме Windows Forms.  
+ С помощью класса <xref:System.Diagnostics.Process> можно получить доступ к процессу, выполняющемуся на компьютере. <xref:System.Diagnostics.Process> Класс является полезной [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] конструкцией для запуска, остановки, управления и мониторинга приложений. Чтобы просмотреть определенный отчет в базе данных сервера отчетов, можно запустить процесс **IExplore**, передав URL-адрес отчета. С помощью следующего примера кода можно запустить обозреватель [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer и передать определенный URL-адрес отчета, когда пользователь нажимает кнопку на форме Windows Forms.  
   
 ```vb  
 Private Sub viewReportButton_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles viewReportButton.Click  
@@ -87,7 +87,7 @@ private void viewReportButton_Click(object sender, System.EventArgs e)
   
 ###### <a name="to-add-the-webbrowser-control-to-your-windows-form"></a>Добавление элемента управления WebBrowser в форму Windows Forms  
   
-1.  Создайте новое приложение Windows на языке [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] или [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
+1.  Создайте новое приложение Windows в либо [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]в, либо в.  
   
 2.  Перейдите к элементу управления <xref:System.Windows.Forms.WebBrowser> в диалоговом окне **Область элементов**.  
   
@@ -113,11 +113,11 @@ string url = "http://localhost/reportserver?/" +
 webBrowser1.Navigate(url);  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Интеграция служб Reporting Services в приложения](../application-integration/integrating-reporting-services-into-applications.md)   
- [Интеграция служб Reporting Services с помощью доступа по URL-адресу](integrating-reporting-services-using-url-access.md)   
- [Интеграция служб Reporting Services с использованием протокола SOAP](integrating-reporting-services-using-soap.md)   
- [Интеграция служб Reporting Services с помощью элементов управления ReportViewer](integrating-reporting-services-using-reportviewer-controls.md)   
+## <a name="see-also"></a>См. также:  
+ [Интеграция Reporting Services в приложения](../application-integration/integrating-reporting-services-into-applications.md)   
+ [Интеграция Reporting Services с использованием доступа по URL-адресу](integrating-reporting-services-using-url-access.md)   
+ [Интеграция Reporting Services с помощью SOAP](integrating-reporting-services-using-soap.md)   
+ [Интеграция Reporting Services с помощью элементов управления ReportViewer](integrating-reporting-services-using-reportviewer-controls.md)   
  [Доступ по URL-адресу (службы SSRS)](../url-access-ssrs.md)  
   
   

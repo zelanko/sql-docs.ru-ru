@@ -1,5 +1,5 @@
 ---
-title: Инструкция CREATE SESSION CUBE (многомерные Выражения) | Документация Майкрософт
+title: Инструкция CREATE SESSION CUBE (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: ac95afcebcf07a5d691db5f2599b3290b9587d44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038359"
 ---
 # <a name="mdx-data-definition---create-session-cube"></a>Определение данных многомерных выражений — CREATE SESSION CUBE
@@ -101,16 +101,16 @@ CREATE SESSION CUBE session_cube_name FROM <cube list> (<param list>)
  dimension_name  
  Имя измерения в кубе сеанса.  
   
- ИЗ \<dim предложение from >  
+ ИЗ \<предложения dim from>  
  Спецификация, допустимая только для определения производного измерения.  
   
  NOT_RELATED_TO_FACTS  
  Спецификация, допустимая только для определения производного измерения.  
   
- \<уровень тип >  
+ \<тип уровня>  
  Спецификация, допустимая только для определения производного измерения.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  В отличие от кубов сервера и локальных кубов куб сеанса не сохраняется вне области сеанса, в котором он был создан. Куб сеанса определяется на основе мер и измерений, которые его определяют. Существует два типа измерений.  
   
 -   Измерения источника — это измерения, которые были частью одного из исходных кубов.  
@@ -198,8 +198,8 @@ CREATE SESSION CUBE [Adventure Works_XL_GROUPING1]
    )  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Инструкции определения данных многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
- [Инструкция CREATE GLOBAL CUBE &#40;многомерных Выражений&#41;](../mdx/mdx-data-definition-create-global-cube.md)  
+## <a name="see-also"></a>См. также:  
+ [Инструкции определения данных многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-data-definition-statements-mdx.md)   
+ [Инструкция CREATE GLOBAL CUBE &#40;&#41;многомерных выражений](../mdx/mdx-data-definition-create-global-cube.md)  
   
   
