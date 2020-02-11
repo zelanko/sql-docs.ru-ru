@@ -14,10 +14,10 @@ ms.assetid: 9f862a3d-25ab-41e9-b833-1db99959e825
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 6bee1ab1716eac70d51006b8bb4315b204be67ab
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73727946"
 ---
 # <a name="models-master-data-services"></a>Модели (службы основных данных)
@@ -47,7 +47,7 @@ ms.locfileid: "73727946"
   
  На рисунке отображены связи между объектами модели.  
   
- ![Объекты в модели Master Data Services](../master-data-services/media/mds-conc-model-circles.gif "Объекты в модели Master Data Services")  
+ ![Объекты в модели служб Master Data Services](../master-data-services/media/mds-conc-model-circles.gif "Объекты в модели служб Master Data Services")  
   
 > [!NOTE]  
 >  Производные иерархии — это тоже объекты модели, но на рисунке они не показаны. Производные иерархии происходят от связей атрибутов на основе домена, существующих между сущностями. Дополнительные сведения см. в разделе [Производные иерархии (службы Master Data Services)](../master-data-services/derived-hierarchies-master-data-services.md).  
@@ -59,7 +59,7 @@ ms.locfileid: "73727946"
 ## <a name="model-example"></a>Пример модели  
  В следующем примере объекты в модели «Продукт» логически группируют данные, связанные с продуктом.  
   
- ![Пример основных данных модели продукта](../master-data-services/media/mds-conc-model.gif "Пример основных данных модели продукта")  
+ ![Пример основных данных модели «Продукт»](../master-data-services/media/mds-conc-model.gif "Пример основных данных модели «Продукт»")  
   
  Другие распространенные модели:  
   
@@ -73,20 +73,20 @@ ms.locfileid: "73727946"
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Создание модели для организации основных данных.|[Создание модели (службы Master Data Services)](../master-data-services/create-a-model-master-data-services.md)|  
-|Изменение имени существующей модели.|[Изменение модели (службы Master Data Services)](../master-data-services/edit-model-master-data-services.md)|  
-|Удаление существующей модели.|[Удаление модели (службы Master Data Services)](../master-data-services/delete-a-model-master-data-services.md)|  
+|Создание модели для организации основных данных.|[Создание &#40;модели Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)|  
+|Изменение имени существующей модели.|[Изменение &#40;модели Master Data Services&#41;](../master-data-services/edit-model-master-data-services.md)|  
+|Удаление существующей модели.|[Удаление &#40;модели Master Data Services&#41;](../master-data-services/delete-a-model-master-data-services.md)|  
   
 ## <a name="related-content"></a>См. также  
   
--   [Общие сведения о службах Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md)  
+-   [Обзор Master Data Services &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
   
--   [Сущности (службы Master Data Services)](../master-data-services/entities-master-data-services.md)  
+-   [Сущности &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  
   
--   [Атрибуты (службы Master Data Services)](../master-data-services/attributes-master-data-services.md)  
+-   [Master Data Services &#40;атрибутов&#41;](../master-data-services/attributes-master-data-services.md)  
   
--   [Развертывание моделей (службы Master Data Services)](../master-data-services/deploying-models-master-data-services.md)  
+-   [Развертывание моделей &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)  
   
--   [Разрешения объекта модели (службы Master Data Services)](../master-data-services/model-object-permissions-master-data-services.md)  
+-   [Разрешения объекта модели &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)  
   
   

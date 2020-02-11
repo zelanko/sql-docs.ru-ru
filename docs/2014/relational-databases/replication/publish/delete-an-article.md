@@ -20,13 +20,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4be2287a1c0d43ccfdfaeaca3378f6d10f100134
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73882274"
 ---
-# <a name="delete-an-article"></a>Delete an Article
+# <a name="delete-an-article"></a>Удаление статьи
   В данном разделе описывается удаление статьи в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью [!INCLUDE[tsql](../../../includes/tsql-md.md)] или объектов RMO. Сведения об условиях, при которых статьи могут быть удалены, и о том, требуется ли при удалении статьи создание нового моментального снимка или повторная инициализация подписок, см. в [этой статье](add-articles-to-and-drop-articles-from-existing-publications.md).  
   
   
@@ -35,22 +35,22 @@ ms.locfileid: "73882274"
   
 #### <a name="to-delete-an-article-from-a-snapshot-or-transactional-publication"></a>Удаление статьи из публикации моментальных снимков или публикации транзакций  
   
-1.  Чтобы удалить статью, указанную в параметре **\@article**, из публикации, указанной в параметре **\@publication**, выполните процедуру [sp_droparticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql). Укажите значение **1** в параметре **\@force_invalidate_snapshot**.  
+1.  Чтобы удалить статью, указанную в параметре [](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql)article **, из публикации, указанной в параметре \@** publication **, выполните процедуру \@sp_droparticle &#40;Transact-SQL&#41;**. Укажите значение **1** в параметре **\@force_invalidate_snapshot**.  
   
 2.  (Необязательно) Чтобы полностью удалить опубликованный объект из базы данных, выполните команду `DROP <objectname>` на издателе для базы данных публикации.  
   
 #### <a name="to-delete-an-article-from-a-merge-publication"></a>Удаление статьи из публикации слиянием  
   
-1.  Чтобы удалить статью, указанную в параметре **\@article**, из публикации, указанной в параметре **\@publication**, выполните процедуру [sp_dropmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql). При необходимости укажите значение **1** в параметре **\@force_invalidate_snapshot** и значение **1** в параметре **\@force_reinit_subscription**.  
+1.  Чтобы удалить статью, указанную в параметре [](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql)article **, из публикации, указанной в параметре \@** publication **, выполните процедуру \@sp_dropmergearticle &#40;Transact-SQL&#41;**. При необходимости укажите значение **1** в параметре **\@force_invalidate_snapshot** и значение **1** в параметре **\@force_reinit_subscription**.  
   
 2.  (Необязательно) Чтобы полностью удалить опубликованный объект из базы данных, выполните команду `DROP <objectname>` на издателе для базы данных публикации.  
   
-###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
- В следующем примере удаляется статья из публикации транзакций. Так как это изменение приведет к недействительности существующего моментального снимка, в параметреforce_invalidate_snapshot **указывается значение \@1**.  
+###  <a name="TsqlExample"></a>Примеры (Transact-SQL)  
+ В следующем примере удаляется статья из публикации транзакций. Так как это изменение приведет к недействительности существующего моментального снимка, в параметре **** force_invalidate_snapshot** указывается значение \@1**.  
   
  [!code-sql[HowTo#sp_droparticle](../../../snippets/tsql/SQL15/replication/howto/tsql/droptranpub.sql#sp_droparticle)]  
   
- В следующем примере две статьи удаляются из публикации слиянием. Так как эти изменения приведут к недействительности существующего моментального снимка, в параметреforce_invalidate_snapshot **указывается значение \@1**.  
+ В следующем примере две статьи удаляются из публикации слиянием. Так как эти изменения приведут к недействительности существующего моментального снимка, в параметре **** force_invalidate_snapshot** указывается значение \@1**.  
   
  [!code-sql[HowTo#sp_dropmergearticle](../../../snippets/tsql/SQL15/replication/howto/tsql/dropmergepub.sql#sp_dropmergearticle)]
  [!code-sql[HowTo#sp_dropmergearticle](../../../snippets/tsql/SQL15/replication/howto/tsql/dropmergearticles.sql#sp_dropmergearticle)]  
@@ -62,7 +62,7 @@ ms.locfileid: "73882274"
   
 1.  Создайте соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.TransArticle> .  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.TransArticle>.  
   
 3.  Установите свойства <xref:Microsoft.SqlServer.Replication.Article.Name%2A>, <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A>и <xref:Microsoft.SqlServer.Replication.Article.DatabaseName%2A> .  
   
@@ -78,7 +78,7 @@ ms.locfileid: "73882274"
   
 1.  Создайте соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergeArticle> .  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergeArticle>.  
   
 3.  Установите свойства <xref:Microsoft.SqlServer.Replication.Article.Name%2A>, <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A>и <xref:Microsoft.SqlServer.Replication.Article.DatabaseName%2A> .  
   
@@ -90,7 +90,7 @@ ms.locfileid: "73882274"
   
 7.  Закройте все соединения.  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
  [Добавление и удаление статей в существующих публикациях](add-articles-to-and-drop-articles-from-existing-publications.md)   
  [Основные понятия системных хранимых процедур репликации](../concepts/replication-system-stored-procedures-concepts.md)  
   

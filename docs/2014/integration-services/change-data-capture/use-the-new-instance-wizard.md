@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 854336885617ac9f3bea98880433a7ce870c4844
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62834580"
 ---
 # <a name="use-the-new-instance-wizard"></a>Использование мастера создания экземпляра
@@ -38,7 +38,7 @@ ms.locfileid: "62834580"
   
 -   [Готово](finish.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Как создать экземпляр базы данных изменений SQL Server](how-to-create-the-sql-server-change-database-instance.md)  
   
   

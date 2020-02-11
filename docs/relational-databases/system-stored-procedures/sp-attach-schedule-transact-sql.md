@@ -18,13 +18,13 @@ ms.assetid: 80c80eaf-cf23-4ed8-b8dd-65fe59830dd1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f85095941311459da2fdc757a11895795ebb418e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046162"
 ---
-# <a name="spattachschedule-transact-sql"></a>sp_attach_schedule (Transact-SQL)
+# <a name="sp_attach_schedule-transact-sql"></a>sp_attach_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Назначает расписание выполнения задания.  
@@ -42,29 +42,29 @@ sp_attach_schedule
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @job_id = ] job_id` Идентификационный номер задания, к которому добавляется расписание. *job_id*— **uniqueidentifier**, значение по умолчанию NULL.  
+`[ @job_id = ] job_id`Идентификационный номер задания, к которому добавляется расписание. *job_id*имеет тип **uniqueidentifier**и значение по умолчанию NULL.  
   
-`[ @job_name = ] 'job_name'` Имя задания, к которому добавляется расписание. *имя_задания*— **sysname**, значение по умолчанию NULL.  
-  
-> [!NOTE]  
->  Либо *job_id* или *имя_задания* должен быть указан, но не оба аргумента одновременно.  
-  
-`[ @schedule_id = ] schedule_id` Идентификационный номер удаляемого расписания, задаваемого для задания. *schedule_id*— **int**, значение по умолчанию NULL.  
-  
-`[ @schedule_name = ] 'schedule_name'` Имя расписания, задаваемого для задания. *schedule_name*— **sysname**, значение по умолчанию NULL.  
+`[ @job_name = ] 'job_name'`Имя задания, к которому добавляется расписание. Аргумент *job_name*имеет тип **sysname**и значение по умолчанию NULL.  
   
 > [!NOTE]  
->  Либо *schedule_id* или *schedule_name* должен быть указан, но не оба аргумента одновременно.  
+>  Необходимо указать либо *job_id* , либо *job_name* , но нельзя указать оба значения.  
   
-## <a name="remarks"></a>Примечания  
+`[ @schedule_id = ] schedule_id`Идентификационный номер расписания, который необходимо задать для задания. *schedule_id*имеет **тип int**и значение по умолчанию NULL.  
+  
+`[ @schedule_name = ] 'schedule_name'`Имя расписания, которое необходимо задать для задания. Аргумент *schedule_name*имеет тип **sysname**и значение по умолчанию NULL.  
+  
+> [!NOTE]  
+>  Необходимо указать либо *schedule_id* , либо *schedule_name* , но нельзя указать оба значения.  
+  
+## <a name="remarks"></a>Remarks  
  Расписание и задание должны иметь одного и того же владельца.  
   
  Расписание может быть назначено более чем одному заданию. Задание может выполняться более чем в одном расписании.  
   
- Эта хранимая процедура должна запускаться из **msdb** базы данных.  
+ Эта хранимая процедура должна запускаться из базы данных **msdb** .  
   
 ## <a name="permissions"></a>Разрешения  
- По умолчанию эту хранимую процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
+ По умолчанию эта хранимая процедура может выполняться членами предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
   
 -   **SQLAgentUserRole**  
   
@@ -76,7 +76,8 @@ sp_attach_schedule
   
  Дополнительные сведения о разрешениях этих ролей см. в разделе [Предопределенные роли базы данных агента SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверяет, является ли пользователь владельцем и задания и расписания.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверяет, является ли пользователь владельцем и задания и расписания.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере создается расписание с именем `NightlyJobs`. Задания, использующие это расписание, выполняются на сервере каждый день в `01:00`. В этом примере расписание подключается к заданиям `BackupDatabase` и `RunReports`.  
@@ -106,9 +107,9 @@ EXEC sp_attach_schedule
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [процедуру sp_detach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)   
+ [sp_detach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)   
  [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  
   
   

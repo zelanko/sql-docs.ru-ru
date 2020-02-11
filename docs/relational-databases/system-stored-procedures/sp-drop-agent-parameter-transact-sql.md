@@ -16,16 +16,16 @@ ms.assetid: b99e65ff-9cca-4dce-a2ce-2968de23a76a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8356ee01b0c14a9cb87542d750a93ea537fac5cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68016546"
 ---
-# <a name="spdropagentparameter-transact-sql"></a>sp_drop_agent_parameter (Transact-SQL)
+# <a name="sp_drop_agent_parameter-transact-sql"></a>sp_drop_agent_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Удаляет один или все параметры из профиля в **MSagent_parameters** таблицы. Эта хранимая процедура выполняется на распространителе в любой базе данных с запущенным агентом.  
+  Удаляет один или все параметры из профиля в таблице **MSagent_parameters** . Эта хранимая процедура выполняется на распространителе в любой базе данных с запущенным агентом.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -38,22 +38,22 @@ sp_drop_agent_parameter [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @profile_id = ] profile_id` — Идентификатор профиля, для которого является параметром для удаления. *profile_id* — **int**, не имеет значения по умолчанию.  
+`[ @profile_id = ] profile_id`Идентификатор профиля, для которого необходимо удалить параметр. *profile_id* имеет **тип int**и не имеет значения по умолчанию.  
   
-`[ @parameter_name = ] 'parameter_name'` — Имя параметра для удаления. *имя_параметра* — **sysname**, значение по умолчанию **%** . Если **%** , удаляются все параметры для данного профиля.  
+`[ @parameter_name = ] 'parameter_name'`Имя удаляемого параметра. Аргумент *parameter_name* имеет тип **sysname**и значение по **%** умолчанию. Если **%** значение равно, удаляются все параметры для указанного профиля.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  **sp_drop_agent_parameter** используется во всех типах репликации.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнять процедуру **sp_drop_agent_parameter**.  
+ Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_drop_agent_parameter**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_add_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
  [sp_help_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

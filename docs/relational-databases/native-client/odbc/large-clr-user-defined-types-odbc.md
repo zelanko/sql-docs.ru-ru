@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6f7b166ae15e403e2a84bc3a7f3902350c805788
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73760589"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Определяемые пользователем типы данных больших значений CLR (ODBC)
@@ -45,7 +45,7 @@ ms.locfileid: "73760589"
   
 |Тип данных SQL|Организация памяти|Тип данных C|Значение (sqlext.h)|  
 |-------------------|-------------------|-----------------|------------------------|  
-|SQL_SS_UDT|SQLCHAR * (\*char без знака)|SQL_C_BINARY|SQL_BINARY (-2)|  
+|SQL_SS_UDT|SQLCHAR * (неподписанный знак \*)|SQL_C_BINARY|SQL_BINARY (-2)|  
   
 ## <a name="descriptor-fields-for-parameters"></a>Поля дескрипторов для параметров  
  Сведения, возвращаются в поля дескриптора параметра реализации (IPD) следующим образом.  
@@ -55,12 +55,12 @@ ms.locfileid: "73760589"
 |SQL_DESC_CASE_SENSITIVE|SQL_FALSE|SQL_FALSE|  
 |SQL_DESC_CONCISE_TYPE|SQL_SS_UDT|SQL_SS_UDT|  
 |SQL_DESC_DATETIME_INTERVAL_CODE|0|0|  
-|SQL_DESC_DATETIME_INTERVAL_PRECISION|*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
+|SQL_DESC_DATETIME_INTERVAL_PRECISION|*\n*|SQL_SS_LENGTH_UNLIMITED (0)|  
 |SQL_DESC_FIXED_PREC_SCALE|SQL_FALSE|SQL_FALSE|  
-|SQL_DESC_LENGTH|*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
+|SQL_DESC_LENGTH|*\n*|SQL_SS_LENGTH_UNLIMITED (0)|  
 |SQL_DESC_LOCAL_TYPE_NAME|"udt"|"udt"|  
-|SQL_DESC_OCTET_LENGTH|*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
-|SQL_DESC_PRECISION|*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
+|SQL_DESC_OCTET_LENGTH|*\n*|SQL_SS_LENGTH_UNLIMITED (0)|  
+|SQL_DESC_PRECISION|*\n*|SQL_SS_LENGTH_UNLIMITED (0)|  
 |SQL_DESC_SCALE|0|0|  
 |SQL_DESC_TYPE|SQL_SS_UDT|SQL_SS_UDT|  
 |SQL_DESC_TYPE_NAME|"udt"|"udt"|  
@@ -87,15 +87,15 @@ ms.locfileid: "73760589"
 |SQL_DESC_CASE_SENSITIVE|SQL_FALSE|SQL_FALSE|  
 |SQL_DESC_CONCISE_TYPE|SQL_SS_UDT|SQL_SS_UDT|  
 |SQL_DESC_DATETIME_INTERVAL_CODE|0|0|  
-|SQL_DESC_DATETIME_INTERVAL_PRECISION|*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
+|SQL_DESC_DATETIME_INTERVAL_PRECISION|*\n*|SQL_SS_LENGTH_UNLIMITED (0)|  
 |SQL_DESC_DISPLAY_SIZE|2*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
 |SQL_DESC_FIXED_PREC_SCALE|SQL_FALSE|SQL_FALSE|  
-|SQL_DESC_LENGTH|*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
+|SQL_DESC_LENGTH|*\n*|SQL_SS_LENGTH_UNLIMITED (0)|  
 |SQL_DESC_LITERAL_PREFIX|"0x"|"0x"|  
 |SQL_DESC_LITERAL_SUFFIX|""|""|  
 |SQL_DESC_LOCAL_TYPE_NAME|"udt"|"udt"|  
-|SQL_DESC_OCTET_LENGTH|*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
-|SQL_DESC_PRECISION|*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
+|SQL_DESC_OCTET_LENGTH|*\n*|SQL_SS_LENGTH_UNLIMITED (0)|  
+|SQL_DESC_PRECISION|*\n*|SQL_SS_LENGTH_UNLIMITED (0)|  
 |SQL_DESC_SCALE|0|0|  
 |SQL_DESC_SEARCHABLE|SQL_PRED_NONE|SQL_PRED_NONE|  
 |SQL_DESC_TYPE|SQL_SS_UDT|SQL_SS_UDT|  
@@ -113,12 +113,12 @@ ms.locfileid: "73760589"
 |-----------------|-------------------------------------------------------------------|----------------------------------------------------------|  
 |DATA_TYPE|SQL_SS_UDT|SQL_SS_UDT|  
 |TYPE_NAME|Имя определяемого пользователем типа.|Имя определяемого пользователем типа.|  
-|COLUMN_SIZE|*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
-|BUFFER_LENGTH|*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
+|COLUMN_SIZE|*\n*|SQL_SS_LENGTH_UNLIMITED (0)|  
+|BUFFER_LENGTH|*\n*|SQL_SS_LENGTH_UNLIMITED (0)|  
 |DECIMAL_DIGITS|NULL|NULL|  
 |SQL_DATA_TYPE|SQL_SS_UDT|SQL_SS_UDT|  
 |SQL_DATETIME_SUB|NULL|NULL|  
-|CHAR_OCTET_LENGTH|*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
+|CHAR_OCTET_LENGTH|*\n*|SQL_SS_LENGTH_UNLIMITED (0)|  
 |SS_UDT_CATALOG_NAME|Имя каталога, содержащего определяемый пользователем тип.|Имя каталога, содержащего определяемый пользователем тип.|  
 |SS_UDT_SCHEMA_NAME|Имя схемы, содержащей определяемый пользователем тип.|Имя схемы, содержащей определяемый пользователем тип.|  
 |SS_UDT_ASSEMBLY_TYPE_NAME|Полное имя определяемого пользователем типа.|Полное имя определяемого пользователем типа.|  
@@ -136,7 +136,7 @@ ms.locfileid: "73760589"
 |SQL_C_BINARY|Поддерживается|  
 |SQL_C_CHAR|Поддерживается|  
   
- \* двоичные данные преобразуются в шестнадцатеричную строку.  
+ \*Двоичные данные преобразуются в шестнадцатеричную строку.  
   
  Поддерживаются следующие преобразования типов данных C в типы данных SQL.  
   
@@ -146,7 +146,7 @@ ms.locfileid: "73760589"
 |SQL_C_BINARY|Поддерживается|  
 |SQL_C_CHAR|Поддерживается|  
   
- \* шестнадцатеричную строку для преобразования двоичных данных.  
+ \*Выполняется преобразование шестнадцатеричной строки в двоичные данные.  
   
 ## <a name="sql_variant-support-for-udts"></a>Поддержка SQL_VARIANT для определяемых пользователем типов  
  Определяемые пользователем типы не поддерживаются в столбцах SQL_VARIANT.  
@@ -159,8 +159,8 @@ ms.locfileid: "73760589"
   
 |Версия сервера|SQL_SS_UDT<br /><br /> (длина не более 8 000 байт)|SQL_SS_UDT<br /><br /> (длина более 8 000 байт)|  
 |--------------------|-------------------------------------------------------------------|----------------------------------------------------------|  
-|SQL Server 2005|**UDT**|**varbinary(max)**|  
-|SQL Server 2008 и более поздние версии|**UDT**|**UDT**|  
+|SQL Server 2005.|**(UDT)**|**varbinary(max)**|  
+|SQL Server 2008 и более поздних версий|**(UDT)**|**(UDT)**|  
   
 ## <a name="odbc-functions-supporting-large-clr-udts"></a>Функции ODBC, поддерживающие определяемые пользователем типы больших данных CLR  
  В этом разделе обсуждаются изменения в функциях ODBC собственного клиента SQL Server, касающиеся поддержки определяемых пользователем типов больших данных CLR.  
@@ -173,7 +173,7 @@ ms.locfileid: "73760589"
   
 |Тип данных SQL|*ParameterType*|*колумнсизептр*|*деЦималдигитсптр*|  
 |-------------------|---------------------|---------------------|------------------------|  
-|SQL_SS_UDT<br /><br /> (длина не более 8 000 байт)|SQL_SS_UDT|*n*|0|  
+|SQL_SS_UDT<br /><br /> (длина не более 8 000 байт)|SQL_SS_UDT|*\n*|0|  
 |SQL_SS_UDT<br /><br /> (длина более 8 000 байт)|SQL_SS_UDT|SQL_SS_LENGTH_UNLIMITED (0)|0|  
   
 ### <a name="sqlcolattribute"></a>SQLColAttribute  
@@ -187,7 +187,7 @@ ms.locfileid: "73760589"
   
 |Тип данных SQL|*дататипептр*|*колумнсизептр*|*деЦималдигитсптр*|  
 |-------------------|-------------------|---------------------|------------------------|  
-|SQL_SS_UDT<br /><br /> (длина не более 8 000 байт)|SQL_SS_UDT|*n*|0|  
+|SQL_SS_UDT<br /><br /> (длина не более 8 000 байт)|SQL_SS_UDT|*\n*|0|  
 |SQL_SS_UDT<br /><br /> (длина более 8 000 байт)|SQL_SS_UDT|SQL_SS_LENGTH_UNLIMITED (0)|0|  
   
 ### <a name="sqldescribeparam"></a>SQLDescribeParam  
@@ -195,7 +195,7 @@ ms.locfileid: "73760589"
   
 |Тип данных SQL|*дататипептр*|*колумнсизептр*|*деЦималдигитсптр*|  
 |-------------------|-------------------|---------------------|------------------------|  
-|SQL_SS_UDT<br /><br /> (длина не более 8 000 байт)|SQL_SS_UDT|*n*|0|  
+|SQL_SS_UDT<br /><br /> (длина не более 8 000 байт)|SQL_SS_UDT|*\n*|0|  
 |SQL_SS_UDT<br /><br /> (длина более 8 000 байт)|SQL_SS_UDT|SQL_SS_LENGTH_UNLIMITED (0)|0|  
   
 ### <a name="sqlfetch"></a>SQLFetch  
@@ -213,9 +213,9 @@ ms.locfileid: "73760589"
 ### <a name="sqlgetdescrec"></a>SQLGetDescRec  
  Для определяемых пользователем типов возвращаются следующие значения.  
   
-|Тип данных SQL|Тип|Подтип|Длина|Точность|Масштаб|  
+|Тип данных SQL|Тип|SubType|Длина|Precision|Масштабирование|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
-|SQL_SS_UDT<br /><br /> (длина не более 8 000 байт)|SQL_SS_UDT|0|*n*|n|0|  
+|SQL_SS_UDT<br /><br /> (длина не более 8 000 байт)|SQL_SS_UDT|0|*\n*|n|0|  
 |SQL_SS_UDT<br /><br /> (длина более 8 000 байт)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
   
 ### <a name="sqlgettypeinfo"></a>SQLGetTypeInfo  
@@ -233,15 +233,15 @@ ms.locfileid: "73760589"
 ### <a name="sqlsetdescrec"></a>SQLSetDescRec  
  Для определяемых пользователем типов разрешены следующие значения.  
   
-|Тип данных SQL|Тип|Подтип|Длина|Точность|Масштаб|  
+|Тип данных SQL|Тип|SubType|Длина|Precision|Масштабирование|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
-|SQL_SS_UDT<br /><br /> (длина не более 8 000 байт)|SQL_SS_UDT|0|*n*|*n*|0|  
+|SQL_SS_UDT<br /><br /> (длина не более 8 000 байт)|SQL_SS_UDT|0|*\n*|*\n*|0|  
 |SQL_SS_UDT<br /><br /> (длина более 8 000 байт)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
   
 ### <a name="sqlspecialcolumns"></a>SQLSpecialColumns  
  Значения, возвращаемые для столбцов DATA_TYPE, TYPE_NAME, COLUMN_SIZE, BUFFER_LENGTH и DECIMAL_DIGTS определяемых пользователем типов, описаны в подразделе «Метаданные, возвращаемые функциями SQLColumns и SQLProcedureColumns (метаданные каталога)» ранее в этом разделе.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Большие определяемые пользователем типы данных CLR](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)  
   
   

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: fd161820fd53d45642848697bce9589a98dec4ca
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401039"
 ---
 # <a name="loading-data-into-parallel-data-warehouse"></a>Загрузка данных в Параллельное хранилище данных
@@ -43,7 +43,7 @@ For more information, see [Prepared statements](prepared-statements.md).
   
 ## <a name="related-tasks"></a>Связанные задачи  
   
-|Задача|Описание|  
+|Задача|Description|  
 |--------|---------------|  
 |Создайте промежуточную базу данных.|[Создание промежуточной базы данных](staging-database.md)|  
 |Загрузка с Integration Services.|[Загрузка с помощью служб Integration Services](load-with-ssis.md)|  

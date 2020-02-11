@@ -18,10 +18,10 @@ ms.assetid: ecac7a16-c638-4703-ab08-753b63295f3a
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 772a7640f93fa11d6596511bc72ec9d1d5e2e1c1
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660892"
 ---
 # <a name="sqlservice-class"></a>Класс SqlService
@@ -30,7 +30,7 @@ ms.locfileid: "73660892"
   
  Класс [SqlService](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) используется для программного управления службой [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Работая с объектом класса [SqlService](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) , можно выполнять следующие задачи:  
   
--   соединяться со службой;  
+-   Подключение к службе.  
   
 -   изменять учетную запись и пароль, которые используются для соединения со службой;  
   
@@ -38,7 +38,7 @@ ms.locfileid: "73660892"
   
 -   проверять свойства службы.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Запуск и остановка служб](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

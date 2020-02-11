@@ -15,17 +15,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: aac0c6b837fcd25b0e1f06344a2745c68b05dea3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206032"
 ---
 # <a name="execute-t-sql-statement-task-maintenance-plan"></a>Задача «Выполнение инструкции T-SQL» (план обслуживания)
   Для настройки своего плана обслуживания путем добавления выбранных инструкций **к этому плану используйте диалоговое окно** Задача "Выполнение инструкции T-SQL" [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 ## <a name="options"></a>Параметры  
- **Соединение**  
+ **Соединен**  
  Выберите соединение с сервером, которое будет использоваться для выполнения этой задачи.  
   
  **Создать**  
@@ -34,17 +34,18 @@ ms.locfileid: "68206032"
  **Время ожидания выполнения**  
  Время (в секундах) ожидания завершения выполнения задачи (завершения задачи).  
   
- **Инструкция Т-SQL**  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] подлежащие выполнению инструкции.  
+ **Инструкция T-SQL**  
+ 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] подлежащие выполнению инструкции.  
   
- **Просмотр T-SQL**  
+ **Просмотреть T-SQL**  
  Просмотрите инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] , выполняемые для данной задачи по отношению к серверу, на основе выбранных параметров.  
   
 > [!NOTE]  
 >  Если количество затронутых объектов велико, построение этого отображения может занять значительное время.  
   
 ## <a name="new-connection-dialog-box"></a>Диалоговое окно «Создание соединения»  
- **Имя соединения**  
+ **Имя подключения**  
  Введите имя нового соединения.  
   
  **Выберите или введите имя сервера**  
@@ -57,7 +58,7 @@ ms.locfileid: "68206032"
  Укажите способ проверки подлинности на сервере.  
   
  **Использовать встроенную безопасность Windows**  
- Подключиться к экземпляру компонента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] c проверкой подлинности [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
+ Подключитесь к экземпляру [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] с использованием [!INCLUDE[msCoName](../../includes/msconame-md.md)] проверки подлинности Windows.  
   
  **Использовать указанные имя пользователя и пароль**  
  Подключиться к экземпляру [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] с использованием проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Этот параметр недоступен.  

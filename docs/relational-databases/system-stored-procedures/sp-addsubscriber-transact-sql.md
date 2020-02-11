@@ -16,10 +16,10 @@ ms.assetid: b8a584ea-2a26-4936-965b-b84f026e39c0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 278af2ca1bd6abdb84cdf2371628c6b95662e46e
-ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73962412"
 ---
 # <a name="sp_addsubscriber-transact-sql"></a>sp_addsubscriber (Transact-SQL)
@@ -60,23 +60,23 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @subscriber = ] 'subscriber'` — имя сервера, добавляемого в качестве допустимого подписчика на публикации на этом сервере. Аргумент *Subscriber* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @subscriber = ] 'subscriber'`Имя сервера, добавляемого в качестве допустимого подписчика на публикации на этом сервере. Аргумент *Subscriber* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @type = ] type` — это тип подписчика. *Type имеет тип* **tinyint**и может принимать одно из следующих значений.  
+`[ @type = ] type`Тип подписчика. *Type имеет тип* **tinyint**и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
-|**0** (по умолчанию)|Подписчик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)]|  
+|**0** (по умолчанию)|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Подписчик|  
 |**1**|Сервер источника данных ODBC|  
 |**2**|База данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet|  
-|**3**|Поставщик OLE DB|  
+|**3-5**|Поставщик OLE DB|  
   
-`[ @login = ] 'login'` — это идентификатор входа для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности. Аргумент *login* имеет тип **sysname** и значение по умолчанию NULL.  
+`[ @login = ] 'login'`Идентификатор входа для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности. Аргумент *Login* имеет тип **sysname**и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Данный аргумент является устаревшим и сохранен только для поддержки обратной совместимости скриптов. Свойство теперь указывается для каждой подписки при выполнении [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Если значение указано, то оно используется в качестве значения по умолчанию при создании подписок на данном подписчике и при возвращении предупреждающего сообщения.  
   
-`[ @password = ] 'password'` — это пароль для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Password* имеет тип **nvarchar (524)** и значение по умолчанию NULL.  
+`[ @password = ] 'password'`Пароль для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности. *Password* имеет тип **nvarchar (524)** и значение по умолчанию NULL.  
   
 > [!IMPORTANT]  
 >  Не используйте пустые пароли. Выбирайте надежные пароли.  
@@ -84,110 +84,110 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 > [!NOTE]  
 >  Данный аргумент является устаревшим и сохранен только для поддержки обратной совместимости скриптов. Свойство теперь указывается для каждой подписки при выполнении [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Если значение указано, то оно используется в качестве значения по умолчанию при создании подписок на данном подписчике и при возвращении предупреждающего сообщения.  
   
-`[ @commit_batch_size = ] commit_batch_size` этот параметр устарел и поддерживается для обратной совместимости скриптов.  
+`[ @commit_batch_size = ] commit_batch_size`Этот параметр является устаревшим и поддерживается для обратной совместимости скриптов.  
   
 > [!NOTE]  
 >  Если значение указано, то оно используется в качестве значения по умолчанию при создании подписок на данном подписчике и при возвращении предупреждающего сообщения.  
   
-`[ @status_batch_size = ] status_batch_size` этот параметр устарел и поддерживается для обратной совместимости скриптов.  
+`[ @status_batch_size = ] status_batch_size`Этот параметр является устаревшим и поддерживается для обратной совместимости скриптов.  
   
 > [!NOTE]  
 >  Если значение указано, то оно используется в качестве значения по умолчанию при создании подписок на данном подписчике и при возвращении предупреждающего сообщения.  
   
-`[ @flush_frequency = ] flush_frequency` этот параметр устарел и поддерживается для обратной совместимости скриптов.  
+`[ @flush_frequency = ] flush_frequency`Этот параметр является устаревшим и поддерживается для обратной совместимости скриптов.  
   
 > [!NOTE]  
 >  Если значение указано, то оно используется в качестве значения по умолчанию при создании подписок на данном подписчике и при возвращении предупреждающего сообщения.  
   
-`[ @frequency_type = ] frequency_type` — это частота, с которой будет планироваться агент репликации. *frequency_type* имеет **тип int**и может принимать одно из следующих значений.  
+`[ @frequency_type = ] frequency_type`Частота, с которой необходимо запланировать агент репликации. *frequency_type* имеет **тип int**и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
-|**1**|Однократно|  
-|**2**|по запросу|  
+|**1**|Один раз.|  
+|**2**|По запросу|  
 |**4**|Ежедневно|  
 |**8**|Еженедельно|  
-|**16**|Ежемесячно|  
+|**глубин**|Ежемесячная|  
 |**32**|Ежемесячно с относительной датой|  
 |**64** (по умолчанию)|Автозапуск|  
-|**128**|Повторяющееся задание|  
+|**128**|Повторение|  
   
 > [!NOTE]  
 >  Данный аргумент является устаревшим и сохранен только для поддержки обратной совместимости скриптов. Свойство теперь указывается для каждой подписки при выполнении [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Если значение указано, то оно используется в качестве значения по умолчанию при создании подписок на данном подписчике и при возвращении предупреждающего сообщения.  
   
-`[ @frequency_interval = ] frequency_interval` — это значение, применяемое к частоте, установленной *frequency_type*. *frequency_interval* имеет **тип int**и значение по умолчанию 1.  
+`[ @frequency_interval = ] frequency_interval`Значение, применяемое к частоте, установленной *frequency_type*. *frequency_interval* имеет **тип int**и значение по умолчанию 1.  
   
 > [!NOTE]  
 >  Данный аргумент является устаревшим и сохранен только для поддержки обратной совместимости скриптов. Свойство теперь указывается для каждой подписки при выполнении [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Если значение указано, то оно используется в качестве значения по умолчанию при создании подписок на данном подписчике и при возвращении предупреждающего сообщения.  
   
-`[ @frequency_relative_interval = ] frequency_relative_interval` — это Дата агента репликации. Этот параметр используется, если *frequency_type* установлен в значение **32** (ежемесячное относительное расписание). *frequency_relative_interval* имеет **тип int**и может принимать одно из следующих значений.  
+`[ @frequency_relative_interval = ] frequency_relative_interval`Дата агента репликации. Этот параметр используется, если *frequency_type* установлен в значение **32** (ежемесячное относительное расписание). *frequency_relative_interval* имеет **тип int**и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
-|**1** (по умолчанию)|Первая|  
-|**2**|Вторая|  
+|**1** (по умолчанию)|Первый|  
+|**2**|Секунда|  
 |**4**|Третья|  
 |**8**|Четвертая|  
-|**16**|Последняя|  
+|**глубин**|Последний|  
   
 > [!NOTE]  
 >  Данный аргумент является устаревшим и сохранен только для поддержки обратной совместимости скриптов. Свойство теперь указывается для каждой подписки при выполнении [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Если значение указано, то оно используется в качестве значения по умолчанию при создании подписок на данном подписчике и при возвращении предупреждающего сообщения.  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` — фактор повторения, используемый *frequency_type*. *frequency_recurrence_factor* имеет **тип int**и значение по умолчанию **0**.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Коэффициент повторения, используемый *frequency_type*. *frequency_recurrence_factor* имеет **тип int**и значение по умолчанию **0**.  
   
 > [!NOTE]  
 >  Данный аргумент является устаревшим и сохранен только для поддержки обратной совместимости скриптов. Свойство теперь указывается для каждой подписки при выполнении [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Если значение указано, то оно используется в качестве значения по умолчанию при создании подписок на данном подписчике и при возвращении предупреждающего сообщения.  
   
-`[ @frequency_subday = ] frequency_subday` — Частота повторного планирования в течение заданного периода. *frequency_subday* имеет **тип int**и может принимать одно из следующих значений.  
+`[ @frequency_subday = ] frequency_subday`Частота повторного планирования в течение заданного периода. *frequency_subday* имеет **тип int**и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |**1**|Однократно|  
-|**2**|Вторая|  
+|**2**|Секунда|  
 |**4** (по умолчанию)|Минута|  
-|**8**|Час|  
+|**8**|Hour|  
   
 > [!NOTE]  
 >  Данный аргумент является устаревшим и сохранен только для поддержки обратной совместимости скриптов. Свойство теперь указывается для каждой подписки при выполнении [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Если значение указано, то оно используется в качестве значения по умолчанию при создании подписок на данном подписчике и при возвращении предупреждающего сообщения.  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval` — интервал для *frequency_subday*. *frequency_subday_interval* имеет **тип int**и значение по умолчанию **5**.  
+`[ @frequency_subday_interval = ] frequency_subday_interval`Интервал для *frequency_subday*. *frequency_subday_interval* имеет **тип int**и значение по умолчанию **5**.  
   
 > [!NOTE]  
 >  Данный аргумент является устаревшим и сохранен только для поддержки обратной совместимости скриптов. Свойство теперь указывается для каждой подписки при выполнении [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Если значение указано, то оно используется в качестве значения по умолчанию при создании подписок на данном подписчике и при возвращении предупреждающего сообщения.  
   
-`[ @active_start_time_of_day = ] active_start_time_of_day` — время суток, когда запланирован первый запуск агента репликации, в формате ЧЧММСС. *active_start_time_of_day* имеет **тип int**и значение по умолчанию **0**.  
+`[ @active_start_time_of_day = ] active_start_time_of_day`Время суток, когда запланирован первый запуск агента репликации, в формате ЧЧММСС. *active_start_time_of_day* имеет **тип int**и значение по умолчанию **0**.  
   
 > [!NOTE]  
 >  Данный аргумент является устаревшим и сохранен только для поддержки обратной совместимости скриптов. Свойство теперь указывается для каждой подписки при выполнении [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Если значение указано, то оно используется в качестве значения по умолчанию при создании подписок на данном подписчике и при возвращении предупреждающего сообщения.  
   
-`[ @active_end_time_of_day = ] active_end_time_of_day` — время суток, когда прекращается выполнение агента репликации, в формате ЧЧММСС. *active_end_time_of_day*имеет **тип int**и значение по умолчанию 235959, то есть 11:59:59 P.M. в 24-часовом формате.  
+`[ @active_end_time_of_day = ] active_end_time_of_day`Время суток, когда запланирована остановка агента репликации, в формате ЧЧММСС. *active_end_time_of_day*имеет **тип int**и значение по умолчанию 235959, то есть 11:59:59 P.M. в 24-часовом формате.  
   
 > [!NOTE]  
 >  Данный аргумент является устаревшим и сохранен только для поддержки обратной совместимости скриптов. Свойство теперь указывается для каждой подписки при выполнении [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Если значение указано, то оно используется в качестве значения по умолчанию при создании подписок на данном подписчике и при возвращении предупреждающего сообщения.  
   
-`[ @active_start_date = ] active_start_date` — Дата первого запланированного запуска агента репликации в формате ГГГГММДД. *active_start_date* имеет **тип int**и значение по умолчанию 0.  
+`[ @active_start_date = ] active_start_date`Дата первого запланированного запуска агента репликации в формате ГГГГММДД. *active_start_date* имеет **тип int**и значение по умолчанию 0.  
   
 > [!NOTE]  
 >  Данный аргумент является устаревшим и сохранен только для поддержки обратной совместимости скриптов. Свойство теперь указывается для каждой подписки при выполнении [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Если значение указано, то оно используется в качестве значения по умолчанию при создании подписок на данном подписчике и при возвращении предупреждающего сообщения.  
   
-`[ @active_end_date = ] active_end_date` — это дата, когда запланировано прекращение выполнения агента репликации в формате ГГГГММДД. *active_end_date* имеет **тип int**и значение по умолчанию 99991231, что означает 31 декабря 9999.  
+`[ @active_end_date = ] active_end_date`Дата запланированной остановки агента репликации в формате ГГГГММДД. *active_end_date* имеет **тип int**и значение по умолчанию 99991231, что означает 31 декабря 9999.  
   
 > [!NOTE]  
 >  Данный аргумент является устаревшим и сохранен только для поддержки обратной совместимости скриптов. Свойство теперь указывается для каждой подписки при выполнении [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Если значение указано, то оно используется в качестве значения по умолчанию при создании подписок на данном подписчике и при возвращении предупреждающего сообщения.  
   
-`[ @description = ] 'description'` является текстовым описанием подписчика. *Description* имеет тип **nvarchar (255)** и значение по умолчанию NULL.  
+`[ @description = ] 'description'`Текстовое описание подписчика. *Description* имеет тип **nvarchar (255)** и значение по умолчанию NULL.  
   
-`[ @security_mode = ] security_mode` является реализованным режимом безопасности. *security_mode* имеет **тип int**и значение по умолчанию 1. **0** указывает проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **1** указывает проверку подлинности Windows.  
+`[ @security_mode = ] security_mode`Реализованный режим безопасности. *security_mode* имеет **тип int**и значение по умолчанию 1. **0** — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверка подлинности. **1** указывает проверку подлинности Windows.  
   
 > [!NOTE]  
 >  Данный аргумент является устаревшим и сохранен только для поддержки обратной совместимости скриптов. Свойство теперь указывается для каждой подписки при выполнении [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Если значение указано, то оно используется в качестве значения по умолчанию при создании подписок на данном подписчике и при возвращении предупреждающего сообщения.  
   
-`[ @encrypted_password = ] encrypted_password` этот параметр является устаревшим и предоставляется для обеспечения обратной совместимости, при этом *encrypted_password* любое значение, но **0** приведет к ошибке.  
+`[ @encrypted_password = ] encrypted_password`Этот параметр является устаревшим и предоставляется для обеспечения обратной совместимости, если параметру *encrypted_password* любое значение, но **0** приведет к ошибке.  
   
-`[ @publisher = ] 'publisher'` указывает издателя, отличного от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'`Указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя, отличного от. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
   
 > [!NOTE]  
->  *Издатель* не следует использовать при публикации из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя.  
+>  ** при публикации с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя не следует использовать издатель.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -202,11 +202,11 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_addsubscriber**.  
   
-## <a name="see-also"></a>См. также статью  
- [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
- [sp_changesubscriber &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)  
- [sp_dropsubscriber &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)  
- [sp_helpsubscriberinfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Создание принудительной подписки](../../relational-databases/replication/create-a-push-subscription.md)   
+ [Создание подписки по запросу](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [sp_changesubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
+ [sp_dropsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
+ [sp_helpsubscriberinfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)  
   
   

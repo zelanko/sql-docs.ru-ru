@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0fb7d422687d0bc956937b30bae261b28edb3931
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62788262"
 ---
 # <a name="some-availability-replicas-are-not-synchronizing-data"></a>Некоторые реплики доступности не выполняют синхронизацию данных
@@ -28,11 +28,11 @@ ms.locfileid: "62788262"
 |||  
 |-|-|  
 |**Имя политики**|Состояние синхронизации данных реплик доступности|  
-|**Проблема**|Некоторые реплики доступности не выполняют синхронизацию данных.|  
+|**Issue**|Некоторые реплики доступности не выполняют синхронизацию данных.|  
 |**Категория**|**Предупреждение**|  
-|**Аспект**|группа доступности|  
+|**Устанавливают**|Группа доступности|  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Description  
  Эта политика сворачивает состояние синхронизации данных всех реплик доступности в группе доступности и проверяет рабочее состояние синхронизации у всех реплик доступности. Политика находится в нерабочем состоянии, если у какой-либо реплики доступности при синхронизации данных имеется состояние NOT SYNCRONIZING.  
   
  Политика находится в рабочем состоянии, если ни у одной из реплик доступности при синхронизации данных не имеется состояние NOT SYNCRONIZING.  
@@ -46,8 +46,8 @@ ms.locfileid: "62788262"
 ## <a name="possible-solution"></a>Возможное решение  
  Используйте состояние политики реплик доступности для поиска реплики доступности с состоянием NOT SYNCHROINIZING и устраните проблему в реплике доступности.  
   
-## <a name="see-also"></a>См. также  
- [Обзор групп доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Использование панели мониторинга AlwaysOn (среда SQL Server Management Studio)](use-the-always-on-dashboard-sql-server-management-studio.md)  
+## <a name="see-also"></a>См. также:  
+ [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Использование панели мониторинга AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

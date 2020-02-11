@@ -10,10 +10,10 @@ ms.assetid: 9b9786fe-9e80-429a-afcb-dc3b3dd6f0b0
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: cd001817ccb5906905db1b0623d2491dd0463c07
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251563"
 ---
 # <a name="import-a-knowledge-base-from-a-dqs-file"></a>Импорт базы знаний из файла .dqs
@@ -28,14 +28,14 @@ ms.locfileid: "75251563"
   
  При импорте базы знаний вы можете использовать то же самое имя, если только это имя базы знаний уже не существует в клиентском приложении; в этом случае базу знаний следует переименовать.  
   
-##  <a name="BeforeYouBegin"></a>Перед началом  
+##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Prerequisites"></a>Требований  
+###  <a name="Prerequisites"></a> Предварительные требования  
  Чтобы импортировать базу знаний из файла данных DQS, необходимо предварительно экспортировать базу знаний в файл DQS.  
   
-###  <a name="Security"></a>Бюллетеня  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a>Чтение  
+####  <a name="Permissions"></a> Permissions  
  Для импорта базы знаний из файла DQS необходимо иметь роль dqs_kb_editor или dqs_administrator в базе данных DQS_MAIN.  
   
 ##  <a name="Import"></a>Импорт базы знаний из файла DQS  

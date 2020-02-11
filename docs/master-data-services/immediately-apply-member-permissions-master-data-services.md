@@ -14,10 +14,10 @@ ms.assetid: 5b16de66-5c39-49f5-992f-402a9eb319aa
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 82ad2fad9645d3d8277abac6328d23c7b18a0c94
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729214"
 ---
 # <a name="immediately-apply-member-permissions-master-data-services"></a>Срочное применение разрешения для элемента (службы Master Data Services)
@@ -26,8 +26,8 @@ ms.locfileid: "73729214"
 
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]можно не ждать, пока безопасность элемента задействуется через обычные промежутки времени, а применить разрешения для элемента немедленно.  
   
-## <a name="prerequisites"></a>необходимые компоненты  
- Чтобы выполнить эту процедуру:  
+## <a name="prerequisites"></a>Предварительные требования  
+ Для выполнения этой процедуры:  
   
 -   пользователь должен иметь разрешения на выполнение хранимой процедуры mdm.udpSecurityMemberProcessRebuildModel в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Дополнительные сведения см. в разделе [Защита объектов базы данных (службы Master Data Services)](../master-data-services/database-object-security-master-data-services.md).  
   
@@ -51,8 +51,8 @@ ms.locfileid: "73729214"
   
 4.  Выполните запрос.  
   
-## <a name="see-also"></a>См. также статью  
- [Назначение разрешений для элемента иерархии (службы Master Data Services)](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
- [Разрешения на элементы иерархии (службы Master Data Services)](../master-data-services/hierarchy-member-permissions-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Назначение разрешений элемента иерархии &#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
+ [Разрешения элемента иерархии &#40;Master Data Services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)  
   
   

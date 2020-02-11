@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d4cb1b821604d125bc81148a06fb613c8547a449
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68186705"
 ---
 # <a name="sql-server-integration-services-properties-service-tab"></a>Свойства служб SQL Server Integration Services (вкладка «Служба»)
-  Используйте вкладку **Служба**диалогового окна [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] **Properties** dialog box to view or specify the following options.  
+  Используйте вкладку **Служба**диалогового окна [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] **служб** , чтобы просмотреть или задать представленные ниже параметры.  
   
 ## <a name="options"></a>Параметры  
  **Путь к двоичным файлам**  
@@ -33,7 +33,7 @@ ms.locfileid: "68186705"
  **Host Name**  
  Отображает имя компьютера или кластера, где запущена служба [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
- **Name**  
+ **Название**  
  Указывает отображаемое имя службы.  
   
  **Идентификатор процесса**  
@@ -45,11 +45,11 @@ ms.locfileid: "68186705"
  **Режим запуска**  
  Установите для этой службы один из следующих вариантов:  
   
--   Вручную: Эта служба запускается автоматически при запуске компьютера. Необходимо запустить службу при помощи диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или другого средства.  
+-   Вручную. Эта служба не запускается автоматически при запуске компьютера. Необходимо запустить службу при помощи диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или другого средства.  
   
--   Автоматически: Эта служба пытается запуститься при запуске этого компьютера.  
+-   Автоматически. Эта служба пытается запуститься при запуске компьютера.  
   
--   Отключено: Служба не может быть запущена.  
+-   Отключено. Служба не может быть запущена.  
   
  **Состояние**  
  Указывает, была ли служба запущена, остановлена или отключена. **…** указывает, что ожидается изменение состояния.  

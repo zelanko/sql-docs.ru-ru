@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: e75230ed175c6fbf1b0a2492265bbe12067060ca
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399935"
 ---
-# <a name="transparent-data-encryption"></a>Прозрачное шифрование данных
-Можно принять ряд мер предосторожности для защиты базы данных, таких как проектирование безопасной системы, шифрование конфиденциальных ресурсов и создание брандмауэра на серверах базы данных. Однако в случае кражи физического носителя (например, дисков или лент резервных копий) злоумышленник может просто восстановить или подключить базу данных и просмотреть данные. Одним из решений является шифрование конфиденциальных данных в базе данных и защита ключей, которые используются для шифрования, с помощью сертификата. Это не позволит использовать данные ни одному человеку, не имеющему ключей, но такой тип защиты следует планировать заранее.  
+# <a name="transparent-data-encryption"></a>прозрачное шифрование данных.
+Можно принять ряд мер предосторожности для защиты базы данных, таких как проектирование безопасной системы, шифрование конфиденциальных ресурсов и создание брандмауэра на серверах базы данных. Однако в случае кражи физического носителя (например, дисков или лент резервных копий) злоумышленник может просто восстановить или подключить базу данных и просмотреть данные. Одним из решений может стать шифрование конфиденциальных данных в базе данных и защита ключей, используемых при шифровании, с помощью сертификата. Это не позволит использовать данные ни одному человеку, не имеющему ключей, но такой тип защиты следует планировать заранее.  
   
-*Прозрачное шифрование данных* (TDE) выполняет шифрование и расшифровку данных и файлов журналов транзакций в режиме реального времени, а также специальные файлы журнала PDW. Шифрование использует ключ шифрования базы данных (DEK), который хранится в загрузочной записи базы данных для обеспечения доступности во время восстановления. DEK — это симметричный ключ, защищенный с помощью сертификата, хранящегося в базе данных master SQL Server PDW. Функция TDE защищает неактивные данные, то есть файлы данных и файлы журналов. Это дает возможность соблюдать требования многих законов, норм и рекомендаций, установленных в различных отраслях. Эта функция позволяет разработчикам программного обеспечения шифровать данные с помощью алгоритмов шифрования AES и 3DES без изменения существующих приложений.  
+*Прозрачное шифрование данных* (TDE) выполняет шифрование и расшифровку данных и файлов журналов транзакций в режиме реального времени, а также специальные файлы журнала PDW. При шифровании используется ключ шифрования базы данных (DEK), который хранится в загрузочной записи базы данных, где можно получить к нему доступ при восстановлении. DEK — это симметричный ключ, защищенный с помощью сертификата, хранящегося в базе данных master SQL Server PDW. Функция прозрачного шифрования данных защищает "неактивные" данные, то есть файлы данных и журналов. Благодаря ей обеспечивается соответствие требованиям различных законов, постановлений и рекомендаций, действующих в разных отраслях. Эта функция позволяет разработчикам программного обеспечения шифровать данные с помощью алгоритмов шифрования AES и 3DES без изменения существующих приложений.  
   
 > [!IMPORTANT]  
 > TDE не обеспечивает шифрование данных, передаваемых между клиентом и PDW. Дополнительные сведения о шифровании данных между клиентом и SQL Server PDW см. в разделе [подготавливает сертификат](provision-certificate.md).  
@@ -123,16 +123,16 @@ GO
 |[СОЗДАНИЕ КЛЮЧА ШИФРОВАНИЯ БАЗЫ ДАННЫХ](../t-sql/statements/create-database-encryption-key-transact-sql.md)|Создает ключ, используемый для шифрования базы данных.|  
 |[ИЗМЕНЕНИЕ КЛЮЧА ШИФРОВАНИЯ БАЗЫ ДАННЫХ](../t-sql/statements/alter-database-encryption-key-transact-sql.md)|Изменяет ключ, используемый для шифрования базы данных.|  
 |[УДАЛИТЬ КЛЮЧ ШИФРОВАНИЯ БАЗЫ ДАННЫХ](../t-sql/statements/drop-database-encryption-key-transact-sql.md)|Удаляет ключ, использовавшийся для шифрования базы данных.|  
-|[ИЗМЕНЕНИЕ БАЗЫ ДАННЫХ](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)|Объясняет параметр **ALTER DATABASE** , который используется для включения TDE.|  
+|[ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)|Объясняет параметр **ALTER DATABASE** , который используется для включения TDE.|  
   
 ## <a name="catalog-views-and-dynamic-management-views"></a>Представления каталога и динамические административные представления  
 В следующей таблице показаны представления каталогов и динамические административные представления TDE.  
   
 |Представление каталога или динамическое административное представление|Назначение|  
 |-------------------------------------------|-----------|  
-|[sys. databases](../relational-databases/system-catalog-views/sys-databases-transact-sql.md)|Представление каталога со сведениями о базе данных.|  
-|[sys. Certificates](../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)|Представление каталога с сертификатами из базы данных.|  
-|[sys. dm_pdw_nodes_database_encryption_keys](../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql.md)|Динамическое административное представление, предоставляющее сведения для каждого узла, сведения о ключах шифрования, используемых в базе данных, и состоянии шифрования базы данных.|  
+|[sys.databases](../relational-databases/system-catalog-views/sys-databases-transact-sql.md)|Представление каталога со сведениями о базе данных.|  
+|[sys.certificates](../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)|Представление каталога с сертификатами из базы данных.|  
+|[sys.dm_pdw_nodes_database_encryption_keys](../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql.md)|Динамическое административное представление, предоставляющее сведения для каждого узла, сведения о ключах шифрования, используемых в базе данных, и состоянии шифрования базы данных.|  
   
 ## <a name="permissions"></a>Разрешения  
 Для каждой функции или команды TDE действуют отдельные требования к разрешениям, описанные в таблицах выше.  
@@ -267,24 +267,24 @@ A distributed query failed: Database '<db_name>' cannot be opened due to inacces
 ## <a name="performance-impact"></a>Влияние на производительность  
 Влияние TDE зависит от типа данных, способа их хранения и типа активности рабочей нагрузки в SQL Server PDW. При защите с помощью TDE операции чтения и расшифровки данных, а также шифрование и запись данных являются трудоемким действием ЦП и повлияют на то, что другие операции с интенсивным использованием ЦП будут происходить одновременно. Поскольку TDE шифрует `tempdb`, TDE может повлиять на производительность баз данных, которые не шифруются. Чтобы получить точную информацию о производительности, следует протестировать всю систему с помощью данных и действий запросов.  
   
-## <a name="related-content"></a>Похожий контент  
+## <a name="related-content"></a>См. также  
 Следующие ссылки содержат общие сведения о том, как SQL Server управляет шифрованием. Эти статьи помогут вам разобраться SQL Server шифровании, но в этих статьях нет сведений, относящихся к SQL Server PDW и обсуждаются функции, отсутствующие в SQL Server PDW.  
   
 -   [Шифрование SQL Server](../relational-databases/security/encryption/sql-server-encryption.md)  
   
--   [Иерархия шифрования](../relational-databases/security/encryption/encryption-hierarchy.md)  
+-   [Иерархия средств шифрования](../relational-databases/security/encryption/encryption-hierarchy.md)  
   
 -   [SQL Server и ключи шифрования базы данных](../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)  
 
   
-## <a name="see-also"></a>См. также  
-[ИЗМЕНЕНИЕ БАЗЫ ДАННЫХ](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)  
+## <a name="see-also"></a>См. также:  
+[ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)  
 [СОЗДАТЬ ГЛАВНЫЙ КЛЮЧ](../t-sql/statements/create-master-key-transact-sql.md)  
 [СОЗДАНИЕ КЛЮЧА ШИФРОВАНИЯ БАЗЫ ДАННЫХ](../t-sql/statements/create-database-encryption-key-transact-sql.md)  
-[СЕРТИФИКАТ РЕЗЕРВНОЙ КОПИИ](../t-sql/statements/backup-certificate-transact-sql.md)  
+[BACKUP CERTIFICATE](../t-sql/statements/backup-certificate-transact-sql.md)  
 [sp_pdw_database_encryption](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)  
 [sp_pdw_database_encryption_regenerate_system_keys](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)  
 [sp_pdw_log_user_data_masking](../relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md)  
-[sys. Certificates](../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)  
-[sys. dm_pdw_nodes_database_encryption_keys](../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql.md)  
+[sys.certificates](../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)  
+[sys.dm_pdw_nodes_database_encryption_keys](../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql.md)  
   

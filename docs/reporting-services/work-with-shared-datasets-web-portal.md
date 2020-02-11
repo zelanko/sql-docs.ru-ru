@@ -9,10 +9,10 @@ ms.assetid: 2641ea84-9343-4e6f-aec1-25339031b163
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e034b911ec5817ac82214466fdc2bf7087e8865a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68222721"
 ---
 # <a name="work-with-shared-datasets---web-portal"></a>Работа с общими наборами данных (веб-портал)
@@ -37,7 +37,7 @@ ms.locfileid: "68222721"
   
 4.  В диалоговом окне **Создание отчета или набора данных** выберите подключение к источнику данных, которое будет использоваться для этого набора данных. Возможно, вам потребуется перейти в расположение общего источника данных.  
   
-5.  Выберите **Создать**.  
+5.  Нажмите кнопку **создания**.  
   
 6.  Постройте набор данных, а затем выберите значок **Сохранить** в левом верхнем углу, чтобы сохранить набор данных на сервере отчетов.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "68222721"
   
     ![ssRSDataset-Ellipse](../reporting-services/media/ssrsdataset-ellipse.png)  
   
-2.  Выберите **Управление**, после чего откроется экран редактирования.  
+2.  Выберите **Управление** , после чего откроется экран редактирования.  
   
     ![ssRSDataset-Manage](../reporting-services/media/ssrsdataset-manage.png)  
   

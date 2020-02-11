@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 92d9eb8bb09065290c99f3cb9894208a7613b984
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73784096"
 ---
 # <a name="cursor-transaction-isolation-level"></a>Уровень изоляции транзакций курсора
@@ -29,7 +29,7 @@ ms.locfileid: "73784096"
 
   Режим полной блокировки курсоров основывается на взаимодействии между атрибутами параллелизма и уровнем изоляции транзакций, установленным клиентом. Клиенты ODBC устанавливают уровень изоляции транзакции с помощью [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) SQL_ATTR_TXN_ISOLATION или атрибутов SQL_COPT_SS_TXN_ISOLATION. Режим блокировки специфической среды курсора определяется комбинацией режимов блокировки параллелизма и параметров уровня изоляции транзакции.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] драйвер ODBC для собственного клиента поддерживает следующие уровни изоляции транзакций курсора:  
+ Драйвер ODBC для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента поддерживает следующие уровни изоляции транзакций курсора:  
   
 -   Зафиксированная операция чтения (SQL_TXN_READ_COMMITTED)  
   
@@ -41,9 +41,9 @@ ms.locfileid: "73784096"
   
 -   Моментальный снимок (SQL_TXN_SS_SNAPSHOT)  
   
- Обратите внимание, что API ODBC указывает дополнительные уровни изоляции транзакций, но они не поддерживаются [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или драйвером ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для собственного клиента.  
+ Обратите внимание, что API ODBC указывает дополнительные уровни изоляции транзакций, но они не поддерживаются [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] драйвером ODBC для собственного клиента.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Свойства курсора](../../../relational-databases/native-client-odbc-cursors/properties/cursor-properties.md)  
   
   

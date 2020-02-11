@@ -1,5 +1,5 @@
 ---
-title: Георепликация динамические административные представления и функции (база данных Azure SQL) | Документация Майкрософт
+title: Динамические административные представления и функции георепликации (база данных SQL Azure) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/24/2015
 ms.prod: sql
@@ -17,20 +17,20 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0b849b6c1edaea011311ed2faf90b5c550c26bd3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68130743"
 ---
-# <a name="geo-replication-dynamic-management-views-and-functions-azure-sql-database"></a>Георепликация динамические административные представления и функции (база данных Azure SQL)
+# <a name="geo-replication-dynamic-management-views-and-functions-azure-sql-database"></a>Динамические административные представления и функции георепликации (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Этот раздел содержит следующие представления каталога, отображающие сведения о георепликации.  
+  В этом разделе содержатся следующие представления каталога, в которых отображаются сведения о георепликации.  
   
 |||  
 |-|-|  
-|[sys.geo_replication_links &#40;базы данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)|[sys.dm_geo_replication_link_status &#40;базы данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)|  
-|[sys.dm_operation_status &#40;базы данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)|[sys.dm_continuous_copy_status &#40;базы данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)|  
+|[sys. geo_replication_links &#40;базы данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)|[sys. dm_geo_replication_link_status &#40;базы данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)|  
+|[sys. dm_operation_status &#40;базы данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)|[sys. dm_continuous_copy_status &#40;базы данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)|  
   
   

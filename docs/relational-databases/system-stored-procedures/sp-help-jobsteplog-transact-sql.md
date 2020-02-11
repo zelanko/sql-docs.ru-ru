@@ -18,16 +18,16 @@ ms.assetid: 1a0be7b1-8f31-4b4c-aadb-586c0e00ed04
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e3af6ff05b971e6b9a0dedc1ec2e14f4ba87e00c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68090042"
 ---
-# <a name="sphelpjobsteplog-transact-sql"></a>sp_help_jobsteplog (Transact-SQL)
+# <a name="sp_help_jobsteplog-transact-sql"></a>sp_help_jobsteplog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Возвращает метаданные об определенном [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] журнала шага задания агента. **sp_help_jobsteplog** не возвращает сам журнал.  
+  Возвращает метаданные о конкретном [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] журнале шагов задания агента. **sp_help_jobsteplog** не возвращает фактический журнал.  
 
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -42,39 +42,39 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @job_id = ] 'job_id'` Идентификационный номер задания, для которого возвращаются сведения из журнала шагов задания. *job_id* — **int**, значение по умолчанию NULL.  
+`[ @job_id = ] 'job_id'`Идентификационный номер задания, для которого возвращаются сведения журнала шагов задания. *job_id* имеет **тип int**и значение по умолчанию NULL.  
   
-`[ @job_name = ] 'job_name'` Имя задания. *имя_задания* — **sysname**, значение по умолчанию NULL.  
+`[ @job_name = ] 'job_name'`Имя задания. Аргумент *job_name* имеет тип **sysname**и значение по умолчанию NULL.  
   
 > [!NOTE]  
->  Либо *job_id* или *имя_задания* должен быть указан, но не оба аргумента одновременно.  
+>  Необходимо указать либо *job_id* , либо *job_name* , но нельзя указать оба значения.  
   
-`[ @step_id = ] step_id` Идентификационный номер шага задания. Если не указан, включаются все этапы задания. *step_id* — **int**, значение по умолчанию NULL.  
+`[ @step_id = ] step_id`Идентификационный номер этапа в задании. Если не указан, включаются все этапы задания. *step_id* имеет **тип int**и значение по умолчанию NULL.  
   
-`[ @step_name = ] 'step_name'` Имя шага задания. *step_name* — **sysname**, значение по умолчанию NULL.  
+`[ @step_name = ] 'step_name'`Имя шага в задании. Аргумент *step_name* имеет тип **sysname**и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или 1 (неуспешное завершение)  
+ 0 (успех) или 1 (сбой).  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|**job_id**|**uniqueidentifier**|Уникальный идентификатор задания.|  
-|**job_name**|**sysname**|Имя задания.|  
-|**step_id**|**int**|Идентификатор для этапа задачи. Например, если этот шаг является первым шагом в задание его *step_id* -1.|  
-|**step_name**|**sysname**|Имя шага задания.|  
-|**step_uid**|**uniqueidentifier**|Уникальный идентификатор этапа (задается системой) задачи.|  
+|**job_id**|**UNIQUEIDENTIFIER**|Уникальный идентификатор задания.|  
+|**job_name**|**имеет sysname**|Имя задания.|  
+|**step_id**|**int**|Идентификатор для этапа задачи. Например, если шаг является первым шагом в задании, его *step_id* имеет значение 1.|  
+|**step_name**|**имеет sysname**|Имя шага задания.|  
+|**step_uid**|**UNIQUEIDENTIFIER**|Уникальный идентификатор этапа (задается системой) задачи.|  
 |**date_created**|**datetime**|Дата создания этапа.|  
 |**date_modified**|**datetime**|Дата последнего изменения этапа.|  
 |**log_size**|**float**|Размер журнала шага задания в мегабайтах (МБ).|  
-|**log**|**nvarchar(max)**|Вывод журнала шага задания.|  
+|**Журналь**|**nvarchar(max)**|Вывод журнала шага задания.|  
   
-## <a name="remarks"></a>Примечания  
- **sp_help_jobsteplog** в **msdb** базы данных.  
+## <a name="remarks"></a>Remarks  
+ **sp_help_jobsteplog** находится в базе данных **msdb** .  
   
 ## <a name="permissions"></a>Разрешения  
- По умолчанию эту хранимую процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
+ По умолчанию эта хранимая процедура может выполняться членами предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
   
 -   **SQLAgentUserRole**  
   
@@ -84,7 +84,7 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
  Дополнительные сведения о разрешениях этих ролей см. в разделе [Предопределенные роли базы данных агента SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Членами **SQLAgentUserRole** могут только просматривать метаданные из журнала шага задания для шагов задания, которыми они владеют.  
+ Члены **SQLAgentUserRole** могут просматривать метаданные журнала шага задания только для тех шагов заданий, которыми они владеют.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -113,7 +113,7 @@ EXEC dbo.sp_help_jobsteplog
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_add_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
  [sp_delete_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
  [sp_help_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   

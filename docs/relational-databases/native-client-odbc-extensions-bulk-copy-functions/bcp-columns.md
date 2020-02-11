@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d26f288c857cf44a932a91b250074c36453e2482
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73782975"
 ---
 # <a name="bcp_columns"></a>bcp_columns
@@ -40,23 +40,23 @@ RETCODE bcp_columns (
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *хдбк*  
+ *hdbc*  
  Дескриптор соединения ODBC с поддержкой массового копирования.  
   
- *нколумнс*  
- Общее количество столбцов в файле пользователя. Даже если вы готовитесь к копированию данных из файла пользователя в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и не собираетесь копировать все столбцы в файле пользователя, необходимо установить *нколумнс* в общее число столбцов User-Files.  
+ *nColumns*  
+ Общее количество столбцов в файле пользователя. Даже если вы готовитесь к копированию данных из файла пользователя в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблицу и не собираетесь копировать все столбцы в файл пользователя, необходимо установить *нколумнс* в общее число столбцов User-Files.  
   
 ## <a name="returns"></a>Возвращает  
  SUCCEED или FAIL.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Эту функцию можно вызвать только после вызова [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) с допустимым именем файла.  
   
  Эту функцию следует вызывать только в том случае, если планируется использовать формат файла пользователя, отличный от формата по умолчанию. Дополнительные сведения об описании формата пользовательских файлов по умолчанию см. в разделе **bcp_init**.  
   
  После вызова **bcp_columns**необходимо вызвать [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) для каждого столбца в пользовательском файле, чтобы полностью определить пользовательский формат файла.  
   
-## <a name="see-also"></a>См. также раздел  
- [Функции массового копирования](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
+## <a name="see-also"></a>См. также:  
+ [Bulk Copy Functions](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

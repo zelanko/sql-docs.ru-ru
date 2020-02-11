@@ -20,17 +20,17 @@ ms.assetid: c947d011-08ac-4fb8-b925-3da6e0999277
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 2c4c413a3a84aa7db12ac4ecde7d41e3efd34525
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68064099"
 ---
 # <a name="srv_getbindtoken-extended-stored-procedure-api"></a>srv_getbindtoken (API-интерфейс расширенных хранимых процедур)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Используйте вместо этого интеграцию со средой CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Вместо этого используйте интеграцию со средой CLR.  
   
  Получает токен привязки транзакции в текущем сеансе клиента, который вызывает расширенную хранимую процедуру.  
   
@@ -53,7 +53,7 @@ bindtoken
  *srvproc*  
  Указатель на структуру SRV_PROC, который представляет собой дескриптор соединения с клиентом. В этой структуре содержатся все сведения, которые библиотека API-интерфейса расширенных хранимых процедур использует для управления обменом данными между приложением и клиентом.  
   
- *bindtoken*  
+ *токен привязки*  
  Указатель на буфер, в который будет скопирован токен привязки. Токен привязки представлен как строка, оканчивающаяся нулевым байтом. Указываемый буфер должен иметь длину не менее 255 байт.  
   
 ## <a name="returns"></a>Возвращает  

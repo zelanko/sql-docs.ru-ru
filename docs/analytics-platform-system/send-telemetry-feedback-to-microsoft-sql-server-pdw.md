@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 639eb4e9e5c531e154b9eb7f91165af365bc519f
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400363"
 ---
 # <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>Отправка отзывов телеметрии в корпорацию Майкрософт для платформы аналитики
@@ -42,7 +42,7 @@ ms.locfileid: "74400363"
     > [!NOTE]  
     > Для импорта необходимо использовать две точки в команде.  
   
-    **Например**  
+    **Пример**.  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> . .\Configure-RemoteMonitoring.ps1  
@@ -92,7 +92,7 @@ ms.locfileid: "74400363"
     > [!NOTE]  
     > Для импорта необходимо использовать две точки в команде.  
   
-    **Например**  
+    **Пример**.  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> . .\Configure-RemoteMonitoring.ps1  
@@ -100,7 +100,7 @@ ms.locfileid: "74400363"
   
 4.  Вызов `Disable-RemoteMonitoring` команды без параметров. Эта команда перестанет отправлять отзыв. (Это не повлияет на локальный мониторинг.) Однако команда не отключит сервер пересылки DNS и (или) отключает подключение к Интернету. Это необходимо сделать вручную после успешного отключения обратной связи.  
   
-    **Например**  
+    **Пример**.  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> Disable-RemoteMonitoring  
@@ -111,7 +111,7 @@ ms.locfileid: "74400363"
 Неважно, чтобы `Disable-RemoteMonitoring` команда выполнялась несколько раз.  
   
 ## <a name="next-steps"></a>Дальнейшие действия
-Дополнительная информация:
+Дополнительные сведения см. в разделе:
 - [Мониторинг устройства с помощью консоли администрирования &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
 - [Мониторинг устройства с помощью системных представлений &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-views.md)  
 - [Мониторинг устройства с помощью системы System Center Operations Manager &#40;Analytics Platform&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  

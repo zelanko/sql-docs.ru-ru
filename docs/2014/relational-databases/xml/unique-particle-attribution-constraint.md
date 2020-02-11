@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2f6361e3e6a295398bdd88d56a6c70a79e92b526
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62467420"
 ---
 # <a name="unique-particle-attribution-constraint"></a>Ограничение однозначного соответствия примитивов
@@ -80,15 +80,15 @@ ms.locfileid: "62467420"
 ## <a name="finding-more-information"></a>Дополнительные сведения  
  Следующий документ опубликован консорциумом World Wide Web (W3C) и содержит техническое описание ограничения однозначного соответствия примитивов:  
   
- «XML Schema Part 1: Структуры, второе издание, W3C Proposed Edited Recommendation»:  
+ «XML-схема. Часть 1, структуры, второе издание, W3C Proposed Edited Recommendation»:  
   
--   Раздел 3.8.6. Ограничения компонентов схемы группы моделей  
+-   Раздел 3.8.6. Ограничения компонентов схемы для группы моделей  
   
--   Приложение h. Анализ уникальный частиц ограничения однозначного соответствия примитивов (не нормативный)  
+-   Приложение H. Анализ ограничения однозначного соответствия примитивов (не нормативный)  
   
  Чтобы просмотреть документ, перейдите по адресу [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?linkid=48881).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Коллекции XML-схем (SQL Server)](xml-schema-collections-sql-server.md)  
   
   

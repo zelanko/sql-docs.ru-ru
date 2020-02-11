@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: ee90d2c367fa289e8255a84e4eb6da19b37933e0
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68891207"
 ---
 # <a name="mdx-data-manipulation---drillthrough"></a>Операции с данными многомерных выражений — DRILLTHROUGH
@@ -41,7 +41,7 @@ DRILLTHROUGH[MAXROWSUnsigned_Integer]
  *Set_of_Attributes_and_Measures*  
  Список атрибутов и мер измерения, разделенный запятыми.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Сквозная детализация — это операция, в которой конечный пользователь выбирает одиночную ячейку из куба и извлекает результирующий набор из исходных данных для данной ячейки для получения более полной информации. По умолчанию результирующий набор сквозной детализации выводится из строк таблицы, на основе которых было вычислено значение выбранной ячейки куба. Для использования сквозной детализации конечными пользователями необходима поддержка этой возможности их клиентскими приложениями. В [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]результаты извлекаются непосредственно из хранилища MOLAP, если не запрашиваются разделы или измерения ROLAP.  
   
 > [!IMPORTANT]  
@@ -96,7 +96,7 @@ RETURN
   ,[Reseller Sales].[Reseller Standard Product Cost]  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Многомерные выражения инструкций &#40;манипулирования данными МНОГОМЕРных выражений&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
+## <a name="see-also"></a>См. также:  
+ [Инструкции обработки данных многомерных выражений &#40;многомерные выражения&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
   
   

@@ -30,10 +30,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 02872a037e60fa3af58a70d3599b03c61d0cfb5e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257341"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>Указание связей при помощи sql:relationship (SQLXML 4.0)
@@ -52,10 +52,10 @@ ms.locfileid: "75257341"
   
  Чтобы указать имена таблиц и необходимые сведения о соединении, в заметке **SQL: relationship** указаны следующие атрибуты. Эти атрибуты допустимы только с элементом ** \<SQL: relationship>** .  
   
- **Безымян**  
+ **Название**  
  Указывает уникальное имя связи.  
   
- **Родительский элемент**  
+ **Parent**  
  Задает родительскую связь (таблицу). Это необязательный атрибут. Если он не указан, то имя родительской таблицы будет получено из дочерней иерархии в документе. Если в схеме указаны две иерархии «родители-потомки», использующие одну и ту же ** \<связь SQL:>** , но разные родительские элементы, то родительский атрибут не указывается в ** \<SQL: relationship>**. Эти сведения будут получены из иерархии в схеме.  
   
  **parent-key**  
@@ -77,7 +77,7 @@ ms.locfileid: "75257341"
 ## <a name="examples"></a>Примеры  
  Чтобы создать рабочие образцы на основе следующих примеров, необходимо выполнить определенные требования. Дополнительные сведения см. в разделе [требования для запуска примеров SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-the-sqlrelationship-annotation-on-an-element"></a>а. Определение заметки sql:relationship для элемента  
+### <a name="a-specifying-the-sqlrelationship-annotation-on-an-element"></a>A. Определение заметки sql:relationship для элемента  
  Следующая схема XSD с заметками включает в себя ** \<>клиента** и ** \<порядок>** элементов. Элемент ** \<Order>** является дочерним элементом элемента ** \<>Customer** .  
   
  В схеме Аннотация **SQL: relationship** задана для дочернего элемента ** \<Order>** . Сама связь определяется в элементе ** \<XSD: appinfo>** .  
@@ -186,7 +186,7 @@ ms.locfileid: "75257341"
 </ROOT>  
 ```  
   
-### <a name="b-specifying-a-relationship-chain"></a>B. Указание цепочки связей  
+### <a name="b-specifying-a-relationship-chain"></a>Б. Указание цепочки связей  
  Для данного примера предположим, что в следующем XML-документе нужно использовать данные, полученные из базы данных AdventureWorks:  
   
 ```  
@@ -318,7 +318,7 @@ ms.locfileid: "75257341"
 </ROOT>  
 ```  
   
-### <a name="c-specifying-the-relationship-annotation-on-an-attribute"></a>C. Задание заметки relationship для атрибута  
+### <a name="c-specifying-the-relationship-annotation-on-an-attribute"></a>В. Задание заметки relationship для атрибута  
  Схема в этом примере включает элемент \<Customer> с дочерним \<элементом CustomerID> и атрибутом ордеридлист типа IDREFS. Элемент \<Customer> сопоставляется с таблицей Sales. Customer в базе данных AdventureWorks. По умолчанию область этого сопоставления применяется ко всем дочерним элементам или атрибутам, если только в дочернем элементе или атрибуте не задано значение **SQL: relation** , и в этом случае соответствующая связь типа "первичный ключ — \<внешний ключ" должна быть определена с помощью элемента> связи. И дочерний элемент или атрибут, указывающий другую таблицу с помощью аннотации **связи** , должен также указывать заметку **Relationship** .  
   
 ```  
@@ -383,7 +383,7 @@ ms.locfileid: "75257341"
 </ROOT>  
 ```  
   
-### <a name="d-specifying-sqlrelationship-on-multiple-elements"></a>D. Задание sql:relationship для нескольких элементов  
+### <a name="d-specifying-sqlrelationship-on-multiple-elements"></a>Г. Задание sql:relationship для нескольких элементов  
  В этом примере схема XSD с заметками содержит элементы " ** \<клиент>**, ** \<" порядок>**"и ** \<" OrderDetail>** ".  
   
  Элемент ** \<Order>** является дочерним элементом элемента ** \<>Customer** . ** \<** **SQL: relationship>задано для дочернего \<** элемента Order>; Таким образом, заказы, принадлежащие клиенту, отображаются как дочерние элементы ** \<>клиента **.  
@@ -484,7 +484,7 @@ ms.locfileid: "75257341"
 </ROOT>  
 ```  
   
-### <a name="e-specifying-the-sqlrelationship-without-the-parent-attribute"></a>E. Указание> \<SQL: relationship без родительского атрибута  
+### <a name="e-specifying-the-sqlrelationship-without-the-parent-attribute"></a>Д. Указание> \<SQL: relationship без родительского атрибута  
  В этом примере показано, ** \<как задать>SQL: relationship** без **родительского** атрибута. Предположим, имеется следующая таблица сотрудников.  
   
 ```  

@@ -22,10 +22,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a653c4b5cd8d6e1bb9b5c826039169a7a5b80278
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74683597"
 ---
 # <a name="accessibility-for-people-with-disabilities"></a>Специальные функции для людей с ограниченными возможностями
@@ -112,7 +112,7 @@ ms.locfileid: "74683597"
   
  Выпускается бесплатный электронный ежемесячный бюллетень со свежими данными по специальным возможностям продуктов [!INCLUDE[msCoName](../includes/msconame-md.md)]. Для подписки обратитесь на веб-сайт [Microsoft Accessibility](https://go.microsoft.com/fwlink/?LinkID=8287).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Приступая к работе с документацией по продукту для SQL Server](../2014-toc/index.yml)   
  [Получение помощи по SQL Server](getting-sql-server-assistance.md)  
   

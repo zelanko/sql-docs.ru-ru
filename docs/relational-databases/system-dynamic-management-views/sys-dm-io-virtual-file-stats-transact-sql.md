@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0ad2d38c031f97e46ef36f33f5e7a0fc82bcb5e0
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74412840"
 ---
 # <a name="sysdm_io_virtual_file_stats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
@@ -73,7 +73,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**имеет sysname**|имя базы данных.</br></br>Для хранилища данных SQL это имя базы данных, хранящейся на узле, который определяется pdw_node_id. Каждый узел имеет одну базу данных tempdb с 13 файлами. Каждый узел также имеет одну базу данных для каждого распределения, и каждая база данных распространителя имеет 5 файлов. Например, если каждый узел содержит 4 распределения, в результатах отобразится 20 файлов базы данных распространителя на pdw_node_id. 
 |**database_id**|**smallint**|Идентификатор базы данных.|  
@@ -92,7 +92,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 |**io_stall_queued_write_ms**|**bigint**|**Не применяется к:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] с до [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br />  Общая задержка ввода-вывода, созданная регулированием ресурсов ввода-вывода для записи. Не допускает значение NULL.|
 |**pdw_node_id**|**int**|**Применимо к:**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Идентификатор узла для распределения.
  
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Remarks
 При запуске службы SQL Server (MSSQLSERVER) счетчики инициализируются пустыми.
   
 ## <a name="permissions"></a>Разрешения  
@@ -100,7 +100,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
   
 ## <a name="examples"></a>Примеры  
 
-### <a name="a-return-statistics-for-a-log-file"></a>а. Возврат статистики для файла журнала
+### <a name="a-return-statistics-for-a-log-file"></a>A. Возврат статистики для файла журнала
 
 **Применимо к:** SQL Server (начиная с 2008), база данных SQL Azure
 
@@ -111,7 +111,7 @@ SELECT * FROM sys.dm_io_virtual_file_stats(DB_ID(N'AdventureWorks2012'), 2);
 GO  
 ```  
   
-### <a name="b-return-statistics-for-file-in-tempdb"></a>B. Возврат статистики для файла в базе данных tempdb
+### <a name="b-return-statistics-for-file-in-tempdb"></a>Б. Возврат статистики для файла в базе данных tempdb
 
 **Применимо к:** Хранилище данных SQL Azure
 
@@ -121,8 +121,8 @@ WHERE database_name = 'tempdb' AND file_id = 2;
 
 ```
 
-## <a name="see-also"></a>См. также  
- [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+## <a name="see-also"></a>См. также:  
+ [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления и функции, связанные с I O &#40;языке Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys. database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys. master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  

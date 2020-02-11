@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 1a0d50e485f0e8f48de11b2e5a3c27c9f9be047e
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401233"
 ---
 # <a name="create-an-aps-domain-administrator"></a>Создание администратора домена APS
@@ -47,6 +47,6 @@ ms.locfileid: "74401233"
   
     Это добавит нового пользователя в группу **"Администраторы домена** " и группу **пдвконтролнодеакцесс** . Нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Запустите систему Configuration Manager &#40;Analytics Platform&#41;](launch-the-configuration-manager.md)  
   

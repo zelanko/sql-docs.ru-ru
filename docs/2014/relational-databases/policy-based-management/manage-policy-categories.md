@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d22ee5c7d66039a8c04daabe411a6ba0554e2849
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68210793"
 ---
 # <a name="manage-policy-categories"></a>Управление категориями политики
@@ -28,7 +28,7 @@ ms.locfileid: "68210793"
   
      [Ограничения](#Restrictions)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Для применения политик категории к экземпляру SQL Server используется:**  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68210793"
   
      В диалоговом окне **Управление категориями политики** доступны следующие данные.  
   
-     **Name**  
+     **Название**  
      Имя категории политики.  
   
      **Обязательные подписки базы данных**  

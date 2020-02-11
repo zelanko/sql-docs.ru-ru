@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0ab00e9d49b7a72ba9ac23bcf7aa4141bd9c4435
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73767442"
 ---
 # <a name="obtain-a-fast_forward-cursor"></a>Получение курсора FAST_FORWARD
@@ -25,10 +25,10 @@ ms.locfileid: "73767442"
 
   Чтобы получить курсор только для чтения с последовательным доступом, установите свойства набора строк DBPROP_SERVERCURSOR, DBPROP_OTHERINSERT, DBPROP_OTHERUPDATEDELETE, DBPROP_OWNINSERT и DBPROP_OWNUPDATEDELETE в значение VARIANT_TRUE.  
   
- Полный образец показывает, как настроить свойства набора строк для создания курсора FAST_FORWARD. После настройки свойств выполняется инструкция SELECT, получающая и отображающая столбец **Name** таблицы **Purchasing.Vendor** базы данных **AdventureWorks** .  
+ Полный образец показывает, как настроить свойства набора строк для создания курсора FAST_FORWARD. После задания свойств выполняется инструкция SELECT для получения и вывода столбца **Name** таблицы Purchase **. Vendor** в базе данных **AdventureWorks** .  
   
 > [!IMPORTANT]  
->  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с помощью [API-интерфейса шифрования Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, следует зашифровать их с помощью [API шифрования Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-obtain-fast_forward-cursor"></a>Получение курсора FAST_FORWARD  
   

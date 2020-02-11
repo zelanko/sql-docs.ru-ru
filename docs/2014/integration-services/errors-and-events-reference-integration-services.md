@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 71efd530222ce548bb867b9e886b1891d5aedb05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62899452"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>Справочник по ошибкам и событиям (службы Integration Services)
@@ -32,7 +32,7 @@ ms.locfileid: "62899452"
   
 ## <a name="error-messages"></a>сообщения об ошибках  
   
-|Символическое имя ошибки|Описание|  
+|Символическое имя ошибки|Description|  
 |----------------------------|-----------------|  
 |DTS_E_CACHELOADEDFROMFILE|Указывает, что пакет нельзя выполнить, так как преобразование «Преобразование кэша» пытается записать данные в кэш, хранимый в памяти. Однако диспетчер соединений с кэшем уже загрузил файл кэша в кэш, который находится в памяти.|  
 |DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER|Указывает, что невозможно выполнить пакет из-за ошибки указанного соединения.|  
@@ -42,7 +42,7 @@ ms.locfileid: "62899452"
 |DTS_E_CONNECTIONNOTFOUND|Указывает, что не удалось запустить пакет, поскольку не удалось найти указанный диспетчер соединений.|  
 |DTS_E_CONNECTIONREQUIREDFORMETADATA|Указывает, что конструктору служб [!INCLUDE[ssIS](../includes/ssis-md.md)] необходимо подключиться к источнику данных для получения новых или обновленных метаданных исходной или целевой базы данных, но установить соединение с источником данных не удалось.|  
 |DTS_E_MULTIPLECACHEWRITES|Указывает, что пакет нельзя выполнить, так как преобразование «Преобразование кэша» пытается записать данные в кэш, хранимый в памяти. Однако другое преобразование «Преобразование кэша» уже произвело запись в кэш, находящийся в памяти.|  
-|DTS_E_PRODUCTLEVELTOLOW|Указывает, что выполнение пакета невозможно, так как не установлена подходящая версия служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .|  
+|DTS_E_PRODUCTLEVELTOLOW|Указывает, что пакет не может быть запущен, так как [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] не установлена соответствующая версия.|  
 |DTS_E_READNOTFILLEDCACHE|Указывает, что преобразование «Уточняющий запрос» пытается прочитать данные из кэша памяти в то же время, когда преобразование «Преобразование кэша» записывает данные в кэш.|  
 |DTS_E_UNPROTECTXMLFAILED|Указывает, что система не расшифровала защищенный XML-узел.|  
 |DTS_E_WRITEWHILECACHEINUSE|Указывает, что преобразование «Преобразование кэша» пытается произвести запись в кэш памяти в то время, как преобразование «Уточняющий запрос» читает данные из кэша памяти.|  
@@ -51,7 +51,7 @@ ms.locfileid: "62899452"
 ## <a name="events-sqlispackage"></a>События (SQLISPackage)  
  Дополнительные сведения см. в статье [Регистрация событий в пакете служб Integration Services](performance/events-logged-by-an-integration-services-package.md).  
   
-|Событие|Описание|  
+|Событие|Description|  
 |-----------|-----------------|  
 |SQLISPackage_12288|Указывает, что пакет запущен.|  
 |SQLISPackage_12289|Указывает, что пакет завершил выполнение успешно.|  
@@ -65,7 +65,7 @@ ms.locfileid: "62899452"
 ## <a name="events-sqlisservice"></a>События (SQLISService)  
  Дополнительные сведения см. в статье [События, зарегистрированные службами Integration Services](service/events-logged-by-the-integration-services-service.md).  
   
-|Событие|Описание|  
+|Событие|Description|  
 |-----------|-----------------|  
 |SQLISService_256|Указывает, что служба запускается.|  
 |SQLISService_257|Указывает, что служба уже запущена.|  
@@ -76,7 +76,7 @@ ms.locfileid: "62899452"
 |SQLISService_273|Указывает, что файл конфигурации не может быть прочитан или недопустим.|  
 |SQLISService_274|Указывает, что параметр реестра, указывающий местонахождение файла конфигурации, не существует или пуст.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

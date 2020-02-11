@@ -1,5 +1,5 @@
 ---
-title: При удалении сборки | Документация Майкрософт
+title: Удаление сборки | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d7dceef4651804dabf4080d6f8b85d0597b1957b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919619"
 ---
 # <a name="dropping-an-assembly"></a>Удаление сборки
@@ -43,7 +43,7 @@ DROP ASSEMBLY MyDotNETAssembly
 -   Функции, хранимые процедуры или триггеры, которые используют переменные или параметры определяемого пользователем типа и созданы в базе данных с помощью предложения WITH SCHEMABINDING.  
   
 ### <a name="finding-udt-dependencies"></a>Поиск зависимостей определяемого пользователем типа  
- Сначала необходимо удалить все зависимые объекты, а затем выполнить инструкцию DROP TYPE. Следующие [!INCLUDE[tsql](../../../includes/tsql-md.md)] запрос находит все столбцы и параметров, которые используют определяемый пользователем тип в **AdventureWorks** базы данных.  
+ Сначала необходимо удалить все зависимые объекты, а затем выполнить инструкцию DROP TYPE. Следующий [!INCLUDE[tsql](../../../includes/tsql-md.md)] запрос находит все столбцы и параметры, которые используют определяемый пользователем тип в базе данных **AdventureWorks** .  
   
 ```  
 USE Adventureworks;  
@@ -63,14 +63,14 @@ SELECT o.name AS major_name, o.type_desc AS major_type_desc
     ON at.user_type_id = c.user_type_id;   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Управление сборками интеграции со средой CLR](managing-clr-integration-assemblies.md)   
  [Изменение сборки](altering-an-assembly.md)   
  [Создание сборки](creating-an-assembly.md)   
- [DROP AGGREGATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-aggregate-transact-sql)   
- [DROP FUNCTION (Transact-SQL)](/sql/t-sql/statements/drop-function-transact-sql)   
- [DROP PROCEDURE (Transact-SQL)](/sql/t-sql/statements/drop-procedure-transact-sql)   
- [DROP TRIGGER (Transact-SQL)](/sql/t-sql/statements/drop-trigger-transact-sql)   
- [Тип ПЕРЕНОСА &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-type-transact-sql)  
+ [DROP АГРЕГАТная &#40;&#41;Transact-SQL](/sql/t-sql/statements/drop-aggregate-transact-sql)   
+ [DROP FUNCTION &#40;&#41;Transact-SQL](/sql/t-sql/statements/drop-function-transact-sql)   
+ [УДАЛИТЬ процедуру &#40;языке Transact-SQL&#41;](/sql/t-sql/statements/drop-procedure-transact-sql)   
+ [УДАЛИТЬ триггер &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-trigger-transact-sql)   
+ [DROP TYPE &#40;&#41;Transact-SQL](/sql/t-sql/statements/drop-type-transact-sql)  
   
   

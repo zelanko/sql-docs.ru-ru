@@ -13,28 +13,28 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 818e1176cb5a4f81205a36dc7be6fd9fded286ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773672"
 ---
 # <a name="search-property-list-editor"></a>Редактор списка свойств поиска
   Используйте это диалоговое окно, чтобы добавлять или удалять свойства поиска в списке свойств поиска.  
   
 ## <a name="to-use-sql-server-management-studio-to-manage-search-property-lists"></a>Управление списками свойств поиска в среде SQL Server Management Studio  
- Дополнительные сведения о том, как создание, просмотр и удаление списка свойств поиска и о настройке полнотекстового индекса для поиска свойств, см. в разделе [поиск свойств документа с использованием списков свойств поиска](../relational-databases/search/search-document-properties-with-search-property-lists.md).  
+ Сведения о создании, просмотре и удалении списка свойств поиска, а также о настройке полнотекстового индекса для поиска свойств см. в разделе [Поиск свойств документа с помощью списков свойств поиска](../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
 ## <a name="options"></a>Параметры  
  **Имя свойства**  
- Укажите имя, которое будет использоваться для обозначения свойства в полнотекстовых запросах. Имя свойства может содержать внутренние пробелы. Длина **имени свойства** не должна превышать 256 символов. Это имя должно быть описательным, таким как «Автор» или «Домашний адрес», или каноническим именем Windows свойства, например `System.Author` или `System.Contact.HomeAddress`. **Имя свойства** должно уникально определять свойство в наборе свойств.  
+ Укажите имя, которое будет использоваться для обозначения свойства в полнотекстовых запросах. Имя свойства может содержать внутренние пробелы. Длина **имени свойства** не должна превышать 256 символов. Это имя должно быть описательным, таким как «Автор» или «Домашний адрес», или каноническим именем Windows свойства, например `System.Author` или `System.Contact.HomeAddress`. **Имя свойства** должно однозначно идентифицировать свойство в наборе свойств.  
   
  Разработчики используют имя свойства, чтобы определить свойство в предикате [CONTAINS](/sql/t-sql/queries/contains-transact-sql) . Поэтому при добавлении свойства важно указать значение, которое значимо представляет свойство.  
   
  **Идентификатор GUID набора свойств**  
  Указывает идентификатор набора свойств, к которому принадлежит свойство. Это глобальный уникальный идентификатор GUID. Набор свойств — группа логически связанных свойств. Дополнительные сведения о получении этого значения см. в подразделе «Замечания» далее в этом разделе.  
   
- **Целочисленный идентификатор свойства**  
+ **Идентификатор Int свойства**  
  Указывает целочисленный идентификатор свойства. Это предопределенное значение представляет собой целое число, уникальное внутри набора свойств. Дополнительные сведения о получении этого значения см. в подразделе «Замечания» далее в этом разделе.  
   
 > [!NOTE]  
@@ -43,21 +43,21 @@ ms.locfileid: "62773672"
  **Описание свойства**  
  Дополнительно можно указать описание свойства. Это строка длиной не более 512 символов. Например, описание может содержать сведения о наборе свойств свойства или сведения о свойстве, которые не очевидны из его имени.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Чтобы добавить свойство поиска к списку свойств поиска, необходимо указать глобальный уникальный идентификатор (GUID) набора свойств, к которому принадлежит свойство, и целочисленный идентификатор свойства. Сочетание этих значений должно быть уникальным в данном списке свойств поиска. При попытке добавить существующее сочетание операция завершается неудачей и выдается ошибка. Это означает, что можно назначить только одно имя для данного свойства.  
   
  Описание свойства является необязательным.  
   
- **Чтобы настроить список свойств поиска для полнотекстового индекса**  
+ **Настройка списка свойств поиска для полнотекстового индекса**  
   
--   [Поиск свойств документа с помощью списков свойств поиска](../relational-databases/search/search-document-properties-with-search-property-lists.md)  
+-   [Поиск свойств документа с использованием списков свойств поиска](../relational-databases/search/search-document-properties-with-search-property-lists.md)  
   
 ## <a name="permissions"></a>Разрешения  
- См. в разделе [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-search-property-list-transact-sql).  
+ См. раздел [ALTER Search Property LIST &#40;&#41;Transact-SQL ](/sql/t-sql/statements/alter-search-property-list-transact-sql).  
   
-## <a name="see-also"></a>См. также  
- [ALTER SEARCH PROPERTY LIST (Transact-SQL)](/sql/t-sql/statements/alter-search-property-list-transact-sql)   
- [Поиск свойств документа с использованием списков свойств поиска](../relational-databases/search/search-document-properties-with-search-property-lists.md)   
- [sys.registered_search_property_lists (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql)  
+## <a name="see-also"></a>См. также:  
+ [ИЗМЕНЕНИЕ списка свойств поиска &#40;&#41;Transact-SQL](/sql/t-sql/statements/alter-search-property-list-transact-sql)   
+ [Поиск свойств документа с помощью списков свойств поиска](../relational-databases/search/search-document-properties-with-search-property-lists.md)   
+ [sys. registered_search_property_lists &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql)  
   
   

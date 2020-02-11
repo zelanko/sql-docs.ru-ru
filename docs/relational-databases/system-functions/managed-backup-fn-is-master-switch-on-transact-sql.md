@@ -1,5 +1,5 @@
 ---
-title: managed_backup.fn_is_master_switch_on (Transact-SQL) | Документация Майкрософт
+title: managed_backup. fn_is_master_switch_on (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ ms.assetid: e8c2108d-b104-46cb-9645-a15f46112c86
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 044cdc1b334732a0730cd2c223d5690e4089a0cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68140636"
 ---
-# <a name="managedbackupfnismasterswitchon-transact-sql"></a>managed_backup.fn_is_master_switch_on (Transact-SQL)
+# <a name="managed_backupfn_is_master_switch_on-transact-sql"></a>managed_backup. fn_is_master_switch_on (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Возвращает состояние операций [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] в экземпляре SQL Server.  
@@ -43,20 +43,20 @@ ms.locfileid: "68140636"
 managed_backup.fn_is_master_switch_on ()  
 ```  
   
-##  <a name="Arguments"></a> Аргументы  
+##  <a name="Arguments"></a>Даваемых  
  None  
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
- **BIT**  
+ **ВЕРСИЙ**  
   
  1 = служба [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] активна, 0 = служба [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] приостановлена.  
   
-## <a name="security"></a>Безопасность  
+## <a name="security"></a>безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  Необходимы разрешения SELECT для функции.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Управляемое резервное копирование SQL Server в Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

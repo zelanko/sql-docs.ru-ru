@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d69bac2879b2d93c44e15c58f9ba44396d99988
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74683689"
 ---
 # <a name="delete-powerpivot-gallery"></a>Удаление галереи PowerPivot
@@ -49,7 +49,7 @@ ms.locfileid: "74683689"
   
 5.  В разделе «Разрешения и управление» выберите **Удалить эту библиотеку**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Галерея PowerPivot](../../2014-toc/index.yml)  
   
   

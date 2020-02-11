@@ -15,33 +15,33 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4d1d929f2d514b12050c79c8251cd58cfeadb6b6
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73787419"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  **SQLColAttribute** можно использовать для получения атрибута столбца результирующего набора для подготовленных или выполненных инструкций ODBC. Вызов **SQLColAttribute** в подготовленных инструкциях вызывает обмен данными с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] получает данные столбца результирующего набора в ходе выполнения инструкции, поэтому вызов **SQLColAttribute** после завершения **SQLExecute** или **SQLExecDirect** не требует обмена данными с сервером.  
+  **SQLColAttribute** можно использовать для получения атрибута столбца результирующего набора для подготовленных или выполненных инструкций ODBC. Вызов **SQLColAttribute** для подготовленных инструкций вызывает обмен данными [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]с. Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента получает данные столбца результирующего набора в ходе выполнения инструкции, поэтому вызов **SQLColAttribute** после завершения **SQLExecute** или **SQLExecDirect** не требует циклического обмена данными с сервером.  
   
 > [!NOTE]  
 >  Атрибуты ODBC идентификаторов столбца доступны не во всех результирующих наборах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Идентификатор поля|Описание|  
+|Идентификатор поля|Description|  
 |----------------------|-----------------|  
 |SQL_COLUMN_TABLE_NAME|Можно использовать для результирующих наборов, полученных от инструкций, которые формируют серверные курсоры, или для выполненных инструкций SELECT, содержащих предложение FOR BROWSE.|  
 |SQL_DESC_BASE_COLUMN_NAME|Можно использовать для результирующих наборов, полученных от инструкций, которые формируют серверные курсоры, или для выполненных инструкций SELECT, содержащих предложение FOR BROWSE.|  
 |SQL_DESC_BASE_TABLE_NAME|Можно использовать для результирующих наборов, полученных от инструкций, которые формируют серверные курсоры, или для выполненных инструкций SELECT, содержащих предложение FOR BROWSE.|  
-|SQL_DESC_CATALOG_NAME|Имя базы данных. Можно использовать для результирующих наборов, полученных от инструкций, которые формируют серверные курсоры, или для выполненных инструкций SELECT, содержащих предложение FOR BROWSE.|  
+|SQL_DESC_CATALOG_NAME|имя базы данных. Можно использовать для результирующих наборов, полученных от инструкций, которые формируют серверные курсоры, или для выполненных инструкций SELECT, содержащих предложение FOR BROWSE.|  
 |SQL_DESC_LABEL|Можно использовать для всех результирующих наборов. Значение идентично значению поля SQL_DESC_NAME.<br /><br /> Длина поля равна нулю только в том случае, если столбец является результатом выражения, не содержащего назначения метки.|  
 |SQL_DESC_NAME|Можно использовать для всех результирующих наборов. Значение идентично значению поля SQL_DESC_LABEL.<br /><br /> Длина поля равна нулю только в том случае, если столбец является результатом выражения, не содержащего назначения метки.|  
 |SQL_DESC_SCHEMA_NAME|Имя владельца. Можно использовать для результирующих наборов, полученных от инструкций, которые формируют серверные курсоры, или для выполненных инструкций SELECT, содержащих предложение FOR BROWSE.<br /><br /> Доступно, только если имя владельца задано для столбца в инструкции SELECT.|  
 |SQL_DESC_TABLE_NAME|Можно использовать для результирующих наборов, полученных от инструкций, которые формируют серверные курсоры, или для выполненных инструкций SELECT, содержащих предложение FOR BROWSE.|  
 |SQL_DESC_UNNAMED|SQL_NAMED для всех столбцов в результирующем наборе, за исключением случаев, когда столбец является результатом выражения, не содержащего назначения метки в составе выражения. Если SQL_DESC_UNNAMED возвращает SQL_UNNAMED, все атрибуты ODBC идентификаторов столбцов содержат строки нулевой длины для этого столбца.|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйвер ODBC для собственного клиента использует инструкцию SET FMTONLY, чтобы уменьшить нагрузку на сервер при вызове **SQLColAttribute** для подготовленных, но невыполненных инструкций.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Драйвер ODBC для собственного клиента использует инструкцию SET FMTONLY, чтобы уменьшить нагрузку на сервер при вызове **SQLColAttribute** для подготовленных, но невыполненных инструкций.  
   
  Для типов больших значений **SQLColAttribute** будет возвращать следующие значения:  
   
@@ -56,7 +56,7 @@ ms.locfileid: "73787419"
   
  Для всех версий атрибуты столбцов возвращаются только для первого результирующего набора, если несколько результирующих наборов формируются готовым пакетом инструкций SQL.  
   
- Следующие атрибуты столбцов являются расширениями, предоставляемыми драйвером ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает все значения в параметре *нумерикаттрптр* . Возвращаются значения с типом SDWORD (signed long) за исключением SQL_CA_SS_COMPUTE_BYLIST, которое представляет собой указатель на массив WORD.  
+ Следующие атрибуты столбцов являются расширениями, предоставляемыми [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ДРАЙВЕРом ODBC для собственного клиента. Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента возвращает все значения в параметре *нумерикаттрптр* . Возвращаются значения с типом SDWORD (signed long) за исключением SQL_CA_SS_COMPUTE_BYLIST, которое представляет собой указатель на массив WORD.  
   
 |Идентификатор поля|Возвращенное значение|  
 |----------------------|--------------------|  
@@ -74,11 +74,11 @@ ms.locfileid: "73787419"
 |SQL_CA_SS_NUM_COMPUTES|Количество предложений COMPUTE, заданных в текущей инструкции Transact-SQL SELECT.|  
 |SQL_CA_SS_NUM_ORDERS|Количество столбцов в предложении ORDER BY инструкции ODBC или Transact-SQL SELECT.|  
   
- \* доступен, если атрибуту инструкции SQL_SOPT_SS_HIDDEN_COLUMNS присвоено значение SQL_HC_ON.  
+ \*Доступный атрибут инструкции If SQL_SOPT_SS_HIDDEN_COLUMNS имеет значение SQL_HC_ON.  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] предоставили относящиеся к драйверу поля дескриптора для предоставления дополнительных сведений для обозначения имени коллекции XML-схем, имени схемы и имени каталога соответственно. При наличии в этих свойствах неалфавитных символов использование кавычек или escape-символа не требуется. Эти новые поля дескриптора приведены в следующей таблице:  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]Добавлены связанные с драйвером поля дескриптора для предоставления дополнительных сведений для обозначения имени коллекции XML-схем, имени схемы и имени каталога соответственно. При наличии в этих свойствах неалфавитных символов использование кавычек или escape-символа не требуется. Эти новые поля дескриптора приведены в следующей таблице:  
   
-|Имя столбца|Тип|Описание|  
+|Имя столбца|Тип|Description|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_CATALOG_NAME|CharacterAttributePtr|Имя каталога, в котором определено имя коллекции схем XML. Если обнаружить имя каталога невозможно, то эта переменная содержит пустую строку.<br /><br /> Эти сведения возвращаются из поля записи SQL_DESC_SS_XML_SCHEMACOLLECTION_CATALOG_NAME IRD, предназначенного для чтения и записи.|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_SCHEMA_NAM E|CharacterAttributePtr|Имя схемы, в которой определено имя коллекции схем XML. Если обнаружить имя схемы невозможно, то эта переменная содержит пустую строку.<br /><br /> Эти сведения возвращаются из поля записи SQL_DESC_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME IRD, предназначенного для чтения и записи.|  
@@ -86,7 +86,7 @@ ms.locfileid: "73787419"
   
  Кроме того, в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] представлены новые поля дескриптора для получения дополнительных сведений для столбца результирующего набора с определяемым пользователем типом данных (UDT) и для параметра UDT хранимой процедуры или параметризированного запроса. При наличии в этих свойствах неалфавитных символов использование кавычек или escape-символа не требуется. Эти новые поля дескриптора приведены в следующей таблице:  
   
-|Column Name|Тип|Описание|  
+|Имя столбца|Тип|Description|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_UDT_CATALOG_NAME|CharacterAttributePtr|Имя каталога, содержащего определяемый пользователем тип.|  
 |SQL_CA_SS_UDT_SCHEMA_NAME|CharacterAttributePtr|Имя схемы, содержащей определяемый пользователем тип.|  
@@ -98,18 +98,18 @@ ms.locfileid: "73787419"
 ## <a name="sqlcolattribute-support-for-enhanced-date-and-time-features"></a>Поддержка SQLColAttribute для усовершенствованных функций даты-времени  
  Значения, возвращаемые для типов даты и времени, см. в подразделе «сведения, возвращаемые в полях IRD» раздела [метаданные параметров и результатов](../../relational-databases/native-client-odbc-date-time/metadata-parameter-and-result.md).  
   
- Дополнительные сведения см. в разделе [улучшения &#40;даты и времени&#41;ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Дополнительные сведения см. в разделе [улучшения даты и времени &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlcolattribute-support-for-large-clr-udts"></a>Поддержка SQLColAttribute для больших определяемых пользователем типов CLR  
- **SQLColAttribute** поддерживает большие определяемые пользователем типы данных CLR (UDT). Дополнительные сведения см. в разделе [типы больших определяемых пользователем &#40;типов&#41;данных CLR ODBC](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ **SQLColAttribute** поддерживает большие определяемые пользователем типы данных CLR (UDT). Дополнительные сведения см. в разделе [большие определяемые пользователем типы данных CLR &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="sqlcolattribute-support-for-sparse-columns"></a>Поддержка SQLColAttribute для разреженных столбцов  
  SQLColAttribute запрашивает новое поле дескриптора строки реализации (IRD), SQL_CA_SS_IS_COLUMN_SET, чтобы определить, является ли столбец **column_setным** столбцом.  
   
- Дополнительные сведения см. в разделе [разреженные &#40;столбцы&#41;поддержка ODBC](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
+ Дополнительные сведения см. в разделе [Поддержка разреженных столбцов &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
   
-## <a name="see-also"></a>См. также статью  
-   [функции SQLColAttribute](https://go.microsoft.com/fwlink/?LinkId=59334)  
+## <a name="see-also"></a>См. также:  
+ [Функция SQLColAttribute](https://go.microsoft.com/fwlink/?LinkId=59334)   
  [Сведения о реализации API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
  [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)  
   

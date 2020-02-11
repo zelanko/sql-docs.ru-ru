@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 30f8f566dc04726076dd9eb7c4d91b56f687218d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62902476"
 ---
 # <a name="flat-file-destination"></a>назначение «Неструктурированный файл»
@@ -44,9 +44,9 @@ ms.locfileid: "62902476"
   
  Дополнительные сведения о свойствах, которые можно задать в диалоговом окне **Редактор источника «Неструктурированный файл»** , см. в следующих разделах:  
   
--   [Редактор назначения "Неструктурированный файл" (страница "Диспетчер соединений")](../flat-file-destination-editor-connection-manager-page.md)  
+-   [Редактор назначения "Неструктурированный файл" &#40;страница "Диспетчер соединений"&#41;](../flat-file-destination-editor-connection-manager-page.md)  
   
--   [Редактор назначения "Неструктурированный файл" (страница "Сопоставления")](../flat-file-destination-editor-mappings-page.md)  
+-   [Редактор назначения "Неструктурированный файл" &#40;страниц сопоставления&#41;](../flat-file-destination-editor-mappings-page.md)  
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
@@ -57,8 +57,8 @@ ms.locfileid: "62902476"
 ## <a name="related-tasks"></a>Связанные задачи  
  Дополнительные сведения о настройке свойств для компонента потока данных см. в разделе [Установление свойств компонента потока данных](set-the-properties-of-a-data-flow-component.md).  
   
-## <a name="see-also"></a>См. также  
- [Источник «Неструктурированный файл»](flat-file-source.md)   
+## <a name="see-also"></a>См. также:  
+ [Источник "Неструктурированный файл"](flat-file-source.md)   
  [Поток данных](data-flow.md)  
   
   

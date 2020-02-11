@@ -15,22 +15,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 769e4cb9298ce2a92f7200d9e04743d6b16f842d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62523887"
 ---
 # <a name="define-transact-sql-job-step-options"></a>Определение параметров для шагов заданий Transact-SQL
-  В этом разделе описано, как определить параметры шагов заданий [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  [!INCLUDE[tsql](../../includes/tsql-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или управляющих объектов SQL Server.  
+  В этом разделе описано, как определить параметры [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] шагов [!INCLUDE[tsql](../../includes/tsql-md.md)] задания агента в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или управляющие объекты SQL Server.  
   
  **В этом разделе**  
   
 -   **Перед началом работы**  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
--   **Для определения параметров шага задания Transact-SQL с помощью:** ,  
+-   **Для определения параметров шага задания Transact-SQL используется:** ,  
   
      [Среда SQL Server Management Studio](#SSMS)  
   
@@ -49,7 +49,7 @@ ms.locfileid: "62523887"
   
 2.  Щелкните страницу **Шаги** , шаг задания, а затем — **Изменить**.  
   
-3.  Проверьте, что в диалоговом окне **Свойства шага задания** задан тип задания **Скрипт Transact-SQL (TSQL)** , и выберите страницу **Дополнительно** .  
+3.  Проверьте, что в диалоговом окне **Свойства шага задания** задан тип задания **Скрипт Transact-SQL (TSQL)**, и выберите страницу **Дополнительно** .  
   
 4.  Выберите из списка **Действие при успехе** действие, которое будет инициироваться при успешном выполнении задания.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "62523887"
   
 9. Если члену предопределенной роли сервера **sysadmin** нужно выполнить шаг задания в контексте другого имени входа SQL, ему следует выбрать имя входа SQL из списка **Выполнять от имени** .  
   
-##  <a name="SMO"></a> Использование управляющих объектов SQL Server  
+##  <a name="SMO"></a>Использование управляющие объекты SQL Server  
  **Определение параметров шага задания Transact-SQL**  
   
  Воспользуйтесь классом `JobStep` в любом языке программирования (Visual Basic, Visual C# или PowerShell).  

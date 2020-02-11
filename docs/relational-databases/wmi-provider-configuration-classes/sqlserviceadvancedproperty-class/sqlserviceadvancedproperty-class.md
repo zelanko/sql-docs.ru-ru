@@ -18,10 +18,10 @@ ms.assetid: a5d06bde-6058-464c-a4aa-444d83f2331f
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 58fb650f9750e81b5e86b86cb5f630a843173930
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73658992"
 ---
 # <a name="sqlserviceadvancedproperty-class"></a>Класс SqlServiceAdvancedProperty
@@ -32,7 +32,7 @@ ms.locfileid: "73658992"
   
  [Начальный и остановленный класс служб](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx) представляет свойства, которые являются уникальными для службы. Эти свойства отсутствуют в списке свойств, связанных с классом [класса SqlService](https://technet.microsoft.com/library/ms186497.aspx) . Класс [класса класс sqlserviceadvancedproperty](https://technet.microsoft.com/library/ms182447.aspx) позволяет представление строковых, числовых или логических свойств. Этот класс можно использовать для просмотра уникальных свойств заданной службы.  
   
-## <a name="see-also"></a>См. также раздел  
- [Запуск, остановка и приостановка служб](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+## <a name="see-also"></a>См. также:  
+ [Запуск, приостановка и остановка служб](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

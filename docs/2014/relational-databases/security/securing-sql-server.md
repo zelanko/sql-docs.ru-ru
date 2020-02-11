@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: c1a701f1e63877c807964a8d81a829afdc9f7b81
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68891612"
 ---
 # <a name="securing-sql-server"></a>Обеспечение безопасности SQL Server
@@ -111,36 +111,41 @@ GO
 |Использование сертификатов при зеркальном отображении базы данных|[Использование сертификатов для конечной точки зеркального отображения базы данных (Transact-SQL)](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|  
   
 ## <a name="application-security"></a>Безопасность приложений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] рекомендуется разрабатывать защищенные клиентские приложения.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] рекомендуется разрабатывать защищенные клиентские приложения.  
   
  Дополнительные сведения об обеспечении безопасности клиентских приложений на сетевом уровне см. в разделе [Client Network Configuration](../../database-engine/configure-windows/client-network-configuration.md).  
   
 ## <a name="sql-server-security-tools-utilities-views-and-functions"></a>Средства, программы, представления и функции безопасности SQL Server  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предусмотрены средства, программы, представления и функции, которые используются для настройки и управления безопасностью.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предусмотрены средства, программы, представления и функции, которые используются для настройки и управления безопасностью.  
   
 ### <a name="sql-server-security-tools-and-utilities"></a>Средства и программы безопасности SQL Server  
  Следующая таблица содержит сведения о средствах и программах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , с помощью которых можно настраивать и администрировать безопасность.  
   
-|Сведения о|См.|  
+|Тема|См. следующие документы.|  
 |---------------------------|---------|  
 |Соединение с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Использование среды SQL Server Management Studio](../../database-engine/use-sql-server-management-studio.md)|  
 |Соединение с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и запуск запросов из командной строки|[Программа sqlcmd](../../tools/sqlcmd-utility.md)|  
 |Настройка сети и управление [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Диспетчер конфигурации SQL Server](../sql-server-configuration-manager.md)|  
 |Включение и отключение компонентов с помощью средства управления на основе политики|[Администрирование серверов с помощью управления на основе политик](../policy-based-management/administer-servers-by-using-policy-based-management.md)|  
-|Управление симметричными ключами для сервера отчетов|[Программа rskeymgmt (SSRS)](../../reporting-services/tools/rskeymgmt-utility-ssrs.md)|  
+|Управление симметричными ключами для сервера отчетов|[Программа rskeymgmt &#40;SSRS&#41;](../../reporting-services/tools/rskeymgmt-utility-ssrs.md)|  
   
 ### <a name="sql-server-security-catalog-views-and-functions"></a>Представления каталога и функции безопасности SQL Server  
  В компоненте [!INCLUDE[ssDE](../../includes/ssde-md.md)] сведения о безопасности доступны через несколько представлений и функций, оптимизированных для наибольшей производительности и полезности. Следующая таблица содержит сведения о представлениях и функциях безопасности.  
   
-|Сведения о|См.|  
+|Тема|См. следующие документы.|  
 |---------------------------|---------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] представления каталога безопасности, которые возвращают сведения о разрешениях, участниках, ролях и других сущностях уровня базы данных и сервера. Кроме того, существуют представления каталога, содержащие сведения о ключах шифрования, сертификатах и учетных данных.|[Представления каталога безопасности (Transact-SQL)](/sql/relational-databases/system-catalog-views/security-catalog-views-transact-sql)|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые возвращают сведения о текущем пользователе, разрешениях и схемах.|[Функции безопасности (Transact-SQL)](/sql/t-sql/functions/security-functions-transact-sql)|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Динамические представления управления и функции, связанные с безопасностью (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql)|  
+|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] представления каталога безопасности, которые возвращают сведения о разрешениях, участниках, ролях и других сущностях уровня базы данных и сервера. Кроме того, существуют представления каталога, содержащие сведения о ключах шифрования, сертификатах и учетных данных.|[Представления каталога безопасности &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/security-catalog-views-transact-sql)|  
+|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые возвращают сведения о текущем пользователе, разрешениях и схемах.|[Функции безопасности &#40;&#41;Transact-SQL](/sql/t-sql/functions/security-functions-transact-sql)|  
+|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Динамические административные представления и функции, связанные с безопасностью &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql)|  
   
 ## <a name="related-content"></a>См. также  
  [Вопросы безопасности при установке SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
   
- [Центр обеспечения безопасности для базы данных Azure SQL и SQL Server Database Engine](security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+ [Центр безопасности для ядра СУБД SQL Server и Базы данных Azure SQL](security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

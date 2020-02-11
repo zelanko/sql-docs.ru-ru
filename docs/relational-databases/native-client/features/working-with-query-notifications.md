@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 286236ec52f1ebb9e1d5639404a48fa91b24aee2
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73761338"
 ---
 # <a name="working-with-query-notifications"></a>Работа с уведомлениями запросов
@@ -39,7 +39,7 @@ ms.locfileid: "73761338"
   
  `service=<service-name>[;(local database=<database> | broker instance=<broker instance>)]`  
   
- Например:  
+ Пример:  
   
  `service=mySSBService;local database=mydb`  
   
@@ -47,7 +47,7 @@ ms.locfileid: "73761338"
   
  Уведомления отправляются только один раз. Чтобы получать постоянные уведомления об изменении данных, необходимо создавать новую подписку после обработки каждого уведомления путем повторного выполнения запроса.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственные клиентские приложения обычно получают уведомления с помощью команды [!INCLUDE[tsql](../../../includes/tsql-md.md)] [Receive](../../../t-sql/statements/receive-transact-sql.md) для чтения уведомлений из очереди, связанной со службой, указанной в параметрах уведомления.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Собственные клиентские приложения обычно получают уведомления с помощью [!INCLUDE[tsql](../../../includes/tsql-md.md)] команды [Receive](../../../t-sql/statements/receive-transact-sql.md) для чтения уведомлений из очереди, связанной со службой, указанной в параметрах уведомления.  
   
 > [!NOTE]  
 >  В запросах необходимо указывать имена таблиц, для которых требуется отправлять уведомления, например `dbo.myTable`. Имена таблиц должны состоять из двух частей. Подписка будет недействительной в случае использования трех- или четырехкомпонентных имен.  
@@ -67,23 +67,23 @@ CREATE SERVICE myService ON QUEUE myQueue
 >  Служба должна использовать стандартный контракт `https://schemas.microsoft.com/SQL/Notifications/PostQueryNotification`, показанный выше.  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>Поставщик OLE DB для собственного клиента SQL Server  
- Поставщик [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB поддерживает уведомление потребителя об изменении набора строк. Потребитель получает уведомление на каждой стадии изменения набора строк, а также при каждой попытке внести изменение.  
+ Поставщик [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB собственного клиента поддерживает уведомление потребителя об изменении набора строк. Потребитель получает уведомление на каждой стадии изменения набора строк, а также при каждой попытке внести изменение.  
   
 > [!NOTE]  
->  Передача запросов уведомлений на сервер с помощью метода **ICommand:: Execute** является единственным допустимым способом подписки на уведомления о запросах с помощью поставщика [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента OLE DB.  
+>  Передача запросов уведомлений на сервер с помощью метода **ICommand:: Execute** является единственным допустимым способом подписки на уведомления о запросах с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] помощью собственного клиента OLE DB Provider.  
   
 ### <a name="the-dbpropset_sqlserverrowset-property-set"></a>Набор свойств DBPROPSET_SQLSERVERROWSET  
  Для поддержки уведомлений о запросах с помощью OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственный клиент добавляет следующие новые свойства в набор свойств DBPROPSET_SQLSERVERROWSET.  
   
-|Имя|Тип|Описание|  
+|Имя|Тип|Description|  
 |----------|----------|-----------------|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|время в секундах, в течение которого уведомление запроса должно оставаться активным.<br /><br /> Значение по умолчанию — 432000 секунд (5 дней). Минимальное значение — 1 секунда, а максимальное значение — 2^31-1 секунд.|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|Текст сообщения уведомления. Определяется пользователем и не имеет стандартного формата.<br /><br /> По умолчанию эта строка пуста. В сообщении можно использовать от 1 до 2000 символов.|  
-|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|параметры уведомлений о запросах. Эти параметры указываются в строке с использованием синтаксиса *имя*=*значение*. За создание службы и считывание уведомлений из очереди отвечает пользователь.<br /><br /> Значением по умолчанию является пустая строка.|  
+|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|параметры уведомлений о запросах. Они указываются в строке с синтаксисом*значения* *Name*=. За создание службы и считывание уведомлений из очереди отвечает пользователь.<br /><br /> Значение по умолчанию — пустая строка.|  
   
  Подписка на уведомления всегда фиксируется независимо от того, выполнялась ли инструкция в рамках пользовательской транзакции или в режиме AUTO COMMIT, а также была ли транзакция, в рамках которой выполнялась инструкция, зафиксирована либо был выполнен ее откат. Уведомление сервера срабатывает при возникновении любого из следующих недопустимых условий: изменение базовых данных или схемы либо по истечении времени ожидания, в зависимости от того, что произойдет первым. Регистрации уведомлений удаляются сразу же после их срабатывания. Поэтому, если приложению требуется получение уведомлений в дальнейшем, оно должно подписаться на них снова сразу после получения уведомления.  
   
- Другое соединение или поток может проверять целевую очередь на наличие уведомлений. Например:  
+ Другое соединение или поток может проверять целевую очередь на наличие уведомлений. Пример:  
   
 ```  
 WAITFOR (RECEIVE * FROM MyQueue);   // Where MyQueue is the queue name.   
@@ -107,7 +107,7 @@ RECEIVE * FROM MyQueue
  Дополнительные сведения о наборе свойств DBPROPSET_SQLSERVERROWSET см. в разделе [Свойства и поведение набора строк](../../../relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md).  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>Драйвер ODBC для собственного клиента SQL Server  
- Драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает уведомления о запросах с помощью добавления трех новых атрибутов к функциям [SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) и [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) :  
+ Драйвер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC для собственного клиента поддерживает уведомления о запросах с помощью добавления трех новых атрибутов к функциям [SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) и [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) :  
   
 -   Атрибут SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT  
   
@@ -123,11 +123,11 @@ RECEIVE * FROM MyQueue
 ## <a name="special-cases-and-restrictions"></a>Особые случаи и ограничения  
  Следующие типы данных для уведомлений не поддерживаются:  
   
--   **text**  
+-   **полнотекстовым**  
   
 -   **ntext**  
   
--   **image**  
+-   **Эскиз**  
   
  Если сделан запрос на уведомление о запросе, который возвращает один из этих типов данных, уведомление срабатывает мгновенно с указанием, что выполнить подписку на уведомление невозможно.  
   
@@ -135,7 +135,7 @@ RECEIVE * FROM MyQueue
   
  Отправка запроса на уведомление, отправленное одним и тем же пользователем в том же контексте базы данных и имеющее тот же шаблон, значения параметров, тот же идентификатор уведомления и место доставки существующей активной подписки, обновит существующий Подписка с сбросом нового указанного времени ожидания. Это означает, что если уведомление запрашивается для идентичных запросов, будет отправлено только одно уведомление. Данные условия применяются к запросам, повторяющимся в пакетах, или к запросам, которые вызываются несколько раз в хранимой процедуре.  
   
-## <a name="see-also"></a>См. также раздел  
- [Компоненты SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
+## <a name="see-also"></a>См. также:  
+ [Компоненты собственного клиента SQL Server](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
   
   

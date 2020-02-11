@@ -1,5 +1,5 @@
 ---
-title: 'Занятие 5.: Создание нейронной сети и модели логистической регрессии (учебник по интеллектуальному анализу интеллектуальному анализу данных) | Документация Майкрософт'
+title: Занятие 5. Создание моделей нейронной сети и логистической регрессии (учебник по интеллектуальному анализу данных — средний уровень) | Документация Майкрософт
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -17,13 +17,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: daf554338a50a81f46d86a77bf04e770fcc2512e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63137453"
 ---
-# <a name="lesson-5-building-neural-network-and-logistic-regression-models-intermediate-data-mining-tutorial"></a>Занятие 5.: Создание нейронной сети и модели логистической регрессии (учебник по интеллектуальному анализу интеллектуальному анализу данных)
+# <a name="lesson-5-building-neural-network-and-logistic-regression-models-intermediate-data-mining-tutorial"></a>Занятие 5. Создание моделей нейронной сети и логистической регрессии (учебник по интеллектуальному анализу данных — средний уровень)
   
   
  Отдел эксплуатации [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] занимается улучшением качества обслуживания клиентов в центре обработки звонков. Они наняли поставщика для управления центром обработки звонков и составлении отчетов о  производительности этого центра, и просят провести анализ предварительных данных, предоставленных поставщиком. Они хотят узнать, если будут какие-либо интересные факты. В частности, они хотели бы знать, свидетельствуют ли эти данные о проблемах с кадрами и можно ли на основе этих данных выбрать способ улучшения качества обслуживания.  
@@ -43,32 +43,32 @@ ms.locfileid: "63137453"
   
  Это занятие содержит следующие разделы:  
   
--   [Добавление данных представления источника для данных Call Center &#40;средний уровень учебник по интеллектуальному анализу данных&#41;](../../2014/tutorials/add-data-source-view-call-center-data-intermediate-data-mining.md)  
+-   [Добавление представления источников данных для центра обработки вызовов &#40;учебник по интеллектуальному анализу данных&#41;](../../2014/tutorials/add-data-source-view-call-center-data-intermediate-data-mining.md)  
   
--   [Создание структуры нейронной сети и модели &#40;средний уровень учебник по интеллектуальному анализу данных&#41;](../../2014/tutorials/creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial.md)  
+-   [Руководство по созданию структуры нейронной сети и модели &#40;промежуточного интеллектуального анализа данных&#41;](../../2014/tutorials/creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial.md)  
   
--   [Изучение модели Call Center &#40;средний уровень учебник по интеллектуальному анализу данных&#41;](../../2014/tutorials/exploring-the-call-center-model-intermediate-data-mining-tutorial.md)  
+-   [Руководство по использованию модели центра обработки вызовов &#40;промежуточного интеллектуального анализа данных&#41;](../../2014/tutorials/exploring-the-call-center-model-intermediate-data-mining-tutorial.md)  
   
--   [Добавление модели логистической регрессии к структуре Call Center &#40;средний уровень учебник по интеллектуальному анализу данных&#41;](../../2014/tutorials/add-logistic-regression-model-to-call-center-intermediate-data-mining.md)  
+-   [Добавление модели логистической регрессии в учебник центра обработки вызовов &#40;промежуточного интеллектуального анализа данных&#41;](../../2014/tutorials/add-logistic-regression-model-to-call-center-intermediate-data-mining.md)  
   
--   [Создание прогнозов для моделей Call Center &#40;средний уровень учебник по интеллектуальному анализу данных&#41;](../../2014/tutorials/create-predictions-call-center-models-intermediate-data-mining-tutorial.md)  
+-   [Создание прогнозов для моделей центра обработки вызовов &#40;руководстве по интеллектуальному анализу данных&#41;](../../2014/tutorials/create-predictions-call-center-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
- [Добавление данных представления источника для данных Call Center &#40;средний уровень учебник по интеллектуальному анализу данных&#41;](../../2014/tutorials/add-data-source-view-call-center-data-intermediate-data-mining.md)  
+ [Добавление представления источников данных для центра обработки вызовов &#40;учебник по интеллектуальному анализу данных&#41;](../../2014/tutorials/add-data-source-view-call-center-data-intermediate-data-mining.md)  
   
 ## <a name="all-lessons"></a>Все занятия  
- [Занятие 1. Создание промежуточного решения интеллектуального анализа &#40;средний уровень учебник по интеллектуальному анализу данных&#41;](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md)  
+ [Занятие 1. Создание промежуточного решения интеллектуального анализа данных &#40;руководстве по интеллектуальному анализу данных&#41;](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md)  
   
- [Занятие 2. Построение сценария прогнозирования &#40;средний уровень учебник по интеллектуальному анализу данных&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
+ [Занятие 2. Создание сценария прогнозирования &#40;руководстве по интеллектуальному анализу данных&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
   
- [Занятие 3. Построение сценария потребительской корзины &#40;средний уровень учебник по интеллектуальному анализу данных&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [Занятие 3. Создание сценария потребительской корзины &#40;учебнике по интеллектуальному анализу данных&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
- [Занятие 4. Построение сценария кластеризации последовательностей &#40;средний уровень учебник по интеллектуальному анализу данных&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
+ [Занятие 4. Создание сценария кластеризации последовательностей &#40;учебник по интеллектуальному анализу данных&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
   
- Занятие 5.: Нейронной сети и сценарий логистической регрессии (учебник по интеллектуальному анализу интеллектуальному анализу данных)  
+ Урок 5. Сценарий нейронной сети и логистической регрессии (учебник по интеллектуальному анализу данных — средний уровень)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Учебник по основам интеллектуального анализа данных](../../2014/tutorials/basic-data-mining-tutorial.md)   
- [Средний уровень учебник по интеллектуальному анализу данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)  
+ [Учебник по интеллектуальному анализу данных &#40;Analysis Services — интеллектуальный анализ данных&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)  
   
   

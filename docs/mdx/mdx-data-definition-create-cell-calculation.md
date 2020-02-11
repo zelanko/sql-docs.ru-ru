@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7ba563c848179e8cf3dc12f64d2b3c4233955159
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892166"
 ---
 # <a name="mdx-data-definition---create-cell-calculation"></a>Определение данных многомерных выражений — CREATE CELL CALCULATION
@@ -58,7 +58,7 @@ CREATE CELL CALCULATION CURRENTCUBE | Cube_Name.Calculation_Name
  *Logical_Expression*  
  Допустимое логическое многомерное выражение.  
   
- *Integer*  
+ *Цело*  
  Допустимое целое значение.  
   
  *Calculation_Name*  
@@ -67,19 +67,19 @@ CREATE CELL CALCULATION CURRENTCUBE | Cube_Name.Calculation_Name
  *Scalar_Expression*  
  Допустимое скалярное многомерное выражение.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Используя вычисляемые ячейки, клиентское приложение может определить значение свертки для определенного набора ячеек вместо выполнения операции над всем набором ячеек, как в случае c формулой пользовательской свертки или вычисляемым элементом. Например, можно указать, что любая ячейка в наборе, определяемом выражением `{[Canada],[Time].[2000]}`, может содержать значение, определяемое некоторой формулой. Все другие ячейки, которые не входят в этот набор, вычисляются как обычно.  
   
 > [!NOTE]  
 >  Форма Бэкуса-Наура (BNF) `{*(<comment> | <whitespace> | <newline>)}` будет проанализирована как `{*}` для обратной совместимости.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание вычисляемых ячеек с областью действия сеанса](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-cell-calculations-session-scoped-calculated-cells)   
- [Создание вычислений ячеек с областью действия запроса (многомерные выражения)](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-cell-calculations-query-scoped-cell-calculations)   
- [Создание вычислений ячеек в многомерных выражениях многомерных выражений &#40;&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-cell-calculations-build-cell-calculations)   
- [Использование свойств ячеек (многомерные выражения)](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties)   
- [Содержание строки FORMAT_STRING (многомерные выражения)](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents)   
- [Многомерное выражение содержимого &#40;FORE_COLOR и BACK_COLOR&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents)   
- [Многомерные выражения инструкций &#40;определения данных многомерных выражений&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+ [Создание вычислений ячеек с областью действия запроса &#40;многомерных выражениях&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-cell-calculations-query-scoped-cell-calculations)   
+ [Создание вычислений ячеек в МНОГОМЕРных выражениях &#40;многомерных выражениях&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-cell-calculations-build-cell-calculations)   
+ [Использование свойств ячеек &#40;&#41;многомерных выражений](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties)   
+ [FORMAT_STRING содержимого &#40;многомерных выражений&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents)   
+ [FORE_COLOR и BACK_COLOR содержимое &#40;&#41;многомерных выражений](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents)   
+ [Инструкции определения данных многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

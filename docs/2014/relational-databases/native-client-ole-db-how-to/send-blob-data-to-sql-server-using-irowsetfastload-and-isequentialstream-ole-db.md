@@ -1,5 +1,5 @@
 ---
-title: Отправка данных BLOB на SQL SERVER с помощью IROWSETFASTLOAD и ISEQUENTIALSTREAM (OLE DB) | Документация Майкрософт
+title: Отправка данных большого двоичного объекта в SQL SERVER с помощью IROWSETFASTLOAD и ISEQUENTIALSTREAM (OLE DB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b18f9c9979121856fc04941438b9e7ce7d461fc8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68207014"
 ---
 # <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db"></a>Отправка данных BLOB на SQL Server через интерфейсы IRowsetFastLoad и ISequentialStream (OLE DВ)
@@ -30,10 +30,10 @@ ms.locfileid: "68207014"
   
  Поскольку DBTYPE_IUNKNOWN указан как тип данных в привязке, он должен соответствовать типу столбца или целевого параметра. Преобразования невозможны при передаче данных через интерфейс ISequentialStream из интерфейсов набора строк. Для параметров следует избегать использования типа ICommandWithParameters::SetParameterInfo и указать другой тип для принудительного преобразования. Это потребует от поставщика кэшировать все данные большого двоичного объекта локально, чтобы преобразовать их перед передачей на SQL Server. Кэширование крупного большого двоичного объекта и его локальное преобразование не обеспечивают хорошей производительности.  
   
- Дополнительные сведения см. в разделе [большие двоичные объекты и объекты OLE](../native-client-ole-db-blobs/blobs-and-ole-objects.md).  
+ Дополнительные сведения см. в разделе объекты [BLOB и OLE](../native-client-ole-db-blobs/blobs-and-ole-objects.md).  
   
 > [!IMPORTANT]  
->  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с помощью [API-интерфейса шифрования Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, следует зашифровать их с помощью [API шифрования Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ## <a name="example"></a>Пример  
  Выполните первый листинг кода ([!INCLUDE[tsql](../../includes/tsql-md.md)]), чтобы создать таблицу, используемую приложением.  

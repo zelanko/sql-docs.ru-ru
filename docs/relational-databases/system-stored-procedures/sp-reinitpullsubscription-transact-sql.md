@@ -16,10 +16,10 @@ ms.assetid: 7d9abe49-ce92-47f3-82c9-aea749518c91
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6f9021ec9b71694fc6567db5edf79965e09fd3c0
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72304912"
 ---
 # <a name="sp_reinitpullsubscription-transact-sql"></a>sp_reinitpullsubscription (Transact-SQL)
@@ -39,11 +39,11 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publisher = ] 'publisher'` — имя издателя. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publisher = ] 'publisher'`Имя издателя. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @publisher_db = ] 'publisher_db'` — имя базы данных издателя. Аргумент *publisher_db* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publisher_db = ] 'publisher_db'`Имя базы данных издателя. Аргумент *publisher_db* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @publication = ] 'publication'` — имя публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию All, что помечает все подписки для повторной инициализации.  
+`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию All, что помечает все подписки для повторной инициализации.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -55,7 +55,7 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
   
  **sp_reinitpullsubscription** можно вызвать с подписчика для повторной инициализации подписки во время следующего запуска агент распространения.  
   
- Подписки на публикации, созданные со значением **false** для **\@immediate_sync** , не могут быть повторно инициализированы с подписчика.  
+ Подписки на публикации, созданные со значением **false** для ** \@immediate_sync** , не могут быть повторно инициализированы с подписчика.  
   
  Можно повторно инициализировать подписку по запросу, выполнив **sp_reinitpullsubscription** на подписчике или **sp_reinitsubscription** на издателе.  
   
@@ -65,9 +65,9 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_reinitpullsubscription**.  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
  [Повторная инициализация подписки](../../relational-databases/replication/reinitialize-a-subscription.md)   
  [Повторная инициализация подписок](../../relational-databases/replication/reinitialize-subscriptions.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: adb411df9f1a67b3c8963382f0c907e04c395b5b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75241339"
 ---
 # <a name="register-a-connected-server-sql-server-management-studio"></a>Регистрация подключенного сервера (среда SQL Server Management Studio)
@@ -29,9 +29,9 @@ ms.locfileid: "75241339"
   
 -   **Регистрация сервера с помощью:**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Среда SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="SSMSProcedure"></a>Использование SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-register-a-connected-server"></a>Регистрация подключенного сервера  
   
@@ -49,7 +49,7 @@ ms.locfileid: "75241339"
      **Новая группа**  
      Щелкните, чтобы открыть диалоговое окно **Создать группу**, в котором нужно создать новую группу серверов для зарегистрированного сервера.  
   
-     **Автоматически**  
+     **Сохранять**  
      Выберите, чтобы сохранить введенные данные и создать зарегистрированный сервер.  
   
   

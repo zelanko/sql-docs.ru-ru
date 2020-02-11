@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 45fc220eb4b3dc74e5550312c5658760b6cb699c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892175"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services-report-builder-and-ssrs"></a>Определение параметров в конструкторе запросов многомерных выражений для служб Analysis Services (построитель отчетов и службы SSRS)
@@ -59,9 +59,9 @@ ms.locfileid: "68892175"
   
 2.  На панели инструментов нажмите кнопку **Конструктор** , чтобы переключиться в режим запроса.  
   
-3.  На панели инструментов в конструкторе запросов многомерных выражений нажмите кнопку **Параметры запроса** (![Значок диалогового окна "Параметры запроса"](https://docs.microsoft.com/analysis-services/analysis-services/media/iconqueryparameter.gif "Значок диалогового окно \"Параметры запроса\"")). Откроется диалоговое окно «Параметры запроса».  
+3.  На панели инструментов конструктора запросов многомерных выражений нажмите кнопку **Параметры запроса** (![значок для диалогового окна Параметры запроса](https://docs.microsoft.com/analysis-services/analysis-services/media/iconqueryparameter.gif "Значок диалогового окна «Параметры запроса»")). Откроется диалоговое окно «Параметры запроса».  
   
-4.  В столбце **Параметр** щелкните **\<Введите параметр>** , а затем введите имя параметра.  
+4.  В столбце **параметр** щелкните ** \<ввод параметра>**, а затем введите имя параметра.  
   
 5.  В столбце **Измерение** выберите значение в раскрывающемся списке.  
   
@@ -81,8 +81,8 @@ ms.locfileid: "68892175"
   
      Чтобы просмотреть набор данных, который включает доступные значения для параметра отчета, щелкните правой кнопкой мыши в любом пустом месте на панели данных отчета и выберите пункт **Показывать скрытые наборы данных**. В области данных отчета отображаются все наборы данных отчета.  
   
-## <a name="see-also"></a>См. также  
- [Тип соединения служб Analysis Services для запросов многомерных выражений (службы SSRS)](analysis-services-connection-type-for-mdx-ssrs.md)   
+## <a name="see-also"></a>См. также:  
+ [Analysis Services тип соединения для МНОГОМЕРных служб SSRS &#40;&#41;](analysis-services-connection-type-for-mdx-ssrs.md)   
  [Пользовательский интерфейс конструктора запросов многомерных выражений служб Analysis Services](analysis-services-mdx-query-designer-user-interface.md)  
   
   

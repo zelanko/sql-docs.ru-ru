@@ -1,5 +1,5 @@
 ---
-title: sys.dm_clr_loaded_assemblies (Transact-SQL) | Документация Майкрософт
+title: sys. dm_clr_loaded_assemblies (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -19,31 +19,31 @@ ms.assetid: 8523d8db-d8a0-4b1f-ae19-6705d633e0a6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1cd677e516048aa52badec7fc9875e5a5b13f25a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68138659"
 ---
-# <a name="sysdmclrloadedassemblies-transact-sql"></a>sys.dm_clr_loaded_assemblies (Transact-SQL)
+# <a name="sysdm_clr_loaded_assemblies-transact-sql"></a>sys.dm_clr_loaded_assemblies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Возвращает по строке для каждой из управляемых пользовательских сборок, загруженных в адресное пространство сервера. Используйте это представление для понимания и устранения интеграция со средой CLR управляемые объекты базы данных, которые выполняются в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Возвращает по строке для каждой из управляемых пользовательских сборок, загруженных в адресное пространство сервера. Используйте это представление для понимания и устранения неполадок в управляемых объектах базы данных интеграции со средой CLR, которые выполняются в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Сборки — это файлы динамических библиотек с управляемым кодом, которые используются для определения и развертывания управляемых объектов базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Каждый раз, когда пользователь запускает один из управляемых объектов базы данных, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и среда CLR загружают сборку (а также другие сборки, на которые она ссылается), в которой определен этот управляемый объект базы данных. Сборка остается загруженной в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для увеличения производительности, чтобы впоследствии управляемые объекты базы данных, содержащиеся в сборке, можно было бы вызывать без повторной загрузки сборки. Сборка не выгружается до тех пор, пока у [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не возникнет необходимость в освобождении памяти. Дополнительные сведения о сборках и интеграции со средой CLR см. в разделе [среде размещения CLR](../../relational-databases/clr-integration/clr-integration-architecture-clr-hosted-environment.md). Дополнительные сведения об управляемых объектов базы данных см. в разделе [построение объектов базы данных с помощью среды CLR &#40;CLR&#41; интеграции](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md).  
+ Сборки — это файлы динамических библиотек с управляемым кодом, которые используются для определения и развертывания управляемых объектов базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Каждый раз, когда пользователь запускает один из управляемых объектов базы данных, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и среда CLR загружают сборку (а также другие сборки, на которые она ссылается), в которой определен этот управляемый объект базы данных. Сборка остается загруженной в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для увеличения производительности, чтобы впоследствии управляемые объекты базы данных, содержащиеся в сборке, можно было бы вызывать без повторной загрузки сборки. Сборка не выгружается до тех пор, пока у [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не возникнет необходимость в освобождении памяти. Дополнительные сведения о сборках и интеграции со средой CLR см. в разделе Среда [размещения CLR](../../relational-databases/clr-integration/clr-integration-architecture-clr-hosted-environment.md). Дополнительные сведения об управляемых объектах базы данных см. в разделе [Создание объектов базы данных с помощью среды clr &#40;интеграция&#41; CLR](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md).  
 
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|**assembly_id**|**int**|Идентификатор загруженной сборки. **Assembly_id** можно использовать для поиска дополнительной информации о сборке в [sys.assemblies &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md) представления каталога. Обратите внимание, что [!INCLUDE[tsql](../../includes/tsql-md.md)] [sys.assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md) каталога сборки показано только текущей базы данных. **Sqs.dm_clr_loaded_assemblies** представление показывает все сборки, загруженные на сервере.|  
-|**appdomain_address**|**int**|Адрес домена приложения (**AppDomain**) в который загружена сборка. Все сборки, принадлежащие одному пользователю всегда загружаются в одном **AppDomain**. **Appdomain_address** можно использовать для поиска дополнительной информации о **AppDomain** в [sys.dm_clr_appdomains](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md) представления.|  
-|**load_time**|**datetime**|Время, когда сборка была загружена. Обратите внимание на то, что сборка остается загруженной до [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] испытывает недостаток памяти и выгружает **AppDomain**. Вы можете отслеживать **load_time** чтобы узнать, как часто [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] освобождении памяти и выгружает **AppDomain**.|  
+|**assembly_id**|**int**|Идентификатор загруженной сборки. **Assembly_id** можно использовать для поиска дополнительных сведений о сборке в представлении каталога [sys. assemblies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md) . Обратите внимание [!INCLUDE[tsql](../../includes/tsql-md.md)] , что в каталоге [sys. assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md) сборки отображаются только в текущей базе данных. В представлении **СКС. dm_clr_loaded_assemblies** отображаются все загруженные сборки на сервере.|  
+|**appdomain_address**|**int**|Адрес домена приложения (**AppDomain**), в котором загружается сборка. Все сборки, принадлежащие одному пользователю, всегда загружаются в одном **домене AppDomain**. **Appdomain_address** можно использовать для поиска дополнительных сведений о **домене приложения** в представлении [sys. dm_clr_appdomains](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md) .|  
+|**load_time**|**datetime**|Время, когда сборка была загружена. Обратите внимание, что сборка остается [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] загруженной до тех пор, пока не найдет нехватка памяти и не выгрузит **AppDomain**. Вы можете отслеживать **load_time** , чтобы понять, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] как часто приходится наблюдать недостаток памяти и выгружать **AppDomain**.|  
   
 ## <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  
   
-## <a name="remarks"></a>Примечания  
- **Dm_clr_loaded_assemblies.appdomain_address** представление имеет отношение "многие к одному" с **dm_clr_appdomains.appdomain_address**. **Dm_clr_loaded_assemblies.assembly_id** представление имеет отношение "один ко многим" с **sys.assemblies.assembly_id**.  
+## <a name="remarks"></a>Remarks  
+ Представление **dm_clr_loaded_assemblies. appdomain_address** имеет связь "многие к одному" с **dm_clr_appdomains. appdomain_address**. Представление **dm_clr_loaded_assemblies. assembly_id** имеет связь «один ко многим» с **sys. assemblies. assembly_id**.  
   
 ## <a name="examples"></a>Примеры  
  Следующий пример показывает, как можно просматривать сведения обо всех сборках, которые в данный момент загружены в текущей базе данных.  
@@ -55,7 +55,7 @@ INNER JOIN sys.assemblies AS a
 ON l.assembly_id = a.assembly_id;  
 ```  
   
- В следующем примере показано, как для просмотра сведений о **AppDomain** в котором загружена данная сборка.  
+ В следующем примере показано, как просмотреть сведения о **домене приложения** , в котором загружается заданная сборка.  
   
 ```  
 SELECT appdomain_id, creation_time, db_id, user_id, state  
@@ -66,7 +66,7 @@ WHERE appdomain_address =
  WHERE assembly_id = 555);  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Динамические административные представления, связанные с среда CLR &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Динамические административные представления, связанные со средой CLR &#40;языке Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
   
   

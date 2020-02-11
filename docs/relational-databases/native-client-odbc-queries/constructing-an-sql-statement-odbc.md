@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 96e3c04692360bd13010fe40063b0e761d60b2ce
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73779977"
 ---
 # <a name="constructing-an-sql-statement-odbc"></a>Конструирование инструкций SQL (ODBC)
@@ -35,7 +35,7 @@ ms.locfileid: "73779977"
   
      Инструкции SQL, сформированные во время выполнения, дают возможность пользователю приспосабливать инструкцию, используя широко распространенные предложения, например SELECT, WHERE и ORDER BY. Это включает нерегламентированные запросы, вводимые пользователем.  
   
- Драйвер ODBC для клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] анализирует инструкции SQL только для синтаксиса ODBC и ISO, который не поддерживается непосредственно [!INCLUDE[ssDE](../../includes/ssde-md.md)], который преобразуется в [!INCLUDE[tsql](../../includes/tsql-md.md)]. Все остальные синтаксисы SQL передаются в [!INCLUDE[ssDE](../../includes/ssde-md.md)] без изменений, где [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определит, является ли он допустимым [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Такой подход имеет следующие два преимущества.  
+ Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC клиента АНАЛИЗИРУЕТ инструкции SQL только для синтаксиса ODBC и ISO [!INCLUDE[ssDE](../../includes/ssde-md.md)], который не поддерживается напрямую, который преобразует драйвер в. [!INCLUDE[tsql](../../includes/tsql-md.md)] Все остальные синтаксисы SQL передаются [!INCLUDE[ssDE](../../includes/ssde-md.md)] в без изменений, где [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определит, является ли он допустимым [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Такой подход имеет следующие два преимущества.  
   
 -   Сокращение издержек  
   
@@ -43,11 +43,11 @@ ms.locfileid: "73779977"
   
 -   Гибкость  
   
-     Программисты могут адаптировать переносимость своих приложений. Чтобы расширить переносимость для различных баз данных, используется прежде всего синтаксис ODBC и ISO. Для расширений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется соответствующий синтаксис [!INCLUDE[tsql](../../includes/tsql-md.md)]. Драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает полный синтаксис [!INCLUDE[tsql](../../includes/tsql-md.md)] поэтому приложения на основе ODBC могут использовать все функции в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Программисты могут адаптировать переносимость своих приложений. Чтобы расширить переносимость для различных баз данных, используется прежде всего синтаксис ODBC и ISO. Для расширений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется соответствующий синтаксис [!INCLUDE[tsql](../../includes/tsql-md.md)]. Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента поддерживает полный [!INCLUDE[tsql](../../includes/tsql-md.md)] синтаксис, поэтому приложения на основе ODBC могут воспользоваться всеми функциями в. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
  Список столбцов в инструкции SELECT должен содержать только столбцы, необходимые для выполнения текущей задачи. Это не только сокращает объем данных, отправляемых по сети, но и снижает эффект изменений в базе данных на приложение. Если приложение не ссылается на столбец в таблице, то оно не затрагивается никакими изменениями, сделанными в этом столбце.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Выполняя запросы &#40;ODBC&#41;](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
   

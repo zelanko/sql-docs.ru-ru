@@ -1,5 +1,5 @@
 ---
-title: sys. DM _exec_function_stats (Transact-SQL) | Документация Майкрософт
+title: sys. dm_exec_function_stats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 05/30/2019
 ms.prod: sql
@@ -19,31 +19,31 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 89d66217536d5cd552eb11de67d6d97d21ec9f6e
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68742835"
 ---
-# <a name="sysdmexecfunctionstats-transact-sql"></a>sys. DM _exec_function_stats (Transact-SQL)
+# <a name="sysdm_exec_function_stats-transact-sql"></a>sys. dm_exec_function_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-  Возвращает статистическую статистику производительности для кэшированных функций. Представление возвращает одну строку для каждого кэшированного плана функции, а время существования строки — до тех пор, пока функция остается в кэше. При удалении функции из кэша соответствующая строка удаляется из этого представления. В это время событие трассировки SQL для статистики производительности вызывается аналогично **sys. DM _exec_query_stats**. Возвращает сведения о скалярных функциях, включая функции в памяти и скалярные функции CLR. Не возвращает сведения о функциях, возвращающих табличное значение.  
+  Возвращает статистическую статистику производительности для кэшированных функций. Представление возвращает одну строку для каждого кэшированного плана функции, а время существования строки — до тех пор, пока функция остается в кэше. При удалении функции из кэша соответствующая строка удаляется из этого представления. В этот момент возникает событие трассировки SQL статистики производительности аналогично **sys.dm_exec_query_stats**. Возвращает сведения о скалярных функциях, включая функции в памяти и скалярные функции CLR. Не возвращает сведения о функциях, возвращающих табличное значение.  
   
  Динамические административные представления в среде [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] не могут предоставлять информацию, которая может повлиять на автономность базы данных, или информацию о других базах данных, к которым имеет доступ пользователь. Во избежание раскрытия этой информации все строки, содержащие данные, не принадлежащие подключенному клиенту, отфильтровываются.  
   
 > [!NOTE]
-> Результаты **sys. DM _exec_function_stats** могут различаться при каждом выполнении, так как данные отражают только завершенные запросы, а не по-прежнему в полете. 
+> Результаты **sys. dm_exec_function_stats** могут различаться при каждом выполнении, так как данные отражают только завершенные запросы, а не по-прежнему в полете. 
 
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|Идентификатор базы данных, в которой находится функция.|  
 |**object_id**|**int**|Идентификационный номер объекта функции.|  
-|**type**|**char (2)**|Тип объекта:   FN = функции с скалярными значениями|  
-|**type_desc**|**nvarchar(60)**|Описание типа объекта: SQL_SCALAR_FUNCTION|  
-|**sql_handle**|**varbinary (64)**|Это можно использовать для сопоставления с запросами в **представлении sys. DM _exec_query_stats** , которые были выполнены в этой функции.|  
-|**plan_handle**|**varbinary (64)**|Идентификатор плана в оперативной памяти. Этот идентификатор является временным и константным, только пока план сохраняется в кэше. Это значение можно использовать с динамическим административным представлением **sys. DM _exec_cached_plans** .<br /><br /> Всегда будет 0x000, когда скомпилированная в собственном режиме функция запрашивает оптимизированную для памяти таблицу.|  
+|**type**|**char (2)**|Тип объекта: FN = скалярные функции|  
+|**type_desc**|**nvarchar (60)**|Описание типа объекта: SQL_SCALAR_FUNCTION|  
+|**sql_handle**|**varbinary (64)**|Это можно использовать для сопоставления с запросами в **представлении sys. dm_exec_query_stats** , которые были выполнены в этой функции.|  
+|**plan_handle**|**varbinary (64)**|Идентификатор плана в оперативной памяти. Этот идентификатор является временным и константным, только пока план сохраняется в кэше. Это значение можно использовать с динамическим административным представлением **sys. dm_exec_cached_plans** .<br /><br /> Всегда будет 0x000, когда скомпилированная в собственном режиме функция запрашивает оптимизированную для памяти таблицу.|  
 |**cached_time**|**datetime**|Время добавления функции в кэш.|  
 |**last_execution_time**|**datetime**|Время последнего выполнения функции.|  
 |**execution_count**|**bigint**|Количество раз, когда функция была выполнена с момента последней компиляции.|  
@@ -74,8 +74,8 @@ ms.locfileid: "68742835"
   
 ## <a name="permissions"></a>Разрешения  
 
-В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо`VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium `VIEW DATABASE STATE` требуется разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
+В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]необходимо `VIEW SERVER STATE` разрешение.   
+На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
   
 ## <a name="examples"></a>Примеры  
  В следующем примере возвращаются сведения о первых десяти функциях, идентифицируемых по среднему затраченному времени.  
@@ -89,12 +89,12 @@ FROM sys.dm_exec_function_stats AS d
 ORDER BY [total_worker_time] DESC;  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Динамические административные представления и функции &#40;, связанные с выполнением TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys. DM _exec_sql_text &#40;, TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
- [sys.dm_exec_query_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Динамические административные представления и функции, связанные с выполнением &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [sys. dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
+ [sys. dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  
- [sys. DM _exec_trigger_stats &#40;, TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)   
- [sys. DM _exec_procedure_stats &#40;, TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
+ [sys. dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)   
+ [sys. dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
   
   

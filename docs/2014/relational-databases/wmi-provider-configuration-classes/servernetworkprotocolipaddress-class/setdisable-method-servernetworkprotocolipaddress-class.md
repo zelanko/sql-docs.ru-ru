@@ -1,5 +1,5 @@
 ---
-title: Метод SetDisable (класс ServerNetworkProtocolIPAddress) | Документация Майкрософт
+title: Метод SetDisable (класс класс servernetworkprotocolipaddress) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: adaa66fd04f6e3b6f97b4e4edc75d9a21ea4e31f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62643216"
 ---
 # <a name="setdisable-method-servernetworkprotocolipaddress-class"></a>Метод SetDisable (класс ServerNetworkProtocolIPAddress)
@@ -38,15 +38,15 @@ object
 ```  
   
 ## <a name="parts"></a>Компоненты  
- *object*  
- Servernetworkprotocolipaddress [класса ServerNetworkProtocolIPAdress]-class.md), представляющий IP-адрес для сетевого протокола для экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ *объектами*  
+ Объект [объект servernetworkprotocolipadress Class] класс servernetworkprotocolipaddress-class.md), который представляет IP-адрес сетевого протокола в экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение uint32, равное 0, если служба изменена успешно, и 1, если запрос не поддерживается. Любое другое значение указывает на ошибку.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
- [Настройка сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+## <a name="see-also"></a>См. также:  
+ [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

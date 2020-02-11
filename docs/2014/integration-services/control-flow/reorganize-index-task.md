@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4869120627fd867fa3bd0573381477fc31a97f5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830575"
 ---
 # <a name="reorganize-index-task"></a>Задача «Реорганизация индекса»
@@ -43,7 +43,7 @@ ms.locfileid: "62830575"
 ## <a name="related-tasks"></a>Связанные задачи  
  Дополнительные сведения о настройке свойств этих свойств в конструкторе [!INCLUDE[ssIS](../../../includes/ssis-md.md)] см. в разделе [Задание свойств задач или контейнеров](../set-the-properties-of-a-task-or-container.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Задачи служб Integration Services](integration-services-tasks.md)   
  [Поток управления](control-flow.md)  
   

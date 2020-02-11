@@ -11,10 +11,10 @@ ms.assetid: b2f6cc27-dbc9-4f3f-961e-e81e76375248
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 26ad0e3d481b5d09a3105645af5705a3bd99cdbf
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729067"
 ---
 # <a name="make-an-attribute-group-visible-to-users-master-data-services"></a>Превращение группы атрибутов в видимую для пользователей (службы Master Data Services)
@@ -25,14 +25,14 @@ ms.locfileid: "73729067"
   
  При создании группы атрибутов она автоматически скрыта от всех пользователей, кроме того, кто ее создал.  
   
-## <a name="prerequisites"></a>необходимые компоненты  
- Чтобы выполнить эту процедуру:  
+## <a name="prerequisites"></a>Предварительные требования  
+ Для выполнения этой процедуры:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
   
 -   необходимо быть администратором модели. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](../master-data-services/administrators-master-data-services.md).  
   
--   Должна существовать хотя бы одна группа атрибутов. Дополнительные сведения см. в статье [Создание группы атрибутов (службы Master Data Services)](../master-data-services/create-an-attribute-group-master-data-services.md).  
+-   Должна существовать хотя бы одна группа атрибутов. Дополнительные сведения см. в статье [Create an Attribute Group &#40;Master Data Services&#41;](../master-data-services/create-an-attribute-group-master-data-services.md).  
   
 ### <a name="to-make-an-attribute-group-visible-to-users"></a>Превращение группы атрибутов в видимую для пользователей  
   
@@ -50,10 +50,10 @@ ms.locfileid: "73729067"
   
 7.  Выберите пользователя или группу в поле **Доступные** и щелкните стрелку **Добавить** . Чтобы добавить все, щелкните стрелку **Добавить все** .  
   
-8.  Нажмите кнопку **Сохранить**.  
+8.  Выберите команду **Сохранить**.  
   
-## <a name="see-also"></a>См. также статью  
- [Группы атрибутов (службы Master Data Services)](../master-data-services/attribute-groups-master-data-services.md)   
- [Создание группы атрибутов (службы Master Data Services)](../master-data-services/create-an-attribute-group-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Группы атрибутов &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md)   
+ [Создание группы атрибутов &#40;Master Data Services&#41;](../master-data-services/create-an-attribute-group-master-data-services.md)  
   
   

@@ -11,14 +11,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ee2ff452e8544e37977e46055fdb9b32af877366
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206673"
 ---
 # <a name="use-table-valued-parameters-ole-db"></a>Использование возвращающих табличные значения параметров (OLE DB)
-  Данный образец работает с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или более поздней версией. Образец выполняет следующие действия.  
+  Данный образец работает с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или более поздней версией. Этот пример выполняет следующее.  
   
 -   Создает возвращающие табличное значение параметры с помощью динамического обнаружения через интерфейс IOpenRowset::OpenRowset.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "68206673"
   
 -   Демонстрирует обработку ошибок для ошибок SQLNCLI11.  
   
- Дополнительные сведения о возвращающих табличные значения параметров, см. в разделе [возвращающего табличное значение параметров &#40;собственный клиент SQL Server&#41;](../native-client/features/table-valued-parameters-sql-server-native-client.md).  
+ Дополнительные сведения о возвращающих табличные значения параметрах см. в разделе [Параметры, возвращающие ](../native-client/features/table-valued-parameters-sql-server-native-client.md)табличное значение, &#40;SQL Server Native Client&#41;.  
   
 ## <a name="example"></a>Пример  
  Первый листинг кода ([!INCLUDE[tsql](../../includes/tsql-md.md)]) создает базу данных, которая используется в образце.  

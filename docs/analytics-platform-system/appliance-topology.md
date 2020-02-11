@@ -9,10 +9,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: e16e1cd972b6374a5b3d17eef5a406b57b1d3c41
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401380"
 ---
 # <a name="appliance-topology---analytics-platform-system"></a>Топология устройства — система аналитики платформы
@@ -22,6 +22,6 @@ ms.locfileid: "74401380"
   
 ![SQL_Server_PDW_DWConfig_ApplTop](./media/appliance-topology/SQL_Server_PDW_DWConfig_ApplTop.png "SQL_Server_PDW_DWConfig_ApplTop")  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Запустите систему Configuration Manager &#40;Analytics Platform&#41;](launch-the-configuration-manager.md)  
   

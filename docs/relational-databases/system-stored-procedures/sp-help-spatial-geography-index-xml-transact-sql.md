@@ -18,10 +18,10 @@ ms.assetid: 821d4127-3ce5-4474-8561-043404a20d81
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: c2503e5d3b94b5bc73d9bf2427e0162ba2eda2fe
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72304910"
 ---
 # <a name="sp_help_spatial_geography_index_xml-transact-sql"></a>sp_help_spatial_geography_index_xml (Transact-SQL)
@@ -57,7 +57,7 @@ sp_help_spatial_geography_index_xml [ @tabname =] 'tabname'
  Свойства, которые содержат значения NULL, не включаются в набор возвращаемых значений.  
   
 ## <a name="example"></a>Пример  
- В следующем примере используется `sp_help_spatial_geography_index_xml` для изучения пространственного индекса **SIndx_SpatialTable_geography_col2** , определенного в **geography_col** таблиц, для данного примера запроса в **\@QS**. В этом примере основные свойства указанного индекса возвращаются в XML-фрагменте, в котором отображаются имя и значение выбранных свойств.  
+ В следующем примере используется `sp_help_spatial_geography_index_xml` для исследования пространственного индекса **SIndx_SpatialTable_geography_col2** , определенного в таблице **geography_col** для данного примера запроса в ** \@QS**. В этом примере основные свойства указанного индекса возвращаются в XML-фрагменте, в котором отображаются имя и значение выбранных свойств.  
   
  Затем в результирующем наборе выполняется [запрос XQuery](../../xquery/xquery-basics.md) , возвращающий определенное свойство.  
   
@@ -75,7 +75,7 @@ select @x.value('(/Primary_Filter_Efficiency/text())[1]', 'float');
   
 ## <a name="requirements"></a>Требования  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
  [Хранимые процедуры пространственного индекса](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
  [sp_help_spatial_geography_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)   
  [Общие сведения о пространственных индексах](../../relational-databases/spatial/spatial-indexes-overview.md)   

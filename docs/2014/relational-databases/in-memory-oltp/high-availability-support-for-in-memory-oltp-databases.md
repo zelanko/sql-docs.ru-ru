@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 37c719beb625a533c2d8f279a8500365c4786c05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62990583"
 ---
 # <a name="high-availability-support-for-in-memory-oltp-databases"></a>Поддержка высокого уровня доступности в базах данных OLTP в памяти
@@ -23,31 +23,31 @@ ms.locfileid: "62990583"
 ## <a name="alwayson-availability-groups-and-in-memory-oltp-databases"></a>Группы доступности AlwaysOn и базы данных OLTP в памяти  
  Настройка баз данных с компонентами [!INCLUDE[hek_2](../../includes/hek-2-md.md)] предоставляет следующие возможности.  
   
--   **Полная интеграция**   
+-   **Полностью интегрированный интерфейс**   
     Вы можете настроить базы данных, содержащие оптимизированные для памяти таблицы, с помощью одного мастера с тем же уровнем поддержки для синхронных и асинхронных вторичных реплик. Кроме того, вы можете отслеживать работоспособность с помощью знакомых функций мониторинга AlwaysOn в SQL Server Management Studio.  
   
 -   **Сравнимое время отработки отказа**   
     Вторичные реплики поддерживают состояние в памяти для устойчивых таблиц, оптимизированных для памяти. При автоматической или принудительной отработке отказа время переключения на новую первичную реплику сравнимо с дисковыми таблицами, при этом восстановление не требуется. В этой конфигурации поддерживаются оптимизированные для памяти таблицы, созданные как SCHEMA_ONLY. Однако изменения в этих таблицах не записываются в журнал, поэтому данные в них во вторичной реплике не будут существовать.  
   
--   **Доступные для чтения вторичные**   
-    Вы можете обращаться и запрашивать оптимизированные для памяти таблицы во вторичной реплике, если она настроена для доступа на чтение. Дополнительные сведения см. в разделе [активные вторичные реплики: Вторичные реплики для чтения (группы доступности AlwaysOn)](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+-   **Вторично доступный для чтения**   
+    Вы можете обращаться и запрашивать оптимизированные для памяти таблицы во вторичной реплике, если она настроена для доступа на чтение. Дополнительные сведения см. в разделе [Активные вторичные реплики: вторичные реплики для чтения (группы доступности AlwaysOn)](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
 ## <a name="failover-clustering-instance-fci-and-in-memory-oltp-databases"></a>Экземпляр отказоустойчивой кластеризации (АСШ) и базы данных OLTP в памяти  
  Чтобы добиться высокого уровня доступности в конфигурации общего хранилища, можно настроить отказоустойчивую кластеризацию в экземплярах с одной или несколькими базами данных с оптимизированными для памяти таблицами. При настройке FCI необходимо учитывать следующие факторы.  
   
--   **Цель времени восстановления**   
+-   **Целевое время восстановления**   
     Время отработки отказа, вероятно, будет больше, так как оптимизированные для памяти таблицы необходимо загрузить в память перед тем, как база данных станет доступна.  
   
--   **Таблицы SCHEMA_ONLY**   
+-   **SCHEMA_ONLY таблицы**   
     Имейте в виду, что таблицы SCHEMA_ONLY после отработки отказа будет пустыми (без строк). Это обусловлено приложением. Точно такое же поведение наблюдается при перезапуске базы данных [!INCLUDE[hek_2](../../includes/hek-2-md.md)] с одной или несколькими таблицами SCHEMA_ONLY.  
   
 ## <a name="support-for-transaction-replication-in-in-memory-oltp"></a>Поддержка репликации транзакций в базах данных OLTP в памяти  
- Таблицы, выступающие в качестве подписчиков репликации транзакций, за исключением одноранговой репликации транзакций, можно настроить как оптимизированные для памяти таблицы. Другие конфигурации репликации несовместимы с таблицами, оптимизированными для памяти.  Дополнительные сведения см. в статье [Репликация на подписчиков оптимизированных для памяти таблиц](../replication/replication-to-memory-optimized-table-subscribers.md).  
+ Таблицы, выступающие в качестве подписчиков репликации транзакций, за исключением одноранговой репликации транзакций, можно настроить как оптимизированные для памяти таблицы. Другие конфигурации репликации несовместимы с таблицами, оптимизированными для памяти.  Дополнительные сведения см. [в разделе Репликация на подписчики таблиц, оптимизированных для памяти](../replication/replication-to-memory-optimized-table-subscribers.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Группы доступности AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [Обзор групп доступности AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Активные вторичные реплики: Вторичные реплики для чтения &#40;группы доступности AlwaysOn&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
- [Репликация в подписчики таблиц, оптимизированных для памяти](../replication/replication-to-memory-optimized-table-subscribers.md)  
+ [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Активные вторичные реплики: &#40;группы доступности AlwaysOn для чтения&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [Репликация на подписчиков оптимизированных для памяти таблиц](../replication/replication-to-memory-optimized-table-subscribers.md)  
   
   

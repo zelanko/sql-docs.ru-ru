@@ -15,18 +15,18 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 02f7cd14d631f6b6a246e34a978a458e9c5b1563
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73849599"
 ---
 # <a name="system-functions-by-category-for-transact-sql"></a>Системные функции по категориям для Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет следующие группы системных функций.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]предоставляет следующие группы системных функций.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Функции групп доступности Always On](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)  
  [Функции системы отслеживания измененных данных](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)  
  [Функции Отслеживание изменений](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)  

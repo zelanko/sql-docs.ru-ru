@@ -11,13 +11,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5b30a9f60f52b8b19875f5fb3c15242ce2c632fd
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175425"
 ---
-# <a name="lesson-8-restore-a-database-to-azure-storage"></a>Занятие 8. Восстановление базы данных в службе хранилища Azure
+# <a name="lesson-8-restore-a-database-to-azure-storage"></a>Занятие 8. Восстановление базы данных в службу хранилища Azure
   На этом занятии вы узнаете, как создать файл резервной копии локально, а затем восстановить его в службе хранилища Azure. Обратите внимание, что базу данных можно настроить либо локально, либо на виртуальной машине в Azure. Для прохождения этого занятия не требуется завершать занятия 4, 5, 6 и 7.  
   
  Для этого занятия предполагается, что вы уже выполнили следующие шаги.  
@@ -73,7 +73,7 @@ ms.locfileid: "70175425"
   
 2.  Разверните узел **базы данных**и выберите свою базу данных.  
   
-3.  Щелкните правой кнопкой мыши базу данных, укажите на пункт **Задачи**и щелкните **Восстановить**.  
+3.  Щелкните правой кнопкой мыши базу данных, укажите на пункт **Задачи**и выберите **Восстановить**.  
   
 4.  На странице **Общие** в разделе Источник **восстановления** щелкните **исходное** устройство.  
   
@@ -87,13 +87,13 @@ ms.locfileid: "70175425"
   
      Для файла данных введите: `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS.mdf`. В качестве файла журнала введите: `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS_log.ldf`.  
   
-     ![SQL 14](../tutorials/media/ss-was-tutlesson-8-8.gif " , ВЕРСИЯ CTP2 SQL 14") , ВЕРСИЯ CTP2  
+     ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-8-8.gif "SQL 14 CTP2")  
   
 9. Нажмите кнопку **ОК**.  
   
  После завершения восстановления войдите на портал управления. Вы должны увидеть MDF- и LDF-файлы в контейнере следующим образом.  
   
- ![SQL 14](../tutorials/media/ss-was-tutlesson-8-9.gif " , ВЕРСИЯ CTP2 SQL 14") , ВЕРСИЯ CTP2  
+ ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-8-9.gif "SQL 14 CTP2")  
   
  **Следующее занятие:**  
   

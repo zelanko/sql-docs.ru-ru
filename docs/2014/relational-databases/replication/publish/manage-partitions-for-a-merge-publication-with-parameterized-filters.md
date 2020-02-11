@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2a71ac4d6bcc887257ea5bfbc1523e327fc03b16
-ms.sourcegitcommit: ea6603e20c723553c89827a6b8731a9e7b560b9c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74479307"
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>Управление секциями для публикации слиянием с параметризованными фильтрами
@@ -32,21 +32,21 @@ ms.locfileid: "74479307"
   
 -   **Для управления секциями для публикации слиянием с параметризованными фильтрами используется:**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Среда SQL Server Management Studio](#SSMSProcedure)  
   
-     [Язык Transact-SQL](#TsqlProcedure)  
+     [Transact-SQL](#TsqlProcedure)  
   
      [Объекты Replication Management Objects (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a>Перед началом  
+##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Recommendations"></a>Проектирован  
+###  <a name="Recommendations"></a> Рекомендации  
   
 -   Если в соответствии с рекомендациями создается скрипт топологии репликации, скрипты публикации содержат вызовы хранимых процедур для создания секций данных. Скрипт содержит справочную информацию для созданных секций и способ воссоздания одной или нескольких секций в случае необходимости. Дополнительные сведения см. в разделе [Scripting Replication](../scripting-replication.md).  
   
 -   Если публикация имеет параметризованные фильтры, позволяющие получать подписки с неперекрывающимися секциями, то при необходимости повторного создания подписки в случае ее утраты необходимо удалить секцию, которая была на нее подписана, создать заново подписку, а затем повторно создать секцию. Дополнительные сведения см. в разделе [Параметризованные фильтры строк](../merge/parameterized-filters-parameterized-row-filters.md). При формировании скрипта публикации репликация формирует скрипты создания для существующих секций подписчика. Дополнительные сведения см. в разделе [Scripting Replication](../scripting-replication.md).  
   
-##  <a name="SSMSProcedure"></a>Использование SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  Управление секциями осуществляется на странице **Секции данных** диалогового окна **Свойства публикации — \<публикация>**. Дополнительные сведения о доступе к этому диалоговому окну см. в разделе [Просмотр и изменение свойств публикации](view-and-modify-publication-properties.md). На этой странице доступны следующие возможности: создание и удаление секций, разрешение подписчикам выполнять создание и доставку моментального снимка, создание моментальных снимков для одной или нескольких секций, очистка моментальных снимков.  
   
 #### <a name="to-create-a-partition"></a>Создание секции  
@@ -87,7 +87,7 @@ ms.locfileid: "74479307"
   
 2.  Щелкните **Очистить существующие моментальные снимки**.  
   
-##  <a name="TsqlProcedure"></a>Использование Transact-SQL  
+##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
  Программный перебор существующих секций с помощью хранимых процедур репликации позволяет повысить управляемость публикаций с параметризованными фильтрами. Кроме того, секции можно создавать и удалять. Для существующей секции доступны следующие сведения.  
   
 -   Метод фильтрации секции (при помощи функций [SUSER_SNAME (Transact-SQL)](/sql/t-sql/functions/suser-sname-transact-sql) или [HOST_NAME (Transact-SQL)](/sql/t-sql/functions/host-name-transact-sql)).  
@@ -122,7 +122,7 @@ ms.locfileid: "74479307"
   
      При этом также будет удалено задание моментального снимка и все файлы снимка для этой секции.  
   
-##  <a name="RMOProcedure"></a>Использование объекты Replication Management Objects (RMO)  
+##  <a name="RMOProcedure"></a> При помощи объектов RMO  
  Программное формирование новых, перебор существующих и удаление секций подписчика с помощью объектов RMO обеспечивает большую управляемость публикации с параметризованными фильтрами. Сведения о создании секций подписчика см. в разделе [Создание моментального снимка для публикации слиянием с параметризованными фильтрами](../create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md). Для существующей секции доступны следующие сведения.  
   
 -   Значение и функция фильтрации, на которых базируется секция.  
@@ -159,7 +159,7 @@ ms.locfileid: "74479307"
   
 7.  Повторите шаг 6 для каждой удаляемой секции.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Параметризованные фильтры строк](../merge/parameterized-filters-parameterized-row-filters.md)   
  [Моментальные снимки для публикаций слиянием с параметризованными фильтрами](../snapshots-for-merge-publications-with-parameterized-filters.md)  
   

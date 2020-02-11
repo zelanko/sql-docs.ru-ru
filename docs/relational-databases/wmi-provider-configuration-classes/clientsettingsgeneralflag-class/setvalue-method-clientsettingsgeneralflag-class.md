@@ -18,10 +18,10 @@ ms.assetid: 34443689-a0e0-4668-a811-17532c6fd271
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: a3f5fce9c795591ca7f8af41762fc9e9438aba2b
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660109"
 ---
 # <a name="setvalue-method-clientsettingsgeneralflag-class"></a>Метод SetValue (класс ClientSettingsGeneralFlag)
@@ -36,21 +36,21 @@ object.SetValue(Value)
 ```  
   
 ## <a name="parts"></a>Компоненты  
- *object*  
+ *объектами*  
  Объект [класса ClientSettingsGeneralFlag](../../../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md) , представляющий универсальный флаг для параметров сервера.  
   
 #### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Description|  
 |---------------|-----------------|  
-|*Значение*|Логическое значение, указывающее состояние флага.|  
+|*Value*|Логическое значение, указывающее состояние флага.|  
   
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение **uint32** , равное 0, если служба изменена успешно, и 1, если запрос не поддерживается. Любое другое значение указывает на ошибку.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также раздел  
- [Настройка клиентских протоколов](https://technet.microsoft.com/library/ms181035.aspx)  
+## <a name="see-also"></a>См. также:  
+ [настройка клиентских протоколов](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

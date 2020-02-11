@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4ea61ea7e6983f9601783957eee6776f36eccfb4
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400724"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Настройка Polybase для доступа к внешним данным в хранилище BLOB-объектов Azure
@@ -23,7 +23,7 @@ ms.locfileid: "74400724"
 > [!NOTE]
 > В настоящее время APS поддерживает только стандартное локально избыточное хранилище BLOB-объектов (LRS) общего назначения версии 1.
 
-## <a name="prerequisites"></a>Необходимые компоненты
+## <a name="prerequisites"></a>Предварительные требования
 
  - Хранилище BLOB-объектов Azure в вашей подписке.
  - Контейнер, созданный в хранилище BLOB-объектов Azure.

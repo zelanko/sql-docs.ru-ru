@@ -1,5 +1,5 @@
 ---
-title: Задача 9. Настройка службы ссылочных данных | Документация Майкрософт
+title: Задача 9. Настройка службы ссылочных данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e4c756463c43ede8c6dae0cda0a184f0ec7f9956
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70154930"
 ---
-# <a name="task-9-configuring-a-reference-data-service"></a>Задача 9. Настройка службы эталонных данных
+# <a name="task-9-configuring-a-reference-data-service"></a>Задача 9. Настройка службы ссылочных данных
   В этой задаче вы настраиваете DQS для использования службы ссылочных данных в Azure Marketplace. В следующей задаче будет настроен домен **проверки адресов** для использования этой службы. Во время выполнения операция очистки служб DQS передает значения доменов в домене **проверки адреса** службе для очистки. Дополнительные сведения см. [в статье Настройка служб DQS для использования справочных данных](https://msdn.microsoft.com/library/hh213070.aspx) .  
   
 1.  На главной странице **клиента DQS**в области **Администрирование** щелкните **Конфигурация**.  
@@ -28,7 +28,7 @@ ms.locfileid: "70154930"
   
 4.  Введите **ключ учетной записи Azure Marketplace** для поля **идентификатор учетной записи DataMarket** .  
   
-     ![Учетная запись службы эталонных данных для рынка данных Azure](../../2014/tutorials/media/et-configuringareferencedataservice.jpg "Учетная запись службы эталонных данных для рынка данных Azure")  
+     ![Учетная запись службы эталонных данных Azure Data Market](../../2014/tutorials/media/et-configuringareferencedataservice.jpg "Учетная запись службы эталонных данных Azure Data Market")  
   
 5.  Нажмите кнопку **проверить** рядом с текстовым полем, чтобы проверить идентификатор учетной записи.  
   

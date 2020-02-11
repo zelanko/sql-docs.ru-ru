@@ -14,10 +14,10 @@ ms.assetid: 1ad3400d-7fcd-40c9-87ae-f5afc61e0374
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 75c5d2f0f04cf0692f4a6c6ca3145210fee014b3
-ms.sourcegitcommit: aaa42f26c68abc2de10eb58444fe6b490c174eab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74308060"
 ---
 # <a name="filestream-support"></a>Поддержка FILESTREAM
@@ -35,7 +35,7 @@ ms.locfileid: "74308060"
   
 -   [Поддержка FILESTREAM &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/filestream-support-odbc.md)  
   
--   [Доступ к данным FILESTREAM с помощью OpenSqlFilestream](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
+-   [Доступ к данным FILESTREAM с OpenSqlFilestream](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
   
 ## <a name="querying-for-filestream-columns"></a>Запрос столбцов FILESTREAM  
  Наборы строк схемы в OLE DB не сообщают, является ли столбец столбцом FILESTREAM. Для создания столбца FILESTREAM невозможно использовать интерфейс ITableDefinition в OLE DB.  
@@ -64,7 +64,7 @@ SELECT is_filestream FROM sys.columns WHERE name = 'varbinaryCol3' AND object_id
   
  Для клиентов, использующих SQLOLEDB или других поставщиков, освобожденных [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] до версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента, тип **varbinary (max)** будет сопоставлен с изображением.  
   
-## <a name="see-also"></a>См. также  
- [SQL Server Native Client функции](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
+## <a name="see-also"></a>См. также:  
+ [Компоненты собственного клиента SQL Server](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
   
   

@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 676335fb8ee4aac5906c61084c28cd94cf8ea815
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400891"
 ---
 # <a name="pdw-certificate-provisioning---analytics-platform-system"></a>Подготовка сертификата PDW — система платформы аналитики
 Страница **подготовки сертификата PDW** в системе аналитики **Configuration Manager** импортирует или удаляет сертификат, используемый в области PDW. С помощью сертификат для шифрования подключений может помочь защитить соединение с узлом управления через SQL Server клиентов, средства, использующие драйверы SQL Server PDW, [консоль администрирования](monitor-the-appliance-by-using-the-admin-console.md)и Integration Services нагрузки.  
   
-## <a name="prerequisites"></a>Необходимые компоненты  
+## <a name="prerequisites"></a>Предварительные требования  
 Перед установкой сертификата выполните следующие действия.  
   
 1.  Получите безопасный сертификат. Если вам нужны дополнительные сведения о получении безопасного сертификата, обратитесь в службу служба поддержки Майкрософт.  
@@ -74,7 +74,7 @@ SQL Server PDW будет продолжать шифровать текущие
   
 ![Сертификат PDW устройств DWConfig](./media/pdw-certificate-provisioning/SQL_Server_PDW_DWConfig_ApplPDWCert.png "SQL_Server_PDW_DWConfig_ApplPDWCert")  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Запустите систему Configuration Manager &#40;Analytics Platform&#41;](launch-the-configuration-manager.md)  
 <!-- MISSING LINKS [HDInsight Certificate Provisioning &#40;Analytics Platform System&#41;](hdinsight-certificate-provisioning.md)  -->  
   

@@ -13,10 +13,10 @@ ms.assetid: 6f7c3f07-0f64-4283-8c9c-93facd00a046
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 870341b6ae6a3ffbda345aa7a0abc4a2fe253ac5
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728929"
 ---
 # <a name="reverse-a-transaction-master-data-services"></a>Отмена транзакции (службы Master Data Services)
@@ -25,7 +25,7 @@ ms.locfileid: "73728929"
 
   В службах [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]администратор может обратить транзакцию, когда необходимо отменить действие. Примеры транзакций: изменения значений атрибутов, перемещение иерархий, удаление элементов. Этот раздел относится только к транзакциям сущностей с типом журнала транзакций "Атрибут". Перейдите на страницу обозревателя сущностей для просмотра журнала сущностей с типом журнала транзакций "Элемент".  
   
-## <a name="prerequisites"></a>необходимые компоненты  
+## <a name="prerequisites"></a>Предварительные требования  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Управление версиями** ;  
   
@@ -33,7 +33,7 @@ ms.locfileid: "73728929"
   
 ### <a name="to-reverse-a-transaction"></a>Отмена транзакции  
   
-1.  На домашней странице [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] щелкните **Управление версиями**.  
+1.  На домашней странице [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] нажмите **Управление версиями**.  
   
 2.  В строке меню выберите пункт **Транзакции**.  
   
@@ -47,9 +47,9 @@ ms.locfileid: "73728929"
   
 7.  В диалоговом окне подтверждения нажмите кнопку **ОК**. В сетку добавляется еще одна транзакция, соответствующая отмененной транзакции.  
   
-## <a name="see-also"></a>См. также статью  
- [Транзакции (службы Master Data Services)](../master-data-services/transactions-master-data-services.md)   
- [Повторная активация элемента или коллекции (службы Master Data Services)](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Master Data Services &#40;транзакций&#41;](../master-data-services/transactions-master-data-services.md)   
+ [Повторная активация элемента или коллекции &#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
  [Откат журнала изменений элемента](../master-data-services/rollback-member-revision-history-master-data-services.md)
   
   

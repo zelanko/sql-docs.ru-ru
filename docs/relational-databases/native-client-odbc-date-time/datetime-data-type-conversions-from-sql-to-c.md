@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9795126f2cd7c39ebd23ed34fde73664388b235f
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73783848"
 ---
 # <a name="datetime-data-type-conversions-from-sql-to-c"></a>Преобразования типа данных datetime из SQL в C
@@ -67,7 +67,7 @@ ms.locfileid: "73783848"
   
  Таблица в этом разделе описывает преобразования между типами, возвращаемыми клиенту, и типами в привязке. Для выходных параметров, если тип сервера, указанный в SQLBindParameter, не совпадает с фактическим типом на сервере, на сервере будет выполнено неявное преобразование, и тип, возвращаемый клиенту, будет соответствовать типу, указанному с помощью SQLBindParameter. Это может привести к непредвиденным результатам преобразования, если правила преобразования сервера отличаются от правил, перечисленных в предыдущей таблице. Например, если необходима дата по умолчанию, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует не текущую дату, а 01.01.1900.  
   
-## <a name="see-also"></a>См. также раздел  
- [Улучшения &#40;даты и времени ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+## <a name="see-also"></a>См. также:  
+ [Улучшения даты и времени &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

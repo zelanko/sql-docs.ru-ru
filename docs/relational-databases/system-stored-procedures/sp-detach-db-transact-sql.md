@@ -19,10 +19,10 @@ ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ec7758ad2f9443ad29f0da799e3f286612f95cab
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72278179"
 ---
 # <a name="sp_detach_db-transact-sql"></a>sp_detach_db (Transact-SQL)
@@ -45,22 +45,22 @@ sp_detach_db [ @dbname= ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @dbname = ] 'database_name'` — имя базы данных, подсоединяемой. *database_name* имеет значение типа **sysname** и значение по умолчанию NULL.  
+`[ @dbname = ] 'database_name'`Имя базы данных, подсоединяемой. *database_name* имеет значение типа **sysname** и значение по умолчанию NULL.  
   
-`[ @skipchecks = ] 'skipchecks'` указывает, следует ли пропустить или выполнить обновление статистики. *параметром skipchecks установленным* — это значение типа **nvarchar (10)** со ЗНАЧЕНИЕМ по умолчанию NULL. Чтобы пропустить СТАТИСТИКУ обновления, укажите **значение true**. Чтобы явно выполнить обновление статистики, укажите **значение false**.  
+`[ @skipchecks = ] 'skipchecks'`Указывает, следует ли пропустить или выполнить обновление статистики. *параметром skipchecks установленным* — это значение типа **nvarchar (10)** со ЗНАЧЕНИЕМ по умолчанию NULL. Чтобы пропустить СТАТИСТИКУ обновления, укажите **значение true**. Чтобы явно выполнить обновление статистики, укажите **значение false**.  
   
  По умолчанию инструкция UPDATE STATISTICS запускается для обновления информации о данных в таблицах и индексах. Выполнение UPDATE STATISTICS имеет смысл для тех баз данных, которые планируется переместить на постоянные носители информации.  
   
-`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'` указывает, что файл полнотекстового индекса, связанный с отсоединяемой базой данных, не будет удален во время операции отсоединения базы данных. *KeepFulltextIndexFile* — это значение типа **nvarchar (10)** со значением по умолчанию **true**. Если *KeepFulltextIndexFile* имеет **значение false**, все файлы полнотекстовых индексов, связанные с базой данных, и метаданные полнотекстового индекса удаляются, если только база данных не доступна только для чтения. Если задано значение NULL или **true**, метаданные, связанные с полнотекстовым текстом, сохраняются.  
+`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'`Указывает, что файл полнотекстового индекса, связанный с отсоединяемой базой данных, не будет удален во время операции отсоединения базы данных. *KeepFulltextIndexFile* — это значение типа **nvarchar (10)** со значением по умолчанию **true**. Если *KeepFulltextIndexFile* имеет **значение false**, все файлы полнотекстовых индексов, связанные с базой данных, и метаданные полнотекстового индекса удаляются, если только база данных не доступна только для чтения. Если задано значение NULL или **true**, метаданные, связанные с полнотекстовым текстом, сохраняются.  
   
 > [!IMPORTANT]
->  Параметр **\@KeepFulltextIndexFile** будет удален в следующей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Не используйте его при работе над новыми приложениями и как можно быстрее измените приложения, в которых он в настоящее время используется.  
+>  Параметр ** \@KeepFulltextIndexFile** будет удален в следующей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Не используйте его при работе над новыми приложениями и как можно быстрее измените приложения, в которых он в настоящее время используется.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или 1 (неуспешное завершение)  
+ 0 (успех) или 1 (сбой).  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
   
 ## <a name="remarks"></a>Remarks  
  При отсоединении базы данных все метаданные удаляются. Если база данных была базой данных по умолчанию для любых учетных записей входа, база данных **master** станет базой по умолчанию.  
@@ -82,7 +82,7 @@ sp_detach_db [ @dbname= ] 'database_name'
   
 -   Имеется моментальный снимок базы данных.  
   
-     Перед отсоединением базы данных необходимо удалить все моментальные снимки. Дополнительные сведения см. в разделе [Drop a Database Snapshot &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md).  
+     Перед отсоединением базы данных необходимо удалить все моментальные снимки. Дополнительные сведения см. в разделе [Удаление моментального снимка базы данных (Transact-SQL)](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md).  
   
     > [!NOTE]  
     >  Невозможно отсоединить или присоединить моментальный снимок базы данных.  
@@ -102,7 +102,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 
  Перед заданием параметра SINGLE_USER проверьте, чтобы параметру AUTO_UPDATE_STATISTICS_ASYNC было присвоено значение OFF. Если этот параметр имеет значение ON, то фоновый поток, используемый для обновления статистики, соединится с базой данных и доступ к базе данных в однопользовательском режиме будет невозможен. Дополнительные сведения см. в разделе [Установка однопользовательского режима базы данных](../databases/set-a-database-to-single-user-mode.md).
 
- Например, следующая инструкция `ALTER DATABASE` получает монопольный доступ к базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] после отключения всех текущих пользователей от базы данных.  
+ Например, следующая `ALTER DATABASE` инструкция получает монопольный доступ к [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] базе данных после отключения всех текущих пользователей от базы данных.  
   
 ```  
 USE master;  
@@ -121,7 +121,7 @@ GO
  Требуется членство в предопределенной роли сервера **sysadmin** или членство в роли **db_owner** базы данных.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере отсоединяется база данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] с параметром *параметром skipchecks установленным* , для которого задано значение true.  
+ В следующем примере [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] база данных отсоединяется с параметром *параметром skipchecks установленным* , для которого задано значение true.  
   
 ```  
 EXEC sp_detach_db 'AdventureWorks2012', 'true';  
@@ -134,10 +134,10 @@ exec sp_detach_db @dbname='AdventureWorks2012'
     , @keepfulltextindexfile='true';  
 ```  
   
-## <a name="see-also"></a>См. также статью  
- [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
- [Присоединение и отсоединение базы данных (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [&#41;Transact-SQL ALTER DATABASE &#40;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [Отсоединение и присоединение базы данных &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
+ [Создание &#40;базы данных SQL Server&#41;Transact-SQL](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [Отсоединение базы данных](../../relational-databases/databases/detach-a-database.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys.registered_search_properties (Transact-SQL) | Документация Майкрософт
+title: sys. registered_search_properties (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -25,27 +25,27 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 055e64c743c453fb6362d45587b395bf6f3d77bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68067891"
 ---
-# <a name="sysregisteredsearchproperties-transact-sql"></a>sys.registered_search_properties (Transact-SQL)
+# <a name="sysregistered_search_properties-transact-sql"></a>sys.registered_search_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Содержит строку для каждого свойства поиска, которое содержится в списке свойств поиска в текущей базе данных.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |**property_list_id**|**int**|Идентификатор списка свойств поиска, к которому принадлежит свойство.|  
-|**property_set_guid**|**uniqueidentifier**|Глобальный уникальный идентификатор (GUID), определяющий набор свойств, к которому принадлежит свойство поиска.|  
+|**property_set_guid**|**UNIQUEIDENTIFIER**|Глобальный уникальный идентификатор (GUID), определяющий набор свойств, к которому принадлежит свойство поиска.|  
 |**property_int_id**|**int**|Целое число, определяющее свойство поиска в наборе свойств. **property_int_id** уникален в пределах набора свойств.|  
-|**property_name**|**Nvarchar(64)**|Имя, однозначно определяющие свойство поиска в списке свойств поиска.<br /><br /> Примечание. Чтобы выполнить поиск по свойству, укажите имя этого свойства в [CONTAINS](../../t-sql/queries/contains-transact-sql.md) предиката.|  
+|**property_name**|**nvarchar (64)**|Имя, однозначно определяющие свойство поиска в списке свойств поиска.<br /><br /> Примечание. для поиска по свойству укажите имя этого свойства в предикате [Contains](../../t-sql/queries/contains-transact-sql.md) .|  
 |**property_description**|**nvarchar(512)**|Описание свойства.|  
-|**идентификатором**|**int**|Внутренний идентификатор свойства поиска в списке свойств поиска, идентифицируемый **property_list_id** значение.<br /><br /> После добавления свойства к данному списку свойств поиска механизм полнотекстового поиска регистрирует это свойство и назначает ему внутренний идентификатор свойства, относящийся к указанному списку свойств. Внутренний идентификатор свойства, являющийся целым числом, не повторяется в заданном списке свойств поиска. Если данное свойство зарегистрировано в нескольких списках свойств поиска, каждому списку свойств поиска может быть назначен отдельный внутренний идентификатор свойств.<br /><br /> Примечание. Внутренний идентификатор свойства отличается от целочисленного идентификатора свойства, указываемого при добавлении свойства в список свойств поиска. Дополнительные сведения см. в статье [Поиск свойств документа с использованием списков свойств поиска](../../relational-databases/search/search-document-properties-with-search-property-lists.md).<br /><br /> Чтобы просмотреть все относящиеся к свойству содержимого в полнотекстовый индекс: <br />                  [sys.dm_fts_index_keywords_by_property (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)|  
+|**property_id**|**int**|Внутренний идентификатор свойства свойства поиска в списке свойств поиска, определяемом значением **property_list_id** .<br /><br /> После добавления свойства к данному списку свойств поиска механизм полнотекстового поиска регистрирует это свойство и назначает ему внутренний идентификатор свойства, относящийся к указанному списку свойств. Внутренний идентификатор свойства, являющийся целым числом, не повторяется в заданном списке свойств поиска. Если данное свойство зарегистрировано в нескольких списках свойств поиска, каждому списку свойств поиска может быть назначен отдельный внутренний идентификатор свойств.<br /><br /> Примечание. идентификатор внутреннего свойства отличается от целочисленного идентификатора свойства, указанного при добавлении свойства в список свойств поиска. Дополнительные сведения см. в статье [Поиск свойств документа с использованием списков свойств поиска](../../relational-databases/search/search-document-properties-with-search-property-lists.md).<br /><br /> Чтобы просмотреть все содержимое, связанное со свойством, в полнотекстовом индексе: <br />                  [sys. dm_fts_index_keywords_by_property &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Дополнительные сведения о списках свойств поиска см. в статье [Поиск свойств документа с использованием списков свойств поиска](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
 ## <a name="permissions"></a>Разрешения  
@@ -64,9 +64,9 @@ SELECT * FROM sys.registered_search_properties;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [ALTER FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/alter-fulltext-index-transact-sql.md)   
- [sys.fulltext_indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)   
- [Поиск свойств документа с помощью списков свойств поиска](../../relational-databases/search/search-document-properties-with-search-property-lists.md)  
+## <a name="see-also"></a>См. также:  
+ [ALTER FULLTEXT INDEX &#40;&#41;Transact-SQL](../../t-sql/statements/alter-fulltext-index-transact-sql.md)   
+ [sys. fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)   
+ [Поиск свойств документа с использованием списков свойств поиска](../../relational-databases/search/search-document-properties-with-search-property-lists.md)  
   
   

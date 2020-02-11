@@ -11,13 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 01f9e53c4ae42f981b1b579294954a965ef8c376
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63140674"
 ---
-# <a name="change-the-scheduling-details-for-a-sql-server-agent-master-job"></a>Изменение параметров расписания для главного задания агента SQL Server
+# <a name="change-the-scheduling-details-for-a-sql-server-agent-master-job"></a>Change the Scheduling Details for a SQL Server Agent Master Job
   В этом разделе описывается изменение параметров расписания для определения задания в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **В этом разделе**  
@@ -26,9 +26,9 @@ ms.locfileid: "63140674"
   
      [Ограничения](#Restrictions)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
--   **Изменение параметров расписания для определения задания с помощью:**  
+-   **Изменение сведений о расписании для определения задания с помощью:**  
   
      [Среда SQL Server Management Studio](#SSMSProcedure)  
   
@@ -56,7 +56,7 @@ ms.locfileid: "63140674"
   
 4.  Щелкните правой кнопкой мыши задание, расписание которого необходимо изменить, и выберите пункт **Свойства**.  
   
-5.  В **свойства задания —** _имя_задания_ диалогового **Выбор страницы**выберите **расписания**. Дополнительные сведения о параметрах, доступных на этой странице, см. в разделе [свойства задания: Новое задание &#40;планирует страницы&#41;](job-properties-new-job-schedules-page.md).  
+5.  В диалоговом окне **Свойства задания —**_Job_name_ в разделе **Выбор страницы**выберите пункт **расписания**. Дополнительные сведения о параметрах, доступных на этой странице, см. в разделе [Свойства задания: создание задания &#40;расписания&#41;](job-properties-new-job-schedules-page.md).  
   
 6.  После завершения нажмите кнопку **ОК**.  
   

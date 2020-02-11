@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3d4d307ea18127586ac46b0f6afb973ef62cf6ba
-ms.sourcegitcommit: ede04340adbf085e668a2536d4f7114abba14a0c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74761483"
 ---
 # <a name="sysindexes-transact-sql"></a>sys.indexes (Transact-SQL)
@@ -32,28 +32,28 @@ ms.locfileid: "74761483"
 
   Содержит строку для каждого индекса или кучи табличного объекта, такого как таблица, представление или функция с табличным значением.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Идентификатор объекта, которому принадлежит данный индекс.|  
-|**безымян**|**имеет sysname**|Имя индекса. **имя** уникально только в пределах объекта.<br /><br /> NULL = куча.|  
+|**name**|**имеет sysname**|Имя индекса. **имя** уникально только в пределах объекта.<br /><br /> NULL = куча.|  
 |**index_id**|**int**|Идентификатор индекса. **index_id** уникален только в пределах объекта.<br /><br /> 0 = куча;<br /><br /> 1 = кластеризованный индекс;<br /><br /> > 1 = некластеризованный индекс|  
-|**Тип**|**tinyint**|Тип индекса:<br /><br /> 0 = куча;<br /><br /> 1 = кластеризованный<br /><br /> 2 = некластеризованный.<br /><br /> 3 = XML.<br /><br /> 4 = пространственный.<br /><br /> 5 = кластеризованный индекс columnstore. **Применимо к**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздним версиям.<br /><br /> 6 = некластеризованный индекс columnstore. **Применимо к**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздним версиям.<br /><br /> 7 = некластеризованный хэш-индекс. **Применимо к**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздним версиям.|  
-|**type_desc**|**nvarchar (60)**|Описание типа индекса.<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> XML<br /><br /> SPATIAL<br /><br /> Clustered COLUMNSTORE — **применяется к**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздним версиям.<br /><br /> Некластеризованный COLUMNSTORE — **применяется к**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздним версиям.<br /><br /> Некластеризованный хэш: некластеризованные хэш-индексы поддерживаются только для таблиц, оптимизированных для памяти. Представление sys.hash_indexes отображает текущие хэш-индексы и свойства хэша. Дополнительные сведения см. в разделе [sys. hash_indexes &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md). **Применимо к**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздним версиям.|  
-|**is_unique**|**версий**|1 = индекс уникален.<br /><br /> 0 = индекс не уникален.<br /><br /> Всегда равен 0 для кластеризованных индексов columnstore.|  
+|**type**|**tinyint**|Тип индекса:<br /><br /> 0 = куча;<br /><br /> 1 = кластеризованный<br /><br /> 2 = некластеризованный.<br /><br /> 3 = XML.<br /><br /> 4 = пространственный.<br /><br /> 5 = кластеризованный индекс columnstore. **Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий.<br /><br /> 6 = некластеризованный индекс columnstore. **Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.<br /><br /> 7 = некластеризованный хэш-индекс. **Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий.|  
+|**type_desc**|**nvarchar (60)**|Описание типа индекса.<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> XML<br /><br /> SPATIAL<br /><br /> Clustered COLUMNSTORE — **применяется к**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздним версиям.<br /><br /> Некластеризованный COLUMNSTORE — **применяется к**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздним версиям.<br /><br /> Некластеризованный хэш: некластеризованные хэш-индексы поддерживаются только для таблиц, оптимизированных для памяти. Представление sys.hash_indexes отображает текущие хэш-индексы и свойства хэша. Дополнительные сведения см. в разделе [sys. hash_indexes &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md). **Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий.|  
+|**is_unique**|**bit**|1 = индекс уникален.<br /><br /> 0 = индекс не уникален.<br /><br /> Всегда равен 0 для кластеризованных индексов columnstore.|  
 |**data_space_id**|**int**|Идентификатор пространства данных этого индекса. Пространством данных может быть или файловая группа, или схема секционирования.<br /><br /> 0 = **object_id** является возвращающей табличное значение функцией или индексом в памяти.|  
-|**ignore_dup_key**|**версий**|1 = параметр IGNORE_DUP_KEY имеет значение ON.<br /><br /> 0 = параметр IGNORE_DUP_KEY имеет значение OFF.|  
-|**is_primary_key**|**версий**|1 = индекс является частью ограничения PRIMARY KEY.<br /><br /> Всегда равен 0 для кластеризованных индексов columnstore.|  
-|**is_unique_constraint**|**версий**|1 = индекс является частью ограничения UNIQUE.<br /><br /> Всегда равен 0 для кластеризованных индексов columnstore.|  
+|**ignore_dup_key**|**bit**|1 = параметр IGNORE_DUP_KEY имеет значение ON.<br /><br /> 0 = параметр IGNORE_DUP_KEY имеет значение OFF.|  
+|**is_primary_key**|**bit**|1 = индекс является частью ограничения PRIMARY KEY.<br /><br /> Всегда равен 0 для кластеризованных индексов columnstore.|  
+|**is_unique_constraint**|**bit**|1 = индекс является частью ограничения UNIQUE.<br /><br /> Всегда равен 0 для кластеризованных индексов columnstore.|  
 |**fill_factor**|**tinyint**|> 0 = процент FILLFACTOR, используемый при создании или перестроении индекса.<br /><br /> 0 = значение по умолчанию.<br /><br /> Всегда равен 0 для кластеризованных индексов columnstore.|  
-|**is_padded**|**версий**|1 = параметр PADINDEX имеет значение ON.<br /><br /> 0 = параметр PADINDEX имеет значение OFF.<br /><br /> Всегда равен 0 для кластеризованных индексов columnstore.|  
-|**is_disabled**|**версий**|1 = индекс отключен.<br /><br /> 0 = индекс не отключен.|  
-|**is_hypothetical**|**версий**|1 = индекс является гипотетическим и не может быть использован непосредственно как путь доступа к данным. Гипотетические индексы содержат статистику уровня столбцов.<br /><br /> 0 = индекс не является гипотетическим.|  
-|**allow_row_locks**|**версий**|1 = индекс допускает блокировки строк.<br /><br /> 0 = индекс не допускает блокировки строк.<br /><br /> Всегда равен 0 для кластеризованных индексов columnstore.|  
-|**allow_page_locks**|**версий**|1 = индекс допускает блокировки страниц.<br /><br /> 0 = индекс не допускает блокировки страниц.<br /><br /> Всегда равен 0 для кластеризованных индексов columnstore.|  
-|**has_filter**|**версий**|1 = индекс с фильтром; содержит строки, удовлетворяющие определению фильтра.<br /><br /> 0 = индекс без фильтра.|  
-|**filter_definition**|**nvarchar (max)**|Выражение для подмножества строк, включенного в фильтруемый индекс.<br /><br /> Имеет значение NULL для кучи или нефильтруемого индекса.|  
-|**auto_created**|**версий**|1 = индекс был создан автоматической настройкой.<br /><br />0 = индекс был создан пользователем.
-|**optimize_for_sequential_key**|**версий**|1 = для индекса включена оптимизация вставки последней страницы.<br><br>0 = значение по умолчанию. В индексе отключена оптимизация вставки последней страницы.|
+|**is_padded**|**bit**|1 = параметр PADINDEX имеет значение ON.<br /><br /> 0 = параметр PADINDEX имеет значение OFF.<br /><br /> Всегда равен 0 для кластеризованных индексов columnstore.|  
+|**is_disabled**|**bit**|1 = индекс отключен.<br /><br /> 0 = индекс не отключен.|  
+|**is_hypothetical**|**bit**|1 = индекс является гипотетическим и не может быть использован непосредственно как путь доступа к данным. Гипотетические индексы содержат статистику уровня столбцов.<br /><br /> 0 = индекс не является гипотетическим.|  
+|**allow_row_locks**|**bit**|1 = индекс допускает блокировки строк.<br /><br /> 0 = индекс не допускает блокировки строк.<br /><br /> Всегда равен 0 для кластеризованных индексов columnstore.|  
+|**allow_page_locks**|**bit**|1 = индекс допускает блокировки страниц.<br /><br /> 0 = индекс не допускает блокировки страниц.<br /><br /> Всегда равен 0 для кластеризованных индексов columnstore.|  
+|**has_filter**|**bit**|1 = индекс с фильтром; содержит строки, удовлетворяющие определению фильтра.<br /><br /> 0 = индекс без фильтра.|  
+|**filter_definition**|**nvarchar(max)**|Выражение для подмножества строк, включенного в фильтруемый индекс.<br /><br /> Имеет значение NULL для кучи или нефильтруемого индекса.|  
+|**auto_created**|**bit**|1 = индекс был создан автоматической настройкой.<br /><br />0 = индекс был создан пользователем.
+|**optimize_for_sequential_key**|**bit**|1 = для индекса включена оптимизация вставки последней страницы.<br><br>0 = значение по умолчанию. В индексе отключена оптимизация вставки последней страницы.|
 
 > [!NOTE]
 > Бит **optimize_for_sequential_key** поддерживается только в версиях SQL Server 2019 CTP 3,1 и выше.
@@ -87,9 +87,9 @@ GO
   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Представления каталога объектов &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [sys. index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
  [sys. xml_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)   
  [sys. Objects &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
@@ -97,6 +97,6 @@ GO
  [sys. FILEGROUP &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
  [sys. partition_schemes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-schemes-transact-sql.md)   
  [Запросы к системному каталогу SQL Server вопросы и ответы](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
- [Выполняющаяся в памяти OLTP &#40;оптимизации в памяти&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+ [Выполняющаяся в памяти OLTP (оптимизация в памяти)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

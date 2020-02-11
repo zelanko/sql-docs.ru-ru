@@ -13,20 +13,20 @@ ms.assetid: 78ae1695-b53e-48ff-be49-ecff1f599e61
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3789c065f11c1c7ce9a8cb34037fbc284ee17c52
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68053993"
 ---
 # <a name="sqldisconnect-visual-foxpro-odbc-driver"></a>SQLDisconnect (драйвер ODBC для Visual FoxPro)
 > [!NOTE]  
->  Этот раздел содержит сведения Visual FoxPro ODBC-драйвером. Общие сведения об этой функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  В этом разделе содержатся сведения, относящиеся к драйверу ODBC для Visual FoxPro. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Поддержка: Полное  
+ Поддержка: полная  
   
- Соответствие API ODBC: Уровня ядра  
+ Соответствие API ODBC: уровень ядра  
   
  Закрывает соединение.  
   
- Дополнительные сведения см. в разделе [SQLDisconnect](../../odbc/reference/syntax/sqldisconnect-function.md) в *Справочник по программированию ODBC*.
+ Дополнительные сведения см. в разделе [SQLDisconnect](../../odbc/reference/syntax/sqldisconnect-function.md) в *справочнике программиста по ODBC*.

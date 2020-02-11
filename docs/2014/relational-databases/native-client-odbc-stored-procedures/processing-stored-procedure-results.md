@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3e7ffe8b73a7df4cbe2fddcaa0864e338b039f53
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68205483"
 ---
 # <a name="processing-stored-procedure-results"></a>Обработка результатов хранимой процедуры
@@ -32,11 +32,11 @@ ms.locfileid: "68205483"
   
 -   Процедура может иметь целочисленный код возврата.  
   
- Приложения должны обрабатывать все эти выходы хранимых процедур. Инструкции CALL или EXECUTE должны включать маркеры параметров для кода возврата и выходных параметров. Используйте [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) для их привязки в качестве выходных параметров и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйвер ODBC собственного клиента будет передавать выходные значения связанным переменным. Выходные параметры и коды возврата являются последними элементами, возвращаемыми клиенту, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; они не возвращаются приложению, пока [SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md) не вернет значение SQL_NO_DATA.  
+ Приложения должны обрабатывать все эти выходы хранимых процедур. Инструкции CALL или EXECUTE должны включать маркеры параметров для кода возврата и выходных параметров. Используйте [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) , чтобы привязать их все как выходные параметры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , а драйвер ODBC для собственного клиента передает выходные значения в привязанные переменные. Выходные параметры и коды возврата — это последние возвращенные клиенту элементы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. они не возвращаются приложению, пока [SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md) не возвратит SQL_NO_DATA.  
   
  ODBC не поддерживает привязку параметров курсора [!INCLUDE[tsql](../../includes/tsql-md.md)]. Поскольку все выходные параметры должны быть связаны до выполнения процедуры, приложение ODBC не может вызывать хранимые процедуры [!INCLUDE[tsql](../../includes/tsql-md.md)], содержащие выходной параметр курсора.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выполнение хранимых процедур](running-stored-procedures.md)  
   
   

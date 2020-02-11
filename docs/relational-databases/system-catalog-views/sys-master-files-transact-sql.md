@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2aa7c30f132f0c0e8774dcb39f31e1a254e8689c
-ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72313721"
 ---
 # <a name="sysmaster_files-transact-sql"></a>sys.master_files (Transact-SQL)
@@ -32,39 +32,39 @@ ms.locfileid: "72313721"
 
   Содержит по одной строке для каждого файла базы данных, как хранящиеся в базе данных master. Это единственное общесистемное представление.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|Идентификатор базы данных, которому принадлежит данный файл. Masterdatabase_id всегда имеет значение 1.|  
 |file_id|**int**|Идентификатор файла в базе данных. Параметр file_id первичного файла всегда имеет значение 1.|  
-|file_guid|**uniqueidentifier**|Уникальный идентификатор файла.<br /><br /> NULL = база данных была обновлена с более ранней версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (допустима для SQL Server 2005 и более ранних версий).|  
-|Тип|**tinyint**|Тип файла:<br /><br /> 0 = строки.<br /><br /> 1 = журнал.<br /><br /> 2 = FILESTREAM.<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = полнотекстовый каталог (полнотекстовые каталоги в версии, предшествующей [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]; полнотекстовые каталоги, которые обновлены до версии или созданы в версии [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и последующих, сообщают о типе файла 0).|  
-|type_desc|**nvarchar(60)**|Описание типа файла:<br /><br /> ROWS<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT (полнотекстовые каталоги в версии, предшествующей [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]).|  
+|file_guid|**UNIQUEIDENTIFIER**|Уникальный идентификатор файла.<br /><br /> NULL = база данных была обновлена с более ранней версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (допустима для SQL Server 2005 и более ранних версий).|  
+|type|**tinyint**|Тип файла:<br /><br /> 0 = строки.<br /><br /> 1 = журнал.<br /><br /> 2 = FILESTREAM.<br /><br /> 3 =[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = полнотекстовый каталог (полнотекстовые каталоги в версии, предшествующей [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]; полнотекстовые каталоги, которые обновлены до версии или созданы в версии [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и последующих, сообщают о типе файла 0).|  
+|type_desc|**nvarchar (60)**|Описание типа файла:<br /><br /> ROWS<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT (полнотекстовые каталоги в версии, предшествующей [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]).|  
 |data_space_id|**int**|Идентификатор пространства данных, которому принадлежит этот файл. Пространство данных является файловой группой.<br /><br /> 0 = файлы журнала|  
-|name|**sysname**|Логическое имя файла в базе данных.|  
+|name|**имеет sysname**|Логическое имя файла в базе данных.|  
 |physical_name|**nvarchar(260)**|Имя файла в операционной системе.|  
 |state|**tinyint**|Состояние файла:<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = SUSPECT<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT|  
-|state_desc|**nvarchar(60)**|Описание состояния файла:<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> Дополнительные сведения см. в разделе [Состояния файлов](../../relational-databases/databases/file-states.md).|  
+|state_desc|**nvarchar (60)**|Описание состояния файла:<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> Дополнительные сведения см. в разделе [Состояния файлов](../../relational-databases/databases/file-states.md).|  
 |size|**int**|Текущий размер файла, в 8 КБ страницах. Для моментального снимка базы данных аргумент size отражает максимальное пространство, которое моментальный снимок может использовать только для файла.<br /><br /> Примечание. это поле заполняется нулевым числом контейнеров FILESTREAM. Запросите представление каталога *sys. database_files* , чтобы получить фактический размер контейнеров FILESTREAM.|  
 |max_size|**int**|Максимальный размер файла в страницах по 8 КБ:<br /><br /> 0 = Увеличение размера запрещено.<br /><br /> -1 = размер файла может увеличиваться до полного заполнения диска.<br /><br /> 268435456 = файл журнала может увеличиваться до 2 ТБ.<br /><br /> Примечание. базы данных, которые были обновлены с неограниченным размером файла журнала, будут сообщать-1 о максимальном размере файла журнала.|  
-|growth|**int**|0 = Файл имеет фиксированный размер и не будет увеличиваться.<br /><br /> > 0 = файл будет автоматически расти.<br /><br /> Если аргумент is_percent_growth имеет значение 0, шаг роста измеряется в страницах по 8 КБ, округленных до ближайших 64 КБ.<br /><br /> Если значение аргумента is_percent_growth = 1, шаг увеличения размера выражается в процентах от общего размера.|  
-|is_media_read_onlyF|**бит**|1 = файл находится на носителе только для чтения.<br /><br /> 0 = Файл размещен на носителе, доступно для чтения и записи.|  
-|is_read_only|**бит**|1 = файл помечен как файл только для чтения.<br /><br /> 0 = Файл помечен как доступный для чтения и записи.|  
-|is_sparse|**бит**|1 = разреженный файл.<br /><br /> 0 = неразреженный файл.<br /><br /> Дополнительные сведения см. в разделе [Просмотр размера разреженного файла снимка базы данных (Transact-SQL)](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md).|  
-|is_percent_growth|**бит**|1 = размер файла увеличивается в процентах.<br /><br /> 0 = абсолютное увеличение размера в страницах.|  
-|is_name_reserved|**бит**|1 = имя удаленного файла, доступно для использования. Резервная копия журнала должна быть получена, перед тем как имя (аргументы name или physical_name) может быть использовано для нового имени файла.<br /><br /> 0 = имя файла, недоступно для использования.|  
-|create_lsn|**numeric(25,0)**|Регистрационный номер транзакции в журнале (LSN), на котором создан файл.|  
-|drop_lsn|**numeric(25,0)**|Номер LSN, с которым файл удален.|  
-|read_only_lsn|**numeric(25,0)**|Номер LSN, на котором файловая группа, содержащая файл, изменила тип с «для чтения и записи» на «только для чтения» (самое последнее изменение).|  
-|read_write_lsn|**numeric(25,0)**|Номер LSN, на котором файловая группа, содержащая файл, изменила тип с «только для чтения» на «для чтения и записи» (самое последнее изменение).|  
-|differential_base_time|**numeric(25,0)**|Основа для разностных резервных копий. Экстенты данных, измененных после того, как этот номер LSN будет включен в разностную резервную копию.|  
-|differential_base_guid|**uniqueidentifier**|Уникальный идентификатор базовой резервной копии, на которой будет основываться разностная резервная копия.|  
+|growth|**int**|0 = Файл имеет фиксированный размер и не будет увеличиваться.<br /><br /> >0 = файл будет автоматически расти.<br /><br /> Если аргумент is_percent_growth имеет значение 0, шаг роста измеряется в страницах по 8 КБ, округленных до ближайших 64 КБ.<br /><br /> Если значение аргумента is_percent_growth = 1, шаг увеличения размера выражается в процентах от общего размера.|  
+|is_media_read_onlyF|**bit**|1 = файл находится на носителе только для чтения.<br /><br /> 0 = Файл размещен на носителе, доступно для чтения и записи.|  
+|is_read_only|**bit**|1 = файл помечен как файл только для чтения.<br /><br /> 0 = Файл помечен как доступный для чтения и записи.|  
+|is_sparse|**bit**|1 = разреженный файл.<br /><br /> 0 = неразреженный файл.<br /><br /> Дополнительные сведения см. в разделе [Просмотр размера разреженного файла снимка базы данных (Transact-SQL)](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md).|  
+|is_percent_growth|**bit**|1 = размер файла увеличивается в процентах.<br /><br /> 0 = абсолютное увеличение размера в страницах.|  
+|is_name_reserved|**bit**|1 = имя удаленного файла, доступно для использования. Резервная копия журнала должна быть получена, перед тем как имя (аргументы name или physical_name) может быть использовано для нового имени файла.<br /><br /> 0 = имя файла, недоступно для использования.|  
+|create_lsn|**numeric (25, 0)**|Регистрационный номер транзакции в журнале (LSN), на котором создан файл.|  
+|drop_lsn|**numeric (25, 0)**|Номер LSN, с которым файл удален.|  
+|read_only_lsn|**numeric (25, 0)**|Номер LSN, на котором файловая группа, содержащая файл, изменила тип с «для чтения и записи» на «только для чтения» (самое последнее изменение).|  
+|read_write_lsn|**numeric (25, 0)**|Номер LSN, на котором файловая группа, содержащая файл, изменила тип с «только для чтения» на «для чтения и записи» (самое последнее изменение).|  
+|differential_base_time|**numeric (25, 0)**|Основа для разностных резервных копий. Экстенты данных, измененных после того, как этот номер LSN будет включен в разностную резервную копию.|  
+|differential_base_guid|**UNIQUEIDENTIFIER**|Уникальный идентификатор базовой резервной копии, на которой будет основываться разностная резервная копия.|  
 |differential_base_time|**datetime**|Время, соответствующее differential_base_lsn.|  
-|redo_start_lsn|**numeric(25,0)**|Номер LSN, с которого должен начаться следующий накат.<br /><br /> Равно NULL за исключением случаев, когда значение аргумента state = RESTORING или значение аргумента state = RECOVERY_PENDING.|  
-|redo_start_fork_guid|**uniqueidentifier**|Уникальный идентификатор точки вилки восстановления. Значение аргумента first_fork_guid следующей восстановленной резервной копии журнала должно совпадать с этим значением. Это отражает текущее состояние контейнера.|  
-|redo_target_lsn|**numeric(25,0)**|Номер LSN, на котором накат в режиме «в сети» по данному файлу может остановиться.<br /><br /> Равно NULL за исключением случаев, когда значение аргумента state = RESTORING или значение аргумента state = RECOVERY_PENDING.|  
-|redo_target_fork_guid|**uniqueidentifier**|Вилка восстановления, на которой может быть восстановлен контейнер. Используется в паре с redo_target_lsn.|  
-|backup_lsn|**numeric(25,0)**|Номер LSN самых новых данных или разностная резервная копия файла.|  
-|credential_id|**int**|`credential_id` из `sys.credentials`, используемого для хранения файла. Например, если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется на виртуальной машине Azure, а файлы базы данных хранятся в хранилище BLOB-объектов Azure, учетные данные настраиваются с учетными данными доступа к месту хранения.|  
+|redo_start_lsn|**numeric (25, 0)**|Номер LSN, с которого должен начаться следующий накат.<br /><br /> Равно NULL за исключением случаев, когда значение аргумента state = RESTORING или значение аргумента state = RECOVERY_PENDING.|  
+|redo_start_fork_guid|**UNIQUEIDENTIFIER**|Уникальный идентификатор точки вилки восстановления. Значение аргумента first_fork_guid следующей восстановленной резервной копии журнала должно совпадать с этим значением. Это отражает текущее состояние контейнера.|  
+|redo_target_lsn|**numeric (25, 0)**|Номер LSN, на котором накат в режиме «в сети» по данному файлу может остановиться.<br /><br /> Равно NULL за исключением случаев, когда значение аргумента state = RESTORING или значение аргумента state = RECOVERY_PENDING.|  
+|redo_target_fork_guid|**UNIQUEIDENTIFIER**|Вилка восстановления, на которой может быть восстановлен контейнер. Используется в паре с redo_target_lsn.|  
+|backup_lsn|**numeric (25, 0)**|Номер LSN самых новых данных или разностная резервная копия файла.|  
+|credential_id|**int**|Объект `credential_id` , `sys.credentials` используемый для хранения файла. Например, если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется на виртуальной машине Azure, а файлы базы данных хранятся в хранилище BLOB-объектов Azure, учетные данные настраиваются с учетными данными доступа к месту хранения.|  
   
 > [!NOTE]  
 >  При удалении или перестройке больших индексов либо удалении или усечении больших таблиц компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] откладывает фактическое освобождение страниц и связанных блокировок до момента фиксации транзакции. Отложенные операции удаления не освобождают выделенное место немедленно. Поэтому значения, возвращаемые sys.master_files сразу после удаления или обрезания большого объекта, могут не отражать доступное пространство на диске.  
@@ -72,11 +72,11 @@ ms.locfileid: "72313721"
 ## <a name="permissions"></a>Разрешения  
  Минимальные разрешения, необходимые для просмотра соответствующих строк — CREATE DATABASE, ALTER ANY DATABASE или VIEW ANY DEFINITION.  
   
-## <a name="see-also"></a>См. также статью  
- [Представления каталогов баз данных и файлов (Transact-SQL)](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
-   [состояний файлов](../../relational-databases/databases/file-states.md)  
- [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Представления каталога баз данных и файлов &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
+ [Состояния файлов](../../relational-databases/databases/file-states.md)   
+ [sys. databases &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
+ [sys. database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [Файлы и файловые группы базы данных](../../relational-databases/databases/database-files-and-filegroups.md)  
   
   

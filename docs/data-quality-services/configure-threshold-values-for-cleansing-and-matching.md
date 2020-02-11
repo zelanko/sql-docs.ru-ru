@@ -1,6 +1,6 @@
 ---
 title: Настройка пороговых значений для очистки и сопоставления
-description: Узнайте, как настроить пороговые значения, которые будут использоваться при пользовательской очистке и соответствующих ими в SQL Server Data Quality Services (DQS).
+description: Узнайте, как настроить пороговые значения, которые будут использоваться при пользовательской очистке и соответствующих действиях в SQL Server Data Quality Services (DQS).
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2305409-7115-45a4-8f60-1213c0a47368
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 4fcbc8e4e6d6a9c1df07d8e1b1aa68c08c162817
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.openlocfilehash: a0bcf7bc1cdf28aae4fc281f14f8edeec9f6c47d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75557896"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76916312"
 ---
 # <a name="configure-threshold-values-for-cleansing-and-matching---data-quality-services-dqs"></a>Настройка пороговых значений для очистки и сопоставления — службы Data Quality Services (DQS)
 
@@ -30,11 +30,11 @@ ms.locfileid: "75557896"
 
   В этом разделе описывается настройка пороговых значений, которые будут использоваться в ходе операций автоматизированной очистки и сопоставления в службах [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
   
-##  <a name="BeforeYouBegin"></a>Перед началом  
+##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Security"></a>Бюллетеня  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a>Чтение  
+####  <a name="Permissions"></a> Permissions  
  Для настройки этих пороговых значений необходимо иметь роль dqs_administrator в базе данных DQS_MAIN.  
   
 ##  <a name="Configure"></a>Настройка пороговых значений  
@@ -53,6 +53,6 @@ ms.locfileid: "75557896"
   
 5.  Пороговое значение для операции сопоставления задается в поле **Минимальная оценка для записи** в области **Сопоставление** . Это значение задает минимальную оценку для записи, которая позволяет считать ее соответствующей другой записи. Значение по умолчанию — 80 %.  
   
-6.  Нажмите кнопку **Закрыть**.  
+6.  Щелкните **Закрыть**.  
   
   

@@ -14,10 +14,10 @@ ms.assetid: 5e4402ce-31db-4774-a2a1-552335f87693
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: a83b51479aadc92941da073e5bf9f0da394691ff
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729163"
 ---
 # <a name="initiate-actions-based-on-attribute-value-changes-master-data-services"></a>Инициирование действия на основе значения атрибута (службы Master Data Services)
@@ -26,14 +26,14 @@ ms.locfileid: "73729163"
 
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]для инициации действий на основе значения атрибута создаются бизнес-правила. Например, когда значение определенного атрибута изменяется, может потребоваться изменить значение, отправить уведомление или запустить внешний рабочий процесс.  
   
-## <a name="prerequisites"></a>необходимые компоненты  
- Чтобы выполнить эту процедуру:  
+## <a name="prerequisites"></a>Предварительные требования  
+ Для выполнения этой процедуры:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
   
 -   необходимо быть администратором модели. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](../master-data-services/administrators-master-data-services.md).  
   
--   Атрибуты должны быть в группе отслеживания изменений. Дополнительные сведения см. в разделе [Добавление атрибутов в группу отслеживания изменений (службы Master Data Services)](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md) .  
+-   Атрибуты должны быть в группе отслеживания изменений. Дополнительные сведения см. в разделе [Add Attributes to a Change Tracking Group &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md) .  
   
 ### <a name="to-create-a-business-rule-to-initiate-actions-based-on-attribute-value-changes"></a>Создание бизнес-правила для инициации действий на основе значения атрибута  
   
@@ -86,12 +86,12 @@ ms.locfileid: "73729163"
   
 -   Примените бизнес-правила к данным с помощью одной из следующих процедур:  
   
-    -   [Подтверждение конкретных членов, обнаруженных при проверке на соответствие бизнес-правилам (службы Master Data Services)](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
+    -   [Проверка конкретных членов на соответствие бизнес-правилам &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
-    -   [Подтверждение исправления проблемы, обнаруженной при проверке на соответствие бизнес-правилам (службы Master Data Services)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
+    -   [Проверка версии на соответствие бизнес-правилам &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
-## <a name="see-also"></a>См. также статью  
- [Добавление атрибутов в группу отслеживания изменений (службы Master Data Services)](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)   
- [Бизнес-правила (службы Master Data Services)](../master-data-services/business-rules-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Добавление атрибутов в группу Отслеживание изменений &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)   
+ [Бизнес-правила &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
   

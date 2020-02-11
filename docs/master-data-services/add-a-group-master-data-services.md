@@ -14,10 +14,10 @@ ms.assetid: c7a88381-3b2c-4af7-9cf7-3a930c1abdee
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: ef07ebbaf787852b3902af158f4f515293aae7ff
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728817"
 ---
 # <a name="add-a-group-master-data-services"></a>Добавление группы (службы Master Data Services)
@@ -27,7 +27,7 @@ ms.locfileid: "73728817"
   Чтобы начать процесс назначения разрешений для веб-приложения, нужно добавить группу в список **Группы** служб [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Прежде чем пользователь группы сможет получить доступ к [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], группе необходимо предоставить разрешения для одной или нескольких функциональных областей и объектов модели.  
   
 ## <a name="prerequisites"></a>Предварительные требования  
- Чтобы выполнить эту процедуру:  
+ Для выполнения этой процедуры:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Разрешения пользователей и групп** ;  
   
@@ -48,11 +48,11 @@ ms.locfileid: "73728817"
     > [!NOTE]  
     >  После первого обращения пользователя к [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]имя пользователя добавляется в список пользователей [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] .  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
   
--   [Назначение разрешений для функциональной области (службы Master Data Services)](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
+-   [Назначение разрешений функциональной области &#40;Master Data Services&#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>См. также раздел  
- [Безопасность (службы Master Data Services)](../master-data-services/security-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Master Data Services &#40;безопасности&#41;](../master-data-services/security-master-data-services.md)  
   
   

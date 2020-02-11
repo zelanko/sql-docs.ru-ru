@@ -18,10 +18,10 @@ ms.assetid: 7a656644-2154-419f-9787-99877f597770
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 48f81c86a823d75d501187ef953930ec92083d27
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73659126"
 ---
 # <a name="numberofflags-property-clientnetworkprotocol-class"></a>Свойство NumberOfFlags (класс ClientNetworkProtocol)
@@ -36,15 +36,15 @@ object.NumberofFlags [= value]
 ```  
   
 ## <a name="parts"></a>Компоненты  
- *object*  
- Объект [класса ClientNetworkProtocol](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) , который представляет сетевой протокол, используемый клиентом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+ *объектами*  
+ A [класса ClientNetworkProtocol](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) , который представляет сетевой протокол, используемый клиентом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение **UInt32** , указывающее количество параметров флага, необходимых сетевому протоколу клиента, на который ссылается свойство **OrderValue** .  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также раздел  
- [Настройка клиентских протоколов](https://technet.microsoft.com/library/ms181035.aspx)  
+## <a name="see-also"></a>См. также:  
+ [настройка клиентских протоколов](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

@@ -16,13 +16,13 @@ ms.assetid: 9ea55df3-2e99-4683-88ad-bde718288bc7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e87e542395c00797ce50b220ad8a6c981f43605a
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771093"
 ---
-# <a name="sphelparticlecolumns-transact-sql"></a>sp_helparticlecolumns (Transact-SQL)
+# <a name="sp_helparticlecolumns-transact-sql"></a>sp_helparticlecolumns (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Возвращает все столбцы базовой таблицы. Эта хранимая процедура выполняется на издателе в базе данных публикации. Для издателей Oracle данная хранимая процедура выполняется распространителем для любой базы данных.  
@@ -46,36 +46,36 @@ sp_helparticlecolumns [ @publication = ] 'publication'
 `[ @publisher = ] 'publisher'`Указывает [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя, отличного от. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
   
 > [!NOTE]  
->  не следует указывать *Издатель* , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] если запрошенная статья опубликована издателем.  
+>  не следует указывать *Издатель* , если запрошенная статья опубликована [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателем.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (неопубликованные столбцы) или **1** (опубликованные столбцы)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |**Идентификатор столбца**|**int**|Идентификатор столбца.|  
-|**column**|**sysname**|Имя столбца.|  
-|**выпущен**|**bit**|Опубликован ли столбец:<br /><br /> **0** = Нет<br /><br /> **1** = Да|  
-|**тип издателя**|**sysname**|Тип данных столбца на издателе.|  
-|**Тип подписчика**|**sysname**|Тип данных столбца на подписчике.|  
+|**рубрик**|**имеет sysname**|Имя столбца.|  
+|**выпущен**|**bit**|Опубликован ли столбец:<br /><br /> **0** = нет<br /><br /> **1** = да|  
+|**тип издателя**|**имеет sysname**|Тип данных столбца на издателе.|  
+|**Тип подписчика**|**имеет sysname**|Тип данных столбца на подписчике.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  **sp_helparticlecolumns** используется в моментальных снимках и репликации транзакций.  
   
- **sp_helparticlecolumns** полезен при проверке вертикальной секции.  
+ **sp_helparticlecolumns** удобно использовать для проверки вертикальной секции.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** , предопределенной роли базы данных **db_owner** или списка доступа к публикации для текущей публикации могут выполнять **sp_helparticlecolumns**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Определение и изменение фильтра столбцов](../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)   
- [хранимая процедуры sp_addarticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
- [sp_articlecolumn (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
- [sp_changearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
- [sp_droparticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
- [sp_droppublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+ [sp_articlecolumn &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
+ [sp_changearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
+ [sp_droparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
+ [sp_droppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -11,25 +11,25 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0be986ee50599c6e95222bca2eae217b088e2de3
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69530816"
 ---
 # <a name="install-sample-data-and-projects-for-the-analysis-services-multidimensional-modeling-tutorial"></a>Установка образцов данных и проектов для учебника по многомерному моделированию в службах Analysis Services
   Используйте указания и ссылки, приведенные в этом разделе, для установки всех файлов данных и проектов, используемых в учебниках по службам Analysis Services.  
   
-## <a name="step-1-install-sql-server-software"></a>Шаг 1. Установка SQL Server программного обеспечения  
- В занятиях этого учебника предполагается, что установлено следующее программное обеспечение. Все перечисленное ниже программное обеспечение устанавливается с установочного носителя SQL Server. Для простоты развертывания все компоненты можно установить на одном компьютере. Для установки этих компонентов запустите программу установки SQL Server и выберите их на странице «Выбор компонентов». Дополнительные сведения см. в разделе [Install SQL Server 2014 &#40;мастера&#41;установки](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).  
+## <a name="step-1-install-sql-server-software"></a>Шаг 1. Установка SQL Server  
+ В занятиях этого учебника предполагается, что установлено следующее программное обеспечение. Все перечисленное ниже программное обеспечение устанавливается с установочного носителя SQL Server. Для простоты развертывания все компоненты можно установить на одном компьютере. Для установки этих компонентов запустите программу установки SQL Server и выберите их на странице «Выбор компонентов». Дополнительные сведения см. [в разделе Install SQL Server 2014 мастера установки &#40;&#41;установки ](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).  
   
 -   Компонент Database Engine  
   
 -   Службы Analysis Services  
   
-     Analysis Services доступен только в этих выпусках: Оценка, Корпоративная, Бизнес-аналитика, стандартная.  
+     Службы Analysis Services доступны только в следующих выпусках: Evaluation, Enterprise, Business Intelligence, Standard.  
   
-     Обратите внимание, что выпуски SQL Server Express не включают службы Analysis Services. [Скачайте ознакомительный выпуск](https://go.microsoft.com/fwlink/?LinkId=392824), если хотите опробовать программное обеспечение бесплатно.  
+     Обратите внимание, что выпуски SQL Server Express не включают службы Analysis Services. [Загрузите ознакомительную](https://go.microsoft.com/fwlink/?LinkId=392824) версию, если вы хотите испытать программное обеспечение бесплатно.  
   
      По умолчанию службы Analysis Services устанавливаются как многомерный экземпляр, но это можно переопределить, выбрав табличный режим сервера на странице настройки сервера мастера установки. Если необходимо запускать оба режима сервера, перезапустите программу установки SQL Server на том же компьютере, чтобы установить второй экземпляр служб Analysis Services в другом режиме.  
   
@@ -39,14 +39,14 @@ ms.locfileid: "69530816"
   
  Кроме того, данные можно просматривать с помощью конструктора запросов многомерных выражений, который встроен в [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Конструктор запросов возвращает те же данные, только представленные в виде плоского набора строк.  
   
-## <a name="step-2-download-sql-server-data-tools---business-intelligence-for-visual-studio-2012"></a>Шаг 2. Загрузка SQL Server Data Tools — бизнес-аналитика для Visual Studio 2012  
+## <a name="step-2-download-sql-server-data-tools---business-intelligence-for-visual-studio-2012"></a>Шаг 2. скачивание SQL Server Data Tools — бизнес-аналитика для Visual Studio 2012  
  В этом выпуске средства SQL Server Data Tools загружаются и устанавливаются отдельно от других компонентов SQL Server. Конструкторы и шаблоны проектов, используемых для создания моделей и отчетов бизнес-аналитики, доступны для бесплатной загрузки в сети.  
   
--   [Скачайте версию Business Intelligence средств SQL Server Data Tools](https://go.microsoft.com/fwlink/p/?LinkID=322038). Файл будет сохранен в папке «Загрузки». Запустите программу установки средства.  
+-   [Скачайте версию бизнес-аналитики SQL Server Data Tools](https://go.microsoft.com/fwlink/p/?LinkID=322038). Файл будет сохранен в папке «Загрузки». Запустите программу установки средства.  
   
      Перезагрузите компьютер, чтобы завершить установку.  
   
-## <a name="step-3-install-databases"></a>Шаг 3. Установка баз данных  
+## <a name="step-3-install-databases"></a>Шаг 3. Установка баз данных  
  В многомерной модели служб Analysis Services используются транзакционные данные, импортируемые из системы управления реляционными базами данных. Для целей этого учебника в качестве источников данных будет использоваться следующая реляционная база данных.  
   
 -   **AdventureWorksDW2012** — это реляционное хранилище данных, которое выполняется на экземпляре ядро СУБД. Оно содержит исходные данные, используемые в базах данных и проектах служб Analysis Services, которые вы создадите и развернете в этом учебнике.  
@@ -94,7 +94,7 @@ ms.locfileid: "69530816"
   
  Файл проекта для занятия 4 особенно важен, так как он используется не только в этом занятии, но и во всех последующих занятиях. В отличие от предыдущих файлов проектов, в которых в результате выполнения шагов занятия создается точная копия файлов выполненных проектов, в образце проекта для занятия 4 содержится новая информация модели, отсутствующая в моделях, которые создаются на занятиях с 1 по 3. В занятии 4 предполагается, что вы начинаете работать с файлом образца проекта, который можно загрузить по следующей ссылке.  
   
-1.  Скачайте [Учебник по службам SQL Server 2012 Analysis Services](https://go.microsoft.com/fwlink/p/?LinkID=221866) на странице образцов продуктов на сайте codeplex.  
+1.  Скачайте [Учебник по службам SQL Server 2012 Analysis Services](https://go.microsoft.com/fwlink/p/?LinkID=221866) на странице образцов продуктов на сайте codeplex.  
   
      Учебники 2012 года действительны для версии [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] .  
   
@@ -144,12 +144,12 @@ ms.locfileid: "69530816"
   
 8.  Запустите среду SQL Server Management Studio. В среде SQL Server Management Studio подключитесь к службам Analysis Services. Убедитесь в том, что на сервере выполняется база данных **Analysis Services Tutorial** (Учебник по службам Analysis Services).  
   
-## <a name="next-step"></a>Следующий шаг  
+## <a name="next-step"></a>Дальнейшее действие  
  Теперь вы готовы к работе с учебником. Дополнительные сведения о том, как приступить к работе, см. в разделе [Многомерное моделирование (учебник по Adventure Works)](multidimensional-modeling-adventure-works-tutorial.md).  
   
-## <a name="see-also"></a>См. также  
- [Установка SQL Server 2014 с помощью мастера &#40;установки&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
- [Configure the Windows Firewall to Allow Analysis Services Access](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)   
- [Настройка брандмауэра Windows для разрешения доступа к SQL Server](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  
+## <a name="see-also"></a>См. также:  
+ [Установка SQL Server 2014 с помощью мастера установки &#40;установки&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
+ [Настройка брандмауэра Windows на разрешение доступа к Analysis Services](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)   
+ [Configure the Windows Firewall to Allow SQL Server Access](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  
   
   

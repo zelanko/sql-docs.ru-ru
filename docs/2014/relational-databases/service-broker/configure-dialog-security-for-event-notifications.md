@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1c62812b138afef0244bbad5f3d17bafb4064537
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62630712"
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>Настройка безопасности диалогов для уведомлений о событиях
@@ -28,7 +28,7 @@ ms.locfileid: "62630712"
 > [!IMPORTANT]  
 >  Все сертификаты должны создаваться с допустимыми датами начала и окончания.  
   
- **Шаг 1. Задайте имя службы номер и целевой порт TCP.**  
+ **Шаг 1. Задайте номер порта TCP и имя целевой службы.**  
   
  Задайте порт TCP, через который как исходный, так и целевой серверы будут получать сообщения. Необходимо также определить имя целевой службы.  
   
@@ -85,14 +85,14 @@ ms.locfileid: "62630712"
 |Переключитесь на базу данных-источник, на которой необходимо создать уведомление о событии, и если еще вы не подключены в качестве пользователя исходной базы данных, выполните это подключение.|Переключитесь на целевую базу данных для получения сообщений с уведомлениями о событиях.|  
 |[Создайте уведомление о событии](/sql/t-sql/statements/create-event-notification-transact-sql)и задайте идентификатор компонента broker service целевой базы данных.||  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [GRANT (Transact-SQL)](/sql/t-sql/statements/grant-transact-sql)   
  [BACKUP CERTIFICATE (Transact-SQL)](/sql/t-sql/statements/backup-certificate-transact-sql)   
  [sys.databases (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
  [Иерархия средств шифрования](../security/encryption/encryption-hierarchy.md)   
  [Реализация уведомлений о событиях](event-notifications.md)   
  [CREATE MASTER KEY (Transact-SQL)](/sql/t-sql/statements/create-master-key-transact-sql)   
- [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)   
+ [CREATE LOGIN (Transact-SQL)](/sql/t-sql/statements/create-login-transact-sql)   
  [CREATE USER (Transact-SQL)](/sql/t-sql/statements/create-user-transact-sql)   
  [CREATE CERTIFICATE (Transact-SQL)](/sql/t-sql/statements/create-certificate-transact-sql)   
  [CREATE REMOTE SERVICE BINDING (Transact-SQL)](/sql/t-sql/statements/create-remote-service-binding-transact-sql)   

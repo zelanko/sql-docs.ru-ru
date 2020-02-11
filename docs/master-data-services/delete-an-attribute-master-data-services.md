@@ -14,10 +14,10 @@ ms.assetid: ec3e66f7-0e35-43d7-a80d-64899948ebfe
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 2d48e8c51f8151f8626e971f928a245ba6776c3e
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728341"
 ---
 # <a name="delete-an-attribute-master-data-services"></a>Удаление атрибута (службы Master Data Services)
@@ -26,8 +26,8 @@ ms.locfileid: "73728341"
 
   Операция удаления атрибута в службах [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]без возможности восстановления удаляет атрибут и все связанные с ним значения.  
   
-## <a name="prerequisites"></a>необходимые компоненты  
- Чтобы выполнить эту процедуру:  
+## <a name="prerequisites"></a>Предварительные требования  
+ Для выполнения этой процедуры:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
   
@@ -60,10 +60,10 @@ ms.locfileid: "73728341"
   
 8.  В диалоговом окне подтверждения нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также статью  
- [Атрибуты (службы Master Data Services)](../master-data-services/attributes-master-data-services.md)   
- [Атрибуты на основе домена (службы Master Data Services)](../master-data-services/domain-based-attributes-master-data-services.md)   
- [Создание текстового атрибута (службы Master Data Services)](../master-data-services/create-a-text-attribute-master-data-services.md)   
- [Создание атрибута на основе домена (службы Master Data Services)](../master-data-services/create-a-domain-based-attribute-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Master Data Services &#40;атрибутов&#41;](../master-data-services/attributes-master-data-services.md)   
+ [Атрибуты на основе домена &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)   
+ [Создание текстового атрибута &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)   
+ [Создание атрибута на основе домена &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)  
   
   

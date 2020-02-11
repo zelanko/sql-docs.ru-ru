@@ -14,10 +14,10 @@ ms.assetid: 4ce177b0-9884-47a2-9cea-212e845dd762
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 74a2b9a825b9e589cba9416eb932bcb824f00373
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728324"
 ---
 # <a name="delete-an-explicit-hierarchy-master-data-services"></a>Удаление явной иерархии (службы Master Data Services)
@@ -29,8 +29,8 @@ ms.locfileid: "73728324"
 > [!WARNING]  
 >  При удалении явной иерархии все консолидированные элементы в этой иерархии также удаляются. Если удаляются все явные иерархии для сущности, то все коллекции для этой сущности также удаляются и сущность перестает поддерживать явные иерархии и коллекции.  
   
-## <a name="prerequisites"></a>необходимые компоненты  
- Чтобы выполнить эту процедуру:  
+## <a name="prerequisites"></a>Предварительные требования  
+ Для выполнения этой процедуры:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
   
@@ -44,16 +44,16 @@ ms.locfileid: "73728324"
   
 3.  На странице **Manage Entity** (Управление сущностью) выберите в сетке строку сущности, для которой необходимо удалить явную иерархию.  
   
-4.  Щелкните **Явные иерархии**.  
+4.  Щелкните **явные иерархии**.  
   
 5.  На странице **Manage Explicit Hierarchy** (Управление явной иерархией) выберите удаляемую явную иерархию.  
   
-6.  Нажмите кнопку **Изменить**.  
+6.  Щелкните **Правка**.  
   
 7.  В диалоговом окне подтверждения нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также статью  
- [Создание явной иерархии (службы Master Data Services)](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
- [Явные иерархии (службы Master Data Services)](../master-data-services/explicit-hierarchies-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Создание явной иерархии &#40;Master Data Services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
+ [Явные иерархии &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)  
   
   

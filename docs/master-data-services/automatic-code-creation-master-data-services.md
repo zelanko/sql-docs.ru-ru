@@ -11,10 +11,10 @@ ms.assetid: 9adbd5e1-f28c-4fb5-afa7-082de2831f3e
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: abf900f8eea0e64ed8e541ee7cd94c63834fbb48
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729746"
 ---
 # <a name="automatic-code-creation-master-data-services"></a>Автоматическое создание кодов (службы Master Data Services)
@@ -37,15 +37,15 @@ ms.locfileid: "73729746"
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Автоматическое формирование значений для атрибута Code.|[Автоматическое формирование значений атрибута Code (службы Master Data Services)](../master-data-services/automatically-generate-code-attribute-values-master-data-services.md)|  
-|Автоматическое формирование значений для других атрибутов.|[Автоматическое формирование значений атрибута, отличного от Code (службы Master Data Services)](../master-data-services/automatically-generate-attribute-values-other-than-code-master-data-services.md)|  
+|Автоматическое формирование значений для атрибута Code.|[Автоматически формировать значения атрибутов кода &#40;Master Data Services&#41;](../master-data-services/automatically-generate-code-attribute-values-master-data-services.md)|  
+|Автоматическое формирование значений для других атрибутов.|[Автоматически формировать значения атрибутов, отличные от Code &#40;Master Data Services&#41;](../master-data-services/automatically-generate-attribute-values-other-than-code-master-data-services.md)|  
   
 ## <a name="related-content"></a>См. также  
   
--   [Общие сведения о службах Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md)  
+-   [Обзор Master Data Services &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
   
--   [Бизнес-правила (службы Master Data Services)](../master-data-services/business-rules-master-data-services.md)  
+-   [Бизнес-правила &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
--   [Сущности (службы Master Data Services)](../master-data-services/entities-master-data-services.md)  
+-   [Сущности &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  
   
   

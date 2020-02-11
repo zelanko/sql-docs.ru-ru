@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0c7d2e5ff90ce8ca9fd8e6cef090b4de5e645be4
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73782814"
 ---
 # <a name="get-mutual-kerberos-authentication"></a>Выполнение взаимной проверки подлинности Kerberos
@@ -25,7 +25,7 @@ ms.locfileid: "73782814"
   
  С версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , вышедшими до [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], образец работать не будет.  
   
- Дополнительные сведения см. [в статье &#40;&#41; поддержка имени субъекта-службы в клиентских подключениях](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md).  
+ Дополнительные сведения см. [в разделе Имя субъекта-службы &#40;SPN&#41; поддержка в клиентских подключениях](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md).  
   
 ## <a name="example"></a>Пример  
  При построении и запуске этого образца как 32-разрядного приложения в 64-разрядной операционной системе необходимо создать источник данных ODBC с помощью программы администрирования ODBC (исполняемый файл %windir%\SysWOW64\odbcad32.exe).  

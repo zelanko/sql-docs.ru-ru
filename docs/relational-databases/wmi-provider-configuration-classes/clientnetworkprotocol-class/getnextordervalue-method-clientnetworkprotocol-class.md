@@ -18,10 +18,10 @@ ms.assetid: d741dc5c-c225-43d9-a730-7ad664ac525f
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 1f9b9a8d69dad76d2ec1d6e38f7151238d0e91c1
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660749"
 ---
 # <a name="getnextordervalue-method-clientnetworkprotocol-class"></a>Метод GetNextOrderValue (класс ClientNetworkProtocol)
@@ -36,7 +36,7 @@ object.GetNextOrderValue()
 ```  
   
 ## <a name="parts"></a>Компоненты  
- *объект*  
+ *объектами*  
  A [класса ClientNetworkProtocol](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) , который представляет сетевой протокол, используемый клиентом [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
@@ -44,8 +44,8 @@ object.GetNextOrderValue()
   
 ## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
  [Настройка клиентских протоколов](https://technet.microsoft.com/library/ms181035.aspx)   
- [Настройка клиентских сетевых протоколов и сетевых библиотек](https://technet.microsoft.com/library/ms181035.aspx)  
+ [Настройка сетевых протоколов клиента и сетевых библиотек](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: e6b8bff2-946f-4abe-bd50-1f7bb11fdddf
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 392fc529b10e79d96a83ccd896733d14d0b8b4dc
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73659675"
 ---
 # <a name="exitcode-property-sqlservice-class"></a>Свойство ExitCode (класс SqlService)
@@ -36,16 +36,16 @@ object.ExitCode [= value]
 ```  
   
 ## <a name="parts"></a>Компоненты  
- *object*  
+ *объектами*  
  Объект [класса SqlService](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) , представляющий службу.  
   
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение **uint32** , определяющее код завершения.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Это свойство имеет значение ERROR_SERVICE_SPECIFIC_ERROR (1066), если ошибка уникальна для службы, представленной этим классом. Во время выполнения и после нормального завершения работы служба присваивает этому параметру значение NO_ERROR.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Запуск и остановка служб](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

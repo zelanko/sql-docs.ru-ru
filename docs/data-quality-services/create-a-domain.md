@@ -12,10 +12,10 @@ ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: d39f86d2efa18c385f2aafd8b3e4cb7de9975b06
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75252262"
 ---
 # <a name="create-a-domain"></a>Создание домена
@@ -26,14 +26,14 @@ ms.locfileid: "75252262"
   
  Существуют следующие два способа создания нового домена. Первый — на этапе сопоставления действий по обнаружению знаний, в процессе анализа образца данных для добавления набора знаний в новую или существующую базу знаний. Второй — в ходе действий по управлению доменами, когда вместо изменения существующего домена вы создаете новый.  
   
-##  <a name="BeforeYouBegin"></a>Перед началом  
+##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Prerequisites"></a>Требований  
+###  <a name="Prerequisites"></a> Предварительные требования  
  Чтобы создать домен, необходимо создать и открыть базу знаний.  
   
-###  <a name="Security"></a>Бюллетеня  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a>Чтение  
+####  <a name="Permissions"></a> Permissions  
  Для создания домена необходимо иметь в базе данных DQS_MAIN роль dqs_administrator или dqs_kb_editor.  
   
 ##  <a name="Discovery"></a>Создание домена в действии обнаружения знаний  

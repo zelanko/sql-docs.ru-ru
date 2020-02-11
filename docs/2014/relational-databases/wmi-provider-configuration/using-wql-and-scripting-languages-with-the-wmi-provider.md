@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: cc9994d4429e82f2bdd4f40797df1c5f628c6500
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68195825"
 ---
 # <a name="using-wql-and-scripting-languages-with-the-wmi-provider-for-configuration-management"></a>Использование WQL и языков сценариев с поставщиком WMI для управления конфигурациями
@@ -32,12 +32,12 @@ ms.locfileid: "68195825"
   
 -   С помощью языка для создания сценариев (например, VBScript).  
   
- Другой способ — управлять службами и сетевыми настройками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] программным образом, используя управляемые объекты WMI в SMO. Дополнительные сведения о программировании WMI управляемых объектов, см. в разделе [управление службами и сетевыми настройками с помощью поставщика WMI](../server-management-objects-smo/tasks/managing-services-and-network-settings-by-using-wmi-provider.md).  
+ Другой способ — управлять службами и сетевыми настройками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] программным образом, используя управляемые объекты WMI в SMO. Дополнительные сведения о программировании управляемых WMI объектов см. в разделе [Управление службами и сетевыми параметрами с помощью поставщика WMI](../server-management-objects-smo/tasks/managing-services-and-network-settings-by-using-wmi-provider.md).  
   
- Поставщик WMI для управления конфигурацией может осуществляться с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager и [!INCLUDE[msCoName](../../includes/msconame-md.md)] консоли управления. Дополнительные сведения о доступе к поставщику WMI с помощью пользовательского интерфейса см. в разделе [разделы руководства по управлению службами &#40;диспетчер конфигурации SQL Server&#41;](../../database-engine/managing-services-how-to-topics-sql-server-configuration-manager.md).  
+ Доступ к поставщику WMI для управления конфигурацией можно получить с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] помощью Configuration Manager [!INCLUDE[msCoName](../../includes/msconame-md.md)] и консоли управления. Дополнительные сведения о доступе к поставщику WMI из пользовательского интерфейса см. [в разделах руководства по управлению службами &#40;диспетчер конфигурации SQL Server&#41;](../../database-engine/managing-services-how-to-topics-sql-server-configuration-manager.md).  
   
-## <a name="see-also"></a>См. также  
- [Доступ к поставщику WMI для управления конфигурацией с использованием WQL](access-wmi-provider-for-configuration-management-using-wql.md)   
- [Изменение расширенных свойств службы SQL Server с помощью VBScript](access-wmi-provider-for-configuration-management-using-vbscript.md)  
+## <a name="see-also"></a>См. также:  
+ [Доступ к поставщику WMI для управления конфигурацией с помощью WQL](access-wmi-provider-for-configuration-management-using-wql.md)   
+ [изменить расширенные свойства службы SQL Server с помощью VBScript](access-wmi-provider-for-configuration-management-using-vbscript.md)  
   
   

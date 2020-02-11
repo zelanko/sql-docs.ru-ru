@@ -12,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7705aa50b488971b1c5aaf6e043ccf2dfd9103f6
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70148655"
 ---
 # <a name="overview-smo"></a>Общие сведения об SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Управляющие объекты (SMO) — это объекты, предназначенные [!INCLUDE[msCoName](../../includes/msconame-md.md)]для программного управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Объекты SMO можно использовать для создания специализированных приложений управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Хотя среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] является мощным и универсальным приложением для управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], иногда удобнее работать с приложением SMO.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Управляющие объекты (SMO) — это объекты, предназначенные [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]для программного управления. Объекты SMO можно использовать для создания специализированных приложений управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Хотя среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] является мощным и универсальным приложением для управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], иногда удобнее работать с приложением SMO.  
   
  К примеру, для удовлетворения потребностей новых пользователей, а также с целью сокращения издержек на подготовку персонала может возникнуть необходимость упрощения пользовательских приложений, выполняющих задачи управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Может возникнуть необходимость в создании специализированных баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или в создании приложения для формирования индексов и наблюдения за их эффективностью. Кроме того, приложение SMO можно использовать для бесшовной интеграции аппаратных или программных компонентов от независимых поставщиков в приложение управления базами данных.  
   
@@ -49,15 +49,15 @@ ms.locfileid: "70148655"
   
 -   Изоляция моментальных снимков и управление версиями на уровне строк для повышения параллелизма. Дополнительные сведения см. в разделе [Working with Snapshot Isolation](../../relational-databases/native-client/features/working-with-snapshot-isolation.md).  
   
--   Коллекции схем XML, XML-индексы и типы данных XML, обеспечивающие проверку и хранение XML-данных. Дополнительные сведения см. в разделе [коллекции &#40;XML-&#41; схем SQL Server](../../relational-databases/xml/xml-schema-collections-sql-server.md) и [Использование XML-схем](../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md).  
+-   Коллекции схем XML, XML-индексы и типы данных XML, обеспечивающие проверку и хранение XML-данных. Дополнительные сведения см. в разделе [коллекции XML-схем &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md) и [с помощью XML-схем](../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md).  
   
 -   Базы данных моментальных снимков, позволяющие создавать копии баз данных только для чтения.  
   
 -   Поддержка компонентом [!INCLUDE[ssSB](../../includes/sssb-md.md)] обмена информацией на основе сообщений. Дополнительные сведения см. в разделе [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md).  
   
--   Поддержка синонимов для множества имен объектов баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [ &#40;синонимы&#41;ядро СУБД](../../relational-databases/synonyms/synonyms-database-engine.md).  
+-   Поддержка синонимов для множества имен объектов баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [синонимы &#40;ядро СУБД&#41;](../../relational-databases/synonyms/synonyms-database-engine.md).  
   
--   Управление компонентом Database Mail, которое позволяет создавать серверы электронной почты, профили электронной почты и учетные записи электронной почты в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Database Mail](../../relational-databases/database-mail/database-mail.md).  
+-   Управление компонентом Database Mail, которое позволяет создавать серверы электронной почты, профили электронной почты и учетные записи электронной почты в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе о [компоненте Database Mail](../../relational-databases/database-mail/database-mail.md).  
   
 -   Поддержка зарегистрированных серверов для регистрации сведений о соединении. Дополнительные сведения см. в разделе [Register Servers](../../tools/sql-server-management-studio/register-servers.md).  
   
@@ -67,7 +67,7 @@ ms.locfileid: "70148655"
   
 -   Триггеры DDL, обеспечивающие дополнительные функции при возникновении DDL-событий. Дополнительные сведения см. в разделе [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md).  
   
- Пространство имен объектов SMO — <xref:Microsoft.SqlServer.Management.Smo>. Объекты SMO реализованы в виде сборки [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Это означает, что перед использованием объектов SMO нужно установить среду CLR из [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0. Сборки объектов SMO по умолчанию устанавливаются в глобальный кэш сборок с параметром пакета SDK [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Сборки находятся в папке C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\. Дополнительные сведения см. в [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] документации.  
+ Пространство имен объектов SMO — <xref:Microsoft.SqlServer.Management.Smo>. Объекты SMO реализованы в виде сборки [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Это означает, что перед использованием объектов SMO нужно установить среду CLR из [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0. Сборки объектов SMO по умолчанию устанавливаются в глобальный кэш сборок с параметром пакета SDK [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Сборки находятся в папке C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\. Дополнительные сведения см. в документации по [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
 ## <a name="smo-classes"></a>Классы модели объектов SMO  
  Классы модели объектов SMO подразделяются на две категории: классы экземпляров и служебные классы.  
@@ -97,7 +97,7 @@ ms.locfileid: "70148655"
   
  Классы экземпляров (объекты, представляющие реальные объекты баз данных) могут существовать на трех уровнях создания. Эти уровни: минимальный экземпляр (лишь минимально необходимые свойства считываются в одном блоке), частично созданный экземпляр (все свойства, использующие относительно большие объемы памяти, считываются в одном блоке) и полностью созданный экземпляр. Традиционные состояния создания экземпляров — несозданный и полностью созданный. Состояние «частично созданный» повышает эффективность, так как частично созданный объект не содержит значений для полного набора свойств объекта. Состояние «частично созданный» применяется по умолчанию для объектов, на которые нет непосредственных ссылок. При обращении к одному из этих свойств возникает ошибка, которая инициирует создание полного экземпляра объекта.  
   
- **Выполнение захвата**  
+ **Выполнение после сбора**  
   
  Обычным методом выполнения является непосредственное выполнение. Инструкции передаются экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] непосредственно по получении. Выполнение после сбора является альтернативным методом.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "70148655"
   
  Объекты поставщика WMI помещаются в объекты SMO. В результате программист модели SMO получает простую модель объектов, весьма напоминающую классы SMO. Однако в этом случае программист не должен понимать модель программирования, представленную пространством имен, и особенности организации поставщика WMI [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Поставщик WMI позволяет конфигурировать службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , псевдонимы, а также сетевые библиотеки клиентов и серверов.  
   
- **Создание скриптов**  
+ **Написание сценариев**  
   
  В модели объектов SMO средства для работы со скриптами были улучшены и переданы в класс **Scripter** . С помощью класса **Scripter** разработчик может находить зависимости, выявлять связи между объектами и осуществлять манипуляции с иерархией зависимостей. Главным объектом, обеспечивающим работу со скриптами, является объект **Scripter** . Существует несколько поддерживающих объектов, которые осуществляют обработку зависимостей, а также реагируют на события состояния и на события ошибок.  
   
@@ -144,19 +144,19 @@ ms.locfileid: "70148655"
   
  Запросы SOAP, а также запросы на зеркальное отображение баз данных обрабатываются конечными точками с использованием объекта <xref:Microsoft.SqlServer.Management.Smo.Endpoint>.  
   
- **Изоляция моментальных снимков/управление версиями на уровне строк**  
+ **Уровень изоляции моментального снимка / управление версиями на уровне строк**  
   
  Уровень изоляции моментального снимка (управление версиями на уровне строк) представлены свойствами нового объекта <xref:Microsoft.SqlServer.Management.Smo.Database>.  
   
- **Пространство имен XML-схемы, XML-индексы и тип данных XML**  
+ **Пространство имен схемы XML, XML-индексы и тип данных XML**  
   
  Пространства имен схемы XML представлены в модели объектов SMO коллекцией объектов. XML-индексы представлены в модели SMO свойством объекта **Index** .  
   
- **Усовершенствования полнотекстового поиска**  
+ **Расширенные возможности полнотекстового поиска**  
   
  В модели объектов SMO реализованы новые объекты, представляющие расширенные возможности полнотекстового поиска.  
   
- **Проверка страниц**  
+ **Объект Page Verify**  
   
  Объект <xref:Microsoft.SqlServer.Management.Smo.DatabaseOptions.PageVerify%2A> представляет параметры проверки страниц баз данных.  
   
@@ -164,15 +164,15 @@ ms.locfileid: "70148655"
   
  База данных моментальных снимков — это предназначенная только для чтения копия указанной базы данных, снятая в указанный момент времени. База данных моментальных снимков может быть определена с помощью свойства <xref:Microsoft.SqlServer.Management.Smo.Database.IsDatabaseSnapshot%2A> объекта <xref:Microsoft.SqlServer.Management.Smo.Database>.  
   
- **Service Broker**  
+ **Компонент Service Broker**  
   
  Компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] и его функциональные возможности представлены группой объектов  
   
- **Усовершенствования индексов**  
+ **Улучшенные возможности индексов**  
   
  Улучшенные возможности индексов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] представлены новыми свойствами объекта <xref:Microsoft.SqlServer.Management.Smo.Index>.  
   
-## <a name="see-also"></a>См. также  
- [Основные понятия объектов RMO](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)  
+## <a name="see-also"></a>См. также:  
+ [Основные понятия объекты Replication Management Objects](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)  
   
   

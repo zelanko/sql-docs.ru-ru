@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2e040fb9c05683be9d737ea134710c03d36317cd
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75229011"
 ---
 # <a name="always-on-availability-groups-sql-server"></a>Группы доступности AlwaysOn (SQL Server)
@@ -125,7 +125,7 @@ ms.locfileid: "75229011"
   
 -   [О Отслеживание изменений; SQL обслуживает;](../../../relational-databases/track-changes/about-change-tracking-sql-server.md)  
   
--   [автономные базы данных;](../../../relational-databases/databases/contained-databases.md)  
+-   [Автономные базы данных](../../../relational-databases/databases/contained-databases.md)  
   
 -   [Шифрование базы данных](../../../relational-databases/security/encryption/transparent-data-encryption.md)  
   
@@ -133,28 +133,28 @@ ms.locfileid: "75229011"
   
 -   [ПОТОКА](../../../relational-databases/blob/filestream-sql-server.md)  
   
--   [Провероч](../../../relational-databases/blob/filetables-sql-server.md)  
+-   [FileTable](../../../relational-databases/blob/filetables-sql-server.md)  
   
 -   [Доставка журналов](../../log-shipping/about-log-shipping-sql-server.md)  
   
 -   [Удаленное хранилище больших двоичных объектов](../../../relational-databases/blob/remote-blob-store-rbs-sql-server.md)  
   
--   [Репликации](../../install-windows/install-sql-server-replication.md)  
+-   [Репликация](../../install-windows/install-sql-server-replication.md)  
   
--   [Service Broker](../../configure-windows/sql-server-service-broker.md)  
+-   [Компонент Service Broker](../../configure-windows/sql-server-service-broker.md)  
   
--   [агент SQL Server](../../../ssms/agent/sql-server-agent.md)  
+-   [Агент SQL Server](../../../ssms/agent/sql-server-agent.md)  
   
 -   [Службы Reporting Services](reporting-services-with-always-on-availability-groups-sql-server.md)  
   
 > [!WARNING]  
 >  Дополнительные сведения об ограничениях и ограничениях использования других функций [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]с см [. в разделе Always on группы доступности: взаимодействие. SQL Server;](always-on-availability-groups-interoperability-sql-server.md).  
   
-##  <a name="RelatedTasks"></a>Связанные задачи  
+##  <a name="RelatedTasks"></a> Связанные задачи  
   
 -   [Начало работы с группами доступности Always On; SQL Server;](getting-started-with-always-on-availability-groups-sql-server.md)  
   
-##  <a name="RelatedContent"></a>Связанное содержимое  
+##  <a name="RelatedContent"></a> См. также  
   
 -   **Тех**  
   
@@ -170,11 +170,11 @@ ms.locfileid: "75229011"
   
 -   **Технические документы**  
   
-     [Microsoft SQL Server Always On рекомендации по обеспечению высокого уровня доступности и аварийного восстановления](https://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Руководство по решениям режима AlwaysOn в Microsoft SQL Server для обеспечения высокой доступности и аварийного восстановления](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
   
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Обзор групп доступности Always On; SQL Server;](overview-of-always-on-availability-groups-sql-server.md)   
  [Предварительные требования, ограничения и рекомендации для группы доступности AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [Конфигурация экземпляра сервера для Always On групп доступности; SQL Server;](always-on-availability-groups-sql-server.md)   

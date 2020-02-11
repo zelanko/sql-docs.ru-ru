@@ -18,13 +18,13 @@ ms.assetid: e4546c13-9fba-4bab-8b42-d6f18b33ec25
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0aad616275d635ac32d6e81dbc5321db0db58b34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019938"
 ---
-# <a name="sprevokeloginfromproxy-transact-sql"></a>sp_revoke_login_from_proxy (Transact-SQL)
+# <a name="sp_revoke_login_from_proxy-transact-sql"></a>sp_revoke_login_from_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Удаляет доступ к учетной записи-посреднику для субъекта безопасности.  
@@ -42,16 +42,16 @@ sp_revoke_login_from_proxy
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @name = ] 'name'` Имя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имени входа, роли сервера или **msdb** роли базы данных, необходимо удалить доступ. *имя* — **nvarchar(256)** не имеет значения по умолчанию.  
+`[ @name = ] 'name'`Имя входа, роль [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сервера или роль базы данных **msdb** , для которой необходимо удалить доступ. *имя* имеет тип **nvarchar (256)** и не имеет значения по умолчанию.  
   
-`[ @proxy_id = ] id` Идентификатор прокси-сервера необходимо удалить доступ. Либо *идентификатор* или *proxy_name* должен быть указан, но не оба аргумента одновременно. *Идентификатор* — **int**, значение по умолчанию NULL.  
+`[ @proxy_id = ] id`Идентификатор прокси-сервера, для которого необходимо удалить доступ. Необходимо указать *идентификатор* или *proxy_name* , но не указывать оба значения. *Идентификатор* имеет **тип int**и значение по умолчанию NULL.  
   
-`[ @proxy_name = ] 'proxy_name'` Имя прокси-сервера необходимо удалить доступ. Либо *идентификатор* или *proxy_name* должен быть указан, но не оба аргумента одновременно. *Proxy_name* — **sysname**, значение по умолчанию NULL.  
+`[ @proxy_name = ] 'proxy_name'`Имя прокси-сервера, для которого необходимо удалить доступ. Необходимо указать *идентификатор* или *proxy_name* , но не указывать оба значения. Аргумент *proxy_name* имеет тип **sysname**и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Задания, принадлежащие имени входа, которое ссылается на эту учетную запись-посредник, не смогут запуститься.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -70,7 +70,7 @@ EXEC dbo.sp_revoke_login_from_proxy
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Агент SQL Server хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_grant_login_to_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
  [sp_help_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-proxy-transact-sql.md)  

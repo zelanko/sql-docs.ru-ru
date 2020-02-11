@@ -16,20 +16,20 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e92668088ce0f30f680d4198ad0c3348a21fbff6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781953"
 ---
 # <a name="system-requirements"></a>Требования к системе
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Управляющие объекты (SMO) использует [!INCLUDE[msCoName](../../includes/msconame-md.md)] `System.Data.SqlClient` драйвер объектов для подключения и взаимодействия с экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Управляющие объекты (SMO) используют [!INCLUDE[msCoName](../../includes/msconame-md.md)] `System.Data.SqlClient` драйвер объектов для подключения к экземплярам и взаимодействия с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ними.  
   
  Для клиентов SMO требуется собственный клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , который входит в состав [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0.  
   
- Для разработки приложений с использованием объектов SMO необходимо установить [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2008.  
+ Для разработки приложений с помощью объектов SMO необходимо [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] установить 2008.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Общие сведения об установке SQL Server](https://technet.microsoft.com/library/bb500438\(v=SQL.105\).aspx)  
   
   

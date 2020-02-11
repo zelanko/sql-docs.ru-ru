@@ -10,18 +10,18 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 421265abcf3731ed48ff34a6b199ba5cd3c6af5c
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401056"
 ---
 # <a name="launch-the-configuration-manager-in-analytics-platform-system"></a>Запуск Configuration Manager в системе аналитики платформы
 В этом разделе приводятся инструкции по запуску **Configuration Manager** для устройства Analytics Platform System.  
   
-## <a name="before-you-begin"></a>Перед началом работы  
+## <a name="before-you-begin"></a>Перед началом  
   
-### <a name="prerequisites"></a>Необходимые компоненты  
+### <a name="prerequisites"></a>Предварительные требования  
 Системная платформа аналитики**Configuration Manager** может запускаться только администратором домена устройства. Для запуска этого средства необходим пароль администратора домена устройства. Сведения о создании дополнительных администраторов APS см. в статье [Создание администратора домена aps &#40;тд&#41;](create-an-aps-domain-administrator-aps.md).  
   
 ## <a name="Accessing"></a>Запуск средства Configuration Manager  
@@ -47,6 +47,6 @@ ms.locfileid: "74401056"
   
 ![SQL_Server_PDW_DWConfig_ApplTop](./media/launch-the-configuration-manager/SQL_Server_PDW_DWConfig_ApplTop.png "SQL_Server_PDW_DWConfig_ApplTop")  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Мониторинг устройства с помощью консоли администрирования &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
   

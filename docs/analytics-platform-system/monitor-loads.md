@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: b284fdcef506924c26e452196db6e9518faa1351
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400965"
 ---
 # <a name="monitor-loads-into-parallel-data-warehouse"></a>Мониторинг загрузки в хранилище Parallel Data
@@ -26,7 +26,7 @@ ms.locfileid: "74400965"
 To monitor this type of load, see [Monitoring Active Queries](monitor-active-queries.md).  
 -->
   
-## <a name="prerequisites"></a>Необходимые компоненты  
+## <a name="prerequisites"></a>Предварительные требования  
 Независимо от метода, используемого для отслеживания нагрузки, имя входа должно иметь разрешение на доступ к базовым источникам данных. 
 
 <!-- MISSING LINKS
@@ -51,9 +51,9 @@ For the permissions to grant, see "Use All of the Admin Console" in [Grant Permi
   
 -   [sys.pdw_loader_run_stages](https://msdn.microsoft.com/library/mt203879.aspx)  
   
--   [sys. pdw_loader_backup_runs](../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
+-   [sys.pdw_loader_backup_runs](../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
   
--   [sys. pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)  
+-   [sys.pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)  
   
 ### <a name="to-monitor-loads-by-using-system-views"></a>Мониторинг загрузок с помощью системных представлений  
 Чтобы отслеживать активные и последние загрузки с помощью SQL Server PDW представлений, выполните следующие действия. Сведения о столбцах и возможных значениях, возвращаемых представлением, для каждого используемого системного представления см. в документации по этому представлению.  

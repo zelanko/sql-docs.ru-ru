@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1828f0f76963cea8cf792c17a251c843a93b5b0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106559"
 ---
 # <a name="add-or-delete-a-group-in-a-chart-report-builder-and-ssrs"></a>Добавление или удаление группы в диаграмме (построитель отчетов и службы SSRS)
@@ -55,7 +55,7 @@ ms.locfileid: "66106559"
   
 2.  Щелкните правой кнопкой мыши группу в области **Группы категорий** или **Группы рядов** и выберите команду **Удалить**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Диаграммы (построитель отчетов и службы SSRS)](charts-report-builder-and-ssrs.md)  
   
   

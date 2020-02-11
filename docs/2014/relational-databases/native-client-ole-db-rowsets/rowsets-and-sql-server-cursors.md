@@ -1,5 +1,5 @@
 ---
-title: Наборы строк и курсоры SQL Server | Документация Майкрософт
+title: Наборы строк и SQL Server курсоры | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,13 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d87706d53190552734785b5310cba7ec81056a40
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68207004"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>Наборы строк и курсоры SQL Server
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает результирующие наборы пользователям двумя способами.  
   
 -   Результирующие наборы по умолчанию, которые характеризуются следующим:  
@@ -56,7 +57,7 @@ ms.locfileid: "68207004"
   
     -   Не поддерживают инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)], которые возвращают несколько результирующих наборов.  
   
- Пользователь может запросить другой режим работы курсоров, установив определенные свойства набора строк. Если пользователь не задает ни одного из этих свойств набора строк или указывает для всех их значения по умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик OLE DB для собственного клиента реализует набор строк при помощи результирующий набор по умолчанию. Если любое из этих свойств присвоено значение, отличное от по умолчанию, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик OLE DB для собственного клиента реализует набор строк при помощи серверного курсора.  
+ Пользователь может запросить другой режим работы курсоров, установив определенные свойства набора строк. Если потребитель не устанавливает ни одного из этих свойств набора строк или задает для них значения по умолчанию, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик OLE DB собственного клиента реализует набор строк, используя результирующий набор по умолчанию. Если для какого-либо из этих свойств задано значение, отличное от значения по умолчанию, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик OLE DB собственного клиента реализует набор строк с помощью серверного курсора.  
   
  Следующие свойства набора строк служат для поставщика OLE DB собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] указанием использовать курсоры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Некоторые свойства можно безопасно сочетать с другими. Например, набор строк, предоставляющий доступ к свойствам DBPROP_IRowsetScroll и DBPROP_IRowsetChange, становится набором строк с закладками, обеспечивающим возможность немедленного обновления. Другие свойства являются взаимоисключающими. Например, набор строк со свойством DBPROP_OTHERINSERT не может содержать закладок.  
   
@@ -73,7 +74,7 @@ ms.locfileid: "68207004"
 |DBPROP_IMMOBILEROWS|VARIANT_FALSE|Обновление данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] через набор строк невозможно. Этот набор строк поддерживает только прямую прокрутку. Относительное позиционирование строки поддерживается. Текст команды может включать предложение ORDER BY, если для указанных в ссылке столбцов существует индекс.<br /><br /> Свойство DBPROP_IMMOBILEROWS можно использовать только в наборах строк, которые способны показывать в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] строки, вставленные командами в рамках других сеансов или другими пользователями. При попытке открыть набор строк с этим свойством, заданным равным VARIANT_FALSE, для любого набора строк, для которого свойство DBPROP_OTHERINSERT не может иметь значение VARIANT_TRUE, возникает ошибка.|  
 |DBPROP_REMOVEDELETED|VARIANT_TRUE|Обновление данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] через набор строк невозможно. Этот набор строк поддерживает только прямую прокрутку. Относительное позиционирование строки поддерживается. Текст команды может содержать предложение ORDER BY, если это не запрещено другим свойством.|  
   
- Объект [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживаемый серверный курсор набора строк поставщика OLE DB для собственного клиента можно легко создать на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базовой таблицы или представления с помощью **IOpenRowset::OpenRowset** метод. Укажите таблицу или представление по имени, передав требуемые наборы свойств набора строк в параметре *rgPropertySets*.  
+ Набор [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] строк поставщика собственного клиента OLE DB, поддерживаемый серверным курсором, можно легко создать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базовой таблице или представлении с помощью метода **IOpenRowset:: OPENROWSET** . Укажите таблицу или представление по имени, передав требуемые наборы свойств набора строк в параметре *rgPropertySets*.  
   
  Если пользователь требует, чтобы набор строк поддерживался серверным курсором, то возможности выбора текста команды, которая создает набор строк, становятся ограниченными. В частности, текст команды ограничивается применением либо одной инструкции SELECT, которая возвращает один результирующий набор строк, либо хранимой процедуры, реализующей одну инструкцию SELECT, которая возвращает результат в виде одного набора строк.  
   
@@ -85,72 +86,73 @@ ms.locfileid: "68207004"
   
  T = VARIANT_TRUE  
   
- \- = VARIANT_TRUE или VARIANT_FALSE  
+ 
+  \- = VARIANT_TRUE или VARIANT_FALSE  
   
  Чтобы ввести в действие модель курсора определенного типа, определите столбец, соответствующий этой модели курсора, и найдите все свойства набора строк со значением «Т» в этом столбце. Чтобы воспользоваться данной конкретной моделью курсора, присвойте этим свойствам набора строк значение VARIANT_TRUE. Свойствам набора строк, для которых в качестве значения указано «-», можно присваивать либо значение VARIANT_TRUE, либо значение VARIANT_FALSE.  
   
-|Свойства набора строк и модели курсора|Значение по умолчанию<br /><br /> набор по<br /><br /> набора<br /><br /> (RO)|быстрый;<br /><br /> однопроходный<br /><br /> только<br /><br /> (RO)|Static<br /><br /> (RO)|Keyset<br /><br /> управляемый<br /><br /> (RO)|  
+|Свойства набора строк и модели курсора|По умолчанию<br /><br /> result<br /><br /> set<br /><br /> (RO)|быстрый;<br /><br /> однопроходный<br /><br /> только<br /><br /> (RO)|Статическое<br /><br /> (RO)|Keyset<br /><br /> управляемый<br /><br /> (RO)|  
 |--------------------------------------|-------------------------------------------|--------------------------------------------|-----------------------|----------------------------------|  
-|DBPROP_SERVERCURSOR|C|T|T|T|  
-|DBPROP_DEFERRED|C|C|-|-|  
-|DBPROP_IrowsetChange|C|C|C|C|  
-|DBPROP_IrowsetLocate|C|C|-|-|  
-|DBPROP_IrowsetScroll|C|C|-|-|  
-|DBPROP_IrowsetUpdate|C|C|C|C|  
-|DBPROP_BOOKMARKS|C|C|-|-|  
-|DBPROP_CANFETCHBACKWARDS|C|C|-|-|  
-|DBPROP_CANSRCOLLBACKWARDS|C|C|-|-|  
-|DBPROP_CANHOLDROWS|C|C|-|-|  
-|DBPROP_LITERALBOOKMARKS|C|C|-|-|  
-|DBPROP_OTHERINSERT|C|T|C|C|  
-|DBPROP_OTHERUPDATEDELETE|C|T|C|T|  
-|DBPROP_OWNINSERT|C|T|C|T|  
-|DBPROP_OWNUPDATEDELETE|C|T|C|T|  
-|DBPROP_QUICKSTART|C|C|-|-|  
-|DBPROP_REMOVEDELETED|C|C|C|-|  
-|DBPROP_IrowsetResynch|C|C|C|-|  
-|DBPROP_CHANGEINSERTEDROWS|C|C|C|C|  
-|DBPROP_SERVERDATAONINSERT|C|C|C|-|  
-|DBPROP_UNIQUEROWS|-|C|C|C|  
+|DBPROP_SERVERCURSOR|F|T|T|T|  
+|DBPROP_DEFERRED|F|F|-|-|  
+|DBPROP_IrowsetChange|F|F|F|F|  
+|DBPROP_IrowsetLocate|F|F|-|-|  
+|DBPROP_IrowsetScroll|F|F|-|-|  
+|DBPROP_IrowsetUpdate|F|F|F|F|  
+|DBPROP_BOOKMARKS|F|F|-|-|  
+|DBPROP_CANFETCHBACKWARDS|F|F|-|-|  
+|DBPROP_CANSRCOLLBACKWARDS|F|F|-|-|  
+|DBPROP_CANHOLDROWS|F|F|-|-|  
+|DBPROP_LITERALBOOKMARKS|F|F|-|-|  
+|DBPROP_OTHERINSERT|F|T|F|F|  
+|DBPROP_OTHERUPDATEDELETE|F|T|F|T|  
+|DBPROP_OWNINSERT|F|T|F|T|  
+|DBPROP_OWNUPDATEDELETE|F|T|F|T|  
+|DBPROP_QUICKSTART|F|F|-|-|  
+|DBPROP_REMOVEDELETED|F|F|F|-|  
+|DBPROP_IrowsetResynch|F|F|F|-|  
+|DBPROP_CHANGEINSERTEDROWS|F|F|F|F|  
+|DBPROP_SERVERDATAONINSERT|F|F|F|-|  
+|DBPROP_UNIQUEROWS|-|F|F|F|  
 |DBPROP_IMMOBILEROWS|-|-|-|T|  
   
 |Свойства набора строк и модели курсора|Динамический (только для чтения)|С набором ключей (для чтения и записи)|Динамический (для чтения и записи)|  
 |--------------------------------------|--------------------|---------------------|----------------------|  
 |DBPROP_SERVERCURSOR|T|T|T|  
 |DBPROP_DEFERRED|-|-|-|  
-|DBPROP_IrowsetChange|C|-|-|  
-|DBPROP_IrowsetLocate|C|-|C|  
-|DBPROP_IrowsetScroll|C|-|C|  
-|DBPROP_IrowsetUpdate|C|-|-|  
-|DBPROP_BOOKMARKS|C|-|C|  
+|DBPROP_IrowsetChange|F|-|-|  
+|DBPROP_IrowsetLocate|F|-|F|  
+|DBPROP_IrowsetScroll|F|-|F|  
+|DBPROP_IrowsetUpdate|F|-|-|  
+|DBPROP_BOOKMARKS|F|-|F|  
 |DBPROP_CANFETCHBACKWARDS|-|-|-|  
 |DBPROP_CANSRCOLLBACKWARDS|-|-|-|  
-|DBPROP_CANHOLDROWS|C|-|C|  
-|DBPROP_LITERALBOOKMARKS|C|-|C|  
-|DBPROP_OTHERINSERT|T|C|T|  
+|DBPROP_CANHOLDROWS|F|-|F|  
+|DBPROP_LITERALBOOKMARKS|F|-|F|  
+|DBPROP_OTHERINSERT|T|F|T|  
 |DBPROP_OTHERUPDATEDELETE|T|T|T|  
 |DBPROP_OWNINSERT|T|T|T|  
 |DBPROP_OWNUPDATEDELETE|T|T|T|  
 |DBPROP_QUICKSTART|-|-|-|  
 |DBPROP_REMOVEDELETED|T|-|T|  
 |DBPROP_IrowsetResynch|-|-|-|  
-|DBPROP_CHANGEINSERTEDROWS|C|-|C|  
-|DBPROP_SERVERDATAONINSERT|C|-|C|  
-|DBPROP_UNIQUEROWS|C|C|C|  
-|DBPROP_IMMOBILEROWS|C|T|C|  
+|DBPROP_CHANGEINSERTEDROWS|F|-|F|  
+|DBPROP_SERVERDATAONINSERT|F|-|F|  
+|DBPROP_UNIQUEROWS|F|F|F|  
+|DBPROP_IMMOBILEROWS|F|T|F|  
   
  Выбор модели курсора для конкретного ряда свойств набора строк определяется следующим образом.  
   
  Получите подмножество свойств, приведенных в предыдущих таблицах, из указанной коллекции свойств набора строк. В зависимости от значения флага для каждого свойства набора строк разделите эти свойства на две подгруппы — обязательные (T, F) и необязательные (-). Применительно к каждой модели курсора начните с первой таблицы и переходите слева направо, сравнивая значения свойств в этих двух подгруппах со значениями соответствующих свойств в этом столбце. Выбирается та модель курсора, для которой все обязательные свойства совпадают, а число несовпадений в необязательных свойствах минимально. При наличии нескольких моделей курсора выбирается самая левая.  
   
 ## <a name="sql-server-cursor-block-size"></a>Размер блока курсора SQL Server  
- Когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] курсор поддерживает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] набор строк поставщика OLE DB для собственного клиента, количество элементов в строке обработки параметра массива из **IRowset::GetNextRows** или **IRowsetLocate::GetRowsAt**  методы определяет размер блока курсора. Строки, указанные дескрипторами в массиве, являются элементами блока курсора.  
+ Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] курсор поддерживает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственный клиентский OLE DB набор строк поставщика, количество элементов в параметре массива строк Handle метода **IRowset:: GetNextRows** или **IRowsetLocate:: GetRowsAt** определяет размер блока курсора. Строки, указанные дескрипторами в массиве, являются элементами блока курсора.  
   
  Что касается наборов строк, поддерживающих закладки, то элементы блока курсора определяются дескрипторами строк, которые извлекаются с помощью метода **IRowsetLocate::GetRowsByBookmark**.  
   
  Независимо от того, какой метод использовался для заполнения набора строк и формирования блока курсора [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], этот блок курсора остается активным до выполнения следующего метода извлечения строк применительно к этому набору строк.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Наборы строк](rowsets.md)  
   
   

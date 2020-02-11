@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 388b51c79681589d3caec2ee3ea03b1ece6ff459
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73782343"
 ---
 # <a name="bcp_writefmt"></a>Функция bcp_writefmt
@@ -40,7 +40,7 @@ RETCODE bcp_writefmt (
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *хдбк*  
+ *hdbc*  
  Дескриптор соединения ODBC с поддержкой массового копирования.  
   
  *szFormatFile*  
@@ -49,10 +49,10 @@ RETCODE bcp_writefmt (
 ## <a name="returns"></a>Возвращает  
  SUCCEED или FAIL.  
   
-## <a name="remarks"></a>Замечания  
- Файл форматирования определяет формат данных, содержащихся в файле данных, создаваемом при массовом копировании. Вызовы функций [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) и [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) определяют формат файла данных. Функция**bcp_writefmt** сохраняет это определение в файле, на который ссылается аргумент *szFormatFile*. Дополнительные сведения см. в разделе [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md).  
+## <a name="remarks"></a>Remarks  
+ Файл форматирования определяет формат данных, содержащихся в файле данных, создаваемом при массовом копировании. Вызовы функций [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) и [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) определяют формат файла данных. **bcp_writefmt** сохраняет это определение в файле, на который ссылается *szFormatFile*. Дополнительные сведения см. в разделе [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md).  
   
- Дополнительные сведения о структуре файлов формата данных **bcp** см. [в статье Импорт и экспорт данных с помощью служебной программы &#40;bcp SQL Server&#41;](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md).  
+ Дополнительные сведения о структуре файлов формата данных **bcp** см. [в статье Импорт и экспорт данных с помощью программы bcp &#40;SQL Server&#41;](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md).  
   
  Для загрузки сохраненного файла форматирования используется функция [bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md).  
   
@@ -114,7 +114,7 @@ if (bcp_exec(hdbc, &nRowsProcessed) == SUCCEED)
 // Carry on.  
 ```  
   
-## <a name="see-also"></a>См. также раздел  
- [Функции массового копирования](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
+## <a name="see-also"></a>См. также:  
+ [Bulk Copy Functions](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

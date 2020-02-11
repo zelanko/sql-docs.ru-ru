@@ -15,19 +15,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2db385919c30037612f00e53b2b990c1a7df0429
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72781856"
 ---
 # <a name="using-database-mail"></a>Использование компонента Database Mail
   В SMO подсистема компонента Database Mail представлена объектом <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail>, на который ссылается свойство <xref:Microsoft.SqlServer.Management.Smo.Server.Mail%2A>. С помощью объекта SMO <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> можно настраивать подсистему компонента Database Mail и управлять профилями и учетными записями почты. Объект SMO <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> принадлежит объекту `Server`, и это означает, что область действия учетных записей почты соответствует уровню сервера.  
   
 ## <a name="examples"></a>Примеры  
- Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в статьях [Создание проекта Visual Basic SMO в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) или [Создание проекта Visual&#35; C SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в статьях [Создание проекта Visual Basic SMO в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) или [Создание проекта Visual C&#35; SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
- Для программ, использующих [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Database Mail, необходимо включить инструкцию `Imports`, чтобы уточнить пространство имен почты. Вставьте инструкцию после других инструкций `Imports` и перед любыми декларациями в приложении.  
+ Для программ, использующих [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Database Mail, необходимо включить `Imports` инструкцию для определения пространства имен почты. Вставьте инструкцию после других инструкций `Imports` и перед любыми декларациями в приложении.  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   

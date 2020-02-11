@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2159178c2fd26aca54d099f7345dbb62039ee34e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196435"
 ---
 # <a name="create-indexed-views"></a>Создание индексированных представлений
@@ -42,10 +42,10 @@ ms.locfileid: "68196435"
   
 5.  Создайте уникальный кластеризованный индекс для представления.  
   
-###  <a name="Restrictions"></a> Обязательные параметры SET для индексированных представлений  
- Если при выполнении запроса активны разные параметры SET, выполнение одного и того же выражения может дать разные результаты в [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Например, если параметр SET CONCAT_NULL_YIELDS_NULL равен ON, выражение **'** abc **'** + NULL возвращает значение NULL. Но если параметр CONCAT_NULL_YIEDS_NULL равен OFF, то же самое выражение дает результат **'** abc **'** .  
+###  <a name="Restrictions"></a>Обязательные параметры SET для индексированных представлений  
+ Если при выполнении запроса активны разные параметры SET, выполнение одного и того же выражения может дать разные результаты в [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Например, если параметр SET CONCAT_NULL_YIELDS_NULL равен ON, выражение **'** abc **'** + NULL возвращает значение NULL. Но если параметр CONCAT_NULL_YIEDS_NULL равен OFF, то же самое выражение дает результат **'** abc **'**.  
   
- Для правильной поддержки представлений и получения согласованных результатов некоторые параметры SET индексированных представлений должны иметь определенные значения. Параметры SET, в следующей таблице должно быть присвоено значений, приведенных в **RequiredValue** столбца при выполнении следующих условий:  
+ Для правильной поддержки представлений и получения согласованных результатов некоторые параметры SET индексированных представлений должны иметь определенные значения. Для параметров SET в следующей таблице должны быть заданы значения, показанные в столбце **рекуиредвалуе** при выполнении следующих условий.  
   
 -   Будет создано представление с соответствующими индексами в нем.  
   
@@ -86,11 +86,11 @@ ms.locfileid: "68196435"
   
 -   При создании индекса параметр IGNORE_DUP_KEY должен быть установлен в OFF (значение по умолчанию).  
   
--   Имя таблицы в определении представления должно быть двухкомпонентным: _схема_ **.** _имя_таблицы_ .  
+-   Имя таблицы в определении представления должно быть двухкомпонентным: _схема_**.**_имя_таблицы_ .  
   
 -   Определяемые пользователем функции, на которые ссылается представление, должны быть созданы с параметром WITH SCHEMABINDING.  
   
--   Все определяемые пользователем функции, на которые ссылается представление, должны иметь двухкомпонентные имена: _схема_ **.** _функция_.  
+-   На любые определяемые пользователем функции, на которые ссылается представление, должны ссылаться имена из двух частей — _Schema_**.** _функция_.  
   
 -   Свойство доступа к данным пользовательской функции должно быть установлено в NO SQL, а свойство внешнего доступа — в NO.  
   
@@ -116,15 +116,15 @@ ms.locfileid: "68196435"
     |COUNT|Функции ROWSET (OPENDATASOURCE, OPENQUERY, OPENROWSET и OPENXML)|Инструкции объединения OUTER (LEFT, RIGHT или FULL)|  
     |Производная таблица (определяемая путем указания инструкции SELECT в предложении FROM)|Самосоединения|Указание столбцов с использованием SELECT \* или SELECT *имя_таблицы*.*|  
     |DISTINCT|STDEV, STDEVP, VAR, VARP или AVG|Обобщенное табличное выражение (CTE)|  
-    |`float`\*, `text`, `ntext`, `image`, `XML`, или `filestream` столбцы|Вложенный запрос|Предложение OVER, включающее статистические функции или агрегатные оконные функции.|  
+    |`float`\*столбцы `text`, `ntext`, `image`, `XML`,, `filestream` или|Вложенный запрос|Предложение OVER, включающее статистические функции или агрегатные оконные функции.|  
     |Полнотекстовые предикаты (CONTAIN, FREETEXT)|Функция SUM, ссылающаяся на выражение, допускающее значение NULL|ORDER BY|  
     |Определяемая пользователем агрегатная функция CLR|В начало|Операторы CUBE, ROLLUP или GROUPING SETS|  
     |MIN, MAX|Операторы UNION, EXCEPT или INTERSECT|TABLESAMPLE|  
-    |Табличные переменные|OUTER APPLY или CROSS APPLY|PIVOT, UNPIVOT|  
+    |Переменные таблицы|OUTER APPLY или CROSS APPLY|PIVOT, UNPIVOT|  
     |Наборы разреженных столбцов|Встроенные функции или функции с табличным значением с несколькими инструкциями|OFFSET|  
     |CHECKSUM_AGG|||  
   
-     \*Индексированное представление может содержать `float` столбцов; тем не менее такие столбцы не могут быть включены в ключ кластеризованного индекса.  
+     \*Индексированное представление может содержать `float` столбцы; Однако такие столбцы не могут быть добавлены в ключ кластеризованного индекса.  
   
 -   Если присутствует предложение GROUP BY, определение VIEW должно содержать функцию COUNT_BIG(*) и не должно содержать предложения HAVING. Эти ограничения для предложения GROUP BY относятся только к определению индексированного представления. Запрос может использовать индексированное представление в своем плане выполнения, даже если он не соответствует этим ограничениям для предложения GROUP BY.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "68196435"
   
  Неявное преобразование символьных данных между различными параметрами сортировки не в Юникоде также считается недетерминированным.  
   
-###  <a name="Considerations"></a> Замечания  
+###  <a name="Considerations"></a>Следует  
  Значение параметра **large_value_types_out_of_row** столбца в индексированном представлении наследуется от значения соответствующего столбца базовой таблицы. Это значение задается с помощью хранимой процедуры [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql). Для столбцов, созданных из выражений, установкой по умолчанию является 0. Это означает, что типы больших значений хранятся в строке.  
   
  Индексированные представления могут создаваться на секционированной таблице и сами могут быть секционированными.  
@@ -212,12 +212,12 @@ ms.locfileid: "68196435"
   
 ## <a name="see-also"></a>См. также:  
  [CREATE INDEX (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql)   
- [SET ANSI_NULLS (Transact-SQL)](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
- [SET ANSI_PADDING (Transact-SQL)](/sql/t-sql/statements/set-ansi-padding-transact-sql)   
- [SET ANSI_WARNINGS (Transact-SQL)](/sql/t-sql/statements/set-ansi-warnings-transact-sql)   
- [SET ARITHABORT (Transact-SQL)](/sql/t-sql/statements/set-arithabort-transact-sql)   
- [SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql)   
- [SET NUMERIC_ROUNDABORT (Transact-SQL)](/sql/t-sql/statements/set-numeric-roundabort-transact-sql)   
- [SET QUOTED_IDENTIFIER (Transact-SQL)](/sql/t-sql/statements/set-quoted-identifier-transact-sql)  
+ [Настройка ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
+ [Настройка ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql)   
+ [Настройка ANSI_WARNINGS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql)   
+ [SET ARITHABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-arithabort-transact-sql)   
+ [Настройка CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql)   
+ [Настройка NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-numeric-roundabort-transact-sql)   
+ [Настройка QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql)  
   
   

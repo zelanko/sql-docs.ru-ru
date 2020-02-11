@@ -14,10 +14,10 @@ ms.assetid: 648b3d0b-e15a-45f9-8292-3a54a072e62c
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 2b5cefb3548886cc26e55a9f408ac68e2bd30620
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729768"
 ---
 # <a name="attribute-groups-master-data-services"></a>Группы атрибутов (службы Master Data Services)
@@ -50,13 +50,13 @@ ms.locfileid: "73729768"
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Создание новой группы атрибутов и добавление к ней атрибутов.|[Создание группы атрибутов (службы Master Data Services)](../master-data-services/create-an-attribute-group-master-data-services.md)|  
-|Превращение группы атрибутов в видимую для пользователей|[Превращение группы атрибутов в видимую для пользователей (службы Master Data Services)](../master-data-services/make-an-attribute-group-visible-to-users-master-data-services.md)|  
-|Изменение имени существующей группы атрибутов.|[Изменение имени группы атрибутов (службы Master Data Services)](../master-data-services/change-an-attribute-group-name-master-data-services.md)|  
-|Удаление существующей группы атрибутов.|[Удаление группы атрибутов (службы Master Data Services)](../master-data-services/delete-an-attribute-group-master-data-services.md)|  
+|Создание новой группы атрибутов и добавление к ней атрибутов.|[Создание группы атрибутов &#40;Master Data Services&#41;](../master-data-services/create-an-attribute-group-master-data-services.md)|  
+|Превращение группы атрибутов в видимую для пользователей|[Сделать группу атрибутов видимой для пользователей &#40;Master Data Services&#41;](../master-data-services/make-an-attribute-group-visible-to-users-master-data-services.md)|  
+|Изменение имени существующей группы атрибутов.|[Изменение имени группы атрибутов &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-group-name-master-data-services.md)|  
+|Удаление существующей группы атрибутов.|[Удаление группы атрибутов &#40;Master Data Services&#41;](../master-data-services/delete-an-attribute-group-master-data-services.md)|  
   
 ## <a name="related-content"></a>См. также  
   
--   [Атрибуты (службы Master Data Services)](../master-data-services/attributes-master-data-services.md)  
+-   [Master Data Services &#40;атрибутов&#41;](../master-data-services/attributes-master-data-services.md)  
   
   

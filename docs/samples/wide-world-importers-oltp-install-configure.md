@@ -10,22 +10,22 @@ author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: e1683adfa20851d279e8b8e18a3c767db9e5810d
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056274"
 ---
 # <a name="installation-and-configuration"></a>Установка и настройка
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 Инструкции по установке и настройке базы данных OLTP для широкого мира.
 
-## <a name="prerequisites"></a>необходимые компоненты
+## <a name="prerequisites"></a>Предварительные требования
 
 - [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (или более поздней версии) или [базы данных SQL Azure](https://azure.microsoft.com/services/sql-database/). Для полной версии примера используйте SQL Server Evaluation, Developer или Enterprise Edition.
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Для получения наилучших результатов используйте выпуск Июнь 2016 или более поздней версии.
 
-## <a name="download"></a>Загрузить
+## <a name="download"></a>Скачивание
 
 Последний выпуск примера:
 
@@ -37,10 +37,10 @@ ms.locfileid: "74056274"
 
 [широкие средства импорта](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-database-scripts)
 
-## <a name="install"></a>Установить
+## <a name="install"></a>Установка
 
 
-### <a name="sql-server"></a>SQL Server
+### <a name="sql-server"></a>SQL Server
 
 Чтобы восстановить резервную копию на SQL Server экземпляр, можно использовать Management Studio.
 
@@ -51,7 +51,7 @@ ms.locfileid: "74056274"
 5. При необходимости измените целевое расположение файлов данных и журналов в области **файлы** . Обратите внимание, что рекомендуется размещать файлы данных и журналов на разных дисках.
 6. Нажмите кнопку **ОК**. Это приведет к запуску восстановления базы данных. После завершения работы на экземпляре SQL Server будет установлена база данных WideWorldImporters.
 
-### <a name="azure-sql-database"></a>Azure SQL Database
+### <a name="azure-sql-database"></a>База данных SQL Azure
 
 Чтобы импортировать BACPAC-файл в новую базу данных SQL, можно использовать Management Studio.
 
@@ -70,12 +70,12 @@ ms.locfileid: "74056274"
 Образец базы данных может использовать полнотекстовое индексирование. Однако эта функция не устанавливается по умолчанию с SQL Server — необходимо выбрать ее во время установки SQL Server (она включена по умолчанию в базе данных SQL Azure). Поэтому необходимо выполнить действие после установки.
 
 1. В SQL Server Management Studio подключитесь к базе данных WideWorldImporters и откройте новое окно запроса.
-2. Выполните следующую команду T-SQL, чтобы разрешить использование полнотекстового индексирования в базе данных: `EXECUTE Application.Configuration_ApplyFullTextIndexing`
+2. Выполните следующую команду T-SQL, чтобы разрешить использование полнотекстового индексирования в базе данных:`EXECUTE Application.Configuration_ApplyFullTextIndexing`
 
 
 ### <a name="sql-server-audit"></a>подсистема аудита SQL Server
 
-Область применения: SQL Server
+Применяется к: SQL Server
 
 Включение аудита в SQL Server требует настройки сервера. Чтобы включить аудит SQL Server для образца WideWorldImporters, выполните следующую инструкцию в базе данных:
 

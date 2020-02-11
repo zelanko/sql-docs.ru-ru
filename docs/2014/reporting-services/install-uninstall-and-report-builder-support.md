@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8d3f7e5829c19b79ca19783d36885f6bfd3761f7
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637888"
 ---
 # <a name="install-uninstall-and-report-builder-support"></a>Установка, удаление и поддержка построителя отчетов
@@ -27,7 +27,7 @@ ms.locfileid: "73637888"
 > [!NOTE]  
 >  Построитель отчетов нельзя устанавливать на компьютеры с процессорами Itanium. Это относится и к версии [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] , и к изолированной версии построителя отчетов.  
   
- Обычно администратор устанавливает и настраивает службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], предоставляет разрешение для использования версии построителя отчетов [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] и управляет папками и разрешениями для отчетов, элементов отчетов и общих наборов данных, сохраняемых на сервере отчетов. Дополнительные сведения о [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] администрирования см. в разделе [Reporting Services сервера &#40;отчетов в&#41; основном режиме](report-server/reporting-services-report-server-native-mode.md) в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [электронной документации](https://go.microsoft.com/fwlink/?LinkId=154888) по MSDN.Microsoft.com.  
+ Обычно администратор устанавливает и настраивает службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], предоставляет разрешение для использования версии построителя отчетов [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] и управляет папками и разрешениями для отчетов, элементов отчетов и общих наборов данных, сохраняемых на сервере отчетов. Дополнительные сведения о [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] администрировании см. в разделе [Reporting Services сервер отчетов &#40;основном режиме&#41;](report-server/reporting-services-report-server-native-mode.md) в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [электронной документации](https://go.microsoft.com/fwlink/?LinkId=154888) по MSDN.Microsoft.com.  
   
 ##  <a name="Installing"></a>Установка построитель отчетов  
  Построитель отчетов доступен как изолированная версия и как версия [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] . Пользователь или администратор загружает и устанавливает изолированную версию на локальном компьютере, а версия [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] устанавливается вместе со службами [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Построитель отчетов можно загрузить в [центре загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=53613).  
@@ -38,7 +38,7 @@ ms.locfileid: "73637888"
  Прежде чем устанавливать одну из версий построителя отчетов, ознакомьтесь с системными требованиями и предварительными условия установки.  
   
 ### <a name="system-requirements"></a>Требования к системе  
- Для построитель отчетов требуется, чтобы на локальном компьютере была установлена [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] версии 3,5. Если приложение [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] не установлено на локальном компьютере, то при установке построителя отчетов появится предложение установить его до завершения установки.  
+ Для построитель отчетов требуется, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] чтобы версия 3,5 была установлена на локальном компьютере. Если приложение [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] не установлено на локальном компьютере, то при установке построителя отчетов появится предложение установить его до завершения установки.  
   
  Платформа .NET Framework 3.5 распространяется бесплатно. Платформу .NET Framework 3.5 можно загрузить в [центре загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=21).  
   
@@ -51,21 +51,22 @@ ms.locfileid: "73637888"
   
  Также можно произвести установку из командной строки и включить параметры, например проведение установки в автоматическом режиме и создание файлов журнала для установки. В документации установщика Windows, выполняющего MSI-файлы, предоставляются сведения о доступных параметрах.  
   
- Дополнительные сведения см. [в статье Установка изолированной версии &#40;построитель отчетов построитель отчетов&#41;](install-windows/install-report-builder.md).  
+ Дополнительные сведения см. [в статье Установка изолированной версии построитель отчетов &#40;построитель отчетов&#41;](install-windows/install-report-builder.md).  
   
  Администратор также может принудительно отправить программу на компьютер пользователя с помощью таких приложений, как Microsoft Systems Manager Server (SMS). Сведения по использованию определенного программного обеспечения для установки построителя отчетов можно получить в документации по этому программному обеспечению.   
   
 ### <a name="installing-the-clickonce-version-of-report-builder-on-your-computer"></a>Установка построителя отчетов версии ClickOnce на компьютер  
  Версия [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] построителя отчетов устанавливается вместе со службами [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Она устанавливается при установке служб [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]как в собственном режиме, так и в режиме интеграции с SharePoint.  
   
- [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] — технология Майкрософт для развертывания приложений Windows. Технология [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] дает пользователям возможность устанавливать и запускать приложения Windows (например, построитель отчетов), щелкнув ссылку на веб-странице. Дополнительные сведения о развертывании [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] приложений, применении [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] безопасности приложений или выполнении приложений [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] в зоне Интернета см. в разделе "развертывание ClickOnce для приложений Windows Forms", "безопасность в Windows Forms Обзор". "или" Общие сведения о развертывании доверенных приложений "на веб-сайте [!INCLUDE[msCoName](../includes/msconame-md.md)] Developer Network [https://developer.microsoft.com/](https://developer.microsoft.com/).  
+ 
+  [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] — технология Майкрософт для развертывания приложений Windows. Технология [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] дает пользователям возможность устанавливать и запускать приложения Windows (например, построитель отчетов), щелкнув ссылку на веб-странице. Дополнительные сведения о развертывании [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] приложений, применении [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] безопасности приложений или запуске [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] приложений в зоне Интернета см. в статьях «развертывание ClickOnce для Windows Forms приложений», «безопасность в Windows Forms обзор» или «общие сведения о развертывании доверенных приложений» [!INCLUDE[msCoName](../includes/msconame-md.md)] на веб-сайте разработчика [https://developer.microsoft.com/](https://developer.microsoft.com/)Network по адресу.  
   
  Версия построителя отчетов [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] располагается на сервере отчетов и устанавливается на компьютер при нажатии кнопки **Построитель отчетов** в диспетчере отчетов или выборе параметра **Отчет построителя отчетов** в меню **Создать документ** в библиотеке SharePoint.  
   
 > [!NOTE]  
 >  Если меню **Создать документ** не содержит пунктов **Отчет построителя отчетов**, **Модель построителя отчетов**и **Источник данных отчета** , необходимо добавить типы их содержимого в библиотеку SharePoint.   
   
- Построитель отчетов можно открыть из диспетчера отчетов или из библиотеки SharePoint. Дополнительные сведения об открытии построитель отчетов см. в разделе [Start &#40;построитель отчетов&#41;построитель отчетов](report-builder/start-report-builder.md).  
+ Построитель отчетов можно открыть из диспетчера отчетов или из библиотеки SharePoint. Дополнительные сведения об открытии построитель отчетов см. в разделе [Start построитель отчетов &#40;построитель отчетов&#41;](report-builder/start-report-builder.md).  
   
 ### <a name="report-builder-languages"></a>Языки построителя отчетов  
  Кроме английского языка, построитель отчетов доступен еще на 21 языке. Во время загрузки изолированной версии построителя отчетов выберите языковую версию для установки. Загрузку следует повторять для каждой языковой версии, которую необходимо использовать.  
@@ -74,14 +75,14 @@ ms.locfileid: "73637888"
   
  В следующей таблице приводятся сведения о доступных языковых версиях.  
   
-|LCID|Язык|Культура|  
+|LCID|Язык|Язык и региональные параметры|  
 |----------|--------------|-------------|  
-|1028|Китайский (традиционный)|zh-TW|  
+|1028|Китайский (традиционное письмо)|zh-TW|  
 |1029|Чешский|cs-CZ|  
 |1030|Датский|da-DK|  
 |1031|Немецкий|de-DE|  
-|1032|Greek|el-GR|  
-|1033|Английский|ru-RU|  
+|1032|Греческий|el-GR|  
+|1033|Английский|en-US|  
 |1035|Финский|fi-FI|  
 |1036|Французский|fr-FR|  
 |1038|Венгерский|hu-HU|  
@@ -91,17 +92,18 @@ ms.locfileid: "73637888"
 |1043|Нидерландский|nl-NL|  
 |1044|Норвежский (букмол)|nb-NO|  
 |1045|Польский|pl-PLl|  
-|1046|Portuguese (Brazil)|pt-BR|  
-|1049|Russian|ru-RU|  
+|1046|Португальский (Бразилия)|pt-BR|  
+|1049|Русский|ru-RU|  
 |1053|Шведский|sv-SE|  
 |1055|Турецкий|tr-TR|  
 |2052|Китайский (упрощенное письмо)|zh-CN|  
 |2070|Португальский (Португалия)|pt-PT|  
-|3082|Испанский (Испания)|es-ES|  
+|3082|испанский (Испания)|es-ES|  
   
   
 ##  <a name="Uninstalling"></a>Удаление построитель отчетов  
- Изолированную версию построителя отчетов можно удалить с помощью панели управления или из командной строки. Это применимо только к изолированной версии построителя отчетов. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] построителя отчетов нельзя удалить отдельно. Он всегда устанавливается и удаляется вместе со службами [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+ Изолированную версию построителя отчетов можно удалить с помощью панели управления или из командной строки. Это применимо только к изолированной версии построителя отчетов. 
+  [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] построителя отчетов нельзя удалить отдельно. Он всегда устанавливается и удаляется вместе со службами [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
  Дополнительные сведения см. [в разделе Удаление изолированной версии построитель отчетов &#40;построитель отчетов&#41;](install-windows/uninstall-report-builder.md).  
   
@@ -126,7 +128,7 @@ ms.locfileid: "73637888"
   
 -   Изображения, например фоновые изображения и логотипы, которые могут быть использованы в нескольких отчетах и хранятся отдельно от отчетов для простоты обслуживания.  
   
- Дополнительные сведения см. в разделе [ &#40;управление содержимым сервера отчетов SSRS&#41; в основном режиме](report-server/report-server-content-management-ssrs-native-mode.md) в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [электронной документации](https://go.microsoft.com/fwlink/?LinkId=154888) по MSDN.Microsoft.com.  
+ Дополнительные сведения см. в разделе [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Управление содержимым сервера отчетов &#40;служб SSRS в основном режиме&#41;](report-server/report-server-content-management-ssrs-native-mode.md) [электронной документации](https://go.microsoft.com/fwlink/?LinkId=154888) по MSDN.Microsoft.com.  
   
 ### <a name="permissions"></a>Разрешения  
  Разрешения на доступ к серверу отчетов предоставляются администратором. Пользователь построителя отчетов должен иметь разрешения для доступа к содержимому и функциям сервера отчетов. Например, может понадобиться использовать элементы отчета, хранящиеся на сервере отчетов, обновить отчеты, повторно сохранить их на сервере отчетов, а также выполнить их в диспетчере отчетов. В зависимости от потребностей и выполняемых задач предоставляются разрешения более низкого или высокого уровня. Например, пользователи, которым необходимо только открывать общие отчеты, предоставляют разрешения более низкого уровня, чем пользователи, которые вносят в эти отчеты изменения.  
@@ -145,14 +147,14 @@ ms.locfileid: "73637888"
   
 -   Использовать уровень разрешений «Участие», по умолчанию предоставляемый группам «Участники», чтобы предоставлять пользователям возможность управления отчетами и общими источниками данных в общих папках. Этот уровень разрешений предоставлен более опытным пользователям.  
   
- Общие сведения о разрешениях и создании и использовании ролей см. в документации по [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [электронной документации](https://go.microsoft.com/fwlink/?LinkId=154888) по MSDN.Microsoft.com.  
+ Общие сведения о разрешениях и создании [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] и использовании ролей см. в документации [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [электронной](https://go.microsoft.com/fwlink/?LinkId=154888) документации по MSDN.Microsoft.com.  
   
 ### <a name="configuration-of-report-server"></a>Настройка сервера отчетов  
  При создании отчетов в построителе отчетов, когда устанавливается соединение с экземпляром [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , который установлен на Windows Vista, Windows Server 2008 или Windows 7, при попытке доступа к серверу отчетов с целью открыть или сохранить отчет в доступе может быть отказано. Это происходит потому, что такое средство безопасности, как контроль учетных записей (UAC) в Windows Vista, Windows Server 2008 и Windows 7, ограничивает излишнее использование повышенных разрешений, отключая разрешения администратора при доступе к приложениям.  
   
  Однако с помощью дополнительной настройки сервер отчетов становится доступным для пользователей построителя отчетов. Можно добавить URL-адреса служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в список надежных сайтов. По умолчанию в Windows Vista, Windows Server 2008 и Windows 7 Internet Explorer 7.0 или более поздние версии запускаются в защищенном режиме. Защищенный режим — это функция, которая изолирует запросы браузера от процессов высокого уровня, выполняющихся на том же компьютере. Защищенный режим для приложений сервера отчетов можно отключить, добавив их в список «Надежные сайты». Для внесения этого изменения необходимо иметь разрешения администратора.  
   
- Дополнительные сведения о настройке [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]см. в [разделе &#40;Диспетчер конфигурации служб Reporting Services&#41; del](https://docs.microsoft.com/sql/sql-server/install/reporting-services-configuration-manager-native-mode) в [Reporting Services документации](https://go.microsoft.com/fwlink/?linkid=121312) по MSDN.Microsoft.com.  
+ Дополнительные сведения о настройке [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]см. в разделе [диспетчер конфигурации служб Reporting Services &#40;del&#41;](https://docs.microsoft.com/sql/sql-server/install/reporting-services-configuration-manager-native-mode) в [документации Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) по MSDN.Microsoft.com.  
   
   
 ##  <a name="SampleDatabases"></a>Примеры баз данных SQL Server  
@@ -171,7 +173,7 @@ ms.locfileid: "73637888"
  Предварительные условия и инструкции по загрузке и установке образцов баз данных [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] см. в разделах [Предварительные условия для образцов баз данных SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=166648) и [Установка образцов баз данных](https://go.microsoft.com/fwlink/?LinkId=166649) на сайте CodePlex.  
   
   
-##  <a name="HowTo"></a> Инструкции  
+##  <a name="HowTo"></a>Разделы руководства  
  В этом разделе описаны процессы установки и удаления построителя отчетов.  
   
  [Установите изолированную версию построитель отчетов &#40;построитель отчетов&#41;](install-windows/install-report-builder.md)  
@@ -181,7 +183,7 @@ ms.locfileid: "73637888"
  [Запуск построитель отчетов &#40;построитель отчетов&#41;](report-builder/start-report-builder.md)  
   
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Построитель отчетов в SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)  
   
   

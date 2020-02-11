@@ -14,10 +14,10 @@ ms.assetid: a360ef13-0c34-43b8-a87e-2f5d8732d30e
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 0e4a49778b9c75c696d079549f586187b1204fd8
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728943"
 ---
 # <a name="require-attribute-values-master-data-services"></a>Запрос значений атрибута (службы Master Data Services)
@@ -29,8 +29,8 @@ ms.locfileid: "73728943"
 > [!NOTE]  
 >  Если у элемента не хватает значения атрибута на основе домена, то этот элемент не отображается в производной иерархии, основанной на этих связях.  
   
-## <a name="prerequisites"></a>необходимые компоненты  
- Чтобы выполнить эту процедуру:  
+## <a name="prerequisites"></a>Предварительные требования  
+ Для выполнения этой процедуры:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
   
@@ -58,11 +58,11 @@ ms.locfileid: "73728943"
   
 10. Из раскрывающегося списка **Оператор** выберите **необходимое действие**.  
   
-11. В раскрывающемся списке **Атрибут** выберите атрибут.  
+11. Из раскрывающегося списка **Атрибут** выберите атрибут.  
   
-12. Нажмите кнопку **Сохранить**. В сетку **Then** будет добавлена новая строка.  
+12. Выберите команду **Сохранить**. В сетку **Then** будет добавлена новая строка.  
   
-13. Нажмите кнопку **Сохранить**.  
+13. Выберите команду **Сохранить**.  
   
 14. Нажмите кнопку **Опубликовать все**.  
   
@@ -72,12 +72,12 @@ ms.locfileid: "73728943"
   
 -   Примените бизнес-правила к данным с помощью одной из следующих процедур:  
   
-    -   [Подтверждение конкретных членов, обнаруженных при проверке на соответствие бизнес-правилам (службы Master Data Services)](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
+    -   [Проверка конкретных членов на соответствие бизнес-правилам &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
-    -   [Подтверждение исправления проблемы, обнаруженной при проверке на соответствие бизнес-правилам (службы Master Data Services)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
+    -   [Проверка версии на соответствие бизнес-правилам &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
-## <a name="see-also"></a>См. также статью  
- [Бизнес-правила (службы Master Data Services)](../master-data-services/business-rules-master-data-services.md)   
- [Производные иерархии (службы Master Data Services)](../master-data-services/derived-hierarchies-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Бизнес-правила &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
+ [Производные иерархии &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
   
   

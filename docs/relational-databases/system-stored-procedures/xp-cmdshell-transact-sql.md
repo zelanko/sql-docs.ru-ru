@@ -18,10 +18,10 @@ ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: be1b7bc97a46282e0adae2fb5679cfff0cd11dd1
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74687313"
 ---
 # <a name="xp_cmdshell-transact-sql"></a>xp_cmdshell (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "74687313"
 
   Увеличивает число процессов командного ядра Windows в строке для выполнения. Любые выходные данные возвращаются в виде текстовых строк.  
   
- ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [соглашения о синтаксисе Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -62,7 +62,7 @@ GO
 The command(s) completed successfully.  
 ```  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Процесс Windows, порожденный **xp_cmdshell** , имеет те же права безопасности, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] что и учетная запись службы.  
   
  **xp_cmdshell** работает синхронно. Управление не возвращается участнику до завершения команды ядра.  
@@ -120,14 +120,14 @@ REVERT ;
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-returning-a-list-of-executable-files"></a>а. Возвращение списка исполняемых файлов  
+### <a name="a-returning-a-list-of-executable-files"></a>A. Возвращение списка исполняемых файлов  
  В следующем примере показано, как расширенная хранимая процедура `xp_cmdshell` выполняет команду каталога.  
   
 ```  
 EXEC master..xp_cmdshell 'dir *.exe''  
 ```  
   
-### <a name="b-returning-no-output"></a>B. Применение без возврата данных  
+### <a name="b-returning-no-output"></a>Б. Применение без возврата данных  
  В следующем примере процедура `xp_cmdshell` применяется для выполнения командной строки без возвращения данных клиенту.  
   
 ```  
@@ -138,7 +138,7 @@ EXEC xp_cmdshell 'copy c:\SQLbcks\AdvWorks.bck
 GO  
 ```  
   
-### <a name="c-using-return-status"></a>C. Применение возвращаемого состояния  
+### <a name="c-using-return-status"></a>В. Применение возвращаемого состояния  
  В следующем примере `xp_cmdshell` расширенная хранимая процедура также предлагает состояние возврата. Значение кода возврата хранится в переменной `@result`.  
   
 ```  
@@ -150,7 +150,7 @@ ELSE
    PRINT 'Failure';  
 ```  
   
-### <a name="d-writing-variable-contents-to-a-file"></a>D. Запись содержимого переменной в файл  
+### <a name="d-writing-variable-contents-to-a-file"></a>Г. Запись содержимого переменной в файл  
  В следующем примере содержимое переменной `@var` записывается в файл с именем `var_out.txt` в текущем каталоге сервера.  
   
 ```  
@@ -160,7 +160,7 @@ SET @cmd = 'echo ' + @var + ' > var_out.txt';
 EXEC master..xp_cmdshell @cmd;  
 ```  
   
-### <a name="e-capturing-the-result-of-a-command-to-a-file"></a>E. Ввод результата команды в файл  
+### <a name="e-capturing-the-result-of-a-command-to-a-file"></a>Д. Ввод результата команды в файл  
  В следующем примере содержимое текущего каталога записывается в файл с именем `dir_out.txt` в текущем каталоге сервера.  
   
 ```  
@@ -170,7 +170,7 @@ SET @cmd = @var + ' > dir_out.txt';
 EXEC master..xp_cmdshell @cmd;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Общие расширенные хранимые процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [Параметр конфигурации сервера xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)   
  [Настройка контактной зоны](../../relational-databases/security/surface-area-configuration.md)   

@@ -15,30 +15,30 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 89e694b18dc27a739a7e1f4d1e0950ef08a01570
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73785742"
 ---
 # <a name="sqlputdata"></a>SQLPutData
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  При использовании SQLPutData для отправки более чем 65 535 байт данных (для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии 4.21 a) или 400 КБ данных (для SQL Server версии 6,0 и более поздних версий) для столбца SQL_LONGVARCHAR (**Text**), SQL_WLONGVARCHAR (**ntext**) или SQL_LONGVARBINARY (**Image**) применяются следующие ограничения:  
+  Следующие ограничения применяются при использовании SQLPutData для отправки более чем 65 535 байт [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] данных (для версии 4.21 a) или 400 КБ данных (для SQL Server версии 6,0 и более поздних) для столбца SQL_LONGVARCHAR (**text**), SQL_WLONGVARCHAR (**ntext**) или SQL_LONGVARBINARY (**Image**).  
   
 -   Параметр, на который указывает ссылка, может быть *insert_value* в инструкции INSERT.  
   
 -   Параметр, на который указывает ссылка, может быть *выражением* в предложении SET инструкции UPDATE.  
   
- Отмена последовательности вызовов SQLPutData, предоставляющих данные в блоках на сервере, на котором выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], приводит к частичному обновлению значения столбца при использовании версии 6,5 или более ранней. Столбец типа **Text**, **ntext**или **Image** , на который было дана ссылка при вызове SQLCancel, имеет значение промежуточного значения заполнителя.  
+ Отмена последовательности вызовов SQLPutData, предоставляющих данные в блоках на сервере, на котором [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется, приводит к частичному обновлению значения столбца при использовании версии 6,5 или более ранней. Столбец типа **Text**, **ntext**или **Image** , на который было дана ссылка при вызове SQLCancel, имеет значение промежуточного значения заполнителя.  
   
 > [!NOTE]  
 >  Драйвер ODBC собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживает соединение с версией [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6.5 и более ранней.  
   
 ## <a name="diagnostics"></a>Диагностика  
- Для SQLPutData существует один [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственный код SQLSTATE для конкретного клиента:  
+ Для SQLPutData существует [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] один собственный клиент с конкретным кодом SQLSTATE:  
   
-|SQLSTATE|Error|Описание|  
+|SQLSTATE|Ошибка|Description|  
 |--------------|-----------|-----------------|  
 |22026|Строковые данные, несовпадение длины|Если длина данных в байтах для отправки была задана приложением, например с SQL_LEN_DATA_AT_EXEC (*n*), где *n* больше 0, общее число байтов, заданное приложением через SQLPutData, должно соответствовать указанной длине.|  
   
@@ -60,13 +60,13 @@ ms.locfileid: "73785742"
 ## <a name="sqlputdata-support-for-enhanced-date-and-time-features"></a>Поддержка функции SQLPutData для улучшенных функций даты-времени  
  Значения параметров типов даты-времени преобразуются, как описано в статье [преобразования из C в SQL](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md).  
   
- Дополнительные сведения см. в разделе [улучшения &#40;даты и времени&#41;ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Дополнительные сведения см. в разделе [улучшения даты и времени &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlputdata-support-for-large-clr-udts"></a>Поддержка функции SQLPutData для больших определяемых пользователем типов данных CLR  
- **SQLPutData** поддерживает большие определяемые пользователем типы данных CLR (UDT). Дополнительные сведения см. в разделе [типы больших определяемых пользователем &#40;типов&#41;данных CLR ODBC](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ **SQLPutData** поддерживает большие определяемые пользователем типы данных CLR (UDT). Дополнительные сведения см. в разделе [большие определяемые пользователем типы данных CLR &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
-## <a name="see-also"></a>См. также статью  
-   [функции SQLPutData](https://go.microsoft.com/fwlink/?LinkId=59365)  
- [Подробные сведения о реализации API-интерфейсов ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+## <a name="see-also"></a>См. также:  
+ [Функция SQLPutData](https://go.microsoft.com/fwlink/?LinkId=59365)   
+ [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

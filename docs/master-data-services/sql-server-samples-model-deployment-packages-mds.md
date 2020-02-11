@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 keywords:
-- master data services
-- образец
+- службы master data services
+- sample
 ms.assetid: 9b31b7b6-319b-4840-b67d-eb383e7762b1
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 19b4cc9cc9282fff784059e6ac39bf74792f95a4
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73727877"
 ---
 # <a name="sql-server-examples-model-deployment-packages-mds"></a>Примеры SQL Server: пакеты развертывания моделей (MDS)
@@ -29,7 +29,7 @@ ms.locfileid: "73727877"
  Инструкции по развертыванию образцов пакетов моделей см. в разделе [Развертывание образцов моделей и данных](../master-data-services/master-data-services-installation-and-configuration.md#deploySample). Вы можете развернуть эти образцы пакетов моделей с помощью [средства MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
 > [!IMPORTANT]
->  **Обновления примеров в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**  
+>  **Примеры обновлений в[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**  
 > 
 >  Образцы пакетов были обновлены для поддержки перечисленных ниже новых возможностей.  
 > 
@@ -42,7 +42,7 @@ ms.locfileid: "73727877"
 >      Дополнительные сведения см. в разделе [Создание атрибута на основе домена (службы Master Data Services)](../master-data-services/create-a-domain-based-attribute-master-data-services.md).  
 > -   Обязательное утверждение изменений сущности.  
 > 
->      Дополнительные сведения см. в разделе [Требуется утверждение (службы Master Data Services)](../master-data-services/approval-required-master-data-services.md).  
+>      Дополнительные сведения см. в разделе [утверждение Required &#40;Master Data Services&#41;](../master-data-services/approval-required-master-data-services.md).  
 > -   Использование операторов Not и Else в бизнес-правилах  
 > 
 >      Дополнительные сведения см. в разделе [Примеры бизнес-правил](../master-data-services/business-rule-examples-master-data-services.md).  
@@ -54,7 +54,7 @@ ms.locfileid: "73727877"
  
  В службах Master Data Services пакет представляет собой XML-файл, содержащий развертываемую структуру модели и (необязательно) данные этой модели. Пакеты модели используются для перемещения копий моделей из одной среды служб MDS в другую либо для создания моделей в существующей среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Развертывание пакета развертывания модели при помощи MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)  
   
   

@@ -13,10 +13,10 @@ ms.assetid: 79510fcf-4c83-4426-bdd4-15b4170ecfbd
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 115cb0011be22e482e6d8d8e032d8db21246bbd9
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729709"
 ---
 # <a name="change-an-attribute-group-name-master-data-services"></a>Изменение имени группы атрибутов (службы Master Data Services)
@@ -25,8 +25,8 @@ ms.locfileid: "73729709"
 
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]можно изменить имя группы атрибутов.  
   
-## <a name="prerequisites"></a>необходимые компоненты  
- Чтобы выполнить эту процедуру:  
+## <a name="prerequisites"></a>Предварительные требования  
+ Для выполнения этой процедуры:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
   
@@ -50,9 +50,9 @@ ms.locfileid: "73729709"
   
 8.  Нажмите кнопку **Сохранить группу**.  
   
-## <a name="see-also"></a>См. также статью  
- [Группы атрибутов (службы Master Data Services)](../master-data-services/attribute-groups-master-data-services.md)   
- [Создание группы атрибутов (службы Master Data Services)](../master-data-services/create-an-attribute-group-master-data-services.md)   
- [Удаление группы атрибутов (службы Master Data Services)](../master-data-services/delete-an-attribute-group-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Группы атрибутов &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md)   
+ [Создание группы атрибутов &#40;Master Data Services&#41;](../master-data-services/create-an-attribute-group-master-data-services.md)   
+ [Удаление группы атрибутов &#40;Master Data Services&#41;](../master-data-services/delete-an-attribute-group-master-data-services.md)  
   
   

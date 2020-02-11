@@ -11,10 +11,10 @@ ms.assetid: 3a6a3cf2-1e77-43d3-a64a-855ae51258e7
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: b0e937ff9222553c42eacefc173dfec90bb6ebc6
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728782"
 ---
 # <a name="apply-and-update-a-changeset-master-data-services"></a>Применение и обновление набора изменений (Master Data Services)
@@ -23,7 +23,7 @@ ms.locfileid: "73728782"
 
   Набор изменений — это совокупность ожидающих изменений основных данных. Набор изменений можно применить локально, чтобы просмотреть, добавить, обновить и удалить ожидающие изменения в этом наборе.  
   
-## <a name="prerequisites"></a>необходимые компоненты  
+## <a name="prerequisites"></a>Предварительные требования  
   
 -   Необходимо иметь разрешение на доступ к функциональной области **Обозреватель** . Дополнительные сведения см. в разделе [Разрешения функциональной области (службы Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md).  
   
@@ -50,10 +50,10 @@ ms.locfileid: "73728782"
 5.  Чтобы обратить ожидающие изменения, в области **Наборы изменений** щелкните правой кнопкой мыши в сетке и выберите пункт **Обратить**.  
   
 ## <a name="next-steps"></a>Next Steps  
- [Фиксация или отправка набора изменений (Master Data Services)](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)  
+ [Фиксация или отправка набора изменений &#40;Master Data Services&#41;](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)  
   
-## <a name="see-also"></a>См. также статью  
- [Создание набора изменений (Master Data Services)](../master-data-services/create-a-changeset-master-data-services.md)   
- [Утверждение или отклонение набора изменений (Master Data Services)](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Создание набора изменений &#40;Master Data Services&#41;](../master-data-services/create-a-changeset-master-data-services.md)   
+ [Утверждение или отклонение набора изменений &#40;Master Data Services&#41;](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)  
   
   
