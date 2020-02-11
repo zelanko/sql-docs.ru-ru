@@ -32,10 +32,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 7427de92691a2d5c0a92aac55ac16f47dd2ef6b1
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232238"
 ---
 # <a name="coding-user-defined-types"></a>Разработка кода для определяемых пользователем типов
@@ -746,6 +746,6 @@ public void Read(System.IO.BinaryReader r)
   
  Полный листинг кода для `Currency` определяемого пользователем типа см. в разделе [SQL Server ядро СУБД Samples](https://msftengprodsamples.codeplex.com/).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание определяемого пользователем типа](creating-user-defined-types.md)  
   

@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 27070cc125ca0443ae833854e721c6f72c7ce832
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244823"
 ---
 # <a name="add-transact-sql-snippets"></a>Добавление фрагментов кода Transact-SQL
@@ -32,21 +32,21 @@ ms.locfileid: "75244823"
   
 #### <a name="adding-a-snippet-folder"></a>Добавление папки фрагментов  
   
-1.  Откройте [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+1.  Откройте среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 2.  Выберите меню **Сервис** и нажмите кнопку **Диспетчер фрагментов кода**.  
   
-3.  Нажмите кнопку **Добавить**.  
+3.  Нажмите кнопку **Добавить** .  
   
 4.  Перейдите к папке, содержащей собственные фрагменты кода, и нажмите кнопку **Выбор папки** .  
   
 #### <a name="importing-a-snippet"></a>Импорт фрагмента  
   
-1.  Откройте [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+1.  Откройте среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 2.  Выберите меню **Сервис** и нажмите кнопку **Диспетчер фрагментов кода**.  
   
-3.  Нажмите кнопку **Импортировать**.  
+3.  Нажмите кнопку **Import** (Импортировать).  
   
 4.  Перейдите к папке, содержащей собственный фрагмент кода, выберите файл с расширением SNIPPET и нажмите кнопку **Открыть** .  
   
@@ -102,15 +102,15 @@ ms.locfileid: "75244823"
     </CodeSnippets>  
     ```  
   
-2.  Откройте [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+2.  Откройте среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 3.  Выберите меню **Сервис** и нажмите кнопку **Диспетчер фрагментов кода**.  
   
-4.  Нажмите кнопку **Импортировать**.  
+4.  Нажмите кнопку **Import** (Импортировать).  
   
 5.  Перейдите к папке, содержащей файл TryCatch.snippet, щелкните файл TryCatch.snippet и нажмите кнопку **Открыть** . В папке **Мои фрагменты кода** не должно быть фрагмента TryCatch.  
   
-## <a name="see-also"></a>См. также  
- [Вставка фрагментов кода на языке Transact-SQL](insert-surround-with-transact-sql-snippets.md)  
+## <a name="see-also"></a>См. также:  
+ [Вставка фрагментов кода окружения Transact-SQL](insert-surround-with-transact-sql-snippets.md)  
   
   

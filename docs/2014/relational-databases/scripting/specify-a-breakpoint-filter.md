@@ -13,16 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a9759134504c7b55f5008783a2e6c3bd9ebf1755
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243223"
 ---
 # <a name="specify-a-breakpoint-filter"></a>Задание фильтра точек останова
   Фильтр для точек останова ограничивает действие точки останова определенными компьютерами, процессами операционной системы и потоками. Фильтры точек останова обычно используются при отладке параллельных приложений.  
   
-##  <a name="BKMK_ActionConsiderations"></a>Рекомендации по фильтрации  
+##  <a name="BKMK_ActionConsiderations"></a> Вопросы применения фильтров  
  Обычно фильтры точек останова используют вместе с отладчиком [!INCLUDE[tsql](../../includes/tsql-md.md)] , потому что скрипты и хранимые процедуры [!INCLUDE[tsql](../../includes/tsql-md.md)] не являются параллельными приложениями.  
   
 #### <a name="to-specify-a-breakpoint-filter"></a>Задание фильтра точки останова  
@@ -46,7 +46,7 @@ ms.locfileid: "75243223"
   
 3.  Нажмите кнопку **ОК** , чтобы внести изменения, либо кнопку **Отмена** , чтобы выйти без их применения.  
   
-## <a name="see-also"></a>См. также  
- [Указание условия для точки останова](specify-a-breakpoint-condition.md)   
- [Укажите число попаданий](specify-a-hit-count.md)   
+## <a name="see-also"></a>См. также:  
+ [Задание условия точки останова](specify-a-breakpoint-condition.md)   
+ [Настройка счетчика числа попаданий](specify-a-hit-count.md)   
  [Задание действия в точке останова](specify-a-breakpoint-action.md)  

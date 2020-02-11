@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6893d00a1fa7fb0986be2eb6241c596160085e2f
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243169"
 ---
 # <a name="use-sqlcmd-with-scripting-variables"></a>Использование программы sqlcmd с переменными скрипта
@@ -103,7 +103,7 @@ ms.locfileid: "75243169"
 ## <a name="sqlcmd-scripting-variables"></a>Переменные скрипта sqlcmd  
  Переменные, которые определяются программой **sqlcmd** , называются переменными сценария. В следующей таблице приведен список переменных сценария программы **sqlcmd** .  
   
-|Переменная|Связанный параметр|Чтение-запись|Значение по умолчанию|  
+|Переменная|Связанный параметр|Чтение-запись|По умолчанию|  
 |--------------|--------------------|----------|-------------|  
 |SQLCMDUSER*|-U|R|""|  
 |SQLCMDPASSWORD*|-P|--|""|  
@@ -116,7 +116,7 @@ ms.locfileid: "75243169"
 |SQLCMDCOLSEP|-s|Чтение-запись|" "|  
 |SQLCMDCOLWIDTH|-w|Чтение-запись|0|  
 |SQLCMDPACKETSIZE|-a|R|"4096"|  
-|SQLCMDERRORLEVEL|-m|Чтение-запись|0|  
+|SQLCMDERRORLEVEL|-M|Чтение-запись|0|  
 |SQLCMDMAXVARTYPEWIDTH|-y|Чтение-запись|«256»|  
 |SQLCMDMAXFIXEDTYPEWIDTH|-y|Чтение-запись|"0" = неограниченное время ожидания|  
 |SQLCMDEDITOR||Чтение-запись|"edit.com"|  
@@ -130,7 +130,7 @@ ms.locfileid: "75243169"
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-using-the-setvar-command-in-a-script"></a>а. Использование команды setvar в скрипте  
+### <a name="a-using-the-setvar-command-in-a-script"></a>A. Использование команды setvar в скрипте  
  Команда **setvar** позволяет управлять многими параметрами программы **sqlcmd** в сценарии. В следующем примере создается скрипт `test.sql` , в котором переменной `SQLCMDLOGINTIMEOUT` присваивается значение `60` , а другой переменной скрипта, `server`, присваивается значение `testserver`. Следующий код входит в скрипт `test.sql`.  
   
  `:setvar SQLCMDLOGINTIMEOUT 60`  
@@ -149,7 +149,7 @@ ms.locfileid: "75243169"
   
  `sqlcmd -i c:\test.sql`  
   
-### <a name="b-using-the-setvar-command-interactively"></a>B. Интерактивное использование команды setvar  
+### <a name="b-using-the-setvar-command-interactively"></a>Б. Интерактивное использование команды setvar  
  В следующем примере показана интерактивная установка переменной сценария с помощью команды `setvar` .  
   
  `sqlcmd`  
@@ -166,7 +166,7 @@ ms.locfileid: "75243169"
   
  `1>`  
   
-### <a name="c-using-command-prompt-environment-variables-within-sqlcmd"></a>C. Использование переменных среды командной строки в программе sqlcmd  
+### <a name="c-using-command-prompt-environment-variables-within-sqlcmd"></a>В. Использование переменных среды командной строки в программе sqlcmd  
  В следующем примере устанавливаются четыре переменные среды `are` , которые затем вызываются из `sqlcmd`.  
   
  `C:\>SET tablename=Person.Person`  
@@ -187,7 +187,7 @@ ms.locfileid: "75243169"
   
  `4> GO`  
   
-### <a name="d-using-user-level-environment-variables-within-sqlcmd"></a>D. Использование переменных среды уровня пользователя в программе sqlcmd  
+### <a name="d-using-user-level-environment-variables-within-sqlcmd"></a>Г. Использование переменных среды уровня пользователя в программе sqlcmd  
  В следующем примере пользовательская переменная среды `%Temp%` устанавливается в командной строке и передается входному файлу `sqlcmd` . Чтобы просмотреть пользовательские переменные среды, на **панели управления**дважды щелкните компонент **Система**. Перейдите на вкладку **Дополнительно** и щелкните **Переменные среды**.  
   
  Следующий программный код является частью входного файла `c:\testscript.txt`:  
@@ -226,7 +226,7 @@ ms.locfileid: "75243169"
   
  `(4 rows affected)`  
   
-### <a name="e-using-a-startup-script"></a>E. Использование скрипта запуска  
+### <a name="e-using-a-startup-script"></a>Д. Использование скрипта запуска  
  Сценарий запуска **sqlcmd** выполняется при запуске программы **sqlcmd** . В следующем примере задается переменная среды `SQLCMDINI`. Ниже приведено содержимое сценария `init.sql.`  
   
  `SET NOCOUNT ON`  
@@ -270,7 +270,7 @@ ms.locfileid: "75243169"
 > [!NOTE]  
 >  Параметр **-X** отключает функцию сценария запуска.  
   
-### <a name="f-variable-expansion"></a>F. Расширение переменной  
+### <a name="f-variable-expansion"></a>Е. Расширение переменной  
  В следующем примере показана работа с данными в форме переменной **sqlcmd** .  
   
  `USE AdventureWorks2012;`  
@@ -341,7 +341,7 @@ ms.locfileid: "75243169"
   
  `>2 GO`  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование программы sqlcmd](sqlcmd-use-the-utility.md)   
  [Программа sqlcmd](../../tools/sqlcmd-utility.md)   
  [Справочник по программе командной строки &#40;ядро СУБД&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  

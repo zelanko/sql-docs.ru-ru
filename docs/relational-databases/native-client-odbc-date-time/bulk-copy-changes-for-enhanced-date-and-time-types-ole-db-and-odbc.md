@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 50d1eb4d7a6070572e674f5ee7f8794837e63aa1
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75225256"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>Изменения в функции массового копирования для работы с улучшенными типами даты и времени (OLE DB и ODBC)
@@ -33,7 +33,7 @@ ms.locfileid: "75225256"
 |Datetime|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  
 |Дата|SQLDATE|de|  
-|Время|SQLTIME|te|  
+|Time|SQLTIME|te|  
 |Datetime2|SQLDATETIME2|d2|  
 |Datetimeoffset|SQLDATETIMEOFFSET|do|  
 ||||
@@ -72,12 +72,12 @@ ms.locfileid: "75225256"
   
 |Тип файла хранилища|Объем памяти в байтах|  
 |-----------------------|---------------------------|  
-|Datetime|8|  
+|DATETIME|8|  
 |smalldatetime|4|  
-|date|3|  
-|Twitter в режиме реального|6|  
+|Дата|3|  
+|time|6|  
 |datetime2|9|  
-|datetimeoffset;|11|  
+|datetimeoffset|11|  
 |||
 
  Размеры для ODBC указаны ниже. Следует заметить, что хранить данные о точности в любом из форматов и в файлах данных не обязательно, поскольку BCP.exe всегда запрашивает значение точности на сервере.  
@@ -100,7 +100,7 @@ ms.locfileid: "75225256"
 |Datetime|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIME4|0x3a|  
 |Дата|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
-|Время|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
+|Time|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
 |Datetime2|SQLDATETIME2|BCP_TYPE_SQLDATETIME2|0x2a|  
 |Datetimeoffset|SQLDATETIMEOFFSET|BCP_TYPE_SQLDATETIMEOFFSET|0x2b|  
 |||||
@@ -110,23 +110,23 @@ ms.locfileid: "75225256"
   
  **OLE DB Примечание** Следующие преобразования выполняются с помощью IBCPSession. IRowsetFastLoad использует преобразования OLE DB, как определено в [преобразованиях, выполненных от клиента к серверу](../../relational-databases/native-client-ole-db-date-time/conversions-performed-from-client-to-server.md). Следует заметить, что значения даты-времени округляются до 1/300 секунды, а в значениях типа smalldatetime после выполнения клиентских преобразований, описанных ниже, значение секунд становится равным нулю. Округление даты-времени распространяется на часы и минуты, но не на дату.  
   
-|Кому --><br /><br /> С|date|Twitter в режиме реального|smalldatetime|Datetime|datetime2|datetimeoffset;|char;|wchar|  
+|Кому --><br /><br /> С|Дата|time|smalldatetime|DATETIME|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
 |Дата|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
-|Время|Н/Д|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
+|Time|Недоступно|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
 |Smalldatetime|1,2|1,4,10|1|1|1,10|1,5,10|1,11|1,11|  
 |Datetime|1,2|1,4,10|1,12|1|1,10|1,5,10|1,11|1,11|  
 |Datetime2|1,2|1,4,10|1,10 (ODBC)1,12 (OLE DB)|1,10|1,10|1,5,10|1,3|1,3|  
 |Datetimeoffset|1,2,8|1,4,8,10|1,8,10|1,8,10|1,8,10|1,10|1,3|1,3|  
-|Char/wchar (date)|9|-|9,6 (ODBC)9,6,12 (OLE DB)|9,6 (ODBC)9,6,12 (OLE DB)|9,6|9,5,6|Н/Д|Н/Д|  
-|Char/wchar (time)|-|9,10|9,7,10 (ODBC)9,7,10,12 (OLE DB)|9,7,10 (ODBC)9,7,10, 12 (OLE DB)|9,7,10|9,5,7,10|Н/Д|Н/Д|  
-|Char/wchar (datetime)|9,2|9,4,10|9,10 (ODBC)9,10,12 (OLE DB)|9,10 (ODBC)9,10,12 (OLE DB)|9,10|9,5,10|Н/Д|Н/Д|  
-|Char/wchar (datetimeoffset)|9,2,8|9,4,8,10|9,8,10 (ODBC)9,8,10,12 (OLE DB)|9,8,10 (ODBC)9,8,10,12 (OLE DB)|9,8,10|9,10|Н/Д|Н/Д|  
+|Char/wchar (date)|9|-|9,6 (ODBC)9,6,12 (OLE DB)|9,6 (ODBC)9,6,12 (OLE DB)|9,6|9,5,6|Недоступно|Недоступно|  
+|Char/wchar (time)|-|9,10|9,7,10 (ODBC)9,7,10,12 (OLE DB)|9,7,10 (ODBC)9,7,10, 12 (OLE DB)|9,7,10|9,5,7,10|Недоступно|Недоступно|  
+|Char/wchar (datetime)|9,2|9,4,10|9,10 (ODBC)9,10,12 (OLE DB)|9,10 (ODBC)9,10,12 (OLE DB)|9,10|9,5,10|Недоступно|Недоступно|  
+|Char/wchar (datetimeoffset)|9,2,8|9,4,8,10|9,8,10 (ODBC)9,8,10,12 (OLE DB)|9,8,10 (ODBC)9,8,10,12 (OLE DB)|9,8,10|9,10|Недоступно|Недоступно|  
 ||||||||||
 
 #### <a name="key-to-symbols"></a>Расшифровка символов  
   
-|Знак|Значение|  
+|Символ|Значение|  
 |------------|-------------|  
 |-|Преобразование не поддерживается.<br /><br /> Создается запись диагностики ODBC с кодом SQLSTATE 07006 и сообщением «Нарушение атрибута ограниченного типа данных».|  
 |1|Если переданы недопустимые данные, то создается запись диагностики ODBC с кодом SQLSTATE 22007 и сообщением «Недопустимый формат даты-времени». Для значений типа datetimeoffset после преобразования в формате UTC временная часть должна находиться в пределах диапазона, даже если преобразование в формате UTC не требуется. Это требование вызвано тем, что поток табличных данных и сервер всегда нормализуют время в значениях типа datetimeoffset для времени в формате UTC. Поэтому клиент должен проверить, попадают ли в поддерживаемый диапазон компоненты времени после преобразования в UTC.|  
@@ -141,9 +141,9 @@ ms.locfileid: "75225256"
 |10|Если в преобразовании с сервера на клиент происходит усечение с потерей данных, в случае OLE DB выдается сообщение об ошибке, а в случае ODBC создается запись диагностики ODBC с кодом SQLSTATE 22008 и сообщением «Недопустимый формат даты-времени». Эта ошибка также возникает в том случае, если значение выходит за пределы диапазона, который может быть представлен диапазоном времени в формате UTC, используемым сервером. Если в преобразовании с сервера на клиент происходит усечение секунд или долей секунд, выдается только предупреждение.|  
 |11|Если происходит усечение с потерей данных, создается запись диагностики.<br /><br /> В преобразовании с сервера на клиент это предупреждение (ODBC SQLSTATE S1000).<br /><br /> В преобразовании с клиента на сервер это ошибка (ODBC SQLSTATE 22001).|  
 |12|Для секунд устанавливается значение 0, а доли секунды отбрасываются. Ошибка усечения невозможна.|  
-|Н/Д|Существующий способ работы [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более ранних версий сохранен.|  
+|Недоступно|Существующий способ работы [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более ранних версий сохранен.|  
 |||
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Улучшения даты и времени &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)   
  [Улучшения даты и времени &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  

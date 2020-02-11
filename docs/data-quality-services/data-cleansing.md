@@ -10,10 +10,10 @@ ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 46ca0fe453548cab780d1e2b32c6a8d98a32de11
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251763"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
@@ -96,7 +96,7 @@ ms.locfileid: "75251763"
   
  При экспорте очищенных данных на странице **Экспорт** в мастере проектов качества данных указывается, будут ли очищенные данные экспортироваться в стандартном формате. Для этого устанавливается флажок **Стандартный вывод** . По умолчанию очищенные данные экспортируются в стандартном формате, то есть этот флажок установлен. Дополнительные сведения об экспорте очищенных данных см. в разделе [Очистка данных с использованием набора знаний служб DQS (внутренних)](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md).  
   
-##  <a name="Related"></a>Связанные задачи  
+##  <a name="Related"></a> Связанные задачи  
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
@@ -105,7 +105,7 @@ ms.locfileid: "75251763"
 |Описывает очистку данных с использованием знаний, полученных от службы эталонных данных.|[Очистка данных с помощью ссылочных данных &#40;внешних&#41; знаний](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
 |Описывает очистку составного домена.|[Очистка данных в составном домене](../data-quality-services/cleanse-data-in-a-composite-domain.md)|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Проекты служб Data Quality &#40;DQS&#41;](../data-quality-services/data-quality-projects-dqs.md)   
  [Сопоставление данных](../data-quality-services/data-matching.md)  
   

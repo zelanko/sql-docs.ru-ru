@@ -17,10 +17,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 58611edabcfeaeb9a97de3da6c7305fb169c14ae
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75252555"
 ---
 # <a name="specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-40"></a>Определение явных функций преобразования в запросах XPath (SQLXML 4.0)
@@ -29,7 +29,7 @@ ms.locfileid: "75252555"
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-use-the-number-explicit-conversion-function"></a>а. Используйте функцию явного преобразования number()  
+### <a name="a-use-the-number-explicit-conversion-function"></a>A. Используйте функцию явного преобразования number()  
  Функция **Number ()** Преобразует аргумент в число.  
   
  Если значение параметра **ContactID** не является числовым, следующий запрос преобразует идентификатор **ContactID** в число и сравнивает его со значением 4. Затем запрос возвращает все **** ** \<** дочерние элементы Employee>элемента контекстного узла с атрибутом ContactID, имеющим числовое значение 4:  
@@ -78,7 +78,7 @@ ms.locfileid: "75252555"
 </ROOT>  
 ```  
   
-### <a name="b-use-the-string-explicit-conversion-function"></a>B. Используйте функцию явного преобразования string()  
+### <a name="b-use-the-string-explicit-conversion-function"></a>Б. Используйте функцию явного преобразования string()  
  Функция **String ()** Преобразует аргумент в строку.  
   
  Следующий запрос преобразует **ContactID** в строку и сравнивает его со строковым значением "4". Запрос возвращает все ** \<** дочерние элементы>элементов узла контекста с параметром **ContactID** со строковым значением "4":  

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d41aab8066b4ce1ee4e45fa9c363e60479868a5
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243043"
 ---
 # <a name="quickwatch-dialog-box"></a>Диалоговое окно «Быстрая проверка»
@@ -29,7 +29,7 @@ ms.locfileid: "75243043"
   
 -   В меню **Отладка** выберите пункт **Быстрая проверка**.  
   
- **Просмотр сведений о выражении**  
+ **Просмотр информации о выражении**  
   
 1.  В списке **Выражение** введите или выберите необходимое выражение. Поддерживаются следующие выражения [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   
@@ -45,7 +45,7 @@ ms.locfileid: "75243043"
   
 2.  Нажмите кнопку **Пересчет**.  
   
- **Добавление выражения "Быстрая проверка" в окно контрольных значений**  
+ **Добавление выражения быстрого просмотра в окно «Просмотр значений»**  
   
 -   Нажмите кнопку **Добавить контрольное значение**.  
   
@@ -60,10 +60,10 @@ ms.locfileid: "75243043"
  **Сетка значений**  
  Отображаются свойства выражения, которое просматривается в настоящее время.  
   
- **Безымян**  
+ **Название**  
  Является просматриваемым выражением [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
- **Значений**  
+ **Value**  
  Отображается значение, которое в настоящее время присвоено выражению. Если в настоящее время выражение не имеет значения, отображается пустое поле.  
   
  Если длина выражения больше ширины столбца **Значение** , полное значение отображается в подсказке при перемещении указателя на ячейку **Значение** для этого выражения.  
@@ -73,12 +73,12 @@ ms.locfileid: "75243043"
  **Тип**  
  Отображает тип данных выражения.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Отладчик Transact-SQL](transact-sql-debugger.md)   
  [Сведения отладчика Transact-SQL](transact-sql-debugger-information.md)   
- [Окно контрольных значений](transact-sql-debugger-watch-window.md)   
- [Окно локальных переменных](transact-sql-debugger-locals-window.md)   
+ [окно просмотра значений](transact-sql-debugger-watch-window.md)   
+ [окно локальных переменных](transact-sql-debugger-locals-window.md)   
  [Окно стека вызовов](transact-sql-debugger-call-stack-window.md)   
- [Выражения &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/expressions-transact-sql)  
+ [Выражения (Transact-SQL)](/sql/t-sql/language-elements/expressions-transact-sql)  
   
   

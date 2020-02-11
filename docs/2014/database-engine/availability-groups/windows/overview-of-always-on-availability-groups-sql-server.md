@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a047a41769467d243b146f304c71662328b50cfb
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75228750"
 ---
 # <a name="overview-of-alwayson-availability-groups-sql-server"></a>Обзор групп доступности AlwaysOn (SQL Server)
@@ -105,7 +105,7 @@ ms.locfileid: "75228750"
   
  Дополнительные сведения см. в статье [Отработка отказа и режимы отработки отказа (группы доступности AlwaysOn)](failover-and-failover-modes-always-on-availability-groups.md).  
   
-##  <a name="ClientConnections"></a>Клиентские подключения  
+##  <a name="ClientConnections"></a> Клиентские соединения  
  Можно обеспечить клиентское соединение с первичной репликой данной группы доступности, создав прослушиватель группы доступности. 
   *Прослушиватель группы доступности* предоставляет набор ресурсов, который закрепляется за определенной группой доступности и направляет клиентские соединения на соответствующую реплику доступности.  
   
@@ -143,11 +143,11 @@ ms.locfileid: "75228750"
   
  Дополнительные сведения см. в разделе [Автоматическое восстановление страниц (для групп доступности и зеркального отображения баз данных)](../../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md).  
   
-##  <a name="RelatedTasks"></a>Связанные задачи  
+##  <a name="RelatedTasks"></a> Связанные задачи  
   
 -   [Начало работы с группы доступности AlwaysOn &#40;SQL Server&#41;](getting-started-with-always-on-availability-groups-sql-server.md)  
   
-##  <a name="RelatedContent"></a>Связанное содержимое  
+##  <a name="RelatedContent"></a> См. также  
   
 -   **Тех**  
   
@@ -171,7 +171,7 @@ ms.locfileid: "75228750"
   
      [Технические документы группы консультирования клиентов SQL Server](http://sqlcat.com/)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Режимы доступности &#40;группы доступности AlwaysOn&#41;](availability-modes-always-on-availability-groups.md)   
  [Отказоустойчивость и режимы отработки отказа &#40;группы доступности AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md)   
  [Общие сведения о инструкциях Transact-SQL для группы доступности AlwaysOn &#40;SQL Server&#41;](transact-sql-statements-for-always-on-availability-groups.md)   
@@ -181,5 +181,5 @@ ms.locfileid: "75228750"
  [Создание и Настройка групп доступности &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
  [Активные вторичные реплики: &#40;группы доступности AlwaysOn для чтения&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [Активные вторичные реплики: резервное копирование в &#40;-получателях группы доступности AlwaysOn&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
- [Прослушиватели групп доступности, подключение клиентов и отработка отказа приложений &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)  
+ [Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](../../listeners-client-connectivity-application-failover.md)  
   

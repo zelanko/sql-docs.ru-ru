@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c666d02449190ca6a88ac43c96ab7aee9676be4d
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242648"
 ---
 # <a name="sqlxml-is-not-installed-in-sql-server"></a>SQLXML не установлен в SQL Server
@@ -29,7 +29,7 @@ ms.locfileid: "75242648"
   
 -   **Дата**  
   
--   **Время**  
+-   **Таймаут**  
   
 -   **DateTime2**  
   
@@ -37,7 +37,7 @@ ms.locfileid: "75242648"
   
  При использовании SQLXML 4,0 с пакетом обновления 1 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SP1) с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]поддержкой SQLOLEDB или Native Client OLE DB из эти типы отображаются как строки для разработчика. SQLXML 4,0 с пакетом обновления 1 (SP1) включит эти четыре новых типа данных в качестве встроенных скалярных типов при использовании [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента OLE DB поставщика 11,0 или более поздней версии. Без загрузки SQLXML 4.0 с пакетом обновления 1 (SP1) при сопоставлении этих типов с нестроковыми типами может происходить усечение и потеря части данных. Например, сопоставление **datetime2** с **xsd: Date** приведет к усечению данных до значения [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] точности **DateTime** , равного 3,33 миллисекундам.  
   
-## <a name="see-also"></a>См. также  
- [Основные понятия программирования SQLXML 4,0](../../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md)  
+## <a name="see-also"></a>См. также:  
+ [Основные понятия о программировании для SQLXML 4.0](../../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md)  
   
   

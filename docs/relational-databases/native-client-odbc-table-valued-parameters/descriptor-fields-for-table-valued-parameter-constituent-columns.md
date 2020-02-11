@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 070029c5f1bf8445a699abacf61e6e988dbdbe2a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75246509"
 ---
 # <a name="descriptor-fields-for-table-valued-parameter-constituent-columns"></a>Поля дескриптора для столбцов, содержащих параметры, возвращающие табличные значения
@@ -25,17 +25,17 @@ ms.locfileid: "75246509"
 
   Поля дескриптора возвращающего табличное значение параметра, описанные в этом разделе, управляются с помощью [SQLSetDescField](../../relational-databases/native-client-odbc-api/sqlsetdescfield.md) и [SQLSetDescField](../../relational-databases/native-client-odbc-api/sqlsetdescfield.md) с дескриптором для дескриптора параметра реализации (IPD).  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  SQL_DESC_AUTO_UNIQUE_VALUE используется для параметров, возвращающих табличные значения, и других компонентов.  
   
-|Имя атрибута|Type|Описание|  
+|Имя атрибута|Тип|Description|  
 |--------------------|----------|-----------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|SQL_TRUE указывает, что этот столбец является столбцом идентификаторов.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]может использовать эти сведения для оптимизации производительности, но не обязательно устанавливать их для столбцов идентификаторов.|  
 ||||
 
  Следующие атрибуты добавляются к параметрам всех типов в дескрипторе параметра приложения (APD) и дескрипторе параметра реализации (IPD).  
   
-|Имя атрибута|Type|Описание|  
+|Имя атрибута|Тип|Description|  
 |--------------------|----------|-----------------|  
 |SQL_CA_SS_COLUMN_COMPUTED|SQLSMALLINT|SQL_TRUE указывает, что этот столбец является вычисляемым.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]может использовать эту информацию для оптимизации производительности, но приложения не обязательно устанавливать их для вычислений столбцов.<br /><br /> Этот атрибут пропускается в случае привязок, не являющихся столбцами параметров, возвращающих табличные значения.|  
 |SQL_CA_SS_COLUMN_IN_UNIQUE_KEY|SQLSMALLINT|SQL_TRUE указывает, что столбец возвращающих табличное значение параметров является частью уникального ключа. Это может повысить производительность запросов. Этот атрибут пропускается в случае привязок, не являющихся столбцами параметров, возвращающих табличные значения.|  
@@ -48,7 +48,7 @@ ms.locfileid: "75246509"
   
  Если для столбца, возвращающего табличное значение параметра, установлен атрибут SQL_CA_SS_COL_HAS_DEFAULT_VALUE, то SQL_DESC_DATA_PTR для этого столбца должен быть равен null. В противном случае SQLExecute или SQLExecDirect возвратит SQL_ERROR. Будет создана диагностическая запись с параметром SQLSTATE = 07S01 и сообщением "Недопустимое использование параметра по \<умолчанию для параметра p \<>, столбец c> \<", где p> — это \<порядковый номер параметра, а в> — порядковый номер столбца.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Возвращающие табличное значение параметры &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

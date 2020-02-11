@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c04742d0e0a84dd35e300bace9107685685ef75b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75228903"
 ---
 # <a name="tools-and-applications-used-in-analysis-services"></a>Средства и приложения, использующиеся в службах Analysis Services
@@ -42,7 +42,7 @@ ms.locfileid: "75228903"
 ### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  Management Studio — это основное средство администрирования для всех функций SQL Server, включая Analysis Services. SQL Server Management Studio является дополнительным компонентом. Если он не отображается вместе с другими приложениями SQL Server на странице "Приложения" в Windows Server 2012, запустите настройку SQL Server, чтобы добавить его в установку.  
   
-### <a name="sql-server-profiler"></a>SQL Server Profiler  
+### <a name="sql-server-profiler"></a>Приложение SQL Server Profiler  
  Хотя он обычно не используется, профилировщик SQL Server предоставляет простой способ мониторинга подключений, выполнения запросов MDX и других операций сервера. Профилировщик SQL Server устанавливается по умолчанию. Его и приложения SQL Server можно найти в разделе "Приложения" в Windows Server 2012.  
   
 ### <a name="powershell"></a>PowerShell  
