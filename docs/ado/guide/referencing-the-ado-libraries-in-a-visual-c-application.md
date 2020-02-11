@@ -17,31 +17,31 @@ ms.assetid: d3ea12ec-bca8-48c3-af57-ce14576108c9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 62fb1b89299af1f466e446c8adba422a841f0196
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923027"
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-c-application"></a>Ссылки на библиотеки ADO в приложении Visual C++
-Чтобы использовать последнюю версию ADO в приложении Visual C++, используйте следующую команду `#import` директивы:  
+Чтобы использовать последнюю версию ADO в Visual C++ приложении, используйте следующую `#import` директиву:  
   
 ```cpp
 #import "msado15.dll" \  
     no_namespace rename("EOF", "EndOfFile")  
 ```  
   
- Чтобы использовать многомерные Объекты ADO и ADOX, необходимо импортировать *msadomd.dll* или *msadox.dll*, используя приведенный выше синтаксис.  
+ Чтобы использовать объекты данных ActiveX (MD) или ADOX, необходимо импортировать *мсадомд. dll* или *мсадокс. dll*с помощью приведенного выше синтаксиса.  
   
 ## <a name="backward-compatibility"></a>Backward Compatibility  
- Чтобы использовать более ранние версии ADO, замените *msado15.dll* выше с одним из следующих библиотек типов.  
+ Чтобы использовать любую более раннюю версию ADO, замените *Msado15. dll* выше одной из следующих библиотек типов.  
   
--   *msado27.tlb*, библиотека 2.7 тип ADO  
+-   *msado27. tlb*, Библиотека типов ADO 2,7  
   
--   *msado26.tlb*, библиотеку ADO 2.6 типов  
+-   *msado26. tlb*, Библиотека типов ADO 2,6  
   
--   *msado25.tlb*, библиотека 2,5 тип ADO  
+-   *msado25. tlb*, Библиотека типов ADO 2,5  
   
--   *msado21.tlb*, библиотека 2.1 тип ADO  
+-   *msado21. tlb*, Библиотека типов ADO 2,1  
   
--   *msado20.tlb*, библиотека типов ADO 2.0
+-   *msado20. tlb*, Библиотека типов ADO 2,0

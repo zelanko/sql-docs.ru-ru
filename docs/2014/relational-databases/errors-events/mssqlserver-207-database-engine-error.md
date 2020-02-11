@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5d39cfd6ca3eba8222dda09a83fdd809bb7d00e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915054"
 ---
-# <a name="mssqlserver207"></a>MSSQLSERVER_207
+# <a name="mssqlserver_207"></a>MSSQLSERVER_207
     
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|207|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
@@ -117,9 +117,9 @@ ms.locfileid: "62915054"
   
 -   В предложении WHEN NOT MATCHED BY SOURCE инструкции MERGE упоминается значение к которому может осуществляться доступ. Измените инструкцию MERGE, чтобы по крайней мере одна строка была возвращена исходной таблицей в предложении WHEN NOT MATCHED BY SOURCE. Например, может потребоваться добавить или изменить условие поиска, указанное для предложения. В качестве альтернативы можно изменить предложение, чтобы указать значение, не ссылающееся на исходную таблицу. Например, `WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = <expression, or other available value>`.  
   
-## <a name="see-also"></a>См. также  
- [MERGE (Transact-SQL)](/sql/t-sql/statements/merge-transact-sql)   
- [FROM (Transact-SQL)](/sql/t-sql/queries/from-transact-sql)   
+## <a name="see-also"></a>См. также:  
+ [&#41;Transact-SQL &#40;MERGE](/sql/t-sql/statements/merge-transact-sql)   
+ [ИЗ &#40;&#41;Transact-SQL](/sql/t-sql/queries/from-transact-sql)   
  [SELECT (Transact-SQL)](/sql/t-sql/queries/select-transact-sql)   
  [UPDATE (Transact-SQL)](/sql/t-sql/queries/update-transact-sql)  
   

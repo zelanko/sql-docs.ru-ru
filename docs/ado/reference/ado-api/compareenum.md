@@ -1,5 +1,5 @@
 ---
-title: CompareEnum | Документация Майкрософт
+title: Компаринум | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,36 +16,36 @@ ms.assetid: bc8f710d-0621-4673-8d8e-0361e44abed0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c109f90fc023b6fbfeda01c8b4404c42a822c40a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919554"
 ---
 # <a name="compareenum"></a>CompareEnum
-Задает относительное положение двух записей, представленный закладок.  
+Задает относительное расположение двух записей, представленных их закладками.  
   
-|Константа|Значение|Описание|  
+|Постоянно|Значение|Description|  
 |--------------|-----------|-----------------|  
-|**adCompareEqual**|1|Указывает, что закладки равны.|  
-|**adCompareGreaterThan**|2|Указывает, что первая закладка после второго.|  
-|**adCompareLessThan**|0|Указывает, что первая закладка находится перед второй.|  
-|**adCompareNotComparable**|4|Указывает, что нельзя сравнивать закладки.|  
-|**adCompareNotEqual**|3|Указывает, что закладки не равно и не упорядоченными.|  
+|**адкомпарикуал**|1|Указывает, что закладки равны.|  
+|**адкомпарегреатерсан**|2|Указывает, что первая закладка находится после второй.|  
+|**адкомпарелесссан**|0|Указывает, что первая закладка находится перед второй.|  
+|**адкомпареноткомпарабле**|4|Указывает, что закладки нельзя сравнивать.|  
+|**адкомпаренотекуал**|3|Указывает, что закладки не равны и не упорядочены.|  
   
-## <a name="adowfc-equivalent"></a>Эквивалент ADO и WFC  
- Пакет: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>Эквивалент ADO/WFC  
+ Пакет: **com. MS. WFC. Data**  
   
-|Константа|  
+|Постоянно|  
 |--------------|  
 |AdoEnums.Compare.EQUAL|  
-|AdoEnums.Compare.GREATERTHAN|  
-|AdoEnums.Compare.LESSTHAN|  
-|AdoEnums.Compare.NOTCOMPARABLE|  
-|AdoEnums.Compare.NOTEQUAL|  
+|Адоенумс. Compare. GREATERTHAN|  
+|Адоенумс. Compare. LESSTHAN|  
+|Адоенумс. Compare. НОТКОМПАРАБЛЕ|  
+|Адоенумс. Compare. NOTEQUAL|  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  [Метод CompareBookmarks (ADO)](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод CompareBookmarks (ADO)](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)

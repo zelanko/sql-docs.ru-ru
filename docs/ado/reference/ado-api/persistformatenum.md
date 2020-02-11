@@ -1,5 +1,5 @@
 ---
-title: PersistFormatEnum | Документация Майкрософт
+title: Персистформатенум | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,29 +16,29 @@ ms.assetid: ebe1a2ab-e9f1-43a2-8f94-b190c9613d70
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2a26fd370e80cb288ee62b0fc53ed6670300172e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917615"
 ---
 # <a name="persistformatenum"></a>PersistFormatEnum
-Указывает формат, в котором следует сохранить [записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
+Задает формат, в котором сохраняется [набор записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
-|Константа|Значение|Описание|  
+|Постоянно|Значение|Description|  
 |--------------|-----------|-----------------|  
-|**adPersistADTG**|0|Указывает формат TableGram дополнительные данные (ADTG).|  
-|**adPersistADO**|1|Указывает, что будет использоваться ADO собственный формат расширяемого языка разметки (XML). Это значение совпадает со значением adPersistXML и включен для обеспечения обратной совместимости.|  
-|**adPersistXML**|1|Указывает формат расширяемого языка разметки (XML).|  
-|**adPersistProviderSpecific**|2|Указывает, что поставщик будет сохраняться **записей** используя свой собственный формат.|  
+|**адперсистадтг**|0|Указывает формат Microsoft Advanced Data Таблеграм (АДТГ).|  
+|**адперсистадо**|1|Указывает, что будет использоваться собственный формат язык XML ADO (XML). Это значение совпадает с Адперсистксмл и включено для обеспечения обратной совместимости.|  
+|**адперсистксмл**|1|Указывает формат язык XML (XML).|  
+|**адперсистпровидерспеЦифик**|2|Указывает, что поставщик будет сохранять **набор записей** в собственном формате.|  
   
-## <a name="adowfc-equivalent"></a>Эквивалент ADO и WFC  
- Пакет: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>Эквивалент ADO/WFC  
+ Пакет: **com. MS. WFC. Data**  
   
-|Константа|  
+|Постоянно|  
 |--------------|  
 |AdoEnums.PersistFormat.ADTG|  
 |AdoEnums.PersistFormat.XML|  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  [Метод Save](../../../ado/reference/ado-api/save-method.md)

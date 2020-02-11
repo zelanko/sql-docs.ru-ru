@@ -1,5 +1,5 @@
 ---
-title: Свойство (ADO) элемента | Документация Майкрософт
+title: Свойство Item (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -46,14 +46,14 @@ ms.assetid: e11484bb-c5c7-42d8-9bb8-21572125d727
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6fe7e807fc38d6f1cf6f72e5b19539bb839e9c08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918367"
 ---
 # <a name="item-property-ado"></a>Свойство Item (ADO)
-Указывает определенный элемент коллекции по имени или порядковый номер.  
+Указывает конкретный элемент коллекции по имени или порядковому номеру.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -65,20 +65,20 @@ Set object = collection.Item ( Index )
  Возвращает ссылку на объект.  
   
 ## <a name="parameters"></a>Параметры  
- *Index*  
- Объект **Variant** выражение, возвращающее имя или порядковый номер объекта в коллекции.  
+ *Номер*  
+ Выражение **типа Variant** , результатом которого является либо имя, либо порядковый номер объекта в коллекции.  
   
-## <a name="remarks"></a>Примечания  
- Используйте **элемент** свойства для возврата определенного объекта в коллекции. Если **элемент** не удается найти объект в коллекции, соответствующий *индекс* аргумент, возникает ошибка. Кроме того некоторые коллекции не поддерживают именованные объекты; для таких коллекций необходимо использовать порядковый номер ссылки.  
+## <a name="remarks"></a>Remarks  
+ Свойство **Item** используется для возврата определенного объекта в коллекции. Если **элемент** не может найти объект в коллекции, соответствующей аргументу *index* , возникает ошибка. Кроме того, некоторые коллекции не поддерживают именованные объекты. для этих коллекций необходимо использовать ссылки на порядковые номера.  
   
- **Элемент** свойство является свойством по умолчанию для всех коллекций; таким образом, следующие формы синтаксиса являются взаимозаменяемыми:  
+ Свойство **Item** является свойством по умолчанию для всех коллекций; Поэтому следующие формы синтаксиса являются взаимозаменяемыми:  
   
 ```  
 collection.Item (Index)  
 collection (Index)  
 ```  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
   
 ||||  
 |-|-|-|  
@@ -90,6 +90,6 @@ collection (Index)
 |[Коллекция Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)|[Коллекция Tables (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)|[Коллекция Users (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)|  
 |[Коллекция Views (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)|||  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример свойства Item (Visual Basic)](../../../ado/reference/ado-api/item-property-example-vb.md)   
  [Пример свойства Item (Visual C++)](../../../ado/reference/ado-api/item-property-example-vc.md)   

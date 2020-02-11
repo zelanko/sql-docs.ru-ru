@@ -17,14 +17,14 @@ ms.assetid: 838502de-80f1-4eeb-8838-dd3d9403e567
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 992631b8fb3864b6d7404f86d2f65de222f0b1c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917408"
 ---
 # <a name="read-method"></a>Метод Read
-Считывает указанное число байтов из двоичного файла [Stream](../../../ado/reference/ado-api/stream-object-ado.md) объекта.  
+Считывает указанное число байтов из объекта двоичного [потока](../../../ado/reference/ado-api/stream-object-ado.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,20 +34,20 @@ Variant = Stream.Read ( NumBytes)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *NumBytes*  
- Необязательный параметр. Объект **Long** значение, указывающее количество байтов, считываемых из файла или [StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md) значение **adReadAll**, который используется по умолчанию.  
+ *нумбитес*  
+ Необязательный параметр. Значение **типа Long** , указывающее количество байтов для чтения из файла или значения [стреамреаденум](../../../ado/reference/ado-api/streamreadenum.md) **адреадалл**, которое является значением по умолчанию.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **Чтения** метод считывает указанное число байтов или весь поток, из **Stream** объекта и возвращает результирующие данные в виде **Variant**.  
+ Метод **Read** считывает указанное число байтов или весь поток из объекта **потока** и возвращает результирующие данные в виде **Variant**.  
   
-## <a name="remarks"></a>Примечания  
- Если *NumBytes* остается больше, чем число байтов в **Stream**, возвращаются только оставшихся байтов. Считывание данных не заполняется в соответствии с длиной, определяемой *NumBytes*. Если ни одного байта, доступных для чтения, возвращается значение variant со значением null. **Чтение** не может использоваться для чтения в обратном направлении.  
+## <a name="remarks"></a>Remarks  
+ Если *нумбитес* больше числа байтов, остающихся в **потоке**, возвращаются только оставшиеся байты. Чтение данных не дополняется в соответствии с длиной, заданной параметром *нумбитес*. Если не осталось байтов для чтения, возвращается Variant со значением NULL. **Чтение** не может быть использовано для чтения в обратном направлении.  
   
 > [!NOTE]
->  *NumBytes* всегда измеряет байт. Для текста **Stream** объектов ([тип](../../../ado/reference/ado-api/type-property-ado-stream.md) — **adTypeText**), используйте [ReadText](../../../ado/reference/ado-api/readtext-method.md).  
+>  *Нумбитес* всегда измеряет байты. Для объектов текстового **потока** ([Type](../../../ado/reference/ado-api/type-property-ado-stream.md) — **адтипетекст**) используйте [ReadText](../../../ado/reference/ado-api/readtext-method.md).  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  [Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод ReadText](../../../ado/reference/ado-api/readtext-method.md)

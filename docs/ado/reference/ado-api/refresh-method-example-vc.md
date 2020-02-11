@@ -1,5 +1,5 @@
 ---
-title: Пример метода (Visual C++) Refresh | Документация Майкрософт
+title: Пример метода Refresh (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 3dc3443b-a1b0-4fbd-908a-6e274dec981c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 58bc25f41171e4258347522efe7a02f2620cfd82
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917277"
 ---
 # <a name="refresh-method-example-vc"></a>Пример метода Refresh (Visual C++)
-В этом примере показано использование [обновить](../../../ado/reference/ado-api/refresh-method-ado.md) метод для обновления [параметры](../../../ado/reference/ado-api/parameters-collection-ado.md) коллекции для хранимой процедуры [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта.  
+В этом примере демонстрируется использование метода [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) для обновления коллекции [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) для объекта [команды](../../../ado/reference/ado-api/command-object-ado.md) хранимой процедуры.  
   
 ## <a name="example"></a>Пример  
   
@@ -218,13 +218,13 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="sample-input"></a>Входные данные выборки  
+## <a name="sample-input"></a>Пример ввода  
   
 ```  
 25  
 ```  
   
-## <a name="sample-output"></a>Образец вывода  
+## <a name="sample-output"></a>Пример вывода  
   
 ```  
 Authors with 25 percent royalty  
@@ -233,7 +233,7 @@ Authors with 25 percent royalty
   899-46-2035, Anne Ringer  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Коллекция Parameters (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Метод Refresh (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)

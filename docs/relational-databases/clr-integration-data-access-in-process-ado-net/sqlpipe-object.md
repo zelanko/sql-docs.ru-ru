@@ -15,10 +15,10 @@ ms.assetid: 3e090faf-085f-4c01-a565-79e3f1c36e3b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 6ecc3f87313b6ddcd48b7b0e527ba4effd58e624
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67913550"
 ---
 # <a name="sqlpipe-object"></a>Объект SqlPipe
@@ -30,7 +30,7 @@ ms.locfileid: "67913550"
  Результаты по объектам базы данных CLR, работающей на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], могут отправляться в подключенный канал при помощи методов **Send** объекта **SqlPipe** . Обратитесь к свойству **Pipe** объекта **SqlContext** , чтобы получить объект **SqlPipe** . Класс **SqlPipe** принципиально подобен классу **Response** в ASP.NET. Дополнительные сведения см. в справочной документации по классу SqlPipe в пакете средств разработки программного обеспечения .NET Framework.  
   
 ## <a name="returning-tabular-results-and-messages"></a>Возврат табличных результатов и сообщений  
- Класс **SqlPipe** имеет метод **Send** , который имеет три перегрузки. Подробные сведения.  
+ Класс **SqlPipe** имеет метод **Send** , который имеет три перегрузки. К ним относятся:  
   
 -   `void Send(string message)`  
   
@@ -49,10 +49,10 @@ ms.locfileid: "67913550"
 ## <a name="returning-custom-result-sets"></a>Возвращение пользовательских результирующих наборов  
  Управляемые хранимые процедуры могут отправлять результирующие наборы, которые не исходят из **SqlDataReader**. Метод **SendResultsStart** вместе с методами **SendResultsRow** и **SendResultsEnd**позволяет хранимым процедурам отправлять клиенту пользовательские результирующие наборы.  
   
- Метод**SendResultsStart** принимает объект **SqlDataRecord** в качестве ввода. Он отмечает начало результирующего набора и при помощи метаданных записи составляет метаданные, описывающие результирующий набор. Он не отправляет значение записи с **SendResultsStart**. Все последующие строки, отправленные при помощи метода **SendResultsRow**, должны соответствовать этому определению метаданных.  
+ **SendResultsStart** принимает в качестве входных данных **SqlDataRecord** . Он отмечает начало результирующего набора и при помощи метаданных записи составляет метаданные, описывающие результирующий набор. Он не отправляет значение записи с **SendResultsStart**. Все последующие строки, отправленные при помощи метода **SendResultsRow**, должны соответствовать этому определению метаданных.  
   
 > [!NOTE]  
->  После вызова метода **SendResultsStart** можно вызвать только методы **SendResultsRow** и **SendResultsEnd** . Вызов любого другого метода в том же экземпляре объекта **SqlPipe** приводит к исключению **InvalidOperationException**. Метод**SendResultsEnd** возвращает объект **SqlPipe** в исходное состояние, в котором можно вызывать другие методы.  
+>  После вызова метода **SendResultsStart** можно вызвать только методы **SendResultsRow** и **SendResultsEnd** . Вызов любого другого метода в том же экземпляре объекта **SqlPipe** приводит к исключению **InvalidOperationException**. **SendResultsEnd** задает **SqlPipe** обратно в начальное состояние, в котором могут быть вызваны другие методы.  
   
 ### <a name="example"></a>Пример  
  Хранимая процедура **uspGetProductLine** возвращает название, номер продукта, цвет и цену по прейскуранту всех продуктов в указанной линейке продуктов. Эта хранимая процедура принимает точные совпадения с *prodLine*.  
@@ -139,7 +139,7 @@ End Class
 EXEC uspGetProductLineVB 'T';  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект SqlDataRecord](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqldatarecord-object.md)   
  [Хранимые процедуры CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)   
  [Внутрипроцессные расширения SQL Server для ADO.NET](../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)  
