@@ -1,5 +1,5 @@
 ---
-title: Специальные расширения SQL Server в процессе для ADO.NET | Документация Майкрософт
+title: SQL Server ADO.NET в процессе конкретных расширений | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 98781a7258a4fa70f9f8c70c37140445af5bcb76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874715"
 ---
 # <a name="sql-server-in-process-specific-extensions-to-adonet"></a>Внутрипроцессные расширения SQL Server для ADO.NET
@@ -34,7 +34,7 @@ ms.locfileid: "62874715"
  [Объект SqlPipe](sqlpipe-object.md)  
  Этот класс содержит процедуры для отправки табличных результатов и сообщений клиенту.  
   
- [Объект SqlTriggerContext](sqltriggercontext-object.md)  
+ [SqlTriggerContext, объект](sqltriggercontext-object.md)  
  Этот класс предоставляет сведения о контексте, в котором выполняется триггер.  
   
  [Объект SqlDataRecord](sqldatarecord-object.md)  

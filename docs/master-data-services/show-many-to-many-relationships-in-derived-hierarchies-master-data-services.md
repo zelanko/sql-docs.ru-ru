@@ -11,10 +11,10 @@ ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: a0300b7f613610403970862fe9e5aad594372b27
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728949"
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>Отображение связей "многие-ко-многим" в производных иерархиях (Master Data Services)
@@ -42,17 +42,17 @@ ms.locfileid: "73728949"
   
  Обратите внимание, что на приведенном выше снимке экрана сущность **Employee** отображается в среднем разделе **Текущие уровни** как единственный уровень. В разделе **Предварительный просмотр** справа выведен список всех элементов сущности **Employee** . В разделе **Доступные уровни** слева отображаются уровни, которые можно добавить выше текущего верхнего уровня (**Сотрудник**). Большинство из них являются атрибутами на основе домена в сущности **Сотрудник** , включая атрибут на основе домена **Отдел** .  
   
- Начиная с [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]существует новый тип уровня, который моделирует связи "многие ко многим", например **Class (сопоставленный через ClassRegistration.Student)** . Имя уровня является более подробным по сравнению с другими именами. Это необходимо для предоставления дополнительных сведений для однозначного описания связи сопоставления. Перетащите этот уровень на уровень **Employee** в разделе **Текущие уровни** .  
+ Начиная с [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]существует новый тип уровня, который моделирует связи "многие ко многим", например **Class (сопоставленный через ClassRegistration.Student)**. Имя уровня является более подробным по сравнению с другими именами. Это необходимо для предоставления дополнительных сведений для однозначного описания связи сопоставления. Перетащите этот уровень на уровень **Employee** в разделе **Текущие уровни** .  
   
  ![mds_hierarchies_edit_derived_hierarchy_two](../master-data-services/media/mds-hierarchies-edit-derived-hierarchy-two.PNG "mds_hierarchies_edit_derived_hierarchy_two")  
   
- Теперь в области предварительного просмотра отображаются сотрудники, сгруппированные по учебным курсам, для прохождения которых они зарегистрированы. Поскольку это связь "многие-ко-многим", каждый дочерний элемент может иметь несколько родительских элементов. В приведенном выше примере сотрудник **6 {Hillman, Reinout N}** зарегистрирован как учащийся двух курсов: **1 {Master Data Services 101}** и **4 {Career-Limiting Moves}** .  
+ Теперь в области предварительного просмотра отображаются сотрудники, сгруппированные по учебным курсам, для прохождения которых они зарегистрированы. Поскольку это связь "многие-ко-многим", каждый дочерний элемент может иметь несколько родительских элементов. В приведенном выше примере сотрудник **6 {Hillman, Reinout N}** зарегистрирован как учащийся двух курсов: **1 {Master Data Services 101}** и **4 {Career-Limiting Moves}**.  
   
  Эта связь сопоставления может отображаться в инвертированном виде с группировкой курсов по учащимся.  
   
  ![mds_hierarchies_available_entities_and_hierarchies](../master-data-services/media/mds-hierarchies-available-entities-and-hierarchies.PNG "mds_hierarchies_available_entities_and_hierarchies")  
   
- Опять же, мы видим, что дочерний элемент может отображаться в нескольких родительских: учебный курс **1 {Master Data Services 101}** отображается для **6 {Hillman, Reinout N}** и **40 {Ford, Jeffrey L}** .  
+ Опять же, мы видим, что дочерний элемент может отображаться в нескольких родительских: учебный курс **1 {Master Data Services 101}** отображается для **6 {Hillman, Reinout N}** и **40 {Ford, Jeffrey L}**.  
   
  Элементы сущности сопоставления **ClassRegistration** не отображаются ни в одном месте в производной иерархии. Они используются для определения связей между родительскими и дочерними элементами в иерархии.  
   
@@ -72,10 +72,11 @@ ms.locfileid: "73728949"
   
  Уровни "многие-ко-многим" могут быть скрыты, как и другие уровни производной иерархии.  
    
-### <a name="M2MSample"></a> Связь "многие ко многим" в образце модели  
+### <a name="M2MSample"></a>Отношение M2M в образце модели  
 Для демонстрации связи "многие ко многим" просмотрите производную иерархию "Region Climate" в образце модели Customer, входящем в состав [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)].   
   
-Как показано на рисунке ниже, имя уровня, моделирующего эту связь, — ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate (сопоставляется через RegionClimate.Region)** . ![mds_Number2](../master-data-services/media/mds-number2.png)**Preview** показывает регионы, сгруппированные по связанному с ними типу климата. Это связь "многие ко многим", так как имеются регионы (дочерние элементы), связанные с несколькими типами климата (родительские элементы). Например, элемент ![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacific}** связан с элементами ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** и ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}** .  
+Как показано на рисунке ниже, имя уровня, моделирующего эту связь, — ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate (сопоставляется через RegionClimate.Region)**. 
+  ![mds_Number2](../master-data-services/media/mds-number2.png)**Preview** показывает регионы, сгруппированные по связанному с ними типу климата. Это связь "многие ко многим", так как имеются регионы (дочерние элементы), связанные с несколькими типами климата (родительские элементы). Например, элемент ![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacific}** связан с элементами ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** и ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}**.  
   
 ![mds_M2MRelationship_Example_CustomerModel](../master-data-services/media/mds-m2mrelationship-example-customermodel.png)  
   
@@ -90,8 +91,8 @@ ms.locfileid: "73728949"
   
  ![mds_hierarchies_dh_screenshot](../master-data-services/media/mds-hierarchies-dh-screenshot.png "mds_hierarchies_dh_screenshot")  
   
-##  <a name="bkmk_member_security"></a> Безопасность элементов  
- Иерархию, допускающую дублирование элементов (элемент может иметь несколько родительских элементов), нельзя использовать для назначения элементам разрешений безопасности. Например:  
+##  <a name="bkmk_member_security"></a>Безопасность элементов  
+ Иерархию, допускающую дублирование элементов (элемент может иметь несколько родительских элементов), нельзя использовать для назначения элементам разрешений безопасности. Пример:  
   
 -   Рекурсивная производная иерархия (RDH), которая не привязывает нулевые рекурсии (каждый элемент на рекурсивном уровне располагается под уровнем ROOT и его рекурсивным родительским элементом).  
   
@@ -102,7 +103,7 @@ ms.locfileid: "73728949"
 ## <a name="collections"></a>Коллекции  
  Коллекции и явные иерархии устарели. Хранимая процедура преобразования (udpConvertCollectionAndConsolidatedMembersToLeaf) преобразует элементы коллекции в конечные элементы и создает производные иерархии "многие-ко-многим" для записи сведений о принадлежности к коллекции.  
   
-## <a name="see-also"></a>См. также раздел  
- [Производные иерархии (службы Master Data Services)](../master-data-services/derived-hierarchies-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Производные иерархии &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
   
   

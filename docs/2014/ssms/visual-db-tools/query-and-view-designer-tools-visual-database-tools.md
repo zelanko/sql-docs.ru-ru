@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 639e6b7640f3463bfe100345d044437d619a5546
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63459999"
 ---
 # <a name="query-and-view-designer-tools-visual-database-tools"></a>Инструменты конструктора запросов и представлений (визуальные инструменты для баз данных)
@@ -47,9 +47,9 @@ ms.locfileid: "63459999"
 ## <a name="displaying-and-hiding-panes"></a>Отображение и скрытие панелей  
  Для скрытия или отображения невидимой панели щелкните правой кнопкой мыши панель конструктора, выберите пункт **Панель**, затем щелкните имя панели. Если конструктор запросов и представлений открыт в режиме конструктора запросов, панель **Результаты** недоступна.  
   
-## <a name="see-also"></a>См. также  
- [Проектирование запросов и представлений инструкции &#40;визуальных инструментах баз данных&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
- [Откройте конструктор запросов и представлений &#40;визуальных инструментах баз данных&#41;](open-the-query-and-view-designer-visual-database-tools.md)   
- [Редактор SQL (визуальные инструменты для баз данных)](sql-editor-visual-database-tools.md)  
+## <a name="see-also"></a>См. также:  
+ [Разделы руководства по проектированию запросов и представлений &#40;визуальных инструментов для баз данных&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [Откройте конструктор запросов и представлений &#40;визуальные инструменты для баз данных&#41;](open-the-query-and-view-designer-visual-database-tools.md)   
+ [Редактор SQL &#40;визуальных инструментов для баз данных&#41;](sql-editor-visual-database-tools.md)  
   
   

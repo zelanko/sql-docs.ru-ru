@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 70d6cc06b0e53754c22e6a8233f529b03c8e4371
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63224646"
 ---
 # <a name="column-selection-dialog-box-visual-database-tools"></a>Диалоговое окно «Выбор столбцов» (визуальные инструменты для баз данных)
@@ -42,14 +42,14 @@ ms.locfileid: "63224646"
  **Сохранить по умолчанию**  
  Заменяет пользовательское представление по умолчанию на столбцы, выбранные в этом диалоговом окне. Если этот параметр не выбран, выбор столбцов, определенных в диалоговом окне, применяется только к таблицам, выбранным в диаграмме базы данных.  
   
- **ОК**  
+ **OK**  
  Сохраняет пользовательское представление.  
   
  **Отмена**  
  Отменяет изменения пользовательского представления.  
   
-## <a name="see-also"></a>См. также  
- [Работа с диаграммами базы данных &#40;визуальных инструментах баз данных&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>См. также:  
+ [Работа с диаграммами баз данных &#40;визуальных инструментов для баз данных&#41;](visual-database-tools.md)   
  [Настройка объема сведений, отображаемых в диаграммах (визуальные инструменты для баз данных)](customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools.md)  
   
   

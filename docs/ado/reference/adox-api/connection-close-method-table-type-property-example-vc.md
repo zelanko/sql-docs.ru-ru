@@ -1,5 +1,5 @@
 ---
-title: Подключение закрывается, таблица примеры метода свойства Type (Visual C++) | Документация Майкрософт
+title: Пример метода Close соединения, свойство типа таблицы (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d0e250aa-fc57-4fd3-9610-d64f50c5507f
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 4ff8cf50279d9be6b3ed334982e2140f0bd41f4d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 980b0eb874781c50f8881f2dc5e4b295d6ba2a87
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966697"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76910502"
 ---
 # <a name="connection-close-method-table-type-property-example-vc"></a>Примеры метода Close для объекта Connection и свойства Type для объекта Table (Visual C++)
-Установка [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) свойства **Nothing** «закрывать» каталога. Связанные коллекции будет пустым. Любые объекты, которые были созданы из объектов схемы в каталоге, окажутся потерянными. Свойства на те объекты, которые были кэшированы по-прежнему будут доступны, но попытка чтения свойства, которые требуют вызова к поставщику завершится сбоем.  
+Присвоение свойству [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) значения **Nothing** должно приводить к закрытию каталога. Связанные коллекции будут пустыми. Все объекты, созданные из объектов схемы в каталоге, будут потеряны. Все свойства этих объектов, которые были кэшированы, будут по-прежнему доступны, но попытка чтения свойств, требующих вызова поставщика, завершится ошибкой.  
   
 ```  
 // BeginCloseConnectionCpp.cpp  
@@ -92,7 +92,7 @@ void CloseConnectionByNothingX() {
       printf("\nError\n\tSource :  %s \n\tdescription : %s \n", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in CloseConnectionByNothingX...." << endl;  
+      cout << "Error occurred in CloseConnectionByNothingX...." << endl;  
    }  
 }  
   
@@ -137,10 +137,10 @@ void CloseConnectionX() {
       printf("\nError\n\tSource :  %s \n\tdescription : %s \n", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in CloseConnectionX...." << endl;  
+      cout << "Error occurred in CloseConnectionX...." << endl;  
    }  
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)

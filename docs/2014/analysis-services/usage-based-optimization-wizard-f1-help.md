@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e5e94818245ba1e87d90f87539ae07e9531e5450
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065571"
 ---
 # <a name="usage-based-optimization-wizard-f1-help"></a>Справка F1 мастера оптимизации с учетом использования
-  Результаты работы мастера оптимизации с учетом использования похожи на результаты, выдаваемые мастером статистических схем, и используются для разработки статистических схем для секции. Но в отличие от него мастер оптимизации с учетом использования разрабатывает схемы на основе определенных шаблонов использования, которые записываются в журнал запросов экземпляра служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Статистическая обработка повышает производительность, позволяя службам [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] извлекать предварительно вычисленные итоги напрямую из хранилища куба, не загружая данные из базового источника данных и не вычисляя их для каждого запроса.  
+  Результаты работы мастера оптимизации с учетом использования похожи на результаты, выдаваемые мастером статистических схем, и используются для разработки статистических схем для секции. Но в отличие от него мастер оптимизации с учетом использования разрабатывает схемы на основе определенных шаблонов использования, которые записываются в журнал запросов экземпляра служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Агрегаты обеспечивают повышение производительности, позволяя [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] извлекать предварительно вычисленные итоги непосредственно из хранилища куба вместо того, чтобы пересчитывать данные из базового источника данных для каждого запроса.  
   
- Чтобы открыть мастер оптимизации с учетом использования из среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], откройте конструктор кубов для проекта служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , а затем перейдите на вкладку **Агрегаты** . На панели инструментов нажмите кнопку **Оптимизация с учетом использования** .  
+ Чтобы открыть мастер оптимизации с учетом использования из среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], откройте конструктор кубов для [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] проекта и перейдите на вкладку **агрегаты** . Нажмите кнопку **Оптимизация на основе использования** на панели инструментов.  
   
  Чтобы открыть мастер оптимизации с учетом использования из среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], установите соединение с базой данных служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , а затем откройте папку **Кубы** . Выберите куб, а затем откройте папку **Группы мер** и разверните группу мер, которую нужно изменить. Щелкните правой кнопкой мыши папку **Секции** и выберите пункт **Оптимизация на основе использования**.  
   
@@ -47,24 +47,24 @@ ms.locfileid: "66065571"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
--   [Выбор секций для изменения &#40;мастер оптимизации с учетом использования&#41;](select-partitions-to-modify-usage-based-optimization-wizard.md)  
+-   [Выберите секции для изменения мастера оптимизации с учетом использования &#40;&#41;](select-partitions-to-modify-usage-based-optimization-wizard.md)  
   
--   [Определение критериев запроса &#40;мастер оптимизации с учетом использования&#41;](specify-query-criteria-usage-based-optimization-wizard.md)  
+-   [Укажите условия запроса &#40;мастера оптимизации с учетом использования&#41;](specify-query-criteria-usage-based-optimization-wizard.md)  
   
--   [Просмотр оптимизируемых запросов &#40;мастер оптимизации с учетом использования&#41;](review-the-queries-that-will-be-optimized-usage-based-optimization-wizard.md)  
+-   [Проверьте запросы, которые будут оптимизированы &#40;мастер оптимизации с учетом использования&#41;](review-the-queries-that-will-be-optimized-usage-based-optimization-wizard.md)  
   
--   [Просмотр использования статистической обработки &#40;мастер оптимизации с учетом использования&#41;](review-aggregation-usage-usage-based-optimiation-wizard.md)  
+-   [Обзор использования статистической обработки &#40;мастер оптимизации с на основе использования&#41;](review-aggregation-usage-usage-based-optimiation-wizard.md)  
   
--   [Определение счетчиков объектов &#40;мастер оптимизации с учетом использования&#41;](specify-object-counts-usage-based-optimization-wizard.md)  
+-   [Укажите счетчики объектов &#40;мастер оптимизации с учетом использования&#41;](specify-object-counts-usage-based-optimization-wizard.md)  
   
--   [Параметры статистической обработки &#40;мастер оптимизации с учетом использования&#41;](set-aggregation-options-usage-based-optimization-wizard.md)  
+-   [Настройка параметров статистической обработки &#40;мастера оптимизации с учетом использования&#41;](set-aggregation-options-usage-based-optimization-wizard.md)  
   
--   [Завершение работы мастера &#40;мастер оптимизации с учетом использования&#41;](completing-the-wizard-usage-based-optimization-wizard.md)  
+-   [Завершение работы мастера &#40;мастера оптимизации с учетом использования&#41;](completing-the-wizard-usage-based-optimization-wizard.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Агрегаты и статистические схемы](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
  [Кубы в многомерных моделях](multidimensional-models/cubes-in-multidimensional-models.md)   
  [Справка F1 мастера статистических схем](aggregation-design-wizard-f1-help.md)   
- [Мастера служб Analysis Services &#40;многомерных данных&#41;](analysis-services-wizards-multidimensional-data.md)  
+ [Analysis Services мастера &#40;многомерных данных&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

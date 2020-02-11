@@ -1,5 +1,5 @@
 ---
-title: Редактор задачи Отслеживание событий WMI (страница "Общие") | Документация Майкрософт
+title: Редактор задачи «наблюдатель событий WMI» (страница «Общие») | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bf462fc9084468b3a76b7c6bd61f07a16ae4f466
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054351"
 ---
 # <a name="wmi-event-watcher-task-editor-general-page"></a>Редактор задачи «Отслеживание событий WMI» (страница «Общие»)
@@ -36,10 +36,10 @@ ms.locfileid: "66054351"
  **Описание**  
  Введите описание для задачи «Отслеживание событий WMI».  
   
-## <a name="see-also"></a>См. также  
- [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор задачи "Отслеживание событий WMI" (страница "Параметры WMI")](../../2014/integration-services/wmi-event-watcher-task-editor-wmi-options-page.md)   
- [Страница «Выражения»](expressions/expressions-page.md)   
+## <a name="see-also"></a>См. также:  
+ [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор задачи "наблюдатель событий WMI" &#40;странице "параметры WMI"&#41;](../../2014/integration-services/wmi-event-watcher-task-editor-wmi-options-page.md)   
+ [Страница "выражения"](expressions/expressions-page.md)   
  [Задача «Модуль чтения данных WMI»](control-flow/wmi-data-reader-task.md)  
   
   

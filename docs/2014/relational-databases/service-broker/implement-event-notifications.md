@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8c5b17b45b50634806c60e5064efc6ebd9d03f8b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68197744"
 ---
 # <a name="implement-event-notifications"></a>Реализация уведомлений о событиях
@@ -86,7 +86,7 @@ TO SERVICE 'NotifyService', '8140a771-3c4b-4479-8ac0-81008ab17984' ;
 >   
 >  `CREATE TABLE t1 (col1 int)`  
 >   
->  В этом случае уведомление о событиях направляется дважды: Первый раз, при возникновении события CREATE_SCHEMA, а при возникновении события CREATE_TABLE. Рекомендуется либо избегать создания уведомлений о событиях одновременно для событий CREATE_SCHEMA и текстов <schema_element> в любых соответствующих определениях CREATE SCHEMA, либо встраивать в приложение логику, позволяющую избежать регистрации ненужных данных о событиях.  
+>  В этом случае уведомление о событиях направляется дважды: в первый раз при возникновении события CREATE_SCHEMA, а во второй — при возникновении события CREATE_TABLE. Рекомендуется либо избегать создания уведомлений о событиях одновременно для событий CREATE_SCHEMA и текстов <schema_element> в любых соответствующих определениях CREATE SCHEMA, либо встраивать в приложение логику, позволяющую избежать регистрации ненужных данных о событиях.  
   
  **Создание уведомления о событии**  
   
@@ -96,7 +96,7 @@ TO SERVICE 'NotifyService', '8140a771-3c4b-4479-8ac0-81008ab17984' ;
   
 -   [DROP EVENT NOTIFICATION (Transact-SQL)](/sql/t-sql/statements/drop-event-notification-transact-sql)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Получение сведений об уведомлениях о событиях](event-notifications.md)   
  [EVENTDATA (Transact-SQL)](/sql/t-sql/functions/eventdata-transact-sql)  
   

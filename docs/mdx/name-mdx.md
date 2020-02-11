@@ -1,5 +1,5 @@
 ---
-title: Name (многомерные Выражения) | Документация Майкрософт
+title: Name (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8fd8aa240a72dacc67e7cd09cb058192cddee282
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68088381"
 ---
 # <a name="name-mdx"></a>Name (многомерные выражения)
@@ -38,7 +38,7 @@ Member_Expression.Name
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *Аргумент Dimension_Expression*  
+ *Dimension_Expression*  
  Допустимое многомерное выражение, возвращающее измерение.  
   
  *Hierarchy_Expression*  
@@ -50,8 +50,8 @@ Member_Expression.Name
  *Member_Expression*  
  Допустимое многомерное выражение, возвращающее элемент.  
   
-## <a name="remarks"></a>Примечания  
- **Имя** функция возвращает имя объекта, а не его уникальное имя.  
+## <a name="remarks"></a>Remarks  
+ Функция **Name** возвращает имя объекта, а не уникальное имя.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -80,7 +80,7 @@ SELECT {Measures.MemberName, Measures.ValueColumn, Measures.KeyColumn, Measures.
 from [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также:  
+ [Ссылка на функцию многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-function-reference-mdx.md)  
   
   

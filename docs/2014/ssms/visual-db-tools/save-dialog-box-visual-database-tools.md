@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9f0c4b1dbdaa7a2b4a15dd8e28586b182d93374a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63241158"
 ---
 # <a name="save-dialog-box-visual-database-tools"></a>Диалоговое окно «Сохранить» (визуальные инструменты для баз данных)
@@ -33,7 +33,7 @@ ms.locfileid: "63241158"
  **Сохранить текстовый файл**  
  Открывает диалоговое окно **Сохранить как** с запросом на размещение сохраняемого текстового файла с перечнем таблиц. Этот файл предоставляет список таблиц, затронутых сделанными изменениями.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Проектирование таблиц (визуальные инструменты для баз данных)](visual-database-tools.md)  
   
   

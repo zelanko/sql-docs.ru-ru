@@ -1,5 +1,5 @@
 ---
-title: Добавление атрибутов к измерениям | Документация Майкрософт
+title: Добавление атрибутов в измерения | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7a30424ce322ed356870465422c4f82fb8d7d88d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079032"
 ---
 # <a name="adding-attributes-to-dimensions"></a>Добавление атрибутов к измерениям
@@ -56,7 +56,7 @@ ms.locfileid: "66079032"
   
     -   **NumberCarsOwned**  
   
-    -   **Phone**  
+    -   **Номер телефона**  
   
     -   **DateFirstPurchase**  
   
@@ -64,15 +64,15 @@ ms.locfileid: "66079032"
   
 5.  Перетащите следующие столбцы из таблицы **Geography** в области **Представление источника данных** в область **Атрибуты** .  
   
-    -   **Город**  
+    -   **City**  
   
     -   **StateProvinceName**  
   
     -   **EnglishCountryRegionName**  
   
-    -   **PostalCode**  
+    -   **Почтовый**  
   
-6.  В меню «Файл» выберите команду **Сохранить все**.  
+6.  В меню Файл выберите команду **Сохранить все**.  
   
 ## <a name="adding-attributes-to-the-product-dimension"></a>Добавление атрибутов в измерение «Продукт»  
   
@@ -100,7 +100,7 @@ ms.locfileid: "66079032"
   
     -   **SizeRange**  
   
-    -   **Weight**  
+    -   **Вес**  
   
     -   **DaysToManufacture**  
   
@@ -110,22 +110,22 @@ ms.locfileid: "66079032"
   
     -   **Class**  
   
-    -   **Style**  
+    -   **Стиль**  
   
     -   **ModelName**  
   
     -   **StartDate**  
   
-    -   **EndDate**  
+    -   **Предшеству**  
   
     -   **Состояние**  
   
-5.  В меню «Файл» выберите команду **Сохранить все**.  
+5.  В меню Файл выберите команду **Сохранить все**.  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
  [Просмотр свойств куба и измерения](lesson-2-4-reviewing-cube-and-dimension-properties.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по свойствам атрибута измерения](multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

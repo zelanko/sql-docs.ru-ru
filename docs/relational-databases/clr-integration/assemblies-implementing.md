@@ -12,10 +12,10 @@ ms.assetid: c228d7bf-a906-4f37-a057-5d464d962ff8
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c6ca486f3464334c96c3b3874c4dfff71161e978
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68018856"
 ---
 # <a name="assemblies---implementing"></a>Реализация сборок
@@ -31,20 +31,20 @@ ms.locfileid: "68018856"
 -   Управление версиями сборок.  
   
 ## <a name="creating-assemblies"></a>Создание сборок.  
- Сборки создаются в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY или в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] с использованием редактора сборок. Кроме того, развертывание проекта SQL Server в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] регистрирует сборку в базе данных, указанной для проекта. Дополнительные сведения см. в статье [Deploying CLR Database Objects](../../relational-databases/clr-integration/deploying-clr-database-objects.md).  
+ Сборки создаются в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY или в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] с использованием редактора сборок. Кроме того, развертывание SQL Server проекта в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] регистрирует сборку в базе данных, указанной для проекта. Дополнительные сведения см. в статье [Deploying CLR Database Objects](../../relational-databases/clr-integration/deploying-clr-database-objects.md).  
   
- **Чтобы создать сборку с помощью Transact-SQL**  
+ **Создание сборки с помощью Transact-SQL**  
   
--   [CREATE ASSEMBLY (Transact-SQL)](../../t-sql/statements/create-assembly-transact-sql.md)  
+-   [Создание сборки &#40;&#41;Transact-SQL](../../t-sql/statements/create-assembly-transact-sql.md)  
   
- **Чтобы создать сборку с помощью SQL Server Management Studio**  
+ **Создание сборки с помощью среды SQL Server Management Studio**  
   
 -   [Свойства сборки &#40;страница "Общие"&#41;](../../relational-databases/clr-integration/assemblies-properties.md)  
   
 ## <a name="modifying-assemblies"></a>Изменение сборок  
  Сборки изменяются в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER ASSEMBLY или в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] с использованием редактора сборок. Можно изменить сборку, когда надо сделать следующее.  
   
--   Изменить реализацию сборки путем передачи более новой версии бинарных файлов сборки. Дополнительные сведения см. в разделе [управление версиями сборок](#_managing) далее в этом разделе.  
+-   Изменить реализацию сборки путем передачи более новой версии бинарных файлов сборки. Дополнительные сведения см. в подразделе [Управление версиями сборок](#_managing) далее в этой статье.  
   
 -   Изменить набор разрешений сборки. Дополнительные сведения см. в разделе [Разработка сборок](../../relational-databases/clr-integration/assemblies-designing.md).  
   
@@ -54,9 +54,9 @@ ms.locfileid: "68018856"
   
  **Чтобы изменить сборку с помощью Transact-SQL**  
   
--   [ALTER ASSEMBLY (Transact-SQL)](../../t-sql/statements/alter-assembly-transact-sql.md)  
+-   [ALTER ASSEMBLY &#40;&#41;Transact-SQL](../../t-sql/statements/alter-assembly-transact-sql.md)  
   
- **Чтобы изменить сборку с помощью SQL Server Management Studio**  
+ **Чтобы изменить сборку с помощью среды SQL Server Management Studio**  
   
 -   [Свойства сборки &#40;страница "Общие"&#41;](../../relational-databases/clr-integration/assemblies-properties.md)  
   
@@ -65,20 +65,20 @@ ms.locfileid: "68018856"
   
  **Чтобы удалить сборку с помощью Transact-SQL**  
   
--   [DROP ASSEMBLY (Transact-SQL)](../../t-sql/statements/drop-assembly-transact-sql.md)  
+-   [УДАЛИТЬ СБОРКУ &#40;&#41;Transact-SQL](../../t-sql/statements/drop-assembly-transact-sql.md)  
   
- **Чтобы удалить сборку с помощью SQL Server Management Studio**  
+ **Чтобы удалить сборку с помощью среды SQL Server Management Studio**  
   
 -   [Удаление объектов](../../ssms/object/delete-objects.md)  
   
- По умолчанию, все сборки, созданные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], отключены от выполнения. Можно использовать **включена среда clr** параметр **sp_configure** системной хранимой процедуры для отключения или включения выполнения всех сборок, загруженных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Отключение выполнения сборки не допускает выполнения функций среды CLR, хранимых процедур, триггеров, статистических выражений и определяемых пользователем типов, а также останавливает все эти объекты, выполняющиеся в настоящее время. Отключение выполнения сборки не отключает способность создавать, изменять или удалять сборки. Дополнительные сведения см. в разделе [параметр конфигурации сервера «clr enabled»](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md).  
+ По умолчанию, все сборки, созданные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], отключены от выполнения. Можно использовать параметр **clr enabled** **sp_configure** системной хранимой процедуры, чтобы отключить или включить выполнение всех сборок, отправленных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Отключение выполнения сборки не допускает выполнения функций среды CLR, хранимых процедур, триггеров, статистических выражений и определяемых пользователем типов, а также останавливает все эти объекты, выполняющиеся в настоящее время. Отключение выполнения сборки не отключает способность создавать, изменять или удалять сборки. Дополнительные сведения см. в разделе [параметр конфигурации сервера clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md).  
   
  **Чтобы отключить и включить выполнение сборки**  
   
 -   [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
-##  <a name="_managing"></a> Управление версиями сборок  
- Когда сборка передана в экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], сборка сохраняется и управляется в пределах системных каталогов базы данных. Любые изменения, внесенные в определение сборки в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] должны распространяться на сборку, которая хранится в каталоге базы данных.  
+##  <a name="_managing"></a>Управление версиями сборки  
+ Когда сборка передана в экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], сборка сохраняется и управляется в пределах системных каталогов базы данных. Любые изменения, внесенные в определение сборки в, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] должны распространяться на сборку, которая хранится в каталоге базы данных.  
   
  Если нужно изменить сборку, следует выполнить инструкцию ALTER ASSEMBLY, чтобы обновить сборку в базе данных. Это обновит сборку до последней копии модулей [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], поддерживая ее реализацию.  
   
@@ -91,13 +91,14 @@ ms.locfileid: "68018856"
 > [!CAUTION]  
 >  Если не указан параметр WITH UNCHECKED DATA, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] старается избежать выполнения ALTER ASSEMBLY, если сборка новой версии изменяет существующие данные в таблицах, индексах и т. д. Однако при обновлении сборки в среде CLR [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не обеспечивает согласованности вычисляемых столбцов, индексов, индексированных представлений или выражений с базовыми процедурами или типами. Следует проявлять осторожность при исполнении ALTER ASSEMBLY, чтобы избежать несоответствия результата выражения и его значения, хранящегося в сборке.  
   
- Только члены **db_owner** и **db_ddlowner** предопределенной роли базы данных можно выполнять запуск ALTER ASSEMBLY с помощью предложения WITH UNCHECKED DATA.  
+ Только члены предопределенной роли базы данных **db_owner** и **db_ddlowner** могут выполнять инструкцию ALTER ASSEMBLY с предложением WITH NOCHECK Data.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отправляет сообщение в журнал событий приложений Windows о том, что сборка была изменена непроверенными данными в таблицах. Затем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отмечает любые таблицы, содержащие данные, зависящие от сборки, как таблицы с непроверенными данными. **Has_unchecked_assembly_data** столбец **sys.tables** представление каталога содержит значение 1 для таблиц, содержащих непроверенные данные и 0 для таблиц без непроверенных данных.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отправляет сообщение в журнал событий приложений Windows о том, что сборка была изменена непроверенными данными в таблицах. Затем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отмечает любые таблицы, содержащие данные, зависящие от сборки, как таблицы с непроверенными данными. Столбец **has_unchecked_assembly_data** представления каталога **sys. Tables** содержит значение 1 для таблиц, содержащих непроверенные данные, и 0 для таблиц без непроверенных данных.  
   
- Чтобы проверить целостность непроверенных данных, запустите DBCC CHECKDB параметр WITH EXTENDED_LOGICAL_CHECKS для каждой таблице, имеющей непроверенные данные. При сбое команды DBCC CHECKDB параметр WITH EXTENDED_LOGICAL_CHECKS, необходимо либо удалить строки таблицы, которые являются недопустимыми или изменить код сборки для решения проблем, а затем выполните дополнительные инструкции ALTER ASSEMBLY.  
+ Чтобы устранить целостность непроверенных данных, выполните инструкцию DBCC CHECKDB с EXTENDED_LOGICAL_CHECKS для каждой таблицы, которая содержит непроверенные данные. Если инструкция DBCC CHECKDB с EXTENDED_LOGICAL_CHECKS завершается ошибкой, необходимо либо удалить недопустимые строки таблицы, либо изменить код сборки для устранения проблем, а затем выдать дополнительные инструкции ALTER ASSEMBLY.  
   
- Инструкция ALTER ASSEMBLY изменяет версию сборки. Язык и региональные параметры и маркер открытого ключа сборки не изменяются. SQL Server не допускает регистрации различных версий сборки с одинаковыми именами, культурой и открытый ключ.  
+ Инструкция ALTER ASSEMBLY изменяет версию сборки. Язык и региональные параметры и маркер открытого ключа сборки остаются неизменными. SQL Server не позволяет регистрировать разные версии сборки с тем же именем, культурой и открытым ключом.  
   
 ### <a name="interactions-with-computer-wide-policy-for-version-binding"></a>Взаимодействие с политикой уровня компьютера для привязки версии  
  Если обращение к сохраненным в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сборкам перенаправляются к определенным версиям, с помощью политики издателя или политики администратора уровня компьютера необходимо сделать любое из следующего.  
@@ -110,10 +111,10 @@ ms.locfileid: "68018856"
   
  **Чтобы обновить версию сборки**  
   
--   [ALTER ASSEMBLY (Transact-SQL)](../../t-sql/statements/alter-assembly-transact-sql.md)  
+-   [ALTER ASSEMBLY &#40;&#41;Transact-SQL](../../t-sql/statements/alter-assembly-transact-sql.md)  
   
-## <a name="see-also"></a>См. также  
- [Сборки &#40;компонент Database Engine&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+## <a name="see-also"></a>См. также:  
+ [Сборки &#40;ядро СУБД&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [Получение сведений о сборках](../../relational-databases/clr-integration/assemblies-getting-information.md)  
   
   

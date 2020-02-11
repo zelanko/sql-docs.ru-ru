@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: dcd7f95833695cc5f9f791d83a6221c35e88f58e
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400280"
 ---
 # <a name="using-a-staging-database-in-parallel-data-warehouse-pdw"></a>Использование промежуточной базы данных в параллельном хранилище данных (PDW)
@@ -38,7 +38,7 @@ SQL Server Parallel Data Warehouse (PDW) использует промежуто
   
 -   Для загрузки в кластеризованный индекс rowstore промежуточная таблица является кластеризованным индексом rowstore.  
   
-## <a name="Permissions"></a>Чтение  
+## <a name="Permissions"></a>Разрешения  
 Требуется разрешение CREATE (для создания временной таблицы) в промежуточной базе данных. 
 
 <!-- MISSING LINKS
@@ -61,9 +61,9 @@ For more information, see [Grant Permissions to load data](grant-permissions-to-
   
     -   Размер журнала обычно аналогичен размеру реплицированной таблицы.  
   
-## <a name="Examples"></a>Примеров  
+## <a name="Examples"></a>Примеры  
   
-### <a name="a-create-a-staging-database"></a>а. Создание промежуточной базы данных 
+### <a name="a-create-a-staging-database"></a>A. Создание промежуточной базы данных 
 В следующем примере создается промежуточная база данных Стажедб для использования со всеми нагрузками на устройстве. Предположим, вы оцениваете, что пять реплицируемых таблиц размером 5 ГБ будут загружаться одновременно. Эта параллельная обработка приводит к выделению не менее 25 ГБ для реплицируемого размера. Предположим, вы оцениваете, что шесть распределенных таблиц размеров 100, 200, 400, 500, 500 и 550 ГБ будут загружаться одновременно. Эта параллельная обработка приводит к выделению не менее 2250 ГБ памяти для размера распределенной таблицы.  
   
 ```sql  

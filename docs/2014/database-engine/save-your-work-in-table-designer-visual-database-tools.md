@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1b6b705f887e0df06684d33fc7be26aa73ff4048
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773692"
 ---
 # <a name="save-your-work-in-table-designer-visual-database-tools"></a>Сохранение результатов работы в конструкторе таблиц (визуальные инструменты для баз данных)
@@ -41,7 +41,7 @@ ms.locfileid: "62773692"
 > [!NOTE]  
 >  Чтобы сохранить изменения всех открытых элементов, таких как таблицы, представления и хранимые процедуры, выберите в меню **Файл** пункт **Сохранить все**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойства таблицы (визуальные инструменты для баз данных)](../ssms/visual-db-tools/visual-database-tools.md)  
   
   

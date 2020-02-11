@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eb05bdc934fe8f42a4f0f6589d0f75d38ca621fc
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73787868"
 ---
 # <a name="odbc-api-implementation-details"></a>ODBC API Implementation Details
@@ -76,7 +76,7 @@ ms.locfileid: "73787868"
   
 -   [SQLFreeHandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md)  
   
--   [SQLFreeStmt](../../relational-databases/native-client-odbc-api/sqlfreestmt.md)  
+-   [Функция SQLFreeStmt](../../relational-databases/native-client-odbc-api/sqlfreestmt.md)  
   
 -   [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)  
   
@@ -134,8 +134,8 @@ ms.locfileid: "73787868"
   
 -   [SQLTables](../../relational-databases/native-client-odbc-api/sqltables.md)  
   
-## <a name="see-also"></a>См. также статью  
- [Справочник &#40;по&#41; SQL Server Native Client ODBC](https://msdn.microsoft.com/library/06b7edee-8636-49d9-9b5c-2c710bf4fa2d)   
- [Построение приложений с использованием собственного клиента SQL Server](../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
+## <a name="see-also"></a>См. также:  
+ [Справочник по SQL Server Native Client &#40;ODBC&#41;](https://msdn.microsoft.com/library/06b7edee-8636-49d9-9b5c-2c710bf4fa2d)   
+ [Построение приложений с использованием SQL Server Native Client](../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

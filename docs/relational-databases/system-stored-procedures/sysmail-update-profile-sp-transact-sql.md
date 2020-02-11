@@ -18,13 +18,13 @@ ms.assetid: eaedf7ce-a8d5-4ab9-99e0-d77d5be19e90
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 36731206770b324bf4387143ef2c98b0532475ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67902894"
 ---
-# <a name="sysmailupdateprofilesp-transact-sql"></a>sysmail_update_profile_sp (Transact-SQL)
+# <a name="sysmail_update_profile_sp-transact-sql"></a>sysmail_update_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Изменяет описание или имя профиля компонента Database Mail.  
@@ -40,27 +40,27 @@ sysmail_update_profile_sp [ [ @profile_id = ] profile_id , ] [ [ @profile_name =
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @profile_id = ] profile_id` Идентификатор профиля для обновления. *profile_id* — **int**, значение по умолчанию NULL. Хотя бы один из *profile_id* или *profile_name* должен быть указан. Если заданы оба параметра, процедура изменяет имя профиля.  
+`[ @profile_id = ] profile_id`Идентификатор обновляемого профиля. *profile_id* имеет **тип int**и значение по умолчанию NULL. Необходимо указать хотя бы один *profile_id* или *profile_name* . Если заданы оба параметра, процедура изменяет имя профиля.  
   
-`[ @profile_name = ] 'profile_name'` Имя профиля или новое имя для профиля. *profile_name* — **sysname**, значение по умолчанию NULL. Хотя бы один из *profile_id* или *profile_name* должен быть указан. Если заданы оба параметра, процедура изменяет имя профиля.  
+`[ @profile_name = ] 'profile_name'`Имя обновляемого профиля или новое имя профиля. Аргумент *profile_name* имеет тип **sysname**и значение по умолчанию NULL. Необходимо указать хотя бы один *profile_id* или *profile_name* . Если заданы оба параметра, процедура изменяет имя профиля.  
   
-`[ @description = ] 'description'` Новое описание для профиля. *Описание* — **nvarchar(256)** , значение по умолчанию NULL.  
+`[ @description = ] 'description'`Новое описание профиля. *Description* имеет тип **nvarchar (256)** и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Если одновременно указаны идентификатор и имя профиля, то процедура изменяет имя профиля на введенное и обновляет описание профиля. Если указан только один из этих аргументов, то процедура обновляет описание профиля.  
   
- Хранимая процедура **sysmail_update_profile_sp** в **msdb** базы данных и принадлежит **dbo** схемы. Процедуру необходимо выполнять с трехкомпонентным именем, если текущая база данных не **msdb**.  
+ Хранимая процедура **sysmail_update_profile_sp** находится в базе данных **msdb** и принадлежит схеме **dbo** . Процедура должна быть выполнена с именем, сопоставленным с тремя частями, если текущей базой данных не является **msdb**.  
   
 ## <a name="permissions"></a>Разрешения  
- Разрешения для этой процедуры по умолчанию члены выполнение **sysadmin** предопределенной роли сервера.  
+ По умолчанию разрешения EXECUTE для этой процедуры имеют члены предопределенной роли сервера **sysadmin** .  
   
 ## <a name="examples"></a>Примеры  
  **А. Изменение описания профиля**  
   
- В следующем примере изменяется описание профиля с именем `AdventureWorks Administrator` в **msdb** базы данных.  
+ В следующем примере изменяется описание профиля с именем `AdventureWorks Administrator` в базе данных **msdb** .  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_profile_sp  
@@ -79,10 +79,10 @@ EXECUTE msdb.dbo.sysmail_update_profile_sp
     ,@description = 'Profile to send alert e-mail to operators.';  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
- [Объекты конфигурации компонента Database Mail](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Создайте учетную запись почты базы данных](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [Хранимые процедуры Database Mail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Database Mail объекты конфигурации](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
+ [Создание учетной записи Database Mail](../../relational-databases/database-mail/create-a-database-mail-account.md)   
+ [Database Mail хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

@@ -19,18 +19,18 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: acadb311dac786d9f1c5dbcc86fac9b2609fb959
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085798"
 ---
-# <a name="spprepare-transact-sql"></a>sp_prepare (Transact SQL)
+# <a name="sp_prepare-transact-sql"></a>sp_prepare (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-Подготавливает параметризованную [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции и возвращает инструкцию *обрабатывать* для выполнения.  `sp_prepare` вызывается при указании ID = 11 в пакете потока табличных данных.  
+Подготавливает параметризованную [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкцию и возвращает *маркер* инструкции для выполнения.  `sp_prepare`Для вызова хранимой процедуры  необходимо указать ID = 11 в пакете потока табличных данных (TDS).  
   
- ![Значок ссылки на статью](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на статью") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Значок ссылки на статью](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,19 +39,19 @@ sp_prepare handle OUTPUT, params, stmt, options
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *Дескриптор*  
- Сформированный SQL Server *подготовленный дескриптор* идентификатор. *обрабатывать* является обязательным параметром с **int** возвращаемое значение.  
+ *справиться*  
+ — Это созданный SQL Server идентификатор *подготовленного обработчика* . *Handle* является обязательным параметром с возвращаемым значением **int** .  
   
  *params*  
- Указывает параметризованные инструкции. *Params* определения переменных подставляется вместо маркеров параметров в инструкции. *params* является обязательным параметром, который вызывает для **ntext**, **nchar**, или **nvarchar** входного значения. Если инструкция не параметризована, необходимо ввести значение NULL.  
+ Указывает параметризованные инструкции. Определение переменных *params* подставляется для маркеров параметров в инструкции. *params* — это обязательный параметр, который вызывает для входного значения **ntext**, **nchar**или **nvarchar** . Если инструкция не параметризована, необходимо ввести значение NULL.  
   
  *stmt*  
- Определяет результирующий набор курсора. *Stmt* параметр является обязательным и требует **ntext**, **nchar**, или **nvarchar** входного значения.  
+ Определяет результирующий набор курсора. Параметр *stmt* является обязательным и вызывает для входного значения **ntext**, **nchar**или **nvarchar** .  
   
  *Параметры*  
- Необязательный параметр, возвращающий описание столбцов результирующего набора курсора. *Параметры* требует следующих входного значения int:  
+ Необязательный параметр, возвращающий описание столбцов результирующего набора курсора. для *параметров* требуется следующее входное значение int:  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
@@ -67,7 +67,7 @@ EXEC sp_execute @P1, N'tempdb', N'ONLINE';
 EXEC sp_unprepare @P1;  
 ```
 
-Б. В следующем примере приложение подготавливает инструкцию в базе данных AdventureWorks2016 и более поздней версии выполняется с помощью дескриптора.
+Б. В следующем примере подготавливается инструкция в базе данных AdventureWorks2016, а позднее она выполняется с помощью маркера.
 
 ```sql
 -- Prepare query
@@ -93,7 +93,7 @@ GO
 (1 row affected)
 ```
 
-Затем приложение выполняет запрос, используя дескриптор значение 1, удалялись подготовленного плана.
+Затем приложение выполняет запрос дважды, используя значение маркера 1, перед отменой подготовленного плана.
 
 ```sql
 EXEC sp_execute 1, 49879;  
@@ -106,7 +106,7 @@ EXEC sp_unprepare 1;
 GO
 ```
   
-## <a name="see-also"></a>См. также  
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
 

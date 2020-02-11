@@ -1,5 +1,5 @@
 ---
-title: Указание согласованных цветов для нескольких фигурных диаграмм (построитель отчетов и службы SSRS) | Документация Майкрософт
+title: Указание согласованных цветов для нескольких фигурных диаграмм (построитель отчетов и SSRS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 31665fc3512314f197ab6371ec17705332c4e55b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104833"
 ---
 # <a name="specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs"></a>Указание согласованных цветов для нескольких фигурных диаграмм (построитель отчетов и службы SSRS)
@@ -73,11 +73,11 @@ ms.locfileid: "66104833"
     =Code.GetColor(Fields!MyCategoryField)  
     ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Форматирование цветов для рядов на диаграмме (построитель отчетов и службы SSRS)](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [Добавление в диаграмму стилей рамки, рельефа и текстуры &#40;построитель отчетов и службы SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
  [Задание цветов диаграммы с помощью палитры &#40;построитель отчетов и службы SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
- [Добавление пустых точек на диаграмму &#40;построитель отчетов и службы SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)   
+ [Добавление пустых точек на диаграмму &#40;построитель отчетов и SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)   
  [Фигурные диаграммы &#40;построитель отчетов и службы SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Связывание нескольких областей данных с одним набором данных (построитель отчетов и службы SSRS)](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [Вложенные области данных (построитель отчетов и службы SSRS)](nested-data-regions-report-builder-and-ssrs.md)   

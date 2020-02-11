@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1dad0f71b2978c25245a42cc33d4adec05dbeaf3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211080"
 ---
 # <a name="create-a-trace-sql-server-profiler"></a>создать трассировку (приложение SQL Server Profiler)
@@ -26,7 +26,7 @@ ms.locfileid: "68211080"
   
 1.  В меню **Файл** выберите пункт **Создать трассировку**, а затем подключитесь к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-     Отображается диалоговое окно **Свойства трассировки** .  
+     отображается диалоговое окно **Свойства трассировки** .  
   
     > [!NOTE]  
     >  Если выбран параметр **Начать трассировку немедленно после установления соединения** , диалоговое окно **Свойства трассировки** не появляется, и начинается трассировка. Чтобы отключить этот параметр, в меню **Сервис**выберите пункт **Параметры**и снимите флажок **Начать трассировку немедленно после установления соединения** .  
@@ -50,14 +50,14 @@ ms.locfileid: "68211080"
   
 5.  При необходимости установите флажок **Включить время остановки трассировки** и укажите дату и время остановки.  
   
-6.  Чтобы добавить или удалить события, столбцы данных или фильтры, перейдите на вкладку **Выбор событий**. Дополнительные сведения см. в разделе: [Указание столбцов событий и данных для файла трассировки (приложение SQL Server Profiler)](sql-server-profiler.md)  
+6.  Чтобы добавить или удалить события, столбцы данных или фильтры, перейдите на вкладку **Выбор событий**. Дополнительные сведения см. в разделе [указать столбцы событий и данных для файла трассировки (приложение SQL Server Profiler)](sql-server-profiler.md).  
   
 7.  Чтобы запустить трассировку, нажмите кнопку **Выполнить** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Разрешения, необходимые для запуска приложения SQL Server Profiler](permissions-required-to-run-sql-server-profiler.md)   
  [Шаблоны и разрешения приложения SQL Server Profiler](sql-server-profiler-templates-and-permissions.md)   
  [Приложение SQL Server Profiler](sql-server-profiler.md)   
- [Сопоставление трассировки с журналом производительности Windows (приложение SQL Server Profiler)](../../database-engine/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)  
+ [Сопоставьте трассировку с данными журнала производительности Windows &#40;SQL Server Profiler&#41;](../../database-engine/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)  
   
   

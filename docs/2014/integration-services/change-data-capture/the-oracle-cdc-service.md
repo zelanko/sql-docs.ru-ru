@@ -11,16 +11,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f3f3967b31331471d1ad0a886cc9eda853a25931
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771080"
 ---
 # <a name="the-oracle-cdc-service"></a>Служба CDC Oracle
   Служба CDC Oracle — это служба Windows, благодаря которой запускается программа xdbcdcsvc.exe. Служба Oracle CDC может настраиваться для запуска нескольких служб Windows на одном компьютере, каждая из которых должна иметь другое имя службы Windows. Создание нескольких служб Windows для Oracle CDC на одном компьютере обычно выполняется для достижения лучшего их разделения или в случае, если каждой из них требуется работать с другим экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Служба Oracle CDC создается при помощи консоли конфигурации службы Oracle CDC или определяется при помощи интерфейса командной строки, встроенного в программу xdbcdcsvc.exe. В обоих случаях каждый Oracle CDC Service созданные связан с одним [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляра (который может быть кластеризованным или зеркально отображаться в **AlwaysOn** установки) и сведения о соединении (строка подключения и учетные данные) являются часть конфигурации службы.  
+ Служба Oracle CDC создается при помощи консоли конфигурации службы Oracle CDC или определяется при помощи интерфейса командной строки, встроенного в программу xdbcdcsvc.exe. В обоих случаях каждая созданная служба Oracle CDC связана с одним [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляром (который может быть кластеризованным или зеркальным с помощью установки **AlwaysOn** ), а сведения о соединении (строка подключения и учетные данные доступа) являются частью конфигурации службы.  
   
  При запуске службы Oracle CDC выполняется попытка подключения к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , к которому она привязана, извлекается список экземпляров Oracle CDC для обработки, после чего выполняется первоначальная проверка среды. Ошибки во время запуска службы и любые сведения о запуске/останове всегда записываются в журнал событий приложения Windows. После установки соединения с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] все ошибки и сообщения записываются в таблицу **dbo.xdbcdc_trace** , расположенную в базе данных MSXDBCDC экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Одной из проверок, выполняемых во время запуска, является проверка отсутствия другой работающей службы Oracle CDC с таким же именем. Если служба с тем же именем в настоящий момент подключена с другого компьютера, служба Oracle CDC переходит к циклу ожидания, пока другая служба не отключится, перед тем как начать обрабатывать данные Oracle CDC.  
   
@@ -88,11 +88,11 @@ CREATE ASYMMETRIC KEY xdbcdc_asym_key
   
 -   [Разрешения, необходимые службе CDC для соединения с SQL Server](sql-server-connection-required-permissions-for-the-cdc-service.md)  
   
--   [Роли пользователя для Change Data Capture Service для Oracle от Attunity](user-roles.md)  
+-   [Роли пользователя для изменения служб отслеживания данных для Oracle от Attunity.](user-roles.md)  
   
 -   [Работа со службой CDC Oracle](the-oracle-cdc-service.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Как управлять локальной службой CDC](how-to-manage-a-local-cdc-service.md)   
  [Управление службой CDC Oracle](manage-an-oracle-cdc-service.md)  
   

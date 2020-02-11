@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: da115c8d4cf48cfbcd6190c88a83bee4e61ae5a1
-ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73240767"
 ---
 # <a name="sysdatabase_scoped_configurations-transact-sql"></a>sys. database_scoped_configurations (Transact-SQL)
@@ -31,17 +31,17 @@ ms.locfileid: "73240767"
 
 Содержит по одной строке для каждой конфигурации. 
 
-|Имя столбца|Data type|Description|
+|Имя столбца|Тип данных|Description|
 |-----------------|---------------|-----------------|
 |**configuration_id**|**int**|Идентификатор параметра конфигурации.|
-|**name**|**nvarchar(60)**|Имя параметра конфигурации. Дополнительные сведения о возможных конфигурациях см. в разделе [ALTER DATABASE scoped Configuration &#40;Transact&#41;-SQL](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|
-|**value**|**SQLVARIANT**|Значение, заданное для параметра конфигурации первичной реплики.|
+|**name**|**nvarchar (60)**|Имя параметра конфигурации. Дополнительные сведения о возможных конфигурациях см. в разделе [ALTER DATABASE scoped CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|
+|**значений**|**SQLVARIANT**|Значение, заданное для параметра конфигурации первичной реплики.|
 |**value_for_secondary**|**SQLVARIANT**|Значение, заданное для параметра конфигурации вторичных реплик.|
-|**is_value_default**|**бит** |Указывает, является ли набор значений значением по умолчанию.|
+|**is_value_default**|**bit** |Указывает, является ли набор значений значением по умолчанию.|
 
-## <a name="Permissions"></a> Разрешения
+## <a name="Permissions"></a> Permissions
 
-Необходимо быть членом роли **public** .
+Требуется членство в роли **Public** .
 
 ## <a name="remarks"></a>Remarks
 
@@ -49,6 +49,6 @@ ms.locfileid: "73240767"
  
 Параметры конфигурации уровня базы данных будут перенесены вместе с базой данных. Это означает, что при восстановлении или прикреплении заданной базы данных существующие параметры конфигурации будут сохранены.
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также:
 
-[ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)
+[ИЗМЕНЕНИЕ конфигурации уровня базы данных &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)

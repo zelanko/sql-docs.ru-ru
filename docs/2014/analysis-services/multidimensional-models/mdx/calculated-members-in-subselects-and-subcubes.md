@@ -11,23 +11,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 57a7a9597be4b7a662fddd9550fdf341be44f922
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074784"
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>Вычисляемые элементы в подзапросах выборки и вложенных кубах
   В предыдущих версиях вычисляемые элементы не допускались в подзапросах выборки и вложенных кубах. Тем не менее, начиная с версии SQL Server 2008, они разрешены и включаются свойством соединения. Кроме того, в SQL Server 2008 R2 определяется новое поведение вычисляемых элементов в подзапросах выборки и вложенных кубах.  
   
 ## <a name="calculated-members-in-subselects-and-subcubes"></a>Вычисляемые элементы в подзапросах выборки и вложенных кубах  
- `SubQueries` Свойство строки подключения в <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> или `DBPROPMSMDSUBQUERIES` свойство в [поддерживаемые свойства XMLA &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) определяет поведение или квоту для вычисляемых элементов или вычисляемых Задает в подзапросах выборки и вложенных кубах. В контексте настоящего документа, если не указано иное, термин «подзапросы выборки» означает подзапросы выборки и вложенные кубы.  
+ Свойство `SubQueries` строки подключения в <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> или `DBPROPMSMDSUBQUERIES` свойство в [поддерживаемых свойствах XMLA &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) определяет поведение или квоту вычисляемых элементов или вычисляемых наборов для подзапросов выборки или вложенных кубов. В контексте настоящего документа, если не указано иное, термин «подзапросы выборки» означает подзапросы выборки и вложенные кубы.  
   
  Свойство SubQueries может принимать следующие значения.  
   
 |||  
 |-|-|  
-|Значение|Описание|  
+|Значение|Description|  
 |0|Вычисляемые элементы не допускаются в подзапросах выборки и вложенных кубах.<br /><br /> Если при вычислении подзапроса выборки или вложенного куба присутствует ссылка на вычисляемый элемент, возникает ошибка.|  
 |1|Вычисляемые элементы допускаются в подзапросах выборки и вложенных кубах, однако в возвращаемое подпространство восходящие элементы не вводятся.|  
 |2|Вычисляемые элементы допускаются в подзапросах выборки и вложенных кубах, и в возвращаемое подпространство вводятся восходящие элементы. Кроме того, в выборке вычисляемых элементов допускается смешанная гранулярность.|  
@@ -82,7 +82,7 @@ Where [Measures].[Reseller Sales Amount]
 ||All Periods|CY 2001|CY 2002|CY 2003|CY 2004|  
 |All Geographies|(null)|(null)|(null)|(null)|(null)|  
 |США|(null)|(null)|(null)|(null)|(null)|  
-|Washington|(null)|(null)|(null)|(null)|(null)|  
+|Вашингтон|(null)|(null)|(null)|(null)|(null)|  
 |Seattle Metro Agg|2 383 545,69 $|291 248,93 $|763 557,02 $|915 832,36 $|412 907,37 $|  
   
  Как отмечалось ранее, если значение свойств SubQueries равно 2, родители элемента [Seattle Metro] присутствуют в возвращаемом подпространстве, однако значения для этих элементов не существуют, поскольку для агрегатов отсутствуют регулярные элементы. Поэтому в этом примере для всех родителей вычисляемого элемента задаются значения NULL.  
@@ -108,22 +108,22 @@ Where [Measures].[Reseller Sales Amount]
 ||All Periods|CY 2001|CY 2002|CY 2003|CY 2004|  
 |All Geographies|235 171,62 $|419,46 $|4996,25 $|131 788,82 $|97 967,09 $|  
 |США|235 171,62 $|419,46 $|4996,25 $|131 788,82 $|97 967,09 $|  
-|Oregon|30 968,25 $|419,46 $|4996,25 $|17 442,97 $|8109,56 $|  
-|Portland|30 968,25 $|419,46 $|4996,25 $|17 442,97 $|8109,56 $|  
+|Орегон|30 968,25 $|419,46 $|4996,25 $|17 442,97 $|8109,56 $|  
+|Портленд|30 968,25 $|419,46 $|4996,25 $|17 442,97 $|8109,56 $|  
 |97205|30 968,25 $|419,46 $|4996,25 $|17 442,97 $|8109,56 $|  
-|Washington|204 203,37 $|(null)|(null)|114 345,85 $|89 857,52 $|  
+|Вашингтон|204 203,37 $|(null)|(null)|114 345,85 $|89 857,52 $|  
 |Spokane|204 203,37 $|(null)|(null)|114 345,85 $|89 857,52 $|  
 |99202|204 203,37 $|(null)|(null)|114 345,85 $|89 857,52 $|  
 |Seattle Metro Agg|2 383 545,69 $|291 248,93 $|763 557,02 $|915 832,36 $|412 907,37 $|  
   
  В приведенных результатах агрегированные значения для [All Geographies], [United States], [Oregon] и [Washington] получаются на основе статической обработки родителей &[Portland]&[OR] и &[Spokane]&[WA]. Из вычисляемого элемента не берется ничего.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
  В выражениях подзапроса выборки или вложенного куба допускается использование только элементов, вычисляемых в сеансе, или элементов, вычисляемых глобально. Наличие в многомерном запросе элементов, вычисляемых в запросе, приведет к ошибке выполнения выражения подзапроса выборки или вложенного куба.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
- [Подзапросы выборки в запросах](subselects-in-queries.md)   
- [Поддерживаемые свойства XMLA (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)  
+ [Подзапросы выборки в запросе](subselects-in-queries.md)   
+ [Поддерживаемые свойства XMLA &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)  
   
   

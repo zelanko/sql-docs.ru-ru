@@ -1,5 +1,5 @@
 ---
-title: Компонент Service Broker с группами доступности AlwaysOn (SQL Server) | Документация Майкрософт
+title: Service Broker с группы доступности AlwaysOn (SQL Server) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fdf98d461039c5c6fb4f25c8cdf543422e5a0a2c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62788534"
 ---
 # <a name="service-broker-with-alwayson-availability-groups-sql-server"></a>Компонент Service Broker с группами доступности AlwaysOn (SQL Server)
@@ -27,9 +27,9 @@ ms.locfileid: "62788534"
   
 -   [Требования к службе в группе доступности для получения удаленных сообщений](#ReceiveRemoteMessages)  
   
--   [Требования к отправке сообщений удаленной службе в группе доступности](#SendRemoteMessages)  
+-   [Требования к отправке сообщений в удаленную службу в группе доступности](#SendRemoteMessages)  
   
-##  <a name="ReceiveRemoteMessages"></a> Требования к службе в группе доступности для получения удаленных сообщений  
+##  <a name="ReceiveRemoteMessages"></a>Требования к службе в группе доступности для получения удаленных сообщений  
   
 1.  **Убедитесь, что группа доступности имеет прослушиватель.**  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62788534"
         FOR SERVICE_BROKER (AUTHENTICATION = WINDOWS)  
     ```  
   
-     Дополнительные сведения см. в статье [CREATE ENDPOINT (Transact-SQL)](/sql/t-sql/statements/create-endpoint-transact-sql).  
+     Дополнительные сведения см. в статье [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql).  
   
 3.  **Предоставьте разрешение CONNECT на конечную точку.**  
   
@@ -67,16 +67,16 @@ ms.locfileid: "62788534"
     GRANT CONNECT ON ENDPOINT::[broker_endpoint] TO [PUBLIC]  
     ```  
   
-     Дополнительные сведения см. в статье [GRANT (Transact-SQL)](/sql/t-sql/statements/grant-transact-sql).  
+     Дополнительные сведения см. в разделе [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql).  
   
 4.  **Убедитесь, что база данных msdb содержит маршрут AutoCreatedLocal или маршрут к некоторой службе.**  
   
     > [!NOTE]  
-    >  По умолчанию все пользовательские базы данных, включая **msdb**, содержат маршрут **AutoCreatedLocal**. Он соответствует имени любой службы и любому экземпляру компонента Service Broker и указывает, что сообщение должно быть доставлено внутри текущего экземпляра. Маршрут**AutoCreatedLocal** имеет более низкий приоритет, чем маршруты, в которых явно указывается служба, обменивающаяся данными с удаленным экземпляром.  
+    >  По умолчанию все пользовательские базы данных, включая **msdb**, содержат маршрут **AutoCreatedLocal**. Он соответствует имени любой службы и любому экземпляру компонента Service Broker и указывает, что сообщение должно быть доставлено внутри текущего экземпляра. **Маршрут AutoCreatedLocal** имеет более низкий приоритет, чем маршруты, явно указывающие конкретную службу, которая взаимодействует с удаленным экземпляром.  
   
-     Сведения о создании маршрутов см. в статьях [Примеры маршрутизации для компонента Service Broker](https://msdn.microsoft.com/library/ms166090\(SQL.105\).aspx) (версия [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] электронной документации) и [CREATE ROUTE (Transact-SQL)](/sql/t-sql/statements/create-route-transact-sql).  
+     Сведения о создании маршрутов см. в статьях [Примеры маршрутизации для компонента Service Broker](https://msdn.microsoft.com/library/ms166090\(SQL.105\).aspx) (версия [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] электронной документации) и [CREATE ROUTE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-route-transact-sql).  
   
-##  <a name="SendRemoteMessages"></a> Требования к отправке сообщений удаленной службе в группе доступности  
+##  <a name="SendRemoteMessages"></a>Требования к отправке сообщений в удаленную службу в группе доступности  
   
 1.  **Создайте маршрут к целевой службе.**  
   
@@ -95,26 +95,26 @@ ms.locfileid: "62788534"
   
     ```  
   
-     Дополнительные сведения см. в статье [CREATE ROUTE (Transact-SQL)](/sql/t-sql/statements/create-route-transact-sql).  
+     Дополнительные сведения см. в статье [CREATE ROUTE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-route-transact-sql).  
   
 2.  **Убедитесь, что база данных msdb содержит маршрут AutoCreatedLocal или маршрут к некоторой службе.** (Дополнительные сведения см. в подразделе [Требования к службе в группе доступности для получения удаленных сообщений](#ReceiveRemoteMessages)выше.)  
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
   
--   [CREATE ENDPOINT (Transact-SQL)](/sql/t-sql/statements/create-endpoint-transact-sql)  
+-   [&#41;создания КОНЕЧНОЙ точки &#40;Transact-SQL](/sql/t-sql/statements/create-endpoint-transact-sql)  
   
--   [CREATE ROUTE (Transact-SQL)](/sql/t-sql/statements/create-route-transact-sql)  
+-   [Создание маршрута &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-route-transact-sql)  
   
--   [GRANT (Transact-SQL)](/sql/t-sql/statements/grant-transact-sql)  
+-   [ПРЕДОСТАВЛЕНИЕ &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)  
   
--   [Создание или настройка прослушивателя группы доступности (SQL Server)](create-or-configure-an-availability-group-listener-sql-server.md).  
+-   [Создайте или настройте прослушиватель группы доступности &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md).  
   
 -   [Создание и настройка групп доступности (SQL Server)](creation-and-configuration-of-availability-groups-sql-server.md)  
   
--   [Настройка учетных записей входа для зеркального отображения базы данных или групп доступности AlwaysOn &#40;SQL Server&#41;](../../database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md)  
+-   [Настройка учетных записей входа для зеркального отображения базы данных или группы доступности AlwaysOn &#40;SQL Server&#41;](../../database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md)  
   
-## <a name="see-also"></a>См. также  
- [Обзор групп доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>См. также:  
+ [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](../../listeners-client-connectivity-application-failover.md)   
  [SQL Server Service Broker](../../configure-windows/sql-server-service-broker.md)  
   

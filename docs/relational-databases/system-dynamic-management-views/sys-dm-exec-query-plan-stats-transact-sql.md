@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_query_plan_stats (Transact-SQL) | Документация Майкрософт
+title: sys. dm_exec_query_plan_stats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 05/22/2019
 ms.prod: sql
@@ -17,17 +17,17 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfacb
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: c4d4f58161885519767e299683fe32b5197a045f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 279f1a8fbe3ec78dc0cae30d9879615b169075bf
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66198219"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "75656996"
 ---
-# <a name="sysdmexecqueryplanstats-transact-sql"></a>sys.dm_exec_query_plan_stats (Transact-SQL)
+# <a name="sysdm_exec_query_plan_stats-transact-sql"></a>sys. dm_exec_query_plan_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
 
-Возвращает эквивалент последнего известного фактический план выполнения для ранее кэшированного плана запроса.
+Возвращает эквивалент последнего известного реального плана выполнения для ранее кэшированного плана запроса.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -37,81 +37,85 @@ sys.dm_exec_query_plan_stats(plan_handle)
 
 ## <a name="arguments"></a>Аргументы 
 *plan_handle*  
-— Это маркер, который уникально идентифицирует план выполнения запроса для запущенного пакета, и ее план находится в кэше планов, или в данный момент. *plan_handle* — **varbinary(64)** .   
+Токен, однозначно определяющий план выполнения запроса для пакета, который был выполнен, а его план находится в кэше планов или в данный момент выполняется. *plan_handle* имеет тип **varbinary (64)**.   
 
 *Plan_handle* можно получить из следующих объектов DMO:  
   
--   [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
+-   [sys. dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   
--   [sys.dm_exec_query_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
+-   [sys. dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
   
--   [sys.dm_exec_requests (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
+-   [sys. dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
 
--   [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
+-   [sys. dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
 
--   [sys.dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
+-   [sys. dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
 
 ## <a name="table-returned"></a>Возвращаемая таблица
 
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|
-|**dbid**|**smallint**|Идентификатор базы данных, в контексте которой выполнялась компиляция инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)], соответствующей данному плану. Для нерегламентированных и подготовленных инструкций SQL это идентификатор базы данных, в которой происходила компиляция инструкции.<br /><br /> Столбец может содержать значение NULL.|  
-|**objectid**|**int**|Идентификатор объекта (например хранимой процедуры или определяемой пользователем функции) для этого плана запроса. Для нерегламентированных и подготовленных пакетов этот столбец содержит **null**.<br /><br /> Столбец может содержать значение NULL.|  
-|**number**|**smallint**|Целое число нумерованных хранимых процедур. Например, группа процедур для **заказы** приложения может называться **orderproc; 1**, **orderproc; 2**, и т. д. Для нерегламентированных и подготовленных пакетов этот столбец содержит **null**.<br /><br /> Столбец может содержать значение NULL.|  
+|**DBID**|**smallint**|Идентификатор базы данных, в контексте которой выполнялась компиляция инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)], соответствующей данному плану. Для нерегламентированных и подготовленных инструкций SQL это идентификатор базы данных, в которой происходила компиляция инструкции.<br /><br /> Столбец может содержать значение NULL.|  
+|**ИД**|**int**|Идентификатор объекта (например хранимой процедуры или определяемой пользователем функции) для этого плана запроса. Для нерегламентированных и подготовленных пакетов этот столбец содержит значение **NULL**.<br /><br /> Столбец может содержать значение NULL.|  
+|**number**|**smallint**|Целое число нумерованных хранимых процедур. Например, группа процедур для приложения **orders** может иметь имена вида **orderproc;1**, **orderproc;2** и так далее. Для нерегламентированных и подготовленных пакетов этот столбец содержит значение **NULL**.<br /><br /> Столбец может содержать значение NULL.|  
 |**Шифрование**|**bit**|Указывает, зашифрована ли соответствующая хранимая процедура.<br /><br /> 0 = не зашифрована<br /><br /> 1 = зашифрована<br /><br /> Столбец не может содержать значение NULL.|  
-|**query_plan**|**xml**|Содержит последние известные среды выполнения представление Showplan фактический план выполнения запроса, указанный с помощью *plan_handle*. Представление Showplan имеет формат XML. Для каждого пакета, содержащего, например нерегламентированные инструкции языка [!INCLUDE[tsql](../../includes/tsql-md.md)], вызовы хранимых процедур и вызовы определяемых пользователем функций, формируется один план.<br /><br /> Столбец может содержать значение NULL.| 
+|**query_plan**|**xml**|Содержит Последнее известное представление среды выполнения Showplan о фактическом плане выполнения запроса, указанном с помощью *plan_handle*. Представление Showplan имеет формат XML. Для каждого пакета, содержащего, например нерегламентированные инструкции языка [!INCLUDE[tsql](../../includes/tsql-md.md)], вызовы хранимых процедур и вызовы определяемых пользователем функций, формируется один план.<br /><br /> Столбец может содержать значение NULL.| 
 
-## <a name="remarks"></a>Примечания
-Этой системной функции доступен, начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.4.
+## <a name="remarks"></a>Remarks
+Эта системная функция доступна начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] версии CTP 2,4.
 
 Эта функция активируется явным образом и требует включения [флага трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451. Начиная с версии [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.5 эта задача выполняется на уровне базы данных в соответствии с инструкциями, которые можно найти в описании параметра LAST_QUERY_PLAN_STATS в статье [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
-Эта функция системы, работает под **упрощенных** инфраструктуру профилирования статистики выполнения запросов. Дополнительные сведения см. в разделе [Инфраструктура профилирования запросов](../../relational-databases/performance/query-profiling-infrastructure.md).  
+Эта системная функция работает в инфраструктуре профилирования статистики выполнения **упрощенных** запросов. Дополнительные сведения см. в разделе [инфраструктура профилирования запросов](../../relational-databases/performance/query-profiling-infrastructure.md).  
 
-При следующих условиях вывод инструкции Showplan **эквивалентно фактический план выполнения** возвращается в **query_plan** столбец возвращаемой таблицы для **sys.dm_exec_query_plan_ Статистика**:  
+Выходные данные инструкции Showplan с помощью sys. dm_exec_query_plan_stats содержат следующие сведения:
+-  Все сведения времени компиляции, найденные в кэшированном плане
+-  Сведения о среде выполнения, такие как фактическое число строк на оператор, общее время ЦП и время выполнения запроса, сброс предупреждений, фактическое значение DOP, максимальный объем используемой памяти и предоставленная память
 
--   План можно найти в [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md).     
+В следующих случаях результат инструкции Showplan, **эквивалентный фактическому плану выполнения** , возвращается в **query_plan** столбец возвращаемой таблицы для **sys. dm_exec_query_plan_stats**.  
+
+-   Этот план можно найти в [представлении каталога sys. dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md).     
     **AND**    
--   Выполняемый запрос является сложных или потребления ресурсов.
+-   Выполняемый запрос является сложным или потребляет ресурсы.
 
-При следующих условиях **упрощенный <sup>1</sup>**  выходных данных Showplan возвращается в **query_plan** столбец возвращаемой таблицы для **sys.dm_exec_ query_plan_stats**:  
+В следующих случаях в столбце **query_plan** возвращаемой таблицы для **sys. dm_exec_query_plan_stats**возвращается **упрощенный результат <sup>1</sup> ** Showplan.  
 
--   План можно найти в [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md).     
+-   Этот план можно найти в [представлении каталога sys. dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md).     
     **AND**    
--   Запрос является довольно простой, обычно относится к категории как часть рабочей нагрузки OLTP.
+-   Запрос достаточно прост, обычно разбитый на категории в рамках рабочей нагрузки OLTP.
 
-<sup>1</sup> начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP-версии 2.5, это относится к инструкции Showplan, который содержит только узел оператор задания корневого каталога (SELECT). Для [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.4, это относится к кэшированного плана по мере доступности через `sys.dm_exec_cached_plans`.
+<sup>1</sup> начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] версии CTP 2,5 это относится к инструкции Showplan, которая содержит только оператор корневого узла (SELECT). Для [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2,4 это — кэшированный план, доступный через `sys.dm_exec_cached_plans`.
 
-При следующих условиях **вывод не возвращается** из **sys.dm_exec_query_plan_stats**:
+В следующих случаях выходные данные **sys. dm_exec_query_plan_stats** **не возвращаются** .
 
--   План запроса, который указан с помощью *plan_handle* исключен из кэша планов.     
+-   План запроса, указанный с помощью *plan_handle* , был исключен из кэша планов.     
     **OR**    
--   План запроса в первую очередь не может быть кэширован. Дополнительные сведения см. в разделе [кэширование и плана выполнения повторного использования ](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse).
+-   На первом месте план запроса не был кэширован. Дополнительные сведения см. в разделе [кэширование и повторное использование плана выполнения ](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse).
   
 > [!NOTE] 
-> Из-за ограничения количества уровней вложенности, допустимых в **xml** тип данных, **sys.dm_exec_query_plan** не может возвратить планы запросов, которые соответствуют или превосходят 128 уровней вложенных элементов. В более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], это условие предназначалось для предотвращения возврата плана запроса и [формирования ошибки 6335](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-6000-to-6999). В [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 и более поздних версиях **query_plan** столбец возвращает значение NULL.  
+> Из-за ограничения количества вложенных уровней, разрешенных в типе данных **XML** , **sys. dm_exec_query_plan** не может возвращать планы запросов, которые соответствуют или превышают 128 уровней вложенных элементов. В более ранних [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]версиях это условие не позволило возвратить план запроса и выдает [ошибку 6335](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-6000-to-6999). В [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] пакетах обновления 2 (SP2) и более поздних версиях столбец **query_plan** возвращает значение null.  
 
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение `VIEW SERVER STATE` на сервере.  
 
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-looking-at-last-known-actual-query-execution-plan-for-a-specific-cached-plan"></a>A. Ищете наконец известных фактический план выполнения запроса определенного кэшированного плана  
- В следующем примере запрос **sys.dm_exec_cached_plans** для поиска необходимого плана и копирования его `plan_handle` из выходных данных.  
+### <a name="a-looking-at-last-known-actual-query-execution-plan-for-a-specific-cached-plan"></a>A. Просмотр последнего известного фактического плана выполнения запроса для определенного кэшированного плана  
+ В следующем примере производится запрос к **sys. dm_exec_cached_plans** для поиска интересного плана и `plan_handle` копирования его из выходных данных.  
   
 ```sql  
 SELECT * FROM sys.dm_exec_cached_plans;  
 GO  
 ```  
   
-Затем, чтобы получить последние известные фактический план выполнения запроса, используйте скопированный `plan_handle` с помощью системной функции **sys.dm_exec_query_plan_stats**.  
+Затем, чтобы получить последний известный план выполнения запроса, используйте скопированную `plan_handle` с помощью системной функции **sys. dm_exec_query_plan_stats**.  
   
 ```sql  
 SELECT * FROM sys.dm_exec_query_plan_stats(< copied plan_handle >);  
 GO  
 ```   
 
-### <a name="b-looking-at-last-known-actual-query-execution-plan-for-all-cached-plans"></a>Б. Ищете наконец известных фактический план выполнения запроса всех кэшированных планов
+### <a name="b-looking-at-last-known-actual-query-execution-plan-for-all-cached-plans"></a>Б. Просмотр последнего известного плана выполнения запроса для всех кэшированных планов
   
 ```sql  
 SELECT *   
@@ -121,7 +125,7 @@ CROSS APPLY sys.dm_exec_query_plan_stats(plan_handle) AS qps;
 GO  
 ```   
 
-### <a name="c-looking-at-last-known-actual-query-execution-plan-for-a-specific-cached-plan-and-query-text"></a>В. Ищете наконец известных фактический план выполнения запроса определенного кэшированного плана и текста запроса
+### <a name="c-looking-at-last-known-actual-query-execution-plan-for-a-specific-cached-plan-and-query-text"></a>В. Просмотр последнего известного фактического плана выполнения запроса для определенного кэшированного плана и текста запроса
 
 ```sql  
 SELECT *   
@@ -132,7 +136,7 @@ WHERE st.text LIKE 'SELECT * FROM Person.Person%';
 GO  
 ```   
 
-### <a name="d-look-at-cached-events-for-trigger"></a>Г. Рассмотрим кэшированных событий для триггера
+### <a name="d-look-at-cached-events-for-trigger"></a>Г. Просмотр кэшированных событий для триггера
 
 ```sql
 SELECT *
@@ -142,8 +146,8 @@ WHERE objtype ='Trigger';
 GO
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
   [Флаги трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Динамические административные представления, связанные с выполнением &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Динамические административные представления, связанные с выполнением &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
 

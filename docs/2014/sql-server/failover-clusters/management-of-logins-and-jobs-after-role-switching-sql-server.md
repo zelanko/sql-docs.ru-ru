@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 870243a5ee69f6058fdc34597ccd4a78b93859e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63252856"
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>Управление именами входа и заданиями после переключения ролей (SQL Server)
@@ -27,7 +27,7 @@ ms.locfileid: "63252856"
   
  Если пользователь утратил связь с учетной записью, создайте имя пользователя на новом экземпляре сервера-источника или основного сервера и выполните хранимую процедуру [sp_change_users_login](/sql/relational-databases/system-stored-procedures/sp-change-users-login-transact-sql). Дополнительные сведения см. в статье [Диагностика пользователей, утративших связь с учетной записью (SQL Server)](troubleshoot-orphaned-users-sql-server.md).  
   
-###  <a name="SSauthentication"></a> Имена входа для приложений, использующих проверку подлинности SQL Server или локальное имя входа Windows  
+###  <a name="SSauthentication"></a>Имена входа для приложений, использующих SQL Serverную проверку подлинности или локальное имя входа Windows  
  Если приложение использует проверку подлинности SQL Server или локальное имя входа Windows, то несоответствие идентификаторов безопасности может привести к ошибке входа на удаленный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Несоответствие идентификаторов безопасности вызывает утрату связи с учетной записью на удаленном экземпляре сервера. Эта проблема может возникать при подключении приложения к зеркальной базе данных или базе данных доставки журналов после отработки отказа либо к базе данных подписчика репликации, которая была инициализирована из резервной копии.  
   
  Во избежание этой проблемы рекомендуется предпринять профилактические меры во время настройки такого приложения на использование базы данных, размещенной на удаленном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Среди таких мер — перенос имен входа и паролей с локального экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на удаленный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения о том, как предотвратить возникновение этой проблемы, см. в статье базы знаний 918992 [Как передавать имена входа и пароли между экземплярами SQL Server](https://support.microsoft.com/kb/918992/)).  
@@ -46,7 +46,7 @@ ms.locfileid: "63252856"
 >  Разные экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут быть настроены по-разному, например, могут различаться буквы, обозначающие диски. Задания для каждого участника должны допускать подобные различия.  
   
 ## <a name="see-also"></a>См. также:  
- [Управление метаданными при обеспечении доступности базы данных на другом экземпляре сервера (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
- [Диагностика пользователей, утративших связь с учетной записью (SQL Server)](troubleshoot-orphaned-users-sql-server.md)  
+ [Управление метаданными при обеспечении доступности базы данных на другом экземпляре сервера &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
+ [Устранение неполадок потерянных пользователей &#40;SQL Server&#41;](troubleshoot-orphaned-users-sql-server.md)  
   
   

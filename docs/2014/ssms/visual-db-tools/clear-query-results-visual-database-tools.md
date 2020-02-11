@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5c53b87f01cd8bbcba4ff8377a98606737654877
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63255790"
 ---
 # <a name="clear-query-results-visual-database-tools"></a>Очистка результатов запросов (визуальные инструменты для баз данных)
@@ -35,9 +35,9 @@ ms.locfileid: "63255790"
   
      Если во время очистки панели результатов выполняется запрос, то конструктор запросов и представлений его останавливает.  
   
-## <a name="see-also"></a>См. также  
- [Выполнение запросов &#40;визуальных инструментах баз данных&#41;](run-queries-visual-database-tools.md)   
- [Остановка выполнения запроса &#40;визуальных инструментах баз данных&#41;](stop-a-query-visual-database-tools.md)   
+## <a name="see-also"></a>См. также:  
+ [Выполнение запросов &#40;визуальных инструментов для баз данных&#41;](run-queries-visual-database-tools.md)   
+ [Завершение запроса &#40;визуальных инструментов для баз данных&#41;](stop-a-query-visual-database-tools.md)   
  [Работа с данными на панели результатов (визуальные инструменты для баз данных)](visual-database-tools.md)  
   
   

@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 39860a2b147a2db392219552ebfd18cbbf7b7992
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63264774"
 ---
 # <a name="custom-report-items"></a>Пользовательские элементы отчета
@@ -44,13 +44,13 @@ ms.locfileid: "63264774"
  [Создание компонента времени разработки пользовательского элемента отчета](creating-a-custom-report-item-design-time-component.md)  
  Описывает процесс создания компонента времени разработки пользовательского элемента отчета.  
   
- [Как развернуть пользовательский элемент отчета](how-to-deploy-a-custom-report-item.md)  
+ [Развертывание пользовательского элемента отчета](how-to-deploy-a-custom-report-item.md)  
  Описывает процесс развертывания пользовательского элемента отчета.  
   
  [Библиотеки классов пользовательских элементов отчета](custom-report-item-class-libraries.md)  
  Описывает классы инфраструктуры пользовательского элемента отчета и управляемые классы-оболочки в пространстве имен `Microsoft.ReportDesigner`.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Технический справочник (службы SSRS)](../technical-reference-ssrs.md)  
   
   

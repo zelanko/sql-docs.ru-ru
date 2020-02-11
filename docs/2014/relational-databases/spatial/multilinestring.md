@@ -13,23 +13,23 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 9244f32b2ee9921d1caaa63b5d6aae9c324049ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014210"
 ---
 # <a name="multilinestring"></a>MultiLineString
-  Объект `MultiLineString` является коллекцией из нуля или более `geometry` или **geographyLineString** экземпляров.  
+  `MultiLineString` — Это коллекция из нуля или более `geometry` экземпляров или **geographyLineString** .  
   
 ## <a name="multilinestring-instances"></a>Экземпляры MultiLineString  
  На рисунке ниже приведены примеры экземпляров `MultiLineString`.  
   
- ![Примеры геометрических экземпляров MultiLineString](../../database-engine/media/multilinestring.gif "Примеры геометрических экземпляров MultiLineString")  
+ ![Примеры объектов MultiLineString типа geometry](../../database-engine/media/multilinestring.gif "Примеры объектов MultiLineString типа geometry")  
   
  На рисунке представлены:  
   
--   Рис. 1 — это простой `MultiLineString` экземпляра, граница которого определяется четырьмя конечными точками двух его `LineString` элементов.  
+-   На рисунке 1 показан простой `MultiLineString` экземпляр, граница которого состоит из четырех конечных точек `LineString` двух элементов.  
   
 -   Изображение 2 представляет простой экземпляр `MultiLineString`, поскольку пересекаются только конечные точки элементов `LineString`. Граница образована двумя неперекрывающимися конечными точками.  
   
@@ -37,12 +37,12 @@ ms.locfileid: "66014210"
   
 -   На рисунке 4 представлен отличный от простого незамкнутый экземпляр объекта `MultiLineString`.  
   
--   Изображение 5 представляет простой, незамкнутый экземпляр `MultiLineString`. Не закрыта, поскольку его `LineStrings` элементы не закрыты. Экземпляр является простым, поскольку внутренние стороны экземпляров `LineStrings` не пересекаются.  
+-   Изображение 5 представляет простой, незамкнутый экземпляр `MultiLineString`. Он не закрыт, поскольку его `LineStrings` элементы не закрыты. Экземпляр является простым, поскольку внутренние стороны экземпляров `LineStrings` не пересекаются.  
   
 -   Изображение 6 представляет простой, замкнутый экземпляр `MultiLineString`. Экземпляр является замкнутым, поскольку все его элементы замкнуты. Экземпляр является простым, поскольку внутренние области его элементов не пересекаются.  
   
 ### <a name="accepted-instances"></a>Правильные экземпляры  
- Чтобы экземпляр `MultiLineString` был принят, он должен либо быть пустым, либо содержать только принимаемые экземпляры `LineString`. Дополнительные сведения о принимаемых `LineString` экземпляров, см. в разделе [LineString](../spatial/linestring.md). В следующих примерах показаны принятые экземпляры `MultiLineString`.  
+ Чтобы экземпляр `MultiLineString` был принят, он должен либо быть пустым, либо содержать только принимаемые экземпляры `LineString`. Дополнительные сведения о принятых `LineString` экземплярах см. в разделе [LineString](../spatial/linestring.md). В следующих примерах показаны принятые экземпляры `MultiLineString`.  
   
 ```  
 DECLARE @g1 geometry = 'MULTILINESTRING EMPTY';  
@@ -92,7 +92,7 @@ SET @g = geometry::Parse('MULTILINESTRING((0 2, 1 1), (1 0, 1 1))');
 SET @g.STSrid = 13;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [STLength (тип данных geometry)](/sql/t-sql/spatial-geometry/stlength-geometry-data-type)   
  [STIsClosed (тип данных geometry)](/sql/t-sql/spatial-geometry/stisclosed-geometry-data-type)   
  [LineString](../spatial/linestring.md)   

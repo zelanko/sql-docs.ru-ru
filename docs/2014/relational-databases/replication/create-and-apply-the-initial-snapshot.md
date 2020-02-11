@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a69d4805a21cfbd83bd9a8d79b5150460d4977be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721691"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>Создание и применение исходного моментального снимка
@@ -31,7 +31,7 @@ ms.locfileid: "62721691"
   
      [Transact-SQL](#TsqlProcedure)  
   
-     [объекты RMO;](#RMOProcedure)  
+     [Объекты Replication Management Objects (RMO)](#RMOProcedure)  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  По умолчанию, если выполняется агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , агент моментальных снимков создает моментальный снимок сразу после того, как создана публикация с помощью мастера создания публикаций. Затем по умолчанию агент распространителя (для репликации моментальных снимков и репликации транзакций) или агент слияния (для подписок на публикацию слиянием) применяет моментальный снимок ко всем подпискам. Моментальный снимок также можно создать с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и монитора репликации. Сведения о запуске монитора репликации см. в [этой статье](monitor/start-the-replication-monitor.md).  
@@ -54,7 +54,7 @@ ms.locfileid: "62721691"
   
 2.  Щелкните правой кнопкой мыши публикацию, для которой нужно создать моментальный снимок, и выберите **Создать моментальный снимок**.  
   
-3.  Чтобы просмотреть состояние агента моментальных снимков, перейдите на вкладку **Агенты** . Для получения дополнительных сведений щелкните правой кнопкой мыши агент моментальных снимков в сетке и выберите **Просмотреть сведения**.  
+3.  Чтобы просмотреть состояние агент моментальных снимков, перейдите на вкладку **агенты** . Для получения более подробных сведений щелкните правой кнопкой мыши агент моментальных снимков в сетке и выберите пункт **Просмотреть сведения**.  
   
 #### <a name="to-apply-a-snapshot"></a>Применение моментального снимка  
   
@@ -78,18 +78,18 @@ ms.locfileid: "62721691"
   
 1.  Создайте моментальный снимок, публикацию слиянием или публикацию транзакций. Дополнительные сведения см. в разделе [Create a Publication](publish/create-a-publication.md).  
   
-2.  Выполните хранимую процедуру [sp_addpublication_snapshot (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql). Укажите параметр **@publication** и следующие параметры.  
+2.  Выполните хранимую процедуру [sp_addpublication_snapshot (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql). Укажите **@publication** и следующие параметры:  
   
-    -   **@job_login — указывает** учетные данные для проверки подлинности Windows, под которыми запускается агент моментальных снимков на распространителе.  
+    -   **Объект @job_login, указывающий** учетные данные проверки подлинности Windows, с помощью которых агент моментальных снимков выполняется на распространителе.  
   
-    -   **@job_password** — пароль для указанных учетных данных Windows.  
+    -   , Который является паролем для предоставленных учетных данных Windows. ** @job_password **  
   
-    -   (Необязательно) Значение **0** в параметре **@publisher_security_mode** , если агент при соединении с издателем будет использовать проверку подлинности SQL Server. В этом случае в параметрах **@publisher_login** и **@publisher_password**.  
+    -   (Необязательно) Значение **0** в параметре **@publisher_security_mode** , если агент при соединении с издателем будет использовать проверку подлинности SQL Server. В этом случае необходимо также указать сведения об имени входа для проверки подлинности SQL Server для **@publisher_login** и **@publisher_password**.  
   
-    -   (Необязательно) Расписание синхронизации для задания агента моментальных снимков. Дополнительные сведения см. в разделе [Specify Synchronization Schedules](specify-synchronization-schedules.md).  
+    -   (Необязательно) Расписание синхронизации для задания агента моментальных снимков. Дополнительные сведения см. в разделе [Указание расписаний синхронизации](specify-synchronization-schedules.md).  
   
     > [!IMPORTANT]  
-    >  Если издатель настраивается с удаленным распространителем, то значения, передаваемые для всех аргументов, включая *job_login* и *job_password*, передаются распространителю в формате обычного (незашифрованного) текста. Прежде чем выполнять эту хранимую процедуру, необходимо зашифровать соединение между издателем и его удаленным распространителем. Дополнительные сведения см. в разделе [Включение шифрования соединений в компоненте Database Engine (диспетчер конфигураций SQL Server)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Если издатель настраивается с удаленным распространителем, то значения, передаваемые для всех аргументов, включая *job_login* и *job_password*, передаются распространителю в формате обычного (незашифрованного) текста. Прежде чем выполнять эту хранимую процедуру, необходимо зашифровать соединение между издателем и его удаленным распространителем. Дополнительные сведения см. [в разделе Enable encrypted connections to the ядро СУБД &#40;диспетчер конфигурации SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 3.  Добавьте статьи к публикации. Дополнительные сведения см. в статье [определить статью](publish/define-an-article.md).  
   
@@ -105,9 +105,9 @@ ms.locfileid: "62721691"
   
     -   **-Publication**  
   
-    -   **-Publisher**  
+    -   **-Издатель**  
   
-    -   **-Distributor**  
+    -   **-Распространитель**  
   
     -   **-PublisherDB**  
   
@@ -127,7 +127,7 @@ ms.locfileid: "62721691"
   
     -   **-PublisherSecurityMode** = **0**  
   
-###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
+###  <a name="TsqlExample"></a>Примеры (Transact-SQL)  
  В этом примере показано, как создавать публикации транзакций и добавлять задания агента моментальных снимков к новым публикациям (с помощью переменных скрипта **sqlcmd** ). В примере также запускается задание.  
   
  [!code-sql[HowTo#sp_trangenerate_snapshot](../../snippets/tsql/SQL15/replication/howto/tsql/createtranpubinitialsnapshot.sql#sp_trangenerate_snapshot)]  
@@ -153,7 +153,7 @@ ms.locfileid: "62721691"
   
 1.  Создайте соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.TransPublication> . Задайте для публикации свойства <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> и <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> , а также установите созданное на шаге 1 соединение <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> в качестве значения для свойства.  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.TransPublication>. Задайте для публикации свойства <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> и <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> , а также установите созданное на шаге 1 соединение <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> в качестве значения для свойства.  
   
 3.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> , чтобы загрузить оставшиеся свойства объекта. Если этот метод возвращает `false`, то либо на шаге 2 были неверно определены свойства публикации, либо публикация не существует.  
   
@@ -167,27 +167,33 @@ ms.locfileid: "62721691"
   
 1.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent> и укажите следующие необходимые свойства.  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Publisher%2A> — имя издателя.  
+    -   
+  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Publisher%2A> — имя издателя.  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherDatabase%2A> — имя базы данных публикации.  
+    -   
+  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherDatabase%2A> — имя базы данных публикации.  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Publication%2A> — имя публикации.  
+    -   
+  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Publication%2A> — имя публикации.  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Distributor%2A> — имя распространителя.  
+    -   
+  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Distributor%2A> — имя распространителя.  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherSecurityMode%2A> — значение параметра <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> , чтобы использовать проверку подлинности Windows для соединения с издателем, или значение <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> и значения параметров <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherLogin%2A> и <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherPassword%2A> , чтобы использовать проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для соединения с издателем. Рекомендуется использовать проверку подлинности Windows.  
+    -   
+  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherSecurityMode%2A> — значение параметра <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> , чтобы использовать проверку подлинности Windows для соединения с издателем, или значение <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> и значения параметров <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherLogin%2A> и <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherPassword%2A> , чтобы использовать проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для соединения с издателем. Рекомендуется использовать проверку подлинности Windows.  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorSecurityMode%2A> — значение параметра <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> , чтобы использовать проверку подлинности Windows для соединения с распространителем, или значение <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> и значения параметров <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorLogin%2A> и <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorPassword%2A> , чтобы использовать проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для соединения с распространителем. Рекомендуется использовать проверку подлинности Windows.  
+    -   
+  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorSecurityMode%2A> — значение параметра <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> , чтобы использовать проверку подлинности Windows для соединения с распространителем, или значение <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> и значения параметров <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorLogin%2A> и <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorPassword%2A> , чтобы использовать проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для соединения с распространителем. Рекомендуется использовать проверку подлинности Windows.  
   
 2.  Укажите значение <xref:Microsoft.SqlServer.Replication.ReplicationType.Transactional> или <xref:Microsoft.SqlServer.Replication.ReplicationType.Snapshot> в параметре <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.ReplicationType%2A>.  
   
-3.  Вызовите метод <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.GenerateSnapshot%2A>.  
+3.  Вызовите метод <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.GenerateSnapshot%2A> .  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-merge-publication-by-starting-the-snapshot-agent-job-asynchronous"></a>Создание исходного моментального снимка для публикации слиянием из задания агента моментальных снимков (в асинхронном режиме)  
   
 1.  Создайте соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergePublication> . Задайте для публикации свойства <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> и <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> , а также установите созданное на шаге 1 соединение <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> в качестве значения для свойства.  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergePublication>. Задайте для публикации свойства <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> и <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> , а также установите созданное на шаге 1 соединение <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> в качестве значения для свойства.  
   
 3.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> , чтобы загрузить оставшиеся свойства объекта. Если этот метод возвращает `false`, то либо на шаге 2 были неверно определены свойства публикации, либо публикация не существует.  
   
@@ -201,23 +207,29 @@ ms.locfileid: "62721691"
   
 1.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent> и укажите следующие необходимые свойства.  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Publisher%2A> — имя издателя.  
+    -   
+  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Publisher%2A> — имя издателя.  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherDatabase%2A> — имя базы данных публикации.  
+    -   
+  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherDatabase%2A> — имя базы данных публикации.  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Publication%2A> — имя публикации.  
+    -   
+  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Publication%2A> — имя публикации.  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Distributor%2A> — имя распространителя.  
+    -   
+  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Distributor%2A> — имя распространителя.  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherSecurityMode%2A> — значение параметра <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> , чтобы использовать проверку подлинности Windows для соединения с издателем, или значение <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> и значения параметров <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherLogin%2A> и <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherPassword%2A> , чтобы использовать проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для соединения с издателем. Рекомендуется использовать проверку подлинности Windows.  
+    -   
+  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherSecurityMode%2A> — значение параметра <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> , чтобы использовать проверку подлинности Windows для соединения с издателем, или значение <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> и значения параметров <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherLogin%2A> и <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherPassword%2A> , чтобы использовать проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для соединения с издателем. Рекомендуется использовать проверку подлинности Windows.  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorSecurityMode%2A> — значение параметра <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> , чтобы использовать проверку подлинности Windows для соединения с распространителем, или значение <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> и значения параметров <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorLogin%2A> и <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorPassword%2A> , чтобы использовать проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для соединения с распространителем. Рекомендуется использовать проверку подлинности Windows.  
+    -   
+  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorSecurityMode%2A> — значение параметра <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> , чтобы использовать проверку подлинности Windows для соединения с распространителем, или значение <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> и значения параметров <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorLogin%2A> и <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorPassword%2A> , чтобы использовать проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для соединения с распространителем. Рекомендуется использовать проверку подлинности Windows.  
   
 2.  Укажите значение <xref:Microsoft.SqlServer.Replication.ReplicationType.Merge> в параметре <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.ReplicationType%2A>.  
   
 3.  Вызовите метод <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.GenerateSnapshot%2A> .  
   
-###  <a name="PShellExample"></a> Примеры (объекты RMO)  
+###  <a name="PShellExample"></a>Примеры (объекты RMO)  
  В следующем примере производится синхронный запуск агента моментальных снимков, который создает исходный моментальный снимок публикации транзакций.  
   
  [!code-csharp[HowTo#rmo_GenerateSnapshot](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_generatesnapshot)]  
@@ -230,16 +242,16 @@ ms.locfileid: "62721691"
   
  [!code-vb[HowTo#rmo_vb_GenerateSnapshot_WithJob](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_generatesnapshot_withjob)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Create a Publication](publish/create-a-publication.md)   
  [Создание подписки по запросу](create-a-pull-subscription.md)   
- [Create a Push Subscription](create-a-push-subscription.md)   
- [Specify Synchronization Schedules](specify-synchronization-schedules.md)   
+ [Создание принудительной подписки](create-a-push-subscription.md)   
+ [Указание расписаний синхронизации](specify-synchronization-schedules.md)   
  [Создание и применение моментального снимка](create-and-apply-the-snapshot.md)   
  [Инициализация подписки с помощью моментального снимка](initialize-a-subscription-with-a-snapshot.md)   
- [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
- [Replication Security Best Practices](security/replication-security-best-practices.md)   
- [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)   
+ [Основные понятия объекты Replication Management Objects](concepts/replication-management-objects-concepts.md)   
+ [Рекомендации по обеспечению безопасности репликации](security/replication-security-best-practices.md)   
+ [Основные понятия системных хранимых процедур репликации](concepts/replication-system-stored-procedures-concepts.md)   
  [Использование программы sqlcmd с переменными скрипта](../scripting/sqlcmd-use-with-scripting-variables.md)  
   
   

@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f70cde85aca7b08003d27ee3bd2fc61cbc0a45f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769130"
 ---
 # <a name="functions-ssis-expression"></a>Функции (выражение служб SSIS)
@@ -38,7 +38,7 @@ ms.locfileid: "62769130"
   
  Язык выражений содержит следующие математические функции.  
   
-|Компонент|Описание|  
+|Компонент|Description|  
 |--------------|-----------------|  
 |[ABS (выражение служб SSIS)](abs-ssis-expression.md)|Возвращает абсолютное положительное значение числового выражения.|  
 |[EXP (выражение служб SSIS)](exp-ssis-expression.md)|Возвращает число «е» в степени, определяемой данным выражением.|  
@@ -54,7 +54,7 @@ ms.locfileid: "62769130"
   
  Средство оценки выражений содержит следующие строковые функции.  
   
-|Компонент|Описание|  
+|Компонент|Description|  
 |--------------|-----------------|  
 |[CODEPOINT (выражение служб SSIS)](codepoint-ssis-expression.md)|Возвращает значение кода Юникод самого первого символа в символьном выражении.|  
 |[FINDSTRING (выражение служб SSIS)](findstring-ssis-expression.md)|Возвращает однократный индекс указанного вхождения символьной строки в выражение.|  
@@ -74,7 +74,7 @@ ms.locfileid: "62769130"
   
  Средство оценки выражений содержит следующие функции для работы с датой и временем.  
   
-|Компонент|Описание|  
+|Компонент|Description|  
 |--------------|-----------------|  
 |[DATEADD (выражение служб SSIS)](dateadd-ssis-expression.md)|Возвращает новое значение типа DT_DBTIMESTAMP, образованное добавлением интервала времени или даты к указанной дате.|  
 |[DATEDIFF (выражение служб SSIS)](datediff-ssis-expression.md)|Возвращает числовое значение границ дат или времени между двумя указанными датами.|  
@@ -87,14 +87,14 @@ ms.locfileid: "62769130"
   
  Средство оценки выражений содержит следующие функции для значения NULL.  
   
-|Компонент|Описание|  
+|Компонент|Description|  
 |--------------|-----------------|  
 |[ISNULL (выражение служб SSIS)](null-ssis-expression.md)|Возвращает результат в виде логического выражения, в зависимости от того, имеет ли выражение значение NULL.|  
 |[NULL (выражение служб SSIS)](null-ssis-expression.md)|Возвращает значение NULL запрошенного типа данных.|  
   
  Названия выражений указаны в верхнем регистре, но эти имена обрабатываются без учета регистра. Например, значение «null» равносильно использованию значения «NULL».  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Операторы (выражение служб SSIS)](operators-ssis-expression.md)   
  [Примеры расширенных выражений служб Integration Services](examples-of-advanced-integration-services-expressions.md)   
  [Выражения служб Integration Services (SSIS)](integration-services-ssis-expressions.md)  
