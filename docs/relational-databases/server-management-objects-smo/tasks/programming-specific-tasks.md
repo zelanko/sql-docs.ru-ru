@@ -20,10 +20,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0ba3ec14f7d94b493b5cc93e3b6b46f0565e38ab
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74095202"
 ---
 # <a name="programming-specific-tasks"></a>Задачи, связанные с программированием
@@ -31,7 +31,7 @@ ms.locfileid: "74095202"
 
   Задачи, связанные с программированием объектов SMO, которые затрагивают сложные вопросы, которые необходимы лишь программам, выполняющим специальные функции, например резервное копирование, статистику наблюдения, репликацию, управление объектами экземпляра и настройка параметров конфигурации.  
   
-|Раздел|Описание|  
+|Раздел|Description|  
 |-----------|-----------------|  
 |[Использование связанных серверов в объектах SMO](../../../relational-databases/server-management-objects-smo/tasks/using-linked-servers-in-smo.md)|Описывает описание использования объектами SMO объекта <xref:Microsoft.SqlServer.Management.Smo.LinkedServer> для связи с сервером OLE-DB.|  
 |[Настройка SQL Server в SMO](../../../relational-databases/server-management-objects-smo/tasks/configuring-sql-server-in-smo.md)|Описывает просмотр и изменение параметров конфигурации для экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в объектах SMO.|  
@@ -44,7 +44,7 @@ ms.locfileid: "74095202"
 |[Использование шифрования](../../../relational-databases/server-management-objects-smo/tasks/using-encryption.md)|Содержит описание защиты данных с помощью шифрования в объектах SMO.|  
 |[Планирование автоматических административных задач в агенте SQL Server](../../../relational-databases/server-management-objects-smo/tasks/scheduling-automatic-administrative-tasks-in-sql-server-agent.md)|Содержит описание использования агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для наблюдения, ведения отчетов и расписания заданий в объектах SMO.|  
 |[Резервное копирование и восстановление баз данных и журналов транзакций](../../../relational-databases/server-management-objects-smo/tasks/backing-up-and-restoring-databases-and-transaction-logs.md)|Содержит описание создания резервной копии и восстановления баз данных и журналов транзакций в объектах SMO.|  
-|[Создание скриптов](../../../relational-databases/server-management-objects-smo/tasks/scripting.md)|Содержит описание создания скриптов для объектов и обнаружения зависимостей в объектах SMO.|  
+|[Написание сценариев](../../../relational-databases/server-management-objects-smo/tasks/scripting.md)|Содержит описание создания скриптов для объектов и обнаружения зависимостей в объектах SMO.|  
 |[Передача данных](../../../relational-databases/server-management-objects-smo/tasks/transferring-data.md)|Содержит описание передачи данных в объектах SMO.|  
 |[Использование компонента Database Mail](../../../relational-databases/server-management-objects-smo/tasks/using-database-mail.md)|Содержит описание использования почтовых служб в объектах SMO.|  
 |[Управление компонентом Service Broker](../../../relational-databases/server-management-objects-smo/tasks/managing-service-broker.md)|Содержит описание установки компонента Service Broker с помощью объектов SMO.|  

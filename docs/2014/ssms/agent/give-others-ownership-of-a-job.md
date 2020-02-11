@@ -15,20 +15,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 20bd8904f8dfabd81f3f16ef7bed4c6bf1084c0d
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798230"
 ---
 # <a name="give-others-ownership-of-a-job"></a>Give Others Ownership of a Job
-  В этом разделе описано, как изменить владельца заданий агента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  В этом разделе описывается, как переназначить [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] владение заданиями агента другому пользователю.  
   
--   **Перед началом:**  [Ограничения](#Restrictions), [Безопасность](#Security)  
+-   **Перед началом:**  [ограничения](#Restrictions), [Безопасность](#Security)  
   
 -   **Для передачи другим пользователям права владения заданием используется:**  
   
-     [SQL Server Management Studio](#SSMSProc2)  
+     [Среда SQL Server Management Studio](#SSMSProc2)  
   
      [Transact-SQL](#TsqlProc2)  
   
@@ -43,14 +43,14 @@ ms.locfileid: "72798230"
   
  Назначение задания другому имени входа не гарантирует того, что новый владелец обладает достаточными разрешениями для успешного запуска задания.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
  Из соображений безопасности изменять определение задания может только его владелец или член роли **sysadmin** . Только члены предопределенной роли сервера **sysadmin** могут предоставлять права владения заданием другим пользователям, а также могут запускать любое задание, независимо от того, кто является его владельцем.  
   
 > [!NOTE]  
 >  Если задать в качестве нового владельца задания пользователя, не являющегося членом предопределенной роли сервера **sysadmin** , а задание выполняет шаги, которым требуются учетные записи-посредники (например, выполнение пакета служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] ), убедитесь в том, что пользователь имеет доступ к этой учетной записи-посреднику, в противном случае задание завершится ошибкой.  
   
-####  <a name="Permissions"></a> Разрешения  
- Дополнительные сведения см. в разделе [Implement SQL Server Agent Security](implement-sql-server-agent-security.md).  
+####  <a name="Permissions"></a> Permissions  
+ Дополнительные сведения см. в разделе [Обеспечение безопасности агента SQL Server](implement-sql-server-agent-security.md).  
   
 ##  <a name="SSMSProc2"></a> Использование среды SQL Server Management Studio  
  **Передача другим пользователям права владения заданием**  
@@ -68,9 +68,9 @@ ms.locfileid: "72798230"
   
 1.  В обозревателе объектов подключитесь к экземпляру компонента Database Engine и разверните его.  
   
-2.  На панели инструментов нажмите кнопку **Создать запрос**.  
+2.  На панели инструментов щелкните **Новый запрос**.  
   
-3.  В окне запроса введите следующие инструкции, которые используют системную хранимую процедуру [Transact &#40;-&#41; SQL sp_manage_jobs_by_login](/sql/relational-databases/system-stored-procedures/sp-manage-jobs-by-login-transact-sql) . В следующем примере производится передача всех заданий от пользователя `danw` пользователю `fran??oisa`.  
+3.  В окне запроса введите следующие инструкции, использующие [sp_manage_jobs_by_login &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-manage-jobs-by-login-transact-sql) системной хранимой процедурой. В следующем примере производится передача всех заданий от пользователя `danw` пользователю `fran??oisa`.  
   
     ```sql
     USE msdb ;  
@@ -87,8 +87,8 @@ ms.locfileid: "72798230"
 
 ### <a name="to-give-others-ownership-of-a-job"></a>Передача другим пользователям права владения заданием
   
-1.  Вызовите класс `Job` с использованием выбранного языка программирования, например Visual Basic, Visual C# или PowerShell. Пример кода см. в разделе [Scheduling Automatic Administrative Tasks in SQL Server Agent](sql-server-agent.md).  
+1.  Вызовите класс `Job` с использованием выбранного языка программирования, например Visual Basic, Visual C# или PowerShell. Пример кода см. в разделе [Планирование автоматических административных задач в агенте SQL Server](sql-server-agent.md).  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
  [Реализация заданий](implement-jobs.md)   
  [Создание заданий](create-jobs.md)  

@@ -18,10 +18,10 @@ ms.assetid: 1426ca4a-9a76-489e-98da-8f6d13ff9732
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d6952d245dfc9083c7cfa6e6d36ad991ffd24654
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72909142"
 ---
 # <a name="sp_fulltext_semantic_unregister_language_statistics_db-transact-sql"></a>sp_fulltext_semantic_unregister_language_statistics_db (Transact-SQL)
@@ -40,19 +40,19 @@ EXEC sp_fulltext_semantic_unregister_language_statistics_db;
 GO  
 ```  
   
-##  <a name="Arguments"></a> Аргументы  
+##  <a name="Arguments"></a>Даваемых  
  Для этой процедуры не требуются аргументы. Поскольку экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет только одну базу данных со статистикой семантики языка, указывать базу данных не обязательно.  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-set"></a>Результирующий набор  
- Отсутствуют.  
+ Нет.  
   
 ## <a name="general-remarks"></a>Общие замечания  
  При отмене регистрации базы данных статистики семантики языка удаляются и все связанные с ней метаданные.  
   
- **sp_fulltext_semantic_unregister_language_statistics_db** выполняет следующие действия:  
+ **sp_fulltext_semantic_unregister_language_statistics_db** выполняет следующие действия.  
   
 1.  Проверяет, что на текущем экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не выполняется заполнение семантической статистики.  
   
@@ -61,11 +61,11 @@ GO
  Дополнительные сведения см. в разделе [Установка и настройка семантического поиска](../../relational-databases/search/install-and-configure-semantic-search.md).  
   
 ## <a name="metadata"></a>Метаданные  
- Для получения сведений о Семантическая статистика языка базе данных, установленной на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], запросите представление каталога [sys. &#40;FULLTEXT_SEMANTIC_LANGUAGE_STATISTICS_DATABASE&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md).  
+ Для получения сведений о Семантическая статистика языка базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], установленной на экземпляре, запросите представление каталога [sys. fulltext_semantic_language_statistics_database &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md).  
   
 ## <a name="security"></a>безопасность  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Разрешения  
  Требуются разрешения CONTROL SERVER.  
   
 ## <a name="examples"></a>Примеры  
@@ -76,7 +76,7 @@ EXEC sp_fulltext_semantic_unregister_language_statistics_db;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
  [Установка и настройка семантического поиска](../../relational-databases/search/install-and-configure-semantic-search.md)  
   
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 0302af7f2241f3e158e8fa95691544c6fdf2dfac
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893919"
 ---
 # <a name="predictcaselikelihood-dmx"></a>PredictCaseLikelihood (расширения интеллектуального анализа данных)
@@ -34,13 +34,13 @@ PredictCaseLikelihood([NORMALIZED|NONNORMALIZED])
  NONNORMALIZED  
  Возвращаемое значение содержит необработанное значение вероятности варианта, представляющее собой произведение вероятностей атрибутов варианта.  
   
-## <a name="applies-to"></a>Объект применения  
- Модели, построенные с использованием [!INCLUDE[msCoName](../includes/msconame-md.md)] алгоритмов кластеризации и [!INCLUDE[msCoName](../includes/msconame-md.md)] кластеризации последовательностей.  
+## <a name="applies-to"></a>Применяется к  
+ Модели, построенные с использованием алгоритмов [!INCLUDE[msCoName](../includes/msconame-md.md)] кластеризации [!INCLUDE[msCoName](../includes/msconame-md.md)] и кластеризации последовательностей.  
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
  Число с плавающей запятой двойной точности в диапазоне от 0 до 1. Число, более близкое к 1, обозначает большую вероятность вхождения варианта в модель; число, близкое к 0, обозначает меньшую вероятность вхождения варианта в модель.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  По умолчанию результат функции **PredictCaseLikelihood** нормализован. Нормализованные значения, как правило, более эффективны, поскольку в варианте увеличивается число атрибутов и разница между необработанными вероятностями двух вариантов существенно уменьшается.  
   
  Следующее уравнение используется для вычисления нормализованных значений при заданных x и y:  
@@ -79,10 +79,10 @@ NATURAL PREDICTION JOIN
   
  Разница между результатами демонстрирует влияние нормализации. Необработанное значение для **каселикелихуд** предполагает, что вероятность варианта составляет примерно 20 процентов; Однако при нормализации результатов становится очевидно, что вероятность варианта очень мала.  
   
-## <a name="see-also"></a>См. также  
- [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
- [Справочник по &#40;функциям&#41; DMX расширений интеллектуального анализа данных](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [DMX &#40;-функции&#41;](../dmx/functions-dmx.md)   
- [DMX-функции &#40;общих прогнозирующих функций&#41;](../dmx/general-prediction-functions-dmx.md)  
+## <a name="see-also"></a>См. также:  
+ [Алгоритмы интеллектуального анализа данных &#40;Analysis Services — интеллектуальный анализ данных&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
+ [Расширения интеллектуального анализа данных &#40;Справочник по функциям DMX&#41;](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Функции &#40;&#41;расширений интеллектуального анализа данных](../dmx/functions-dmx.md)   
+ [Общие прогнозирующие функции &#40;&#41;расширений интеллектуального анализа данных](../dmx/general-prediction-functions-dmx.md)  
   
   

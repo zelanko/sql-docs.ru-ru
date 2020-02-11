@@ -15,14 +15,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dafa6037682610d7011cdfc9f378ead6f95774fe
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782893"
 ---
 # <a name="change-the-availability-mode-of-an-availability-replica-sql-server"></a>Смена режима доступности для реплики доступности (SQL Server)
-  В этом разделе описывается изменение режима доступности для реплики доступности в группе доступности AlwaysOn в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или PowerShell. Режим доступности — это свойство реплики, которое определяет, происходит в ней синхронная или асинхронная фиксация. *Режим асинхронной фиксации* увеличивает производительность за счет средств высокого уровня доступности и поддерживает только принудительный переход на другой ресурс вручную (с возможной потерей данных), который обычно называется *принудительной отработкой отказа*. *Режим синхронной фиксации* обеспечивает высокий уровень доступности за счет производительности и после завершения синхронизации вторичной реплики поддерживает как автоматическую отработку отказа, так и отработку отказа вручную.  
+  В этом разделе описывается изменение режима доступности для реплики доступности в группе доступности AlwaysOn в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или PowerShell. Режим доступности — это свойство реплики, которое определяет, происходит в ней синхронная или асинхронная фиксация. *Режим асинхронной фиксации* повышает производительность за счет высокой доступности и поддерживает только принудительный переход на другой ресурс вручную (с возможной потерей данных), обычно называемый *принудительной отработкой отказа*. *Режим синхронной фиксации* подчеркивает высокий уровень доступности, а после синхронизации вторичной реплики поддерживает отработку отказа вручную и, при необходимости, автоматический переход на другой ресурс.  
   
 
   
@@ -32,13 +32,13 @@ ms.locfileid: "72782893"
   
 -   Необходимо подключиться к экземпляру сервера, на котором размещена первичная реплика.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER AVAILABILITY GROUP для группы доступности, разрешение CONTROL AVAILABILITY GROUP, разрешение ALTER ANY AVAILABILITY GROUP или разрешение CONTROL SERVER.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
- **Изменение режима доступности для группы доступности**  
+ **Изменение режима доступности группы доступности**  
   
 1.  В обозревателе объектов подключитесь к экземпляру сервера, на котором размещена первичная реплика, и разверните дерево сервера.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "72782893"
 5.  В диалоговом окне **Свойства реплики доступности** измените режим доступности для этой реплики с помощью раскрывающегося списка **Режим доступности** .  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
- **Изменение режима доступности для группы доступности**  
+ **Изменение режима доступности группы доступности**  
   
 1.  Подключитесь к экземпляру сервера, на котором находится первичная реплика.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "72782893"
        WITH (FAILOVER_MODE = AUTOMATIC);  
     ```  
   
-##  <a name="PowerShellProcedure"></a> Использование PowerShell
+##  <a name="PowerShellProcedure"></a>Использование PowerShell
 
 ### <a name="to-change-the-availability-mode-of-an-availability-group"></a>Изменение режима доступности для группы доступности
   
@@ -98,11 +98,11 @@ ms.locfileid: "72782893"
     ```  
   
     > [!NOTE]  
-    >  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом `Get-Help` в среде [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Дополнительные сведения см. в статье [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом `Get-Help` в среде [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
 Сведения о настройке и использовании поставщика SQL Server PowerShell см. в разделе [поставщик SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md).
   
-## <a name="see-also"></a>См. также статью  
- [Общие сведения о &#40;группы доступности AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>См. также:  
+ [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Режимы доступности (группы доступности AlwaysOn)](availability-modes-always-on-availability-groups.md)   
- [Отказоустойчивость и режимы &#40;отработки отказа группы доступности AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md)  
+ [Отказоустойчивость и режимы отработки отказа &#40;группы доступности AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md)  

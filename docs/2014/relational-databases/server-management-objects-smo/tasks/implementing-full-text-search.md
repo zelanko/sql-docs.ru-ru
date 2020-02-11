@@ -13,21 +13,21 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6ddc3521031f34f179cdfef08abf178f21f5f47e
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72796723"
 ---
 # <a name="implementing-full-text-search"></a>Реализация полнотекстового поиска
-  Полнотекстовый поиск доступен для отдельных экземпляров [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и представлен в SMO объектом <xref:Microsoft.SqlServer.Management.Smo.Server.FullTextService%2A>. Объект <xref:Microsoft.SqlServer.Management.Smo.FullTextService> размещен в объекте `Server`. Он используется для управления параметрами конфигурации [!INCLUDE[msCoName](../../../includes/msconame-md.md)] службы полнотекстового поиска. Объект <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalogCollection> принадлежит объекту <xref:Microsoft.SqlServer.Management.Smo.Database> и является коллекцией объектов <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog>, представляющих полнотекстовые каталоги, определенные в базе данных. Для каждой таблицы можно определить только один полнотекстовый индекс (в отличие от обычных индексов). Индекс представлен объектом <xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn> в объекте <xref:Microsoft.SqlServer.Management.Smo.Table>.  
+  Полнотекстовый поиск доступен для отдельных экземпляров [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и представлен в SMO объектом <xref:Microsoft.SqlServer.Management.Smo.Server.FullTextService%2A>. Объект <xref:Microsoft.SqlServer.Management.Smo.FullTextService> размещен в объекте `Server`. Он используется для управления параметрами конфигурации службы [!INCLUDE[msCoName](../../../includes/msconame-md.md)] полнотекстового поиска. Объект <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalogCollection> принадлежит объекту <xref:Microsoft.SqlServer.Management.Smo.Database> и является коллекцией объектов <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog>, представляющих полнотекстовые каталоги, определенные в базе данных. Для каждой таблицы можно определить только один полнотекстовый индекс (в отличие от обычных индексов). Индекс представлен объектом <xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn> в объекте <xref:Microsoft.SqlServer.Management.Smo.Table>.  
   
  Чтобы создать службу полнотекстового поиска, необходимо иметь полнотекстовый каталог, определенный в базе данных, и индекс полнотекстового поиска, определенный на одной из таблиц в базе данных.  
   
  Сначала создайте полнотекстовый каталог для базы данных, вызвав конструктор <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog> и указав имя каталога. Затем создайте полнотекстовый индекс, вызвав конструктор и указав таблицу, по которой он будет создан. Затем для полнотекстового индекса можно добавить столбцы индекса с помощью объекта <xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn>, указав имя столбца в таблице. Потом укажите в свойстве <xref:Microsoft.SqlServer.Management.Smo.FullTextIndex.CatalogName%2A> путь к созданному каталогу. Наконец, вызовите метод <xref:Microsoft.SqlServer.Management.Smo.FullTextIndex.Create%2A> и создайте полнотекстовый индекс для экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="example"></a>Пример  
- Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в статьях [Создание проекта Visual Basic SMO в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) или [Создание проекта Visual&#35; C SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в статьях [Создание проекта Visual Basic SMO в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) или [Создание проекта Visual C&#35; SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-a-full-text-search-service-in-visual-basic"></a>Создание службы полнотекстового поиска на языке Visual Basic  
  В этом примере кода создается каталог полнотекстового поиска для таблицы `ProductCategory` в образце базы данных [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]. Затем создается индекс полнотекстового поиска на столбце имен в таблице `ProductCategory`. Для индекса полнотекстового поиска необходимо, чтобы для столбца уже был определен уникальный индекс.  

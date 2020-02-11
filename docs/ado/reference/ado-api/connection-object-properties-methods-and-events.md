@@ -1,5 +1,5 @@
 ---
-title: Свойства объекта соединения, методы и события | Документация Майкрософт
+title: Свойства, методы и события объекта Connection | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,23 +13,23 @@ ms.assetid: f571b74d-b796-4009-9c66-6a36ab995a2a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bd6c95c7c761e2aadf9d42befcd4e2f740877196
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919515"
 ---
-# <a name="connection-object-properties-methods-and-events"></a>Свойства объекта соединения, методы и события
+# <a name="connection-object-properties-methods-and-events"></a>Свойства, методы и события объекта Connection
 ## <a name="propertiescollections"></a>Свойства и коллекции  
- [Атрибуты свойства](../../../ado/reference/ado-api/attributes-property-ado.md)  
+ [Attributes, свойство](../../../ado/reference/ado-api/attributes-property-ado.md)  
   
- [Свойство CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md)  
+ [CommandTimeout, свойство](../../../ado/reference/ado-api/commandtimeout-property-ado.md)  
   
  [Свойство ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)  
   
- [Свойство ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)  
+ [ConnectionTimeout, свойство](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)  
   
- [Свойство CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)  
+ [CursorLocation, свойство](../../../ado/reference/ado-api/cursorlocation-property-ado.md)  
   
  [Свойство DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)  
   
@@ -37,9 +37,9 @@ ms.locfileid: "67919515"
   
  [Свойство IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)  
   
- [Свойство Mode](../../../ado/reference/ado-api/mode-property-ado.md)  
+ [Режим, свойство](../../../ado/reference/ado-api/mode-property-ado.md)  
   
- [Свойства коллекции](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [Коллекция Properties](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
  [Свойство поставщика](../../../ado/reference/ado-api/provider-property-ado.md)  
   
@@ -48,9 +48,9 @@ ms.locfileid: "67919515"
  [Свойство Version](../../../ado/reference/ado-api/version-property-ado.md)  
   
 ## <a name="methods"></a>Методы  
- [Примеры BeginTrans, CommitTrans и RollbackTrans методы](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)  
+ [Методы примеры BeginTrans, CommitTrans и RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)  
   
- [Cancel-метод](../../../ado/reference/ado-api/cancel-method-ado.md)  
+ [Метод Cancel](../../../ado/reference/ado-api/cancel-method-ado.md)  
   
  [Метод Close](../../../ado/reference/ado-api/close-method-ado.md)  
   
@@ -61,17 +61,17 @@ ms.locfileid: "67919515"
  [Метод OpenSchema](../../../ado/reference/ado-api/openschema-method.md)  
   
 ## <a name="events"></a>События  
- [BeginTransComplete, CommitTransComplete и RollbackTransComplete события](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)  
+ [События Бегинтранскомплете, Коммиттранскомплете и Роллбакктранскомплете](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)  
   
- [ConnectComplete и события отключения](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)  
+ [События Коннекткомплете и Disconnect](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)  
   
- [Событие ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)  
+ [Событие Ексекутекомплете](../../../ado/reference/ado-api/executecomplete-event-ado.md)  
   
- [InfoMessage-событие](../../../ado/reference/ado-api/infomessage-event-ado.md)  
+ [Событие InfoMessage](../../../ado/reference/ado-api/infomessage-event-ado.md)  
   
- [Событие WillConnect](../../../ado/reference/ado-api/willconnect-event-ado.md)  
+ [Событие Виллконнект](../../../ado/reference/ado-api/willconnect-event-ado.md)  
   
  [Событие WillExecute](../../../ado/reference/ado-api/willexecute-event-ado.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

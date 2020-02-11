@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_os_event_logs (Transact-SQL) | Документация Майкрософт
+title: sys. dm_pdw_os_event_logs (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,31 +13,31 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 819b38bce871bd1a43b3d259d23b2c95fb6dfdd3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68086215"
 ---
-# <a name="sysdmpdwoseventlogs-transact-sql"></a>sys.dm_pdw_os_event_logs (Transact-SQL)
+# <a name="sysdm_pdw_os_event_logs-transact-sql"></a>sys. dm_pdw_os_event_logs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  Содержит сведения о различных событий Windows, журналы на разных узлах.  
+  Содержит сведения о различных журналах событий Windows на разных узлах.  
   
-|Имя столбца|Тип данных|Описание|Диапазон|  
+|Имя столбца|Тип данных|Description|Диапазонный индекс|  
 |-----------------|---------------|-----------------|-----------|  
-|pdw_node_id|**int**|Устройство узла извлекается этот журнал.<br /><br /> pdw_node_id и имя_журнала формируют ключ для этого представления.||  
-|имя_журнала|**nvarchar(255)**|Имя журнала событий Windows.<br /><br /> pdw_node_id и имя_журнала формируют ключ для этого представления.||  
+|pdw_node_id|**int**|Узел устройства, из которого находится этот журнал.<br /><br /> pdw_node_id и log_name формируют ключ для этого представления.||  
+|log_name|**nvarchar(255)**|Имя журнала событий Windows.<br /><br /> pdw_node_id и log_name формируют ключ для этого представления.||  
 |log_source|**nvarchar(255)**|Имя источника журнала событий Windows.||  
-|event_id|**int**|Идентификатор события. Не уникален.||  
-|event_type|**nvarchar(255)**|Тип события, определяющее уровень серьезности.|«Сведения», «Предупреждение», «Ошибка»|  
-|event_message|**nvarchar(4000)**|Дополнительные сведения о событии.||  
+|event_id|**int**|Идентификатор события. Не является уникальным.||  
+|event_type|**nvarchar(255)**|Тип события, определяющий серьезность.|"Information", "warning", "Error"|  
+|event_message|**nvarchar (4000)**|Сведения о событии.||  
 |generate_time|**datetime**|Время создания события.||  
-|write_time|**datetime**|Время, когда событие фактически было записано в журнал.||  
+|write_time|**datetime**|Время фактической записи события в журнал.||  
   
- Сведения о максимальное число строк, сохраняемых в этом представлении см. в разделе метаданных в [ограничения емкости](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) раздела. 
+ Сведения о максимальном объеме строк, хранящихся в этом представлении, см. в разделе метаданные статьи [ограничения емкости](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) . 
   
-## <a name="see-also"></a>См. также  
- [Хранилище данных SQL и параллельные хранилища данных динамические административные представления &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+## <a name="see-also"></a>См. также:  
+ [Динамические административные представления хранилища данных SQL и параллельного хранилища данных &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

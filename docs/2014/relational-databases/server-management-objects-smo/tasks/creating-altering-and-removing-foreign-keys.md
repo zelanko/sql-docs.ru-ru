@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a0462af67afbf5ac25c52ded8523ca26678699b9
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72796956"
 ---
 # <a name="creating-altering-and-removing-foreign-keys"></a>Создание, изменение и удаление внешних ключей
@@ -27,7 +27,7 @@ ms.locfileid: "72796956"
  Столбцы, представляющие внешний ключ, перечислены в свойстве `Columns` объекта <xref:Microsoft.SqlServer.Management.Smo.ForeignKey>. Первичный ключ, на который ссылается внешний ключ, представлен свойством <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A>, которое находится в таблице, указанной в свойстве <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A>.  
   
 ## <a name="example"></a>Пример  
- Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в статьях [Создание проекта Visual Basic SMO в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) или [Создание проекта Visual&#35; C SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в статьях [Создание проекта Visual Basic SMO в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) или [Создание проекта Visual C&#35; SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-foreign-key-in-visual-basic"></a>Создание, изменение и удаление внешнего ключа на языке Visual Basic  
  Этот пример кода показывает, как создать связь по внешнему ключу между одним или несколькими столбцами одной таблицы и первичным ключевым столбцом другой таблицы.  
@@ -93,7 +93,7 @@ $fk.Create()
 ```  
   
 ## <a name="sample-foreign-keys-primary-keys-and-unique-constraint-columns"></a>Образец. Внешние ключи, первичные ключи и столбцы с ограничением уникальности  
- В этом образце показано, как:  
+ В этом примере демонстрируются следующее:  
   
 -   Создать внешний ключ для существующего объекта.  
   

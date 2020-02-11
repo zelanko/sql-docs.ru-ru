@@ -14,17 +14,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8ff96b99ee7982be89126e79687dbc8a2215f42f
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798144"
 ---
 # <a name="sqlps-utility"></a>программа sqlps
   Программа `sqlps` запускает сеанс Windows PowerShell 2.0 с помощью поставщика [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell, а также загруженных и зарегистрированных командлетов. Можно вводить команды или скрипты PowerShell, в которых используются компоненты [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell для работы с экземплярами [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и их объектами.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] Вместо этого используйте модуль `sqlps` PowerShell. Дополнительные сведения о модуле `sqlps` см. в разделе [Импорт модуля sqlps](../database-engine/import-the-sqlps-module.md).  
+>  
+  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] Вместо этого используйте модуль `sqlps` PowerShell. Дополнительные сведения о `sqlps` модуле см. в разделе [Импорт модуля sqlps](../database-engine/import-the-sqlps-module.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -54,28 +55,28 @@ ms.locfileid: "72798144"
  Указывает программе `sqlps` не загружать профиль пользователя. В профилях пользователей записываются часто используемые псевдонимы, функции и переменные для использования в различных сеансах PowerShell.  
   
  **-OutPutFormat** { **Text** | **XML** }  
- Указывает, что выходные данные служебной программы `sqlps` должны быть форматированы как текстовые строки (**текст**) или в сериализованном формате CLIXML (**XML**).  
+ Указывает, что `sqlps` выходные данные служебной программы должны быть форматированы как текстовые строки (**текст**) или в сериализованном формате CLIXML (**XML**).  
   
  **-InPutFormat** { **Text** | **XML** }  
- Указывает, что входные данные `sqlps` служебной программе форматируются как текстовые строки (**текст**) или сериализованный формат CLIXML (**XML**).  
+ Указывает, что входные `sqlps` данные для служебной программы форматируются как текстовые строки (**текст**) или в сериализованном формате CLIXML (**XML**).  
   
  **-Command**  
- Указывает команду для запуска программой `sqlps`. Служебная программа `sqlps` выполняет команду, а затем завершает работу, если не задан параметр **-Exit** . После параметра **-Command**не следует указывать какие-либо иные параметры, так как они будут интерпретироваться как параметры команды.  
+ Указывает команду для запуска программой `sqlps`. `sqlps` Программа выполняет команду, а затем завершает работу, если не задан параметр **-Exit** . После параметра **-Command**не следует указывать какие-либо иные параметры, так как они будут интерпретироваться как параметры команды.  
   
  **-**  
- **-Command —** указывает, что служебная программа `sqlps` считывает входные данные из стандартного ввода.  
+ **-Command —** указывает, что `sqlps` программа считывает входные данные из стандартного ввода.  
   
- *блок_скрипта* [ **-args**_массив_аргументов_ ]  
- Указывает блок команд PowerShell для выполнения, который должен быть заключен в фигурные скобки: {}. *Script_block* можно указать только при вызове служебной программы `sqlps` из **PowerShell** или другого сеанса `sqlps` служебной программы. Параметр *массив_аргументов* представляет собой массив переменных PowerShell, содержащий аргументы для команд PowerShell из параметра *блок_скрипта*.  
+ *script_block* [ **-args**_argument_array_ ]  
+ Указывает блок команд PowerShell для выполнения, который должен быть заключен в фигурные скобки: {}. *Script_block* можно указать только при вызове `sqlps` служебной программы из **PowerShell** или из другого `sqlps` сеанса программы. Параметр *массив_аргументов* представляет собой массив переменных PowerShell, содержащий аргументы для команд PowerShell из параметра *блок_скрипта*.  
   
  *string* [ *параметры_команды* ]  
- Указывает строку, содержащую команды PowerShell для запуска. Используйте формат **"& { *`command`* }"** . Кавычки обозначают строку, а оператор Invoke (&) приводит к тому, что служебная программа `sqlps` выполняет команду.  
+ Указывает строку, содержащую команды PowerShell для запуска. Используйте формат **"& {*`command`*}"**. Кавычки обозначают строку, а оператор Invoke (&) заставляет `sqlps` программу выполнить команду.  
   
  [ **-?** |  **-Help** ]  
  Показывает синтаксис параметров программы `sqlps`.  
   
 ## <a name="remarks"></a>Remarks  
- Служебная программа `sqlps` запускает среду PowerShell (PowerShell. exe) и загружает модуль PowerShell [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Модуль, также именуемый `sqlps`, загружает и регистрирует эти [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] оснастки PowerShell:  
+ `sqlps` Программа запускает среду PowerShell (PowerShell. exe) и загружает модуль [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell. Модуль, также именуемый `sqlps`, загружает и регистрирует [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] следующие оснастки PowerShell:  
   
 -   Microsoft.SqlServer.Management.PSProvider.dll  
   
@@ -95,7 +96,7 @@ ms.locfileid: "72798144"
   
 -   Использовать пути поставщика служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для передвижения по иерархии объектов среды служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- По умолчанию служебная программа `sqlps` запускается с политикой выполнения скриптов, для которой задано значение " **ограничено**". Это предотвращает запуск любых скриптов PowerShell. Командлет **Set-ExecutionPolicy** обеспечивает возможность запуска как подписанных, так и любых других скриптов. Запускать следует только скрипты из надежных источников, а также рекомендуется защитить все входные и выходные файлы соответствующими разрешениями NTFS. Дополнительные сведения о включении скриптов PowerShell см. в разделе [Запуск скриптов Windows PowerShell](https://www.tech-recipes.com/rx/2513/powershell_enable_script_support/).  
+ По умолчанию `sqlps` программа запускается с политикой выполнения скриптов, для которой задано значение " **ограничено**". Это предотвращает запуск любых скриптов PowerShell. Командлет **Set-ExecutionPolicy** обеспечивает возможность запуска как подписанных, так и любых других скриптов. Запускать следует только скрипты из надежных источников, а также рекомендуется защитить все входные и выходные файлы соответствующими разрешениями NTFS. Дополнительные сведения о включении скриптов PowerShell см. в разделе [Запуск скриптов Windows PowerShell](https://www.tech-recipes.com/rx/2513/powershell_enable_script_support/).  
   
  Версия программы `sqlps` в [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] и [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] была реализована как мини-оболочка Windows PowerShell 1.0. Мини-оболочки имеют определенные ограничения, такие как запрет на загрузку пользователями других оснасток, помимо загруженных мини-оболочкой. Эти ограничения не относятся к [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] и более поздним версиям программы, где изменилось использование модуля `sqlps`.  
   
@@ -107,7 +108,7 @@ ms.locfileid: "72798144"
 sqlps -NoLogo  
 ```  
   
-### <a name="b-run-a-sql-server-powershell-script-from-the-command-prompt"></a>б. Запуск скрипта SQL Server PowerShell из командной строки
+### <a name="b-run-a-sql-server-powershell-script-from-the-command-prompt"></a>Б. Запуск скрипта SQL Server PowerShell из командной строки
   
 ```cmd
 sqlps -Command "&{.\MyFolder.MyScript.ps1}"  
@@ -119,6 +120,6 @@ sqlps -Command "&{.\MyFolder.MyScript.ps1}"
 sqlps -NoExit -Command "&{.\MyFolder.MyScript.ps1}"  
 ```  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
  [Включение или отключение сетевого протокола сервера](../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)   
  [SQL Server PowerShell](../powershell/sql-server-powershell.md)  

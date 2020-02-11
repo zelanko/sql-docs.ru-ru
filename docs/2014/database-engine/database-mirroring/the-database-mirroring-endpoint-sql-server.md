@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1afac17b04c968c6685e356e3bbc8101161a36b3
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797903"
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>Конечная точка зеркального отображения базы данных (SQL Server)
@@ -47,7 +47,7 @@ ms.locfileid: "72797903"
 > [!IMPORTANT]  
 >  Если компьютер, на котором запущен [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , оснащен брандмауэром, конфигурация брандмауэра должна разрешать установку как входящих, так и исходящих соединений для порта, указанного в конечной точке.  
   
- Для зеркального отображения базы данных и [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]проверка подлинности и шифрование настраиваются в конечной точке. Дополнительные сведения см. в разделе [Безопасность транспорта для зеркального отображения базы &#40;данных&#41;и группы доступности AlwaysOn SQL Server](transport-security-database-mirroring-always-on-availability.md).  
+ Для зеркального отображения базы данных и [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]проверка подлинности и шифрование настраиваются в конечной точке. Дополнительные сведения см. в разделе [Безопасность транспорта для зеркального отображения базы данных и группы доступности AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md).  
   
 > [!IMPORTANT]  
 >  Не изменяйте конфигурацию используемой конечной точки зеркального отображения базы данных. Экземпляры серверов используют конечные точки друг друга, чтобы узнать состояние других систем. Если конфигурация конечной точки изменена, может быть выполнен ее перезапуск, который может быть причиной возникновения ошибки на других экземплярах сервера. Это особенно важно в режиме автоматического перехода на другой ресурс, когда изменение конфигурации конечной точки участника может привести к переходу на другой ресурс.  
@@ -58,7 +58,7 @@ ms.locfileid: "72797903"
   
 -   Если все экземпляры сервера выполняются с учетной записью службы домена, для конечных точек зеркального отображения базы данных вы можете использовать проверку подлинности Windows. Если все экземпляры сервера запущены под одной и той же учетной записью домена, правильные имена входа автоматически существуют в обеих базах данных **master** . Это упрощает настройку безопасности базы данных доступности и рекомендуется.  
   
-     Если какие-либо экземпляры сервера, на которых размещаются реплики доступности для группы доступности, выполняются с разными учетными записями, имя входа для каждой учетной записи необходимо создать в базе данных **master** другого экземпляра сервера. Затем этому имени пользователя нужно предоставить разрешения CONNECT для подключения к конечной точке зеркального отображения базы данных этого экземпляра сервера. Для получения дополнительных сведений [Настройте учетные записи входа для зеркального отображения базы &#40;данных&#41;или SQL Server группы доступности AlwaysOn](set-up-login-accounts-database-mirroring-always-on-availability.md).  
+     Если какие-либо экземпляры сервера, на которых размещаются реплики доступности для группы доступности, выполняются с разными учетными записями, имя входа для каждой учетной записи необходимо создать в базе данных **master** другого экземпляра сервера. Затем этому имени пользователя нужно предоставить разрешения CONNECT для подключения к конечной точке зеркального отображения базы данных этого экземпляра сервера. Для получения дополнительных сведений [Настройте учетные записи входа для зеркального отображения базы данных или группы доступности AlwaysOn &#40;SQL Server&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md).  
   
      Если для экземпляров сервера используется проверка подлинности Windows, вы можете создать конечные точки зеркального отображения базы данных с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)], PowerShell или мастера создания группы доступности.  
   
@@ -67,34 +67,34 @@ ms.locfileid: "72797903"
   
 -   Если какой-либо экземпляр сервера выполняется с встроенной учетной записью, например учетной записью локальной системы, локальной службы, сетевой службы или не входящей в домен учетной записью, то для проверки подлинности конечных точек следует использовать сертификаты. Если для конечных точек зеркального отображения баз данных используются сертификаты, системный администратор должен настроить каждый экземпляр сервера для использования сертификатов на входящих и исходящих соединениях.  
   
-     Автоматического способа настройки защиты зеркального отображения баз данных с помощью сертификатов не существует. Потребуется использовать инструкцию CREATE ENDPOINT языка [!INCLUDE[tsql](../../includes/tsql-md.md)] или командлет PowerShell `New-SqlHadrEndpoint`. Дополнительные сведения см. в статье [CREATE ENDPOINT (Transact-SQL)](/sql/t-sql/statements/create-endpoint-transact-sql). Сведения о включении проверки подлинности на основе сертификата на экземпляре сервера см. в разделе [использование &#40;сертификатов для конечной&#41;точки зеркального отображения базы данных Transact-SQL](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
+     Автоматического способа настройки защиты зеркального отображения баз данных с помощью сертификатов не существует. Потребуется использовать инструкцию CREATE ENDPOINT языка [!INCLUDE[tsql](../../includes/tsql-md.md)] или командлет PowerShell `New-SqlHadrEndpoint`. Дополнительные сведения см. в статье [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql). Сведения о включении проверки подлинности на основе сертификата на экземпляре сервера см. в разделе [Использование сертификатов для конечной точки зеркального отображения базы данных &#40;&#41;Transact-SQL ](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
   
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
 
 ### <a name="to-configure-a-database-mirroring-endpoint"></a>Настройка конечной точки зеркального отображения базы данных
   
--   [Создание конечной точки зеркального отображения базы данных с проверкой подлинности Windows (Transact-SQL)](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
+-   [Создание конечной точки зеркального отображения базы данных для проверки подлинности Windows &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
--   [Использование сертификатов для конечной точки зеркального отображения базы данных (Transact-SQL)](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
+-   [Использование сертификатов для конечной точки зеркального отображения базы данных &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
-    -   [Включение использования сертификатов для исходящих соединений в конечной точке зеркального отображения базы данных (Transact-SQL)](database-mirroring-use-certificates-for-outbound-connections.md)  
+    -   [Разрешить использование сертификатов для исходящих соединений в конечной точке зеркального отображения базы данных &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md)  
   
-    -   [Включение использования сертификатов для входящих соединений в конечной точке зеркального отображения базы данных (Transact-SQL)](database-mirroring-use-certificates-for-inbound-connections.md)  
+    -   [Разрешить использование сертификатов для входящих соединений в конечной точке зеркального отображения базы данных &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-inbound-connections.md)  
   
--   [Указание сетевого адреса сервера (зеркальное отображение базы данных)](specify-a-server-network-address-database-mirroring.md)  
+-   [Укажите сетевой адрес сервера &#40;зеркальное отображение базы данных&#41;](specify-a-server-network-address-database-mirroring.md)  
   
--   [Указание URL-адреса конечной точки при добавлении или изменении реплики доступности (SQL Server)](../availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [Укажите URL-адрес конечной точки при добавлении или изменении &#40;реплики доступности SQL Server&#41;](../availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
--   [Использование мастера групп доступности (среда SQL Server Management Studio)](../../ssms/sql-server-management-studio-ssms.md)  
+-   [Использование мастера групп доступности &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)  
   
  **Просмотр сведений о конечной точке зеркального отображения базы данных**  
   
--   [sys.database_mirroring_endpoints (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)  
+-   [sys. database_mirroring_endpoints &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)  
   
   
-## <a name="see-also"></a>См. также статью  
- [Безопасность транспорта для зеркального отображения базы данных &#40;и&#41; группы доступности AlwaysOn SQL Server](transport-security-database-mirroring-always-on-availability.md)   
- [Диагностика конфигурации зеркального отображения базы данных (SQL Server)](troubleshoot-database-mirroring-configuration-sql-server.md)   
- [sys. dm_hadr_availability_replica_states &#40;  Transact-&#41; SQL](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)  
- [sys. dm_db_mirroring_connections &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)  
+## <a name="see-also"></a>См. также:  
+ [Безопасность транспорта для зеркального отображения базы данных и группы доступности AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
+ [Устранение неполадок конфигурации зеркального отображения базы данных &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
+ [sys. dm_hadr_availability_replica_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)   
+ [sys. dm_db_mirroring_connections &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)  

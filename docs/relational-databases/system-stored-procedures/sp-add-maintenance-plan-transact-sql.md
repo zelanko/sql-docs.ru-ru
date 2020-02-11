@@ -18,13 +18,13 @@ ms.assetid: 01ab1834-6260-47cb-a1b7-20722217b062
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: aa33e418b81cb2f77a39f20d36bba7a25caffb4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68104586"
 ---
-# <a name="spaddmaintenanceplan-transact-sql"></a>sp_add_maintenance_plan (Transact-SQL)
+# <a name="sp_add_maintenance_plan-transact-sql"></a>sp_add_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Добавляет план обслуживания и возвращает его идентификатор.  
@@ -45,19 +45,19 @@ sp_add_maintenance_plan [ @plan_name = ] 'plan_name' ,
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @plan_name = ] 'plan_name'` Указывает имя добавляемого плана обслуживания. *plan_name* — **varchar(128)** .  
+`[ @plan_name = ] 'plan_name'`Указывает имя добавляемого плана обслуживания. *plan_name* имеет тип **varchar (128)**.  
   
- **@plan_id = "** *plan_id* **"**  
- Указывает идентификатор плана обслуживания. *plan_id* — **uniqueidentifier**.  
+ ** ** @plan_id = '** plan_id **'**  
+ Указывает идентификатор плана обслуживания. *plan_id* имеет тип **uniqueidentifier**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или 1 (неуспешное завершение)  
+ 0 (успех) или 1 (сбой).  
   
-## <a name="remarks"></a>Примечания  
- **sp_add_maintenance_plan** должна запускаться из **msdb** базы данных и создает план обслуживания новый, но пустой. Чтобы добавить один или несколько баз данных и связывать их с заданием или заданиями, выполнение **sp_add_maintenance_plan_db** и **sp_add_maintenance_plan_job**.  
+## <a name="remarks"></a>Remarks  
+ **sp_add_maintenance_plan** необходимо запустить из базы данных **msdb** и создать новый, но пустой план обслуживания. Чтобы добавить одну или несколько баз данных и связать их с заданием или заданиями, выполните **sp_add_maintenance_plan_db** и **sp_add_maintenance_plan_job**.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнять процедуру **sp_add_maintenance_plan**.  
+ Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_add_maintenance_plan**.  
   
 ## <a name="examples"></a>Примеры  
  Создание плана обслуживания с названием Myplan.  
@@ -75,7 +75,7 @@ GO
 'The id for the maintenance plan "Myplan" is:' FAD6F2AB-3571-11D3-9D4A-00C04FB925FC  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Планы обслуживания](../../relational-databases/maintenance-plans/maintenance-plans.md)   
  [Хранимые процедуры плана обслуживания базы данных &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
   

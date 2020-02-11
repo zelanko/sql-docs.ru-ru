@@ -16,13 +16,13 @@ ms.assetid: 4678a2b9-9a5f-4193-a20d-2e11fc896c3a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 85e75e1ce52866eb04b3c410f021db8de392239a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68122330"
 ---
-# <a name="sphelpmergearticleconflicts-transact-sql"></a>sp_helpmergearticleconflicts (Transact-SQL)
+# <a name="sp_helpmergearticleconflicts-transact-sql"></a>sp_helpmergearticleconflicts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Возвращает конфликтные статьи публикации. Эта хранимая процедура выполняется на издателе в базе данных публикации или на подписчике в базе данных подписки слиянием.  
@@ -39,35 +39,35 @@ sp_helpmergearticleconflicts [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` — Имя создаваемой публикации слиянием. *публикации* — **sysname**, значение по умолчанию **%** , который возвращает все статьи в базе данных, содержащие конфликты.  
+`[ @publication = ] 'publication'`Имя публикации слиянием. Аргумент *publication* имеет тип **sysname**и значение по **%** умолчанию, которое возвращает все статьи в базе данных с конфликтами.  
   
-`[ @publisher = ] 'publisher'` — Имя издателя. *издателя* — **sysname**, значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'`Имя издателя. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @publisher_db = ] 'publisher_db'` — Имя базы данных издателя. *publisher_db* — **sysname**, значение по умолчанию NULL.  
+`[ @publisher_db = ] 'publisher_db'`Имя базы данных издателя. Аргумент *publisher_db* имеет тип **sysname**и значение по умолчанию NULL.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|**Статья**|**sysname**|Имя статьи.|  
-|**source_owner**|**sysname**|Владелец исходного объекта.|  
-|**source_object**|**nvarchar(386)**|Имя исходного объекта.|  
-|**conflict_table**|**nvarchar(258)**|Имя таблицы, хранящей конфликты при операциях вставки или обновления.|  
-|**guidcolname**|**sysname**|Имя RowGuidCol для исходного объекта.|  
+|**рассмотрен**|**имеет sysname**|Имя статьи.|  
+|**source_owner**|**имеет sysname**|Владелец исходного объекта.|  
+|**source_object**|**nvarchar (386)**|Имя исходного объекта.|  
+|**conflict_table**|**nvarchar (258)**|Имя таблицы, хранящей конфликты при операциях вставки или обновления.|  
+|**guidcolname**|**имеет sysname**|Имя RowGuidCol для исходного объекта.|  
 |**centralized_conflicts**|**int**|Указывает, хранятся ли конфликтные записи на заданном издателе.|  
   
- Если аргументу статьи только конфликты удаления и нет **conflict_table** rows, имя **conflict_table** в результирующем наборе содержит значение NULL.  
+ Если статья содержит только конфликты удаления и **conflict_table** строк, то имя **conflict_table** в результирующем наборе будет иметь значение null.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  **sp_helpmergearticleconflicts** используется в репликации слиянием.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера и **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_helpmergearticleconflicts**.  
+ Только члены предопределенной роли сервера **sysadmin** и **db_owner** предопределенной роли базы данных могут выполнять **sp_helpmergearticleconflicts**.  
   
-## <a name="see-also"></a>См. также  
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 39ee8bfc079445e177aa9b175019ae385b9f9f36
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797657"
 ---
 # <a name="join-a-secondary-replica-to-an-availability-group-sql-server"></a>Присоединение вторичной реплики к группе доступности (SQL Server)
@@ -30,17 +30,17 @@ ms.locfileid: "72797657"
   
      [Предварительные требования](#Prerequisites)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
--   **Подготовка базы данных-получателя с помощью различных средств.**  
+-   **Подготовка базы данных-получателя с помощью:**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Среда SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
      [PowerShell](#PowerShellProcedure)  
   
--   **Дополнительные действия:** [Настройте базы данных-получатели](#FollowUp)  
+-   **Дальнейшие действия.** [Настройка баз данных-получателей](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
@@ -55,9 +55,9 @@ ms.locfileid: "72797657"
 > [!IMPORTANT]  
 >  Если какое-либо из предварительных условий не выполняется, происходит сбой операции соединения. После неудачной попытки соединения может быть необходимо подключиться к экземпляру сервера, на котором содержится первичная реплика, чтобы удалить и повторно добавить вторичную реплику, прежде чем можно будет выполнить соединение с группой доступности. Дополнительные сведения см. в разделах [Удаление вторичной реплики из группы доступности (SQL Server)](remove-a-secondary-replica-from-an-availability-group-sql-server.md) и [Добавление вторичной реплики к группе доступности (SQL Server)](add-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER AVAILABILITY GROUP для группы доступности, разрешение CONTROL AVAILABILITY GROUP, разрешение ALTER ANY AVAILABILITY GROUP или разрешение CONTROL SERVER.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
@@ -86,7 +86,7 @@ ms.locfileid: "72797657"
   
      где *имя_группы* — это имя группы доступности.  
   
-     В следующем примере объединяются дополнительная реплика и группа доступности `MyAG` .  
+     В следующем примере объединяются дополнительная реплика и группа доступности `MyAG`.  
   
     ```sql
     ALTER AVAILABILITY GROUP MyAG JOIN;  
@@ -95,7 +95,7 @@ ms.locfileid: "72797657"
     > [!NOTE]  
     >  Пример использования инструкции [!INCLUDE[tsql](../../../includes/tsql-md.md)] в контексте см. в статье [Создание группы доступности (Transact-SQL)](create-an-availability-group-transact-sql.md).  
   
-##  <a name="PowerShellProcedure"></a> Использование PowerShell  
+##  <a name="PowerShellProcedure"></a>Использование PowerShell  
  **Присоединение реплики доступности к группе доступности**  
   
  В поставщике [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell:  
@@ -111,20 +111,20 @@ ms.locfileid: "72797657"
     ```  
   
     > [!NOTE]  
-    >  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом `Get-Help` в среде [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Дополнительные сведения см. в статье [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом `Get-Help` в среде [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Настройка и использование поставщика SQL Server PowerShell**  
   
 -   [SQL Server PowerShell, поставщик](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. Настройка баз данных-получателей  
+##  <a name="FollowUp"></a>Дальнейшие действия. Настройка баз данных-получателей  
  Для каждой базы данных в группе доступности необходимо настроить базу данных-получатель на экземпляре сервера, где находится дополнительная реплика. Настроить базы данных-получатели до или после присоединения дополнительной реплики к группе доступности можно следующим образом.  
   
-1.  Восстановите последние базы данных и резервные копии журналов каждой базы данных-источника на экземпляр сервера, где находится вторичная реплика, используя инструкцию RESTORE WITH NORECOVERY для каждой операции восстановления. Дополнительные сведения см. в статье [Подготовка базы данных-получателя для присоединения к группе доступности вручную (SQL Server)](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
+1.  Восстановите последние базы данных и резервные копии журналов каждой базы данных-источника на экземпляр сервера, где находится вторичная реплика, используя инструкцию RESTORE WITH NORECOVERY для каждой операции восстановления. Дополнительные сведения см. в разделе [Подготовка базы данных-получателя для присоединения к группе доступности вручную (SQL Server)](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
 2.  Присоедините каждую базу данных-получатель к группе доступности. Дополнительные сведения см. в статье [Присоединение базы данных-получателя к группе доступности (SQL Server)](join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
-## <a name="see-also"></a>См. также статью  
- [Создание и настройка групп доступности (SQL Server)](creation-and-configuration-of-availability-groups-sql-server.md)   
- [Общие сведения о &#40;группы доступности AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)   
- [Устранение неполадок &#40;SQL Server&#41;конфигурации группы доступности AlwaysOn](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
+## <a name="see-also"></a>См. также:  
+ [Создание и Настройка групп доступности &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
+ [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Устранение неполадок &#40;конфигурации группы доступности AlwaysOn SQL Server&#41;Deleted](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  

@@ -16,13 +16,13 @@ ms.assetid: d3fe79c5-31ef-4565-bf38-b476b5fb16f7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b636eb929d74aec7b0f3555ce511372f6592c5b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68099142"
 ---
-# <a name="spchangeqreaderagent-transact-sql"></a>sp_changeqreader_agent (Transact-SQL)
+# <a name="sp_changeqreader_agent-transact-sql"></a>sp_changeqreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Изменяет свойства безопасности агента чтения очереди. Эта хранимая процедура выполняется на распространителе в базе данных распространителя или на издателе в базе данных публикации.  
@@ -39,27 +39,27 @@ sp_changeqreader_agent [ [ @job_login = ] 'job_login' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @job_login = ] 'job_login'` Имя входа для [!INCLUDE[msCoName](../../includes/msconame-md.md)] учетной записи Windows, под которой запускается агент. *job_login* — **nvarchar(257)** , значение по умолчанию NULL.  
+`[ @job_login = ] 'job_login'`Имя входа для учетной [!INCLUDE[msCoName](../../includes/msconame-md.md)] записи Windows, под которой запускается агент. *job_login* имеет тип **nvarchar (257)** и значение по умолчанию NULL.  
   
-`[ @job_password = ] 'job_password'` — Пароль для учетной записи Windows, под которой запускается агент. *job_password* — **sysname**, значение по умолчанию NULL.  
+`[ @job_password = ] 'job_password'`Пароль для учетной записи Windows, под которой запускается агент. Аргумент *job_password* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @frompublisher = ] frompublisher` —, Выполняется ли процедура на издателе. *frompublisher* имеет тип bit и значение по умолчанию **0**. Значение **1** означает, что процедура выполняется из издателя в базе данных публикации.  
+`[ @frompublisher = ] frompublisher`Значение, если процедура выполняется на издателе. *фромпублишер* имеет бит и значение по умолчанию **0**. Значение **1** означает, что процедура выполняется из издателя в базе данных публикации.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  **sp_changeqreader_agent** используется в репликации транзакций.  
   
- **sp_changeqreader_agent** используется для изменения учетной записи Windows, под которой запускается агент чтения очереди. Можно изменить пароль существующего имени входа в систему Windows или ввести новое имя пользователя Windows и пароль.  
+ **sp_changeqreader_agent** используется для изменения учетной записи Windows, с которой запускается агент чтения очереди. Можно изменить пароль существующего имени входа в систему Windows или ввести новое имя пользователя Windows и пароль.  
   
  После изменения имени входа и пароля агента необходимо остановить и повторно запустить агент, чтобы изменения вступили в силу.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнять процедуру **sp_changeqreader_agent**.  
+ Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_changeqreader_agent**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Просмотр и изменение параметров безопасности репликации](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
- [sp_addqreader_agent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md)  
+ [sp_addqreader_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md)  
   
   

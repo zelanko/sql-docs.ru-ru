@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 088b0991d3549cfa7d12a0d0365d40d3ededbfba
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70911164"
 ---
 # <a name="smo-programming---getting-started-in-visual-c-net"></a>Программирование SMO. Приступая к работе с Visual C# .NET
@@ -26,9 +26,9 @@ ms.locfileid: "70911164"
 ## <a name="references-and-imports"></a>Ссылки и импорт  
  После запуска проекта [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] необходимо добавить ссылки на сборки объектов (SMO). Затем нужно импортировать требуемые пространства имен, чтобы программа могла распознать типы SMO.  
   
- В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]сборки объектов SMO находятся в папке C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\.  
+ В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]сборки объектов SMO находятся в папке C:\PROGRAM Files\Microsoft SQL Server\130\SDK\Assemblies\.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание проекта Visual C&#35; SMO в Visual Studio .NET](../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)  
   
   

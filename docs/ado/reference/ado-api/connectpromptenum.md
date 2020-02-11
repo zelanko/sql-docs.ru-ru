@@ -1,5 +1,5 @@
 ---
-title: ConnectPromptEnum | Документация Майкрософт
+title: Коннектпромптенум | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,31 +16,31 @@ ms.assetid: 21026e24-62b7-4cc9-8aef-62c1fc6cba75
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: afd5d9ca0de6b8d2ffba75f862e6ca0afb594848
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919443"
 ---
 # <a name="connectpromptenum"></a>ConnectPromptEnum
-Указывает, следует ли отображать диалоговое окно запрашивать отсутствуют параметры, при открытии соединения с источником данных.  
+Указывает, должно ли отображаться диалоговое окно для запроса отсутствующих параметров при открытии соединения с источником данных.  
   
-|Константа|Значение|Описание|  
+|Постоянно|Значение|Description|  
 |--------------|-----------|-----------------|  
-|**adPromptAlways**|1|Запросы всегда.|  
-|**adPromptComplete**|2|Запрос, если требуются дополнительные сведения.|  
-|**adPromptCompleteRequired**|3|Запрашивает, если больше данных, но необязательные параметры не допускаются.|  
-|**adPromptNever**|4|Никогда не запрашивает.|  
+|**адпромпталвайс**|1|Всегда запрашивает.|  
+|**адпромпткомплете**|2|Запрашивает, требуется ли дополнительная информация.|  
+|**адпромпткомплетерекуиред**|3|Запрашивает дополнительные сведения, но необязательные параметры не допускаются.|  
+|**адпромптневер**|4|Никогда не запрашивается.|  
   
-## <a name="adowfc-equivalent"></a>Эквивалент ADO и WFC  
- Пакет: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>Эквивалент ADO/WFC  
+ Пакет: **com. MS. WFC. Data**  
   
-|Константа|  
+|Постоянно|  
 |--------------|  
-|AdoEnums.ConnectPrompt.ALWAYS|  
-|AdoEnums.ConnectPrompt.COMPLETE|  
-|AdoEnums.ConnectPrompt.COMPLETEREQUIRED|  
-|AdoEnums.ConnectPrompt.NEVER|  
+|Адоенумс. Коннектпромпт. ALWAYS|  
+|Адоенумс. Коннектпромпт. COMPLETE|  
+|Адоенумс. Коннектпромпт. КОМПЛЕТЕРЕКУИРЕД|  
+|Адоенумс. Коннектпромпт. NEVER|  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  [Свойство Prompt (динамическое) (ADO)](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)

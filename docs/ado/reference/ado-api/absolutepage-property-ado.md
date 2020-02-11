@@ -1,5 +1,5 @@
 ---
-title: Свойство AbsolutePage (ADO) | Документация Майкрософт
+title: Свойство примеры absolutepage (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,37 +16,37 @@ ms.assetid: ddb58a35-ec3a-423c-a504-3c65e62c23d4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 12b2e6c6f12fc06cb223551b55cb7f9a38df9ac3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921835"
 ---
 # <a name="absolutepage-property-ado"></a>Свойство AbsolutePage (ADO)
-Указывает, на какой странице находится текущей записи.  
+Указывает, на какой странице находится текущая запись.  
   
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
- 32-разрядного кода, задает или возвращает **Long** значение от 1 до количество страниц в [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта ([PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)), или возвращает одно из [PositionEnum ](../../../ado/reference/ado-api/positionenum.md) значения.  
+ Для 32-разрядного кода задает или возвращает значение **типа Long** от 1 до числа страниц в объекте [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) ([PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)) или возвращает одно из значений [поситионенум](../../../ado/reference/ado-api/positionenum.md) .  
   
- Для 64-разрядного кода используйте тип данных, который предоставляет для хранения 64-разрядное значение. Например, можно использовать либо **Long** или другое значение, которое может иметь длину 64-разрядной, например DBORDINAL. Не используйте **PositionEnum** значения, поскольку они ограничены длиной в 32-разрядной.  
+ Для 64-разрядного кода используйте тип данных, который обеспечивает хранение 64-разрядного значения. Например, можно использовать либо **длинное** , либо другое значение, которое может быть 64-разрядной длиной, например дбординал. Не используйте значения **поситионенум** , так как их длина ограничена 32-разрядной.  
   
-## <a name="remarks"></a>Примечания  
- Это свойство может использоваться для идентификации номер страницы, на котором расположена текущая запись. Она использует [PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) свойство для логического разделения строк общее число **записей** объект в последовательности страниц, каждая из которых имеет количество записей равно **PageSize** (за исключением последней страницы, которые могут иметь меньше записей). Поставщик должен поддерживать соответствующие функциональные возможности для этого свойства доступен.  
+## <a name="remarks"></a>Remarks  
+ Это свойство можно использовать для указания номера страницы, на которой находится текущая запись. Он использует свойство [pageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) , чтобы логически разделить общее число наборов строк объекта **Recordset** на ряд страниц, каждый из которых имеет число записей, равное **pageSize** (за исключением последней страницы, в которой может быть меньше записей). Чтобы это свойство было доступно, поставщик должен поддерживать соответствующие функциональные возможности.  
   
--   При получении или задании **примеры AbsolutePage** свойство, ADO использует [примеры AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) свойство и [PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) свойство друг с другом, как показано ниже:  
+-   При получении или установке свойства **примеры ABSOLUTEPAGE** ADO использует свойство [примеры AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) и свойство [pageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) следующим образом:  
   
--   Чтобы получить **примеры AbsolutePage**, ADO сначала извлекает **примеры AbsolutePosition**, а затем делит его с **PageSize**.  
+-   Чтобы получить **примеры absolutepage**, ADO сначала извлекает **примеры AbsolutePosition**, а затем делит его на **pageSize**.  
   
--   Чтобы задать **примеры AbsolutePage**, перемещает ADO **примеры AbsolutePosition** следующим образом: она умножает **PageSize** по новому **примеры AbsolutePage** значение, а затем добавляет 1 к значению. В результате текущую позицию в **записей** после успешной установки **примеры AbsolutePage** является первой записи на данной странице.  
+-   Чтобы задать **примеры absolutepage**, ADO перемещает **примеры AbsolutePosition** следующим образом: он умножает значение **pageSize** на новое, а затем добавляет 1 **к значению** . В результате текущим положением в **наборе записей** после успешной установки **примеры absolutepage** является первая запись на этой странице.  
   
- Как и **примеры AbsolutePosition** свойство, **примеры AbsolutePage** отсчитывается от 1, и равняется 1 при первой записи в текущей записи **записей**. Установите это свойство, чтобы перейти к первой записи, определенной страницы. Получить общее число страниц из **PageCount** свойство.  
+ Как и свойство **примеры AbsolutePosition** , **примеры absolutepage** является 1 и равно 1, если текущая запись является первой записью в **наборе записей**. Задайте это свойство, чтобы перейти к первой записи определенной страницы. Получение общего числа страниц из свойства **PageCount** .  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
- [Примеры AbsolutePage, PageCount и PageSize свойства пример (Visual Basic)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vb.md)   
- [Примеры AbsolutePage, PageCount и PageSize пример свойства (Visual C++)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vc.md)   
- [Свойство AbsolutePosition (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   
+## <a name="see-also"></a>См. также:  
+ [Примеры свойств примеры absolutepage, PageCount и PageSize (Visual Basic)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vb.md)   
+ [Пример свойств примеры absolutepage, PageCount и PageSize (Visual c++)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vc.md)   
+ [Свойство примеры AbsolutePosition (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   
  [Свойство PageCount (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)   
  [Свойство PageSize (ADO)](../../../ado/reference/ado-api/pagesize-property-ado.md)

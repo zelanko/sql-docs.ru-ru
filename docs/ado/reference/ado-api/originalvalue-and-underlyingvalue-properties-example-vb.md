@@ -1,5 +1,5 @@
 ---
-title: Примеры OriginalValue и Underlyingvalue свойства (Visual Basic) | Документация Майкрософт
+title: Примеры свойств OriginalValue и UnderlyingValue (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 1750804b-d7ef-47d6-8d73-1f51fa1cbe4a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7d424fb1033ff30044dd34134ac31991d8561c40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917803"
 ---
-# <a name="originalvalue-and-underlyingvalue-properties-example-vb"></a>Примеры OriginalValue и Underlyingvalue свойства (Visual Basic)
-В этом примере показано [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) и [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) свойства, отображая сообщение, если запись основного данных был изменен в течение [записей](../../../ado/reference/ado-api/recordset-object-ado.md) пакетное обновление.  
+# <a name="originalvalue-and-underlyingvalue-properties-example-vb"></a>Примеры свойств OriginalValue и UnderlyingValue (Visual Basic)
+Этот пример демонстрирует свойства [originalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) и [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) , отображая сообщение, если базовые данные записи изменились во время пакетного обновления [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) .  
   
 ```  
 'BeginOriginalValueVB  
@@ -119,7 +119,7 @@ End Sub
 'EndOriginalValueVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство OriginalValue (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Свойство UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)

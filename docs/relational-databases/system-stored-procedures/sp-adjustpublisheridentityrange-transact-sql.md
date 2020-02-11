@@ -16,13 +16,13 @@ ms.assetid: 64f111fd-fb7d-4459-93f7-65f0f8dd7efe
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: eb9fdd324ba6275cd20f99a32f0a82aa112626b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68117882"
 ---
-# <a name="spadjustpublisheridentityrange-transact-sql"></a>sp_adjustpublisheridentityrange (Transact-SQL)
+# <a name="sp_adjustpublisheridentityrange-transact-sql"></a>sp_adjustpublisheridentityrange (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Настраивает диапазон идентификаторов для публикации и перераспределяет новые диапазоны на основе порогового значения публикации. Эта хранимая процедура выполняется на издателе в базе данных публикации.  
@@ -39,27 +39,27 @@ sp_adjustpublisheridentityrange [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` — Имя публикации, в которой размещается новые диапазоны идентификаторов. *Публикация* — **sysname**, значение по умолчанию NULL.  
+`[ @publication = ] 'publication'`Имя публикации, в которой перераспределяются новые диапазоны идентификаторов. Аргумент *publication* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @table_name = ] 'table_name'` — Имя таблицы, в которой размещается новые диапазоны идентификаторов. *TABLE_NAME* — **sysname**, значение по умолчанию NULL.  
+`[ @table_name = ] 'table_name'`Имя таблицы, в которой перераспределяются новые диапазоны идентификаторов. Аргумент *table_name* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @table_owner = ] 'table_owner'` Является владельцем таблицы на издателе. *TABLE_OWNER* — **sysname**, значение по умолчанию NULL. Если *table_owner* не указан, используется имя текущего пользователя.  
+`[ @table_owner = ] 'table_owner'`Владелец таблицы на издателе. Аргумент *table_owner* имеет тип **sysname**и значение по умолчанию NULL. Если параметр *table_owner* не указан, используется имя текущего пользователя.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  **sp_adjustpublisheridentityrange** используется во всех типах репликации.  
   
- Агент распространителя или агент слияния являются ответственными за автоматическое изменение границ диапазона идентификаторов публикаций, для которых включено автоматическое определение диапазона на основе пороговых значений. Тем не менее, если для какой-либо причине агент распространителя или агент слияния не был выполнен в течение заданного времени, а ресурс диапазона идентификаторов были использованы во многом на пороговую точку, пользователи могут вызывать **sp_adjustpublisheridentityrange** Чтобы выделить новый диапазон значений для издателя.  
+ Агент распространителя или агент слияния являются ответственными за автоматическое изменение границ диапазона идентификаторов публикаций, для которых включено автоматическое определение диапазона на основе пороговых значений. Однако, если по какой-либо причине агент распространения или агент слияния не выполнялись в течение определенного периода времени, а ресурс диапазона идентификаторов интенсивно потребляет точку порогового значения, пользователи могут вызвать **sp_adjustpublisheridentityrange** , чтобы выделить новый диапазон значений для издателя.  
   
- При выполнении **sp_adjustpublisheridentityrange**, либо *публикации* или *table_name* должен быть указан. Если указаны оба или ни одного, возвращается ошибка.  
+ При выполнении **sp_adjustpublisheridentityrange**необходимо указать либо *публикацию* , либо *table_name* . Если указаны оба или ни одного, возвращается ошибка.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_adjustpublisheridentityrange**.  
+ Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_adjustpublisheridentityrange**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Репликация столбцов идентификаторов](../../relational-databases/replication/publish/replicate-identity-columns.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

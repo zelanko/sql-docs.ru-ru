@@ -11,30 +11,30 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4106de497a43404cb44606259d53beb1ed8f5a58
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797450"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>Настройка параметров свойства HealthCheckTimeout
   Параметр HealthCheckTimeout используется для задания временного интервала (в миллисекундах) ожидания библиотекой ресурсов SQL Server данных, возвращаемых хранимой процедурой [sp_server_diagnostics](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) , до появления сообщения о том, что экземпляр отказоустойчивого кластера AlwaysOn SQL Server (FCI) не отвечает. Изменения, внесенные в параметры времени ожидания, вступают в силу немедленно и не требуют перезапуска ресурса SQL Server.  
   
--   **Before you begin:**  [Limitations and Restrictions](#Limits), [Security](#Security)  
+-   **Перед началом:**  [ограничения](#Limits), [Безопасность](#Security)  
   
--   **To Configure the HeathCheckTimeout setting, using:**  [PowerShell](#PowerShellProcedure), [Failover Cluster Manager](#WSFC), [Transact-SQL](#TsqlProcedure)  
+-   **Настройка параметра HealthCheckTimeout с помощью:**  [PowerShell](#PowerShellProcedure), [Диспетчер отказоустойчивости кластеров](#WSFC), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Limits"></a> ограничения  
+###  <a name="Limits"></a> Ограничения  
  Значение по умолчанию для этого свойства составляет 60 000 миллисекунд (60 секунд). Минимальное значение равно 15 000 миллисекундам (15 секундам).  
   
 ###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Требует разрешения ALTER SETTINGS и VIEW SERVER STATE.  
   
-##  <a name="PowerShellProcedure"></a> Использование PowerShell  
+##  <a name="PowerShellProcedure"></a>Использование PowerShell  
   
 ### <a name="to-configure-healthchecktimeout-settings"></a>Настройка параметров HealthCheckTimeout  
   
@@ -42,7 +42,7 @@ ms.locfileid: "72797450"
   
 2.  Импортируйте модуль `FailoverClusters` для включения командлетов кластера.  
   
-3.  С помощью командлета `Get-ClusterResource` найдите ресурс [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], а затем используйте командлет `Set-ClusterParameter`, чтобы задать свойство **HealthCheckTimeout** для экземпляра отказоустойчивого кластера.  
+3.  Используйте `Get-ClusterResource` командлет, чтобы найти [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ресурс, а затем используйте `Set-ClusterParameter` командлет, чтобы задать свойство **HealthCheckTimeout** для экземпляра отказоустойчивого кластера.  
   
 > [!TIP]  
 >  Каждый раз при открытии нового окна Powershell нужно импортировать модуль `FailoverClusters`.  
@@ -58,14 +58,14 @@ Get-ClusterResource $fci | Set-ClusterParameter HealthCheckTimeout 60000
   
 ### <a name="related-content-powershell"></a>См. также (PowerShell)  
   
--   [Кластеризация и высокая доступность](https://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (блог группы отказоустойчивой кластеризации и балансировки сетевой нагрузки)  
+-   [Кластеризация и высокая доступность](https://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (блог группы по отказоустойчивой кластеризации и балансировки сетевой нагрузки)  
   
--   [Приступая к работе с Windows PowerShell в отказоустойчивом кластере](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
+-   [начало работы с Windows PowerShell в отказоустойчивом кластере](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   
--   [Команды ресурса кластера и соответствующие командлеты Windows PowerShell](https://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
+-   [Команды ресурсов кластера и эквивалентные командлеты Windows PowerShell](https://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
   
-##  <a name="WSFC"></a> Использование оснастки «Диспетчер отказоустойчивости кластеров»  
- **Для настройки параметров HealthCheckTimeout**  
+##  <a name="WSFC"></a>Использование оснастки «диспетчер отказоустойчивости кластеров»  
+ **Настройка параметра HealthCheckTimeout**  
   
 1.  Откройте оснастку «Диспетчер отказоустойчивости кластеров»  
   
@@ -76,9 +76,9 @@ Get-ClusterResource $fci | Set-ClusterParameter HealthCheckTimeout 60000
 4.  Перейдите на вкладку **Свойства** , введите желаемое значение свойства **HealthCheckTimeout** и нажмите кнопку **ОК** , чтобы применить изменение.  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
- С помощью инструкции [ALTER SERVER CONFIGURATION](/sql/t-sql/statements/alter-server-configuration-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] вы можете задать значение свойства HealthCheckTimeOut.  
+ С помощью инструкции [ALTER Server Configuration](/sql/t-sql/statements/alter-server-configuration-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] можно указать значение свойства HealthCheckTimeOut.  
   
-###  <a name="TsqlExample"></a> Пример (Transact-SQL)  
+###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
  В следующем примере для параметра HealthCheckTimeout устанавливается значение, равное 15 000 миллисекунд (15 секунд).  
   
 ```sql
@@ -86,5 +86,5 @@ ALTER SERVER CONFIGURATION
 SET FAILOVER CLUSTER PROPERTY HealthCheckTimeout = 15000;  
 ```  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
  [Политика отработки отказа для экземпляров отказоустойчивого кластера](failover-policy-for-failover-cluster-instances.md)  

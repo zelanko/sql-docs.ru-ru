@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 5e609585e464cb52b996f45c7d8c57aaffcd79fe
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400935"
 ---
 # <a name="parallel-data-warehouse-components---analytics-platform-system"></a>Компоненты параллельного хранилища данных — система аналитики платформы
@@ -66,7 +66,7 @@ To learn more about Analytics Platform System, see:
 ### <a name="admin-console"></a>Административная консоль  
 Консоль администрирования — это веб-приложение, которое представляет сведения о состоянии устройства, работоспособности и производительности.  
   
-### <a name="configuration-manager"></a>Диспетчер конфигураций  
+### <a name="configuration-manager"></a>диспетчер конфигураций  
 Configuration Manager (dwconfig. exe) — это средство, которое администраторы устройств используют для настройки системы аналитики.  
   
 ### <a name="control-node-databases"></a>Управление базами данных узлов  
@@ -156,7 +156,7 @@ sqlcmd — это SQL Server программа командной строки 
 If you don't have SQL Server, you can download this as a standalone package. For more information, see [Install sqlcmd Command-Line Client &#40;SQL Server PDW&#41;](../sqlpdw/install-sqlcmd-command-line-client-sql-server-pdw.md) 
 --> 
   
-### <a name="integration-services"></a>Службы интеграции  
+### <a name="integration-services"></a>Службы Integration Services  
 Integration Services можно использовать для запроса SQL Server PDW. 
 
 <!-- MISSING LINKS
@@ -172,7 +172,7 @@ For more information, see [Connect With SQL Server Linked Server &#40;SQL Server
   
 ## <a name="business-intelligence-tools"></a>Средства бизнес-аналитики
   
-### <a name="analysis-services"></a>Analysis Services  
+### <a name="analysis-services"></a>Службы Analysis Services  
 SQL Server PDW является допустимым источником данных для Analysis Services баз данных и моделей Excel PowerPivot. С помощью поставщика OLE DB можно настроить куб Analysis Services для использования многомерной оперативной обработки (MOLAP) или хранилища реляционной оперативной аналитической обработки (ROLAP).  
   
 <!-- MISSING LINKS
@@ -200,7 +200,7 @@ For more information, see [Connect With PowerPivot for Excel &#40;SQL Server PDW
   
 ## <a name="loading-tools"></a>Загрузка средств 
   
-### <a name="integration-services"></a>Службы интеграции  
+### <a name="integration-services"></a>Службы Integration Services  
 Установите адаптеры назначения для PDW, которые позволяют использовать службы SQL Серверинтегратион для загрузки данных в SQL Server PDW.  
 
 <!-- MISSING LINKS
@@ -235,7 +235,7 @@ For more information, see [Remote Table Copy &#40;SQL Server PDW&#41;](../sqlpdw
 
 -->
   
-## <a name="monitoring"></a>Мониторинг  
+## <a name="monitoring"></a>Наблюдение  
 Система аналитики платформы имеет несколько способов мониторинга активности устройства  
   
 ### <a name="admin-console"></a>Административная консоль  

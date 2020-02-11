@@ -18,13 +18,13 @@ ms.assetid: 75a4a040-72d5-4d29-8304-de0aa481ad4b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ff6abaef6fc19a1bc646aab7ff30e4fcf6e13380
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097658"
 ---
-# <a name="spdroplinkedsrvlogin-transact-sql"></a>sp_droplinkedsrvlogin (Transact-SQL)
+# <a name="sp_droplinkedsrvlogin-transact-sql"></a>sp_droplinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Удаляет существующее сопоставление между именем входа на локальном сервере с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и именем входа на связанном сервере.  
@@ -40,19 +40,19 @@ sp_droplinkedsrvlogin [ @rmtsrvname= ] 'rmtsrvname' ,
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @rmtsrvname = ] 'rmtsrvname'` Имя связанного сервера, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] применяется сопоставление имен входа. *серверу rmtsrvname* — **sysname**, не имеет значения по умолчанию. *серверу rmtsrvname* должен уже существовать.  
+`[ @rmtsrvname = ] 'rmtsrvname'`Имя связанного сервера, к которому применяется сопоставление [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имен входа. *рмтсрвнаме* имеет тип **sysname**и не имеет значения по умолчанию. *рмтсрвнаме* уже должен существовать.  
   
-`[ @locallogin = ] 'locallogin'` — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Входа на локальном сервере, сопоставленный со связанным сервером *серверу rmtsrvname*. *locallogin* — **sysname**, не имеет значения по умолчанию. Сопоставление для *locallogin* для *серверу rmtsrvname* должен уже существовать. Если значение равно NULL, сопоставление по умолчанию созданные **sp_addlinkedserver**, которая сопоставляет все имена входа на локальном сервере с именами входа на связанном сервере, удаляется.  
+`[ @locallogin = ] 'locallogin'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Имя входа на локальном сервере с сопоставлением со связанным сервером *рмтсрвнаме*. *локаллогин* имеет тип **sysname**и не имеет значения по умолчанию. Сопоставление для *локаллогин* с *рмтсрвнаме* должно уже существовать. Если значение равно NULL, то сопоставление по умолчанию, созданное **sp_addlinkedserver**, которое сопоставляет все имена входа на локальном сервере с именами входа на связанном сервере, удаляется.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или 1 (неуспешное завершение)  
+ 0 (успех) или 1 (сбой).  
   
-## <a name="remarks"></a>Примечания  
- При локальном сервере существующее отображение для имени входа удаляется, использует сопоставление по умолчанию, созданные **sp_addlinkedserver** при подключении к связанному серверу от имени этого имени входа. Чтобы изменить сопоставление по умолчанию, используйте **sp_addlinkedsrvlogin**.  
+## <a name="remarks"></a>Remarks  
+ При удалении существующего сопоставления для имени входа локальный сервер использует сопоставление по умолчанию, созданное **sp_addlinkedserver** при подключении к связанному серверу от имени этого имени входа. Чтобы изменить сопоставление по умолчанию, используйте **sp_addlinkedsrvlogin**.  
   
- Если сопоставление по умолчанию также удалено, только имена входа, которым явно предоставлен сопоставление имен входа к связанному серверу с помощью **sp_addlinkedsrvlogin**, можно получить доступ к связанному серверу.  
+ Если сопоставление по умолчанию также удалено, то к связанному серверу могут быть подключены только имена входа, для которых явно задано сопоставление имени входа со связанным сервером с помощью **sp_addlinkedsrvlogin**.  
   
- **sp_droplinkedsrvlogin** нельзя выполнять внутри пользовательской транзакции.  
+ невозможно выполнить **sp_droplinkedsrvlogin** из определяемой пользователем транзакции.  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение ALTER ANY LOGIN на сервере.  
@@ -73,9 +73,9 @@ EXEC sp_droplinkedsrvlogin 'Accounts', 'Mary';
 EXEC sp_droplinkedsrvlogin 'Accounts', NULL;  
 ```  
   
-## <a name="see-also"></a>См. также  
- [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Измерения (многомерные Выражения) | Документация Майкрософт
+title: Dimension (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 58bee93a4cef37a8a5a71211b292a16392687f12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67999958"
 ---
 # <a name="dimension-mdx"></a>Dimension (многомерные выражения)
@@ -46,7 +46,7 @@ Member_Expression.Dimension
  Допустимое многомерное выражение, возвращающее элемент.  
   
 ### <a name="examples"></a>Примеры  
- В следующем примере используется **измерения** функция в сочетании с **имя** возвращается имя иерархии указанного элемента.  
+ В следующем примере с помощью функции **Dimension** в сочетании с функцией **Name** возвращается имя иерархии указанного элемента.  
   
 ```  
 WITH member measures.x as [Product].[Product Model Lines].[Model].&[HL Road Tire].Dimension.Name  
@@ -62,7 +62,7 @@ SELECT measures.x on 0
 FROM [Adventure Works]  
 ```  
   
- В следующем примере используется **измерения** функция в сочетании с **члены** и **число** функции, чтобы возвращать число элементов в иерархии содержащий заданный элемент.  
+ В следующем примере используется функция **Dimension** в сочетании с функциями **Members** и **Count** , чтобы получить количество элементов в иерархии, содержащих указанный элемент.  
   
 ```  
 WITH member measures.x as [Product].[Product Model Lines].[Model].&[HL Road Tire].Dimension.Members.Count  
@@ -70,11 +70,11 @@ SELECT measures.x on 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Число &#40;уровней иерархии&#41; &#40;многомерных Выражений&#41;](../mdx/count-hierarchy-levels-mdx.md)   
- [Count (наборы) (многомерные выражения)](../mdx/count-set-mdx.md)   
- [Уровни &#40;многомерных Выражений&#41;](../mdx/levels-mdx.md)   
- [Члены &#40;задать&#41; &#40;многомерных Выражений&#41;](../mdx/members-set-mdx.md)   
- [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также:  
+ [Количество &#40;уровней иерархии&#41; &#40;МНОГОМЕРных&#41;](../mdx/count-hierarchy-levels-mdx.md)   
+ [Count &#40;Set&#41; &#40;многомерных выражений&#41;](../mdx/count-set-mdx.md)   
+ [Уровни &#40;&#41;многомерных выражений](../mdx/levels-mdx.md)   
+ [Элементы &#40;задать&#41; &#40;многомерных выражений&#41;](../mdx/members-set-mdx.md)   
+ [Ссылка на функцию многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-function-reference-mdx.md)  
   
   

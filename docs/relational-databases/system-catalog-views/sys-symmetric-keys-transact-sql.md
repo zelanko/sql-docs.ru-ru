@@ -1,5 +1,5 @@
 ---
-title: sys.symmetric_keys (Transact-SQL) | Документация Майкрософт
+title: sys. symmetric_keys (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -21,37 +21,37 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5b4607c5873889c17e9934cc4f24465fe4e83007
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108931"
 ---
-# <a name="syssymmetrickeys-transact-sql"></a>sys.symmetric_keys (Transact-SQL)
+# <a name="syssymmetric_keys-transact-sql"></a>sys.symmetric_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Возвращает по одной строке для каждого симметричного ключа, созданного инструкцией CREATE SYMMETRIC KEY.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|Имя ключа. Уникально в пределах базы данных.|  
+|**name**|**имеет sysname**|Имя ключа. Уникально в пределах базы данных.|  
 |**principal_id**|**int**|Идентификатор участника базы данных, который владеет ключом.|  
 |**symmetric_key_id**|**int**|Идентификатор ключа. Уникально в пределах базы данных.|  
 |**key_length**|**int**|Длина ключа в битах.|  
-|**key_algorithm**|**char(2)**|Алгоритм, используемый с ключом:<br /><br /> R2 = RC2<br /><br /> R4 = RC4<br /><br /> D = DES<br /><br /> D3 = тройной DES<br /><br /> DT = TRIPLE_DES_3KEY<br /><br /> DX = DESX<br /><br /> A1 = AES 128<br /><br /> A2 = AES 192<br /><br /> A3 = AES 256<br /><br /> NA = EKM Key|  
-|**algorithm_desc**|**nvarchar(60)**|Описание алгоритма, используемого с ключом:<br /><br /> RC2<br /><br /> RC4<br /><br /> DES<br /><br /> Triple_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256<br /><br /> NULL (только алгоритмы расширенного управления ключами)|  
+|**key_algorithm**|**char (2)**|Алгоритм, используемый с ключом:<br /><br /> R2 = RC2<br /><br /> R4 = RC4<br /><br /> D = DES<br /><br /> D3 = тройной DES<br /><br /> DT = TRIPLE_DES_3KEY<br /><br /> DX = DESX<br /><br /> A1 = AES 128<br /><br /> A2 = AES 192<br /><br /> A3 = AES 256<br /><br /> NA = EKM Key|  
+|**algorithm_desc**|**nvarchar (60)**|Описание алгоритма, используемого с ключом:<br /><br /> RC2;<br /><br /> RC4;<br /><br /> DES<br /><br /> Triple_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256<br /><br /> NULL (только алгоритмы расширенного управления ключами)|  
 |**create_date**|**datetime**|Дата создания ключа.|  
 |**modify_date**|**datetime**|Дата изменения ключа.|  
-|**key_guid**|**uniqueidentifier**|Глобальный уникальный идентификатор (GUID), ассоциированный с ключом. Он формируется автоматически для материализованного ключа. Идентификаторы GUID для временных ключей наследуются из указанной пользователем парольной фразы.|  
+|**key_guid**|**UNIQUEIDENTIFIER**|Глобальный уникальный идентификатор (GUID), ассоциированный с ключом. Он формируется автоматически для материализованного ключа. Идентификаторы GUID для временных ключей наследуются из указанной пользователем парольной фразы.|  
 |**key_thumbprint**|**sql_variant**|Хэш ключа SHA-1. Хэш глобально уникален. Для ключей, не относящихся к системе расширенного управления ключами, это значение будет равно NULL.|  
-|**provider_type**|**nvarchar(120)**|Тип поставщика служб шифрования.<br /><br /> CRYPTOGRAPHIC PROVIDER = ключи системы расширенного управления ключами<br /><br /> NULL = ключи, не относящиеся к расширенному управлению ключами|  
-|**cryptographic_provider_guid**|**uniqueidentifier**|Идентификатор GUID поставщика служб шифрования. Для ключей, не относящихся к системе расширенного управления ключами, это значение будет равно NULL.|  
+|**provider_type**|**nvarchar (120)**|Тип поставщика служб шифрования.<br /><br /> CRYPTOGRAPHIC PROVIDER = ключи системы расширенного управления ключами<br /><br /> NULL = ключи, не относящиеся к расширенному управлению ключами|  
+|**cryptographic_provider_guid**|**UNIQUEIDENTIFIER**|Идентификатор GUID поставщика служб шифрования. Для ключей, не относящихся к системе расширенного управления ключами, это значение будет равно NULL.|  
 |**cryptographic_provider_algid**|**sql_variant**|Идентификатор алгоритма для поставщика служб шифрования. Для ключей, не относящихся к системе расширенного управления ключами, это значение будет равно NULL.|  
   
 ## <a name="permissions"></a>Разрешения  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Дополнительные сведения см. в разделе [Настройка видимости метаданных](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Алгоритм RC4 устарел. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
 > [!NOTE]  
@@ -65,11 +65,11 @@ ms.locfileid: "68108931"
   
 -   Симметричные ключи, созданные с параметром ALGORITHM = TRIPLE_DES, используют шифр TRIPLE DES с 128-битным ключом.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Расширенное управление ключами (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
- [Представления каталога безопасности (Transact-SQL)](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [Иерархия средств шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)   
+ [Расширенное управление ключами &#40;управления РАСШИРЕНным ключом&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
+ [Представления каталога безопасности &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [Иерархия шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [CREATE SYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/create-symmetric-key-transact-sql.md)  
   
   

@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5c579d8d31daff1b03db4c82bcd33642c02f85c5
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72251276"
 ---
 # <a name="sp_xtp_flush_temporal_history-transact-sql"></a>sp_xtp_flush_temporal_history (Transact-SQL)
@@ -48,12 +48,12 @@ sys.sp_xtp_flush_temporal_history @schema_name, @object_name
  Имя текущей или темпоральной таблицы  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или > 0 (сбой)  
+ 0 (успешное завершение) или >0 (сбой)  
   
 ## <a name="permissions"></a>Разрешения  
  Требуются db_owner разрешения.  
   
-## <a name="see-also"></a>См. также статью  
- [Вопросы производительности оптимизированных для памяти темпоральных таблиц с системным управлением версиями](../../relational-databases/tables/memory-optimized-system-versioned-temporal-tables-performance.md)  
+## <a name="see-also"></a>См. также:  
+ [Вопросы производительности при оптимизированных для памяти временных таблицах с системным управлением версиями](../../relational-databases/tables/memory-optimized-system-versioned-temporal-tables-performance.md)  
   
   

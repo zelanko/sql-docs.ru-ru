@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a51364838173f70c4d5daac794176caa6ea01221
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72796537"
 ---
 # <a name="transferring-data"></a>Передача данных
@@ -27,7 +27,7 @@ ms.locfileid: "72796537"
   
  Объекты в схеме базы данных передаются в ходе выполнения сформированного скрипта на целевом сервере. Данные <xref:Microsoft.SqlServer.Management.Smo.Table> передаются вместе с динамически созданным пакетом DTS.  
   
- Объект <xref:Microsoft.SqlServer.Management.Smo.Transfer> обладает всеми функциональными возможностями объектов <xref:Microsoft.SqlServer.Management.Smo.Transfer> в DMO и дополнительными функциональными возможностями [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Однако в SMO в [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]объект <xref:Microsoft.SqlServer.Management.Smo.Transfer> использует API [SQLBulkCopy](https://msdn.microsoft.com/library/system.data.sqlclient.sqlbulkcopy\(v=VS.90\).aspx) для перемещения данных. Кроме того, методы и свойства, используемые для передачи данных, располагаются в объекте <xref:Microsoft.SqlServer.Management.Smo.Transfer>, а не в объекте <xref:Microsoft.SqlServer.Management.Smo.Database>. Перенос функциональных возможностей с экземпляров классов на вспомогательные классы согласуется с облегченной объектной моделью, поскольку код для выполнения конкретных задач загружается только по мере необходимости.  
+ Объект <xref:Microsoft.SqlServer.Management.Smo.Transfer> обладает всеми функциональными возможностями объектов <xref:Microsoft.SqlServer.Management.Smo.Transfer> в DMO и дополнительными функциональными возможностями [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Однако в SMO в [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] <xref:Microsoft.SqlServer.Management.Smo.Transfer> объект использует API [SQLBulkCopy](https://msdn.microsoft.com/library/system.data.sqlclient.sqlbulkcopy\(v=VS.90\).aspx) для перемещения данных. Кроме того, методы и свойства, используемые для передачи данных, располагаются в объекте <xref:Microsoft.SqlServer.Management.Smo.Transfer>, а не в объекте <xref:Microsoft.SqlServer.Management.Smo.Database>. Перенос функциональных возможностей с экземпляров классов на вспомогательные классы согласуется с облегченной объектной моделью, поскольку код для выполнения конкретных задач загружается только по мере необходимости.  
   
  Объект <xref:Microsoft.SqlServer.Management.Smo.Transfer> не поддерживает передачи данных в целевую базу данных, у которой <xref:Microsoft.SqlServer.Management.Smo.Database.CompatibilityLevel%2A> меньше, чем у версии экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   

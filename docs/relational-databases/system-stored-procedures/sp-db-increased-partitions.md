@@ -18,13 +18,13 @@ ms.assetid: a8c043ec-b504-4929-ac0e-8babaa99d989
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 83a40c9070db1c997f30db71a6cff226cd0430d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108258"
 ---
-# <a name="spdbincreasedpartitions"></a>sp_db_increased_partitions
+# <a name="sp_db_increased_partitions"></a>sp_db_increased_partitions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Включает или отключает поддержку до 15 000 секций для указанной базы данных.  
@@ -44,14 +44,14 @@ sp_dp_increased_partitions
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @dbname=] '*имя_базы_данных*"  
- Имя базы данных. *DBName* — **sysname** со значением по умолчанию NULL. Если *dbname* не указан, используется текущая база данных.  
+ [ @dbname= ] "*database_name*"  
+ Имя базы данных. Аргумент *dbname* имеет тип **sysname** и значение по умолчанию NULL. Если параметр *dbname* не указан, используется текущая база данных.  
   
- [ @increased_partitions=] '*increased_partitions*"  
- Включает или выключает поддержку 15 000 секций для указанной базы данных. *increased_partitions* — **varchar(6)** значение по умолчанию NULL. Для включения поддержки используются значения ON или TRUE, а для выключения — OFF или FALSE. Если *increased_partitions* не указан, процедура возвращает 1, чтобы указать, включена поддержка для указанной базы данных, или 0, чтобы указать поддержку отключен.  
+ [ @increased_partitions= ] "*increased_partitions*"  
+ Включает или выключает поддержку 15 000 секций для указанной базы данных. *increased_partitions* имеет тип **varchar (6)** и значение по умолчанию NULL. Для включения поддержки используются значения ON или TRUE, а для выключения — OFF или FALSE. Если *increased_partitions* не указан, процедура возвращает 1, чтобы указать, что поддержка включена для указанной базы данных, или значение 0, чтобы указать, что поддержка отключена.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или 1 (неуспешное завершение)  
+ 0 (успех) или 1 (сбой).  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение ALTER DATABASE для указанной базы данных.  

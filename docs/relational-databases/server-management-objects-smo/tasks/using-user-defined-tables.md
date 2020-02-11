@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0aa54692cf300a8d52d767092881ab30bc62d80f
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70911219"
 ---
 # <a name="using-user-defined-tables"></a>Использование определяемых пользователем таблиц
@@ -25,7 +25,7 @@ ms.locfileid: "70911219"
 
   В определяемых пользователем таблицах представлены табличные данные. Они используются в качестве параметров при передаче табличных данных в хранимые процедуры или определяемые пользователем функции. Определяемые пользователем таблицы нельзя использовать для представления столбцов в таблице базы данных.  
   
- Объект <xref:Microsoft.SqlServer.Management.Smo.Database> содержит свойство <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A>, которое ссылается на объект <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection>. Каждый <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> объект в этой коллекции имеет свойство **Columns** , ссылающееся <xref:Microsoft.SqlServer.Management.Smo.Column> на коллекцию объектов, в которой перечислены столбцы в определяемой пользователем таблице. Для добавления столбцов в определяемую пользователем таблицу используется метод Add.  
+ Объект <xref:Microsoft.SqlServer.Management.Smo.Database> содержит свойство <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A>, которое ссылается на объект <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection>. Каждый <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> объект в этой коллекции имеет свойство **Columns** , ссылающееся на коллекцию <xref:Microsoft.SqlServer.Management.Smo.Column> объектов, в которой перечислены столбцы в определяемой пользователем таблице. Для добавления столбцов в определяемую пользователем таблицу используется метод Add.  
   
  При определении новой определяемой пользователем таблицы с помощью объекта <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> необходимо предоставить столбцы и первичный ключ, основанный на одном из столбцов.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "70911219"
  Для определения типа данных, связанного со столбцами и параметрами, используется класс <xref:Microsoft.SqlServer.Management.Smo.DataType>. Этот тип используется для задания определяемого пользователем табличного типа в качестве параметра для определяемых пользователем функций или хранимых процедур.  
   
 ## <a name="examples"></a>Примеры  
-Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. [в разделе Создание проекта Visual&#35; C SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. [в статье Создание проекта Visual C&#35; SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
 
   
 ## <a name="creating-a-user-defined-table-in-visual-basic"></a>Создание определяемой пользователем таблицы на языке Visual Basic  
@@ -255,7 +255,7 @@ $udf.TextBody = "BEGIN RETURN (GETDATE());end"
 $udf.Create()           
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  <xref:Microsoft.SqlServer.Management.Smo.FileGroup>   
  [Файлы и файловые группы базы данных](../../../relational-databases/databases/database-files-and-filegroups.md)   
   

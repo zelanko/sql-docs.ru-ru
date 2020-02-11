@@ -16,10 +16,10 @@ ms.assetid: 7551f345-5510-4684-ab53-f9057249d13a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3d324d5f26f847488af8cec480cce6c699a5f473
-ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70212275"
 ---
 # <a name="sp_dropsubscription-transact-sql"></a>sp_dropsubscription (Transact-SQL)
@@ -42,13 +42,13 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` — имя связанной публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию NULL. Если задано значение **ALL**, то все подписки для всех публикаций указанного подписчика отменяются. параметр *publication* является обязательным.  
+`[ @publication = ] 'publication'`Имя связанной публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию NULL. Если задано значение **ALL**, то все подписки для всех публикаций указанного подписчика отменяются. параметр *publication* является обязательным.  
   
-`[ @article = ] 'article'` — имя статьи. Аргумент *article* имеет тип **sysname**и значение по умолчанию NULL. Если **все**, то подписки на все статьи для каждой указанной публикации и подписчика удаляются. Используйте **все** для публикаций, которые допускают немедленное обновление.  
+`[ @article = ] 'article'`Имя статьи. Аргумент *article* имеет тип **sysname**и значение по умолчанию NULL. Если **все**, то подписки на все статьи для каждой указанной публикации и подписчика удаляются. Используйте **все** для публикаций, которые допускают немедленное обновление.  
   
-`[ @subscriber = ] 'subscriber'` — имя подписчика, для которого будут удалены подписки. Аргумент *Subscriber* имеет тип **sysname**и не имеет значения по умолчанию. Если **все**, то все подписки для всех подписчиков удаляются.  
+`[ @subscriber = ] 'subscriber'`Имя подписчика, для которого будут удалены подписки. Аргумент *Subscriber* имеет тип **sysname**и не имеет значения по умолчанию. Если **все**, то все подписки для всех подписчиков удаляются.  
   
-`[ @destination_db = ] 'destination_db'` — имя целевой базы данных. Аргумент *destination_db* имеет тип **sysname**и значение по умолчанию NULL. Если имеет значение NULL, то все подписки от этого подписчика удаляются.  
+`[ @destination_db = ] 'destination_db'`Имя целевой базы данных. Аргумент *destination_db* имеет тип **sysname**и значение по умолчанию NULL. Если имеет значение NULL, то все подписки от этого подписчика удаляются.  
   
 `[ @ignore_distributor = ] ignore_distributor`  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -70,10 +70,10 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** , предопределенной роли базы данных **db_owner** или пользователя, создавшего подписку, могут выполнять **sp_dropsubscription**.  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
  [Удаление принудительной подписки](../../relational-databases/replication/delete-a-push-subscription.md)   
- [sp_addsubscription &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)  
- [sp_changesubstatus &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)  
- [sp_helpsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
+ [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
+ [sp_changesubstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
+ [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
   
   

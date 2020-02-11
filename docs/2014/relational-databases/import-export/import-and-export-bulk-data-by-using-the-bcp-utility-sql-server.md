@@ -15,15 +15,15 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/14/2017
 ms.openlocfilehash: 7075bf87ed64686750bc4a267af431268987ff35
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71708211"
 ---
 # <a name="import-and-export-bulk-data-by-using-the-bcp-utility-sql-server"></a>Массовый импорт и экспорт данных с использованием программы bcp (SQL Server)
 
-В этом разделе представлен обзор использования [программы bcp](../../tools/bcp-utility.md) для экспорта данных из любого местоположения в базу данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в которой может применяться инструкция SELECT, включая секционированные представления.  
+В этом разделе представлен обзор использования [программы bcp](../../tools/bcp-utility.md) для экспорта данных из любого местоположения в базу данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , в которой может применяться инструкция SELECT, включая секционированные представления.  
   
  Программа bcp (bcp.exe) представляет собой инструмент командной строки, использующий API-интерфейс программы массового копирования (BCP). Программа bcp выполняет следующие задачи:  
   
@@ -52,31 +52,33 @@ ms.locfileid: "71708211"
   
 -   [Программа bcp](../../tools/bcp-utility.md)  
   
--   [Создание файла форматирования (SQL Server)](create-a-format-file-sql-server.md)  
+-   [Создайте файл форматирования &#40;SQL Server&#41;](create-a-format-file-sql-server.md)  
   
--   [Примеры массового импорта и экспорта XML-документов (SQL Server)](examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
+-   [Примеры выполнения операций импорта и экспорта XML-документов &#40;SQL Server&#41;](examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
   
--   [Сохранение значений идентификаторов при массовом импорте данных (SQL Server)](keep-identity-values-when-bulk-importing-data-sql-server.md)  
+-   [Не заключайте значения идентификаторов при выполнении много&#40;ного импорта данных SQL Server&#41;](keep-identity-values-when-bulk-importing-data-sql-server.md)  
   
--   [Сохранение значений NULL или использование значений по умолчанию при массовом импорте данных (SQL Server)](keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)  
+-   [Не заменяйте значения NULL или используйте значение по умолчанию во время &#40;ного импорта SQL Server&#41;](keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)  
   
--   [Определение признаков конца поля и строки (SQL Server)](specify-field-and-row-terminators-sql-server.md)  
+-   [Укажите признаки конца поля и строки &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
   
--   [Использование файла форматирования для массового импорта данных (SQL Server)](use-a-format-file-to-bulk-import-data-sql-server.md)  
+-   [Использование файла форматирования для SQL Server &#40;данных при выполнении операций импорта&#41;](use-a-format-file-to-bulk-import-data-sql-server.md)  
   
--   [Использование символьного формата для импорта и экспорта данных (SQL Server)](use-character-format-to-import-or-export-data-sql-server.md)  
+-   [Используйте символьный формат для импорта или экспорта &#40;данных SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
   
--   [Использование собственного формата для импорта и экспорта данных (SQL Server)](use-native-format-to-import-or-export-data-sql-server.md)  
+-   [Используйте собственный формат для импорта или экспорта &#40;данных SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
   
--   [Использование символьного формата Юникод для импорта и экспорта данных (SQL Server)](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
+-   [Используйте символьный формат Юникода для импорта или экспорта &#40;данных SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
--   [Использование собственного формата Юникод для импорта и экспорта данных (SQL Server)](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
+-   [Используйте собственный формат Юникода для импорта или экспорта &#40;данных SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[INSERT &#40;t-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)
-[предложение &#40;SELECT, инструкция Transact&#41;-SQL](/sql/t-sql/queries/select-clause-transact-sql)
-[bcp](../../tools/bcp-utility.md)   
-[Подготовка к групповому импорту&#41;данных &#40;SQL Server](prepare-to-bulk-import-data-sql-server.md)
-[BULK INSERT &#40;Transact&#41;-SQL](/sql/t-sql/statements/bulk-insert-transact-sql)
-[массовым импортом &#40;и&#41;экспортом данных SQL Server](bulk-import-and-export-of-data-sql-server.md)1[OPENROWSET &#40; Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)5[Создание &#40;файла форматирования SQL Server&#41; ](create-a-format-file-sql-server.md)
+[INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql) 
+ [предложение SELECT &#40;](/sql/t-sql/queries/select-clause-transact-sql) 
+ [служебной программы](../../tools/bcp-utility.md) Transact-SQL&#41;bcp   
+[Подготовка к групповому импорту данных &#40;SQL Server&#41;](prepare-to-bulk-import-data-sql-server.md) 
+ [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) 
+ [групповой импорт и экспорт данных &#40;](bulk-import-and-export-of-data-sql-server.md) 
+SQL Server&#41;[OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql) 
+ [Создание файла форматирования &#40;](create-a-format-file-sql-server.md) SQL Server

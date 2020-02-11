@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 46f440aa6b40d8a2e0ff48c59818b722073b1628
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62640371"
 ---
 # <a name="remove-a-utility-control-point-sql-server-utility"></a>удалить точку управления служебной программой (SQL Server Utility)
@@ -26,7 +26,7 @@ ms.locfileid: "62640371"
   
      [Ограничения](#Restrictions)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Для удаления точки управления служебной программы используется:**  
   
@@ -62,7 +62,7 @@ ms.locfileid: "62640371"
 EXEC msdb.dbo.sp_sysutility_ucp_remove;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функции и задачи служебной программы SQL Server](sql-server-utility-features-and-tasks.md)   
  [Использование проводника служебных программ для управления служебной программой SQL Server](use-utility-explorer-to-manage-the-sql-server-utility.md)   
  [Устранение неполадок служебной программы SQL Server](../../database-engine/troubleshoot-the-sql-server-utility.md)  

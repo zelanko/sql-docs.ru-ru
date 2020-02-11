@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 88ab6a4e91b98a2e6551f6a01cbca29738513b61
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69028633"
 ---
 # <a name="azure-hdinsight-create-cluster-task"></a>Задача создания кластера Azure HDInsight
@@ -27,7 +27,7 @@ ms.locfileid: "69028633"
 > - Создание кластера HDInsight может занимать от 10 до 20 минут.  
 > - Создание кластера Azure HDInsight и управление им сопряжено с определенными затратами. Дополнительные сведения см. в статье [Цены на HDInsight](https://azure.microsoft.com/pricing/details/hdinsight/).  
   
-Чтобы добавить **задачу создания кластера Azure HDInsight**, перетащите ее в конструктор служб SSIS и дважды щелкните или щелкните правой кнопкой мыши и выберите пункт **Изменить** , чтобы вызвать диалоговое окно **Azure HDInsight Create Cluster Task Editor** (Редактор задач создания кластера Azure HDInsight).  
+Чтобы добавить **задачу создания кластера Azure HDInsight**, перетащите ее в конструктор служб SSIS и дважды щелкните или щелкните правой кнопкой мыши и выберите пункт **Изменить**, чтобы вызвать диалоговое окно **Azure HDInsight Create Cluster Task Editor** (Редактор задач создания кластера Azure HDInsight).  
   
 Следующая таблица содержит описание полей этого диалогового окна.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "69028633"
 |ResourceGroup|Укажите группу ресурсов Azure, где будет создан кластер HDInsight.|
 |Location|Определите расположение кластера HDInsight. Кластер нужно создавать в том же расположении, где находится указанная учетная запись службы хранилища Azure.|  
 |ClusterName|Укажите имя для создаваемого кластера HDInsight.|  
-|ClusterSize|Укажите число узлов, которые нужно создать в кластере.|  
+|ClusterSize (размер кластера)|Укажите число узлов, которые нужно создать в кластере.|  
 |BlobContainer|Укажите имя контейнера хранилища по умолчанию, связываемого с кластером HDInsight.|  
 |UserName|Укажите имя пользователя, используемое для подключения к кластеру HDInsight.|  
 |Пароль|Укажите пароль, используемый для подключения к кластеру HDInsight.|

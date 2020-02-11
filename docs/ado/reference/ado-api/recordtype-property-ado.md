@@ -18,24 +18,24 @@ ms.assetid: 790e46a2-13d2-451e-a8be-130bd9a206a4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e832ec871a353b994c1858bb01a2a2ab557f3869
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917309"
 ---
 # <a name="recordtype-property-ado"></a>Свойство RecordType (ADO)
-Указывает тип [записи](../../../ado/reference/ado-api/record-object-ado.md) объекта.  
+Указывает тип объекта [записи](../../../ado/reference/ado-api/record-object-ado.md) .  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает [RecordTypeEnum](../../../ado/reference/ado-api/recordtypeenum.md) значение.  
+ Возвращает значение [рекордтипинум](../../../ado/reference/ado-api/recordtypeenum.md) .  
   
-## <a name="remarks"></a>Примечания  
- **RecordType** свойство доступно только для чтения.  
+## <a name="remarks"></a>Remarks  
+ Свойство **RecordType** доступно только для чтения.  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  [Объект Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство Type (ADO)](../../../ado/reference/ado-api/type-property-ado.md)   
  [Свойство Type (объект Stream ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)

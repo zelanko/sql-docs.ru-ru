@@ -19,29 +19,29 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 927d0fd7b108718daffe86a6534ca40492429d34
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797650"
 ---
 # <a name="manually-prepare-a-secondary-database-for-an-availability-group-sql-server"></a>Ручная подготовка базы данных-получателя для присоединения к группе доступности (SQL Server)
   В этом разделе описывается подготовка базы данных-получателя для группы доступности AlwaysOn в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или PowerShell. Подготовка базы данных-получателя выполняется в два этапа: (1) восстановление базы данных из последней резервной копии базы данных-источника и соответствующих резервных копий журнала на каждом экземпляре сервера, где размещена вторичная реплика доступности, с помощью инструкции RESTORE WITH NORECOVERY и (2) присоединение восстановленной базы данных к группе доступности.  
   
 > [!TIP]  
->  Если имеется существующая конфигурация доставки журналов, можно будет преобразовать базу данных-источник доставки журналов вместе с одной или более базой данных-получателем в базу данных-источник AlwaysOn и одну или более баз данных-получателей AlwaysOn. Дополнительные сведения см. [в разделе Предварительные требования для миграции из доставки &#40;журналов&#41;в группы доступности AlwaysOn SQL Server](prereqs-migrating-log-shipping-to-always-on-availability-groups.md).  
+>  Если имеется существующая конфигурация доставки журналов, можно будет преобразовать базу данных-источник доставки журналов вместе с одной или более базой данных-получателем в базу данных-источник AlwaysOn и одну или более баз данных-получателей AlwaysOn. Дополнительные сведения см. [в разделе Предварительные требования для миграции из доставки журналов в группы доступности AlwaysOn &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md).  
   
 -   **Перед началом работы**  
   
-     [Требования и ограничения](#Prerequisites)  
+     [Предварительные условия и ограничения](#Prerequisites)  
   
      [Рекомендации](#Recommendations)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
--   **Подготовка базы данных-получателя с помощью различных средств.**  
+-   **Подготовка базы данных-получателя с помощью:**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Среда SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -49,11 +49,11 @@ ms.locfileid: "72797650"
   
 -   [Связанные задачи резервного копирования и восстановления](#RelatedTasks)  
   
--   **Дальнейшие действия.** [После подготовки базы данных-получателя](#FollowUp)  
+-   **Дальнейшие действия.** [после подготовки базы данных-получателя](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Prerequisites"></a> Требования и ограничения  
+###  <a name="Prerequisites"></a>Предварительные условия и ограничения  
   
 -   Убедитесь, что в системе, в которой предполагается разместить базу данных, есть жесткий диск, на котором достаточно свободного места для баз данных-получателей.  
   
@@ -67,19 +67,19 @@ ms.locfileid: "72797650"
   
 -   После восстановления базы данных необходимо восстановить (с параметром WITH NORECOVERY) каждую резервную копию журнала, созданную с момента последнего восстановления данных из резервной копии.  
   
-###  <a name="Recommendations"></a> рекомендации  
+###  <a name="Recommendations"></a> Рекомендации  
   
 -   Для автономных экземпляров [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]рекомендуется, чтобы по возможности путь к файлам (в том числе буква диска) базы данных-получателя совпадал с путем к соответствующей базе данных-источнику. Такой подход рекомендуется, поскольку если при создании базы данных-получателя переместить ее файлы, то последующее добавление в нее файлов может завершиться ошибкой, в результате чего ее работа будет приостановлена.  
   
 -   Перед подготовкой баз данных-получателей настоятельно рекомендуется приостановить резервное копирование журнала по расписанию для всех баз данных в группе доступности до завершения инициализации вторичных реплик.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
  При резервном копировании базы данных [свойство базы данных TRUSTWORTHY](../../../relational-databases/security/trustworthy-database-property.md) принимает значение OFF. Поэтому свойство TRUSTWORTHY всегда имеет значение OFF во всех только что восстановленных базах данных.  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Разрешения BACKUP DATABASE и BACKUP LOG назначены по умолчанию членам предопределенной роли сервера **sysadmin** и предопределенным ролям базы данных **db_owner** и **db_backupoperator** . Дополнительные сведения см. в разделе [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql).  
   
- Если восстанавливаемая база данных не существует на нужном экземпляре сервера, для выполнения инструкции RESTORE требуются разрешения CREATE DATABASE. Дополнительные сведения см. в разделе [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql)невозможно.  
+ Если восстанавливаемая база данных не существует на нужном экземпляре сервера, для выполнения инструкции RESTORE требуются разрешения CREATE DATABASE. Дополнительные сведения см. в разделе [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
@@ -94,35 +94,35 @@ ms.locfileid: "72797650"
   
 3.  Выполните восстановление из полной резервной копии базы данных-источника на том экземпляре сервера, на котором размещена вторичная реплика (можно также восстановить разностную резервную копию), после чего восстановите все последующие резервные копии журнала.  
   
-     На странице **Параметры RESTORE DATABASE** выберите параметр **Оставить базу данных в неработающем состоянии и не выполнять откат незафиксированных транзакций. Можно восстановить дополнительные журналы транзакций. (RESTORE WITH NORECOVERY)** .  
+     На странице **Параметры RESTORE DATABASE** выберите параметр **Оставить базу данных в неработающем состоянии и не выполнять откат незафиксированных транзакций. Можно восстановить дополнительные журналы транзакций. (RESTORE WITH NORECOVERY)**.  
   
      Если пути к файлам базы данных-источника и базы данных-получателя отличаются, например если соответствующие основные базы данных находятся на диске «F:», но на экземпляре сервера, на котором размещена дополнительная реплика, нет диска «F:», используйте параметр MOVE в предложении WITH.  
   
 4.  Чтобы завершить настройку базы данных-получателя, необходимо присоединить ее к группе доступности. Дополнительные сведения см. в разделе [Присоединение базы данных-получателя к группе доступности (SQL Server)](join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
 > [!NOTE]  
->  Дополнительные сведения о выполнении этих операций резервного копирования и восстановления см. в подразделе [Связанные задачи резервного копирования и восстановления](#RelatedTasks)далее в этом разделе.  
+>  Дополнительные сведения о выполнении этих операций резервного копирования и восстановления см. в подразделе [связанные задачи резервного копирования и восстановления](#RelatedTasks)далее в этой статье.  
   
-###  <a name="RelatedTasks"></a> Связанные задачи резервного копирования и восстановления  
+###  <a name="RelatedTasks"></a>Связанные задачи резервного копирования и восстановления  
  **Создание резервной копии базы данных**  
   
--   [Создание полной резервной копии базы данных (SQL Server)](../../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
+-   [Создание полной резервной копии базы данных &#40;SQL Server&#41;](../../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   
--   [Создание разностной резервной копии базы данных (SQL Server)](../../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)  
+-   [Создание разностной резервной копии базы данных &#40;SQL Server&#41;](../../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)  
   
  **Создание резервной копии журнала**  
   
--   [Создание резервной копии журнала транзакций (SQL Server)](../../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
+-   [Создание резервной копии журнала транзакций &#40;SQL Server&#41;](../../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
  **Восстановление резервных копий**  
   
--   [Восстановление резервной копии &#40;базы данных SQL Server Management Studio&#41;](../../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
+-   [Восстановление резервной копии базы данных &#40;SQL Server Management Studio&#41;](../../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
--   [Восстановление разностной резервной копии базы данных (SQL Server)](../../../relational-databases/backup-restore/restore-a-differential-database-backup-sql-server.md)  
+-   [Восстановление разностной резервной копии базы данных &#40;SQL Server&#41;](../../../relational-databases/backup-restore/restore-a-differential-database-backup-sql-server.md)  
   
--   [Восстановление резервной копии журнала транзакций (SQL Server)](../../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
+-   [Восстановление резервной копии журнала транзакций &#40;SQL Server&#41;](../../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
--   [Восстановление базы данных в новом расположении (SQL Server)](../../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)  
+-   [Восстановление базы данных в новое расположение &#40;SQL Server&#41;](../../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
  **Подготовка базы данных-получателя**  
@@ -144,9 +144,9 @@ ms.locfileid: "72797650"
 4.  Чтобы завершить настройку базы данных-получателя, необходимо присоединить ее к группе доступности. Дополнительные сведения см. в разделе [Присоединение базы данных-получателя к группе доступности (SQL Server)](join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
 > [!NOTE]  
->  Дополнительные сведения о выполнении этих операций резервного копирования и восстановления см. в подразделе [Связанные задачи резервного копирования и восстановления](#RelatedTasks)далее в этом разделе.  
+>  Дополнительные сведения о выполнении этих операций резервного копирования и восстановления см. в подразделе [Связанные задачи резервного копирования и восстановления](#RelatedTasks) далее в этом разделе.  
   
-###  <a name="ExampleTsql"></a> Пример (Transact-SQL)  
+###  <a name="ExampleTsql"></a>Пример Transact-SQL  
  В следующем примере показана подготовка базы данных-получателя. В этом примере используется образец базы данных [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] , в котором по умолчанию применяется простая модель восстановления.  
   
 1.  Чтобы использовать базу данных [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] , следует ее изменить так, чтобы использовалась модель полного восстановления:  
@@ -188,7 +188,7 @@ ms.locfileid: "72797650"
         GO  
         ```  
   
-    -   **Если пути отличаются:**  
+    -   **Если пути различаются:**  
   
          Если путь к базе данных-получателю отличается от пути к базе данных-источнику (например, отличаются имена дисков), то для создания базы данных-получателя в операцию восстановления нужно будет добавить предложение MOVE.  
   
@@ -242,7 +242,7 @@ ms.locfileid: "72797650"
     GO  
     ```  
   
-##  <a name="PowerShellProcedure"></a> Использование PowerShell  
+##  <a name="PowerShellProcedure"></a>Использование PowerShell  
  **Подготовка базы данных-получателя**  
   
 1.  В случае если резервная копия базы данных-источника отсутствует и вы создаете ее самостоятельно, перейдите в каталог (`cd`) экземпляра сервера, на котором размещена первичная реплика.  
@@ -254,7 +254,7 @@ ms.locfileid: "72797650"
 4.  Чтобы восстановить резервные копии базы данных и журналов для каждой базы данных-источника, используйте командлет `restore-SqlDatabase`, указывая параметр восстановления `NoRecovery`. Если пути к файлам различны на компьютерах, на которых размещена основная реплика и целевая вторичная реплика, также следует использовать параметр восстановления `RelocateFile`.  
   
     > [!NOTE]  
-    >  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом `Get-Help` в среде [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Дополнительные сведения см. в статье [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом `Get-Help` в среде [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
 5.  Чтобы завершить настройку базы данных-получателя, необходимо присоединить ее к группе доступности. Дополнительные сведения см. в разделе [Присоединение базы данных-получателя к группе доступности (SQL Server)](join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
@@ -262,7 +262,7 @@ ms.locfileid: "72797650"
   
 -   [SQL Server PowerShell, поставщик](../../../powershell/sql-server-powershell-provider.md)  
   
-###  <a name="ExamplePSscript"></a> Образцы скрипта и команды резервного копирования и восстановления  
+###  <a name="ExamplePSscript"></a>Пример сценария и команды резервного копирования и восстановления  
  Следующие команды PowerShell создают полную резервную копию базы данных и журнала транзакций в общей сетевой папке и восстанавливают базу данных из этой папки. В этом примере предполагается, что путь к файлам, в которые выполняется восстановление базы данных, такой же, как и путь к файлам базы данных, резервная копия которых была создана.  
   
 ```powershell
@@ -276,12 +276,12 @@ Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.bak" -N
 Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -RestoreAction "Log" -NoRecovery -ServerInstance "DestinationMachine\Instance"
 ```  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. После подготовки базы данных-получателя  
+##  <a name="FollowUp"></a>Дальнейшие действия. После подготовки базы данных-получателя  
  Чтобы завершить настройку базы данных-получателя, необходимо присоединить только что восстановленную базу данных к группе доступности. Дополнительные сведения см. в статье [Присоединение базы данных-получателя к группе доступности (SQL Server)](join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
-## <a name="see-also"></a>См. также статью  
- [Общие сведения о &#40;группы доступности AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)   
- [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
- [Аргументы инструкции RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-arguments-transact-sql)   
- [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql)   
- [Устранение неполадок при выполнении операции &#40;добавления файла группы доступности AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
+## <a name="see-also"></a>См. также:  
+ [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [&#41;BACKUP &#40;Transact-SQL](/sql/t-sql/statements/backup-transact-sql)   
+ [Аргументы Restore &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)   
+ [Восстановление &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
+ [Устранение неполадок при &#40;операции добавления файла группы доступности AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  

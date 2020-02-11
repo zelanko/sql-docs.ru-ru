@@ -1,5 +1,5 @@
 ---
-title: Событие ExecuteComplete (ADO) | Документация Майкрософт
+title: Событие Ексекутекомплете (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: 62470d42-e511-494c-bec4-ad4591734b7b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 62b78b608526ae0d6943a7416a21687fd1e51412
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918784"
 ---
 # <a name="executecomplete-event-ado"></a>Событие ExecuteComplete (ADO)
-**ExecuteComplete** событие вызывается после завершения выполнения команды.  
+Событие **ексекутекомплете** вызывается после завершения выполнения команды.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,28 +35,28 @@ ExecuteComplete RecordsAffected, pError, adStatus, pCommand, pRecordset, pConnec
   
 #### <a name="parameters"></a>Параметры  
  *RecordsAffected*  
- Объект **Long** значение, указывающее количество записей, затронутых этой командой.  
+ Значение **типа Long** , указывающее количество записей, затронутых командой.  
   
  *pError*  
- [Ошибка](../../../ado/reference/ado-api/error-object.md) объекта. Он описывает ошибки, возникшей при значение **adStatus** — **adStatusErrorsOccurred**; в противном случае оно не задано.  
+ Объект [ошибки](../../../ado/reference/ado-api/error-object.md) . Она описывает ошибку, которая возникла, если значение **адстатус** равно **адстатусеррорсоккурред**; в противном случае он не задан.  
   
- *adStatus*  
- [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) значение состояния. Когда это событие вызывается, этот параметр имеет значение **adStatusOK** при успешной операции, которая вызвала событие, или чтобы **adStatusErrorsOccurred** Если произошел сбой операции.  
+ *адстатус*  
+ Значение состояния [евентстатусенум](../../../ado/reference/ado-api/eventstatusenum.md) . При вызове этого события этот параметр устанавливается в значение **адстатусок** , если операция, вызвавшая событие, прошла успешно, или значение **адстатусеррорсоккурред** , если операция завершилась ошибкой.  
   
- Прежде чем это событие возвращает, присвойте этому параметру значение **adStatusUnwantedEvent** игнорировать последующие уведомления.  
+ Перед возвратом этого события задайте для этого параметра значение **адстатусунвантедевент** , чтобы предотвратить появление последующих уведомлений.  
   
- *Командной*  
- [Команда](../../../ado/reference/ado-api/command-object-ado.md) объект, который был выполнен. Содержит **команда** даже в том случае, если вызов **Connection.Execute** или **Recordset.Open** без явного создания **команда** , в какие варианты **команда** создается внутренне путем ADO.  
+ *пкомманд*  
+ Выполняемый объект [команды](../../../ado/reference/ado-api/command-object-ado.md) . Содержит объект **Command** , даже если вызывает **соединение. Execute** или **Recordset. Open** без явного создания **команды**. в этом случае объект **команды** создается внутренне ADO.  
   
- *pRecordset*  
- Объект [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объект, являющийся результатом выполнения команды. Это **записей** может быть пустым. Вы никогда не должны уничтожить этого объекта набора записей в этот обработчик событий. Это приведет к нарушению прав доступа при ADO пытается получить доступ к объекту, который больше не существует.  
+ *предшнур*  
+ Объект [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) , являющийся результатом выполненной команды. Этот **набор записей** может быть пустым. Ни в коем случае не следует уничтожать этот объект Recordset из этого обработчика событий. Это приведет к нарушению прав доступа при попытке ADO получить доступ к объекту, который больше не существует.  
   
- *pConnection*  
- Объект [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта. Соединение, по которому выполнялась операция.  
+ *пконнектион*  
+ Объект [соединения](../../../ado/reference/ado-api/connection-object-ado.md) . Соединение, для которого была выполнена операция.  
   
-## <a name="remarks"></a>Примечания  
- **ExecuteComplete** событие может происходить из-за **подключения.** [Выполнение](../../../ado/reference/ado-api/execute-method-ado-connection.md), **команды.** [Выполнение](../../../ado/reference/ado-api/execute-method-ado-command.md), **набор записей.** [Откройте](../../../ado/reference/ado-api/open-method-ado-recordset.md), **набор записей.** [Requery](../../../ado/reference/ado-api/requery-method.md), или **набор записей.** [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) методы.  
+## <a name="remarks"></a>Remarks  
+ Событие **ексекутекомплете** может возникать из-за **соединения.** [Выполните](../../../ado/reference/ado-api/execute-method-ado-connection.md) **команду.** [EXECUTE](../../../ado/reference/ado-api/execute-method-ado-command.md), **набор записей.** [Открыть](../../../ado/reference/ado-api/open-method-ado-recordset.md), **набор записей.** [Requery](../../../ado/reference/ado-api/requery-method.md)или **Recordset.** Методы [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) .  
   
-## <a name="see-also"></a>См. также  
- [Пример модели событий ADO (Visual C++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
+## <a name="see-also"></a>См. также:  
+ [Пример модели событий ADO (Visual c++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [Общие сведения об обработчике событий ADO](../../../ado/guide/data/ado-event-handler-summary.md)

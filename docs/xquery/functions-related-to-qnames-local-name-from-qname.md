@@ -16,16 +16,16 @@ ms.assetid: fafed718-8c3c-403f-93ee-ec51fc157a6e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 765d412b9f3f0395a9bca6fd52c74135ddde3ff4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68004568"
 ---
 # <a name="functions-related-to-qnames---local-name-from-qname"></a>Функции, связанные с QName — local-name-from-QName
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Возвращает xs: NCName, представляющее локальную часть QName, заданную *$arg*. Результат представляет собой пустую последовательность, если *$arg* является пустая последовательность.  
+  Возвращает значение типа xs: NCNAME, представляющее локальную часть QName, заданную *$arg*. Результатом является пустая последовательность, если *$arg* является пустой последовательностью.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,15 +38,15 @@ fn:local-name-from-QName($arg as xs:QName?) as xs:NCName?
  QName, из которого должно извлекаться локальное имя.  
   
 ## <a name="examples"></a>Примеры  
- В этом разделе приведены примеры запросов XQuery к экземплярам XML, которые хранятся в различных **xml** -столбцов в [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] базы данных.  
+ В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных столбцах [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] типа **XML** в базе данных.  
   
- В следующем примере используется **local-name-from-QName()** функции для получения локального имени и URI пространства имен частей из значения типа QName. В примере выполняются следующие действия.  
+ В следующем примере используется функция **local-name-from-QName ()** для получения локальных имен и частей URI пространства имен из значения типа QName. В примере выполняются следующие действия.  
   
 -   Создается коллекция XML-схемы.  
   
 -   Создается таблица со столбцом типа xml. Значение для типа xml типизируется с помощью коллекции XML-схемы.  
   
--   Пример образца XML сохраняется в таблице. С помощью **query()** выполнения метода типа данных xml, выражение запроса для извлечения из экземпляра в части локального имени значения типа QName.  
+-   Пример образца XML сохраняется в таблице. С помощью метода **query ()** типа данных XML выражение запроса выполняется для получения локальной части имени значения типа QName из экземпляра.  
   
 ```sql
 DROP TABLE T  
@@ -75,7 +75,7 @@ FROM T
 -- Result = https://someURI  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функции, связанные с QName &#40;XQuery&#41;](https://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
   
   

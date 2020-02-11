@@ -14,15 +14,15 @@ ms.assetid: 084761fe-e65b-4f38-ba4f-69884b2a7700
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: eb2587f733f5042436144f7865627fee576e3d9c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68096311"
 ---
 # <a name="delete-statement-limitations"></a>Ограничения инструкции DELETE
-Инструкции DELETE не поддерживается для драйвера Microsoft Excel или текст. Обратите внимание на то, что драйвер для текстовых поддерживается инструкции INSERT.  
+Инструкция DELETE не поддерживается для Microsoft Excel или текстового драйвера. Обратите внимание, что инструкция INSERT поддерживается для текстового драйвера.  
   
- Драйвер для dBASE не поддерживает упаковку таблицу для удаления значений «удалено».  
+ Драйвер dBASE не поддерживает упаковку таблиц для удаления "удаленных" значений.  
   
- Для драйвера для Paradox удаление строки из таблицы таблица должна иметь уникальный индекс (первичный ключ для Paradox).
+ Чтобы драйвер Paradox удалил строку из таблицы, таблица должна иметь уникальный индекс (первичный ключ Paradox).

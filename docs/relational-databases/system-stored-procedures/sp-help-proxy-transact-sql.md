@@ -18,13 +18,13 @@ ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 904a694d73613bb1c40c671b18ca33e5d9b5d0e6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085277"
 ---
-# <a name="sphelpproxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
+# <a name="sp_help_proxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Выводит сведения об одной и нескольких учетных записях-посредниках.  
@@ -43,58 +43,58 @@ sp_help_proxy
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @proxy_id = ] id` Идентификационный номер прокси-сервера необходимо вывести сведения. *Proxy_id* — **int**, значение по умолчанию NULL. Либо *идентификатор* или *proxy_name* может быть указан.  
+`[ @proxy_id = ] id`Идентификационный номер прокси-сервера, для которого необходимо получить список сведений. *Proxy_id* имеет **тип int**и значение по умолчанию NULL. Можно указать либо *идентификатор* , либо *proxy_name* .  
   
-`[ @proxy_name = ] 'proxy_name'` Имя прокси-сервера необходимо вывести сведения. *Proxy_name* — **sysname**, значение по умолчанию NULL. Либо *идентификатор* или *proxy_name* может быть указан.  
+`[ @proxy_name = ] 'proxy_name'`Имя учетной записи-посредника для получения списка сведений. Аргумент *proxy_name* имеет тип **sysname**и значение по умолчанию NULL. Можно указать либо *идентификатор* , либо *proxy_name* .  
   
-`[ @subsystem_name = ] 'subsystem_name'` Имя подсистемы, должны быть перечислены посредники. *Subsystem_name* — **sysname**, значение по умолчанию NULL. Когда *subsystem_name* указано, *имя* также должен быть указан.  
+`[ @subsystem_name = ] 'subsystem_name'`Имя подсистемы, для которой перечисляются прокси-серверы. Аргумент *subsystem_name* имеет тип **sysname**и значение по умолчанию NULL. Если указано *subsystem_name* , необходимо также указать *Name* .  
   
  В следующей таблице показаны значения для каждой подсистемы.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |ActiveScripting|ActiveX-скрипт|  
 |CmdExec|Операционная система (CmdExec)|  
 |Моментальный снимок|Агент моментальных снимков репликации|  
 |LogReader|Агент чтения журнала репликации|  
-|Distribution|Агент распространения репликации|  
+|Distribution|агент распространения репликации|  
 |Объединить|Replication Merge Agent|  
 |QueueReader|Агент чтения очереди репликации|  
 |ANALYSISQUERY|Команда служб Analysis Services|  
 |ANALYSISCOMMAND|Запрос служб Analysis Services|  
 |Dts|Выполнение пакетов служб SSIS|  
-|PowerShell|Скрипт PowerShell|  
+|PowerShell|Сценарий PowerShell.|  
   
-`[ @name = ] 'name'` Имя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа должны быть перечислены посредники. Имя **nvarchar(256)** , значение по умолчанию NULL. Когда *имя* указано, *subsystem_name* также должен быть указан.  
+`[ @name = ] 'name'`Имя входа, для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] которого перечисляются учетные записи-посредники. Имя имеет тип **nvarchar (256)** и значение по умолчанию NULL. Если указано *имя* , необходимо также указать *subsystem_name* .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|Идентификационный номер учетной записи-посредника.|  
-|**name**|**sysname**|Имя учетной записи-посредника.|  
-|**столбец credential_identity**|**sysname**|Имя домена и имя пользователя Microsoft Windows для учетных данных, относящихся к учетной записи-посреднику.|  
-|**включен**|**tinyint**|Указывает, включена ли учетная запись-посредник. { **0** — не включено, **1** = включена}|  
-|**description**|**nvarchar(1024)**|Описание этой учетной записи-посредника.|  
-|**user_sid**|**varbinary(85)**|Идентификатор безопасности Windows для пользователя Windows, соответствующего этой учетной записи-посреднику.|  
+|**name**|**имеет sysname**|Имя учетной записи-посредника.|  
+|**credential_identity**|**имеет sysname**|Имя домена и имя пользователя Microsoft Windows для учетных данных, относящихся к учетной записи-посреднику.|  
+|**доступной**|**tinyint**|Указывает, включена ли учетная запись-посредник. { **0** = не включено, **1** = включено}|  
+|**nописание**|**nvarchar(1024)**|Описание этой учетной записи-посредника.|  
+|**user_sid**|**varbinary (85)**|Идентификатор безопасности Windows для пользователя Windows, соответствующего этой учетной записи-посреднику.|  
 |**credential_id**|**int**|Идентификатор учетных данных, связанных с учетной записью-посредником.|  
 |**credential_identity_exists**|**int**|Указывает, существует ли столбец credential_identity. { 0 = не существует, 1 = существует }|  
   
-## <a name="remarks"></a>Примечания  
- Если параметры не указаны, **sp_help_proxy** выводит сведения для всех учетных записей-посредников в экземпляре.  
+## <a name="remarks"></a>Remarks  
+ Если параметры не указаны, **sp_help_proxy** выводит сведения для всех прокси-серверов в экземпляре.  
   
- Чтобы определить, какие учетные записи-посредники определенное имя входа можно использовать для данной подсистемы, укажите *имя* и *subsystem_name*. Если эти аргументы указаны, **sp_help_proxy** перечислены учетные записи-посредники, имя входа, указанное может доступ и может быть использована для указанной подсистемы.  
+ Чтобы определить, какие прокси-серверы могут использоваться для входа в данную подсистему, укажите *имя* и *subsystem_name*. При указании этих аргументов **sp_help_proxy** перечисляет прокси-серверы, к которым может получить доступ указанное имя входа, которые могут использоваться для указанной подсистемы.  
   
 ## <a name="permissions"></a>Разрешения  
- По умолчанию эту хранимую процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена предопределенная роль базы данных **SQLAgentOperatorRole** в базе данных **msdb** .  
+ По умолчанию эта хранимая процедура может выполняться членами предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена предопределенная роль базы данных **SQLAgentOperatorRole** в базе данных **msdb** .  
   
- Дополнительные сведения о **SQLAgentOperatorRole**, см. в разделе [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
+ Дополнительные сведения о **SQLAgentOperatorRole**см. в разделе [Агент SQL Server предопределенных ролей базы данных](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 > [!NOTE]  
->  **Credential_identity** и **user_sid** столбцы возвращаются только в результирующий набор, когда члены **sysadmin** выполнения этой хранимой процедуры.  
+>  Столбцы **credential_identity** и **user_sid** возвращаются в результирующем наборе только тогда, когда члены **роли sysadmin** выполняют эту хранимую процедуру.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -121,9 +121,9 @@ EXEC dbo.sp_help_proxy
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Агент SQL Server хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [Хранимая процедура sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
+ [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
  [sp_delete_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)  
   
   

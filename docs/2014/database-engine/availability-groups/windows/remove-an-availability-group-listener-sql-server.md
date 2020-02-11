@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 049296ff601296edbd990fe9ea70aef3efa8c44b
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782859"
 ---
 # <a name="remove-an-availability-group-listener-sql-server"></a>Удаление прослушивателя группы доступности (SQL Server)
@@ -30,11 +30,11 @@ ms.locfileid: "72782859"
   
      [Рекомендации](#Recommendations)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
--   **Удаление прослушивателя с помощью**  
+-   **Удаление прослушивателя с помощью:**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Среда SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -46,12 +46,12 @@ ms.locfileid: "72782859"
   
 -   Необходимо подключиться к экземпляру сервера, на котором размещена первичная реплика.  
   
-###  <a name="Recommendations"></a> рекомендации  
+###  <a name="Recommendations"></a> Рекомендации  
  Перед удалением прослушивателя группы доступности рекомендуется убедиться, что он не используется никакими приложениями.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER AVAILABILITY GROUP для группы доступности, разрешение CONTROL AVAILABILITY GROUP, разрешение ALTER ANY AVAILABILITY GROUP или разрешение CONTROL SERVER.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
@@ -67,8 +67,8 @@ ms.locfileid: "72782859"
   
 5.  Откроется диалоговое окно **Удаление прослушивателя из группы доступности** . Дополнительные сведения см. в подразделе [Удаление прослушивателя из группы доступности](#AgListenerPropertiesDialog)далее в этом разделе.  
   
-###  <a name="AgListenerPropertiesDialog"></a> Удаление прослушивателя из группы доступности (диалоговое окно)  
- **Имя**  
+###  <a name="AgListenerPropertiesDialog"></a>Удалить прослушиватель из группы доступности (диалоговое окно)  
+ **Название**  
  Имя удаляемого прослушивателя.  
   
  **Результат**  
@@ -81,7 +81,7 @@ ms.locfileid: "72782859"
   
 2.  Инструкция [ALTER AVAILABILITY GROUP](/sql/t-sql/statements/alter-availability-group-transact-sql) используется следующим образом:  
   
-     ALTER AVAILABILITY GROUP *group_name* удалить прослушиватель **" *`dns_name`* "**  
+     ALTER AVAILABILITY GROUP *group_name* удалить прослушиватель **"*`dns_name`*"**  
   
      где *group_name* — имя группы доступности, а *dns_name* — DNS-имя прослушивателя группы доступности.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "72782859"
     ALTER AVAILABILITY GROUP AccountsAG REMOVE LISTENER 'AccountsAG_Listener';  
     ```  
   
-##  <a name="PowerShellProcedure"></a> Использование PowerShell  
+##  <a name="PowerShellProcedure"></a>Использование PowerShell  
  **Удаление прослушивателя группы доступности**  
   
 1.  Установите значение по умолчанию (`cd`) равным серверу экземпляра, на котором размещена первичная реплика.  
@@ -103,7 +103,7 @@ ms.locfileid: "72782859"
     ```  
   
     > [!NOTE]  
-    >  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом `Get-Help` в среде [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Дополнительные сведения см. в статье [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом `Get-Help` в среде [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
   
@@ -111,6 +111,6 @@ ms.locfileid: "72782859"
   
 -   [Просмотр свойств прослушивателя группы доступности (SQL Server)](view-availability-group-listener-properties-sql-server.md)  
   
-## <a name="see-also"></a>См. также статью  
- [Общие сведения о &#40;группы доступности AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>См. также:  
+ [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](../../listeners-client-connectivity-application-failover.md)  

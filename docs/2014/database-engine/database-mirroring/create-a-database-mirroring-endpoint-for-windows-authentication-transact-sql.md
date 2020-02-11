@@ -17,13 +17,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 43bb7fdd5b9c8cf8a73c423ac21e8ba7f779ec79
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797928"
 ---
-# <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Create a Database Mirroring Endpoint for Windows Authentication (Transact-SQL)
+# <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Создание конечной точки зеркального отображения базы данных с проверкой подлинности Windows (Transact-SQL)
   В этом разделе описывается создание конечной точки зеркального отображения базы данных, использующей проверку подлинности Windows, в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[tsql](../../includes/tsql-md.md)]. Для поддержки зеркального отображения баз данных или [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] , каждому экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] требуется конечная точка зеркального отображения базы данных. На экземпляре сервера может быть только одна конечная точка зеркального отображения базы данных, которой назначен только один порт. Конечная точка зеркального отображения базы данных может использовать любой доступный порт на локальной системе, на которой эта точка создана. Все сеансы зеркального отображения базы данных на экземпляре сервера прослушивают этот порт, и все входящие соединения для зеркального отображения базы данных используют этот порт.  
   
 > [!IMPORTANT]  
@@ -31,20 +31,20 @@ ms.locfileid: "72797928"
   
  **В этом разделе**  
   
--   **Перед началом работы:**  [безопасность](#Security)  
+-   **Перед началом:**  [Безопасность](#Security)  
   
--   **Создание конечной точки зеркального отображения базы данных с помощью следующих средств:**  [Transact-SQL](#TsqlProcedure)  
+-   **Создание конечной точки зеркального отображения базы данных с помощью:**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
  Методы проверки подлинности и шифрования для каждого экземпляра сервера устанавливаются администратором системы.  
   
 > [!IMPORTANT]  
->  Алгоритм RC4 устарел. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Вместо этого рекомендуется использовать алгоритм AES.  
+>  Алгоритм RC4 устарел. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Рекомендуется использовать алгоритм AES.  
   
-####  <a name="Permissions"></a> Разрешения  
- Требуется разрешение CREATE ENDPOINT или членство в предопределенной роли сервера sysadmin. Дополнительные сведения см. в разделе [GRANT, предоставление разрешений конечной точке (Transact-SQL)](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql).  
+####  <a name="Permissions"></a> Permissions  
+ Требуется разрешение CREATE ENDPOINT или членство в предопределенной роли сервера sysadmin. Дополнительные сведения см. в разделе [GRANT, предоставление разрешений на конечную точку (Transact-SQL)](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql).  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
@@ -65,37 +65,37 @@ ms.locfileid: "72797928"
   
 4.  Чтобы создать конечную точку с проверкой подлинности Windows на языке Transact-SQL, выполните инструкцию CREATE ENDPOINT. Эта инструкция выглядит так:  
   
-     CREATE ENDPOINT *\<имя_конечной_точки>*  
+     Создание конечной точки * \<EndpointName>*  
   
      STATE=STARTED  
   
-     AS TCP ( LISTENER_PORT = *\<список_портов_прослушивателя>* )  
+     Как TCP (LISTENER_PORT = * \<листенерпортлист>* )  
   
      ДЛЯ DATABASE_MIRRORING  
   
      (  
   
-     [ AUTHENTICATION = **WINDOWS** [ *\<метод_авторизации>* ]  
+     [Authentication = **Windows** [ * \<аусоризатионмесод>* ]  
   
      ]  
   
-     [ [ **,** ] ENCRYPTION = **REQUIRED**  
+     [ [**,**] ENCRYPTION = **REQUIRED**  
   
-     [ ALGORITHM { *\<алгоритм>* } ]  
+     [Алгоритм { * \<алгоритм>* }]  
   
      ]  
   
-     [ **,** ] ROLE = *\<роль>*  
+     [**,**] Role = * \<роль>*  
   
      )  
   
-     где  
+     , где  
   
-    -   *\<имя_конечной_точки>*  — это уникальное имя для конечной точки зеркального отображения базы данных экземпляра сервера.  
+    -   EndpointName>— уникальное имя для конечной точки зеркального отображения базы данных экземпляра сервера. * \<*  
   
     -   STARTED указывает, что конечная точка должна запуститься и начать ожидать соединения. Обычно конечные точки зеркального отображения базы данных создаются в состоянии STARTED. Можно также начать сеанс в состоянии STOPPED (по умолчанию) или DISABLED.  
   
-    -   *\<<список_портов_прослушивателя>*  — это номер одного порта (*nnnn*), по которому сервер должен прослушивать сообщения зеркального отображения базы данных. Разрешается только протокол TCP; использование другого протокола приведет к ошибке.  
+    -   листенерпортлист>— это один номер порта (*nnnn*), на котором сервер должен прослушивать сообщения зеркального отображения базы данных. * \<* Разрешается только протокол TCP; использование другого протокола приведет к ошибке.  
   
          Номер порта на одном компьютере может использоваться только один раз. Конечная точка зеркального отображения базы данных может использовать любой доступный порт на локальной системе, на которой эта точка создана. Чтобы определить, какие порты в данный момент используются в системе конечными точками протокола TCP, выполните следующую инструкцию Transact-SQL:  
   
@@ -106,7 +106,7 @@ ms.locfileid: "72797928"
         > [!IMPORTANT]  
         >  У каждого экземпляра сервера должен быть один и только один уникальный прослушиваемый порт.  
   
-    -   Для проверки подлинности Windows параметр AUTHENTICATION является необязательным, если не требуется, чтобы в конечной точке использовались только NTLM или Kerberos для проверки подлинности соединений. *\<метод_авторизации>* указывает метод, используемый для проверки подлинности соединений, как один из следующих: NTLM, KERBEROS или NEGOTIATE. Значение по умолчанию NEGOTIATE соответствует тому, что конечная точка будет использовать протокол согласования Windows для выбора NTLM либо Kerberos. Согласование разрешает соединения без проверки подлинности или с ней, в зависимости от уровня проверки подлинности противоположной конечной точки.  
+    -   Для проверки подлинности Windows параметр AUTHENTICATION является необязательным, если не требуется, чтобы в конечной точке использовались только NTLM или Kerberos для проверки подлинности соединений. аусоризатионмесод>указывает метод, используемый для проверки подлинности подключений в одном из следующих: NTLM, Kerberos или Negotiate. * \<* Значение по умолчанию NEGOTIATE соответствует тому, что конечная точка будет использовать протокол согласования Windows для выбора NTLM либо Kerberos. Согласование разрешает соединения без проверки подлинности или с ней, в зависимости от уровня проверки подлинности противоположной конечной точки.  
   
     -   По умолчанию параметр ENCRYPTION имеет значение REQUIRED. Это означает, что все соединения с этой конечной точкой должны использовать шифрование. Однако можно отключить шифрование или сделать его необязательным. Существуют следующие варианты.  
   
@@ -114,30 +114,30 @@ ms.locfileid: "72797928"
         |-----------|----------------|  
         |DISABLED|Указывает на то, что данные, передаваемые через соединение, не будут зашифрованы.|  
         |SUPPORTED|Указывает на то, что данные будут зашифрованы только в случае, если у противоположной конечной точки этот аргумент принял значение SUPPORTED или REQUIRED.|  
-        |REQUIRED|Указывает на то, что данные, передаваемые через соединение, шифруются.|  
+        |ОБЯЗАТЕЛЬНЫЙ ПАРАМЕТР|Указывает на то, что данные, передаваемые через соединение, шифруются.|  
   
          Если конечная точка требует шифрования, у другой конечной точки значением параметра ENCRYPTION может быть SUPPORTED или REQUIRED.  
   
-    -   *\<алгоритм>* предоставляет параметр определения стандартов шифрования для конечной точки. Значение *\<алгоритм>* может указывать один из следующих алгоритмов или сочетание алгоритмов: RC4, AES, AES RC4 или RC4 AES.  
+    -   алгоритм>предоставляет возможность указания стандартов шифрования для конечной точки. * \<* Значение * \<алгоритма>* может быть одним из следующих алгоритмов или сочетанием алгоритмов: RC4, AES, AES RC4 или RC4 AES.  
   
          Алгоритм AES RC4 определяет, что данная конечная точка будет согласовывать алгоритм шифрования, отдавая предпочтение алгоритму AES. Алгоритм RC4 AES определяет, что данная конечная точка будет согласовывать алгоритм шифрования, отдавая предпочтение алгоритму RC4. Если обе конечные точки указывают оба алгоритма, но в разной последовательности, то используется та, которая указана на принимающей стороне.  
   
         > [!NOTE]  
-        >  Алгоритм RC4 устарел. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Вместо этого рекомендуется использовать алгоритм AES.  
+        >  Алгоритм RC4 устарел. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Рекомендуется использовать алгоритм AES.  
   
-    -   *\<роль>* определяет роль или роли, которые может выполнять сервер. Указание параметра ROLE необходимо. Однако роль конечной точки является значимой только для зеркального отображения базы данных. Для [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]роль конечной точки игнорируется.  
+    -   роль>определяет роль или роли, которые может выполнять сервер. * \<* Указание параметра ROLE необходимо. Однако роль конечной точки является значимой только для зеркального отображения базы данных. Для [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]роль конечной точки игнорируется.  
   
          Чтобы сервер мог выполнять одну роль в одном сеансе зеркального отображения базы данных и другую — в другом, укажите ROLE=ALL. Чтобы ограничить роль сервера только участником или следящим, укажите ROLE=PARTNER или ROLE=WITNESS соответственно.  
   
         > [!NOTE]  
-        >  Дополнительные сведения о параметрах зеркального отображения баз данных для различных выпусков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]см. [в разделе функции, поддерживаемые различными Выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+        >  Дополнительные сведения о параметрах зеркального отображения баз данных для различных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]выпусков см. [в разделе функции, поддерживаемые различными выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
-     Полное описание синтаксиса инструкции CREATE ENDPOINT см. в разделе [CREATE ENDPOINT (Transact-SQL)](/sql/t-sql/statements/create-endpoint-transact-sql).  
+     Полное описание синтаксиса инструкции CREATE ENDPOINT см. в разделе [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql).  
   
     > [!NOTE]  
-    >  Чтобы изменить существующую конечную точку, используйте [ALTER ENDPOINT (Transact-SQL)](/sql/t-sql/statements/alter-endpoint-transact-sql).  
+    >  Чтобы изменить существующую конечную точку, используйте [ALTER ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql).  
   
-###  <a name="TsqlExample"></a> Пример. Создание конечных точек для поддержки функции зеркального отображения базы данных (Transact-SQL)  
+###  <a name="TsqlExample"></a>Пример. Создание конечных точек для поддержки зеркального отображения базы данных (Transact-SQL)  
  В следующем примере создаются конечные точки зеркального отображения базы данных для экземпляров сервера по умолчанию на трех разных компьютерах.  
   
 |Роль экземпляра сервера|Имя главного компьютера|  
@@ -181,26 +181,26 @@ GO
 
 ### <a name="to-configure-a-database-mirroring-endpoint"></a>Настройка конечной точки зеркального отображения базы данных
   
--   [Создание конечной точки зеркального отображения базы данных &#40;для группы доступности AlwaysOn SQL Server PowerShell&#41;](../availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
+-   [Создание конечной точки зеркального отображения базы данных для группы доступности AlwaysOn &#40;SQL Server PowerShell&#41;](../availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
   
--   [Использование сертификатов для конечной точки зеркального отображения базы данных (Transact-SQL)](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
+-   [Использование сертификатов для конечной точки зеркального отображения базы данных &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
-    -   [Включение использования сертификатов для исходящих соединений в конечной точке зеркального отображения базы данных (Transact-SQL)](database-mirroring-use-certificates-for-outbound-connections.md)  
+    -   [Разрешить использование сертификатов для исходящих соединений в конечной точке зеркального отображения базы данных &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md)  
   
-    -   [Включение использования сертификатов для входящих соединений в конечной точке зеркального отображения базы данных (Transact-SQL)](database-mirroring-use-certificates-for-inbound-connections.md)  
+    -   [Разрешить использование сертификатов для входящих соединений в конечной точке зеркального отображения базы данных &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-inbound-connections.md)  
   
--   [Указание сетевого адреса сервера (зеркальное отображение базы данных)](specify-a-server-network-address-database-mirroring.md)  
+-   [Укажите сетевой адрес сервера &#40;зеркальное отображение базы данных&#41;](specify-a-server-network-address-database-mirroring.md)  
   
--   [Указание URL-адреса конечной точки при добавлении или изменении реплики доступности (SQL Server)](../availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [Укажите URL-адрес конечной точки при добавлении или изменении &#40;реплики доступности SQL Server&#41;](../availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
  **Просмотр сведений о конечной точке зеркального отображения базы данных**  
   
--   [sys.database_mirroring_endpoints (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)  
+-   [sys. database_mirroring_endpoints &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)  
   
-## <a name="see-also"></a>См. также статью  
- [ALTER ENDPOINT (Transact-SQL)](/sql/t-sql/statements/alter-endpoint-transact-sql)   
+## <a name="see-also"></a>См. также:  
+ [ALTER ENDPOINT &#40;&#41;Transact-SQL](/sql/t-sql/statements/alter-endpoint-transact-sql)   
  [Выбор алгоритма шифрования](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
- [CREATE ENDPOINT (Transact-SQL)](/sql/t-sql/statements/create-endpoint-transact-sql)   
- [Указание сетевого адреса сервера (зеркальное отображение базы данных)](specify-a-server-network-address-database-mirroring.md)   
- [Пример. Настройка зеркального отображения базы данных с помощью проверки подлинности Windows (Transact-SQL)](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)   
- [Конечная точка зеркального отображения базы данных (SQL Server)](the-database-mirroring-endpoint-sql-server.md)  
+ [&#41;создания КОНЕЧНОЙ точки &#40;Transact-SQL](/sql/t-sql/statements/create-endpoint-transact-sql)   
+ [Укажите сетевой адрес сервера &#40;зеркальное отображение базы данных&#41;](specify-a-server-network-address-database-mirroring.md)   
+ [Пример. Настройка зеркального отображения базы данных с помощью проверки подлинности Windows &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)   
+ [SQL Server &#40;конечной точки зеркального отображения базы данных&#41;](the-database-mirroring-endpoint-sql-server.md)  

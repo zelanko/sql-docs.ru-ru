@@ -20,10 +20,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: ca6e7485e85665f06c2410438b902fa0647418ae
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73593751"
 ---
 # <a name="sp_enclave_send_keys-transact-sql"></a>sp_enclave_send_keys (Transact-SQL)
@@ -31,14 +31,14 @@ ms.locfileid: "73593751"
 
 Отправляет ключи шифрования столбцов, определенные в базе данных, в защищенную анклава на стороне сервера, используемую с [Always encrypted с защищенным енклавес](../security/encryption/always-encrypted-enclaves.md).
 
-`sp_enclave_send_keys` только отправляет только те ключи, которые являются анклава и шифруют столбцы, использующие случайное шифрование и имеющие индексы. Для обычного пользовательского запроса драйвер клиента предоставляет анклава с ключами, необходимыми для вычислений в запросе. `sp_enclave_send_keys` отправляет все ключи шифрования столбцов, определенные в базе данных и используемые для индексов зашифрованных столбцов. 
+`sp_enclave_send_keys`отправляются только те ключи, которые являются анклава и шифруют столбцы, использующие случайное шифрование и имеющие индексы. Для обычного пользовательского запроса драйвер клиента предоставляет анклава с ключами, необходимыми для вычислений в запросе. `sp_enclave_send_keys`отправляет все ключи шифрования столбцов, определенные в базе данных и используемые для индексов зашифрованных столбцов. 
 
-`sp_enclave_send_keys` предоставляет простой способ отправки ключей в анклава и заполнения кэша ключей шифрования столбцов для последующих операций индексирования. Используйте `sp_enclave_send_keys`, чтобы включить:
+`sp_enclave_send_keys`предоставляет простой способ отправки ключей в анклава и заполнения кэша ключей шифрования столбцов для последующих операций индексирования. Используйте `sp_enclave_send_keys` , чтобы включить:
 - DBA для перестроения или изменения индексов или статистики по зашифрованным столбцам базы данных, если DBA не имеет доступа к главным ключам столбцов. См. раздел [вызов операций индексирования с использованием кэшированных ключей шифрования столбцов](../security/encryption/always-encrypted-enclaves-create-use-indexes.md#invoke-indexing-operations-using-cached-column-encryption-keys).
-- [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], чтобы завершить восстановление индексов в зашифрованных столбцах. См. раздел [Восстановление базы данных](../security/encryption/always-encrypted-enclaves.md#database-recovery).
+- [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]для завершения восстановления индексов в зашифрованных столбцах. См. раздел [Восстановление базы данных](../security/encryption/always-encrypted-enclaves.md#database-recovery).
 - Приложение, использующее .NET Framework поставщик данных для SQL Server для выполнения групповой загрузки данных в зашифрованные столбцы.
 
-Для успешного вызова `sp_enclave_send_keys`необходимо подключиться к базе данных с помощью Always Encrypted и анклава вычислений, включенных для подключения к базе данных. Кроме того, необходимо иметь доступ к главным ключам столбцов, защищать ключи шифрования столбцов, отправку, а также разрешения на доступ к метаданным ключа Always Encrypted в базе данных. 
+Для успешного вызова `sp_enclave_send_keys`необходимо подключиться к базе данных, используя Always encrypted и вычисления анклава, включенные для подключения к базе данных. Кроме того, необходимо иметь доступ к главным ключам столбцов, защищать ключи шифрования столбцов, отправку, а также разрешения на доступ к метаданным ключа Always Encrypted в базе данных. 
 
 ## <a name="syntax"></a>Синтаксис  
   
@@ -61,7 +61,7 @@ sp_enclave_send_keys
   
 ## <a name="permissions"></a>Разрешения
 
- Требовать разрешения `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` и `VIEW ANY COLUMN MASTER KEY DEFINITION` в базе данных.  
+ Требуются разрешения `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` и `VIEW ANY COLUMN MASTER KEY DEFINITION` в базе данных.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -69,8 +69,8 @@ sp_enclave_send_keys
 EXEC sp_enclave_send_keys;  
 ```
 
-## <a name="see-also"></a>См. также:
-- [Always Encrypted с безопасными анклавами](../security/encryption/always-encrypted-enclaves.md) 
+## <a name="see-also"></a>См. также раздел
+- [Always Encrypted с безопасными анклавами.](../security/encryption/always-encrypted-enclaves.md) 
  
 - [Создание и использование индексов в столбцах с помощью Always Encrypted с Secure енклавес](../security/encryption/always-encrypted-enclaves-create-use-indexes.md)
 

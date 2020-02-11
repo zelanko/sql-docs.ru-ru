@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_partition_stats (Transact-SQL) | Документация Майкрософт
+title: sys. dm_db_partition_stats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 05/31/2019
 ms.prod: sql
@@ -21,52 +21,52 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cb9ab9e3cbf5948e5e832171c179d6daa2c0bc28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68096286"
 ---
-# <a name="sysdmdbpartitionstats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
+# <a name="sysdm_db_partition_stats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Возвращает страницу и сведения о количестве строк для всех секций текущей базы данных.  
   
 > [!NOTE]  
->  Вызывать его из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте имя **sys.dm_pdw_nodes_db_partition_stats**. Partition_id в sys.dm_pdw_nodes_db_partition_stats отличается от partition_id в представлении каталога sys.partitions для хранилища данных SQL Azure.
+>  Чтобы вызвать эту функцию [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] из [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]или, используйте имя **sys. dm_pdw_nodes_db_partition_stats**. Partition_id в sys. dm_pdw_nodes_db_partition_stats отличается от partition_id в представлении каталога sys. partitions для хранилища данных SQL Azure.
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|**partition_id**|**bigint**|Идентификатор секции. Является уникальным в пределах базы данных. Это то же значение, что **partition_id** в **sys.partitions** каталога представление, за исключением хранилище данных SQL Azure.|  
+|**partition_id**|**bigint**|Идентификатор секции. Является уникальным в пределах базы данных. Это то же значение, что и **partition_id** в представлении каталога **sys. partitions** , за исключением хранилища данных SQL Azure.|  
 |**object_id**|**int**|Идентификатор таблицы или индексированного представления, в которое входит данная секция.|  
 |**index_id**|**int**|Идентификатор кучи или индекса, в который входит данная секция.<br /><br /> 0 = куча;<br /><br /> 1 = Кластеризованный индекс.<br /><br /> > 1 = некластеризованный индекс|  
 |**partition_number**|**int**|Номер секции внутри индекса или кучи (нумерация начинается с 1).|  
-|**in_row_data_page_count**|**bigint**|Количество страниц, используемых для хранения данных, содержащихся в строках данной секции. Если секция является частью кучи, то данное значение отображает количество страниц данных в куче. Если секция является частью индекса, то данное значение отображает количество страниц на конечном уровне. (Неконечные страницы сбалансированного дерева не включаются в счетчик.) (Карты распределения индекса) IAM-страницы не включаются в любом случае. Всегда 0 для оптимизированного для памяти xVelocity индекса columnstore.|  
-|**in_row_used_page_count**|**bigint**|Количество страниц, используемых для хранения и управления данными, содержащимися в строках данной секции. Данный счетчик учитывает страницы неконечные сбалансированного дерева, IAM-страниц и все страницы, включенные в **in_row_data_page_count** столбца. Всегда равно 0 для индекса columnstore.|  
+|**in_row_data_page_count**|**bigint**|Количество страниц, используемых для хранения данных, содержащихся в строках данной секции. Если секция является частью кучи, то данное значение отображает количество страниц данных в куче. Если секция является частью индекса, то данное значение отображает количество страниц на конечном уровне. (Неконечные страницы в сбалансированном дереве не учитываются в подсчете.) IAM-страницы (карта распределения индекса) не включаются в оба варианта. Всегда 0 для оптимизированного для памяти xVelocity индекса columnstore.|  
+|**in_row_used_page_count**|**bigint**|Количество страниц, используемых для хранения и управления данными, содержащимися в строках данной секции. В данном случае при подсчете учитываются неконечные страницы сбалансированного дерева, IAM-страницы, а также все страницы, включенные в столбец **in_row_data_page_count**. Всегда равно 0 для индекса columnstore.|  
 |**in_row_reserved_page_count**|**bigint**|Общее количество страниц, зарезервированных для хранения и управления данными в данной секции (учитываются как используемые, так и не используемые страницы). Всегда равно 0 для индекса columnstore.|  
-|**lob_used_page_count**|**bigint**|Количество страниц, используемых для хранения и управления out of row **текст**, **ntext**, **изображение**, **varchar(max)** , **nvarchar (max)** , **varbinary(max)** , и **xml** столбцов в пределах секции. IAM-страницы учитываются.<br /><br /> Количество больших объектов (LOB), используемых для хранения и управления данными индекса columnstore в секции.|  
-|**lob_reserved_page_count**|**bigint**|Общее число страниц, зарезервированных для хранения и управления ими out of row **текст**, **ntext**, **изображение**, **varchar(max)** ,  **nvarchar(max)** , **varbinary(max)** , и **xml** столбцов в пределах секции, учитываются ли используемые страницы используется или нет. IAM-страницы учитываются.<br /><br /> Общее количество больших объектов (LOB), зарезервированных для хранения и управления индексом columnstore в секции.|  
-|**row_overflow_used_page_count**|**bigint**|Количество страниц, используемых для хранения и управления строки, превышающие **varchar**, **nvarchar**, **varbinary**, и **sql_variant** столбцы в разделе. IAM-страницы учитываются.<br /><br /> Всегда равно 0 для индекса columnstore.|  
-|**row_overflow_reserved_page_count**|**bigint**|Общее число страниц, зарезервированных для хранения и управления ими строки, превышающие **varchar**, **nvarchar**, **varbinary**, и **sql_variant** столбцы в пределах секции, учитываются ли используемые страницы используется или нет. IAM-страницы учитываются.<br /><br /> Всегда равно 0 для индекса columnstore.|  
-|**used_page_count**|**bigint**|Общее число страниц, используемых в секции. Вычисляется как **in_row_used_page_count** + **lob_used_page_count** + **row_overflow_used_page_count**.|  
-|**reserved_page_count**|**bigint**|Общее число страниц, зарезервированных в секции. Вычисляется как **in_row_reserved_page_count** + **lob_reserved_page_count** + **row_overflow_reserved_page_count**.|  
+|**lob_used_page_count**|**bigint**|Количество страниц, используемых для хранения и управления данными типа **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** и **xml**, хранящимися вне строк секции. IAM-страницы учитываются.<br /><br /> Количество больших объектов (LOB), используемых для хранения и управления данными индекса columnstore в секции.|  
+|**lob_reserved_page_count**|**bigint**|Общее количество страниц, зарезервированных для хранения и управления данными типа **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** и **xml**, хранящимися вне строк секции (учитываются как используемые, так и не используемые страницы). IAM-страницы учитываются.<br /><br /> Общее количество больших объектов (LOB), зарезервированных для хранения и управления индексом columnstore в секции.|  
+|**row_overflow_used_page_count**|**bigint**|Количество страниц, используемых для хранения и управления данными типа **varchar**, **nvarchar**, **varbinary** и **sql_variant**, хранящимися вне строк секции. IAM-страницы учитываются.<br /><br /> Всегда равно 0 для индекса columnstore.|  
+|**row_overflow_reserved_page_count**|**bigint**|Общее количество страниц, зарезервированных для хранения и управления данными типа **varchar**, **nvarchar**, **varbinary** и **sql_variant**, хранящимися вне строк секции (учитываются как используемые, так и не используемые страницы). IAM-страницы учитываются.<br /><br /> Всегда равно 0 для индекса columnstore.|  
+|**used_page_count**|**bigint**|Общее число страниц, используемых в секции. Вычисляются как **in_row_used_page_count** + **lob_used_page_count** + **row_overflow_used_page_count**.|  
+|**reserved_page_count**|**bigint**|Общее число страниц, зарезервированных в секции. Вычисляются как **in_row_reserved_page_count** + **lob_reserved_page_count** + **row_overflow_reserved_page_count**.|  
 |**row_count**|**bigint**|Приблизительное количество строк в секции.|  
-|**pdw_node_id**|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение является на.|  
-|**distribution_id**|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Уникальный числовой идентификатор, связанная с распределением.|  
+|**pdw_node_id**|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
+|**distribution_id**|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Уникальный числовой идентификатор, связанный с распределением.|  
   
-## <a name="remarks"></a>Примечания  
- **sys.dm_db_partition_stats** отображаются сведения о пространстве, используемом для хранения и управления внутристрочные данные LOB, а данные строки, превышающие для всех секций в базе данных. Для каждой секции отображается одна строка.  
+## <a name="remarks"></a>Remarks  
+ **sys. dm_db_partition_stats** отображает сведения о пространстве, используемом для хранения и управления данными LOB данных в строке, а также данных, превышающих размер строки, для всех секций в базе данных. Для каждой секции отображается одна строка.  
   
  Результаты подсчетов, на которых основаны выходные данные, хранятся в оперативной памяти или записываются в различные таблицы на жестком диске.  
   
- Данные в строках, данные LOB, а также данные строки, превышающие размер страницы, представляют собой три типа единиц распределения, из которых состоит секция. [Sys.allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md) запрос к представлению каталога метаданные по каждой единицы распределения в базе данных.  
+ Данные в строках, данные LOB, а также данные строки, превышающие размер страницы, представляют собой три типа единиц распределения, из которых состоит секция. Из представления каталога [sys.allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md) можно запрашивать метаданные по каждой единице распределения базы данных.  
   
- Если куча или индекс не имеют делений, то они состоят из одной секции (с номером 1); поэтому для каждой такой кучи или индекса возвращается только одна строка. [Sys.partitions](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) запрос к представлению каталога метаданные по каждой секции всех таблиц и индексов в базе данных.  
+ Если куча или индекс не имеют делений, то они состоят из одной секции (с номером 1); поэтому для каждой такой кучи или индекса возвращается только одна строка. Из представления каталога [sys.partitions](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) можно запрашивать метаданные по каждой секции таблиц и индексов базы данных.  
   
  Общее количество секций таблицы или индекса может быть получено путем суммирования результатов для всех секций.  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется разрешение VIEW DATABASE STATE **sys.dm_db_partition_stats** динамическое административное представление. Дополнительные сведения о разрешениях на динамические административные представления, см. в разделе [динамические административные представления и функции &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
+ Для работы с динамическим административным представлением **sys.dm_db_partition_stats** требуется разрешение VIEW DATABASE STATE. Дополнительные сведения о разрешениях для динамических административных представлений см. в разделе [динамические административные представления и функции &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 ## <a name="examples"></a>Примеры  
   
@@ -104,9 +104,9 @@ WHERE object_id=OBJECT_ID('HumanResources.Employee')    AND (index_id=0 or index
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Динамические административные представления, относящиеся к базе данных &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [Динамические административные представления, связанные с базами данных &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   
 

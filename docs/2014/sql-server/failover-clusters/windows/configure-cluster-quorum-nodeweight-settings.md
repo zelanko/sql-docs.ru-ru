@@ -14,22 +14,22 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dfc31fa968952db56a64f93b180c2b88ec685725
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797607"
 ---
 # <a name="configure-cluster-quorum-nodeweight-settings"></a>Настройка параметров NodeWeight кворума кластера
   В этом разделе описан порядок настройки параметров NodeWeight для узла элемента в отказоустойчивом кластере Windows Server (WSFC). Параметры NodeWeight используются при определении голосов в кворуме для поддержки аварийного восстановления и сценариев с несколькими подсетями для экземпляров отказоустойчивого кластера [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
--   **Перед началом:**  [Предварительные требования](#Prerequisites), [Безопасность](#Security)  
+-   **Перед началом работы:**  [Предварительные требования](#Prerequisites), [Безопасность](#Security)  
   
--   **Просмотр параметров NodeWeight кворума с помощью:** [Использование Powershell](#PowerShellProcedure), [Использование Cluster.exe](#CommandPromptProcedure)  
+-   **Просмотр параметров NodeWeight кворума с помощью:** [Использование PowerShell](#PowerShellProcedure)с [помощью программы Cluster. exe](#CommandPromptProcedure)  
   
--   [См. также](#RelatedContent)  
+-   [Связанное содержимое](#RelatedContent)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом работы  
+##  <a name="BeforeYouBegin"></a>Перед началом работы  
   
 ###  <a name="Prerequisites"></a> Предварительные требования  
  Эта функция поддерживается только в [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] или более поздних версиях.  
@@ -37,15 +37,15 @@ ms.locfileid: "72797607"
 > [!IMPORTANT]  
 >  Для использования параметров NodeWeight необходимо применить следующее исправление ко всем серверам в кластере WSFC:  
 >   
->  [KB2494036](https://support.microsoft.com/kb/2494036): доступно исправление, позволяющее настраивать узел кластера, не имеющий голосов кворума в [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] и в [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
+>  [KB2494036](https://support.microsoft.com/kb/2494036). доступно исправление, позволяющее настроить узел кластера, не имеющий голоса кворума в [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] и в[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
   
 > [!TIP]  
 >  Если это исправление не установлено, то в примерах этого раздела будут возвращены пустые значения или значения NULL для NodeWeight.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
  Пользователь должен входить в учетную запись домена, которая является членом локальной группы администраторов, на каждом узле кластера WSFC.  
   
-##  <a name="PowerShellProcedure"></a> Использование Powershell  
+##  <a name="PowerShellProcedure"></a>Использование PowerShell  
   
 ### <a name="to-configure-nodeweight-settings"></a>Настройка параметров NodeWeight
   
@@ -71,7 +71,7 @@ $nodes = Get-ClusterNode -Cluster $cluster
 $nodes | Format-Table -property NodeName, State, NodeWeight  
 ```  
   
-##  <a name="CommandPromptProcedure"></a> Использование Cluster.exe  
+##  <a name="CommandPromptProcedure"></a>Использование Cluster. exe  
   
 > [!NOTE]  
 >  Программа cluster.exe является устаревшей в выпуске [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] .  Для будущих разработок используйте PowerShell с отказоустойчивым кластером.  Программа cluster.exe будет удалена в следующем выпуске Windows Server. Дополнительные сведения см. в разделе [Сопоставление команд Cluster.exe с командлетами Windows PowerShell для отказоустойчивых кластеров](https://technet.microsoft.com/library/ee619744\(WS.10\).aspx).  
@@ -92,9 +92,9 @@ cluster.exe Cluster001 node AlwaysOnSrv1 /prop NodeWeight=0
   
 -   [Просмотр событий и журналов для отказоустойчивого кластера](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
--   [Командлет Get-ClusterLog отказоустойчивого кластера](https://technet.microsoft.com/library/ee461045.aspx)  
+-   [Командлет Get-ClusterLog для отказоустойчивого кластера](https://technet.microsoft.com/library/ee461045.aspx)  
   
-## <a name="see-also"></a>См. также статью  
- [Режим кворума и участвующая в голосовании конфигурация WSFC (SQL Server)](wsfc-quorum-modes-and-voting-configuration-sql-server.md)   
+## <a name="see-also"></a>См. также:  
+ [Режимы кворума WSFC и &#40;настройки голосования SQL Server&#41;](wsfc-quorum-modes-and-voting-configuration-sql-server.md)   
  [Просмотр параметров NodeWeight кворума кластера](view-cluster-quorum-nodeweight-settings.md)   
- [Командлеты отказоустойчивого кластера в Windows PowerShell по выполняемым задачам](https://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  
+ [Командлеты отказоустойчивого кластера в Windows PowerShell, перечисленные в фокусе задач](https://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 723d481bc858d7d1db4a63cbb32ab5614eddbb55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097172"
 ---
 # <a name="using-logical-functions"></a>Использование логических функций
@@ -20,9 +20,9 @@ ms.locfileid: "68097172"
 
   Логическая функция выполняет логическую операцию или сравнение объектов и выражений, результатом вычисления логической функции будет логическое значение. В многомерных выражениях логические функции крайне важны для определения положения элементов.  
   
- Наиболее часто используемые Логическая функция — это **IsEmpty** функции. Дополнительные сведения об использовании **IsEmpty** функции, см. в разделе [работа с пустыми значениями](../mdx/working-with-empty-values.md).  
+ Наиболее часто используемой логической функцией является функция **IsEmpty** . Дополнительные сведения об **использовании функции IsEmpty см. в разделе** [Работа с пустыми значениями](../mdx/working-with-empty-values.md).  
   
- Следующий запрос показывает, как использовать **IsLeaf** и **IsAncestor** функции:  
+ В следующем запросе показано, как использовать функции **листьев** и **ancestor** .  
   
  `WITH`  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68097172"
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>См. также  
- [Функции &#40;синтаксис многомерных Выражений&#41;](../mdx/functions-mdx-syntax.md)  
+## <a name="see-also"></a>См. также:  
+ [Функции &#40;синтаксиса многомерных выражений&#41;](../mdx/functions-mdx-syntax.md)  
   
   

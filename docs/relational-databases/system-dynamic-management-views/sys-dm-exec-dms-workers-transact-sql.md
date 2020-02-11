@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6fd005563251ba674449020c7af25ce20ea98b4a
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73532941"
 ---
 # <a name="sysdm_exec_dms_workers-transact-sql"></a>sys. dm_exec_dms_workers (Transact-SQL)
@@ -36,14 +36,14 @@ ms.locfileid: "73532941"
   
  В этом представлении отображаются данные за последние 1000 запросов и активных запросов. Активные запросы всегда имеют данные, представленные в этом представлении.  
   
-|Column Name|Тип данных|Описание|Диапазон|  
+|Имя столбца|Тип данных|Description|Диапазонный индекс|  
 |-----------------|---------------|-----------------|-----------|  
 |execution_id|`nvarchar(32)`|Запрос, частью которого является эта Рабочая роль DMS. request_id, step_index и dms_step_index формируют ключ для этого представления.||  
-|step_index|`int`|Шаг запроса, частью которого является Рабочая роль DMS.|См. раздел индекс шага в [sys &#40;. DM_EXEC_DISTRIBUTED_REQUEST_STEPS Transact&#41;-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md).|  
+|step_index|`int`|Шаг запроса, частью которого является Рабочая роль DMS.|См. раздел индекс шага в [sys. dm_exec_distributed_request_steps &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md).|  
 |dms_step_index|`int`|Шаг в плане DMS, в котором выполняется этот рабочий процесс.|См [. раздел sys. dm_exec_dms_workers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
-|compute_node_id|`int`|Узел, на котором запущена Рабочая роль.|См. раздел [sys &#40;. DM_EXEC_COMPUTE_NODES Transact&#41;-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
+|compute_node_id|`int`|Узел, на котором запущена Рабочая роль.|См. раздел [sys. dm_exec_compute_nodes &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
 |distribution_id|`int`|||  
-|Тип|`nvarcha(32)`|||  
+|type|`nvarcha(32)`|||  
 |status|`nvarchar(32)`|Состояние этого шага|"Pending", "работает", "Complete", "Failed", "Ундофаилед", "Пендингканцел", "recommit", "Undone", "Abortd"|  
 |bytes_per_sec|`bigint`|||  
 |bytes_processed|`bigint`|||  
@@ -62,9 +62,9 @@ ms.locfileid: "73532941"
 |command|`nvarchar(4000)`|||
 |compute_pool_id|`int`|Уникальный идентификатор пула.|
 
-## <a name="see-also"></a>См. также статью  
- [Устранение неполадок в polybase с помощью динамических административных представлений](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+## <a name="see-also"></a>См. также:  
+ [Устранение неполадок в Polybase с помощью динамических административных представлений](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Динамические административные представления &#40;, связанные с базами данных TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [Динамические административные представления, связанные с базами данных &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

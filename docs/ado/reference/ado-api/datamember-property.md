@@ -16,24 +16,24 @@ ms.assetid: 2c8fb09e-10ad-49b5-ab41-2603771780d9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 623f9b1f1e8873ddc4819bb8500c11edf09f5f76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919221"
 ---
 # <a name="datamember-property"></a>Свойство DataMember
-Указывает имя элемента данных, которые будут извлечены из [записей](../../../ado/reference/ado-api/recordset-object-ado.md) ссылается [DataSource](../../../ado/reference/ado-api/datasource-property-ado.md) свойство.  
+Указывает имя элемента данных, который будет извлечен из [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) , на который ссылается свойство [DataSource](../../../ado/reference/ado-api/datasource-property-ado.md) .  
   
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
- Возвращает или задает **строка** значение. Имя не учитывается регистр.  
+ Задает или возвращает **строковое** значение. Имя не учитывает регистр.  
   
-## <a name="remarks"></a>Примечания  
- Это свойство используется для создания элементов управления с привязкой данных в среде данных. Поддерживает среду данных наборами данных (источники данных), содержащий именованные объекты (члены данных), на которые будет представлена в виде [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта.  
+## <a name="remarks"></a>Remarks  
+ Это свойство используется для создания элементов управления с привязкой к данным в среде данных. Среда данных хранит коллекции данных (источники данных), содержащие именованные объекты (элементы данных), которые будут представлены в виде объекта [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) .  
   
- **DataMember** и **DataSource** свойства, которые должны использоваться совместно.  
+ Свойства **DataMember** и **DataSource** должны использоваться вместе.  
   
- **DataMember** свойство определяет, какой объект, указанный параметром **DataSource** свойство будет представлена в виде **записей** объекта. **Записей** объект должен быть закрыт, прежде чем это свойство имеет значение. Ошибка создается в том случае, если **DataMember** свойство не задано до **DataSource** свойство, или если **DataMember** имя не распознается средой объекта, указанного в **DataSource** свойство.  
+ Свойство **DataMember** определяет, какой объект, заданный свойством **DataSource** , будет представлен как объект **набора записей** . Перед установкой этого свойства объект **набора записей** должен быть закрыт. Если свойство **DataMember** не задано перед свойством **DataSource** или если имя **DataMember** не распознается объектом, указанным в свойстве **DataSource** , возникает ошибка.  
   
 ## <a name="usage"></a>Использование  
   
@@ -43,8 +43,8 @@ rs.DataMember = "Command"     'Name of the rowset to bind to
 Set rs.DataSource = myDE      'Name of the object containing an IRowset  
 ```  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство DataSource (ADO)](../../../ado/reference/ado-api/datasource-property-ado.md)

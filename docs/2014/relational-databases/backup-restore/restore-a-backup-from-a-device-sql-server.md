@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4834a25b9100a37e027d8174897d86655c3690d1
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70154744"
 ---
 # <a name="restore-a-backup-from-a-device-sql-server"></a>Восстановление резервной копии с устройства (SQL Server)
@@ -32,19 +32,19 @@ ms.locfileid: "70154744"
   
 -   **Перед началом работы**  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Восстановление резервной копии с устройства с помощью:**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Среда SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Если восстанавливаемая база данных не существуют, для выполнения инструкции RESTORE у пользователя должны быть разрешения CREATE DATABASE. Если база данных существует, разрешения на выполнение инструкции RESTORE по умолчанию предоставлены членам предопределенных ролей сервера **sysadmin** и **dbcreator** , а также владельцу базы данных (**dbo**) (для параметра FROM DATABASE_SNAPSHOT база данных всегда существует).  
   
  Разрешения на выполнение инструкции RESTORE даются ролям, в которых данные о членстве всегда доступны серверу. Так как членство в предопределенной роли базы данных может быть проверено только тогда, когда база данных доступна и не повреждена, что не всегда имеет место при выполнении инструкции RESTORE, члены предопределенной роли базы данных **db_owner** не имеют разрешений RESTORE.  
@@ -53,11 +53,11 @@ ms.locfileid: "70154744"
   
 #### <a name="to-restore-a-backup-from-a-device"></a>Восстановление резервной копии с устройства  
   
-1.  После соединения с соответствующим экземпляром компонента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]в обозревателе объектов разверните дерево сервера, щелкнув его имя.  
+1.  После подключения к соответствующему экземпляру [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] в обозревателе объектов разверните дерево сервера, щелкнув его имя.  
   
 2.  Раскройте узел **Базы данных**и в зависимости от типа восстанавливаемой базы данных выберите пользовательскую базу данных или раскройте узел **Системные базы данных** и выберите системную базу данных.  
   
-3.  Щелкните правой кнопкой мыши базу данных, укажите на пункт **Задачи**и выберите **Восстановить**.  
+3.  Щелкните правой кнопкой мыши базу данных, укажите на пункт **Задачи**и щелкните **Восстановить**.  
   
 4.  Выберите нужный тип операции восстановления (**База данных**, **Файлы и файловые группы**или **Журнал транзакций**). Откроется соответствующее диалоговое окно.  
   
@@ -85,16 +85,16 @@ RESTORE DATABASE AdventureWorks2012
   
 ```  
   
-## <a name="see-also"></a>См. также статью  
- [RESTORE FILELISTONLY (Transact-SQL)](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)   
+## <a name="see-also"></a>См. также:  
+ [Инструкция RESTORE FILELISTONLY (Transact-SQL)](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)   
  [RESTORE HEADERONLY (Transact-SQL)](/sql/t-sql/statements/restore-statements-headeronly-transact-sql)   
  [RESTORE LABELONLY (Transact-SQL)](/sql/t-sql/statements/restore-statements-labelonly-transact-sql)   
  [RESTORE VERIFYONLY (Transact-SQL)](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql)   
  [Восстановление резервной копии базы данных в простой модели восстановления (Transact-SQL)](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)   
- [Восстановление SQL Server Management Studio&#41; резервной &#40;копии базы данных](restore-a-database-backup-using-ssms.md)   
+ [Восстановление резервной копии базы данных &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)   
  [Восстановление разностной резервной копии базы данных (SQL Server)](restore-a-differential-database-backup-sql-server.md)   
- [Восстановление базы данных в новом расположении (SQL Server)](restore-a-database-to-a-new-location-sql-server.md)   
- [Резервное копирование файлов и файловых групп (SQL Server)](back-up-files-and-filegroups-sql-server.md)   
+ [Восстановление базы данных в новое место (SQL Server)](restore-a-database-to-a-new-location-sql-server.md)   
+ [Создание резервных копий файлов и файловых групп (SQL Server)](back-up-files-and-filegroups-sql-server.md)   
  [Создание резервной копии журнала транзакций (SQL Server)](back-up-a-transaction-log-sql-server.md)   
  [Создание разностной резервной копии базы данных (SQL Server)](create-a-differential-database-backup-sql-server.md)  
   

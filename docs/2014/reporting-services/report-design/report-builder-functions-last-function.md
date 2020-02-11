@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fcaad5c420af766d6c43bd5d57adeb6ce444257f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105254"
 ---
 # <a name="last-function-report-builder-and-ssrs"></a>Функция Last (построитель отчетов и службы SSRS)
@@ -40,7 +40,7 @@ Last(expression, scope)
 ## <a name="return-type"></a>Тип возвращаемых данных  
  Определяется типом выражения.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Функция `Last` возвращает конечное значение в набор данных после сортировки и фильтрации, примененных к заданной области.  
   
  Функция `Last` не может использоваться в критериях фильтра группирования с какой-либо областью, кроме текущей области (по умолчанию).  
@@ -55,7 +55,7 @@ Last(expression, scope)
   
 -   Параметр*Scope* для вложенных агрегатов не может быть именем набора данных.  
   
--   *Выражение* не может содержать `First`, `Last`, `Previous`, или `RunningValue` функции.  
+-   *Выражение* не должно содержать `First`функции `Last`, `Previous`, или `RunningValue` .  
   
 -   *Expression* не может содержать вложенные агрегаты, в которых указан параметр *recursive*.  
   
@@ -70,7 +70,7 @@ Last(expression, scope)
 =Last(Fields!ProductNumber.Value, "Category")  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование выражений в отчетах (построитель отчетов и службы SSRS)](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [Типы данных в выражениях (построитель отчетов и службы SSRS)](expressions-report-builder-and-ssrs.md)   

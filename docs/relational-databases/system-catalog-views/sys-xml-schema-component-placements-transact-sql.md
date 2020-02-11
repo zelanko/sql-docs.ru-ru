@@ -1,5 +1,5 @@
 ---
-title: sys.xml_schema_component_placements (Transact-SQL) | Документация Майкрософт
+title: sys. xml_schema_component_placements (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,18 +20,18 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 0bab2cda409d5715e1f6b5519e1b760eb1cad9c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68103373"
 ---
-# <a name="sysxmlschemacomponentplacements-transact-sql"></a>sys.xml_schema_component_placements (Transact-SQL)
+# <a name="sysxml_schema_component_placements-transact-sql"></a>sys.xml_schema_component_placements (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Возвращает по одной строке на размещение для компонентов схемы XML.  
    
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |**xml_component_id**|**int**|Идентификатор компонента схемы XML, который является владельцем этого размещения.|  
 |**placement_id**|**int**|Идентификатор размещения. Идентификатор уникален относительно своего владельца, компонента XML-схемы.|  
@@ -42,10 +42,10 @@ ms.locfileid: "68103373"
 |**default_value**|**nvarchar (4000)**|Значение по умолчанию, если оно предоставляется. Если значение по умолчанию не задано, то значение равно NULL.|  
   
 ## <a name="permissions"></a>Разрешения  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Дополнительные сведения см. в разделе [Настройка видимости метаданных](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [XML-схем &#40;системой типов XML&#41; представления каталога &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
+ [Схемы XML &#40;представления каталога системы типов XML&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
   
   

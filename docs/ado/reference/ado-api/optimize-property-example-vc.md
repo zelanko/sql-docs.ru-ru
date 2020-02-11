@@ -1,5 +1,5 @@
 ---
-title: Оптимизация пример свойства (Visual C++) | Документация Майкрософт
+title: Пример свойства optimize (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: cb335455-b027-4f66-868d-d0d8b2175de1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5000a537e068136de98e8635f348ff6aa3d9e364
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931830"
 ---
 # <a name="optimize-property-example-vc"></a>Пример свойства Optimize (Visual C++)
-В этом примере показано [поле](../../../ado/reference/ado-api/field-object.md) динамический объект **оптимизировать** свойство. **Zip** поле **авторов** в таблицу **Pubs** базы данных не индексируется. Установка [оптимизировать](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) свойства **True** на **zip** поле авторизует ADO для создания индекса, который повышает производительность [найти](../../../ado/reference/ado-api/find-method-ado.md)метод.  
+В этом примере демонстрируется динамическое свойство **optimize** объекта [field](../../../ado/reference/ado-api/field-object.md) . Поле **ZIP** таблицы **authors** в базе данных **pubs** не индексируется. Присвоение свойству [optimize](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) значения **true** в поле **ZIP** разрешает ADO создавать индексы, повышающие производительность метода [Find](../../../ado/reference/ado-api/find-method-ado.md) .  
   
 ## <a name="example"></a>Пример  
   
@@ -132,7 +132,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **Akiko Yokomoto компьютерной телефонии Silver 3 ЦС Walnut крик**   
-## <a name="see-also"></a>См. также  
- [Объект field](../../../ado/reference/ado-api/field-object.md)   
+ **Акико Йокомото 3 серебро CT. Валнут Крик CA**   
+## <a name="see-also"></a>См. также:  
+ [Объект Field](../../../ado/reference/ado-api/field-object.md)   
  [Свойство Optimize (динамическое) (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)

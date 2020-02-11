@@ -16,22 +16,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a00b07bb54d30d4e1db49cf2db70dec8286b27e0
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798294"
 ---
 # <a name="create-a-schedule"></a>Создание расписания
   Расписание для заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] вы можете создать с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или управляющих объектов SQL Server.  
   
--   **Перед началом:**  
+-   **Перед началом работы**  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Для создания расписания используется:**  
   
-     [Среда Среда SQL Server Management Studio](#SSMS)  
+     [Среда SQL Server Management Studio](#SSMS)  
   
      [Transact-SQL](#TSQL)  
   
@@ -62,13 +62,13 @@ ms.locfileid: "72798294"
   
     -   Если необходимо периодическое выполнение расписания, выберите пункт **Повторяющееся задание**. Затем в диалоговом окне заполните группы **Частота**, **Сколько раз в день**и **Продолжительность** .  
   
-    -   Если планируется однократное выполнение, выберите **Один раз**. Для установки расписания **Один раз** заполните в диалоговом окне группу **Однократное выполнение** .  
+    -   Если планируется однократное выполнение, выберите **Один раз**. Для установки расписания **Один раз** заполните в диалоговом окне группу **Однократное выполнение**.  
   
 ##  <a name="TSQL"></a> Использование Transact-SQL  
   
 #### <a name="to-create-a-schedule"></a>Создание расписания  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "72798294"
     GO  
     ```  
   
- Дополнительные сведения см. в [разделе &#40;SP_ADD_SCHEDULE Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql).  
+ Дополнительные сведения см. в разделе [sp_add_schedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql).  
   
 ##  <a name="SMO"></a>Использование управляющие объекты SQL Server  
  **Создание расписания**  

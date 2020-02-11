@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ce1e3a2088214c222cd2c2e84fc333f4993b7a6b
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797809"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>Перемещение путей SQL Server PowerShell
@@ -25,7 +25,7 @@ ms.locfileid: "72797809"
   
  Поставщик [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] реализует подмножество командлетов поставщика, приведенных в следующей таблице.  
   
-|Командлет|Канонический псевдоним|Псевдоним командной строки|Псевдоним оболочки UNIX|Описание|  
+|командлет|Канонический псевдоним|Псевдоним командной строки|Псевдоним оболочки UNIX|Description|  
 |------------|---------------------|---------------|----------------------|-----------------|  
 |**Get-Location**|**gl**|**pwd**|**pwd**|Возвращает текущий узел.|  
 |`Set-Location`|**sl**|**cd, chdir**|**cd, chdir**|Изменяет текущий узел.|  
@@ -130,7 +130,7 @@ New-PSDrive -Name AWDB -Root SQLSERVER:\SQL\localhost\DEFAULT\Databases\Adventur
 Set-Location AWDB:\Tables\Purchasing.Vendor  
 ```  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
  [SQL Server PowerShell, поставщик](sql-server-powershell-provider.md)   
  [Работа с  путями SQL Server PowerShell](work-with-sql-server-powershell-paths.md)   
  [Преобразование универсальных имен ресурса в пути поставщика SQL Server](../database-engine/convert-urns-to-sql-server-provider-paths.md)   

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: 09f5a26493600fd346192f6ba7ebbc73ea7ed184
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73536218"
 ---
 # <a name="sp_configure-transact-sql"></a>sp_configure (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "73536218"
   Отображает или изменяет глобальные параметры конфигурации текущего сервера.
 
 > [!NOTE]  
-> Сведения о параметрах конфигурации уровня базы данных см. в разделе [ALTER &#40;Database scoped&#41;Configuration Transact-SQL](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). Сведения о настройке программной архитектуры NUMA см. в разделе [Soft-numa &#40;&#41;SQL Server](../../database-engine/configure-windows/soft-numa-sql-server.md).  
+> Сведения о параметрах конфигурации уровня базы данных см. в разделе [ALTER DATABASE scoped configuration &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). Сведения о настройке программной архитектуры NUMA см. в разделе [Soft-numa &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -60,29 +60,29 @@ RECONFIGURE
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @configname = ] 'option_name'` — имя параметра конфигурации. Аргумент*option_name* имеет тип **varchar(35)** , значение по умолчанию — NULL. Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] распознает любую уникальную строку, являющуюся частью имени конфигурации. Если этот параметр отсутствует, возвращается список всех параметров.  
+`[ @configname = ] 'option_name'`Имя параметра конфигурации. *option_name* имеет тип **varchar (35)** и значение по умолчанию NULL. Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] распознает любую уникальную строку, являющуюся частью имени конфигурации. Если этот параметр отсутствует, возвращается список всех параметров.  
   
- Сведения о доступных параметрах конфигурации и их параметрах см. в разделе [Параметры &#40;конфигурации&#41;сервера SQL Server](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
+ Сведения о доступных параметрах конфигурации и их параметрах см. в разделе [Параметры конфигурации сервера &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
-`[ @configvalue = ] 'value'` — это новый параметр конфигурации. Аргумент*value* имеет тип **int**и значение по умолчанию NULL. Максимальное значение зависит от конкретного параметра.  
+`[ @configvalue = ] 'value'`— Это новый параметр конфигурации. *значение* имеет **тип int**и значение по умолчанию NULL. Максимальное значение зависит от конкретного параметра.  
   
  Чтобы увидеть максимальное значение для каждого параметра, см. столбец **Максимальное** в представлении каталога **sys. Configurations** .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или 1 (неуспешное завершение)  
+ 0 (успех) или 1 (сбой).  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  При выполнении без параметров **sp_configure** возвращает результирующий набор с пятью столбцами и упорядочивает параметры в алфавитном порядке по возрастанию, как показано в следующей таблице.  
   
  Значения для **config_value** и **run_value** не эквивалентны автоматически. После обновления параметра конфигурации с помощью **sp_configure**системный администратор должен обновить значение выполняющейся конфигурации с помощью перенастройки или повторной настройки с переопределением. Дополнительные сведения см. в разделе «Примечания».  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|**name**|**nvarchar(35)**|Имя параметра конфигурации.|  
-|**minimum**|**int**|Минимальное значение параметра конфигурации.|  
+|**name**|**nvarchar (35)**|Имя параметра конфигурации.|  
+|**минимальное**|**int**|Минимальное значение параметра конфигурации.|  
 |**maximum**|**int**|Максимальное значение параметра конфигурации.|  
-|**config_value**|**int**|Значение, для которого параметр конфигурации был задан с помощью **sp_configure** (значение в **sys. Configurations. Value**). Дополнительные сведения об этих параметрах см. в разделе [Параметры &#40;конфигурации&#41; сервера SQL Server](../../database-engine/configure-windows/server-configuration-options-sql-server.md) и [sys &#40;. Configurations&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
-|**run_value**|**int**|Текущее значение параметра конфигурации (значение в **sys. Configurations. value_in_use**).<br /><br /> Дополнительные сведения см. в разделе [sys. &#40;Configurations Transact&#41;-SQL](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
+|**config_value**|**int**|Значение, для которого параметр конфигурации был задан с помощью **sp_configure** (значение в **sys. Configurations. Value**). Дополнительные сведения об этих параметрах см. в разделе [Параметры конфигурации сервера &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md) и [sys. Configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
+|**run_value**|**int**|Текущее значение параметра конфигурации (значение в **sys. Configurations. value_in_use**).<br /><br /> Дополнительные сведения см. в разделе [sys. configurations &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
   
 ## <a name="remarks"></a>Remarks  
  Используйте **sp_configure** для просмотра или изменения параметров серверного уровня. Для изменения параметров уровня базы данных используйте инструкцию ALTER DATABASE. Для изменения параметров, влияющих только на сеанс текущего пользователя, используйте инструкцию SET.  
@@ -99,21 +99,21 @@ RECONFIGURE
 > [!CAUTION]  
 > Недопустимое значение параметра может отрицательно сказаться на конфигурации экземпляра сервера. Поэтому использовать инструкцию RECONFIGURE WITH OVERRIDE следует с осторожностью.  
   
- Инструкция RECONFIGURE выполняет динамическое обновление некоторых параметров; для обновления других параметров необходимо остановить и перезапустить сервер. Например, параметры **min server memory** и **max server memory** Server динамически обновляются в [!INCLUDE[ssDE](../../includes/ssde-md.md)]; Поэтому их можно изменить без перезапуска сервера. В отличие от этого, для повторной настройки значения, выполняемого для параметра **fill factor** , необходимо перезапустить [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ Инструкция RECONFIGURE выполняет динамическое обновление некоторых параметров; для обновления других параметров необходимо остановить и перезапустить сервер. Например, параметры **min server memory** и **max server memory** Server динамически обновляются в [!INCLUDE[ssDE](../../includes/ssde-md.md)]; Поэтому их можно изменить без перезапуска сервера. В отличие от этого, для повторной настройки значения, выполняемого для параметра **Коэффициент заполнения** , [!INCLUDE[ssDE](../../includes/ssde-md.md)]необходимо перезапустить.  
   
- После выполнения команды "изменить конфигурацию" в конфигурации можно увидеть, что параметр был динамически обновлен путем выполнения **sp_configure "***option_name***"** . Значения в столбцах **run_value** и **config_value** должны соответствовать динамически обновляемым параметрам. Можно также проверить, какие параметры являются динамическими, просмотрев столбец **is_dynamic** представления каталога **sys. Configurations** .  
+ После выполнения команды "изменить конфигурацию" в конфигурации можно увидеть, что параметр был динамически обновлен путем выполнения **sp_configure "***option_name***"**. Значения в столбцах **run_value** и **config_value** должны соответствовать динамически обновляемым параметрам. Можно также проверить, какие параметры являются динамическими, просмотрев столбец **is_dynamic** представления каталога **sys. Configurations** .  
  
  Это изменение также записывается в SQL Server журнал ошибок.
   
 > [!NOTE]  
->  Если указанное *значение* слишком велико для параметра, то столбец **run_value** отражает тот факт, что [!INCLUDE[ssDE](../../includes/ssde-md.md)] по умолчанию использует динамическую память вместо недопустимого параметра.  
+>  Если указанное *значение* слишком велико для параметра, то столбец **run_value** отражает тот факт, что по умолчанию [!INCLUDE[ssDE](../../includes/ssde-md.md)] использует динамическую память, а не недопустимый параметр.  
   
- Дополнительные сведения см. в разделе [Повторная настройка &#40;Transact&#41;-SQL](../../t-sql/language-elements/reconfigure-transact-sql.md).  
+ Дополнительные сведения см. в статье [перенастройка &#40;&#41;Transact-SQL ](../../t-sql/language-elements/reconfigure-transact-sql.md).  
   
 ## <a name="advanced-options"></a>Дополнительные параметры  
  Некоторые параметры конфигурации, такие как **маска сходства** и **интервал восстановления**, обозначены как дополнительные параметры. По умолчанию эти параметры недоступны для просмотра и изменения. Чтобы сделать их доступными, установите для параметра конфигурации **шовадванцедоптионс** значение 1.  
   
- Дополнительные сведения о параметрах конфигурации и их параметрах см. в разделе [Параметры &#40;конфигурации&#41;сервера SQL Server](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
+ Дополнительные сведения о параметрах конфигурации и их параметрах см. в разделе [Параметры конфигурации сервера &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
 ## <a name="permissions"></a>Разрешения  
  Разрешения на выполнение хранимой процедуры **sp_configure** без параметров или только с первым параметром по умолчанию предоставляются всем пользователям. Чтобы выполнить **sp_configure** с обоими параметрами для изменения параметра конфигурации или выполнения инструкции RECONFIGURE, необходимо обладать разрешением ALTER SETTINGS на уровне сервера. Разрешение ALTER SETTINGS неявным образом предоставлено предопределенным ролям сервера **sysadmin** и **serveradmin** .  
@@ -138,7 +138,7 @@ RECONFIGURE;
 EXEC sp_configure;  
 ```  
   
-### <a name="b-changing-a-configuration-option"></a>б. Изменение параметра конфигурации  
+### <a name="b-changing-a-configuration-option"></a>Б. Изменение параметра конфигурации  
  В следующем примере системный параметр `recovery interval` устанавливается в `3` минуты.  
   
 ```sql  
@@ -157,7 +157,8 @@ RECONFIGURE WITH OVERRIDE;
 EXEC sp_configure;  
 ```  
   
- В результате возвращается имя параметра, за которым следуют его минимальное и максимальное значения. **Config_value** — это значение, которое [!INCLUDE[ssDW](../../includes/ssdw-md.md)] будет использовать после завершения перенастройки. **run_value** — это значение, которое используется в настоящий момент. Значения **config_value** и **run_value** , как правило, совпадают, если не находятся в процессе изменения.  
+ В результате возвращается имя параметра, за которым следуют его минимальное и максимальное значения. **Config_value** — это значение, которое [!INCLUDE[ssDW](../../includes/ssdw-md.md)] будет использоваться после завершения перенастройки. 
+  **run_value** — это значение, которое используется в настоящий момент. Значения **config_value** и **run_value** , как правило, совпадают, если не находятся в процессе изменения.  
   
 ### <a name="d-list-the-configuration-settings-for-one-configuration-name"></a>Г. Список параметров конфигурации для одного имени конфигурации.  
   
@@ -166,16 +167,16 @@ EXEC sp_configure @configname='hadoop connectivity';
 ```  
   
 ### <a name="e-set-hadoop-connectivity"></a>Д. Установка подключения к Hadoop.  
- Настройка подключения Hadoop требует выполнения еще нескольких действий в дополнение к запуску sp_configure. Полную процедуру см. в разделе [Создание внешнего источника &#40;данных Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md).  
+ Настройка подключения Hadoop требует выполнения еще нескольких действий в дополнение к запуску sp_configure. Полную процедуру см. в разделе [Создание внешнего источника данных &#40;&#41;Transact-SQL ](../../t-sql/statements/create-external-data-source-transact-sql.md).  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
  [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)   
- [Инструкции SET (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
+ [Инструкции SET &#40;&#41;Transact-SQL](../../t-sql/statements/set-statements-transact-sql.md)   
  [Параметры конфигурации сервера (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
- [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sys.configurations (Transact-SQL)](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
- [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)   
- [Архитектура Soft-NUMA (SQL Server)](../../database-engine/configure-windows/soft-numa-sql-server.md)  
+ [&#41;Transact-SQL ALTER DATABASE &#40;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [sys. Configurations &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
+ [ИЗМЕНЕНИЕ конфигурации уровня базы данных &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)   
+ [SQL Server &#40;Soft-NUMA&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)  
   
   

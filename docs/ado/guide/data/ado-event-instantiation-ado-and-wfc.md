@@ -11,10 +11,10 @@ ms.assetid: 9ee4be21-657b-407a-afa4-0b27a6b096ce
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7dbbbf92c751093d2a7333b7ac1f76888d41d345
-ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70212340"
 ---
 # <a name="ado-event-instantiation-ado-and-wfc"></a>Создание экземпляра события ADO: ADO и WFC
@@ -60,7 +60,7 @@ ms.locfileid: "70212340"
   
 7.  После завершения обработки удалите обработчик из списка обработчиков событий ADO/WFC. Используйте метод с именем, например **removeOn**_EventName_(*handler*).  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
  [Сводка по обработчику событий ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
  [ADO — индекс синтаксиса WFC](../../../ado/reference/ado-api/ado-wfc-syntax-index.md)   
  [Параметры события](../../../ado/guide/data/event-parameters.md)   

@@ -1,5 +1,5 @@
 ---
-title: хранимой процедуре sp_execute (Transact-SQL) | Документация Майкрософт
+title: sp_execute (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,16 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1957103cf2c817f0ef77816446be5fb2d352c9d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68124464"
 ---
-# <a name="spexecute-transact-sql"></a>sp_execute (Transact-SQL)
+# <a name="sp_execute-transact-sql"></a>sp_execute (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  Выполняет подготовленную [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкцию, используя указанный дескриптор и значение необязательного параметра. хранимой процедуре sp_execute вызывается указанием ID = 12 в пакете потока табличных данных.  
+  Выполняет подготовленную [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкцию, используя указанный маркер и необязательное значение параметра. sp_execute вызывается путем указания ID = 12 в пакете потока табличных данных (TDS).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,17 +42,17 @@ sp_execute handle OUTPUT
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *Дескриптор*  
- — *Обрабатывать* значение, возвращаемое хранимой процедурой sp_prepare. *обрабатывать* является обязательным параметром, который вызывает для **int** входного значения.  
+ *справиться*  
+ Значение *обработчика* , возвращаемое sp_prepare. *Handle* является обязательным параметром, который вызывает входное значение **int** .  
   
  *bound_param*  
- Означает использование дополнительных параметров. *bound_param* является обязательным параметром, требующий входных значений любого типа данных для обозначения дополнительных параметров для процедуры.  
+ Означает использование дополнительных параметров. *bound_param* является обязательным параметром, который вызывает входные значения любого типа данных для обозначения дополнительных параметров процедуры.  
   
 > [!NOTE]  
->  *bound_param* должно совпадать с декларациями, сделанными sp_prepare*params* и может иметь в виде  *@name = value* или *значение*.  
+>  *bound_param* должны соответствовать объявлениям, сделанным значением sp_prepare*params* , и может иметь вид * @name = значение* или *значение*.  
   
-## <a name="see-also"></a>См. также  
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sp_prepare &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)  
   
   
