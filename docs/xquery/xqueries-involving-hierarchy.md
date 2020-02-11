@@ -1,5 +1,5 @@
 ---
-title: Запросы XQuery с использованием иерархии | Документация Майкрософт
+title: Запросы XQuery использующие, включающая иерархию | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -16,23 +16,23 @@ ms.assetid: 6953d8b7-bad8-4b64-bf7b-12fa4f10f65c
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 8aa762af8e08c72f7f00369219771c371ce39aac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946107"
 ---
 # <a name="xqueries-involving-hierarchy"></a>Запросы XQuery, использующие иерархию
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Большинство **xml** -столбцов в **AdventureWorks** базы данных представляют собой полуструктурированные документы. Поэтому документы, хранящиеся в каждой строке, могут выглядеть по-разному. Примеры запросов в этом подразделе показывают, как извлечь данные из этих различных документов.  
+  Большинство столбцов типа **XML** в базе данных **AdventureWorks** являются частично структурированными документами. Поэтому документы, хранящиеся в каждой строке, могут выглядеть по-разному. Примеры запросов в этом подразделе показывают, как извлечь данные из этих различных документов.  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-from-the-manufacturing-instructions-documents-retrieve-work-center-locations-together-with-the-first-manufacturing-step-at-those-locations"></a>A. Получение сведений о размещении цехов и о первом этапе производства в этих цехах из документов инструкций производства  
- Для продукта модели 7 запрос создает XML, включающий <`ManuInstr`> элемент, с помощью **ProductModelID** и **ProductModelName** атрибуты и один или несколько <`Location`> дочерние элементы.  
+ Для модели продукта 7 Запрос конструирует XML, `ManuInstr` включающий элемент <>, с атрибутами **ProductModelID** и **ProductModelName** и одним или несколькими <`Location`> дочерними элементами.  
   
- Каждый <`Location`> элемент имеет свой собственный набор атрибутов и один <`step`> дочерний элемент. Это <`step`> дочерний элемент — это первый этап производства на участке цеха.  
+ Каждый элемент `Location`> <имеет собственный набор атрибутов и один <`step`> дочерний элемент. Этот <`step`> дочерним элементом является первым шагом производства в расположении цеха.  
   
 ```sql
 SELECT Instructions.query('  
@@ -55,15 +55,15 @@ WHERE ProductModelID=7
   
  Обратите внимание на следующие данные из предыдущего запроса:  
   
--   **Пространства имен** ключевое слово в [прологе XQuery](../xquery/modules-and-prologs-xquery-prolog.md) определяет префикс пространства имен. Затем данный префикс используется в теле запроса.  
+-   Ключевое слово **Namespace** в [прологе XQuery](../xquery/modules-and-prologs-xquery-prolog.md) определяет префикс пространства имен. Затем данный префикс используется в теле запроса.  
   
 -   Токены переключения контекста, {) и (}, используются для переключения запроса из режима построения XML в режим вычисления.  
   
--   **SQL: column()** используется для включения реляционного значения в XML, который создается.  
+-   **SQL: column ()** используется для включения реляционного значения в создаваемый XML.  
   
--   При конструировании <`Location`> элемент, $wc/@* возвращает все атрибуты размещения цехов.  
+-   При конструировании элемента <`Location`> $WC/@ * получает все атрибуты расположения рабочего центра.  
   
--   **String()** функция возвращает строковое значение из <`step`> элемента.  
+-   Функция **String ()** возвращает строковое значение из элемента <`step`>.  
   
  Частичный результат:  
   
@@ -84,7 +84,7 @@ WHERE ProductModelID=7
 ```  
   
 ### <a name="b-find-all-telephone-numbers-in-the-additionalcontactinfo-column"></a>Б. Поиск всех телефонных номеров в столбце AdditionalContactInfo  
- Следующий запрос возвращает дополнительные телефонные номера заказчиков поиском по всей иерархии <`telephoneNumber`> элемента. Так как <`telephoneNumber`> элемент может находиться в любом месте иерархии, в запросе используется оператор нисходящий (/ /) для поиска.  
+ Следующий запрос получает дополнительные телефонные номера для конкретного контакта клиента, выполняя поиск элемента <`telephoneNumber`> в всей иерархии. Поскольку элемент> `telephoneNumber` <может находиться в любом месте иерархии, в запросе используется потомок и оператор Self (//).  
   
 ```sql
 SELECT AdditionalContactInfo.query('  
@@ -98,7 +98,7 @@ FROM  Person.Contact
 WHERE ContactID = 1  
 ```  
   
- Это результат:  
+ Результат:  
   
 ```xml
 \<act:number   
@@ -111,13 +111,13 @@ WHERE ContactID = 1
 \</act:number>  
 ```  
   
- Для получения только номера телефонов верхнего уровня, в частности <`telephoneNumber`> дочерними элементами элемента <`AdditionalContactInfo`>, изменяет выражение FOR в запросе на  
+ Чтобы получить только телефонные номера верхнего уровня, в частности <`telephoneNumber`> дочерние элементы <`AdditionalContactInfo`>, выражение for в запросе изменяется на  
   
  `for $ph in /ci:AdditionalContactInfo/act:telephoneNumber`.  
   
-## <a name="see-also"></a>См. также  
- [Основы языка XQuery](../xquery/xquery-basics.md)   
- [Построение XML &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)   
- [Данные XML (SQL Server)](../relational-databases/xml/xml-data-sql-server.md)  
+## <a name="see-also"></a>См. также раздел  
+ [Основы XQuery](../xquery/xquery-basics.md)   
+ [Создание XML &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)   
+ [SQL Server &#40;XML-данных&#41;](../relational-databases/xml/xml-data-sql-server.md)  
   
   

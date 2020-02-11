@@ -1,5 +1,5 @@
 ---
-title: Поддерживаемые конструкции в хранимых процедурах, скомпилированных в собственном | Документация Майкрософт
+title: Поддерживаемые конструкции в хранимых процедурах, скомпилированных в собственном виде | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,22 +11,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b4fd1a406848006739b83c1b8a0886d5c2d4bdfa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63155718"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>Поддерживаемые конструкции для хранимых процедур, скомпилированных в собственном коде
-  В этом разделе содержится список поддерживаемых функций для скомпилированных хранимых процедур ([CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)):  
+  Этот раздел содержит список поддерживаемых функций для хранимых процедур, скомпилированных в собственном виде ([Создание процедуры &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)):  
   
--   [Возможности программирования в собственном коде хранимых процедурах](#pncsp)  
+-   [Возможности программирования в хранимых процедурах, скомпилированных в собственном коде](#pncsp)  
   
 -   [Поддерживаемые операторы](#so)  
   
--   [Встроенные функции в собственном коде хранимых процедурах](#bfncsp)  
+-   [Встроенные функции в хранимых процедурах, скомпилированных в собственном коде](#bfncsp)  
   
--   [Контактная зона запросов в скомпилированных хранимых процедур](#qsancsp)  
+-   [Контактная зона запросов в хранимых процедурах, скомпилированных в собственном коде](#qsancsp)  
   
 -   [Аудит](#auditing)  
   
@@ -38,7 +38,7 @@ ms.locfileid: "63155718"
   
  Полные сведения о неподдерживаемых конструкциях и о том, как обойти некоторые неподдерживаемые функции в хранимых процедурах, скомпилированных в собственном коде, см. в разделе [Migration Issues for Natively Compiled Stored Procedures](migration-issues-for-natively-compiled-stored-procedures.md). Дополнительные сведения о неподдерживаемых компонентах см. в разделе [Конструкции языка Transact-SQL, неподдерживаемые в In-Memory OLTP](transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
   
-##  <a name="pncsp"></a> Возможности программирования в собственном коде хранимых процедурах  
+##  <a name="pncsp"></a>Программирование в хранимых процедурах, скомпилированных в собственном режиме  
  Поддерживаются следующие конструкции:  
   
 -   BEGIN ATOMIC (на внешнем уровне хранимой процедуры), LANGUAGE, ISOLATION LEVEL, DATEFORMAT и DATEFIRST.  
@@ -63,10 +63,10 @@ ms.locfileid: "63155718"
   
      Чтобы улучшить производительность, используйте один блок TRY/CATCH для всей хранимой процедуры, скомпилированной в собственном коде.  
   
-##  <a name="so"></a> Поддерживаемые операторы  
+##  <a name="so"></a>Поддерживаемые операторы  
  Поддерживаются следующие операторы.  
   
--   [Операторы сравнения &#40;Transact-SQL&#41; ](/sql/t-sql/language-elements/comparison-operators-transact-sql) (например, >, \<, > =, и < =) поддерживаются в условных предложениях (IF, ХОТЯ).  
+-   [Операторы сравнения &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/comparison-operators-transact-sql) (например, >, \<, >= и <=) поддерживаются в условных выражениях (если, while).  
   
 -   Унарные операторы (+, -).  
   
@@ -78,28 +78,28 @@ ms.locfileid: "63155718"
   
 -   Битовые операторы ~, &, |, и ^  
   
-##  <a name="bfncsp"></a> Встроенные функции в собственном коде хранимых процедурах  
+##  <a name="bfncsp"></a>Встроенные функции в хранимых процедурах, скомпилированных в собственном виде  
  Следующие функции поддерживаются в ограничениях по умолчанию для оптимизированных для памяти таблиц и в хранимых процедурах, скомпилированных в собственном коде.  
   
--   Математические функции: ACOS, ASIN, ATAN, ATN2, COS, COT, ГРАДУСОВ, EXP, LOG, LOG10, PI, POWER, RADIANS, RAND, SIN, SQRT, КВАДРАТНЫЕ и TAN  
+-   Математические функции: ACOS, ASIN, ATAN, ATN2, COS, COT, DEGREES, EXP, LOG, LOG10, PI, POWER, RADIANS, RAND, SIN, SQRT, SQUARE и TAN  
   
--   Функции даты: CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, день, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME и YEAR.  
+-   Функции даты: CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME и YEAR.  
   
 -   Строковые функции: LEN, LTRIM, RTRIM и SUBSTRING  
   
--   Функция IDENTITY: SCOPE_IDENTITY  
+-   Функция идентификации: SCOPE_IDENTITY  
   
--   Функцию NULL: ISNULL  
+-   NULL-функции: ISNULL  
   
 -   Функции уникальных идентификаторов: NEWID и NEWSEQUENTIALID  
   
--   Функции ошибок: Функция ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY и ERROR_STATE  
+-   Функции ошибок: ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY и ERROR_STATE  
   
 -   Преобразования: CAST и CONVERT. Не поддерживаются преобразования между символьными строками в Юникоде и отличными от Юникода (n(var)char и (var)char).  
   
 -   Системные функции: @@rowcount. Инструкции в хранимых процедурах, скомпилированных в собственном коде, обновляют @@rowcount, и вы можете использовать @@rowcount в таких процедурах для определения числа строк, затронутых последней инструкцией, выполненной в пределах этой хранимой процедуры. Но @@rowcount сбрасывается до 0 в начале и в конце выполнения каждой хранимой процедуры, скомпилированной в собственном коде.  
   
-##  <a name="qsancsp"></a> Контактная зона запросов в скомпилированных хранимых процедур  
+##  <a name="qsancsp"></a>Контактная зона запроса в скомпилированных в собственном режиме хранимых процедурах  
  Поддерживаются следующие конструкции:  
   
 -   BETWEEN  
@@ -108,37 +108,38 @@ ms.locfileid: "63155718"
   
 -   CROSS JOIN и INNER JOIN поддерживаются только с запросами SELECT.  
   
--   В списке ВЫБОРА, поддерживаются выражения и [ГДЕ &#40;Transact-SQL&#41; ](/sql/t-sql/queries/where-transact-sql) предложение, если они используют поддерживаемый оператор. Список поддерживаемых в настоящее время операторов см. в разделе [Supported Operators](#so) .  
+-   Выражения поддерживаются в списке SELECT, [где &#40;предложение&#41;Transact-SQL](/sql/t-sql/queries/where-transact-sql) , если они используют поддерживаемый оператор. Список поддерживаемых в настоящее время операторов см. в разделе [Supported Operators](#so) .  
   
 -   Предикат фильтра IS [NOT] NULL  
   
--   ИЗ \<оптимизированной для памяти таблицы >  
+-   ИЗ \<оптимизированной для памяти таблицы>  
   
--   [GROUP BY &#40;Transact-SQL&#41; ](/sql/t-sql/queries/select-group-by-transact-sql) поддерживается, а также статистические функции AVG, COUNT, COUNT_BIG, MIN, MAX и SUM. Функции MIN и MAX не поддерживаются для типов nvarchar, char, varchar, varchar, varbinary и binary. [Предложение ORDER BY &#40;Transact-SQL&#41; ](/sql/t-sql/queries/select-order-by-clause-transact-sql) поддерживается с [GROUP BY &#40;Transact-SQL&#41; ](/sql/t-sql/queries/select-group-by-transact-sql) Если выражение в списке ORDER BY появляется дословно в списке GROUP BY. Например, GROUP BY a + b ORDER BY a + b поддерживается; GROUP BY a, b ORDER BY a + b не поддерживается.  
+-   Поддерживается [группирование &#40;&#41;Transact-SQL](/sql/t-sql/queries/select-group-by-transact-sql) , а также агрегатные функции AVG, COUNT, COUNT_BIG, min, Max и Sum. Функции MIN и MAX не поддерживаются для типов nvarchar, char, varchar, varchar, varbinary и binary. [Предложение order by &#40;&#41;Transact-SQL](/sql/t-sql/queries/select-order-by-clause-transact-sql) поддерживается в инструкции [Group By &#40;transact-SQL&#41;](/sql/t-sql/queries/select-group-by-transact-sql) если выражение в списке ORDER BY отображается в списке Group By. Например, GROUP BY a + b ORDER BY a + b поддерживается; GROUP BY a, b ORDER BY a + b не поддерживается.  
   
 -   HAVING, с соблюдением тех же ограничений, как в предложении WHERE.  
   
 -   INSERT VALUES (по одной строке на каждую инструкцию) и SELECT INSERT  
   
--   ORDER BY <sup>1</sup>  
+-   УПОРЯДОЧИТЬ по <sup>1</sup>  
   
 -   Предикаты без ссылки на столбец.  
   
 -   DELETE, SELECT и UPDATE  
   
--   ВЕРХНЕЙ <sup>1</sup>  
+-   ПЕРВЫЕ <sup>1</sup>  
   
 -   Присвоение переменных в списке предложения SELECT.  
   
--   WHERE... AND  
+-   ГДЕ... ПЕРЕТАСКИВАНИ  
   
- <sup>1</sup> TOP и ORDER BY поддерживаются в скомпилированных хранимых процедур, с некоторыми ограничениями:  
+ <sup>1</sup> ORDER BY и Top поддерживаются в хранимых процедурах, скомпилированных в собственном режиме, с некоторыми ограничениями.  
   
 -   Не поддерживается `DISTINCT` в предложениях `SELECT` и `ORDER BY`.  
   
 -   Не поддерживаются `WITH TIES` и `PERCENT` в предложении `TOP`.  
   
--   `TOP` совместно с `ORDER BY` не поддерживает более 8192 строк при использовании константы в предложении `TOP`. Это ограничение может быть понижено в случае, если запрос содержит соединения или агрегатные функции. (Например, с одним соединением (двумя таблицами) ограничение составляет 4 096 строк. С двумя соединениями (тремя таблицами) ограничение равно 2 730 строкам.)  
+-   
+  `TOP` совместно с `ORDER BY` не поддерживает более 8192 строк при использовании константы в предложении `TOP`. Это ограничение может быть понижено в случае, если запрос содержит соединения или агрегатные функции. (Например, с одним соединением (двумя таблицами) ограничение составляет 4 096 строк. С двумя соединениями (тремя таблицами) ограничение равно 2 730 строкам.)  
   
      Результаты более 8 192 можно получить, сохраняя в переменной несколько строк.  
   
@@ -151,12 +152,12 @@ ms.locfileid: "63155718"
   
  Эти ограничения не применяются к интерпретированному доступу [!INCLUDE[tsql](../../includes/tsql-md.md)] к оптимизированным для памяти таблицам.  
   
-##  <a name="auditing"></a> Аудит  
+##  <a name="auditing"></a>Проведение  
  Аудит на уровне процедуры поддерживается для хранимых процедур, скомпилированных в собственном коде. Аудит уровня инструкций не поддерживается.  
   
  Дополнительные сведения об аудите см. в разделе [Создание спецификация аудита для сервера и базы данных](../security/auditing/create-a-server-audit-and-database-audit-specification.md).  
   
-##  <a name="tqh"></a> Таблица, запрос и указания по соединению  
+##  <a name="tqh"></a>Таблицы, запросы и указания по соединению  
  Поддерживаются следующие конструкции:  
   
 -   Табличные указания INDEX, FORCESCAN и FORCESEEK в синтаксисе табличных указаний или в [предложении OPTION (Transact-SQL)](/sql/t-sql/queries/option-clause-transact-sql) запроса.  
@@ -169,16 +170,16 @@ ms.locfileid: "63155718"
   
  Дополнительные сведения см. в разделе [указания &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql).  
   
-##  <a name="los"></a> Ограничения на сортировку  
- В запросе с использованием [TOP (Transact-SQL)](/sql/t-sql/queries/top-transact-sql) и [предложения ORDER BY (Transact-SQL)](/sql/t-sql/queries/select-order-by-clause-transact-sql) можно сортировать более 8 000 строк. Без [предложения ORDER BY (Transact-SQL)](/sql/t-sql/queries/select-order-by-clause-transact-sql) [TOP (Transact-SQL)](/sql/t-sql/queries/top-transact-sql) позволяет сортировать не более 8 000 строк (меньше, если есть соединения).  
+##  <a name="los"></a>Ограничения на сортировку  
+ В запросе с использованием [TOP (Transact-SQL)](/sql/t-sql/queries/top-transact-sql) и [предложения ORDER BY (Transact-SQL)](/sql/t-sql/queries/select-order-by-clause-transact-sql) можно сортировать более 8 000 строк. Без [предложения ORDER BY (Transact-SQL)](/sql/t-sql/queries/select-order-by-clause-transact-sql)[TOP (Transact-SQL)](/sql/t-sql/queries/top-transact-sql) позволяет сортировать не более 8 000 строк (меньше, если есть соединения).  
   
- Если в запросе используется как оператор [TOP (Transact-SQL)](/sql/t-sql/queries/top-transact-sql), так и [предложение ORDER BY (Transact-SQL)](/sql/t-sql/queries/select-order-by-clause-transact-sql), для оператора TOP можно указать не более 8192 строк. При указании более 8192 строк вы получаете сообщение об ошибке: **Сообщение 41398, уровень 16, состояние 1, процедура  *\<Имя_процедуры >* , строки  *\<номер_строки >* оператор TOP может возвращать не более 8192 строк;  *\<номер >* был запрошен.**  
+ Если в запросе используется как оператор [TOP (Transact-SQL)](/sql/t-sql/queries/top-transact-sql), так и [предложение ORDER BY (Transact-SQL)](/sql/t-sql/queries/select-order-by-clause-transact-sql), для оператора TOP можно указать не более 8192 строк. Если строк будет больше, чем 8192, вы получите такое сообщение об ошибке: **сообщение 41398, уровень 16, состояние 1, процедура *\<имя_процедуры>*, строка *\<номер_строки>*. Оператор TOP может возвратить не более 8192 строк; запрошенное число: *\<число>*.**  
   
  Если отсутствует предложение TOP, то можно отсортировать любое количество строк с помощью предложения ORDER BY.  
   
  Если не используется предложение ORDER BY, то можно использовать любое целочисленное значение с оператором TOP.  
   
- Пример с TOP N = 8192: Компилирует  
+ Пример для оператора TOP с числом значений 8192: компиляция  
   
 ```sql  
 CREATE PROCEDURE testTop  
@@ -191,7 +192,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```  
   
- Пример с TOP N > 8192: Ошибка компиляции.  
+ Пример для оператора TOP с числом значений > 8192: сбой компиляции.  
   
 ```sql  
 CREATE PROCEDURE testTop  
@@ -206,7 +207,7 @@ GO
   
  Ограничение в 8192 строки применяется только к `TOP N` , где `N` является константой, как показано в предыдущих примерах.  Если нужно, чтобы `N` было больше 8192, можно присвоить это значение переменной и использовать ее с оператором `TOP`.  
   
- Пример использования переменной: Компилирует  
+ Пример использования переменной: компиляция  
   
 ```sql  
 CREATE PROCEDURE testTop  
@@ -220,7 +221,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```  
   
- **Ограничения возвращаемых строк:** Существует два варианта, когда могут уменьшить количество строк, возвращаемых оператором TOP:  
+ **Ограничения на возвращаемые строки:** Существует два случая, когда это может привести к сокращению числа строк, которые могут быть возвращены оператором TOP:  
   
 -   Использование соединений в запросе.  Влияние соединений на ограничения зависит от плана запроса.  
   
@@ -228,8 +229,8 @@ GO
   
  Формула для вычисления наименьшего поддерживаемого значения N в предложении TOP N выглядит следующим образом: `N = floor ( 65536 / number_of_tables * 8 + total_size+of+aggs )`.  
   
-## <a name="see-also"></a>См. также  
- [Скомпилированные в собственном коде хранимые процедуры](natively-compiled-stored-procedures.md)   
+## <a name="see-also"></a>См. также:  
+ [Скомпилированные в собственном код хранимые процедуры](natively-compiled-stored-procedures.md)   
  [Проблемы миграции, связанные с хранимыми процедурами, скомпилированными в собственном коде](migration-issues-for-natively-compiled-stored-procedures.md)  
   
   

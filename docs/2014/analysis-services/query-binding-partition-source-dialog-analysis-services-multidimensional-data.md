@@ -1,5 +1,5 @@
 ---
-title: (Partition Source Dialog Box) сведения о привязке запроса (службы Analysis Services — многомерные данные) | Документация Майкрософт
+title: Сведения о привязке запроса (диалоговое окно «Источник секции») (Analysis Services-многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 604a42cc0b3519f1034733e12f72dc1a7c969ce6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070567"
 ---
 # <a name="query-binding-detail-partition-source-dialog-box-analysis-services---multidimensional-data"></a>Сведения о привязке запроса (диалоговое окно «Источник секции») (службы Analysis Services — многомерные данные)
@@ -32,10 +32,10 @@ ms.locfileid: "66070567"
 > [!IMPORTANT]  
 >  Указав предложение WHERE, для этой секции можно использовать вложенный набор записей. Данное действие необходимо во избежание дублирования данных в случае, если несколько параллельных секций функционируют с помощью единственной таблицы фактов. Дополнительные сведения см. в разделе [Partition Source Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](partition-source-dialog-box-analysis-services-multidimensional-data.md).  
   
- **Проверить**  
+ **Отмечен**  
  Щелкните, чтобы проверить, является ли инструкция в поле **Запрос** допустимой инструкцией SQL.  
   
-## <a name="see-also"></a>См. также  
- [Окно выбора источника секции &#40;службы Analysis Services — многомерные данные&#41;](partition-source-dialog-box-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>См. также:  
+ [Диалоговое окно «Источник секции» &#40;Analysis Services многомерных данных&#41;](partition-source-dialog-box-analysis-services-multidimensional-data.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Пример метода GetRows (Visual C++) | Документация Майкрософт
+title: Пример метода GetRows (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 08e5c5bf-f7de-4bf9-97a9-f214c128ad8c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c1f49de41c0735f53323c1f9ba75c6f2257439b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932495"
 ---
 # <a name="getrows-method-example-vc"></a>Пример метода GetRows (Visual C++)
-В этом примере используется [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) метод для получения указанного числа строк из [записей](../../../ado/reference/ado-api/recordset-object-ado.md) и заполняют массив полученные данные. **GetRows** метод возвратит меньше, чем требуемое число строк в двух случаях: либо если [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) был достигнут, или если **GetRows** попытка получить запись, которая была удалена другим пользователем. Функция возвращает **False** только в том случае, если происходит второй вариант. Функция GetRowsOK является обязательным для выполнения этой процедуры.  
+В этом примере метод [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) используется для получения указанного числа строк из [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) и для заполнения массива результирующими данными. Метод **GetRows** возвратит меньше требуемого числа строк в двух случаях: либо при достижении [конца файла](../../../ado/reference/ado-api/bof-eof-properties-ado.md) , либо при попытке **GetRows** получить запись, удаленную другим пользователем. Функция возвращает **значение false** только в том случае, если происходит второй вариант. Для выполнения этой процедуры требуется функция Жетровсок.  
   
 ## <a name="example"></a>Пример  
   
@@ -228,14 +228,14 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- Ввод  
+ Входные данные  
   
 ```  
 2  
 0  
 ```  
   
-## <a name="sample-output"></a>Образец вывода  
+## <a name="sample-output"></a>Пример вывода  
   
 ```  
 2 record(s) found.  
@@ -243,7 +243,7 @@ Paolo Accorti, 8/27/1992
 Pedro Afonso, 12/24/1990  
 ```  
   
-## <a name="see-also"></a>См. также  
- [BOF, EOF свойства (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
+## <a name="see-also"></a>См. также:  
+ [Свойства BOF, EOF (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
  [Метод GetRows (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

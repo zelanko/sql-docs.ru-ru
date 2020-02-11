@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_backup_config_schedule (Transact-SQL) | Документация Майкрософт
+title: managed_backup. sp_backup_config_schedule (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,16 +21,16 @@ ms.assetid: 82541160-d1df-4061-91a5-6868dd85743a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 52df69439cecad5fddf3d38b8852a1ce86cc4dbd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942074"
 ---
-# <a name="managedbackupspbackupconfigschedule-transact-sql"></a>managed_backup.sp_backup_config_schedule (Transact-SQL)
+# <a name="managed_backupsp_backup_config_schedule-transact-sql"></a>managed_backup. sp_backup_config_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Настраивает параметры автоматической или пользовательского расписания для [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
+  Настраивает автоматические или настраиваемые параметры планирования для [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
     
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,41 +47,41 @@ EXEC managed_backup.sp_backup_config_schedule
     ,[@log_backup_freq = ] 'frequency of log backup'  
 ```  
   
-##  <a name="Arguments"></a> Аргументы  
+##  <a name="Arguments"></a>Даваемых  
  @database_name  
- Имя базы данных для включения управляемого резервного копирования на определенной базе данных. Если значение равно NULL или *, то этот управляемого резервного копирования применяется ко всем базам данных на сервере.  
+ Имя базы данных для включения управляемого резервного копирования в определенной базе данных. Если задано значение NULL или *, то эта управляемая резервная копия применяется ко всем базам данных на сервере.  
   
  @scheduling_option  
- Планирование управляемой системы резервного копирования, укажите «System». Укажите «Custom» применительно к пользовательскому расписанию, определяется другие параметры.  
+ Укажите "System" для планирования резервного копирования, контролируемого системой. Укажите "Custom" для настраиваемого расписания, определенного другим паратметерс.  
   
  @full_backup_freq_type  
- Тип частоты в управляемых операции резервного копирования, который можно установить значение «Daily» или «Еженедельно».  
+ Тип частоты для управляемой операции резервного копирования, для которой можно задать значение "ежедневно" или "еженедельно".  
   
  @days_of_week  
- Дни недели для резервных копий при @full_backup_freq_type задана еженедельная. Укажите имена полную строку как «Понедельник».  Можно также указать более одного имени один день, разделенные вертикальной линией. Например N'Monday | Среда | Пятница ".  
+ Дни недели для резервных копий, если @full_backup_freq_type задано значение еженедельно. Укажите полные имена строк, например "понедельник".  Можно также указать более одного названия дня, разделенных вертикальной чертой. Например, Н'мондай | Среда | Пятница ".  
   
  @backup_begin_time  
- Время начала резервного копирования. Резервные копии не будут запущены за пределами периода времени, который определен с помощью сочетания @backup_begin_time и @backup_duration.  
+ Время начала периода резервного копирования. Резервные копии не будут запущены за пределами временного окна, которое определяется сочетанием @backup_begin_time и @backup_duration.  
   
  @backup_duration  
- Длительность окна время резервного копирования. Обратите внимание, что нет никакой гарантии, что резервные копии будут выполняться в период времени, определяемый @backup_begin_time и @backup_duration. Операции резервного копирования, которые запущены в этот период времени, но превышает длительность окна не будут отменены.  
+ Длительность периода резервного копирования. Обратите внимание на то, что резервные копии не будут завершены в течение временного @backup_begin_time окна @backup_duration, определенного в и. Операции резервного копирования, запущенные в этом временном окне, но превышающие длительность окна, не будут отменены.  
   
  @log_backup_freq  
- Этот параметр определяет частоту резервного копирования журнала транзакций. Эти резервные копии создаются с регулярными интервалами, а не по расписанию, указанному для резервных копий базы данных. @log_backup_freq 0 — допустимым, то резервное копирование журнала не может быть в часах или минутах Отключение резервные копии журналов только подойдут и для баз данных с простой модели восстановления.  
+ Это определяет частоту резервного копирования журналов транзакций. Эти резервные копии выполняются через регулярные интервалы, а не по расписанию, заданному для резервных копий базы данных. @log_backup_freqможет быть в минутах или часах, а 0 является допустимым, что означает отсутствие резервных копий журналов. Отключение резервных копий журналов будет уместно только для баз данных с простой моделью восстановления.  
   
 > [!NOTE]  
->  При изменении модели восстановления с simple на full необходимо перенастроить log_backup_freq от 0 к ненулевое значение.  
+>  Если модель восстановления изменяется с Simple на Full, необходимо перенастроить log_backup_freq с 0 на ненулевое значение.  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
- 0 (успешное завершение) или 1 (неуспешное завершение)  
+ 0 (успех) или 1 (сбой).  
   
-## <a name="security"></a>Безопасность  
+## <a name="security"></a>безопасность  
   
 ### <a name="permissions"></a>Разрешения  
- Требуется членство в **db_backupoperator** роли базы данных с помощью **ALTER ANY CREDENTIAL** разрешения, и **EXECUTE** разрешения на **sp_delete_ backuphistory** хранимой процедуры.  
+ Требуется членство в роли базы данных **db_backupoperator** , с разрешениями **ALTER ANY CREDENTIAL** и **EXECUTE** для хранимой процедуры **sp_delete_backuphistory** .  
   
-## <a name="see-also"></a>См. также  
- [managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)   
- [managed_backup.sp_backup_config_advanced (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [managed_backup. sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)   
+ [managed_backup. sp_backup_config_advanced &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)  
   
   

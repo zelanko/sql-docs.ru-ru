@@ -11,19 +11,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 04f8eaf855d33faf0d2eab8fde718c92f9a24906
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232315"
 ---
 # <a name="sql-server-backup-to-url"></a>Резервное копирование в SQL Server по URL-адресу
   В этом разделе представлены основные понятия, требования и компоненты, необходимые для использования службы хранилища BLOB-объектов Azure в качестве места назначения резервного копирования. Функции резервного копирования и восстановления аналогичны при использовании DISK и TAPE, но имеют некоторые отличия. В данном разделе описаны различия и все важные исключения, а также приведено несколько примеров кода.  
   
 ## <a name="requirements-components-and-concepts"></a>Требования, компоненты и основные понятия  
- **Содержание раздела**  
+ **В этом разделе:**  
   
--   [Бюллетеня](#security)  
+-   [Безопасность](#security)  
   
 -   [Общие сведения о ключевых компонентах и концепциях](#intorkeyconcepts)  
   
@@ -31,7 +31,7 @@ ms.locfileid: "75232315"
   
 -   [Компоненты SQL Server](#sqlserver)  
   
--   [Ограничений](#limitations)  
+-   [Ограничения](#limitations)  
   
 -   [Поддержка инструкций Backup/Restore](#Support)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "75232315"
   
 -   [Восстановление из хранилища Azure с помощью SQL Server Management Studio](sql-server-backup-to-url.md#RestoreSSMS)  
   
-###  <a name="security"></a>Бюллетеня  
+###  <a name="security"></a> безопасность  
  Ниже приведены рекомендации по безопасности и требования к резервному копированию или восстановлению из служб хранилища BLOB-объектов Azure.  
   
 -   При создании контейнера для службы хранилища BLOB-объектов Azure рекомендуется установить доступ к **частному**. Установка закрытых прав доступа означает, что доступ получают только те пользователи и учетные записи, которые могут предоставить необходимую информацию для проверки подлинности в учетной записи Azure.  
@@ -65,7 +65,7 @@ ms.locfileid: "75232315"
   
  **Большой двоичный объект:** Файл любого типа и размера. Существует два типа больших двоичных объектов, которые можно хранить в службе хранилища больших двоичных объектов Azure: блочные и страничные BLOB-объекты. В резервном копировании [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используются страничные большие двоичные объекты. Адресация больших двоичных объектов осуществляется с помощью следующего формата\<URL-адреса: учетная запись хранения HTTPS://>. BLOB.Core.Windows.NET/\<> контейнер/\<BLOB>  
   
- ![Хранилище BLOB-объектов Azure](../../database-engine/media/backuptocloud-blobarchitecture.gif "Хранилище BLOB-объектов Azure")  
+ ![хранилище BLOB-объектов Azure](../../database-engine/media/backuptocloud-blobarchitecture.gif "хранилище BLOB-объектов Azure")  
   
  Дополнительные сведения о службе хранилища BLOB-объектов Azure см. в статье [Использование службы хранилища BLOB-объектов Azure](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/) .  
   
@@ -123,8 +123,8 @@ ms.locfileid: "75232315"
   
 |||||  
 |-|-|-|-|  
-|Инструкции BACKUP и RESTORE|Поддерживаются|Исключения|Комментарии|  
-|АРХИВАЦИЯ|&#x2713;|BLOCKSIZE и MAXTRANSFERSIZE не поддерживаются.|Необходимо использовать инструкцию WITH CREDENTIAL|  
+|Инструкции BACKUP и RESTORE|Поддерживается|Исключения|Комментарии|  
+|BACKUP|&#x2713;|BLOCKSIZE и MAXTRANSFERSIZE не поддерживаются.|Необходимо использовать инструкцию WITH CREDENTIAL|  
 |RESTORE|&#x2713;||Необходимо использовать инструкцию WITH CREDENTIAL|  
 |RESTORE FILELISTONLY|&#x2713;||Необходимо использовать инструкцию WITH CREDENTIAL|  
 |инструкция RESTORE HEADERONLY|&#x2713;||Необходимо использовать инструкцию WITH CREDENTIAL|  
@@ -140,7 +140,7 @@ ms.locfileid: "75232315"
   
 |||||  
 |-|-|-|-|  
-|Аргумент|Поддерживаются|Exception|Комментарии|  
+|Аргумент|Поддерживается|Exception|Комментарии|  
 |DATABASE|&#x2713;|||  
 |LOG|&#x2713;|||  
 ||  
@@ -176,7 +176,7 @@ ms.locfileid: "75232315"
   
 |||||  
 |-|-|-|-|  
-|Аргумент|Поддерживаются|Исключения|Комментарии|  
+|Аргумент|Поддерживается|Исключения|Комментарии|  
 |DATABASE|&#x2713;|||  
 |LOG|&#x2713;|||  
 |FROM (URL)|&#x2713;||Аргумент FROM URL используется, чтобы указать URL-адрес для файла резервной копии.|  
@@ -800,6 +800,6 @@ ms.locfileid: "75232315"
    Restore-SqlDatabase -Database AdventureWorks2012 -SqlCredential $credentialName -BackupFile $backuplogFile  -ToPointInTime (Get-Date).ToString()
    ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Рекомендации по SQL Server резервного копирования на URL-адреса и устранение неполадок](sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
  [Резервное копирование и восстановление системных баз данных &#40;SQL Server&#41;](back-up-and-restore-of-system-databases-sql-server.md)   

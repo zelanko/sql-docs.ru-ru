@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 67767ae7ec3bda62783281385333fef89481f45d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68195591"
 ---
 # <a name="modify-xml-indexes"></a>Изменение XML-индексов
@@ -29,7 +29,7 @@ ms.locfileid: "68195591"
   
 -   Инструкция ALTER INDEX ALL применяется как к обычным, так и к XML-индексам. Если заданы параметры индексирования, недопустимые для обоих типов индексов, то вся инструкция завершится ошибкой.  
   
-## <a name="example-modifying-an-xml-index"></a>Пример Изменение XML-индекса  
+## <a name="example-modifying-an-xml-index"></a>Пример. Изменение XML-индекса  
  В следующем примере создается XML-индекс, после чего производится его изменение — установка параметра `ALLOW_ROW_LOCKS` в значение `OFF`. Когда параметр `ALLOW_ROW_LOCKS` установлен в значение `OFF`, строки не блокируются и доступ к указанным индексам осуществляется при помощи блокировок уровня страницы и таблицы.  
   
 ```  
@@ -50,7 +50,7 @@ ALTER INDEX PIdx_T_XmlCol on T
 SET (ALLOW_ROW_LOCKS = OFF)  
 ```  
   
-## <a name="example-disabling-and-enabling-an-xml-index"></a>Пример Отключение и включение XML-индекса  
+## <a name="example-disabling-and-enabling-an-xml-index"></a>Пример. Отключение и включение XML-индекса  
  По умолчанию XML-индекс включен. Если XML-индекс отключен, то запросы, выполняемые для XML-столбца, не пользуются им. Для включения XML-индекса используется инструкция `ALTER INDEX` с параметром `REBUILD` .  
   
 ```  
@@ -70,7 +70,7 @@ ALTER INDEX PIdx_T_XmlCol on T REBUILD
 Go  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [XML-индексы (SQL Server)](xml-indexes-sql-server.md)  
   
   

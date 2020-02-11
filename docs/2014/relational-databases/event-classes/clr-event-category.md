@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 101badf320f72887d6eb9669224d24fff5b9a299
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62663649"
 ---
 # <a name="clr-event-category"></a>Категория событий CLR
@@ -28,12 +28,12 @@ ms.locfileid: "62663649"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Описание|  
+|Раздел|Description|  
 |-----------|-----------------|  
 |[Класс событий Assembly Load](../../database-engine/assembly-load-event-class.md)|Указывает, что запрос на загрузку сборки был выполнен.|  
 |[Класс событий Assembly Load](../../database-engine/assembly-load-event-class.md)|Возникает при выполнении запроса на загрузку сборки.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширенные события](../extended-events/extended-events.md)  
   
   
