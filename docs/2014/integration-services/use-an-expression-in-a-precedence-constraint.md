@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 672d9c363f64037f5f40f51fc7c6cb1c4c3bc674
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054749"
 ---
 # <a name="use-an-expression-in-a-precedence-constraint"></a>Использование выражения в элементах управлении очередностью
@@ -41,11 +41,11 @@ ms.locfileid: "66054749"
   
 8.  Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Управление очередностью](control-flow/precedence-constraints.md)   
- [Соединение задач и контейнеров с помощью элементов управления очередностью по умолчанию](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
- [Установите для параметра очередностью с помощью контекстного меню](../../2014/integration-services/set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)   
- [Задайте свойства элементов управления очередностью](../../2014/integration-services/set-the-properties-of-a-precedence-constraint.md)   
- [Выражения служб Integration Services (SSIS)](expressions/integration-services-ssis-expressions.md)  
+ [Подключение задач и контейнеров с помощью управления очередностью по умолчанию](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
+ [Установка значения управления очередностью с помощью контекстного меню](../../2014/integration-services/set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)   
+ [Задание свойств управления очередностью](../../2014/integration-services/set-the-properties-of-a-precedence-constraint.md)   
+ [Выражения&#41; Integration Services &#40;SSIS](expressions/integration-services-ssis-expressions.md)  
   
   

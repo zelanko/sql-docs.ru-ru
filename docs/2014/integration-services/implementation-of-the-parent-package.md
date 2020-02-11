@@ -1,5 +1,5 @@
 ---
-title: Осуществление родительского пакета | Документация Майкрософт
+title: Реализация родительского пакета | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2cec1f30ba728f1cf3b808acb2fb362e21d259a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058157"
 ---
 # <a name="implementation-of-the-parent-package"></a>Осуществление родительского пакета
@@ -39,7 +39,7 @@ ms.locfileid: "66058157"
  Ошибка при работе по такому сценарию может произойти только в случае неуспешного вызова удаленной задачи «Выполнение задания агента SQL Server». Единственной причиной невозможности вызвать задачу является отсутствие связи с сервером, когда агент не отвечает на запросы. Если же агент отвечает на вызов родительского пакета, тот успешно завершает свою работу.  
   
 > [!NOTE]  
->  Можно использовать задачу "Выполнение SQL", содержащую инструкцию Transact-SQL **sp_start_job N'имя_пакета'** . Дополнительные сведения см. в разделе [sp_start_job (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql).  
+>  Можно использовать задачу "Выполнение SQL", содержащую инструкцию Transact-SQL **sp_start_job N'имя_пакета'**. Дополнительные сведения см. в разделе [sp_start_job (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql).  
   
 ## <a name="debugging-environment"></a>Среда отладки  
  Во время тестирования родительского пакета запустите в конструкторе среду отладки, выбрав в меню «Отладка» команду «Начать отладку» или нажав клавишу F5. Или можно воспользоваться программой командной строки **dtexec**. Дополнительные сведения см. в статье [dtexec Utility](packages/dtexec-utility.md).  
