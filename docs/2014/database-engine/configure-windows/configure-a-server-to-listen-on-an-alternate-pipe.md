@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 68b082d125650d150676d545cfdf6ab27bd25da2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62813527"
 ---
 # <a name="configure-a-server-to-listen-on-an-alternate-pipe-sql-server-configuration-manager"></a>Настройка сервера для прослушивания альтернативного канала (диспетчер конфигурации SQL Server)
@@ -33,19 +33,19 @@ ms.locfileid: "62813527"
   
 -   Настройте клиент на использование пользовательской строки подключения.  
   
-##  <a name="SSMSProcedure"></a> Использование диспетчера конфигурации SQL Server  
+##  <a name="SSMSProcedure"></a>Использование диспетчер конфигурации SQL Server  
   
 #### <a name="to-configure-the-named-pipe-used-by-the-sql-server-database-engine"></a>Настройка именованного канала, используемого компонентом SQL Server Database Engine  
   
-1.  В области консоли диспетчера конфигурации SQL Server разверните узел **Сетевая конфигурация SQL Server**, а затем — **Протоколы для** *\<имя экземпляра>* .  
+1.  В области консоли диспетчера конфигурации SQL Server разверните узел **Сетевая конфигурация SQL Server**, а затем — **Протоколы для** *\<имя экземпляра>*.  
   
-2.  В области сведений щелкните правой кнопкой мыши **Именованные каналы**и выберите пункт **Свойства**.  
+2.  В области сведений щелкните правой кнопкой мыши **Именованные каналы** и выберите пункт **Свойства**.  
   
 3.  На вкладке **Протоколы** в поле **Имя канала** укажите канал, который должен прослушиваться компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)] , и нажмите кнопку **ОК**.  
   
-4.  В области консоли выберите **Службы SQL Server**.  
+4.  На панели консоли выберите **Службы SQL Server**.  
   
-5.  В области сведений щелкните правой кнопкой мыши **SQL Server (** \<имя экземпляра> **)** , а затем нажмите кнопку **Перезагрузка**, чтобы остановить и перезагрузить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+5.  В области сведений щелкните правой кнопкой мыши **SQL Server (**\<имя экземпляра>**)** и выберите команду **перезапустить**, чтобы прерывать и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]перезапускать.  
   
  Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] прослушивает альтернативный канал, то подключить клиентское приложение к конкретному именованному каналу можно тремя способами:  
   
@@ -55,8 +55,8 @@ ms.locfileid: "62813527"
   
 -   Настройте клиент на использование пользовательской строки подключения.  
   
-## <a name="see-also"></a>См. также  
- [Создание или удаление псевдонима сервера для использования клиентом (диспетчер конфигурации SQL Server)](create-or-delete-a-server-alias-for-use-by-a-client.md)   
+## <a name="see-also"></a>См. также:  
+ [Создание или удаление псевдонима сервера, используемого &#40;ом клиента диспетчер конфигурации SQL Server&#41;](create-or-delete-a-server-alias-for-use-by-a-client.md)   
  [Сетевая конфигурация сервера](server-network-configuration.md)  
   
   

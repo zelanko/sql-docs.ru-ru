@@ -1,5 +1,5 @@
 ---
-title: FileStream и FileTable системные хранимые процедуры (Transact-SQL) | Документация Майкрософт
+title: Системные хранимые процедуры FILESTREAM и FileTable (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,18 +15,18 @@ ms.assetid: 2c83a4a7-720b-4435-a3b5-788c29f56949
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1ebcaf4659d7be880f0f0e901b2eadcc9002b2d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942243"
 ---
-# <a name="filestream-and-filetable-system-stored-procedures-transact-sql"></a>FileStream и FileTable системные хранимые процедуры (Transact-SQL)
+# <a name="filestream-and-filetable-system-stored-procedures-transact-sql"></a>Системные хранимые процедуры FILESTREAM и FileTable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  В этом разделе описаны системные хранимые процедуры, функции FileTable и Filestream.  
+  В этом разделе описываются системные хранимые процедуры функций FileTable и FILESTREAM.  
 
-## <a name="filestream-and-filetable-system-stored-procedures"></a>FileStream и Filetable системные хранимые процедуры
+## <a name="filestream-and-filetable-system-stored-procedures"></a>Системные хранимые процедуры FILESTREAM и FileTable
   [sp_filestream_force_garbage_collection (Transact-SQL)](filestream-and-filetable-sp-filestream-force-garbage-collection.md)
 
    Принудительно запускает сборщик мусора FILESTREAM, который удаляет все ненужные файлы FILESTREAM.
@@ -36,10 +36,10 @@ ms.locfileid: "67942243"
   Закрывает нетранзакционные дескрипторы файлов для данных FileTable.
 
 
-## <a name="see-also"></a>См. также
-[FileStream](../../relational-databases/blob/filestream-sql-server.md)
-<br>[Таблицы Filetable](../../relational-databases/blob/filetables-sql-server.md)
-<br>[Динамические административные представления Filestream и FileTable (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
+## <a name="see-also"></a>См. также раздел
+[Файловый поток](../../relational-databases/blob/filestream-sql-server.md)
+<br>[Таблицы FileTable](../../relational-databases/blob/filetables-sql-server.md)
+<br>[Динамические административные представления Filestream and FileTable (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
 <br>[Представления каталога Filestream и FileTable (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
   
   

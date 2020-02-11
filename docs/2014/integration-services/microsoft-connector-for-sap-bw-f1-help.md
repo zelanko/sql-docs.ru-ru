@@ -1,5 +1,5 @@
 ---
-title: Microsoft Connector 1.1 для SAP BW Справка F1 по | Документация Майкрософт
+title: Справка по SAP BW F1 для соединителя Microsoft Connector 1,1 | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 80dfa890b16b27ac00218f9e9e7895411c8ac9eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62890666"
 ---
 # <a name="microsoft-connector-11-for-sap-bw-f1-help"></a>Справка F1 по Microsoft Connector 1.1 для SAP BW
@@ -31,13 +31,13 @@ ms.locfileid: "62890666"
   
 ### <a name="sap-bw-source-f1-help"></a>Справка F1 по источнику SAP BW  
   
--   [Редактор источника SAP BW (страница "Диспетчер подключений")](data-flow/sap-bw-source-editor-connection-manager-page.md)  
+-   [Редактор SAP BWного источника &#40;страница "Диспетчер соединений"&#41;](data-flow/sap-bw-source-editor-connection-manager-page.md)  
   
--   [Редактор источника SAP BW (страница "Столбцы")](data-flow/sap-bw-source-editor-columns-page.md)  
+-   [Страница "&#40;столбцов" редактора источника SAP BW&#41;](data-flow/sap-bw-source-editor-columns-page.md)  
   
--   [Редактор источника SAP BW (страница "Вывод ошибок")](data-flow/sap-bw-source-editor-error-output-page.md)  
+-   [Редактор источника SAP BW &#40;странице вывода ошибок&#41;](data-flow/sap-bw-source-editor-error-output-page.md)  
   
--   [Редактор источника SAP BW (страница "Дополнительно")](data-flow/sap-bw-source-editor-advanced-page.md)  
+-   [Редактор источника SAP BW &#40;страница "Дополнительно"&#41;](data-flow/sap-bw-source-editor-advanced-page.md)  
   
 -   [Поиск назначения RFC](data-flow/look-up-rfc-destination.md)  
   
@@ -49,13 +49,13 @@ ms.locfileid: "62890666"
   
 ### <a name="sap-bw-destination-f1-help"></a>Справка F1 по назначению SAP BW  
   
--   [Редактор назначений SAP BW (страница "Диспетчер подключений")](data-flow/sap-bw-destination-editor-connection-manager-page.md)  
+-   [Редактор назначения SAP BW &#40;странице Диспетчер соединений&#41;](data-flow/sap-bw-destination-editor-connection-manager-page.md)  
   
--   [Редактор назначений SAP BW (страница "Сопоставления")](data-flow/sap-bw-destination-editor-mappings-page.md)  
+-   [Редактор назначения "SAP BW &#40;страница" сопоставления "&#41;](data-flow/sap-bw-destination-editor-mappings-page.md)  
   
--   [Редактор назначений SAP BW (страница "Вывод ошибок")](data-flow/sap-bw-destination-editor-error-output-page.md)  
+-   [Редактор назначения SAP BW &#40;странице вывода ошибок&#41;](data-flow/sap-bw-destination-editor-error-output-page.md)  
   
--   [Редактор назначений SAP BW (страница "Дополнительно")](data-flow/sap-bw-destination-editor-advanced-page.md)  
+-   [Редактор назначения SAP BW &#40;страница "Дополнительно"&#41;](data-flow/sap-bw-destination-editor-advanced-page.md)  
   
 -   [Поиск InfoPackage](data-flow/look-up-infopackage.md)  
   
@@ -73,7 +73,7 @@ ms.locfileid: "62890666"
   
 -   [Создать InfoPackage](data-flow/create-infopackage.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Компоненты Microsoft Connector 1.1 для SAP BW](microsoft-connector-for-sap-bw-components.md)  
   
   

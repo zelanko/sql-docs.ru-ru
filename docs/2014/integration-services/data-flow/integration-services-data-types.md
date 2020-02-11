@@ -19,22 +19,22 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fbd39569da4623eda3bb3906fd81bd5da69ab831
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62902452"
 ---
 # <a name="integration-services-data-types"></a>Типы данных служб Integration Services
-  Когда данные входят в поток данных в пакете, источник, извлекающий данные, преобразовывает их в тип данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Числовым данным назначается числовой тип данных, строковым — символьный тип данных, а датам — тип даты. Другим данным, таким как идентификатор GUID и BLOB (Binary Large Object Blocks), также назначаются соответствующие типы данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Если данные имеют тип, не преобразуемый в тип данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , возникает ошибка.  
+  Когда данные входят в поток данных в пакете, источник, извлекающий данные, преобразовывает их в тип данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Числовым данным назначается числовой тип данных, строковым — символьный тип данных, а датам — тип даты. Другим данным, таким как идентификатор GUID и BLOB (Binary Large Object Blocks), также назначаются соответствующие типы данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Если данные имеют тип, не преобразуемый в тип данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , возникает ошибка.  
   
- Некоторые компоненты потока данных преобразуют типы данных между типами данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и управляемыми типами данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Дополнительные сведения о сравнении между службами [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и управляемыми типами данных см. в разделе [Работа с типами данных в потоке данных](../extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md).  
+ Некоторые компоненты потока данных преобразуют типы данных между типами [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] данных и управляемыми типами [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]данных. Дополнительные сведения о сравнении между службами [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и управляемыми типами данных см. в разделе [Работа с типами данных в потоке данных](../extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md).  
   
  В следующей таблице перечислены типы данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . К некоторым из типов данных в таблице применяются сведения о масштабе и точности. Сведения о точности и масштабе см. в разделе [Точность, масштаб и длина (Transact-SQL)](/sql/t-sql/data-types/precision-scale-and-length-transact-sql).  
   
-|Тип данных|Описание|  
+|Тип данных|Description|  
 |---------------|-----------------|  
-|DT_BOOL|Значение типа Boolean.|  
+|DT_BOOL|Логическое значение.|  
 |DT_BYTES|Значение двоичных данных. Длину можно изменять. Максимальная длина составляет 8000 байт.|  
 |DT_CY|Значение денежного типа. Этот тип данных представляет собой восьмибайтовое целое число со знаком, с масштабом 4 и максимальной точностью в 19 цифр.|  
 |DT_DATE|Структура даты, состоящая из года, месяца, дня, часа, минуты, секунд и долей секунды.  Для долей секунды используется фиксированный масштаб в 7 разрядов.<br /><br /> Тип данных DT_DATE представляет собой 8-байтовое число с плавающей запятой. Дни представлены целым числом, где за ноль принято значение полночь 30 декабря 1899. Значение часа выражается абсолютным значением дробной части числа. Тем не менее, значение с плавающей запятой не может представить все реальные значения, поэтому есть пределы отображения ряда дат в DT_DATE.<br /><br /> С другой стороны, тип данных DT_DBTIMESTAMP представлен структурой, имеющей внутри себя отдельные поля для года, месяца, дня, часов, минут, секунд и миллисекунд. Такой тип данных имеет более широкие границы диапазона дат, которые он может представлять.|  
@@ -61,13 +61,13 @@ ms.locfileid: "62902452"
 |DT_UI8|Восьмибайтовое беззнаковое целое число.|  
 |DT_WSTR|Строка в Юникоде заканчивающаяся символом конца строки с максимальной длиной 4000 символов. (Если значение столбца содержит дополнительные символы конца строки, строка усекается в месте вхождения первого такого символа).|  
 |DT_IMAGE|Двоичное значение с максимальным размером 2<sup>31</sup>-1 (2 147 483 647) байт. .|  
-|DT_NTEXT|Строка символов Юникод с максимальной длиной 2<sup>30</sup> - 1 (1 073 741 823) символов.|  
-|DT_TEXT|[!INCLUDE[vcpransi](../../../includes/vcpransi-md.md)]/MBCS символьная строка длиной не более 2<sup>31</sup>-1 (2 147 483 647) символов.|  
+|DT_NTEXT|Строка символов в Юникоде с максимальной длиной 2<sup>30</sup> – 1 (1 073 741 823) символов.|  
+|DT_TEXT|Строка [!INCLUDE[vcpransi](../../../includes/vcpransi-md.md)]символов/мбкс с максимальной длиной 2<sup>31</sup>-1 (2 147 483 647) символов.|  
   
 ## <a name="conversion-of-data-types"></a>Преобразование типов данных  
  Если тип источника данных не требует распределения данных по всей ширине столбца, можно изменить тип данных столбца. Максимально короткие строки данных помогают оптимизировать производительность при передаче данных, так как чем короче каждая строка, тем быстрее данные перемещаются от источника к целевому объекту.  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] включают полный набор числовых типов данных, так что можно сопоставить типы данных с размером данных. Например, если значения в столбце с типом данных DT_UI8 всегда являются целыми числами от 0 до 3000, то можно изменить тип данных на DT_UI2. Подобным образом, если столбец с типом данных DT_CY соответствует требованиям данных пакета, используя целочисленный тип данных, можно изменить тип данных на DT_I4.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]включает полный набор числовых типов данных, что позволяет точно сопоставить тип данных с размером данных. Например, если значения в столбце с типом данных DT_UI8 всегда являются целыми числами от 0 до 3000, то можно изменить тип данных на DT_UI2. Подобным образом, если столбец с типом данных DT_CY соответствует требованиям данных пакета, используя целочисленный тип данных, можно изменить тип данных на DT_I4.  
   
  Можно изменить тип данных столбца следующим образом:  
   
@@ -77,7 +77,7 @@ ms.locfileid: "62902452"
   
 -   Использование преобразования «Конвертация данных» для приведения типа данных столбца от одного к другому. Дополнительные сведения см. в статье [Data Conversion Transformation](transformations/data-conversion-transformation.md).  
   
--   Создание копии столбца, тип данных которого отличается от типа данных исходного столбца, с помощью преобразования «Производный столбец». Дополнительные сведения см. в статье [Derived Column Transformation](transformations/derived-column-transformation.md).  
+-   Создание копии столбца, тип данных которого отличается от типа данных исходного столбца, с помощью преобразования «Производный столбец». Дополнительные сведения см. в статье [Преобразование «Производный столбец»](transformations/derived-column-transformation.md).  
   
 ### <a name="converting-between-strings-and-datetime-data-types"></a>Преобразование между строковым типом данных и типами данных даты-времени  
  В следующей таблице приведены результаты приведения или преобразования между строковыми типами данных и типами данных даты-времени.  
@@ -105,11 +105,11 @@ ms.locfileid: "62902452"
 ### <a name="converting-datetime-data-types"></a>Преобразование типов данных «дата-время»  
  Можно изменить тип данных столбца с данными «дата-время» для извлечения даты или временной части данных. В следующей таблице приводятся результаты переходов от одного типа данных «дата-время» к другому.  
   
-#### <a name="converting-from-dtfiletime"></a>Преобразование из типа данных DT_FILETIME  
+#### <a name="converting-from-dt_filetime"></a>Преобразование из типа данных DT_FILETIME  
   
 |Преобразование типа данных DT_FILETIME в|Результат|  
 |-----------------------------|------------|  
-|DT_FILETIME|Без изменений.|  
+|DT_FILETIME|Без изменения.|  
 |DT_DATE|Преобразует тип данных.|  
 |DT_DBDATE|Удаляет значение времени.|  
 |DT_DBTIME|Удаляет значение даты.<br /><br /> Удаляет значение доли секунды в том случае, если ее масштаб больше числа десятичных знаков, которое может содержать тип данных DT_DBTIME. После удаления долей секунд формируется отчет об усечении данных. Дополнительные сведения см. в разделе [Обработка ошибок в данных](error-handling-in-data.md).|  
@@ -118,12 +118,12 @@ ms.locfileid: "62902452"
 |DT_DBTIMESTAMP2|Удаляет значение для долей секунды, если его масштаб больше числа разрядов, предусмотренного для типа данных DT_DBTIMESTAMP2. После удаления долей секунд формируется отчет об усечении данных. Дополнительные сведения см. в разделе [Обработка ошибок в данных](error-handling-in-data.md).|  
 |DT_DBTIMESTAMPOFFSET|Устанавливает поле часового пояса для типа данных DT_DBTIMESTAMPOFFSET в нулевое значение.<br /><br /> Удаляет значение долей секунд, если его масштаб больше числа разрядов, предусмотренного для типа данных DT_DBTIMESTAMPOFFSET. После удаления долей секунд формируется отчет об усечении данных. Дополнительные сведения см. в разделе [Обработка ошибок в данных](error-handling-in-data.md).|  
   
-#### <a name="converting-from-dtdate"></a>Преобразование из типа данных DT_DATE  
+#### <a name="converting-from-dt_date"></a>Преобразование из типа данных DT_DATE  
   
 |Преобразовать тип данных DT_DATE в|Результат|  
 |-------------------------|------------|  
 |DT_FILETIME|Преобразует тип данных.|  
-|DT_DATE|Без изменений.|  
+|DT_DATE|Без изменения.|  
 |DT_DBDATE|Удаляет значение времени, представленное типом данных DT_DATA.|  
 |DT_DBTIME|Удаляет значение даты, представленное типом данных DT_DATE.|  
 |DT_DBTIME2|Удаляет значение даты, представленное типом данных DT_DATE.|  
@@ -131,33 +131,33 @@ ms.locfileid: "62902452"
 |DT_DBTIMESTAMP2|Преобразует тип данных.|  
 |DT_DBTIMESTAMPOFFSET|Устанавливает поле часового пояса для типа данных DT_DBTIMESTAMPOFFSET в нулевое значение.|  
   
-#### <a name="converting-from-dtdbdate"></a>Преобразование из типа данных DT_DBDATE  
+#### <a name="converting-from-dt_dbdate"></a>Преобразование из типа данных DT_DBDATE  
   
 |Преобразовать тип данных DT_DBDATE в|Результат|  
 |---------------------------|------------|  
 |DT_FILETIME|Устанавливает поля времени для типа данных DT_FILETIME в нулевое значение.|  
 |DT_DATE|Устанавливает поля времени для типа данных DT_DATE в нулевое значение.|  
-|DT_DBDATE|Без изменений.|  
+|DT_DBDATE|Без изменения.|  
 |DT_DBTIME|Устанавливает поля времени для типа данных DT_DBTIME в нулевое значение.|  
 |DT_DBTIME2|Устанавливает поля времени для типа данных DT_DBTIME2 в нулевое значение.|  
 |DT_DBTIMESTAMP|Устанавливает поля времени для типа данных DT_DBTIMESTAMP в нулевое значение.|  
 |DT_DBTIMESTAMP2|Устанавливает поля времени для типа данных DT_DBTIMESTAMP в нулевое значение.|  
 |DT_DBTIMESTAMPOFFSET|Устанавливает поля времени и часового пояса для типа данных DT_DBTIME2 в нулевое значение.|  
   
-#### <a name="converting-from-dtdbtime"></a>Преобразование из типа данных DT_DBTIME  
+#### <a name="converting-from-dt_dbtime"></a>Преобразование из типа данных DT_DBTIME  
   
 |Преобразование типа данных DT_DBTIME в|Результат|  
 |---------------------------|------------|  
 |DT_FILETIME|Устанавливает поля даты для типа данных DT_FILETIME в значения, соответствующие текущей дате.|  
 |DT_DATE|Устанавливает поля даты для типа данных DT_DATE в значения, соответствующие текущей дате.|  
 |DT_DBDATE|Устанавливает поля даты для типа данных DT_DBDATE в значения, соответствующие текущей дате.|  
-|DT_DBTIME|Без изменений.|  
+|DT_DBTIME|Без изменения.|  
 |DT_DBTIME2|Преобразует тип данных.|  
 |DT_DBTIMESTAMP|Устанавливает поля даты для типа данных DT_DBTIMESTAMP в значения, соответствующие текущей дате.|  
 |DT_DBTIMESTAMP2|Устанавливает поля даты для типа данных DT_DBTIMESTAMP2 в значения, соответствующие текущей дате.|  
 |DT_DBTIMESTAMPOFFSET|Устанавливает поля даты для типа данных DT_DBTIMESTAMPOFFSET в значения, соответствующие текущей дате, а поле часового пояса — в нулевое значение.|  
   
-#### <a name="converting-from-dtdbtime2"></a>Преобразование из типа данных DT_DBTIME2  
+#### <a name="converting-from-dt_dbtime2"></a>Преобразование из типа данных DT_DBTIME2  
   
 |Преобразование типа данных DT_DBTIME2 в|Результат|  
 |----------------------------|------------|  
@@ -170,7 +170,7 @@ ms.locfileid: "62902452"
 |DT_DBTIMESTAMP2|Устанавливает поля даты для типа данных DT_DBTIMESTAMP2 в значения, соответствующие текущей дате.<br /><br /> Удаляет значение для долей секунды, если его масштаб больше числа разрядов, предусмотренного для типа данных DT_DBTIMESTAMP2. После удаления долей секунд формируется отчет об усечении данных. Дополнительные сведения см. в разделе [Обработка ошибок в данных](error-handling-in-data.md).|  
 |DT_DBTIMESTAMPOFFSET|Устанавливает поля даты для типа данных DT_DBTIMESTAMPOFFSET в значения, соответствующие текущей дате, а поле часового пояса — в нулевое значение.<br /><br /> Удаляет значение долей секунд, если его масштаб больше числа разрядов, предусмотренного для типа данных DT_DBTIMESTAMPOFFSET. После удаления долей секунд формируется отчет об усечении данных. Дополнительные сведения см. в разделе [Обработка ошибок в данных](error-handling-in-data.md).|  
   
-#### <a name="converting-from-dtdbtimestamp"></a>Преобразование из типа данных DT_DBTIMESTAMP  
+#### <a name="converting-from-dt_dbtimestamp"></a>Преобразование из типа данных DT_DBTIMESTAMP  
   
 |Преобразование типа данных DT_DBTIMESTAMP в|Результат|  
 |--------------------------------|------------|  
@@ -179,11 +179,11 @@ ms.locfileid: "62902452"
 |DT_DBDATE|Удаляет значение времени, представленное типом данных DT_DBTIMESTAMP.|  
 |DT_DBTIME|Удаляет значение даты, представленное типом данных DT_DBTIMESTAMP.<br /><br /> Удаляет значение долей секунд, если его масштаб больше числа разрядов, предусмотренного для типа данных DT_DBTIME. После удаления долей секунд формируется отчет об усечении данных. Дополнительные сведения см. в разделе [Обработка ошибок в данных](error-handling-in-data.md).|  
 |DT_DBTIME2|Удаляет значение даты, представленное типом данных DT_DBTIMESTAMP.<br /><br /> Удаляет значение для долей секунд, если его масштаб больше числа разрядов, предусмотренного для типа данных DT_DBTIME2. После удаления долей секунд формируется отчет об усечении данных. Дополнительные сведения см. в разделе [Обработка ошибок в данных](error-handling-in-data.md).|  
-|DT_DBTIMESTAMP|Без изменений.|  
+|DT_DBTIMESTAMP|Без изменения.|  
 |DT_DBTIMESTAMP2|Удаляет значение для долей секунды, если его масштаб больше числа разрядов, предусмотренного для типа данных DT_DBTIMESTAMP2. После удаления долей секунд формируется отчет об усечении данных. Дополнительные сведения см. в разделе [Обработка ошибок в данных](error-handling-in-data.md).|  
 |DT_DBTIMESTAMPOFFSET|Устанавливает поле часового пояса для типа данных DT_DBTIMESTAMPOFFSET в нулевое значение.<br /><br /> Удаляет значение долей секунд, если его масштаб больше числа разрядов, предусмотренного для типа данных DT_DBTIMESTAMPOFFSET. После удаления долей секунд формируется отчет об усечении данных. Дополнительные сведения см. в разделе [Обработка ошибок в данных](error-handling-in-data.md).|  
   
-#### <a name="converting-from-dtdbtimestamp2"></a>Преобразование из типа данных DT_DBTIMESTAMP2  
+#### <a name="converting-from-dt_dbtimestamp2"></a>Преобразование из типа данных DT_DBTIMESTAMP2  
   
 |Преобразование типа данных DT_DBTIMESTAMP2 в|Результат|  
 |---------------------------------|------------|  
@@ -196,7 +196,7 @@ ms.locfileid: "62902452"
 |DT_DBTIMESTAMP2|Удаляет значение долей секунд, если его масштаб больше числа разрядов, предусмотренного для целевого типа данных DT_DBTIMESTAMP2. После удаления долей секунд формируется отчет об усечении данных. Дополнительные сведения см. в разделе [Обработка ошибок в данных](error-handling-in-data.md).|  
 |DT_DBTIMESTAMPOFFSET|Устанавливает поле часового пояса для типа данных DT_DBTIMESTAMPOFFSET в нулевое значение.<br /><br /> Удаляет значение долей секунд, если его масштаб больше числа разрядов, предусмотренного для типа данных DT_DBTIMESTAMPOFFSET. После удаления долей секунд формируется отчет об усечении данных. Дополнительные сведения см. в разделе [Обработка ошибок в данных](error-handling-in-data.md).|  
   
-#### <a name="converting-from-dtdbtimestampoffset"></a>Преобразование из типа данных DT_DBTIMESTAMPOFFSET  
+#### <a name="converting-from-dt_dbtimestampoffset"></a>Преобразование из типа данных DT_DBTIMESTAMPOFFSET  
   
 |Преобразование типа данных DT_DBTIMESTAMPOFFSET в|Результат|  
 |--------------------------------------|------------|  
@@ -218,30 +218,30 @@ ms.locfileid: "62902452"
 > [!NOTE]  
 >  Для оценки размера типов данных даты и времени служб Integration Services можно использовать соответствующие типы данных SQL Server.  
   
-|Тип данных|SQL Server<br /><br /> (SQLOLEDB; SQLNCLI10)|SQL Server (SqlClient)|Jet|Oracle;<br /><br /> (OracleClient)|DB2<br /><br /> (DB2OLEDB)|DB2<br /><br /> (IBMDADB2)|  
+|Тип данных|SQL Server<br /><br /> (SQLOLEDB; SQLNCLI10)|SQL Server (SqlClient)|Jet|Oracle;<br /><br /> (OracleClient)|DB2<br /><br /> (DB2OLEDB)|DB2<br /><br /> (IBMDADB2)|  
 |---------------|--------------------------------------------|------------------------------|---------|---------------------------------|--------------------------|--------------------------|  
 |DT_BOOL|bit|bit|bit||||  
 |DT_BYTES|binary, varbinary, timestamp|binary, varbinary, timestamp|BigBinary, VarBinary|RAW|||  
-|DT_CY|smallmoney, money|smallmoney, money|Currency||||  
+|DT_CY|smallmoney, money|smallmoney, money|Валюта||||  
 |DT_DATE|||||||  
-|DT_DBDATE|[date &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)|[date &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)||date|date|date|  
+|DT_DBDATE|[Дата &#40;&#41;Transact-SQL](/sql/t-sql/data-types/date-transact-sql)|[Дата &#40;&#41;Transact-SQL](/sql/t-sql/data-types/date-transact-sql)||Дата|Дата|Дата|  
 |DT_DBTIME||||TIMESTAMP|time|time|  
-|DT_DBTIME2|[time &#40;Transact-SQL&#41;](/sql/t-sql/data-types/time-transact-sql)(p)|[time &#40;Transact-SQL&#41;](/sql/t-sql/data-types/time-transact-sql) (p)|||||  
-|DT_DBTIMESTAMP|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql), [smalldatetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql), [smalldatetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|DateTime|TIMESTAMP, DATE, INTERVAL|TIME, TIMESTAMP, DATE|TIME, TIMESTAMP, DATE|  
+|DT_DBTIME2|[время &#40;&#41;Transact-SQL ](/sql/t-sql/data-types/time-transact-sql)(p)|[время &#40;&#41;Transact-SQL](/sql/t-sql/data-types/time-transact-sql) (p)|||||  
+|DT_DBTIMESTAMP|[datetime &#40;Transact-sql&#41;](/sql/t-sql/data-types/datetime-transact-sql), [smalldatetime &#40;transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|[datetime &#40;Transact-sql&#41;](/sql/t-sql/data-types/datetime-transact-sql), [smalldatetime &#40;transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|DateTime|TIMESTAMP, DATE, INTERVAL|TIME, TIMESTAMP, DATE|TIME, TIMESTAMP, DATE|  
 |DT_DBTIMESTAMP2|[datetime2 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)|[datetime2 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)||TIMESTAMP|TIMESTAMP|TIMESTAMP|  
-|DT_DBTIMESTAMPOFFSET|[datetimeoffset &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetimeoffset-transact-sql)(p)|[datetimeoffset &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetimeoffset-transact-sql) (p)||timestampoffset|timestamp,<br /><br /> varchar|timestamp,<br /><br /> varchar|  
+|DT_DBTIMESTAMPOFFSET|[&#41;Transact-SQL &#40;DateTimeOffset ](/sql/t-sql/data-types/datetimeoffset-transact-sql)(p)|[&#41;Transact-SQL &#40;DateTimeOffset](/sql/t-sql/data-types/datetimeoffset-transact-sql) (p)||timestampoffset|timestamp,<br /><br /> varchar|timestamp,<br /><br /> varchar|  
 |DT_DECIMAL|||||||  
 |DT_FILETIME|||||||  
 |DT_GUID|UNIQUEIDENTIFIER|UNIQUEIDENTIFIER|GUID||||  
 |DT_I1|||||||  
-|DT_I2|smallint|smallint|Short||smallint|SMALLINT|  
-|DT_I4|ssNoversion|ssNoversion|Long||INTEGER|INTEGER|  
-|DT_I8|BIGINT|BIGINT|||bigint|bigint|  
+|DT_I2|smallint|smallint|Сокращение||SMALLINT|SMALLINT|  
+|DT_I4|INT|INT|Long||INTEGER|INTEGER|  
+|DT_I8|bigint|bigint|||BIGINT|BIGINT|  
 |DT_NUMERIC|decimal, numeric|decimal, numeric|Decimal|NUMBER, INT|decimal, numeric|decimal, numeric|  
-|DT_R4|real|real|Один||real|real|  
-|DT_R8|float|float|Double|FLOAT, REAL|FLOAT, DOUBLE|FLOAT, DOUBLE|  
-|DT_STR|char, varchar||varchar||char, varchar|char, varchar|  
-|DT_UI1|tinyint|tinyint|Byte||||  
+|DT_R4|real;|real;|Single||REAL|REAL|  
+|DT_R8|FLOAT|FLOAT|Double|FLOAT, REAL|FLOAT, DOUBLE|FLOAT, DOUBLE|  
+|DT_STR|char, varchar||VarChar||char, varchar|char, varchar|  
+|DT_UI1|tinyint;|tinyint;|Byte||||  
 |DT_UI2|||||||  
 |DT_UI4|||||||  
 |DT_UI8|||||||  
@@ -255,7 +255,7 @@ ms.locfileid: "62902452"
 ## <a name="related-content"></a>См. также  
  Запись в блоге [Сравнение производительности между способами преобразования типов данных в службах SSIS 2008](https://go.microsoft.com/fwlink/?LinkId=220823)на сайте blogs.msdn.com.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Данные потоков данных](data-in-data-flows.md)  
   
   

@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1803850e770b42a411a0e6e7a62096afc9b8d3f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762685"
 ---
-# <a name="mssqlserver8601"></a>MSSQLSERVER_8601
+# <a name="mssqlserver_8601"></a>MSSQLSERVER_8601
     
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|8601|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|INVALID_INTERFACE_ERR|  
-|Текст сообщения|Внутренняя ошибка обработчика запросов: Обработчику запросов не удалось получить доступ к требуемому интерфейсу.|  
+|Текст сообщения|Внутренняя ошибка обработчика запросов: обработчику запросов не удалось получить доступ к необходимому интерфейсу.|  
   
 ## <a name="explanation"></a>Объяснение  
  Внутренняя ошибка обработки: не удалось получить доступ к требуемому интерфейсу.  

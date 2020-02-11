@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ae87ebd3afa2ee49b55471be4d955cbb4d894ca7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62811607"
 ---
 # <a name="configure-the-cost-threshold-for-parallelism-server-configuration-option"></a>Параметр конфигурации сервера cost threshold for parallelism
@@ -30,7 +30,7 @@ ms.locfileid: "62811607"
   
      [Рекомендации](#Recommendations)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Настройка параметра cost threshold for parallelism**  
   
@@ -108,13 +108,13 @@ GO
   
  Дополнительные сведения см. в разделе [Параметры конфигурации сервера (SQL Server)](server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. После настройки параметра cost threshold for parallelism  
+##  <a name="FollowUp"></a>Дальнейшие действия. После настройки параметра стоимости порога для параллелизма  
  Параметр вступает в силу немедленно, без перезапуска сервера.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Настройка параллельных операций с индексами](../../relational-databases/indexes/configure-parallel-index-operations.md)   
- [Указания запросов (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-query)   
- [ALTER WORKLOAD GROUP (Transact-SQL)](/sql/t-sql/statements/alter-workload-group-transact-sql)   
+ [Указания запросов &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query)   
+ [ALTER Рабочей группы &#40;&#41;Transact-SQL](/sql/t-sql/statements/alter-workload-group-transact-sql)   
  [Параметр конфигурации сервера «affinity mask»](affinity-mask-server-configuration-option.md)   
  [RECONFIGURE (Transact-SQL)](/sql/t-sql/language-elements/reconfigure-transact-sql)   
  [Параметры конфигурации сервера (SQL Server)](server-configuration-options-sql-server.md)   

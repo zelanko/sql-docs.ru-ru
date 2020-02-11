@@ -16,31 +16,31 @@ ms.assetid: 1974fd26-ef0d-45d5-860b-298917c8e9c3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: db1fbaffbee0f74625f4a11cad3b961f194e3829
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67948777"
 ---
 # <a name="string-functions-visual-foxpro-odbc-driver"></a>Строковые функции (драйвер ODBC для Visual FoxPro)
-В следующей таблице перечислены функции обработки строк ODBC, поддерживаемых драйвером Visual FoxPro ODBC; Если Visual FoxPro грамматики для той же функции отличается от синтаксиса ODBC, Visual FoxPro эквивалентное отображаются.  
+В следующей таблице перечислены функции обработки строк ODBC, поддерживаемые драйвером ODBC для Visual FoxPro. Если грамматика Visual FoxPro для той же функции отличается от синтаксиса ODBC, в списке отображается эквивалент Visual FoxPro.  
   
 |Грамматика ODBC|Грамматика Visual FoxPro|  
 |------------------|---------------------------|  
-|ASCII *(строковое_выражение)*|ASC *(строковое_выражение)*|  
-|CHAR *(код)*|CHR *(строковое_выражение)*|  
-|CONCAT *(строковое_выражение1, строковое_выражение2)*|*строковое_выражение1 + строковое_выражение2*|  
-|РАЗЛИЧИЕ *(строковое_выражение1, строковое_выражение2)*||  
-|Вставить *(строковое_выражение1, начало, длина, строковое_выражение2)*|STUFF *(строковое_выражение1, начало, длина, строковое_выражение2)*|  
-|LCASE *(строковое_выражение)*|НИЖНИЙ *(строковое_выражение)*|  
-|СЛЕВА *(строковое_выражение, число)*||  
-|Длина *(строковое_выражение)*|LEN *(строковое_выражение)*|  
-|LTRIM *(строковое_выражение)*||  
-|ПОВТОРИТЕ *(строковое_выражение, число)*|РЕПЛИЦИРОВАТЬ *(строковое_выражение, число)*|  
-|ЗАМЕНИТЕ *(строковое_выражение1, строковое_выражение2, string_exp3)*|STRTRAN *(строковое_выражение1, строковое_выражение2, string_exp3)*|  
-|СПРАВА *(строковое_выражение, число)*||  
-|RTRIM *(строковое_выражение)*||  
-|SOUNDEX *(строковое_выражение)*||  
-|ПРОСТРАНСТВО *(количество)*||  
-|Подстрока *(строковое_выражение, начало, длина)*|SUBSTR *(строковое_выражение, начало, длина)*|  
-|UCASE *(строковое_выражение)*|Верхний *(строковое_выражение)*|
+|ASCII *(string_exp)*|ASC *(string_exp)*|  
+|CHAR *(код)*|CHR *(string_exp)*|  
+|CONCAT *(string_exp1, string_exp2)*|*string_exp1 + string_exp2*|  
+|Разница *(string_exp1, string_exp2)*||  
+|INSERT *(string_exp1, начало, длина, string_exp2)*|МАТЕРИАЛЫ *(string_exp1, начало, длина, string_exp2)*|  
+|ЛКАСЕ *(string_exp)*|НИЖЕ *(string_exp)*|  
+|LEFT *(string_exp, количество)*||  
+|Длина *(string_exp)*|LEN *(string_exp)*|  
+|LTRIM *(string_exp)*||  
+|Повтор *(string_exp, количество)*|РЕПЛИКАЦИя *(string_exp, количество)*|  
+|Replace *(string_exp1, string_exp2, string_exp3)*|СТРТРАН *(string_exp1, string_exp2, string_exp3)*|  
+|RIGHT *(string_exp, количество)*||  
+|RTRIM *(string_exp)*||  
+|SOUNDEX *(string_exp)*||  
+|ПРОБЕЛ *(количество)*||  
+|Подстрока *(string_exp, начало, длина)*|SUBSTR *(string_exp, начало, длина)*|  
+|УКАСЕ *(string_exp)*|UPPER *(string_exp)*|

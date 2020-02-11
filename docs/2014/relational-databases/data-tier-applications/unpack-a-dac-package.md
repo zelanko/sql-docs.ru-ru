@@ -16,16 +16,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14e699be884ff24136b8bae1a744593be86c42ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62918007"
 ---
 # <a name="unpack-a-dac-package"></a>Распаковка пакета DAC
   Чтобы распаковать скрипты и файлы из пакета приложения уровня данных (DAC), используйте диалоговое окно «Распаковка приложения уровня данных». Скрипты и файлы помещаются в папку, где их можно просмотреть перед тем, как использовать пакет для развертывания приложения уровня данных в рабочей системе. Кроме того, содержимое одного приложения уровня данных можно сравнить с содержимым другого пакета, распакованного в другую папку.  
   
-1.  **Перед началом:**  [безопасность](#Security)  
+1.  **Перед началом работы**  [Безопасность](#Security)  
   
 2.  **Распаковка приложения уровня данных с использованием:**  [диалогового окна распаковки приложения уровня данных](#UnpackDACDial), [изучения содержимого пакета приложения уровня данных](#ExamDACPack)  
   
@@ -82,7 +82,7 @@ ms.locfileid: "62918007"
   
  Дополнительные сведения см. в статье [Validate a DAC Package](validate-a-dac-package.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Приложения уровня данных](data-tier-applications.md)   
  [Развертывание приложения уровня данных](deploy-a-data-tier-application.md)   
  [Обновление приложения уровня данных](upgrade-a-data-tier-application.md)  

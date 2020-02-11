@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 22b1c18cba793d5845e2adf92b1dca300911a72f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62823805"
 ---
 # <a name="manage-files-with-encoding"></a>Управление файлами с помощью кодировок
@@ -42,7 +42,7 @@ ms.locfileid: "62823805"
   
 #### <a name="to-save-a-file-with-a-different-encoding-or-line-ending-type"></a>Сохранение файла с другой кодировкой или символом конца строки  
   
-1.  На **файл** меню, щелкните **Сохранить \<filename > как**.  
+1.  В меню **файл** выберите команду **сохранить \<имя файла> как**.  
   
 2.  В диалоговом окне **Сохранение файла** раскройте кнопку **Сохранить** и выберите пункт **Выбор кодировки для сохранения**.  
   
@@ -61,8 +61,8 @@ ms.locfileid: "62823805"
   
 -   Файлы в кодировке UTF8 не могут надежно работать с Visual SourceSafe, поскольку при возврате, извлечении, проверке на наличие различий и слиянии производятся изменения, вызывающие проблемы при работе редакторов файлов UTF8.  
   
-## <a name="see-also"></a>См. также  
- [Файлы для управления решениями и проектами](files-that-manage-solutions-and-projects.md)   
+## <a name="see-also"></a>См. также:  
+ [Файлы, управляющие решениями и проектами](files-that-manage-solutions-and-projects.md)   
  [Связывание расширения файла с редактором кода](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
   
   

@@ -14,18 +14,18 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 47ef01538368dcbfdd235d649fdb3b2c805a59dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62780297"
 ---
 # <a name="discontinued-full-text-search-features-in-sql-server-2014"></a>Неподдерживаемые функции полнотекстового поиска в SQL Server 2014
-  В [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]нет неподдерживаемых функций полнотекстового поиска, хотя некоторые из них являются устаревшими. Дополнительные сведения см. в разделе [нерекомендуемые функции полнотекстового поиска в SQL Server 2014](../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md).  
+  В [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] нет неподдерживаемых функций полнотекстового поиска, хотя некоторые из них являются устаревшими. Дополнительные сведения см. [в разделе Нерекомендуемые функции полнотекстового поиска в SQL Server 2014](../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md).  
   
-## <a name="see-also"></a>См. также  
- [Критические изменения в компонент Full-Text Search](breaking-changes-to-full-text-search.md)   
- [Изменения в поведении полнотекстового поиска](behavior-changes-to-full-text-search.md)   
+## <a name="see-also"></a>См. также:  
+ [Критические изменения в полнотекстовом поиске](breaking-changes-to-full-text-search.md)   
+ [Изменения в работе полнотекстового поиска](behavior-changes-to-full-text-search.md)   
  [Неподдерживаемые функции ядра СУБД в SQL Server 2014](discontinued-database-engine-functionality-in-sql-server-2016.md)  
   
   

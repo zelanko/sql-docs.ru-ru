@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6d99a357c754add722fb6d5b5d880d1c472a5989
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827937"
 ---
 # <a name="create-infosource-for-transaction-data"></a>Создание InfoSource для данных транзакции
@@ -81,17 +81,17 @@ ms.locfileid: "62827937"
  **Тип**  
  Отображает тип InfoObject, связанный со столбцом потока данных. В следующей таблице приводятся возможные значения типа.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |CHA|Характеристики|  
-|UNI|Единицы измерения|  
+|UNI|Units|  
 |KYF|Ключевые цифры|  
 |TIM|Характеристики времени|  
   
  **Поле единицы**  
  Укажите единицы, которые будут использоваться в InfoObject.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание InfoSource](create-infosource.md)   
  [Справка F1 по Microsoft Connector 1.1 для SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
   

@@ -16,13 +16,13 @@ ms.assetid: 34244ae6-bd98-4a6a-bbd3-85f50edfcdc0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8bf38ef67089c65d53bedcb56afd81de3e21a413
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933871"
 ---
-# <a name="spdropmergesubscription-transact-sql"></a>sp_dropmergesubscription (Transact-SQL)
+# <a name="sp_dropmergesubscription-transact-sql"></a>sp_dropmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Удаляет подписку на публикацию слиянием и соответствующий агент слияния. Эта хранимая процедура выполняется на издателе в базе данных публикации.  
@@ -42,39 +42,39 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` — Имя публикации. *Публикация* — **sysname**, значение по умолчанию NULL. Публикация уже должна существовать и соответствовать правилам идентификаторов.  
+`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию NULL. Публикация уже должна существовать и соответствовать правилам идентификаторов.  
   
-`[ @subscriber = ] 'subscriber'` — Имя подписчика. *подписчик* — **sysname**, значение по умолчанию NULL.  
+`[ @subscriber = ] 'subscriber'`Имя подписчика. Аргумент *Subscriber* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @subscriber_db = ] 'subscriber_db'` — Имя базы данных подписки. *subscription_database*— **sysname**, значение по умолчанию NULL.  
+`[ @subscriber_db = ] 'subscriber_db'`Имя базы данных подписки. Аргумент *subscription_database*имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @subscription_type = ] 'subscription_type'` — Тип подписки. *subscription_type*— **nvarchar(15)** , и может принимать одно из следующих значений.  
+`[ @subscription_type = ] 'subscription_type'`Тип подписки. *subscription_type*имеет тип **nvarchar (15)** и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
-|**Все**|Принудительные подписки, подписки по запросу и анонимные подписки.|  
-|**Анонимный**|Анонимная подписка.|  
-|**Push-уведомлений**|Принудительная подписка.|  
-|**По запросу**|Подписка по запросу.|  
-|**оба** (по умолчанию)|Как принудительная подписка, так и подписка по запросу.|  
+|**каждого**|Принудительные подписки, подписки по запросу и анонимные подписки.|  
+|**подключившихся**|Анонимная подписка.|  
+|**распространение**|Принудительная подписка.|  
+|**собирает**|Подписка по запросу.|  
+|**both** (по умолчанию)|Как принудительная подписка, так и подписка по запросу.|  
   
-`[ @ignore_distributor = ] ignore_distributor` Указывает, выполняется ли данная хранимая процедура без подключения к распространителю. *ignore_distributor* — **бит**, значение по умолчанию **0**. Этот аргумент может использоваться для удаления подписки без выполнения задач очистки на распространителе. Это полезно и в тех случаях, когда требуется переустановить распространитель.  
+`[ @ignore_distributor = ] ignore_distributor`Указывает, выполняется ли эта хранимая процедура без соединения с распространителем. *ignore_distributor* имеет **бит**и значение по умолчанию **0**. Этот аргумент может использоваться для удаления подписки без выполнения задач очистки на распространителе. Это полезно и в тех случаях, когда требуется переустановить распространитель.  
   
-`[ @reserved = ] reserved` Зарезервировано для использования в будущем. *зарезервированные* — **бит**, значение по умолчанию **0**.  
+`[ @reserved = ] reserved`Зарезервировано для будущего использования. параметр *reserved* имеет значение **bit**и значение по умолчанию **0**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  **sp_dropmergesubscription** используется в репликации слиянием.  
   
 ## <a name="example"></a>Пример  
  [!code-sql[HowTo#sp_dropmergesubscription](../../relational-databases/replication/codesnippet/tsql/sp-dropmergesubscription_1.sql)]  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_dropmergesubscription**.  
+ Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_dropmergesubscription**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Удаление принудительной подписки](../../relational-databases/replication/delete-a-push-subscription.md)   
  [Удаление подписки по запросу](../../relational-databases/replication/delete-a-pull-subscription.md)   
  [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   

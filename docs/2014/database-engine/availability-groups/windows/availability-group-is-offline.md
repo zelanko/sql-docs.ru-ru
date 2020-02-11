@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 35d8f9cdda7c3b85c77d290f9c793640705438e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62815438"
 ---
 # <a name="availability-group-is-offline"></a>Группа доступности в режиме вне сети
@@ -28,11 +28,11 @@ ms.locfileid: "62815438"
 |||  
 |-|-|  
 |**Имя политики**|Режим «в сети» группы доступности|  
-|**Проблема**|Группа доступности находится в режиме «вне сети».|  
-|**Категория**|**Критическая**|  
-|**Аспект**|группа доступности|  
+|**Issue**|Группа доступности находится в режиме «вне сети».|  
+|**Категория**|**Critical**|  
+|**Устанавливают**|Группа доступности|  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Description  
  Эта политика проверяет состояние группы доступности (режим «в сети» или режим «вне сети»). Политика находится в нерабочем состоянии и при переходе кластерного ресурса группы доступности в режим «вне сети» и отсутствии у группы доступности первичной реплики формируется предупреждение.  
   
  Политика находится в рабочем состоянии, если кластерный ресурс группы доступности находится в режиме «в сети», а у группы доступности имеется первичная реплика.  
@@ -72,8 +72,8 @@ ms.locfileid: "62815438"
   
 -   Если выполняется отработка отказа, дождитесь его завершения.  
   
-## <a name="see-also"></a>См. также  
- [Обзор групп доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Использование панели мониторинга AlwaysOn (среда SQL Server Management Studio)](use-the-always-on-dashboard-sql-server-management-studio.md)  
+## <a name="see-also"></a>См. также:  
+ [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Использование панели мониторинга AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

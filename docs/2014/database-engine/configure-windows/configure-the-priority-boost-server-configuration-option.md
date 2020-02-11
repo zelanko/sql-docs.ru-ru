@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d75f292ea86b4b619fec81ea7a6f7aafc83fdc15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62812276"
 ---
 # <a name="configure-the-priority-boost-server-configuration-option"></a>Настройка параметра конфигурации сервера priority boost
@@ -31,7 +31,7 @@ ms.locfileid: "62812276"
   
      [Ограничения](#Restrictions)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Настройка параметра повышения приоритета с помощью:**  
   
@@ -39,7 +39,7 @@ ms.locfileid: "62812276"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Дальнейшие действия.**  [После настройки параметра повышения приоритета](#FollowUp)  
+-   **Дальнейшие действия.**  [после настройки параметра повышения приоритета](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
@@ -90,10 +90,10 @@ GO
   
  Дополнительные сведения см. в разделе [Параметры конфигурации сервера (SQL Server)](server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. После настройки параметра повышения приоритета  
+##  <a name="FollowUp"></a>Дальнейшие действия. После настройки параметра повышения приоритета  
  Чтобы изменения вступили в силу, необходимо перезапустить сервер.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [RECONFIGURE (Transact-SQL)](/sql/t-sql/language-elements/reconfigure-transact-sql)   
  [Параметры конфигурации сервера (SQL Server)](server-configuration-options-sql-server.md)   
  [sp_configure (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  

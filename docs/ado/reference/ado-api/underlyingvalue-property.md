@@ -1,5 +1,5 @@
 ---
-title: Свойство UnderlyingValue | Документация Майкрософт
+title: UnderlyingValue, свойство | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,33 +18,33 @@ ms.assetid: 00a0c8b8-8b63-433f-95b8-020ab05874a0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 582d0b87edd4729ce54cc2a7323b0a63443cab82
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938856"
 ---
 # <a name="underlyingvalue-property"></a>Свойство UnderlyingValue
-Указывает текущее значение [поле](../../../ado/reference/ado-api/field-object.md) объекта базы данных.  
+Указывает текущее значение объекта [поля](../../../ado/reference/ado-api/field-object.md) в базе данных.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает **Variant** значение, указывающее значение **поле**.  
+ Возвращает значение **типа Variant** , указывающее значение **поля**.  
   
-## <a name="remarks"></a>Примечания  
- Используйте **UnderlyingValue** свойство для возврата текущего значения поля из базы данных. Значение поля в **UnderlyingValue** свойство является значением, которое является видимым для транзакции и может быть результатом недавнего обновления другой транзакцией. Это может отличаться от [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) свойство, которое отражает значение, которое изначально было возвращено к [записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
+## <a name="remarks"></a>Remarks  
+ Используйте свойство **UnderlyingValue** , чтобы вернуть текущее значение поля из базы данных. Значение поля в свойстве **UnderlyingValue** является значением, видимым для транзакции и может быть результатом последнего обновления другой транзакции. Это может отличаться от свойства [originalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) , которое отражает значение, первоначально возвращенное [набору записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
- Это похоже на использование [Resync](../../../ado/reference/ado-api/resync-method.md) метод, но **UnderlyingValue** свойство возвращает только значение для указанного поля из текущей записи. Это то же значение, которое [Resync](../../../ado/reference/ado-api/resync-method.md) метод используется для замены [значение](../../../ado/reference/ado-api/value-property-ado.md) свойства.  
+ Это похоже на использование метода повторной [синхронизации](../../../ado/reference/ado-api/resync-method.md) , но свойство **UnderlyingValue** возвращает только значение для определенного поля из текущей записи. Это то же значение, которое метод [Resync](../../../ado/reference/ado-api/resync-method.md) использует для замены свойства [value](../../../ado/reference/ado-api/value-property-ado.md) .  
   
- При использовании этого свойства с **OriginalValue** можно устранить конфликты, возникающие из пакетных обновлений.  
+ При использовании этого свойства со свойством **originalValue** можно разрешить конфликты, возникающие в пакетных обновлениях.  
   
-## <a name="record"></a>Запись  
- Для [записи](../../../ado/reference/ado-api/record-object-ado.md) объектов, это свойство будет пустым для поля, добавленные перед [обновления](../../../ado/reference/ado-api/update-method.md) вызывается.  
+## <a name="record"></a>Record  
+ Для объектов [записи](../../../ado/reference/ado-api/record-object-ado.md) это свойство будет пустым для полей, добавленных до вызова метода [Update](../../../ado/reference/ado-api/update-method.md) .  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  [Объект Field](../../../ado/reference/ado-api/field-object.md)  
   
-## <a name="see-also"></a>См. также  
- [Примеры OriginalValue и Underlyingvalue свойства (Visual Basic)](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vb.md)   
- [Примеры OriginalValue и Underlyingvalue свойства (Visual C++)](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vc.md)   
+## <a name="see-also"></a>См. также:  
+ [Примеры свойств OriginalValue и UnderlyingValue (Visual Basic)](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vb.md)   
+ [Пример свойств OriginalValue и UnderlyingValue (Visual c++)](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vc.md)   
  [Свойство OriginalValue (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
  [Метод Resync](../../../ado/reference/ado-api/resync-method.md)

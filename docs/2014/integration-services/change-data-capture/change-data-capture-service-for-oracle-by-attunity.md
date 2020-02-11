@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a01524acf4fc72cb50732650f1f2e6f58b4ff74d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771530"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity"></a>Служба системы отслеживания измененных данных для Oracle компании Attunity
@@ -23,9 +23,9 @@ ms.locfileid: "62771530"
 ## <a name="installation"></a>Установка  
  Службу CDC Service для Oracle можно установить на любой поддерживаемый компьютер с ОС Windows с доступом к исходным базам данных Oracle, изменения в которых отслеживаются, и к целевому экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , где находится целевая база данных CDC. Службе CDC Service не нужны локально установленные базы данных Oracle или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , а только их поддерживаемые клиенты. Сведения о месте установки необходимых компонентов базы данных см. в подразделе **Предварительные требования базы данных** в этом разделе.  
   
- Установка службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC Service для Oracle помещает в выбранном месте графический интерфейс пользователя для настройки службы и служебную программу. Служба CDC Service для Oracle настраивается отдельно с помощью консоли конфигурации службы Oracle CDC. Дополнительные сведения о настройке службы Oracle CDC Service см. в разделе [Change Data Capture Service for Oracle by Attunity F1 Help](change-data-capture-service-for-oracle-by-attunity-f1-help.md).  
+ Установка службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC Service для Oracle помещает в выбранном месте графический интерфейс пользователя для настройки службы и служебную программу. Служба CDC Service для Oracle настраивается отдельно с помощью консоли конфигурации службы Oracle CDC. Дополнительные сведения о настройке службы Oracle CDC Service см. в разделе [Справка F1 по службе системы отслеживания информации об изменениях данных для Oracle компании Attunity](change-data-capture-service-for-oracle-by-attunity-f1-help.md).  
   
- Чтобы установить службу CDC Service для Oracle, вручную запустите файл **AttunityOracleCdcDesigner.msi** с установочного носителя SQL Server. Установочные пакеты для x86 и x64 расположены в **.\Tools\AttunityCDCOracle\\**  на установочном носителе SQL Server.  
+ Чтобы установить службу CDC для Oracle, вручную запустите **файл attunityoraclecdcdesigner. msi** с установочного носителя SQL Server. Пакеты установки для x86 и x64 находятся в **.\тулс\аттунитикдкоракле\\ ** на установочном носителе SQL Server.  
   
  Службу CDC Service для Oracle можно установить на любой поддерживаемый компьютер с ОС Windows, на котором установлен собственный клиент Native Client [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ; он не обязательно должен быть установлен на том же компьютере, что и целевая база данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -66,9 +66,10 @@ ms.locfileid: "62771530"
   
  Если программное обеспечение службы CDC Service удаляется с одного компьютера и устанавливается на другой, нужно задать только следующие данные:  
   
--   Учетная запись службы  
+-   Учетная запись службы.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и учетные данные  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и учетные данные  
   
 -   Главный пароль  
   
@@ -80,7 +81,7 @@ ms.locfileid: "62771530"
   
 -   [Служба CDC Oracle](the-oracle-cdc-service.md)  
   
--   [Справка F1 по службе системы отслеживания информации об изменениях данных для Oracle компании Attunity](change-data-capture-service-for-oracle-by-attunity-f1-help.md)  
+-   [Справка F1 службы системы отслеживания измененных данных для Oracle компании Attunity](change-data-capture-service-for-oracle-by-attunity-f1-help.md)  
   
 -   [Руководство по службе системы отслеживания измененных данных для Oracle компании Attunity](change-data-capture-service-for-oracle-by-attunity-how-to-guide.md)  
   

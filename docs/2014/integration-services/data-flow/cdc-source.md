@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4572e9fc61649f638b7c86ee23c75450216a4342
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62828121"
 ---
 # <a name="cdc-source"></a>CDC-источник
@@ -28,7 +28,7 @@ ms.locfileid: "62828121"
   
  Источник CDC использует следующие конфигурации.  
   
--   Диспетчер соединений ADO.NET [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для получения доступа к базе данных CDC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения о настройке соединения с источником CDC см. в разделе [CDC Source Editor &#40;Connection Manager Page&#41;](../cdc-source-editor-connection-manager-page.md).  
+-   Диспетчер соединений ADO.NET [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для получения доступа к базе данных CDC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения о настройке соединения с источником CDC см. в разделе [Редактор источника "CDC" (страница "Диспетчер соединений")](../cdc-source-editor-connection-manager-page.md).  
   
 -   Таблица, включенная для CDC.  
   
@@ -45,11 +45,11 @@ ms.locfileid: "62828121"
 ## <a name="error-handling"></a>Обработка ошибок  
  Источник CDC имеет вывод ошибок. Вывод ошибок компонента включает следующие выходные столбцы.  
   
--   **Код ошибки.** значение всегда равно 1.  
+-   **Код ошибки**. Значение всегда равно -1.  
   
--   **Столбец с ошибкой.** Входной столбец, вызывающий ошибку (это относится к ошибкам преобразования).  
+-   **Столбец с ошибкой**. Входной столбец, вызывающий ошибку (это относится к ошибкам преобразования).  
   
--   **Столбцы строки с ошибкой.** Данные записи, которые вызывают ошибку.  
+-   **Столбцы строки с ошибкой**. Данные записи, которые вызывают ошибку.  
   
  В зависимости от настройки поведения в случае ошибки, источник CDC поддерживает возврат ошибок (преобразование данных, усечение), которые обнаруживаются в процессе извлечения в выводе ошибок. Дополнительные сведения см. в разделе [CDC Source Editor &#40;Error Output Page&#41;](../cdc-source-editor-error-output-page.md).  
   
@@ -75,20 +75,22 @@ use <cdc-enabled-database-name>
   
  где:  
   
--   \<<cdc-enabled-database-name> — имя базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], содержащей таблицы изменений;  
+-   \<с поддержкой CDC-Database-Name> — имя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных, содержащей таблицы изменений.  
   
--   \<value-from-state-cs> — значение, которое появляется в переменной состояния CDC в виде CS/\<value-from-state-cs>/ (CS означает Current-processing-range-Start — начало текущего диапазона обработки);  
+-   
+  \<value-from-state-cs> — значение, которое появляется в переменной состояния CDC в виде CS/\<value-from-state-cs>/ (CS означает Current-processing-range-Start — начало текущего диапазона обработки);  
   
--   \<value-from-state-ce> — значение, которое появляется в переменной состояния CDC в виде CE/\<value-from-state-cs>/ (CE означает Current-processing-range-End — конец текущего диапазона обработки);  
+-   
+  \<value-from-state-ce> — значение, которое появляется в переменной состояния CDC в виде CE/\<value-from-state-cs>/ (CE означает Current-processing-range-End — конец текущего диапазона обработки);  
   
--   \<mode> — режимы обработки CDC. Режимы обработки могут иметь одно из следующих значений: **Все**, **Все со старыми значениями**, **Суммарные**, **Суммарные с маской обновления**, **Суммарные со слиянием**.  
+-   \<> режима — это режимы обработки CDC. Режимы обработки могут иметь одно из следующих значений: **Все**, **Все со старыми значениями**, **Суммарные**, **Суммарные с маской обновления**, **Суммарные со слиянием**.  
   
  Этот скрипт позволяет выявлять проблемы путем воспроизведения их в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], где можно легко воспроизводить и идентифицировать ошибки.  
   
 #### <a name="sql-server-error-message"></a>Сообщение об ошибке SQL Server  
  Следующее сообщение может быть возвращено [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
- **Для функции или процедуры cdc.fn_cdc_get_net_changes_\<..> задано недостаточное количество аргументов.**  
+ **Для процедуры или функции CDC указано недостаточное число аргументов. fn_cdc_get_net_changes_\<.. >.**  
   
  Эта ошибка не указывает, что отсутствует какой-то аргумент. Она означает, что начало или конец диапазона значений номеров LSN в переменной состояния CDC является недопустимым.  
   
@@ -97,11 +99,11 @@ use <cdc-enabled-database-name>
   
  Дополнительные сведения см. в одном из следующих разделов:  
   
--   [Редактор источника "CDC" (страница "Диспетчер соединений")](../cdc-source-editor-connection-manager-page.md)  
+-   [Редактор источника "CDC" &#40;страница "Диспетчер соединений"&#41;](../cdc-source-editor-connection-manager-page.md)  
   
--   [Редактор источника "CDC" (страница "Столбцы")](../cdc-source-editor-columns-page.md)  
+-   [Редактор источника «CDC» &#40;столбцов&#41;](../cdc-source-editor-columns-page.md)  
   
--   [Редактор источника "CDC" (страница "Вывод ошибок")](../cdc-source-editor-error-output-page.md)  
+-   [Редактор источника "CDC" &#40;страница "вывод ошибок"&#41;](../cdc-source-editor-error-output-page.md)  
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые могут быть заданы программным путем.  
   
@@ -113,13 +115,13 @@ use <cdc-enabled-database-name>
   
 ## <a name="in-this-section"></a>в этом разделе  
   
--   [Редактор источника "CDC" (страница "Диспетчер соединений")](../cdc-source-editor-connection-manager-page.md)  
+-   [Редактор источника "CDC" &#40;страница "Диспетчер соединений"&#41;](../cdc-source-editor-connection-manager-page.md)  
   
--   [Редактор источника "CDC" (страница "Столбцы")](../cdc-source-editor-columns-page.md)  
+-   [Редактор источника «CDC» &#40;столбцов&#41;](../cdc-source-editor-columns-page.md)  
   
--   [Редактор источника "CDC" (страница "Вывод ошибок")](../cdc-source-editor-error-output-page.md)  
+-   [Редактор источника "CDC" &#40;страница "вывод ошибок"&#41;](../cdc-source-editor-error-output-page.md)  
   
--   [CDC Source Custom Properties](cdc-source-custom-properties.md)  
+-   [Пользовательские свойства источника «CDC»](cdc-source-custom-properties.md)  
   
 -   [Извлечение информации об изменениях данных с помощью источника CDC](cdc-source.md)  
   

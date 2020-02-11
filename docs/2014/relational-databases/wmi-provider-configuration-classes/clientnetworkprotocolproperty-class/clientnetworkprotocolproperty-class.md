@@ -1,5 +1,5 @@
 ---
-title: Класс ClientNetworkProtocolProperty | Документация Майкрософт
+title: Класс класс clientnetworkprotocolproperty | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 05bd3c59428b719e5d292dd3d122e5c8af0b7b79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62826675"
 ---
 # <a name="clientnetworkprotocolproperty-class"></a>Класс ClientNetworkProtocolProperty
@@ -40,7 +40,7 @@ ms.locfileid: "62826675"
   
 -   Установка флагов для текущего свойства.  
   
-## <a name="see-also"></a>См. также  
- [Настройка клиентских протоколов](https://technet.microsoft.com/library/ms181035.aspx)  
+## <a name="see-also"></a>См. также:  
+ [настройка клиентских протоколов](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

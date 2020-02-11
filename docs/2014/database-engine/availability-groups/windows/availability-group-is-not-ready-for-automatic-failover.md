@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a9a7bdca770bccaac50da1ac6a7688eabd335e20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62791868"
 ---
 # <a name="availability-group-is-not-ready-for-automatic-failover"></a>Группа доступности не готова для автоматического перехода на другой ресурс
@@ -28,11 +28,11 @@ ms.locfileid: "62791868"
 |||  
 |-|-|  
 |**Имя политики**|Готовность группы доступности к автоматическому переходу на другой ресурс при сбое|  
-|**Проблема**|Группа доступности не готова к автоматическому переходу на другой ресурс.|  
-|**Категория**|**Критическая**|  
-|**Аспект**|группа доступности|  
+|**Issue**|Группа доступности не готова к автоматическому переходу на другой ресурс.|  
+|**Категория**|**Critical**|  
+|**Устанавливают**|Группа доступности|  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Description  
  Эта политика проверяет наличие в группе доступности хотя бы одной вторичной реплики, готовой к переходу на другой ресурс. Политика находится в нерабочем состоянии и, если для первичной реплики настроен автоматический режим перехода на другой ресурс, но ни одна из вторичных реплик в группе доступности не готова к переходу на другой ресурс, формируется предупреждение.  
   
  Политика находится в рабочем состоянии, если по крайней мере одна вторичная реплика готова к автоматическому переходу на другой ресурс.  
@@ -50,8 +50,8 @@ ms.locfileid: "62791868"
   
 -   Используйте политику, чтобы убедиться, что данные находятся в состоянии синхронизации, и что у целевого узла автоматического перехода на другой ресурс имеется состояние SYNCHRONIZED, а затем устраните проблему в реплике доступности.  
   
-## <a name="see-also"></a>См. также  
- [Обзор групп доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Использование панели мониторинга AlwaysOn (среда SQL Server Management Studio)](use-the-always-on-dashboard-sql-server-management-studio.md)  
+## <a name="see-also"></a>См. также:  
+ [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Использование панели мониторинга AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

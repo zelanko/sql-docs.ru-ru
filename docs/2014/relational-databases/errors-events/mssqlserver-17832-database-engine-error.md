@@ -16,13 +16,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1280bb44d11ce4f8234d544bf113e796a9c3c85c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915432"
 ---
-# <a name="mssqlserver17832"></a>MSSQLSERVER_17832
+# <a name="mssqlserver_17832"></a>MSSQLSERVER_17832
     
 ## <a name="details"></a>Сведения  
   
@@ -51,15 +51,15 @@ ms.locfileid: "62915432"
 > [!CAUTION]  
 >  [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
   
- **Изменение параметра MaxTokenSize на компьютере сервера**  
+ **Изменение MaxTokenSize на компьютере сервера**  
   
 1.  В меню **Пуск** выберите команду **Выполнить**.  
   
-2.  Тип `regedit`, а затем нажмите кнопку **ОК**. (Если появится диалоговое окно **Контроль учетных записей**, нажмите в нем кнопку **Продолжить**).  
+2.  Введите `regedit`, а затем нажмите кнопку **ОК**. (Если появится диалоговое окно **Контроль учетных записей**, нажмите в нем кнопку **Продолжить**).  
   
 3.  Перейдите к разделу **HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Lsa\Kerberos\Parameters**.  
   
-4.  Если параметр **MaxTokenSize** отсутствует, щелкните правой кнопкой мыши **Параметры**, выберите пункт **Создать**, а затем формат значения **DWORD (32 бита)**. Присвойте новому параметру реестра имя **MaxTokenSize**.  
+4.  Если параметр **MaxTokenSize** отсутствует, щелкните правой кнопкой мыши **Параметры**, выберите пункт **Создать**, а затем формат значения **DWORD (32 бита)** . Присвойте новому параметру реестра имя **MaxTokenSize**.  
   
 5.  Щелкните правой кнопкой мыши параметр **MaxTokenSize** и выберите команду **Изменить**.  
   

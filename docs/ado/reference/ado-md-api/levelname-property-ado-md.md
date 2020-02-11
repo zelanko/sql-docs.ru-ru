@@ -1,5 +1,5 @@
 ---
-title: Свойство LevelName (многомерные Объекты ADO) | Документация Майкрософт
+title: Свойство LevelName (объекты данных ActiveX (MD)) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,24 +17,24 @@ ms.assetid: bf3b4466-9a0b-446e-9e04-fed944e3a493
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e50793691db8a67eb0008dc186945ec82935efec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949589"
 ---
 # <a name="levelname-property-ado-md"></a>Свойство LevelName (многомерные объекты ADO)
-Указывает имя уровня [член](../../../ado/reference/ado-md-api/member-object-ado-md.md).  
+Указывает имя уровня [элемента](../../../ado/reference/ado-md-api/member-object-ado-md.md).  
   
 ## <a name="return-values"></a>Возвращаемые значения  
- Возвращает **строка** и доступен только для чтения.  
+ Возвращает **строку** и доступна только для чтения.  
   
-## <a name="remarks"></a>Примечания  
- Используйте **LevelName** свойства, чтобы получить имя уровня, к которой принадлежит член. Это соответствует [имя](../../../ado/reference/ado-md-api/name-property-ado-md.md) свойство [уровень](../../../ado/reference/ado-md-api/level-object-ado-md.md) объекта.  
+## <a name="remarks"></a>Remarks  
+ Используйте свойство **LevelName** , чтобы получить имя уровня, которому принадлежит элемент. Это соответствует свойству [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md) объекта [Level](../../../ado/reference/ado-md-api/level-object-ado-md.md) .  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  [Объект Member (многомерные объекты ADO)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
   
-## <a name="see-also"></a>См. также  
- [Объект Level (многомерные Объекты ADO)](../../../ado/reference/ado-md-api/level-object-ado-md.md)   
+## <a name="see-also"></a>См. также:  
+ [Объект Level (объекты данных ActiveX (MD))](../../../ado/reference/ado-md-api/level-object-ado-md.md)   
  [Свойство Name (многомерные объекты ADO)](../../../ado/reference/ado-md-api/name-property-ado-md.md)

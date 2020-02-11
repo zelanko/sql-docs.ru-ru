@@ -25,10 +25,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: af647a446366ea03063ea0deb84603a3f8f90dd8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62896132"
 ---
 # <a name="raising-and-defining-events-in-a-custom-task"></a>Вызов и определение событий в пользовательской задаче
@@ -43,7 +43,7 @@ ms.locfileid: "62896132"
   
  В следующем образце кода демонстрируется метод `InitializeTask` пользовательской задачи при создании двух пользовательских событий и указании их свойств. Затем новые события добавляются в коллекцию <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos>.  
   
- Первому событию присваивается имя *eventName* "**OnBeforeIncrement**" и описание *description* "**Fires after the initial value is updated**". (Срабатывает после обновления исходного значения.) Следующий параметр, имеющий значение `true`, указывает, что для обработки этого события разрешено создание контейнера обработчика событий. Обработчик событий представляет собой контейнер, обеспечивающий структуру пакета и службы для задач, как и другие контейнеры, например, пакет, Sequence, ForLoop и ForEachLoop. Когда *allowEventHandlers* параметр `true`, <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> для события создаются объекты. Любые параметры, определенные для события, становятся доступными для <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> в его коллекции <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>.  
+ Первому событию присваивается имя *eventName* "**OnBeforeIncrement**" и описание *description* "**Fires after the initial value is updated**". (Срабатывает после обновления исходного значения.) Следующий параметр, имеющий значение `true`, указывает, что для обработки этого события разрешено создание контейнера обработчика событий. Обработчик событий представляет собой контейнер, обеспечивающий структуру пакета и службы для задач, как и другие контейнеры, например, пакет, Sequence, ForLoop и ForEachLoop. Если параметр *allowEventHandlers* имеет значение `true`, <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> для события создаются объекты. Любые параметры, определенные для события, становятся доступными для <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> в его коллекции <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>.  
   
 ```csharp  
 public override void InitializeTask(Connections connections,  
@@ -189,10 +189,10 @@ Nothing,  bFireOnBeforeIncrement)
     End Class  
 ```  
   
-![Значок служб Integration Services (маленький)](../../media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
+![Значок Integration Services (маленький)](../../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
-## <a name="see-also"></a>См. также  
- [Обработчики событий в службах Integration Services (SSIS)](../../integration-services-ssis-event-handlers.md)   
- [Добавление обработчика событий к пакету](../../add-an-event-handler-to-a-package.md)  
+## <a name="see-also"></a>См. также:  
+ [Integration Services &#40;служб SSIS&#41; обработчики событий](../../integration-services-ssis-event-handlers.md)   
+ [Добавление к пакету обработчик событий](../../add-an-event-handler-to-a-package.md)  
   
   

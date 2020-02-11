@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 27b71e75e370cd1a5c5af93a4ba0b34a69db16a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914844"
 ---
-# <a name="mssqlserver2540"></a>MSSQLSERVER_2540
+# <a name="mssqlserver_2540"></a>MSSQLSERVER_2540
     
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|2540|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  

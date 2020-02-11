@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 53a8e0ab728c1fee0033ef86dbf6b7dfc22bdc8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62867848"
 ---
-# <a name="mssqlserver4186"></a>MSSQLSERVER_4186
+# <a name="mssqlserver_4186"></a>MSSQLSERVER_4186
     
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|4186|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
@@ -35,7 +35,7 @@ ms.locfileid: "62867848"
 ## <a name="explanation"></a>Объяснение  
  Во избежание недетерминированного поведения в предложении OUTPUT запрещено ссылаться на столбец из представления или встроенной функции, возвращающей табличное значение, если этот столбец определен одним из следующих методов.  
   
--   Вложенный запрос.  
+-   вложенный запрос.  
   
 -   Определяемая пользователем функция, которая осуществляет или может осуществлять доступ к пользовательским или системным данным.  
   
@@ -106,7 +106,7 @@ WHERE ProductModelID BETWEEN 75 and 80;
   
 -   Удалите столбец из предложения OUTPUT.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Предложение OUTPUT (Transact-SQL)](/sql/t-sql/queries/output-clause-transact-sql)  
   
   

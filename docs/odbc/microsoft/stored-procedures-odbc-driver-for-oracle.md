@@ -11,17 +11,17 @@ ms.assetid: de0e1214-b9d8-4afc-8fc0-e8b9c4c648f6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cef0c3737dbca640d6b842fc495c14c925c35723
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67948816"
 ---
 # <a name="stored-procedures-odbc-driver-for-oracle"></a>Хранимые процедуры (драйвер ODBC для Oracle)
 > [!IMPORTANT]  
->  Этот компонент будет удален в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Вместо этого используйте драйвер ODBC, предоставляемого корпорацией Oracle.  
+>  Эта функция будет удалена в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Вместо этого используйте драйвер ODBC, предоставляемый Oracle.  
   
- В этом разделе рассматриваются следующие вопросы.  
+ В этом разделе рассматриваются следующие темы:  
   
 -   [Ограничения параметров хранимой процедуры](../../odbc/microsoft/stored-procedure-parameter-limitations.md)  
   

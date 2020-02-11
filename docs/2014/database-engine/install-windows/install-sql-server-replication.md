@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3fd70d208960af1f121795bfdf8a657ceaf59f21
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62775297"
 ---
 # <a name="install-sql-server-replication"></a>Установка репликации SQL Server
@@ -39,9 +39,9 @@ ms.locfileid: "62775297"
 ## <a name="installing-replication-from-the-command-prompt"></a>Установка репликации из командной строки  
  **Установка репликации при установке нового экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**  
   
--   См. в разделе [Установка SQL Server 2014 из командной строки](install-sql-server-from-the-command-prompt.md).  
+-   См. раздел [Install SQL Server 2014 из командной строки](install-sql-server-from-the-command-prompt.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Установка SQL Server 2014](install-sql-server.md)   
  [Установка SQL Server 2014 из командной строки](install-sql-server-from-the-command-prompt.md)   
  [Возможности, поддерживаемые различными выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  

@@ -1,5 +1,5 @@
 ---
-title: GetPermissions и SetPermissions методы (Visual Basic) | Документация Майкрософт
+title: Примеры методов PermissionSet и SetPermissions (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: aa366d98-8c7a-4189-bdd8-1d663b243d33
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 11250cf591f576052434c641d8c65ba681000666
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966241"
 ---
 # <a name="getpermissions-and-setpermissions-methods-example-vb"></a>Примеры методов GetPermissions и SetPermissions (Visual Basic)
-В этом примере показано [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) и [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) методы. Следующий код дает полный доступ для таблицы Orders пользователю с правами администратора.  
+В этом примере демонстрируются методы [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) и [PermissionSet](../../../ado/reference/adox-api/getpermissions-method-adox.md) . Следующий код предоставляет пользователю с правами администратора полный доступ к таблице Orders.  
   
 ```  
 ' BeginGrantPermissionsVB  
@@ -94,9 +94,9 @@ End Sub
 ' EndGrantPermissionsVB  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Объект Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Метод GetPermissions (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)   
+## <a name="see-also"></a>См. также:  
+ [Объект каталога (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Метод PermissionSet (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)   
  [Метод SetPermissions (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)   
  [Объект User (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)   
  [Коллекция Users (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)

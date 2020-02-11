@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5532156a555139b8bb985621e343a3fd59031462
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62899841"
 ---
 # <a name="welcome-to-the-slowly-changing-dimension-wizard"></a>Приветствие мастера медленно меняющихся измерений
@@ -28,7 +28,7 @@ ms.locfileid: "62899841"
  **Больше не показывать это окно**  
  Пропустить страницу приветствия при следующем запуске мастера.  
   
-## <a name="see-also"></a>См. также  
- [Настройка выходов при помощи мастера медленно изменяющихся измерений](configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
+## <a name="see-also"></a>См. также:  
+ [Настройка выходов с помощью мастера медленно изменяющихся измерений](configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   

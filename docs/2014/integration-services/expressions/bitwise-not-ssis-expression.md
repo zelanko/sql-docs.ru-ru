@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 73a67105a8b70b1b55b15d894ebc13c90417d8e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769500"
 ---
 # <a name="-bitwise-not-ssis-expression"></a>~ (битовое НЕ) (выражение служб SSIS)
@@ -38,7 +38,7 @@ ms.locfileid: "62769500"
 ## <a name="result-types"></a>Типы результата  
  Возвращает тип данных *integer_expression*.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  None  
   
 ## <a name="expression-examples"></a>Примеры выражений  
@@ -57,7 +57,7 @@ ms.locfileid: "62769500"
   
  1111111101010101  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Очередность и ассоциативность операторов](operator-precedence-and-associativity.md)   
  [Операторы (выражение служб SSIS)](operators-ssis-expression.md)  
   

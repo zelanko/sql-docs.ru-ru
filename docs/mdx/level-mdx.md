@@ -1,5 +1,5 @@
 ---
-title: Level (многомерные Выражения) | Документация Майкрософт
+title: Level (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b419cbb05aa616f163f5878bda83c9d68203575d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905662"
 ---
 # <a name="level-mdx"></a>Level (многомерные выражения)
@@ -32,7 +32,7 @@ Member_Expression.Level
  Допустимое многомерное выражение, возвращающее элемент.  
   
 ### <a name="examples"></a>Примеры  
- В следующем примере используется **уровень** функция возвращаются все месяцы в кубе Adventure Works.  
+ В следующем примере функция **Level** используется для возврата всех месяцев в кубе Adventure Works.  
   
 ```  
 SELECT[Date].[Fiscal].[Month].[February 2002].Level.Members ON 0,  
@@ -40,7 +40,7 @@ SELECT[Date].[Fiscal].[Month].[February 2002].Level.Members ON 0,
 FROM [Adventure Works]  
 ```  
   
- В следующем примере используется **уровень** функция возвращает имя уровня для элемента All-Purpose Bike Stand в иерархии атрибута Model Name в кубе Adventure Works.  
+ В следующем примере функция **Level** используется для возврата имени уровня для каждого велосипеда, который находится в иерархии атрибута Model Name в кубе Adventure Works.  
   
 ```  
 WITH MEMBER Measures.x AS   
@@ -49,7 +49,7 @@ SELECT Measures.x ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также:  
+ [Ссылка на функцию многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -18,13 +18,13 @@ ms.assetid: a9a23b90-2c60-4460-80a7-d7e14cc5a6a8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 69651cedfa45df20d3a16966dbb8cd5574436bd8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67995510"
 ---
-# <a name="spmshasdbaccess-transact-sql"></a>sp_MShasdbaccess (Transact-SQL)
+# <a name="sp_mshasdbaccess-transact-sql"></a>sp_MShasdbaccess (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Перечисляет имена и владельцев всех баз данных, к которым данный пользователь имеет доступ.  
@@ -39,12 +39,12 @@ sp_MShasdbaccess
 ```  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или 1 (неуспешное завершение)  
+ 0 (успех) или 1 (сбой).  
   
 ## <a name="permissions"></a>Разрешения  
- Выполните разрешение предоставляется **открытый** роли.  
+ Роли **Public** предоставлено разрешение EXECUTE.  
   
-## <a name="see-also"></a>См. также  
- [sys.sysdatabases (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-sysdatabases-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [sys. sysdatabases &#40;&#41;Transact-SQL](../../relational-databases/system-compatibility-views/sys-sysdatabases-transact-sql.md)  
   
   

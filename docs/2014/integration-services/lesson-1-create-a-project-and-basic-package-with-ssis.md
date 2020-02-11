@@ -1,5 +1,5 @@
 ---
-title: Урок 1. Создание проекта и основного пакета | Документация Майкрософт
+title: Занятие 1. Создание проекта и основного пакета | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,17 +11,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 652cf44f70e890b3203ed27890d06f98d70b7f1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767506"
 ---
-# <a name="lesson-1-creating-the-project-and-basic-package"></a>Урок 1. Создание проекта и базового пакета
+# <a name="lesson-1-creating-the-project-and-basic-package"></a>Урок 1. Создание проекта и основного пакета
   На этом занятии будет рассмотрено создание простого ETL-пакета, который будет извлекать данные из отдельного источника неструктурированных файлов, преобразовывать полученные данные при помощи двух компонентов преобразования «Уточняющий запрос», а затем записывать эти данные в таблицу фактов **FactCurrency** , находящуюся в базе данных **AdventureWorksDW2012**. На этом занятии предстоит узнать, как создавать новые пакеты, добавлять и настраивать соединения с источниками данных и назначениями, а также работать с новыми компонентами потока управления и потока данных.  
   
 > [!IMPORTANT]  
->  Для выполнения упражнений этого учебника потребуется образец базы данных **AdventureWorksDW2012** . Дополнительные сведения об установке и развертывании **AdventureWorksDW2012**, см. в разделе [Microsoft SQL Server Product Samples: Службы Reporting Services](https://archive.codeplex.com/?p=msftrsprodsamples).  
+>  Для выполнения упражнений этого учебника потребуется образец базы данных **AdventureWorksDW2012** . Дополнительные сведения об установке и развертывании **AdventureWorksDW2012**см. в разделе [Microsoft SQL Server Product samples: Reporting Services](https://archive.codeplex.com/?p=msftrsprodsamples).  
   
 ## <a name="understanding-the-package-requirements"></a>Основные сведения о требованиях пакета  
  Для выполнения упражнений этого учебника требуется Microsoft SQL Server Data Tools.  
@@ -60,22 +60,22 @@ ms.locfileid: "62767506"
 ### <a name="looking-at-the-destination"></a>Анализ назначения  
  Конечным назначением источника данных является таблица фактов **FactCurrency** в базе данных **AdventureWorksDW**. Таблица фактов **FactCurrency** имеет четыре столбца и связи с двумя таблицами измерений, как показано в следующей таблице.  
   
-|Имя столбца|Тип данных|Таблица уточняющих запросов|Уточняющий столбец|  
+|Имя столбца|Тип данных|Таблица уточняющих запросов|столбцом подстановки|  
 |-----------------|---------------|------------------|-------------------|  
-|AverageRate|float|None|None|  
+|AverageRate|FLOAT|None|None|  
 |CurrencyKey|int (FK)|DimCurrency|CurrencyKey (PK)|  
 |DateKey|int (FK)|DimDate|DateKey (PK)|  
-|EndOfDayRate|float|None|None|  
+|EndOfDayRate|FLOAT|None|None|  
   
 ### <a name="mapping-source-data-to-be-compatible-with-the-destination"></a>Сопоставление совместимых данных источника с назначением  
  Анализ форматов данных источника и назначения показывает, что для значений **CurrencyKey** и **DateKey** требуются уточняющие запросы. Преобразования, которые выполнят эти уточняющие запросы, получат значения **CurrencyKey** и **DateKey** , с помощью альтернативных ключей из таблиц измерений **DimCurrency** и **DimDate** .  
   
 |Столбец неструктурированных файлов|Имя таблицы|Имя столбца|Тип данных|  
 |----------------------|----------------|-----------------|---------------|  
-|0|FactCurrency|AverageRate|float|  
+|0|FactCurrency|AverageRate|FLOAT|  
 |1|DimCurrency|CurrencyAlternateKey|nchar (3)|  
-|2|DimDate|FullDateAlternateKey|date|  
-|3|FactCurrency|EndOfDayRate|float|  
+|2|DimDate|FullDateAlternateKey|Дата|  
+|3|FactCurrency|EndOfDayRate|FLOAT|  
   
 ## <a name="lesson-tasks"></a>Задачи занятия  
  Это занятие содержит следующие задачи.  
@@ -86,17 +86,17 @@ ms.locfileid: "62767506"
   
 -   [Шаг 3. Добавление и настройка диспетчера соединений OLE DB](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
--   [Шаг 4. Добавление в пакет задачу потока данных](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
+-   [Этап 4. Добавление задачи потока данных в пакет](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
 -   [Шаг 5. Добавление и настройка источника неструктурированных файлов](lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
--   [Шаг 6. Добавление и Настройка преобразований «Уточняющий запрос»](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
+-   [Шаг 6. Добавление и настройка преобразований «Уточняющий запрос»](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
--   [Шаг 7. Добавление и Настройка назначения OLE DB](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
+-   [Шаг 7. Добавление и настройка назначения OLE DB](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
--   [Шаг 8. Облегчение пакета занятия 1](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
+-   [Шаг 8. Облегчение чтения пакета, созданного на занятии 1](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
--   [Шаг 9. Проверка учебного пакета занятия 1](lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
+-   [Шаг 9. Проверка учебного пакета, созданного на занятии 1](lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Начало занятия  
  [Шаг 1. Создание нового проекта служб Integration Services](lesson-1-1-creating-a-new-integration-services-project.md)  

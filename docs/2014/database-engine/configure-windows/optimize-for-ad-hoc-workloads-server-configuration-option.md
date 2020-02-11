@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7edf279b49374823c9083005be9b8d047b003f62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781440"
 ---
 # <a name="optimize-for-ad-hoc-workloads-server-configuration-option"></a>Параметр конфигурации сервера «optimize for ad hoc workloads»
@@ -28,13 +28,13 @@ ms.locfileid: "62781440"
   
  Скомпилированная заглушка плана принадлежит к объектам cacheobjtypes, которые можно просмотреть в представлении каталога sys.dm_exec_cached_plans. У каждой заглушки есть уникальный дескриптор SQL и дескриптор плана. Со скомпилированной заглушкой плана не связан план выполнения. Запрос по дескриптору плана не вернет XML-код Showplan.  
   
- Флаг трассировки 8032 восстанавливает параметры предела кэша до значения в RTM-версии [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , что обычно позволяет увеличить размер кэша. Используйте этот параметр, если часто используемые повторно элементы кэша не помещаются в кэш и в *optimize for ad hoc workloads Server Configuration Option* не удалось разрешить эту проблему с помощью кэша планов.  
+ Флаг трассировки 8032 восстанавливает параметры предела кэша до значения в RTM-версии [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , что обычно позволяет увеличить размер кэша. Используйте этот параметр, если часто используемые повторно записи кэша не помещаются в кэш и параметру конфигурации сервера *Оптимизировать для нерегламентированной рабочей нагрузки* не удалось разрешить эту проблему с помощью кэша планов.  
   
 > [!WARNING]  
 >  Применение флага трассировки 8032 может привести к снижению производительности, если увеличение кэша приводит к уменьшению объема памяти, доступной для других потребителей памяти, например для буферного пула.  
   
-## <a name="see-also"></a>См. также  
- [sys.dm_exec_cached_plans (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql)   
+## <a name="see-also"></a>См. также:  
+ [sys. dm_exec_cached_plans &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql)   
  [Параметры конфигурации сервера (SQL Server)](server-configuration-options-sql-server.md)  
   
   

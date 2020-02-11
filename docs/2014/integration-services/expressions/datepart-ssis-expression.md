@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 22225f9a1791185ed78dfc75d92c3dbced7be3ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769341"
 ---
 # <a name="datepart-ssis-expression"></a>DATEPART (выражение служб SSIS)
@@ -31,7 +31,7 @@ DATEPART(datepart, date)
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *часть_даты*  
+ *datepart*  
  Параметр, который указывает, для какой части даты вернуть новое значение.  
   
  *date*  
@@ -40,7 +40,7 @@ DATEPART(datepart, date)
 ## <a name="result-types"></a>Типы результата  
  DT_I4  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  DATEPART возвращает NULL при аргументе NULL.  
   
  Литерал даты должен быть явно приведен к одному из типов данных даты. Дополнительные сведения см. в разделе [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
@@ -58,7 +58,7 @@ DATEPART(datepart, date)
 |День недели|dw|  
 |Час|Hh|  
 |Минута|mi, n|  
-|Вторая|ss, s|  
+|Секунда|ss, s|  
 |Миллисекунда|Ms|  
   
 ## <a name="ssis-expression-examples"></a>Примеры выражений служб SSIS  
@@ -80,7 +80,7 @@ DATEPART("dd", ModifiedDate)
 DATEPART("yy",GETDATE())  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [DATEADD (выражение служб SSIS)](dateadd-ssis-expression.md)   
  [DATEDIFF (выражение служб SSIS)](datediff-ssis-expression.md)   
  [DAY (выражение служб SSIS)](day-ssis-expression.md)   

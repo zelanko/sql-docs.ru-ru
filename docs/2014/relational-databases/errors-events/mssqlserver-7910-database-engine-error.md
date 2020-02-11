@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 427223e6c11d47091741e032dc79b0ecafef1d00
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913493"
 ---
-# <a name="mssqlserver7910"></a>MSSQLSERVER_7910
+# <a name="mssqlserver_7910"></a>MSSQLSERVER_7910
     
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|7910|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC2_REPAIR_PAGE_ALLOCATED|  
-|Текст сообщения|Исправление: Страница P_ID выделена объекту с Идентификатором O_ID, Идентификатором индекса I_ID, Идентификатором секции PN_ID, Идентификатором единицы распределения A_ID (тип TYPE).|  
+|Текст сообщения|Исправление: выделена страница P_ID объекту с идентификатором O_ID, идентификатором индекса I_ID, идентификатором секции PN_ID, идентификатором единицы распределения A_ID (тип TYPE).|  
   
 ## <a name="explanation"></a>Объяснение  
  Это информационное сообщение инструкции REPAIR, указывающее, что страница была размещена в карте распределения индекса (IAM)-страницы.  

@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0eda0980b3b8ffbc748f15933ea397ae3d0b71e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913418"
 ---
-# <a name="mssqlserver7916"></a>MSSQLSERVER_7916
+# <a name="mssqlserver_7916"></a>MSSQLSERVER_7916
     
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|7916|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC2_REPAIR_RECORD_DELETED|  
-|Текст сообщения|Исправление: Удалена запись для объекта с Идентификатором O_ID, Идентификатором индекса I_ID, Идентификатором секции PN_ID, Идентификатором единицы распределения A_ID (тип TYPE), на странице P_ID, область памяти S_ID. Индексы будут перестроены.|  
+|Текст сообщения|Исправление: удалена запись для объекта с идентификатором O_ID, идентификатором индекса I_ID, идентификатором секции PN_ID, идентификатором единицы распределения A_ID (тип TYPE) на странице P_ID, слот S_ID. Индексы будут перестроены.|  
   
 ## <a name="explanation"></a>Объяснение  
  Данное информационное сообщение отправлено функцией REPAIR и означает, что указанная запись была удалена со страницы.  

@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1a89632ad5502cee9599d1eea6e1cd0a0bebe7d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771000"
 ---
 # <a name="ole-db-source"></a>Источник OLE DB
@@ -80,7 +80,7 @@ ms.locfileid: "62771000"
  Хранимая процедура ожидает, что в переменных `@StartProductID` и `@CheckDate`будут содержаться значения параметров. Порядок следования параметров в списке **Сопоставления** неважен. Единственное требование состоит в том, что имена параметров должны совпадать с именами переменных в хранимой процедуре вплоть до символа \@.  
   
 ### <a name="mapping-parameters-to-variables"></a>Сопоставление параметров и переменных  
- Параметры сопоставляются с переменными, которые во время выполнения предоставляют значения параметров. Переменные обычно являются определяемыми пользователем переменными, хотя также можно использовать системные переменные, предоставляемые службами [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . При использовании определяемых пользователем переменных убедитесь, что тип их данных совместим с типом данных столбца, на который ссылается сопоставляемый параметр. Дополнительные сведения см. в разделе [Integration Services &#40;SSIS&#41; Variables](../integration-services-ssis-variables.md).  
+ Параметры сопоставляются с переменными, которые во время выполнения предоставляют значения параметров. Переменные обычно являются определяемыми пользователем переменными, хотя также можно использовать системные переменные, предоставляемые службами [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . При использовании определяемых пользователем переменных убедитесь, что тип их данных совместим с типом данных столбца, на который ссылается сопоставляемый параметр. Дополнительные сведения см. в разделе [Переменные служб Integration Services (SSIS)](../integration-services-ssis-variables.md).  
   
 ## <a name="troubleshooting-the-ole-db-source"></a>Устранение неполадок, связанных с источником OLE DB  
  Можно вести журнал вызовов, сделанных источником OLE DB к внешним источникам данных. Эта возможность ведения журнала может быть использована для устранения неполадок загрузки данных из внешнего источника данных, выполняемой источником OLE DB. Чтобы вести журнал вызовов, которые источник OLE DB совершает к внешним поставщикам данных, необходимо включить ведение журнала пакета и выбрать событие **Диагностика** на уровне пакета. Дополнительные сведения см. в разделе [Инструменты устранения неполадок при выполнении пакетов](../troubleshooting/troubleshooting-tools-for-package-execution.md).  
@@ -90,15 +90,15 @@ ms.locfileid: "62771000"
   
  Дополнительные сведения о свойствах, которые можно задавать в диалоговом окне **Редактор источника OLE DB** , см. в следующих разделах:  
   
--   [Редактор источника OLE DB (страница "Диспетчер соединений")](../ole-db-source-editor-connection-manager-page.md)  
+-   [Редактор OLE DBного источника &#40;страница "Диспетчер соединений"&#41;](../ole-db-source-editor-connection-manager-page.md)  
   
--   [Редактор источника OLE DB (страница "Столбцы")](../ole-db-source-editor-columns-page.md)  
+-   [Страница "&#40;столбцов" редактора источника OLE DB&#41;](../ole-db-source-editor-columns-page.md)  
   
--   [Редактор источника OLE DB (страница "Вывод ошибок")](../ole-db-source-editor-error-output-page.md)  
+-   [Редактор источника OLE DB &#40;странице вывода ошибок&#41;](../ole-db-source-editor-error-output-page.md)  
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
--   [Common Properties](../common-properties.md)  
+-   [Общие свойства](../common-properties.md)  
   
 -   [Пользовательские свойства OLE DB](ole-db-custom-properties.md)  
   
@@ -110,14 +110,14 @@ ms.locfileid: "62771000"
   
 -   [Установление свойств компонента потока данных](set-the-properties-of-a-data-flow-component.md)  
   
--   [Сортировка данных для преобразований "Слияние" и "Соединение слиянием"](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [Сортировка данных для преобразований «Слияние» и «Соединение слиянием»](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-content"></a>См. также  
  Статья Wiki [Соединители служб SSIS с Oracle](https://go.microsoft.com/fwlink/?LinkId=220670)на сайте social.technet.microsoft.com.  
   
-## <a name="see-also"></a>См. также  
- [Назначение «OLE DB»](ole-db-destination.md)   
- [Переменные в службах Integration Services (SSIS)](../integration-services-ssis-variables.md)   
+## <a name="see-also"></a>См. также:  
+ [Назначение OLE DB](ole-db-destination.md)   
+ [Integration Services &#40;переменные&#41; SSIS](../integration-services-ssis-variables.md)   
  [Поток данных](data-flow.md)  
   
   

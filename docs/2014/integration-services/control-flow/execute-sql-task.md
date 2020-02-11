@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6be23e1a45f2b2ed0cc055c5032a72ffe2387399
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831772"
 ---
 # <a name="execute-sql-task"></a>Задача "Выполнение SQL"
@@ -42,14 +42,14 @@ ms.locfileid: "62831772"
 ## <a name="connecting-to-a-data-source"></a>Подключение к источнику данных  
  Задача «Выполнение SQL» может использовать разные типы диспетчеров соединений для подключения к источнику данных, где требуется выполнить инструкцию SQL или хранимую процедуру. Задача может использовать типы соединений, перечисленные в следующей таблице.  
   
-|Тип соединений|Диспетчер соединений|  
+|Тип подключения|Диспетчер соединений|  
 |---------------------|------------------------|  
-|EXCEL|[Диспетчер подключений Excel](../connection-manager/excel-connection-manager.md)|  
-|OLE DB|[Диспетчер соединений OLE DB](../connection-manager/ole-db-connection-manager.md)|  
-|интерфейс ODBC|[Диспетчер подключений ODBC](../connection-manager/odbc-connection-manager.md)|  
-|ADO|[Диспетчер подключений объектов данных ActiveX](../connection-manager/ado-connection-manager.md)|  
-|ADO.NET|[Диспетчер подключений ADO.NET](../connection-manager/ado-net-connection-manager.md)|  
-|SQLMOBILE|[Диспетчер подключений SQL Server Compact Edition](../connection-manager/sql-server-compact-edition-connection-manager.md)|  
+|EXCEL;|[Диспетчер соединений с Excel](../connection-manager/excel-connection-manager.md)|  
+|OLE DB|[диспетчер соединений OLE DB](../connection-manager/ole-db-connection-manager.md)|  
+|ODBC|[диспетчер соединений ODBC](../connection-manager/odbc-connection-manager.md)|  
+|ADO|[Диспетчер соединений ADO](../connection-manager/ado-connection-manager.md)|  
+|ADO.NET|[Диспетчер соединений ADO.NET](../connection-manager/ado-net-connection-manager.md)|  
+|SQLMOBILE|[Диспетчер соединений SQL Server Compact Edition](../connection-manager/sql-server-compact-edition-connection-manager.md)|  
   
 ## <a name="creating-sql-statements"></a>Создание инструкций SQL  
  Источником инструкций SQL для этой задачи может быть свойство задачи, которое содержит инструкцию, соединение с файлом, содержащим инструкции, или имя переменной, хранящей инструкцию. Для написания инструкций SQL необходимо использовать разновидность языка SQL, используемую системой управления базой данных-источником (СУБД). Дополнительные сведения см. в разделе [Запросы в службах Integration Services (SSIS)](../integration-services-ssis-queries.md).  
@@ -104,7 +104,7 @@ ms.locfileid: "62831772"
 ### <a name="custom-log-entries"></a>Пользовательские записи журнала  
  В следующей таблице перечислены пользовательские записи журнала для задачи «Выполнение SQL». Дополнительные сведения см. в разделах [Ведение журналов в службах Integration Services (SSIS)](../performance/integration-services-ssis-logging.md) и [Пользовательские сообщения для ведения журнала](../custom-messages-for-logging.md).  
   
-|Запись журнала|Описание|  
+|Запись в журнале|Description|  
 |---------------|-----------------|  
 |`ExecuteSQLExecutingQuery`|Предоставляет сведения об этапах выполнения инструкции SQL. Записи журнала формируются в тот момент, когда задача устанавливает соединение с базой данных, когда задача приступает к подготовке инструкции SQL, и после того, как завершается выполнение инструкции SQL. Запись журнала для этапа подготовки содержит инструкцию SQL, которая используется задачей.|  
   
@@ -127,11 +127,11 @@ ms.locfileid: "62831772"
   
  Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующих разделах:  
   
--   [Редактор задач SQL Выполнение &#40;страница "Общие"&#41;](../execute-sql-task-editor-general-page.md)  
+-   [Редактор задачи «Выполнение SQL» &#40;страница «Общие»&#41;](../execute-sql-task-editor-general-page.md)  
   
--   [Редактор задач SQL Выполнение &#40;странице «сопоставление параметров»&#41;](../execute-sql-task-editor-parameter-mapping-page.md)  
+-   [Редактор задачи "Выполнение SQL" &#40;страница "Сопоставление параметров"&#41;](../execute-sql-task-editor-parameter-mapping-page.md)  
   
--   [Редактор задач SQL Выполнение &#40;результирующий набор страниц&#41;](../execute-sql-task-editor-result-set-page.md)  
+-   [Редактор задачи "Выполнение SQL" &#40;страница "результирующий набор"&#41;](../execute-sql-task-editor-result-set-page.md)  
   
 -   [Страница «Выражения»](../expressions/expressions-page.md)  
   
@@ -152,11 +152,11 @@ ms.locfileid: "62831772"
   
 ## <a name="related-content"></a>См. также  
   
--   [Параметры и коды возврата в задаче "Выполнение SQL"](execute-sql-task.md)  
+-   [Параметры и коды возврата в задаче «Выполнение SQL»](execute-sql-task.md)  
   
 -   [Результирующие наборы в задаче "Выполнение SQL"](../result-sets-in-the-execute-sql-task.md)  
   
--   [Справочник по Transact-SQL (компонент Database Engine)](/sql/t-sql/language-reference)  
+-   [Справочник по Transact-SQL &#40;ядро СУБД&#41;](/sql/t-sql/language-reference)  
   
 -   Запись в блоге [Новые функции даты и времени в SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=239783)на сайте mssqltips.com  
   

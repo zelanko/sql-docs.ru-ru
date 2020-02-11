@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 73415bf802973fcac8cd0fe29c6db3bd5e110f6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63015286"
 ---
 # <a name="migration-issues-for-natively-compiled-stored-procedures"></a>Проблемы миграции, связанные с хранимыми процедурами, скомпилированными в собственном коде
@@ -22,7 +22,7 @@ ms.locfileid: "63015286"
   
  Дополнительные сведения о скомпилированных в собственном коде хранимых процедурах см. в разделе [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md).  
   
--   [Создание таблиц в базе данных TempDB и обращение к ним из скомпилированных в собственном коде хранимых процедур](create-and-access-tables-in-tempdb-from-stored-procedures.md)  
+-   [Создание и обращение к таблицам в базе данных TempDB из скомпилированных в собственном коде хранимых процедур](create-and-access-tables-in-tempdb-from-stored-procedures.md)  
   
 -   [Имитация предложения EXISTS в скомпилированной в собственном коде хранимой процедуре](simulating-an-if-while-exists-statement-in-a-natively-compiled-module.md)  
   
@@ -34,7 +34,7 @@ ms.locfileid: "63015286"
   
 -   [Реализация оператора OR в скомпилированных в собственном коде хранимых процедурах](../../database-engine/implementing-the-or-operator-in-natively-compiled-stored-procedures.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Миграция в In-Memory OLTP](migrating-to-in-memory-oltp.md)  
   
   

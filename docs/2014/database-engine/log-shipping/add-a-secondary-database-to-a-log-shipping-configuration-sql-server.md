@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 22f1fbc9470eb4002bb40f0e4e513f35134c442e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774365"
 ---
 # <a name="add-a-secondary-database-to-a-log-shipping-configuration-sql-server"></a>Добавление базы данных-получателя в конфигурацию доставки журналов (SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "62774365"
   
 -   **Перед началом работы**  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Добавление базы данных-получателя доставки журналов с помощью:**  
   
@@ -98,20 +98,20 @@ ms.locfileid: "62774365"
   
 -   [Обновление доставки журналов до SQL Server 2014 &#40;Transact-SQL&#41;](upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   
--   [Настройка доставки журналов (SQL Server)](configure-log-shipping-sql-server.md)  
+-   [Настройка SQL Server &#40;доставки журналов&#41;](configure-log-shipping-sql-server.md)  
   
--   [Удаление базы данных-получателя из конфигурации доставки журналов (SQL Server)](remove-a-secondary-database-from-a-log-shipping-configuration-sql-server.md)  
+-   [Удаление базы данных-получателя из конфигурации доставки журналов &#40;SQL Server&#41;](remove-a-secondary-database-from-a-log-shipping-configuration-sql-server.md)  
   
--   [Удаление доставки журналов (SQL Server)](remove-log-shipping-sql-server.md)  
+-   [Удалить SQL Server &#40;доставки журналов&#41;](remove-log-shipping-sql-server.md)  
   
--   [Просмотр отчета о доставке журналов (среда SQL Server Management Studio)](view-the-log-shipping-report-sql-server-management-studio.md)  
+-   [Просмотрите &#40;SQL Server Management Studio отчета о доставке журналов&#41;](view-the-log-shipping-report-sql-server-management-studio.md)  
   
--   [Наблюдение за доставкой журналов (Transact-SQL)](monitor-log-shipping-transact-sql.md)  
+-   [Мониторинг доставки журналов &#40;&#41;Transact-SQL](monitor-log-shipping-transact-sql.md)  
   
--   [Переход на вторичный сервер доставки журналов (SQL Server)](fail-over-to-a-log-shipping-secondary-sql-server.md)  
+-   [Отработка отказа на SQL Server вторичного &#40;доставки журналов&#41;](fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
-## <a name="see-also"></a>См. также  
- [Сведения о доставке журналов (SQL Server)](about-log-shipping-sql-server.md)   
- [Таблицы доставки журналов и хранимые процедуры](log-shipping-tables-and-stored-procedures.md)  
+## <a name="see-also"></a>См. также:  
+ [SQL Server &#40;доставки журналов&#41;](about-log-shipping-sql-server.md)   
+ [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)  
   
   

@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f15575b5a410fdc2430d4914b3c2bc0456f54158
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762303"
 ---
-# <a name="mssqlserver7913"></a>MSSQLSERVER_7913
+# <a name="mssqlserver_7913"></a>MSSQLSERVER_7913
     
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|7913|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC2_REPAIR_EXTENT_DEALLOCATED|  
-|Текст сообщения|Исправление: Экстент P_ID была освобождена из объекта с Идентификатором O_ID, Идентификатором индекса I_ID, Идентификатором секции PN_ID, Идентификатором единицы распределения A_ID (тип TYPE).|  
+|Текст сообщения|Исправление: отменено выделение экстента P_ID объекту с идентификатором O_ID, идентификатором индекса I_ID, идентификатором секции PN_ID, идентификатором единицы распределения A_ID (тип TYPE).|  
   
 ## <a name="explanation"></a>Объяснение  
  Это информационное сообщение функции REPAIR, которое означает, что указанный объект был удален из экстента.  

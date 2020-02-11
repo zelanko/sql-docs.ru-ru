@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 57e89016641469cbb3215429ff0f2b9053f758c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63138901"
 ---
 # <a name="open-file-dialog-box"></a>Диалоговое окно «Открытие файла»
@@ -28,7 +28,7 @@ ms.locfileid: "63138901"
 >  Прежде чем открыть проект или компонент в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], определите, заслуживает ли его код доверия. Даже само действие по открытию проекта или компонента в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] может привести к выполнению его кода в доверенном процессе на локальном компьютере.  
   
 ## <a name="option"></a>Параметр  
- **Папка**  
+ **Look in**  
  Найти существующую папку проектов в выпадающем меню. Если выбрать папку в этом списке, в основной панели отображается содержимое папки.  
   
 ## <a name="my-places-bar"></a>Моя панель позиций  

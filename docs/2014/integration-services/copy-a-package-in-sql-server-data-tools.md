@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 673b69ea632108b889cc2f99b63c9c602ef05237
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62829540"
 ---
 # <a name="copy-a-package-in-sql-server-data-tools"></a>Копирование пакета с помощью SQL Server Data Tools
@@ -42,9 +42,9 @@ ms.locfileid: "62829540"
   
 6.  Обновите имя файла пакета. Убедитесь, что файл сохраняется с расширением DTSX.  
   
-7.  Нажмите кнопку **Сохранить**.  
+7.  Выберите команду **Сохранить**.  
   
-8.  Выберите, обновлять ли имя объекта пакета, чтобы оно соответствовало имени файла. Если щелкнуть **Да**, `Name` обновляется свойство пакета. Новый пакет будет добавлен к проекту служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] и открыт в конструкторе служб [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
+8.  Выберите, обновлять ли имя объекта пакета, чтобы оно соответствовало имени файла. Если нажать кнопку **Да**, `Name` свойство пакета будет обновлено. Новый пакет будет добавлен к проекту служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] и открыт в конструкторе служб [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
 9. При необходимости перейдите на вкладку **Поток управления** и выберите **Свойства**.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62829540"
   
 11. В меню **Файл** выберите команду **Сохранить выбранные элементы** , чтобы сохранить новый пакет.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Сохранение одной копии пакета](../../2014/integration-services/save-a-copy-of-a-package.md)   
  [Создание пакетов в SQL Server Data Tools](create-packages-in-sql-server-data-tools.md)   
  [Пакеты служб Integration Services (SSIS)](../../2014/integration-services/integration-services-ssis-packages.md)  

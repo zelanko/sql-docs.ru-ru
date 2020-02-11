@@ -1,5 +1,5 @@
 ---
-title: Общие сведения об SMO | Документация Майкрософт
+title: Общие сведения (SMO) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b66a0c9efc94d648eba2f4d4f8cff779def413fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63131808"
 ---
 # <a name="overview-smo"></a>Общие сведения об SMO
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Управляющие объекты (SMO) представляют собой объекты, разработанные для программного управления [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Объекты SMO можно использовать для создания специализированных приложений управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Хотя среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] является мощным и универсальным приложением для управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], иногда удобнее работать с приложением SMO.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Управляющие объекты (SMO) — это объекты, предназначенные [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]для программного управления. Объекты SMO можно использовать для создания специализированных приложений управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Хотя среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] является мощным и универсальным приложением для управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], иногда удобнее работать с приложением SMO.  
   
  К примеру, для удовлетворения потребностей новых пользователей, а также с целью сокращения издержек на подготовку персонала может возникнуть необходимость упрощения пользовательских приложений, выполняющих задачи управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Может возникнуть необходимость в создании специализированных баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или в создании приложения для формирования индексов и наблюдения за их эффективностью. Кроме того, приложение SMO можно использовать для бесшовной интеграции аппаратных или программных компонентов от независимых поставщиков в приложение управления базами данных.  
   
@@ -48,15 +48,15 @@ ms.locfileid: "63131808"
   
 -   Изоляция моментальных снимков и управление версиями на уровне строк для повышения параллелизма. Дополнительные сведения см. в разделе [Working with Snapshot Isolation](../native-client/features/working-with-snapshot-isolation.md).  
   
--   Коллекции схем XML, XML-индексы и типы данных XML, обеспечивающие проверку и хранение XML-данных. Дополнительные сведения см. в разделе [коллекции XML-схем &#40;SQL Server&#41; ](../xml/xml-schema-collections-sql-server.md) и [Using XML Schemas](tasks/using-xml-schemas.md).  
+-   Коллекции схем XML, XML-индексы и типы данных XML, обеспечивающие проверку и хранение XML-данных. Дополнительные сведения см. в разделе [коллекции XML-схем &#40;SQL Server&#41;](../xml/xml-schema-collections-sql-server.md) и [с помощью XML-схем](tasks/using-xml-schemas.md).  
   
 -   Базы данных моментальных снимков, позволяющие создавать копии баз данных только для чтения.  
   
 -   Поддержка компонентом [!INCLUDE[ssSB](../../includes/sssb-md.md)] обмена информацией на основе сообщений. Дополнительные сведения см. в разделе [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md).  
   
--   Поддержка синонимов для множества имен объектов баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [синонимы &#40;СУБД&#41;](../synonyms/synonyms-database-engine.md).  
+-   Поддержка синонимов для множества имен объектов баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [синонимы &#40;ядро СУБД&#41;](../synonyms/synonyms-database-engine.md).  
   
--   Управление компонентом Database Mail, которое позволяет создавать серверы электронной почты, профили электронной почты и учетные записи электронной почты в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Database Mail](../database-mail/database-mail.md).  
+-   Управление компонентом Database Mail, которое позволяет создавать серверы электронной почты, профили электронной почты и учетные записи электронной почты в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе о [компоненте Database Mail](../database-mail/database-mail.md).  
   
 -   Поддержка зарегистрированных серверов для регистрации сведений о соединении. Дополнительные сведения см. в разделе [Register Servers](../../ssms/register-servers/register-servers.md).  
   
@@ -66,7 +66,7 @@ ms.locfileid: "63131808"
   
 -   Триггеры DDL, обеспечивающие дополнительные функции при возникновении DDL-событий. Дополнительные сведения см. в разделе [DDL Triggers](../triggers/ddl-triggers.md).  
   
- Пространство имен объектов SMO — <xref:Microsoft.SqlServer.Management.Smo>. Объекты SMO реализованы в виде сборки [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Это означает, что перед использованием объектов SMO нужно установить среду CLR из [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0. Сборки объектов SMO по умолчанию устанавливаются в глобальный кэш сборок с параметром пакета SDK [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Эти сборки размещаются в [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)]. Дополнительные сведения см. в разделе [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] документации.  
+ Пространство имен объектов SMO — <xref:Microsoft.SqlServer.Management.Smo>. Объекты SMO реализованы в виде сборки [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Это означает, что перед использованием объектов SMO нужно установить среду CLR из [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0. Сборки объектов SMO по умолчанию устанавливаются в глобальный кэш сборок с параметром пакета SDK [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Эти сборки размещаются в [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)]. Дополнительные сведения см. в документации по [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
 ## <a name="smo-classes"></a>Классы модели объектов SMO  
  Классы модели объектов SMO подразделяются на две категории: классы экземпляров и служебные классы.  
@@ -108,9 +108,9 @@ ms.locfileid: "63131808"
   
  Объекты поставщика WMI помещаются в объекты SMO. В результате программист модели SMO получает простую модель объектов, весьма напоминающую классы SMO. Однако в этом случае программист не должен понимать модель программирования, представленную пространством имен, и особенности организации поставщика WMI [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Поставщик WMI позволяет конфигурировать службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , псевдонимы, а также сетевые библиотеки клиентов и серверов.  
   
- **Создание скриптов**  
+ **Написание сценариев**  
   
- В модели объектов SMO средства для работы со скриптами были улучшены и переданы в класс `Scripter`. `Scripter` Класс может находить зависимости, выявлять связи между объектами и осуществлять манипуляции с иерархией зависимостей. Главным объектом, обеспечивающим работу со скриптами, является объект `Scripter`. Существует несколько поддерживающих объектов, которые осуществляют обработку зависимостей, а также реагируют на события состояния и на события ошибок.  
+ В модели объектов SMO средства для работы со скриптами были улучшены и переданы в класс `Scripter`. `Scripter` Класс может обнаруживать зависимости, понимать связи между объектами и позволяет управлять иерархией зависимостей. Главным объектом, обеспечивающим работу со скриптами, является объект `Scripter`. Существует несколько поддерживающих объектов, которые осуществляют обработку зависимостей, а также реагируют на события состояния и на события ошибок.  
   
  Объект `Scripter` поддерживает следующие дополнительные параметры создания скриптов:  
   
@@ -134,18 +134,18 @@ ms.locfileid: "63131808"
 /Server/Database[@Name='Adventureworks2012']  
 ```  
   
- URN объекта может быть получен с помощью ссылки на его свойство URN. Объект Scripter тоже использует имена URN в качестве параметров, которые передают ссылки на объект методу объекта `Scripter`. Кроме того, URN можно указывать для **GetSmoObject** метод `Server` объекта. Это делается для того, чтобы создать экземпляр объекта SMO.  
+ URN объекта может быть получен с помощью ссылки на его свойство URN. Объект Scripter тоже использует имена URN в качестве параметров, которые передают ссылки на объект методу объекта `Scripter`. Кроме того, URN можно указать для метода **жетсмубжект** `Server` объекта. Это делается для того, чтобы создать экземпляр объекта SMO.  
   
 ## <a name="new-sql-server-features-represented-in-smo"></a>Новые возможности SQL Server, реализованные в объектах SMO  
  **Секционирование таблиц и индексов**  
   
  Секционирование таблицы индексов дает возможность управлять распределением данных в таблицах и индексах по файловым группам. Эта новая функция представлена в объектах SMO.  
   
- **Конечные точки**  
+ **Конеч**  
   
  Запросы SOAP, а также запросы на зеркальное отображение баз данных обрабатываются конечными точками с использованием объекта <xref:Microsoft.SqlServer.Management.Smo.Endpoint>.  
   
- **Моментальный снимок управление версиями на уровне изоляции и строк**  
+ **Уровень изоляции моментального снимка / управление версиями на уровне строк**  
   
  Уровень изоляции моментального снимка (управление версиями на уровне строк) представлены свойствами нового объекта <xref:Microsoft.SqlServer.Management.Smo.Database>.  
   
@@ -157,11 +157,11 @@ ms.locfileid: "63131808"
   
  В модели объектов SMO реализованы новые объекты, представляющие расширенные возможности полнотекстового поиска.  
   
- **Проверка страниц**  
+ **Объект Page Verify**  
   
  Объект <xref:Microsoft.SqlServer.Management.Smo.DatabaseOptions.PageVerify%2A> представляет параметры проверки страниц баз данных.  
   
- **Моментальный снимок базы данных**  
+ **Базы данных моментальных снимков**  
   
  База данных моментальных снимков — это предназначенная только для чтения копия указанной базы данных, снятая в указанный момент времени. База данных моментальных снимков может быть определена с помощью свойства <xref:Microsoft.SqlServer.Management.Smo.Database.IsDatabaseSnapshot%2A> объекта <xref:Microsoft.SqlServer.Management.Smo.Database>.  
   
@@ -178,9 +178,10 @@ ms.locfileid: "63131808"
   
  Библиотека DMO представляет собой объектную модель COM, тогда как модель SMO реализована в виде сборки [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Компоненты COM — это библиотеки, которые предоставляют пригодные для повторного использования средства приложениям и в программировании неуправляемых приложений. Сборки [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] предоставляют пригодные для повторного использования средства для [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] с целью написания приложений с управляемым кодом.  
   
- При переходе к использованию технологии [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] можно применять приложения, написанные частично с помощью управляемого, а частично — неуправляемого кода. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] дает возможность взаимодействовать с компонентами COM, для чего требуется основная сборка взаимодействия. Для объекта SQL-DMO требуется оболочка среды выполнения, чтобы к нему можно было обращаться из приложения на базе платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
+ При переходе к использованию технологии [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] можно применять приложения, написанные частично с помощью управляемого, а частично — неуправляемого кода. 
+  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] дает возможность взаимодействовать с компонентами COM, для чего требуется основная сборка взаимодействия. Для объекта SQL-DMO требуется оболочка среды выполнения, чтобы к нему можно было обращаться из приложения на базе платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
-## <a name="see-also"></a>См. также  
- [Основные понятия объектов RMO](../replication/concepts/replication-management-objects-concepts.md)  
+## <a name="see-also"></a>См. также:  
+ [Основные понятия объекты Replication Management Objects](../replication/concepts/replication-management-objects-concepts.md)  
   
   

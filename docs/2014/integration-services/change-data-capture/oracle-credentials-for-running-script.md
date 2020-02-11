@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 12de97bf147ccb61cde5f82e2fa31782404071e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771115"
 ---
 # <a name="oracle-credentials-for-running-script"></a>Учетные данные Oracle для выполнения скрипта
@@ -23,16 +23,16 @@ ms.locfileid: "62771115"
 ## <a name="task-list"></a>Список задач  
  Введите в этом диалоговом окне следующие данные:  
   
- **Проверка подлинности**  
+ **Аутентификация**  
   
  Выберите один из следующих вариантов:  
   
 -   **Проверка подлинности Windows**. Выберите этот параметр, чтобы использовать учетные данные текущего пользователя Windows. Этот параметр можно использовать только в том случае, если в базе данных Oracle настроено использование проверки подлинности Windows.  
   
--   **Проверка подлинности Oracle**. Если выбран этот вариант, то нужно будет ввести **имя пользователя** и **пароль** в исходной базе данных Oracle, к которой устанавливается подключение.  
+-   **Проверка подлинности Oracle**. Если выбран этот вариант, то нужно будет ввести **Имя пользователя** и **Пароль** пользователя в исходной базе данных Oracle, с которой устанавливается соединение.  
   
-## <a name="see-also"></a>См. также  
- [Как управлять экземпляром CDC](manage-a-cdc-instance.md)   
+## <a name="see-also"></a>См. также:  
+ [How to Manage a CDC Instance](manage-a-cdc-instance.md)   
  [Обзор и создание скриптов дополнительного журналирования](review-and-generate-supplemental-logging-scripts.md)  
   
   

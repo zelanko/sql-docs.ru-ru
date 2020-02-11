@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 278a85ddce309f276f61603961169529ffcdfe67
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62896346"
 ---
 # <a name="upper-ssis-expression"></a>UPPER (выражение служб SSIS)
@@ -39,7 +39,7 @@ UPPER(character_expression)
 ## <a name="result-types"></a>Типы результата  
  DT_WSTR  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Функция UPPER работает только с типом данных DT_WSTR. Аргумент *character_expression* , являющийся строковым литералом или столбцом данных с типом данных DT_STR, неявно приведен к типу данных DT_WSTR до выполнения функции UPPER. Прочие типы данных должны быть явно приведены к типу данных DT_WSTR. Дополнительные сведения см. в разделах [Типы данных служб Integration Services](../data-flow/integration-services-data-types.md) и [Приведение (выражение служб SSIS)](cast-ssis-expression.md).  
   
  Функция UPPER возвращает значение NULL, если аргумент имеет значение NULL.  
@@ -63,7 +63,7 @@ UPPER(SUBSTRING(FirstName, 1, 1))
 UPPER(@PostalCode)  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [LOWER (выражение служб SSIS)](lower-ssis-expression.md)   
  [Функции (выражение служб SSIS)](functions-ssis-expression.md)  
   

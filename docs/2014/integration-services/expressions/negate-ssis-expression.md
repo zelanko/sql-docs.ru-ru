@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1137fa6847cf851a6cb56ffd8a0da10032decc7a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62897422"
 ---
 # <a name="--negate-ssis-expression"></a>- (инверсия) (выражение служб SSIS)
@@ -45,7 +45,7 @@ ms.locfileid: "62897422"
 -@Counter + 50  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Очередность и ассоциативность операторов](operator-precedence-and-associativity.md)   
  [Операторы (выражение служб SSIS)](operators-ssis-expression.md)  
   

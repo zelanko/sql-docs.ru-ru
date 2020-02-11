@@ -1,5 +1,5 @@
 ---
-title: Объект-член (многомерные Объекты ADO) | Документация Майкрософт
+title: Объект Member (объекты данных ActiveX (MD)) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,84 +16,84 @@ ms.assetid: 3dedf755-0741-4c3f-8b4e-bff8ff8809c8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 44d6b5f06bffb1cea786ba34d3d2aa8a3efb45ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949498"
 ---
 # <a name="member-object-ado-md"></a>Объект Member (многомерные объекты ADO)
-Представляет элемент уровня в кубе, дочерние элементы элемента уровня или членом положение вдоль оси набора ячеек.  
+Представляет элемент уровня в Кубе, дочерние элементы элемента уровня или элемента в положении вдоль оси набора ячеек.  
   
-## <a name="remarks"></a>Примечания  
- Свойства **член** различаться в зависимости от контекста, в котором оно использовано. Объект **член** из [уровень](../../../ado/reference/ado-md-api/level-object-ado-md.md) в [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) имеет [дочерние элементы](../../../ado/reference/ado-md-api/children-property-ado-md.md) свойство, которое возвращает **члены** на следующий нижний уровень в иерархии из текущего **член**. Для **член** из [позиции](../../../ado/reference/ado-md-api/position-object-ado-md.md), **дочерние элементы** всегда возвращается пустая коллекция. Кроме того [тип](../../../ado/reference/ado-md-api/type-property-ado-md.md) свойство применяется только к **члены** из **уровень**.  
+## <a name="remarks"></a>Remarks  
+ Свойства **элемента** различаются в зависимости от контекста, в котором он используется. **Элемент** [уровня](../../../ado/reference/ado-md-api/level-object-ado-md.md) в [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) имеет [дочернее](../../../ado/reference/ado-md-api/children-property-ado-md.md) свойство, возвращающее **элементы** следующего нижнего уровня иерархии из текущего **элемента**. Для **элемента** в [положении](../../../ado/reference/ado-md-api/position-object-ado-md.md)коллекция **Children** всегда пуста. Кроме того, свойство [Type](../../../ado/reference/ado-md-api/type-property-ado-md.md) применяется только к **элементам** **уровня**.  
   
- Объект **член** из **позиции** имеет два свойства, которые полезны при отображении [набора ячеек](../../../ado/reference/ado-md-api/cellset-object-ado-md.md): [DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md) и [ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md). Произойдет ошибка, если эти свойства доступны на **член** из **уровень**.  
+ **Элемент** в **положении** имеет два свойства, которые полезны при отображении набора [ячеек](../../../ado/reference/ado-md-api/cellset-object-ado-md.md): [дрилледдовн](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md) и [парентсамеаспрев](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md). Если доступ к этим свойствам осуществляется на **члене** **уровня**, возникнет ошибка.  
   
- С помощью коллекций и свойств **член** объект **уровень**, можно выполнять следующие:  
+ С помощью коллекций и свойств объекта- **члена** **уровня**можно выполнить следующие действия.  
   
--   Определить **член** с [имя](../../../ado/reference/ado-md-api/name-property-ado-md.md) и [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md) свойства.  
+-   Найдите **элемент** с помощью свойств [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md) и [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md) .  
   
--   Возвращает строку, используемый при отображении **член** с [заголовок](../../../ado/reference/ado-md-api/caption-property-ado-md.md) свойство.  
+-   Возвращает строку, используемую при отображении **элемента** со свойством [Caption](../../../ado/reference/ado-md-api/caption-property-ado-md.md) .  
   
--   Возвращать осмысленные строку, описывающую мера или формула **член** с [описание](../../../ado/reference/ado-md-api/description-property-ado-md.md) свойство.  
+-   Возвращает осмысленную строку, описывающую **элемент** меры или формулы со свойством [Description](../../../ado/reference/ado-md-api/description-property-ado-md.md) .  
   
--   Определить характер **член** с [тип](../../../ado/reference/ado-md-api/type-property-ado-md.md) свойства.  
+-   Определите природу **элемента** с помощью свойства [Type](../../../ado/reference/ado-md-api/type-property-ado-md.md) .  
   
--   Получения сведений о **уровень** из **член** с [LevelDepth](../../../ado/reference/ado-md-api/leveldepth-property-ado-md.md) и [LevelName](../../../ado/reference/ado-md-api/levelname-property-ado-md.md) свойства.  
+-   Получение сведений о **уровне** **элемента** с помощью свойств [LevelDepth](../../../ado/reference/ado-md-api/leveldepth-property-ado-md.md) и [LevelName](../../../ado/reference/ado-md-api/levelname-property-ado-md.md) .  
   
--   Получить связанные **члены** в [иерархии](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md) с [родительского](../../../ado/reference/ado-md-api/parent-property-ado-md.md) и [дочерние элементы](../../../ado/reference/ado-md-api/children-property-ado-md.md) свойства.  
+-   Получение связанных **элементов** в [иерархии](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md) с [родительскими](../../../ado/reference/ado-md-api/parent-property-ado-md.md) и [дочерними](../../../ado/reference/ado-md-api/children-property-ado-md.md) свойствами.  
   
--   Количество дочерних элементов **член** с [ChildCount](../../../ado/reference/ado-md-api/childcount-property-ado-md.md) свойство.  
+-   Подсчитайте, что дочерние **элементы элемента имеют свойство** [ChildCount](../../../ado/reference/ado-md-api/childcount-property-ado-md.md) .  
   
--   Используйте стандартные ADO [свойства](../../../ado/reference/ado-api/properties-collection-ado.md) коллекции для получения дополнительных сведений о **уровень** объекта.  
+-   Используйте стандартную коллекцию [свойств](../../../ado/reference/ado-api/properties-collection-ado.md) ADO для получения дополнительных сведений об объекте **Level** .  
   
- С помощью коллекций и свойств **член** из **позиции** вдоль [оси](../../../ado/reference/ado-md-api/axis-object-ado-md.md), можно выполнять следующие:  
+ С помощью коллекций и свойств **элемента** в **положении** вдоль [оси](../../../ado/reference/ado-md-api/axis-object-ado-md.md)можно выполнить следующие действия.  
   
--   Определить **член** с [имя](../../../ado/reference/ado-md-api/name-property-ado-md.md) и [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md) свойства.  
+-   Найдите **элемент** с помощью свойств [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md) и [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md) .  
   
--   Возвращает строку, используемый при отображении **член** с [заголовок](../../../ado/reference/ado-md-api/caption-property-ado-md.md) свойство.  
+-   Возвращает строку, используемую при отображении **элемента** со свойством [Caption](../../../ado/reference/ado-md-api/caption-property-ado-md.md) .  
   
--   Возвращать осмысленные строку, описывающую мера или формула **член** с [описание](../../../ado/reference/ado-md-api/description-property-ado-md.md) свойство.  
+-   Возвращает осмысленную строку, описывающую **элемент** меры или формулы со свойством [Description](../../../ado/reference/ado-md-api/description-property-ado-md.md) .  
   
--   Получения сведений о **уровень** из **член** с [LevelDepth](../../../ado/reference/ado-md-api/leveldepth-property-ado-md.md) и [LevelName](../../../ado/reference/ado-md-api/levelname-property-ado-md.md) свойства.  
+-   Получение сведений о **уровне** **элемента** с помощью свойств [LevelDepth](../../../ado/reference/ado-md-api/leveldepth-property-ado-md.md) и [LevelName](../../../ado/reference/ado-md-api/levelname-property-ado-md.md) .  
   
--   Количество дочерних элементов **член** с [ChildCount](../../../ado/reference/ado-md-api/childcount-property-ado-md.md) свойство.  
+-   Подсчитайте, что дочерние **элементы элемента имеют свойство** [ChildCount](../../../ado/reference/ado-md-api/childcount-property-ado-md.md) .  
   
--   Используйте [DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md) свойства, чтобы определить, имеются ли хотя бы один дочерний элемент **оси** после этого сразу же **член**.  
+-   Используйте свойство [дрилледдовн](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md) , чтобы определить, имеется ли по крайней мере один дочерний элемент на **оси** , которая сразу после этого **элемента**.  
   
--   Используйте [ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md) свойства, чтобы определить ли родительский элемент данного **член** совпадает с родительским для объекта непосредственно перед **член**.  
+-   Используйте свойство [парентсамеаспрев](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md) , чтобы определить, совпадает ли родительский элемент этого **элемента** со родителем непосредственно предшествующего ему **члена**.  
   
--   Используйте стандартные ADO [свойства](../../../ado/reference/ado-api/properties-collection-ado.md) коллекции для получения дополнительных сведений о **уровень** объекта.  
+-   Используйте стандартную коллекцию [свойств](../../../ado/reference/ado-api/properties-collection-ado.md) ADO для получения дополнительных сведений об объекте **Level** .  
   
- **Свойства** коллекция содержит свойства, предоставляемые поставщиком. Ниже перечислены свойства, которые могут быть доступны. В списке свойств фактическое может различаться в зависимости от реализации поставщика. См. в документации поставщика более полный список доступных свойств.  
+ Коллекция **Properties** содержит свойства, предоставляемые поставщиком. В следующей таблице перечислены свойства, которые могут быть доступны. Фактический список свойств может отличаться в зависимости от реализации поставщика. Более полный список доступных свойств см. в документации поставщика.  
   
-|Name|Описание|  
+|Имя|Description|  
 |----------|-----------------|  
-|CatalogName|Имя каталога, к которому принадлежит этот куб.|  
-|ChildrenCardinality|Количество потомков элемента.|  
+|CatalogName|Имя каталога, которому принадлежит куб.|  
+|чилдренкардиналити|Количество потомков элемента.|  
 |CubeName|Имя куба.|  
-|Описание|Понятное описание элемента.|  
-|DimensionUniqueName|Имя однозначно [измерения](../../../ado/reference/ado-md-api/dimension-object-ado-md.md).|  
-|HierarchyUniqueName|Однозначный имя иерархии.|  
-|LevelNumber|Расстояние между уровнем и корень иерархии.|  
-|LevelUniqueName|Однозначный имя уровня.|  
-|MemberCaption|Метка или заголовок, связанный с элементом.|  
-|MemberGUID|Идентификатор GUID элемента.|  
+|Description|Понятное описание элемента.|  
+|дименсионуникуенаме|Однозначное имя [измерения](../../../ado/reference/ado-md-api/dimension-object-ado-md.md).|  
+|хиерарчюникуенаме|Однозначное имя иерархии.|  
+|LevelNumber|Расстояние между уровнем и корнем иерархии.|  
+|LevelUniqueName|Однозначное имя уровня.|  
+|мемберкаптион|Метка или заголовок, связанный с элементом.|  
+|мембергуид|Идентификатор GUID элемента.|  
 |MemberName|Имя элемента.|  
-|MemberOrdinal|Порядковый номер элемента.|  
-|Тип элемента|Тип элемента.|  
-|MemberUniqueName|Однозначный имя члена.|  
-|ParentCount|Число количество родительских элементов данного элемента.|  
-|ParentLevel|Номер уровня родительского элемента.|  
-|ParentUniqueName|Однозначный имя родительского элемента данного элемента.|  
-|SchemaName|Имя схемы, которой принадлежит этот куб.|  
+|мемберординал|Порядковый номер элемента.|  
+|MemberType|Тип элемента.|  
+|мемберуникуенаме|Однозначное имя элемента.|  
+|паренткаунт|Количество родительских элементов данного элемента.|  
+|ParentLevel|Номер уровня родителя элемента.|  
+|ParentUniqueName|Однозначное имя родителя элемента.|  
+|SchemaName|Имя схемы, к которой принадлежит куб.|  
   
- Этот раздел содержит следующие подразделы.  
+ Этот раздел содержит следующий раздел.  
   
 -   [Свойства, методы и события](../../../ado/reference/ado-md-api/member-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
- [Пример каталога (Visual Basic)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
- [Коллекция Members (многомерные Объекты ADO)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)   
+## <a name="see-also"></a>См. также:  
+ [Пример каталога (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
+ [Коллекция Members (объекты данных ActiveX (MD))](../../../ado/reference/ado-md-api/members-collection-ado-md.md)   
  [Коллекция Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

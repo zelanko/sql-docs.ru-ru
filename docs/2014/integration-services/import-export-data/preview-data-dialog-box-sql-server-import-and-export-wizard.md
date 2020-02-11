@@ -13,22 +13,22 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 55102e5b91b9b544a38338dbbbbcd882bc66f84a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767986"
 ---
 # <a name="preview-data-dialog-box-sql-server-import-and-export-wizard"></a>Диалоговое окно «Просмотр данных» (мастер импорта и экспорта SQL Server)
-  Используйте **Предварительный просмотр данных** диалоговое окно, чтобы видеть запрос, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] мастер импорта и экспорта отправит в источник данных. Это диалоговое окно можно также использовать для просмотра до 200 строк образца данных.  
+  Используйте диалоговое окно **Просмотр данных** , чтобы просмотреть запрос, который [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] мастер импорта и экспорта будет отправлять в источник данных. Это диалоговое окно можно также использовать для просмотра до 200 строк образца данных.  
   
- Дополнительные сведения о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Импорт и экспорт, см. в разделе [SQL Server Импорт и экспорт](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Дополнительные сведения о параметрах запуска этого мастера и о разрешениях, необходимых для успешного запуска мастера, см. в разделе [запустить мастер экспорта и импорта SQL Server](start-the-sql-server-import-and-export-wizard.md).  
+ Дополнительные сведения о мастере [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] импорта и экспорта см. в разделе [SQL Server мастер импорта и экспорта](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Дополнительные сведения о параметрах запуска мастера и о разрешениях, необходимых для успешного запуска мастера, см. [в разделе Запуск мастера импорта и экспорта SQL Server](start-the-sql-server-import-and-export-wizard.md).  
   
  Мастера импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предназначен для копирования данных из исходного расположения в целевое. Этот мастер может также создать целевую базу данных и целевые таблицы. Однако если нужно скопировать несколько баз данных, таблиц или других объектов базы данных, следует использовать мастер копирования баз данных. Дополнительные сведения см. в статье [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
- **Чтобы открыть диалоговое окно предварительного просмотра данных**  
+ **Открытие диалогового окна «Просмотр данных»**  
   
--   На **Выбор исходных таблиц и представлений** странице [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] мастер импорта и экспорта, щелкните **предварительной версии**.  
+-   На странице **Выбор исходных таблиц и представлений** мастера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] импорта и экспорта нажмите кнопку **Предварительный просмотр**.  
   
 ## <a name="options"></a>Параметры  
  **Source**  

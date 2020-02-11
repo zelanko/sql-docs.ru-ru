@@ -1,5 +1,5 @@
 ---
-title: Задание параметров сортировки пользовательских баз данных совпадают с главной и базами данных модели | Документация Майкрософт
+title: Задать параметры сортировки определяемых пользователем баз данных в соответствии с параметрами баз данных master и Model | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dfb00b1cc1a9930f7a374403b40e2c0d793eb090
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773319"
 ---
 # <a name="set-the-collation-of-user-defined-databases-to-match-those-of-the-master-and-model-databases"></a>Задание параметров сортировки пользовательских баз данных в соответствии с параметрами баз данных master и model
@@ -29,7 +29,7 @@ ms.locfileid: "62773319"
   
 -   Экспортируйте данные из пользовательской базы данных и импортируйте их в новые таблицы, параметры сортировки которых совпадают с параметрами сортировки баз данных master и model.  
   
--   Перестройте системные базы данных таким образом, чтобы их параметры сортировки совпадали с параметрами сортировки пользовательской базы данных. Дополнительные сведения о том, как Перестроение системных баз данных см. в разделе [Перестроение системных баз данных](../relational-databases/databases/system-databases.md).  
+-   Перестройте системные базы данных таким образом, чтобы их параметры сортировки совпадали с параметрами сортировки пользовательской базы данных. Дополнительные сведения о перестроении системных баз данных см. в разделе [Перестроение системных баз данных](../relational-databases/databases/system-databases.md).  
   
 -   Внесите изменения во все хранимые процедуры, производящие соединение пользовательских таблиц с таблицами в базе данных tempdb, чтобы таблицы в tempdb создавались с параметрами сортировки пользовательской базы данных. Для этого в определения столбцов временной таблицы добавьте предложение `COLLATE database_default`, как показано в следующем примере.  
   
@@ -44,15 +44,15 @@ ms.locfileid: "62773319"
   
  [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)  
   
- [COLLATE (Transact-SQL)](/sql/t-sql/statements/collations)  
+ [Сортировка &#40;Transact-SQL&#41;](/sql/t-sql/statements/collations)  
   
  [sys.databases (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   
- [Статье 325335 базы знаний Майкрософт](https://go.microsoft.com/fwlink/?linkid=117751)  
+ [Статья базы знаний Майкрософт 325335](https://go.microsoft.com/fwlink/?linkid=117751)  
   
- [Как Установить SQL Server 2008 из командной строки](https://go.microsoft.com/fwlink/?LinkId=81585)  
+ [Как установить SQL Server 2008 из командной строки](https://go.microsoft.com/fwlink/?LinkId=81585)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Наблюдение с помощью управления на основе политик и принудительное применение рекомендаций с помощью управления на основе политик](../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

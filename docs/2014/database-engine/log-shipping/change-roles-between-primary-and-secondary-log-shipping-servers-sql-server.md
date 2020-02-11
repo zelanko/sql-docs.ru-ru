@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 08467118608db6b222bea2a41351eac951449a16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774568"
 ---
 # <a name="change-roles-between-primary-and-secondary-log-shipping-servers-sql-server"></a>Обмен ролями между сервером-источником и сервером-получателем доставки журналов (SQL Server)
@@ -30,11 +30,11 @@ ms.locfileid: "62774568"
 ## <a name="performing-the-initial-role-change"></a>Выполнение исходного изменения роли  
  В первый раз при переключении на базу данных-получатель и назначении ее новой базой данных-источником необходимо выполнить ряд шагов. После выполнения этих первоначальных шагов появится возможность легко менять местами базу данных-источник и базу данных-получатель.  
   
-1.  Переход с базы данных-источника на базу данных-получатель вручную. Обязательно создайте резервную копию активного журнала транзакций сервера-источника с параметром NORECOVERY. Дополнительные сведения см. в разделе [Переход на вторичный сервер доставки журналов (SQL Server)](fail-over-to-a-log-shipping-secondary-sql-server.md).  
+1.  Переход с базы данных-источника на базу данных-получатель вручную. Обязательно создайте резервную копию активного журнала транзакций сервера-источника с параметром NORECOVERY. Дополнительные сведения см. в разделе [Fail Over to a Log Shipping Secondary &#40;SQL Server&#41;](fail-over-to-a-log-shipping-secondary-sql-server.md).  
   
 2.  Отключите задание резервного копирования в доставке журналов на исходном сервере-источнике и задания копирования и восстановления на исходном сервере-получателе.  
   
-3.  С помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] настройте доставку журналов для базы данных-получателя (базы данных, которую хотите сделать источником). Дополнительные сведения см. в разделе [Настройка доставки журналов (SQL Server)](configure-log-shipping-sql-server.md). Выполните следующие шаги:  
+3.  С помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]настройте доставку журналов для базы данных-получателя (базы данных, которую хотите сделать источником). Дополнительные сведения см. в статьях [Configure Log Shipping &#40;SQL Server&#41;](configure-log-shipping-sql-server.md). Выполните следующие шаги:  
   
     1.  Для создания резервных копий используйте ту же общую папку, которая была создана для первоначального сервера-источника.  
   
@@ -82,11 +82,11 @@ ms.locfileid: "62774568"
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
   
--   [Переход на вторичный сервер доставки журналов (SQL Server)](fail-over-to-a-log-shipping-secondary-sql-server.md)  
+-   [Отработка отказа на SQL Server вторичного &#40;доставки журналов&#41;](fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
--   [Управление именами входа и заданиями после переключения ролей (SQL Server)](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
+-   [Управление именами входа и заданиями после переключения ролей &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
-## <a name="see-also"></a>См. также  
- [Таблицы доставки журналов и хранимые процедуры](log-shipping-tables-and-stored-procedures.md)  
+## <a name="see-also"></a>См. также:  
+ [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)  
   
   

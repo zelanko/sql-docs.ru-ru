@@ -11,14 +11,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5396a6a94e1d5c4bfde39153081f3c4137a2c922
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62901043"
 ---
 # <a name="sap-bw-destination-editor-advanced-page"></a>Редактор назначений SAP BW (страница «Дополнительно»)
-  Используйте страницу **Дополнительно** **редактора назначений SAP BW**, чтобы задать дополнительные параметры, такие как размер пакета и сведения о времени ожидания.  
+  Используйте страницу **Дополнительно** **редактора назначений SAP BW** , чтобы задать дополнительные параметры, такие как размер пакета и сведения о времени ожидания.  
   
  Для получения дополнительных сведений о назначении SAP BW для [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 для SAP BW см. раздел [Назначение SAP BW](sap-bw-destination.md).  
   
@@ -53,7 +53,7 @@ ms.locfileid: "62901043"
  **Не запускать InfoPackage (только ожидание)**  
  Укажите, что назначение не инициирует включение InfoPackage, а ожидает уведомления о начале загрузки данных системой SAP Netweaver BW.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Редактор назначений SAP BW (страница "Диспетчер подключений")](sap-bw-destination-editor-connection-manager-page.md)   
  [Редактор назначений SAP BW (страница "Сопоставления")](sap-bw-destination-editor-mappings-page.md)   
  [Редактор назначений SAP BW (страница "Вывод ошибок")](sap-bw-destination-editor-error-output-page.md)   

@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 34bd5a607998c6e37f688ccbadcd4d612d3daea7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807039"
 ---
 # <a name="rebuild-index-task-maintenance-plan"></a>Задача «Перестроение индекса» (план обслуживания)
@@ -28,7 +28,7 @@ ms.locfileid: "62807039"
  **Задача "Перестроение индекса"** использует инструкцию ALTER INDEX.  
   
 ## <a name="options"></a>Параметры  
- **Соединение**  
+ **Соединен**  
  Выберите соединение с сервером, которое будет использоваться для выполнения этой задачи.  
   
  **Создать**  
@@ -49,7 +49,7 @@ ms.locfileid: "62807039"
   
      Создается план обслуживания, по которому задачи обслуживания выполняются для всех баз данных, созданных пользователем. Для системных баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] задачи обслуживания выполняться не будут.  
   
--   **Определенные базы данных**  
+-   **Эти конкретные базы данных**  
   
      Создается план обслуживания, по которому задачи обслуживания должны выполняться только для указанных баз данных. Если выбран этот параметр, необходимо выбрать в списке хотя бы одну базу данных.  
   
@@ -65,26 +65,26 @@ ms.locfileid: "62807039"
  **Реорганизовать страницы с использованием объема свободного места по умолчанию**  
  Удалите индексы таблиц в базе данных и создайте их повторно с коэффициентом заполнения, указанным при создании индексов.  
   
- **Изменить долю свободного места на странице на**  
+ **Изменить процент свободного места на страницу до**  
  Удалите индексы таблиц в базе данных и создайте их повторно с новым, автоматически вычисляемым коэффициентом заполнения, резервирующим указанный объем свободного пространства на страницах индекса. Чем выше процентное значение, тем больше свободного места резервируется на страницах индекса и тем больше будет размер индекса. Допустимые значения: от 0 до 100.  
   
- **Отсортировать результаты в базе данных tempdb**  
- Используйте `SORT_IN_TEMPDB`используется для определения места временного сохранения промежуточных результатов сортировки, сформированных при создании индекса. Если операция сортировки не требуется или сортировка может быть выполнена в памяти, параметр `SORT_IN_TEMPDB`не учитывается.  
+ **Сортировка результатов в базе данных tempdb**  
+ Используйте `SORT_IN_TEMPDB`параметр, определяющий, где временно сохраняются промежуточные результаты сортировки, созданные во время создания индекса. Если операция сортировки не требуется или сортировка может быть выполнена в памяти, параметр `SORT_IN_TEMPDB`не учитывается.  
   
- **Сохранять индекс в процессе переиндексирования**  
+ **Сохранять индекс в рабочем состоянии в процессе переиндексирования**  
  Параметр `ONLINE` дает пользователям возможность получать доступ к базовой таблице или данным кластеризованного индекса, а также к любым связанным с ними некластеризованным индексам при операциях с индексами.  
   
 > [!NOTE]  
->  Операции с индексами в режиме "в сети" доступны не во всех выпусках [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Перечень функций, поддерживаемых в разных выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в разделе [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+>  Операции с индексами в сети доступны не во всех выпусках [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Перечень функций, поддерживаемых в разных выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в разделе [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
- **Просмотр T-SQL**  
+ **Просмотреть T-SQL**  
  Просмотрите инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] , выполняемые для данной задачи по отношению к серверу, на основе выбранных параметров.  
   
 > [!NOTE]  
 >  Если количество затронутых объектов велико, построение этого отображения может занять значительное время.  
   
 ## <a name="new-connection-dialog-box"></a>Диалоговое окно «Создание соединения»  
- **Имя соединения**  
+ **Имя подключения**  
  Введите имя нового соединения.  
   
  **Выберите или введите имя сервера**  
@@ -108,13 +108,13 @@ ms.locfileid: "62807039"
  **Пароль**  
  Укажите используемый при проверке подлинности пароль. Этот параметр недоступен.  
   
-## <a name="see-also"></a>См. также  
- [ALTER INDEX (Transact-SQL)](/sql/t-sql/statements/alter-index-transact-sql)   
- [DBCC DBREINDEX (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-dbreindex-transact-sql)   
+## <a name="see-also"></a>См. также:  
+ [Инструкция ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
+ [DBCC DBREINDEX &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-dbreindex-transact-sql)   
  [CREATE INDEX (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql)   
- [Параметр SORT_IN_TEMPDB для индексов](../indexes/indexes.md)   
- [Руководящие принципы для операций с индексами](../indexes/guidelines-for-online-index-operations.md)   
- [Об операциях с индексом в сети](../indexes/how-online-index-operations-work.md)   
- [Выполнение операции с индексами в сети](../indexes/perform-index-operations-online.md)  
+ [SORT_IN_TEMPDB параметр для индексов](../indexes/indexes.md)   
+ [Рекомендации по операциям с индексами в сети](../indexes/guidelines-for-online-index-operations.md)   
+ [Как работают операции с индексами в сети](../indexes/how-online-index-operations-work.md)   
+ [Выполнение операций с индексами в оперативном режиме](../indexes/perform-index-operations-online.md)  
   
   

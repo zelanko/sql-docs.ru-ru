@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5e8022dd9a7bd4f301ca55f60614e1b13369b804
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62810425"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Диагностическое соединение для администраторов баз данных
@@ -36,14 +36,14 @@ ms.locfileid: "62810425"
   
 ||  
 |-|  
-|**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (от[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
+|**Применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)) [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)],.|  
   
 ## <a name="connecting-with-dac"></a>Соединение с помощью выделенного административного соединения  
  По умолчанию, соединение разрешено только из клиента, запущенного на сервере. Сетевые подключения не разрешаются, пока они не настроены с помощью хранимой процедуры sp_configure с параметром [remote admin connections](remote-admin-connections-server-configuration-option.md).  
   
  Только члены роли [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin могут подключаться с использованием выделенного административного соединения.  
   
- Выделенное административное соединение доступно и поддерживается через программу командной строки **sqlcmd** со специальным административным параметром ( **-A**). Дополнительные сведения об использовании **sqlcmd** см. в разделе [Использование программы sqlcmd с переменными скрипта](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md). Можно также подключиться, подставив префикс `admin:`к имени экземпляра в формате **sqlcmd - Sadmin:** _< имя_экземпляра >._ Можно также запустить приложения уровня данных из [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] редактора запросов, подключившись к `admin:` \< *имя_экземпляра*>.  
+ Выделенное административное соединение доступно и поддерживается через программу командной строки **sqlcmd** со специальным административным параметром ( **-A**). Дополнительные сведения об использовании **sqlcmd** см. в разделе [Использование программы sqlcmd с переменными скрипта](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md). Можно также подсоединить префикс `admin:`к имени экземпляра в формате **sqlcmd-садмин:** _<instance_name>._ Кроме того, приложение уровня данных можно запустить [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] из редактора запросов, подключившись `admin:` \<к *instance_name*>.  
   
 ## <a name="restrictions"></a>Ограничения  
  Так как выделенное административное соединение существует только для диагностики проблем на сервере в редких обстоятельствах, у подключения есть некоторые ограничения.  
@@ -74,7 +74,7 @@ ms.locfileid: "62810425"
   
 -   Запрос представлений каталога.  
   
--   Основные команды DBCC, например DBCC FREEPROCCACHE, DBCC FREESYSTEMCACHE, DBCC DROPCLEANBUFFERS`,` а также DBCC SQLPERF. Не выполняйте такие ресурсоемкие команды, как **DBCC** CHECKDB, DBCC DBREINDEX или DBCC SHRINKDATABASE.  
+-   Основные команды DBCC, например DBCC FREEPROCCACHE, DBCC FREESYSTEMCACHE, DBCC DROPCLEANBUFFERS`,` а также DBCC SQLPERF. Не запускайте ресурсоемкие команды, такие как **DBCC** CHECKDB, DBCC DBREINDEX или DBCC SHRINKDATABASE.  
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] Команда KILL *\<spid>* . В зависимости от состояния [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]команда KILL не всегда выполняется успешно. В этом случае единственным выходом остается перезапуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Рассмотрим несколько общих правил.  
   
@@ -93,11 +93,11 @@ ms.locfileid: "62810425"
   
  Порт выделенных административных соединений присваивается [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] динамически во время запуска. При соединении с экземпляром по умолчанию DAC стремится не использовать запрос протокола разрешения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SSRP) к службе обозревателя SQL Server. Сначала выполняется попытка подключиться через TCP-порт 1434. В случае ошибки следует вызов SSRP на получение порта. Если браузер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не ожидает запросов SSRP, запрос на подключение возвращает ошибку. Обратитесь к журналу ошибок, чтобы найти номер порта, на котором ожидается выделенное административное соединение. Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настроен для приема удаленных административных подключений, выделенное административное соединение должно быть инициировано с явно указанным номером порта:  
   
- **sqlcmd-Stcp:** _\<server>,\<port>_  
+ **sqlcmd-stcp:** _ \<сервер>,\<порт>_  
   
  Журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] приводит номер порта для выделенного административного соединения; по умолчанию он равен 1434. Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настроен для приема только локальных выделенных административных соединений, подключайтесь через адаптер замыкания на себя с использованием следующей команды:  
   
- **sqlcmd-S127.0.0.1**,`1434`  
+ **sqlcmd-s 127.0.0.1**,`1434`  
   
 ## <a name="example"></a>Пример  
  В этом примере администратор видит, что сервер `URAN123` не отвечает, и пытается определить неполадку. Для этого пользователь активирует программу командной строки `sqlcmd` и подключается к серверу `URAN123` с помощью ключа `-A` , чтобы обозначить выделенное административное соединение.  
@@ -115,24 +115,24 @@ ms.locfileid: "62810425"
   
  [SELECT (Transact-SQL)](/sql/t-sql/queries/select-transact-sql)  
   
- [sp_who (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql)  
+ [sp_who &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql)  
   
- [sp_lock (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-lock-transact-sql)  
+ [sp_lock &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-lock-transact-sql)  
   
- [KILL (Transact-SQL)](/sql/t-sql/language-elements/kill-transact-sql)  
+ [Инструкция KILL &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/kill-transact-sql)  
   
- [DBCC CHECKALLOC (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-checkalloc-transact-sql)  
+ [DBCC CHECKALLOC &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkalloc-transact-sql)  
   
- [DBCC CHECKDB (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)  
+ [DBCC CHECKDB &#40;&#41;Transact-SQL](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)  
   
- [DBCC OPENTRAN (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-opentran-transact-sql)  
+ [DBCC OPENTRAN &#40;&#41;Transact-SQL](/sql/t-sql/database-console-commands/dbcc-opentran-transact-sql)  
   
- [DBCC INPUTBUFFER (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-inputbuffer-transact-sql)  
+ [DBCC INPUTBUFFER &#40;&#41;Transact-SQL](/sql/t-sql/database-console-commands/dbcc-inputbuffer-transact-sql)  
   
  [Параметры конфигурации сервера (SQL Server)](server-configuration-options-sql-server.md)  
   
- [Динамические административные представления и функции, связанные с транзакциями (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql)  
+ [Динамические административные представления и функции, связанные с транзакциями &#40;языке Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql)  
   
- [Флаги трассировки (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)  
+ [Флаги трассировки &#40;&#41;Transact-SQL](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)  
   
   

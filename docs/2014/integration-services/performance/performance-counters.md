@@ -17,21 +17,21 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 79c9e433a6b5bcf9babee0060fdf028775e0e8a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62889842"
 ---
 # <a name="performance-counters"></a>Счетчики производительности
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] устанавливают набор счетчиков производительности, предназначенных для наблюдения за производительностью подсистемы обработки потока данных. Например, наблюдая за счетчиком «Выгружено буферов», можно определить, записываются ли временно на диск буфера данных при выполнении пакета. Такая выгрузка снижает производительность и указывает на недостаточный объем памяти компьютера.  
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]устанавливает набор счетчиков производительности, которые можно использовать для наблюдения за производительностью подсистемы обработки потока данных. Например, наблюдая за счетчиком «Выгружено буферов», можно определить, записываются ли временно на диск буфера данных при выполнении пакета. Такая выгрузка снижает производительность и указывает на недостаточный объем памяти компьютера.  
   
 > [!NOTE]  
->  Если установить службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на компьютер, на котором запущена ОС [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)], а затем обновить ОС до [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)], то в процессе обновления из компьютера будут удалены счетчики производительности [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Чтобы восстановить счетчики производительности служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на компьютере, запустите средство установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в режиме исправлений.  
+>  Если установить службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на компьютер, где запущена ОС [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)], а затем обновить ОС до [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)], то в процессе обновления из компьютера будут удалены счетчики производительности [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Чтобы восстановить счетчики производительности служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на компьютере, запустите средство установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в режиме исправлений.  
   
  В следующей таблице приводятся описания счетчиков производительности.  
   
-|Счетчик производительности|Описание|  
+|Счетчик производительности|Description|  
 |-------------------------|-----------------|  
 |Считано байтов BLOB|Число байт данных BLOB, которое подсистема обработки потока данных считала из всех источников.|  
 |Записано байтов BLOB|Число байтов данных BLOB, которые подсистема обработки потока данных записала во все назначения.|  
@@ -77,7 +77,7 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 -   Статья поддержки [Счетчик производительности служб SSIS больше недоступен в системном мониторе после обновления до Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=235319)на узле support.microsoft.com.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Запуск проектов и пакетов](../packages/run-integration-services-ssis-packages.md)  
   
   

@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4850be4c112f9c0b987d543873cb55af08372455
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917359"
 ---
 # <a name="display-data-and-log-space-information-for-a-database"></a>Отображение данных и сведений о пространстве журнала для базы данных
@@ -33,9 +33,9 @@ ms.locfileid: "62917359"
   
 -   **Перед началом работы**  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
--   **Отображение данных и сведений о пространстве для базы данных, с помощью:**  
+-   **Отображение данных и сведений о пространстве журнала с помощью различных средств.**  
   
      [Среда SQL Server Management Studio](#SSMSProcedure)  
   
@@ -60,7 +60,7 @@ ms.locfileid: "62917359"
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### <a name="to-display-data-and-log-space-information-for-a-database-by-using-spspaceused"></a>Отображение данных и сведений о пространстве журнала для базы данных при помощи процедуры sp_spaceused  
+#### <a name="to-display-data-and-log-space-information-for-a-database-by-using-sp_spaceused"></a>Отображение данных и сведений о пространстве журнала для базы данных при помощи процедуры sp_spaceused  
   
 1.  Установите соединение с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -75,7 +75,7 @@ EXEC sp_spaceused N'Purchasing.Vendor';
 GO  
 ```  
   
-#### <a name="to-display-data-and-log-space-information-for-a-database-by-querying-sysdatabasefiles"></a>Отображение данных и сведений о пространстве журнала для базы данных путем запроса к представлению каталога sys.database_files  
+#### <a name="to-display-data-and-log-space-information-for-a-database-by-querying-sysdatabase_files"></a>Отображение данных и сведений о пространстве журнала для базы данных путем запроса к представлению каталога sys.database_files  
   
 1.  Установите соединение с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -92,10 +92,10 @@ GO
   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [SELECT (Transact-SQL)](/sql/t-sql/queries/select-transact-sql)   
- [sys.database_files (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
- [sp_spaceused (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql)   
+ [sys. database_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
+ [sp_spaceused &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql)   
  [Добавление файлов данных или журналов в базу данных](add-data-or-log-files-to-a-database.md)   
  [Удаление файлов данных или журнала из базы данных](delete-data-or-log-files-from-a-database.md)  
   

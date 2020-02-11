@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_get_backup_diagnostics (Transact-SQL) | Документация Майкрософт
+title: managed_backup. sp_get_backup_diagnostics (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,18 +21,18 @@ ms.assetid: 2266a233-6354-464b-91ec-824ca4eb9ceb
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 5e967ae5b46ec703da4e8b1fff64f298fdf8a081
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942048"
 ---
-# <a name="managedbackupspgetbackupdiagnostics-transact-sql"></a>managed_backup.sp_get_backup_diagnostics (Transact-SQL)
+# <a name="managed_backupsp_get_backup_diagnostics-transact-sql"></a>managed_backup. sp_get_backup_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Возвращает расширенные события, записанные в журнал объектом Smart Admin.  
   
- Эта хранимая процедура используется для мониторинга расширенных событий в журнал объектом Smart Admin. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] события записываются в эту систему, можно просмотреть и отслеживать с помощью этой хранимой процедуры.  
+ Используйте эту хранимую процедуру для мониторинга расширенных событий, регистрируемых интеллектуальным администратором. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] события регистрируются в этой системе и могут быть просмотрены и отслеживаться с помощью этой хранимой процедуры.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,32 +42,32 @@ ms.locfileid: "67942048"
 managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@begin_time = ] 'time1' ] [, [@end_time = ] 'time2'VARCHAR(255) = 'Xevent',@begin_time DATETIME = NULL,@end_time DATETIME = NULL  
 ```  
   
-##  <a name="Arguments"></a> Аргументы  
+##  <a name="Arguments"></a>Даваемых  
  @xevent_channel  
- Тип расширенного события. Значение по умолчанию предполагает возврат всех событий, занесенных в журнал за предшествующие 30 минут. Занесенные в журнал события зависят от типа включенных расширенных событий. Этот параметр можно использовать для фильтрации хранимой процедуры, чтобы показывать только события определенного типа. Можно указать полное имя события или укажите подстроки, например: **«Admin»** , **'Analytic'** , **'Operational'** , и **'Debug'** . @event_channel — **VARCHAR (255)** .  
+ Тип расширенного события. Значение по умолчанию предполагает возврат всех событий, занесенных в журнал за предшествующие 30 минут. Занесенные в журнал события зависят от типа включенных расширенных событий. Этот параметр можно использовать для фильтрации хранимой процедуры, чтобы показывать только события определенного типа. Можно либо указать полное имя события, либо указать подстроку, такую как: **"admin** **", "Analytics"**, "Operation **"** и **"Debug"**. @event_channel Имеет тип **varchar (255)**.  
   
- Чтобы получить список событий, используйте типы в настоящее время включено **managed_backup.fn_get_current_xevent_settings** функции.  
+ Чтобы получить список типов событий, включенных в данный момент, используйте функцию **managed_backup. fn_get_current_xevent_settings** .  
   
  [@begin_time  
- Начало периода времени, события из которого должны отображаться. @begin_time Тип параметра — DATETIME со значением по умолчанию NULL. Если не задан, отображаются события за последние 30 минут.  
+ Начало периода времени, события из которого должны отображаться. @begin_time Параметр имеет тип DateTime и значение по умолчанию NULL. Если не задан, отображаются события за последние 30 минут.  
   
  @end_time  
- Конец периода времени, события из которого должны отображаться. @end_time Параметр — это DATATIME со значением по умолчанию NULL.  Если не задан, отображаются события по текущий момент.  
+ Конец периода времени, события из которого должны отображаться. @end_time Параметр имеет значение Time со значением по умолчанию NULL.  Если не задан, отображаются события по текущий момент.  
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
  Эта хранимая процедура возвращает таблицу со следующей информацией:  
   
 ||||  
 |-|-|-|  
-|Имя столбца|Тип данных|Описание|  
-|event_type|NVARCHAR(512)|Тип расширенного события.|  
-|Событие|NVARCHAR(512)|Сводка журналов событий.|  
-|Отметка времени|timestamp|Отметка времени события, показывающая, когда оно возникло.|  
+|Имя столбца|Тип данных|Description|  
+|event_type|NVARCHAR (512)|Тип расширенного события.|  
+|Событие|NVARCHAR (512)|Сводка журналов событий.|  
+|Timestamp|TIMESTAMP|Отметка времени события, показывающая, когда оно возникло.|  
   
-## <a name="security"></a>Безопасность  
+## <a name="security"></a>безопасность  
   
 ### <a name="permissions"></a>Разрешения  
- Требуется **EXECUTE** разрешений на хранимую процедуру. Это также потребует выполнения **VIEW SERVER STATE** разрешения, так как процедура автоматически вызывает другие системные объекты, требующие этого разрешения.  
+ Требуются разрешения **EXECUTE** на хранимую процедуру. Также требуется разрешение **View Server State** , так как оно внутренне вызывает другие системные объекты, требующие этого разрешения.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере возвращаются все события, записанные за последние 30 минут  

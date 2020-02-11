@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 85eb934b93d22acc2534d1eb34aa967cbb4f2714
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774256"
 ---
 # <a name="view-the-log-shipping-report-sql-server-management-studio"></a>просмотреть отчет доставки журналов (среда SQL Server Management Studio)
@@ -47,7 +47,7 @@ ms.locfileid: "62774256"
   
 3.  Выберите **Состояние доставки журналов транзакций**.  
   
-## <a name="see-also"></a>См. также  
- [Наблюдение за доставкой журналов (Transact-SQL)](monitor-log-shipping-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Мониторинг доставки журналов &#40;&#41;Transact-SQL](monitor-log-shipping-transact-sql.md)  
   
   

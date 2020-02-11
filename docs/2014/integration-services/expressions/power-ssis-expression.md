@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3d25801b7cc7f6282ebc8cf7b1ce7839159312dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62897419"
 ---
 # <a name="power-ssis-expression"></a>POWER (выражение служб SSIS)
@@ -39,7 +39,7 @@ POWER(numeric_expression,power)
 ## <a name="result-types"></a>Типы результата  
  DT_R8  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Перед выполнением операции возведения в степень аргументы *numeric_expression* и *power* приводятся к типу DT_R8. Дополнительные сведения см. в разделе [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
   
  В случае если результатом *numeric_expression* является ноль, а *power* меньше ноля, средство оценки выражений возвращает ошибку, а выходному параметру присваивается значение NULL.  
@@ -61,7 +61,7 @@ POWER(4,3)
 POWER(Length, @DimensionCount)   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функции (выражение служб SSIS)](functions-ssis-expression.md)  
   
   

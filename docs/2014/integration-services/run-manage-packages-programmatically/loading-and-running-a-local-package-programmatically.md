@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 00d213bf8ca554b60edc8dc3de3f1290cd00f538
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62766896"
 ---
 # <a name="loading-and-running-a-local-package-programmatically"></a>Программная загрузка и запуск локального пакета
@@ -59,7 +59,7 @@ ms.locfileid: "62766896"
   
 2.  В меню **Проект** выберите пункт **Добавить ссылку** и добавьте ссылку на **Microsoft.SqlServer.ManagedDTS.dll**. Нажмите кнопку **ОК**.  
   
-3.  Использование Visual Basic `Imports` инструкции или C# `using` оператора импорта **Microsoft.SqlServer.Dts.Runtime** пространства имен.  
+3.  Чтобы импортировать пространство `Imports` имен `using` **Microsoft. SqlServer. DTS. Runtime** , используйте инструкцию Visual Basic или C#.  
   
 4.  Добавьте следующий код в подпрограмму main. В следующем примере представлено полное консольное приложения.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "62766896"
   
 5.  Запустите проект. В образце кода выполняется пакет образца CalculatedColumns, который устанавливается вместе с образцами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Результат выполнения пакета отображается в консольном окне.  
   
-### <a name="sample-code"></a>Образец кода  
+### <a name="sample-code"></a>Пример кода  
   
 ```vb  
 Imports Microsoft.SqlServer.Dts.Runtime  
@@ -136,7 +136,7 @@ namespace RunFromClientAppCS
   
 3.  Запустите проект. В образце кода выполняется пакет образца CalculatedColumns, который устанавливается вместе с образцами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Результат выполнения пакета отображается в консольном окне вместе с сообщениями о любых возникших ошибках.  
   
-### <a name="sample-code"></a>Образец кода  
+### <a name="sample-code"></a>Пример кода  
   
 ```vb  
 Imports Microsoft.SqlServer.Dts.Runtime  
@@ -223,10 +223,10 @@ namespace RunFromClientAppWithEventsCS
 }  
 ```  
   
-![Значок служб Integration Services (маленький)](../media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
+![Значок Integration Services (маленький)](../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
-## <a name="see-also"></a>См. также  
- [Основные сведения об отличиях между локальным и удаленным выполнением](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
+## <a name="see-also"></a>См. также:  
+ [Основные сведения о различиях между локальным и удаленным выполнением](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
  [Программная загрузка и запуск удаленного пакета](../run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)   
  [Загрузка выхода локального пакета](../run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  
   

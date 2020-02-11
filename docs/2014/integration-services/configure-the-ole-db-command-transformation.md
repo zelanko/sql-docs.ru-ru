@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8c9536e14f20e62b944df44ff943b05edb92e5fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060554"
 ---
 # <a name="configure-the-ole-db-command-transformation"></a>настроить преобразование «Команда OLE DB»
@@ -41,7 +41,7 @@ ms.locfileid: "66060554"
   
 8.  В **редакторе строковых значений**введите параметризованную инструкцию SQL, используя знак вопроса (?) в качестве маркера параметра для каждого параметра.  
   
-9. Нажмите кнопку **Обновить**. При нажатии кнопки **Обновить**преобразование создает столбец для каждого параметра в коллекции "Внешние столбцы" и устанавливает свойство DBParamInfoFlags.  
+9. Щелкните **Refresh** (Обновить). При нажатии кнопки **Обновить**преобразование создает столбец для каждого параметра в коллекции "Внешние столбцы" и устанавливает свойство DBParamInfoFlags.  
   
 10. Щелкните вкладку **Свойства входов и выходов** .  
   
@@ -71,10 +71,10 @@ ms.locfileid: "66060554"
   
 15. Чтобы сохранить обновленный пакет, щелкните **Сохранить** в меню **Файл** .  
   
-## <a name="see-also"></a>См. также  
- [OLE DB Command Transformation](data-flow/transformations/ole-db-command-transformation.md)   
- [Преобразования служб Integration Services](data-flow/transformations/integration-services-transformations.md)   
- [Пути служб Integration Services](data-flow/integration-services-paths.md)   
+## <a name="see-also"></a>См. также:  
+ [Преобразование «OLE DB команда»](data-flow/transformations/ole-db-command-transformation.md)   
+ [Преобразования Integration Services](data-flow/transformations/integration-services-transformations.md)   
+ [Пути Integration Services](data-flow/integration-services-paths.md)   
  [Задача потока данных](control-flow/data-flow-task.md)  
   
   

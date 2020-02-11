@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 973cb7dcfe7eb95e003428adf0c8a0beb7e68e87
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62877718"
 ---
 # <a name="working-with-connection-managers-programmatically"></a>Работа с диспетчерами соединений программным образом
@@ -44,7 +44,7 @@ ms.locfileid: "62877718"
 |EXCEL|Диспетчер соединений с Excel|  
 |FTP|диспетчер FTP-соединений|  
 |HTTP|диспетчер HTTP-соединений|  
-|интерфейс ODBC|диспетчер соединений ODBC|  
+|ODBC|диспетчер соединений ODBC|  
 |OLEDB|диспетчер соединений OLE DB|  
   
  Как правило, для соединения с источником данных ADO, Excel, ODBC и OLE DB в управляемом коде можно использовать диспетчер соединений [!INCLUDE[vstecado](../includes/vstecado-md.md)].  
@@ -65,11 +65,11 @@ ms.locfileid: "62877718"
 |WMI|Диспетчер WMI-соединений|`System.Management.ManagementScope`||  
 |SQLMOBILE|Диспетчер соединений SQL Server Compact|`System.Data.SqlServerCe.SqlCeConnection`||  
   
-![Значок служб Integration Services (маленький)](media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
+![Значок Integration Services (маленький)](media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
-## <a name="see-also"></a>См. также  
- [Соединение с источниками данных в задаче "Скрипт"](extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md)   
- [Соединение с источниками данных в компоненте скрипта](extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)   
+## <a name="see-also"></a>См. также:  
+ [Подключение к источникам данных в задаче «Скрипт»](extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md)   
+ [Подключение к источникам данных в компоненте скрипта](extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)   
  [Соединение с источниками данных в пользовательской задаче](extending-packages-custom-objects/task/connecting-to-data-sources-in-a-custom-task.md)  
   
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 01b985a1bb818e7b3d3612596bb4e2b7fa6fd393
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62829464"
 ---
 # <a name="transfer-sql-server-objects-task"></a>Задача «Передача объектов SQL Server»
@@ -29,7 +29,7 @@ ms.locfileid: "62829464"
   
  В следующей таблице перечислены типы объектов, которые могут быть скопированы.  
   
-|Object|  
+|Объект|  
 |------------|  
 |Таблицы|  
 |Представления|  
@@ -106,9 +106,9 @@ ms.locfileid: "62829464"
   
  Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующих разделах:  
   
--   [Редактор задачи "Передача объектов SQL Server" (страница "Общие")](../general-page-of-integration-services-designers-options.md)  
+-   [Редактор задачи "перемещение SQL Server объектов" &#40;страница "Общие"&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Редактор задачи "Передача объектов SQL Server" (страница "Объекты")](../transfer-sql-server-objects-task-editor-objects-page.md)  
+-   [Редактор задачи "перемещение объектов SQL Server объекты" &#40;"объекты"&#41;](../transfer-sql-server-objects-task-editor-objects-page.md)  
   
 -   [Страница «Выражения»](../expressions/expressions-page.md)  
   

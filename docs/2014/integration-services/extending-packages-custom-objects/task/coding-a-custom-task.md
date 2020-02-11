@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ee6c3325364e6b695b288e1a5b43e7d2470f6e34
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62896110"
 ---
 # <a name="coding-a-custom-task"></a>Создание кода пользовательской задачи
@@ -157,19 +157,19 @@ End Class
  В этом разделе описывается, как использовать метод `Execute`, который наследуется и переопределяется задачами. В разделе также поясняются различные способы предоставления сведений о результатах выполнения задачи.  
   
 ### <a name="execute-method"></a>Метод Execute  
- Задачи, содержащиеся в пакете, выполняются, когда среда выполнения служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] вызывает их метод `Execute`. Задачи реализуют свою основную бизнес-логику и функциональность в этом методе и предоставляют результаты выполнения, выдавая сообщения, возвращая значение из <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> перечисления и переопределяя свойство `get` из `ExecutionValue` свойство.  
+ Задачи, содержащиеся в пакете, выполняются, когда среда выполнения служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] вызывает их метод `Execute`. Задачи реализуют свою основную бизнес-логику и функциональные возможности в этом методе и предоставляют результаты выполнения путем отправки сообщений, возвращения значения из <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> перечисления и переопределения свойства `get` `ExecutionValue` свойства.  
   
  Базовый класс <xref:Microsoft.SqlServer.Dts.Runtime.Task> предоставляет реализацию по умолчанию метода <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>. Пользовательские задачи переопределяют этот метод, чтобы определить собственную функциональность времени выполнения. Объект <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> упаковывает задачу, изолируя ее от обработчика среды выполнения и других объектов в пакете. В результате этой изоляции задача не имеет сведений о своем местоположении в пакете с учетом порядка выполнения. Она выполняется только после вызова средой выполнения. Такая архитектура предотвращает проблемы, которые могут возникнуть при изменении задачами пакета в процессе выполнения. Задаче предоставляется доступ к другим объектам в пакете только через объекты, передаваемые ей в качестве параметров в методе <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>. Эти параметры позволяют задачам вызывать события, делать записи в журнале событий, обращаться к коллекции Variables и прикреплять соединения к источникам данных в транзакциях, одновременно сохраняя изоляцию, которая необходима для обеспечения стабильности и надежности пакета.  
   
  В следующей таблице перечислены параметры, передаваемые задаче в методе <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>.  
   
-|Параметр|Описание|  
+|Параметр|Description|  
 |---------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Connections>|Содержит коллекцию объектов <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>, доступных для задачи.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.VariableDispenser>|Содержит переменные, доступные для задачи. Переменные используются задачами через свойство VariableDispenser, а не напрямую. Свойство VariableDispenser осуществляет блокировку и разблокирование переменных, а также предотвращает взаимоблокировки или перезаписи.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents>|Содержит методы, вызываемые задачей для вызова событий в обработчике среды выполнения.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.IDTSLogging>|Содержит методы и свойства, используемые задачей для внесения записей в журнал событий.|  
-|Object|Содержит объект транзакции (при наличии такового), частью которого является контейнер. Это значение передается в качестве параметра методу <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> объекта <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>.|  
+|Объект|Содержит объект транзакции (при наличии такового), частью которого является контейнер. Это значение передается в качестве параметра методу <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> объекта <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>.|  
   
 ### <a name="providing-execution-feedback"></a>Обеспечение обратной связи при выполнении  
  Задачи упаковывают свой код в блоки `try/catch`, чтобы предотвратить возникновение исключений в обработчике среды выполнения. Таким образом, гарантируется, что выполнение пакета будет завершено, и не произойдет неожиданной остановки. Однако обработчик среды выполнения предоставляет и другие механизмы обработки ошибок, которые могут возникать во время выполнения задачи. К ним относится выдача сообщений об ошибках и предупреждений, возвращение значения из структуры <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult>, выдача сообщений, возвращение значения <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> и раскрытие сведений о результатах выполнения задачи с помощью свойства <xref:Microsoft.SqlServer.Dts.Runtime.Task.ExecutionValue%2A>.  
@@ -285,11 +285,11 @@ Public Class SampleTask
 End Class  
 ```  
   
-![Значок служб Integration Services (маленький)](../../media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
+![Значок Integration Services (маленький)](../../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание пользовательской задачи](creating-a-custom-task.md)   
- [Создание кода пользовательской задачи](coding-a-custom-task.md)   
+ [Написание кода пользовательской задачи](coding-a-custom-task.md)   
  [Разработка пользовательского интерфейса для пользовательской задачи](developing-a-user-interface-for-a-custom-task.md)  
   
   

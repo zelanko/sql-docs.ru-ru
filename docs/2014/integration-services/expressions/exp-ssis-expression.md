@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 366a938b2e90ce448cbcba2775f0eb7f327aab61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62898059"
 ---
 # <a name="exp-ssis-expression"></a>EXP (выражение служб SSIS)
@@ -37,7 +37,7 @@ EXP(numeric_expression)
 ## <a name="result-types"></a>Типы результата  
  DT_R8  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Перед вычислением степени числовое выражение приводится к типу данных DT_R8. Дополнительные сведения см. в разделе [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
   
  Возвращаемый результат всегда является положительным числом.  
@@ -63,7 +63,7 @@ EXP(0)
   
  Возвращает значение 1.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [LOG (выражение служб SSIS)](log-ssis-expression.md)   
  [Функции (выражение служб SSIS)](functions-ssis-expression.md)  
   

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 26af58e208527d155b5ddf3506be4509627c1f7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62918342"
 ---
 # <a name="management-data-warehouse"></a>хранилище данных управления
@@ -39,7 +39,7 @@ ms.locfileid: "62918342"
   
  В следующей таблице описаны таблицы базы данных в схеме core. Эти таблицы базы данных позволяют сборщику данных отслеживать источники данных, пользователей, вставивших данные, и время передачи в хранилище данных.  
   
-|Имя таблицы|Описание|  
+|Имя таблицы|Description|  
 |----------------|-----------------|  
 |core.performance_counter_report_group_items|Хранит сведения о группировке отчетов из хранилища данных управления, а также статистику счетчиков производительности.|  
 |core.snapshots_internal|Определяет каждый новый моментальный снимок. Новая строка вставляется в эту таблицу каждый раз, когда пакет передачи начинает передачу нового пакета данных.|  
@@ -75,7 +75,7 @@ ms.locfileid: "62918342"
   
     -   `snapshots.os_memory_clerks`  
   
-    -   **snapshots.os_memory_nodes**  
+    -   **моментальные снимки. os_memory_nodes**  
   
     -   snapshots.sql_process_and_system_memory  
   
@@ -103,7 +103,7 @@ ms.locfileid: "62918342"
   
     -   snapshots.distinct_query_to_handle  
   
- **Схема custom_snapshots**  
+ **Схема Custom_snapshots**  
   
  Схема custom_snapshots описывает новые таблицы и представления, которые создаются, когда стандартные или сторонние типы сборщика используются для создания пользовательских наборов сбора. Любой тип сборщика, которому необходима новая таблица данных для элемента сбора, может создать ее в этой схеме. Новые таблицы могут быть добавлены в эту схему членами роли mdw_writer. Любые другие изменения схемы могут выполнять только члены роли mdw_admin.  
   
@@ -125,10 +125,10 @@ ms.locfileid: "62918342"
 |В раздел «Схема core» добавлена таблица core.performance_counter_report_group_items.|  
 |Обновлен список таблиц в разделе «Схема snapshots». Добавлены таблицы snapshots.os_memory_clerks, snapshots.sql_process_and_system_memory и snapshots.io_virtual_file_stats. Удалены таблицы snapshots.os_process_memory и snapshots.distinct_query_stats.|  
   
-## <a name="see-also"></a>См. также  
- [Хранимые процедуры хранилища данных управления (Transact-SQL)](/sql/relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql)   
- [Хранимые процедуры сборщика данных (Transact-SQL)](/sql/relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql)   
+## <a name="see-also"></a>См. также:  
+ [Хранимые процедуры хранилища управляющих данных &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql)   
+ [Хранимые процедуры сборщика данных &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql)   
  [Сбор данных](data-collection.md)   
- [Просмотр отчета о наборе элементов сбора (среда SQL Server Management Studio)](view-a-collection-set-report-sql-server-management-studio.md)  
+ [Просмотр SQL Server Management Studio &#40;отчетов набора сбора&#41;](view-a-collection-set-report-sql-server-management-studio.md)  
   
   

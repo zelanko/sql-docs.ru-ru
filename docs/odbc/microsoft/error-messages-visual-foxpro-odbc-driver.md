@@ -16,41 +16,41 @@ ms.assetid: 58ea9734-4edf-44da-ba80-938aa7b340e4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6072a6e317ab87118376b08790fc0fb49c495e3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67952519"
 ---
 # <a name="error-messages-visual-foxpro-odbc-driver"></a>Сообщения об ошибках (драйвер ODBC для Visual FoxPro)
-При возникновении ошибки, Visual FoxPro драйвер возвращает следующую информацию:  
+При возникновении ошибки драйвер Visual FoxPro возвращает следующие сведения:  
   
--   Номер собственной ошибки и текст сообщения об ошибке  
+-   Основной номер ошибки и текст сообщения об ошибке  
   
--   SQLSTATE (код ошибки ODBC) и текст сообщения об ошибке  
+-   Сообщение SQLSTATE (код ошибки ODBC) и текст сообщения об ошибке  
   
- Сведения об этой ошибке к путем вызова [SQLError](../../odbc/microsoft/sqlerror-visual-foxpro-odbc-driver.md).  
+ Чтобы получить доступ к этой информации об ошибке, вызовите [SqlError](../../odbc/microsoft/sqlerror-visual-foxpro-odbc-driver.md).  
   
 ## <a name="native-errors"></a>Собственные ошибки  
- Для ошибок, возникших в источнике данных драйвер Visual FoxPro возвращает номер собственной ошибки и текст сообщения об ошибке. Список номера собственных ошибок, см. в разделе [Visual FoxPro ODBC драйвер собственные сообщения об ошибках](../../odbc/microsoft/visual-foxpro-odbc-driver-native-error-messages.md).  
+ Для ошибок, возникающих в источнике данных, драйвер Visual FoxPro возвращает собственный номер ошибки и текст сообщения об ошибке. Список машинных номеров ошибок см. в разделе [собственные сообщения об ошибках драйвера ODBC для Visual FoxPro](../../odbc/microsoft/visual-foxpro-odbc-driver-native-error-messages.md).  
   
 ## <a name="sqlstate-odbc-error-codes"></a>SQLSTATE (коды ошибок ODBC)  
- Для ошибок, обнаруженных и возвращенных драйвера для Visual FoxPro драйвер сопоставляет возвращенный собственный номер ошибки с соответствующим кодом SQLSTATE. Если собственный номер ошибки не содержит код ошибки для сопоставления с ODBC, драйвер Visual FoxPro возвращает SQLSTATE S1000 (Общая ошибка).  
+ Для ошибок, обнаруженных и возвращаемых драйвером Visual FoxPro, драйвер сопоставляет возвращенный номер собственной ошибки с соответствующим SQLSTATE. Если номер собственной ошибки не содержит код ошибки ODBC для сопоставлений, драйвер Visual FoxPro возвращает значение SQLSTATE S1000 (общая ошибка).  
   
- Список значений SQLSTATE, создаваемые драйвера ODBC для Visual FoxPro для соответствующей ошибки Visual FoxPro, см. в разделе [коды ошибок ODBC](../../odbc/microsoft/odbc-error-codes-visual-foxpro-odbc-driver.md).  
+ Список значений SQLSTATE, созданных драйвером ODBC для Visual FoxPro для соответствующих ошибок Visual FoxPro, см. в статье [коды ошибок ODBC](../../odbc/microsoft/odbc-error-codes-visual-foxpro-odbc-driver.md).  
   
 ## <a name="syntax"></a>Синтаксис  
  Сообщения об ошибках имеют следующий формат:  
   
- **[** *поставщика* **] [** *ODBC_component* **]** *error_message*  
+ **[** *Vendor* **] [** *ODBC_component* **]** *ERROR_MESSAGE*  
   
- Префиксы в квадратные скобки ([]) определить источник ошибки, как определено в таблице ниже.  
+ Префиксы в квадратных скобках ([]) определяют источник ошибки, как определено в следующей таблице.  
   
-|Источник данных|Prefix|Значение|  
+|Источник данных|Prefix (Префикс)|Значение|  
 |-----------------|------------|-----------|  
-|Диспетчер драйверов|[поставщик]<br />[ODBC_component]<br />[источник_данных]|[Майкрософт]<br />[Диспетчер драйверов ODBC]<br />Н/Д|  
-|Драйвер Visual FoxPro|поставщика]<br />[ODBC_component]<br />[источник_данных]|[Майкрософт]<br />[ODBC Visual FoxPro driver]<br />Н/Д|  
+|Диспетчер драйверов|разработчика<br />[ODBC_component]<br />[data_source]|NNTP<br />[Диспетчер драйверов ODBC]<br />Недоступно|  
+|Драйвер Visual FoxPro|разработчика<br />[ODBC_component]<br />[data_source]|NNTP<br />[Драйвер ODBC Visual FoxPro]<br />Недоступно|  
   
- Например если драйвер ODBC для Visual FoxPro не удалось найти файл employee.dbf, может быть возвращено следующее сообщение об ошибке:  
+ Например, если драйверу ODBC для Visual FoxPro не удалось найти файл Employee. dbf, он может вернуть следующее сообщение об ошибке:  
   
- «[*Microsoft*] [*драйвера ODBC для Visual FoxPro*] файл «employee.dbf» не существует»
+ "[*Microsoft*] [*драйвер ODBC Visual FoxPro*] файл" Employee. dbf "не существует"

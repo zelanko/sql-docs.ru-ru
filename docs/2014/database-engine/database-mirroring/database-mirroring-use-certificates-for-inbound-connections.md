@@ -1,5 +1,5 @@
 ---
-title: Включение использования сертификатов для входящих соединений (Transact-SQL) конечной точке зеркального отображения базы данных | Документация Майкрософт
+title: Разрешить использование сертификатов для входящих соединений в конечной точке зеркального отображения базы данных (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3f70ddfc241a902a59dff989323a75b17f7af55e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807563"
 ---
 # <a name="allow-a-database-mirroring-endpoint-to-use-certificates-for-inbound-connections-transact-sql"></a>Включение использования сертификатов для входящих соединений в конечной точке зеркального отображения базы данных (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "62807563"
   
  Ниже эти шаги описаны подробно. Для каждого шага приведен пример настройки экземпляра сервера в системе с именем HOST_A. В соответствующем разделе «Пример» показаны те же шаги для другого экземпляра сервера в системе с именем HOST_B.  
   
-### <a name="to-configure-server-instances-for-inbound-mirroring-connections-on-hosta"></a>Настройка экземпляров сервера на входящие соединения зеркального отображения (на узле HOST_A)  
+### <a name="to-configure-server-instances-for-inbound-mirroring-connections-on-host_a"></a>Настройка экземпляров сервера на входящие соединения зеркального отображения (на узле HOST_A)  
   
 1.  Создайте имя входа для другой системы.  
   
@@ -157,16 +157,16 @@ GO
   
  Дополнительные сведения о создании зеркальной базы данных, содержащей пример Transact-SQL, см. в разделе [Подготовка зеркальной базы данных к зеркальному отображению (SQL Server)](prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
- Пример Transact-SQL, устанавливающий сеанс с режимом высокой производительности, см. в разделе [пример: Настройка зеркального отображения с помощью сертификатов &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md).  
+ Пример запроса Transact-SQL, устанавливающий сеанс с режимом высокой производительности, см. в разделе [Пример. Настройка зеркального отображения базы данных с помощью сертификатов (Transact-SQL)](example-setting-up-database-mirroring-using-certificates-transact-sql.md).  
   
 ## <a name="net-framework-security"></a>Безопасность .NET Framework  
  При копировании сертификата на другую систему используйте безопасный метод копирования. Отнеситесь с особым вниманием к хранению сертификатов в безопасном месте.  
   
-## <a name="see-also"></a>См. также  
- [Безопасность транспорта для зеркального отображения базы данных и групп доступности AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
- [GRANT, предоставление разрешений конечной точке (Transact-SQL)](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)   
+## <a name="see-also"></a>См. также:  
+ [Безопасность транспорта для зеркального отображения базы данных и группы доступности AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
+ [GRANT, предоставление разрешений на конечную точку &#40;&#41;Transact-SQL](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)   
  [Настройка зашифрованной зеркальной базы данных](set-up-an-encrypted-mirror-database.md)   
- [Конечная точка зеркального отображения базы данных (SQL Server)](the-database-mirroring-endpoint-sql-server.md)   
- [Диагностика конфигурации зеркального отображения базы данных (SQL Server)](troubleshoot-database-mirroring-configuration-sql-server.md)  
+ [SQL Server &#40;конечной точки зеркального отображения базы данных&#41;](the-database-mirroring-endpoint-sql-server.md)   
+ [Устранение неполадок конфигурации зеркального отображения базы данных &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)  
   
   

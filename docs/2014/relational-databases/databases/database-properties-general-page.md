@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 13ec38a90e0acf85dccf87edd94f6efa4cf3dfd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916962"
 ---
 # <a name="database-properties-general-page"></a>Свойства базы данных (страница «Общие»)
@@ -29,11 +29,11 @@ ms.locfileid: "62916962"
  **Последнее резервное копирование журнала базы данных**  
  Дата последнего резервного копирования журнала транзакций базы данных.  
   
- **Name**  
+ **Название**  
  Отображается имя базы данных.  
   
  **Состояние**  
- Отображает состояние базы данных. Дополнительные сведения см. в разделе [Database States](database-states.md).  
+ Отображает состояние базы данных. Дополнительные сведения см. в разделе [Состояния базы данных](database-states.md).  
   
  **Владелец**  
  Отображает имя владельца базы данных. Изменить владельца можно на странице **Файлы** .  
@@ -53,7 +53,7 @@ ms.locfileid: "62916962"
  **Имя параметров сортировки**  
  Отображает параметры сортировки, используемые в базе данных. Изменить параметры сортировки можно на странице **Параметры** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)   
  [sys.databases (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   

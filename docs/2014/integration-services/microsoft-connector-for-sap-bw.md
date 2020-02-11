@@ -1,5 +1,5 @@
 ---
-title: Microsoft Connector 1.1 для SAP BW | Документация Майкрософт
+title: Microsoft Connector 1,1 для SAP BW | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cd4cf8f8fe90afcda343b2b494e0b0b050c8c951
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62890611"
 ---
 # <a name="microsoft-connector-11-for-sap-bw"></a>Microsoft Connector 1.1 для SAP BW
+  
   [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 для SAP BW — это набор из трех компонентов, позволяющих извлекать или загружать данные в систему SAP NetWeaver BW версии 7.  
   
 > [!IMPORTANT]  
@@ -26,14 +27,15 @@ ms.locfileid: "62890611"
 > [!IMPORTANT]  
 >  Для извлечения данных из SAP Netweaver BW требуется дополнительная лицензия SAP. Обратитесь к SAP, чтобы уточнить требования.  
   
-## <a name="components"></a>Компоненты  
- [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 для SAP BW состоит из следующих компонентов:  
+## <a name="components"></a>Components  
+ 
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 для SAP BW состоит из следующих компонентов:  
   
--   **SAP BW Source** — это компонент потока данных, который позволяет извлекать данные из системы SAP Netweaver BW версии 7.  
+-   Источник **SAP BW**— источник SAP BW — это компонент источника потока данных, позволяющий извлекать данные из системы SAP NetWeaver BW версии 7.  
   
--   **SAP BW Destination** — это компонент потока данных, позволяющий загружать данные в систему SAP Netweaver BW версии 7.  
+-   **Назначение SAP BW**. SAP BW назначение — это компонент назначения потока данных, который позволяет загружать данные в систему SAP NetWeaver BW версии 7.  
   
--   **Диспетчер соединений SAP BW** подключает источник SAP BW или назначение SAP BW к системе SAP Netweaver BW версии 7.  
+-   **Диспетчер соединений SAP BW**. диспетчер соединений SAP BW подключает либо источник SAP BW, либо SAP BW назначение к системе SAP NetWeaver BW версии 7.  
   
  Пошаговое руководство, в котором показано, как настроить и использовать диспетчер соединений, источник и назначение SAP BW см. в техническом документе [Использование службы SQL Server Integration Services с SAP BI 7.0](https://go.microsoft.com/fwlink/?LinkId=301897). В этом техническом документе также показано, как настроить необходимые объекты в SAP BW.  
   

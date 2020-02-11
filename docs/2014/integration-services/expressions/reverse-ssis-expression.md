@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ce882ae32718f634efb6b2f39ed397dfb9cbf785
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62897343"
 ---
 # <a name="reverse-ssis-expression"></a>REVERSE (выражение служб SSIS)
@@ -37,7 +37,7 @@ REVERSE(character_expression)
 ## <a name="result-types"></a>Типы результата  
  DT_WSTR  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Аргумент *character_expression* должен иметь тип данных DT_WSTR.  
   
  Функция TOKEN возвращает значение NULL, если строка *character_expression* имеет значение NULL.  
@@ -55,7 +55,7 @@ REVERSE("Mountain Bike")
 REVERSE(@Name)  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функции (выражение служб SSIS)](functions-ssis-expression.md)  
   
   

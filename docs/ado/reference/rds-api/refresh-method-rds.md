@@ -1,5 +1,5 @@
 ---
-title: Метод (RDS) Refresh | Документация Майкрософт
+title: Метод Refresh (RDS) | Документация Майкрософт
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,17 +18,17 @@ ms.assetid: c90a8050-0ff4-4c83-9925-261f2f2ccfe9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fb7cb94edab6b5422c315b71c2900662f85aa1e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963501"
 ---
 # <a name="refresh-method-rds"></a>Метод Refresh (служба удаленных рабочих столов)
-Повторно запрашивает источник данных, указанный в [Connect](../../../ado/reference/rds-api/connect-property-rds.md) свойство и обновления результатов запроса.  
+Повторно запрашивает источник данных, указанный в свойстве [Connect](../../../ado/reference/rds-api/connect-property-rds.md) , и обновляет результаты запроса.  
   
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,21 +39,21 @@ DataControl.Refresh
   
 #### <a name="parameters"></a>Параметры  
  *DataControl*  
- Объектную переменную, которая представляет [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) объекта.  
+ Объектная переменная, представляющая [RDS. Объект элемента управления](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
   
-## <a name="remarks"></a>Примечания  
- Необходимо задать [Connect](../../../ado/reference/rds-api/connect-property-rds.md), [Server](../../../ado/reference/rds-api/server-property-rds.md), и [SQL](../../../ado/reference/rds-api/sql-property.md) свойства, прежде чем использовать **обновить** метод. Все элементы управления с привязкой к данным на форму, связанную с **RDS. DataControl** объекта будут отражены в новом наборе записей. Все ранее существовавшие [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объект будет освобожден, а все несохраненные изменения будут утеряны. **Обновить** метод автоматически делает первую запись текущей записи.  
+## <a name="remarks"></a>Remarks  
+ Перед использованием метода **Refresh** необходимо задать свойства [Connect](../../../ado/reference/rds-api/connect-property-rds.md), [Server](../../../ado/reference/rds-api/server-property-rds.md)и [SQL](../../../ado/reference/rds-api/sql-property.md) . Все элементы управления, привязанные к данным, в форме, связанной с **RDS. Объект элемента управления** данные будет отражать новый набор записей. Освобождается существующий объект [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) , и все несохраненные изменения отбрасываются. Метод **Refresh** автоматически делает первую запись текущей записью.  
   
- Рекомендуется вызывать **обновить** метод периодически при работе с данными. Если извлечение данных и оставить его на клиентском компьютере какое-то время, это может устареть. Вполне возможно, что любые изменения, внесенные не удастся, так как другой пользователь изменил запись и отправил изменения, прежде чем.  
+ Рекомендуется периодически вызывать метод **Refresh** при работе с данными. Если получить данные и оставить их на клиентском компьютере в течение определенного времени, скорее всего, они устаревают. Возможно, любые внесенные изменения будут завершаться ошибкой, так как другой пользователь мог изменить запись и отправил изменения перед вами.  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  [Объект DataControl (служба удаленных рабочих столов)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>См. также  
- [Метод пример Refresh (Visual Basic)](../../../ado/reference/ado-api/refresh-method-example-vb.md)   
- [Обновить пример метода (VBScript)](../../../ado/reference/rds-api/refresh-method-example-vbscript.md)   
- [Кнопки команд адресной книги](../../../ado/guide/remote-data-service/address-book-command-buttons.md)   
- [Метод CancelUpdate (служба удаленных рабочих СТОЛОВ)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   
+## <a name="see-also"></a>См. также:  
+ [Пример метода Refresh (Visual Basic)](../../../ado/reference/ado-api/refresh-method-example-vb.md)   
+ [Пример метода Refresh (VBScript)](../../../ado/reference/rds-api/refresh-method-example-vbscript.md)   
+ [Кнопки для команд адресной книги](../../../ado/guide/remote-data-service/address-book-command-buttons.md)   
+ [Метод CancelUpdate (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   
  [Метод Refresh (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)   
  [Метод SubmitChanges (служба удаленных рабочих столов)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
 
