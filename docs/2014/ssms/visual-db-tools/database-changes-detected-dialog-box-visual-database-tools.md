@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0d5850ce71e483ea33bb99972c243140a63da5f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63270537"
 ---
 # <a name="database-changes-detected-dialog-box-visual-database-tools"></a>Диалоговое окно «Обнаружены изменения базы данных» (визуальные инструменты для баз данных)
@@ -43,8 +43,8 @@ ms.locfileid: "63270537"
  **Сохранить текстовый файл**  
  Отображает диалоговое окно **Сохранить как** , которое позволяет указать расположение текстового файла, содержащего список изменений в базе данных.  
   
-## <a name="see-also"></a>См. также  
- [Согласование диаграммы базы данных с измененной базой данных &#40;визуальных инструментах баз данных&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>См. также:  
+ [Выверка диаграммы базы данных с измененной базой данных &#40;визуальные инструменты для баз данных&#41;](visual-database-tools.md)   
  [Многопользовательские среды (визуальные инструменты для баз данных)](multiuser-environments-visual-database-tools.md)  
   
   

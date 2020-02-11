@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: b83388ff3be4c8cfdfec72968230f957358b1960
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63288416"
 ---
 # <a name="wmi-provider-for-configuration-management-classes"></a>Поставщик WMI для классов управления конфигурацией
@@ -45,7 +45,7 @@ ms.locfileid: "63288416"
   
  [Класс ServerNetworkProtocol](servernetworkprotocol-class/servernetworkprotocol-class.md)  
   
- [Класс ServerNetworkProtocolIPAddress](servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md)  
+ [Класс класс servernetworkprotocolipaddress](servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md)  
   
  [Класс ServerNetworkProtocolProperty](servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md)  
   
@@ -55,9 +55,9 @@ ms.locfileid: "63288416"
   
  [Класс SInstance](sinstance-class/sinstance-class.md)  
   
- [Класс SqlErrorLogEvent](sqlerrorlogevent-class.md)  
+ [SqlErrorLogEvent, класс](sqlerrorlogevent-class.md)  
   
- [Класс SqlErrorLogFile](sqlerrorlogfile-class.md)  
+ [SqlErrorLogFile, класс](sqlerrorlogfile-class.md)  
   
  [Класс SqlServerAlias](sqlserveralias-class/sqlserveralias-class.md)  
   

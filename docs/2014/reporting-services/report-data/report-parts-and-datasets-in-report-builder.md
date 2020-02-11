@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e5f77df0a2e5322687f5724e7921932a551d07ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107169"
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>Элементы отчета и наборы данных в построителе отчетов
@@ -59,7 +59,7 @@ ms.locfileid: "66107169"
 >  Чтобы гарантировать успешную работу с данными из общего набора данных, необходимо владеть основными принципами обеспечения безопасности элементов отчетов. Дополнительные сведения см. в разделе [Защита элементов общего набора данных](../security/secure-shared-dataset-items.md).  
   
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Представление конструктора отчетов (построитель отчетов)](../report-builder/report-design-view-report-builder.md)   
  [Безопасность (построитель отчетов)](../report-builder/security-report-builder.md)   
  [Элементы отчета (построитель отчетов и службы SSRS)](../report-parts-report-builder-and-ssrs.md)   

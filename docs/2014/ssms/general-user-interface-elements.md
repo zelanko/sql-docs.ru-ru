@@ -14,17 +14,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 47ce33e0d0a8cf76a90beb1fa3cc6ddfda27606f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63316136"
 ---
 # <a name="general-user-interface-elements"></a>Общие элементы пользовательского интерфейса
-  Примерами базовых элементов [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] являются **Редактор**, окно **Свойства**, а также **область элементов**.  
+  Примерами базовых элементов **** являются **Редактор** , окно **Свойства** , а также [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="in-this-section"></a>в этом разделе  
- [Диалоговое окно «О продукте»](about-dialog-box.md)  
+ [диалоговое окно «О продукте»](about-dialog-box.md)  
  Описывает диалоговое окно, содержащее сведения о среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] и компьютере, на котором она работает.  
   
  [Веб-браузер среды SQL Server Management Studio](sql-server-management-studio-web-browser.md)  

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e1861b6ef4ab3617b5f12e7711fa2b895edaa55a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63188115"
 ---
 # <a name="dtainput-element-dta"></a>Элемент DTAInput (DTA)
@@ -36,7 +36,7 @@ ms.locfileid: "63188115"
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристики|Описание|  
+|Характеристики|Description|  
 |---------------------|-----------------|  
 |**Тип данных и длина**|Нет.|  
 |**Значение по умолчанию**|Нет.|  
@@ -49,13 +49,13 @@ ms.locfileid: "63188115"
 |**Родительский элемент**|[Элемент DTAXML (DTA)](dtaxml-element-dta.md)|  
 |**Дочерние элементы**|[Элемент Server (DTA)](server-element-dta.md)<br /><br /> [Элемент Workload (DTA)](workload-element-dta.md)<br /><br /> [Элемент TuningOptions (DTA)](tuningoptions-element-dta.md)<br /><br /> [Элемент Configuration (DTA)](configuration-element-dta.md)|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Этот элемент является корневым в иерархии входной схемы помощника по настройке ядра СУБД. С помощью входных аргументов помощника по настройке ядра СУБД можно задавать серверы с подлежащими настройке базами данных, рабочие нагрузки, параметры настройки или пользовательскую конфигурацию.  
   
 ## <a name="example"></a>Пример  
  Пример использования элемента **DTAInput** см. в разделе [Образец простого входного файла XML (DTA)](simple-xml-input-file-sample-dta.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по входным XML-файлам (помощник по настройке ядра СУБД)](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

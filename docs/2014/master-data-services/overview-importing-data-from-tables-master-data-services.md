@@ -15,16 +15,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7f5f5e7d6c4706dee09c90237c2363f6cbf46b02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479003"
 ---
 # <a name="data-import-master-data-services"></a>Импорт данных (службы Master Data Services)
   После создания модели для данных в [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]можно добавлять данные и вносить в них изменения в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .   Используются промежуточные таблицы [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , хранимые процедуры и диспетчер основных данных.  
   
- Можно также использовать [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]для добавления данных в репозиторий MDS ([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] базы данных). Дополнительные сведения см. в разделе [публикации данных &#40;надстройки MDS для Excel&#41;](microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md).  
+ Можно [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]также использовать для добавления данных в репозиторий MDS ([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] база данных). Дополнительные сведения см. в разделе [Publishing Data &#40;надстройка MDS для Excel&#41;](microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md).  
   
  При добавлении или обновлении данных можно выполнять следующие действия.  
   
@@ -69,11 +69,11 @@ ms.locfileid: "65479003"
 ## <a name="staging-tables-and-stored-procedures"></a>Промежуточные таблицы и хранимые процедуры  
  База данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] включает следующие типы промежуточных таблиц, которые можно заполнять данными.  
   
--   [Конечный элемент таблицы элементов (службы Master Data Services)](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)  
+-   [&#40;Master Data Services промежуточной таблицы элементов&#41;](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)  
   
--   [Промежуточная таблица консолидированных элементов (службы Master Data Services)](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)  
+-   [Промежуточная таблица консолидированного элемента &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)  
   
--   [Промежуточная таблица связей (службы Master Data Services)](../../2014/master-data-services/relationship-staging-table-master-data-services.md)  
+-   [Промежуточная таблица связей &#40;Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md)  
   
  Для каждой сущности в модели есть промежуточная таблица. Имя таблицы обозначает соответствующую сущность и ее тип, например конечный элемент. На этом изображении показаны промежуточные таблицы для сущностей валюты, клиента и продукта.  
   
@@ -81,7 +81,8 @@ ms.locfileid: "65479003"
   
  Имя таблицы указывается при создании сущности и не может быть изменено. Если имя промежуточной таблицы содержит _1 (или другое число), то на момент создания сущности уже существовала другая таблица с тем же именем.  
   
- [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] включает следующие типы промежуточных хранимых процедур.  
+ 
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] включает следующие типы промежуточных хранимых процедур.  
   
 -   stg.udp_\<имя>_Leaf  
   
@@ -91,7 +92,7 @@ ms.locfileid: "65479003"
   
  Для каждой сущности в модели есть три хранимые процедуры, которые соответствуют конечному элементу, объединенному элементу и промежуточным таблицам связей.  На следующем изображении показаны промежуточные хранимые процедуры для сущностей валюты, клиента и продукта.  
   
- ![Промежуточные хранимые процедуры в базе данных MDS](../../2014/master-data-services/media/mds-stagingstoredprocedures.png "промежуточные хранимые процедуры в базе данных MDS")  
+ ![Промежуточные хранимые процедуры в базе данных MDS](../../2014/master-data-services/media/mds-stagingstoredprocedures.png "Промежуточные хранимые процедуры в базе данных MDS")  
   
  Дополнительные сведения о хранимых процедурах см. в разделе [Промежуточная хранимая процедура (службы Master Data Services)](../../2014/master-data-services/staging-stored-procedure-master-data-services.md).  
   
@@ -102,8 +103,8 @@ ms.locfileid: "65479003"
   
 ## <a name="related-content"></a>См. также  
   
--   [Проверка (службы Master Data Services)](../../2014/master-data-services/validation-master-data-services.md)  
+-   [Master Data Services &#40;проверки&#41;](../../2014/master-data-services/validation-master-data-services.md)  
   
--   [Бизнес-правила (службы Master Data Services)](../../2014/master-data-services/business-rules-master-data-services.md)  
+-   [Бизнес-правила &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
   

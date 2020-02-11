@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_volume_stats (Transact-SQL) | Документация Майкрософт
+title: sys. dm_os_volume_stats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/06/2019
 ms.prod: sql
@@ -19,13 +19,13 @@ ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e7ec8171b569adbf887c1e153fb2b41619778f48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67899722"
 ---
-# <a name="sysdmosvolumestats-transact-sql"></a>sys.dm_os_volume_stats (Transact-SQL)
+# <a name="sysdm_os_volume_stats-transact-sql"></a>sys.dm_os_volume_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2008R2SP1-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-2008R2sp1-xxxx-xxxx-xxx-md.md)]
 
   Возвращает сведения о томе (каталоге) операционной системы, в котором хранятся указанные базы данных и файлы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Используйте эту функцию динамического управления для проверки атрибутов физического диска или для получения сведений об объеме свободного пространства в каталоге.  
@@ -38,18 +38,18 @@ ms.locfileid: "67899722"
 sys.dm_os_volume_stats (database_id, file_id)  
 ```  
   
-##  <a name="Arguments"></a> Аргументы  
+##  <a name="Arguments"></a>Даваемых  
  *database_id*  
- Идентификатор базы данных. Аргумент *database_id* имеет тип **int** и не имеет значения по умолчанию. Не может быть NULL.  
+ Идентификатор базы данных. *database_id* имеет **тип int**и не имеет значения по умолчанию. Не может быть NULL.  
   
  *file_id*  
- Идентификатор файла. *file_id* — **int**, не имеет значения по умолчанию. Не может быть NULL.  
+ Идентификатор файла. *file_id* имеет **тип int**и не имеет значения по умолчанию. Не может быть NULL.  
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
   
 ||||  
 |-|-|-|  
-|**Столбец**|**Data type**|**Описание**|  
+|**Столбец**|**Тип данных**|**Описание**|  
 |**database_id**|**int**|Идентификатор базы данных. Не может иметь значение null.|  
 |**file_id**|**int**|Идентификатор файла. Не может иметь значение null.|  
 |**volume_mount_point**|**nvarchar(512)**|Точка подключения, с которой ассоциирован корень тома. Может возвращать пустую строку.|  
@@ -64,7 +64,7 @@ sys.dm_os_volume_stats (database_id, file_id)
 |**is_read_only**|**bit**|Указывает, помечен ли том как доступный только для чтения. Не может иметь значение null.|  
 |**is_compressed**|**bit**|Указывает, сжат ли том в настоящее время. Не может иметь значение null.|  
   
-## <a name="security"></a>Безопасность  
+## <a name="security"></a>безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  Требуется разрешение `VIEW SERVER STATE`.  
@@ -89,8 +89,8 @@ FROM sys.database_files AS f
 CROSS APPLY sys.dm_os_volume_stats(DB_ID(f.name), f.file_id);  
 ```  
   
-## <a name="see-also"></a>См. также  
- [sys.master_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [sys. master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)  
   
   

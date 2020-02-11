@@ -1,5 +1,5 @@
 ---
-title: Использование инструкций по курсорам (ODBC) | Документация Майкрософт
+title: Инструкции по использованию курсоров (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a8c565d924b6d8ed6340d60022f9436ec5a34347
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200429"
 ---
 # <a name="using-cursors-how-to-topics-odbc"></a>Использование инструкций по курсорам (ODBC)
@@ -26,11 +26,11 @@ ms.locfileid: "63200429"
   
 -   [Использование курсоров &#40;ODBC&#41;](use-cursors-odbc.md)  
   
--   [Использование привязки наборов строк &#40;ODBC&#41;](use-rowset-binding-odbc.md)  
+-   [Использовать привязку набора строк &#40;ODBC&#41;](use-rowset-binding-odbc.md)  
   
--   [Выбор и обновление наборов строк &#40;ODBC&#41;](fetch-and-update-rowsets-odbc.md)  
+-   [Получение и обновление наборов строк &#40;ODBC&#41;](fetch-and-update-rowsets-odbc.md)  
   
-## <a name="see-also"></a>См. также  
- [Инструкции по ODBC](../odbc-how-to-topics.md)  
+## <a name="see-also"></a>См. также:  
+ [ODBC How-to Topics](../odbc-how-to-topics.md)  
   
   

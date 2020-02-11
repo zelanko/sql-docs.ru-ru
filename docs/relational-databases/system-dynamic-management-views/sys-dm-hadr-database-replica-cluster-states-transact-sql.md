@@ -1,5 +1,5 @@
 ---
-title: sys.dm_hadr_database_replica_cluster_states (Transact-SQL) | Документация Майкрософт
+title: sys. dm_hadr_database_replica_cluster_states (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,16 +21,16 @@ ms.assetid: 6f719071-ebce-470d-aebd-1f55ee8cd70a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2fbd066113f5ad4394b83e0151643ab9ea3b7b82
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67900670"
 ---
-# <a name="sysdmhadrdatabasereplicaclusterstates-transact-sql"></a>sys.dm_hadr_database_replica_cluster_states (Transact-SQL)
+# <a name="sysdm_hadr_database_replica_cluster_states-transact-sql"></a>sys.dm_hadr_database_replica_cluster_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Возвращает строку с информацией, помогающей получить полезные сведения о работоспособности баз данных доступности в каждой группе доступности AlwaysOn в кластере WSFC. Запрос **sys.dm_hadr_database_replica_states** позволяет ответить на следующие вопросы:  
+  Возвращает строку с информацией, помогающей получить полезные сведения о работоспособности баз данных доступности в каждой группе доступности AlwaysOn в кластере WSFC. Выполните запрос к **sys. dm_hadr_database_replica_states** , чтобы ответить на следующие вопросы:  
   
 -   Все ли базы данных в группе доступности готовы к отработке отказа?  
   
@@ -38,29 +38,29 @@ ms.locfileid: "67900670"
   
 -   Если первичная реплика в настоящий момент недоступна, выбор какой вторичной реплики в качестве первичной позволит минимизировать потерю данных?  
   
--   Если значение [sys.databases](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)**log_reuse_wait_desc** столбец является «availability_replica», то какая вторичная реплика в группе доступности содержит усечение журнала в указанной базе данных ?  
+-   Если значение столбца [sys. databases](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)   **log_reuse_wait_desc** равно "AVAILABILITY_REPLICA", а вторичная реплика в группе доступности удерживает усечение журнала в заданной базе данных-источнике?  
    
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|**replica_id**|**uniqueidentifier**|Идентификатор реплики доступности в группе доступности.|  
-|**group_database_id**|**uniqueidentifier**|Идентификатор базы данных из группы доступности. Этот идентификатор совпадает на всех репликах, к которым присоединена эта база данных.|  
-|**database_name**|**sysname**|Имя базы данных, которая принадлежит к группе доступности.|  
+|**replica_id**|**UNIQUEIDENTIFIER**|Идентификатор реплики доступности в группе доступности.|  
+|**group_database_id**|**UNIQUEIDENTIFIER**|Идентификатор базы данных из группы доступности. Этот идентификатор совпадает на всех репликах, к которым присоединена эта база данных.|  
+|**database_name**|**имеет sysname**|Имя базы данных, которая принадлежит к группе доступности.|  
 |**is_failover_ready**|**bit**|Указывает, синхронизирована ли база данных-получатель с соответствующей базой данных-источником. Может принимать одно из следующих значений:<br /><br /> 0 = база данных не помечена в кластере как синхронизированная. База данных не готова к отработке отказа.<br /><br /> 1 = база данных помечена в кластере как синхронизированная. База данных готова к отработке отказа.|  
 |**is_pending_secondary_suspend**|**bit**|Указывает, ожидает ли база данных приостанова после принудительной отработки отказа. Может принимать одно из следующих значений:<br /><br /> 0 = все состояния, кроме HADR_SYNCHRONIZED_ SUSPENDED.<br /><br /> 1 = состояние HADR_SYNCHRONIZED_ SUSPENDED. После завершения принудительной отработки отказа каждая из баз данных-получателей переходит в состояние HADR_SYNCHONIZED_SUSPENDED и остается в этом состоянии до тех пор, пока новая первичная реплика не получит подтверждение сообщения SUSPEND от базы данных-получателя.<br /><br /> NULL = неизвестное состояние (нет кворума).|  
 |**is_database_joined**|**bit**|Указывает, присоединена ли база данных на этой реплике доступности к группе доступности. Может принимать одно из следующих значений:<br /><br /> 0 = база данных не присоединена к группе доступности на этой реплике доступности.<br /><br /> 1 = база данных присоединена к группе доступности на этой реплике доступности.<br /><br /> NULL = неизвестно (в реплике доступности нет кворума).|  
-|**recovery_lsn**|**numeric(25,0)**|На первичной реплике это конец журнала транзакций до записи репликой любых новых записей журнала после восстановления или отработки отказа. На первичной реплике в строке для заданной базы данных-получателя содержится значение, до которого первичной реплике необходимо синхронизировать вторичную реплику (то есть восстановить и повторно инициализировать).<br /><br /> На вторичных репликах это значение равно NULL. Обратите внимание, что на каждой из вторичных реплик это будет либо значение MAX, либо более низкое значение, вернуться к которому вторичной реплике указала первичная реплика.|  
-|**truncation_lsn**|**numeric(25,0)**|Значение усечения журнала [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], которое может быть выше локального номера LSN усечения, если локальное усечение журнала заблокировано (например, операцией резервного копирования).|  
+|**recovery_lsn**|**numeric (25, 0)**|На первичной реплике это конец журнала транзакций до записи репликой любых новых записей журнала после восстановления или отработки отказа. На первичной реплике в строке для заданной базы данных-получателя содержится значение, до которого первичной реплике необходимо синхронизировать вторичную реплику (то есть восстановить и повторно инициализировать).<br /><br /> На вторичных репликах это значение равно NULL. Обратите внимание, что на каждой из вторичных реплик это будет либо значение MAX, либо более низкое значение, вернуться к которому вторичной реплике указала первичная реплика.|  
+|**truncation_lsn**|**numeric (25, 0)**|Значение усечения журнала [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], которое может быть выше локального номера LSN усечения, если локальное усечение журнала заблокировано (например, операцией резервного копирования).|  
   
-## <a name="security"></a>Безопасность  
+## <a name="security"></a>безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  
   
-## <a name="see-also"></a>См. также  
- [Динамические представления управления и функции, связанные с группами доступности AlwaysOn (Transact-SQL)](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
- [Представления каталога групп доступности AlwaysOn (Transact-SQL)](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
- [Отслеживание групп доступности (Transact-SQL)](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
- [Группы доступности AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [sys.dm_hadr_database_replica_states (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Always On динамические административные представления и функции групп доступности &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
+ [Always On представления каталога групп доступности &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
+ [Мониторинг групп доступности &#40;&#41;Transact-SQL](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [Always On группы доступности &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
+ [sys. dm_hadr_database_replica_states &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)  
   
   

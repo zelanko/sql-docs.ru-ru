@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a3dfc7b81bf6f6a3ef0b9b74a2d1a78f3e3e1db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200108"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>Веб-синхронизация для репликации слиянием
@@ -29,7 +29,7 @@ ms.locfileid: "63200108"
   
 -   Синхронизация данных от мобильных пользователей через Интернет.  
   
--   Синхронизация данных между базами данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] через корпоративный брандмауэр.  
+-   Синхронизация данных между [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базами данных в корпоративном брандмауэре.  
   
  Например, веб-синхронизацию могут использовать коммерческие представители, которым приходится много перемещаться. В компании [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]работают коммерческие представители, которые посещают различные магазины и поставщиков в пределах обслуживаемых регионов. Во время длительных путешествий представители компании останавливаются в гостиницах и нуждаются в удобном способе передачи данных по продажам и загрузки обновлений по продуктам в конце каждого дня.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "63200108"
   
  На приведенном ниже рисунке показаны некоторые из компонентов, участвующих в веб-синхронизации при репликации слиянием.  
   
- ![Компоненты и поток данных веб-синхронизации](media/web-sync01.gif "Компоненты и поток данных веб-синхронизации")  
+ ![Компоненты веб-синхронизации и потоки данных](media/web-sync01.gif "Компоненты веб-синхронизации и потоки данных")  
   
  Веб-синхронизация может использоваться только для подписок по запросу, поэтому на подписчике всегда будет запущен агент слияния. Это может быть стандартный агент слияния, элемент управления ActiveX агента слияния или приложение, которое обеспечивает синхронизацию с помощью объектов RMO. Для указания расположения компьютера со службами IIS служит параметр **-InternetUrl** агента слияния.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "63200108"
 3.  После получения HTTPS-ответа агент слияния на подписчике применяет загруженные изменения к базе данных подписки.  
   
 ## <a name="see-also"></a>См. также:  
- [Configure Web Synchronization](configure-web-synchronization.md)   
- [Topologies for Web Synchronization](topologies-for-web-synchronization.md)  
+ [Настройка веб-синхронизации](configure-web-synchronization.md)   
+ [Топологии для веб-синхронизации](topologies-for-web-synchronization.md)  
   
   

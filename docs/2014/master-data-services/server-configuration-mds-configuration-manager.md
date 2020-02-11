@@ -1,5 +1,5 @@
 ---
-title: Страница конфигурации сервера служб Master Data Services (диспетчер конфигурации) | Документация Майкрософт
+title: Страница "Конфигурация сервера Master Data Services" (Configuration Manager) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4d2fabec1bd022a1d73c3abc669995d04bfc9856
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478856"
 ---
 # <a name="master-data-services-server-configuration-page-configuration-manager"></a>Страница «Настройка сервера служб Master Data Services» (диспетчер конфигурации)
@@ -24,9 +24,9 @@ ms.locfileid: "65478856"
   
 ## <a name="server-configuration"></a>Конфигурация сервера  
   
-|Имя элемента управления|Описание|  
+|Имя элемента управления|Description|  
 |------------------|-----------------|  
-|**Windows PowerShell**|Показывает версию Windows PowerShell, установленную на локальном компьютере. Windows PowerShell версии 1.0 и выше требует использования диспетчера конфигурации Master Data Services.|  
-|**Службы IIS**|Показывает версию служб IIS, установленных на локальном компьютере. IIS версии 7.0 и выше требует использования диспетчера конфигурации Master Data Services.|  
+|**Windows PowerShell**|Показывает версию Windows PowerShell, установленную на локальном компьютере. Windows PowerShell версии 1.0 и выше требует использования диспетчера конфигурации Master Data Services.|  
+|**службы IIS;**|Показывает версию служб IIS, установленных на локальном компьютере. IIS версии 7.0 и выше требует использования диспетчера конфигурации Master Data Services.|  
   
   

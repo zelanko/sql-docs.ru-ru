@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: faa6198bc9fa42b55be63ec57ff49ed6703ef260
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081260"
 ---
 # <a name="filter-and-sort-data-ssas-tabular"></a>Сортировка и фильтрация данных (табличные службы SSAS)
@@ -24,9 +24,9 @@ ms.locfileid: "66081260"
   
 ## <a name="related-tasks"></a>Связанные задачи  
   
-|Раздел|Описание|  
+|Раздел|Description|  
 |-----------|-----------------|  
-|[Сортировка данных в таблице &#40;табличные службы SSAS&#41;](tabular-models/sort-data-in-a-table-ssas-tabular.md)сортировать данные в таблице|Задачи в этом разделе показывают, как отсортировать данные в таблице по алфавиту или по числовым значениям.|  
-|[Фильтрация данных в таблице &#40;табличные службы SSAS&#41;](tabular-models/filter-data-in-a-table-ssas-tabular.md)|Задачи в этом разделе показывают, как применить пользовательские фильтры для отображения строк.|  
+|[Сортировка данных в таблице &#40;табличных&#41;SSAS](tabular-models/sort-data-in-a-table-ssas-tabular.md) Сортировка данных в таблице|Задачи в этом разделе показывают, как отсортировать данные в таблице по алфавиту или по числовым значениям.|  
+|[Фильтрация данных в таблице &#40;табличных&#41;SSAS](tabular-models/filter-data-in-a-table-ssas-tabular.md)|Задачи в этом разделе показывают, как применить пользовательские фильтры для отображения строк.|  
   
   

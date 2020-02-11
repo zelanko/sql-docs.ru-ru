@@ -1,5 +1,5 @@
 ---
-title: Пример Указание директивы ELEMENT и кодировка сущности | Документация Майкрософт
+title: Пример. Указание директивы ELEMENT и кодировка сущности | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 28e0e9f808820acc1959ccc11266174e5610600c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287241"
 ---
-# <a name="example-specifying-the-element-directive-and-entity-encoding"></a>Пример Указание директивы ELEMENT и кодировка сущности
+# <a name="example-specifying-the-element-directive-and-entity-encoding"></a>Пример. Указание директивы ELEMENT и кодировка сущности
   Этот пример демонстрирует различие между директивами **ELEMENT** и **XML** . Директива **ELEMENT** преобразует данные в сущность, а директива **XML** не делает этого. Элемент \<Summary> представляет XML `<Summary>This is summary description</Summary>`, назначенный в запросе.  
   
  Рассмотрим следующий запрос:  
@@ -92,7 +92,7 @@ ORDER BY [ProductModel!1!ProdModelID],Tag
 FOR XML EXPLICIT  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Использование режима EXPLICIT совместно с предложением FOR XML](use-explicit-mode-with-for-xml.md)  
+## <a name="see-also"></a>См. также:  
+ [Использование режима EXPLICIT с предложением FOR XML](use-explicit-mode-with-for-xml.md)  
   
   

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e148fa4f7a5340217a2efe2374312568eee43435
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099932"
 ---
 # <a name="reporting-services-in-sql-server-management-studio-ssrs"></a>Службы Reporting Services в среде SQL Server Management Studio (SSRS)
@@ -40,11 +40,11 @@ ms.locfileid: "66099932"
   
 -   [Создание, удаление и изменение ролей (среда Management Studio)](../security/role-definitions-create-delete-or-modify.md)  
   
--   [Удаление элемента &#40;Management Studio&#41;](delete-an-item-management-studio.md)  
+-   [Удаление элемента (среда Management Studio)](delete-an-item-management-studio.md)  
   
--   [Отмена заданий сервера отчетов (среда Management Studio)](cancel-report-server-jobs-management-studio.md)  
+-   [Отмена &#40;Management Studio заданий сервера отчетов&#41;](cancel-report-server-jobs-management-studio.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справка F1 по использованию сервера отчетов среде Management Studio](report-server-in-management-studio-f1-help.md)   
  [Общие сведения о среде SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)  
   

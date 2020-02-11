@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: da26fc9274e68cd5233766af7e7c15550412db38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63254465"
 ---
 # <a name="open-database-diagrams-visual-database-tools"></a>Открытие диаграммы базы данных (визуальные инструменты для баз данных)
@@ -39,8 +39,8 @@ ms.locfileid: "63254465"
 > [!NOTE]  
 >  Только владелец диаграммы или член роли базы данных db_owner может открыть диаграмму.  
   
-## <a name="see-also"></a>См. также  
- [Работа с диаграммами базы данных &#40;визуальных инструментах баз данных&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>См. также:  
+ [Работа с диаграммами баз данных &#40;визуальных инструментов для баз данных&#41;](visual-database-tools.md)   
  [Основные сведения о владении диаграммами баз данных (визуальные инструменты для баз данных)](understand-database-diagram-ownership-visual-database-tools.md)  
   
   

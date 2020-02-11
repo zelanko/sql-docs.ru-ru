@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7e7172a7b9b17dfa4553d3179d8cc1a880040f13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63306530"
 ---
 # <a name="create-table-aliases-visual-database-tools"></a>Создание псевдонимов таблицы (визуальные инструменты для баз данных)
@@ -39,10 +39,10 @@ ms.locfileid: "63306530"
   
 3.  В окне **Свойства** введите псевдоним в поле **Псевдоним** .  
   
-## <a name="see-also"></a>См. также  
- [Добавление таблиц в запросы &#40;визуальных инструментах баз данных&#41;](add-tables-to-queries-visual-database-tools.md)   
- [Результаты запросов сортировки и группирования &#40;визуальных инструментах баз данных&#41;](sort-and-group-query-results-visual-database-tools.md)   
- [Резюмирование результатов запросов &#40;визуальных инструментах баз данных&#41;](summarize-query-results-visual-database-tools.md)   
+## <a name="see-also"></a>См. также:  
+ [Добавление таблиц в запросы &#40;визуальных инструментов для баз данных&#41;](add-tables-to-queries-visual-database-tools.md)   
+ [Сортировка и Группировка результатов запроса &#40;визуальных инструментов для баз данных&#41;](sort-and-group-query-results-visual-database-tools.md)   
+ [Суммировать результаты запроса &#40;визуальных инструментов для баз данных&#41;](summarize-query-results-visual-database-tools.md)   
  [Выполнение основных операций с запросами (визуальные инструменты для баз данных)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

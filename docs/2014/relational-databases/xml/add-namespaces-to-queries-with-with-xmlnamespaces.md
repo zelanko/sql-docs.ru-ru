@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3fbb7cbdda657ef59491cfbb2c1651b969d04428
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287721"
 ---
 # <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>Добавление пространств имен в запросы с WITH XMLNAMESPACES
@@ -45,7 +45,7 @@ WHERE  ProductID=316 or ProductID=317
 FOR XML RAW  
 ```  
   
- Это результат:  
+ Результат:  
   
 ```  
 <row ProductID="316" Name="Blade" />  
@@ -192,7 +192,7 @@ go
   
  Атрибуты @xml:lang используют предопределенное пространство имен XML. Так как в XML версии 1.0 нет необходимости явно задавать привязку пространства имен XML, то она не включается в результат.  
   
- Это результат:  
+ Результат:  
   
 ```  
 <Translation>  
@@ -218,7 +218,7 @@ WHERE CatalogDescription.exist('
     ) = 1  
 ```  
   
- В представленном выше запросе в прологах обоих методов (**query()** и **exist()** ) объявляются одинаковые пространства имен. Пример:  
+ В представленном выше запросе в прологах обоих методов ( **query()** и **exist()** ) объявляются одинаковые пространства имен. Пример:  
   
 ```  
 declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
@@ -242,7 +242,7 @@ Go
   
  Обратите внимание, что при явном объявлении в прологе запроса на языке XQuery, указанные в нем префиксы пространства имен переопределяют все указанные ранее и заданные по умолчанию с помощью предложения WITH префиксы.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [методов типа данных xml](/sql/t-sql/xml/xml-data-type-methods)   
  [Справочник по языку XQuery (SQL Server)](/sql/xquery/xquery-language-reference-sql-server)   
  [WITH XMLNAMESPACES (Transact-SQL)](/sql/t-sql/xml/with-xmlnamespaces)   

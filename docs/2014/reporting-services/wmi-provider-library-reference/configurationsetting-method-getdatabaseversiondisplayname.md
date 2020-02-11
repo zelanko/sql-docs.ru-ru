@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 05ee617f1a065c44a7c593af244d778f76a7a627
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098410"
 ---
 # <a name="getdatabaseversiondisplayname-method-wmi"></a>Метод GetDatabaseVersionDisplayName (WMI)
@@ -39,20 +39,26 @@ public void GetDatabaseVersionDisplayName(string Version, string DisplayName, ou
  *DisplayName*  
  [out] Строка, содержащая отображаемое имя, соответствующее заданной версии.  
   
- *HRESULT*  
+ *СОСТАВ*  
  [out] Значение, которое указывает, окончился ли вызов успехом или сбоем.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Следующая таблица показывает сопоставления версий базы данных с отображаемыми строками.  
   
-|**Выпуск**|`Version`|**Отображаемое имя**|  
+|**Release**|`Version`|**Отображаемое имя**|  
 |-----------------|-----------------|----------------------|  
-|Службы Reporting Services 2005 с пакетом обновления 2 (SP2)|@DBVersion = 'C.0.8.54'|SQL Server 2005 SP2|  
-|Службы Reporting Services 2005 с пакетом обновления 1 (SP1)|@DBVersion = 'C.0.8.43'|SQL Server 2005 SP1|  
-|Службы Reporting Services 2005, RTM-версия|@DBVersion = 'C.0.8.40'|SQL Server 2005|  
-|Службы Reporting Services 2000 с пакетом обновления 2 (SP2)|@DBVersion = 'C.0.6.54'|SQL Server 2000 с пакетом обновления 2 (SP2)|  
-|Службы Reporting Services 2000 с пакетом обновления 1 (SP1)|@DBVersion = 'C.0.6.51'|SQL Server 2000 SP1|  
-|Службы Reporting Services 2000, RTM-версия|@DBVersion = 'C.0.6.43'|SQL Server 2000|  
+|Службы Reporting Services 2005 с пакетом обновления 2 (SP2)|
+  @DBVersion = 'C.0.8.54'|SQL Server 2005 SP2|  
+|Службы Reporting Services 2005 с пакетом обновления 1 (SP1)|
+  @DBVersion = 'C.0.8.43'|SQL Server 2005 SP1|  
+|Службы Reporting Services 2005, RTM-версия|
+  @DBVersion = 'C.0.8.40'|SQL Server 2005.|  
+|Службы Reporting Services 2000 с пакетом обновления 2 (SP2)|
+  @DBVersion = 'C.0.6.54'|SQL Server 2000 с пакетом обновления 2 (SP2)|  
+|Службы Reporting Services 2000 с пакетом обновления 1 (SP1)|
+  @DBVersion = 'C.0.6.51'|SQL Server 2000 SP1|  
+|Службы Reporting Services 2000, RTM-версия|
+  @DBVersion = 'C.0.6.43'|SQL Server 2000|  
 |Исправление||Ближайшая применимая версия|  
   
  Для *версий* , предшествующих [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2000, возвращается значение типа HRESULT параметра ACT_E_BAD_VERSION.  
@@ -61,7 +67,7 @@ public void GetDatabaseVersionDisplayName(string Version, string DisplayName, ou
  Возвращает значение *HRESULT* , являющееся признаком успешного или неуспешного завершение вызова метода. Значение 0 указывает, что вызов метода завершился успешно. Ненулевое значение указывает, что произошла ошибка.  
   
 ## <a name="requirements"></a>Требования  
- **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Пространство имен:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

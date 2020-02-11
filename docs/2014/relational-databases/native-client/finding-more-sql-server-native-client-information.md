@@ -1,5 +1,5 @@
 ---
-title: Поиск дополнительных сведений о собственном клиенте SQL Server | Документация Майкрософт
+title: Поиск дополнительных сведений о SQL Server Native Client | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 639796b9abcf95c9f701d3ed88fbb5e71078eb8f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63205852"
 ---
 # <a name="finding-more-sql-server-native-client-information"></a>Поиск дополнительных сведений о собственном клиенте SQL Server
@@ -34,9 +34,9 @@ ms.locfileid: "63205852"
   
  Пакет SDK Window DAC содержит документацию по объектам ADO, OLE DB и интерфейсу ODBC.  
   
- Дополнительные сведения о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client можно найти, выполнив поиск [поддержки Майкрософт](https://support.microsoft.com).  
+ Дополнительные сведения о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственном клиенте можно найти, выполнив поиск в [Служба поддержки Майкрософт](https://support.microsoft.com).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Программирование собственного клиента SQL Server](sql-server-native-client-programming.md)  
   
   

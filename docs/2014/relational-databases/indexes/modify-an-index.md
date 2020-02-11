@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1da4462f3ba23d263cd30d222f7b9026285b1159
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63162379"
 ---
 # <a name="modify-an-index"></a>Изменение индекса
@@ -61,7 +61,7 @@ ms.locfileid: "63162379"
   
 2.  На панели «Стандартная» нажмите **Создать запрос**.  
   
-3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере индекс по столбцу `ProductID` таблицы `Production.WorkOrder` удаляется и создается вновь с помощью параметра `DROP_EXISTING` . Указываются также аргументы `FILLFACTOR` и `PAD_INDEX` .  
+3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере индекс по столбцу `ProductID` таблицы `Production.WorkOrder` удаляется и создается вновь с помощью параметра `DROP_EXISTING` . Указываются также параметры `FILLFACTOR` и `PAD_INDEX`.  
   
      [!code-sql[IndexDDL#CreateIndex4](../../snippets/tsql/SQL14/tsql/indexddl/transact-sql/createindex.sql#createindex4)]  
   
@@ -73,13 +73,13 @@ ms.locfileid: "63162379"
   
 1.  Чтобы добавить, удалить или изменить позицию столбца индекса, необходимо удалить и повторно создать индекс.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [CREATE INDEX (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql)   
- [ALTER INDEX (Transact-SQL)](/sql/t-sql/statements/alter-index-transact-sql)   
- [INDEXPROPERTY (Transact-SQL)](/sql/t-sql/functions/indexproperty-transact-sql)   
- [sys.indexes (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql)   
- [sys.index_columns (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-index-columns-transact-sql)   
- [Установка параметров индекса](set-index-options.md)   
+ [Инструкция ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
+ [INDEXPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/indexproperty-transact-sql)   
+ [sys. indexes &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql)   
+ [sys. index_columns &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-index-columns-transact-sql)   
+ [Задание параметров индекса](set-index-options.md)   
  [Переименование индексов](indexes.md)  
   
   

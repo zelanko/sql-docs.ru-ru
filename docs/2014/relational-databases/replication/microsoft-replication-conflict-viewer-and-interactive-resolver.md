@@ -14,29 +14,29 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e0cce16636e8f3be542b926170c905353602d95e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250342"
 ---
 # <a name="microsoft-replication-conflict-viewer-and-interactive-resolver"></a>Программы Microsoft «Средство просмотра конфликтов репликации» и «Интерактивный сопоставитель»
   В этом разделе приведены сведения о средстве просмотра конфликтов репликации для репликации слиянием и репликации транзакций, а также об интерактивном сопоставителе для репликации слиянием.  
   
--   [Средство просмотра конфликтов репликации (Майкрософт) (репликация слиянием)](microsoft-replication-conflict-viewer-merge-replication.md)  
+-   [Репликация слиянием Microsoft средство просмотра конфликтов репликации &#40;&#41;](microsoft-replication-conflict-viewer-merge-replication.md)  
   
--   [Средство просмотра конфликтов репликации (Майкрософт) (репликация транзакций)](microsoft-replication-conflict-viewer-transactional-replication.md)  
+-   [Репликация транзакций Microsoft средство просмотра конфликтов репликации &#40;&#41;](microsoft-replication-conflict-viewer-transactional-replication.md)  
   
--   [Интерактивный сопоставитель конфликтов репликации (Майкрософт)](microsoft-replication-interactive-conflict-resolver.md)  
+-   [Интерактивный сопоставитель конфликтов репликации (Microsoft)](microsoft-replication-interactive-conflict-resolver.md)  
   
 -   [Определение фильтров](define-filters.md)  
   
-## <a name="see-also"></a>См. также  
- [Просмотр и разрешение конфликтов данных для публикации слиянием (SQL Server Management Studio)](view-and-resolve-data-conflicts-for-merge-publications.md)   
- [Просмотр конфликтов данных для публикаций транзакций (среда SQL Server Management Studio)](view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)   
- [Расширенное обнаружение и разрешение конфликтов репликации слиянием](merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+## <a name="see-also"></a>См. также:  
+ [Просмотр и разрешение конфликтов данных для публикаций слиянием &#40;SQL Server Management Studio&#41;](view-and-resolve-data-conflicts-for-merge-publications.md)   
+ [Просмотр конфликтов данных для публикаций транзакций &#40;SQL Server Management Studio&#41;](view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)   
+ [Расширенное обнаружение и разрешение конфликтов при репликации слиянием](merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Обнаружение конфликтов в одноранговой репликации](transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)   
- [Queued Updating Conflict Detection and Resolution](transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)   
+ [Обнаружение и разрешение конфликтов обновления посредством очередей](transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)   
 
   
   

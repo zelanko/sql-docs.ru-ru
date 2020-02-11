@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d0a08c191bfd8ec00a4e0181ad3960bf7644f93e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077396"
 ---
 # <a name="bind-an-attribute-to-a-name-column"></a>Привязка атрибута к столбцу имени
@@ -30,7 +30,7 @@ ms.locfileid: "66077396"
   
 2.  На панели **Атрибуты** на вкладке **Структура измерения** щелкните правой кнопкой мыши атрибут, который нужно настроить, а затем щелкните **Свойства**.  
   
-3.  В окне **Свойства** найдите свойство **NameColumn** , а затем выберите **(новое)** .  
+3.  В окне **Свойства** найдите свойство **NameColumn** , а затем выберите **(новое)**.  
   
 4.  В диалоговом окне **Привязка объекта** в качестве значения **Тип привязки**выберите **Привязка к столбцу**.  
   

@@ -11,16 +11,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f53c456832e89aa96c0f7c9a1decd9fabbe96360
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151585"
 ---
 # <a name="administration-tool-command-line-options-distributed-replay-utility"></a>Параметры командной строки средства администрирования (программа распределенного воспроизведения)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Средство администрирования распределенного воспроизведения `DReplay.exe`, это средство командной строки, которое можно использовать для взаимодействия с контроллером распределенного воспроизведения. При помощи средства администрирования можно инициировать операции на контроллере, наблюдать за ними и отменять.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Средство `DReplay.exe`администрирования распределенное воспроизведение — это средство командной строки, которое можно использовать для взаимодействия с контроллером распределенного воспроизведения. При помощи средства администрирования можно инициировать операции на контроллере, наблюдать за ними и отменять.  
   
- ![Topic link icon](../../database-engine/media/topic-link.gif "Значок ссылки на раздел") Дополнительные сведения о синтаксических обозначениях, используемых в синтаксисе средства администрирования, см. в разделе [Синтаксические обозначения в Transact-SQL (Transact-SQL)](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql).  
+ ![Значок ссылки на раздел](../../database-engine/media/topic-link.gif "Значок ссылки на раздел") Дополнительные сведения о синтаксических обозначениях, используемых с синтаксисом средств администрирования, см. в разделе [соглашения о синтаксисе Transact-sql &#40;&#41;Transact-SQL ](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,30 +42,30 @@ Usage:
   dreplay cancel [-mcontroller] [-q]   
 ```  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  В программе `DReplay.exe` можно применять следующие параметры командной строки:  
   
- **preprocess**  
+ **предварительной обработки**  
  Инициирует стадию предварительной обработки. Подготавливаются для воспроизведения на целевом сервере входные данные трассировки, отслеженные в рабочей среде.  
   
- **replay**  
+ **воспроизведения**  
  Инициирует стадию воспроизведения события. Данные воспроизведения отправляются указанным клиентам, запускается распределенное воспроизведение, синхронизируются клиенты. При необходимости каждый выбранный клиент может записывать последовательность воспроизведения и сохранять получившиеся файлы трассировки в локальном кэше.  
   
- **status**  
+ **состояние**  
  Опрашивает контроллер и отображает его текущее состояние.  
   
- **cancel**  
+ **Отмена**  
  Отменяет текущую операцию, выполняемую на контроллере.  
   
  Подробные сведения о синтаксисе, включая командные аргументы и примеры, см. в следующих разделах:  
   
--   [Параметр предварительной обработки (средство администрирования распределенного воспроизведения)](preprocess-option-distributed-replay-administration-tool.md)  
+-   [&#40;параметров предварительной обработки распределенное воспроизведение средства администрирования&#41;](preprocess-option-distributed-replay-administration-tool.md)  
   
--   [Параметр воспроизведения (средство администрирования распределенного воспроизведения)](replay-option-distributed-replay-administration-tool.md)  
+-   [&#40;средству воспроизведения распределенное воспроизведение средства администрирования&#41;](replay-option-distributed-replay-administration-tool.md)  
   
--   [Параметр состояния (средство администрирования распределенного воспроизведения)](status-option-distributed-replay-administration-tool.md)  
+-   [Параметр состояния &#40;средство администрирования распределенное воспроизведение&#41;](status-option-distributed-replay-administration-tool.md)  
   
--   [Параметр отмены (средство администрирования распределенного воспроизведения)](cancel-option-distributed-replay-administration-tool.md)  
+-   [Параметр отмены &#40;средство администрирования распределенное воспроизведение&#41;](cancel-option-distributed-replay-administration-tool.md)  
   
  Удаленные вызовы процедур (RPC) воспроизводятся как RPC, а не события языка.  
   
@@ -74,7 +74,7 @@ Usage:
   
  Дополнительные сведения см. в статье [Distributed Replay Security](distributed-replay-security.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Распределенное воспроизведение SQL Server](sql-server-distributed-replay.md)  
   
   

@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e14c0d724ba4832dfc0f67deec25308804b82f84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63191417"
 ---
-# <a name="mssqleng014152"></a>MSSQL_ENG014152
+# <a name="mssql_eng014152"></a>MSSQL_ENG014152
     
 ## <a name="message-details"></a>Сведения о сообщении  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|14152|  
 |Источник события|MSSQLSERVER|  
 |Компонент|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
@@ -46,11 +46,11 @@ ms.locfileid: "63191417"
 ## <a name="user-action"></a>Действие пользователя  
  Если сообщение о повторном выполнении появляется нечасто, никакие пользовательские действия не требуются.  
   
- Используйте процедуру [sp_help_jobstep](/sql/relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql) для проверки текущего значения максимального числа повторений шага **Запустить агент** для указанного агента репликации. Для корректировки допустимого числа повторений шага задания можно использовать параметр **@retry_attempts** хранимой процедуры [sp_update_jobstep](/sql/relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql) .  
+ Используйте процедуру [sp_help_jobstep](/sql/relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql) для проверки текущего значения максимального числа повторений шага **Запустить агент** для указанного агента репликации. **@retry_attempts** Параметр хранимой процедуры [sp_update_jobstep](/sql/relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql) можно использовать для настройки числа повторных попыток выполнения шага задания.  
   
  Если сообщение о повторном выполнении появляется часто, способ устранения неполадок зависит от сообщения, вызывающего повтор. Проверьте в журнале агента наличие сообщений, указывающих причину назначения повторного выполнения. В некоторых случаях может потребоваться включить ведение более подробного журнала для агента репликации. Дополнительные сведения о настройке ведения журнала репликации см. в статье базы знаний Майкрософт [312292](https://support.microsoft.com/kb/312292).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по ошибкам и событиям (репликация)](errors-and-events-reference-replication.md)  
   
   

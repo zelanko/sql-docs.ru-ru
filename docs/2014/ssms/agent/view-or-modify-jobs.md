@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 87e5644329742712e112fd3df97f601838f7faea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245520"
 ---
 # <a name="view-or-modify-jobs"></a>Просмотр или изменение заданий
@@ -37,7 +37,7 @@ ms.locfileid: "63245520"
   
 -   Расписания  
   
--   шаги задания;  
+-   Шаги задания  
   
 -   владельца;  
   
@@ -64,9 +64,9 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
 |Описывает, как просматривать журнал заданий агента [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[View the Job History](view-the-job-history.md)|  
 |Описывает, как удалить содержимое журнала заданий агента [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Clear the Job History Log](clear-the-job-history-log.md)|  
 |Описывает установление ограничений на размер журналов заданий агента [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Resize the Job History Log](resize-the-job-history-log.md)|  
-|Описывает, как изменить свойства заданий агента [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Modify a Job](modify-a-job.md)|  
+|Описывает, как изменить свойства заданий агента [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Изменение задания](modify-a-job.md)|  
   
-## <a name="see-also"></a>См. также  
- [dbo.sysjobhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobhistory-transact-sql)  
+## <a name="see-also"></a>См. также:  
+ [dbo. sysjobhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobhistory-transact-sql)  
   
   

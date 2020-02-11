@@ -15,13 +15,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f47529726445cf52d280df78a6a96f18889fcd2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63272814"
 ---
-# <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>Публикация выполнения хранимых процедур в репликации транзакций
+# <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>Publishing Stored Procedure Execution in Transactional Replication
   Если существует одна или несколько хранимых процедур, выполняемых на издателе и влияющих на опубликованные таблицы, рассмотрите возможность включения в публикацию этих хранимых процедур в виде статей выполнения хранимых процедур. Определение процедуры (инструкция CREATE PROCEDURE) реплицируется на подписчик при инициализации подписки. Когда процедура выполняется на издателе, репликация выполняет соответствующую процедуру на подписчике. Это может обеспечить значительное повышение производительности в случаях, когда выполняются крупные пакетные операции, поскольку реплицируется только выполнение процедуры и исключается необходимость репликации отдельных изменений для каждой строки. Например, предположим, что создана следующая хранимая процедура в базе данных публикации:  
   
 ```  
@@ -50,9 +50,9 @@ EXEC give_raise
   
  **Публикация выполнения хранимой процедуры**  
   
--   Среда SQL Server Management Studio: [Публикация выполнения хранимой процедуры в публикации транзакций (среда SQL Server Management Studio)](../publish/publish-execution-of-stored-procedure-in-transactional-publication.md)  
+-   SQL Server Management Studio: [Публикация выполнения хранимой процедуры в публикации транзакций (среда SQL Server Management Studio)](../publish/publish-execution-of-stored-procedure-in-transactional-publication.md)  
   
--   Программирование репликации на языке Transact-SQL: выполните хранимую процедуру [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) и укажите значение "serializable proc exec" (рекомендуется) или "proc exec" для параметра **@type** . Дополнительные сведения об определении статей см. в [этой статье](../publish/define-an-article.md).  
+-   Программирование репликации на языке Transact-SQL: выполните [sp_addarticle &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) и укажите для параметра **@type**значение "Serializable proc exec" (рекомендуется) или "proc exec". Дополнительные сведения об определении статей см. в [этой статье](../publish/define-an-article.md).  
   
 ## <a name="modifying-the-procedure-at-the-subscriber"></a>Изменение процедуры на подписчике  
  По умолчанию определение хранимой процедуры на издателе отправляется каждому подписчику. Тем не менее хранимую процедуру можно также изменить на подписчике. Эта возможность используется, когда требуется разная логика для выполнения процедуры на подписчике и на издателе. В качестве примера рассмотрим **sp_big_delete**, хранимую процедуру на издателе, которая выполняет две функции: процедура удаляет 1 000 000 строк из реплицируемой таблицы **big_table1** и обновляет нереплицируемую таблицу **big_table2**. Чтобы уменьшить необходимый объем сетевых ресурсов, следует передать удаление 1 миллиона строк в виде хранимой процедуры посредством публикации **sp_big_delete**. На подписчике можно изменить хранимую процедуру **sp_big_delete** , чтобы удалить только 1 миллион строк, но не выполнять последующее обновление таблицы **big_table2**.  
@@ -88,12 +88,12 @@ COMMIT TRANSACTION T2
   
  Блокировки удерживаются дольше, когда процедура выполняется в рамках сериализуемой транзакции, и могут привести к снижению степени параллелизма.  
   
-## <a name="the-xactabort-setting"></a>Настройки XACT_ABORT  
+## <a name="the-xact_abort-setting"></a>Настройки XACT_ABORT  
  При репликации выполнения хранимой процедуры настройка сеанса, в котором выполняется хранимая процедура, должна задавать значение XACT_ABORT ON. Если значение параметра XACT_ABORT установлено в OFF и во время выполнения процедуры на издателе возникает ошибка, то такая же ошибка возникнет на подписчике и вызовет сбой в работе агента распространителя. Значение параметра XACT_ABORT ON гарантирует полный откат процедуры в случае возникновения ошибок во время выполнения процедуры на издателе, что позволяет исключить сбои в работе агента распространителя. Дополнительные сведения о настройке XACT_ABORT см. в статье [SET XACT_ABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-xact-abort-transact-sql).  
   
  Если требуется использование настройки XACT_ABORT OFF, укажите для агента распространителя параметр **-SkipErrors** . Это позволит агенту продолжить применение изменений на подписчике, даже если возникнет ошибка.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Article Options for Transactional Replication](article-options-for-transactional-replication.md)  
   
   

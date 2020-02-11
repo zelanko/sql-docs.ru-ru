@@ -1,5 +1,5 @@
 ---
-title: Режимы работы курсоров | Документация Майкрософт
+title: Поведение курсора | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,14 +21,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6c5ded9f42da267cfd137f0adfd4465d965d9a06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63188572"
 ---
 # <a name="cursor-behaviors"></a>Режимы работы курсоров
-  ODBC поддерживает параметры ISO, предназначенные для указания поведения курсоров, задавая их прокручиваемость и чувствительность. Эти поведения задаются с помощью параметров SQL_ATTR_CURSOR_SCROLLABLE и SQL_ATTR_CURSOR_SENSITIVITY во время вызова [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md). Драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] реализует эти параметры, запрашивая серверные курсоры со следующими характеристиками.  
+  ODBC поддерживает параметры ISO, предназначенные для указания поведения курсоров, задавая их прокручиваемость и чувствительность. Эти поведения задаются путем установки параметров SQL_ATTR_CURSOR_SCROLLABLE и SQL_ATTR_CURSOR_SENSITIVITY для вызова [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md). Драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] реализует эти параметры, запрашивая серверные курсоры со следующими характеристиками.  
   
 |Параметры режима работы курсоров|Запрошенные характеристики серверного курсора|  
 |------------------------------|---------------------------------------------|  
@@ -39,15 +39,15 @@ ms.locfileid: "63188572"
 |SQL_NONSCROLLABLE и SQL_INSENSITIVE|Результирующий набор по умолчанию (последовательный доступ, только чтение)|  
 |SQL_NONSCROLLABLE и SQL_UNSPECIFIED|Результирующий набор по умолчанию (последовательный доступ, только чтение)|  
   
- Основанный на версии оптимистический параллелизм требует **timestamp** столбца в базовой таблице. Если управления оптимистичным параллелизмом на основе версии запрашивается на таблице, которая не имеет **timestamp** столбец, сервер использует основанный на значениях оптимистичного параллелизма.  
+ Для оптимистичного параллелизма на основе версий требуется столбец **отметок времени** в базовой таблице. Если для таблицы, не имеющей столбца **timestamp** , запрашивается управление оптимистичным параллелизмом на основе версий, то сервер использует оптимистичный параллелизм на основе значений.  
   
 ## <a name="scrollability"></a>Прокручиваемость  
- Если параметр SQL_ATTR_CURSOR_SCROLLABLE имеет значение SQL_SCROLLABLE, курсор поддерживает все различные значения для *FetchOrientation* параметр [SQLFetchScroll](../native-client-odbc-api/sqlfetchscroll.md). Если параметр SQL_ATTR_CURSOR_SCROLLABLE имеет значение SQL_NONSCROLLABLE, курсор поддерживает только *FetchOrientation* для SQL_FETCH_NEXT.  
+ Если SQL_ATTR_CURSOR_SCROLLABLE имеет значение SQL_SCROLLABLE, курсор поддерживает все различные значения параметра *Фетчориентатион* [SQLFetchScroll](../native-client-odbc-api/sqlfetchscroll.md). Если SQL_ATTR_CURSOR_SCROLLABLE имеет значение SQL_NONSCROLLABLE, курсор поддерживает только значение *фетчориентатион* , равное SQL_FETCH_NEXT.  
   
 ## <a name="sensitivity"></a>Чувствительность  
  Если параметр SQL_ATTR_CURSOR_SENSITIVITY имеет значение SQL_SENSITIVE, курсор отражает изменения данных, произведенные текущим пользователем или зафиксированные другими пользователями. Если параметр SQL_ATTR_CURSOR_SENSITIVITY имеет значение SQL_INSENSITIVE, курсор не отражает изменения данных.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование курсоров &#40;ODBC&#41;](using-cursors-odbc.md)  
   
   

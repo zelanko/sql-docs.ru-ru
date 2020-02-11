@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1d3f61904a1a820df58583212dcbd2e998dbabbd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63190426"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>Функции и задачи служебной программы SQL Server
@@ -42,7 +42,7 @@ ms.locfileid: "63190426"
 |-|-|  
 |**Описание**|**Раздел**|  
 |Описывает замечания по настройке сервера для выполнения программы и настройке не относящихся к программе наборов элементов сбора на одном и том же экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Замечания по выполнению программы, не относящиеся к прочим наборам элементов сбора на том же экземпляре SQL Server](run-utility-and-non-utility-collection-sets-on-same-sql-instance.md)|  
-|Описывает, как создать точку управления служебной программой SQL Server.|[Создать точку управления служебной программы SQL Server (служебная программа SQL Server)](create-a-sql-server-utility-control-point-sql-server-utility.md)|  
+|Описывает, как создать точку управления служебной программой SQL Server.|[Создание точки управления служебной программы SQL Server (служебная программа SQL Server)](create-a-sql-server-utility-control-point-sql-server-utility.md)|  
 |Описывает, как подключиться к служебной программе SQL Server.|[Подключение к служебной программе SQL Server](connect-to-a-sql-server-utility.md)|  
 |Описывает, как зарегистрировать экземпляр SQL Server с помощью точки управления служебной программой.|[Регистрация экземпляра SQL Server (служебная программа SQL Server)](enroll-an-instance-of-sql-server-sql-server-utility.md)|  
 |Описывает, как использовать обозреватель программ для управления служебной программой SQL Server.|[Использование проводника служебных программ для управления служебной программой SQL Server](use-utility-explorer-to-manage-the-sql-server-utility.md)|  

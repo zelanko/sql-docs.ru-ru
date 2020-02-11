@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f3414498d0ce399607ab0faa1a438dad88efc35c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105283"
 ---
 # <a name="countrows-function-report-builder-and-ssrs"></a>Функция CountRows (построитель отчетов и службы SSRS)
@@ -35,12 +35,13 @@ CountRows(scope, recursive)
  (`String`) — имя набора данных, области данных или группы, содержащих подсчитываемые элементы отчета.  
   
  *рекурсивные*  
- (**Перечислимый тип**) Необязательно. `Simple` (по умолчанию) или `RdlRecursive`. Указывает, нужно ли выполнять статистическую обработку рекурсивно.  
+ (**Перечислимый тип**) Необязательно. 
+  `Simple` (по умолчанию) или `RdlRecursive`. Указывает, нужно ли выполнять статистическую обработку рекурсивно.  
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
  Возвращает значение типа `Integer`.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Функция `CountRows` подсчитывает все строки в указанной области, включая строки со значениями NULL.  
   
  Значение *scope* не может быть выражением и должно указывать на текущую или включающую область.  
@@ -56,7 +57,7 @@ CountRows(scope, recursive)
 ="Number of rows: " & CountRows("GroupbyCategory")  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование выражений в отчетах (построитель отчетов и службы SSRS)](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [Типы данных в выражениях (построитель отчетов и службы SSRS)](expressions-report-builder-and-ssrs.md)   

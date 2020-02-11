@@ -1,5 +1,5 @@
 ---
-title: Distributed Replay Requirements | Документация Майкрософт
+title: Требования к распределенное воспроизведение | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0e7a87ad14dbe1b12abb4ca4fe0af6b0a439c57b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63149775"
 ---
 # <a name="distributed-replay-requirements"></a>Distributed Replay Requirements
@@ -53,7 +53,7 @@ ms.locfileid: "63149775"
   
 -   Аудит входа в систему  
   
--   Аудит выхода из системы  
+-   Audit Logout  
   
 -   ExistingConnection  
   
@@ -93,21 +93,21 @@ ms.locfileid: "63149775"
   
 -   TextData  
   
--   Application Name  
+-   Имя приложения  
   
 -   LoginName  
   
--   DatabaseName  
+-   имя_базы_данных  
   
 -   Идентификатор базы данных  
   
 -   HostName  
   
--   Binary Data  
+-   Двоичные данные  
   
 -   SPID  
   
--   Start Time  
+-   Время начала  
   
 -   EndTime  
   
@@ -125,7 +125,7 @@ ms.locfileid: "63149775"
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
   
 ## <a name="operating-system-requirements"></a>Требования к операционной системе  
- Для запуска средства администрирования, контроллера и клиентских служб поддерживаются те же операционные системы, что и для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения о том, какие операционные системы поддерживаются для вашей [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляра, см. в разделе [оборудованию и программному обеспечению для установки SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
+ Для запуска средства администрирования, контроллера и клиентских служб поддерживаются те же операционные системы, что и для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения о том, какие операционные системы поддерживаются [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для вашего экземпляра, см. в разделе [требования к оборудованию и программному обеспечению для установки SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
  Компоненты распределенного воспроизведения поддерживаются в операционных системах как для платформы x86, так и для платформы x64. Для операционных систем платформы x64 поддерживается только режим Windows on Windows (WOW).  
   
@@ -134,9 +134,10 @@ ms.locfileid: "63149775"
   
 |Компонент распределенного воспроизведения|Максимальное число установленных экземпляров для среды воспроизведения|  
 |--------------------------------|--------------------------------------------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Служба контроллера распределенного воспроизведения|1|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Служба клиента распределенного воспроизведения|16 (физических или виртуальных компьютеров)|  
-|Средство администрирования|Неограниченно|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Служба контроллера распределенное воспроизведение|1|  
+|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Служба клиента распределенного воспроизведения|16 (физических или виртуальных компьютеров)|  
+|Средство администрирования|Без ограничений|  
   
 > [!NOTE]  
 >  Хотя на одном компьютере можно устанавливать только один экземпляр программы администрирования, допускается одновременный запуск нескольких экземпляров программы администрирования. Команды, поступающие от нескольких экземпляров программы администрирования, разрешаются в порядке поступления.  
@@ -157,9 +158,9 @@ ms.locfileid: "63149775"
   
  В результате воспроизведения событий, связанных с отсутствующими или неверными именами входа, будут возникать ошибки воспроизведения, но сама операция воспроизведения будет продолжена.  
   
-## <a name="see-also"></a>См. также  
- [Распределенное воспроизведение SQL Server](sql-server-distributed-replay.md)   
- [Безопасность распределенного воспроизведения](distributed-replay-security.md)   
+## <a name="see-also"></a>См. также:  
+ [SQL Server распределенное воспроизведение](sql-server-distributed-replay.md)   
+ [Безопасность распределенное воспроизведение](distributed-replay-security.md)   
  [Установка распределенного воспроизведения](install-distributed-replay-overview.md)  
   
   

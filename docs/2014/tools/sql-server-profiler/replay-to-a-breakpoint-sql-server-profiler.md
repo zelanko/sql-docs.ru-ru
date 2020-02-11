@@ -1,5 +1,5 @@
 ---
-title: Воспроизведение до точки останова (SQL Server Profiler) | Документация Майкрософт
+title: Воспроизведение в точке останова (SQL Server Profiler) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 33860d4e84e828b404236527dbe3c8c8cf6becc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63183517"
 ---
 # <a name="replay-to-a-breakpoint-sql-server-profiler"></a>воспроизвести нагрузку до точки останова (SQL Server Profiler)
@@ -27,7 +27,7 @@ ms.locfileid: "63183517"
   
 1.  Откройте файл трассировки или таблицу трассировки, которые необходимо воспроизвести. Дополнительные сведения см. в статье [Открыть файл трассировки (приложение SQL Server Profiler)](open-a-trace-file-sql-server-profiler.md) или в помощник по настройке ядра СУБД [Открыть таблицу трассировки (приложение SQL Server Profiler)](open-a-trace-table-sql-server-profiler.md).  
   
-     Убедитесь, что открытый файл трассировки или открытая таблица содержат классы событий, которые необходимо воспроизвести. Дополнительные сведения см. в статье [Replay Requirements](replay-requirements.md).  
+     Убедитесь, что открытый файл трассировки или открытая таблица содержат классы событий, которые необходимо воспроизвести. Дополнительные сведения см. в разделе [Replay Requirements](replay-requirements.md).  
   
 2.  В окне трассировки щелкните событие, по которому устанавливается точка останова. Точку останова можно назначить одним из следующих трех способов:  
   
@@ -51,7 +51,7 @@ ms.locfileid: "63183517"
   
 6.  Повторяйте шаг 5 до завершения трассировки.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Воспроизвести нагрузку до курсора (приложение SQL Server Profiler)](replay-to-a-cursor-sql-server-profiler.md)   
  [Воспроизведение трассировок](replay-traces.md)   
  [Приложение SQL Server Profiler](sql-server-profiler.md)  

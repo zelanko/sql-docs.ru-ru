@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: a28f2401f11f20f8891dbe71537ce2240a570ed8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63158246"
 ---
 # <a name="in-memory-oltp-garbage-collection"></a>Сборка мусора модулем In-Memory OLTP
@@ -42,7 +42,7 @@ ms.locfileid: "63158246"
   
  После фиксации пользовательской транзакции она определяет все элементы, помещенные в очередь, связанную с их выполнением планировщиком, а затем освобождает память. Если очередь в планировщике сборки мусора пуста, то он выполняет поиск всех непустых очередей в текущем узле NUMA. При низкой активности транзакций или дефиците памяти главный поток сборщика мусора может включить в сбор мусора строки из любой очереди. Если после, например, удаления большого числа строк транзакций нет и память не потребляется, сборщик мусора не будет трогать удаленные строки до возобновления транзакций или формирования потребности в памяти.  
   
-## <a name="see-also"></a>См. также  
- [Управление памятью для компонента In-Memory OLTP](../../database-engine/managing-memory-for-in-memory-oltp.md)  
+## <a name="see-also"></a>См. также:  
+ [Управление памятью для компонента "Выполняющаяся в памяти OLTP"](../../database-engine/managing-memory-for-in-memory-oltp.md)  
   
   

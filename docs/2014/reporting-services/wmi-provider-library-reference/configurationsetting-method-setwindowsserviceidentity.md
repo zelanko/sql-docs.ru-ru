@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d08e9900453fe259d727e202489d728e0dce47e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097874"
 ---
-# <a name="setwindowsserviceidentity-method-wmi-msreportserverconfigurationsetting"></a>Метод SetWindowsServiceIdentity (WMI MSReportServer_ConfigurationSetting)
+# <a name="setwindowsserviceidentity-method-wmi-msreportserver_configurationsetting"></a>Метод SetWindowsServiceIdentity (WMI MSReportServer_ConfigurationSetting)
   Обеспечивает запуск службы Windows сервера отчетов в качестве заданного пользователя Windows, а также предоставляет этой учетной записи достаточные разрешения, необходимые для работы сервера отчетов.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -41,32 +41,32 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
 ```  
   
 ## <a name="parameters"></a>Параметры  
- *UseBuiltInAccount*  
+ *Параметру usebuiltinaccount присвоено*  
  Показывает, является ли указанная учетная запись встроенной учетной записью Windows.  
   
- *Учетная запись*  
+ *Учетной записи*  
  Учетная запись Windows, которая используется для запуска службы Windows, имеет формат «ДОМЕН\псевдоним».  
   
  *Пароль*  
  Пароль для учетной записи.  
   
- *HRESULT*  
+ *СОСТАВ*  
  [out] Значение, которое указывает, окончился ли вызов успехом или сбоем.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение *HRESULT* , являющееся признаком успешного или неуспешного завершение вызова метода. Значение 0 указывает, что вызов метода завершился успешно. Ненулевое значение указывает, что произошла ошибка.  
   
-## <a name="remarks"></a>Примечания  
- Когда *UseBuiltInAccount* параметр имеет значение `true` и сервер отчетов работает под управлением Microsoft [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)] или Windows XP, то значения параметров *имя*, *домена*, и *пароль* учитываются и используется учетная запись локальной системы.  
+## <a name="remarks"></a>Remarks  
+ Если параметр *параметру usebuiltinaccount присвоено* `true` имеет значение и сервер отчетов работает под управлением Microsoft [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)] или Windows XP, значения параметров *имя*, *домен*и *пароль* игнорируются и используется учетная запись локальной системы.  
   
- Когда *UseBuiltInAccount* параметр имеет значение `true` и сервер отчетов работает в Windows Server 2003, *домена* и *пароль* свойства игнорируется, а поле имени должно быть значение «» или «Builtin\System» или «Builtin\LocalService».  
+ Если параметр *параметру usebuiltinaccount присвоено* имеет значение `true` и сервер отчетов работает под управлением Windows Server 2003, свойства *домена* и *пароля* не учитываются, а поле имени должно содержать значения "Builtin\NetworkService", "Builtin\System" или "Builtin\LocalService".  
   
  Метод SetWindowsServiceIdentity задает разрешения для файлов и папок в установочном каталоге сервера отчетов.  
   
- Учетная запись, указанная в *учетной записи* параметр требует `LogonAsService` прав в Windows. Метод предоставляет эти права указанной учетной записи.  
+ Учетной записи, указанной ** в параметре `LogonAsService` Account, требуются права в Windows. Метод предоставляет эти права указанной учетной записи.  
   
 ## <a name="requirements"></a>Требования  
- **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Пространство имен:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

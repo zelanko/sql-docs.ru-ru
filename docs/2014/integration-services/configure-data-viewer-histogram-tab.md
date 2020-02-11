@@ -1,5 +1,5 @@
 ---
-title: Настройка средства просмотра данных (вкладка "Гистограмма") | Документация Майкрософт
+title: Настройка средства просмотра данных (вкладка «Гистограмма») | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3df1a27d94c3da63e1760e890654dba4045b2f94
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060713"
 ---
 # <a name="configure-data-viewer-histogram-tab"></a>Настройка средства просмотра данных (вкладка «Гистограмма»)
@@ -28,11 +28,11 @@ ms.locfileid: "66060713"
  **Визуализированный столбец**  
  Выберите столбец, который будет представлен в виде гистограммы.  
   
-## <a name="see-also"></a>См. также  
- [Настройка средства просмотра данных &#40;вкладка "Общие"&#41;](../../2014/integration-services/configure-data-viewer-general-tab.md)   
+## <a name="see-also"></a>См. также:  
+ [Настройка средства просмотра данных &#40;вкладка «Общие»&#41;](../../2014/integration-services/configure-data-viewer-general-tab.md)   
  [Настройка средства просмотра данных &#40;вкладка «Гистограмма»&#41;](../../2014/integration-services/configure-data-viewer-column-chart-tab.md)   
- [Настройка средства просмотра данных &#40;вкладка "Сетка"&#41;](../../2014/integration-services/configure-data-viewer-grid-tab.md)   
- [Настройка средства просмотра данных &#40;Точечная диаграмма, на вкладке построения&#41;](../../2014/integration-services/configure-data-viewer-scatter-plot-tab.md)   
+ [Настройка средства просмотра данных &#40;вкладке сетки&#41;](../../2014/integration-services/configure-data-viewer-grid-tab.md)   
+ [Настройка средства просмотра данных &#40;вкладке точечная диаграмма&#41;](../../2014/integration-services/configure-data-viewer-scatter-plot-tab.md)   
  [Поток данных](data-flow/data-flow.md)   
  [Отладка потока данных](troubleshooting/debugging-data-flow.md)  
   

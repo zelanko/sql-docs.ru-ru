@@ -1,5 +1,5 @@
 ---
-title: Упорядочение фигур в диаграмме связей атрибутов | Документация Майкрософт
+title: Размещение фигур на диаграмме связей атрибутов | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ac7fe46583c579c861de7b639fe72e58801f2e5c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077140"
 ---
 # <a name="arrange-shapes-in-the-attribute-relationship-diagram"></a>Упорядочение фигур в диаграмме связи атрибутов
@@ -30,8 +30,8 @@ ms.locfileid: "66077140"
   
      Можно также щелкнуть команду **Упорядочить фигуры** , чтобы автоматически расположить фигуры в соответствии с алгоритмом формата, используемого конструктором измерений.  
   
-## <a name="see-also"></a>См. также  
- [можно изменить расположение фигур на вкладке](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)   
+## <a name="see-also"></a>См. также:  
+ [Связи атрибутов](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)   
  [Определение связей атрибутов](attribute-relationships-define.md)  
   
   

@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 973ad34d5d24eecd0c3af0e0451b0d2ba9058222
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63194915"
 ---
 # <a name="sql-editor-visual-database-tools"></a>Редактор SQL (визуальные инструменты для баз данных)
@@ -47,7 +47,7 @@ ms.locfileid: "63194915"
   
  При изменении инструкций SQL определенные инструкции Transact-SQL заключены в прямоугольники, состоящие из тонкой линии. Это помогает визуально выделить код SQL в командных разделах, а также определяет блоки инструкций SQL, которые могут быть графически сконструированы при помощи конструктора запросов. Дополнительные сведения об использовании конструктора запросов см. в разделе [Разделы по конструированию запросов и представлений (визуальные инструменты для баз данных)](design-queries-and-views-how-to-topics-visual-database-tools.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Разделы по конструированию запросов и представлений (визуальные инструменты для баз данных)](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

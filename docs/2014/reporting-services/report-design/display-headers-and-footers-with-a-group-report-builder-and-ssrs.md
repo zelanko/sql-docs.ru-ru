@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7b330b5aedaeff4cf73ad6dca3e88860dde0f90b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106063"
 ---
 # <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>Отображение верхних и нижних колонтитулов в группе (построитель отчетов и службы SSRS)
@@ -68,9 +68,9 @@ ms.locfileid: "66106063"
   
 5.  При необходимости просмотрите отчет. По возможности, модуль подготовки отчетов сохраняет данный элемент с указанными элементами группы столбцов.  
   
-## <a name="see-also"></a>См. также  
- [Ячейки области данных Табликса, строк и столбцов &#40;построитель отчетов&#41; и службы SSRS](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)   
- [Разделах области данных Табликса &#40;построитель отчетов и службы SSRS&#41;](tablix-data-region-areas-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>См. также:  
+ [Ячейки, строки и столбцы области данных табликса &#40;построитель отчетов&#41; и SSRS](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)   
+ [Области данных табликса &#40;построитель отчетов и SSRS&#41;](tablix-data-region-areas-report-builder-and-ssrs.md)   
  [Область данных табликса (построитель отчетов и службы SSRS)](../tablix-data-region-report-builder-and-ssrs.md)   
  [Таблицы &#40;построитель отчетов и службы SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [Матрицы &#40;построитель отчетов и службы SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   

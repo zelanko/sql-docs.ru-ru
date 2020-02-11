@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 249b338148dc762e091d0be47bc081fe87c72fcd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63162391"
 ---
 # <a name="configure-the-general-properties-of-policy-based-management"></a>Настройка общих свойств управления на основе политик
@@ -28,9 +28,9 @@ ms.locfileid: "63162391"
   
 -   **Перед началом работы**  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
--   **Для настройки управления на основе политик используется:**  
+-   **Настройка управления на основе политик с помощью:**  
   
      [Среда SQL Server Management Studio](#SSMSProcedure)  
   
@@ -58,10 +58,10 @@ ms.locfileid: "63162391"
      **Enabled**  
      Указывает, включено ли управление на основе политик.  
   
-     **HistoryRetentionInDays**  
+     **хисториретентиониндайс**  
      Указывает число дней, в течение которых хранится журнал вычисления политик. Если это значение равно 0 (по умолчанию), то журнал автоматически не удаляется.  
   
-     **LogOnSuccess**  
+     **логонсукцесс**  
      Указывает, регистрирует ли управление на основе политик успешное вычисление политик.  
   
     -   Если это значение равно false (по умолчанию), то регистрируются только вычисления политик, завершившиеся ошибками.  

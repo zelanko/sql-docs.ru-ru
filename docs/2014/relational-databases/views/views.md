@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 21be7e81440fe6eb9573ecd100a459d70319ccea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63191260"
 ---
 # <a name="views"></a>Представления
@@ -51,7 +51,7 @@ ms.locfileid: "63191260"
 |Описывает, как получить сведения о представлении, например его определение.|[Получение сведений о представлении](../views/get-information-about-a-view.md)|  
 |Описывает, как переименовать представление.|[Переименование представлений](../views/rename-views.md)|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание представлений для столбцов XML](../xml/create-views-over-xml-columns.md)   
  [CREATE VIEW (Transact-SQL)](/sql/t-sql/statements/create-view-transact-sql)  
   

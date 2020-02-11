@@ -1,5 +1,5 @@
 ---
-title: Проекты табличной модели (табличные службы SSAS) | Документация Майкрософт
+title: Проекты табличных моделей (табличные службы SSAS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 43ee3cc999d227931e53c6faa89465315f52e4e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066334"
 ---
 # <a name="tabular-model-projects-ssas-tabular"></a>Проекты табличной модели (табличные службы SSAS)
@@ -22,10 +22,10 @@ ms.locfileid: "66066334"
   
 ## <a name="related-tasks"></a>Связанные задачи  
   
-|Раздел|Описание|  
+|Раздел|Description|  
 |-----------|-----------------|  
-|[Создание нового проекта табличной модели &#40;табличные службы SSAS&#41;](create-a-new-tabular-model-project-analysis-services.md)|В этом разделе описывается создание нового, пустого проекта табличной модели.|  
-|[Импорт из служб Analysis Services (табличные службы SSAS)](import-from-analysis-services-ssas-tabular.md)|В этом разделе описывается создание нового проекта табличной модели на основе существующей модели в службах Analysis Services. Для создания новой модели извлекаются и используются метаданные из существующей модели.|  
-|[Импорт из PowerPivot &#40;табличные службы SSAS&#41;](import-from-power-pivot-ssas-tabular.md)|В данном разделе описывается создание нового проекта табличной модели путем извлечения метаданных и данных из файла PowerPivot для Excel (.xlsx).|  
+|[Создание проекта модели нового табличной &#40;табличных&#41;SSAS](create-a-new-tabular-model-project-analysis-services.md)|В этом разделе описывается создание нового, пустого проекта табличной модели.|  
+|[Импорт из Analysis Services &#40;табличных&#41;SSAS](import-from-analysis-services-ssas-tabular.md)|В этом разделе описывается создание нового проекта табличной модели на основе существующей модели в службах Analysis Services. Для создания новой модели извлекаются и используются метаданные из существующей модели.|  
+|[Импорт из табличного&#41;PowerPivot &#40;SSAS](import-from-power-pivot-ssas-tabular.md)|В данном разделе описывается создание нового проекта табличной модели путем извлечения метаданных и данных из файла PowerPivot для Excel (.xlsx).|  
   
   

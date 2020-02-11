@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 72d0d319c8ac512be55ef93a9d0e55802da2de22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478515"
 ---
 # <a name="test-a-user39s-permissions-master-data-services"></a>Проверка разрешений пользователя (службы Master Data Services)
@@ -31,6 +31,6 @@ ms.locfileid: "65478515"
 4.  При следующем открытии окна браузера будет предложено указать имя пользователя и пароль.  
   
 ## <a name="see-also"></a>См. также:  
- [Безопасность (службы Master Data Services)](security-master-data-services.md)  
+ [Master Data Services &#40;безопасности&#41;](security-master-data-services.md)  
   
   

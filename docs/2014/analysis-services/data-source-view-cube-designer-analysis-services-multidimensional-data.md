@@ -1,5 +1,5 @@
 ---
-title: Представление (вкладка «Структура куба», конструктор кубов) источника данных (службы Analysis Services — многомерные данные) | Документация Майкрософт
+title: Представление источника данных (вкладка «Структура куба», конструктор кубов) (Analysis Services-многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b5c5f1389e0761ba0665e37e842b23b58c70cfe2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082530"
 ---
 # <a name="data-source-view-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Представление источника данных (вкладка «Структура куба» конструктора кубов) (службы Analysis Services — многомерные данные)
@@ -44,7 +44,7 @@ ms.locfileid: "66082530"
  **Показать понятные имена**  
  Устанавливает режим отображения понятных имен для объектов в данной панели.  
   
- **Выделить все**  
+ **Выбрать все**  
  Выделяет все объекты на панели.  
   
  **Найти таблицу**  
@@ -75,14 +75,14 @@ ms.locfileid: "66082530"
   
      Выводит диаграмму таблиц и столбцов, связанных с текущим кубом.  
   
--   дереВО  
+-   Дерево  
   
      Выводит представление дерева, которое содержит диаграмму таблиц и столбцов, связанных с текущим кубом.  
   
  **Копировать диаграмму из**  
  Выберите одну из диаграмм, включенных в это представление данных, связанное с выбранным кубом, для отображения на панели **Представление источника данных** .  
   
- **Масштаб**  
+ **Zoom**  
  Выберите доступный вариант масштаба.  
   
  **Свойства**  
@@ -136,10 +136,10 @@ ms.locfileid: "66082530"
  **Свойства**  
  Отображает окно **Свойства** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] для выбранной связи.  
   
-## <a name="see-also"></a>См. также  
- [Панель инструментов &#40;вкладка «Структура куба» конструктора кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
- [Меры &#40;вкладка «Структура куба» конструктора кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](measures-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
- [Измерения &#40;вкладка «Структура куба» конструктора кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](dimensions-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
- [Структура куба &#40;конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>См. также:  
+ [Панель инструментов &#40;вкладка «Структура куба», конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
+ [Меры &#40;вкладка «Структура куба», конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](measures-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
+ [Измерения &#40;вкладка «Структура куба», конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](dimensions-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
+ [Структура куба &#40;конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)  
   
   

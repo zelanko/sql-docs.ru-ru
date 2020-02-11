@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 11e875d5b171194c3ac8ba4ad33fad51cacacffe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482658"
 ---
 # <a name="shortcut-query-files-mds-add-in-for-excel"></a>Файлы ярлыков запросов (надстройка MDS для Excel)
@@ -37,23 +37,23 @@ ms.locfileid: "65482658"
   
  При открытии файла ярлыка запроса в приложении вам будет предложено сделать соединение безопасным, а это означает, что вы доверяете содержимому из этого источника. Каждый раз, когда соединение помечается как безопасное, оно добавляется в список. Если нужно очистить этот список, откройте диалоговое окно **Настройки** и в разделе **Серверы, добавленные в список безопасных** нажмите кнопку **Очистить все**.  
   
- Расположение по умолчанию для приложения — *диск*: \Program Files\Microsoft SQL Server\120\Master Data Services\Excel Add-In\Microsoft.MasterDataServices.QueryOpener.exe.  
+ Расположением по умолчанию для приложения является *диск*: \PROGRAM Files\Microsoft SQL Server\120\Master Data сервицес\ексцел адд-ин\микрософт.мастердатасервицес.куерйопенер.ЕКСЕ.  
   
- Существует два способа, чтобы открыть файлы ярлыков запросов: их можно импортировать или дважды щелкнуть, и он открывается автоматически.  
+ Открывать файлы запросов ярлыков можно двумя способами: импортировать их или двойным щелчком и открывать их автоматически.  
   
 ## <a name="related-tasks"></a>Связанные задачи  
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Сохранение содержимого активного листа в виде файла ярлыка запроса.|[Сохранение файла ярлыка запроса (надстройка MDS для Excel)](save-a-shortcut-query-file-mds-add-in-for-excel.md)|  
-|Отправка файла ярлыка запроса, который представляет содержимое активного листа.|[Отправка файла ярлыка запроса по электронной почте (надстройка MDS для Excel)](email-a-shortcut-query-file-mds-add-in-for-excel.md)|  
+|Сохранение содержимого активного листа в виде файла ярлыка запроса.|[Сохранение файла ярлыка запроса &#40;надстройка MDS для Excel&#41;](save-a-shortcut-query-file-mds-add-in-for-excel.md)|  
+|Отправка файла ярлыка запроса, который представляет содержимое активного листа.|[Отправка надстройка MDS для Excel &#40;файла ярлыка запроса&#41;](email-a-shortcut-query-file-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>См. также  
   
--   [Соединения (надстройка MDS для Excel)](connections-mds-add-in-for-excel.md)  
+-   [Подключения &#40;надстройка MDS для Excel&#41;](connections-mds-add-in-for-excel.md)  
   
 -   [Надстройка Master Data Services для Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
   
--   [Безопасность (службы Master Data Services)](../security-master-data-services.md)  
+-   [Master Data Services &#40;безопасности&#41;](../security-master-data-services.md)  
   
   

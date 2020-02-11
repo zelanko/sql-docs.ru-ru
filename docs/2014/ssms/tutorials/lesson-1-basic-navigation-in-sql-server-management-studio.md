@@ -1,5 +1,5 @@
 ---
-title: Урок 1. Основные возможности перемещения в SQL Server Management Studio | Документация Майкрософт
+title: Занятие 1. Основы работы в SQL Server Management Studio | Документы Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 09cccd43b4d20b5be2306c0922ff3bf40ff1b033
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151520"
 ---
-# <a name="lesson-1-basic-navigation-in-sql-server-management-studio"></a>Урок 1. Основы работы в среде SQL Server Management Studio
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] — это мощное и гибкое средство. Однако пользователи, не работавшие с Microsoft Visual Studio, иногда не знают, как быстро воспользоваться той или иной функцией. На этом занятии предстоит изучить, как взаимодействие окон образует область конструктора, которая облегчает выполнение задач. В конце занятия описано, как убирать ненужные окна, быстро открывать окна с требуемыми сведениями и задавать настройки по умолчанию таким образом, чтобы на экране отображались наиболее часто используемые в работе элементы.  
+# <a name="lesson-1-basic-navigation-in-sql-server-management-studio"></a>Занятие 1. Основные возможности перемещения в среде SQL Server Management Studio
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] — это мощное и гибкое средство. Однако пользователи, не работавшие с Microsoft Visual Studio, иногда не знают, как быстро воспользоваться той или иной функцией. На этом занятии предстоит изучить, как взаимодействие окон образует область конструктора, которая облегчает выполнение задач. В конце занятия описано, как убирать ненужные окна, быстро открывать окна с требуемыми сведениями и задавать настройки по умолчанию таким образом, чтобы на экране отображались наиболее часто используемые в работе элементы.  
   
  Это занятие содержит следующие разделы:  
   

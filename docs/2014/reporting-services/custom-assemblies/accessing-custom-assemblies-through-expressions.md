@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fb9e2ae87a82bf272e84a8d940606879aa3c1e9d
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67792800"
 ---
 # <a name="accessing-custom-assemblies-through-expressions"></a>Доступ к пользовательским сборкам посредством выражений
@@ -43,7 +43,7 @@ ms.locfileid: "67792800"
 ## <a name="calling-instance-members-from-a-report-definition-file"></a>Вызов членов экземпляров из файла определения отчета  
  Если в пользовательской сборке содержатся члены экземпляров, к которым нужно обращаться из определения отчета, то в отчет следует добавить имя экземпляра класса. Имя экземпляра для класса можно добавить, использовав вкладку **Код** диалогового окна **Свойства отчета**. Дополнительные сведения о добавлении экземпляров классов в отчет см. в разделе [Пользовательский код и ссылки на сборки в выражениях в конструкторе отчетов &#40;SSRS&#41;](../report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
   
- Для вызова статического члена необходимо сослаться на него как на выражение, принимающее следующий вид = Code *. ИмяЭкземпляра.метод*.  
+ Чтобы вызвать статический член, необходимо сослаться на него как на выражение, принимающее форму = Code *. InstanceName. Method*.  
   
 #### <a name="to-call-instance-members"></a>Вызов членов экземпляра  
   
@@ -53,7 +53,7 @@ ms.locfileid: "67792800"
     =Code.m_myDollarCoversion.ToEUR(Fields!StandardCost.Value)  
     ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование пользовательских сборок с отчетами](using-custom-assemblies-with-reports.md)  
   
   

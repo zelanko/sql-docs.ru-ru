@@ -13,20 +13,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2371109c8fa28c579cd90735a51a4ad3a790385
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63255064"
 ---
 # <a name="manage-schedules"></a>Управление расписаниями
-  Позволяет просматривать и изменять свойства расписаний заданий агента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  Позволяет просматривать и изменять свойства [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] расписаний заданий агента.  
   
 ## <a name="options"></a>Параметры  
  **Доступные расписания**  
  Приводит список расписаний, доступных пользователю. Обратите внимание, что у задания и у расписания должен быть один владелец. Следовательно, в этом списке приводятся только расписания, которые принадлежат владельцу задания.  
   
- **Name**  
+ **Название**  
  Отображает имя расписания.  
   
  **Enabled**  
@@ -47,7 +47,7 @@ ms.locfileid: "63255064"
  **Свойства**  
  Нажмите эту кнопку, чтобы изменить свойства выбранного расписания.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание и присоединение расписаний к заданиям](create-and-attach-schedules-to-jobs.md)  
   
   

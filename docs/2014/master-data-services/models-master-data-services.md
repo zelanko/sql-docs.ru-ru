@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d202c04a41553b934c175edb7c0afcd907e846e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482538"
 ---
 # <a name="models-master-data-services"></a>Модели (службы основных данных)
@@ -56,7 +56,7 @@ ms.locfileid: "65482538"
 ## <a name="model-example"></a>Пример модели  
  В следующем примере объекты в модели «Продукт» логически группируют данные, связанные с продуктом.  
   
- ![Пример основных данных модели "Продукт"](../../2014/master-data-services/media/mds-conc-model.gif "Пример основных данных модели \"Продукт\"")  
+ ![Пример основных данных модели «Продукт»](../../2014/master-data-services/media/mds-conc-model.gif "Пример основных данных модели «Продукт»")  
   
  Другие распространенные модели:  
   
@@ -70,20 +70,20 @@ ms.locfileid: "65482538"
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Создание модели для организации основных данных.|[Создание модели (службы Master Data Services)](../../2014/master-data-services/create-a-model-master-data-services.md)|  
-|Изменение имени существующей модели.|[Изменение имени модели &#40;службы Master Data Services&#41;](../../2014/master-data-services/change-a-model-name-master-data-services.md)|  
-|Удаление существующей модели.|[Удаление модели (службы Master Data Services)](../../2014/master-data-services/delete-a-model-master-data-services.md)|  
+|Создание модели для организации основных данных.|[Создание &#40;модели Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)|  
+|Изменение имени существующей модели.|[Измените имя модели &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-model-name-master-data-services.md)|  
+|Удаление существующей модели.|[Удаление &#40;модели Master Data Services&#41;](../../2014/master-data-services/delete-a-model-master-data-services.md)|  
   
 ## <a name="related-content"></a>См. также  
   
 -   [Общие сведения о службах Master Data Services](master-data-services-overview-mds.md)  
   
--   [Сущности (службы Master Data Services)](../../2014/master-data-services/entities-master-data-services.md)  
+-   [Сущности &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)  
   
--   [Атрибуты (службы Master Data Services)](../../2014/master-data-services/attributes-master-data-services.md)  
+-   [Master Data Services &#40;атрибутов&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
   
--   [Развертывание моделей (службы Master Data Services)](../../2014/master-data-services/deploying-models-master-data-services.md)  
+-   [Развертывание моделей &#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
   
--   [Разрешения объекта модели (службы Master Data Services)](../../2014/master-data-services/model-object-permissions-master-data-services.md)  
+-   [Разрешения объекта модели &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)  
   
   

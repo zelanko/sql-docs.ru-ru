@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d0d309103880a369a88952e19b252fc15693fdd4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63191919"
 ---
 # <a name="handling-smo-events"></a>Обработка событий SMO
@@ -35,9 +35,9 @@ ms.locfileid: "63191919"
 ## <a name="event-subscription"></a>Подписка на событие  
  Для обработки некоторого события пишется класс обработчика этого события, создается его экземпляр, этот обработчик события назначается родительскому объекту, затем производится подписка на данное событие.  
   
- Для обработки событий необходимо написать класс обработчика события. Класс обработчика события может содержать более одной функции обработки события, и его надо установить для обрабатываемых событий. Функции обработчика события получают информацию о событии из *ServerEventNotificatificationArgs* параметр, который может использоваться для передачи сведений о событии.  
+ Для обработки событий необходимо написать класс обработчика события. Класс обработчика события может содержать более одной функции обработки события, и его надо установить для обрабатываемых событий. Функции обработчика событий получают сведения о событии из параметра *серверевентнотификатификатионаргс* , который можно использовать для передачи сведений о событии.  
   
- Типы событий базы данных и сервера, которые могут быть обработаны, перечислены в <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> класс и <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>класса.  
+ Типы событий базы данных и сервера, которые могут быть обработаны, перечислены <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> в классе и <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>классе.  
   
 ## <a name="example"></a>Пример  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  

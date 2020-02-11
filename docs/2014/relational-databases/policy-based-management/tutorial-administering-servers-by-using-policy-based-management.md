@@ -1,5 +1,5 @@
 ---
-title: Учебник. Администрирование серверов с помощью управления на основе политик | Документация Майкрософт
+title: Руководство. Администрирование серверов с помощью управления на основе политик | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 58757aa0de2b13c68926cf596a8da702b972edf3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63256060"
 ---
 # <a name="tutorial-administering-servers-by-using-policy-based-management"></a>Учебник. Администрирование серверов с помощью управления на основе политик
@@ -28,7 +28,7 @@ ms.locfileid: "63256060"
   
  Учебник разделен на два занятия.  
   
- [Занятие 1. Создание и применение политики по умолчанию, отключенной по](lesson-1-create-and-apply-an-off-by-default-policy.md)  
+ [Урок 1. Создание и применение политики, отключенной по умолчанию](lesson-1-create-and-apply-an-off-by-default-policy.md)  
  На данном занятии создается политика, указывающая, что компонент Database Mail не включен на сервере. Затем выполняется проверка сервера на соответствие политике и его настройка путем отключения компонента Database Mail.  
   
  [Занятие 2. Создание и применение политики стандартов именования](lesson-2-create-and-apply-a-naming-standards-policy.md)  
@@ -40,9 +40,9 @@ ms.locfileid: "63256060"
  Для работы с этим учебником необходима установка среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 ## <a name="start-the-tutorial"></a>Приступить к изучению  
- [Занятие 1. Создание и применение политики по умолчанию, отключенной по](lesson-1-create-and-apply-an-off-by-default-policy.md)  
+ [Урок 1. Создание и применение политики, отключенной по умолчанию](lesson-1-create-and-apply-an-off-by-default-policy.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Администрирование серверов с помощью управления на основе политик](administer-servers-by-using-policy-based-management.md)  
   
   

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c77a06618cddddc06aae962c137433c4905cecb6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63282305"
 ---
 # <a name="security-extensions-overview"></a>Общие сведения о модулях безопасности
@@ -61,8 +61,8 @@ ms.locfileid: "63282305"
   
 -   Имеются определяемые пользователем пользователи и роли, и необходимо предоставить подходящую схему авторизации в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Реализация модуля безопасности](../security-extension/implementing-a-security-extension.md)   
- [Настройка передачи файлов cookie для пользовательской проверки подлинности в диспетчере отчетов](../../security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)  
+ [Настройка передачи куки-файлов для нестандартной проверки подлинности пользователя в диспетчере отчетов](../../security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)  
   
   

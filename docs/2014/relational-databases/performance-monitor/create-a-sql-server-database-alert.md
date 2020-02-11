@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7c95605ed1a0ab42340713c5c5fa635b09d4a8ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63249481"
 ---
 # <a name="create-a-sql-server-database-alert"></a>Создание предупреждения для базы данных SQL Server
@@ -34,7 +34,7 @@ ms.locfileid: "63249481"
   
  Дополнительные сведения об использовании системного монитора для настройки предупреждения базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в статье [Настройка оповещения базы данных SQL Server (Windows)](../performance/set-up-a-sql-server-database-alert-windows.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_add_alert (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-add-alert-transact-sql)   
  [sys.sysperfinfo (Transact-SQL)](/sql/relational-databases/system-compatibility-views/sys-sysperfinfo-transact-sql)  
   

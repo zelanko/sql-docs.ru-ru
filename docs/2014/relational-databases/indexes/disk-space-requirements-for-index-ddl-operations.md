@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7dbb3fafd32ead6587d9c64eb6ccf2294ed4918b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63161806"
 ---
 # <a name="disk-space-requirements-for-index-ddl-operations"></a>Disk Space Requirements for Index DDL Operations
@@ -78,7 +78,7 @@ ms.locfileid: "63161806"
  Для действий с индексами в оперативном режиме применяется управление версиями строк, позволяющее изолировать действия с индексами от воздействия изменений, внесенных другими транзакциями. Это исключает необходимость запрашивать общую блокировку уже считанных записей. Для одновременных операций обновления и удаления, выполняемых пользователями во время операций с индексами в сети, требуется место в базе данных **tempdb**для сохранения записей версий. Дополнительные сведения см. в статье [Выполнение операции с индексами в сети](perform-index-operations-online.md) .  
   
 ## <a name="related-tasks"></a>Связанные задачи  
- [Index Disk Space Example](index-disk-space-example.md)  
+ [Пример использования места на диске для индекса](index-disk-space-example.md)  
   
  [Место на диске журнала транзакций для операций обработки индекса](transaction-log-disk-space-for-index-operations.md)  
   
@@ -97,7 +97,7 @@ ms.locfileid: "63161806"
   
  [DROP INDEX (Transact-SQL)](/sql/t-sql/statements/drop-index-transact-sql)  
   
- [Укажите коэффициент заполнения для индекса](specify-fill-factor-for-an-index.md)  
+ [Указание коэффициента заполнения для индекса](specify-fill-factor-for-an-index.md)  
   
  [Реорганизация и перестроение индексов](indexes.md)  
   

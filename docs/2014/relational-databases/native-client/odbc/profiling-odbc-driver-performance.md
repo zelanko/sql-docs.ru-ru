@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3f2c16e66c03eee8c5e1616fdaa0f0d1b154b85e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63143592"
 ---
 # <a name="profiling-odbc-driver-performance"></a>Создание профилей производительности драйвера ODBC
@@ -41,7 +41,7 @@ ms.locfileid: "63143592"
   
 -   Соединение с источником данных, настроенным для ведения журнала.  
   
--   Вызов [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) для задания собственных атрибутов драйвера, управляющих профилированием.  
+-   Вызов [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) для задания атрибутов, зависящих от драйвера, которые управляют профилированием.  
   
  Каждый процесс приложения получает отдельную копию драйвера ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], а профилирование является глобальным для сочетания копии драйвера и процесса приложения. Если какое-либо действие приложения включает профилирование, записываются сведения для всех активных соединений с драйвером из этого приложения. Включаются даже соединения, которые сами не определяли профилирование.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "63143592"
   
  Если приложение начинает профилирование в файл журнала, а другое приложение выполняет попытку профилирования в тот же файл журнала, второму приложению не удастся записать в журнал какие-либо данные профилирования. Если второе приложение запускает профилирование после выгрузки драйвера первым приложением, второе приложение перезаписывает файл журнала первого приложения.  
   
- Если приложение подключается к источнику данных, для которого включено профилирование, драйвер возвращает значение SQL_ERROR, если приложение вызывает **SQLSetConnectOption** чтобы начать ведение журнала. Вызов **SQLGetDiagRec** возвращаются следующие:  
+ Если приложение подключается к источнику данных с включенным профилированием, драйвер возвращает SQL_ERROR, если приложение вызывает **SQLSetConnectOption** для начала ведения журнала. Затем вызов **SQLGetDiagRec** возвращает следующее:  
   
 ```  
 SQLState: 01000, pfNative = 0  
@@ -64,7 +64,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 -   Профиль приложения  
   
--   Соединение  
+-   Подключение  
   
 -   Сеть  
   
@@ -74,7 +74,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="application-profile-statistics"></a>Статистика профиля приложения  
   
-|Поле SQLPERF|Описание|  
+|Поле SQLPERF|Description|  
 |-------------------|-----------------|  
 |TimerResolution|Минимальное разрешение времени с часов сервера в миллисекундах. Обычно возвращается 0 (ноль). Это значение учитывается только в тех случаях, когда сообщается большое число. Если минимальное разрешение часов сервера больше, чем вероятные интервалы какой-либо статистики по таймеру, эти статистические данные могут оказаться завышенными.|  
 |SQLidu|Количество инструкций INSERT, DELETE и UPDATE после SQL_PERF_START.|  
@@ -82,9 +82,9 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |SQLSelects|Количество инструкций SELECT, обработанных после SQL_PERF_START.|  
 |SQLSelectRows|Количество строк, выбранных после SQL_PERF_START.|  
 |Transactions|Количество пользовательских транзакций после SQL_PERF_START, включая откаты. Если приложение ODBC запущено с параметром SQL_AUTOCOMMIT_ON, каждая команда считается транзакцией.|  
-|SQLPrepares|Число [функция SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360) вызовы после SQL_PERF_START.|  
-|ExecDirects|Число **SQLExecDirect** вызовы после SQL_PERF_START.|  
-|SQLExecutes|Число **SQLExecute** вызовы после SQL_PERF_START.|  
+|SQLPrepares|Число вызовов [функций SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360) после SQL_PERF_START.|  
+|ExecDirects|Число вызовов **SQLExecDirect** после SQL_PERF_START.|  
+|SQLExecutes|Число вызовов **SQLExecute** после SQL_PERF_START.|  
 |CursorOpens|Количество открытий драйвером серверного курсора после SQL_PERF_START.|  
 |CursorSize|Количество строк в результирующих наборах, открытых курсором после SQL_PERF_START.|  
 |CursorUsed|Количество строк, фактически полученных с помощью драйвера от курсоров после SQL_PERF_START.|  
@@ -97,13 +97,13 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |CurrentStmtCount|Количество дескрипторов инструкций, открытых в настоящее время для всех открытых в драйвере соединений.|  
 |MaxOpenStmt|Максимальное количество одновременно открытых дескрипторов инструкций после SQL_PERF_START.|  
 |SumOpenStmt|Количество дескрипторов инструкций, открытых после SQL_PERF_START.|  
-|**Статистика подключений:**||  
+|**Статистика соединений**||  
 |CurrentConnectionCount|Текущее количество активных дескрипторов соединений, открытых приложением для сервера.|  
 |MaxConnectionsOpened|Максимальное количество одновременно открытых дескрипторов соединений после SQL_PERF_START.|  
 |SumConnectionsOpened|Общее количество дескрипторов соединений, открытых после SQL_PERF_START.|  
 |SumConnectionTime|Общее количество времени, в течение которого были открыты соединения, после SQL_PERF_START. Например, если приложение открыло 10 соединений и поддерживало каждое соединение в течение 5 секунд, значение SumConnectionTime будет равно 50 секунд.|  
 |AvgTimeOpened|Равно SumConnectionsOpened/ SumConnectionTime.|  
-|**Сетевая Статистика**||  
+|**Сетевая статистика**||  
 |ServerRndTrips|Количество раз, когда драйвер отправлял команды на сервер и получал ответ.|  
 |BuffersSent|Количество пакетов потока табличных данных (TDS), отправленных драйвером в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] после SQL_PERF_START. Большие команды могут занимать несколько буферов, поэтому если на сервер отправляется большая команда, занимающая шесть пакетов, значение ServerRndTrips увеличивается на 1, а значение BuffersSent — на 6.|  
 |BuffersRec|Количество пакетов потока табличных данных, полученных драйвером от [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] после начала использования драйвера приложением.|  
@@ -112,13 +112,13 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="time-statistics"></a>Статистика по времени  
   
-|Поле SQLPERF|Описание|  
+|Поле SQLPERF|Description|  
 |-------------------|-----------------|  
 |msExecutionTime|Общее количество времени, затраченного драйвером на обработку после SQL_PERF_START, включая время на ожидание ответов от сервера.|  
 |msNetworkServerTime|Общее количество времени, затраченного драйвером на ожидание ответов от сервера.|  
   
-## <a name="see-also"></a>См. также  
- [Собственный клиент SQL Server &#40;ODBC&#41;](sql-server-native-client-odbc.md)   
- [Профилирование разделы руководства по производительности драйвера ODBC &#40;ODBC&#41;](../../native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
+## <a name="see-also"></a>См. также:  
+ [SQL Server Native Client &#40;ODBC&#41;](sql-server-native-client-odbc.md)   
+ [Инструкции по профилированию производительности драйвера ODBC &#40;ODBC&#41;](../../native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   
   

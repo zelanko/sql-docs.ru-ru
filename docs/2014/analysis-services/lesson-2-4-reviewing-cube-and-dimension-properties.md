@@ -1,5 +1,5 @@
 ---
-title: Просмотр свойств куба и измерения | Документация Майкрософт
+title: Проверка свойств куба и измерения | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c95d241d136f290110ac8a2b72540011a3922e24
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079003"
 ---
 # <a name="reviewing-cube-and-dimension-properties"></a>Просмотр свойств куба и измерения
@@ -34,7 +34,7 @@ ms.locfileid: "66079003"
   
 4.  На панели **Измерения** вкладки **Структура куба** раскройте измерение **Customer**, а затем нажмите кнопку **Изменить Customer** , чтобы открыть это измерение в конструкторе измерений.  
   
-     Конструктор измерений содержит следующие вкладки: **Структура измерения**, **связи атрибутов**, **переводы**, и **браузера**. Обратите внимание, что **Структура измерения** вкладка содержит три панели: **Атрибуты**, **иерархий**, и **представление источника данных**. Атрибуты, содержащиеся в измерении, отображаются на панели **Атрибуты** . Дополнительные сведения см. в разделе [Справочник по свойствам атрибута измерения](multidimensional-models/dimension-attribute-properties-reference.md), [Создание пользовательских иерархий](multidimensional-models/user-defined-hierarchies-create.md).  
+     Конструктор измерений содержит следующие вкладки: **Структура измерения**, **Связи атрибутов**, **Переводы**и **Браузер**. Обратите внимание, что вкладка **Структура измерения** содержит три панели: **Атрибуты**, **Иерархии**и **Представление источника данных**. Атрибуты, содержащиеся в измерении, отображаются на панели **Атрибуты** . Дополнительные сведения см. в разделе [Справочник по свойствам атрибутов измерения](multidimensional-models/dimension-attribute-properties-reference.md), [Создание пользовательских иерархий](multidimensional-models/user-defined-hierarchies-create.md).  
   
 5.  Чтобы переключиться к конструктору кубов, щелкните правой кнопкой мыши **Учебник по службам Analysis Services** в узле **Кубы** в обозревателе решений и выберите пункт **Конструктор представлений**.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66079003"
   
 7.  Перейдите на вкладку **Секции** .  
   
-     Мастер кубов определяет единственную секцию для куба с использованием режима хранения результатов многомерной интерактивной аналитической обработки данных (MOLAP) без статистических выражений. Для обработки MOLAP все данные конечного уровня и все статистические выражения хранятся в кубе, чтобы обеспечить максимальную производительность. Статистические выражения представляют собой предварительно вычисленные сводные данные, которые содержат ответы на еще не заданные вопросы, что позволяет сократить время до получения ответа на запрос. На вкладке **Секции** можно определять дополнительные секции, параметры хранения и настройки обратной записи. Дополнительные сведения см. в разделе [Секции (службы Analysis Services — многомерные данные)](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md), [Агрегаты и статистические схемы](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
+     Мастер кубов определяет единственную секцию для куба с использованием режима хранения результатов многомерной интерактивной аналитической обработки данных (MOLAP) без статистических выражений. Для обработки MOLAP все данные конечного уровня и все статистические выражения хранятся в кубе, чтобы обеспечить максимальную производительность. Статистические выражения представляют собой предварительно вычисленные сводные данные, которые содержат ответы на еще не заданные вопросы, что позволяет сократить время до получения ответа на запрос. На вкладке **Секции** можно определить дополнительные разделы, параметры хранилища и параметры обратной записи. Дополнительные сведения см. в [разделах partitions &#40;Analysis Services-многомерные данные&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md), [агрегаты и статистические](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)схемы.  
   
 8.  Перейдите на вкладку **Браузер** .  
   
@@ -52,14 +52,14 @@ ms.locfileid: "66079003"
   
 9. В обозревателе решений щелкните правой кнопкой мыши **Учебник по службам Analysis Services** в узле **Кубы** и выберите пункт **Просмотр кода**. Возможно, потребуется подождать.  
   
-     XML-код для куба "Учебник по [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] " отображается на вкладке **[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial.cube [XML]** . Это фактический код, используемый для создания куба в экземпляре служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] в процессе развертывания. Дополнительные сведения см. в разделе [Просмотр XML-кода проекта служб Analysis Services (среда SSDT)](multidimensional-models/view-the-xml-for-an-analysis-services-project-ssdt.md).  
+     XML-код для куба [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial отображается на вкладке ** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial. куб [XML]** . Это фактический код, который используется для создания куба в экземпляре [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] во время развертывания. Дополнительные сведения см. в разделе [Просмотр XML-кода проекта служб Analysis Services (среда SSDT)](multidimensional-models/view-the-xml-for-an-analysis-services-project-ssdt.md).  
   
 10. Закройте вкладку XML-кода.  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
  [Развертывание проекта служб Analysis Services](lesson-2-5-deploying-an-analysis-services-project.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Просмотр данных измерения в конструкторе измерений](multidimensional-models/database-dimensions-browse-dimension-data-in-dimension-designer.md)  
   
   

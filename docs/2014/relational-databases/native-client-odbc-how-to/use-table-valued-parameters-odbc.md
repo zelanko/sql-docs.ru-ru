@@ -11,16 +11,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ec4d66af36ff74b5b0a9160529990c9fc52fc961
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200275"
 ---
 # <a name="use-table-valued-parameters-odbc"></a>Использование возвращающих табличные значения параметров (ODBC)
   В нем демонстрируется вставка нескольких строк с несколькими столбцами за одно обращение к серверу при помощи возвращающего табличное значение параметра.  
   
- Дополнительные сведения о возвращающих табличные значения параметров, см. в разделе [возвращающего табличное значение параметров &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md). Дополнительные образцы использования возвращающих табличное значение параметров см. в разделе [ODBC Table-Valued Parameter Programming Examples](../../database-engine/dev-guide/odbc-table-valued-parameter-programming-examples.md).  
+ Дополнительные сведения о возвращающих табличное значение параметрах см. в разделе [возвращающие табличное значение параметры &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md). Дополнительные образцы использования возвращающих табличное значение параметров см. в разделе [ODBC Table-Valued Parameter Programming Examples](../../database-engine/dev-guide/odbc-table-valued-parameter-programming-examples.md).  
   
 ## <a name="example"></a>Пример  
  Кроме того, потребуется источник данных ODBC с именем TVPDemo. По умолчанию в качестве базы данных для источника данных TVPDemo может быть указана любая тестовая база данных на компьютере. Этот источник данных должен быть основан на драйвере ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

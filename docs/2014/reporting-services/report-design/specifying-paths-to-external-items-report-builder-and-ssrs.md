@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c7364ad7c7de4678926187cb171e62318c884bd2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104839"
 ---
 # <a name="specifying-paths-to-external-items-report-builder-and-ssrs"></a>Указание путей к внешним элементам (построитель отчетов и службы SSRS)
@@ -39,11 +39,11 @@ ms.locfileid: "66104839"
   
 -   **Полный путь к элементу.**  
   
-    -   **На сервере отчетов** путь начинается с **/** (корневой папки), например /Reports/AllSubreports/Subreport1.  
+    -   **На сервере отчетов** путь начинается с **/** (корневой папки). например /Reports/AllSubreports/Subreport1.  
   
-    -   **На сайте SharePoint** Необходимо указать имя отчета в выражении, полный URL-адресом элемента и расширением файла RDL. Например, `="http://server/site/library/folder/Report1.rdl"`.  
+    -   **На сайте SharePoint** необходимо указать в выражении имя отчета с полным URL-адресом элемента и расширением файла RDL. Например, `="http://server/site/library/folder/Report1.rdl"`.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Добавление внешнего изображения (построитель отчетов и службы SSRS)](add-an-external-image-report-builder-and-ssrs.md)   
  [Добавление вложенного отчета и параметров (построитель отчетов и службы SSRS)](add-a-subreport-and-parameters-report-builder-and-ssrs.md)   
  [Добавление действия детализации в отчет (построитель отчетов и службы SSRS)](add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md)  

@@ -14,19 +14,19 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: edf6d73edb8c4409f82302c2cdf013f18037e4bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478531"
 ---
 # <a name="validate-specific-members-against-business-rules-master-data-services"></a>Подтверждение конкретных членов, обнаруженных при проверке на соответствие бизнес-правилам (службы Master Data Services)
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]бизнес-правила можно применять выборочно, если требуется обновить или проверить подмножество элементов с использованием бизнес-правил.  
   
 > [!NOTE]  
->  Инструкции о том, как применить бизнес-правила ко всем элементам в версии модели, см. в разделе [проверка версии на соответствие бизнес-правила &#40;службы Master Data Services&#41;](validate-a-version-against-business-rules-master-data-services.md).  
+>  Инструкции о том, как применить бизнес-правила ко всем элементам в версии модели, см. в разделе [Подтверждение исправления проблемы, обнаруженной при проверке на соответствие бизнес-правилам (службы Master Data Services)](validate-a-version-against-business-rules-master-data-services.md).  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения этой процедуры:  
   
 -   Необходимо иметь разрешение на доступ к функциональной области **Обозреватель** .  
@@ -45,8 +45,8 @@ ms.locfileid: "65478531"
   
 5.  Нажмите кнопку **Применить бизнес-правила**. Бизнес-правила применяются только к элементам, отображенным в сетке.  
   
-## <a name="see-also"></a>См. также  
- [Подтверждение исправления проблемы, обнаруженной при проверке на соответствие бизнес-правилам (службы Master Data Services)](validate-a-version-against-business-rules-master-data-services.md)   
- [Бизнес-правила (службы Master Data Services)](../../2014/master-data-services/business-rules-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Проверка версии на соответствие бизнес-правилам &#40;Master Data Services&#41;](validate-a-version-against-business-rules-master-data-services.md)   
+ [Бизнес-правила &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
   

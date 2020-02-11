@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e56a15d10bc267e6613d24ff934daf4561831c1a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63254463"
 ---
 # <a name="navigate-in-database-diagram-designer-visual-database-tools"></a>Навигация в конструкторе диаграмм баз данных (визуальные инструменты для баз данных)
@@ -34,10 +34,10 @@ ms.locfileid: "63254463"
 |Перемещать таблицы по поверхности диаграммы|CTRL+СТРЕЛКА ВВЕРХ или CTRL+СТРЕЛКА ВНИЗ|  
 |Прокрутить вправо/влево и вверх/вниз|PAGE UP/DOWN для вертикальной прокрутки, CTL+PAGE UP/DOWN для горизонтальной прокрутки|  
 |Изменить размер таблиц и заметок|SHIFT+ клавиши-стрелки|  
-|Изменить данные, приведенные в таблице|CTRL + T|  
-|Масштаб|CTRL+ PLUS KEY или MINUS KEY|  
+|Изменить данные, приведенные в таблице|CTRL+T|  
+|Zoom|CTRL+ PLUS KEY или MINUS KEY|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Конструирование диаграмм баз данных (визуальные инструменты для баз данных)](visual-database-tools.md)  
   
   

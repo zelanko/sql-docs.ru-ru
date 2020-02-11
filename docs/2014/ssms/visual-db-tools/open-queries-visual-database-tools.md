@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 48d0e96f2cd7b37683399c599f336f78e1ede3fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63195039"
 ---
 # <a name="open-queries-visual-database-tools"></a>Открытие запросов (визуальные инструменты для баз данных)
@@ -34,9 +34,9 @@ ms.locfileid: "63195039"
 > [!NOTE]  
 >  По умолчанию открываются все панели конструктора запросов и представлений ("SQL", "Критерии", "Диаграмма" и "Результаты"), но это значение по умолчанию можно изменить в диалоговом окне **Параметры** . Если эти панели закрыты, то для их открытия в меню **Конструктор запросов** выберите **Панель**, а затем щелкните нужную панель.  
   
-## <a name="see-also"></a>См. также  
- [Выполнение основных операций с запросами &#40;визуальных инструментах баз данных&#41;](visual-database-tools.md)   
- [Сохранение запросов &#40;визуальных инструментах баз данных&#41;](save-queries-visual-database-tools.md)   
+## <a name="see-also"></a>См. также:  
+ [Выполнение основных операций с запросами &#40;визуальных инструментов для баз данных&#41;](visual-database-tools.md)   
+ [Сохранение запросов &#40;визуальных инструментов для баз данных&#41;](save-queries-visual-database-tools.md)   
  [Работа с данными на панели результатов (визуальные инструменты для баз данных)](results-pane-visual-database-tools.md)  
   
   

@@ -13,18 +13,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ad425c954526fabd6b9b1cf83b42fe5667979c3a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63165414"
 ---
 # <a name="data-processing-extensions-overview"></a>Общие сведения о модулях обработки данных
-  Модули обработки данных в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] позволяют соединяться с источником данных и получать данные. Они также служат мостом между источником данных и набором данных. Модули обработки данных служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] построены на наборе интерфейсов поставщиков данных платформы [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
+  Модули обработки данных в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] позволяют соединяться с источником данных и получать данные. Они также служат мостом между источником данных и набором данных. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]модули обработки данных моделируются после подмножества [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] интерфейсов поставщика данных.  
   
  В следующей таблице перечисляются модули обработки данных, включенные в службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
-|Модуль обработки данных|Описание|  
+|Модуль обработки данных|Description|  
 |-------------------------------|-----------------|  
 |Модуль обработки данных для служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Использует поставщик данных платформы .NET Framework для SQL Server с целью подключения и получения данных из [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)].|  
 |Модуль обработки данных OLE DB|Использует поставщик данных платформы .NET Framework для OLE DB. С помощью данного модуля сервер отчетов может осуществлять запрос к любым источникам данных с поставщиком OLE DB.|  
@@ -70,15 +70,15 @@ ms.locfileid: "63165414"
   
 -   Компьютер развертывания с установленным конструктором отчетов или сервером отчетов.  
   
--   Компьютер для разработки с установленной средой [!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)] или более поздней версии или пакетом средств разработки программного обеспечения (SDK) для [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
+-   Компьютер разработки с [!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)] или более поздней версии или [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] установленный пакет средств разработки программного обеспечения (SDK).  
   
 -   Глубокое понимание функций и возможностей служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
--   Глубокое понимание архитектуры [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vstecado](../../../includes/vstecado-md.md)], поставщиков данных платформы [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], объектов ADO.NET DataSet и общих интерфейсов [!INCLUDE[vstecado](../../../includes/vstecado-md.md)].  
+-   Глубокое понимание [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] архитектуры, [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] поставщиков данных, объектов набора данных ADO.NET и общих [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] интерфейсов.  
   
--   Опыт разработки на языке [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], например [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# или [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET.  
+-   Возможности разработки на таких [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] языках, как [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# или [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Модули служб Reporting Services](../reporting-services-extensions.md)   
  [Библиотека модулей Reporting Services](../reporting-services-extension-library.md)  
   

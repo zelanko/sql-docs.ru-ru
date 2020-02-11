@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cca8d20555a2221842a6962081a0880c1a820745
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63280583"
 ---
 # <a name="perform-basic-operations-with-queries-visual-database-tools"></a>Выполнение основных операций с запросами (визуальные инструменты для баз данных)
@@ -87,7 +87,7 @@ ms.locfileid: "63280583"
  [Использование конструктора запросов и представлений с международными данными (визуальные инструменты для баз данных)](use-the-query-and-view-designer-with-international-data-visual-database-tools.md)  
  Возможности, предоставляемые конструктором запросов и представлений для облегчения работы с международными данными.  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочник  
  [Инструменты конструктора запросов и представлений (визуальные инструменты для баз данных)](query-and-view-designer-tools-visual-database-tools.md)  
  Функции и возможности конструктора запросов и представлений.  
   

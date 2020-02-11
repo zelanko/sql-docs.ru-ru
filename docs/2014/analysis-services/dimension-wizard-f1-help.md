@@ -13,46 +13,46 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0cc1b7eec5ceb3b74e575dce9fd5d1d71897a3f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081657"
 ---
 # <a name="dimension-wizard-f1-help"></a>Справка F1 мастера измерений
-  Мастер измерений в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] используется для создания измерения базы данных в проекте служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . После создания измерения базы данных можно использовать конструктор измерений, чтобы изменить его свойства. Дополнительные сведения о конструкторе измерений см. в разделе [Конструктор измерений (службы Analysis Services — многомерные данные)](dimension-designer-analysis-services-multidimensional-data.md).  
+  Используйте [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] мастер измерений в для создания измерения базы данных в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] проекте. После создания измерения базы данных можно использовать конструктор измерений, чтобы изменить его свойства. Дополнительные сведения о конструкторе измерений см. в разделе [Конструктор измерений (службы Analysis Services — многомерные данные)](dimension-designer-analysis-services-multidimensional-data.md).  
   
- **Чтобы открыть мастер измерений**  
+ **Открытие мастера измерений**  
   
--   В **обозревателе решений** [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] щелкните правой кнопкой мыши папку **Измерения** для проекта [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , а затем выберите команду **Новое измерение**.  
+-   В [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]обозревателе решений **** щелкните правой кнопкой мыши папку **Измерения** для проекта [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , а затем выберите команду **Новое измерение**.  
   
 ## <a name="in-this-section"></a>в этом разделе  
   
--   [Выбор метода создания &#40;мастер измерений&#41;](select-creation-method-dimension-wizard.md)  
+-   [Выберите метод создания &#40;мастер измерений&#41;](select-creation-method-dimension-wizard.md)  
   
--   [Определение временных периодов &#40;источника данных&#41; &#40;мастер измерений&#41;](define-time-periods-data-source-dimension-wizard.md)  
+-   [Определение временных периодов &#40;мастере&#41; &#40;измерений источника данных&#41;](define-time-periods-data-source-dimension-wizard.md)  
   
 -   [Определение временных периодов &#40;мастер измерений&#41;](define-time-periods-dimension-wizard.md)  
   
--   [Выбор календарей &#40;мастер измерений&#41;](select-calendars-dimension-wizard.md)  
+-   [Мастер выбора календарей &#40;измерения&#41;](select-calendars-dimension-wizard.md)  
   
--   [Определение исходных сведений &#40;мастер измерений&#41;](specify-source-information-dimension-wizard.md)  
+-   [Мастер определения исходных сведений &#40;измерений&#41;](specify-source-information-dimension-wizard.md)  
   
--   [Выбор связанных таблиц &#40;мастер измерений&#41;](select-related-tables-dimension-wizard.md)  
+-   [Мастер выбора связанных таблиц &#40;измерения&#41;](select-related-tables-dimension-wizard.md)  
   
--   [Выбор атрибутов измерения &#40;мастер измерений&#41;](select-dimension-attributes-dimension-wizard.md)  
+-   [Выберите атрибуты измерения &#40;мастер измерений&#41;](select-dimension-attributes-dimension-wizard.md)  
   
--   [Определение типа измерения &#40;мастер измерений&#41;](specify-dimension-type-dimension-wizard.md)  
+-   [Мастер определения типа измерения &#40;измерения&#41;](specify-dimension-type-dimension-wizard.md)  
   
--   [Укажите ключа и типа измерения &#40;мастер измерений&#41;](specify-dimension-key-and-type-dimension-wizard.md)  
+-   [Мастер определения ключа измерения и типа &#40;измерения&#41;](specify-dimension-key-and-type-dimension-wizard.md)  
   
--   [Определение логики операций с учетной записью &#40;мастер измерений&#41;](define-account-intelligence-dimension-wizard.md)  
+-   [Мастер определения аналитических операций с учетом &#40;измерений&#41;](define-account-intelligence-dimension-wizard.md)  
   
--   [Завершение работы мастера &#40;мастер измерений&#41;](completing-the-wizard-dimension-wizard.md)  
+-   [Завершение работы мастера &#40;измерений&#41;](completing-the-wizard-dimension-wizard.md)  
   
-## <a name="see-also"></a>См. также  
- [Измерения &#40;службы Analysis Services — многомерные данные&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>См. также:  
+ [Измерения &#40;Analysis Services многомерных данных&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Измерения в многомерных моделях](multidimensional-models/dimensions-in-multidimensional-models.md)   
- [Мастера служб Analysis Services &#40;многомерных данных&#41;](analysis-services-wizards-multidimensional-data.md)  
+ [Analysis Services мастера &#40;многомерных данных&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

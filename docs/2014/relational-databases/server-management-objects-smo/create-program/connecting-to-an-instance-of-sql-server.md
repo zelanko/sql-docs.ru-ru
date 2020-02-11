@@ -1,5 +1,5 @@
 ---
-title: Подключение к экземпляру SQL Server | Документация Майкрософт
+title: Соединение с экземпляром SQL Server | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1d22ec44b7be6562c7186272b403a76cd562be62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63192087"
 ---
 # <a name="connecting-to-an-instance-of-sql-server"></a>Соединение с экземпляром SQL Server
-  Первым шагом в программировании [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] управляющих объектов (SMO) приложения является создание экземпляра <xref:Microsoft.SqlServer.Management.Smo.Server> объект и установление его соединения с экземпляром [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Первым шагом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] программирования в приложении управляющих объектов является создание экземпляра <xref:Microsoft.SqlServer.Management.Smo.Server> объекта и установка его соединения с экземпляром. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
  Создать экземпляр <xref:Microsoft.SqlServer.Management.Smo.Server> и установить соединение с экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] можно тремя способами. Первый способ — использовать переменную объекта <xref:Microsoft.SqlServer.Management.Common.ServerConnection> для задания информации о соединении. Второй способ — задать информацию о соединении в явном виде, присвоив соответствующие значения свойствам объекта <xref:Microsoft.SqlServer.Management.Smo.Server>. Третий способ — передать имя экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в конструктор объекта <xref:Microsoft.SqlServer.Management.Smo.Server>.  
   
@@ -31,11 +31,11 @@ ms.locfileid: "63192087"
   
  Преимущество использования переменной объекта <xref:Microsoft.SqlServer.Management.Common.ServerConnection> в том, что заданную информацию о соединении можно применять многократно. Объявите переменную объекта <xref:Microsoft.SqlServer.Management.Smo.Server>. Затем объявите объект <xref:Microsoft.SqlServer.Management.Common.ServerConnection> и задайте для его свойств значения информации соединения, такие как имя экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и режим проверки подлинности. Затем передайте переменную объекта <xref:Microsoft.SqlServer.Management.Common.ServerConnection> в качестве параметра конструктору объекта <xref:Microsoft.SqlServer.Management.Smo.Server>. Не рекомендуется использование одного соединения несколькими серверными объектами одновременно. Чтобы получить копию настроек существующего соединения, вызовите метод <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A>.  
   
- **Настройка свойств серверного объекта явным образом**  
+ **Настройка свойств серверного объекта в явном виде**  
   
  Другая возможность — объявить переменную объекта <xref:Microsoft.SqlServer.Management.Smo.Server> и вызвать конструктор по умолчанию. Объект <xref:Microsoft.SqlServer.Management.Smo.Server> попытается соединиться с экземпляром по умолчанию [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], используя все настройки соединения по умолчанию.  
   
- **Имя экземпляра SQL Server в конструктор объекта Server**  
+ **Передача имени экземпляра SQL Server в конструктор объекта Server**  
   
  Объявите переменную объекта <xref:Microsoft.SqlServer.Management.Smo.Server> и передайте имя экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в качестве строкового параметра конструктору объекта. Объект <xref:Microsoft.SqlServer.Management.Smo.Server> установит соединение с экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], используя значения настроек по умолчанию.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "63192087"
 ## <a name="connecting-to-the-local-instance-of-sql-server-by-using-windows-authentication-in-visual-basic"></a>Соединение с локальным экземпляром SQL Server с использованием проверки подлинности Windows на языке Visual Basic  
  Для соединения с локальным экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не нужно писать много программного кода. Вместо этого для метода проверки подлинности и сервера используются настройки по умолчанию. Первая операция, требующая получения данных, вызовет создание соединения.  
   
- Данный пример является [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] кода .NET, который подключается к локальному экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с использованием проверки подлинности Windows.  
+ В этом примере [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] используется код .NET, который подключается к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] локальному экземпляру с помощью проверки подлинности Windows.  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VB1](SMO How to#SMO_VB1)]  -->  
   
@@ -89,14 +89,14 @@ Console.WriteLine(srv.Information.Version);
 ## <a name="connecting-to-a-remote-instance-of-sql-server-by-using-windows-authentication-in-visual-basic"></a>Соединение с удаленным экземпляром SQL Server с использованием проверки подлинности Windows на языке Visual Basic  
  При подключении к экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с использованием проверки подлинности Windows указывать тип проверки не нужно. По умолчанию используется проверка подлинности Windows.  
   
- Данный пример является [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] кода .NET, который подключается к удаленному экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с использованием проверки подлинности Windows. Строковая переменная *strServer* содержит имя удаленного экземпляра.  
+ В этом примере [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] используется код .NET, который подключается к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] удаленному экземпляру с помощью проверки подлинности Windows. Строковая переменная *стрсервер* содержит имя удаленного экземпляра.  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VB2](SMO How to#SMO_VB2)]  -->  
   
 ## <a name="connecting-to-a-remote-instance-of-sql-server-by-using-windows-authentication-in-visual-c"></a>Соединение с удаленным экземпляром SQL Server с использованием проверки подлинности Windows на языке Visual C#  
  При подключении к экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с использованием проверки подлинности Windows указывать тип проверки не нужно. По умолчанию используется проверка подлинности Windows.  
   
- Этот пример представляет собой программный код на языке Visual C# .NET, который производит подключение к удаленному экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с использованием проверки подлинности Windows. Строковая переменная *strServer* содержит имя удаленного экземпляра.  
+ Этот пример представляет собой программный код на языке Visual C# .NET, который производит подключение к удаленному экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с использованием проверки подлинности Windows. Строковая переменная *стрсервер* содержит имя удаленного экземпляра.  
   
 ```  
 {   
@@ -113,7 +113,7 @@ Console.WriteLine(srv.Information.Version);
 ## <a name="connecting-to-an-instance-of-sql-server-by-using-sql-server-authentication-in-visual-basic"></a>Соединение с экземпляром SQL Server с использованием проверки подлинности SQL Server на языке Visual Basic  
  При подключении к экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с использованием проверки подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] нужно указывать тип проверки. В данном примере демонстрируется альтернативный метод объявления переменной объекта <xref:Microsoft.SqlServer.Management.Common.ServerConnection>, позволяющий повторно использовать информацию соединения.  
   
- В примере представлено [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] код .NET, который демонстрирует подключение к удаленному и *vPassword* содержат имя пользователя и пароль.  
+ В примере используется [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] код .NET, демонстрирующий, как соединиться с удаленным и *впассворд* содержит имя входа и пароль.  
   
 ```  
 ' compile with:   
@@ -161,7 +161,7 @@ End Class
 ## <a name="connecting-to-an-instance-of-sql-server-by-using-sql-server-authentication-in-visual-c"></a>Соединение с экземпляром SQL Server с использованием проверки подлинности SQL Server на языке Visual C#  
  При подключении к экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с использованием проверки подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] нужно указывать тип проверки. В данном примере демонстрируется альтернативный метод объявления переменной объекта <xref:Microsoft.SqlServer.Management.Common.ServerConnection>, позволяющий повторно использовать информацию соединения.  
   
- В примере показан код Visual C# .NET, который демонстрирует подключение к удаленному и *vPassword* содержат имя пользователя и пароль.  
+ В примере используется код Visual C# .NET, демонстрирующий, как подключиться к удаленному и *впассворду* , содержащему имя входа и пароль.  
   
 ```  
 // compile with:   
@@ -207,7 +207,7 @@ public class A {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  <xref:Microsoft.SqlServer.Management.Smo.Server>   
  <xref:Microsoft.SqlServer.Management.Common.ServerConnection>  
   

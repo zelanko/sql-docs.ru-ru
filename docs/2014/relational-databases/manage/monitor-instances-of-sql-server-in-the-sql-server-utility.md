@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6e016b8fb3986b4fa9431a1d223335affa72d3d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63188557"
 ---
 # <a name="monitor-instances-of-sql-server-in-the-sql-server-utility"></a>Наблюдение за экземплярами SQL Server в служебной программе SQL Server
@@ -27,7 +27,7 @@ ms.locfileid: "63188557"
 |[Просмотр результатов политики исправности ресурсов (служебная программа SQL Server)](view-resource-health-policy-results-sql-server-utility.md)|Просмотр панели мониторинга [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility и представление списка в обозревателе программ среды SSMS.|  
 |[Изменение определения политики исправности ресурсов (служебная программа SQL Server)](modify-a-resource-health-policy-definition-sql-server-utility.md)|Просмотр или изменение определений политик исправности ресурсов с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функции и задачи служебной программы SQL Server](sql-server-utility-features-and-tasks.md)  
   
   

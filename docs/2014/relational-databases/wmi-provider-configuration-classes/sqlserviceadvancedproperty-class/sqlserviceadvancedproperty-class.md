@@ -1,5 +1,5 @@
 ---
-title: Класс SqlServiceAdvancedProperty | Документация Майкрософт
+title: Класс класс sqlserviceadvancedproperty | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,20 +19,20 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 903c33c2679d4869bd26e95392e6eb5dcd2f9fb2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63188587"
 ---
 # <a name="sqlserviceadvancedproperty-class"></a>Класс SqlServiceAdvancedProperty
-  [Класс SqlServiceAdvancedProperty](sqlserviceadvancedproperty-class.md) представляет дополнительное свойство службы, на который ссылается [класс SqlService](../sqlservice-class/sqlservice-class.md) объекта.  
+  [Класс класс sqlserviceadvancedproperty](sqlserviceadvancedproperty-class.md) представляет дополнительное свойство службы, на которое ссылается объект [класса SqlService](../sqlservice-class/sqlservice-class.md) .  
   
- [Свойство AdvancedProperties (класс SqlService)](../sqlservice-class/advancedproperties-property-sqlservice-class.md) ссылается на массив [класс SqlServiceAdvancedProperty](sqlserviceadvancedproperty-class.md) объектов.  
+ [Свойство AdvancedProperties (класс SqlService)](../sqlservice-class/advancedproperties-property-sqlservice-class.md) ссылается на массив объектов [класса класс sqlserviceadvancedproperty](sqlserviceadvancedproperty-class.md) .  
   
- [Запуск и остановка служб](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx) класс представляет свойства, уникальные для службы. Эти свойства не входят в список свойств, связанных с [класс SqlService](https://technet.microsoft.com/library/ms186497.aspx) класса. [Класс SqlServiceAdvancedProperty](https://technet.microsoft.com/library/ms182447.aspx) класс позволяет представлять строковые, числовые или логические свойства. Этот класс можно использовать для просмотра уникальных свойств заданной службы.  
+ [Начальный и остановленный класс служб](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx) представляет свойства, которые являются уникальными для службы. Эти свойства отсутствуют в списке свойств, связанных с классом [класса SqlService](https://technet.microsoft.com/library/ms186497.aspx) . Класс [класса класс sqlserviceadvancedproperty](https://technet.microsoft.com/library/ms182447.aspx) позволяет представление строковых, числовых или логических свойств. Этот класс можно использовать для просмотра уникальных свойств заданной службы.  
   
-## <a name="see-also"></a>См. также  
- [Начальный, приостановка и остановка служб](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+## <a name="see-also"></a>См. также:  
+ [Запуск, приостановка и остановка служб](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b6b354cbb09a61e5fdd2444afaff0e6c8e0bb5b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106911"
 ---
 # <a name="add-a-border-frame-to-a-chart-report-builder-and-ssrs"></a>Добавление границы рамки в диаграмму (построитель отчетов и службы SSRS)
@@ -45,9 +45,9 @@ ms.locfileid: "66106911"
   
 7.  Если выбран тип «Рамка», укажите стиль и цвет рамки (необязательно). Список **Цвет заливки рамки** содержит распространенные цвета.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Диаграммы (построитель отчетов и службы SSRS)](charts-report-builder-and-ssrs.md)   
  [Форматирование диаграммы (построитель отчетов и службы SSRS)](formatting-a-chart-report-builder-and-ssrs.md)   
- [Добавление в диаграмму стилей рельефа, приподнятости и текстуры (построитель отчетов и службы SSRS)](chart-effects-add-bevel-emboss-or-texture-report-builder.md)  
+ [Добавление в диаграмму стилей рельефа, приподнятости и текстуры &#40;построитель отчетов и службы SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md)  
   
   

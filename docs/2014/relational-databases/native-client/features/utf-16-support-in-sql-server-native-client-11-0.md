@@ -1,5 +1,5 @@
 ---
-title: Поддержка UTF-16 в SQL Server Native Client 11.0 | Документация Майкрософт
+title: Поддержка UTF-16 в SQL Server Native Client 11,0 | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 415cb2fe8a3295770cfc8bd2d5c6e56750adb6d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63205122"
 ---
 # <a name="utf-16-support-in-sql-server-native-client-110"></a>Поддержка UTF-16 в собственном клиенте SQL Server версии 11.0
-  Начиная с версии [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], если при привязке результата столбца или выходного параметра указывается буфер фиксированной длины и если `wchar` символ, записываемый в буфер перед завершающим символом, является кодовую точку Старший суррогат суррогатной пары, а также если Следующий `wchar` символом, является младшим символом-заместителем кода, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client не будет добавлять старшая замещающая кодовая точка в буфере.  
+  Начиная с [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], при предоставлении буфера фиксированной длины при привязке результата или выходного параметра столбца, а также `wchar` если символ, записанный в буфер перед завершающим символом, является старшим замещающим кодовым точкой суррогатной пары, а `wchar` следующий символ является младшим кодовым точкой [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -заместителем, собственный клиент не будет добавлять старшую кодовую точку в буфер.  
   
-## <a name="see-also"></a>См. также  
- [Компоненты SQL Server Native Client](sql-server-native-client-features.md)  
+## <a name="see-also"></a>См. также:  
+ [Компоненты собственного клиента SQL Server](sql-server-native-client-features.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Инструкции по ODBC | Документация Майкрософт
+title: Разделы руководства по ODBC | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 359419f0da19151172689090272e0c42e18cc906
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200377"
 ---
 # <a name="odbc-how-to-topics"></a>ODBC How-to Topics
@@ -24,27 +24,27 @@ ms.locfileid: "63200377"
   
 -   [Инструкции по настройке драйвера ODBC SQL Server](../../database-engine/dev-guide/configuring-the-sql-server-odbc-driver-how-to-topics.md)  
   
--   [Выделение дескрипторов и соединение с SQL Server &#40;ODBC&#41;](allocate-handles-and-connect-to-sql-server-odbc.md)  
+-   [Выделение дескрипторов и подключение к SQL Server &#40;ODBC&#41;](allocate-handles-and-connect-to-sql-server-odbc.md)  
   
--   [Выполнении запросов разделы руководства, посвященные &#40;ODBC&#41;](execute-queries/executing-queries-how-to-topics-odbc.md)  
+-   [Инструкции по выполнению запросов &#40;ODBC&#41;](execute-queries/executing-queries-how-to-topics-odbc.md)  
   
--   [Результаты инструкции по обработке &#40;ODBC&#41;](../../database-engine/dev-guide/processing-results-how-to-topics-odbc.md)  
+-   [Разделы руководства по обработке результатов &#40;ODBC&#41;](../../database-engine/dev-guide/processing-results-how-to-topics-odbc.md)  
   
--   [Использование инструкций по курсорам &#40;ODBC&#41;](cursors/using-cursors-how-to-topics-odbc.md)  
+-   [Инструкции по использованию курсоров &#40;ODBC&#41;](cursors/using-cursors-how-to-topics-odbc.md)  
   
--   [Используйте Microsoft координатор распределенных транзакций &#40;ODBC&#41;](use-microsoft-distributed-transaction-coordinator-odbc.md)  
+-   [Использование Microsoft координатор распределенных транзакций &#40;ODBC&#41;](use-microsoft-distributed-transaction-coordinator-odbc.md)  
   
--   [Выполнение разделы руководства, посвященные хранимых процедур &#40;ODBC&#41;](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)  
+-   [Разделы руководства по выполнению хранимых процедур &#40;ODBC&#41;](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)  
   
--   [Инструкции по столбцы text и image управлению &#40;ODBC&#41;](../../database-engine/dev-guide/managing-text-and-image-columns-how-to-topics-odbc.md)  
+-   [Разделы руководства по управлению столбцами Text и Image &#40;ODBC&#41;](../../database-engine/dev-guide/managing-text-and-image-columns-how-to-topics-odbc.md)  
   
--   [Профилирование разделы руководства по производительности драйвера ODBC &#40;ODBC&#41;](profiling-odbc-driver-performance-odbc.md)  
+-   [Инструкции по профилированию производительности драйвера ODBC &#40;ODBC&#41;](profiling-odbc-driver-performance-odbc.md)  
   
 -   [Обработка ошибок ODBC &#40;ODBC&#41;](process-odbc-errors-odbc.md)  
   
--   [Массовое копирование с помощью инструкции SQL Server ODBC драйвер &#40;ODBC&#41;](bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
+-   [Инструкции по групповому копированию с помощью драйвера ODBC SQL Server &#40;ODBC&#41;](bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
   
-## <a name="see-also"></a>См. также  
- [SQL Server Native Client (ODBC)](../native-client/odbc/sql-server-native-client-odbc.md)  
+## <a name="see-also"></a>См. также:  
+ [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)  
   
   

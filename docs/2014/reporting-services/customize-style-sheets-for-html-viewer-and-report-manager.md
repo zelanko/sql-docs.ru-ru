@@ -1,5 +1,5 @@
 ---
-title: Настройка таблицы стилей для просмотра HTML-СТРАНИЦ и диспетчера отчетов | Документация Майкрософт
+title: Настройка таблиц стилей для средства просмотра HTML-страниц и диспетчер отчетов | Документация Майкрософт
 ms.prod: sql-server-2014
 ms.technology: reporting-services-native
 ms.topic: conceptual
@@ -10,14 +10,14 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/26/2019
 ms.openlocfilehash: 7c7745d69e234f81c2a331d214789e93e9fd4014
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "64568264"
 ---
 # <a name="customize-style-sheets-for-html-viewer-and-report-manager"></a>Настройка таблицы стилей для средства просмотра HTML-страниц и диспетчера отчетов
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] предоставляют файлы по умолчанию каскадных таблиц стилей (CSS), определяющие стили на **отчетов** панели инструментов в средстве просмотра HTML и для диспетчера отчетов. Веб-разработчик или пользователь, имеющий опыт создания каскадных таблиц стилей, может (на свой страх и риск) модифицировать таблицы стилей по умолчанию, чтобы изменить цвета, шрифты и макет панели инструментов или диспетчер отчетов. В этой версии не документированы ни таблицы стилей по умолчанию, ни инструкции по изменению таблиц стилей.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]предоставляет файлы каскадных таблиц стилей (CSS) по умолчанию, определяющие стили для панели инструментов **отчета** в средстве просмотра HTML-страниц и для Диспетчер отчетов. Веб-разработчик или пользователь, имеющий опыт создания каскадных таблиц стилей, может (на свой страх и риск) модифицировать таблицы стилей по умолчанию, чтобы изменить цвета, шрифты и макет панели инструментов или диспетчер отчетов. В этой версии не документированы ни таблицы стилей по умолчанию, ни инструкции по изменению таблиц стилей.  
   
  Неправильное изменение таблиц стилей может привести к ошибкам при открытии отчетов. Пользователям, сомневающимся в своем умении изменять таблицы стилей, следует использовать таблицы стилей по умолчанию. Если все же решено изменить настройки таблицы стилей, убедитесь, что созданы резервные копии всех файлов CSS, установленных по умолчанию.  
   
@@ -29,22 +29,22 @@ ms.locfileid: "64568264"
 ## <a name="reporting-services-style-sheets"></a>Таблицы стилей служб Reporting Services  
  В следующей таблице описываются файлы таблиц стилей (CSS), которые используются экземпляром служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
-|Таблица стилей|Описание|  
+|Таблица стилей|Description|  
 |-----------------|-----------------|  
 |Htmlviewer.css|Образец таблицы стилей, который можно использовать в качестве шаблона для создания собственных таблиц стилей для панели инструментов **Отчет** в средстве просмотра HTML-страниц.<br /><br /> Стили по умолчанию, используемые в средстве просмотра HTML-страниц, внедрены в сервер отчетов. Их образец и содержится в файле Htmlviewer.css.|  
 |ReportingServices.css|Определяет стили диспетчера отчетов.|  
   
 ## <a name="configuring-reporting-services-to-use-a-custom-style-sheet"></a>Настройка служб Reporting Services для использования пользовательской таблицы стилей  
- Таблица стилей должна представлять собой файл допустимой каскадной таблицы стилей (CSS), расположенный в папке Styles. По умолчанию папка Styles находится в \< *диск*>: \Program Files\Microsoft SQL Server\MSSQL. *n*\Reporting Services\ReportServer\Styles.  
+ Таблица стилей должна представлять собой файл допустимой каскадной таблицы стилей (CSS), расположенный в папке Styles. По умолчанию папка Styles находится в \<папке *диск*>: \Program Files\Microsoft SQL Server\MSSQL. *n*\Reporting Services\ReportServer\Styles.  
   
  Чтобы использовать таблицу стилей для средства просмотра HTML-страниц в режиме реального времени, применяются следующие подходы:  
   
--   Добавьте <`HTMLViewerStyleSheet`> присвоить [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] файла конфигурации.  
+-   Добавьте параметр> `HTMLViewerStyleSheet` <в файл [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] конфигурации.  
   
 -   Задайте таблицу стилей в URL-адресе отчета.  
   
 ### <a name="modifying-the-rsreportserverconfig-file"></a>Изменение файла RSReportServer.config  
- Чтобы задать пользовательскую таблицу стилей для средства просмотра HTML-страниц, можно изменить файл RSReportServer.config. <`HTMLViewerStyleSheet`> Параметр не включен в файл по умолчанию. Необходимо ввести его в <`Configuration`> Выбор RSReportServer.config файл, а затем укажите таблицу стилей, который вы хотите использовать. При задании таблицы стилей не указывайте расширение файла CSS.  
+ Чтобы задать пользовательскую таблицу стилей для средства просмотра HTML-страниц, можно изменить файл RSReportServer.config. Параметр> `HTMLViewerStyleSheet` <по умолчанию не включен в файл. Его необходимо ввести в <`Configuration`> выбора файла RSReportServer. config, а затем указать таблицу стилей, которую нужно использовать. При задании таблицы стилей не указывайте расширение файла CSS.  
   
  В следующем примере показан способ задания таблицы стилей:  
   
@@ -57,7 +57,7 @@ ms.locfileid: "64568264"
 ```  
   
 ### <a name="specifying-a-style-sheet-on-a-report-url"></a>Указание таблицы стилей в URL-адресе отчета  
- Для задания пользовательской таблицы стилей в URL-адресе отчета можно использовать параметр доступа `rc:StyleSheet`. Дополнительные сведения об указании параметров для доступа по URL-адрес, см. в разделе [URL Access Parameter Reference](url-access-parameter-reference.md).  
+ Для задания пользовательской таблицы стилей в URL-адресе отчета можно использовать параметр доступа `rc:StyleSheet`. Дополнительные сведения о задании параметров доступа по URL-адресу см. в разделе [Справочник по параметрам доступа по URL-адресу](url-access-parameter-reference.md).  
   
  В следующем примере показан способ добавления пользовательских стилей:  
   
@@ -65,9 +65,9 @@ ms.locfileid: "64568264"
 http://localhost/reportserver?/AdventureWorksSampleReports/Product+Line+Sales&rs:Command=Render&rc:Stylesheet=MyStyleSheet  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Диспетчер отчетов (службы Reporting Services в основном режиме)](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Просмотра HTML-СТРАНИЦ и панель инструментов отчета](html-viewer-and-the-report-toolbar.md)   
- [Файл конфигурации RSReportServer](report-server/rsreportserver-config-configuration-file.md)  
+ [Средство просмотра HTML-страниц и панель инструментов отчета](html-viewer-and-the-report-toolbar.md)   
+ [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md)  
   
   

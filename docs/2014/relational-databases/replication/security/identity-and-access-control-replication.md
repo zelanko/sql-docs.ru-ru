@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cd51a3e4c139c52d6510140324ae042c653377b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250318"
 ---
 # <a name="identity-and-access-control-replication"></a>Идентификатор и управление доступом (репликация)
@@ -27,11 +27,11 @@ ms.locfileid: "63250318"
   
  Система безопасности репликации использует проверку подлинности и авторизацию для контроля доступа к реплицируемым объектам базы данных, к компьютерам и агентам, участвующим в процессе репликации. Эти действия выполняются с помощью трех механизмов.  
   
--   Безопасность агента:  Модель безопасности агентов репликации обеспечивает точный контроль учетных записей, под которыми запускаются и подключаются агенты репликации. Подробные сведения о модели безопасности агентов см. в разделе [Replication Agent Security Model](replication-agent-security-model.md). Сведения о настройке имен для входа и паролей агентов см. в статье [Управление именами для входа и паролями при репликации](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication).  
+-   Безопасность агентов. модель безопасности агента репликации позволяет точно контролировать учетные записи, в которых агенты репликации запускаются и выполняют подключения. Подробные сведения о модели безопасности агентов см. в разделе [Replication Agent Security Model](replication-agent-security-model.md). Сведения о настройке имен для входа и паролей агентов см. в статье [Управление именами для входа и паролями при репликации](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication).  
   
--   Роли администрирования:  Убедитесь, что для настройки, обслуживания и обработки репликации используются правильные роли серверов и баз данных. Дополнительные сведения см. в статье [Security Role Requirements for Replication](security-role-requirements-for-replication.md).  
+-   Роли администрирования. Убедитесь, что для настройки, обслуживания и обработки репликации используются правильные роли сервера и базы данных. Дополнительные сведения см. в статье [Security Role Requirements for Replication](security-role-requirements-for-replication.md).  
   
--   Список доступа публикации (PAL): Предоставьте доступ к публикациям с помощью списка доступа к публикации. Он работает так же, как и список управления доступом [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. Когда подписчик подключается к издателю или распространителю и запрашивает доступ к публикации, данные для проверки подлинности, переданные агентом, проверяются согласно списку доступа к публикации. Дополнительные сведения и рекомендации по использованию списков доступа к публикации см. в [этой статье](secure-the-publisher.md).  
+-   Список доступа к публикации (PAL): предоставление доступа к публикациям через список доступа к данным. Он работает так же, как и список управления доступом [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. Когда подписчик подключается к издателю или распространителю и запрашивает доступ к публикации, данные для проверки подлинности, переданные агентом, проверяются согласно списку доступа к публикации. Дополнительные сведения и рекомендации по использованию списков доступа к публикации см. в [этой статье](secure-the-publisher.md).  
   
 ## <a name="filtering-published-data"></a>Фильтрование опубликованных данных  
  В дополнение к использованию проверки подлинности и авторизации для контроля доступа к реплицируемым данным и объектам репликация имеет два параметра для управления доступными данными на подписчике: фильтрация по столбцам и строкам. Дополнительные сведения о фильтрации см. в статье [Фильтрация опубликованных данных](../publish/filter-published-data.md).  
@@ -41,13 +41,13 @@ ms.locfileid: "63250318"
  Фильтрация опубликованных данных позволяет ограничить доступ к данным и указать данные, доступные на подписчике. Например, можно отфильтровать таблицу **Заказчик** так, чтобы партнеры компании получали сведения только о тех заказчиках, для которых в столбце **ShareInfo** имеется значение «да». При репликации слиянием может возникать проблема безопасности, если используется параметризованный фильтр, содержащий HOST_NAME(). Дополнительные сведения см. в подразделе «Фильтрация с использованием HOST_NAME()» раздела [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
 
 ## <a name="manage-logins-and-passwords-in-replication"></a>Управление именами входа и паролями в репликации
-  При настройке репликации укажите имена входа и пароли для агентов репликации. После настройки репликации можно изменить имена входа и пароли. Дополнительные сведения см. в статье [View and Modify Replication Security Settings](view-and-modify-replication-security-settings.md). Если вы измените пароль для учетной записи, которая используется агентом репликации, выполните процедуру [sp_changereplicationserverpasswords &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changereplicationserverpasswords-transact-sql).  
+  При настройке репликации укажите имена входа и пароли для агентов репликации. После настройки репликации можно изменить имена входа и пароли. Дополнительные сведения см. в разделе [Просмотр и изменение параметров безопасности репликации](view-and-modify-replication-security-settings.md). Если вы измените пароль для учетной записи, которая используется агентом репликации, выполните процедуру [sp_changereplicationserverpasswords &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changereplicationserverpasswords-transact-sql).  
   
-## <a name="see-also"></a>См. также  
- [Replication Agent Security Model](replication-agent-security-model.md)  (Модель безопасности агента репликации)  
- [Replication Security Best Practices](replication-security-best-practices.md)   
- [Безопасность репликации SQL Server](view-and-modify-replication-security-settings.md)   
- [Репликация угроз и уязвимости для безопасности](threat-and-vulnerability-mitigation-replication.md)   
+## <a name="see-also"></a>См. также:  
+ [Модель безопасности агента репликации](replication-agent-security-model.md)   
+ [Рекомендации по обеспечению безопасности репликации](replication-security-best-practices.md)   
+ [Безопасность Репликация SQL Server](view-and-modify-replication-security-settings.md)   
+ [Угроза репликации и устранение уязвимостей](threat-and-vulnerability-mitigation-replication.md)   
 
   
   

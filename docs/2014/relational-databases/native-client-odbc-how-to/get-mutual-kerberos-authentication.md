@@ -1,5 +1,5 @@
 ---
-title: Взаимной проверки подлинности Kerberos | Документация Майкрософт
+title: Получение взаимной проверки подлинности Kerberos | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9158544f40a18ff6dce97483be57e645e15a57d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200419"
 ---
 # <a name="get-mutual-kerberos-authentication"></a>Выполнение взаимной проверки подлинности Kerberos
@@ -22,7 +22,7 @@ ms.locfileid: "63200419"
   
  С версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , вышедшими до [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], образец работать не будет.  
   
- Дополнительные сведения см. в разделе [имени участника-службы &#40;имени участника-службы&#41; поддержка в клиентских соединениях](../native-client/features/service-principal-name-spn-support-in-client-connections.md).  
+ Дополнительные сведения см. [в разделе Имя субъекта-службы &#40;SPN&#41; поддержка в клиентских подключениях](../native-client/features/service-principal-name-spn-support-in-client-connections.md).  
   
 ## <a name="example"></a>Пример  
  При построении и запуске этого образца как 32-разрядного приложения в 64-разрядной операционной системе необходимо создать источник данных ODBC с помощью программы администрирования ODBC (исполняемый файл %windir%\SysWOW64\odbcad32.exe).  

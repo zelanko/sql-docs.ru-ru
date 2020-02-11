@@ -1,5 +1,5 @@
 ---
-title: Создание запроса интеллектуального анализа данных с помощью XML для Аналитики | Документация Майкрософт
+title: Создание запроса интеллектуального анализа данных с помощью XMLA | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ec69c7225d4c509d93787e667612269c4de91e23
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085547"
 ---
 # <a name="create-a-data-mining-query-by-using-xmla"></a>Создание запроса интеллектуального анализа данных с помощью XMLA
@@ -44,9 +44,9 @@ ms.locfileid: "66085547"
   
      На панели **Результаты** будет выведен список наборов строк схемы, содержащий имена наборов строк и столбцы наборов строк для всех наборов строк, доступных в данном экземпляре.  
   
-2.  В **запроса** области, поместите курсор после  **\<список ограничений >** и нажмите клавишу ВВОД, чтобы добавить новую строку.  
+2.  На панели **запрос** поместите курсор после ** \<списка ограничений>** и нажмите клавишу ВВОД, чтобы добавить новую строку.  
   
-3.  Поместите курсор на пустую строку и введите  **\<SchemaName > DMSCHEMA_MINING_MODEL_CONTENT\</SchemaName >**  
+3.  Поместите курсор на пустую строку и введите ** \<SchemaName>DMSCHEMA_MINING_MODEL_CONTENT\</счеманаме>**  
   
      Весь раздел ограничений теперь должен выглядеть следующим образом.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "66085547"
   
      `</Restrictions>`  
   
-4.  Нажмите кнопку **Выполнить**.  
+4.  Нажмите **Execute (Выполнить)**.  
   
      На панели **Результаты** отображается список имен столбцов для указанного набора строк схемы.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "66085547"
   
      введите следующую строку:  
   
-     **\<RequestType>DMSCHEMA_MINING_MODEL_CONTENT\</RequestType>**  
+     **\<RequestType>DMSCHEMA_MINING_MODEL_CONTENT\</рекуесттипе>**  
   
 2.  Измените список ограничений, чтобы задать имя модели интеллектуального анализа данных, добавив новое условие к списку ограничений.  
   
@@ -94,12 +94,12 @@ ms.locfileid: "66085547"
   
      `</Restrictions>`  
   
-5.  Нажмите кнопку **Выполнить**.  
+5.  Нажмите **Execute (Выполнить)**.  
   
      На панели результатов выводится определение схемы и значения для заданной модели.  
   
-## <a name="see-also"></a>См. также  
- [Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](mining-model-content-analysis-services-data-mining.md)   
+## <a name="see-also"></a>См. также:  
+ [&#40;содержимого моделей интеллектуального анализа данных Analysis Services — интеллектуальный анализ&#41;](mining-model-content-analysis-services-data-mining.md)   
  [Data Mining Schema Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets) 
   
   

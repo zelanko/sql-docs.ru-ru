@@ -17,24 +17,24 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f3164bca23e709fd434c6ba7850ec21179a076ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479714"
 ---
 # <a name="delete-a-member-or-collection-master-data-services"></a>Удаление элемента или коллекции (службы Master Data Services)
-  В службах [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]элементы и коллекции следует удалять, когда в них больше нет необходимости. Если необходимо удалить большое количество элементов, лучше воспользоваться промежуточным процессом. Дополнительные сведения см. в разделе [деактивировать или удалить членов группы с помощью промежуточного процесса &#40;службы Master Data Services&#41;](add-update-and-delete-data-master-data-services.md).  
+  В службах [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]элементы и коллекции следует удалять, когда в них больше нет необходимости. Если необходимо удалить большое количество элементов, лучше воспользоваться промежуточным процессом. Дополнительные сведения см. [в разделе Отключение или удаление элементов с помощью промежуточного процесса &#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md).  
   
 > [!NOTE]  
 >  Невозможно удалить элемент, если он используется в качестве значения атрибута на основе домена для другого элемента.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения этой процедуры:  
   
 -   Необходимо иметь разрешение на доступ к функциональной области **Обозреватель** .  
   
--   Для элементов, необходимо иметь как минимум **обновления** разрешение для конечного объекта модели, можно удалить элемент из.  
+-   Для членов необходимо иметь как минимум разрешение **Обновление** для объекта конечной модели, из которого удаляется элемент.  
   
 -   Для коллекций необходимо как минимум разрешение **Обновление** на удаляемый конечный объект коллекции.  
   
@@ -60,9 +60,9 @@ ms.locfileid: "65479714"
   
 7.  В диалоговом окне подтверждения нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также  
- [Повторная активация элемента или коллекции (службы Master Data Services)](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)   
- [Элементы (службы Master Data Services)](../../2014/master-data-services/members-master-data-services.md)   
- [Коллекции (службы Master Data Services)](../../2014/master-data-services/collections-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Повторная активация элемента или коллекции &#40;Master Data Services&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)   
+ [Master Data Services &#40;членов&#41;](../../2014/master-data-services/members-master-data-services.md)   
+ [&#40;коллекций Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  
   
   

@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eb3365195e3a64353fb0cbd45e832cd0206f678e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63241287"
 ---
 # <a name="load-xml-data"></a>Загрузка XML-данных
@@ -32,7 +32,7 @@ ms.locfileid: "63241287"
 ## <a name="bulk-loading-xml-data"></a>Массовая загрузка XML-данных  
  Массовую загрузку XML-данных на сервер можно осуществить при помощи реализованных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]средств массовой загрузки, таких как bcp. Инструкция OPENROWSET позволяет загрузить данные в XML-столбец из файлов. Это показано в следующем примере.  
   
-##### <a name="example-loading-xml-from-files"></a>Пример Загрузка XML из файлов  
+##### <a name="example-loading-xml-from-files"></a>Пример. Загрузка XML-данных из файлов  
  Следующий пример показывает, как вставить строку в таблицу T. Значение XML-столбца загружается из файла «C:\MyFile\xmlfile.xml» как объект CLOB, а целочисленному столбцу назначается значение 10.  
   
 ```  
@@ -52,7 +52,7 @@ FROM    (SELECT *
   
 -   Чтобы явно задать кодировку, воспользуйтесь типом `varbinary()`, поскольку он не работает с кодовыми страницами либо символьный тип для соответствующей кодовой страницы. После этого назначьте данные XML-столбцу, переменной или параметру.  
   
-### <a name="example-explicitly-specifying-an-encoding"></a>Пример явное указание кодировки  
+### <a name="example-explicitly-specifying-an-encoding"></a>Пример. Явное указание кодировки  
  Предположим, что есть XML-документ vcdoc, хранящийся в типе данных `varchar(max)`, который не объявлен явно как XML. Следующая инструкция добавляет объявление XML с кодировкой «iso8859-1», присоединяет к нему XML-документ, приводит результат к типу `varbinary(max)` (чтобы сохранить двоичное представление) и, наконец, приводит его к типу XML. Это позволяет процессору XML выполнять синтаксический анализ данных в соответствии с указанной кодировкой «iso8859-1» и создавать для строковых значений соответствующее представление UTF-16.  
   
 ```  
@@ -81,7 +81,7 @@ INSERT INTO T VALUES (N'...')
 CREATE XML SCHEMA COLLECTION XMLCOLL1 AS N'<xsd:schema ... '  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Данные XML (SQL Server)](xml-data-sql-server.md)  
   
   

@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 719e7a24efa2b0c68d4984d8b16f957a268fdafb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63265862"
 ---
 # <a name="creating-a-custom-report-item-run-time-component"></a>Создание компонента времени выполнения пользовательского элемента отчета
-  Компонент времени выполнения пользовательского элемента отчета реализуется как компонент [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] с помощью любого CLS-совместимого языка и вызывается обработчиком отчетов во время выполнения. Свойства компонента времени выполнения в среде разработки задаются настройкой соответствующего компонента времени разработки пользовательского элемента отчета.  
+  Компонент времени выполнения пользовательского элемента отчета реализуется как [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] компонент с помощью любого CLS-совместимого языка и вызывается обработчиком отчетов во время выполнения. Свойства компонента времени выполнения в среде разработки задаются настройкой соответствующего компонента времени разработки пользовательского элемента отчета.  
 
 <!--
 Replacing the following multiValue.....
@@ -146,10 +146,10 @@ namespace Microsoft.Samples.ReportingServices
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Архитектура пользовательских элементов отчета](custom-report-item-architecture.md)   
+## <a name="see-also"></a>См. также:  
+ [Архитектура пользовательского элемента отчета](custom-report-item-architecture.md)   
  [Создание компонента времени разработки пользовательского элемента отчета](creating-a-custom-report-item-design-time-component.md)   
  [Библиотеки классов пользовательских элементов отчета](custom-report-item-class-libraries.md)   
- [Как развернуть пользовательский элемент отчета](how-to-deploy-a-custom-report-item.md)  
+ [Развертывание пользовательского элемента отчета](how-to-deploy-a-custom-report-item.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: TCP - свойства IP-адреса (вкладка «протоколы») | Документация Майкрософт
+title: Свойства TCP-IP (вкладка «Протоколы») | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b545fbe28e28739b5f66a7beca1ab7c0450ae08a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150457"
 ---
-# <a name="tcp---ip-properties-protocols-tab"></a>TCP - свойства IP-адреса (вкладка «протоколы»)
+# <a name="tcp---ip-properties-protocols-tab"></a>Свойства TCP-IP (вкладка «Протоколы»)
   Используйте диалоговое окно **Свойства TCP/IP** для настройки параметров протокола TCP/IP. Щелкните пункт **TCP/IP** в левой панели, чтобы вывести настройки отдельных IP-адресов в панель сведений.  
   
  Чтобы изменения вступили в силу, необходимо перезапустить Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -37,7 +37,7 @@ ms.locfileid: "63150457"
  **No Delay**  
  Сервер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не реализует изменения этого свойства.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выбор сетевого протокола](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   
  [Создание допустимой строки подключения с использованием протокола TCP/IP](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)  
   

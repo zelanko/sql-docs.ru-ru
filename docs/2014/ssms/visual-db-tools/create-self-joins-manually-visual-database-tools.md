@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dd8e26099ec7152aac08a11b6f7e38550834d248
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184236"
 ---
 # <a name="create-self-joins-manually-visual-database-tools"></a>Создание самосоединения вручную (визуальные инструменты для баз данных)
@@ -124,8 +124,8 @@ Cheryl Carson       Abraham Bennet
   
 7.  Задайте другие параметры запроса, например выходные столбцы, условия поиска и порядок сортировки.  
   
-## <a name="see-also"></a>См. также  
- [Создание самосоединения автоматически &#40;визуальных инструментах баз данных&#41;](create-self-joins-automatically-visual-database-tools.md)   
+## <a name="see-also"></a>См. также:  
+ [Автоматическое создание самосоединений &#40;визуальных инструментов для баз данных&#41;](create-self-joins-automatically-visual-database-tools.md)   
  [Запросы с соединениями (визуальные инструменты для баз данных)](query-with-joins-visual-database-tools.md)  
   
   

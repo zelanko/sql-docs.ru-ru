@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 781963ddd2011c9e16cf67fdcd878039527546cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63294460"
 ---
 # <a name="query-definitions-differ-dialog-box-visual-database-tools"></a>Диалоговое окно «Определения запроса различаются» (визуальные инструменты для баз данных)
@@ -50,7 +50,7 @@ ms.locfileid: "63294460"
 > [!NOTE]  
 >  Если инструкция верна, но не поддерживается графически конструктором запросов и представлений, ее можно выполнить даже в том случае, если она не представлена на панелях «Диаграмма» и «Критерии». Например, если вводится запрос соединения, инструкция может быть выполнена, но не будет представлена на других панелях.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Инструменты конструктора запросов и представлений (визуальные инструменты для баз данных)](visual-database-tools.md)  
   
   

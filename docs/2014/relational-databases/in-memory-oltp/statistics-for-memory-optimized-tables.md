@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4e47a8c6f5b0da31aea9168bbbc56bd9b28afb96
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63155790"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>Статистика для таблиц, оптимизированных для памяти
@@ -24,13 +24,13 @@ ms.locfileid: "63155790"
   
  Табличные данные обычно с течением времени изменяются по мере вставки, обновления и удаления строк. Это означает, что статистику необходимо периодически обновлять. По умолчанию статистика по дисковым таблицам обновляется автоматически, когда оптимизатор определяет, что она устарела.  
   
- Статистика для оптимизированных для памяти таблиц по умолчанию не обновляется. Вместо этого нужно обновлять ее вручную. Используйте [UPDATE STATISTICS &#40;Transact-SQL&#41; ](/sql/t-sql/statements/update-statistics-transact-sql) для отдельных столбцов, индексов или таблиц. Используйте [sp_updatestats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) для обновления статистики для всех пользовательских и внутренних таблиц в базе данных.  
+ Статистика для оптимизированных для памяти таблиц по умолчанию не обновляется. Вместо этого нужно обновлять ее вручную. Для отдельных столбцов, индексов или таблиц используйте [инструкцию UPDATE STATISTICS &#40;&#41;Transact-SQL](/sql/t-sql/statements/update-statistics-transact-sql) . Используйте [sp_updatestats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) , чтобы обновить статистику для всех пользователей и внутренних таблиц в базе данных.  
   
- При использовании [CREATE STATISTICS &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-statistics-transact-sql) или [UPDATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql), необходимо указать `NORECOMPUTE` отключение автоматического сбора статистики обновление для оптимизированных для памяти таблиц. Для таблиц на диске [sp_updatestats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) обновляет статистику, только если она была изменена с момента последнего [sp_updatestats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql). Для таблиц, оптимизированных для памяти [sp_updatestats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) всегда формирует обновленную статистику. [sp_updatestats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) — хороший вариант для таблиц, оптимизированных для памяти; в противном случае необходимо знать, какие таблицы значительно изменились статистику можно обновлять по отдельности.  
+ При использовании инструкции [CREATE STATISTICS &#40;языке Transact-sql&#41;](/sql/t-sql/statements/create-statistics-transact-sql) или [обновлении статистики &#40;transact-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql)необходимо указать `NORECOMPUTE` , чтобы отключить автоматическое обновление статистики для оптимизированных для памяти таблиц. Для таблиц на основе диска [sp_updatestats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) только обновляет статистику, если таблица была изменена с момента последнего [sp_updatestats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql). Для таблиц, оптимизированных для памяти, [sp_updatestats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) всегда создает обновленную статистику. [sp_updatestats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) является хорошим вариантом для оптимизированных для памяти таблиц. в противном случае необходимо знать, какие таблицы имеют значительные изменения, чтобы можно было обновлять статистику по отдельности.  
   
  Статистика может быть создана или при выборочном анализе данных, или при выполнении полного сканирования. Выборочная статистика использует только образец данных таблиц для оценки распределения данных. Полная статистика просматривает всю таблицу для определения распределения данных. Статистика полного сканирования обычно более точна, но для ее вычисления требуется больше времени. Выборочную статистику можно получить быстрее.  
   
- Дисковые таблицы по умолчанию используют выборочную статистику. Оптимизированные для памяти таблицы поддерживают только полную статистику. При использовании [CREATE STATISTICS &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-statistics-transact-sql) или [UPDATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql), необходимо указать `FULLSCAN` параметр для оптимизированных для памяти таблицы.  
+ Дисковые таблицы по умолчанию используют выборочную статистику. Оптимизированные для памяти таблицы поддерживают только полную статистику. При использовании инструкции [CREATE STATISTICS &#40;Transact-sql&#41;](/sql/t-sql/statements/create-statistics-transact-sql) или [UPDATE STATISTICS &#40;&#41;Transact-SQL ](/sql/t-sql/statements/update-statistics-transact-sql)необходимо указать `FULLSCAN` параметр для таблиц, оптимизированных для памяти.  
   
  Дополнительные замечания по статистике для оптимизированных для памяти таблиц.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "63155790"
   
 -   Или обновите статистику с помощью скрипта [!INCLUDE[tsql](../../../includes/tsql-md.md)] , как описано ниже.  
   
- Чтобы обновить статистику для отдельной таблицы, оптимизированной для памяти (*myschema*. *Mytable*), выполните следующий скрипт:  
+ Чтобы обновить статистику для отдельной таблицы, оптимизированной для памяти (*myschema*. *MyTable*), выполните следующий скрипт:  
   
 ```  
 UPDATE STATISTICS myschema.Mytable WITH FULLSCAN, NORECOMPUTE  
@@ -86,7 +86,7 @@ FROM sys.tables WHERE is_memory_optimized=1
 EXEC sp_executesql @sql  
 ```  
   
- Чтобы обновить статистику для всех таблиц в базе данных, запустите [sp_updatestats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql).  
+ Чтобы обновить статистику для всех таблиц в базе данных, выполните [sp_updatestats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql).  
   
  В следующем примере сообщается, когда статистика по оптимизированным для памяти таблицам обновлялась последний раз. Эти сведения помогут решить, нужно ли обновить статистику.  
   
@@ -96,7 +96,7 @@ from sys.tables t join sys.stats s on t.object_id=s.object_id cross apply sys.dm
 where t.is_memory_optimized=1  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Таблицы, оптимизированные для памяти](memory-optimized-tables.md)  
   
   

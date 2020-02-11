@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a16f070623503dcb17788bc75bd5695bc1584d7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200243"
 ---
 # <a name="using-statement-parameters"></a>Использование параметров инструкции
@@ -32,9 +32,9 @@ ms.locfileid: "63200243"
   
 -   Повышать степень взаимодействия с пользователем при конструировании критериев запроса.  
   
--   Управление **текст**, **ntext**, и **изображение** данных и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-определенные типы данных C.  
+-   Управление данными типа **Text**, **ntext**и **Image** и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]конкретными типами данных C.  
   
- Например **частей** таблица содержит столбцы с именем **PartID**, **описание**, и **цена**. Для добавления компонента без параметров необходимо составить инструкцию SQL, например:  
+ Например, таблица **Parts** содержит столбцы с именами **PartID**, **Description**и **Price**. Для добавления компонента без параметров необходимо составить инструкцию SQL, например:  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (2100, 'Drive shaft', 50.00)  
@@ -54,7 +54,7 @@ INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)
   
 -   [Привязка параметров](using-statement-parameters-binding-parameters.md)  
   
-## <a name="see-also"></a>См. также  
- [Выполнение запросов &#40;ODBC&#41;](executing-queries-odbc.md)  
+## <a name="see-also"></a>См. также:  
+ [Выполняя запросы &#40;ODBC&#41;](executing-queries-odbc.md)  
   
   

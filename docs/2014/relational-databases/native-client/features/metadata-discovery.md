@@ -11,20 +11,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e808f1fc82dfe0a9fd6fa96999e6e2c5320ee452
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63162018"
 ---
 # <a name="metadata-discovery"></a>Обнаружение метаданных
-  Улучшенное обнаружение метаданных в [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] позволяет [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] форматирования собственные клиентские приложения, чтобы убедиться, что метаданные столбца или параметра, возвращенные в результате выполнения запроса, идентичен или совместимая с метаданными, вы указали перед Вы выполнили запрос. Если формат метаданных, возвращенных в результате выполнения запроса, будет несовместим с форматом, указанным до выполнения запроса, возвращается ошибка.  
+  Улучшение обнаружения метаданных в [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] позволяет [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственным клиентским приложениям гарантировать, что метаданные столбца или параметра, возвращаемые при выполнении запроса, идентичны или совместимы с форматом метаданных, указанным перед выполнением запроса. Если формат метаданных, возвращенных в результате выполнения запроса, будет несовместим с форматом, указанным до выполнения запроса, возвращается ошибка.  
   
  В функциях bcp и ODBC, а также интерфейсах IBCPSession и IBCPSession2 теперь можно задавать отложенное чтение (отложенное обнаружение метаданных), чтобы избежать обнаружения метаданных для операций с параметром queryout. Это позволяет повысить производительность и устранить ошибки обнаружения метаданных.  
   
- При разработке приложения с помощью [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client в [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] , но подключиться к серверной версии более ранней, чем [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], обнаружение метаданных, функции будет соответствовать версии сервера.  
+ Если приложение разрабатывается с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] помощью собственного клиента [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] в, но соединение с версией сервера, [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]более ранней, чем, функция обнаружения метаданных будет соответствовать версии сервера.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  В [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] были изменены следующие функции bcp, которые теперь обеспечивают улучшенное обнаружение метаданных:  
   
 -   [bcp_columns](../../native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)  
@@ -37,9 +37,9 @@ ms.locfileid: "63162018"
   
 -   [bcp_setcolfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md)  
   
- Вы также увидите повышение производительности при указании формата метаданных с помощью [bcp_setbulkmode](../../native-client-odbc-extensions-bulk-copy-functions/bcp-setbulkmode.md).  
+ При указании формата метаданных с помощью [bcp_setbulkmode](../../native-client-odbc-extensions-bulk-copy-functions/bcp-setbulkmode.md)также отображается улучшение производительности.  
   
- [bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) получил новый *eOption* для управления поведением bcp_readfmt: `BCPDELAYREADFMT`.  
+ [bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) имеет новый *eOption* для управления поведением bcp_readfmt: `BCPDELAYREADFMT`.  
   
  В [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] были изменены следующие функции ODBC, которые теперь обеспечивают улучшенное обнаружение метаданных:  
   
@@ -57,7 +57,7 @@ ms.locfileid: "63162018"
   
 -   IColumnsRowset::GetColumnsRowset  
   
--   ICommandWithParameters::GetParameterInfo (см. в разделе [ICommandWithParameters](../../native-client-ole-db-interfaces/icommandwithparameters.md) Дополнительные сведения)  
+-   ICommandWithParameters:: GetParameterInfo (Дополнительные сведения см. в [ICommandWithParameters](../../native-client-ole-db-interfaces/icommandwithparameters.md) )  
   
  Повышение производительности также заметно при указании формата метаданных с помощью метода IBCPSession::BCPSetBulkMode.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "63162018"
   
 -   sp_describe_undeclared_parameters  
   
-## <a name="see-also"></a>См. также  
- [Компоненты SQL Server Native Client](sql-server-native-client-features.md)  
+## <a name="see-also"></a>См. также:  
+ [Компоненты собственного клиента SQL Server](sql-server-native-client-features.md)  
   
   

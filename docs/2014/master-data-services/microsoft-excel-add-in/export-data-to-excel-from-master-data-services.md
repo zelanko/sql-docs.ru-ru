@@ -11,18 +11,18 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bbe1188773d0770ff345cd54ea47e03a3c05555f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482716"
 ---
 # <a name="load-data-from-mds-into-excel"></a>Загрузка данных из MDS в Excel
-  В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], необходимо загрузить данные из репозитория MDS для работы с ним.  
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]В необходимо загрузить данные из репозитория MDS, чтобы работать с [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]ними.  
   
- Если вы хотите отфильтровать перед загрузкой набора данных, см. в разделе [фильтрация данных перед загрузкой &#40;надстройки MDS для Excel&#41; ](filter-data-before-exporting-mds-add-in-for-excel.md) вместо этого.  
+ Если необходимо отфильтровать набор данных перед загрузкой, см. раздел [Фильтрация данных перед Загрузкой &#40;надстройка MDS для Excel&#41;](filter-data-before-exporting-mds-add-in-for-excel.md) .  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения этой процедуры:  
   
 -   Необходимо иметь разрешение на доступ к функциональной области **Обозреватель** .  
@@ -41,17 +41,17 @@ ms.locfileid: "65482716"
   
     > [!NOTE]  
     >  -   В Excel загружается только первый миллион элементов. Чтобы отфильтровать список перед загрузкой, на ленте в группе **Подключение и загрузка** нажмите кнопку **Фильтр**.  
-    > -   В столбцах, которые являются ограниченными списками (атрибутами на основе домена), загружаются только первые 25 000 значений. Это число можно изменить в свойстве MaximumDbaEntitySize в файле excelusersettings.config, расположенном на компьютере, на котором установлена программа Excel. Этот файл находится в C:\Users\\< пользователя\>\AppData\Local\Microsoft\Microsoft SQL Server\120\MasterDataServices\\.  
+    > -   В столбцах, которые являются ограниченными списками (атрибутами на основе домена), загружаются только первые 25 000 значений. Это число можно изменить в свойстве MaximumDbaEntitySize в файле excelusersettings.config, расположенном на компьютере, на котором установлена программа Excel. Этот файл находится в папке C:\Users\\<user\>\AppData\Local\Microsoft\Microsoft SQL Server\120\MasterDataServices\\.  
   
     > [!NOTE]  
     >  Если при загрузке разделенных текстом данных с помощью надстройки для Microsoft Excel в 32-разрядную версию Excel свойствам **Число ячеек для загрузки** и **Число ячеек для публикации** присвоено максимальное значение 1000, возникнет ошибка нехватки памяти. Для использования максимальных значений свойств **Число ячеек для загрузки** и **Число ячеек для публикации**необходимо использовать 64-разрядную версию Excel.  
   
-## <a name="next-steps"></a>Следующие шаги  
- [Публикация данных из Excel в MDS &#40;надстройка MDS для Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)  
+## <a name="next-steps"></a>Next Steps  
+ [Публикация данных из Excel в службах MDS &#40;надстройка MDS для Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)  
   
-## <a name="see-also"></a>См. также  
- [Загрузка данных &#40;надстройка MDS для Excel&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)   
- [Диалоговое окно "Фильтр" (надстройка MDS для Excel)](filter-dialog-box-mds-add-in-for-excel.md)   
- [Публикация данных &#40;надстройка MDS для Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+## <a name="see-also"></a>См. также:  
+ [Загрузка надстройка MDS для Excel &#40;данных&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)   
+ [Диалоговое окно "фильтр" &#40;надстройка MDS для Excel&#41;](filter-dialog-box-mds-add-in-for-excel.md)   
+ [Публикация &#40;данных надстройка MDS для Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   

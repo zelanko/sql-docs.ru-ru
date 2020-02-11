@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: db6467b21f84a80bb14a5e6ccad30e16d7cfb584
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63180414"
 ---
 # <a name="using-a-notification-class-for-a-delivery-extension"></a>Использование класса Notification для модуля доставки
@@ -37,7 +37,7 @@ ms.locfileid: "63180414"
 ## <a name="retry-functionality"></a>Функция повторной передачи  
  Службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] предоставляют возможность создавать очереди повтора для уведомлений, которые не могут быть переданы немедленно. После вызова сервером отчетов метода <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.Deliver%2A> модуля доставки этот модуль доставки может обратиться к серверу отчетов с запросом о повторной доставке в более поздний момент времени. В таком случае сервер отчетов помещает уведомление во внутреннюю очередь и по истечении определенного периода времени предпринимает новую попытку доставки. Администраторы могут настраивать максимальное число попыток повторной передачи, предпринимаемых сервером отчетов, а также период времени между повторными попытками, в разделе модуля доставки файла RSReportServer.config с помощью элемента XML **MaxNumberOfRetries** и элемента XML **PeriodBetweenRetries**. Уведомления удаляются из очереди повтора, если в дальнейшем доставка завершится успешно или будет достигнуто максимальное число попыток повторной передачи. Если после достижения максимального числа попыток повторной передачи доставка оканчивается неудачей, уведомление отменяется.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Реализация модуля доставки](../delivery-extension/implementing-a-delivery-extension.md)   
  [Библиотека модулей Reporting Services](../reporting-services-extension-library.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Слияние диалоговое окно секции (службы Analysis Services — многомерные данные) | Документация Майкрософт
+title: Диалоговое окно «слияние секции» (Analysis Services-многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,20 +13,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 26751f2cc00330716f160c115d0e839cc6d9527a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077829"
 ---
 # <a name="merge-partition-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Слияние секций» (службы Analysis Services — многомерные данные)
   Диалоговое окно **Слияние секций** в среде **SQL Server Management Studio** позволяет объединять секции для группы мер в кубе. Для вывода диалогового окна **Слияние секций** щелкните правой кнопкой мыши папку "Секции" в **обозревателе объектов** и выберите команду **Слияние секций** из контекстного меню.  
   
 ## <a name="options"></a>Параметры  
- **Server**  
+ **Сервер**  
  Выберите имя экземпляра службы Analysis Services, содержащего нужную секцию.  
   
- **Name**  
+ **Название**  
  Выберите имя существующей секции для использования в качестве секции назначения.  
   
  **Папка**  
@@ -38,16 +38,16 @@ ms.locfileid: "66077829"
 > [!NOTE]  
 >  Объединять можно только секции в одной группе мер с одной статистической схемой.  
   
- Сетка содержит следующие столбцы:  
+ Сетка содержит следующие столбцы.  
   
-|Столбец|Описание|  
+|Столбец|Description|  
 |------------|-----------------|  
-|**Объединить**|Выберите, чтобы выполнить слияние исходной секции с секцией назначения.|  
+|**AutoMerge**|Выберите, чтобы выполнить слияние исходной секции с секцией назначения.|  
 |**Имя секции**|Отображает имя исходной секции.|  
 |**Последняя обработка**|Выводит дату и время последней обработки исходной секции.|  
   
-## <a name="see-also"></a>См. также  
- [Секции (службы Analysis Services — многомерные данные)](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
- [Объединение секций в службах Analysis Services (службы SSAS — многомерные данные)](multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+## <a name="see-also"></a>См. также:  
+ [Секции &#40;Analysis Services многомерных данных&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [Слияние секций в Analysis Services &#40;SSAS — многомерные&#41;](multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

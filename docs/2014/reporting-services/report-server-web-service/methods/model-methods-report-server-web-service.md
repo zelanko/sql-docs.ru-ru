@@ -1,5 +1,5 @@
 ---
-title: Методы моделей | Документация Майкрософт
+title: Методы модели | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6a1246d422b8ed88b0e9411dc5df5b398d0bfef6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63283436"
 ---
 # <a name="model-methods"></a>Методы моделей
@@ -36,7 +36,7 @@ ms.locfileid: "63283436"
 |<xref:ReportService2010.ReportingService2010.SetModelDrillthroughReports%2A>|Связывает набор детализированных отчетов с моделью.|  
 |<xref:ReportService2010.ReportingService2010.SetModelItemPolicies%2A>|Задает политики безопасности для элемента модели.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание приложений с помощью веб-службы и .NET Framework](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Веб-служба сервера отчетов](../report-server-web-service.md)   
  [Методы веб-службы сервера отчетов](report-server-web-service-methods.md)   

@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3cf9d0651b1a0ce5bbb49a575aea10723667ee2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479462"
 ---
 # <a name="hierarchies-master-data-services"></a>Иерархии (службы основных данных)
@@ -35,9 +35,9 @@ ms.locfileid: "65479462"
 ## <a name="kinds-of-hierarchies"></a>Виды иерархий  
  Можно создавать разные иерархии для просмотра и систематизации элементов разными способами. Можно создавать:  
   
--   Неоднородные иерархии из единой сущности, которые называются явными иерархиями. Дополнительные сведения см. в разделе [Explicit Hierarchies &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md).  
+-   Неоднородные иерархии из единой сущности, которые называются явными иерархиями. Дополнительные сведения см. в разделе [Явные иерархии (службы Master Data Services)](../../2014/master-data-services/explicit-hierarchies-master-data-services.md).  
   
--   Иерархии на основе уровней, состоящие из многих сущностей и основанные на существующих связях между сущностями и их атрибутами, которые называются производными иерархиями. Дополнительные сведения см. в разделе [Derived Hierarchies &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md).  
+-   Иерархии на основе уровней, состоящие из многих сущностей и основанные на существующих связях между сущностями и их атрибутами, которые называются производными иерархиями. Дополнительные сведения см. в разделе [Производные иерархии (службы Master Data Services)](../../2014/master-data-services/derived-hierarchies-master-data-services.md).  
   
 > [!NOTE]  
 >  Все элементы в иерархии должны быть в одной модели.  
@@ -50,27 +50,27 @@ ms.locfileid: "65479462"
 ## <a name="hierarchy-example"></a>Пример иерархии  
  В следующем примере в иерархии элементы продуктов группируются по элементам подкатегории.  
   
- ![Пример иерархии, сгруппированной по подкатегориям](../../2014/master-data-services/media/mds-conc-hierarchy.gif "Пример иерархии, сгруппированной по подкатегориям")  
+ ![Пример иерархии, сгруппированной по подкатегории](../../2014/master-data-services/media/mds-conc-hierarchy.gif "Пример иерархии, сгруппированной по подкатегории")  
   
 ## <a name="related-tasks"></a>Связанные задачи  
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Включение сущности для явных иерархий и коллекций.|[Активация сущности для явных иерархий и коллекций &#40;службы Master Data Services&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
-|Создание явной иерархии.|[Создание явной иерархии (службы Master Data Services)](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
-|Создание производной иерархии.|[Создание производной иерархии (службы Master Data Services)](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
-|Скрытие или удаление уровней в существующей производной иерархии.|[Скрытие или удаление уровней в производной иерархии (службы Master Data Services)](../../2014/master-data-services/hide-or-delete-levels-in-a-derived-hierarchy-master-data-services.md)|  
+|Включение сущности для явных иерархий и коллекций.|[Включение сущности для явных иерархий и коллекций &#40;Master Data Services&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
+|Создание явной иерархии.|[Создание явной иерархии &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
+|Создание производной иерархии.|[Создание производной иерархии &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
+|Скрытие или удаление уровней в существующей производной иерархии.|[Скрытие или удаление уровней в производной иерархии &#40;Master Data Services&#41;](../../2014/master-data-services/hide-or-delete-levels-in-a-derived-hierarchy-master-data-services.md)|  
   
 ## <a name="related-content"></a>См. также  
   
--   [Явные иерархии (службы Master Data Services)](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
+-   [Явные иерархии &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
   
--   [Производные иерархии (службы Master Data Services)](../../2014/master-data-services/derived-hierarchies-master-data-services.md)  
+-   [Производные иерархии &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)  
   
--   [Рекурсивные иерархии (службы Master Data Services)](../../2014/master-data-services/recursive-hierarchies-master-data-services.md)  
+-   [Рекурсивные иерархии &#40;Master Data Services&#41;](../../2014/master-data-services/recursive-hierarchies-master-data-services.md)  
   
--   [Производные иерархии с явными ограничениями (службы Master Data Services)](../../2014/master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)  
+-   [Производные иерархии с явно заданными ограничениями &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)  
   
--   [Коллекции (службы Master Data Services)](collections-master-data-services.md)  
+-   [&#40;коллекций Master Data Services&#41;](collections-master-data-services.md)  
   
   

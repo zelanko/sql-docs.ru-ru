@@ -1,5 +1,5 @@
 ---
-title: Справка F1 мастера объект связанного | Документация Майкрософт
+title: Справка F1 мастера связанных объектов | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1ac7ca54d8db398cf93e83e93c8f7d87c81f9d6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078067"
 ---
 # <a name="linked-object-wizard-f1-help"></a>Справка F1 мастера связанных объектов
-  Используйте мастер связанных объектов для установления связи или импорта данных из объектов других баз данных служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] того же или другого экземпляра служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] в текущий проект служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , открытый в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Связанные объекты продолжают отражать значения в их исходной базе данных служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , в то время как импортированные объекты не воспроизводят изменения, внесенные в их базу данных-источник. Могут связываться измерения и группы мер, включая связанные с ними меры. Могут импортироваться действия, ключевые показатели эффективности и вычисления.  
+  С помощью мастера связанных объектов можно связать или [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] импортировать объекты из других баз данных либо из того же [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] экземпляра или из другого экземпляра, в текущий [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] проект в. [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] Связанные объекты продолжают отражать значения в их исходной базе данных служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , в то время как импортированные объекты не воспроизводят изменения, внесенные в их базу данных-источник. Могут связываться измерения и группы мер, включая связанные с ними меры. Могут импортироваться действия, ключевые показатели эффективности и вычисления.  
   
  Мастер связанных объектов помогает выполнить следующие этапы.  
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4fef2df598d96b33def41f27345f88226fd4c6b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63185411"
 ---
 # <a name="databasetoconnect-element-dta"></a>Элемент DatabaseToConnect (DTA)
@@ -35,9 +35,10 @@ ms.locfileid: "63185411"
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
-|**Тип данных и длина**|`string`, неограниченная длина|  
+|**Тип данных и длина**|
+  `string`, неограниченная длина|  
 |**Значение по умолчанию**|Нет.|  
 |**Наличие**|Необязательный параметр. Может использоваться один раз для каждого элемента `TuningOptions`.|  
   
@@ -48,13 +49,13 @@ ms.locfileid: "63185411"
 |**Родительский элемент**|[Элемент TuningOptions (DTA)](tuningoptions-element-dta.md)|  
 |**Дочерние элементы**|None|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Используйте `DatabaseToConnect` для указания имени первой базы данных, к которой должен подключиться помощник по настройке ядра СУБД при запуске сеанса настройки. Этот элемент позволяет задать только одну базу данных. Если задано несколько имен баз данных, помощник по настройке ядра СУБД вернет ошибку.  
   
 ## <a name="example"></a>Пример  
  Пример использования см. в разделе [Образец входного XML-файла с описанием встроенной рабочей нагрузки (DTA)](xml-input-file-sample-with-inline-workload-dta.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по входным XML-файлам (помощник по настройке ядра СУБД)](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

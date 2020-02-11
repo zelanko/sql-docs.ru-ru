@@ -1,5 +1,5 @@
 ---
-title: Класс ClientNetLibInfo | Документация Майкрософт
+title: Класс класс ClientNetLibInfo | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,18 +19,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: f7c2e734fdb332199595a0236d7d86666f4429fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63191340"
 ---
 # <a name="clientnetlibinfo-class"></a>Класс ClientNetLibInfo
   Класс [ClientNetLibInfo](clientnetlibinfo-class.md) представляет сведения о сетевой библиотеке клиента.  
   
- Файл сетевой библиотеки клиента позволяет экземпляру клиента связываться по сети с экземпляром [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с помощью конкретного сетевого протокола.  
+ Файл сетевой библиотеки клиента позволяет экземпляру клиента взаимодействовать по сети с экземпляром [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с помощью определенного сетевого протокола.  
   
-## <a name="see-also"></a>См. также  
- [Настройка клиентских протоколов](https://technet.microsoft.com/library/ms181035.aspx)  
+## <a name="see-also"></a>См. также:  
+ [настройка клиентских протоколов](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

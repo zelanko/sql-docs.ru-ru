@@ -1,5 +1,5 @@
 ---
-title: Конструкторы и диалоговые окна (табличное) служб Analysis Services | Документация Майкрософт
+title: Конструкторы Analysis Services и диалоговые окна (табличные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f049e8a91b072bc49c3c555101fdf9fb1398944c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062573"
 ---
 # <a name="analysis-services-designers-and-dialog-boxes-tabular"></a>Конструкторы и диалоговые окна служб Analysis Services (табличная модель)
@@ -22,14 +22,14 @@ ms.locfileid: "66062573"
   
  Подразделы в этом разделе:  
   
- [Диалоговые окна ссылка &#40;SSAS&#41;](dialog-boxes-reference-ssas.md)  
+ [Справочник по диалоговым окнам &#40;SSAS&#41;](dialog-boxes-reference-ssas.md)  
   
  [Справочник по мастеру импорта таблиц &#40;SSAS&#41;](table-import-wizard-reference-ssas.md)  
   
- [Диалоговое окно «Свойства соединения» &#40;службы SSAS — табличные&#41;](connection-properties-dialog-box-ssas-tabular.md)  
+ [Диалоговое окно "Свойства соединения" &#40;SSAS — табличные&#41;](connection-properties-dialog-box-ssas-tabular.md)  
   
- [Базы данных свойства &#40;службы SSAS — табличные&#41;](database-properties-dialog-box-ssas-tabular.md)  
+ [Диалоговое окно "Свойства базы данных" &#40;SSAS — табличные&#41;](database-properties-dialog-box-ssas-tabular.md)  
   
- [Диалоговое окно свойств таблицы &#40;службы SSAS — табличные&#41;](table-properties-dialog-box-ssas-tabular.md)  
+ [Диалоговое окно «Свойства таблицы» &#40;SSAS — табличные&#41;](table-properties-dialog-box-ssas-tabular.md)  
   
   

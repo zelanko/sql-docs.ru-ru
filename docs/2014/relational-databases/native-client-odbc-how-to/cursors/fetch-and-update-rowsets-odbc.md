@@ -1,5 +1,5 @@
 ---
-title: Выбор и обновление наборов строк (ODBC) | Документация Майкрософт
+title: Выборка и обновление наборов строк (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f04184e968b60a58c4adfa067d516b58b0a43292
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200450"
 ---
 # <a name="fetch-and-update-rowsets-odbc"></a>Выбор и обновление наборов строк (ODBC)
     
 ### <a name="to-fetch-and-update-rowsets"></a>Получение и обновление наборов строк  
   
-1.  Можно также вызвать [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) с SQL_ROW_ARRAY_SIZE, чтобы изменить число строк (R) в наборе строк.  
+1.  При необходимости вызовите [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) с SQL_ROW_ARRAY_SIZE, чтобы изменить число строк (R) в наборе строк.  
   
 2.  Вызовите [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) или [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md) , чтобы получить набор строк.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "63200450"
   
 6.  Выполните инструкцию позиционирования UPDATE или DELETE, задав имя курсора (его можно получить с помощью [SQLGetCursorName](../../native-client-odbc-api/sqlgetcursorname.md)) и используя дескриптор другой инструкции в том же соединении (необязательно).  
   
-## <a name="see-also"></a>См. также  
- [Использование инструкций по курсорам &#40;ODBC&#41;](using-cursors-how-to-topics-odbc.md)  
+## <a name="see-also"></a>См. также:  
+ [Инструкции по использованию курсоров &#40;ODBC&#41;](using-cursors-how-to-topics-odbc.md)  
   
   

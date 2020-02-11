@@ -16,20 +16,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1dfa6926d86fce5006e458b3738a28a8b5f467d0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63267392"
 ---
 # <a name="sql-server-agent-error-log"></a>Журнал ошибок агента SQL Server
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Агент создает журнал ошибок, в который по умолчанию записываются предупреждения и ошибки. В журнале отображаются следующие предупреждения и ошибки:  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Агент создает журнал ошибок, который по умолчанию записывает предупреждения и ошибки. В журнале отображаются следующие предупреждения и ошибки:  
   
--   Предупреждающие сообщения, содержащие сведения о потенциальных проблемах, например "Задание \<*имя_задания*> удалено в процессе выполнения".  
+-   Предупреждающие сообщения, содержащие сведения о потенциальных проблемах, например "задание \< *job_name*> было удалено во время выполнения".  
   
 -   Сообщения об ошибках, обычно требующих вмешательства системного администратора, например «Невозможно начать почтовый сеанс». Сообщения об ошибках могут отправляться конкретному пользователю или на конкретный компьютер с помощью команды **net send**.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает до девяти журналов ошибок агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Каждый архивируемый журнал снабжается расширением, указывающим относительный срок давности журнала. Например, расширение .1 указывает на новейший архивированный журнал ошибок, а расширение .9 — на наиболее старый.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]поддерживает до девяти [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] журналов ошибок агента. Каждый архивируемый журнал снабжается расширением, указывающим относительный срок давности журнала. Например, расширение .1 указывает на новейший архивированный журнал ошибок, а расширение .9 — на наиболее старый.  
   
  По умолчанию сообщения трассировки выполнения не записываются в журнал ошибок агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так как они могут его переполнить. При заполнении журнала ошибок снижается возможность выбора и анализа более сложных ошибок. Так как ведение журнала увеличивает нагрузку на сервер, важно правильно оценить эффект, получаемый при захвате сообщений трассировки выполнения в журнал ошибок. В общем случае захват всех сообщений будет наилучшим вариантом только при отладке конкретной проблемы.  
   
@@ -37,11 +37,11 @@ ms.locfileid: "63267392"
   
  **Просмотр журнала ошибок агента SQL Server**  
   
--   [Просмотр журнала ошибок агента SQL Server (среда SQL Server Management Studio)](view-sql-server-agent-error-log-sql-server-management-studio.md) 
+-   [Просмотр агент SQL Server журнал ошибок &#40;SQL Server Management Studio&#41;](view-sql-server-agent-error-log-sql-server-management-studio.md) 
   
  **Переименование журнала ошибок агента SQL Server**  
   
--   [Переименование журнала ошибок агента SQL Server (среда SQL Server Management Studio)](rename-a-sql-server-agent-error-log-sql-server-management-studio.md)  
+-   [Переименование агент SQL Server &#40;журнала ошибок SQL Server Management Studio&#41;](rename-a-sql-server-agent-error-log-sql-server-management-studio.md)  
   
  **Отправка сообщений об ошибках агента SQL Server**  
   
@@ -49,6 +49,6 @@ ms.locfileid: "63267392"
   
  **Запись сообщений трассировки выполнения в журнал ошибок агента SQL Server**  
   
--   [Запись сообщений трассировки выполнения в журнал ошибок агента SQL Server (среда SQL Server Management Studio)](write-execution-trace-messages-to-sql-server-agent-log-ssms.md)  
+-   [Запись сообщений трассировки выполнения в журнал ошибок агент SQL Server &#40;SQL Server Management Studio&#41;](write-execution-trace-messages-to-sql-server-agent-log-ssms.md)  
   
   

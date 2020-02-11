@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a7140e3b4511417952246093e5ed82da9f2c099b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184320"
 ---
 # <a name="create-queries-visual-database-tools"></a>Создание запросов (визуальные инструменты для баз данных)
@@ -43,11 +43,11 @@ ms.locfileid: "63184320"
   
  При дальнейшем улучшении запроса можно изменить код SQL на **панели SQL** или выбрать такие параметры, как порядок сортировки или псевдонимы столбцов на **панели критериев**.  
   
-## <a name="see-also"></a>См. также  
- [Сохранение запросов &#40;визуальных инструментах баз данных&#41;](save-queries-visual-database-tools.md)   
- [Типы запросов &#40;визуальных инструментах баз данных&#41;](types-of-queries-visual-database-tools.md)   
- [Определение критериев поиска &#40;визуальных инструментах баз данных&#41;](specify-search-criteria-visual-database-tools.md)   
- [Резюмирование результатов запросов &#40;визуальных инструментах баз данных&#41;](summarize-query-results-visual-database-tools.md)   
+## <a name="see-also"></a>См. также:  
+ [Сохранение запросов &#40;визуальных инструментов для баз данных&#41;](save-queries-visual-database-tools.md)   
+ [Типы запросов &#40;визуальных инструментов для баз данных&#41;](types-of-queries-visual-database-tools.md)   
+ [Укажите условия поиска &#40;визуальные инструменты для баз данных&#41;](specify-search-criteria-visual-database-tools.md)   
+ [Суммировать результаты запроса &#40;визуальных инструментов для баз данных&#41;](summarize-query-results-visual-database-tools.md)   
  [Выполнение основных операций с запросами (визуальные инструменты для баз данных)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

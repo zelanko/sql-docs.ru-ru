@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d64b5bf6b60f37bf386840031c304dd5b13faaeb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63158808"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>Привязка базы данных с таблицами, оптимизированными для памяти, к пулу ресурсов
@@ -30,7 +30,7 @@ ms.locfileid: "63158808"
 ## <a name="create-the-database-and-resource-pool"></a>Создайте базу данных и пул ресурсов  
  Можно создать базу данных и пул ресурсов в любом порядке. Важно, чтобы база данных и пул ресурсов существовали еще до привязки.  
   
-### <a name="create-the-database"></a>Создайте базу данных  
+### <a name="create-the-database"></a>Создание базы данных  
  Следующая инструкция [!INCLUDE[tsql](../../includes/tsql-md.md)] создает базу данных с именем IMOLTP_DB, которая будет содержать одну или несколько таблиц, оптимизированных для памяти. Путь \<driveAndPath> должен существовать до выполнения этой команды.  
   
 ```sql  
@@ -41,10 +41,10 @@ ALTER DATABASE IMOLTP_DB ADD FILE( NAME = 'IMOLTP_DB_fg' , FILENAME = 'c:\data\I
 GO  
 ```  
   
-### <a name="determine-the-minimum-value-for-minmemorypercent-and-maxmemorypercent"></a>Определение минимального значения для MIN_MEMORY_PERCENT и MAX_MEMORY_PERCENT  
+### <a name="determine-the-minimum-value-for-min_memory_percent-and-max_memory_percent"></a>Определение минимального значения для MIN_MEMORY_PERCENT и MAX_MEMORY_PERCENT  
  После определения потребностей в памяти для оптимизированных для памяти таблиц нужно определить, какой процент доступной памяти требуется, и задать в процентах это значение или выше.  
   
- **Пример**   
+ **Например**   
 В этом примере предполагается, что согласно вычислениям для оптимизированных для памяти таблиц и индексов требуется 16 ГБ памяти. Предположим, доступно 32 ГБ памяти.  
   
  На первый взгляд может показаться, что для MIN_MEMORY_PERCENT и MAX_MEMORY_PERCENT нужно задать значение 50 (16 — это 50 % от 32).  Но в этом случае оптимизированные для памяти таблицы не получат достаточного объема памяти. В приведенной ниже таблице ([Процент доступной памяти для оптимизированных для памяти таблиц и индексов](#percent-of-memory-available-for-memory-optimized-tables-and-indexes)) видно, что при наличии 32 ГБ выделенной памяти только 80 % доступно для оптимизированных для памяти таблиц и индексов.  Поэтому следует вычислять минимальный и максимальный процент исходя из доступной памяти, а не общей.  
@@ -63,7 +63,7 @@ GO
 ### <a name="create-a-resource-pool-and-configure-memory"></a>Создайте новый пул ресурсов и настройте память.  
  При настройке памяти для таблиц, оптимизированных для памяти, планирование загрузки следует выполнять на основе MIN_MEMORY_PERCENT, но не MAX_MEMORY_PERCENT.  Сведения о MIN_MEMORY_PERCENT и MAX_MEMORY_PERCENT см. в разделе [ALTER RESOURCE POOL (Transact-SQL)](/sql/t-sql/statements/alter-resource-pool-transact-sql). Это повышает прогнозируемую доступность памяти для таблиц, оптимизированных для памяти, так как использование MIN_MEMORY_PERCENT повышает нагрузку на другие пулы ресурсов, чтобы добиться выделения памяти. Чтобы обеспечить доступность памяти и избежать ее нехватки, значения MIN_MEMORY_PERCENT и MAX_MEMORY_PERCENT должны быть одинаковыми. В разделе [Процент доступной памяти для оптимизированных для памяти таблиц и индексов](#percent-of-memory-available-for-memory-optimized-tables-and-indexes) ниже процент доступной памяти для таблиц, оптимизированных для памяти, основан на объеме выделенной памяти.  
   
- См. в разделе [советы и рекомендации: Использование In-Memory OLTP в среде ВМ](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) Дополнительные сведения при работе в среде ВМ.  
+ Дополнительные сведения см. в разделе [Использование In-Memory OLTP в среде ВМ](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) .  
   
  Следующий код [!INCLUDE[tsql](../../includes/tsql-md.md)] создает пул ресурсов с именем Pool_IMOLTP, в котором для использования будет доступно 50 % памяти.  После создания пула регулятор ресурсов настраивается для включения Pool_IMOLTP.  
   
@@ -118,14 +118,14 @@ GO
   
  Теперь база данных будет привязана к пулу ресурсов.  
   
-## <a name="change-min-memory-percent-and-max-memory-percent-on-an-existing-pool"></a>Изменить ПРОЦЕНТ памяти MIN и МАКСИМАЛЬНЫЙ объем памяти в ПРОЦЕНТАХ для существующего пула  
- Если на сервере увеличилась дополнительная память либо если изменился объем памяти, необходимый оптимизированным для памяти таблицам, может потребоваться изменить значения MIN_MEMORY_PERCENT и MAX_MEMORY_PERCENT. Следующие шаги показывают, как изменить значение MIN_MEMORY_PERCENT и MAX_MEMORY_PERCENT в пуле ресурсов. Инструкции по использованию значений для MIN_MEMORY_PERCENT и MAX_MEMORY_PERCENT см. ниже.  См. в разделе [рекомендации: Использование In-Memory OLTP в среде ВМ](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) Дополнительные сведения.  
+## <a name="change-min-memory-percent-and-max-memory-percent-on-an-existing-pool"></a>Изменение МИНИМАЛЬного процента памяти и максимального объема памяти в существующем пуле  
+ Если на сервере увеличилась дополнительная память либо если изменился объем памяти, необходимый оптимизированным для памяти таблицам, может потребоваться изменить значения MIN_MEMORY_PERCENT и MAX_MEMORY_PERCENT. Следующие шаги показывают, как изменить значение MIN_MEMORY_PERCENT и MAX_MEMORY_PERCENT в пуле ресурсов. Инструкции по использованию значений для MIN_MEMORY_PERCENT и MAX_MEMORY_PERCENT см. ниже.  Дополнительные сведения см. в статье [Использование In-Memory OLTP в среде ВМ](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) .  
   
 1.  Используйте `ALTER RESOURCE POOL` , чтобы изменить значение как MIN_MEMORY_PERCENT, так и MAX_MEMORY_PERCENT.  
   
 2.  Используйте `ALTER RESURCE GOVERNOR` , чтобы настроить регулятор ресурсов с новыми значениями.  
   
- **Образец кода**  
+ **Пример кода**  
   
 ```sql  
 ALTER RESOURCE POOL Pool_IMOLTP  
@@ -149,8 +149,9 @@ GO
 |<= 8 ГБ|70 %|  
 |<= 16 ГБ|75 %|  
 |<= 32 ГБ|80 %|  
-|\<= 96 ГБ|85 %|  
-|>96 ГБ|90 %|  
+|
+  \<= 96 ГБ|85 %|  
+|>96 ГБ|90 %|  
   
  Например, если "целевая зафиксированная память" равна 100 ГБ, а, по вашей оценке для таблиц и индексов, оптимизированных для памяти, требуется 60 ГБ, можно создать пул ресурсов с параметром MAX_MEMORY_PERCENT = 67 (60 требуемых ГБ / 0,90 = 66,667 ГБ, после округления — 67 ГБ; 67 ГБ/100 установленных ГБ = 67 %), чтобы обеспечить объем памяти, необходимый объектам [!INCLUDE[hek_2](../../../includes/hek-2-md.md)].  
   
@@ -169,7 +170,7 @@ SELECT pool_id
   
  Этот пример вывода показывает, что память, занятая оптимизированными для памяти объектами, равна 1356 МБ в пуле ресурсов PoolIMOLTP с верхней границей в 2307 МБ. Эта верхняя граница определяет общий объем памяти, который может быть занят пользовательскими и оптимизированными для памяти объектами, сопоставленными с этим пулом.  
   
- **Образец вывода**   
+ **Пример выходных данных**   
 Этот вывод из базы данных и таблиц, созданных ранее.  
   
 ```  
@@ -185,10 +186,10 @@ pool_id     Name        min_memory_percent max_memory_percent max_memory_mb used
  Если не привязать базу данных к именованному пулу ресурсов, она привязывается к пулу ресурсов default. Поскольку стандартный пул ресурсов используется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и при других операциях выделения памяти, вы не сможете отслеживать память, потребляемую таблицами, оптимизированными для памяти, в нужной базе данных с помощью динамического административного представления sys.dm_resource_governor_resource_pools.  
   
 ## <a name="see-also"></a>См. также:  
- [sys.sp_xtp_bind_db_resource_pool (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql)   
- [sys.sp_xtp_unbind_db_resource_pool (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql)   
- [регулятор ресурсов](../resource-governor/resource-governor.md)   
- [Пул ресурсов регулятора ресурсов](../resource-governor/resource-governor-resource-pool.md)   
+ [sys. sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql)   
+ [sys. sp_xtp_unbind_db_resource_pool &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql)   
+ [Resource Governor](../resource-governor/resource-governor.md)   
+ [Resource Governor пул ресурсов](../resource-governor/resource-governor-resource-pool.md)   
  [Создание пула ресурсов](../resource-governor/create-a-resource-pool.md)   
  [Изменение параметров пула ресурсов](../resource-governor/change-resource-pool-settings.md)   
  [Удаление пула ресурсов](../resource-governor/delete-a-resource-pool.md)  

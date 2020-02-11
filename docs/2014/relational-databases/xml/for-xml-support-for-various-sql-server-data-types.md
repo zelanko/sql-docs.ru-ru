@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 478c7e49fcdef335a65e0574eeaa80843f5b1c29
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63205065"
 ---
 # <a name="for-xml-support-for-various-sql-server-data-types"></a>Поддержка FOR XML для различных типов данных SQL Server
@@ -25,9 +25,9 @@ ms.locfileid: "63205065"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Описание|  
+|Раздел|Description|  
 |-----------|-----------------|  
-|[Поддержка FOR XML для XML-данных](for-xml-support-for-the-xml-data-type.md)|Описывает работу предложения FOR XML с типом данных **xml** .|  
+|[Поддержка FOR XML для типа данных XML](for-xml-support-for-the-xml-data-type.md)|Описывает работу предложения FOR XML с типом данных **xml** .|  
 |[Поддержка FOR XML для строковых типов данных](for-xml-support-for-string-data-types.md)|Описывает работу предложения FOR XML со строковыми типами данных, например **varchar** and **nvarchar**.|  
 |[Поддержка FOR XML для определяемых пользователем типов данных (UDT)](for-xml-support-for-the-user-defined-data-types-udt.md)|Описывает работу предложения FOR XML с пользовательскими типами данных.|  
 |[Поддержка режима FOR XML для типа данных timestamp](for-xml-support-for-the-timestamp-data-type.md)|Описывает работу предложения FOR XML с типом данных **отметка времени** .|  

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: efba2e73c3043ddbf25fef06b57ef039f6eacea5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63183470"
 ---
 # <a name="jobs-that-reference-a-schedule"></a>Задания, содержащие ссылки на расписание
@@ -29,10 +29,10 @@ ms.locfileid: "63183470"
  **Расписание**  
  Отображается имя просматриваемого расписания.  
   
- **Выбрано**  
+ **Выбрать**  
  Только для чтения.  
   
- **Name**  
+ **Название**  
  Имя задания, использующего это расписание.  
   
  **Enabled**  
@@ -41,7 +41,7 @@ ms.locfileid: "63183470"
  **Категория**  
  Категория задания.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание и присоединение расписаний к заданиям](create-and-attach-schedules-to-jobs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Источники данных из существующих объектов (мастер источников данных) (службы Analysis Services) | Документация Майкрософт
+title: Источники данных из существующих объектов (мастер источников данных) (Analysis Services) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,31 +13,31 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5576e997023e5a00cdecc3c2079ce387c7062ebb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082378"
 ---
 # <a name="data-sources-from-existing-objects-data-source-wizard-analysis-services"></a>Источники данных из существующих объектов (мастер источников данных) (службы Analysis Services)
   Используйте страницу **Источники данных из существующих объектов** для определения существующего источника данных или проекта, на котором будет основан новый источник данных.  
   
 ## <a name="options"></a>Параметры  
- **Создать источник данных на основе существующего источника данных в решении**  
+ **Создать источник данных, основанный на существующем источнике данных из вашего решения**  
  Выберите, если нужно создать новый источник данных на основе уже существующего источника данных в решении. Когда создается, обновляется или развертывается проект, использующий новый источник данных, новый источник данных получает настройки источника данных, определенного выбором этого параметра.  
   
  **Источник данных**  
  Из списка источников данных, сгруппированных по проектам, выберите источник данных, на основе которого нужно создать новый источник.  
   
  **Создать источник данных на основе проекта служб Analysis Services**  
- Выберите, чтобы создать новый источник данных со ссылкой на другой проект служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] в текущем решении. Новый источник данных заимствует настройки из свойств `TargetServer` и `TargetDatabase` выбранного проекта. Когда создается, обновляется или развертывается проект, использующий новый источник данных, новый источник данных получает настройки источника данных, определенного выбором этого параметра.  
+ Выберите, чтобы создать новый источник данных, ссылающийся [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] на другой проект в текущем решении. Новый источник данных заимствует настройки из свойств `TargetServer` и `TargetDatabase` выбранного проекта. Когда создается, обновляется или развертывается проект, использующий новый источник данных, новый источник данных получает настройки источника данных, определенного выбором этого параметра.  
   
- **Проект**  
+ **Проектом**  
  Выберите проект, на который будет ссылаться новый источник данных.  
   
-## <a name="see-also"></a>См. также  
- [Справка F1 мастера источников данных &#40;служб Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)   
+## <a name="see-also"></a>См. также:  
+ [Справка F1 мастера источников данных &#40;Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)   
  [Источники данных в многомерных моделях](multidimensional-models/data-sources-in-multidimensional-models.md)   
- [Источники данных, поддерживаемые &#40;многомерные службы SSAS&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
+ [Поддерживаемые источники данных &#40;многомерные&#41;SSAS](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   
   

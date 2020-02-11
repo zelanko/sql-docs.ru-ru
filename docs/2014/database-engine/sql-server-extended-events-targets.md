@@ -1,5 +1,5 @@
 ---
-title: Цели расширенных событий SQL Server | Документация Майкрософт
+title: SQL Server мишеней расширенных событий | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f7be4c1cc392516ffaf6d1e36fc10b93b517d772
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088871"
 ---
 # <a name="sql-server-extended-events-targets"></a>SQL Server Extended Events Targets
@@ -39,11 +39,11 @@ ms.locfileid: "66088871"
   
      Многие типы событий происходят попарно, например получение и снятие блокировки. Эта цель позволяет определить, что указанное парное событие не произошло в правильной последовательности. Это асинхронная цель.  
   
--   [События трассировки событий Windows (ETW)](../relational-databases/extended-events/event-tracing-for-windows-target.md)  
+-   [Трассировка событий Windows (ETW)](../relational-databases/extended-events/event-tracing-for-windows-target.md)  
   
      Предназначена для сопоставления событий [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с данными событий Windows или данными событий приложений. Это синхронная цель.  
   
--   [Гистограммы](../../2014/database-engine/histogram-target.md)  
+-   [Отображения](../../2014/database-engine/histogram-target.md)  
   
      Используется для подсчета количества указанных событий на основании указанного действия или столбца события. Это асинхронная цель.  
   
@@ -51,10 +51,10 @@ ms.locfileid: "66088871"
   
      Используется для хранения данных о событиях в памяти по принципу очереди (FIFO) или по принципу FIFO для каждого события. Это асинхронная цель.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширенные события](../relational-databases/extended-events/extended-events.md)   
- [Пакеты обработки расширенных событий SQL Server](../relational-databases/extended-events/sql-server-extended-events-packages.md)   
- [SQL Server Extended Events Sessions](../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
+ [SQL Server пакетов расширенных событий](../relational-databases/extended-events/sql-server-extended-events-packages.md)   
+ [Сеансы расширенных событий SQL Server](../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
  [Подсистема расширенных событий SQL Server](../relational-databases/extended-events/sql-server-extended-events-engine.md)  
   
   

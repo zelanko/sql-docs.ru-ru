@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f72f8e40374198a5230e32b8ec5b3974fdb6b971
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63144648"
 ---
 # <a name="log-file-viewer"></a>Средство просмотра файлов журнала
@@ -37,9 +37,9 @@ ms.locfileid: "63144648"
   
 -   Удаленные планы обслуживания  
   
--   SQL Server  
+-   SQL Server  
   
--   Агент SQL Server  
+-   Агент SQL Server  
   
 -   Windows NT (это события Windows, также доступные из программы просмотра событий Windows)  
   
@@ -51,7 +51,7 @@ ms.locfileid: "63144648"
 |Описывает процедуру просмотра файлов журналов, находящихся в режиме вне сети, с помощью зарегистрированных серверов, а также процедуру проверки разрешений WMI.|[Просмотр автономных файлов журнала](view-offline-log-files.md)|  
 |Предоставляет справку F1 для средства просмотра журналов.|[Справка средства просмотра журнала F1](log-file-viewer-f1-help.md)|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Подсистема аудита SQL Server (компонент Database Engine)](../security/auditing/sql-server-audit-database-engine.md)   
  [Журнал ошибок агента SQL Server](../../ssms/agent/sql-server-agent-error-log.md)  
   

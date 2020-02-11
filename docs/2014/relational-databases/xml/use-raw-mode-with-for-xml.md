@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aec0ec20c9bd46a06560f5ce6ebd374e937f0343
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63193246"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>Использование с RAW Mode для FOR XML
@@ -39,7 +39,7 @@ ms.locfileid: "63193246"
   
 -   [Пример. Указание XSINIL с директивой ELEMENTS](example-specifying-xsinil-with-the-elements-directive.md)  
   
--   [Пример. Запросы к схемам как к результатам с помощью параметров XMLDATA и XMLSCHEMA](example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
+-   [Пример: запросы к схемам как к результатам с помощью параметров XMLDATA и XMLSCHEMA](example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
   
 -   [Пример. Получение двоичных данных](example-retrieving-binary-data.md)  
   
@@ -49,12 +49,12 @@ ms.locfileid: "63193246"
   
 -   [Пример. Запросы к столбцам XMLType](example-querying-xmltype-columns.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Добавление пространств имен в запросы с WITH XMLNAMESPACES](add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [Использование режима AUTO совместно с FOR XML](use-auto-mode-with-for-xml.md)   
  [Использование режима EXPLICIT совместно с предложением FOR XML](use-explicit-mode-with-for-xml.md)   
- [Использование с PATH Mode для FOR XML](use-path-mode-with-for-xml.md)   
+ [Использование режима PATH совместно с FOR XML](use-path-mode-with-for-xml.md)   
  [SELECT (Transact-SQL)](/sql/t-sql/queries/select-transact-sql)   
- [FOR XML (SQL Server)](../xml/for-xml-sql-server.md)  
+ [ДЛЯ SQL Server &#40;XML&#41;](../xml/for-xml-sql-server.md)  
   
   

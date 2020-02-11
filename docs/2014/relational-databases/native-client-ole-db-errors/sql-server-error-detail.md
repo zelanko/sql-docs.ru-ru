@@ -1,5 +1,5 @@
 ---
-title: Сведения об ошибке SQL Server | Документация Майкрософт
+title: SQL Server сведения об ошибке | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,14 +18,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5c7535e4579204834fc8024b7c37c46675320b8f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63156391"
 ---
 # <a name="sql-server-error-detail"></a>Подробные сведения об ошибках SQL Server
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщика OLE DB для собственного клиента определяет интерфейс поставщика ошибка [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md). Интерфейс возвращает более подробные сведения об ошибке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и полезен, если выполнение команды или операции работы с наборами строк завершились с ошибкой.  
+  Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента определяет определяемый поставщиком интерфейс ошибок [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md). Интерфейс возвращает более подробные сведения об ошибке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и полезен, если выполнение команды или операции работы с наборами строк завершились с ошибкой.  
   
  Существует два способа получения доступа к интерфейсу **ISQLServerErrorInfo**.  
   
@@ -44,18 +44,18 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
   
  Элементы структуры SSERRORINFO обрабатываются потребителем следующим образом.  
   
-|Член|Описание|  
+|Участник|Description|  
 |------------|-----------------|  
-|*pwszMessage*|Сообщение об ошибке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Идентично строке, возвращаемой методом **IErrorInfo::GetDescription**.|  
-|*pwszServer*|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для сеанса.|  
-|*pwszProcedure*|При необходимости, имя процедуры, в которой произошла ошибка. Пустая строка в противном случае.|  
-|*lNative*|Номер собственной ошибки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Идентичен значению, возвращаемому в параметре *plNativeError* метода **ISQLErrorInfo::GetSQLInfo**.|  
-|*bState*|Состояние сообщения об ошибке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|*bClass*|Серьезность сообщения об ошибке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|*wLineNumber*|Если применимо, номер строки хранимой процедуры, в которой возникла ошибка.|  
+|*пвсзмессаже*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]сообщение об ошибке. Идентично строке, возвращаемой методом **IErrorInfo::GetDescription**.|  
+|*пвсзсервер*|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для сеанса.|  
+|*пвсзпроцедуре*|При необходимости, имя процедуры, в которой произошла ошибка. Пустая строка в противном случае.|  
+|*лнативе*|Номер собственной ошибки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Идентичен значению, возвращаемому в параметре *plNativeError* метода **ISQLErrorInfo::GetSQLInfo**.|  
+|*бстате*|Состояние сообщения об ошибке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|*бкласс*|Серьезность сообщения об ошибке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|*влиненумбер*|Если применимо, номер строки хранимой процедуры, в которой возникла ошибка.|  
   
-## <a name="see-also"></a>См. также  
- [Ошибки](errors.md)   
- [RAISERROR (Transact-SQL)](/sql/t-sql/language-elements/raiserror-transact-sql)  
+## <a name="see-also"></a>См. также:  
+ [Наличии](errors.md)   
+ [&#41;инструкции RAISERROR &#40;Transact-SQL](/sql/t-sql/language-elements/raiserror-transact-sql)  
   
   

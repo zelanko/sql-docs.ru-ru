@@ -1,5 +1,5 @@
 ---
-title: Найдите диалоговое окно файлы базы данных (службы Analysis Services — многомерные данные) | Документация Майкрософт
+title: Диалоговое окно «Размещение файлов базы данных» (Analysis Services-многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1a013ed1ca80e17f89baba65b89c460b6ee68691
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078032"
 ---
 # <a name="locate-database-files-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Расположение файлов базы данных» (службы Analysis Services — многомерные данные)
@@ -24,7 +24,7 @@ ms.locfileid: "66078032"
   
 -   Нажать кнопку **Обзор** на странице **Общие** диалогового окна **Восстановление базы данных** .  
   
--   Нажать кнопку с многоточием ( **...** ) в столбце **Файл резервной копии** сетки для параметра **Восстановление секций резервной копии** на странице **Секции** диалогового окна **Восстановление базы данных** .  
+-   Нажать кнопку с многоточием (**...**) в столбце **Файл резервной копии** сетки для параметра **Восстановление секций резервной копии** на странице **Секции** диалогового окна **Восстановление базы данных** .  
   
 ## <a name="options"></a>Параметры  
  **Выберите папку**  
@@ -36,9 +36,9 @@ ms.locfileid: "66078032"
  **Имя файла**  
  Введите для изменения имени файла, выбранного из списка **Выберите папку**, или для выбора файла, отсутствующего в списке **Выберите папку**.  
   
-## <a name="see-also"></a>См. также  
- [Конструкторы и диалоговые окна служб Analysis Services &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Общие &#40;восстановление базы данных-диалоговое окно&#41; &#40;службы Analysis Services — многомерные данные&#41;](general-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
- [Секции &#40;восстановление базы данных-диалоговое окно&#41; &#40;службы Analysis Services — многомерные данные&#41;](partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>См. также:  
+ [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Диалоговое окно «Общие &#40;восстановление базы данных»&#41; &#40;Analysis Services многомерных данных&#41;](general-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
+ [Секции &#40;диалоговое окно «Восстановление базы данных»&#41; &#40;Analysis Services многомерных данных&#41;](partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md)  
   
   

@@ -17,10 +17,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: c83d92da6708c8c63e1ba4c2cea60b1497a54883
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63284545"
 ---
 # <a name="permissions-or-securables-page"></a>Страница «Разрешения» или «Защищаемые объекты»
@@ -34,7 +34,7 @@ ms.locfileid: "63284545"
 ## <a name="upper-grid"></a>Верхняя сетка  
  Верхняя сетка содержит один или несколько элементов, для которых могут быть установлены разрешения. В этом диалоговом окне есть кнопка **Поиск** для выбора объектов или участников, добавляемых в верхнюю сетку. Имя верхней сетки может содержать **Защищаемые объекты** , или один или более типов защищаемых объектов или участников. Отображаемые в верхней сетке столбцы меняются в зависимости от участника или защищаемого объекта.  
   
- **Name**  
+ **имя**;  
  Имя каждого участника или защищаемого объекта, добавляемого в сетку.  
   
  **Тип**  
@@ -70,8 +70,8 @@ ms.locfileid: "63284545"
  **Столбец**  
  Имена столбцов, на которые воздействует разрешение.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Роли уровня базы данных](authentication-access/database-level-roles.md)   
- [Центр обеспечения безопасности для базы данных Azure SQL и SQL Server Database Engine](security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+ [Центр безопасности для ядра СУБД SQL Server и Базы данных Azure SQL](security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

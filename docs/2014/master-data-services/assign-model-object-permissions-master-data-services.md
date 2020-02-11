@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a1477f934dfa8a23fa5498124b74c9a150b24a33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480074"
 ---
 # <a name="assign-model-object-permissions-master-data-services"></a>Назначение разрешения для объекта модели (службы Master Data Services)
@@ -26,7 +26,7 @@ ms.locfileid: "65480074"
 > [!NOTE]  
 >  При назначении разрешения на модель доступ ко всем другим моделям неявно запрещается. Если не будут назначены никакие разрешения, то пользователи и группы не смогут обращаться к данным в **Обозревателе**.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения этой процедуры:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Разрешения пользователей и групп** ;  
@@ -45,21 +45,22 @@ ms.locfileid: "65480074"
   
 5.  По желанию выберите модель из списка **Модель** .  
   
-6.  Нажмите кнопку **Изменить**.  
+6.  Щелкните **Правка**.  
   
 7.  Разверните дерево и щелкните объект модели, для которого нужно назначить разрешения.  
   
-8.  В меню выберите **только для чтения**, **обновление**, или **Deny**.  
+8.  В меню выберите **только чтение**, **Обновить**или **запретить**.  
   
-9. Нажмите кнопку **Сохранить**.  
+9. Выберите команду **Сохранить**.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
   
--   [Назначение разрешений для элемента иерархии (службы Master Data Services)](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md) (необязательно)  
+-   
+  [Назначение разрешений для элемента иерархии (службы Master Data Services)](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md) (необязательно)  
   
-## <a name="see-also"></a>См. также  
- [Удаление разрешений для объекта модели (службы Master Data Services)](../../2014/master-data-services/delete-model-object-permissions-master-data-services.md)   
- [Разрешения объекта модели (службы Master Data Services)](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
- [Создание администратора модели (службы Master Data Services)](../../2014/master-data-services/create-a-model-administrator-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Удаление разрешений объекта модели &#40;Master Data Services&#41;](../../2014/master-data-services/delete-model-object-permissions-master-data-services.md)   
+ [Разрешения объекта модели &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
+ [Создание администратора модели &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-administrator-master-data-services.md)  
   
   

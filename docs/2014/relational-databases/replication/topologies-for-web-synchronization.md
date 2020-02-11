@@ -14,16 +14,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 62fd4cd78beaeff479fc7cc9ec3abbd79e227e04
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63273570"
 ---
 # <a name="topologies-for-web-synchronization"></a>Topologies for Web Synchronization
-  Существует несколько топологий репликации [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для веб-синхронизации. Наиболее часто используемые способы настройки веб-синхронизации включают в себя следующие.  
+  Вы можете выбрать одну из различных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] топологий репликации веб-синхронизации. Наиболее часто используемые способы настройки веб-синхронизации включают в себя следующие.  
   
--   Одиночный сервер  
+-   Отдельный сервер  
   
 -   Два сервера  
   
@@ -37,7 +37,7 @@ ms.locfileid: "63273570"
 > [!NOTE]  
 >  Данная конфигурация рекомендуется только для сценариев, использующих корпоративные сети. Для других сценариев рекомендуется, чтобы сервер IIS и издатель/распространитель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] находились на разных компьютерах.  
   
- ![Веб-синхронизация с одним сервером](media/web-sync02.gif "Веб-синхронизация с одним сервером")  
+ ![Веб-синхронизация с одиночным сервером](media/web-sync02.gif "Веб-синхронизация с одиночным сервером")  
   
 ## <a name="two-servers"></a>Два сервера  
  Можно установить службы IIS на один сервер и настроить издатель и распространитель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на другом сервере. Сервер, на котором запускаются службы IIS, может быть изолирован от Интернета брандмауэром. Подписчики осуществляют синхронизацию, подключаясь к службам IIS.  
@@ -56,8 +56,8 @@ ms.locfileid: "63273570"
   
  ![Веб-синхронизация с повторной публикацией](media/web-sync05.gif "Веб-синхронизация с повторной публикацией")  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Настройка веб-синхронизации](configure-web-synchronization.md)   
- [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md)  
+ [Веб-синхронизация для репликации слиянием](web-synchronization-for-merge-replication.md)  
   
   

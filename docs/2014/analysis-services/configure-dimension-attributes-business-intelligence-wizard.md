@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5fe43b53878744586c3d0d8ec5719d6241b0a302
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087450"
 ---
 # <a name="configure-dimension-attributes-business-intelligence-wizard"></a>Настройка атрибутов измерения (мастер бизнес-аналитики)
@@ -27,12 +27,12 @@ ms.locfileid: "66087450"
  Отображает выбранный тип измерения.  
   
 > [!NOTE]  
->  Этот параметр недоступен из-за `Type` свойство измерения не может быть присвоено значение отличное от *учетной записи* для измерений счетов.  
+>  Этот параметр недоступен, так `Type` как свойство измерения не может быть изменено на значение, отличное от *Account* для измерений счетов.  
   
  **Атрибуты измерения**  
  Отображает допустимые типы атрибутов, которые можно сопоставить с существующими атрибутами измерений в измерении.  
   
- **включить**  
+ **Относится**  
  Установите флажок для включения соответствующего типа атрибута в измерение.  
   
  **Тип атрибута**  
@@ -41,15 +41,15 @@ ms.locfileid: "66087450"
  **Атрибут измерения**  
  Выберите атрибут измерения, который необходимо сопоставить с нужным типом атрибутов.  
   
- **Установить полуаддитивные меры в зависимости от типа учетной записи**  
+ **Установить полуаддитивные меры в соответствии с типом счета**  
  Выберите, чтобы каждая мера, связанная с данным измерением, агрегировалась по типу счета.  
   
 > [!NOTE]  
 >  Этот параметр не отображается, если мастер бизнес-аналитики был запущен из конструктора измерений, а также при щелчке правой кнопкой мыши по измерению в обозревателе решений в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справка F1 мастера бизнес-аналитики](business-intelligence-wizard-f1-help.md)   
- [Конструктор кубов &#40;службы Analysis Services — многомерные данные&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Конструктор измерений &#40;службы Analysis Services — многомерные данные&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
+ [Конструктор кубов &#40;Analysis Services многомерных данных&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Конструктор измерений &#40;Analysis Services многомерных данных&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   
   

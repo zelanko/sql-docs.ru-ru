@@ -15,17 +15,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 509205e0eeb2a913c8fdb4505961b8a3d4965529
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63188604"
 ---
 # <a name="sqlstatistics"></a>SQLStatistics
-  Функция**SQLStatistics** может быть выполнена для статического курсора. Попытка выполнения функции **SQLStatistics** для обновляемого (управляемого набором ключей или динамического) курсора возвращает SQL_SUCCESS_WITH_INFO, определяющий изменение типа курсора.  
+  **SQLStatistics** может выполняться для статического курсора. Попытка выполнения функции **SQLStatistics** для обновляемого (управляемого набором ключей или динамического) курсора возвращает SQL_SUCCESS_WITH_INFO, определяющий изменение типа курсора.  
   
-## <a name="see-also"></a>См. также  
- [SQLStatistics, функция](https://go.microsoft.com/fwlink/?LinkId=59372)   
- [Подробные сведения о реализации API-интерфейсов ODBC](odbc-api-implementation-details.md)  
+## <a name="see-also"></a>См. также:  
+ [Функция SQLStatistics](https://go.microsoft.com/fwlink/?LinkId=59372)   
+ [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

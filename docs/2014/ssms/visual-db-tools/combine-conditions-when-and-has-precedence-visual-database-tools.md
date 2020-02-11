@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4d0a0bcb7115255c3c6b3750cd930e7d06b9e2df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63225814"
 ---
 # <a name="combine-conditions-when-and-has-precedence-visual-database-tools"></a>Объединение условий, если приоритет имеет оператор AND (визуальные инструменты для баз данных)
@@ -57,10 +57,10 @@ ms.locfileid: "63225814"
       (job_lvl = 200)  
     ```  
   
-## <a name="see-also"></a>См. также  
- [Объединение условий, если приоритет имеет оператор OR &#40;визуальных инструментах баз данных&#41;](combine-conditions-when-or-has-precedence-visual-database-tools.md)   
- [Обозначения для объединения условий поиска на панели критериев &#40;визуальных инструментах баз данных&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
- [Правила ввода для поиска значения &#40;визуальных инструментах баз данных&#41;](rules-for-entering-search-values-visual-database-tools.md)   
+## <a name="see-also"></a>См. также:  
+ [Объединение условий, когда или имеет приоритет &#40;визуальных инструментов для баз данных&#41;](combine-conditions-when-or-has-precedence-visual-database-tools.md)   
+ [Соглашения для комбинирования условий поиска на панели критериев &#40;визуальных инструментов для баз данных&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
+ [Правила ввода значений поиска &#40;визуальных инструментов для баз данных&#41;](rules-for-entering-search-values-visual-database-tools.md)   
  [Определение критериев поиска (визуальные инструменты для баз данных)](specify-search-criteria-visual-database-tools.md)  
   
   
