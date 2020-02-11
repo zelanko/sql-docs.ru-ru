@@ -1,5 +1,5 @@
 ---
-title: Создание, областью действия запроса именованных наборов (многомерные Выражения) с | Документация Майкрософт
+title: Создание именованных наборов с областью действия запроса (многомерные выражения) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a611d3d20d269bb9c3fa3a1f764181b1660713b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074070"
 ---
 # <a name="creating-query-scoped-named-sets-mdx"></a>Создание именованных наборов с областью действия запроса (многомерные выражения)
@@ -92,8 +92,8 @@ FROM Sales
   
 ```  
   
-## <a name="see-also"></a>См. также  
- [Инструкция SELECT (многомерные выражения)](/sql/mdx/mdx-data-manipulation-select)   
- [Создание именованных наборов с областью действия сеанса (многомерные выражения)](mdx-named-sets-creating-session-scoped-named-sets.md)  
+## <a name="see-also"></a>См. также:  
+ [Инструкция SELECT &#40;&#41;многомерных выражений](/sql/mdx/mdx-data-manipulation-select)   
+ [Создание именованных наборов с областью действия сеанса &#40;&#41;многомерных выражений](mdx-named-sets-creating-session-scoped-named-sets.md)  
   
   

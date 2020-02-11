@@ -1,5 +1,5 @@
 ---
-title: Построение проектов служб Analysis Services (SSDT) | Документация Майкрософт
+title: Сборка проектов Analysis Services (SSDT) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97e32b80d19675b3763101d1c226529a48e23e68
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076771"
 ---
 # <a name="build-analysis-services-projects-ssdt"></a>Построение проектов служб Analysis Services (среда SSDT)
@@ -41,24 +41,24 @@ ms.locfileid: "66076771"
   
  Если проверка прошла успешно, среда [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] создает XML-файлы. После построения выходная папка будет содержать файлы, описанные в следующей таблице.  
   
-|Файлы (в папке «bin»)|Описание|  
+|Файлы (в папке «bin»)|Description|  
 |-----------------------------|-----------------|  
-|*Projectname*.asdatabase|Содержит элементы языка ASSL, которые определяют метаданные для объектов проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в файле скрипта развертывания. Этот файл используется ядром развертывания, чтобы развернуть объекты в базе данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
-|*Projectname*.configsettings|Содержит настройки конфигурации, используемые во время развертывания, которые можно изменить непосредственно или в мастере развертывания служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (например, строка подключения для источников данных).|  
-|*Projectname*.deploymenttargets|Содержит целевые настройки, используемые во время развертывания, которые можно изменить непосредственно или в мастере развертывания служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , например имена сервера и базы данных.|  
-|*Projectname*.deploymentoptions|Содержит различные настройки параметров, используемые во время развертывания, которые можно изменить непосредственно или в мастере развертывания служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , например место хранения.|  
-|*Assemblyname*/*dllname.* dll|Отдельные папки для каждой связанной сборки. Каждая папка содержит библиотеку DLL для сборки, любые связанные сборки и любые связанные PDB-файлы для выходных отладочных данных.|  
+|*Имя_проекта*. asdatabase|Содержит элементы языка ASSL, которые определяют метаданные для объектов проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в файле скрипта развертывания. Этот файл используется ядром развертывания, чтобы развернуть объекты в базе данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
+|*Имя_проекта*. configsettings|Содержит настройки конфигурации, используемые во время развертывания, которые можно изменить непосредственно или в мастере развертывания служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (например, строка подключения для источников данных).|  
+|*Имя_проекта*. deploymenttargets|Содержит целевые настройки, используемые во время развертывания, которые можно изменить непосредственно или в мастере развертывания служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , например имена сервера и базы данных.|  
+|*Имя_проекта*. deploymentoptions|Содержит различные настройки параметров, используемые во время развертывания, которые можно изменить непосредственно или в мастере развертывания служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , например место хранения.|  
+|*Имя сборки*/*dllname.* компоновки|Отдельные папки для каждой связанной сборки. Каждая папка содержит библиотеку DLL для сборки, любые связанные сборки и любые связанные PDB-файлы для выходных отладочных данных.|  
   
-|Файлы (в папке «obj»)|Описание|  
+|Файлы (в папке «obj»)|Description|  
 |-----------------------------|-----------------|  
-|\<Имя конфигурации > \LastBuilt.xml|Содержит временную метку и хэш-код, идентифицирующие время последней сборки проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
+|\<Имя конфигурации> \Ластбуилт.ксмл|Содержит временную метку и хэш-код, идентифицирующие время последней сборки проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
   
- Эти XML-файлы не содержат \<Create > и \<Alter > теги, которые формируются при развертывании.  
+ Эти XML-файлы не содержат \<теги Create> \<и ALTER>, созданные во время развертывания.  
   
  Связанные сборки (за исключением стандартной системной сборки и сборки служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ) также копируются в выходной каталог. При наличии связей с другими проектами решения, эти проекты сначала собираются, используя соответствующую конфигурацию проекта и зависимости построения, заданные связями проекта, а затем копируются в выходную папку проекта.  
   
-## <a name="see-also"></a>См. также  
- [Язык сценариев Analysis Services &#40;ASSL&#41; ссылки](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
- [Развертывание проектов служб Analysis Services (среда SSDT)](deploy-analysis-services-projects-ssdt.md)  
+## <a name="see-also"></a>См. также:  
+ [Справочник по языку сценариев Analysis Services &#40;языка ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
+ [Развертывание проектов Analysis Services &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  
   
   

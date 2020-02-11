@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e1d5f5d846a690676942e0d4ffcba0475a35595a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105679"
 ---
 # <a name="insert-or-delete-a-column-report-builder-and-ssrs"></a>Вставка или удаление столбца (построитель отчетов и службы SSRS)
@@ -29,13 +29,13 @@ ms.locfileid: "66105679"
   
 -   В конструкторе щелкните левый верхний угол области данных табликса, чтобы поверх и рядом с ней появились маркеры столбца и строки.  
   
-     Дополнительные сведения об областях данных см. в разделе [перечислены &#40;построитель отчетов и службы SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md).  
+     Дополнительные сведения об областях области данных см. в разделе [lists &#40;построитель отчетов and SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
 ### <a name="to-insert-a-column-in-a-selected-data-region"></a>Вставка столбца в выделенную область данных  
   
 -   Щелкните правой кнопкой мыши маркер там, где нужно вставить столбец, выберите команду **Вставить столбец**и укажите **Слева** или **Справа**.  
   
-     или  
+     -- или --  
   
 -   Щелкните правой кнопкой мыши ячейку области данных там, где нужно вставить столбец, выберите команду **Вставить столбец**и укажите **Слева** или **Справа**.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66105679"
   
 -   Выделите один или несколько столбцов, которые нужно удалить, щелкните правой кнопкой мыши маркер одного из выделенных столбцов и выберите команду **Удалить столбцы**.  
   
-     или  
+     -- или --  
   
 -   Щелкните правой кнопкой мыши ячейку области данных там, где нужно удалить столбец, и выберите команду **Удалить столбцы**.  
   
@@ -57,12 +57,12 @@ ms.locfileid: "66105679"
   
 -   Щелкните правой кнопкой мыши ячейку группы столбцов в области данных табликса там, где нужно удалить столбец, и выберите команду **Удалить столбцы**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Основные сведения о группах (построитель отчетов и службы SSRS)](understanding-groups-report-builder-and-ssrs.md)   
  [Область данных табликса (построитель отчетов и службы SSRS)](../tablix-data-region-report-builder-and-ssrs.md)   
  [Таблицы &#40;построитель отчетов и службы SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [Матрицы &#40;построитель отчетов и службы SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   
  [Списки &#40;построитель отчетов и службы SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [Списки (построитель отчетов и службы SSRS)](tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Списки &#40;построитель отчетов и службы SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

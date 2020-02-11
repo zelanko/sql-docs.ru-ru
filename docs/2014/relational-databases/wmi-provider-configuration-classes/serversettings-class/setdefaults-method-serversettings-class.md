@@ -1,5 +1,5 @@
 ---
-title: Метод SetDefaults (класс ServerSettings) | Документация Майкрософт
+title: Метод SetDefaults (класс класс serversettings) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,14 +19,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: daa5635fc64e46dd8b6ccf6b9ab4cf38dc5d492d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62735897"
 ---
 # <a name="setdefaults-method-serversettings-class"></a>Метод SetDefaults (класс ServerSettings)
-  Задает все значения по умолчанию для экземпляра [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с параметром перезаписи существующих данных.  
+  Задает все значения по умолчанию для экземпляра [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с параметром для перезаписи существующих данных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,21 +40,21 @@ OverwriteAll
 ```  
   
 ## <a name="parts"></a>Компоненты  
- *object*  
- Объект [класс ServerSettings](serversettings-class.md) , представляющий [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] экземпляр клиента.  
+ *объектами*  
+ Объект [класса класс serversettings](serversettings-class.md) , представляющий экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] клиента.  
   
 #### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Description|  
 |---------------|-----------------|  
-|*OverwriteAll*|Логическое значение, указывающее, следует ли перезаписывать существующие значения в экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. `true`, если следует; в противном случае — `false`.|  
+|*овервритеалл*|Логическое значение, указывающее, следует ли перезаписывать существующие значения в экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. `true`, если следует; в противном случае — `false`.|  
   
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение u`int32`, равное 0, если служба изменена успешно, и 1, если запрос не поддерживается. Любое другое значение указывает на ошибку.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
- [Настройка сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+## <a name="see-also"></a>См. также:  
+ [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

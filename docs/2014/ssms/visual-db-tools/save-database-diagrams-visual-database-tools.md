@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c29053daaef4e24d89ee92fc4b6653616999205a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62710510"
 ---
 # <a name="save-database-diagrams-visual-database-tools"></a>Сохранение диаграмм баз данных (визуальные инструменты для баз данных)
@@ -26,7 +26,7 @@ ms.locfileid: "62710510"
   
 ### <a name="to-save-the-database-diagram"></a>Сохранение диаграммы базы данных  
   
-1.  Из **файл** меню, выберите **Сохранить < *`tablename`* >** .  
+1.  В меню **файл** выберите команду **сохранить <*`tablename`* **.  
   
 2.  Если это новая диаграмма, которую еще ни разу не сохраняли, откроется диалоговое окно **Сохранить как** . Введите имя диаграммы.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "62710510"
   
 3.  Нажмите кнопку **Да** (или **ОК** , если это новая диаграмма) для обновления базы в соответствии с диаграммой.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Работа с диаграммами баз данных (визуальные инструменты для баз данных)](visual-database-tools.md)  
   
   

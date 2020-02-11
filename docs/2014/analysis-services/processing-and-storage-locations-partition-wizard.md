@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 73340613b14c8f0e90340b589c8b97bad7cd5599
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070653"
 ---
 # <a name="processing-and-storage-locations-partition-wizard"></a>Места обработки и хранения (мастер секционирования)
-  На странице **Места обработки и хранения** можно определить экземпляр служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] куба, владеющий секцией, а также экземпляр служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , где хранятся данные секции. Чтобы определить секцию как удаленную, укажите либо удаленный экземпляр служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , либо место хранения, отличающееся от места хранения по умолчанию. Дополнительные сведения об удаленных секциях см. в разделе [Удаленные секции](multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md).  
+  На странице **Места обработки и хранения** можно определить экземпляр служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] куба, владеющий секцией, а также экземпляр служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , где хранятся данные секции. Чтобы определить секцию как удаленную, укажите либо удаленный экземпляр служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , либо место хранения, отличающееся от места хранения по умолчанию. Дополнительные сведения об удаленных секциях см. в разделе [Remote Partitions](multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md).  
   
 ## <a name="processing-location-options"></a>Параметры места обработки  
  **Текущий экземпляр сервера**  
@@ -45,11 +45,11 @@ ms.locfileid: "66070653"
  Задает место хранения статистических данных и данных индексирования для секции.  
   
  **...**  
- Выводит диалоговое окно **Выбор удаленной папки** , в котором можно выбрать папку для поля **Указанная папка**.  
+ Выводит диалоговое окно **Обзор удаленных папок** , в котором можно выбрать папку для поля **Указанная папка**.  
   
-## <a name="see-also"></a>См. также  
- [Справка F1 мастера секционирования &#40;службы Analysis Services — многомерные данные&#41;](partition-wizard-f1-help-analysis-services-multidimensional-data.md)   
- [Секции (службы Analysis Services — многомерные данные)](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
- [Выбор удаленной папки-диалоговое окно &#40;службы Analysis Services — многомерные данные&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>См. также:  
+ [Справка F1 мастера секционирования &#40;Analysis Services многомерных данных&#41;](partition-wizard-f1-help-analysis-services-multidimensional-data.md)   
+ [Секции &#40;Analysis Services многомерных данных&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [Диалоговое окно «Выбор удаленной папки» &#40;Analysis Services многомерных данных&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)  
   
   

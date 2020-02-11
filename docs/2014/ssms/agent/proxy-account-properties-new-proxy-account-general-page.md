@@ -1,5 +1,5 @@
 ---
-title: Свойства учетной записи-посредника и новой учетной записи-посредника (страница "Общие") | Документация Майкрософт
+title: Свойства учетной записи-посредника и новая учетная запись-посредник (страница "Общие") | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,24 +13,24 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 59361a2c0428be8ec7f2abc5b3a7fd199611bccc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62650205"
 ---
 # <a name="proxy-account-properties-and-new-proxy-account-general-page"></a>Свойства учетной записи-посредника и создание учетной записи-посредника (страница "Общие")
-  Используйте эту страницу для просмотра и изменения свойств учетной записи-посредника для агента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Эта страница используется для просмотра или изменения свойств [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учетной записи-посредника агента.  
   
 ## <a name="options"></a>Параметры  
  **Имя учетной записи-посредника**  
  Введите имя учетной записи-посредника.  
   
- **Учетное имя**  
+ **Имя учетных данных**  
  Введите учетное имя для учетной записи-посредника.  
   
 > [!NOTE]  
->  Необходимо ввести реально существующие учетное имя. Сведения о создании учетных данных см. в разделе [Создание учетных данных](../../relational-databases/security/authentication-access/create-a-credential.md)  
+>  Необходимо ввести реально существующие учетное имя. Сведения о создании учетных данных см. в разделе [Создание учетных данных](../../relational-databases/security/authentication-access/create-a-credential.md) .  
   
  **...**  
  Открывает диалоговое окно **Выбор учетных данных** .  
@@ -44,7 +44,7 @@ ms.locfileid: "62650205"
  **Повторно присвоить шаги заданий**  
  Выберите учетную запись-посредник, которой следует повторно присвоить шаги задания. Этот список активен при отмене доступа к подсистеме, к которой ранее был доступ у учетной записи-посредника.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание учетной записи-посредника агента SQL Server](create-a-sql-server-agent-proxy.md)  
   
   

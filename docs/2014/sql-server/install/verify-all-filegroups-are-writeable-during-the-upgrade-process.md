@@ -1,5 +1,5 @@
 ---
-title: Проверьте все файловые группы доступны для записи в процессе обновления | Документация Майкрософт
+title: Убедитесь, что все файловые группы доступны для записи в процессе обновления | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 758207977c8ddf92d6696dda71a8943e6a596d4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091188"
 ---
 # <a name="verify-all-filegroups-are-writeable-during-the-upgrade-process"></a>Убедитесь, что все файловые группы доступны для записи во время процесса обновления
@@ -29,8 +29,8 @@ ms.locfileid: "66091188"
 ## <a name="corrective-action"></a>Действие по исправлению  
  С помощью инструкции ALTER DATABASE переведите файловые группы в режим READ_WRITE.  
   
-## <a name="see-also"></a>См. также  
- [Проблемы обновления компонента Database Engine](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Помощник по обновлению SQL Server 2014 &#91;new&#93;](sql-server-2014-upgrade-advisor.md)  
+## <a name="see-also"></a>См. также:  
+ [Проблемы обновления ядро СУБД](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [Советник по переходу SQL Server 2014 &#91;New&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

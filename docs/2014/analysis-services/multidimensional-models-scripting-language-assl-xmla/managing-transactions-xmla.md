@@ -21,23 +21,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ad8a77d1d8552dc811c1232afb53c142452658db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62727243"
 ---
 # <a name="managing-transactions-xmla"></a>Управление транзакциями (XMLA)
-  Каждый XML для аналитики (XMLA) команды, отправляемые экземпляром [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] выполняется в контексте транзакции в рамках текущего явного или неявного сеанса. Для управления каждой из этих транзакций используйте [BeginTransaction](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/begintransaction-element-xmla), [CommitTransaction](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/committransaction-element-xmla), и [RollbackTransaction](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/rollbacktransaction-element-xmla) команды. При помощи этих команд можно создавать явные или неявные транзакции, изменять счетчик ссылок транзакции, а также запускать, фиксировать или выполнять откат транзакций.  
+  Каждая команда XML для аналитики (XMLA), отправленная экземпляру [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] служб, выполняется в контексте транзакции в текущем неявном или неявном сеансе. Для управления каждой из этих транзакций используются команды [BeginTransaction](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/begintransaction-element-xmla), [CommitTransaction](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/committransaction-element-xmla)и [RollbackTransaction](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/rollbacktransaction-element-xmla) . При помощи этих команд можно создавать явные или неявные транзакции, изменять счетчик ссылок транзакции, а также запускать, фиксировать или выполнять откат транзакций.  
   
 ## <a name="implicit-and-explicit-transactions"></a>Явные и неявные транзакции  
  Транзакция является либо неявной, либо явной.  
   
- **неявные транзакции**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Создает *неявное* транзакцию для XML для Аналитики команды, если `BeginTransaction` команда не указывает начало транзакции. Службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] всегда фиксируют неявную транзакцию, если команда будет выполнена успешно, и откатывают неявную транзакцию при сбое команды.  
+ **Неявная транзакция**  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]создает *неявную* транзакцию для команды XMLA, если `BeginTransaction` команда не задает начало транзакции. Службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] всегда фиксируют неявную транзакцию, если команда будет выполнена успешно, и откатывают неявную транзакцию при сбое команды.  
   
  **Явная транзакция**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Создает *явные* транзакции если `BeginTransaction` команда запускает транзакцию. При этом службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] фиксируют явную транзакцию, только если отправлена команда `CommitTransaction`, и выполняют ее откат, если отправлена команда `RollbackTransaction`.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]создает *явную* транзакцию, если `BeginTransaction` команда запускает транзакцию. При этом службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] фиксируют явную транзакцию, только если отправлена команда `CommitTransaction`, и выполняют ее откат, если отправлена команда `RollbackTransaction`.  
   
  Кроме того, службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] выполняют откат и неявных, и явных транзакций, если текущий сеанс завершается до выполнения активной транзакции.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62727243"
 ## <a name="rolling-back-a-transaction"></a>Откат транзакции  
  Команда `RollbackTransaction` осуществляет откат результатов команд, выполненных после того, как в текущем сеансе была выполнена команда `BeginTransaction`. Команда `RollbackTransaction` выполняет откат активной транзакции независимо от текущего значения счетчика ссылок транзакции и устанавливает счетчик ссылок транзакции в нуль. Если отсутствуют активные транзакции (то есть счетчик ссылок на транзакции в текущем сеансе уже имеет нулевое значение), команда `RollbackTransaction` вызывает ошибку.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Разработка с использованием XMLA в службах Analysis Services](developing-with-xmla-in-analysis-services.md)  
   
   

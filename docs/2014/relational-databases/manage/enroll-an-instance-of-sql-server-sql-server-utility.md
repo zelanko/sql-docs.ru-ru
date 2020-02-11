@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 37a148393d66a7434fda4461b704ee81b7e05223
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798081"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Регистрация экземпляра SQL Server (служебная программа SQL Server)
@@ -92,11 +92,11 @@ ms.locfileid: "72798081"
  Чтобы продолжить, нажмите кнопку **Далее**.  
   
 ##  <a name="Instance_name"></a> Укажите экземпляр SQL Server  
- Чтобы выбрать экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в диалоговом окне соединения, нажмите кнопку **Подключить...** . Укажите имя компьютера и имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в формате Компутернаме\инстанценаме.. Дополнительные сведения см. в статье [Соединение с сервером (компонент Database Engine)](../../ssms/f1-help/connect-to-server-database-engine.md).  
+ Чтобы выбрать экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в диалоговом окне соединения, нажмите кнопку **Подключить...** . Введите имя компьютера и имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в формате "имя_компьютера\имя_экземпляра". Дополнительные сведения см. в статье [Соединение с сервером (компонент Database Engine)](../../ssms/f1-help/connect-to-server-database-engine.md).  
   
  Чтобы продолжить, нажмите кнопку **Далее**.  
   
-##  <a name="Connection_dialog"></a> Диалоговое окно соединения  
+##  <a name="Connection_dialog"></a> Диалоговое окно подключения  
  Проверьте в диалоговом окне «Соединение с сервером» тип сервера, имя компьютера и сведения обо имени экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в статье [Соединение с сервером (компонент Database Engine)](../../ssms/f1-help/connect-to-server-database-engine.md).  
   
 > [!NOTE]  
@@ -145,9 +145,9 @@ ms.locfileid: "72798081"
   
  Параметры управляемого экземпляра:  
   
--   Имя экземпляра SQL Server: имя_компьютера\имя_экземпляра  
+-   Имя экземпляра SQL Server: Имя_компьютера\Имя_экземпляра  
   
--   Набор элементов сбора служебной программы: имя_домена\имя_пользователя  
+-   Учетная запись набора элементов сбора служебной программы: Доменное_имя\Имя_пользователя  
   
  Чтобы продолжить, нажмите кнопку **Далее**.  
   
@@ -169,7 +169,7 @@ ms.locfileid: "72798081"
 >   
 >  Возникло исключение при выполнении пакета или инструкции Transact-SQL. (Microsoft.SqlServer.ConnectionInfo)  
 >   
->  Дополнительные сведения. Не удалось получить сведения о пользователе или группе Windows NT "\<имя_домена\имя_учетной_записи>", код ошибки 0x5. (Microsoft SQL Server, ошибка: 15404)  
+>  Дополнительные сведения:  Не удалось получить сведения о пользователе или группе Windows NT "\<ДоменноеИмя\ИмяУчетнойЗаписи>", код ошибки 0x5. (Microsoft SQL Server, ошибка: 15404)  
 >   
 >  Дополнительные сведения об устранении этой неполадки см. в статье [Устранение неполадок служебной программы SQL Server](../../database-engine/troubleshoot-the-sql-server-utility.md).  
   
@@ -194,7 +194,7 @@ $InstanceConnection = new-object -Type Microsoft.SqlServer.Management.Sdk.Sfc.Sq
 $ManagedInstance = $Utility.EnrollInstance($InstanceConnection, "ProxyAccount", "ProxyPassword");  
 ```  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
  [Функции и задачи служебной программы SQL Server](sql-server-utility-features-and-tasks.md)   
  [Наблюдение за экземплярами SQL Server в служебной программе SQL Server](monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
  [Устранение неполадок служебной программы SQL Server](../../database-engine/troubleshoot-the-sql-server-utility.md)  

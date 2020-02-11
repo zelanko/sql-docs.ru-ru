@@ -16,16 +16,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 04dff943d1227f84ff514e593f65c2ce4d7a918f
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952584"
 ---
 # <a name="configure-a-service-account-ssrs-configuration-manager"></a>Настройка учетной записи службы (диспетчер конфигурации служб SSRS)
   В установке служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] веб-служба сервера отчетов, диспетчер отчетов и приложение фоновой обработки работают в составе одной службы. Учетная запись, от которой запускается эта служба, должна быть задана в процессе установки на странице «Удостоверение службы», однако если есть необходимость сменить учетную запись или пароль, то можно воспользоваться для этого программой настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- Если сервер отчетов настроен для работы в режиме интеграции с SharePoint и вы изменяете учетную запись службы с помощью средства настройки [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], необходимо также открыть центр администрирования SharePoint и использовать страницу [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **предоставления доступа к базе данных** для повторного применения параметров сервера отчетов и экземпляра. Этот шаг предоставит новой учетной записи службы доступ к базам данных SharePoint, необходимым для интеграции [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] или [!INCLUDE[SPS2010](../../includes/sps2010-md.md)].  
+ Если сервер отчетов настроен для работы в режиме интеграции с SharePoint и вы изменили учетную запись службы с помощью средства [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] настройки служб, необходимо также открыть центр администрирования SharePoint и использовать [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] страницу **предоставление доступа к базе данных** для повторного применения параметров сервера отчетов и экземпляра. Этот шаг предоставит новой учетной записи службы доступ к базам данных SharePoint, которые необходимы для интеграции [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] или. [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]  
   
  Для изменения учетной записи службы всегда пользуйтесь средством настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], которое одновременно обновляет и другие параметры, зависящие от учетных данных службы.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "71952584"
   
 1.  Запустите диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и подключитесь к серверу отчетов.  
   
-2.  На странице «Учетная запись службы» выберите параметр, указывающий тип используемой учетной записи. Рекомендации по указанию типа учетной записи см. в разделе [Настройка учетной записи &#40;службы сервера&#41;отчетов SSRS Configuration Manager](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
+2.  На странице «Учетная запись службы» выберите параметр, указывающий тип используемой учетной записи. Рекомендации по указанию типа учетной записи см. в разделе [Настройка учетной записи службы сервера отчетов &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
   
 3.  Если выбрана учетная запись пользователя Windows, укажите новую учетную запись и пароль. Имя учетной записи не может превышать в длину 20 символов.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "71952584"
   
 5.  При получении запроса на создание резервной копии симметричного ключа укажите местоположение и имя файла резервной копии симметричного ключа, введите пароль для его блокировки, а затем нажмите кнопку **ОК**.  
   
-6.  Если сервер отчетов пользуется для подключения к базе данных сервера отчетов учетной записью службы, то ее имя и пароль будут обновлены в сведениях о соединении. Для этого потребуется соединение с базой данных. Если откроется диалоговое окно [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , введите учетные данные, имеющие разрешение на подключение к базе данных, и нажмите кнопку **ОК**.  
+6.  Если сервер отчетов пользуется для подключения к базе данных сервера отчетов учетной записью службы, то ее имя и пароль будут обновлены в сведениях о соединении. Для этого потребуется соединение с базой данных. Если откроется диалоговое окно [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Database Connection** dialog box appears, enter credentials that have permission to connect to the database, and then click **OK**.  
   
 7.  Получив запрос на восстановление симметричного ключа, введите пароль, указанный на шаге 5, а затем нажмите кнопку **ОК**.  
   
@@ -63,11 +63,11 @@ ms.locfileid: "71952584"
   
 -   При обновлении учетной записи службы могут возникнуть ошибки резервирования URL-адресов. Каждое резервирование URL-адресов предусматривает создание дескриптора безопасности, который включает список разграничительного управления доступа DACL, который предоставляет учетной записи службы разрешение на прием запросов по данному URL-адресу. После обновления учетной записи URL-адрес должен быть создан повторно, чтобы обновить список DACL на основе новых сведений об учетной записи. Если резервирование URL-адресов не может быть выполнено повторно, но известно, что учетная запись является действительной, то можно попробовать перезапустить компьютер. Если после этого ошибка не исчезла, попробуйте воспользоваться другой учетной записью.  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
  [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Настройка учетной записи службы сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [Настройка подключения к базе данных сервера отчетов (диспетчер конфигураций служб Reporting Services)](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
-   в [собственном режиме &#40;&#41; для учетной записи службы SSRS](../../../2014/sql-server/install/service-account-ssrs-native-mode.md)  
+ [Настройка подключения к базе данных сервера отчетов &#40;службы SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Учетная запись службы &#40;служб SSRS в основном режиме&#41;](../../../2014/sql-server/install/service-account-ssrs-native-mode.md)   
  [Настройка ключей шифрования и управление ими (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

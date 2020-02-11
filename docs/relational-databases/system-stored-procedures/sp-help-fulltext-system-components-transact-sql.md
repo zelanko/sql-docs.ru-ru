@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 98e360887d63db59e1e61bf5c52928e9626b0f39
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72304882"
 ---
 # <a name="sp_help_fulltext_system_components-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
@@ -45,11 +45,11 @@ sp_help_fulltext_system_components
  'all'  
  Возвращает сведения для всех полнотекстовых компонентов.  
   
-`[ @component_type = ] component_type` указывает тип компонента. *component_type* может быть одним из следующих:  
+`[ @component_type = ] component_type`Указывает тип компонента. *component_type* может быть одним из следующих:  
   
 -   **Разделитель слов**  
   
--   **фильтр**  
+-   **Фильтрация**  
   
 -   **обработчик протокола**  
   
@@ -57,7 +57,7 @@ sp_help_fulltext_system_components
   
  Если указан полный путь, в аргументе *param* необходимо также указать полный путь к DLL-библиотеке компонента. В противном случае будет возвращено сообщение об ошибке.  
   
-`[ @param = ] param` в зависимости от типа компонента это один из следующих: код локали (LCID), расширение файла с префиксом ".", полное имя компонента обработчика протокола или полный путь к библиотеке DLL компонента.  
+`[ @param = ] param`В зависимости от типа компонента это один из следующих: код локали (LCID), расширение файла с префиксом ".", полное имя компонента обработчика протокола или полный путь к библиотеке DLL компонента.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -65,21 +65,21 @@ sp_help_fulltext_system_components
 ## <a name="result-sets"></a>Результирующие наборы  
  Следующий результирующий набор возвращается для системных компонентов.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|**параметра ComponentType**|**sysname**|Тип компонента. Это может быть:<br /><br /> filter<br /><br /> обработчик протокола<br /><br /> разделитель слов|  
-|**ComponentName**|**sysname**|Имя компонента.|  
-|**этому**|**uniqueidentifier**|Идентификатор класса компонента.|  
+|**componenttype**|**имеет sysname**|Тип компонента. Это может быть:<br /><br /> фильтр<br /><br /> обработчик протокола<br /><br /> разделитель слов|  
+|**ComponentName**|**имеет sysname**|Имя компонента.|  
+|**clsid**|**UNIQUEIDENTIFIER**|Идентификатор класса компонента.|  
 |**FullPath**|**nvarchar(256)**|Путь к расположению компонента.<br /><br /> NULL = вызывающая сторона не является членом предопределенной роли сервера **serveradmin** .|  
-|**version**|**nvarchar(30)**|Версия компонента.|  
-|**производителя**|**sysname**|Имя производителя компонента.|  
+|**Версия**|**nvarchar (30)**|Версия компонента.|  
+|**manufacturer**|**имеет sysname**|Имя производителя компонента.|  
   
  Следующий результирующий набор возвращается только в том случае, если существует один или несколько полнотекстовых каталогов, использующих *component_type*.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|**dbid**|**int**|Идентификатор базы данных.|  
-|**столбцу ftcatid**|**int**|Идентификатор полнотекстового каталога.|  
+|**DBID**|**int**|Идентификатор базы данных.|  
+|**ftcatid**|**int**|Идентификатор полнотекстового каталога.|  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется членство в роли **Public** ; Тем не менее пользователи могут видеть только сведения о полнотекстовых каталогах, для которых у них есть разрешение VIEW DEFINITION. Значения столбца **fullpath** могут просматривать только члены предопределенной роли сервера **serveradmin** .  
@@ -97,7 +97,7 @@ EXEC sp_help_fulltext_system_components 'all';
 GO  
 ```  
   
-### <a name="b-listing-word-breakers"></a>б. Перечисление средств разбиения по словам  
+### <a name="b-listing-word-breakers"></a>Б. Перечисление средств разбиения по словам  
  В следующем примере перечислены все средства разбиения по словам, зарегистрированные в экземпляре сервера.  
   
 ```  
@@ -106,7 +106,7 @@ GO
 ```  
   
 ### <a name="c-determining-whether-a-specific-word-breaker-is-registered"></a>В. Определение того, зарегистрировано ли средство разбиения по словам  
- В следующем примере будет выведено средство разбиения по словам для турецкого языка (LCID = 1055), если оно установлено в системе и зарегистрировано в экземпляре сервера. В этом примере указываются имена параметров, **\@component_type** и **\@param**.  
+ В следующем примере будет выведено средство разбиения по словам для турецкого языка (LCID = 1055), если оно установлено в системе и зарегистрировано в экземпляре сервера. В этом примере указываются имена параметров, ** \@component_type** и ** \@param**.  
   
 ```  
 EXEC sp_help_fulltext_system_components @component_type = 'wordbreaker', @param = 1055;  
@@ -135,10 +135,10 @@ GO
   
 ```  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
  [Просмотр или изменение зарегистрированных фильтров и разделителей слов](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)   
- [Настройка и управление средством разбиения на слова и парадигматические модули для поиска](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
+ [Настройка средств разбиения по словам и парадигматические модули для поиска и управление ими](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Настройка и управление фильтрами для поиска](../../relational-databases/search/configure-and-manage-filters-for-search.md)   
- [Хранимые процедуры &#40;полнотекстового поиска и семантического поиска TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
+ [Хранимые процедуры полнотекстового поиска и семантического поиска &#40;языке Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   
   

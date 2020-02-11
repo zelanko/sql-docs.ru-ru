@@ -13,23 +13,23 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a102991d08085f093e08a068a3d3127c9d7f7fc6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62666700"
 ---
-# <a name="mssqleng002627"></a>MSSQL_ENG002627
+# <a name="mssql_eng002627"></a>MSSQL_ENG002627
     
 ## <a name="message-details"></a>Сведения о сообщении  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|2627|  
 |Источник события|MSSQLSERVER|  
 |Компонент|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
-|Символическое имя|Н/Д|  
+|Символическое имя|Недоступно|  
 |Текст сообщения|Нарушение ограничения "%.*ls" для %ls. Не удается вставить повторяющийся ключ в объект "%.\*ls".|  
   
 ## <a name="explanation"></a>Объяснение  
@@ -56,10 +56,10 @@ ms.locfileid: "62666700"
   
      При использовании репликации слиянием или репликации с обновляемыми подписками столбцы идентификаторов должны автоматически управляться репликацией. При использовании одноранговой репликации транзакций управление этими столбцами должно выполняться вручную. Дополнительные сведения см. в статье [Репликация столбцов идентификаторов](publish/replicate-identity-columns.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по ошибкам и событиям (репликация)](errors-and-events-reference-replication.md)   
  [Репликация слиянием](merge/merge-replication.md)   
- [Peer-to-Peer Transactional Replication](transactional/peer-to-peer-transactional-replication.md)   
- [Обновляемые подписки для репликации транзакций](transactional/updatable-subscriptions-for-transactional-replication.md)  
+ [Одноранговая репликация транзакций](transactional/peer-to-peer-transactional-replication.md)   
+ [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   

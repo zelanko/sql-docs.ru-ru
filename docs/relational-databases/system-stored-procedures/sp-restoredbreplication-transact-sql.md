@@ -16,10 +16,10 @@ ms.assetid: a2c5ee32-e6d9-46e9-8031-8ff13c20acf7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 92d0b6390e630e3dea33c603bab11e8649444ab1
-ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70160707"
 ---
 # <a name="sp_restoredbreplication-transact-sql"></a>sp_restoredbreplication (Transact-SQL)
@@ -41,10 +41,10 @@ sp_restoredbreplication [ @srv_orig = ] 'original_server_name'
   
 ## <a name="arguments"></a>Аргументы  
 `[ @srv_orig = ] 'original_server_name'`  
- Возвращает имя сервера, на котором была создана резервная копия. *original_server_name* имеет тип **sysname**и не имеет значения по умолчанию.  
+ Возвращает имя сервера, на котором была создана резервная копия. Аргумент *original_server_name* имеет тип **sysname**и не имеет значения по умолчанию.  
   
 `[ @db_orig = ] 'original_database_name'`  
- Имя базы данных, резервная копия которой была сделана. *original_database_name* имеет тип **sysname**и не имеет значения по умолчанию.  
+ Имя базы данных, резервная копия которой была сделана. Аргумент *original_database_name* имеет тип **sysname**и не имеет значения по умолчанию.  
   
 `[ @keep_replication = ] keep_replication`  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -55,13 +55,13 @@ sp_restoredbreplication [ @srv_orig = ] 'original_server_name'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  **sp_restoredbreplication** используется во всех типах репликации.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или **dbcreator** или схемы базы данных **dbo** могут выполнять **sp_restoredbreplication**.  
   
-## <a name="see-also"></a>См. также  
- [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Хранимые процедуры репликации &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

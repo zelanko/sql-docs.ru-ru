@@ -1,5 +1,5 @@
 ---
-title: Тестирование и задачи и проверке решения по тестированию (интеллектуальный анализ данных) | Документация Майкрософт
+title: Задачи тестирования и проверки и инструкции (интеллектуальный анализ данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 451efaa1bb6968c2e2f43e5fad01646e507ae8ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082870"
 ---
 # <a name="testing-and-validation-tasks-and-how-tos-data-mining"></a>Задачи и решения по тестированию и проверке (интеллектуальный анализ данных)
@@ -39,7 +39,7 @@ ms.locfileid: "66082870"
   
  Диаграммы первых трех типов используют вкладку **Выбор входа** для определения данных, которые используются для создания диаграммы.  
   
- На вкладке **Перекрестная проверка** доступны дополнительные входные параметры для создания диаграммы перекрестной проверки. Дополнительные сведения см. в разделе [Перекрестная проверка (службы Analysis Services — интеллектуальный анализ данных)](cross-validation-analysis-services-data-mining.md).  
+ Диаграмма перекрестной проверки создается с помощью дополнительных входных данных, доступных на вкладке **Перекрестная проверка** . Дополнительные сведения см. в разделе [Перекрестная проверка &#40;Analysis Services-&#41;интеллектуального анализа данных ](cross-validation-analysis-services-data-mining.md).  
   
  Дополнительные сведения об использовании диаграммы точности интеллектуального анализа см. в разделе [Тестирование и проверка (интеллектуальный анализ данных)](testing-and-validation-data-mining.md).  
   
@@ -47,9 +47,9 @@ ms.locfileid: "66082870"
   
 -   [Создать диаграмму точности прогнозов, диаграмму роста прибыли или матрицу классификации](create-a-lift-chart-profit-chart-or-classification-matrix.md)  
   
--   [Создание отчета перекрестной проверки](create-a-cross-validation-report.md)  
+-   [создать отчет перекрестной проверки](create-a-cross-validation-report.md)  
   
--   [Выбор и сопоставление данных проверки модели](choose-and-map-model-testing-data.md)  
+-   [Выбрать и сопоставить данные проверки модели](choose-and-map-model-testing-data.md)  
   
 -   [Применение фильтров к данным проверки модели](apply-filters-to-model-testing-data.md)  
   

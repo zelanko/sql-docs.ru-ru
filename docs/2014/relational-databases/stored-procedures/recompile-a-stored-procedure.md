@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 43ae01b9173693370d5e422d4f26b6175101ff12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721044"
 ---
 # <a name="recompile-a-stored-procedure"></a>Перекомпиляция хранимой процедуры
-  В этом разделе описывается, как перекомпилировать хранимую процедуру в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)]. Существует три способа это сделать: `WITH RECOMPILE` параметр в определении процедуры или при вызове процедуры `RECOMPILE` указание запроса в отдельных инструкциях или с помощью `sp_recompile` системной хранимой процедуры. В этом разделе описывается использование параметра WITH RECOMPILE при создании определения процедуры и выполнении существующей процедуры. Также описывается использование системной хранимой процедуры sp_recompile для перекомпиляции существующей процедуры.  
+  В этом разделе описывается, как перекомпилировать хранимую процедуру в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)]. Это можно сделать тремя способами: `WITH RECOMPILE` параметр в определении процедуры или при вызове процедуры, указание `RECOMPILE` запроса для отдельных инструкций или использование `sp_recompile` системной хранимой процедуры. В этом разделе описывается использование параметра WITH RECOMPILE при создании определения процедуры и выполнении существующей процедуры. Также описывается использование системной хранимой процедуры sp_recompile для перекомпиляции существующей процедуры.  
   
  **В этом разделе**  
   
@@ -31,7 +31,7 @@ ms.locfileid: "62721044"
   
      [Рекомендации](#Recommendations)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Для перекомпиляции хранимой процедуры используется:**  
   
@@ -54,15 +54,15 @@ ms.locfileid: "62721044"
 ###  <a name="Security"></a> безопасность  
   
 ####  <a name="Permissions"></a> Permissions  
- `WITH RECOMPILE` Параметр  
+ `WITH RECOMPILE`Функцию  
  Если этот параметр используется при создании определения процедуры, то необходимо разрешение CREATE PROCEDURE в базе данных и разрешение ALTER на схему, в которой создается процедура.  
   
  Если этот параметр используется в инструкции EXECUTE, требуются разрешения EXECUTE на процедуру. Разрешения на саму инструкцию EXECUTE не требуются, однако требуются разрешения на выполнение процедуры, упоминаемой в инструкции EXECUTE. Дополнительные сведения см. в разделе [EXECUTE (Transact-SQL)](/sql/t-sql/language-elements/execute-transact-sql).  
   
- `RECOMPILE` Указание запроса  
+ `RECOMPILE`Указание запроса  
  Эта возможность используется при создании процедуры, и указание включается в инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] в процедуре. Таким образом, требуется разрешение CREATE PROCEDURE в базе данных и разрешение ALTER на схему, в которой создается процедура.  
   
- `sp_recompile` Системная хранимая процедура  
+ `sp_recompile`Системная хранимая процедура  
  Необходимо разрешение ALTER на указанную процедуру.  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
@@ -113,7 +113,7 @@ GO
   
 ```  
   
-#### <a name="to-recompile-a-stored-procedure-by-using-sprecompile"></a>Перекомпиляция хранимой процедуры с использованием процедуры sp_recompile  
+#### <a name="to-recompile-a-stored-procedure-by-using-sp_recompile"></a>Перекомпиляция хранимой процедуры с использованием процедуры sp_recompile  
   
 1.  Установите соединение с компонентом [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
@@ -134,9 +134,9 @@ GO
 ## <a name="see-also"></a>См. также:  
  [Создание хранимой процедуры](../stored-procedures/create-a-stored-procedure.md)   
  [Изменение хранимой процедуры](../stored-procedures/modify-a-stored-procedure.md)   
- [Изменение имени хранимой процедуры](rename-a-stored-procedure.md)   
+ [Переименование хранимой процедуры](rename-a-stored-procedure.md)   
  [Просмотр определения хранимой процедуры](view-the-definition-of-a-stored-procedure.md)   
  [Просмотр зависимостей хранимой процедуры](view-the-dependencies-of-a-stored-procedure.md)   
- [DROP PROCEDURE (Transact-SQL)](/sql/t-sql/statements/drop-procedure-transact-sql)  
+ [УДАЛИТЬ процедуру &#40;языке Transact-SQL&#41;](/sql/t-sql/statements/drop-procedure-transact-sql)  
   
   

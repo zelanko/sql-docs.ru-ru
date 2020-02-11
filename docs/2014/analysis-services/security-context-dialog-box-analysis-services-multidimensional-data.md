@@ -1,5 +1,5 @@
 ---
-title: Диалоговое окно «контекст безопасности» (службы Analysis Services — многомерные данные) | Документация Майкрософт
+title: Диалоговое окно «контекст безопасности» (Analysis Services-многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c775bc01f78af7d5d5f0dad39eb93c77348ea31d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069850"
 ---
 # <a name="security-context-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Контекст безопасности» (службы Analysis Services — многомерные данные)
@@ -31,14 +31,14 @@ ms.locfileid: "66069850"
   
  Чтобы указать домен и имя пользователя или группы, используйте следующий формат:  
   
- *\<Имя домена >* **\\**  *\<учетную запись пользователя >*  
+ Доменное **\\** имя>* \<имя учетной записи пользователя>* * \<*  
   
- **Roles**  
+ **Роли**  
  Выберите, если хотите использовать одну или несколько указанных ролей во время просмотра данных и метаданных объекта служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Несколько ролей можно выбрать, если они определены в базе данных служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
-## <a name="see-also"></a>См. также  
- [Ключевые показатели эффективности &#40;конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)   
- [Браузер &#40;конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)   
- [Конструкторы и диалоговые окна служб Analysis Services &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+## <a name="see-also"></a>См. также:  
+ [Ключевые показатели эффективности &#40;конструктора кубов&#41; &#40;Analysis Services многомерных данных&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)   
+ [Обозреватель &#40;конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)   
+ [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

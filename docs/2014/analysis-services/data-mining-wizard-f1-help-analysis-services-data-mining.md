@@ -1,5 +1,5 @@
 ---
-title: Справка F1 мастера интеллектуального анализа данных (службы Analysis Services — Интеллектуальный анализ данных) | Документация Майкрософт
+title: Справка F1 мастера интеллектуального анализа данных (Analysis Services — интеллектуальный анализ данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 44fd7290f48c995ae9cfc92476f1a33fbdc0e8be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086302"
 ---
 # <a name="data-mining-wizard-f1-help-analysis-services---data-mining"></a>Справка F1 мастера интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)
@@ -30,7 +30,8 @@ ms.locfileid: "66086302"
   
  Дополнительные сведения см. в разделе [Data Mining Wizard &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md).  
   
- **Мастер интеллектуального анализа данных** содержит следующие этапы.  
+ 
+  **Мастер интеллектуального анализа данных** содержит следующие этапы.  
   
 -   Выберите тип источника данных, на базе которого будет создаваться модель интеллектуального анализа данных.  
   
@@ -56,28 +57,28 @@ ms.locfileid: "66086302"
   
  После создания структуры интеллектуального анализа данных и необязательной модели интеллектуального анализа данных с помощью **Конструктора моделей интеллектуального анализа данных** можно изменить их свойства.  
   
-## <a name="see-also"></a>См. также  
- [Мастер интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](data-mining/data-mining-wizard-analysis-services-data-mining.md)   
- [конструктор интеллектуального анализа данных](data-mining/data-mining-designer.md)   
+## <a name="see-also"></a>См. также:  
+ [Мастер интеллектуального анализа данных &#40;Analysis Services — интеллектуальный анализ данных&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)   
+ [Конструктор интеллектуального анализа данных](data-mining/data-mining-designer.md)   
  [Создание реляционной структуры интеллектуального анализа данных](data-mining/create-a-relational-mining-structure.md)   
- [Выбор метода определения &#40;мастер интеллектуального анализа данных&#41;](select-the-definition-method-data-mining-wizard.md)   
+ [Выберите метод определения &#40;мастер интеллектуального анализа данных&#41;](select-the-definition-method-data-mining-wizard.md)   
  [Создание структуры интеллектуального анализа данных &#40;мастер интеллектуального анализа данных&#41;](create-the-data-mining-structure-data-mining-wizard.md)   
  [Выберите представление источника данных &#40;мастер интеллектуального анализа данных&#41;](select-data-source-view-data-mining-wizard.md)   
- [Обзор представления источников данных &#40;мастер интеллектуального анализа данных&#41;](browse-data-source-view-data-mining-wizard.md)   
- [Определение типов таблиц &#40;мастер интеллектуального анализа данных&#41;](specify-table-types-data-mining-wizard.md)   
- [Определение обучающих данных &#40;мастер интеллектуального анализа данных&#41;](specify-the-training-data-data-mining-wizard.md)   
- [Предложение связанных столбцов &#40;мастер интеллектуального анализа данных&#41;](suggest-related-columns-data-mining-wizard.md)   
- [Выбор измерения исходного куба &#40;мастер интеллектуального анализа данных&#41;](select-the-source-cube-dimension-data-mining-wizard.md)   
- [Выбор ключа варианта &#40;мастер интеллектуального анализа данных&#41;](select-the-case-key-data-mining-wizard.md)   
- [Столбцы уровня вариантов выберите &#40;мастер интеллектуального анализа данных&#41;](select-case-level-columns-data-mining-wizard.md)   
- [Укажите использование столбца модели интеллектуального &#40;мастер интеллектуального анализа данных&#41;](specify-mining-model-column-usage-data-mining-wizard.md)   
- [Выбор измерения группы мер &#40;мастер добавления новой вложенной таблицы&#41;](select-a-measure-group-dimension-add-new-nested-table-wizard.md)   
+ [Просмотр представления источника данных &#40;мастер интеллектуального анализа данных&#41;](browse-data-source-view-data-mining-wizard.md)   
+ [Определение типов таблиц &#40;мастера интеллектуального анализа данных&#41;](specify-table-types-data-mining-wizard.md)   
+ [Укажите обучающие данные &#40;мастер интеллектуального анализа данных&#41;](specify-the-training-data-data-mining-wizard.md)   
+ [Предлагать связанные столбцы &#40;мастер интеллектуального анализа данных&#41;](suggest-related-columns-data-mining-wizard.md)   
+ [Выберите измерение исходного куба &#40;мастер интеллектуального анализа данных&#41;](select-the-source-cube-dimension-data-mining-wizard.md)   
+ [Выберите ключ варианта &#40;мастер интеллектуального анализа данных&#41;](select-the-case-key-data-mining-wizard.md)   
+ [Выбор столбцов уровня вариантов &#40;мастера интеллектуального анализа данных&#41;](select-case-level-columns-data-mining-wizard.md)   
+ [Определение использования столбцов модели интеллектуального анализа данных &#40;мастер интеллектуального анализа&#41;](specify-mining-model-column-usage-data-mining-wizard.md)   
+ [Выберите измерение группы мер &#40;мастер добавления новой вложенной таблицы&#41;](select-a-measure-group-dimension-add-new-nested-table-wizard.md)   
  [Выбор ключа вложенной таблицы &#40;мастер добавления новой вложенной таблицы&#41;](select-nested-table-key-add-new-nested-table-wizard.md)   
  [Выбор столбцов вложенной таблицы &#40;мастер добавления новой вложенной таблицы&#41;](select-nested-table-columns-add-new-nested-table-wizard.md)   
- [Определение содержимого и типа данных столбца &#40;мастер интеллектуального анализа данных&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)   
- [Срез исходного куба &#40;мастер интеллектуального анализа данных&#41;](slice-source-cube-data-mining-wizard.md)   
- [Завершение работы мастера &#40;мастер интеллектуального анализа данных&#41;](completing-the-wizard-data-mining-wizard.md)   
- [Задание содержимого столбца и тип данных &#40;мастер интеллектуального анализа данных&#41;](specify-column-content-and-data-type-data-mining-wizard.md)   
+ [Укажите содержимое столбца и тип данных &#40;мастер интеллектуального анализа данных&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)   
+ [Создание среза исходного куба &#40;мастер интеллектуального анализа данных&#41;](slice-source-cube-data-mining-wizard.md)   
+ [Завершение работы мастера &#40;мастера интеллектуального анализа данных&#41;](completing-the-wizard-data-mining-wizard.md)   
+ [Укажите содержимое столбца и тип данных &#40;мастер интеллектуального анализа данных&#41;](specify-column-content-and-data-type-data-mining-wizard.md)   
  [Создание проверочного набора &#40;мастер интеллектуального анализа данных&#41;](create-testing-set-data-mining-wizard.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Определить тип связи атрибутов | Документация Майкрософт
+title: Определение типа отношения для связи атрибутов | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d30cc8f7dd64af79617c2f4ffd06e584f3c6e85
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077080"
 ---
 # <a name="define-the-relationship-type-of-an-attribute-relationship"></a>Определение типа связей атрибутов
@@ -37,7 +37,7 @@ ms.locfileid: "66077080"
   
      Связи между элементами в гибкой связи изменяются со временем. Связи между элементами в жесткой связи не изменяются со временем.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Определение связей атрибутов](attribute-relationships-define.md)  
   
   

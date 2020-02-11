@@ -1,5 +1,5 @@
 ---
-title: Базы данных (службы Analysis Services — многомерные данные) конструктор | Документация Майкрософт
+title: Конструктор баз данных (Analysis Services-многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,26 +11,26 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bf63755b657ae55085decc9c84e25ee1dd51c553
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082412"
 ---
 # <a name="database-designer-analysis-services---multidimensional-data"></a>Конструктор баз данных (службы Analysis Services — многомерные данные)
-  Конструктор баз данных в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] позволяет изменить свойства и просмотреть предупреждения базы данных служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
+  Используйте конструктор баз данных в [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] для изменения свойств и просмотра предупреждений, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] созданных базой данных.  
   
-## <a name="tabs"></a>Табуляция  
+## <a name="tabs"></a>Вкладки  
  Конструктор баз данных содержит следующие вкладки.  
   
  [Общие сведения](general-database-designer-analysis-services-multidimensional-data.md)  
  Используйте вкладку **Общие** , чтобы изменить свойства базы данных служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
  [Предупреждения](warnings-database-designer-analysis-services-multidimensional-data.md)  
- Чтобы просмотреть и отклонить правила глобально, а также просмотреть и повторно включить конкретные экземпляры отклоненных предупреждений, используется вкладка **Предупреждения** .  
+ Чтобы просмотреть и отклонить правила глобально, а также просмотреть и повторно включить конкретные экземпляры отклоненных предупреждений, используется вкладка **Предупреждения**.  
   
-## <a name="see-also"></a>См. также  
- [Конструкторы и диалоговые окна служб Analysis Services &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Базы данных многомерных моделей (службы SSAS)](multidimensional-models/multidimensional-model-databases-ssas.md)  
+## <a name="see-also"></a>См. также:  
+ [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Базы данных многомерной модели &#40;SSAS&#41;](multidimensional-models/multidimensional-model-databases-ssas.md)  
   
   

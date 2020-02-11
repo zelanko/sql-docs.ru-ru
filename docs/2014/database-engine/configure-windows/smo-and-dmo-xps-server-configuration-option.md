@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d55bd667909721a68d51bcd1db7128b809118843
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755281"
 ---
 # <a name="smo-and-dmo-xps-server-configuration-option"></a>Параметр конфигурации сервера «SMO and DMO XPs»
@@ -29,7 +29,7 @@ ms.locfileid: "62755281"
 |0|Расширенные хранимые процедуры объектов SMO недоступны.|  
 |1|Расширенные хранимые процедуры объектов SMO доступны. Это значение по умолчанию.|  
   
- Изменение этой настройки вступает в силу немедленно.  
+ Изменение параметров вступает в силу немедленно.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере активируются расширенные хранимые процедуры объектов SMO.  
@@ -45,7 +45,7 @@ RECONFIGURE
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Учебник по программированию управляющих объектов SQL Server (SMO)](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   
   

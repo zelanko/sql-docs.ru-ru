@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b43cdabb83b8f255b315e16b4bbe0d9af1156c51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62655340"
 ---
 # <a name="queued-updating-conflict-detection-and-resolution"></a>Queued Updating Conflict Detection and Resolution
@@ -54,13 +54,13 @@ ms.locfileid: "62655340"
   
  **Установка политики устранения конфликтов обновления посредством очередей**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. [Настройка параметров разрешения конфликтов для обновления посредством очередей (среда SQL Server Management Studio)](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Настройка параметров разрешения конфликтов для обновления посредством очередей (среда SQL Server Management Studio)](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
   
--   Программирование репликации на Transact-SQL: [Включение обновляемых подписок для публикации транзакций](../publish/enable-updating-subscriptions-for-transactional-publications.md)  
+-   Программирование репликации на Transact-SQL: [Enable Updating Subscriptions for Transactional Publications](../publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
  **Просмотр конфликтов данных**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. [Просмотр конфликтов данных для публикаций транзакций (среда SQL Server Management Studio)](../view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Просмотр конфликтов данных для публикаций транзакций (среда SQL Server Management Studio)](../view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
   
 ### <a name="publisher-wins"></a>Побеждает издатель  
  Когда параметр устранения конфликтов имеет значение «Побеждает издатель», согласованность транзакций поддерживается на основании данных издателя. Происходит откат конфликтной транзакции у инициировавшего ее подписчика.  
@@ -77,7 +77,7 @@ ms.locfileid: "62655340"
 ### <a name="subscriber-wins"></a>Побеждает подписчик  
  Обнаружение конфликтов в соответствии с политикой «Побеждает подписчик» означает, что побеждает последняя транзакция подписчика, обновляющая издателя. В этом случае при обнаружении конфликта продолжает использоваться транзакция, отправленная подписчиком, а издатель обновляется. Эта политика подходит для приложений, в которых подобные изменения не нарушают целостность данных.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Updatable Subscriptions for Transactional Replication](updatable-subscriptions-for-transactional-replication.md)  
   
   

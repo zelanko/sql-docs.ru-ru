@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7fd9d9b293287d76b50c351b29b74df509793168
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076542"
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>Настройка хранилища строк для измерений и секций
@@ -24,7 +24,7 @@ ms.locfileid: "66076542"
   
  Ниже приведены допустимые значения для этого свойства.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |**1050**|Задает архитектуру хранилища строк по умолчанию, для которого действует ограничение максимального размера файла в 4 ГБ на одно хранилище.|  
 |**1100**|Задает хранилище строк большего размера, поддерживает до 4 млрд уникальных строк в одном хранилище.|  
@@ -42,7 +42,7 @@ ms.locfileid: "66076542"
   
 -   [Шаг 2. Обработка объектов](#bkmk_step2)  
   
-##  <a name="bkmk_background"></a> Сведения о хранилищах строк  
+##  <a name="bkmk_background"></a>Сведения о хранилищах строк  
  Конфигурация хранилища строк не является обязательной, а это означает, что даже в создаваемых новых базах данных используется архитектура хранилища строк по умолчанию, для которой действует ограничение на размер файла в 4 ГБ. Использование архитектуры хранилища строк большего размера хоть и незначительно, но снижает производительность. Его следует использовать, только если размер файлов хранилища приближается к максимальному пределу в 4 ГБ.  
   
 > [!NOTE]  
@@ -59,9 +59,9 @@ ms.locfileid: "66076542"
   
  Измерения или секции должны использовать режим хранения MOLAP.  
   
- Уровню совместимости базы данных должно быть присвоено значение 1100. Если база данных создавалась или развертывалась с использованием [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] и [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или более поздней версии [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], то уровень совместимости базы данных уже установлен в значение 1100. Если база данных, созданная в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] более ранней версии, перемещалась в ssSQL11 или более позднюю версию, необходимо обновить уровень совместимости. Для баз данных, которые перемещаются без повторного развертывания, можно задать уровень совместимости в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Дополнительные сведения см. в разделе [установить уровень совместимости многомерной базы данных &#40;служб Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md).  
+ Уровню совместимости базы данных должно быть присвоено значение 1100. Если база данных создавалась или развертывалась с использованием [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] и [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или более поздней версии [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], то уровень совместимости базы данных уже установлен в значение 1100. Если база данных, созданная в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] более ранней версии, перемещалась в ssSQL11 или более позднюю версию, необходимо обновить уровень совместимости. Для баз данных, которые перемещаются без повторного развертывания, можно задать уровень совместимости в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Дополнительные сведения см. [в разделе Установка уровня совместимости многомерной базы данных &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md).  
   
-##  <a name="bkmk_step1"></a> Шаг 1. Задание свойства StringStoreCompatiblityLevel в SQL Server Data Tools  
+##  <a name="bkmk_step1"></a>Шаг 1. Задание свойства StringStoreCompatiblityLevel в SQL Server Data Tools  
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]откройте проект, содержащий измерения или секции, которые необходимо изменить.  
   
@@ -79,17 +79,17 @@ ms.locfileid: "66076542"
   
 8.  Сохраните файл.  
   
-##  <a name="bkmk_step2"></a> Шаг 2. Обработка объектов  
+##  <a name="bkmk_step2"></a>Шаг 2. Обработка объектов  
  После обработки объектов будет использоваться новая архитектура хранилища. Обработка объектов также подтверждает успешное разрешение проблемы с ограничением размера хранилища, поскольку сообщение об ошибке переполнения хранилища строк больше не возникает.  
   
 -   В обозревателе решений щелкните правой кнопкой мыши только что измененное измерение и выберите пункт **Обработать**.  
   
  Следует использовать параметр «Обработка. Полная» для каждого объекта, который использует новую архитектуру хранилища строк. До обработки обязательно выполните анализ влияния для измерения, чтобы проверить необходимость повторной обработки зависимых объектов.  
   
-## <a name="see-also"></a>См. также  
- [Средства и способы обработки (службы Analysis Services)](tools-and-approaches-for-processing-analysis-services.md)   
- [Настройка параметров обработки (службы Analysis Services)](processing-options-and-settings-analysis-services.md)   
- [Режимы хранения и обработка секции](../multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)   
+## <a name="see-also"></a>См. также:  
+ [Средства и подходы для обработки &#40;Analysis Services&#41;](tools-and-approaches-for-processing-analysis-services.md)   
+ [Параметры обработки и настройки &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md)   
+ [Режимы и обработка хранилища секций](../multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)   
  [Хранение измерений](../multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)  
   
   

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 64fa315457361e8d160735f38156e79ea667a4da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774196"
 ---
 # <a name="fail-over-to-a-log-shipping-secondary-sql-server"></a>Переход на вторичный сервер доставки журналов (SQL Server)
@@ -54,13 +54,13 @@ ms.locfileid: "62774196"
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
   
--   [Обмен ролями между сервером-источником и сервером-получателем доставки журналов (SQL Server)](change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md)  
+-   [Изменение ролей между основным и дополнительным серверами доставки журналов &#40;SQL Server&#41;](change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md)  
   
--   [Управление именами входа и заданиями после переключения ролей (SQL Server)](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
+-   [Управление именами входа и заданиями после переключения ролей &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Таблицы доставки журналов и хранимые процедуры](log-shipping-tables-and-stored-procedures.md)   
- [О доставке журналов &#40;SQL Server&#41;](about-log-shipping-sql-server.md)   
- [Резервные копии заключительного фрагмента журнала (SQL Server)](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)  
+ [SQL Server &#40;доставки журналов&#41;](about-log-shipping-sql-server.md)   
+ [Резервные копии заключительного фрагмента журнала &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)  
   
   

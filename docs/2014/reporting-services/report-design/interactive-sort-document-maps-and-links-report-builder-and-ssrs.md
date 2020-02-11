@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d2fc1145354b4e14317c7588d75ea904f3fa094d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105635"
 ---
 # <a name="interactive-sort-document-maps-and-links-report-builder-and-ssrs"></a>Интерактивная сортировка, схемы документов и ссылки (построитель отчетов и службы SSRS)
@@ -29,7 +29,7 @@ ms.locfileid: "66105635"
 -   **Ссылки на детализованные отчеты** — переход к другим отчетам на том же сервере отчетов. Дополнительные сведения см. в разделе [Детализированные отчеты (построитель отчетов и службы SSRS)](drillthrough-reports-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  Ссылки, привязанные к полям набора данных, могут стать мишенью для злонамеренного вторжения. Дополнительные сведения см. в разделе [Защищенные отчеты и ресурсы](../security/secure-reports-and-resources.md) [электронной документации](https://go.microsoft.com/fwlink/?LinkId=154888) по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на сайте msdn.microsoft.com.  
+>  Ссылки, привязанные к полям набора данных, могут стать мишенью для злонамеренного вторжения. Дополнительные сведения см. в разделе [Защищенные отчеты и ресурсы](../security/secure-reports-and-resources.md)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]электронной документации[ по ](https://go.microsoft.com/fwlink/?LinkId=154888) на сайте msdn.microsoft.com.  
   
  Также можно предоставить пользователям возможность управлять отображением отчета и его содержимым, создавая выражения, включающие ссылки на параметры для сортировки, фильтрации и определения видимости. Дополнительные сведения см. в разделах [Параметры отчета (построитель отчетов и конструктор отчетов)](report-parameters-report-builder-and-report-designer.md), [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](filter-group-and-sort-data-report-builder-and-ssrs.md) и [Добавление фильтров набора данных, фильтров области данных и групповых фильтров (построитель отчетов и службы SSRS)](add-dataset-filters-data-region-filters-and-group-filters.md).  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66105635"
  [Добавление гиперссылки на URL-адрес (построитель отчетов и службы SSRS)](add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)  
  Объясняет, как добавить в отчет ссылки на URL-адрес.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Детализация, углубленная детализация, вложенные отчеты и вложенные области данных (построитель отчетов и службы SSRS)](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

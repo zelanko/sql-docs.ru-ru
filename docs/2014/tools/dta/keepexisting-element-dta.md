@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fc3ae8c7e11a3f5a4aa71e91463cbe80ab70c7e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62735636"
 ---
 # <a name="keepexisting-element-dta"></a>Элемент KeepExisting (DTA)
@@ -36,12 +36,13 @@ ms.locfileid: "62735636"
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
-|**Тип данных и длина**|`string`, ограничение длины определяется сервером.|  
+|**Тип данных и длина**|
+  `string`, ограничение длины определяется сервером.|  
 |**Допустимые значения**|**NONE**<br /> Существующих структур нет.<br /><br /> **ALL**<br /> Все существующие структуры.<br /><br /> **ALIGNED**<br /> Все структуры, выровненные по секциям.<br /><br /> **CL_IDX**<br /> Все кластеризованные индексы по таблицам.<br /><br /> **IDX**<br /> Все кластеризованные и некластеризованные индексы по таблицам.<br /><br /> С этим элементом следует использовать только одно из данных значений.|  
 |**Значение по умолчанию**|Нет.|  
-|**Наличие**|Необязательный. Может использоваться только один раз для каждого элемента `TuningOptions`.|  
+|**Наличие**|Необязательный параметр. Может использоваться только один раз для каждого элемента `TuningOptions`.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
@@ -53,7 +54,7 @@ ms.locfileid: "62735636"
 ## <a name="example"></a>Пример  
  Пример использования этого элемента см. в разделе [Образец простого входного файла XML (DTA)](simple-xml-input-file-sample-dta.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по входным XML-файлам (помощник по настройке ядра СУБД)](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

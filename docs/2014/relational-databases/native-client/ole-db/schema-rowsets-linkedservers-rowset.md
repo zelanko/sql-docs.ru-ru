@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a136e3b2064e42e6bae7cfb39f059dbaa41a8410
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62667339"
 ---
 # <a name="linkedservers-rowset-ole-db"></a>Набор строк LINKEDSERVERS (OLE DB)
@@ -25,7 +25,7 @@ ms.locfileid: "62667339"
   
  Набор строк **LINKEDSERVERS** содержит следующие столбцы.  
   
-|Имя столбца|Индикатор типа|Описание|  
+|Имя столбца|Индикатор типа|Description|  
 |-----------------|--------------------|-----------------|  
 |SVR_NAME|DBTYPE_WSTR|Имя связанного сервера.|  
 |SVR_PRODUCT|DBTYPE_WSTR|Имя производителя или другое имя, задающее тип хранилища данных, представленного именем связанного сервера.|  
@@ -36,7 +36,7 @@ ms.locfileid: "62667339"
   
  Набор строк сортируется по столбцу SRV_NAME, и единственное ограничение поддерживается для столбца SRV_NAME.  
   
-## <a name="see-also"></a>См. также  
- [Поддержка набора строк схемы &#40;OLE DB&#41;](schema-rowset-support-ole-db.md)  
+## <a name="see-also"></a>См. также:  
+ [&#40;OLE DB поддерживает набор строк схемы&#41;](schema-rowset-support-ole-db.md)  
   
   

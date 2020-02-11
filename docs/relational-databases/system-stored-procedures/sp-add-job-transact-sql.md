@@ -18,10 +18,10 @@ ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7752b8fcb453f545c357c529774d570e41201ed1
-ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72381914"
 ---
 # <a name="sp_add_job-transact-sql"></a>sp_add_job (Transact-SQL)
@@ -57,65 +57,66 @@ sp_add_job [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @job_name = ] 'job_name'` имя задания. Имя должно быть уникальным и не может содержать знак процента ( **%** ). *job_name*имеет тип **nvarchar (128)** и не имеет значения по умолчанию.  
+`[ @job_name = ] 'job_name'`Имя задания. Имя должно быть уникальным и не может содержать символ процента (**%**). *job_name*имеет тип **nvarchar (128)** и не имеет значения по умолчанию.  
   
-`[ @enabled = ] enabled` указывает состояние добавленного задания. *Enabled*имеет тип **tinyint**и значение по умолчанию 1 (включено). Если значение **равно 0**, задание не включено и не выполняется в соответствии с расписанием. Однако его можно запустить вручную.  
+`[ @enabled = ] enabled`Указывает состояние добавленного задания. *Enabled*имеет тип **tinyint**и значение по умолчанию 1 (включено). Если значение **равно 0**, задание не включено и не выполняется в соответствии с расписанием. Однако его можно запустить вручную.  
   
-`[ @description = ] 'description'` описание задания. *Description* имеет тип **nvarchar (512)** и значение по умолчанию NULL. Если *Описание* отсутствует, используется параметр "нет описания".  
+`[ @description = ] 'description'`Описание задания. *Description* имеет тип **nvarchar (512)** и значение по умолчанию NULL. Если *Описание* отсутствует, используется параметр "нет описания".  
   
-`[ @start_step_id = ] step_id` идентификационный номер первого шага, выполняемого для задания. *step_id*имеет **тип int**и значение по умолчанию 1.  
+`[ @start_step_id = ] step_id`Идентификационный номер первого шага, выполняемого для задания. *step_id*имеет **тип int**и значение по умолчанию 1.  
   
-`[ @category_name = ] 'category'` категорию для задания. *Category*имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @category_name = ] 'category'`Категория для задания. *Category*имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @category_id = ] category_id` независимый от языка механизм для указания категории заданий. *category_id*имеет **тип int**и значение по умолчанию NULL.  
+`[ @category_id = ] category_id`Независимый от языка механизм для указания категории заданий. *category_id*имеет **тип int**и значение по умолчанию NULL.  
   
-`[ @owner_login_name = ] 'login'` имя входа, владеющего заданием. Аргумент *Login*имеет тип **sysname**и значение по умолчанию NULL, которое интерпретируется как текущее имя входа. Только члены предопределенной роли сервера **sysadmin** могут устанавливать или изменять значение для **\@owner_login_name**. Если пользователи, не являющиеся участниками роли **sysadmin** , или изменяют значение **\@owner_login_name**, выполнение этой хранимой процедуры завершается неудачей и возвращается ошибка.  
+`[ @owner_login_name = ] 'login'`Имя входа, владеющего заданием. Аргумент *Login*имеет тип **sysname**и значение по умолчанию NULL, которое интерпретируется как текущее имя входа. Только члены предопределенной роли сервера **sysadmin** могут устанавливать или изменять значение для ** \@owner_login_name**. Если пользователи, не являющиеся участниками роли **sysadmin** , или изменяют значение ** \@owner_login_name**, выполнение этой хранимой процедуры завершается неудачей и возвращается ошибка.  
   
-`[ @notify_level_eventlog = ] eventlog_level` значение, указывающее, когда следует поместить запись в журнал приложений Microsoft Windows для этого задания. *eventlog_level*имеет **тип int**и может принимать одно из следующих значений.  
+`[ @notify_level_eventlog = ] eventlog_level`Значение, указывающее, когда следует поместить запись в журнал приложений Microsoft Windows для этого задания. *eventlog_level*имеет **тип int**и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |**0**|Никогда|  
 |**1**|При успешном завершении|  
 |**2** (по умолчанию)|При сбое|  
-|**3**|Всегда|  
+|**3-5**|Всегда|  
   
-`[ @notify_level_email = ] email_level` значение, указывающее, когда следует отправить сообщение электронной почты после завершения этого задания. *email_level*имеет **тип int**и значение по умолчанию **0**, что означает Never. *email_level*использует те же значения, что и *eventlog_level*.  
+`[ @notify_level_email = ] email_level`Значение, указывающее, когда следует отправить сообщение электронной почты после завершения этого задания. *email_level*имеет **тип int**и значение по умолчанию **0**, что означает Never. *email_level*использует те же значения, что и *eventlog_level*.  
   
-`[ @notify_level_netsend = ] netsend_level` значение, указывающее, когда следует отправить сетевое сообщение после завершения этого задания. *netsend_level*имеет **тип int**и значение по умолчанию **0**, что означает Never. *netsend_level* использует те же значения, что и *eventlog_level*.  
+`[ @notify_level_netsend = ] netsend_level`Значение, указывающее, когда следует отправить сетевое сообщение после завершения этого задания. *netsend_level*имеет **тип int**и значение по умолчанию **0**, что означает Never. *netsend_level* использует те же значения, что и *eventlog_level*.  
   
-`[ @notify_level_page = ] page_level` значение, указывающее, когда следует отправить страницу после завершения этого задания. *page_level*имеет **тип int**и значение по умолчанию **0**, что означает Never. *page_level*использует те же значения, что и *eventlog_level*.  
+`[ @notify_level_page = ] page_level`Значение, указывающее, когда следует отправить страницу после завершения этого задания. *page_level*имеет **тип int**и значение по умолчанию **0**, что означает Never. *page_level*использует те же значения, что и *eventlog_level*.  
   
-`[ @notify_email_operator_name = ] 'email_name'` адрес электронной почты пользователя, которому будет отправлено сообщение при достижении *email_level* . Аргумент *email_name* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @notify_email_operator_name = ] 'email_name'`Адрес электронной почты пользователя, которому отправляется сообщение при достижении *email_level* . Аргумент *email_name* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @notify_netsend_operator_name = ] 'netsend_name'` имя оператора, которому отправляется сетевое сообщение после завершения этого задания. Аргумент *netsend_name*имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @notify_netsend_operator_name = ] 'netsend_name'`Имя оператора, которому отправляется сетевое сообщение после завершения этого задания. Аргумент *netsend_name*имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @notify_page_operator_name = ] 'page_name'` имя пользователя для страницы после завершения задания. Аргумент *page_name*имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @notify_page_operator_name = ] 'page_name'`Имя пользователя, которому будет присвоена страница после завершения этого задания. Аргумент *page_name*имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @delete_level = ] delete_level` значение, указывающее, когда нужно удалить задание. *delete_value*имеет **тип int**и значение по умолчанию 0, что означает никогда. *delete_level*использует те же значения, что и *eventlog_level*.  
+`[ @delete_level = ] delete_level`Значение, указывающее, когда следует удалять задание. *delete_value*имеет **тип int**и значение по умолчанию 0, что означает никогда. *delete_level*использует те же значения, что и *eventlog_level*.  
   
 > [!NOTE]  
 >  Если *delete_level* имеет значение **3**, задание выполняется только один раз, независимо от всех расписаний, определенных для задания. Если в какой-то момент задание удаляет себя, журнал этого задания также удаляется.  
   
-`[ @job_id = ] _job_idOUTPUT` идентификационный номер задания, назначенный заданию при успешном создании. *job_id*является выходной переменной типа **uniqueidentifier**и ЗНАЧЕНИЕМ по умолчанию NULL.  
+`[ @job_id = ] _job_idOUTPUT`Идентификационный номер задания, назначенный заданию при успешном создании. *job_id*является выходной переменной типа **uniqueidentifier**и ЗНАЧЕНИЕМ по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
   
 ## <a name="remarks"></a>Remarks  
- **\@originating_server** существует в **sp_add_job,** но не указана в списке arguments. **\@originating_server** зарезервировано для внутреннего использования.  
+ originating_server существует в **sp_add_job,** но не указана в списке arguments. ** \@** originating_server зарезервировано для внутреннего использования. ** \@**  
   
- После выполнения **sp_add_job** для добавления задания **sp_add_jobstep** можно использовать для добавления действий, выполняющих действия для задания. **sp_add_jobschedule** можно использовать для создания расписания, которое служба агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует для выполнения задания. Используйте **sp_add_jobserver** , чтобы задать экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в котором выполняется задание, и **sp_delete_jobserver** , чтобы удалить задание из экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ После выполнения **sp_add_job** для добавления задания **sp_add_jobstep** можно использовать для добавления действий, выполняющих действия для задания. **sp_add_jobschedule** можно использовать для создания расписания, используемого службой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента для выполнения задания. Используйте **sp_add_jobserver** , чтобы задать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляр, в котором выполняется задание, и **sp_delete_jobserver** , чтобы удалить задание из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляра.  
   
  Если задание будет выполняться на одном или нескольких целевых серверах в многосерверной среде, используйте **sp_apply_job_to_targets** , чтобы задать целевые серверы или группы целевых серверов для задания. Чтобы удалить задания с целевых серверов или групп целевых серверов, используйте **sp_remove_job_from_targets**.  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] обеспечивает доступный графический способ управления заданиями и рекомендуется для создания и управления инфраструктурой заданий.  
+ 
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] обеспечивает доступный графический способ управления заданиями и рекомендуется для создания и управления инфраструктурой заданий.  
   
 ## <a name="permissions"></a>Разрешения  
- Для выполнения этой хранимой процедуры пользователи должны быть членами предопределенной роли сервера **sysadmin** или иметь одну из следующих предопределенных ролей базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента, которые находятся в базе данных **msdb** :  
+ Для выполнения этой хранимой процедуры пользователи должны быть членами предопределенной роли сервера **sysadmin** или иметь одну из следующих [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предопределенных ролей базы данных агента, которая находится в базе данных **msdb** :  
   
 -   **SQLAgentUserRole**  
   
@@ -125,7 +126,7 @@ sp_add_job [ @job_name = ] 'job_name'
   
  Сведения о конкретных разрешениях, связанных с каждой из этих предопределенных ролей базы данных, см. в разделе агент SQL Server предопределенных [ролей базы данных](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Только члены предопределенной роли сервера **sysadmin** могут устанавливать или изменять значение для **\@owner_login_name**. Если пользователи, не являющиеся участниками роли **sysadmin** , или изменяют значение **\@owner_login_name**, выполнение этой хранимой процедуры завершается неудачей и возвращается ошибка.  
+ Только члены предопределенной роли сервера **sysadmin** могут устанавливать или изменять значение для ** \@owner_login_name**. Если пользователи, не являющиеся участниками роли **sysadmin** , или изменяют значение ** \@owner_login_name**, выполнение этой хранимой процедуры завершается неудачей и возвращается ошибка.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -141,7 +142,7 @@ EXEC dbo.sp_add_job
 GO  
 ```  
   
-### <a name="b-adding-a-job-with-pager-e-mail-and-net-send-information"></a>б. Создание задания с уведомлением по пейджеру, электронной почте и по сети  
+### <a name="b-adding-a-job-with-pager-e-mail-and-net-send-information"></a>Б. Создание задания с уведомлением по пейджеру, электронной почте и по сети  
  Этот пример иллюстрирует создание задания `Ad hoc Sales Data Backup`, в случае сбоя которого пользователь `François Ajenstat` получает уведомление (по пейджеру, электронной почте или с помощью сетевого всплывающего сообщения); в случае успешного завершения задания выполняется его удаление.  
   
 > [!NOTE]  
@@ -167,17 +168,17 @@ EXEC dbo.sp_add_job
 GO  
 ```  
   
-## <a name="see-also"></a>См. также статью  
- [sp_add_schedule &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)  
- [sp_add_jobstep &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)  
- [sp_add_jobserver &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)  
- [sp_apply_job_to_targets &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)  
- [sp_delete_job &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)  
- [sp_delete_jobserver &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)  
- [sp_remove_job_from_targets &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-remove-job-from-targets-transact-sql.md)  
- [sp_help_job &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)  
- [sp_help_jobstep &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)  
- [sp_update_job &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)  
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_add_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
+ [sp_add_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
+ [sp_apply_job_to_targets &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
+ [sp_delete_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [sp_delete_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
+ [sp_remove_job_from_targets &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-remove-job-from-targets-transact-sql.md)   
+ [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [sp_help_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
+ [sp_update_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

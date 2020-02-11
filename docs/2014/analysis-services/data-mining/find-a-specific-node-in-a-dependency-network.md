@@ -1,5 +1,5 @@
 ---
-title: Поиск определенного узла в сети зависимостей | Документация Майкрософт
+title: Поиск конкретного узла в сети зависимостей | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f27398948ed2c89578921bf6404244bcf5072652
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084379"
 ---
 # <a name="find-a-specific-node-in-a-dependency-network"></a>Поиск определенного узла в сети зависимостей
-  Сеть зависимостей в модели интеллектуального анализа данных служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] может содержать множество узлов, что создает трудности при обнаружении нужных данных. Для решения этой проблемы можно использовать диалоговое окно **Поиск узла** на вкладке **Сеть зависимостей** конструктора интеллектуального анализа данных для поиска конкретного узла.  
+  Сеть зависимостей в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] модели интеллектуального анализа данных может содержать множество узлов, что затрудняет обнаружение интересующих вас данных. Для решения этой проблемы можно использовать диалоговое окно **Поиск узла** на вкладке **Сеть зависимостей** конструктора интеллектуального анализа данных для поиска конкретного узла.  
   
 ### <a name="to-find-a-specific-node-in-a-dependency-network"></a>Поиск конкретного узла в сети зависимостей  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66084379"
   
 3.  Выберите необходимый узел из списка, а затем нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также  
- [Задачи и инструкции по средству просмотра моделей интеллектуального анализа данных](mining-model-viewer-tasks-and-how-tos.md)  
+## <a name="see-also"></a>См. также:  
+ [Задачи и инструкции средства просмотра моделей интеллектуального анализа данных](mining-model-viewer-tasks-and-how-tos.md)  
   
   

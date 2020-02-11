@@ -13,38 +13,38 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c55224b5590d23008de8b6caef7f120748f232bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082894"
 ---
 # <a name="security-overview-data-mining"></a>Общие сведения о безопасности (интеллектуальный анализ данных)
-  Защита служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] выполняется на нескольких уровнях. Необходимо защитить каждый экземпляр служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и его источники данных, чтобы убедиться, что только авторизованные пользователи имеют разрешения на чтение или на чтение и запись в выбранных измерениях, моделях интеллектуального анализа данных и источниках данных. Необходимо также обезопасить базовые источники данных, чтобы предотвратить несанкционированный доступ к конфиденциальным бизнес-данным. Процесс защиты экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] описывается в следующих разделах.  
+  Процесс обеспечения безопасности [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] выполняется на нескольких уровнях. Необходимо защитить каждый экземпляр служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и его источники данных, чтобы убедиться, что только авторизованные пользователи имеют разрешения на чтение или на чтение и запись в выбранных измерениях, моделях интеллектуального анализа данных и источниках данных. Необходимо также обезопасить базовые источники данных, чтобы предотвратить несанкционированный доступ к конфиденциальным бизнес-данным. Процесс защиты экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] описывается в следующих разделах.  
   
-##  <a name="bkmk_Architecture"></a> Архитектура защиты  
+##  <a name="bkmk_Architecture"></a>Архитектура безопасности  
  В следующих источниках приводятся сведения об архитектуре безопасности экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], включая то, как службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] используют проверку подлинности [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows для проверки подлинности доступа пользователей.  
   
--   [Роли безопасности (службы Analysis Services — многомерные данные)](../multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
+-   [Роли безопасности &#40;Analysis Services многомерных данных&#41;](../multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
   
 -   [Свойства безопасности](../server-properties/security-properties.md)  
   
--   [Настройка учетных записей служб (службы Analysis Services)](../instances/configure-service-accounts-analysis-services.md)  
+-   [Настройка учетных записей служб &#40;Analysis Services&#41;](../instances/configure-service-accounts-analysis-services.md)  
   
--   [Предоставление доступа к объектам и операциям (службы Analysis Services)](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [Авторизация доступа к объектам и операциям &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
-##  <a name="bkmk_Logon"></a> Настройка учетной записи входа для служб Analysis Services  
+##  <a name="bkmk_Logon"></a>Настройка учетной записи входа для Analysis Services  
  Необходимо выбрать подходящую учетную запись входа для служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и указать для нее разрешения. Следует убедиться, что учетная запись входа служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] обладает только теми разрешениями, которые необходимы для выполнения требуемых задач, включая соответствующие разрешения на доступ к базовым источникам данных.  
   
  Набор разрешений для создания и обработки моделей, необходимых при выполнении интеллектуального анализа данных, отличается от набора разрешений, необходимых при просмотре моделей или при выполнении запросов к ним. Выполнение прогнозов с помощью модели является одним из типов запроса и не требует разрешений администратора.  
   
-##  <a name="bkmk_Instance"></a> Защита экземпляра служб Analysis Services  
+##  <a name="bkmk_Instance"></a>Защита экземпляра Analysis Services  
  Необходимо защитить компьютер служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , ОС Windows на этом компьютере [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , сами службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и источники данных, которые используются службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
-##  <a name="bkmk_Access"></a> Настройка доступа к службам Analysis Services  
+##  <a name="bkmk_Access"></a>Настройка доступа к Analysis Services  
  После установки и указания авторизованных пользователей для экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]необходимо определить, какие пользователи будут иметь дополнительные разрешения на администрирование конкретных объектов базы данных, просмотр определения объектов либо моделей или прямой доступ к источникам данных.  
   
-##  <a name="bkmk_DMspecial"></a> Особые соображения при выполнении интеллектуального анализа данных  
+##  <a name="bkmk_DMspecial"></a>Специальные рекомендации по интеллектуальному анализу данных  
  Чтобы аналитик или разработчик мог создавать и испытывать модели интеллектуального анализа данных, необходимо предоставить ему административные разрешения на базу данных, в которой хранятся эти модели интеллектуального анализа данных. Вследствие этого аналитик интеллектуального анализа данных или разработчик будут иметь возможность создавать либо удалять другие объекты, не связанные с интеллектуальным анализом данных, включая объекты интеллектуального анализа данных, созданные другими аналитиками либо разработчиками и используемые в настоящее время, или объекты OLAP, не включенные в решение интеллектуального анализа данных.  
   
  Соответственно, при создании решений для интеллектуального анализа данных необходимо учитывать как потребности аналитиков и разработчиков, которые должны разрабатывать, тестировать и настраивать модели, так и потребности других пользователей и принимать меры по защите существующих объектов баз данных. Одним из решений является создание отдельной базы данных, специально предназначенной для интеллектуального анализа данных, или создание отдельных баз данных для каждого аналитика.  
@@ -55,7 +55,7 @@ ms.locfileid: "66082894"
   
  При использовании пакетов служб Integration Services для очистки данных, обновления моделей интеллектуального анализа данных или для прогнозирования необходимо позаботиться о том, чтобы служба Integration Services имела соответствующие разрешения на работу с базой данных, в которой хранится модель, и соответствующие разрешения на работу с данными источника.  
   
-## <a name="see-also"></a>См. также  
- [Роли и разрешения (службы Analysis Services)](../multidimensional-models/roles-and-permissions-analysis-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Роли и разрешения &#40;Analysis Services&#41;](../multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler — конфигурация воспроизведения (базовые параметры воспроизведения) | Документация Майкрософт
+title: Конфигурация SQL Server Profiler воспроизведения (основные параметры воспроизведения) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6ea9517047321f54734b3ccd8d072ba8f3f23152
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089722"
 ---
 # <a name="sql-server-profiler---replay-configuration-basic-replay-options"></a>Приложение SQL Server Profiler — конфигурация воспроизведения (базовые параметры воспроизведения)
@@ -34,10 +34,12 @@ ms.locfileid: "66089722"
  Запускает диалоговое окно **Соединение с сервером** для подключения к другому серверу.  
   
  **Сохранить в файл**  
- Сохраняет результаты воспроизведения в файл. [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] отображает стандартное диалоговое окно, в котором можно указать место для сохранения файла.  
+ Сохраняет результаты воспроизведения в файл. 
+  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] отображает стандартное диалоговое окно, в котором можно указать место для сохранения файла.  
   
  **Сохранить в таблицу**  
- Сохраняет результаты воспроизведения в таблицу. [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] отображает диалоговое окно выбора таблицы, в котором можно указать место для сохранения таблицы.  
+ Сохраняет результаты воспроизведения в таблицу. 
+  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] отображает диалоговое окно выбора таблицы, в котором можно указать место для сохранения таблицы.  
   
  **Число потоков воспроизведения**  
  Задайте число потоков воспроизведения, используемых одновременно. Чем больше это число, тем больше ресурсов потребляется при воспроизведении, но при этом воспроизведение ускоряется и возрастает его параллельность.  
@@ -51,9 +53,9 @@ ms.locfileid: "66089722"
  **Отобразить результаты воспроизведения**  
  Отображает результаты воспроизведения в приложении [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)].  
   
-## <a name="see-also"></a>См. также  
- [Воспроизведение таблицы трассировки (приложение SQL Server Profiler)](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
- [Воспроизведение файла трассировки (приложение SQL Server Profiler)](../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
+## <a name="see-also"></a>См. также:  
+ [Воспроизведение таблицы трассировки &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
+ [Воспроизведение файла трассировки &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
  [Воспроизведение трассировок](../tools/sql-server-profiler/replay-traces.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Включение инициализации из резервной копии для публикаций транзакций (SQL Server Management Studio) | Документация Майкрософт
+title: Включение инициализации с помощью резервной копии для публикаций транзакций (SQL Server Management Studio) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,16 +17,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 046eb926391faff26bb3238dfd225619e9fec374
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721342"
 ---
 # <a name="enable-initialization-with-a-backup-for-transactional-publications-sql-server-management-studio"></a>включить инициализацию из резервной копии для публикаций транзакций (среда SQL Server Management Studio)
   Для инициализации подписки на публикацию транзакций из резервной копии сначала активизируйте публикацию, чтобы разрешить инициализацию из резервной копии, а затем, создавая подписку, укажите сведения о резервной копии:  
   
--   Включите публикацию на странице **Параметры подписки** диалогового окна **Свойства публикации — \<публикация>** . Дополнительные сведения о доступе к этому диалоговому окну см. в разделе [Просмотр и изменение свойств публикации](publish/view-and-modify-publication-properties.md).  
+-   Включите публикацию на странице **Параметры подписки** диалогового окна **Свойства публикации — \<публикация>**. Дополнительные сведения о доступе к этому диалоговому окну см. в разделе [Просмотр и изменение свойств публикации](publish/view-and-modify-publication-properties.md).  
   
 -   Укажите сведения о резервной копии с помощью хранимой процедуры [sp_addsubscription (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Дополнительные сведения о параметрах **sp_addsubscription** можно найти в статье [Инициализация транзакционной подписки из резервной копии (программирование репликации на языке Transact-SQL)](initialize-a-transactional-subscription-from-a-backup.md).  
   
@@ -34,7 +34,7 @@ ms.locfileid: "62721342"
   
 1.  На странице **Параметры подписки** диалогового окна **Свойства публикации — \<Публикация>** установите значение **True** для параметра **Разрешать инициализацию из файлов резервных копий**.  
   
-## <a name="see-also"></a>См. также  
- [Инициализация транзакционной подписки без моментального снимка](initialize-a-transactional-subscription-without-a-snapshot.md)  
+## <a name="see-also"></a>См. также:  
+ [Инициализация подписки на публикацию транзакций без моментального снимка](initialize-a-transactional-subscription-without-a-snapshot.md)  
   
   

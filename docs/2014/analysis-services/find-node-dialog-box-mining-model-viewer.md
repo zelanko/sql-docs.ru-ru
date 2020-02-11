@@ -1,5 +1,5 @@
 ---
-title: Найти узел-диалоговое окно (средство просмотра моделей интеллектуального анализа данных) | Документация Майкрософт
+title: Диалоговое окно «Поиск узла» (средство просмотра моделей интеллектуального анализа данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c202ae84546cfdfde917a3d4ff9d98df74d7afd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081142"
 ---
 # <a name="find-node-dialog-box-mining-model-viewer"></a>Диалоговое окно «Найти узел» (средство просмотра моделей интеллектуального анализа данных)
@@ -34,9 +34,9 @@ ms.locfileid: "66081142"
  **OK**  
  Выберите имя узла в списке и нажмите **ОК**. Диалоговое окно закроется, а выбранный узел будет выделен в средстве просмотра.  
   
-## <a name="see-also"></a>См. также  
- [Средства просмотра моделей интеллектуального анализа данных (конструктор моделей интеллектуального анализа данных)](mining-model-viewers-data-mining-model-designer.md)   
+## <a name="see-also"></a>См. также:  
+ [Средства просмотра моделей интеллектуального анализа &#40;конструктор моделей интеллектуального анализа данных&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Средства просмотра моделей интеллектуального анализа данных](data-mining/data-mining-model-viewers.md)   
- [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [Алгоритмы интеллектуального анализа данных &#40;Analysis Services — интеллектуальный анализ данных&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
   

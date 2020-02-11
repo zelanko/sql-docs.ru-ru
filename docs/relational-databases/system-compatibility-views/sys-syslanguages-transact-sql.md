@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bc152b8241b775f9fd686f8a31363cb4fca39de4
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70874871"
 ---
 # <a name="syssyslanguages-transact-sql"></a>sys.syslanguages (Transact-SQL)
@@ -33,60 +33,60 @@ ms.locfileid: "70874871"
 
   Содержит одну строку для каждого языка, представленного в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |langid|**smallint**|Уникальный идентификатор языка.|  
-|формат даты|**nchar (3)**|Формат представления даты, например DMY.|  
+|формат даты|**nchar(3)**|Формат представления даты, например DMY.|  
 |datefirst|**tinyint**|Первый день недели: 1 для Понедельник, 2 для вторника и так далее до 7 для воскресенья.|  
-|обновление|**int**|Зарезервировано для системного использования.|  
-|name|**sysname**|Официальное название языка, например Franзais.|  
-|alias|**sysname**|Альтернативное название языка, например French.|  
+|upgrade|**int**|Зарезервировано для системного использования.|  
+|name|**имеет sysname**|Официальное название языка, например Franзais.|  
+|alias|**имеет sysname**|Альтернативное название языка, например French.|  
 |months|**nvarchar (372)**|Список полных названий месяцев через запятую в порядке с января до декабря. Каждое название может содержать не более 20 символов.|  
 |shortmonths|**nvarchar (132)**|Список сокращенных названий месяцев через запятую в порядке с января до декабря. Название может содержать не более 9 символов.|  
 |days|**nvarchar (217)**|Список названий дней недели через запятую в порядке с понедельника до воскресенья. Каждое название может содержать не более 30 символов.|  
 |lcid|**int**|Код локали языка в [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.|  
-|msglangid|**smallint**|Идентификатор группы сообщений компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
+|msglangid|**smallint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]Идентификатор группы сообщений.|  
   
  Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] содержит следующие установленные языки.  
   
 |Английское название языка|Код языка в Windows|Идентификатор группы сообщений компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]|  
 |---------------------|------------------|-----------------------------------------|  
-|English|1033|1033|  
-|German|1031|1031|  
-|French|1036|1036|  
-|Japanese|1041|1041|  
+|Английский|1033|1033|  
+|Немецкий|1031|1031|  
+|Французский|1036|1036|  
+|Японский|1041|1041|  
 |Датский|1030|1030|  
-|Spanish|3082|3082|  
-|Italian|1040|1040|  
-|Dutch|1043|1043|  
+|Испанский|3082|3082|  
+|Итальянский|1040|1040|  
+|Нидерландский|1043|1043|  
 |Норвежский|2068|2068|  
 |Португальский|2070|2070|  
 |Финский|1035|1035|  
-|Swedish|1053|1053|  
-|Czech|1029|1029|  
+|Шведский|1053|1053|  
+|Чешский|1029|1029|  
 |Венгерский|1038|1038|  
-|Polish|1045|1045|  
-|Romanian|1048|1048|  
-|Croatian|1050|1050|  
-|Slovak|1051|1051|  
+|Польский|1045|1045|  
+|Румынский|1048|1048|  
+|Хорватский|1050|1050|  
+|Словацкий|1051|1051|  
 |Slovene|1060|1060|  
-|Greek|1032|1032|  
-|Bulgarian|1026|1026|  
-|Russian|1049|1049|  
-|Turkish|1055|1055|  
+|Греческий|1032|1032|  
+|Болгарский|1026|1026|  
+|Русский|1049|1049|  
+|Турецкий|1055|1055|  
 |British English|2057|1033|  
 |Эстонский|1061|1061|  
-|Latvian|1062|1062|  
-|Lithuanian|1063|1063|  
-|Portuguese (Brazil)|1046|1046|  
-|Traditional Chinese|1028|1028|  
-|Korean|1042|1042|  
-|Simplified Chinese|2052|2052|  
-|Arabic|1025|1025|  
-|Thai|1054|1054|  
+|Латышский|1062|1062|  
+|Литовский|1063|1063|  
+|Португальский (Бразилия)|1046|1046|  
+|Китайский, традиционное письмо|1028|1028|  
+|Корейский|1042|1042|  
+|Китайский (упрощенный)|2052|2052|  
+|Арабский|1025|1025|  
+|Тайский|1054|1054|  
   
-## <a name="see-also"></a>См. также статью  
- [Представления &#40;совместимости Transact-SQL&#41; ](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
- [Сопоставление системных таблиц с системными &#40;представлениями TRANSACT-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Представления совместимости &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
+ [Сопоставление системных таблиц с системными представлениями &#40;&#41;Transact-SQL](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   
   

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ac5d4f7d199e3ee3de6ffb43e2c43e232681b0d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721456"
 ---
 # <a name="delete-a-pull-subscription"></a>Удаление подписки по запросу
@@ -65,15 +65,15 @@ ms.locfileid: "62721456"
   
 #### <a name="to-delete-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>Удаление подписки по запросу на публикацию моментальных снимков или транзакций  
   
-1.  В базе данных подписчика в подписчике выполните процедуру [sp_addmergepushsubscription_agent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql). Задайте значения для параметров **@publication** , **@publisher** и **@publisher_db** .  
+1.  В базе данных подписчика в подписчике выполните процедуру [sp_addmergepushsubscription_agent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql). Укажите **@publication**, **@publisher**и **@publisher_db**.  
   
-2.  В издателе в базе данных публикации выполните процедуру [sp_dropsubscription (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql). Задайте значения для параметров **@publication** и **@subscriber** . Задайте значение **all** в параметре **@article** . Если распространитель недоступен, задайте значение **1** в параметре **@ignore_distributor** , чтобы удалить подписку без удаления связанных с ней объектов на распространителе (необязательно).  
+2.  В издателе в базе данных публикации выполните процедуру [sp_dropsubscription (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql). Укажите **@publication** и **@subscriber**. Задайте значение **all** в параметре **@article**. Если распространитель недоступен, задайте значение **1** в параметре **@ignore_distributor** , чтобы удалить подписку без удаления связанных с ней объектов на распространителе (необязательно).  
   
 #### <a name="to-delete-a-pull-subscription-to-a-merge-publication"></a>Удаление подписки по запросу на публикацию слиянием  
   
-1.  В базе данных подписчика в подписчике выполните процедуру [sp_dropmergepullsubscription (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql). Задайте значения для параметров **@publication** , **@publisher** и **@publisher_db** .  
+1.  В базе данных подписчика в подписчике выполните процедуру [sp_dropmergepullsubscription (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql). Укажите **@publication**, **@publisher**и **@publisher_db**.  
   
-2.  В издателе в базе данных публикации выполните процедуру [sp_dropmergesubscription (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql). Задайте значения для параметров **@publication** , **@subscriber** и **@subscriber_db** . Задайте значение **@subscription_type** в параметре **@subscription_type** . Если распространитель недоступен, задайте значение **1** в параметре **@ignore_distributor** , чтобы удалить подписку без удаления связанных с ней объектов на распространителе (необязательно).  
+2.  В издателе в базе данных публикации выполните процедуру [sp_dropmergesubscription (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql). Укажите **@publication**, **@subscriber**и **@subscriber_db**. В качестве значения параметра **@subscription_type** в качестве значения параметра **@subscription_type**. Если распространитель недоступен, задайте значение **1** в параметре **@ignore_distributor** , чтобы удалить подписку без удаления связанных с ней объектов на распространителе (необязательно).  
   
 ###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
  В следующем примере производится удаление подписки по запросу на публикацию транзакций. Первый пакет выполняется на подписчике, а второй — на издателе.  
@@ -99,13 +99,13 @@ ms.locfileid: "62721456"
   
 3.  Проверьте свойство <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> , чтобы убедиться, что подписка существует. Если это свойство имеет значение `false`, значит, на шаге 2 были неправильно заданы свойства подписки либо подписка не существует.  
   
-4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.PullSubscription.Remove%2A>.  
+4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.PullSubscription.Remove%2A> .  
   
 5.  На основе соединения с издателем, созданного на шаге 1, создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.TransPublication> . Задайте свойства <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> и <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-6.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Если метод возвращает значение `false`, то либо неверно определены свойства, указанные на шаге 5, либо публикация не существует на сервере.  
+6.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если метод возвращает значение `false`, то либо неверно определены свойства, указанные на шаге 5, либо публикация не существует на сервере.  
   
-7.  Вызовите метод <xref:Microsoft.SqlServer.Replication.TransPublication.RemovePullSubscription%2A>. Укажите имя подписчика и имя базы данных подписки в параметрах *subscriber* и *subscriberDB* .  
+7.  Вызовите метод <xref:Microsoft.SqlServer.Replication.TransPublication.RemovePullSubscription%2A> . Укажите имя подписчика и имя базы данных подписки в параметрах *subscriber* и *subscriberDB* .  
   
 #### <a name="to-delete-a-pull-subscription-to-a-merge-publication"></a>Удаление подписки по запросу на публикацию слиянием  
   
@@ -115,13 +115,13 @@ ms.locfileid: "62721456"
   
 3.  Проверьте свойство <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> , чтобы убедиться, что подписка существует. Если это свойство имеет значение `false`, значит, на шаге 2 были неправильно заданы свойства подписки либо подписка не существует.  
   
-4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.PullSubscription.Remove%2A>.  
+4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.PullSubscription.Remove%2A> .  
   
 5.  На основе соединения с издателем, созданного на шаге 1, создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergePublication> . Задайте свойства <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> и <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-6.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Если метод возвращает значение `false`, то либо неверно определены свойства, указанные на шаге 5, либо публикация не существует на сервере.  
+6.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если метод возвращает значение `false`, то либо неверно определены свойства, указанные на шаге 5, либо публикация не существует на сервере.  
   
-7.  Вызовите метод <xref:Microsoft.SqlServer.Replication.MergePublication.RemovePullSubscription%2A>. Укажите имя подписчика и имя базы данных подписки в параметрах *subscriber* и *subscriberDB* .  
+7.  Вызовите метод <xref:Microsoft.SqlServer.Replication.MergePublication.RemovePullSubscription%2A> . Укажите имя подписчика и имя базы данных подписки в параметрах *subscriber* и *subscriberDB* .  
   
 ###  <a name="PShellExample"></a> Примеры (объекты RMO)  
  В этом примере удаляется подписка по запросу на публикацию транзакций, а также удаляется регистрация подписки на издателе.  
@@ -136,8 +136,8 @@ ms.locfileid: "62721456"
   
  [!code-vb[HowTo#rmo_vb_DropMergePullSub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_dropmergepullsub)]  
   
-## <a name="see-also"></a>См. также  
- [Подписка на публикации](subscribe-to-publications.md)   
+## <a name="see-also"></a>См. также:  
+ [Subscribe to Publications](subscribe-to-publications.md)   
  [Рекомендации по защите репликации](security/replication-security-best-practices.md)  
   
   

@@ -22,10 +22,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 15f4d85d117b5af09b0f67ef788364be6adad810
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62745495"
 ---
 # <a name="synchronize-data"></a>Синхронизация данных
@@ -49,17 +49,17 @@ ms.locfileid: "62745495"
   
  Публикации моментальных снимков полностью обновляют схему на подписчике при каждой синхронизации, так что все изменения схемы применяются на подписчике. Репликация транзакций и репликация слиянием также поддерживают наиболее распространенные изменения схем. Дополнительные сведения см. в статье [Внесение изменений в схемы баз данных публикации](publish/make-schema-changes-on-publication-databases.md).  
   
- Сведения о синхронизации принудительной подписки см. в разделе [синхронизации принудительной подписки](synchronize-a-push-subscription.md).  
+ Сведения о синхронизации принудительной подписки см. в разделе [Synchronize a Push Subscription](synchronize-a-push-subscription.md).  
   
- Сведения о синхронизации подписки по запросу см. в разделе [синхронизации подписки по запросу](synchronize-a-pull-subscription.md).  
+ Сведения о синхронизации подписки по запросу см. в разделе [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md).  
   
- Чтобы настроить расписания синхронизации, см. раздел [укажите расписания синхронизации](specify-synchronization-schedules.md).  
+ Чтобы настроить расписания синхронизации, см. раздел [Specify Synchronization Schedules](specify-synchronization-schedules.md).  
   
  **Просмотр и разрешение конфликтов синхронизации**  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. [Просмотр и разрешение конфликтов данных для публикации слиянием (SQL Server Management Studio)](view-and-resolve-data-conflicts-for-merge-publications.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Просмотр и разрешение конфликтов данных для публикации слиянием (SQL Server Management Studio)](view-and-resolve-data-conflicts-for-merge-publications.md)  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. [Просмотр конфликтов данных для публикаций транзакций (среда SQL Server Management Studio)](view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Просмотр конфликтов данных для публикаций транзакций (среда SQL Server Management Studio)](view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
   
 ## <a name="executing-code-during-synchronization"></a>Выполнение кода во время синхронизации  
  Репликация поддерживает два метода выполнения кода во время синхронизации  
@@ -68,7 +68,7 @@ ms.locfileid: "62745495"
   
 -   Обработчики бизнес-логики поддерживаются для репликации слиянием. С помощью платформы обработчиков бизнес-логики можно создать сборку управляемого кода, которая будет вызываться в процессе синхронизации слиянием. Сборка включает бизнес-логику, которая может учитывать ряд условий во время синхронизации: изменения данных, конфликты и ошибки. Дополнительные сведения см. в статье [Выполнение бизнес-логики при синхронизации слиянием](merge/execute-business-logic-during-merge-synchronization.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Обнаружение и разрешение конфликтов репликации слиянием](merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
   
   

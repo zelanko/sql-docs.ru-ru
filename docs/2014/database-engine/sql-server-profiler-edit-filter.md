@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler - Edit Filter | Документация Майкрософт
+title: SQL Server Profiler-изменить фильтр | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2828316739e53a94b248a8fffcf020ed16692241
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089782"
 ---
 # <a name="sql-server-profiler---edit-filter"></a>SQL Server Profiler - Edit Filter
@@ -25,10 +25,10 @@ ms.locfileid: "66089782"
 > [!NOTE]  
 >  Для столбцов данных строкового типа критерии фильтрации будут показаны как строковое значение LIKE или NOT LIKE.  
   
-## <a name="see-also"></a>См. также  
- [Фильтрация событий в трассировке &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)   
- [Фильтрация событий по времени окончания события &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-based-on-the-event-end-time-sql-server-profiler.md)   
- [Фильтрация событий по времени начала события &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-based-on-the-event-start-time-sql-server-profiler.md)   
+## <a name="see-also"></a>См. также:  
+ [Фильтрация событий в SQL Server Profiler &#40;трассировки&#41;](../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)   
+ [Фильтрация событий на основе времени окончания события &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-based-on-the-event-end-time-sql-server-profiler.md)   
+ [Отфильтруйте события на основе времени начала события &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-based-on-the-event-start-time-sql-server-profiler.md)   
  [Фильтрация трассировки](../relational-databases/sql-trace/filter-a-trace.md)   
  [Фильтрация трассировок с помощью приложения SQL Server Profiler](../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)  
   

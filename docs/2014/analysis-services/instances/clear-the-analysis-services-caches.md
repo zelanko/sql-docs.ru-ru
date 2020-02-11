@@ -1,5 +1,5 @@
 ---
-title: Очистка кэша служб Analysis Services | Документация Майкрософт
+title: Очистка Analysis Services кэшей | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e35ee4b59c77c3d1b47db360d11a9b838106c1b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080303"
 ---
 # <a name="clear-the-analysis-services-caches"></a>Очистка кэша служб Analysis Services
@@ -46,13 +46,13 @@ ms.locfileid: "66080303"
   
  Для очистки кэша необходимо указать идентификатор объекта в инструкции `ClearCache` в запросе XMLA. Сначала в этом разделе описывается, как получить идентификатор объекта.  
   
-#### <a name="step-1-get-the-object-identifier"></a>Шаг 1. Получение идентификатора объекта  
+#### <a name="step-1-get-the-object-identifier"></a>Шаг 1. Получение идентификатора объекта  
   
 1.  В среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]щелкните объект правой кнопкой мыши, выберите пункт **Свойства**и скопируйте значение свойства "Идентификатор" на панели **Свойства** . Такой подход работает для баз данных, кубов, измерений и таблиц.  
   
 2.  Чтобы получить идентификатор группы мер, щелкните правой кнопкой мыши группу мер и выберите пункт **Создать скрипт для группы мер**. Выберите команду **CREATE** или **ALTER**и отправьте запрос в окно. Идентификатор группы мер будет виден в определении объекта. Скопируйте идентификатор определения объекта.  
   
-#### <a name="step-2-run-the-query"></a>Шаг 2. Выполнить запрос  
+#### <a name="step-2-run-the-query"></a>Шаг 2. Запуск запроса  
   
 1.  В среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]щелкните правой кнопкой мыши базу данных, укажите пункт **Создать запрос**и выберите пункт **XMLA**.  
   
@@ -87,8 +87,8 @@ ms.locfileid: "66080303"
     </return>  
     ```  
   
-## <a name="see-also"></a>См. также  
- [Создание скриптов для административных задач в службах Analysis Services](../script-administrative-tasks-in-analysis-services.md)   
- [Мониторинг экземпляра Analysis Services](monitor-an-analysis-services-instance.md)  
+## <a name="see-also"></a>См. также:  
+ [Создание скриптов административных задач в Analysis Services](../script-administrative-tasks-in-analysis-services.md)   
+ [Наблюдение за экземпляром служб Analysis Services](monitor-an-analysis-services-instance.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Определение режима работы сервера анализа экземпляра служб Services | Документация Майкрософт
+title: Определение режима работы сервера для экземпляра Analysis Services | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ff9ac19c0b605266de5eca69dd0f410f0d8fbdd2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080062"
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>Определение режима работы сервера экземпляра служб Analysis Services
-  Службы Analysis Services можно установить одним из трех серверных режимов: Многомерный и интеллектуальный анализ данных (по умолчанию), PowerPivot для SharePoint и табличный. Режим сервера экземпляра служб Analysis Services определяется во время установки, когда пользователь выбирает параметры для установки сервера.  
+  Analysis Services можно установить в одном из трех режимов сервера: многомерные данные и интеллектуальный анализ данных (по умолчанию), PowerPivot для SharePoint и табличные. Режим сервера экземпляра служб Analysis Services определяется во время установки, когда пользователь выбирает параметры для установки сервера.  
   
  Режим сервера определяет тип создаваемого и развертываемого решения. Если программное обеспечение сервера не было установлено и необходимо узнать, в каком режиме установлен сервер, режим можно определить, следуя указаниям в этом разделе. Дополнительные сведения о доступных функциях в определенном режиме см. в разделе [Сравнение табличных и многомерных решений (службы SSAS)](../comparing-tabular-and-multidimensional-solutions-ssas.md).  
   
@@ -27,7 +27,7 @@ ms.locfileid: "66080062"
 ## <a name="server-icons-in-object-explorer"></a>Значки сервера в обозревателе объектов  
  Самый простой способ определить режим сервера — это подключиться к серверу в среде SQL Server Management Studio и посмотреть на значок рядом с именем сервера в обозревателе объектов. На следующей иллюстрации показаны три экземпляра служб Analysis Services, развернутые в многомерном, табличном режиме и режиме PowerPivot.  
   
- ![Объект Explorer значки для каждого режима работы сервера](../media/ssas-ssms-servermodes.gif "значки обозревателя объектов для каждого режима работы сервера")  
+ ![Значки обозревателя объектов для каждого режима сервера](../media/ssas-ssms-servermodes.gif "Значки обозревателя объектов для каждого режима сервера")  
   
 ## <a name="viewing-deploymentmode-property-in-msmdsrvini-file"></a>Просмотр свойства DeploymentMode в файле MSMDSRV.INI  
  Также можно проверить свойство `DeploymentMode` в файле msmdsrv.ini, который имеется в каждом экземпляре служб Analysis Services. Значение этого свойства определяет режим сервера. Допустимые значения: 0 (многомерный), 1 (SharePoint) или 2 (табличный). Чтобы открыть файл msmdsrv.ini, необходимо быть администратором служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (то есть членом роли сервера). Этот файл содержит структурированный XML-код. Просмотреть этот файл можно в Блокноте или другом текстовом редакторе.  
@@ -36,11 +36,11 @@ ms.locfileid: "66080062"
 >  Не изменяйте значение свойства `DeploymentMode`. Изменение свойства вручную после установки сервера не поддерживается.  
   
 ## <a name="about-the-deploymentmode-property"></a>О свойстве DeploymentMode  
- Свойство `DeploymentMode` определяет контекст работы экземпляра сервера служб Analysis Services. Это свойство называется «режим сервера» в диалоговых окон, сообщений и документации. Это свойство инициализируется программой установки в зависимости от способа установки служб Analysis Services. Это свойство следует рассматривать исключительно как внутреннее и всегда использовать в нем значение, указанное программой установки.  
+ Свойство `DeploymentMode` определяет контекст работы экземпляра сервера служб Analysis Services. Это свойство называется "режим сервера" в диалоговых окнах, сообщениях и документации. Это свойство инициализируется программой установки в зависимости от способа установки служб Analysis Services. Это свойство следует рассматривать исключительно как внутреннее и всегда использовать в нем значение, указанное программой установки.  
   
  Ниже приведены допустимые значения для этого свойства.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |0|Это значение по умолчанию. Оно задает многомерный режим, используемый для обслуживания многомерных баз данных с хранилищем MOLAP, HOLAP и ROLAP, а также с моделями интеллектуального анализа данных.|  
 |1|Указывает экземпляры служб Analysis Service, установленные в составе развертывания PowerPivot для SharePoint. Не следует изменять свойство режима развертывания экземпляра служб Analysis Services, который входит в состав установки PowerPivot для SharePoint. Если изменить режим, данные PowerPivot больше не будут выполняться на сервере.|  
@@ -48,13 +48,13 @@ ms.locfileid: "66080062"
   
  Это монопольные режимы. На сервере, где настроен табличный режим, не могут работать базы данных служб Analysis Services, содержащие кубы и измерения. Если позволяет оборудование компьютера, можно установить на одном компьютере несколько экземпляров служб Analysis Services и настроить для каждого экземпляра свой режим развертывания. Следует помнить, что службы Analysis Services являются ресурсоемким приложением. Развертывание нескольких экземпляров на одном компьютере рекомендуется только для мощных серверов.  
   
-## <a name="see-also"></a>См. также  
- [Установка служб Analysis Services в табличном режиме](install-windows/install-analysis-services.md)   
- [Установка служб Analysis Services в многомерном режиме и режиме интеллектуального анализа данных](../../sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md)   
+## <a name="see-also"></a>См. также:  
+ [Установка Analysis Services в табличном режиме](install-windows/install-analysis-services.md)   
+ [Установка Analysis Services в многомерном режиме и модели интеллектуального анализа данных](../../sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md)   
  [Установка PowerPivot для SharePoint 2010](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)   
- [Подключение к службам Analysis Services](connect-to-analysis-services.md)   
- [Решения табличных моделей (табличные службы SSAS)](../tabular-model-solutions-ssas-tabular.md)   
- [Решения многомерной модели (службы SSAS)](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [Модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../data-mining/mining-models-analysis-services-data-mining.md)  
+ [Подключение к Analysis Services](connect-to-analysis-services.md)   
+ [Решения табличных моделей &#40;табличные&#41;SSAS](../tabular-model-solutions-ssas-tabular.md)   
+ [Решения многомерной модели &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
+ [Модели интеллектуального анализа данных &#40;Analysis Services — интеллектуальный анализ&#41;](../data-mining/mining-models-analysis-services-data-mining.md)  
   
   

@@ -13,10 +13,10 @@ ms.assetid: cb076fda-6488-4959-a6a4-7adaccf3f25c
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: fa57b82d0e3f18e4ee1c3d0147935fa00cd5c06a
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70874851"
 ---
 # <a name="transaction-lifetimes"></a>Время существования транзакций
@@ -31,7 +31,7 @@ ms.locfileid: "70874851"
   
 -   Попытка отката транзакции, которая не была запущена в той же процедуре, приводит к тому, что транзакция перестает отвечать на запросы (что препятствует выполнению других побочных операций). Выполнение транзакции прекращается, пока код CLR не выйдет из области действия. Обратите внимание, что эта особенность может быть полезной при обнаружении ошибки в процедуре и необходимости убедиться, что работа транзакции полностью прекращена.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Интеграция со средой CLR и транзакции](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
   
   

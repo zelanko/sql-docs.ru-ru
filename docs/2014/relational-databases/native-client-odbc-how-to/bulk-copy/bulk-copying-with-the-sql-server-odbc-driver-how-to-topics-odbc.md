@@ -14,30 +14,30 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dcc35614e156301efa5892d59a09156c189e0fac
-ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72688883"
 ---
 # <a name="bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc"></a>Инструкции по массовому копированию с помощью драйвера ODBC для SQL Server (ODBC)
   При использовании с Microsoft SQL Server 2005 драйвер ODBC SQL Server поддерживает те же функции операций с массовым копированием, которые поддерживаются API DB-Library.  
   
- Сведения о критическом изменении, выполняемом при выполнении операции копирования в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], см. в разделе [выполнение операций &#40;с массовым&#41;копированием в ODBC](../../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
+ Дополнительные сведения о критическом изменении [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], начиная с, в разделе [выполнение операций полного копирования &#40;&#41;ODBC ](../../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
   
 ## <a name="in-this-section"></a>в этом разделе  
   
--   [Полное копирование без файла &#40;форматирования ODBC&#41;](bulk-copy-without-a-format-file-odbc.md)  
+-   [Полное копирование без файла форматирования &#40;ODBC&#41;](bulk-copy-without-a-format-file-odbc.md)  
   
--   [Выполнить групповое копирование ВЫБОРки &#40;ODBC для результирующего набора&#41;](bulk-copy-a-select-result-set-odbc.md)  
+-   [Групповое копирование результирующего набора SELECT &#40;ODBC&#41;](bulk-copy-a-select-result-set-odbc.md)  
   
--   [Создание файла формата для копирования файлов &#40;в формате ODBC&#41;](create-a-bulk-copy-format-file-odbc.md)  
+-   [Создание файла форматирования для копирования &#40;ODBC&#41;](create-a-bulk-copy-format-file-odbc.md)  
   
--   [Групповое копирование с помощью файла &#40;форматирования ODBC&#41;](bulk-copy-by-using-a-format-file-odbc.md)  
+-   [Групповое копирование с помощью файла форматирования &#40;ODBC&#41;](bulk-copy-by-using-a-format-file-odbc.md)  
   
--   [Пакетная Копирование данных из переменных &#40;программы ODBC&#41;](bulk-copy-data-from-program-variables-odbc.md)  
+-   [Групповое Копирование данных из переменных программы &#40;ODBC&#41;](bulk-copy-data-from-program-variables-odbc.md)  
   
-## <a name="see-also"></a>См. также  
- [Инструкции по ODBC](../odbc-how-to-topics.md)  
+## <a name="see-also"></a>См. также:  
+ [ODBC How-to Topics](../odbc-how-to-topics.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f28d0503497fd066de2d328e75813f7b77026b2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085242"
 ---
 # <a name="create-drillthrough-queries-using-dmx"></a>Создание запросов детализации с помощью расширений интеллектуального анализа данных
@@ -43,8 +43,8 @@ WHERE [Model Region] = 'M200 Pacific'
   
  Обратите внимание, что в этом примере столбец структуры переименован с использованием псевдонима. Если столбцу структуры не присвоить псевдоним, то он будет возвращен с именем Expression. Это поведение по умолчанию для всех безымянных столбцов.  
   
-## <a name="see-also"></a>См. также  
- [Запросы детализации (интеллектуальный анализ данных)](drillthrough-queries-data-mining.md)   
+## <a name="see-also"></a>См. также:  
+ [Запросы детализации &#40;&#41;интеллектуального анализа данных](drillthrough-queries-data-mining.md)   
  [Детализация структур интеллектуального анализа данных](drillthrough-on-mining-structures.md)  
   
   

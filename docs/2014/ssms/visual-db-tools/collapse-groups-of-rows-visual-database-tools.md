@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f7f6cbc6b4150f2f951befcb70c1b09108de3b51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62670487"
 ---
 # <a name="collapse-groups-of-rows-visual-database-tools"></a>Сворачивание групп строк (визуальные инструменты для баз данных)
@@ -72,8 +72,8 @@ ms.locfileid: "62670487"
   
      Сведения о применении критериев выбора на группах строк см. в разделах [Задание условий для групп (визуальные инструменты для баз данных)](specify-conditions-for-groups-visual-database-tools.md) и [Использование предложения HAVING и WHERE в одном запросе (визуальные инструменты для баз данных)](use-having-and-where-clauses-in-the-same-query-visual-database-tools.md).  
   
-## <a name="see-also"></a>См. также  
- [Определение критериев поиска &#40;визуальных инструментах баз данных&#41;](specify-search-criteria-visual-database-tools.md)   
+## <a name="see-also"></a>См. также:  
+ [Укажите условия поиска &#40;визуальные инструменты для баз данных&#41;](specify-search-criteria-visual-database-tools.md)   
  [Разделы по конструированию запросов и представлений (визуальные инструменты для баз данных)](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

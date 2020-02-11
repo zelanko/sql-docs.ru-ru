@@ -1,5 +1,5 @@
 ---
-title: Создание и управление ими локальной секции (службы Analysis Services) | Документация Майкрософт
+title: Создание локальной секции и управление ей (Analysis Services) | Документация Майкрософт
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 44b27801af70756913b293afd5e7613f3e026d82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076298"
 ---
 # <a name="create-and-manage-a-local-partition-analysis-services"></a>Создание локальной секции и управление ей (Analysis Services)
@@ -26,8 +26,8 @@ ms.locfileid: "66076298"
   
  Секции могут создаваться во время разработки модели в среде [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] или при развертывании решения с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или XMLA-скрипта. Рекомендуется выбрать и использовать только один подход. При использовании разных средств может возникнуть ситуация, когда изменения, внесенные в развернутую базу данных с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , будут перезаписаны последующим развертыванием решения из [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
-## <a name="before-you-start"></a>Перед началом  
- Убедитесь, что у вас установлен выпуск Business Intelligence или Enterprise. Выпуск Standard не поддерживает работу с множественными секциями. Чтобы проверить выпуск, щелкните правой кнопкой мыши узел сервера в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и выберите пункт **Отчеты** | **Общие**. Дополнительные сведения о доступных функциях см. в разделе [функции, поддерживаемые различными выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+## <a name="before-you-start"></a>Перед началом работы  
+ Убедитесь, что у вас установлен выпуск Business Intelligence или Enterprise. Выпуск Standard не поддерживает работу с множественными секциями. Чтобы проверить выпуск, щелкните правой кнопкой мыши узел [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] сервера в и выберите **отчеты** | **Общие**. Дополнительные сведения о доступности функций см. [в разделе функции, поддерживаемые различными Выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  Важно понять, что секции должны иметь одинаковую агрегатную схему, если вы в будущем планируете выполнять их объединение. Объединять можно только секции с одними и теми же режимами хранения и агрегатными схемами.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66076298"
   
 3.  В столбце Source нажмите кнопку обзора (. .), чтобы открыть окно выбора источника секции.  
   
-     ![Исходный столбец на панели секции](../media/ssas-partitionsource.png "исходный столбец на панели секции")  
+     ![Исходный столбец на панели секции](../media/ssas-partitionsource.png "Исходный столбец на панели секции")  
   
 4.  В поле выбора типа привязки укажите **Привязка запроса**. Автоматически появится SQL-запрос выбора данных.  
   
@@ -116,14 +116,14 @@ ms.locfileid: "66076298"
   
 11. Изучите куб, чтобы проверить правильность возвращаемых данных.  
   
-## <a name="next-step"></a>Следующий шаг  
+## <a name="next-step"></a>Дальнейшее действие  
  При создании взаимоисключающих запросов для секций убедитесь, что комбинированные данные секций включают все данные, которые необходимо включить в куб.  
   
  В качестве последнего действия обычно необходимо удалить секцию по умолчанию, которая была основана на самой таблице (если она еще есть), иначе секции, основанные на запросах, будут перекрываться с запросом, основанным на полной таблице.  
   
-## <a name="see-also"></a>См. также  
- [Секции (службы Analysis Services — многомерные данные)](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>См. также:  
+ [Секции &#40;Analysis Services многомерных данных&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [Удаленные секции](../multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)   
- [Объединение секций в службах Analysis Services (службы SSAS  — многомерные данные)](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+ [Слияние секций в Analysis Services &#40;SSAS — многомерные&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

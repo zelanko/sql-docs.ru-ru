@@ -15,27 +15,27 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9aa5518ee9ebcaca287b76636d6eeea8af2f4ea5
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72796420"
 ---
 # <a name="create-a-stored-procedure"></a>Создание хранимой процедуры
   В этом разделе описывается, как можно создать хранимую процедуру [!INCLUDE[tsql](../../includes/tsql-md.md)] в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] с использованием инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE PROCEDURE.  
   
 ##  <a name="Top"></a>   
--   **Перед началом работы выполните следующие действия.**  [Разрешения](#Permissions)  
+-   **Перед началом работы**  [Разрешения](#Permissions)  
   
--   **To create a procedure, using:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Создание процедуры с использованием:**  [среды SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="Permissions"></a> Разрешения  
+##  <a name="Permissions"></a> Permissions  
  Для выполнения этой инструкции требуется разрешение CREATE PROCEDURE в отношении базы данных и разрешение ALTER в отношении схемы, в которой создается процедура.  
   
 ##  <a name="Procedures"></a> Создание хранимой процедуры  
  Можно использовать один из следующих способов:  
   
--   [Среда Среда SQL Server Management Studio](#SSMSProcedure)  
+-   [Среда SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
@@ -52,11 +52,11 @@ ms.locfileid: "72796420"
   
 5.  В диалоговом окне **Задание значений для параметров шаблона** введите для показанных параметров следующие значения.  
   
-    |Parameter|Value|  
+    |Параметр|Значение|  
     |---------------|-----------|  
     |Автор|*Ваше имя*|  
     |Дата создания|*Сегодняшняя дата*|  
-    |Description|Возвращает данные о сотрудниках.|  
+    |Описание|Возвращает данные о сотрудниках.|  
     |Procedure_name|HumanResources.uspGetEmployeesTest|  
     |@Param1|@LastName|  
     |@Datatype_For_Param1|`nvarchar`(50)|  
@@ -76,7 +76,7 @@ ms.locfileid: "72796420"
         AND EndDate IS NULL;  
     ```  
   
-8.  Для проверки синтаксиса выберите пункт **Синтаксический анализ** в меню **Запрос**. Если возвращается сообщение об ошибке, сравните инструкции с приведенными выше и при необходимости внесите исправления.  
+8.  Для проверки синтаксиса выберите пункт **Выполнить анализ** в меню **Запрос**. Если возвращается сообщение об ошибке, сравните инструкции с приведенными выше и при необходимости внесите исправления.  
   
 9. Чтобы создать процедуру, в меню **Запрос** выберите пункт **Выполнить**. Процедура создается как объект в базе данных.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "72796420"
 ###  <a name="TsqlProcedure"></a> Использование Transact-SQL  
  **Создание процедуры в редакторе запросов**  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  В меню **Файл** выберите пункт **Создать запрос**.  
   
@@ -126,6 +126,6 @@ ms.locfileid: "72796420"
     GO
     ```  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
  [CREATE PROCEDURE (Transact-SQL)](/sql/t-sql/statements/create-procedure-transact-sql)  
   

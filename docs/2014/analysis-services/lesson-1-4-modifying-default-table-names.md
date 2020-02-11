@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b6e43196f5bc318630a52073e22969dc58a0e64a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079229"
 ---
 # <a name="modifying-default-table-names"></a>Изменение имен таблиц по умолчанию
@@ -27,17 +27,17 @@ ms.locfileid: "66079229"
   
 ### <a name="to-modify-the-default-name-of-a-table"></a>Изменение имени таблицы по умолчанию  
   
-1.  На панели **Таблицы** **конструктора представлений источников данных**щелкните правой кнопкой мыши таблицу **FactInternetSales** и выберите пункт **Свойства**.  
+1.  На панели **Таблицы****конструктора представлений источников данных**щелкните правой кнопкой мыши таблицу **FactInternetSales** и выберите пункт **Свойства**.  
   
 2.  Если окно свойств не отображается в правой части окна Microsoft Visual Studio, нажмите кнопку **Автоматически скрывать** в строке заголовка окна свойств, чтобы окно оставалось видимым.  
   
      Когда окно свойств открыто, проще изменять свойства каждой таблицы в представлении источника данных. Если окно не закреплено в открытом состоянии с помощью кнопки **Автоматически скрывать** , оно будет закрыто, как только будет выбран другой объект на панели **Диаграмма** .  
   
-3.  Изменение **FriendlyName** свойство для **FactInternetSales** объект *`InternetSales`* .  
+3.  Измените свойство **FriendlyName** для объекта **FactInternetSales** на *`InternetSales`*.  
   
      Изменение будет применено, если щелкнуть вне ячейки свойства **FriendlyName** . На следующем занятии будет рассмотрено определение группы мер на основе этой таблицы фактов. Из-за сделанных на этом занятии изменений она будет называться не FactInternetSales, а InternetSales.  
   
-4.  На панели **Таблицы** выберите таблицу **DimProduct** . В окне «Свойства» измените **FriendlyName** свойства *`Product`* .  
+4.  На панели **Таблицы** выберите таблицу **DimProduct** . В окно свойств измените свойство **FriendlyName** на *`Product`*.  
   
 5.  Точно таким же образом измените значения свойства **FriendlyName** для всех оставшихся таблиц в представлении источника данных, удалив префикс**Dim**.  
   
@@ -48,8 +48,8 @@ ms.locfileid: "66079229"
 ## <a name="next-lesson"></a>Следующее занятие  
  [Занятие 2. Определение и развертывание куба](lesson-2-defining-and-deploying-a-cube.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Представления источников данных в многомерных моделях](multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [Изменение свойств в представлении источника данных (службы Analysis Services)](multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)  
+ [Изменение свойств в представлении источника данных &#40;Analysis Services&#41;](multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)  
   
   

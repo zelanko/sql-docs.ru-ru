@@ -1,5 +1,5 @@
 ---
-title: Закрыть диалоговое окно «предупреждение» (службы Analysis Services — многомерные данные) | Документация Майкрософт
+title: Диалоговое окно "Отклонить предупреждение" (Analysis Services-многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3450713f3b621e960e443062323c3074b2698b07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081635"
 ---
 # <a name="dismiss-warning-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Отклонить предупреждение» (службы Analysis Services — многомерные данные)
   Диалоговое окно **Отклонить предупреждение** используется, чтобы отклонить конкретный экземпляр предупреждения.  
   
- **Чтобы отобразить предупреждения**  
+ **Отображение предупреждений**  
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]откройте проект служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
@@ -35,7 +35,7 @@ ms.locfileid: "66081635"
  **Комментарии (необязательно)**  
  Введите объяснение, почему отклонено предупреждение. Комментарий будет отображаться в столбце **Комментарий** таблицы **Отключенные предупреждения** вкладки **Предупреждения** конструктора баз данных.  
   
-## <a name="see-also"></a>См. также  
- [Предупреждения &#40;базы данных конструктор&#41; &#40;службы Analysis Services — многомерные данные&#41;](warnings-database-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>См. также:  
+ [Предупреждения &#40;конструкторе баз данных&#41; &#40;Analysis Services многомерных данных&#41;](warnings-database-designer-analysis-services-multidimensional-data.md)  
   
   

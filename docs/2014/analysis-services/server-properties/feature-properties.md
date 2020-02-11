@@ -20,22 +20,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1cc2d52bd942fe15eeabd72f1c37740637e692d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069052"
 ---
-# <a name="feature-properties"></a>Свойства компонента
+# <a name="feature-properties"></a>Свойства функций
   Свойства функций служат для настройки возможностей продуктов, большинство из них являются расширенными, включая свойства, которые управляют связями между экземплярами сервера.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживают свойства сервера, перечисленные в следующей таблице. Дополнительные сведения о дополнительных свойствах сервера и об их настройке см. в разделе [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]поддерживает свойства сервера, перечисленные в следующей таблице. Дополнительные сведения о дополнительных свойствах сервера и об их настройке см. в разделе [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
- **Применимо к:** Только многомерный режим сервера  
+ **Применимо к:** Только в многомерном режиме сервера  
   
 ## <a name="properties"></a>Свойства  
   
-|Свойство|По умолчанию|Описание|  
+|Свойство|По умолчанию|Description|  
 |--------------|-------------|-----------------|  
 |`ManagedCodeEnabled`|1|Логическое свойство, показывающее, включены ли процедуры хранилища среды CLR.|  
 |`LinkInsideInstanceEnabled`|1|Логическое свойство, показывающее, может ли связанный объект быть создан в том же экземпляре сервера.|  
@@ -47,9 +47,9 @@ ms.locfileid: "66069052"
 |`SQMSupportEnabled`|1|Свойство логического типа, показывающее, отправляются ли отчеты об ошибках и использовании компонентов в корпорацию [!INCLUDE[msCoName](../../includes/msconame-md.md)] автоматически.|  
 |`ResourceMonitoringEnabled`|1|Свойство логического типа, показывающее, включены ли счетчики мониторинга внутренних ресурсов. По умолчанию это свойство включено. Будучи включенным, это свойство позволяет счетчикам выполнять сбор данных об использовании ЦП, памяти и работе подсистемы ввода-вывода.<br /><br /> Счетчики мониторинга внутренних ресурсов используются динамическими административными представлениями (DMV), которые предоставляют информацию об использовании ресурсов. Если отключить это свойство, то запросы динамического административного представления по-прежнему будут выполняться, но собранные результаты будут недействительными. Динамические административные представления, зависящие от этого свойства:<br />**DISCOVER_OBJECT_ACTIVITY**<br />**DISCOVER_COMMAND_OBJECTS**<br />**DISCOVER_SESSIONS** (для SESSION_READS, SESSION_WRITES, SESSION_CPU_TIME_MS)<br /><br /> <br /><br /> В многоядерной системе с архитектурой NUMA отключение этого свойства может повысить производительность запросов, особенно при высоких многопользовательских рабочих нагрузках. Следует выполнить сравнительные проверки для определения того, можно ли повысить производительность выполнения запросов в результате изменения этого свойства. Рекомендации по выполнению сравнительных проверок (включая способы очистки кэша и предотвращения распространенных ошибок) см. в [руководстве по использованию служб SQL Server 2008 R2 Analysis Services](https://go.microsoft.com/fwlink/?LinkID=225539).|  
   
-## <a name="see-also"></a>См. также  
- [Настройка свойств сервера в службах Analysis Services](server-properties-in-analysis-services.md)   
- [Определение режима работы сервера экземпляра служб Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
- [Использование динамических административных представлений для мониторинга служб Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Настройка свойств сервера в Analysis Services](server-properties-in-analysis-services.md)   
+ [Определение режима работы сервера для экземпляра Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
+ [Используйте динамические административные представления &#40;&#41; DMV для мониторинга Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
   

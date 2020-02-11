@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2cbc3571aa26728fa94957bb0c2f207ff769f4c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721796"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
@@ -84,7 +84,7 @@ ms.locfileid: "62721796"
     > [!NOTE]  
     >  Чтобы выбрать несколько файлов, удерживайте клавишу CTRL.  
   
-8.  (Необязательно) Повторите шаг 6. Щелкните вкладку **Обзор[!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)], перейдите в каталог** COM, выберите файл Microsoft.SqlServer.Replication.BusinessLogicSupport.dll и нажмите кнопку **ОК**.  
+8.  (Необязательно) Повторите шаг 6. Щелкните вкладку **Обзор**, перейдите в каталог [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM, выберите файл Microsoft.SqlServer.Replication.BusinessLogicSupport.dll и нажмите кнопку **ОК**.  
   
 9. В меню **Вид** выберите пункт **Код**.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "62721796"
     > [!NOTE]  
     >  Чтобы выбрать несколько файлов, удерживайте клавишу CTRL.  
   
-8.  (Необязательно) Повторите шаг 6. Щелкните вкладку **Обзор[!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)], перейдите в каталог** COM, выберите файл Microsoft.SqlServer.Replication.BusinessLogicSupport.dll и нажмите кнопку **ОК**.  
+8.  (Необязательно) Повторите шаг 6. Щелкните вкладку **Обзор**, перейдите в каталог [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM, выберите файл Microsoft.SqlServer.Replication.BusinessLogicSupport.dll и нажмите кнопку **ОК**.  
   
 9. В меню **Вид** выберите пункт **Код**.  
   
@@ -185,8 +185,8 @@ ms.locfileid: "62721796"
   
  [!code-csharp[HowTo#rmo_ChangeTranPub_cached](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_ChangeTranPub_cached)]  
   
-## <a name="see-also"></a>См. также  
- [Replication System Stored Procedures Concepts](replication-system-stored-procedures-concepts.md)   
+## <a name="see-also"></a>См. также:  
+ [Основные понятия системных хранимых процедур репликации](replication-system-stored-procedures-concepts.md)   
  [Основные понятия программирования репликации](replication-programming-concepts.md)  
   
   

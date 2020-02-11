@@ -1,5 +1,5 @@
 ---
-title: Интеллектуального анализа данных, задачи и инструкции моделей | Документация Майкрософт
+title: Задачи и инструкции по модели интеллектуального анализа данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a41d72ce6c0234e6419b55a9fe1895226d884fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083486"
 ---
 # <a name="mining-model-tasks-and-how-tos"></a>Задачи и инструкции по модели интеллектуального анализа данных
@@ -27,15 +27,15 @@ ms.locfileid: "66083486"
   
 -   [добавить модель интеллектуального анализа данных к существующей структуре интеллектуального анализа данных](add-a-mining-model-to-an-existing-mining-structure.md)  
   
--   [Удаление модели интеллектуального анализа данных из структуры интеллектуального анализа данных](delete-a-mining-model-from-a-mining-structure.md)  
+-   [удалить модель интеллектуального анализа данных из структуры интеллектуального анализа данных](delete-a-mining-model-from-a-mining-structure.md)  
   
--   [Исключение столбца из модели интеллектуального анализа данных](exclude-a-column-from-a-mining-model.md)  
+-   [исключить столбец из модели интеллектуального анализа данных](exclude-a-column-from-a-mining-model.md)  
   
--   [Создание псевдонима для столбца модели](create-an-alias-for-a-model-column.md)  
+-   [создать псевдоним для столбца модели](create-an-alias-for-a-model-column.md)  
   
 -   [изменить дискретизацию столбца в модели интеллектуального анализа данных](change-the-discretization-of-a-column-in-a-mining-model.md)  
   
--   [Просмотр или изменение флагов моделирования (интеллектуальный анализ данных)](modeling-flags-data-mining.md)  
+-   [Просмотр или изменение флагов модели &#40;&#41;интеллектуального анализа данных](modeling-flags-data-mining.md)  
   
 -   [Указание столбца, который будет использоваться в модели в качестве регрессора](specify-a-column-to-use-as-regressor-in-a-model.md)  
   
@@ -43,9 +43,9 @@ ms.locfileid: "66083486"
   
 -   [Применение фильтра к модели интеллектуального анализа данных](apply-a-filter-to-a-mining-model.md)  
   
--   [Удаление фильтра из модели интеллектуального анализа данных](delete-a-filter-from-a-mining-model.md)  
+-   [удалить фильтр из модели интеллектуального анализа данных](delete-a-filter-from-a-mining-model.md)  
   
--   [Включение детализации для модели интеллектуального анализа данных](enable-drillthrough-for-a-mining-model.md)  
+-   [включить детализацию для модели интеллектуального анализа данных](enable-drillthrough-for-a-mining-model.md)  
   
 -   [Просмотр или изменение параметров алгоритма](view-or-change-algorithm-parameters.md)  
   
@@ -55,9 +55,9 @@ ms.locfileid: "66083486"
   
 -   [создать измерение интеллектуального анализа данных](create-a-data-mining-dimension.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Задачи и инструкции по структуре интеллектуального анализа данных](mining-structure-tasks-and-how-tos.md)   
- [Модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](mining-models-analysis-services-data-mining.md)   
+ [Модели интеллектуального анализа данных &#40;Analysis Services — интеллектуальный анализ&#41;](mining-models-analysis-services-data-mining.md)   
  [Основные понятия интеллектуального анализа данных](data-mining-concepts.md)  
   
   

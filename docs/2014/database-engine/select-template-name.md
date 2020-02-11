@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b0f79a5b61fc7526d87772c6b07c8a217b1baf60
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089795"
 ---
 # <a name="select-template-name"></a>Выберите имя шаблона
@@ -31,7 +31,7 @@ ms.locfileid: "66089795"
  **Имя шаблона**  
  Введите имя нового шаблона или выберите имя шаблона из списка. Если осуществляется экспорт шаблона, можно лишь выбрать имя шаблона из списка.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Изменение шаблона трассировки (приложение SQL Server Profiler)](modify-a-trace-template-sql-server-profiler.md)   
  [Экспорт шаблона трассировки (приложение SQL Server Profiler)](../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)  
   

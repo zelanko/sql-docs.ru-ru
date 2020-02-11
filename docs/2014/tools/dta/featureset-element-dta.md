@@ -1,5 +1,5 @@
 ---
-title: Элемент FeatureSet (DTA) | Документация Майкрософт
+title: Элемент "список_компонентов" (DTA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a4bf6fac03eab1e096c0ac5dc63285c11bd3f114
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62735757"
 ---
 # <a name="featureset-element-dta"></a>Элемент FeatureSet (DTA)
@@ -36,9 +36,10 @@ ms.locfileid: "62735757"
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
-|**Тип данных и длина**|`string`, без ограничения длины|  
+|**Тип данных и длина**|
+  `string`, без ограничения длины|  
 |**Допустимые значения**|**IDX_IV**<br /> Индексы и индексированные представления.<br /><br /> **IDX**<br /> Только индексы.<br /><br /> **IV**<br /> Только индексированные представления.<br /><br /> **NCL_IDX**<br /> Только некластеризованные индексы.<br /><br /> Используйте с данным элементом одно из этих значений.|  
 |**Значение по умолчанию**|**IDX**|  
 |**Наличие**|Требуется для каждого элемента `TuningOptions`, если не используется элемент `DropOnlyMode`. Если используется элемент `DropOnlyMode`, элемент `FeatureSet` нельзя использовать. Эти элементы являются взаимоисключающими.|  
@@ -53,7 +54,7 @@ ms.locfileid: "62735757"
 ## <a name="example"></a>Пример  
  Пример использования этого элемента см. в разделе [Образец простого входного файла XML (DTA)](simple-xml-input-file-sample-dta.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по входным XML-файлам (помощник по настройке ядра СУБД)](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3c7a9b107a05b0645f2286f534f457d46a1b6f11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771100"
 ---
 # <a name="extract-data-by-using-the-xml-source"></a>Извлечение данных с помощью XML-источника
@@ -61,7 +61,7 @@ ms.locfileid: "62771100"
   
 11. Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [XML-источник](xml-source.md)   
  [Преобразования служб Integration Services](transformations/integration-services-transformations.md)   
  [Пути служб Integration Services](integration-services-paths.md)   

@@ -1,5 +1,5 @@
 ---
-title: Управление областью и контекстом (многомерные Выражения) | Документация Майкрософт
+title: Управление областью и контекстом (многомерные выражения) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,14 +18,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bec0dc51a4f91ba4ca8f71a0a3caba387d37bf1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074635"
 ---
 # <a name="managing-scope-and-context-mdx"></a>Управление областью и контекстом (многомерные выражения)
-  В службах [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]скрипты многомерных выражений могут распространяться на весь куб или на его отдельные участки в особых точках при выполнении скрипта. В скриптах многомерных выражений используется многоуровневый подход к вычислениям в кубе при помощи этапов вычисления.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] В [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]службах скрипты многомерных выражений могут применяться ко всему кубу или к конкретным частям куба в конкретных точках выполнения скрипта. В скриптах многомерных выражений используется многоуровневый подход к вычислениям в кубе при помощи этапов вычисления.  
   
 > [!NOTE]  
 >  Дополнительные сведения о влиянии этапов вычисления на сами вычисления см. в разделе [Основные сведения о порядке этапов и порядке вычисления (многомерные выражения)](mdx-data-manipulation-understanding-pass-order-and-solve-order.md).  
@@ -58,7 +58,7 @@ SCOPE([Customer].&[Redmond].MEMBERS,
 END SCOPE;  
 ```  
   
- Дополнительные сведения о синтаксисе `This` функции, см. в разделе [это &#40;многомерных Выражений&#41;](/sql/mdx/this-mdx).  
+ Дополнительные сведения о синтаксисе `This` функции см. в [этой &#40;&#41;многомерных выражений ](/sql/mdx/this-mdx).  
   
 ## <a name="using-the-scope-statement"></a>Инструкция SCOPE  
  Инструкция SCOPE определяет текущий вложенный куб, содержащий другие выражения и инструкции многомерных выражений и определяющий для них область в рамках скрипта многомерных выражений. В многомерных выражениях эти другие выражения и многомерные инструкции, включая функцию `This` и инструкцию CALCULATE, вычисляются в контексте данного вложенного куба.  
@@ -113,9 +113,9 @@ END SCOPE;
   
  Дополнительные сведения о синтаксисе инструкции SCOPE см. в разделе [Инструкция SCOPE (многомерные выражения)](/sql/mdx/mdx-scripting-scope).  
   
-## <a name="see-also"></a>См. также  
- [Справочник по языку многомерных выражений (многомерные выражения)](/sql/mdx/mdx-language-reference-mdx)   
- [Базовый скрипт многомерных выражений (многомерные выражения)](the-basic-mdx-script-mdx.md)   
- [Основные принципы запросов многомерных выражений (службы Analysis Services)](mdx-query-fundamentals-analysis-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Справочник по языку многомерных выражений &#40;&#41;многомерных выражений](/sql/mdx/mdx-language-reference-mdx)   
+ [Базовый скрипт многомерных выражений &#40;многомерные выражения&#41;](the-basic-mdx-script-mdx.md)   
+ [Основные принципы запросов многомерных выражений &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

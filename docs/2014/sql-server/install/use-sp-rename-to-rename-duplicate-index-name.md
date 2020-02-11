@@ -1,5 +1,5 @@
 ---
-title: С помощью хранимой процедуры sp_rename переименуйте повторяющиеся имена индексов | Документация Майкрософт
+title: Использование sp_rename для переименования повторяющегося имени индекса | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,13 +17,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3ca4efb2a16f615af57e89fa56a4dcb8bdb3bf5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091359"
 ---
-# <a name="use-sprename-to-rename-duplicate-index-name"></a>При помощи хранимой процедуры sp_rename переименуйте повторяющиеся имена индексов
+# <a name="use-sp_rename-to-rename-duplicate-index-name"></a>При помощи хранимой процедуры sp_rename переименуйте повторяющиеся имена индексов
   Советник по переходу обнаружил повторяющиеся имена таблиц или индексированных представлений. Перед обновлением переименуйте повторяющиеся индексы, чтобы их не было.  
   
 ## <a name="component"></a>Компонент  
@@ -42,7 +42,7 @@ ms.locfileid: "66091359"
           AND i.name = o.name and i.indid < o.indid);  
     ```  
   
-2.  Используйте **sp_rename** для изменения одного из имен индексов. Поскольку имена индексов одинаковые, невозможно определить, какой из этих индексов будет переименован. Следующий шаг позволит различить такие индексы.  
+2.  Используйте **sp_rename** , чтобы изменить одно из имен индексов. Поскольку имена индексов одинаковые, невозможно определить, какой из этих индексов будет переименован. Следующий шаг позволит различить такие индексы.  
   
     ```  
     EXEC sp_rename N'table_name.index_name', N'new_index_name', N'INDEX'  
@@ -58,10 +58,10 @@ ms.locfileid: "66091359"
     WHERE i.id = OBJECT_ID('table_or_view_name')  
     ```  
   
-4.  При необходимости используйте **sp_rename** еще раз, чтобы исправления имен индексов.  
+4.  При необходимости используйте **sp_rename** еще раз, чтобы исправить имена индексов.  
   
-## <a name="see-also"></a>См. также  
- [Проблемы обновления компонента Database Engine](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Помощник по обновлению SQL Server 2014 &#91;new&#93;](sql-server-2014-upgrade-advisor.md)  
+## <a name="see-also"></a>См. также:  
+ [Проблемы обновления ядро СУБД](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [Советник по переходу SQL Server 2014 &#91;New&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

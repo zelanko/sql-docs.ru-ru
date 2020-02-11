@@ -1,5 +1,5 @@
 ---
-title: Заметки языка CSDL для бизнес-аналитики (CSDLBI) | Документация Майкрософт
+title: Аннотации языка CSDL для бизнес-аналитики (CSDLBI) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 760e90c34c84bd4b44af90cbbb78aec7e025689a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62757951"
 ---
 # <a name="csdl-annotations-for-business-intelligence-csdlbi"></a>Заметки языка CSDL для бизнес-аналитики (CSDLBI)
+  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживает представление определения табличной модели в формате XML, называемое языком определения концептуальной схемы с заметками бизнес-аналитики (CSDLBI).  
   
  В этом разделе представлены общие сведения о CSDLBI и его использовании в моделях данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -27,22 +28,22 @@ ms.locfileid: "62757951"
   
  Несмотря на то что язык CSDL совместим с платформой Entity Data Framework, для построения с его помощью табличной модели или основанного на модели отчета не требуются ни знания модели «сущность-связь», ни какие-либо специальные средства. Модели создаются с помощью клиентских средств, таких как [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], или API, таких как объекты AMO, и развертываются на сервере. Клиенты подключаются к модели с помощью файла определения модели, обычно публикуемого в библиотеке SharePoint, где его могут использовать конструкторы отчетов и пользователи отчетов. Для просмотра дополнительных сведений перейдите по следующим ссылкам:  
   
--   [Решения табличных моделей (табличные службы SSAS)](../tabular-model-solutions-ssas-tabular.md)  
+-   [Решения табличных моделей &#40;табличные&#41;SSAS](../tabular-model-solutions-ssas-tabular.md)  
   
--   [Развертывание решений табличной модели (табличные службы SSAS)](../tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
+-   [Развертывание решения табличной модели &#40;табличные&#41;SSAS](../tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
--   [Соединение семантической модели бизнес-Аналитики PowerPivot &#40;bism-файлы&#41;](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)  
+-   [Соединение семантической модели бизнес-аналитики PowerPivot &#40;. BISM&#41;](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)  
   
  Схема CSDLBI создается сервером служб Analysis Services в ответ на запрос определения модели от клиентских средств, таких как [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]. Клиентское приложение отправляет XML-запрос серверу служб Analysis Services, на котором размещены данные модели. В ответ сервер отправляет XML-сообщение, содержащее определение сущностей в модели с использованием заметок CSDLBI. С помощью этих сведений клиентское средство создания отчетов представляет поля, статистические выражения и меры, доступные в модели. Заметки CSDLBI также содержат сведения о том, как группировать, сортировать и форматировать данные.  
   
- Общие сведения о CSDLBI см. в разделе [основные понятия CSDLBI](https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts).  
+ Общие сведения о CSDLBI см. в разделе [Основные понятия CSDLBI](https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts).  
   
 ### <a name="working-with-csdl"></a>Работа с языком CSDL  
  Набор заметок CSDLBI, представляющий любую конкретную табличную модель, — это XML-документ, содержащий коллекцию сущностей, как простых, так и сложных. Сущности определяют таблицы (или измерения), столбцы (атрибуты), ассоциации (связи) и формулы, включенные в вычисляемые столбцы, меры и ключевые показатели эффективности.  
   
  Эти объекты нельзя изменять непосредственно, для их изменения следует использовать клиентские средства и API-интерфейсы для работы с табличными моделями.  
   
- CSDL-код для модели можно получить, отправив запрос DISCOVER на сервер, на котором размещается модель. Запрос следует уточнить, указав сервер и модель, а также при необходимости представление или перспективу. Возвращаемое сообщение является XML-строкой. Некоторые элементы зависят от языка и могут возвращать разные значения в зависимости от языка текущего соединения. Дополнительные сведения см. в разделе [строк DISCOVER_CSDL_METADATA](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset).  
+ CSDL-код для модели можно получить, отправив запрос DISCOVER на сервер, на котором размещается модель. Запрос следует уточнить, указав сервер и модель, а также при необходимости представление или перспективу. Возвращаемое сообщение является XML-строкой. Некоторые элементы зависят от языка и могут возвращать разные значения в зависимости от языка текущего соединения. Дополнительные сведения см. в разделе [DISCOVER_CSDL_METADATA набор строк](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset).  
   
 ### <a name="csdlbi-versions"></a>Версии CSDLBI  
  Изначальная спецификация языка CSDL (для платформы Entity Data Framework) предоставляет большинство сущностей и свойств, необходимых для моделирования. Заметки бизнес-аналитики поддерживают особые требования табличных моделей, необходимые для клиентов (таких как [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]) свойства отчетов и дополнительные метаданные, необходимые для многомерных моделей. В этом разделе описаны изменения в каждой версии.  
@@ -71,11 +72,11 @@ ms.locfileid: "62757951"
   
 -   Поддержка перспектив.  
   
- Подробные сведения об отдельных элементах в заметках csdlbi см. в разделе [Технический справочник по аннотациям бизнес-Аналитики для языка CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl). Сведения о базовой спецификации языка CSDL, см. в разделе [спецификация языка CSDL версии 3](https://docs.microsoft.com/ef/ef6/modeling/designer/advanced/edmx/csdl-spec).  
+ Подробные сведения об отдельных элементах в заметках CSDLBI см. [в статье Технический справочник по аннотациям бизнес-аналитики на языке CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl). Сведения о базовой спецификации языка CSDL см. в [спецификации CSDL v3](https://docs.microsoft.com/ef/ef6/modeling/designer/advanced/edmx/csdl-spec).  
   
   
-## <a name="see-also"></a>См. также  
- [Общие сведения о модели табличного объекта](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)   
+## <a name="see-also"></a>См. также:  
+ [Основные сведения об табличной модели объектов](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)   
  [Основные понятия CSDLBI](https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts)   
  [Основные сведения о табличной объектной модели](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
   

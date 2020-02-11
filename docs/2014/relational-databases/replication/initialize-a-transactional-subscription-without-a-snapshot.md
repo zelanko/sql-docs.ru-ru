@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c0cef8a7e8a64935cca6b378e14c00eb0d80f6b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721151"
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>Initialize a Transactional Subscription Without a Snapshot
@@ -44,7 +44,7 @@ ms.locfileid: "62721151"
   
  Чтобы инициализировать подписку с помощью резервной копии, следует включить эту возможность при создании публикации, а затем указать значения нескольких параметров при создании подписки. Публикации можно включить с помощью мастера создания публикаций или программно. Однако указать необходимые значения параметров подписки можно только программно.  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. [Включение инициализации из резервной копии для публикаций транзакций (SQL Server Management Studio)](enable-initialization-with-backup-for-transactional-publications.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Включение инициализации из резервной копии для публикаций транзакций (SQL Server Management Studio)](enable-initialization-with-backup-for-transactional-publications.md)  
   
 -   Программирование репликации на Transact-SQL: [Инициализация транзакционной подписки из резервной копии](initialize-a-transactional-subscription-from-a-backup.md)  
   
@@ -73,7 +73,7 @@ ms.locfileid: "62721151"
   
  Описание альтернативного метода инициализации подписки см. в разделе [Initialize a Subscription Manually](initialize-a-subscription-manually.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Инициализация подписки](initialize-a-subscription.md)  
   
   

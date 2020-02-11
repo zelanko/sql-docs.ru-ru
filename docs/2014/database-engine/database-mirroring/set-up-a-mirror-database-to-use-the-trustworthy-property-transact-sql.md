@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 29cafc7e9669ca322571ff171961dd64cab114cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754330"
 ---
 # <a name="set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql"></a>Настройка зеркальной базы данных на использование свойства TRUSTWORTHY (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "62754330"
   
      Дополнительные сведения см. в разделе [sys.databases (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql).  
   
-2.  После начала зеркального отображения базы данных необходимо убедиться, что в этот момент база данных является основной, в сеансе используется синхронный режим работы и что сеанс уже синхронизирован.  
+2.  После начала зеркального отображения базы данных необходимо убедиться, что в этот момент база данных является основной, в сеансе используется синхронный режим работы и что сеанс уже синхронизирован.   
   
     ```  
     SELECT database_id, mirroring_role, mirroring_safety_level_desc, mirroring_state_desc FROM sys.database_mirroring  
@@ -51,9 +51,9 @@ ms.locfileid: "62754330"
   
      Сделать это можно в среде SQL Server Management Studio или при помощи Transact-SQL:  
   
-    -   [Переключение сеанса зеркального отображения базы данных на другой ресурс вручную (среда SQL Server Management Studio)](manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)  
+    -   [Вручную отработка отказа сеанса зеркального отображения базы данных &#40;SQL Server Management Studio&#41;](manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)  
   
-    -   [Переключение сеанса зеркального отображения базы данных на другой ресурс вручную (язык Transact-SQL)](manually-fail-over-a-database-mirroring-session-transact-sql.md)  
+    -   [Вручную отработка отказа сеанса зеркального отображения базы данных &#40;&#41;Transact-SQL](manually-fail-over-a-database-mirroring-session-transact-sql.md)  
   
 4.  Следующей командой ALTER DATABASE включите свойство TRUSTWORTHY для базы данных:  
   
@@ -69,15 +69,15 @@ ms.locfileid: "62754330"
   
      На языке Transact-SQL:  
   
-    -   [Изменение безопасности транзакций в сеансах зеркального отображения базы данных (Transact-SQL)](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)  
+    -   [Изменение безопасности транзакций в сеансе зеркального отображения базы данных &#40;&#41;Transact-SQL](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)  
   
-    -   [Удаление следящего сервера из сеанса зеркального отображения базы данных (SQL Server)](remove-the-witness-from-a-database-mirroring-session-sql-server.md)  
+    -   [Удалите следящий сервер из сеанса зеркального отображения базы данных &#40;SQL Server&#41;](remove-the-witness-from-a-database-mirroring-session-sql-server.md)  
   
      В среде SQL Server Management Studio:  
   
-    -   [Создание сеанса зеркального отображения базы данных с использованием проверки подлинности Windows (среда SQL Server Management Studio)](establish-database-mirroring-session-windows-authentication.md)  
+    -   [Создание сеанса зеркального отображения базы данных с использованием проверки подлинности Windows &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство базы данных TRUSTWORTHY](../../relational-databases/security/trustworthy-database-property.md)   
  [Настройка зашифрованной зеркальной базы данных](set-up-an-encrypted-mirror-database.md)  
   

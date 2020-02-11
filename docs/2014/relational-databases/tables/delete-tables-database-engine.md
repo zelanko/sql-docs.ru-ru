@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f040c9907574bba718827999bb9c0fbb432a0bd0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761437"
 ---
 # <a name="delete-tables-database-engine"></a>Удаление таблиц (компонент Database Engine)
@@ -34,7 +34,7 @@ ms.locfileid: "62761437"
   
      [Ограничения](#Restrictions)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Удаление таблицы с помощью следующих средств:**  
   
@@ -69,7 +69,7 @@ ms.locfileid: "62761437"
   
 2.  Щелкните таблицу правой кнопкой мыши и в контекстном меню выберите **Удалить** .  
   
-3.  Появится окно подтверждения удаления. Нажмите кнопку **Да**.  
+3.  Появится окно подтверждения удаления. Щелкните **Да**.  
   
     > [!NOTE]  
     >  При удалении таблицы автоматически удаляются все связи с ней.  

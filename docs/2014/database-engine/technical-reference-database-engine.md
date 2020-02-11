@@ -14,40 +14,40 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 67e79a107c47563e507ad27fb0bd14f703206b4c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088792"
 ---
-# <a name="technical-reference-database-engine"></a>Технический справочник (ядро СУБД)
+# <a name="technical-reference-database-engine"></a>Технический справочник (компонент Database Engine)
   В [!INCLUDE[ssDE](../includes/ssde-md.md)] имеется справочная документация по средствам, языкам и программированию для администратора компонента [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
- ![Маленький значок папки](../../2014/integration-services/media/filefolder-small.gif "Маленький значок папки") **Справочник по функциям**  
+ ![Маленький значок папки с файлами](../../2014/integration-services/media/filefolder-small.gif "Маленький значок папки") **Справочник по функциям**  
  [Справка F1 по зарегистрированным серверам](../ssms/register-servers/registered-servers-f1-help.md)  
   
  [Справка меню среды SQL Server Management Studio](../ssms/menu-help/sql-server-management-studio-menu-help.md)  
   
  [Справка F1 визуальных инструментов для баз данных](../ssms/visual-db-tools/visual-database-tools-f1-help.md)  
   
- ![Маленький значок папки](../../2014/integration-services/media/filefolder-small.gif "маленький значок папки") **Справочник по программе командной строки**  
+ ![Маленький значок папки](../../2014/integration-services/media/filefolder-small.gif "Маленький значок папки") **Справка программа командной строки**  
  [Программа bcp](../tools/bcp-utility.md)  
   
- [dta, программа](../tools/dta/dta-utility.md)  
+ [dta](../tools/dta/dta-utility.md)  
   
  [Программа SqlLocalDB](../tools/sqllocaldb-utility.md)  
   
- [Подробнее...](../tools/command-prompt-utility-reference-database-engine.md)  
+ [Другие...](../tools/command-prompt-utility-reference-database-engine.md)  
   
- ![Маленький значок папки](../../2014/integration-services/media/filefolder-small.gif "маленький значок папки") **командлеты PowerShell для ядра базы данных**  
+ ![Маленький значок папки с файлами](../../2014/integration-services/media/filefolder-small.gif "Маленький значок папки") **ядро СУБД командлеты PowerShell**  
  [Invoke-PolicyEvaluation, командлет](../../2014/database-engine/invoke-policyevaluation-cmdlet.md)  
   
  [Invoke-Sqlcmd, командлет](../../2014/database-engine/invoke-sqlcmd-cmdlet.md)  
   
- ![Маленький значок папки](../../2014/integration-services/media/filefolder-small.gif "маленький значок папки") **ошибки и события**  
- [События ядра базы данных и ошибки] (.. /Relational-databases/Errors-Events/Database-Engine-Events-and-Errors.md0  
+ ![Маленький значок папки](../../2014/integration-services/media/filefolder-small.gif "Маленький значок папки") **ошибки и ссылки на события**  
+ [События и ошибки ядро СУБД] (.. /relational-databases/errors-events/database-engine-events-and-errors.md0  
   
- ![Маленький значок папки](../../2014/integration-services/media/filefolder-small.gif "маленький значок папки") **Справочник по логическим и физическим операторам Showplan**  
+ ![Маленький значок папки](../../2014/integration-services/media/filefolder-small.gif "Маленький значок папки") **, Справочник по логическим и физическим операторам Showplan**  
  [Справочник по логическим и физическим операторам Showplan](../relational-databases/showplan-logical-and-physical-operators-reference.md)  
   
   

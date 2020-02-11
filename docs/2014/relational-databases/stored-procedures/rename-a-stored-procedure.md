@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b85a6a5e79c004eb3ed2c7c40c6e3b62d526e95a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721010"
 ---
 # <a name="rename-a-stored-procedure"></a>Изменение имени хранимой процедуры
@@ -29,7 +29,7 @@ ms.locfileid: "62721010"
   
      [Ограничения](#Restrictions)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Для переименования хранимой процедуры используется:**  
   
@@ -45,16 +45,16 @@ ms.locfileid: "62721010"
   
 -   При переименовании хранимой процедуры не изменяется имя соответствующего объекта в столбце определения представления каталога **sys.sql_modules** . Поэтому не рекомендуется переименовывать объекты этого типа. Лучше удалить хранимую процедуру и создать ее повторно с новым именем.  
   
--   Изменение имени или определения процедуры может привести к тому, что все зависящие от нее объекты при выполнении будут возвращать ошибку, если они не будут обновлены в соответствии с внесенными в процедуру изменениями. Дополнительные сведения см. в разделе [Просмотр зависимостей хранимой процедуры](view-the-dependencies-of-a-stored-procedure.md).  
+-   Изменение имени или определения процедуры может привести к тому, что все зависящие от нее объекты при выполнении будут возвращать ошибку, если они не будут обновлены в соответствии с внесенными в процедуру изменениями. Дополнительные сведения см. [в разделе Просмотр зависимостей хранимой процедуры](view-the-dependencies-of-a-stored-procedure.md).  
   
 ###  <a name="Security"></a> безопасность  
   
 ####  <a name="Permissions"></a> Permissions  
  CREATE PROCEDURE  
- Требуется разрешение CREATE PROCEDURE на базу данных и разрешение ALTER на схему, в которой создается процедура, либо членство в предопределенной роли базы данных **db_ddladmin** .  
+ Требуется разрешение CREATE PROCEDURE на базу данных и разрешение ALTER на схему, в которой создается процедура, либо членство в предопределенной роли базы данных **db_ddladmin**.  
   
  ALTER PROCEDURE  
- Требуется разрешение ALTER на процедуру или членство в предопределенной роли базы данных **db_ddladmin** .  
+ Требуется разрешение ALTER на процедуру или членство в предопределенной роли базы данных **db_ddladmin**.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
@@ -110,9 +110,9 @@ AS
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [ALTER PROCEDURE (Transact-SQL)](/sql/t-sql/statements/alter-procedure-transact-sql)   
- [CREATE PROCEDURE (Transact-SQL)](/sql/t-sql/statements/create-procedure-transact-sql)   
+ [Создание процедуры &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)   
  [Создание хранимой процедуры](../stored-procedures/create-a-stored-procedure.md)   
  [Изменение хранимой процедуры](../stored-procedures/modify-a-stored-procedure.md)   
  [Удаление хранимой процедуры](../stored-procedures/delete-a-stored-procedure.md)   

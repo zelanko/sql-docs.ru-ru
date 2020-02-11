@@ -1,5 +1,5 @@
 ---
-title: Указание секций и параметров развертывания ролей | Документация Майкрософт
+title: Указание параметров развертывания секций и ролей | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -23,26 +23,26 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b9b36013f13360a2afcf9546cd1e286b35ae4acd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075356"
 ---
 # <a name="specifying-partition-and-role-deployment-options"></a>Указание параметров развертывания секций и ролей
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Мастер развертывания служб считывает параметры развертывания секций и ролей из \< *имя_проекта*> .deploymentoptions файл. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] создает этот файл при построении проекта служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] использует параметры развертывания секций и ролей текущего проекта при \< *имя_проекта*> .deploymentoptions файл создается. Дополнительные сведения о настройках конфигурации см. в разделе [Основные сведения о входных файлах, применяемых для создания скрипта развертывания](deployment-script-files-input-used-to-create-deployment-script.md).  
+  Мастер [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] развертывания считывает параметры развертывания секций и ролей из \<файла с *именем проекта*>. deploymentoptions. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]создает этот файл при сборке [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] проекта. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]использует параметры развертывания секций и ролей текущего проекта при \<создании *имени проекта*>. deploymentoptions. Дополнительные сведения о настройках конфигурации см. в разделе [Understanding the Input Files Used to Create the Deployment Script](deployment-script-files-input-used-to-create-deployment-script.md).  
   
 ## <a name="reviewing-the-partition-and-role-deployment-options"></a>Просмотр параметров развертывания секций и ролей  
- Параметры развертывания в \< *имя_проекта*> .deploymentoptions включают следующее:  
+ Параметры развертывания в файле с \< *именем проекта*>. deploymentoptions включают следующее:  
   
  **Параметры развертывания секций**  
- \< *Имя_проекта*> .deploymentoptions указывает ли существующие секции в целевой базе данных сохраняться или перезаписываться (по умолчанию). Если существующие секции сохраняются, то будут развернуты только новые секции, а секции и статистические схемы во всех существующих группах мер останутся неизменными.  
+ \< *Имя проекта*>. deploymentoptions указывает, будут ли сохранены или перезаписаны существующие секции в целевой базе данных (по умолчанию). Если существующие секции сохраняются, то будут развернуты только новые секции, а секции и статистические схемы во всех существующих группах мер останутся неизменными.  
   
 > [!NOTE]  
 >  Если группа мер, на которой основана секция, удаляется, то секция также автоматически удаляется.  
   
- **Параметры развертывания ролей**  
- \< *Имя_проекта*> .deploymentoptions указывает один из следующих параметров развертывания ролей:  
+ **Параметры развертывания роли**  
+ \< *Имя проекта*>. deploymentoptions указывает один из следующих вариантов развертывания роли:  
   
 -   Существующие роли и члены ролей в целевой базе данных сохраняются, и развертываются только новые роли и члены ролей.  
   
@@ -50,12 +50,12 @@ ms.locfileid: "66075356"
   
 -   Существующие роли и члены ролей в целевой базе данных сохраняются, и новые роли не развертываются.  
   
--   **Примечание** При сохранении существующих ролей или членов ролей связанные с ними разрешения теряются. Разрешения содержатся в защищаемых объектах, а не в ролях безопасности, с которыми они связаны. Дополнительные сведения о работе с этим поведением с помощью мастера развертывания служб Analysis Service см. в разделе «Сохранение ролей и членов» в базе знаний Майкрософт.  
+-   **Примечание** . Когда существующие роли и члены сохраняются, разрешения, связанные с этими ролями, сбрасываются в значение нет. Разрешения содержатся в защищаемых объектах, а не в ролях безопасности, с которыми они связаны. Дополнительные сведения о работе с этим поведением с помощью мастера развертывания служб Analysis Services см. в разделе "сохраните роли и члены" в базе знаний Майкрософт.  
   
 ## <a name="modifying-the-partition-and-role-deployment-options"></a>Изменение параметров развертывания секций и ролей  
- Может возникнуть необходимость развернуть [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] проекта с помощью разных параметров секций и ролей, отличающихся от хранящихся в \< *имя_проекта*> .deploymentoptions файл. Например, может понадобиться сохранить существующие секции, роли и члены ролей вместо замены всех существующих секций, ролей и членов, как указано в \< *имя_проекта*> .deploymentoptions файл.  
+ Может потребоваться развернуть [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] проект, используя параметры раздела и роли, отличные от тех, которые хранятся в \<файле *Project Name*>. deploymentoptions. Например, может потребоваться хранить существующие секции, роли и члены ролей вместо того, чтобы заменять все существующие секции, роли и члены, как указано в \<файле *Project*>. deploymentoptions.  
   
- Чтобы изменить развертывание секций и ролей в [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] проекта, невозможно изменить настройки секций и ролей в проекте, так как  *\<имя проекта >* **страницы свойств**  диалогового окна в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] эти параметры не отображаются. Если вы хотите изменить параметры развертывания для ролей и секций, необходимо изменить эти данные в \< *имя_проекта*> сам файл .deploymentoptions. Следующая процедура описывает изменение параметров развертывания секций и ролей в \< *имя_проекта*> .deploymentoptions файл.  
+ Чтобы изменить развертывание секций и ролей в [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] проекте, нельзя изменить параметры секций и ролей в проекте, так как в диалоговом окне **страницы свойств** " * \<имя проекта>* " [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] в не отображаются эти параметры. Если вы хотите изменить параметры развертывания для ролей и секций, необходимо изменить эти сведения в \<файле *Project Name*>. deploymentoptions. В следующей процедуре описывается изменение параметров развертывания секций и ролей в \< *имени проекта*>. deploymentoptions.  
   
 #### <a name="to-change-the-deployment-of-partitions-or-roles-after-the-input-files-have-been-generated"></a>Изменение развертывания секций и ролей после формирования входных файлов  
   
@@ -63,15 +63,15 @@ ms.locfileid: "66075356"
   
      -или-  
   
--   Запустите мастер развертывания служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] из командной строки и настройте его на работу в режиме файла ответов. (Дополнительные сведения о режиме файла ответов см. в разделе [Запуск мастера развертывания служб Analysis Services](running-the-analysis-services-deployment-wizard.md).)  
+-   Запустите мастер развертывания служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] из командной строки и настройте его на работу в режиме файла ответов. (Дополнительные сведения о режиме файла ответов см. [в разделе Запуск мастера развертывания Analysis Services](running-the-analysis-services-deployment-wizard.md).)  
   
      -или-  
   
--   Откройте \< *имя_проекта*> .deploymentoptions в любом текстовом редакторе и вручную изменить параметры.  
+-   \<Откройте *имя проекта*>. deploymentoptions в любом текстовом редакторе и вручную измените параметры.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Указание целевого объекта установки](deployment-script-files-specifying-the-installation-target.md)   
- [Указание настроек конфигурации для развертывания решения](deployment-script-files-solution-deployment-config-settings.md)   
+ [Указание параметров конфигурации для развертывания решения](deployment-script-files-solution-deployment-config-settings.md)   
  [Указание параметров обработки](deployment-script-files-specifying-processing-options.md)  
   
   

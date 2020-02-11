@@ -1,5 +1,5 @@
 ---
-title: Не удалось загрузить файл или сборку &#39;Microsoft.AnalysisServices.SharePoint.Integration&#39; | Документация Майкрософт
+title: Не удалось загрузить файл или сборку &#39;Microsoft. AnalysisServices. SharePoint. Integration&#39; | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,22 +11,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 42c7b7e876f244831920be390d97c88412eed63f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071669"
 ---
-# <a name="could-not-load-file-or-assembly-39microsoftanalysisservicessharepointintegration39"></a>Не удалось загрузить файл или сборку &#39;Microsoft.AnalysisServices.SharePoint.Integration&#39;
+# <a name="could-not-load-file-or-assembly-39microsoftanalysisservicessharepointintegration39"></a>Не удалось загрузить файл или сборку &#39;Microsoft. AnalysisServices. SharePoint. Integration&#39;
   В среде SharePoint 2010, в которой установлен PowerPivot для SharePoint, эта ошибка возникает, если решение на уровне приложений для PowerPivot развернуто неправильно.  
   
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Применение|PowerPivot для SharePoint|  
-|Номер версии продукта|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
-|Причина|Решение Powerpivotwebapp не развернуто или развернуто неправильно.|  
+|Применяется к|PowerPivot для SharePoint|  
+|Версия продукта|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|Причина:|Решение Powerpivotwebapp не развернуто или развернуто неправильно.|  
 |Текст сообщения|Не удалось загрузить файл или сборку Microsoft.AnalysisServices.SharePoint.Integration|  
   
 ## <a name="explanation"></a>Объяснение  
@@ -45,7 +45,7 @@ ms.locfileid: "66071669"
   
 5.  Нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Развертывание решений PowerPivot в SharePoint](deploy-power-pivot-solutions-to-sharepoint.md)  
   
   

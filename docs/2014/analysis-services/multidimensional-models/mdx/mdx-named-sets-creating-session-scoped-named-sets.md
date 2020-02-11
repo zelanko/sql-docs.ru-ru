@@ -1,5 +1,5 @@
 ---
-title: Создание с областью действия сеанса с именем наборами (многомерные Выражения) | Документация Майкрософт
+title: Создание именованных наборов с областью действия сеанса (многомерные выражения) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 545bbdb171388f06c28644e0b8caa48db95e7e7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074048"
 ---
 # <a name="creating-session-scoped-named-sets-mdx"></a>Создание именованных наборов с областью действия сеанса (многомерные выражения)
@@ -52,7 +52,7 @@ create Session set [Store].[SetCities_2_3] as
 select SetCities_2_3 on 0 from [Store]  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Создание именованных наборов с областью действия запроса (многомерные выражения)](mdx-named-sets-creating-query-scoped-named-sets.md)  
+## <a name="see-also"></a>См. также:  
+ [Создание именованных наборов с областью действия запроса &#40;многомерных выражениях&#41;](mdx-named-sets-creating-query-scoped-named-sets.md)  
   
   

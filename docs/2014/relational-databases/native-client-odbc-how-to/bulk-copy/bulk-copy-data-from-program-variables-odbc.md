@@ -1,5 +1,5 @@
 ---
-title: Массовое копирование данных из переменных программы (ODBC) | Документация Майкрософт
+title: Пакетная Копирование данных из переменных программы (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3489e7a925ec09f84397ea27e5a749180999a9fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62753646"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>Обеспечение массового копирования данных из переменных приложения (ODBC)
@@ -25,7 +25,7 @@ ms.locfileid: "62753646"
   
  Этот образец разработан для ODBC версии 3.0 или более поздней.  
   
- **Примечание по безопасности** по возможности используйте проверку подлинности Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранение учетных данных, зашифруйте их с помощью [API-интерфейса шифрования Win32](https://go.microsoft.com/fwlink/?LinkId=9504).  
+ **Примечание по безопасности** По возможности используйте проверку подлинности Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранение учетных данных, зашифруйте их с помощью [API-интерфейса шифрования Win32](https://go.microsoft.com/fwlink/?LinkId=9504).  
   
 ### <a name="to-use-bulk-copy-functions-directly-on-program-variables"></a>Использование функций массового копирования непосредственно с переменными программ  
   
@@ -35,7 +35,7 @@ ms.locfileid: "62753646"
   
 3.  Соединитесь с SQL Server.  
   
-4.  Вызовите [bcp_init](../../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) задать следующие сведения:  
+4.  Вызовите [bcp_init](../../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) , чтобы задать следующие сведения:  
   
     -   Имя таблицы или представления, из которого или в которое будет производиться массовое копирование.  
   
@@ -43,22 +43,22 @@ ms.locfileid: "62753646"
   
     -   Имя файла данных, в который сохраняются все сообщения об ошибках массового копирования (укажите значение NULL, если файл сообщений не требуется).  
   
-    -   Направление копирования: DB_IN из приложения в представление, таблицу или DB_OUT в приложение из таблицы или представления.  
+    -   Направление копирования: DB_IN из приложения в представление или таблицу или DB_OUT приложению из таблицы или представления.  
   
-5.  Вызовите [bcp_bind](../../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) для каждого столбца при массовом копировании для привязки столбца к программной переменной.  
+5.  Вызовите [bcp_bind](../../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) для каждого столбца в операции с массовым копированием, чтобы привязать столбец к программной переменной.  
   
-6.  Заполните переменные программы с данными и вызов [bcp_sendrow](../../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) отправлять строки данных.  
+6.  Заполните переменные программы данными и вызовите [bcp_sendrow](../../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) , чтобы отправить строку данных.  
   
-7.  После передачи нескольких строк, вызвать [bcp_batch](../../native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) до контрольной точки, уже переданных строк. Рекомендуется вызывать [bcp_batch](../../native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) по крайней мере один раз на каждые 1000 строк.  
+7.  После отправки нескольких строк вызовите [bcp_batch](../../native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) , чтобы установить контрольную точку для уже отправленных строк. Рекомендуется вызывать [bcp_batch](../../native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) по крайней мере один раз в 1000 строк.  
   
-8.  После отправки всех строк, вызвать [bcp_done](../../native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) для завершения операции.  
+8.  После отправки всех строк вызовите [bcp_done](../../native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) , чтобы завершить операцию.  
   
- Можно изменять местонахождение и длину переменных программы во время операции массового копирования путем вызова [bcp_colptr](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) и [bcp_collen](../../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md). Используйте [bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) задать различные параметры массового копирования. Используйте [bcp_moretext](../../native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) для отправки `text`, `ntext`, и `image` данные в сегменты на сервер.  
+ Можно изменить расположение и длину переменных программы во время операции копирования, вызвав [bcp_colptr](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) и [bcp_collen](../../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md). Используйте [bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) , чтобы задать различные параметры групповой копии. Используйте [bcp_moretext](../../native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) для отправки `text`данных `ntext`, и `image` в сегментах на сервер.  
   
 ## <a name="example"></a>Пример  
  Этот образец не поддерживается на архитектуре IA64.  
   
- Также необходим источник данных ODBC с именем AdventureWorks, для которого базой данных по умолчанию является образец базы данных AdventureWorks. (Образец базы данных AdventureWorks можно скачать с домашней страницы [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (Образцы кода и проекты сообщества Microsoft SQL Server).) Этот источник данных должен быть основан на драйвере ODBC, предоставленном операционной системой (имя драйвера — «SQL Server»). При построении и запуске этого образца как 32-разрядного приложения в 64-разрядной операционной системе необходимо создать источник данных ODBC с помощью программы администрирования ODBC (исполняемый файл %windir%\SysWOW64\odbcad32.exe).  
+ Также необходим источник данных ODBC с именем AdventureWorks, для которого базой данных по умолчанию является образец базы данных AdventureWorks. (Образец базы данных AdventureWorks можно скачать на домашней странице [Microsoft SQL Server примеры и проекты сообщества](https://go.microsoft.com/fwlink/?LinkID=85384) .) Этот источник данных должен быть основан на драйвере ODBC, предоставленном операционной системой (имя драйвера — "SQL Server"). При построении и запуске этого образца как 32-разрядного приложения в 64-разрядной операционной системе необходимо создать источник данных ODBC с помощью программы администрирования ODBC (исполняемый файл %windir%\SysWOW64\odbcad32.exe).  
   
  Этот образец соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. Чтобы соединиться с именованным экземпляром, измените определение источника данных ODBC, указав экземпляр в следующем формате: Сервер\ИменованныйЭкземпляр. По умолчанию [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] устанавливается на именованный экземпляр.  
   
@@ -300,8 +300,8 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'BCPTarget')
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Массовое копирование с помощью инструкции SQL Server ODBC драйвер &#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
+## <a name="see-also"></a>См. также:  
+ [Инструкции по групповому копированию с помощью драйвера ODBC SQL Server &#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
  [Массовое копирование из переменных приложения](../../native-client-odbc-bulk-copy-operations/bulk-copying-from-program-variables.md)  
   
   

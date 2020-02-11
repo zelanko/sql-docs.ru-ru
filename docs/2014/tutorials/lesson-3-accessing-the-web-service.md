@@ -1,5 +1,5 @@
 ---
-title: Урок 3. Доступ к веб-службы | Документация Майкрософт
+title: Занятие 3. доступ к веб-службе | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 09671f8880f9f7745359961d9c6c126a893d26a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62653787"
 ---
 # <a name="lesson-3-accessing-the-web-service"></a>Урок 3. Доступ к веб-службе
@@ -113,7 +113,7 @@ ms.locfileid: "62653787"
   
 4.  Сохраните решение.  
   
- В образце кода из этого пошагового руководства используется метод веб-службы <xref:ReportService2010.ReportingService2010.GetProperties%2A> для получения свойства образца отчета «Продажи компании в 2012 г.». <xref:ReportService2010.ReportingService2010.GetProperties%2A> Метод принимает два аргумента: имя отчета, для которого требуется извлечь сведения о свойствах, а также массив **Property []** объектов, содержащий имена свойств, значения которых требуется извлечь. Этот метод возвращает массив объектов **Property[]** , который содержит имена и значения свойств, указанных в аргументе свойств.  
+ В образце кода из этого пошагового руководства используется метод веб-службы <xref:ReportService2010.ReportingService2010.GetProperties%2A> для получения свойства образца отчета «Продажи компании в 2012 г.». <xref:ReportService2010.ReportingService2010.GetProperties%2A> Метод принимает два аргумента: имя отчета, для которого требуется получить сведения о свойстве, и массив объектов **Property []** , содержащий имена свойств, значения которых необходимо получить. Этот метод возвращает массив объектов **Property[]** , который содержит имена и значения свойств, указанных в аргументе свойств.  
   
 > [!NOTE]  
 >  Если в качестве аргумента свойств указать пустой массив **Property[]** , будут возвращены все доступные свойства.  
@@ -122,8 +122,8 @@ ms.locfileid: "62653787"
   
  Дополнительные сведения о создании и использовании класса-посредника для веб-службы сервера отчетов см. в разделе [Creating the Web Service Proxy](../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md).  
   
-## <a name="see-also"></a>См. также  
- [Занятие 4. Запуск приложения &#40;VB VC&#35;&#41;](../../2014/tutorials/lesson-4-running-the-application-vb-vcsharp.md)   
- [Доступ к веб-службы сервера отчетов, с помощью Visual Basic или Visual c#&#35; &#40;учебник по службам SSRS&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
+## <a name="see-also"></a>См. также:  
+ [Занятие 4. Запуск приложения &#40;VB — VC&#35;&#41;](../../2014/tutorials/lesson-4-running-the-application-vb-vcsharp.md)   
+ [Доступ к веб-службе сервера отчетов с помощью Visual Basic или учебника по Visual C&#35; &#40;SSRS&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
   
   

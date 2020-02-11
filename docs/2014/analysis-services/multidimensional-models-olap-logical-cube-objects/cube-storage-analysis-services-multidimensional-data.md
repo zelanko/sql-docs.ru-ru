@@ -1,5 +1,5 @@
 ---
-title: Куб хранилища (службы Analysis Services — многомерные данные) | Документация Майкрософт
+title: Хранилище Куба (Analysis Services-многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,14 +18,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d780010d0cae7dbbe358c9ae5e6430ed0fff4d2d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62727670"
 ---
 # <a name="cube-storage-analysis-services---multidimensional-data"></a>Хранилище кубов (службы Analysis Services — многомерные данные)
-  В хранилище могут содержаться либо только метаданные куба, либо все исходные данные из таблицы фактов и все агрегаты, определенные связанными с группой мер измерениями. Объем хранимых данных зависит от выбранного режима хранения и количества агрегатов. Объем сохраняемых данных непосредственно влияет на производительность запросов. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] используют несколько методов минимизации дискового пространства, необходимого для хранения данных и агрегатов куба.  
+  В хранилище могут содержаться либо только метаданные куба, либо все исходные данные из таблицы фактов и все агрегаты, определенные связанными с группой мер измерениями. Объем хранимых данных зависит от выбранного режима хранения и количества агрегатов. Объем сохраняемых данных непосредственно влияет на производительность запросов. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует несколько методов для минимизации пространства, необходимого для хранения данных куба и агрегатов [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] :  
   
 -   Параметры хранилища позволяют выбрать режим хранения и наиболее подходящее место хранения данных куба.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "62727670"
   
 -   Под пустые ячейки место не выделяется.  
   
- Хранилище определяется последовательно для каждой секции; для каждой группы мер куба существует, по крайней мере, одна секция. Дополнительные сведения см. в разделе [секций &#40;службы Analysis Services — многомерные данные&#41;](partitions-analysis-services-multidimensional-data.md), [режимы хранения и обработки](partitions-partition-storage-modes-and-processing.md), [мер и групп мер](../multidimensional-models/measures-and-measure-groups.md), и [Создание мер и групп мер в многомерных моделях](../multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md).  
+ Хранилище определяется последовательно для каждой секции; для каждой группы мер куба существует, по крайней мере, одна секция. Дополнительные сведения см. в [разделах partitions &#40;Analysis Services-многомерные данные&#41;](partitions-analysis-services-multidimensional-data.md), [режимы хранения секций и обработка](partitions-partition-storage-modes-and-processing.md), [меры и группы мер](../multidimensional-models/measures-and-measure-groups.md), а затем [Создайте меры и группы мер в многомерных моделях](../multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md).  
   
 ## <a name="partition-storage"></a>Partition Storage  
  Хранилище для группы мер может быть разбито на несколько секций. Секции позволяют распределять группы мер между отдельными сегментами на одном или нескольких серверах, а также оптимизировать производительность хранилища и обработки запросов. У каждой секции в группе мер может быть свой источник данных и собственные параметры хранения.  
@@ -42,12 +42,12 @@ ms.locfileid: "62727670"
   
  Секции изначально создаются с параметрами хранения группы мер, которой они принадлежат. Параметры хранилища определяют способ хранения подробных данных и агрегатов. Данные могут храниться в многомерном формате на экземпляре служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]или в реляционном формате на исходном сервере, причем способы хранения данных можно сочетать друг с другом. Параметры хранилища управляют также упреждающим кэшированием, которое применяется для автоматического распространения изменений исходных данных на многомерные данные, хранящиеся на сервере служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
- Секции куба для пользователя невидимы, однако выбор параметров хранилища для различных секций может повлиять на оперативность данных, объем используемого места на диске и на производительность запроса. Секции могут храниться на нескольких экземплярах служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Это обеспечивает подход к хранению куба с использованием кластеризации и распределяет рабочую нагрузку между серверами служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Дополнительные сведения см. в разделе [режимы хранения и обработки](partitions-partition-storage-modes-and-processing.md), [удаленных секций](partitions-remote-partitions.md), и [секций &#40;службы Analysis Services — многомерные данные&#41; ](partitions-analysis-services-multidimensional-data.md).  
+ Секции куба для пользователя невидимы, однако выбор параметров хранилища для различных секций может повлиять на оперативность данных, объем используемого места на диске и на производительность запроса. Секции могут храниться на нескольких экземплярах служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Это обеспечивает подход к хранению куба с использованием кластеризации и распределяет рабочую нагрузку между серверами служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Дополнительные сведения см. в разделах [режимы хранения и обработка](partitions-partition-storage-modes-and-processing.md), [Удаленные секции](partitions-remote-partitions.md)и [Секции &#40;Analysis Services многомерных данных&#41;](partitions-analysis-services-multidimensional-data.md).  
   
 ## <a name="linked-measure-groups"></a>Связанные группы мер  
  Хранение нескольких копий куба на различных экземплярах служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]может потребовать довольно много места на диске, но можно этого избежать, заменив копии группы мер связанными группами мер. Связанная группа мер образуется на основе группы мер куба в другой базе данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или в другом экземпляре той же базы данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Связанная группа мер может также использоваться со связанными измерениями из того же исходного куба. Связанные измерения и группы мер используют агрегаты исходного куба и не требуют дополнительного пространства. Таким образом, помещение исходных группы мер и измерений в одну базу данных и создание связанных групп мер и измерений в кубе другой базы данных позволяет сэкономить место на диске. Дополнительные сведения см. в разделе [Linked Measure Groups](../multidimensional-models/linked-measure-groups.md).  
   
-## <a name="see-also"></a>См. также  
- [Агрегаты и статистические схемы](aggregations-and-aggregation-designs.md)  
+## <a name="see-also"></a>См. также:  
+ [Aggregations and Aggregation Designs](aggregations-and-aggregation-designs.md)  
   
   

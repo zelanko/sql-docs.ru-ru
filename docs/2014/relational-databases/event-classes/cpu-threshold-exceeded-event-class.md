@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cc8252d0049953f0958ea331015aae51fd737709
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62663487"
 ---
 # <a name="cpu-threshold-exceeded-event-class"></a>класс событий CPU Threshold Exceeded
@@ -29,17 +29,17 @@ ms.locfileid: "62663487"
   
 ## <a name="cpu-threshold-exceeded-data-columns"></a>Столбцы данных класса событий CPU Threshold Exceeded  
   
-|Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
+|Имя столбца данных|Тип данных|Description|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ЦП|`int`|Использование ЦП в миллисекундах.|18|Да|  
-|EventClass|`int`|214|27|Нет|  
+|EventClass|`int`|214|27|нет|  
 |EventSubClass|`int`|Нарушение ограничения ЦП.|21|Да|  
 |GroupID|`int`|Идентификатор группы, в которой произошло нарушение.|66|Да|  
 |OwnerID|`int`|Идентификатор SPID процесса, который вызвал нарушение.|58|Да|  
-|SPID|`int`|Идентификатор процесса сервера, запустившего данное событие.<br /><br /> Примечание. Он может отличаться от действительного пользовательского идентификатора SPID, если в потоке операционной системы Проверка использования ЦП является фоновой задачей.|12|Да|  
+|SPID|`int`|Идентификатор процесса сервера, запустившего данное событие.<br /><br /> Примечание. Он может отличаться от действительного пользовательского идентификатора SPID, если в потоке операционной системы проверка использования ЦП является фоновой задачей.|12|Да|  
 |StartTime|`datetime`|Время срабатывания события.|14|Да|  
   
-## <a name="see-also"></a>См. также  
- [Хранимая процедура sp_trace_setevent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
+## <a name="see-also"></a>См. также:  
+ [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

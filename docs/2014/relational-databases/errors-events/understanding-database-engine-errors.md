@@ -16,21 +16,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2f8f7264b63417d9dc337aec62ee5734dcf8ad98
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761685"
 ---
 # <a name="understanding-database-engine-errors"></a>Основные сведения об ошибках компонента Database Engine
-  Ошибки, возникшие в компоненте [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , имеют атрибуты, описанные в следующей таблице.  
+  Ошибки, вызванные [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , имеют атрибуты, описанные в следующей таблице.  
   
-|attribute|Описание|  
+|attribute|Description|  
 |---------------|-----------------|  
 |Номер ошибки|Каждое сообщение имеет уникальный номер ошибки.|  
 |Строка сообщения об ошибке|Сообщение об ошибке содержит диагностические сведения о причине ошибки. Многие сообщения об ошибках имеют подстановочные переменные, в которые заносятся сведения, например имя объекта, вызвавшего ошибку.|  
 |Severity|Степень серьезности ошибки указывает, насколько она значительна. Ошибки с низкой степенью серьезности, например 1 или 2, являются информационными сообщениями или предупреждениями низкого уровня. Ошибки с высокой степенью серьезности указывают на проблемы, которые должны быть решены как можно быстрее. Дополнительные сведения о степенях серьезности см. в разделе [Степени серьезности ошибок компонента Database Engine](database-engine-error-severities.md).|  
-|Состояние|Некоторые сообщения об ошибках могут возникнуть в нескольких точках кода компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Например, ошибка 1105 может возникнуть при различных условиях. Каждое условие, которое вызывает ошибку, присваивает уникальный код состояния.<br /><br /> При просмотре баз данных со сведениями об известных неполадках, таких как база знаний [!INCLUDE[msCoName](../../includes/msconame-md.md)] , можно использовать номер состояния, чтобы определить, является ли записанная неполадка возникшей ошибкой. Например, если статья базы знаний описывает ошибку 1105 с состоянием 2, а получена ошибка 1105 с состоянием 3, ошибка, вероятно, возникла не по той причине, которая описана в статье.<br /><br /> Инженер поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] также может использовать код состояния, содержащийся в сообщении об ошибке, чтобы найти место в исходном коде, где эта ошибка возникла. Эти данные могут предоставить дополнительные сведения для диагностики проблемы.|  
+|State|Некоторые сообщения об ошибках могут возникнуть в нескольких точках кода компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Например, ошибка 1105 может возникнуть при различных условиях. Каждое условие, которое вызывает ошибку, присваивает уникальный код состояния.<br /><br /> При просмотре баз данных со сведениями об известных неполадках, таких как база знаний [!INCLUDE[msCoName](../../includes/msconame-md.md)] , можно использовать номер состояния, чтобы определить, является ли записанная неполадка возникшей ошибкой. Например, если статья базы знаний описывает ошибку 1105 с состоянием 2, а получена ошибка 1105 с состоянием 3, ошибка, вероятно, возникла не по той причине, которая описана в статье.<br /><br /> Инженер поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] также может использовать код состояния, содержащийся в сообщении об ошибке, чтобы найти место в исходном коде, где эта ошибка возникла. Эти данные могут предоставить дополнительные сведения для диагностики проблемы.|  
 |Имя процедуры|Имя хранимой процедуры или триггера, в которых произошла ошибка.|  
 |Номер строки|Указывает на инструкцию в пакете, хранимой процедуре, триггере или функции, которая сформировала ошибку.|  
   
@@ -57,15 +57,15 @@ SELECT
  Дополнительные сведения см. в разделе [sys.messages (Transact-SQL)](/sql/relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages).  
   
 ## <a name="see-also"></a>См. также:  
- [sys.messages (Transact-SQL)](/sql/relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages)   
- [RAISERROR (Transact-SQL)](/sql/t-sql/language-elements/raiserror-transact-sql)   
- [@@ERROR (Transact-SQL)](/sql/t-sql/functions/error-transact-sql)   
- [TRY...CATCH (Transact-SQL)](/sql/t-sql/language-elements/try-catch-transact-sql)   
- [ERROR_LINE (Transact-SQL)](/sql/t-sql/functions/error-line-transact-sql)   
- [ERROR_MESSAGE (Transact-SQL)](/sql/t-sql/functions/error-message-transact-sql)   
- [ERROR_NUMBER (Transact-SQL)](/sql/t-sql/functions/error-number-transact-sql)   
- [ERROR_PROCEDURE (Transact-SQL)](/sql/t-sql/functions/error-procedure-transact-sql)   
- [ERROR_SEVERITY (Transact-SQL)](/sql/t-sql/functions/error-severity-transact-sql)   
- [ERROR_STATE (Transact-SQL)](/sql/t-sql/functions/error-state-transact-sql)  
+ [sys. messages &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages)   
+ [&#41;инструкции RAISERROR &#40;Transact-SQL](/sql/t-sql/language-elements/raiserror-transact-sql)   
+ [@ERROR &#40;TRANSACT-SQL&#41;](/sql/t-sql/functions/error-transact-sql)   
+ [Попробуйте... Перехватывать &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/try-catch-transact-sql)   
+ [ERROR_LINE &#40;Transact-SQL&#41;](/sql/t-sql/functions/error-line-transact-sql)   
+ [ERROR_MESSAGE &#40;Transact-SQL&#41;](/sql/t-sql/functions/error-message-transact-sql)   
+ [ERROR_NUMBER &#40;Transact-SQL&#41;](/sql/t-sql/functions/error-number-transact-sql)   
+ [ERROR_PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/functions/error-procedure-transact-sql)   
+ [ERROR_SEVERITY &#40;Transact-SQL&#41;](/sql/t-sql/functions/error-severity-transact-sql)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](/sql/t-sql/functions/error-state-transact-sql)  
   
   

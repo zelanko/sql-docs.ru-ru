@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 90e7ee3b8c0ac9c77c4ef863367ff46467a35277
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62705389"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-general-page"></a>Диалоговое окно «Создание новой политики» или «Открытие политики», страница «Общие»
@@ -28,7 +28,7 @@ ms.locfileid: "62705389"
  **Название**  
  Введите имя для новой политики. Если политика уже существует, отображается ее имя.  
   
- **Активировано**  
+ **Enabled**  
  Установите флажок **Включено** , чтобы включить политику. Снимите флажок в поле **Включено** , чтобы отключить политику. Флажок **Включено** применяется к автоматизации политики. Он создает или удаляет систему автоматизации для политики. Автоматизация применяет следующие механизмы.  
   
  **При изменении: запретить**  
