@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 89f02cfd7ab2116528adb82d6e98023c912c6437
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62868667"
 ---
-# <a name="mssqlserver33028"></a>MSSQLSERVER_33028
+# <a name="mssqlserver_33028"></a>MSSQLSERVER_33028
     
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|33028|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
@@ -35,7 +35,7 @@ ms.locfileid: "62868667"
 ## <a name="explanation"></a>Объяснение  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не смог открыть поставщик служб шифрования, указанный в сообщении об ошибке. Поставщик служб шифрования предоставляет указанный код ошибки. Возможно, придется обратиться к поставщику служб шифрования за дополнительными сведениями об ошибке.  
   
-|Код ошибки|Описание|  
+|Код ошибки|Description|  
 |----------------|-----------------|  
 |0|Успешно. Нет ошибки.|  
 |1|Ошибка. Произошла неуказанная или непредвиденная ошибка. Дополнительные сведения об ошибке недоступны.|  

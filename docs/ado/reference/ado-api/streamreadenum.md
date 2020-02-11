@@ -1,5 +1,5 @@
 ---
-title: StreamReadEnum | Документация Майкрософт
+title: Стреамреаденум | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,24 +16,24 @@ ms.assetid: cfa1b416-003a-436f-a21b-bd2397e54db3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7700fc1ddc3cc619db224ac46006370898af1d62
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67928662"
 ---
 # <a name="streamreadenum"></a>StreamReadEnum
-Указывает, следует ли читать весь поток или следующая строка из [Stream](../../../ado/reference/ado-api/stream-object-ado.md) объекта.  
+Указывает, следует ли считывать весь поток или следующую строку из объекта [потока](../../../ado/reference/ado-api/stream-object-ado.md) .  
   
-|Константа|Значение|Описание|  
+|Постоянно|Значение|Description|  
 |--------------|-----------|-----------------|  
-|**adReadAll**|-1|По умолчанию. Считывает все байты из потока, начиная с текущей позиции и более поздних версий [EOS](../../../ado/reference/ado-api/eos-property.md) маркера. Это единственное допустимое **StreamReadEnum** значение с двоичными потоками ([тип](../../../ado/reference/ado-api/type-property-ado-stream.md) — **adTypeBinary**).|  
-|**adReadLine**|-2|Считывает следующую строку из потока (обозначенный [LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md) свойство).|  
+|**адреадалл**|-1|По умолчанию. Считывает все байты из потока от текущей позицией до маркера [EOS](../../../ado/reference/ado-api/eos-property.md) . Это единственное допустимое значение **стреамреаденум** с двоичными потоками ([тип](../../../ado/reference/ado-api/type-property-ado-stream.md) — **адтипебинари**).|  
+|**адреадлине**|-2|Считывает следующую строку из потока (назначается свойством [LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md) ).|  
   
-## <a name="adowfc-equivalent"></a>Эквивалент ADO и WFC  
- Эти константы не имеют эквивалентов ADO и WFC.  
+## <a name="adowfc-equivalent"></a>Эквивалент ADO/WFC  
+ Эти константы не имеют эквивалентов ADO/WFC.  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
   
 |||  
 |-|-|  

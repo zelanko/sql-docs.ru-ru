@@ -18,26 +18,26 @@ ms.assetid: c1330f03-940b-4564-ac42-6030c6e21173
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 45dad1cfaa6057cd50ee4c01b484df8250121a46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68079152"
 ---
-# <a name="msreplversion-transact-sql"></a>MSrepl_version (Transact-SQL)
+# <a name="msrepl_version-transact-sql"></a>MSrepl_version (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSrepl_version** таблица содержит одну строку с текущей версией установки репликации. Эта таблица хранится в базе данных распространителя.  
+  Таблица **MSrepl_version** содержит одну строку с текущей версией установленной репликации. Эта таблица хранится в базе данных распространителя.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|**основная_версия**|**int**|Номер основной версии базы данных распространителя.|  
-|**вспомогательная_версия**|**int**|Номер вспомогательной версии базы данных распространителя.|  
-|**редакция**|**int**|Номер ревизии.|  
-|**db_existed**|**bit**|Указывает, существует ли база данных распространителя, прежде чем **sp_adddistributiondb** вызывается.|  
+|**major_version**|**int**|Номер основной версии базы данных распространителя.|  
+|**minor_version**|**int**|Номер вспомогательной версии базы данных распространителя.|  
+|**редакции**|**int**|Номер ревизии.|  
+|**db_existed**|**bit**|Указывает, существует ли база данных распространителя перед вызовом **sp_adddistributiondb** .|  
   
-## <a name="see-also"></a>См. также  
- [Таблицы репликации &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Представления репликации &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

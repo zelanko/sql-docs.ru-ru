@@ -21,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a492aee19d6b09cb7d227b34648f1ea35d1d95d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762088"
 ---
 # <a name="database-identifiers"></a>Идентификаторы баз данных
-  Имя объекта базы данных называется его идентификатором. Идентификаторы в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут присваиваться любым сущностям: серверам, базам данных и их объектам, например таблицам, представлениям, столбцам, индексам, триггерам, процедурам, ограничениям и правилам. Для большинства объектов идентификаторы необходимы, а для некоторых, например ограничений, необязательны.  
+  Имя объекта базы данных называется его идентификатором. Все в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может иметь идентификатор. серверам, базам данных и их объектам, например таблицам, представлениям, столбцам, индексам, триггерам, процедурам, ограничениям и правилам. Для большинства объектов идентификаторы необходимы, а для некоторых, например ограничений, необязательны.  
   
  Идентификатор объекта создается при определении объекта. Затем идентификатор используется для обращения к объекту. Например, следующая инструкция создает таблицу с идентификатором `TableX`и двумя столбцами с идентификаторами `KeyCol` и `Description`:  
   
@@ -96,7 +96,8 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
   
     -   символ @, знак доллара ($), решетка или подчеркивание.  
   
-3.  Идентификатор не должен быть зарезервированным словом [!INCLUDE[tsql](../../includes/tsql-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] резервирует версии зарезервированных слов как в верхнем, так и в нижнем регистре. Если идентификаторы используются в инструкциях языка [!INCLUDE[tsql](../../includes/tsql-md.md)] , идентификаторы, которые не соответствуют этим правилам, должны быть заключены в двойные кавычки или квадратные скобки. Состав зарезервированных слов зависит от уровня совместимости базы данных. Этот уровень можно установить с помощью инструкции [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) .  
+3.  Идентификатор не должен быть зарезервированным словом [!INCLUDE[tsql](../../includes/tsql-md.md)] . 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] резервирует версии зарезервированных слов как в верхнем, так и в нижнем регистре. Если идентификаторы используются в инструкциях языка [!INCLUDE[tsql](../../includes/tsql-md.md)] , идентификаторы, которые не соответствуют этим правилам, должны быть заключены в двойные кавычки или квадратные скобки. Состав зарезервированных слов зависит от уровня совместимости базы данных. Этот уровень можно установить с помощью инструкции [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) .  
   
 4.  Внутри идентификаторов запрещается использовать символы пробела или специальные символы.  
   
@@ -107,19 +108,19 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
 > [!NOTE]  
 >  Некоторые правила форматирования обычных идентификаторов зависят от уровня совместимости базы данных. Этот уровень можно установить с помощью процедуры [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [ALTER TABLE (Transact-SQL)](/sql/t-sql/statements/alter-table-transact-sql)   
- [CREATE DATABASE (SQL Server Transact-SQL)](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
- [CREATE DEFAULT (Transact-SQL)](/sql/t-sql/statements/create-default-transact-sql)   
- [CREATE PROCEDURE (Transact-SQL)](/sql/t-sql/statements/create-procedure-transact-sql)   
- [CREATE RULE (Transact-SQL)](/sql/t-sql/statements/create-rule-transact-sql)   
+ [Создание &#40;базы данных SQL Server&#41;Transact-SQL](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
+ [Создание &#40;по УМОЛЧАНИю для&#41;Transact-SQL](/sql/t-sql/statements/create-default-transact-sql)   
+ [Создание процедуры &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)   
+ [Создание правила &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-rule-transact-sql)   
  [CREATE TABLE (Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql)   
  [CREATE TRIGGER (Transact-SQL)](/sql/t-sql/statements/create-trigger-transact-sql)   
  [CREATE VIEW (Transact-SQL)](/sql/t-sql/statements/create-view-transact-sql)   
- [DECLARE @local_variable (Transact-SQL)](/sql/t-sql/language-elements/declare-local-variable-transact-sql)   
+ [ОБЪЯВЛЕНИЕ @local_variable &#40;TRANSACT-SQL&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql)   
  [DELETE (Transact-SQL)](/sql/t-sql/statements/delete-transact-sql)   
  [INSERT (Transact-SQL)](/sql/t-sql/statements/insert-transact-sql)   
- [Зарезервированные ключевые слова (Transact-SQL)](/sql/t-sql/language-elements/reserved-keywords-transact-sql)   
+ [Зарезервированные ключевые слова &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/reserved-keywords-transact-sql)   
  [SELECT (Transact-SQL)](/sql/t-sql/queries/select-transact-sql)   
  [UPDATE (Transact-SQL)](/sql/t-sql/queries/update-transact-sql)  
   

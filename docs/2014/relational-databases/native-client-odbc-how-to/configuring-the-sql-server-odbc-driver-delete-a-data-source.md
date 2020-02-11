@@ -13,27 +13,27 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ff882caf0ce5d9ef7d2e9f059daed89ed4b50d82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63126107"
 ---
 # <a name="delete-a-data-source-odbc"></a>Удаление источника данных (ODBC)
-  Источник данных можно удалить с помощью администратора ODBC программным способом (с помощью [SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)), или путем удаления файла (если имя файла источника данных).  
+  Источник данных можно удалить с помощью администратора ODBC, программно (с помощью [SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)) или путем удаления файла (если имя источника данных файла).  
   
 ### <a name="to-delete-a-data-source-by-using-odbc-administrator"></a>Удаление источника данных с помощью администратора ODBC  
   
-1.  В **панели управления**откройте **Администрирование**, а затем дважды щелкните **источники данных (ODBC)** . Либо можно запустить файл odbcad32.exe из командной строки.  
+1.  На **панели управления**откройте **Администрирование**, а затем дважды щелкните элемент **Источники данных (ODBC)**. Либо можно запустить файл odbcad32.exe из командной строки.  
   
-2.  Нажмите кнопку **DSN пользователя**, **системный DSN**, или **файловый DSN** вкладки.  
+2.  Щелкните вкладку **DSN пользователя**, **системное имя DSN**или **Файловый DSN** .  
   
 3.  Щелкните источник данных, который нужно удалить.  
   
-4.  Нажмите кнопку **удалить**, а затем подтвердите удаление.  
+4.  Нажмите кнопку **Удалить**, а затем подтвердите удаление.  
   
 ## <a name="example"></a>Пример  
- Чтобы программно удалить источник данных, вызовите [SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md) с помощью значение ODBC_REMOVE_DSN или ODBC_REMOVE_SYS_DSN в качестве второго параметра.  
+ Чтобы программно удалить источник данных, вызовите [SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md) , используя либо ODBC_REMOVE_DSN, либо ODBC_REMOVE_SYS_DSN в качестве второго параметра.  
   
  В следующем образце показана процедура удаления источника данных программным способом.  
   
@@ -54,7 +54,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Инструкции по настройке драйвера ODBC SQL Server](../../database-engine/dev-guide/configuring-the-sql-server-odbc-driver-how-to-topics.md)  
   
   

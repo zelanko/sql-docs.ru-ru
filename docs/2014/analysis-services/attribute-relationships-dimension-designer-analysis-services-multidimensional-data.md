@@ -1,5 +1,5 @@
 ---
-title: Атрибут отношений (конструктор измерений) (службы Analysis Services — многомерные данные) | Документация Майкрософт
+title: Связи атрибутов (конструктор измерений) (Analysis Services-многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 08d01bb328bcf3e693724475532b6c9a39c79be2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66063190"
 ---
 # <a name="attribute-relationships-dimension-designer-analysis-services---multidimensional-data"></a>Связи атрибутов (конструктор измерений) (службы Analysis Services - многомерные данные)
@@ -28,20 +28,20 @@ ms.locfileid: "66063190"
  [Панель инструментов](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)  
  Панель инструментов используется для работы на вкладке **Связи атрибутов** конструктора измерений.  
   
- [Диаграмма связи атрибутов](attribute-relationship-diagram-analysis-services-multidimensional-data.md)  
+ [Диаграмма «Связь атрибутов»](attribute-relationship-diagram-analysis-services-multidimensional-data.md)  
  Чтобы просмотреть диаграмму связей атрибутов и создать, изменить или удалить связи атрибутов используется диаграмма связей атрибутов.  
   
- [Список «атрибуты»](attributes-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Список «Атрибуты»](attributes-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)  
  Этот список используется, чтобы отыскать конкретный атрибут в диаграмме связей атрибутов или определить новую связь атрибутов.  
   
- [Список связей атрибутов](attribute-relationships-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Список «Связи атрибутов»](attribute-relationships-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)  
  Этот список используется, чтобы отыскать конкретную связь в диаграмме связей атрибутов и управлять этой связью.  
   
-## <a name="see-also"></a>См. также  
- [Структура измерения &#40;конструктор измерений&#41; &#40;службы Analysis Services — многомерные данные&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
- [Переводы &#40;конструктор измерений&#41; &#40;службы Analysis Services — многомерные данные&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)   
- [Браузер &#40;конструктор измерений&#41; &#40;службы Analysis Services — многомерные данные&#41;](browser-dimension-designer-analysis-services-multidimensional-data.md)   
- [Измерения &#40;службы Analysis Services — многомерные данные&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>См. также:  
+ [Структура измерения &#40;конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Переводы &#40;конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Конструктор измерений &#40;конструктора&#41; &#40;Analysis Services многомерных данных&#41;](browser-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Измерения &#40;Analysis Services многомерных данных&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Измерения в многомерных моделях](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

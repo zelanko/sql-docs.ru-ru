@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_log_space_usage (Transact-SQL) | Документация Майкрософт
+title: sys. dm_db_log_space_usage (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/29/2017
 ms.prod: sql
@@ -21,38 +21,38 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: bfa102163012456e9b2660d26cb54dec3d58cfbb
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68264581"
 ---
-# <a name="sysdmdblogspaceusage-transact-sql"></a>sys.dm_db_log_space_usage (Transact-SQL)
+# <a name="sysdm_db_log_space_usage-transact-sql"></a>sys. dm_db_log_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Возвращает пространство сведения об использовании для журнала транзакций. 
+Возвращает сведения об использовании пространства для журнала транзакций. 
   
 > [!NOTE]
-> Объединяются все файлы журнала транзакций.  
+> Все файлы журнала транзакций объединены.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |database_id|**smallint**|Идентификатор базы данных.|  
 |total_log_size_in_bytes |**bigint** |Размер журнала  |
-|used_log_space_in_bytes |**bigint** |Занято размер журнала  |     
-|used_log_space_in_percent |**real** |Занято размер журнала в процентах от размера всего журнала |
-|log_space_in_bytes_since_last_backup |**bigint** |Объем пространства, используемого с момента последней резервной копии журнала <br />**Применяется к:** [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)] через [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|
+|used_log_space_in_bytes |**bigint** |Объем занятого журнала  |     
+|used_log_space_in_percent |**Real** |Объем занятого журнала в процентах от общего размера журнала. |
+|log_space_in_bytes_since_last_backup |**bigint** |Объем пространства, используемого с момента создания последней резервной копии журнала <br />**Применимо к:** [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)] [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)]с [!INCLUDE[ssSDS](../../includes/sssds-md.md)]до,.|
     
   
 ## <a name="permissions"></a>Разрешения  
 
-На [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], требуется `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровней Premium необходимо `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровней Standard и Basic, требует **администратора сервера** или **администратор Azure Active Directory** учетной записи.   
+В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]необходимо `VIEW SERVER STATE` разрешение.   
+На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-determine-the-amount-of-free-log-space-in-tempdb"></a>A. Определение объема свободного журнала пространства в базе данных tempdb   
-Следующий запрос возвращает общее свободное пространство журнала в мегабайтах (МБ), доступных в базе данных tempdb.
+### <a name="a-determine-the-amount-of-free-log-space-in-tempdb"></a>A. Определение объема свободного пространства в журнале базы данных tempdb   
+Следующий запрос возвращает общее свободное пространство журнала в мегабайтах (МБ), доступное в базе данных tempdb.
 
 ```sql
 USE tempdb;  
@@ -62,14 +62,14 @@ SELECT (total_log_size_in_bytes - used_log_space_in_bytes)*1.0/1024/1024 AS [fre
 FROM sys.dm_db_log_space_usage;  
 ```
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
-[Динамические административные представления, относящиеся к базе данных &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
-[sys.dm_db_file_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md)    
-[sys.dm_db_task_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)   
-[sys.dm_db_session_space_usage (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)  
-[sys.dm_db_log_info (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)    
-[sys.dm_db_log_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md) 
+[Динамические административные представления, связанные с базами данных &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
+[sys. dm_db_file_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md)    
+[sys. dm_db_task_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)   
+[sys. dm_db_session_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)  
+[sys. dm_db_log_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)    
+[sys. dm_db_log_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md) 
 
 
 

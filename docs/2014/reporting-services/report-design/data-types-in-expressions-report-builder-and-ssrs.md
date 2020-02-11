@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86aa646865ecfe3da6ed1ad4bacb75907ab39472
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68891869"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Типы данных в выражениях (построитель отчетов и службы SSRS)
@@ -31,11 +31,11 @@ ms.locfileid: "68891869"
 |Тип RDL|Типы CLR|  
 |--------------|---------------|  
 |String|По умолчанию: String<br /><br /> Chart, GUID, Timespan|  
-|Логическое значение|По умолчанию: Логическое значение|  
-|Целочисленный|По умолчанию: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
+|Логическое|По умолчанию: Boolean|  
+|Целое число|По умолчанию: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
 |DateTime|По умолчанию: DateTime<br /><br /> DateTimeOffset|  
-|float|По умолчанию: Double<br /><br /> Single, Decimal|  
-|Бинарный|По умолчанию: Byte[]|  
+|Float|По умолчанию: Double<br /><br /> Single, Decimal|  
+|Двоичные данные|По умолчанию: Byte[]|  
 |Variant|Любое из вышеприведенного, кроме Byte[]|  
 |VariantArray|Массив данных типа Variant|  
 |Упорядочиваемый уровень изоляции|Значение типа Variant или типов, отмеченных свойством Serializable или реализующих интерфейс ISerializable.|  
@@ -65,10 +65,10 @@ ms.locfileid: "68891869"
   
 -   Создание вычисляемого поля на основе существующего поля набора данных отчета с помощью выражения, преобразующего все данные одного столбца результирующего набора в данные нового столбца с другим типом данных. Например, следующее выражение преобразует поле Year из целочисленного значения в строковое: `=CStr(Fields!Year.Value)`. Дополнительные сведения см. в разделе [Добавление, изменение и обновление полей в области данных отчета (построитель отчетов и службы SSRS)](../report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
   
--   Проверка наличия метаданных в используемом модуле обработки данных с целью получения предварительно отформатированных данных. Например, запрос многомерных выражений служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] включает расширенное свойство FORMATTED_VALUE для значений куба, отформатированных при обработке куба. Дополнительные сведения см. в разделе [Расширенные свойства поля для базы данных служб Analysis Services &#40;SSRS&#41;](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
+-   Проверка наличия метаданных в используемом модуле обработки данных с целью получения предварительно отформатированных данных. Например, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] запрос многомерных выражений включает FORMATTED_VALUE расширенное свойство для значений Куба, которые уже были отформатированы при обработке куба. Дополнительные сведения см. в разделе [Расширенные свойства поля для базы данных служб Analysis Services &#40;SSRS&#41;](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
 ## <a name="understanding-parameter-data-types"></a>Основные сведения о типах данных параметров  
- Параметры отчета должны иметь один из пяти типов данных: Boolean, DateTime, Integer, float или Text (также называется строкой). Если запрос набора данных включает параметры запроса, автоматически создаются параметры отчета, которые связываются с параметрами запроса. Типом данных по умолчанию для параметра отчета является String. Чтобы изменить тип данных по умолчанию параметра отчета, выберите нужное значение в раскрывающемся списке **Тип данных** на странице **Общие** в диалоговом окне **Свойства параметров отчета** .  
+ Параметры отчета должны иметь один из пяти типов данных: Boolean, DateTime, Integer, Float или Text (также известный как String). Если запрос набора данных включает параметры запроса, автоматически создаются параметры отчета, которые связываются с параметрами запроса. Типом данных по умолчанию для параметра отчета является String. Чтобы изменить тип данных по умолчанию параметра отчета, выберите нужное значение в раскрывающемся списке **Тип данных** на странице **Общие** в диалоговом окне **Свойства параметров отчета** .  
   
 > [!NOTE]  
 >  Параметры отчета с типами данных DateTime не поддерживают миллисекунды. После создания параметра на основе значений, содержащих миллисекунды, нельзя выбрать значение из раскрывающегося списка доступных значений Date или Time, включающих миллисекунды.  
@@ -116,9 +116,9 @@ ms.locfileid: "68891869"
   
     -   Следующее выражение преобразует строку в значение даты и времени: `=DateTime.Parse(Fields!MyDateTime.Value)`  
   
-         Если строка `MyDateTime.Value` содержит значение смещения времени в формате UTC, то функция `DateTime.Parse` сначала изменит смещение времени в формате UTC (7:00 утра - [`+08:00`] относительно времени в формате UTC 23:00 предыдущего вечера). Затем функция `DateTime.Parse` применяет локальное смещение времени в формате UTC сервера отчетов и при необходимости настраивает переход на летнее время. Например, в Ричмонде, штат Вашингтон, смещение локального времени с переходом на летнее время составляет `[-07:00]`, или на 7 часов раньше 23:00. Результатом является следующее `DateTime` значение: `2007-07-06 04:07:07 PM`(6 июля 2007 в 4:07 P. M).  
+         Если строка `MyDateTime.Value` содержит значение смещения времени в формате UTC, то функция `DateTime.Parse` сначала изменит смещение времени в формате UTC (7:00 утра - [`+08:00`] относительно времени в формате UTC 23:00 предыдущего вечера). Затем функция `DateTime.Parse` применяет локальное смещение времени в формате UTC сервера отчетов и при необходимости настраивает переход на летнее время. Например, в Ричмонде, штат Вашингтон, смещение локального времени с переходом на летнее время составляет `[-07:00]`, или на 7 часов раньше 23:00. Результатом является следующее значение типа `DateTime`: `2007-07-06 04:07:07 PM` (6 июля 2007 г., 16:07).  
   
- Дополнительные сведения о преобразовании строк в `DateTime` типы данных см. в статьях [Анализ строк даты и времени](https://go.microsoft.com/fwlink/?LinkId=89703), [Форматирование даты и времени для определенной культуры](https://go.microsoft.com/fwlink/?LinkId=89704)и [Выбор между DateTime, DateTimeOffset и TimeZoneInfo](https://go.microsoft.com/fwlink/?linkid=110652) on. MSDN.  
+ Дополнительные сведения о преобразовании строк в `DateTime` типы данных см. в статьях [Анализ строк даты и времени](https://go.microsoft.com/fwlink/?LinkId=89703), [Форматирование даты и времени для определенной культуры](https://go.microsoft.com/fwlink/?LinkId=89704)и [Выбор между DateTime, DateTimeOffset и TimeZoneInfo](https://go.microsoft.com/fwlink/?linkid=110652) на сайте MSDN.  
   
 -   Добавление нового вычисляемого поля к набору данных отчета, который использует выражение для получения части строки. Дополнительные сведения см. в разделе [Добавление, изменение и обновление полей в области данных отчета (построитель отчетов и службы SSRS)](../report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
   
@@ -138,11 +138,11 @@ ms.locfileid: "68891869"
   
      `2008-07-01 06:05:07             2008                   480`  
   
- Дополнительные сведения о типах данных баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделах [Типы данных &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql) и [Типы данных и функции даты и времени &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql) [электронной документации по SQL Server](https://go.microsoft.com/fwlink/?linkid=120955).  
+ Дополнительные сведения о типах данных баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделах [Типы данных &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql) и [Типы данных и функции даты и времени &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)[электронной документации по SQL Server](https://go.microsoft.com/fwlink/?linkid=120955).  
   
- Дополнительные сведения о типах данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] см. в разделе [Типы данных в службах Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services) [SQL Server Books Onle](https://go.microsoft.com/fwlink/?linkid=120955).  
+ Дополнительные сведения о типах данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] см. в разделе [Типы данных в службах Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services)[SQL Server Books Onle](https://go.microsoft.com/fwlink/?linkid=120955).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Форматирование элементов отчета (построитель отчетов и службы SSRS)](formatting-report-items-report-builder-and-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Пример свойства StayInSync (Visual C++) | Документация Майкрософт
+title: Пример свойства StayInSync (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,16 +15,16 @@ ms.assetid: 3a5db5f0-094b-46e1-939b-d9fa9417a406
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2b5df87b29a0fc73a83d8b6dde568a7c173876cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930753"
 ---
 # <a name="stayinsync-property-example-vc"></a>Пример свойства StayInSync (Visual C++)
-В этом примере показано, как [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) свойство облегчает доступ к строкам в иерархической [записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
+В этом примере показано, как свойство [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) упрощает доступ к строкам в иерархическом [наборе записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
- Внешний цикл отображает имя и фамилия каждого автора, состояние и идентификатор. Добавленная коллекция **записей** для каждой строки извлекается из [поля](../../../ado/reference/ado-api/fields-collection-ado.md) коллекции и автоматически назначаться **rstTitleAuthor** по **StayInSync**  свойство всякий раз, когда родительский **записей** перемещается на новую строку. Внутренний цикл отображаются четыре поля из каждой строки в добавленных записей.  
+ Внешний цикл отображает имя и фамилию каждого автора, состояние и идентификацию. Добавленный **набор записей** для каждой строки извлекается из коллекции [полей](../../../ado/reference/ado-api/fields-collection-ado.md) и автоматически назначается **рсттитлеаусор** свойством **StayInSync** каждый раз, когда родительский **набор записей** перемещается в новую строку. Внутренний цикл отображает четыре поля из каждой строки в присоединенном наборе записей.  
   
 ```  
 // BeginStayInSyncCpp.cpp  
@@ -143,7 +143,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Коллекция Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Свойство StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)

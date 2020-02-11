@@ -11,19 +11,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f24786c95cde089c159945ecd58075139163e3c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62643327"
 ---
 # <a name="send-data-to-a-filestream-column-using-irowsetfastupload-ole-db"></a>Передача данных в столбец FILESTREAM с использованием интерфейса IRowsetFastUpload (OLE DB)
   Этот образец использует интерфейс IRowsetFastUpload, чтобы передать от 4 МБ до 4 ГБ данных в столбец файлового потока.  
   
- Дополнительные сведения о функции filestream, см. в разделе [поддержка FILESTREAM &#40;OLE DB&#41;](../../native-client/ole-db/filestream-support-ole-db.md).  
+ Дополнительные сведения о компоненте FILESTREAM см. в разделе [Поддержка filestream &#40;OLE DB&#41;](../../native-client/ole-db/filestream-support-ole-db.md).  
   
 ## <a name="example"></a>Пример  
- Перед компиляцией и запуском этого образца, включите поддержку FILESTREAM ([Включение и настройка FILESTREAM](../../blob/enable-and-configure-filestream.md)).  
+ Перед компиляцией и запуском этого образца включите поддержку FILESTREAM ([включить и настроить FILESTREAM](../../blob/enable-and-configure-filestream.md)).  
   
  Убедитесь, что переменная среды INCLUDE включает каталог, содержащий файл sqlncli.h.  
   

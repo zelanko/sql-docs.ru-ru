@@ -16,10 +16,10 @@ ms.assetid: 0644032f-5ff0-4718-8dde-321bc9967a03
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a82a3bedf78eb69dfc4a1736e212164341077601
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72304977"
 ---
 # <a name="sp_dropdistributor-transact-sql"></a>sp_dropdistributor (Transact-SQL)
@@ -38,13 +38,13 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @no_checks = ] no_checks` указывает, следует ли проверять зависимые объекты перед удалением распространителя. *no_checks* имеет **бит**и значение по умолчанию 0.  
+`[ @no_checks = ] no_checks`Указывает, следует ли проверять зависимые объекты перед удалением распространителя. *no_checks* имеет **бит**и значение по умолчанию 0.  
   
  Если значение **равно 0**, **sp_dropdistributor** проверяет, что все объекты публикации и распространения в дополнение к распространителю удалены.  
   
  Если значение равно **1**, **sp_dropdistributor** удаляет все объекты публикации и распространения перед удалением распространителя.  
   
-`[ @ignore_distributor = ] ignore_distributor` указывает, выполняется ли эта хранимая процедура без соединения с распространителем. *ignore_distributor* имеет **бит**и значение по умолчанию **0**.  
+`[ @ignore_distributor = ] ignore_distributor`Указывает, выполняется ли эта хранимая процедура без соединения с распространителем. *ignore_distributor* имеет **бит**и значение по умолчанию **0**.  
   
  Если значение **равно 0**, **sp_dropdistributor** подключается к распространителю и удаляет все объекты репликации. Если **sp_dropdistributor** не удается подключиться к распространителю, хранимая процедура завершается ошибкой.  
   
@@ -56,7 +56,7 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ## <a name="remarks"></a>Remarks  
  **sp_dropdistributor** используется во всех типах репликации.  
   
- Если на сервере существуют другие объекты издателя или распространения, **sp_dropdistributor** завершается ошибкой, если только **\@no_checks** не имеет значение **1**.  
+ Если на сервере существуют другие объекты издателя или распространения, **sp_dropdistributor** завершается ошибкой, если ** \@no_checks** не имеет значение **1**.  
   
  Эта хранимая процедура должна быть выполнена после удаления базы данных распространителя путем выполнения **sp_dropdistributiondb**.  
   
@@ -66,11 +66,11 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_dropdistributor**.  
   
-## <a name="see-also"></a>См. также статью  
- [Disable Publishing and Distribution](../../relational-databases/replication/disable-publishing-and-distribution.md)  (Отключение публикации и распространения)  
- [sp_adddistributor &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)  
- [sp_changedistributor_property &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)  
- [sp_helpdistributor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
- [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Отключение публикации и распространения](../../relational-databases/replication/disable-publishing-and-distribution.md)   
+ [sp_adddistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
+ [sp_changedistributor_property &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)   
+ [sp_helpdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
+ [Хранимые процедуры репликации &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   
