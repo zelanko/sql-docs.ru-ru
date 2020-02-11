@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 33f037f4d82cbf5bbdebde01a5c4492128ecc8ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206028"
 ---
 # <a name="execute-sql-server-agent-job-task-maintenance-plan"></a>Задача «Выполнение задания агента SQL Server» (план обслуживания)
@@ -27,7 +27,7 @@ ms.locfileid: "68206028"
  Эта задача использует инструкцию **.sp_start_job** .  
   
 ## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
- **Соединение**  
+ **Соединен**  
  Выберите соединение с сервером, которое будет использоваться для выполнения этой задачи.  
   
  **Создать**  
@@ -36,14 +36,14 @@ ms.locfileid: "68206028"
  **Доступные задания агента SQL Server**  
  Выберите задание для выполнения. Для идентификации заданий в сетке используются столбцы **Имя задания** и **Описание** .  
   
- **Просмотр T-SQL**  
+ **Просмотреть T-SQL**  
  Просмотрите инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] , выполняемые для данной задачи по отношению к серверу, на основе выбранных параметров.  
   
 > [!NOTE]  
 >  Если количество затронутых объектов велико, построение этого отображения может занять значительное время.  
   
 ## <a name="new-connection-dialog-box"></a>Диалоговое окно «Создание соединения»  
- **Имя соединения**  
+ **Имя подключения**  
  Введите имя нового соединения.  
   
  **Выберите или введите имя сервера**  
@@ -56,10 +56,10 @@ ms.locfileid: "68206028"
  Укажите способ проверки подлинности на сервере.  
   
  **Использовать встроенную безопасность Windows**  
- Подключиться к экземпляру компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] с использованием проверки подлинности Windows.  
+ Подключение к экземпляру компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] с использованием проверки подлинности Windows.  
   
  **Использовать указанные имя пользователя и пароль**  
- Подключиться к экземпляру компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] с использованием проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Этот параметр недоступен.  
+ Соединение с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] компонента с использованием [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности. Этот параметр недоступен.  
   
  **User name**  
  Укажите имя входа, используемое при проверке подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Этот параметр недоступен.  
@@ -67,9 +67,9 @@ ms.locfileid: "68206028"
  **Пароль**  
  Укажите используемый при проверке подлинности пароль. Этот параметр недоступен.  
   
-## <a name="see-also"></a>См. также  
- [sp_add_job (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)   
+## <a name="see-also"></a>См. также:  
+ [sp_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)   
  [Создание задания](../../ssms/agent/create-a-job.md)   
- [sp_start_job (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql)  
+ [sp_start_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql)  
   
   

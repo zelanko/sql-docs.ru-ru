@@ -14,22 +14,22 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c40ec2d7da7dc8f46644632d29b6fb8d1101ff9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055638"
 ---
 # <a name="set-the-properties-of-the-integration-services-service"></a>задать свойства службы Integration Services
     
 > [!IMPORTANT]  
->  В данном разделе описывается компонент [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] — служба Windows для управления пакетами служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] поддерживает эту службу для обеспечения обратной совместимости с более ранними версиями служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], на сервере служб Integration Services можно управлять пакетами.  
+>  В данном разделе описывается компонент [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] — служба Windows для управления пакетами служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]поддерживает службу для обеспечения обратной совместимости с более ранними выпусками [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], на сервере служб Integration Services можно управлять пакетами.  
   
- Служба [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] управляет и отслеживает пакеты в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. После первой установки [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]запускается служба [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , а тип запуска для нее устанавливается на автоматический.  
+ Служба [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] управляет и отслеживает пакеты в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. При первой установке [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] служба запускается, а в качестве типа запуска службы устанавливается значение автоматически.  
   
  После установки службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] можно задавать свойства службы, используя диспетчер конфигурации SQL Server или оснастку Services консоли MMC.  
   
- Чтобы настроить другие важные функции службы, включая местоположения, в которых осуществляется хранение и управление пакетами, необходимо внести изменения в файл конфигурации службы. Дополнительные сведения см. в разделе [Настройка служб Integration Services (SSIS)](service/integration-services-service-ssis-service.md).  
+ Чтобы настроить другие важные функции службы, включая местоположения, в которых осуществляется хранение и управление пакетами, необходимо внести изменения в файл конфигурации службы. Дополнительные сведения см. в разделе [Configuring the Integration Services Service &#40;SSIS Service&#41;](service/integration-services-service-ssis-service.md).  
   
 ### <a name="to-set-properties-of-the-integration-services-service-by-using-sql-server-configuration-manager"></a>Определение свойств службы Integration Services с использованием диспетчера конфигурации SQL Server  
   
@@ -58,9 +58,9 @@ ms.locfileid: "66055638"
   
 3.  В оснастке **Службы** в списке служб найдите **SQL Server Integration Services** , щелкните правой кнопкой мыши **SQL Server Integration Services**и выберите пункт **Свойства**.  
   
-4.  В диалоговом окне **Свойства служб SQL Server Integration Services** можно выполнить следующие действия.  
+4.  В диалоговом окне **свойства SQL Server Integration Services** можно выполнить следующие действия.  
   
-    -   Перейдите на вкладку **Общие** . Чтобы включить службу, выберите ручной или автоматический запуск. Чтобы выключить службу, выберите «Отключено» в поле **Тип запуска** . Выбор варианта «Отключено» не останавливает службу, если она работает в данный момент.  
+    -   Перейдите на вкладку **Общие** . Чтобы включить службу, выберите ручной или автоматический тип запуска. Чтобы выключить службу, выберите «Отключено» в поле **Тип запуска** . Выбор варианта «Отключено» не останавливает службу, если она работает в данный момент.  
   
          Если служба уже включена, можно нажать кнопку **Стоп** для остановки службы или **Пуск** для запуска службы.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "66055638"
   
 7.  Чтобы закрыть оснастку **Службы** , в меню **Файл** выберите пункт **Выход** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Управление службой Integration Services](../../2014/integration-services/manage-the-integration-services-service.md)  
   
   

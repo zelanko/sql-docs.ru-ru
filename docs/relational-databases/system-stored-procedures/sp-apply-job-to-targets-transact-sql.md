@@ -18,13 +18,13 @@ ms.assetid: 4a3e9173-7e3c-4100-a9ac-2f5d2c60a8b0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 32e9f15dca77a7c99d7d4a9ae314e074876c6274
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68117810"
 ---
-# <a name="spapplyjobtotargets-transact-sql"></a>sp_apply_job_to_targets (Transact-SQL)
+# <a name="sp_apply_job_to_targets-transact-sql"></a>sp_apply_job_to_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Применяет задание к одному или нескольким целевым серверам или к целевым серверам, принадлежащим к одной или нескольким группам целевых серверов.  
@@ -42,27 +42,27 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @job_id = ] job_id` Идентификационный номер задания, применяемого к указанным целевым серверам или группам целевых серверов. *job_id* — **uniqueidentifier**, значение по умолчанию NULL.  
+`[ @job_id = ] job_id`Идентификационный номер задания, применяемого к указанным целевым серверам или группам целевых серверов. *job_id* имеет тип **uniqueidentifier**и значение по умолчанию NULL.  
   
-`[ @job_name = ] 'job_name'` Имя задания, применяемого к указанным целевым серверам или группам целевых серверов. *имя_задания* — **sysname**, значение по умолчанию NULL.  
+`[ @job_name = ] 'job_name'`Имя задания, применяемого к указанным целевым серверам или группам целевых серверов. Аргумент *job_name* имеет тип **sysname**и значение по умолчанию NULL.  
   
 > [!NOTE]  
->  Либо *job_id* или *имя_задания* должен быть указан, но не оба аргумента одновременно.  
+>  Необходимо указать либо *job_id* , либо *job_name* , но нельзя указать оба значения.  
   
-`[ @target_server_groups = ] 'target_server_groups'` Список разделенных запятыми групп целевых серверов, на которые имеет указанное задание, для применения. *target_server_groups* — **nvarchar(2048)** , значение по умолчанию NULL.  
+`[ @target_server_groups = ] 'target_server_groups'`Разделенный запятыми список групп целевых серверов, к которым должно применяться указанное задание. *target_server_groups* имеет тип **nvarchar (2048)** и значение по умолчанию NULL.  
   
-`[ @target_servers = ] 'target_servers'` Разделенный запятыми список целевых серверов, на которые имеет указанное задание, для применения. *target_servers*— **nvarchar(2048)** , значение по умолчанию NULL.  
+`[ @target_servers = ] 'target_servers'`Разделенный запятыми список целевых серверов, к которым будет применено указанное задание. *target_servers*имеет тип **nvarchar (2048)** и значение по умолчанию NULL.  
   
-`[ @operation = ] 'operation'` Является ли указанное задание следует применить к или удалено с указанных целевых серверов или групп целевых серверов. *Операция*— **varchar(7)** , значение по умолчанию APPLY. Допустимы следующие операции: **применить** и **удалить**.  
+`[ @operation = ] 'operation'`Указывает, должно ли указанное задание быть применено или удалено из указанных целевых серверов или групп целевых серверов. *Операция*имеет тип **varchar (7)** и значение по умолчанию Apply. Допустимые операции: **Apply** и **Remove**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
- **sp_apply_job_to_targets** предоставляет простой способ для применения (или удаления) задания к нескольким целевым серверам и является альтернативой вызову **sp_add_jobserver** (или **sp_delete_jobserver**) один раз для каждого целевого сервера требуется.  
+## <a name="remarks"></a>Remarks  
+ **sp_apply_job_to_targets** предоставляет простой способ применения (или удаления) задания с нескольких целевых серверов и является альтернативой вызову **sp_add_jobserver** (или **sp_delete_jobserver**) один раз для каждого требуемого целевого сервера.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнить эту процедуру.  
+ Эту процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** .  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере ко всем целевым серверам в группе `Backup Customer Information` применяется ранее созданное задание `Servers Maintaining Customer Information`.  
@@ -78,10 +78,10 @@ EXEC dbo.sp_apply_job_to_targets
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_add_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
  [sp_delete_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
  [sp_remove_job_from_targets &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-remove-job-from-targets-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

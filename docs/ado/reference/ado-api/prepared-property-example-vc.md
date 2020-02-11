@@ -1,5 +1,5 @@
 ---
-title: Подготовлен пример свойства (Visual C++) | Документация Майкрософт
+title: Пример подготовленного свойства (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: f697ac1a-f125-42b5-bbf6-762a7fa30ae3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 58da870e9c65be459e6bd4a8c35bb84aef325c61
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917586"
 ---
 # <a name="prepared-property-example-vc"></a>Пример свойства Prepared (Visual C++)
-В этом примере показано [подготовленных](../../../ado/reference/ado-api/prepared-property-ado.md) свойство, открыв два [команда](../../../ado/reference/ado-api/command-object-ado.md) объектов - подготовлены и не подготовлена.  
+В этом примере демонстрируется [подготовленное](../../../ado/reference/ado-api/prepared-property-ado.md) свойство путем открытия двух [командных](../../../ado/reference/ado-api/command-object-ado.md) объектов — один подготовленный и еще не подготовленный.  
   
 ## <a name="example"></a>Пример  
   
@@ -141,8 +141,8 @@ void PrintComError(_com_error &e) {
 ```  
   
  **Результаты производительности:**  
-**Не готов:  0.016 секунд**  
-**Подготовить.      0.016 секунд**   
-## <a name="see-also"></a>См. также  
+**Не подготовлено: 0,016 с**  
+**Подготовлено: 0,016 с**   
+## <a name="see-also"></a>См. также:  
  [Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Свойство Prepared (ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)

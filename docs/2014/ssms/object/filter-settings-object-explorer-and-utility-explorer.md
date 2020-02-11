@@ -14,13 +14,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 78573a21a5aa6a719a9bb55d0ee17bf9837258f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63277081"
 ---
-# <a name="filter-settings-object-explorer-and-utility-explorer"></a>Настройки фильтра (обозреватель объектов и проводник служебной программы)
+# <a name="filter-settings-object-explorer-and-utility-explorer"></a>Настройки фильтра (обозреватель объектов и обозреватель программ)
   Используйте данное диалоговое окно для задания фильтра. Фильтр позволяет настроить обозреватель объектов и проводник служебной программы для отображения только тех элементов, которые соответствуют заданным критериям. Например, фильтр можно использовать для отображения только тех заданий, имена которых содержат слово «Maintenance». В заголовке диалогового окна **Настройки фильтра** содержится имя сервера и может содержаться имя базы данных.  
   
 ## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
@@ -66,14 +66,14 @@ ms.locfileid: "63277081"
   
      Доступно для дат. Отображаются элементы, дата которых не входит в диапазон двух заданных дат. Выберите **Вне** и в последней ячейке столбца **Оператор** нажмите клавишу TAB, чтобы добавить строку ввода второй даты.  
   
- **Значение**  
+ **Value**  
  Введите значение, на основе которого будет сравниваться свойство. Для дат нажмите кнопку со стрелкой вниз, чтобы открыть календарь, и выберите в нем дату.  
   
  **Очистить фильтр**  
  Позволяет удалить все настройки текущего фильтра.  
   
-## <a name="see-also"></a>См. также  
- [Использование среды SQL Server Management Studio](../sql-server-management-studio-ssms.md)   
+## <a name="see-also"></a>См. также:  
+ [Использование SQL Server Management Studio](../sql-server-management-studio-ssms.md)   
  [Функции и задачи служебной программы SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
   
   

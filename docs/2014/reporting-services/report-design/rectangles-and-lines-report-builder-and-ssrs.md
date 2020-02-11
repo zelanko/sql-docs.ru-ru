@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f447d05501949df0fd0860ed7799fca2932714fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105389"
 ---
 # <a name="rectangles-and-lines-report-builder-and-ssrs"></a>Прямоугольники и линии (построитель отчетов и службы SSRS)
@@ -41,7 +41,7 @@ ms.locfileid: "66105389"
 
   
 ##  <a name="ReportBorder"></a> Добавление границы отчета  
- Можно добавить границу к отчету путем добавления границ к самим верхним колонтитулам, нижним колонтитулам и тексту отчета, не добавляя линии или прямоугольники. Дополнительные сведения см. в разделе [добавить границу к отчету &#40;построитель отчетов и службы SSRS&#41;](add-a-border-to-a-report-report-builder-and-ssrs.md).  
+ Можно добавить границу к отчету путем добавления границ к самим верхним колонтитулам, нижним колонтитулам и тексту отчета, не добавляя линии или прямоугольники. Дополнительные сведения см. в разделе [Добавление границы в отчет (построитель отчетов и службы SSRS)](add-a-border-to-a-report-report-builder-and-ssrs.md).  
   
 
   
@@ -52,7 +52,7 @@ ms.locfileid: "66105389"
   
  [Добавление и изменение линии (построитель отчетов и службы SSRS)](add-and-modify-a-line-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Добавление прямоугольника или контейнера (построитель отчетов и службы SSRS)](add-a-rectangle-or-container-report-builder-and-ssrs.md)  
   
   
