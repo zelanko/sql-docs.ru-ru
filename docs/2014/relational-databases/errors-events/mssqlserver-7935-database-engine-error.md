@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9441a002f7c6e7113970bd4fb847f3371fd67909
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762054"
 ---
-# <a name="mssqlserver7935"></a>MSSQLSERVER_7935
+# <a name="mssqlserver_7935"></a>MSSQLSERVER_7935
     
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|7935|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC2_FS_MISSING_COLUMN|  
-|Текст сообщения|Ошибка таблицы: Каталог Filestream с Идентификатором f_id для столбца объекта с Идентификатором O_ID, Идентификатором индекса I_ID, Идентификатором секции PN_ID, однако данный столбец отсутствует в секции.|  
+|Текст сообщения|Ошибка в таблице. Существует каталог FILESTREAM с идентификатором F_ID для столбца объекта с идентификатором O_ID, идентификатором индекса I_ID, идентификатором секции PN_ID, однако данный столбец отсутствует в этой секции.|  
   
 ## <a name="explanation"></a>Объяснение  
  Во время проверки DBCC CHECKDB был обнаружен каталог FILESTREAM для столбца указанного объекта, но сам столбец не был найден в соответствующих метаданных секции.  

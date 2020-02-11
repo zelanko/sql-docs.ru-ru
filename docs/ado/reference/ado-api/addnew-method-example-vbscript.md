@@ -15,18 +15,18 @@ ms.assetid: dcdcaf0a-b9b0-4d81-8728-43c38c4c853b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e8329b1edd2e240e00221096bd501d3edf204e71
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921285"
 ---
 # <a name="addnew-method-example-vbscript"></a>Пример метода AddNew (VBScript)
-В этом примере используется [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) метод, чтобы создать новую запись с указанным именем.  
+В этом примере используется метод [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) для создания новой записи с указанным именем.  
   
- Используйте следующий пример в Active Server Page (ASP). Используйте **найти** найдите файл Adovbs.inc и поместите его в каталог, который вы планируете использовать. Вырежьте и вставьте следующий код в блокноте или другом текстовом редакторе и сохраните его в **AddNewVBS.asp**. Результат можно просмотреть в любом браузере клиента.  
+ Используйте следующий пример на странице Active Server (ASP). Используйте **Find** для поиска файла адовбс. Inc и поместите его в каталог, который планируется использовать. Вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **аддневвбс. ASP**. Результат можно просмотреть в любом клиентском браузере.  
   
- Чтобы использовать в примере, добавьте новую запись в формате HTML. Нажмите кнопку **добавить новый**. См. в разделе [удалить пример метода](../../../ado/reference/ado-api/delete-method-example-vbscript.md) для удаления нежелательных записей.  
+ Чтобы выполнить пример, добавьте новую запись в HTML-форму. Щелкните **Добавить новый**. Чтобы удалить ненужные записи, см. [пример метода Delete](../../../ado/reference/ado-api/delete-method-example-vbscript.md) .  
   
 ```  
 <!-- BeginAddNewVBS -->  
@@ -212,6 +212,6 @@ End Sub
 <!-- EndAddNewVBS -->  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод AddNew (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

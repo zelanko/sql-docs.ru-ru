@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b3be16ea856b5d632ba5a0285bad2c4d2d93709c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62473154"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>Автоматизация администрирования в масштабах предприятия
@@ -35,7 +35,7 @@ ms.locfileid: "62473154"
 -   Планирования потоков данных между серверами предприятия для организации хранилищ данных.  
   
 > [!NOTE]  
->  Как часть [!INCLUDE[msCoName](../../includes/msconame-md.md)] продолжающихся усилий, чтобы снизить совокупную стоимость владения, [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] появилось два новшества: метод управления серверами, называемый управление на основе политик и многосерверные запросы, использующие серверы конфигурации и сервера группы. Эти функции могут использоваться вместо или совместно с некоторыми функциями, описанными в этом разделе. Дополнительные сведения см. в разделе [Администрирование серверов с управления на основе политик](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) и [администрирования нескольких серверов с использованием центральных серверов управления](../../relational-databases/administer-multiple-servers-using-central-management-servers.md).  
+>  В рамках [!INCLUDE[msCoName](../../includes/msconame-md.md)] текущих усилий по уменьшению совокупной стоимости владения [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] появились две функции: метод управления серверами, называемый управлением на основе политик, и многосерверные запросы, использующие серверы конфигурации и группы серверов. Эти функции могут использоваться вместо или совместно с некоторыми функциями, описанными в этом разделе. Дополнительные сведения см. в статьях [Администрирование серверов с помощью управления на основе политик](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) и [Администрирование нескольких серверов с помощью центральных серверов управления](../../relational-databases/administer-multiple-servers-using-central-management-servers.md).  
   
  Чтобы воспользоваться преимуществами администрирования нескольких серверов, необходимо иметь, по меньшей мере, один главный сервер и один целевой. Главный сервер распределяет задания целевым серверам и получает от них события. На главном сервере также хранится центральная копия определений заданий, выполняющихся на целевых серверах. Целевые серверы периодически подключаются к главному серверу для обновления расписаний своих заданий. Если на главном сервере имеется новое задание, то целевой сервер получает его. После завершения задания целевой сервер подключается к главному серверу и сообщает о состоянии его завершения.  
   
@@ -81,8 +81,8 @@ ms.locfileid: "62473154"
  [Настройка автоматизированного администрирования в организации](tune-automated-administration-across-an-enterprise.md)  
  Содержит сведения о том, как автоматизированное администрирование в многосерверном окружении использует функции самонастройки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>См. также  
- [Обратная совместимость компонента ядра СУБД SQL Server](../../database-engine/sql-server-database-engine-backward-compatibility.md)   
+## <a name="see-also"></a>См. также:  
+ [SQL Server ядро СУБД обратной совместимости](../../database-engine/sql-server-database-engine-backward-compatibility.md)   
  [Регистрация серверов](../register-servers/register-servers.md)   
  [sp_add_targetservergroup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql)   
  [sp_delete_targetserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql)   
@@ -92,8 +92,8 @@ ms.locfileid: "62473154"
  [sp_help_targetservergroup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)   
  [sp_resync_targetserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql)   
  [sp_update_targetservergroup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql)   
- [dbo.sysjobservers &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobservers-transact-sql)   
- [sys.syslogins &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-syslogins-transact-sql)   
- [dbo.systargetservers &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-systargetservers-transact-sql)  
+ [dbo. сисжобсерверс &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobservers-transact-sql)   
+ [sys. syslogins &#40;&#41;Transact-SQL](/sql/relational-databases/system-compatibility-views/sys-syslogins-transact-sql)   
+ [dbo. systargetservers &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-systargetservers-transact-sql)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Класс ServerNetworkProtocolProperty | Документация Майкрософт
+title: Класс класс servernetworkprotocolproperty | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,16 +19,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 39d0a86147d40bb4f2eaf85dbf5b9ae92bfe540d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62642908"
 ---
 # <a name="servernetworkprotocolproperty-class"></a>Класс ServerNetworkProtocolProperty
-  Servernetworkprotocolproperty [класс ServerNetworkProtocolProperty]-class.md) представляет свойства сетевого протокола сервера.  
+  [Класс servernetworkprotocolproperty Class] класс servernetworkprotocolproperty-class.md) представляет свойства сетевого протокола сервера.  
   
- С помощью servernetworkprotocolproperty [класс ServerNetworkProtocolProperty]-class.md) можно выполнять следующие задачи:  
+ С помощью [класс servernetworkprotocolproperty Class] класс servernetworkprotocolproperty-class.md) можно выполнять следующие задачи:  
   
 -   Проверка протокола, которому принадлежит текущее свойство.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62642908"
   
 -   Установка флагов для текущего свойства.  
   
-## <a name="see-also"></a>См. также  
- [Настройка сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+## <a name="see-also"></a>См. также:  
+ [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

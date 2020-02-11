@@ -1,5 +1,5 @@
 ---
-title: Элемент пример свойства (Visual Basic) | Документация Майкрософт
+title: Пример свойства Item (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,16 +15,16 @@ ms.assetid: b4476603-691b-4081-8797-a3d0b331dce5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c309319ceb81e9af4a8b84d0b96537d0be933e32
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918341"
 ---
 # <a name="item-property-example-vb"></a>Пример свойства Item (Visual Basic)
-В этом примере показано, как [элемент](../../../ado/reference/ado-api/item-property-ado.md) свойство обращается к членам коллекции. В примере открывается ***авторов*** таблицы ***Pubs*** базы данных с помощью параметризованные команды.  
+В этом примере показано, как свойство [Item](../../../ado/reference/ado-api/item-property-ado.md) получает доступ к членам коллекции. В примере открывается таблица ***authors*** базы данных ***pubs*** с параметризованной командой.  
   
- На параметр в команде, выполнен по отношению к базе данных осуществляется из [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта [параметры](../../../ado/reference/ado-api/parameters-collection-ado.md) коллекции с индексом и именем. Поля, возвращаемого [записей](../../../ado/reference/ado-api/recordset-object-ado.md) затем осуществляется из этого объекта [поля](../../../ado/reference/ado-api/fields-collection-ado.md) коллекции с индексом и именем.  
+ Доступ к параметру в команде, выданной для базы данных, осуществляется из коллекции [параметров](../../../ado/reference/ado-api/parameters-collection-ado.md) объекта [Command](../../../ado/reference/ado-api/command-object-ado.md) по индексу и имени. Затем к полям возвращенного [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) осуществляется доступ из коллекции [полей](../../../ado/reference/ado-api/fields-collection-ado.md) этого объекта по индексу и имени.  
   
 ```  
 'BeginItemVB  
@@ -134,7 +134,7 @@ End Sub
 'EndItemVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Коллекция Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Свойство Item (ADO)](../../../ado/reference/ado-api/item-property-ado.md)   

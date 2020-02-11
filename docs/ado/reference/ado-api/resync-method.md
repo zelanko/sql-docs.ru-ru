@@ -1,5 +1,5 @@
 ---
-title: Метод Resync | Документация Майкрософт
+title: Повторно синхронизировать метод | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -19,14 +19,14 @@ ms.assetid: 73b355d4-a4c0-434b-bfc4-039b1c76b32e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7e2f83a3637af8f0e89c4125d3207c8c54b86763
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917162"
 ---
 # <a name="resync-method"></a>Метод Resync
-Обновляет данные в текущем [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта, или [поля](../../../ado/reference/ado-api/fields-collection-ado.md) коллекцию [записи](../../../ado/reference/ado-api/record-object-ado.md) объекта из базы данных.  
+Обновляет данные в текущем объекте [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) или коллекции [полей](../../../ado/reference/ado-api/fields-collection-ado.md) объекта [записи](../../../ado/reference/ado-api/record-object-ado.md) из базовой базы данных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,42 +36,42 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *AffectRecords*  
- Необязательный. [AffectEnum](../../../ado/reference/ado-api/affectenum.md) значение, которое определяет, сколько записей **Resync** повлияет на метод. Значение по умолчанию — **adAffectAll**. Это значение не входит в состав **Resync** метод **поля** коллекцию **записи** объекта.  
+ *аффектрекордс*  
+ Необязательный параметр. Значение [аффектенум](../../../ado/reference/ado-api/affectenum.md) , определяющее количество записей, на которые будет влиять метод повторной **синхронизации** . Значение по умолчанию — **адаффекталл**. Это значение недоступно в методе **Resync** коллекции **Fields** объекта **Record** .  
   
- *ResyncValues*  
- Необязательный параметр. Объект [ResyncEnum](../../../ado/reference/ado-api/resyncenum.md) значение, которое указывает, перезаписываются ли базового значения. Значение по умолчанию — **adResyncAllValues**.  
+ *ресинквалуес*  
+ Необязательный параметр. Значение [ресинценум](../../../ado/reference/ado-api/resyncenum.md) , указывающее, перезаписываются ли базовые значения. Значение по умолчанию — **адресинкаллвалуес**.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="recordset"></a>набор записей  
- Используйте **Resync** метод повторная синхронизация записей в текущем **записей** с основной базы данных. Это полезно в том случае, если вы используете статические или однопроходный курсор, но вы хотите просмотреть все изменения в основной базе данных.  
+ Используйте метод **Resync** для повторной синхронизации записей в текущем **наборе записей** с базовой базой данных. Это полезно, если используется либо статический, либо однонаправленный курсор, но вы хотите видеть изменения в основной базе данных.  
   
- Если задать [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) свойства **adUseClient**, **Resync** доступна только для не только для чтения **записей** объектов.  
+ Если для свойства [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) задано значение **адусеклиент**, **Повторная синхронизация** доступна только для объектов **Recordset** , не являющихся доступными только для чтения.  
   
- В отличие от [Requery](../../../ado/reference/ado-api/requery-method.md) метод, **Resync** метод нельзя будет выполнить повторно **записей** основным команды. Новые записи в основной базе данных, не будут видны.  
+ В отличие от метода [Resync](../../../ado/reference/ado-api/requery-method.md) , метод **Resync** не выполняет повторное выполнение базовой команды объекта **Recordset** . Новые записи в базовой базе данных не будут видны.  
   
- Если произошел сбой попытки повторной синхронизации из-за конфликта с базовыми данными (например, записи был удален другим пользователем), поставщик возвращает предупреждения, чтобы [ошибки](../../../ado/reference/ado-api/errors-collection-ado.md) коллекции и ошибку во время выполнения происходит. Используйте [фильтра](../../../ado/reference/ado-api/filter-property.md) свойство (**adFilterConflictingRecords**) и [состояние](../../../ado/reference/ado-api/status-property-ado-recordset.md) свойства для поиска записей с конфликтами.  
+ Если попытка повторной синхронизации завершается сбоем из-за конфликта с базовыми данными (например, запись была удалена другим пользователем), поставщик возвращает предупреждения в коллекцию [ошибок](../../../ado/reference/ado-api/errors-collection-ado.md) и возникает ошибка времени выполнения. Используйте свойство [Filter](../../../ado/reference/ado-api/filter-property.md) (**адфилтерконфликтингрекордс**) и свойство [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) для обнаружения записей с конфликтами.  
   
- Если [уникальной таблицы](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) и [Resync команда](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md) динамические свойства заданы и **записей** является результатом выполнения операции СОЕДИНЕНИЯ на несколько таблиц, а затем  **Повторная синхронизация** метод выполнит команду, заданную в **Resync команда** свойство только для таблицы с именем в **уникальной таблицы** свойство.  
+ Если заданы динамические свойства [уникальной таблицы](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) и повторной [синхронизации](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md) , а **набор записей** является результатом выполнения операции объединения нескольких таблиц, то метод **Resync** выполняет команду, указанную в свойстве Command повторной **синхронизации** , только для таблицы, указанной в свойстве **уникальной таблицы** .  
   
 ## <a name="fields"></a>Поля  
- Используйте **Resync** метода для повторной синхронизации значения **поля** коллекцию **записи** объекта к базовому источнику данных. [Число](../../../ado/reference/ado-api/count-property-ado.md) этот метод не влияет на свойство.  
+ Используйте метод **Resync** для повторной синхронизации значений коллекции **Fields** объекта **Record** с базовым источником данных. Этот метод не влияет на свойство [Count](../../../ado/reference/ado-api/count-property-ado.md) .  
   
- Если *ResyncValues* присваивается **adResyncAllValues** (значение по умолчанию), [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md), [значение](../../../ado/reference/ado-api/value-property-ado.md), и [ Примеры OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) свойства [поле](../../../ado/reference/ado-api/field-object.md) синхронизации объектов в коллекции. Если *ResyncValues* присваивается **adResyncUnderlyingValues**, только **UnderlyingValue** свойство синхронизируется.  
+ Если для *ресинквалуес* задано значение **адресинкаллвалуес** (по умолчанию), то свойства [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md), [value](../../../ado/reference/ado-api/value-property-ado.md)и [originalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) объектов [field](../../../ado/reference/ado-api/field-object.md) в коллекции синхронизируются. Если для *ресинквалуес* задано значение **адресинкундерлингвалуес**, то синхронизируется только свойство **UnderlyingValue** .  
   
- Значение **состояние** для каждой **поле** во время вызова также влияет на поведение **Resync**. Для **поле** объектов, имеющих **состояние** значения **adFieldPendingUnknown** или **adFieldPendingInsert**, **повторной синхронизации**  не оказывает влияния. Для **состояние** значения **adFieldPendingChange** или **adFieldPendingDelete**, **Resync** синхронизирует данные значения для полей, по-прежнему существует в источнике данных.  
+ Значение свойства **Status** для каждого объекта **поля** во время вызова также влияет на поведение повторной **синхронизации**. Для **объектов Field** , имеющих **значения состояния** **адфиелдпендингункновн** или **адфиелдпендингинсерт**, **Повторная синхронизация** не действует. Для значений **состояния** **адфиелдпендингчанже** или **адфиелдпендингделете**повторная **Синхронизация** синхронизирует значения данных для полей, которые еще существуют в источнике данных.  
   
- **Повторная синхронизация** не будет изменять **состояние** значения **поле** объектов, пока не произойдет ошибка при **Resync** вызывается. Например, если поле больше не существует, то поставщик возвратит соответствующей **состояние** значение **поле** объект, например **adFieldDoesNotExist**. Возвращаемый **состояние** значения могут быть логически объединены в значении элемента **состояние** свойство.  
+ **Повторная синхронизация** не приведет к изменению значений **состояния** объектов **полей** , если не возникает ошибка при вызове повторной **синхронизации** . Например, если поле больше не существует, поставщик возвратит соответствующее значение **состояния** для объекта **поля** , например **адфиелддоеснотексист**. Возвращаемые значения **состояния** могут быть логически объединены в значение свойства **Status** .  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
   
 |||  
 |-|-|  
 |[Коллекция Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
   
-## <a name="see-also"></a>См. также  
- [Повторная синхронизация пример метода (Visual Basic)](../../../ado/reference/ado-api/resync-method-example-vb.md)   
- [Повторная синхронизация пример метода (Visual C++)](../../../ado/reference/ado-api/resync-method-example-vc.md)   
+## <a name="see-also"></a>См. также:  
+ [Пример метода Resync (Visual Basic)](../../../ado/reference/ado-api/resync-method-example-vb.md)   
+ [Пример метода Resync (Visual c++)](../../../ado/reference/ado-api/resync-method-example-vc.md)   
  [Метод Clear (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
  [Свойство UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)

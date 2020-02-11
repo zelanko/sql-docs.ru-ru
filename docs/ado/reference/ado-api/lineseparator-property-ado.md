@@ -16,25 +16,25 @@ ms.assetid: 0b20fbb8-6b83-48ec-b442-f96c8a4bafbb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0343954f549f2cba4b535b8ab4ebafec5a842015
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918287"
 ---
 # <a name="lineseparator-property-ado"></a>Свойство LineSeparator (ADO)
-Указывает двоичный символ для использования в качестве разделителя строки в тексте [Stream](../../../ado/reference/ado-api/stream-object-ado.md) объектов.  
+Указывает двоичный символ, используемый в качестве разделителя строк в объектах текстового [потока](../../../ado/reference/ado-api/stream-object-ado.md) .  
   
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
- Возвращает или задает [LineSeparatorsEnum](../../../ado/reference/ado-api/lineseparatorsenum.md) значение, указывающее знак разделителя строки, используемые в **Stream**. Значение по умолчанию — **adCRLF**.  
+ Задает или возвращает значение [линесепараторсенум](../../../ado/reference/ado-api/lineseparatorsenum.md) , указывающее символ разделителя строки, используемый в **потоке**. Значение по умолчанию — **адкрлф**.  
   
-## <a name="remarks"></a>Примечания  
- **LineSeparator** используется для интерпретации строк при чтении содержимого текстового **Stream**. Строки могут быть пропущены с [SkipLine](../../../ado/reference/ado-api/skipline-method.md) метод.  
+## <a name="remarks"></a>Remarks  
+ **LineSeparator** используется для интерпретации строк при считывании содержимого текстового **потока**. Строки можно пропустить с помощью метода [скиплине](../../../ado/reference/ado-api/skipline-method.md) .  
   
- **LineSeparator** используется только с текстом **Stream** объектов ([тип](../../../ado/reference/ado-api/type-property-ado-stream.md) — **adTypeText**). Это свойство учитывается, если **тип** — **adTypeBinary**.  
+ **LineSeparator** используется только с объектами **потока** текста ([тип](../../../ado/reference/ado-api/type-property-ado-stream.md) — **адтипетекст**). Это свойство игнорируется, если **Type** имеет значение **адтипебинари**.  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  [Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

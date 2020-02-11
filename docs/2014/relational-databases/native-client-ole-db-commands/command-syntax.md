@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 00ab769ee2051edc499d586ab7d5ee1fa47dd854
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62468221"
 ---
 # <a name="command-syntax"></a>Синтаксис команды
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщика OLE DB для собственного клиента распознает синтаксис команды, указанный макросом DBGUID_SQL. Для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента, описатель указывает, что сочетание ODBC SQL, ISO и [!INCLUDE[tsql](../../includes/tsql-md.md)] является допустимым синтаксисом. Например, следующая инструкция SQL использует escape-последовательность ODBC SQL, чтобы указать строковую функцию LCASE.  
+  Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента распознает синтаксис команд, указанный в макросе DBGUID_SQL. Для поставщика [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента описатель указывает, что АМАЛГАМ ODBC SQL, ISO и [!INCLUDE[tsql](../../includes/tsql-md.md)] является допустимым синтаксисом. Например, следующая инструкция SQL использует escape-последовательность ODBC SQL, чтобы указать строковую функцию LCASE.  
   
 ```  
 SELECT customerid={fn LCASE(CustomerID)} FROM Customers  
@@ -35,10 +35,10 @@ SELECT customerid={fn LCASE(CustomerID)} FROM Customers
 SELECT customerid=LOWER(CustomerID) FROM Customers  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщика OLE DB для собственного клиента обрабатывает любую форму инструкции успешно при использовании в качестве текста для команды.  
+ Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента обрабатывает любую форму инструкции, если она указана как текст для команды.  
   
 ## <a name="stored-procedures"></a>Хранимые процедуры  
- При выполнении [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] хранимой процедуры с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента команду, используйте escape-последовательность ODBC CALL в тексте команды. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщика OLE DB для собственного клиента затем использует механизм вызова удаленной процедуры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для оптимизации обработки команд. Например, следующая инструкция ODBC SQL является более предпочтительным текстом команды, нежели форма [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+ При выполнении [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] хранимой процедуры с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] команды поставщика OLE DB Native Client используйте escape-последовательность ODBC CALL в тексте команды. Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента использует механизм удаленного вызова процедур [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для оптимизации обработки команд. Например, следующая инструкция ODBC SQL является более предпочтительным текстом команды, нежели форма [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 -   ODBC SQL  
   
@@ -52,7 +52,7 @@ SELECT customerid=LOWER(CustomerID) FROM Customers
     EXECUTE SalesByCategory 'Produce', '1995'  
     ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Команды](commands.md)  
   
   

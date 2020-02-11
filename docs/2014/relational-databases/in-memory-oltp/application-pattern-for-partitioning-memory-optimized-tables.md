@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f3296d0162136a441d141d32089a674a67e7b5b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62466098"
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>Модель приложения для секционирования таблиц, оптимизированных для памяти
@@ -209,7 +209,7 @@ SELECT OBJECT_NAME( object_id) , partition_number , row_count  FROM sys.dm_db_pa
   WHERE object_id = OBJECT_ID( 'dbo.SalesOrders_cold') AND index_id = 1;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Таблицы, оптимизированные для памяти](memory-optimized-tables.md)  
   
   

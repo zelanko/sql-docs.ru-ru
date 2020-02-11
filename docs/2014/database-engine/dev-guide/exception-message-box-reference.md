@@ -1,5 +1,5 @@
 ---
-title: Справочник по сообщениям исключение | Документация Майкрософт
+title: Справочник по окнам сообщений об исключениях | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,16 +14,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 33e64636e195a9f7048b21f2fd5ad7d37e03f9db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62752989"
 ---
 # <a name="exception-message-box-reference"></a>Справочник по сообщениям об исключениях
   Окно сообщения об исключении реализуется классом <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox>, содержащимся в сборке Microsoft.ExceptionMessageBox.dll. Папкой установки по умолчанию для этой сборки является [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)]. Окно сообщения об исключении описывается в справочной документации по пространству имен <xref:Microsoft.SqlServer.MessageBox>. Следующие образцы используют объект <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> в ходе обработки исключений.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выведение окна сообщения об исключении программы](../../../2014/database-engine/dev-guide/program-exception-message-box.md)  
   
   

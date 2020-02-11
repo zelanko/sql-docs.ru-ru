@@ -15,14 +15,14 @@ ms.assetid: 630a3be4-7a87-41cf-997e-8bb50d89db1e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3caa09a03a7aabd87eddedff335abc3bddd1b318
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918179"
 ---
 # <a name="maxrecords-property-example-vb"></a>Пример свойства MaxRecords (Visual Basic)
-В этом примере используется [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) свойства, чтобы открыть [записей](../../../ado/reference/ado-api/recordset-object-ado.md) содержащий 10 самые дорогостоящие книги в ***заголовки*** таблицы.  
+В этом примере свойство [maxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) используется для открытия [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) , содержащего 10 самых дорогих заголовков в таблице ***titles*** .  
   
 ```  
 'BeginMaxRecordsVB  
@@ -87,6 +87,6 @@ End Sub
 'EndMaxRecordsVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство MaxRecords (ADO)](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

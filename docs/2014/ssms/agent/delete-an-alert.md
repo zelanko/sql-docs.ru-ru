@@ -19,14 +19,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9f6da8b7376e03ff5c0ab516aeaef0e6ac538b48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62523627"
 ---
 # <a name="delete-an-alert"></a>Удаление предупреждения
-  В этом разделе приведены инструкции по удалению предупреждения агента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  В этом разделе описывается удаление [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предупреждений агента в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **В этом разделе**  
   
@@ -34,9 +34,9 @@ ms.locfileid: "62523627"
   
      [Ограничения](#Restrictions)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
--   **Удаление предупреждения с помощью**  
+-   **Удаление предупреждения с помощью:**  
   
      [Среда SQL Server Management Studio](#SSMSProcedure)  
   

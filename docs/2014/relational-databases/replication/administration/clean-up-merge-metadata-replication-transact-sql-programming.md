@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 384b5cc158600848dbca6528a4c8c39250a23908
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629174"
 ---
 # <a name="clean-up-merge-metadata-replication-transact-sql-programming"></a>очистить метаданные слияния (программирование репликации на языке Transact-SQL)
@@ -29,11 +29,11 @@ ms.locfileid: "62629174"
   
 1.  В базе данных публикации на издателе выполните хранимую процедуру [sp_mergemetadataretentioncleanup](/sql/relational-databases/system-stored-procedures/sp-mergemetadataretentioncleanup-transact-sql).  
   
-2.  Обратите внимание на то, что количество строк , удаляемых в шаге 1 из системных таблиц [MSmerge_genhistory](/sql/relational-databases/system-tables/msmerge-genhistory-transact-sql), [MSmerge_contents](/sql/relational-databases/system-tables/msmerge-contents-transact-sql)и [MSmerge_tombstone](/sql/relational-databases/system-tables/msmerge-tombstone-transact-sql) , выводится, соответственно, в выходных параметрах **@num_genhistory_rows** , **@num_contents_rows** и **@num_tombstone_rows** (необязательно).  
+2.  Используемых Обратите внимание на количество строк, удаленных на шаге 1 из системных таблиц [MSmerge_genhistory](/sql/relational-databases/system-tables/msmerge-genhistory-transact-sql), [MSmerge_contents](/sql/relational-databases/system-tables/msmerge-contents-transact-sql)и [MSmerge_tombstone](/sql/relational-databases/system-tables/msmerge-tombstone-transact-sql) , возвращаемых соответственно в **@num_genhistory_rows**выходных **@num_contents_rows**параметрах **@num_tombstone_rows** , и.  
   
 3.  Повторите шаги 1 и 2 на подписчике для очистки метаданных в базе данных подписки.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Окончание срока действия и отключение подписки](../subscription-expiration-and-deactivation.md)  
   
   

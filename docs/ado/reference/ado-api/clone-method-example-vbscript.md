@@ -1,5 +1,5 @@
 ---
-title: Клонируйте пример метода (VBScript) | Документация Майкрософт
+title: Пример метода Clone (VBScript) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,18 +15,18 @@ ms.assetid: 36b96e3d-8cb0-4b79-bd93-ea5e0eb5679f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cc82f72b175373d504b7fda658f1c7ed8eb7f1ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919990"
 ---
 # <a name="clone-method-example-vbscript"></a>Пример метода Clone (VBScript)
-В этом примере используется [клона](../../../ado/reference/ado-api/clone-method-ado.md) метод для создания копии [записей](../../../ado/reference/ado-api/recordset-object-ado.md) и затем позволяет пользователям указатель записи каждой копии независимо друг от друга.  
+В этом примере используется метод [clone](../../../ado/reference/ado-api/clone-method-ado.md) для создания копий [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) , а затем пользователь помещает указатель записи каждой копии независимо друг от друга.  
   
- Используйте следующий пример в Active Server Page (ASP). В этом примере используется **Northwind** базы данных, в состав Microsoft Access. Вырежьте и вставьте следующий код в блокноте или другом текстовом редакторе и сохраните его как CloneVBS.asp. Результат можно просмотреть в любом браузере клиента.  
+ Используйте следующий пример на странице Active Server (ASP). В этом примере используется база данных **Northwind** , распространяемая с Microsoft Access. Вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как Клоневбс. ASP. Результат можно просмотреть в любом клиентском браузере.  
   
- Чтобы использовать в примере, измените строку `RsCustomerList.Source = "Customers"` для `RsCustomerList.Source = "Products"` для подсчета таблицы большего размера.  
+ Чтобы выполнить этот пример, измените строку `RsCustomerList.Source = "Customers"` на `RsCustomerList.Source = "Products"` , чтобы подсчитать подсчитанную таблицу большего размера.  
   
 ```  
 <!-- BeginCloneVBS -->  
@@ -117,6 +117,6 @@ ms.locfileid: "67919990"
 <!-- EndCloneVBS -->  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Метод clone (ADO)](../../../ado/reference/ado-api/clone-method-ado.md)   
+## <a name="see-also"></a>См. также:  
+ [Метод Clone (ADO)](../../../ado/reference/ado-api/clone-method-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

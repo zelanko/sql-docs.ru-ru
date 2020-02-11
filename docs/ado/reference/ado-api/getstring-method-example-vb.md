@@ -15,16 +15,16 @@ ms.assetid: 14c96d71-46a8-4782-b474-80ce348e8bff
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6928d870c00fce0f712e7a9fc01cc2a2a33a57d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918499"
 ---
 # <a name="getstring-method-example-vb"></a>Пример метода GetString (Visual Basic)
-В этом примере показано [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) метод.  
+В этом примере показан метод [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) .  
   
- Предположим, у вас при отладке проблемы доступа данных и требуется быстрый и простой способ печати текущее содержимое с малой [записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
+ Предположим, что выполняется отладка проблемы доступа к данным и требуется быстрый и простой способ печати текущего содержимого небольшого [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
 ```  
 'BeginGetStringVB  
@@ -101,6 +101,6 @@ End Sub
 'EndGetStringVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод GetString (ADO)](../../../ado/reference/ado-api/getstring-method-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

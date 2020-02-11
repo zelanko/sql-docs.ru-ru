@@ -15,16 +15,16 @@ ms.assetid: b682bcc3-04b3-42b0-86f4-c17e0cd29baf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5a97ff4191aa065ece5af53087295e13885209d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930819"
 ---
 # <a name="stayinsync-property-example-vb"></a>Пример свойства StayInSync (Visual Basic)
-В этом примере показано, как [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) свойство облегчает доступ к строкам в иерархической [записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
+В этом примере показано, как свойство [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) упрощает доступ к строкам в иерархическом [наборе записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
- Внешний цикл отображает имя и фамилия каждого автора, состояние и идентификатор. Добавленная коллекция **записей** для каждой строки извлекается из [поля](../../../ado/reference/ado-api/fields-collection-ado.md) коллекции и автоматически назначаться **rstTitleAuthor** по **StayInSync**  свойство всякий раз, когда родительский **записей** перемещается на новую строку. Внутренний цикл отображаются четыре поля из каждой строки в добавленных записей.  
+ Внешний цикл отображает имя и фамилию каждого автора, состояние и идентификацию. Добавленный **набор записей** для каждой строки извлекается из коллекции [полей](../../../ado/reference/ado-api/fields-collection-ado.md) и автоматически назначается **рсттитлеаусор** свойством **StayInSync** каждый раз, когда родительский **набор записей** перемещается в новую строку. Внутренний цикл отображает четыре поля из каждой строки в присоединенном наборе записей.  
   
 ```  
 'BeginStayInSyncVB  
@@ -89,7 +89,7 @@ End Sub
 'EndStayInSyncVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Коллекция Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Свойство StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)

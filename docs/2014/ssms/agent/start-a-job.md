@@ -15,24 +15,25 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e94adcf8242c6acaca7c28ff9a854e0aa87cb3ea
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798177"
 ---
-# <a name="start-a-job"></a>Start a Job
-  В этом разделе описано, как запустить задание агента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] или управляющих объектов SQL Server.  
+# <a name="start-a-job"></a>Запуск задания
+  В этом разделе описано, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] как начать выполнение задания агента в с помощью или управляющие объекты SQL Server.  
   
- Задание — это указанная последовательность действий, выполняемых агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут выполняться на одном локальном сервере или на нескольких удаленных серверах.  
+ Задание — это указанная последовательность действий, выполняемых агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут выполняться на одном локальном сервере или на нескольких удаленных серверах.  
   
--   **Перед началом:**  
+-   **Перед началом работы**  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Для запуска задания используется:**  
   
-     [Среда Среда SQL Server Management Studio](#SSMS)  
+     [Среда SQL Server Management Studio](#SSMS)  
   
      [Transact-SQL](#TSQL)  
   
@@ -63,7 +64,7 @@ ms.locfileid: "72798177"
   
 ### <a name="to-start-a-job"></a>Запуск задания  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   

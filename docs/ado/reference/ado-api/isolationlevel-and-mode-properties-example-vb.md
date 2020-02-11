@@ -1,5 +1,5 @@
 ---
-title: Примеры IsolationLevel и Mode свойства (Visual Basic) | Документация Майкрософт
+title: Пример свойств IsolationLevel и Mode (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 3382fd41-0aa1-4091-97d3-624403111e07
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a5826cc8edcb857ffeb10cc197134708d20468b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918415"
 ---
-# <a name="isolationlevel-and-mode-properties-example-vb"></a>Примеры IsolationLevel и Mode свойства (Visual Basic)
-В этом примере используется [режим](../../../ado/reference/ado-api/mode-property-ado.md) свойства, чтобы открыть монопольное подключение и [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) свойства, чтобы открыть транзакцию, которая выполняется отдельно от других транзакций.  
+# <a name="isolationlevel-and-mode-properties-example-vb"></a>Пример свойств IsolationLevel и Mode (Visual Basic)
+В этом примере свойство [mode](../../../ado/reference/ado-api/mode-property-ado.md) используется для открытия монопольного соединения, а свойство [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) — для открытия транзакции, которая выполняет изоляцию других транзакций.  
   
 ```  
 'BeginIsolationLevelVB  
@@ -115,7 +115,7 @@ End Sub
 'EndIsolationLevelVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Свойство IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)   
+ [IsolationLevel, свойство](../../../ado/reference/ado-api/isolationlevel-property.md)   
  [Свойство Mode (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)

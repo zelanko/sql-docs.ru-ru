@@ -16,22 +16,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7e9412ee0bd2be7b44dff2a06bd674abee0da34a
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798168"
 ---
 # <a name="set-job-step-success-or-failure-flow"></a>Настройка потока действий системы при успешном или неуспешном выполнении шага задания
-  При создании задания агента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно определить действия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при возникновении ошибки в ходе его выполнения. Определите действия, которые должен предпринять [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при успешном и неуспешном завершении каждого шага задания. Затем с помощью агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настройте логику потока действий на шаге.  
+  При создании [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] заданий агента можно указать, какие действия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должны выполняться при возникновении ошибки во время выполнения задания. Определите действия, которые должен предпринять [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при успешном и неуспешном завершении каждого шага задания. Затем с помощью агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настройте логику потока действий на шаге.  
   
--   **Перед началом:**  
+-   **Перед началом работы**  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Для настройки потока действий системы при успешном или неуспешном выполнении шага задания используется:**  
   
-     [Среда Среда SQL Server Management Studio](#SSMS)  
+     [Среда SQL Server Management Studio](#SSMS)  
   
      [Transact-SQL](#TSQL)  
   
@@ -74,7 +74,7 @@ ms.locfileid: "72798168"
   
 #### <a name="to-set-job-step-success-or-failure-flow"></a>Настройка потока действий системы при успешном или неуспешном выполнении шага задания  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "72798168"
     GO  
     ```  
   
- Дополнительные сведения см. в [разделе &#40;SP_ADD_JOBSTEP Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
+ Дополнительные сведения см. в разделе [sp_add_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
   
 ##  <a name="SMO"></a>Использование управляющие объекты SQL Server  
 

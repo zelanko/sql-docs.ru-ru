@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e855b9de09727a4437cad99a2534aee9d960298b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62519308"
 ---
 # <a name="event-tracing-for-windows-target"></a>Цель «Средство трассировки событий для Windows»
@@ -48,7 +48,7 @@ ms.locfileid: "62519308"
   
  В следующей таблице описаны доступные параметры для настройки назначения ETW.  
   
-|Параметр|Допустимые значения|Описание|  
+|Параметр|Допустимые значения|Description|  
 |------------|--------------------|-----------------|  
 |default_xe_session_name|Любая строка длиной до 256 символов. Это значение является необязательным.|Имя сеанса расширенных событий. По умолчанию это XE_DEFAULT_ETW_SESSION.|  
 |default_etw_session_logfile_path|Любая строка длиной до 256 символов. Это значение является необязательным.|Путь к файлу журнала сеанса расширенных событий. По умолчанию %TEMP%\ XEEtw.etl.|  
@@ -86,7 +86,7 @@ ADD TARGET package0.etw_classic_sync_target
   
  Дополнительные сведения о полном примере, который показывает, как использовать назначение трассировки событий, включая просмотр данных, см. в разделе [отслеживать активность системы с помощью расширенных событий](monitor-system-activity-using-extended-events.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Цели расширенных событий SQL Server](../../database-engine/sql-server-extended-events-targets.md)   
  [sys.dm_xe_session_targets (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
  [CREATE EVENT SESSION (Transact-SQL)](/sql/t-sql/statements/create-event-session-transact-sql)   

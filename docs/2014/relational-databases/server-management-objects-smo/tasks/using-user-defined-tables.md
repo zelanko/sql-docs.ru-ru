@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2b780dfd75d998a9e3f6e382890b8318b958688d
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72781820"
 ---
 # <a name="using-user-defined-tables"></a>Использование определяемых пользователем таблиц
   В определяемых пользователем таблицах представлены табличные данные. Они используются в качестве параметров при передаче табличных данных в хранимые процедуры или определяемые пользователем функции. Определяемые пользователем таблицы нельзя использовать для представления столбцов в таблице базы данных.  
   
- Объект <xref:Microsoft.SqlServer.Management.Smo.Database> содержит свойство <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A>, которое ссылается на объект <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection>. Каждый объект <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> в этой коллекции имеет свойство **Columns** , которое ссылается на коллекцию объектов <xref:Microsoft.SqlServer.Management.Smo.Column>, в которых перечислены столбцы в определяемой пользователем таблице. Для добавления столбцов в определяемую пользователем таблицу используется метод Add.  
+ Объект <xref:Microsoft.SqlServer.Management.Smo.Database> содержит свойство <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A>, которое ссылается на объект <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection>. Каждый <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> объект в этой коллекции имеет свойство **Columns** , ссылающееся на коллекцию <xref:Microsoft.SqlServer.Management.Smo.Column> объектов, в которой перечислены столбцы в определяемой пользователем таблице. Для добавления столбцов в определяемую пользователем таблицу используется метод Add.  
   
  При определении новой определяемой пользователем таблицы с помощью объекта <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> необходимо предоставить столбцы и первичный ключ, основанный на одном из столбцов.  
   
@@ -240,6 +240,6 @@ $udf.TextBody = "BEGIN RETURN (GETDATE());end"
 $udf.Create()
 ```  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
  <xref:Microsoft.SqlServer.Management.Smo.FileGroup>   
  [Файлы и файловые группы базы данных](../../databases/database-files-and-filegroups.md)  

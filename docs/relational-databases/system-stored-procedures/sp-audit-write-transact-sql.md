@@ -18,10 +18,10 @@ ms.assetid: 4c523848-1ce6-49ad-92b3-e0e90f24f1c2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9bef63c267bdf5b7d0c2603ed7a93af329d1992c
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72251968"
 ---
 # <a name="sp_audit_write-transact-sql"></a>sp_audit_write (Transact-SQL)
@@ -42,16 +42,16 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
   
 ## <a name="arguments"></a>Аргументы  
  `[ @user_defined_event_id = ] user_defined_event_id`  
- Параметр, определяемый пользователем и записываемый в столбец **user_defined_event_id** журнала аудита. *\@user_defined_event_id* имеет тип **smallint**.  
+ Параметр, определяемый пользователем и записываемый в столбец **user_defined_event_id** журнала аудита. user_defined_event_id имеет тип **smallint**. * \@*  
   
  `[ @succeeded = ] succeeded`  
- Параметр, переданный пользователем с целью указания, было ли событие успешным или нет. Содержится в столбце успеха журнала аудита. `@succeeded` имеет **бит**.  
+ Параметр, переданный пользователем с целью указания, было ли событие успешным или нет. Содержится в столбце успеха журнала аудита. `@succeeded`**бит**.  
   
  `[ @user_defined_information = ] 'user_defined_information'`  
- Определяемый пользователем текст, который заносится в новый столбец user_defined_event_id журнала аудита. `@user_defined_information` имеет тип **nvarchar (4000)** .  
+ Определяемый пользователем текст, который заносится в новый столбец user_defined_event_id журнала аудита. `@user_defined_information`имеет тип **nvarchar (4000)**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или 1 (неуспешное завершение)  
+ 0 (успех) или 1 (сбой).  
   
  Ошибки вызваны неверными входными параметрами или ошибкой записи в целевой журнал аудита.  
   
@@ -72,7 +72,7 @@ EXEC sp_audit_write @user_defined_event_id =  27 ,
             , @user_defined_information = N'Access to a monitored object.' ;  
 ```  
   
-### <a name="b--creating-a-user-defined-audit-event-without-informational-text"></a>б.  Создание пользовательского события аудита без информативного текста  
+### <a name="b--creating-a-user-defined-audit-event-without-informational-text"></a>Б.  Создание пользовательского события аудита без информативного текста  
  В следующем примере создается событие аудита с идентификатором 27, успешным значением 0, не содержащее дополнительный информативный текст.  
   
 ```  
@@ -80,14 +80,14 @@ EXEC sp_audit_write 27, 0;
   
 ```  
   
-## <a name="see-also"></a>См. также статью  
- [Хранимые процедуры безопасности (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sys.server_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
- [sp_addrole (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
- [CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md)   
- [sp_dropuser (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
- [sp_grantdbaccess (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
- [Хранимая процедура sp_grantlogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [sys. server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
+ [sp_addrole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
+ [Создание ПОЛЬЗОВАТЕЛЬСКОГО &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
+ [sp_dropuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
+ [sp_grantdbaccess &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
+ [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3fe1414131991a35b316a50da730f42e8b02d462
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62637997"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>Создание переменных и столбцов типа данных XML
-  Тип данных `xml` — это встроенный в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных, несколько напоминающий другие встроенные типы данных, такие как `int` и `varchar`. Как и другие встроенные типы, можно использовать `xml` типа данных как тип столбца при создании таблицы как тип переменной, типа параметра, тип возвращаемого функцией значения, а также в [CAST и CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql).  
+  Тип данных `xml` — это встроенный в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных, несколько напоминающий другие встроенные типы данных, такие как `int` и `varchar`. Как и в случае с другими встроенными типами, тип `xml` данных можно использовать в качестве типа столбца при создании таблицы в качестве типа переменной, типа параметра, типа возвращаемого функцией значения, а также в случае [приведения и преобразования](/sql/t-sql/functions/cast-and-convert-transact-sql).  
   
 ## <a name="creating-columns-and-variables"></a>Создание столбцов и переменных  
  Чтобы создать в таблице столбец типа `xml` , воспользуйтесь инструкцией `CREATE TABLE` , приведенной в следующем примере:  
@@ -66,7 +66,8 @@ CREATE TABLE T (XmlColumn xml
                   default CAST(N'<element1/><element2/>' AS xml))  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает ограничения NULL и NOT NULL для столбцов типа `xml`. Пример:  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает ограничения NULL и NOT NULL для столбцов типа `xml`. Пример:  
   
 ```  
 CREATE TABLE T (XmlColumn xml NOT NULL)  
@@ -127,9 +128,9 @@ INSERT INTO T values(1,'<Product />')
 ```  
   
 ## <a name="same-or-different-table"></a>Та же таблица или другая  
- `xml` Столбце с типом данных могут создаваться в таблице, содержащей другие реляционные столбцы, или в таблице, связанной посредством внешнего ключа с главной таблицей.  
+ Столбец `xml` типа данных может быть создан в таблице, содержащей другие реляционные столбцы, или в отдельной таблице с отношением внешнего ключа к главной таблице.  
   
- Создание `xml` столбец типа данных в той же таблице, если выполняется одно из следующих условий:  
+ Создайте столбец `xml` типа данных в той же таблице, если выполняется одно из следующих условий.  
   
 -   Приложение извлекает данные из XML-столбца и не нуждается в том, чтобы для него был создан XML-индекс.  
   
