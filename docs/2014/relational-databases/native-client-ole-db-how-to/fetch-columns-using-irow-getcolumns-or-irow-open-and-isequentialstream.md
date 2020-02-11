@@ -15,17 +15,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ca820a8f7f916aa473bdd527e24a9549b7c5195e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62467587"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Выбор столбцов с помощью метода IRow::GetColumns (или IRow::Open) и интерфейса ISequentialStream
   Большие объемы данных можно привязать или получить с помощью интерфейса `ISequentialStream`. Для привязанных столбцов флаг состояния DBSTATUS_S_TRUNCATED указывает на факт усечения данных.  
   
 > [!IMPORTANT]  
->  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с помощью [API-интерфейса шифрования Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, следует зашифровать их с помощью [API шифрования Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Выборка столбцов с помощью IRow::GetColumns (или IRow::Open) и ISequentialStream  
   
@@ -37,9 +37,9 @@ ms.locfileid: "62467587"
   
     -   С помощью метода `IRow::Open()` можно открыть поток `ISequentialStream` для данной строки. Задайте параметр DBGUID_STREAM, чтобы указать, что столбец содержит поток двоичных данных; после этого можно прочитать данные из столбца с помощью метода `IStream` или `ISequentialStream`.  
   
-    -   Если `IRow::GetColumns()` используется, **pData** элементом структуры DBCOLUMNACCESS присваивается в объект потока.  
+    -   Если `IRow::GetColumns()` используется, элемент **pData** структуры DBCOLUMNACCESS задается как указатель на объект потока.  
   
-4.  Используйте **ISequentialStream::Read()** несколько раз, чтобы указанное число байтов, считанных в буфер потребителя.  
+4.  Многократное использование **ISequentialStream:: Read ()** для чтения указанного числа байтов в буфере потребителя.  
   
 ## <a name="example"></a>Пример  
  В этом примере показано, как выбрать единственную строку с помощью интерфейса IRow. В этом примере из строки за один раз извлекается один столбец. В этом примере иллюстрируется использование интерфейсов IRow::Open() и IRow::GetColumns(). Для чтения данных столбца в примере используется интерфейс ISequentialStream::Read.  
@@ -669,7 +669,7 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'MyTable')
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Инструкции по OLE DB](ole-db-how-to-topics.md)  
   
   

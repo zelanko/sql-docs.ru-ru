@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 32962186ac6fdf7b0cc18801d635e9b5ef9f5d22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63209740"
 ---
 # <a name="resource-governor-classifier-function"></a>Resource Governor Classifier Function
@@ -83,9 +83,9 @@ ms.locfileid: "63209740"
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Описывает, как создать и проверить определяемую пользователем функцию-классификатор.|[Создать и проверить определяемую пользователем функцию-классификатор](create-and-test-a-classifier-user-defined-function.md)|  
+|Описывает, как создать и проверить определяемую пользователем функцию-классификатор.|[Создание и тестирование пользовательской функции-классификатора](create-and-test-a-classifier-user-defined-function.md)|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [регулятор ресурсов](resource-governor.md)   
  [Активация регулятора ресурсов](enable-resource-governor.md)   
  [Пул ресурсов регулятора ресурсов](resource-governor-resource-pool.md)   

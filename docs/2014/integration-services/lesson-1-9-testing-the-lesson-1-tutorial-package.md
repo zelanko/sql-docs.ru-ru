@@ -1,5 +1,5 @@
 ---
-title: Шаг 9. Проверка учебного пакета занятия 1 | Документация Майкрософт
+title: Шаг 9. Проверка учебного пакета, созданного на занятии 1 | Документы Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 566284668ac8ea27aded665da7028375d97623e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767615"
 ---
-# <a name="step-9-testing-the-lesson-1-tutorial-package"></a>Шаг 9. Тестирование учебного пакета урока 1
+# <a name="step-9-testing-the-lesson-1-tutorial-package"></a>Шаг 9. Проверка учебного пакета, созданного на занятии 1
   На этом занятии были выполнены представленные ниже задачи.  
   
 -   Был создан проект служб [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
@@ -50,7 +50,7 @@ ms.locfileid: "62767615"
 ## <a name="next-lesson"></a>Следующее занятие  
  [Занятие 2. Добавление циклов](../integration-services/lesson-2-adding-looping-with-ssis.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Запуск проектов и пакетов](packages/run-integration-services-ssis-packages.md)  
   
   

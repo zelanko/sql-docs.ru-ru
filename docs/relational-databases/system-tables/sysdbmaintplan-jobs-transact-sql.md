@@ -18,24 +18,25 @@ ms.assetid: bc65cd70-6ef2-4c17-be11-877ecf4efe50
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f780199361d9e5741187dd4e5346abb2df98b9cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68130436"
 ---
-# <a name="sysdbmaintplanjobs-transact-sql"></a>sysdbmaintplan_jobs (Transact-SQL)
+# <a name="sysdbmaintplan_jobs-transact-sql"></a>sysdbmaintplan_jobs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Эта таблица включена в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], чтобы сохранить существующие сведения по экземплярам, обновленным с предыдущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не изменяет содержимое этой таблицы. Эта таблица хранится в **msdb** базы данных.  
+  Эта таблица включена в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], чтобы сохранить существующие сведения по экземплярам, обновленным с предыдущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не изменяет содержимое этой таблицы. Эта таблица хранится в базе данных **msdb** .  
   
  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]  
   
 
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|**plan_id**|**uniqueidentifier**|Идентификатор плана обслуживания базы данных.|  
-|**job_id**|**uniqueidentifier**|Идентификатор задания, связанного с планом обслуживания базы данных.|  
+|**plan_id**|**UNIQUEIDENTIFIER**|Идентификатор плана обслуживания базы данных.|  
+|**job_id**|**UNIQUEIDENTIFIER**|Идентификатор задания, связанного с планом обслуживания базы данных.|  
   
   

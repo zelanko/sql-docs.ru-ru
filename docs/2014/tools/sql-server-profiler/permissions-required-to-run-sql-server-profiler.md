@@ -17,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bed2868b74087cd0e4c119ada7e29f0c5db73ce5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63240527"
 ---
 # <a name="permissions-required-to-run-sql-server-profiler"></a>Разрешения, необходимые для запуска приложения SQL Server Profiler
-  По умолчанию для запуска приложения [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] требуются такие же разрешения, что и для хранимых процедур языка Transact-SQL, используемых для создания трассировок. Для запуска приложения [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] пользователь должен обладать разрешением ALTER TRACE. Дополнительные сведения см. в разделе [GRANT, предоставление разрешений на сервер (Transact-SQL)](/sql/t-sql/statements/grant-server-permissions-transact-sql).  
+  По умолчанию для запуска приложения [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] требуются такие же разрешения, что и для хранимых процедур языка Transact-SQL, используемых для создания трассировок. Для запуска приложения [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]пользователь должен обладать разрешением ALTER TRACE. Дополнительные сведения см. в разделе [GRANT, предоставление разрешений на сервер (Transact-SQL)](/sql/t-sql/statements/grant-server-permissions-transact-sql).  
   
 > [!IMPORTANT]  
 >  Пользователи, которые имеют разрешение SHOWPLAN, ALTER TRACE или VIEW SERVER STATE, могут просматривать запросы, захваченные выходом Showplan. Эти запросы могут содержать конфиденциальные сведения, такие как пароли. В связи с этим рекомендуется предоставлять данные разрешения только пользователям, которые имеют право просмотра конфиденциальных данных, например членам предопределенной роли базы данных db_owner или членам предопределенной роли сервера sysadmin. Также рекомендуется сохранять файлы Showplan или файлы трассировки, содержащие события, связанные с инструкцией Showplan, только в каталог, расположенный в файловой системе NTFS, для которого есть возможность ограничить доступ, предоставляя его только пользователям, имеющим право просмотра конфиденциальных данных.  
@@ -32,7 +32,7 @@ ms.locfileid: "63240527"
 ## <a name="permissions-used-to-replay-traces"></a>Разрешения на воспроизведение трассировок  
  Для воспроизведения трассировок пользователю требуется разрешение ALTER TRACE.  
   
- Однако если во время воспроизведения трассировки возникло событие «Audit Login», приложение [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] использует команду EXECUTE AS. [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] использует для олицетворения пользователя, связанного с событием входа в систему.  
+ Однако если во время воспроизведения трассировки возникло событие «Audit Login», приложение [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] использует команду EXECUTE AS. [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]использует команду EXECUTE AS для олицетворения пользователя, связанного с событием входа.  
   
  Если в воспроизводимой трассировке приложение [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] обнаруживает событие входа в систему, то производятся проверки следующих разрешений.  
   
@@ -40,9 +40,9 @@ ms.locfileid: "63240527"
   
 2.  В воспроизводимой трассировке возникло событие входа в систему для Пользователя2.  
   
-3.  [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] олицетворяет Пользователя2 командой EXECUTE AS.  
+3.  [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]использует команду EXECUTE AS для олицетворения Пользователь2.  
   
-4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пытается проверить подлинность Пользователя2, и, в зависимости от результатов, происходят следующие действия.  
+4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]пытается выполнить проверку подлинности Пользователь2, и в зависимости от результатов происходит одно из следующих условий.  
   
     1.  Если проверить подлинность Пользователя2 невозможно, приложение [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] возвращает ошибку и продолжает воспроизведение трассировки от имени Пользователя1.  
   
@@ -62,13 +62,13 @@ ms.locfileid: "63240527"
   
  На следующей диаграмме показан процесс проверки разрешений во время воспроизведения трассировок:  
   
- ![Разрешения на воспроизведение трассировки SQL Server Profiler](../../database-engine/media/replaytracedecisiontree.gif "разрешения на воспроизведение трассировки SQL Server Profiler")  
+ ![Разрешения на воспроизведение трассировки приложения SQL Server Profiler](../../database-engine/media/replaytracedecisiontree.gif "Разрешения на воспроизведение трассировки приложения SQL Server Profiler")  
   
-## <a name="see-also"></a>См. также  
- [Хранимые процедуры приложения SQL Server Profiler (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql)   
+## <a name="see-also"></a>См. также:  
+ [SQL Server Profiler хранимых процедур &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql)   
  [Воспроизведение трассировок](replay-traces.md)   
- [Создание трассировки (SQL Server Profiler)](create-a-trace-sql-server-profiler.md)   
- [Воспроизведение таблицы трассировки (SQL Server Profiler)](replay-a-trace-table-sql-server-profiler.md)   
- [Воспроизведение файла трассировки (SQL Server Profiler)](replay-a-trace-file-sql-server-profiler.md)  
+ [Создание трассировки (приложение SQL Server Profiler)](create-a-trace-sql-server-profiler.md)   
+ [Воспроизведение таблицы трассировки &#40;SQL Server Profiler&#41;](replay-a-trace-table-sql-server-profiler.md)   
+ [Воспроизведение файла трассировки &#40;SQL Server Profiler&#41;](replay-a-trace-file-sql-server-profiler.md)  
   
   

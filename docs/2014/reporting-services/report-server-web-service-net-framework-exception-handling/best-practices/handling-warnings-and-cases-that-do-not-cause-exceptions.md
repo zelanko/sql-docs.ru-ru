@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4c2c58a5edf42966ba828288c2aa8b84dbb49967
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63046106"
 ---
 # <a name="handling-warnings-and-cases-that-do-not-cause-exceptions"></a>Обработка предупреждений и ситуаций, не вызывающих исключения
@@ -65,7 +65,7 @@ catch (SoapException ex)
   
  Еще один способ обработки ошибок состоит в обработке возвращаемых значений определенных методов. К примеру, метод <xref:ReportService2010.ReportingService2010.FindItems%2A> можно использовать для поиска определенных элементов в базе данных сервера отчетов. Если элементы, соответствующие критериям поиска, не обнаружены, возвращается пустой массив объектов <xref:ReportService2010.CatalogItem>. Необходимо обработать этот массив, проверить его на наличие значений `null`, а если не обнаружены элементы, известить об этом пользователя.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  <xref:ReportService2010.CatalogItem>   
  [Введение в обработку исключений в службах Reporting Services](../introducing-exception-handling-in-reporting-services.md)   
  [Класс SoapException в службах Reporting Services](../soapexception-class/reporting-services-soapexception-class.md)  

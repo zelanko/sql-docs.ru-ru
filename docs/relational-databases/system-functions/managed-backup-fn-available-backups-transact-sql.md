@@ -1,5 +1,5 @@
 ---
-title: managed_backup.fn_available_backups (Transact-SQL) | Документация Майкрософт
+title: managed_backup. fn_available_backups (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,13 +21,13 @@ ms.assetid: 7aa84474-16e5-49bd-a703-c8d1408ef107
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1c7bb6e33dfd2ee6640e9588011d3686a72a0188
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68140672"
 ---
-# <a name="managedbackupfnavailablebackups-transact-sql"></a>managed_backup.fn_available_backups (Transact-SQL)
+# <a name="managed_backupfn_available_backups-transact-sql"></a>managed_backup. fn_available_backups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Возвращает таблицу, где нуль, одна или несколько строк, для доступных файлов резервных копий для указанной базы данных. Возвращаемые файлы резервных копий являются резервными копиями, созданными [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
@@ -40,19 +40,19 @@ ms.locfileid: "68140672"
 managed_backup.fn_available_backups ([@database_name = ] 'database name')  
 ```  
   
-##  <a name="Arguments"></a> Аргументы  
+##  <a name="Arguments"></a>Даваемых  
  @database_name  
- Имя базы данных. @database_name Это NVARCHAR(512).  
+ Имя базы данных. Значение @database_name типа — nvarchar (512).  
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
  Таблица имеет уникальное кластеризованное ограничение в (database_guid, backup_start_date и first_lsn, backup_type).   
 Если база данных удалена, затем создана повторно, возвращаются резервные наборы данных для всех баз данных. Выходные данные упорядочиваются по database_guid, уникально идентифицирующим каждую базу данных.   
 Если в LSN имеются разрывы, означающие разрыв в цепочке журналов, таблица будет содержать отдельную строку для каждого пропущенного сегмента номера LSN.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |Backup_path|NVARCHAR(260) COLLATE Latin1_General_CI_AS_KS_WS|URL-адрес файла резервной копии.|  
-|backup_type|NVARCHAR(6)|Резервное копирование «DB» для базы данных «LOG» для резервной копии журнала|  
+|backup_type|NVARCHAR (6)|"DB" для резервного копирования базы данных "LOG" для резервной копии журнала|  
 |expiration_date|DATETIME|Дата, в которую ожидается удаление этого файла. Эта настройка основывается на возможности восстановить базу данных до определенного момента времени внутри заданного срока хранения.|  
 |database_guid|UNIQUEIDENTIFIER|Значение GUID для указанной базы данных.  GUID однозначно определяет базу данных.|  
 |first_lsn|NUMERIC(25, 0)|Регистрационный номер транзакции в журнале для первой или самой ранней записи журнала в резервном наборе данных. Может иметь значение NULL.|  
@@ -63,18 +63,18 @@ managed_backup.fn_available_backups ([@database_name = ] 'database name')
 |last_recovery_fork_id|UNIQUEIDENTIFIER|Идентификационный номер для конечной вилки восстановления.|  
 |first_recovery_fork_id|UNIQUEIDENTIFIER|Идентификатор начальной вилки восстановления. Для резервного копирования данных параметр first_recovery_fork_guid равен last_recovery_fork_guid.|  
 |fork_point_lsn|NUMERIC(25, 0)|Если значение first_recovery_fork_id не равно значению last_recovery_fork_id, данный параметр представляет собой регистрационный номер транзакции в журнале для вилки. В противном случае - значение NULL.|  
-|availability_group_guid|UNIQUEIDENTIFIER|Если базы данных является базой данных Always On, это идентификатор GUID группы доступности. В противном случае — значение NULL.|  
+|availability_group_guid|UNIQUEIDENTIFIER|Если база данных является Always On базой данных, это идентификатор GUID группы доступности. В противном случае — значение NULL.|  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="security"></a>Безопасность  
+## <a name="security"></a>безопасность  
   
 ### <a name="permissions"></a>Разрешения  
- Требуется **ВЫБЕРИТЕ** разрешения для данной функции.  
+ Для этой функции требуются разрешения **SELECT** .  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере перечисляются все доступные резервные копии, созданные через [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] для базы данных «MyDB»  
+ В следующем примере перечисляются все доступные резервные копии, созданные [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] с помощью для базы данных "MyDB".  
   
 ```  
 SELECT *   
@@ -82,8 +82,8 @@ FROM managed_backup.fn_available_backups ('MyDB')
   
 ```  
   
-## <a name="see-also"></a>См. также  
- [SQL Server управляемое резервное копирование в Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)   
+## <a name="see-also"></a>См. также:  
+ [SQL Server управляемого резервного копирования Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)   
  [Восстановление из резервных копий в Microsoft Azure](../../relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Объект иерархии синтаксис (Transact-SQL) | Документация Майкрософт
+title: Синтаксис иерархии объектов (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ ms.assetid: 7ed8df86-9fd2-4e09-96bc-5381fec85f65
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 3405621d604e6450756520f6d93b66a51d4d66c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67941987"
 ---
 # <a name="object-hierarchy-syntax-transact-sql"></a>Синтаксис иерархии объектов (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  *Propertyname* параметр sp_OAGetProperty и sp_OASetProperty и *имя_метода* параметр процедуры sp_OAMethod поддерживают синтаксис иерархии объектов, аналогичны [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. При использовании этого синтаксиса приведенные выше аргументы имеют следующий общий вид:  
+  Параметр *PropertyName* параметра sp_OAGetProperty и sp_OASetProperty и параметр *MethodName* sp_OAMethod поддерживают синтаксис иерархии объектов, аналогичный представленному в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. При использовании этого синтаксиса приведенные выше аргументы имеют следующий общий вид:  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,41 +34,41 @@ ms.locfileid: "67941987"
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *TraversedObject*  
- Объект OLE, находящийся в иерархии под *objecttoken* указан в хранимой процедуре. Серии коллекций, свойства объектов и методы, возвращающие объекты, указываются с помощью синтаксиса [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Описатели объектов в сериях разделяются точкой (.).  
+ *траверседобжект*  
+ — Это объект OLE в иерархии под *обжекттокен* , указанным в хранимой процедуре. Серии коллекций, свойства объектов и методы, возвращающие объекты, указываются с помощью синтаксиса [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Описатели объектов в сериях разделяются точкой (.).  
   
  Элемент в серии может быть именем коллекции. Коллекции указываются с помощью следующего синтаксиса:  
   
- Коллекции ("*элемент*")  
+ Коллекция ("*Item*")  
   
  Следует обязательно использовать двойные кавычки ("). Синтаксис [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] с восклицательным знаком (!) не поддерживается для коллекций.  
   
- *PropertyOrMethod*  
- Имя свойства или метода *TraversedObject*.  
+ *пропертйормесод*  
+ Имя свойства или метода *траверседобжект*.  
   
  Все аргументы индексов или методов задаются процедурами sp_OAGetProperty, sp_OASetProperty или sp_OAMethod (включая поддержку для выходных аргументов процедуры sp_OAMethod) с помощью следующего синтаксиса:  
   
- *PropertyOrMethod*  
+ *пропертйормесод*  
   
  Чтобы указать все аргументы индекса или метода внутри скобок (в результате все аргументы индекса или метода процедур sp_OAGetProperty, sp_OASetProperty или sp_OAMethod игнорируются), применяется следующий синтаксис:  
   
- *PropertyOrMethod*([ *ParameterName*: =] "*параметр*» [,...])  
+ *Пропертйормесод*([ *ParameterName*: =] "*параметр*" [,...])  
   
  Следует обязательно использовать двойные кавычки ("). Все именованные параметры должны указываться после указания всех позиционных параметров.  
   
-## <a name="remarks"></a>Примечания  
- Если *TraversedObject* не указан, *PropertyOrMethod* является обязательным.  
+## <a name="remarks"></a>Remarks  
+ Если *траверседобжект* не указан, требуется *пропертйормесод* .  
   
- Если *PropertyOrMethod* не указан, *TraversedObject* возвращается в виде объекта маркера выходного параметра из хранимой процедуры OLE Automation. Если *PropertyOrMethod* указан, свойство или метод *TraversedObject* вызывается, и значение свойства или возвращаемое значение метода возвращается в виде выходного параметра из OLE-автоматизации Хранимая процедура.  
+ Если *пропертйормесод* не указан, *траверседобжект* возвращается в качестве выходного параметра токена объекта из хранимой процедуры OLE-автоматизации. Если указан параметр *пропертйормесод* , вызывается свойство или метод *траверседобжект* , а значение свойства или возвращаемое значение метода возвращается в виде выходного параметра из хранимой процедуры OLE-автоматизации.  
   
- Если хотя бы один элемент в *TraversedObject* списка не возвращает объект OLE, возникает ошибка.  
+ Если какой-либо элемент в списке *траверседобжект* не ВОЗВРАЩАЕТ объект OLE, возникает ошибка.  
   
  Дополнительные сведения о синтаксисе объектов OLE в [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] см. в документации по [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
   
  Дополнительные сведения о кодах возврата HRESULT см. в разделе [sp_OACreate &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-oacreate-transact-sql.md).  
   
 ## <a name="examples"></a>Примеры  
- Ниже приведены примеры синтаксиса иерархии объекта для использования объекта SQLServer языка SQL-DMO.  
+ Ниже приведены примеры синтаксиса иерархии объекта, в которых используется объект SQLServer SQL-DMO.  
   
 ```  
 -- Get the AdventureWorks2012 Person.Address Table object.  
@@ -88,8 +88,8 @@ EXEC @hr = sp_OAMethod @object,
    @checkoutput OUT  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Пример скрипта OLE-автоматизации](../../relational-databases/stored-procedures/ole-automation-sample-script.md)   
- [Хранимые процедуры OLE-автоматизации (Transact-SQL)](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Пример скрипта OLE Automation](../../relational-databases/stored-procedures/ole-automation-sample-script.md)   
+ [Хранимые процедуры OLE-автоматизации &#40;&#41;Transact — SQL](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)  
   
   

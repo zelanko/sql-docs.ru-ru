@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b4518884b3fe17ea3a638ed21210775af7c4921c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62640337"
 ---
 # <a name="move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility"></a>Перенос точки управления служебной программой из одного экземпляра SQL Server на другой (служебная программа SQL Server)
@@ -24,17 +24,17 @@ ms.locfileid: "62640337"
   
 #### <a name="move-a-ucp-from-one-instance-of-sql-server-to-another"></a>Перемещение пункта управления программой с одного экземпляра SQL Server на другой.  
   
-1.  Создайте новый пункт управления программой на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], на который будет перемещен исходный пункт управления программой. Дополнительные сведения см. в статье [Создание точки управления служебной программой SQL Server (служебная программа SQL Server Utility)](create-a-sql-server-utility-control-point-sql-server-utility.md).  
+1.  Создайте новый пункт управления программой на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на который будет перемещен исходный пункт управления программой. Дополнительные сведения см. в статье [Создание точки управления служебной программой SQL Server (служебная программа SQL Server Utility)](create-a-sql-server-utility-control-point-sql-server-utility.md).  
   
 2.  При наличии в программе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настроек, отличных от параметров по умолчанию, для любых экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запишите пороговые значения политик, чтобы их можно было вновь задать на новом пункте управления программой. Политики по умолчанию применяются при добавлении экземпляров в новый пункт управления программой. Если на данный экземпляр распространяется действие политик по умолчанию, то в столбце [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Тип политики **списка программы** Utility отображается значение **Глобальная** .  
   
-3.  Удалите все управляемые экземпляры из старого пункта управления программой. Дополнительные сведения см. в статье [Удаление экземпляра SQL Server из служебной программы SQL Server](remove-an-instance-of-sql-server-from-the-sql-server-utility.md).  
+3.  Удалите все управляемые экземпляры из старого пункта управления программой. Дополнительные сведения см. в разделе [Удаление экземпляра SQL Server из служебной программы SQL Server](remove-an-instance-of-sql-server-from-the-sql-server-utility.md).  
   
 4.  Создайте резервную копию хранилища данных управления программой (UMDW) старого пункта управления программой. Имя файла — Sysutility_mdw_\<GUID>_DATA, а местоположение базы данных по умолчанию — \<Системный диск>:\Program Files\Microsoft SQL Server\MSSQL10_50.<Имя_пункта_управления_программой>\MSSQL\Data\\, где \<Системный диск> обычно указывает на диск C:\. Дополнительные сведения см. в статье [Копирование баз данных путем создания и восстановления резервных копий](../databases/copy-databases-with-backup-and-restore.md).  
   
 5.  Восстановите резервную копию UMDW на новый пункт управления программой. Дополнительные сведения см. в статье [Копирование баз данных путем создания и восстановления резервных копий](../databases/copy-databases-with-backup-and-restore.md).  
   
-6.  Зарегистрируйте экземпляры в новом пункте управления программой, чтобы они попали под управление программой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в статье [Регистрация экземпляра SQL Server (служебная программа SQL Server)](enroll-an-instance-of-sql-server-sql-server-utility.md).  
+6.  Зарегистрируйте экземпляры в новом пункте управления программой, чтобы они попали под управление программой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в статье [Регистрация экземпляра SQL Server (служебная программа SQL Server Utility)](enroll-an-instance-of-sql-server-sql-server-utility.md).  
   
 7.  Задайте требуемые пользовательские определения политик для экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62640337"
   
 9. Чтобы обновить данные, щелкните правой кнопкой мыши узел **Управляемые экземпляры** в **Обозревателе программы**и выберите команду **Обновить**. Данные в списке отображаются на панели содержимого **Обозревателя программы** . Дополнительные сведения см. в статье [Просмотр результатов политики исправности ресурсов (служебная программа SQL Server)](view-resource-health-policy-results-sql-server-utility.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функции и задачи служебной программы SQL Server](sql-server-utility-features-and-tasks.md)   
  [Регистрация экземпляра SQL Server (служебная программа SQL Server)](enroll-an-instance-of-sql-server-sql-server-utility.md)  
   

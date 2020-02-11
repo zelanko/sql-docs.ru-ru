@@ -1,5 +1,5 @@
 ---
-title: Пример Переименование элемента &lt;row&gt; | Документация Майкрософт
+title: Пример. Переименование элемента &lt;row&gt; | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 01b835696c5e64182cffb72aea80d53b3c3bb776
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62704905"
 ---
-# <a name="example-renaming-the-ltrowgt-element"></a>Пример Переименование элемента &lt;row&gt;
+# <a name="example-renaming-the-ltrowgt-element"></a>Пример. Переименование элемента &lt;row&gt;
   Для каждой строки результирующего набора режим RAW создает элемент `<row>`. При необходимости можно задать другое имя для этого элемента путем определения дополнительного аргумента в режиме RAW, как показано в данном запросе. Запрос возвращает элемент <`ProductModel`> для каждой строки из набора строк.  
   
 ## <a name="example"></a>Пример  
@@ -41,7 +41,7 @@ GO
 </ProductModel>   
 ```  
   
-## <a name="see-also"></a>См. также  
- [Использование с RAW Mode для FOR XML](use-raw-mode-with-for-xml.md)  
+## <a name="see-also"></a>См. также:  
+ [Использование RAW Mode с FOR XML](use-raw-mode-with-for-xml.md)  
   
   

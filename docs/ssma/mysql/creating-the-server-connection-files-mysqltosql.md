@@ -13,16 +13,16 @@ ms.assetid: df0e970c-da0b-4118-b359-c9dcbbad16d6
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 1df2c474afa5e062dfa22cf05af6b0edf036f768
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68103040"
 ---
 # <a name="creating-the-server-connection-files-mysqltosql"></a>Создание файлов подключения к серверу (MySQLToSQL)
-В разделе "серверы" файла скрипта или в файле подключения отдельный сервер можно указать сведения о сервере. — Параметр командной строки файла подключения к серверу, `-c <serverconnectionfile>`. Если один и тот же идентификатор сервера присутствует в файл скрипта и файла подключения сервера, тогда считается определение сервера в файле скрипта.  
+Сведения о сервере можно указать либо в разделе Servers файла сценария, либо в отдельном файле соединения сервера. Параметр командной строки для файла соединения сервера имеет значение, `-c <serverconnectionfile>`. Если один и тот же идентификатор сервера имеется как в файле скрипта, так и в файле соединения сервера, то будет считаться определение сервера в файле скрипта.  
   
-**Пример.**  
+**Пример**.  
   
 ```xml  
 <!--Sample of server connection file commands -->  
@@ -84,12 +84,12 @@ ms.locfileid: "68103040"
 </sql-azure>  
 ```  
   
-## <a name="server-connection-file-validation"></a>Проверка файла подключения сервера  
-Пользователь может просто проверять его/ее файл подключения сервера соответствие файлу определения схемы **«M2SSConsoleScriptServersSchema.xsd»** доступны в папке «Схемы».  
+## <a name="server-connection-file-validation"></a>Проверка файлов подключения к серверу  
+Пользователь может легко проверить файл подключения своего сервера относительно файла определения схемы **2ssconsolescriptserversschema. xsd** , доступного в папке Schemas.  
   
-## <a name="next-step"></a>Следующий шаг  
-Следующий шаг в работе консоли — [выполнение команд консоли SSMA &#40;MySQLToSQL&#41;](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md)  
+## <a name="next-step"></a>Дальнейшее действие  
+Следующий шаг в работе консоли заключается [в выполнении консоли SSMA &#40;MySQLToSQL&#41;](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md)  
   
-## <a name="see-also"></a>См. также  
-[Выполнение команд консоли SSMA (MySQL)](https://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
+## <a name="see-also"></a>См. также:  
+[Исполнение консоли SSMA (MySQL)](https://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
   

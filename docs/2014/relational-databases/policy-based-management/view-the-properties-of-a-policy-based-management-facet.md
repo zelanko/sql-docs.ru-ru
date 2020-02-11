@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c819fc7fb3b1cc73b67362a0eabd82ad33946fbc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62676868"
 ---
 # <a name="view-the-properties-of-a-policy-based-management-facet"></a>Просмотр свойств аспекта управления на основе политик
@@ -26,9 +26,9 @@ ms.locfileid: "62676868"
   
 -   **Перед началом работы**  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
--   **Просмотр свойств аспекта с помощью:**  
+-   **Для просмотра свойств аспекта используется:**  
   
      [Среда SQL Server Management Studio](#SSMSProcedure)  
   
@@ -51,7 +51,7 @@ ms.locfileid: "62676868"
   
 4.  Чтобы развернуть папку **Аспекты** , щелкните знак «плюс».  
   
-5.  Щелкните правой кнопкой мыши аспект, свойства которого необходимо просмотреть, и выберите пункт **Свойства**. Дополнительные сведения о параметрах, доступных в диалоговом окне **Свойства аспекта —** _имя_аспекта_, см. в статьях [Диалоговое окно "Свойства аспекта", вкладка "Общие"](../../integration-services/general-page-of-integration-services-designers-options.md), [Диалоговое окно "Свойства аспекта", вкладка "Зависимые политики"](facet-properties-dialog-box-dependent-policies-page.md) и [Диалоговое окно "Свойства аспекта", вкладка "Зависимые условия"](facet-properties-dialog-box-dependent-conditions-page.md).  
+5.  Щелкните правой кнопкой мыши аспект, свойства которого необходимо просмотреть, и выберите пункт **Свойства**. Дополнительные сведения о параметрах, доступных в диалоговом окне **Свойства аспекта —**_facet_name_ , см. в разделе [диалоговое окно Свойства аспекта, страница Общие](../../integration-services/general-page-of-integration-services-designers-options.md), [Свойства аспекта, страница Зависимые политики](facet-properties-dialog-box-dependent-policies-page.md)и [диалоговое окно Свойства аспекта — страница Зависимые условия](facet-properties-dialog-box-dependent-conditions-page.md).  
   
 6.  После завершения нажмите кнопку **Закрыть**.  
   

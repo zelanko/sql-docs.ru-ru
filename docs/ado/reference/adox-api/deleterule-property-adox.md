@@ -20,23 +20,23 @@ ms.assetid: 87bd4c0a-cae3-4007-a939-4193acaa00ac
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1e1e0b9a5cea798f9f8b6cc53404378d370276d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966423"
 ---
 # <a name="deleterule-property-adox"></a>Свойство DeleteRule (ADOX)
-Указывает выполнить действие, при удалении первичного ключа.  
+Указывает действие, выполняемое при удалении первичного ключа.  
   
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
- Задает и возвращает **Long** значение, которое может принимать одно из [RuleEnum](../../../ado/reference/adox-api/ruleenum.md) константы. Значение по умолчанию — **adRINone**.  
+ Задает и возвращает значение **типа Long** , которое может быть одной из констант [рулинум](../../../ado/reference/adox-api/ruleenum.md) . Значение по умолчанию — **адриноне**.  
   
-## <a name="remarks"></a>Примечания  
- Это свойство доступно только для чтения на [ключ](../../../ado/reference/adox-api/key-object-adox.md) объектов, уже добавлен в коллекцию.  
+## <a name="remarks"></a>Remarks  
+ Это свойство доступно только для чтения для объектов [ключей](../../../ado/reference/adox-api/key-object-adox.md) , уже добавленных в коллекцию.  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  [Объект Key (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример свойства DeleteRule (Visual Basic)](../../../ado/reference/adox-api/deleterule-property-example-vb.md)

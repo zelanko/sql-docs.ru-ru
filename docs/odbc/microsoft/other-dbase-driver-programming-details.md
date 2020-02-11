@@ -1,5 +1,5 @@
 ---
-title: Другие сведения о программировании драйверов для dBASE | Документация Майкрософт
+title: Другие сведения о программировании драйвера dBASE | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ ms.assetid: 1bb9b727-66e8-49e8-9a6b-587ad6217031
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0f0fb1fb9a4c0130ac62f9b4cf0b621f1673b7e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68135753"
 ---
 # <a name="other-dbase-driver-programming-details"></a>Другие сведения о программировании драйверов для dBASE
 > [!NOTE]  
->  В этом разделе описаны dBASE специфические для драйвера функции ODBC и другие сведения о программировании. Общие сведения о функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  В этом разделе содержатся сведения о функциях ODBC и другие сведения о программировании, относящиеся к драйверу dBASE. Общие сведения о функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
  В этом разделе рассматриваются следующие вопросы.  
   

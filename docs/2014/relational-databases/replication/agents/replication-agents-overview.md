@@ -25,16 +25,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 41775a529d34aa5ca457f92c9d26e327b74705ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721916"
 ---
 # <a name="replication-agents-overview"></a>Обзор агентов репликации
   Репликация использует ряд отдельных программ, называемых агентами, для выполнения задач, связанных с отслеживанием изменений и распространением данных. По умолчанию агенты репликации выполняются как задания, запланированные агентом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , причем для выполнения заданий агент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] должен быть запущен. Агенты репликации могут запускаться из командной строки или приложениями, которые используют объекты RMO (Replication Management Objects). Агенты репликации управляются из монитора репликации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и из [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
-## <a name="sql-server-agent"></a>Агент SQL Server  
+## <a name="sql-server-agent"></a>Агент SQL Server  
  Агент[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] служит для размещения и планирования работы агентов, используемых в репликации, а также предоставляет простой способ запуска агентов репликации. Агент[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] также управляет операциями за пределами репликации и осуществляет наблюдение за выполняемыми операциями. Дополнительные сведения см. в статье [Configure SQL Server Agent](../../../ssms/agent/sql-server-agent.md).  
   
 > [!IMPORTANT]  
@@ -58,7 +58,7 @@ ms.locfileid: "62721916"
 ## <a name="replication-maintenance-jobs"></a>Задания обслуживания репликации  
  Репликация имеет ряд заданий обслуживания, которые исполняют запланированное и выполняемое по запросу обслуживание. Дополнительные сведения см. в статье [Администрирование агента репликации](replication-agent-administration.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Запуск и остановка агента репликации (среда SQL Server Management Studio)](start-and-stop-a-replication-agent-sql-server-management-studio.md)   
  [Запуск задания по обслуживанию репликаций (среда SQL Server Management Studio)](../administration/run-replication-maintenance-jobs-sql-server-management-studio.md)   
  [Основные понятия исполняемых файлов агента репликации](../concepts/replication-agent-executables-concepts.md)   

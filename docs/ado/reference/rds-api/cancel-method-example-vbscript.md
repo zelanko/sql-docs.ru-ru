@@ -1,5 +1,5 @@
 ---
-title: Пример метода (VBScript) Cancel | Документация Майкрософт
+title: Пример метода Cancel (VBScript) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,17 +15,17 @@ ms.assetid: 4ade106d-063d-486e-bc4d-a1a6b6e0bea9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 764a99faf40450bfd550dfe3f96789e705e8624a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964721"
 ---
 # <a name="cancel-method-example-vbscript"></a>Пример метода Cancel (VBScript)
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- В следующем примере показано, как для чтения [отменить](../../../ado/reference/ado-api/cancel-method-ado.md) во время выполнения. Вырежьте и вставьте следующий код в блокноте или другом текстовом редакторе и сохраните его как CancelVBS.asp. Результат можно просмотреть в любом браузере клиента.  
+ В следующем примере показано, как считать метод [Cancel](../../../ado/reference/ado-api/cancel-method-ado.md) во время выполнения. Вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как Канцелвбс. ASP. Результат можно просмотреть в любом клиентском браузере.  
   
 ```  
 <!-- BeginCancelVBS -->  
@@ -68,7 +68,7 @@ End Sub
 <!-- EndCancelVBS -->  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод Cancel (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)
 
 

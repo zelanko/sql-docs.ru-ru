@@ -1,5 +1,5 @@
 ---
-title: PrimaryKey и уникальные свойства (Visual Basic) | Документация Майкрософт
+title: Пример PrimaryKey и уникальных свойств (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: f536acac-06ea-4b39-bfba-ee9902b01615
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 43ee83f0c08e5ea686758c5fe913d0afc9be572d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965559"
 ---
 # <a name="primarykey-and-unique-properties-example-vb"></a>Примеры свойств PrimaryKey и Unique (Visual Basic)
-В этом примере показано [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md) и [Unique](../../../ado/reference/adox-api/unique-property-adox.md) свойства [индекс](../../../ado/reference/adox-api/index-object-adox.md). Код создает новую таблицу с двумя столбцами. **PrimaryKey** и **Unique** свойства используются, чтобы один столбец первичного ключа, для которого не допускаются повторяющиеся значения.  
+В этом примере демонстрируются свойства [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md) и [UNIQUE](../../../ado/reference/adox-api/unique-property-adox.md) [индекса](../../../ado/reference/adox-api/index-object-adox.md). Код создает новую таблицу с двумя столбцами. Свойства **PrimaryKey** и **UNIQUE** используются, чтобы сделать один столбец первичным ключом, для которого повторяющиеся значения не допускаются.  
   
 ```  
 ' BeginPrimaryKeyVB  
@@ -112,7 +112,7 @@ End Sub
 ' EndPrimaryKeyVB  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Объект INDEX (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
+## <a name="see-also"></a>См. также:  
+ [Объект index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [Свойство PrimaryKey (ADOX)](../../../ado/reference/adox-api/primarykey-property-adox.md)   
  [Свойство Unique (ADOX)](../../../ado/reference/adox-api/unique-property-adox.md)
