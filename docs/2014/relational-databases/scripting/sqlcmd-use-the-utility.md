@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bb14d7809eba496ede8c8e0aa6e7133c2ad9c524
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243182"
 ---
 # <a name="use-the-sqlcmd-utility"></a>Использование программы sqlcmd
@@ -69,7 +69,7 @@ ms.locfileid: "75243182"
     sqlcmd -S <ComputerName>\<InstanceName>  
     ```  
   
-     или  
+     или диспетчер конфигурации служб  
   
     ```  
     sqlcmd -S .\<InstanceName>  
@@ -103,7 +103,7 @@ ms.locfileid: "75243182"
     >  Для просмотра полного перечня параметров, поддерживаемых служебной программой `sqlcmd`, введите `sqlcmd -?`.  
   
 ## <a name="running-transact-sql-statements-interactively-by-using-sqlcmd"></a>Интерактивный запуск инструкций Transact-SQL с помощью программы sqlcmd  
- С помощью программы `sqlcmd` можно интерактивно запускать инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] из окна командной строки. Для интерактивного выполнения [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкций с помощью `sqlcmd`запустите программу, не используя параметры **-q**, **-q**, **-Z**или **-i** , чтобы указать входные файлы или запросы. Например:  
+ С помощью программы `sqlcmd` можно интерактивно запускать инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] из окна командной строки. Для интерактивного выполнения [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкций с помощью `sqlcmd`запустите программу, не используя параметры **-q**, **-q**, **-Z**или **-i** , чтобы указать входные файлы или запросы. Пример:  
   
  `sqlcmd -S <ComputerName>\<InstanceName>`  
   
@@ -119,7 +119,7 @@ ms.locfileid: "75243182"
  Символы, заключенные в кавычки, используются без какой-либо дополнительной предварительной обработки, за исключением кавычек, которые вставляются в строку путем ввода двух последовательных кавычек. 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] рассматривает такую последовательность символов как одни кавычки. однако на сервере выполняется преобразование. Переменные скрипта при появлении в строке не раскрываются.  
   
- Например:  
+ Пример:  
   
  `sqlcmd`  
   
@@ -219,7 +219,7 @@ ms.locfileid: "75243182"
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-running-a-script-by-using-sqlcmd"></a>а. Запуск скрипта с помощью программы sqlcmd  
+### <a name="a-running-a-script-by-using-sqlcmd"></a>A. Запуск скрипта с помощью программы sqlcmd  
  Откройте «Блокнот» и введите следующие инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   
  `USE AdventureWorks2012;`  
@@ -252,7 +252,7 @@ ms.locfileid: "75243182"
   
  `(3 rows affected)`  
   
-### <a name="b-using-sqlcmd-with-a-dedicated-administrative-connection"></a>B. Использование программы sqlcmd с выделенным административным соединением  
+### <a name="b-using-sqlcmd-with-a-dedicated-administrative-connection"></a>Б. Использование программы sqlcmd с выделенным административным соединением  
  В следующем примере программа `sqlcmd` используется для подключения к серверу, на котором возникла проблема с блокировкой, с помощью выделенного административного соединения.  
   
  `C:\>sqlcmd -S ServerName -A`  
@@ -277,7 +277,7 @@ ms.locfileid: "75243182"
   
  `2> GO`  
   
-### <a name="c-using-sqlcmd-to-execute-a-stored-procedure"></a>C. Использование программы sqlcmd для выполнения хранимых процедур  
+### <a name="c-using-sqlcmd-to-execute-a-stored-procedure"></a>В. Использование программы sqlcmd для выполнения хранимых процедур  
  В следующем примере представлено действие, выполняющее хранимую процедуру с помощью `sqlcmd`. Создайте следующую хранимую процедуру.  
   
  `USE AdventureWorks2012;`  
@@ -330,7 +330,7 @@ ms.locfileid: "75243182"
   
  `gustavo0@adventure-works.com`  
   
-### <a name="d-using-sqlcmd-for-database-maintenance"></a>D. Использование программы sqlcmd для обслуживания базы данных  
+### <a name="d-using-sqlcmd-for-database-maintenance"></a>Г. Использование программы sqlcmd для обслуживания базы данных  
  В следующем примере кода показано, как использовать программу `sqlcmd` для задач обслуживания базы данных. Создайте `C:\BackupTemplate.sql` со следующим кодом.  
   
  `USE master;`  
@@ -361,7 +361,7 @@ ms.locfileid: "75243182"
   
  `BACKUP DATABASE successfully processed 693 pages in 0.725 seconds (7.830 MB/sec)`  
   
-### <a name="e-using-sqlcmd-to-execute-code-on-multiple-instances"></a>E. Использование программы sqlcmd для выполнения кода на нескольких экземплярах  
+### <a name="e-using-sqlcmd-to-execute-code-on-multiple-instances"></a>Д. Использование программы sqlcmd для выполнения кода на нескольких экземплярах  
  Следующий код представляет собой скрипт для соединения двух экземпляров. Обратите внимание на команду `GO` перед подключением ко второму экземпляру.  
   
  `:CONNECT <server>\,<instance1>`  
@@ -376,7 +376,7 @@ ms.locfileid: "75243182"
   
  `GO`  
   
-### <a name="e-returning-xml-output"></a>E. Возврат выходных XML-данных  
+### <a name="e-returning-xml-output"></a>Д. Возврат выходных XML-данных  
  Следующий пример показывает, как выходные данные XML возвращаются неформатированными, в виде непрерывного потока.  
   
  `C:\>sqlcmd -d AdventureWorks2012`  
@@ -391,7 +391,7 @@ ms.locfileid: "75243182"
   
  `Syed Abbas, Catherine Abel, Kim Abercrombie,`  
   
-### <a name="f-using-sqlcmd-in-a-windows-script-file"></a>F. Использование программы sqlcmd в файлах скриптов Windows  
+### <a name="f-using-sqlcmd-in-a-windows-script-file"></a>Е. Использование программы sqlcmd в файлах скриптов Windows  
  `sqlcmd`Команда, например, `sqlcmd -i C:\InputFile.txt -o C:\OutputFile.txt,` может быть выполнена в BAT-файле вместе с VBScript. В этом случае интерактивные параметры не используются. Программа `sqlcmd` должна быть установлена на компьютере, на котором выполняется файл BAT.  
   
  Сначала создайте следующие четыре файла.  
@@ -562,11 +562,11 @@ SQLCMD -E -N -C
   
  Если поставщик установил значение `ForceProtocolEncryption = True` , шифрование включается даже в случае, если в строке соединения указано значение `Encrypt=No` .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Программа sqlcmd](../../tools/sqlcmd-utility.md)   
  [Использование sqlcmd с переменными скрипта](sqlcmd-use-with-scripting-variables.md)   
  [Изменение скриптов SQLCMD с помощью редактора запросов](edit-sqlcmd-scripts-with-query-editor.md)   
  [Управление шагами заданий](../../ssms/agent/manage-job-steps.md)   
- [Создание шага задания CmdExec](../../ssms/agent/create-a-cmdexec-job-step.md)  
+ [Create a CmdExec Job Step](../../ssms/agent/create-a-cmdexec-job-step.md)  
   
   

@@ -11,16 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6c5c6cf2953de3b23e55cf75b0287750a4abbb86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480561"
 ---
 # <a name="grant-dqs-roles-to-users"></a>Предоставление ролей DQS пользователям
   В этом разделе описывается создание имен входа SQL Server на основе участников Windows и предоставление им ролей служб [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) в базе данных DQS_MAIN.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
   
 -   Необходимо, чтобы установка сервера [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] , запускаемая с помощью файла DQSInstaller.exe, была завершена. Дополнительные сведения см. в разделе [Запуск файла DQSInstaller.exe для завершения установки сервера служб DQS](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md).  
   
@@ -38,7 +38,7 @@ ms.locfileid: "65480561"
   
 5.  После проверки пользователя щелкните страницу **Сопоставление пользователей** в левой части окна.  
   
-6.  В области справа установите флажок в столбце **Сопоставление** для базы данных **DQS_MAIN**, а затем установите флажок **dqs_administrator**, **dqs_kb_editor** или **dqs_kb_operator** на панели **Членство в роли базы данных для: DQS_MAIN** в зависимости от уровня доступа, необходимого пользователю. Дополнительные сведения о трех ролях служб DQS см. в разделе [DQS Security](../dqs-security.md).  
+6.  В правой области установите флажок в столбце **Сопоставление** для базы данных **DQS_MAIN** , а затем на панели **Членство в роли базы данных для: DQS_MAIN**установите флажок **dqs_administrator**, **dqs_kb_editor** или **dqs_kb_operator** в зависимости от уровня доступа, который требуется пользователю. Дополнительные сведения о трех ролях служб DQS см. в разделе [DQS Security](../dqs-security.md).  
   
 7.  В диалоговом окне **Создание имени входа** нажмите кнопку **ОК**, чтобы применить изменения.  
   

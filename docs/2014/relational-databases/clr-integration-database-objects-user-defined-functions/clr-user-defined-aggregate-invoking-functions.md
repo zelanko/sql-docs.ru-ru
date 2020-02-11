@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8f70a2df2fd824d8a0021a0985d6f75e79efce48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919607"
 ---
 # <a name="invoking-clr-user-defined-aggregate-functions"></a>Вызов определяемых пользователем агрегатных функций CLR
@@ -32,11 +32,11 @@ ms.locfileid: "62919607"
   
 -   Текущий пользователь должен иметь разрешение `EXECUTE` на определяемую пользователем статистическую функцию.  
   
--   Определяемые пользователем статистические функции должны вызываться с помощью двухкомпонентное имя в виде *имя_схемы.имя_функции*.  
+-   Определяемые пользователем статистические функции должны быть вызваны с помощью имени, сокрывающегося из двух частей, в виде *schema_name. udagg_name*.  
   
--   Тип аргумента определяемую пользователем агрегатную функцию должен совпадать или иметь могут быть неявно преобразованы *input_type* агрегатной функции, как определено в `CREATE AGGREGATE` инструкции.  
+-   Тип аргумента определяемой пользователем статистической функции должен совпадать или быть неявно преобразуемым в *input_type* агрегата, как определено в `CREATE AGGREGATE` инструкции.  
   
--   Тип возвращаемого значения пользовательского статистического выражения должен соответствовать *return_type* в `CREATE AGGREGATE` инструкции.  
+-   Возвращаемый тип определяемой пользователем статистической функции должен соответствовать *return_type* в `CREATE AGGREGATE` инструкции.  
   
 ## <a name="example-1"></a>Пример 1  
  Ниже приводится пример определяемой пользователем агрегатной функции, объединяющей набор строковых значений из столбца таблицы.  
@@ -196,7 +196,7 @@ Public Class Concatenate
 End Class  
 ```  
   
- После компиляции кода в **MyAgg.dll**, можно зарегистрировать агрегатную функцию в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] следующим образом:  
+ После компиляции кода в **мягг. dll**можно зарегистрировать статистическую функцию в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] следующим образом:  
   
 ```  
 CREATE ASSEMBLY MyAgg FROM 'C:\MyAgg.dll';  
@@ -240,7 +240,7 @@ GROUP BY BookID;
 |2|Taylor, Mayler|  
 |3|Roberts, Michaels, Steven|  
   
-## <a name="example-2"></a>Пример 2  
+## <a name="example-2"></a>Пример 2.  
  В следующем образце показана статистическая функция, имеющая два параметра в методе `Accumulate`.  
   
  [C#]  
@@ -441,7 +441,7 @@ SELECT dbo.WeightedAvg(ItemValue, ItemWeight) FROM @myTable;
 go  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Определяемые пользователем агрегатные функции среды CLR](clr-user-defined-aggregates.md)  
+## <a name="see-also"></a>См. также:  
+ [Пользовательские агрегатные функции среды CLR](clr-user-defined-aggregates.md)  
   
   

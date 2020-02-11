@@ -15,14 +15,14 @@ ms.assetid: 0dd1a3b6-69dc-462f-9290-12ebee2b4a2a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a9cdf20fa57da4b6085fc0e2fab61a23f3fed83e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039912"
 ---
 # <a name="developing-applications"></a>Разработка приложений
-Этот раздел содержит сведения о разработке приложений, использующих интерфейс ODBC и драйверы, которые реализуют его.  
+В этом разделе содержатся сведения о разработке приложений, использующих интерфейс ODBC и драйверы, реализующие его.  
   
  Этот раздел содержит следующие подразделы.  
   
@@ -54,5 +54,5 @@ ms.locfileid: "68039912"
   
 -   [Замечания по программированию](../../../odbc/reference/develop-app/programming-considerations.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по программированию ODBC](../../../odbc/reference/odbc-programmer-s-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: Указание переменных XPath в запросах XPath (SQLXML 4.0) | Документация Майкрософт
+title: Указание переменных XPath в запросах XPath (SQLXML 4,0) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 25e6c96ccbe51ccc0d2d88c4b119c08538d37fcf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010684"
 ---
 # <a name="specifying-xpath-variables-in-xpath-queries-sqlxml-40"></a>Указание переменных XPath в запросах XPath (SQLXML 4.0)
-  В следующих примерах показано, как передаются переменные в запросах XPath. В данных примерах запросы XPath определены в соответствии со схемой сопоставления, которая содержится в файле SampleSchema1.xml. Сведения об этом образце схемы см. в разделе [образец аннотированные схемы XSD для примеров XPath &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  В следующих примерах показано, как передаются переменные в запросах XPath. В данных примерах запросы XPath определены в соответствии со схемой сопоставления, которая содержится в файле SampleSchema1.xml. Дополнительные сведения об этом образце схемы см. в разделе [Пример схемы XSD с заметками для XPath-примеров &#40;SQLXML 4,0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-use-the-xpath-variables"></a>A. Использование переменных XPath  
- Образец шаблона содержит два запроса XPath. Каждый из запросов принимает один параметр. Шаблон также задает для этих параметров значения по умолчанию. Они используются, если значения не заданы. Два параметра со значениями по умолчанию указаны в  **\<sql:header >** .  
+ Образец шаблона содержит два запроса XPath. Каждый из запросов принимает один параметр. Шаблон также задает для этих параметров значения по умолчанию. Они используются, если значения не заданы. В ** \<>SQL: Header **указаны два параметра со значениями по умолчанию.  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -45,7 +45,7 @@ ms.locfileid: "66010684"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Проверка запроса XPath к схеме сопоставления  
   
-1.  Копировать [образец кода схемы](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) и вставьте его в текстовый файл. Сохраните файл с именем SampleSchema1.xml.  
+1.  Скопируйте [пример кода схемы](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) и вставьте его в текстовый файл. Сохраните файл с именем SampleSchema1.xml.  
   
 2.  Создайте следующий шаблон (XPathVariables.xml) и сохраните его в каталоге, где  
   
@@ -70,7 +70,7 @@ ms.locfileid: "66010684"
     mapping-schema="C:\MyDir\SampleSchema1.xml"  
     ```  
   
-3.  Создайте и запустите тестовый скрипт SQLXML 4.0 (Sqlxml4test.vbs), чтобы выполнить шаблон. Дополнительные сведения см. в разделе [использование объектов ADO для выполнения запросов SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+3.  Создайте и запустите тестовый скрипт SQLXML 4.0 (Sqlxml4test.vbs), чтобы выполнить шаблон. Дополнительные сведения см. [в разделе Использование ADO для выполнения запросов SQLXML 4,0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
 > [!NOTE]  
 >  В данном примере никакие параметры не передаются. Поэтому используются значения по умолчанию.  

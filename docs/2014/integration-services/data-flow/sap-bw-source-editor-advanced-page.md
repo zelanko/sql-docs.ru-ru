@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 80a3d1d0fa667821616909a327a946a4116d06de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62901050"
 ---
 # <a name="sap-bw-source-editor-advanced-page"></a>Редактор источников SAP BW (страница «Дополнительно»)
@@ -44,7 +44,7 @@ ms.locfileid: "62901050"
  **Преобразование строк**  
  Укажите правило для преобразования строк.  
   
-|Параметр|Описание|  
+|Параметр|Description|  
 |------------|-----------------|  
 |**Автоматическое преобразование строк**|Преобразовать все строки в `nvarchar`, если система SAP Netweaver BW поддерживает Юникод. В противном случае все строки преобразуются в `varchar`.|  
 |**Преобразование строк в varchar**|Все строки преобразуются в `varchar`.|  
@@ -62,7 +62,7 @@ ms.locfileid: "62901050"
  **Сброс**  
  Позволяет сбросить состояние идентификатора запроса до «G — зеленый», после отображения запроса на подтверждение. Это может быть полезным, если произошла ошибка и система SAP Netweaver BW отметила запрос с состоянием «Красный» или «Желтый».  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Редактор источника SAP BW (страница "Диспетчер подключений")](sap-bw-source-editor-connection-manager-page.md)   
  [Редактор источника SAP BW (страница "Столбцы")](sap-bw-source-editor-columns-page.md)   
  [Редактор источника SAP BW (страница "Вывод ошибок")](sap-bw-source-editor-error-output-page.md)   
