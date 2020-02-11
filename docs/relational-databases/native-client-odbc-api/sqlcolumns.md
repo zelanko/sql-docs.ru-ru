@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 58209d617d7978ff4ed6da486bd5c89c076c05af
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73787413"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  **SQLColumns** возвращает значение, SQL_SUCCESS, существуют ли значения для параметров *CatalogName*, *TableName*или *ColumnName* . Функция**SQLFetch** возвращает значение SQL_NO_DATA, если в этих параметрах заданы недопустимые значения.  
+  **SQLColumns** возвращает значение, SQL_SUCCESS, существуют ли значения для параметров *CatalogName*, *TableName*или *ColumnName* . **SQLFetch** возвращает SQL_NO_DATA, если в этих параметрах используются недопустимые значения.  
   
 > [!NOTE]  
 >  Для типов больших значений все параметры длины будут возвращены со значением SQL_SS_LENGTH_UNLIMITED.  
@@ -37,10 +37,10 @@ ms.locfileid: "73787413"
   
  В следующей таблице перечислены столбцы, возвращаемые в результирующем наборе.  
   
-|Имя столбца|Описание|  
+|Имя столбца|Description|  
 |-----------------|-----------------|  
 |DATA_TYPE|Возвращает SQL_VARCHAR, SQL_VARBINARY или SQL_WVARCHAR для типов данных **varchar (max)** .|  
-|TYPE_NAME|Возвращает "varchar", "varbinary" или "nvarchar" для типов данных **varchar (max)** , **varbinary (max)** и **nvarchar (max)** .|  
+|TYPE_NAME|Возвращает "varchar", "varbinary" или "nvarchar" для типов данных **varchar (max)**, **varbinary (max)** и **nvarchar (max)** .|  
 |COLUMN_SIZE|Возвращает SQL_SS_LENGTH_UNLIMITED для типов данных **varchar (max)** , указывающих на то, что размер столбца не ограничен.|  
 |BUFFER_LENGTH|Возвращает SQL_SS_LENGTH_UNLIMITED для типов данных **varchar (max)** , указывающих, что размер буфера не ограничен.|  
 |SQL_DATA_TYPE|Возвращает SQL_VARCHAR, SQL_VARBINARY или SQL_WVARCHAR для типов данных **varchar (max)** .|  
@@ -56,12 +56,12 @@ ms.locfileid: "73787413"
   
  Для параметров определяемого пользователем типа можно использовать новые, зависящие от драйвера дескрипторы, определенные выше, для получения или задания дополнительных свойств метаданных определяемого пользователем типа, если сервер должен вернуть или запросить данные сведения.  
   
- Когда клиент подключается к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и вызывает SQLColumns, использование значений NULL или подстановочных знаков для входного параметра каталога не приведет к возврату сведений из других каталогов. Вместо этого будут возвращены сведения только о текущем каталоге. Клиент может сначала вызвать SQLTables, чтобы определить, в каком каталоге находится нужная таблица. Затем клиент может использовать это значение каталога для входного параметра каталога в его вызове SQLColumns для получения сведений о столбцах в этой таблице.  
+ Когда клиент подключается [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] к и вызывает SQLColumns, использование значений NULL или подстановочных знаков для входного параметра каталога не приведет к возврату сведений из других каталогов. Вместо этого будут возвращены сведения только о текущем каталоге. Клиент может сначала вызвать SQLTables, чтобы определить, в каком каталоге находится нужная таблица. Затем клиент может использовать это значение каталога для входного параметра каталога в его вызове SQLColumns для получения сведений о столбцах в этой таблице.  
   
 ## <a name="sqlcolumns-and-table-valued-parameters"></a>Функция SQLColumns и возвращающие табличное значение параметры  
  Результирующий набор, возвращаемый функцией SQLColumns, зависит от значения параметра SQL_SOPT_SS_NAME_SCOPE. Дополнительные сведения см. в разделе [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md). Следующие столбцы добавлены для возвращающих табличное значение параметров.  
   
-|Имя столбца|Тип данных|Содержание|  
+|Имя столбца|Тип данных|Содержимое|  
 |-----------------|---------------|--------------|  
 |SS_IS_COMPUTED|Smallint|Если столбец является вычисляемым, то для него в TABLE_TYPE это значение равно SQL_TRUE. В противном случае — SQL_FALSE.|  
 |SS_IS_IDENTITY|Smallint|SQL_TRUE, если столбец является столбцом идентификаторов. В противном случае — SQL_FALSE.|  
@@ -71,27 +71,27 @@ ms.locfileid: "73787413"
 ## <a name="sqlcolumns-support-for-enhanced-date-and-time-features"></a>Поддержка функцией SQLColumns улучшенных возможностей работы с датой и временем  
  Сведения о значениях, возвращаемых для типов даты и времени, см. в разделе [метаданные каталога](../../relational-databases/native-client-odbc-date-time/metadata-catalog.md).  
   
- Дополнительные сведения см. в разделе [улучшения &#40;даты и времени&#41;ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Дополнительные сведения см. в разделе [улучшения даты и времени &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlcolumns-support-for-large-clr-udts"></a>Поддержка функцией SQLColumns определяемых пользователем типов больших данных CLR  
- **SQLColumns** поддерживает большие определяемые пользователем типы данных CLR (UDT). Дополнительные сведения см. в разделе [типы больших определяемых пользователем &#40;типов&#41;данных CLR ODBC](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ **SQLColumns** поддерживает большие определяемые пользователем типы данных CLR (UDT). Дополнительные сведения см. в разделе [большие определяемые пользователем типы данных CLR &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="sqlcolumns-support-for-sparse-columns"></a>Поддержка функцией SQLColumns разреженных столбцов  
- В результирующий набор для SQLColumns были добавлены два [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отдельных столбца:  
+ В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] результирующий набор для SQLColumns были добавлены два указанных столбца:  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |SS_IS_SPARSE|**Smallint**|Если столбец является разреженным, то значение равно SQL_TRUE. В противном случае — SQL_FALSE.|  
 |SS_IS_COLUMN_SET|**Smallint**|Если столбец является столбцом **column_set** , это SQL_TRUE. в противном случае SQL_FALSE.|  
   
- В соответствии со спецификацией ODBC SS_IS_SPARSE и SS_IS_COLUMN_SET отображаются до всех столбцов, связанных с драйвером, которые были добавлены в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] более ранних версий, чем [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], и после всех столбцов, заданные самим ODBC.  
+ В соответствии со спецификацией ODBC SS_IS_SPARSE и SS_IS_COLUMN_SET отображаются перед всеми столбцами, которые были добавлены в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] более ранние версии, чем [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], и после всех столбцов, заданные самим ODBC.  
   
  Результирующий набор, возвращаемый функцией SQLColumns, зависит от значения параметра SQL_SOPT_SS_NAME_SCOPE. Дополнительные сведения см. в разделе [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md).  
   
- Дополнительные сведения о разреженных столбцах в ODBC см. в разделе [разреженные столбцы &#40;поддержка ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
+ Дополнительные сведения о разреженных столбцах в ODBC см. в разделе [Поддержка разреженных столбцов &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
   
-## <a name="see-also"></a>См. также статью  
-   [функции SQLColumns](https://go.microsoft.com/fwlink/?LinkId=59336)  
- [Подробные сведения о реализации API-интерфейсов ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+## <a name="see-also"></a>См. также:  
+ [Функция SQLColumns](https://go.microsoft.com/fwlink/?LinkId=59336)   
+ [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

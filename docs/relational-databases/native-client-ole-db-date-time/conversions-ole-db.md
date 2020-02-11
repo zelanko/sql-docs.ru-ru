@@ -16,10 +16,10 @@ ms.author: genemi
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a1d02ef5827ff9d121c19dd055f97feea5184758
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74095358"
 ---
 # <a name="conversions-ole-db"></a>Преобразования (OLE DB)
@@ -31,15 +31,15 @@ ms.locfileid: "74095358"
   
 -   Формат строк **DateTime** и **DateTimeOffset** :  
   
-     *гггг*-*мм*-*дд*[ *чч*:*мм*:*СС*[. *9999999*] [± *чч*:*мм*]]  
+     *гггг*-** мм-*дд*[ *чч*:*мм*:*СС*[.* 9999999*] [± *чч*:*мм*]]  
   
 -   Формат строк типа **time**:  
   
-     *чч*:*мм*:*сс*[.*9999999*]  
+     *чч*:*мм*:*СС*[.* 9999999*]  
   
 -   Формат строк **даты** :  
   
-     *гггг*-*мм*-*дд*  
+     *гггг*-** мм-*дд*  
   
 > [!NOTE]  
 >  Предыдущие версии собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и SQLOLEDB реализовали преобразования OLE в случаях, когда стандартные преобразования возвращали ошибку. В результате некоторые преобразования, проводимые собственным клиентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии 10.0 и более поздних версий, отличаются от спецификации OLE DB.  
@@ -71,7 +71,7 @@ ms.locfileid: "74095358"
  [Преобразования, выполняемые при передаче от сервера к клиенту](../../relational-databases/native-client-ole-db-date-time/conversions-performed-from-server-to-client.md)  
  Описывает преобразования даты-времени, проводимые между [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (или более поздней версией) и клиентским приложением, написанным с помощью собственного клиента OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>См. также статью  
- [Улучшения функций даты и времени &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
+## <a name="see-also"></a>См. также:  
+ [Улучшения даты и времени &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

@@ -20,10 +20,10 @@ ms.assetid: 9abcc20f-a421-4591-affb-62674d04575e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 03a4457cb5dd087639a439e9e9bb883eaf924366
-ms.sourcegitcommit: 8c1c6232a4f592f6bf81910a49375f7488f069c4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70026196"
 ---
 # <a name="dbosysjobservers-transact-sql"></a>dbo.sysjobservers (Transact-SQL)
@@ -31,9 +31,9 @@ ms.locfileid: "70026196"
 
 Хранит взаимосвязь или связь определенного задания с одним или более целевых серверов. Эта таблица хранится в базе данных msdb.
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|job_id|**uniqueidentifier**|Идентификатор задания.|  
+|job_id|**UNIQUEIDENTIFIER**|Идентификатор задания.|  
 |server_id|**int**|Идентификационный номер сервера.|  
 |last_run_outcome|**tinyint**|Результат последнего выполнения задания:<br /><br /> **0** = сбой<br /><br /> **1** = выполнена<br /><br /> **2** = повторная попытка<br /><br /> **3** = Отмена<br /><br /> **4** = выполняется<br /><br /> **5** = неизвестно (см. следующий раздел "Примечания") |  
 |last_outcome_ message|**nvarchar(1024)**|Сообщение (если оно существует), связанное со столбцом last_run_outcome.|  
@@ -42,11 +42,11 @@ ms.locfileid: "70026196"
 |last_run_duration|**int**|Продолжительность выполнения задания в часах, минутах и секундах. Вычисляемый с использованием формулы: (*ч*\*10000) + (*минут*\*100) + *секунды*.|  
 
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Значение выше *4* означает, что агент SQL не знает состояние этого задания. При создании задания *last_run_outcome* изначально имеет значение *5* .
+Значение выше *4* означает, что агент SQL не знает состояние этого задания. При создании задания для *last_run_outcome* изначально устанавливается значение *5* .
 
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Таблицы &#40;агент SQL Server TRANSACT-SQL&#41;](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)  
+[Агент SQL Serverные таблицы &#40;&#41;Transact-SQL](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)  

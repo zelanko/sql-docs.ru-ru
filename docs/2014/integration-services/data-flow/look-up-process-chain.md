@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 01c30422e6f0a1beb65c5f72259fce2aa8f80806
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771160"
 ---
 # <a name="look-up-process-chain"></a>Поиск цепочки процессов
@@ -40,7 +40,7 @@ ms.locfileid: "62771160"
 ## <a name="lookup-options"></a>Параметры поиска  
  В полях поиска можно фильтровать результаты с помощью символа-шаблона звездочки (*) или с помощью частичной строки в сочетании с символом-шаблоном звездочки. Однако если оставить поле поиска пустым, то критериям поиска в этом поле будут соответствовать только пустые строки.  
   
- **Process chain**  
+ **Цепочка процесса**  
  Введите имя цепочки процессов для поиска или введите часть имени с символом-шаблоном звездочки (*). Также можно использовать только символ-шаблон звездочки для включения всех цепочек процессов.  
   
  **Найти**  
@@ -57,7 +57,7 @@ ms.locfileid: "62771160"
   
  После отображения списка доступных цепочек процесса выберите необходимую цепочку, и источник заполнит связанные параметры необходимыми значениями.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Редактор источника SAP BW (страница "Диспетчер подключений")](sap-bw-source-editor-connection-manager-page.md)   
  [Справка F1 по Microsoft Connector 1.1 для SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
   

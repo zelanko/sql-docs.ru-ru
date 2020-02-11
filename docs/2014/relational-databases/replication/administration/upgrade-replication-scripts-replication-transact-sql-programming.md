@@ -20,14 +20,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cd3f6498cbfb4ef8cf38e27879d619472a6693ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68210762"
 ---
 # <a name="upgrade-replication-scripts-replication-transact-sql-programming"></a>обновить скрипты репликации (программирование репликации на языке Transact-SQL)
-  Настройка топологии репликации программным способом возможна при помощи файлов скриптов на языке[!INCLUDE[tsql](../../../includes/tsql-md.md)] . Дополнительные сведения см. в статье [Основные понятия системных хранимых процедур репликации](../concepts/replication-system-stored-procedures-concepts.md).  
+  [!INCLUDE[tsql](../../../includes/tsql-md.md)]файлы скриптов можно использовать для программной настройки топологии репликации. Дополнительные сведения см. в статье [Основные понятия системных хранимых процедур репликации](../concepts/replication-system-stored-procedures-concepts.md).  
   
 > [!IMPORTANT]  
 >  Хотя обновление скриптов, выполняемых членами роли `sysadmin`, не является обязательным, рекомендуется внести в существующие скрипты изменения, описанные в настоящем разделе. Для всех агентов репликации следует указывать учетные записи, наделенные минимальным числом разрешений, как это описано в подразделе «Разрешения, необходимые для агентов» раздела [Replication Agent Security Model](../security/replication-agent-security-model.md).  
@@ -36,23 +36,23 @@ ms.locfileid: "68210762"
   
 -   **sp_addpublication_snapshot**:  
   
-     Теперь при вызове хранимой процедуры [sp_addpublication_snapshot (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) для формирования задания пользователь должен в параметрах **@job_login** и **@job_password** передать учетные данные Windows, с которыми будет запускаться агент моментальных снимков на распространителе.  
+     Теперь учетные данные Windows следует указывать как **@job_login** и **@job_password** при выполнении [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) для создания задания, при котором агент моментальных снимков выполняется на распространителе.  
   
 -   **sp_addpushsubscription_agent**:  
   
-     Теперь пользователь должен выполнять хранимую процедуру [sp_addpushsubscription_agent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql), чтобы явным образом добавить задание и передать учетные данные Windows(в параметрах **@job_login** и **@job_password** ), с которыми задание агента распространителя будет выполняться на распространителе. В версиях [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] до [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]это выполнялось автоматически при создании принудительной подписки.  
+     Теперь необходимо выполнить [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql) , чтобы явно добавить задание и указать учетные данные Windows (**@job_login** и **@job_password**), при которых задание агент распространения выполняется на распространителе. В версиях [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] до [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]это выполнялось автоматически при создании принудительной подписки.  
   
 -   **sp_addmergepushsubscription_agent**:  
   
-     Теперь пользователь должен выполнить процедуру [sp_addpushsubscription_agent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql), чтобы явным образом добавить задание и передать учетные данные Windows (в параметрах **@job_login** и **@job_password** ), с использованием которых задание агента слияния будет выполняться на распространителе. В версиях [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] до [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]это выполнялось автоматически при создании принудительной подписки.  
+     Теперь необходимо выполнить [sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql) , чтобы явно добавить задание и указать учетные данные Windows (**@job_login** и **@job_password**), при которых задание агент слияния выполняется на распространителе. В версиях [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] до [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]это выполнялось автоматически при создании принудительной подписки.  
   
 -   **sp_addpullsubscription_agent**:  
   
-     Теперь при вызове хранимой процедуры [sp_addpullsubscription_agent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql) для формирования задания пользователь должен в параметрах **@job_login** и **@job_password** передать учетные данные Windows, с которыми будет запускаться агент распространителя на подписчике.  
+     Теперь учетные данные Windows следует указывать как **@job_login** и **@job_password** при выполнении [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql) для создания задания, при котором агент распространения выполняется на подписчике.  
   
 -   **sp_addmergepullsubscription_agent**:  
   
-     Теперь при вызове хранимой процедуры [sp_addmergepullsubscription_agent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql) для формирования задания пользователь должен в параметрах **@job_login** и **@job_password** передать учетные данные Windows, с которыми будет запускаться агент слияния на подписчике.  
+     Теперь учетные данные Windows следует указывать как **@job_login** и **@job_password** при выполнении [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql) для создания задания, при котором агент слияния выполняется на подписчике.  
   
 -   **sp_addlogreader_agent**:  
   
@@ -62,26 +62,26 @@ ms.locfileid: "68210762"
   
      Теперь пользователь должен вызвать хранимую процедуру [sp_addlogreader_agent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql), чтобы вручную добавить задание и передать учетные данные Windows, с использованием которых агент чтения очереди будет выполняться на распространителе. В версиях [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ранее [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]это производилось автоматически при создании публикации транзакций, поддерживающей обновление посредством очередей.  
   
- В модели безопасности, которая реализована в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], агенты репликации всегда устанавливают соединение с локальным экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с использованием проверки подлинности Windows. При этом они пользуются учетными данными, переданными в параметрах **@job_name** @job_login **@job_password** . Сведения о требованиях к учетным записям Windows, которые предназначены для выполнения заданий агента репликации, см. в разделе [Replication Agent Security Model](../security/replication-agent-security-model.md).  
+ В модели безопасности, представленной [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]в, агенты репликации всегда выполняют соединения с локальным экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с проверкой подлинности Windows **@job_name** , **@job_password**используя учетные данные, указанные в и. Сведения о требованиях к учетным записям Windows, которые предназначены для выполнения заданий агента репликации, см. в разделе [Replication Agent Security Model](../security/replication-agent-security-model.md).  
   
 > [!IMPORTANT]  
 >  По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. Если учетные данные сохраняются в файле скрипта, то должна быть обеспечена защита этого файла.  
   
 ### <a name="to-upgrade-scripts-that-configure-a-snapshot-or-transactional-publication"></a>Обновление скриптов настройки репликации моментальными снимками и публикацией транзакций  
   
-1.  В существующем скрипте перед [sp_addpublication (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) выполните хранимую процедуру [sp_addlogreader_agent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql) в издателе в базе данных публикации. Укажите в параметрах **@job_name** @job_login **@job_password** . Если агент при соединении с издателем будет использовать проверку подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , то необходимо также присвоить значение **0** параметру **@publisher_security_mode** и передать сведения об имени входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в качестве значений параметров **@publisher_login** @job_login **@publisher_password** . Таким образом будет сформировано задание агента чтения журнала для базы данных публикации.  
+1.  В существующем скрипте перед [sp_addpublication (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) выполните хранимую процедуру [sp_addlogreader_agent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql) в издателе в базе данных публикации. Укажите учетные данные Windows, с которыми будет выполняться **@job_name** агент чтения журнала **@job_password**, для и. Если агент будет [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использовать проверку подлинности при соединении с издателем, необходимо также указать значение **0** в **@publisher_security_mode** параметре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и сведения об **@publisher_login** имени **@publisher_password**входа для и. Таким образом будет сформировано задание агента чтения журнала для базы данных публикации.  
   
     > [!NOTE]  
     >  Этот шаг предназначен только для публикаций транзакций и не обязателен для публикаций моментальных снимков.  
   
-2.  (Необязательно.) Перед [sp_addpublication (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) выполните [sp_addlogreader_agent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql) в издателе в базе данных публикации. Укажите в параметрах **@job_name** @job_login **@job_password** . В результате этого будет сформировано задание агента чтения очереди для распространителя.  
+2.  (Необязательно.) Перед [sp_addpublication (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) выполните [sp_addlogreader_agent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql) в издателе в базе данных публикации. Укажите учетные данные Windows, с которыми будет выполняться **@job_name** агент чтения очереди **@job_password**, для и. В результате этого будет сформировано задание агента чтения очереди для распространителя.  
   
     > [!NOTE]  
     >  Этот шаг обязателен только для публикаций транзакций, которые поддерживают подписчиков, обновляемых посредством очередей.  
   
 3.  Чтобы установить для параметров, реализующих новые функции репликации, значения отличные от принятых по умолчанию, обновите код вызова процедуры [sp_addpublication (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) (необязательно).  
   
-4.  После [sp_addpublication (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) выполните [sp_addpublication_snapshot (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) в издателе в базе данных публикации. Укажите параметр **@publication** и учетные данные Windows, с которыми будет выполняться агент моментальных снимков, в параметрах **@job_name** @job_login **@job_password** . Если агент при соединении с издателем будет использовать проверку подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , то необходимо также присвоить значение **0** параметру **@publisher_security_mode** и передать сведения об имени входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в качестве значений параметров **@publisher_login** @job_login **@publisher_password** . Будет создано задание агента моментальных снимков для публикации.  
+4.  После [sp_addpublication (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) выполните [sp_addpublication_snapshot (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) в издателе в базе данных публикации. Укажите **@publication** учетные данные Windows, с которыми будет запускаться **@job_name** агент моментальных снимков **@job_password**, и. Если агент будет [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использовать проверку подлинности при соединении с издателем, необходимо также указать значение **0** в **@publisher_security_mode** параметре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и сведения об **@publisher_login** имени **@publisher_password**входа для и. Будет создано задание агента моментальных снимков для публикации.  
   
 5.  Чтобы установить для параметров, реализующих новые функции репликации, значения, отличные от принятых по умолчанию, обновите код вызова процедуры [sp_addarticle (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) (необязательно).  
   
@@ -89,15 +89,15 @@ ms.locfileid: "68210762"
   
 1.  После вызова хранимой процедуры, которая создает подписку, обязательно выполните хранимую процедуру, формирующую задание агента распространителя для синхронизации подписки. Используемая хранимая процедура зависит от типа подписки.  
   
-    -   Для подписки по запросу обновите вызов процедуры [sp_addpullsubscription_agent (Transact-SQL) ](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql), указав в параметрах **@job_name** и **@job_password** учетные данные Windows, с использованием которых агент распространителя будет запускаться на подписчике. Это необходимо сделать после вызова хранимой процедуры [sp_addpullsubscription](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql). Дополнительные сведения см. в статье [Создание подписки по запросу](../create-a-pull-subscription.md).  
+    -   Для подписки по запросу обновите выполнение [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql) для предоставления учетных данных Windows, с которыми агент распространения выполняется на подписчике для **@job_name** и. **@job_password** Это необходимо сделать после вызова хранимой процедуры [sp_addpullsubscription](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql). Дополнительные сведения см. в статье [Создание подписки по запросу](../create-a-pull-subscription.md).  
   
-    -   Для принудительной подписки выполните процедуру [sp_addpushsubscription_agent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql) на издателе. Укажите параметр **@subscriber** , **@subscriber_db** , **@publication** , учетные данные Windows, от которых агент распространителя будет запускаться на распространителе, в параметрах **@job_name** @job_login **@job_password** , а также расписание для этого задания. Дополнительные сведения см. в статье [Specify Synchronization Schedules](../specify-synchronization-schedules.md). Это необходимо сделать после вызова процедуры [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Дополнительные сведения см. в статье [Create a Push Subscription](../create-a-push-subscription.md).  
+    -   Для принудительной подписки выполните процедуру [sp_addpushsubscription_agent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql) на издателе. Укажите **@subscriber**, **@subscriber_db**, **@publication**, учетные данные Windows, с которыми агент распространения выполняется на **@job_name** распространителе **@job_password**для и, и расписание для этого задания агента. Дополнительные сведения см. в разделе [Указание расписаний синхронизации](../specify-synchronization-schedules.md). Это необходимо сделать после вызова процедуры [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Дополнительные сведения см. в статье [Создание принудительной подписки](../create-a-push-subscription.md).  
   
 ### <a name="to-upgrade-scripts-that-configure-a-merge-publication"></a>Обновление скриптов настройки публикации слиянием  
   
 1.  В существующем скрипте обновите вызов процедуры [sp_addmergepublication (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql), указав для новых параметров, реализующих новые функции репликации, значения, отличные от заданных по умолчанию (необязательно).  
   
-2.  После [sp_addmergepublication (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql) выполните [sp_addpublication_snapshot (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) в издателе в базе данных публикации. Укажите параметр **@publication** и учетные данные Windows, с которыми будет выполняться агент моментальных снимков, в параметрах **@job_name** @job_login **@job_password** . Если агент при соединении с издателем будет использовать проверку подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , то необходимо также присвоить значение **0** параметру **@publisher_security_mode** и передать сведения об имени входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в качестве значений параметров **@publisher_login** @job_login **@publisher_password** . Будет создано задание агента моментальных снимков для публикации.  
+2.  После [sp_addmergepublication (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql) выполните [sp_addpublication_snapshot (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) в издателе в базе данных публикации. Укажите **@publication** учетные данные Windows, с которыми будет запускаться **@job_name** агент моментальных снимков **@job_password**, и. Если агент будет [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использовать проверку подлинности при соединении с издателем, необходимо также указать значение **0** в **@publisher_security_mode** параметре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и сведения об **@publisher_login** имени **@publisher_password**входа для и. Будет создано задание агента моментальных снимков для публикации.  
   
 3.  (Необязательно.) Чтобы установить для параметров, реализующих новые функции репликации, значения, отличные от принятых по умолчанию, обновите код вызова процедуры [sp_addmergearticle (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql).  
   
@@ -105,9 +105,9 @@ ms.locfileid: "68210762"
   
 1.  После вызова хранимой процедуры, которая создает подписку, обязательно выполните хранимую процедуру, формирующую задание агента слияния для синхронизации подписки. Используемая хранимая процедура зависит от типа подписки.  
   
-    -   Для подписки по запросу обновите вызов процедуры [sp_addmergepullsubscription_agent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql), указав в параметрах **@job_name** и **@job_password** учетные данные Windows, с использованием которых агент слияния будет запускаться на подписчике. Это необходимо сделать после вызова процедуры [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql). Дополнительные сведения см. в статье [Создание подписки по запросу](../create-a-pull-subscription.md).  
+    -   Для подписки по запросу обновите выполнение [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql) для предоставления учетных данных Windows, с которыми агент слияния выполняется на подписчике для **@job_name** и. **@job_password** Это необходимо сделать после вызова процедуры [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql). Дополнительные сведения см. в статье [Создание подписки по запросу](../create-a-pull-subscription.md).  
   
-    -   Для принудительной подписки, выполните процедуру [sp_addmergepushsubscription_agent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql) на издателе. Укажите параметр **@subscriber** , **@subscriber_db** , **@publication** , в параметрах **@job_name** @job_login **@job_password** , а также расписание для этого задания. Дополнительные сведения см. в статье [Specify Synchronization Schedules](../specify-synchronization-schedules.md). Это необходимо сделать после вызова хранимой процедуры [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql). Дополнительные сведения см. в статье [Создание принудительной подписки](../create-a-push-subscription.md).  
+    -   Для принудительной подписки, выполните процедуру [sp_addmergepushsubscription_agent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql) на издателе. Укажите **@subscriber**, **@subscriber_db**, **@publication**, учетные данные Windows, с которыми будет запускаться **@job_name** агент слияния на распространителе **@job_password**, и расписание для этого задания агента. Дополнительные сведения см. в разделе [Указание расписаний синхронизации](../specify-synchronization-schedules.md). Это необходимо сделать после вызова хранимой процедуры [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql). Дополнительные сведения см. в статье [Создание принудительной подписки](../create-a-push-subscription.md).  
   
 ## <a name="example"></a>Пример  
  Ниже приведен пример скрипта [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] , который создает публикацию транзакций для таблицы Product. Эта публикация поддерживает немедленное обновление с переключением на обновление отработки отказа. Значения по умолчанию были удалены для удобства чтения.  
@@ -187,14 +187,14 @@ ms.locfileid: "68210762"
   
  [!code-sql[HowTo#sp_createmergepullsub_NWpostupgrade](../../../snippets/tsql/SQL15/replication/howto/tsql/createnwpullsub.sql#sp_createmergepullsub_nwpostupgrade)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Create a Publication](../publish/create-a-publication.md)   
- [Create a Push Subscription](../create-a-push-subscription.md)   
- [Create a Pull Subscription](../create-a-pull-subscription.md)   
+ [Создание принудительной подписки](../create-a-push-subscription.md)   
+ [Создание подписки по запросу](../create-a-pull-subscription.md)   
  [Просмотр и изменение параметров безопасности репликации](../security/view-and-modify-replication-security-settings.md)   
  [MSSQL_ENG021797](../mssql-eng021797.md)   
  [MSSQL_ENG021798](../mssql-eng021798.md)   
- [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
+ [Основные понятия системных хранимых процедур репликации](../concepts/replication-system-stored-procedures-concepts.md)   
  [Обновление реплицируемых баз данных](../../../database-engine/install-windows/upgrade-replicated-databases.md)  
   
   

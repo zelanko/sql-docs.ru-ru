@@ -17,16 +17,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ec38404a32751330d7fefd974fafe3d571d3b11b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074783"
 ---
 # <a name="linked-measure-groups"></a>Связанные группы мер
   Связанная группа мер основана на другой группе мер в другом кубе в той же или другой базе данных служб Analysis Services. Можно использовать связанную группу мер, если требуется повторно использовать набор мер и соответствующие значения данных в нескольких кубах.  
   
- Корпорация Майкрософт рекомендует, чтобы исходные и связанные группы мер находились в решениях, которые выполняются на том же сервере. Связывание с группой мер на удаленном сервере планируется отменить в будущих выпусках (см. в разделе [нерекомендуемые функции служб Analysis Services в SQL Server 2014](../deprecated-analysis-services-features-in-sql-server-2014.md)).  
+ Корпорация Майкрософт рекомендует, чтобы исходные и связанные группы мер находились в решениях, которые выполняются на том же сервере. Связывание с группой мер на удаленном сервере запланировано на устаревшее в будущем выпуске (см. статью [устаревшие Analysis Services функции в SQL Server 2014](../deprecated-analysis-services-features-in-sql-server-2014.md)).  
   
 > [!IMPORTANT]  
 >  Связанные группы мер доступны только для чтения. Для получения самых последних изменений следует удалить и повторно создать все связанные группы мер на основе измененного исходного объекта. По этой причине копирование и вставка группы мер между проектами является альтернативным подходом, который следует рассматривать в том случае, если в будущем в группу мер необходимо будет вносить изменения.  
@@ -70,7 +70,7 @@ ms.locfileid: "66074783"
   
  Чтобы определить или использовать связанную группу мер, учетная запись службы Windows для экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] должна принадлежать к роли базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], имеющей права доступа `ReadDefinition` и `Read` в исходном экземпляре служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] на исходный куб и группу мер, или к роли «Администраторы» служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для исходного экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Определите связанные измерения](define-linked-dimensions.md)  
   
   

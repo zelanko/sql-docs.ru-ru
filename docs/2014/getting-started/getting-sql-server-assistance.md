@@ -42,10 +42,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cfa159a88cfc159e65fe3ec39b334a3f6e8c5c8b
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74683605"
 ---
 # <a name="getting-sql-server-assistance"></a>Получение помощи по SQL Server
@@ -86,14 +86,14 @@ ms.locfileid: "74683605"
 ## <a name="additional-online-information"></a>Дополнительные источники сведений в Интернете  
  Дополнительные [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] сведения можно найти на этих [!INCLUDE[msCoName](../includes/msconame-md.md)] веб-сайтах.  
   
-|Ресурс|Описание|  
+|Ресурс|Description|  
 |--------------|-----------------|  
 |[Microsoft SQL Server](https://go.microsoft.com/fwlink/?linkid=8504)|Предпродажные сведения об оценке [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] как средства для хранения данных и бизнес-аналитики.|  
 |[База знаний Майкрософт](https://go.microsoft.com/fwlink/?LinkId=42461)|Предоставляет доступное для поиска репозиторий [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] статей, [!INCLUDE[msCoName](../includes/msconame-md.md)] написанных по поддержке.|    
   
  Продукты [!INCLUDE[msCoName](../includes/msconame-md.md)] имеют сроки поддержки, которые определяют, как долго для каждой версии будет доступна поддержка. Служба поддержки [!INCLUDE[msCoName](../includes/msconame-md.md)] ведет страницу, в которой описываются сроки поддержки [!INCLUDE[msCoName](../includes/msconame-md.md)]. Страница содержит ссылки на другие страницы, в которых указана доступность поддержки [!INCLUDE[msCoName](../includes/msconame-md.md)] продуктов. Дополнительные сведения см. в разделе [жизненный цикл служба поддержки Майкрософт](https://go.microsoft.com/fwlink/?LinkId=98306).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование документации по продукту SQL Server](../2014-toc/index.yml)  
   
   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e07bd6ead9ce0dfc20249f5db50a8b0b78ba242a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832791"
 ---
 # <a name="column-statistics-profile-request-options-data-profiling-task"></a>Параметры запроса профиля статистики столбцов (задача «Профилирование данных»)
@@ -43,7 +43,7 @@ ms.locfileid: "62832791"
   
  Дополнительные сведения см. в подразделе «Параметры TableorView» данного раздела.  
   
- **Column**  
+ **Столбец**  
  Выберите существующий столбец для профилирования. Выберите **(\*)** , чтобы выполнить профилирование всех столбцов.  
   
  Дополнительные сведения см. в подразделе «Параметры столбца» данного раздела.  
@@ -69,7 +69,7 @@ ms.locfileid: "62832791"
  **RequestID**  
  Введите описательное имя для этого запроса профиля. Обычно не нужно менять автоматически сформированное значение.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Редактор задачи "Профилирование данных" (страница "Общие")](../general-page-of-integration-services-designers-options.md)   
  [Форма быстрого профиля одной таблицы (задача "Профилирование данных")](single-table-quick-profile-form-data-profiling-task.md)  
   

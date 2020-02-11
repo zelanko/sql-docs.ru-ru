@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 2b24d55720d6db5997bfa85c2621f0e8d58c5f95
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401194"
 ---
 # <a name="download-and-apply-microsoft-updates-for-analytics-platform-system"></a>Загрузка и применение обновлений Майкрософт для платформы аналитики
@@ -26,7 +26,7 @@ ms.locfileid: "74401194"
 >   
 > Не применяйте обновления Майкрософт во время использования устройства. Применение обновлений может привести к перезагрузке узлов устройств. Обновления следует применять во время периода обслуживания, когда устройство не используется.  
   
-### <a name="prerequisites"></a>Необходимые компоненты  
+### <a name="prerequisites"></a>Предварительные требования  
 Перед выполнением этих действий необходимо выполнить следующие действия.  
   
 -   Настройте службы WSUS на устройстве, выполнив инструкции в разделе [настройка Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform&#41;](configure-windows-server-update-services-wsus.md).  
@@ -161,7 +161,7 @@ C:\pdwinst\media\setup.exe /action="MicrosoftUpdate" /DomainAdminPassword="<pass
 C:\pdwinst\media\setup.exe /action="ReportMicrosoftUpdateClientStatus" /DomainAdminPassword="<password>"  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Удаление центра обновления Майкрософт &#40;система аналитики&#41;](uninstall-microsoft-updates.md)  
 [Применить исправления системы аналитики к системе &#40;Analytics Platform&#41;](apply-analytics-platform-system-hotfixes.md)  
 [Удаление исправлений системы аналитики &#40;Analytics Platform System&#41;](uninstall-analytics-platform-system-hotfixes.md)  

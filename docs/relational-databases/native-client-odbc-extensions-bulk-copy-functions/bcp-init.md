@@ -20,10 +20,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9b8e40091f88c4e9fc739f125a2e44715e62c9ee
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73782686"
 ---
 # <a name="bcp_init"></a>bcp_init
@@ -47,20 +47,20 @@ RETCODE bcp_init (
 - bcp_initW (Юникод)
 
 ## <a name="arguments"></a>Аргументы  
- *хдбк*  
+ *hdbc*  
  Дескриптор соединения ODBC с поддержкой массового копирования.  
   
- *сзтабле*  
+ *szTable*  
  Имя таблицы базы данных, в которую (или из которой) выполняется копирование. Это имя также может включать имя базы данных или владельца. Например, **Pubs. Gracie. titles**, **Pubs.. заголовки**, **Gracie. titles**и **titles** — это имена юридических таблиц.  
   
  Если *eDirection* имеет значение DB_OUT, *сзтабле* также может быть именем представления базы данных.  
   
  Если *eDirection* имеет DB_OUT и инструкция SELECT указывается с помощью [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) перед вызовом [bcp_exec](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) , **bcp_init** *сзтабле* должно быть установлено в NULL.  
   
- *сздатафиле*  
+ *szDataFile*  
  Имя пользовательского файла, в который или из которого выполняется копирование. Если данные копируются непосредственно из переменных с помощью [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md), задайте для *сздатафиле* значение null.  
   
- *сзеррорфиле*  
+ *szErrorFile*  
  Имя файла ошибок, заполняемого сообщениями о ходе работы, сообщениями об ошибках и копиями строк, которые по каким-либо причинам не могут быть скопированы из пользовательского файла в таблицу. Если значение NULL передается как *сзеррорфиле*, файл ошибок не используется.  
   
  *eDirection*  
@@ -69,8 +69,8 @@ RETCODE bcp_init (
 ## <a name="returns"></a>Возвращает  
  SUCCEED или FAIL.  
   
-## <a name="remarks"></a>Замечания  
- Вызовите **bcp_init** перед вызовом любой другой функции небольшого копирования. **bcp_init** выполняет необходимые операции инициализации для копирования данных между рабочей станцией и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+## <a name="remarks"></a>Remarks  
+ Вызовите **bcp_init** перед вызовом любой другой функции небольшого копирования. **bcp_init** выполняет необходимые операции инициализации для выполнения операций с массовым копированием данных между рабочей [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]станцией и.  
   
  Функция **bcp_init** должна быть предоставлена с помощью обработчика соединений ODBC, включенного для использования с функциями операций с массовым копированием. Чтобы включить этот маркер, используйте [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) с параметром SQL_COPT_SS_BCP, чтобы SQL_BCP_ON для выделенного, но не подключенного обработчика соединения. Попытка назначения атрибута для подключенного дескриптора приведет к ошибке.  
   
@@ -84,9 +84,9 @@ RETCODE bcp_init (
   
 -   При копировании в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] файл данных должен содержать данные для каждого столбца таблицы базы данных. При копировании на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] данные из всех столбцов в таблице, представлении или результирующем наборе инструкции SELECT базы данных копируются в файл данных.  
   
--   При копировании в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] порядковый номер столбца в файле данных должен совпадать с порядковым номером столбца таблицы базы данных. При копировании из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**bcp_exec** размещает данные на основе порядкового номера столбца в таблице базы данных.  
+-   При копировании в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] порядковый номер столбца в файле данных должен совпадать с порядковым номером столбца таблицы базы данных. При копировании [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]из **bcp_exec** помещает данные в зависимости от порядкового номера столбца в таблице базы данных.  
   
--   Если тип данных базы данных имеет переменную длину (например, **varbinary (22)** ) или столбец базы данных может содержать значения NULL, то данные в файле данных имеют префикс длины или значения NULL. Ширина признака изменяется в зависимости от типа данных и версии массового копирования.  
+-   Если тип данных базы данных имеет переменную длину (например, **varbinary (22)**) или столбец базы данных может содержать значения NULL, то данные в файле данных имеют префикс длины или значения NULL. Ширина признака изменяется в зависимости от типа данных и версии массового копирования.  
   
  Чтобы изменить значения формата данных, заданные для файла данных, вызовите [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) и [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md).  
   
@@ -223,7 +223,7 @@ int main() {
   
 ```  
 
-## <a name="see-also"></a>См. также раздел  
- [Функции массового копирования](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
+## <a name="see-also"></a>См. также:  
+ [Bulk Copy Functions](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

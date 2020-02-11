@@ -16,42 +16,42 @@ ms.assetid: b681d260-3dbb-47df-a616-4910d727add7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9fe4383e397c0fd06197be2ff25e6dbb876f6c0b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68037768"
 ---
 # <a name="c-data-types"></a>Типы данных C
-Типы данных ODBC C указывают тип данных C буферов, используемых для хранения данных в приложении.  
+Типы данных ODBC C указывают тип данных буферов C, используемых для хранения данных в приложении.  
   
- Все драйверы должны поддерживать все типы данных C. Это необходимо, поскольку все драйверы должны поддерживать все типы C, к которым можно преобразовать типы SQL, которые они поддерживают, и все драйверы поддерживают по крайней мере один символ типа SQL. Поскольку тип символа SQL можно преобразовать в и из всех типов C, все драйверы должны поддерживать все типы C.  
+ Все драйверы должны поддерживать все типы данных C. Это необходимо, так как все драйверы должны поддерживать все типы C, для которых поддерживается преобразование типов SQL, а все драйверы поддерживают по крайней мере один символ SQL. Поскольку символьный тип SQL можно преобразовать в типы и из всех типов C, все драйверы должны поддерживать все типы C.  
   
- Тип данных C указывается в **SQLBindCol** и **SQLGetData** функции с *TargetType* аргумент и в **SQLBindParameter**функционировать с *ValueType* аргумент. Также можно задать путем вызова **SQLSetDescField** задать поле SQL_DESC_CONCISE_TYPE в APD или Отменить, или путем вызова **SQLSetDescRec** с *тип* аргумента (и *подтип* аргумента при необходимости) и *DescriptorHandle* аргумент значение дескриптора, Отменить или APD.  
+ Тип данных C указывается в функциях **SQLBindCol** и **SQLGetData** с аргументом *TargetType* и в функции **SQLBindParameter** с аргументом *ValueType* . Его также можно указать с помощью вызова **SQLSetDescField** , чтобы задать поле SQL_DESC_CONCISE_TYPE АРД или APD, или путем вызова **SQLSetDescRec** с аргументом *типа* (и аргументом *подтипа* , если это необходимо), а аргументу *дескрипторхандле* задано значение Handle для АРД или APD.  
   
- В следующей таблице перечислены идентификаторы допустимый тип для типов данных C. В таблице также перечислены тип данных ODBC C, соответствующий каждому идентификатору и определение этого типа данных.  
+ В следующих таблицах перечислены допустимые идентификаторы типов данных C. В таблице также представлен тип данных ODBC C, соответствующий каждому идентификатору и определению этого типа данных.  
   
 |Идентификатор типа C|Определение типа ODBC C|Тип C|  
 |-----------------------|--------------------|------------|  
-|SQL_C_CHAR|SQLCHAR *|unsigned char *|  
-|SQL_C_WCHAR|SQLWCHAR *|wchar_t *|  
+|SQL_C_CHAR|SQLCHAR|unsigned char *|  
+|SQL_C_WCHAR|SQLWCHAR-|wchar_t *|  
 |SQL_C_SSHORT [j]|SQLSMALLINT|short int|  
-|SQL_C_USHORT [j]|SQLUSMALLINT|unsigned short int|  
-|SQL_C_SLONG [j]|SQLINTEGER|Long int|  
-|SQL_C_ULONG [j]|SQLUINTEGER|unsigned long int|  
-|SQL_C_FLOAT|SQLREAL|float|  
-|SQL_C_DOUBLE|SQLDOUBLE, SQLFLOAT|double|  
-|SQL_C_BIT|SQLCHAR|char без знака|  
-|SQL_C_STINYINT [j]|SQLSCHAR|char со знаком|  
-|SQL_C_UTINYINT [j]|SQLCHAR|char без знака|  
+|SQL_C_USHORT [j]|склусмаллинт|короткое целое без знака|  
+|SQL_C_SLONG [j]|SQLINTEGER|long int|  
+|SQL_C_ULONG [j]|SQLUINTEGER|длинное целое без знака|  
+|SQL_C_FLOAT|склреал|FLOAT|  
+|SQL_C_DOUBLE|SQLDOUBLE, СКЛФЛОАТ|double|  
+|SQL_C_BIT|SQLCHAR|Char без знака|  
+|SQL_C_STINYINT [j]|склсчар|signed char|  
+|SQL_C_UTINYINT [j]|SQLCHAR|Char без знака|  
 |SQL_C_SBIGINT|SQLBIGINT|_int64 [h]|  
-|SQL_C_UBIGINT|SQLUBIGINT|без знака _int64 [h]|  
-|SQL_C_BINARY|SQLCHAR *|unsigned char *|  
-|SQL_C_BOOKMARK [i]|ЗАКЛАДКА|unsigned long int [d]|  
-|SQL_C_VARBOOKMARK|SQLCHAR *|unsigned char *|  
-|Все типы данных C интервал|SQL_INTERVAL_STRUCT|См. в разделе [структура Interval C](../../../odbc/reference/appendixes/c-interval-structure.md) раздела ниже в этом приложении.|  
+|SQL_C_UBIGINT|склубигинт|неподписанный _int64 [h]|  
+|SQL_C_BINARY|SQLCHAR|unsigned char *|  
+|SQL_C_BOOKMARK [i]|Закладка|long int без знака [d]|  
+|SQL_C_VARBOOKMARK|SQLCHAR|unsigned char *|  
+|Все типы данных интервала C|SQL_INTERVAL_STRUCT|См. раздел [Структура интервалов C](../../../odbc/reference/appendixes/c-interval-structure.md) далее в этом приложении.|  
   
- **Идентификатор типа C** SQL_C_TYPE_DATE [c]  
+ **Идентификатор типа C** SQL_C_TYPE_DATE [C]  
   
  **Определение типа ODBC C** SQL_DATE_STRUCT  
   
@@ -65,7 +65,7 @@ struct tagDATE_STRUCT {
 } DATE_STRUCT;[a]  
 ```  
   
- **Идентификатор типа C** SQL_C_TYPE_TIME [c]  
+ **Идентификатор типа C** SQL_C_TYPE_TIME [C]  
   
  **Определение типа ODBC C** SQL_TIME_STRUCT  
   
@@ -79,7 +79,7 @@ struct tagTIME_STRUCT {
 } TIME_STRUCT;[a]  
 ```  
   
- **Идентификатор типа C** SQL_C_TYPE_TIMESTAMP [c]  
+ **Идентификатор типа C** SQL_C_TYPE_TIMESTAMP [C]  
   
  **Определение типа ODBC C** SQL_TIMESTAMP_STRUCT  
   
@@ -99,7 +99,7 @@ struct tagTIMESTAMP_STRUCT {
   
  **Идентификатор типа C** SQL_C_NUMERIC  
   
- **Определение типа ODBC C** помощью SQL_NUMERIC_STRUCT  
+ **Определение типа ODBC C** SQL_NUMERIC_STRUCT  
   
  **Тип C**  
   
@@ -114,7 +114,7 @@ struct tagSQL_NUMERIC_STRUCT {
   
  **Идентификатор типа C** SQL_C_GUID  
   
- **Определение типа ODBC C** SQLGUID  
+ **Определение типа ODBC C** склгуид  
   
  **Тип C**  
   
@@ -127,33 +127,33 @@ struct tagSQLGUID {
 } SQLGUID;[k]  
 ```  
   
- [a] значения года, месяца, дня, часа, минуты и второго полей в типы данных даты и времени C должны соответствовать ограничениям, григорианского календаря. (См. в разделе [ограничения григорианского календаря](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md) далее в этом приложении.)  
+ [a] значения полей год, месяц, день, час, минут и секунд в типах данных DateTime C должны соответствовать ограничениям григорианского календаря. (См. раздел [ограничения григорианского календаря](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md) далее в этом приложении.)  
   
- [b число миллиардных долей секунды и лежит в диапазоне от 0 до 999,999,999 (1 не более 1 миллиарда) значение поле дробной части. Например, поле дробной части для полсекунды значение 500,000,000, для разделителя доли секунды (1 миллисекунда) составляет 1 000 000, для миллионного доли секунды (1 микросекунде) 1000, а также для миллиардную долю секунды (1 наносекунде)-1.  
+ [b] значение поля "дробь" равно числу биллионсс секунды и диапазонам от 0 до 999 999 999 (1 меньше 1 000 000 000). Например, значение поля "дробь" для половины секунды равно 500 000 000, то есть доли секунды (одна миллисекунда) — 1 000 000, для миллионной части секунды (одна микросекунда) — 1 000, а для биллионс секунды (один наносекундных) — 1.  
   
- [c] в ODBC 2. *x*, типы данных date, time и timestamp C — SQL_C_DATE SQL_C_TIME и SQL_C_TIMESTAMP.  
+ [c] в ODBC 2. *x*, типы данных даты, времени и отметок времени C SQL_C_DATE, SQL_C_TIME и SQL_C_TIMESTAMP.  
   
- [d] ODBC 3 *.x* приложения должны использовать SQL_C_VARBOOKMARK, не SQL_C_BOOKMARK. Когда ODBC 3 *.x* приложение работает с ODBC 2. *x* драйвера ODBC 3 *.x* диспетчера драйверов сопоставляется SQL_C_BOOKMARK SQL_C_VARBOOKMARK.  
+ [d] приложения ODBC 3 *. x* должны использовать SQL_C_VARBOOKMARK, а не SQL_C_BOOKMARK. Когда приложение ODBC 3 *. x* работает с ODBC 2. драйвер *x* , диспетчер драйверов ODBC 3 *. x* будет сопоставлять SQL_C_VARBOOKMARK SQL_C_BOOKMARK.  
   
- [e] A номер хранится в *val* помощью SQL_NUMERIC_STRUCT структуры как масштабированное значение типа integer, в режиме прямым порядком байтов (крайнего левого байта, что младший байт). Например номер 10.001 основание 10, с масштабом 4, масштабируется до целого числа 100010. Так как это 186AA в шестнадцатеричном формате, то значение в помощью SQL_NUMERIC_STRUCT должно быть «AA 86 01 00 00... 00", с числом байтов, определяется SQL_MAX_NUMERIC_LEN **#define**.  
+ [e] число хранится в поле *Val* структуры SQL_NUMERIC_STRUCT как масштабируемое целое число, в режиме с прямым порядком байтов (самый левый байт является наименьшим значащим байтом). Например, число 10,001 с основанием 10 и масштабом 4, масштабируется до целого числа 100010. Так как это 186AA в шестнадцатеричном формате, значение в SQL_NUMERIC_STRUCT будет равно "AA 86 01 00 00... 00 ", с числом байтов, определенным **#defineом**SQL_MAX_NUMERIC_LEN.  
   
- Дополнительные сведения о **помощью SQL_NUMERIC_STRUCT**, см. в разделе [HOWTO: Получение числовых данных с помощью SQL_NUMERIC_STRUCT](retrieve-numeric-data-sql-numeric-struct-kb222831.md).  
+ Дополнительные сведения о **SQL_NUMERIC_STRUCT**см. [в разделе Практическое руководство. Извлечение числовых данных с помощью SQL_NUMERIC_STRUCT](retrieve-numeric-data-sql-numeric-struct-kb222831.md).  
   
- [f] точность и Масштаб поля данных SQL_C_NUMERIC введите areused для входных данных из приложения, а также для вывода от драйвера в приложение. При драйвер записывает числовое значение в помощью SQL_NUMERIC_STRUCT, свои собственные специфические для драйвера по умолчанию будет использоваться как значение для *точности* поля и он будет использовать значение в поле SQL_DESC_SCALE (дескриптор) приложения которое по умолчанию равно 0) для *масштабирования* поля. Приложение может предоставлять собственные значения для точности и масштаба, задав SQL_DESC_PRECISION и SQL_DESC_SCALE поля дескриптора приложения.  
+ [f] поля точности и масштаба SQL_C_NUMERIC типа данных ареусед для ввода из приложения и для вывода из драйвера в приложение. Когда драйвер записывает числовое значение в SQL_NUMERIC_STRUCT, оно будет использовать собственное значение по умолчанию, зависящее от драйвера, в качестве значения для поля *точность* , и будет использовать значения в поле SQL_DESC_SCALE дескриптора приложения (значение по умолчанию — 0) для поля *Scale* . Приложение может предоставлять собственные значения точности и масштаба, устанавливая поля SQL_DESC_PRECISION и SQL_DESC_SCALE дескриптора приложения.  
   
- [g] поле входа-1, если оно положительное, 0, если оно отрицательное.  
+ [g] поле знака имеет значение 1, если оно положительное, 0 (если отрицательное).  
   
- [h] _int64 не может быть передан в некоторых компиляторах.  
+ [h] _int64 могут быть не предоставлены некоторыми компиляторами.  
   
- [i] _SQL_C_BOOKMARK был объявлен устаревшим в ODBC 3 *.x*.  
+ [i] _SQL_C_BOOKMARK не рекомендуется использовать в ODBC 3 *. x*.  
   
- [j] _SQL_C_SHORT SQL_C_LONG и SQL_C_TINYINT были заменены в ODBC типы со знаком и без знака: SQL_C_SSHORT и SQL_C_USHORT, SQL_C_SLONG и SQL_C_ULONG и SQL_C_STINYINT и SQL_C_UTINYINT. ODBC 3 *.x* драйвер, должны работать с ODBC 2. *x* приложения должны поддерживать SQL_C_SHORT SQL_C_LONG и SQL_C_TINYINT, так как при вызове, диспетчер драйверов передает их через драйвер.  
+ [j] _SQL_C_SHORT, SQL_C_LONG и SQL_C_TINYINT были заменены в ODBC с помощью подписанных и неподписанных типов: SQL_C_SSHORT и SQL_C_USHORT, SQL_C_SLONG и SQL_C_ULONG, а SQL_C_STINYINT и SQL_C_UTINYINT. Драйвер ODBC 3 *. x* , который должен работать с ODBC 2. приложения *x* должны поддерживать SQL_C_SHORT, SQL_C_LONG и SQL_C_TINYINT, поскольку при их вызове диспетчер драйверов передает их в драйвер.  
   
- [k] SQL_C_GUID можно преобразовать только к SQL_CHAR или SQL_WCHAR.  
+ [k] SQL_C_GUID можно преобразовать только в SQL_CHAR или SQL_WCHAR.  
   
- Этот раздел содержит следующие подразделы.  
+ Этот раздел содержит следующий раздел.  
   
 -   [64-разрядные целочисленные структуры](../../../odbc/reference/appendixes/64-bit-integer-structures.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Типы данных C в ODBC](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)

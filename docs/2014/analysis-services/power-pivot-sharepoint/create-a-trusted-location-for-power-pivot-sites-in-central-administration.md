@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6c5dd66b72ff280431d29ae292af8fa1402095dc
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74684086"
 ---
 # <a name="create-a-trusted-location-for-powerpivot-sites-in-central-administration"></a>Create a trusted location for PowerPivot sites in Central Administration
@@ -22,7 +22,7 @@ ms.locfileid: "74684086"
   
   
   
-## <a name="prerequisites"></a>Необходимые компоненты  
+## <a name="prerequisites"></a>Предварительные требования  
  Для обозначения URL-адреса как надежного расположения пользователь должен быть администратором фермы или службы.  
   
  Необходимо знать URL-адрес веб-сайта SharePoint, содержащего галерею PowerPivot или другую библиотеку, в которой хранятся книги. Чтобы получить адрес, откройте сайт, содержащий библиотеку, щелкните правой кнопкой мыши **галерею PowerPivot**, выберите пункт **свойства**, а затем скопируйте первую часть адреса (URL), содержащую имя сервера и путь к сайту.  
@@ -61,9 +61,9 @@ ms.locfileid: "74684086"
   
 11. Нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Галерея PowerPivot](../../2014-toc/index.yml)  
  [Создание и настройка галереи PowerPivot](create-and-customize-power-pivot-gallery.md)   
- [Использование галереи PowerPivot](use-power-pivot-gallery.md)  
+ [использовать галерею PowerPivot](use-power-pivot-gallery.md)  
   
   

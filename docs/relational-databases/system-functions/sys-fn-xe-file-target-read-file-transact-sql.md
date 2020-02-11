@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 126b05adab3a07099f6c9110e18e54910f5b2f25
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73982990"
 ---
 # <a name="sysfn_xe_file_target_read_file-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "73982990"
   Читает файлы, создаваемые асинхронным целевым файловым объектом расширенных событий. Возвращается одно событие в каждой строке в формате XML.  
   
 > [!WARNING]  
->  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] принимают результаты трассировки, созданные в формате XEL-и XEM. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Расширенные события поддерживают только результаты трассировки в формате XEL-. Для чтения результатов трассировки в формате XEL рекомендуется использовать SQL Server Management Studio.    
+>  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]и [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] принимают результаты трассировки, созданные в формате XEL-и XEM. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Расширенные события поддерживают только результаты трассировки в формате XEL-. Для чтения результатов трассировки в формате XEL рекомендуется использовать SQL Server Management Studio.    
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,16 +48,16 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
   
 ## <a name="arguments"></a>Аргументы  
  *путь*  
- Путь к файлам для чтения. *путь* может содержать подстановочные знаки и включает имя файла. *путь* имеет тип **nvarchar (260)** . Значение по умолчанию отсутствует. В контексте базы данных SQL Azure это значение является URL-адресом HTTP для файла в службе хранилища Azure.
+ Путь к файлам для чтения. *путь* может содержать подстановочные знаки и включает имя файла. *путь* имеет тип **nvarchar (260)**. Значение по умолчанию отсутствует. В контексте базы данных SQL Azure это значение является URL-адресом HTTP для файла в службе хранилища Azure.
   
  *мдпас*  
- Путь к файлу метаданных, который соответствует файлу или файлам, указанным в аргументе *path* . *мдпас* имеет тип **nvarchar (260)** . Значение по умолчанию отсутствует. Начиная с SQL Server 2016, этот параметр может быть задан как null.
+ Путь к файлу метаданных, который соответствует файлу или файлам, указанным в аргументе *path* . *мдпас* имеет тип **nvarchar (260)**. Значение по умолчанию отсутствует. Начиная с SQL Server 2016, этот параметр может быть задан как null.
   
 > [!NOTE]  
->  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] не требует параметра *мдпас* . Однако он используется для поддержки обратной совместимости фалов журналов, сформированных в предыдущих версиях SQL Server.  
+>  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]не требуется параметр *мдпас* . Однако он используется для поддержки обратной совместимости фалов журналов, сформированных в предыдущих версиях SQL Server.  
   
  *initial_file_name*  
- Первый файл для чтения из *пути*. *initial_file_name* имеет тип **nvarchar (260)** . Значение по умолчанию отсутствует. Если в качестве аргумента указано **значение NULL** , считываются все файлы, найденные в *пути* .  
+ Первый файл для чтения из *пути*. *initial_file_name* имеет тип **nvarchar (260)**. Значение по умолчанию отсутствует. Если в качестве аргумента указано **значение NULL** , считываются все файлы, найденные в *пути* .  
   
 > [!NOTE]  
 >  *initial_file_name* и *initial_offset* являются парными аргументами. При указании значения для любого из этих аргументов необходимо также указать значение для второго аргумента.  
@@ -67,15 +67,15 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|module_guid|**uniqueidentifier**|Идентификатор GUID модуля событий. Не допускает значение NULL.|  
-|package_guid|**uniqueidentifier**|Идентификатор GUID пакета событий. Не допускает значение NULL.|  
+|module_guid|**UNIQUEIDENTIFIER**|Идентификатор GUID модуля событий. Не допускает значение NULL.|  
+|package_guid|**UNIQUEIDENTIFIER**|Идентификатор GUID пакета событий. Не допускает значение NULL.|  
 |object_name|**nvarchar(256)**|Имя события. Не допускает значение NULL.|  
-|event_data|**nvarchar(max)** ;|Содержимое события в формате XML. Не допускает значение NULL.|  
+|event_data|**nvarchar(max)**|Содержимое события в формате XML. Не допускает значение NULL.|  
 |file_name|**nvarchar(260)**|Имя файла, содержащего событие. Не допускает значение NULL.|  
 |file_offset|**bigint**|Смещение блока в файле, содержащем событие. Не допускает значение NULL.|  
-|timestamp_utc|**datetime2**|**Применимо к**: [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] и выше, а также [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br />Дата и время (часовой пояс UTC) события. Не допускает значение NULL.|  
+|timestamp_utc|**datetime2**|**Применимо к**: [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] и более [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]поздним и.<br /><br />Дата и время (часовой пояс UTC) события. Не допускает значение NULL.|  
 
   
 ## <a name="remarks"></a>Remarks  
@@ -93,7 +93,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 SELECT * FROM sys.fn_xe_file_target_read_file('C:\traces\*.xel', 'C:\traces\metafile.xem', null, null);  
 ```  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
  [Динамические административные представления расширенных событий](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
  [Представления каталога расширенных событий (Transact-SQL)](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [Расширенные события](../../relational-databases/extended-events/extended-events.md)  

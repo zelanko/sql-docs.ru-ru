@@ -18,16 +18,16 @@ ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a8e6a8187936e7a2f824315123937cf9c7eca9c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933869"
 ---
-# <a name="spdropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
+# <a name="sp_dropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Удаляет заданное пользовательское сообщение об ошибке из экземпляра [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Определяемые пользователем сообщения можно просматривать при помощи **sys.messages** представления каталога.  
+  Удаляет заданное пользовательское сообщение об ошибке из экземпляра [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Определяемые пользователем сообщения можно просматривать с помощью представления каталога **sys. messages** .  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,26 +40,26 @@ sp_dropmessage [ @msgnum = ] message_number
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @msgnum = ] message_number` — Это номер удаляемого сообщения. *message_number* должно быть определенное пользователем сообщение с номером более 50000. *message_number* — **int**, значение по умолчанию NULL.  
+`[ @msgnum = ] message_number`Номер сообщения для удаления. *message_number* должно быть определяемым пользователем сообщением, имеющим номер сообщения, превышающий 50000. *message_number* имеет **тип int**и значение по умолчанию NULL.  
   
-`[ @lang = ] 'language'` — Это язык сообщения. Если **все** указан, все языковые версии *message_number* удаляются. *Язык* — **sysname**, значение по умолчанию NULL.  
+`[ @lang = ] 'language'`Язык сообщения для удаления. Если указано значение **ALL** , то все языковые версии *message_number* удаляются. *Language* имеет тип **sysname**и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или 1 (неуспешное завершение)  
+ 0 (успех) или 1 (сбой).  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  Нет.  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется членство в **sysadmin** и **serveradmin** предопределенных ролей сервера.  
+ Требуется членство в предопределенных ролях сервера **sysadmin** и **serveradmin** .  
   
-## <a name="remarks"></a>Примечания  
- Если не **все** указывается для *языка*, всех остальных локализованных версий сообщения должны быть удалены перед США Английская версия сообщения может быть удален.  
+## <a name="remarks"></a>Remarks  
+ Если для *языка*не указано значение **ALL** , все локализованные версии сообщения должны быть удалены до тех пор, пока не будет удалена версия сообщения для английского языка (США).  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-dropping-a-user-defined-message"></a>A. Удаление пользовательских сообщений  
- В следующем примере удаляется пользовательское сообщение, номер `50001`, из **sys.messages**.  
+ В следующем примере удаляется определяемое пользователем сообщение Number `50001`из представления **sys. messages**.  
   
 ```  
 USE master;  
@@ -130,12 +130,12 @@ EXEC sp_dropmessage
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)   
- [sp_addmessage (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [&#41;инструкции RAISERROR &#40;Transact-SQL](../../t-sql/language-elements/raiserror-transact-sql.md)   
+ [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
  [sp_altermessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
  [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)   
- [sys.messages (Transact-SQL)](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [sys. messages &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

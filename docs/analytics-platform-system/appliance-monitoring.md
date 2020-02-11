@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: cec604ff1a93213fc6308455cadda90e6efa2d61
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401426"
 ---
 # <a name="appliance-monitoring-for-analytics-platform-system"></a>Мониторинг устройств для системы аналитики платформы
@@ -38,7 +38,7 @@ ms.locfileid: "74401426"
 Для мониторинга устройства доступно несколько средств.  
   
 Административная консоль  
-SQL Server PDW имеет консоль администрирования. Это веб-средство, которое отображает сведения о запросах, загрузках, резервном копировании и восстановлении, блокировках, сеансах, предупреждениях и состоянии устройства. Консоль администрирования работает на устройстве; Пользователи подключаются к консоли администрирования через Internet Explorer. Дополнительная информация:  
+SQL Server PDW имеет консоль администрирования. Это веб-средство, которое отображает сведения о запросах, загрузках, резервном копировании и восстановлении, блокировках, сеансах, предупреждениях и состоянии устройства. Консоль администрирования работает на устройстве; Пользователи подключаются к консоли администрирования через Internet Explorer. Дополнительные сведения см. в разделе:  
   
 -   [Мониторинг устройства с помощью консоли администрирования &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
   
@@ -63,7 +63,7 @@ SQL Server PDW имеет обширную интеграцию с Operations Ma
    
 ## <a name="Tasks"></a>Связанные задачи мониторинга  
   
-|Задача мониторинга|Описание|  
+|Задача мониторинга|Description|  
 |-------------------|---------------|  
 |Мониторинг устройства с помощью консоли администрирования.|[Мониторинг устройства с помощью консоли администрирования &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)|  
 |Мониторинг устройства с помощью системных представлений.|[Мониторинг устройства с помощью системных представлений &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-views.md)|  
@@ -80,7 +80,7 @@ SQL Server PDW имеет обширную интеграцию с Operations Ma
 <!-- MISSING LINKS |Monitor backups and restores.|[Monitor Backups and Restores &#40;SQL Server PDW&#41;](../sqlpdw/monitor-backups-and-restores-sql-server-pdw.md)|  -->  
 <!-- MISSING LINKS |Monitor the active queries.|[Monitoring Active Queries &#40;SQL Server PDW&#41;](../sqlpdw/monitoring-active-queries-sql-server-pdw.md)|  -->  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
 [Задачи управления устройством &#40;&#41;платформы аналитики](appliance-management-tasks.md)  
   

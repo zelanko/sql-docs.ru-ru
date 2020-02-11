@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 317f6f25e717a49f3b26c4cc09d957f8c38557f0
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73758319"
 ---
 # <a name="setting-large-data"></a>Присваивание больших данных
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  С помощью поставщика [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента OLE DB можно задать данные большого двоичного объекта, передав указатель на объект хранилища объекта-получателя.  
+  С помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента OLE DB поставщика можно задать данные большого двоичного объекта, передав указатель на объект хранилища объекта-получателя.  
   
  Потребитель создает объект хранилища, содержащий эти данные, и передает поставщику указатель на этот объект. Поставщик считывает данные из объекта в хранилище поставщика и записывает их в столбец BLOB.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "73758319"
   
 2.  Установите свойства в группе свойств DBPROPSET_ROWSET, чтобы включить возможность обновления для набора строк.  
   
-3.  Создайте набор привязок (по одной для каждого столбца) с помощью массива структур DBBINDING. Установите для элемента *wType* структуры DBBINDING значение DBTYPE_IUNKNOWN, а для элемента *pObject* значение указателя на созданную структуру DBOBJECT.  
+3.  Создайте набор привязок (по одной для каждого столбца) с помощью массива структур DBBINDING. Установите для элемента *wType* структуры DBBINDING значение DBTYPE_IUNKNOWN, а для элемента *pObject* — значение указателя на созданную структуру DBOBJECT.  
   
 4.  Создайте метод доступа на основе сведений о привязках в массиве структур DBBINDINGS.  
   
@@ -720,8 +720,8 @@ Exit:
 } //end function  
 ```  
   
-## <a name="see-also"></a>См. также статью  
- [Большие двоичные объекты и объекты OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
+## <a name="see-also"></a>См. также:  
+ [Большие двоичные объекты и OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
  [Использование типов больших значений](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   

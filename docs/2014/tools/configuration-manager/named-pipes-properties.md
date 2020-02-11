@@ -16,16 +16,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5d8b542e709ed7104d851652e75be41ae4d6afec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62911481"
 ---
 # <a name="named-pipes-properties"></a>Свойства именованных каналов
-  Используйте страницу **Протокол**в диалоговом окне **Свойства именованных каналов** , чтобы просмотреть или изменить именованный канал, который прослушивается [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , во время использования протокола именованных каналов.  
+  Используйте страницу **Протокол** в диалоговом окне **Свойства именованных каналов**, чтобы просмотреть или изменить именованный канал, который прослушивается [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], во время использования протокола именованных каналов.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен быть перезапущен, чтобы включить протокол, отключить протокол или изменить именованный канал.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]необходимо перезапустить, чтобы включить или отключить протокол или изменить именованный канал.  
   
 ## <a name="options"></a>Параметры  
  **Enabled**  
@@ -38,11 +38,11 @@ ms.locfileid: "62911481"
  Чтобы изменить именованный канал, введите новое имя канала в поле **Имя канала** , а затем остановите и перезапустите [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Так как **sql\query** хорошо известен в качестве именованного канала, используемого [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], изменение канала может помочь сократить риск проведения атак вредоносными программами.  
   
 ### <a name="example"></a>Пример  
- Введите **\\\\.\pipe\unit\app** , чтобы прослушивать канал **unit\app** .  
+ ** \\Введите \\.\pipe\unit\app** для прослушивания канала **канал unit\app** .  
   
- Введите **\\\\.\pipe\acct** , чтобы прослушивать канал **acct** .  
+ ** \\Введите \\.\pipe\acct** для прослушивания канала **acct** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Включение или отключение сетевого протокола сервера](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)   
  [Выбор сетевого протокола](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   
  [Создание допустимой строки подключения, использующей протокол именованных каналов](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-named-pipes.md)  

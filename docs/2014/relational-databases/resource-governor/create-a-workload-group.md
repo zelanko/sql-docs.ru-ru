@@ -14,16 +14,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1cd3b72418d0791d70d28d2dca0a434190a2d4a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68198928"
 ---
 # <a name="create-a-workload-group"></a>Создание группы рабочей нагрузки
   Группы рабочей нагрузки можно создавать в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
--   **Перед началом:**  [ограничения](#LimitationsRestrictions), [разрешения](#Permissions)  
+-   **Перед началом работы**  [ограничения](#LimitationsRestrictions), [разрешения](#Permissions)  
   
 -   **Создание группы рабочей нагрузки с использованием:**  [среды SQL Server Management Studio](#CreWGProp), [Transact-SQL](#CreWGTSQL)  
   
@@ -74,12 +74,12 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [регулятор ресурсов](resource-governor.md)   
  [Активация регулятора ресурсов](enable-resource-governor.md)   
  [Создание пула ресурсов](create-a-resource-pool.md)   
  [Изменение параметров группы рабочей нагрузки](change-workload-group-settings.md)   
- [Создать и проверить определяемую пользователем функцию-классификатор](create-and-test-a-classifier-user-defined-function.md)   
+ [Создание и проверка определяемой пользователем функции-классификатора](create-and-test-a-classifier-user-defined-function.md)   
  [CREATE WORKLOAD GROUP (Transact-SQL)](/sql/t-sql/statements/create-workload-group-transact-sql)   
  [ALTER RESOURCE GOVERNOR (Transact-SQL)](/sql/t-sql/statements/alter-resource-governor-transact-sql)  
   

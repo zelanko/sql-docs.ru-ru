@@ -1,5 +1,5 @@
 ---
-title: Учебник. Составление инструкций Transact-SQL | Документация Майкрософт
+title: Учебник. Составление инструкций Transact-SQL | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 67e09713fdec72313bde6ba81e1cc169467fda0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211197"
 ---
-# <a name="tutorial-writing-transact-sql-statements"></a>Учебник. Написание инструкций Transact-SQL
+# <a name="tutorial-writing-transact-sql-statements"></a>Учебник. Составление инструкций Transact-SQL
   Учебник «Составление инструкций [!INCLUDE[tsql](../includes/tsql-md.md)] ». Этот учебник предназначен для пользователей, не умеющих составлять инструкции SQL. Он поможет новым пользователям начать обучение с просмотра некоторых простых инструкций по созданию таблиц и вставке данных. Этот учебник использует язык [!INCLUDE[tsql](../includes/tsql-md.md)], [!INCLUDE[msCoName](../includes/msconame-md.md)] -реализацию стандарта SQL. Он представляет собой краткое введение в язык [!INCLUDE[tsql](../includes/tsql-md.md)] и не заменяет обучение языку [!INCLUDE[tsql](../includes/tsql-md.md)] . Инструкции в учебнике намеренно простые и не представляют всей сложности типичной производственной базы данных.  
   
 > [!NOTE]  
@@ -35,13 +35,13 @@ ms.locfileid: "68211197"
   
  Учебник разделен на три занятия.  
   
- [Занятие 1. Создание объектов базы данных](lesson-1-creating-database-objects.md)  
+ [Урок 1. Создание объектов базы данных](lesson-1-creating-database-objects.md)  
  В этом занятии будет создана база данных, таблица в ней, вставлены данные в таблицу, затем данные будут обновлены и прочитаны.  
   
- [Занятие 2. Настройка разрешений для объектов базы данных](lesson-2-configuring-permissions-on-database-objects.md)  
+ [Урок 2. Настройка разрешений для объектов базы данных](lesson-2-configuring-permissions-on-database-objects.md)  
  В этом занятии будут созданы имя входа и пользователь. Также будут созданы представление и хранимая процедура, и пользователю будет предоставлено разрешение на нее.  
   
- [Занятие 3. Удаление объектов базы данных](lesson-3-1-deleting-database-objects.md)  
+ [Урок 3. Удаление объектов базы данных](lesson-3-1-deleting-database-objects.md)  
  В этом занятии доступ к данным будет запрещен, данные из таблицы удалены, сама таблица тоже удалена вместе с базой данных.  
   
 ## <a name="requirements"></a>Требования  
@@ -56,6 +56,6 @@ ms.locfileid: "68211197"
 -   Internet Explorer 6 или более поздней версии.  
   
 > [!NOTE]  
->  При просмотре учебников рекомендуется добавить **Далее** и **Назад** кнопок панели инструментов средства просмотра документов.  
+>  При просмотре учебников рекомендуется добавить кнопки **Далее** и **назад** на панель инструментов средства просмотра документов.  
   
   

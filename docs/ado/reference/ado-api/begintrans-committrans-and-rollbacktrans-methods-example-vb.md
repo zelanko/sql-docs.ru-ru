@@ -1,5 +1,5 @@
 ---
-title: Примеры BeginTrans, CommitTrans и Rollbacktrans по методы (Visual Basic) | Документация Майкрософт
+title: Примеры методов примеры BeginTrans, CommitTrans и RollbackTrans (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: aa7de324-cd71-4bd0-8043-24229f4a785e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0cfb65adeab6f97faca44dc917396bc02fab2fa1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920456"
 ---
-# <a name="begintrans-committrans-and-rollbacktrans-methods-example-vb"></a>Примеры BeginTrans, CommitTrans и Rollbacktrans по методы (Visual Basic)
-В этом примере изменяется тип книги все книги по психологии в ***заголовки*** таблицы в базе данных. После [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) метод запускает транзакцию, которая изолирует все изменения, внесенные ***заголовки*** таблицы, [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) метод сохраняет изменения. Можно использовать [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) метод, чтобы отменить изменения, которые были сохранены с помощью [обновления](../../../ado/reference/ado-api/update-method.md) метод.  
+# <a name="begintrans-committrans-and-rollbacktrans-methods-example-vb"></a>Примеры методов примеры BeginTrans, CommitTrans и RollbackTrans (Visual Basic)
+В этом примере изменяется тип книги всех книг психологии в таблице ***titles*** базы данных. После того как метод [примеры BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) запускает транзакцию, которая изолирует все изменения, внесенные в таблицу ***titles*** , метод [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) сохраняет изменения. Для отмены изменений, сохраненных с помощью метода [Update](../../../ado/reference/ado-api/update-method.md) , можно использовать метод [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) .  
   
 ```  
 'BeginBeginTransVB  
@@ -131,6 +131,6 @@ End Sub
 'EndBeginTransVB  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Примеры BeginTrans, CommitTrans и RollbackTrans методы (ADO)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)   
+## <a name="see-also"></a>См. также:  
+ [Методы примеры BeginTrans, CommitTrans и RollbackTrans (ADO)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)   
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

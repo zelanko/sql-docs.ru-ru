@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 86f74710e99079d0acd28db09bcf1e4ba7c57865
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957248"
 ---
 # <a name="create-a-database-master-key"></a>Создание главного ключа базы данных
@@ -27,19 +27,19 @@ ms.locfileid: "74957248"
 
 - **Перед началом работы**
 
-  [Бюллетеня](#Security)
+  [Безопасность](#Security)
 
 - [Создание главного ключа базы данных с помощью Transact-SQL](#TsqlProcedure)
 
-## <a name="BeforeYouBegin"></a>Перед началом
+## <a name="BeforeYouBegin"></a> Перед началом
 
-### <a name="Security"></a>Бюллетеня
+### <a name="Security"></a> безопасность
 
-#### <a name="Permissions"></a>Чтение
+#### <a name="Permissions"></a> Permissions
 
 Требует разрешения CONTROL для базы данных.
 
-## <a name="TsqlProcedure"></a>Использование Transact-SQL
+## <a name="TsqlProcedure"></a> Использование Transact-SQL
 
 ### <a name="to-create-a-database-master-key"></a>Создание главного ключа базы данных
 

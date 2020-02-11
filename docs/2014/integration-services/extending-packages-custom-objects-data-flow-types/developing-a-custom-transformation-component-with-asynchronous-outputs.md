@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5bb52fc5c8a3789cc945a2ea850d0849335917e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62896635"
 ---
 # <a name="developing-a-custom-transformation-component-with-asynchronous-outputs"></a>Разработка пользовательского компонента преобразования с асинхронными выходами
@@ -37,7 +37,7 @@ ms.locfileid: "62896635"
   
  Столбцы, полученные от вышестоящих компонентов и доступные компоненту с синхронными выходами, автоматически становятся доступны компонентам, нижестоящим по отношению к данному компоненту. Поэтому компоненту с синхронными выходами не нужно определять выходные столбцы, чтобы обеспечить следующему компоненту столбцы и строки. С другой стороны, компоненту с асинхронными выходами нужно определять выходные столбцы и предоставлять строки нижестоящим компонентам. Следовательно, компоненту с асинхронными выходами приходится выполнять больше задач, как во время разработки, так и во время выполнения, а разработчику этого компонента приходится писать больше кода.  
   
- Службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] содержат несколько преобразований с асинхронными выходами. Например, преобразование «Сортировка» требует получения всех строк до того, как их можно будет сортировать, и использует для этого асинхронные выходы. После получения всех строк преобразование сортирует их и добавляет к выходу.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] содержит несколько преобразований с асинхронными выходами. Например, преобразование «Сортировка» требует получения всех строк до того, как их можно будет сортировать, и использует для этого асинхронные выходы. После получения всех строк преобразование сортирует их и добавляет к выходу.  
   
  В данном разделе приводится подробное описание разработок преобразований с асинхронными выходами. Дополнительные сведения о разработке компонентов-источников см. в разделе [Разработка пользовательского компонента источника](../extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md).  
   
@@ -318,9 +318,9 @@ Namespace Microsoft.Samples.SqlServer.Dts
 End Namespace  
 ```  
   
-![Значок служб Integration Services (маленький)](../media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
+![Значок Integration Services (маленький)](../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Разработка пользовательского компонента преобразования с синхронными выходами](../extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)   
  [Основные сведения о синхронных и асинхронных преобразованиях](../understanding-synchronous-and-asynchronous-transformations.md)   
  [Создание асинхронного преобразования с помощью компонента скрипта](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)  

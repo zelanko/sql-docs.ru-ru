@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4e4894fa7e05c863095fdca7b26f448efe176216
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781494"
 ---
 # <a name="remote-admin-connections-server-configuration-option"></a>Параметр конфигурации сервера «remote admin connections»
@@ -30,7 +30,7 @@ ms.locfileid: "62781494"
   
  В следующей таблице приведены возможные значения параметра remote admin connections.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |0|Означает, что разрешены только локальные соединения через DAC.|  
 |1|Означает, что разрешены удаленные соединения через DAC.|  
@@ -45,7 +45,7 @@ RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Диагностическое соединение для администраторов баз данных](diagnostic-connection-for-database-administrators.md)  
   
   

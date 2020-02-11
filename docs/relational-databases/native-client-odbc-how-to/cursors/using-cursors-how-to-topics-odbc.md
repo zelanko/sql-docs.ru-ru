@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8fa0411d322e3e16b8fe1bebf6f84fb626b0f82e
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73781498"
 ---
 # <a name="using-cursors-how-to-topics-odbc"></a>Использование инструкций по курсорам (ODBC)
@@ -25,15 +25,15 @@ ms.locfileid: "73781498"
 
   Чтобы использовать курсоры, сначала необходимо задать атрибуты соединения и инструкции, которые управляют режимом работы курсоров ODBC. Курсоры позволяют приложению получать несколько строк для каждой выборки и выполнять инструкции UPDATE, INSERT и DELETE для текущего положения курсора.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
 -   [Использование курсоров &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-cursors-odbc.md)  
   
--   [Использовать привязку &#40;к набору строк ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-rowset-binding-odbc.md)  
+-   [Использовать привязку набора строк &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-rowset-binding-odbc.md)  
   
 -   [Получение и обновление наборов строк &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/fetch-and-update-rowsets-odbc.md)  
   
-## <a name="see-also"></a>См. также раздел  
- [Инструкции по ODBC](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
+## <a name="see-also"></a>См. также:  
+ [ODBC How-to Topics](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   
   

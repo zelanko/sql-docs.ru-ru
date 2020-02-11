@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7e531a2d916cfc464c18aab931c268197fbf5982
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915031"
 ---
-# <a name="mssqlserver2515"></a>MSSQLSERVER_2515
+# <a name="mssqlserver_2515"></a>MSSQLSERVER_2515
     
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|2515|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
@@ -60,8 +60,8 @@ ms.locfileid: "62915031"
 ### <a name="results-of-running-repair-options"></a>Результаты выполнения инструкции REPAIR  
  Выполнение инструкции REPAIR сделает недействительными разностные битовые карты. Нельзя выполнить разностное резервное копирование до создания полной резервной копии базы данных. Полная резервная копия базы данных обеспечит основу для повторного создания разностной битовой карты.  
   
-## <a name="see-also"></a>См. также  
- [Создание полной резервной копии базы данных (SQL Server)](../backup-restore/create-a-full-database-backup-sql-server.md)   
+## <a name="see-also"></a>См. также:  
+ [Создание полной резервной копии базы данных &#40;SQL Server&#41;](../backup-restore/create-a-full-database-backup-sql-server.md)   
  [MSSQLSERVER_2516](mssqlserver-2516-database-engine-error.md)  
   
   

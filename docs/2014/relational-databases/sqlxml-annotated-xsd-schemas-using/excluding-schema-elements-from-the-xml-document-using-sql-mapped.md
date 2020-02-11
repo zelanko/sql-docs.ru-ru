@@ -1,5 +1,5 @@
 ---
-title: 'Исключение элементов схемы из итоговый документ XML с помощью sql: mapped (SQLXML 4.0) | Документация Майкрософт'
+title: 'Исключение элементов схемы из результирующего XML-документа с помощью SQL: сопоставлено (SQLXML 4,0) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -23,10 +23,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 865a9af892f948e77aa593d3713766e7860349b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013862"
 ---
 # <a name="excluding-schema-elements-from-the-resulting-xml-document-using-sqlmapped-sqlxml-40"></a>Исключение элементов схемы из результирующего XML-документа с помощью sql:mapped (SQLXML 4.0)
@@ -40,11 +40,11 @@ ms.locfileid: "66013862"
  Чтобы создать рабочие образцы на основе следующих примеров, необходимо выполнить определенные требования. Дополнительные сведения см. в разделе [требования для запуска примеров SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-the-sqlmapped-annotation"></a>A. Задание заметки sql:mapped  
- Предположим, существует схема XSD, полученная из другого источника. Эта схема XSD состоит из  **\<Person.Contact >** элемент с **ContactID**, **FirstName**, **LastName**, и **HomeAddress** атрибуты.  
+ Предположим, существует схема XSD, полученная из другого источника. Эта схема XSD состоит из элемента ** \<Person. Contact>** с атрибутами **ContactID**, **FirstName**, **LastName**и **HomeAddress** .  
   
- При сопоставлении этой схемы XSD с таблицей Person.Contact в базе данных AdventureWorks, `sql:mapped` заметка указывается для **HomeAddress** атрибут, поскольку таблица Employees не хранятся домашние адреса сотрудников. В результате этот атрибут не сопоставлен с базой данных и не возвращается в результирующем XML-документе в ответ на запрос XPath к схеме сопоставления.  
+ При сопоставлении этой схемы XSD с таблицей Person. Contact в базе данных `sql:mapped` AdventureWorks в атрибуте **HomeAddress** указывается, потому что в таблице Employees не хранятся домашние адреса сотрудников. В результате этот атрибут не сопоставлен с базой данных и не возвращается в результирующем XML-документе в ответ на запрос XPath к схеме сопоставления.  
   
- Для остальной части схемы используется сопоставление по умолчанию. **\<Person.Contact >** элемент сопоставляется с таблицей Person.Contact, а все атрибуты сопоставляются со столбцами с тем же именем в таблице Person.Contact.  
+ Для остальной части схемы используется сопоставление по умолчанию. Элемент ** \<Person. Contact>** сопоставляется с таблицей Person. Contact, а все атрибуты сопоставляются со столбцами с тем же именем в таблице Person. Contact.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -83,7 +83,7 @@ ms.locfileid: "66013862"
   
 3.  Создайте и запустите тестовый скрипт SQLXML 4.0 (Sqlxml4test.vbs), чтобы выполнить шаблон.  
   
-     Дополнительные сведения см. в разделе [использование объектов ADO для выполнения запросов SQLXML](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Дополнительные сведения см. [в разделе Использование ADO для выполнения запросов SQLXML](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Результирующий набор:  
   
@@ -103,7 +103,7 @@ ms.locfileid: "66013862"
   
  Обратите внимание, что поля ContactID, FirstName и LastName присутствуют, а HomeAddress — нет, потому что в схеме сопоставления было задано значение 0 для атрибута `sql:mapped`.  
   
-## <a name="see-also"></a>См. также  
- [По умолчанию осуществляется сопоставление элементов и атрибутов с таблицами и столбцами XSD &#40;SQLXML 4.0&#41;](default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
+## <a name="see-also"></a>См. также:  
+ [Сопоставление элементов и атрибутов XSD с таблицами и столбцами по умолчанию &#40;SQLXML 4,0&#41;](default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
   
   

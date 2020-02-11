@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_enable_db (Transact-SQL) | Документация Майкрософт
+title: sys. sp_cdc_enable_db (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ ms.assetid: 176d83b3-493d-43cd-800e-aa123c3bdf17
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 87cb8f207d85220b88ef00d65fd4704b21becf63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68106501"
 ---
-# <a name="sysspcdcenabledb-transact-sql"></a>sys.sp_cdc_enable_db (Transact-SQL)
+# <a name="syssp_cdc_enable_db-transact-sql"></a>sys.sp_cdc_enable_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Включает систему отслеживания измененных данных для текущей базы данных. Эту процедуру необходимо выполнить в базе данных, чтобы для таблиц в этой базе можно было включить систему отслеживания измененных данных. Система отслеживания измененных данных регистрирует действия по вставке, обновлению и удалению, применяемые к таблицам, для которых включена система, предоставляя сведения об операциях изменения в легко обрабатываемом реляционном формате. Данные столбца, зеркально копирующего структуру столбцов отслеживаемой исходной таблицы, регистрируются для измененных строк вместе с метаданными, необходимыми для применения изменений к целевой среде.  
@@ -46,15 +46,15 @@ sys.sp_cdc_enable_db
 ```  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или 1 (неуспешное завершение)  
+ 0 (успех) или 1 (сбой).  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  None  
   
-## <a name="remarks"></a>Примечания  
- Невозможно включить сбор данных об изменениях в [системных баз данных](../../relational-databases/databases/system-databases.md) или базы данных распространителя.  
+## <a name="remarks"></a>Remarks  
+ Система отслеживания измененных данных не может быть включена в [системных базах данных](../../relational-databases/databases/system-databases.md) или базах данных распространителя.  
   
- Процедура sys.sp_cdc_enable_db создает объекты отслеживания измененных данных, действующие в области базы данных, включая таблицы метаданных и триггеры DDL. Он также создает схему cdc и пользователя базы данных cdc и устанавливает столбец is_cdc_enabled записи базы данных в [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) представление 1 каталога.  
+ Процедура sys.sp_cdc_enable_db создает объекты отслеживания измененных данных, действующие в области базы данных, включая таблицы метаданных и триггеры DDL. Он также создает схему CDC и пользователя базы данных CDC и задает в столбце is_cdc_enabled для записи базы данных в представлении каталога [sys. databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) значение 1.  
   
 ## <a name="permissions"></a>Разрешения  
  Требует членства в предопределенной роли сервера sysadmin.  
@@ -69,7 +69,7 @@ EXECUTE sys.sp_cdc_enable_db;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [sys.sp_cdc_disable_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [sys. sp_cdc_disable_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md)  
   
   

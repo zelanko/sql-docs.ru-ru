@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 22b8ed87ea78424049f1dc42513826ef032b3654
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74685348"
 ---
 # <a name="configuration-and-administration-of-a-report-server-reporting-services-sharepoint-mode"></a>Настройка и администрирование сервера отчетов (режим интеграции с SharePoint служб Reporting Services)
@@ -27,21 +27,21 @@ ms.locfileid: "74685348"
   
     -   [Диспетчер предупреждений данных для пользователей SharePoint](../../2014/reporting-services/data-alert-manager-for-sharepoint-users.md)  
   
-    -   [Создание и управление подписками для серверов отчетов в режиме интеграции с SharePoint](subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
+    -   [Создание подписок для серверов отчетов, работающих в режиме интеграции с SharePoint, и управление этими подписками](subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
   
-    -   [Обновление учетных данных в источниках данных отчета с сайта SharePoint](report-data/update-credentials-in-report-data-sources-from-a-sharepoint-site.md)  
+    -   [Обновление учетных данных в источниках данных отчетов с сайта SharePoint](report-data/update-credentials-in-report-data-sources-from-a-sharepoint-site.md)  
   
     -   [Управление общими наборами данных](report-data/manage-shared-datasets.md)  
   
     -   [Установка параметров опубликованного отчета &#40;Reporting Services в режиме интеграции с SharePoint&#41;](report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)  
   
-    -   [Настройка параметров обработки &#40;Reporting Services в режиме интеграции с SharePoint&#41;](../../2014/reporting-services/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
+    -   [Установка параметров обработки (службы Reporting Services в режиме интеграции с SharePoint)](../../2014/reporting-services/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
   
     -   [Параметры обновления кэша &#40;диспетчер отчетов&#41;](../../2014/reporting-services/cache-refresh-options-report-manager.md)  
   
 -   [Компоненты семейства веб-сайтов служб Reporting Services](../../2014/reporting-services/reporting-services-site-collection-features.md)  
   
--   [Активация функций интеграции сервера отчетов и Power View в SharePoint](activate-the-report-server-and-power-view-integration-features-in-sharepoint.md)  
+-   [Активация функций интеграции семейства веб-сайтов с сервером отчетов и Power View в SharePoint](activate-the-report-server-and-power-view-integration-features-in-sharepoint.md)  
   
 -   [Reporting Services параметры сайта и компоненты сайта&#40;режиме интеграции с SharePoint&#41;](../../2014/reporting-services/reporting-services-site-settings-and-site-features-sharepoint-mode.md)  
   
@@ -51,9 +51,9 @@ ms.locfileid: "74685348"
   
 -   [Отчеты в локальном и подключенном режимах в средстве просмотра отчетов &#40;Reporting Services в режиме интеграции с SharePoint&#41;](../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)  
   
--   [Отправка документов в библиотеку SharePoint &#40;Reporting Services в режиме интеграции с SharePoint&#41;](../../2014/reporting-services/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)  
+-   [Загрузка документов в библиотеку SharePoint (службы Reporting Services в режиме SharePoint)](../../2014/reporting-services/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)  
   
--   [Настройка параметров обработки &#40;Reporting Services в режиме интеграции с SharePoint&#41;](../../2014/reporting-services/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
+-   [Установка параметров обработки (службы Reporting Services в режиме интеграции с SharePoint)](../../2014/reporting-services/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
   
  Дополнительные общие сведения о службах [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] см. в разделе [Службы Reporting Services (SSRS)](create-deploy-and-manage-mobile-and-paginated-reports.md) электронной документации по [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Дополнительные сведения о других компонентах, средствах и ресурсах [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] см. в [электронной документации по SQL Server](../2014-toc/index.yml).  
   

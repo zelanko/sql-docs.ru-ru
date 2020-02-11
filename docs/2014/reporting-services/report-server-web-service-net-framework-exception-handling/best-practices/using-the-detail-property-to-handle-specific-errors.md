@@ -15,16 +15,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f45118f75161fc8877edad53bce9abef4f5e00a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63046116"
 ---
 # <a name="using-the-detail-property-to-handle-specific-errors"></a>Использование свойства Detail для обработки определенных ошибок
   В ходе дальнейшей классификации исключений службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] возвращают дополнительные сведения об ошибках в свойстве **InnerText** дочерних элементов свойства **Detail** исключения SOAP. Так как свойство **Detail** является объектом **XmlNode**, с помощью приведенного ниже кода можно обращаться к внутреннему тексту дочернего элемента **Message**.  
   
- Список всех доступных дочерних элементов в свойстве **Detail** см. в разделе [Свойство Detail](../soapexception-class/detail-property.md). Дополнительные сведения см. в разделе "Свойство Detail" в документации по пакету SDK [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
+ Список всех доступных дочерних элементов в свойстве **Detail** см. в разделе [Свойство Detail](../soapexception-class/detail-property.md). Дополнительные сведения см. в разделе "свойство Detail" в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] документации по пакету SDK.  
   
 ```vb  
 Try  
@@ -82,7 +82,7 @@ Console.WriteLine(ex.Detail("ErrorCode").InnerXml)
 Console.WriteLine(ex.Detail["ErrorCode"].InnerXml);  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Введение в обработку исключений в службах Reporting Services](../introducing-exception-handling-in-reporting-services.md)   
  [Класс SoapException в службах Reporting Services](../soapexception-class/reporting-services-soapexception-class.md)   
  [Таблица ошибок SoapException](../soapexception-class/soapexception-errors-table.md)  

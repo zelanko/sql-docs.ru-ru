@@ -18,34 +18,34 @@ ms.assetid: 808661eb-0d7c-4e6d-8e40-9dc3bef3d77a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bc5b2e2bce410309656bad5591a3df90781cc8bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932228"
 ---
 # <a name="mode-property-ado"></a>Свойство Mode (ADO)
-Указывает доступные разрешения для изменения данных в [подключения](../../../ado/reference/ado-api/connection-object-ado.md), [записи](../../../ado/reference/ado-api/record-object-ado.md), или [Stream](../../../ado/reference/ado-api/stream-object-ado.md) объекта.  
+Указывает доступные разрешения для изменения данных в [соединении](../../../ado/reference/ado-api/connection-object-ado.md), [записи](../../../ado/reference/ado-api/record-object-ado.md)или объекте [потока](../../../ado/reference/ado-api/stream-object-ado.md) .  
   
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
- Возвращает или задает [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) значение. Значение по умолчанию для **подключения** — **adModeUnknown**. Значение по умолчанию для **записи** объект **adModeRead**. Значение по умолчанию для **Stream** связанные с базового источника (открыть URL-адрес, как источник или как значение по умолчанию **Stream** из **записи**) является  **adModeRead**. Значение по умолчанию для **Stream** не связана с основной источник (экземпляр в памяти) — **adModeUnknown**.  
+ Задает или возвращает значение [коннектмодинум](../../../ado/reference/ado-api/connectmodeenum.md) . Значение по умолчанию для **соединения** — **адмодеункновн**. Значение по умолчанию для объекта **Record** — **адмодереад**. Значение по умолчанию для **потока** , связанного с базовым источником (открытым с URL-адресом в качестве источника или в качестве **потока** по умолчанию **записи**), — **адмодереад**. Значение по умолчанию для **потока** , не связанного с базовым источником (экземпляром в памяти), — **адмодеункновн**.  
   
-## <a name="remarks"></a>Примечания  
- Используйте **режим** свойство задание или возврат права доступа используется поставщиком для текущего соединения. Можно задать **режим** свойства только тогда, когда **подключения** объект закрыт.  
+## <a name="remarks"></a>Remarks  
+ Используйте свойство **mode** , чтобы задать или вернуть разрешения на доступ, используемые поставщиком в текущем соединении. Свойство **mode** можно задать только в том случае, если объект **соединения** закрыт.  
   
- Для **Stream** объекта, если режим доступа не указано, оно наследуется из источника, используемый для открытия **Stream** объекта. Например если **Stream** открывается из **записи** объекта по умолчанию, то он открывается в один и тот же режим как **записи**.  
+ Для объекта **потока** , если режим доступа не указан, он наследуется из источника, используемого для открытия объекта **потока** . Например, если **поток** открыт из объекта **Record** , по умолчанию он открывается в том же режиме, что и **запись**.  
   
- Это свойство является чтение и запись, пока объект является закрытым или только для чтения, пока открыт объект.  
+ Это свойство доступно для чтения и записи, пока объект закрыт и доступен только для чтения, пока открыт объект.  
   
 > [!NOTE]
->  **Удаленное использование службы данных** при использовании на стороне клиента **подключения** объекта, **режим** свойство может устанавливаться только **adModeUnknown**.  
+>  **Использование удаленной службы данных** При использовании объекта **подключения** на стороне клиента для свойства **mode** можно задать только значение **адмодеункновн**.  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
   
 ||||  
 |-|-|-|  
 |[Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Объект Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|[Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
   
-## <a name="see-also"></a>См. также  
- [Примеры IsolationLevel и Mode свойства (Visual Basic)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vb.md)   
- [Примеры IsolationLevel и Mode свойства (Visual C++)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vc.md)   
+## <a name="see-also"></a>См. также:  
+ [Пример свойств IsolationLevel и Mode (Visual Basic)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vb.md)   
+ [Пример свойств IsolationLevel и Mode (Visual c++)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vc.md)   

@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 53ab22f96020080e28a92975c4d78d6ca3215d57
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74095968"
 ---
 # <a name="how-to-create-a-visual-c-smo-project-in-visual-studio-net"></a>Создание проекта SMO на языке Visual C# в среде Visual Studio .NET
@@ -25,15 +25,15 @@ ms.locfileid: "74095968"
 
   В данном разделе описывается, как построить простое консольное приложение командной строки SMO.  
   
- В этом примере импортируются пространства имен, что позволяет программе ссылаться на типы объектов SMO. Импорт пространства имен **агента** является необязательным. Его следует выполнить при написании программы, в которой используется агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для установления безопасного соединения с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]требуется **Общее** пространство имен. Пространство имен **SqlClient** используется для обработки ошибок исключений SQL.  
+ В этом примере импортируются пространства имен, что позволяет программе ссылаться на типы объектов SMO. Импорт пространства имен **агента** является необязательным. Его следует выполнить при написании программы, в которой используется агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для установления безопасного соединения с экземпляром требуется **Общее** пространство имен [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Пространство имен **SqlClient** используется для обработки ошибок исключений SQL.  
   
 ### <a name="creating-a-visual-c-smo-project-in-visual-studionet"></a>Создание проекта SMO на языке Visual C# в среде Visual Studio.NET  
   
 1. Запуск Visual Studio
   
-2. В меню **файл** выберите пункт **создать** , а затем **проект**.  Откроется диалоговое окно **Создание проекта** .   
+2. В меню **файл** выберите пункт **создать** , а затем **проект**.  Раскроется диалоговое окно **Новый проект**.   
   
-3. На панели **установленные** [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] перейдите к **шаблонам**\\**Visual C#** \\**Windows** и выберите **консольное приложение**.  
+3. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] На панели **установки** перейдите в раздел **шаблоны**\\**Visual C#**\\**окна** и выберите **консольное приложение**.  
   
 4. Используемых В текстовом поле **имя** введите имя нового приложения.  
 

@@ -19,13 +19,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b0326330e3d2052e8e997a293f666a8fc725391b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62689080"
 ---
-# <a name="bcpdone"></a>bcp_done
+# <a name="bcp_done"></a>bcp_done
   Завершает массовое копирование переменных программы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , выполненное с помощью функции [bcp_sendrow](bcp-sendrow.md).  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -40,16 +40,16 @@ hdbc
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *HDBC*  
+ *hdbc*  
  Дескриптор соединения ODBC с поддержкой массового копирования.  
   
 ## <a name="returns"></a>Возвращает  
  Число строк окончательно сохраняется после последнего вызова функции [bcp_batch](bcp-batch.md) или -1 в случае ошибки.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Вызов функции **bcp_done** после последнего вызова [bcp_sendrow](bcp-sendrow.md) или [bcp_moretext](bcp-moretext.md). Сбой вызова функции **bcp_done** после копирования всех результатов данных в ошибки.  
   
-## <a name="see-also"></a>См. также  
- [Функции массового копирования](sql-server-driver-extensions-bulk-copy-functions.md)  
+## <a name="see-also"></a>См. также:  
+ [Bulk Copy Functions](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

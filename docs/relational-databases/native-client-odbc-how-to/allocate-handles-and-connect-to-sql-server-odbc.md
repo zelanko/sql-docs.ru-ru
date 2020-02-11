@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ce294636c4d01a143b640126832bc6cca31ece14
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73782067"
 ---
 # <a name="allocate-handles-and-connect-to-sql-server-odbc"></a>Выделение дескрипторов и соединение с SQL Server (ODBC)
@@ -42,11 +42,11 @@ ms.locfileid: "73782067"
   
 7.  При необходимости вызовите [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) , чтобы задать параметры соединения, или вызовите [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) , чтобы получить параметры соединения.  
   
-8.  Вызовите SQLConnect, чтобы использовать существующий источник данных для подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+8.  Вызовите SQLConnect, чтобы использовать существующий источник данных для подключения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]к.  
   
      или  
   
-     Вызовите [SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md) , чтобы использовать строку подключения для подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Вызовите [SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md) , чтобы использовать строку подключения для подключения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]к.  
   
      Минимальная строка соединения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет одну из двух форм:  
   
@@ -59,23 +59,23 @@ ms.locfileid: "73782067"
   
      \- или -  
   
-     Вызывайте [SQLBrowseConnect](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md) несколько раз в итеративном виде, чтобы создать строку подключения и подключиться к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Вызывайте [SQLBrowseConnect](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md) несколько раз в итеративном виде для создания строки подключения и подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 9. При необходимости вызовите [SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md) , чтобы получить атрибуты и поведение драйвера для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] источника данных.  
   
 10. Выделите и используйте инструкции.  
   
-11. Вызовите SQLDisconnect, чтобы отключиться от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и сделать маркер соединения доступным для нового соединения.  
+11. Вызовите SQLDisconnect, чтобы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отключиться от и сделать маркер соединения доступным для нового соединения.  
   
 12. Вызовите [SQLFreeHandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md) с **параметром handletype** SQL_HANDLE_DBC, чтобы освободить маркер подключения.  
   
 13. Вызовите **SQLFreeHandle** с **параметром handletype** SQL_HANDLE_ENV, чтобы освободить обработчик среды.  
   
 > [!IMPORTANT]  
->  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с помощью [API-интерфейса шифрования Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, следует зашифровать их с помощью [API шифрования Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ## <a name="example"></a>Пример  
- В этом примере показан вызов **SQLDriverConnect** для подключения к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] без использования существующего источника данных ODBC. Передавая неполную строку подключения в **SQLDriverConnect**, драйвер ODBC запрашивает у пользователя ввод недостающих данных.  
+ В этом примере показан вызов **SQLDriverConnect** для подключения к экземпляру, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не требуя наличия существующего источника данных ODBC. Передавая неполную строку подключения в **SQLDriverConnect**, драйвер ODBC запрашивает у пользователя ввод недостающих данных.  
   
 ```  
 #define MAXBUFLEN   255  

@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 932bb271d7d38a1dfec411dca4ed5b1696ab924f
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73763207"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Метода IBCPSession2:: BCPSetBulkMode предоставляет альтернативу [IBCPSession:: &#40;BCPColFmt OLE DB&#41; ](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) для указания формата столбца. В отличие от IBCPSession:: BCPColFmt, который устанавливает атрибуты формата отдельных столбцов, метода IBCPSession2:: BCPSetBulkMode задает все атрибуты.  
+  Метода IBCPSession2:: BCPSetBulkMode предоставляет альтернативу [IBCPSession:: BCPColFmt &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) для указания формата столбца. В отличие от IBCPSession:: BCPColFmt, который устанавливает атрибуты формата отдельных столбцов, метода IBCPSession2:: BCPSetBulkMode задает все атрибуты.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -65,14 +65,14 @@ HRESULT BCPSetBulkMode (
 |**E_INVALIDARG**|Недопустимое значение аргумента.|  
 |**E_OUTOFMEMORY**|Ошибка, связанная с нехваткой памяти.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Метода IBCPSession2:: BCPSetBulkMode можно использовать для выполнения полного копирования из запроса или таблицы. При использовании метода IBCPSession2::BCPSetBulkMode для массового копирования из инструкции запроса его необходимо вызывать до вызова метода `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, ...)` для указания инструкции запроса.  
   
  В рамках одной команды не следует сочетать синтаксис вызова RPC с синтаксисом пакетных запросов (например,`{rpc func};SELECT * from Tbl`).  Это вызовет ICommandPrepare::P готовка, чтобы вернуть ошибку и предотвратить получение метаданных. Если в рамках одной команды требуется объединить выполнение хранимой процедуры и пакетный запрос, то следует использовать синтаксис ODBC CALL (например,`{call func}; SELECT * from Tbl`).  
   
  В следующей таблице перечислены константы для параметра *property* .  
   
-|Свойство|Описание|  
+|Свойство|Description|  
 |--------------|-----------------|  
 |BCP_OUT_CHARACTER_MODE|Указывает символьный режим вывода.<br /><br /> Соответствует параметру-c в BCP. EXE, и для IBCPSession:: BCPColFmt со свойством *еусердататипе* установлено значение **BCP_TYPE_SQLCHARACTER**.|  
 |BCP_OUT_WIDE_CHARACTER_MODE|Указывает режим вывода в Юникоде.<br /><br /> Соответствует параметру-w в BCP. EXE и IBCPSession:: BCPColFmt со свойством *еусердататипе* , имеющим значение **BCP_TYPE_SQLNCHAR**.|  
@@ -361,7 +361,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Метода IBCPSession2 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession2-ole-db.md)  
   
   

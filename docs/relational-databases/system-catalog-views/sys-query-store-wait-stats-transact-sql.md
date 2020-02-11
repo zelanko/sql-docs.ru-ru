@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6bff80fbe2b5022e12eca58de42192a3a1bb18d1
-ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74190373"
 ---
 # <a name="sysquery_store_wait_stats-transact-sql"></a>sys. query_store_wait_stats (Transact-SQL)
@@ -32,21 +32,21 @@ ms.locfileid: "74190373"
 
   Содержит сведения о времени ожидания для запроса.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |**wait_stats_id**|**bigint**|Идентификатор строки, представляющей статистику ожидания для plan_id, runtime_stats_interval_id, execution_type и wait_category. Он уникален только за прошлые интервалы статистики времени выполнения. Для текущего активного интервала может существовать несколько строк, представляющих статистику ожидания для плана, на который ссылается plan_id, с типом выполнения, представленным execution_type, и категорией ожидания, представленной wait_category. Как правило, одна строка представляет статистику ожидания, записанную на диск, а другие (s) — состояние в памяти. Таким образом, чтобы получить фактическое состояние для каждого интервала, необходимо объединить метрики, группировать по plan_id, runtime_stats_interval_id, execution_type и wait_category. |  
 |**plan_id**|**bigint**|Внешний ключ. Присоединяет к [sys. query_store_plan &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|  
 |**runtime_stats_interval_id**|**bigint**|Внешний ключ. Присоединяет к [sys. query_store_runtime_stats_interval &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
 |**wait_category**|**tinyint**|Типы ожидания распределяются по категориям в таблице ниже, а затем время ожидания вычисляется по этим категориям ожидания. Для различных категорий ожидания требуется другой анализ для устранения проблемы, но типы ожидания из одной категории ведут к аналогичным действиям по устранению неполадок, а предоставление соответствующего запроса в дополнение к ожиданиям — отсутствие элемента для завершения Большая часть такого исследования успешно выполнена.|
-|**wait_category_desc**|**nvarchar(128)**|Текстовое описание поля "Категория ожидания" см. в таблице ниже.|
+|**wait_category_desc**|**nvarchar(128**|Текстовое описание поля "Категория ожидания" см. в таблице ниже.|
 |**execution_type**|**tinyint**|Определяет тип выполнения запроса:<br /><br /> 0 — регулярное выполнение (успешно завершено)<br /><br /> 3. инициированное клиентом прерывание выполнения<br /><br /> 4 — выполнение прерванного исключения|  
-|**execution_type_desc**|**nvarchar(128)**|Текстовое описание поля "тип выполнения":<br /><br /> 0 — обычный<br /><br /> 3 — прервано<br /><br /> 4 — исключение|  
+|**execution_type_desc**|**nvarchar(128**|Текстовое описание поля "тип выполнения":<br /><br /> 0 — обычный<br /><br /> 3 — прервано<br /><br /> 4 — исключение|  
 |**total_query_wait_time_ms**|**bigint**|Общее `CPU wait` время для плана запроса в пределах интервала агрегирования и категории ожидания (отображается в миллисекундах).|
-|**avg_query_wait_time_ms**|**сделать**|Средняя длительность ожидания для плана запроса на выполнение в пределах интервала агрегирования и категории ожидания (отображается в миллисекундах).|
+|**avg_query_wait_time_ms**|**float**|Средняя длительность ожидания для плана запроса на выполнение в пределах интервала агрегирования и категории ожидания (отображается в миллисекундах).|
 |**last_query_wait_time_ms**|**bigint**|Длительность последнего ожидания для плана запроса в пределах интервала агрегирования и категории ожидания (отображается в миллисекундах).|
 |**min_query_wait_time_ms**|**bigint**|Минимальное `CPU wait` время для плана запроса в пределах интервала агрегирования и категории ожидания (отображается в миллисекундах).|
 |**max_query_wait_time_ms**|**bigint**|Максимальное `CPU wait` время для плана запроса в пределах интервала агрегирования и категории ожидания (отображается в миллисекундах).|
-|**stdev_query_wait_time_ms**|**сделать**|`Query wait`стандартное отклонение длительности для плана запроса в пределах интервала агрегирования и категории ожидания (отображается в миллисекундах).|
+|**stdev_query_wait_time_ms**|**float**|`Query wait`стандартное отклонение длительности для плана запроса в пределах интервала агрегирования и категории ожидания (отображается в миллисекундах).|
 
 ## <a name="wait-categories-mapping-table"></a>Таблица сопоставления категорий ожидания
 
@@ -54,20 +54,20 @@ ms.locfileid: "74190373"
   
 |Целое значение|Категория ожидания|Типы ожидания включают в категорию|  
 |-----------------|---------------|-----------------|  
-|**0**|**Неизвестный**|Unknown |  
-|**одного**|**ЗАГРУЗКИ**|SOS_SCHEDULER_YIELD|
+|**0**|**Неизвестно**|Неизвестно |  
+|**1**|**ЗАГРУЗКИ**|SOS_SCHEDULER_YIELD|
 |**2**|**Рабочий поток**|THREADPOOL|
 |**3-5**|**Скрыть**|LCK_M_%|
-|**четырех**|**Периода**|LATCH_%|
+|**4**|**Периода**|LATCH_%|
 |**5.0**|**Кратковременная блокировка буфера**|PAGELATCH_%|
 |**6**|**Операции ввода-вывода буфера**|PAGEIOLATCH_%|
 |**7**|**Компиляции***|RESOURCE_SEMAPHORE_QUERY_COMPILE|
 |**8**|**SQL CLR**|CLR%, SQLCLR%|
 |**8**|**Зеркальное отображение**|ДБМИРРОР%|
 |**штук**|**Операции**|ТРАНЗАКЦИИ%, DTC%, TRAN_MARKLATCH_%, MSQL_XACT_%, TRANSACTION_MUTEX|
-|**11**|**Idle**|SLEEP_%, LAZYWRITER_SLEEP, SQLTRACE_BUFFER_FLUSH, SQLTRACE_INCREMENTAL_FLUSH_SLEEP, SQLTRACE_WAIT_ENTRIES, FT_IFTS_SCHEDULER_IDLE_WAIT, XE_DISPATCHER_WAIT, REQUEST_FOR_DEADLOCK_SEARCH, LOGMGR_QUEUE, ONDEMAND_TASK_QUEUE, CHECKPOINT_ ОЧЕРЕДЬ, XE_TIMER_EVENT|
+|**11**|**Выключен**|SLEEP_%, LAZYWRITER_SLEEP, SQLTRACE_BUFFER_FLUSH, SQLTRACE_INCREMENTAL_FLUSH_SLEEP, SQLTRACE_WAIT_ENTRIES, FT_IFTS_SCHEDULER_IDLE_WAIT, XE_DISPATCHER_WAIT, REQUEST_FOR_DEADLOCK_SEARCH, LOGMGR_QUEUE, ONDEMAND_TASK_QUEUE, CHECKPOINT_ ОЧЕРЕДЬ, XE_TIMER_EVENT|
 |**12**|**PreEmptive**|PREEMPTIVE_%|
-|**решением**|**Service Broker**|BROKER_% **(но не BROKER_RECEIVE_WAITFOR)**|
+|**решением**|**Компонент Service Broker**|BROKER_% **(но не BROKER_RECEIVE_WAITFOR)**|
 |**14**|**Ввод-вывод журнала транзакций**|LOGMGR, ЛОГБУФФЕР, LOGMGR_RESERVE_APPEND, LOGMGR_FLUSH, LOGMGR_PMM_LOG, CHKPT, WRITELOG|
 |**15**|**Сетевые операции**|ASYNC_NETWORK_IO, NET_WAITFOR_PACKET, PROXY_NETWORK_IO, EXTERNAL_SCRIPT_NETWORK_IOF|
 |**глубин**|**Parallelism**|CXPACKET, EXCHANGE, HT%, BMP%, BP%|
@@ -76,7 +76,7 @@ ms.locfileid: "74190373"
 |**стр**|**Трассировка**|ТРАЦЕВРИТЕ, SQLTRACE_LOCK, SQLTRACE_FILE_BUFFER, SQLTRACE_FILE_WRITE_IO_COMPLETION, SQLTRACE_FILE_READ_IO_COMPLETION, SQLTRACE_PENDING_BUFFER_WRITERS, SQLTRACE_SHUTDOWN, QUERY_TRACEOUT, TRACE_EVTNOTIFF|
 |**20**|**Полнотекстовый поиск**|FT_RESTART_CRAWL, ПОЛНОТЕКСТОВЫЙ СБОР, MSSEARCH, FT_METADATA_MUTEX, FT_IFTSHC_MUTEX, FT_IFTSISM_MUTEX, FT_IFTS_RWLOCK, FT_COMPROWSET_RWLOCK, FT_MASTER_MERGE, FT_PROPERTYLIST_CACHE, FT_MASTER_MERGE_COORDINATOR, PWAIT_RESOURCE_SEMAPHORE_FT_ PARALLEL_QUERY_SYNC|
 |**открыт**|**Другие операции ввода-вывода диска**|ASYNC_IO_COMPLETION, IO_COMPLETION, БАККУПИО, WRITE_COMPLETION, IO_QUEUE_LIMIT, IO_RETRY|
-|**максималь**|**Репликации**|SE_REPL_%, REPL_%, HADR_% **(но не HADR_THROTTLE_LOG_RATE_GOVERNOR)**, PWAIT_HADR_%, REPLICA_WRITES, FCB_REPLICA_WRITE, FCB_REPLICA_READ, PWAIT_HADRSIM|
+|**максималь**|**Репликация**|SE_REPL_%, REPL_%, HADR_% **(но не HADR_THROTTLE_LOG_RATE_GOVERNOR)**, PWAIT_HADR_%, REPLICA_WRITES, FCB_REPLICA_WRITE, FCB_REPLICA_READ, PWAIT_HADRSIM|
 |**выражения**|**Регулятор частоты ведения журнала**|LOG_RATE_GOVERNOR, POOL_LOG_RATE_GOVERNOR, HADR_THROTTLE_LOG_RATE_GOVERNOR, INSTANCE_LOG_RATE_GOVERNOR|
 
 Категория ожидания **компиляции** в настоящее время не поддерживается.
@@ -85,7 +85,7 @@ ms.locfileid: "74190373"
 
  Требуется разрешение `VIEW DATABASE STATE`.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [sys. database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)
 - [sys. query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)
@@ -93,6 +93,6 @@ ms.locfileid: "74190373"
 - [sys. query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)
 - [sys. query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)
 - [sys. query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)
-- [Мониторинг производительности с помощью хранилища запросов](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
-- [Представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
+- [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
+- [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
 - [Хранимые процедуры хранилища запросов &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  

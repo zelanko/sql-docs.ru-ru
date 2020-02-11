@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c2ee83335e00c3129d73c26db37d40af2375c410
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73786048"
 ---
 # <a name="sqlprimarykeys"></a>SQLPrimaryKeys
@@ -26,7 +26,7 @@ ms.locfileid: "73786048"
 
   Таблица может содержать столбец или столбцы, которые могут использоваться в качестве уникальных идентификаторов строк, а таблицы, созданные без ограничения ПЕРВИЧного ключа, возвращают пустой результирующий набор для SQLPrimaryKeys. Функция ODBC [SQLSpecialColumns](../../relational-databases/native-client-odbc-api/sqlspecialcolumns.md) сообщает кандидатов идентификаторов строк для таблиц без первичных ключей.  
   
- SQLPrimaryKeys возвращает SQL_SUCCESS, существуют ли значения для параметров *CatalogName*, *SchemaName*или *TableName* . SQLFetch возвращает SQL_NO_DATA, если в этих параметрах используются недопустимые значения.  
+ SQLPrimaryKeys возвращает SQL_SUCCESS, существуют ли значения для параметров *CatalogName*, *SchemaName*или *TableName* . Функция SQLFetch возвращает значение SQL_NO_DATA, если в этих параметрах заданы недопустимые значения.  
   
  SQLPrimaryKeys может выполняться на статическом серверном курсоре. Попытка выполнить SQLPrimaryKeys для обновляемого (динамического или ключевого набора ключей) курсора возвратит SQL_SUCCESS_WITH_INFO, указывающее, что тип курсора был изменен.  
   
@@ -37,8 +37,8 @@ ms.locfileid: "73786048"
   
  Дополнительные сведения о возвращающих табличное значение параметрах см. в разделе [возвращающие табличное значение параметры &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
-## <a name="see-also"></a>См. также статью  
-   [функции SQLPrimaryKeys](https://go.microsoft.com/fwlink/?LinkId=59361)  
- [Подробные сведения о реализации API-интерфейсов ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+## <a name="see-also"></a>См. также:  
+ [Функция SQLPrimaryKeys](https://go.microsoft.com/fwlink/?LinkId=59361)   
+ [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

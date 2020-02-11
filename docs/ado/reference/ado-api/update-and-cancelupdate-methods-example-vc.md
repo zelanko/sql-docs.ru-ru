@@ -1,5 +1,5 @@
 ---
-title: Обновление методов и Cancelupdate (Visual C++) | Документация Майкрософт
+title: Примеры методов Update и CancelUpdate (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: cc59d23a-2f38-42f9-8b65-ed89009e87ec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 09b33331607678d20e2e7fff6cb487f100d29d84
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67940081"
 ---
 # <a name="update-and-cancelupdate-methods-example-vc"></a>Примеры методов Update и CancelUpdate (Visual C++)
-В этом примере показано [обновление](../../../ado/reference/ado-api/update-method.md) в сочетании с [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) метод.  
+В этом примере демонстрируется метод [Update](../../../ado/reference/ado-api/update-method.md) в сочетании с методом [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) .  
   
 ```  
 // Update_CancelUpdate_Methods_Sample.cpp  
@@ -309,6 +309,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод CancelUpdate (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
  [Метод Update](../../../ado/reference/ado-api/update-method.md)

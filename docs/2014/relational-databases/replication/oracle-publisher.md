@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b38b397c0a2128aed5ebaba0b1367ca14ebdcd09
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022032"
 ---
 # <a name="oracle-publisher"></a>Издатель Oracle
-  Начиная с версии [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет публиковать данные из базы данных Oracle, используя репликацию моментальных снимков и репликацию транзакций. Дополнительные сведения см. в статье [Обзор публикации Oracle](non-sql/oracle-publishing-overview.md).  
+  Начиная с [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет публиковать данные из базы данных Oracle с помощью моментальных снимков и репликации транзакций. Дополнительные сведения см. в статье [Обзор публикации Oracle](non-sql/oracle-publishing-overview.md).  
   
  Издатель Oracle должен использовать удаленный распространитель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; данный мастер должен быть запущен на этом сервере после установки и тестирования необходимого сетевого ПО Oracle. Дополнительные сведения см. в статье [Настройка издателя Oracle](non-sql/configure-an-oracle-publisher.md).  
   
 > [!IMPORTANT]  
->  Если другой администратор настроил базу данных Oracle в качестве издателя, после нажатия кнопки **Далее** будет выбран запрос на ввод пароля для имени входа репликации, используемого для подключения к этой базе данных Oracle. Затем[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установит соответствие между именем входа и соединением связанного сервера с базой данных Oracle. При следующих соединениях с этой базой данных Oracle вводить пароль не потребуется.  
+>  Если другой администратор настроил базу данных Oracle в качестве издателя, после нажатия кнопки **Далее** будет выбран запрос на ввод пароля для имени входа репликации, используемого для подключения к этой базе данных Oracle. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]затем создаст сопоставление между именем входа и соединением связанного сервера с базой данных Oracle. При следующих соединениях с этой базой данных Oracle вводить пароль не потребуется.  
   
 ## <a name="options"></a>Параметры  
  **Издатели Oracle**  
@@ -37,8 +37,8 @@ ms.locfileid: "63022032"
 > [!NOTE]  
 >  Если сервер, к которому обращается этот мастер, еще не настроен как распространитель, выдается запрос на его настройку.  
   
-## <a name="see-also"></a>См. также  
- [Создание публикации из базы данных Oracle](publish/create-a-publication-from-an-oracle-database.md)   
+## <a name="see-also"></a>См. также:  
+ [Создание публикации из Oracle Database](publish/create-a-publication-from-an-oracle-database.md)   
 
   
   

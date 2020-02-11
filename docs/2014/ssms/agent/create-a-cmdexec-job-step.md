@@ -13,24 +13,24 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7ba283ef2ff426521c881f733bc29465eebc0c76
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798155"
 ---
 # <a name="create-a-cmdexec-job-step"></a>Create a CmdExec Job Step
-  В этом разделе описано, как создать и определить шаг задания агента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , использующий выполняемую программу или команду операционной системы, с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] или управляющих объектов SQL Server.  
+  В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этом разделе описывается создание и определение шага задания агента в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , использующего исполняемую программу или команду операционной системы с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] или управляющие объекты SQL Server.  
   
  **В этом разделе**  
   
--   **Перед началом:**  
+-   **Перед началом работы**  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Для создания шага задания CmdExec используется:**  
   
-     [Среда Среда SQL Server Management Studio](#SSMS)  
+     [Среда SQL Server Management Studio](#SSMS)  
   
      [Transact-SQL](#TSQL)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "72798155"
 ###  <a name="Security"></a> безопасность  
  По умолчанию только члены предопределенной роли сервера **sysadmin** могут создавать шаги задания CmdExec. Шаги задания службы агента SQL Server запускаются под учетной записью службы агента SQL Server, если пользователь **sysadmin** не создал учетную запись-посредника. Пользователь, не являющийся членом предопределенной роли сервера **sysadmin** может создавать шаги задания CmdExec, только если у него есть доступ к учетной записи-посреднику CmdExec.  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Дополнительные сведения см. в разделе [Обеспечение безопасности агента SQL Server](implement-sql-server-agent-security.md).  
   
 ##  <a name="SSMS"></a> Использование среды SQL Server Management Studio  
@@ -56,7 +56,7 @@ ms.locfileid: "72798155"
   
 4.  В диалоговом окне **Новый шаг задания** введите **имя шага**задания.  
   
-5.  В списке **Тип** выберите **Операционная система (CmdExec)** .  
+5.  В списке **Тип** выберите **Операционная система (CmdExec)**.  
   
 6.  В списке **Выполнять как** выберите учетную запись-посредник с учетными данными, используемыми в задании. По умолчанию шаги задания CmdExec выполняются под учетной записью службы агента SQL Server.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "72798155"
   
 ### <a name="to-create-a-cmdexec-job-step"></a>Создание шага задания CmdExec  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "72798155"
     GO  
     ```  
   
- Дополнительные сведения см. в [разделе &#40;SP_ADD_JOBSTEP Transact-&#41; SQL](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql) .  
+ Дополнительные сведения см. в разделе [sp_add_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)  
   
 ##  <a name="SMO"></a>Использование управляющие объекты SQL Server  
 

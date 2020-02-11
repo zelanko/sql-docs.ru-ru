@@ -17,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 379877d3a08c60a293b96c5c57d55a2894ba0a79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63074063"
 ---
 # <a name="handle-multiple-job-steps"></a>Обработка множественных шагов задания
-  Если в задании содержится более одного шага, необходимо указать порядок выполнения шагов задания. Это называется *управлением потоком*** . Добавить новые шаги задания и реорганизовать поток шагов задания можно в любое время; изменения вступают в силу при следующем выполнении задания. На этой иллюстрации показано управление потоком для задания резервного копирования базы данных.  
+  Если в задании содержится более одного шага, необходимо указать порядок выполнения шагов задания. Это называется *управлением потоком * *.* Добавить новые шаги задания и реорганизовать поток шагов задания можно в любое время; изменения вступают в силу при следующем выполнении задания. На этой иллюстрации показано управление потоком для задания резервного копирования базы данных.  
   
  ![Управление потоком шагов заданий агента SQL Server](../../database-engine/media/dbflow01.gif "Управление потоком шагов заданий агента SQL Server")  
   
@@ -40,13 +40,13 @@ ms.locfileid: "63074063"
 > [!NOTE]  
 >  Если создаются задания с циклическими шагами (за шагом 1 следует шаг 2, затем шаг 2 возвращается к шагу 1), то при создании задания с использованием среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]выдается предупреждающее сообщение.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Агент записывает сведения о задании и шагах задания в журнал заданий.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Агент записывает сведения о заданиях и шагах заданий в журнал заданий.  
   
-## <a name="see-also"></a>См. также  
- [sp_add_job (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)   
- [dbo.sysjobhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobhistory-transact-sql)   
- [dbo.sysjobs &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobs-transact-sql)   
- [dbo.sysjobsteps &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobsteps-transact-sql)   
+## <a name="see-also"></a>См. также:  
+ [sp_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)   
+ [dbo. sysjobhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobhistory-transact-sql)   
+ [dbo. sysjobs &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobs-transact-sql)   
+ [dbo. сисжобстепс &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobsteps-transact-sql)   
  [Реализация заданий](implement-jobs.md)   
  [Управление шагами задания](manage-job-steps.md)  
   

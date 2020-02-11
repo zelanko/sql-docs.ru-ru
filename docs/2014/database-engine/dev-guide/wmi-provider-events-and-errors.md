@@ -1,5 +1,5 @@
 ---
-title: Ошибки и события поставщика WMI | Документация Майкрософт
+title: События и ошибки поставщика WMI | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b5a6c9c1b30adee7b42f9424d648d33dacc52e0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62780270"
 ---
 # <a name="wmi-provider-events-and-errors"></a>Ошибки и события поставщика WMI
@@ -28,7 +28,7 @@ ms.locfileid: "62780270"
  0x8007052f  
  Ошибка входа в систему: ограничение учетной записи. Возможные причины: запрещено использование пустых паролей, имеется ограничение по времени входа или применено ограничение, предусмотренное политикой.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [События и ошибки компонента Database Engine](../../relational-databases/native-client-ole-db-errors/errors.md)  
   
   

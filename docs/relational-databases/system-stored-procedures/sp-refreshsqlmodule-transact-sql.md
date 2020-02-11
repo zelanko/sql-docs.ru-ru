@@ -27,10 +27,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: df5ff458c45a4ac804591a8a4d77d9367b8cb6c4
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73982773"
 ---
 # <a name="sp_refreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
@@ -56,9 +56,9 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @name = ] 'module\_name'` — имя хранимой процедуры, определяемой пользователем функции, представления, триггера DML, триггера DDL уровня базы данных или триггера DDL уровня сервера. *module_name* не может быть хранимой процедурой среды CLR или функцией CLR. *module_name* не могут быть привязаны к схеме. *module_name* имеет тип **nvarchar**и не имеет значения по умолчанию. *module_name* может быть составным идентификатором, но может ссылаться только на объекты в текущей базе данных.  
+`[ @name = ] 'module\_name'`Имя хранимой процедуры, определяемой пользователем функции, представления, триггера DML, триггера DDL уровня базы данных или триггера DDL уровня сервера. *module_name* не может быть хранимой процедурой среды CLR или функцией CLR. *module_name* не могут быть привязаны к схеме. *module_name* имеет тип **nvarchar**и не имеет значения по умолчанию. *module_name* может быть составным идентификатором, но может ссылаться только на объекты в текущей базе данных.  
   
-`[ , @namespace = ] ' \<class> '` — это класс указанного модуля. Если *module_name* является триггером DDL, требуется \<класса >. *класс\<>* имеет тип **nvarchar**(20). Допустимые входные значения:  
+`[ , @namespace = ] ' \<class> '`Класс указанного модуля. Если *module_name* является триггером DDL, \<требуется класс>. класс>имеет тип **nvarchar**(20). * \<* Допустимые входные значения:  
   
 |||  
 |-|-|  
@@ -143,7 +143,7 @@ SELECT dbo.to_upper('abcdefgh');
 GO  
 ```  
   
-### <a name="b-refreshing-a-database-level-ddl-trigger"></a>б. Обновление триггера DDL уровня базы данных  
+### <a name="b-refreshing-a-database-level-ddl-trigger"></a>Б. Обновление триггера DDL уровня базы данных  
  В представленном ниже примере обновляется триггер DDL уровня базы данных.  
   
 ```  
@@ -168,8 +168,8 @@ GO
   
 ```  
   
-## <a name="see-also"></a>См. также статью  
- [sp_refreshview (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
- [Ядро СУБД хранимых &#40;процедур TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [sp_refreshview &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
+ [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

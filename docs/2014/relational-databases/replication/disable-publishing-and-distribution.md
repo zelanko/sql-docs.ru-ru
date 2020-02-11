@@ -19,16 +19,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 682f015215218f362f0ca57557b9d6afb6edee08
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73882377"
 ---
 # <a name="disable-publishing-and-distribution"></a>Отключение публикации и распространения
   В данном разделе описывается отключение публикации и распространения в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или объектов RMO.  
   
- Можно сделать следующее.  
+ Можно сделать следующее:  
   
 -   Удалите все базы данных распространителя на распространителе.  
   
@@ -44,11 +44,11 @@ ms.locfileid: "73882377"
   
 -   **Для отключения публикации и распространения используется:**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Среда SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-     [объекты RMO;](#RMOProcedure)  
+     [Объекты Replication Management Objects (RMO)](#RMOProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
@@ -61,7 +61,7 @@ ms.locfileid: "73882377"
   
 #### <a name="to-disable-publishing-and-distribution"></a>Отключение публикации и распространения  
   
-1.  Подключитесь к издателю или распространителю, который необходимо отключить, в среде [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], а затем раскройте узел сервера.  
+1.  Подключитесь к издателю или распространителю, который необходимо [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]отключить в, а затем разверните узел сервера.  
   
 2.  Щелкните правой кнопкой мыши папку **Репликация** и выберите **Отключить публикацию и распространение**.  
   
@@ -87,9 +87,9 @@ ms.locfileid: "73882377"
 7.  На распространителе выполните хранимую процедуру [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql) , чтобы удалить с сервера обозначение распространителя.  
   
     > [!NOTE]  
-    >  Если все объекты публикации репликации и распространения не удалены перед выполнением хранимых процедур [sp_dropdistpublisher](/sql/relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql) и [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql), эти процедуры возвратят ошибку. Чтобы удалить все объекты, связанные с репликацией, при удалении издателя или распространителя, параметру **\@no_checks** необходимо присвоить значение **1**. Если издатель или распространитель отключен от сети или недоступен, параметру **\@ignore_distributor** можно присвоить значение **1** , чтобы их можно было удалить. Однако все публикации и распространение объектов, которые остались позади, необходимо удалить вручную.  
+    >  Если все объекты публикации репликации и распространения не удалены перед выполнением хранимых процедур [sp_dropdistpublisher](/sql/relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql) и [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql), эти процедуры возвратят ошибку. Чтобы удалить все объекты, связанные с репликацией, при удалении издателя или распространителя, параметру ** \@no_checks** должно быть присвоено значение **1**. Если издатель или распространитель отключен или недоступен, параметру ** \@ignore_distributor** может быть присвоено значение **1** , чтобы их можно было удалить; Однако все публикации и распространение объектов, которые остались позади, необходимо удалить вручную.  
   
-###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
+###  <a name="TsqlExample"></a>Примеры (Transact-SQL)  
  В этом примере скрипта удаляются объекты репликации из базы данных подписки.  
   
  [!code-sql[HowTo#sp_removedbreplication](../../snippets/tsql/SQL15/replication/howto/tsql/dropdistpub.sql#sp_removedbreplication)]  
@@ -108,17 +108,17 @@ ms.locfileid: "73882377"
   
 3.  Создайте соединение с распространителем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-4.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.DistributionPublisher> . Укажите свойство <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> и передайте объект <xref:Microsoft.SqlServer.Management.Common.ServerConnection> из шага 3.  
+4.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.DistributionPublisher>. Укажите свойство <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> и передайте объект <xref:Microsoft.SqlServer.Management.Common.ServerConnection> из шага 3.  
   
 5.  (Необязательно) Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> , чтобы получить свойства объекта и убедиться, что издатель существует. Если метод возвращает значение `false`, то имя издателя, установленное на шаге 4, неверно или издатель не используется этим распространителем.  
   
 6.  Вызовите метод <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Remove%2A> . Передайте значение `true` для *Force* , если издатель и распространитель находятся на разных серверах, и когда издатель должен быть удален на распространителе без предварительного подтверждения того, что публикации больше не существуют на издателе.  
   
-7.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.ReplicationServer> . Передайте объект <xref:Microsoft.SqlServer.Management.Common.ServerConnection> , созданный на шаге 3.  
+7.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.ReplicationServer>. Передайте объект <xref:Microsoft.SqlServer.Management.Common.ServerConnection> , созданный на шаге 3.  
   
-8.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationServer.UninstallDistributor%2A> . Передайте значение `true`, чтобы *принудительно* удалить все объекты репликации на распространителе, не проверяя, отключены ли все локальные базы данных публикации и удалены ли базы данных распространителя.  
+8.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationServer.UninstallDistributor%2A> . Передайте значение `true` для *Force* , чтобы удалить все объекты репликации на распространителе, не проверяя, отключены ли все локальные базы данных публикации, а также удалены ли базы данных распространителя.  
   
-###  <a name="PShellExample"></a> Примеры (объекты RMO)  
+###  <a name="PShellExample"></a>Примеры (объекты RMO)  
  В этом примере удаляется как регистрация издателя на распространителе, так и база данных распространителя, а также удаляется распространитель.  
   
  [!code-csharp[HowTo#rmo_DropDistPub](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_dropdistpub)]  
@@ -131,8 +131,8 @@ ms.locfileid: "73882377"
   
  [!code-vb[HowTo#rmo_vb_DropDistPubForce](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_dropdistpubforce)]  
   
-## <a name="see-also"></a>См. также статью  
- [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
+## <a name="see-also"></a>См. также:  
+ [Основные понятия объекты Replication Management Objects](concepts/replication-management-objects-concepts.md)   
  [Основные понятия системных хранимых процедур репликации](concepts/replication-system-stored-procedures-concepts.md)  
   
   

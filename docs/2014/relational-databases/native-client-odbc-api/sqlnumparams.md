@@ -11,19 +11,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e7fd9cbf18083f05457b99ed5d58e04ebd29d75f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63046713"
 ---
 # <a name="sqlnumparams"></a>SQLNumParams
-  Улучшения ядра базы данных, начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] разрешить SQLNumParams получать более точные описания ожидаемых результатов. Эти более точные результаты могут отличаться от значения, возвращаемые методом SQLNumParams в предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Улучшения в ядре СУБД, начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Allow SQLNumParams, позволяют получить более точные описания ожидаемых результатов. Эти более точные результаты могут отличаться от значений, возвращаемых функцией SQLNumParams в предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Дополнительные сведения см. в разделе [Обнаружение метаданных](../native-client/features/metadata-discovery.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функция SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404)   
- [Подробные сведения о реализации API-интерфейсов ODBC](odbc-api-implementation-details.md)  
+ [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

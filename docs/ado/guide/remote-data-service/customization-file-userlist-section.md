@@ -1,5 +1,5 @@
 ---
-title: Настройка файла раздела UserList | Документация Майкрософт
+title: Раздел UserList файла настройки | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,38 +14,38 @@ ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 558fd9c8379808e6c2f109a9c9584e8831cddd0f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922765"
 ---
 # <a name="customization-file-userlist-section"></a>Настройка раздела UserList файла
-**Userlist** раздел относится к **подключения** раздел с тот же раздел *идентификатор* параметра.  
+Раздел **USERLIST** относится к разделу **Connect** с тем же параметром *идентификатора* раздела.  
   
- Этот раздел может содержать *доступом пользователя*, который указывает доступа права для указанного пользователя и переопределяет *по умолчанию* *доступ к записи* в соответствующем **подключения** раздел.  
+ Этот раздел может содержать *запись доступа пользователя*, которая задает права доступа для указанного пользователя и переопределяет *запись доступа* *по умолчанию* в соответствующем разделе **Connect** .  
   
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Синтаксис  
  Запись доступа пользователя имеет вид:  
   
- _имя пользователя_ **=**    
+ _имя пользователя_**=**   
  **_accessRights_**  
   
-|Часть|Описание|  
+|Часть|Description|  
 |----------|-----------------|  
-|*userName*|*Имя пользователя* лица, применение этого подключения. Допустимые имена пользователей, устанавливаются со службами IIS **Service Manager** диалоговое окно.|  
-|**_accessRights_**|Один из следующих прав доступа:<br /><br /> -   **NoAccess** -пользователь не может получить доступ к источнику данных.<br />-   **Только для чтения** -пользователь может просматривать источника данных.<br />-   **ReadWrite** -пользователя можно считывать или записывать в источник данных.|  
+|*Имен*|*Имя пользователя* , использующего это подключение. Допустимые имена пользователей устанавливаются в диалоговом окне IIS **Service Manager** .|  
+|**_accessRights_**|Одно из следующих прав доступа:<br /><br /> -   Не **доступ** — пользователь не может получить доступ к источнику данных.<br />-   **Только для** чтения — пользователь может читать источник данных.<br />-   **ReadWrite** — пользователь может выполнять чтение или запись в источник данных.|  
   
-## <a name="see-also"></a>См. также  
- [Настройка раздела подключения файла](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [Настройка раздела журналов файла](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [Настройка раздела SQL файла](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [Настройка DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [Необходимые параметры клиентов](../../../ado/guide/remote-data-service/required-client-settings.md)   
+## <a name="see-also"></a>См. также:  
+ [Раздел "Подключение файла настройки"](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
+ [Раздел журналов файлов настройки](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
+ [Раздел файла настройки SQL](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
+ [Настройка в отношении фактов](../../../ado/guide/remote-data-service/datafactory-customization.md)   
+ [Требуемые параметры клиента](../../../ado/guide/remote-data-service/required-client-settings.md)   
  [Общие сведения о файле настройки](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
- [Запись собственного настраиваемого обработчика](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
+ [Создание собственного настраиваемого обработчика](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
 
 

@@ -22,10 +22,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d04ba8b85c124b66e250d17ad204ef76a8de6dc7
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73882359"
 ---
 # <a name="enhance-transactional-replication-performance"></a>Повышение производительности репликации транзакций
@@ -80,7 +80,7 @@ ms.locfileid: "73882359"
   
      Параметр **-SubscriptionStreams** может значительно повысить суммарную пропускную способность репликации. Он позволяет нескольким соединениям с подписчиком параллельно применять пакеты изменений, при этом сохраняя многие свойства транзакций, характерные для использования одиночного потока. Если одному из соединений не удается осуществить выполнение или фиксацию, все подключения прекратят выполнение текущего пакета, и агент будет использовать одиночный поток для повторных попыток выполнения поврежденных пакетов. Перед завершением фазы выполнения повторной попытки могут существовать временные несоответствия транзакций на подписчике. После успешной фиксации всех поврежденных пакетов подписчик возвращается в состояние согласованности транзакций.  
   
-     Значение для этого параметра агента можно указать с помощью **\@SubscriptionStreams** в [SP_ADDSUBSCRIPTION &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql).  
+     Значение для этого параметра агента можно указать с помощью ** \@SubscriptionStreams** [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql).  
   
 -   Увеличьте значение параметра **-ReadBatchSize** для агента чтения журнала.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "73882359"
   
 -   [Работа с профилями агента репликации](../agents/replication-agent-profiles.md)  
   
--   [Просмотр и изменение параметров командной строки агента репликации (SQL Server Management Studio)](../agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
+-   [Просмотр и изменение параметров командной строки агента репликации &#40;SQL Server Management Studio&#41;](../agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
 -   [Основные понятия исполняемых файлов агента репликации](../concepts/replication-agent-executables-concepts.md)  
   

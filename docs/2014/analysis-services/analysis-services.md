@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bceabba9b490be6bc2c51b4fdcce9b6b131eb0ce
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74683480"
 ---
 # <a name="sql-server-2014-analysis-services"></a>SQL Server 2014 Analysis Services
@@ -76,7 +76,7 @@ ms.locfileid: "74683480"
 > [!NOTE]  
 >  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]функции зависят от выпуска. Многомерные модели и модели интеллектуального анализа данных поддерживаются в стандартном выпуске, но с меньшим количеством функций по сравнению с выпусками более высокого уровня. Табличные модели и PowerPivot для SharePoint являются функциями высокого уровня, которые отсутствуют в стандартном выпуске. Дополнительные сведения см. [в разделе функции, поддерживаемые различными Выпусками SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Учебники по Analysis Services &#40;SSAS&#41;](analysis-services-tutorials-ssas.md)   
  [Установка для SQL Server 2014](../database-engine/install-windows/installation-for-sql-server.md)   
  [&#40;Analysis Services с руководством разработчика&#41;](analysis-services-developer-documentation.md)   

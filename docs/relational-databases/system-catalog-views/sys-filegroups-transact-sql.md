@@ -1,5 +1,5 @@
 ---
-title: sys.filegroups (Transact-SQL) | Документация Майкрософт
+title: sys. filegroup (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 05/24/2016
 ms.prod: sql
@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 313c0b80a1bf1d2a094760198053e26426e99c36
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68005171"
 ---
 # <a name="sysfilegroups-transact-sql"></a>sys.filegroups (Transact-SQL)
@@ -32,18 +32,19 @@ ms.locfileid: "68005171"
 
   Содержит по одной строке для каждого пространства данных, занимаемого файловой группой.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|**\<наследуемые столбцы >**|--|Список столбцов, наследуемых этим представлением, см. в разделе [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md).|  
-|**filegroup_guid**|**uniqueidentifier**|Идентификатор GUID файловой группы.<br /><br /> NULL = файловая группа PRIMARY|  
-|**log_filegroup_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец имеет значение NULL.|  
+|**\<наследуемые столбцы>**|--|Список столбцов, наследуемых этим представлением, см. в разделе [sys. data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md).|  
+|**filegroup_guid**|**UNIQUEIDENTIFIER**|Идентификатор GUID файловой группы.<br /><br /> NULL = файловая группа PRIMARY|  
+|**log_filegroup_id**|**int**|
+  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец имеет значение NULL.|  
 |**is_read_only**|**bit**|1 = Файловая группа доступна только для чтения.<br /><br /> 0 = Файловая группа доступна для чтения и записи.|  
-|**is_autogrow_all_files**|**bit**|**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).<br /><br /> 1 = при создании файла в файловой группе удовлетворяет, порога автоматического увеличения, все файлы в файловой группе расти.<br /><br /> 0 = при создании файла в файловой группе удовлетворяет, растет порога автоматического увеличения, только этот файл. Это значение по умолчанию.|  
+|**is_autogrow_all_files**|**bit**|**Применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (с по [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).<br /><br /> 1 = Если файл в файловой группе соответствует пороговому значению автоматического увеличения, все файлы в файловой группе увеличиваются.<br /><br /> 0 = если файл в файловой группе соответствует пороговому значению автоматического увеличения, то растет только этот файл. Это значение используется по умолчанию.|  
   
 ## <a name="permissions"></a>Разрешения  
- Необходимо быть членом роли **public**. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Требуется членство в роли **Public** . Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Пространства данных &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-spaces-transact-sql.md)  
   

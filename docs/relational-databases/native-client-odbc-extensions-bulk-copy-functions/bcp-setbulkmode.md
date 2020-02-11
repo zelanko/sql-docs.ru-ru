@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 46da93307d28b5be6aec3fbcbff31322e96ea634
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73782399"
 ---
 # <a name="bcp_setbulkmode"></a>bcp_setbulkmode
@@ -40,7 +40,7 @@ RETCODE bcp_setbulkmode (
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *хдбк*  
+ *hdbc*  
  Дескриптор соединения ODBC с поддержкой массового копирования.  
   
  *property*  
@@ -49,26 +49,26 @@ RETCODE bcp_setbulkmode (
  *пфиелд*  
  Указатель на значение признака конца поля.  
   
- *кбфиелд*  
+ *cbField*  
  Длина в байтах значения признака конца поля.  
   
- *пров*  
+ *pRow*  
  Указатель на значение признака конца строки.  
   
- *кбров*  
+ *cbRow*  
  Длина в байтах значения признака конца строки.  
   
 ## <a name="returns"></a>Возвращает  
  SUCCEED или FAIL  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  bcp_setbulkmode можно использовать для выполнения полного копирования из запроса или таблицы. Если bcp_setbulkmode используется для выполнения операций с массовым копированием инструкции запроса, он должен быть вызван перед вызовом bcp_control с BCP_HINT.  
   
  bcp_setbulkmode является альтернативой использованию [bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md) и [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md), который позволяет задавать только формат одного столбца для каждого вызова функции.  
   
  В следующей таблице перечислены константы для параметра *property* .  
   
-|Свойство|Описание|  
+|Свойство|Description|  
 |--------------|-----------------|  
 |BCP_OUT_CHARACTER_MODE|Указывает символьный режим вывода.<br /><br /> Соответствует параметру-c в BCP. EXE и для bcp_setcolfmt со свойством **BCP_FMT_TYPE** , для которого задано значение **SQLCHARACTER**.|  
 |BCP_OUT_WIDE_CHARACTER_MODE|Указывает режим вывода в Юникоде.<br /><br /> Соответствует параметру-w в BCP. EXE и bcp_setcolfmt со свойством **BCP_FMT_TYPE** , имеющим значение **SQLNCHAR**.|  
@@ -284,7 +284,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>См. также раздел  
- [Функции массового копирования](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
+## <a name="see-also"></a>См. также:  
+ [Bulk Copy Functions](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

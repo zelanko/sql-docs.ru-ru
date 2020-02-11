@@ -18,19 +18,20 @@ ms.assetid: 5db87d77-85fa-45a3-a23a-3ea500f9a5ac
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ac8bc2087b4c100b784aadac8458e106538f76d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68123995"
 ---
-# <a name="spgetbindtoken-transact-sql"></a>sp_getbindtoken (Transact-SQL)
+# <a name="sp_getbindtoken-transact-sql"></a>sp_getbindtoken (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Возвращает уникальный идентификатор для транзакции. Этот уникальный идентификатор является строкой, используемой для привязки сеансов при помощи процедуры sp_bindsession.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Используйте режим MARS или распределенные транзакции. Дополнительные сведения см. в статье [Использование множественных активных результирующих наборов &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
+>  
+  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Используйте режим MARS или распределенные транзакции. Дополнительные сведения см. в статье [Использование множественных активных результирующих наборов &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,8 +43,8 @@ sp_getbindtoken [@out_token =] 'return_value' OUTPUT
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [@out_token=]'*return_value*"  
- Токен, используемый для связывания сеансов. *RETURN_VALUE* — **varchar(255)** не имеет значения по умолчанию.  
+ [@out_token=] "*RETURN_VALUE*"  
+ Токен, используемый для связывания сеансов. *RETURN_VALUE* имеет тип **varchar (255)** и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  None  
@@ -51,8 +52,8 @@ sp_getbindtoken [@out_token =] 'return_value' OUTPUT
 ## <a name="result-sets"></a>Результирующие наборы  
  None  
   
-## <a name="remarks"></a>Примечания  
- процедура sp_getbindtoken возвращает допустимый токен только в том случае, если хранимая процедура выполняется внутри активной транзакции. В противном случае компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] возвращает сообщение об ошибке. Пример:  
+## <a name="remarks"></a>Remarks  
+ sp_getbindtoken будет возвращать действительный маркер только в том случае, если хранимая процедура выполняется внутри активной транзакции. В противном случае компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] возвращает сообщение об ошибке. Пример:  
   
 ```  
 -- Declare a variable to hold the bind token.  
@@ -65,7 +66,7 @@ Cannot get a transaction token if there is no transaction active.
 Reissue the statement after a transaction has been started.  
 ```  
   
- Если процедура sp_getbindtoken используется для прикрепления соединения распределенной транзакции к открытой транзакции, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает тот же токен. Пример:  
+ Если sp_getbindtoken используется для прикрепления соединения распределенных транзакций в открытой транзакции, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает тот же токен. Пример:  
   
 ```  
 USE AdventureWorks2012;  
@@ -125,9 +126,9 @@ SELECT @bind_token AS Token;
   
  `\0]---5^PJK51bP<1F<-7U-]ANZ`  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_bindsession (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-bindsession-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [srv_getbindtoken &#40;API расширенных хранимых процедур&#41;](../../relational-databases/extended-stored-procedures-reference/srv-getbindtoken-extended-stored-procedure-api.md)  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [API srv_getbindtoken &#40;расширенных хранимых процедур&#41;](../../relational-databases/extended-stored-procedures-reference/srv-getbindtoken-extended-stored-procedure-api.md)  
   
   

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 57eb4f021a25fa2fa559fa7ff21d12bb621cc53a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63126914"
 ---
 # <a name="configure-alerts-to-notify-policy-administrators-of-policy-failures"></a>Настройка предупреждений для уведомления администраторов политик об ошибках политик
@@ -31,11 +31,11 @@ ms.locfileid: "63126914"
   
  Сведения о настройке предупреждений в ответ на сообщения об ошибках управления на основе политик см. в следующих разделах:  
   
--   [Создание оператора](../../ssms/agent/create-an-operator.md)  
+-   [Create an Operator](../../ssms/agent/create-an-operator.md)  
   
 -   [Создание предупреждения по номеру сообщения](../../ssms/agent/create-an-alert-using-an-error-number.md)  
   
--   [Назначение предупреждений оператору](../../ssms/agent/assign-alerts-to-an-operator.md)  
+-   [Assign Alerts to an Operator](../../ssms/agent/assign-alerts-to-an-operator.md)  
   
 ## <a name="permissions"></a>Разрешения  
  Когда политики вычисляются по запросу, они выполняются в контексте безопасности пользователя. Для записи в журнал ошибок пользователь должен иметь разрешения ALTER TRACE или быть членом предопределенной роли сервера sysadmin. Политики, вычисляемые пользователем, обладающим меньшими правами доступа, не регистрируются в журнале событий и не формируют предупреждений.  

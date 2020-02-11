@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6c0975dee640230880dfe05a7d86359172cfa157
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73882240"
 ---
 # <a name="validate-replicated-data"></a>Проверка реплицированных данных
@@ -65,7 +65,7 @@ ms.locfileid: "73882240"
 -   Ввиду того что простые и двоичные контрольные суммы могут требовать больших вычислительных мощностей при проверке большого количества данных, следует назначать проверку на время, когда активность используемых в репликации серверов минимальна.    
 -   Репликация проверяет только таблицы; она не проверяет, совпадают ли в схеме на издателе и подписчике только статьи (например, хранимые процедуры).    
 -   Двоичная контрольная сумма может использоваться с любой опубликованной таблицей. С помощью контрольной суммы нельзя проверить таблицы с фильтрацией по столбцам, или логические структуры таблиц, отличающиеся смещением столбцов (из-за инструкций ALTER TABLE, удаляющих или добавляющих столбцы).    
--   При проверке репликации используются функции `checksum` и **BINARY_CHECKSUM** . Сведения об их поведении см. в статьях [CHECKSUM (Transact-SQL)](/sql/t-sql/functions/checksum-transact-sql) и [BINARY_CHECKSUM (Transact-SQL)](/sql/t-sql/functions/binary-checksum-transact-sql).  
+-   При проверке репликации используются `checksum` функции и **BINARY_CHECKSUM** . Сведения об их поведении см. в статьях [CHECKSUM (Transact-SQL)](/sql/t-sql/functions/checksum-transact-sql) и [BINARY_CHECKSUM (Transact-SQL)](/sql/t-sql/functions/binary-checksum-transact-sql).  
   
 -   Проверка с использованием двоичной контрольной суммы может неверно сообщить об отказе, если типы данных на подписчике и издателе отличаются. К этому может привести выполнение одного из следующих действий.    
     -   Явная установка параметров схемы для соответствия типам данных в ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].    
@@ -79,7 +79,7 @@ ms.locfileid: "73882240"
   
  Чтобы обработать ошибки проверки, рассмотрите следующее.  
   
--   Настройте предупреждение репликации под названием **Репликация: ошибка проверки данных подписчиком** , чтобы получать уведомление об ошибке. Дополнительные сведения см. в разделе [Настройка стандартных предупреждений &#40;репликации SQL Server Management Studio & #41 (Администрирование/Настройка-предопределенные-Replication-Alerts-SQL-Server-Management-Studio. md).  
+-   Настройте предупреждение репликации под названием **Репликация: ошибка проверки данных подписчиком** , чтобы получать уведомление об ошибке. Дополнительные сведения см. в разделе [Настройка стандартных предупреждений репликации &#40;SQL Server Management Studio& # 41 (Администрирование/Настройка-предопределенные-Replication-Alerts-SQL-Server-Management-Studio. md).  
   
 -   Является ли неудачная проверка данных проблемой для приложения? Если неудачная проверка данных представляет собой проблему, обновите данные вручную, чтобы они были синхронизированы, или повторно инициализируйте подписку.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "73882240"
 
 #### <a name="all-articles"></a>Все статьи
   
-1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_publication_validation (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-publication-validation-transact-sql). Укажите **\@публикацию** и одно из следующих значений для **\@rowcount_only**:    
+1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_publication_validation (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-publication-validation-transact-sql). Укажите ** \@публикацию** и одно из следующих значений для ** \@rowcount_only**.    
     -   **1** — проверка только количества строк (по умолчанию);    
     -   **2** — проверка количества строк и двоичной контрольной суммы.  
   
@@ -124,9 +124,9 @@ ms.locfileid: "73882240"
   
 #### <a name="single-article"></a>Одна статья 
   
-1.  На издателе в базе данных публикации выполните процедуру [sp_article_validation (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql). Укажите **\@ную публикацию**, имя статьи для **\@статьи**и одно из следующих значений для **\@rowcount_only**:    
+1.  На издателе в базе данных публикации выполните процедуру [sp_article_validation (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql). Укажите ** \@публикацию**, имя статьи для ** \@статьи**и одно из следующих значений для ** \@rowcount_only**.    
     -   **1** — проверка только количества строк (по умолчанию)    
-    -   **2** — проверка количества строк и двоичной контрольной суммы.  
+    -   **2** — количество строк и двоичная контрольная сумма.  
   
     > [!NOTE]  
     >  Для успешного выполнения процедуры [sp_article_validation (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql) необходимо иметь разрешения SELECT для всех столбцов в опубликованных базовых таблицах.  
@@ -137,11 +137,11 @@ ms.locfileid: "73882240"
 #### <a name="single-subscriber"></a>Один подписчик
   
 1.  На издателе в базе данных публикации откройте явную транзакцию с помощью [BEGIN TRANSACTION (Transact-SQL)](/sql/t-sql/language-elements/begin-transaction-transact-sql).    
-2.  На издателе в базе данных публикации выполните процедуру [sp_marksubscriptionvalidation (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql). Укажите публикацию для **\@публикации**, имя подписчика для **\@ного подписчика**и имя базы данных подписки для **\@destination_db**.    
+2.  На издателе в базе данных публикации выполните процедуру [sp_marksubscriptionvalidation (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql). Укажите публикацию для ** \@публикации**, имя подписчика для ** \@подписчика**и имя базы данных подписки для ** \@destination_db**.    
 3.  Повторите шаг 2 для каждой проверяемой подписки (необязательно).    
-4.  На издателе в базе данных публикации выполните процедуру [sp_article_validation (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql). Укажите **\@ную публикацию**, имя статьи для **\@статьи**и одно из следующих значений для **\@rowcount_only**:    
+4.  На издателе в базе данных публикации выполните процедуру [sp_article_validation (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql). Укажите ** \@публикацию**, имя статьи для ** \@статьи**и одно из следующих значений для ** \@rowcount_only**.    
     -   **1** — проверка только количества строк (по умолчанию)    
-    -   **2** — проверка количества строк и двоичной контрольной суммы.  
+    -   **2** — количество строк и двоичная контрольная сумма.  
   
     > [!NOTE]  
     >  Для успешного выполнения процедуры [sp_article_validation (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql) необходимо иметь разрешения SELECT для всех столбцов в опубликованных базовых таблицах.  
@@ -149,7 +149,7 @@ ms.locfileid: "73882240"
 5.  На издателе в базе данных публикации зафиксируйте транзакцию с помощью [COMMIT TRANSACTION (Transact-SQL)](/sql/t-sql/language-elements/commit-transaction-transact-sql).    
 6.  Повторите шаги 1 – 5 для каждой проверяемой статьи (необязательно).    
 7.  Запустите агент распространителя, если он еще не работает (необязательно). Дополнительные сведения см. в разделах [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) и [Synchronize a Push Subscription](synchronize-a-push-subscription.md).    
-8.  Просмотрите результаты проверки в выходном файле агента. Дополнительные сведения см. в статье [Validate Data at the Subscriber](validate-data-at-the-subscriber.md).  
+8.  Просмотрите результаты проверки в выходном файле агента. Дополнительные сведения см. в разделе [Validate Data at the Subscriber](validate-data-at-the-subscriber.md).  
 
 ##  <a name="all-push-subscriptions-to-a-transactional-publication"></a>Все принудительные подписки на публикацию транзакций 
 
@@ -164,9 +164,9 @@ ms.locfileid: "73882240"
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
 6.  Перейдите на вкладку **Все подписки** .    
 7.  Просмотрите результаты проверки. Для каждой принудительной подписки:   
-    1.  1\. Если агент не запущен, щелкните правой кнопкой мыши подписку и выберите **Запустить синхронизацию**.   
+    1.  1. Если агент не запущен, щелкните правой кнопкой мыши подписку и выберите **Запустить синхронизацию**.   
     2.  Щелкните правой кнопкой мыши подписку, затем выберите **Просмотреть подробности**.    
-    3.  3\.Просмотрите сведения на вкладке **Журнал операций от распространителя к подписчику** в текстовом поле **Действия в выбранном сеансе** .  
+    3.  3.Просмотрите сведения на вкладке **Журнал операций от распространителя к подписчику** в текстовом поле **Действия в выбранном сеансе** .  
   
 
 ## <a name="for-a-single-subscription-to-a-merge-publication"></a>Для одной подписки на публикацию слиянием
@@ -187,9 +187,9 @@ ms.locfileid: "73882240"
 
 ### <a name="using-transact-sql-t-sql"></a>Использование Transact-SQL (T-SQL)
 
-1.  На издателе в базе данных публикации выполните процедуру [sp_validatemergesubscription (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql). Укажите **\@ную публикацию**, имя подписчика для **\@подписчика**, имя базы данных подписки для **\@subscriber_db**и одно из следующих значений для **\@уровня**:   
+1.  На издателе в базе данных публикации выполните процедуру [sp_validatemergesubscription (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql). Укажите ** \@публикацию**, имя подписчика для ** \@подписчика**, имя базы данных подписки для ** \@subscriber_db**и одно из следующих значений для ** \@уровня**:   
     -   **1** — проверка только количества строк.    
-    -   **3** — проверка двоичной контрольной суммы.  
+    -   **3** — проверка двоичной контрольной суммы ROWCOUNT.  
   
      Выбранная подписка будет помечена для проверки.  
   
@@ -218,14 +218,14 @@ ms.locfileid: "73882240"
 
 ### <a name="using-transact-sql-t-sql"></a>Использование Transact-SQL (T-SQL)
 
-1.  На издателе в базе данных публикации выполните процедуру [sp_validatemergepublication (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql). Укажите **\@публикацию** и одно из следующих значений для **\@уровня**:    
+1.  На издателе в базе данных публикации выполните процедуру [sp_validatemergepublication (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql). Укажите ** \@публикацию** и одно из следующих значений для ** \@уровня**:    
     -   **1** — проверка только количества строк.    
-    -   **3** — проверка двоичной контрольной суммы.  
+    -   **3** — проверка двоичной контрольной суммы ROWCOUNT.  
   
      Таким образом будут отмечены для проверки все публикации.  
   
 2.  Запустите агент слияния для каждой подписки. Дополнительные сведения см. в разделах [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) и [Synchronize a Push Subscription](synchronize-a-push-subscription.md).    
-3.  Просмотрите результаты проверки в выходном файле агента. Дополнительные сведения см. в статье [Validate Data at the Subscriber](validate-data-at-the-subscriber.md).  
+3.  Просмотрите результаты проверки в выходном файле агента. Дополнительные сведения см. в разделе [Validate Data at the Subscriber](validate-data-at-the-subscriber.md).  
 
 
 ## <a name="for-a-single-push-subscription-to-a-merge-publication"></a>Для одной принудительной подписки на публикацию слиянием 
@@ -240,7 +240,7 @@ ms.locfileid: "73882240"
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
 7.  Перейдите на вкладку **Все подписки** .    
 8.  Просмотрите результаты проверки:    
-    1.  1\. Если агент не запущен, щелкните правой кнопкой мыши подписку и выберите **Запустить синхронизацию**.    
+    1.  1. Если агент не запущен, щелкните правой кнопкой мыши подписку и выберите **Запустить синхронизацию**.    
     2.  Щелкните правой кнопкой мыши подписку, затем выберите **Просмотреть подробности**.    
     3.  Просмотрите сведения на вкладке **Журнал синхронизации** в текстовом поле **Последнее сообщение выбранного сеанса** .  
   
@@ -254,7 +254,7 @@ ms.locfileid: "73882240"
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
 5.  Перейдите на вкладку **Все подписки** .    
 6.  Просмотрите результаты проверки. Для каждой принудительной подписки:    
-    1.  1\. Если агент не запущен, щелкните правой кнопкой мыши подписку и выберите **Запустить синхронизацию**.    
+    1.  1. Если агент не запущен, щелкните правой кнопкой мыши подписку и выберите **Запустить синхронизацию**.    
     2.  Щелкните правой кнопкой мыши подписку, затем выберите **Просмотреть подробности**.    
     3.  Просмотрите сведения на вкладке **Журнал синхронизации** в текстовом поле **Последнее сообщение выбранного сеанса** .  
   
@@ -276,7 +276,7 @@ ms.locfileid: "73882240"
 #### <a name="to-validate-data-for-all-articles-in-a-transactional-publication"></a>Проверка данных для всех статей в публикации транзакций  
   
 1.  Создайте соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .    
-2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.TransPublication> . Установите для публикации свойства <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> и <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> . В свойстве <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> укажите созданное на шаге 1 соединение.   
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.TransPublication>. Установите для публикации свойства <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> и <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> . В свойстве <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> укажите созданное на шаге 1 соединение.   
 3.  Чтобы получить оставшиеся свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает `false`, то либо на шаге 2 были неверно определены свойства публикации, либо публикация не существует.    
 4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.TransPublication.ValidatePublication%2A> . Передайте следующие параметры:    
     -   <xref:Microsoft.SqlServer.Replication.ValidationOption>    
@@ -285,25 +285,25 @@ ms.locfileid: "73882240"
   
      Будут отмечены статьи для проверки.  
   
-5.  Если агент распространителя еще не работает, запустите его для синхронизации каждой подписки. Дополнительные сведения см. в разделе [Synchronize a Push Subscription](synchronize-a-push-subscription.md) или [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md). Результат операции проверки записывается в журнал агента. Дополнительные сведения см. в статье [Monitoring Replication](monitoring-replication.md).  
+5.  Если агент распространителя еще не работает, запустите его для синхронизации каждой подписки. Дополнительные сведения см. в разделе [Synchronize a Push Subscription](synchronize-a-push-subscription.md) или [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md). Результат операции проверки записывается в журнал агента. Дополнительные сведения см. в разделе [Monitoring Replication](monitoring-replication.md).  
   
 #### <a name="to-validate-data-in-all-subscriptions-to-a-merge-publication"></a>Проверка данных всех подписок на публикацию слиянием  
   
 1.  Создайте соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .   
-2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergePublication> . Установите для публикации свойства <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> и <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> . В свойстве <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> укажите созданное на шаге 1 соединение.   
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergePublication>. Установите для публикации свойства <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> и <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> . В свойстве <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> укажите созданное на шаге 1 соединение.   
 3.  Чтобы получить оставшиеся свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает `false`, то либо на шаге 2 были неверно определены свойства публикации, либо публикация не существует.    
 4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.MergePublication.ValidatePublication%2A> . Передайте нужный параметр <xref:Microsoft.SqlServer.Replication.ValidationOption>.    
-5.  Выполните агент слияния для каждой подписки, чтобы начать проверку, или подождите следующего планового запуска агента. Дополнительные сведения см. в разделах [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) и [Synchronize a Push Subscription](synchronize-a-push-subscription.md). Результат проверки записывается в журнал агента, который можно просмотреть с помощью монитора репликации. Дополнительные сведения см. в статье [Monitoring Replication](monitoring-replication.md).  
+5.  Выполните агент слияния для каждой подписки, чтобы начать проверку, или подождите следующего планового запуска агента. Дополнительные сведения см. в разделах [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) и [Synchronize a Push Subscription](synchronize-a-push-subscription.md). Результат проверки записывается в журнал агента, который можно просмотреть с помощью монитора репликации. Дополнительные сведения см. в разделе [Monitoring Replication](monitoring-replication.md).  
   
 #### <a name="to-validate-data-in-a-single-subscription-to-a-merge-publication"></a>Проверка данных в одной подписке на публикацию слиянием  
   
 1.  Создайте соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .    
-2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergePublication> . Установите для публикации свойства <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> и <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> . В свойстве <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> укажите созданное на шаге 1 соединение.    
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergePublication>. Установите для публикации свойства <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> и <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> . В свойстве <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> укажите созданное на шаге 1 соединение.    
 3.  Чтобы получить оставшиеся свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает `false`, то либо на шаге 2 были неверно определены свойства публикации, либо публикация не существует.    
 4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.MergePublication.ValidateSubscription%2A> . Передайте имя подписчика, проверяемую базу данных подписки и нужный параметр <xref:Microsoft.SqlServer.Replication.ValidationOption>.    
-5.  Выполните агент слияния для каждой подписки, чтобы начать проверку, или подождите следующего планового запуска агента. Дополнительные сведения см. в разделах [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) и [Synchronize a Push Subscription](synchronize-a-push-subscription.md). Результат проверки записывается в журнал агента, который можно просмотреть с помощью монитора репликации. Дополнительные сведения см. в статье [Monitoring Replication](monitoring-replication.md).  
+5.  Выполните агент слияния для каждой подписки, чтобы начать проверку, или подождите следующего планового запуска агента. Дополнительные сведения см. в разделах [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) и [Synchronize a Push Subscription](synchronize-a-push-subscription.md). Результат проверки записывается в журнал агента, который можно просмотреть с помощью монитора репликации. Дополнительные сведения см. в разделе [Monitoring Replication](monitoring-replication.md).  
   
-###  <a name="RMOExample"></a> Пример (объекты RMO)  
+###  <a name="RMOExample"></a>Пример (объекты RMO)  
  В этом примере помечаются все подписки на публикацию транзакций для проверки количества строк.  
   
  [!code-csharp[HowTo#rmo_ValidateTranPub](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_validatetranpub)]  

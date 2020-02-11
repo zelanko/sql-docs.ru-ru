@@ -1,5 +1,5 @@
 ---
-title: GetObjectOwner и Setobjectowner методы (Visual C++) | Документация Майкрософт
+title: Примеры методов примеры методов getobjectowner и SetObjectOwner (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f5f2aa4b-d790-458f-9e70-1643e3e203b2
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1cf3526681095fd5d1cc1dd67b5dd16061f601b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c16536becfcea826d9cb6e6ea251517d40ad3ded
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966363"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76934640"
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vc"></a>Примеры методов GetObjectOwner и SetObjectOwner (Visual C++)
-В этом примере показано [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md) и [SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md) методы. Этот код предполагается существование группы Accounting (см. в разделе [группы и добавление пользователей, а также пример метода ChangePassword (Visual C++)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vc.md) чтобы узнать, как добавить эту группу в систему). Владелец таблицы Categories будет присвоено учета.  
+В этом примере демонстрируются методы [примеры методов getobjectowner](../../../ado/reference/adox-api/getobjectowner-method-adox.md) и [SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md) . В этом коде предполагается наличие учетной записи группы (см. Дополнительные сведения о добавлении этой группы в систему в разделе [группы и пользователи добавим, метод ChangePassword (](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vc.md) Visual c++)). Владелец таблицы Categories имеет значение Accounting.  
   
 ```  
 // BeginOwnersCpp.cpp  
@@ -86,7 +86,7 @@ int main() {
    }  
   
    catch(...) {  
-      cout << "Error occured in include files...." << endl;  
+      cout << "Error occurred in include files...." << endl;  
    }  
    ::CoUninitialize();  
 }  

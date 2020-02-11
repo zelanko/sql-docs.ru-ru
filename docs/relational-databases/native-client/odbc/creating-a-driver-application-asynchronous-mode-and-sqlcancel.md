@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e49e9cd9fdf9b4aeeaad4480a222914aaeb607e3
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73787776"
 ---
 # <a name="creating-a-driver-application---asynchronous-mode-and-sqlcancel"></a>Создание приложения драйвера. Асинхронный режим и команда SQLCancel
@@ -50,7 +50,7 @@ SQLSetStmtAttr(hstmt, SQL_ATTR_ASYNC_ENABLE,
   
  Иногда команда остается необработанной долгое время. Если приложению нужно отменить команду, не дожидаясь ответа, это можно сделать, вызвав **SQLCancel** с тем же маркером инструкции, что и у необработанной команды. Это единственный момент, когда следует использовать **SQLCancel** . Некоторые программисты используют **SQLCancel** , когда они обрабатывали фрагменты в результирующем наборе и хотят отменить оставшуюся часть результирующего набора. [SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md) или [SQLCloseCursor](../../../relational-databases/native-client-odbc-api/sqlclosecursor.md) следует использовать для отмены оставшейся части необработанного результирующего набора, а не **SQLCancel**.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Создание драйвера ODBC для собственного клиента SQL Server](../../../relational-databases/native-client/odbc/creating-a-driver-application.md)  
   
   

@@ -16,10 +16,10 @@ ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 42b56712e8b441184d55bf12ce16dbcb55930374
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68762779"
 ---
 # <a name="sp_changesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
@@ -58,11 +58,11 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 ## <a name="arguments"></a>Аргументы  
 `[ @subscriber = ] 'subscriber'`Имя подписчика, для которого необходимо изменить параметры. Аргумент *Subscriber* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @type = ] type`Тип подписчика. *Type имеет тип* **tinyint**и значение по умолчанию NULL. **0** [!INCLUDE[msCoName](../../includes/msconame-md.md)] означает[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчик. **1** указывает другой подписчик сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] источника данных ODBC, отличный от или другого.  
+`[ @type = ] type`Тип подписчика. *Type имеет тип* **tinyint**и значение по умолчанию NULL. **0** означает [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчик. **1** указывает другой подписчик сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] источника данных ODBC, отличный от или другого.  
   
-`[ @login = ] 'login'`Идентификатор входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для проверки подлинности. Аргумент *login* имеет тип **sysname** и значение по умолчанию NULL.  
+`[ @login = ] 'login'`Идентификатор входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для проверки подлинности. Аргумент *Login* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @password = ] 'password'`Пароль для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности. Аргумент *Password* имеет **%** тип **sysname**и значение по умолчанию. **%** Указывает, что свойство Password не изменяется.  
+`[ @password = ] 'password'`Пароль для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности. Аргумент *Password* имеет тип **sysname**и значение по **%** умолчанию. **%** Указывает, что свойство Password не изменяется.  
   
 `[ @commit_batch_size = ] commit_batch_size`Поддерживается только для обратной совместимости.  
   
@@ -70,41 +70,41 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @flush_frequency = ] flush_frequency`Поддерживается только для обратной совместимости.  
   
-`[ @frequency_type = ] frequency_type`Частота, с которой следует запланировать задачу распределения. Аргумент *frequency_type* имеет **тип int**и может принимать одно из следующих значений.  
+`[ @frequency_type = ] frequency_type`Частота, с которой следует запланировать задачу распределения. *frequency_type* имеет **тип int**и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
-|**1**|Однократно|  
-|**2**|по запросу|  
+|**1**|Один раз.|  
+|**2**|По запросу|  
 |**4**|Ежедневно|  
 |**8**|Еженедельно|  
-|**16**|Ежемесячно|  
+|**глубин**|Ежемесячная|  
 |**32**|Ежемесячно с относительной датой|  
 |**64**|Автозапуск|  
-|**128**|Повторяющееся задание|  
+|**128**|Повторение|  
   
-`[ @frequency_interval = ] frequency_interval`Интервал для аргумента *frequency_type*. *frequency_interval* имеет **тип int**и значение по умолчанию NULL.  
+`[ @frequency_interval = ] frequency_interval`Интервал для *frequency_type*. *frequency_interval* имеет **тип int**и значение по умолчанию NULL.  
   
-`[ @frequency_relative_interval = ] frequency_relative_interval`Дата задачи распространения. Этот параметр используется, если аргумент *frequency_type* имеет значение **32** (ежемесячное относительное). *frequency_relative_interval* имеет **тип int**и может принимать одно из следующих значений.  
+`[ @frequency_relative_interval = ] frequency_relative_interval`Дата задачи распространения. Этот параметр используется, если *frequency_type* установлен в значение **32** (ежемесячное относительное расписание). *frequency_relative_interval* имеет **тип int**и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
-|**1**|Первая|  
-|**2**|Вторая|  
+|**1**|Первый|  
+|**2**|Секунда|  
 |**4**|Третья|  
 |**8**|Четвертая|  
-|**16**|Последняя|  
+|**глубин**|Последний|  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Частота повторения задачи распределения во время заданного аргумента *frequency_type*. *frequency_recurrence_factor* имеет **тип int**и значение по умолчанию NULL.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Частота повторения задачи распределения во время определенных *frequency_type*. *frequency_recurrence_factor* имеет **тип int**и значение по умолчанию NULL.  
   
 `[ @frequency_subday = ] frequency_subday`Частота повторного планирования в течение заданного периода. *frequency_subday* имеет **тип int**и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |**1**|Однократно|  
-|**2**|Вторая|  
+|**2**|Секунда|  
 |**4**|Минута|  
-|**8**|Час|  
+|**8**|Hour|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`Интервал для *frequence_subday*. *frequency_subday_interval* имеет **тип int**и значение по умолчанию NULL.  
   
@@ -120,31 +120,31 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @security_mode = ] security_mode`Реализованный режим безопасности. *security_mode* имеет **тип int**и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
-|**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Проверка подлинности|  
+|**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Идентификаци|  
 |**1**|Проверка подлинности Windows|  
   
 `[ @publisher = ] 'publisher'`Указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя, отличного от. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
   
 > [!NOTE]  
->  при изменении свойств [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] статьи издателя не следует использовать издатель.  
+>  ** при изменении свойств статьи [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя не следует использовать издатель.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  **sp_changesubscriber** используется во всех типах репликации.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_changesubscriber**.  
   
-## <a name="see-also"></a>См. также  
- [sp_addsubscriber &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
- [sp_dropsubscriber &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
- [sp_helpdistributiondb (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
- [sp_helpserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
- [sp_helpsubscriberinfo (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [sp_addsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
+ [sp_dropsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
+ [sp_helpdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
+ [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_helpsubscriberinfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

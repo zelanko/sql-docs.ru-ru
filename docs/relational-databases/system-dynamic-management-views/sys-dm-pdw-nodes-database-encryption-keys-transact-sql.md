@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: c319259d8997db2ff39d90b408056d03eb008782
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401640"
 ---
 # <a name="sysdm_pdw_nodes_database_encryption_keys-transact-sql"></a>sys. dm_pdw_nodes_database_encryption_keys (Transact-SQL)
@@ -24,15 +24,15 @@ ms.locfileid: "74401640"
 
   Возвращает сведения о состоянии шифрования базы данных и о связанных ключах шифрования базы данных. **sys. dm_pdw_nodes_database_encryption_keys** предоставляет эти сведения для каждого узла. Дополнительные сведения о шифровании базы данных см. в разделе [прозрачное шифрование данных (SQL Server PDW)](../../analytics-platform-system/transparent-data-encryption.md).  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|Идентификатор физической базы данных на каждом узле.|  
 |encryption_state|**int**|Указывает, является ли база данных на этом узле зашифрованной или не зашифрованной.<br /><br /> 0 = нет ключа шифрования базы данных, нет шифрования<br /><br /> 1 = не зашифрована<br /><br /> 2 = выполняется шифрование<br /><br /> 3 = зашифрована<br /><br /> 4 = выполняется изменение ключа<br /><br /> 5 = выполняется расшифровка<br /><br /> 6 = выполняется изменение защиты (сертификат, который шифрует ключ шифрования базы данных, изменяется.)|  
-|create_date|**DateTime**|Отображает дату создания ключа шифрования.|  
-|regenerate_date|**DateTime**|Отображает дату повторного создания ключа шифрования.|  
-|modify_date|**DateTime**|Отображает дату изменения ключа шифрования.|  
-|set_date|**DateTime**|Отображает дату применения ключа шифрования к базе данных.|  
-|opened_date|**DateTime**|Показывает, когда ключ базы данных был открыт в последний раз.|  
+|create_date|**datetime**|Отображает дату создания ключа шифрования.|  
+|regenerate_date|**datetime**|Отображает дату повторного создания ключа шифрования.|  
+|modify_date|**datetime**|Отображает дату изменения ключа шифрования.|  
+|set_date|**datetime**|Отображает дату применения ключа шифрования к базе данных.|  
+|opened_date|**datetime**|Показывает, когда ключ базы данных был открыт в последний раз.|  
 |key_algorithm|**varchar (?)**|Отображает алгоритм, используемый для ключа.|  
 |key_length|**int**|Отображает длину ключа.|  
 |encryptor_thumbprint|**варбин**|Показывает отпечаток шифратора.|  
@@ -59,7 +59,7 @@ JOIN sys.databases AS D
 ORDER BY D.database_id, PD.pdw_node_ID;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Динамические административные представления хранилища данных SQL и параллельного хранилища данных &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)   
  [Создание ключа шифрования базы данных &#40;&#41;Transact-SQL](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
  [&#40;&#41;Transact-SQL в инструкции ALTER DATABASE ENCRYPTION KEY](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   

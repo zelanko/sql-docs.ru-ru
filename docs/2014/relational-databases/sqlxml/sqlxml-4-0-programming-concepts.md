@@ -1,5 +1,5 @@
 ---
-title: SQLXML 4.0 основные понятия программирования | Документация Майкрософт
+title: Основные понятия программирования SQLXML 4,0 | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 03d6069358c1591233aa892a723b7367a21be569
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012224"
 ---
 # <a name="sqlxml-40-programming-concepts"></a>Основные понятия о программировании для SQLXML 4.0
@@ -27,22 +27,22 @@ ms.locfileid: "66012224"
   
  Этот раздел содержит сведения об SQLXML 4.0.  
   
- [SQLXML не устанавливается в SQL Server](sqlxml-is-not-installed-in-sql-server.md)  
+ [SQLXML не установлен в SQL Server](sqlxml-is-not-installed-in-sql-server.md)  
  Описывает процесс установки SQLXML 4.0.  
   
- [Новые возможности SQLXML 4.0 с пакетом обновления 1 (SP1)](what-s-new-in-sqlxml-4-0-sp1.md)  
+ [Новые возможности в SQLXML 4.0 с пакетом обновления 1 (SP1)](what-s-new-in-sqlxml-4-0-sp1.md)  
  Содержит описание обновлений и расширений в SQLXML 4.0, а также ссылки на соответствующие разделы в настоящей документации.  
   
  [Использование ADO для выполнения запросов SQLXML 4.0](using-ado-to-execute-sqlxml-4-0-queries.md)  
  Описывает процесс работы с запросами ADO для SQLXML. В SQLXML 4.0 поддержка ADO более заметна, чем в предыдущих версиях.  
   
- [Поддержка типов данных XML в SQLXML 4.0](xml-data-type-support-in-sqlxml-4-0.md)  
+ [Поддержка типов данных xml в SQLXML 4.0](xml-data-type-support-in-sqlxml-4-0.md)  
  Описывает поддержку типа данных xml, которая была добавлена в SQLXML 4.0.  
   
  [Требования к запуску примеров SQLXML](requirements-for-running-sqlxml-examples.md)  
  Описывает требования для создания рабочих образцов из примеров, входящих в состав SQLXML.  
   
- [Клиентские и серверные форматирование &#40;SQLXML 4.0&#41;](formatting/client-side-and-server-side-formatting-sqlxml-4-0.md)  
+ [Форматирование на стороне клиента и на стороне сервера &#40;SQLXML 4,0&#41;](formatting/client-side-and-server-side-formatting-sqlxml-4-0.md)  
  Содержит сведения о форматировании на стороне сервера и на стороне клиента, а также их сравнение, в том числе сведения о команде FOR XML для создания XML-документов.  
   
  [Схемы XSD с заметками в SQLXML 4.0](annotated-xsd-schemas/annotated-xsd-schemas-in-sqlxml-4-0.md)  
@@ -54,7 +54,7 @@ ms.locfileid: "66012224"
  [Использование диаграмм обновления для изменения данных в SQLXML 4.0](../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md)  
  Содержит сведения о диаграммах обновления, которые изменяют данные в базе данных применительно к XML-представлениям на основе аннотированных схем XSD (или XDR).  
   
- [Выполнение массовой загрузки XML-данных &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+ [Выполнение групповой загрузки данных XML &#40;SQLXML 4,0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
  Описывает процесс массовой загрузки XML в SQLXML 4.0.  
   
  [Компоненты доступа к данным SQLXML 4.0](../sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/sqlxml-4-0-data-access-components-sqlxmloledb-provider.md)  
@@ -63,7 +63,7 @@ ms.locfileid: "66012224"
  [Поддержка SQLXML 4.0 на платформе .NET Framework](../../database-engine/dev-guide/sqlxml-4-0-net-framework-support.md)  
  Описывает поддержку SQLXML 4.0 для .NET Framework.  
   
- [Кэширование шаблонов, XSL и схем &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/caching-templates-xsl-and-schemas-sqlxml-4-0.md)  
+ [Кэширование шаблонов, XSL и схем &#40;SQLXML 4,0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/caching-templates-xsl-and-schemas-sqlxml-4-0.md)  
  Описывает функции кэширования, обеспечиваемые SQLXML для повышения производительности.  
   
  [Проблемы безопасности SQLXML 4.0](../sqlxml-annotated-xsd-schemas-xpath-queries/security/sqlxml-4-0-security-considerations.md)  
@@ -72,7 +72,7 @@ ms.locfileid: "66012224"
  [Рекомендации по использованию SQLXML 4.0 и действующие ограничения](../sqlxml-annotated-xsd-schemas-xpath-queries/guidelines-and-limitations-of-sqlxml-4-0.md)  
  Содержит перечень проблем, которые следует учитывать при работе с SQLXML 4.0.  
   
-## <a name="see-also"></a>См. также  
- [Данные XML (SQL Server)](../xml/xml-data-sql-server.md)  
+## <a name="see-also"></a>См. также:  
+ [SQL Server &#40;XML-данных&#41;](../xml/xml-data-sql-server.md)  
   
   

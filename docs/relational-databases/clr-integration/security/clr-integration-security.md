@@ -1,5 +1,5 @@
 ---
-title: Безопасность интеграции CLR | Документация Майкрософт
+title: Безопасность интеграции со средой CLR | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7cfcc3f4d65901da34152a6fce21b436750c15fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68118511"
 ---
 # <a name="clr-integration-security"></a>Безопасность интеграции со средой CLR
@@ -40,10 +40,10 @@ ms.locfileid: "68118511"
   
  В следующей таблице приводится список подразделов данного раздела.  
   
- [Безопасность доступом для кода на основе интеграции со средой CLR](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)  
+ [Управление доступом для кода на основе интеграции со средой CLR](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)  
  Обсуждается модель безопасности для управляемого кода, основанная на управлении доступом для кода (CAS).  
   
- [Атрибуты защиты узла и программирование интеграции со средой CLR](../../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)  
+ [Атрибуты защиты узла и программирование средств интеграции со средой CLR](../../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)  
  Содержит сведения о значениях атрибутов защиты узла (host protection attribute, HPA), запрещенных в сборках SAFE и EXTERNAL_ACCESS.  
   
  [Ссылки в средствах безопасности интеграции со средой CLR](https://msdn.microsoft.com/library/168efd01-d12e-4bdf-a1b3-0b5c76474eaf)  
@@ -58,7 +58,7 @@ ms.locfileid: "68118511"
  [Домены приложений и безопасность интеграции со средой CLR](/sql/database-engine/dev-guide/allowing-partially-trusted-callers?view=sql-server-2014)  
  Описывает загрузку сборок в домены приложений.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Управление сборками интеграции со средой CLR](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)  
   
   

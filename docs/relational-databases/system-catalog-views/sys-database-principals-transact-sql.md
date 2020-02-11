@@ -20,37 +20,37 @@ ms.assetid: 8cb239e9-eb8c-4109-9cec-0d35de95fa0e
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cc9dd813736a2cc06f3108a0b3402e4cef99815e
-ms.sourcegitcommit: ede04340adbf085e668a2536d4f7114abba14a0c
+ms.openlocfilehash: 32c5e56526b0e3ee06dc570e35b81bdfb4b14ce7
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761164"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76761848"
 ---
 # <a name="sysdatabase_principals-transact-sql"></a>sys.database_principals (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Возвращает по одной строке для каждого субъекта безопасности в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|**безымян**|**имеет sysname**|Имя участника, уникальное в пределах базы данных.|  
+|**name**|**имеет sysname**|Имя участника, уникальное в пределах базы данных.|  
 |**principal_id**|**int**|Идентификатор участника, уникальный в пределах базы данных.|  
-|**Тип**|**char (1)**|Тип участника:<br /><br /> A = роль приложения<br /><br /> C = пользователь сопоставлен с сертификатом<br /><br /> E = внешний пользователь из Azure Active Directory<br /><br /> G = группа Windows<br /><br /> K = пользователь сопоставлен с асимметричным ключом<br /><br /> R = роль базы данных<br /><br /> S = пользователь SQL<br /><br /> U = пользователь Windows<br /><br /> X = Внешняя группа из группы или приложений Azure Active Directory|  
+|**type**|**char (1)**|Тип участника:<br /><br /> A = роль приложения<br /><br /> C = пользователь сопоставлен с сертификатом<br /><br /> E = внешний пользователь из Azure Active Directory<br /><br /> G = группа Windows<br /><br /> K = пользователь сопоставлен с асимметричным ключом<br /><br /> R = роль базы данных<br /><br /> S = пользователь SQL<br /><br /> U = пользователь Windows<br /><br /> X = Внешняя группа из группы или приложений Azure Active Directory|  
 |**type_desc**|**nvarchar (60)**|Описание типа участника.<br /><br /> APPLICATION_ROLE<br /><br /> CERTIFICATE_MAPPED_USER<br /><br /> EXTERNAL_USER<br /><br /> WINDOWS_GROUP<br /><br /> ASYMMETRIC_KEY_MAPPED_USER<br /><br /> DATABASE_ROLE<br /><br /> SQL_USER<br /><br /> WINDOWS_USER<br /><br /> EXTERNAL_GROUPS|  
 |**default_schema_name**|**имеет sysname**|Имя, используемое в случае, когда схема не определяется именем SQL. NULL для участников с типами, отличными от S, U или A.|  
-|**create_date**|**DateTime**|Время создания участника.|  
-|**modify_date**|**DateTime**|Время последнего изменения участника.|  
-|**owning_principal_id**|**int**|Идентификатор участника, являющегося владельцем данного участника. Все субъекты, за исключением ролей базы данных, должны принадлежать **dbo**.|  
+|**create_date**|**datetime**|Время создания участника.|  
+|**modify_date**|**datetime**|Время последнего изменения участника.|  
+|**owning_principal_id**|**int**|Идентификатор участника, являющегося владельцем данного участника. По умолчанию владельцем всех предопределенных ролей базы данных является **dbo** .|  
 |**sid**|**varbinary (85)**|SID (идентификатор защиты) участника.  NULL для SYS и INFORMATION SCHEMAS.|  
-|**is_fixed_role**|**версий**|Если значение равно 1, эта строка представляет запись для одной из предопределенных ролей базы данных: db_owner, db_accessadmin, db_datareader, db_datawriter, db_ddladmin, db_securityadmin, db_backupoperator, db_denydatareader, db_denydatawriter.|  
-|**authentication_type**|**int**|**Применимо к**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздним версиям.<br /><br /> Обозначает тип проверки подлинности. Ниже приведены возможные значения и их описания.<br /><br /> 0 — без проверки подлинности<br />1: проверка подлинности экземпляра<br />2: проверка подлинности базы данных<br />3: проверка подлинности Windows|  
-|**authentication_type_desc**|**nvarchar (60)**|**Применимо к**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздним версиям.<br /><br /> Описание типа проверки подлинности. Ниже приведены возможные значения и их описания.<br /><br /> Нет: нет проверки подлинности<br />ЭКЗЕМПЛЯР: проверка подлинности экземпляра<br />БАЗА данных: проверка подлинности базы данных<br />WINDOWS: проверка подлинности Windows|  
-|**default_language_name**|**имеет sysname**|**Применимо к**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздним версиям.<br /><br /> Обозначает язык по умолчанию для участника.|  
-|**default_language_lcid**|**int**|**Применимо к**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздним версиям.<br /><br /> Обозначает код языка по умолчанию для участника.|  
-|**allow_encrypted_value_modifications**|**версий**|**Применимо к**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] и более [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]поздним версиям.<br /><br /> Отключает проверки шифрованных метаданных на сервере в операциях массового копирования. Это позволяет пользователю выполнять полное копирование данных, зашифрованных с помощью Always Encrypted, между таблицами или базами данных без расшифровки данных. Значение по умолчанию — OFF. |      
+|**is_fixed_role**|**bit**|Если значение равно 1, эта строка представляет запись для одной из предопределенных ролей базы данных: db_owner, db_accessadmin, db_datareader, db_datawriter, db_ddladmin, db_securityadmin, db_backupoperator, db_denydatareader, db_denydatawriter.|  
+|**authentication_type**|**int**|**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.<br /><br /> Обозначает тип проверки подлинности. Ниже приведены возможные значения и их описания.<br /><br /> 0 — без проверки подлинности<br />1: проверка подлинности экземпляра<br />2: проверка подлинности базы данных<br />3: проверка подлинности Windows|  
+|**authentication_type_desc**|**nvarchar (60)**|**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.<br /><br /> Описание типа проверки подлинности. Ниже приведены возможные значения и их описания.<br /><br /> Нет: нет проверки подлинности<br />ЭКЗЕМПЛЯР: проверка подлинности экземпляра<br />БАЗА данных: проверка подлинности базы данных<br />WINDOWS: проверка подлинности Windows|  
+|**default_language_name**|**имеет sysname**|**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.<br /><br /> Обозначает язык по умолчанию для участника.|  
+|**default_language_lcid**|**int**|**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.<br /><br /> Обозначает код языка по умолчанию для участника.|  
+|**allow_encrypted_value_modifications**|**bit**|**Применимо к**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] и более [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]поздним версиям.<br /><br /> Отключает проверки шифрованных метаданных на сервере в операциях массового копирования. Это позволяет пользователю выполнять полное копирование данных, зашифрованных с помощью Always Encrypted, между таблицами или базами данных без расшифровки данных. Значение по умолчанию — OFF. |      
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Свойства *passwordlastsettime имеют* доступны во всех поддерживаемых конфигурациях SQL Server, но другие свойства доступны только в том случае, если SQL Server работает на Windows Server 2003 или более поздней версии и включены оба CHECK_POLICY и CHECK_EXPIRATION. Дополнительные сведения см. в разделе [Политика паролей](../../relational-databases/security/password-policy.md) .
 Значения principal_id могут быть повторно использованы в случае, если субъекты были удалены и, следовательно, не всегда растет.
   
@@ -121,7 +121,7 @@ JOIN sys.schemas AS s
     ON o.schema_id = s.schema_id;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Участники &#40;ядро СУБД&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [sys. server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [Представления каталога безопасности &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   

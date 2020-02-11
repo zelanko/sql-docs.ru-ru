@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ceec7e4a58b98763f7a3215d29087eb948ec0b41
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68891327"
 ---
 # <a name="text-based-query-designer-user-interface"></a>Пользовательский интерфейс текстового конструктора запросов
@@ -35,17 +35,17 @@ ms.locfileid: "68891327"
 ## <a name="text-based-query-designer-toolbar"></a>Панель инструментов текстового конструктора запросов  
  Текстовый конструктор запросов предоставляет одну панель инструментов для всех типов команд. В следующей таблице перечислены все кнопки панели инструментов и их функции.  
   
-|Кнопка|Описание|  
+|Кнопка|Description|  
 |------------|-----------------|  
-|**Редактировать как текст**|Переключиться из текстового конструктора запросов в графический и обратно. Не все источники данных поддерживают графические конструкторы запросов.|  
+|**Изменить как текст**|Переключиться из текстового конструктора запросов в графический и обратно. Не все источники данных поддерживают графические конструкторы запросов.|  
 |**Импорт**|Импорт существующего запроса из файла или отчета. Поддерживаются только SQL и RDL-файлы. Дополнительные сведения см. в разделе [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
-|![Выполнить запрос](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Выполнить запрос")|Выполнить запрос и показать результирующий набор в панели результатов.|  
+|![Выполнение запроса](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Выполнение запроса")|Выполнить запрос и показать результирующий набор в панели результатов.|  
 |**Тип команды**|Выберите **Text**, **StoredProcedure**или **TableDirect**. Если хранимая процедура имеет параметры, при нажатии на панели инструментов кнопки **Выполнить** появится диалоговое окно **Определение параметров запроса** , в котором можно ввести значения параметров. Обратите внимание, что если хранимая процедура возвращает более одного результирующего набора, для заполнения набора данных используется только первый результирующий набор.<br /><br /> Поддержка типов команд зависит от типа источника данных. Например, **TableDirect**поддерживают только OLE DB и ODBC.|  
   
 ### <a name="command-type-text"></a>Тип команды Text  
  Если создается набор данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], конструктор отчетов по умолчанию отображает графический конструктор запросов. Чтобы переключиться в текстовый конструктор запросов, нажмите кнопку переключателя **Редактировать как текст** на панели инструментов. В окне текстового конструктора запросов отображаются две панели: панель запросов и область результатов. На следующем рисунке показана каждая панель.  
   
- ![Конструктор универсальных запросов с запросом реляционных данных](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-dsaw-sql-generic.gif "Конструктор универсальных запросов с запросом реляционных данных")  
+ ![Обычный конструктор запросов для запросов к реляционным данным](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-dsaw-sql-generic.gif "Обычный конструктор запросов для запросов к реляционным данным")  
   
  В следующей таблице описываются функции каждой панели.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "68891327"
 |Результат|Отображает результаты запроса. Чтобы выполнить запрос, щелкните правой кнопкой мыши любую область и выберите команду **Выполнить**либо нажмите кнопку **Выполнить** на панели инструментов.|  
   
 #### <a name="example"></a>Пример  
- Следующий запрос возвращает список фамилий из таблицы `Contact` базы данных [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)], .  
+ Следующий запрос возвращает список фамилий из таблицы [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] базы данных `Contact`, .  
   
 ```  
 SELECT LastName FROM Person.Person;  
@@ -89,13 +89,13 @@ uspGetEmployeeManagers;
   
  При вводе имени таблицы Sales. Customer это эквивалентно созданию [!INCLUDE[tsql](../includes/tsql-md.md)] инструкции. `SELECT * FROM Sales.Customer;`  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Средства проектирования запросов в конструктор отчетов SQL Server Data Tools &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   
  [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Тип соединения SQL Server (службы SSRS)](report-data/sql-server-connection-type-ssrs.md)   
- [Тип подключения OLE DB &#40;SSRS&#41;](report-data/ole-db-connection-type-ssrs.md)   
- [Типы &#40;соединений ODBC SSRS&#41;](report-data/odbc-connection-type-ssrs.md)   
+ [Тип подключения SQL Server &#40;SSRS&#41;](report-data/sql-server-connection-type-ssrs.md)   
+ [Тип подключения OLE DB &#40;SSRS&#41;](report-data/ole-db-connection-type-ssrs.md)   
+ [Тип подключения ODBC &#40;службы SSRS&#41;](report-data/odbc-connection-type-ssrs.md)   
  [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Файл конфигурации RSReportDesigner](report-server/rsreportdesigner-configuration-file.md)  
+ [RSReportDesigner, файл конфигурации](report-server/rsreportdesigner-configuration-file.md)  
   
   

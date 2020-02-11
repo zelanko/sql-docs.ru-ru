@@ -18,13 +18,13 @@ ms.assetid: c440f5c9-9884-4196-b07c-55d87afb17c3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 74558320df59414a756e1655bb073e9bf0d7d73c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107978"
 ---
-# <a name="spnotifyoperator-transact-sql"></a>sp_notify_operator (Transact-SQL)
+# <a name="sp_notify_operator-transact-sql"></a>sp_notify_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Отправляет оператору сообщения по электронной почте с помощью компонента Database Mail.  
@@ -47,32 +47,32 @@ sp_notify_operator
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @profile_name = ] 'profilename'` Имя профиля компонента Database Mail для отправки сообщения. *ProfileName* — **nvarchar(128)** . Если *profilename* не указан, используется профиль компонента Database Mail по умолчанию.  
+`[ @profile_name = ] 'profilename'`Имя профиля Database Mail, используемого для отправки сообщения. *filename* имеет тип **nvarchar (128)**. Если параметр *filename* не указан, используется профиль Database Mail по умолчанию.  
   
-`[ @id = ] id` Идентификатор оператора, которому отправляется сообщение. *Идентификатор* — **int**, значение по умолчанию NULL. Один из *идентификатор* или *имя* должен быть указан.  
+`[ @id = ] id`Идентификатор оператора, которому отправляется сообщение. *ID* имеет **тип int**и значение по умолчанию NULL. Необходимо указать один из *идентификаторов* или *имя* .  
   
-`[ @name = ] 'name'` Имя оператора, которому отправляется сообщение. *имя* — **nvarchar(128)** , значение по умолчанию NULL. Один из *идентификатор* или *имя* должен быть указан.  
+`[ @name = ] 'name'`Имя оператора, которому отправляется сообщение. *имя* имеет тип **nvarchar (128)** и значение по умолчанию NULL. Необходимо указать один из *идентификаторов* или *имя* .  
   
-> **ПРИМЕЧАНИЕ.** Адрес электронной почты должны быть определены для оператора, прежде чем они могут получать сообщения.  
+> **Примечание.** Перед получением сообщений необходимо определить адрес электронной почты оператора.  
   
-`[ @subject = ] 'subject'` Тема сообщения электронной почты. *Тема* — **nvarchar(256)** не имеет значения по умолчанию.  
+`[ @subject = ] 'subject'`Тема сообщения электронной почты. *subject* имеет тип **nvarchar (256)** и не имеет значения по умолчанию.  
   
-`[ @body = ] 'message'` Тело сообщения электронной почты. *сообщение* — **nvarchar(max)** не имеет значения по умолчанию.  
+`[ @body = ] 'message'`Текст сообщения электронной почты. *Message* имеет тип **nvarchar (max)** и не имеет значения по умолчанию.  
   
-`[ @file_attachments = ] 'attachment'` Имя файла, прилагаемого к сообщению электронной почты. *вложение* — **nvarchar(512)** , не имеет значения по умолчанию.  
+`[ @file_attachments = ] 'attachment'`Имя файла, который необходимо присоединить к сообщению электронной почты. *вложение* имеет тип **nvarchar (512)** и не имеет значения по умолчанию.  
   
-`[ @mail_database = ] 'mail_host_database'` Указывает имя базы данных обслуживания почты. *mail_host_database* — **nvarchar(128)** . Если не *mail_host_database* указано, **msdb** база данных используется по умолчанию.  
+`[ @mail_database = ] 'mail_host_database'`Указывает имя базы данных обслуживания почты. *mail_host_database* имеет тип **nvarchar (128)**. Если *mail_host_database* не указано, по умолчанию используется база данных **msdb** .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Отправляет данное сообщение на адрес электронной почты указанного оператора. Если оператор не имеет настроенного адреса электронной почты, возвращается ошибка.  
   
  Компонент Database Mail и базы данных обслуживания почты должны быть сконфигурированы до отправки уведомления оператору.  
   
 ## <a name="permissions"></a>Разрешения  
- По умолчанию эту хранимую процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
+ По умолчанию эта хранимая процедура может выполняться членами предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
   
 -   **SQLAgentUserRole**  
   
@@ -97,10 +97,10 @@ EXEC dbo.sp_notify_operator
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Агент SQL Server хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_add_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
- [Хранимая процедура sp_help_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
+ [sp_help_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
  [sp_delete_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)  
   
   
