@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0682c6100a96fbfb3016dec4bead4c385190192f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62470041"
 ---
 # <a name="dtaxml-element-dta"></a>Элемент DTAXML (DTA)
@@ -37,14 +37,14 @@ ms.locfileid: "62470041"
   
 ## <a name="element-attributes"></a>Атрибуты элемента  
   
-|attribute|Описание|  
+|attribute|Description|  
 |---------------|-----------------|  
-|`xmlns:xsi`|Обязательный. Определяет пространство имен экземпляра XML-схемы. Атрибуты этого пространства имен используются для обращения к схеме, применяемой для проверки XML-файла помощника по настройке ядра СУБД.<br /><br /> Обязательное значение: [http://www.w3.org/2001/XMLSchema-instance](http://www.w3.org/2001/XMLSchema-instance)|  
-|`xmlns`|Обязательный. Определяет пространство имен помощника по настройке ядра СУБД.<br /><br /> При редактировании XML-файла помощника по настройке ядра СУБД в редакторе XML из [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]это значение используется в справке F1, а также в динамической справке для поиска подходящих разделов электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Обязательное значение:<br /><br /> [XML-схема помощника по настройке компонента Database Engine](https://go.microsoft.com/fwlink/?LinkId=43100) Пространство имен|  
+|`xmlns:xsi`|Обязательный параметр. Определяет пространство имен экземпляра XML-схемы. Атрибуты этого пространства имен используются для обращения к схеме, применяемой для проверки XML-файла помощника по настройке ядра СУБД.<br /><br /> Обязательное значение:[http://www.w3.org/2001/XMLSchema-instance](http://www.w3.org/2001/XMLSchema-instance)|  
+|`xmlns`|Обязательный параметр. Определяет пространство имен помощника по настройке ядра СУБД.<br /><br /> При редактировании XML-файла помощника по настройке ядра СУБД в редакторе XML из [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]это значение используется в справке F1, а также в динамической справке для поиска подходящих разделов электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Обязательное значение:<br /><br /> [Помощник по настройке ядра СУБД схемы XML](https://go.microsoft.com/fwlink/?LinkId=43100) Имен|  
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |**Тип данных и длина**|Нет.|  
 |**Значение по умолчанию**|Нет.|  
@@ -55,16 +55,16 @@ ms.locfileid: "62470041"
 |Связь|Элементы|  
 |------------------|--------------|  
 |**Родительский элемент**|None|  
-|**Дочерние элементы**|[Элемент DTAInput (DTA)](dtainput-element-dta.md)<br /><br /> `DTAOutput` Элемент (см. в разделе [схемы XML помощника по настройке ядра СУБД](https://schemas.microsoft.com/sqlserver/) сведения)|  
+|**Дочерние элементы**|[Элемент DTAInput &#40;DTA&#41;](dtainput-element-dta.md)<br /><br /> `DTAOutput`Элемент (сведения см. в разделе [Помощник по настройке ядра СУБД XML Schema](https://schemas.microsoft.com/sqlserver/) )|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Дополнительные сведения о пространствах имен XML см. в статье [Пространства имен в XML-документе](https://go.microsoft.com/fwlink/?LinkId=7341) в библиотеке [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN.  
   
 ## <a name="example"></a>Пример  
  Примеры типичных элементов **DTAXML** см. в разделе [Образцы входных XML-файлов (DTA)](xml-input-file-samples-dta.md).  
   
-## <a name="see-also"></a>См. также  
- [Справочник по входным XML-файлам (помощник по настройке ядра СУБД)](xml-input-file-reference-database-engine-tuning-advisor.md)   
+## <a name="see-also"></a>См. также:  
+ [Справочник по входным XML-файлам &#40;помощник по настройке ядра СУБД&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)   
  [Запуск и использование помощника по настройке ядра СУБД](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)  
   
   

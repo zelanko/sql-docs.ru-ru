@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a860db611154f9f7a130ee6be90dd43a96b50af5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62510424"
 ---
 # <a name="add-a-custom-report-to-management-studio"></a>Добавление пользовательского отчета в среду Management Studio
@@ -67,10 +67,10 @@ ms.locfileid: "62510424"
   
     2.  Измените число в поле **Показать n файлов в списке недавно использованных**.  
   
-## <a name="see-also"></a>См. также  
- [Пользовательские отчеты в среде Management Studio](custom-reports-in-management-studio.md)   
- [Использование пользовательских отчетов совместно со свойствами узлов обозревателя объектов](use-custom-reports-with-object-explorer-node-properties.md)   
- [Отмена подавления предупреждений для пользовательских отчетов](unsuppress-run-custom-report-warnings.md)   
+## <a name="see-also"></a>См. также:  
+ [Пользовательские отчеты в Management Studio](custom-reports-in-management-studio.md)   
+ [Использование пользовательских отчетов в свойствах узла обозревателя объектов](use-custom-reports-with-object-explorer-node-properties.md)   
+ [Отменить подавление предупреждений о выполнении пользовательских отчетов](unsuppress-run-custom-report-warnings.md)   
  [Службы Reporting Services (SSRS)](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
   

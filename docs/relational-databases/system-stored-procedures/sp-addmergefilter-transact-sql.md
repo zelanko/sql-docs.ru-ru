@@ -16,13 +16,13 @@ ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0ba0e2384ec63d29d3a5030c0b018998896dc8cb
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68769180"
 ---
-# <a name="spaddmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
+# <a name="sp_addmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Добавляет новый фильтр слияния для создания секции на базе соединения с другой таблицей. Эта хранимая процедура выполняется на издателе в базе данных публикации.  
@@ -51,22 +51,22 @@ sp_addmergefilter [ @publication = ] 'publication'
   
 `[ @filtername = ] 'filtername'`Имя фильтра. *filtername* является обязательным параметром. *filtername*имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @join_articlename = ] 'join_articlename'`Родительская статья, к которой дочерняя статья, указанная в *статье*, должна быть соединена с помощью предложения JOIN, заданного параметром *join_filterclause*, чтобы определить строки дочерней статьи, соответствующие критерию фильтра фильтра слияния. *join_articlename* имеет тип **sysname**и не имеет значения по умолчанию. Статья должна быть в публикации, заданной в *публикации*.  
+`[ @join_articlename = ] 'join_articlename'`Родительская статья, к которой дочерняя статья, указанная в *статье*, должна быть соединена с помощью предложения JOIN, заданного *join_filterclause*, чтобы определить строки дочерней статьи, соответствующие критерию фильтра фильтра слияния. Аргумент *join_articlename* имеет тип **sysname**и не имеет значения по умолчанию. Статья должна быть в публикации, заданной в *публикации*.  
   
-`[ @join_filterclause = ] join_filterclause`Предложение join, которое должно использоваться для объединения дочерней статьи, указанной в *статье*и родительской статье, указанной параметром *join_article*, чтобы определить строки, определяющие фильтр слияния. *join_filterclause* имеет тип **nvarchar (1000)** .  
+`[ @join_filterclause = ] join_filterclause`Предложение join, которое должно использоваться для объединения дочерней статьи, указанной в *статье*и родительской статье, указанной в *join_article*, для определения строк, соответствующих фильтру слияния. *join_filterclause* имеет тип **nvarchar (1000)**.  
   
-`[ @join_unique_key = ] join_unique_key`Указывает, является ли соединение между дочерней статьей статьи и родительской статьей *join_article*, «один к одному», «многие к одному» или «многие ко многим». *join_unique_key* имеет **тип int**и значение по умолчанию 0. значение **0** указывает на соединение типа «многие к одному» или «многие ко многим». **1** указывает на соединение типа «один к одному» или «один ко многим». Это значение равно **1** , если соединяемые столбцы формируют уникальный ключ в *join_article*или если *join_filterclause* находится между внешним ключом в *статье* и первичным ключом в *join_article*.  
+`[ @join_unique_key = ] join_unique_key`Указывает, является ли соединение между дочерней *статьей и*родительской статьей *join_article*"один ко многим", "один к одному", "многие к одному" или "многие ко многим". *join_unique_key* имеет **тип int**и значение по умолчанию 0. значение **0** указывает на соединение типа «многие к одному» или «многие ко многим». **1** указывает на соединение типа «один к одному» или «один ко многим». Это значение равно **1** , если соединяемые столбцы формируют уникальный ключ в *join_article*или если *join_filterclause* между внешним ключом в *статье* и первичным ключом в *join_article*.  
   
 > [!CAUTION]  
->  Присвойте этому параметру значение **1** , если имеется ограничение на соединяемый столбец в базовой таблице для родительской статьи, что гарантирует уникальность. Если для *join_unique_key* задано значение **1** , может произойти неконвергенция данных.  
+>  Присвойте этому параметру значение **1** , если имеется ограничение на соединяемый столбец в базовой таблице для родительской статьи, что гарантирует уникальность. Если *join_unique_key* имеет неверное значение **1** , может произойти неконвергенция данных.  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`Подтверждает, что действие, выполняемое этой хранимой процедурой, может сделать существующий моментальный снимок недействительным. параметр *force_invalidate_snapshot* имеет значение **bit**и значение по умолчанию **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`Подтверждает, что действие, выполняемое этой хранимой процедурой, может сделать существующий моментальный снимок недействительным. *force_invalidate_snapshot* является **битом**и имеет значение по умолчанию **0**.  
   
  **0** указывает, что изменения в статье слияния не приведут к недействительности моментального снимка. Если хранимая процедура определяет, что изменение требует создания нового моментального снимка, то возникает ошибка, и изменение не выполняется.  
   
  значение **1** указывает, что изменения в статье слияния могут привести к недействительности моментального снимка, и если существуют подписки, требующие нового моментального снимка, предоставляет разрешение на пометку существующего моментального снимка как устаревшего и создание нового моментального снимка.  
   
-`[ @force_reinit_subscription = ] force_reinit_subscription`Подтверждает, что действие, выполняемое этой хранимой процедурой, может потребовать повторной инициализации существующих подписок. параметр *force_reinit_subscription* имеет значение **bit**и значение по умолчанию 0.  
+`[ @force_reinit_subscription = ] force_reinit_subscription`Подтверждает, что действие, выполняемое этой хранимой процедурой, может потребовать повторной инициализации существующих подписок. *force_reinit_subscription* является **битом**и имеет значение по умолчанию 0.  
   
  **0** указывает, что изменения в статье публикации слиянием не приведут к повторной инициализации подписки. Если хранимая процедура определит, что изменение потребует повторной инициализации подписки, то выдается сообщение об ошибке и изменения не производятся.  
   
@@ -74,21 +74,21 @@ sp_addmergefilter [ @publication = ] 'publication'
   
 `[ @filter_type = ] filter_type`Указывает тип добавляемого фильтра. *filter_type* имеет тип **tinyint**и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |**1**|Только фильтр соединения. Необходим для поддержки подписчиков [!INCLUDE[ssEW](../../includes/ssew-md.md)].|  
 |**2**|Только связь логических записей.|  
-|**3**|Как фильтр соединения, так и связь логических записей.|  
+|**3-5**|Как фильтр соединения, так и связь логических записей.|  
   
  Дополнительные сведения см. в статье [Группирование изменений в связанных строках с помощью логических записей](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  **sp_addmergefilter** используется в репликации слиянием.  
   
- **sp_addmergefilter** можно использовать только с статьями таблиц. Статьи представлений и индексированных представлений не поддерживаются.  
+ **sp_addmergefilter** можно использовать только с статьями таблицы. Статьи представлений и индексированных представлений не поддерживаются.  
   
  Эта процедура также может быть использована для формирования логической взаимосвязи между двумя статьями, между которыми может существовать или отсутствовать фильтр соединения. *filter_type* используется для указания, является ли добавляемый фильтр слияния фильтром объединения, логической связью или обоими.  
   
@@ -106,13 +106,13 @@ sp_addmergefilter [ @publication = ] 'publication'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_addmergefilter**.  
   
-## <a name="see-also"></a>См. также  
- [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
- [Определение и изменение фильтра соединения между статьями публикации слиянием](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
- [Join Filters](../../relational-databases/replication/merge/join-filters.md)   
- [sp_changemergefilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
- [sp_dropmergefilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
- [sp_helpmergefilter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
- [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Определение статьи](../../relational-databases/replication/publish/define-an-article.md)   
+ [Определение и изменение фильтра соединений между статьями публикации слиянием](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
+ [Фильтры соединений](../../relational-databases/replication/merge/join-filters.md)   
+ [sp_changemergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
+ [sp_dropmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
+ [sp_helpmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
+ [Хранимые процедуры репликации &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   
