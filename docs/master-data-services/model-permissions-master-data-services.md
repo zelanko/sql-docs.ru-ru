@@ -14,10 +14,10 @@ ms.assetid: 210f440b-2cc1-4c49-94b1-3a97e2af7bc3
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 5e42e54689b5b6a576a24fe57f2f9f4dcaccd1b8
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728974"
 ---
 # <a name="model-permissions-master-data-services"></a>Разрешения модели (службы Master Data Services)
@@ -27,23 +27,23 @@ ms.locfileid: "73728974"
   Разрешения модели применяются ко всем сущностям, явным и производным иерархиям и коллекциям, существующим в модели. Разрешения, назначенные для модели, можно переопределить для любого отдельного объекта.  
   
 > [!NOTE]  
->  Если пользователь является администратором модели, то модель отображается во всех функциональных областях пользовательского интерфейса. В противном случае модель отображается только в функциональной области **Обозреватель**. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](../master-data-services/administrators-master-data-services.md).  
+>  Если пользователь является администратором модели, то модель отображается во всех функциональных областях пользовательского интерфейса. В противном случае модель отображается только в функциональной области **Обозреватель** . Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](../master-data-services/administrators-master-data-services.md).  
   
-|Разрешение|Описание|  
+|Разрешение|Description|  
 |----------------|-----------------|  
 |**Чтение**|Пользователь может просматривать элементы, атрибуты, членство в иерархии или коллекциях.|  
-|**Создать**|Пользователь может создавать элементы и назначать значения атрибутов во время создания.|  
-|**Update**|Пользователь может обновлять элементы, атрибуты, членство в иерархии или коллекциях.|  
-|**Удалить**|Пользователь может удалять элементы.|  
+|**Создания**|Пользователь может создавать элементы и назначать значения атрибутов во время создания.|  
+|**Обновляют**|Пользователь может обновлять элементы, атрибуты, членство в иерархии или коллекциях.|  
+|**Удаление**|Пользователь может удалять элементы.|  
 |**Запретить**|Запрет любого доступа к сущности.|  
-|**Административный**|Административные разрешения для модели. Административные разрешения доступны только на уровне модели.|  
+|**Группы**|Административные разрешения для модели. Административные разрешения доступны только на уровне модели.|  
   
  Разрешения на чтение, создание, обновление и удаление можно использовать в различных комбинациях. Когда назначаются разрешения на создание, обновление и удаление, автоматически добавляется и разрешение на чтение.  
   
-## <a name="see-also"></a>См. также статью  
- [Назначение разрешения для объекта модели (службы Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)   
- [Разрешения объекта модели (службы Master Data Services)](../master-data-services/model-object-permissions-master-data-services.md)   
- [Разрешения сущности (службы Master Data Services)](../master-data-services/entity-permissions-master-data-services.md)   
- [Разрешения коллекции (службы Master Data Services)](../master-data-services/collection-permissions-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Назначение разрешений объекта модели &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
+ [Разрешения объекта модели &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
+ [Разрешения сущности &#40;Master Data Services&#41;](../master-data-services/entity-permissions-master-data-services.md)   
+ [Разрешения коллекции &#40;Master Data Services&#41;](../master-data-services/collection-permissions-master-data-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Собственный клиент SQL Server (OLE DB) | Документация Майкрософт
+title: SQL Server Native Client (OLE DB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 924c8f9dca934c81eab74c102509a8d04f66997b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63033565"
 ---
 # <a name="sql-server-native-client-ole-db"></a>Собственный клиент SQL Server (OLE DB)
@@ -30,11 +30,11 @@ ms.locfileid: "63033565"
   
  Собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] обеспечивает поддержку OLE DB для приложений, соединяющихся с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Поставщик OLE DB для собственного клиента является 2.0-совместимой версии поставщика OLE DB.  
+ Поставщик [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB собственного клиента — это поставщик, соответствующий OLE DB версии 2,0.  
   
 ## <a name="in-this-section"></a>в этом разделе  
   
--   [Создание приложения поставщика OLE DB для SQL Server Native Client](../../native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md)  
+-   [Создание приложения поставщика OLE DB для собственного клиента SQL Server](../../native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md)  
   
 -   [Объекты источника данных &#40;OLE DB&#41;](../../native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
@@ -50,11 +50,11 @@ ms.locfileid: "63033565"
   
 -   [Типы данных &#40;OLE DB&#41;](../../native-client-ole-db-data-types/data-types-ole-db.md)  
   
--   [Поддержка набора строк схемы &#40;OLE DB&#41;](schema-rowset-support-ole-db.md)  
+-   [&#40;OLE DB поддерживает набор строк схемы&#41;](schema-rowset-support-ole-db.md)  
   
 -   [Возвращающие табличные значения параметры &#40;OLE DB&#41;](../../native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)  
   
--   [Улучшения функций даты и времени &#40;OLE DB&#41;](../../native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
+-   [Улучшения даты и времени &#40;OLE DB&#41;](../../native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
 -   [Большие определяемые пользователем типы данных CLR &#40;OLE DB&#41;](large-clr-user-defined-types-ole-db.md)  
   
@@ -66,13 +66,13 @@ ms.locfileid: "63033565"
   
 -   [Имена субъектов-служб &#40;SPN&#41; в клиентских соединениях &#40;OLE DB&#41;](service-principal-names-spns-in-client-connections-ole-db.md)  
   
--   [Поддержка разреженных столбцов &#40;OLE DB&#41;](sparse-columns-support-ole-db.md)  
+-   [Разреженные столбцы поддерживают &#40;OLE DB&#41;](sparse-columns-support-ole-db.md)  
   
--   [Собственный клиент SQL Server &#40;OLE DB&#41; ссылки](../../native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)  
+-   [Справочник по SQL Server Native Client &#40;OLE DB&#41;](../../native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)  
   
 -   [Инструкции по OLE DB](../../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Программирование собственного клиента SQL Server](../sql-server-native-client-programming.md)  
   
   

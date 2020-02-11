@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4424504ddbfd0dfa1b16169186988141bb7b4c41
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62999557"
 ---
 # <a name="open-and-configure-object-explorer"></a>Открытие и настройка обозревателя объектов
@@ -26,9 +26,9 @@ ms.locfileid: "62999557"
 ## <a name="configuring-object-explorer-options"></a>Настройка параметров обозревателя объектов  
  Чтобы настроить параметры обозревателя объектов, нажмите кнопку **Параметры** в меню **Средства**, а затем щелкните **Обозреватель объектов SQL Server**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Обозреватель объектов](object-explorer.md)   
- [Подключитесь к экземпляру из обозревателя объектов](connect-to-an-instance-from-object-explorer.md)   
+ [Подключение к экземпляру из обозревателя объектов](connect-to-an-instance-from-object-explorer.md)   
  [Управление объектами с помощью обозревателя объектов](manage-objects-by-using-object-explorer.md)   
  [Область сведений обозревателя объектов](object-explorer-details-pane.md)   
  [Пользовательские отчеты в среде Management Studio](custom-reports-in-management-studio.md)  

@@ -1,5 +1,5 @@
 ---
-title: Ограничения обычных и контекстных соединений | Документация Майкрософт
+title: Ограничения для обычных и контекстных подключений | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3b721409f0915cb1e13861f6481909e02af37cb2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919169"
 ---
 # <a name="restrictions-on-regular-and-context-connections"></a>Ограничения обычных и контекстных соединений
-  В этом разделе содержатся сведения об ограничениях, связанных с кодом, выполняемым в [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] через контекстные и обычные соединения.  
+  В этом разделе содержатся сведения об ограничениях, связанных с кодом, выполняемым в процессе [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] через контекстные и обычные соединения.  
   
 ## <a name="restrictions-on-context-connections"></a>Ограничения контекстных соединений  
  При проектировании приложения учитывайте следующие ограничения, которые применяются к контекстным соединениям.  
@@ -34,24 +34,25 @@ ms.locfileid: "62919169"
   
 -   Пакетное обновление не поддерживается в контекстных соединениях.  
   
--   `SqlNotificationRequest` нельзя использовать с командами, применяемыми в контекстном соединении.  
+-   
+  `SqlNotificationRequest` нельзя использовать с командами, применяемыми в контекстном соединении.  
   
 -   Отмена команд, применяемых в контекстном соединении, не поддерживается. Метод `SqlCommand.Cancel` не учитывает запрос, не сообщая об этом.  
   
 -   Никакие другие ключевые слова строки соединения не могут использоваться при использовании «context connection=true».  
   
--   Свойство `SqlConnection.DataSource` возвращает вместо имени экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] значение NULL, если строка соединения для `SqlConnection` равна «context connection=true».  
+-   Свойство `SqlConnection.DataSource` возвращает вместо имени экземпляра `SqlConnection` значение NULL, если строка соединения для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] равна «context connection=true».  
   
 -   Установка свойства `SqlCommand.CommandTimeout` не имеет значения, если команда выполняется в контекстном соединении.  
   
 ## <a name="restrictions-on-regular-connections"></a>Ограничения обычных соединений  
  При проектировании приложения учитывайте следующие ограничения, которые применяются к обычным соединениям.  
   
--   Асинхронное применение команд к внутренним серверам не поддерживается. Если в строке соединения содержится «async=true», по при последующем выполнении команды возникает исключение `System.NotSupportedException`. Отображается сообщение: «Асинхронная обработка не поддерживается при его выполнении в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] процесса.»  
+-   Асинхронное применение команд к внутренним серверам не поддерживается. Если в строке соединения содержится «async=true», по при последующем выполнении команды возникает исключение `System.NotSupportedException`. Отображается сообщение: «Асинхронная обработка не поддерживается при выполнении в процессе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ».  
   
 -   Объект `SqlDependency` не поддерживается.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Контекстное соединение](context-connection.md)  
   
   

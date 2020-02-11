@@ -21,16 +21,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 00645f619a89010bb4e2b112d50e00cbc6f40dce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63127159"
 ---
-# <a name="srvparamset-extended-stored-procedure-api"></a>srv_paramset (API-интерфейс расширенных хранимых процедур)
+# <a name="srv_paramset-extended-stored-procedure-api"></a>srv_paramset (API-интерфейс расширенных хранимых процедур)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Используйте вместо этого интеграцию со средой CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Вместо этого используйте интеграцию со средой CLR.  
   
  Устанавливает значение возвратного параметра вызова удаленной хранимой процедуры. Эта функция заменена функцией **srv_paramsetoutput**.  
   
@@ -58,7 +58,7 @@ len
  *srvproc*  
  Указатель на структуру SRV_PROC, представляющую собой дескриптор соединения с клиентом (в данном случае — дескриптор, который получил вызов удаленной хранимой процедуры). Эта структура содержит сведения, которые используются библиотекой API-интерфейса расширенных хранимых процедур для управления связью и передачи данных между приложением и клиентом.  
   
- *n*  
+ *\n*  
  Указывает номер параметра, который должен быть задан. Первый параметр имеет значение 1.  
   
  *data*  
@@ -72,23 +72,23 @@ len
   
  Если *len* имеет значение 0, то возвращается NULL. Единственным способом возвратить значение NULL клиенту является задание параметру *len* значения 0.  
   
- Если параметр принадлежит к одному из типов данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], то эта функция возвращает следующие значения.  
+ Эта функция возвращает следующие значения, если параметр относится к одному из [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] типов данных.  
   
 |Новые типы данных|Длина возвращаемых данных|  
 |--------------------|------------------------|  
-|`BITN`|**NULL:** *len* = 0, data = IG, RET = 0<br /><br /> **ZERO:** Н/Д<br /><br /> **>=255:** Н/Д<br /><br /> **<255:** Н/Д|  
-|`BIGVARCHAR`|**NULL:** *len* = 0, data = IG, RET = 1<br /><br /> **ZERO:** *len* = IG, data = IG, RET = 0<br /><br /> **>=255:** *len* = max8k, data = valid, RET = 0<br /><br /> **<255:** *len* = <8k, data = valid, RET = 1|  
-|`BIGCHAR`|**NULL:** *len* = 0, data = IG, RET = 1<br /><br /> **ZERO:** *len* = IG, data = IG, RET = 0<br /><br /> **>=255:** *len* = max8k, data = valid, RET = 0<br /><br /> **<255:** *len* = <8k, data = valid, RET = 1|  
-|`BIGBINARY`|**NULL:** *len* = 0, data = IG, RET = 1<br /><br /> **ZERO:** *len* = IG, data = IG, RET = 0<br /><br /> **>=255:** *len* = max8k, data = valid, RET = 0<br /><br /> **<255:** *len* = <8k, data = valid, RET = 1|  
-|`BIGVARBINARY`|**NULL:** *len* = 0, data = IG, RET = 1<br /><br /> **ZERO:** *len* = IG, data = IG, RET = 0<br /><br /> **>=255:** *len* = max8k, data = valid, RET = 0<br /><br /> **<255:** *len* = <8k, data = valid, RET = 1|  
-|NCHAR|**NULL:** *len* = 0, data = IG, RET = 1<br /><br /> **ZERO:** *len* = IG, data = IG, RET = 0<br /><br /> **>=255:** *len* = max8k, data = valid, RET = 0<br /><br /> **<255:** *len* = <8k, data = valid, RET = 1|  
-|NVARCHAR|**NULL:** *len* = 0, data = IG, RET = 1<br /><br /> **ZERO:** *len* = IG, data = IG, RET = 0<br /><br /> **>=255:** *len* = max8k, data = valid, RET = 0<br /><br /> **<255:** *len* = <8k, data = valid, RET = 1|  
-|`NTEXT`|**NULL:** *len* = IG, data = IG, RET = 0<br /><br /> **ZERO:** *len* = IG, data = IG, RET = 0<br /><br /> **>=255:** *len* = IG, data = IG, RET = 0<br /><br /> **\<255:** *len* = IG, data = IG, RET = 0|  
+|`BITN`|**Null:** *Len* = 0, Data = и, ret = 0<br /><br /> **Ноль:** Н/Д<br /><br /> **>= 255:** Н/Д<br /><br /> **<255:** Н/Д|  
+|`BIGVARCHAR`|**Null:** *Len* = 0, Data = и, Ret = 1<br /><br /> **Ноль:** *Len* = и, Data = и, ret = 0<br /><br /> **>= 255:** *Len* = max8k, Data = Valid, ret = 0<br /><br /> **<255:** *Len* = <8 КБ, Data = Valid, Ret = 1|  
+|`BIGCHAR`|**Null:** *Len* = 0, Data = и, Ret = 1<br /><br /> **Ноль:** *Len* = и, Data = и, ret = 0<br /><br /> **>= 255:** *Len* = max8k, Data = Valid, ret = 0<br /><br /> **<255:** *Len* = <8 КБ, Data = Valid, Ret = 1|  
+|`BIGBINARY`|**Null:** *Len* = 0, Data = и, Ret = 1<br /><br /> **Ноль:** *Len* = и, Data = и, ret = 0<br /><br /> **>= 255:** *Len* = max8k, Data = Valid, ret = 0<br /><br /> **<255:** *Len* = <8 КБ, Data = Valid, Ret = 1|  
+|`BIGVARBINARY`|**Null:** *Len* = 0, Data = и, Ret = 1<br /><br /> **Ноль:** *Len* = и, Data = и, ret = 0<br /><br /> **>= 255:** *Len* = max8k, Data = Valid, ret = 0<br /><br /> **<255:** *Len* = <8 КБ, Data = Valid, Ret = 1|  
+|NCHAR|**Null:** *Len* = 0, Data = и, Ret = 1<br /><br /> **Ноль:** *Len* = и, Data = и, ret = 0<br /><br /> **>= 255:** *Len* = max8k, Data = Valid, ret = 0<br /><br /> **<255:** *Len* = <8 КБ, Data = Valid, Ret = 1|  
+|NVARCHAR|**Null:** *Len* = 0, Data = и, Ret = 1<br /><br /> **Ноль:** *Len* = и, Data = и, ret = 0<br /><br /> **>= 255:** *Len* = max8k, Data = Valid, ret = 0<br /><br /> **<255:** *Len* = <8 КБ, Data = Valid, Ret = 1|  
+|`NTEXT`|**Null:** *Len* = и, Data = и, ret = 0<br /><br /> **Ноль:** *Len* = и, Data = и, ret = 0<br /><br /> **>= 255:** *Len* = и, Data = и, ret = 0<br /><br /> 255: *Len* = и, Data = и, ret = 0 ** \<**|  
 |RET = значение, возвращаемое srv_paramset||  
 |IG = значение будет пропущено||  
 |valid = любой допустимый указатель на данные||  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Параметры содержат данные, передаваемые между клиентами и приложением с удаленной хранимой процедурой. Клиент может указать некоторые параметры в качестве возвращаемых. Эти возвращаемые параметры могут содержать значения, которые серверное приложение служб Open Data Services данных передает клиенту. Использование возвращаемых параметров аналогично передаче параметров по ссылке.  
   
  Возвращаемое значение невозможно задать параметру, который не был запущен как возвращаемый параметр. Определить, как был вызван параметр, можно с помощью функции **srv_paramstatus**.  
@@ -98,9 +98,9 @@ len
  Когда удаленная хранимая процедура вызывается с параметрами, эти параметры могут быть переданы либо по имени, либо по позиции — без указания имени. Если при вызове удаленной хранимой процедуры часть параметров передается по имени, а часть — по позиции, возникает ошибка. Обработчик SRV_RPC по-прежнему вызывается, однако он отображается так, как если бы не имел параметров, а функция **srv_rpcparams** возвращает 0.  
   
 > [!IMPORTANT]  
->  Необходимо тщательно просмотреть исходный код расширенных хранимых процедур и проверить скомпилированные библиотеки DLL перед их установкой на рабочий сервер. Сведения о проверке безопасности см. на следующем [веб-сайте Майкрософт](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/).  
+>  Необходимо тщательно просмотреть исходный код расширенных хранимых процедур и проверить скомпилированные библиотеки DLL перед их установкой на рабочий сервер. Сведения о проверке безопасности см. на следующем [веб-сайте Майкрософт](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a>См. также  
- [srv_paramsetoutput (интерфейс API расширенных хранимых процедур)](srv-paramsetoutput-extended-stored-procedure-api.md)  
+## <a name="see-also"></a>См. также:  
+ [API srv_paramsetoutput &#40;расширенных хранимых процедур&#41;](srv-paramsetoutput-extended-stored-procedure-api.md)  
   
   

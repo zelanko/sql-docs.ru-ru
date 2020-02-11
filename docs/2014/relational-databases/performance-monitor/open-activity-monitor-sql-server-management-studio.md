@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0d1c0312acfcd2e5dbb17d740fe2659cb8c91bbe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63032008"
 ---
 # <a name="open-activity-monitor-sql-server-management-studio"></a>Открытие монитора активности (среда SQL Server Management Studio)
@@ -29,13 +29,13 @@ ms.locfileid: "63032008"
   
 -   **Перед началом работы**  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Открытие монитора активности с помощью:**  
   
      [Среда SQL Server Management Studio](#SSMSProcedure)  
   
--   **Чтобы задать интервал обновления с помощью:**  [SQL Server Management Studio](#Refresh)  
+-   **Установка интервала обновления с помощью:**  [SQL Server Management Studio](#Refresh)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
  Монитор активности выполняет запросы в отслеживаемом экземпляре, чтобы получать данные для панелей отображения монитора активности. Если установлен интервал обновления менее 10 секунд, то время, затрачиваемое на выполнение этих запросов, может повлиять на производительность сервера.  
@@ -51,7 +51,7 @@ ms.locfileid: "63032008"
   
 #### <a name="to-open-activity-monitor-in-sql-server-management-studio"></a>Открытие монитора активности в среде SQL Server Management Studio  
   
-1.  На стандартной панели инструментов среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] щелкните **Монитор активности**.  
+1.  На панели [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] инструментов Стандартная щелкните **Монитор активности**.  
   
 2.  В диалоговом окне **Подключение к серверу** выберите имя сервера и режим проверки подлинности, а затем нажмите кнопку **Соединить**.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "63032008"
   
 #### <a name="to-open-activity-monitor-in-object-explorer"></a>Открытие монитора активности в обозревателе объектов  
   
--   В обозревателе объектов щелкните правой кнопкой мыши имя экземпляра и выберите **монитор активности**.  
+-   В обозревателе объектов щелкните правой кнопкой мыши имя экземпляра и выберите пункт **Монитор активности**.  
   
 #### <a name="to-open-activity-monitor-when-opening-sql-server-management-studio"></a>Открытие монитора активности при открытии среды SQL Server Management Studio  
   
@@ -71,7 +71,7 @@ ms.locfileid: "63032008"
   
 4.  Чтобы изменения вступили в силу, закройте и снова откройте среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-###  <a name="Refresh"></a> Чтобы задать интервал обновления монитора активности  
+###  <a name="Refresh"></a>Настройка интервала обновления монитора активности  
   
 -   Откройте монитор активности.  
   

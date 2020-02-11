@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b5011daf52b7eb5a14fb97ff3d39691caf4a563c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68210771"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Стратегии резервного копирования и восстановления из копии репликации моментальных снимков и репликации транзакций
@@ -71,7 +71,7 @@ ms.locfileid: "68210771"
   
  **Установка параметра «sync with backup»**  
   
--   Программирование репликации на языке [!INCLUDE[tsql](../../../includes/tsql-md.md)]. [Enable Coordinated Backups for Transactional Replication](enable-coordinated-backups-for-transactional-replication.md) (Включение скоординированной архивации для репликации транзакций)  
+-   Программирование репликации на языке [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [Enable Coordinated Backups for Transactional Replication](enable-coordinated-backups-for-transactional-replication.md) (Включение скоординированной архивации для репликации транзакций)  
   
 ## <a name="restoring-databases-involved-in-replication"></a>Восстановление баз данных, участвующих в репликации  
  Если имеются последние резервные копии и выполнены соответствующие шаги, можно восстановить все базы данных в топологии репликации. Действия по восстановлению базы данных публикации зависят от типа репликации и от используемых параметров, однако действия по восстановлению всех других баз данных не зависят от типа репликации и параметров.  
@@ -101,7 +101,7 @@ ms.locfileid: "68210771"
   
      Дополнительные сведения об удалении репликации см. в статье [sp_removedbreplication (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql).  
   
-#### <a name="publication-database-read-only-transactional-replication"></a>База данных публикации: Репликация транзакций только для чтения  
+#### <a name="publication-database-read-only-transactional-replication"></a>База данных публикации: репликация транзакций, доступная только для чтения  
   
 1.  Восстановите последнюю резервную копию базы данных публикации. Перейдите к шагу 2.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "68210771"
   
          Дополнительные сведения о запуске агента распространителя см. в статьях [Запуск и остановка агента репликации (среда SQL Server Management Studio)](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) и [Основные понятия исполняемых файлов агента репликации](../concepts/replication-agent-executables-concepts.md).  
   
-         Дополнительные сведения о проверке команд см. в разделе [Просмотр реплицированных команд и другой информации в базе данных распространителя &#40;программирование репликации Transact-SQL&#41; ](../monitor/view-replicated-commands-and-information-in-distribution-database.md) и [Просмотр сведений и выполнение задач с помощью монитора репликации](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+         Дополнительные сведения о проверке команд см. в статьях [Просмотр реплицированных команд и другие сведения в базе данных распространителя &#40;программирование репликации на языке Transact-SQL&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md) и [Просмотр сведений и выполнение задач с помощью монитора репликации](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
     2.  Удалите конфигурацию репликации с издателя, распространителя и подписчиков, затем создайте конфигурацию заново. При повторном создании подписок укажите, что подписчик уже содержит данные. Восстановление завершено.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "68210771"
   
          Дополнительные сведения о запуске агента распространителя см. в статьях [Запуск и остановка агента репликации (среда SQL Server Management Studio)](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) и [Основные понятия исполняемых файлов агента репликации](../concepts/replication-agent-executables-concepts.md).  
   
-         Дополнительные сведения о проверке команд см. в разделе [Просмотр реплицированных команд и другой информации в базе данных распространителя &#40;программирование репликации Transact-SQL&#41; ](../monitor/view-replicated-commands-and-information-in-distribution-database.md) и [Просмотр сведений и выполнение задач с помощью монитора репликации](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+         Дополнительные сведения о проверке команд см. в статьях [Просмотр реплицированных команд и другие сведения в базе данных распространителя &#40;программирование репликации на языке Transact-SQL&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md) и [Просмотр сведений и выполнение задач с помощью монитора репликации](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
     2.  Для ручной синхронизации издателя с подписчиками используется [программа tablediff](../../../tools/tablediff-utility.md) или другое средство. Это позволяет восстанавливать данные из базы данных подписчика, которая не содержалась в резервной копии базы данных публикации. Перейдите к шагу c.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "68210771"
   
          Дополнительные сведения о том, как указать, что у подписчика уже есть данные, см. в разделе [Initialize a Subscription Manually](../initialize-a-subscription-manually.md).  
   
-#### <a name="publication-database-transactional-replication-with-updating-subscriptions"></a>База данных публикации: Репликация транзакций с обновляемыми подписками  
+#### <a name="publication-database-transactional-replication-with-updating-subscriptions"></a>База данных публикации: репликация транзакций с обновляемыми подписками  
   
 1.  Восстановите последнюю резервную копию базы данных публикации. Перейдите к шагу 2.  
   
@@ -156,7 +156,7 @@ ms.locfileid: "68210771"
   
      Дополнительные сведения о запуске агента распространителя см. в статьях [Запуск и остановка агента репликации (среда SQL Server Management Studio)](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) и [Основные понятия исполняемых файлов агента репликации](../concepts/replication-agent-executables-concepts.md).  
   
-     Дополнительные сведения о проверке команд см. в разделе [Просмотр реплицированных команд и другой информации в базе данных распространителя &#40;программирование репликации Transact-SQL&#41; ](../monitor/view-replicated-commands-and-information-in-distribution-database.md) и [Просмотр сведений и выполнение задач с помощью монитора репликации](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+     Дополнительные сведения о проверке команд см. в статьях [Просмотр реплицированных команд и другие сведения в базе данных распространителя &#40;программирование репликации на языке Transact-SQL&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md) и [Просмотр сведений и выполнение задач с помощью монитора репликации](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 3.  Если используются обновляемые посредством очередей подписки, подключитесь к каждому подписчику и удалите все строки из таблицы [MSreplication_queue (Transact-SQL)](/sql/relational-databases/system-tables/msreplication-queue-transact-sql) в базе данных подписки. Перейдите к шагу 4.  
   
@@ -205,19 +205,19 @@ ms.locfileid: "68210771"
   
     1.  Заново создайте публикацию в базе данных **B**. Перейдите к шагу b.  
   
-    2.  Создайте заново подписку в базе данных **B** на публикацию в базе данных **A**, указав, что подписка должна быть инициализирована с резервной копией (значение **initialize with backup** для параметра **@sync_type** хранимой процедуры [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Перейдите к шагу c.  
+    2.  Повторно создайте подписку в базе данных **B** на публикацию в базе **данных а**, указав, что подписка должна быть инициализирована с помощью резервной копии (значение **инициализации с резервной копией** для **@sync_type** параметра [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Перейдите к шагу c.  
   
-    3.  Создайте заново подписку в базе данных **A** на публикацию в базе данных **B**, указав, что подписчик уже содержит данные (значение **replication support only** для параметра **@sync_type** хранимой процедуры [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Перейдите к шагу 8.  
+    3.  Повторно создайте подписку в базе данных **A** на публикацию в базе данных **B**, указав, что подписчик уже имеет данные (значение **поддержка репликации только** для **@sync_type** параметра [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Перейдите к шагу 8.  
   
 8.  Запустите агент распространителя для синхронизации подписок в базах данных **A** и **B**. Если в публикуемых таблицах имеются столбцы идентификаторов, перейдите к шагу 9. Если нет, перейдите к шагу 10.  
   
 9. После восстановления диапазон идентификаторов, присвоенный каждой таблице в базе данных **A**, будет также использоваться в базе данных **B**. Убедитесь, что восстановленная база данных **B** получила все изменения из поврежденной базы данных **B**, которые были переданы в базы данных **A** и **C**, затем обновите начальные значения диапазона идентификаторов для каждой таблицы.  
   
-    1.  Выполните процедуру [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) в базе данных **B** и получите выходной параметр **@request_id** . Перейдите к шагу b.  
+    1.  Выполните [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) в базе данных **B** и извлеките выходной **@request_id**параметр. Перейдите к шагу b.  
   
     2.  По умолчанию агент распространителя работает непрерывно, поэтому токены отправляются на все узлы автоматически. Если агент распространителя не выполняется в непрерывном режиме, запустите его. Дополнительные сведения см. в разделах [Основные понятия исполняемых файлов агента репликации](../concepts/replication-agent-executables-concepts.md) и [Запуск и остановка агента репликации (среда SQL Server Management Studio)](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md). Перейдите к шагу c.  
   
-    3.  Выполните процедуру [sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql), указав значение **@request_id** , полученное на шаге b. Подождите, пока все узлы сообщат о получении однорангового запроса. Перейдите к шагу d.  
+    3.  Выполните [sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql), указав **@request_id** значение, полученное на шаге b. Подождите, пока все узлы сообщат о получении однорангового запроса. Перейдите к шагу d.  
   
     4.  Выполните инструкцию [DBCC CHECKIDENT](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql) для обновления начальных значений каждой таблицы в базе данных **B** , чтобы убедиться, что используется соответствующий диапазон. Перейдите к шагу 10.  
   
@@ -229,11 +229,11 @@ ms.locfileid: "68210771"
   
     1.  Остановите все действия в опубликованных таблицах в одноранговой топологии. Перейдите к шагу b.  
   
-    2.  Выполните процедуру [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) в базе данных **B** и получите выходной параметр **@request_id** . Перейдите к шагу c.  
+    2.  Выполните [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) в базе данных **B** и извлеките выходной **@request_id**параметр. Перейдите к шагу c.  
   
     3.  По умолчанию агент распространителя работает непрерывно, поэтому токены отправляются на все узлы автоматически. Если агент распространителя не выполняется в непрерывном режиме, запустите его. Перейдите к шагу d.  
   
-    4.  Выполните процедуру [sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql), указав значение **@request_id** , полученное на шаге b. Подождите, пока все узлы сообщат о получении однорангового запроса. Перейдите к шагу e.  
+    4.  Выполните [sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql), указав **@request_id** значение, полученное на шаге b. Подождите, пока все узлы сообщат о получении однорангового запроса. Перейдите к шагу e.  
   
     5.  Создайте заново подписку в базе данных **B** на публикацию в базе данных **C**, указав, что подписчик уже содержит данные. Перейдите к шагу b.  
   
@@ -243,7 +243,7 @@ ms.locfileid: "68210771"
   
     1.  В базе данных **B**выполните запрос к таблице [MSpeer_lsns](/sql/relational-databases/system-tables/mspeer-lsns-transact-sql) , чтобы получить номер LSN последней транзакции, которая была передана в базу данных **B** из базы данных **C**.  
   
-    2.  Создайте заново подписку в базе данных **B** на публикацию в базе данных **C**, указав, что подписка должна быть инициализирована на основе номера LSN (значение **initialize from lsn** для параметра **@sync_type** хранимой процедуры [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Перейдите к шагу b.  
+    2.  Повторно создайте подписку в базе данных **B** на публикацию в базе данных **C**, указав, что подписка должна быть ИНИЦИАЛИЗИРОВАНА на основе номера LSN (значение **Initialize из номера LSN** для **@sync_type** параметра [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Перейдите к шагу b.  
   
     3.  Создайте заново подписку в базе данных **C** на публикацию в базе данных **B**, указав, что подписчик уже содержит данные. Перейдите к шагу 13.  
   
@@ -321,7 +321,7 @@ ms.locfileid: "68210771"
   
 2.  Восстановите последнюю резервную копию базы данных подписки. Перейдите к шагу 3.  
   
-3.  Если база данных подписки содержит только принудительные подписки, перейдите к шагу 4. Если база данных подписки содержит любые подписки по запросу, задайте следующие вопросы: Действует ли сведения о подписке? Включает ли база данных все таблицы и параметры, которые были установлены на момент сбоя. Если да, перейдите к шагу 4. Если нет, выполните повторную инициализацию подписки. Восстановление завершено.  
+3.  Если база данных подписки содержит только принудительные подписки, перейдите к шагу 4. Если база данных подписки содержит любые подписки по запросу, задайте указанные ниже вопросы. Являются ли сведения о подписке актуальными? Включает ли база данных все таблицы и параметры, которые были установлены на момент сбоя. Если да, перейдите к шагу 4. Если нет, выполните повторную инициализацию подписки. Восстановление завершено.  
   
 4.  Для синхронизации подписчика запустите агент распространителя. Восстановление завершено.  
   
@@ -345,12 +345,12 @@ ms.locfileid: "68210771"
   
 2.  Убедитесь, что база данных согласована с базой данных публикации по конфигурации и параметрам репликации.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Резервное копирование и восстановление баз данных SQL Server](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [Создание резервных копий реплицируемых баз данных и восстановление из них](back-up-and-restore-replicated-databases.md)   
+ [Создание резервной копии и восстановление из копий реплицируемых баз данных](back-up-and-restore-replicated-databases.md)   
  [Настройка распространения](../configure-distribution.md)   
  [Публикация данных и объектов базы данных](../publish/publish-data-and-database-objects.md)   
- [Подписка на публикации](../subscribe-to-publications.md)   
+ [Subscribe to Publications](../subscribe-to-publications.md)   
  [Инициализация подписки](../initialize-a-subscription.md)   
  [Синхронизация данных](../synchronize-data.md)  
   

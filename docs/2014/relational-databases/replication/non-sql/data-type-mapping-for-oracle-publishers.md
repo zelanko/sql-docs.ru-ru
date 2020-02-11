@@ -15,48 +15,48 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 463dd08cfa9434396a1afea1e4851549f16496cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022645"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Сопоставление типов данных для издателей Oracle
-  Типы данных Oracle и типы данных [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не всегда полностью совпадают. Там, где это возможно, выбор подходящего типа данных при публикации таблицы Oracle осуществляется автоматически. В случаях, когда выбор однозначного соответствия типов данных не очевиден, предлагаются альтернативные сопоставления типов данных. Сведения о выборе альтернативных соответствий типов данных см. ниже в разделе «Указание альтернативных сопоставлений типов данных».  
+  Типы данных Oracle и [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] типы данных не всегда точно совпадают. Там, где это возможно, выбор подходящего типа данных при публикации таблицы Oracle осуществляется автоматически. В случаях, когда выбор однозначного соответствия типов данных не очевиден, предлагаются альтернативные сопоставления типов данных. Сведения о выборе альтернативных соответствий типов данных см. ниже в разделе «Указание альтернативных сопоставлений типов данных».  
   
  Следующая таблица показывает, как по умолчанию осуществляется преобразование типов данных между Oracle и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , когда данные передаются издателем Oracle распространителю [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . В столбце «Альтернатива» показано, допустимы ли альтернативные соответствия.  
   
-|Тип данных Oracle|Тип данных SQL Server|Альтернатива|  
+|Тип данных Oracle|Тип данных SQL Server|Альтернативные варианты|  
 |----------------------|--------------------------|------------------|  
 |BFILE|VARBINARY(MAX)|Да|  
 |BLOB|VARBINARY(MAX)|Да|  
 |CHAR([1-2000])|CHAR([1-2000])|Да|  
 |CLOB|VARCHAR(MAX)|Да|  
 |DATE|DATETIME|Да|  
-|FLOAT|FLOAT|Нет|  
-|FLOAT([1-53])|FLOAT([1-53])|Нет|  
-|FLOAT([54-126])|FLOAT|Нет|  
+|FLOAT|FLOAT|нет|  
+|FLOAT([1-53])|FLOAT([1-53])|нет|  
+|FLOAT([54-126])|FLOAT|нет|  
 |INT|NUMERIC(38)|Да|  
 |INTERVAL|DATETIME|Да|  
 |LONG|VARCHAR(MAX)|Да|  
 |LONG RAW|IMAGE|Да|  
-|NCHAR([1-1000])|NCHAR([1-1000])|Нет|  
+|NCHAR([1-1000])|NCHAR([1-1000])|нет|  
 |NCLOB|NVARCHAR(MAX)|Да|  
 |NUMBER|FLOAT|Да|  
-|NUMBER([1-38])|NUMERIC([1-38])|Нет|  
+|NUMBER([1-38])|NUMERIC([1-38])|нет|  
 |NUMBER([0-38],[1-38])|NUMERIC([0-38],[1-38])|Да|  
-|NVARCHAR2([1-2000])|NVARCHAR([1-2000])|Нет|  
-|RAW([1-2000])|VARBINARY([1-2000])|Нет|  
-|real|FLOAT|Нет|  
-|ROWID|CHAR(18)|Нет|  
-|timestamp|DATETIME|Да|  
+|NVARCHAR2([1-2000])|NVARCHAR([1-2000])|нет|  
+|RAW([1-2000])|VARBINARY([1-2000])|нет|  
+|REAL|FLOAT|нет|  
+|ROWID|CHAR(18)|нет|  
+|TIMESTAMP|DATETIME|Да|  
 |TIMESTAMP(0-7)|DATETIME|Да|  
 |TIMESTAMP(8-9)|DATETIME|Да|  
 |TIMESTAMP(0-7) WITH TIME ZONE|VARCHAR(37)|Да|  
-|TIMESTAMP(8-9) WITH TIME ZONE|VARCHAR(37)|Нет|  
+|TIMESTAMP(8-9) WITH TIME ZONE|VARCHAR(37)|нет|  
 |TIMESTAMP(0-7) WITH LOCAL TIME ZONE|VARCHAR(37)|Да|  
-|TIMESTAMP(8-9) WITH LOCAL TIME ZONE|VARCHAR(37)|Нет|  
-|UROWID|CHAR(18)|Нет|  
+|TIMESTAMP(8-9) WITH LOCAL TIME ZONE|VARCHAR(37)|нет|  
+|UROWID|CHAR(18)|нет|  
 |VARCHAR2([1-4000])|VARCHAR([1-4000])|Да|  
   
 ## <a name="considerations-for-data-type-mapping"></a>Вопросы сопоставления типов данных  
@@ -65,7 +65,7 @@ ms.locfileid: "63022645"
 ### <a name="unsupported-data-types"></a>Неподдерживаемые типы данных  
  Следующие типы данных не поддерживаются; столбцы, имеющие эти типы, невозможно реплицировать.  
   
--   Типы Object  
+-   Типы объектов  
   
 -   Типы XML  
   
@@ -81,7 +81,7 @@ ms.locfileid: "63022645"
 ### <a name="float-and-number-types"></a>Типы FLOAT и NUMBER  
  Масштаб и точность, задаваемые при сопоставлении типов данных FLOAT и NUMBER, зависят от масштаба и точности, указанных для столбца, использующего этот тип данных в базе данных Oracle. Точность представляет собой количество цифр в числе. Масштаб представляет собой количество цифр справа от десятичной запятой в числе. Например, у числа 123,45 точность равна 5, а масштаб равен 2.  
   
- Oracle позволяет определять числа, имеющие масштаб больший, чем точность, например NUMBER(4,5), в то время как [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] требует, чтобы точность была не меньше масштаба. Чтобы убедиться, что усечение данных, если масштаб больше, чем точность значения на издателе Oracle, точность приравнивается к масштабу при сопоставлении типа данных: Тип данных Number(4,5) был бы в numeric(5,5).  
+ Oracle позволяет определять числа, имеющие масштаб больший, чем точность, например NUMBER(4,5), в то время как [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] требует, чтобы точность была не меньше масштаба. Чтобы исключить усечение данных, когда в данных издателя Oracle масштаб больше, чем точность, при преобразовании данных точность приравнивается к масштабу: тип данных NUMBER(4,5) был бы преобразован в NUMERIC(5,5).  
   
 > [!NOTE]  
 >  Если для типа NUMBER не указать масштаб и точность, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] будет использовать по умолчанию максимальные масштаб (8) и точность (38). Для оптимизации хранения данных и производительности при репликации данных рекомендуется установить специальные значения масштаба и точности в Oracle.  
@@ -104,9 +104,9 @@ ms.locfileid: "63022645"
   
  Чтобы указать альтернативные сопоставления типов данных, см. раздел [Указание сопоставления типов данных для издателя Oracle](../publish/specify-data-type-mappings-for-an-oracle-publisher.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Настройка издателя Oracle](configure-an-oracle-publisher.md)   
- [Рекомендации по структуре и ограничения для издателей Oracle](design-considerations-and-limitations-for-oracle-publishers.md)   
- [Обзор публикации Oracle](oracle-publishing-overview.md)  
+ [Рекомендации по проектированию и ограничения для издателей Oracle](design-considerations-and-limitations-for-oracle-publishers.md)   
+ [Общие сведения о публикации Oracle](oracle-publishing-overview.md)  
   
   

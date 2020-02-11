@@ -17,20 +17,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9bb392991afbb3707fafdb18a28cc3de53f97c78
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783202"
 ---
 # <a name="delete-a-job-category"></a>Удаление категории заданий
-  В этом разделе описано, как удалить категорию заданий агента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в среде [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] или управляющих объектов SQL ServerO.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] В этом разделе описывается удаление категории заданий агента в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] или управляющие объекты SQL Server.  
   
  Категории заданий помогают упорядочивать их, упрощая их фильтрацию и группирование. Например, все фоновые задания можно поместить в категорию «Обслуживание базы данных».  
 
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> ограничения  
+###  <a name="Restrictions"></a> Ограничения  
  При удалении пользовательской категории заданий агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предлагает переназначить другим категориям задания, которые ей назначены. Могут быть удалены только пользовательские категории заданий.  
   
 ###  <a name="Security"></a> безопасность  
@@ -42,23 +42,23 @@ ms.locfileid: "72783202"
   
 1.  В **обозревателе объектов**щелкните значок «плюс», чтобы развернуть сервер, на котором нужно удалить категорию заданий.  
   
-2.  Щелкните знак «плюс», чтобы развернуть **Агент SQL Server**.  
+2.  Щелкните знак "плюс", чтобы развернуть **Агент SQL Server**.  
   
 3.  Щелкните правой кнопкой мыши папку **Задания** и выберите пункт **Управление категориями заданий**.  
   
-4.  В диалоговом окне **Управление категориями заданий**_имя_сервера_ выберите нужную категорию.  
+4.  В диалоговом окне **Управление категориями заданий**_server_name_ выберите категорию заданий, которую нужно удалить.  
   
 5.  Щелкните **Удалить**.  
   
 6.  В диалоговом окне **Управление категориями заданий** щелкните **Да**.  
   
-7.  Закройте диалоговое окно **Управление категориями заданий**_имя_сервера_ .  
+7.  Закройте диалоговое окно **Управление категориями заданий**_server_name_ .  
   
 ##  <a name="TSQL"></a> Использование Transact-SQL  
   
 ### <a name="to-delete-a-job-category"></a>Удаление категории заданий  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "72783202"
     GO  
     ```  
   
- Дополнительные сведения см. в [разделе &#40;SP_DELETE_CATEGORY Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-delete-category-transact-sql).  
+ Дополнительные сведения см. в разделе [sp_delete_category &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-category-transact-sql).  
 
   
 ##  <a name="SMO"></a>Использование управляющие объекты SQL Server  

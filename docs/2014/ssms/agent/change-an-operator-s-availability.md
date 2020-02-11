@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 11e5b26a9e2a953aff319b41749d2c12be1a880e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63017098"
 ---
 # <a name="change-an-operator39s-availability"></a>Изменение доступности оператора
@@ -36,7 +36,7 @@ ms.locfileid: "63017098"
   
 -   **Перед началом работы**  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Изменение доступности оператора с помощью:**  
   
@@ -63,7 +63,7 @@ ms.locfileid: "63017098"
   
 4.  Щелкните правой кнопкой мыши оператора, которого нужно включить или отключить, и выберите пункт **Свойства**, а затем перейдите на вкладку **Общие** .  
   
-5.  В диалоговом окне _Свойства_**имя_оператора** установите или снимите флажок **Включен** .  
+5.  В диалоговом окне**свойства** _operator_name_установите или снимите флажок **включено** .  
   
 6.  Нажмите кнопку **ОК**.  
   

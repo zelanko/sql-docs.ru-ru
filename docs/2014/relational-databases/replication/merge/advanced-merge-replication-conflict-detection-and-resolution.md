@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5aaf7031afb1b3c148bbef2bcafd5d40f4947f8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63000349"
 ---
 # <a name="advanced-merge-replication-conflict-detection-and-resolution"></a>Advanced Merge Replication Conflict Detection and Resolution
@@ -38,9 +38,11 @@ ms.locfileid: "63000349"
   
 -   указан ли механизм разрешения конфликтов на основе приоритетов (по умолчанию) или указан сопоставитель статей. Сопоставитель статей может быть:  
   
-    -   *обработчиком бизнес-логики* , разработанным в управляемом коде;  
+    -   
+  *обработчиком бизнес-логики* , разработанным в управляемом коде;  
   
-    -   *пользовательским сопоставителем конфликтов*на основе COM;  
+    -   
+  *пользовательским сопоставителем конфликтов*на основе COM;  
   
     -   Основанный на технологии COM сопоставитель, поддерживаемый [!INCLUDE[msCoName](../../../includes/msconame-md.md)].  
   
@@ -57,7 +59,7 @@ ms.locfileid: "63000349"
   
  Дополнительные сведения см. в статье [Распознавание и разрешение конфликтов в логических записях](advanced-merge-replication-conflict-resolving-in-logical-record.md).  
   
- Чтобы указать уровень отслеживания конфликтов и разрешений, см. раздел [указать уровень разрешения и отслеживания конфликтов для статьи слияния](../publish/specify-merge-replication-properties.md#interactive-conflict-resolution).  
+ Чтобы указать уровень отслеживания конфликтов и разрешений, см. раздел [Указание уровня отслеживания и разрешения конфликтов для статей публикации слиянием](../publish/specify-merge-replication-properties.md#interactive-conflict-resolution).  
   
 ## <a name="conflict-resolution"></a>Устранение конфликтов  
  После обнаружения конфликта агент слияния запускает выбранный сопоставитель конфликтов и использует его для определения победителя в конфликте. Победившая строка применяется на издателе и подписчике, а данные из проигравшей строки записываются в таблицу конфликтов. Разрешение конфликтов осуществляется немедленно после выполнения сопоставления конфликтов, если не выбран интерактивный режим разрешения конфликтов.  
@@ -81,11 +83,11 @@ ms.locfileid: "63000349"
   
 -   Пользовательский сопоставитель на основе COM  
   
-     Репликация слиянием обеспечивает API-интерфейс, предназначенный для написания сопоставителей в виде COM-объектов на различных языках программирования — [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] , [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]и других. Дополнительные сведения см. в статье [COM-Based Custom Resolvers](advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
+     Репликация слиянием предоставляет API для записи арбитров конфликтов в виде COM-объектов на [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] языках [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)], таких как или. Дополнительные сведения см. в статье [COM-Based Custom Resolvers](advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
   
 -   Основанный на технологии COM сопоставитель, поддерживаемый [!INCLUDE[msCoName](../../../includes/msconame-md.md)]  
   
-     [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] содержит несколько сопоставителей на основе COM. Дополнительные сведения см. в статье [Сопоставители на базе технологии Microsoft COM](advanced-merge-replication-conflict-com-based-resolvers.md).  
+     [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] включает несколько арбитров конфликтов на основе COM. Дополнительные сведения см. в статье [Сопоставители на базе технологии Microsoft COM](advanced-merge-replication-conflict-com-based-resolvers.md).  
   
  Сведения о выборе подходящего типа сопоставителя см. в статье [Выбор сопоставителя](advanced-merge-replication-conflict-choose-a-resolver.md).  
   
@@ -94,9 +96,9 @@ ms.locfileid: "63000349"
   
  Указание типа подписки на публикацию слиянием и приоритета устранения конфликтов см. в разделе  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. [Указание типа подписки слиянием и приоритета устранения конфликтов (SQL Server Management Studio)](../specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Укажите тип подписки на публикацию слиянием и приоритет разрешения конфликтов &#40;SQL Server Management Studio&#41;](../specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
   
--   Репликация [!INCLUDE[tsql](../../../includes/tsql-md.md)] программирования и программирования Replication Management Objects (RMO): [Создание подписки по запросу](../create-a-pull-subscription.md) и [Создание принудительной подписки](../create-a-push-subscription.md).  
+-   Программирование репликации с помощью [!INCLUDE[tsql](../../../includes/tsql-md.md)] programming и Программирование репликации с помощью Management Objects (RMO) programming: [Create a Pull Subscription](../create-a-pull-subscription.md) и [Create a Push Subscription](../create-a-push-subscription.md)  
   
 ### <a name="interactive-resolver"></a>Интерактивный сопоставитель  
  Репликация предоставляет пользовательский интерфейс интерактивного сопоставителя, который может использоваться совместно либо с сопоставителем конфликтов на основе приоритетов (по умолчанию), либо с сопоставителем статей. При выполнении синхронизации по требованию с помощью диспетчера синхронизации [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows интерактивный сопоставитель отображает конфликтные данные во время выполнения, позволяя выбрать методы разрешения конфликтов. Дополнительные сведения о том, как включить интерактивное устранение конфликтов и запуск интерактивного сопоставителя, см. в разделе [Interactive Conflict Resolution](advanced-merge-replication-conflict-interactive-resolution.md).  
@@ -109,7 +111,7 @@ ms.locfileid: "63000349"
   
  Средство просмотра конфликтов отображает информацию из трех системных таблиц:  
   
--   При репликации для каждой таблицы в статье слияния создается таблица конфликтов с именем следующего вида: **MSmerge_conflict_\<имя_публикации>_\<имя_статьи>** .  
+-   При репликации для каждой таблицы в статье слияния создается таблица конфликтов с именем следующего вида: **MSmerge_conflict_\<имя_публикации>_\<имя_статьи>**.  
   
      Таблицы конфликтов имеют структуру, аналогичную структуре таблиц, на которых они основаны. Строка в одной из этих таблиц состоит из проигравшей версии строки конфликта (победившая версия строки находится в существующей пользовательской таблице).  
   
@@ -127,11 +129,11 @@ ms.locfileid: "63000349"
   
  **Просмотр конфликтов**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. [Просмотр и разрешение конфликтов данных для публикации слиянием (SQL Server Management Studio)](../view-and-resolve-data-conflicts-for-merge-publications.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Просмотр и разрешение конфликтов данных для публикаций слиянием &#40;SQL Server Management Studio&#41;](../view-and-resolve-data-conflicts-for-merge-publications.md)  
   
--   Программирование репликации на языке [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [View Conflict Information for Merge Publications](../view-conflict-information-for-merge-publications.md) (Просмотр сведений о конфликтах для публикаций слиянием)  
+-   Репликация [!INCLUDE[tsql](../../../includes/tsql-md.md)] Программирование: [Просмотр сведений о конфликтах для публикаций слиянием (программирование репликации на языке Transact-SQL)](../view-conflict-information-for-merge-publications.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Синхронизация данных](../synchronize-data.md)  
   
   

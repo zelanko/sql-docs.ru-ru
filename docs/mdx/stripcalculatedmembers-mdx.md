@@ -1,5 +1,5 @@
 ---
-title: StripCalculatedMembers (многомерные Выражения) | Документация Майкрософт
+title: StripCalculatedMembers (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d4a29a8227fc7b0452f17d6da0c1f47d37738ed0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036809"
 ---
 # <a name="stripcalculatedmembers-mdx"></a>StripCalculatedMembers (многомерные выражения)
@@ -31,8 +31,8 @@ StripCalculatedMembers(Set_Expression)
  *Set_Expression*  
  Допустимое многомерное выражение, возвращающее набор.  
   
-## <a name="remarks"></a>Примечания  
- **StripCalculatedMembers** функция удаляет вычисляемые элементы из набора. Вычисляемые элементы могут добавляться к набору с помощью [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) функции, которая возвращает вычисляемые элементы, определенные на сервере или вычисляемые элементы, которые были добавлены в самом запросе с помощью аргумента WITH Синтаксис ЭЛЕМЕНТА.  
+## <a name="remarks"></a>Remarks  
+ Функция **StripCalculatedMembers** удаляет вычисляемые элементы из набора. Вычисляемые элементы можно добавить в набор с помощью функции [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) , которая возвращает вычисляемые элементы, определенные на сервере, или вычисляемые элементы, которые были добавлены в самом запросе, с помощью СИНТАКСИСА элемента with.  
   
 ## <a name="example"></a>Пример  
  В следующем примере из запроса удаляются все вычисляемые элементы.  
@@ -77,7 +77,7 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также:  
+ [Ссылка на функцию многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-function-reference-mdx.md)  
   
   

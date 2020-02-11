@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6bb9c6f7fddc9ba0d4430b42ba5472a59c29e3cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916239"
 ---
-# <a name="mssqlserver10519"></a>MSSQLSERVER_10519
+# <a name="mssqlserver_10519"></a>MSSQLSERVER_10519
     
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|10519|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|PG_INCOMPATIBLE_STMT_AND_HINTS|  
-|Текст сообщения|Невозможно создать структуру плана "%. \*ls поскольку указания, заданные в `@hints` не может использоваться для инструкции, заданной с помощью `@stmt` или `@statement_start_offset`. Убедитесь, что заданные указания можно применить к этой инструкции.|  
+|Текст сообщения|Не удается создать структуру плана "%.\*ls", поскольку указания, заданные в параметре `@hints`, нельзя применить к инструкции, заданной параметром `@stmt` или `@statement_start_offset`. Убедитесь, что заданные указания можно применить к этой инструкции.|  
   
 ## <a name="explanation"></a>Объяснение  
  Указания, заданные в параметре `@hints`, не могут быть применены к инструкции, заданной с помощью `@stmt` или `@statement_start_offset`.  
@@ -38,8 +38,8 @@ ms.locfileid: "62916239"
 ## <a name="user-action"></a>Действие пользователя  
  Задайте указания, которые могут быть применены к этой инструкции.  
   
-## <a name="see-also"></a>См. также  
- [sp_create_plan_guide (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+## <a name="see-also"></a>См. также:  
+ [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
  [Структуры планов](../performance/plan-guides.md)   
  [sp_create_plan_guide_from_handle (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)  
   

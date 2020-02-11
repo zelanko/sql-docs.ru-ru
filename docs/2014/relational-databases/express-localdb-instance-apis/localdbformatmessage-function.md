@@ -17,16 +17,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d287a7ceff1c38c829da91a8ae2e530f664fb4ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63128742"
 ---
 # <a name="localdbformatmessage-function"></a>Функция LocalDBFormatMessage
   Возвращает локализованное текстовое описание для указанной ошибки SQL Server Express LocalDB.  
   
- **Файл заголовка:** sqlncli.h  
+ **Заголовочный файл:** sqlncli. h  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,7 +41,7 @@ HRESULT LocalDBFormatMessage(
 ```  
   
 ## <a name="parameters"></a>Параметры  
- *hrLocalDB*  
+ *хрлокалдб*  
  [Вход] Код ошибки LocalDB.  
   
  *dwFlags*  
@@ -52,13 +52,13 @@ HRESULT LocalDBFormatMessage(
  LOCALDB_TRUNCATE_ERR_MESSAGE  
  Если размер входного буфера окажется недостаточным, сообщение об ошибке урезается до длины буфера.  
   
- *dwLanguageId*  
+ *двлангуажеид*  
  [Вход] Требуемый язык (LANGID) или значение 0. В последнем случае используется порядок языков Win32 FormatMessage.  
   
  *wszMessage*  
  [Выход] Буфер для сохранения сообщения об ошибке LocalDB.  
   
- *lpcchMessage*  
+ *лпкчмессаже*  
  [Вход/выход] На входе содержит размер буфера *wszMessage* в символах. На выходе, если указан недостаточный размер буфера, содержит требуемый размер буфера в символах, включая любые конечные символы NULL. При успешном завершении работы функции содержит количество символов в сообщении без учета конечных символов NULL.  
   
 ## <a name="returns"></a>Возвращает  
@@ -83,10 +83,10 @@ HRESULT LocalDBFormatMessage(
  [LOCALDB_ERROR_INTERNAL_ERROR](../express-localdb-error-messages/localdb-error-internal-error.md)  
  Произошла непредвиденная ошибка. Подробные сведения см. в журнале событий.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Образец кода, использующего API LocalDB, см. в разделе [SQL Server Express LocalDB Reference](../sql-server-express-localdb-reference.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Заголовок и сведения о версии SQL Server Express LocalDB](sql-server-express-localdb-header-and-version-information.md)  
   
   

@@ -20,10 +20,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5875ad2268e14d6bbe276ea437c5ee201867105e
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73632770"
 ---
 # <a name="upgrade-advisor-prerequisites"></a>Компоненты, необходимые для помощника по обновлению
@@ -32,17 +32,18 @@ ms.locfileid: "73632770"
 ## <a name="prerequisites"></a>Предварительные требования  
  Ниже перечислены предварительные условия для установки и запуска помощника по обновлению.  
   
--   [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] с пакетом обновления 1 (SP1), [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)], начиная с версии с пакетом обновления 2 (SP2), Windows 7 или [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] R2.  
+-   
+  [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] с пакетом обновления 1 (SP1), [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)], начиная с версии с пакетом обновления 2 (SP2), Windows 7 или [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] R2.  
   
 -   Установщик Windows 4.5. Установщик Windows можно установить с [веб-сайта установщик Windows](https://www.microsoft.com/download/details.aspx?id=8483).  
   
--   Платформа [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], начиная с версии Microsoft .NET Framework 4. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] доступен на установочном носителе [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], а также на [веб-сайте с пакетом SDK, распространяемого пакета и пакете обновления](https://go.microsoft.com/fwlink/?LinkId=48882).  
+-   Платформа [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], начиная с версии Microsoft .NET Framework 4. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Компонент доступен на носителе [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] продукта, а также на [веб-сайте загрузки пакетов SDK, распространяемых компонентов и пакета обновления](https://go.microsoft.com/fwlink/?LinkId=48882).  
   
     -   Чтобы установить платформу .NET Framework 4 с установочного диска [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], перейдите в корневой каталог диска. Откройте папку «\redist», а затем папку «DotNetFrameworks», после чего запустите файл dotNetFx40_Full_x86_x64.exe (для 32-разрядных и 64-разрядных версий операционных систем).  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)] ScriptDom является необходимым условием для установки помощника по обновлению [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и не устанавливается программой установки помощника по обновлению. Для установки необходимо загрузить и установить [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)] ScriptDom из пакета дополнительных компонентов [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+-   ScriptDom является [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] необходимым условием для установки помощника по обновлению и не устанавливается программой установки помощника по обновлению. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] Для установки [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] необходимо загрузить и установить ScriptDom из пакета дополнительных [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] компонентов.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Установка помощника по обновлению](../../../2014/sql-server/install/how-to-install-upgrade-advisor.md)  
   
   

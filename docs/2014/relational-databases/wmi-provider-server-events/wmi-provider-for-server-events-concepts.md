@@ -1,5 +1,5 @@
 ---
-title: Поставщик WMI для событий сервера основные понятия | Документация Майкрософт
+title: Основные понятия о поставщике WMI для событий сервера | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3a0ef44b57e092c13b4046b250c99fca5eaea101
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211571"
 ---
 # <a name="wmi-provider-for-server-events-concepts"></a>Основные понятия о поставщике WMI для событий сервера
@@ -36,13 +36,13 @@ ms.locfileid: "68211571"
  [Использование WQL с поставщиком WMI для событий сервера](using-wql-with-the-wmi-provider-for-server-events.md)  
  Рассказывает о синтаксисе языка запросов WMI (WMI Query Language, WQL) и его использовании для программирования работы с поставщиком.  
   
- [Пример: Создание предупреждения агента SQL Server с помощью поставщика WMI для событий сервера](sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md)  
+ [Создание предупреждения агента SQL Server при помощи поставщика WMI для событий сервера](sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md)  
  Иллюстрирует использование поставщика WMI для возвращения трассировочной информации о событиях сервера, на основании которой создается предупреждение агента SQL Server.  
   
- [Пример: Использование поставщика событий WMI с платформой .NET Framework](sample-using-the-wmi-event-provider-with-the-net-framework.md)  
+ [Пример. Использование поставщика событий WMI с .NET Framework](sample-using-the-wmi-event-provider-with-the-net-framework.md)  
  Иллюстрирует использование поставщика WMI для возвращения данных события сервера в приложении на языке C#.  
   
- [Поставщик WMI для классов и свойств событий сервера](wmi-provider-for-server-events-classes-and-properties.md)  
+ [Поставщик инструментария WMI для классов событий и свойств сервера](wmi-provider-for-server-events-classes-and-properties.md)  
  Предоставляет обзор классов и свойств событий, составляющих программный режим поставщика.  
   
   

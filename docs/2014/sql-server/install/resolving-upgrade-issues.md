@@ -1,5 +1,5 @@
 ---
-title: Разрешение проблем при обновлении | Документация Майкрософт
+title: Устранение проблем с обновлением | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -31,10 +31,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 85de606ecea93aba80714d4266e9897dd856879f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66092501"
 ---
 # <a name="resolving-upgrade-issues"></a>Разрешение проблем при обновлении
@@ -42,15 +42,15 @@ ms.locfileid: "66092501"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
--   [Сведения о последних критических проблемах при обновлении](../../../2014/sql-server/install/late-breaking-upgrade-issues.md)  
+-   [Последние сведения о проблемах при обновлении](../../../2014/sql-server/install/late-breaking-upgrade-issues.md)  
   
--   [Проблемы обновления ядра СУБД](../../../2014/sql-server/install/database-engine-upgrade-issues.md)  
+-   [Проблемы обновления компонента Database Engine](../../../2014/sql-server/install/database-engine-upgrade-issues.md)  
   
--   [Проблемы обновления полнотекстового поиска](../../../2014/sql-server/install/full-text-search-upgrade-issues.md)  
+-   [Проблемы обновления компонента Full-Text Search](../../../2014/sql-server/install/full-text-search-upgrade-issues.md)  
   
 -   [Проблемы репликации при обновлении](../../../2014/sql-server/install/replication-upgrade-issues.md)  
   
--   [Проблемы обновления служб Reporting Services &#40;помощник по обновлению&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
+-   [Reporting Services проблем обновления &#40;советник по переходу&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
   
 -   [Проблемы обновления агента SQL Server](../../../2014/sql-server/install/sql-server-agent-upgrade-issues.md)  
   
@@ -60,15 +60,15 @@ ms.locfileid: "66092501"
 ### [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
  Если в отчете по обновлению компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] присутствуют перечисленные ниже задачи, то обновление до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] станет возможным только после того, как указанные действия будут выполнены.  
   
--   [Отсоедините базу данных с идентификатором 32767](../../../2014/sql-server/install/detach-database-id-32767.md)  
+-   [Отсоедините базу данных с идентификатором 32767](../../../2014/sql-server/install/detach-database-id-32767.md)  
   
--   [Переименование имен для входа, которые совпадают с именами предопределенной роли сервера](../../../2014/sql-server/install/rename-logins-matching-fixed-server-role-names.md)  
+-   [Переименование имен входа, которые совпадают с именами предопределенной роли сервера](../../../2014/sql-server/install/rename-logins-matching-fixed-server-role-names.md)  
   
 -   [Переименуйте пользователя с именем sys](../../../2014/sql-server/install/rename-user-sys.md)  
   
 -   [При помощи хранимой процедуры sp_rename переименуйте повторяющиеся имена индексов](../../../2014/sql-server/install/use-sp-rename-to-rename-duplicate-index-name.md)  
   
-## <a name="see-also"></a>См. также  
- [Помощник по обновлению SQL Server 2014 &#91;new&#93;](sql-server-2014-upgrade-advisor.md)  
+## <a name="see-also"></a>См. также:  
+ [Советник по переходу SQL Server 2014 &#91;New&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

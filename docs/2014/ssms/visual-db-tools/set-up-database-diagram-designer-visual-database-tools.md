@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d71ea2d6a10755ef52e0cac37ddcd2385d82d9cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63067625"
 ---
 # <a name="set-up-database-diagram-designer-visual-database-tools"></a>Настройка конструктора диаграмм баз данных (визуальные инструменты для баз данных)
@@ -57,9 +57,9 @@ ms.locfileid: "63067625"
   
     9. хранимая процедура sp_upgraddiagrams.  
   
-## <a name="see-also"></a>См. также  
- [Основные сведения о владении базы данных &#40;визуальных инструментах баз данных&#41;](visual-database-tools.md)   
- [Обновление диаграмм баз данных из предыдущих версий &#40;визуальных инструментах баз данных&#41;](upgrade-database-diagrams-from-previous-editions-visual-database-tools.md)   
- [ALTER AUTHORIZATION (Transact-SQL)](/sql/t-sql/statements/alter-authorization-transact-sql)  
+## <a name="see-also"></a>См. также:  
+ [Общие сведения о владении диаграммами базы данных &#40;визуальные инструменты для баз данных&#41;](visual-database-tools.md)   
+ [Обновление диаграмм баз данных из предыдущих выпусков &#40;визуальные инструменты для баз данных&#41;](upgrade-database-diagrams-from-previous-editions-visual-database-tools.md)   
+ [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-authorization-transact-sql)  
   
   

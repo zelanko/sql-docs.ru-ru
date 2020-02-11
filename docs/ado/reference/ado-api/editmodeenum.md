@@ -1,5 +1,5 @@
 ---
-title: EditModeEnum | Документация Майкрософт
+title: Едитмодинум | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,31 +16,31 @@ ms.assetid: 45d54b6e-db2c-4553-9fd0-528147d6da2f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0a8c4ddb27bbc6831095062af5491fb501b6d5b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933048"
 ---
 # <a name="editmodeenum"></a>EditModeEnum
-Указывает состояние редактирования записи.  
+Указывает состояние редактирования записи a.  
   
-|Константа|Значение|Описание|  
+|Постоянно|Значение|Description|  
 |--------------|-----------|-----------------|  
-|**как таковые**|0|Указывает, что ни одна из операций редактирования идет.|  
-|**adEditInProgress**|1|Указывает, что данные в текущей записи были изменены, но не сохранены.|  
-|**adEditAdd**|2|Указывает, что [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) был вызван метод, и текущую запись в буфер копирования считается новой записью, который не был сохранен в базе данных.|  
-|**adEditDelete**|4|Указывает, что текущая запись была удалена.|  
+|**адедитноне**|0|Указывает, что операции редактирования не выполняются.|  
+|**адедитинпрогресс**|1|Указывает, что данные в текущей записи были изменены, но не сохранены.|  
+|**адедитадд**|2|Указывает, что был вызван метод [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) , а текущая запись в буфере копирования является новой записью, которая не была сохранена в базе данных.|  
+|**адедитделете**|4|Указывает, что текущая запись была удалена.|  
   
-## <a name="adowfc-equivalent"></a>Эквивалент ADO и WFC  
- Пакет: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>Эквивалент ADO/WFC  
+ Пакет: **com. MS. WFC. Data**  
   
-|Константа|  
+|Постоянно|  
 |--------------|  
-|AdoEnums.EditMode.NONE|  
-|AdoEnums.EditMode.INPROGRESS|  
-|AdoEnums.EditMode.ADD|  
-|AdoEnums.EditMode.DELETE|  
+|Адоенумс. EditMode. NONE|  
+|Адоенумс. EditMode. выполняется|  
+|Адоенумс. EditMode. ADD|  
+|Адоенумс. EditMode. DELETE|  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  [Свойство EditMode](../../../ado/reference/ado-api/editmode-property.md)

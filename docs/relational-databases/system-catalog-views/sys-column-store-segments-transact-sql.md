@@ -1,5 +1,5 @@
 ---
-title: sys.column_store_segments (Transact-SQL) | Документация Майкрософт
+title: sys. column_store_segments (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/15/2018
 ms.prod: sql
@@ -20,37 +20,37 @@ ms.assetid: 1253448c-2ec9-4900-ae9f-461d6b51b2ea
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: b8d476e2f21693254eac5fc4712d53ac854e74ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68139999"
 ---
-# <a name="syscolumnstoresegments-transact-sql"></a>sys.column_store_segments (Transact-SQL)
+# <a name="syscolumn_store_segments-transact-sql"></a>sys.column_store_segments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
-Возвращает по одной строке для каждого сегмента столбца в индексе columnstore. Имеется один сегмент столбца для каждого столбца в каждой группе строк. Например таблица с 10 групп строк и столбцов 34 возвращает 340 строки. 
+Возвращает по одной строке для каждого сегмента столбца в индексе columnstore. Для каждого столбца группы строк имеется один сегмент столбца. Например, таблица с 10 групп строк и 34 столбцами возвращает 340 строк. 
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |**partition_id**|**bigint**|Указывает идентификатор секции. Уникален в базе данных.|  
 |**hobt_id**|**bigint**|Идентификатор кучи или индекс сбалансированного дерева (hobt) для таблицы, в которой содержится индекс columnstore.|  
 |**column_id**|**int**|Идентификатор столбца columnstore.|  
-|**segment_id**|**int**|Идентификатор группы строк. Для обеспечения обратной совместимости имя столбца по-прежнему вызываться segment_id, несмотря на то, что это идентификатор группы строк Можно однозначно определить сегмент с помощью \<hobt_id, partition_id, column_id >, < segment_id >.|  
-|**version**|**int**|Версия формата сегмента столбца.|  
-|**encoding_type**|**int**|Тип кодировки, используемой для этого сегмента:<br /><br /> 1 = VALUE_BASED - строка/недвоичных с словарь (очень схож с 4 с некоторые варианты внутренний)<br /><br /> 2 = VALUE_HASH_BASED - строка/недвоичный столбец с общими значениями в словаре<br /><br /> 3 = STRING_HASH_BASED - двоичные данные строки или столбца с общими значениями в словаре<br /><br /> 4 = STORE_BY_VALUE_BASED - строка/недвоичных с словарь<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED - строки или двоичного файла с помощью нет словаря<br /><br /> Все кодировки использовать преимущества упаковки бит и длин кодирования, когда это возможно.|  
+|**segment_id**|**int**|Идентификатор группы строк. Для обеспечения обратной совместимости имя столбца будет по-segment_id, несмотря на то, что это идентификатор группы строк. Можно однозначно идентифицировать сегмент с помощью \<hobt_id, partition_id, column_id>, <SEGMENT_ID>.|  
+|**Версия**|**int**|Версия формата сегмента столбца.|  
+|**encoding_type**|**int**|Тип кодировки, используемой для этого сегмента:<br /><br /> 1 = VALUE_BASED-нестроковый/двоичный без словаря (очень похож на 4 с некоторыми внутренними вариациями)<br /><br /> 2 = VALUE_HASH_BASED — нестроковый или двоичный столбец с общими значениями в словаре<br /><br /> 3 = STRING_HASH_BASED-строка/двоичный столбец с общими значениями в словаре<br /><br /> 4 = STORE_BY_VALUE_BASED-не строковый/двоичный без словаря<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED-String/binary без словаря<br /><br /> Все кодировки по возможности используют преимущества битовой упаковки и длины выполнения.|  
 |**row_count**|**int**|Число строк в группе строк.|  
 |**has_nulls**|**int**|Значение 1, если сегмент столбца содержит значения NULL.|  
-|**base_id**|**bigint**|Идентификатор базового значения, если используется тип кодирования 1.  Если тип кодирования 1 не используется, значение base_id устанавливается равным -1.|  
-|**абсолютное значение**|**float**|Значение величины, если используется тип кодирования 1.  Если тип кодирования 1 не используется, абсолютное значение устанавливается равным -1.|  
-|**primary_dictionary_id**|**int**|Значение 0 представляет глобальный словарь. Значение -1 указывает, что имеется не глобальный словарь, созданный для этого столбца.|  
-|**secondary_dictionary_id**|**int**|Ненулевое значение указывает на локальный словарь для данного столбца в текущем сегменте (т. е. группу строк). Значение -1 указывает, что отсутствует локальный словарь для этого сегмента.|  
+|**base_id**|**bigint**|Идентификатор базового значения, если используется тип кодировки 1.  Если тип кодировки 1 не используется, base_id устанавливается в значение-1.|  
+|**magnitude**|**float**|Величина, если используется тип кодировки 1.  Если тип кодировки 1 не используется, то величина устанавливается равным-1.|  
+|**primary_dictionary_id**|**int**|Значение 0 представляет глобальный словарь. Значение-1 указывает на отсутствие глобального словаря, созданного для этого столбца.|  
+|**secondary_dictionary_id**|**int**|Ненулевое значение указывает на локальный словарь для этого столбца в текущем сегменте (т. е. группы строк). Значение-1 указывает на отсутствие локального словаря для этого сегмента.|  
 |**min_data_id**|**bigint**|Минимальный идентификатор данных в сегменте столбца.|  
 |**max_data_id**|**bigint**|Максимальный идентификатор данных в сегменте столбца.|  
 |**null_value**|**bigint**|Значение, используемое для представления значений NULL.|  
 |**on_disk_size**|**bigint**|Размер сегмента в байтах.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Следующий запрос возвращает сведения о сегментах индекса columnstore.  
   
 ```sql  
@@ -67,19 +67,19 @@ GO
 ```  
   
 ## <a name="permissions"></a>Разрешения  
- Все столбцы требуется по меньшей мере **VIEW DEFINITION** разрешение на таблицу. Следующие столбцы возвращают значение null, если у пользователя также нет **ВЫБЕРИТЕ** разрешение: has_nulls, base_id, magnitude, min_data_id, max_data_id и null_value.  
+ Все столбцы должны иметь по крайней мере разрешение **View definition** на таблицу. Следующие столбцы возвращают значение null, если только пользователь не имеет разрешение **SELECT** : has_nulls, base_id, величина, min_data_id, max_data_id и null_value.  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Дополнительные сведения см. в разделе [Настройка видимости метаданных](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>См. также  
- [Представления каталога объектов (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Представления каталога объектов &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Запросив системный каталог SQL Server часто задаваемые вопросы](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
- [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [sys.all_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
- [sys.computed_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
- [Руководство по индексам columnstore](~/relational-databases/indexes/columnstore-indexes-overview.md)    
- [sys.column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)  
+ [Запросы к системному каталогу SQL Server вопросы и ответы](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
+ [sys. Columns &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
+ [sys. all_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
+ [sys. computed_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
+ [Инструкции по индексам columnstore](~/relational-databases/indexes/columnstore-indexes-overview.md)    
+ [sys. column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)  
   
   
 

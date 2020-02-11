@@ -1,5 +1,5 @@
 ---
-title: Учебник. Цепочки владения и переключение контекста | Документация Майкрософт
+title: Руководство. Цепочки владения и переключение контекста | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1ae566345f722399982c909244e77c564abb7b53
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62524370"
 ---
-# <a name="tutorial-ownership-chains-and-context-switching"></a>Учебник. Цепочки владения и переключение контекста
+# <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
   В этом учебнике приведен пример, в котором рассматриваются основные понятия безопасности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , включая цепочки владения и переключение контекста.  
   
 > [!NOTE]  
@@ -48,7 +48,7 @@ ms.locfileid: "62524370"
  Каждый блок кода в этом примере объясняется по порядку. Чтобы скопировать весь пример, см. раздел [Пример целиком](#CompleteExample) в конце этого учебника.  
   
 ## <a name="1-configure-the-environment"></a>1. Настройка среды  
- С помощью среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] и приведенного ниже кода откройте базу данных `AdventureWorks2012`, затем с помощью инструкции `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] проверьте, отображается ли пользователь dbo в качестве контекста.  
+ Используйте [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] и следующий код, чтобы открыть `AdventureWorks2012` базу данных, и используйте `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] инструкцию, чтобы убедиться, что пользователь dbo отображается в качестве контекста.  
   
 ```  
 USE AdventureWorks2012;  
@@ -80,7 +80,8 @@ GO
   
  Дополнительные сведения об инструкции CREATE USER см. в разделе [CREATE USER (Transact-SQL)](/sql/t-sql/statements/create-user-transact-sql). Дополнительные сведения об инструкции CREATE LOGIN см. в разделе [CREATE LOGIN (Transact-SQL)](/sql/t-sql/statements/create-login-transact-sql).  
   
- Изменить владельца схемы `Purchasing` на учетную запись `TestManagerUser` можно с помощью приведенного ниже кода. Это позволит учетной записи использовать все инструкции доступа языка обработки данных DML (например, разрешения `SELECT` или `INSERT` ) для объектов, которые содержит эта схема. `TestManagerUser` также предоставляет возможность создавать хранимые процедуры.  
+ Изменить владельца схемы `Purchasing` на учетную запись `TestManagerUser` можно с помощью приведенного ниже кода. Это позволит учетной записи использовать все инструкции доступа языка обработки данных DML (например, разрешения `SELECT` или `INSERT` ) для объектов, которые содержит эта схема. 
+  `TestManagerUser` также предоставляет возможность создавать хранимые процедуры.  
   
 ```  
 /* Change owner of the Purchasing Schema to TestManagerUser */  
@@ -95,7 +96,7 @@ GRANT CREATE PROCEDURE
 GO  
 ```  
   
- Дополнительные сведения об инструкции GRANT см. в разделе [GRANT (Transact-SQL)](/sql/t-sql/statements/grant-transact-sql). Дополнительные сведения о хранимых процедурах см. в разделе [Хранимые процедуры (компонент Database Engine)](stored-procedures/stored-procedures-database-engine.md). Плакат со всеми разрешениями [!INCLUDE[ssDE](../includes/ssde-md.md)] см. по ссылке [https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142).  
+ Дополнительные сведения об инструкции GRANT см. в разделе [GRANT (Transact-SQL)](/sql/t-sql/statements/grant-transact-sql). Дополнительные сведения о хранимых процедурах см. в разделе [Хранимые процедуры (компонент Database Engine)](stored-procedures/stored-procedures-database-engine.md). Афишу всех [!INCLUDE[ssDE](../includes/ssde-md.md)] разрешений см. в разделе [https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142).  
   
 ## <a name="2-create-a-stored-procedure-to-access-data"></a>2. Создание хранимой процедуры для доступа к данным  
  Для переключения контекста внутри базы данных используйте инструкцию EXECUTE AS. Инструкции EXECUTE AS требуются разрешения IMPERSONATE.  
@@ -156,7 +157,8 @@ GO
  Дополнительные сведения об инструкции REVERT см. в разделе [REVERT (Transact-SQL)](/sql/t-sql/statements/revert-transact-sql).  
   
 ## <a name="3-access-data-through-the-stored-procedure"></a>3. Доступ к данным через хранимую процедуру  
- `TestEmployeeUser` не обладает разрешениями на объекты базы данных [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] , кроме разрешения на вход в систему и прав, присвоенных роли базы данных public. Следующий код возвращает ошибку при попытке обращения `TestEmployeeUser` к базовым таблицам.  
+ 
+  `TestEmployeeUser` не обладает разрешениями на объекты базы данных [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] , кроме разрешения на вход в систему и прав, присвоенных роли базы данных public. Следующий код возвращает ошибку при попытке обращения `TestEmployeeUser` к базовым таблицам.  
   
 ```  
 EXECUTE AS LOGIN = 'TestEmployeeUser'  
@@ -200,7 +202,7 @@ DROP LOGIN TestManagerUser;
 GO  
 ```  
   
-##  <a name="CompleteExample"></a> Полный пример  
+##  <a name="CompleteExample"></a>Полный пример  
  В этом разделе приведен полный код примера.  
   
 > [!NOTE]  
@@ -321,7 +323,7 @@ DROP LOGIN TestManagerUser;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Центр обеспечения безопасности для базы данных Azure SQL и SQL Server Database Engine](security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+## <a name="see-also"></a>См. также:  
+ [Центр безопасности для ядра СУБД SQL Server и Базы данных Azure SQL](security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

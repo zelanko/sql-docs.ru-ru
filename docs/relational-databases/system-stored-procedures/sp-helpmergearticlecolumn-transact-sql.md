@@ -16,13 +16,13 @@ ms.assetid: 651c017b-9e9a-48f2-a0bd-6fc896eab334
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: da2eec998176dfd46ab261fa405ecaa4b6e90044
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68126440"
 ---
-# <a name="sphelpmergearticlecolumn-transact-sql"></a>sp_helpmergearticlecolumn (Transact-SQL)
+# <a name="sp_helpmergearticlecolumn-transact-sql"></a>sp_helpmergearticlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Возвращает список столбцов в статье указанной таблицы или представления для публикации слиянием. Поскольку хранимые процедуры не имеют столбцов, эта хранимая процедура возвращает ошибку, если в качестве статьи указана хранимая процедура. Эта хранимая процедура выполняется на издателе в базе данных публикации.  
@@ -38,28 +38,28 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` — Имя публикации. *публикации* — **sysname**, не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @article = ] 'article'` — Имя таблицы или представления, являющейся статьей необходимо получить сведения. *статье* — **sysname**, не имеет значения по умолчанию.  
+`[ @article = ] 'article'`Имя таблицы или представления, на которых должна быть извлечена информация. Аргумент *article* имеет тип **sysname**и не имеет значения по умолчанию.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|**column_id**|**sysname**|Идентификатор столбца.|  
-|**column_name**|**sysname**|Имя столбца для таблицы или представления.|  
-|**Опубликованные**|**bit**|Указывает, опубликовано ли имя столбца.<br /><br /> **1** указывает, что столбец опубликован.<br /><br /> **0** указывает, что он не опубликован.|  
+|**column_id**|**имеет sysname**|Идентификатор столбца.|  
+|**column_name**|**имеет sysname**|Имя столбца для таблицы или представления.|  
+|**выпущен**|**bit**|Указывает, опубликовано ли имя столбца.<br /><br /> значение **1** указывает, что столбец публикуется.<br /><br /> значение **0** указывает, что она не опубликована.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  **sp_helpmergearticlecolumn** используется в репликации слиянием.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **replmonitor** предопределенной роли базы данных в базе данных распространителя или в списке доступа к публикации для публикации могут выполнять процедуру **sp_helpmergearticlecolumn**.  
+ Только члены предопределенной роли базы данных **replmonitor** в базе данных распространителя или список доступа к публикации для публикации могут выполнять **sp_helpmergearticlecolumn**.  
   
-## <a name="see-also"></a>См. также  
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

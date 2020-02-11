@@ -15,16 +15,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4830a677125cb03e2c53ed78065d94d5265d4a83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62920782"
 ---
 # <a name="assemblies-database-engine"></a>Сборки (компонент Database Engine)
   В этом разделе содержатся сведения, которые помогут понять, сконструировать и применить сборки.  
   
- Сборки — это файлы DLL, используемые в экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для развертывания функции, хранимые процедуры, триггеры, определяемые пользователем статистические функции и определяемые пользователем типы, написанные на одном из языков управляемого кода, проводимых [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Общеязыковая среда выполнения (CLR), а не в [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+ Сборки — [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] это файлы DLL, используемые в экземпляре служб для развертывания функций, хранимых процедур, триггеров, определяемых пользователем агрегатов и определяемых пользователем типов, написанных на одном из языков управляемого кода [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] , размещенных в среде CLR, а не в [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  Сборка в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] представляет собой объект, который ссылается на управляемый модуль приложений (DLL-файл), созданный в среде CLR [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Сборка содержит метаданные класса и управляемый код. Передача сборки на экземпляр SQL Server — это первый шаг к созданию любого из следующих объектов базы данных.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "62920782"
   
 -   Триггеры среды CLR. Дополнительные сведения см. в разделе [Создание триггеров CLR](../triggers/create-clr-triggers.md).  
   
--   Определяемые пользователем агрегатные функции. Дополнительные сведения см. в разделе [создание определяемых пользователем статистических выражений](../user-defined-functions/create-user-defined-aggregates.md).  
+-   Определяемые пользователем агрегатные функции. Дополнительные сведения см. в разделе [Создание определяемых пользователем статистических функций](../user-defined-functions/create-user-defined-aggregates.md).  
   
 -   Определяемые пользователем типы. Дополнительные сведения см. в статье [Использование пользовательских типов](../native-client/features/using-user-defined-types.md).  
   
@@ -50,13 +50,13 @@ ms.locfileid: "62920782"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Описание|  
+|Раздел|Description|  
 |-----------|-----------------|  
 |[Конструирование сборок](assemblies-designing.md)|Объясняет, что необходимо учесть перед созданием сборки. Включает в себя упаковку сборок, разрешения кода доступа и другие ограничения.|  
 |[Реализация сборок](assemblies-implementing.md)|Объясняет, как правильно создать и удалить сборку, как и когда необходимо изменить сборку, а также как получить метаданные о сборке.|  
 |[Получение сведений о сборках](assemblies-getting-information.md)|Перечисляет представления и функции каталога, которые могут запрашиваться для метаданных о сборках.|  
   
-## <a name="see-also"></a>См. также  
- [Основные понятия о программировании интеграции со средой (CLR)](common-language-runtime-clr-integration-programming-concepts.md)  
+## <a name="see-also"></a>См. также:  
+ [Общеязыковая среда выполнения &#40;концепции программирования интеграции&#41; среды CLR](common-language-runtime-clr-integration-programming-concepts.md)  
   
   

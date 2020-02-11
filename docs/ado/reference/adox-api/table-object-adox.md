@@ -1,5 +1,5 @@
 ---
-title: Таблицы объект (ADOX) | Документация Майкрософт
+title: Объект Table (ADOX) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,54 +16,54 @@ ms.assetid: a6d74000-0828-49ba-850a-63da865f8802
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 10f3add3cb243d54643c3294104ec2546e7737d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965169"
 ---
 # <a name="table-object-adox"></a>Объект Table (ADOX)
 Представляет таблицу базы данных, включая столбцы, индексы и ключи.  
   
-## <a name="remarks"></a>Примечания  
- В следующем коде создается новый **таблицы**:  
+## <a name="remarks"></a>Remarks  
+ Следующий код создает новую **таблицу**:  
   
 ```  
 Dim obj As New Table  
 ```  
   
- С помощью свойств и коллекций **таблицы** объекта, вы можете:  
+ Свойства и коллекции объекта **Table** позволяют:  
   
--   Определите таблицу с [свойство Name (ADOX)](../../../ado/reference/adox-api/name-property-adox.md) свойство.  
+-   Найдите таблицу с помощью свойства [Name (ADOX)](../../../ado/reference/adox-api/name-property-adox.md) .  
   
--   Определите тип таблицы с [свойство Type (Table) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md) свойство.  
+-   Определите тип таблицы с помощью свойства [свойства типа (таблица) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md) .  
   
--   Доступ к базе данных столбцы таблицы с [коллекции столбцов (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md) коллекции.  
+-   Получите доступ к столбцам базы данных таблицы со коллекцией [Columns Collection (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md) .  
   
--   Доступ к индексы таблицы с [коллекции индексов (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md).  
+-   Получите доступ к индексам таблицы с помощью [коллекции indexes (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md).  
   
--   Доступ к ключам таблицы с [ключи коллекции (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md).  
+-   Получите доступ к ключам таблицы с помощью [коллекции Keys (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md).  
   
--   Укажите каталог, к которой принадлежит таблица с [свойство ParentCatalog (ADOX)](../../../ado/reference/adox-api/parentcatalog-property-adox.md) свойство.  
+-   Укажите каталог, которому принадлежит таблица со свойством [ParentCatalog (ADOX)](../../../ado/reference/adox-api/parentcatalog-property-adox.md) .  
   
--   Возвращает сведения о дате с [свойство DateCreated (ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md) и [свойство DateModified (ADOX)](../../../ado/reference/adox-api/datemodified-property-adox.md) свойства.  
+-   Возвращает сведения о дате с помощью свойств [DateCreated (ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md) и свойства [DateModified (ADOX)](../../../ado/reference/adox-api/datemodified-property-adox.md) .  
   
--   Доступ к свойствам поставщика таблицы с [свойства коллекции (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) коллекции.  
+-   Доступ к зависящим от поставщика свойствам таблицы с помощью коллекции [свойств (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) .  
   
 > [!NOTE]
->  Поставщик данных может не поддерживать все свойства **таблицы** объектов. Если вы задали значение для свойства, которое поставщик не поддерживает, произойдет ошибка. Для новых **таблицы** объектов, ошибка возникает в том случае, когда объект добавляется в коллекцию. Для существующих объектов ошибка возникает при задании свойства.  
+>  Поставщик данных может не поддерживать все свойства объектов **Table** . Если задано значение для свойства, которое не поддерживается поставщиком, возникнет ошибка. Для новых объектов **таблицы** ошибка возникает при добавлении объекта в коллекцию. Для существующих объектов при задании свойства возникнет ошибка.  
 >   
->  При создании **таблицы** объекты, существование соответствующего значения по умолчанию необязательное свойство не гарантирует, что поставщик поддерживает свойство. Дополнительные сведения о свойствах используемый поставщик поддерживает см. в документации поставщика.  
+>  При создании объектов **таблицы** существование соответствующего значения по умолчанию для необязательного свойства не гарантирует, что поставщик поддерживает свойство. Дополнительные сведения о свойствах, поддерживаемых поставщиком, см. в документации поставщика.  
   
- Этот раздел содержит следующие подразделы.  
+ Этот раздел содержит следующий раздел.  
   
 -   [Свойства, методы и события объекта Table](../../../ado/reference/adox-api/table-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
- [Пример свойства ActiveConnection объекта Catalog (Visual Basic)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
- [Столбцов и таблиц методов append для коллекций, пример свойства Name (Visual Basic)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
- [Подключение примеры метода Close, таблица тип свойства (Visual Basic)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
- [Append коллекции Keys метод, тип ключа, RelatedColumn, RelatedTable и UpdateRule свойства (Visual Basic)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+## <a name="see-also"></a>См. также:  
+ [Пример свойства ActiveConnection каталога (Visual Basic)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
+ [Методы добавления столбцов и таблиц, пример свойства Name (Visual Basic)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
+ [Пример метода Close соединения, свойство типа таблицы (Visual Basic)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
+ [Пример свойств для добавления ключей, типа ключа, RelatedColumn, RelatedTable и UpdateRule (Visual Basic)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Пример свойства ParentCatalog (Visual Basic)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
  [Коллекция Columns (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Коллекция indexes (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)   

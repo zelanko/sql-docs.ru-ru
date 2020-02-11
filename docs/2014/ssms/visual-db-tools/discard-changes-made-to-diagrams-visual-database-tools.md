@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a2f439c1d3350a30f1bdd8fe8c3fe917686d2401
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63125967"
 ---
 # <a name="discard-changes-made-to-diagrams-visual-database-tools"></a>Отмена изменений, внесенных в диаграммы (визуальные инструменты для баз данных)
@@ -33,8 +33,8 @@ ms.locfileid: "63125967"
     > [!CAUTION]  
     >  Если открыты другие диаграммы базы данных или окна проектирования таблиц, связанные с этой базой данных, закройте их (также без сохранения изменений).  
   
-## <a name="see-also"></a>См. также  
- [Работа с диаграммами базы данных &#40;визуальных инструментах баз данных&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>См. также:  
+ [Работа с диаграммами баз данных &#40;визуальных инструментов для баз данных&#41;](visual-database-tools.md)   
  [Работа с таблицами в диаграммах базы данных (визуальные инструменты для баз данных)](work-with-tables-in-database-diagram-visual-database-tools.md)  
   
   

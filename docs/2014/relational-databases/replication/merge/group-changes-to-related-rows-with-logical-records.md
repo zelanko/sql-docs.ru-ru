@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b05d3b02c4fcd0d90b0b96a1a32c792537818e1e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62999871"
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>Группирование изменений в связанных строках с помощью логических записей
@@ -79,11 +79,11 @@ ms.locfileid: "62999871"
   
 -   Логические записи не могут ссылаться на столбцы, имеющие любой из следующих типов данных:  
   
-    -   `varchar(max)` и `nvarchar(max)`  
+    -   `varchar(max)`перетаскивани`nvarchar(max)`  
   
     -   `varbinary(max)`  
   
-    -   `text` и `ntext`  
+    -   `text`перетаскивани`ntext`  
   
     -   `image`  
   
@@ -127,7 +127,7 @@ ms.locfileid: "62999871"
   
      Например, база данных, отслеживающая классы и студентов, могла бы иметь структуру, похожую на следующую:  
   
-     ![Дочерняя таблица с несколькими родительскими таблицами](../media/logical-records-03.gif "Дочерняя таблица с несколькими родительскими таблицами")  
+     ![Дочерняя таблица с несколькими родительскими](../media/logical-records-03.gif "Дочерняя таблица с несколькими родительскими")  
   
      Нельзя использовать логическую запись для представления трех таблиц в этом отношении, потому что строки в **ClassMembers** не связаны с одиночной строкой первичного ключа. Таблицы **Classes** и **ClassMembers** могут по-прежнему образовывать логическую запись, так же как таблицы **ClassMembers** и **Students**, но не все три таблицы.  
   
@@ -140,7 +140,7 @@ ms.locfileid: "62999871"
   
  Если используются логические записи, агент слияния должен обрабатывать все изменения для каждой логической записи совместно. Это влияет на время, которое требуется агенту слияния для репликации строк. Кроме того, так как агент открывает отдельную транзакцию для каждой логической записи, потребность в блокировках может увеличиться.  
   
-## <a name="see-also"></a>См. также  
- [Article Options for Merge Replication](article-options-for-merge-replication.md)  
+## <a name="see-also"></a>См. также:  
+ [Параметры статьи для репликации слиянием](article-options-for-merge-replication.md)  
   
   

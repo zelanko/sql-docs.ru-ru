@@ -1,5 +1,5 @@
 ---
-title: Столбцов и таблиц методов append для коллекций, назовите пример свойства (Visual Basic) | Документация Майкрософт
+title: Методы добавления столбцов и таблиц, пример свойства Name (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 678e5546-df5d-4cd0-bfe9-6cf13cb385c0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 898efdf4fe33ec3ce08028bd00b5654947048255
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966861"
 ---
 # <a name="columns-and-tables-append-methods-name-property-example-vb"></a>Примеры методов Append для коллекций Columns и Tables, а также пример свойства Name (Visual Basic)
-Ниже показано, как создать новую таблицу.  
+В следующем коде показано, как создать новую таблицу.  
   
 ```  
 ' BeginCreateTableVB  
@@ -66,9 +66,9 @@ End Sub
 ' EndCreateTableVB  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Append-метод (коллекция Columns ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append-метод (коллекция Tables ADOX)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
+## <a name="see-also"></a>См. также:  
+ [Метод Append (столбцы ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
+ [Метод Append (таблицы ADOX)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
  [Объект Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [Коллекция Columns (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Свойство Name (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)   

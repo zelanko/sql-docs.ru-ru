@@ -1,5 +1,5 @@
 ---
-title: Свойство FormattedValue (многомерные Объекты ADO) | Документация Майкрософт
+title: Свойство FormattedValue (объекты данных ActiveX (MD)) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,24 +17,24 @@ ms.assetid: 5c06451e-06ec-4da6-9a87-2d043469248a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c2c48630a8d8cafc96f192e07d41a6245f86e60c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938428"
 ---
 # <a name="formattedvalue-property-ado-md"></a>Свойство FormattedValue (многомерные объекты ADO)
-Указывает, форматированный вывод [ячейки](../../../ado/reference/ado-md-api/cell-object-ado-md.md) значение.  
+Указывает отформатированное отображение значения [ячейки](../../../ado/reference/ado-md-api/cell-object-ado-md.md) .  
   
 ## <a name="return-values"></a>Возвращаемые значения  
- Возвращает **строка** и доступен только для чтения.  
+ Возвращает **строку** и доступна только для чтения.  
   
-## <a name="remarks"></a>Примечания  
- Используйте **FormattedValue** свойство, чтобы получить значение форматированного отображения [значение](../../../ado/reference/ado-md-api/value-property-ado-md.md) свойство [ячейки](../../../ado/reference/ado-md-api/cell-object-ado-md.md) объекта. Например, если значение ячейки было 1056.87, и это значение представлено суммы в долларах **FormattedValue** бы 1,056.87 долл. США.  
+## <a name="remarks"></a>Remarks  
+ Используйте свойство **FormattedValue** для получения форматированного отображаемого значения свойства [value](../../../ado/reference/ado-md-api/value-property-ado-md.md) объекта [ячейки](../../../ado/reference/ado-md-api/cell-object-ado-md.md) . Например, если значение ячейки 1056,87, а это значение представляло собой сумму в долларах, **FormattedValue** будет $1 056,87.  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  [Объект Cell (многомерные объекты ADO)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)  
   
-## <a name="see-also"></a>См. также  
- [Пример объекта Cellset (Visual Basic)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
+## <a name="see-also"></a>См. также:  
+ [Пример набора ячеек (Visual Basic)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [Свойство Value (многомерные объекты ADO)](../../../ado/reference/ado-md-api/value-property-ado-md.md)

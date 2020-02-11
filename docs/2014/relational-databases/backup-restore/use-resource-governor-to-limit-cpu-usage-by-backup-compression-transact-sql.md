@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5fcd3d72ef3e716cd640d35505b82df459eb37b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62920791"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>Использование регулятора ресурсов для ограничения загрузки ЦП при сжатии резервной копии (компонент Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "62920791"
 ##  <a name="setup_login_and_user"></a> Создание учетной записи и пользователя для операций с низким приоритетом  
  Для сценария в этом разделе требуется низкоприоритетное имя входа в систему [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и пользователь. Имя пользователя будет использоваться для классификации сеансов, запущенных в процессе входа, и для направления их в группу рабочей нагрузки регулятора ресурсов, которая ограничивает загрузку ЦП.  
   
- Следующая процедура описывает шаги по настройке имени входа и пользователя для этой цели, за которым следует [!INCLUDE[tsql](../../includes/tsql-md.md)] примере «пример а. Настройка имени входа и пользователя (Transact-SQL)».  
+ Ниже описываются этапы настройки имени входа и пользователя для этой цели, за которыми следует пример на языке [!INCLUDE[tsql](../../includes/tsql-md.md)]: "Пример А. Настройка имени входа и пользователя (Transact-SQL)".  
   
 ### <a name="to-set-up-a-login-and-database-user-for-classifying-sessions"></a>Настройка имени входа и пользователя базы данных для классификации сеансов  
   
@@ -72,11 +72,11 @@ ms.locfileid: "62920791"
   
      **Добавление пользователя к предопределенной роли базы данных**  
   
-    -   [Хранимая процедура sp_addrolemember (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql)  
+    -   [sp_addrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql)  
   
      Дополнительные сведения см. в разделе [GRANT, предоставление разрешений на участника базы данных (Transact-SQL)](/sql/t-sql/statements/grant-database-principal-permissions-transact-sql).  
   
-### <a name="example-a-setting-up-a-login-and-user-transact-sql"></a>Пример а. Настройка имени входа и пользователя (Transact-SQL)  
+### <a name="example-a-setting-up-a-login-and-user-transact-sql"></a>Пример А. Настройка имени входа и пользователя (Transact-SQL)  
  Следующий пример касается только случая, когда выбрано создание нового имени входа и пользователя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для низкоприоритетных резервных копий. В качестве альтернативы можно использовать существующие имя входа и пользователя, если таковой существует.  
   
 > [!IMPORTANT]  
@@ -183,7 +183,7 @@ GO
     ALTER RESOURCE GOVERNOR RECONFIGURE;  
     ```  
   
-### <a name="example-b-configuring-resource-governor-transact-sql"></a>Пример б Настройка регулятора ресурсов (Transact-SQL)  
+### <a name="example-b-configuring-resource-governor-transact-sql"></a>Пример Б. Настройка Resource Governor (Transact-SQL)  
  В нижеприведенном примере в одной транзакции выполняются следующие шаги.  
   
 1.  Создание пула ресурсов `pMAX_CPU_PERCENT_20` .  
@@ -197,7 +197,7 @@ GO
  После того как транзакция зафиксирована, применяются изменения в конфигурации, запрошенные в инструкциях ALTER WORKLOAD GROUP или ALTER RESOURCE POOL.  
   
 > [!IMPORTANT]  
->  В следующем примере используется образец имени пользователя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] созданный в разделе «Пример а. Настройка имени входа и пользователя (Transact-SQL)", — *domain_name*`\MAX_CPU`. Замените его именем пользователя, соответствующего имени входа, которое планируется использовать для создания низкоприоритетных сжатых резервных копий.  
+>  В следующем примере используется образец имени пользователя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], созданный в разделе "Пример А. Настройка имени входа и пользователя (Transact-SQL)", — *domain_name*`\MAX_CPU`. Замените его именем пользователя, соответствующего имени входа, которое планируется использовать для создания низкоприоритетных сжатых резервных копий.  
   
 ```sql  
 -- Configure Resource Governor.  
@@ -259,9 +259,9 @@ GO
  [&#91;В начало&#93;](#Top)  
   
 ##  <a name="creating_compressed_backup"></a> Сжатие резервных копий в сеансе с ограничением доступа к ЦП  
- Чтобы создать сжатую резервную копию в сеансе с ограниченной максимальной загрузкой ЦП, войдите в систему как пользователь, указанный в функции-классификаторе. В команде резервного копирования укажите предложение WITH COMPRESSION ([!INCLUDE[tsql](../../includes/tsql-md.md)]) или выберите вариант **Сжимать резервные копии** ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]). Сведения о создании сжатой резервной копии базы данных см. в разделе [Создание полной резервной копии базы данных (SQL Server)](create-a-full-database-backup-sql-server.md).  
+ Чтобы создать сжатую резервную копию в сеансе с ограниченной максимальной загрузкой ЦП, войдите в систему как пользователь, указанный в функции-классификаторе. В команде Backup укажите с помощью СЖАТИЯ ([!INCLUDE[tsql](../../includes/tsql-md.md)]) или выберите **Сжимать резервные копии** ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]). Сведения о создании сжатой резервной копии базы данных см. в разделе [Создание полной резервной копии базы данных (SQL Server)](create-a-full-database-backup-sql-server.md).  
   
-### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>Пример в. Создание сжатой резервной копии (Transact-SQL)  
+### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>Пример В. Создание сжатой резервной копии (Transact-SQL)  
  В следующем примере [BACKUP](/sql/t-sql/statements/backup-transact-sql) создается сжатая полная резервная копия базы данных [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] в чистом форматированном файле резервной копии `Z:\SQLServerBackups\AdvWorksData.bak`.  
   
 ```sql  
@@ -277,8 +277,8 @@ GO
   
  [&#91;В начало&#93;](#Top)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание и проверка определяемой пользователем функции-классификатора](../resource-governor/create-and-test-a-classifier-user-defined-function.md)   
- [Resource Governor](../resource-governor/resource-governor.md)  
+ [Регулятор ресурсов](../resource-governor/resource-governor.md)  
   
   

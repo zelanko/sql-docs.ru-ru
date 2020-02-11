@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cb523d8e9b1dbbb136475d0aa739491935f755ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62922164"
 ---
 # <a name="complete-database-restores-full-recovery-model"></a>Выполнение полного восстановления базы данных (модель полного восстановления)
@@ -32,20 +32,20 @@ ms.locfileid: "62922164"
  При восстановлении базы данных, в особенности при использовании модели полного восстановления или модели восстановления с неполным протоколированием, следует использовать одну последовательность восстановления. *Последовательность восстановления* состоит из одной или нескольких операций восстановления, которые выполняют перемещение данных в одном или нескольких этапах восстановления.  
   
 > [!IMPORTANT]  
->  Не рекомендуется подключать или восстанавливать базы данных, полученные из неизвестных или ненадежных источников. В этих базах данных может содержаться вредоносный код, вызывающий выполнение непредусмотренных инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] или появление ошибок путем изменения схемы или физической структуры базы данных. Перед тем как использовать базу данных, полученную из неизвестного или ненадежного источника, выполните на тестовом сервере инструкцию [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) для этой базы данных, а также изучите исходный код в базе данных, например хранимые процедуры и другой пользовательский код.  
+>  Не рекомендуется подключать или восстанавливать базы данных, полученные из неизвестных или ненадежных источников. В этих базах данных может содержаться вредоносный код, вызывающий выполнение непредусмотренных инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] или появление ошибок путем изменения схемы или физической структуры базы данных. Прежде чем использовать базу данных из неизвестного или ненадежного источника, выполните [инструкцию DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) в базе данных на непроизводительном сервере, а также изучите код, например хранимые процедуры или другой пользовательский код, в базе данных.  
   
- **В этом разделе.**  
+ **В этом разделе:**  
   
 -   [Восстановление базы данных до точки сбоя](#PointOfFailure)  
   
--   [Восстановление базы данных на момент времени в пределах резервной копии журнала](#PointWithinBackup)  
+-   [Восстановление базы данных до точки в резервной копии журнала](#PointWithinBackup)  
   
 -   [Связанные задачи](#RelatedTasks)  
   
 > [!NOTE]  
 >  Сведения о поддержке резервных копий более ранних версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]см. в подразделе "Поддержка совместимости" раздела [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql).  
   
-##  <a name="PointOfFailure"></a> Восстановление базы данных до точки сбоя  
+##  <a name="PointOfFailure"></a>Восстановление базы данных до точки сбоя  
  Обычно восстановление базы данных до точки сбоя включает следующие основные шаги:  
   
 1.  Произведите резервное копирование активного журнала транзакций (также известного как заключительный фрагмент журнала). На этом шаге создается резервная копия заключительного фрагмента журнала. Если активный журнал транзакций недоступен, все транзакции этой части журнала будут потеряны.  
@@ -67,13 +67,13 @@ ms.locfileid: "62922164"
   
  На следующем рисунке показана эта последовательность восстановления. После сбоя (1) создается резервная копия заключительного фрагмента журнала (2). Затем база данных восстанавливается до точки сбоя. Это включает восстановление резервной копии базы данных, последующей разностной резервной копии и всех резервных копий журналов, сохраненных после разностной резервной копии, в том числе резервной копии заключительного фрагмента журнала.  
   
- ![Полное восстановление базы данных на момент сбоя](../../database-engine/media/bnrr-rmfull1-db-failure-pt.gif "Полное восстановление базы данных на момент сбоя")  
+ ![Полное восстановление базы данных до момента сбоя](../../database-engine/media/bnrr-rmfull1-db-failure-pt.gif "Полное восстановление базы данных на момент сбоя")  
   
 > [!NOTE]  
 >  Если база данных восстанавливается на другой экземпляр сервера, см. раздел [Копирование баз данных путем создания и восстановления резервных копий](../databases/copy-databases-with-backup-and-restore.md).  
   
-###  <a name="TsqlSyntax"></a> Базовый синтаксис инструкции Transact-SQL RESTORE  
- Базовый синтаксис инструкции [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] для последовательности восстановления в предыдущей иллюстрации выглядит следующим образом:  
+###  <a name="TsqlSyntax"></a>Базовый синтаксис инструкции Transact-SQL RESTORE  
+ Базовый синтаксис инструкции [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) [!INCLUDE[tsql](../../includes/tsql-md.md)] для последовательности восстановления на предыдущем рисунке выглядит следующим образом:  
   
 1.  RESTORE DATABASE *база_данных* FROM *full database backup* WITH NORECOVERY;  
   
@@ -85,7 +85,7 @@ ms.locfileid: "62922164"
   
 4.  RESTORE DATABASE *база_данных* WITH RECOVERY;  
   
-###  <a name="ExampleToPoFTsql"></a> Пример. Восстановление до точки сбоя (Transact-SQL)  
+###  <a name="ExampleToPoFTsql"></a>Пример. Восстановление до точки сбоя (Transact-SQL)  
  В следующем примере [!INCLUDE[tsql](../../includes/tsql-md.md)] показаны важные параметры в последовательности восстановления для восстановления базы данных до точки сбоя. На этом шаге создается резервная копия заключительного фрагмента журнала базы данных. Далее в примере восстанавливается полная резервная копия базы данных и резервная копия журнала, а затем восстанавливается резервная копия заключительного фрагмента журнала. В этом примере показан отдельный последний шаг восстановления базы данных.  
   
 > [!NOTE]  
@@ -121,7 +121,7 @@ RESTORE DATABASE AdventureWorks2012 WITH RECOVERY;
 GO  
 ```  
   
-##  <a name="PointWithinBackup"></a> Восстановление базы данных на момент времени в пределах резервной копии журнала  
+##  <a name="PointWithinBackup"></a>Восстановление базы данных до точки в резервной копии журнала  
  При работе в режиме полного восстановления можно провести полное восстановление базы данных до состояния на момент времени, до помеченной транзакции или до номера LSN в резервной копии журнала. Однако в модели восстановления с неполным протоколированием, если в резервной копии журнала содержатся изменения с неполным протоколированием, восстановление до момента времени невозможно.  
   
 ### <a name="sample-point-in-time-restore-scenarios"></a>Образцы сценариев восстановления на определенный момент времени  
@@ -153,36 +153,36 @@ GO
   
 -   [Восстановление резервной копии базы данных &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
   
--   [Восстановление базы данных в новом расположении (SQL Server)](restore-a-database-to-a-new-location-sql-server.md)  
+-   [Восстановление базы данных в новое расположение &#40;SQL Server&#41;](restore-a-database-to-a-new-location-sql-server.md)  
   
  **Восстановление разностной резервной копии базы данных**  
   
--   [Восстановление разностной резервной копии базы данных (SQL Server)](restore-a-differential-database-backup-sql-server.md)  
+-   [Восстановление разностной резервной копии базы данных &#40;SQL Server&#41;](restore-a-differential-database-backup-sql-server.md)  
   
  **Восстановление резервной копии журнала транзакций**  
   
--   [Восстановление резервной копии журнала транзакций (SQL Server)](restore-a-transaction-log-backup-sql-server.md)  
+-   [Восстановление резервной копии журнала транзакций &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)  
   
- **Восстановление резервной копии с помощью управляющих объектов SQL Server (SMO)**  
+ **Восстановление резервной копии с помощью управляющие объекты SQL Server (SMO)**  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlRestore%2A>  
   
  **Восстановление базы данных до точки в резервной копии журнала**  
   
--   [Восстановление базы данных SQL Server до определенного момента времени (модель полного восстановления)](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
+-   [Восстановление SQL Server базы данных на момент времени &#40;модель полного восстановления&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
 -   [Восстановление связанных баз данных, которые содержат помеченную транзакцию](recovery-of-related-databases-that-contain-marked-transaction.md)  
   
--   [Восстановление до номера LSN (SQL Server)](recover-to-a-log-sequence-number-sql-server.md)  
+-   [Восстановление до регистрационного номера в журнале &#40;SQL Server&#41;](recover-to-a-log-sequence-number-sql-server.md)  
   
-## <a name="see-also"></a>См. также  
- [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql)   
- [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
- [Применение резервных копий журналов транзакций (SQL Server)](transaction-log-backups-sql-server.md)   
- [sp_addumpdevice (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
- [Полные резервные копии баз данных (SQL Server)](full-database-backups-sql-server.md)   
- [Разностные резервные копии (SQL Server)](differential-backups-sql-server.md)   
- [Общие сведения о резервном копировании (SQL Server)](backup-overview-sql-server.md)   
- [Обзор процессов восстановления (SQL Server)](restore-and-recovery-overview-sql-server.md)  
+## <a name="see-also"></a>См. также:  
+ [Восстановление &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
+ [&#41;BACKUP &#40;Transact-SQL](/sql/t-sql/statements/backup-transact-sql)   
+ [Применение резервных копий журналов транзакций &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
+ [sp_addumpdevice &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
+ [&#40;SQL Server полного резервного копирования базы данных&#41;](full-database-backups-sql-server.md)   
+ [Разностные резервные копии &#40;SQL Server&#41;](differential-backups-sql-server.md)   
+ [Общие сведения о резервном копировании &#40;SQL Server&#41;](backup-overview-sql-server.md)   
+ [Обзор восстановления и восстановления &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)  
   
   

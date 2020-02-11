@@ -15,17 +15,17 @@ ms.assetid: b35d2f4a-449c-4170-aab6-9ff88c890043
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1f097d66259e51e2883dd350a33f7d7ff6a6bbba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963988"
 ---
 # <a name="internettimeout-property-example-vb"></a>Пример свойства InternetTimeout (Visual Basic)
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- В этом примере показано [InternetTimeout](../../../ado/reference/rds-api/internettimeout-property-rds.md) свойство, которое существует на [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) и [DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) объектов. В этом примере используется **DataControl** и устанавливает время ожидания до 20 секунд.  
+ В этом примере демонстрируется свойство [InternetTimeout](../../../ado/reference/rds-api/internettimeout-property-rds.md) , которое существует в объектах « [элемент управления](../../../ado/reference/rds-api/datacontrol-object-rds.md) данным» и « [пространство](../../../ado/reference/rds-api/dataspace-object-rds.md) ». В этом примере используется объект **элемента управления** DataObject и устанавливается время ожидания равным 20 секундам.  
   
 ```  
 'BeginInternetTimeoutVB  
@@ -75,9 +75,9 @@ End Sub
 'EndInternetTimeoutVB  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Объект DataControl (служба удаленных рабочих СТОЛОВ)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [Объект DataSpace (служба удаленных рабочих СТОЛОВ)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
+## <a name="see-also"></a>См. также:  
+ [Объект элемента управления (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
+ [Объект Space (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
  [Свойство InternetTimeout (служба удаленных рабочих столов)](../../../ado/reference/rds-api/internettimeout-property-rds.md)
 
 

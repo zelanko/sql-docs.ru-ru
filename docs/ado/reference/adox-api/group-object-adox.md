@@ -1,5 +1,5 @@
 ---
-title: Сгруппировать объект (ADOX) | Документация Майкрософт
+title: Объект Group (ADOX) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,32 +16,32 @@ ms.assetid: 55ef0ade-68ea-4da5-8aa5-4cd27d1f6d1e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b4b3de5f445ddd09bf7d069b0b93d82c6f8de978
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966210"
 ---
 # <a name="group-object-adox"></a>Объект Group (ADOX)
-Представляет учетную запись группы, имеющую разрешения на доступ в рамках защищенной базы данных.  
+Представляет учетную запись группы, имеющую разрешения на доступ в защищенной базе данных.  
   
-## <a name="remarks"></a>Примечания  
- [Группы](../../../ado/reference/adox-api/groups-collection-adox.md) коллекцию [каталога](../../../ado/reference/adox-api/catalog-object-adox.md) представляет учетные записи групп каталога. **Группы** коллекции для [пользователя](../../../ado/reference/adox-api/user-object-adox.md) представляет только группы, к которой принадлежит пользователь.  
+## <a name="remarks"></a>Remarks  
+ Коллекция [Groups](../../../ado/reference/adox-api/groups-collection-adox.md) [каталога](../../../ado/reference/adox-api/catalog-object-adox.md) представляет все учетные записи групп каталога. Коллекция **Groups** для [пользователя](../../../ado/reference/adox-api/user-object-adox.md) представляет только группу, к которой принадлежит пользователь.  
   
- С помощью свойств, коллекций и методы **группы** объекта, вы можете:  
+ С помощью свойств, коллекций и методов объекта **Group** можно:  
   
--   Идентифицировать группу с [имя](../../../ado/reference/adox-api/name-property-adox.md) свойство.  
+-   Найдите группу с помощью свойства [Name](../../../ado/reference/adox-api/name-property-adox.md) .  
   
--   Определить, имеет ли чтение группы, записи или удаления разрешений с помощью [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) и [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) методы.  
+-   Определите, имеет ли группа разрешения на чтение, запись или удаление [с помощью методов](../../../ado/reference/adox-api/getpermissions-method-adox.md) [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) и.  
   
--   Доступ к учетным записям пользователя, имеющих членства в группе с [пользователей](../../../ado/reference/adox-api/users-collection-adox.md) коллекции.  
+-   Доступ к учетным записям пользователей, имеющим членство в группе, с помощью коллекции [пользователей](../../../ado/reference/adox-api/users-collection-adox.md) .  
   
--   Доступ к свойствам поставщика с [свойства](../../../ado/reference/ado-api/properties-collection-ado.md) коллекции.  
+-   Доступ к свойствам, зависящим от поставщика, с коллекцией [свойств](../../../ado/reference/ado-api/properties-collection-ado.md) .  
   
- Этот раздел содержит следующие подразделы.  
+ Этот раздел содержит следующий раздел.  
   
 -   [Свойства, методы и события объекта Group](../../../ado/reference/adox-api/group-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Коллекция Groups (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)   
  [Коллекция Users (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)

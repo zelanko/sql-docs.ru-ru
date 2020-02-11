@@ -16,17 +16,17 @@ ms.assetid: 3eebb485-8a53-4a79-82a9-57b8de9f8e84
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 297dd5ca109e7b35d8d74d5daf1f8b1c7fd06703
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68126944"
 ---
 # <a name="localdbcreateinstance-function"></a>Функция LocalDBCreateInstance
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Создает новый экземпляр SQL Server Express LocalDB.  
   
- **Файл заголовка:** sqlncli.h  
+ **Заголовочный файл:** sqlncli. h  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,10 +39,10 @@ HRESULT LocalDBCreateInstance(
 ```  
   
 ## <a name="parameters"></a>Параметры  
- *wszVersion*  
+ *всзверсион*  
  [Вход] Версия LocalDB, например 11.0 или 11.0.1094.2.  
   
- *pInstanceName*  
+ *пинстанценаме*  
  [Вход] Имя создаваемого экземпляра LocalDB.  
   
  *dwFlags*  
@@ -97,14 +97,14 @@ HRESULT LocalDBCreateInstance(
  [LOCALDB_ERROR_INTERNAL_ERROR](../../relational-databases/express-localdb-error-messages/localdb-error-internal-error.md)  
  Произошла непредвиденная ошибка. Подробные сведения см. в журнале событий.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Если существует полностью функциональный экземпляр LocalDB с указанным именем и его версия равна или выше запрошенной, возвращается результат S_OK.  
   
  В случае, если существующий экземпляр поврежден, последующие вызовы метода API **LocalDBCreateInstance** завершатся с ошибкой. Поврежденный экземпляр необходимо исправить вручную или явно удалить, чтобы его можно было использовать снова.  
   
  Образец кода, использующего API LocalDB, см. в разделе [SQL Server Express LocalDB Reference](../../relational-databases/sql-server-express-localdb-reference.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Заголовок и сведения о версии SQL Server Express LocalDB](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  
   
   

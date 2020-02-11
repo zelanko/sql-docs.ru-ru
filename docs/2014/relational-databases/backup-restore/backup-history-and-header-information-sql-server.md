@@ -34,10 +34,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b1ab8545714e84c8ecf8ee6c9cb89b7b8c0d3831
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62922246"
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>Журнал и сведения о заголовке резервной копии (SQL Server)
@@ -67,7 +67,7 @@ ms.locfileid: "62922246"
 ##  <a name="BnRHistoryTables"></a> Таблицы журналов резервного копирования и восстановления  
  В этом разделе рассказывается о журнальных таблицах, в которых в системной базе данных **msdb** хранятся метаданные резервного копирования и восстановления.  
   
-|Таблица журнала|Описание|  
+|Таблица журнала|Description|  
 |-------------------|-----------------|  
 |[backupfile;](/sql/relational-databases/system-tables/backupfile-transact-sql)|Содержит по одной строке для каждого файла данных или журнала, подвергаемого резервному копированию.|  
 |[backupfilegroup](/sql/relational-databases/system-tables/backupfilegroup-transact-sql)|Содержит по одной строке для каждой файловой группы в резервном наборе данных.|  
@@ -87,10 +87,10 @@ ms.locfileid: "62922246"
 > [!IMPORTANT]  
 >  Инструкциям Transact-SQL RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY и RESTORE VERIFYONLY требуется разрешение CREATE DATABASE. Тем самым обеспечивается более надежная защита файлов резервных копий и данных, чем в предыдущих версиях. Дополнительные сведения об этом разрешении см. в разделе[ Разрешения базы данных GRANT (Transact-SQL)](/sql/t-sql/statements/grant-database-permissions-transact-sql).  
   
-|Информационная инструкция|Таблица журнала резервного копирования|Описание|  
+|Информационная инструкция|Таблица журнала резервного копирования|Description|  
 |---------------------------|--------------------------|-----------------|  
 |[RESTORE FILELISTONLY](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)|[backupfile;](/sql/relational-databases/system-tables/backupfile-transact-sql)|Возвращает результирующий набор со списком файлов базы данных и журнала, которые содержит указанный резервный набор данных.<br /><br /> Дополнительные сведения см. далее в разделе «Составление списка файлов базы данных и журналов транзакций».|  
-|[RESTORE HEADERONLY](/sql/t-sql/statements/restore-statements-headeronly-transact-sql)|[backupset;](/sql/relational-databases/system-tables/backupset-transact-sql)|Извлекает все данные заголовка резервной копии для всех резервных наборов данных в определенном устройстве резервного копирования. Результатом выполнения RESTORE HEADERONLY является результирующий набор.<br /><br /> Дополнительные сведения см. далее в разделе «Просмотр данных заголовка резервной копии».|  
+|[инструкция RESTORE HEADERONLY](/sql/t-sql/statements/restore-statements-headeronly-transact-sql)|[backupset;](/sql/relational-databases/system-tables/backupset-transact-sql)|Извлекает все данные заголовка резервной копии для всех резервных наборов данных в определенном устройстве резервного копирования. Результатом выполнения RESTORE HEADERONLY является результирующий набор.<br /><br /> Дополнительные сведения см. далее в разделе «Просмотр данных заголовка резервной копии».|  
 |[RESTORE LABELONLY](/sql/t-sql/statements/restore-statements-labelonly-transact-sql)|[backupmediaset;](/sql/relational-databases/system-tables/backupmediaset-transact-sql)|Возвращает результирующий набор, который содержит сведения о резервном носителе в указанном устройстве резервного копирования.<br /><br /> Дополнительные сведения см. далее в разделе «Просмотр данных заголовка носителя».|  
   
 ##  <a name="ListDbTlogFiles"></a> Файлы базы данных и журнала транзакций  
@@ -217,7 +217,7 @@ ms.locfileid: "62922246"
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify%2A> (SMO)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
  [Наборы носителей, семейства носителей и резервные наборы данных (SQL Server)](media-sets-media-families-and-backup-sets-sql-server.md)   
  [Устройства резервного копирования (SQL Server)](backup-devices-sql-server.md)   

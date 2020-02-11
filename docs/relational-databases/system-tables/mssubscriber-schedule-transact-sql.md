@@ -18,29 +18,29 @@ ms.assetid: ff428306-0ef4-49a3-b536-07ccdf6e2196
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 04ad122f6fc999aa285513d41e71bfc347dbfb82
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68139802"
 ---
-# <a name="mssubscriberschedule-transact-sql"></a>MSsubscriber_schedule (Transact-SQL)
+# <a name="mssubscriber_schedule-transact-sql"></a>MSsubscriber_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSsubscriber_schedule** таблица содержит слияния по умолчанию и расписаний синхронизации транзакций для каждой пары издатель-подписчик. Эта таблица хранится в базе данных распространителя.  
+  В **MSsubscriber_schedule** таблице содержатся расписания слияния и синхронизации транзакций по умолчанию для каждой пары "издатель — подписчик". Эта таблица хранится в базе данных распространителя.  
   
 > [!NOTE]
->  Эта системная таблица устарела и поддерживается для поддержки более ранних версиях [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+>  Эта системная таблица устарела и поддерживается для поддержки более ранних версий [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|**издатель**|**sysname**|Имя издателя.|  
-|**подписчик**|**sysname**|Имя подписчика.|  
+|**издателя**|**имеет sysname**|Имя издателя.|  
+|**абонент**|**имеет sysname**|Имя подписчика.|  
 |**agent_type**|**smallint**|Тип агента:<br /><br /> 0 = агент распространителя;<br /><br /> 1 = агент слияния.|  
-|**frequency_type**|**int**|Частота запуска агента распространителя по расписанию:<br /><br /> **1** = один раз.<br /><br /> **2** = по запросу.<br /><br /> **4** = ежедневно.<br /><br /> **8** = еженедельно.<br /><br /> **16** = ежемесячно.<br /><br /> **32** = ежемесячное расписание.<br /><br /> **64** = автозапуск.<br /><br /> **128** = повторять.|  
-|**frequency_interval**|**int**|Значение, которое применяется к частоте, задаваемой аргументом **frequency_type**.|  
-|**frequency_relative_interval**|**int**|Период агента распространителя:<br /><br /> **1** = первый.<br /><br /> **2** = секунда.<br /><br /> **4** = третий.<br /><br /> **8** = четвертый.<br /><br /> **16** = последний.|  
-|**frequency_recurrence_factor**|**int**|Коэффициент повторения, используемый с **frequency_type**.|  
+|**frequency_type**|**int**|Частота запуска агента распространителя по расписанию:<br /><br /> **1** = один раз.<br /><br /> **2** = по запросу.<br /><br /> **4** = ежедневное.<br /><br /> **8** = еженедельно.<br /><br /> **16** = ежемесячно.<br /><br /> **32** = ежемесячное относительное.<br /><br /> **64** = автозапуск.<br /><br /> **128** = повторяющаяся.|  
+|**frequency_interval**|**int**|Значение, применяемое к частоте, установленной **frequency_type**.|  
+|**frequency_relative_interval**|**int**|Период агента распространителя:<br /><br /> **1** = сначала.<br /><br /> **2** = секунда.<br /><br /> **4** = третий.<br /><br /> **8** = четвертый.<br /><br /> **16** = последняя.|  
+|**frequency_recurrence_factor**|**int**|Коэффициент повторения, используемый **frequency_type**.|  
 |**frequency_subday**|**int**|Частота изменения расписания в течение заданного периода:<br /><br /> **1** = один раз.<br /><br /> **2** = секунда.<br /><br /> **4** = минута.<br /><br /> **8** = час.|  
 |**frequency_subday_interval**|**int**|Интервал для **frequency_subday**.|  
 |**active_start_time_of_day**|**int**|Время, когда запланировано первое выполнение агента распространителя, в формате ЧЧММСС.|  
@@ -48,8 +48,8 @@ ms.locfileid: "68139802"
 |**active_start_date**|**int**|Дата, когда запланировано первое выполнение агента распространителя, в формате ГГГГММДД.|  
 |**active_end_date**|**int**|Дата, когда будет прекращено выполнение агента распространителя по расписанию, в формате ГГГГММДД.|  
   
-## <a name="see-also"></a>См. также  
- [Таблицы репликации &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Представления репликации &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

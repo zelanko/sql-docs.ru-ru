@@ -16,21 +16,21 @@ ms.assetid: 300a702a-3544-48c5-b759-83b511fe97e0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fd677e29631e53eeb71c43e8174baff553defc85
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933247"
 ---
 # <a name="datasource-property-ado"></a>Свойство DataSource (ADO)
-Указывает объект, содержащий данные для представления в виде [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта.  
+Указывает объект, содержащий данные, которые должны быть представлены как объект [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) .  
   
-## <a name="remarks"></a>Примечания  
- Это свойство используется для создания элементов управления с привязкой данных в среде данных. Поддерживает среду данных наборами данных (источники данных), содержащий именованные объекты (члены данных), на которые будет представлена в виде **записей** объекта.  
+## <a name="remarks"></a>Remarks  
+ Это свойство используется для создания элементов управления с привязкой к данным в среде данных. Среда данных хранит коллекции данных (источники данных), содержащие именованные объекты (элементы данных), которые будут представлены в виде объекта **набора записей** .  
   
- [DataMember](../../../ado/reference/ado-api/datamember-property.md) и **DataSource** свойства должен использоваться совместно.  
+ Свойства [DataMember](../../../ado/reference/ado-api/datamember-property.md) и **DataSource** должны использоваться совместно.  
   
- Ссылка на объект должен реализовывать **IDataSource** интерфейс и может содержать **IRowset** интерфейс.  
+ Объект, на который указывает ссылка, должен реализовать интерфейс **IDataSource** и должен содержать интерфейс **IRowset** .  
   
 ## <a name="usage"></a>Использование  
   
@@ -40,8 +40,8 @@ rs.DataMember = "Command"     'Name of the rowset to bind to.
 Set rs.DataSource = myDE      'Name of the object containing an IRowset.  
 ```  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство DataMember](../../../ado/reference/ado-api/datamember-property.md)

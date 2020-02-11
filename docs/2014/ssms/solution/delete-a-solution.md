@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9a16d7565bb36eb7895db94da088927be7595f5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63043949"
 ---
 # <a name="delete-a-solution"></a>Удаление решения
@@ -37,8 +37,8 @@ ms.locfileid: "63043949"
   
 4.  В меню **Файл** выберите пункт **Удалить**.  
   
-## <a name="see-also"></a>См. также  
- [Обозреватель решений](solution-explorer.md)   
+## <a name="see-also"></a>См. также:  
+ [обозреватель решений](solution-explorer.md)   
  [Создание нового решения](create-a-new-solution.md)   
  [Создание проекта](create-a-project.md)   
  [Перемещение или удаление элемента или проекта](remove-or-delete-an-item-or-project.md)  

@@ -1,5 +1,5 @@
 ---
-title: Подключение закрывается, таблица примеры метода свойства Type (Visual Basic) | Документация Майкрософт
+title: Метод Close соединения, пример свойства типа таблицы (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: f88e7a3b-19ed-46e2-b2ce-3b611d9b8166
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4559a8d46852f37f2e828ce8f4abbd0e40845744
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966704"
 ---
 # <a name="connection-close-method-table-type-property-example-vb"></a>Примеры метода Close для объекта Connection и свойства Type для объекта Table (Visual Basic)
-Установка [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) свойства **Nothing** следует закрыть соединение с каталогом. Связанные коллекции будет пустым. Любые объекты, которые были созданы из объектов схемы в каталоге, окажутся потерянными. Свойства на те объекты, которые были кэшированы по-прежнему будут доступны, но попытка чтения свойства, требуется вызывать поставщик завершится ошибкой.  
+Если задать для свойства [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) значение **Nothing** , соединение с каталогом должно быть закрыто. Связанные коллекции будут пустыми. Все объекты, созданные из объектов схемы в каталоге, будут потеряны. Все свойства этих объектов, которые были кэшированы, будут по-прежнему доступны, но попытка чтения свойств, требующих вызова поставщика, завершится ошибкой.  
   
 ```  
 ' BeginCloseConnectionVB  
@@ -66,15 +66,15 @@ End Sub
 ' EndCloseConnectionVB  
 ```  
   
- Закрытие [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта, который был использован для открыть каталог должен быть тот же эффект, что параметр **ActiveConnection** свойства **ничего не**.  
+ Закрытие объекта [соединения](../../../ado/reference/ado-api/connection-object-ado.md) , который использовался для открытия каталога, должно иметь тот же результат, что и установка свойства **ActiveConnection** в значение **Nothing**.  
   
 ```  
 Attribute VB_Name = "Connection"  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Объект Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Объект каталога (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Объект Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [Коллекция Columns (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Объект Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   

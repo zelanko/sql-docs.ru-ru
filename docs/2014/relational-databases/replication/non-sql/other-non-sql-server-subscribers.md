@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 135d317d74a720d51c966ed92f1c305f8c04b838
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63021949"
 ---
 # <a name="other-non-sql-server-subscribers"></a>Подписчики, отличные от подписчиков SQL Server
-  Список подписчиков, не относящихся к[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и поддерживаемых [!INCLUDE[msCoName](../../../includes/msconame-md.md)], см. в разделе [Non-SQL Server Subscribers](non-sql-server-subscribers.md). В данном разделе содержатся сведения о требованиях к драйверам ODBC и поставщикам OLE DB.  
+  Список[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] подписчиков [!INCLUDE[msCoName](../../../includes/msconame-md.md)], отличных от, поддерживаемых, см. в разделе [подписчики, отличные от SQL Server](non-sql-server-subscribers.md). В данном разделе содержатся сведения о требованиях к драйверам ODBC и поставщикам OLE DB.  
   
 ## <a name="odbc-driver-requirements"></a>Требования к драйверам ODBC  
  Драйвер ODBC:  
   
--   Должен быть совместим с уровнем 1 ODBC.  
+-   Должен соответствовать уровню 1 ODBC.  
   
 -   Должен быть поточно-защищенным и предназначаться для процессорной архитектуры (Intel или Alpha) и платформы (32-разрядной или 64-разрядной), на которой выполняется распространитель [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -40,15 +40,15 @@ ms.locfileid: "63021949"
 ## <a name="replicating-using-ole-db-interfaces"></a>Репликация при помощи интерфейсов OLE DB  
  Поставщики OLE DB должны поддерживать эти объекты для репликации транзакций:  
   
--   объект**DataSource**  
+-   Объект **DataSource**  
   
--   объект**Session**  
+-   Объект **Session**  
   
--   объект**Command**  
+-   Объект **Command**  
   
--   объект**Rowset**  
+-   Объект **набора строк**  
   
--   объект**Error**  
+-   Объект **Error**  
   
 ### <a name="datasource-object-interfaces"></a>Интерфейсы объекта DataSource  
  Необходимы следующие интерфейсы для подключения к источнику данных:  
@@ -66,7 +66,7 @@ ms.locfileid: "63021949"
   
 -   **IDBCreateCommand**  
   
--   **ITransaction**  
+-   **Методы**  
   
 -   **ITransactionLocal**  
   
@@ -89,7 +89,7 @@ ms.locfileid: "63021949"
   
 -   **ICommandWithParameters**  
   
- **IAccessor** необходим для создания методов доступа к параметрам. Если поставщик поддерживает интерфейс **IColumnRowset**, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использует его, чтобы определить, является ли столбец столбцом идентификаторов.  
+ **IAccessor** необходим для создания методов доступа к параметрам. Если поставщик поддерживает **иколумнровсет**, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использует этот интерфейс для определения того, является ли столбец столбцом идентификаторов.  
   
 ### <a name="rowset-object-interfaces"></a>Интерфейсы объекта Rowset  
  Требуются следующие интерфейсы:  
@@ -100,7 +100,7 @@ ms.locfileid: "63021949"
   
 -   **IColumnsInfo**  
   
- Приложение должно открыть набор строк в реплицированной таблице, которая создается в базе данных подписки. Интерфейсы**IColumnsInfo** и **IAccessor** необходимы для доступа к данным в наборе строк.  
+ Приложение должно открыть набор строк в реплицированной таблице, которая создается в базе данных подписки. **IColumnsInfo** и **IAccessor** необходимы для доступа к данным в наборе строк.  
   
 ### <a name="error-object-interfaces"></a>Интерфейсы объекта Error  
  Используйте следующие интерфейсы для управления ошибками:  
@@ -113,7 +113,7 @@ ms.locfileid: "63021949"
   
  Дополнительные сведения о поставщике OLE DB см. в документации, поставляемой с используемым поставщиком OLE DB.  
   
-## <a name="see-also"></a>См. также  
- [Non-SQL Server Subscribers](non-sql-server-subscribers.md)  
+## <a name="see-also"></a>См. также:  
+ [Подписчики, не относящиеся к SQL Server](non-sql-server-subscribers.md)  
   
   

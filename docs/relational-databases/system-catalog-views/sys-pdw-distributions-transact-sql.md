@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_distributions (Transact-SQL) | Документация Майкрософт
+title: sys. pdw_distributions (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -13,25 +13,25 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 7deddb57cdc02410fe161728f45190492ac18a16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68127554"
 ---
-# <a name="syspdwdistributions-transact-sql"></a>sys.pdw_distributions (Transact-SQL)
+# <a name="syspdw_distributions-transact-sql"></a>sys. pdw_distributions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Содержит сведения о распределениях на устройстве. В ней перечислены одну строку для каждого устройства распространения.  
+  Содержит сведения о распределениях на устройстве. В нем отображается одна строка для каждого распределения устройства.  
   
-|Имя столбца|Тип данных|Описание|Диапазон|  
+|Имя столбца|Тип данных|Description|Диапазонный индекс|  
 |-----------------|---------------|-----------------|-----------|  
-|distribution_id|**int**|Уникальный числовой идентификатор, связанная с распределением.<br /><br /> Ключ для этого представления.|от 1 до количество вычислительных узлов в устройстве, умноженное на количество распределений на каждом вычислительном узле.|  
-|pdw_node_id|**int**|Идентификатор узла, в которой находится этот дистрибутив.|См. в разделе pdw_node_id в [sys.dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
-|name|**nvarchar(32)**|Строковый идентификатор, связанная с распределением, используемый в качестве суффикса для распределенных таблиц.|Строка, состоящая из «A – Z», «a – z», "0-9", «_», "-".|  
-|position|**int**|Позиция распространения в узле соответствующего для других дистрибутивов на этом узле.|от 1 до количество распределений на узел.|  
+|distribution_id|**int**|Уникальный числовой идентификатор, связанный с распределением.<br /><br /> Ключ для этого представления.|1 на число единиц вычислений на устройстве, умноженное на число распределений на каждый узел вычислений.|  
+|pdw_node_id|**int**|Идентификатор узла, на котором находится это распространение.|См. раздел pdw_node_id в [sys. dm_pdw_nodes &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
+|name|**nvarchar (32)**|Идентификатор строки, связанный с распределением, используемый в качестве суффикса в распределенных таблицах.|Строка, состоящая из "A-Z", "a-z", "0-9", "_", "-".|  
+|position|**int**|Расположение распределения в узле, соответствующем другим распределениям на этом узле.|1 — число распределений на узел.|  
   
-## <a name="see-also"></a>См. также  
- [Хранилище данных SQL и представления каталога хранилища параллельных данных](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+## <a name="see-also"></a>См. также:  
+ [Хранилища данных SQL и представления каталога параллельных хранилищ данных](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

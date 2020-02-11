@@ -1,5 +1,5 @@
 ---
-title: Коллекция Members (многомерные Объекты ADO) | Документация Майкрософт
+title: Коллекция Members (объекты данных ActiveX (MD)) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,36 +18,36 @@ ms.assetid: 3a647cde-efdc-4394-b1b9-8cbb1b9d689f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 79394abee5b12bb10f34a34e882d2ac0562722fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949435"
 ---
 # <a name="members-collection-ado-md"></a>Коллекция Members (многомерные объекты ADO)
-Содержит [член](../../../ado/reference/ado-md-api/member-object-ado-md.md) объекты уровня или положение вдоль оси.  
+Содержит объекты- [члены](../../../ado/reference/ado-md-api/member-object-ado-md.md) уровня или расположения вдоль оси.  
   
-## <a name="remarks"></a>Примечания  
- Объект **члены** коллекция используется должен содержать следующие элементы:  
+## <a name="remarks"></a>Remarks  
+ Коллекция **Members** используется для хранения следующих типов членов:  
   
--   Элементы, которые составляют уровень в кубе. Они содержатся в **члены** коллекцию [уровень](../../../ado/reference/ado-md-api/level-object-ado-md.md) объекта. Например, с помощью образца из [Общие сведения о многомерных схемы и данные](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md), четыре элемента уровня странах, Канада, США, Соединенное Королевство и Германии.  
+-   Элементы, составляющие уровень в Кубе. Они содержатся в коллекции **Members** объекта [Level](../../../ado/reference/ado-md-api/level-object-ado-md.md) . Например, используя пример из [обзора многомерных схем и данных](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md), четыре элемента уровня «страны» — это Канада, США, Великобритания и Германия.  
   
--   Элементы, являющиеся дочерними для конкретного элемента в пределах иерархии. Эти члены возвращаются [дочерние элементы](../../../ado/reference/ado-md-api/children-property-ado-md.md) свойство родительского объекта **член** объекта. Например два дочерних элементов элемента Canada снова с помощью одного примера, являются Восточная Канада и Западная часть Канады.  
+-   Элементы, являющиеся дочерними элементами определенного элемента в иерархии. Эти члены возвращаются свойством [Children](../../../ado/reference/ado-md-api/children-property-ado-md.md) родительского объекта **member** . Например, при использовании одного и того же примера два дочерних элемента в Канаде — Канада-Восток и Канада-Запад.  
   
--   Элементы, которые определяют заданное положение вдоль оси из [cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md). С помощью набора ячеек из [работа с многомерными данными](../../../ado/guide/multidimensional/working-with-multidimensional-data.md) в качестве примера два члена первой позиции по оси x являются святого и Сиэтл. Эти элементы, содержащиеся в **члены** коллекцию [позиции](../../../ado/reference/ado-md-api/position-object-ado-md.md) объекта.  
+-   Элементы, определяющие определенную позицией вдоль оси набора [ячеек](../../../ado/reference/ado-md-api/cellset-object-ado-md.md). Используя набор ячеек для [работы с многомерными данными](../../../ado/guide/multidimensional/working-with-multidimensional-data.md) в качестве примера, два элемента первой должности на оси x — любимая и Сиэтл. Эти элементы содержатся в коллекции **Members** объекта [позиционирования](../../../ado/reference/ado-md-api/position-object-ado-md.md) .  
   
- **Члены** является стандартной коллекции ADO. С помощью свойства и методы коллекции сделайте следующее:  
+ **Members** — это стандартная коллекция ADO. С помощью свойств и методов коллекции можно выполнять следующие действия.  
   
--   Получить число объектов в коллекции с [число](../../../ado/reference/ado-api/count-property-ado.md) свойство.  
+-   Получите количество объектов в коллекции со свойством [Count](../../../ado/reference/ado-api/count-property-ado.md) .  
   
--   Вернуть объект из коллекции со значением по умолчанию [элемент](../../../ado/reference/ado-api/item-property-ado.md) свойство.  
+-   Возврат объекта из коллекции со свойством [элемента](../../../ado/reference/ado-api/item-property-ado.md) по умолчанию.  
   
--   Обновление объектов в коллекции от поставщика с [обновить](../../../ado/reference/ado-api/refresh-method-ado.md) метод.  
+-   Обновите объекты в коллекции от поставщика с помощью метода [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) .  
   
- Этот раздел содержит следующие подразделы.  
+ Этот раздел содержит следующий раздел.  
   
 -   [Свойства, методы и события](../../../ado/reference/ado-md-api/members-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
- [Пример коллекции Members (VBScript)](../../../ado/reference/ado-md-api/members-example-vbscript.md)   
+## <a name="see-also"></a>См. также:  
+ [Пример членов (VBScript)](../../../ado/reference/ado-md-api/members-example-vbscript.md)   
  [Объект Member (многомерные объекты ADO)](../../../ado/reference/ado-md-api/member-object-ado-md.md)

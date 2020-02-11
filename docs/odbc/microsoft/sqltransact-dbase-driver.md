@@ -14,14 +14,14 @@ ms.assetid: 159ca21a-ccc4-45e2-97ca-2a9387efa7df
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3f05be059bc374b7b8236453e7c46feed4b8a6bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67948948"
 ---
 # <a name="sqltransact-dbase-driver"></a>SQLTransact (драйвер для dBASE)
 > [!NOTE]  
->  В этом разделе сведения для dBASE специфические для драйвера. Общие сведения об этой функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  В этом разделе приводятся сведения, относящиеся к драйверу dBASE. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Эта функция поддерживает параметром SQL_COMMIT, но не SQL_ROLLBACK.
+ Эта функция поддерживает SQL_COMMIT, но не SQL_ROLLBACK.

@@ -1,5 +1,5 @@
 ---
-title: Группирует коллекцию свойств, методов и событий | Документация Майкрософт
+title: Свойства, методы и события коллекции Groups | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,27 +13,27 @@ ms.assetid: 0776457f-bf78-4a79-96bf-a17136d45811
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a3e3b7147593cc6d6f1654ccdb0f9d362bd7b421
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966162"
 ---
 # <a name="groups-collection-properties-methods-and-events"></a>Свойства, методы и события коллекции Groups
 ## <a name="properties"></a>Свойства  
- [Свойство Count](../../../ado/reference/ado-api/count-property-ado.md)  
+ [Count, свойство](../../../ado/reference/ado-api/count-property-ado.md)  
   
  [Свойство элемента](../../../ado/reference/ado-api/item-property-ado.md)  
   
 ## <a name="methods"></a>Методы  
- [Append-метод (группы)](../../../ado/reference/adox-api/append-method-adox-groups.md)  
+ [Метод Append (группы)](../../../ado/reference/adox-api/append-method-adox-groups.md)  
   
- [Удаление метода (коллекций)](../../../ado/reference/adox-api/delete-method-adox-collections.md)  
+ [Метод Delete (коллекции)](../../../ado/reference/adox-api/delete-method-adox-collections.md)  
   
  [Метод Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
 ## <a name="events"></a>События  
  Нет.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Коллекция Groups (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)

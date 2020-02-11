@@ -1,5 +1,5 @@
 ---
-title: Обновление столбцов определяемого пользователем ТИПА с помощью DataAdapter | Документация Майкрософт
+title: Обновление столбцов определяемых пользователем типов с помощью DataAdapter | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,17 +24,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 82ac3490f80cf8683a6aebcea75004503a4d5ad4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919647"
 ---
 # <a name="updating-udt-columns-with-dataadapters"></a>Обновление столбцов определяемых пользователем типов с помощью DataAdapter
   Определяемые пользователем типы поддерживаются с помощью объектов `System.Data.DataSet` и `System.Data.SqlClient.SqlDataAdapter` для получения и изменения данных.  
   
 ## <a name="populating-a-dataset"></a>Заполнение набора данных  
- Инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT можно использовать для выбора значений столбцов определяемых пользователем типов, чтобы заполнить набор данных с помощью адаптера обработки данных. В следующем примере предполагается, что у вас есть **точек** таблицы, определенные со следующей структурой и данными. Следующие [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции создают **точек** и вставить несколько строк.  
+ Инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT можно использовать для выбора значений столбцов определяемых пользователем типов, чтобы заполнить набор данных с помощью адаптера обработки данных. В следующем примере предполагается, что у вас есть таблица **points** , определенная со следующей структурой и некоторыми примерами данных. Следующие [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции создают таблицу **points** и вставляют несколько строк.  
   
 ```  
 CREATE TABLE dbo.Points (id int PRIMARY Key, p Point);  
@@ -46,7 +46,7 @@ INSERT INTO dbo.Points VALUES (4, CONVERT(Point, '4,6'));
 GO  
 ```  
   
- В следующем фрагменте кода ADO.NET получает допустимую строку соединения, создает новый `SqlDataAdapter`и заполняет `System.Data.DataTable` со строками данных из **точек** таблицы.  
+ Следующий фрагмент кода ADO.NET извлекает допустимую строку соединения, создает новый `SqlDataAdapter`объект и заполняет его `System.Data.DataTable` строками данных из таблицы **points** .  
   
 ```vb  
 Dim da As New SqlDataAdapter( _  
@@ -85,9 +85,9 @@ INSERT INTO dbo.Points_ts (id, p) VALUES (4, CONVERT(Point, '4,6'));
   
  В следующем примере ADO.NET используются два метода.  
   
--   `UserProvidedCommands`, который показывает, как предоставить `InsertCommand`, `UpdateCommand`, и `DeleteCommand` объекты для обновления `Point` определяемого пользователем ТИПА в **точки** таблицы (которая не содержит `timestamp` столбца).  
+-   `UserProvidedCommands`, в котором демонстрируется предоставление `InsertCommand`объектов `UpdateCommand`, и `DeleteCommand` для обновления `Point` определяемого пользователем типа в таблице **points** (которая не содержит `timestamp` столбца).  
   
--   `CommandBuilder`, который показывает, как использовать `SqlCommandBuilder` в **Points_ts** таблицу, содержащую `timestamp` столбца.  
+-   `CommandBuilder`, который демонстрирует использование `SqlCommandBuilder` в таблице **Points_ts** , содержащей `timestamp` столбец.  
   
 ```vb  
 Imports System  
@@ -369,7 +369,7 @@ static void Main()
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Доступ к определяемым пользователем типам в ADO.NET](accessing-user-defined-types-in-ado-net.md)  
   
   

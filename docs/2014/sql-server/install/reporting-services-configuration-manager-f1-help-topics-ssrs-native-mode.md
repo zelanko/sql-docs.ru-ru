@@ -13,16 +13,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: d2205465f1fd6f03c67e1fc09ec76a2dfbb2e083
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952045"
 ---
 # <a name="reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode"></a>Разделы справки (F1) диспетчера конфигурации служб Reporting Services (службы Reporting Services в собственном режиме)
   В этом разделе приводится справка F1 для диспетчера конфигурации служб Reporting Services.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в собственном режиме.  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Собственный режим.  
   
 ## <a name="in-this-section"></a>в этом разделе  
   
@@ -32,9 +32,9 @@ ms.locfileid: "71952045"
   
 -   [Учетная запись службы](../../../2014/sql-server/install/service-account-ssrs-native-mode.md)  
   
--   [URL веб-службы](../../../2014/sql-server/install/web-service-url-ssrs-native-mode.md)  
+-   [URL-адрес веб-службы](../../../2014/sql-server/install/web-service-url-ssrs-native-mode.md)  
   
--   [Расширенная конфигурация нескольких веб-сайтов](../../../2014/sql-server/install/advanced-multiple-web-site-configuration-ssrs-native-mode.md)  
+-   [Расширенная настройка нескольких веб-сайтов](../../../2014/sql-server/install/advanced-multiple-web-site-configuration-ssrs-native-mode.md)  
   
 -   [База данных](../../../2014/sql-server/install/database-ssrs-native-mode.md)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "71952045"
   
 -   [URL-адрес диспетчер отчетов](../../../2014/sql-server/install/report-manager-url-ssrs-native-mode.md)  
   
--   [Настройки электронной почты](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)  
+-   [Параметры электронной почты](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)  
   
 -   [Учетная запись выполнения](../../../2014/sql-server/install/execution-account-ssrs-native-mode.md)  
   
@@ -56,7 +56,7 @@ ms.locfileid: "71952045"
   
 -   [Масштабное развертывание](../../../2014/sql-server/install/scale-out-deployment-native-mode-report-server.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Диспетчер конфигурации служб Reporting Services &#40;del&#41;](reporting-services-configuration-manager-native-mode.md)  
   
   

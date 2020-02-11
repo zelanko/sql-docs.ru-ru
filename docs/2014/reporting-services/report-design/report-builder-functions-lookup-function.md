@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 93e53646314d211ced489d3538b40c77195f494b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105217"
 ---
 # <a name="lookup-function-report-builder-and-ssrs"></a>Функция подстановки (построитель отчетов и службы SSRS)
@@ -38,7 +38,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
  (`Variant`) Выражение, вычисляемое для каждой строки в наборе данных и указывающее имя или ключ для сопоставления. Например, `=Fields!ProductID.Value`.  
   
  *result_expression*  
- (`Variant`) Выражение, вычисляемое для строки в наборе данных где *source_expression* = *destination_expression*, и указывает извлекаемого значения. Например, `=Fields!ProductName.Value`.  
+ (`Variant`) Выражение, которое вычисляется для строки в наборе данных, где *source_expression* = *destination_expression*и указывает извлекаемое значение. Например, `=Fields!ProductName.Value`.  
   
  *набор данных*  
  Константа, задающая имя набора данных в отчете. Например, «Продукты».  
@@ -46,7 +46,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
 ## <a name="return"></a>Возвращает  
  Возвращает значение `Variant` или `Nothing`, если совпадения нет.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Функция `Lookup` позволяет извлечь значение из указанного набора данных, состоящего из пар «имя-значение» с отношением один к одному. Например, для поля ID в таблице функция `Lookup` может быть использована для поиска соответствующего поля Name в наборе данных, не привязанном к области данных.  
   
  Функция `Lookup` выполняет следующие действия.  
@@ -59,9 +59,9 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
 -   Возвращает результирующее значение выражения.  
   
- Для получения множества значений по одному имени или ключевому полю, если существует отношение связь "один ко многим", пользуйтесь [функцией LookupSet (построитель отчетов и службы SSRS)](report-builder-functions-lookupset-function.md). Для вызова `Lookup` набор значений, используйте [функцию Multilookup &#40;построитель отчетов и службы SSRS&#41;](report-builder-functions-lookup-function.md).  
+ Для получения множества значений по одному имени или ключевому полю, если существует отношение связь "один ко многим", пользуйтесь [функцией LookupSet (построитель отчетов и службы SSRS)](report-builder-functions-lookupset-function.md). Для вызова `Lookup` набора значений используйте [функцию много&#40;ПОСТРОИТЕЛЬ отчетов и службы SSRS&#41;](report-builder-functions-lookup-function.md).  
   
- Существуют следующие ограничения.  
+ Применяются следующие ограничения:  
   
 -   Функция `Lookup` вычисляется после применения всех выражений фильтров.  
   
@@ -96,7 +96,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
 =Lookup(Fields!ProductID.Value, Fields!ID.Value, Fields!Name.Value, "Product")  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование выражений в отчетах (построитель отчетов и службы SSRS)](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [Типы данных в выражениях (построитель отчетов и службы SSRS)](expressions-report-builder-and-ssrs.md)   

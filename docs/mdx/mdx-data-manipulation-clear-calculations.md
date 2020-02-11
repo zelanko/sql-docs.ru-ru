@@ -1,5 +1,5 @@
 ---
-title: Инструкция CLEAR CALCULATIONS (многомерные Выражения) | Документация Майкрософт
+title: Инструкция CLEAR для вычислений (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1b0766cb002960a96d702184ac9719abe7610afd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938023"
 ---
 # <a name="mdx-data-manipulation---clear-calculations"></a>Операции с данными многомерных выражений — CLEAR CALCULATIONS
@@ -31,13 +31,13 @@ CLEAR CALCULATIONS [FROMCube_Expression]
  *Cube_Expression*  
  Допустимое многомерное выражение куба.  
   
-## <a name="remarks"></a>Примечания  
- **FROM** предложения можно опустить, если контекст куба известен, например скрипт многомерных Выражений.  
+## <a name="remarks"></a>Remarks  
+ Предложение **from** можно опустить, если известен контекст куба, например в СКРИПТе многомерных выражений.  
   
 > [!NOTE]  
 >  Данная инструкция может быть выполнена только сервером, администратором базы данных или членом роли, имеющей доступ к исходным данным куба (то есть со свойством ReadSourceData=true).  
   
-## <a name="see-also"></a>См. также  
- [Инструкции для манипулирования данными многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
+## <a name="see-also"></a>См. также:  
+ [Инструкции обработки данных многомерных выражений &#40;многомерные выражения&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
   
   

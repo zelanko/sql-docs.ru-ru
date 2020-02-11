@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b7f387145077e5a562279b6c72bc0f7eefadde36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63023305"
 ---
 # <a name="performance-event-category"></a>Категория событий Performance
@@ -28,10 +28,10 @@ ms.locfileid: "63023305"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Описание|  
+|Раздел|Description|  
 |-----------|-----------------|  
 |[Класс событий Auto Stats](auto-stats-event-class.md)|Указывает, что произошло автоматическое обновление статистики индекса и столбца.|  
-|[Класс событий Degree of Parallelism (используется с версией 7.0)](degree-of-parallelism-7-0-insert-event-class.md)|Указывает, что в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] инструкции SELECT, INSERT, UPDATE или DELETE были выполнены с использованием последовательного или параллельного плана. В отчет также включается количество ЦП, использованных для выполнения операции.|  
+|[Класс событий Degree of Parallelism (7.0 Insert)](degree-of-parallelism-7-0-insert-event-class.md)|Указывает, что в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] инструкции SELECT, INSERT, UPDATE или DELETE были выполнены с использованием последовательного или параллельного плана. В отчет также включается количество ЦП, использованных для выполнения операции.|  
 |[Класс событий Performance Statistics](performance-statistics-event-class.md)|Наблюдает за производительностью выполняемых запросов.|  
 |[Класс событий Showplan All](showplan-all-event-class.md)|Идентифицирует операторы **Showplan** в инструкции SQL.|  
 |[Класс событий Showplan All for Query Compile](showplan-all-for-query-compile-event-class.md)|Отображает данные компиляции для операторов **Showplan** .|  
@@ -43,7 +43,7 @@ ms.locfileid: "63023305"
 |[Класс событий Plan Guide Successful](plan-guide-successful-event-class.md)|Указывает, что в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] успешно создан план выполнения для запроса или пакета, в котором содержится структура плана.|  
 |[Класс событий Plan Guide Unsuccessful](plan-guide-unsuccessful-event-class.md)|Указывает, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не удалось создать план выполнения для запроса или пакета, в котором содержится структура плана.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширенные события](../extended-events/extended-events.md)  
   
   

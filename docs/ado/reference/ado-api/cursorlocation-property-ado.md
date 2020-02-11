@@ -17,35 +17,35 @@ ms.assetid: 39c8d86e-7ee9-4182-be5e-aad5ce952f84
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: afee71d4f37e2b3a27247fbeacf51dab66cc1e23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933288"
 ---
 # <a name="cursorlocation-property-ado"></a>Свойство CursorLocation (ADO)
 Указывает расположение службы курсора.  
   
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
- Возвращает или задает **Long** значение, которое может быть присвоено одно из [CursorLocationEnum](../../../ado/reference/ado-api/cursorlocationenum.md) значения.  
+ Задает или возвращает значение **типа Long** , которое можно задать для одного из значений [курсорлокатионенум](../../../ado/reference/ado-api/cursorlocationenum.md) .  
   
-## <a name="remarks"></a>Примечания  
- Это свойство позволяет выбирать различные библиотеки курсоров, доступ к поставщику. Как правило можно выбрать между использованием библиотеку курсор на стороне клиента или один, который находится на сервере.  
+## <a name="remarks"></a>Remarks  
+ Это свойство позволяет выбрать между различными библиотеками курсоров, доступными для поставщика. Обычно можно выбрать одну из них, используя библиотеку курсоров на стороне клиента или ту, которая находится на сервере.  
   
- Значение этого свойства влияет на подключение только в том случае, после задания свойства. Изменение **CursorLocation** свойство не влияет на существующие подключения.  
+ Этот параметр свойства влияет на соединения, установленные только после установки свойства. Изменение свойства **CursorLocation** не влияет на существующие соединения.  
   
- Возвращенные курсоры [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) метод будут наследовать этот параметр. **Набор записей** объекты будут автоматически наследовать этот параметр из их связанные соединения.  
+ Курсоры, возвращаемые методом [EXECUTE](../../../ado/reference/ado-api/execute-method-ado-connection.md) , наследуют этот параметр. Объекты **набора записей** будут автоматически наследовать этот параметр от связанных соединений.  
   
- Это свойство доступно для чтения/записи на [подключения](../../../ado/reference/ado-api/connection-object-ado.md) или закрытого [записей](../../../ado/reference/ado-api/recordset-object-ado.md)и только для чтения при открытии **записей**.  
+ Это свойство доступно для чтения и записи в [соединении](../../../ado/reference/ado-api/connection-object-ado.md) или закрытом [наборе записей](../../../ado/reference/ado-api/recordset-object-ado.md)и доступно только для чтения в открытом **наборе записей**.  
   
 > [!NOTE]
->  **Удаленное использование службы данных** при использовании на стороне клиента **записей** или **подключения** объекта, **CursorLocation** свойство может устанавливаться только для **adUseClient**.  
+>  **Использование удаленной службы данных** При использовании **набора записей** или объекта **соединения** на стороне клиента свойство **CursorLocation** может иметь только значение **адусеклиент**.  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
   
 |||  
 |-|-|  
 |[Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
   
-## <a name="see-also"></a>См. также  
- [Приложение а. Поставщики](../../../ado/guide/appendixes/appendix-a-providers.md)
+## <a name="see-also"></a>См. также:  
+ [Приложение А. Поставщики](../../../ado/guide/appendixes/appendix-a-providers.md)

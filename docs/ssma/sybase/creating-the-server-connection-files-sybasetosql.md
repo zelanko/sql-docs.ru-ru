@@ -13,16 +13,16 @@ ms.assetid: 35ef396f-9f98-429d-9fc5-4f413d08fb37
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: ece41e157ddad4f62a041d8e06dde073f681d274
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68029357"
 ---
 # <a name="creating-the-server-connection-files-sybasetosql"></a>Создание файлов подключения к серверу (SybaseToSQL)
-В разделе "серверы" файла скрипта или в файле подключения отдельный сервер можно указать сведения о сервере. — Параметр командной строки файла подключения к серверу, `-c <serverconnectionfile>`. Если один и тот же идентификатор сервера присутствует в файл скрипта и файла подключения сервера, тогда считается определение сервера в файле скрипта.  
+Сведения о сервере можно указать либо в разделе Servers файла сценария, либо в отдельном файле соединения сервера. Параметр командной строки для файла соединения сервера имеет значение, `-c <serverconnectionfile>`. Если один и тот же идентификатор сервера имеется как в файле скрипта, так и в файле соединения сервера, то будет считаться определение сервера в файле скрипта.  
   
-**Пример.**  
+**Пример**.  
   
 ```  
 1.<!--Sample of server connection file commands -->  
@@ -101,12 +101,12 @@ ms.locfileid: "68029357"
 </sql-server>  
 ```  
   
-## <a name="server-connection-file-validation"></a>Проверка файла подключения сервера  
-Пользователь может просто проверять его/ее файл подключения сервера соответствие файлу определения схемы **S2SSConsoleScriptServersSchema.xsd** доступны в папке «Схемы».  
+## <a name="server-connection-file-validation"></a>Проверка файлов подключения к серверу  
+Пользователь может легко проверить файл подключения своего сервера относительно файла определения схемы **S2SSConsoleScriptServersSchema. xsd** , доступного в папке Schemas.  
   
-## <a name="next-step"></a>Следующий шаг  
-Следующий шаг в работе консоли — [выполнение команд консоли SSMA &#40;SybaseToSQL&#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)  
+## <a name="next-step"></a>Дальнейшее действие  
+Следующий шаг в работе консоли заключается [в выполнении консоли SSMA &#40;SybaseToSQL&#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Выполнение команд консоли SSMA](executing-the-ssma-console-sybasetosql.md)  
   

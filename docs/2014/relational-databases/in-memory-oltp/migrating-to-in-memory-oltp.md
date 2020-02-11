@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 89fc6a74486cad96be0baee374721e06520acfcb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63015307"
 ---
 # <a name="migrating-to-in-memory-oltp"></a>Миграция в In-Memory OLTP
@@ -24,9 +24,9 @@ ms.locfileid: "63015307"
   
 -   [Помощник по оптимизации памяти](memory-optimization-advisor.md)  
   
--   [Помощник по собственной компиляции](native-compilation-advisor.md)  
+-   [Помощник по компиляции в машинный код](native-compilation-advisor.md)  
   
--   [Конструкции языка Transact-SQL, не поддерживаемые в выполняющейся в памяти OLTP](transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
+-   [Конструкции языка Transact-SQL, неподдерживаемые в In-Memory OLTP](transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
   
 -   [Реализация LOB Columns в таблице, оптимизированной для памяти](../../database-engine/implementing-lob-columns-in-a-memory-optimized-table.md)  
   
@@ -42,12 +42,12 @@ ms.locfileid: "63015307"
   
 -   [Миграция проверочных ограничений и ограничений внешнего ключа](../../database-engine/migrating-check-and-foreign-key-constraints.md)  
   
--   [Реализация IDENTITY в оптимизированной для памяти таблице](implementing-identity-in-a-memory-optimized-table.md)  
+-   [Реализация IDENTITY в таблице, оптимизированной для памяти](implementing-identity-in-a-memory-optimized-table.md)  
   
- Дополнительные сведения о методологиях миграции см. в разделе [Выполняемая в памяти OLTP — стандартные шаблоны рабочей нагрузки и вопросы миграции](https://msdn.microsoft.com/library/dn673538.aspx).  
+ Дополнительные сведения о методологиях миграции см. в разделе [Выполняемая в памяти OLTP — стандартные шаблоны рабочей нагрузки и вопросы миграции](https://msdn.microsoft.com/library/dn673538.aspx).  
   
 ## <a name="see-also"></a>См. также:  
- [In-Memory OLTP (оптимизация в памяти)](in-memory-oltp-in-memory-optimization.md)   
+ [Выполняющаяся в памяти OLTP &#40;оптимизации в памяти&#41;](in-memory-oltp-in-memory-optimization.md)   
  [Оценка требований к объему памяти для таблиц, оптимизированных для памяти](memory-optimized-tables.md)  
   
   

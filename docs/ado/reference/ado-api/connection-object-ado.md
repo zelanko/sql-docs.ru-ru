@@ -16,54 +16,54 @@ ms.assetid: ef6b1824-5b12-43db-89d7-8f3d13896d4d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 278e2d90ed20b99706f00acf72e2892941c42865
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933566"
 ---
 # <a name="connection-object-ado"></a>Объект Connection (ADO)
-Представляет открытое подключение к источнику данных.  
+Представляет открытое соединение с источником данных.  
   
-## <a name="remarks"></a>Примечания  
- Объект **подключения** представляет уникальный сеанс с источником данных. В системе базы данных клиент/сервер может быть эквивалентно действительное сетевое подключение к серверу. В зависимости от функциональных возможностей, поддерживаемых поставщиком, некоторые коллекции, методы или свойства **подключения** могут оказаться недоступными.  
+## <a name="remarks"></a>Remarks  
+ Объект **Connection** представляет уникальный сеанс с источником данных. В системе базы данных клиента или сервера она может быть эквивалентна фактическому сетевому подключению к серверу. В зависимости от функциональности, поддерживаемой поставщиком, некоторые коллекции, методы или свойства объекта **соединения** могут быть недоступны.  
   
- С помощью коллекций, методы и свойства **подключения** объекта, можно сделать следующее:  
+ С помощью коллекций, методов и свойств объекта **Connection** можно выполнять следующие действия.  
   
--   Настройка подключения перед его с открытием [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md), [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md), и [режим](../../../ado/reference/ado-api/mode-property-ado.md) свойства. **ConnectionString** — свойство по умолчанию **подключения** объекта.  
+-   Настройте подключение перед его открытием с помощью свойств [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md), [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)и [mode](../../../ado/reference/ado-api/mode-property-ado.md) . **ConnectionString** — это свойство объекта **Connection** по умолчанию.  
   
--   Задайте [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) свойство клиенту для вызова [служба курсора Майкрософт для OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md), который поддерживает пакетные обновления.  
+-   Задайте для свойства [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) значение Client, чтобы вызвать [службу Microsoft Cursor для OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md), которая поддерживает пакетные обновления.  
   
--   Задайте базу данных по умолчанию для соединения с [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) свойство.  
+-   Задайте для соединения базу данных по умолчанию со свойством [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) .  
   
--   Уровень изоляции для транзакций, открытом в соединении с набора [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) свойство.  
+-   Установите уровень изоляции для транзакций, открытых в соединении со свойством [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) .  
   
--   Укажите поставщика OLE DB с помощью [поставщика](../../../ado/reference/ado-api/provider-property-ado.md) свойство.  
+-   Укажите поставщик OLE DB с помощью свойства [provider](../../../ado/reference/ado-api/provider-property-ado.md) .  
   
--   Установите, а позже прервать физическое подключение к источнику данных с помощью [откройте](../../../ado/reference/ado-api/open-method-ado-connection.md) и [закрыть](../../../ado/reference/ado-api/close-method-ado.md) методы.  
+-   Установите и попозже приостановить физическое подключение к источнику данных с помощью методов [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) и [Close](../../../ado/reference/ado-api/close-method-ado.md) .  
   
--   Выполнить команду для соединения с [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) метод и настройте выполнение с [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md) свойство.  
+-   Выполните команду в соединении с методом [EXECUTE](../../../ado/reference/ado-api/execute-method-ado-connection.md) и настройте выполнение с помощью свойства [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md) .  
   
     > [!NOTE]
-    >  Чтобы выполнить запрос без использования объект Command, передать строку запроса для **Execute** метод **подключения** объекта. Тем не менее [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта является обязательным, если вы хотите сохранить текст команды и повторно выполните ее или использовать параметры запроса.  
+    >  Чтобы выполнить запрос без использования объекта Command, передайте строку запроса в метод **EXECUTE** объекта **Connection** . Однако объект [команды](../../../ado/reference/ado-api/command-object-ado.md) необходим, если нужно сохранить текст команды и повторно выполнить его, либо использовать параметры запроса.  
   
--   Управление транзакциями на открытое соединение, включая вложенные транзакции, если поставщик поддерживает, с помощью [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md), [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md), и [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) методы и [атрибуты](../../../ado/reference/ado-api/attributes-property-ado.md) свойство.  
+-   Управление транзакциями в открытом соединении, включая вложенные транзакции, если поставщик поддерживает их, с помощью методов [примеры BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md), [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)и [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) и свойства [Attributes](../../../ado/reference/ado-api/attributes-property-ado.md) .  
   
--   Проанализируйте ошибки, возвращенные из источника данных с помощью [ошибки](../../../ado/reference/ado-api/errors-collection-ado.md) коллекции.  
+-   Проверьте ошибки, возвращенные из источника данных с помощью коллекции [ошибок](../../../ado/reference/ado-api/errors-collection-ado.md) .  
   
--   Прочитать версию из ADO реализацию, используемую с [версии](../../../ado/reference/ado-api/version-property-ado.md) свойство.  
+-   Считывает версию из реализации ADO, используемой со свойством [Version](../../../ado/reference/ado-api/version-property-ado.md) .  
   
--   Получение сведений о схеме о базе данных с помощью [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) метод.  
+-   Получите сведения о схеме базы данных с помощью метода [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) .  
   
- Можно создать **подключения** объектов независимо от любого другого ранее определенного объекта.  
+ Объекты **соединения** можно создавать независимо от любого другого ранее определенного объекта.  
   
- Вы можете выполнить именованные команды или хранимых процедур, как если бы они находились собственных методов в **подключения** объекта, как показано в следующем разделе. Если команду с именем имеет то же имя, что хранимые процедуры, вызова неуправляемого кода «собственный метод» на **подключения** объект всегда выполнить команду с именем, а не хранимой процедуры.  
+ Можно выполнять именованные команды или хранимые процедуры, как если бы они были собственными методами для объекта **соединения** , как показано в следующем разделе. Если именованная команда имеет то же имя, что и хранимая процедура, то для объекта **соединения** вызовите "собственный вызов метода" всегда выполните именованную команду вместо процедуры Store.  
   
 > [!NOTE]
->  Не используйте эту функцию (вызов именованную команду или хранимую процедуру, как будто собственного метода на **подключения** объекта) в приложении Microsoft® .NET Framework, так как базовая реализация того, функция конфликты с тем, как .NET Framework взаимодействует с COM.  
+>  Не используйте эту функцию (вызов именованной команды или хранимой процедуры, как если бы он был собственным методом в объекте **Connection** ) в приложении Microsoft® .NET Framework, поскольку базовая реализация функции конфликтует с тем, как .NET Framework взаимодействует с COM.  
   
-## <a name="execute-a-command-as-a-native-method-of-a-connection-object"></a>Выполнение команды как собственный метод объекта подключения  
- Для выполнения команды, присвойте команде имя, используя **команда** объект [имя](../../../ado/reference/ado-api/name-property-ado.md) свойство. Задайте **ActiveConnection** свойство **команда** объект соединения. Затем предстоит выполнить инструкцию, где используется имя команды, как если бы он был методом на **подключения** объекта, а затем все параметры и **набор записей** объекта, если возвращаются все строки. Задайте **записей** свойства для настройки результирующего **записей**. Пример:  
+## <a name="execute-a-command-as-a-native-method-of-a-connection-object"></a>Выполнение команды в качестве собственного метода объекта соединения  
+ Чтобы выполнить команду, присвойте команде имя, используя свойство [имя](../../../ado/reference/ado-api/name-property-ado.md) объекта **команды** . Задайте для свойства **ActiveConnection** объекта **Command** значение Connection. Затем выполните инструкцию, где имя команды используется как метод для объекта **соединения** , за которым следуют все параметры и объект **Recordset** , если возвращаются какие-либо строки. Задайте свойства **набора записей** , чтобы настроить результирующий **набор записей**. Пример:  
   
 ```  
 Dim cnn As New ADODB.Connection  
@@ -78,8 +78,8 @@ cmd.ActiveConnection = cnn
 cnn. "parameter", rst  
 ```  
   
-## <a name="execute-a-stored-procedure-as-a-native-method-of-a-connection-object"></a>Выполнение хранимой процедуры в качестве собственного метода объекта подключения  
- Для выполнения хранимой процедуры, выполнить инструкцию, где используется имя хранимой процедуры, как если бы он был методом на **подключения** объекта, а затем все параметры. ADO сделает «наиболее подходящих значений» типов параметров. Пример:  
+## <a name="execute-a-stored-procedure-as-a-native-method-of-a-connection-object"></a>Выполнение хранимой процедуры в качестве собственного метода объекта соединения  
+ Чтобы выполнить хранимую процедуру, выполните инструкцию, где имя хранимой процедуры используется как метод в объекте **Connection** , за которым следуют все параметры. ADO выполнит «наилучшее предположение» типов параметров. Пример:  
   
 ```  
 Dim cnn As New ADODB.Connection  
@@ -88,15 +88,15 @@ Dim cnn As New ADODB.Connection
 cnn. "parameter"  
 ```  
   
- **Подключения** объект безопасен для скриптов.  
+ Объект **соединения** является надежным для сценариев.  
   
- Этот раздел содержит следующие подразделы.  
+ Этот раздел содержит следующий раздел.  
   
--   [Свойства объекта соединения, методы и события](../../../ado/reference/ado-api/connection-object-properties-methods-and-events.md)  
+-   [Свойства, методы и события объекта Connection](../../../ado/reference/ado-api/connection-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Коллекция Errors (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
  [Коллекция Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Приложение а. Поставщики](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Приложение А. Поставщики](../../../ado/guide/appendixes/appendix-a-providers.md)

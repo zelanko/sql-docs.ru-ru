@@ -16,16 +16,16 @@ ms.assetid: df169b21-d10a-41df-b3a1-654cfb58bc21
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: da5579c52d1ffe1400e3b4c8c01210ca5856597b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68124582"
 ---
-# <a name="spenumeratependingschemachanges-transact-sql"></a>sp_enumeratependingschemachanges (Transact-SQL)
+# <a name="sp_enumeratependingschemachanges-transact-sql"></a>sp_enumeratependingschemachanges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Возвращает список всех ожидающих изменений схемы. Эта хранимая процедура может использоваться с [sp_markpendingschemachange](../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md), что позволяет администратору пропустить выбранные изменения схемы, ожидающие завершения, чтобы они не реплицируются. Эта хранимая процедура выполняется на издателе в базе данных публикации.  
+  Возвращает список всех ожидающих изменений схемы. Эта хранимая процедура может использоваться с [sp_markpendingschemachange](../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md), что позволяет администратору пропустить выбранные ожидающие изменения схемы, чтобы они не были реплицированы. Эта хранимая процедура выполняется на издателе в базе данных публикации.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -38,34 +38,34 @@ sp_enumeratependingschemachanges [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` — Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @starting_schemaversion = ] starting_schemaversion` — Это минимальное количество изменений схемы для включения в результирующем наборе.  
+`[ @starting_schemaversion = ] starting_schemaversion`Наименьшее число изменений схемы, которое необходимо включить в результирующий набор.  
   
 ## <a name="result-set"></a>Результирующий набор  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|**имя_статьи**|**sysname**|Имя статьи, к которому применяется изменение схемы, или **всей публикации** для изменения схемы, которые применяются ко всей публикации.|  
-|**schemaversion**|**int**|Количество изменений схемы, ожидающих завершения.|  
-|**SchemaType**|**sysname**|Текстовое значение, представляющее тип изменения схемы.|  
+|**article_name**|**имеет sysname**|Имя статьи, к которой применяется изменение схемы, или **всей публикации** для изменений схемы, применяемых ко всей публикации.|  
+|**schemaVersion**|**int**|Количество изменений схемы, ожидающих завершения.|  
+|**schematype**|**имеет sysname**|Текстовое значение, представляющее тип изменения схемы.|  
 |**schematext**|**nvarchar(max)**|Код [!INCLUDE[tsql](../../includes/tsql-md.md)], описывающий изменение схемы.|  
-|**schemastatus**|**nvarchar(10)**|Указывает, ожидает ли своего завершения изменение схемы для данной статьи; может иметь следующие значения:<br /><br /> **Active** = изменение схемы находится в состоянии ожидания<br /><br /> **Неактивные** = изменение схемы неактивно<br /><br /> **Пропустить** = изменение схемы не реплицируется.|  
-|**schemaguid**|**uniqueidentifier**|Идентифицирует изменение схемы.|  
+|**schemastatus**|**nvarchar (10)**|Указывает, ожидает ли своего завершения изменение схемы для данной статьи; может иметь следующие значения:<br /><br /> **Active** = ожидается изменение схемы<br /><br /> **Inactive** = изменение схемы неактивно<br /><br /> **пропустить** = изменение схемы не реплицируется|  
+|**schemaguid**|**UNIQUEIDENTIFIER**|Идентифицирует изменение схемы.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  **sp_enumeratependingschemachanges** используется в репликации слиянием.  
   
- **sp_enumeratependingschemachanges**, которое используется с [sp_markpendingschemachange](../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md), предназначенной для поддержки репликации слиянием и должна использоваться только тогда, когда другие действия по исправлению, такие как Повторная инициализация, не удалось исправить ситуацию.  
+ **sp_enumeratependingschemachanges**, используемый с [sp_markpendingschemachange](../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md), предназначен для поддержки репликации слиянием и должен использоваться только в том случае, если другие корректирующие действия, такие как повторная инициализация, не могли исправить ситуацию.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_enumeratependingschemachanges**.  
+ Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_enumeratependingschemachanges**.  
   
-## <a name="see-also"></a>См. также  
- [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Хранимые процедуры репликации &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [sysmergeschemachange &#40;Transact-SQL&#41;](../../relational-databases/system-tables/sysmergeschemachange-transact-sql.md)  
   
   

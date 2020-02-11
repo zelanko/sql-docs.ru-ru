@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 63ec11b8575017ffbb3a1b1468ef3150a20326e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63028357"
 ---
 # <a name="exclude-duplicate-rows-visual-database-tools"></a>Исключение повторяющихся строк (визуальные инструменты для баз данных)
@@ -38,8 +38,8 @@ ms.locfileid: "63028357"
     > [!NOTE]  
     >  При использовании ключевого слова DISTINCT изменение результирующего набора на панели результатов может оказаться невозможным.  
   
-## <a name="see-also"></a>См. также  
- [Определение критериев поиска &#40;визуальных инструментах баз данных&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>См. также:  
+ [Укажите условия поиска &#40;визуальные инструменты для баз данных&#41;](visual-database-tools.md)   
  [Результаты запросов сортировки и группирования (визуальные инструменты для баз данных)](sort-and-group-query-results-visual-database-tools.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Найти пример метода (Visual Basic) | Документация Майкрософт
+title: Пример метода Find (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: bbf27dcc-9815-4e2f-8ea8-b8c9fe6dedd6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6513daf2a2d57b0ed2b9d68f6232112d238de037
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932626"
 ---
 # <a name="find-method-example-vb"></a>Пример метода Find (Visual Basic)
-В этом примере используется [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта [найти](../../../ado/reference/ado-api/find-method-ado.md) метод для поиска и подсчитать количество должностей в ***Pubs*** базы данных. В примере предполагается, что базовый поставщик не поддерживает аналогичные функциональные возможности.  
+В этом примере используется метод [Find](../../../ado/reference/ado-api/find-method-ado.md) объекта [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) для поиска и подсчета количества названий бизнес-объектов в базе данных ***pubs*** . В этом примере предполагается, что базовый поставщик не поддерживает аналогичные функции.  
   
 ```  
 'BeginFindVB  
@@ -99,6 +99,6 @@ End Sub
 'EndFindVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод Find (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

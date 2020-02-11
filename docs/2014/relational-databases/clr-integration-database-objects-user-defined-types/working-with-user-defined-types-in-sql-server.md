@@ -1,5 +1,5 @@
 ---
-title: Работа с пользовательскими типами в SQL Server | Документация Майкрософт
+title: Работа с определяемыми пользователем типами данных в SQL Server | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1a6a226ae76f75a07b483b74a09ecafc0191eee2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919961"
 ---
 # <a name="working-with-user-defined-types-in-sql-server"></a>Работа с определяемыми пользователем типами в SQL Server
-  Можно получить доступ к функциональности определяемого пользователем типа (UDT) в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из [!INCLUDE[tsql](../../includes/tsql-md.md)] языка с помощью синтаксиса обычных запросов. Определяемые пользователем типы можно использовать в определениях объектов базы данных, как переменные в пакетах [!INCLUDE[tsql](../../includes/tsql-md.md)], в функциях и хранимых процедурах, а также как аргументы функций и хранимых процедур.  
+  Вы можете получить доступ к функциям определяемого пользователем типа ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UDT) [!INCLUDE[tsql](../../includes/tsql-md.md)] в из языка с помощью обычного синтаксиса запросов. Определяемые пользователем типы можно использовать в определениях объектов базы данных, как переменные в пакетах [!INCLUDE[tsql](../../includes/tsql-md.md)], в функциях и хранимых процедурах, а также как аргументы функций и хранимых процедур.  
   
 ## <a name="in-this-section"></a>в этом разделе  
  [Определение таблиц и столбцов определяемых пользователем типов](working-with-user-defined-types-defining-udt-tables-and-columns.md)  
@@ -33,7 +33,7 @@ ms.locfileid: "62919961"
  [Работа с данными определяемого пользователем типа](working-with-user-defined-types-manipulating-udt-data.md)  
  Описывает работу с данными определяемого пользователем типа в [!INCLUDE[tsql](../../includes/tsql-md.md)] с помощью языка [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>См. также  
- [Определяемые пользователем типы в CLR](clr-user-defined-types.md)  
+## <a name="see-also"></a>См. также:  
+ [Определяемые пользователем типы данных CLR](clr-user-defined-types.md)  
   
   

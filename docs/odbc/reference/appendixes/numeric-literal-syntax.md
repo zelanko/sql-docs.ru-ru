@@ -1,5 +1,5 @@
 ---
-title: Синтаксисе числовых литералов | Документация Майкрософт
+title: Синтаксис числового литерала | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,39 +15,39 @@ ms.assetid: fb17498d-4f1d-4b3d-b33d-1e62c7d3c32d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9daa81e2e0c2e927ee7407d4a00d5d48c333bd54
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67990719"
 ---
 # <a name="numeric-literal-syntax"></a>Синтаксис числовых литералов
 Для числовых литералов в ODBC используется следующий синтаксис:  
   
- *numeric-literal* ::= *signed-numeric-literal &#124; unsigned-numeric-literal*  
+ *числовой литерал* :: =- *numeric-Literal &#124; без знака-числового литерала*  
   
- *signed-numeric-literal* ::= [*sign*] *unsigned-numeric-literal*  
+ *знак-numeric-Literal* :: = [*знак*] *без знака — числовой литерал*  
   
- *unsigned-numeric-literal* ::= *exact-numeric-literal &#124; approximate-numeric-literal*  
+ *неподписанный-numeric-Literal* :: = *СОВПАД-numeric-Literal &#124; приблизительный числовой литерал*  
   
- *exact-numeric-literal* ::= *unsigned-integer* [*period*[*unsigned-integer*]] *&#124;period unsigned-integer*  
+ *СОВПАД-numeric-Literal* :: = *без знака-целое число* [*точка*[*без знака-целое*]] *&#124;периода без знака — целое число*  
   
- *sign* ::= *plus-sign &#124; minus-sign*  
+ *знак* :: = *плюс-знак &#124; минус-знак*  
   
- *approximate-numeric-literal* ::= *mantissa E exponent*  
+ Примерное значение экспоненты " *приблизительный-числовой литерал* :: = *мантисса E* "  
   
- *mantissa* ::= *exact-numeric-literal*  
+ *мантисса* :: = *СОВПАД-numeric-Literal*  
   
- *exponent* ::= *signed-integer*  
+ *экспонента* :: = *целое число со знаком*  
   
- *signed-integer* ::= [*sign*] *unsigned-integer*  
+ *знак-целое* :: = [*знак*] без *знака — целое число*  
   
- *unsigned-integer* ::= *digit...*  
+ *без знака — целое число* :: = *цифра...*  
   
- *plus-sign* ::= *+*  
+ *плюс-знак* :: =*+*  
   
- *minus-sign* ::= -  
+ *минус-Sign* :: =-  
   
- *digit* ::= 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; 0  
+ *digit* :: = 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; 0  
   
- *period* ::= .
+ *period* :: =.

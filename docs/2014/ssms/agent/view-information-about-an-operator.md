@@ -18,20 +18,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9d1cab01b6fc496de90975966bfcf29b70e041fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68188747"
 ---
 # <a name="view-information-about-an-operator"></a>Просмотр сведений об операторе
-  В данном подразделе описывается просмотр сведений об операторе агента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этом разделе описывается Просмотр сведений об операторе агента в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или. [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
  **В этом разделе**  
   
 -   **Перед началом работы**  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Для просмотра сведений об операторе используется:**  
   
@@ -44,7 +44,7 @@ ms.locfileid: "68188747"
 ###  <a name="Security"></a> безопасность  
   
 ####  <a name="Permissions"></a> Permissions  
- По умолчанию эту хранимую процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
+ По умолчанию эта хранимая процедура может выполняться членами предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
   
 -   **SQLAgentUserRole**  
   
@@ -66,13 +66,13 @@ ms.locfileid: "68188747"
   
 4.  Щелкните правой кнопкой оператор, который нужно просмотреть, и выберите пункт **Свойства**.  
   
-     Дополнительные сведения о доступных параметрах, содержащихся в диалоговом окне _Свойства_**имя_оператора** , см. в разделе:  
+     Дополнительные сведения о доступных параметрах, содержащихся в диалоговом окне**свойства** _operator_name_, см. в следующих статьях:  
   
-    -   [Свойства оператора и оператора New &#40;страница "Общие"&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
+    -   [Свойства оператора и новый оператор &#40;общие&#41;страницы](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
-    -   [Свойства оператора: Оператор New &#40;страница "уведомления"&#41;](operator-properties-new-operator-notifications-page.md)  
+    -   [Свойства оператора: Новая страница &#40;уведомлений оператора&#41;](operator-properties-new-operator-notifications-page.md)  
   
-    -   [Свойства оператора (страница "Журнал")](operator-properties-history-page.md)  
+    -   [Свойства оператора &#40;страница журнала&#41;](operator-properties-history-page.md)  
   
 5.  После завершения нажмите кнопку **ОК**.  
   

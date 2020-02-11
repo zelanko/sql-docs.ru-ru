@@ -1,5 +1,5 @@
 ---
-title: Агент SQL Server хранимые процедуры (Transact-SQL) | Документация Майкрософт
+title: Агент SQL Server хранимых процедур (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +16,16 @@ ms.assetid: 9c8de925-928b-460c-9455-779c4c37b966
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0396823be5a733acc551dc52a96ff642b67076c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67950374"
 ---
 # <a name="sql-server-agent-stored-procedures-transact-sql"></a>Хранимые процедуры агента SQL Server (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает следующие системные хранимые процедуры, используемые агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для управления запланированными и событийно-управляемыми операциями.  
   
 |||  
@@ -38,7 +39,7 @@ ms.locfileid: "67950374"
 |[sp_add_notification](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)|[sp_help_jobstep](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)|  
 |[sp_add_operator](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)|[sp_help_jobsteplog](../../relational-databases/system-stored-procedures/sp-help-jobsteplog-transact-sql.md)|  
 |[sp_add_schedule](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|[sp_help_notification](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)|  
-|[sp_add_targetservergroup](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)|[sp_help_operator](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)|  
+|[sp_add_targetservergroup](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)|[хранимая процедура sp_help_operator](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)|  
 |[sp_add_targetsvrgrp_member](../../relational-databases/system-stored-procedures/sp-add-targetsvrgrp-member-transact-sql.md)|[sp_help_proxy](../../relational-databases/system-stored-procedures/sp-help-proxy-transact-sql.md)|  
 |[sp_apply_job_to_targets](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)|[sp_help_schedule](../../relational-databases/system-stored-procedures/sp-help-schedule-transact-sql.md)|  
 |[sp_attach_schedule](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)|[sp_help_targetserver](../../relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql.md)|  
@@ -50,16 +51,16 @@ ms.locfileid: "67950374"
 |[sp_delete_jobschedule](../../relational-databases/system-stored-procedures/sp-delete-jobschedule-transact-sql.md)|[sp_msx_set_account](../../relational-databases/system-stored-procedures/sp-msx-set-account-transact-sql.md)|  
 |[sp_delete_jobserver](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)|[sp_notify_operator](../../relational-databases/system-stored-procedures/sp-notify-operator-transact-sql.md)|  
 |[sp_delete_jobstep](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)|[sp_post_msx_operation](../../relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql.md)|  
-|[sp_delete_jobsteplog](../../relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql.md)|[sp_purge_jobhistory](../../relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql.md)|  
+|[sp_delete_jobsteplog, хранимая процедура](../../relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql.md)|[sp_purge_jobhistory, хранимая процедура](../../relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql.md)|  
 |[sp_delete_notification](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)|[sp_remove_job_from_targets](../../relational-databases/system-stored-procedures/sp-remove-job-from-targets-transact-sql.md)s|  
 |[sp_delete_operator](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)|[sp_resync_targetserver](../../relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql.md)|  
 |[sp_delete_proxy](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)|[sp_revoke_login_from_proxy](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)|  
 |[sp_delete_schedule](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)|[sp_revoke_proxy_from_subsystem](../../relational-databases/system-stored-procedures/sp-revoke-proxy-from-subsystem-transact-sql.md)|  
 |[sp_delete_targetserver, хранимая процедура](../../relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql.md)|[sp_start_job](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)|  
 |[sp_delete_targetservergroup](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)|[sp_stop_job](../../relational-databases/system-stored-procedures/sp-stop-job-transact-sql.md)|  
-|[sp_delete_targetsvrgrp_member](../../relational-databases/system-stored-procedures/sp-delete-targetsvrgrp-member-transact-sql.md)|[sp_update_alert](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)|  
+|[sp_delete_targetsvrgrp_member, хранимая процедура](../../relational-databases/system-stored-procedures/sp-delete-targetsvrgrp-member-transact-sql.md)|[sp_update_alert](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)|  
 |[sp_detach_schedule](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)|[sp_update_category](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)|  
-|[sp_enum_login_for_proxy](../../relational-databases/system-stored-procedures/sp-enum-login-for-proxy-transact-sql.md)|[sp_update_job](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)|  
+|[sp_enum_login_for_proxy](../../relational-databases/system-stored-procedures/sp-enum-login-for-proxy-transact-sql.md)|[sp_update_job, хранимая процедура](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)|  
 |[sp_enum_proxy_for_subsystem](../../relational-databases/system-stored-procedures/sp-enum-proxy-for-subsystem-transact-sql.md)|[sp_update_jobschedule](../../relational-databases/system-stored-procedures/sp-update-jobschedule-transact-sql.md)|  
 |[sp_enum_sqlagent_subsystems](../../relational-databases/system-stored-procedures/sp-enum-sqlagent-subsystems-transact-sql.md)|[sp_update_jobstep](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)|  
 |[sp_grant_proxy_to_subsystem](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)|[sp_update_notification](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)|  
@@ -69,7 +70,7 @@ ms.locfileid: "67950374"
 |[sp_help_downloadlist](../../relational-databases/system-stored-procedures/sp-help-downloadlist-transact-sql.md)|[sp_update_targetservergroup](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)|  
 |[sp_help_job](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)||  
   
-## <a name="see-also"></a>См. также  
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

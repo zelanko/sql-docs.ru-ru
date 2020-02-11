@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d67a37e85bd67d80b86a30c21b35de298060985f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63044229"
 ---
 # <a name="server-event-category"></a>Категория событий Server
@@ -28,10 +28,10 @@ ms.locfileid: "63044229"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Описание|  
+|Раздел|Description|  
 |-----------|-----------------|  
-|[Класс событий Mount Tape](mount-tape-event-class.md)|Указывает на получение запроса на заправку ленты.|  
-|[Класс событий Server Memory Change](server-memory-change-event-class.md)|Указывает на изменения в использовании памяти [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
-|[Класс событий Trace File Close](trace-file-close-event-class.md)|Указывает, что файл трассировки был закрыт во время операции переключения на файл продолжения трассировки.|  
+|[Mount Tape, класс событий](mount-tape-event-class.md)|Указывает на получение запроса на заправку ленты.|  
+|[Server Memory Change, класс событий](server-memory-change-event-class.md)|Указывает, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] что использование памяти изменилось.|  
+|[Trace File Close, класс событий](trace-file-close-event-class.md)|Указывает, что файл трассировки был закрыт во время операции переключения на файл продолжения трассировки.|  
   
   

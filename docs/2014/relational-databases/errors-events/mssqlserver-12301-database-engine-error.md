@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3880a4cac81732a75a119b782ad6f925571863fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915852"
 ---
-# <a name="mssqlserver12301"></a>MSSQLSERVER_12301
+# <a name="mssqlserver_12301"></a>MSSQLSERVER_12301
     
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|12301|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
@@ -35,7 +35,7 @@ ms.locfileid: "62915852"
 ## <a name="user-action"></a>Действие пользователя  
  Не используйте столбцы, допускающие значения NULL, в ключе индекса.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выполняющаяся в памяти OLTP (оптимизация в памяти)](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   
