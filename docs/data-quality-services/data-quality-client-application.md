@@ -10,10 +10,10 @@ ms.assetid: 25d1547e-4113-4b34-a9f8-8897db1acf16
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 4a789386fbbef91590ec025787e47c7655753a3b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251737"
 ---
 # <a name="data-quality-client-application"></a>Клиентское приложение DQS
@@ -33,16 +33,16 @@ ms.locfileid: "75251737"
 |----------------------|-----------|  
 |Описывает использование приложения [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .|[Запуск клиентского приложения DQS](../data-quality-services/run-the-data-quality-client-application.md)|  
   
-## <a name="related-content"></a>Похожий контент  
+## <a name="related-content"></a>См. также  
   
 |Описание содержимого|Раздел|  
 |-------------------------|-----------|  
 |Описывает использование баз знаний и доменов в DQS.|[Базы знаний и домены DQS](../data-quality-services/dqs-knowledge-bases-and-domains.md)|  
-|Описывает очистку данных в DQS.|[Очистка данных](../data-quality-services/data-cleansing.md)|  
+|Описывает очистку данных в DQS.|[Data Cleansing](../data-quality-services/data-cleansing.md)|  
 |Описывает выполнение сопоставления в DQS.|[Сопоставление данных](../data-quality-services/data-matching.md)|  
 |Описывает администрирование DQS.|[администрирование DQS](../data-quality-services/dqs-administration.md)|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Главный экран клиента DQS](../data-quality-services/data-quality-client-home-screen.md)  
   
   

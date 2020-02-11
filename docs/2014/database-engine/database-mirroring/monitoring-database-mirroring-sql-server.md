@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 23c8c3c76b881f342f56490e5722a0ae641464ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755368"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>Наблюдение за зеркальным отображением базы данных (SQL Server)
@@ -76,13 +76,13 @@ ms.locfileid: "62755368"
   
      Основные сведения об интерфейсе монитора зеркального отображения баз данных см. в разделе [Database Mirroring Monitor Overview](database-mirroring-monitor-overview.md). Сведения о запуске монитора зеркального отображения базы данных см. в статье [Запуск монитора зеркального отображения баз данных (среда SQL Server Management Studio)](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md).  
   
--   Системные хранимые процедуры.  
+-   Системные хранимые процедуры  
   
      Получить или обновить текущее состояние можно с помощью системной хранимой процедуры **sp_dbmmonitorresults** . Другие хранимые процедуры из группы dbmmonitor позволяют настраивать мониторинг, изменять его параметры, просматривать текущий период обновления и отменять мониторинг на экземпляре сервера.  
   
      В следующей таблице приведены хранимые процедуры для использования мониторинга зеркального отображения и управления им независимо от монитора зеркального отображения баз данных.  
   
-    |Процедура|Описание|  
+    |Процедура|Description|  
     |---------------|-----------------|  
     |[sp_dbmmonitoraddmonitoring](/sql/relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql)|Создает задание, периодически обновляющее сведения о состоянии по каждой зеркально отображаемой базе данных на экземпляре сервера.|  
     |[sp_dbmmonitorchangemonitoring](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql)|Изменяет значение параметра мониторинга зеркального отображения базы данных.|  
@@ -129,7 +129,7 @@ ms.locfileid: "62755368"
   
      Системные администраторы могут использовать системную хранимую процедуру **sp_dbmmonitorresults** для просмотра и, при необходимости, для обновления таблицы состояния, если она не была обновлена в предыдущие 15 секунд. Эта процедура в свою очередь вызывает процедуру **sp_dbmmonitorupdate** и возвращает одну или более строк журнала, в зависимости от количества, запрашиваемого при вызове процедуры. Дополнительные сведения о состоянии в результирующем наборе см. в статье [sp_dbmmonitorresults (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql).  
   
-#### <a name="monitoring-database-mirroring-status-by-dbmmonitor-members"></a>Контроль над состоянием зеркального отображения базы данных (членами роли dbm_monitor)  
+#### <a name="monitoring-database-mirroring-status-by-dbm_monitor-members"></a>Контроль над состоянием зеркального отображения базы данных (членами роли dbm_monitor)  
  Как уже упоминалось, при первом выполнении процедуры **sp_dbmmonitorupdate** в базе данных **msdb** создается предопределенная роль **dbm_monitor** . Члены предопределенной роли базы данных **dbm_monitor** могут просматривать текущее состояние зеркального отображения при помощи монитора зеркального отображения баз данных или хранимой процедуры **sp_dbmmonitorresults** . Но эти пользователи не могут обновлять таблицу состояния. Чтобы узнать возраст отображаемого состояния, пользователь может посмотреть время в метках **Журнал основной базы данных (***\<время>***)** и **Журнал зеркальной базы данных (***\<время>***)** на странице **Состояние**.  
   
  Члены предопределенной роли базы данных **dbm_monitor** для обновления таблицы состояния через определенные промежутки времени полагаются на **Задание монитора зеркального отображения баз данных** . Если это задание не существует или агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] остановлен, состояние постепенно устаревает и может более не отражать реальную конфигурацию сеанса зеркального отображения. Например, после отработки отказа может оказаться, что партнеры используют одинаковую роль основного или зеркального сервера или текущий основной сервер может отображаться как зеркальный, в то время как текущий зеркальный сервер отображается как основной.  
@@ -293,11 +293,11 @@ ms.locfileid: "62755368"
   
  При зеркальном отображении базы данных доступны следующие события.  
   
--   Класс событий**Database Mirroring State Change**   
+-   Класс событий**Database Mirroring State Change**  
   
      Указывает, что состояние зеркального отображения зеркальной базы данных изменилось. Дополнительные сведения см. в статье [Database Mirroring State Change Event Class](../../relational-databases/event-classes/database-mirroring-state-change-event-class.md).  
   
--   Класс событий**Audit Database Mirroring Login**   
+-   Класс событий**Audit Database Mirroring Login**  
   
      Содержит сведения о сообщениях аудита, связанных с безопасностью транспорта зеркального отображения базы данных. Дополнительные сведения см. в статье [Audit Database Mirroring Login Event Class](../../relational-databases/event-classes/audit-database-mirroring-login-event-class.md).  
   

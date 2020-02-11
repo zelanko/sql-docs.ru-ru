@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 013dfc93c5e6acfa22d4283cbb0460a1c8f97c23
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70148770"
 ---
 # <a name="backward-compatibility-in-smo"></a>Обратная совместимость в SMO
@@ -55,7 +55,7 @@ Imports Microsoft.SqlServer.Management.Smo
 Imports Microsoft.SqlServer.Management.Common  
 ```  
   
- Если в коде используется функциональность URN типа **Server.GetSqlSmoObject(Urn)** , необходимо установить связь с пространством имен Microsoft.SqlServer.Management.Sdk.Sfc.  
+ Если в коде используется функциональность URN типа **Server.GetSqlSmoObject(Urn)**, необходимо установить связь с пространством имен Microsoft.SqlServer.Management.Sdk.Sfc.  
   
  Если данный код использует передачу объектов непосредственно, необходимо установить связь с пространством имен Microsoft.SqlServer.Management.SmoExtended.  
   

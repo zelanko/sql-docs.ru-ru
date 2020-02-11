@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fb94a88d749b7d850eee9eff96cd78ef8cf9e08d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913625"
 ---
-# <a name="mssqlserver5512"></a>MSSQLSERVER_5512
+# <a name="mssqlserver_5512"></a>MSSQLSERVER_5512
     
 ## <a name="details"></a>Сведения  
   
@@ -36,6 +36,6 @@ ms.locfileid: "62913625"
  Не удалось выполнить операцию усечения.  
   
 ## <a name="user-action"></a>Действие пользователя  
- Чтобы выяснить причину ошибки, см. конкретный код состояния Windows. Дополнительные сведения об этом коде состояния см. в разделе [события и сообщения об ошибках в службу технической поддержки Майкрософт](https://support.microsoft.com/search?query=events%20and%20error%20messages).  
+ Чтобы выяснить причину ошибки, см. конкретный код состояния Windows. Дополнительные сведения об этом коде состояния см. [в разделе сообщения о событиях и ошибках служба поддержки Майкрософт](https://support.microsoft.com/search?query=events%20and%20error%20messages).  
   
   

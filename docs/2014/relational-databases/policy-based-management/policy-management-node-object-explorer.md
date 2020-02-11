@@ -11,28 +11,28 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: febf8ce34e93f4efffaea1d9a9925ab5c8206652
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62625908"
 ---
 # <a name="policy-management-node-object-explorer"></a>Узел управления политиками (обозреватель объектов)
   Этот раздел содержит приведенные ниже разделы справки F1 для узла **PolicyManagement** обозревателя объектов в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
--   [Диалоговое окно «Создание нового условия» или «Открытие условия», страница «Общие»](../../integration-services/general-page-of-integration-services-designers-options.md)  
+-   [Диалоговое окно "Создание нового условия" или "Открытие условия", страница "Общие"](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
--   [Диалоговое окно «Открытие условия», вкладка «Зависимые политики»](open-condition-dialog-box-dependent-policies-page.md)  
+-   [Диалоговое окно "Открытие условия", вкладка "Зависимые политики"](open-condition-dialog-box-dependent-policies-page.md)  
   
 -   [Диалоговое окно "Расширенное редактирование" (Условие)](advanced-edit-condition-dialog-box.md)  
   
--   [Диалоговое окно «Создание новой политики» или «Открытие политики», страница «Общие»](create-new-policy-or-open-policy-dialog-box-general-page.md)  
+-   [Диалоговое окно "Создание новой политики" или "Открытие политики", страница "Общие"](create-new-policy-or-open-policy-dialog-box-general-page.md)  
   
--   [Диалоговое окно «Создание новой политики» или «Открытие политики», страница «Описание»](create-new-policy-or-open-policy-dialog-box-description-page.md)  
+-   [Диалоговое окно "Создание новой политики" или "Открытие политики", страница "Описание"](create-new-policy-or-open-policy-dialog-box-description-page.md)  
   
--   [Диалоговое окно «Создание нового условия» или «Открытие условия», страница «Описание»](create-new-condition-or-open-condition-dialog-box-description-page.md)  
+-   [Диалоговое окно "Создание нового условия" или "Открытие условия", страница "Описание"](create-new-condition-or-open-condition-dialog-box-description-page.md)  
   
--   [Диалоговое окно «Просмотр политик»](view-policies-dialog-box.md)  
+-   [Диалоговое окно "Просмотр политик"](view-policies-dialog-box.md)  
   
 -   [Диалоговое окно «Выполнение политик», страница «Выбор политики»](evaluate-policies-dialog-box-policy-selection-page.md)  
   
@@ -52,9 +52,9 @@ ms.locfileid: "62625908"
   
 -   [Диалоговое окно «Экспортировать как политику»](export-as-policy-dialog-box.md)  
   
--   [Диалоговое окно «Импорт политик»](import-policies-dialog-box.md)  
+-   [Диалоговое окно "Импорт политик"](import-policies-dialog-box.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Администрирование серверов с помощью управления на основе политик](administer-servers-by-using-policy-based-management.md)  
   
   

@@ -18,13 +18,13 @@ ms.assetid: 63ea7d0d-a567-456e-a778-bee99e21d16c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a9a6812e12366900dfc1c5808eaede727c05f958
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68120049"
 ---
-# <a name="spdeletecategory-transact-sql"></a>sp_delete_category (Transact-SQL)
+# <a name="sp_delete_category-transact-sql"></a>sp_delete_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Удаляет указанную категорию заданий, предупреждений или операторов с текущего сервера.  
@@ -40,29 +40,29 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @class = ] 'class'` Класс добавляемой категории. *Класс* — **varchar(8)** , не по умолчанию и должен иметь одно из следующих значений.  
+`[ @class = ] 'class'`Класс категории. *класс* имеет тип **varchar (8)**, не имеет значения по умолчанию и должен иметь одно из следующих значений.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
-|**JOB**|Удаляет категорию задания.|  
-|**ПРЕДУПРЕЖДЕНИЯ**|Удаляет категорию предупреждения.|  
-|**ОПЕРАТОР**|Удаляет категорию оператора.|  
+|**ДОЛЖНО**|Удаляет категорию задания.|  
+|**ПОЛУЧАЕТЕ**|Удаляет категорию предупреждения.|  
+|**СТАНЦИИ**|Удаляет категорию оператора.|  
   
-`[ @name = ] 'name'` Имя категории, которое необходимо удалить. *имя* — **sysname**, не имеет значения по умолчанию.  
+`[ @name = ] 'name'`Имя удаляемой категории. Аргумент *Name* имеет тип **sysname**и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  None  
   
-## <a name="remarks"></a>Примечания  
- **sp_delete_category** должна запускаться из **msdb** базы данных.  
+## <a name="remarks"></a>Remarks  
+ **sp_delete_category** должны запускаться из базы данных **msdb** .  
   
  Удаление категории относит задания, предупреждения или операторы данной категории в категорию по умолчанию для объектов этих классов.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнять эту процедуру.  
+ Эту процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** .  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере удаляется категория заданий с именем `AdminJobs`.  
@@ -77,10 +77,10 @@ EXEC dbo.sp_delete_category
 GO   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
  [sp_help_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
  [sp_update_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f8e3b2f19d25374a592203cbd4b00f118385d980
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73781680"
 ---
 # <a name="configuring-the-sql-server-odbc-driver---delete-a-data-source"></a>Настройка драйвера ODBC SQL Server — удаление источника данных
@@ -29,7 +29,7 @@ ms.locfileid: "73781680"
   
 ### <a name="to-delete-a-data-source-by-using-odbc-administrator"></a>Удаление источника данных с помощью администратора ODBC  
   
-1.  На **панели управления**откройте **меню Администрирование**, а затем дважды щелкните **Источники данных ODBC (64-разрядная версия)** или **Источники данных ODBC (32-бит)** . Либо можно запустить файл odbcad32.exe из командной строки.  
+1.  На **панели управления**откройте **меню Администрирование**, а затем дважды щелкните **Источники данных ODBC (64-разрядная версия)** или **Источники данных ODBC (32-бит)**. Либо можно запустить файл odbcad32.exe из командной строки.  
   
 2.  Щелкните вкладку **DSN пользователя**, **системное имя DSN**или **Файловый DSN** .  
   
@@ -59,7 +59,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>См. также раздел  
- [Добавление источника &#40;данных ODBC&#41;](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-add-a-data-source.md)  
+## <a name="see-also"></a>См. также:  
+ [Добавление источника данных &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-add-a-data-source.md)  
   
   

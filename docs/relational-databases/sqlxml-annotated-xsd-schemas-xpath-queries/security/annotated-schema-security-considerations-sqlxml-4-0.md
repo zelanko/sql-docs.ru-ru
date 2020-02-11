@@ -22,10 +22,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 87af92866658e2fa5b4f8648e2a22dbf3d1cb13f
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75252513"
 ---
 # <a name="annotated-schema-security-considerations-sqlxml-40"></a>Основные понятия о безопасности схемы с заметками (SQLXML 4.0)
@@ -36,13 +36,13 @@ ms.locfileid: "75252513"
   
 -   Явное задание сопоставления с помощью заметок предоставляет информацию о базе данных (например, об именах таблиц и столбцов). Поэтому бывает нежелательно предоставлять публичный доступ к этим схемам.  
   
--   Выполнение определенных запросов, таких как указанные в схеме сопоставления с рекурсией (указанная с помощью аннотации **max-depth** с более высоким значением), может занять больше времени. При необходимости можно задать предельное время ожидания, задав свойство времени ожидания команды (в секундах). Например:  
+-   Выполнение определенных запросов, таких как указанные в схеме сопоставления с рекурсией (указанная с помощью аннотации **max-depth** с более высоким значением), может занять больше времени. При необходимости можно задать предельное время ожидания, задав свойство времени ожидания команды (в секундах). Пример:  
   
     ```  
     cn.Open "Provider=SQLOLEDB;Server=localhost;Database=tempdb;Integrated Security=SSPI;Command Properties='Command Time Out=50';"  
     ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Схемы XSD с заметками в SQLXML 4.0](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xsd-schemas-in-sqlxml-4-0.md)  
   
   

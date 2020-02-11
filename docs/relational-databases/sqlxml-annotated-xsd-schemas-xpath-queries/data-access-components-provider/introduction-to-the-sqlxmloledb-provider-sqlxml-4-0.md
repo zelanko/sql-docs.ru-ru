@@ -16,10 +16,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7f94cf5002f0f587332df9ccc9a77e24010b8824
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75246678"
 ---
 # <a name="introduction-to-the-sqlxmloledb-provider-sqlxml-40"></a>Введение в поставщик SQLXMLOLEDB (SQLXML 4.0)
@@ -39,13 +39,13 @@ oTestCommand.Execute , , adExecuteStream
 ## <a name="sqlxmloledb-provider-specific-properties"></a>Свойства поставщика SQLXMLOLEDB  
  Поставщик SQLXMLOLEDB имеет следующие характерные для него свойства соединения.  
   
-|Подключение<br /><br /> property|Значение по умолчанию<br /><br /> (если есть)|Описание|  
+|Подключение<br /><br /> property|По умолчанию<br /><br /> (если есть)|Description|  
 |-----------------------------|----------------------------|-----------------|  
 |Поставщик данных||Предоставляет идентификатор PROGID поставщика OLE DB, через который SQLXMLOLEDB выполняет команды. Начиная с SQLXML 4.0 и [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], этот поставщик является частью собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]; поэтому значение этого свойства может быть только «SQLNCLI11». Дополнительные сведения см. в статье [Программирование SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client-programming.md).|  
   
  Поставщик SQLXMLOLEDB имеет следующие характерные для него свойства команды.  
   
-|Команда<br /><br /> property|Значение по умолчанию<br /><br /> (если есть)|Описание|  
+|Get-Help<br /><br /> property|По умолчанию<br /><br /> (если есть)|Description|  
 |--------------------------|----------------------------|-----------------|  
 |Базовый путь|""|Указывает базовый путь к файлу. Базовый путь к файлу используется для указания местоположения файлов языка XSL или схемы сопоставления. Базовый путь к файлу также используется для разрешения относительных путей к файлам схемы XSL или сопоставления, указанным в свойствах схемы XSL или сопоставления.<br /><br /> Пример использования этого свойства см. в разделе [исполнение запросов XPath &#40;поставщика SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md).|  
 |клиентсидексмл|Нет|Если требуется, чтобы процесс преобразования набора строк в XML был выполнен на клиенте, а не на сервере, установите этому свойству значение TRUE. Это полезно, когда необходимо переместить нагрузку производительности на средний уровень.<br /><br /> Пример использования этого свойства см. в статьях [исполнение SQL-запросов &#40;поставщика SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-sql-queries-sqlxmloledb-provider.md) или запуск [шаблонов, содержащих SQL-запросы &#40;&#41;поставщика SQLXMLOLEDB ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md).|  
@@ -58,7 +58,7 @@ oTestCommand.Execute , , adExecuteStream
   
  В следующей таблице содержатся описания значений свойств флагов потока SS.  
   
-|Значение свойства|Описание|  
+|Значение свойства|Description|  
 |--------------------|-----------------|  
 |STREAM_FLAGS_DISALLOW_URL|URL-адреса не принимаются для схем сопоставления или XSL.|  
 |STREAM_FLAGS_DISALLOW_ABSOLTE_PATH|Путь, указываемый для схемы сопоставления или XSL, должен задаваться относительно базового пути самого шаблона.|  

@@ -1,5 +1,5 @@
 ---
-title: Выборка данных BLOB при помощи интерфейса IRow | Документация Майкрософт
+title: Получение данных большого двоичного объекта с помощью IRow | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,22 +17,22 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 06ca087cdb1e2009faa19ff8fb86f9ab4982fddd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62752971"
 ---
 # <a name="fetching-blob-data-using-irow"></a>Выборка данных большого двоичного объекта при помощи интерфейса IRow
-  Столбец BLOB-ОБЪЕКТОВ в объекте строки можно получить с помощью **IRow::GetColumns**, или **IRow::Open** и **ISequentialStream**.  
+  Столбец больших двоичных объектов в объекте Row можно получить с помощью **IRow::** GetObject или **IRow:: Open** и **ISequentialStream**.  
   
 ## <a name="in-this-section"></a>в этом разделе  
   
--   [Выборка данных BLOB с помощью метода IRow::GetColumns и интерфейса ISequentialStream](../../relational-databases/native-client-ole-db-rowsets/fetching-blob-data-using-irow-getcolumns-and-isequentialstream.md)  
+-   [Выборка данных BLOB при помощи метода IRow::GetColumns и интерфейса ISequentialStream](../../relational-databases/native-client-ole-db-rowsets/fetching-blob-data-using-irow-getcolumns-and-isequentialstream.md)  
   
--   [Выборка данных BLOB с помощью метода IRow::Open и интерфейса ISequentialStream](../../relational-databases/native-client-ole-db-rowsets/fetching-blob-data-using-irow-open-and-isequentialstream.md)  
+-   [Выборка данных BLOB при помощи метода IRow::Open и интерфейса ISequentialStream](../../relational-databases/native-client-ole-db-rowsets/fetching-blob-data-using-irow-open-and-isequentialstream.md)  
   
-## <a name="see-also"></a>См. также  
- [Выборка одной строки с помощью интерфейса IRow](../../relational-databases/native-client-ole-db-rowsets/fetching-a-single-row-with-irow.md)  
+## <a name="see-also"></a>См. также:  
+ [Выборка одной строки при помощи интерфейса IRow](../../relational-databases/native-client-ole-db-rowsets/fetching-a-single-row-with-irow.md)  
   
   

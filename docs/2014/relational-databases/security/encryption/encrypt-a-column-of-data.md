@@ -14,10 +14,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: bd0b5824abfc36923909ce37866b221c0bc830d5
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957213"
 ---
 # <a name="encrypt-a-column-of-data"></a>Шифрование столбца данных
@@ -27,15 +27,15 @@ ms.locfileid: "74957213"
   
 -   **Перед началом работы**  
   
-     [Бюллетеня](#Security)  
+     [Безопасность](#Security)  
   
 -   [Шифрование столбца данных с помощью Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a>Перед началом  
+##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Security"></a>Бюллетеня  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a>Чтение  
+####  <a name="Permissions"></a> Permissions  
  Для выполнения приведенных ниже шагов необходимы следующие разрешения.  
   
 -   Разрешение CONTROL на базу данных.  
@@ -46,7 +46,7 @@ ms.locfileid: "74957213"
   
 -   Некоторые разрешения на ключ, также не должно быть запрета на разрешение VIEW DEFINITION.  
   
-##  <a name="TsqlProcedure"></a>Использование Transact-SQL  
+##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>Шифрование столбца данных с помощью простого симметричного шифрования  
   
@@ -174,14 +174,14 @@ ms.locfileid: "74957213"
     GO  
     ```  
   
- Дополнительную информацию см. в следующих разделах.  
+ Дополнительные сведения см. в следующих разделах:  
   
--   [Создание сертификата &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
+-   [CREATE CERTIFICATE (Transact-SQL)](/sql/t-sql/statements/create-certificate-transact-sql)  
   
--   [Создание &#40;ов на основе СИММЕТРИЧНого ключа&#41;Transact-SQL](/sql/t-sql/statements/create-symmetric-key-transact-sql)  
+-   [CREATE SYMMETRIC KEY (Transact-SQL)](/sql/t-sql/statements/create-symmetric-key-transact-sql)  
   
--   [Инструкция ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)  
+-   [ALTER TABLE (Transact-SQL)](/sql/t-sql/statements/alter-table-transact-sql)  
   
--   [Открытый СИММЕТРИЧНЫй ключ &#40;&#41;Transact-SQL](/sql/t-sql/statements/open-symmetric-key-transact-sql)  
+-   [OPEN SYMMETRIC KEY (Transact-SQL)](/sql/t-sql/statements/open-symmetric-key-transact-sql)  
   
   

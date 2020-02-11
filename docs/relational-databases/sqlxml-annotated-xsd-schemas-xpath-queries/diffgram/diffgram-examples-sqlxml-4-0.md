@@ -17,10 +17,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6fe05c49f44bc0e210687b63e0eb8878b479a07f
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257262"
 ---
 # <a name="diffgram-examples-sqlxml-40"></a>Примеры дельт (SQLXML 4.0)
@@ -74,7 +74,7 @@ ms.locfileid: "75257262"
   
      Сохраните данную схему под именем DiffGramSchema.xml в той же папке, где находятся остальные файлы, используемые в примерах.  
   
-## <a name="a-deleting-a-record-by-using-a-diffgram"></a>а. Удаление записи с помощью дельты  
+## <a name="a-deleting-a-record-by-using-a-diffgram"></a>A. Удаление записи с помощью дельты  
  Дельта в этом примере удаляет запись пользователя (с атрибутом CustomerID, имеющим значение ALFKI) из таблицы Cust и удаляет соответствующую запись заказа (с атрибутом OrderID со значением 1) из таблицы Ord.  
   
 ```  
@@ -143,7 +143,7 @@ ms.locfileid: "75257262"
   
      Дополнительные сведения см. [в разделе Использование ADO для выполнения запросов SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-## <a name="b-inserting-a-record-by-using-a-diffgram"></a>B. Вставка записи с помощью дельты  
+## <a name="b-inserting-a-record-by-using-a-diffgram"></a>Б. Вставка записи с помощью дельты  
  В этом примере дельта вставляет по одной записи в таблицы Cust и Ord.  
   
 ```  
@@ -210,7 +210,7 @@ ms.locfileid: "75257262"
   
      Дополнительные сведения см. [в разделе Использование ADO для выполнения запросов SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-## <a name="c-updating-an-existing-record-by-using-a-diffgram"></a>C. Обновление существующей записи с помощью дельты  
+## <a name="c-updating-an-existing-record-by-using-a-diffgram"></a>В. Обновление существующей записи с помощью дельты  
  В этом примере дельта обновляет CompanyName и ContactName для клиента ALFKI.  
   
 ```  
@@ -282,7 +282,7 @@ ms.locfileid: "75257262"
   
      Дополнительные сведения см. [в разделе Использование ADO для выполнения запросов SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-## <a name="d-inserting-updating-and-deleting-records-by-using-a-diffgram"></a>D. Вставка, обновление и удаление записей с помощью дельты  
+## <a name="d-inserting-updating-and-deleting-records-by-using-a-diffgram"></a>Г. Вставка, обновление и удаление записей с помощью дельты  
  В этом примере относительно сложная дельта используется для выполнения операций вставки, обновления и удаления.  
   
 ```  
@@ -391,7 +391,7 @@ ms.locfileid: "75257262"
   
      Дополнительные сведения см. [в разделе Использование ADO для выполнения запросов SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-## <a name="e-applying-updates-by-using-a-diffgram-with-the-diffgrparentid-annotation"></a>E. Применение обновлений с помощью дельты с заметкой diffgr:parentID  
+## <a name="e-applying-updates-by-using-a-diffgram-with-the-diffgrparentid-annotation"></a>Д. Применение обновлений с помощью дельты с заметкой diffgr:parentID  
  В этом примере показано, как заметка **ParentID** , указанная в блоке ** \<Before>** объекта DiffGram, используется при применении обновлений.  
   
 ```  

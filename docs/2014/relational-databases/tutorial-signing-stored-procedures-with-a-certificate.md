@@ -1,5 +1,5 @@
 ---
-title: Учебник. Подписывание хранимых процедур с помощью сертификата | Документация Майкрософт
+title: Руководство. Подписывание хранимых процедур с помощью сертификата | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: daf80492cd6a0d8040d1497e71600c798e7ef96c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62524097"
 ---
 # <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>Учебник. Подписывание хранимых процедур с помощью сертификата
@@ -48,7 +48,7 @@ ms.locfileid: "62524097"
  Каждый блок кода в этом примере объясняется по порядку. Чтобы скопировать весь пример, см. раздел [Пример целиком](#CompleteExample) в конце этого учебника.  
   
 ## <a name="1-configure-the-environment"></a>1. Настройка среды  
- Чтобы задать начальный контекст в этом примере, откройте в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] новый запрос и выполните следующий код, чтобы открыть базу данных [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]. Этот код изменяет контекст базы данных на `AdventureWorks2012`, затем создает новое имя входа сервера и новую учетную запись пользователя базы данных (`TestCreditRatingUser`) с использованием пароля.  
+ Чтобы задать начальный контекст в этом примере, откройте в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] новый запрос и выполните следующий код, чтобы открыть базу данных [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] . Этот код изменяет контекст базы данных на `AdventureWorks2012`, затем создает новое имя входа сервера и новую учетную запись пользователя базы данных (`TestCreditRatingUser`) с использованием пароля.  
   
 ```  
 USE AdventureWorks2012;  
@@ -192,7 +192,7 @@ GO
   
  Дополнительные сведения об инструкции REVERT см. в разделе [REVERT (Transact-SQL)](/sql/t-sql/statements/revert-transact-sql).  
   
-##  <a name="CompleteExample"></a> Полный пример  
+##  <a name="CompleteExample"></a>Полный пример  
  В этом разделе приведен полный код примера.  
   
 ```  
@@ -288,7 +288,7 @@ DROP CERTIFICATE TestCreditRatingCer;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Центр обеспечения безопасности для базы данных Azure SQL и SQL Server Database Engine](security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+## <a name="see-also"></a>См. также:  
+ [Центр безопасности для ядра СУБД SQL Server и Базы данных Azure SQL](security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

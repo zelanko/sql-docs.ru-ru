@@ -13,19 +13,19 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: e9ddec585f530cf57481c56477d5be4aeaedb44a
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957128"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>Ключи шифрования базы данных и SQL Server (компонент Database Engine)
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]использует ключи шифрования для защиты данных, учетных данных и сведений о соединении, хранящихся в базе данных сервера. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]имеет два вида ключей: *симметричный* и *асимметричный*. В симметричных ключах для шифрования и расшифровки данных используется одинаковый пароль. При использовании асимметричных ключей один пароль применяется для шифрования данных ( *открытый* ключ), а другой для расшифровки данных ( *закрытый* ключ).  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] используются ключи шифрования для защиты данных, информации об учетных данных и соединениях, которые хранятся в серверной базе данных. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] существует два вида ключей: *симметричный* и *aсимметричный*. В симметричных ключах для шифрования и расшифровки данных используется одинаковый пароль. При использовании асимметричных ключей один пароль применяется для шифрования данных ( *открытый* ключ), а другой для расшифровки данных ( *закрытый* ключ).  
   
  Используемые в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ключи шифрования представляют собой сочетание открытых, закрытых и симметричных ключей, которые используются для защиты конфиденциальных данных. Симметричный ключ создается во время инициализации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , при первом запуске экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Этот ключ используется [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для шифрования конфиденциальных данных, которые хранятся в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Открытые и закрытые ключи создаются операционной системой и используются для защиты симметричного ключа. Пара из открытого и закрытого ключей создается для каждого экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , который сохраняет конфиденциальные данные в базе данных.  
   
 ## <a name="applications-for-sql-server-and-database-keys"></a>Применения ключей шифрования SQL Server и базы данных  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]содержит два основных приложения для ключей: *главный ключ службы* (SMK), созданный на [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] экземпляре и для экземпляра, и *главный ключ базы данных* (DMK), используемый для базы данных.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает два основных варианта применения ключей: *главный ключ службы* (SMK) создается на экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и для этого экземпляра, а *главный ключ базы данных* (DMK) используется для базы данных.  
   
  Главный ключ службы автоматически создается при первом запуске экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и используется для шифрования пароля связанного сервера, учетных данных или главного ключа базы данных. Главный ключ службы шифруется с помощью ключа локального компьютера и API-интерфейса защиты данных Windows. Этот API-интерфейс использует ключ, получаемый из учетных данных Windows, которые соответствуют учетной записи службы для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и учетным данным компьютера. Главный ключ службы может быть расшифрован лишь той учетной записью службы, под которой он был создан, или участником, имеющим доступ к учетным данным компьютера.  
   
@@ -64,37 +64,37 @@ ms.locfileid: "74957128"
  [Главный ключ службы](service-master-key.md)  
  Дано краткое объяснение главного ключа службы и рекомендации.  
   
- [Расширенное управление ключами &#40;управления РАСШИРЕНным ключом&#41;](extensible-key-management-ekm.md)  
+ [Расширенное управление ключами &#40;EKM&#41;](extensible-key-management-ekm.md)  
  Объясняется, как использовать сторонние системы управления ключами с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="related-tasks"></a>Связанные задачи  
- [Резервное копирование главного ключа службы](back-up-the-service-master-key.md)  
+ [Создание резервной копии главного ключа службы](back-up-the-service-master-key.md)  
   
  [Восстановление главного ключа службы](restore-the-service-master-key.md)  
   
  [Создание главного ключа базы данных](create-a-database-master-key.md)  
   
- [Резервное копирование главного ключа базы данных](back-up-a-database-master-key.md)  
+ [Создание резервной копии главного ключа базы данных](back-up-a-database-master-key.md)  
   
  [Восстановление главного ключа базы данных](restore-a-database-master-key.md)  
   
  [Создание идентичных симметричных ключей на двух серверах](create-identical-symmetric-keys-on-two-servers.md)  
   
- [Расширенное управление ключами с помощью Azure Key Vault &#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)  
+ [Расширенное управление ключами с помощью хранилища ключей Azure (SQL Server)](extensible-key-management-using-azure-key-vault-sql-server.md)  
   
  [Включение TDE с помощью расширенного управления ключами](enable-tde-on-sql-server-using-ekm.md)  
   
-## <a name="related-content"></a>Похожий контент  
- [Создание главного ключа &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-master-key-transact-sql)  
+## <a name="related-content"></a>См. также  
+ [CREATE MASTER KEY (Transact-SQL)](/sql/t-sql/statements/create-master-key-transact-sql)  
   
- [ALTER SERVICE MASTER KEY &#40;&#41;Transact-SQL](/sql/t-sql/statements/alter-service-master-key-transact-sql)  
+ [ALTER SERVICE MASTER KEY (Transact-SQL)](/sql/t-sql/statements/alter-service-master-key-transact-sql)  
   
  [Восстановление главного ключа базы данных](restore-a-database-master-key.md)  
   
-## <a name="see-also"></a>См. также  
- [Резервное копирование и восстановление ключей шифрования Reporting Services](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
- [Удаление и повторное создание ключей шифрования &#40;служб SSRS Configuration Manager&#41;](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
- [Добавление и удаление ключей шифрования для масштабного развертывания &#40;службы SSRS Configuration Manager&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
- [Прозрачное шифрование данных &#40;TDE&#41;](transparent-data-encryption.md)  
+## <a name="see-also"></a>См. также:  
+ [Резервное копирование и восстановление ключей шифрования служб Reporting Services](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
+ [Удаление и повторное создание ключей шифрования (диспетчер конфигурации служб SSRS)](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
+ [Добавление и удаление ключей шифрования для масштабного развертывания (диспетчер конфигурации служб SSRS)](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
+ [Прозрачное шифрование данных (TDE)](transparent-data-encryption.md)  
   
   

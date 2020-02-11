@@ -16,16 +16,16 @@ ms.assetid: f132694a-dd05-405b-9d84-21acce9e564a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d7caca72f684dfb6428361a4550860b3bea3f273
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68126414"
 ---
-# <a name="spscriptsynctrancommands-transact-sql"></a>Хранимая процедура sp_script_synctran_commands (Transact-SQL)
+# <a name="sp_script_synctran_commands-transact-sql"></a>Хранимая процедура sp_script_synctran_commands (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Формирует скрипт, который содержит **sp_addsynctrigger** вызовы должны применяться к подписчикам для обновляемых подписок. Имеется один **sp_addsynctrigger** вызовите для каждой статьи в публикации. Скрипт также содержит **sp_addqueued_artinfo** вызовы, которые создают **MSsubsciption_articles** таблицы, необходимые для обработки очереди публикаций. Эта хранимая процедура выполняется на издателе в базе данных публикации.  
+  Формирует скрипт, содержащий вызовы **sp_addsynctrigger** , применяемые на подписчиках для обновляемых подписок. Существует один **sp_addsynctrigger** вызов для каждой статьи в публикации. Созданный скрипт также содержит **sp_addqueued_artinfoные** вызовы, создающие **MSsubsciption_articles** таблицу, необходимую для обработки публикаций в очереди. Эта хранимая процедура выполняется на издателе в базе данных публикации.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -38,27 +38,27 @@ sp_script_synctran_commands [@publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` — Имя публикации, для которой создается сценарий. *Публикация* — **sysname**, не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'`Имя публикации, для которой создается скрипт. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @article = ] 'article'` — Имя статьи для включения в скрипт. *статья* — **sysname**, значение по умолчанию **все**, которое указывает, все статьи включаются в скрипт.  
+`[ @article = ] 'article'`Имя статьи, для которой создается скрипт. Аргумент *article* имеет тип **sysname**и значение по умолчанию **ALL**, которое указывает, что все статьи включены в скрипт.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="results-set"></a>Результирующий набор  
- **sp_script_synctran_commands** возвращает результирующий набор, состоящий из одного **nvarchar(4000)** столбца. Результирующий набор формирует полные скрипты необходимые для создания **sp_addsynctrigger** и **sp_addqueued_artinfo** вызовы на подписчиках.  
+ **sp_script_synctran_commands** возвращает результирующий набор, состоящий из одного столбца **nvarchar (4000)** . Результирующий набор формирует полные скрипты, необходимые для создания вызовов **sp_addsynctrigger** и **sp_addqueued_artinfo** , применяемых на подписчиках.  
   
-## <a name="remarks"></a>Примечания  
- **sp_script_synctran_commands** используется в репликации моментальных снимков и репликации транзакций.  
+## <a name="remarks"></a>Remarks  
+ **sp_script_synctran_commands** используется в моментальных снимках и репликации транзакций.  
   
- **sp_addqueued_artinfo** используется для очереди обновляемых подписок.  
+ **sp_addqueued_artinfo** используется для обновляемых посредством очередей подписок.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_script_synctran_commands**.  
+ Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_script_synctran_commands**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_addsynctriggers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsynctriggers-transact-sql.md)   
  [sp_addqueued_artinfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addqueued-artinfo-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

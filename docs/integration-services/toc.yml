@@ -30,7 +30,7 @@
           href: ../integration-services/ssis-quickstart-deploy-powershell.md
         - name: 'Развертывание с помощью C#'
           href: ../integration-services/ssis-quickstart-deploy-dotnet.md
-    - name: Выполнить
+    - name: Run (Запустить)
       items:
         - name: Запуск с помощью SSMS
           href: ../integration-services/ssis-quickstart-run-ssms.md
@@ -78,6 +78,8 @@
   href: ../integration-services/integration-services-ssis-development-and-management-tools.md
 - name: Проекты и решения
   href: ../integration-services/integration-services-ssis-projects-and-solutions.md
+- name: SSIS DevOps
+  href: ../integration-services/devops/ssis-devops-overview.md
 - name: Пользовательский интерфейс
   href: ../integration-services/integration-services-user-interface.md
   items:
@@ -325,7 +327,7 @@
               href: ../integration-services/control-flow/select-a-package.md
         - name: задача «Уведомление оператора»
           href: ../integration-services/control-flow/notify-operator-task.md
-        - name: Задача «Перестроение индекса»
+        - name: задача «Перестроение индекса»
           href: ../integration-services/control-flow/rebuild-index-task.md
         - name: Задача «Реорганизация индекса»
           href: ../integration-services/control-flow/reorganize-index-task.md
@@ -444,7 +446,7 @@
         - name: Назначение потоковой передачи данных
           href: ../integration-services/data-flow/data-streaming-destination.md
           items:
-            - name: Пошаговое руководство. Публикация пакета служб SSIS в качестве представления SQL
+            - name: Пошаговое руководство. Публикация пакета служб SSIS в представлении SQL
               href: ../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md
         - name: назначение DataReader
           href: ../integration-services/data-flow/datareader-destination.md
@@ -454,7 +456,7 @@
         - name: назначение «Обработка измерений»
           href: ../integration-services/data-flow/dimension-processing-destination.md
           items:
-            - name: Настраиваемые свойства назначения "Обработка измерений"
+            - name: Пользовательские свойства назначения «Обработка измерений»
               href: ../integration-services/data-flow/dimension-processing-destination-custom-properies.md
         - name: Источник Excel
           href: ../integration-services/data-flow/excel-source.md
@@ -475,7 +477,7 @@
         - name: Источник OData
           href: ../integration-services/data-flow/odata-source.md
           items:
-            - name: "Руководство. Использование источника\_OData"
+            - name: Учебник. Использование источника OData
               href: ../integration-services/data-flow/tutorial-using-the-odata-source.md
             - name: Указание запроса источника OData во время выполнения
               href: ../integration-services/data-flow/modify-odata-source-query-at-runtime.md
@@ -549,7 +551,7 @@
               href: ../integration-services/data-flow/look-up-process-chain.md
             - name: Журнал запросов
               href: ../integration-services/data-flow/request-log.md
-            - name: Предварительный просмотр
+            - name: Preview (Предварительный просмотр)
               href: ../integration-services/data-flow/preview.md
         - name: Назначение SAP BW
           href: ../integration-services/data-flow/sap-bw-destination.md
@@ -819,7 +821,7 @@
           href: ../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md
         - name: <= (меньше или равно) (выражение служб SSIS)
           href: ../integration-services/expressions/less-than-or-equal-to-ssis-expression.md
-        - name: '? , перечислены ниже. (условный оператор) (выражение служб SSIS)'
+        - name: '? : (условный) (выражение служб SSIS)'
           href: ../integration-services/expressions/conditional-ssis-expression.md
     - name: Функции (выражение служб SSIS)
       href: ../integration-services/expressions/functions-ssis-expression.md
@@ -925,13 +927,13 @@
       href: ../integration-services/packages/sql-server-agent-jobs-for-packages.md
     - name: Пакеты балансировки нагрузки на удаленном сервере с использованием агента SQL Server
       href: ../integration-services/packages/load-balancing-packages-on-remote-servers-by-using-sql-server-agent.md
-- name: Масштабирование
+- name: Scale Out
   items:
     - name: Обзор
       href: ../integration-services/scale-out/integration-services-ssis-scale-out.md
     - name: Начало работы с масштабным развертыванием SSIS на одном компьютере
       href: ../integration-services/scale-out/get-started-with-ssis-scale-out-onebox.md
-    - name: "Пошаговое руководство. Настройка Integration Services\_Scale\_Out"
+    - name: Пошаговое руководство. Настройка масштабного развертывания Integration Services
       href: ../integration-services/scale-out/walkthrough-set-up-integration-services-scale-out.md
     - name: Выполнение пакетов в масштабном развертывании
       href: ../integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md
@@ -1460,7 +1462,7 @@
   href: ../integration-services/azure-feature-pack-for-integration-services-ssis.md
 - name: Поддержка Hadoop и HDFS в службах Integration Services (SSIS)
   href: ../integration-services/hadoop-and-hdfs-support-in-integration-services-ssis.md
-- name: Соединитель Microsoft Connector для Oracle
+- name: Соединитель с Oracle (Microsoft)
   href: ../integration-services/data-flow/oracle-connector.md
   items:
     - name: Диспетчер подключений Oracle
@@ -1471,6 +1473,17 @@
       href: ../integration-services/data-flow/oracle-destination.md
     - name: Поддержка типов данных
       href: ../integration-services/data-flow/oracle-data-type-support.md
+- name: Соединитель с Teradata (Microsoft)
+  href: ../integration-services/data-flow/Teradata-connector.md
+  items:
+    - name: Диспетчер подключений Teradata
+      href: ../integration-services/data-flow/Teradata-connection-manager.md
+    - name: Источник Teradata
+      href: ../integration-services/data-flow/Teradata-source.md
+    - name: Назначение Teradata
+      href: ../integration-services/data-flow/Teradata-destination.md
+    - name: Поддержка типов данных
+      href: ../integration-services/data-flow/Teradata-data-type-support.md
 - name: Соединители Microsoft для Oracle и Teradata компании Attunity
   href: ../integration-services/attunity-connectors.md
 - name: мастер импорта и экспорта SQL Server
@@ -1553,7 +1566,7 @@
       href: ../integration-services/change-data-capture/change-data-capture-ssis.md
     - name: Задание интервала для информации об изменениях данных
       href: ../integration-services/change-data-capture/specify-an-interval-of-change-data.md
-    - name: Определение готовности информации об изменениях данных
+    - name: Определение готовности информации об  изменениях данных
       href: ../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md
     - name: Подготовка к запросу информации об изменениях
       href: ../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md
@@ -1636,7 +1649,7 @@
               href: ../integration-services/change-data-capture/how-to-manage-a-cdc-service-from-the-cdc-designer-console.md
             - name: Как создать экземпляр изменения базы данных SQL Server
               href: ../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md
-            - name: Как управлять экземпляром CDC
+            - name: How to Manage a CDC Instance
               href: ../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md
             - name: Как изменить свойства экземпляра CDC
               href: ../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md
@@ -1679,7 +1692,7 @@
               href: ../integration-services/change-data-capture/connection-to-sql-server-for-delete.md
             - name: Создание и изменение службы CDC Oracle
               href: ../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md
-            - name: Управление службой CDC Oracle
+            - name: Manage an Oracle CDC Service
               href: ../integration-services/change-data-capture/manage-an-oracle-cdc-service.md
             - name: Подготовка SQL Server для CDC
               href: ../integration-services/change-data-capture/prepare-sql-server-for-cdc.md
@@ -1717,7 +1730,7 @@
     - name: Создание пакета
       href: ../integration-services/ssis-how-to-create-an-etl-package.md
       items:
-        - name: Урок 1. Создание проекта и основного пакета
+        - name: "Урок\_1. Создание проекта и основного пакета"
           href: ../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md
           items:
             - name: "Занятие\_1–1. Создание проекта служб Integration Services"
@@ -1738,7 +1751,7 @@
               href: ../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md
             - name: 'Занятие 1–9. Проверка учебного пакета, созданного на занятии 1'
               href: ../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md
-        - name: Урок 2. Добавление цикла
+        - name: "Урок\_2. Добавление циклов"
           href: ../integration-services/lesson-2-adding-looping-with-ssis.md
           items:
             - name: "Занятие\_2–1. Копирование пакета, созданного на занятии\_1"
@@ -1749,7 +1762,7 @@
               href: ../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md
             - name: "Занятие\_2–4. Проверка учебного пакета, созданного на занятии\_2"
               href: ../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md
-        - name: Урок 3. Добавление средства ведения журнала
+        - name: "Урок\_3. Добавление ведения журнала"
           href: ../integration-services/lesson-3-add-logging-with-ssis.md
           items:
             - name: "Занятие\_3–1. Копирование пакета, созданного на занятии\_2"
@@ -1758,7 +1771,7 @@
               href: ../integration-services/lesson-3-2-adding-and-configuring-logging.md
             - name: "Занятие\_3–3. Проверка учебного пакета, созданного на занятии\_3"
               href: ../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md
-        - name: 'Занятие 4: Добавление перенаправления потока ошибок'
+        - name: "Урок\_4. Добавление перенаправления потока ошибок"
           href: ../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md
           items:
             - name: "Занятие\_4–1. Копирование пакета, созданного на занятии\_3"
@@ -1771,7 +1784,7 @@
               href: ../integration-services/lesson-4-4-adding-a-flat-file-destination.md
             - name: "Занятие\_4–5. Проверка учебного пакета, созданного на занятии\_4"
               href: ../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md
-        - name: "Занятие\_5.: Добавление конфигураций пакетов в модель развертывания пакета"
+        - name: "Урок\_5. Добавление конфигураций пакетов в модель развертывания пакета"
           href: ../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md
           items:
             - name: "Занятие\_5-1. Копирование пакета, созданного на занятии\_4"
@@ -1782,7 +1795,7 @@
               href: ../integration-services/lesson-5-3-modifying-the-directory-property-configuration-value.md
             - name: "Занятие\_5–4. Проверка учебного пакета, созданного на занятии\_5"
               href: ../integration-services/lesson-5-4-testing-the-lesson-5-tutorial-package.md
-        - name: 'Занятие 6: Использование параметров в модели развертывания проекта'
+        - name: Занятие 6. Использование параметров в модели развертывания проекта
           href: ../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md
           items:
             - name: 'Занятие 6–1. Копирование пакета, созданного на занятии 5'
@@ -1809,14 +1822,14 @@
               href: ../integration-services/lesson-1-4-adding-package-configurations.md
             - name: "Занятие\_1–5. Тестирование обновленных пакетов"
               href: ../integration-services/lesson-1-5-testing-the-updated-packages.md
-        - name: Урок 2. Создание пакета развертывания
+        - name: "Урок\_2. Создание пакета развертывания"
           href: ../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md
           items:
             - name: "Занятие\_2–1. Построение программы развертывания"
               href: ../integration-services/lesson-2-1-building-the-deployment-utility.md
             - name: "Занятие\_2–2. Проверка пакета развертывания"
               href: ../integration-services/lesson-2-2-verifying-the-deployment-bundle.md
-        - name: Урок 3. Установка пакетов
+        - name: "Урок\_3. Установка пакетов"
           href: ../integration-services/lesson-3-install-ssis-packages.md
           items:
             - name: Занятие 3–1. Копирование пакета развертывания

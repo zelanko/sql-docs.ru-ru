@@ -23,10 +23,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 98f2ee047bccf7cd3843fe34aaf8f5caec0dc11a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257467"
 ---
 # <a name="data-type-conversions-and-the-sqldatatype-annotation-sqlxml-40"></a>Преобразования типов данных и аннотации SQL: DataType (SQLXML 4,0)
@@ -42,12 +42,12 @@ ms.locfileid: "75257467"
   
 |Тип данных XSD|Преобразование SQL Server|  
 |-------------------|---------------------------|  
-|Логический|CONVERT(bit, COLUMN)|  
+|Логическое|CONVERT(bit, COLUMN)|  
 |Дата|LEFT(CONVERT(nvarchar(4000), COLUMN, 126), 10)|  
-|decimal|CONVERT(money, COLUMN)|  
+|Decimal|CONVERT(money, COLUMN)|  
 |id/idref/idrefs|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
 |nmtoken/nmtokens|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
-|Время|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
+|Time|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
 |Все остальные|Дополнительное преобразование не выполняется|  
   
 > [!NOTE]  
@@ -56,34 +56,34 @@ ms.locfileid: "75257467"
 ## <a name="mapping-from-sql-server-data-types-to-xsd-data-types"></a>Сопоставление типов данных SQL Server с типами данных XSD  
  Следующая таблица показывает очевидные сопоставления типов данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типам данных XSD. Если известен тип [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в данной таблице показан соответствующий XSD-тип, который можно указать в схеме XSD.  
   
-|Типы данных SQL Server|Тип данных XSD|  
+|Тип данных SQL Server|Тип данных XSD|  
 |--------------------------|-------------------|  
 |**bigint**|**поддерживаем**|  
-|**двоичный**|**base64Binary**|  
-|**версий**|**логическая**|  
+|**binary**|**base64Binary**|  
+|**bit**|**Логическое**|  
 |**типа**|**Строка**|  
-|**DateTime**|**dateTime**|  
-|**decimal**|**decimal**|  
-|**сделать**|**Дважды**|  
+|**datetime**|**dateTime**|  
+|**Decimal**|**Decimal**|  
+|**float**|**double**|  
 |**Эскиз**|**base64Binary**|  
 |**int**|**int**|  
-|**кредита**|**decimal**|  
+|**money**|**Decimal**|  
 |**nchar**|**Строка**|  
-|**типы**|**Строка**|  
+|**ntext**|**Строка**|  
 |**nvarchar**|**Строка**|  
-|**ISNUMERIC**|**decimal**|  
-|**Real**|**сделать**|  
+|**ISNUMERIC**|**Decimal**|  
+|**Real**|**float**|  
 |**smalldatetime**|**dateTime**|  
 |**smallint**|**short**|  
-|**smallmoney**|**decimal**|  
+|**smallmoney**|**Decimal**|  
 |**sql_variant**|**Строка**|  
 |**имеет sysname**|**Строка**|  
 |**полнотекстовым**|**Строка**|  
-|** timestamp**|**dateTime**|  
+|**TIMESTAMP**|**dateTime**|  
 |**tinyint**|**унсигнедбите**|  
 |**varbinary**|**base64Binary**|  
 |**varchar**|**Строка**|  
-|**uniqueidentifier**|**Строка**|  
+|**UNIQUEIDENTIFIER**|**Строка**|  
   
 ## <a name="sqldatatype-annotation"></a>Заметка sql:datatype  
  Для указания типа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] данных используется аннотация **SQL: DataType** . Эта заметка должна быть указана в следующих случаях:  
@@ -99,7 +99,7 @@ ms.locfileid: "75257467"
 ## <a name="examples"></a>Примеры  
  Чтобы создать рабочие образцы на основе следующих примеров, необходимо выполнить определенные требования. Дополнительные сведения см. в разделе [требования для запуска примеров SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-xsdtype"></a>а. Указание заметки xsd:type  
+### <a name="a-specifying-xsdtype"></a>A. Указание заметки xsd:type  
  В этом примере показано, как тип **даты** XSD, заданный с помощью атрибута **xsd: Type** в схеме, влияет на результирующий XML-документ. Схема обеспечивает XML-представление таблицы Sales.SalesOrderHeader в базе данных AdventureWorks.  
   
 ```  
@@ -191,7 +191,7 @@ ms.locfileid: "75257467"
 </Schema>  
 ```  
   
-### <a name="b-specifying-sql-data-type-using-sqldatatype"></a>B. Указание типа данных SQL с помощью заметки sql:datatype  
+### <a name="b-specifying-sql-data-type-using-sqldatatype"></a>Б. Указание типа данных SQL с помощью заметки sql:datatype  
  Рабочий пример см. в разделе пример инструкции для [групповой загрузки XML &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md). В этом примере выполняется массовая загрузка значения идентификатора GUID, включая "{" и "}". Схема в этом примере определяет тип данных **SQL: DataType** , чтобы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] указать значение типа **uniqueidentifier**. В этом примере показано, когда в схеме должно быть указано значение **SQL: DataType** .  
   
   

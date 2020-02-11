@@ -20,10 +20,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0304b2113e6112f5c2777478ae03436d9f24cfb1
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257411"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>Фильтрация значений при помощи sql:limit-field и sql:limit-value (SQLXML 4.0)
@@ -46,7 +46,7 @@ ms.locfileid: "75257411"
   
  В этих примерах для задания запросов XPath к схеме сопоставления XSD используются шаблоны.  
   
-### <a name="a-limiting-the-customer-addresses-returned-to-a-specific-address-type"></a>а. Ограничение адресов заказчиков определенным типом адреса  
+### <a name="a-limiting-the-customer-addresses-returned-to-a-specific-address-type"></a>A. Ограничение адресов заказчиков определенным типом адреса  
  В этом примере база данных содержит две таблицы  
   
 -   Customer (CustomerID, CompanyName)  
@@ -165,7 +165,7 @@ ms.locfileid: "75257411"
 </ROOT>  
 ```  
   
-### <a name="b-limiting-results-based-on-a-discount-value-of-type-real-data"></a>B. Ограничение результатов на основе значения скидки, имеющего тип данных real  
+### <a name="b-limiting-results-based-on-a-discount-value-of-type-real-data"></a>Б. Ограничение результатов на основе значения скидки, имеющего тип данных real  
  В этом примере база данных содержит две таблицы  
   
 -   Orders (OrderID)  
@@ -306,7 +306,7 @@ ms.locfileid: "75257411"
     </root>  
     ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [&#41;с плавающей запятой и реальным &#40;Transact-SQL](../../t-sql/data-types/float-and-real-transact-sql.md)   
  [nchar и nvarchar &#40;Transact-SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
  [Установка SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   

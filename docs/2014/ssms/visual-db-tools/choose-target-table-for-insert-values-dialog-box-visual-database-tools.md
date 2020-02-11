@@ -1,5 +1,5 @@
 ---
-title: Выбор целевой таблицы для вставки значения-диалоговое окно (визуальные инструменты баз данных) | Документация Майкрософт
+title: Диалоговое окно «Выбор целевой таблицы для вставки значений» (визуальные инструменты для баз данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7dc613dd6dcb7e639fff247a84a73812d023fb5c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63255750"
 ---
 # <a name="choose-target-table-for-insert-values-dialog-box-visual-database-tools"></a>Диалоговое окно «Выбор целевой таблицы для вставки» (визуальные инструменты для баз данных)
@@ -25,7 +25,7 @@ ms.locfileid: "63255750"
   
  Выберите таблицу, к которой нужно добавить данные, а затем нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание запросов "Вставка значений" (визуальные инструменты для баз данных)](visual-database-tools.md)  
   
   

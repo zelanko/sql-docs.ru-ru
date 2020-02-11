@@ -11,17 +11,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 56ddfce4fc1812e99870c22eeb0e15be64c5decb
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245625"
 ---
 # <a name="hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode"></a>Требования к оборудованию и программному обеспечению для служб Reporting Services в режиме интеграции с SharePoint
 
   В этом разделе описываются необходимые условия, требования к оборудованию и [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] рекомендации по установке для работы в режиме интеграции с SharePoint. Поскольку для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint требуется сервер SharePoint, большинство требований основаны на среде SharePoint. Для серверов отчетов, работающих в собственном режиме, оборудование должно соответствовать минимальным требованиям для работы [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Дополнительные сведения см. в разделе [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md).  
   
--   [Необходимые компоненты](#bkmk_prereq)  
+-   [Предварительные требования](#bkmk_prereq)  
   
 -   [Требования к базе данных сервера отчетов](#bkmk_report_server_database)  
   
@@ -29,7 +29,7 @@ ms.locfileid: "75245625"
   
 -   [Дополнительные сведения](#bkmk_more_information)  
   
-##  <a name="bkmk_prereq"></a>Требований  
+##  <a name="bkmk_prereq"></a> Предварительные требования  
   
 -   Для локальных установок учетная запись, в которую был выполнен вход при установке SharePoint, и службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] должны быть членами группы администраторов локальной операционной системы. Учетной записи установки не обязательно быть членом группы администраторов фермы SharePoint.  
   

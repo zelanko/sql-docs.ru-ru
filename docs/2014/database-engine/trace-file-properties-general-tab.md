@@ -1,5 +1,5 @@
 ---
-title: Свойства файла (вкладка "Общие") трассировки | Документация Майкрософт
+title: Свойства файла трассировки (вкладка «Общие») | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bf665b0ea1cae89257d6368af9b307845a2cb3c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089611"
 ---
 # <a name="trace-file-properties-general-tab"></a>Свойства файла трассировки (вкладка «Общие»)
@@ -36,19 +36,19 @@ ms.locfileid: "66089611"
  **Тип поставщика трассировки**  
  Тип сервера, обеспечившего трассировку.  
   
- **version**  
+ **Версия**  
  Версия сервера, обеспечившего трассировку.  
   
  **Размер файла (КБ)**  
  Размер файла трассировки в килобайтах (KБ).  
   
- **Создан**  
+ **Создание**  
  Дата и время создания файла трассировки.  
   
- **Изменен**  
+ **Изменено**  
  Дата и время изменения файла трассировки.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Открытие файла трассировки (приложение SQL Server Profiler)](../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
  [Приложение SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)   
  [Шаблоны и разрешения приложения SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)  

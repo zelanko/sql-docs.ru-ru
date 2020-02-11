@@ -1,5 +1,5 @@
 ---
-title: Примеры AppendChunk и GetChunk методы (Visual Basic) | Документация Майкрософт
+title: Примеры методов AppendChunk и-блока (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: c07862b5-e466-46bd-910b-59ac96709cb9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f7183dbc6b54e5560784e5de602a45da8e5a235a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920628"
 ---
-# <a name="appendchunk-and-getchunk-methods-example-vb"></a>Примеры AppendChunk и GetChunk методы (Visual Basic)
-В этом примере используется [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) и [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) методы для заполнения поля изображения с данными из другой записи.  
+# <a name="appendchunk-and-getchunk-methods-example-vb"></a>Примеры методов AppendChunk и-блока (Visual Basic)
+В этом примере [используются методы](../../../ado/reference/ado-api/getchunk-method-ado.md) [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) и an для заполнения поля изображения данными из другой записи.  
   
 ```  
 'BeginAppendChunkVB  
@@ -147,8 +147,8 @@ End Sub
 'EndAppendChunkVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод AppendChunk (ADO)](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
- [Объект field](../../../ado/reference/ado-api/field-object.md)   
- [Метод GetChunk (ADO)](../../../ado/reference/ado-api/getchunk-method-ado.md)   
+ [Объект Field](../../../ado/reference/ado-api/field-object.md)   
+ [Методического фрагмента данных (ADO)](../../../ado/reference/ado-api/getchunk-method-ado.md)   
  [Объект Parameter](../../../ado/reference/ado-api/parameter-object.md)

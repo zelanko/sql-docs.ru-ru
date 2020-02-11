@@ -11,13 +11,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 689c3a734a5b4eb424511da52032dc348b5757ea
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75231798"
 ---
-# <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-azure"></a>Занятие 6. Миграция базы данных с исходного компьютера на конечный компьютер в Azure
+# <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-azure"></a>Занятие 6. Перенос базы данных с исходного локального компьютера на целевой компьютер в Azure
   В этом занятии предполагается, что у вас уже есть другой SQL Server, который может находиться на другом локальном компьютере или на виртуальной машине в Azure. Сведения о том, как создать виртуальную машину SQL Server в Azure, см. в статье [Подготовка виртуальной машины SQL Server в Azure](https://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/). После подготовки SQL Server виртуальной машины в Azure убедитесь, что вы можете подключиться к экземпляру SQL Server на этой виртуальной машине с помощью SQL Server Management Studio на другом компьютере.  
   
  Для этого занятия также предполагается, что вы уже выполнили следующие шаги.  
@@ -146,5 +146,5 @@ ms.locfileid: "75231798"
   
  **Следующее занятие:**  
   
- [Занятие 7. Перемещение файлов данных в службу хранилища Azure](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
+ [Занятие 7. Перенос файлов данных в службу хранилища Azure](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
   

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 07c5118c654faccea2d9bab01040ce17b1d5699a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232471"
 ---
 # <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>Шаг 2. Добавление и настройка контейнера "цикл по каждому элементу"
@@ -91,7 +91,7 @@ ms.locfileid: "75232471"
 ## <a name="next-lesson-task"></a>Следующая задача занятия  
  [Шаг 3. Изменение диспетчера соединений с неструктурированными файлами](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Настройка контейнера «цикл по каждому элементу»](control-flow/foreach-loop-container.md)   
  [Использование переменных в пакетах](use-variables-in-packages.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Интерфейс ADORecordsetConstruction | Документация Майкрософт
+title: Интерфейс Адорекордсетконструктион | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1e1d14255acd4cc7f18abea1c494353ef970903c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920797"
 ---
 # <a name="adorecordsetconstruction-interface"></a>Интерфейс ADORecordsetConstruction
-**ADORecordsetConstruction** интерфейс используется для создания ADO **записей** объект из OLE DB **набора строк** объекта в приложении C/C++.  
+Интерфейс **адорекордсетконструктион** используется для создания объекта **набора записей** ADO из объекта OLE DB **набора строк** в приложении C/C++.  
   
  Этот интерфейс поддерживает следующие свойства:  
   
@@ -31,9 +31,9 @@ ms.locfileid: "67920797"
   
 |||  
 |-|-|  
-|[Глава](../../../ado/reference/ado-api/chapter-property-ado.md)|Чтение и запись.<br />Получает или задает поставщика OLE DB **глава** объект на этом ADO или из **записей** объекта.|  
-|[RowPosition](../../../ado/reference/ado-api/rowposition-property-ado.md)|Чтение и запись.<br />Получает или задает поставщика OLE DB **RowPosition** объект на этом ADO или из **записей** объекта.|  
-|[Функции набора строк](../../../ado/reference/ado-api/rowset-property-ado.md)|Чтение и запись.<br />Получает или задает поставщика OLE DB **набора строк** объект на этом ADO или из **записей** объекта.|  
+|[Глава](../../../ado/reference/ado-api/chapter-property-ado.md)|Чтение и запись.<br />Получает или задает OLE DB объект **главы** от/в этом объекте ADO **Recordset** .|  
+|[ровпоситион](../../../ado/reference/ado-api/rowposition-property-ado.md)|Чтение и запись.<br />Возвращает или задает OLE DB объект **ровпоситион** из или в этом объекте ADO **Recordset** .|  
+|[Набор строк](../../../ado/reference/ado-api/rowset-property-ado.md)|Чтение и запись.<br />Возвращает или задает OLE DB объект **набора строк** из или в этом объекте ADO **Recordset** .|  
   
 ## <a name="methods"></a>Методы  
  Нет.  
@@ -41,17 +41,17 @@ ms.locfileid: "67920797"
 ## <a name="events"></a>События  
  Нет.  
   
-## <a name="remarks"></a>Примечания  
- Учитывая OLE DB **набора строк** объекта (`pRowset`), конструирование объекта ADO **записей** объекта (`adoRs`) равносильно следующие три основные операции:  
+## <a name="remarks"></a>Remarks  
+ При наличии объекта **набора строк** OLE DB`pRowset`() построение объекта **набора записей** ADO (`adoRs`) производится в следующие три основные операции:  
   
-1.  Создайте объект ADO **записей** объекта:  
+1.  Создайте объект **набора записей** ADO.  
   
     ```  
     Recordset20Ptr adoRs;  
     adoRs.CreateInstance(__uuidof(Recordset));  
     ```  
   
-2.  Запрос **IADORecordsetConstruction** интерфейс **записей** объекта:  
+2.  Запросите интерфейс **иадорекордсетконструктион** в объекте **Recordset** :  
   
     ```  
     adoRecordsetConstructionPtr adoRsConstruct=NULL;  
@@ -59,7 +59,7 @@ ms.locfileid: "67920797"
                          (void**)&adoRsConstruct);  
     ```  
   
-3.  Вызовите `IADORecordsetConstruction::put_Rowset` метод свойство для задания OLE DB `Rowset` объекта ADO `Recordset` объекта:  
+3.  Вызовите `IADORecordsetConstruction::put_Rowset` метод Property, чтобы задать объект `Rowset` OLE DB объекта ADO `Recordset` :  
   
     ```  
     IUnknown *pUnk=NULL;  
@@ -67,17 +67,17 @@ ms.locfileid: "67920797"
     adoRsConstruct->put_Rowset(pUnk);  
     ```  
   
- Полученный `adoRs` теперь представляет объект ADO **записей** объект, созданный из OLE DB **набора строк** объекта.  
+ Результирующий `adoRs` объект теперь представляет объект ADO **Recordset** , созданный из объекта OLE DB **Rowset** .  
   
- Можно также создать объект ADO **записей** объект из OLE DB **глава** или **RowPosition** объекта.  
+ Можно также создать объект **набора записей** ADO из OLE DB **главы** или объекта **ровпоситион** .  
   
 ## <a name="requirements"></a>Требования  
- **Версия:** ADO 2.0 и более поздние версии  
+ **Версия:** ADO 2,0 и более поздние версии  
   
- **Библиотека:** msado15.dll  
+ **Библиотека:** Msado15. dll  
   
  **UUID:** 00000283-0000-0010-8000-00AA006D2EA4  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Свойство Rowset (ADO)](../../../ado/reference/ado-api/rowset-property-ado.md)

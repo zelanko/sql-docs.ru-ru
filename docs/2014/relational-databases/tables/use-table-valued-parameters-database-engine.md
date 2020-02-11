@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9cd3f00b89de1d2bad683e7ce7005605d3c61f18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211764"
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>Использование параметров, возвращающих табличные значения (компонент Database Engine)
@@ -30,7 +30,7 @@ ms.locfileid: "68211764"
   
  Возвращающие табличные значения параметры похожи на массивы параметров в OLE DB и ODBC, но они обеспечивают большую гибкость и больше интегрированы с [!INCLUDE[tsql](../../includes/tsql-md.md)]. Преимуществом возвращающих табличные значения параметров также является возможность участия в операциях, основанных на наборах.  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] передает возвращающие табличные значения параметры подпрограммам по ссылке, чтобы избежать создания копий входных данных. Можно создавать и выполнять процедуры [!INCLUDE[tsql](../../includes/tsql-md.md)] с возвращающими табличные значения параметрами и вызывать их из кода [!INCLUDE[tsql](../../includes/tsql-md.md)] , управляемых и собственных клиентов на любом управляемом языке.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] передает возвращающие табличные значения параметры подпрограммам по ссылке, чтобы избежать создания копий входных данных. Можно создавать и выполнять процедуры [!INCLUDE[tsql](../../includes/tsql-md.md)] с возвращающими табличные значения параметрами и вызывать их из кода [!INCLUDE[tsql](../../includes/tsql-md.md)], управляемых и собственных клиентов на любом управляемом языке.  
   
  **В этом разделе:**  
   
@@ -38,12 +38,12 @@ ms.locfileid: "68211764"
   
  [Ограничения](#Restrictions)  
   
- [Возвращающие табличные значения параметры и операции BULK INSERT](#BulkInsert)  
+ [Возвращающие табличные значения параметры и Операции BULK INSERT](#BulkInsert)  
   
  [Пример](#Example)  
   
 ##  <a name="Benefits"></a> Преимущества  
- Область действия возвращающего табличное значение параметра такая же, как и у других параметров, — хранимая процедура, функция или динамический текст [!INCLUDE[tsql](../../includes/tsql-md.md)] . Аналогично область действия у переменной типа table точно такая же, как и у любой другой переменной, созданной с помощью инструкции DECLARE. Возвращающие табличные значения переменные можно объявлять в динамических инструкциях [!INCLUDE[tsql](../../includes/tsql-md.md)] , а затем передавать эти переменные как возвращающие табличные значения параметры хранимым процедурам и функциям.  
+ Область действия возвращающего табличное значение параметра такая же, как и у других параметров, — хранимая процедура, функция или динамический текст [!INCLUDE[tsql](../../includes/tsql-md.md)] . Аналогично область действия у переменной типа table точно такая же, как и у любой другой переменной, созданной с помощью инструкции DECLARE. Возвращающие табличные значения переменные можно объявлять в динамических инструкциях [!INCLUDE[tsql](../../includes/tsql-md.md)], а затем передавать эти переменные как возвращающие табличные значения параметры хранимым процедурам и функциям.  
   
  Возвращающие табличные значения параметры обеспечивают большую гибкость и в некоторых случаях более высокую производительность, чем временные таблицы или другие методы передачи списка параметров. Возвращающие табличные значения параметры имеют следующие преимущества.  
   
@@ -63,23 +63,24 @@ ms.locfileid: "68211764"
   
 -   Кэшируются как временная таблица при использовании в хранимой процедуре. Начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], возвращающие табличное значение параметры также кэшируется для параметризированных запросов.  
   
-##  <a name="Restrictions"></a> Ограничения  
+##  <a name="Restrictions"></a>Ограничения  
  Возвращающие табличные значения параметры имеют следующие ограничения.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не ведет статистику столбцов возвращающих табличные значения параметров.  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не ведет статистику столбцов возвращающих табличные значения параметров.  
   
 -   Возвращающие табличные значения параметры должны передаваться процедурам [!INCLUDE[tsql](../../includes/tsql-md.md)] как входные параметры типа READONLY. Над возвращающими табличные значения параметрами, находящимися в теле процедуры, нельзя выполнять операции DML, такие как UPDATE, DELETE или INSERT.  
   
 -   Возвращающий табличное значение параметр не может быть использован в качестве цели для инструкции SELECT INTO или INSERT EXEC. Возвращающий табличное значение параметр может присутствовать в предложении FROM инструкции SELECT INTO, в строке или хранимой процедуре INSERT EXEC.  
   
-##  <a name="BulkInsert"></a> Возвращающие табличные значения параметры и Операции BULK INSERT  
+##  <a name="BulkInsert"></a>Возвращающие табличные значения параметры и операции BULK INSERT  
  Использование возвращающих табличные значения параметров похоже на другие способы использования переменных, основанных на наборах. Однако применение возвращающих табличные значения параметров при работе с большими наборами данных часто позволяет добиться увеличения производительности. По сравнению с массовыми операциями, имеющими большие начальные затраты, возвращающие табличные значения параметры показывают хорошую производительность при вставке менее 1000 строк.  
   
  Возвращающие табличные значения параметры, используемые повторно, могут использовать кэширование временных таблиц. Это кэширование таблиц позволяет обеспечить лучшую масштабируемость, чем в эквивалентных операциях BULK INSERT. С помощью маленьких операций вставки строк можно добиться небольшого увеличения производительности, применяя списки параметров или пакетные инструкции вместо операций BULK INSERT или возвращающих табличные значения параметров. Однако эти методы сложнее программировать, а производительность быстро падает при увеличении количества строк.  
   
  Возвращающие табличные значения параметры работают также хорошо или даже лучше, чем эквивалентная реализация массива параметров.  
   
-##  <a name="Example"></a> Пример  
+##  <a name="Example"></a>Например  
  В следующем примере используется язык [!INCLUDE[tsql](../../includes/tsql-md.md)] и показывается, как создать тип возвращающего табличное значение параметра, объявить ссылающуюся на него переменную, заполнить список параметров, а затем передать значения хранимой процедуре.  
   
 ```  
@@ -119,13 +120,13 @@ EXEC usp_InsertProductionLocation @LocationTVP;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [CREATE TYPE (Transact-SQL)](/sql/t-sql/statements/create-type-transact-sql)   
- [DECLARE @local_variable (Transact-SQL)](/sql/t-sql/language-elements/declare-local-variable-transact-sql)   
- [sys.types (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-types-transact-sql)   
- [sys.parameters (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-parameters-transact-sql)   
- [sys.parameter_type_usages (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql)   
- [CREATE PROCEDURE (Transact-SQL)](/sql/t-sql/statements/create-procedure-transact-sql)   
- [CREATE FUNCTION (Transact-SQL)](/sql/t-sql/statements/create-function-transact-sql)  
+## <a name="see-also"></a>См. также:  
+ [Создание типа &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-type-transact-sql)   
+ [ОБЪЯВЛЕНИЕ @local_variable &#40;TRANSACT-SQL&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql)   
+ [sys. types &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-types-transact-sql)   
+ [sys. parameters &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-parameters-transact-sql)   
+ [sys. parameter_type_usages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql)   
+ [Создание процедуры &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)   
+ [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql)  
   
   

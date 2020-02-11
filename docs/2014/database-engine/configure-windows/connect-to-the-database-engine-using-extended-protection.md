@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5b1317bc41be836cfad5159339a4e7c90fcfbc83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62811288"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Соединение с компонентом Database Engine с использованием расширенной защиты
@@ -85,7 +85,7 @@ ms.locfileid: "62811288"
   
 1.  В меню **Пуск** выберите последовательно **Все программы**, **Microsoft SQL Server** и **Диспетчер конфигурации SQL Server**.  
   
-2.  Разверните узел **Конфигурация сети SQL Server**, щелкните правой кнопкой мыши **Протоколы для** *\<* Имя_экземпляра *>* , а затем выберите пункт **Свойства**.  
+2.  Разверните узел **Конфигурация сети SQL Server**, щелкните правой кнопкой мыши **Протоколы для** *\<* Имя_экземпляра*>*, а затем выберите пункт **Свойства**.  
   
 3.  Для привязки каналов и служб на вкладке **Дополнительно** установите значение **Расширенная защита** для соответствующих параметров.  
   

@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dc207c4c1bc7ddc2c7c4f590622e04a0f7739375
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62698755"
 ---
 # <a name="get-information-about-dml-triggers"></a>Получение сведений о триггерах DML
@@ -31,7 +31,7 @@ ms.locfileid: "62698755"
   
 -   **Перед началом работы**  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Для получения сведений о триггерах DML используется:**  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62698755"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../security/metadata-visibility-configuration.md).  
   
  OBJECT_DEFINITION, OBJECTPROPERTY, **sp_helptext**  
- Необходимо быть членом роли **public**. Определения пользовательских объектов видимы владельцу объекта или получателям, которым предоставлено одно из следующих разрешений: ALTER, CONTROL, TAKE OWNERSHIP или VIEW DEFINITION. Эти разрешения неявно предоставляются членам предопределенных ролей базы данных **db_owner**, **db_ddladmin**и **db_securityadmin** .  
+ Необходимо быть членом роли **public**. Определения пользовательских объектов видимы владельцу объекта или участникам, которым предоставлены следующие разрешения: ALTER, CONTROL, TAKE OWNERSHIP или VIEW DEFINITION. Эти разрешения неявно предоставляются членам предопределенных ролей базы данных **db_owner**, **db_ddladmin**и **db_securityadmin** .  
   
  **sys.sql_expression_dependencies**  
  Необходимо разрешение VIEW DEFINITION в базе данных и разрешение SELECT на представление **sys.sql_expression_dependencies** в базе данных. По умолчанию разрешение SELECT предоставляется только членам предопределенной роли базы данных **db_owner** . Если разрешения SELECT и VIEW DEFINITION предоставлены другому пользователю, он может просматривать все зависимости в базе данных.  
@@ -71,9 +71,9 @@ ms.locfileid: "62698755"
   
 3.  Разверните узел **Триггеры**, щелкните правой кнопкой мыши нужный триггер и выберите команду **Просмотреть зависимости**.  
   
-4.  Для просмотра объектов, зависящих от триггера DML, в окне **Зависимости объектов** выберите **Объекты, зависящие от \<имя триггера DML>**. Объекты отображаются в области **Зависимости** .  
+4.  Для просмотра объектов, зависящих от триггера DML, в окне **Зависимости объектов** выберите **Объекты, зависящие от \<имя триггера DML>** . Объекты отображаются в области **Зависимости** .  
   
-     Чтобы просмотреть объекты, от которых зависит триггер DML, выберите пункт **Объекты, от которых зависит \<имя триггера DML>**. Объекты отображаются в области **Зависимости** . Разверните каждый узел, чтобы просмотреть все объекты.  
+     Чтобы просмотреть объекты, от которых зависит триггер DML, выберите пункт **Объекты, от которых зависит \<имя триггера DML>** . Объекты отображаются в области **Зависимости** . Разверните каждый узел, чтобы просмотреть все объекты.  
   
 5.  Чтобы получить сведения об объекте, который появляется в области **Зависимости** , щелкните его. В поле **Выбранный объект** сведения указываются в полях **Имя**, **Тип**и **Тип зависимости** .  
   
@@ -202,7 +202,7 @@ WHERE object_id = OBJECT_ID('Person.iuPerson');
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [CREATE TRIGGER (Transact-SQL)](/sql/t-sql/statements/create-trigger-transact-sql)   
  [DROP TRIGGER (Transact-SQL)](/sql/t-sql/statements/drop-trigger-transact-sql)   
  [ENABLE TRIGGER (Transact-SQL)](/sql/t-sql/statements/enable-trigger-transact-sql)   

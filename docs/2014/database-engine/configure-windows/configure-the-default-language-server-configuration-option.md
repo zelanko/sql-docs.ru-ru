@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e0f9a295cb5c49b9a88d70187cd49527df5ba83b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62811679"
 ---
 # <a name="configure-the-default-language-server-configuration-option"></a>Настройка параметра конфигурации сервера «язык по умолчанию»
@@ -28,7 +28,7 @@ ms.locfileid: "62811679"
   
      [Рекомендации](#Recommendations)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Настройка параметра default language с помощью различных средств.**  
   
@@ -36,7 +36,7 @@ ms.locfileid: "62811679"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Дальнейшие действия.**  [После настройки параметра default language](#FollowUp)  
+-   **Дальнейшие действия.**  [после настройки параметра языка по умолчанию](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
@@ -82,16 +82,16 @@ GO
   
  Дополнительные сведения см. в разделе [Параметры конфигурации сервера (SQL Server)](server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. После настройки параметра default language  
+##  <a name="FollowUp"></a>Дальнейшие действия. После настройки параметра языка по умолчанию  
  Параметр вступает в силу немедленно, без перезапуска сервера.  
   
-## <a name="see-also"></a>См. также  
- [CREATE LOGIN (Transact-SQL)](/sql/t-sql/statements/create-login-transact-sql)   
+## <a name="see-also"></a>См. также:  
+ [Создание имени входа &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)   
  [ALTER LOGIN (Transact-SQL)](/sql/t-sql/statements/alter-login-transact-sql)   
- [CREATE USER (Transact-SQL)](/sql/t-sql/statements/create-user-transact-sql)   
- [ALTER USER (Transact-SQL)](/sql/t-sql/statements/alter-user-transact-sql)   
- [CREATE DATABASE (SQL Server Transact-SQL)](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
- [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)   
+ [Создание ПОЛЬЗОВАТЕЛЬСКОГО &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql)   
+ [&#41;Transact-SQL ALTER USER &#40;](/sql/t-sql/statements/alter-user-transact-sql)   
+ [Создание &#40;базы данных SQL Server&#41;Transact-SQL](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
+ [&#41;Transact-SQL ALTER DATABASE &#40;](/sql/t-sql/statements/alter-database-transact-sql)   
  [RECONFIGURE (Transact-SQL)](/sql/t-sql/language-elements/reconfigure-transact-sql)   
  [Параметры конфигурации сервера (SQL Server)](server-configuration-options-sql-server.md)   
  [sp_configure (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  

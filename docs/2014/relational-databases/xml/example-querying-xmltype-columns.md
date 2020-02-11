@@ -1,5 +1,5 @@
 ---
-title: Пример Запросы к столбцам XMLType | Документация Майкрософт
+title: Пример. Запросы к столбцам XMLType | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d91192a8edd4d4ab93f539b9dc359e1be37eecf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62637734"
 ---
-# <a name="example-querying-xmltype-columns"></a>Пример Запросы к столбцам XMLType
+# <a name="example-querying-xmltype-columns"></a>Пример. Запросы к столбцам XMLType
   В следующий запрос включены столбцы типа `xml`. Запрос возвращает идентификатор модели продукта, имя и шаги производства в первом месте из столбца `Instructions` типа `xml`.  
   
 ## <a name="example"></a>Пример  
@@ -48,7 +48,7 @@ GO
  </ProductModelData>  
 ```  
   
- Если в запросе задано имя столбца для XML-документа, возвращаемого XQuery, так как это задано в следующей инструкции `SELECT`, то шаги производства помещаются в элемент, имеющий указанное имя.  
+ Если в запросе задано имя столбца для XML-документа, возвращаемого XQuery, так как это задано в следующей инструкции `SELECT` , то шаги производства помещаются в элемент, имеющий указанное имя.  
   
 ```  
 USE AdventureWorks2012;  
@@ -63,7 +63,7 @@ FOR XML RAW ('ProductModelData')
 go  
 ```  
   
- Это результат:  
+ Результат:  
   
 ```  
 <ProductModelData ProductModelID="5" Name="HL Mountain Frame" />  
@@ -91,7 +91,7 @@ FOR XML RAW ('ProductModelData'), root('MyRoot'), ELEMENTS XSINIL
 go  
 ```  
   
- Это результат:  
+ Результат:  
   
 ```  
 <MyRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
@@ -113,7 +113,7 @@ go
 </MyRoot>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Использование с RAW Mode для FOR XML](use-raw-mode-with-for-xml.md)  
+## <a name="see-also"></a>См. также:  
+ [Использование RAW Mode с FOR XML](use-raw-mode-with-for-xml.md)  
   
   

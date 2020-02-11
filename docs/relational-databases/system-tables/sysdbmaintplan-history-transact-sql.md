@@ -18,33 +18,33 @@ ms.assetid: 02d36f08-ac93-4463-bb59-284c5cd6ed04
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4470b6b5d1b30f5698bf588a04066c50bb4c7197
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68130454"
 ---
-# <a name="sysdbmaintplanhistory-transact-sql"></a>sysdbmaintplan_history (Transact-SQL)
+# <a name="sysdbmaintplan_history-transact-sql"></a>sysdbmaintplan_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Эта таблица хранится в **msdb** базы данных.  
+  Эта таблица хранится в базе данных **msdb** .  
   
  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]  
   
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |**sequence_id**|**int**|Последовательность журнала, содержащая операции планов обслуживания базы данных.|  
-|**plan_id**|**uniqueidentifier**|Идентификатор плана обслуживания базы данных.|  
-|**plan_name**|**sysname**|Имя плана обслуживания базы данных.|  
-|**database_name**|**sysname**|Имя базы данных, связанной с планом обслуживания базы данных.|  
-|**server_name**|**sysname**|Имя системы.|  
-|**Действие**|**nvarchar(128)**|Операции, выполненные планом обслуживания базы данных (например, «Резервное копирование журнала транзакций» и т. д.).|  
-|**succeeded**|**bit**|**0** = успешное завершение **1** = неуспешное завершение|  
+|**plan_id**|**UNIQUEIDENTIFIER**|Идентификатор плана обслуживания базы данных.|  
+|**plan_name**|**имеет sysname**|Имя плана обслуживания базы данных.|  
+|**database_name**|**имеет sysname**|Имя базы данных, связанной с планом обслуживания базы данных.|  
+|**server_name**|**имеет sysname**|Имя системы.|  
+|**оборот**|**nvarchar(128**|Операции, выполненные планом обслуживания базы данных (например, «Резервное копирование журнала транзакций» и т. д.).|  
+|**успешно**|**bit**|**0** = успех **1** = сбой|  
 |**end_time**|**datetime**|Время завершения операции.|  
-|**duration**|**int**|Период времени, требуемый для завершения операции плана обслуживания базы данных.|  
+|**длитель**|**int**|Период времени, требуемый для завершения операции плана обслуживания базы данных.|  
 |**start_time**|**datetime**|Время начала операции.|  
 |**error_number**|**int**|Номер ошибки при сбое.|  
-|**message**|**nvarchar(512)**|Сообщение, созданное **sqlmaint**.|  
+|**Сообщение**|**nvarchar(512)**|Сообщение, созданное с помощью **sqlmaint**.|  
   
   

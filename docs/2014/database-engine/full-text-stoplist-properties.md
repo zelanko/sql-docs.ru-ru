@@ -14,18 +14,18 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 4cfdd308ab7488633721ddaac55d3d926a276b0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779411"
 ---
 # <a name="full-text-stoplist-properties"></a>Свойства полнотекстового списка стоп-слов
   Это диалоговое окно используется для добавления и удаления отдельных стоп-слов, удаления всех стоп-слов указанного языка, а также для очистки текущего списка стоп-слов. Стоп-слово — это часто употребляемое слово, включенное в список стоп-слов. Стоп-слова из этого списка исключаются при полнотекстовом индексировании таблиц, в которых используется список стоп-слов. Дополнительные сведения см. в разделе [Настройка стоп-слов и списков стоп-слов для полнотекстового поиска и управление ими](../relational-databases/search/full-text-search.md).  
   
- **Чтобы использовать SQL Server Management Studio для изменения свойств списка стоп-слов**  
+ **Изменение свойств списка стоп-слов в среде SQL Server Management Studio**  
   
--   [Настройка стоп-слов, списков стоп-слов и управление ими для полнотекстового поиска](../relational-databases/search/full-text-search.md)  
+-   [Настройка и управление стоп-словами и списками стоп-слов для полнотекстового поиска](../relational-databases/search/full-text-search.md)  
   
 ## <a name="options"></a>Параметры  
  **Действие**  
@@ -37,7 +37,7 @@ ms.locfileid: "62779411"
  **Удалить стоп-слово**  
  Удаление стоп-слова из списка.  
   
- **Удалить все Стоп-слова**  
+ **Удалить все стоп-слова**  
  Удаление всех стоп-слов определенного языка.  
   
  **Очистить список стоп-слов**  
@@ -49,12 +49,12 @@ ms.locfileid: "62779411"
  **Язык полнотекстового поиска**  
  Если выбрана команда **Добавить стоп-слово**, **Удалить стоп-слово**или **Удалить все стоп-слова**, выберите язык стоп-слов из списка. Список содержит все языки полнотекстового поиска, поддерживаемые экземпляром сервера.  
   
-## <a name="see-also"></a>См. также  
- [sys.fulltext_stopwords (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql)   
- [sys.fulltext_stoplists (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql)   
- [Настройка стоп-слов, списков стоп-слов и управление ими для полнотекстового поиска](../relational-databases/search/full-text-search.md)   
- [ALTER FULLTEXT STOPLIST (Transact-SQL)](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql)   
- [CREATE FULLTEXT STOPLIST (Transact-SQL)](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)   
- [DROP FULLTEXT STOPLIST (Transact-SQL)](/sql/t-sql/statements/drop-fulltext-stoplist-transact-sql)  
+## <a name="see-also"></a>См. также:  
+ [sys. fulltext_stopwords &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql)   
+ [sys. fulltext_stoplists &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql)   
+ [Настройка стоп-слова и списков для полнотекстового поиска и управление ими](../relational-databases/search/full-text-search.md)   
+ [ALTER FULLTEXT стоп-слов &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql)   
+ [Создание ПОЛНОТЕКСТОВОГО списка стоп-слов &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)   
+ [УДАЛИТЬ ПОЛНОТЕКСТОВЫЙ список стоп-слов &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-fulltext-stoplist-transact-sql)  
   
   

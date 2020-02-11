@@ -1,5 +1,5 @@
 ---
-title: LOCALDB_ERROR_CANNOT_MODIFY_INSTANCE_REGISTRY | Microsoft Docs
+title: LOCALDB_ERROR_CANNOT_MODIFY_INSTANCE_REGISTRY | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8cf44d6a2bda0b9828fec0c3b6e71f08bda20d6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62519338"
 ---
-# <a name="localdberrorcannotmodifyinstanceregistry"></a>LOCALDB_ERROR_CANNOT_MODIFY_INSTANCE_REGISTRY
+# <a name="localdb_error_cannot_modify_instance_registry"></a>LOCALDB_ERROR_CANNOT_MODIFY_INSTANCE_REGISTRY
     
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|265|  
 |Источник события|Среда выполнения локальной базы данных SQL Server 12.0|  
 |Компонент|API среды выполнения локальной базы данных|  

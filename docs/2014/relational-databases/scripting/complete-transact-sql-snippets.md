@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 98c72aad94c34f40538670a7a7c8df945a9c4970
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244929"
 ---
 # <a name="complete-transact-sql-snippets"></a>Завершение фрагментов кода Transact-SQL
@@ -37,8 +37,8 @@ ms.locfileid: "75244929"
   
 3.  Выберите элемент из списка или введите собственный вариант.  
   
-## <a name="see-also"></a>См. также  
- [Вставить фрагменты кода Transact-SQL](insert-transact-sql-snippets.md)   
- [Вставка фрагментов кода на языке Transact-SQL](insert-surround-with-transact-sql-snippets.md)  
+## <a name="see-also"></a>См. также:  
+ [вставлять фрагменты кода Transact-SQL](insert-transact-sql-snippets.md)   
+ [Вставка фрагментов кода окружения Transact-SQL](insert-surround-with-transact-sql-snippets.md)  
   
   

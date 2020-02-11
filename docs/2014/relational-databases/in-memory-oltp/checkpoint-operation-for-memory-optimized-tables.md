@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ddcdec0f624c1d6f70c57e593eaf9da66cbe0419
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63065532"
 ---
 # <a name="checkpoint-operation-for-memory-optimized-tables"></a>Работа контрольной точки для оптимизированных для памяти таблиц
@@ -30,7 +30,7 @@ ms.locfileid: "63065532"
   
  Для оптимизированных для памяти таблиц автоматическая контрольная точка устанавливается, когда размер файла журнала транзакций становится больше 512 МБ с момента создания последней контрольной точки. В эти 512 МБ входят записи журналов транзакций как для таблиц на диске, так и для оптимизированных для памяти таблиц.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание и управление хранилищем для оптимизированных для памяти объектов](creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   

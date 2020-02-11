@@ -19,10 +19,10 @@ ms.assetid: de8a2b04-4673-4beb-b4cf-96a28cdf3a93
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 666e7fdbc080af3ed259dae978bd782e437eae2e
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75557811"
 ---
 # <a name="open-unlock-rename-and-delete-a-data-quality-project---data-quality-services-dqs"></a>Открытие, разблокировка, переименование и удаление проекта качества данных — службы Data Quality Services (DQS)
@@ -31,9 +31,9 @@ ms.locfileid: "75557811"
 
   В этом разделе описывается управление проектом служб DQS с помощью [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] : такие действия, как открытие, разблокирование, переименование и удаление проекта.  
   
-##  <a name="BeforeYouBegin"></a>Перед началом  
+##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="LimitationsRestrictions"></a>Ограничения  
+###  <a name="LimitationsRestrictions"></a> Ограничения  
   
 -   Нельзя открыть заблокированный проект, созданный другим пользователем.  
   
@@ -43,12 +43,12 @@ ms.locfileid: "75557811"
   
 -   Вы можете разблокировать только тот проект служб DQS, который сами создали.  
   
-###  <a name="Prerequisites"></a>Требований  
+###  <a name="Prerequisites"></a> Предварительные требования  
  Для управления должен быть в наличии хотя бы один проект служб DQS.  
   
-###  <a name="Security"></a>Бюллетеня  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a>Чтение  
+####  <a name="Permissions"></a> Permissions  
  Для управления проектом служб DQS необходимо иметь роль dqs_kb_editor или dqs_kb_operator в базе данных DQS_MAIN.  
   
 ##  <a name="Open"></a>Открытие проекта качества данных  
@@ -94,6 +94,6 @@ ms.locfileid: "75557811"
   
 3.  На экране **Открытие проекта** щелкните правой кнопкой мыши созданный вами разблокированный проект служб DQS, затем выберите **Удалить** в контекстном меню.  
   
-4.  Появится сообщение с подтверждением. Нажмите кнопку **Да**.  
+4.  Появится сообщение с подтверждением. Щелкните **Да**.  
   
   

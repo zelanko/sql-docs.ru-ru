@@ -17,17 +17,17 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d187528a8d965cb767f7e79da140a08ad21abe4d
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75247043"
 ---
 # <a name="annotated-xdr-schemas-deprecated-in-sqlxml-40"></a>Схемы XDR с заметками (устарели в SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Схемы XDR с заметками устарели. Дальнейшая разработка этой функции проводиться не будет. Рекомендуется избегать использования данной функции в новых разработках. Вместо этого используйте аннотированные схемы XSD. Можно преобразовать существующие схемы XDR с заметками в схемы XSD. Дополнительные сведения см. [в разделе Преобразование схем XDR с заметками в эквивалентные схемы XSD &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-4-0.md). Дополнительные сведения о нерекомендуемых схемах XDR см. в [документации по SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=202011).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Общие сведения о схемах XSD с заметками &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)  
   
   

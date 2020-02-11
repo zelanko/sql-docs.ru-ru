@@ -1,5 +1,5 @@
 ---
-title: Использование кластеризованных индексов Columnstore | Документация Майкрософт
+title: Использование кластеризованных индексов columnstore | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1e65c3e277eb9a3e5e3703525b9c1ac06b423c96
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773745"
 ---
 # <a name="using-clustered-columnstore-indexes"></a>Использование кластеризованных индексов columnstore
@@ -24,22 +24,22 @@ ms.locfileid: "62773745"
   
  Дополнительные сведения о кластеризованных индексах columnstore см. в разделе [Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md).  
   
-## <a name="contents"></a>Содержание  
+## <a name="contents"></a>Содержимое  
   
--   [Создайте кластеризованный индекс Columnstore](#create)  
+-   [Создание кластеризованного индекса columnstore](#create)  
   
--   [Удаление кластеризованного индекса Columnstore](#drop)  
+-   [Удаление кластеризованного индекса columnstore](#drop)  
   
--   [Загрузка данных в кластеризованный индекс Columnstore](#load)  
+-   [Загрузка данных в кластеризованный индекс columnstore](#load)  
   
--   [Изменение данных в кластеризованном индексе Columnstore](#change)  
+-   [Информация об изменениях в кластеризованном индексе columnstore](#change)  
   
--   [Перестроение кластеризованного индекса Columnstore](#rebuild)  
+-   [Перестроение кластеризованного индекса columnstore](#rebuild)  
   
--   [Реорганизация кластеризованного индекса Columnstore](#reorganize)  
+-   [Реорганизация кластеризованного индекса columnstore](#reorganize)  
   
-##  <a name="create"></a> Создайте кластеризованный индекс Columnstore  
- Чтобы создать кластеризованный индекс columnstore, сначала создайте таблицу rowstore как кучу или кластеризованный индекс и воспользуйтесь [создать КЛАСТЕРИЗОВАННЫЙ индекс COLUMNSTORE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql) инструкцию, чтобы преобразовать таблицу кластеризованный Индекс ColumnStore. Если кластеризованный индекс columnstore должен иметь то же имя, что и кластеризованный индекс, используйте параметр DROP_EXISTING.  
+##  <a name="create"></a>Создание кластеризованного индекса columnstore  
+ Чтобы создать кластеризованный индекс columnstore, сначала создайте таблицу rowstore в виде кучи или кластеризованного индекса, а затем используйте инструкцию [CREATE Clustered COLUMNSTORE index &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql) для преобразования таблицы в кластеризованный индекс columnstore. Если кластеризованный индекс columnstore должен иметь то же имя, что и кластеризованный индекс, используйте параметр DROP_EXISTING.  
   
  В этом примере создается таблица как куча, затем преобразуется в кластеризованный индекс с именем columnstore cci_Simple. В результате таблица rowstore становится таблицей columnstore.  
   
@@ -54,13 +54,13 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci_T1 ON T1;
 GO  
 ```  
   
- Дополнительные примеры см. в разделе "Примеры" в [CREATE CLUSTERED COLUMNSTORE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql).  
+ Дополнительные примеры см. в подразделе "примеры" раздела [CREATE Clustered COLUMNSTORE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql).  
   
-##  <a name="drop"></a> Удаление кластеризованного индекса Columnstore  
- Используйте [DROP INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/drop-index-transact-sql) инструкцию, чтобы удалить кластеризованный индекс columnstore. Эта операция удаляет индекс columnstore и преобразует таблицу columnstore в кучу rowstore.  
+##  <a name="drop"></a>Удаление кластеризованного индекса columnstore  
+ Используйте инструкцию [&#41;Transact-SQL DROP INDEX &#40;](/sql/t-sql/statements/drop-index-transact-sql) , чтобы удалить кластеризованный индекс columnstore. Эта операция удаляет индекс columnstore и преобразует таблицу columnstore в кучу rowstore.  
   
-##  <a name="load"></a> Загрузка данных в кластеризованный индекс Columnstore  
- Можно добавлять данные к существующим кластеризованным индексам columnstore с помощью любого из стандартных методов загрузки.  Например массовой загрузки bcp средства, службы Integration Services и INSERT... SELECT могут загружать данные в кластеризованный индекс columnstore.  
+##  <a name="load"></a>Загрузка данных в кластеризованный индекс columnstore  
+ Можно добавлять данные к существующим кластеризованным индексам columnstore с помощью любого из стандартных методов загрузки.  Например, средство bcp с массовым загрузкой, Integration Services и INSERT... SELECT может загружать данные в кластеризованный индекс columnstore.  
   
  Кластеризованные индексы columnstore используют deltastore, чтобы исключить фрагментацию сегментов столбца в columnstore.  
   
@@ -68,7 +68,7 @@ GO
  Для секционированных данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] сначала назначает каждую строку секции, а затем выполняет операции columnstore для данных в секции. Каждая секция имеет собственную rowgroups и как минимум одно deltastore.  
   
 ### <a name="deltastore-loading-scenarios"></a>Сценарии загрузки Deltastore  
- Строки накапливаются в каждом deltastore до тех пор, пока число строк не достигнет максимального количества строк, допустимого для rowgroup. Когда deltastore будет содержать максимальное количество строк на rowgroup, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] пометит rowgroup как «ЗАКРЫТО». Фоновый процесс, называется «кортежей», находит CLOSED rowgroup и перемещает в columnstore, где группа строк сжимается в сегменты и сегменты столбцов сохраняются в columnstore.  
+ Строки накапливаются в каждом deltastore до тех пор, пока число строк не достигнет максимального количества строк, допустимого для rowgroup. Если deltastore содержит максимальное число строк на группы строк, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] помечает группы строк как "Closed". Фоновый процесс, называемый «переносом кортежей», находит ЗАКРЫТые группы строк и перемещает в columnstore, где группы строк сжимается в сегменты столбцов, а сегменты столбцов хранятся в columnstore.  
   
  Для каждого кластеризованного индекса columnstore может быть несколько deltastore.  
   
@@ -82,10 +82,10 @@ GO
   
 |Строки для массовой загрузки|Строки, добавленные в Columnstore|Строки, добавленные в Deltastore|  
 |-----------------------|-----------------------------------|----------------------------------|  
-|102,000|0|102,000|  
-|145,000|145,000<br /><br /> Размер группы строк: 145,000|0|  
-|1,048,577|1 048 576<br /><br /> Размер группы строк: 1 048 576.|1|  
-|2,252,152|2,252,152<br /><br /> Размеры групп строк: 1 048 576, 1 048 576, 155 000.|0|  
+|102 000|0|102 000|  
+|145,000|145,000<br /><br /> Размер группы строк: 145 000.|0|  
+|1,048,577|1 048 576<br /><br /> Размер группы строк: 1 048 576.|1|  
+|2,252,152|2,252,152<br /><br /> Размер группы строк: 1 048 576, 1 048 576, 155 000.|0|  
   
  В следующем примере показаны результаты загрузки 1 048 577 строк в секцию. Результаты показывают наличие одной СЖАТОЙ rowgroup в columnstore (в виде сжатых сегментов столбцов) и 1 строки в deltastore.  
   
@@ -93,14 +93,14 @@ GO
 SELECT * FROM sys.column_store_row_groups  
 ```  
   
- ![Группа строк и разностная группа строк для пакетной загрузки](../../2014/database-engine/media/sql-server-pdw-columnstore-batchload.gif "Группа строк и разностная группа строк для пакетной загрузки")  
+ ![Элементы rowgroup и deltastore для загрузки пакета](../../2014/database-engine/media/sql-server-pdw-columnstore-batchload.gif "Элементы rowgroup и deltastore для загрузки пакета")  
   
 
   
-##  <a name="change"></a> Изменение данных в кластеризованном индексе Columnstore  
+##  <a name="change"></a>Изменение данных в кластеризованном индексе columnstore  
  Кластеризованные индексы columnstore поддерживают операции DML вставки, обновления и удаления.  
   
- Используйте [вставить &#40;Transact-SQL&#41; ](/sql/t-sql/statements/insert-transact-sql) вставить строку. Строка будет добавлена в deltastore.  
+ Для вставки строки используйте [инструкцию insert &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql) . Строка будет добавлена в deltastore.  
   
  Используйте синтаксис [DELETE (Transact-SQL)](/sql/t-sql/statements/delete-transact-sql) для удаления строки.  
   
@@ -114,8 +114,8 @@ SELECT * FROM sys.column_store_row_groups
   
 -   Если строка находится в deltastore, компонент [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] обновляет строку в deltastore.  
   
-##  <a name="rebuild"></a> Перестроение кластеризованного индекса Columnstore  
- Используйте [CREATE CLUSTERED COLUMNSTORE INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql) или [ALTER INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-index-transact-sql) для полного перестроения существующего кластеризованного индекса. Кроме того, можно использовать инструкцию ALTER INDEX... REBUILD, чтобы перестроить конкретную секцию.  
+##  <a name="rebuild"></a>Перестроение кластеризованного индекса columnstore  
+ Чтобы выполнить полное перестроение существующего кластеризованного индекса columnstore, используйте инструкцию [CREATE Clustered COLUMNSTORE index &#40;Transact-sql&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql) или [ALTER INDEX &#40;&#41;Transact-SQL](/sql/t-sql/statements/alter-index-transact-sql) . Кроме того, можно использовать инструкцию ALTER INDEX... REBUILD для перестроения определенной секции.  
   
 ### <a name="rebuild-process"></a>Процесс перестроения  
  Перестроение кластеризованного индекса columnstore, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
@@ -145,8 +145,8 @@ SELECT * FROM sys.column_store_row_groups
   
      Это гарантирует, что все данные будут храниться в columnstore. Если одновременно выполняется несколько загрузок, то в каждой секции может образоваться несколько deltastore. Перестроение переместит все строки из deltastore в columnstore.  
   
-##  <a name="reorganize"></a> Реорганизация кластеризованного индекса Columnstore  
- Реорганизация кластеризованный индекса columnstore перемещает все ЗАКРЫТЫЕ rowgroups в columnstore. Для реорганизации, использовать [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)с параметром REORGANIZE.  
+##  <a name="reorganize"></a>Реорганизация кластеризованного индекса columnstore  
+ Реорганизация кластеризованный индекса columnstore перемещает все ЗАКРЫТЫЕ rowgroups в columnstore. Чтобы выполнить реорганизацию, используйте [инструкцию ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)с параметром реорганизовать.  
   
  Реорганизация не требуется для перемещения ЗАКРЫТЫХ rowgroup в columnstore. Процесс перемещения кортежей в конечном счете находит все группы строк CLOSED и перемещает их. Но процесс перемещения кортежей является однопотоковым и может не перемещать группы строк достаточно быстро применительно к конкретной рабочей нагрузке.  
   

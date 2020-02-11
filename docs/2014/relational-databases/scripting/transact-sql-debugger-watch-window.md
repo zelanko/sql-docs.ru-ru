@@ -13,17 +13,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6d6f0d0335b07be83d7b34895c08e8ff01dcd67a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242987"
 ---
 # <a name="watch-window"></a>окно просмотра значений
   В окне **Контрольные значения** отображается информация о выбранных выражениях. Может быть открыто четыре окна контрольных значений: **Контрольные значения 1**, **Контрольные значения 2, Контрольные значения 3**и **Контрольные значения 4**. Выражения вычисляются в области текущего кадра стека вызова, который выбран в окне **Стек вызовов** . Чтобы иметь возможность контролировать значения переменных и выражений, необходимо находиться в режиме отладки.  
   
 ## <a name="task-list"></a>Список задач  
- **Доступ к окнам «контрольные значения»**  
+ **Доступ к окнам «Контрольные значения»**  
   
 -   В меню **Отладка** выберите пункт **Окна**, затем пункт **Контрольные значения**и выберите пункт **Контрольные значения 1**, **Контрольные значения 2, Контрольные значения 3**или **Контрольные значения 4**.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "75242987"
 -   Щелкните правой кнопкой мыши выражение и выберите команду **Изменить значение**.  
   
 ## <a name="columns"></a>Столбцы  
- **Безымян**  
+ **Название**  
  Выражения, перечисляемые отладчиком [!INCLUDE[tsql](../../includes/tsql-md.md)] . Поддерживаются следующие выражения:  
   
 -   Переменные.  
@@ -45,7 +45,7 @@ ms.locfileid: "75242987"
   
 -   Инструкции Transact-SQL, возвращающие единственное значение, например SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1.  
   
- **Значений**  
+ **Value**  
  Отображается значение, возвращаемое после оценки отладчиком [!INCLUDE[tsql](../../includes/tsql-md.md)] выражения, указанного в поле **Имя**.  
   
  Если длина выражения больше ширины столбца **Значение** , полное значение отображается в подсказке при перемещении указателя на ячейку **Значение** для этого выражения.  
@@ -55,10 +55,10 @@ ms.locfileid: "75242987"
  **Тип**  
  Отображает тип данных выражения.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Отладчик Transact-SQL](transact-sql-debugger.md)   
  [Сведения отладчика Transact-SQL](transact-sql-debugger-information.md)   
- [Окно локальных переменных](transact-sql-debugger-locals-window.md)   
+ [окно локальных переменных](transact-sql-debugger-locals-window.md)   
  [Окно стека вызовов](transact-sql-debugger-call-stack-window.md)   
- [Диалоговое окно "Быстрая проверка"](transact-sql-debugger-quickwatch-dialog-box.md)   
- [Выражения &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/expressions-transact-sql)  
+ [Диалоговое окно «Быстрая проверка»](transact-sql-debugger-quickwatch-dialog-box.md)   
+ [Выражения (Transact-SQL)](/sql/t-sql/language-elements/expressions-transact-sql)  

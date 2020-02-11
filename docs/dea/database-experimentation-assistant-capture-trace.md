@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
-ms.openlocfilehash: 999fd3f6caca13ecd768a9560915c53c732af27c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 1c87d791d5a5a16ec3b0d07c6a630f133a7f673c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75258532"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76831544"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>Запись трассировки в Database Experimentation Assistant
 
@@ -133,7 +133,7 @@ Database Experimentation Assistant (ДЕА) можно использовать 
 
 - Имя компьютера, на котором работает SQL Server, является допустимым. Для подтверждения попробуйте подключиться к компьютеру, на котором работает SQL Server, с помощью SQL Server Management Studio (SSMS).
 - Конфигурация брандмауэра не блокирует подключения к компьютеру, на котором работает SQL Server.
-- У пользователя есть разрешения, которые перечислены в записи блога [вопросы и ответы о воспроизведении](https://blogs.msdn.microsoft.com/datamigration/2017/03/24/dea-2-0-replay-faq/).
+- Пользователь имеет разрешения, перечисленные в [разделе часто задаваемые вопросы о воспроизведении](https://docs.microsoft.com/sql/dea/database-experimentation-assistant-replay-trace?view=sql-server-ver15#frequently-asked-questions-about-trace-replay).
 - Имя трассировки не соответствует стандартному соглашению о смене\_ключей (захват 1). Вместо этого попробуйте использовать такие имена трассировок\_, как Capture 1A или Capture1.
 
 Ниже приведены некоторые возможные ошибки, которые могут возникнуть, и способы их устранения.
@@ -147,6 +147,6 @@ Database Experimentation Assistant (ДЕА) можно использовать 
 
 Если вы видите другие ошибки с меткой " *код ошибки SQL*", см. раздел [ядро СУБД Errors](https://docs.microsoft.com/sql/relational-databases/errors-events/database-engine-events-and-errors) For detailed descriptions.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 - Сведения о настройке средств распределенное воспроизведение в SQL Server перед воспроизведением захваченной трассировки см. в разделе [настройка распределенное воспроизведение для Database experimentation Assistant](database-experimentation-assistant-configure-replay.md).

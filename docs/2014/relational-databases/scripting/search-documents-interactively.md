@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ac2a15bae8fde50315ab6c7c41f2e3e57973061f
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243292"
 ---
 # <a name="search-documents-interactively"></a>осуществлять поиск в документах в интерактивном режиме
@@ -61,11 +61,11 @@ ms.locfileid: "75243292"
   
  Команда **Заменить все** заменяет все найденные совпадения, включая и те, которые были пропущены нажатием кнопки **Найти далее** . Чтобы отменить команду **Заменить все**, перед тем как закрыть какой-либо файл в меню **Правка** выберите пункт **Отменить** .  
   
-## <a name="see-also"></a>См. также  
- [Добавочный поиск в активном документе](search-an-active-document-incrementally.md)   
+## <a name="see-also"></a>См. также:  
+ [Выполнение добавочного поиска в активном документе](search-an-active-document-incrementally.md)   
  [Поиск и замена](search-and-replace.md)   
  [Поиск документов с помощью списков результатов](search-documents-using-results-lists.md)   
- [Поиск текста с подстановочными знаками](search-text-with-wildcards.md)   
+ [Поиск текста с символами-шаблонами](search-text-with-wildcards.md)   
  [Поиск текста с помощью регулярных выражений](search-text-with-regular-expressions.md)  
   
   

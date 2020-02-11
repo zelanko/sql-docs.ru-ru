@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3ca62d8d45ab5a116ab657646abf2393c69e73c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211809"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>Указание вычисляемых столбцов в таблице
@@ -28,7 +28,7 @@ ms.locfileid: "68211809"
   
      [Ограничения](#Limitations)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Задание вычисляемого столбца с использованием:**  
   
@@ -64,7 +64,7 @@ ms.locfileid: "68211809"
     > [!IMPORTANT]  
     >  Если формула связывает два выражения различных типов данных, то по правилам приоритета типов данных определяется, какой тип данных имеет меньший приоритет и будет преобразован в тип данных с большим приоритетом. Если неявное преобразование не поддерживается, возвращается ошибка «`Error validating the formula for column column_name.`». Используйте функцию CAST или CONVERT, чтобы устранить конфликт типа данных. Например, если столбец типа `nvarchar` объединяется со столбцом типа `int`, то целочисленный тип необходимо преобразовать в `nvarchar`, как показано в следующей формуле: `('Prod'+CONVERT(nvarchar(23),ProductID))`. Дополнительные сведения см. в разделе [Функции CAST и CONVERT (Transact-SQL)](/sql/t-sql/functions/cast-and-convert-transact-sql).  
   
-5.  Выберите **Да** или **Нет** в раскрывающемся списке для дочернего свойства **Материализованный**, чтобы указать, следует ли сохранять данные.  
+5.  Выберите **Да** или **Нет** в раскрывающемся списке для дочернего свойства **Материализованный** , чтобы указать, следует ли сохранять данные.  
   
 6.  В меню **Файл** выберите пункт **Сохранить**_table name_.  
   
@@ -133,6 +133,6 @@ ms.locfileid: "68211809"
   
     ```  
   
-     Дополнительные сведения см. в разделе [ALTER TABLE (Transact-SQL)](/sql/t-sql/statements/alter-table-transact-sql).  
+     Дополнительные сведения см. в разделе [ALTER table &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql).  
   
 ###  <a name="TsqlExample"></a>  

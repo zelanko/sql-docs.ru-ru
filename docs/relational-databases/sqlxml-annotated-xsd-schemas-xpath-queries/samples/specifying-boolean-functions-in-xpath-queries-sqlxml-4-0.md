@@ -18,10 +18,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 18d1f66cde1a40e68d95fa4ef98c4df7c1a608b0
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75252590"
 ---
 # <a name="specifying-boolean-functions-in-xpath-queries-sqlxml-40"></a>Указание логических функций в запросах XPath (SQLXML 4.0)
@@ -30,7 +30,7 @@ ms.locfileid: "75252590"
   
 ## <a name="examples"></a>Примеры  
   
-## <a name="a-specify-the-not-boolean-function"></a>а. Задание логической функции not()  
+## <a name="a-specify-the-not-boolean-function"></a>A. Задание логической функции not()  
  Этот запрос возвращает все ** \<клиентские>** дочерние элементы контекстного узла, не имеющие ** \<порядка>** дочерних элементов:  
   
 ```  
@@ -78,7 +78,7 @@ ms.locfileid: "75252590"
 </ROOT>  
 ```  
   
-## <a name="b-specify-the-true-and-false-boolean-functions"></a>B. Задание логических функций true() и false()  
+## <a name="b-specify-the-true-and-false-boolean-functions"></a>Б. Задание логических функций true() и false()  
  Этот запрос возвращает все ** \<** дочерние элементы>элементов для узла контекста, не имеющие ** \<порядка>** дочерних элементов. В реляционных терминах этот запрос возвращает всех заказчиков, не разместивших ни одного заказа.  
   
 ```  

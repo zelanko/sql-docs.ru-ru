@@ -17,13 +17,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 07f8ecc0e6550fcec63a0b1ebb906cd5ffd3aaf1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62524339"
 ---
-# <a name="tutorial-getting-started-with-the-database-engine"></a>Учебник. Начало работы с ядром СУБД
+# <a name="tutorial-getting-started-with-the-database-engine"></a>Учебник. Приступая к работе с компонентом Database Engine
   Добро пожаловать в учебник «Приступая к работе с компонентом [!INCLUDE[ssDE](../includes/ssde-md.md)] ». Этот учебник предназначен для пользователей, незнакомых с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , установивших выпуск [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]. Этот краткий курс поможет приступить к работе с компонентом [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 ## <a name="what-you-will-learn"></a>Обзор учебника  
@@ -31,10 +31,10 @@ ms.locfileid: "62524339"
   
  Учебник разделен на два занятия.  
   
- [Занятие 1. Подключение к ядру СУБД](lesson-1-connecting-to-the-database-engine.md)  
+ [Занятие 1. Подключение к ядру СУБД](lesson-1-connecting-to-the-database-engine.md)  
  Это занятие учит соединяться с компонентом [!INCLUDE[ssDE](../includes/ssde-md.md)] и позволять соединяться другим пользователям.  
   
- [Занятие 2. Подключение с другого компьютера](lesson-2-connecting-from-another-computer.md)  
+ [Занятие 2. Соединение с другого компьютера](lesson-2-connecting-from-another-computer.md)  
  Это занятие учит соединяться с компонентом [!INCLUDE[ssDE](../includes/ssde-md.md)] с другого компьютера, включая активацию протоколов, настройку портов и настроек брандмауэра.  
   
 ## <a name="requirements"></a>Требования  
@@ -42,9 +42,9 @@ ms.locfileid: "62524339"
   
  Для работы с этим учебником в системе должны быть установлены следующие компоненты:  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] можно установить, запустив программу установки [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] либо выполнив загрузку и установку из [Центра загрузки Майкрософт](https://go.microsoft.com/fwlink/?LinkId=144346).  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]можно установить, запустив [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] программу установки или выполнив загрузку и установку из [центра загрузки Майкрософт](https://go.microsoft.com/fwlink/?LinkId=144346).  
   
-## <a name="see-also"></a>См. также  
- [Учебник. SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  
+## <a name="see-also"></a>См. также:  
+ [Руководство: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  
   
   

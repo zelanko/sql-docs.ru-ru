@@ -26,10 +26,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fd16879f512bf1529bec8dab6679880cd0a6b8dd
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243329"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>Редакторы запросов и текста (среда SQL Server Management Studio)
@@ -64,7 +64,7 @@ ms.locfileid: "75243329"
  **Результаты**  
  Это окно используется для просмотра результатов выполнения запроса. Результаты могут отображаться в окне в виде текста или табличной сетки либо могут быть отправлены в файл. Табличные сетки результатов могут отображаться в виде отдельных окон со вкладками.  
   
- **IntelliSense**  
+ **технология IntelliSense**  
  Чтобы просмотреть параметры технологии **IntelliSense, в меню** Правка **редактора выберите пункт**Технология IntelliSense [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  **Выделение цветом**  
@@ -76,7 +76,7 @@ ms.locfileid: "75243329"
  **Шаблон**  
  Шаблоны — это файлы, содержащие базовый набор инструкций, необходимых для создания объектов в базе данных. Они могут использоваться для ускорения разработки скриптов.  
   
- **Ошибка**  
+ **Сообщения**  
  Отображают ошибки, предупреждения и информационные сообщения, возвращаемые сервером в ходе выполнения скрипта. Список сообщений изменяется только при повторном запуске скрипта.  
   
  **Строка состояния**  
@@ -107,7 +107,7 @@ ms.locfileid: "75243329"
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Описывает способы просмотра и использования базовых функций редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Редактор запросов ядро СУБД &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)|  
+|Описывает способы просмотра и использования базовых функций редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Редактор запросов компонента Database Engine (среда SQL Server Management Studio)](database-engine-query-editor-sql-server-management-studio.md)|  
 |Описывает способы просмотра и использования базовых функций редактора запросов многомерных выражений.|[Редактор запросов многомерных выражений &#40;Analysis Services многомерных данных&#41;](../../analysis-services/mdx-query-editor-analysis-services-multidimensional-data.md)|  
 |Описывает способы просмотра и использования базовых функций редактора DMX-запросов.|[Редактор DMX-запросов &#40;Analysis Services — интеллектуальный анализ данных&#41;](../../analysis-services/dmx-query-editor-analysis-services-data-mining.md)|  
 |Описывает способы просмотра и использования базовых функций редактора запросов XML/A.|[Редактор XML &#40;SQL Server Management Studio&#41;](xml-editor-sql-server-management-studio.md)|  
@@ -121,12 +121,12 @@ ms.locfileid: "75243329"
 |Описывает способ перетаскивания текста с одного места в скрипте в другое.|[Перетаскивание текста](drag-and-drop-text.md)|  
 |Описывает выполнение глобального поиска и замены, например при изменении имен столбцов.|[Поиск и замена](search-and-replace.md)|  
 |Описывает установку закладок для более легкого поиска важных элементов кода.|[Управление закладками](../native-client-ole-db-rowsets/bookmarks.md)|  
-|Описывает вывод скриптов или результатов в окно или сетку.|[Печать кода и результатов](print-code-and-results.md)|  
+|Описывает вывод скриптов или результатов в окно или сетку.|[Печать кода и результаты](print-code-and-results.md)|  
 |Описывает использование функций sqlcmd в редакторе запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Изменение скриптов SQLCMD при помощи редактора запросов](edit-sqlcmd-scripts-with-query-editor.md)|  
 |Описывает использование функций IntelliSense, например автоподстановки имен объектов при их вводе пользователем или обеспечение установки точек останова в допустимых местах.|[SQL Server Management Studio &#40;IntelliSense&#41;](intellisense-sql-server-management-studio.md)|  
-|Описывает использование фрагментов кода в редакторе запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Фрагменты кода — это шаблоны часто используемых инструкций или блоков. Их можно настроить или расширить, включив в них фрагменты, специфичные для сайта.|[Фрагменты кода Transact-SQL](transact-sql-code-snippets.md)|  
+|Описывает использование фрагментов кода в редакторе запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Фрагменты кода — это шаблоны часто используемых инструкций или блоков. Их можно настроить или расширить, включив в них фрагменты, специфичные для сайта.|[Фрагменты кода [Transact-SQL]](transact-sql-code-snippets.md)|  
 |Описывает использование отладчика [!INCLUDE[tsql](../../includes/tsql-md.md)] для пошагового просмотра кода и просмотра отладочных данных, например значений переменных и параметров.|[Отладчик Transact-SQL](transact-sql-debugger.md)|  
 |Описывает настройку пользовательских цветов для различных экземпляров компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]и задание этих цветов в качестве фонового цвета для строки состояния в окнах редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Строка состояния &#40;редактор запросов ядро СУБД&#41;](status-bar-database-engine-query-editor.md)|  
   
-## <a name="see-also"></a>См. также  
- [SQL Server Management Studio сочетаний клавиш](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
+## <a name="see-also"></a>См. также:  
+ [Сочетания клавиш среды SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  

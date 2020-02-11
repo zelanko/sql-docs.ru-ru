@@ -13,10 +13,10 @@ ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 070ef5db87ac28b59f01e3927f876f9c757e6caa
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245471"
 ---
 # <a name="create-a-cross-domain-rule"></a>Создание междоменного правила
@@ -33,14 +33,14 @@ ms.locfileid: "75245471"
   
  Междоменные правила рассматриваются после всех простых правил, затрагивающих только один домен. Только если для значения выполняются простые правила (если они существуют), к нему применяется междоменное правило. Составной домен и отдельные домены, для которых выполняется правило, должны быть определены, прежде чем правило будет применяться.  
   
-##  <a name="BeforeYouBegin"></a>Перед началом  
+##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Prerequisites"></a>Требований  
+###  <a name="Prerequisites"></a> Предварительные требования  
  Чтобы создать междоменное правило, необходимо предварительно создать и открыть составной домен.  
   
-###  <a name="Security"></a>Бюллетеня  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a>Чтение  
+####  <a name="Permissions"></a> Permissions  
  Для создания междоменного правила необходимо иметь в базе данных DQS_MAIN роль dqs_administrator или dqs_kb_editor.  
   
 ##  <a name="Create"></a>Создание междоменных правил  

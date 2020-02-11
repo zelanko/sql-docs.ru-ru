@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 21c8de3e6903a28ad8358431f5e455df31d3044e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097953"
 ---
-# <a name="setservicestate-method-wmi-msreportserverconfigurationsetting"></a>Метод SetServiceState (WMI MSReportServer_ConfigurationSetting)
+# <a name="setservicestate-method-wmi-msreportserver_configurationsetting"></a>Метод SetServiceState (WMI MSReportServer_ConfigurationSetting)
   Включает и выключает службу Windows и веб-службу сервера отчетов.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -46,21 +46,21 @@ public void SetSecureConnectionLevel(Boolean EnableWindowsService,
  Значение `Boolean`, которое показывает состояние службы Windows. Значение `true` запускает службу Windows сервера отчетов; значение `false` останавливает службу Windows.  
   
  *EnableWebService*  
- Объект `Boolean` значение, указывающее состояние [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] веб-службы. Значение `true` запускает веб-службу сервера отчетов; значение `false` останавливает веб-службу.  
+ `Boolean` Значение, указывающее состояние [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] веб-службы. Значение `true` запускает веб-службу сервера отчетов; значение `false` останавливает веб-службу.  
   
  *EnableReportManager*  
  Значение `Boolean`, которое показывает требуемое состояние диспетчера отчетов.  
   
- *HRESULT*  
+ *СОСТАВ*  
  [out] Значение, которое указывает, окончился ли вызов успехом или сбоем.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение *HRESULT* , являющееся признаком успешного или неуспешного завершение вызова метода. Значение 0 указывает, что вызов метода завершился успешно. Ненулевое значение указывает, что произошла ошибка.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="requirements"></a>Требования  
- **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Пространство имен:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

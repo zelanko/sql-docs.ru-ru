@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ab8db976275a60cfbf1e0afb78457afad18fc366
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63012261"
 ---
 # <a name="accessing-the-soap-api"></a>Доступ к API-интерфейсу SOAP
@@ -41,7 +41,7 @@ ms.locfileid: "63012261"
   
 -   Конечная точка <xref:ReportExecution2005> позволяет разработчикам программным образом обрабатывать и подготавливать к просмотру отчеты на сервере отчетов. Обратиться к WSDL-файлу данной конечной точки можно по адресу `ReportExecution2005.asmx?wsdl`  
   
- WSDL-файл может использоваться пакетами разработки, поддерживающими SOAP и веб-службы, например пакетом SDK [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
+ WSDL может использоваться пакетами разработки, поддерживающими SOAP и веб-службы, например [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] пакетом SDK.  
   
  В следующем примере показывается формат URL-адреса управляющего WSDL-файла служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]:  
   
@@ -51,15 +51,15 @@ http://server/reportserver/ReportService2010.asmx?wsdl
   
  В следующей таблице описывается каждый элемент URL-адреса.  
   
-|Элемент URL-адреса|Описание|  
+|Элемент URL-адреса|Description|  
 |-----------------|-----------------|  
-|*server*|Имя сервера, на котором развернут сервер отчетов.|  
-|*reportserver*|Имя папки, в которой содержится веб-служба XML. Данный элемент настраивается во время установки.|  
-|*\<имя конечной точки>.asmx*|Имя конечной точки веб-службы.|  
+|*сервером*|Имя сервера, на котором развернут сервер отчетов.|  
+|*ReportServer*|Имя папки, в которой содержится веб-служба XML. Данный элемент настраивается во время установки.|  
+|*\<имя конечной точки>. asmx*|Имя конечной точки веб-службы.|  
   
  Дополнительные сведения о формате WSDL см. в спецификации языка WSDL см. на веб-сайте консорциума W3C: http://www.w3.org/TR/wsdl.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание приложений с помощью веб-службы и .NET Framework](net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Веб-службы сервера отчетов](report-server-web-service.md)  
   

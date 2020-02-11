@@ -1,5 +1,5 @@
 ---
-title: Примеры AppendChunk и GetChunk методы (Visual C++) | Документация Майкрософт
+title: Примеры методов AppendChunk и-блока (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 51aa99be-d5ca-46ac-8b3f-1b03ce4f0b2a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e68bbb558a3cc7fef9428fd63a4fecc4881c997d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 991c295f5437d16ed10aafeacf184722046941a8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67920610"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76922563"
 ---
 # <a name="appendchunk-and-getchunk-methods-example-vc"></a>Примеры методов AppendChunk и GetChunk (Visual C++)
-В этом примере используется [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) и [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) методы для заполнения поля изображения с данными из другой записи.  
+В этом примере [используются методы](../../../ado/reference/ado-api/getchunk-method-ado.md) [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) и an для заполнения поля изображения данными из другой записи.  
   
 ```  
 // BeginAppendChunkCpp.cpp  
@@ -183,7 +183,7 @@ void AppendChunkX() {
       while (lngOffSet < lngLogoSize) {  
          varChunk = pRstPubInfo->Fields->Item["logo"]->GetChunk(ChunkSize);  
   
-         // Copy the data only upto the Actual Size of Field.    
+         // Copy the data only up to the Actual Size of Field.    
          for (long index = 0 ; index <= (ChunkSize - 1) ; index++) {  
             hr = SafeArrayGetElement(varChunk.parray, &index, &chData);  
             if (SUCCEEDED(hr)) {  
@@ -265,7 +265,7 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод AppendChunk (ADO)](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
- [Объект field](../../../ado/reference/ado-api/field-object.md)   
+ [Объект Field](../../../ado/reference/ado-api/field-object.md)   
  [Метод GetChunk (ADO)](../../../ado/reference/ado-api/getchunk-method-ado.md)

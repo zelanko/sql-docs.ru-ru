@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 41d215d4d6e288b74e69e0ea8266c442a0726220
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243070"
 ---
 # <a name="transact-sql-debugger-information"></a>Сведения отладчика Transact-SQL
@@ -95,14 +95,14 @@ ms.locfileid: "75243070"
   
  Когда редактор запросов находится в режиме отладки, вкладки **Результаты** и **Сообщения** остаются активными. На вкладке **Результаты** продолжают отображаться результирующие наборы от инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] , которые выполняются во время сеанса отладки. На вкладке **Сообщения** продолжают отображаться такие сообщения, как *xx* строк затронуто, а также вывод инструкций PRINT и RAISERROR.  
   
-## <a name="see-also"></a>См. также  
- [Окно локальных переменных](transact-sql-debugger-locals-window.md)   
- [Окно контрольных значений](transact-sql-debugger-watch-window.md)   
- [Диалоговое окно "Быстрая проверка"](transact-sql-debugger-quickwatch-dialog-box.md)   
+## <a name="see-also"></a>См. также:  
+ [окно локальных переменных](transact-sql-debugger-locals-window.md)   
+ [окно просмотра значений](transact-sql-debugger-watch-window.md)   
+ [Диалоговое окно «Быстрая проверка»](transact-sql-debugger-quickwatch-dialog-box.md)   
  [Окно точек останова](transact-sql-debugger-breakpoints-window.md)   
  [Окно стека вызовов](transact-sql-debugger-call-stack-window.md)   
  [Окно потоков](transact-sql-debugger-threads-window.md)   
- [окно вывода](transact-sql-debugger-output-window.md)   
+ [Окно вывода](transact-sql-debugger-output-window.md)   
  [Отладчик Transact-SQL](transact-sql-debugger.md)  
   
   

@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: c48db11ae347d1fb1c2a393e440aebb0c80def54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62912138"
 ---
 # <a name="sqlservice-class"></a>Класс SqlService
@@ -30,7 +30,7 @@ ms.locfileid: "62912138"
   
  Класс [SqlService](sqlservice-class.md) используется для программного управления службой [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Работая с объектом класса [SqlService](sqlservice-class.md) , можно выполнять следующие задачи:  
   
--   соединяться со службой;  
+-   Подключение к службе.  
   
 -   изменять учетную запись и пароль, которые используются для соединения со службой;  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62912138"
   
 -   проверять свойства службы.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Запуск и остановка служб](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

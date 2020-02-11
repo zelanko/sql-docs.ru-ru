@@ -28,10 +28,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3526595d169f5283f849017f1fabec24f33d553c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75255992"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>Обновление данных при помощи диаграмм обновления XML (SQLXML 4.0)
@@ -93,7 +93,7 @@ ms.locfileid: "75255992"
   
 -   В большинстве примеров задействован образец базы данных AdventureWorks. Все обновления применяются к таблицам в этой базе данных. Базу данных AdventureWorks можно восстановить.  
   
-### <a name="a-updating-a-record"></a>а. Обновление записи  
+### <a name="a-updating-a-record"></a>A. Обновление записи  
  Следующая диаграмма обновления используется для изменения фамилии сотрудника в таблице Person.Contact базы данных AdventureWorks на Fuller. В диаграмме обновления не задана схема сопоставления, поэтому применяется сопоставление по умолчанию.  
   
 ```  
@@ -121,7 +121,7 @@ ms.locfileid: "75255992"
 
      Дополнительные сведения см. [в разделе Использование ADO для выполнения запросов SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-### <a name="b-updating-multiple-records-by-using-the-updgid-attribute"></a>B. Обновление нескольких записей с помощью атрибута updg:id  
+### <a name="b-updating-multiple-records-by-using-the-updgid-attribute"></a>Б. Обновление нескольких записей с помощью атрибута updg:id  
  В данном примере диаграмма обновления выполняет два обновления в таблице HumanResources.Shift в базе данных AdventureWorks.  
   
 -   Имя исходной дневной смены, начинающейся в 7:00, меняется с «Day» на «Early Morning».  
@@ -157,7 +157,7 @@ ms.locfileid: "75255992"
   
      Дополнительные сведения см. [в разделе Использование ADO для выполнения запросов SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-### <a name="c-specifying-multiple-before-and-after-blocks"></a>C. Указание нескольких \<> и \<после блоков>  
+### <a name="c-specifying-multiple-before-and-after-blocks"></a>В. Указание нескольких \<> и \<после блоков>  
  Чтобы избежать неоднозначности, можно написать диаграмма обновления в примере б с помощью нескольких ** \<>** и ** \<после>** пар блоков. Указание ** \<Before>** и ** \<после>** пар — один из способов указания нескольких обновлений с минимальными путаницами. Кроме того, если каждый из блоков ** \<Before>** и ** \<After>** указал не более одного элемента, не нужно использовать атрибут **атрибута updg: ID** .  
   
 > [!NOTE]  
@@ -194,7 +194,7 @@ ms.locfileid: "75255992"
   
      Дополнительные сведения см. [в разделе Использование ADO для выполнения запросов SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-### <a name="d-specifying-multiple-sync-blocks"></a>D. Указание нескольких \<блоков синхронизации>  
+### <a name="d-specifying-multiple-sync-blocks"></a>Г. Указание нескольких \<блоков синхронизации>  
  В диаграмма обновления можно указать несколько ** \<блоков Sync>** . Каждый указанный блок ** \<>синхронизации** является независимой транзакцией.  
   
  В следующем диаграмма обновления блок ** \<Sync>** обновляет запись в таблице Sales. Customer. Для простоты в диаграмме обновления указаны только обязательные значения столбцов: идентификатор (CustomerID) и обновляемое значение (SalesPersonID).  
@@ -260,7 +260,7 @@ ms.locfileid: "75255992"
   
      Дополнительные сведения см. [в разделе Использование ADO для выполнения запросов SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-### <a name="e-using-a-mapping-schema"></a>E. Использование схемы сопоставления  
+### <a name="e-using-a-mapping-schema"></a>Д. Использование схемы сопоставления  
  В этом примере диаграмма обновления указывает схему сопоставления с помощью атрибута **Mapping-Schema** . (сопоставление по умолчанию отсутствует; это означает, что сопоставление элементов и атрибутов в диаграмме обновления с таблицами и столбцами базы данных производится согласно схеме сопоставления).  
   
  Элементы и атрибуты диаграммы обновления ссылаются на элементы и атрибуты схемы сопоставления.  
@@ -348,7 +348,7 @@ ms.locfileid: "75255992"
   
  Дополнительные примеры диаграмм обновления, в которых используются схемы сопоставления, см. [в разделе Указание схемы сопоставления с заметками в диаграмма обновления &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
-### <a name="f-using-a-mapping-schema-with-idrefs-attributes"></a>F. Использование схемы сопоставления с атрибутами IDREFS  
+### <a name="f-using-a-mapping-schema-with-idrefs-attributes"></a>Е. Использование схемы сопоставления с атрибутами IDREFS  
  В данном примере показано, каким образом диаграммы обновления используют атрибуты IDREFS в схеме сопоставления для обновления записей в нескольких таблицах. В этом примере предполагается, что база данных состоит из следующих таблиц.  
   
 -   Student(StudentID, LastName)  
@@ -556,7 +556,7 @@ ms.locfileid: "75255992"
   
  Дополнительные примеры диаграмм обновления, в которых используются схемы сопоставления, см. [в разделе Указание схемы сопоставления с заметками в диаграмма обновления &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Вопросы безопасности диаграмма обновления &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

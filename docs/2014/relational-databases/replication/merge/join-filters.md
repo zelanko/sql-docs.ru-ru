@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6bfb1bf3cd43bac47dfb06e4f24c74dc4835709b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629736"
 ---
 # <a name="join-filters"></a>фильтры соединения
@@ -43,7 +43,7 @@ ms.locfileid: "62629736"
 LoginID = SUSER_SNAME()  
 ```  
   
- Благодаря этому фильтру подписка каждого сотрудника будет содержать только те данные из таблицы **HumanResources.Employee** , которые относятся к этому сотруднику (в этом случае — в одной строке). Дополнительные сведения см. в статье [Parameterized Row Filters](parameterized-filters-parameterized-row-filters.md).  
+ Благодаря этому фильтру подписка каждого сотрудника будет содержать только те данные из таблицы **HumanResources.Employee** , которые относятся к этому сотруднику (в этом случае — в одной строке). Дополнительные сведения см. в разделе [Параметризованные фильтры строк](parameterized-filters-parameterized-row-filters.md).  
   
  Следующим этапом является расширение этого фильтра на все связанные таблицы, используя синтаксис, подобный тому, который использовался для указания соединения таблиц. Первое предложение фильтра соединения:  
   
@@ -86,7 +86,7 @@ SalesOrderHeader.SalesOrderID = SalesOrderDetail.SalesOrderID
   
      Настоятельно рекомендуется такую логику выражать в фильтре соединения, а не во вложенном запросе. Если приложение требует, чтобы фильтр строк использовал вложенный запрос, убедитесь, что вложенный запрос обращается только к поисковым данным, которые не изменяются.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Фильтрация опубликованных данных для репликации слиянием](filter-published-data-for-merge-replication.md)   
  [Параметризованные фильтры строк](parameterized-filters-parameterized-row-filters.md)  
   

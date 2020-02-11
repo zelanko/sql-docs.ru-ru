@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 44aedf7d53b2a9ad91b37f5023c13d8e20097da1
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243053"
 ---
 # <a name="locals-window"></a>окно локальных переменных
@@ -32,10 +32,10 @@ ms.locfileid: "75243053"
 -   Щелкните правой кнопкой мыши выражение и выберите команду **Изменить значение**.  
   
 ## <a name="columns"></a>Столбцы  
- **Безымян**  
+ **Название**  
  Имя локального выражения. В отладчике [!INCLUDE[tsql](../../includes/tsql-md.md)] перечисляются переменные, параметры и системные функции, имена которых начинаются с @@.  
   
- **Значений**  
+ **Value**  
  Отображается значение, которое в настоящее время присвоено локальному выражению. Этот столбец остается пустым, если выражению не присвоено значение.  
   
  Если длина выражения больше ширины столбца **Значение** , полное значение отображается в подсказке при перемещении указателя на ячейку **Значение** для этого выражения.  
@@ -45,10 +45,10 @@ ms.locfileid: "75243053"
  **Тип**  
  Отображает тип данных выражения.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Отладчик Transact-SQL](transact-sql-debugger.md)   
  [Сведения отладчика Transact-SQL](transact-sql-debugger-information.md)   
- [Окно контрольных значений](transact-sql-debugger-watch-window.md)   
+ [окно просмотра значений](transact-sql-debugger-watch-window.md)   
  [Окно стека вызовов](transact-sql-debugger-call-stack-window.md)   
- [Диалоговое окно "Быстрая проверка"](transact-sql-debugger-quickwatch-dialog-box.md)   
- [Выражения &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/expressions-transact-sql)  
+ [Диалоговое окно «Быстрая проверка»](transact-sql-debugger-quickwatch-dialog-box.md)   
+ [Выражения (Transact-SQL)](/sql/t-sql/language-elements/expressions-transact-sql)  

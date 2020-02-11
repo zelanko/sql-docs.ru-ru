@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 38c92e397c971f6e9976bb857c63410fa60b7e85
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232432"
 ---
 # <a name="sql-server-backup-and-restore-with-azure-blob-storage-service"></a>Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Azure
@@ -52,9 +52,9 @@ ms.locfileid: "75232432"
   
  **Передача данных:** Передача входящих данных в Azure бесплатная. Исходящие передачи оцениваются по пропускной способности, а их стоимость высчитывается по градуированной шкале, привязанной к региону. Дополнительные сведения см. в разделе [Передача данных](https://go.microsoft.com/fwlink/?LinkId=277061) в статье «Расчет цен».  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Рекомендации по SQL Server резервного копирования на URL-адреса и устранение неполадок](sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
  [Резервное копирование и восстановление системных баз данных &#40;SQL Server&#41;](back-up-and-restore-of-system-databases-sql-server.md)   
  [Учебник. SQL Server резервное копирование и восстановление в службе хранилища BLOB-объектов Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)   
- [SQL Server резервное копирование на URL-адрес](sql-server-backup-to-url.md)  
+ [Резервное копирование в SQL Server по URL-адресу](sql-server-backup-to-url.md)  
   

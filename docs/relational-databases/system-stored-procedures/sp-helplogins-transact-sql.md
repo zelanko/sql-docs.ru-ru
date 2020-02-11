@@ -18,13 +18,13 @@ ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b4c3d6ded5d85e5d38556792aaa7ea71dd9f42fa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68122453"
 ---
-# <a name="sphelplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
+# <a name="sp_helplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Предоставляет данные об именах учетных записей и соответствующих пользователях в каждой базе данных.  
@@ -39,45 +39,45 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @LoginNamePattern = ] 'login'` — Имя входа. Аргумент *login* имеет тип **sysname** и значение по умолчанию NULL. *Имя входа* должен существовать, если задано. Если *входа* является не указан, возвращаются сведения обо всех имен входа.  
+`[ @LoginNamePattern = ] 'login'`Имя входа. Аргумент *Login* имеет тип **sysname**и значение по умолчанию NULL. *имя входа* должно существовать, если оно указано. Если параметр *Login* не указан, возвращаются сведения обо всех именах входа.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или 1 (неуспешное завершение)  
+ 0 (успех) или 1 (сбой).  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  Первый отчет содержит данные о каждой заданной учетной записи, как показано в следующей таблице.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|**LoginName**|**sysname**|Имя входа.|  
-|**SID**|**varbinary(85)**|Идентификатор защиты имени входа (SID).|  
-|**DefDBName**|**sysname**|По умолчанию базы данных, которые **LoginName** при подключении к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**DefLangName**|**sysname**|Язык, используемый по умолчанию **LoginName**.|  
-|**Auser**|**char(5)**|Yes = **LoginName** имеет связанное имя пользователя в базе данных.<br /><br /> Нет = **LoginName** не имеет связанного имени пользователя.|  
-|**Возможность**|**символ(7)**|Yes = **LoginName** имеет связанного имени для удаленного входа.<br /><br /> Нет = **LoginName** не имеет связанного имени для входа.|  
+|**LoginName**|**имеет sysname**|Имя входа.|  
+|**ТРАНСЛЯЦИЮ**|**varbinary (85)**|Идентификатор защиты имени входа (SID).|  
+|**DefDBName**|**имеет sysname**|База данных по умолчанию, которую использует **LoginName** при соединении с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**DefLangName**|**имеет sysname**|Язык по умолчанию, используемый в **LoginName**.|  
+|**Auser**|**char (5)**|Yes = **LoginName** имеет связанное имя пользователя в базе данных.<br /><br /> No = **LoginName** не имеет связанного имени пользователя.|  
+|**ARemote**|**char (7)**|Yes = **LoginName** имеет связанное удаленное имя входа.<br /><br /> No = **LoginName** не имеет связанного имени входа.|  
   
  Второй отчет содержит данные о пользователях, сопоставленных с каждым из имен входа, а также ролях, членом которых является каждое имя входа, как показано в следующей таблице.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|**LoginName**|**sysname**|Имя входа.|  
-|**DBName**|**sysname**|По умолчанию базы данных, которые **LoginName** при подключении к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**UserName**|**sysname**|Учетная запись пользователя, **LoginName** сопоставляется в **DBName**и роли, **LoginName** входит в **DBName**.|  
-|**UserOrAlias**|**значение типа char(8)**|MemberOf = **UserName** — это роль.<br /><br /> Пользователь = **UserName** является учетной записью пользователя.|  
+|**LoginName**|**имеет sysname**|Имя входа.|  
+|**DBName**|**имеет sysname**|База данных по умолчанию, которую использует **LoginName** при соединении с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**Имен**|**имеет sysname**|Учетная запись пользователя, сопоставленная с **LoginName** в параметре **dbname**, а роли, в которые находится **LoginName** , являются членами в параметре **dbname**.|  
+|**UserOrAlias**|**char (8)**|MemberOf = **имя пользователя** является ролью.<br /><br /> Пользователь = **username** является учетной записью пользователя.|  
   
-## <a name="remarks"></a>Примечания  
- Прежде чем удалить имя входа, используйте **sp_helplogins** для идентификации учетных записей пользователей, сопоставленных с именем входа.  
+## <a name="remarks"></a>Remarks  
+ Перед удалением имени входа используйте **sp_helplogins** , чтобы указать учетные записи пользователей, сопоставленные с именем входа.  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется членство в **securityadmin** предопределенной роли сервера.  
+ Требуется членство в предопределенной роли сервера **администратора** .  
   
- Для определения всех учетных записей, сопоставленных с данным именем входа, **sp_helplogins** необходимо проверить все базы данных на сервере. Однако для каждой базы данных на сервере должно выполняться как минимум одно из следующих условий.  
+ Чтобы определить все учетные записи пользователей, сопоставленные с данным именем входа, **sp_helplogins** должны проверить все базы данных в сервере. Однако для каждой базы данных на сервере должно выполняться как минимум одно из следующих условий.  
   
--   Пользователь, выполняющий **sp_helplogins** имеет разрешение на доступ к базе данных.  
+-   Пользователь, который исполняет **sp_helplogins** , имеет разрешение на доступ к базе данных.  
   
--   **Гостевой** учетной записи пользователя включена в базе данных.  
+-   Учетная запись **гостевого** пользователя включена в базе данных.  
   
- Если **sp_helplogins** не может получить доступ к базе данных, **sp_helplogins** возвратит столько информации, сколько возможно и сообщение об ошибке 15622.  
+ Если **sp_helplogins** не может получить доступ к базе данных, **sp_helplogins** возвратит столько сведений, сколько может и выводит сообщение об ошибке 15622.  
   
 ## <a name="examples"></a>Примеры  
  Следующий пример выдает данные об имени входа `John`.  
@@ -99,10 +99,10 @@ John        pubs     John       User
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Хранимые процедуры безопасности (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_helpdb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
  [sp_helpuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

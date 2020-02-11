@@ -1,5 +1,5 @@
 ---
-title: Свойств NumericScale и Precision (Visual Basic) | Документация Майкрософт
+title: Пример свойств NumericScale и Precision (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 9c1e2322-c225-49d1-a120-a343f23cea73
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bf9fc4f0e96a714c8d00d2ffa9e36dea73e55fe1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932052"
 ---
 # <a name="numericscale-and-precision-properties-example-vb"></a>Примеры свойств NumericScale и Precision (VB)
-В этом примере используется [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) и [точности](../../../ado/reference/ado-api/precision-property-ado.md) свойства для отображения числового масштаба и точности полей в ***скидки*** таблицы  ***Pubs*** базы данных.  
+В этом примере используются свойства [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) и [Precision](../../../ado/reference/ado-api/precision-property-ado.md) для просмотра числа и точности полей в таблице ***скидок*** базы данных ***pubs*** .  
   
 ```  
 'BeginNumericScaleVB  
@@ -73,8 +73,8 @@ End Sub
 'EndNumericScaleVB  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Объект field](../../../ado/reference/ado-api/field-object.md)   
+## <a name="see-also"></a>См. также:  
+ [Объект Field](../../../ado/reference/ado-api/field-object.md)   
  [Свойство NumericScale (ADO)](../../../ado/reference/ado-api/numericscale-property-ado.md)   
- [Объект параметра](../../../ado/reference/ado-api/parameter-object.md)   
+ [Объект Parameter](../../../ado/reference/ado-api/parameter-object.md)   
  [Свойство Precision (ADO)](../../../ado/reference/ado-api/precision-property-ado.md)

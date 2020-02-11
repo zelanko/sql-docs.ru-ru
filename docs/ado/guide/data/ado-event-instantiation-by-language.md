@@ -1,5 +1,5 @@
 ---
-title: Создание экземпляра события ADO языком | Документация Майкрософт
+title: Создание экземпляра события ADO по языку | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,21 +14,21 @@ ms.assetid: eded7e8c-a25f-46a6-bc2b-32d89a54d1bc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a2881ca390aebc18cf5e80b390591c81a575c8de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926175"
 ---
 # <a name="ado-event-instantiation-by-language"></a>Создание экземпляра события ADO на различных языках
-Каждый язык программирования по-разному создает экземпляры события ADO. Все следующие примеры создают **ConnectComplete** обработчик событий.  
+Каждый язык программирования создает экземпляры событий ADO по-разному. Во всех приведенных ниже примерах создается обработчик событий **коннекткомплете** .  
   
 -   [Visual Basic](../../../ado/guide/data/ado-event-instantiation-visual-basic.md)  
   
 -   [Visual C++](../../../ado/guide/data/ado-event-instantiation-visual-c.md)  
   
--   [VBScript](../../../ado/guide/data/ado-event-instantiation-vbscript.md)  
+-   [Сценариев](../../../ado/guide/data/ado-event-instantiation-vbscript.md)  
   
--   [Язык JScript](../../../ado/guide/data/ado-event-instantiation-jscript.md)  
+-   [JScript](../../../ado/guide/data/ado-event-instantiation-jscript.md)  
   
--   [ADO И WFC](../../../ado/guide/data/ado-event-instantiation-ado-and-wfc.md)
+-   [ADO/WFC](../../../ado/guide/data/ado-event-instantiation-ado-and-wfc.md)

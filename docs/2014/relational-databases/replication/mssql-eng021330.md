@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e3640999842c7bd61c368bf967f74183f5d57099
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63023395"
 ---
-# <a name="mssqleng021330"></a>MSSQL_ENG021330
+# <a name="mssql_eng021330"></a>MSSQL_ENG021330
     
 ## <a name="message-details"></a>Сведения о сообщении  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|21330|  
 |Источник события|MSSQLSERVER|  
 |Компонент|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
@@ -38,8 +38,8 @@ ms.locfileid: "63023395"
 ## <a name="user-action"></a>Действие пользователя  
  Проверьте правильность указанного пути к папке моментальных снимков, а также убедитесь, что учетная запись, под которой работает служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя, обладает всеми необходимыми разрешениями.  
   
-## <a name="see-also"></a>См. также  
- [Задайте местоположение моментальных снимков по умолчанию](snapshot-options.md#snapshot-folder-locations)   
+## <a name="see-also"></a>См. также:  
+ [Укажите расположение моментальных снимков по умолчанию](snapshot-options.md#snapshot-folder-locations)   
  [Справочник по ошибкам и событиям (репликация)](errors-and-events-reference-replication.md)   
  [Инициализация транзакционной подписки без моментального снимка](initialize-a-transactional-subscription-without-a-snapshot.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Службы Integration Services Server (SSIS) | Документация Майкрософт
+title: Сервер Integration Services (SSIS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 02966721d1fdfd1c1d3051510e0dd68ed26dcbc3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771740"
 ---
 # <a name="integration-services-ssis-server"></a>Службы Integration Services (SSIS Server)
@@ -36,12 +36,12 @@ ms.locfileid: "62771740"
   
  Также вы можете обеспечить высокий уровень доступности SSISDB и содержимого с помощью служб SSIS и групп доступности AlwaysOn. Дополнительные сведения см. в записи блога Метта Мэйсона (Matt Masson) [Службы SSIS с AlwaysOn](https://go.microsoft.com/fwlink/?LinkId=255873)на сайте blogs.msdn.com.  
   
-##  <a name="ssms"></a> Сервер служб Integration Services в среде SQL Server Management Studio  
+##  <a name="ssms"></a>Integration Services Server в SQL Server Management Studio  
  При подключении к экземпляру [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], на котором размещена база данных `SSISDB`, в обозревателе объектов отображаются следующие объекты:  
   
 -   **База данных SSISDB**  
   
-     `SSISDB` База данных отображается в разделе **баз данных** в обозревателе объектов. Вы можете создавать запросы к представлениям и вызывать хранимые процедуры для управления сервером служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и объектами, которые хранятся на нем.  
+     `SSISDB` База данных отображается в узле " **базы данных** " в разделе "Просмотр объектов". Вы можете создавать запросы к представлениям и вызывать хранимые процедуры для управления сервером служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и объектами, которые хранятся на нем.  
   
 -   **Каталоги служб Integration Services**  
   
@@ -53,7 +53,7 @@ ms.locfileid: "62771740"
   
 -   [Просмотр списка пакетов на сервере служб Integration Services](view-the-list-of-packages-on-the-integration-services-server.md)  
   
--   [Развертывание проектов на сервере служб Integration Services](../deploy-projects-to-integration-services-server.md)  
+-   [Deploy Projects to Integration Services Server](../deploy-projects-to-integration-services-server.md)  
   
 -   [Выполнение пакета на сервере служб SSIS с использованием среды SQL Server Management Studio](../run-a-package-on-the-ssis-server-using-sql-server-management-studio.md)  
   

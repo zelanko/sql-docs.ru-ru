@@ -9,10 +9,10 @@ ms.assetid: 9ae20556-e243-4a60-b076-9fd9e82c7355
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 698c78dced26e7981fb7a651c22530909427b796
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68222576"
 ---
 # <a name="working-with-snapshots-web-portal"></a>Работа моментальными снимками (веб-портал)
@@ -70,7 +70,7 @@ ms.locfileid: "68222576"
   
 При выборе этого параметра моментальный снимок отчета, сформированный на основе свойств выполнения отчетов, копируется в журнал отчета. Можно установить свойства выполнения отчетов для запуска отчета из созданного моментального снимка. Настраивая это свойство журнала отчетов, можно хранить запись всех созданных моментальных снимков отчетов, размещая их копии в журнале отчетов.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Веб-портал](../reporting-services/web-portal-ssrs-native-mode.md)  
 [Работа с отчетами с разбиением на страницы](working-with-paginated-reports-web-portal.md)  

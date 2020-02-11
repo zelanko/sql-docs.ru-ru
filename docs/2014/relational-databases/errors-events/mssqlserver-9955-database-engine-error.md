@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a092a7228f5ec70247e38cf39073d946de0e56ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761638"
 ---
-# <a name="mssqlserver9955"></a>MSSQLSERVER_9955
+# <a name="mssqlserver_9955"></a>MSSQLSERVER_9955
     
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|9955|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
@@ -38,9 +38,9 @@ ms.locfileid: "62761638"
 ## <a name="user-action"></a>Действие пользователя  
  Чтобы устранить эту ошибку, завершите все запущенные процессы управляющей программы полнотекстовой фильтрации и при необходимости измените конфигурацию учетной записи этой программы с помощью диспетчера конфигурации SQL Server.  
   
-## <a name="see-also"></a>См. также  
- [Диспетчер конфигурации SQL Server](../sql-server-configuration-manager.md)   
- [Настройка учетной записи службы средства запуска управляющей программы полнотекстовой фильтрации](../search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)   
+## <a name="see-also"></a>См. также:  
+ [диспетчер конфигурации SQL Server](../sql-server-configuration-manager.md)   
+ [Настройка учетной записи службы для средства запуска управляющей программы полнотекстовой фильтрации](../search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)   
  [Полнотекстовый поиск](../search/full-text-search.md)  
   
   

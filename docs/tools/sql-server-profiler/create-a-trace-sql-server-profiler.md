@@ -1,27 +1,28 @@
 ---
-title: Создание трассировки (SQL Server Profiler) | Документация Майкрософт
-ms.custom: ''
-ms.date: 08/01/2016
+title: Создание трассировки
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- traces [SQL Server], creating
 ms.assetid: 0302fa6d-d2b5-43fe-ad70-7a337575b112
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cb6a3f10f93d7bba147dca0cc9f7bbb879a82d68
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 08/01/2016
+ms.openlocfilehash: 5a5c004bbc7e93720f18df998b989c46ced0188e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930169"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307333"
 ---
 # <a name="create-a-trace-sql-server-profiler"></a>создать трассировку (приложение SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  В этом подразделе описывается, как создать трассировку при помощи [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] .  
+
+В этом подразделе описывается, как создать трассировку при помощи [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] .  
   
 ### <a name="to-create-a-trace"></a>Создание трассировки  
   
@@ -29,7 +30,7 @@ ms.locfileid: "67930169"
   
      отображается диалоговое окно **Свойства трассировки** .  
   
-    > **ПРИМЕЧАНИЕ.** Если выбран параметр **Начать трассировку немедленно после установления соединения** , диалоговое окно **Свойства трассировки** не появляется, и начинается трассировка. Чтобы отключить этот параметр, в меню **Сервис** выберите пункт **Параметры** и снимите флажок "Начать трассировку немедленно после установления соединения".  
+    > **ПРИМЕЧАНИЕ.** Если выбран параметр Начать трассировку немедленно после установления соединения , диалоговое окно **Свойства трассировки** не появляется, и начинается трассировка. Чтобы отключить этот параметр, в меню **Сервис** выберите пункт **Параметры** и снимите флажок "Начать трассировку немедленно после установления соединения".  
   
 2.  В поле **Имя трассировки** введите имя трассировки.  
   
@@ -49,7 +50,7 @@ ms.locfileid: "67930169"
   
 5.  При необходимости установите флажок **Включить время остановки трассировки** и укажите дату и время остановки.  
   
-6.  Чтобы добавить или удалить события, столбцы данных или фильтры, перейдите на вкладку **Выбор событий**  . Дополнительные сведения см. в разделе [указать столбцы событий и данных для файла трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md).  
+6.  Чтобы добавить или удалить события, столбцы данных или фильтры, перейдите на вкладку **Выбор событий**  . Дополнительные сведения см. в разделе: [Указание столбцов событий и данных для файла трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
   
 7.  Чтобы запустить трассировку, нажмите кнопку **Выполнить** .  
   
@@ -57,6 +58,6 @@ ms.locfileid: "67930169"
  [Разрешения, необходимые для запуска приложения SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)   
  [Шаблоны и разрешения приложения SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [Приложение SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
- [Сопоставление трассировки с журналом производительности Windows (приложение SQL Server Profiler)](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)  
+ [Сопоставить трассировку с данными журнала производительности Windows (приложение SQL Server Profiler)](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)  
   
   

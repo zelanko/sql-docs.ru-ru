@@ -10,10 +10,10 @@ ms.assetid: 84928476-3a98-4bac-bb47-6346142752d0
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: f2775969aa22b580d40ecd6f8065deb2ed3472c7
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251701"
 ---
 # <a name="data-quality-services-features-and-tasks"></a>Функции и задачи служб Data Quality Services
@@ -29,7 +29,7 @@ ms.locfileid: "75251701"
   
  [Проекты служб Data Quality &#40;DQS&#41;](../data-quality-services/data-quality-projects-dqs.md)  
   
- [Очистка данных](../data-quality-services/data-cleansing.md)  
+ [Data Cleansing](../data-quality-services/data-cleansing.md)  
   
  [Сопоставление данных](../data-quality-services/data-matching.md)  
   

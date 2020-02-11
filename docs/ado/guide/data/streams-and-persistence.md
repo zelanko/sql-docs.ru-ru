@@ -14,23 +14,23 @@ ms.assetid: ad5bf52c-fd10-4cfa-bf7d-fcedcaa41eea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 22fbf503196c467a7816bf4e9c76151276cc6d4a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924021"
 ---
 # <a name="streams-and-persistence"></a>Потоки и сохраняемость
-[Записей](../../../ado/reference/ado-api/recordset-object-ado.md) объект [Сохранить](../../../ado/reference/ado-api/save-method.md) метод хранилищ, или *сохраняется*, **записей** в файле и [откройте](../../../ado/reference/ado-api/open-method-ado-recordset.md)метод восстанавливает **записей** из этого файла.  
+Метод [сохранения](../../../ado/reference/ado-api/save-method.md) объекта [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) сохраняет или сохраняет **набор записей** в *файле, а*метод [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) восстанавливает **набор записей** из этого файла.  
   
- С помощью ADO 2.7 или более поздней версии **Сохранить** и **откройте** методы можно сохранить **набор записей** для [Stream](../../../ado/reference/ado-api/stream-object-ado.md) объект. Эта функция особенно полезна при работе с удаленной службе данных (RDS) и Active Server Pages (ASP).  
+ При использовании ADO 2,7 или более поздней версии методы **Save** и **Open** могут также сохранить **набор записей** в объекте [потока](../../../ado/reference/ado-api/stream-object-ado.md) . Эта функция особенно полезна при работе с удаленной службой данных (RDS) и Active Server страницами (ASP).  
   
- Дополнительные сведения об использовании сохраняемости в сам по себе на ASP-страницах см. в разделе текущей документации ASP.  
+ Дополнительные сведения о том, как можно использовать сохраняемость на страницах ASP, см. в текущей документации по ASP.  
   
- Ниже приведены несколько сценариев, которые показывают, как **Stream** объектов и сохранения может использоваться.  
+ Ниже приведено несколько сценариев, демонстрирующих, как можно использовать объекты **Stream** и сохраняемость.  
   
 ## <a name="scenario-1"></a>Сценарий 1  
- Этот сценарий просто сохраняет **записей** в файл, а затем к **Stream**. После этого он открывает постоянного потока в другой **записей**.  
+ Этот сценарий просто сохраняет **набор записей** в файл, а затем в **поток**. Затем он открывает сохраненный поток в другом **наборе записей**.  
   
 ```  
 Dim rs1 As ADODB.Recordset  
@@ -50,7 +50,7 @@ rs2.Open stm
 ```  
   
 ## <a name="scenario-2"></a>Сценарий 2  
- Этот сценарий будет повторяться **записей** в **Stream** в формате XML. Затем он считывает **Stream** в строку, которая проверки, обработки или отображения.  
+ Этот сценарий сохраняет **набор записей** в **потоке** в формате XML. Затем он считывает **поток** в строку, которую можно просматривать, изменять или отображать.  
   
 ```  
 Dim rs As ADODB.Recordset  
@@ -76,7 +76,7 @@ strRst = stm.ReadText(adReadAll)
 ```  
   
 ## <a name="scenario-3"></a>Сценарий 3  
- В этом примере кода показано сохранение кода ASP **записей** как XML непосредственно к **ответа** объекта:  
+ В этом примере кода показан код ASP, сохраняющий **набор записей** в виде XML непосредственно в объекте **Response** :  
   
 ```  
 ...  
@@ -100,11 +100,11 @@ Set rs = nothing
 ```  
   
 ## <a name="scenario-4"></a>Сценарий 4  
- В этом случае код ASP записывает содержимое **записей** в формате ADTG клиенту. [Служба курсора Майкрософт для OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) эти данные можно использовать для создания отключенного **записей**.  
+ В этом сценарии код ASP записывает содержимое **набора записей** в формате адтг клиенту. [Служба курсора Майкрософт для OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) может использовать эти данные для создания отключенного **набора записей**.  
   
- Новое свойство в RDS [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md), [URL-адрес](../../../ado/reference/rds-api/url-property-rds.md), указывает на страницу .asp, который создает **записей**. Это означает, что **записей** может быть получен без служб удаленных рабочих СТОЛОВ на стороне сервера [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) объекта или пользователь, написание бизнес-объекта. Это значительно упрощает модель программирования служб удаленных рабочих СТОЛОВ.  
+ Новое свойство в [элементе управления](../../../ado/reference/rds-api/datacontrol-object-rds.md)RDS ( [URL](../../../ado/reference/rds-api/url-property-rds.md)) указывает на страницу. ASP, создающую **набор записей**. Это означает, что объект **набора записей** можно получить без RDS, используя объект [факта](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) на стороне сервера или пользователь, записывающий бизнес-объект. Это значительно упрощает модель программирования RDS.  
   
- Код на стороне сервера, с именем https://server/directory/recordset.asp:  
+ Код на стороне сервера с именемhttps://server/directory/recordset.asp:  
   
 ```  
 <%  
@@ -147,7 +147,7 @@ rs.Save response, adPersistADTG
 </HTML>  
 ```  
   
- Разработчики также имеют возможность использовать **записей** объекта на стороне клиента:  
+ Разработчики также имеют возможность использовать объект **Recordset** на клиенте:  
   
 ```  
 ...  
@@ -160,7 +160,7 @@ function GetRs()
 ...  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Метод Open (объект Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
+## <a name="see-also"></a>См. также:  
+ [Метод Open (набор записей ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Объект Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Метод Save](../../../ado/reference/ado-api/save-method.md)

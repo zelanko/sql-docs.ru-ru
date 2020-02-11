@@ -14,19 +14,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ba249d99c991fafc377aee019d666b9fa11df8b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629891"
 ---
 # <a name="detecting-and-resolving-conflicts-in-logical-records"></a>Detecting and Resolving Conflicts in Logical Records
-  В разделе рассматриваются различные комбинации подходов к распознаванию конфликтов и устранению конфликтов, возможные при использовании логических записей. В репликации слиянием возникает конфликт, когда изменение одних и тех же данных производится более чем одним узлом, или же в репликации слиянием возникают определенные типы ошибок, такие как нарушение ограничений, когда изменяется репликация. Дополнительные сведения о распознавании и разрешении конфликтов см. в разделе [Расширенное обнаружение и разрешение конфликтов репликации слиянием](advanced-merge-replication-conflict-detection-and-resolution.md).  
+  В разделе рассматриваются различные комбинации подходов к распознаванию конфликтов и устранению конфликтов, возможные при использовании логических записей. В репликации слиянием возникает конфликт, когда изменение одних и тех же данных производится более чем одним узлом, или же в репликации слиянием возникают определенные типы ошибок, такие как нарушение ограничений, когда изменяется репликация. Дополнительные сведения о распознавании и разрешении конфликтов см. в разделе [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md).  
   
  Чтобы указать уровень отслеживания конфликтов и разрешений, см. раздел [Указание уровня отслеживания и разрешения конфликтов для статей публикации слиянием](../publish/specify-merge-replication-properties.md#interactive-conflict-resolution).  
   
 ## <a name="conflict-detection"></a>Обнаружение конфликтов  
- Способ обнаружения конфликтов в логических записях определяется двумя свойствами статьи: **column_tracking** и **logical_record_level_conflict_detection**. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] и более поздние версии также поддерживают обнаружение на уровне логической записи.  
+ Способ обнаружения конфликтов в логических записях определяется двумя свойствами статьи: **column_tracking** и **logical_record_level_conflict_detection**. 
+  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] и более поздние версии также поддерживают обнаружение на уровне логической записи.  
   
  Значением свойства статьи **logical_record_level_conflict_detection** может быть TRUE или FALSE. Значение должно быть задано только для родительской статьи верхнего уровня. Кроме того, его должны игнорировать все дочерние статьи. Если значение этого параметра FALSE, репликация слиянием обнаруживает конфликты, как в предыдущих версиях [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], основываясь исключительно на значениях свойства **column_tracking** для статьи. Если значение этого параметра TRUE, репликация слиянием игнорирует значение свойства **column_tracking** для статьи и определяет конфликт, если где-либо в логической записи были сделаны изменения. В качестве примера рассмотрен сценарий:  
   
@@ -53,22 +54,22 @@ ms.locfileid: "62629891"
 ### <a name="row-or-column-level-detection-row-level-resolution"></a>Обнаружение на уровне строк или столбцов, разрешение на уровне строк.  
  В этом примере публикация настраивается с помощью:  
   
--   параметр**column_tracking** принимает значения TRUE или FALSE;  
+-   **column_tracking** имеет значение true или false  
   
--   параметр**logical_record_level_conflict_detection** имеет значение FALSE;  
+-   **logical_record_level_conflict_detection** имеет значение false  
   
--   параметр**logical_record_level_conflict_resolution** имеет значение FALSE.  
+-   **logical_record_level_conflict_resolution** имеет значение false  
   
  В этом случае обнаружение конфликтов осуществляется на уровне строк или столбцов, а разрешение — на уровне строк. С помощью этих настроек используется преимущество, когда все изменения в логической записи реплицируются как одно целое, но без обнаружения или разрешения конфликта на уровне логических записей.  
   
 ### <a name="column-level-detection-logical-record-resolution"></a>Обнаружение на уровне столбцов, разрешение на уровне логических записей.  
  В этом примере публикация настраивается с помощью:  
   
--   параметр**column_tracking** имеет значение TRUE;  
+-   **column_tracking** имеет значение true  
   
--   параметр**logical_record_level_conflict_detection** имеет значение FALSE;  
+-   **logical_record_level_conflict_detection** имеет значение false  
   
--   параметр**logical_record_level_conflict_resolution** имеет значение TRUE.  
+-   **logical_record_level_conflict_resolution** имеет значение true  
   
  Издатель и подписчик начинают работать с одним и тем же набором данных, логическая запись определяется между таблицами **orders** и **customers** . Издатель изменяет столбец **custcol1** в таблице **customers** , а так же **ordercol1** в таблице **orders** . Подписчик изменяет **custcol1** в той же самой строке таблицы **customers** и столбец **ordercol2** в той же строке таблицы **orders** . Изменения одного и того же столбца в таблице **customer** приводят к конфликту, но изменения таблицы **orders** к конфликту не приводят.  
   
@@ -79,11 +80,11 @@ ms.locfileid: "62629891"
 ### <a name="row-level-detection-logical-record-resolution"></a>Обнаружение на уровне строк, разрешение на уровне логических записей.  
  В этом примере публикация настраивается с помощью:  
   
--   параметр**column_tracking** имеет значение FALSE;  
+-   **column_tracking** имеет значение false  
   
--   параметр**logical_record_level_conflict_detection** имеет значение FALSE;  
+-   **logical_record_level_conflict_detection** имеет значение false  
   
--   параметр**logical_record_level_conflict_resolution** имеет значение TRUE.  
+-   **logical_record_level_conflict_resolution** имеет значение true  
   
  Издатель и подписчик запускаются с одинаковым набором данных. Издатель изменяет столбец **custcol1** в таблице **пользователи** . Подписчик изменяет столбец **custcol2** в таблице **customers** , а так же **ordercol2** в таблице **orders** . Изменения одной и той же строки в таблице **customers** приводят к конфликту, но изменения подписчиком таблицы **orders** к конфликту не приводят.  
   
@@ -94,9 +95,9 @@ ms.locfileid: "62629891"
 ### <a name="logical-record-detection-logical-record-resolution"></a>Обнаружение на уровне логических записей, разрешение на уровне логических записей.  
  В этом примере публикация настраивается с помощью:  
   
--   параметр**logical_record_level_conflict_detection** имеет значение TRUE;  
+-   **logical_record_level_conflict_detection** имеет значение true  
   
--   параметр**logical_record_level_conflict_resolution** имеет значение TRUE.  
+-   **logical_record_level_conflict_resolution** имеет значение true  
   
  Издатель и подписчик запускаются с одинаковым набором данных. Издатель изменяет столбец **custcol1** в таблице **пользователи** . Подписчик изменяет столбец **ordercol1** в таблице **orders** . Изменения не относятся к одной и той же строке или одним и тем же столбцам, но поскольку изменения произошли в одной и той же логической записи для **custid**=1, они распознаны как конфликт на уровне логической записи.  
   
@@ -104,7 +105,7 @@ ms.locfileid: "62629891"
   
  ![Последовательность таблиц, показывающая изменения связанных строк](../media/logical-records-08.gif "Последовательность таблиц, показывающая изменения связанных строк")  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Группирование изменений в связанных строках с помощью логических записей](group-changes-to-related-rows-with-logical-records.md)  
   
   

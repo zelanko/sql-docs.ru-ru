@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 87e33ff166f07c10ee8b0b32eac5590f486e70c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483912"
 ---
 # <a name="annotate-a-transaction-master-data-services"></a>Добавление заметки для транзакции (Master Data Services)
@@ -25,7 +25,7 @@ ms.locfileid: "65483912"
 > [!NOTE]  
 >  Заметки нельзя удалить.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
   
 -   Для добавления заметок к созданным транзакциям необходимы права на доступ к функциональной области **Браузер** и как минимум разрешение **Обновление** на объект модели, к которому добавляется заметка.  
   
@@ -63,8 +63,8 @@ ms.locfileid: "65483912"
   
 5.  Нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также  
- [Заметки (службы Master Data Services)](../../2014/master-data-services/annotations-master-data-services.md)   
- [Транзакции (службы Master Data Services)](../../2014/master-data-services/transactions-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Заметки &#40;Master Data Services&#41;](../../2014/master-data-services/annotations-master-data-services.md)   
+ [Master Data Services &#40;транзакций&#41;](../../2014/master-data-services/transactions-master-data-services.md)  
   
   

@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9560249e07cbd360914b5dab21eb68dc8e7f013f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62467248"
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>Восстановление оптимизированных для памяти таблиц
@@ -53,7 +53,7 @@ ms.locfileid: "62467248"
   
  На этом этапе можно создать пул ресурсов для привязки базы данных, а затем использовать инструкцию RESTORE WITH RECOVERY, чтобы подключить восстановленную базу данных.  Поскольку привязка производится на месте перед подключением базы данных, использование памяти In-Memory OLTP учитывается правильно. Для этого необходимо восстановить базу данных только один раз. Первая команда RESTORE является информационной и только считывает заголовок резервной копии, а последняя — просто активирует восстановление без фактического восстановления всех битов.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Резервное копирование и восстановление оптимизированных для памяти таблиц](memory-optimized-tables.md)  
   
   

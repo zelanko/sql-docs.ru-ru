@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 374d75c18adc091eaf6a01ae1164a529a34accee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62636428"
 ---
 # <a name="connect-with-registered-servers-and-object-explorer"></a>Подключение к зарегистрированным серверам и к обозревателю объектов
@@ -37,7 +37,7 @@ ms.locfileid: "62636428"
   
 5.  В поле **Имя зарегистрированного сервера** введите [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-6.  На **свойства соединения** на вкладке **подключение к базе данных** выберите  **\<Обзор сервера... >** .  
+6.  На вкладке **Свойства соединения** в списке **Подключение к базе данных** выберите ** \<Обзор сервера... >**.  
   
 7.  В диалоговом окне **Просмотр баз данных** нажмите кнопку **Да**.  
   

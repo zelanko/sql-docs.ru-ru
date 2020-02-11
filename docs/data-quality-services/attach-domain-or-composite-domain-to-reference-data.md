@@ -15,10 +15,10 @@ ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: df671e83d80175f154a4008270c3b68dc2581b59
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75557919"
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data---data-quality-services-dqs"></a>Подключение домена или составного домена к ссылочным данным — службы Data Quality Services (DQS)
@@ -37,12 +37,12 @@ ms.locfileid: "75557919"
   
  В этой статье мы создадим четыре домена: **Адрес**, **Город**, **Штат** и **Почтовый индекс** внутри составного домена **Проверка адреса**, подключим составной домен к службе ссылочных данных **Данные Мелиссы — проверка адреса**, а затем сопоставим отдельные домены внутри составного домена с соответствующими столбцами в схеме службы ссылочных данных.  
   
-## <a name="before-you-begin"></a>Перед началом работы  
+## <a name="before-you-begin"></a>Перед началом  
   
-###  <a name="Prerequisites"></a>Требований  
+###  <a name="Prerequisites"></a> Предварительные требования  
  Необходимо настроить [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) для использования служб ссылочных данных. См. раздел [Настройка служб DQS для использования эталонных данных](../data-quality-services/configure-dqs-to-use-reference-data.md).  
   
-###  <a name="Security"></a>Бюллетеня  
+###  <a name="Security"></a> безопасность  
   
 #### <a name="permissions"></a>Разрешения  
  Для сопоставления доменов со ссылочными данными необходимо иметь роль dqs_kb_editor в базе данных DQS_MAIN.  
@@ -91,8 +91,8 @@ ms.locfileid: "75557919"
 ##  <a name="FollowUp"></a>Дальнейшие действия. После сопоставления домена с ссылочными данными  
  Создайте проект служб DQS и выполните действие очистки исходных данных, которые содержат адреса США, с помощью сравнения этих данных с базой знаний, созданной в данном разделе. См. раздел [Очистка данных с использованием набора знаний об эталонных данных &#40;внешних&#41;](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Службы эталонных данных в DQS](../data-quality-services/reference-data-services-in-dqs.md)   
- [Очистка данных](../data-quality-services/data-cleansing.md)  
+ [Data Cleansing](../data-quality-services/data-cleansing.md)  
   
   

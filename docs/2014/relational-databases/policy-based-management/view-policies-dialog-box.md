@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 40ce89f518dfdbf4d1c782121dc5ec0e935752ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62676850"
 ---
 # <a name="view-policies-dialog-box"></a>Диалоговое окно «Просмотр политик»
@@ -29,7 +29,7 @@ ms.locfileid: "62676850"
  **Применяется**  
  Указывает, действует ли в данный момент политика на цель.  
   
- **политика**  
+ **Политика**  
  Имя каждой применимой политики.  
   
  **Категория**  
@@ -47,7 +47,7 @@ ms.locfileid: "62676850"
  **Последнее выполнение**  
  Дата и время последнего запуска политики.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Администрирование серверов с помощью управления на основе политик](administer-servers-by-using-policy-based-management.md)  
   
   

@@ -15,10 +15,10 @@ ms.assetid: a7b589ac-104d-4b68-b4aa-9f5fc192b13d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e04b5308aeca5881f624122c70ad74c27417a46b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75258335"
 ---
 # <a name="monitoring-and-troubleshooting-managed-database-objects"></a>Наблюдение и устранение неполадок в управляемых объектах базы данных
@@ -29,9 +29,9 @@ ms.locfileid: "75258335"
  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет приложение трассировки SQL и уведомления о событиях для мониторинга событий компонента Database Engine. Записывая указанные события, приложение трассировки SQL помогает диагностировать проблемы производительности, проводить аудит активности базы данных, собирать образцы данных для тестовой среды, отлаживать инструкции и хранимые процедуры [!INCLUDE[tsql](../../includes/tsql-md.md)] и собирать данные для инструментов анализа производительности. Дополнительные сведения см. в разделе [SQL Trace](../../relational-databases/sql-trace/sql-trace.md) и [Расширенные события](../../relational-databases/extended-events/extended-events.md).  
   
-|Событие|Описание|  
+|Событие|Description|  
 |-----------|-----------------|  
-|[Assembly Load, класс событий](/sql/database-engine/assembly-load-event-class)|Используется для наблюдения за запросами на загрузку сборок (успех или неудача).|  
+|[Класс событий Assembly Load](/sql/database-engine/assembly-load-event-class)|Используется для наблюдения за запросами на загрузку сборок (успех или неудача).|  
 |[SQL: BatchStarting](../../relational-databases/event-classes/sql-batchstarting-event-class.md), класс событий [SQL: BatchCompleted](../../relational-databases/event-classes/sql-batchcompleted-event-class.md)|Предоставляет сведения о пакетах [!INCLUDE[tsql](../../includes/tsql-md.md)], которые начали или завершили работу.|  
 |Класс событий [SP: Starting](../../relational-databases/event-classes/sp-starting-event-class.md), [SP: Completed](../../relational-databases/event-classes/sp-completed-event-class.md)|Используется для наблюдения за выполнением хранимых процедур [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
 |[SQL: StmtStarting](../../relational-databases/event-classes/sql-stmtstarting-event-class.md), класс событий [SQL: StmtCompleted](../../relational-databases/event-classes/sql-stmtcompleted-event-class.md)|Используется для наблюдения за выполнением процедур [!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR.|  
@@ -40,14 +40,14 @@ ms.locfileid: "75258335"
  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет объекты и счетчики, которые могут применяться системным монитором для отслеживания активности на компьютере, где запущен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Объект представляет собой любой ресурс [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], например блокировку [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или процесс Windows. В каждом объекте содержатся один или более счетчиков, определяющих различные аспекты объектов для мониторинга. Дополнительные сведения см. в разделе [Использование объектов SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md).  
   
-|Объект|Описание|  
+|Объект|Description|  
 |------------|-----------------|  
-|[SQL Server, объект CLR](../../relational-databases/performance-monitor/sql-server-clr-object.md)|Общее время выполнения в среде CLR.|  
+|[SQL Server, объект «Среда CLR»](../../relational-databases/performance-monitor/sql-server-clr-object.md)|Общее время выполнения в среде CLR.|  
   
 ## <a name="windows-system-monitor-perfmonexe-counters"></a>Счетчики системного монитора Windows (PERFMON.EXE)  
  Системный монитор Windows (PERFMON.EXE) имеет несколько счетчиков производительности, которые можно использовать для наблюдения за приложениями интеграции со средой CLR. Счетчики производительности .NET CLR можно отфильтровать по имени процесса «sqlservr» для слежения за приложениями интеграции со средой CLR, выполняющимися в данный момент.  
   
-|Объект производительности|Описание|  
+|Объект производительности|Description|  
 |------------------------|-----------------|  
 |SqlServer:CLR|Предоставляет статистику по ЦП сервера.|  
 |Исключения .NET CLR|Следит за числом исключений в секунду.|  
@@ -58,7 +58,7 @@ ms.locfileid: "75258335"
 ## <a name="catalog-views"></a>Представления каталога  
  Представления каталога возвращают данные, используемые компонентом Database Engine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Рекомендуется, чтобы использовались представления каталога, потому что они имеют наиболее универсальный интерфейс к метаданным каталога и предоставляют наиболее эффективный способ для получения, преобразования и представления настроенных форм этих данных. Все доступные для пользователя метаданные каталога предоставляются через представления каталога. Дополнительные сведения см. в разделе [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md).  
   
-|Представление каталога|Описание|  
+|Представление каталога|Description|  
 |------------------|-----------------|  
 |[sys. assemblies &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)|Возвращает сведения о сборках, зарегистрированных в базе данных.|  
 |[sys. assembly_references &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-references-transact-sql.md)|Указывает сборки, которые содержат ссылки на другие сборки.|  
@@ -75,7 +75,7 @@ ms.locfileid: "75258335"
 ## <a name="dynamic-management-views"></a>Динамические административные представления  
  Динамические административные представления и функции возвращают данные о состоянии сервера, которые могут использоваться для контроля исправности экземпляра сервера, диагностики проблем и настройки производительности. Дополнительные сведения см. в разделе [динамические административные представления и функции &#40;&#41;Transact-SQL ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
-|DMV|Описание|  
+|DMV|Description|  
 |---------|-----------------|  
 |[sys. dm_clr_appdomains &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md)|Возвращает сведения о каждом домене приложения на сервере.|  
 |[sys. dm_clr_loaded_assemblies &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)|Указывает все управляемые сборки, зарегистрированные на сервере.|  
@@ -86,7 +86,7 @@ ms.locfileid: "75258335"
 |[sys. dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|Возвращает сведения о каждом из запросов, выполняющихся в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[sys. dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)|Возвращает все клерки памяти, активные в настоящее время в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в том числе клерки памяти CLR.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Общеязыковая среда выполнения &#40;концепции программирования интеграции&#41; среды CLR](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
   
   

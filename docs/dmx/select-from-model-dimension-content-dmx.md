@@ -1,5 +1,5 @@
 ---
-title: SELECT FROM &lt;модели&gt;. DIMENSION_CONTENT (РАСШИРЕНИЯ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ) | Документация Майкрософт
+title: Выберите из &lt;модели&gt;. DIMENSION_CONTENT (РАСШИРЕНИЯ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ) | Документация Майкрософт
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7fac89454cd31c1334e41d4c2367143f31476e20
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67928361"
 ---
-# <a name="select-from-ltmodelgtdimensioncontent-dmx"></a>SELECT FROM &lt;модели&gt;. DIMENSION_CONTENT (РАСШИРЕНИЯ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ)
+# <a name="select-from-ltmodelgtdimension_content-dmx"></a>Выберите из &lt;модели&gt;. DIMENSION_CONTENT (РАСШИРЕНИЯ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Модель интеллектуального анализа данных можно использовать как измерение в кубе OLAP, причем каждый узел модели представлен как элемент измерения. **SELECT FROM \<модели >. Dimension_CONTENT** инструкция возвращает содержимое модели, которая подходит для использования в качестве измерения.  
+  Модель интеллектуального анализа данных можно использовать как измерение в кубе OLAP, причем каждый узел модели представлен как элемент измерения. **> выбор из \<модели. Инструкция Dimension_CONTENT** возвращает содержимое модели, относящееся к ее использованию в качестве измерения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -30,7 +30,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.Dimension_CONTENT
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *n*  
+ *\n*  
  Необязательный параметр. Целое число, указывающее количество возвращаемых строк.  
   
  *список выражений*  
@@ -39,13 +39,13 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.Dimension_CONTENT
  *model*  
  Идентификатор модели.  
   
- *Выражение условия*  
- Необязательный. Условие ограничения значений, возвращаемых из списка столбцов.  
+ *выражение условия*  
+ Необязательный параметр. Условие ограничения значений, возвращаемых из списка столбцов.  
   
  *expression*  
  Необязательный параметр. Выражение, возвращающее скалярное значение.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Поставщики алгоритмов определяют, какое содержимое возвращается и как его организовать. Например, поставщик может ограничить количество узлов, описываемых в содержимом измерения.  
   
  Следующая таблица перечисляет столбцы, которые можно запросить для содержимого измерения, и функцию, которую каждый столбец выполняет как измерение интеллектуального анализа данных.  
@@ -56,9 +56,9 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.Dimension_CONTENT
 |NODE_NAME|Свойство элемента.|  
 |NODE_UNIQUE_NAME|Ключевой атрибут.|  
 |NODE_TYPE|Свойство элемента.|  
-|NODE_CAPTION|Столбец CaptionColumn для **ключ** атрибута.|  
+|NODE_CAPTION|CaptionColumn для **ключевого** атрибута.|  
 |CHILDREN_CARDINALITY|Свойство элемента.|  
-|PARENT_UNIQUE_NAME|Атрибут RelatedAttribute для **ключ** атрибут (ParentAttribute в иерархии родители потомки).|  
+|PARENT_UNIQUE_NAME|Релатедаттрибуте для **ключевого** атрибута (парентаттрибуте в иерархии "родители-потомки").|  
 |NODE_DESCRIPTION|Свойство элемента.|  
 |NODE_RULE|Свойство элемента.|  
 |MARGINAL_RULE|Свойство элемента.|  
@@ -68,7 +68,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.Dimension_CONTENT
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="description"></a>Описание  
+### <a name="description"></a>Description  
  В примере выбираются все столбцы из содержимого модели `[TM Decision Tree]`, которая подходит для использования в качестве измерения.  
   
 ### <a name="code"></a>Код  
@@ -78,10 +78,10 @@ SELECT *
 FROM [TM Decision Tree].Dimension_Content  
 ```  
   
-## <a name="see-also"></a>См. также  
- [ВЫБЕРИТЕ &#40;РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ&#41;](../dmx/select-dmx.md)   
- [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; инструкции определения данных](../dmx/dmx-statements-data-definition.md)   
- [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; инструкций по обработке данных](../dmx/dmx-statements-data-manipulation.md)   
- [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../dmx/data-mining-extensions-dmx-statements.md)  
+## <a name="see-also"></a>См. также:  
+ [ВЫБОР &#40;&#41;РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ](../dmx/select-dmx.md)   
+ [Расширения интеллектуального анализа данных &#40;инструкции расширений интеллектуального анализа данных&#41; DDL](../dmx/dmx-statements-data-definition.md)   
+ [Расширения интеллектуального анализа данных &#40;инструкции расширений интеллектуального анализа данных&#41;](../dmx/dmx-statements-data-manipulation.md)   
+ [Расширения интеллектуального анализа данных &#40;Справочник по инструкции DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

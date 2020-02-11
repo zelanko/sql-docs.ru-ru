@@ -1,5 +1,5 @@
 ---
-title: Recordset (ADO — синтаксис WFC) | Документация Майкрософт
+title: Набор записей (ADO — синтаксис WFC) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,14 +14,14 @@ ms.assetid: bd1f571e-007f-432e-ada1-5c3e436c1a22
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 58e0cde8798f73257a54be5cc95f64474334a153
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931381"
 ---
 # <a name="recordset-ado---wfc-syntax"></a>Recordset (ADO — синтаксис WFC)
-## <a name="package-commswfcdata"></a>com.ms.wfc.data пакета  
+## <a name="package-commswfcdata"></a>упаковать com. MS. WFC. Data  
   
 ### <a name="constructors"></a>Конструкторы  
   
@@ -135,7 +135,7 @@ public AdoProperties getProperties()
 ```  
   
 ### <a name="events"></a>События  
- Дополнительные сведения о событиях ADO и WFC см. в разделе [создание экземпляра события ADO языком](../../../ado/guide/data/ado-event-instantiation-by-language.md).  
+ Дополнительные сведения о событиях ADO/WFC см. [в разделе Создание экземпляра события ADO по языку](../../../ado/guide/data/ado-event-instantiation-by-language.md).  
   
 ```  
 public void addOnEndOfRecordset(RecordsetEventHandler handler)  
@@ -162,5 +162,5 @@ public void addOnWillMove(RecordsetEventHandler handler)
 public void removeOnWillMove(RecordsetEventHandler handler)  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

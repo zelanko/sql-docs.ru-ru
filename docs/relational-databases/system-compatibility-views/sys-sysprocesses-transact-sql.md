@@ -21,10 +21,10 @@ ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: d9da0f09c2506e0d596a485aee112f9f188b6d12
-ms.sourcegitcommit: ef830f565ee07dc7d4388925cc3c86c5d2cfb4c7
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74947163"
 ---
 # <a name="syssysprocesses-transact-sql"></a>sys.sysprocesses (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "74947163"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |spid|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Идентификатор сеанса.|  
 |kpid|**smallint**|Идентификатор потока Windows.|  
@@ -49,8 +49,8 @@ ms.locfileid: "74947163"
 |cpu|**int**|Совокупное время ЦП для процесса. Запись обновляется для всех процессов независимо от значения параметра SET STATISTICS TIME (ON или OFF).|  
 |physical_io|**bigint**|Совокупное количество операций чтения и записи для процесса.|  
 |memusage|**int**|Число страниц в кэше процедур, выделенных в данный момент для этого процесса. Отрицательное значение показывает, что процесс освобождает память, выделенную другим процессом.|  
-|login_time|**DateTime**|Время регистрации клиентского процесса на сервере.|  
-|last_batch|**DateTime**|Время последнего вызова удаленной хранимой процедуры или инструкции EXECUTE клиентским процессом.|  
+|login_time|**datetime**|Время регистрации клиентского процесса на сервере.|  
+|last_batch|**datetime**|Время последнего вызова удаленной хранимой процедуры или инструкции EXECUTE клиентским процессом.|  
 |ecid|**smallint**|Идентификатор контекста выполнения используется с целью идентифицировать подпроцессы, действующие от имени одного процесса, уникальным образом.|  
 |open_tran|**smallint**|Количество транзакций, открытых для данного процесса.|  
 |status|**nchar (30)**|Состояние идентификатора процесса. Вы можете выбрать<br /><br /> **Спящий** режим переустанавливает сеанс. =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **работает** — в сеансе выполняются один или несколько пакетов. Если включен режим MARS, в сеансе может выполняться несколько пакетов. Дополнительные сведения см. в статье [Использование множественных активных результирующих наборов &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **Background** = сеанс выполняет фоновую задачу, например обнаружение взаимоблокировки.<br /><br /> **ROLLBACK** = в ходе сеанса выполняется откат транзакций.<br /><br /> **Pending** — сеанс ожидает, пока рабочий поток не станет доступным.<br /><br /> **готов к запуску** — задача в сеансе находится в очереди готовности планировщика в ожидании получения кванта времени.<br /><br /> **спинлуп** = задача в сеансе ожидает освобождения спин-блокировки.<br /><br /> **suspended** — сеанс ожидает завершения события, например ввода-вывода.|  
@@ -71,10 +71,10 @@ ms.locfileid: "74947163"
 |request_id|**int**|Идентификатор запроса. Применяется для идентификаций запросов, выполняемых в текущем сеансе.|
 |page_resource |**Binary (8)** |**Применимо к**:[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br /><br /> 8-байтовое шестнадцатеричное представление ресурса страницы, если `waitresource` столбец содержит страницу. |  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если пользователь имеет разрешение VIEW SERVER STATE на сервере, он увидит все выполняющиеся сеансы на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В противном случае пользователь увидит только текущий сеанс.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Динамические административные представления и функции, связанные с выполнением &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [Сопоставление системных таблиц с системными представлениями &#40;&#41;Transact-SQL](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [Представления совместимости &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  

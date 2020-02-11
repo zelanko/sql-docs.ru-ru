@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c4b1706f81808d90e02df32df7e56828b054bd05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62638109"
 ---
 # <a name="drop-xml-indexes"></a>Удаление XML-индексов
@@ -26,7 +26,7 @@ ms.locfileid: "62638109"
   
  Синтаксис инструкции DROP для *TableName.IndexName* постепенно вытесняется и для XML-индексов не поддерживается.  
   
-## <a name="example-creating-and-dropping-a-primary-xml-index"></a>Пример Создание и удаление первичного XML-индекса  
+## <a name="example-creating-and-dropping-a-primary-xml-index"></a>Пример. Создание и удаление первичного XML-индекса  
  В следующем примере создается XML-индекс для столбца типа `xml`.  
   
 ```  
@@ -68,7 +68,7 @@ ON TestTable(Col2)
 GO  
 ```  
   
-## <a name="example-creating-an-xml-index-by-using-the-dropexisting-index-option"></a>Пример Создание XML-индекса с помощью параметра индекса DROP_EXISTING  
+## <a name="example-creating-an-xml-index-by-using-the-drop_existing-index-option"></a>Пример. Создание XML-индекса с помощью параметра DROP_EXISTING  
  В следующем примере XML-индекс создается для столбца`XmlColx`. Затем для другого столбца (`XmlColy`) создается другой XML-индекс с тем же именем. Так как задан параметр `DROP_EXISTING` , существующий XML-индекс для столбца (`XmlColx)` ) удаляется и вместо него создается новый XML-индекс для столбца (`XmlColy`).  
   
 ```  
@@ -96,7 +96,7 @@ AND    si.object_id=object_id('T')
   
  Запрос возвращает имя столбца, для которого создан XML-индекс.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [XML-индексы (SQL Server)](xml-indexes-sql-server.md)  
   
   

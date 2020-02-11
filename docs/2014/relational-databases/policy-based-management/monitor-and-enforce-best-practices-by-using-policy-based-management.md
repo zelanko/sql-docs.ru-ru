@@ -13,17 +13,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: bfc7cc16c9751ebdf64a8e9cd110547255c944ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62626051"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Наблюдение с помощью управления на основе политик и принудительное применение рекомендаций с помощью управления на основе политик
-  Управление на основе политик позволяет наблюдать за рекомендациями для [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет набор файлов политик, что можно импортировать в качестве политик рекомендаций и затем оценивать эти политики для набора целей, которая включает экземпляры, объекты экземпляров, баз данных или объекты базы данных. Политики можно оценивать вручную или устанавливать их для оценки набора целей согласно расписанию либо тому или иному событию. Дополнительные сведения об управлении на основе политик см. в статье [Администрирование серверов с помощью управления на основе политик](administer-servers-by-using-policy-based-management.md).  
+  Управление на основе политик позволяет отслеживать рекомендации для [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]предоставляет набор файлов политик, которые можно импортировать в качестве политик рекомендаций, а затем оценивать политики по набору целей, включающему экземпляры, объекты экземпляров, базы данных или объекты базы данных. Политики можно оценивать вручную или устанавливать их для оценки набора целей согласно расписанию либо тому или иному событию. Дополнительные сведения об управлении на основе политик см. в статье [Администрирование серверов с помощью управления на основе политик](administer-servers-by-using-policy-based-management.md).  
   
 ## <a name="policy-and-rules-for-database-engine"></a>Политика и правила для компонента Database Engine  
- В следующей таблице перечислены политики, которые входят в состав установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и содержатся сведения о правилах рекомендаций, которые вычисляет Каждая политика. Политики хранятся в виде XML-файлов и должны импортироваться в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения об импорте политик см. в статье [Импорт политики управления на основе политик](import-a-policy-based-management-policy.md).  
+ В следующей таблице перечислены политики, включенные в установку [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , и содержатся сведения о рекомендациях, которые оценивает каждая политика. Политики хранятся в виде XML-файлов и должны импортироваться в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения об импорте политик см. в статье [Импорт политики управления на основе политик](import-a-policy-based-management-policy.md).  
   
 |Имя политики|Правило рекомендации|  
 |-----------------|------------------------|  
@@ -38,8 +38,8 @@ ms.locfileid: "62626051"
 |Разрешения гостя|[Разрешения гостя для пользовательских баз данных](guest-permissions-on-user-databases.md)|  
 |Дата последнего успешного резервного копирования|[Устаревшая резервная копия](outdated-backup.md)|  
 |Роли Public не предоставлены разрешения на сервер|[Разрешения роли сервера public](server-public-permissions.md)|  
-|SQL Server: перекрытие 32-разрядных Affinity Mask|[Правильный Affinity Mask и перекрытие маска схожести ввода-вывода](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
-|SQL Server: перекрытие 64-разрядной маски сходства|[Правильный Affinity Mask и перекрытие маска схожести ввода-вывода](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
+|Перекрытие SQL Server 32-разрядной маски сходства|[Правильное перекрытие маски сходства и привязки входных данных сходства](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
+|SQL Server: перекрытие 64-разрядной маски сходства|[Правильное перекрытие маски сходства и привязки входных данных сходства](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
 |SQL Server: маска сходства|[Сохранение значения маски сходства по умолчанию](keep-the-affinity-mask-default-value.md)|  
 |SQL Server: пороговый интервал ожидания блокированных процессов|[Увеличение или отключение порога заблокированных процессов](increase-or-disable-blocked-process-threshold.md)|  
 |SQL Server: трассировка по умолчанию|[Отключение предусмотренных по умолчанию файлов журнала трассировки](default-trace-log-files-disabled.md)|  
@@ -60,9 +60,9 @@ ms.locfileid: "62626051"
 |Журнал событий Windows: ошибка из-за повреждения дискового ресурса кластера|[Определение неполадок хост-адаптера SCSI](detect-scsi-host-adapter-issues.md)|  
 |Журнал событий Windows: ошибка управления драйвером устройства|[Ошибка управления драйвером устройства](device-driver-control-error.md)|  
 |Журнал событий Windows, ошибка: устройство не готово|[Ошибка отсутствия готовности устройства](device-not-ready-error.md)|  
-|Журнал событий Windows: ошибка запроса ввода-вывода|[Обнаружения запроса неудачных входов и выходов](detect-failed-input-and-output-requests.md)|  
-|Журнал событий Windows: предупреждение об отложенном вводе-выводе|[Проверка на наличие проблем задержки ввода-вывода в подсистеме дискового ввода-вывода](check-disk-input-and-output-subsystem-for-io-delay-problems.md)|  
-|Журнал событий Windows: ошибка ввода-вывода при сбое страницы физической памяти|[Ошибка ввода-вывода во время сбоев страниц физической памяти](input-and-output-error-during-hard-page-fault.md)|  
+|Журнал событий Windows: ошибка запроса ввода-вывода|[Обнаружить неудачный входящий запрос на выход](detect-failed-input-and-output-requests.md)|  
+|Журнал событий Windows: предупреждение об отложенном вводе-выводе|[Проверка наличия проблем с задержкой ввода-вывода в дисковых и выходных подсистемах](check-disk-input-and-output-subsystem-for-io-delay-problems.md)|  
+|Журнал событий Windows: ошибка ввода-вывода при сбое страницы физической памяти|[Input and Output Error During Hard Page Fault](input-and-output-error-during-hard-page-fault.md)|  
 |Журнал событий Windows: ошибка при повторном считывании|[Проверка на наличие проблем повторного чтения в подсистеме дискового ввода-вывода](check-disk-input-output-subsystem-for-read-retry-problems.md)|  
 |Журнал событий Windows: ошибка из-за истечения времени ожидания ввода-вывода системы хранения|[Время ожидания ввода-вывода для системы хранения](storage-system-input-output-time-out.md)|  
 |Журнал событий Windows: сбой в системе|[Непредвиденные сбои системы](unexpected-system-failures.md)|  

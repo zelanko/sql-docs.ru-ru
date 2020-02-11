@@ -1,5 +1,5 @@
 ---
-title: Учебник. Репликация данных между постоянно соединенными серверами | Документация Майкрософт
+title: Руководство. Репликация данных между постоянно соединенными серверами | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 32b97d456c42eab89511d8f5a9d1924914ea81ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62655400"
 ---
 # <a name="tutorial-replicating-data-between-continuously-connected-servers"></a>Учебник. Репликация данных между постоянно соединенными серверами
@@ -36,11 +36,11 @@ ms.locfileid: "62655400"
   
     -   Любой выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], за исключением Express ([!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]) или [!INCLUDE[ssEW](../../includes/ssew-md.md)]. Эти выпуски не могут быть издателями репликации.  
   
-    -   [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] . В целях повышения безопасности образцы баз данных по умолчанию не устанавливаются.  
+    -   [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)]образец базы данных. В целях повышения безопасности образцы баз данных по умолчанию не устанавливаются.  
   
 -   На сервере-подписчике (целевом):  
   
-    -   Любой выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], за исключением [!INCLUDE[ssEW](../../includes/ssew-md.md)]. [!INCLUDE[ssEW](../../includes/ssew-md.md)] не может быть подписчиком в репликации транзакций.  
+    -   Любой выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], за исключением [!INCLUDE[ssEW](../../includes/ssew-md.md)]. [!INCLUDE[ssEW](../../includes/ssew-md.md)]не может быть подписчиком в репликации транзакций.  
   
     > [!NOTE]  
     >  Репликация не устанавливается по умолчанию на [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] .  
@@ -56,11 +56,11 @@ ms.locfileid: "62655400"
   
 -   [Занятие 2. Создание подписки на публикацию транзакций](lesson-2-creating-a-subscription-to-the-transactional-publication.md)  
   
--   [Занятие 3. Проверка подписки и измерение задержки](lesson-3-validating-the-subscription-and-measuring-latency.md)  
+-   [Занятие 3. Проверка подписки и измерение задержки](lesson-3-validating-the-subscription-and-measuring-latency.md)  
   
- [Приступить к изучению](transactional/transactional-replication.md)  
+ [Запуск учебника](transactional/transactional-replication.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Основные понятия программирования репликации](concepts/replication-programming-concepts.md)  
   
   

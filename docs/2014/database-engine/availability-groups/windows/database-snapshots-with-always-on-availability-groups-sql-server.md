@@ -1,5 +1,5 @@
 ---
-title: Базы данных моментальных снимков с группами доступности AlwaysOn (SQL Server) | Документация Майкрософт
+title: Моментальные снимки базы данных с группы доступности AlwaysOn (SQL Server) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cba02aa87e800391ffba3c791c1ee4341462c3f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62814660"
 ---
 # <a name="database-snapshots-with-alwayson-availability-groups-sql-server"></a>Моментальные снимки баз данных для групп доступности AlwaysOn (SQL Server)
@@ -35,8 +35,8 @@ ms.locfileid: "62814660"
   
  Если реплика доступности, на которой размещен моментальный снимок базы данных, выполнила переход на другой ресурс, моментальные снимки базы данных остаются на экземпляре сервера, где они были созданы. Эти снимки будут доступны пользователям и после перехода на другой ресурс. Если для вашей среды важна производительность, рекомендуется создавать моментальные снимки баз данных только в базах данных-получателях, размещенных в дополнительной реплике, настроенной на режим ручного перехода на другой ресурс.  Если потребуется вручную перевести группу доступности на другой ресурс в данной дополнительной реплике, можно будет создать новый набор моментальных снимков базы данных в другой дополнительной реплике, перенаправить клиентов к новым моментальным снимкам базы данных, а затем удалить все моментальные снимки баз данных, ставших базами данных-источниками.  
   
-## <a name="see-also"></a>См. также  
- [Обзор групп доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Моментальные снимки базы данных (SQL Server)](../../../relational-databases/databases/database-snapshots-sql-server.md)  
+## <a name="see-also"></a>См. также:  
+ [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Моментальные снимки базы данных &#40;SQL Server&#41;](../../../relational-databases/databases/database-snapshots-sql-server.md)  
   
   
