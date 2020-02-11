@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 986f464752f631d55b994469b733a3374a1926a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63161823"
 ---
 # <a name="transaction-log-disk-space-for-index-operations"></a>Место на диске журнала транзакций для операций обработки индекса
@@ -41,8 +41,8 @@ ms.locfileid: "63161823"
 4.  Не выполняйте обработку индекса в сети в явной транзакции. Усечение журнала нельзя будет выполнить до завершения явной транзакции.  
   
 ## <a name="related-content"></a>См. также  
- [Требования к месту на диске для DDL-операций индекса](disk-space-requirements-for-index-ddl-operations.md)  
+ [Disk Space Requirements for Index DDL Operations](disk-space-requirements-for-index-ddl-operations.md)  
   
- [Пример места на диске для индекса](index-disk-space-example.md)  
+ [Пример использования места на диске для индекса](index-disk-space-example.md)  
   
   

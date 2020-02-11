@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 32a2296fdb68e640ce8ebfc8dd9cdb351666b337
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250581"
 ---
 # <a name="sql-server-memory-node"></a>SQL Server, память узла
@@ -23,18 +23,18 @@ ms.locfileid: "63250581"
 ## <a name="memory-node-counters"></a>Счетчики памяти узла  
  В таблице описываются счетчики [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Память узла** .  
   
-|SQL Server, счетчики диспетчера памяти|Описание|  
+|SQL Server, счетчики диспетчера памяти|Description|  
 |----------------------------------------|-----------------|  
 |**Память узла базы данных (КБ)**|Указывает объем памяти, который используется в настоящий момент сервером на данном узле для страниц базы данных.|  
 |**Свободная память узла (КБ)**|Указывает объем памяти, который не используется сервером на данном узле.|  
-|**Внешняя память узла (КБ)**|Указывает объем локальной памяти, отличной от NUMA, на данном узле.|  
-|**Заимствованная память узла (КБ)**|Указывает объем памяти, который используется в настоящий момент сервером на данном узле не для страниц базы данных, а для других целей.|  
-|**Целевая память узла.**|Указывает идеальный объем памяти для данного узла.|  
+|**Память внешнего узла (КБ)**|Указывает объем локальной памяти, отличной от NUMA, на данном узле.|  
+|**Узел заимствованной памяти (КБ)**|Указывает объем памяти, который используется в настоящий момент сервером на данном узле не для страниц базы данных, а для других целей.|  
+|**Память целевого узла**|Указывает идеальный объем памяти для данного узла.|  
 |**Общая память узла**|Указывает общий объем памяти, выделенной серверу на данном узле.|  
   
-## <a name="see-also"></a>См. также  
- [Наблюдение за использованием ресурсов (системный монитор)](monitor-resource-usage-system-monitor.md)   
- [SQL Server, объект Buffer Manager](sql-server-buffer-manager-object.md)   
- [sys.dm_os_performance_counters (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)  
+## <a name="see-also"></a>См. также:  
+ [Мониторинг использования ресурсов &#40;системном мониторе&#41;](monitor-resource-usage-system-monitor.md)   
+ [SQL Server, объект диспетчера буферов](sql-server-buffer-manager-object.md)   
+ [sys. dm_os_performance_counters &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)  
   
   

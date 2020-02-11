@@ -1,5 +1,5 @@
 ---
-title: Баннер элемент (ssbdiagnose) | Документация Майкрософт
+title: Элемент Banner (ssbdiagnose) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b2f425dd955e0c92daeaa0241e7ea01333222b75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63186870"
 ---
 # <a name="banner-element-ssbdiagnose"></a>Элемент Banner (программа ssbdiagnose)
@@ -36,7 +36,7 @@ ms.locfileid: "63186870"
   
 ## <a name="element-attributes"></a>Атрибуты элемента  
   
-|attribute|Описание|  
+|attribute|Description|  
 |---------------|-----------------|  
 |`title`|Определяет программу, сформировавшую выходной XML-файл **ssbdiagnose** .|  
 |`product`|Определяет продукт, сформировавший выходной XML-файл **ssbdiagnose** .|  
@@ -44,7 +44,7 @@ ms.locfileid: "63186870"
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |**Тип данных и длина**|Нет.|  
 |**Значение по умолчанию**|Нет.|  
@@ -64,7 +64,7 @@ ms.locfileid: "63186870"
 <Banner title="Service Broker Diagnostics Utility" product="Microsoft SQL Server" version="10.0.1073.0" />  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Программа ssbdiagnose (компонент Service Broker)](ssbdiagnose-utility-service-broker.md)  
   
   

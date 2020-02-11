@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ba3957eb5b0c88396376d615033107b13d0621ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63297858"
 ---
 # <a name="add-tables-to-queries-visual-database-tools"></a>Добавление таблиц в запросы (визуальные инструменты для баз данных)
@@ -56,11 +56,11 @@ ms.locfileid: "63297858"
   
 7.  Продолжая работать на **панели SQL**, укажите псевдоним после правой скобки.  
   
-## <a name="see-also"></a>См. также  
- [Создание псевдонимов таблиц &#40;визуальных инструментах баз данных&#41;](visual-database-tools.md)   
- [Удаление таблиц из запросов &#40;визуальных инструментах баз данных&#41;](remove-tables-from-queries-visual-database-tools.md)   
- [Определение критериев поиска &#40;визуальных инструментах баз данных&#41;](specify-search-criteria-visual-database-tools.md)   
- [Резюмирование результатов запросов &#40;визуальных инструментах баз данных&#41;](summarize-query-results-visual-database-tools.md)   
+## <a name="see-also"></a>См. также:  
+ [Создание псевдонимов таблиц &#40;визуальных инструментов для баз данных&#41;](visual-database-tools.md)   
+ [Удаление таблиц из запросов &#40;визуальных инструментов для баз данных&#41;](remove-tables-from-queries-visual-database-tools.md)   
+ [Укажите условия поиска &#40;визуальные инструменты для баз данных&#41;](specify-search-criteria-visual-database-tools.md)   
+ [Суммировать результаты запроса &#40;визуальных инструментов для баз данных&#41;](summarize-query-results-visual-database-tools.md)   
  [Выполнение основных операций с запросами (визуальные инструменты для баз данных)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

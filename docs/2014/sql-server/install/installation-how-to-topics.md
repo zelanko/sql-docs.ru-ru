@@ -1,5 +1,5 @@
 ---
-title: Инструкции по установке | Документация Майкрософт
+title: Разделы руководства по установке | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 20c42e7d57415875acd1aebeaa3a674285468dc0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094364"
 ---
 # <a name="installation-how-to-topics"></a>Инструкции по установке
@@ -25,22 +25,22 @@ ms.locfileid: "66094364"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Описание|  
+|Раздел|Description|  
 |-----------|-----------------|  
 |[Установка SQL Server 2014 с помощью мастера установки &#40;установки&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)|Методический раздел, описывающий типичную установку [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при помощи мастера установки.|  
-|[Установка SQL Server 2014 из командной строки](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)|Методический раздел, в котором приведены образцы синтаксиса и параметров для запуска установки в автоматическом режиме.|  
-|[Установка SQL Server 2014 с помощью файла конфигурации](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)|Методический раздел, в котором приведены образцы синтаксиса и параметров для запуска установки с помощью файла конфигурации.|  
+|[Install SQL Server 2014 from the Command Prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)|Методический раздел, в котором приведены образцы синтаксиса и параметров для запуска установки в автоматическом режиме.|  
+|[установить SQL Server 2014 с помощью файла конфигурации](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)|Методический раздел, в котором приведены образцы синтаксиса и параметров для запуска установки с помощью файла конфигурации.|  
 |[Установка PowerPivot для SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)|Методический раздел, содержащий ссылки на дополнительные процедуры по установке [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] в разных конфигурациях сервера SharePoint.|  
-|[Добавление компонентов к экземпляру SQL Server 2014 &#40;установки&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup.md)|Методический раздел, описывающий обновление компонентов существующего экземпляра [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|[Добавьте компоненты в экземпляр компонента SQL Server 2014 &#40;установки&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup.md)|Методический раздел, описывающий обновление компонентов существующего экземпляра [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |[Удаление установки SQL Server 2014](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)|Методический раздел, описывающий исправление поврежденной установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .|  
 |[Переименование компьютера, на который установлен изолированный экземпляр SQL Server](../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)|Методический раздел, описывающий обновление системных метаданных, хранящихся в таблице sys.servers.|  
 |[Просмотр и чтение файлов журналов программы установки SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)|Методический раздел, описывающий проверку ошибок в файлах журнала установки.|  
 |[Удаление существующего экземпляра SQL Server (программа установки)](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)|Методический раздел, описывающий удаление изолированного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вручную.|  
 |[Инструкции по обновлению](../../../2014/sql-server/install/upgrade-how-to-topics.md)|Методические разделы, описывающие обновление изолированного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или экземпляра, входящего в кластер.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Планирование установки SQL Server](../../../2014/sql-server/install/planning-a-sql-server-installation.md)   
  [Обновление до SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)   
- [Установка SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  
+ [Установка собственного клиента SQL Server](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  
   
   

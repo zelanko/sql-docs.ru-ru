@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6f3c180ed4eef217eb338b3b180c39702a3a89bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479614"
 ---
 # <a name="master-data-services-database"></a>База данных служб Master Data Services
@@ -35,17 +35,17 @@ ms.locfileid: "65479614"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
--   [Конечный элемент таблицы элементов (службы Master Data Services)](leaf-member-staging-table-master-data-services.md)  
+-   [&#40;Master Data Services промежуточной таблицы элементов&#41;](leaf-member-staging-table-master-data-services.md)  
   
--   [Промежуточная таблица консолидированных элементов (службы Master Data Services)](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)  
+-   [Промежуточная таблица консолидированного элемента &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)  
   
--   [Промежуточная таблица связей (службы Master Data Services)](../../2014/master-data-services/relationship-staging-table-master-data-services.md)  
+-   [Промежуточная таблица связей &#40;Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md)  
   
--   [Ошибки промежуточного процесса (службы Master Data Services)](../../2014/master-data-services/staging-process-errors-master-data-services.md)  
+-   [Ошибки промежуточного процесса &#40;Master Data Services&#41;](../../2014/master-data-services/staging-process-errors-master-data-services.md)  
   
-## <a name="see-also"></a>См. также  
- [Создание базы данных служб Master Data Services](install-windows/create-a-master-data-services-database.md)   
- [Защита объектов базы данных (службы Master Data Services)](../../2014/master-data-services/database-object-security-master-data-services.md)   
- [Имена входа, пользователи и роли базы данных (службы Master Data Services)](../../2014/master-data-services/database-logins-users-and-roles-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Создание базы данных Master Data Services](install-windows/create-a-master-data-services-database.md)   
+ [&#40;Master Data Services безопасности объектов базы данных&#41;](../../2014/master-data-services/database-object-security-master-data-services.md)   
+ [Имена входа, пользователи и роли базы данных &#40;Master Data Services&#41;](../../2014/master-data-services/database-logins-users-and-roles-master-data-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Подписка, Нераспространенные команды (подписка на публикацию транзакций, SQL Server 2005 и более поздние версии) | Документация Майкрософт
+title: Подписка, нераспространенные команды (подписка на публикацию транзакций, SQL Server 2005 и более поздних версий) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2a1f957c417c5c63766dfbffa923edd6935d1eb5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151483"
 ---
 # <a name="subscription-undistributed-commands-transactional-subscription-sql-server-2005-and-later"></a>Подписка, нераспространенные команды (подписка на публикацию транзакций, SQL Server 2005 и более поздние версии)
@@ -29,9 +29,9 @@ ms.locfileid: "63151483"
  **Расчетное время применения этих команд, вычисленное по результатам предыдущего выполнения.**  
  Примерное количество времени, необходимое для доставки команд на подписчик. Если это значение превышает количество времени, требуемое для создания и применения моментального снимка на подписчике, рассмотрите возможность повторной инициализации подписчика. Дополнительные сведения см. в статье [Повторная инициализация подписок](reinitialize-subscriptions.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Запуск монитора репликации](monitor/start-the-replication-monitor.md)   
- [Наблюдение за производительностью с помощью монитора репликации](monitor/monitor-performance-with-replication-monitor.md)   
+ [Мониторинг производительности с помощью монитора репликации](monitor/monitor-performance-with-replication-monitor.md)   
  [Наблюдение за репликацией](monitoring-replication.md)  
   
   

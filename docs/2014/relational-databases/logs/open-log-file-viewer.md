@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2cf214691c2bcffeb617d3f7534fac94f8941db5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63144506"
 ---
 # <a name="open-log-file-viewer"></a>Открытие средства просмотра файла журнала
@@ -30,9 +30,9 @@ ms.locfileid: "63144506"
   
 -   Журнал заданий  
   
--   SQL Server  
+-   SQL Server  
   
--   SQL Server, агент  
+-   Агент SQL Server  
   
 -   События Windows (К ним можно получить доступ с помощью программы просмотра событий Windows.)  
   
@@ -54,7 +54,7 @@ ms.locfileid: "63144506"
   
 1.  В обозревателе объектов разверните узел **Управление**.  
   
-2.  Выполните любое из следующих действий.  
+2.  Выполните одно из приведенных ниже действий.  
   
     -   Щелкните правой кнопкой мыши **Журналы SQL Server**, выберите **Просмотр**, а затем **Журнал SQL Server** или **Журнал SQL Server и Windows**.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "63144506"
   
      Доступны журналы **Коллекция аудитов** и **Windows NT**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Средство просмотра файлов журнала](log-file-viewer.md)   
  [Подсистема аудита SQL Server (компонент Database Engine)](../security/auditing/sql-server-audit-database-engine.md)   
  [Просмотр автономных файлов журнала](view-offline-log-files.md)  

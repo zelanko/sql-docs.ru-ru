@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 28203de42b3cdb4a033ce222c747df3e80da96f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63224493"
 ---
 # <a name="combine-conditions-when-or-has-precedence-visual-database-tools"></a>Соединение условий, если приоритет имеет оператор OR (визуальные инструменты для баз данных)
@@ -70,8 +70,8 @@ WHERE (job_lvl = 100 OR status = 'R') AND
 > [!NOTE]  
 >  Если ввести условия поиска в формате, представленном выше, в [панель SQL](sql-pane-visual-database-tools.md), но потом изменить запрос на панели диаграмм или панели критериев, то конструктор запросов и представлений заново создает инструкцию SQL, так чтобы она соответствовала форме с условием AND, явно распространенным на оба условия, связанные оператором OR.  
   
-## <a name="see-also"></a>См. также  
- [Обозначения для объединения условий поиска на панели критериев &#40;визуальных инструментах баз данных&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
+## <a name="see-also"></a>См. также:  
+ [Соглашения для комбинирования условий поиска на панели критериев &#40;визуальных инструментов для баз данных&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
  [Определение критериев поиска (визуальные инструменты для баз данных)](specify-search-criteria-visual-database-tools.md)  
   
   

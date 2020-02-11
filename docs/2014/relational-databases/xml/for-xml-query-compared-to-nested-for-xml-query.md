@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3cccb676574fe4b767d567fbe48cdb887baddf8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63205054"
 ---
 # <a name="for-xml-query-compared-to-nested-for-xml-query"></a>Сравнение запросов FOR XML и вложенных запросов FOR XML
@@ -90,7 +90,7 @@ ORDER BY ProductCategoryID
 FOR XML AUTO, TYPE  
 ```  
   
- Это результат:  
+ Результат:  
   
 ```  
 < ProdCat ProductCategoryID="1" CategoryName="Bikes" />  
@@ -200,7 +200,7 @@ FOR XML AUTO, TYPE
   
  Если удалить директиву `ELEMENTS` из вложенного запроса `FOR XML` , который создает подкатегории продуктов, то весь результат будет создан по атрибутивной модели. Этот запрос можно составить без вложений. Добавление директивы `ELEMENTS` приводит к созданию XML-документа как по атрибутивной, так и по элементной модели. Этот результат нельзя сформировать с помощью одноуровневого запроса FOR XML.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование вложенных запросов FOR XML](use-nested-for-xml-queries.md)  
   
   

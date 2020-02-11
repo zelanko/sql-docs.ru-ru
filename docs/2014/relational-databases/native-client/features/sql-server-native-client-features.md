@@ -1,5 +1,5 @@
 ---
-title: Компоненты собственного клиента SQL Server | Документация Майкрософт
+title: SQL Server Native Client компонентов | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 093d40734b88cc370e0c08a8f9a8b86312409e6b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63225563"
 ---
 # <a name="sql-server-native-client-features"></a>Компоненты собственного клиента SQL Server
@@ -30,19 +30,19 @@ ms.locfileid: "63225563"
  Описание изменения поведения, реализованного с версии Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012.  
   
  [Использование зеркального отображения базы данных](using-database-mirroring.md)  
- Рассматриваются как [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client поддерживает использование зеркальных баз данных, который является возможность хранить копию или зеркальную из [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] базы данных на резервном сервере.  
+ Описывает, как [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственный клиент поддерживает использование зеркальных баз данных, то есть возможность сохранения копии или зеркала [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] базы данных на резервном сервере.  
   
  [Выполнение асинхронных операций](performing-asynchronous-operations.md)  
  Обсуждение поддержки собственным клиентом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] асинхронных операций, то есть способности немедленно возвращать управление, не блокируя вызывающий поток.  
   
- [Использование множественных активных результирующих наборов (MARS)](using-multiple-active-result-sets-mars.md)  
+ [Использование нескольких активных результирующих наборов &#40;режиме MARS&#41;](using-multiple-active-result-sets-mars.md)  
  Обсуждение поддержки собственным клиентом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] режима MARS. Режим MARS позволяет выполнять и получать несколько результирующих наборов через одно подключение к базе данных.  
   
  [Использование типов данных XML](using-xml-data-types.md)  
  Обсуждение поддержки собственным клиентом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] типа данных XML (представляющего собой тип данных на основе XML), который можно использовать как тип столбца, переменной, параметра или значения, возвращаемого функцией.  
   
- [Использование определяемых пользователем типов](using-user-defined-types.md)  
- Рассматриваются как [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client поддерживает определяемые пользователем типы (UDT), который расширяет систему типов SQL, позволяя сохранять объекты и настраиваемые структуры данных в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] базы данных.  
+ [Использование определяемых пользователем типов данных](using-user-defined-types.md)  
+ Описывает, как [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственный клиент поддерживает определяемые пользователем типы, которые расширяют систему типов SQL, позволяя сохранять объекты и пользовательские структуры данных в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] базе данных.  
   
  [Использование типов больших значений](using-large-value-types.md)  
  Обсуждение поддержки собственным клиентом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] типов данных больших значений, то есть типов данных больших объектов (LOB).  
@@ -57,33 +57,33 @@ ms.locfileid: "63225563"
  Обсуждение поддержки собственным клиентом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] уведомления потребителя об изменении набора строк.  
   
  [Выполнение операций массового копирования](performing-bulk-copy-operations.md)  
- Рассматриваются как [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client поддерживает операции массового копирования, обеспечивающие передачу больших объемов данных, в который или из которого [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] таблицы или представления.  
+ Описывает, как [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственный клиент поддерживает операции с массовым копированием, которые позволяют передавать большие объемы данных в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] таблицу или представление или из нее.  
   
  [Использование шифрования без проверки](using-encryption-without-validation.md)  
  Обсуждение использования собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для шифрования данных, передаваемых на сервер, без проверки сертификата.  
   
- [Возвращающие табличные значения параметров &#40;собственный клиент SQL Server&#41;](table-valued-parameters-sql-server-native-client.md)  
+ [Возвращающие табличное значение параметры &#40;SQL Server Native Client&#41;](table-valued-parameters-sql-server-native-client.md)  
  Обсуждение поддержки собственным клиентом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] возвращающих табличные значения параметров.  
   
  [Большие определяемые пользователем типы данных CLR](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
  Обсуждение поддержки определяемых пользователем типов данных среды CLR.  
   
  [Поддержка FILESTREAM](filestream-support.md)  
- Обсуждаются [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддержка Native Client для улучшенной функции FILESTREAM.  
+ Обсуждается [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддержка собственного клиента для расширенного компонента FILESTREAM.  
   
- [Поддержка имени субъекта-службы &#40;SPN&#41; в клиентских соединениях](service-principal-name-spn-support-in-client-connections.md)  
+ [Поддержка имени участника-службы (SPN) в клиентских соединениях](service-principal-name-spn-support-in-client-connections.md)  
  Обсуждение расширенной поддержки имен участника-службы (SPN) для проведения взаимной проверки подлинности по всем протоколам.  
   
- [Поддержка разреженных столбцов в SQL Server Native Client](sparse-columns-support-in-sql-server-native-client.md)  
+ [Поддержка разреженных столбцов в собственном клиенте SQL Server](sparse-columns-support-in-sql-server-native-client.md)  
  Обсуждение поддержки собственным клиентом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] разреженных столбцов.  
   
- [Улучшения функций даты и времени](date-and-time-improvements.md)  
+ [Улучшения даты и времени](date-and-time-improvements.md)  
  Обсуждение поддержки новых типов данных даты и времени, добавленной в собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  [Обнаружение метаданных](metadata-discovery.md)  
  Обсуждение улучшений в механизме обнаружения метаданных, внесенных в [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
   
- [Поддержка UTF-16 в SQL Server Native Client 11.0](utf-16-support-in-sql-server-native-client-11-0.md)  
+ [Поддержка UTF-16 в собственном клиенте SQL Server версии 11.0](utf-16-support-in-sql-server-native-client-11-0.md)  
  Рассматривает изменение поведения, появившееся в [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Если при привязке результата столбца или выходного параметра указывается буфер фиксированной длины, а символ `wchar`, записываемый в буфер перед завершающим символом, является старшим символом суррогатной пары, а следующий символ `wchar` является младшим символом суррогатной пары, то клиент Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не добавит в буфер старший символ суррогатной пары.  
   
  [Поддержка высокого уровня доступности и аварийного восстановления собственного клиента SQL Server](sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
@@ -95,10 +95,10 @@ ms.locfileid: "63225563"
  [Поддержка SQL Server Native Client для LocalDB](sql-server-native-client-support-for-localdb.md)  
  Обсуждение поддержки клиентом Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] улучшенной функции LocalDB.  
   
-## <a name="see-also"></a>См. также  
- [Программирование собственного клиента SQL Server](../sql-server-native-client-programming.md)   
- [Инструкции по ODBC](../../native-client-odbc-how-to/odbc-how-to-topics.md)   
- [Инструкции по OLE DB](../../native-client-ole-db-how-to/ole-db-how-to-topics.md)   
- [Установка SQL Server Native Client](../applications/installing-sql-server-native-client.md)  
+## <a name="see-also"></a>См. также:  
+ [SQL Server Native Client программирование](../sql-server-native-client-programming.md)   
+ [Разделы руководства по ODBC](../../native-client-odbc-how-to/odbc-how-to-topics.md)   
+ [OLE DB инструкций](../../native-client-ole-db-how-to/ole-db-how-to-topics.md)   
+ [Установка собственного клиента SQL Server](../applications/installing-sql-server-native-client.md)  
   
   

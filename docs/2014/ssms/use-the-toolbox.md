@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 517db08c37a0952a25a66828a37b11fd6ffa96ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63280670"
 ---
 # <a name="use-the-toolbox"></a>Использование панели элементов
@@ -42,7 +42,7 @@ ms.locfileid: "63280670"
 |изменить положение элемента на развернутой вкладке области элементов,|перетащите элемент в нужное место и отпустите кнопку мыши.|  
 |переименовать элемент области элементов,|Щелкните правой кнопкой мыши элемент области элементов и выберите пункт **Переименовать элемент** в контекстном меню.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Общие элементы пользовательского интерфейса](general-user-interface-elements.md)  
   
   

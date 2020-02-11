@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 19e6683baeb0a82c77a858b04f18695ba7120b15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250125"
 ---
 # <a name="inserting-and-updating-data-in-a-table-tutorial"></a>Вставка данных в таблицу и их обновление (учебник)
@@ -29,7 +29,7 @@ ms.locfileid: "63250125"
 |75|Tire Bar||Tool for changing tires.|  
 |3000|3mm Bracket|0,52||  
   
- Базовый синтаксис: INSERT, имя таблицы, список столбцов, значения и затем список значений для вставки. Два дефиса в начале строки означают, что строка является примечанием и текст не будет обрабатываться компилятором. В этом случае примечание описывает возможные варианты синтаксиса.  
+ Базовый синтаксис: INSERT, имя таблицы, список столбцов, VALUES, а затем список добавляемых значений. Два дефиса в начале строки означают, что строка является примечанием и текст не будет обрабатываться компилятором. В этом случае примечание описывает возможные варианты синтаксиса.  
   
 ### <a name="to-insert-data-into-a-table"></a>Вставка данных в таблицу  
   
@@ -84,9 +84,9 @@ ms.locfileid: "63250125"
     ```  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
- [Чтение данных из таблицы (учебник)](lesson-1-4-reading-the-data-in-a-table.md)  
+ [Чтение данных в таблице &#40;учебнике&#41;](lesson-1-4-reading-the-data-in-a-table.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [INSERT (Transact-SQL)](/sql/t-sql/statements/insert-transact-sql)   
  [UPDATE (Transact-SQL)](/sql/t-sql/queries/update-transact-sql)  
   

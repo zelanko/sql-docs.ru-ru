@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4219830c82710861ee7b079ce78d1b5859681753
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479533"
 ---
 # <a name="entity-permissions-master-data-services"></a>Разрешения сущности (службы Master Data Services)
@@ -34,15 +34,15 @@ ms.locfileid: "65479533"
 > [!NOTE]  
 >  Эти разрешения применяются только к функциональной области **Обозреватель** пользовательского интерфейса.  
   
-|Разрешение|Описание|  
+|Разрешение|Description|  
 |----------------|-----------------|  
 |**Только для чтения**|Сущность отображается, но пользователь не может добавлять, удалять или изменять элементы.|  
-|**Update**|Сущность отображается, пользователь может добавлять, удалять и изменять элементы.|  
+|**Обновляют**|Сущность отображается, пользователь может добавлять, удалять и изменять элементы.|  
 |**Запретить**|Сущность не отображается.|  
   
-## <a name="see-also"></a>См. также  
- [Назначение разрешения для объекта модели (службы Master Data Services)](assign-model-object-permissions-master-data-services.md)   
- [Разрешения объекта модели (службы Master Data Services)](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
- [Сущности (службы Master Data Services)](../../2014/master-data-services/entities-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Назначение разрешений объекта модели &#40;Master Data Services&#41;](assign-model-object-permissions-master-data-services.md)   
+ [Разрешения объекта модели &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
+ [Сущности &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)  
   
   

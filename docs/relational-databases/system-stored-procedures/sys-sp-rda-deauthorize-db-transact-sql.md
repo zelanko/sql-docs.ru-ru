@@ -1,5 +1,5 @@
 ---
-title: sys.sp_rda_deauthorize_db (Transact-SQL) | Документация Майкрософт
+title: sys. sp_rda_deauthorize_db (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,16 +17,16 @@ ms.assetid: 2e362e15-2cd5-4856-9f0b-54df56b0866b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6aeb27d4fb452a4ed5b7f45086f601eacb4f0339
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905112"
 ---
-# <a name="syssprdadeauthorizedb-transact-sql"></a>sys.sp_rda_deauthorize_db (Transact-SQL)
+# <a name="syssp_rda_deauthorize_db-transact-sql"></a>sys. sp_rda_deauthorize_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Удаление соединения между локальной базы данных с поддержкой Stretch и удаленной базе данных Azure с проверкой подлинности. Запустите **sp_rda_deauthorize_db** при удаленной базы данных недоступен или находится в несогласованном состоянии, и вы хотите изменить поведение запроса для всех таблиц, совместимых со Stretch, в базе данных.  
+  Удаляет подключение с проверкой подлинности между локальной базой данных с поддержкой Stretch и удаленной базой данных Azure. Запустите **sp_rda_deauthorize_db** , когда удаленная база данных недоступна или находится в непостоянном состоянии и необходимо изменить поведение запроса для всех таблиц с поддержкой Stretch в базе данных.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -37,21 +37,21 @@ sp_rda_deauthorize_db
 ```  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или > 0 (неуспешное завершение)  
+ 0 (успешное завершение) или >0 (сбой)  
   
 ## <a name="permissions"></a>Разрешения  
- Требуются права db_owner.  
+ Требуются db_owner разрешения.  
   
-## <a name="remarks"></a>Примечания  
- После того, как **sp_rda_deauthorize_db** , все запросы, адресованные баз данных с поддержкой Stretch и таблицы ошибкой. Это значит режим запроса устанавливается значение отключено. Чтобы выйти из этого режима, выполните одно из следующих действий.  
+## <a name="remarks"></a>Remarks  
+ После запуска **sp_rda_deauthorize_db** все запросы к базам данных и таблицам с поддержкой растяжения завершаются ошибкой. То есть режим запроса имеет значение ОТКЛЮЧЕНо. Чтобы выйти из этого режима, выполните одно из следующих действий.  
   
--   Запустите [sys.sp_rda_reauthorize_db &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) для повторного подключения к удаленной базе данных Azure. Эта операция автоматически восстанавливает режим запроса LOCAL_AND_REMOTE, что является поведением по умолчанию для Stretch Database. То есть запросы возвращают результаты из локальных и удаленных данных.  
+-   Выполните [sys. sp_rda_reauthorize_db &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) , чтобы повторно подключиться к удаленной базе данных Azure. Эта операция автоматически сбрасывает режим запроса на LOCAL_AND_REMOTE, что является поведением по умолчанию для Stretch Database. То есть запросы возвращают результаты как из локальных, так и удаленных данных.  
   
--   Запустите [sys.sp_rda_set_query_mode &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md) с аргументом LOCAL_ONLY запросов продолжать работать с только локальные данные.  
+-   Выполните [sys. sp_rda_set_query_mode &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md) с аргументом LOCAL_ONLY, чтобы разрешить выполнение запросов только для локальных данных.  
   
-## <a name="see-also"></a>См. также  
- [sys.sp_rda_set_query_mode &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md)   
- [sys.sp_rda_reauthorize_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md)   
- [База данных Stretch](../../sql-server/stretch-database/stretch-database.md)  
+## <a name="see-also"></a>См. также:  
+ [sys. sp_rda_set_query_mode &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md)   
+ [sys. sp_rda_reauthorize_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md)   
+ [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
   
   

@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a27720408db760604852410d9733983d7d67f18e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63193340"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>Использование результатов FOR XML в коде приложений
@@ -157,9 +157,9 @@ ms.locfileid: "63193340"
   
 -   **AnnualRevenue:** 150000  
   
--   **BankName:** PRIMARY International  
+-   **BankName:** Primary International  
   
--   **BusinessType:** ОС  
+-   **BusinessType:** OS  
   
 -   **YearOpened:** 1974  
   
@@ -290,9 +290,9 @@ SqlConnection closed.
 ```  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml` Позволяет реализовать поддержку, требование, что результат запроса FOR XML должен быть возвращен как тип данных `xml` тип данных, а не string или image типизированных данных, указав [директивы TYPE](type-directive-in-for-xml-queries.md). Если в запросе FOR XML указана директива TYPE, она предоставляет программный доступ к результатам FOR XML, как описано в разделе [Использование XML-данных в приложениях](use-xml-data-in-applications.md).  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml` Поддержка типа данных позволяет запросить возврат результата запроса FOR XML в виде `xml` типа данных вместо строковых или графических данных, указав [директиву Type](type-directive-in-for-xml-queries.md). Если в запросе FOR XML указана директива TYPE, она предоставляет программный доступ к результатам FOR XML, как описано в разделе [Использование XML-данных в приложениях](use-xml-data-in-applications.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [FOR XML (SQL Server)](for-xml-sql-server.md)  
   
   
