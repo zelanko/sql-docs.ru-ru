@@ -11,14 +11,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e67c5448a6625b37c7fb17bc24ea6bdd7cb879ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061599"
 ---
 # <a name="analysis-of-data-flow"></a>Анализ потока данных
-  Можно использовать [catalog.execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB` представление для анализа потока данных пакетов базы данных. Это представление отображает строку каждый раз, когда компонент потока данных передает данные в компонент, находящийся ниже в иерархии. Подобная информация дает полное представление о строках, отправляемых для каждого компонента.  
+  Для анализа потока данных пакетов можно использовать представление базы данных [Catalog. execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB` . Это представление отображает строку каждый раз, когда компонент потока данных передает данные в компонент, находящийся ниже в иерархии. Подобная информация дает полное представление о строках, отправляемых для каждого компонента.  
   
 > [!NOTE]  
 >  Чтобы получать необходимые сведения с помощью представления catalog.execution_data_statistics, уровнем ведения журнала должен быть **Подробно** .  
@@ -38,11 +38,11 @@ order by source_component_name, destination_component_name
   
 -   **total_rows** — сумма всех строк, отправленных компонентом  
   
--   **wall_clock_time_ms** — общее время выполнения каждого компонента, в миллисекундах  
+-   **wall_clock_time_ms** — общее затраченное время выполнения (в миллисекундах) для каждого компонента  
   
--   **num_rows_per_millisecond** — количество строк, отправляемых каждым компонентом в миллисекунду  
+-   **num_rows_per_millisecond** — количество строк в миллисекунду, отправляемых каждым компонентом  
   
- `HAVING` Предложение используется для предотвращения возникновения в вычислениях ошибки деления на ноль.  
+ `HAVING` Предложение используется для предотвращения ошибки деления на ноль в вычислениях.  
   
 ```  
 use SSISDB  
@@ -63,7 +63,7 @@ order by source_component_name desc
   
  [Устранение неполадок инструментов с помощью отчетов](troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Данные потоков данных](data-flow/data-in-data-flows.md)  
   
   

@@ -24,10 +24,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7b746f27653f5e8d1c24a584ac19c8fbac05a57c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105533"
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>Верхние и нижние колонтитулы страницы (построитель отчетов и службы SSRS)
@@ -57,12 +57,12 @@ ms.locfileid: "66105533"
   
 |Поддерживается в выражении|Статистические выражения ReportItems|Статистические выражения набора данных (в качестве области должно быть указано имя набора данных)|  
 |-----------------------------|----------------------------|----------------------------------------------------------|  
-|Текстовые поля в тексте отчета|Да|Нет|  
-|&PageNumber|Да|Нет|  
-|&TotalPages|Да|Нет|  
+|Текстовые поля в тексте отчета|Да|нет|  
+|&PageNumber|Да|нет|  
+|&TotalPages|Да|нет|  
 |Агрегатная функция|Да. Например,<br /><br /> `=First(ReportItems!TXT_LastName.Value)`|Да. Например,<br /><br /> `=Max(Quantity.Value,"DataSet1")`|  
 |Коллекция полей для элементов на странице|Косвенно. Например,<br /><br /> `=Sum(ReportItems!Textbox1.Value)`|Да. Например,<br /><br /> `=Sum(Fields!Quantity.Value,"DataSet1")`|  
-|Изображение, привязанное к данным|Косвенно. Например: `=ReportItems!TXT_Photo.Value`|Да. Например,<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  
+|Изображение, привязанное к данным|Косвенно. Например `=ReportItems!TXT_Photo.Value`.|Да. Например,<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  
   
  Следующие подразделы этого раздела содержат готовые к использованию выражения, получающие переменные данные, обычно используемые в колонтитулах. Этот раздел также содержит сведения о том, как модуль подготовки отчетов в формате Excel обрабатывает верхние и нижние колонтитулы. Дополнительные сведения о выражениях см. в разделе [Выражения (построитель отчетов и службы SSRS)](expressions-report-builder-and-ssrs.md).  
   
@@ -126,7 +126,7 @@ ms.locfileid: "66105533"
   
  Дополнительные сведения см. в разделе [Экспорт в Microsoft Excel (построитель отчетов и службы SSRS)](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Внедрение изображения в отчет (построитель отчетов и службы SSRS)](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
  [Прямоугольники и линии (построитель отчетов и службы SSRS)](rectangles-and-lines-report-builder-and-ssrs.md)  
   

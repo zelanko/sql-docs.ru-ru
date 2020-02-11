@@ -1,5 +1,5 @@
 ---
-title: Метод SetFlag (класс ClientNetworkProtocolProperty) | Документация Майкрософт
+title: Метод SetFlag (класс класс clientnetworkprotocolproperty) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 6c33eca0bf3281243aeee42ed89001cf9108d5d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245092"
 ---
 # <a name="setflag-method-clientnetworkprotocolproperty-class"></a>Метод SetFlag (класс ClientNetworkProtocolProperty)
@@ -39,21 +39,21 @@ BoolValue
 ```  
   
 ## <a name="parts"></a>Компоненты  
- *object*  
+ *объектами*  
  A [класса ClientNetworkProtocolProperty](clientnetworkprotocolproperty-class.md) , который представляет атрибут сетевого протокола, используемого [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 #### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Description|  
 |---------------|-----------------|  
-|*BoolValue*|Логическое значение, указывающее новое состояние флага.|  
+|*булвалуе*|Логическое значение, указывающее новое состояние флага.|  
   
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение `uint32`, равное 0, если служба изменена успешно, и 1, если запрос не поддерживается. Любое другое значение указывает на ошибку.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
- [Настройка клиентских протоколов](../../../database-engine/configure-windows/configure-client-protocols.md)  
+## <a name="see-also"></a>См. также:  
+ [настройка клиентских протоколов](../../../database-engine/configure-windows/configure-client-protocols.md)  
   
   

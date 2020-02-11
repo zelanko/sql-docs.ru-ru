@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 44cdff7d7b6813e6fbdf52282621d8845d0643b9
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68890529"
 ---
 # <a name="data-mining-query-transformation"></a>преобразование «Запрос интеллектуального анализа данных»
@@ -36,15 +36,15 @@ ms.locfileid: "68890529"
   
  Дополнительные сведения о свойствах, которые можно настроить при помощи диалогового окна **Редактор преобразования «Запрос интеллектуального анализа данных»** , см. в следующих разделах:  
   
--   [Редактор преобразования "Запрос интеллектуального анализа данных" (вкладка "Модель интеллектуального анализа данных")](../../data-mining-query-transformation-editor-mining-model-tab.md)  
+-   [Редактор преобразования «Запрос интеллектуального анализа данных» &#40;вкладку «модель интеллектуального анализа»&#41;](../../data-mining-query-transformation-editor-mining-model-tab.md)  
   
--   [Редактор преобразования "Запрос интеллектуального анализа данных" (вкладка "Модель интеллектуального анализа данных")](../../data-mining-query-transformation-editor-mining-model-tab.md)  
+-   [Редактор преобразования «Запрос интеллектуального анализа данных» &#40;вкладку «модель интеллектуального анализа»&#41;](../../data-mining-query-transformation-editor-mining-model-tab.md)  
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
 -   [Общие свойства](../../common-properties.md)  
   
--   [Пользовательские свойства преобразований](transformation-custom-properties.md)  
+-   [Transformation Custom Properties](transformation-custom-properties.md)  
   
  Дополнительные сведения о настройке свойств см. в разделе [Установление свойств компонента потока данных](../set-the-properties-of-a-data-flow-component.md).  
   

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3c1785e927bf2d2b90322c90f2adace4555047af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101534"
 ---
 # <a name="system-level-tasks"></a>Задачи системного уровня
@@ -40,7 +40,7 @@ ms.locfileid: "66101534"
 |Просмотр свойств сервера отчетов|Считывание системных свойств|  
 |Просмотр общих расписаний|Считывание расписаний|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Предоставление разрешений на сервер отчетов в собственном режиме](granting-permissions-on-a-native-mode-report-server.md)  
   
   
