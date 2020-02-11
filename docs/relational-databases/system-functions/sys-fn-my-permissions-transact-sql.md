@@ -1,5 +1,5 @@
 ---
-title: sys.fn_my_permissions (Transact-SQL) | Документация Майкрософт
+title: sys. fn_my_permissions (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,13 +21,13 @@ ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0a64db42ba04e864752559bb2d2b895625f2c9f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68122626"
 ---
-# <a name="sysfnmypermissions-transact-sql"></a>sys.fn_my_permissions (Transact-SQL)
+# <a name="sysfn_my_permissions-transact-sql"></a>sys.fn_my_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Возвращает список разрешений на защищаемый объект, фактически предоставленных участнику. Связанная функция — [HAS_PERMS_BY_NAME](../../t-sql/functions/has-perms-by-name-transact-sql.md).  
@@ -43,21 +43,21 @@ fn_my_permissions ( securable , 'securable_class' )
   
 ## <a name="arguments"></a>Аргументы  
  *securable*  
- Имя защищаемого объекта. Если защищаемым объектом является сам сервер или база данных, то этому аргументу должно быть присвоено значение NULL. Аргумент *securable* является скалярным выражением типа **sysname**. *защищаемый объект* может быть многочастным именем.  
+ Имя защищаемого объекта. Если защищаемым объектом является сам сервер или база данных, то этому аргументу должно быть присвоено значение NULL. *защищаемый объект* — это скалярное выражение типа **sysname**. *защищаемый объект* может быть многокомпонентным именем.  
   
  "*securable_class*"  
- Имя класса защищаемых объектов, для которого перечислены разрешения. *securable_class* — **sysname**. *securable_class* должно быть одно из следующих: РОЛИ ПРИЛОЖЕНИЯ, СБОРКИ, АСИММЕТРИЧНЫЙ КЛЮЧ, СЕРТИФИКАТ, КОНТРАКТА, БАЗЫ ДАННЫХ, КОНЕЧНОЙ ТОЧКИ, FULLTEXT CATALOG, ИМЯ ВХОДА, ТИП СООБЩЕНИЯ, ОБЪЕКТ, ПРИВЯЗКИ УДАЛЕННОЙ СЛУЖБЫ, РОЛИ, МАРШРУТА, СХЕМЫ, SERVER, СЛУЖБЫ, СИММЕТРИЧНЫЙ КЛЮЧ, ТИП, ПОЛЬЗОВАТЕЛЯ, КОЛЛЕКЦИИ XML-СХЕМ.  
+ Имя класса защищаемых объектов, для которого перечислены разрешения. *securable_class* имеет тип **sysname**. *securable_class* должен быть одним из следующих: роль приложения, сборка, асимметричный ключ, сертификат, контракт, база данных, конечная точка, полнотекстовый каталог, имя входа, тип сообщения, объект, привязка удаленной службы, роль, маршрут, схема, сервер, служба, симметричный ключ, тип, пользователь, коллекция схем XML.  
   
 ## <a name="columns-returned"></a>Возвращаемые столбцы  
- В следующей таблице перечислены столбцы, **fn_my_permissions** возвращает. Каждая возвращаемая строка описывает разрешение относительно защищаемого объекта в текущем контексте безопасности. Возвращает NULL в случае неудачного завершения запроса.  
+ В следующей таблице перечислены столбцы, возвращаемые **fn_my_permissions** . Каждая возвращаемая строка описывает разрешение относительно защищаемого объекта в текущем контексте безопасности. Возвращает NULL в случае неудачного завершения запроса.  
   
-|Имя столбца|Type|Описание|  
+|Имя столбца|Тип|Description|  
 |-----------------|----------|-----------------|  
-|entity_name|**sysname**|Имя защищаемого объекта, на который предоставлены перечисленные разрешения.|  
-|subentity_name|**sysname**|Имя столбца, если у защищаемого объекта есть столбцы, в противном случае — NULL.|  
+|entity_name|**имеет sysname**|Имя защищаемого объекта, на который предоставлены перечисленные разрешения.|  
+|subentity_name|**имеет sysname**|Имя столбца, если у защищаемого объекта есть столбцы, в противном случае — NULL.|  
 |permission_name|**nvarchar**|Имя разрешения.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Эта функция возвращает список действующих разрешений вызывающего участника в отношении указанного защищаемого объекта. Действующим разрешением будет одно из следующих:  
   
 -   Действующее разрешение, предоставленное непосредственно участнику.  
@@ -70,7 +70,7 @@ fn_my_permissions ( securable , 'securable_class' )
   
  Оценка разрешений всегда выполняется в контексте безопасности участника. Для определения того, имеют ли какие-либо другие участники действующее разрешение, вызывающая сторона должна иметь разрешение IMPERSONATE в отношении такого участника.  
   
- Для объектов на уровне схем допустимы одно-, двух- и трехкомпонентные непустые имена. Для сущностей уровня базы данных, принимается однокомпонентного имени, с помощью значение null означает «*текущей базы данных*«. Для самого сервера значение NULL является обязательным и означает текущий сервер. **fn_my_permissions** не может проверить разрешения на связанном сервере.  
+ Для объектов на уровне схем допустимы одно-, двух- и трехкомпонентные непустые имена. Для сущностей уровня базы данных принимается однокомпонентное имя с нулевым значением, что означает "*текущую базу данных*". Для самого сервера значение NULL является обязательным и означает текущий сервер. **fn_my_permissions** не может проверить разрешения на связанном сервере.  
   
  Приведенный ниже запрос возвращает список встроенных классов защищаемых объектов:  
   
@@ -80,7 +80,7 @@ SELECT DISTINCT class_desc FROM fn_builtin_permissions(default)
 GO  
 ```  
   
- Если указано значение по умолчанию для параметра *защищаемый объект* или *securable_class*, значение будет интерпретировано как NULL.  
+ Если значение по УМОЛЧАНИю передается в качестве значения *защищаемого объекта* или *securable_class*, то значение будет интерпретироваться как null.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -131,7 +131,7 @@ GO
 ```  
   
 ### <a name="f-listing-effective-permissions-on-an-xml-schema-collection"></a>Е. Перечисляет действующие разрешения для коллекции XML-схем  
- Следующий пример возвращает список действующих разрешений вызывающей стороны на коллекцию схем XML с именем `ProductDescriptionSchemaCollection` в [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] базы данных.  
+ В следующем примере возвращается список действующих разрешений вызывающего объекта в коллекции схем XML с именем `ProductDescriptionSchemaCollection` в [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] базе данных.  
   
 ```  
 USE AdventureWorks2012;  
@@ -149,7 +149,7 @@ GO
 ```  
   
 ### <a name="h-listing-effective-permissions-of-another-login"></a>З. Перечисление действующих разрешений другого имени входа  
- Следующий пример возвращает список действующих разрешений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имени входа `WanidaBenshoof` для таблицы `Employee` в схеме `HumanResources` базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Для вызывающей стороны требуется разрешение IMPERSONATE для имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `WanidaBenshoof`.  
+ Следующий пример возвращает список действующих разрешений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имени входа `WanidaBenshoof` для таблицы `Employee` в схеме `HumanResources` базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Для вызывающей стороны требуется разрешение IMPERSONATE для имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`WanidaBenshoof`.  
   
 ```  
 EXECUTE AS LOGIN = 'WanidaBenshoof';  
@@ -159,13 +159,13 @@ REVERT;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Функции безопасности (Transact-SQL)](../../t-sql/functions/security-functions-transact-sql.md)   
- [Разрешения (ядро СУБД)](../../relational-databases/security/permissions-database-engine.md)   
- [Securables](../../relational-databases/security/securables.md)   
- [Иерархия разрешений (ядро СУБД)](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
- [sys.fn_builtin_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
- [Представления каталога безопасности (Transact-SQL)](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [EXECUTE AS (Transact-SQL)](../../t-sql/statements/execute-as-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Функции безопасности &#40;&#41;Transact-SQL](../../t-sql/functions/security-functions-transact-sql.md)   
+ [Разрешения &#40;ядро СУБД&#41;](../../relational-databases/security/permissions-database-engine.md)   
+ [Защищаемые объекты](../../relational-databases/security/securables.md)   
+ [Иерархия разрешений &#40;ядро СУБД&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
+ [sys. fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
+ [Представления каталога безопасности &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [ВЫПОЛНИТЬ как &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)  
   
   

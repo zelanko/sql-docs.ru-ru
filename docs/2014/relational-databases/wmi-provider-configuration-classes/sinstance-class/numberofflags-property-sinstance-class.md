@@ -1,5 +1,5 @@
 ---
-title: Свойство NumberOfFlags (класс SInstance) | Документация Майкрософт
+title: Свойство NumberOfFlags (Класс Класс SInstance) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 6fe7d2bf1ef6b8932704242e94c377a2b11c0619
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63137246"
 ---
 # <a name="numberofflags-property-sinstance-class"></a>Свойство NumberOfFlags (класс SInstance)
@@ -37,15 +37,15 @@ object
 ```  
   
 ## <a name="parts"></a>Компоненты  
- *object*  
- [Класс SInstance](sinstance-class.md) объект, представляющий экземпляр сервера.  
+ *объектами*  
+ Объект [класса Класс SInstance](sinstance-class.md) , представляющий экземпляр сервера.  
   
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение `uint32`, определяющее число флагов для экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
- [Настройка сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+## <a name="see-also"></a>См. также:  
+ [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

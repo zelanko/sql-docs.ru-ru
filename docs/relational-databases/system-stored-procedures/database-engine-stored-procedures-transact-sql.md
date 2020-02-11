@@ -1,5 +1,5 @@
 ---
-title: Компонент Database Engine хранимые процедуры (Transact-SQL) | Документация Майкрософт
+title: Ядро СУБД хранимых процедур (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/02/2015
 ms.prod: sql
@@ -17,15 +17,16 @@ ms.assetid: 2ce018e9-1a3b-4530-a87d-842456a555ad
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 40548043b601d2a2309d9d5180f1200228f11bb4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942414"
 ---
 # <a name="database-engine-stored-procedures-transact-sql"></a>Хранимые процедуры ядра СУБД (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает следующие системные хранимые процедуры, используемые для общего обслуживания экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |||  
@@ -37,7 +38,7 @@ ms.locfileid: "67942414"
 |[sp_addmessage](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)|[sp_helpextendedproc](../../relational-databases/system-stored-procedures/sp-helpextendedproc-transact-sql.md)|  
 |[sp_addtype](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md)|[sp_helpfile](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)|  
 |[sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)|[sp_helpfilegroup](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)|  
-|[sp_altermessage](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)|[sp_helpindex](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)|  
+|[sp_altermessage](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)|[хранимая процедура sp_helpindex](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)|  
 |[sp_attach_db](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md)|[sp_helplanguage](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)|  
 |[sp_attach_single_file_db](../../relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql.md)|[sp_helpserver](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)|  
 |[sp_autostats](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)|[sp_helpsort](../../relational-databases/system-stored-procedures/sp-helpsort-transact-sql.md)|  
@@ -52,7 +53,7 @@ ms.locfileid: "67942414"
 |[sp_create_plan_guide](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)|[sp_prepare](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)|  
 |[sp_create_plan_guide_from_handle](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)|[sp_prepexec](../../relational-databases/system-stored-procedures/sp-prepexec-transact-sql.md)|  
 |[sp_create_removable](../../relational-databases/system-stored-procedures/sp-create-removable-transact-sql.md)|[sp_prepexecrpc](../../relational-databases/system-stored-procedures/sp-prepexecrpc-transact-sql.md)|  
-|[sp_createstats](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)|[sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md)|  
+|[sp_createstats, хранимая процедура](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)|[sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md)|  
 |[sp_cycle_errorlog](../../relational-databases/system-stored-procedures/sp-cycle-errorlog-transact-sql.md)|[sp_recompile](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md)|  
 |[sp_datatype_info](../../relational-databases/system-stored-procedures/sp-datatype-info-transact-sql.md)|[sp_refreshview](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)|  
 |[sp_db_increased_partitions](../../relational-databases/system-stored-procedures/sp-db-increased-partitions.md)|[sp_releaseapplock](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)|  
@@ -66,7 +67,7 @@ ms.locfileid: "67942414"
 |[sp_dbmmonitorhelpmonitoring](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)|[sp_settriggerorder](../../relational-databases/system-stored-procedures/sp-settriggerorder-transact-sql.md)|  
 |[sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)|[sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)|  
 |[sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)|[sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)|  
-|[sp_depends](../../relational-databases/system-stored-procedures/sp-depends-transact-sql.md)|[sp_unbindefault](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)|  
+|[процедура sp_depends](../../relational-databases/system-stored-procedures/sp-depends-transact-sql.md)|[хранимая процедура sp_unbindefault](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)|  
 |[sp_describe_first_result_set](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)|[sp_unbindrule](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)|  
 |[sp_describe_undeclared_parameters](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)|[sp_updateextendedproperty](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)|  
 |[sp_detach_db](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)|[sp_updatestats](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)|  
@@ -74,13 +75,13 @@ ms.locfileid: "67942414"
 |[sp_dropextendedproc](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)|[sp_validname](../../relational-databases/system-stored-procedures/sp-validname-transact-sql.md)|  
 |[sp_dropextendedproperty](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)|[sp_who](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)|  
 |[sp_dropmessage](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)|[sys.sp_xtp_control_proc_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md)|  
-|[sp_droptype](../../relational-databases/system-stored-procedures/sp-droptype-transact-sql.md)|[sys.sp_flush_log](../../relational-databases/system-stored-procedures/sys-sp-flush-log-transact-sql.md)|  
+|[хранимая процедура sp_droptype](../../relational-databases/system-stored-procedures/sp-droptype-transact-sql.md)|[sys.sp_flush_log](../../relational-databases/system-stored-procedures/sys-sp-flush-log-transact-sql.md)|  
 |[sp_execute](../../relational-databases/system-stored-procedures/sp-execute-transact-sql.md)|[sys.sp_xtp_bind_db_resource_pool](../../relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql.md)|  
 |[sp_executesql](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md)|[sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md)|  
 |[sp_getapplock](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)|[sys.sp_xtp_checkpoint_force_garbage_collection](../../relational-databases/system-stored-procedures/sys-sp-xtp-checkpoint-force-garbage-collection-transact-sql.md)|  
 |[sp_getbindtoken](../../relational-databases/system-stored-procedures/sp-getbindtoken-transact-sql.md)|[sys.sp_xtp_unbind_db_resource_pool](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)|  
   
-## <a name="see-also"></a>См. также  
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -20,36 +20,36 @@ ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ac6ad0872e813d36d9884a00f979b2a5284cd4a3
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73536161"
 ---
-# <a name="sysexternal_libraries-transact-sql"></a>sys. external_libraries (Transact-SQL)  
+# <a name="sysexternal_libraries-transact-sql"></a>sys.external_libraries (Transact-SQL)  
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Поддерживает управление библиотеками пакетов, связанными с внешними средами выполнения, такими как R, Python и Java.
 
 > [!NOTE]
-> В SQL Server 2017 поддерживаются язык R и платформа Windows. R, Python и Java на платформах Windows и Linux поддерживаются в SQL Server 2019 и более поздних версиях.
+> В SQL Server 2017 поддерживаются язык R и платформа Windows. R, Python и Java на платформах Windows и Linux поддерживаются в SQL Server 2019 и более поздних версий.
 
 ## <a name="sysexternal_libraries"></a>sys.external_libraries
 
 Представление каталога sys. external_libraries содержит строку для каждой внешней библиотеки, которая была передана в базу данных.
 
-|Имя столбца |Тип данных | Описание|
+|Имя столбца |Тип данных | Description|
 |------|------|------|
-|external_library_id |int | Идентификатор объекта внешней библиотеки. |
-|имя |sysname |Имя внешней библиотеки. Уникален в пределах базы данных на владельца.|
-|principal_id |int |Идентификатор участника, владеющего этой внешней библиотекой. |
-|language | sysname | Имя языка или среды выполнения, поддерживающей внешнюю библиотеку. Допустимые значения: "R", "Python" и "Java". В будущем могут быть добавлены дополнительные среды выполнения.|
-|область |int |0 для общедоступной области; 1 для закрытой области |  
+|external_library_id |INT | Идентификатор объекта внешней библиотеки. |
+|name |sysname |Имя внешней библиотеки. Уникален в пределах базы данных на владельца.|
+|principal_id |INT |Идентификатор участника, владеющего этой внешней библиотекой. |
+|Язык | sysname | Имя языка или среды выполнения, поддерживающей внешнюю библиотеку. Допустимые значения: "R", "Python" и "Java". В будущем могут быть добавлены дополнительные среды выполнения.|
+|scope |INT |0 для общедоступной области; 1 для закрытой области |  
 |scope_desc |varchar (7) |Указывает, является ли пакет открытым или закрытым|
 
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
 
 + [sys.external_library_files](sys-external-library-files-transact-sql.md)  
 + [СОЗДАТЬ ВНЕШНЮЮ БИБЛИОТЕКУ](../../t-sql/statements/create-external-library-transact-sql.md)  
-+ [Установка новых пакетов R в SQL Server](../../advanced-analytics/r/install-additional-r-packages-on-sql-server.md)  
-+ [Установка новых пакетов Python в SQL Server](../../advanced-analytics/python/install-additional-python-packages-on-sql-server.md)  
++ [Установить новые пакеты R на SQL Server](../../advanced-analytics/r/install-additional-r-packages-on-sql-server.md)  
++ [Установить новые пакеты Python на SQL Server](../../advanced-analytics/python/install-additional-python-packages-on-sql-server.md)  

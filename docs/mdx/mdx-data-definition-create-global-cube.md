@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d678622c67a83c279cce094b849829e668af30cb
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892152"
 ---
 # <a name="mdx-data-definition---create-global-cube"></a>Определение данных многомерных выражений — CREATE GLOBAL CUBE
 
 
-  Создает и заполняет значениями локально материализованный куб на основе вложенного куба из куба на сервере. Чтобы соединиться с локально материализованным кубом, соединяться с сервером необязательно. Дополнительные сведения о локальных кубах см. в разделе [локальные &#40;Кубы Analysis Services — многомерные данные&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data).  
+  Создает и заполняет значениями локально материализованный куб на основе вложенного куба из куба на сервере. Чтобы соединиться с локально материализованным кубом, соединяться с сервером необязательно. Дополнительные сведения о локальных кубах см. в разделе [Локальные кубы &#40;Analysis Services многомерных данных&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -104,16 +104,16 @@ FROM source_cube_name (<param list>)
  dimension_name  
  Имя измерения в локальном кубе.  
   
- Из \<предложения Dim from >  
+ ИЗ \<предложения dim from>  
  Спецификация, допустимая только для определения производного измерения.  
   
  NOT_RELATED_TO_FACTS  
  Спецификация, допустимая только для определения производного измерения.  
   
- \<тип уровня >  
+ \<тип уровня>  
  Спецификация, допустимая только для определения производного измерения.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Локальный куб определяется в терминах мер и определений, определяющих его. Существует два типа измерений.  
   
 -   Измерения источника — это измерения, которые были частью одного из исходных кубов.  
@@ -196,8 +196,8 @@ MEMBER [Date].[Fiscal].[Fiscal Year].&[2005]
    )  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Многомерные выражения инструкций &#40;определения данных многомерных выражений&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
- [Многомерное выражение инструкции &#40;Create сеанса Cube&#41;](../mdx/mdx-data-definition-create-session-cube.md)  
+## <a name="see-also"></a>См. также:  
+ [Инструкции определения данных многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-data-definition-statements-mdx.md)   
+ [Инструкция CREATE SESSION CUBE &#40;многомерных выражений&#41;](../mdx/mdx-data-definition-create-session-cube.md)  
   
   

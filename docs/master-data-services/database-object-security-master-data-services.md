@@ -14,10 +14,10 @@ ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: cd3ce4034a1e64c7c8ca6b1e54d989b129f177f4
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728436"
 ---
 # <a name="database-object-security-master-data-services"></a>Защита объектов базы данных (службы Master Data Services)
@@ -32,7 +32,7 @@ ms.locfileid: "73728436"
   
  Для следующих задач необходим доступ к базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] :  
   
--   [Промежуточное сохранение данных](#Staging)  
+-   [Промежуточные данные](#Staging)  
   
 -   [Проверка данных на соответствие бизнес-правилам](#rules)  
   
@@ -42,8 +42,8 @@ ms.locfileid: "73728436"
   
 -   [Настройка параметров системы](#SysSettings)  
   
-##  <a name="Staging"></a> Промежуточное сохранение данных  
- В следующей таблице каждый защищаемый объект имеет строку name в составе имени. Это указывает на имя промежуточной таблицы, которая определена при создании сущности. Дополнительные сведения см. в разделе [Обзор: импорт данных из таблиц (службы Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
+##  <a name="Staging"></a>Промежуточные данные  
+ В следующей таблице каждый защищаемый объект имеет строку name в составе имени. Это указывает на имя промежуточной таблицы, которая определена при создании сущности. Дополнительные сведения см. в разделе [Обзор: импорт данных из таблиц &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
 |Действие|Защищаемые объекты|Разрешения|  
 |------------|----------------|-----------------|  
@@ -57,7 +57,7 @@ ms.locfileid: "73728436"
   
  Дополнительные сведения см. в разделе [Обзор: импорт данных из таблиц (службы Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
   
-##  <a name="rules"></a> Проверка данных на соответствие бизнес-правилам  
+##  <a name="rules"></a>Проверка данных на соответствие бизнес-правилам  
   
 |Действие|Защищаемый объект|Разрешения|  
 |------------|---------------|-----------------|  
@@ -65,7 +65,7 @@ ms.locfileid: "73728436"
   
  Дополнительные сведения см. в разделе [Проверка хранимых процедур (службы Master Data Services)](../master-data-services/validation-stored-procedure-master-data-services.md).  
   
-##  <a name="Versions"></a> Удаление версий  
+##  <a name="Versions"></a>Удаление версий  
   
 |Действие|Защищаемые объекты|Разрешения|  
 |------------|----------------|-----------------|  
@@ -74,7 +74,7 @@ ms.locfileid: "73728436"
   
  Дополнительные сведения см. в разделе [Удаление версии (службы Master Data Services)](../master-data-services/delete-a-version-master-data-services.md).  
   
-##  <a name="Hierarchy"></a> Немедленное применение разрешений для элементов иерархии  
+##  <a name="Hierarchy"></a>Немедленное применение разрешений для элементов иерархии  
   
 |Действие|Защищаемые объекты|Разрешения|  
 |------------|----------------|-----------------|  
@@ -82,10 +82,10 @@ ms.locfileid: "73728436"
   
  Дополнительные сведения см. в разделе [Срочное применение разрешений для элемента (службы Master Data Services)](../master-data-services/immediately-apply-member-permissions-master-data-services.md).  
   
-##  <a name="SysSettings"></a> Настройка параметров системы  
+##  <a name="SysSettings"></a>Настройка параметров системы  
  Эти параметры системы можно изменять, настраивая поведение в [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Их можно настроить в [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] или при наличии доступа на выполнение команды UPDATE изменять непосредственно в таблице базы данных mdm.tblSystemSetting. Дополнительные сведения см. в разделе [Системные параметры (службы Master Data Services)](../master-data-services/system-settings-master-data-services.md).  
   
-## <a name="see-also"></a>См. также раздел  
- [Безопасность (службы Master Data Services)](../master-data-services/security-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Master Data Services &#40;безопасности&#41;](../master-data-services/security-master-data-services.md)  
   
   

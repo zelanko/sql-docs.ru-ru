@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 63de71ae82e60b8ec7d8a39e18f89e6bd2393f2d
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892939"
 ---
 # <a name="crossjoin-mdx"></a>Crossjoin (многомерные выражения)
@@ -38,15 +38,15 @@ Set_Expression1 * Set_Expression2 [* ...n]
  *Set_Expression2*  
  Допустимое многомерное выражение, возвращающее набор.  
   
-## <a name="remarks"></a>Примечания  
- Функция с перекрестным соединением Возвращает перекрестное произведение двух или более заданных наборов. Порядок кортежей в результирующем наборе зависит от порядка соединяемых наборов и от порядка их элементов. Например, если первый набор состоит из {x1, x2,..., x*n*}, а второй набор состоит из {Y1, Y2,..., y*n*}, перекрестное произведение этих наборов будет следующим:  
+## <a name="remarks"></a>Remarks  
+ Функция с **перекрестным** соединением Возвращает перекрестное произведение двух или более заданных наборов. Порядок кортежей в результирующем наборе зависит от порядка соединяемых наборов и от порядка их элементов. Например, если первый набор состоит из {x1, x2,..., x*n*}, а второй набор состоит из {Y1, Y2,..., y*n*}, перекрестное произведение этих наборов будет следующим:  
   
  {(x1, y1), (x1, Y2),..., (x1, y*n*), (x2, y1), (x2, y2),...,  
   
  (x2, y*n*),..., (x*n*, y1), (x*n*, Y2),..., (xn, y*n*)}  
   
 > [!IMPORTANT]  
->  Если наборы в перекрестном соединении состоят из кортежей из различных иерархий атрибутов одного измерения, функция вернет только те кортежи, которые действительно существуют. Дополнительные сведения см. в разделе Основные [понятия в &#40;многомерных&#41;выражениях Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services).  
+>  Если наборы в перекрестном соединении состоят из кортежей из различных иерархий атрибутов одного измерения, функция вернет только те кортежи, которые действительно существуют. Дополнительные сведения см. в разделе Основные [понятия в многомерных выражениях &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services).  
   
 ## <a name="examples"></a>Примеры  
  В следующем запросе показаны простые примеры использования функции Crossjoin по осям Columns и Rows запроса:  
@@ -105,7 +105,7 @@ FROM [Adventure Works]
 WHERE Measures.[Internet Sales Amount]  
 ```  
   
-### <a name="example-2"></a>Пример 2  
+### <a name="example-2"></a>Пример 2.  
   
 ```  
 SELECT   
@@ -116,7 +116,7 @@ FROM [Adventure Works]
 WHERE Measures.[Internet Sales Amount]  
 ```  
   
-### <a name="example-3"></a>Пример 3  
+### <a name="example-3"></a>Пример 3  
   
 ```  
 SELECT   
@@ -127,7 +127,7 @@ WHERE (Measures.[Internet Sales Amount],
    [Customer].[Country].[United States])  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также:  
+ [Ссылка на функцию многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-function-reference-mdx.md)  
   
   

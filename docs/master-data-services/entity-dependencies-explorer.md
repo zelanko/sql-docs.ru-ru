@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 keywords:
-- master data services
+- службы master data services
 ms.assetid: 9d922118-1412-4a9d-9c02-70d6c48d6c0d
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 86b9a2ed9738790cf9747fbad104074393fd33d1
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729273"
 ---
 # <a name="entity-dependencies-explorer"></a>Обозреватель зависимостей сущности
@@ -24,7 +24,8 @@ ms.locfileid: "73729273"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   
-[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 2016 представлена новая страница обозревателя — "Зависимости сущностей". Здесь применяется новый подход к визуализации отношений между элементами сущности в модели в соответствии со значениями атрибута на основе домена (DBA). При этом нет необходимости предварительно определять производную иерархию.   
+
+  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 2016 представлена новая страница обозревателя — "Зависимости сущностей". Здесь применяется новый подход к визуализации отношений между элементами сущности в модели в соответствии со значениями атрибута на основе домена (DBA). При этом нет необходимости предварительно определять производную иерархию.   
   
 Это помогает ответить на вопрос: "Кто и как использует мою сущность?". Это представление похоже на страницу обозревателя производной иерархии, но охватывает больше данных. Оно показывает все отношения DBA, а не только те, которые определены в рамках конкретной иерархии. Определение иерархии не требуется, поскольку отображаемая иерархическая структура выводится из имеющихся атрибутов на основе существующих DBA.  
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c2aa59b0806cc0ede01fa728636ab9d90479f14b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62898852"
 ---
 # <a name="expression-builder"></a>Построитель выражений
@@ -46,7 +46,7 @@ ms.locfileid: "62898852"
 |**Рассчитанное значение**|Список результатов вычислений выражения.|  
 |**Вычислить значение выражения**|Чтобы просмотреть результаты вычислений выражения, выберите параметр **Вычислить значение выражения** .|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Страница «Выражения»](expressions-page.md)   
  [Редактор выражений свойств](property-expressions-editor.md)   
  [Переменные в службах Integration Services (SSIS)](../integration-services-ssis-variables.md)   

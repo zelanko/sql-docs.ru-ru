@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a6577ec13cc990eb65d66eb2975d61b5f1147201
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915353"
 ---
-# <a name="mssqlserver17300"></a>MSSQLSERVER_17300
+# <a name="mssqlserver_17300"></a>MSSQLSERVER_17300
     
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|17300|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
@@ -46,11 +46,11 @@ ms.locfileid: "62915353"
   
 -   Увеличьте максимально допустимое число одновременно подключенных пользователей на сервере.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_configure (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   
  [Параметры конфигурации сервера (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
- [sys.dm_exec_sessions (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql)   
- [Настройка параметра конфигурации сервера user connections](../../database-engine/configure-windows/configure-the-user-connections-server-configuration-option.md)   
+ [sys. dm_exec_sessions &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql)   
+ [Настройка параметра конфигурации сервера «User Connections»](../../database-engine/configure-windows/configure-the-user-connections-server-configuration-option.md)   
  [KILL (Transact-SQL)](/sql/t-sql/language-elements/kill-transact-sql)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler — целевая таблица | Документация Майкрософт
+title: SQL Server Profiler-Целевая таблица | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 802d39742b932b3721941e3d3c314b209b4e823c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088929"
 ---
 # <a name="sql-server-profiler---destination-table"></a>Приложение SQL Server Profiler — Целевая таблица
@@ -34,11 +34,11 @@ ms.locfileid: "66088929"
  **Владелец**  
  Specifies the owner of the trace table. Это поле автоматически заполняется значением **dbo**.  
   
- **Table**  
+ **Таблица**  
  Позволяет указать имя таблицы, в которой необходимо хранить трассировку.  
   
-## <a name="see-also"></a>См. также  
- [Сохранение результатов трассировки в таблицу (приложение SQL Server Profiler)](../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)   
+## <a name="see-also"></a>См. также:  
+ [Сохранение результатов трассировки в таблицу &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)   
  [Шаблоны и разрешения приложения SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [Приложение SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
   

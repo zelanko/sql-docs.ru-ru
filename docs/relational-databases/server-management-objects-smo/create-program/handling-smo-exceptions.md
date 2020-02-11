@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4fdf4e03eeb839aad74588f3fb338d10fc949220
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70148705"
 ---
 # <a name="handling-smo-exceptions"></a>Обработка исключений SMO
@@ -38,12 +38,12 @@ ms.locfileid: "70148705"
 > [!NOTE]  
 >  Исключение **SqlException** объявляется в пространстве имен **System. Data. SqlClient** .  
   
- ![Диаграмма, показывающая уровни, на которых екскп](../../../relational-databases/server-management-objects-smo/create-program/media/exception-flow.gif "Диаграмма, показывающая уровни, на которых екскп")  
+ ![Диаграмма, показывающая уровни, из которых могут вызываться исключения](../../../relational-databases/server-management-objects-smo/create-program/media/exception-flow.gif "Диаграмма, показывающая уровни, из которых могут вызываться исключения")  
   
  Диаграмма показывает поток исключений по уровням приложения.  
   
 ## <a name="example"></a>Пример  
- Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. [в разделе Создание проекта Visual&#35; C SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).
+ Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. [в статье Создание проекта Visual C&#35; SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).
   
 ## <a name="catching-an-exception-in-visual-basic"></a>Перехват исключения на языке Visual Basic  
  В этом примере кода показано, как использовать метод **try... Перехватить... Оператор finally** [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] для перехвата исключения SMO. Все исключения объектов SMO имеют тип SmoException и перечислены в справке по объектам SMO. Последовательность внутренних исключений отображается, чтобы показать основание ошибки. Дополнительные сведения см. в документации по среде [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET.  
@@ -83,7 +83,7 @@ End Try
 ``` 
   
 ## <a name="catching-an-exception-in-visual-c"></a>Перехват исключения на языке Visual C#  
- В этом примере кода показано, как использовать метод **try... Перехватить... Наконец** , C# Визуальная инструкция для перехвата исключения SMO. Все исключения объектов SMO имеют тип SmoException и перечислены в справке по объектам SMO. Последовательность внутренних исключений отображается, чтобы показать основание ошибки. Дополнительные сведения см. в документации по языку Visual C#.  
+ В этом примере кода показано, как использовать метод **try... Перехватить... Наконец** , инструкция Visual C# для перехвата исключения SMO. Все исключения объектов SMO имеют тип SmoException и перечислены в справке по объектам SMO. Последовательность внутренних исключений отображается, чтобы показать основание ошибки. Дополнительные сведения см. в документации по языку Visual C#.  
   
 ```csharp  
 {   

@@ -19,14 +19,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7385dddea48813615a851979e526af5f03a23332
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206580"
 ---
 # <a name="calling-a-stored-procedure-ole-db"></a>Вызов хранимой процедуры (OLE DB)
-  Хранимая процедура может иметь ноль и более параметров. Также она может возвращать значение. При использовании [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента, параметры для хранимой процедуры могут быть переданы:  
+  Хранимая процедура может иметь ноль и более параметров. Также она может возвращать значение. При использовании поставщика [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента OLE DB параметры хранимой процедуры могут передаваться следующим образом:  
   
 -   Заданные в коде значения данных.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "68206580"
   
 1.  Внесите сведения о параметре (имя параметра, специфическое для поставщика имя типа данных параметра или стандартное имя типа данных и т. д.) в массив структур DBPARAMBINDINFO. Каждая структура в массиве описывает один параметр. Затем этот массив передается методу **SetParameterInfo**.  
   
-2.  Вызовите метод **ICommandWithParameters::SetParameterInfo**, чтобы описать параметры для поставщика. Метод **SetParameterInfo** определяет собственный тип данных каждого параметра. Метод **SetParameterInfo** использует следующие аргументы.  
+2.  Вызовите метод **ICommandWithParameters::SetParameterInfo**, чтобы описать параметры для поставщика. **SetParameterInfo** указывает собственный тип данных для каждого параметра. Аргументы **SetParameterInfo** :  
   
     -   Количество параметров, для которых задаются сведения о типе.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "68206580"
 5.  Выполните команду с помощью метода **ICommand::Execute**.  
   
 ## <a name="methods-of-calling-a-stored-procedure"></a>Методы вызова хранимых процедур  
- При выполнении хранимой процедуры в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает поставщик OLE DB для собственного клиента:  
+ При выполнении хранимой процедуры в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]службах [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщик OLE DB собственного клиента поддерживает:  
   
 -   Escape-последовательность ODBC CALL.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "68206580"
   
  Общий синтаксис для вызова процедуры с помощью escape-последовательности ODBC CALL выглядит следующим образом.  
   
- {[ **? =** ]**вызвать**_имя_процедуры_[ **(** [*параметр*] [ **,** [*параметр*]]... **)** ]}  
+ {[**? =**]**вызовите**_procedure_name_[**(**[*параметр*] [**,**[*параметр*]]... **)**]}  
   
  Пример:  
   
@@ -104,7 +104,7 @@ ms.locfileid: "68206580"
   
  Если escape-последовательность RPC используется для выполнения хранимой процедуры, поставщик не вызывает вспомогательные функции для определения сведений о параметре, как в случае применения синтаксиса ODBC CALL. Синтаксис RPC проще синтаксиса ODBC CALL, поэтому команда анализируется быстрее, что увеличивает производительность. В этом случае необходимо указать сведения о параметрах путем выполнения метода **ICommandWithParameters::SetParameterInfo**.  
   
- Escape-последовательность RPC требует наличия возвращаемого значения. Если хранимая процедура не возвращает значение, сервер по умолчанию возвращает 0. Кроме того, для хранимой процедуры нельзя открыть курсор [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Хранимая процедура подготавливается неявно, и вызов метода **ICommandPrepare::Prepare** завершится ошибкой. Из-за невозможности подготовить вызов RPC не могут запрашивать метаданные столбцов; IColumnsInfo::GetColumnInfo и IColumnsRowset::GetColumnsRowset будут возвращать значение DB_E_NOTPREPARED.  
+ Escape-последовательность RPC требует наличия возвращаемого значения. Если хранимая процедура не возвращает значение, сервер по умолчанию возвращает 0. Кроме того, для хранимой процедуры нельзя открыть курсор [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Хранимая процедура подготавливается неявно, и вызов метода **ICommandPrepare::Prepare** завершится ошибкой. Запрашивать метаданные столбцов нельзя, поскольку невозможно подготовить вызов RPC. Методы IColumnsInfo::GetColumnInfo и IColumnsRowset::GetColumnsRowset будут возвращать значение DB_E_NOTPREPARED.  
   
  Если известны все метаданные параметров, для выполнения хранимых процедур рекомендуется использовать escape-последовательность RPC.  
   
@@ -114,10 +114,10 @@ ms.locfileid: "68206580"
 {rpc SalesByCategory}  
 ```  
   
- Пример приложения, демонстрирующего escape-последовательность RPC, см. в разделе [выполнение хранимых процедур &#40;с использованием синтаксиса RPC&#41; и Обработка кодов возврата и выходные параметры &#40;OLE DB&#41;](../../native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
+ Пример приложения, демонстрирующий escape-последовательность RPC, см. [в разделах выполнение хранимой процедуры &#40;использование синтаксиса rpc&#41; и обработка кодов возврата и параметров вывода &#40;OLE DB&#41;](../../native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
   
 ### <a name="transact-sql-execute-statement"></a>Инструкция Transact-SQL EXECUTE  
- Escape-последовательность ODBC CALL и escape-последовательность RPC — это предпочтительные способы вызова хранимых процедур в отличие от инструкции [EXECUTE](/sql/t-sql/language-elements/execute-transact-sql). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Поставщик OLE DB для собственного клиента использует механизм RPC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для оптимизации обработки команд. Этот протокол RPC повышает производительность, устраняя большую часть обработки параметров и синтаксической проверки инструкций на сервере.  
+ Escape-последовательность ODBC CALL и escape-последовательность RPC — это предпочтительные способы вызова хранимых процедур в отличие от инструкции [EXECUTE](/sql/t-sql/language-elements/execute-transact-sql). Поставщик [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB собственного клиента использует механизм RPC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для оптимизации обработки команд. Этот протокол RPC повышает производительность, устраняя большую часть обработки параметров и синтаксической проверки инструкций на сервере.  
   
  Это пример инструкции [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE**.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "68206580"
 EXECUTE SalesByCategory 'Produce', '1995'  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Хранимые процедуры](stored-procedures.md)  
   
   

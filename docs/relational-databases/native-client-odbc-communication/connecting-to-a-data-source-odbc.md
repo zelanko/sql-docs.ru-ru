@@ -25,10 +25,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eb1f2133aa335f266da75e00638dbb484dae1431
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73784712"
 ---
 # <a name="connecting-to-a-data-source-odbc"></a>Соединение с источником данных (ODBC)
@@ -58,7 +58,7 @@ ms.locfileid: "73784712"
   
 -   для соединения без использования источника данных ODBC.  
   
- Строка подключения **SQLDriverConnect** содержит ряд пар "ключевое слово-значение", которые указывают все сведения о соединении, поддерживаемые драйвером ODBC. Каждый драйвер поддерживает стандартные ключевые слова ODBC (DSN, FILEDSN, DRIVER, UID, PWD и SAVEFILE) в дополнение к специальным ключевым словам драйвера для указания всей информации о соединении, поддерживаемой драйвером. **SQLDriverConnect** можно использовать для подключения без источника данных. Например, приложение, предназначенное для создания подключения "без DSN" к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может вызывать **SQLDriverConnect** со строкой подключения, определяющей идентификатор входа, пароль, сетевую библиотеку, имя сервера для подключения и по умолчанию. используемая база данных.  
+ Строка подключения **SQLDriverConnect** содержит ряд пар "ключевое слово-значение", которые указывают все сведения о соединении, поддерживаемые драйвером ODBC. Каждый драйвер поддерживает стандартные ключевые слова ODBC (DSN, FILEDSN, DRIVER, UID, PWD и SAVEFILE) в дополнение к специальным ключевым словам драйвера для указания всей информации о соединении, поддерживаемой драйвером. **SQLDriverConnect** можно использовать для подключения без источника данных. Например, приложение, которое предназначено для создания подключения "без DSN" к экземпляру, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может вызывать **SQLDriverConnect** со строкой подключения, определяющей идентификатор входа, пароль, сетевую библиотеку, имя сервера для подключения и используемую базой данных по умолчанию.  
   
  При использовании **SQLDriverConnect**существует два варианта запроса сведений о подключении для пользователя.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "73784712"
   
  Когда **SQLBrowseConnect** завершает успешное подключение, он возвращает строку подключения, которую можно использовать при последующих вызовах **SQLDriverConnect**.  
   
- Драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] всегда возвращает SQL_SUCCESS_WITH_INFO при успешном **SQLConnect**, **SQLDriverConnect**или **SQLBrowseConnect**. Когда приложение ODBC вызывает **SQLGetDiagRec** после получения SQL_SUCCESS_WITH_INFO, оно может получать следующие сообщения:  
+ Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента всегда возвращает SQL_SUCCESS_WITH_INFO для успешных **SQLConnect**, **SQLDriverConnect**или **SQLBrowseConnect**. Когда приложение ODBC вызывает **SQLGetDiagRec** после получения SQL_SUCCESS_WITH_INFO, оно может получать следующие сообщения:  
   
  5701  
  Показывает, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] помещает пользовательский контекст в базу данных по умолчанию, которая определена в источнике данных, или в базу данных, определенную для идентификатора входа, который использовался в соединении, если источник данных не имеет базы данных по умолчанию.  
@@ -112,9 +112,9 @@ szErrorMsg: "[Microsoft][SQL Server Native Client]The ODBC
             Please contact your system administrator."  
 ```  
   
- Функция обработки ошибок приложения для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соединений должна вызывать **SQLGetDiagRec** до тех пор, пока не вернет SQL_NO_DATA. Затем он должен работать с любыми сообщениями, кроме тех, с *pfNative* кодом 5701 или 5703.  
+ Функция обработки ошибок приложения для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подключений должна вызывать **SQLGetDiagRec** до тех пор, пока не вернет SQL_NO_DATA. Затем он должен работать с любыми сообщениями, кроме тех, с *pfNative* кодом 5701 или 5703.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Взаимодействие с SQL Server &#40;ODBC&#41;](../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
   
   

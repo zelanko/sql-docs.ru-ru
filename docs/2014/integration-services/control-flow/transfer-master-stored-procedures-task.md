@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0b7cef1e64ab9c499c52ac3bbc0364a05bfcc812
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62829481"
 ---
 # <a name="transfer-master-stored-procedures-task"></a>Задача «Передача главных хранимых процедур»
@@ -64,9 +64,9 @@ ms.locfileid: "62829481"
   
  Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующих разделах.  
   
--   [Редактор задачи "Передача главных хранимых процедур" (страница "Общие")](../general-page-of-integration-services-designers-options.md)  
+-   [Редактор задачи "перенос главных хранимых процедур" &#40;общие&#41;страницы](../general-page-of-integration-services-designers-options.md)  
   
--   [Редактор задачи "Передача главных хранимых процедур" (страница "Хранимые процедуры")](../transfer-master-stored-procedures-task-editor-stored-procedures-page.md)  
+-   [Редактор задачи "перенос главных хранимых процедур" &#40;страницу хранимых процедур&#41;](../transfer-master-stored-procedures-task-editor-stored-procedures-page.md)  
   
 -   [Страница «Выражения»](../expressions/expressions-page.md)  
   
@@ -81,9 +81,9 @@ ms.locfileid: "62829481"
   
 -   [Задание свойств задач или контейнеров](../set-the-properties-of-a-task-or-container.md)  
   
-## <a name="see-also"></a>См. также  
- [Задача «Передача объектов SQL Server»](transfer-sql-server-objects-task.md)   
- [Задачи служб Integration Services](integration-services-tasks.md)   
+## <a name="see-also"></a>См. также:  
+ [Задача «перемещение SQL Server объектов»](transfer-sql-server-objects-task.md)   
+ [Задачи Integration Services](integration-services-tasks.md)   
  [Поток управления](control-flow.md)  
   
   

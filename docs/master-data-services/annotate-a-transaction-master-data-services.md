@@ -13,10 +13,10 @@ ms.assetid: f5a6b2ca-56de-4e42-9da8-fba0ac3e8d92
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 17474c603e437dd0cb2dcfbedf5e444ba50ba3ae
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728788"
 ---
 # <a name="annotate-a-transaction-master-data-services"></a>Добавление заметки для транзакции (Master Data Services)
@@ -28,7 +28,7 @@ ms.locfileid: "73728788"
 > [!NOTE]  
 >  Заметки нельзя удалить.  
   
-## <a name="prerequisites"></a>необходимые компоненты  
+## <a name="prerequisites"></a>Предварительные требования  
   
 -   Для добавления заметок к созданным транзакциям необходимы права на доступ к функциональной области **Браузер** и как минимум разрешение **Обновление** на объект модели, к которому добавляется заметка.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "73728788"
   
 ### <a name="to-annotate-a-transaction-in-version-management-administrators-only"></a>Добавление заметки к транзакции в управлении версиями (только администраторы)  
   
-1.  На домашней странице [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] щелкните **Управление версиями**.  
+1.  На домашней странице [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] нажмите **Управление версиями**.  
   
 2.  В строке меню выберите пункт **Транзакции**.  
   
@@ -66,8 +66,8 @@ ms.locfileid: "73728788"
   
 5.  Нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также статью  
- [Заметки (службы Master Data Services)](../master-data-services/annotations-master-data-services.md)   
- [Транзакции (службы Master Data Services)](../master-data-services/transactions-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Заметки &#40;Master Data Services&#41;](../master-data-services/annotations-master-data-services.md)   
+ [Master Data Services &#40;транзакций&#41;](../master-data-services/transactions-master-data-services.md)  
   
   

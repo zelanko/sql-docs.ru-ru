@@ -16,13 +16,13 @@ ms.assetid: 6cb9b1ce-1ce7-43ab-9451-201f79ed1ffa
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 548285b08ceedab49674b35128216bed320c3e7c
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771178"
 ---
-# <a name="sprefreshsubscriptions-transact-sql"></a>sp_refreshsubscriptions (Transact-SQL)
+# <a name="sp_refreshsubscriptions-transact-sql"></a>sp_refreshsubscriptions (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Добавление подписок на новые статьи для всех существующих подписчиков на немедленно обновляемую публикацию. Эта хранимая процедура выполняется на издателе в базе данных публикации.  
@@ -45,16 +45,16 @@ sp_refreshsubscriptions [ @publication = ] 'publication'
 ## <a name="result-sets"></a>Результирующие наборы  
  None  
   
-## <a name="remarks"></a>Примечания  
- **sp_refreshsubscriptions** используется в репликации моментальных снимков, транзакций и слиянием.  
+## <a name="remarks"></a>Remarks  
+ **sp_refreshsubscriptions** используется в репликации моментальных снимков, транзакций и репликация слиянием.  
   
- **sp_refreshsubscriptions** вызывается хранимой процедурой **sp_addarticle** для немедленно обновляемой публикации.  
+ **sp_refreshsubscriptions** вызывается **sp_addarticle** для немедленно обновляемой публикации.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_refreshsubscriptions**.  
   
-## <a name="see-also"></a>См. также  
- [хранимая процедуры sp_addarticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

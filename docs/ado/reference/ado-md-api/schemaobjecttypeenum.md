@@ -1,5 +1,5 @@
 ---
-title: SchemaObjectTypeEnum | Документация Майкрософт
+title: Счемаобжекттипинум | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,18 +16,18 @@ ms.assetid: bf53939f-5543-40ac-a707-aa35e9bde1dd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cfb208880586d0bda6bfe6bf956bbb544b48e69a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949186"
 ---
 # <a name="schemaobjecttypeenum"></a>SchemaObjectTypeEnum
-Указывает тип объекта следует извлечь, [GetSchemaObject](../../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md) метод.  
+Указывает тип объекта, извлекаемого методом [жетсчемаобжект](../../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md) .  
   
-|Константа|Значение|Описание|  
+|Постоянно|Значение|Description|  
 |--------------|-----------|-----------------|  
-|**adObjectTypeDimension**|1|Объект [измерения](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) объекта.|  
-|**adObjectTypeHierarchy**|2|Объект [иерархии](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md) объекта.|  
-|**adObjectTypeLevel**|3|Объект [уровень](../../../ado/reference/ado-md-api/level-object-ado-md.md) объекта.|  
-|**adObjectTypeMember**|4|Объект [член](../../../ado/reference/ado-md-api/member-object-ado-md.md) объекта.|
+|**адобжекттипедименсион**|1|Объект [Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) .|  
+|**адобжекттипехиерарчи**|2|Объект [Hierarchy](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md) .|  
+|**адобжекттипелевел**|3|Объект [уровня](../../../ado/reference/ado-md-api/level-object-ado-md.md) .|  
+|**адобжекттипемембер**|4|Объект- [член](../../../ado/reference/ado-md-api/member-object-ado-md.md) .|

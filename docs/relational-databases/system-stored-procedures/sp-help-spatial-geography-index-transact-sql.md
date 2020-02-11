@@ -18,10 +18,10 @@ ms.assetid: c9bf5675-eafc-4d71-bfdb-da963384fa0c
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 73bb564880cae238cdbaa7e3c13a1f18ab95dc99
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72304872"
 ---
 # <a name="sp_help_spatial_geography_index-transact-sql"></a>sp_help_spatial_geography_index (Transact-SQL)
@@ -53,7 +53,7 @@ sp_help_spatial_geography_index [ @tabname =] 'tabname'
 ## <a name="remarks"></a>Remarks  
   
 ## <a name="example"></a>Пример  
- В следующем примере `sp_help_spatial_geography_index` используется для исследования пространственного индекса **geography** **SIndx_SpatialTable_geography_col2** , определенного в **geography_col** таблиц, для данного примера запроса в **\@QS**. Этот пример возвращает только основные свойства указанного индекса.  
+ В следующем примере используется `sp_help_spatial_geography_index` для исследования пространственного индекса **географии** **SIndx_SpatialTable_geography_col2** определенного в таблице **geography_col** для данного примера запроса в ** \@QS**. Этот пример возвращает только основные свойства указанного индекса.  
   
 ```  
 declare @qs geography  
@@ -65,7 +65,7 @@ exec sp_help_spatial_geography_index 'geography_col', 'SIndx_SpatialTable_geogra
   
 ## <a name="requirements"></a>Требования  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
  [Хранимые процедуры пространственного индекса](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
  [sp_help_spatial_geography_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)   
  [Общие сведения о пространственных индексах](../../relational-databases/spatial/spatial-indexes-overview.md)   
