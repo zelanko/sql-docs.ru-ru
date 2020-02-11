@@ -1,5 +1,5 @@
 ---
-title: Разработчик&#39;руководство (службы Integration Services) | Документация Майкрософт
+title: Руководством разработчика&#39;s (Integration Services) | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -19,13 +19,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3fc7c93f8e499fb063e0d01c9132606f3ddfa3f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62892418"
 ---
-# <a name="developer39s-guide-integration-services"></a>Разработчик&#39;руководство (службы Integration Services)
+# <a name="developer39s-guide-integration-services"></a>Руководством для разработчиков&#39;(Integration Services)
   Службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] включают полностью переписанную модель объектов, которая была улучшена многими функциями, позволяющими упростить расширение и программирование пакетов и сделать их более гибкими и более мощными. Разработчики могут расширять и программировать пакеты служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] почти в любом аспекте.  
   
  Разработчик служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] может воспользоваться двумя фундаментальными подходами при программировании служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
@@ -72,7 +72,7 @@ ms.locfileid: "62892418"
  [Выполнение пакетов и управление пакетами программным образом](run-manage-packages-programmatically/running-and-managing-packages-programmatically.md)  
  Показывает, как перечислять, запускать пакеты служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] и управлять ими программным путем.  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Справочник  
  [Справочник по сообщениям об ошибках служб Integration Services](integration-services-error-and-message-reference.md)  
  Содержит список стандартных кодов ошибок служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] с символическими именами и описаниями.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "62892418"
   
 -   Образцы CodePlex, [Образцы продуктов служб Integration Services](https://go.microsoft.com/fwlink/?LinkID=131204)на сайте www.codeplex.com/MSFTISProdSamples  
   
-## <a name="see-also"></a>См. также  
- [службы SQL Server Integration Services](sql-server-integration-services.md)  
+## <a name="see-also"></a>См. также:  
+ [SQL Server Integration Services](sql-server-integration-services.md)  
   
   

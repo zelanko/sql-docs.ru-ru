@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a6db88a8bb5e44090e5201220fee36a432b69767
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62869879"
 ---
-# <a name="mssqlserver14421"></a>MSSQLSERVER_14421
+# <a name="mssqlserver_14421"></a>MSSQLSERVER_14421
     
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|14421|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
@@ -66,9 +66,9 @@ ms.locfileid: "62869879"
     > [!NOTE]  
     >  Разные часовые пояса на двух экземплярах серверов не должны быть причиной проблемы.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [log_shipping_monitor_secondary &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/log-shipping-monitor-secondary-transact-sql)   
- [О доставке журналов &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [SQL Server &#40;доставки журналов&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [sp_help_log_shipping_monitor_secondary &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-secondary-transact-sql)   
  [sp_refresh_log_shipping_monitor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql)   
  [Сведения о доставке журналов (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  

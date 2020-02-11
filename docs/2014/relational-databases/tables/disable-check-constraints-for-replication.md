@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 957fcd77a6443cf2e23be8965a68823085db870c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762195"
 ---
 # <a name="disable-check-constraints-for-replication"></a>Отключение проверочных ограничений для репликации
@@ -73,7 +73,7 @@ ms.locfileid: "62762195"
  Дополнительные сведения см. в разделе [ALTER TABLE (Transact-SQL)](/sql/t-sql/statements/alter-table-transact-sql).  
   
 ###  <a name="TsqlExample"></a>   
-## <a name="see-also"></a>См. также  
- [Указание параметров схемы](../replication/publish/specify-schema-options.md)  
+## <a name="see-also"></a>См. также:  
+ [Specify Schema Options (Указание параметров схемы)](../replication/publish/specify-schema-options.md)  
   
   

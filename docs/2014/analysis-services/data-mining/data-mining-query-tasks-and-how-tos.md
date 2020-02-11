@@ -1,5 +1,5 @@
 ---
-title: Запросов интеллектуального анализа данных, задачи и инструкции по | Документация Майкрософт
+title: Задачи и инструкции по запросам интеллектуального анализа данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 24ccf065a393e9534f3f4a3f830f90e3d1d5e5cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084950"
 ---
 # <a name="data-mining-query-tasks-and-how-tos"></a>Задачи и инструкции по запросам интеллектуального анализа данных
@@ -42,7 +42,7 @@ ms.locfileid: "66084950"
 ## <a name="using-other-data-mining-query-tools"></a>Использование других средств построения запросов интеллектуального анализа данных  
  Кроме построителя прогнозирующих запросов, можно воспользоваться расширениями интеллектуального анализа данных или XMLA, введя запрос непосредственно в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Вы также можете программно создавать прогнозирующие запросы и направлять их на сервер [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . В следующих разделах приведены дополнительные сведения о создании и использовании прогнозирующих запросов вне построителя прогнозирующих запросов.  
   
- [Создание одноэлементного прогнозирующего запроса из шаблона](create-a-singleton-prediction-query-from-a-template.md)  
+ [создать одноэлементный прогнозирующий запрос из шаблона](create-a-singleton-prediction-query-from-a-template.md)  
  Описывает использование средств в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] для построения и выполнения прогнозирующего запроса.  
   
  [создать одноэлементный прогнозирующий запрос из шаблона](create-a-singleton-prediction-query-from-a-template.md)  
@@ -57,8 +57,8 @@ ms.locfileid: "66084950"
  [Создание запроса интеллектуального анализа данных с помощью XMLA](create-a-data-mining-query-by-using-xmla.md)  
  Описывает создание запросов содержимого модели интеллектуального анализа данных с помощью XMLA-шаблонов в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-## <a name="see-also"></a>См. также  
- [Справочник по языку запросов и выражений (службы Analysis Services)](https://msdn.microsoft.com/library/gg492188(SQL.130).aspx)   
- [Хранимые процедуры интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
+## <a name="see-also"></a>См. также:  
+ [Справочник по языку запросов и выражений &#40;Analysis Services&#41;](https://msdn.microsoft.com/library/gg492188(SQL.130).aspx)   
+ [Хранимые процедуры интеллектуального анализа данных &#40;Analysis Services — интеллектуальный анализ данных&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
   
   

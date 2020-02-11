@@ -96,16 +96,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4b26323f99d0b31cdb31e12b64eabdd2a855d907
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068869"
 ---
 # <a name="olap-properties"></a>Свойства OLAP
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживают перечисленные в следующих таблицах свойства сервера OLAP. Дополнительные сведения о дополнительных свойствах сервера и об их настройке см. в разделе [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]поддерживает свойства сервера OLAP, перечисленные в следующих таблицах. Дополнительные сведения о дополнительных свойствах сервера и об их настройке см. в разделе [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
- **Применимо к:** Только многомерный режим сервера  
+ **Применимо к:** Только в многомерном режиме сервера  
   
 ## <a name="memory"></a>Память  
  `DefaultPageSizeForData`  
@@ -224,7 +224,7 @@ ms.locfileid: "66068869"
  `BufferRecordLimit`  
  32-разрядное целочисленное свойство со знаком, устанавливающее количество записей, которые можно поместить в буфер во время обработки.  
   
- Значение этого свойства по умолчанию — 1 048 576 (записей).  
+ Значение этого свойства по умолчанию — 1 048 576 (записей).  
   
  `CacheRecordLimit`  
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
@@ -314,7 +314,7 @@ ms.locfileid: "66068869"
  `DefaultDrillthroughMaxRows`  
  32-разрядное целочисленное свойство со знаком, которое указывает число строк, возвращаемых детализированным запросом.  
   
- Значение по умолчанию для этого свойства составляет 10 000 (строк).  
+ Значение по умолчанию для этого свойства составляет 10 000 (строк).  
   
  `DimensionPropertyCacheSize`  
  Подписанное 32-разрядное целочисленное свойство, указывающее объем памяти (в байтах), используемой для сохранения в кэше тех элементов измерения, которые применяются в запросе.  
@@ -327,7 +327,7 @@ ms.locfileid: "66068869"
   
      Обратите внимание, что объем памяти, используемый этими кэшами, считается несжимаемым и учитывается при вычислении значения **TotalMemoryLimit**.  
   
--   Затрагивает все базы данных на сервере. Свойство**DimensionPropertyCachesize** распространяется на весь сервер. Изменение этого свойства влияет на все базы данных, которые работают в этом экземпляре.  
+-   Затрагивает все базы данных на сервере. **Свойство dimensionpropertycachesize распространяется** является свойством на уровне сервера. Изменение этого свойства влияет на все базы данных, которые работают в этом экземпляре.  
   
  Способ оценки потребностей кэша измерения.  
   
@@ -477,8 +477,8 @@ ms.locfileid: "66068869"
  `ProcessAggregation\ ProcessProperty\ Tax`  
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="see-also"></a>См. также  
- [Настройка свойств сервера в службах Analysis Services](server-properties-in-analysis-services.md)   
- [Определение режима работы сервера экземпляра служб Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+## <a name="see-also"></a>См. также:  
+ [Настройка свойств сервера в Analysis Services](server-properties-in-analysis-services.md)   
+ [Определение режима работы сервера для экземпляра Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

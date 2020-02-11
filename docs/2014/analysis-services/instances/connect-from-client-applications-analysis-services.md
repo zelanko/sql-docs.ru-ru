@@ -1,5 +1,5 @@
 ---
-title: Подключение из клиентских приложений (службы Analysis Services) | Документация Майкрософт
+title: Подключение из клиентских приложений (Analysis Services) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a646d152abaa3c352bf5ca1c576760e1715c3578
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080204"
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>Подключение из клиентских приложений (службы Analysis Services)
   Начинающим пользователям служб Analysis Services следует использовать сведения в этом разделе для подключения к существующему экземпляру служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] с помощью стандартных средств и приложений. В этом разделе также объясняется, как подключаться для тестирования под разными удостоверениями пользователей.  
   
--   [Подключение с помощью среды SQL Server Management Studio (SSMS)](#bkmk_SSMS)  
+-   [Подключение с помощью SQL Server Management Studio](#bkmk_SSMS)  
   
 -   [Подключение с использованием Excel](#bkmk_excel)  
   
@@ -32,11 +32,11 @@ ms.locfileid: "66080204"
   
  Успешные подключения зависят от допустимой настройки портов и соответствующих разрешений пользователя. Для более подробного знакомства с каждым требованием воспользуйтесь следующими ссылками.  
   
--   [Настройка брандмауэра Windows на разрешение доступа к службам Analysis Services](configure-the-windows-firewall-to-allow-analysis-services-access.md)  
+-   [Настройка брандмауэра Windows на разрешение доступа к Analysis Services](configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
--   [Предоставление доступа к объектам и операциям (службы Analysis Services)](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [Авторизация доступа к объектам и операциям &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
-##  <a name="bkmk_SSMS"></a> Подключение с помощью среды SQL Server Management Studio (SSMS)  
+##  <a name="bkmk_SSMS"></a>Подключение с помощью SQL Server Management Studio (SSMS)  
  Подключение к службам Analysis Services в среде SSMS для управления экземплярами сервера и базами данных в интерактивном режиме. Можно также запустить запросы XMLA или многомерных выражений для выполнения задач администрирования или получения данных. В отличие от других средств и приложений, которые загружают базы данных, только если отправляется запрос, среда SSMS загружает все базы данных при соединении с сервером, предполагая, что разрешение на просмотр базы данных имеется. Это означает, что, если на сервере есть множество табличных баз данных, все они будут загружены в память системы при установке соединения с помощью среды SSMS.  
   
  Разрешения можно проверить с помощью среды SSMS с определенным удостоверением пользователя, а затем подключиться к службам Analysis Services от имени этого пользователя.  
@@ -55,7 +55,7 @@ ms.locfileid: "66080204"
   
 3.  Проверка подлинности всегда осуществляется средствами Windows, а удостоверение пользователя всегда означает пользователя Windows, который подключается посредством среды Management Studio.  
   
-     Для успешного подключения необходимо разрешение на доступ к серверу или к базе данных на сервере. Для большинства задач, которые нужно выполнять в среде Management Studio, требуется разрешение администратора. Убедитесь, что учетная запись, с которой устанавливается соединение, является членом роли администратора сервера. Дополнительные сведения см. в разделе [предоставление разрешений администратора сервера &#40;служб Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md).  
+     Для успешного подключения необходимо разрешение на доступ к серверу или к базе данных на сервере. Для большинства задач, которые нужно выполнять в среде Management Studio, требуется разрешение администратора. Убедитесь, что учетная запись, с которой устанавливается соединение, является членом роли администратора сервера. Дополнительные сведения см. в статьях [предоставление разрешений администратора сервера &#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md).  
   
 4.  Нажмите кнопку **Свойства соединения** , чтобы указать конкретную базу данных, задать время ожидания или параметры шифрования. Дополнительные сведения о соединении содержат свойства соединения, используемые только для текущего соединения.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66080204"
     Provider=MSOLAP; Data Source=SERVERNAME; Initial Catalog=AdventureWorks2012; Roles=READER  
     ```  
   
-##  <a name="bkmk_excel"></a> Подключение с использованием Excel  
+##  <a name="bkmk_excel"></a>Подключение с помощью Excel  
  Microsoft Excel часто используется для анализа бизнес-данных. В рамках установки Excel пакет Office устанавливает поставщик OLE DB для служб Analysis Services (MSOLAP DDL), ADOMD.NET и другие поставщики данных, облегчающие подготовку к использованию данных на сетевых серверах. При использовании одной из новых версий служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] с клиентом более старой версии Excel, вероятнее всего, потребуется установить более новые версии поставщиков данных на каждую рабочую станцию, которая подключается к службам [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Дополнительные сведения см. в разделе [Поставщики данных, используемые для соединений со службами Analysis Services](data-providers-used-for-analysis-services-connections.md) .  
   
  При настройке соединения с кубом служб Analysis Services или шаблоном базы данных Excel сохраняет сведения о соединении в ODC-файле для использования в будущем. Соединение выполняется в контексте безопасности текущего пользователя Windows. Для успешного соединения у этой учетной записи пользователя должно быть разрешение на чтение базы данных.  
@@ -88,19 +88,19 @@ ms.locfileid: "66080204"
   
  Дополнительные сведения см. в разделе [Подключение к службам SQL Server Analysis Services или импорт данных из них](https://go.microsoft.com/fwlink/?linkID=215150).  
   
-##  <a name="bkmk_SSDT"></a> Соединение с помощью SQL Server Data Tools  
+##  <a name="bkmk_SSDT"></a>Подключение с помощью SQL Server Data Tools  
  SQL Server Data Tools используется для построения решения бизнес-аналитики, в том числе моделей служб Analysis Services, отчетов служб Reporting Services и пакетов служб SSIS. При построении отчетов или пакетов можно указать подключение к службам Analysis services.  
   
  По следующим ссылкам можно найти сведения о подключении к службам Analysis Services из проекта сервера отчетов или проекта служб Integration Services.  
   
--   [Тип соединения служб Analysis Services для запросов многомерных выражений (службы SSRS)](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)  
+-   [Analysis Services тип соединения для МНОГОМЕРных служб SSRS &#40;&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)  
   
--   [Диспетчер соединений служб Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
+-   [диспетчер соединений служб Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
   
 > [!NOTE]  
 >  При использовании SQL Server Data Tools для работы над существующим проектом служб Analysis Services не забудьте, что можно выполнить подключение в режиме «вне сети» с помощью локального проекта или проекта с управлением версиями или установить соединение в режиме «в сети» для обновления объектов служб Analysis Services при запущенной базе данных. Дополнительные сведения см. в разделе [Connect in Online Mode to an Analysis Services Database](../multidimensional-models/connect-in-online-mode-to-an-analysis-services-database.md). Часто подключения из среды [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] выполняются в режиме проекта, когда изменения развертываются в базе данных только при явном развертывании проекта.  
   
-##  <a name="bkmk_tshoot"></a> Проверка подключения  
+##  <a name="bkmk_tshoot"></a>Проверить подключения  
  Можно использовать приложение SQL Server Profiler для контроля за соединениями со службами Analysis Services. События Audit Login и Audit Logout предоставляют свидетельство соединения. Столбец идентификаторов указывает контекст безопасности, в котором устанавливается соединение.  
   
 1.  Запустите приложение **SQL Server Profiler** на экземпляре служб Analysis Services, затем запустите новую трассировку.  
@@ -119,18 +119,18 @@ ms.locfileid: "66080204"
   
      Для проверки используйте Excel или SSMS на удаленном компьютере, указывая IP-адрес и порт, используемые экземпляром служб Analysis Services. В случае удачной попытки соединения правила брандмауэра допустимы для экземпляра и экземпляр разрешает удаленные соединения.  
   
-     Кроме того, при использовании протокола TCP/IP для соединения следует помнить, что службы Analysis Services требуют, чтобы подключения клиента исходили из того же домена или доверенного домена. Если соединения проходят через периметр безопасности, вероятнее всего, потребуется настроить доступ по протоколу HTTP. Дополнительные сведения см. в разделе [Настройка HTTP-доступа к службам Analysis Services в службах Internet Information Services (IIS) 8.0](configure-http-access-to-analysis-services-on-iis-8-0.md).  
+     Кроме того, при использовании протокола TCP/IP для соединения следует помнить, что службы Analysis Services требуют, чтобы подключения клиента исходили из того же домена или доверенного домена. Если соединения проходят через периметр безопасности, вероятнее всего, потребуется настроить доступ по протоколу HTTP. Дополнительные сведения см. в статьях [Configure HTTP Access to Analysis Services on Internet Information Services &#40;IIS&#41; 8.0](configure-http-access-to-analysis-services-on-iis-8-0.md).  
   
 -   Можно ли подключиться, используя одни средства, но не другие? Проблема может заключаться в неверной версии клиентских библиотек. Получить клиентские библиотеки можно на странице загрузки «Пакет дополнительных компонентов SQL Server».  
   
  Ресурсы, которые могут быть полезными в устранении ошибок соединения:  
   
- [Устранение проблем с возможным подключением для подключений служб SQL Server 2005 Analysis Services](https://technet.microsoft.com/library/cc917670.aspx). Этот документ был опубликован несколько лет назад, но сведения и методологии по-прежнему актуальны.  
+ [Устранение распространенных проблем с подключением в SQL Server 2005 Analysis Services сценарии подключения](https://technet.microsoft.com/library/cc917670.aspx). Этот документ был опубликован несколько лет назад, но сведения и методологии по-прежнему актуальны.  
   
-## <a name="see-also"></a>См. также  
- [Подключение к службам Analysis Services](connect-to-analysis-services.md)   
- [Методики проверки подлинности, поддерживаемые службами Analysis Services](authentication-methodologies-supported-by-analysis-services.md)   
- [Олицетворение (табличные службы SSAS)](../tabular-models/impersonation-ssas-tabular.md)   
- [Создание источника данных (многомерные службы SSAS)](../multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
+## <a name="see-also"></a>См. также:  
+ [Подключение к Analysis Services](connect-to-analysis-services.md)   
+ [Методологии проверки подлинности, поддерживаемые Analysis Services](authentication-methodologies-supported-by-analysis-services.md)   
+ [Олицетворение &#40;табличные&#41;SSAS](../tabular-models/impersonation-ssas-tabular.md)   
+ [Создание источника данных &#40;многомерных&#41;SSAS](../multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

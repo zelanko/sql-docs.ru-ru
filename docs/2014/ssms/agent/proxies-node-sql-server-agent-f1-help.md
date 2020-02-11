@@ -11,13 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bd38514159ca668a82f98582a9c5fde1d2aa98ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62650185"
 ---
-# <a name="proxies-node-sql-server-agent-f1-help"></a>Узел "Учетные записи-посредники" (справка F1 агента SQL Server)
+# <a name="proxies-node-sql-server-agent-f1-help"></a>Узел прокси-серверов (справка F1 агента SQL Server)
   Этот раздел содержит справку F1 для узла **Учетные записи-посредники** обозревателя объектов в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
   

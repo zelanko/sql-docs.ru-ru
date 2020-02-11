@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bbcea29ad75eb84b9c8099e5998e307ecbd7943c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62895033"
 ---
 # <a name="querying-the-active-directory-with-the-script-task"></a>Запрос Active Directory в задаче «Скрипт»
@@ -30,14 +30,14 @@ ms.locfileid: "62895033"
 > [!NOTE]  
 >  Если нужно создать задачу, которую будет удобно использовать в нескольких пакетах, рекомендуется начать разработку пользовательской задачи с этого образца задачи «Скрипт». Дополнительные сведения см. в разделе [Разработка пользовательской задачи](../extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Description  
  В следующем примере имя сотрудника, название его должности и номер телефона извлекаются из службы каталогов Active Directory в соответствии со значением переменной `email`, которая содержит адрес электронной почты сотрудника. Элементы управления очередностью в пакете могут использовать извлеченные данные, чтобы определить, например, с каким приоритетом – низким или высоким – следует отправить сообщение электронной почты, в зависимости от должности сотрудника.  
   
 #### <a name="to-configure-this-script-task-example"></a>Настройка этого образца задачи «Скрипт»  
   
 1.  Создайте три строковые переменные: `email`, `name` и `title`. Введите действительный корпоративный адрес электронной почты в качестве значения переменной `email`.  
   
-2.  На **сценарий** странице **редактор задачи "скрипт"** , добавьте `email` переменной `ReadOnlyVariables` свойство.  
+2.  На странице **Скрипт** в **редакторе задачи "Скрипт**" добавьте `email` переменную в `ReadOnlyVariables` свойство.  
   
 3.  Добавьте переменные `name` и `title` в свойство `ReadWriteVariables`.  
   
@@ -110,6 +110,6 @@ public void Main()
   
 -   Техническая статья [Обработка данных Active Directory в службах SSIS](https://go.microsoft.com/fwlink/?LinkId=199588) на сайте social.technet.microsoft.com  
   
-![Значок служб Integration Services (маленький)](../media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
+![Значок Integration Services (маленький)](../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
   

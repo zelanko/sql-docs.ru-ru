@@ -1,5 +1,5 @@
 ---
-title: Укажите ли резервного копирования или восстановления продолжается или останавливается после возникновения ошибки (SQL Server) | Документация Майкрософт
+title: Укажите, будет ли операция резервного копирования или восстановления продолжаться или остановлена после возникновения ошибки (SQL Server) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 79ab28861fb4ad1eb3fb166e0cccb6b30ff89f86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62877055"
 ---
 # <a name="specify-whether-a-backup-or-restore-operation-continues-or-stops-after-encountering-an-error-sql-server"></a>Определение, продолжает ли операция резервного копирования или восстановления работу после возникновения ошибки (SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "62877055"
   
 -   **Перед началом работы**  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Определение, продолжает ли операция резервного копирования или восстановления работу после возникновения ошибки, с помощью следующих средств.**  
   
@@ -92,14 +92,14 @@ RESTORE DATABASE AdventureWorks2012
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [RESTORE FILELISTONLY (Transact-SQL)](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)   
+## <a name="see-also"></a>См. также:  
+ [Инструкция RESTORE FILELISTONLY (Transact-SQL)](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)   
  [RESTORE HEADERONLY (Transact-SQL)](/sql/t-sql/statements/restore-statements-headeronly-transact-sql)   
  [RESTORE LABELONLY (Transact-SQL)](/sql/t-sql/statements/restore-statements-labelonly-transact-sql)   
  [RESTORE VERIFYONLY (Transact-SQL)](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql)   
  [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
  [backupset (Transact-SQL)](/sql/relational-databases/system-tables/backupset-transact-sql)   
- [Аргументы RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-arguments-transact-sql)   
+ [Аргументы инструкции RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-arguments-transact-sql)   
  [Возможные ошибки носителей во время резервного копирования и восстановления (SQL Server)](possible-media-errors-during-backup-and-restore-sql-server.md)   
  [Включение или отключение вычисления контрольных сумм резервных копий во время резервного копирования или восстановления (SQL Server)](enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)  
   

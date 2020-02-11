@@ -1,5 +1,5 @@
 ---
-title: Установка свойства использования | Документация Майкрософт
+title: Задание свойства использования | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: def616b09e6d5378257c3e5c377f2724c9d09676
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077169"
 ---
 # <a name="set-usage-property"></a>Установка свойства использования
   Можно задать использование атрибута с помощью представления **Структура измерения** в конструкторе измерений, доступ к которому выполняется из среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
- При задании использования атрибута изменения вступают в силу только после обработки измерения. Дополнительные сведения см. в разделе [обработку объекта многомерных моделей](processing-a-multidimensional-model-analysis-services.md).  
+ При задании использования атрибута изменения вступают в силу только после обработки измерения. Дополнительные сведения см. в разделе [Обработка объектов многомерной модели](processing-a-multidimensional-model-analysis-services.md).  
   
 ### <a name="to-set-usage-for-an-attribute"></a>Задание использования атрибута  
   
@@ -33,13 +33,13 @@ ms.locfileid: "66077169"
   
 2.  В списке **Атрибуты**щелкните правой кнопкой мыши атрибут, для которого требуется задать использование, и выберите пункт **Задать использование атрибута**, а затем установите один из следующих флажков:  
   
-    -   **Regular**  
+    -   **Регулярное, **  
   
     -   **Key**  
   
     -   **Parent**  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Атрибуты и иерархии атрибутов](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
  [Добавление атрибута в измерение](attribute-properties-add-an-attribute-to-a-dimension.md)  
   

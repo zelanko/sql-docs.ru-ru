@@ -1,5 +1,5 @@
 ---
-title: Настройка структуры и моделей интеллектуального анализа данных | Документация Майкрософт
+title: Настройка моделей и структуры интеллектуального анализа данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5d5ffe7ba8f0f844b7de626ff6238ebbead91dd7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085208"
 ---
 # <a name="customize-mining-models-and-structure"></a>Настройка структуры и моделей интеллектуального анализа данных
@@ -43,7 +43,7 @@ ms.locfileid: "66085208"
 ### <a name="using-feature-selection"></a>Выбор компонентов  
  В большинстве алгоритмов интеллектуального анализа данных в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] используется процесс *выбора компонентов* , чтобы выбрать для добавления к модели только наиболее полезные атрибуты. Сокращение числа столбцов и атрибутов может повысить производительность и точность работы модели. Доступные методы выбора компонентов зависят от выбранного алгоритма.  
   
- [Выбор компонентов (интеллектуальный анализ данных)](feature-selection-data-mining.md).  
+ [Выбор компонентов &#40;&#41;интеллектуального анализа данных ](feature-selection-data-mining.md).  
   
 ### <a name="changing-usage"></a>Изменение порядка использования  
  Можно изменить список столбцов, включаемых в модель интеллектуального анализа данных, и порядок использования каждого столбца. Если результаты не соответствуют ожиданиям, следует изучить столбцы, использованные в качестве входных данных, и оценить удачность выбора этих столбцов. Затем выясните, что можно сделать для улучшения обработки данных (любые из следующих операций).  
@@ -56,14 +56,14 @@ ms.locfileid: "66085208"
   
 -   Удаление столбцов с большим числом уникальных значений или столбцов, содержащих эталонные данные (адреса, отчества и т. п.), бесполезные для анализа.  
   
- Не нужно физически удалять столбцы из структуры интеллектуального анализа данных. можно просто установить для столбца значение **пропустить**. Столбец будет удален из модели интеллектуального анализа данных, но при этом сохранится возможность использовать его в других моделях интеллектуального анализа данных из структуры и ссылаться на него в запросах детализации.  
+ Нет необходимости физически удалять столбцы из структуры интеллектуального анализа данных. можно просто пометить столбец как **игнорируемый**. Столбец будет удален из модели интеллектуального анализа данных, но при этом сохранится возможность использовать его в других моделях интеллектуального анализа данных из структуры и ссылаться на него в запросах детализации.  
   
 ### <a name="creating-aliases-for-model-columns"></a>Создание псевдонимов для столбцов модели  
  Когда службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] создают модель интеллектуального анализа данных, они используют те же имена столбцов, что существуют в структуре интеллектуального анализа данных. Любому столбцу в модели интеллектуального анализа данных можно добавить псевдоним. Это может облегчить понимание содержимого столбца или его использования. Также можно сократить имя, чтобы было удобнее создавать запросы. Псевдонимы также удобны при создании копии столбца с заданием для нее описательного имени.  
   
- Псевдоним создается путем изменения свойства `Name` для столбца модели интеллектуального анализа данных. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] продолжается использование исходного имени в качестве идентификатора столбца и новое значение, введенное для `Name` становится псевдоним столбца и отображается в сетке в круглых скобках рядом со столбцом.  
+ Псевдоним создается путем изменения свойства `Name` для столбца модели интеллектуального анализа данных. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]использует исходное имя в качестве идентификатора столбца, а новое значение, введенное для `Name` , становится псевдонимом столбца и отображается в сетке в круглых скобках рядом с использованием столбца.  
   
- ![псевдонимы для интеллектуального анализа данных столбцами модели](../media/modelcolumnalias-income.gif "столбцами модели псевдонимы для интеллектуального анализа данных")  
+ ![псевдонимы для столбцов модели интеллектуального анализа данных](../media/modelcolumnalias-income.gif "псевдонимы для столбцов модели интеллектуального анализа данных")  
   
  На диаграмме показаны связанные модели, в которых присутствуют несколько копий столбца структуры интеллектуального анализа данных, относящегося к прибыли. Каждая копия столбца структуры была дискретизирована различными способами. В моделях на диаграмме используются разные столбцы из структуры интеллектуального анализа данных, однако для удобства сравнения столбцов между моделями имя столбца в каждой модели было изменено на [**Прибыль**].  
   
@@ -84,8 +84,8 @@ ms.locfileid: "66085208"
 |||  
 |-|-|  
 |[Алгоритм дерева принятия решений (Майкрософт)](microsoft-decision-trees-algorithm.md)|[Алгоритм временных рядов (Майкрософт)](microsoft-time-series-algorithm.md)|  
-|[Алгоритм кластеризации (Майкрософт)](microsoft-clustering-algorithm.md)|[Алгоритм нейронной сети (Майкрософт)](microsoft-neural-network-algorithm.md)|  
-|[Упрощенный алгоритм Байеса (Майкрософт)](microsoft-naive-bayes-algorithm.md)|[Алгоритм логистической регрессии (Майкрософт)](microsoft-logistic-regression-algorithm.md)|  
+|[Алгоритм кластеризации (Майкрософт)](microsoft-clustering-algorithm.md)|[Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)|  
+|[Microsoft Naive Bayes Algorithm](microsoft-naive-bayes-algorithm.md)|[Алгоритм логистической регрессии (Майкрософт)](microsoft-logistic-regression-algorithm.md)|  
 |[Алгоритм взаимосвязей (Майкрософт)](microsoft-association-algorithm.md)|[Алгоритм линейной регрессии (Майкрософт)](microsoft-linear-regression-algorithm.md)|  
 |[Алгоритм кластеризации последовательностей (Майкрософт)](microsoft-sequence-clustering-algorithm.md)||  
   
@@ -94,46 +94,46 @@ ms.locfileid: "66085208"
   
  В разделе для каждого типа алгоритма также приведены прогнозирующие функции, которые можно использовать с моделями, основанными на данном алгоритме.  
   
-|Имя свойства|Применение|  
+|Имя свойства|Применяется к|  
 |-------------------|----------------|  
-|AUTO_DETECT_PERIODICITY|[Технический справочник по алгоритму временных рядов (Майкрософт)](microsoft-time-series-algorithm-technical-reference.md)|  
+|AUTO_DETECT_PERIODICITY|[Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)|  
 |CLUSTER_COUNT|[Технический справочник по алгоритму кластеризации (Майкрософт)](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Технический справочник по алгоритму кластеризации последовательностей (Майкрософт)](microsoft-sequence-clustering-algorithm-technical-reference.md)|  
 |CLUSTER_SEED|[Технический справочник по алгоритму кластеризации (Майкрософт)](microsoft-clustering-algorithm-technical-reference.md)|  
 |CLUSTERING_METHOD|[Технический справочник по алгоритму кластеризации (Майкрософт)](microsoft-clustering-algorithm-technical-reference.md)|  
-|COMPLEXITY_PENALTY|[Технический справочник по алгоритму дерева принятия решений (Майкрософт)](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Технический справочник по алгоритму временных рядов (Майкрософт)](microsoft-time-series-algorithm-technical-reference.md)|  
-|FORCE_REGRESSOR|[Технический справочник по алгоритму дерева принятия решений (Майкрософт)](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Технический справочник по алгоритму линейной регрессии (Майкрософт)](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Флаги моделирования (интеллектуальный анализ данных)](modeling-flags-data-mining.md)|  
-|FORECAST_METHOD|[Технический справочник по алгоритму временных рядов (Майкрософт)](microsoft-time-series-algorithm-technical-reference.md)|  
+|COMPLEXITY_PENALTY|[Технический справочник по алгоритму дерева принятия решений (Майкрософт)](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)|  
+|FORCE_REGRESSOR|[Технический справочник по алгоритму дерева принятия решений (Майкрософт)](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Технический справочник по алгоритму линейной регрессии (Майкрософт)](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Флаги моделирования &#40;&#41;интеллектуального анализа данных](modeling-flags-data-mining.md)|  
+|FORECAST_METHOD|[Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)|  
 |HIDDEN_NODE_RATIO|[Технический справочник по алгоритму нейронной сети (Майкрософт)](microsoft-neural-network-algorithm-technical-reference.md)|  
-|HISTORIC_MODEL_COUNT|[Технический справочник по алгоритму временных рядов (Майкрософт)](microsoft-time-series-algorithm-technical-reference.md)|  
-|HISTORICAL_MODEL_GAP|[Технический справочник по алгоритму временных рядов (Майкрософт)](microsoft-time-series-algorithm-technical-reference.md)|  
-|HOLDOUT_PERCENTAGE|[Технический справочник по алгоритму логистической регрессии (Майкрософт)](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Технический справочник по алгоритму нейронной сети (Майкрософт)](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> Примечание. Этот параметр отличается от значения контрольных данных в процентах, применяемого к структуре интеллектуального анализа данных.|  
-|HOLDOUT_SEED|[Технический справочник по алгоритму логистической регрессии (Майкрософт)](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Технический справочник по алгоритму нейронной сети (Майкрософт)](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> Примечание. Этот параметр отличается от начального контрольного значения, применяемого к структуре интеллектуального анализа данных.|  
-|INSTABILITY_SENSITIVITY|[Технический справочник по алгоритму временных рядов (Майкрософт)](microsoft-time-series-algorithm-technical-reference.md)|  
-|MAXIMUM_INPUT_ATTRIBUTES|[Технический справочник по алгоритму кластеризации (Майкрософт)](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Технический справочник по алгоритму дерева принятия решений (Майкрософт)](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Технический справочник по алгоритму линейной регрессии (Майкрософт)](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Технический справочник по упрощенному алгоритму Байеса (Майкрософт)](microsoft-naive-bayes-algorithm-technical-reference.md)<br /><br /> [Технический справочник по алгоритму нейронной сети (Майкрософт)](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> [Технический справочник по алгоритму логистической регрессии (Майкрософт)](microsoft-logistic-regression-algorithm-technical-reference.md)|  
+|HISTORIC_MODEL_COUNT|[Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)|  
+|HISTORICAL_MODEL_GAP|[Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)|  
+|HOLDOUT_PERCENTAGE|[техническом справочнике по алгоритму логистической регрессии (Майкрософт)](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Технический справочник по алгоритму нейронной сети (Майкрософт)](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> Примечание. Этот параметр отличается от значения контрольных данных в процентах, применяемого к структуре интеллектуального анализа данных.|  
+|HOLDOUT_SEED|[техническом справочнике по алгоритму логистической регрессии (Майкрософт)](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Технический справочник по алгоритму нейронной сети (Майкрософт)](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> Примечание. Этот параметр отличается от начального контрольного значения, применяемого к структуре интеллектуального анализа данных.|  
+|INSTABILITY_SENSITIVITY|[Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)|  
+|MAXIMUM_INPUT_ATTRIBUTES|[Технический справочник по алгоритму кластеризации (Майкрософт)](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Технический справочник по алгоритму дерева принятия решений (Майкрософт)](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Технический справочник по алгоритму линейной регрессии (Майкрософт)](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Технический справочник по упрощенному алгоритму Байеса (Майкрософт)](microsoft-naive-bayes-algorithm-technical-reference.md)<br /><br /> [Технический справочник по алгоритму нейронной сети (Майкрософт)](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> [техническом справочнике по алгоритму логистической регрессии (Майкрософт)](microsoft-logistic-regression-algorithm-technical-reference.md)|  
 |MAXIMUM_ITEMSET_COUNT|[Технический справочник по алгоритму взаимосвязей (Майкрософт)](microsoft-association-algorithm-technical-reference.md)|  
 |MAXIMUM_ITEMSET_SIZE|[Технический справочник по алгоритму взаимосвязей (Майкрософт)](microsoft-association-algorithm-technical-reference.md)|  
-|MAXIMUM_OUTPUT_ATTRIBUTES|[Технический справочник по алгоритму дерева принятия решений (Майкрософт)](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Технический справочник по алгоритму линейной регрессии (Майкрософт)](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Технический справочник по алгоритму логистической регрессии (Майкрософт)](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Технический справочник по упрощенному алгоритму Байеса (Майкрософт)](microsoft-naive-bayes-algorithm-technical-reference.md)<br /><br /> [Технический справочник по алгоритму нейронной сети (Майкрософт)](microsoft-neural-network-algorithm-technical-reference.md)|  
+|MAXIMUM_OUTPUT_ATTRIBUTES|[Технический справочник по алгоритму дерева принятия решений (Майкрософт)](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Технический справочник по алгоритму линейной регрессии (Майкрософт)](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [техническом справочнике по алгоритму логистической регрессии (Майкрософт)](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Технический справочник по упрощенному алгоритму Байеса (Майкрософт)](microsoft-naive-bayes-algorithm-technical-reference.md)<br /><br /> [Технический справочник по алгоритму нейронной сети (Майкрософт)](microsoft-neural-network-algorithm-technical-reference.md)|  
 |MAXIMUM_SEQUENCE_STATES|[Технический справочник по алгоритму кластеризации последовательностей (Майкрософт)](microsoft-sequence-clustering-algorithm-technical-reference.md)|  
-|MAXIMUM_SERIES_VALUE|[Технический справочник по алгоритму временных рядов (Майкрософт)](microsoft-time-series-algorithm-technical-reference.md)|  
+|MAXIMUM_SERIES_VALUE|[Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)|  
 |MAXIMUM_STATES|[Технический справочник по алгоритму кластеризации (Майкрософт)](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Технический справочник по алгоритму нейронной сети (Майкрософт)](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> [Технический справочник по алгоритму кластеризации последовательностей (Майкрософт)](microsoft-sequence-clustering-algorithm-technical-reference.md)|  
 |MAXIMUM_SUPPORT|[Технический справочник по алгоритму взаимосвязей (Майкрософт)](microsoft-association-algorithm-technical-reference.md)|  
 |MINIMUM_IMPORTANCE|[Технический справочник по алгоритму взаимосвязей (Майкрософт)](microsoft-association-algorithm-technical-reference.md)|  
 |MINIMUM_ITEMSET_SIZE|[Технический справочник по алгоритму взаимосвязей (Майкрософт)](microsoft-association-algorithm-technical-reference.md)|  
 |MINIMUM_DEPENDENCY_PROBABILITY|[Технический справочник по упрощенному алгоритму Байеса (Майкрософт)](microsoft-naive-bayes-algorithm-technical-reference.md)|  
 |MINIMUM_PROBABILITY|[Технический справочник по алгоритму взаимосвязей (Майкрософт)](microsoft-association-algorithm-technical-reference.md)|  
-|MINIMUM_SERIES_VALUE|[Технический справочник по алгоритму временных рядов (Майкрософт)](microsoft-time-series-algorithm-technical-reference.md)|  
-|MINIMUM_SUPPORT|[Технический справочник по алгоритму взаимосвязей (Майкрософт)](microsoft-association-algorithm-technical-reference.md)<br /><br /> [Технический справочник по алгоритму кластеризации (Майкрософт)](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Технический справочник по алгоритму дерева принятия решений (Майкрософт)](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Технический справочник по алгоритму кластеризации последовательностей (Майкрософт)](microsoft-sequence-clustering-algorithm-technical-reference.md)<br /><br /> [Технический справочник по алгоритму временных рядов (Майкрософт)](microsoft-time-series-algorithm-technical-reference.md)|  
-|MISSING_VALUE_SUBSTITUTION|[Технический справочник по алгоритму временных рядов (Майкрософт)](microsoft-time-series-algorithm-technical-reference.md)|  
+|MINIMUM_SERIES_VALUE|[Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)|  
+|MINIMUM_SUPPORT|[Технический справочник по алгоритму взаимосвязей (Майкрософт)](microsoft-association-algorithm-technical-reference.md)<br /><br /> [Технический справочник по алгоритму кластеризации (Майкрософт)](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Технический справочник по алгоритму дерева принятия решений (Майкрософт)](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Технический справочник по алгоритму кластеризации последовательностей (Майкрософт)](microsoft-sequence-clustering-algorithm-technical-reference.md)<br /><br /> [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)|  
+|MISSING_VALUE_SUBSTITUTION|[Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)|  
 |MODELLING_CARDINALITY|[Технический справочник по алгоритму кластеризации (Майкрософт)](microsoft-clustering-algorithm-technical-reference.md)|  
-|PERIODICITY_HINT|[Технический справочник по алгоритму временных рядов (Майкрософт)](microsoft-time-series-algorithm-technical-reference.md)|  
-|PREDICTION_SMOOTHING|[Технический справочник по алгоритму временных рядов (Майкрософт)](microsoft-time-series-algorithm-technical-reference.md)|  
-|SAMPLE_SIZE|[Технический справочник по алгоритму кластеризации (Майкрософт)](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Технический справочник по алгоритму логистической регрессии (Майкрософт)](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Технический справочник по алгоритму нейронной сети (Майкрософт)](microsoft-neural-network-algorithm-technical-reference.md)|  
+|PERIODICITY_HINT|[Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)|  
+|PREDICTION_SMOOTHING|[Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)|  
+|SAMPLE_SIZE|[Технический справочник по алгоритму кластеризации (Майкрософт)](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [техническом справочнике по алгоритму логистической регрессии (Майкрософт)](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Технический справочник по алгоритму нейронной сети (Майкрософт)](microsoft-neural-network-algorithm-technical-reference.md)|  
 |SCORE_METHOD|[Технический справочник по алгоритму дерева принятия решений (Майкрософт)](microsoft-decision-trees-algorithm-technical-reference.md)|  
 |SPLIT_METHOD|[Технический справочник по алгоритму дерева принятия решений (Майкрософт)](microsoft-decision-trees-algorithm-technical-reference.md)|  
 |STOPPING_TOLERANCE|[Технический справочник по алгоритму кластеризации (Майкрософт)](microsoft-clustering-algorithm-technical-reference.md)|  
   
-## <a name="see-also"></a>См. также  
- [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](data-mining-algorithms-analysis-services-data-mining.md)   
- [Физическая архитектура (службы Analysis Services — интеллектуальный анализ данных)](physical-architecture-analysis-services-data-mining.md)  
+## <a name="see-also"></a>См. также:  
+ [Алгоритмы интеллектуального анализа данных &#40;Analysis Services — интеллектуальный анализ данных&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Физическая архитектура &#40;Analysis Services-интеллектуальный анализ данных&#41;](physical-architecture-analysis-services-data-mining.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Алгоритмы интеллектуального анализа данных (SQL Server Data Mining Add-ins) | Документация Майкрософт
+title: Алгоритмы интеллектуального анализа данных (SQL Server надстройки интеллектуального анализа данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,10 +24,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6e0bf6c0c1126dff29107636e0956d92d4b314a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086509"
 ---
 # <a name="data-mining-algorithms-sql-server-data-mining-add-ins"></a>Алгоритмы интеллектуального анализа данных (надстройки интеллектуального анализа данных SQL Server)
@@ -49,16 +49,16 @@ ms.locfileid: "66086509"
 ## <a name="advanced-options"></a>Дополнительные параметры  
  При использовании клиента интеллектуального анализа данных для Excel можно создавать собственные структуры и модели интеллектуального анализа данных или тонко настраивать параметры алгоритмов.  
   
- [Параметры алгоритма &#40;надстройки интеллектуального анализа данных SQL Server&#41;](algorithm-parameters-sql-server-data-mining-add-ins.md)  
+ [Параметры алгоритма &#40;SQL Server надстройки интеллектуального анализа данных&#41;](algorithm-parameters-sql-server-data-mining-add-ins.md)  
   
  Предусмотрены два способа настройки модели с использованием следующих дополнительных параметров:  
   
--   Используйте **запрос интеллектуального анализа данных** мастер для создания модели.  
+-   Используйте мастер **запросов интеллектуального анализа данных** для создания модели.  
   
--   В **клиента интеллектуального анализа данных**, то после запуска мастера, нажмите кнопку **параметры**.  
+-   В **клиенте интеллектуального анализа данных**после запуска мастера нажмите кнопку **Параметры**.  
   
-## <a name="see-also"></a>См. также  
- [Запрос &#40;надстройки интеллектуального анализа данных SQL Server&#41;](query-sql-server-data-mining-add-ins.md)   
- [Advanced моделирования &#40;интеллектуального анализа данных надстройки для Excel&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)  
+## <a name="see-also"></a>См. также:  
+ [&#40;запросов SQL Server надстройки интеллектуального анализа данных&#41;](query-sql-server-data-mining-add-ins.md)   
+ [Расширенное моделирование &#40;надстройки интеллектуального анализа данных для Excel&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)  
   
   

@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 46b9fef97433609310169c98d8ffc623a21a10c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876120"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>Возможные ошибки носителей во время резервного копирования и восстановления (SQL Server)
@@ -67,7 +67,7 @@ ms.locfileid: "62876120"
   
  Если операция BACKUP продолжает работу при возникновении ошибок, она производит следующие действия:  
   
-1.  Помечает резервный набор данных на резервном носителе как содержащий ошибки и отслеживает эту страницу в таблице **suspect_pages** в базе данных **msdb**. Дополнительные сведения см. в разделе [suspect_pages (Transact-SQL)](/sql/relational-databases/system-tables/suspect-pages-transact-sql).  
+1.  Помечает резервный набор данных на резервном носителе как содержащий ошибки и отслеживает эту страницу в таблице **suspect_pages** в базе данных **msdb** . Дополнительные сведения см. в разделе [suspect_pages (Transact-SQL)](/sql/relational-databases/system-tables/suspect-pages-transact-sql).  
   
 2.  Записывает эту ошибку в журнал ошибок SQL Server.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "62876120"
   
 -   [Определение, продолжает ли операция резервного копирования или восстановления работу после возникновения ошибки (SQL Server)](specify-if-backup-or-restore-continues-or-stops-after-error.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)   
  [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
  [backupset (Transact-SQL)](/sql/relational-databases/system-tables/backupset-transact-sql)   

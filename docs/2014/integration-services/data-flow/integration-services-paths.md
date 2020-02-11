@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 832ea48478eb28b94caf292067344a3754040b2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62901798"
 ---
 # <a name="integration-services-paths"></a>Пути служб Integration Services
@@ -41,11 +41,11 @@ ms.locfileid: "62901798"
   
  Дополнительные сведения о свойствах, которые могут быть заданы в диалоговом окне **Редактор пути потока данных** , см. в следующих разделах:  
   
--   [Редактор пути потока данных &#40;страница "Общие"&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Редактор пути потока данных &#40;общие&#41;страницы](../general-page-of-integration-services-designers-options.md)  
   
--   [Редактор пути потока данных &#40;страница «метаданные»&#41;](../data-flow-path-editor-metadata-page.md)  
+-   [Редактор пути потока данных &#40;страница метаданных&#41;](../data-flow-path-editor-metadata-page.md)  
   
--   [Редактор пути потока данных &#40;странице средства просмотра данных&#41;](../data-flow-path-editor-data-viewers-page.md)  
+-   [Редактор пути потока данных &#40;страница "средства просмотра данных"&#41;](../data-flow-path-editor-data-viewers-page.md)  
   
  Дополнительные сведения о свойствах, которые можно задать программно, см. в разделе [Path Properties](../path-properties.md).  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62901798"
   
 -   [Соединение компонентов в потоке данных](connect-components-in-a-data-flow.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Поток данных](data-flow.md)  
   
   

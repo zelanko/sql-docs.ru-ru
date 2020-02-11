@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f32462ef33af50a08cd933ed5c1a04c4efaa17de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835766"
 ---
 # <a name="connect-to-an-oracle-source-database"></a>Соединение с базой данных-источником Oracle
@@ -36,7 +36,7 @@ ms.locfileid: "62835766"
   
 -   **Проверка подлинности Windows**. Выберите этот параметр, чтобы использовать учетные данные текущего пользователя Windows. Этот параметр можно использовать только в том случае, если в базе данных Oracle настроено использование проверки подлинности Windows.  
   
--   **Проверка подлинности Oracle**. Если выбран этот вариант, то нужно будет ввести **Имя пользователя** и **Пароль пользователя** в базе данных Oracle, с которой устанавливается соединение.  
+-   **Проверка подлинности Oracle**. При выборе этого варианта необходимо ввести **Имя пользователя** и **Пароль** пользователя в базе данных Oracle, с которой устанавливается соединение.  
   
 > [!NOTE]
 >  Для выполнения интеллектуального анализа журналов пользователь должен иметь следующие права доступа, предоставленные в базе данных Oracle.  
@@ -65,7 +65,7 @@ ms.locfileid: "62835766"
   
  Завершив ввод данных на этой странице, нажмите кнопку **Далее** , чтобы перейти на страницу [Select Oracle Tables and Columns](select-oracle-tables-and-columns.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Как создать экземпляр изменения базы данных SQL Server](how-to-create-the-sql-server-change-database-instance.md)   
  [Изменение свойств экземпляра](edit-instance-properties.md)  
   

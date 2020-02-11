@@ -12,22 +12,22 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 69127078f72eeab296c754dfce666804dcdda53d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62837707"
 ---
 # <a name="getting-assistance-sql-server-2014"></a>Получение помощи (SQL Server 2014)
-  Существует три основных источника сведений из [!INCLUDE[msCoName](../includes/msconame-md.md)] о [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
+  Существует три основных источника сведений [!INCLUDE[msCoName](../includes/msconame-md.md)] о: [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
   
 -   Документация и учебники, устанавливаемые вместе с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 -   Сайты, посвященные [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и входящие в состав порталов [!INCLUDE[msCoName](../includes/msconame-md.md)] MSDN и TechNet.  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Информация о других [!INCLUDE[msCoName](../includes/msconame-md.md)] веб-сайтов.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]сведения о других [!INCLUDE[msCoName](../includes/msconame-md.md)] веб-сайтах.  
   
- Если не удается найти сведения, которые вы ищете, в этих источниках, можно опубликовать вопросы на [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] форумы сообщества и группы новостей либо открыть обращение в службу поддержки с [!INCLUDE[msCoName](../includes/msconame-md.md)] поддержки.  
+ Если вы не нашли нужную информацию в этих источниках, можно отправить вопросы на форумах [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] сообщества и в группы новостей или открыть обращение [!INCLUDE[msCoName](../includes/msconame-md.md)] в службу поддержки.  
   
 ## <a name="in-this-section"></a>в этом разделе  
  [Получение помощи по SQL Server](../../2014/getting-started/getting-sql-server-assistance.md)  
@@ -37,10 +37,10 @@ ms.locfileid: "62837707"
  Описывает продукты, функции и службы, которые делают [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] более доступными для людей с физическими нарушениями.  
   
  [Отзывы по SQL Server 2014](../../2014/getting-started/providing-feedback-for-sql-server-2014.md)  
- Описывает, как Отправка предложений и ошибка сообщает о возможностях продукта и пользовательского интерфейса, предоставлять отзывы о документации, и разрешить отправку отчетов об ошибках и данные об использовании автоматически [!INCLUDE[msCoName](../includes/msconame-md.md)] для анализа.  
+ Описание способов предоставления предложений и отчетов об ошибках по функциям продукта и пользовательскому интерфейсу, отправки отзывов о документации и автоматической [!INCLUDE[msCoName](../includes/msconame-md.md)] отправки отчетов об ошибках и данных об использовании для анализа.  
   
-## <a name="see-also"></a>См. также  
- [Новые возможности в SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md)   
+## <a name="see-also"></a>См. также:  
+ [Новые возможности SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md)   
  [Установка SQL Server 2014](../database-engine/install-windows/installation-for-sql-server.md)  
   
   

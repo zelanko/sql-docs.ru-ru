@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 77792826a80a4564e5f0fd7be2904d99029c3fe7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62864915"
 ---
-# <a name="mssqleng014165"></a>MSSQL_ENG014165
+# <a name="mssql_eng014165"></a>MSSQL_ENG014165
     
 ## <a name="message-details"></a>Сведения о сообщении  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|14165|  
 |Источник события|MSSQLSERVER|  
 |Компонент|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
@@ -44,7 +44,7 @@ ms.locfileid: "62864915"
   
 -   [Наблюдение за производительностью с помощью монитора репликации](monitor/monitor-performance-with-replication-monitor.md) (в частности, раздел "Просмотр подробных сведений о производительности синхронизации для репликации слиянием").  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по ошибкам и событиям (репликация)](errors-and-events-reference-replication.md)  
   
   

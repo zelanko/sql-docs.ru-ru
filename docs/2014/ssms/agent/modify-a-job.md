@@ -15,24 +15,24 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 614c35992be2f85ef15afd0645140746041d083d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62656387"
 ---
 # <a name="modify-a-job"></a>Изменение задания
-  В этом разделе описано, как изменять свойства заданий агента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью среды [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или управляющих объектов SQL Server.  
+  В этом разделе описывается изменение свойств [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] заданий агента в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или управляющие объекты SQL Server.  
   
  **В этом разделе**  
   
--   **Перед началом работы**  
+-   **Перед началом:** ,  
   
      [Ограничения](#Restrictions)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
--   **Для изменения задания используется:**  
+-   **Изменение задания с помощью:**  
   
      [Среда SQL Server Management Studio](#SSMS)  
   
@@ -64,27 +64,27 @@ ms.locfileid: "62656387"
   
 1.  В обозревателе объектов подключитесь к экземпляру компонента Database Engine и разверните его.  
   
-2.  На панели инструментов нажмите кнопку **Создать запрос**.  
+2.  На панели инструментов щелкните **Новый запрос**.  
   
 3.  В окне запроса используйте следующие системные хранимые процедуры для изменения задания.  
   
-    -   Выполнение [sp_update_job &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql) Чтобы изменить атрибуты задания.  
+    -   Выполните [sp_update_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql) , чтобы изменить атрибуты задания.  
   
-    -   Выполнение [sp_update_schedule &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-update-schedule-transact-sql) на изменение параметров расписания для определения задания.  
+    -   Выполните [sp_update_schedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-schedule-transact-sql) , чтобы изменить сведения о расписании для определения задания.  
   
-    -   Выполнение [sp_add_jobstep &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql) Чтобы добавить новые шаги к заданию.  
+    -   Выполните [sp_add_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql) , чтобы добавить новые шаги задания.  
   
-    -   Выполнение [sp_update_jobstep &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql) Чтобы изменить существующие шаги задания.  
+    -   Выполните [sp_update_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql) , чтобы изменить уже существующие шаги задания.  
   
-    -   Выполнение [sp_delete_jobstep &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql) удалить шаг задания из задания.  
+    -   Выполните [sp_delete_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql) , чтобы удалить шаг задания из задания.  
   
     -   Дополнительные хранимые процедуры для изменения любого главного задания агента SQL Server.  
   
-        -   Выполнение [sp_delete_jobserver &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql) для удаления сервера, связанного с заданием.  
+        -   Выполните [sp_delete_jobserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql) , чтобы удалить сервер, который в настоящее время связан с заданием.  
   
-        -   Выполнение [sp_add_jobserver &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql) связывание сервера с текущим заданием.  
+        -   Выполните [sp_add_jobserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql) , чтобы связать сервер с текущим заданием.  
   
-##  <a name="SMO"></a> Использование управляющих объектов SQL Server  
+##  <a name="SMO"></a>Использование управляющие объекты SQL Server  
  **Изменение задания**  
   
  Воспользуйтесь классом `Job` в любом языке программирования (Visual Basic, Visual C# или PowerShell). Дополнительные сведения см. в статье [Управляющие объекты SQL Server (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 823a6455616b412a41179d831b565e10b3286fb7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62875141"
 ---
 # <a name="restore-the-master-database-transact-sql"></a>восстановить базу данных master (Transact-SQL)
@@ -26,13 +26,13 @@ ms.locfileid: "62875141"
   
 1.  Запустите экземпляр сервера в однопользовательском режиме.  
   
-     Дополнительные сведения об указании параметра запуска в однопользовательском режиме ( **-m**) см. в разделе [Настройка параметров запуска сервера (диспетчер конфигурации SQL Server)](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md).  
+     Дополнительные сведения об указании параметра запуска в однопользовательском режиме (**-m**) см. в разделе [Настройка параметров запуска сервера (диспетчер конфигурации SQL Server)](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md).  
   
 2.  Чтобы восстановить полную резервную копию базы данных **master**, используйте следующую инструкцию [RESTORE DATABASE](/sql/t-sql/statements/restore-statements-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   
-     `RESTORE DATABASE master FROM`  *<устройство_резервного_копирования>*  `WITH REPLACE`  
+     `RESTORE DATABASE master FROM`  *<backup_device>*  `WITH REPLACE`  
   
-     Если задан параметр REPLACE, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] восстанавливает указанную базу данных, даже если база данных с таким же именем уже существует. Существующая база данных в таком случае будет удалена. В однопользовательском режиме рекомендуется вводить инструкцию RESTORE DATABASE в [программе sqlcmd](../../tools/sqlcmd-utility.md). Дополнительные сведения см. в статье [Программа sqlcmd](../scripting/sqlcmd-use-the-utility.md).  
+     Если задан параметр REPLACE, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] восстанавливает указанную базу данных, даже если база данных с таким же именем уже существует. Существующая база данных в таком случае будет удалена. В однопользовательском режиме рекомендуется вводить инструкцию RESTORE DATABASE в [программе sqlcmd](../../tools/sqlcmd-utility.md). Дополнительные сведения см. [в разделе Использование служебной программы sqlcmd](../scripting/sqlcmd-use-the-utility.md).  
   
     > [!IMPORTANT]  
     >  После восстановления базы данных **master** экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] завершает работу и останавливает процесс **sqlcmd** . Перед перезапуском экземпляра сервера удалите параметр запуска однопользовательского режима. Дополнительные сведения см. в разделе [Настройка параметров запуска сервера (диспетчер конфигурации SQL Server)](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md).  
@@ -43,7 +43,7 @@ ms.locfileid: "62875141"
  Следующий пример восстанавливает базу данных `master` в определенном по умолчанию экземпляре сервера. В этом примере предполагается, что экземпляр сервера уже работает в однопользовательском режиме. В примере запускается `sqlcmd` и выполняется инструкция `RESTORE DATABASE` , которая восстанавливает полную резервную копию базы данных `master` с дискового устройства: `Z:\SQLServerBackups\master.bak`.  
   
 > [!NOTE]
->  Для именованного экземпляра команда **sqlcmd** должна задавать параметр **-S** _\<имя_компьютера>_ \\ *\<имя_экземпляра>* .  
+>  Для именованного экземпляра команда **sqlcmd** должна указывать параметр **-S**_\<ComputerName>_ \\ * \<instanceName>* .  
   
 ```  
   
@@ -52,16 +52,16 @@ ms.locfileid: "62875141"
 2> GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Выполнение полного восстановления базы данных (простая модель восстановления)](complete-database-restores-simple-recovery-model.md)   
- [Выполнение полного восстановления базы данных (модель полного восстановления)](complete-database-restores-full-recovery-model.md)   
- [Диагностика пользователей, утративших связь с учетной записью (SQL Server)](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)   
- [Присоединение и отсоединение базы данных (SQL Server)](../databases/database-detach-and-attach-sql-server.md)   
+## <a name="see-also"></a>См. также:  
+ [Полное восстановление базы данных &#40;простой модели восстановления&#41;](complete-database-restores-simple-recovery-model.md)   
+ [Полное восстановление базы данных &#40;модель полного восстановления&#41;](complete-database-restores-full-recovery-model.md)   
+ [Устранение неполадок потерянных пользователей &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)   
+ [Отсоединение и присоединение базы данных &#40;SQL Server&#41;](../databases/database-detach-and-attach-sql-server.md)   
  [Перестроение системных баз данных](../databases/system-databases.md)   
- [Параметры запуска службы Database Engine](../../database-engine/configure-windows/database-engine-service-startup-options.md)   
- [Диспетчер конфигурации SQL Server](../sql-server-configuration-manager.md)   
- [Резервное копирование и восстановление системных баз данных (SQL Server)](back-up-and-restore-of-system-databases-sql-server.md)   
- [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql)   
+ [Параметры запуска службы ядро СУБД](../../database-engine/configure-windows/database-engine-service-startup-options.md)   
+ [диспетчер конфигурации SQL Server](../sql-server-configuration-manager.md)   
+ [Резервное копирование и восстановление системных баз данных &#40;SQL Server&#41;](back-up-and-restore-of-system-databases-sql-server.md)   
+ [Восстановление &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [Запуск SQL Server в однопользовательском режиме](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md)  
   
   

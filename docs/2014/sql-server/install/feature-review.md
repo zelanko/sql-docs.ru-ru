@@ -1,5 +1,5 @@
 ---
-title: Функция проверки | Документация Майкрософт
+title: Обзор компонентов | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f095429070a16cb4a99dabd84ffe99d169ce35a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66095333"
 ---
 # <a name="feature-review"></a>Обзор компонента
@@ -26,10 +26,12 @@ ms.locfileid: "66095333"
   
 |Группа компонентов|Компоненты и функции|  
 |---------------------|-----------------------------|  
-|Службы[!INCLUDE[ssDE](../../includes/ssde-md.md)]|[!INCLUDE[ssDE](../../includes/ssde-md.md)] — основная служба для хранения, обработки и защиты данных. Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] включает в себя следующие компоненты.<br /><br /> Репликация. (Необязательно) Репликация — это набор технологий копирования и распространения данных и объектов базы данных из одной базы данных в другую и последующей синхронизации баз данных для поддержания согласованности.<br /><br /> Компонент Full-Text Search: (Необязательно) Компонент Full-Text Search позволяет выполнять полнотекстовые запросы к символьным данным в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблиц.<br /><br /> [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (Необязательно): [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) — это решение очистки данных, в который дает возможность обнаруживать несогласованные и неверные данные в источнике данных, а также предоставляет автоматизированные и интерактивные методы очистки данных.|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)]Обслуживание|
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] — основная служба для хранения, обработки и защиты данных. Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] включает в себя следующие компоненты.<br /><br /> Репликация: (Дополнительно.) Репликация представляет собой набор технологий копирования и распространения данных и объектов баз данных между базами данных, а также синхронизации баз данных для поддержания согласованности.<br /><br /> Полнотекстовый поиск (дополнительно). Компонент "Полнотекстовый поиск" позволяет выполнять полнотекстовые запросы в таблицах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для произвольных символьных данных.<br /><br /> 
+  [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (необязательно). [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) — это решение для очистки данных, позволяющее выявлять несогласованные и неверные данные в источнике данных и предоставляющее средства для очистки данных в автоматическом и интерактивном режимах.|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Службы[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] включают в себя серверные и клиентские компоненты для создания, управления и развертывания табличных, матричных и графических отчетов, а также отчетов в свободной форме. Службы[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] являются расширяемой платформой, которую можно использовать для разработки приложений отчетов.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Установка SQL Server 2014 с помощью SysPrep](../../database-engine/install-windows/install-sql-server-using-sysprep.md)  
   
   

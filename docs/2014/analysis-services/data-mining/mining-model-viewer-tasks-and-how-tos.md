@@ -1,5 +1,5 @@
 ---
-title: Задачи средства просмотра модели и инструкции интеллектуального анализа данных | Документация Майкрософт
+title: Задачи и инструкции средства просмотра моделей интеллектуального анализа данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a3c99733ca6853a2e0a5503868e2270fa6585eae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083483"
 ---
 # <a name="mining-model-viewer-tasks-and-how-tos"></a>Задачи и инструкции средства просмотра моделей интеллектуального анализа данных
@@ -35,18 +35,18 @@ ms.locfileid: "66083483"
   
 -   [Поиск определенного узла в сети зависимостей](find-a-specific-node-in-a-dependency-network.md)  
   
--   [Фильтрация правила в модели правил взаимосвязей](filter-a-rule-in-an-association-rules-model.md)  
+-   [Фильтрация правила в модели ассоциативных правил](filter-a-rule-in-an-association-rules-model.md)  
   
 -   [Фильтрация набора элементов в модели ассоциативных правил](filter-an-itemset-in-an-association-rules-model.md)  
   
--   [Детализация до данных вариантов из модели интеллектуального анализа данных](drill-through-to-case-data-from-a-mining-model.md)  
+-   [выполнить детализацию до данных вариантов из модели интеллектуального анализа данных](drill-through-to-case-data-from-a-mining-model.md)  
   
--   [Просмотр формулы для модели временных рядов (интеллектуальный анализ данных)](view-the-formula-for-a-time-series-model-data-mining.md)  
+-   [Просмотр формулы для модели временных рядов &#40;интеллектуального анализа данных&#41;](view-the-formula-for-a-time-series-model-data-mining.md)  
   
 -   [изменить цвета, используемые в средстве просмотра интеллектуального анализа данных](change-the-colors-used-in-the-data-mining-viewer.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Учебник по основам интеллектуального анализа данных](../../tutorials/basic-data-mining-tutorial.md)   
- [Средства просмотра моделей интеллектуального анализа данных (конструктор моделей интеллектуального анализа данных)](../mining-model-viewers-data-mining-model-designer.md)  
+ [Средства просмотра моделей интеллектуального анализа &#40;конструктор моделей интеллектуального анализа данных&#41;](../mining-model-viewers-data-mining-model-designer.md)  
   
   

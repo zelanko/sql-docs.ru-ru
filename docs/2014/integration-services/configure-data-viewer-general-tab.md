@@ -1,5 +1,5 @@
 ---
-title: Настройка средства просмотра данных (вкладка "Общие") | Документация Майкрософт
+title: Настройка средства просмотра данных (вкладка «Общие») | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a482a4d615c12023cceb6995eb9f261b6dd86a98
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060672"
 ---
 # <a name="configure-data-viewer-general-tab"></a>Настройка средства просмотра данных (вкладка «Общие»)
@@ -27,7 +27,7 @@ ms.locfileid: "66060672"
  Вкладка **Общие** диалогового окна **Настройка средства просмотра данных** используется для задания имени средства просмотра данных и типа диаграммы для отображения данных.  
   
 ## <a name="options"></a>Параметры  
- **Name**  
+ **Название**  
  Следует задать уникальное имя для средства просмотра данных.  
   
  **Тип**  
@@ -36,11 +36,11 @@ ms.locfileid: "66060672"
  **Описание**  
  Здесь отображается образец диаграммы, а также описание.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Настройка средства просмотра данных &#40;вкладка «Гистограмма»&#41;](../../2014/integration-services/configure-data-viewer-column-chart-tab.md)   
- [Настройка средства просмотра данных &#40;вкладка "Сетка"&#41;](../../2014/integration-services/configure-data-viewer-grid-tab.md)   
- [Настройка средства просмотра данных &#40;вкладка "Гистограмма"&#41;](../../2014/integration-services/configure-data-viewer-histogram-tab.md)   
- [Настройка средства просмотра данных &#40;Точечная диаграмма, на вкладке построения&#41;](../../2014/integration-services/configure-data-viewer-scatter-plot-tab.md)   
+ [Настройка средства просмотра данных &#40;вкладке сетки&#41;](../../2014/integration-services/configure-data-viewer-grid-tab.md)   
+ [Настройка средства просмотра данных &#40;вкладке «гистограмма»&#41;](../../2014/integration-services/configure-data-viewer-histogram-tab.md)   
+ [Настройка средства просмотра данных &#40;вкладке точечная диаграмма&#41;](../../2014/integration-services/configure-data-viewer-scatter-plot-tab.md)   
  [Поток данных](data-flow/data-flow.md)   
  [Отладка потока данных](troubleshooting/debugging-data-flow.md)  
   

@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4b964e1a3958ed57251b2b5cccc8ec4dfc13f9eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62869214"
 ---
-# <a name="mssqlserver2512"></a>MSSQLSERVER_2512
+# <a name="mssqlserver_2512"></a>MSSQLSERVER_2512
     
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|2512|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC_DUPLICATE_KEYS|  
-|Текст сообщения|Ошибка таблицы: Идентификатор объекта O_ID, Идентификатором индекса I_ID, Идентификатором секции PN_ID, Идентификатором единицы распределения A_ID (тип TYPE). Повторяющиеся ключи на странице P_ID1, область памяти SLOT1, и странице P_ID2, область памяти SLOT2.|  
+|Текст сообщения|Ошибка в таблице: идентификатор объекта O_ID, идентификатор индекса I_ID, идентификатор секции PN_ID, идентификатор единицы распределения A_ID (тип TYPE). Повторяющиеся ключи на странице P_ID1, область памяти SLOT1, и странице P_ID2, область памяти SLOT2.|  
   
 ## <a name="explanation"></a>Объяснение  
  Две указанные области памяти обладают одинаковыми ключами, возможно, типа `uniqueifiers`.  

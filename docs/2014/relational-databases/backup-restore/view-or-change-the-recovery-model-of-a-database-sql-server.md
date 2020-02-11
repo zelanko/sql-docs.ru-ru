@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4bc7254d8a3eafa3c7c7d152d323051a3c5bea94
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62875078"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>Просмотр или изменение модели восстановления базы данных (SQL Server)
@@ -34,15 +34,15 @@ ms.locfileid: "62875078"
   
      [Рекомендации](#Recommendations)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
--   **Чтобы просмотреть или изменить модель восстановления базы данных, с помощью:**  
+-   **Просмотр и изменение модели восстановления базы данных**  
   
      [Среда SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Рекомендуемые действия:**  [После изменения модели восстановления](#FollowUp)  
+-   **Дальнейшие рекомендации.**  [после изменения модели восстановления](#FollowUp)  
   
 -   [Связанные задачи](#RelatedTasks)  
   
@@ -72,7 +72,7 @@ ms.locfileid: "62875078"
   
 #### <a name="to-view-or-change-the-recovery-model"></a>Просмотр или изменение модели восстановления  
   
-1.  После подключения к соответствующему экземпляру компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]в обозревателе объектов разверните дерево сервера, щелкнув его имя.  
+1.  После подключения к соответствующему экземпляру [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]в обозревателе объектов разверните дерево сервера, щелкнув имя сервера.  
   
 2.  Раскройте узел **Базы данных**и в зависимости от типа восстанавливаемой базы данных выберите пользовательскую базу данных или раскройте узел **Системные базы данных** и выберите системную базу данных.  
   
@@ -117,9 +117,9 @@ USE master ;
 ALTER DATABASE model SET RECOVERY FULL ;  
 ```  
   
-##  <a name="FollowUp"></a> Рекомендуемые действия: После изменения модели восстановления  
+##  <a name="FollowUp"></a>Дальнейшие рекомендации. После изменения модели восстановления  
   
--   **После переключения с модели полного восстановления на модель восстановления с неполным протоколированием**  
+-   **После переключения между полными и неполным протоколированием модель восстановления**  
   
     -   После завершения массовых операций немедленно переключитесь обратно на модель полного восстановления.  
   
@@ -148,23 +148,23 @@ ALTER DATABASE model SET RECOVERY FULL ;
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
   
--   [Создание полной резервной копии базы данных (SQL Server)](create-a-full-database-backup-sql-server.md)  
+-   [Создание полной резервной копии базы данных &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)  
   
--   [Создание резервной копии журнала транзакций (SQL Server)](back-up-a-transaction-log-sql-server.md)  
+-   [Создание резервной копии журнала транзакций &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
   
 -   [Создание задания](../../ssms/agent/create-a-job.md)  
   
--   [Отключение или включение задания](../../ssms/agent/disable-or-enable-a-job.md)  
+-   [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)  
   
 ##  <a name="RelatedContent"></a> См. также  
   
--   [Планы обслуживания базы данных](../maintenance-plans/maintenance-plans.md) (в электронной документации по [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] )  
+-   [Планы обслуживания базы данных](../maintenance-plans/maintenance-plans.md) ( [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] в электронной документации)  
   
-## <a name="see-also"></a>См. также  
- [Модели восстановления (SQL Server)](recovery-models-sql-server.md)   
- [Журнал транзакций (SQL Server)](../logs/the-transaction-log-sql-server.md)   
- [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)   
- [sys.databases (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
- [Модели восстановления (SQL Server)](recovery-models-sql-server.md)  
+## <a name="see-also"></a>См. также:  
+ [Модели восстановления &#40;SQL Server&#41;](recovery-models-sql-server.md)   
+ [&#40;SQL Server журнала транзакций&#41;](../logs/the-transaction-log-sql-server.md)   
+ [&#41;Transact-SQL ALTER DATABASE &#40;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [sys. databases &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
+ [Модели восстановления &#40;SQL Server&#41;](recovery-models-sql-server.md)  
   
   

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cfa8ca59787be1fd6d33c392bfa7333075e38936
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62746088"
 ---
 # <a name="tsql-event-category"></a>Категория событий TSQL
@@ -28,7 +28,7 @@ ms.locfileid: "62746088"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Описание|  
+|Раздел|Description|  
 |-----------|-----------------|  
 |[Класс событий Exec Prepared SQL](exec-prepared-sql-event-class.md)|Указывает, что SqlClient, ODBC, OLE DB или DB-Library выполнили подготовленные инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
 |[Класс событий Prepare SQL](prepare-sql-event-class.md)|Указывает, что SqlClient, ODBC, OLE DB или DB-Library подготовили для использования инструкции языка [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
@@ -40,7 +40,7 @@ ms.locfileid: "62746088"
 |[Класс событий Unprepare SQL](unprepare-sql-event-class.md)|Указывает, что SqlClient, ODBC, OLE DB или DB-Library удалили подготовленные инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
 |[Класс событий XQuery Static Type](xquery-static-type-event-class.md)|Возникает, если сервер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет выражение XQuery.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по Transact-SQL (компонент Database Engine)](/sql/t-sql/language-reference)  
   
   

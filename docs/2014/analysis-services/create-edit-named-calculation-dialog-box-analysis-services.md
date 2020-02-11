@@ -1,5 +1,5 @@
 ---
-title: Создание Изменение с именем диалоговое окно «вычисления» (службы Analysis Services) | Документация Майкрософт
+title: Диалоговое окно «Создание именованного вычисления» (Analysis Services) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,20 +15,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a53db9413ce7877182ca5f9c768bb1e1ef71e383
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086845"
 ---
-# <a name="create-edit-named-calculation-dialog-box-analysis-services"></a>Создание Изменение диалоговое окно «именованное вычисление» (службы Analysis Services)
-  Используйте диалоговое окно **Создание именованного вычисления/Изменение именованного вычисления** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] для определения или редактирования именованного вычисления для таблицы в представлении источника данных. You can display the **Create/Edit Named Calculation** dialog box by:  
+# <a name="create-edit-named-calculation-dialog-box-analysis-services"></a>Диалоговое окно «Создание именованного вычисления» (Analysis Services)
+  Чтобы определить или изменить именованное вычисление для таблицы [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] в представлении источника данных, используйте диалоговое окно **Создать именованное вычисление/изменение названного вычисления** в. Диалоговое окно **Создание именованного вычисления/Изменение именованного вычисления** можно открыть следующими способами:  
   
--   нажмите кнопку **Создать именованное вычисление** на панели **Панель инструментов** **конструктора представлений источников данных**;  
+-   нажмите кнопку **Создать именованное вычисление** на панели **Панель инструментов****конструктора представлений источников данных**;  
   
--   щелкните правой кнопкой мыши таблицу на панели **Таблицы** или **Диаграмма** **конструктора представлений источников данных** и выберите команду **Создать именованное вычисление**;  
+-   щелкните правой кнопкой мыши таблицу на панели **Таблицы** или **Диаграмма****конструктора представлений источников данных** и выберите команду **Создать именованное вычисление**;  
   
--   щелкните правой кнопкой мыши именованное вычисление на панели **Диаграмма** **конструктора представлений источников данных** и выберите команду **Изменить именованное вычисление**.  
+-   щелкните правой кнопкой мыши именованное вычисление на панели **Диаграмма****конструктора представлений источников данных** и выберите команду **Изменить именованное вычисление**.  
   
 ## <a name="options"></a>Параметры  
  **Имя столбца**  
@@ -46,8 +46,8 @@ SELECT <Table Name in Data Source>.* , <Expression> AS <Column Name> FROM <Table
   
  The expression can contain references to other tables, by means of a sub-select statement. If the expression would require parentheses in a SELECT statement, the expression entered must be enclosed between parentheses.  
   
-## <a name="see-also"></a>См. также  
- [Конструкторы и диалоговые окна служб Analysis Services &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Конструктор представлений источников данных (службы Analysis Services — многомерные данные)](data-source-view-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>См. также:  
+ [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Конструктор представлений источников данных &#40;Analysis Services многомерных данных&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e500eb47af39502e1bcf59f60b3dd24fed0713fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62872131"
 ---
 # <a name="database-mail-log-and-audits"></a>Ведение журнала и аудит компонента Database Mail
@@ -36,11 +36,11 @@ ms.locfileid: "62872131"
 |||  
 |-|-|  
 |**Обзор журналов компонента Database Mail и управление ими**|**Ссылка на раздел**|  
-|Проверьте состояние доставки отдельного сообщения|[Проверка состояния сообщений электронной почты, отправленных при помощи компонента Database Mail](check-the-status-of-e-mail-messages-sent-with-database-mail.md)|  
+|Проверьте состояние доставки отдельного сообщения|[Проверка состояния сообщений электронной почты, отправленных с помощью компонента Database Mail](check-the-status-of-e-mail-messages-sent-with-database-mail.md)|  
 |Очистите сообщения, вложения и записи журнала компонента Database Mail|[sysmail_delete_mailitems_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql)<br /><br /> [sysmail_delete_log_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql)|  
-|Заархивируйте сообщения и журналы компонента Database Mail|[Создание задания агента SQL Server по архивации сообщений компонента Database Mail и журналов событий базы данных](create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)|  
+|Заархивируйте сообщения и журналы компонента Database Mail|[Создание задания агента SQL Server по архивации сообщений и журналов событий компонента Database Mail](create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Наблюдение за использованием ресурсов (системный монитор)](../performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

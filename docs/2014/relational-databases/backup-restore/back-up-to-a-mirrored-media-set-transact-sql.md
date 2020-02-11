@@ -11,14 +11,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 88ea15fabe8e8fd6630d3430417879c7104dff67
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876992"
 ---
 # <a name="back-up-to-a-mirrored-media-set-transact-sql"></a>Создание резервной копии на зеркальном наборе носителей (Transact-SQL)
-  В этой статье описан порядок использования инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql) для указания зеркального набора носителей при резервном копировании базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Для определения зеркального набора носителей в инструкции BACKUP укажите первое зеркало в предложении TO. Затем определите каждое зеркало в своем собственном предложении TO. Предложения TO и MIRROR TO должны определять одинаковое количество и одинаковый тип устройств резервного копирования.  
+  В этой статье описано, как использовать инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql), чтобы указать зеркальный набор носителей при резервном копировании базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для определения зеркального набора носителей в инструкции BACKUP укажите первое зеркало в предложении TO. Затем определите каждое зеркало в своем собственном предложении TO. Предложения TO и MIRROR TO должны определять одинаковое количество и одинаковый тип устройств резервного копирования.  
   
 ## <a name="example"></a>Пример  
  В следующем примере создается зеркальный набор носителей, показанный на предыдущем рисунке, и производится резервное копирование базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] на оба зеркала.  
@@ -34,12 +34,12 @@ GO
 ```  
   
 ## <a name="related-tasks"></a>Связанные задачи  
- **Восстановление из зеркально отображенной резервной копии**  
+ **Восстановление из зеркальной резервной копии**  
   
--   [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql)  
+-   [Восстановление &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   
-## <a name="see-also"></a>См. также  
- [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
- [Зеркальные наборы носителей резервных копий (SQL Server)](mirrored-backup-media-sets-sql-server.md)  
+## <a name="see-also"></a>См. также:  
+ [&#41;BACKUP &#40;Transact-SQL](/sql/t-sql/statements/backup-transact-sql)   
+ [Зеркальные наборы носителей резервных копий &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Восстановление базы данных-диалоговое окно (службы Analysis Services — многомерные данные) | Документация Майкрософт
+title: Диалоговое окно «Восстановление базы данных» (Analysis Services-многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 42649fd9fe8284e89aebd37c2d9b668a3ac34a2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070261"
 ---
 # <a name="restore-database-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Восстановление базы данных» (службы Analysis Services — многомерные данные)
@@ -28,21 +28,21 @@ ms.locfileid: "66070261"
 > [!NOTE]  
 >  После восстановления существующей базы данных пользователь, выполнявший восстановление, может утратить доступ к этой базе данных. Потеря доступа может произойти в случае, если на время создания резервной копии этот пользователь не был членом роли сервера и роли базы данных с разрешением «Полный доступ (Администратор)».  
   
- **Чтобы отобразить диалоговое окно Восстановление базы данных**  
+ **Отображение диалогового окна «Восстановление базы данных»**  
   
 -   В среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]щелкните правой кнопкой мыши папку **Базы данных** экземпляра [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] или базу данных в **обозревателе объектов**, а затем выберите **Восстановить**.  
   
  Диалоговое окно **Восстановление базы данных** содержит следующие страницы.  
   
-## <a name="pages"></a>Pages  
+## <a name="pages"></a>Страницы  
  **Общие сведения**  
  Эта страница используется для выбора базы данных, подлежащей восстановлению, файла резервной копии, а также общих параметров и пароля, который будет использоваться для восстановления базы данных. Дополнительные сведения об этой странице см. в разделе [Общие (диалоговое окно "Восстановление базы данных") (службы Analysis Services — многомерные данные)](general-restore-database-dialog-box-analysis-services-multidimensional-data.md).  
   
  **Секции**  
  Эта страница используется для восстановления локальных секций в заданном расположении и для восстановления удаленных секций из удаленных файлов резервных копий. Дополнительные сведения об этой странице см. в разделе [Секции (диалоговое окно "Восстановление базы данных") (службы Analysis Services — многомерные данные)](partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md).  
   
-## <a name="see-also"></a>См. также  
- [Конструкторы и диалоговые окна служб Analysis Services &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+## <a name="see-also"></a>См. также:  
+ [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Создание и восстановление резервных копий баз данных служб Analysis Services](multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
   

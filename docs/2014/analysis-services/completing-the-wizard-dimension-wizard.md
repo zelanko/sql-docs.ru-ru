@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4efca206c40c685f81c2c4629714e285ba6119af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087598"
 ---
 # <a name="completing-the-wizard-dimension-wizard"></a>Завершение работы мастера (мастер измерений)
@@ -28,12 +28,12 @@ ms.locfileid: "66087598"
   
 -   При необходимости можно сформировать схему, необходимую для поддержки измерения.  
   
- **Чтобы открыть мастер измерений**  
+ **Открытие мастера измерений**  
   
--   В **обозревателе решений** [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] щелкните правой кнопкой мыши папку **Измерения** для проекта [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , а затем выберите команду **Новое измерение**.  
+-   В [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]обозревателе решений **** щелкните правой кнопкой мыши папку **Измерения** для проекта [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , а затем выберите команду **Новое измерение**.  
   
 ## <a name="options"></a>Параметры  
- **Name**  
+ **Название**  
  Введите имя нового измерения.  
   
  **Предварительный просмотр**  
@@ -43,11 +43,11 @@ ms.locfileid: "66087598"
  Выберите этот режим для формирования схемы, необходимой для поддержки измерения. Выбор этого параметра открывает мастер формирования схем.  
   
 > [!NOTE]  
->  Этот параметр отображается в случае, если на странице **Выбор метода создания** выбрана команда **Создать в источнике данных таблицу времени** или **Создать в источнике данных таблицу, не содержащую время**. Дополнительные сведения см. в разделе [Выбор метода создания (мастер измерений)](select-creation-method-dimension-wizard.md).  
+>  Этот параметр отображается в случае, если на странице **Выбор метода создания** выбрана команда **Создать в источнике данных таблицу времени** или **Создать в источнике данных таблицу, не содержащую время** . Дополнительные сведения см. в разделе [Выбор метода создания (мастер измерений)](select-creation-method-dimension-wizard.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справка F1 мастера измерений](dimension-wizard-f1-help.md)   
- [Измерения &#40;службы Analysis Services — многомерные данные&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+ [Измерения &#40;Analysis Services многомерных данных&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Измерения в многомерных моделях](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

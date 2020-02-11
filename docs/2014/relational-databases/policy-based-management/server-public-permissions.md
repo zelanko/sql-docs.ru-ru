@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6f240973def97dea739c21381f38dc366deb8920
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62691470"
 ---
 # <a name="server-public-permissions"></a>Разрешения роли сервера public
@@ -26,7 +26,7 @@ ms.locfileid: "62691470"
  Не предоставляйте серверной роли public разрешения на сервер.  
   
 > [!IMPORTANT]  
->  После завершения установки **ОТКРЫТЫЙ** роль имеет `CONNECT` разрешение всех конечных точек за исключением **Dedicated Admin Connection**. Это нормально, и в обычных ситуациях не нуждается в изменении. (Управление доступом осуществляется с помощью разрешения `CONNECT SQL`, которое предоставляется автоматически при создании нового имени входа.)  
+>  После завершения установки роль **Public** имеет `CONNECT` разрешение на все конечные точки, кроме **выделенного административного соединения**. Это нормально, и в обычных ситуациях не нуждается в изменении. (Управление доступом осуществляется с помощью разрешения `CONNECT SQL`, которое предоставляется автоматически при создании нового имени входа.)  
   
 ### <a name="for-more-information"></a>Дополнительные сведения  
  [Обеспечение безопасности SQL Server](../security/securing-sql-server.md)  

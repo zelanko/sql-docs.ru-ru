@@ -25,16 +25,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 602ac6de5a2b623e33b1b85b46a9f8cf31e0b225
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871727"
 ---
 # <a name="move-user-databases"></a>Перемещение пользовательских баз данных
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]позволяет переносить в новое место файлы данных, журнала и полнотекстового каталога пользовательской базы данных; новое место указывается при помощи предложения FILENAME инструкции [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) . Этот метод подходит для перемещения файлов базы данных в пределах одного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для переноса базы данных на другой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или другой сервер применяются операции [резервного копирования и восстановления](../backup-restore/back-up-and-restore-of-sql-server-databases.md) или [отключения и подключения](move-a-database-using-detach-and-attach-transact-sql.md).  
   
-## <a name="considerations"></a>Замечания  
+## <a name="considerations"></a>Рекомендации  
  Чтобы обеспечить целостность работы пользователей и приложений при перемещении базы данных на другой экземпляр сервера, необходимо повторно создать некоторые или все метаданные базы данных. Дополнительные сведения см. в статье [Управление метаданными при обеспечении доступности базы данных на другом экземпляре сервера (SQL Server)](manage-metadata-when-making-a-database-available-on-another-server.md).  
   
  Некоторые функции компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] изменяют способ, с помощью которого [!INCLUDE[ssDE](../../includes/ssde-md.md)] хранит информацию в файлах базы данных. Эти функции зависят от конкретных выпусков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. База данных, содержащая данные функции, не может быть перемещена в выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , который их не поддерживает. Используйте динамическое административное представление sys.dm_db_persisted_sku_features чтобы просмотреть список всех зависящих от выпуска функций, включенных в текущей базе данных.  
@@ -119,7 +119,7 @@ ms.locfileid: "62871727"
         NET START MSSQL$instancename /f /T3608  
         ```  
   
-     Дополнительные сведения см. в статье [Запуск, остановка, приостановка, возобновление и перезапуск ядра СУБД, агента SQL Server и обозревателя SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+     Дополнительные сведения см. в статье [Iniciar, parar, pausar, retomar e reiniciar os serviços SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 3.  Для каждого перемещаемого файла используйте команды **sqlcmd** или [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] для выполнения следующей инструкции.  
   
@@ -175,7 +175,7 @@ WHERE database_id = DB_ID(N'AdventureWorks2012')
     AND type_desc = N'LOG';  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)   
  [CREATE DATABASE (SQL Server Transact-SQL)](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
  [Присоединение и отсоединение базы данных (SQL Server)](database-detach-and-attach-sql-server.md)   
@@ -183,6 +183,6 @@ WHERE database_id = DB_ID(N'AdventureWorks2012')
  [Перемещение файлов базы данных](move-database-files.md)   
  [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
  [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql)   
- [Запуск, остановка, приостановка, возобновление и перезапуск ядра СУБД, агента SQL Server и обозревателя SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
+ [Запуск, остановка, приостановка, возобновление и перезапуск компонента Database Engine, агента SQL и службы браузера SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
   
   

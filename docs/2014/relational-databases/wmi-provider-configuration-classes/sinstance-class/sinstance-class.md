@@ -1,5 +1,5 @@
 ---
-title: Класс SInstance | Документация Майкрософт
+title: Класс Класс SInstance | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 12918f817277eb35f32d96eefeea40c4b4d36bda
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62720986"
 ---
 # <a name="sinstance-class"></a>Класс SInstance
@@ -30,7 +30,7 @@ ms.locfileid: "62720986"
   
  Класс [SInstance Class](sinstance-class.md) можно использовать для управления протоколами и сетевыми библиотеками, связанными с экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Для экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]можно также задать сертификат безопасности.  
   
-## <a name="see-also"></a>См. также  
- [Настройка сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+## <a name="see-also"></a>См. также:  
+ [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

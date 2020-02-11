@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 455d0981a4b81bc81b2dece8cedbd6ea07e66a21
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080538"
 ---
 # <a name="import-from-a-text-file-ssas-tabular"></a>Импорт из текстового файла (табличные службы SSAS)
@@ -30,8 +30,8 @@ ms.locfileid: "66080538"
   
 3.  Выполните шаги мастера импорта таблиц. На последующих страницах можно будет выбрать отдельные таблицы и применить фильтры на странице **Выбор таблиц и представлений** .  
   
-## <a name="see-also"></a>См. также  
- [Импорт данных (табличные службы SSAS)](import-data-ssas-tabular.md)   
- [Поддерживаемые источники данных (табличные службы SSAS)](tabular-models/data-sources-supported-ssas-tabular.md)  
+## <a name="see-also"></a>См. также:  
+ [Импорт данных &#40;табличные&#41;SSAS](import-data-ssas-tabular.md)   
+ [Поддерживаемые источники данных &#40;табличные&#41;SSAS](tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

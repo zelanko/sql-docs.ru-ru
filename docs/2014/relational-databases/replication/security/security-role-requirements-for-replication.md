@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 52eed41a8b44147c13ed8dbc63dbda46ed625f51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62676891"
 ---
 # <a name="security-role-requirements-for-replication"></a>Security Role Requirements for Replication
@@ -49,8 +49,8 @@ ms.locfileid: "62676891"
 |Обслуживание агентов репликации.|Роль**db_owner** базы данных в соответствующей базе данных или роль сервера **sysadmin** на соответствующем сервере.<br /><br /> Если агент создан пользователем в роли **sysadmin** , а учетная запись-посредник не указана для агента, агент запускается в контексте учетной записи агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . В этом случае пользователь в роли **db_owner** не может изменить задание, связанное с агентом.|  
 |Запуск или останов агента репликации.|Владелец задания агента или роль сервера **sysadmin** на соответствующем сервере.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [Безопасность репликации SQL Server](view-and-modify-replication-security-settings.md)  
+ [Безопасность Репликация SQL Server](view-and-modify-replication-security-settings.md)  
   
   

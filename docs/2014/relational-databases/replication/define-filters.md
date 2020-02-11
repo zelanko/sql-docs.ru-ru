@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f7b82b3450727d36a36186453e366625ebecbde2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721391"
 ---
 # <a name="define-filters"></a>Определение фильтров
@@ -28,13 +28,13 @@ ms.locfileid: "62721391"
  **Оператор**  
  Выберите оператор для фильтра, например **Меньше**или Равно.  
   
- **Значение**  
+ **Value**  
  Введите значение для фильтра. Для большинства операторов нужно только значение в первом столбце **Значение** , но для операторов **Между** и **Вне** необходимы значения в обоих столбцах **Значение** .  
   
  **Clear**  
  Нажмите эту кнопку для сброса всех ранее определенных фильтров.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Средство просмотра конфликтов репликации (Майкрософт) (репликация слиянием)](microsoft-replication-conflict-viewer-merge-replication.md)   
  [Средство просмотра конфликтов репликации (Майкрософт) (репликация транзакций)](microsoft-replication-conflict-viewer-transactional-replication.md)  
   

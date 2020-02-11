@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c3f320b5e1d3801426dfc4843f2929be6284d87e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835570"
 ---
 # <a name="how-to-view-the-cdc-instance-properties"></a>Как просмотреть свойства экземпляра CDC
@@ -33,7 +33,7 @@ ms.locfileid: "62835570"
      **Состояние**  
      На этой вкладке отображаются сведения о текущем состоянии отслеживания измененных данных для экземпляра. Сведения о том, что отображено на этой вкладке, приведены в пункте **Вкладки средства просмотра** раздела [Manage a CDC Instance](manage-a-cdc-instance.md).  
   
-     **Oracle;**  
+     **Oracle**  
      На этой вкладке отображаются общие сведения об экземпляре CDC и базе данных-источнике Oracle. Сведения о том, что отображено на этой вкладке, приведены в разделе [Edit the Oracle Database Properties](edit-the-oracle-database-properties.md).  
   
      **Таблицы**  

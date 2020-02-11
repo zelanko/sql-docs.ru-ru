@@ -1,5 +1,5 @@
 ---
-title: Определение операций со счетами (мастер измерений) | Документация Майкрософт
+title: Определение логики операций со счетами (мастер измерений) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e7bbc2b890c61e2864aa727f42276f01c87e94a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082161"
 ---
 # <a name="define-account-intelligence-dimension-wizard"></a>Определение логики операций со счетами (мастер измерений)
@@ -34,19 +34,19 @@ ms.locfileid: "66082161"
   
  Следующая таблица содержит список типов счетов, определенных в экземпляре служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
-|**Актив**|Ценность вещей, находящихся в собственности в заданное время.|  
-|**Баланс**|Итоговое количество чего-либо в заданное время.|  
+|**Asset**|Ценность вещей, находящихся в собственности в заданное время.|  
+|**Balance**|Итоговое количество чего-либо в заданное время.|  
 |**Расход**|Ценность потраченного.|  
 |**Поток**|Подсчет приращений элементов.|  
-|**Доходы**|Ценность полученного.|  
+|**Ручки**|Ценность полученного.|  
 |**Обязательство**|Ценность подлежащего возврату в заданное время.|  
-|**Статистические**|Вычисленное соотношение или количество некоторой величины, не подлежащей статистической обработке.|  
+|**Статистический**|Вычисленное соотношение или количество некоторой величины, не подлежащей статистической обработке.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справка F1 мастера измерений](dimension-wizard-f1-help.md)   
- [Измерения &#40;службы Analysis Services — многомерные данные&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+ [Измерения &#40;Analysis Services многомерных данных&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Измерения в многомерных моделях](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

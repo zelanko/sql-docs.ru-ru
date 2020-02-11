@@ -1,5 +1,5 @@
 ---
-title: Типы данных SQL Server в .NET Framework | Документация Майкрософт
+title: SQL Server типы данных в .NET Framework | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2ca5e816d3068b0607a8ab30e949040df0187db9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874539"
 ---
 # <a name="sql-server-data-types-in-the-net-framework"></a>Типы данных SQL Server в платформе .NET Framework
@@ -37,7 +37,7 @@ ms.locfileid: "62874539"
  [Параметры сортировки и типы данных интеграции со средой CLR](collation-and-clr-integration-data-types.md)  
  Описывает обработку параметров сортировки при интеграции со средой CLR.  
   
- [Обработка больших объектов &#40;LOB&#41; параметров в среде CLR](handling-large-object-lob-parameters-in-the-clr.md)  
+ [Обработка больших объектов &#40;бизнес-&#41; параметров в CLR](handling-large-object-lob-parameters-in-the-clr.md)  
  Описывает передачу типов LOB между [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и средой CLR.  
   
  [Сопоставление данных о параметрах CLR](mapping-clr-parameter-data.md)  

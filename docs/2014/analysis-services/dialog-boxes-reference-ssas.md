@@ -1,5 +1,5 @@
 ---
-title: Диалоговые окна Справочник (службы SSAS) | Документация Майкрософт
+title: Справочник по диалоговым окнам (SSAS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,25 +11,25 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 33cb020aac728bec7a98d8eb7f66f78eb799b0c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081803"
 ---
 # <a name="dialog-boxes-reference-ssas"></a>Справочник по диалоговым окнам (SSAS)
   Сведения о диалоговых окнах в [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]см. в следующих разделах.  
   
--   [Диалоговое окно ширины столбца &#40;SSAS&#41;](column-width-dialog-box-ssas.md)  
+-   [Диалоговое окно «Ширина столбца» &#40;SSAS&#41;](column-width-dialog-box-ssas.md)  
   
--   [Пометить как таблицу дат-диалоговое окно &#40;SSAS&#41;](mark-as-date-table-dialog-box-ssas.md)  
+-   [Диалоговое окно "пометить как таблицу дат" &#40;SSAS&#41;](mark-as-date-table-dialog-box-ssas.md)  
   
--   [Диалоговое окно "Изменение свойств таблицы" (службы SSAS)](edit-table-properties-dialog-box-ssas.md)  
+-   [Диалоговое окно «Изменение свойств таблицы» &#40;SSAS&#41;](edit-table-properties-dialog-box-ssas.md)  
   
--   [Перейдите в диалоговое окно &#40;SSAS&#41;](go-to-dialog-box-ssas.md)  
+-   [Диалоговое окно «Переход к» &#40;SSAS&#41;](go-to-dialog-box-ssas.md)  
   
--   [Вставить функцию диалоговое окно &#40;SSAS&#41;](insert-function-dialog-box-ssas.md)  
+-   [Диалоговое окно «Вставка функции» &#40;SSAS&#41;](insert-function-dialog-box-ssas.md)  
   
--   [Переместить таблицу-диалоговое окно &#40;SSAS&#41;](move-table-dialog-box-ssas.md)  
+-   [Диалоговое окно «Перемещение таблицы» &#40;SSAS&#41;](move-table-dialog-box-ssas.md)  
   
   

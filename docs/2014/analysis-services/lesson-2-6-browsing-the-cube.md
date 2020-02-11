@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 910bb7a425e62221dce932392e1aedfaa401a992
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078980"
 ---
 # <a name="browsing-the-cube"></a>Просмотр куба
@@ -30,18 +30,18 @@ ms.locfileid: "66078980"
   
 1.  В **конструкторе измерений** среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]откройте измерение «Продукт». Для этого дважды щелкните измерение **Продукт** в узле **Измерения** обозревателя решений.  
   
-2.  Нажмите кнопку **браузера** вкладку, чтобы отобразить **все** членом `Product Key` иерархии атрибута. На третьем занятии будет определена пользовательская иерархия для измерения «Продукты», позволяющая просматривать это измерение.  
+2.  Перейдите на вкладку **браузер** , чтобы отобразить элемент **все** в иерархии `Product Key` атрибута. На третьем занятии будет определена пользовательская иерархия для измерения «Продукты», позволяющая просматривать это измерение.  
   
-3.  Перейдите в **конструктор кубов** среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Чтобы сделать это, дважды щелкните куб **Учебник по службам Analysis Services** , который находится в узле **Кубы** в дереве обозревателя решений.  
+3.  Перейдите в **конструктор кубов** среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Для этого дважды щелкните куб **учебник по Analysis Services** в узле **Кубы** Обозреватель решений.  
   
 4.  Перейдите на вкладку **Браузер** и на панели инструментов конструктора нажмите значок **Повторное соединение** .  
   
      Левая панель конструктора отображает объекты куба учебника по службам [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . В правой части вкладки **Браузер** находятся две панели: верхняя — панель **Фильтр** , нижняя — панель **Данные** . На следующем занятии будет выполнен анализ с помощью средства просмотра кубов.  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- [Занятие 3. Изменение мер, атрибутов и иерархий](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
+ [Урок 3. Изменение мер, атрибутов и иерархий](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
   
-## <a name="see-also"></a>См. также  
- [Редактор запросов многомерных выражений (службы Analysis Services — многомерные данные)](mdx-query-editor-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>См. также:  
+ [Редактор запросов многомерных выражений &#40;Analysis Services многомерных данных&#41;](mdx-query-editor-analysis-services-multidimensional-data.md)  
   
   

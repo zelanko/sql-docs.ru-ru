@@ -23,10 +23,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 273e0343fc57af419a349725482047df08619cdd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62896326"
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>Разработка пользовательского интерфейса для компонента потока данных
@@ -35,7 +35,7 @@ ms.locfileid: "62896326"
  Если не создать для компонента пользовательский интерфейс, пользователи смогут настраивать компонент и его свойства с помощью расширенного редактора. Можно при необходимости убедиться, что расширенный редактор позволяет пользователям правильно изменять значения пользовательских свойств, с помощью свойств <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.TypeConverter%2A> и <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.UITypeEditor%2A> интерфейса <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100>. Дополнительные сведения см. в пункте "Создание пользовательских свойств" раздела [Методы времени разработки для компонента потока данных](design-time-methods-of-a-data-flow-component.md).  
   
 ## <a name="setting-the-uitypename-property"></a>Указание свойства UITypeName  
- Чтобы обеспечить пользовательский интерфейс, разработчик должен указать в качестве свойства <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.UITypeName%2A> атрибута <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> имя класса, реализующего интерфейс <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI>. Если это свойство задается компонентом, службы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] загружаются и вызывают пользовательский интерфейс при изменении компонента в конструкторе [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
+ Чтобы обеспечить пользовательский интерфейс, разработчик должен указать в качестве свойства <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.UITypeName%2A> атрибута <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> имя класса, реализующего интерфейс <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI>. Если это свойство задано компонентом, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] загружает и вызывает настраиваемый пользовательский интерфейс при редактировании компонента в [!INCLUDE[ssIS](../../../includes/ssis-md.md)] конструкторе.  
   
  Свойство <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.UITypeName%2A> представляет собой разделенную запятыми строку, указывающую полное имя типа. В следующем списке показаны по порядку элементы, указывающие тип.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62896326"
   
 -   Версия файла  
   
--   Культура  
+-   Язык и региональные параметры  
   
 -   Токен открытого ключа  
   
@@ -89,7 +89,7 @@ End Class
 ### <a name="using-the-services-of-the-ssis-designer"></a>Использование служб конструктора служб SSIS  
  Параметр `IServiceProvider` метода <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> предоставляет доступ к следующим службам конструктора служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
   
-|Служба|Описание|  
+|Служба|Description|  
 |-------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Design.IDtsClipboardService>|Используется для определения, был ли компонент создан в ходе операции копирования и вставки или вырезания и вставки.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionService>|Используется для доступа к существующим соединениям или для создания новых соединений в пакете.|  
@@ -281,9 +281,9 @@ Namespace Microsoft.Samples.SqlServer.Dts
 End Namespace  
 ```  
   
-![Значок служб Integration Services (маленький)](../../media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
+![Значок Integration Services (маленький)](../../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание пользовательского компонента потока данных](creating-a-custom-data-flow-component.md)  
   
   

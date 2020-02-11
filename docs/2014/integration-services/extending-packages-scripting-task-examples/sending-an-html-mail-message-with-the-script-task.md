@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 254f1fcb701fd11b22e35def915b09b537c4b33a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62894993"
 ---
 # <a name="sending-an-html-mail-message-with-the-script-task"></a>Отправка почтового сообщения в формате HTML с помощью задачи «Скрипт»
@@ -29,7 +29,7 @@ ms.locfileid: "62894993"
 > [!NOTE]  
 >  Если нужно создать задачу, которую будет удобно использовать в нескольких пакетах, рекомендуется начать разработку пользовательской задачи с этого образца задачи «Скрипт». Дополнительные сведения см. в разделе [Разработка пользовательской задачи](../extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Description  
  В следующем примере пространство имен `System.Net.Mail` используется для настройки и передачи почтового сообщения в формате HTML. Скрипт извлекает значения полей «Кому», «От кого», «Тема» и текст сообщения электронной почты из переменных пакета, использует их для создания нового сообщения `MailMessag`e и присваивает его свойству `IsBodyHtml` значение `True`. Затем сценарий получает имя SMTP-сервера из другой переменной пакета, инициализирует экземпляр клиента `System.Net.Mail.SmtpClient` и вызывает его метод `Send`, чтобы отправить сообщение в формате HTML. В образце функциональность отправки сообщений инкапсулируется в подпрограмме, которая может быть использована повторно в других скриптах.  
   
 #### <a name="to-configure-this-script-task-example-without-an-smtp-connection-manager"></a>Настройка этого примера задачи «Скрипт» без диспетчера соединений SMTP  
@@ -150,9 +150,9 @@ public void Main()
         }  
 ```  
   
-![Значок служб Integration Services (маленький)](../media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
+![Значок Integration Services (маленький)](../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Задача «Отправка почты»](../control-flow/send-mail-task.md)  
   
   

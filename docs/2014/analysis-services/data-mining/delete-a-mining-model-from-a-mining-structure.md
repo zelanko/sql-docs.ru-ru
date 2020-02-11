@@ -1,5 +1,5 @@
 ---
-title: Удаление модели интеллектуального анализа данных из структуры интеллектуального анализа данных | Документация Майкрософт
+title: Удалить модель интеллектуального анализа данных из структуры интеллектуального анализа данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7d4e32a40946eb9e513ad22cd837773187843151
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084783"
 ---
 # <a name="delete-a-mining-model-from-a-mining-structure"></a>удалить модель интеллектуального анализа данных из структуры интеллектуального анализа данных
@@ -47,9 +47,9 @@ ms.locfileid: "66084783"
   
 ### <a name="delete-a-mining-model-using-dmx"></a>Удаление модели интеллектуального анализа данных с помощью расширений интеллектуального анализа данных  
   
--   [DROP MINING MODEL (расширения интеллектуального анализа данных)](/sql/dmx/drop-mining-model-dmx)  
+-   [УДАЛЕНИЕ МОДЕЛИ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ &#40;DMX&#41;](/sql/dmx/drop-mining-model-dmx)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Задачи и инструкции по модели интеллектуального анализа данных](mining-model-tasks-and-how-tos.md)  
   
   

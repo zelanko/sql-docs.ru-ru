@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e2fd00fd96fe9b0bf7e1b605d935908970d0c1fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62875629"
 ---
 # <a name="restore-a-database-backup-under-the-simple-recovery-model-transact-sql"></a>Восстановление резервной копии базы данных в простой модели восстановления (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "62875629"
 > [!IMPORTANT]  
 >  При восстановлении базы данных из полной резервной копии системный администратор должен быть единственным пользователем, работающим с базой данных.  
   
-## <a name="prerequisites-and-recommendations"></a>Предварительные условия и рекомендации  
+## <a name="prerequisites-and-recommendations"></a>Предварительные требования и рекомендации  
   
 -   Чтобы восстановить зашифрованную базу данных, необходимо иметь доступ к сертификату или асимметричному ключу, который использовался для шифрования базы данных. Без сертификата или асимметричного ключа восстановить базу данных нельзя. Поэтому сертификат, используемый для шифрования ключа шифрования базы данных, должен храниться в течение всего времени, пока есть необходимость в резервной копии. Дополнительные сведения см. в статье [SQL Server Certificates and Asymmetric Keys](../security/sql-server-certificates-and-asymmetric-keys.md).  
   
@@ -67,7 +67,7 @@ ms.locfileid: "62875629"
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание  
+### <a name="description"></a>Description  
  В следующем примере восстанавливается полная резервная копия базы [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] с магнитной ленты.  
   
 ### <a name="example"></a>Пример  
@@ -80,7 +80,7 @@ RESTORE DATABASE AdventureWorks2012
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выполнение полного восстановления базы данных (модель полного восстановления)](complete-database-restores-full-recovery-model.md)   
  [Выполнение полного восстановления базы данных (простая модель восстановления)](complete-database-restores-simple-recovery-model.md)   
  [Полные резервные копии баз данных (SQL Server)](full-database-backups-sql-server.md)   

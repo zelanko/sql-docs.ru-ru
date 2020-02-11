@@ -1,5 +1,5 @@
 ---
-title: Изменить значение времени ожидания для запросов интеллектуального анализа данных | Документация Майкрософт
+title: Изменение значения времени ожидания для запросов интеллектуального анализа данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 640d07115e2a071bb5d57e87955c11670f4c38b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085893"
 ---
 # <a name="change-the-time-out-value-for-data-mining-queries"></a>изменить значение времени ожидания для запросов интеллектуального анализа данных
@@ -34,7 +34,7 @@ ms.locfileid: "66085893"
   
 3.  В текстовое поле **Время ожидания запроса** введите значение в секундах.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Задачи и инструкции по запросам интеллектуального анализа данных](data-mining-query-tasks-and-how-tos.md)   
  [Запросы интеллектуального анализа данных](data-mining-queries.md)  
   

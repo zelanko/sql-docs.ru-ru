@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0373952a28a901519d1d40e92750af3da72f94e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62868885"
 ---
-# <a name="mssqlserver3159"></a>MSSQLSERVER_3159
+# <a name="mssqlserver_3159"></a>MSSQLSERVER_3159
     
 ## <a name="details"></a>Сведения  
   
@@ -47,10 +47,10 @@ ms.locfileid: "62868885"
   
  Если не удается создать резервную копию заключительного фрагмента журнала, то следует использовать предложения WITH STOPAT или WITH REPLACE с инструкцией RESTORE.  
   
-## <a name="see-also"></a>См. также  
- [Восстановление базы данных SQL Server до определенного момента времени (модель полного восстановления)](../backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
- [Резервное копирование журнала транзакций при повреждении базы данных &#40;SQL Server&#41;](../backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)   
- [Создание резервной копии журнала транзакций (SQL Server)](../backup-restore/back-up-a-transaction-log-sql-server.md)   
+## <a name="see-also"></a>См. также:  
+ [Восстановление SQL Server базы данных на момент времени &#40;модель полного восстановления&#41;](../backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
+ [Создайте резервную копию журнала транзакций, если база данных повреждена &#40;SQL Server&#41;](../backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)   
+ [Создание резервной копии журнала транзакций &#40;SQL Server&#41;](../backup-restore/back-up-a-transaction-log-sql-server.md)   
  [Резервные копии заключительного фрагмента журнала (SQL Server)](../backup-restore/tail-log-backups-sql-server.md)  
   
   

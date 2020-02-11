@@ -1,5 +1,5 @@
 ---
-title: Урок 3. Изменение мер, атрибутов и иерархий | Документация Майкрософт
+title: Занятие 3. изменение мер, атрибутов и иерархий | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -11,24 +11,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c17ed69cb8f64e08023e2e1473ad2cbc6624e403
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078782"
 ---
 # <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>Урок 3. Изменение мер, атрибутов и иерархий
   После определения начального куба можно увеличить его полезность и удобство использования. Это можно сделать, добавив иерархии, поддерживающие навигацию и агрегаты на разных уровнях, применив форматы к конкретной мере и определив вычисления и связи.  
   
 > [!NOTE]  
->  Завершенные проекты для всех занятий в этом учебнике доступны через Интернет. Можно перейти вперед к любому занятию, используя в качестве отправной точки завершенный проект из предыдущего урока. [Щелкните здесь](https://go.microsoft.com/fwlink/?LinkID=221866) для загрузки образцов проектов, прилагаемых к этому учебнику.  
+>  Завершенные проекты для всех занятий в этом учебнике доступны через Интернет. Можно перейти вперед к любому занятию, используя в качестве отправной точки завершенный проект из предыдущего урока. [Щелкните здесь](https://go.microsoft.com/fwlink/?LinkID=221866) , чтобы скачать примеры проектов, которые можно найти в этом руководстве.  
   
  Это занятие содержит следующие задачи.  
   
  [Изменение мер](lesson-3-1-modifying-measures.md)  
  В этой задаче предстоит указать свойства форматирования мер валюты и процентов в кубе учебника по службам [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
- [Изменение измерения Customer](lesson-3-2-modifying-the-customer-dimension.md)  
+ [Изменение измерения «Заказчик»](lesson-3-2-modifying-the-customer-dimension.md)  
  В этой задаче определяется пользовательская иерархия, создаются именованные вычисления, изменяются атрибуты для использования именованных вычислений, группируются атрибуты и пользовательские иерархии в папки отображения.  
   
  [Изменение измерения Product](lesson-3-3-modifying-the-product-dimension.md)  
@@ -40,8 +40,8 @@ ms.locfileid: "66078782"
  [Просмотр развернутого куба](lesson-3-5-browsing-the-deployed-cube.md)  
  В этой задаче с помощью обозревателя в конструкторе кубов выполняется просмотр данных куба.  
   
-## <a name="see-also"></a>См. также  
- [Сценарий учебника по службам Analysis Services](analysis-services-tutorial-scenario.md)   
- [Многомерное моделирование (учебник по Adventure Works)](multidimensional-modeling-adventure-works-tutorial.md)  
+## <a name="see-also"></a>См. также:  
+ [Analysis Services сценарий учебника](analysis-services-tutorial-scenario.md)   
+ [&#40;учебника по Adventure Works в многомерном моделировании&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

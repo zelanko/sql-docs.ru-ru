@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd364a08781c00eaaf42eb0b1c15e7e5011ed432
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62868001"
 ---
-# <a name="mssqlserver4104"></a>MSSQLSERVER_4104
+# <a name="mssqlserver_4104"></a>MSSQLSERVER_4104
     
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|4104|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
@@ -121,7 +121,7 @@ ms.locfileid: "62868001"
   
 -   Используйте для идентификаторов уникальные, понятные имена. В результате будет проще читать и исправлять исходный текст, и снижается опасность неоднозначных ссылок на несколько сущностей.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [MSSQLSERVER_107](mssqlserver-107-database-engine-error.md)   
  [Идентификаторы баз данных](../databases/database-identifiers.md)  
   

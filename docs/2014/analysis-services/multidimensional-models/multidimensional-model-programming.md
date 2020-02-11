@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 668878e93d72c9c0b276b95ad090c8570f3fc936
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62725198"
 ---
 # <a name="multidimensional-model-programming"></a>Программирование многомерной модели
@@ -25,17 +25,17 @@ ms.locfileid: "62725198"
   
  [Разработка с использованием ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
   
- [Разработка объектов управления аналитикой (объекты AMO)](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
+ [Разработка с помощью объекты AMO &#40;объектов AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
   
  [Разработка с использованием XMLA в службах Analysis Services](../multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
- [Разработка на языке ASSL (язык ASSL)](scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ [Разработка с помощью Analysis Services языка сценариев &#40;ASSL&#41;](scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
   
  [Расширение функциональных возможностей OLAP](extending-olap/extending-olap-functionality.md)  
   
- [Поставщик OLE DB служб Analysis Services (службы Analysis Services — многомерные данные)](../dev-guide/analysis-services-ole-db-provider-analysis-services-multidimensional-data.md)  
+ [Поставщик Analysis Services OLE DB &#40;Analysis Services — многомерные данные&#41;](../dev-guide/analysis-services-ole-db-provider-analysis-services-multidimensional-data.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Программирование табличных моделей](../tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)   
  [Программирование интеллектуального анализа данных](../dev-guide/data-mining-programming.md)  
   

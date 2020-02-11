@@ -11,14 +11,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a6e1583dad869860bdd2f555a354850c7f7a1198
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62691960"
 ---
 # <a name="sparse-columns-support-odbc"></a>Поддержка разреженных столбцов (ODBC)
-  В этом разделе описывается поддержка разреженных столбцов драйвером ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Образец, демонстрирующий поддержку ODBC для разреженных столбцов, см. в разделе [вызов SQLColumns для таблицы с разреженными столбцами](../../native-client-odbc-how-to/call-sqlcolumns-on-a-table-with-sparse-columns.md). Дополнительные сведения о разреженных столбцах см. в разделе [Sparse Columns Support in SQL Server Native Client](../features/sparse-columns-support-in-sql-server-native-client.md).  
+  В этом разделе описывается поддержка разреженных столбцов драйвером ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Пример, демонстрирующий поддержку ODBC для разреженных столбцов, см. в разделе [вызов SQLColumns для таблицы с разреженными столбцами](../../native-client-odbc-how-to/call-sqlcolumns-on-a-table-with-sparse-columns.md). Дополнительные сведения о разреженных столбцах см. [в разделе Поддержка разреженных столбцов в SQL Server Native Client](../features/sparse-columns-support-in-sql-server-native-client.md).  
   
 ## <a name="statement-metadata"></a>Метаданные инструкции  
  Поле дескриптора в дескрипторе параметра приложения (APD) и атрибут инструкции SQL_SOPT_SS_NAME_SCOPE принимают дополнительные значения SQL_SS_NAME_SCOPE_EXTENDED и SQL_SS_NAME_SCOPE_SPARSE_COLUMN_SET. Эти значения определяют, какие столбцы включаются в возвращаемый [SQLColumns](../../native-client-odbc-api/sqlcolumns.md)результирующий набор. Дополнительные сведения об атрибуте SQL_SOPT_SS_NAME_SCOPE см. в разделе [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md).  
@@ -41,7 +41,7 @@ ms.locfileid: "62691960"
   
 -   [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)  
   
-## <a name="see-also"></a>См. также  
- [SQL Server Native Client (ODBC)](sql-server-native-client-odbc.md)  
+## <a name="see-also"></a>См. также:  
+ [SQL Server Native Client &#40;ODBC&#41;](sql-server-native-client-odbc.md)  
   
   

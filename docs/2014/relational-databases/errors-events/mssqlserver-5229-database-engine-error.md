@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2e3d2a420529778584b9e187550772a112d459c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62867968"
 ---
-# <a name="mssqlserver5229"></a>MSSQLSERVER_5229
+# <a name="mssqlserver_5229"></a>MSSQLSERVER_5229
     
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|5229|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC4_ANTIMATTER_IN_HEAP_OR_CLUSTERED_INDEX|  
-|Текст сообщения|Ошибка таблицы: Идентификатор объекта O_ID, Идентификатором индекса I_ID, Идентификатором секции PN_ID, Идентификатором единицы распределения A_ID (тип TYPE) содержит виртуальный столбец, но не является некластеризованным индексом.|  
+|Текст сообщения|Ошибка таблицы: идентификатор объекта O_ID, идентификатор индекса I_ID, идентификатор секции PN_ID, идентификатор единицы распределения A_ID (тип TYPE) содержит виртуальный столбец, однако не является некластеризованным индексом.|  
   
 ## <a name="explanation"></a>Объяснение  
  Куча или кластеризованный индекс содержит виртуальный столбец, хотя этого быть не должно.  

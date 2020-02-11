@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 21209de55bc010c2c85285f4cbed7305c6755f4c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914371"
 ---
-# <a name="mssqlserver2596"></a>MSSQLSERVER_2596
+# <a name="mssqlserver_2596"></a>MSSQLSERVER_2596
     
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|2596|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
@@ -38,7 +38,7 @@ ms.locfileid: "62914371"
 ## <a name="user-action"></a>Действие пользователя  
  При помощи инструкции ALTER DATABASE переведите базу данных в режим чтения и записи, а затем повторите команду DBCC.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)  
   
   

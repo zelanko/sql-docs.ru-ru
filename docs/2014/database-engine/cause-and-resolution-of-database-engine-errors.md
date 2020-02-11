@@ -1,5 +1,5 @@
 ---
-title: Причины и способы разрешения базы данных обработчика ошибок | Документация Майкрософт
+title: Причины и способы устранения ошибок ядро СУБД | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 3c52de15f5f5d06590b74182819804750a957e17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065188"
 ---
 # <a name="cause-and-resolution-of-database-engine-errors"></a>Причины ошибок компонента Database Engine и способы их устранения
@@ -23,10 +23,10 @@ ms.locfileid: "66065188"
 ## <a name="in-this-section"></a>в этом разделе  
  Подразделы по сообщениям об ошибках в этом разделе содержат объяснения сообщений об ошибке, возможные причины и действия по устранению проблемы.  
   
-## <a name="reference"></a>Ссылка  
- [Основные сведения об ошибках ядра СУБД](../relational-databases/native-client-ole-db-errors/errors.md)  
+## <a name="reference"></a>Справочник  
+ [Основные сведения об ошибках компонента Database Engine](../relational-databases/native-client-ole-db-errors/errors.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [События и ошибки компонента Database Engine](../relational-databases/errors-events/database-engine-events-and-errors.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Шаг 3. Проверка пакета занятии 6 | Документация Майкрософт
+title: Шаг 3. Проверка пакета, созданного на занятии 6 | Документы Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c69c75c9dff4bf8d0542dae71cddcf1a431ab063
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62890860"
 ---
-# <a name="step-3-testing-the-lesson-6-package"></a>Шаг 3. Тестирование пакета урока 6
+# <a name="step-3-testing-the-lesson-6-package"></a>Шаг 3. Проверка пакета, созданного на занятии 6
   Во время выполнения пакет получит значение для свойства Directory из параметра VarFolderName.  
   
  Чтобы убедиться, что пакет обновляет свойство Directory новым значением во время выполнения, выполните пакет. Поскольку в новый каталог были скопированы только три файла образцов данных, поток данных будет запущен только три раза, а не 14 раз в соответствии с количеством файлов в исходном каталоге.  
@@ -40,6 +40,6 @@ ms.locfileid: "62890860"
 2.  После окончания работы пакета выберите в меню Отладка пункт Остановить отладку.  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
- [Шаг 4. Развертывание пакета занятия 6](../integration-services/lesson-6-4-deploying-the-lesson-6-package.md)  
+ [Шаг 4. Развертывание пакета, созданного на занятии 6](../integration-services/lesson-6-4-deploying-the-lesson-6-package.md)  
   
   

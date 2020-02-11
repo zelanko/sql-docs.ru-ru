@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 52781de1cd4b6309f3ebeb9a2c59ae85b0b32dbd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754595"
 ---
 # <a name="pause-or-resume-a-database-mirroring-session-sql-server"></a>Приостановка или возобновление сеанса зеркального отображения базы данных (SQL Server)
@@ -30,7 +30,7 @@ ms.locfileid: "62754595"
   
 -   **Перед началом работы**  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Выполнение ReplaceThisText с помощью:**  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62754595"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Дальнейшие действия.**  [После приостановки или возобновления зеркального отображения базы данных](#FollowUp)  
+-   **Дальнейшие действия.**  [после приостановки или возобновления зеркального отображения базы данных](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
  В любой момент сеанс зеркального отображения базы данных можно приостановить, что дает возможность повышать производительность при возникновении узких мест. Затем в любое время приостановленный сеанс можно возобновить.  
@@ -108,7 +108,7 @@ ms.locfileid: "62754595"
     ALTER DATABASE AdventureWorks2012 SET PARTNER RESUME;  
     ```  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. После приостановки или возобновления зеркального отображения базы данных  
+##  <a name="FollowUp"></a>Дальнейшие действия. После приостановки или возобновления зеркального отображения базы данных  
   
 -   **После приостановки зеркального отображения базы данных**  
   
@@ -120,9 +120,9 @@ ms.locfileid: "62754595"
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
   
--   [Удаление зеркального отображения базы данных (SQL Server)](remove-database-mirroring-sql-server.md)  
+-   [&#40;SQL Server удаления зеркального отображения базы данных&#41;](remove-database-mirroring-sql-server.md)  
   
-## <a name="see-also"></a>См. также  
- [Зеркальное отображение базы данных (SQL Server)](database-mirroring-sql-server.md)  
+## <a name="see-also"></a>См. также:  
+ [SQL Server &#40;зеркального отображения базы данных&#41;](database-mirroring-sql-server.md)  
   
   

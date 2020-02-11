@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b70dbab14424335fe210f5a9b1ddbdbda4f90deb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62889317"
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>Службы Integration Services (SSIS) в кластере
@@ -29,7 +29,7 @@ ms.locfileid: "62889317"
 ## <a name="understanding-the-disadvantages-of-configuring-integration-services-as-a-cluster-resource"></a>Основные сведения о недостатках настройки службы Integration Services в качестве ресурса кластера  
  Далее приводятся потенциальные недостатки настройки службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] в качестве ресурса кластера.  
   
--   При отработке отказа не происходит повторного запуска выполняющихся пакетов. Восстановление после ошибок пакетов можно произвести, перезапустив пакеты с контрольных точек. Перезапуск с контрольных точек можно производить и без настройки службы в качестве ресурса кластера. Дополнительные сведения см. в разделе [Перезапуск пакетов с помощью контрольных точек](../packages/restart-packages-by-using-checkpoints.md).  
+-   При отработке отказа не происходит повторного запуска выполняющихся пакетов. Восстановление после ошибок пакетов можно произвести, перезапустив пакеты с контрольных точек. Перезапуск с контрольных точек можно производить и без настройки службы в качестве ресурса кластера. Дополнительные сведения см. в разделе [Restart Packages by Using Checkpoints](../packages/restart-packages-by-using-checkpoints.md).  
   
 -   Если служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] была настроена в группе ресурсов, отличной от группы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], то будет невозможно использовать среду [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] на клиентских компьютерах для управления пакетами, хранящимися в базе данных msdb. В этом двухшаговом сценарии служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] не может делегировать учетные данные.  
   

@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 889e0c5a54477a1532aa9ec2760fad890a671618
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755184"
 ---
 # <a name="sql-server-monitor-overview"></a>Обзор монитора SQL Server
@@ -50,7 +50,7 @@ ms.locfileid: "62755184"
  **Действие**  
  Содержит контекстное меню узла, выбранного в дереве навигации.  
   
- **Перейти**  
+ **GO**  
  Содержит перечень компонентов мониторинга:  
   
 -   Зеркальное отображение базы данных  
@@ -61,7 +61,7 @@ ms.locfileid: "62755184"
   
 -   [Запуск монитора зеркального отображения баз данных (среда SQL Server Management Studio)](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>См. также  
- [Мониторинг зеркального отображения базы данных (SQL Server)](../database-mirroring/database-mirroring-sql-server.md)  
+## <a name="see-also"></a>См. также:  
+ [Наблюдение за зеркальным отображением базы данных (SQL Server)](../database-mirroring/database-mirroring-sql-server.md)  
   
   

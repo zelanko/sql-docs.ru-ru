@@ -1,5 +1,5 @@
 ---
-title: Предоставление разрешений администратора сервера (службы Analysis Services) | Документация Майкрософт
+title: Предоставление разрешений администратора сервера (Analysis Services) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ac145f4f330b530cc47f4f055a49ad3fdc0063b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079978"
 ---
 # <a name="grant-server-administrator-permissions-analysis-services"></a>Предоставление разрешений администратора сервера (службы Analysis Services)
@@ -31,16 +31,16 @@ ms.locfileid: "66079978"
   
 2.  На панели **Выбор страницы** щелкните **Безопасность** и нажмите кнопку **Добавить** , расположенную в нижней части страницы, чтобы добавить к роли сервера одного или нескольких пользователей или групп Windows.  
   
-     ![Добавить пользователей диалоговое окно в среде management studio](../media/ssas-serveradminadd.png "добавить пользователей диалоговое окно в среде management studio")  
+     ![Диалоговое окно «Добавление пользователей» в среде Management Studio](../media/ssas-serveradminadd.png "Диалоговое окно «Добавление пользователей» в среде Management Studio")  
   
  Во время установки программа установки SQL Server требует указания по крайней мере одной учетной записи пользователя в качестве администратора служб Analysis Services.  
   
- По умолчанию члены локальной группы администраторов автоматически получают права администраторов в службе Analysis Server. Хотя локальной группе явно не предоставлено членство в роли администратора сервера [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , локальные администраторы могут создавать базы данных, создавать пользователей и разрешения и выполнять другие разрешенные системным администраторам задачи. Это настраивается. Он определяется `BuiltinAdminsAreServerAdmins` свойства сервера, которому присвоено значение **true** по умолчанию. Это свойство вы можете изменить в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Дополнительные сведения см. в разделе [Security Properties](../server-properties/security-properties.md).  
+ По умолчанию члены локальной группы администраторов автоматически получают права администраторов в службе Analysis Server. Хотя локальной группе явно не предоставлено членство в роли администратора сервера [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , локальные администраторы могут создавать базы данных, создавать пользователей и разрешения и выполнять другие разрешенные системным администраторам задачи. Это настраивается. Он определяется свойством `BuiltinAdminsAreServerAdmins` сервера, по умолчанию для которого задано **значение true** . Это свойство вы можете изменить в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Дополнительные сведения см. в разделе [Security Properties](../server-properties/security-properties.md).  
   
  Ролями сервера вы можете также управлять с помощью объектов AMO. Дополнительные сведения см. в разделе [Разработка объектов управления аналитикой (объекты AMO)](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo).  
   
-## <a name="see-also"></a>См. также  
- [Предоставление доступа к объектам и операциям (службы Analysis Services)](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)   
- [Роли безопасности (службы Analysis Services — многомерные данные)](../multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>См. также:  
+ [Авторизация доступа к объектам и операциям &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)   
+ [Роли безопасности &#40;Analysis Services многомерных данных&#41;](../multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
   
   

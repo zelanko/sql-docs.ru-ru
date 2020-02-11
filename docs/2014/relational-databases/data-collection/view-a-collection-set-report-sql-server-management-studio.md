@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 898dd309dae82818b60332b29c14f785c18b173b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873065"
 ---
 # <a name="view-a-collection-set-report-sql-server-management-studio"></a>Просмотр отчета о наборе элементов сбора (среда SQL Server Management Studio)
@@ -54,7 +54,7 @@ ms.locfileid: "62873065"
  **Длительность**  
  Выберите временной диапазон для включения в отчет. Значение по умолчанию составляет 240 минут. Возможные значения для выбора составляют 15 мин, 60 мин, 240 мин (4 часа), 720 мин (12 часов) и 1440 мин (24 часа).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Сбор данных](data-collection.md)   
  [Пользовательские отчеты в среде Management Studio](../../ssms/object/custom-reports-in-management-studio.md)   
  [Настройка хранилища данных управления (среда SQL Server Management Studio)](configure-the-management-data-warehouse-sql-server-management-studio.md)  

@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: aa0e9f6eb8e2a02bb92db50eaf11dde60d8e8f12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913289"
 ---
-# <a name="mssqlserver7932"></a>MSSQLSERVER_7932
+# <a name="mssqlserver_7932"></a>MSSQLSERVER_7932
     
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|7932|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC2_FS_ROWSET_IN_WRONG_FILEGROUP|  
-|Текст сообщения|Ошибка таблицы: Каталог файловых потоков для объекта с Идентификатором O_ID, Идентификатором индекса I_ID, Идентификатором секции PN_ID находится в файловой группе FG_ID1, но должен находиться в файловой группе FG_ID2.|  
+|Текст сообщения|Ошибка в таблице. Каталог FILESTREAM с идентификатором F_ID для объекта с идентификатором O_ID, идентификатором индекса I_ID, идентификатором секции PN_ID находится в файловой группе FG_ID1, хотя должен быть расположен в файловой группе FG_ID2.|  
   
 ## <a name="explanation"></a>Объяснение  
  При выполнении команды DBCC CHECKDB хранилище FILESTREAM для указанного объекта было обнаружено в неверной файловой группе. Причиной может быть повреждение метаданных объекта.  

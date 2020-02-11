@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e68bb7c70d08fb07d3079436fafe5fd61ae104f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097921"
 ---
-# <a name="setvirtualdirectory-method-wmi-msreportserverconfigurationsetting"></a>Метод SetVirtualDirectory (WMI MSReportServer_ConfigurationSetting)
+# <a name="setvirtualdirectory-method-wmi-msreportserver_configurationsetting"></a>Метод SetVirtualDirectory (WMI MSReportServer_ConfigurationSetting)
   Задает имя виртуального каталога для указанного приложения.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -42,19 +42,19 @@ public void SetVirtualDirectory(string Application, string VirtualDirectory,
  *VirtualDirectory*  
  Имя виртуального каталога.  
   
- *lcid*  
+ *намного*  
  Идентификатор локали для виртуального каталога.  
   
  *Ошибка*  
  [out] Описания возникших ошибок.  
   
- *HRESULT*  
+ *СОСТАВ*  
  [out] Значение, которое указывает, окончился ли вызов успехом или сбоем.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение *HRESULT* , являющееся признаком успешного или неуспешного завершение вызова метода. Значение 0 означает, что вызов метода завершился успешно; код ошибки означает, что произошла ошибка.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Для приложения можно задать только одно имя виртуального каталога для всех зарезервированных URL-адресов.  
   
  Параметр VirtualDirectory должен соответствовать контексту именования для виртуальных каталогов. Параметр VirtualDirectory не должен быть пустой строкой.  
@@ -62,7 +62,7 @@ public void SetVirtualDirectory(string Application, string VirtualDirectory,
  Обновляет значение элемента \Configuration\URLReservations\Application\VirtualDirectory. Выполняется успешно, даже еще не созданы зарезервированные URL-адреса.  
   
 ## <a name="requirements"></a>Требования  
- **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Пространство имен:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

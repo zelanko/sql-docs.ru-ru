@@ -1,5 +1,5 @@
 ---
-title: (SSIS) проекты служб Integration Services | Документация Майкрософт
+title: Проекты Integration Services (SSIS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,16 +17,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 26ab429a5f2abeda9a811e85dc5113121380e999
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62892527"
 ---
 # <a name="integration-services-ssis-projects"></a>Проекты служб Integration Services (SSIS)
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] включает среду [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , предназначенную для разработки пакетов [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]предоставляет [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] для разработки [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] пакетов.  
   
- При развертывании пакетов в базу данных [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или хранилище пакетов [!INCLUDE[ssIS](../includes/ssis-md.md)] для управления пакетами используются службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Служба [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] доступна только в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Дополнительные сведения о службе см. в разделе [Службы Integration Services (SSIS)](service/integration-services-service-ssis-service.md). Дополнительные сведения о развертывании пакетов см. в разделе [развертывания пакета &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md).  
+ При развертывании пакетов в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] базе данных или хранилище [!INCLUDE[ssIS](../includes/ssis-md.md)] пакетов для управления пакетами используется [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] служба. Служба [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] доступна только в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Дополнительные сведения о службе см. в разделе [Службы Integration Services (SSIS)](service/integration-services-service-ssis-service.md). Дополнительные сведения о развертывании пакетов см. в разделе [Развертывание пакетов &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md).  
   
  При развертывании проектов служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на сервер [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] для управления проектами используются представления и хранимые процедуры Transact-SQL в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Дополнительные сведения о развертывании проектов см. в разделе [Развертывание проектов и пакетов](packages/deploy-integration-services-ssis-projects-and-packages.md). Дополнительные сведения о сервере [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] см. в разделе [Службы Integration Services (SSIS)](catalog/integration-services-ssis-server-and-catalog.md).  
   
@@ -37,7 +37,7 @@ ms.locfileid: "62892527"
   
  В среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]в проекте служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] хранятся и группируются файлы, связанные с пакетом. Например, проект содержит файлы, необходимые для создания специального извлечения, преобразования и загрузки решения ETL.  
   
- Прежде чем приступать к созданию проекта служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , необходимо ознакомиться c основным содержимым проекта этого типа. После знакомства с содержимым проекта можно приступать к созданию и работе с проектом служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
+ Прежде чем приступать к созданию проекта служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , необходимо ознакомиться c основным содержимым проекта этого типа. После знакомства с содержимым проекта можно приступать к созданию и работе с проектом служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
 ### <a name="folders-in-integration-services-projects"></a>Папки в проектах служб Integration Services  
  На следующей диаграмме показаны папки проекта служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -46,9 +46,9 @@ ms.locfileid: "62892527"
   
  В следующей таблице описаны папки, появляющиеся в проекте служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
-|Папка|Описание|  
+|Папка|Description|  
 |------------|-----------------|  
-|[!INCLUDE[ssIS](../includes/ssis-md.md)] Пакеты|Содержит пакеты. Дополнительные сведения см. в разделе [Пакеты служб Integration Services (SSIS)](../../2014/integration-services/integration-services-ssis-packages.md).|  
+|[!INCLUDE[ssIS](../includes/ssis-md.md)]Пакеты|Содержит пакеты. Дополнительные сведения см. в разделе [Пакеты служб Integration Services (SSIS)](../../2014/integration-services/integration-services-ssis-packages.md).|  
 |Разное|Содержит файлы, не являющиеся файлами пакетов.|  
   
 ### <a name="files-in-integration-services-projects"></a>Файлы в проектах служб Integration Services  

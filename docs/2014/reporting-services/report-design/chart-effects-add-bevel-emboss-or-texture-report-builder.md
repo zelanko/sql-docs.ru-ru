@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b25d12646a2662cb5c6ab8f2a9b510aa02d7c49b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106280"
 ---
 # <a name="add-bevel-emboss-and-texture-styles-to-a-chart-report-builder-and-ssrs"></a>Добавление в диаграмму стилей рельефа, приподнятости и текстуры (построитель отчетов и службы SSRS)
@@ -24,7 +24,7 @@ ms.locfileid: "66106280"
   
  Если используется какой-либо вариант линейчатой диаграммы или гистограммы, то можно применить стили текстуры, такие как оформление в виде цилиндра, клина и переход от светлого к темному, к отдельным линейкам или столбцам.  
   
- Кроме этих стилей рисования можно добавлять границы и тени ко многим элементам диаграммы для создания иллюзии глубины. Дополнительные сведения о других способах форматирования диаграммы см. в разделе [Форматирование диаграммы (построитель отчетов и службы SSRS)](formatting-a-chart-report-builder-and-ssrs.md).  
+ Кроме этих стилей рисования можно добавлять границы и тени ко многим элементам диаграммы для создания иллюзии глубины. Дополнительные сведения о других способах форматирования диаграммы см. в разделе [Formatting a Chart &#40;Report Builder and SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -59,7 +59,7 @@ ms.locfileid: "66106280"
   
  ![Линейчатая диаграмма с эффектом LightToDark](../media/rs-bardrawingeffects-lighttodark.gif "Линейчатая диаграмма с эффектом LightToDark")  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Линейчатые диаграммы (построитель отчетов и службы SSRS)](charts-report-builder-and-ssrs.md)   
  [Гистограммы (построитель отчетов и службы SSRS)](column-charts-report-builder-and-ssrs.md)   
  [Круговые диаграммы (построитель отчетов и службы SSRS)](pie-charts-report-builder-and-ssrs.md)   

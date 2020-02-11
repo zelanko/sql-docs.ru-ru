@@ -1,5 +1,5 @@
 ---
-title: Пример Указание директивы ELEMENTXSINIL | Документация Майкрософт
+title: Пример. Указание директивы ELEMENTXSINIL | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1a23baa7791aea37c4c90077c21391001ddc538a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62704813"
 ---
-# <a name="example-specifying-the-elementxsinil-directive"></a>Пример Определение директивы ELEMENTXSINIL
+# <a name="example-specifying-the-elementxsinil-directive"></a>Пример. Задание директивы ELEMENTXSINIL
   При указании директивы ELEMENT для извлечения элементного XML, если столбец имеет значение NULL, соответствующий элемент не будет сформирован при режиме EXPLICIT. Можно указать директиву ELEMENTXSINIL, чтобы создать элементы со значениями NULL для элементов, у которых атрибут `xsi:nil` установлен в значение TRUE.  
   
  Следующий запрос создает XML, включающий адрес работника. Для столбцов `AddressLine2` и `City` в именах столбцов указана директива `ELEMENTXSINIL` . Это позволяет создать элемент для значений NULL в столбцах `AddressLine2` и `City` набора строк.  
@@ -77,7 +77,7 @@ FOR XML EXPLICIT;
   
  `...`  
   
-## <a name="see-also"></a>См. также  
- [Использование режима EXPLICIT совместно с предложением FOR XML](use-explicit-mode-with-for-xml.md)  
+## <a name="see-also"></a>См. также:  
+ [Использование режима EXPLICIT с предложением FOR XML](use-explicit-mode-with-for-xml.md)  
   
   

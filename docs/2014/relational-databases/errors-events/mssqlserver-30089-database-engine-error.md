@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f452da206afd91c2db49d32600c34397ef7b2609
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62868779"
 ---
-# <a name="mssqlserver30089"></a>MSSQLSERVER_30089
+# <a name="mssqlserver_30089"></a>MSSQLSERVER_30089
     
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|30089|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
@@ -42,9 +42,9 @@ ms.locfileid: "62868779"
   
 2.  Просмотрите журнал сканирования, чтобы выявить какой-либо из новых документов, для которого не удалось провести полнотекстовую индексацию, и удалите его.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_help_fulltext_system_components &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql)   
- [Настройка и управление средством разбиения на слова и парадигматические модули для поиска](../search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
+ [Настройка средств разбиения по словам и парадигматические модули для поиска и управление ими](../search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Настройка и управление фильтрами для поиска](../search/configure-and-manage-filters-for-search.md)  
   
   

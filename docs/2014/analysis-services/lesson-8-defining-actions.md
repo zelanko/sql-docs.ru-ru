@@ -1,5 +1,5 @@
 ---
-title: Урок 8. Определение действий | Документация Майкрософт
+title: Занятие 8. Определение действий | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8293bb8d1f0465d09b296cbd18702b569f073766
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078230"
 ---
-# <a name="lesson-8-defining-actions"></a>Урок 8. Определение действий
+# <a name="lesson-8-defining-actions"></a>Занятие 8. Определение действий
   На этом занятии определяются действия в проекте служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Действие представляет собой инструкцию многомерных выражений, хранимую в службах [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , которая может быть включена в клиентские приложения и выполнена пользователем.  
   
 > [!NOTE]  
->  Завершенные проекты для всех занятий в этом учебнике доступны через Интернет. Можно перейти вперед к любому занятию, используя в качестве отправной точки завершенный проект из предыдущего урока. [Щелкните здесь](https://go.microsoft.com/fwlink/?LinkID=221866) для загрузки образцов проектов, прилагаемых к этому учебнику.  
+>  Завершенные проекты для всех занятий в этом учебнике доступны через Интернет. Можно перейти вперед к любому занятию, используя в качестве отправной точки завершенный проект из предыдущего урока. [Щелкните здесь](https://go.microsoft.com/fwlink/?LinkID=221866) , чтобы скачать примеры проектов, которые можно найти в этом руководстве.  
   
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] поддерживают типы операций, описанные в таблице ниже.  
+ 
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] поддерживают типы операций, описанные в таблице ниже.  
   
 |||  
 |-|-|  
@@ -32,12 +33,12 @@ ms.locfileid: "66078230"
 |Детализация|Возвращает инструкцию детализации в качестве выражения, которое клиент выполняет, чтобы вернуть набор строк|  
 |Html|Выполняет HTML-скрипт в браузере Интернета.|  
 |Частный|Выполняет операцию с использованием интерфейса, отличного от приведенных в данной таблице.|  
-|Отчет|Направляет серверу отчетов параметризованный запрос на основе URL-адресов и возвращает клиентскому приложению отчет.|  
+|Report|Направляет серверу отчетов параметризованный запрос на основе URL-адресов и возвращает клиентскому приложению отчет.|  
 |Набор строк|Возвращает клиентскому приложению набор строк.|  
-|.|Выполняет команду OLE DB.|  
-|URL|Отображает динамическую веб-страницу в браузереБраузер Интернета.|  
+|Инструкция|Выполняет команду OLE DB.|  
+|URL-адрес|Отображает динамическую веб-страницу в браузереБраузер Интернета.|  
   
- Действия позволяют пользователям запускать приложение или выполнять другие шаги в контексте выбранного элемента. Дополнительные сведения см. в разделе [Действия (службы Analysis Services — многомерные данные)](multidimensional-models/actions-analysis-services-multidimensional-data.md), [Действия в многомерных моделях](multidimensional-models/actions-in-multidimensional-models.md).  
+ Действия позволяют пользователям запускать приложение или выполнять другие шаги в контексте выбранного элемента. Дополнительные сведения см. в разделе [Действия (службы Analysis Services — многомерные данные)](multidimensional-models/actions-analysis-services-multidimensional-data.md), [Действия в многомерных моделях](multidimensional-models/actions-in-multidimensional-models.md)  
   
 > [!NOTE]  
 >  Примеры действий см. на вкладке «Шаблоны» на панели «Средства вычисления» и в примерах, содержащихся в образце хранилища данных [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW. Дополнительные сведения об установке этой базы данных см. в разделе [Установка образцов данных и проектов для учебника по многомерному моделированию в службах Analysis Services](install-sample-data-and-projects.md).  
@@ -50,10 +51,10 @@ ms.locfileid: "66078230"
 ## <a name="next-lesson"></a>Следующее занятие  
  [Занятие 9. Определение перспектив и переводов](lesson-9-defining-perspectives-and-translations.md)  
   
-## <a name="see-also"></a>См. также  
- [Сценарий учебника по службам Analysis Services](analysis-services-tutorial-scenario.md)   
- [Многомерное моделирование &#40;руководством по Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
- [Действия &#40;службы Analysis Services — многомерные данные&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>См. также:  
+ [Analysis Services сценарий учебника](analysis-services-tutorial-scenario.md)   
+ [&#40;учебника по Adventure Works в многомерном моделировании&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
+ [Действия &#40;Analysis Services многомерных данных&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
  [Действия в многомерных моделях](multidimensional-models/actions-in-multidimensional-models.md)  
   
   

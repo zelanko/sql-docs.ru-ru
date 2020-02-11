@@ -1,5 +1,5 @@
 ---
-title: Нерекомендуемые служб Analysis Services в SQL Server 2014 | Документация Майкрософт
+title: Устаревшие функции Analysis Services в SQL Server 2014 | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 04d12aab677e38d17d4e869e6885eb470854d824
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081921"
 ---
 # <a name="deprecated-analysis-services-features-in-sql-server-2014"></a>Устаревшие функции служб Analysis Services в SQL Server 2014
@@ -28,12 +28,12 @@ ms.locfileid: "66081921"
 ## <a name="features-not-supported-in-the-next-version-of-sql-server"></a>Функции, не поддерживаемые в следующей версии SQL Server  
  Следующие функции компонента [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] не будут поддерживаться в следующей версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Не используйте их при работе над новыми приложениями и как можно скорее измените приложения, в которых они в настоящее время используются.  
   
-|Category|Устаревшая функция|Замена|  
+|Категория|Устаревшая функция|Замена|  
 |--------------|------------------------|-----------------|  
 |Функция многомерных выражений|CalculationPassValue, функция|Нет. Механизм OLAP управляет этапом вычисления. Эта функция больше не нужна.|  
 |Функция многомерных выражений|CalculationCurrentPass, функция|Нет. Механизм OLAP управляет этапом вычисления. Эта функция больше не нужна.|  
 |Многомерные выражения.|Подсказка оптимизатора запросов NON_EMPTY_BEHAVIOR была включена по умолчанию.|Подсказка оптимизатора запросов NON_EMPTY_BEHAVIOR будет отключена по умолчанию в будущем выпуске. При неправильном использовании подсказка оптимизации многомерного выражения может выдавать неверные результаты.|  
-|Другое|Внутреннее свойство ячейки CELL_EVALUATION_LIST|Первоначально предоставлялся список вычисляемых формул, применимых к ячейке. В данном выпуске Analysis Services это свойство пусто.  Порядок вычисления теперь указывается в скрипте многомерных выражений. Дополнительные сведения см. в разделе [основные сведения о порядке этапов и порядке вычисления &#40;многомерных Выражений&#41;](multidimensional-models/mdx/mdx-data-manipulation-understanding-pass-order-and-solve-order.md)|  
+|Другие|Внутреннее свойство ячейки CELL_EVALUATION_LIST|Первоначально предоставлялся список вычисляемых формул, применимых к ячейке. В данном выпуске Analysis Services это свойство пусто.  Порядок вычисления теперь указывается в скрипте многомерных выражений. Дополнительные сведения см. в разделе [Основные сведения о порядке этапов и порядке вычисления &#40;многомерных выражениях&#41;](multidimensional-models/mdx/mdx-data-manipulation-understanding-pass-order-and-solve-order.md)|  
 |Объекты|Сборки COM|Использование сборок COM может представлять угрозу безопасности. Поддержка сборок COM будет удалена в будущем выпуске.|  
   
 ## <a name="features-not-supported-in-a-future-version-of-sql-server"></a>Функции, не поддерживаемые в будущей версии SQL Server  
@@ -41,14 +41,14 @@ ms.locfileid: "66081921"
   
 |Категория|Устаревшая функция|Замена|  
 |--------------|------------------------|-----------------|  
-|Многомерные модели|Удаленные секции|Нет. Вместо этого используйте локальные секции. См. в разделе [Создание и управление ими локальной секции &#40;служб Analysis Services&#41; ](multidimensional-models/create-and-manage-a-local-partition-analysis-services.md) Дополнительные сведения.|  
+|Многомерные модели|Удаленные секции|Нет. Вместо этого используйте локальные секции. Дополнительные сведения см. [в разделе Создание локальной секции и управление ей &#40;Analysis Services&#41;](multidimensional-models/create-and-manage-a-local-partition-analysis-services.md) .|  
 |Многомерные модели|Удаленные связанные группы мер|Удаленная связанная группа мер ― это связанная группа мер, которая использует источник данных на удаленном сервере. Возможность связанной группы мер использовать удаленный источник данных будет планово выведена из эксплуатации.<br /><br /> Замены для этой функции нет. Вместо нее рекомендуется использовать локальные связанные группы мер. Подробнее см. в разделе [Linked Measure Groups](multidimensional-models/linked-measure-groups.md) .|  
-|Многомерные модели|Многомерная обратная запись|Нет. Если нужна возможность обратной записи, используйте обратную запись секции. См. в разделе [Set Partition Writeback](multidimensional-models/set-partition-writeback.md) Дополнительные сведения.|  
+|Многомерные модели|Многомерная обратная запись|Нет. Если нужна возможность обратной записи, используйте обратную запись секции. Дополнительные сведения см. в разделе [Set Partition обратной записи](multidimensional-models/set-partition-writeback.md) .|  
 |Многомерные модели|Связанные измерения|Нет. Можно скопировать измерения в другие модели, а не устанавливать связь с измерением из другой модели.|  
 |Многомерное выражение|Свойство Non_Empty_Behavior|Нет. При создании вычисляемого элемента ошибочное задание этого свойства увеличивает вероятность возврата неверных результатов. В последних оптимизациях ядра OLAP улучшены операции с наборами разреженных данных, что делает это свойство менее релевантным.|  
   
-## <a name="see-also"></a>См. также  
- [Analysis Services Backward Compatibility](analysis-services-backward-compatibility.md)   
- [Функции служб неподдерживаемые Analysis Services в SQL Server 2014](discontinued-analysis-services-functionality-in-sql-server-2014.md)  
+## <a name="see-also"></a>См. также:  
+ [Analysis Services обратной совместимости](analysis-services-backward-compatibility.md)   
+ [Неподдерживаемые функции служб Analysis Services в SQL Server 2014](discontinued-analysis-services-functionality-in-sql-server-2014.md)  
   
   

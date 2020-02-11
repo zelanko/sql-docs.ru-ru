@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 663ef21dc9c4d0f3698ae468637fe0a8fd55a16e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078899"
 ---
 # <a name="modifying-measures"></a>Изменение мер
@@ -28,7 +28,7 @@ ms.locfileid: "66078899"
   
      Если окно свойств остается постоянно открытым, изменять свойства нескольких элементов куба проще.  
   
-3.  В окне свойств щелкните список **FormatString** и введите **#,#** .  
+3.  В окне свойств щелкните список **FormatString** и введите **#,#**.  
   
 4.  На панели инструментов вкладки **Структура куба** нажмите значок **Показывать сетку мер** слева.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66078899"
   
 5.  Выберите следующие меры. Можно выбрать несколько мер. Для этого щелкните каждую из них, удерживая нажатой клавишу CTRL.  
   
-    -   **Unit Price**  
+    -   **Цена за единицу**  
   
     -   **Extended Amount**  
   
@@ -44,11 +44,11 @@ ms.locfileid: "66078899"
   
     -   **Product Standard Cost**  
   
-    -   **Total Product Cost**  
+    -   **общая себестоимость продукции**  
   
     -   **Объем продаж**  
   
-    -   **Tax Amt**  
+    -   **сумма налогов**  
   
     -   **Freight**  
   
@@ -56,9 +56,9 @@ ms.locfileid: "66078899"
   
 7.  В раскрывающемся списке в верхней части окна свойств (под строкой названия) выберите меру **Процент скидки от стоимости единицы товара**, а затем выберите значение **Процент** в списке **FormatString** .  
   
-8.  В окне «Свойства» измените **имя** свойство для **Unit Price Discount Pct** меру `Unit Price Discount Percentage`.  
+8.  В окно свойств измените свойство **Name** для меры **процент скидки цены за единицу** на `Unit Price Discount Percentage`.  
   
-9. В **меры** панели щелкните **Tax Amt** и измените имя меры на `Tax Amount`.  
+9. На панели **меры** щелкните **налоги AMT** и измените имя этой меры на `Tax Amount`.  
   
 10. В окне свойств нажмите значок **Автоматически скрыть** , чтобы скрыть окно свойств, а затем нажмите кнопку **Показывать дерево мер** на вкладке панели инструментов **Структура куба** .  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66078899"
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
  [Изменение измерения «Заказчик»](lesson-3-2-modifying-the-customer-dimension.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Определение измерений базы данных](multidimensional-models/define-database-dimensions.md)   
  [Настройка свойств мер](multidimensional-models/configure-measure-properties.md)  
   

@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 50069ad5b96914d98f3d08e795467c2693fabe87
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874022"
 ---
 # <a name="impersonation-and-credentials-for-connections"></a>Олицетворение и учетные данные для соединений
@@ -33,7 +33,7 @@ ms.locfileid: "62874022"
   
  В некоторых случаях бывает необходимо олицетворить вызывающего при помощи свойства `SqlContext.WindowsIdentity`, а не запускать его, как учетную запись службы. Экземпляр `WindowsIdentity` представляет идентификатор клиента, запустившего вызывающий код, и его можно использовать только если клиент использовал проверку подлинности Windows. Получив экземпляр `WindowsIdentity`, можно вызвать метод `Impersonate`, чтобы изменить токен безопасности потока, а затем открыть соединения ADO.NET от имени клиента.  
   
- После вызова SQLContext.WindowsIdentity.Impersonate, не может получить доступ к локальным данным и не может получить доступ к системных данных. Для доступа к данным, необходимо вызвать WindowsImpersonationContext.Undo.  
+ После вызова SQLContext. WindowsIdentity. IMPERSONATE вы не сможете получить доступ к локальным данным, и вы не сможете получить доступ к системным данным. Чтобы снова получить доступ к данным, необходимо вызвать метод WindowsImpersonationContext. Undo.  
   
  В следующем примере показано, как выполнять олицетворение вызывающего объекта с помощью свойства `SqlContext.WindowsIdentity`.  
   
@@ -71,11 +71,11 @@ catch
 ```  
   
 > [!NOTE]  
->  Сведения об изменениях поведения при олицетворении см. в разделе [критические изменения в функциях ядра СУБД в SQL Server 2014](../../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
+>  Сведения об изменениях в работе олицетворения см. в разделе [критические изменения в функциях ядро СУБД в SQL Server 2014](../../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
   
- Более того, если был получен экземпляр идентификатора [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows, то по умолчанию нельзя перенести этот экземпляр на другой компьютер; по умолчанию инфраструктура безопасности Windows не позволяет делать этого. Однако существует механизм под названием «делегирование», который позволяет распространять идентификаторы Windows на несколько доверенных компьютеров. Дополнительные сведения о делегировании в статье TechNet «[передачу протокола Kerberos и ограниченное делегирование](https://go.microsoft.com/fwlink/?LinkId=50419)«.  
+ Более того, если был получен экземпляр идентификатора [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows, то по умолчанию нельзя перенести этот экземпляр на другой компьютер; по умолчанию инфраструктура безопасности Windows не позволяет делать этого. Однако существует механизм под названием «делегирование», который позволяет распространять идентификаторы Windows на несколько доверенных компьютеров. Дополнительные сведения о делегировании см. в статье TechNet "[Переход по протоколу Kerberos и ограниченное делегирование](https://go.microsoft.com/fwlink/?LinkId=50419)".  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект SqlContext](../../clr-integration-data-access-in-process-ado-net/sqlcontext-object.md)  
   
   

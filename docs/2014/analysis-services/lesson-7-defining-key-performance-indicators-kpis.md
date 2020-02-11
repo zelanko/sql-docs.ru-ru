@@ -1,5 +1,5 @@
 ---
-title: 'Занятие 7: Определение ключевых показателей (эффективности KPI) | Документация Майкрософт'
+title: Занятие 7. определение ключевых показателей эффективности (KPI) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,17 +11,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 51fe8dc2a7ec38c9e2a71d9b2678e7c3e4ba6f95
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078290"
 ---
-# <a name="lesson-7-defining-key-performance-indicators-kpis"></a>Занятие 7: Определение ключевых показателей эффективности
-  На этом занятии обсуждается определение ключевых показателей эффективности в проекте служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Ключевые показатели эффективности предоставляют среду для определения вычислений по мерам деятельности организации на стороне сервера, а также приводят к единому виду отображения результатов. Ключевые показатели эффективности могут отображаться в отчетах, на порталах и инструментальных панелях, через API-интерфейсы доступа к данным, а также с использованием средств [!INCLUDE[msCoName](../includes/msconame-md.md)] и средств сторонних производителей. Ключевые показатели эффективности представляют собой упакованные в метаданные обычные меры и иные многомерные выражения. Дополнительные сведения см. в разделе [Ключевые показатели эффективности в многомерных моделях](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md).  
+# <a name="lesson-7-defining-key-performance-indicators-kpis"></a>Занятие 7. Определение ключевых показателей эффективности
+  На этом занятии обсуждается определение ключевых показателей эффективности в проекте служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Ключевые показатели эффективности предоставляют среду для определения вычислений по мерам деятельности организации на стороне сервера, а также приводят к единому виду отображения результатов. Ключевые показатели эффективности могут отображаться в отчетах, на порталах и инструментальных панелях, через API-интерфейсы доступа к данным, а также с использованием средств [!INCLUDE[msCoName](../includes/msconame-md.md)] и средств сторонних производителей. Ключевые показатели эффективности представляют собой упакованные в метаданные обычные меры и иные многомерные выражения. Дополнительные сведения см. в разделе [Key Performance Indicators &#40;KPIs&#41; in Multidimensional Models](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md).  
   
 > [!NOTE]  
->  Завершенные проекты для всех занятий в этом учебнике доступны через Интернет. Можно перейти вперед к любому занятию, используя в качестве отправной точки завершенный проект из предыдущего урока. [Щелкните здесь](https://go.microsoft.com/fwlink/?LinkID=221866) для загрузки образцов проектов, прилагаемых к этому учебнику.  
+>  Завершенные проекты для всех занятий в этом учебнике доступны через Интернет. Можно перейти вперед к любому занятию, используя в качестве отправной точки завершенный проект из предыдущего урока. [Щелкните здесь](https://go.microsoft.com/fwlink/?LinkID=221866) , чтобы скачать примеры проектов, которые можно найти в этом руководстве.  
   
  Это занятие содержит следующую задачу:  
   
@@ -31,9 +31,9 @@ ms.locfileid: "66078290"
 ## <a name="next-lesson"></a>Следующее занятие  
  [Занятие 8. Определение действий](lesson-8-defining-actions.md)  
   
-## <a name="see-also"></a>См. также  
- [Сценарий учебника по службам Analysis Services](analysis-services-tutorial-scenario.md)   
- [Многомерное моделирование &#40;руководством по Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
- [Ключевые показатели эффективности в многомерных моделях](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)  
+## <a name="see-also"></a>См. также:  
+ [Analysis Services сценарий учебника](analysis-services-tutorial-scenario.md)   
+ [&#40;учебника по Adventure Works в многомерном моделировании&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
+ [Ключевые показатели эффективности &#40;ключевые показатели эффективности&#41; в многомерных моделях](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)  
   
   

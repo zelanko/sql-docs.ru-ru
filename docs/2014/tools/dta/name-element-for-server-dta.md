@@ -1,5 +1,5 @@
 ---
-title: Элемент Name описания сервера (DTA) | Документация Майкрософт
+title: Элемент Name для Server (DTA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 750911c19224ff088fee5c27272bf13c14875975
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62657268"
 ---
 # <a name="name-element-for-server-dta"></a>Элемент Name описания сервера (DTA)
@@ -35,9 +35,9 @@ ms.locfileid: "62657268"
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
-|**Тип данных и длина**|`string`, от 1 до 255 символов|  
+|**Тип данных и длина**|`string`от 1 до 255 символов.|  
 |**Значение по умолчанию**|Нет.|  
 |**Наличие**|Требуется один раз для каждого элемента **Server** .|  
   
@@ -49,9 +49,9 @@ ms.locfileid: "62657268"
 |**Дочерние элементы**|Нет.|  
   
 ## <a name="example"></a>Пример  
- Пример использования этого элемента **Name** см. в статье [Server Element &#40;DTA&#41;](server-element-dta.md).  
+ Пример использования этого элемента **Name** см. в статье [Элемент Server (DTA)](server-element-dta.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по входным XML-файлам (помощник по настройке ядра СУБД)](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

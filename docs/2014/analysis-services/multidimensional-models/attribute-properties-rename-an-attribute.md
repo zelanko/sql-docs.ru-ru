@@ -1,5 +1,5 @@
 ---
-title: Переименовать атрибут | Документация Майкрософт
+title: Переименование атрибута | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: df6f25841231bbfc8821cb5a7c42c4687544f407
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077215"
 ---
 # <a name="rename-an-attribute"></a>переименовать атрибут
@@ -27,7 +27,7 @@ ms.locfileid: "66077215"
   
  Дополнительные сведения о переименовании атрибута см. в разделе [Привязка атрибута к ключевому столбцу](attribute-properties-bind-an-attribute-to-a-key-column.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по свойствам атрибута измерения](dimension-attribute-properties-reference.md)  
   
   

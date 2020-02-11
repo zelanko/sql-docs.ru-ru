@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 919c10372e397f0c2d66d7648363aef7916ec598
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62875599"
 ---
 # <a name="restore-a-database-to-a-marked-transaction-sql-server-management-studio"></a>Восстановление базы данных до помеченной транзакции (среда SQL Server Management Studio)
@@ -31,7 +31,7 @@ ms.locfileid: "62875599"
   
 ### <a name="to-restore-a-marked-transaction"></a>Восстановление помеченной транзакции  
   
-1.  После соединения с соответствующим экземпляром компонента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]в обозревателе объектов разверните дерево сервера, щелкнув его имя.  
+1.  После подключения к соответствующему экземпляру [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] в обозревателе объектов разверните дерево сервера, щелкнув его имя.  
   
 2.  Раскройте узел **Базы данных**и в зависимости от типа восстанавливаемой базы данных выберите пользовательскую базу данных или раскройте узел **Системные базы данных** и выберите системную базу данных.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62875599"
   
      В приведенной ниже таблице перечислены заголовки столбцов сетки, а также даны описания их значений.  
   
-    |Header|Значение|  
+    |Заголовок|Значение|  
     |------------|-----------|  
     |\<пусто>|Отображает флажок для выбора маркера.|  
     |**Отметка транзакции**|Имя помеченной транзакции, заданное пользователем при фиксации транзакции.|  
@@ -55,7 +55,7 @@ ms.locfileid: "62875599"
     |**База данных**|Имя базы данных, в которой была зафиксирована помеченная транзакция.|  
     |**Имя пользователя**|Имя пользователя базы данных, зафиксировавшего помеченную транзакцию.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Восстановление резервной копии базы данных &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)   
  [Восстановление резервной копии журнала транзакций (SQL Server)](restore-a-transaction-log-backup-sql-server.md)  
   

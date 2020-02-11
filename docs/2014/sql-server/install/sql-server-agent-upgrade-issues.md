@@ -1,5 +1,5 @@
 ---
-title: Проблемы при обновлении агента SQL Server | Документация Майкрософт
+title: Проблемы обновления агент SQL Server | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 598a317bdecb2ed3808a7b5af35316d95d3b87c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66092013"
 ---
 # <a name="sql-server-agent-upgrade-issues"></a>Проблемы обновления агента SQL Server
@@ -27,7 +27,7 @@ ms.locfileid: "66092013"
   
 -   [Планы обслуживания базы данных заменены](../../../2014/sql-server/install/database-maintenance-plans-superseded.md)  
   
--   [Только пользователи с правами sysadmin могут записывать файлы журнала шагов заданий в файловую систему](../../../2014/sql-server/install/only-sysadmin-users-can-write-job-step-log-files-to-the-file-system.md)  
+-   [Только пользователи с правами sysadmin могут записывать файлы журнала шага задания в файловую систему](../../../2014/sql-server/install/only-sysadmin-users-can-write-job-step-log-files-to-the-file-system.md)  
   
 -   [Замена вызовов расширенной хранимой процедуры xp_sqlagent_proxy_account на вызовы новых хранимых процедур](../../../2014/sql-server/install/replace-xp-sqlagent-proxy-account-extended-sp-with-new-stored-procedures.md)  
   
@@ -41,8 +41,8 @@ ms.locfileid: "66092013"
   
 -   [При обновлении пользовательская учетная запись-посредник агента SQL Server изменится на временную учетную запись-посредник UpgradedProxyAccount](../../../2014/sql-server/install/upgrading-changes-sql-server-agent-user-proxy-account-to-temporary-account.md)  
   
-## <a name="see-also"></a>См. также  
- [Помощник по обновлению SQL Server 2014 &#91;new&#93;](sql-server-2014-upgrade-advisor.md)   
- [Решение проблем при обновлении](../../../2014/sql-server/install/resolving-upgrade-issues.md)  
+## <a name="see-also"></a>См. также:  
+ [Советник по переходу SQL Server 2014 &#91;New&#93;](sql-server-2014-upgrade-advisor.md)   
+ [Разрешение проблем при обновлении](../../../2014/sql-server/install/resolving-upgrade-issues.md)  
   
   

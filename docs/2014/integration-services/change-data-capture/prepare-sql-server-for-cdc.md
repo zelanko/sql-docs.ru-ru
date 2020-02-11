@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5f348a7f76f65c19801525967f3ded5c8b0d2d26
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835835"
 ---
 # <a name="prepare-sql-server-for-cdc"></a>Подготовка SQL Server для CDC
@@ -31,7 +31,7 @@ ms.locfileid: "62835835"
 ### <a name="server-name"></a>Имя сервера  
  Введите имя сервера, на котором находится экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-### <a name="authentication"></a>Проверка подлинности  
+### <a name="authentication"></a>Аутентификация  
  Выберите один из следующих вариантов:  
   
 -   **Проверка подлинности Windows.**  
@@ -54,7 +54,7 @@ ms.locfileid: "62835835"
 ### <a name="view-script"></a>Просмотреть скрипт  
  Щелкните **Просмотреть скрипт** для просмотра скрипта установки (он будет доступен только для чтения). Системный администратор [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при необходимости может скопировать этот скрипт в консоль управления SQL Server и отредактировать его. Дополнительные сведения о подготовке скрипта SQL Server см. в разделе [Подготовка SQL Server для скрипта представления CDC Oracle](prepare-sql-server-for-oracle-cdc-view-script.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Как работать со службами CDC](work-with-cdc-services.md)   
  [Как подготовить SQL Server для CDC](prepare-sql-server-for-cdc.md)  
   

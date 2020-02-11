@@ -15,17 +15,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e7dbd69379bd59e75ac39fc5765514ab8e1b4151
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62657833"
 ---
 # <a name="sqlgetfunctions"></a>SQLGetFunctions
-  Интерфейс ODBC-драйвера собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соответствует трем определенным уровням соответствия ODBC (ISO, Open Group и ODBC уровня 2). Функция**SQLGetFunctions** сообщает, что все функции ODBC поддерживаются для ODBC-драйвера собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  Интерфейс ODBC-драйвера собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соответствует трем определенным уровням соответствия ODBC (ISO, Open Group и ODBC уровня 2). **SQLGetFunctions** сообщает, что все функции ODBC поддерживаются драйвером ODBC для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функция SQLGetFunctions](https://go.microsoft.com/fwlink/?LinkId=59353)   
- [Подробные сведения о реализации API-интерфейсов ODBC](odbc-api-implementation-details.md)  
+ [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

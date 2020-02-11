@@ -1,5 +1,5 @@
 ---
-title: Параметры (запроса результаты SQL Server-Multi-Server) | Документация Майкрософт
+title: Параметры (результаты запроса-SQL Server-Multi-Server) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 6019a328463d27b4495ae0db70e844eb4e05d747
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089968"
 ---
 # <a name="options-query-results-sql-server-multi-server"></a>Параметры (страница "Результаты запроса/SQL Server/Многосерверные")
@@ -35,7 +35,7 @@ ms.locfileid: "66089968"
  **Добавить имя входа к результатам**  
  Установите данный флажок, чтобы включить дополнительный столбец, в котором указывается имя входа, использованное для подключения к серверу, предоставившему каждую из строк.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание сервера централизованного управления и группы серверов &#40;SQL Server Management Studio&#41;](../ssms/register-servers/create-a-central-management-server-and-server-group.md)   
  [Выполнение инструкции на нескольких серверах одновременно (среда SQL Server Management Studio)](../ssms/register-servers/execute-statements-against-multiple-servers-simultaneously.md)  
   

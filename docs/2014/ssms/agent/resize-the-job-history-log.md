@@ -18,20 +18,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1a8c9ab517d1f6a122144604d6b147e6f5eeaf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62650891"
 ---
-# <a name="resize-the-job-history-log"></a>Изменение размера журнала заданий
-  В этом разделе описывается задание ограничений на размер журналов заданий агента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в среде [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+# <a name="resize-the-job-history-log"></a>Resize the Job History Log
+  В этом разделе описывается, как задать ограничения размера [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для журналов заданий агента в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
--   **Перед началом:**  
+-   **Перед началом работы**  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
--   **Для задания ограничений на размер журнала заданий используется:**  
+-   **Для установки ограничений размера журналов заданий используется:**  
   
      [Среда SQL Server Management Studio](#SSMS)  
   
@@ -56,7 +56,7 @@ ms.locfileid: "62650891"
   
 #### <a name="to-resize-the-job-history-log-based-on-time"></a>Изменить размера журнала заданий, основанного на времени  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]и разверните его.  
+1.  В **обозревателе объектов**подключитесь к экземпляру [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], а затем разверните этот экземпляр.  
   
 2.  Щелкните правой кнопкой мыши **агент SQL Server**, затем выберите **Свойства**.  
   

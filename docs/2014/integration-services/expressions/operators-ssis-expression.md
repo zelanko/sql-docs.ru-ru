@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7689110600b7c4cded50572828ab469dd51c1432
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62897363"
 ---
 # <a name="operators-ssis-expression"></a>Операторы (выражение служб SSIS)
@@ -27,7 +27,7 @@ ms.locfileid: "62897363"
   
  В следующей таблице содержится список разделов, посвященных операторам.  
   
-|Оператор|Описание|  
+|Оператор|Description|  
 |--------------|-----------------|  
 |[Приведение (выражение служб SSIS)](cast-ssis-expression.md)|Преобразует выражение одного типа данных в другой тип данных.|  
 |[() (скобки) (выражение служб SSIS)](parentheses-ssis-expression.md)|Определяет порядок вычисления выражений.|  
@@ -36,15 +36,15 @@ ms.locfileid: "62897363"
 |[+ (вычитание) (выражение служб SSIS)](subtract-ssis-expression.md)|Вычитает второе числовое выражение из первого.|  
 |[+ (инверсия) (выражение служб SSIS)](negate-ssis-expression.md)|Инвертирует числовое выражение.|  
 |[&#42; (умножение) (выражение служб SSIS)](multiply-ssis-expression.md)|Умножает два числовых выражения.|  
-|[Деление (выражение служб SSIS)](divide-ssis-expression.md)|Делит первое числовое выражение на второе.|  
-|[(Остаток от деления) (выражение служб SSIS)](modulo-ssis-expression.md)|Вычисляет целочисленный остаток после деления первого числового выражения на второе.|  
+|[Разделение &#40;выражений служб SSIS&#41;](divide-ssis-expression.md)|Делит первое числовое выражение на второе.|  
+|[&#40;ный остаток от деления&#41; &#40;&#41;выражений служб SSIS](modulo-ssis-expression.md)|Вычисляет целочисленный остаток после деления первого числового выражения на второе.|  
 |[&#124;&#124; (логическое ИЛИ) (выражение служб SSIS)](logical-or-ssis-expression.md)|Выполняет логическую операцию ИЛИ.|  
 |[&#124;&#124; (логическое И) (выражение служб SSIS)](logical-and-ssis-expression.md)|Выполняет логическую операцию И.|  
 |[\! (логическое НЕ) (выражение служб SSIS)](logical-not-ssis-expression.md)|Инвертирует логический операнд.|  
 |[&#124; (битовое включающее ИЛИ) (выражение служб SSIS)](bitwise-inclusive-or-ssis-expression.md)|Выполняет побитовую операцию ИЛИ для двух целочисленных значений.|  
 |[^ (битовое исключающее ИЛИ) (выражение служб SSIS)](bitwise-exclusive-or-ssis-expression.md)|Выполняет побитовую исключающую операцию ИЛИ для двух целочисленных значений.|  
 |[& (битовое И) (выражение служб SSIS)](bitwise-and-ssis-expression.md)|Выполняет побитовую операцию И для двух целочисленных значений.|  
-|[~ (битовое НЕ) (выражение служб SSIS)](bitwise-not-ssis-expression.md)|Выполняет битовую инверсию целого числа.|  
+|[~ &#40;побитовое не&#41; &#40;выражение служб SSIS&#41;](bitwise-not-ssis-expression.md)|Выполняет битовую инверсию целого числа.|  
 |[= = (равно) (выражение служб SSIS)](equal-ssis-expression.md)|Выполняет сравнение с целью определения равенства двух выражений.|  
 |[\!= (не равно) (выражение служб SSIS)](unequal-ssis-expression.md)|Осуществляет операцию сравнения для определения неравенства двух выражений.|  
 |[&#62; (больше чем) (выражение служб SSIS)](greater-than-ssis-expression.md)|Выполняет сравнение с целью определения, является ли первое выражение больше второго.|  
@@ -53,9 +53,9 @@ ms.locfileid: "62897363"
 |[&#60;= (меньше или равно) (выражение служб SSIS)](less-than-or-equal-to-ssis-expression.md)|Выполняет сравнение с целью определения, является ли первое выражение меньше второго или равно ему.|  
 |[? : (условный) (выражение служб SSIS)](conditional-ssis-expression.md)|Возвращает одно из двух выражений на основе вычисления логического выражения.|  
   
- Сведения о размещении каждого оператора в иерархии приоритета см. в разделе [Очередность и ассоциативность операторов](operator-precedence-and-associativity.md).  
+ Сведения о размещении каждого оператора в иерархии приоритета см. в разделе [Operator Precedence and Associativity](operator-precedence-and-associativity.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функции (выражение служб SSIS)](functions-ssis-expression.md)   
  [Примеры расширенных выражений служб Integration Services](examples-of-advanced-integration-services-expressions.md)   
  [Выражения служб Integration Services (SSIS)](integration-services-ssis-expressions.md)  
