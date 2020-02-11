@@ -1,5 +1,5 @@
 ---
-title: Пример метода NextRecordset (Visual C++) | Документация Майкрософт
+title: Пример метода NextRecordset (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 8bb72817-0cf5-4ce9-9fb8-043c89da941c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ec37df7c37c8117dfdda99faabd746ccd8c3d69f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932029"
 ---
 # <a name="nextrecordset-method-example-vc"></a>Пример метода NextRecordset (Visual C++)
-В этом примере используется [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) метод для просмотра данных в наборе записей, который использует оператор комплексной команда состоит из трех отдельных **ВЫБЕРИТЕ** инструкций.  
+В этом примере используется метод [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) для просмотра данных в наборе записей, который использует составной командный оператор, состоящие из трех отдельных инструкций **SELECT** .  
   
 ```  
 // BeginNextRecordsetCpp.cpp  
@@ -138,5 +138,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод NextRecordset (ADO)](../../../ado/reference/ado-api/nextrecordset-method-ado.md)

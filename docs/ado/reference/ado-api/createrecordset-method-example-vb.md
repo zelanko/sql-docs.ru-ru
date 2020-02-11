@@ -15,16 +15,16 @@ ms.assetid: 2de8fd02-0f49-4d47-8bd3-397726d1c644
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bb1bda7808b8875da5982b70e749f45ec15e5958
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919349"
 ---
 # <a name="createrecordset-method-example-vb"></a>Пример метода CreateRecordset (Visual Basic)
-Можно создать [записей](../../../ado/reference/ado-api/recordset-object-ado.md) и укажите сведения о столбце. Затем можно вставить данные в **записей** объекта; в базовые буферы набора строк операции вставки.  
+Можно создать объект [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) и указать сведения о столбце. Затем можно вставить данные в объект **набора записей** . базовый набор строк помещает в буфер вставки.  
   
- В следующем примере кода показано, как определить **записей** с помощью [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) объекта. Вы также можно сделать с помощью [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) объекта.  
+ В следующем примере кода показано, как определить **набор записей** с помощью объекта [RDSServer.](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) DataObject. Это также можно сделать с помощью [RDS. Объект элемента управления](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
   
 ```  
 'BeginRsDefineShapeVB  

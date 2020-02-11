@@ -1,5 +1,5 @@
 ---
-title: Отправка и получение данных с помощью FILESTREAM (ODBC) | Документация Майкрософт
+title: Добавочная отправка и получение данных с помощью FILESTREAM (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ac4965e665013cad4cd17068633a812cc5813826
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68205526"
 ---
 # <a name="send-and-receive-data-incrementally-with-filestream-odbc"></a>Выполнение добавочной отправки и получение данных с помощью FILESTREAM (ODBC)
   В этом образце показывается, как использовать функцию FILESTREAM для добавочной передачи и получения данных с помощью функций SQLPutData и SQLGetData.  
   
- Дополнительные сведения о функции FILESTREAM см. в разделе [поддержка FILESTREAM &#40;ODBC&#41;](../native-client/odbc/filestream-support-odbc.md).  
+ Дополнительные сведения о компоненте FILESTREAM см. в разделе [Поддержка filestream &#40;&#41;ODBC ](../native-client/odbc/filestream-support-odbc.md).  
   
 ## <a name="example"></a>Пример  
- Перед компиляцией и запуском этого образца, включите поддержку FILESTREAM ([Включение и настройка FILESTREAM](../blob/enable-and-configure-filestream.md)).  
+ Перед компиляцией и запуском этого образца включите поддержку FILESTREAM ([включить и настроить FILESTREAM](../blob/enable-and-configure-filestream.md)).  
   
  Первый листинг кода ([!INCLUDE[tsql](../../includes/tsql-md.md)]) создает базу данных, которая используется в этом образце. Для выполнения этого скрипта экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен иметь доступ с возможностью (например, войдите в систему с учетной записью Local System).  
   

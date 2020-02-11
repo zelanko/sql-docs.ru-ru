@@ -1,5 +1,5 @@
 ---
-title: sys.securable_classes (Transact-SQL) | Документация Майкрософт
+title: sys. securable_classes (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 12/01/2016
 ms.prod: sql
@@ -21,24 +21,24 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dffa82d659ab2f36f94d5fecbafeb5c65ba4f05a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68135277"
 ---
-# <a name="syssecurableclasses-transact-sql"></a>sys.securable_classes (Transact-SQL)
+# <a name="syssecurable_classes-transact-sql"></a>sys.securable_classes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Возвращает список защищаемых классов  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|**class_desc**|**sysname**|Имя класса.|  
-|**class**|**int**|Числовое обозначение класса.|  
+|**class_desc**|**имеет sysname**|Имя класса.|  
+|**см**|**int**|Числовое обозначение класса.|  
   
 ## <a name="permissions"></a>Разрешения  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Дополнительные сведения см. в разделе [Настройка видимости метаданных](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере возвращаются защищаемые классы, поддерживаемые данным экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -47,7 +47,7 @@ ms.locfileid: "68135277"
 SELECT * FROM sys.securable_classes ORDER BY class;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Защищаемые объекты](../../relational-databases/security/securables.md)  
   
   

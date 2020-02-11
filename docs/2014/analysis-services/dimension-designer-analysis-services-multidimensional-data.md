@@ -1,5 +1,5 @@
 ---
-title: Измерение конструктора (службы Analysis Services — многомерные данные) | Документация Майкрософт
+title: Конструктор измерений (Analysis Services-многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 79dfdc1534820d3637dfc06e42bd696e26db3501
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081777"
 ---
 # <a name="dimension-designer-analysis-services---multidimensional-data"></a>Конструктор измерений (службы Analysis Services — многомерные данные)
   Конструктор измерений в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] применяется для просмотра данных, содержащихся в измерении, и изменения различных свойств существующего измерения: атрибутов, иерархий, уровней, связей атрибутов и преобразований.  
   
- **Чтобы отобразить конструктор измерений**  
+ **Отображение конструктора измерений**  
   
 -   В среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]в окне **Обозреватель решений**используйте одну из следующих процедур.  
   
@@ -32,24 +32,24 @@ ms.locfileid: "66081777"
   
     -   Дважды щелкните измерение.  
   
-## <a name="pages"></a>Pages  
+## <a name="pages"></a>Страницы  
  Конструктор измерений содержит следующие страницы.  
   
  [Структура измерения](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)  
  Используйте эту страницу для просмотра и изменения атрибутов, иерархий и уровней измерений.  
   
- [Связи атрибутов](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)  
+ [можно изменить расположение фигур на вкладке](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)  
  Используйте эту страницу для создания, изменения или удаления связей атрибутов выбранного измерения.  
   
- [Преобразования](translations-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Translations](translations-dimension-designer-analysis-services-multidimensional-data.md)  
  Используйте эту страницу для просмотра и изменения переводов, связанных с измерением и его атрибутами, иерархией и уровнями.  
   
  [Браузер](browser-dimension-designer-analysis-services-multidimensional-data.md)  
  Используйте эту страницу для просмотра элементов иерархии, входящих в измерение.  
   
-## <a name="see-also"></a>См. также  
- [Конструкторы и диалоговые окна служб Analysis Services &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Измерения &#40;службы Analysis Services — многомерные данные&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>См. также:  
+ [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Измерения &#40;Analysis Services многомерных данных&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Измерения в многомерных моделях](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

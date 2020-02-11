@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 58373531871a5db8ff859280de52cbe21562bfb5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478618"
 ---
 # <a name="users-and-groups-master-data-services"></a>Пользователи и группы (службы Master Data Services)
@@ -41,10 +41,10 @@ ms.locfileid: "65478618"
   
  Не присваивайте отдельным пользователям дополнительные разрешения и не включайте пользователей в несколько групп, имеющих доступ к службам [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]. Кроме того, не используйте разрешения для элементов иерархии, за исключением случаев, когда группе необходим был ограниченный доступ к определенным элементам.  
   
-## <a name="see-also"></a>См. также  
- [Добавление пользователя (службы Master Data Services)](../../2014/master-data-services/add-a-user-master-data-services.md)   
- [Добавление группы (службы Master Data Services)](../../2014/master-data-services/add-a-group-master-data-services.md)   
- [Удаление пользователей или групп (службы Master Data Services)](../../2014/master-data-services/delete-users-or-groups-master-data-services.md)   
- [Проверка разрешений пользователя (службы Master Data Services)](../../2014/master-data-services/test-a-user-s-permissions-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Добавление Master Data Services &#40;пользователя&#41;](../../2014/master-data-services/add-a-user-master-data-services.md)   
+ [Добавление Master Data Services &#40;группы&#41;](../../2014/master-data-services/add-a-group-master-data-services.md)   
+ [Удаление пользователей или групп &#40;Master Data Services&#41;](../../2014/master-data-services/delete-users-or-groups-master-data-services.md)   
+ [Проверка разрешений пользователя &#40;Master Data Services&#41;](../../2014/master-data-services/test-a-user-s-permissions-master-data-services.md)  
   
   

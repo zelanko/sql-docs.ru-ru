@@ -13,10 +13,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: c1668c2b4c96f23283f0eca87fdbac591f52b75f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211606"
 ---
 # <a name="wmi-error-0x8007052f"></a>WMI Error 0x8007052f
@@ -25,11 +25,11 @@ ms.locfileid: "68211606"
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|0x8007052f|  
 |Источник события|Ошибка поставщика WMI|  
 |Компонент|Диспетчер конфигурации SQL Server|  
-|Символическое имя|Н/Д|  
+|Символическое имя|Нет данных|  
 |Текст сообщения|Ошибка входа в систему: ограничение учетной записи. Возможные причины: запрещено использование пустых паролей, имеется ограничение по времени входа или применено ограничение, предусмотренное политикой.|  
   
 ## <a name="explanation"></a>Объяснение  

@@ -14,22 +14,22 @@ ms.assetid: 022dfbc0-8d18-4c35-8a28-d9eb16063188
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6c8d2d567f899c30dfe91cd35445956cd6214da9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68125549"
 ---
 # <a name="sqlsetparam-mapping"></a>Сопоставление SQLSetParam
-**SQLSetParam** по-прежнему должны быть сопоставлены в верхней части **SQLBindParameter** как в ODBC 2. *x*. Несмотря на то, что он аналогичен **SQLBindParam**, диспетчер драйверов не соответствует **SQLSetParam** для **SQLBindParam**. Это обусловлено тем, некоторые существующие ODBC 2. *x* драйверы использовать специальное значение *BufferLength* (SQL_SETPARAM_VALUE_MAX), создает диспетчер драйверов, если он был сопоставлен **SQLSetParam** на основе  **SQLBindParameter** для определения того, если он вызывается по 1. *x* приложений ODBC.  
+**SQLSetParam** по **SQLBindParameter** , как в ODBC 2, будет продолжать сопоставляться. *x*. Несмотря на то, что концептуально похоже на **склбиндпарам**, диспетчер драйверов не сопоставляет **SQLSetParam** с **склбиндпарам**. Это связано с тем, что некоторые существующие ODBC 2. драйверы *x* используют специальное значение *BufferLength* (SQL_SETPARAM_VALUE_MAX), которое диспетчер драйверов создает при сопоставлении **SQLSetParam** поверх **SQLBindParameter** , чтобы определить, когда он вызывается с помощью 1. Приложение *x* ODBC.  
   
- Вызов  
+ Вызов метода  
   
 ```  
 SQLSetParam(hstmt, ipar, fCType, fSqlType, cbColDef, ibScale, rgbValue, pcbValue)  
 ```  
   
- приведет к следующим образом:  
+ приведет к следующему результату:  
   
 ```  
 SQLBindParameter(StatementHandle, ParameterNumber, SQL_PARAM_INPUT_OUTPUT, ValueType, ParameterType, ColumnSize, DecimalDigits, ParameterValuePtr, SQL_SETPARAM_VALUE_MAX, StrLen_or_IndPtr)  

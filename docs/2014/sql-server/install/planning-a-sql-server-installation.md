@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b1baf29a88ff25eb278271719680d1979940c590
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211497"
 ---
 # <a name="planning-a-sql-server-installation"></a>Планирование установки SQL Server
@@ -39,7 +39,7 @@ ms.locfileid: "68211497"
  [Новые возможности установки SQL Server](../../../2014/sql-server/install/what-s-new-in-sql-server-installation.md)  
  В этом разделе подробно рассматриваются новые и усовершенствованные возможности установки в данной версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- [Требования к оборудованию и программному обеспечению для установки SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)  
+ [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)  
  В этом разделе перечислены минимальные требования к оборудованию и программному обеспечению, необходимые для установки и запуска экземпляра [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  [Вопросы безопасности при установке SQL Server](../../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)  
@@ -57,11 +57,11 @@ ms.locfileid: "68211497"
  [Версии SQL Server на местных языках](../../../2014/sql-server/install/local-language-versions-in-sql-server.md)  
  В этом разделе рассматриваются локализованные версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a>См. также  
  [Установка SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)  
  В этом разделе представлены общие сведения о разных параметрах установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- [Установка компонентов бизнес-Аналитики SQL Server 2014](install-sql-server-business-intelligence-features.md)  
+ [Install SQL Server 2014 BI Features](install-sql-server-business-intelligence-features.md)  
  В этом разделе документации по программе установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] описывается процедура установки функций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые входят в состав платформы бизнес-аналитики Майкрософт.  
   
  [Обновление до SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)  
@@ -73,11 +73,11 @@ ms.locfileid: "68211497"
  [Установка отказоустойчивого кластера SQL Server](../failover-clusters/install/sql-server-failover-cluster-installation.md)  
  В этом разделе документации по программе установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] описывается процедура установки и настройки кластера отработки отказа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a>См. также  
- [Быстрая установка SQL Server 2014](../../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)   
+## <a name="see-also"></a>См. также:  
+ [Быстрый запуск установки SQL Server 2014](../../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)   
  [Установка SQL Server 2014 из командной строки](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
- [Решения высокого уровня доступности (SQL Server)](../failover-clusters/high-availability-solutions-sql-server.md)   
- [Подготовка к установке отказоустойчивого кластера](../failover-clusters/install/before-installing-failover-clustering.md)   
+ [Решения для обеспечения высокого уровня доступности &#40;SQL Server&#41;](../failover-clusters/high-availability-solutions-sql-server.md)   
+ [Перед установкой отказоустойчивой кластеризации](../failover-clusters/install/before-installing-failover-clustering.md)   
  [Обновление до SQL Server 2014 с помощью мастера установки &#40;установки&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
   
   

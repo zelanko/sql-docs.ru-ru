@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7823ce29facb7f1c85a51a12b31ee2076a0d023b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107416"
 ---
 # <a name="configure-data-source-properties-for-a-report--report-manager"></a>Настройка свойств источника данных для отчета (диспетчер отчетов)
@@ -30,9 +30,9 @@ ms.locfileid: "66107416"
   
 2.  В диспетчере отчетов перейдите на страницу **Содержимое** . Перейдите к отчету, для которого нужно настроить источник данных, связанный с отчетом, и откройте его.  
   
-3.  Перейдите на вкладку **Свойства** . Откроется страница свойств **Общие**.  
+3.  Перейдите на вкладку **Свойства** . Откроется страница **Общие** свойства.  
   
-4.  Перейдите на вкладку **Источники данных** . Откроется страница свойств «Источник данных» отчета.  
+4.  Перейдите на вкладку **Источники данных** . Откроется страница свойств источника данных отчета.  
   
 5.  Щелкните **Пользовательский источник данных** , чтобы указать сведения о соединении с источником данных внутри отчета.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "66107416"
   
 7.  В поле **Строка подключения**укажите строку соединения, которую сервер отчетов будет использовать для подключения к источнику данных. Не рекомендуется указывать в строке соединения учетные данные.  
   
-     В следующем примере показана строка соединения для подключения к локальной базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
+     В следующем примере показана строка подключения для подключения к локальной [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] базе данных.  
   
     ```  
     data source=<localservername>; initial catalog=AdventureWorks2012  
@@ -58,12 +58,12 @@ ms.locfileid: "66107416"
   
  Дополнительные сведения о настройке учетных данных см. в разделе [Указание учетных данных и сведений о соединении для источников данных отчета](specify-credential-and-connection-information-for-report-data-sources.md). Дополнительные сведения об учетной записи автоматического выполнения см. в разделе [Настройка учетной записи автоматического выполнения (диспетчер конфигурации служб SSRS)](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
-## <a name="see-also"></a>См. также  
- [Страница "Содержимое" (диспетчер отчетов)](../contents-page-report-manager.md)   
- [Страница "Создание источника данных" (диспетчер отчетов)](../new-data-source-page-report-manager.md)   
- [Создание, изменение и удаление общих источников данных (службы SSRS)](create-modify-and-delete-shared-data-sources-ssrs.md)   
+## <a name="see-also"></a>См. также:  
+ [Страница "содержимое" &#40;диспетчер отчетов&#41;](../contents-page-report-manager.md)   
+ [Страница "Создание источника данных" &#40;диспетчер отчетов&#41;](../new-data-source-page-report-manager.md)   
+ [Создание, изменение и удаление общих источников данных &#40;SSRS&#41;](create-modify-and-delete-shared-data-sources-ssrs.md)   
  [Управление источниками данных отчета](manage-report-data-sources.md)   
- [Создание, удаление или изменение общего источника данных (диспетчер отчетов)](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [Страница "Свойства источников данных" (диспетчер отчетов)](../data-sources-properties-page-report-manager.md)  
+ [Создание, удаление или изменение общего источника данных &#40;диспетчер отчетов&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [Страница свойств «Источники данных» &#40;диспетчер отчетов&#41;](../data-sources-properties-page-report-manager.md)  
   
   

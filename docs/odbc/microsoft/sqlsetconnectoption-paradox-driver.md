@@ -1,5 +1,5 @@
 ---
-title: SQLSetConnectOption (драйвер для Paradox) | Документация Майкрософт
+title: SQLSetConnectOption (Драйвер Paradox) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,24 +14,24 @@ ms.assetid: 050ee2be-594e-4dbd-af67-8b6aae756cd1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0cf6d01650b86fca4c782521fe3c368f729e6b42
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67897765"
 ---
 # <a name="sqlsetconnectoption-paradox-driver"></a>SQLSetConnectOption (драйвер для Paradox)
 > [!NOTE]  
->  Здесь приведены сведения об особенностях драйвер для Paradox. Общие сведения об этой функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  В этом разделе приводятся сведения, относящиеся к драйверу Paradox. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
-|fOption|Комментарий|  
+|Параметром fOption|Комментарий|  
 |-------------|-------------|  
-|SQL_ACCESS_MODE|Можно задать SQL_ACCESS_MODE fOption SQL_MODE_READ_ONLY или SQL_MODE_READ_WRITE. Тем не менее драйвер не запрещает обновление, если задано значение SQL_ACCESS_MODE SQL_MODE_READ_ONLY.|  
-|SQL_AUTOCOMMIT|Драйвер для Paradox поддерживает SQL_AUTOCOMMIT, задаваемого (состояние по умолчанию), только в том случае, поскольку они не поддерживают транзакции.|  
-|SQL_CURRENT_QUALIFIER|Поддерживается.|  
+|SQL_ACCESS_MODE|SQL_ACCESS_MODE параметром fOption можно задать как SQL_MODE_READ_ONLY, так и SQL_MODE_READ_WRITE. Однако драйвер не запрещает обновление, если для SQL_ACCESS_MODE установлено значение SQL_MODE_READ_ONLY.|  
+|SQL_AUTOCOMMIT|Драйвер Paradox поддерживает только SQL_AUTOCOMMIT, для которых задано значение ON (состояние по умолчанию), так как они не поддерживают транзакции.|  
+|SQL_CURRENT_QUALIFIER| Поддерживается.|  
 |SQL_LOGIN_TIMEOUT|Не поддерживается.|  
-|SQL_OPT_TRACE|Поддерживается.|  
-|SQL_OPT_TRACEFILE|Поддерживается.|  
+|SQL_OPT_TRACE| Поддерживается.|  
+|SQL_OPT_TRACEFILE| Поддерживается.|  
 |SQL_PACKET_SIZE|Не поддерживается.|  
 |SQL_QUIET_MODE|Не поддерживается.|  
 |SQL_TRANSLATE_DLL|Не поддерживается.|  

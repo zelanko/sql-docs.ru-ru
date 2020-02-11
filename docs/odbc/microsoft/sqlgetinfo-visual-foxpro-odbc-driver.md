@@ -13,44 +13,44 @@ ms.assetid: fbc39e3d-67d9-4331-bf5f-76dbd74c4c45
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 14837bc5ba3368fbb0d33680ee1c54936ab0a224
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67898850"
 ---
 # <a name="sqlgetinfo-visual-foxpro-odbc-driver"></a>SQLGetInfo (драйвер ODBC для Visual FoxPro)
 > [!NOTE]  
->  Этот раздел содержит сведения Visual FoxPro ODBC-драйвером. Общие сведения об этой функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  В этом разделе содержатся сведения, относящиеся к драйверу ODBC для Visual FoxPro. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Поддержка: Полное  
+ Поддержка: полная  
   
- Соответствие API ODBC: уровне 1  
+ Соответствие API ODBC: уровень 1  
   
- Возвращает общие сведения о драйвер ODBC для Visual FoxPro и источник данных, связанный с дескриптором соединения, *hdbc*. В следующем списке показано значение, возвращаемое для каждого драйвера ODBC для Visual FoxPro *fInfoType* аргумент и комментарии, касающиеся возвращаемые значения.  
+ Возвращает общие сведения о драйвере ODBC для Visual FoxPro и источнике данных, связанном с маркером соединения *хдбк*. В следующем списке показано значение, возвращаемое драйвером ODBC для Visual FoxPro для каждого аргумента *финфотипе* , и комментарии, касающиеся возвращаемых значений.  
   
- Дополнительные сведения см. в разделе [SQLGetInfo](../../odbc/reference/syntax/sqlgetinfo-function.md) в *Справочник по программированию ODBC*.  
+ Дополнительные сведения см. в разделе [SQLGetInfo](../../odbc/reference/syntax/sqlgetinfo-function.md) в *справочнике программиста по ODBC*.  
   
-## <a name="a"></a>Объект  
- Возвращает SQL_ACCESSIBLE_PROCEDURES 'N'.  
+## <a name="a"></a>A  
+ SQL_ACCESSIBLE_PROCEDURES возвращает значение "N".  
   
- SQL_ACCESSIBLE_TABLES возвращает «Y».  
+ SQL_ACCESSIBLE_TABLES возвращает значение "Y".  
   
  SQL_ACTIVE_CONNECTIONS возвращает 0.  
   
  SQL_ACTIVE_STATEMENTS возвращает 0.  
   
- SQL_ALTER_TABLE возвращает SQL_AT_ADD_COLUMN или SQL_AT_DROP_COLUMN.  
+ SQL_ALTER_TABLE возвращает либо SQL_AT_ADD_COLUMN, либо SQL_AT_DROP_COLUMN.  
   
-## <a name="b"></a>С  
+## <a name="b"></a>B  
  SQL_BOOKMARK_PERSISTENCE возвращает SQL_BP_SCROLL.  
   
-## <a name="c"></a>В  
- SQL_COLUMN_ALIAS возвращает «Y».  
+## <a name="c"></a>C  
+ SQL_COLUMN_ALIAS возвращает значение "Y".  
   
  SQL_CONCAT_NULL_BEHAVIOR возвращает SQL_CB_NULL.  
   
- SQL_CONVERT_BIGINT возвращает 0. Драйвер ODBC для Visual FoxPro не поддерживает *BigInt*.  
+ SQL_CONVERT_BIGINT возвращает 0. Драйвер ODBC для Visual FoxPro не поддерживает *bigint*.  
   
  SQL_CONVERT_BINARY возвращает 0.  
   
@@ -60,11 +60,11 @@ ms.locfileid: "67898850"
   
  SQL_CONVERT_DATE возвращает 0.  
   
- Раздел SQL_CONVERT_DECIMAL возвращает 0.  
+ SQL_CONVERT_DECIMAL возвращает 0.  
   
  SQL_CONVERT_DOUBLE возвращает 0.  
   
- Раздел SQL_CONVERT_FLOAT возвращает 0.  
+ SQL_CONVERT_FLOAT возвращает 0.  
   
  SQL_CONVERT_INTEGER возвращает 0.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "67898850"
   
  SQL_CONVERT_TIME возвращает 0.  
   
- Раздел SQL_CONVERT_TIMESTAMP возвращает 0.  
+ SQL_CONVERT_TIMESTAMP возвращает 0.  
   
  SQL_CONVERT_TINYINT возвращает 0.  
   
@@ -97,17 +97,17 @@ ms.locfileid: "67898850"
  SQL_CURSOR_ROLLBACK_BEHAVIOR возвращает SQL_CB_PRESERVE.  
   
 ## <a name="d"></a>D  
- SQL_DATA_SOURCE_NAME возвращает значение, переданное в качестве источника данных для [SQLConnect](../../odbc/microsoft/sqlconnect-visual-foxpro-odbc-driver.md), или [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md); возвращает пустую строку в том случае, если не указано без имени DSN.  
+ SQL_DATA_SOURCE_NAME возвращает значение, передаваемое в качестве имени DSN в [SQLConnect](../../odbc/microsoft/sqlconnect-visual-foxpro-odbc-driver.md)или [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md); Возвращает пустую строку, если не указано имя DSN.  
   
- Возвращает SQL_DATA_SOURCE_READ_ONLY 'N'.  
+ SQL_DATA_SOURCE_READ_ONLY возвращает значение "N".  
   
- SQL_DATABASE_NAME возвращает полный путь UNC к текущей базе данных, если источником данных является [базы данных](../../odbc/microsoft/visual-foxpro-terminology.md). Если источник данных подключается к каталогу [таблиц](../../odbc/microsoft/visual-foxpro-terminology.md), функция возвращает путь к каталогу.  
+ SQL_DATABASE_NAME возвращает полный UNC-путь к текущей базе данных, если источником данных является [база данных](../../odbc/microsoft/visual-foxpro-terminology.md). Если источник данных подключается к каталогу [таблиц](../../odbc/microsoft/visual-foxpro-terminology.md), функция возвращает путь к каталогу.  
   
- SQL_DBMS_NAME возвращает «Visual FoxPro».  
+ SQL_DBMS_NAME возвращает "Visual FoxPro".  
   
- SQL_DBMS_VER возвращает «03.00.0000».  
+ SQL_DBMS_VER возвращает значение "03.00.0000".  
   
- SQL_DEFAULT_TXN_ISOLATION возвращает SQL_TXN_READ_COMMITTED. «Грязные» чтения невозможны, но возможны неповторяющееся чтение и появляться фантомы.  
+ SQL_DEFAULT_TXN_ISOLATION возвращает SQL_TXN_READ_COMMITTED. "Грязные" операции чтения невозможны, но возможны неповторяемые операции чтения и фантомы.  
   
  SQL_DRIVER_HDBC реализуется диспетчером драйверов.  
   
@@ -117,17 +117,17 @@ ms.locfileid: "67898850"
   
  SQL_DRIVER_HSTMT реализуется диспетчером драйверов.  
   
- SQL_DRIVER_NAME возвращает «vfpodbc.dll».  
+ SQL_DRIVER_NAME возвращает "вфподбк. dll".  
   
- SQL_DRIVER_ODBC_VER возвращает «02.50» (SQL_SPEC_MAJOR, SQL_SPEC_MINOR).  
+ SQL_DRIVER_ODBC_VER возвращает значение "02,50" (SQL_SPEC_MAJOR, SQL_SPEC_MINOR).  
   
- SQL_DRIVER_VER возвращает «01.00.0000».  
+ SQL_DRIVER_VER возвращает значение "01.00.0000".  
   
 ## <a name="e"></a>E  
- Возвращает SQL_EXPRESSIONS_IN_ORDERBY 'N'.  
+ SQL_EXPRESSIONS_IN_ORDERBY возвращает значение "N".  
   
-## <a name="f"></a>C  
- Возвращает SQL_FETCH_DIRECTION:  
+## <a name="f"></a>F  
+ SQL_FETCH_DIRECTION возвращает:  
   
 -   SQL_FD_FETCH_NEXT  
   
@@ -143,10 +143,10 @@ ms.locfileid: "67898850"
   
 -   SQL_FD_FETCH_BOOKMARK.  
   
- SQL_FILE_USAGE бесплатно таблицы источников данных (DBF-файл) и возвращает оба SQL_FILE_QUALIFIER для базы данных (файл .dbc).  
+ SQL_FILE_USAGE возвращает SQL_FILE_QUALIFIER для базы данных (DBC-файла) и для источников данных свободной таблицы (DBF-файла).  
   
 ## <a name="g-h"></a>G-H  
- Возвращает SQL_GETDATA_EXENSIONS:  
+ SQL_GETDATA_EXENSIONS возвращает:  
   
 -   SQL_GD_ANY_COLUMN  
   
@@ -158,16 +158,16 @@ ms.locfileid: "67898850"
   
  SQL_GROUP_BY возвращает SQL_GB_NO_RELATION.  
   
-## <a name="i-j"></a>Я-J  
- SQL_IDENTIFIER_CASE возвращает sql_ic_mixed, имеющим.  
+## <a name="i-j"></a>I-J  
+ SQL_IDENTIFIER_CASE возвращает SQL_IC_MIXED.  
   
- Возвращает SQL_IDENTIFIER_QUOTE_CHAR ".  
+ SQL_IDENTIFIER_QUOTE_CHAR возвращает ".  
   
 ## <a name="k"></a>K  
- Возвращает SQL_KEYWORDS «».  
+ SQL_KEYWORDS возвращает "".  
   
 ## <a name="l"></a>L  
- Возвращает SQL_LIKE_ESCAPE_CLAUSE 'N'.  
+ SQL_LIKE_ESCAPE_CLAUSE возвращает значение "N".  
   
  SQL_LOCK_TYPES возвращает SQL_LCK_NO_CHANGE.  
   
@@ -178,9 +178,9 @@ ms.locfileid: "67898850"
   
  SQL_MAX_COLUMN_NAME_LEN возвращает 128.  
   
- SQL_MAX_COLUMNS_IN_GROUP_BY возвращает 16.  
+ SQL_MAX_COLUMNS_IN_GROUP_BY возвращает значение 16.  
   
- SQL_MAX_COLUMNS_IN_ORDER_BY возвращает 16.  
+ SQL_MAX_COLUMNS_IN_ORDER_BY возвращает значение 16.  
   
  SQL_MAX_COLUMNS_IN_INDEX возвращает 0.  
   
@@ -194,34 +194,34 @@ ms.locfileid: "67898850"
   
  SQL_MAX_OWNER_NAME_LEN возвращает 0.  
   
- SQL_MAX_PROCEDURE_NAME_LEN возвращает 0. Драйвер ODBC для Visual FoxPro не поддерживает прямой доступ к Visual FoxPro хранимых процедур.  
+ SQL_MAX_PROCEDURE_NAME_LEN возвращает 0. Драйвер ODBC для Visual FoxPro не разрешает прямой доступ к хранимым процедурам Visual FoxPro.  
   
- SQL_MAX_QUALIFIER_NAME_LEN возвращает длину пути максимальное операционной системы.  
+ SQL_MAX_QUALIFIER_NAME_LEN Возвращает максимальную длину пути операционной системы.  
   
  SQL_MAX_ROW_SIZE возвращает 254 ^ 2.  
   
- Возвращает SQL_MAX_ROW_SIZE_INCLUDES_LONG 'N'.  
+ SQL_MAX_ROW_SIZE_INCLUDES_LONG возвращает значение "N".  
   
  SQL_MAX_STATEMENT_LEN возвращает 8192.  
   
  SQL_MAX_TABLE_NAME_LEN возвращает 128.  
   
- SQL_MAX_TABLES_IN_SELECT возвращает 16.  
+ SQL_MAX_TABLES_IN_SELECT возвращает значение 16.  
   
  SQL_MAX_USER_NAME_LEN возвращает 0.  
   
- SQL_MULT_RESULT_SETS возвращает «Y».  
+ SQL_MULT_RESULT_SETS возвращает значение "Y".  
   
- SQL_MULTIPLE_ACTIVE_TXN возвращает «Y». Несколько подключений может иметь несколько транзакций за один раз открыть.  
+ SQL_MULTIPLE_ACTIVE_TXN возвращает значение "Y". Несколько соединений могут одновременно открыть несколько транзакций.  
   
-## <a name="n"></a>в  
- Возвращает SQL_NEED_LONG_DATA_LEN 'N'.  
+## <a name="n"></a>Нет  
+ SQL_NEED_LONG_DATA_LEN возвращает значение "N".  
   
  SQL_NON_NULLABLE_COLUMNS возвращает SQL_NNC_NON_NULL.  
   
  SQL_NULL_COLLATION возвращает SQL_NC_LOW.  
   
- SQL_NUMERIC_FUNCTIONS возвращает всех функций за исключением SQL_FN_NUM_POWER, который не поддерживается драйвером ODBC для Visual FoxPro. Поддерживаются следующие функции:  
+ SQL_NUMERIC_FUNCTIONS возвращает все функции, кроме SQL_FN_NUM_POWER, которые не поддерживаются драйвером ODBC для Visual FoxPro. Поддерживаются следующие функции:  
   
 -   SQL_FN_NUM_ABS  
   
@@ -272,57 +272,57 @@ ms.locfileid: "67898850"
   
  SQL_ODBC_SAG_CLI_CONFORMANCE возвращает SQL_OSCC_COMPLIANT.  
   
- SQL_ODBC_SQL_CONFORMANCE возвращает SQL_OSC_MINIMUM. Минимальный синтаксис SQL поддерживается.  
+ SQL_ODBC_SQL_CONFORMANCE возвращает SQL_OSC_MINIMUM. Поддерживается минимальный синтаксис SQL.  
   
- Возвращает SQL_ODBC_SQL_OPT_IEF «N».  
+ SQL_ODBC_SQL_OPT_IEF возвращает "N".  
   
  SQL_ODBC_VER реализуется диспетчером драйверов.  
   
- Возвращает SQL_ORDER_BY_COLUMNS_IN_SELECT «N».  
+ SQL_ORDER_BY_COLUMNS_IN_SELECT возвращает "N".  
   
- Возвращает SQL_OUTER_JOINS «N».  
+ SQL_OUTER_JOINS возвращает "N".  
   
- Возвращает SQL_OWNER_TERM «». Драйвер ODBC для Visual FoxPro не поддерживает владельцев для своих объектов.  
+ SQL_OWNER_TERM возвращает "". Драйвер ODBC для Visual FoxPro не поддерживает владельцев для своих объектов.  
   
  SQL_OWNER_USAGE возвращает 0. Драйвер ODBC для Visual FoxPro не поддерживает владельцев для своих объектов.  
   
-## <a name="p"></a>С  
+## <a name="p"></a>P  
  SQL_POS_OPERATIONS возвращает SQL_POS_POSITION.  
   
  SQL_POSITIONED_STATEMENTS возвращает 0.  
   
- Возвращает SQL_PROCEDURE_TERM «».  
+ SQL_PROCEDURE_TERM возвращает "".  
   
- Возвращает SQL_PROCEDURES 'N'.  
+ SQL_PROCEDURES возвращает значение "N".  
   
 ## <a name="q"></a>Q  
  SQL_QUALIFIER_LOCATION возвращает SQL_QL_START.  
   
- Возвращает SQL_QUALIFIER_NAME_SEPARATOR "!" или "\\". Разделитель между базой данных и таблицы — "!" для источников данных, подключенных к [баз данных](../../odbc/microsoft/visual-foxpro-terminology.md), и "\\" для источников данных, которые являются каталоги [свободных таблиц](../../odbc/microsoft/visual-foxpro-terminology.md).  
+ SQL_QUALIFIER_NAME_SEPARATOR возвращает "!" или "\\". Разделитель между базой данных и таблицей — "!" для источников данных, [](../../odbc/microsoft/visual-foxpro-terminology.md)подключенных к базам\\данных, и "" для источников данных, которые являются каталогами [свободных таблиц](../../odbc/microsoft/visual-foxpro-terminology.md).  
   
- SQL_QUALIFIER_TERM возвращает «database» или «каталог». Квалификатор не» базы данных «источники данных с подключением к [баз данных](../../odbc/microsoft/visual-foxpro-terminology.md)и «каталог» для источников данных, которые являются каталоги [свободных таблиц](../../odbc/microsoft/visual-foxpro-terminology.md).  
+ SQL_QUALIFIER_TERM возвращает "Database" или "Directory". Квалификатор — "база данных" для источников данных, подключенных к [базам](../../odbc/microsoft/visual-foxpro-terminology.md)данных, и "Directory" для источников данных, которые являются каталогами [свободных таблиц](../../odbc/microsoft/visual-foxpro-terminology.md).  
   
- SQL_QUALIFIER_USAGE не поддерживает SQL_QU_PRIVILEGE_DEFINITION; он возвращает SQL_QU_DML_STATEMENT или SQL_QU_TABLE_DEFINITION.  
+ SQL_QUALIFIER_USAGE не поддерживает SQL_QU_PRIVILEGE_DEFINITION; Он возвращает либо SQL_QU_DML_STATEMENT, либо SQL_QU_TABLE_DEFINITION.  
   
- SQL_QUOTED_IDENTIFIER_CASE возвращает sql_ic_mixed, имеющим.  
+ SQL_QUOTED_IDENTIFIER_CASE возвращает SQL_IC_MIXED.  
   
 ## <a name="r"></a>R  
- Возвращает SQL_ROW_UPDATES «N». Драйвер ODBC для Visual FoxPro поддерживает только статические и прямой курсоры.  
+ SQL_ROW_UPDATES возвращает "N". Драйвер ODBC для Visual FoxPro поддерживает только статические и прямые курсоры.  
   
 ## <a name="s"></a>S  
  SQL_SCROLL_CONCURRENCY возвращает SQL_SCCO_READ_ONLY.  
   
- SQL_SCROLL_OPTIONS возвращает SQL_SO_STATIC или SQL_SO_READONLY.  
+ SQL_SCROLL_OPTIONS возвращает либо SQL_SO_STATIC, либо SQL_SO_READONLY.  
   
- Возвращает SQL_SEARCH_PATTERN_ESCAPE "\\«.  
+ SQL_SEARCH_PATTERN_ESCAPE возвращает "\\".  
   
- Возвращает SQL_SERVER_NAME «».  
+ SQL_SERVER_NAME возвращает "".  
   
- Возвращает SQL_SPECIAL_CHARACTERS «~ @# $% ^».  
+ SQL_SPECIAL_CHARACTERS возвращает "~ @ # $% ^".  
   
- SQL_STATIC_SENSITIVITY возвращает 0. Драйвер ODBC для Visual FoxPro не поддерживает позиционные обновления.  
+ SQL_STATIC_SENSITIVITY возвращает 0. Драйвер ODBC для Visual FoxPro не поддерживает позиционированные обновления.  
   
- SQL_FN_STR_INSERT, SQL_FN_STR_LOCATE, SQL_FN_STR_LOCATE_2 или SQL_FN_STR_SOUNDEX SQL_STRING_FUNCTIONS не поддерживает.  
+ SQL_STRING_FUNCTIONS не поддерживает SQL_FN_STR_INSERT, SQL_FN_STR_LOCATE, SQL_FN_STR_LOCATE_2 или SQL_FN_STR_SOUNDEX.  
   
  Он возвращает:  
   
@@ -356,7 +356,7 @@ ms.locfileid: "67898850"
   
 -   SQL_FN_STR_SPACE.  
   
- Возвращает SQL_SUBQUERIES:  
+ SQL_SUBQUERIES возвращает:  
   
 -   SQL_SQ_CORRELATED_SUBQUERIES  
   
@@ -368,22 +368,22 @@ ms.locfileid: "67898850"
   
 -   SQL_SQ_QUANTIFIED.  
   
- Возвращает SQL_SYSTEM_FUNCTIONS:  
+ SQL_SYSTEM_FUNCTIONS возвращает:  
   
 -   SQL_FN_SYS_DBNAME  
   
 -   SQL_FN_SYS_IFNULL  
   
- но не:  
+ но не так:  
   
 -   SQL_FN_SYS_USERNAME  
   
 ## <a name="t"></a>T  
- SQL_TABLE_TERM возвращает «table».  
+ SQL_TABLE_TERM возвращает "Table".  
   
- Возвращает SQL_TIMEDATE_ADD_INTERVALS:  
+ SQL_TIMEDATE_ADD_INTERVALS возвращает:  
   
--   ВТОРОЙ SQL_FN_TSI_  
+-   SQL_FN_TSI_ СЕКУНДЫ  
   
 -   SQL_FN_TSI_MINUTE  
   
@@ -395,7 +395,7 @@ ms.locfileid: "67898850"
   
 -   SQL_FN_TSI_YEAR  
   
- но не:  
+ но не так:  
   
 -   SQL_FN_TSI_FRAC_SECOND  
   
@@ -403,9 +403,9 @@ ms.locfileid: "67898850"
   
 -   SQL_FN_TSI_QUARTER  
   
- Возвращает SQL_TIMEDATE_DIFF_INTERVALS:  
+ SQL_TIMEDATE_DIFF_INTERVALS возвращает:  
   
--   ВТОРОЙ SQL_FN_TSI_  
+-   SQL_FN_TSI_ СЕКУНДЫ  
   
 -   SQL_FN_TSI_MINUTE  
   
@@ -417,7 +417,7 @@ ms.locfileid: "67898850"
   
 -   SQL_FN_TSI_YEAR  
   
- SQL_FN_TD_QUARTER, SQL_FN_TD_TIMESTAMPADD, SQL_FN_TD_DAYOFYEAR или SQL_FN_TD_WEEK SQL_TIMEDATE_FUNCTIONS не поддерживает.  
+ SQL_TIMEDATE_FUNCTIONS не поддерживает SQL_FN_TD_QUARTER, SQL_FN_TD_TIMESTAMPADD, SQL_FN_TD_DAYOFYEAR или SQL_FN_TD_WEEK.  
   
  Он возвращает:  
   
@@ -452,6 +452,6 @@ ms.locfileid: "67898850"
  SQL_TXN_ISOLATION_OPTION возвращает SQL_TXN_READ_COMMITTED.  
   
 ## <a name="u-z"></a>U-Z  
- SQL_UNION возвращает SQL_U_UNION или SQL_U_UNION_ALL.  
+ SQL_UNION возвращает либо SQL_U_UNION, либо SQL_U_UNION_ALL.  
   
- Возвращает SQL_USER_NAME \<пустой >.
+ SQL_USER_NAME возвращает \<пустое>.

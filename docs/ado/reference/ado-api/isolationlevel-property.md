@@ -1,5 +1,5 @@
 ---
-title: Свойство IsolationLevel | Документация Майкрософт
+title: IsolationLevel, свойство | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,29 +16,29 @@ ms.assetid: ea84e4b2-fbf2-4eef-b9ce-796b22e21800
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dc360bc91e977228a6f9139089a7bfa87d912e1f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918440"
 ---
 # <a name="isolationlevel-property"></a>Свойство IsolationLevel
-Указывает уровень изоляции для [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта.  
+Указывает уровень изоляции для объекта [соединения](../../../ado/reference/ado-api/connection-object-ado.md) .  
   
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
- Возвращает или задает [IsolationLevelEnum](../../../ado/reference/ado-api/isolationlevelenum.md) значение. По умолчанию используется **adXactReadCommitted**.  
+ Задает или возвращает значение [исолатионлевеленум](../../../ado/reference/ado-api/isolationlevelenum.md) . Значение по умолчанию — **adXactReadCommitted**.  
   
-## <a name="remarks"></a>Примечания  
- Используйте **IsolationLevel** свойство для задания уровня изоляции **подключения** объекта. Этот параметр не вступили в силу только при следующем вызове [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) метод. Если уровень изоляции, запрашивается недоступен, это означает, поставщик может вернуть больше уровня изоляции без обновления **IsolationLevel** свойство.  
+## <a name="remarks"></a>Remarks  
+ Используйте свойство **IsolationLevel** , чтобы установить уровень изоляции объекта **Connection** . Параметр не вступит в силу до следующего вызова метода [примеры BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) . Если запрошенный уровень изоляции недоступен, поставщик может вернуть следующий более высокий уровень изоляции, не обновляя свойство **IsolationLevel** .  
   
- **IsolationLevel** свойство доступно для чтения/записи.  
+ Свойство **IsolationLevel** доступно для чтения и записи.  
   
 > [!NOTE]
->  **Удаленное использование службы данных** при использовании на стороне клиента **подключения** объекта, **IsolationLevel** свойству можно присвоить только значение **adXactUnspecified**. Так как пользователи работают с отключенной **записей** объекты на стороне клиента кэша, могут возникнуть проблемы в многопользовательской. К примеру попытку обновления той же записи два разных пользователя удаленной службы данных просто позволяет пользователю, выполняющему сначала обновляет запись для «win». Запрос на обновление второго пользователя будут завершаться ошибкой.  
+>  **Использование удаленной службы данных** При использовании объекта **подключения** на стороне клиента свойство **IsolationLevel** может быть установлено только в **адксактунспеЦифиед**. Поскольку пользователи работают с отключенными объектами **Recordset** в кэше на стороне клиента, могут возникнуть проблемы с многопользовательской работой. Например, когда два разных пользователя пытаются обновить одну и ту же запись, служба Remote Data Service просто позволяет пользователю, который сначала обновляет запись, получить «выиграть». Запрос на обновление второго пользователя завершится с ошибкой.  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
- [Примеры IsolationLevel и Mode свойства (Visual Basic)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vb.md)   
- [Примеры IsolationLevel и Mode свойства (Visual C++)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vc.md)   
+## <a name="see-also"></a>См. также:  
+ [Пример свойств IsolationLevel и Mode (Visual Basic)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vb.md)   
+ [Пример свойств IsolationLevel и Mode (Visual c++)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vc.md)   

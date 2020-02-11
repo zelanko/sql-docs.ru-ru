@@ -14,16 +14,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 637d4e648d4d2b5c64d4635af8f96d0f2258b2f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479935"
 ---
 # <a name="create-a-model-master-data-services"></a>Создание модели (службы Master Data Services)
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]модель создается для того, чтобы содержать объекты.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения этой процедуры:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
@@ -34,26 +34,26 @@ ms.locfileid: "65479935"
   
 2.  На странице **Представление модели** в строке меню наведите указатель мыши на **Управление** и щелкните **Модели**.  
   
-3.  На **обслуживание модели** щелкните **Add model**.  
+3.  На странице **Обслуживание модели** нажмите кнопку **Добавить модель**.  
   
-4.  В **имя_модели** введите имя модели.  
+4.  В поле **имя модели** введите имя модели.  
   
 5.  По желанию выберите параметр **Создать сущность с именем модели** для создания сущности с тем же именем, что и у модели.  
   
-6.  При необходимости выберите **создать явную иерархию с именем модели** для создания явной иерархии с тем же именем, что и у модели. Этот параметр также активирует сущность для коллекций.  
+6.  При необходимости выберите **создать явную иерархию с тем же именем, что и модель** , чтобы создать явную иерархию с тем же именем, что и у модели. Этот параметр также активирует сущность для коллекций.  
   
-7.  При необходимости выберите **обязательная иерархия (все конечные элементы** для создания явной иерархии как обязательной иерархии.  
+7.  При необходимости выберите **обязательная иерархия (все конечные элементы будут включены** для создания явной иерархии в качестве обязательной иерархии).  
   
 8.  Нажмите **Сохранить модель**.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
   
--   [Создание сущности (службы Master Data Services)](create-an-entity-master-data-services.md)  
+-   [Создание сущности &#40;Master Data Services&#41;](create-an-entity-master-data-services.md)  
   
 ## <a name="see-also"></a>См. также:  
- [Модели (службы Master Data Services)](../../2014/master-data-services/models-master-data-services.md)   
- [Сущности (службы Master Data Services)](../../2014/master-data-services/entities-master-data-services.md)   
- [Удаление модели (службы Master Data Services)](../../2014/master-data-services/delete-a-model-master-data-services.md)   
- [Изменение имени модели &#40;службы Master Data Services&#41;](../../2014/master-data-services/change-a-model-name-master-data-services.md)  
+ [Модели &#40;Master Data Services&#41;](../../2014/master-data-services/models-master-data-services.md)   
+ [Сущности &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)   
+ [Удаление &#40;модели Master Data Services&#41;](../../2014/master-data-services/delete-a-model-master-data-services.md)   
+ [Измените имя модели &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-model-name-master-data-services.md)  
   
   

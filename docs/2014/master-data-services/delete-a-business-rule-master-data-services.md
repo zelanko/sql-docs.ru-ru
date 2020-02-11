@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d294bb2d07d87216fb40fb93267518970fdf4c9d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479739"
 ---
 # <a name="delete-a-business-rule-master-data-services"></a>Удаление бизнес-правила (службы Master Data Services)
@@ -26,7 +26,7 @@ ms.locfileid: "65479739"
 > [!NOTE]  
 >  Чтобы предотвратить выполнение проверки данных на соответствие бизнес-правилу, можно исключить эти данные, а не удалить их. Дополнительные сведения см. в разделе [Exclude a Business Rule &#40;Master Data Services&#41;](exclude-a-business-rule-master-data-services.md).  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения этой процедуры:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
@@ -49,17 +49,17 @@ ms.locfileid: "65479739"
   
 7.  В сетке щелкните строку бизнес-правила, которое необходимо удалить.  
   
-8.  Нажмите кнопку **удалить выбранное бизнес-правило**.  
+8.  Щелкните **Удалить выбранное бизнес-правило**.  
   
-9. В диалоговом окне подтверждения нажмите кнопку **ОК**. Значение в **состояние** столбец **Ожидается удаление**.  
+9. В диалоговом окне подтверждения нажмите кнопку **ОК**. Значение в столбце **состояние** — **Ожидание удаления**.  
   
 10. Нажмите кнопку **Опубликовать бизнес-правила**.  
   
 11. В диалоговом окне подтверждения нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также  
- [Исключение бизнес-правила (службы Master Data Services)](exclude-a-business-rule-master-data-services.md)   
- [Создание и публикация бизнес-правила (службы Master Data Services)](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)   
- [Бизнес-правила (службы Master Data Services)](../../2014/master-data-services/business-rules-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Исключить &#40;бизнес-правила Master Data Services&#41;](exclude-a-business-rule-master-data-services.md)   
+ [Создание и публикация бизнес-правила &#40;Master Data Services&#41;](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)   
+ [Бизнес-правила &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
   

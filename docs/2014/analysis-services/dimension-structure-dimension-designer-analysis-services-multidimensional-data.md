@@ -1,5 +1,5 @@
 ---
-title: Структура (конструктор измерений) измерения (службы Analysis Services — многомерные данные) | Документация Майкрософт
+title: Структура измерения (конструктор измерений) (Analysis Services-многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cb5c593d07d0df235fb173c02229bcf784847306
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081748"
 ---
 # <a name="dimension-structure-dimension-designer-analysis-services---multidimensional-data"></a>Структура измерения (конструктор измерений) (службы Analysis Services — многомерные данные)
   Страница **Структура измерения** конструктора измерений используется для изменения атрибутов, иерархий и уровней выбранного измерения. Страница **Структура измерения** содержит панель инструментов и три области.  
   
- **Чтобы отобразить страницу «Структура измерения»**  
+ **Отображение страницы «Структура измерения»**  
   
 -   В среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]откройте проект служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , затем откройте нужное измерение.  
   
@@ -43,9 +43,9 @@ ms.locfileid: "66081748"
  [Атрибуты](attributes-dimension-designer-analysis-services-multidimensional-data.md)  
  Панель **Атрибуты** используется для обзора и управления атрибутами измерения.  
   
-## <a name="see-also"></a>См. также  
- [Конструктор измерений &#40;службы Analysis Services — многомерные данные&#41;](dimension-designer-analysis-services-multidimensional-data.md)   
- [Измерения &#40;службы Analysis Services — многомерные данные&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>См. также:  
+ [Конструктор измерений &#40;Analysis Services многомерных данных&#41;](dimension-designer-analysis-services-multidimensional-data.md)   
+ [Измерения &#40;Analysis Services многомерных данных&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Измерения в многомерных моделях](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

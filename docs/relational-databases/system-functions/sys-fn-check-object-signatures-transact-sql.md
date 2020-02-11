@@ -1,5 +1,5 @@
 ---
-title: sys.fn_check_object_signatures (Transact-SQL) | Документация Майкрософт
+title: sys. fn_check_object_signatures (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1b9054cae2d8b67a96be964ca8dd0f1effe2113a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046309"
 ---
-# <a name="sysfncheckobjectsignatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
+# <a name="sysfn_check_object_signatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   Возвращает список всех подписываемых объектов и показывает, был ли объект подписан указанным сертификатом или асимметричным ключом. Если объект подписан указанным сертификатом или асимметричным ключом, возвращает также данные о том, является ли подпись объекта допустимой.  
@@ -52,23 +52,23 @@ fn_ check_object_signatures (
   
 -   'asymmetric key'  
   
- \@*Класс* — **sysname**.  
+ \@Аргумент *Class* имеет тип **sysname**.  
   
- { \@ *отпечаток* }  
- Хэш SHA-1 сертификата, с помощью которого был зашифрован ключ, или идентификатор GUID асимметричного ключа, которым был зашифрован этот ключ. \@*отпечаток* — **varbinary(20)** .  
+ { \@ *Thumbprint* }  
+ Хэш SHA-1 сертификата, с помощью которого был зашифрован ключ, или идентификатор GUID асимметричного ключа, которым был зашифрован этот ключ. \@*отпечаток* имеет тип **varbinary (20)**.  
   
 ## <a name="tables-returned"></a>Возвращаемые таблицы  
- В следующей таблице перечислены столбцы, **fn_check_object_signatures** возвращает.  
+ В следующей таблице перечислены столбцы, возвращаемые **fn_check_object_signatures** .  
   
-|Столбец|Type|Описание|  
+|Столбец|Тип|Description|  
 |------------|----------|-----------------|  
-|type|**nvarchar(120)**|Возвращает описание типа или сборки.|  
+|type|**nvarchar (120)**|Возвращает описание типа или сборки.|  
 |entity_id|**int**|Возвращает идентификатор оцениваемого объекта.|  
 |is_signed|**int**|Возвращает значение 0, если объект не был подписан с помощью предоставленного отпечатка. Возвращает значение 1, если объект подписан с помощью предоставленного отпечатка.|  
 |is_signature_valid|**int**|Если значение is_signed равно 1, возвращает значение 0, если подпись не является допустимой. Возвращает значение 1, если подпись является допустимой.<br /><br /> Если значение is_signed равно 0, всегда возвращает 0.|  
   
-## <a name="remarks"></a>Примечания  
- Используйте **fn_check_object_signatures** для подтверждения того, что пользователи-злоумышленники не изменены с объектами.  
+## <a name="remarks"></a>Remarks  
+ Используйте **fn_check_object_signatures** , чтобы убедиться в том, что злоумышленники не подделки объектов.  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение VIEW DEFINITION на сертификат или асимметричный ключ.  
@@ -91,7 +91,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [IS_OBJECTSIGNED &#40;Transact-SQL&#41;](../../t-sql/functions/is-objectsigned-transact-sql.md)  
   
   

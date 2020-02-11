@@ -1,5 +1,5 @@
 ---
-title: Исходный пример свойства (Visual C++) | Документация Майкрософт
+title: Пример свойства Source (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: e10d33da-ea30-4138-ae40-e9f6aa9d17d9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: da0bfacc4ab64929bcd37051efa9d36944871253
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930887"
 ---
 # <a name="source-property-example-vc"></a>Пример свойства Source (Visual C++)
-В этом примере показано [источника](../../../ado/reference/ado-api/source-property-ado-recordset.md) свойство, открыв три [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекты на основе различных источников данных.  
+В этом примере показано свойство [Source](../../../ado/reference/ado-api/source-property-ado-recordset.md) , открывающее три объекта [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) на основе различных источников данных.  
   
 ```  
 // Source_Property_Sample.cpp  
@@ -156,6 +156,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Свойство Source (объект Recordset ADO)](../../../ado/reference/ado-api/source-property-ado-recordset.md)

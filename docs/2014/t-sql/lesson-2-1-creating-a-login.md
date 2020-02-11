@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 7ceed5f82af858f6a2dc3a88df7276d5ba2fda3f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211208"
 ---
 # <a name="creating-a-login"></a>Создание имени входа
@@ -26,7 +26,7 @@ ms.locfileid: "68211208"
   
 ### <a name="to-create-a-new-windows-account"></a>Создание новой учетной записи Windows  
   
-1.  Нажмите кнопку **запустить**, нажмите кнопку **запуска**в **откройте** введите `%SystemRoot%\system32\compmgmt.msc /s`и нажмите кнопку **ОК** чтобы открыть программу «Управление компьютером».  
+1.  Нажмите кнопку **Пуск**, выберите пункт **выполнить**, в поле **Открыть** введите `%SystemRoot%\system32\compmgmt.msc /s`, а затем нажмите кнопку **ОК** , чтобы открыть программу управления компьютером.  
   
 2.  В пункте **Служебные программы**откройте **Локальные пользователи и группы**, щелкните правой кнопкой мыши элемент **Пользователи**и выберите пункт **Новый пользователь**.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68211208"
   
 ### <a name="to-create-a-login"></a>Создание имени входа  
   
-1.  В окне редактора запросов среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]введите и выполните следующий исходный код, заменив `computer_name` на имя компьютера. `FROM WINDOWS` указывает, что Windows проверит подлинность пользователя. Необязательный аргумент `DEFAULT_DATABASE` соединяет `Mary` с базой данных `TestData` , если только в ее строке соединения не указана другая база данных. Эта инструкция рассматривает точку с запятой в виде необязательного завершения инструкции языка [!INCLUDE[tsql](../includes/tsql-md.md)] .  
+1.  В окне редактора запросов среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]введите и выполните следующий исходный код, заменив `computer_name` на имя компьютера. `FROM WINDOWS`Указывает, что Windows будет проверять подлинность пользователя. Необязательный аргумент `DEFAULT_DATABASE` соединяет `Mary` с базой данных `TestData` , если только в ее строке соединения не указана другая база данных. Эта инструкция рассматривает точку с запятой в виде необязательного завершения инструкции языка [!INCLUDE[tsql](../includes/tsql-md.md)] .  
   
     ```  
     CREATE LOGIN [computer_name\Mary]  
@@ -53,8 +53,8 @@ ms.locfileid: "68211208"
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
  [Предоставление доступа к базе данных](lesson-2-2-granting-access-to-a-database.md)  
   
-## <a name="see-also"></a>См. также  
- [CREATE LOGIN (Transact-SQL)](/sql/t-sql/statements/create-login-transact-sql)   
+## <a name="see-also"></a>См. также:  
+ [Создание имени входа &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)   
  [Выбор режима проверки подлинности](../relational-databases/security/choose-an-authentication-mode.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys.fn_validate_plan_guide (Transact-SQL) | Документация Майкрософт
+title: sys. fn_validate_plan_guide (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ ms.assetid: 3af8b47a-936d-4411-91d1-d2d16dda5623
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a76835272ed86faeab807f97f6e8801985062733
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68059202"
 ---
-# <a name="sysfnvalidateplanguide-transact-sql"></a>sys.fn_validate_plan_guide (Transact-SQL)
+# <a name="sysfn_validate_plan_guide-transact-sql"></a>sys.fn_validate_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Проверяет допустимость указанного руководства плана. Функция sys.fn_validate_plan_guide возвращает первое сообщение об ошибке, выдаваемое при применении структуры плана к запросу. Если структура плана допустима, возвращается пустой набор строк. Структуры планов могут стать недопустимыми после внесения изменений в физическую структуру базы данных. Например, если в структуре плана указан конкретный индекс, который впоследствии удаляется, данная структура плана больше не может быть использована для запроса.  
@@ -44,16 +44,16 @@ sys.fn_validate_plan_guide ( plan_guide_id )
   
 ## <a name="arguments"></a>Аргументы  
  *plan_guide_id*  
- — Это идентификатор структуры плана в [sys.plan_guides](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md) представления каталога. *plan_guide_id* — **int** не имеет значения по умолчанию.  
+ Идентификатор структуры плана, сообщаемый в представлении каталога [sys. plan_guides](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md) . *plan_guide_id* имеет **тип int** и не имеет значения по умолчанию.  
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |msgnum|**int**|Идентификатор сообщения об ошибке.|  
 |severity|**tinyint**|Степень серьезности сообщения, от 1 до 25.|  
 |state|**smallint**|Номер состояния ошибки, отмеченной точкой в коде, в котором она произошла.|  
-|message|**nvarchar(2048)**|Текст сообщения ошибки.|  
+|Message|**nvarchar (2048)**|Текст сообщения ошибки.|  
   
 ## <a name="permissions"></a>Разрешения  
  Для руководств планов области OBJECT требуются разрешения VIEW DEFINITION или ALTER на соответствующий объект и разрешения на компиляцию запроса или пакета, представленного в структуре плана. Например, если пакет содержит инструкции SELECT, необходимы разрешения SELECT на соответствующие объекты.  
@@ -75,7 +75,7 @@ GO
 ```  
   
 ### <a name="b-testing-plan-guide-validation-before-implementing-a-change-to-the-database"></a>Б. Тестирование проверки руководства плана перед изменением базы данных  
- В следующем примере используется явная транзакция для удаления индекса. `sys.fn_validate_plan_guide` Функция выполняется для определения ли это действие сделает недействительным все структуры планов в базе данных. В зависимости от результатов выполнения этой функции инструкция `DROP INDEX` фиксируется либо выполняется откат транзакции, а индекс не удаляется.  
+ В следующем примере используется явная транзакция для удаления индекса. `sys.fn_validate_plan_guide` Функция выполняется, чтобы определить, будет ли это действие делать недействительными структуры плана в базе данных. В зависимости от результатов выполнения этой функции инструкция `DROP INDEX` фиксируется либо выполняется откат транзакции, а индекс не удаляется.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -92,9 +92,9 @@ ELSE
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Структуры планов](../../relational-databases/performance/plan-guides.md)   
- [sp_create_plan_guide (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
- [sp_create_plan_guide_from_handle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)  
+ [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
+ [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)  
   
   

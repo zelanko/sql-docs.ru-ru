@@ -1,5 +1,5 @@
 ---
-title: процедура sp_describe_cursor_columns (Transact-SQL) | Документация Майкрософт
+title: sp_describe_cursor_columns (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 6eaa54af-7ba4-4fce-bf6c-6ac67cc1ac94
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1dffb53a2b6436725a2b7dc19dfb209a58b1134e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68053113"
 ---
-# <a name="spdescribecursorcolumns-transact-sql"></a>sp_describe_cursor_columns (Transact-SQL)
+# <a name="sp_describe_cursor_columns-transact-sql"></a>sp_describe_cursor_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Выдает отчет об атрибутах столбцов результирующего набора серверного курсора.  
@@ -47,49 +47,49 @@ sp_describe_cursor_columns
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @cursor_return=] *output_cursor_variable* выходных данных  
- Имя объявленной переменной для получения выходных данных курсора. *output_cursor_variable* — **курсор**, не по умолчанию, и не может быть связан с какими-либо курсорами во время вызова sp_describe_cursor_columns. Возвращаемый курсор является прокручиваемым, динамическим и доступным только для чтения.  
+ [ @cursor_return= ] *output_cursor_variable* ПРОВЕРКИ  
+ Имя объявленной переменной для получения выходных данных курсора. *output_cursor_variable* является **курсором**, не имеет значения по умолчанию и не должен быть связан ни с одним курсором во время вызова sp_describe_cursor_columns. Возвращаемый курсор является прокручиваемым, динамическим и доступным только для чтения.  
   
- [ @cursor_source=] {N'local' | N'global' | N'variable'}  
- Указывает, задан ли возвращаемый курсор с помощью имени локального курсора, глобального курсора или курсорной переменной. Параметр — **nvarchar(30)** .  
+ [ @cursor_source= ] {Н'локал ' | Н'глобал ' | Н'вариабле "}  
+ Указывает, задан ли возвращаемый курсор с помощью имени локального курсора, глобального курсора или курсорной переменной. Параметр имеет тип **nvarchar (30)**.  
   
- [ @cursor_identity=] N'*local_cursor_name*"  
- Имя курсора, созданного инструкцией DECLARE CURSOR с ключевым словом LOCAL или параметром LOCAL по умолчанию. *local_cursor_name* — **nvarchar(128)** .  
+ [ @cursor_identity= ] N "*local_cursor_name*"  
+ Имя курсора, созданного инструкцией DECLARE CURSOR с ключевым словом LOCAL или параметром LOCAL по умолчанию. *local_cursor_name* имеет тип **nvarchar (128)**.  
   
- [ @cursor_identity=] N'*global_cursor_name*"  
- Имя курсора, созданного инструкцией DECLARE CURSOR с ключевым словом GLOBAL или параметром GLOBAL по умолчанию. *global_cursor_name* — **nvarchar(128)** .  
+ [ @cursor_identity= ] N "*global_cursor_name*"  
+ Имя курсора, созданного инструкцией DECLARE CURSOR с ключевым словом GLOBAL или параметром GLOBAL по умолчанию. *global_cursor_name* имеет тип **nvarchar (128)**.  
   
- *global_cursor_name* также может быть именем серверного курсора API, открытого приложением ODBC и затем именованного вызовом SQLSetCursorName.  
+ *global_cursor_name* также может быть именем серверного курсора API, который открыт приложением ODBC, а затем называется вызовом SQLSetCursorName.  
   
- [ @cursor_identity=] N'*input_cursor_variable*"  
- Имя переменной курсора, связанной с открытым курсором. *input_cursor_variable* — **nvarchar(128)** .  
+ [ @cursor_identity= ] N "*input_cursor_variable*"  
+ Имя переменной курсора, связанной с открытым курсором. *input_cursor_variable* имеет тип **nvarchar (128)**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  None  
   
 ## <a name="cursors-returned"></a>Возвращенные курсоры  
- процедура sp_describe_cursor_columns инкапсулирует отчет в виде [!INCLUDE[tsql](../../includes/tsql-md.md)] **курсор** выходного параметра. Это позволяет пакетам [!INCLUDE[tsql](../../includes/tsql-md.md)], хранимым процедурам и триггерам построчно обрабатывать выходные данные. Это также означает, что процедуру нельзя вызывать непосредственно из функций API баз данных. **Курсор** выходной параметр должен быть привязан к программной переменной, но API базы данных не поддерживают привязку **курсор** параметры или переменные.  
+ sp_describe_cursor_columns инкапсулирует свой отчет в качестве [!INCLUDE[tsql](../../includes/tsql-md.md)] выходного параметра **курсора** . Это позволяет пакетам [!INCLUDE[tsql](../../includes/tsql-md.md)], хранимым процедурам и триггерам построчно обрабатывать выходные данные. Это также означает, что процедуру нельзя вызывать непосредственно из функций API баз данных. Параметр вывода **курсора** должен быть привязан к программной переменной, но API-интерфейсы базы данных не поддерживают привязку параметров или переменных **курсора** .  
   
  В следующей таблице приводится описание курсора, возвращаемого с помощью процедуры sp_describe_cursor_columns.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|column_name|**sysname** (допускающие значение NULL)|Имя, назначенное столбцу результирующего набора. Столбец принимает значение NULL, если он был задан без сопутствующего предложения AS.|  
+|column_name|**sysname** (Nullable)|Имя, назначенное столбцу результирующего набора. Столбец принимает значение NULL, если он был задан без сопутствующего предложения AS.|  
 |ordinal_position|**int**|Позиция столбца относительно крайнего левого столбца в результирующем наборе. Первый столбец находится в позиции 0.|  
 |column_characteristics_flags|**int**|Битовая маска параметров, хранящихся в переменной DBCOLUMNFLAGS OLE DB. Может представлять собой одно из следующих значений или их сочетание.<br /><br /> 1 = закладка<br /><br /> 2 = фиксируемая длина<br /><br /> 4 = допускающий значения NULL<br /><br /> 8 = управление версиями строк<br /><br /> 16 = обновляемый столбец (устанавливается для проецируемых столбцов курсора, не имеющего предложения FOR UPDATE. Если таковой столбец имеется, то аргумент может указываться только один раз для курсора).<br /><br /> При сочетании битовых значений применяются характеристики комбинируемых значений. Например, если битовое значение равно 6, столбец имеет фиксированную длину (2) и допускает значения NULL (4).|  
 |column_size|**int**|Предельно допустимый размер значения данного столбца.|  
 |data_type_sql|**smallint**|Число, определяющее тип данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] данного столбца.|  
-|column_precision|**tinyint**|Максимальная точность столбца согласно *bPrecision* значение в OLE DB.|  
-|column_scale|**tinyint**|Количество цифр справа от десятичной запятой для **числовых** или **десятичное** типы данных согласно *bScale* значение в OLE DB.|  
+|column_precision|**tinyint**|Максимальная точность столбца в соответствии со значением *бпреЦисион* в OLE DB.|  
+|column_scale|**tinyint**|Количество цифр справа от десятичной запятой для **числовых** или **десятичных** типов данных в соответствии со значением *bScale* в OLE DB.|  
 |order_position|**int**|Если столбец участвует в сортировке результирующего набора, позиция столбца в ключе сортировки относительно крайнего левого столбца.|  
-|order_direction|**varchar(1)** (допускающие значение NULL)|A — Столбец входит в ключ сортировки, которая производится по возрастанию.<br /><br /> D — Столбец входит в ключ сортировки, которая упорядочивается по убыванию.<br /><br /> NULL — Столбец не участвует в сортировке.|  
+|order_direction|**varchar (1)**(Nullable)|A — Столбец входит в ключ сортировки, которая производится по возрастанию.<br /><br /> D — Столбец входит в ключ сортировки, которая упорядочивается по убыванию.<br /><br /> NULL — Столбец не участвует в сортировке.|  
 |hidden_column|**smallint**|0 = данный столбец отображается в списке выбора.<br /><br /> 1 = зарезервировано для использования в будущем.|  
 |columnid|**int**|Идентификатор базового столбца. Если столбец результирующего набора строится из выражения, значение columnid равно -1.|  
 |objectid|**int**|Идентификатор объекта или базовой таблицы, служащих источником столбца. Если столбец результирующего набора строится из выражения, значение objectid равно -1.|  
 |dbid|**int**|Идентификатор базы данных, в которой находится таблица этого столбца. Если столбец результирующего набора строится из выражения, значение dbid равно -1.|  
-|dbname|**sysname**<br /><br /> (допускает значение NULL)|Имя базы данных, содержащей базовую таблицу, служащую источником столбца. Если столбец результирующего набора строится из выражения, значение dbname равно NULL.|  
+|dbname|**имеет sysname**<br /><br /> (допускает значение NULL)|Имя базы данных, содержащей базовую таблицу, служащую источником столбца. Если столбец результирующего набора строится из выражения, значение dbname равно NULL.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Процедура sp_describe_cursor_columns описывает атрибуты столбцов в результирующем наборе серверного курсора, такие как имя и тип данных, для каждого курсора. Процедура sp_describe_cursor используется для получения описания глобальных атрибутов серверного курсора. Процедура sp_describe_cursor_tables используется для получения отчета по базовым таблицам, на которые ссылается курсор. Чтобы получить отчет по серверным курсорам [!INCLUDE[tsql](../../includes/tsql-md.md)], видимым в соединении, используется процедура sp_cursor_list.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -135,13 +135,13 @@ DEALLOCATE abc;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Курсоры](../../relational-databases/cursors.md)   
  [CURSOR_STATUS &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-status-transact-sql.md)   
- [DECLARE CURSOR (Transact-SQL)](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
- [процедура sp_describe_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-transact-sql.md)   
- [Хранимая процедура sp_cursor_list &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)   
- [процедура sp_describe_cursor_tables &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [ОБЪЯВИТь курсор &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
+ [sp_describe_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-transact-sql.md)   
+ [sp_cursor_list &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)   
+ [sp_describe_cursor_tables &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Примеры MoveFirst, MoveLast, MoveNext и MovePrevious методы (ADO) | Документация Майкрософт
+title: Методы MoveFirst, MoveLast, MoveNext и MovePrevious (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -26,14 +26,14 @@ ms.assetid: a61a01a7-5b33-4150-9126-21dfa63654cb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e5f0cdacc6e0d7e5512dbc259815e5b9562c9b68
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918113"
 ---
-# <a name="movefirst-movelast-movenext-and-moveprevious-methods-ado"></a>Примеры MoveFirst, MoveLast, MoveNext и MovePrevious методы (ADO)
-Переходит к первой, последней, следующей или предыдущей записи в указанном [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта и делает этот записи текущей записи.  
+# <a name="movefirst-movelast-movenext-and-moveprevious-methods-ado"></a>Методы MoveFirst, MoveLast, MoveNext и MovePrevious (ADO)
+Переходит к первой, последней, следующей или предыдущей записи в указанном объекте [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) и делает запись текущей записью.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,28 +42,28 @@ ms.locfileid: "67918113"
 recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}  
 ```  
   
-## <a name="remarks"></a>Примечания  
- Используйте **MoveFirst** метод для перехода к первой записи в текущей позиции записи **записей**.  
+## <a name="remarks"></a>Remarks  
+ Используйте метод **MoveFirst** , чтобы переместить текущую запись в первую запись в **наборе записей**.  
   
- Используйте **MoveLast** метод для перемещения положения текущей записи к последней записи в **записей**. **Записей** объект должен поддерживать закладки или движение курсора назад; в противном случае вызов метода приведет к ошибке.  
+ Используйте метод **MoveLast** , чтобы переместить текущую запись в последнюю запись в **наборе записей**. Объект **Recordset** должен поддерживать закладки или обратное перемещение курсора; в противном случае вызов метода выдаст ошибку.  
   
- Вызов либо **MoveFirst** или **MoveLast** при **записей** пуст (оба **BOF** и **EOF** имеют значение True) приводит к ошибке.  
+ Вызов метода **MoveFirst** или **MoveLast** , если **набор записей** пуст (значение **BOF** и **EOF** равно true), выдает ошибку.  
   
- Используйте **MoveNext** метод для перемещения текущей записи вперед положение одной записи (в нижней части **записей**). Если последняя запись становится текущей записью и вызывается **MoveNext** метода ADO задает текущую запись в позицию после последней записи в **записей** ([EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) — **True**). Переместить вперед when **EOF** свойство уже **True** приводит к ошибке.  
+ Используйте метод **MoveNext** для перемещения текущей записи, расположенной на одну запись вперед (в нижней части **набора записей**). Если последняя запись является текущей и вызывается метод **MoveNext** , ADO устанавливает текущую запись в качестве текущей записи после последней записи в **наборе записей** (значение[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) равно **true**). Попытка перемещения вперед, если свойство **EOF** уже имеет **значение true** , приводит к ошибке.  
   
- В ADO 2.5 и более поздних версий, при **набор записей** фильтрации или сортировки и изменении данных текущей записи, вызвав **MoveNext** метод перемещает курсор на две записи вперед от текущей записи . Это потому, что при изменении текущей записи следующей записи становится новой текущей записи. Вызов **MoveNext** после изменения перемещает курсор одной записи вперед из новой текущей записи. Это отличается от поведения в ADO 2.1 и более ранних версий. В более ранних версиях, изменение данных текущей записи в отсортированном или фильтрованном **записей** не меняет позицию текущей записи, и **MoveNext** перемещает курсор к следующей записи сразу после текущей записи.  
+ В ADO 2,5 и более поздних версиях, когда **набор записей** фильтруется или сортируется и изменяются данные текущей записи, вызов метода **MoveNext** перемещает курсор на две записи вперед от текущей записи. Это происходит потому, что при изменении текущей записи Следующая запись становится новой текущей записью. Вызов **MoveNext** после изменения перемещает курсор на одну запись вперед от новой текущей записи. Это отличается от поведения в ADO 2,1 и более ранних версиях. В этих более ранних версиях изменение данных текущей записи в отсортированном или фильтруемом **наборе записей** не изменяет позицию текущей записи, а **MoveNext** перемещает курсор на следующую запись сразу после текущей записи.  
   
- Используйте **MovePrevious** метод для перемещения текущей записи размещения обратной записи (в верхней части **записей**). **Записей** объект должен поддерживать закладки или движение курсора назад; в противном случае вызов метода приведет к ошибке. Если первая запись становится текущей записью и вызывается **MovePrevious** метода ADO задает текущую запись до позиции перед первой записи в **записей** ([BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)— **True**). Переместить назад when **BOF** свойство уже **True** приводит к ошибке. Если **записей** объект не поддерживает закладки или перемещение курсора обратной **MovePrevious** метод выдаст ошибку.  
+ Используйте метод **MovePrevious** , чтобы переместить текущую запись в обратном направлении (в верхнюю часть **набора записей**). Объект **Recordset** должен поддерживать закладки или обратное перемещение курсора; в противном случае вызов метода выдаст ошибку. Если первая запись является текущей и вызывается метод **MovePrevious** , ADO устанавливает текущую запись в точку перед первой записью в **наборе записей** ([BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) имеет **значение true**). Попытка перемещения назад, если свойство **BOF** уже имеет **значение true** , приводит к ошибке. Если объект **Recordset** не поддерживает ни закладки, ни обратное перемещение курсора, метод **MovePrevious** выдаст ошибку.  
   
- Если **записей** только вперед, и вы хотите поддерживают прокрутку вперед и назад, можно использовать [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) свойства для создания записи кэша, который будет поддерживать движение курсора назад через [переместить](../../../ado/reference/ado-api/move-method-ado.md) метод. Так как кэшированные записи загружаются в память, следует избегать кэширования больше записей, чем необходимо. Можно вызвать **MoveFirst** метод в последовательным **записей** объекта; это может привести к поставщику, повторно выполните команду, которая сформирована **записей** объекта .  
+ Если **набор записей** предназначен только для переадресации и требуется поддержка прямой и обратной прокрутки, можно использовать свойство [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) для создания кэша записей, который будет поддерживать обратное перемещение курсора через метод [Move](../../../ado/reference/ado-api/move-method-ado.md) . Поскольку кэшированные записи загружаются в память, следует избегать кэширования большего количества записей, чем требуется. Метод **MoveFirst** можно вызвать в объекте **набора записей** последовательного доступа. Это может привести к тому, что поставщик повторно выполнит команду, создавшую объект **набора записей** .  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
- [MoveFirst, MoveLast, MoveNext и MovePrevious методы пример (Visual Basic)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vb.md)   
- [Примеры MoveFirst, MoveLast, MoveNext и MovePrevious примеры методов (VBScript)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vbscript.md)   
- [MoveFirst, MoveLast, MoveNext и MovePrevious примеры методов (Visual C++)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vc.md)   
+## <a name="see-also"></a>См. также:  
+ [Примеры методов MoveFirst, MoveLast, MoveNext и MovePrevious (Visual Basic)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vb.md)   
+ [Пример методов MoveFirst, MoveLast, MoveNext и MovePrevious (VBScript)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vbscript.md)   
+ [Пример методов MoveFirst, MoveLast, MoveNext и MovePrevious (Visual c++)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vc.md)   
  [Метод Move (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
- [Примеры MoveFirst, MoveLast, MoveNext и MovePrevious методы (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)   
+ [Методы MoveFirst, MoveLast, MoveNext и MovePrevious (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)   
  [Метод MoveRecord (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)

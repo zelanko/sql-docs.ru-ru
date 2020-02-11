@@ -1,5 +1,5 @@
 ---
-title: Примеры ActualSize и Definedsize свойства (JScript) | Документация Майкрософт
+title: Примеры свойств ActualSize и DefinedSize (JScript) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 23575e70-2304-43b4-b8be-99d9a6842589
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b465f5e567262aead6ffe73f696968d736b472eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921509"
 ---
 # <a name="actualsize-and-definedsize-properties-example-jscript"></a>Примеры свойств ActualSize и DefinedSize (JScript)
-В этом примере используется [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) и [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) свойства для отображения определенного размера, а фактический размер поля. Вырежьте и вставьте следующий код в блокноте или другом текстовом редакторе и сохраните его в **ActualSizeJS.asp**.  
+В этом примере используются свойства [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) и [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) для вывода определенного размера и фактического размера поля. Вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **актуалсизежс. ASP**.  
   
 ```  
 <!-- BeginActualSizeJS -->  
@@ -130,7 +130,7 @@ body {
 <!-- EndActualSizeJS -->  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство ActualSize (ADO)](../../../ado/reference/ado-api/actualsize-property-ado.md)   
- [Свойство DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)   
+ [DefinedSize, свойство](../../../ado/reference/ado-api/definedsize-property.md)   
  [Объект Field](../../../ado/reference/ado-api/field-object.md)

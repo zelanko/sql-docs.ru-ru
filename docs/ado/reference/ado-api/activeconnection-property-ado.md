@@ -18,64 +18,64 @@ ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8dabf974e36b1f6beaff36f3a4888c128d7dfe1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921513"
 ---
 # <a name="activeconnection-property-ado"></a>Свойство ActiveConnection (ADO)
-Указывает, к которому [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта указанного [команда](../../../ado/reference/ado-api/command-object-ado.md), [записей](../../../ado/reference/ado-api/recordset-object-ado.md), или [записи](../../../ado/reference/ado-api/record-object-ado.md) в данный момент принадлежит объект.  
+Указывает, к какому объекту [соединения](../../../ado/reference/ado-api/connection-object-ado.md) в данный момент принадлежит указанная [команда](../../../ado/reference/ado-api/command-object-ado.md), [набор записей](../../../ado/reference/ado-api/recordset-object-ado.md)или объект [записи](../../../ado/reference/ado-api/record-object-ado.md) .  
   
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
- Возвращает или задает **строка** значение, которое содержит определение для подключения, если подключение закрыто, или объект **Variant** содержащая текущие **подключения** объекта, если подключение открыто. Значение по умолчанию — пустая ссылка на объект. См. в разделе [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) свойство.  
+ Задает или возвращает **строковое** значение, содержащее определение соединения, если соединение закрыто, или **вариант** , содержащий текущий объект **соединения** , если соединение открыто. По умолчанию используется пустая ссылка на объект. См. свойство [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) .  
   
-## <a name="remarks"></a>Примечания  
- Используйте **ActiveConnection** свойства, чтобы определить **подключения** объекта, по которому указанного **команда** объекта будут выполняться или указанный  **Набор записей** будет открыт.  
+## <a name="remarks"></a>Remarks  
+ Используйте свойство **ActiveConnection** , чтобы определить объект **соединения** , для которого будет выполняться указанный объект **команды** , или будет открыт указанный **набор записей** .  
   
-## <a name="command"></a>Command  
- Для **команда** объектов, **ActiveConnection** свойство доступно для чтения/записи.  
+## <a name="command"></a>Get-Help  
+ Для объектов **Command** свойство **ActiveConnection** доступно для чтения и записи.  
   
- При попытке вызвать [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) метод **команда** объекта до установки этого свойства открытый **подключения** объекта или допустимую строку соединения, происходит ошибка.  
+ При попытке вызвать метод [EXECUTE](../../../ado/reference/ado-api/execute-method-ado-command.md) для объекта **Command** перед установкой этого свойства в открытый объект **соединения** или допустимую строку подключения возникнет ошибка.  
   
- Если **подключения** присвоить объект **ActiveConnection** свойство, объект должен быть открыт. Назначение закрытого объекта соединения приводит к ошибке.  
+ Если объект **соединения** назначен свойству **ActiveConnection** , то объект должен быть открыт. При назначении закрытого объекта соединения возникает ошибка.  
   
 ### <a name="note"></a>Примечание  
- **Microsoft Visual Basic** параметр **ActiveConnection** свойства *ничего не* отменяет связь **команда** объекта из текущего **Подключения** и вызывает службу, чтобы освободить все связанные ресурсы в источнике данных. Затем можно связать **команда** объект с той же или другой **подключения** объекта. Некоторые поставщики позволяют изменять параметр свойства из одного **подключения** на другой без необходимости сначала задайте для свойства значение *ничего не*.  
+ **Microsoft Visual Basic** Если задать для свойства **ActiveConnection** значение Nothing, объект **команды** *не* будет связан с текущим **соединением** и будет вызван тем, что поставщик выпустит все связанные ресурсы в источнике данных. Затем можно связать объект **команды** с тем же или с другим объектом **Connection** . Некоторые поставщики позволяют изменить значение свойства с одного **соединения** на другое без необходимости присвоить свойству значение *Nothing*.  
   
- Если [параметры](../../../ado/reference/ado-api/parameters-collection-ado.md) коллекцию **команда** объект содержит параметры, предоставленные поставщиком, коллекция очищается, если задать **ActiveConnection** свойства *ничего не* или в другой **подключения** объекта. Если вручную [параметр](../../../ado/reference/ado-api/parameter-object.md) объектов и использовать их для заполнения **параметры** коллекцию **команда** объекта, присвоив **ActiveConnection**  свойства *ничего не* или в другой **подключения** объект оставляет **параметры** коллекции без изменений.  
+ Если коллекция [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) объекта **Command** содержит параметры, предоставленные поставщиком, коллекция удаляется, если для свойства **ActiveConnection** задано значение *Nothing* или другой объект **соединения** . Если вы вручную создаете объекты [параметров](../../../ado/reference/ado-api/parameter-object.md) и используете их для заполнения коллекции **Parameters** объекта **Command** , установка свойства **ActiveConnection** в значение *Nothing* или на другой объект **соединения** оставляет коллекцию **параметров** неизменной.  
   
- Закрытие **подключения** объект, с которым **команда** объект имеет связанные наборы **ActiveConnection** свойства *ничего не*. Установка этого свойства в закрытом **подключения** возвращает ошибку.  
+ При закрытии объекта **соединения** , с которым связан объект **команды** , свойству **ActiveConnection** присваивается значение *Nothing*. При присвоении этому свойству закрытого объекта **соединения** выдается ошибка.  
   
 ## <a name="recordset"></a>набор записей  
- Для открытой **записей** объектов или для **набор записей** объектов, [источника](../../../ado/reference/ado-api/source-property-ado-recordset.md) задано допустимое **команда** объект, **ActiveConnection** свойство доступно только для чтения. В противном случае — это чтение и запись.  
+ Для открытых **объектов Recordset** или для объектов **набора записей** , свойству [Source](../../../ado/reference/ado-api/source-property-ado-recordset.md) которых задан допустимый объект **Command** , свойство **ActiveConnection** доступно только для чтения. В противном случае он доступен для чтения и записи.  
   
- Это свойство можно задать на допустимый **подключения** объекта или допустимую строку соединения. В этом случае создает новый поставщик **подключения** с помощью этого определения и открывает соединение. Кроме того, поставщик может присвоить этому свойству новый **подключения** объектов дают возможность доступа к **подключения** сведения об ошибке, или для выполнения других команд.  
+ Этому свойству можно присвоить допустимый объект **соединения** или допустимую строку подключения. В этом случае поставщик создает новый объект **соединения** с помощью этого определения и открывает соединение. Кроме того, поставщик может задать этому свойству новый объект **соединения** , чтобы предоставить возможность доступа к объекту **соединения** для получения расширенных сведений об ошибках или выполнения других команд.  
   
- При использовании *ActiveConnection* аргумент [откройте](../../../ado/reference/ado-api/open-method-ado-recordset.md) метод, чтобы открыть **записей** объекта, **ActiveConnection** будет свойство Наследовать значение аргумента.  
+ При использовании аргумента *ActiveConnection* метода [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) для открытия объекта **Recordset** свойство **ActiveConnection** будет наследовать значение аргумента.  
   
- Если задать **источника** свойство **записей** объекта на допустимый **команда** объектной переменной, **ActiveConnection** свойство **записей** наследует параметр **команда** объекта **ActiveConnection** свойство.  
-  
-> [!NOTE]
->  **Удаленное использование службы данных** при использовании на стороне клиента **записей** объект, это свойство можно задать только на строку подключения или (в Microsoft Visual Basic или Visual Basic Scripting Edition) *Nothing* .  
-  
-## <a name="record"></a>Запись  
- Это свойство доступно для чтения/записи при **записи** объект закрывается и может содержать строки подключения или ссылку на открытую **подключения** объекта. Это свойство только для чтения при **записи** объект открыт и содержит ссылку на открытую **подключения** объекта.  
-  
- Объект **подключения** объекта создается неявно при **записи** объект открыт из URL-адрес. Откройте **записи** с существующим, откройте **подключения** объекта путем назначения **подключения** к этому свойству, или помощи **подключения** объект в качестве параметра в [откройте](../../../ado/reference/ado-api/open-method-ado-record.md) вызова метода. Если **записи** открывается из существующего **записи** или [набор записей](../../../ado/reference/ado-api/recordset-object-ado.md), а затем автоматически связывается с этим **записи** или  **Набор записей** объекта **подключения** объекта.  
+ Если свойству **Source** объекта **Recordset** присвоено значение допустимой переменной объекта **Command** , свойство **ActiveConnection** **набора записей** наследует значение свойства **ActiveConnection** объекта **Command** .  
   
 > [!NOTE]
->  URL-адреса, с использованием схемы http, автоматически вызывает метод [поставщик Microsoft OLE DB для публикаций в Интернете](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Дополнительные сведения см. в разделе [абсолютные и относительные URL-адреса](../../../ado/guide/data/absolute-and-relative-urls.md).  
+>  **Использование удаленной службы данных** При использовании объекта **набора записей** на стороне клиента это свойство может быть установлено только в строку подключения или (в Microsoft Visual Basic или Visual Basic, Scripting Edition) в значение *Nothing*.  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="record"></a>Record  
+ Это свойство доступно для чтения и записи при закрытии объекта **Record** и может содержать строку соединения или ссылку на открытый объект **соединения** . Это свойство доступно только для чтения, если объект **Record** открыт, и содержит ссылку на открытый объект **соединения** .  
+  
+ Объект **соединения** создается неявно при открытии объекта **Record** из URL-адреса. Откройте **запись** с существующим открытым объектом **соединения** , назначив этому свойству объект **соединения** или используя объект **соединения** в качестве параметра в вызове метода [Open](../../../ado/reference/ado-api/open-method-ado-record.md) . Если **запись** была открыта из существующей **записи** или [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md), то она автоматически связывается с объектом **соединения** **записи** или объекта **набора записей** .  
+  
+> [!NOTE]
+>  URL-адреса, использующие схему HTTP, автоматически вызывают [поставщик OLE DB Майкрософт для публикации в Интернете](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Дополнительные сведения см. в разделе [абсолютные и относительные URL-адреса](../../../ado/guide/data/absolute-and-relative-urls.md).  
+  
+## <a name="applies-to"></a>Применяется к  
   
 ||||  
 |-|-|-|  
 |[Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[Объект Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|[Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
   
-## <a name="see-also"></a>См. также  
- [ActiveConnection, CommandText, CommandTimeout, CommandType, размер и направление свойства пример (Visual Basic)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
- [ActiveConnection, CommandText, CommandTimeout, CommandType, размер и направление пример свойства (Visual C++)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
- [ActiveConnection, CommandText, CommandTimeout, CommandType, размер и направление примеры свойств (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)   
+## <a name="see-also"></a>См. также:  
+ [Пример свойств ActiveConnection, CommandText, CommandTimeout, CommandType, Size и Direction (Visual Basic)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
+ [Пример свойств ActiveConnection, CommandText, CommandTimeout, CommandType, Size и Direction (Visual c++)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
+ [Пример свойств ActiveConnection, CommandText, CommandTimeout, CommandType, Size и Direction (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)   
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Свойство ConnectionString (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md)

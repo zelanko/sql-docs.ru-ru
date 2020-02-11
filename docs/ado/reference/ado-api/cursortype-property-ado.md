@@ -1,5 +1,5 @@
 ---
-title: Свойство CursorType (ADO) | Документация Майкрософт
+title: Свойство примеры CursorType (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,46 +16,46 @@ ms.assetid: b62c66ca-58d5-430e-9257-eb38c65e48c2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4dc881b96a1e2641d4946340c9462455197f2043
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919256"
 ---
 # <a name="cursortype-property-ado"></a>Свойство CursorType (ADO)
-Указывает тип курсора, используемого в [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта.  
+Указывает тип курсора, используемого в объекте [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) .  
   
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
- Возвращает или задает [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md) значение. Значение по умолчанию — **adOpenForwardOnly**.  
+ Задает или возвращает значение [курсортипинум](../../../ado/reference/ado-api/cursortypeenum.md) . Значение по умолчанию — **адопенфорвардонли**.  
   
-## <a name="remarks"></a>Примечания  
- Используйте **CursorType** свойство, чтобы указать тип курсора, который должен использоваться при открытии **записей** объекта.  
+## <a name="remarks"></a>Remarks  
+ Используйте свойство **примеры CursorType** , чтобы указать тип курсора, который должен использоваться при открытии объекта **Recordset** .  
   
- Только значение **adOpenStatic** поддерживается, если [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) свойству **adUseClient**. Если задано неподдерживаемое значение, сообщение об ошибке не приведет к; ближайшим поддерживается **CursorType** вместо него будет использоваться.  
+ Если свойство [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) имеет значение **адусеклиент**, то поддерживается только параметр **адопенстатик** . Если задано неподдерживаемое значение, то ошибка не будет возникать. Вместо этого будет использоваться ближайший поддерживаемый **примеры CursorType** .  
   
- Если поставщик не поддерживает курсора запрошенного типа, он может вернуть другой тип курсора. **CursorType** свойство изменятся в соответствии фактический тип курсора используется при [записей](../../../ado/reference/ado-api/recordset-object-ado.md) открыт. Для проверки определенных функциональных возможностей, возвращенный курсора, используйте [поддерживает](../../../ado/reference/ado-api/supports-method.md) метод. После того как вы закроете **записей**, **CursorType** , свойство возвращается к исходному.  
+ Если поставщик не поддерживает запрошенный тип курсора, он может вернуть другой тип курсора. Свойство **примеры CursorType** изменится в соответствии с фактическим типом курсора, который используется при открытом объекте [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) . Чтобы проверить конкретную функциональность возвращаемого курсора, используйте метод [поддерживает](../../../ado/reference/ado-api/supports-method.md) . После закрытия **набора записей**свойство **примеры CursorType** возвращается к исходному значению.  
   
- На следующей диаграмме показаны функциональные возможности поставщика (определяется **поддерживает** метод константы) требуется для каждого типа курсора.  
+ На следующей диаграмме показаны функциональные возможности поставщика **(определяемые с помощью** констант методов), необходимые для каждого типа курсора.  
   
-|Для объекта Recordset этот CursorType|Поддерживает метод должен возвращать значение True для всех этих констант|  
+|Для набора записей этого примеры CursorType|Метод поддержки должен возвращать значение true для всех этих констант|  
 |----------------------------------------|---------------------------------------------------------------------|  
-|**adOpenForwardOnly**|none|  
-|**adOpenKeyset**|**adBookmark**, **adHoldRecords**, **adMovePrevious**, **adResync**|  
-|**adOpenDynamic**|**adMovePrevious**|  
-|**adOpenStatic**|**adBookmark**, **adHoldRecords**, **adMovePrevious**, **adResync**|  
+|**адопенфорвардонли**|none|  
+|**адопенкэйсет**|**адбукмарк**, **адхолдрекордс**, **адмовепревиаус**, **адресинк**|  
+|**адопендинамик**|**адмовепревиаус**|  
+|**адопенстатик**|**адбукмарк**, **адхолдрекордс**, **адмовепревиаус**, **адресинк**|  
   
 > [!NOTE]
->  Несмотря на то что **поддерживает**(**adUpdateBatch**) может иметь значение true, если динамические и однонаправленные курсоры для пакета обновления, вам следует использовать либо курсора keyset или static. Задайте [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) свойства **adLockBatchOptimistic** и **CursorLocation** свойства **adUseClient** Чтобы включить курсор Служба для OLE DB, который необходим для пакетных обновлений.  
+>  Хотя **поддерживает**(**адупдатебатч**) значение true для динамических и последовательных курсоров, для пакетных обновлений следует использовать курсор KEYSET или static. Задайте для свойства [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) значение **адлоккбатчоптимистик** , а для свойства **CursorLocation** значение **адусеклиент** , чтобы включить службу курсора для OLE DB, которая необходима для пакетных обновлений.  
   
- **CursorType** свойство доступно для чтения/записи при **записей** является закрытым или только для чтения, когда он открыт.  
+ Свойство **примеры CursorType** доступно для чтения и записи, когда **набор записей** закрывается и только для чтения, когда он открыт.  
   
 > [!NOTE]
->  **Удаленное использование службы данных** при использовании на стороне клиента **записей** объекта, **CursorType** свойству можно присвоить только значение **adOpenStatic**.  
+>  **Использование удаленной службы данных** При использовании объекта **набора записей** на стороне клиента свойство **примеры CursorType** может быть установлено только в **адопенстатик**.  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
- [Примеры CursorType, LockType и EditMode по свойства (Visual Basic)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vb.md)   
- [Примеры CursorType, LockType и EditMode пример свойства (Visual C++)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vc.md)   
+## <a name="see-also"></a>См. также:  
+ [Примеры свойств примеры CursorType, LockType и EditMode (Visual Basic)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vb.md)   
+ [Пример свойств примеры CursorType, LockType и EditMode (Visual c++)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vc.md)   
  [Метод Supports](../../../ado/reference/ado-api/supports-method.md)

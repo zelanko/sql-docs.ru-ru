@@ -1,5 +1,5 @@
 ---
-title: Осей коллекции свойства, методы и события | Документация Майкрософт
+title: Свойства, методы и события коллекции осей | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,15 +13,15 @@ ms.assetid: be459530-6f28-458f-ad70-759eae3ae08c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3cb4546839d09954f7d08f71164ecba59595fbd9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930515"
 ---
 # <a name="axes-collection-properties-methods-and-events"></a>Свойства, методы и события коллекции Axes
 ## <a name="properties"></a>Свойства  
- [Свойство Count](../../../ado/reference/ado-api/count-property-ado.md)  
+ [Count, свойство](../../../ado/reference/ado-api/count-property-ado.md)  
   
  [Свойство элемента](../../../ado/reference/ado-api/item-property-ado.md)  
   
@@ -31,5 +31,5 @@ ms.locfileid: "67930515"
 ## <a name="events"></a>События  
  Нет.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Коллекция Axes (многомерные объекты ADO)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)

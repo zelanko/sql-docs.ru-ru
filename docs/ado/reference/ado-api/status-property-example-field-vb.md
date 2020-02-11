@@ -1,5 +1,5 @@
 ---
-title: Пример свойства Status (объект Field) (Visual Basic) | Документация Майкрософт
+title: Пример свойства Status (поле) (VB) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: fdd09b60-39c7-44be-8008-e891a031f80e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c28a0b615a9f250c8539e87abf9fefbc11f513ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67916829"
 ---
 # <a name="status-property-example-field-vb"></a>Пример свойства Status (объект Field) (Visual Basic)
-В следующем примере открывается документ из папки чтения и записи с помощью [публикации поставщик Интернета](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). [Состояние](../../../ado/reference/ado-api/status-property-ado-field.md) свойство [поле](../../../ado/reference/ado-api/field-object.md) объект [записи](../../../ado/reference/ado-api/record-object-ado.md) сначала будет указано значение **adFieldPendingInsert**, обновляться для **adFieldOk**.  
+В следующем примере документ открывается из папки для чтения и записи с помощью [поставщика публикации в Интернете](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Для свойства [Status](../../../ado/reference/ado-api/status-property-ado-field.md) объекта [поля](../../../ado/reference/ado-api/field-object.md) [записи](../../../ado/reference/ado-api/record-object-ado.md) сначала будет задано значение **адфиелдпендингинсерт**, а затем оно будет обновлено на **адфиелдок**.  
   
 ```  
 'BeginStatusFieldVB  
@@ -79,19 +79,19 @@ End Sub
 'EndStatusFieldVB  
 ```  
   
- В следующем примере удаляется известная **поле** из **записи** открывается из документа. **Состояние** сначала присваивается свойству **adFieldOK**, затем **adFieldPendingUnknown**.  
+ В следующем примере известное **поле** удаляется из **записи** , открытой из документа. Для свойства **Status** сначала будет задано значение **адфиелдок**, а затем **адфиелдпендингункновн**.  
   
 ```  
 Attribute VB_Name = "StatusField"  
 ```  
   
- Следующий код удаляет **поле** из **записи** открывается на документ только для чтения. **Состояние** будет присвоено **adFieldPendingDelete**. В [обновление](../../../ado/reference/ado-api/update-method.md), удаление завершится ошибкой и **состояние** будет **adFieldPendingDelete** , а также **adFieldPermissionDenied**. [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) очищает отложенные **состояние** параметр.  
+ Следующий код удаляет **поле** из **записи** , открытой в документе, доступном только для чтения. Для параметра **Status** будет задано значение **адфиелдпендингделете**. Во время [обновления](../../../ado/reference/ado-api/update-method.md)удаление завершится ошибкой и **** будет отображаться состояние **адфиелдпендингделете** Plus **адфиелдпермиссиондениед**. [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) очищает параметр **состояния** "ожидание".  
   
 ```  
 Attribute VB_Name = "StatusField"  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Объект field](../../../ado/reference/ado-api/field-object.md)   
+## <a name="see-also"></a>См. также:  
+ [Объект Field](../../../ado/reference/ado-api/field-object.md)   
  [Объект Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Свойство Status (объект Field ADO)](../../../ado/reference/ado-api/status-property-ado-field.md)
