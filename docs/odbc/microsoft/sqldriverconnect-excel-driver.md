@@ -14,27 +14,27 @@ ms.assetid: 285cb1ea-f461-4596-97f2-fc57af05dede
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e38f2f513b7da2c9342470ba75e2ee11b3d7e52a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68053901"
 ---
 # <a name="sqldriverconnect-excel-driver"></a>SQLDriverConnect (драйвер для Excel)
 > [!NOTE]  
->  В этом разделе сведения конкретного драйвера Excel. Общие сведения об этой функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  В этом разделе приводятся сведения, относящиеся к драйверу Excel. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- **SQLDriverConnect** позволяет подключиться к драйверу без создания источника данных (DSN).  
+ **SQLDriverConnect** позволяет подключаться к драйверу без создания источника данных (DSN).  
   
- В строке подключения для всех драйверов поддерживаются следующие ключевые слова: **DSN**, **DBQ**, и **FIL**.  
+ В строке подключения для всех драйверов поддерживаются следующие ключевые слова: **DSN**, **ДБК** **и.**  
   
- В следующей таблице показаны минимальные необходимые для подключения к драйверу ключевые слова и пример пар "ключевое слово значение", используемый с **SQLDriverConnect**. Полный список значений DRIVERID, см. в разделе [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md).  
+ В следующей таблице приведены минимальные ключевые слова, необходимые для подключения к каждому драйверу, а также пример пар «ключевое слово-значение», используемых с **SQLDriverConnect**. Полный список значений ДРИВЕРИД см. в разделе [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md).  
   
 > [!NOTE]  
->  Если DBQ или его значения не указан для Microsoft Excel 3.0 или 4.0 драйвера, драйвер будет использоваться текущий каталог.  
+>  Если ДБК или Дефаултдир не указаны для драйвера Microsoft Excel 3,0 или 4,0, драйвер будет подключаться к текущему каталогу.  
   
-|Драйвер|Необходимые ключевые слова|Примеры|  
+|Драйвер|Требуются ключевые слова|Примеры|  
 |------------|-----------------------|--------------|  
-|Microsoft Excel 3.0 или 4.0|Драйвер, DriverID|Driver = {драйвер Microsoft Excel (*.xls)}; DBQ = c:\temp; DriverID = 278|  
-|Microsoft Excel 5.0/7.0|Драйвер, DriverID, DBQ|Driver = {драйвер Microsoft Excel (*.xls)}; DBQ=c:\temp\sample.xls; DriverID = 22|  
-|Microsoft Excel 97 и более поздние версии|Драйвер, DriverID, DBQ|Driver = {драйвер Microsoft Excel (*.xls)}; DBQ=c:\temp\sample.xls; DriverID = 790|
+|Microsoft Excel 3,0 или 4,0|Драйвер, Дриверид|Драйвер = {Драйвер Microsoft Excel (*. xls)}; ДБК = c:\temp; Дриверид = 278|  
+|Microsoft Excel 5.0/7.0|Driver, Дриверид, ДБК|Драйвер = {Драйвер Microsoft Excel (*. xls)}; ДБК = к:\темп\сампле.кслс; Дриверид = 22|  
+|Microsoft Excel 97 и более поздние версии|Driver, Дриверид, ДБК|Драйвер = {Драйвер Microsoft Excel (*. xls)}; ДБК = к:\темп\сампле.кслс; Дриверид = 790|

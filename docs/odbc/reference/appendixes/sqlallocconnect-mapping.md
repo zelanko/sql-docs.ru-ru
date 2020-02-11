@@ -14,21 +14,21 @@ ms.assetid: ac89dd1f-c565-47cc-8fa3-6fa5f80b5d63
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 65c23f41ea9176c460c8fb32ece5e74dfb803541
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68065024"
 ---
 # <a name="sqlallocconnect-mapping"></a>Сопоставление SQLAllocConnect
-Если приложение вызывает **SQLAllocConnect** через ODBC 3. *x* драйвера, вызов **SQLAllocConnect**(*henv*, *phdbc*) сопоставляется с **SQLAllocHandle** следующим образом:  
+Когда приложение вызывает **SQLAllocConnect** через ODBC 3. драйвер *x* , вызов **SQLAllocConnect**(*хенв*, *фдбк*) сопоставляется с **функцию SQLAllocHandle** следующим образом:  
   
 1.  Диспетчер драйверов выделяет соединение и возвращает его приложению.  
   
-2.  Когда приложение устанавливает соединение, диспетчер драйверов вызывает  
+2.  Когда приложение устанавливает соединение, диспетчер драйверов вызывает метод  
   
     ```  
     SQLAllocHandle(SQL_HANDLE_DBC, InputHandle, OutputHandlePtr)  
     ```  
   
-     в драйвере с *InputHandle* присвоено *henv*, и *OutputHandlePtr* присвоено *phdbc*.
+     в драйвере с параметром *инпусандле* установлено значение *хенв*, а для *аутпусандлептр* — значение *фдбк*.

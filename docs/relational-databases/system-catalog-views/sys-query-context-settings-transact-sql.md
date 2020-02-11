@@ -1,5 +1,5 @@
 ---
-title: sys.query_context_settings (Transact-SQL) | Документация Майкрософт
+title: sys. query_context_settings (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/29/2018
 ms.prod: sql
@@ -21,46 +21,46 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7736c0001c8e22b6cc7c72b2e721e31519d035b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68068058"
 ---
-# <a name="sysquerycontextsettings-transact-sql"></a>sys.query_context_settings (Transact-SQL)
+# <a name="sysquery_context_settings-transact-sql"></a>sys. query_context_settings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-  Содержит сведения о семантике, влияющие на параметры контекста, связанного с запросом. Существует ряд параметров контекста в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , влияют на семантику запроса (определяя правильный результат запроса). Тот же текст запроса, который компилируется в различных ситуациях может давать разные результаты (в зависимости от базовых данных).  
+  Содержит сведения о семантике, влияющей на параметры контекста, связанные с запросом. Существует несколько доступных контекстных параметров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые влияют на семантику запроса (определяя правильный результат запроса). Тот же текст запроса, скомпилированный с разными параметрами, может давать разные результаты (в зависимости от базовых данных).  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|**context_settings_id**|**bigint**|Первичный ключ. Это значение предоставляется в Showplan XML для запросов.|  
-|**set_options**|**varbinary(8)**|Битовая маска, отражая состояние некоторых параметров SET. Дополнительные сведения см. в разделе [sys.dm_exec_plan_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md).|  
-|**language_id**|**smallint**|Идентификатор языка. Дополнительные сведения см. в разделе [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).|  
+|**context_settings_id**|**bigint**|Первичный ключ. Это значение предоставляется в инструкциях Showplan XML для запросов.|  
+|**set_options**|**varbinary(8)**|Битовая маска, отражающая состояние нескольких параметров SET. Дополнительные сведения см. в разделе [sys. dm_exec_plan_attributes &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md).|  
+|**language_id**|**smallint**|Идентификатор языка. Дополнительные сведения см. в разделе [sys. syslanguages &#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).|  
 |**date_format**|**smallint**|Формат даты. Дополнительные сведения см. в разделе [SET DATEFORMAT (Transact-SQL)](../../t-sql/statements/set-dateformat-transact-sql.md).|  
 |**date_first**|**tinyint**|Первое значение даты. Дополнительные сведения см. в разделе [SET DATEFIRST (Transact-SQL)](../../t-sql/statements/set-datefirst-transact-sql.md).|  
-|**status**|**varbinary(2)**|Битовую маску, которая указывает тип запроса или контекст, в котором был выполнен запрос. <br />Значение столбца может быть сочетанием сразу несколько флагов (выражено в шестнадцатеричном формате):<br /><br /> 0x0 — обычных запросов (определенные флаги не)<br /><br /> 0x1 — запрос, который был выполнен через один из API-интерфейсы хранимые процедуры курсора<br /><br /> 0x2 — запроса на уведомление<br /><br /> 0x4 — внутренний запрос<br /><br /> 0x8 — auto параметризованного запроса без универсальной параметризации<br /><br /> 0x10 — выборка курсора обновить запрос<br /><br /> 0x20 — запрос, который используется в запросы на обновление курсора<br /><br /> 0x40 – первоначальный результирующий набор возвращается, если курсор открывается (курсор автоматически выборки)<br /><br /> 0x80 – зашифрованных запросов<br /><br /> 0x100 - запроса в контексте предиката безопасности на уровне строк|  
+|**состояние**|**varbinary (2)**|Поле битовой маски, указывающее тип запроса или контекста, в котором был выполнен запрос. <br />Значение столбца может быть сочетанием нескольких флагов (выраженное в шестнадцатеричном формате):<br /><br /> 0x0 — обычный запрос (без специальных флагов)<br /><br /> 0x1 — запрос, выполненный с помощью одной из хранимых процедур API курсоров<br /><br /> 0x2 — запрос на уведомление<br /><br /> 0x4 — внутренний запрос<br /><br /> 0x8 — автоматический параметризованный запрос без универсальной параметризации<br /><br /> 0x10 — запрос на обновление выборки курсора<br /><br /> 0x20 — запрос, используемый в запросах на обновление курсора<br /><br /> 0x40 — начальный результирующий набор возвращается при открытии курсора (автоматическая выборка курсора)<br /><br /> 0x80-зашифрованный запрос<br /><br /> 0x100 — запрос в контексте предиката безопасности на уровне строк|  
 |**required_cursor_options**|**int**|Параметры курсора, указанные пользователем, такие как тип курсора.|  
 |**acceptable_cursor_options**|**int**|Параметры курсора, которые [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может неявно преобразовывать для поддержания выполнения инструкции.|  
-|**merge_action_type**|**smallint**|Тип плана выполнения триггера, используемого в результате **СЛИЯНИЯ** инструкции.<br /><br /> 0 указывает план без триггеров, план триггеров, который не выполняется в результате **СЛИЯНИЯ** инструкции или план триггеров, который выполняется в результате **СЛИЯНИЯ** инструкцию, которая только определяет **Удалить** действие.<br /><br /> 1 указывает **вставить** план триггеров, который выполняется в результате **СЛИЯНИЯ** инструкции.<br /><br /> 2 указывает **обновление** план триггеров, который выполняется в результате **СЛИЯНИЯ** инструкции.<br /><br /> 3 указывает **удалить** план триггеров, который выполняется в результате **СЛИЯНИЯ** инструкции, содержащей соответствующий **вставить** или **обновления** действие.<br /><br /> <br /><br /> Наличие вложенных триггеров, выполняемых каскадными операциями, это значение, — это **СЛИЯНИЯ** инструкции, запустившей каскад.|  
-|**default_schema_id**|**int**|Идентификатор схемы по умолчанию, который используется для разрешения имен, которые не являются полными.|  
+|**merge_action_type**|**smallint**|Тип плана выполнения триггера, используемый в качестве результата инструкции **Merge** .<br /><br /> 0 указывает на нетриггерный план, план триггера, который не выполняется в результате выполнения инструкции **Merge** , или план триггера, который выполняется в результате выполнения инструкции **Merge** , которая только указывает действие **Delete** .<br /><br /> 1 указывает план триггера **INSERT** , который выполняется в результате выполнения инструкции **Merge** .<br /><br /> 2 указывает план триггера **обновления** , который выполняется в результате выполнения инструкции **Merge** .<br /><br /> 3 указывает план триггера **Delete** , который выполняется в результате инструкции **Merge** , содержащей соответствующее действие **INSERT** или **Update** .<br /><br /> <br /><br /> Для вложенных триггеров, выполняемых каскадными действиями, это значение является действием инструкции **Merge** , которая вызвала каскадную операцию.|  
+|**default_schema_id**|**int**|Идентификатор схемы по умолчанию, которая используется для разрешения имен, которые не являются полными.|  
 |**is_replication_specific**|**bit**|Используется для репликации.|  
-|**is_contained**|**varbinary(1)**|1 указывает автономной базы данных.|  
+|**is_contained**|**varbinary (1)**|1 указывает на автономную базу данных.|  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется **VIEW DATABASE STATE** разрешение.  
+ Требуется разрешение **View Database State** .  
   
-## <a name="see-also"></a>См. также  
- [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
- [sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
- [sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
- [sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
- [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)   
- [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [sys. database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [sys. query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
+ [sys. query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
+ [sys. query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
+ [sys. query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
+ [sys. query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)   
+ [sys. query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [Мониторинг производительности с использованием хранилища запросов](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Query Store Stored Procedures (Transact-SQL)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  (Хранимые процедуры хранилища запросов (Transact-SQL))  
- [sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)  
+ [Хранимые процедуры хранилища запросов &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
+ [sys. fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)  
   
   

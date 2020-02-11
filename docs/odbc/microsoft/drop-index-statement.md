@@ -1,5 +1,5 @@
 ---
-title: Инструкции DROP INDEX | Документация Майкрософт
+title: DROP INDEX, инструкция | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ ms.assetid: cd0ff767-9254-413b-bd1a-bed26c6774f5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 23823e53e516324832c79706e6171b48a9c5297c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68071860"
 ---
 # <a name="drop-index-statement"></a>Инструкция DROP INDEX
-Если используется драйвер для Paradox, dBASE или Microsoft Access, синтаксис инструкции DROP INDEX является «DROP INDEX на b» где «» — это имя индекса, а «b» — имя таблицы (DROP INDEX не *имя индекса*).  
+При использовании драйвера Microsoft Access, dBASE или Paradox синтаксисом оператора DROP INDEX является "DROP INDEX a на b", где "a" — имя индекса, а "b" — имя таблицы (не DROP INDEX *index-Name*).  
   
- Если используется драйвер для Paradox, инструкции DROP INDEX удаляет файлы Paradox вторичного индекса.  
+ При использовании драйвера Paradox инструкция DROP INDEX удаляет файлы вторичного индекса Paradox.  
   
- Инструкции DROP INDEX не поддерживается для драйверов Microsoft Excel или текст.
+ Инструкция DROP INDEX не поддерживается для драйверов Microsoft Excel или Text.

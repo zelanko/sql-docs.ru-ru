@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a7c7751f317d4a56fb4aafb7085509d175f32255
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68074684"
 ---
 # <a name="predictnodeid-dmx"></a>PredictNodeId (расширения интеллектуального анализа данных)
@@ -27,11 +27,11 @@ ms.locfileid: "68074684"
 PredictNodeId(<scalar column reference>)  
 ```  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  Скалярный столбец.  
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
- \<скалярное выражение >  
+ \<> скалярного выражения  
   
 ## <a name="examples"></a>Примеры  
  В приведенном ниже примере выдаются сведения о вероятности покупки велосипедов отдельными покупателями, а также значения параметров nodeID для узлов, к которым они могут относиться с наибольшей вероятностью.  
@@ -60,9 +60,9 @@ FROM
 WHERE NODE_UNIQUE_NAME= '00000000100'   
 ```  
   
-## <a name="see-also"></a>См. также  
- [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; справочнике по функциям](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Функции &#40;расширений интеллектуального анализа данных&#41;](../dmx/functions-dmx.md)   
- [Общие функции прогнозирования &#40;расширений интеллектуального анализа данных&#41;](../dmx/general-prediction-functions-dmx.md)  
+## <a name="see-also"></a>См. также:  
+ [Расширения интеллектуального анализа данных &#40;Справочник по функциям DMX&#41;](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Функции &#40;&#41;расширений интеллектуального анализа данных](../dmx/functions-dmx.md)   
+ [Общие прогнозирующие функции &#40;&#41;расширений интеллектуального анализа данных](../dmx/general-prediction-functions-dmx.md)  
   
   

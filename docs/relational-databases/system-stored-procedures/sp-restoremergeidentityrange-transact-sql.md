@@ -16,13 +16,13 @@ ms.assetid: 7923e422-2748-40c0-b5a8-6410c48d5b70
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5160e0f734f68450f868f3b1c670b1e5647524ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68041056"
 ---
-# <a name="sprestoremergeidentityrange-transact-sql"></a>sp_restoremergeidentityrange (Transact-SQL)
+# <a name="sp_restoremergeidentityrange-transact-sql"></a>sp_restoremergeidentityrange (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Эта хранимая процедура используется для обновления присвоения диапазона идентификаторов. Она обеспечивает автоматическое и корректное управление диапазонами идентификаторов после восстановления издателя из резервной копии. Эта хранимая процедура выполняется на издателе в базе данных публикации.  
@@ -38,24 +38,24 @@ sp_restoremergeidentityrange [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` — Имя публикации. *Публикация* — **sysname**, значение по умолчанию **все**. Если он указан, восстанавливаются диапазоны идентификаторов только для соответствующей публикации.  
+`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и значение **ALL**по умолчанию. Если он указан, восстанавливаются диапазоны идентификаторов только для соответствующей публикации.  
   
-`[ @article = ] 'article'` — Имя статьи. *статья* — **sysname**, со значением по умолчанию **все**. Если он указан, восстанавливаются диапазоны идентификаторов только для соответствующей статьи.  
+`[ @article = ] 'article'`Имя статьи. Аргумент *article* имеет тип **sysname**и значение по умолчанию **ALL**. Если он указан, восстанавливаются диапазоны идентификаторов только для соответствующей статьи.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  **sp_restoremergeidentityrange** используется с репликацией слиянием.  
   
- **sp_restoremergeidentityrange** возвращает о выделении диапазонов идентификаторов максимальное из распространителя и обновляет значения в **max_used** столбец [MSmerge_identity_range_allocations &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msmerge-identity-range-allocations-transact-sql.md) для статей, которые используют автоматическое управление диапазонами идентификаторов.  
+ **sp_restoremergeidentityrange** получает максимальные сведения о выделении диапазона идентификаторов от распространителя и обновляет значения в столбце **max_used** в [MSmerge_identity_range_allocations &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-identity-range-allocations-transact-sql.md) для статей, использующих автоматическое управление диапазонами идентификаторов.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_restoremergeidentityrange**.  
+ Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_restoremergeidentityrange**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
- [sp_changemergearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
+ [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
  [Репликация столбцов идентификаторов](../../relational-databases/replication/publish/replicate-identity-columns.md)  
   
   

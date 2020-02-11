@@ -1,5 +1,5 @@
 ---
-title: sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL) | Документация Майкрософт
+title: sys. fn_stmt_sql_handle_from_sql_stmt (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,16 +14,16 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 92ebff45c8599e6257ad22f563da6af5067d8e3c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68059273"
 ---
-# <a name="sysfnstmtsqlhandlefromsqlstmt-transact-sql"></a>sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)
+# <a name="sysfn_stmt_sql_handle_from_sql_stmt-transact-sql"></a>sys. fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Получает **stmt_sql_handle** для [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции в разделе указанный тип параметризации (простую или принудительную). Это позволяет ссылаться на запросах, хранимых в Store запроса с помощью их **stmt_sql_handle** когда вы знаете их текст.  
+  Возвращает **stmt_sql_handle** для [!INCLUDE[tsql](../../includes/tsql-md.md)] оператора с данным типом параметризации (Simple или forced). Это позволяет обращаться к запросам, хранящимся в хранилище запросов, с помощью их **stmt_sql_handle** , если известно их текстовое значение.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,47 +39,47 @@ sys.fn_stmt_sql_handle_from_sql_stmt
   
 ## <a name="arguments"></a>Аргументы  
  *query_sql_text*  
- — Текст запроса в хранилище запросов, требуется дескриптор. *query_sql_text* — **nvarchar(max)** , не имеет значения по умолчанию.  
+ Текст запроса в хранилище запросов, для которого требуется создать маркер. *query_sql_text* имеет тип **nvarchar (max)** и не имеет значения по умолчанию.  
   
  *query_param_type*  
- Является типом параметра запроса. *query_param_type* — **tinyint**. Возможны следующие значения:  
+ Тип параметра запроса. *query_param_type* является **tinyint**. Возможны следующие значения:  
   
--   NULL — значение по умолчанию — 0  
+-   NULL — значение по умолчанию 0  
   
--   0 — none  
+-   0 — нет  
   
--   1 – Проверка  
+-   1 — пользователь  
   
--   2 — простая  
+-   2 — простой  
   
--   3 - принудительно  
+-   3 — принудительно  
   
 ## <a name="columns-returned"></a>Возвращаемые столбцы  
- В следующей таблице перечислены столбцы этого sys.fn_stmt_sql_handle_from_sql_stmt возвращает.  
+ В следующей таблице перечислены столбцы, возвращаемые sys. fn_stmt_sql_handle_from_sql_stmt.  
   
-|Имя столбца|Type|Описание|  
+|Имя столбца|Тип|Description|  
 |-----------------|----------|-----------------|  
-|**statement_sql_handle**|**varbinary(64)**|Дескриптор SQL.|  
+|**statement_sql_handle**|**varbinary (64)**|Маркер SQL.|  
 |**query_sql_text**|**nvarchar(max)**|Текст [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции.|  
 |**query_parameterization_type**|**tinyint**|Тип параметризации запроса.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или 1 (неуспешное завершение)  
+ 0 (успех) или 1 (сбой).  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется **EXECUTE** разрешений в базе данных, и **удалить** разрешения на представления каталога хранилища запросов.  
+ Требуется разрешение **EXECUTE** на базу данных и разрешение **Delete** для представлений каталога хранилища запросов.  
   
 ## <a name="examples"></a>Примеры  
- Следующий пример выполняет инструкцию, а затем использует `sys.fn_stmt_sql_handle_from_sql_stmt` будет возвращен дескриптор этой инструкции SQL.  
+ В следующем примере выполняется инструкция, а затем используется функция `sys.fn_stmt_sql_handle_from_sql_stmt` для возврата SQL-маркера этой инструкции.  
   
 ```  
 SELECT * FROM sys.databases;   
 SELECT * FROM sys.fn_stmt_sql_handle_from_sql_stmt('SELECT * FROM sys.databases', NULL);  
 ```  
   
- Функция для сопоставления данных Store запроса с помощью других динамических административных представлений. Следующий пример:  
+ Используйте функцию для корреляции данных хранилища запросов с другими динамическими административными представлениями. В следующем примере:  
   
 ```  
 SELECT qt.query_text_id, q.query_id, qt.query_sql_text, qt.statement_sql_handle,  
@@ -92,14 +92,14 @@ JOIN sys.dm_exec_query_stats AS qs
     ON fn_handle_from_stmt.statement_sql_handle = qs.statement_sql_handle;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_query_store_force_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)   
  [sp_query_store_remove_plan &#40;Transct-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)   
  [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)   
  [sp_query_store_reset_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)   
  [sp_query_store_flush_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)   
  [sp_query_store_remove_query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)   
- [Query Store Catalog Views (Transact-SQL) ](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)  (Представления каталогов хранилища запросов (Transact-SQL))  
- [Мониторинг производительности с использованием хранилища запросов](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
+ [Представления каталога хранилища запросов &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
+ [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
   
   

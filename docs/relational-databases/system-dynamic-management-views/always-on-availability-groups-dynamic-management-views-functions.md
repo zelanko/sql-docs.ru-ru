@@ -1,5 +1,5 @@
 ---
-title: Всегда для динамических административных представлений для группы доступности - функции | Документация Майкрософт
+title: Динамические административные представления групп доступности Always On-функции | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -14,13 +14,13 @@ ms.assetid: 17a77e24-d8b8-4f8a-8a7c-05d6c5d32d96
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 732f1f84d7bc336969d2484f18eb2dae8ebfab76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68018045"
 ---
-# <a name="always-on-availability-groups-dynamic-management-views---functions"></a>Всегда для динамических административных представлений для группы доступности - функции
+# <a name="always-on-availability-groups-dynamic-management-views---functions"></a>Динамические административные представления групп доступности Always On — функции
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   В этом разделе описаны динамические административные представления и функции, связанные с [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
@@ -37,9 +37,9 @@ ms.locfileid: "68018045"
 |[sys.dm_hadr_cluster](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md)|[sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md)|  
 |[sys.dm_hadr_cluster_members](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql.md)||  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Группы доступности AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [Представления каталога групп доступности AlwaysOn &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
- [Отслеживание групп доступности (Transact-SQL)](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
+ [Группы доступности AlwaysOn представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
+ [Мониторинг групп доступности &#40;&#41;Transact-SQL](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
   
   

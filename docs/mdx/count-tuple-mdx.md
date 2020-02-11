@@ -1,5 +1,5 @@
 ---
-title: Count (кортеж) (многомерные Выражения) | Документация Майкрософт
+title: Count (кортеж) (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 486c68e1947bfad67bc0288751d03c6042cd7f3e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68047273"
 ---
 # <a name="count-tuple-mdx"></a>Count (кортеж) (многомерные выражения)
@@ -31,7 +31,7 @@ Tuple_Expression.Count
  *Tuple_Expression*  
  Допустимое многомерное выражение, возвращающее кортеж.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Возвращает количество измерений в кортеже.  
   
 ## <a name="example"></a>Пример  
@@ -44,10 +44,10 @@ SELECT MEASURES.COUNTTUPLE ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Число &#40;измерения&#41; &#40;многомерных Выражений&#41;](../mdx/count-dimension-mdx.md)   
- [Число &#40;уровней иерархии&#41; &#40;многомерных Выражений&#41;](../mdx/count-hierarchy-levels-mdx.md)   
- [Count (наборы) (многомерные выражения)](../mdx/count-set-mdx.md)   
- [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также:  
+ [Счетчик &#40;измерение&#41; &#40;&#41;многомерных выражений](../mdx/count-dimension-mdx.md)   
+ [Количество &#40;уровней иерархии&#41; &#40;МНОГОМЕРных&#41;](../mdx/count-hierarchy-levels-mdx.md)   
+ [Count &#40;Set&#41; &#40;многомерных выражений&#41;](../mdx/count-set-mdx.md)   
+ [Ссылка на функцию многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: процедура sp_syspolicy_purge_health_state (Transact-SQL) | Документация Майкрософт
+title: sp_syspolicy_purge_health_state (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 4ba4aa91-4c19-41c7-b70d-5fd9d0e89a5e
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 9049340483674969a6ab4730d54794957c67aac9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67997318"
 ---
-# <a name="spsyspolicypurgehealthstate-transact-sql"></a>sp_syspolicy_purge_health_state (Transact-SQL)
+# <a name="sp_syspolicy_purge_health_state-transact-sql"></a>sp_syspolicy_purge_health_state (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Удаляет состояния работоспособности политик в управлении на основе политик. Состояния работоспособности политик — это визуальные индикаторы (символ прокрутки с красным знаком X) в обозревателе объектов, которые позволяют определить, для каких узлов не выполнена политика.  
@@ -39,14 +39,14 @@ sp_syspolicy_purge_health_state [ @target_tree_root_with_id = ] 'target_tree_roo
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @target_tree_root_with_id = ] 'target_tree_root_with_id'` Представляет узел в обозревателе объектов, где вы хотите очистить состояние работоспособности. *target_tree_root_with_id* — **nvarchar(400)** , значение по умолчанию NULL.  
+`[ @target_tree_root_with_id = ] 'target_tree_root_with_id'`Представляет узел в обозревателе объектов, в котором необходимо очистить состояние работоспособности. *target_tree_root_with_id* имеет тип **nvarchar (400)** и значение по умолчанию NULL.  
   
  Можно указывать значения из столбца target_query_expression_with_id системного представления msdb.dbo.syspolicy_system_health_state.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Процедура sp_syspolicy_purge_health_state должна выполняться в контексте системной базы данных msdb.  
   
  Если запустить эту хранимую процедуру, не указывая параметров, то состояние работоспособности системы будет удалено для всех узлов в обозревателе объектов.  
@@ -55,7 +55,7 @@ sp_syspolicy_purge_health_state [ @target_tree_root_with_id = ] 'target_tree_roo
  Требуется членство в предопределенной роли базы данных PolicyAdministratorRole.  
   
 > [!IMPORTANT]  
->  Возможно повышение учетных данных: Пользователи с ролью PolicyAdministratorRole могут создавать триггеры сервера и планировать выполнение политик, влияющих на работу экземпляра [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Например, пользователи в роли PolicyAdministratorRole могут создать политику, которая может запретить создание большинства объектов в компоненте [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Вследствие возможного повышения прав учетных данных роль PolicyAdministratorRole должна предоставляться только пользователям, имеющим право изменять конфигурацию компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+>  Возможное повышение уровня учетных данных. пользователи в роли PolicyAdministratorRole могут создавать серверные триггеры и планировать выполнение политик, которые могут повлиять на работу экземпляра [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Например, пользователи в роли PolicyAdministratorRole могут создать политику, которая может запретить создание большинства объектов в компоненте [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Вследствие возможного повышения прав учетных данных роль PolicyAdministratorRole должна предоставляться только пользователям, имеющим право изменять конфигурацию компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере удаляются состояния работоспособности для заданного узла в обозревателе объектов.  
@@ -66,7 +66,7 @@ EXEC msdb.dbo.sp_syspolicy_purge_health_state @target_tree_root_with_id = 'Serve
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Хранимые процедуры управления на основе политик &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Хранимые процедуры управления на основе политик &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)  
   
   

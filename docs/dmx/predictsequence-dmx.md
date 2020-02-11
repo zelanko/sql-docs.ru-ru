@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c6828b77af36b5dbbc50fbca0210961a7f2ed20c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68041922"
 ---
 # <a name="predictsequence-dmx"></a>PredictSequence (расширения интеллектуального анализа данных)
@@ -30,14 +30,14 @@ PredictSequence(\<table column reference, n-start, n-end>)
 ```  
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
- Объект \<таблицы выражения >.  
+ \<Табличное выражение>.  
   
-## <a name="remarks"></a>Примечания  
- Если *n* параметр указан, он возвращает следующие значения:  
+## <a name="remarks"></a>Remarks  
+ Если указан параметр *n* , он возвращает следующие значения:  
   
--   Если *n* не равно нулю, скорее всего, значений последовательности, в течение *n* действия.  
+-   Если *n* больше нуля, наиболее вероятные значения последовательностей приведены в следующих *n* шагах.  
   
--   Если оба *n-start* и *n-end* указаны, выдается последовательность значений элементов из *n-start* для *n-end*.  
+-   Если указаны как *n-start* , так и *n-End* , то значения последовательности из *n-start* в *n-End*.  
   
 ## <a name="examples"></a>Примеры  
  Следующий пример возвращает последовательность из пяти продуктов, которые, вероятнее всего, приобретет клиент из базы данных [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)], с учетом модели интеллектуального анализа данных «Кластеризация последовательностей».  
@@ -49,9 +49,9 @@ From
   [Sequence Clustering]  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; справочнике по функциям](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Функции &#40;расширений интеллектуального анализа данных&#41;](../dmx/functions-dmx.md)   
- [Общие функции прогнозирования &#40;расширений интеллектуального анализа данных&#41;](../dmx/general-prediction-functions-dmx.md)  
+## <a name="see-also"></a>См. также:  
+ [Расширения интеллектуального анализа данных &#40;Справочник по функциям DMX&#41;](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Функции &#40;&#41;расширений интеллектуального анализа данных](../dmx/functions-dmx.md)   
+ [Общие прогнозирующие функции &#40;&#41;расширений интеллектуального анализа данных](../dmx/general-prediction-functions-dmx.md)  
   
   

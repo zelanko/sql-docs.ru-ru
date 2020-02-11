@@ -19,13 +19,13 @@ ms.assetid: 2dccc3cd-0e93-4e3e-a4e5-8fe89b31bd63
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0a351eaa746654d26d7f51536a41fc2677a2f67e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68010563"
 ---
-# <a name="spsyscollectorupdatecollectionset-transact-sql"></a>sp_syscollector_update_collection_set (Transact-SQL)
+# <a name="sp_syscollector_update_collection_set-transact-sql"></a>sp_syscollector_update_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Используется для изменения свойств или переименования определяемого пользователем набора элементов сбора.  
@@ -55,37 +55,37 @@ sp_syscollector_update_collection_set
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @collection_set_id = ] collection_set_id` — Это уникальный локальный идентификатор набора элементов сбора. *collection_set_id* — **int** и должен иметь значение, если *имя* имеет значение NULL.  
+`[ @collection_set_id = ] collection_set_id`Уникальный локальный идентификатор набора сбора. *collection_set_id* имеет **тип int** и должен иметь значение, если *Name* имеет значение null.  
   
-`[ @name = ] 'name'` — Имя набора элементов сбора. *имя* — **sysname** и должен иметь значение, если *collection_set_id* имеет значение NULL.  
+`[ @name = ] 'name'`Имя набора элементов сбора. Аргумент *Name* имеет тип **sysname** и должен иметь значение, если *collection_set_id* имеет значение null.  
   
-`[ @new_name = ] 'new_name'` — Новое имя для набора сбора. *новое_имя* — **sysname**, и при использовании не может быть пустой строкой. *новое_имя* должно быть уникальным. Чтобы получить список имен текущего набора сбора, выполните запрос системного представления syscollector_collection_sets.  
+`[ @new_name = ] 'new_name'`Новое имя набора сбора. Аргумент *new_name* имеет тип **sysname**и, если он используется, не может быть пустой строкой. *new_name* должны быть уникальными. Чтобы получить список имен текущего набора сбора, выполните запрос системного представления syscollector_collection_sets.  
   
-`[ @target = ] 'target'` Зарезервировано для будущего использования.  
+`[ @target = ] 'target'`Зарезервировано для будущего использования.  
   
-`[ @collection_mode = ] collection_mode` Является типом коллекции данных для использования. *collection_mode* — **smallint** и может иметь одно из следующих значений:  
+`[ @collection_mode = ] collection_mode`Тип используемой коллекции данных. *collection_mode* имеет значение **smallint** и может иметь одно из следующих значений:  
   
  0 — режим с кэшированием. Сбор и передача данных выполняются по отдельным расписаниям. Укажите кэшированный режим для непрерывного сбора.  
   
  1 — режим без кэширования. Сбор и передача данных выполняются по общему расписанию. Укажите некэшированный режим для нерегламентированного сбора или создания моментального снимка.  
   
- Если изменение с некэшированного на кэшированный (0), необходимо также указать либо *schedule_uid* или *schedule_name*.  
+ При переходе от режима без кэширования в режим кэширования (0) необходимо также указать либо *schedule_uid* , либо *schedule_name*.  
   
-`[ @days_until_expiration = ] days_until_expiration` — Число дней, в которых собранные данные хранятся в хранилище данных управления. *days_until_expiration* — **smallint**. *days_until_expiration* должно равняться 0 или положительным целым числом.  
+`[ @days_until_expiration = ] days_until_expiration`Число дней, в течение которых собранные данные сохраняются в хранилище данных управления. *days_until_expiration* имеет **smallint**. *days_until_expiration* должно быть равно 0 или быть положительным целым числом.  
   
-`[ @proxy_id = ] proxy_id` Уникальный идентификатор для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учетной записи-посредника агента. *proxy_id* — **int**.  
+`[ @proxy_id = ] proxy_id`Уникальный идентификатор учетной записи- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] посредника агента. *proxy_id* имеет **тип int**.  
   
-`[ @proxy_name = ] 'proxy_name'` — Имя прокси-сервера. *proxy_name* — **sysname** и допускает значения NULL.  
+`[ @proxy_name = ] 'proxy_name'`Имя прокси-сервера. *proxy_name* имеет тип **sysname** и допускает значение null.  
   
-`[ @schedule_uid = ] 'schedule_uid'` — Это GUID, указывающий на расписание. *schedule_uid* — **uniqueidentifier**.  
+`[ @schedule_uid = ] 'schedule_uid'`Идентификатор GUID, указывающий на расписание. *schedule_uid* имеет тип **uniqueidentifier**.  
   
- Для получения *schedule_uid*, запрос системной таблицы sysschedules.  
+ Чтобы получить *schedule_uid*, запросите системную таблицу sysschedules.  
   
- Когда *collection_mode* имеет значение 0, *schedule_uid* или *schedule_name* должен быть указан. Когда *collection_mode* имеет значение 1, *schedule_uid* или *schedule_name* учитывается, если указан.  
+ Если *collection_mode* имеет значение 0, необходимо указать *schedule_uid* или *schedule_name* . Если параметр *collection_mode* имеет значение 1, *schedule_uid* или *schedule_name* игнорируется, если он указан.  
   
-`[ @schedule_name = ] 'schedule_name'` — Имя расписания. *schedule_name* — **sysname** и допускает значения NULL. Если указано, *schedule_uid* должен иметь значение NULL. Для получения *schedule_name*, запрос системной таблицы sysschedules.  
+`[ @schedule_name = ] 'schedule_name'`Имя расписания. *schedule_name* имеет тип **sysname** и допускает значение null. Если указано, *schedule_uid* должны иметь значение null. Чтобы получить *schedule_name*, запросите системную таблицу sysschedules.  
   
-`[ @logging_level = ] logging_level` Является уровень ведения журнала. *LOGGING_LEVEL* — **smallint** с одним из следующих значений:  
+`[ @logging_level = ] logging_level`Уровень ведения журнала. *LOGGING_LEVEL* имеет значение **smallint** с одним из следующих значений:  
   
  0 - Регистрировать сведения о выполнении и события служб [!INCLUDE[ssIS](../../includes/ssis-md.md)], которые отслеживают:  
   
@@ -105,19 +105,19 @@ sp_syscollector_update_collection_set
   
  2 - Ведениe журнала на уровне 1, а также запись подробных сведений о событиях служб [!INCLUDE[ssIS](../../includes/ssis-md.md)]  
   
- Значение по умолчанию для *logging_level* -1.  
+ Значение по умолчанию для *LOGGING_LEVEL* равно 1.  
   
-`[ @description = ] 'description'` Представляет собой описание набора элементов сбора. *Описание* — **nvarchar(4000)** .  
+`[ @description = ] 'description'`Описание набора элементов сбора. *Описание* — **nvarchar (4000)**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Функция sp_syscollector_update_collection_set должна выполняться в контексте системной базы данных msdb.  
   
- Либо *collection_set_id* или *имя* должен иметь значение, не может быть NULL. Чтобы получить эти значения, выполните запрос системного представления syscollector_collection_sets.  
+ Либо *collection_set_id* , либо *имя* должны иметь значение, которое не может быть null. Чтобы получить эти значения, выполните запрос системного представления syscollector_collection_sets.  
   
- Если набор сбора выполняется, можно обновить только *schedule_uid* и *описание*. Чтобы остановить набор сбора, используйте [sp_syscollector_stop_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-stop-collection-set-transact-sql.md).  
+ Если набор сбора выполняется, можно обновить только *schedule_uid* и *Description*. Чтобы прерывать набор сбора, используйте [sp_syscollector_stop_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-stop-collection-set-transact-sql.md).  
   
 ## <a name="permissions"></a>Разрешения  
  Для выполнения этой процедуры требуется членство в предопределенной роли базы данных dc_admin или dc_operator (с разрешением EXECUTE). Хотя члены роли dc_operator могут выполнять эту хранимую процедуру, они могут менять не все свойства. Следующие свойства могут изменить только члены роли dc_admin:  
@@ -178,10 +178,10 @@ EXEC dbo.sp_syscollector_update_collection_set
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Сбор данных](../../relational-databases/data-collection/data-collection.md)   
  [syscollector_collection_sets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)   
- [dbo.sysschedules &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
+ [dbo. sysschedules &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
   
   

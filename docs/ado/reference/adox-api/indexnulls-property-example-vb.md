@@ -15,14 +15,14 @@ ms.assetid: 45204669-32c0-4690-aab9-ddf0fd71ae48
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c5976cf913a98e5fa7db313144463ca12373d6bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965997"
 ---
 # <a name="indexnulls-property-example-vb"></a>Пример свойства IndexNulls (Visual Basic)
-В этом примере показано [IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md) свойство [индекс](../../../ado/reference/adox-api/index-object-adox.md). Код создает новый индекс и задает значение **IndexNulls** на основе ввода пользователя (из списка с именем List1). Затем **индекс** добавляется к **сотрудников** [таблицы](../../../ado/reference/adox-api/table-object-adox.md) в *Northwind* [каталога](../../../ado/reference/adox-api/catalog-object-adox.md). Новый **индекс** применяется к [записей](../../../ado/reference/ado-api/recordset-object-ado.md) на основе **сотрудников** таблицы и **записей** открыт. Добавляется новая запись **сотрудников** таблицы, с помощью **Null** значение индексированного поля. Следует ли отображать этой новой записи зависит от параметра **IndexNulls** свойство.  
+В этом примере демонстрируется свойство [IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md) [индекса](../../../ado/reference/adox-api/index-object-adox.md). Код создает новый индекс и задает значение **IndexNulls** на основе введенных пользователем данных (из списка с именем list1). Затем **индекс** добавляется в [таблицу](../../../ado/reference/adox-api/table-object-adox.md) **Employees** в [каталоге](../../../ado/reference/adox-api/catalog-object-adox.md) *Northwind* . Новый **индекс** применяется к [набору записей](../../../ado/reference/ado-api/recordset-object-ado.md) , основанному на таблице **Employees** , и открывается **набор записей** . В таблицу **Employees** добавляется новая запись со значением **null** в индексированном поле. Отображается ли эта новая запись, зависит от значения свойства **IndexNulls** .  
   
 ```  
 ' BeginIndexNullsVB  
@@ -108,6 +108,6 @@ End Sub
 ' EndIndexNullsVB  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Объект INDEX (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
+## <a name="see-also"></a>См. также:  
+ [Объект index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [Свойство IndexNulls (ADOX)](../../../ado/reference/adox-api/indexnulls-property-adox.md)

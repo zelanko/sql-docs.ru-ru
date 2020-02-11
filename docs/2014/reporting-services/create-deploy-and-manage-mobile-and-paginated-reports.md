@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1a4d9983da355c244e5d26873f92b4c43159a0e1
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74685437"
 ---
 # <a name="reporting-services-ssrs"></a>Cлужбы Reporting Services (SSRS)
@@ -35,7 +35,7 @@ ms.locfileid: "74685437"
  Дополнительные сведения о других компонентах, средствах и ресурсах [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] см. в [электронной документации по SQL Server](../2014-toc/index.yml).  
   
  **Просмотр содержимого по областям**  
- ![Значок папки](media/hlp-16folder.gif "Fстарый значок ") [Reporting Services сервере отчетов](../../2014/reporting-services/reporting-services-report-server.md)  
+ ![Значок папки](media/hlp-16folder.gif "Значок папки") [Reporting Services сервере отчетов](../../2014/reporting-services/reporting-services-report-server.md)  
   
  ![Значок папки](media/hlp-16folder.gif "Значок папки") [Reporting Services отчеты &#40;SSRS&#41;](reports/reporting-services-reports-ssrs.md)  
   
@@ -65,7 +65,7 @@ ms.locfileid: "74685437"
   
  ![Значок папки](media/hlp-16folder.gif "Значок папки") [ссылка на компонент &#40;Reporting Services&#41;](feature-reference-reporting-services.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Центр ресурсов SQL Server](https://go.microsoft.com/fwlink/?linkID=219676)  
   
   

@@ -18,13 +18,13 @@ ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c4f0ceb580ddc7538dd1ea98b9e08a82cd8d35b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68044496"
 ---
-# <a name="sysmailhelpprofileaccountsp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
+# <a name="sysmail_help_profileaccount_sp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Перечисляет учетные записи, связанные с одним или несколькими профилями компонента Database Mail.  
@@ -43,39 +43,39 @@ sysmail_help_profileaccount_sp
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @profile_id = ] profile_id` — Идентификатор профиля из перечисляемого профиля. *profile_id* — **int**, значение по умолчанию NULL. Либо *profile_id* или *profile_name* должен быть указан.  
+`[ @profile_id = ] profile_id`Идентификатор профиля для перечисления. *profile_id* имеет **тип int**и значение по умолчанию NULL. Необходимо указать либо *profile_id* , либо *profile_name* .  
   
-`[ @profile_name = ] 'profile_name'` — Имя профиля, профиля в список. *profile_name* — **sysname**, значение по умолчанию NULL. Либо *profile_id* или *profile_name* должен быть указан.  
+`[ @profile_name = ] 'profile_name'`Имя профиля для списка. Аргумент *profile_name* имеет тип **sysname**и значение по умолчанию NULL. Необходимо указать либо *profile_id* , либо *profile_name* .  
   
-`[ @account_id = ] account_id` — Идентификатор учетной записи в список. *account_id* — **int**, значение по умолчанию NULL. Когда *account_id* и *account_name* имеют значение NULL, перечисляет все учетные записи в профиле.  
+`[ @account_id = ] account_id`Идентификатор учетной записи для перечисления. *account_id* имеет **тип int**и значение по умолчанию NULL. Если *account_id* и *account_name* равны NULL, выводит список всех учетных записей в профиле.  
   
-`[ @account_name = ] 'account_name'` — Имя учетной записи в список. *account_name* — **sysname**, значение по умолчанию NULL. Когда *account_id* и *account_name* имеют значение NULL, перечисляет все учетные записи в профиле.  
+`[ @account_name = ] 'account_name'`Имя учетной записи для перечисления. Аргумент *account_name* имеет тип **sysname**и значение по умолчанию NULL. Если *account_id* и *account_name* равны NULL, выводит список всех учетных записей в профиле.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  Возвращает результирующий набор со следующими столбцами.  
   
 ||||  
 |-|-|-|  
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |**profile_id**|**int**|Идентификатор профиля.|  
-|**profile_name**|**sysname**|Имя профиля.|  
+|**profile_name**|**имеет sysname**|Имя профиля.|  
 |**account_id**|**int**|Идентификатор учетной записи.|  
-|**account_name**|**sysname**|Имя учетной записи.|  
+|**account_name**|**имеет sysname**|Имя учетной записи.|  
 |**sequence_number**|**int**|Порядковый номер учетной записи в профиле.|  
   
-## <a name="remarks"></a>Примечания  
- Если аргумент *profile_id* или *profile_name* указан, эта хранимая процедура возвращает данные для каждого профиля в экземпляре.  
+## <a name="remarks"></a>Remarks  
+ Если *profile_id* или *profile_name* не указаны, эта хранимая процедура возвращает сведения для каждого профиля в экземпляре.  
   
- Хранимая процедура **sysmail_help_profileaccount_sp** в **msdb** базы данных и принадлежит **dbo** схемы. Процедуру необходимо выполнять с трехкомпонентным именем, если текущая база данных не **msdb**.  
+ Хранимая процедура **sysmail_help_profileaccount_sp** находится в базе данных **msdb** и принадлежит схеме **dbo** . Процедура должна быть выполнена с именем, сопоставленным с тремя частями, если текущей базой данных не является **msdb**.  
   
 ## <a name="permissions"></a>Разрешения  
- Разрешения для этой процедуры по умолчанию члены выполнение **sysadmin** предопределенной роли сервера.  
+ По умолчанию разрешения EXECUTE для этой процедуры имеют члены предопределенной роли сервера **sysadmin** .  
   
 ## <a name="examples"></a>Примеры  
- **А. Вывод списка учетных записей для конкретного профиля по имени**  
+ **A. Вывод списка учетных записей для конкретного профиля по имени профиля**  
   
  В следующем примере выводятся данные профиля `AdventureWorks Administrator` путем указания имени профиля.  
   
@@ -93,7 +93,7 @@ profile_id  profile_name                 account_id  account_name         sequen
 131         AdventureWorks Administrator 198         Admin-BackupServer   2  
 ```  
   
- **Б. Перечисление учетных записей для конкретного профиля по Идентификатору профиля**  
+ **Б. Вывод списка учетных записей для конкретного профиля по идентификатору профиля**  
   
  В следующем примере демонстрируется вывод данных профиля `AdventureWorks Administrator` путем указания идентификатора профиля.  
   
@@ -111,7 +111,7 @@ profile_id  profile_name                 account_id  account_name         sequen
 131         AdventureWorks Administrator 198         Admin-BackupServer   2  
 ```  
   
- **В. Перечисление учетных записей для всех профилей**  
+ **В. Вывод списка учетных записей для всех профилей**  
   
  В следующем примере демонстрируется вывод списка учетных записей для всех профилей экземпляра.  
   
@@ -129,10 +129,10 @@ profile_id  profile_name                 account_id  account_name         sequen
 106         AdventureWorks Operator      210         Operator-MainServer  1  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
- [Создайте учетную запись почты базы данных](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [Объекты конфигурации компонента Database Mail](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Хранимые процедуры Database Mail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Создание учетной записи Database Mail](../../relational-databases/database-mail/create-a-database-mail-account.md)   
+ [Database Mail объекты конфигурации](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
+ [Database Mail хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

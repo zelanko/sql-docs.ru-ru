@@ -16,10 +16,10 @@ ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4c0837db9666ab6b49aee30b81b5585cbf5d5ee0
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056773"
 ---
 # <a name="sp_replicationdboption-transact-sql"></a>sp_replicationdboption (Transact-SQL)
@@ -41,20 +41,20 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @dbname = ] 'dbname'` — это база данных, для которой задается параметр базы данных репликации. Аргумент *db_name* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @dbname = ] 'dbname'`База данных, для которой задается параметр базы данных репликации. Аргумент *db_name* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @optname = ] 'optname'` является параметром базы данных репликации для включения или отключения. *optname* имеет тип **sysname**и может принимать одно из следующих значений.  
+`[ @optname = ] 'optname'`Параметр базы данных репликации для включения или отключения. *optname* имеет тип **sysname**и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |**Публикация слиянием**|База данных может использоваться для публикации слиянием.|  
 |**отменить**|База данных может использоваться для других типов публикаций.|  
-|**наблюдателя**|База данных является базой данных подписки.|  
-|**Синхронизация с резервной копией**|База данных доступна для скоординированного создания резервных копий. Дополнительные сведения см. в разделе [Включение координированных резервных копий для репликации &#40;репликации транзакций программирование&#41;на языке Transact-SQL](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md).|  
+|**subscribe**|База данных является базой данных подписки.|  
+|**sync with backup**|База данных доступна для скоординированного создания резервных копий. Дополнительные сведения см. в разделе [Включение координированных резервных копий для репликации транзакций &#40;программирование репликации на языке Transact-SQL&#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md).|  
   
-`[ @value = ] 'value'`, следует ли включать или отключать данный параметр базы данных репликации. **аргумент** *value* имеет тип sysname и может принимать **значение true** или **false**. Если это значение равно **false** и *optname* является **публикацией слиянием**, то подписки на опубликованную базу данных слияния также удаляются.  
+`[ @value = ] 'value'`Указывает, следует ли включить или отключить данный параметр базы данных репликации. **аргумент** *value* имеет тип sysname и может принимать **значение true** или **false**. Если это значение равно **false** и *optname* является **публикацией слиянием**, то подписки на опубликованную базу данных слияния также удаляются.  
   
-`[ @ignore_distributor = ] ignore_distributor` указывает, выполняется ли эта хранимая процедура без соединения с распространителем. *ignore_distributor* имеет **бит**, значение по умолчанию **0**, означающее, что распространитель должен быть подключен к и обновлен с новым состоянием базы данных публикации. Значение **1** должно быть указано, только если распространитель недоступен, а **sp_replicationdboption** используется для отключения публикации.  
+`[ @ignore_distributor = ] ignore_distributor`Указывает, выполняется ли эта хранимая процедура без соединения с распространителем. *ignore_distributor* имеет **бит**, значение по умолчанию **0**, означающее, что распространитель должен быть подключен к и обновлен с новым состоянием базы данных публикации. Значение **1** должно быть указано, только если распространитель недоступен, а **sp_replicationdboption** используется для отключения публикации.  
   
 `[ @from_scripting = ] from_scripting` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -71,12 +71,12 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_replicationdboption**.  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
  [Настройка публикации и распространения](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Удаление публикации](../../relational-databases/replication/publish/delete-a-publication.md)   
- [Disable Publishing and Distribution](../../relational-databases/replication/disable-publishing-and-distribution.md)  (Отключение публикации и распространения)  
- [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+ [Отключение публикации и распространения](../../relational-databases/replication/disable-publishing-and-distribution.md)   
+ [sys. databases &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
+ [Хранимые процедуры репликации &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

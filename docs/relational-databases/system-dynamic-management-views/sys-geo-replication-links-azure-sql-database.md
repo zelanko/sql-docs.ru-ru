@@ -1,5 +1,5 @@
 ---
-title: sys.geo_replication_links (база данных SQL Azure) | Документация Майкрософт
+title: sys. geo_replication_links (база данных SQL Azure) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/28/2019
 ms.service: sql-database
@@ -18,40 +18,40 @@ author: mashamsft
 ms.author: mathoma
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 6e768f447cd53321861eae91bbe40e2e34ad12f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68043161"
 ---
-# <a name="sysgeoreplicationlinks-azure-sql-database"></a>sys.geo_replication_links (база данных SQL Azure)
+# <a name="sysgeo_replication_links-azure-sql-database"></a>sys.geo_replication_links (база данных SQL Azure)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Содержит по строке на каждый канал репликации между первичной и вторичной базы данных в партнерстве георепликации. Данное представление находится в логической базе данных master.  
+  Содержит по одной строке для каждой связи репликации между первичной и базой данных-получателем в партнерстве георепликации. Данное представление находится в логической базе данных master.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|database_id|**int**|Идентификатор текущей базы данных в представлении sys.databases.|  
-|start_date|**datetimeoffset**|Время в формате UTC в региональном центре данных базы данных SQL при репликации базы данных была начата|  
-|modify_date|**datetimeoffset**|Время в формате UTC в региональном центре данных базы данных SQL после завершения георепликации базы данных. Новая база данных синхронизируется с базы данных-источника на этот момент времени. .|  
-|link_guid|**uniqueidentifier**|Уникальный идентификатор связи георепликации.|  
-|partner_server|**sysname**|Имя сервера базы данных SQL, содержащего геореплицированную базу данных.|  
-|partner_database|**sysname**|Имя геореплицированную базу данных на связанном сервере базы данных SQL.|  
-|replication_state|**tinyint**|Состояние географической репликации для этой базы данных, один из:.<br /><br /> 0 = ожидает согласования. Создание активной базы данных-получателя запланировано, но необходимые действия по подготовке еще не завершены.<br /><br /> 1 = заполнение. Георепликация целевой объект заполняется, но еще не синхронизированы две базы данных. До завершения первоначального заполнения, не удается подключиться к базе данных-получателе. Удаление базы данных-получателя из основного отменит операции заполнения.<br /><br /> 2 = захват. База данных-получатель находится в состоянии транзакционной согласованности и постоянно синхронизируются с базы данных-источника.|  
+|database_id|**int**|ИДЕНТИФИКАТОР текущей базы данных в представлении sys. databases.|  
+|start_date|**datetimeoffset**|Время в формате UTC в центральном центре обработки данных SQL, когда была инициирована репликация базы данных|  
+|modify_date|**datetimeoffset**|Время в формате UTC при выполнении георепликации базы данных в региональном центре обработки данных SQL. В это время новая база данных будет синхронизирована с базой данных-источником. .|  
+|link_guid|**UNIQUEIDENTIFIER**|Уникальный идентификатор канала георепликации.|  
+|partner_server|**имеет sysname**|Имя сервера базы данных SQL, содержащего геореплицированную базу данных.|  
+|partner_database|**имеет sysname**|Имя геореплицированной базы данных на связанном сервере базы данных SQL.|  
+|replication_state|**tinyint**|Состояние георепликации для этой базы данных, одно из следующих:.<br /><br /> 0 = ожидание. Создание активной базы данных-получателя запланировано, но необходимые шаги подготовки еще не завершены.<br /><br /> 1 = заполнение. Выполняется заполнение целевого объекта георепликации, но две базы данных еще не синхронизированы. Пока заполнение не завершится, вы не сможете подключиться к базе данных-получателю. Удаление базы данных-получателя с сервера-источника приведет к отмене операции заполнения.<br /><br /> 2 = перехватить. База данных-получатель находится в состоянии согласованности транзакций и постоянно синхронизируется с базой данных-источником.|  
 |replication_state_desc|**nvarchar(256)**|PENDING<br /><br /> SEEDING<br /><br /> CATCH_UP|  
-|role|**tinyint**|Роль георепликации, один из:<br /><br /> 0 = primary. Database_id относится к базе данных источнику в партнерстве георепликации.<br /><br /> 1 = вторичный.  Database_id относится к базе данных источнику в партнерстве георепликации.|  
-|role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
-|secondary_allow_connections|**tinyint**|Тип вторичного, один из:<br /><br /> 0 = Нет. База данных-получатель недоступен до отработки отказа.<br /><br /> 1 = только для чтения. База данных-получатель доступен только для клиентских соединений посредством ApplicationIntent = ReadOnly.<br /><br /> 2= все. Любое клиентское подключение доступен базы данных-получателя.|  
-|secondary_allow_connections _desc|**nvarchar(256)**|Нет<br /><br /> All<br /><br /> Только для чтения|  
+|роль|**tinyint**|Роль георепликации, одна из следующих:<br /><br /> 0 = основной. Database_id ссылается на базу данных-источник в партнерстве георепликации.<br /><br /> 1 = вторичный.  Database_id ссылается на базу данных-источник в партнерстве георепликации.|  
+|role_desc|**nvarchar(256)**|PRIMARY.<br /><br /> SECONDARY.|  
+|secondary_allow_connections|**tinyint**|Вторичный тип, один из следующих:<br /><br /> 0 = Нет. База данных-получатель недоступна до отработки отказа.<br /><br /> 1 = только для чтения. База данных-получатель доступна только для клиентских подключений с ApplicationIntent = ReadOnly.<br /><br /> 2= все. База данных-получатель доступна любому клиентскому подключению.|  
+|secondary_allow_connections _desc|**nvarchar(256)**|нет<br /><br /> All<br /><br /> Только для чтения|  
   
 ## <a name="permissions"></a>Разрешения
 
-Это представление доступно только в **master** базы данных имени входа субъекта уровня сервера.  
+Это представление доступно в базе данных **master** только для входа субъекта уровня сервера.  
   
 ## <a name="example"></a>Пример
 
-Отобразить все базы данных с соединениями георепликации.  
+Отображение всех баз данных с связями георепликации.  
 
 ```sql
 SELECT
@@ -65,8 +65,8 @@ SELECT
 FROM sys.geo_replication_links;  
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
- [CREATE DATABASE (база данных SQL Azure)](../../t-sql/statements/alter-database-azure-sql-database.md)   
- [sys.dm_geo_replication_link_status &#40;базы данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
- [sys.dm_operation_status &#40;базы данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)  
+ [ALTER DATABASE (база данных SQL Azure)](../../t-sql/statements/alter-database-azure-sql-database.md)   
+ [sys. dm_geo_replication_link_status &#40;базы данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
+ [sys. dm_operation_status &#40;базы данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)  

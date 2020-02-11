@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 76b1f8ac9a5f7ad584f42110f2c3b22e5c1918ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68008140"
 ---
 # <a name="or-dmx"></a>OR (расширения интеллектуального анализа данных)
@@ -37,8 +37,8 @@ Expression1 OR Expression2
 ## <a name="return-value"></a>Возвращаемое значение  
  Логическое значение, возвращающее TRUE, если хотя бы один из аргументов возвращает TRUE, и FALSE в противном случае.  
   
-## <a name="remarks"></a>Примечания  
- Оба аргумента считаются логическими значениями (0 — FALSE; любое ненулевое значение — TRUE), прежде чем оператор выполнит логическое сложение. Если хотя бы один аргумент возвращает TRUE, оператор возвращает TRUE. Если *Expression1* возвращает значение TRUE, и *Expression2* оценивается как FALSE, оператор возвращает TRUE.  
+## <a name="remarks"></a>Remarks  
+ Оба аргумента считаются логическими значениями (0 — FALSE; любое ненулевое значение — TRUE), прежде чем оператор выполнит логическое сложение. Если хотя бы один аргумент возвращает TRUE, оператор возвращает TRUE. Если значение *expression1* равно true, а *EXPRESSION2* принимает значение false, то оператор возвращает значение true.  
   
  В следующей таблице иллюстрируется выполнение логического сложения (дизъюнкции).  
   
@@ -49,9 +49,9 @@ Expression1 OR Expression2
 |FALSE|TRUE|TRUE|  
 |FALSE|FALSE|FALSE|  
   
-## <a name="see-also"></a>См. также  
- [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; Справочник по операторам](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Логические операторы &#40;расширений интеллектуального анализа данных&#41;](../dmx/operators-logical.md)   
- [Операторы &#40;расширений интеллектуального анализа данных&#41;](../dmx/operators-dmx.md)  
+## <a name="see-also"></a>См. также:  
+ [Ссылки на операторы расширений интеллектуального анализа данных &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Логические операторы &#40;&#41;расширений интеллектуального анализа данных](../dmx/operators-logical.md)   
+ [Операторы &#40;&#41;расширений интеллектуального анализа данных](../dmx/operators-dmx.md)  
   
   

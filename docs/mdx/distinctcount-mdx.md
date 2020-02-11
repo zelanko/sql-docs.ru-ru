@@ -1,5 +1,5 @@
 ---
-title: DistinctCount (многомерные Выражения) | Документация Майкрософт
+title: DistinctCount (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a5364b32aeb69019f7438b2c6d0e8f5ab716e39f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68077257"
 ---
 # <a name="distinctcount-mdx"></a>DistinctCount (многомерные выражения)
@@ -31,8 +31,8 @@ DistinctCount(Set_Expression)
  *Set_Expression*  
  Допустимое многомерное выражение, возвращающее набор.  
   
-## <a name="remarks"></a>Примечания  
- **DistinctCount** функция эквивалентна `Count(Distinct(Set_Expression), EXCLUDEEMPTY)`.  
+## <a name="remarks"></a>Remarks  
+ Функция **DistinctCount** эквивалентна `Count(Distinct(Set_Expression), EXCLUDEEMPTY)`.  
   
 ## <a name="examples"></a>Примеры  
  В следующем запросе показано использование функции DistinctCount:  
@@ -61,8 +61,8 @@ DistinctCount(Set_Expression)
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>См. также  
- [Count (наборы) (многомерные выражения)](../mdx/count-set-mdx.md)   
- [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также:  
+ [Count &#40;Set&#41; &#40;многомерных выражений&#41;](../mdx/count-set-mdx.md)   
+ [Ссылка на функцию многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-function-reference-mdx.md)  
   
   

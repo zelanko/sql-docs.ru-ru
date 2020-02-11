@@ -1,5 +1,5 @@
 ---
-title: sys.dm_resource_governor_external_resource_pool_affinity (Transact-SQL) | Документация Майкрософт
+title: sys. dm_resource_governor_external_resource_pool_affinity (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/13/2017
 ms.prod: sql
@@ -20,38 +20,38 @@ ms.assetid: e32fac49-5161-47c0-8540-af3fe730c00c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 02ec95d318825c1759067455b62f3dae6a86c184
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68053336"
 ---
-# <a name="sysdmresourcegovernorexternalresourcepoolaffinity-transact-sql"></a>sys.dm_resource_governor_external_resource_pool_affinity (Transact-SQL)
+# <a name="sysdm_resource_governor_external_resource_pool_affinity-transact-sql"></a>sys. dm_resource_governor_external_resource_pool_affinity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
-**Применимо к:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] и [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
+**Применимо к:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] и [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
-Возвращает сведения о сходстве ЦП о текущей конфигурации пула внешних ресурсов.
+Возвращает сведения о сходстве ЦП с текущей конфигурацией внешнего пула ресурсов.
   
-|Имя столбца|Тип данных|Описание|
+|Имя столбца|Тип данных|Description|
 |----------------|---------------|-----------------|
-|pool_id|**int**|Идентификатор внешнего пула ресурсов. Не допускает значение NULL.|
+|pool_id|**int**|ИДЕНТИФИКАТОР внешнего пула ресурсов. Не допускает значение NULL.|
 |processor_group|**smallint**|Идентификатор логической группы процессоров Windows. Не допускает значение NULL.|
 |cpu_mask|**bigint**|Двоичная маска, представляющая процессоры, связанные с этим пулом. Не допускает значение NULL.|
   
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Пулы, которые созданы со сходством `AUTO` не отображаются в этом представлении, так как они не имеют сходства. Дополнительные сведения см. в разделе [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41; ](../../t-sql/statements/create-external-resource-pool-transact-sql.md) и [ALTER EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-external-resource-pool-transact-sql.md) инструкций.
+Пулы, созданные с помощью сходства `AUTO` , не отображаются в этом представлении, так как они не имеют сходства. Дополнительные сведения см. в статьях [Создание пула внешних ресурсов &#40;Transact-sql&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md) и [Изменение внешнего пула ресурсов &#40;инструкций transact-SQL&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md) .
 
 ## <a name="permissions"></a>Разрешения
 
 Требуется разрешение `VIEW SERVER STATE`.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Управление ресурсами для машинного обучения в SQL Server](../../advanced-analytics/r/resource-governance-for-r-services.md)
 
-[представление sys.dm_resource_governor_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md)
+[sys. dm_resource_governor_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md)
 
-[Параметр конфигурации сервера «external scripts enabled»](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)
+[Параметр конфигурации сервера «External Scripts Enabled»](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)
 
-[ALTER EXTERNAL RESOURCE POOL (Transact-SQL)](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)
+[ИЗМЕНЕНИЕ внешнего пула ресурсов &#40;&#41;Transact-SQL](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)

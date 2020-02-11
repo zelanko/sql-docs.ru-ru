@@ -13,22 +13,22 @@ ms.assetid: b28af112-fb47-4143-b11e-3b743b2ae1b8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d58d7885eed1a8ed0611470f29cb24e8072afcb9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68053798"
 ---
 # <a name="sqlextendedfetch-visual-foxpro-odbc-driver"></a>SQLExtendedFetch (драйвер ODBC для Visual FoxPro)
 > [!NOTE]  
->  Этот раздел содержит сведения Visual FoxPro ODBC-драйвером. Общие сведения об этой функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  В этом разделе содержатся сведения, относящиеся к драйверу ODBC для Visual FoxPro. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Поддержка: Полное  
+ Поддержка: полная  
   
- Соответствие API ODBC: Уровень 2  
+ Соответствие API-интерфейса ODBC: уровень 2  
   
- Аналогичную [SQLFetch](../../odbc/microsoft/sqlfetch-visual-foxpro-odbc-driver.md) , но возвращает несколько строк с помощью массива для каждого столбца. Результирующий набор поддерживает прокрутку вперед и могут выполняться обратной прокручиваемые Если курсора определяется как статический, не последовательного доступа.  
+ Аналогично [SQLFetch](../../odbc/microsoft/sqlfetch-visual-foxpro-odbc-driver.md) , но возвращает несколько строк с помощью массива для каждого столбца. Результирующий набор доступен для прокрутки и может быть выполнен с возможностью обратной прокрутки, если курсор определен как статический, а не однонаправленный.  
   
- По умолчанию драйвер ODBC для Visual FoxPro не возвращает строк, помечаются как удаленные в таблице FoxPro. Строки помечаются для удаления, но еще не удаленных из таблицы не включаются в курсор результирующего набора. Это поведение можно изменить с помощью [SET DELETED](../../odbc/microsoft/set-deleted-command.md) команды.  
+ По умолчанию драйвер ODBC для Visual FoxPro не возвращает строки, помеченные как удаленные, в таблице FoxPro. Строки, помеченные для удаления, но еще не удаленные из таблицы, не включаются в курсор результирующего набора. Это поведение можно изменить с помощью команды [SET DELETED](../../odbc/microsoft/set-deleted-command.md) .  
   
- Дополнительные сведения см. в разделе [SQLExtendedFetch](../../odbc/reference/syntax/sqlextendedfetch-function.md) в *Справочник по программированию ODBC*.
+ Дополнительные сведения см. в разделе [SQLExtendedFetch](../../odbc/reference/syntax/sqlextendedfetch-function.md) в *справочнике программиста по ODBC*.

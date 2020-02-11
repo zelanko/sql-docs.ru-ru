@@ -1,5 +1,5 @@
 ---
-title: Написание драйверов ODBC 3.x | Документация Майкрософт
+title: Создание драйверов ODBC 3. x | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,103 +16,103 @@ ms.assetid: 9b75f59b-623f-4711-9ca2-e751b3622e00
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fb403cef47f901cdb43bbb32c669ba68aa34913d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68078898"
 ---
 # <a name="writing-odbc-3x-drivers"></a>Написание драйверов ODBC 3.x
-В следующей таблице показаны функции поддержки в ODBC 3. *x* драйвер и приложение ODBC и сопоставления, выполняемые диспетчером драйверов при вызове функций для работы с ODBC 3. *x* драйвера.  
+В следующей таблице показана поддержка функций в ODBC 3. драйвер *x* и приложение ODBC, а также сопоставление, выполняемое диспетчером драйверов при вызове функций для ODBC 3. драйвер *x* .  
   
-|Компонент|Поддерживается<br /><br /> по<br /><br /> ODBC 3. *x*<br /><br /> драйвер?|Поддерживается<br /><br /> по<br /><br /> ODBC 3. *x*<br /><br /> приложение?|Сопоставить поддерживается<br /><br /> в ODBC 3. *x*<br /><br /> Диспетчер драйверов для<br /><br /> ODBC-3. *x* драйвер?|  
+|Компонент|Поддерживается<br /><br /> с помощью<br /><br /> ODBC 3. *x*<br /><br /> аудиодрайвера?|Поддерживается<br /><br /> с помощью<br /><br /> ODBC 3. *x*<br /><br /> приклад?|Сопоставлено/поддерживается<br /><br /> по ODBC 3. *x*<br /><br /> Диспетчер драйверов для<br /><br /> ODBC 3. драйвер *x* ?|  
 |--------------|----------------------------------------------------|---------------------------------------------------------|---------------------------------------------------------------------------------------------|  
-|**SQLAllocConnect**|Нет|Нет [1]|Да|  
-|**SQLAllocEnv**|Нет|Нет [1]|Да|  
-|**SQLAllocHandle**|Да|Да|Нет|  
-|**SQLAllocStmt**|Нет|Нет [1]|Да|  
-|**SQLBindCol**|Да|Да|Нет|  
-|**SQLBindParam**|Нет|Да [2]|Да|  
-|**SQLBindParameter**|Да|Да|Нет|  
-|**SQLBrowseConnect**|Да|Да|Нет|  
-|**SQLBulkOperations**|Да|Да|Нет|  
-|**SQLCancel**|Да|Да|Нет|  
-|**SQLCloseCursor**|Да|Да|Нет|  
-|**SQLColAttribute**|Да|Да|Нет|  
-|**SQLColAttributes**|[3]|Нет|Да|  
-|**SQLColumnPrivileges**|Да|Да|Нет|  
-|**SQLColumns**|Да|Да|Нет|  
-|**SQLConnect**|Да|Да|Нет|  
-|**SQLCopyDesc**|Да|Да|Да [4]|  
-|**SQLDataSources**|Нет|Да|Да|  
-|**SQLDescribeCol**|Да|Да|Нет|  
-|**SQLDescribeParam**|Да|Да|Нет|  
-|**SQLDisconnect**|Да|Да|Нет|  
-|**SQLDriverConnect**|Да|Да|Нет|  
-|**SQLDrivers**|Нет|Да|Да|  
-|**SQLEndTran**|Да|Да|Нет|  
-|**SQLError**|Нет|Нет [1]|Да|  
-|**SQLExecDirect**|Да|Да|Нет|  
-|**SQLExecute**|Да|Да|Нет|  
-|**SQLExtendedFetch**|Да|Нет|Нет|  
-|**SQLFetch**|Да|Да|Нет|  
-|**SQLFetchScroll**|Да|Да|Нет|  
-|**SQLForeignKeys**|Да|Да|Нет|  
-|**SQLFreeConnect**|Нет|Да [1]|Да|  
-|**SQLFreeEnv**|Нет|Да [1]|Да|  
-|**SQLFreeHandle**|Да|Да|Нет|  
-|**SQLFreeStmt**|Да|Да|Нет|  
-|**SQLGetConnectAttr**|Да|Да|Нет|  
+|**SQLAllocConnect**|нет|Нет [1]|Да|  
+|**SQLAllocEnv**|нет|Нет [1]|Да|  
+|**Функцию SQLAllocHandle**|Да|Да|нет|  
+|**SQLAllocStmt**|нет|Нет [1]|Да|  
+|**SQLBindCol**|Да|Да|нет|  
+|**склбиндпарам**|нет|Да [2]|Да|  
+|**SQLBindParameter**|Да|Да|нет|  
+|**SQLBrowseConnect**|Да|Да|нет|  
+|**SQLBulkOperations**|Да|Да|нет|  
+|**SQLCancel**|Да|Да|нет|  
+|**SQLCloseCursor**|Да|Да|нет|  
+|**SQLColAttribute**|Да|Да|нет|  
+|**SQLColAttributes**|Нет [3]|нет|Да|  
+|**SQLColumnPrivileges**|Да|Да|нет|  
+|**SQLColumns**|Да|Да|нет|  
+|**SQLConnect**|Да|Да|нет|  
+|**склкопидеск**|Да|Да|Да [4]|  
+|**SQLDataSources**|нет|Да|Да|  
+|**SQLDescribeCol**|Да|Да|нет|  
+|**SQLDescribeParam**|Да|Да|нет|  
+|**SQLDisconnect**|Да|Да|нет|  
+|**SQLDriverConnect**|Да|Да|нет|  
+|**SQLDrivers**|нет|Да|Да|  
+|**SQLEndTran**|Да|Да|нет|  
+|**SQLError**|нет|Нет [1]|Да|  
+|**SQLExecDirect**|Да|Да|нет|  
+|**SQLExecute**|Да|Да|нет|  
+|**SQLExtendedFetch**|Да|нет|нет|  
+|**SQLFetch**|Да|Да|нет|  
+|**SQLFetchScroll**|Да|Да|нет|  
+|**SQLForeignKeys**|Да|Да|нет|  
+|**SQLFreeConnect**|нет|Да [1]|Да|  
+|**SQLFreeEnv**|нет|Да [1]|Да|  
+|**SQLFreeHandle**|Да|Да|нет|  
+|**Функция SQLFreeStmt**|Да|Да|нет|  
+|**SQLGetConnectAttr**|Да|Да|нет|  
 |**SQLGetConnectOption**|Нет [5]|Нет [1]|Да|  
-|**SQLGetCursorName**|Да|Да|Нет|  
-|**SQLGetData**|Да|Да|Нет|  
-|**SQLGetDescField**|Да|Да|Нет|  
-|**SQLGetDescRec**|Да|Да|Нет|  
-|**SQLGetDiagField**|Да|Да|Нет|  
-|**SQLGetDiagRec**|Да|Да|Нет|  
-|**SQLGetEnvAttr**|Да|Да|Нет|  
+|**SQLGetCursorName**|Да|Да|нет|  
+|**SQLGetData**|Да|Да|нет|  
+|**SQLGetDescField**|Да|Да|нет|  
+|**SQLGetDescRec**|Да|Да|нет|  
+|**SQLGetDiagField**|Да|Да|нет|  
+|**Функции SQLGetDiagRec**|Да|Да|нет|  
+|**SQLGetEnvAttr**|Да|Да|нет|  
 |**SQLGetFunctions**|Нет [6]|Да|Да|  
-|**SQLGetInfo**|Да|Да|Нет|  
-|**SQLGetStmtAttr**|Да|Да|Нет|  
+|**SQLGetInfo**|Да|Да|нет|  
+|**SQLGetStmtAttr**|Да|Да|нет|  
 |**SQLGetStmtOption**|Нет [5]|Нет [1]|Да|  
-|**SQLGetTypeInfo**|Да|Да|Нет|  
-|**SQLMoreResults**|Да|Да|Нет|  
-|**SQLNativeSql**|Да|Да|Нет|  
-|**SQLNumParams**|Да|Да|Нет|  
-|**SQLNumResultCols**|Да|Да|Нет|  
-|**SQLParamData**|Да|Да|Нет|  
-|**SQLParamOptions**|Нет|Нет|Да|  
-|**SQLPrepare**|Да|Да|Нет|  
-|**SQLPrimaryKeys**|Да|Да|Нет|  
-|**SQLProcedureColumns**|Да|Да|Нет|  
-|**SQLProcedures**|Да|Да|Нет|  
-|**SQLPutData**|Да|Да|Нет|  
-|**SQLRowCount**|Да|Да|Нет|  
-|**SQLSetConnectAttr**|Да|Да|Нет|  
+|**SQLGetTypeInfo**|Да|Да|нет|  
+|**SQLMoreResults**|Да|Да|нет|  
+|**SQLNativeSql**|Да|Да|нет|  
+|**SQLNumParams**|Да|Да|нет|  
+|**SQLNumResultCols**|Да|Да|нет|  
+|**SQLParamData**|Да|Да|нет|  
+|**SQLParamOptions**|нет|нет|Да|  
+|**SQLPrepare**|Да|Да|нет|  
+|**SQLPrimaryKeys**|Да|Да|нет|  
+|**SQLProcedureColumns**|Да|Да|нет|  
+|**SQLProcedures**|Да|Да|нет|  
+|**SQLPutData**|Да|Да|нет|  
+|**SQLRowCount**|Да|Да|нет|  
+|**SQLSetConnectAttr**|Да|Да|нет|  
 |**SQLSetConnectOption**|Нет [5]|Нет [1]|Да|  
-|**SQLSetCursorName**|Да|Да|Нет|  
-|**SQLSetDescField**|Да|Да|Нет|  
-|**SQLSetDescRec**|Да|Да|Нет|  
-|**SQLSetEnvAttr**|Да|Да|Нет|  
-|**SQLSetPos**|Да|Да|Нет|  
-|**SQLSetParam**|Нет|Нет|Да|  
-|**SQLSetScrollOption**|Да|Да|Нет|  
-|**SQLSetStmtAttr**|Да|Да|Нет|  
+|**SQLSetCursorName**|Да|Да|нет|  
+|**SQLSetDescField**|Да|Да|нет|  
+|**SQLSetDescRec**|Да|Да|нет|  
+|**SQLSetEnvAttr**|Да|Да|нет|  
+|**функция SQLSetPos;**|Да|Да|нет|  
+|**SQLSetParam**|нет|нет|Да|  
+|**склсетскроллоптион**|Да|Да|нет|  
+|**SQLSetStmtAttr**|Да|Да|нет|  
 |**SQLSetStmtOption**|Нет [5]|Нет [1]|Да|  
-|**SQLSpecialColumns**|Да|Да|Нет|  
-|**SQLStatistics**|Да|Да|Нет|  
-|**SQLTablePrivileges**|Да|Да|Нет|  
-|**SQLTables**|Да|Да|Нет|  
-|**SQLTransact**|Нет|Нет [1]|Да|  
+|**SQLSpecialColumns**|Да|Да|нет|  
+|**SQLStatistics**|Да|Да|нет|  
+|**SQLTablePrivileges**|Да|Да|нет|  
+|**SQLTables**|Да|Да|нет|  
+|**SQLTransact**|нет|Нет [1]|Да|  
   
- [1] Эта функция является устаревшей в ODBC 3. *x*. ODBC 3. *x* приложения не должны использовать эту функцию. Тем не менее Open Group или приложение, совместимое с ISO CLI можно вызвать эту функцию.  
+ [1] Эта функция является устаревшей в ODBC 3. *x*. ODBC 3. приложения *x* не должны использовать эту функцию. Однако можно вызвать эту функцию с помощью открытой группы или приложения, совместимого с CLI ISO.  
   
- [2] ODBC 3. *x* приложения должны использовать **SQLBindParameter** вместо **SQLBindParam**. Тем не менее Open Group или приложение, совместимое с ISO CLI можно вызвать эту функцию.  
+ [2] ODBC 3. приложения *x* должны использовать **SQLBindParameter** вместо **склбиндпарам**. Однако можно вызвать эту функцию с помощью открытой группы или приложения, совместимого с CLI ISO.  
   
- [3] модули записи драйвер следует отметить, что ODBC 2. *x* SQL_COLUMN_PRECISION SQL_COLUMN_SCALE и SQL_COLUMN_LENGTH должен поддерживаться с атрибуты столбца **SQLColAttribute**.  
+ [3] модули записи драйверов должны заметить, что ODBC 2. атрибуты столбца *x* SQL_COLUMN_PRECISION, SQL_COLUMN_SCALE и SQL_COLUMN_LENGTH должны поддерживаться с помощью **SQLColAttribute**.  
   
- [4] **SQLCopyDesc** частично реализуется диспетчером драйверов, когда дескриптор копируется в соединениях, которые принадлежат различными драйверами. Драйверы должны поддерживать **SQLCopyDesc** между двумя свои собственные подключения. Функции, такие как **SQLDrivers**, которые реализованы исключительно диспетчером драйверов, не отображаются в этом списке.  
+ [4] **склкопидеск** частично реализуется диспетчером драйверов при копировании дескриптора между соединениями, относящимися к разным драйверам. Драйверы необходимы для поддержки **склкопидеск** в двух своих подключениях. Такие функции, как **SQLDrivers**, реализованные только диспетчером драйверов, не отображаются в этом списке.  
   
- [5] при определенных обстоятельствах драйверов может потребоваться поддержка этой функции. Дополнительные сведения см. в разделе справочной странице этой функции.  
+ [5] при определенных обстоятельствах может потребоваться поддержка этой функции драйверами. Дополнительные сведения см. на странице справки этой функции.  
   
- [6] Драйвер можно выбрать для поддержки **SQLGetFunctions** Если набор функций, поддерживаемых драйвером зависит от подключения для подключения.
+ [6] Драйвер может поддерживать **SQLGetFunctions** , если набор функций, поддерживаемых драйвером, отличается от подключения к подключению.

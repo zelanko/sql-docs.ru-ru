@@ -1,5 +1,5 @@
 ---
-title: Append-метод (коллекция Columns ADOX) | Документация Майкрософт
+title: Метод Append (столбцы ADOX) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: 7a46d23c-efef-4ec7-815d-cd3ac86787dd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6493157c00e5a71c7c2f085191231bb33bb5279a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67967325"
 ---
 # <a name="append-method-adox-columns"></a>Метод Append (коллекция Columns ADOX)
-Добавляет новый [столбец](../../../ado/reference/adox-api/column-object-adox.md) объект [столбцы](../../../ado/reference/adox-api/columns-collection-adox.md) коллекции.  
+Добавляет новый объект [Column](../../../ado/reference/adox-api/column-object-adox.md) в коллекцию [Columns](../../../ado/reference/adox-api/columns-collection-adox.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,28 +35,28 @@ Columns.Append Column [,Type] [,DefinedSize]
   
 #### <a name="parameters"></a>Параметры  
  *Столбец*  
- **Столбец** добавляемый объект или имя столбца для создания и добавления.  
+ Добавляемый объект **Column** или имя создаваемого и добавляемого столбца.  
   
  *Тип*  
- Необязательный параметр. Объект **Long** значение, указывающее тип данных столбца. *Тип* параметр соответствует параметру [тип](../../../ado/reference/adox-api/type-property-column-adox.md) свойство **столбец** объекта.  
+ Необязательный параметр. Значение типа **Long** , указывающее тип данных столбца. Параметр *типа* соответствует свойству [Type](../../../ado/reference/adox-api/type-property-column-adox.md) объекта **Column** .  
   
  *DefinedSize*  
- Необязательный. Объект **Long** значение, указывающее размер столбца. *DefinedSize* параметр соответствует параметру [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) свойство **столбец** объекта.  
+ Необязательный параметр. Значение **типа Long** , указывающее размер столбца. Параметр *DefinedSize* соответствует свойству [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) объекта **Column** .  
   
 > [!NOTE]
->  Произойдет ошибка при добавлении **столбец** для **столбцы** коллекцию [индекс](../../../ado/reference/adox-api/index-object-adox.md) Если **столбца** не существует в [Таблицы](../../../ado/reference/adox-api/table-object-adox.md) , добавляется к уже [таблиц](../../../ado/reference/adox-api/tables-collection-adox.md) коллекции.  
+>  При добавлении **столбца** в коллекцию **Columns** [индекса](../../../ado/reference/adox-api/index-object-adox.md) , если **Столбец** не существует в [таблице](../../../ado/reference/adox-api/table-object-adox.md) , уже присоединенной к коллекции [таблиц](../../../ado/reference/adox-api/tables-collection-adox.md) , возникнет ошибка.  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  [Коллекция Columns (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)  
   
-## <a name="see-also"></a>См. также  
- [Столбцов и таблиц методов append для коллекций, пример свойства Name (Visual Basic)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
- [Append коллекции Keys метод, тип ключа, RelatedColumn, RelatedTable и UpdateRule свойства (Visual Basic)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+## <a name="see-also"></a>См. также:  
+ [Методы добавления столбцов и таблиц, пример свойства Name (Visual Basic)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
+ [Пример свойств для добавления ключей, типа ключа, RelatedColumn, RelatedTable и UpdateRule (Visual Basic)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Пример свойства ParentCatalog (Visual Basic)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
- [Append-метод (коллекция Groups ADOX)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
- [Append-метод (коллекция Indexes ADOX)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
- [Append-метод (коллекция Keys ADOX)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
- [Append-метод (коллекция Procedures ADOX)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
- [Append-метод (коллекция Tables ADOX)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [Append-метод (коллекция Users ADOX)](../../../ado/reference/adox-api/append-method-adox-users.md)   
+ [Метод Append (группы ADOX)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
+ [Метод Append (индексы ADOX)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
+ [Метод Append (ключи ADOX)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
+ [Метод Append (процедуры ADOX)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
+ [Метод Append (таблицы ADOX)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
+ [Метод Append (пользователи ADOX)](../../../ado/reference/adox-api/append-method-adox-users.md)   
  [Метод Append (коллекция Views ADOX)](../../../ado/reference/adox-api/append-method-adox-views.md)

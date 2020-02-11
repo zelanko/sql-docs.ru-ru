@@ -1,5 +1,5 @@
 ---
-title: sys.availability_group_listener_ip_addresses (Transact-SQL) | Документация Майкрософт
+title: sys. availability_group_listener_ip_addresses (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,39 +22,39 @@ ms.assetid: e515fa6b-1354-4110-9b70-ab2e6164c992
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a9c66e12ec326ba5021de0829b0d7cc479f858c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67997586"
 ---
-# <a name="sysavailabilitygrouplisteneripaddresses-transact-sql"></a>sys.availability_group_listener_ip_addresses (Transact-SQL)
+# <a name="sysavailability_group_listener_ip_addresses-transact-sql"></a>sys.availability_group_listener_ip_addresses (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Возвращает по строке для каждого IP-адреса, связанного с прослушивателем группы доступности AlwaysOn в кластере WSFC.  
   
- Первичный ключ: **listener_id** + **IP-адрес** + **ip_sub_mask**  
+ Первичный ключ: **listener_id** + **ip_address** + **ip_sub_mask**  
   
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|**listener_id**|**nvarchar(36)**|GUID ресурса в отказоустойчивой кластеризации Windows Server (WSFC).|  
-|**IP-адрес**|**nvarchar(48)**|Настроенный виртуальный IP-адрес прослушивателя группы доступности. Возвращает один адрес IPv4 или IPv6.|  
-|**ip_subnet_mask**|**nvarchar(15)**|Настроенная маска подсети IP для адреса IPv4, если он имеется, заданная для прослушивателя группы доступности.<br /><br /> NULL = подсеть IPv6|  
+|**listener_id**|**nvarchar (36)**|GUID ресурса в отказоустойчивой кластеризации Windows Server (WSFC).|  
+|**ip_address**|**nvarchar (48)**|Настроенный виртуальный IP-адрес прослушивателя группы доступности. Возвращает один адрес IPv4 или IPv6.|  
+|**ip_subnet_mask**|**nvarchar (15)**|Настроенная маска подсети IP для адреса IPv4, если он имеется, заданная для прослушивателя группы доступности.<br /><br /> NULL = подсеть IPv6|  
 |**is_dhcp**|**bit**|Указывает, настраивается ли IP-адрес по DHCP, одно из следующих значений:<br /><br /> 0 = IP-адрес не настраивается по DHCP.<br /><br /> 1 = IP-адрес настраивается по DHCP.|  
-|**network_subnet_ip**|**nvarchar(48)**|IP-адрес подсети, задающий подсеть, к которой принадлежит IP-адрес.|  
+|**network_subnet_ip**|**nvarchar (48)**|IP-адрес подсети, задающий подсеть, к которой принадлежит IP-адрес.|  
 |**network_subnet_prefix_length**|**int**|Длина префикса подсети, к которой принадлежит IP-адрес.|  
-|**network_subnet_ipv4_mask**|**nvarchar(45)**|Маска подсети, к которой принадлежит IP-адрес. **network_subnet_ipv4_mask** для указания параметров DHCP < network_subnet_option > в предложении WITH DHCP [CREATE AVAILABILITY GROUP](../../t-sql/statements/create-availability-group-transact-sql.md) или [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции.<br /><br /> NULL = подсеть IPv6|  
+|**network_subnet_ipv4_mask**|**nvarchar (45)**|Маска подсети, к которой принадлежит IP-адрес. **network_subnet_ipv4_mask** , чтобы указать параметры DHCP-<network_subnet_option> в предложении WITH DHCP инструкции [CREATE Availability Group](../../t-sql/statements/create-availability-group-transact-sql.md) или [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] .<br /><br /> NULL = подсеть IPv6|  
 |**state**|**tinyint**|Состояние ONLINE/OFFLINE IP-ресурса в кластере WSFC, одно из следующих значений:<br /><br /> 1 = в сети. IP-ресурс находится в режиме «в сети».<br /><br /> 0 = вне сети. IP-ресурс находится вне сети.<br /><br /> 2 = ожидание перехода в режиме «в сети» IP-ресурс находится вне сети, но производится его перевод в режим «в сети».<br /><br /> 3 = ошибка. В процессе перевода IP-ресурса в режим «в сети» произошла ошибка.|  
-|**state_desc**|**nvarchar(60)**|Описание **состояние**, используя один из:<br /><br /> ONLINE<br /><br /> OFFLINE<br /><br /> ONLINE_PENDING<br /><br /> FAILED|  
+|**state_desc**|**nvarchar (60)**|Описание **состояния**, одно из следующих:<br /><br /> ONLINE<br /><br /> OFFLINE<br /><br /> ONLINE_PENDING<br /><br /> FAILED|  
   
-## <a name="security"></a>Безопасность  
+## <a name="security"></a>безопасность  
   
 ### <a name="permissions"></a>Разрешения  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Дополнительные сведения см. в разделе [Настройка видимости метаданных](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>См. также  
- [Запросив системный каталог SQL Server часто задаваемые вопросы](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
+## <a name="see-also"></a>См. также:  
+ [Запросы к системному каталогу SQL Server вопросы и ответы](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

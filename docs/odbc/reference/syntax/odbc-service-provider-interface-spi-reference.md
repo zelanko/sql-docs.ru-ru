@@ -1,5 +1,5 @@
 ---
-title: Справочник по интерфейса (SPI) ODBC службы поставщика | Документация Майкрософт
+title: Справочник по интерфейсу поставщика служб ODBC (SPI) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,36 +11,36 @@ ms.assetid: cdeffb4a-f344-4abe-97f3-be2ede1c8e59
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 88053620fa413c50a8faff4cc47cbbe1457249f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68073833"
 ---
 # <a name="odbc-service-provider-interface-spi-reference"></a>Справочник по интерфейсу службы доступа (SPI) ODBC
-В большинстве случаев ODBC определен интерфейс программирования (API). Функции в API, которые могут вызываться приложениями, и они должны быть реализованы внутри диспетчера драйверов и драйвер.  
+Обычно ODBC определяет интерфейс программирования приложений (API). Функции в API могут вызываться приложениями и должны быть реализованы в диспетчере драйверов и драйвере.  
   
- С появлением функция объединения соединений с учетом драйвера ODBC реализует интерфейс поставщика службы (SPI). Функции в SPI используются для обмена данными между диспетчера драйверов и драйверов. SPI функции реализуются с помощью драйвера; Диспетчер драйверов не предоставляет функции SPI к приложениям. Приложения не должны напрямую вызывать эти функции.  
+ С добавлением функции пулов соединений с учетом драйверов ODBC вводит интерфейс поставщика услуг (SPI). Функции в индексе SPI используются для обмена данными между диспетчером драйверов и драйвером. Функции SPI реализуются драйвером. Диспетчер драйверов не предоставляет приложениям функции SPI. Приложения не должны вызывать эти функции напрямую.  
   
- Включить sqlspi.h для разработки драйвера ODBC.  
+ Включите склспи. h для разработки драйвера ODBC.  
   
- Этот раздел содержит следующие разделы  
+ Этот раздел содержит следующие подразделы.  
   
--   [SQLCleanupConnectionPoolID](../../../odbc/reference/syntax/sqlcleanupconnectionpoolid-function.md)  
+-   [склклеанупконнектионпулид](../../../odbc/reference/syntax/sqlcleanupconnectionpoolid-function.md)  
   
--   [SQLGetPoolID](../../../odbc/reference/syntax/sqlgetpoolid-function.md)  
+-   [склжетпулид](../../../odbc/reference/syntax/sqlgetpoolid-function.md)  
   
--   [SQLPoolConnect](../../../odbc/reference/syntax/sqlpoolconnect-function.md)  
+-   [склпулконнект](../../../odbc/reference/syntax/sqlpoolconnect-function.md)  
   
--   [SQLRateConnection](../../../odbc/reference/syntax/sqlrateconnection-function.md)  
+-   [склратеконнектион](../../../odbc/reference/syntax/sqlrateconnection-function.md)  
   
--   [SQLSetConnectAttrForDbcInfo](../../../odbc/reference/syntax/sqlsetconnectattrfordbcinfo-function.md)  
+-   [склсетконнектаттрфордбЦинфо](../../../odbc/reference/syntax/sqlsetconnectattrfordbcinfo-function.md)  
   
--   [SQLSetConnectInfo](../../../odbc/reference/syntax/sqlsetconnectinfo-function.md)  
+-   [склсетконнектинфо](../../../odbc/reference/syntax/sqlsetconnectinfo-function.md)  
   
--   [SQLSetDriverConnectInfo](../../../odbc/reference/syntax/installation-and-configuration-wwi-oltp.md)  
+-   [склсетдриверконнектинфо](../../../odbc/reference/syntax/installation-and-configuration-wwi-oltp.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Разработка драйвера ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
- [Разработка драйвера ODBC с поддержкой пула подключений](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)   
+ [Разработка осведомленности о пуле подключений в драйвере ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)   
  [Организация пулов соединений диспетчера драйверов](../../../odbc/reference/develop-app/driver-manager-connection-pooling.md)

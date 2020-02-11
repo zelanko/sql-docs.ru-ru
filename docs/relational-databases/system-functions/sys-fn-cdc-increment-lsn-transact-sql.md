@@ -1,5 +1,5 @@
 ---
-title: sys.fn_cdc_increment_lsn (Transact-SQL) | Документация Майкрософт
+title: sys. fn_cdc_increment_lsn (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,13 +21,13 @@ ms.assetid: e53b6703-358b-4c9a-912a-8f7c7331069b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a482acb22ad535e44d6ceb06a20474945a477e58
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046368"
 ---
-# <a name="sysfncdcincrementlsn-transact-sql"></a>sys.fn_cdc_increment_lsn (Transact-SQL)
+# <a name="sysfn_cdc_increment_lsn-transact-sql"></a>sys.fn_cdc_increment_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Возвращает следующий регистрационный номер транзакции в журнале (LSN) в последовательности относительно указанного номера.  
@@ -43,12 +43,12 @@ sys.fn_cdc_increment_lsn ( lsn_value )
   
 ## <a name="arguments"></a>Аргументы  
  *lsn_value*  
- Значение LSN. *lsn_value* — **binary(10)** .  
+ Значение LSN. *lsn_value* является **двоичным (10)**.  
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
- **binary(10)**  
+ **двоичный (10)**  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Номер LSN, возвращаемый функцией, всегда больше заданного значения. Между указанными двумя значениями не может быть промежуточных номеров LSN.  
   
  Для систематического отображения информации об изменениях данных с течением времени можно периодически вызывать функцию запроса, каждый раз указывая новые значения границ интервала. Чтобы исключить потерю данных, необходимо в качестве нижней границы последующего запроса использовать верхнюю границу предыдущего запроса. Так как интервал запроса является замкнутым, то новое значение нижней границы должно быть больше, чем значение верхней границы предыдущего запроса. Однако необходимо убедиться, что разница между указанными значениями границ достаточно мала и не включает номеров LSN каких-либо изменений. Для получения этого значения используется функция sys.fn_cdc_increment_lsn.  
@@ -70,11 +70,11 @@ SELECT * from cdc.fn_cdc_get_all_changes_HumanResources_Employee( @from_lsn, @to
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [sys.fn_cdc_decrement_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-decrement-lsn-transact-sql.md)   
- [CDC.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
- [CDC.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
- [Журнал транзакций (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)   
- [Об отслеживании измененных данных (SQL Server)](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
+## <a name="see-also"></a>См. также:  
+ [sys. fn_cdc_decrement_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-decrement-lsn-transact-sql.md)   
+ [CDC. fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
+ [CDC. fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
+ [&#40;SQL Server журнала транзакций&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   
+ [Об SQL Server &#40;системы отслеживания измененных данных&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   
   

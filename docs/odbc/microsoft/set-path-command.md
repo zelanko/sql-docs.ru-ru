@@ -13,14 +13,14 @@ ms.assetid: db488d1e-0963-4f45-8c76-a23b9bde9e9d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 57685731bc5eb86381816d0cbb91a4942b5bfeff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68063639"
 ---
 # <a name="set-path-command"></a>Команда SET PATH
-Указывает путь для поиска файлов. Сведения см. в разделе "Примечания".  
+Указывает путь для поиска файлов. Сведения, относящиеся к драйверу, см. в разделе Примечания.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -30,27 +30,27 @@ SET PATH TO [Path]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- ДЛЯ [ *путь*]  
- Задает каталоги, требуется Visual FoxPro для поиска. Используйте запятые или точки с запятой для разделения каталогов используется.  
+ В [ *path*]  
+ Указывает каталоги, в которых требуется выполнять поиск в Visual FoxPro. Для разделения каталогов используйте запятые или точки с запятой.  
   
-## <a name="remarks"></a>Примечания  
- SET PATH можно указать пути поиска для других программ Visual FoxPro, которые могут вызываться в хранимых процедурах. SET PATH не изменится на путь к источнику данных, который вы указали для подключения.  
+## <a name="remarks"></a>Remarks  
+ ЗАДАТЬ путь позволяет указать пути поиска для других программ Visual FoxPro, которые могут вызываться в хранимых процедурах. SET PATH не изменит путь к источнику данных, указанному для соединения.  
   
- Выдавать ЗАДАЙТЕ путь без *путь* для восстановления пути по умолчанию каталог или папку.  
+ Выдача пути к параметру без *пути* для восстановления пути к каталогу или папке по умолчанию.  
   
-## <a name="driver-remarks"></a>Драйвер "Примечания"  
- Если ЗАДАТЬ путь в хранимой процедуре, то оно будет игнорироваться, следующие функции и команды:  
+## <a name="driver-remarks"></a>Примечания к драйверам  
+ Если вы выдаете параметр PATH в хранимой процедуре, он будет проигнорирован следующими функциями и командами:  
   
--   Например, функции работы с каталогами [SQLTables](../../odbc/microsoft/sqltables-visual-foxpro-odbc-driver.md) и [SQLColumns](../../odbc/microsoft/sqlcolumns-visual-foxpro-odbc-driver.md) игнорирует новый путь и дальше ссылаться на путь, указанный источник данных в [SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md) или [ SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md).  
+-   Функции каталога, такие как [SQLTables](../../odbc/microsoft/sqltables-visual-foxpro-odbc-driver.md) и [SQLColumns](../../odbc/microsoft/sqlcolumns-visual-foxpro-odbc-driver.md) , игнорируют новый путь и продолжают ссылаться на путь, указанный в источнике данных в [SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md) или [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md).  
   
--   Команды, такие как SELECT, INSERT, UPDATE, DELETE и CREATE TABLE будет игнорировать новый путь и дальше ссылаться на путь, указанный источник данных в **SQLPrepare** или **SQLExecDirect**.  
+-   Такие команды, как SELECT, INSERT, UPDATE, DELETE и CREATE TABLE, пропускают новый путь и продолжают ссылаться на путь, указанный в источнике данных в **SQLPrepare** или **SQLExecDirect**.  
   
- Если вы выполните SET PATH в хранимой процедуре и не впоследствии путь к обратно в исходное состояние, другие подключения к базе данных будет использовать новый путь (так как SET PATH не ограничена сеансов данных).  
+ Если вы выдаете параметр PATH в хранимой процедуре и не устанавливаете путь обратно в исходное состояние, то другие соединения с базой данных будут использовать новый путь (так как для установки пути не используется сеансы данных).  
   
- Если вы хотите создать, выберите или обновлении таблиц в каталоге, отличном от указанного в источнике данных, укажите полный путь к файлу с помощью вашей команды.  
+ Если необходимо создать, выбрать или обновить таблицы в каталоге, отличном от указанного в источнике данных, укажите полный путь к файлу с помощью команды.  
   
-## <a name="see-also"></a>См. также  
- [Диалоговое окно настройки Visual FoxPro ODBC](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)   
+## <a name="see-also"></a>См. также:  
+ [Диалоговое окно установки ODBC Visual FoxPro](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)   
  [SQLColumns (драйвер ODBC для Visual FoxPro)](../../odbc/microsoft/sqlcolumns-visual-foxpro-odbc-driver.md)   
  [SQLDriverConnect (драйвер ODBC для Visual FoxPro)](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md)   
  [SQLTables (драйвер ODBC для Visual FoxPro)](../../odbc/microsoft/sqltables-visual-foxpro-odbc-driver.md)

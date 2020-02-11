@@ -1,5 +1,5 @@
 ---
-title: dbo.sysproxysubsystem (Transact-SQL) | Документация Майкрософт
+title: dbo. сиспроксисубсистем (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,27 +20,27 @@ ms.assetid: 6d7713f5-1253-4a19-b1fb-635c377c95c1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f3a140a4cf1c82deda3b9d6a15b419b33b411974
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097022"
 ---
 # <a name="dbosysproxysubsystem-transact-sql"></a>dbo.sysproxysubsystem (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Содержит записи, используемые подсистемой агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для каждой из учетных записей-посредников. Эта таблица хранится в **msdb** базы данных.  
+  Содержит записи, используемые подсистемой агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для каждой из учетных записей-посредников. Эта таблица хранится в базе данных **msdb** .  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|**subsystem_id**|**int**|Идентификатор подсистемы. Это значение соответствует **subsystem_id** столбца в **syssubsystems** таблицы.|  
-|**proxy_id**|**int**|Идентификатор учетной записи-посредника. Это значение соответствует **proxy_id** столбца в **sysproxies** таблицы.|  
+|**subsystem_id**|**int**|Идентификатор подсистемы. Это значение соответствует столбцу **subsystem_id** в таблице **заполнения таблицы syssubsystems** .|  
+|**proxy_id**|**int**|Идентификатор учетной записи-посредника. Это значение соответствует столбцу **proxy_id** в таблице **sysproxies** .|  
   
-## <a name="remarks"></a>Примечания  
- Только члены **sysadmin** предопределенной роли сервера можно получить доступ к этой таблице.  
+## <a name="remarks"></a>Remarks  
+ Только члены предопределенной роли сервера **sysadmin** могут обращаться к этой таблице.  
   
-## <a name="see-also"></a>См. также  
- [dbo.syssubsystems &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-syssubsystems-transact-sql.md)   
- [dbo.sysproxies &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [dbo. заполнения таблицы syssubsystems &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-syssubsystems-transact-sql.md)   
+ [dbo. sysproxies &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md)  
   
   

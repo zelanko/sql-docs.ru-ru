@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ff489b218f783201d5ea3bd0a0165951f51ff4e9
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74095496"
 ---
 # <a name="creating-altering-and-removing-stored-procedures"></a>Создание, изменение и удаление хранимых процедур
@@ -25,10 +25,10 @@ ms.locfileid: "74095496"
 
   В управляющих объектах [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SMO хранимые процедуры представлены объектом <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>.  
   
- Создание объекта <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> в SMO требует, чтобы свойство <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A> указывало скрипт [!INCLUDE[tsql](../../../includes/tsql-md.md)], определяющий хранимую процедуру. Для параметров требуется префикс \@ и его необходимо создать отдельно с помощью <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> объектов и добавления в коллекцию <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> объекта <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>.  
+ Создание объекта <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> в SMO требует, чтобы свойство <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A> указывало скрипт [!INCLUDE[tsql](../../../includes/tsql-md.md)], определяющий хранимую процедуру. Параметры нуждаются в \@ префиксе и должны создаваться по отдельности с помощью <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> объектов и <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> добавления в коллекцию <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> объекта.  
   
 ## <a name="example"></a>Пример  
- Чтобы использовать какой-либо из представленных примеров кода, необходимо выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. [в разделе Создание проекта Visual&#35; C SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. [в статье Создание проекта Visual C&#35; SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-stored-procedure-in-visual-basic"></a>Создание, изменение и удаление хранимой процедуры на языке Visual Basic  
  Данный пример кода показывает, как создавать хранимую процедуру для базы данных [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] . По идентификатору сотрудника пример возвращает фамилию этого сотрудника. Хранимая процедура требует один входной параметр для указания идентификатора сотрудника и один выходной параметр для возвращения последнего имени сотрудника.  
@@ -151,7 +151,7 @@ $sp.Alter()
 $sp.Drop()  
 ```  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
  <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>  
   
   

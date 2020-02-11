@@ -16,13 +16,13 @@ ms.assetid: a96e365f-5967-4580-9d79-5bacf2d12211
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6875e745cc05735b9f116c2d4afa5e5218defb99
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68122392"
 ---
-# <a name="sphelpmergealternatepublisher-transact-sql"></a>sp_helpmergealternatepublisher (Transact-SQL)
+# <a name="sp_helpmergealternatepublisher-transact-sql"></a>sp_helpmergealternatepublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Возвращает список всех серверов, которые разрешены как альтернативные издатели для публикации слиянием. Эта хранимая процедура выполняется на подписчике в базе данных подписки.  
@@ -37,35 +37,35 @@ sp_helpmergealternatepublisher [ @publisher = ] 'publisher', [ @publisher_db = ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publisher = ] 'publisher'` — Имя альтернативного издателя. *издателя* — **sysname**, не имеет значения по умолчанию.  
+`[ @publisher = ] 'publisher'`Имя альтернативного издателя. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @publisher_db = ] 'publisher_db'` — Имя базы данных публикации. *publisher_db* — **sysname**, не имеет значения по умолчанию.  
+`[ @publisher_db = ] 'publisher_db'`Имя базы данных публикации. Аргумент *publisher_db* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @publication = ] 'publication'` — Имя публикации. *публикации* — **sysname**, не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|**alternate_publisher**|**sysname**|Имя альтернативного издателя.|  
-|**alternate_publisher_db**|**sysname**|Имя базы данных публикации.|  
-|**alternate_publication**|**sysname**|Имя публикации.|  
-|**alternate_distributor**|**sysname**|Имя распространителя.|  
-|**Имя**|**nvarchar(255)**|Описание альтернативного издателя.|  
-|**включен**|**bit**|Определяет, является ли сервер альтернативным издателем. **1** указывает, что издатель альтернативный издатель. **0** указывает, что он не включен.|  
+|**alternate_publisher**|**имеет sysname**|Имя альтернативного издателя.|  
+|**alternate_publisher_db**|**имеет sysname**|Имя базы данных публикации.|  
+|**alternate_publication**|**имеет sysname**|Имя публикации.|  
+|**alternate_distributor**|**имеет sysname**|Имя распространителя.|  
+|**friendly_name**|**nvarchar(255)**|Описание альтернативного издателя.|  
+|**доступной**|**bit**|Определяет, является ли сервер альтернативным издателем. значение **1** указывает, что издатель включен в качестве альтернативного издателя. **0** указывает, что он не включен.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  **sp_helpmergealternatepublisher** используется в репликации слиянием.  
   
  Во время каждого сеанса слияния система запрашивает у издателя и подписчика список их альтернативных издателей. Процесс слияния добавляет или удаляет записи в список альтернативных издателей, в результате создается список альтернативных издателей, которые присутствуют и в списке издателя и в списке подписчика.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены списка доступа публикации для публикации могут выполнять **sp_helpmergealternatepublisher**.  
+ Только члены списка доступа к публикации могут выполнять **sp_helpmergealternatepublisher**.  
   
-## <a name="see-also"></a>См. также  
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

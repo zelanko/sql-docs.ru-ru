@@ -15,32 +15,32 @@ ms.assetid: aaf5d516-e090-445f-8839-9e39581c69c7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 36e108fcc61b2390d5fd72ac4ad322778ccfb4b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68057075"
 ---
 # <a name="scalar-function-escape-sequence"></a>Escape-последовательность скалярной функции
-ODBC использует escape-последовательности для скалярных функций. Синтаксис escape-последовательность выглядит следующим образом:  
+ODBC использует escape-последовательности для скалярных функций. Синтаксис этой escape-последовательности выглядит следующим образом:  
   
 ```  
 {fn scalar-function}  
 ```  
   
-## <a name="remarks"></a>Примечания  
- В форме Бэкуса-Наура синтаксис выглядит следующим образом:  
+## <a name="remarks"></a>Remarks  
+ В нотации BNF синтаксис выглядит следующим образом:  
   
- *Скаляр функция — escape-последовательность ODBC* :: =  
+ *ODBC-скалярная функция-escape* :: =  
   
- *ODBC-esc инициатор* fn *скалярная функция ODBC-esc-terminator*  
+ *ODBC-ESC-инициатор* , *Скалярная функция ODBC-ESC-признак конца*  
   
- *Скалярная функция* :: = *имя функции* (*список аргументов*)  
+ *Скалярная функция* :: = *Function-Name* (*Argument-List*)  
   
- (Определения Нетерминальные слова *имя функции* и *имя функции* (*список аргументов*) являются производными от список скалярных функций в [ Приложение д. Скалярные функции](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md).)  
+ (Определения для нетерминальных *функций-имя* и *имя функции* (*Argument-List*) являются производными от списка скалярных функций в [приложении E: скалярные функции](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md).)  
   
- *ODBC-esc-initiator* ::= {  
+ *ODBC-ESC-инициатор* :: = {  
   
- *ODBC-esc-terminator* ::= }  
+ *ODBC-ESC-признак конца* :: =}  
   
- Чтобы определить источник данных поддерживает процедуры и драйвер поддерживает синтаксис вызова процедуры ODBC, приложение может вызвать **SQLGetInfo**. Дополнительные сведения см. в разделе [приложении E: Скалярные функции](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md).
+ Чтобы определить, поддерживает ли источник данных процедуры, и драйвер поддерживает синтаксис вызова процедуры ODBC, приложение может вызвать **SQLGetInfo**. Дополнительные сведения см. в разделе [Приложение E. скалярные функции](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md).
