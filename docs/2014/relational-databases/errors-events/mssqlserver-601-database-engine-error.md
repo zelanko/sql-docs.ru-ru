@@ -15,19 +15,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9aebe73ac73ee09ed2ba6de9162877d0e70bc7e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62867733"
 ---
-# <a name="mssqlserver601"></a>MSSQLSERVER_601
+# <a name="mssqlserver_601"></a>MSSQLSERVER_601
     
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|601|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
@@ -42,9 +42,9 @@ ms.locfileid: "62867733"
 ## <a name="user-action"></a>Действие пользователя  
  Эта ошибка отменяет запрос. Отправьте запрос повторно или удалите указание блокировки NOLOCK.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [MSSQLSERVER_605](mssqlserver-605-database-engine-error.md)   
- [Табличные указания (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-table)   
+ [Табличные указания &#40;&#41;Transact-SQL](/sql/t-sql/queries/hints-transact-sql-table)   
  [SELECT (Transact-SQL)](/sql/t-sql/queries/select-transact-sql)   
  [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)  
   
