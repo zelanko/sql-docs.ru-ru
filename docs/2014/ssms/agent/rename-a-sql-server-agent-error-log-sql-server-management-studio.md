@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b3405f69ce36b4b46cdb519d281ab910d7220887
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62649929"
 ---
-# <a name="rename-a-sql-server-agent-error-log-sql-server-management-studio"></a>переименовать журнал ошибок агента SQL Server (среда SQL Server Management Studio)
-  В этом разделе описано, как переименовать файл, в котором содержится журнал ошибок агента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+# <a name="rename-a-sql-server-agent-error-log-sql-server-management-studio"></a>Rename a SQL Server Agent Error Log (SQL Server Management Studio)
+  В этом разделе описывается, как переименовать файл, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] который записываются ошибки агента [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], с помощью.  
   
  **В этом разделе**  
   
@@ -31,9 +31,9 @@ ms.locfileid: "62649929"
   
      [Ограничения](#Restrictions)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
--   [Переименование журнала ошибок агента SQL Server с помощью среды SQL Server Management Studio](#SSMSProcedure)  
+-   [Переименование агент SQL Server журнала ошибок с помощью SQL Server Management Studio](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
@@ -41,7 +41,8 @@ ms.locfileid: "62649929"
   
 -   Узел агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отображается в обозревателе объектов только при наличии у пользователя разрешения на использование узла.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет записывать сведения в новый файл журнала только после перезапуска службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет записывать сведения в новый файл журнала только после перезапуска службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ###  <a name="Security"></a> безопасность  
   
@@ -56,7 +57,7 @@ ms.locfileid: "62649929"
   
 -   Назначение квот памяти процессам (SeIncreaseQuotaPrivilege)  
   
- Дополнительные сведения о разрешениях Windows, необходимых для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учетная запись службы агента, см. в разделе [выберите учетную запись для службы агента SQL Server](select-an-account-for-the-sql-server-agent-service.md) и [Настройка учетных записей службы Windows и Разрешения](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+ Дополнительные сведения о разрешениях Windows, необходимых для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учетной записи службы агента, см. в разделе [Выбор учетной записи для службы агент SQL Server](select-an-account-for-the-sql-server-agent-service.md) и [Настройка учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   

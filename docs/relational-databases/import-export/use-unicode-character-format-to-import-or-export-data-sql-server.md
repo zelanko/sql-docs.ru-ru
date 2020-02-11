@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: d016e4f45a91a61c5918a4bfdfb9dd1073521c02
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056310"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>Использование символьного формата Юникода для импорта и экспорта данных (SQL Server)
@@ -82,7 +82,7 @@ Error = [Microsoft][ODBC Driver 13 for SQL Server]Invalid character value for ca
   
 Символьный формат Юникода поддерживается следующими параметрами командной строки:  
   
-|Command|Параметр|Описание|  
+|Get-Help|Параметр|Описание|  
 |-------------|------------|-----------------|  
 |bcp|**-w**|Использует символьный формат Юникода.|  
 |BULK INSERT|DATAFILETYPE **="widechar"**|Использует символьный формат Юникода при массовом импорте данных.|  

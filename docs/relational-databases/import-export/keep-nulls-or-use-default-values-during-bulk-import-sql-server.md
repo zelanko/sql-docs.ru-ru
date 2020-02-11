@@ -22,10 +22,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 7120efd623905f05e1f02c6c02856b793ad15cea
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74055957"
 ---
 # <a name="keep-nulls-or-default-values-during-bulk-import-sql-server"></a>Сохранение значений NULL или значений по умолчанию при массовом импорте данных (SQL Server)
@@ -42,7 +42,7 @@ ms.locfileid: "74055957"
 ## Сохранение значений NULL<a name="keep_nulls"></a>  
 Следующие квалификаторы указывают, что вместо пустого поля в файле данных необходимо вставить не значение по умолчанию, а значение NULL.  Для инструкции [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)по умолчанию любым столбцам, не участвующим в операции массовой загрузки, присваивается значение NULL.
   
-|Command|Квалификатор|Тип квалификатора|  
+|Get-Help|Квалификатор|Тип квалификатора|  
 |-------------|---------------|--------------------|  
 |bcp|-k|Параметр|  
 |BULK INSERT|KEEPNULLS\*|Аргумент|  
@@ -322,11 +322,11 @@ SELECT * FROM TestDatabase.dbo.myNulls;
   
 -   [Использование файла форматирования для массового импорта данных (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)  
   
--   [Использование файла форматирования для сопоставления столбцов таблицы полям файла данных (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
+-   [Использование файла форматирования для сопоставления столбцов таблицы с полями файла данных (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
 -   [Использование файла форматирования для пропуска поля данных (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)  
   
--   [Использование файла форматирования для пропуска столбца таблицы (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)  
+-   [Пропуск столбца таблицы с помощью файла форматирования (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)  
   
  **Использование форматов данных для массового импорта или экспорта**  
   
