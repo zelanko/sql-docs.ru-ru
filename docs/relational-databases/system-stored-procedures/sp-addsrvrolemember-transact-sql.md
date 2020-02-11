@@ -18,19 +18,19 @@ ms.assetid: 777f0e09-8ee5-4cb2-a3ac-939d02c3cd22
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2c927bdff462922d1846188366fbb92ce0d3663c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68022424"
 ---
-# <a name="spaddsrvrolemember-transact-sql"></a>sp_addsrvrolemember (Transact-SQL)
+# <a name="sp_addsrvrolemember-transact-sql"></a>sp_addsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Добавляет имя входа в качестве члена предопределенной роли сервера.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Используйте [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) вместо этого.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Вместо этого используйте [инструкцию ALTER Server Role](../../t-sql/statements/alter-server-role-transact-sql.md) .  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,11 +43,11 @@ sp_addsrvrolemember [ @loginame= ] 'login'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @loginame **=** ] **"** _входа_ **"**  
- Имя входа, добавляемое к предопределенной роли сервера. *Имя входа* — **sysname**, не имеет значения по умолчанию. *Имя входа* может быть [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа или имя входа Windows. Если имени входа Windows еще не был предоставлен доступ к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], он предоставляется автоматически.  
+ [ @loginame **=** ] **"**_Login_**"**  
+ Имя входа, добавляемое к предопределенной роли сервера. Аргумент *Login* имеет тип **sysname**и не имеет значения по умолчанию. *имя входа* может быть [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] именем входа или именем входа Windows. Если имени входа Windows еще не был предоставлен доступ к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], он предоставляется автоматически.  
   
- [ @rolename **=** ] **"** _роли_ **"**  
- Имя предопределенной роли сервера, к которой добавляется имя входа. *роль* — **sysname**, значение по умолчанию NULL, и должен иметь одно из следующих значений:  
+ [ @rolename **=** ] **"**_роль_**"**  
+ Имя предопределенной роли сервера, к которой добавляется имя входа. Аргумент *Role* имеет тип **sysname**, значение по умолчанию NULL и должен иметь одно из следующих значений:  
   
 -   sysadmin  
   
@@ -66,35 +66,35 @@ sp_addsrvrolemember [ @loginame= ] 'login'
 -   bulkadmin  
 
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или 1 (неуспешное завершение)  
+ 0 (успех) или 1 (сбой).  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  При добавлении имени входа к предопределенной роли сервера, оно получает разрешения, связанные с этой ролью.  
   
- Нельзя изменить членство в роли имени входа sa и общедоступных.  
+ Нельзя изменить членство в роли имени входа sa и public.  
   
- Процедура sp_addrolemember используется для добавления члена к предопределенной или определяемой пользователем роли.  
+ Для добавления члена к фиксированной или пользовательской роли базы данных используется хранимая процедура sp_addrolemember.  
   
- sp_addsrvrolemember не может быть выполнена в пользовательской транзакции.  
+ Процедуру sp_addsrvrolemember нельзя выполнять в пользовательской транзакции.  
   
 ## <a name="permissions"></a>Разрешения  
  Требует членства в роли, к которой добавляется новый элемент.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере добавляется имя входа Windows `Corporate\HelenS` для `sysadmin` предопределенной роли сервера.  
+ В следующем примере имя входа `Corporate\HelenS` Windows добавляется к `sysadmin` предопределенной роли сервера.  
   
 ```  
 EXEC sp_addsrvrolemember 'Corporate\HelenS', 'sysadmin';  
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Хранимые процедуры безопасности (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [Хранимая процедура sp_addrolemember (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [sp_dropsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Функции безопасности (Transact-SQL)](../../t-sql/functions/security-functions-transact-sql.md)   
- [CREATE SERVER ROLE (Transact-SQL)](../../t-sql/statements/create-server-role-transact-sql.md)   
- [DROP SERVER ROLE (Transact-SQL)](../../t-sql/statements/drop-server-role-transact-sql.md)  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Функции безопасности &#40;&#41;Transact-SQL](../../t-sql/functions/security-functions-transact-sql.md)   
+ [Создание роли сервера &#40;&#41;Transact-SQL](../../t-sql/statements/create-server-role-transact-sql.md)   
+ [УДАЛИТЬ роль сервера &#40;&#41;Transact-SQL](../../t-sql/statements/drop-server-role-transact-sql.md)  
   
   

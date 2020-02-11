@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b2e058eba4e21e5e9060e2315dad3c865c46bb78
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150866"
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>Сохранение плана выполнения в формате XML
@@ -63,11 +63,11 @@ ms.locfileid: "63150866"
     SET SHOWPLAN_XML OFF;  
     ```  
   
-4.  На панели **Результаты** щелкните правой кнопкой мыши поле **Microsoft SQL Server XML Showplan** , содержащее план запроса, и выберите пункт **Сохранить результаты как**.  
+4.  На панели **Результаты** щелкните правой кнопкой мыши поле **Microsoft SQL Server XML Showplan**, содержащее план запроса, и выберите пункт **Сохранить результаты как**.  
   
-5.  В диалоговом окне **Сохранить** **результаты** \<сетка или текст> найдите поле **Тип файла** и выберите в нем значение **Все файлы (\*.\*)** .  
+5.  В диалоговом окне **Сохранить** \<результаты**** сетка или текст> найдите поле **Тип файла** и выберите в нем значение **Все файлы (\*.\*)**.  
   
-6.  В поле **Имя файла** укажите имя в формате \<имя **>.sqlplan**, после чего нажмите кнопку **Сохранить**.  
+6.  В поле **имя файла** введите имя в формате \<**>. sqlplan**и нажмите кнопку **сохранить**.  
   
 ### <a name="to-save-an-execution-plan-by-using-sql-server-management-studio-options"></a>Сохранение плана выполнения с помощью параметров среды SQL Server Management Studio  
   
@@ -77,22 +77,22 @@ ms.locfileid: "63150866"
   
      Как альтернативный вариант можно также выбрать **Сохранить план выполнения как** в меню **Файл** .  
   
-3.  В диалоговом окне **Сохранение** убедитесь, что в поле **Тип файла** установлено значение **Файлы плана выполнения (\*.sqlplan)** .  
+3.  В диалоговом окне **Сохранение** убедитесь, что в поле **Тип файла** установлено значение **Файлы плана выполнения (\*.sqlplan)**.  
   
-4.  В поле **Имя файла** укажите имя в формате \<имя **>.sqlplan**, после чего нажмите кнопку **Сохранить**.  
+4.  В поле **имя файла** введите имя в формате \<**>. sqlplan**и нажмите кнопку **сохранить**.  
   
 ### <a name="to-open-a-saved-xml-query-plan-in-sql-server-management-studio"></a>Открытие сохраненного плана запроса в формате XML в среде SQL Server Management Studio  
   
 1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]в меню **Файл** выберите **Открыть**, а затем нажмите **Файл**.  
   
-2.  В диалоговом окне **Открытие файла** установите в поле **Файлы типа** значение **Файлы плана выполнения (\*.sqlplan)** , чтобы получить отфильтрованный список сохраненных файлов XML с планами запросов.  
+2.  В диалоговом окне **Открытие файла** установите в поле **Файлы типа** значение **Файлы плана выполнения (\*.sqlplan)**, чтобы получить отфильтрованный список сохраненных файлов XML с планами запросов.  
   
 3.  Выберите файл плана запроса XML, который нужно просмотреть, и нажмите **Открыть**.  
   
      Также можно дважды щелкнуть файл с расширением **sqlplan**в проводнике Windows. План откроется в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
-## <a name="see-also"></a>См. также  
- [SET SHOWPLAN_XML (Transact-SQL)](/sql/t-sql/statements/set-showplan-xml-transact-sql)   
- [SET STATISTICS XML (Transact-SQL)](/sql/t-sql/statements/set-statistics-xml-transact-sql)  
+## <a name="see-also"></a>См. также:  
+ [Настройка SHOWPLAN_XML &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-showplan-xml-transact-sql)   
+ [SET STATISTICS XML &#40;&#41;Transact-SQL](/sql/t-sql/statements/set-statistics-xml-transact-sql)  
   
   
