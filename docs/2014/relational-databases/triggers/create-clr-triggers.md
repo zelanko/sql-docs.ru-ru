@@ -15,14 +15,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b68531b962b10785927c6212b2483f2d9c1d7d3a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62698831"
 ---
 # <a name="create-clr-triggers"></a>Создание триггеров CLR
-  Внутри [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно создавать объекты базы данных, запрограммированные в составе сборки, созданной в среде CLR платформы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Объекты базы данных, способные эффективно использовать многофункциональную модель программирования, реализованную в среде CLR, включают триггеры DML и DDL, хранимые процедуры, функции, агрегатные функции и типы.  
+  Можно создать объект базы данных внутри [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , запрограммированный в сборке, созданной в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] среде CLR. Объекты базы данных, способные эффективно использовать многофункциональную модель программирования, реализованную в среде CLR, включают триггеры DML и DDL, хранимые процедуры, функции, агрегатные функции и типы.  
   
  Шаги создания триггера CLR (DML или DDL) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] следующие.  
   
@@ -40,19 +40,19 @@ ms.locfileid: "62698831"
   
  **Создание, изменение или удаление сборки**  
   
--   [CREATE ASSEMBLY (Transact-SQL)](/sql/t-sql/statements/create-assembly-transact-sql)  
+-   [Создание сборки &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-assembly-transact-sql)  
   
--   [ALTER ASSEMBLY (Transact-SQL)](/sql/t-sql/statements/alter-assembly-transact-sql)  
+-   [ALTER ASSEMBLY &#40;&#41;Transact-SQL](/sql/t-sql/statements/alter-assembly-transact-sql)  
   
--   [DROP ASSEMBLY (Transact-SQL)](/sql/t-sql/statements/drop-assembly-transact-sql)  
+-   [УДАЛИТЬ СБОРКУ &#40;&#41;Transact-SQL](/sql/t-sql/statements/drop-assembly-transact-sql)  
   
- **Добавление триггера CRL**  
+ **Создание триггера CLR**  
   
 -   [CREATE TRIGGER (Transact-SQL)](/sql/t-sql/statements/create-trigger-transact-sql)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Триггеры DML](dml-triggers.md)   
- [Основные понятия о программировании интеграции со средой (CLR)](../clr-integration/common-language-runtime-clr-integration-programming-concepts.md)   
+ [Общеязыковая среда выполнения &#40;концепции программирования интеграции&#41; среды CLR](../clr-integration/common-language-runtime-clr-integration-programming-concepts.md)   
  [Доступ к данным из объектов среды CLR для работы с базами данных](../clr-integration/data-access/data-access-from-clr-database-objects.md)  
   
   

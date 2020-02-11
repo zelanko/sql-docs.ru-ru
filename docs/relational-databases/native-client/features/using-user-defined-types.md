@@ -22,50 +22,50 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ebe74ac4cc99f15002dfbd0e011a1b9352b45c55
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73761350"
 ---
 # <a name="using-user-defined-types"></a>Использование определяемых пользователем типов данных
 [!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md](../../../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
 
-  В [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] представлены определяемые пользователем типы данных (UDT). Пользовательские типы расширяют систему типов SQL путем разрешения хранения объектов и пользовательских структур данных в базе данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Определяемые пользователем типы могут содержать несколько типов данных, и их поведение может отличаться от традиционных псевдонимов типов данных, которые состоят из одного системного типа данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Определяемые пользователем типы определяются с помощью любого языка, поддерживаемого средой .NET CLR, который создает поддающийся проверке код. Сюда входят языки Microsoft Visual C#<sup>®</sup> и Visual Basic<sup>®</sup> .NET. Данные представляются в виде полей и свойств класса или структуры .NET, а поведения определяются методами класса или структуры.  
+  В [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] представлены определяемые пользователем типы данных (UDT). Пользовательские типы расширяют систему типов SQL путем разрешения хранения объектов и пользовательских структур данных в базе данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Определяемые пользователем типы могут содержать несколько типов данных, и их поведение может отличаться от традиционных псевдонимов типов данных, которые состоят из одного системного типа данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Определяемые пользователем типы определяются с помощью любого языка, поддерживаемого средой .NET CLR, который создает поддающийся проверке код. К ним относятся<sup>®</sup> Microsoft Visual C# и Visual Basic<sup>®</sup> .NET. Данные представляются в виде полей и свойств класса или структуры .NET, а поведения определяются методами класса или структуры.  
   
  Пользовательский тип можно использовать в качестве определения столбца таблицы, переменной в пакете [!INCLUDE[tsql](../../../includes/tsql-md.md)], аргумента функции или хранимой процедуры [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>Поставщик OLE DB для собственного клиента SQL Server  
- Поставщик [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB поддерживает UDT как двоичные типы со сведениями о метаданных, что позволяет управлять определяемыми пользователем типами как объектами. Столбцы пользовательских типов представляются как DBTYPE_UDT, и их метаданные доступны через основной интерфейс OLE DB **IColumnRowset** и новый интерфейс [ISSCommandWithParameters](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md).  
+ Поставщик [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB собственного клиента поддерживает UDT как двоичные типы со сведениями о метаданных, что позволяет управлять определяемыми пользователем типами как объектами. Столбцы пользовательских типов представляются как DBTYPE_UDT, и их метаданные доступны через основной интерфейс OLE DB **IColumnRowset** и новый интерфейс [ISSCommandWithParameters](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md).  
   
 > [!NOTE]  
 >  Метод **IRowsetFind::FindNextRow** не работает с пользовательским типом данных. Если определяемый пользователем тип используется в качестве типа столбца поиска, возвращается значение DB_E_BADCOMPAREOP.  
   
 ### <a name="data-bindings-and-coercions"></a>Привязки данных и приведение типов  
- В следующей таблице описаны привязка и приведение типа данных, которые возникают при использовании перечисленных определенных пользователем типов данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Столбцы определяемых пользователем типов доступны через [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента OLE DB поставщика как DBTYPE_UDT. Метаданные можно получать через соответствующие наборы строк схемы, так что можно управлять собственными определенными типами как объектами.  
+ В следующей таблице описаны привязка и приведение типа данных, которые возникают при использовании перечисленных определенных пользователем типов данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Столбцы определяемого пользователем типа предоставляются [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с помощью собственного клиента OLE DB поставщика в качестве DBTYPE_UDT. Метаданные можно получать через соответствующие наборы строк схемы, так что можно управлять собственными определенными типами как объектами.  
   
-|Тип данных|На сервер<br /><br /> **UDT**|На сервер<br /><br /> **Не пользовательский тип**|С сервера<br /><br /> **UDT**|С сервера<br /><br /> **Не пользовательский тип**|  
+|Тип данных|На сервер<br /><br /> **(UDT)**|На сервер<br /><br /> **не определяемый пользователем тип**|С сервера<br /><br /> **(UDT)**|С сервера<br /><br /> **не определяемый пользователем тип**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
 |DBTYPE_UDT|Поддерживается<sup>6</sup>|Ошибка<sup>1</sup>|Поддерживается<sup>6</sup>|Ошибка<sup>5</sup>|  
-|DBTYPE_BYTES|Поддерживается<sup>6</sup>|Н/Д<sup>2</sup>|Поддерживается<sup>6</sup>|Н/Д<sup>2</sup>|  
-|DBTYPE_WSTR|Поддерживаемые<sup>3, 6</sup>|Н/Д<sup>2</sup>|Поддерживаемые<sup>4, 6</sup>|Н/Д<sup>2</sup>|  
-|DBTYPE_BSTR|Поддерживаемые<sup>3, 6</sup>|Н/Д<sup>2</sup>|Поддерживается<sup>4</sup>|Н/Д<sup>2</sup>|  
-|DBTYPE_STR|Поддерживаемые<sup>3, 6</sup>|Н/Д<sup>2</sup>|Поддерживаемые<sup>4, 6</sup>|Н/Д<sup>2</sup>|  
-|DBTYPE_IUNKNOWN|Не поддерживается|Н/Д<sup>2</sup>|Не поддерживается|Н/Д<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Поддерживается<sup>6</sup>|Н/Д<sup>2</sup>|Поддерживается<sup>4</sup>|Н/Д<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|Поддерживаемые<sup>3, 6</sup>|Н/Д<sup>2</sup>|Недоступно|Н/Д<sup>2</sup>|  
+|DBTYPE_BYTES|Поддерживается<sup>6</sup>|Недоступно<sup>2</sup>|Поддерживается<sup>6</sup>|Недоступно<sup>2</sup>|  
+|DBTYPE_WSTR|Поддерживаемые<sup>3, 6</sup>|Недоступно<sup>2</sup>|Поддерживаемые<sup>4, 6</sup>|Недоступно<sup>2</sup>|  
+|DBTYPE_BSTR|Поддерживаемые<sup>3, 6</sup>|Недоступно<sup>2</sup>|Поддерживается<sup>4</sup>|Недоступно<sup>2</sup>|  
+|DBTYPE_STR|Поддерживаемые<sup>3, 6</sup>|Недоступно<sup>2</sup>|Поддерживаемые<sup>4, 6</sup>|Недоступно<sup>2</sup>|  
+|DBTYPE_IUNKNOWN|Не поддерживается|Недоступно<sup>2</sup>|Не поддерживается|Недоступно<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Поддерживается<sup>6</sup>|Недоступно<sup>2</sup>|Поддерживается<sup>4</sup>|Недоступно<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|Поддерживаемые<sup>3, 6</sup>|Недоступно<sup>2</sup>|Недоступно|Недоступно<sup>2</sup>|  
   
- <sup>1</sup>Если тип сервера, отличный от DBTYPE_UDT, указывается с помощью метода **ICommandWithParameters::SetParameterInfo** и типом метода доступа является DBTYPE_UDT, то при выполнении инструкции возникает ошибка (DB_E_ERRORSOCCURRED; состояние параметра — DBSTATUS_E_BADACCESSOR). В остальных случаях данные отсылаются на сервер, но сервер возвращает ошибку, указывающую на то, что нет неявного преобразования определяемого пользовательского типа в тип данных параметра.  
+ <sup>1</sup> Если тип сервера, отличный от DBTYPE_UDT, указан с помощью **ICommandWithParameters:: SetParameterInfo** , а тип метода доступа — DBTYPE_UDT, то при выполнении инструкции возникает ошибка (DB_E_ERRORSOCCURRED, состояние параметра — DBSTATUS_E_BADACCESSOR). В остальных случаях данные отсылаются на сервер, но сервер возвращает ошибку, указывающую на то, что нет неявного преобразования определяемого пользовательского типа в тип данных параметра.  
   
  <sup>2</sup> Кроме области этого раздела.  
   
- <sup>3</sup> Происходит преобразование шестнадцатеричной строки в двоичные данные.  
+ <sup>3</sup> выполняется преобразование шестнадцатеричной строки в двоичные данные.  
   
- <sup>4</sup> Происходит преобразование двоичных данных в шестнадцатеричную строку.  
+ <sup>4</sup> выполняется преобразование данных из двоичных данных в шестнадцатеричную строку.  
   
- <sup>5</sup>Во время создания метода доступа или во время выборки может произойти проверка данных. Ошибка — DB_E_ERRORSOCCURRED, состояние привязки устанавливается в значение DBBINDSTATUS_UNSUPPORTEDCONVERSION.  
+ <sup>5</sup> Проверка может происходить во время создания метода доступа или во время выборки, если ошибка DB_E_ERRORSOCCURRED, состояние привязки установлено в DBBINDSTATUS_UNSUPPORTEDCONVERSION.  
   
- <sup>6</sup>Может использоваться BY_REF.  
+ <sup>6</sup> Можно использовать BY_REF.  
   
  Типы DBTYPE_NULL и DBTYPE_EMPTY могут быть привязаны только для входных параметров. Они не могут быть привязаны для выходных параметров или результатов. При привязке входных параметров состояние должно быть установлено в значение DBSTATUS_S_ISNULL или DBSTATUS_S_DEFAULT.  
   
@@ -79,12 +79,12 @@ ms.locfileid: "73761350"
  Преобразования данных, выполняемые основными службами OLE DB (**IDataConvert**), неприменимы к типу DBTYPE_UDT. Другие привязки не поддерживаются.  
   
 ### <a name="ole-db-rowset-additions-and-changes"></a>Добавления и изменения для наборов строк OLE DB  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственный клиент добавляет новые значения или изменения во многие базовые наборы строк схемы OLE DB.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Собственный клиент добавляет новые значения или изменения во многие базовые наборы строк схемы OLE DB.  
   
 #### <a name="the-procedure_parameters-schema-rowset"></a>Набор строк схемы PROCEDURE_PARAMETERS  
  В набор строк схемы PROCEDURE_PARAMETERS были сделаны следующие добавления.  
   
-|Имя столбца|Тип|Описание|  
+|Имя столбца|Тип|Description|  
 |-----------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|Идентификатор трехкомпонентного имени.|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|Идентификатор трехкомпонентного имени.|  
@@ -92,9 +92,9 @@ ms.locfileid: "73761350"
 |SS_UDT_ASSEMBLY_TYPENAME|DBTYPE_WSTR|Полное имя сборки, которое включает имя типа и все идентификационные данные сборки, необходимые для ссылки на сборку из среды CLR.|  
   
 #### <a name="the-sql_assemblies-schema-rowset"></a>Набор строк схемы SQL_ASSEMBLIES  
- Поставщик [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB предоставляет новый набор строк схемы конкретного поставщика, который описывает зарегистрированные пользовательские типы. Сервер ASSEMBLY может быть указан как тип DBTYPE_WSTR, но он отсутствует в наборе строк. Если значение не задано, то по умолчанию для набора строк будет использоваться текущий сервер. Набор строк схемы SQL_ASSEMBLIES определен в следующей таблице.  
+ Поставщик [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB собственного клиента предоставляет новый набор строк схемы конкретного поставщика, который описывает зарегистрированные определяемые пользователем типы. Сервер ASSEMBLY может быть указан как тип DBTYPE_WSTR, но он отсутствует в наборе строк. Если значение не задано, то по умолчанию для набора строк будет использоваться текущий сервер. Набор строк схемы SQL_ASSEMBLIES определен в следующей таблице.  
   
-|Имя столбца|Тип|Описание|  
+|Имя столбца|Тип|Description|  
 |-----------------|----------|-----------------|  
 |ASSEMBLY_CATALOG|DBTYPE_WSTR|Имя каталога сборки, содержащей тип.|  
 |ASSEMBLY_SCHEMA|DBTYPE_WSTR|Имя схемы или имя владельца сборки, содержащей тип. Хотя сборки ограничены базой данных, а не схемой, они все еще имеют владельца, отраженного здесь.|  
@@ -104,9 +104,9 @@ ms.locfileid: "73761350"
 |ASSEMBLY_BINARY|DBTYPE_BYTES|Двоичное представление сборки.|  
   
 #### <a name="the-sql_assemblies_-dependencies-schema-rowset"></a>Набор строк схемы SQL_ASSEMBLIES_ DEPENDENCIES  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщик OLE DB собственного клиента предоставляет новый набор строк схемы, зависящий от поставщика, который описывает зависимости сборки для указанного сервера. ASSEMBLY_SERVER может быть указан участником как тип DBTYPE_WSTR, но отсутствовать в наборе строк. Если значение не задано, то по умолчанию для набора строк будет использоваться текущий сервер. Набор строк схемы SQL_ASSEMBLY_DEPENDENCIES определен в следующей таблице.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Поставщик OLE DB собственного клиента предоставляет новый набор строк схемы, зависящий от поставщика, который описывает зависимости сборки для указанного сервера. ASSEMBLY_SERVER может быть указан участником как тип DBTYPE_WSTR, но отсутствовать в наборе строк. Если значение не задано, то по умолчанию для набора строк будет использоваться текущий сервер. Набор строк схемы SQL_ASSEMBLY_DEPENDENCIES определен в следующей таблице.  
   
-|Имя столбца|Тип|Описание|  
+|Имя столбца|Тип|Description|  
 |-----------------|----------|-----------------|  
 |ASSEMBLY_CATALOG|DBTYPE_WSTR|Имя каталога сборки, содержащей тип.|  
 |ASSEMBLY_SCHEMA|DBTYPE_WSTR|Имя схемы или имя владельца сборки, содержащей тип. Хотя сборки ограничены базой данных, а не схемой, они все еще имеют владельца, отраженного здесь.|  
@@ -114,9 +114,9 @@ ms.locfileid: "73761350"
 |REFERENCED_ASSEMBLY_ID|DBTYPE_UI4|Идентификатор объекта сборки, на которую присутствует ссылка.|  
   
 #### <a name="the-sql_user_types-schema-rowset"></a>Набор строк схемы SQL_USER_TYPES  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщик собственного клиента OLE DB предоставляет новый набор строк схемы, SQL_USER_TYPES, который описывает, когда добавляется зарегистрированный определяемый пользователем типов для указанного сервера. UDT_SERVER должен быть указан участником как тип DBTYPE_WSTR, но отсутствовать в наборе строк. Набор строк схемы SQL_USER_TYPES определен в следующей таблице.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Поставщик OLE DB собственного клиента предоставляет новый набор строк схемы, SQL_USER_TYPES, который описывает, когда добавляется зарегистрированный определяемый пользователем типов для указанного сервера. UDT_SERVER должен быть указан участником как тип DBTYPE_WSTR, но отсутствовать в наборе строк. Набор строк схемы SQL_USER_TYPES определен в следующей таблице.  
   
-|Имя столбца|Тип|Описание|  
+|Имя столбца|Тип|Description|  
 |-----------------|----------|-----------------|  
 |UDT_CATALOGNAME|DBTYPE_WSTR|Для столбцов определяемого пользователем типа данное свойство содержит строку, представляющую имя каталога, в котором определен этот тип.|  
 |UDT_SCHEMANAME|DBTYPE_WSTR|Для столбцов определяемого пользователем типа данное свойство содержит строку, представляющую имя схемы, в которой определен этот тип.|  
@@ -126,7 +126,7 @@ ms.locfileid: "73761350"
 #### <a name="the-columns-schema-rowset"></a>Набор строк схемы COLUMNS  
  Добавления в наборе строк схемы COLUMNS включает следующие столбцы.  
   
-|Имя столбца|Тип|Описание|  
+|Имя столбца|Тип|Description|  
 |-----------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|Для столбцов определяемого пользователем типа данное свойство содержит строку, представляющую имя каталога, в котором определен этот тип.|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|Для столбцов определяемого пользователем типа данное свойство содержит строку, представляющую имя схемы, в которой определен этот тип.|  
@@ -134,12 +134,12 @@ ms.locfileid: "73761350"
 |SS_UDT_ASSEMBLY_TYPENAME|DBTYPE_WSTR|Полное имя типа (AQN) включает имя типа и префикс пространства имен (если оно задано).|  
   
 ### <a name="ole-db-property-set-additions-and-changes"></a>Добавления и изменения для наборов свойств OLE DB  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственный клиент добавляет новые значения или изменения во многие из основных наборов свойств OLE DB.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Собственный клиент добавляет новые значения или изменения во многие из основных наборов свойств OLE DB.  
   
 #### <a name="the-dbpropset_sqlserverparameter-property-set"></a>Набор свойств DBPROPSET_SQLSERVERPARAMETER  
- Чтобы обеспечить поддержку определяемых пользователем типов с помощью OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client реализует новый набор свойств DBPROPSET_SQLSERVERPARAMETER, который содержит следующие значения.  
+ Для поддержки определяемых пользователем типов с помощью [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB собственный клиент реализует новый набор свойств DBPROPSET_SQLSERVERPARAMETER, который содержит следующие значения.  
   
-|Name|Тип|Описание|  
+|Имя|Тип|Description|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_UDT_CATALOGNAME|DBTYPE_WSTR|Идентификатор трехкомпонентного имени.<br /><br /> Для параметров определяемого пользователем типа это свойство содержит строку, представляющую имя каталога, в котором определен этот тип.|  
 |SSPROP_PARAM_UDT_SCHEMANAME|DBTYPE_WSTR|Идентификатор трехкомпонентного имени.<br /><br /> Для параметров определяемого пользователем типа данное свойство содержит строку, представляющую имя схемы, в которой определен этот тип.|  
@@ -148,9 +148,9 @@ ms.locfileid: "73761350"
  Свойство SSPROP_PARAM_UDT_NAME является обязательным. Свойства SSPROP_PARAM_UDT_CATALOGNAME и SSPROP_PARAM_UDT_SCHEMANAME не обязательны. Если какое-либо свойство указывается неправильно, возвращается ошибка DB_E_ERRORSINCOMMAND. Если свойства SSPROP_PARAM_UDT_CATALOGNAME и SSPROP_PARAM_UDT_SCHEMANAME не указаны, то определяемый пользователем тип должен быть определен в той же базе данных и схеме, что и таблица. Если определение определяемого пользователем типа и таблица находятся в разных схемах (но в одной базе данных), то должно быть указано свойство SSPROP_PARAM_UDT_SCHEMANAME. Если определение определяемого пользователем типа находится в другой базе данных, то должны быть указаны свойства SSPROP_PARAM_UDT_CATALOGNAME и SSPROP_PARAM_UDT_SCHEMANAME.  
   
 #### <a name="the-dbpropset_sqlservercolumn-property-set"></a>Набор свойств DBPROPSET_SQLSERVERCOLUMN  
- Для поддержки создания таблиц в интерфейсе **ITableDefinition** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client добавляет в набор свойств DBPROPSET_SQLSERVERCOLUMN следующие три новых столбца.  
+ Для поддержки создания таблиц в интерфейсе **ITableDefinition** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client добавляет следующие три новых столбца в набор свойств DBPROPSET_SQLSERVERCOLUMN.  
   
-|Name|Описание|Тип|Описание|  
+|Имя|Description|Тип|Description|  
 |----------|-----------------|----------|-----------------|  
 |SSPROP_COL_UDT_CATALOGNAME|UDT_CATALOGNAME|VT_BSTR|Для столбцов типа DBTYPE_UDT это свойство содержит строку, указывающую имя каталога, в котором определен определяемый пользователем тип.|  
 |SSPROP_COL_UDT_SCHEMANAME|UDT_SCHEMANAME|VT_BSTR|Для столбцов типа DBTYPE_UDT это свойство содержит строку, указывающую имя схемы, в которой определен определяемый пользователем тип.|  
@@ -161,7 +161,7 @@ ms.locfileid: "73761350"
   
  ADO будет ссылаться на эти свойства с помощью соответствующей записи в столбце «Описание».  
   
- Свойство SSPROP_COL_UDTNAME является обязательным. Свойства SSPROP_COL_UDT_CATALOGNAME и SSPROP_COL_UDT_SCHEMANAME не обязательны. Если какое-либо свойство указывается неправильно, возвращается ошибка **DB_E_ERRORSINCOMMAND**.  
+ Свойство SSPROP_COL_UDTNAME является обязательным. Свойства SSPROP_COL_UDT_CATALOGNAME и SSPROP_COL_UDT_SCHEMANAME не обязательны. Если какое бы то ни было свойство указано неверно, **DB_E_ERRORSINCOMMAND** будет возвращено.  
   
  Если ни свойство SSPROP_PARAM_UDT_CATALOGNAME, ни свойство SSPROP_PARAM_UDT_SCHEMANAME не указаны, то определяемый пользователем тип должен быть определен в той же базе данных и схеме, что и таблица.  
   
@@ -170,10 +170,10 @@ ms.locfileid: "73761350"
  Если определение определяемого пользователем типа находится в другой базе данных, то должны быть указаны свойства SSPROP_COL_UDT_CATALOGNAME и SSPROP_COL_UDT_CATALOGNAME.  
   
 ### <a name="ole-db-interface-additions-and-changes"></a>Добавления и изменения для интерфейсов OLE DB  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственный клиент добавляет новые значения или изменения во многие основные интерфейсы OLE DB.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Собственный клиент добавляет новые значения или изменения во многие основные OLE DB интерфейсы.  
   
 #### <a name="the-isscommandwithparameters-interface"></a>Интерфейс ISSCommandWithParameters  
- Для поддержки определяемых пользователем типов с помощью OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственный клиент реализует ряд изменений, включая Добавление интерфейса **ISSCommandWithParameters** . Этот новый интерфейс наследует основной интерфейс OLE DB — **ICommandWithParameters**. В дополнение к трем методам, унаследованным от **ICommandWithParameters**; **GetParameterInfo**, **MapParameterNames**и **SetParameterInfo**; **ISSCommandWithParameters** предоставляет методы **GetParameterProperties** и **SetParameterProperties** , используемые для работы с конкретными типами данных сервера.  
+ Для поддержки определяемых пользователем типов [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с помощью OLE DB в собственном клиенте реализован ряд изменений, включая Добавление интерфейса **ISSCommandWithParameters** . Этот новый интерфейс наследует основной интерфейс OLE DB — **ICommandWithParameters**. В дополнение к трем методам, унаследованным от **ICommandWithParameters**; **GetParameterInfo**, **MapParameterNames**и **SetParameterInfo**; **ISSCommandWithParameters** предоставляет методы **GetParameterProperties** и **SetParameterProperties** , используемые для работы с конкретными типами данных сервера.  
   
 > [!NOTE]  
 >  Интерфейс **ISSCommandWithParameters** также задействует возможности новой структуры SSPARAMPROPS.  
@@ -181,7 +181,7 @@ ms.locfileid: "73761350"
 #### <a name="the-icolumnsrowset-interface"></a>Интерфейс IColumnsRowset  
  Помимо интерфейса **ISSCommandWithParameters** , [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client также добавляет новые значения в набор строк, возвращаемый из вызова метода **IColumnsRowset:: GetColumnRowset** , включая следующие.  
   
-|Column Name|Тип|Описание|  
+|Имя столбца|Тип|Description|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_UDT_CATALOGNAME|DBTYPE_WSTR|Идентификатор имени каталога определяемого пользователем типа.|  
 |DBCOLUMN_SS_UDT_SCHEMANAME|DBTYPE_WSTR|Идентификатор имени схемы определяемого пользователем типа.|  
@@ -191,10 +191,10 @@ ms.locfileid: "73761350"
  Если столбец DBCOLUMN_TYPE имеет значение DBTYPE_UDT, то столбец определяемого пользователем типа сервера можно отличить от других двоичных типов, изучив добавленные метаданные определяемого пользователем типа, указанные выше. Если данные частично завершены, то тип сервера является определяемым пользователем типом. Для типов сервера, отличных от определяемых пользователем типов, эти столбцы всегда возвращают значение NULL.  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>Драйвер ODBC для собственного клиента SQL Server  
- Для поддержки определяемых пользователем типов в драйвере ODBC для собственного клиента внесено несколько изменений [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] сопоставляет [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] определяемый пользователем тип с SQL_SS_UDT идентификатором типа данных SQL, относящимся к драйверу. Столбцы определяемого пользователем типа отображаются как тип SQL_SS_UDT. Если столбец определяемого пользователем типа явно сопоставлен с другим типом в инструкции SQL с помощью методов **ToString** или **токсмлстринг** определяемого пользователем типа или с помощью функции **CAST/CONVERT** , тип столбца в результирующем наборе отражает фактический тип столбца преобразовано в  
+ В драйвере ODBC для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента внесены некоторые изменения для поддержки определяемых пользователем типов. Драйвер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC для собственного клиента сопоставляет [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] определяемый пользователем тип с SQL_SS_UDT идентификатором типа данных SQL конкретного драйвера. Столбцы определяемого пользователем типа отображаются как тип SQL_SS_UDT. Если явно сопоставлять столбец UDT с другим типом в инструкции SQL с помощью методов **ToString** или **токсмлстринг** определяемого пользователем типа или с помощью функции **CAST/CONVERT** , тип столбца в результирующем наборе отражает фактический тип, в который был преобразован столбец.  
   
 ### <a name="sqlcolattribute-sqldescribeparam-sqlgetdescfield"></a>SQLColAttribute, SQLDescribeParam, SQLGetDescField  
- Для предоставления дополнительных сведений для столбца определяемого пользователем типа в результирующем наборе или параметра UDT для хранимой процедуры или параметризованного запроса были добавлены четыре новых поля дескриптора для конкретного драйвера, которые будут извлечены с помощью [SQLColAttribute](../../../relational-databases/native-client-odbc-api/sqlcolattribute.md) [. Функции SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md)и [SQLGetDescField](../../../relational-databases/native-client-odbc-api/sqlgetdescfield.md) .  
+ Были добавлены четыре новых поля дескриптора для конкретного драйвера, которые предоставляют дополнительные сведения для столбца определяемого пользователем типа в результирующем наборе или параметра определяемого пользователем типа для хранимой процедуры или параметризованного запроса, которые должны быть получены с помощью функций [SQLColAttribute](../../../relational-databases/native-client-odbc-api/sqlcolattribute.md), [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md)и [SQLGetDescField](../../../relational-databases/native-client-odbc-api/sqlgetdescfield.md) .  
   
  Это следующие поля дескриптора: SQL_CA_SS_UDT_CATALOG_NAME, SQL_CA_SS_UDT_SCHEMA_NAME, SQL_CA_SS_UDT_TYPE_NAME и SQL_CA_SS_UDT_ASSEMBLY_TYPE_NAME.  
   
@@ -206,7 +206,7 @@ ms.locfileid: "73761350"
   
  При преобразовании из типов данных C в типы данных SQL типы SQL_C_WCHAR, SQL_C_BINARY и SQL_C_CHAR могут быть преобразованы в SQL_SS_UDT. Однако обратите внимание, что при преобразовании из типов данных SQL_C_WCHAR и SQL_C_CHAR SQL двоичные данные преобразуются в шестнадцатеричную строку.  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
  [Компоненты собственного клиента SQL Server](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [ISSCommandWithParameters &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   

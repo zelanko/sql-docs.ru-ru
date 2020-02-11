@@ -13,10 +13,10 @@ author: CarlRabeler
 ms.author: carlrab
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f5aeb8a5eda8e4e49e478cbc53cd0ad90e3cc890
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74095479"
 ---
 # <a name="sql-server-express-localdb-header-and-version-information"></a>Заголовок и сведения о версии SQL Server Express LocalDB
@@ -26,7 +26,7 @@ ms.locfileid: "74095479"
 ## <a name="localdb-versioning"></a>Управление версиями LocalDB  
  Установка LocalDB использует по одному набору двоичных файлов на каждую из основных версий SQL Server. Эти версии LocalDB поддерживаются независимо. Исправления в них также вносятся независимо друг от друга. Это значит, что пользователю необходимо указывать используемый базовый выпуск LocalDB (то есть номер основной версии SQL Server). Версия указывается в стандартном формате версии, определяемом классом .NET Framework **System. Version** :  
   
- *Major. minor [. Build [. Редакция]]*  
+ *ОсновнойНомерВерсии.ДополнительныйНомерВерсии[.НомерПостроения[.НомерРедакции]]*  
   
  Первые два числа в строке версии (*основной* и *дополнительный*) являются обязательными. Последние два числа в строке версии (*Сборка* и *Редакция*) являются необязательными и по умолчанию равны нулю, если пользователь оставит их. Это означает, что если пользователь указывает в качестве номера версии LocalDB только "12,2", он будет рассматриваться так, как если бы пользователь указал "12.2.0.0".  
   
@@ -45,7 +45,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL13E.LOCALDB\ MSS
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server Local DB\Installed Versions]  
 ```  
   
- Этот ключ содержит список ключей, по одному для каждой из установленных на компьютере версий LocalDB. Каждый из этих ключей именуется номером версии LocalDB в формате *\<основной версии >* . *\<вспомогательной версии >* (например, ключ для [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] называется 13,0). В каждом из ключей версий содержится пара «имя-значение» `InstanceAPIPath`, определяющая полный путь к установленному в составе соответствующей версии файлу SQLUserInstance.dll. В следующем примере показаны записи реестра для компьютера с установленными версиями LocalDB 11,0 и 13,0:  
+ Этот ключ содержит список ключей, по одному для каждой из установленных на компьютере версий LocalDB. Каждый из этих ключей именуется номером версии LocalDB в формате * \<основной версии>*. дополнительный номер версии>(например, ключ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с именем 13,0). * \<* В каждом из ключей версий содержится пара «имя-значение» `InstanceAPIPath`, определяющая полный путь к установленному в составе соответствующей версии файлу SQLUserInstance.dll. В следующем примере показаны записи реестра для компьютера с установленными версиями LocalDB 11,0 и 13,0:  
   
 ```  
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server Local DB\Installed Versions\13.0]  
@@ -67,7 +67,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL13E.LOCALDB\ MSS
   
 ```  
   
- 64-разрядные программы, считывающие ключ `Installed Versions`, увидят значения, указывающие на 64-разрядные версии библиотеки **SQLUserInstance** DLL, а 32-разрядные программы (запущенные в 64-разрядных Windows в режиме WOW64) будут автоматически перенаправлены на `Installed Versions`ный ключ, расположенный в разделе `Wow6432Node` Hive. Этот ключ содержит значения, указывающие на 32-разрядные версии библиотеки **SQLUserInstance** .  
+ 64-разрядные программы, `Installed Versions` считывающие ключ, увидят значения, указывающие на 64-разрядные версии библиотеки **SQLUserInstance** DLL, а 32-разрядные программы (работающие в 64-разрядных Windows в режиме WOW64) будут `Installed Versions` автоматически перенаправлены в `Wow6432Node` раздел, расположенный в кусте Hive. Этот ключ содержит значения, указывающие на 32-разрядные версии библиотеки **SQLUserInstance** .  
   
 ## <a name="using-localdb_define_proxy_functions"></a>Использование константы LOCALDB_DEFINE_PROXY_FUNCTIONS  
  API экземпляра LocalDB определяет константу с именем LOCALDB_DEFINE_PROXY_FUNCTIONS, которая автоматизирует обнаружение и загрузку библиотеки **SQLUserInstance** DLL.  

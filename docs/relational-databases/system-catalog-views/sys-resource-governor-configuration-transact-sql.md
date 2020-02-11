@@ -20,10 +20,10 @@ ms.assetid: 89099668-1dc6-4b07-9d8b-49bc95c7bfc0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8e4068d9763460995335fe5adbd6684ecb70d8b7
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73982619"
 ---
 # <a name="sysresource_governor_configuration-transact-sql"></a>sys.resource_governor_configuration (Transact-SQL)
@@ -31,10 +31,10 @@ ms.locfileid: "73982619"
 
   Возвращает хранимое состояние регулятора ресурсов.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |classifier_function_id|**int**|Идентификатор функции-классификатора в том виде, в каком он хранится в метаданных. Не допускает значение NULL.<br /><br /> **Примечание** . Эта функция используется для классификации новых сеансов и использует правила для направления рабочей нагрузки в соответствующую группу рабочей нагрузки. Дополнительные сведения см. в разделе [Resource Governor](../../relational-databases/resource-governor/resource-governor.md) (Регулятор ресурсов).|  
-|is_enabled|**бит**|Отображает текущее состояние регулятора ресурсов:<br /><br /> 0 = Resource Governor не включена.<br /><br /> 1 = Resource Governor включен.<br /><br /> Не допускает значение NULL.|  
+|is_enabled|**bit**|Отображает текущее состояние регулятора ресурсов:<br /><br /> 0 = Resource Governor не включена.<br /><br /> 1 = Resource Governor включен.<br /><br /> Не допускает значение NULL.|  
 |max_outstanding_io_per_volume|**int**|**Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий.<br /><br /> Максимальное число невыполненных операций ввода-вывода в расчете на том.|  
   
 ## <a name="remarks"></a>Remarks  
@@ -65,10 +65,10 @@ sys.dm_resource_governor_configuration;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также статью  
- [Resource Governor представлений &#40;каталога Transact-SQL&#41; ](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Resource Governor представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)   
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [sys. dm_resource_governor_configuration &#40;  Transact-&#41; SQL](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md)  
- [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)  
+ [sys. dm_resource_governor_configuration &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md)   
+ [Регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)  
   
   
