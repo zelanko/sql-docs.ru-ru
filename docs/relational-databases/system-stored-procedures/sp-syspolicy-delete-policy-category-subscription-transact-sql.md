@@ -1,5 +1,5 @@
 ---
-title: процедура sp_syspolicy_delete_policy_category_subscription (Transact-SQL) | Документация Майкрософт
+title: sp_syspolicy_delete_policy_category_subscription (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: eeab0120-c869-4c95-a79d-6dc418d0b23a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 1cc965b55cb1f7216d4711c129a5e99bb4da067f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68010492"
 ---
-# <a name="spsyspolicydeletepolicycategorysubscription-transact-sql"></a>sp_syspolicy_delete_policy_category_subscription (Transact-SQL)
+# <a name="sp_syspolicy_delete_policy_category_subscription-transact-sql"></a>sp_syspolicy_delete_policy_category_subscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Удаляет подписку на категорию политики для указанной базы данных.  
@@ -39,12 +39,12 @@ sp_syspolicy_delete_policy_category_subscription [ @policy_category_subscription
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @policy_category_subscription_id = ] policy_category_subscription_id` — Идентификатор для подписки на категорию политики. *policy_category_subscription_id* — **int**.  
+`[ @policy_category_subscription_id = ] policy_category_subscription_id`Идентификатор подписки на категорию политики. *policy_category_subscription_id* имеет **тип int**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Процедура sp_syspolicy_delete_policy_category_subscription должна выполняться в контексте системной базы данных msdb.  
   
  Нельзя удалить подписку на категорию политики, если подписка обязательна.  
@@ -70,8 +70,8 @@ EXEC msdb.dbo.sp_syspolicy_delete_policy_category_subscription @policy_category_
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Хранимые процедуры управления на основе политик &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [процедура sp_syspolicy_update_policy_category_subscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-subscription-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Хранимые процедуры управления на основе политик &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+ [sp_syspolicy_update_policy_category_subscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-subscription-transact-sql.md)  
   
   

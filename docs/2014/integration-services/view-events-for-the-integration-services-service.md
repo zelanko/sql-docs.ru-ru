@@ -1,5 +1,5 @@
 ---
-title: Просмотреть события службы Integration Services | Документация Майкрософт
+title: Просмотр событий для службы Integration Services | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4be91309e4feb34bd8dfd85aee8e3e0cd1f82ffd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054664"
 ---
 # <a name="view-events-for-the-integration-services-service"></a>просмотреть события службы Integration Services
@@ -62,7 +62,7 @@ ms.locfileid: "66054664"
   
 9. В меню **Консоль** выберите **Выход** для закрытия диалогового окна **Просмотр событий** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Управление службой Integration Services](../../2014/integration-services/manage-the-integration-services-service.md)   
  [Добавление журнала для счетчиков производительности потока данных](performance/performance-counters.md)  
   

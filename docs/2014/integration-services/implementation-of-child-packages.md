@@ -1,5 +1,5 @@
 ---
-title: Осуществление дочерних пакетов | Документация Майкрософт
+title: Реализация дочерних пакетов | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1f9eb6860a40f6c47e65beb3fe109255d333d628
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058191"
 ---
 # <a name="implementation-of-child-packages"></a>Осуществление дочерних пакетов
@@ -41,7 +41,7 @@ ms.locfileid: "66058191"
   
 -   Экспорт пакетов с помощью среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
--   Развертывание пакетов путем построения программы развертывания для проекта, содержащего необходимые пакеты, с последующим запуском мастера установки пакета для размещения пакетов в файловой системе или на экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [развертывания пакета &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md).  
+-   Развертывание пакетов путем построения программы развертывания для проекта, содержащего необходимые пакеты, с последующим запуском мастера установки пакета для размещения пакетов в файловой системе или на экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Развертывание пакетов &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md).  
   
  Развертывание необходимо повторить на каждом используемом удаленном сервере.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66058191"
 ## <a name="debugging-the-sql-server-agent-jobs-and-child-packages"></a>Отладка задания агента SQL Server и дочерних пакетов  
  Протестировать задания агента SQL Server и их дочерние пакеты можно с помощью одного из следующих методов:  
   
--   выполняя каждый пакет в конструкторе служб SSIS в режиме **Отладка** / **Запуск без отладки**;  
+-   Запуск каждого дочернего пакета в конструкторе служб SSIS путем нажатия кнопки **Отладка** / **Запуск без отладки**.  
   
 -   выполняя индивидуальное задание агента SQL Server на удаленном компьютере, используя среду [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], чтобы убедиться в том, что пакет запущен.  
   
@@ -67,8 +67,8 @@ ms.locfileid: "66058191"
   
 ## <a name="related-content"></a>См. также  
   
--   Запись в блоге [служб SSIS: Доступ к переменным из родительского пакета](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/), на andyleonard.blog.  
+-   Запись в блоге [службы SSIS: доступ к переменным в родительском пакете](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/)в андилеонард. blog.  
   
--   Статьи, [«выполнение пакета»](../integration-services/control-flow/execute-package-task.md).  
+-   Статья, [задача «Выполнение пакета](../integration-services/control-flow/execute-package-task.md)».  
   
   

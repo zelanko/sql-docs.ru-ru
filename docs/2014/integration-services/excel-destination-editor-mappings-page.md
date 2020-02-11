@@ -1,5 +1,5 @@
 ---
-title: Редактор назначения «Excel» (страница "сопоставления") | Документация Майкрософт
+title: Редактор назначения "Excel" (страница "сопоставления") | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a79316eedb95a026d4869442a06ca1916b40ff3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059175"
 ---
 # <a name="excel-destination-editor-mappings-page"></a>Редактор назначения «Excel» (страница «Сопоставления»)
@@ -39,10 +39,10 @@ ms.locfileid: "66059175"
  **Целевой столбец**  
  Просмотреть все доступные целевые столбцы независимо от того, сопоставлены они с входными столбцами или нет.  
   
-## <a name="see-also"></a>См. также  
- [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор назначения "Excel" (страница "Диспетчер соединений")](../../2014/integration-services/excel-destination-editor-connection-manager-page.md)   
- [Редактор назначения "Excel" (страница "Вывод ошибок")](../../2014/integration-services/excel-destination-editor-error-output-page.md)   
- [Просмотр файлов и таблиц Excel с помощью контейнера «цикл по каждому элементу»](control-flow/foreach-loop-container.md)  
+## <a name="see-also"></a>См. также:  
+ [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор назначения "Excel" &#40;страница "Диспетчер соединений"&#41;](../../2014/integration-services/excel-destination-editor-connection-manager-page.md)   
+ [Редактор назначения "Excel" &#40;страница "вывод ошибок"&#41;](../../2014/integration-services/excel-destination-editor-error-output-page.md)   
+ [Просмотр файлов и таблиц Excel с помощью контейнера "Цикл по каждому элементу"](control-flow/foreach-loop-container.md)  
   
   

@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3c3f4c31da84c2ca07b948faeba4aed7b93ad011
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70148695"
 ---
 # <a name="using-collections"></a>Использование коллекций
@@ -30,7 +30,7 @@ ms.locfileid: "70148695"
  С помощью инструкции [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] **vbprvb** или инструкции [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] **csprcs** можно перебирать все элементы коллекции.  
   
 ## <a name="examples"></a>Примеры  
-Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. [в разделе Создание проекта Visual&#35; C SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. [в статье Создание проекта Visual C&#35; SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="referencing-an-object-by-using-a-collection-in-visual-basic"></a>Ссылка на объект с помощью коллекции в языке Visual Basic  
  В данном примере кода демонстрируется задание свойства столбца с помощью свойств <xref:Microsoft.SqlServer.Management.Smo.TableViewTableTypeBase.Columns%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A> и <xref:Microsoft.SqlServer.Management.Smo.Server.Databases%2A>. Эти свойства представляют собой коллекции, с помощью которых можно указать на конкретный объект при их использовании с именем объекта в качестве параметра. Для свойства объекта коллекции <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A> требуются имя и схема.  

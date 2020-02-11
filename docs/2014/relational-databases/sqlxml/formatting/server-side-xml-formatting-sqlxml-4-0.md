@@ -1,5 +1,5 @@
 ---
-title: Форматирование XML на стороне сервера (SQLXML 4.0) | Документация Майкрософт
+title: Форматирование XML на стороне сервера (SQLXML 4,0) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: af44d854ba28e8e8ac3b1a4572bf9b222f20299b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012213"
 ---
 # <a name="server-side-xml-formatting-sqlxml-40"></a>Форматирование XML-кода на сервере (SQLXML 4.0)
@@ -25,7 +25,7 @@ ms.locfileid: "66012213"
   
  В [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] можно помещать XML-документы в таблицы базы данных и получать XML-документы из них. Для получения XML-документа в запросе SELECT используется расширение FOR XML.  
   
- Предположим, например, клиентское приложение выполняет команду в отношении [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , состоит из следующих [!INCLUDE[tsql](../../../includes/tsql-md.md)] запроса:  
+ Например, предположим, что клиентское приложение выполняет команду [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , состоящую из следующего [!INCLUDE[tsql](../../../includes/tsql-md.md)] запроса:  
   
 ```  
 SELECT FirstName, LastName  
@@ -46,15 +46,15 @@ FROM   Person.Contact
   
 -   RAW  
   
--   AUTO  
+-   AUTO (АВТОМАТИЧЕСКИ)  
   
 -   EXPLICIT  
   
- Дополнительные сведения о предложении FOR XML, см. в разделе [конструирование XML используя FOR XML](../../xml/for-xml-sql-server.md).  
+ Дополнительные сведения о предложении FOR XML см. в разделе [Создание XML с помощью предложения FOR XML](../../xml/for-xml-sql-server.md).  
   
-## <a name="see-also"></a>См. также  
- [Архитектура форматирования XML, клиентские и серверные &#40;SQLXML 4.0&#41;](architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)   
- [Форматирование XML на стороне клиента &#40;SQLXML 4.0&#41;](client-side-xml-formatting-sqlxml-4-0.md)   
- [FOR XML (SQL Server)](../../xml/for-xml-sql-server.md)  
+## <a name="see-also"></a>См. также:  
+ [Архитектура форматирования XML на стороне клиента и на стороне сервера &#40;SQLXML 4,0&#41;](architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)   
+ [Форматирование XML на стороне клиента &#40;SQLXML 4,0&#41;](client-side-xml-formatting-sqlxml-4-0.md)   
+ [ДЛЯ SQL Server &#40;XML&#41;](../../xml/for-xml-sql-server.md)  
   
   

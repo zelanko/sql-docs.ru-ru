@@ -1,5 +1,5 @@
 ---
-title: Диалоговое окно «ограничения схемы» | Документация Майкрософт
+title: Диалоговое окно "ограничения схемы" | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3da112ff268e824792bdd29160ec97331e5b0f7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056147"
 ---
 # <a name="schema-restrictions-dialog-box"></a>Диалоговое окно «Ограничения схемы»
@@ -28,15 +28,15 @@ ms.locfileid: "66056147"
  **Ограничения**  
  Выберите ограничения, которые необходимо применить к схеме.  
   
- **Переменная**  
+ **Перемен**  
  Используйте переменную для определения ограничений. Выберите переменную из списка или нажмите кнопку **Создать переменную...** , чтобы создать переменную.  
   
- **См. также:** подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md) и о [добавлении переменной](../../2014/integration-services/add-variable.md).  
+ **См. также:** [Integration Services &#40;переменные&#41; SSIS](integration-services-ssis-variables.md) , [Добавить переменную](../../2014/integration-services/add-variable.md)  
   
- **Text**  
+ **текст**  
  Введите текст для определения ограничений.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Редактор циклов по каждому элементу &#40;страница коллекции&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
  [Контейнер «цикл по каждому элементу»](control-flow/foreach-loop-container.md)  
   

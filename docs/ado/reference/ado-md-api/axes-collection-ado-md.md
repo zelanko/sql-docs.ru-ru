@@ -1,5 +1,5 @@
 ---
-title: Коллекция (многомерные Объекты ADO) осей | Документация Майкрософт
+title: Коллекция осей (объекты данных ActiveX (MD)) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,33 +17,33 @@ ms.assetid: 072fb21a-ec0f-4b02-9022-1cef3ad4bfff
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6c06faf6327d60be823ce9d99215655b5badf5e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67947409"
 ---
 # <a name="axes-collection-ado-md"></a>Коллекция Axes (многомерные объекты ADO)
-Содержит [оси](../../../ado/reference/ado-md-api/axis-object-ado-md.md) объектами, которые определяют набор ячеек.  
+Содержит объекты [осей](../../../ado/reference/ado-md-api/axis-object-ado-md.md) , определяющие набор ячеек.  
   
-## <a name="remarks"></a>Примечания  
- Объект [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) объект содержит **осей** коллекции. Один раз **набора ячеек** будет открыт, эта коллекция будет содержать по крайней мере **оси**. См. в разделе [оси](../../../ado/reference/ado-md-api/axis-object-ado-md.md) объекта более подробное описание способов использования **оси** объектов.  
+## <a name="remarks"></a>Remarks  
+ Объект набора [ячеек](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) содержит коллекцию **осей** . После открытия набора **ячеек** эта коллекция будет содержать по крайней мере одну **ось**. Более подробное описание использования объектов **Axis** см. в объекте [Axis](../../../ado/reference/ado-md-api/axis-object-ado-md.md) .  
   
 > [!NOTE]
->  Ось фильтра **Cellset** не содержится в **осей** коллекции. См. в разделе [FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md) получения дополнительных сведений.  
+>  Ось фильтра набора **ячеек** не содержится в коллекции **осей** . Дополнительные сведения см. в свойстве [филтераксис](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md) .  
   
- **Оси** является стандартной коллекции ADO. С помощью свойства и методы коллекции сделайте следующее:  
+ **Оси** — это стандартная коллекция ADO. С помощью свойств и методов коллекции можно выполнять следующие действия.  
   
--   Получить число объектов в коллекции с [число](../../../ado/reference/ado-api/count-property-ado.md) свойство.  
+-   Получите количество объектов в коллекции со свойством [Count](../../../ado/reference/ado-api/count-property-ado.md) .  
   
--   Вернуть объект из коллекции со значением по умолчанию [элемент](../../../ado/reference/ado-api/item-property-ado.md) свойство.  
+-   Возврат объекта из коллекции со свойством [элемента](../../../ado/reference/ado-api/item-property-ado.md) по умолчанию.  
   
--   Обновление объектов в коллекции от поставщика с [обновить](../../../ado/reference/ado-api/refresh-method-ado.md) метод.  
+-   Обновите объекты в коллекции от поставщика с помощью метода [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) .  
   
- Этот раздел содержит следующие подразделы.  
+ Этот раздел содержит следующий раздел.  
   
 -   [Свойства, методы и события](../../../ado/reference/ado-md-api/axes-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
- [Пример объекта Cellset (Visual Basic)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
+## <a name="see-also"></a>См. также:  
+ [Пример набора ячеек (Visual Basic)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [Объект Axis (многомерные объекты ADO)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)

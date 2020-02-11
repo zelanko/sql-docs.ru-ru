@@ -1,5 +1,5 @@
 ---
-title: XQuery Prolog | Документация Майкрософт
+title: Пролог XQuery | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,10 +18,10 @@ ms.assetid: 03924684-c5fd-44dc-8d73-c6ab90f5e069
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 84f4093fe9c4693c50d6ae89c7b2ba111191db9d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946609"
 ---
 # <a name="modules-and-prologs---xquery-prolog"></a>Модули и прологи — пролог XQuery
@@ -29,7 +29,7 @@ ms.locfileid: "67946609"
 
   Запрос XQuery состоит из пролога и текста запроса. Пролог XQuery является набором объявлений и определений, создающим требуемую для обработки запроса среду. На сервере SQL Server, в прологе XQuery могут содержаться объявления пространств имен. Текст запроса XQuery состоит из последовательности выражений, которые определяют желаемый результат запроса.  
   
- Например, следующий запрос XQuery задан для столбца Instructions **xml** тип, который хранит промышленные инструкции в формате XML. Запрос получает инструкции по производству продукта для производственного цеха `10`. `query()` Метод **xml** тип данных используется для определения запроса XQuery.  
+ Например, следующий запрос XQuery задается для столбца Instructions типа **XML** , который хранит инструкции по производству в виде XML. Запрос получает инструкции по производству продукта для производственного цеха `10`. `query()` Метод типа данных **XML** используется для указания языка XQuery.  
   
 ```  
 SELECT Instructions.query('declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";           
@@ -41,14 +41,15 @@ WHERE ProductModelID=7
   
  Обратите внимание на следующие данные из предыдущего запроса:  
   
--   Пролог XQuery содержит объявление префикса (AWMI) пространства имен `(namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";`.  
+-   Пролог XQuery содержит объявление префикса пространства имен (AWMI), `(namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";`.  
   
 -   Ключевое слово `declare namespace` определяет префикс пространств имен, который впоследствии используется в теле запроса.  
   
--   `/AWMI:root/AWMI:Location[@LocationID="10"]` является текстом запроса.  
+-   
+  `/AWMI:root/AWMI:Location[@LocationID="10"]` является текстом запроса.  
   
 ## <a name="namespace-declarations"></a>Объявление пространств имен  
- Объявление пространств имен задает префикс и связывает его с URI-кодом пространства имен, как показано в следующем запросе. В запросе `CatalogDescription` — **xml** столбец типа.  
+ Объявление пространств имен задает префикс и связывает его с URI-кодом пространства имен, как показано в следующем запросе. В запросе `CatalogDescription` является столбцом типа **XML** .  
   
  В определенном запросе XQuery для этого столбца пролог запроса определяет объявление `declare namespace`, которое связывает префикс `PD`, описание продукта с URI-кодом пространства имен. Затем этот префикс используется в теле запроса вместо URI-кода пространства имен. Узлы результирующего XML находятся в пространстве имен, связанном с URI-кодом пространства имен.  
   
@@ -73,7 +74,7 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
- Дополнительные сведения см. в разделе, [добавление пространств имен в запросы с WITH XMLNAMESPACES](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md).  
+ Дополнительные сведения см. в разделе [Добавление пространств имен в запросы с помощью предложения WITH XMLNAMESPACES](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md).  
   
 ### <a name="default-namespace-declaration"></a>Установленные по умолчанию объявления пространств имен  
  Вместо объявления префикса пространства при помощи объявления `declare namespace` можно использовать объявление `declare default element namespace` для привязки заданного по умолчанию пространства имен к именам элементов. В этом случае не нужно задавать префикс.  
@@ -100,7 +101,7 @@ FROM  Production.ProductModel
 WHERE ProductModelID=19   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Добавление пространств имен в запросы с WITH XMLNAMESPACES](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)  
   
   

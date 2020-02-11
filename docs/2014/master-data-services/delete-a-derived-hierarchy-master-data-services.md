@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bcf52745a984d049db92e8255ba7984b6b52a71a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483124"
 ---
 # <a name="delete-a-derived-hierarchy-master-data-services"></a>Удаление производной иерархии (службы Master Data Services)
@@ -26,7 +26,7 @@ ms.locfileid: "65483124"
 > [!NOTE]  
 >  Удаление производной иерархии не влияет на связи атрибутов, на которых основана иерархия.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения этой процедуры:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
@@ -37,18 +37,18 @@ ms.locfileid: "65483124"
   
 1.  В [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]щелкните область **Администрирование системы**.  
   
-2.  На **представление модели** страницы, на панели меню наведите указатель мыши на **управление** и нажмите кнопку **производные иерархии**.  
+2.  На странице **представление модели** в строке меню наведите указатель мыши на пункт **Управление** и щелкните **производные иерархии**.  
   
 3.  На странице **Обслуживание производной иерархии** выберите модель из списка **Модель** .  
   
 4.  Выберите строку для производной иерархии, которую необходимо удалить.  
   
-5.  Нажмите кнопку **удалить выбранную иерархию**.  
+5.  Нажмите кнопку **Удалить выбранную иерархию**.  
   
 6.  В диалоговом окне подтверждения нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также  
- [Создание производной иерархии (службы Master Data Services)](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)   
- [Производные иерархии (службы Master Data Services)](../../2014/master-data-services/derived-hierarchies-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Создание производной иерархии &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)   
+ [Производные иерархии &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)  
   
   

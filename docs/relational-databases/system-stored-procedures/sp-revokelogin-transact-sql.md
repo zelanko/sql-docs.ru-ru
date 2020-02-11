@@ -1,5 +1,5 @@
 ---
-title: Хранимая процедура sp_revokelogin (Transact-SQL) | Документация Майкрософт
+title: sp_revokelogin (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,19 +18,19 @@ ms.assetid: cb1ab102-1ae0-4811-9144-9a8121ef2d7e
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 95598885a80b1f697f5e1287e22c1048e737ba6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67944724"
 ---
-# <a name="sprevokelogin-transact-sql"></a>Хранимая процедура sp_revokelogin (Transact-SQL)
+# <a name="sp_revokelogin-transact-sql"></a>Хранимая процедура sp_revokelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Удаляет записи имени входа из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для пользователя Windows или группы, созданные с помощью CREATE LOGIN, **sp_grantlogin**, или **sp_denylogin**.  
+  Удаляет записи входа из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для пользователя или группы Windows, созданных с помощью инструкции CREATE login, **sp_grantlogin**или **sp_denylogin**.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Используйте [DROP LOGIN](../../t-sql/statements/drop-login-transact-sql.md) вместо этого.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Вместо этого используйте [инструкцию DROP LOGIN](../../t-sql/statements/drop-login-transact-sql.md) .  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,48 +42,48 @@ sp_revokelogin [ @loginame= ] 'login'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @loginame = ] 'login'` — Имя пользователя Windows или группы. *Имя входа* — **sysname**, не имеет значения по умолчанию. *Имя входа* может быть любым существующим именем пользователя Windows или группы в форме *имя_компьютера*\\*пользователя или домена*\\*пользователя*.  
+`[ @loginame = ] 'login'`Имя пользователя или группы Windows. Аргумент *Login* имеет тип **sysname**и не имеет значения по умолчанию. именем для *входа* может быть любое существующее имя пользователя или группа Windows в формате *компьютер имя*\\*пользователь или домен*\\*пользователь*.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или 1 (неуспешное завершение)  
+ 0 (успех) или 1 (сбой).  
   
-## <a name="remarks"></a>Примечания  
- **Хранимая процедура sp_revokelogin** блокирует соединения, используя учетную запись, заданную аргументом *входа* параметра. Но пользователи Windows, которым доступ к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] был предоставлен через членство в группе Windows, тем не менее, могут установить соединение после того, как был запрещен их индивидуальный доступ. Аналогично Если *входа* параметр задает имя группы Windows, члены этой группы, которые были отдельно предоставлен доступ к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по-прежнему будут иметь возможность подключения.  
+## <a name="remarks"></a>Remarks  
+ **sp_revokelogin** отключает соединения, используя учетную запись, указанную параметром *Login* . Но пользователи Windows, которым доступ к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] был предоставлен через членство в группе Windows, тем не менее, могут установить соединение после того, как был запрещен их индивидуальный доступ. Аналогично, если параметр *Login* указывает имя группы Windows, то члены этой группы, которым был предоставлен доступ к экземпляру по отдельности, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будут по-прежнему иметь возможность подключения.  
   
- Например если пользователь Windows **ADVWORKS\john** является членом группы Windows **ADVWORKS\Admins**, и **sp_revokelogin** отменяет доступ `ADVWORKS\john`:  
+ Например, если пользователь **Адвворкс\жохн** Windows является членом группы Windows **адвворкс\админс**, а **sp_revokelogin** отменяет доступ к `ADVWORKS\john`:  
   
 ```  
 sp_revokelogin [ADVWORKS\john]  
 ```  
   
- Пользователь **ADVWORKS\john** по-прежнему могут подключаться, если **ADVWORKS\Admins** был предоставлен доступ к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Аналогично Если группы Windows **ADVWORKS\Admins** отменен доступ, но **ADVWORKS\john** предоставляется доступ, **ADVWORKS\john** по-прежнему можно подключиться.  
+ Пользователь **адвворкс\жохн** по-прежнему может подключиться, если **адвворкс\админс** предоставил доступ к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Аналогично, если доступ к группе Windows **адвворкс\админс** был отменен, но **адвворкс\жохн** получает доступ, **адвворкс\жохн** может подключиться.  
   
- Используйте **sp_denylogin** к явно запрещает пользователям подключаться к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], независимо от их членства в группах Windows.  
+ Используйте **sp_denylogin** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], чтобы явно запретить пользователям подключаться к экземпляру, независимо от членства в группе Windows.  
   
- **Хранимая процедура sp_revokelogin** не может выполняться внутри пользовательской транзакции.  
+ **sp_revokelogin** не может быть выполнена в пользовательской транзакции.  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение ALTER ANY LOGIN на сервере.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере удаляются записи имени входа для пользователя Windows `Corporate\MollyA`.  
+ В следующем примере удаляются записи входа для пользователя `Corporate\MollyA`Windows.  
   
 ```  
 EXEC sp_revokelogin 'Corporate\MollyA';  
 ```  
   
- либо  
+ или  
   
 ```  
 EXEC sp_revokelogin [Corporate\MollyA];  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Хранимые процедуры безопасности (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [DROP LOGIN (Transact-SQL)](../../t-sql/statements/drop-login-transact-sql.md)   
- [Хранимая процедура sp_denylogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
- [sp_droplogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
- [Хранимая процедура sp_grantlogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [DROP LOGIN &#40;&#41;Transact-SQL](../../t-sql/statements/drop-login-transact-sql.md)   
+ [sp_denylogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
+ [sp_droplogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
+ [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

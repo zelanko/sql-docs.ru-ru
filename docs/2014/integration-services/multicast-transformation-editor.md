@@ -1,5 +1,5 @@
 ---
-title: Редактор многоадресной рассылки преобразования | Документация Майкрософт
+title: Редактор преобразования "многоадресная рассылка" | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c4013483838f81e9147eb45c84598c9cc73016fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057620"
 ---
 # <a name="multicast-transformation-editor"></a>редактор преобразования «Многоадресная доставка»
@@ -33,8 +33,8 @@ ms.locfileid: "66057620"
  **Свойства**  
  Все перечисленные выходные свойства доступны только для чтения, за исключением свойств **Имя** и **Описание**.  
   
-## <a name="see-also"></a>См. также  
- [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Преобразование «Условное разбиение»](data-flow/transformations/conditional-split-transformation.md)  
+## <a name="see-also"></a>См. также:  
+ [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [преобразование «Условное разбиение»](data-flow/transformations/conditional-split-transformation.md)  
   
   

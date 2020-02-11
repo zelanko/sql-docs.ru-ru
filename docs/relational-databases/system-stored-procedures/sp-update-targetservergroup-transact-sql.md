@@ -18,13 +18,13 @@ ms.assetid: 4ac65ed6-e07e-40e4-a282-13bfd92dfa41
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 330f044d832bf039028cb3d7e92d8929e28e6e79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946628"
 ---
-# <a name="spupdatetargetservergroup-transact-sql"></a>sp_update_targetservergroup (Transact-SQL)
+# <a name="sp_update_targetservergroup-transact-sql"></a>sp_update_targetservergroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Изменяет имя указанной группы целевых серверов.  
@@ -41,18 +41,18 @@ sp_update_targetservergroup
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @name = ] 'current_name'` Имя группы целевых серверов. *current_name* — **sysname**, не имеет значения по умолчанию.  
+`[ @name = ] 'current_name'`Имя группы целевых серверов. Аргумент *current_name* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @new_name = ] 'new_name'` Новое имя для группы целевых серверов. *новое_имя* — **sysname**, не имеет значения по умолчанию.  
+`[ @new_name = ] 'new_name'`Новое имя группы целевых серверов. Аргумент *new_name* имеет тип **sysname**и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="permissions"></a>Разрешения  
- Чтобы выполнить эту хранимую процедуру, пользователям необходимо предоставить **sysadmin** предопределенной роли сервера.  
+ Для выполнения этой хранимой процедуры пользователям должна быть предоставлена предопределенная роль сервера **sysadmin** .  
   
-## <a name="remarks"></a>Примечания  
- **sp_update_targetservergroup** должна запускаться из **msdb** базы данных.  
+## <a name="remarks"></a>Remarks  
+ **sp_update_targetservergroup** должны запускаться из базы данных **msdb** .  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере имя группы целевых серверов `Servers Processing Customer Orders` изменяется на имя `Local Servers Processing Customer Orders`.  
@@ -67,10 +67,10 @@ EXEC dbo.sp_update_targetservergroup
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_add_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)   
  [sp_delete_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)   
  [sp_help_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

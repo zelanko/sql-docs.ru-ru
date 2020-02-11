@@ -1,5 +1,5 @@
 ---
-title: Сопоставление результирующих наборов с переменными в «выполнение SQL» | Документация Майкрософт
+title: Сопоставьте результирующие наборы с переменными в задаче «Выполнение SQL» | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 995afe55c1cd1b7d925c9267ba5dfa3aed038358
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057760"
 ---
 # <a name="map-result-sets-to-variables-in-an-execute-sql-task"></a>Сопоставление результирующих наборов с переменными в задаче "Выполнение SQL"
@@ -30,11 +30,11 @@ ms.locfileid: "66057760"
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]откройте проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , содержащий необходимый пакет.  
   
-2.  Чтобы открыть пакет, дважды щелкните его в **обозревателе решений**.  
+2.  В **Обозреватель решений**дважды щелкните пакет, чтобы открыть его.  
   
 3.  Перейдите на вкладку **Поток управления** .  
   
-4.  Если пакет не включает задачу «Выполнение SQL», добавьте его к потоку управления пакета. Дополнительные сведения см. в разделе [Добавление или удаление задачи или контейнера в поток управления](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+4.  Если пакет не включает задачу «Выполнение SQL», добавьте его к потоку управления пакета. Дополнительные сведения см. [в разделе Добавление или удаление задачи или контейнера в потоке управления](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md) .  
   .  
   
 5.  Дважды щелкните задачу «Выполнение SQL».  
@@ -59,13 +59,13 @@ ms.locfileid: "66057760"
   
 11. Нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также  
- [Задача "Выполнение SQL"](control-flow/execute-sql-task.md)   
- [Результирующие наборы «Выполнение SQL»](result-sets-in-the-execute-sql-task.md)   
- [«Выполнение пакета»](control-flow/execute-package-task.md)   
+## <a name="see-also"></a>См. также:  
+ [Задача «Выполнение SQL»](control-flow/execute-sql-task.md)   
+ [Результирующие наборы в задаче «Выполнение SQL»](result-sets-in-the-execute-sql-task.md)   
+ [Задача "выполнение пакета"](control-flow/execute-package-task.md)   
  [Конфигурации пакетов](../../2014/integration-services/package-configurations.md)   
- [Создание конфигурации пакетов](../../2014/integration-services/create-package-configurations.md)   
- [Используйте значения переменных и параметров в дочернем пакете](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)   
- [Переменные в службах Integration Services (SSIS)](integration-services-ssis-variables.md)  
+ [Создание конфигураций пакетов](../../2014/integration-services/create-package-configurations.md)   
+ [Использование значений переменных и параметров в дочернем пакете](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)   
+ [Integration Services &#40;переменные&#41; SSIS](integration-services-ssis-variables.md)  
   
   

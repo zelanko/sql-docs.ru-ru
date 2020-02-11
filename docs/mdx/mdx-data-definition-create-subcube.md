@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: f137e8c377c94a60fdcfd8f1534069cef4b28f66
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68887435"
 ---
 # <a name="mdx-data-definition---create-subcube"></a>Определение данных многомерных выражений — CREATE SUBCUBE
@@ -35,24 +35,24 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
  *Select_Statement*  
  Допустимое многомерное выражение SELECT, не содержащее предложений WITH, NON EMPTY и HAVING и не запрашивающее свойства измерений и ячеек.  
   
- Подробное описание синтаксиса инструкций SELECT и невизуального предложения см. в разделе [многомерное &#40;выражение&#41; инструкции SELECT](../mdx/mdx-data-manipulation-select.md) .  
+ Подробное описание синтаксиса инструкций SELECT и **НЕвизуального** предложения см. в разделе [инструкция SELECT &#40;&#41;многомерных выражений](../mdx/mdx-data-manipulation-select.md) .  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Если элементы по умолчанию исключаются из определения вложенного куба, то координаты изменяются соответствующим образом. Для атрибутов, которые могут быть статистически вычислены, элемент по умолчанию перемещается в элемент [Все]. Для атрибутов, которые не могут быть статистически вычислены, элемент по умолчанию перемещается в элемент, существующий во вложенном кубе. В следующей таблице приведен пример вложенного куба и комбинаций элемента по умолчанию.  
   
 |Исходный элемент по умолчанию|Статистически вычисляемый|Подзапрос выборки|Измененный элемент по умолчанию|  
 |-----------------------------|-----------------------|---------------|----------------------------|  
-|Время.Год.Все|Да|{Время.Год.2003}|Без изменений|  
+|Время.Год.Все|Да|{Время.Год.2003}|Без изменения.|  
 |Time. year. [1997]|Да|{Время.Год.2003}|Время.Год.Все|  
-|Time. year. [1997]|Нет|{Время.Год.2003}|Time. year. [2003]|  
+|Time. year. [1997]|нет|{Время.Год.2003}|Time. year. [2003]|  
 |Time. year. [1997]|Да|{Время.Год.2003, Время.Год.2004}|Время.Год.Все|  
-|Time. year. [1997]|Нет|{Время.Год.2003, Время.Год.2004}|Или Время.Год.[2003] или<br /><br /> Время.Год.[2004]|  
+|Time. year. [1997]|нет|{Время.Год.2003, Время.Год.2004}|Или Время.Год.[2003] или<br /><br /> Время.Год.[2004]|  
   
  Во вложенном кубе всегда существуют элементы [Все].  
   
  Объекты сеанса, созданные в контексте вложенного куба, сбрасываются при сбрасывании вложенного куба.  
   
- Дополнительные сведения о вложенных кубах см. [в разделе Создание вложенных кубов в &#40;многомерном выражении&#41;многомерных](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)выражений.  
+ Дополнительные сведения о вложенных кубах см. [в разделе Создание вложенных кубов в многомерных выражениях &#40;многомерных выражениях&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx).  
   
 ## <a name="example"></a>Пример  
  В следующем примере создается вложенный куб, ограничивающий видимое пространство куба до элементов со страной Canada. Затем она использует функцию **Members** для возврата всех элементов уровня Country определяемой пользователем иерархии Geography — возврат только страны Канады.  
@@ -91,10 +91,10 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
 |||||  
 |-|-|-|-|  
-||Все продукты|Accessories|Clothing|  
-|All Resellers|$2,031,079.39|$ 506 172,45|$ 1 524 906,93|  
-|Value Added Reseller|$767,388.52|$ 175 002,81|$ 592 385,71|  
-|Warehouse|$1,263,690.86|$ 331 169,64|$ 932 521,23|  
+||All Products|Accessories|Clothing|  
+|All Resellers|$2 031 079,39|$ 506 172,45|$ 1 524 906,93|  
+|Value Added Reseller|$767 388,52|$ 175 002,81|$ 592 385,71|  
+|Warehouse|$1 263 690,86|$ 331 169,64|$ 932 521,23|  
   
  В результате удаления и повторного создания вложенного куба с помощью предложения NON VISUAL создается вложенный куб, хранящий верные итоги для всех элементов в Products.Category и Resellers.[Business Type] независимо от того, являются ли они видимыми или нет.  
   
@@ -120,17 +120,17 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
 |||||  
 |-|-|-|-|  
-||Все продукты|Accessories|Clothing|  
+||All Products|Accessories|Clothing|  
 |All Resellers|$ 80 450 596,98|$ 571 297,93|$ 1 777 840,84|  
 |Value Added Reseller|$ 34 967 517,33|$ 175 002,81|$ 592 385,71|  
 |Warehouse|$ 38 726 913,48|$ 331 169,64|$ 932 521,23|  
   
  [All Products] и [All Resellers], столбец и строка соответственно, содержат итоги всех элементов, а не только тех, что видимы.  
   
-## <a name="see-also"></a>См. также  
- [Основные понятия многомерных выражений (службы Analysis Services)](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
- [Многомерные выражения инструкций &#40;скриптов многомерных выражений&#41;](../mdx/mdx-scripting-statements-mdx.md)   
- [Многомерное выражение инструкции &#40;Drop Cube&#41;](../mdx/mdx-data-definition-drop-subcube.md)   
- [Инструкция SELECT (многомерные выражения)](../mdx/mdx-data-manipulation-select.md)  
+## <a name="see-also"></a>См. также:  
+ [Основные понятия в Analysis Services &#40;многомерных выражений&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
+ [Инструкции скриптов многомерных выражений &#40;многомерные выражения&#41;](../mdx/mdx-scripting-statements-mdx.md)   
+ [Инструкция DROP CUBE &#40;&#41;многомерных выражений](../mdx/mdx-data-definition-drop-subcube.md)   
+ [Инструкция SELECT &#40;&#41;многомерных выражений](../mdx/mdx-data-manipulation-select.md)  
   
   

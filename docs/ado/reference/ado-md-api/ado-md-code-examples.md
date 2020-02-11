@@ -1,5 +1,5 @@
 ---
-title: Примеры кода многомерных Объектов ADO | Документация Майкрософт
+title: объекты данных ActiveX (MD) примеры кода | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,26 +13,26 @@ ms.assetid: 72cf9eb3-31f6-441c-aede-5383fdfb81af
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9655281302eddb65e693da9a9516c1eecbbce1dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67940067"
 ---
 # <a name="ado-md-code-examples"></a>Примеры кода многомерных объектов ADO
-Используйте в следующих примерах кода, чтобы узнать, как использовать объекты ADO MD, методы и свойства. Эти примеры являются подмножеством примера приложения, установленные с Microsoft SQL Server OLAP Services для SQL Server 7.0.  
+Используйте приведенные ниже примеры кода, чтобы научиться использовать объекты данных ActiveX (MD) объекты, методы и свойства. Эти примеры представляют собой подмножество примеров приложений, устанавливаемых с Microsoft SQL Server служб OLAP для SQL Server 7,0.  
   
- Эти примеры использовать поставщик MSOLAP OLE DB и выполняется в локальный узел OLAP служб Microsoft SQL Server. Тем не менее эти примеры предназначены для демонстрации основных методики программирования ADO MD и должны быть легко адаптирован к других источников данных или поставщиков.  
+ В этих примерах используется поставщик OLE DB MSOLAP и выполняется для локального узла Microsoft SQL Server служб OLAP. Однако эти примеры предназначены для отображения фундаментальных объекты данных ActiveX (MD) методов программирования и должны быть легко адаптированы к другим источникам данных или поставщикам.  
   
 -   [Примеры кода многомерных объектов ADO в Visual Basic](../../../ado/reference/ado-md-api/ado-md-code-examples-in-visual-basic.md)  
   
 -   [Примеры кода многомерных объектов ADO на языке сценариев Visual Basic](../../../ado/reference/ado-md-api/ado-md-code-examples-in-visual-basic-scripting-edition.md)  
   
-## <a name="see-also"></a>См. также  
- [Справочник по API ADO MD](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
- [Коллекции многомерных Объектов ADO](../../../ado/reference/ado-md-api/ado-md-collections.md)   
- [Перечисляемые константы многомерных Объектов ADO](../../../ado/reference/ado-md-api/ado-md-enumerated-constants.md)   
- [Методы многомерных Объектов ADO](../../../ado/reference/ado-md-api/ado-md-methods.md)   
- [Объектная модель ADO MD](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
- [Многомерные объекты ADO](../../../ado/reference/ado-md-api/ado-md-objects.md)   
+## <a name="see-also"></a>См. также:  
+ [Справочник по объекты данных ActiveX (MD) API](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
+ [объекты данных ActiveX (MD) коллекции](../../../ado/reference/ado-md-api/ado-md-collections.md)   
+ [объекты данных ActiveX (MD) перечислимые константы](../../../ado/reference/ado-md-api/ado-md-enumerated-constants.md)   
+ [Методы объекты данных ActiveX (MD)](../../../ado/reference/ado-md-api/ado-md-methods.md)   
+ [Объектная модель объекты данных ActiveX (MD)](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
+ [объекты данных ActiveX (MD) объекты](../../../ado/reference/ado-md-api/ado-md-objects.md)   
  [Свойства многомерных объектов ADO](../../../ado/reference/ado-md-api/ado-md-properties.md)

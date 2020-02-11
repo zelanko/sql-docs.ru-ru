@@ -18,25 +18,25 @@ ms.assetid: c644814b-4e40-44d7-b6b4-5954b0d4db7c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 29ea5e7e78d274eaf289afbd6ca73f97cd479679
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68026659"
 ---
-# <a name="mspeertopologyrequest-transact-sql"></a>MSpeer_topologyrequest (Transact-SQL)
+# <a name="mspeer_topologyrequest-transact-sql"></a>MSpeer_topologyrequest (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Используется в одноранговой репликации для отслеживания запросов состояния топологии для публикации. Эта таблица хранится в базе данных публикации.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |id|**int**|Идентифицирует запрос состояния топологии. Столбец request_id в [MSpeer_topologyresponse](../../relational-databases/system-tables/mspeer-topologyresponse-transact-sql.md) использует это значение.|  
-|публикация|**sysname**|Имя публикации, из которой был сформирован запрос состояния топологии.|  
+|публикация|**имеет sysname**|Имя публикации, из которой был сформирован запрос состояния топологии.|  
 |sent_date|**datetime**|Дата и время выдачи запроса состояния топологии.|  
   
-## <a name="see-also"></a>См. также  
- [Таблицы репликации &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Представления репликации &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

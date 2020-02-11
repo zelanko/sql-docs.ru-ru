@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 37b4a53461b2ebd485941ecad89e3672e7c31b62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62877073"
 ---
 # <a name="use-marked-transactions-to-recover-related-databases-consistently-full-recovery-model"></a>Использование помеченных транзакций для согласованного восстановления связанных баз данных (модель полного восстановления)
@@ -173,7 +173,7 @@ GO
 ## <a name="recovering-to-a-marked-transaction"></a>Восстановление до помеченной транзакции  
  Дополнительные сведения о восстановлении базы данных, содержащей помеченные транзакции на определенной метке или перед ней, см. в разделе [Восстановление связанных баз данных, которые содержат помеченную транзакцию](recovery-of-related-databases-that-contain-marked-transaction.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [BEGIN DISTRIBUTED TRANSACTION (Transact-SQL)](/sql/t-sql/language-elements/begin-distributed-transaction-transact-sql)   
  [Резервное копирование и восстановление системных баз данных (SQL Server)](back-up-and-restore-of-system-databases-sql-server.md)   
  [BEGIN TRANSACTION (Transact-SQL)](/sql/t-sql/language-elements/begin-transaction-transact-sql)   

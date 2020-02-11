@@ -1,5 +1,5 @@
 ---
-title: StreamTypeEnum | Документация Майкрософт
+title: Стреамтипинум | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,22 +16,22 @@ ms.assetid: 220fe51d-4889-4020-a099-2ec9c7485503
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 09f917f326db197fa42aedf9a668134c257af4a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67936720"
 ---
 # <a name="streamtypeenum"></a>StreamTypeEnum
-Указывает тип данных, хранящихся в [Stream](../../../ado/reference/ado-api/stream-object-ado.md) объекта.  
+Указывает тип данных, хранящихся в объекте [потока](../../../ado/reference/ado-api/stream-object-ado.md) .  
   
-|Константа|Значение|Описание|  
+|Постоянно|Значение|Description|  
 |--------------|-----------|-----------------|  
-|**adTypeBinary**|1|Указывает двоичные данные.|  
-|**adTypeText**|2|По умолчанию. Указывает текстовых данных, которая находится на кодировку, указанную с [Charset](../../../ado/reference/ado-api/charset-property-ado.md).|  
+|**адтипебинари**|1|Указывает двоичные данные.|  
+|**адтипетекст**|2|По умолчанию. Указывает текстовые данные, которые находятся в кодировке, заданной параметром [CharSet](../../../ado/reference/ado-api/charset-property-ado.md).|  
   
-## <a name="adowfc-equivalent"></a>Эквивалент ADO и WFC  
- Эти константы не имеют эквивалентов ADO и WFC.  
+## <a name="adowfc-equivalent"></a>Эквивалент ADO/WFC  
+ Эти константы не имеют эквивалентов ADO/WFC.  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  [Свойство Type (объект Stream ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)

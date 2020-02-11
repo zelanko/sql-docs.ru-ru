@@ -15,14 +15,14 @@ ms.assetid: d33467a5-5a56-450d-98c1-c3ce6f9f103c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0ae1a96f2f5a72f354e376faa3e9e7370f9fcb92
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932472"
 ---
 # <a name="getrows-method-example-jscript"></a>Пример метода GetRows (JScript)
-В этом примере используется [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) метод для извлечения всех строк *Custiomers* таблицу [записей](../../../ado/reference/ado-api/recordset-object-ado.md) и заполняют массив полученные данные. **GetRows** метод возвратит меньше, чем требуемое число строк в двух случаях: либо если [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) был достигнут, или если **GetRows** попытка получить запись, которая была удалена другим пользователем. Функция возвращает **False** только в том случае, если происходит второй вариант. Вырежьте и вставьте следующий код в блокноте или другом текстовом редакторе и сохраните его в **GetRowsJS.asp**.  
+В этом примере метод [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) используется для получения всех строк таблицы *Кустиомерс* из [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) и для заполнения массива результирующими данными. Метод **GetRows** возвращает меньше требуемого числа строк в двух случаях: или, если был достигнут [конец файла](../../../ado/reference/ado-api/bof-eof-properties-ado.md) , или если **GetRows** попытался получить запись, удаленную другим пользователем. Функция возвращает **значение false** только в том случае, если происходит второй вариант. Вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **жетровсжс. ASP**.  
   
 ```  
 <!-- BeginGetRowsJS -->  
@@ -158,6 +158,6 @@ BODY {
 <!-- EndGetRowsJS -->  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод GetRows (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

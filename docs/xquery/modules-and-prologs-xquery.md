@@ -1,5 +1,5 @@
 ---
-title: Модули и Прологи (XQuery) | Документация Майкрософт
+title: Модули и журналы (XQuery) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 0f17b4a4-6234-41d4-a996-6db4e27bff7e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: f7a2df8ea534622c4ff4c1695c7e44a7aea7611d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946585"
 ---
 # <a name="modules-and-prologs-xquery"></a>Модули и прологи (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [XQuery Prolog](../xquery/modules-and-prologs-xquery-prolog.md) — это последовательность объявлений пространств имен. При использовании объявленного пространства имен в прологе можно указать префикс для привязки пространства имен, а также применять префикс в теле запроса.  
+  [Пролог XQuery](../xquery/modules-and-prologs-xquery-prolog.md) — это серия объявлений пространств имен. При использовании объявленного пространства имен в прологе можно указать префикс для привязки пространства имен, а также применять префикс в теле запроса.  
   
 ## <a name="implementation-limitations"></a>Ограничения реализации  
  В этой реализации не поддерживаются следующие возможности из спецификации XQuery:  
@@ -34,7 +34,7 @@ ms.locfileid: "67946585"
   
 -   объявление модуля (`module namespace`);  
   
--   Xmpspacedeclaration (`xmlspace`)  
+-   Ксмпспацедекларатион (`xmlspace`)  
   
 -   объявление параметров сортировки по умолчанию (`declare default collation`);  
   
@@ -56,7 +56,7 @@ ms.locfileid: "67946585"
  [Пролог XQuery](../xquery/modules-and-prologs-xquery-prolog.md)  
  Описание пролога XQuery.  
   
-## <a name="see-also"></a>См. также  
- [Справочник по языку XQuery (SQL Server)](../xquery/xquery-language-reference-sql-server.md)  
+## <a name="see-also"></a>См. также:  
+ [Справочник по языку XQuery &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  
   
   

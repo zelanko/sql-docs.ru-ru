@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0114aa3ca6f6744303c3053003a622185d33f547
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479899"
 ---
 # <a name="delete-users-or-groups-master-data-services"></a>Удаление пользователей или группы (службы Master Data Services)
@@ -33,7 +33,7 @@ ms.locfileid: "65479899"
   
 -   Изменения безопасности распространяются на MDS [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] спустя 20 минут.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения этой процедуры:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Разрешения пользователей и групп** ;  
@@ -52,7 +52,7 @@ ms.locfileid: "65479899"
   
 5.  В диалоговом окне подтверждения нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также  
- [Безопасность (службы Master Data Services)](../../2014/master-data-services/security-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Master Data Services &#40;безопасности&#41;](../../2014/master-data-services/security-master-data-services.md)  
   
   

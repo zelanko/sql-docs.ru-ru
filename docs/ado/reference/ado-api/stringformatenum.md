@@ -1,5 +1,5 @@
 ---
-title: StringFormatEnum | Документация Майкрософт
+title: Стрингформатенум | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,25 +16,25 @@ ms.assetid: 28f7d1ec-092b-4323-a39d-d3f882c6c81a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 85bef64902f014e7b5269d6df328128bc8fe8d6e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67937881"
 ---
 # <a name="stringformatenum"></a>StringFormatEnum
-Задает формат при извлечении [записей](../../../ado/reference/ado-api/recordset-object-ado.md) как строка.  
+Задает формат при извлечении [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) в виде строки.  
   
-|Константа|Значение|Описание|  
+|Постоянно|Значение|Description|  
 |--------------|-----------|-----------------|  
-|**adClipString**|2|Разделяет строки по *RowDelimiter*, столбцы по *ColumnDelimiter*и значения, null *NullExpr*. Эти три параметра [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) не является допустимым только с *StringFormat* из **adClipString**.|  
+|**адклипстринг**|2|Отделяет строки от *RowDelimiter*, Columns по *ColumnDelimiter*и значения NULL значениями *нуллекспр*. Эти три параметра метода [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) допустимы только с *StringFormat* **адклипстринг**.|  
   
-## <a name="adowfc-equivalent"></a>Эквивалент ADO и WFC  
- Пакет: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>Эквивалент ADO/WFC  
+ Пакет: **com. MS. WFC. Data**  
   
-|Константа|  
+|Постоянно|  
 |--------------|  
-|AdoEnums.StringFormat.CLIPSTRING|  
+|Адоенумс. StringFormat. КЛИПСТРИНГ|  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  [Метод GetString (ADO)](../../../ado/reference/ado-api/getstring-method-ado.md)

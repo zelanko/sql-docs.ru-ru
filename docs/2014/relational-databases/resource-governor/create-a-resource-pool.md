@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f4d18ef352c3e5ab6342e573d16bc3deaed5db72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211992"
 ---
 # <a name="create-a-resource-pool"></a>Создание пула ресурсов
@@ -25,11 +25,11 @@ ms.locfileid: "68211992"
   
 -   **Перед началом:**  [ограничения](#LimitationsRestrictions), [разрешения](#Permissions)  
   
--   **Создание пула ресурсов с использованием:**  [среды SQL Server Management Studio](#CreRPProp), [Transact-SQL](#CreRPTSQL)  
+-   **Создание пула ресурсов с помощью:**  [SQL Server Management Studio](#CreRPProp), [Transact-SQL](#CreRPTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="LimitationsRestrictions"></a> ограничения  
+###  <a name="LimitationsRestrictions"></a> Ограничения  
  Максимальный процент использования ЦП должен быть больше минимального или равен ему. Максимальный процент использования памяти должен быть больше минимального или равен ему.  
   
  Сумма значений минимальных процентов использования ЦП и минимальных процентов использования памяти для всех пулов ресурсов не должна превышать 100.  
@@ -37,8 +37,8 @@ ms.locfileid: "68211992"
 ###  <a name="Permissions"></a> Permissions  
  Для создания пула ресурсов требуется разрешение CONTROL SERVER.  
   
-##  <a name="CreRPProp"></a> Создание пула ресурсов в среде SQL Server Management Studio  
- **Создание пула ресурсов с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
+##  <a name="CreRPProp"></a>Создание пула ресурсов с помощью SQL Server Management Studio  
+ **Создание пула ресурсов с помощью[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]откройте обозреватель объектов и рекурсивно разверните узел **Управление** вплоть до узла **Регулятор ресурсов**.  
   
@@ -52,8 +52,8 @@ ms.locfileid: "68211992"
   
 6.  Чтобы сохранить изменения, нажмите кнопку **ОК**.  
   
-##  <a name="CreRPTSQL"></a> Создание пула ресурсов с помощью Transact-SQL  
- **Создание пула ресурсов с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
+##  <a name="CreRPTSQL"></a>Создание пула ресурсов с помощью Transact-SQL  
+ **Создание пула ресурсов с помощью[!INCLUDE[tsql](../../includes/tsql-md.md)]**  
   
 1.  Выполните инструкцию `CREATE RESOURCE POOL`, указав значения свойств, которые необходимо присвоить.  
   
@@ -70,16 +70,16 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [регулятор ресурсов](resource-governor.md)   
- [Активация регулятора ресурсов](enable-resource-governor.md)   
- [Resource Governor Resource Pool](resource-governor-resource-pool.md)   
+## <a name="see-also"></a>См. также:  
+ [Resource Governor](resource-governor.md)   
+ [Включить Resource Governor](enable-resource-governor.md)   
+ [Resource Governor пул ресурсов](resource-governor-resource-pool.md)   
  [Изменение параметров пула ресурсов](change-resource-pool-settings.md)   
  [Удаление пула ресурсов](delete-a-resource-pool.md)   
- [Настройка регулятора ресурсов с помощью шаблона](configure-resource-governor-using-a-template.md)   
- [Группа рабочей нагрузки регулятора ресурсов](resource-governor-workload-group.md)   
- [Функция-классификатор регулятора ресурсов](resource-governor-classifier-function.md)   
- [CREATE RESOURCE POOL (Transact-SQL)](/sql/t-sql/statements/create-resource-pool-transact-sql)   
+ [Настройка Resource Governor с помощью шаблона](configure-resource-governor-using-a-template.md)   
+ [Группа рабочей нагрузки Resource Governor](resource-governor-workload-group.md)   
+ [Resource Governorная функция-классификатор](resource-governor-classifier-function.md)   
+ [Создание пула ресурсов &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-resource-pool-transact-sql)   
  [ALTER RESOURCE GOVERNOR (Transact-SQL)](/sql/t-sql/statements/alter-resource-governor-transact-sql)  
   
   

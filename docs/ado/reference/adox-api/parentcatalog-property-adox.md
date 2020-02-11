@@ -1,5 +1,5 @@
 ---
-title: Пример свойства ParentCatalog (ADOX) | Документация Майкрософт
+title: Свойство ParentCatalog (ADOX) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -41,29 +41,29 @@ ms.assetid: a0bb2ed8-d4cb-4f92-8de7-769bbe0e6273
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8bc9527109aaa4a3a8063b26a594c9bdb978dcf3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965583"
 ---
 # <a name="parentcatalog-property-adox"></a>Свойство ParentCatalog (ADOX)
-Указывает каталог родительского объекта таблицы, пользователя или столбец для предоставления доступа к свойствам конкретного поставщика.  
+Указывает родительский каталог объекта таблицы, пользователя или столбца, который предоставляет доступ к свойствам, зависящим от поставщика.  
   
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
- Задает и возвращает [каталога](../../../ado/reference/adox-api/catalog-object-adox.md) объекта. Установка **ParentCatalog** открытому **каталога** разрешает доступ к свойствам поставщика перед добавлением таблицы или столбца для **каталога** коллекции.  
+ Задает и возвращает объект [каталога](../../../ado/reference/adox-api/catalog-object-adox.md) . Установка **ParentCatalog** в открытый **Каталог** предоставляет доступ к свойствам, зависящим от поставщика, до добавления таблицы или столбца в коллекцию **каталогов** .  
   
-## <a name="remarks"></a>Примечания  
- Некоторые поставщики данных позволяет значениям свойств от поставщика, должны быть записаны только во время создания: то есть когда таблица или столбец добавляется к его **каталога** коллекции. Для доступа к этим свойствам перед добавлением этих объектов для **каталога**, укажите **каталога** в **ParentCatalog** свойства первого.  
+## <a name="remarks"></a>Remarks  
+ Некоторые поставщики данных позволяют записывать значения свойств, определяемые поставщиком, только при их создании: то есть когда таблица или столбец добавляются в коллекцию **каталогов** . Чтобы получить доступ к этим свойствам перед добавлением этих объектов в **Каталог**, сначала укажите **Каталог** в свойстве **ParentCatalog** .  
   
- Произошла ошибка, если таблица или столбец добавляется к другой **каталога** чем **ParentCatalog**.  
+ Ошибка возникает при добавлении таблицы или столбца к **каталогу** , отличному от каталога **ParentCatalog**.  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
   
 |||  
 |-|-|  
 |[Объект Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)|[Объект Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|  
 |[Объект User (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)||  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример свойства ParentCatalog (Visual Basic)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)

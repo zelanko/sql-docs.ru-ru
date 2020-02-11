@@ -14,16 +14,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 387613e12af3435a2a8eb9e3f630f61acaf28a8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479993"
 ---
 # <a name="create-a-file-attribute-master-data-services"></a>Создание файлового атрибута (службы Master Data Services)
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]файловый атрибут создается для заполнения значений атрибута файлами.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения этой процедуры:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
@@ -52,13 +52,13 @@ ms.locfileid: "65479993"
   
     -   если атрибут предназначен для коллекций, выберите команду **Добавить атрибут коллекции** на панели **Атрибуты коллекций**.  
   
-7.  На **добавить атрибут** выберите **файл** параметр.  
+7.  На странице **Добавление атрибута** выберите параметр **файл** .  
   
 8.  Введите имя атрибута в поле **Имя** . Список слов, которые не должны использоваться как имена атрибутов, см. в разделе [Зарезервированные слова (службы Master Data Services)](../../2014/master-data-services/reserved-words-master-data-services.md).  
   
 9. В поле **Ширина отображаемой области (в пикселях)** введите ширину столбца атрибута для отображения в сетке **обозревателя** .  
   
-10. Из **расширение файла** выберите один или несколько типов файлов, пользователь может отправить или оставить значение по умолчанию (*.\*) для всех типов файлов.  
+10. В списке **расширение файла** выберите один или несколько типов файлов, которые может передать пользователь, или оставьте значение по умолчанию (*.\*), чтобы разрешить все типы файлов.  
   
 11. По желанию установите флажок **Включить отслеживание изменений** , чтобы отслеживать изменения в группах атрибутов. Дополнительные сведения см. в разделе [Добавление атрибутов в группу отслеживания изменений (службы Master Data Services)](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md).  
   
@@ -66,10 +66,10 @@ ms.locfileid: "65479993"
   
 13. На странице **Обслуживание сущности** нажмите кнопку **Сохранить сущность**.  
   
-## <a name="see-also"></a>См. также  
- [Атрибуты (службы Master Data Services)](../../2014/master-data-services/attributes-master-data-services.md)   
- [Изменение имени атрибута &#40;службы Master Data Services&#41;](change-an-attribute-name-and-data-type-master-data-services.md)   
- [Создание атрибута на основе домена (службы Master Data Services)](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)   
- [Создание текстового атрибута (службы Master Data Services)](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Master Data Services &#40;атрибутов&#41;](../../2014/master-data-services/attributes-master-data-services.md)   
+ [Измените имя атрибута &#40;Master Data Services&#41;](change-an-attribute-name-and-data-type-master-data-services.md)   
+ [Создание атрибута на основе домена &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)   
+ [Создание текстового атрибута &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)  
   
   

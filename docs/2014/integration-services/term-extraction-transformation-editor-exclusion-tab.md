@@ -1,5 +1,5 @@
 ---
-title: Редактор преобразования извлечения терминов (вкладка "исключение") | Документация Майкрософт
+title: Редактор преобразования "Извлечение терминов" (вкладка "исключение") | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4b1032a0fc11ab07069309b7053e756d28329b77
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055226"
 ---
 # <a name="term-extraction-transformation-editor-exclusion-tab"></a>Редактор преобразования «Извлечение терминов» (вкладка «Исключения»)
@@ -30,7 +30,7 @@ ms.locfileid: "66055226"
  **Использовать исключаемые термины**  
  Укажите, необходимо ли исключать определенные термины в процессе извлечения терминов, определив столбцы, содержащие исключаемые термины. Необходимо указать следующие свойства источника, если принято решение исключать термины.  
   
- **Диспетчер соединений OLE DB**  
+ **Диспетчер подключений OLE DB**  
  Выберите существующий диспетчер соединений OLE DB или создайте новое соединение, выбрав **Создать**.  
   
  **Создать**  
@@ -46,9 +46,9 @@ ms.locfileid: "66055226"
  Используйте диалоговое окно [Настройка вывода ошибок](../../2014/integration-services/configure-error-output.md) для указания метода обработки ошибок для строк, вызвавших ошибку.  
   
 ## <a name="see-also"></a>См. также:  
- [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор преобразования "Извлечение терминов" (вкладка "Извлечение терминов")](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
- [Редактор преобразования "Извлечение терминов" (вкладка "Дополнительно")](../../2014/integration-services/term-extraction-transformation-editor-advanced-tab.md)   
- [Преобразование "Уточняющий запрос термина"](data-flow/transformations/lookup-transformation.md)  
+ [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор преобразования "Извлечение терминов" &#40;вкладка "Извлечение терминов"&#41;](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
+ [Редактор преобразования "Извлечение терминов" &#40;вкладка "Дополнительно"&#41;](../../2014/integration-services/term-extraction-transformation-editor-advanced-tab.md)   
+ [преобразование «Уточняющий запрос термина»](data-flow/transformations/lookup-transformation.md)  
   
   

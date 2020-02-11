@@ -1,5 +1,5 @@
 ---
-title: Индекс объекта (ADOX) | Документация Майкрософт
+title: Объект index (ADOX) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,55 +16,55 @@ ms.assetid: 6b9578c0-bc94-46b9-b801-c18e14b04b31
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7bff462b7c9ffe115cdfd52d1ec1f0a810a50531
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966080"
 ---
 # <a name="index-object-adox"></a>Объект Index (ADOX)
 Представляет индекс из таблицы базы данных.  
   
-## <a name="remarks"></a>Примечания  
- В следующем коде создается новый **индекс**:  
+## <a name="remarks"></a>Remarks  
+ Следующий код создает новый **индекс**:  
   
 ```  
 Dim obj As New Index  
 ```  
   
- С помощью свойств и коллекций **индекс** объекта, вы можете:  
+ С помощью свойств и коллекций объекта **index** можно:  
   
--   Определение индекса с [имя](../../../ado/reference/adox-api/name-property-adox.md) свойство.  
+-   Найдите индекс с помощью свойства [Name](../../../ado/reference/adox-api/name-property-adox.md) .  
   
--   Доступ к базе данных столбцы индекса с помощью [столбцы](../../../ado/reference/adox-api/columns-collection-adox.md) коллекции.  
+-   Доступ к столбцам базы данных индекса с помощью коллекции [Columns](../../../ado/reference/adox-api/columns-collection-adox.md) .  
   
--   Укажите, должны ли быть уникальными в ключи индекса [Unique](../../../ado/reference/adox-api/unique-property-adox.md) свойство.  
+-   Укажите, должны ли ключи индекса быть уникальными с [уникальным](../../../ado/reference/adox-api/unique-property-adox.md) свойством.  
   
--   Укажите, является ли индекс первичным ключом для таблицы с [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md) свойство.  
+-   Укажите, является ли индекс первичным ключом для таблицы со свойством [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md) .  
   
--   Укажите, имеют ли записи со значениями null в полях индекс записи индекса с [IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md) свойство.  
+-   Укажите, будут ли записи, имеющие значения NULL в полях индекса, содержать элементы индекса со свойством [IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md) .  
   
--   Укажите, является ли индекс кластеризованным с [Clustered](../../../ado/reference/adox-api/clustered-property-adox.md) свойство.  
+-   Укажите, кластеризован ли индекс с помощью свойства [Clustered](../../../ado/reference/adox-api/clustered-property-adox.md) .  
   
--   Доступ к свойствам индекса поставщика с [свойства](../../../ado/reference/ado-api/properties-collection-ado.md) коллекции.  
-  
-> [!NOTE]
->  Произойдет ошибка при добавлении [столбец](../../../ado/reference/adox-api/column-object-adox.md) для **столбцы** коллекцию **индекс** Если **столбца** не существует в [Таблицы](../../../ado/reference/adox-api/table-object-adox.md) объекта, уже добавлен к [таблиц](../../../ado/reference/adox-api/tables-collection-adox.md) коллекции.  
+-   Доступ к свойствам индекса для конкретного поставщика с помощью коллекции [свойств](../../../ado/reference/ado-api/properties-collection-ado.md) .  
   
 > [!NOTE]
->  Поставщик данных может не поддерживать все свойства **индекс** объектов. Если вы задали значение для свойства, которое не поддерживается поставщиком, произойдет ошибка. Для новых **индекс** объектов, ошибка возникает в том случае, когда объект добавляется в коллекцию. Для существующих объектов ошибка возникает при задании свойства.  
+>  При добавлении [столбца](../../../ado/reference/adox-api/column-object-adox.md) в коллекцию **Columns** **индекса** , если **Столбец** не существует в объекте [таблицы](../../../ado/reference/adox-api/table-object-adox.md) , уже добавленном в коллекцию [таблиц](../../../ado/reference/adox-api/tables-collection-adox.md) , возникнет ошибка.  
   
 > [!NOTE]
->  При создании **индекс** объекты, существование соответствующего значения по умолчанию необязательное свойство не гарантирует, что поставщик поддерживает свойство. Дополнительные сведения о свойствах используемый поставщик поддерживает см. в документации поставщика.  
+>  Поставщик данных может не поддерживать все свойства объектов **индекса** . Если задано значение для свойства, которое не поддерживается поставщиком, возникнет ошибка. Для новых объектов **индекса** ошибка возникает при добавлении объекта в коллекцию. Для существующих объектов при задании свойства возникнет ошибка.  
   
- Этот раздел содержит следующие подразделы.  
+> [!NOTE]
+>  При создании объектов **индекса** наличие соответствующего значения по умолчанию для необязательного свойства не гарантирует, что поставщик поддерживает свойство. Дополнительные сведения о свойствах, поддерживаемых поставщиком, см. в документации поставщика.  
+  
+ Этот раздел содержит следующий раздел.  
   
 -   [Свойства, методы и события объекта Index](../../../ado/reference/adox-api/index-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
- [Пример метода (Visual Basic) Append](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
+## <a name="see-also"></a>См. также:  
+ [Пример метода Append для индексов (Visual Basic)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
  [Пример свойства IndexNulls (Visual Basic)](../../../ado/reference/adox-api/indexnulls-property-example-vb.md)   
- [PrimaryKey и уникальные свойства (Visual Basic)](../../../ado/reference/adox-api/primarykey-and-unique-properties-example-vb.md)   
+ [Пример PrimaryKey и уникальных свойств (Visual Basic)](../../../ado/reference/adox-api/primarykey-and-unique-properties-example-vb.md)   
  [Пример свойства SortOrder (Visual Basic)](../../../ado/reference/adox-api/sortorder-property-example-vb.md)   
  [Коллекция Columns (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Коллекция indexes (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)   

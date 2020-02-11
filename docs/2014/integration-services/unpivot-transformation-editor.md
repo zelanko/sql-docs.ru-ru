@@ -1,5 +1,5 @@
 ---
-title: Редактор преобразования «Отмена сведения» | Документация Майкрософт
+title: Редактор преобразования "Отмена свертывания" | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2a0222627860b70059163bff1dd989e230c1cb66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054841"
 ---
 # <a name="unpivot-transformation-editor"></a>Редактор преобразования «Отмена свертывания»
@@ -33,10 +33,10 @@ ms.locfileid: "66054841"
  **Доступные входные столбцы**  
  Используя флажки, укажите столбцы, которые должны быть сведены в строки.  
   
- **Name**  
+ **Название**  
  Просмотрите имя доступного входного столбца.  
   
- **Передать**  
+ **Сквозная передача**  
  Укажите, следует ли включить этот столбец в выход с отмененным сведением.  
   
  **Входной столбец**  
@@ -61,8 +61,8 @@ ms.locfileid: "66054841"
   
  В сценарии отмены свертывания, описанном в разделе [Unpivot Transformation](data-flow/transformations/unpivot-transformation.md), именем столбца значений ключа сведения является **Product** , оно обозначает новый столбец **Product** , в который осуществляется отмена свертывания столбцов **Ham**, **Soda**, **Milk**, **Beer**и **Chips** .  
   
-## <a name="see-also"></a>См. также  
- [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Преобразование «Сведение»](data-flow/transformations/pivot-transformation.md)  
+## <a name="see-also"></a>См. также:  
+ [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [преобразование «Сведение»](data-flow/transformations/pivot-transformation.md)  
   
   

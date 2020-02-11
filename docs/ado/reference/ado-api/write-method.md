@@ -1,5 +1,5 @@
 ---
-title: Написать метод | Документация Майкрософт
+title: Метод Write | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: 02982e6a-ac5f-4af2-b82e-ce12534b84b2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 84e10e8edb6cca3c4e56ac1dd0106b3c641af872
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67945908"
 ---
 # <a name="write-method"></a>Метод Write
-Записывает двоичные данные в [Stream](../../../ado/reference/ado-api/stream-object-ado.md) объекта.  
+Записывает двоичные данные в объект [потока](../../../ado/reference/ado-api/stream-object-ado.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,21 +34,21 @@ Stream.Write Buffer
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *буфер*  
- Объект **Variant** , содержащий массив байтов для записи.  
+ *Буфер*  
+ **Значение типа Variant** , содержащее массив байтов для записи.  
   
-## <a name="remarks"></a>Примечания  
- Указанные байты записываются **Stream** объектом, не вмешиваясь пробелами каждый байт.  
+## <a name="remarks"></a>Remarks  
+ Указанные байты записываются в объект **потока** без промежуточных пробелов между каждым байтом.  
   
- Текущий [позиции](../../../ado/reference/ado-api/position-property-ado.md) присваивается байт, следующий записанные данные. **Записи** метод не вызывает усечение до конца данных в потоке. Если вы хотите выполнить усечение эти байты, вызов [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  
+ Текущей [позицией](../../../ado/reference/ado-api/position-property-ado.md) присваивается байт, следующий за записанными данными. Метод **Write** не усекает остальные данные в потоке. Если вы хотите усечь эти байты, вызовите [сетеос](../../../ado/reference/ado-api/seteos-method.md).  
   
- При написании за текущий [EOS](../../../ado/reference/ado-api/eos-property.md) позиции, [размер](../../../ado/reference/ado-api/size-property-ado-stream.md) из **Stream** будет увеличено до содержат все новые байты и **EOS** будут перемещены новый последний байт в **Stream**.  
+ Если вы пишете после текущей позиции [EOS](../../../ado/reference/ado-api/eos-property.md) , [Размер](../../../ado/reference/ado-api/size-property-ado-stream.md) **потока** будет увеличен, чтобы вместить новые байты, а **EOS** перейдет к новому байтовому байту в **потоке**.  
   
 > [!NOTE]
->  **Записи** метод используется с двоичными потоками ([тип](../../../ado/reference/ado-api/type-property-ado-stream.md) — **adTypeBinary**). Для текстовых потоков (**тип** — **adTypeText**), используйте [WriteText](../../../ado/reference/ado-api/writetext-method.md).  
+>  Метод **Write** используется с двоичными потоками ([Type](../../../ado/reference/ado-api/type-property-ado-stream.md) — **адтипебинари**). Для текстовых потоков (**Type** — **Адтипетекст**) используйте [WriteText](../../../ado/reference/ado-api/writetext-method.md).  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  [Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод WriteText](../../../ado/reference/ado-api/writetext-method.md)

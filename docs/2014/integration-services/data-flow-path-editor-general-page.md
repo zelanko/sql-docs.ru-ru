@@ -1,5 +1,5 @@
 ---
-title: Редактор пути (страница «Общие») потока данных | Документация Майкрософт
+title: Редактор пути потока данных (страница «Общие») | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e044d001c88edef9d1e8d4ab453b85853994cf7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059955"
 ---
 # <a name="data-flow-path-editor-general-page"></a>Редактор пути потока данных (страница «Общие»)
@@ -27,10 +27,10 @@ ms.locfileid: "66059955"
  Используйте раздел **Общие** диалогового окна **Редактор пути потока данных** , чтобы задать имя и описание пути, а также указать заметки для пути.  
   
 ## <a name="options"></a>Параметры  
- **Name**  
+ **Название**  
  Введите уникальное имя пути.  
   
- **Идентификатор**  
+ **УДОСТОВЕРЕНИЯ**  
  Идентификатор истории данных пути. Это свойство доступно только для чтения.  
   
  **IdentificationString**  
@@ -48,9 +48,9 @@ ms.locfileid: "66059955"
  **SourceName**  
  Отображает выход, являющийся началом пути.  
   
-## <a name="see-also"></a>См. также  
- [Редактор пути потока данных &#40;страница «метаданные»&#41;](../../2014/integration-services/data-flow-path-editor-metadata-page.md)   
- [Редактор пути потока данных &#40;странице средства просмотра данных&#41;](../../2014/integration-services/data-flow-path-editor-data-viewers-page.md)   
+## <a name="see-also"></a>См. также:  
+ [Редактор пути потока данных &#40;страница метаданных&#41;](../../2014/integration-services/data-flow-path-editor-metadata-page.md)   
+ [Редактор пути потока данных &#40;страница "средства просмотра данных"&#41;](../../2014/integration-services/data-flow-path-editor-data-viewers-page.md)   
  [Поток данных](data-flow/data-flow.md)   
  [Использование заметок в пакетах](use-annotations-in-packages.md)  
   

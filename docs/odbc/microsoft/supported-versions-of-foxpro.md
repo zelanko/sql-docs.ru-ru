@@ -17,14 +17,14 @@ ms.assetid: 203fdabe-9b5c-4840-824c-792b508262c2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3902917eb2c219983c6d1ac3c86f738d272aeb5b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67939846"
 ---
 # <a name="supported-versions-of-foxpro"></a>Поддерживаемые версии FoxPro
-Можно использовать драйвер Microsoft® Visual FoxPro® ODBC для доступа к данным, которые хранятся в таблицах FoxPro. Поддерживаются следующие версии FoxPro данных:  
+Для доступа к данным, хранящимся в таблицах FoxPro, можно использовать драйвер Microsoft® Visual FoxPro® ODBC. Поддерживаются следующие версии данных FoxPro:  
   
 -   2.0  
   
@@ -34,8 +34,8 @@ ms.locfileid: "67939846"
   
 -   Visual FoxPro (все версии)  
   
- При доступе к данным в Visual FoxPro, вы можете подключиться к [базы данных](../../odbc/microsoft/visual-foxpro-terminology.md) , содержащий ноль или более [таблиц](../../odbc/microsoft/visual-foxpro-terminology.md) или в каталог [свободных таблиц](../../odbc/microsoft/visual-foxpro-terminology.md).  
+ При доступе к данным, хранящимся в Visual FoxPro, можно выбрать подключение к [базе данных](../../odbc/microsoft/visual-foxpro-terminology.md) , содержащей ноль или более [таблиц](../../odbc/microsoft/visual-foxpro-terminology.md) , или каталог [бесплатных таблиц](../../odbc/microsoft/visual-foxpro-terminology.md).  
   
  Дополнительные сведения о подключении к источнику данных см. в разделе [Добавление источника данных Visual FoxPro](../../odbc/microsoft/adding-a-visual-foxpro-data-source.md).  
   
- Чтобы загрузить драйвер, см. в разделе [на сайт загрузки драйвера ODBC для Visual FoxPro](https://go.microsoft.com/fwlink/?LinkId=121318).
+ Сведения о загрузке драйвера см. [на веб-сайте загрузки драйверов ODBC для Visual FoxPro](https://go.microsoft.com/fwlink/?LinkId=121318).

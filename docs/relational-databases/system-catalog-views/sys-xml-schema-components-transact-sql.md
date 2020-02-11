@@ -1,5 +1,5 @@
 ---
-title: sys.xml_schema_components (Transact-SQL) | Документация Майкрософт
+title: sys. xml_schema_components (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,38 +20,38 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 7b9ab66e0a25067440a496c6c5eb04b5d8b61e64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039279"
 ---
-# <a name="sysxmlschemacomponents-transact-sql"></a>sys.xml_schema_components (Transact-SQL)
+# <a name="sysxml_schema_components-transact-sql"></a>sys.xml_schema_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Возвращает по строке на каждый компонент XML-схемы. Пары (**collection_id**, **namespace_id**) представляет собой составной внешний ключ для содержащего пространства имен. Для именованных компонентов значения **symbol_space**, **имя**, **scoping_xml_component_id**, **is_qualified**,  **xml_namespace_id**, **xml_collection_id** являются уникальными.  
+  Возвращает по строке на каждый компонент XML-схемы. Пара (**collection_id**, **namespace_id**) является составным внешним ключом для содержащего его пространства имен. Для именованных компонентов значения **symbol_space**, **Name**, **scoping_xml_component_id**, **is_qualified**, **xml_namespace_id**, **xml_collection_id** являются уникальными.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |**xml_component_id**|**int**|Уникальный идентификатор компонента схемы XML в базе данных.|  
 |**xml_collection_id**|**int**|Идентификатор коллекции XML-схем, содержащей пространство имен данного компонента.|  
 |**xml_namespace_id**|**int**|Идентификатор пространства имен XML в пределах коллекции.|  
-|**is_qualified**|**bit**|1 = данный компонент имеет явный квалификатор пространства имен.<br /><br /> 0 = это компонент локальной области. В этом случае пара, **namespace_id**, **collection_id**, ссылается на «нет пространства имен» **targetNamespace**.<br /><br /> Для компонентов с подстановкой это значение может быть равным 1.|  
+|**is_qualified**|**bit**|1 = данный компонент имеет явный квалификатор пространства имен.<br /><br /> 0 = это компонент локальной области. В этом случае пара **namespace_id**, **collection_id**, относится к пространству имен **targetNamespace**.<br /><br /> Для компонентов с подстановкой это значение может быть равным 1.|  
 |**name**|**nvarchar**<br /><br /> **(4000)**|Уникальное имя компонента XML-схемы. Если значение равно NULL, компонент является неименованным.|  
-|**symbol_space**|**char(1)**|Пространство, в котором имя символа уникально, на основе **вид**:<br /><br /> N = нет<br /><br /> T = тип<br /><br /> E = элемент<br /><br /> M = модель-группа<br /><br /> A = атрибут<br /><br /> G = атрибут-группа|  
-|**symbol_space_desc**|**nvarchar**<br /><br /> **(60)**|Описание пространства, в котором имя символа уникально, на основании **вид**:<br /><br /> None<br /><br /> TYPE<br /><br /> ELEMENT<br /><br /> MODEL_GROUP<br /><br /> ATTRIBUTE<br /><br /> ATTRIBUTE_GROUP|  
-|**Тип**|**char(1)**|Разновидность компонента схемы XML.<br /><br /> N = любой тип (особый внутренний компонент)<br /><br /> Z = любой простой тип (особый внутренний компонент)<br /><br /> P = примитивный тип (внутренние типы)<br /><br /> S = простой тип<br /><br /> L = перечисляемый тип<br /><br /> U = тип объединения<br /><br /> C = составной простой тип (производный от простого)<br /><br /> K = составной тип<br /><br /> E = элемент<br /><br /> M = модель-группа<br /><br /> W = элемент-подстановка<br /><br /> A = атрибут<br /><br /> G = атрибут-группа<br /><br /> V = атрибут-подстановка|  
+|**symbol_space**|**char (1)**|Пространство, в котором имя символа уникально, в зависимости от **вида**:<br /><br /> N = нет<br /><br /> T = тип<br /><br /> E = элемент<br /><br /> M = модель-группа<br /><br /> A = атрибут<br /><br /> G = атрибут-группа|  
+|**symbol_space_desc**|**nvarchar**<br /><br /> **(60)**|Описание пространства, в котором имя символа уникально на основе **типа**:<br /><br /> None<br /><br /> TYPE<br /><br /> ELEMENT<br /><br /> MODEL_GROUP<br /><br /> ATTRIBUTE<br /><br /> ATTRIBUTE_GROUP|  
+|**kind**|**char (1)**|Разновидность компонента схемы XML.<br /><br /> N = любой тип (особый внутренний компонент)<br /><br /> Z = любой простой тип (особый внутренний компонент)<br /><br /> P = примитивный тип (внутренние типы)<br /><br /> S = простой тип<br /><br /> L = перечисляемый тип<br /><br /> U = тип объединения<br /><br /> C = составной простой тип (производный от простого)<br /><br /> K = составной тип<br /><br /> E = элемент<br /><br /> M = модель-группа<br /><br /> W = элемент-подстановка<br /><br /> A = атрибут<br /><br /> G = атрибут-группа<br /><br /> V = атрибут-подстановка|  
 |**kind_desc**|**nvarchar**<br /><br /> **(60)**|Описание разновидности компонента схемы XML:<br /><br /> ANY_TYPE<br /><br /> ANY_SIMPLE_TYPE<br /><br /> PRIMITIVE_TYPE<br /><br /> SIMPLE_TYPE<br /><br /> LIST_TYPE<br /><br /> UNION_TYPE<br /><br /> COMPLEX_SIMPLE_TYPE<br /><br /> COMPLEX_TYPE<br /><br /> ELEMENT<br /><br /> MODEL_GROUP<br /><br /> ELEMENT_WILDCARD<br /><br /> ATTRIBUTE<br /><br /> ATTRIBUTE_GROUP<br /><br /> ATTRIBUTE_WILDCARD|  
-|**Наследование**|**char(1)**|Метод выведения производных типов:<br /><br /> N = нет (не выводится)<br /><br /> X = расширение<br /><br /> R = ограничение<br /><br /> S = замена|  
+|**derivation**|**char (1)**|Метод выведения производных типов:<br /><br /> N = нет (не выводится)<br /><br /> X = расширение<br /><br /> R = ограничение<br /><br /> S = замена|  
 |**derivation_desc**|**nvarchar**<br /><br /> **(60)**|Описание метода выведения производных типов:<br /><br /> None<br /><br /> EXTENSION<br /><br /> RESTRICTION<br /><br /> SUBSTITUTION|  
 |**base_xml_component_id**|**int**|Идентификатор компонента, от которого выводится производный компонент. NULL в случае отсутствия такового.|  
 |**scoping_xml_component_id**|**int**|Уникальный идентификатор компонента области. NULL в случае отсутствия такового (глобальная область).|  
   
 ## <a name="permissions"></a>Разрешения  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Дополнительные сведения см. в разделе [Настройка видимости метаданных](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [XML-схем &#40;системой типов XML&#41; представления каталога &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
+ [Схемы XML &#40;представления каталога системы типов XML&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
   
   

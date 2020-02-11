@@ -1,5 +1,5 @@
 ---
-title: Пример метода (Visual Basic) Refresh коллекции Views | Документация Майкрософт
+title: Пример метода Refresh для представлений (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: cdad2d66-6ade-40dc-9e74-e40cfa9bc127
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e0d50c8cab60ddf1839c5683023af0b90ebe527c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964737"
 ---
 # <a name="views-refresh-method-example-vb"></a>Пример метода Refresh коллекции Views (Visual Basic)
-Ниже показано, как обновить [представления](../../../ado/reference/adox-api/views-collection-adox.md) коллекцию [каталога](../../../ado/reference/adox-api/catalog-object-adox.md). Это необходимо перед [представление](../../../ado/reference/adox-api/view-object-adox.md) объектов из **каталога** возможен.  
+В следующем коде показано, как обновить коллекцию [views](../../../ado/reference/adox-api/views-collection-adox.md) [каталога](../../../ado/reference/adox-api/catalog-object-adox.md). Это необходимо, прежде чем можно будет получить доступ к объектам [представления](../../../ado/reference/adox-api/view-object-adox.md) из **каталога** .  
   
 ```  
 ' BeginViewsRefreshVB  
@@ -55,6 +55,6 @@ End Sub
 ' EndViewsRefreshVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод Refresh (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)   
  [Коллекция Views (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

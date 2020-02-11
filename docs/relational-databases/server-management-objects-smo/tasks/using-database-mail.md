@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3e29aaf45306c9ed5d8c8dd7c132dacd9af1e926
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70148343"
 ---
 # <a name="using-database-mail"></a>Использование компонента Database Mail
@@ -28,7 +28,7 @@ ms.locfileid: "70148343"
   В SMO подсистема компонента Database Mail представлена объектом <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail>, на который ссылается свойство <xref:Microsoft.SqlServer.Management.Smo.Server.Mail%2A>. С помощью объекта SMO <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> можно настраивать подсистему компонента Database Mail и управлять профилями и учетными записями почты. Объект SMO <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> принадлежит объекту **Server** , что означает, что область действия учетных записей почты находится на уровне сервера.  
   
 ## <a name="examples"></a>Примеры  
- Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. [в разделе Создание проекта Visual&#35; C SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. [в статье Создание проекта Visual C&#35; SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
  В программах, в которых используется компонент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Database Mail, необходимо включать инструкцию **Imports** для определения пространства имен Mail. Вставьте инструкцию после других инструкций **Imports** и перед любыми декларациями в приложении.  
   

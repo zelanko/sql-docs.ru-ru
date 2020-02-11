@@ -16,49 +16,49 @@ ms.assetid: a175d453-fa55-4f49-9ede-a26d83177919
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5018dc921267663d64037024ef21c82ac6e3f7c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932961"
 ---
 # <a name="error-object"></a>Объект Error
-Содержит сведения об ошибках доступа к данным, которые относятся к одной операции с участием поставщика.  
+Содержит сведения об ошибках доступа к данным, относящихся к одной операции, включающей в себя поставщик.  
   
-## <a name="remarks"></a>Примечания  
- Любая операция, включающее объекты ADO можно создать один или несколько ошибок поставщика. Так как возникли ошибки, один или несколько **ошибка** объекты размещаются в [ошибки](../../../ado/reference/ado-api/errors-collection-ado.md) коллекцию [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта. Если другая операция ADO создает ошибку, **ошибки** коллекции установлен и новый набор **ошибка** объектов помещается в **ошибки** коллекции.  
-  
-> [!NOTE]
->  Каждый **ошибка** представляет ошибку конкретного поставщика, а не ошибка ADO. Ошибки ADO предоставляются механизм обработки исключений среды выполнения. Например, в Microsoft Visual Basic, возникновение ошибки ADO конкретных активирует **On Error** событий и отображаются в **ошибка** объекта. Полный список ошибок ADO, см. в разделе [ErrorValueEnum](../../../ado/reference/ado-api/errorvalueenum.md) раздела.  
-  
- Можно прочитать **ошибка** свойств объекта, чтобы получить подробные сведения о каждой ошибке, включая следующие:  
-  
--   [Описание](../../../ado/reference/ado-api/description-property.md) свойство, содержащее текст сообщения об ошибке. Это свойство по умолчанию.  
-  
--   [Номер](../../../ado/reference/ado-api/number-property-ado.md) свойство, содержащее **Long** целое число для константы ошибки.  
-  
--   [Источника](../../../ado/reference/ado-api/source-property-ado-error.md) свойство, которое определяет объект, который вызвал ошибку. Это особенно полезно, если существует несколько **ошибка** объекты в **ошибки** коллекции следуя запрос к источнику данных.  
-  
--   [SQLState](../../../ado/reference/ado-api/sqlstate-property.md) и [NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md) свойства, которые предоставляют информацию из источников данных SQL.  
-  
- При возникновении ошибки поставщика, он помещается в **ошибки** коллекцию **подключения** объекта. ADO поддерживает возврат нескольких ошибок по одной операции ADO, чтобы разрешить сообщения об ошибках поставщика. Для получения этих сведений подробных сведений об ошибках в обработчик ошибок, используйте соответствующие перехват ошибок компонента языка или среды, вы работаете, а затем использовать вложенные циклы для перечисления свойства каждого **ошибка** объекта в **Ошибки** коллекции.  
+## <a name="remarks"></a>Remarks  
+ Любая операция, включающая объекты ADO, может формировать одну или несколько ошибок поставщика. При возникновении каждой ошибки в коллекцию [ошибок](../../../ado/reference/ado-api/errors-collection-ado.md) объекта [Connection](../../../ado/reference/ado-api/connection-object-ado.md) помещаются один или несколько объектов **ошибок** . Если другая операция ADO создает ошибку, коллекция **Errors** удаляется, а новый набор объектов **ошибок** помещается в коллекцию **Errors** .  
   
 > [!NOTE]
->  **Microsoft Visual Basic и VBScript пользователей** Если отсутствует **подключения** объекта, необходимо получить сведения об ошибке из **ошибка** объекта.  
+>  Каждый объект **ошибки** представляет определенную ошибку поставщика, а не ошибку ADO. Ошибки ADO предоставляются механизмом обработки исключений времени выполнения. Например, в Microsoft Visual Basic возникновение ошибки, относящейся к ADO, вызывает событие **On Error** и появляется в объекте **Error** . Полный список ошибок ADO см. в разделе [еррорвалуинум](../../../ado/reference/ado-api/errorvalueenum.md) .  
   
- Так же, как поставщики сделать, очищает ADO **OLE Error Info** объекта после выполнения звонка, который потенциально может создать новую ошибку поставщика. Тем не менее **ошибки** коллекции **подключения** объекта очищается и заполняется только в том случае, когда поставщик создает новую ошибку, или когда [Очистить](../../../ado/reference/ado-api/clear-method-ado.md) вызывается метод.  
+ Вы можете считать свойства объекта **ошибки** , чтобы получить подробные сведения о каждой ошибке, включая следующие.  
   
- Некоторые свойства и методы возвращают предупреждения, которые отображаются в виде **ошибка** объекты в **ошибки** коллекции, но не приостанавливает выполнение программы. Перед вызовом метода [Resync](../../../ado/reference/ado-api/resync-method.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md), или [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) методы [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта; [откройте](../../../ado/reference/ado-api/open-method-ado-connection.md) метод **подключения** задана объекта; или [фильтра](../../../ado/reference/ado-api/filter-property.md) свойство **записей** , вызовите **снимите**метод **ошибки** коллекции. Таким образом, можно прочитать [число](../../../ado/reference/ado-api/count-property-ado.md) свойство **ошибки** коллекцию для проверки возникли предупреждения.  
+-   Свойство [Description](../../../ado/reference/ado-api/description-property.md) , содержащее текст ошибки. Это свойство по умолчанию.  
   
- **Ошибка** объект не является безопасным для использования в сценариях.  
+-   Свойство [Number](../../../ado/reference/ado-api/number-property-ado.md) , которое содержит **длинное** целое значение константы ошибки.  
   
- Этот раздел содержит следующие подразделы.  
+-   Свойство [Source](../../../ado/reference/ado-api/source-property-ado-error.md) , определяющее объект, вызвавший ошибку. Это особенно полезно при наличии нескольких объектов **Error** в коллекции **Errors** после запроса к источнику данных.  
+  
+-   Свойства [SQLSTATE](../../../ado/reference/ado-api/sqlstate-property.md) и [NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md) , которые предоставляют сведения из источников данных SQL.  
+  
+ При возникновении ошибки поставщика она помещается в коллекцию **Errors** объекта **Connection** . ADO поддерживает возврат нескольких ошибок с помощью одной операции ADO, чтобы разрешить сведения об ошибках, характерные для поставщика. Чтобы получить эти подробные сведения об ошибке в обработчике ошибок, используйте подходящие функции перехвата ошибок языка или среды, с которыми вы работаете, а затем используйте вложенные циклы для перечисления свойств каждого объекта **Error** в коллекции **Errors** .  
+  
+> [!NOTE]
+>  **Пользователи Microsoft Visual Basic и VBScript** Если нет допустимого объекта **соединения** , необходимо получить сведения об ошибке из объекта **Error** .  
+  
+ Как и поставщики, ADO очищает объект **сведений об ошибках OLE** перед вызовом, потенциально создающим новую ошибку поставщика. Однако коллекция **Errors** в объекте **Connection** очищается и заполняется только в том случае, если поставщик создает новую ошибку или когда вызывается метод [clear](../../../ado/reference/ado-api/clear-method-ado.md) .  
+  
+ Некоторые свойства и методы возвращают предупреждения, которые отображаются как объекты **ошибок** в коллекции **ошибок** , но не приводят к остановке выполнения программы. Перед вызовом методов [Resync](../../../ado/reference/ado-api/resync-method.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)или [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) для объекта [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) ; метод [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) для объекта **Connection** ; или задайте свойство [Filter](../../../ado/reference/ado-api/filter-property.md) для объекта **набора записей** , вызовите метод **clear** для коллекции **Errors** . Таким образом, можно прочитать свойство [Count](../../../ado/reference/ado-api/count-property-ado.md) коллекции **Errors** , чтобы проверить наличие возвращаемых предупреждений.  
+  
+ Объект **Error** не является надежным для скриптов.  
+  
+ Этот раздел содержит следующий раздел.  
   
 -   [Свойства, методы и события объекта Error](../../../ado/reference/ado-api/error-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
- [Description, HelpContext, HelpFile, NativeError, номер, источника и SQLState свойства пример (Visual Basic)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
- [Описание, HelpContext, HelpFile, NativeError, номер, источника и пример свойства SQLState (Visual C++)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
+## <a name="see-also"></a>См. также:  
+ [Примеры свойств Description, HelpContext, HelpFile, NativeError, Number, Source и SQLState (Visual Basic)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
+ [Примеры свойств Description, HelpContext, HelpFile, NativeError, Number, Source и SQLState (Visual c++)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Коллекция Errors (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [Приложение а. Поставщики](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Приложение А. Поставщики](../../../ado/guide/appendixes/appendix-a-providers.md)

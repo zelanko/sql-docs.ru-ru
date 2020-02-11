@@ -1,5 +1,5 @@
 ---
-title: Строка поиска в языке XQuery | Документация Майкрософт
+title: Поиск строки в XQuery | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -18,10 +18,10 @@ ms.assetid: edc62024-4c4c-4970-b5fa-2e54a5aca631
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b34570120b22cea1ca12eaf146d41b596e43aecf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946250"
 ---
 # <a name="string-search-in-xquery"></a>Поиск строки в XQuery
@@ -44,9 +44,9 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- В предыдущем запросе `where` в FLOWR выражение фильтрует результат `for` выражение и возвращает только элементы, которые удовлетворяют **contains()** условие.  
+ В предыдущем запросе выражение `where` в выражении Flow фильтрует результат `for` выражения и возвращает только те элементы, которые соответствуют условию **Contains ()** .  
   
- Это результат:  
+ Результат:  
   
 ```  
 <p1:Maintenance     
@@ -57,8 +57,8 @@ WHERE ProductModelID=19
 </p1:Maintenance>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Данные XML (SQL Server)](../relational-databases/xml/xml-data-sql-server.md)   
- [Справочник по языку XQuery (SQL Server)](../xquery/xquery-language-reference-sql-server.md)  
+## <a name="see-also"></a>См. также:  
+ [SQL Server &#40;XML-данных&#41;](../relational-databases/xml/xml-data-sql-server.md)   
+ [Справочник по языку XQuery &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  
   
   

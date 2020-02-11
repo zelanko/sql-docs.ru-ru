@@ -16,13 +16,13 @@ ms.assetid: d63909a0-8ea7-4734-9ce8-8204d936a3e4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1b0a20e2bc7a167698353db31e7c0411fb1a6961
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68769143"
 ---
-# <a name="spaddmergepullsubscription-transact-sql"></a>sp_addmergepullsubscription (Transact-SQL)
+# <a name="sp_addmergepullsubscription-transact-sql"></a>sp_addmergepullsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Добавляет подписку по запросу к публикации слиянием. Эта хранимая процедура выполняется на подписчике в базе данных подписки.  
@@ -47,7 +47,7 @@ sp_addmergepullsubscription [ @publication= ] 'publication'
   
 `[ @publisher = ] 'publisher'`Имя издателя. Параметр *Publisher* имеет тип **sysname**и имя локального сервера по умолчанию. Издатель должен быть действительным сервером.  
   
-`[ @publisher_db = ] 'publisher_db'`Имя базы данных издателя. *publisher_db* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @publisher_db = ] 'publisher_db'`Имя базы данных издателя. Аргумент *publisher_db* имеет тип **sysname**и значение по умолчанию NULL.  
   
 `[ @subscriber_type = ] 'subscriber_type'`Тип подписчика. *subscriber_type* имеет тип **nvarchar (15)** и может быть **глобальным**, **локальным** или **анонимным**. В [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версиях локальные подписки называются клиентскими подписками, а глобальные подписки — серверными подписками.  
   
@@ -58,15 +58,15 @@ sp_addmergepullsubscription [ @publication= ] 'publication'
 > [!NOTE]  
 >  Не рекомендуется указывать значение **None**.  
   
-`[ @description = ] 'description'`Краткое описание этой подписки по запросу. *Description*имеет тип **nvarchar (255)** и значение по умолчанию NULL. Это значение отображается монитором репликации в столбце Понятное **имя** , который можно использовать для сортировки подписок для отслеживаемой публикации.  
+`[ @description = ] 'description'`Краткое описание этой подписки по запросу. *Description*имеет тип **nvarchar (255)** и значение по умолчанию NULL. Это значение отображается монитором репликации в столбце **понятное имя** , который можно использовать для сортировки подписок для отслеживаемой публикации.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  **sp_addmergepullsubscription** используется для репликации слиянием.  
   
- Если для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] синхронизации подписки используется агент, хранимая процедура [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) должна выполняться на подписчике, чтобы создать агент и задание для синхронизации с публикацией.  
+ Если для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] синхронизации подписки используется агент, то хранимая процедура [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) должна выполняться на подписчике, чтобы создать агент и задание для синхронизации с публикацией.  
   
 ## <a name="example"></a>Пример  
  [!code-sql[HowTo#sp_addmergepullsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergepullsubscript_0_1.sql)]  
@@ -76,13 +76,13 @@ sp_addmergepullsubscription [ @publication= ] 'publication'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_addmergepullsubscription**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание подписки по запросу](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Подписка на публикации](../../relational-databases/replication/subscribe-to-publications.md)   
- [sp_addmergepullsubscription_agent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)   
- [sp_changemergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
- [sp_dropmergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
- [sp_helpmergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
- [sp_helpsubscription_properties (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
+ [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)   
+ [sp_changemergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
+ [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
+ [sp_helpmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
+ [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
   

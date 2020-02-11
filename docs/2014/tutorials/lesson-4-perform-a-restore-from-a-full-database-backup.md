@@ -1,5 +1,5 @@
 ---
-title: 'Занятие 4: Восстановление из полной резервной копии базы данных | Документация Майкрософт'
+title: Занятие 4. Восстановление из полной резервной копии базы данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: de9a356589ac6bceb532ed4cecf509f957e3c337
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70153404"
 ---
-# <a name="lesson-4-perform-a-restore-from-a-full-database-backup"></a>Занятие 4: Восстановление базы данных из полной резервной копии
+# <a name="lesson-4-perform-a-restore-from-a-full-database-backup"></a>Урок 4. Восстановление базы данных из полной резервной копии
   На этом занятии рассматривается использование инструкции TSQL для выполнения восстановления из полной резервной копии базы данных, созданной на предыдущем уроке.  
   
 ## <a name="perform-a-restore-of-a-database-backup"></a>Выполнение восстановления резервной копии базы данных  
@@ -43,6 +43,6 @@ ms.locfileid: "70153404"
 5.  Проверьте инструкцию T-SQL и нажмите кнопку " **выполнить** ".  
   
 ### <a name="return-to-tutorials-portal"></a>Возвращение к порталу учебников  
- [Учебник. SQL Server резервное копирование и восстановление в службе](../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)хранилища BLOB-объектов Azure.  
+ [Учебник. SQL Server резервное копирование и восстановление в службе хранилища BLOB-объектов Azure](../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md).  
   
   

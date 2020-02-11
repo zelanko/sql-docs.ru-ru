@@ -1,5 +1,5 @@
 ---
-title: Создание конфигурации пакетов | Документация Майкрософт
+title: Создание конфигураций пакетов | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 287ac1a5631cf2e3925e5895db7f04bb7b89bf5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060168"
 ---
 # <a name="create-package-configurations"></a>Создание конфигурации пакетов
@@ -32,7 +32,7 @@ ms.locfileid: "66060168"
 >  Можно также открыть **Организатор конфигураций пакета**, нажав кнопку с многоточием рядом со свойством **Конфигурация**. Свойство «Конфигурация» отображается в окне свойств пакета.  
   
 > [!NOTE]  
->  Доступны конфигурации для модели развертывания пакетов. Для моделей развертывания проектов вместо конфигураций используются параметры. Модель развертывания проектов позволяет развертывать проекты служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на сервере служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Дополнительные сведения о моделях развертывания см. в разделе [Развертывание проектов и пакетов](packages/deploy-integration-services-ssis-projects-and-packages.md).  
+>  Доступны конфигурации для модели развертывания пакетов. Для моделей развертывания проектов вместо конфигураций используются параметры. Модель развертывания проектов позволяет развертывать проекты служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на сервере служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Дополнительные сведения о моделях развертывания см. в разделе [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  В окне **Организатор конфигураций пакетов** можно разрешить пакетам использовать, добавить и удалить конфигурации, а также настроить порядок загрузки конфигураций.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "66060168"
   
  В приведенной ниже таблице описаны столбцы списка конфигураций в диалоговом окне **Организатор конфигураций пакетов** .  
   
-|Столбец|Описание|  
+|Столбец|Description|  
 |------------|-----------------|  
 |**Имя конфигурации**|Имя конфигурации.|  
 |**Тип конфигурации**|Тип конфигурации.|  
@@ -87,7 +87,7 @@ ms.locfileid: "66060168"
   
 2.  Чтобы открыть пакет, дважды щелкните его в обозревателе решений.  
   
-3.  В конструкторе служб [!INCLUDE[ssIS](../includes/ssis-md.md)] перейдите на вкладку **Поток управления**, **Поток данных**, **Обработчики события** или **Обозреватель пакетов**.  
+3.  В конструкторе служб [!INCLUDE[ssIS](../includes/ssis-md.md)] перейдите на вкладку **Поток управления**, **Поток данных**, **Обработчики события**или **Обозреватель пакетов** .  
   
 4.  В меню **Службы SSIS** выберите команду **Конфигурации пакетов**.  
   
@@ -110,15 +110,15 @@ ms.locfileid: "66060168"
   
 ## <a name="external-resources"></a>Внешние ресурсы  
   
--   Техническая статья [Основные сведения о конфигурации пакетов служб Integration Services](https://go.microsoft.com/fwlink/?LinkId=165643) на сайте msdn.microsoft.com.  
+-   Техническая статья [Understanding Integration Services Package Configurations](https://go.microsoft.com/fwlink/?LinkId=165643)(Основные сведения о конфигурации пакетов служб Integration Services) на сайте msdn.microsoft.com.  
   
--   Запись в блоге [создание пакетов в коде — конфигурации пакетов](https://go.microsoft.com/fwlink/?LinkId=217663), на www.sqlis.com.  
+-   Запись блога, [Создание пакетов в конфигурациях пакетов кода](https://go.microsoft.com/fwlink/?LinkId=217663)на www.sqlis.com.  
   
--   Запись в блоге [образец API - программным способом добавить файл конфигурации в пакет](https://go.microsoft.com/fwlink/?LinkId=217664), на сайте blogs.msdn.com.  
+-   Запись блога, [Пример API — программное добавление файла конфигурации в пакет](https://go.microsoft.com/fwlink/?LinkId=217664)на blogs.MSDN.com.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Конфигурации пакетов](../../2014/integration-services/package-configurations.md)   
- [Развертывания пакета &#40;служб SSIS&#41;](packages/legacy-package-deployment-ssis.md)   
+ [Развертывание пакетов &#40;&#41;SSIS](packages/legacy-package-deployment-ssis.md)   
  [Программная работа с переменными](building-packages-programmatically/working-with-variables-programmatically.md)  
   
   

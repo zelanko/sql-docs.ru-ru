@@ -19,22 +19,22 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ddbf842839e917477269c0de7886055d585a196c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250486"
 ---
 # <a name="replication-backward-compatibility"></a>Обратная совместимость репликации
-  Разделы в главе по обратной совместимости описывают изменения в поведении репликации в разных версиях [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . При обновлении или наличии нескольких версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в топологии репликации важно понимать принцип обратной совместимости.  
+  В подразделах раздела о обратной совместимости описаны изменения в поведении между версиями [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] репликации. При обновлении или наличии нескольких версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в топологии репликации важно понимать принцип обратной совместимости.  
   
- [Устаревшие функции репликации в SQL Server](deprecated-features-in-sql-server-replication.md)  
- Функциональные возможности репликации, которые были сохранены в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] в целях обратной совместимости, но которые будут удалены из будущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [Устаревшие функции репликации SQL Server](deprecated-features-in-sql-server-replication.md)  
+ Функции репликации, которые были сохранены в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] для обратной совместимости, но которые будут удалены в следующей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [Критические изменения репликации в SQL Server](breaking-changes-in-sql-server-replication.md)  
  Изменения функциональных возможностей репликации, которые могут потребовать изменений в приложениях.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Обновление реплицируемых баз данных](../../database-engine/install-windows/upgrade-replicated-databases.md)  
   
   

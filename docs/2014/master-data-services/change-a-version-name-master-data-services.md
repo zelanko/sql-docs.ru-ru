@@ -13,16 +13,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3e064f78efa3caacf3b21c330a54c145b8fead4a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483645"
 ---
 # <a name="change-a-version-name-master-data-services"></a>Изменение имени версии (службы Master Data Services)
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]имя версии можно изменить для ее настройки для нужд организации.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения этой процедуры:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Управление версиями** ;  
@@ -39,10 +39,10 @@ ms.locfileid: "65483645"
   
 4.  Нажмите клавишу ВВОД.  
   
-## <a name="see-also"></a>См. также  
- [Подтверждение исправления проблемы, обнаруженной при проверке на соответствие бизнес-правилам (службы Master Data Services)](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
- [Блокировка версии (службы Master Data Services)](../../2014/master-data-services/lock-a-version-master-data-services.md)   
- [Фиксация версии (службы Master Data Services)](../../2014/master-data-services/commit-a-version-master-data-services.md)   
- [Версии (службы Master Data Services)](../../2014/master-data-services/versions-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Проверка версии на соответствие бизнес-правилам &#40;Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
+ [Блокировка &#40;версии Master Data Services&#41;](../../2014/master-data-services/lock-a-version-master-data-services.md)   
+ [Фиксация &#40;версии Master Data Services&#41;](../../2014/master-data-services/commit-a-version-master-data-services.md)   
+ [Версии &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)  
   
   

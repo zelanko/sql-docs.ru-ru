@@ -21,19 +21,19 @@ author: Minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cdd9e34e57694efc1234a2f0245833596644cb73
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68889186"
 ---
 # <a name="upgrade-analysis-services"></a>Обновление служб Analysis Services
-  Используйте пакет установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для обновления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения об обновлении [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в режиме интеграции с SharePoint см. в разделе [Upgrade PowerPivot для SharePoint](upgrade-power-pivot-for-sharepoint.md). Дополнительные сведения об обновлении существующего экземпляра SQL Server см. в статье [обновление до SQL Server 2014 с помощью &#40;мастера&#41;установки](upgrade-sql-server-using-the-installation-wizard-setup.md).  
+  Используйте пакет установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для обновления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения об обновлении [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в режиме интеграции с SharePoint см. в разделе [Upgrade PowerPivot для SharePoint](upgrade-power-pivot-for-sharepoint.md). Дополнительные сведения об обновлении существующего экземпляра SQL Server см. в статье [обновление до SQL Server 2014 с помощью мастера установки &#40;&#41;установки ](upgrade-sql-server-using-the-installation-wizard-setup.md).  
   
 ## <a name="known-upgrade-issues"></a>Известные проблемы при обновлении  
  Перед обновлением до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]просмотрите следующие источники:  
   
--   [Заметки о выпуске SQL Server 2014](https://go.microsoft.com/fwlink/?LinkID=296445).  
+-   [Заметки о Выпуске SQL Server 2014](https://go.microsoft.com/fwlink/?LinkID=296445).  
   
 -   Чтобы узнать, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] какие функции и функции были прекращены, устарели или изменены, см. [Analysis Services обратная совместимость](https://docs.microsoft.com/analysis-services/analysis-services-backward-compatibility).  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68889186"
   
 -   [Поддерживаемые обновления версий и выпусков](supported-version-and-edition-upgrades.md)  
   
--   [Требования к оборудованию и программному обеспечению для установки SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
+-   [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 -   [Параметры для средства проверки конфигурации системы](check-parameters-for-the-system-configuration-checker.md)  
   
@@ -55,19 +55,19 @@ ms.locfileid: "68889186"
 ## <a name="upgrading-analysis-services"></a>Обновление служб Analysis Services  
  Можно выбрать один из нескольких способов обновления сервера и данных.  
   
--   **При обновлении на месте** существующие программные файлы [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] заменяются программами. Базы данных остаются в том же расположении. Программные папки обновляются с целью отражения нового имени.  
+-   **При обновлении на месте** существующие программные файлы заменяются [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] программами. Базы данных остаются в том же расположении. Программные папки обновляются с целью отражения нового имени.  
   
 -   **Параллельное обновление** — это новая установка [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] на том же компьютере, на котором имеется экземпляр Analysis Services. Можно перенести базы данных на новый экземпляр на этом же компьютере и затем удалить старую версию, если она больше не используется.  
   
 -   Можно также установить службы Analysis Services на новом оборудовании, а затем осуществить миграцию существующих баз данных на этот сервер.  
   
 ## <a name="in-place-upgrade"></a>Обновление на месте  
- Можно выполнить обновление версии существующего экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and, as part of the upgrade process, auдоmatically migrate existing databases from the old instance до the new instance. Поскольку метаданные и двоичные данные между двумя версиями совместимы, после обновления данные сохраняются и их не нужно переносить вручную.  
+ Можно обновить существующий экземпляр [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и, как часть процесса обновления, автоматически перенести существующие базы данных из старого экземпляра в новый экземпляр. Поскольку метаданные и двоичные данные между двумя версиями совместимы, после обновления данные сохраняются и их не нужно переносить вручную.  
   
  Чтобы обновить существующий экземпляр, запустите программу установки и укажите имя существующего экземпляра в качестве имени нового экземпляра.  
   
 ## <a name="upgrading-databases"></a>Обновление баз данных  
- Базы данных, созданные в предыдущих версиях служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , на обновленном сервере работают со старым значением уровня совместимости. Базы данных, созданные в следующих версиях, имеют уровень совместимости баз данных 105. Если необходимо использовать функции, требующие нового уровня совместимости базы данных, уровень совместимости можно изменить. В противном случае базы данных можно запустить на обновленном сервере, используя исходные параметры. Дополнительные сведения см. [в разделе Установка уровня совместимости многомерной базы &#40;данных Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services).  
+ Базы данных, созданные в предыдущих версиях служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , на обновленном сервере работают со старым значением уровня совместимости. Базы данных, созданные в следующих версиях, имеют уровень совместимости баз данных 105. Если необходимо использовать функции, требующие нового уровня совместимости базы данных, уровень совместимости можно изменить. В противном случае базы данных можно запустить на обновленном сервере, используя исходные параметры. Дополнительные сведения см. [в разделе Установка уровня совместимости многомерной базы данных &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services).  
   
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
@@ -77,12 +77,12 @@ ms.locfileid: "68889186"
   
 -   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функции, поддерживаемые различными выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [Планирование установки SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)   
  [Основные сведения об архитектуре Microsoft OLAP](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-architecture)   
  [PowerPivot для SharePoint обновления](upgrade-power-pivot-for-sharepoint.md)   
- [Установка служб Analysis Services в многомерном режиме и режиме интеллектуального анализа данных](../../sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md)   
+ [Установка Analysis Services в многомерном режиме и модели интеллектуального анализа данных](../../sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md)   
  [Установка PowerPivot для SharePoint 2010](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   
   

@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 89d92fc60e18926351cc94e6e6c21a32a7371ed5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62638243"
 ---
 # <a name="sql-server-extended-events-engine"></a>Подсистема расширенных событий SQL Server
@@ -34,9 +34,9 @@ ms.locfileid: "62638243"
   
  На следующем рисунке показан упрощенный вид сеанса расширенных событий. Дополнительные сведения см. в разделе [SQL Server Extended Events Sessions](sql-server-extended-events-sessions.md).  
   
- ![Архитектура подсистемы расширенных событий](../../database-engine/media/xearchitecturedetailed.gif "Архитектура подсистемы расширенных событий")  
+ ![Подробная архитектура расширенных событий](../../database-engine/media/xearchitecturedetailed.gif "Подробная архитектура расширенных событий")  
   
- Обратите внимание на следующее условия:  
+ Следует отметить следующее.  
   
 -   Каждому процессу Windows соответствует один или несколько модулей (**процесс Win32**, **модуль Win32**). Они называются *двоичными* или *исполняемыми модулями*.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "62638243"
   
     -   Когда буферы заполняются, они отправляются целям.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширенные события](extended-events.md)  
   
   

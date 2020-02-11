@@ -16,13 +16,13 @@ ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 90dee1076743ae54201248c808b04c6197d42198
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68770934"
 ---
-# <a name="sphelpdistributiondb-transact-sql"></a>sp_helpdistributiondb (Transact-SQL)
+# <a name="sp_helpdistributiondb-transact-sql"></a>sp_helpdistributiondb (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Возвращает свойства указанной базы данных распространителя. Эта хранимая процедура выполняется на распространителе в базе данных распространителя.  
@@ -37,19 +37,19 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @database = ] 'database_name'`Имя базы данных, для которой возвращаются свойства. Аргумент *database_name* имеет **%** тип **sysname**и значение по умолчанию для всех баз данных, связанных с распространителем, и разрешения пользователя.  
+`[ @database = ] 'database_name'`Имя базы данных, для которой возвращаются свойства. Аргумент *database_name* имеет тип **sysname**и значение по **%** умолчанию для всех баз данных, связанных с распространителем, и у пользователя есть разрешения.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|Имя базы данных распространителя.|  
+|**name**|**имеет sysname**|Имя базы данных распространителя.|  
 |**min_distretention**|**int**|Минимальный срок хранения транзакций перед удалением (в часах).|  
 |**max_distretention**|**int**|Максимальный срок хранения транзакций перед удалением (в часах).|  
-|**хранение журнала**|**int**|Количество часов, в течение которых будет храниться журнал.|  
-|**history_cleanup_agent**|**sysname**|Имя агента очистки журнала.|  
-|**distribution_cleanup_agent**|**sysname**|Имя агента очистки распространителя.|  
-|**status**|**int**|Только для внутреннего применения.|  
+|**history retention**|**int**|Количество часов, в течение которых будет храниться журнал.|  
+|**history_cleanup_agent**|**имеет sysname**|Имя агента очистки журнала.|  
+|**distribution_cleanup_agent**|**имеет sysname**|Имя агента очистки распространителя.|  
+|**состояние**|**int**|Только для внутреннего применения.|  
 |**data_folder**|**nvarchar(255)**|Имя каталога, используемого для хранения файлов базы данных.|  
 |**data_file**|**nvarchar(255)**|Имя файла базы данных.|  
 |**data_file_size**|**int**|Исходный размер файла данных в мегабайтах.|  
@@ -60,17 +60,17 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  **sp_helpdistributiondb** используется во всех типах репликации.  
   
 ## <a name="permissions"></a>Разрешения  
- Члены предопределенной роли базы данных **db_owner** или роли **replmonitor** в базе данных распространителя и пользователи из списка доступа к публикации с помощью базы данных распространителя могут выполнять **sp_helpdistributiondb** для возврата сведения, связанные с файлом. Члены роли **Public** могут выполнять **sp_helpdistributiondb** для возврата сведений, не относящихся к файлам, для баз данных распространителя, к которым у них есть доступ.  
+ Члены предопределенной роли базы данных **db_owner** или роли **replmonitor** в базе данных распространителя и пользователи из списка доступа к публикации публикации с помощью базы данных распространителя могут выполнять **sp_helpdistributiondb** для возврата сведений, относящихся к файлу. Члены роли **Public** могут выполнять **sp_helpdistributiondb** для возврата сведений, не относящихся к файлам, для баз данных распространителя, к которым у них есть доступ.  
   
-## <a name="see-also"></a>См. также  
- [Просмотр и изменение свойств издателя и распространителя](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [sp_adddistributiondb &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
- [sp_changedistributiondb &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
- [sp_dropdistributiondb &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Просмотр и изменение свойств распространителя и издателя](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
+ [sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
+ [sp_changedistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
+ [sp_dropdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

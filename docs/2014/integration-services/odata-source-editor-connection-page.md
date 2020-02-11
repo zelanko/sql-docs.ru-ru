@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0e36c0a3449566db9a2acee360243c77ee548f92
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057318"
 ---
 # <a name="odata-source-editor-connection-page"></a>Редактор источника OData (страница «Подключение»)
@@ -32,7 +32,7 @@ ms.locfileid: "66057318"
  **Использование пути к коллекции или ресурсу**  
  Укажите метод выбора данных из источника.  
   
-|Параметр|Описание|  
+|Параметр|Description|  
 |------------|-----------------|  
 |Коллекция|Извлечение данных из источника OData с помощью имени коллекции.|  
 |Путь к ресурсу|Извлечение данных из источника OData с помощью пути к ресурсу.|  
@@ -40,25 +40,25 @@ ms.locfileid: "66057318"
  **Параметры запроса**  
  Укажите параметры запроса.  Например: $top=5  
   
- **URL-адрес канала**  
+ **URL-адрес веб-канала**  
  Отображает доступный только для чтения URL-адрес канала на основе параметров, выбранных в этом диалоговом окне.  
   
  **Предварительный просмотр**  
- Предварительный просмотр результатов в диалоговом окне **Предварительный просмотр** . В окне**Предварительный просмотр** может отображаться до 20 строк.  
+ Предварительный просмотр результатов в диалоговом окне **Предварительный просмотр** . **Предварительный просмотр** может отображать до 20 строк.  
   
 ## <a name="dynamic-options"></a>Динамические параметры  
   
 ### <a name="use-collection-or-resource-path--collection"></a>Использование пути к коллекции или ресурсу = коллекция  
- **Коллекция**  
+ **Набор**  
  Выберите коллекцию из раскрывающегося списка.  
   
 ### <a name="use-collection-or-resource-path--resource-path"></a>Использование пути к коллекции или ресурсу = путь к ресурсу  
- **Resource path**  
- Введите путь к ресурсу. Пример: Employees  
+ **Путь к ресурсу**  
+ Введите путь к ресурсу. Например: Employees  
   
-## <a name="see-also"></a>См. также  
- [Редактор источника OData (страница "Столбцы")](../../2014/integration-services/odata-source-editor-columns-page.md)   
- [Редактор источника OData (страница "Вывод ошибок")](../../2014/integration-services/odata-source-editor-error-output-page.md)   
- [OData Connection Manager](connection-manager/odata-connection-manager.md)  
+## <a name="see-also"></a>См. также:  
+ [Редактор источника OData — страница &#40;столбцы&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
+ [Редактор источника OData &#40;страница "вывод ошибок"&#41;](../../2014/integration-services/odata-source-editor-error-output-page.md)   
+ [Диспетчер соединений OData](connection-manager/odata-connection-manager.md)  
   
   

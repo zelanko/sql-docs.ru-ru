@@ -1,5 +1,5 @@
 ---
-title: Пример метода (JScript) Find | Документация Майкрософт
+title: Пример метода Find (JScript) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: adb5c37e-7874-41db-b4ee-572c1323deff
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1b6a81b69fc16c587786685897c476c65937bb4d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932637"
 ---
 # <a name="find-method-example-jscript"></a>Пример метода Find (JScript)
-В этом примере используется [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта [найти](../../../ado/reference/ado-api/find-method-ado.md) метод для поиска и отображения на компании в ***Northwind*** базы данных, имена которых начинаются с буквы G. вырезания и вставки следующим кодом в блокноте или другом текстовом редакторе и сохраните его как **FindJS.asp**.  
+В этом примере используется метод [Find](../../../ado/reference/ado-api/find-method-ado.md) объекта [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) для поиска и просмотра компаний в базе данных ***Northwind*** , имя которых начинается с буквы G. вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **финджс. ASP**.  
   
 ```  
 <!-- BeginFindJS -->  
@@ -152,6 +152,6 @@ BODY {
 <!-- EndFindJS -->  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод Find (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

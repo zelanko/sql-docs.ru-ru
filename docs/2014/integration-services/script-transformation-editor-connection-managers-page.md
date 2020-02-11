@@ -1,5 +1,5 @@
 ---
-title: Редактор преобразования скриптов (страница «Диспетчеры соединений») | Документация Майкрософт
+title: Редактор преобразования "Скрипт" (страница "диспетчеры соединений") | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,42 +15,42 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b0090534872f0c2ae73e4047d30a6bcc0729b9d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056199"
 ---
 # <a name="script-transformation-editor-connection-managers-page"></a>Редактор преобразования «Скрипт» (страница «Диспетчеры соединений»)
   Используйте страницу **Диспетчеры соединений** в **Редакторе преобразования «Скрипт»** , чтобы указать любые соединения, которые будут использоваться скриптом.  
   
- Дополнительные сведения о компоненте скрипта см. в разделе [компонента скрипта](data-flow/transformations/script-component.md) и [Настройка компонента скрипта в редакторе компонента скрипта](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Дополнительные сведения о программировании компонента скрипта, см. в разделе [расширение потока данных в компоненте скрипта](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+ Дополнительные сведения о компоненте скрипта см. в разделах [Script Component](data-flow/transformations/script-component.md) и [Configuring the Script Component in the Script Component Editor](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Дополнительные сведения о программировании компонента скрипта см. в разделе [Расширение потока данных с помощью компонента скрипта](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
 ## <a name="options"></a>Параметры  
- **Connection managers**  
+ **Диспетчеры соединений**  
  Просмотрите список соединений, доступных для использования скриптом.  
   
  **Название**  
  Введите уникальное и описательное имя для соединения.  
   
  **Диспетчер соединений**  
- Выберите в списке доступных диспетчеров подключений либо выберите **\<Создать соединение>** , чтобы открыть диалоговое окно **Добавление диспетчера соединений со службами SSIS**.  
+ Выберите из списка доступных диспетчеров соединений или щелкните ** \<создать подключение>** , чтобы открыть диалоговое окно **Добавление диспетчера соединений со службами SSIS** .  
   
  **Описание**  
  Введите описание для соединения.  
   
- **Добавить**  
+ **Добавление**  
  Добавить еще одно соединение в список **Диспетчеры соединений** .  
   
  **Удалить**  
  Удалить выбранное соединение из списка **Диспетчеры соединений** .  
   
-## <a name="see-also"></a>См. также  
- [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>См. также:  
+ [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Выбор типа компонента скрипта](../../2014/integration-services/select-script-component-type.md)   
- [Редактор преобразования "Скрипт" (страница "Входные столбцы")](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
- [Редактор преобразования "Скрипт" (страница "Входы и выходы")](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
- [Редактор преобразования "Скрипт" (страница "Скрипт")](../../2014/integration-services/script-transformation-editor-script-page.md)   
+ [Редактор преобразования "Скрипт" &#40;страница "входные столбцы"&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
+ [Редактор преобразования "Скрипт" &#40;страница "входы и выходы"&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
+ [Редактор преобразования "Скрипт" &#40;страница "Скрипт"&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   
  [Дополнительные примеры компонента скрипта](extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
   
   

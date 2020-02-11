@@ -1,5 +1,5 @@
 ---
-title: Объект Axis (многомерные Объекты ADO) | Документация Майкрософт
+title: Объект Axis (объекты данных ActiveX (MD)) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,34 +16,34 @@ ms.assetid: 5f498c9a-b1e7-4e6e-9ae6-71eadaf9aada
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bf2b072acfda34ebdcafc1af82cd90c6be5d2537
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67939962"
 ---
 # <a name="axis-object-ado-md"></a>Объект Axis (многомерные объекты ADO)
-Представляет позиционные или оси фильтра набора ячеек, содержащий выбранные элементы из одного или нескольких измерений.  
+Представляет координату или ось фильтрации набора ячеек, содержащего выбранные элементы одного или нескольких измерений.  
   
-## <a name="remarks"></a>Примечания  
- **Оси** могут содержаться объект [осей](../../../ado/reference/ado-md-api/axes-collection-ado-md.md) коллекции, или возвращается [FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md) свойство [набора ячеек](../../../ado/reference/ado-md-api/cellset-object-ado-md.md).  
+## <a name="remarks"></a>Remarks  
+ Объект **Axis** может содержаться в коллекции [осей](../../../ado/reference/ado-md-api/axes-collection-ado-md.md) или возвращаться свойством [филтераксис](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md) набора [ячеек](../../../ado/reference/ado-md-api/cellset-object-ado-md.md).  
   
- С помощью коллекций и свойств **оси** объекта, можно сделать следующее:  
+ С помощью коллекций и свойств объекта **Axis** можно выполнять следующие действия.  
   
--   Определить **оси** с [имя](../../../ado/reference/ado-md-api/name-property-ado-md.md) свойство.  
+-   Определяет **ось** с помощью свойства [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md) .  
   
--   Итерации по каждой позиции вдоль **оси** с помощью [позиций](../../../ado/reference/ado-md-api/positions-collection-ado-md.md) коллекции.  
+-   Перебирает каждую позицию вдоль **оси** с помощью коллекции [Positions](../../../ado/reference/ado-md-api/positions-collection-ado-md.md) .  
   
--   Получить число измерений в **оси** с [DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md) свойство.  
+-   Получите количество измерений на **оси** со свойством [DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md) .  
   
--   Получение атрибутов поставщика **оси** с помощью стандартных ADO [свойства](../../../ado/reference/ado-api/properties-collection-ado.md) коллекции.  
+-   Получите атрибуты **оси** , зависящие от поставщика, со стандартной коллекцией [свойств](../../../ado/reference/ado-api/properties-collection-ado.md) ADO.  
   
- Этот раздел содержит следующие подразделы.  
+ Этот раздел содержит следующий раздел.  
   
 -   [Свойства, методы и события](../../../ado/reference/ado-md-api/axis-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
- [Пример объекта Axis (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
- [Коллекция axes (многомерные Объекты ADO)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)   
- [Коллекции Positions (многомерные Объекты ADO)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)   
+## <a name="see-also"></a>См. также:  
+ [Пример оси (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
+ [Коллекция осей (объекты данных ActiveX (MD))](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)   
+ [Коллекция Positions (объекты данных ActiveX (MD))](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)   
  [Коллекция Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

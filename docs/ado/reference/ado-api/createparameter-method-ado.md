@@ -17,14 +17,14 @@ ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: af796c36bd2960730536ec07ac49614876311e84
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933291"
 ---
 # <a name="createparameter-method-ado"></a>Метод CreateParameter (ADO)
-Создает новый [параметр](../../../ado/reference/ado-api/parameter-object.md) объект с указанными свойствами.  
+Создает новый объект [Parameter](../../../ado/reference/ado-api/parameter-object.md) с указанными свойствами.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,39 +34,39 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает **параметр** объекта.  
+ Возвращает объект **параметра** .  
   
 #### <a name="parameters"></a>Параметры  
- *Name*  
- Необязательный параметр. Объект **строка** значение, содержащее имя **параметр** объекта.  
+ *Название*  
+ Необязательный параметр. **Строковое** значение, содержащее имя объекта **параметра** .  
   
  *Тип*  
- Необязательный параметр. Объект [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) значение, указывающее тип данных **параметр** объекта.  
+ Необязательный параметр. Значение [дататипинум](../../../ado/reference/ado-api/datatypeenum.md) , указывающее тип данных объекта **параметра** .  
   
- *Направление*  
- Необязательный параметр. Объект [ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md) значение, указывающее тип **параметр** объекта.  
+ *Двух*  
+ Необязательный параметр. Значение [параметердиректионенум](../../../ado/reference/ado-api/parameterdirectionenum.md) , указывающее тип объекта **параметра** .  
   
  *Размер*  
- Необязательный параметр. Объект **Long** значение, которое указывает максимальную длину для значения параметра в символах или байтах.  
+ Необязательный параметр. Значение **типа Long** , указывающее максимальную длину значения параметра в символах или байтах.  
   
- *Значение*  
- Необязательный параметр. Объект **Variant** , указывающее значение для **параметр** объекта.  
+ *Value*  
+ Необязательный параметр. **Вариант** , указывающий значение для объекта **параметра** .  
   
-## <a name="remarks"></a>Примечания  
- Используйте **CreateParameter** метод для создания нового **параметр** объект с указанным именем, типом, направление, размер и значением. Все значения, указываемые в аргументах записываются в соответствующий **параметр** свойства.  
+## <a name="remarks"></a>Remarks  
+ Используйте метод **CreateParameter** для создания нового объекта **Parameter** с указанными именем, типом, направлением, размером и значением. Любые значения, передаваемые в аргументы, записываются в соответствующие свойства **параметров** .  
   
- Этот метод не добавляет автоматически **параметр** объект **параметры** коллекцию [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта. Это позволяет задать дополнительные свойства, которого ADO значения будет проверять при присоединении **параметр** в коллекцию.  
+ Этот метод не добавляет автоматически объект **Parameter** в коллекцию **Parameters** объекта [Command](../../../ado/reference/ado-api/command-object-ado.md) . Это позволяет задать дополнительные свойства, значения которых будут проверяться ADO при добавлении объекта **параметра** в коллекцию.  
   
- Если указан тип данных переменной длины в *тип* аргумент, необходимо либо передать *размер* аргумент или набора [размер](../../../ado/reference/ado-api/size-property-ado-parameter.md) свойство **параметр**  объекта перед его добавлением **параметры** коллекции; в противном случае возникает ошибка.  
+ Если в аргументе *типа* указан тип данных переменной длины, необходимо либо передать аргумент *размера* , либо задать свойство [size](../../../ado/reference/ado-api/size-property-ado-parameter.md) объекта **Parameter** перед добавлением его в коллекцию **Parameters** . в противном случае возникает ошибка.  
   
- При указании типа numeric (**adNumeric** или **adDecimal**) в *тип* аргумента, то необходимо также задать [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) и [Точности](../../../ado/reference/ado-api/precision-property-ado.md) свойства.  
+ Если в аргументе *типа* указан числовой тип данных (**аднумерик** или **аддеЦимал**), необходимо также задать свойства [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) и [Precision](../../../ado/reference/ado-api/precision-property-ado.md) .  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  [Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
- [Append и CreateParameter методы (Visual Basic)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vb.md)   
- [Append и CreateParameter методы (Visual C++)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vc.md)   
- [Метод append (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
- [Объект параметра](../../../ado/reference/ado-api/parameter-object.md)   
+## <a name="see-also"></a>См. также:  
+ [Примеры методов Append и CreateParameter (Visual Basic)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vb.md)   
+ [Пример методов Append и CreateParameter (Visual c++)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vc.md)   
+ [Метод Append (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
+ [Объект Parameter](../../../ado/reference/ado-api/parameter-object.md)   
  [Коллекция Parameters (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)

@@ -1,5 +1,5 @@
 ---
-title: Пример метода CompareBookmarks (Visual C++) | Документация Майкрософт
+title: Пример метода CompareBookmarks (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,16 +15,16 @@ ms.assetid: 24ab3f3a-29c5-4ee1-942e-2634c02d0778
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 137805600b30876baa96e8b795b99b62b140e915
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933598"
 ---
 # <a name="comparebookmarks-method-example-vc"></a>Пример метода CompareBookmarks (Visual C++)
-В этом примере показано [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) метод. Если определенной закладки какая-нибудь специальные редко требуется относительное значение закладки.  
+В этом примере демонстрируется метод [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) . Относительное значение закладок редко требуется, если конкретная закладка не является каким-либо специальным.  
   
- Назначить случайных строк из [записей](../../../ado/reference/ado-api/recordset-object-ado.md) производным от ***авторы*** таблицы в качестве цели поиска. Затем отобразите положение каждой строки относительно этого целевого.  
+ Назначьте случайную строку [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) , производного от таблицы ***authors*** , в качестве цели поиска. Затем отобразить расположение каждой строки относительно этого целевого объекта.  
   
 ```  
 // BeginCompareBookmarksCpp.cpp  
@@ -169,6 +169,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод CompareBookmarks (ADO)](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

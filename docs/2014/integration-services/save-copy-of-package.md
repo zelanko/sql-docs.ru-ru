@@ -1,5 +1,5 @@
 ---
-title: Сохранение копии пакета | Документация Майкрософт
+title: Сохранить копию пакета | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,18 +15,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 649c972b001a0627a568f0bd9e1ac2b42d5175ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056320"
 ---
 # <a name="save-copy-of-package"></a>Сохранение копии пакета
   Используйте диалоговое окно **Сохранение копии пакета** , доступное в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], чтобы сохранить копию пакета служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] из среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] в другое местоположение и в случае необходимости изменить уровень защиты пакета.  
   
 ## <a name="options"></a>Параметры  
- **Размещение пакета**  
- Выберите тип места хранения, в котором должна быть сохранена копия пакета. Доступны следующие параметры:  
+ **Расположение пакета**  
+ Выберите тип места хранения, в котором должна быть сохранена копия пакета. Доступны следующие варианты:  
   
  **SQL Server**  
   
@@ -34,16 +34,16 @@ ms.locfileid: "66056320"
   
  **Хранилище пакетов служб SSIS**  
   
- **Server**  
+ **Сервер**  
  Введите имя сервера или выберите его из списка. Этот параметр доступен, только если в качестве места хранения указан **SQL Server** или **Хранилище пакетов служб SSIS**.  
   
- **Authentication**  
+ **Аутентификация**  
  Выберите проверку подлинности Windows или проверку подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Этот параметр доступен, только если в качестве места хранения указан [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
 >  При возможности используйте проверку подлинности Windows.  
   
- **Тип проверки подлинности**  
+ **Authentication type (Тип проверки подлинности)**  
  Выберите тип проверки подлинности.  
   
  **User name**  
@@ -52,16 +52,16 @@ ms.locfileid: "66056320"
  **Пароль**  
  При использовании проверки подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] укажите пароль.  
   
- **Путь пакета**  
- Введите путь к пакету или нажмите кнопку обзора **(...)**  кнопку и найдите папку, в которой должен быть сохранен пакет.  
+ **Путь к пакету**  
+ Введите путь к пакету или нажмите кнопку обзора **(...)** и найдите папку, в которой будет сохранен пакет.  
   
  **Уровень защиты**  
- Нажмите кнопку обзора **(...)**  и обновите уровень защиты в **уровень защиты пакета** диалоговое окно. Дополнительные сведения см. в разделе [Диалоговое окно уровня защиты пакета и проекта](../../2014/integration-services/package-and-project-protection-level-dialog-box.md).  
+ Нажмите кнопку обзора **(...)** и обновите уровень защиты в диалоговом окне **уровень защиты пакета** . Дополнительные сведения см. в разделе [Диалоговое окно уровня защиты пакета и проекта](../../2014/integration-services/package-and-project-protection-level-dialog-box.md).  
   
-## <a name="see-also"></a>См. также  
- [Диалоговое окно «Импорт пакета» справочника по пользовательскому интерфейсу](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
- [Диалоговое окно «Экспорт пакета» справочника по пользовательскому интерфейсу](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
+## <a name="see-also"></a>См. также:  
+ [Справочник по пользовательскому интерфейсу диалогового окна "Импорт пакета"](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
+ [Справочник по пользовательскому интерфейсу диалогового окна экспорта пакета](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
  [Сохранение пакетов](save-packages.md)   
- [Импорт и экспорт пакетов (службы SSIS)](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
+ [Импорт и экспорт пакетов &#40;служб SSIS&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
   
   

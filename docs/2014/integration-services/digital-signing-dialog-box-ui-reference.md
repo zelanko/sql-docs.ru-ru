@@ -1,5 +1,5 @@
 ---
-title: Цифровая подпись диалогового окна пользовательского интерфейса в справочник | Документация Майкрософт
+title: Справочник по пользовательскому интерфейсу диалогового окна цифровой подписи | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e7e676368ccdd28a195f3a50208e3ca1c0703214
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059448"
 ---
 # <a name="digital-signing-dialog-box-ui-reference"></a>Справочник по пользовательскому Интерфейсу цифровой подписи диалоговое
@@ -27,13 +27,13 @@ ms.locfileid: "66059448"
  Дополнительные сведения см. в разделах [Определение источника пакетов с помощью цифровых подписей](security/identify-the-source-of-packages-with-digital-signatures.md) и [Подписание пакета цифровым сертификатом](../../2014/integration-services/sign-a-package-by-using-a-digital-certificate.md).  
   
 ## <a name="options"></a>Параметры  
- **Подпись**  
+ **Писать**  
  Щелкните, чтобы открыть диалоговое окно **Выбор сертификата** и выберите необходимый сертификат.  
   
  **Удалить**  
  Щелкните, чтобы удалить цифровую подпись.  
   
-## <a name="see-also"></a>См. также  
- [Общие сведения о безопасности (службы Integration Services)](security/security-overview-integration-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Общие сведения о безопасности &#40;Integration Services&#41;](security/security-overview-integration-services.md)  
   
   

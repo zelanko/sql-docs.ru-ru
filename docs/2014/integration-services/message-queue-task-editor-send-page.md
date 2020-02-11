@@ -1,5 +1,5 @@
 ---
-title: Редактор задачи очереди сообщений (страница «Отправка») | Документация Майкрософт
+title: Редактор задачи «очередь сообщений» (страница «отправка») | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 66323ccdb91076496f9796245c368697d9ebc8c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057601"
 ---
 # <a name="message-queue-task-editor-send-page"></a>Редактор задачи «Очередь сообщений» (страница «Отправка»)
@@ -27,8 +27,8 @@ ms.locfileid: "66057601"
  Дополнительные сведения об этой задаче см. в разделе [Message Queue Task](control-flow/message-queue-task.md).  
   
 ## <a name="options"></a>Параметры  
- **UseEncryption**  
- Укажите, необходимо ли шифровать сообщение. Значение по умолчанию — `False`.  
+ **усинкриптион**  
+ Укажите, необходимо ли шифровать сообщение. Значение по умолчанию — `False`.  
   
  **EncryptionAlgorithm**  
  При выборе шифрования задайте имя алгоритма шифрования для использования. Задача «Очередь сообщений» поддерживает алгоритмы RC2 и RC4. По умолчанию, используется алгоритм **RC2**.  
@@ -42,7 +42,7 @@ ms.locfileid: "66057601"
  **MessageType**  
  Выбор типа сообщения. Это свойство имеет параметры, указанные в следующей таблице.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |**Сообщение файла данных**|Сообщение хранится в файле. При выборе этого значения отображается динамический параметр **DataFileMessage**.|  
 |**Сообщение переменной**|Сообщение хранится в переменной. При выборе этого значения отображается динамический параметр **VariableMessage**.|  
@@ -64,10 +64,10 @@ ms.locfileid: "66057601"
  **StringMessage**  
  Введите строковое сообщение или нажмите кнопку с многоточием **(…)**, а затем введите сообщение в диалоговом окне **Введите строковое сообщение**.  
   
-## <a name="see-also"></a>См. также  
- [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор задачи "Очередь сообщений" (страница "Общие")](general-page-of-integration-services-designers-options.md)   
- [Редактор задачи "Очередь сообщений" (страница "Получение")](../../2014/integration-services/message-queue-task-editor-receive-page.md)   
+## <a name="see-also"></a>См. также:  
+ [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор задачи "очередь сообщений" &#40;страница "Общие"&#41;](general-page-of-integration-services-designers-options.md)   
+ [Редактор задачи "очередь сообщений" &#40;"получить страницу"&#41;](../../2014/integration-services/message-queue-task-editor-receive-page.md)   
  [Страница «Выражения»](expressions/expressions-page.md)  
   
   

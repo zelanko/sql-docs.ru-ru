@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c5661d490f4669968b6d8198a7565fb5e5c8c218
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484307"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>Импорт значений проекта очистки в домен
@@ -35,9 +35,9 @@ ms.locfileid: "65484307"
 ####  <a name="Permissions"></a> Permissions  
  Для импорта знаний служб DQS, собранных в процессе очистки, в домен необходимо быть членом роли dqs_kb_editor или dqs_administrator в базе данных DQS_MAIN.  
   
-##  <a name="Import"></a> Импорт значений проекта очистки  
+##  <a name="Import"></a>Импорт значений проекта очистки  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Запуск клиентского приложения Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Запустите приложение Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  На главном экране клиента [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] откройте базу знаний в разделе управления доменами.  
   
@@ -71,10 +71,10 @@ ms.locfileid: "65484307"
     > [!NOTE]  
     >  Дополнительные сведения о работе со значениями на вкладке **Значения домена** см. в разделе [Change Domain Values](../../2014/data-quality-services/change-domain-values.md).  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. После импорта значений проекта в домен  
+##  <a name="FollowUp"></a>Дальнейшие действия. После импорта значений проекта в домен  
  После импорта знаний служб DQS, собранных в процессе очистки, в домен вы можете приступать к другим задачам управления доменами с использованием этого домена и значений. Дополнительные сведения см. в разделе [Управление доменом](../../2014/data-quality-services/managing-a-domain.md).  
   
-##  <a name="Values"></a> Значения, которые будут импортированы  
+##  <a name="Values"></a>Значения, которые будут импортированы  
  Из проекта в домен будут импортированы следующие значения.  
   
 -   В домен импортируются только строковые значения.  
@@ -93,7 +93,7 @@ ms.locfileid: "65484307"
   
 -   Исправление, выполненное в соответствии со связью на основе термина в домене, импортируется как правильное значение.  
   
-##  <a name="ValuesNot"></a> Значения, которые не будут импортированы  
+##  <a name="ValuesNot"></a>Значения, которые не будут импортированы  
  Следующие значения не будут импортированы из проекта в домен:  
   
 -   Значения с вкладок **Предлагаемые** и **Недопустимые** на странице **Управление и просмотр результатов** в категории **Очистка** импортированы не будут.  
@@ -110,8 +110,8 @@ ms.locfileid: "65484307"
   
 -   Импортировать значения из проекта можно только тогда, когда база знаний имеет состояние «в обработке» и заблокирована пользователем, выполняющим импорт.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Очистка данных](../../2014/data-quality-services/data-cleansing.md)   
- [Преобразование "Очистка DQS"](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)  
+ [Преобразование «Очистка DQS»](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)  
   
   

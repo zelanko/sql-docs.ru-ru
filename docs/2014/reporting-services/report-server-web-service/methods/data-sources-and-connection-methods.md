@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 43f68015c7488c1fcf07ccff612950038f873855
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62518957"
 ---
 # <a name="data-sources-and-connection-methods"></a>Источники данных и методы соединения
@@ -39,7 +39,7 @@ ms.locfileid: "62518957"
 |<xref:ReportService2010.ReportingService2010.TestConnectForDataSourceDefinition%2A>|Проверяет соединение с источником данных. Этот метод поддерживает непосредственную проверку источника данных.|  
 |<xref:ReportService2010.ReportingService2010.TestConnectForItemDataSource%2A>|Проверяет соединение с источником данных. Этот метод поддерживает проверку опубликованных источников данных, используемых отчетами или моделями и общими источниками данных.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание приложений с помощью веб-службы и .NET Framework](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Веб-служба сервера отчетов](../report-server-web-service.md)   
  [Методы веб-службы сервера отчетов](report-server-web-service-methods.md)   

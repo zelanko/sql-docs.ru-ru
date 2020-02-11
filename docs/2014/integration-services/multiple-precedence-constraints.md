@@ -1,5 +1,5 @@
 ---
-title: Несколько ограничений очередности | Документация Майкрософт
+title: Несколько ограничений очередностью | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c0b75b96f30d2fe7f104e8f59aa03d7de6202e6a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057404"
 ---
 # <a name="multiple-precedence-constraints"></a>Множественные элементы управления очередностью
@@ -32,7 +32,7 @@ ms.locfileid: "66057404"
 ## <a name="logicaland-property"></a>Свойство LogicalAnd  
  Если задача или контейнер содержит несколько ограничений, то при помощи свойства `LogicalAnd` указывается, следует ли вычислять управление очередностью отдельно или вместе с остальными ограничениями.  
   
- Можно задать `LogicalAnd` свойства с помощью **редактор управления очередностью** в [!INCLUDE[ssIS](../includes/ssis-md.md)] конструктор, или в окне «Свойства», [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] предоставляет.  
+ Свойство можно задать с помощью редактора управления **очередностью** в [!INCLUDE[ssIS](../includes/ssis-md.md)] конструкторе или в окно свойств, [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] предоставляемой. `LogicalAnd`  
   
 ## <a name="related-tasks"></a>Связанные задачи  
  [Установка свойств управления очередностью](../../2014/integration-services/set-the-properties-of-a-precedence-constraint.md)  

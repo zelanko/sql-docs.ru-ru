@@ -1,5 +1,5 @@
 ---
-title: Учебник. Использование типа данных hierarchyid | Документация Майкрософт
+title: Руководство. Использование типа данных hierarchyid | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e3718b45b69870969dae85b4eb1ad2e9e80adc85
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211775"
 ---
 # <a name="tutorial-using-the-hierarchyid-data-type"></a>Учебник. Использование типа данных hierarchyid
@@ -26,10 +26,10 @@ ms.locfileid: "68211775"
 ## <a name="what-you-will-learn"></a>Обзор учебника  
  Учебник разделен на два занятия.  
   
- [Занятие 1. Преобразование таблицы в иерархическую структуру](lesson-1-converting-a-table-to-a-hierarchical-structure.md)  
+ [Занятие 1. Преобразование таблицы в иерархическую структуру](lesson-1-converting-a-table-to-a-hierarchical-structure.md)  
  На этом занятии возьмем существующую таблицу сотрудников, структурированную по иерархии «родители-потомки», и переместим данные в новую таблицу, представляющую иерархию с помощью типа данных `hierarchyid`. Для этого занятия требуется образец базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
- [Занятие 2. Создание и управление данными в иерархической таблице](lesson-2-creating-and-managing-data-in-a-hierarchical-table.md)  
+ [Занятие 2. Создание данных и управление ими в иерархической таблице](lesson-2-creating-and-managing-data-in-a-hierarchical-table.md)  
  На этом занятии создается таблица, используя тип данных `hierarchyid` для представления структуры иерархии. Затем создаются запросы и производится управление данными с помощью иерархических методов.  
   
 ## <a name="requirements"></a>Требования  
@@ -41,11 +41,11 @@ ms.locfileid: "68211775"
   
 -   Internet Explorer 6 или более поздней версии.  
   
-## <a name="see-also"></a>См. также  
- [Учебник. Начало работы с ядром СУБД](../tutorial-getting-started-with-the-database-engine.md)   
+## <a name="see-also"></a>См. также:  
+ [Учебник. начало работы с ядро СУБД](../tutorial-getting-started-with-the-database-engine.md)   
  [Учебник. Написание инструкций Transact-SQL](../../t-sql/tutorial-writing-transact-sql-statements.md)   
  [Справочник по методам типа данных hierarchyid](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)   
- [Иерархические данные &#40;SQL Server&#41;](../hierarchical-data-sql-server.md)   
+ [SQL Server &#40;иерархических данных&#41;](../hierarchical-data-sql-server.md)   
  [hierarchyid (Transact-SQL)](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Примеры CursorType, LockType и EditMode пример свойства (Visual C++) | Документация Майкрософт
+title: Пример свойств примеры CursorType, LockType и EditMode (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: b2a80e44-03d8-426e-81b6-dd9dfc30e181
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: be094e6886cceb8e6f4e42e3b60f9e7355df7592
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933259"
 ---
-# <a name="cursortype-locktype-and-editmode-properties-example-vc"></a>Примеры CursorType, LockType и EditMode пример свойства (Visual C++)
-Пример задания [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) и [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) свойства перед открытием [записей](../../../ado/reference/ado-api/recordset-object-ado.md). Также показано, что значение [EditMode](../../../ado/reference/ado-api/editmode-property.md) свойство в различных условиях. Функция EditModeOutput является обязательным для выполнения этой процедуры.  
+# <a name="cursortype-locktype-and-editmode-properties-example-vc"></a>Пример свойств примеры CursorType, LockType и EditMode (Visual c++)
+В этом примере показано задание свойств [примеры CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) и [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) перед открытием [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md). Он также показывает значение свойства [EditMode](../../../ado/reference/ado-api/editmode-property.md) в различных условиях. Для выполнения этой процедуры требуется функция Едитмодеаутпут.  
   
 ## <a name="example"></a>Пример  
   
@@ -155,14 +155,14 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-  **После AddNew:**    
- **EditMode = adEditAdd**  
-**После обновления:**    
- **EditMode = adEditNone**  
-**После изменения:**    
- **EditMode = adEditInProgress**   
-## <a name="see-also"></a>См. также  
- [Свойство CursorType (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)   
- [Свойство EditMode](../../../ado/reference/ado-api/editmode-property.md)   
+  **После AddNew:**   
+ **EditMode = Адедитадд**  
+**После обновления:**   
+ **EditMode = Адедитноне**  
+**После изменения:**   
+ **EditMode = Адедитинпрогресс**   
+## <a name="see-also"></a>См. также:  
+ [Свойство примеры CursorType (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)   
+ [EditMode, свойство](../../../ado/reference/ado-api/editmode-property.md)   
  [Свойство LockType (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

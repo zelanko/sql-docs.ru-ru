@@ -19,31 +19,31 @@ ms.assetid: 43a821fb-97fd-4316-aafe-4ef2de783188
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 54cc247827a176bc9921884ae318120b07108293
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67939869"
 ---
 # <a name="supported-set-commands-visual-foxpro-odbc-driver"></a>Поддерживаемые команды SET (драйвер ODBC для Visual FoxPro)
-Приложение может отправлять следующие Visual FoxPro **ЗАДАТЬ** команды для источника данных:  
+Приложение может отправить следующие команды Visual FoxPro **Set** в источник данных:  
   
- [SET ANSI](../../odbc/microsoft/set-ansi-command.md)  
+ [ЗАДАТЬ ANSI](../../odbc/microsoft/set-ansi-command.md)  
   
- [SET BLOCKSIZE](../../odbc/microsoft/set-blocksize-command.md)  
+ [ЗАДАТЬ РАЗМЕР БЛОКА](../../odbc/microsoft/set-blocksize-command.md)  
   
- [SET COLLATE](../../odbc/microsoft/set-collate-command.md)  
+ [ЗАДАТЬ ПАРАМЕТРЫ СОРТИРОВКИ](../../odbc/microsoft/set-collate-command.md)  
   
- [УДАЛИТЬ НАБОР](../../odbc/microsoft/set-deleted-command.md)  
+ [УСТАНОВИТЬ УДАЛЕННОЕ](../../odbc/microsoft/set-deleted-command.md)  
   
- [ТОЧНЫЙ НАБОР](../../odbc/microsoft/set-exact-command.md)  
+ [ЗАДАТЬ ТОЧНОЕ ЗНАЧЕНИЕ](../../odbc/microsoft/set-exact-command.md)  
   
- [SET EXCLUSIVE](../../odbc/microsoft/set-exclusive-command.md)  
+ [УСТАНОВИТЬ ЭКСКЛЮЗИВНУЮ](../../odbc/microsoft/set-exclusive-command.md)  
   
- [ЗАДАЙТЕ ЗНАЧЕНИЕ NULL](../../odbc/microsoft/set-null-command.md)  
+ [SET NULL](../../odbc/microsoft/set-null-command.md)  
   
- [ПУТЬ НАБОРА](../../odbc/microsoft/set-path-command.md)  
+ [ЗАДАТЬ ПУТЬ](../../odbc/microsoft/set-path-command.md)  
   
- [ПОВТОРНАЯ ОБРАБОТКА НАБОРА](../../odbc/microsoft/set-reprocess-command.md)  
+ [ЗАДАТЬ ПОВТОРНУЮ ОБРАБОТКУ](../../odbc/microsoft/set-reprocess-command.md)  
   
- [ЗАДАЙТЕ УНИКАЛЬНОЕ](../../odbc/microsoft/set-unique-command.md)
+ [ЗАДАТЬ УНИКАЛЬНЫЙ](../../odbc/microsoft/set-unique-command.md)

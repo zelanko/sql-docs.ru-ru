@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8eebb47569a4ccc96437a3e16379c794b83642dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478508"
 ---
 # <a name="transactions-master-data-services"></a>Транзакции (службы Master Data Services)
@@ -43,9 +43,9 @@ ms.locfileid: "65478508"
 >  Администраторы могут просматривать все транзакции всех пользователей до тех пор, если только в функциональной области **Управление версиями** для них не задан уровень разрешений только для чтения. Например, если у администратора есть разрешение только на чтение и разрешение на обновление, он не сможет просматривать транзакции других пользователей, так как разрешение только на чтение имеет приоритет над разрешением на обновление.
 
 ## <a name="system-settings"></a>Системные настройки  
- В программе [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] имеется параметр, который определяет, записываются ли транзакции для промежуточных записей. Эта настройка влияет только на SQL Server 2008 R2. Этот параметр можно настроить в программе [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] или непосредственно в таблице системных параметров в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Дополнительные сведения см. в разделе [Системные параметры (службы Master Data Services)](system-settings-master-data-services.md).  
+ В программе [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] имеется параметр, который определяет, записываются ли транзакции для промежуточных записей. Эта настройка влияет только на SQL Server 2008 R2. Этот параметр можно настроить в программе [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] или непосредственно в таблице системных параметров в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Дополнительные сведения см. в разделе [Системные параметры (службы Master Data Services)](system-settings-master-data-services.md).  
   
- При импорте данных из этой версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] можно указать, следует ли вести журнал транзакций при инициировании хранимых процедур. Дополнительные сведения см. в разделе [Промежуточная хранимая процедура (службы Master Data Services)](../../2014/master-data-services/staging-stored-procedure-master-data-services.md).  
+ При импорте данных из этой версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]можно указать, следует ли вести журнал транзакций при инициировании хранимых процедур. Дополнительные сведения см. в разделе [Промежуточная хранимая процедура (службы Master Data Services)](../../2014/master-data-services/staging-stored-procedure-master-data-services.md).  
   
 ## <a name="concurrency"></a>Параллелизм  
  Если значение определенной сущности одновременно отображается в нескольких сеансах обозревателя, это значение может изменяться одновременно несколькими пользователями. Службы MDS не обнаруживают одновременные изменения автоматически. Такая ситуация возможна, когда несколько пользователей работают в обозревателе служб MDS в веб-браузере, например в нескольких сеансах, на нескольких вкладках браузера или в нескольких его окнах либо из-под нескольких учетных записей пользователей.  
@@ -56,12 +56,12 @@ ms.locfileid: "65478508"
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Отмена действия путем обращения транзакции (только администраторы).|[Отмена транзакции (службы Master Data Services)](../../2014/master-data-services/reverse-a-transaction-master-data-services.md)|  
+|Отмена действия путем обращения транзакции (только администраторы).|[Отмена Master Data Services &#40;транзакций&#41;](../../2014/master-data-services/reverse-a-transaction-master-data-services.md)|  
   
 ## <a name="related-content"></a>См. также  
   
--   [Администраторы (службы Master Data Services)](../../2014/master-data-services/administrators-master-data-services.md)  
+-   [Администраторы &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)  
   
--   [Заметки (службы Master Data Services)](../../2014/master-data-services/annotations-master-data-services.md)  
+-   [Заметки &#40;Master Data Services&#41;](../../2014/master-data-services/annotations-master-data-services.md)  
   
   

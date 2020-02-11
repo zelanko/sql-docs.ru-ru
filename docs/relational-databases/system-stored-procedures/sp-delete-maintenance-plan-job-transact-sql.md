@@ -18,13 +18,13 @@ ms.assetid: 1c2148c3-2928-4d9b-b1c8-3512cfbd6a63
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c67731907d105c6fb2cc48ecf3232d2c9d89c5b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68009202"
 ---
-# <a name="spdeletemaintenanceplanjob-transact-sql"></a>sp_delete_maintenance_plan_job (Transact-SQL)
+# <a name="sp_delete_maintenance_plan_job-transact-sql"></a>sp_delete_maintenance_plan_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Отменяет привязку указанного плана обслуживания от указанного задания.  
@@ -45,20 +45,20 @@ sp_delete_maintenance_plan_job [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @plan_id = ] 'plan\_id'` Указывает идентификатор плана обслуживания. *plan_id* — **uniqueidentifier**, и должен быть допустимым идентификатором.  
+`[ @plan_id = ] 'plan\_id'`Указывает идентификатор плана обслуживания. *plan_id* имеет тип **uniqueidentifier**и должен быть допустимым идентификатором.  
   
-`[ @job_id = ] 'job\_id'` Указывает идентификатор задания, с которым связан план обслуживания. *job_id* — **uniqueidentifier**, и должен быть допустимым идентификатором.  
+`[ @job_id = ] 'job\_id'`Указывает идентификатор задания, с которым связан план обслуживания. *job_id* имеет тип **uniqueidentifier**и должен быть допустимым идентификатором.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или 1 (неуспешное завершение)  
+ 0 (успех) или 1 (сбой).  
   
-## <a name="remarks"></a>Примечания  
- **sp_delete_maintenance_plan_job** должна запускаться из **msdb** базы данных.  
+## <a name="remarks"></a>Remarks  
+ **sp_delete_maintenance_plan_job** должны запускаться из базы данных **msdb** .  
   
- Если все задания удалены из плана обслуживания, рекомендуется выполнить процедуру **sp_delete_maintenance_plan_db** для удаления из плана оставшихся баз данных.  
+ Когда все задания были удалены из плана обслуживания, рекомендуется выполнить **sp_delete_maintenance_plan_db** , чтобы удалить оставшиеся базы данных из плана.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнять процедуру **sp_delete_maintenance_plan_job**.  
+ Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_delete_maintenance_plan_job**.  
   
 ## <a name="examples"></a>Примеры  
  В этом примере задание B8FCECB1-E22C-11D2-AA64-00C04F688EAE удаляется из плана обслуживания.  
@@ -67,7 +67,7 @@ sp_delete_maintenance_plan_job [ @plan_id = ] 'plan_id' ,
 EXECUTE   sp_delete_maintenance_plan_job N'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC', N'B8FCECB1-E22C-11D2-AA64-00C04F688EAE';  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Планы обслуживания](../../relational-databases/maintenance-plans/maintenance-plans.md)   
  [Хранимые процедуры плана обслуживания базы данных &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
   

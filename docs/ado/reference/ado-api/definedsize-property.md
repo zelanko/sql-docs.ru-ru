@@ -1,5 +1,5 @@
 ---
-title: Пример свойства DefinedSize | Документация Майкрософт
+title: DefinedSize, свойство | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,35 +16,35 @@ ms.assetid: 3ee27314-a305-4fbc-8433-9ee9a909afd6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4bfb0db701801f1853009594b9d6d24aeb41c629
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933215"
 ---
 # <a name="definedsize-property"></a>Свойство DefinedSize
-Показывает объем данных [поле](../../../ado/reference/ado-api/field-object.md) объекта.  
+Указывает емкость данных для объекта [поля](../../../ado/reference/ado-api/field-object.md) .  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает **Long** значение, которое отражает размер, определенный для поля, которое зависит от типа данных поля объекта; см. в разделе [тип](../../../ado/reference/ado-api/type-property-ado.md) Дополнительные сведения. Для поля, которое использует тип данных фиксированной длины возвращается размер типа данных в байтах. Для поля, которое использует тип данных переменной длины это одно из следующих:  
+ Возвращает значение типа **Long** , отражающее заданный размер поля, который зависит от типов данных объекта Field. Дополнительные сведения см. в разделе [тип](../../../ado/reference/ado-api/type-property-ado.md) . Для поля, использующего тип данных фиксированной длины, возвращаемое значение — это размер типа данных в байтах. Для поля, использующего тип данных переменной длины, это одно из следующих:  
   
-1.  Максимальная длина поля в символах (для **adVarChar** и **adVarWChar**) или в байтах (для **adVarBinary**, и **adVarNumeric**) Если поле имеет определенной длины. Например **adVarChar(5)** поле имеет длину не более 5.  
+1.  Максимальная длина поля в символах (для **адварчар** и **адварвчар**) или в байтах (для **адварбинари**и **адварнумерик**), если поле имеет определенную длину. Например, поле **адварчар (5)** имеет максимальную длину 5.  
   
-2.  Максимальная длина типа данных в символах (для **adChar** и **adWChar**) или в байтах (для **adBinary** и **adNumeric**) Если поле не имеет определенной длины.  
+2.  Максимальная длина типа данных в символах (для **адчар** и **адвчар**) или в байтах (для **адбинари** и **аднумерик**), если поле не имеет определенной длины.  
   
-3.  ~ 0 (побитовое, значение 0; все биты установлены в значение 1) Если определена максимальная длина поля, ни тип данных.  
+3.  ~ 0 (побитовое значение не равно 0; все биты установлены в 1), если ни поле, ни тип данных не имеют определенной максимальной длины.  
   
-4.  Для типов данных, которые не имеют длину, это имеет значение ~ 0 (побитовое, значение 0; все биты установлены в значение 1).  
+4.  Для типов данных, длина которых не превышает длину, для этого параметра задано значение ~ 0 (битовая, а не 0, все биты установлены в 1).  
   
-## <a name="remarks"></a>Примечания  
- Используйте **DefinedSize** свойства, чтобы определить объем данных **поле** объекта.  
+## <a name="remarks"></a>Remarks  
+ Используйте свойство **DefinedSize** , чтобы определить емкость данных для объекта **поля** .  
   
- **DefinedSize** и [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) свойства отличаются. Например, рассмотрим **поле** объект с объявленным типом **adVarChar** и **DefinedSize** значение 50, содержащей один символ. **ActualSize** он возвращает значение свойства имеет длину в байтах один символ.  
+ Свойства **DefinedSize** и [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) различаются. Например, рассмотрим объект **field** с объявленным типом **адварчар** и значением свойства **DefinedSize** 50, содержащим один символ. Возвращаемое значение свойства **ActualSize** — это длина в байтах одного символа.  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  [Объект Field](../../../ado/reference/ado-api/field-object.md)  
   
-## <a name="see-also"></a>См. также  
- [Примеры ActualSize и Definedsize свойства (Visual Basic)](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vb.md)   
- [Примеры ActualSize и Definedsize свойства (Visual C++)](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vc.md)   
+## <a name="see-also"></a>См. также:  
+ [Примеры свойств ActualSize и DefinedSize (Visual Basic)](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vb.md)   
+ [Пример свойств ActualSize и DefinedSize (Visual c++)](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vc.md)   
  [Свойство ActualSize (ADO)](../../../ado/reference/ado-api/actualsize-property-ado.md)

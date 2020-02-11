@@ -14,14 +14,14 @@ ms.assetid: 0349bd4e-f402-4a69-b215-046210a433de
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7fd473dc750251bd93dbda97d270e3878d8cac1f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67948846"
 ---
 # <a name="sqltransact-text-file-driver"></a>SQLTransact (драйвер для текстовых файлов)
 > [!NOTE]  
->  В этом разделе сведения конкретного драйвера текстовый файл. Общие сведения об этой функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  В этом разделе содержатся сведения, относящиеся к драйверам текстовых файлов. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Эта функция поддерживает параметром SQL_COMMIT, но не SQL_ROLLBACK.
+ Эта функция поддерживает SQL_COMMIT, но не SQL_ROLLBACK.

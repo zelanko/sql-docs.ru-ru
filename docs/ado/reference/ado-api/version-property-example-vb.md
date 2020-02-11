@@ -15,24 +15,24 @@ ms.assetid: 708efd50-2905-4168-b7e4-91b2e9b23539
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 023ee009831cb3576691f0af5dfb85752d51fcc1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938747"
 ---
 # <a name="version-property-example-vb"></a>Пример свойства Version (Visual Basic)
-В этом примере используется [версии](../../../ado/reference/ado-api/version-property-ado.md) свойство [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объект для отображения текущей версии ADO. Он также использует несколько динамических свойств для отображения:  
+В этом примере свойство [Version](../../../ado/reference/ado-api/version-property-ado.md) объекта [Connection](../../../ado/reference/ado-api/connection-object-ado.md) используется для вывода текущей версии ADO. Он также использует несколько динамических свойств для отображения:  
   
--   Текущее имя СУБД и версия.  
+-   Текущее имя и версия СУБД.  
   
 -   Версия OLE DB.  
   
--   Имя поставщика и версия.  
+-   имя и версия поставщика.  
   
 -   Версия ODBC.  
   
--   Имя драйвера ODBC и версия.  
+-   Имя и версия драйвера ODBC.  
   
 ```  
 'BeginVersionVB  
@@ -77,6 +77,6 @@ End Sub
 'EndVersionVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Свойство Version (ADO)](../../../ado/reference/ado-api/version-property-ado.md)

@@ -1,5 +1,5 @@
 ---
-title: sys.external_language_files (Transact-SQL) — SQL Server | Документация Майкрософт
+title: sys. external_language_files (Transact-SQL) — SQL Server | Документация Майкрософт
 ms.custom: ''
 ms.date: 05/22/2019
 ms.prod: sql
@@ -20,34 +20,34 @@ ms.author: negust
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 0d1325311ef0b708f5a3abd5f4494e099863efc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65995092"
 ---
-# <a name="sysexternallanguagefiles-transact-sql"></a>sys.external_language_files (Transact-SQL)
+# <a name="sysexternal_language_files-transact-sql"></a>sys. external_language_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Это представление каталога содержит список внешних языковые файлы расширения в базе данных. **R** и **Python** являются зарезервированными именами, поэтому создать внешние языки с такими именами невозможно.
+Это представление каталога содержит список файлов внешних расширений языка в базе данных. **R** и **Python** являются зарезервированными именами, и ни один внешний язык не может быть создан с этими конкретными именами.
 
-При создании внешнего языка из file_spec само расширение и его свойства, перечислены в этом представлении. Это представление будет содержать одну запись для каждого языка, в ОС.
+При создании внешнего языка из file_spec в этом представлении отображаются само расширение и его свойства. В этом представлении будет содержаться одна запись для каждого языка, каждая ОС.
 
-## <a name="sysexternallanguages"></a>sys.external_languages
+## <a name="sysexternal_languages"></a>sys.external_languages
 
-Sys.external_language_files представления каталога перечислены по строке для каждого расширения внешним языком, который, в базе данных. Параметры
+Представление каталога sys. external_language_files содержит строку для каждого расширения внешнего языка в базе данных. Параметры
 
-|Имя столбца |Тип данных | Описание|
+|Имя столбца |Тип данных | Description|
 |------|------|------|
-|external_language_id |ssNoversion | Идентификатор внешнего языка|
-|content|varbinary(max) |Содержимое файла расширения внешних языка|
-|file_name|nvarchar(266)|Имя файла расширения языка|
-|Платформы|tinyint|Идентификатор платформы узла, на котором установлен SQL Server|
-|platform_desc |nvarchar(60)|Имя платформы узла. Допустимые значения: «WINDOWS», «LINUX».|
-|Параметры|nvarchar(4000)|Внешние языковые prameters|
-|environment_variables |nvarchar(4000)|Язык внешних переменных среды|
+|external_language_id |INT | ИДЕНТИФИКАТОР внешнего языка|
+|Содержимое|varbinary(max) |Содержимое файла внешнего расширения языка|
+|file_name|nvarchar (266)|Имя файла расширения языка|
+|платформа|tinyint;|Идентификатор платформы узла, на которой установлен SQL Server|
+|platform_desc |nvarchar(60)|Имя платформы узла. Допустимые значения: "WINDOWS", "LINUX".|
+|parameters|nvarchar(4000)|Внешний язык праметерс|
+|environment_variables |nvarchar(4000)|Переменные среды внешнего языка|
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
 
 + [sys.external_languages](sys-external-languages-transact-sql.md)  
 + [СОЗДАТЬ ВНЕШНИЙ ЯЗЫК](../../t-sql/statements/create-external-language-transact-sql.md)  

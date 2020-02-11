@@ -1,5 +1,5 @@
 ---
-title: Редактор источника ODBC (страница "Вывод ошибок") | Документация Майкрософт
+title: Редактор источника «ODBC» (страница «вывод ошибок») | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b19a94e71eaef45184c1777ce299809b2b2d7f8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057132"
 ---
 # <a name="odbc-source-editor-error-output-page"></a>Редактор источника «ODBC» (страница «Вывод ошибок»)
@@ -25,7 +25,7 @@ ms.locfileid: "66057132"
  Дополнительные сведения об источнике ODBC см. в разделе [CDC Source](data-flow/cdc-source.md).  
   
 ## <a name="task-list"></a>Список задач  
- **Открытие страницы «Вывод ошибок» редактора источника ODBC**  
+ **Открытие страницы «вывод ошибок» редактора источника ODBC**  
   
 -   В среде [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]откройте пакет служб [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] , содержащий источник ODBC.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66057132"
 ### <a name="truncation"></a>Усечение  
  Выберите порядок обработки усечений в потоке источником ODBC: пропустить ошибку, перенаправить строку или вызвать сбой компонента.  
   
-### <a name="description"></a>Описание  
+### <a name="description"></a>Description  
  Не используется.  
   
 ### <a name="set-this-value-to-selected-cells"></a>Присвоить указанное значение выбранным ячейкам  
@@ -60,7 +60,7 @@ ms.locfileid: "66057132"
  Следующие параметры позволяют настроить обработку ошибок и усечений источником ODBC.  
   
 ### <a name="fail-component"></a>Компонент, завершившийся сбоем  
- Задача потока данных заканчивается сбоем, если возникли ошибка или усечение. Это поведение по умолчанию.  
+ Задача потока данных заканчивается сбоем, если возникли ошибка или усечение. Такая реакция на события используется по умолчанию.  
   
 ### <a name="ignore-failure"></a>Пропуск неудачи  
  Ошибка или усечение пропускается.  
@@ -68,8 +68,8 @@ ms.locfileid: "66057132"
 ### <a name="redirect-flow"></a>Перенаправление потока  
  Строка, вызывающая ошибку или усечение, направляется на вывод ошибок источника ODBC. Дополнительные сведения см. в статье [ODBC Source](data-flow/odbc-source.md).  
   
-## <a name="see-also"></a>См. также  
- [Редактор источника ODBC (страница "Диспетчер соединений")](../../2014/integration-services/odbc-source-editor-connection-manager-page.md)   
- [Редактор источника ODBC (страница "Столбцы")](../../2014/integration-services/odbc-source-editor-columns-page.md)  
+## <a name="see-also"></a>См. также:  
+ [Редактор источника ODBC &#40;страница "Диспетчер соединений"&#41;](../../2014/integration-services/odbc-source-editor-connection-manager-page.md)   
+ [Редактор источника «ODBC» &#40;столбцы&#41;](../../2014/integration-services/odbc-source-editor-columns-page.md)  
   
   

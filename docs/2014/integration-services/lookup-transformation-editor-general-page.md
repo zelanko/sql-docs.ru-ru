@@ -1,5 +1,5 @@
 ---
-title: Редактор преобразования Уточняющий запрос (страница "Общие") | Документация Майкрософт
+title: Редактор преобразования "Уточняющий запрос" (страница "Общие") | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cb83e95bd13b566f46386cf10676ee882a954762
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057841"
 ---
 # <a name="lookup-transformation-editor-general-page"></a>Редактор преобразования «Уточняющий запрос» (страница «Общие»)
@@ -31,13 +31,13 @@ ms.locfileid: "66057841"
  **Частичное кэширование**  
  При выполнении преобразования «Уточняющий запрос» — создать эталонный набор данных. Загружать в кэш строки с совпадающими записями в эталонном наборе данных и строки без совпадающих записей в наборе данных.  
   
- **Без кэширования**  
+ **Нет кэша**  
  При выполнении преобразования «Уточняющий запрос» — создать эталонный набор данных. Данные в кэш не загружаются.  
   
- **диспетчер соединений с кэшем**  
+ **Диспетчер соединений с кэшем**  
  Настроить преобразование «Уточняющий запрос» на использование диспетчера соединений с кэшем. Этот параметр доступен только в случае, если выбран параметр «Полное кэширование».  
   
- **Диспетчер соединений OLE DB**  
+ **Диспетчер подключений OLE DB**  
  Настроить преобразование «Уточняющий запрос» на использование диспетчера соединений OLE DB.  
   
  **Метод обработки строк без совпадающих элементов**  
@@ -50,11 +50,11 @@ ms.locfileid: "66057841"
 ## <a name="external-resources"></a>Внешние ресурсы  
  Запись в блоге [Режимы кэша уточняющих запросов](https://go.microsoft.com/fwlink/?LinkId=219518) на сайте blogs.msdn.com  
   
-## <a name="see-also"></a>См. также  
- [Cache Connection Manager](connection-manager/cache-connection-manager.md)   
- [Редактор преобразования "Уточняющий запрос" (страница "Соединение")](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
- [Редактор преобразования "Уточняющий запрос" (страница "Столбцы")](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   
- [Редактор преобразования "Уточняющий запрос" (страница "Дополнительно")](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
- [Редактор преобразования "Уточняющий запрос" (страница "Вывод ошибок")](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)  
+## <a name="see-also"></a>См. также:  
+ [Диспетчер соединений с кэшем](connection-manager/cache-connection-manager.md)   
+ [Редактор преобразования "Уточняющий запрос" &#40;страница подключения&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
+ [Редактор преобразования «Уточняющий запрос» &#40;столбцов&#41;](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   
+ [Редактор преобразования "Уточняющий запрос" &#40;страница "Дополнительно"&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
+ [Редактор преобразования "Уточняющий запрос" &#40;страница "вывод ошибок"&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)  
   
   

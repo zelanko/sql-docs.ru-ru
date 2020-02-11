@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 18318775c63cd7126686154dec2ee1f02733763f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060638"
 ---
 # <a name="configure-error-output"></a>Настройка вывода ошибок
@@ -44,13 +44,13 @@ ms.locfileid: "66060638"
  **Описание**  
  Просмотрите описание операции.  
   
- **Присвоить указанное значение выбранным ячейкам**  
+ **Присвоить это значение выбранным ячейкам**  
  Укажите действие, которое необходимо применить ко всем выбранным ячейкам при возникновении ошибки или усечения: пропустить ошибку, перенаправить строку или вызвать сбой компонента.  
   
  **Применить**  
  Применить параметр обработки ошибок к выбранным ячейкам.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

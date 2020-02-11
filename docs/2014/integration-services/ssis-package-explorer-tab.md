@@ -1,5 +1,5 @@
 ---
-title: Вкладка «Обозреватель» пакета служб SSIS | Документация Майкрософт
+title: Вкладка "Обозреватель пакетов служб SSIS" | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ab5c3112bfeddd41c9c877365e36780e32b4241e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055391"
 ---
 # <a name="ssis-package-explorer-tab"></a>Вкладка «Обозреватель пакетов служб SSIS»
@@ -24,8 +24,8 @@ ms.locfileid: "66055391"
   
  Щелкните правой кнопкой мыши элемент пакета, затем щелкните **Свойства** для отображения свойств элемента в окне **Свойства** или нажмите кнопку **Удалить** для того, чтобы удалить элемент.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Просмотр объектов пакета](view-package-objects.md)   
- [Конструктор служб SSIS](ssis-designer.md)  
+ [конструктор служб SSIS](ssis-designer.md)  
   
   

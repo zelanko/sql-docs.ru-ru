@@ -1,5 +1,5 @@
 ---
-title: Урок 2. Настройка разрешений на объекты базы данных | Документация Майкрософт
+title: Урок 2. Настройка разрешений для объектов базы данных | Документы Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 940b33cda3158e98c9fee519ea12f1193e615bca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62642587"
 ---
-# <a name="lesson-2-configuring-permissions-on-database-objects"></a>Урок 2. Настройка разрешений для объектов базы данных
+# <a name="lesson-2-configuring-permissions-on-database-objects"></a>Занятие 2. Настройка разрешений на объекты базы данных
   Предоставление пользователю доступа к базе данных включает три шага. Вначале создается имя входа. Имя входа дает пользователю возможность подключиться к компоненту [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]. Затем имя входа настраивается как пользователь в заданной базе данных. Наконец, предоставляются пользовательские разрешения на объекты базы данных. В этом занятии показаны все три шага, а также создание представления и хранимой процедуры в виде объекта.  
   
  Это занятие содержит следующие разделы:  

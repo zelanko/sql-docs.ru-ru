@@ -1,5 +1,5 @@
 ---
-title: Выполнение массовой загрузки XML-данных (SQLXML 4.0) | Документация Майкрософт
+title: Выполнение групповой загрузки XML-данных (SQLXML 4,0) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,35 +19,35 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 09f8c1cf3b6c9226dc87a0a95c57f4c5719f0d03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013369"
 ---
 # <a name="performing-bulk-load-of-xml-data-sqlxml-40"></a>Выполнение массовой загрузки XML-данных (SQLXML 4.0)
   Массовая загрузка XML является самостоятельным объектом COM, который позволяет загрузить частично структурированные XML-данные в таблицы Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="in-this-section"></a>в этом разделе  
- [Общие сведения о массовой загрузке XML &#40;SQLXML 4.0&#41;](introduction-to-xml-bulk-load-sqlxml-4-0.md)  
+ [Общие сведения о групповой загрузке XML &#40;SQLXML 4,0&#41;](introduction-to-xml-bulk-load-sqlxml-4-0.md)  
  Содержит основные сведения о массовой загрузке XML-данных при помощи программы XML Bulk Load. Разделы включают в себя описание потоковых XML-данных, а также синхронные и асинхронные операции массовой загрузки.  
   
- [Процесс создания записей &#40;SQLXML 4.0&#41;](record-generation-process-sqlxml-4-0.md)  
+ [Процесс создания записей &#40;SQLXML 4,0&#41;](record-generation-process-sqlxml-4-0.md)  
  Содержит описание процесса и правил, посредством которых создаются записи для массовой загрузки XML.  
   
- [Интерпретация заметки &#40;SQLXML 4.0&#41;](annotation-interpretation-sqlxml-4-0.md)  
+ [Интерпретация аннотации &#40;SQLXML 4,0&#41;](annotation-interpretation-sqlxml-4-0.md)  
  Содержит описание того, как массовая загрузка XML интерпретирует заметки в схемах XSD и XDR.  
   
- [Модель объектов массовой загрузки SQL Server XML &#40;SQLXML 4.0&#41;](sql-server-xml-bulk-load-object-model-sqlxml-4-0.md)  
- Описывает свойство sqlxmlbulkload и его методам и свойствам.  
+ [SQL Server модели объектов XML для групповой загрузки &#40;SQLXML 4,0&#41;](sql-server-xml-bulk-load-object-model-sqlxml-4-0.md)  
+ Описывает объект Склксмлбулклоад, его методы и свойства.  
   
- [Примеры массовой загрузки XML &#40;SQLXML 4.0&#41;](xml-bulk-load-examples-sqlxml-4-0.md)  
+ [Примеры групповой загрузки XML &#40;SQLXML 4,0&#41;](xml-bulk-load-examples-sqlxml-4-0.md)  
  Содержит пример кода, использующего массовую загрузку XML.  
   
- [Типы данных и XML массового поведение при загрузке &#40;SQLXML 4.0&#41;](data-types-and-xml-bulk-load-behavior-sqlxml-4-0.md)  
+ [Типы данных и поведение при выполнении групповой загрузки XML &#40;SQLXML 4,0&#41;](data-types-and-xml-bulk-load-behavior-sqlxml-4-0.md)  
  Содержит описание поведения массовой загрузки XML при различных типах в XSD и XDR.  
   
- [Рекомендации и ограничения XML-кода, выполнить массовую загрузку &#40;SQLXML 4.0&#41;](guidelines-and-limitations-of-xml-bulk-load-sqlxml-4-0.md)  
+ [Рекомендации и ограничения для групповой загрузки XML &#40;SQLXML 4,0&#41;](guidelines-and-limitations-of-xml-bulk-load-sqlxml-4-0.md)  
  Содержит список проблем, которые необходимо учитывать при работе с массовой загрузкой XML.  
   
   

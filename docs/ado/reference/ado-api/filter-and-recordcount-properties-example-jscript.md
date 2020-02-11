@@ -1,5 +1,5 @@
 ---
-title: Filter и свойств RecordCount (JScript) | Документация Майкрософт
+title: Пример свойств Filter и RecordCount (JScript) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 677fa67e-9cb9-4d7d-a786-beeb5bee5236
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0832ddbbb16c54ee62c8fcec8749aeadb4f98449
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932654"
 ---
-# <a name="filter-and-recordcount-properties-example-jscript"></a>Filter и свойств RecordCount (JScript)
-В этом примере открывается **записей** компаний таблицы базы данных "Борей", а затем использует [фильтра](../../../ado/reference/ado-api/filter-property.md) свойства для ограничения записей отображается до тех, где поле CompanyName начинается с буквы Г., вырезать и вставить следующий код в блокноте или другом текстовом редакторе и сохраните его в **FilterJS.asp**.  
+# <a name="filter-and-recordcount-properties-example-jscript"></a>Пример свойств Filter и RecordCount (JScript)
+Этот пример открывает **набор записей** в таблице компании базы данных Northwind, а затем использует свойство [Filter](../../../ado/reference/ado-api/filter-property.md) для ограничения записей, видимых для тех, где поле CompanyName начинается с буквы D. вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **филтержс. ASP**.  
   
 ```  
 <!-- BeginFilterJS -->  
@@ -148,7 +148,7 @@ BODY {
 <!-- EndFilterJS -->  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Свойство фильтра](../../../ado/reference/ado-api/filter-property.md)   
+## <a name="see-also"></a>См. также:  
+ [Свойство Filter](../../../ado/reference/ado-api/filter-property.md)   
  [Свойство RecordCount (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

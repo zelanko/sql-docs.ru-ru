@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b038c1132cf8c1ccd31da2a5a1e2a600f2505624
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011958"
 ---
 # <a name="humanresourcesmyteam-sample-table-sql-server"></a>Образец таблицы HumanResources.myTeam (SQL Server)
@@ -29,14 +29,14 @@ ms.locfileid: "66011958"
   
  Таблица **myTeam** содержит следующие столбцы.  
   
-|Столбец|Тип данных|Допускает значения NULL|Описание|  
+|Столбец|Тип данных|Допускает значения NULL|Description|  
 |------------|---------------|-----------------|-----------------|  
 |**EmployeeID**|`smallint`|Нет|Первичный ключ для строк таблицы. Идентификатор сотрудника — члена команды.|  
-|**Name**|`nvarchar(50)`|Нет|Имя члена команды.|  
-|**Title**|`nvarchar(50)`|Допускает значения NULL|Должность, которую сотрудник занимает в команде.|  
+|**Название**|`nvarchar(50)`|Нет|Имя члена команды.|  
+|**Title**|`nvarchar(50)`|Nullable|Должность, которую сотрудник занимает в команде.|  
 |**Историческая справка**|`nvarchar(50)`|Нет|Дата и время последнего обновления строки (по умолчанию)|  
   
- **Для создания таблицы HumanResources.myTeam**  
+ **Создание HumanResources. myTeam**  
   
 -   Используйте следующие инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66011958"
     GO  
     ```  
   
- **Для заполнения таблицы HumanResources.myTeam**  
+ **Заполнение HumanResources. myTeam**  
   
 -   Чтобы вставить в таблицу две строки, выполните следующие инструкции `INSERT` .  
   
@@ -71,7 +71,7 @@ ms.locfileid: "66011958"
     > [!NOTE]  
     >  В этих инструкциях пропущен четвертый столбец таблицы `Background`. У него есть значение по умолчанию. Если не указывать этот столбец в инструкции `INSERT` , поле останется пустым.  
   
-## <a name="see-also"></a>См. также  
- [Массовый импорт и экспорт данных (SQL Server)](bulk-import-and-export-of-data-sql-server.md)  
+## <a name="see-also"></a>См. также:  
+ [Групповой импорт и экспорт SQL Server &#40;данных&#41;](bulk-import-and-export-of-data-sql-server.md)  
   
   

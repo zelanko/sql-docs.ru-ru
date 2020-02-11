@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 80c5c5b2f4e6d4f691b7c3977ae2f715f5424e7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011693"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>Пропуск столбца таблицы с помощью файла форматирования (SQL Server)
@@ -66,7 +66,7 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c
   
  Следующая иллюстрация показывает значения в образцах файлов форматирования по умолчанию. Иллюстрация также показывает имя каждого поля файла форматирования.  
   
- ![Файл форматирования по умолчанию для myTestSkipCol, в формате, отличном от XML](../../database-engine/media/mytestskipcol-f-c-default-fmt.gif "Файл форматирования по умолчанию для myTestSkipCol, в формате, отличном от XML")  
+ ![файл форматирования по умолчанию в формате, отличном от XML, для myTestSkipCol](../../database-engine/media/mytestskipcol-f-c-default-fmt.gif "файл форматирования по умолчанию в формате, отличном от XML, для myTestSkipCol")  
   
 > [!NOTE]  
 >  Дополнительные сведения о файлах форматирования в формате, отличном от XML, см. в разделе [Файлы формата, отличные от XML (SQL Server)](xml-format-files-sql-server.md).  
@@ -89,7 +89,7 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c
   
      Для значения поля «порядковый номер столбца на сервере» необходима непустая строка, хотя действительное имя столбца не требуется. Для оставшихся полей форматирования требуются значения по умолчанию.  
   
-     Следующий пример основан на файле форматирования по умолчанию для таблицы `myTestSkipCol`. Значения, которые должны быть равны 0 или NULL, выделены полужирным шрифтом.  
+     Следующий пример основан на файле форматирования по умолчанию для таблицы `myTestSkipCol` . Значения, которые должны быть равны 0 или NULL, выделены полужирным шрифтом.  
   
     ```  
     9.0  
@@ -124,7 +124,7 @@ GO
  INSERT ...<список_столбцов> SELECT <список_столбцов> FROM OPENROWSET(BULK...)  
   
 ### <a name="creating-a-default-xml-format-file"></a>Создание XML-файла форматирования по умолчанию  
- Следующие примеры измененных файлов форматирования базируются на образце таблицы `myTestSkipCol` и файла данных, созданных в подразделе «Образец таблицы и файла данных» ранее в этом разделе. Следующая команда **bcp`myTestSkipCol` создает XML-файл форматирования по умолчанию для таблицы** .  
+ Следующие примеры измененных файлов форматирования базируются на образце таблицы `myTestSkipCol` и файла данных, созданных в подразделе «Образец таблицы и файла данных» ранее в этом разделе. Следующая команда **bcp** создает XML-файл форматирования по умолчанию для таблицы `myTestSkipCol`.  
   
 ```  
 bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c -x -T  
@@ -204,12 +204,12 @@ WITH (FORMATFILE='C:\myTestSkipCol2.xml');
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql)   
- [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql)   
- [Использование файла форматирования для пропуска поля данных (SQL Server)](use-a-format-file-to-skip-a-data-field-sql-server.md)   
- [Использование файла форматирования для сопоставления столбцов таблицы полям файла данных (SQL Server)](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)   
- [Использование файла форматирования для массового импорта данных (SQL Server)](use-a-format-file-to-bulk-import-data-sql-server.md)  
+ [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
+ [Используйте файл форматирования для пропуска поля данных &#40;SQL Server&#41;](use-a-format-file-to-skip-a-data-field-sql-server.md)   
+ [Используйте файл форматирования для преобразования столбцов таблицы в поля файла данных &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)   
+ [Использование файла форматирования для SQL Server &#40;данных при выполнении операций импорта&#41;](use-a-format-file-to-bulk-import-data-sql-server.md)  
   
   

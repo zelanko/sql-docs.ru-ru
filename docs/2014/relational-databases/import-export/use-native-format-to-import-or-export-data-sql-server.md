@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a2e91899172dfc6d640df0c33c77e32de3c1c21c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011660"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>Использование собственного формата для импорта или экспорта данных
@@ -57,12 +57,12 @@ ms.locfileid: "66011660"
   
 -   Данные типа `char` или `varchar`.  
   
-     В начале каждого `char` или `varchar` поле **bcp** добавляет длину префикса.  
+     В начале каждого `char` поля или `varchar` программа **bcp** добавляет длину префикса.  
   
     > [!IMPORTANT]  
-    >  По умолчанию при использовании собственного режима программа **bcp** перед копированием в файл данных преобразует символы из формата [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в символы OEM. Программа **bcp** преобразует символы из файла данных в символы ANSI перед их массовым импортом в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Во время подобных преобразований расширенные символьные данные могут быть потеряны. Для расширенных наборов символов необходимо либо использовать собственный формат в Юникоде, либо задать кодовую страницу.  
+    >  Когда используется собственный режим, программа **bcp** по умолчанию преобразует символы из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в символы OEM перед их копированием в файл данных. Программа **bcp** преобразует символы из файла данных в символы ANSI перед их массовым импортом в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблицу. Во время подобных преобразований расширенные символьные данные могут быть потеряны. Для расширенных наборов символов необходимо либо использовать собственный формат в Юникоде, либо задать кодовую страницу.  
   
--   Данные `sql_variant`.  
+-   `sql_variant`Data  
   
      Если данные типа `sql_variant` сохраняются как SQLVARIANT в файле данных в собственном формате, то все характеристики данных сохраняются. Метаданные, в которых записан тип данных каждой величины, записываются вместе со значениями данных. Эти метаданные используются для повторного создания значений данных с тем же типом данных, как и в столбце назначения `sql_variant`.  
   
@@ -71,18 +71,18 @@ ms.locfileid: "66011660"
      Дополнительные сведения о преобразовании данных см. в статье [Преобразование типов данных (ядро СУБД)](/sql/t-sql/data-types/data-type-conversion-database-engine).  
   
 ## <a name="command-options-for-native-format"></a>Параметры командной строки для собственного формата  
- Импортировать в таблицу данные в собственном формате можно с помощью программы **bcp** или с помощью инструкции BULK INSERT или INSERT... ВЫБЕРИТЕ \* FROM OPENROWSET(BULK...). Для команды **bcp** или инструкции BULK INSERT формат данных можно указать в командной строке. Для инструкции INSERT ... SELECT * FROM OPENROWSET(BULK...) нужно указать формат данных в файле форматирования.  
+ Данные собственного формата можно импортировать в таблицу с помощью программы **bcp**, BULK INSERT или INSERT... Выбор \* из OPENROWSET (BULK...). Для команды **bcp** или инструкции BULK INSERT можно указать формат данных в командной строке. Для инструкции INSERT ... SELECT * FROM OPENROWSET(BULK...) нужно указать формат данных в файле форматирования.  
   
  Собственный формат поддерживается следующими параметрами командной строки:  
   
-|Command|Параметр|Описание|  
+|Get-Help|Параметр|Description|  
 |-------------|------------|-----------------|  
-|**bcp**|**-n**|Вызывает **bcp** служебной программы для использования собственных типов данных.<sup> 1</sup>|  
-|BULK INSERT|DATAFILETYPE **='** native **'**|Использует собственный тип данных или расширенный собственный тип данных. Учтите, что параметр DATAFILETYPE не нужен, если типы данных указываются в файле форматирования.|  
+|**bcp**|**-n**|Заставляет служебную программу **bcp** использовать собственные типы данных. <sup>1</sup>|  
+|BULK INSERT|DATAFILETYPE **= "** Native **"**|Использует собственный тип данных или расширенный собственный тип данных. Учтите, что параметр DATAFILETYPE не нужен, если типы данных указываются в файле форматирования.|  
   
- <sup>1</sup> Чтобы загрузить собственные ( **- n**) данные в формате, совместимом с более ранними версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] клиентов необходимо использовать **-V** переключения. Дополнительные сведения см. в разделе [Импорт данных в собственном и символьном формате из предыдущих версий SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
+ <sup>1</sup> чтобы загрузить собственные (**-n**) данные в формате, совместимом с предыдущими [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версиями клиентов, используйте параметр **-V** . Дополнительные сведения см. в разделе [Импорт данных в собственном и символьном формате из предыдущих версий SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
   
- Дополнительные сведения см. в статьях [Программа bcp](../../tools/bcp-utility.md), [BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql) и [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql).  
+ Дополнительные сведения см. в статьях [Программа bcp](../../tools/bcp-utility.md), [BULK INSERT (SQL Server)](/sql/t-sql/statements/bulk-insert-transact-sql) и [OPENROWSET (SQL Server)](/sql/t-sql/functions/openrowset-transact-sql).  
   
 > [!NOTE]  
 >  Также в файле форматирования можно указать форматирование для каждого поля. Дополнительные сведения см в разделе [Файлы форматирования для импорта или экспорта данных (SQL Server)](format-files-for-importing-or-exporting-data-sql-server.md).  
@@ -118,12 +118,12 @@ SELECT Col1,Col2,Col3 FROM myTestNativeData
 ### <a name="using-bcp-to-bulk-export-native-data"></a>Массовый экспорт собственных данных с помощью программы bcp  
  Чтобы экспортировать данные из таблицы в файл данных, используйте команду **bcp** с параметром **out** и следующими квалификаторами:  
   
-|Квалификаторы|Описание|  
+|Квалификаторы|Description|  
 |----------------|-----------------|  
 |**-n**|Указывает собственные типы данных.|  
 |**-T**|Указывает, что программа **bcp** устанавливает доверительное соединение с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с использованием встроенной безопасности. Если параметр **-T** не указан, для входа необходимо указать **-U** и **-P** .|  
   
- В следующем примере показан массовый экспорт данных в собственном формате из таблицы `myTestNativeData` в новый файл данных с именем `myTestNativeData-n.Dat`. В командной строке [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows введите:  
+ В следующем примере показан массовый экспорт данных в собственном формате из таблицы `myTestNativeData` в новый файл данных с именем `myTestNativeData-n.Dat` . В командной строке [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows введите:  
   
 ```  
 bcp AdventureWorks..myTestNativeData out C:\myTestNativeData-n.Dat -n -T  
@@ -150,19 +150,19 @@ GO
   
 -   [Импорт данных в собственном и символьном формате из предыдущих версий SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
--   [Использование символьного формата для импорта и экспорта данных (SQL Server)](use-character-format-to-import-or-export-data-sql-server.md)  
+-   [Используйте символьный формат для импорта или экспорта &#40;данных SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
   
--   [Использование символьного формата Юникод для импорта и экспорта данных (SQL Server)](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
+-   [Используйте символьный формат Юникода для импорта или экспорта &#40;данных SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
--   [Использование собственного формата Юникод для импорта и экспорта данных (SQL Server)](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
+-   [Используйте собственный формат Юникода для импорта или экспорта &#40;данных SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
 ## <a name="see-also"></a>См. также:  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql)   
- [Типы данных (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql)   
- [sql_variant (Transact-SQL)](/sql/t-sql/data-types/sql-variant-transact-sql)   
- [Импорт данных в собственном и символьном формате из предыдущих версий SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)   
- [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql)   
- [Использование собственного формата Юникод для импорта и экспорта данных (SQL Server)](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
+ [Типы данных &#40;&#41;Transact-SQL](/sql/t-sql/data-types/data-types-transact-sql)   
+ [sql_variant &#40;Transact-SQL&#41;](/sql/t-sql/data-types/sql-variant-transact-sql)   
+ [Импорт данных в собственном и символьном формате из более ранних версий SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)   
+ [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
+ [Используйте собственный формат Юникода для импорта или экспорта &#40;данных SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
   

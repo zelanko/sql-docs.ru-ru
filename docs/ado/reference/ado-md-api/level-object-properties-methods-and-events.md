@@ -1,5 +1,5 @@
 ---
-title: Объект свойства, методы и события на уровне | Документация Майкрософт
+title: Свойства, методы и события объекта Level | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,10 +13,10 @@ ms.assetid: fdff70b0-95d0-447f-9359-97b8d159420d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 52008fa75b70bfb4c4b3ea3d25ef1d6fe6977142
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949617"
 ---
 # <a name="level-object-properties-methods-and-events"></a>Свойства, методы и события объекта Level
@@ -27,13 +27,13 @@ ms.locfileid: "67949617"
   
  [Свойство Description](../../../ado/reference/ado-md-api/description-property-ado-md.md)  
   
- [Элементы коллекции](../../../ado/reference/ado-md-api/members-collection-ado-md.md)  
+ [Коллекция members](../../../ado/reference/ado-md-api/members-collection-ado-md.md)  
   
  [Свойство Name](../../../ado/reference/ado-md-api/name-property-ado-md.md)  
   
- [Свойства коллекции](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [Коллекция Properties](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
- [Свойство UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)  
+ [UniqueName, свойство](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)  
   
 ## <a name="methods"></a>Методы  
  Нет.  
@@ -41,5 +41,5 @@ ms.locfileid: "67949617"
 ## <a name="events"></a>События  
  Нет.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Level (многомерные объекты ADO)](../../../ado/reference/ado-md-api/level-object-ado-md.md)

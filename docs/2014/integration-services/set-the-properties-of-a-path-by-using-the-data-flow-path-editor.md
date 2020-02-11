@@ -1,5 +1,5 @@
 ---
-title: Задание свойств пути, используя редактор пути потока данных | Документация Майкрософт
+title: Задание свойств пути с помощью редактора пути потока данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1172143ebfa44deb19d15bf596db1df0e9399ed0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055724"
 ---
 # <a name="set-the-properties-of-a-path-by-using-the-data-flow-path-editor"></a>Задание свойств пути с помощью редактора пути потока данных
@@ -36,8 +36,8 @@ ms.locfileid: "66055724"
   
 6.  Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
-## <a name="see-also"></a>См. также  
- [Пути служб Integration Services](data-flow/integration-services-paths.md)   
+## <a name="see-also"></a>См. также:  
+ [Пути Integration Services](data-flow/integration-services-paths.md)   
  [Поток данных](data-flow/data-flow.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Ограничения SELECT DISTINCT | Документация Майкрософт
+title: Выберите ограничения DISTINCT | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,11 +14,11 @@ ms.assetid: c8896e28-af94-46e6-bc3f-1af657e38462
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 69a69e43bd98e9421e3197439c9f0376884c23ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67987892"
 ---
 # <a name="select-distinct-limitations"></a>Ограничения SELECT DISTINCT
-Ключевое слово DISTINCT не применяется к двоичных данных.
+Ключевое слово DISTINCT не применяется к двоичным данным.

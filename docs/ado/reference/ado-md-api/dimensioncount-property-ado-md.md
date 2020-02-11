@@ -1,5 +1,5 @@
 ---
-title: Свойство DimensionCount (многомерные Объекты ADO) | Документация Майкрософт
+title: Свойство DimensionCount (объекты данных ActiveX (MD)) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,21 +17,21 @@ ms.assetid: 87929cbc-9c38-491a-8616-62d45c51e299
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8ccb2ae99761ecfa1fc52cef44e4cf35a5600531
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938498"
 ---
 # <a name="dimensioncount-property-ado-md"></a>Свойство DimensionCount (многомерные объекты ADO)
-Указывает число измерений в [оси](../../../ado/reference/ado-md-api/axis-object-ado-md.md).  
+Указывает количество измерений на [оси](../../../ado/reference/ado-md-api/axis-object-ado-md.md).  
   
 ## <a name="return-values"></a>Возвращаемые значения  
- Возвращает **Long** целое число и только для чтения.  
+ Возвращает **длинное** целое число и доступно только для чтения.  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  [Объект Axis (многомерные объекты ADO)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)  
   
-## <a name="see-also"></a>См. также  
- [Пример объекта Axis (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
+## <a name="see-also"></a>См. также:  
+ [Пример оси (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
  [Объект Dimension (многомерные объекты ADO)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)

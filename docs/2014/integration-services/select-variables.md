@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 89e166be7ee2100945cc430a78e725630b1e8f6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055919"
 ---
 # <a name="select-variables"></a>Выбор переменных
@@ -40,9 +40,9 @@ ms.locfileid: "66055919"
  **Создать переменную**  
  Создать новую переменную.  
   
- **См. также:** [Добавить переменную](../../2014/integration-services/add-variable.md)  
+ **См. также:** [Добавление переменной](../../2014/integration-services/add-variable.md)  
   
-## <a name="see-also"></a>См. также  
- [Задача «Очередь сообщений»](control-flow/message-queue-task.md)  
+## <a name="see-also"></a>См. также:  
+ [Message Queue Task](control-flow/message-queue-task.md)  
   
   

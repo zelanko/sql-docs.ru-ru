@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: f0e587e4c87b8d209c86476b1500ca6bbe3d026a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893645"
 ---
 # <a name="assignment-operators"></a>Операторы присваивания
@@ -22,7 +22,7 @@ ms.locfileid: "68893645"
   
  Оператор присваивания используется для присвоения значений вложенным кубам в скрипте многомерных выражений. Дополнительные сведения см. в статье [Основные принципы создания скриптов многомерных выражений (службы Analysis Services)](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services).  
   
-## <a name="see-also"></a>См. также  
- [Синтаксис &#40;операторов многомерных выражений&#41;](../mdx/operators-mdx-syntax.md)  
+## <a name="see-also"></a>См. также:  
+ [Операторы &#40;синтаксиса многомерных выражений&#41;](../mdx/operators-mdx-syntax.md)  
   
   

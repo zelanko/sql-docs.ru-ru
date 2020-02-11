@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e5f7959496cfa2b473fbf5c500f424647df0a1c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060231"
 ---
 # <a name="create-a-deployment-utility"></a>Create a Deployment Utility
@@ -29,7 +29,7 @@ ms.locfileid: "66060231"
   
  В следующей таблице производится перечисление свойств программы развертывания.  
   
-|Свойство|Описание|  
+|Свойство|Description|  
 |--------------|-----------------|  
 |AllowConfigurationChange|Значение, указывающее, возможно ли обновление конфигураций во время развертывания.|  
 |CreateDeploymentUtility|Значение, указывающее, будет ли во время построения пакета производиться создание программы развертывания. Для создания программы развертывания значение свойства должно быть равно `True`.|  
@@ -45,11 +45,11 @@ ms.locfileid: "66060231"
   
 2.  Щелкните правой кнопкой мыши проект и выберите пункт **Свойства**.  
   
-3.  В диалоговом окне **Страницы свойств \<имя проекта>** выберите элемент **Программа развертывания**.  
+3.  В диалоговом окне ** \<страницы свойств "имя проекта>** " щелкните **средство развертывания**.  
   
-4.  Для обновления конфигураций пакета после развертывания пакетов установите **AllowConfigurationChanges** для `True`.  
+4.  Чтобы обновить конфигурации пакетов при развертывании пакетов, задайте **** для `True`AllowConfigurationChanges значение.  
   
-5.  Присвойте параметру `CreateDeploymentUtility` значение `True`.  
+5.  Задайте для параметра `CreateDeploymentUtility` значение `True`.  
   
 6.  При необходимости обновите расположение программы развертывания посредством изменения свойства `DeploymentOutputPath`.  
   
@@ -59,10 +59,10 @@ ms.locfileid: "66060231"
   
 9. Просмотрите ход компоновки и ошибки в окне **Выход** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Конфигурации пакетов](../../2014/integration-services/package-configurations.md)   
- [Создание конфигурации пакетов](../../2014/integration-services/create-package-configurations.md)   
+ [Создание конфигураций пакетов](../../2014/integration-services/create-package-configurations.md)   
  [Развертывание пакетов с помощью программы развертывания](../../2014/integration-services/deploy-packages-by-using-the-deployment-utility.md)   
- [Развертывания пакета &#40;служб SSIS&#41;](packages/legacy-package-deployment-ssis.md)  
+ [Развертывание пакетов &#40;&#41;SSIS](packages/legacy-package-deployment-ssis.md)  
   
   
