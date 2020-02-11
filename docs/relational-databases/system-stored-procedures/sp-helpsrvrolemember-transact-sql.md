@@ -18,13 +18,13 @@ ms.assetid: d0714913-8d6b-4de3-b042-3ae9934f839d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ba1cbbfb95dafaa99a33d95b1d92a9e6e5f4e9a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68010762"
 ---
-# <a name="sphelpsrvrolemember-transact-sql"></a>sp_helpsrvrolemember (Transact-SQL)
+# <a name="sp_helpsrvrolemember-transact-sql"></a>sp_helpsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Возвращает сведения о членах предопределенной роли сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -39,40 +39,40 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @srvrolename = ] 'role'` — Имя предопределенной роли сервера. *роль* — **sysname**, значение по умолчанию NULL. Если *роли*не задан, результирующий набор включает сведения о всех предопределенных ролей сервера.  
+`[ @srvrolename = ] 'role'`Имя предопределенной роли сервера. Аргумент *Role* имеет тип **sysname**и значение по умолчанию NULL. Если *роль*не указана, результирующий набор содержит сведения обо всех предопределенных ролях сервера.  
   
- *роль* может быть любым из следующих значений.  
+ *роль* может иметь любое из следующих значений.  
   
-|Предопределенная роль сервера|Описание|  
+|Предопределенная роль сервера|Description|  
 |-----------------------|-----------------|  
 |sysadmin|Системные администраторы|  
 |securityadmin|Администраторы безопасности.|  
-|serveradmin|Администраторы сервера.|  
+|serveradmin|Администраторы сервера|  
 |setupadmin|Администраторы установки.|  
 |processadmin|Администраторы процесса.|  
 |diskadmin|Администраторы диска.|  
-|dbcreator|Создатели баз данных.|  
+|dbcreator|Создатели баз данных|  
 |bulkadmin|Имеющие разрешение на выполнение инструкции BULK INSERT.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или 1 (неуспешное завершение)  
+ 0 (успех) или 1 (сбой).  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|ServerRole|**sysname**|Имя роли сервера|  
-|MemberName|**sysname**|Имя элемента в "роли сервера"|  
-|MemberSID|**varbinary(85)**|Идентификатор безопасности MemberName|  
+|ServerRole|**имеет sysname**|Имя роли сервера|  
+|MemberName|**имеет sysname**|Имя члена роли ServerRole.|  
+|MemberSID|**varbinary (85)**|Идентификатор защиты члена роли MemberName.|  
   
-## <a name="remarks"></a>Примечания  
- Используйте sp_helprolemember для отображения членов роли базы данных.  
+## <a name="remarks"></a>Remarks  
+ Хранимая процедура sp_helprolemember используется для отображения членов ролей базы данных.  
   
- Все имена входа являются членами public. sp_helpsrvrolemember не распознает роль public, так как внутри системы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не реализует открытый как роль.  
+ Все имена входа являются членами общедоступной версии. sp_helpsrvrolemember не распознает общую роль, так как, внутри [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , не реализует Public как роль.  
   
- Чтобы добавлять или удалять членов ролей сервера, см. в разделе [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
+ Сведения о добавлении или удалении членов из ролей сервера см. в разделе [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
   
- sp_helpsrvrolemember не принимает в качестве аргумента определяемой пользователями серверной роли. Чтобы определить члены определяемой пользователями серверной роли, см. в примерах в [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
+ sp_helpsrvrolemember не принимает определяемую пользователем роль сервера в качестве аргумента. Чтобы определить членов определяемой пользователем роли сервера, см. примеры в статье [ALTER Server role &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется членство в роли public.  
@@ -84,11 +84,11 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 EXEC sp_helpsrvrolemember 'sysadmin';  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_helprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
  [sp_helprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Хранимые процедуры безопасности (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [Функции безопасности &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Функции безопасности &#40;&#41;Transact-SQL](../../t-sql/functions/security-functions-transact-sql.md)  
   
   

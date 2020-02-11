@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 835057cdef6b7d2a336b64480515a5046cfde070
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62875767"
 ---
 # <a name="recover-to-a-log-sequence-number-sql-server"></a>Восстановление до номера LSN (SQL Server)
@@ -38,7 +38,7 @@ ms.locfileid: "62875767"
   
  Каждая запись в журнале транзакций однозначно идентифицируется регистрационным номером транзакции в журнале (номером LSN). Регистрационные номера транзакций в журнале упорядочены таким образом, что если два изменения описываются записями в журнале, помеченными номерами LSN1 и LSN2, а LSN2 больше LSN1, то изменение, помеченное номером LSN2, произошло после изменения LSN1.  
   
- Регистрационный номер транзакции в журнале, в которой произошло важное событие, может оказаться полезен при формировании правильных последовательностей восстановления. Так как регистрационные номера транзакций в журнале упорядочены, их можно проверять на равенство и неравенство (то есть **\<** , **>** , **=** , **\<=** , **>=** ). Такие сравнения полезны при построении последовательностей восстановления.  
+ Регистрационный номер транзакции в журнале, в которой произошло важное событие, может оказаться полезен при формировании правильных последовательностей восстановления. Так как регистрационные номера LSN упорядочены, их можно сравнивать на равенство и неравенство **\<**( **>** т **=** ** \< **. е **>=**.,,,,). Такие сравнения полезны при построении последовательностей восстановления.  
   
 > [!NOTE]  
 >  Регистрационные номера транзакций в журнале — это значения типа `numeric`(25,0). Арифметические операции (например сложение или вычитание) не имеют смысла и не должны использоваться для регистрационных номеров транзакций в журнале.  
@@ -52,7 +52,7 @@ ms.locfileid: "62875767"
   
 -   [backupfile;](/sql/relational-databases/system-tables/backupfile-transact-sql)  
   
--   [sys.database_files](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql); [sys.master_files](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql)  
+-   [sys. database_files](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql); [sys. master_files](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql)  
   
 -   [инструкция RESTORE HEADERONLY](/sql/t-sql/statements/restore-statements-headeronly-transact-sql)  
   
@@ -64,11 +64,11 @@ ms.locfileid: "62875767"
 ## <a name="transact-sql-syntax-for-restoring-to-an-lsn"></a>Синтаксис языка Transact-SQL при восстановлении до номера LSN  
  Инструкция [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) позволяет остановить восстановление на транзакции по номеру LSN или непосредственно перед ней следующим образом:  
   
--   Используйте предложение WITH STOPATMARK **='** lsn: _<lsn_number>_ **'** , где lsn: *\<lsnNumber>*  — это строка, указывающая, что точкой восстановления является запись в журнале, которая содержит указанный номер LSN.  
+-   Используйте предложение WITH STOPATMARK **= '** LSN:_<lsn_number>_ **'** , где lsn:*\<lsnNumber>* — это строка, указывающая, что запись журнала, содержащая указанный номер LSN, является точкой восстановления.  
   
      Предложение STOPATMARK выполняет накат до номера LSN, включая указанную запись журнала.  
   
--   Используйте предложение WITH STOPBEFOREMARK **='** lsn: _<lsn_number>_ **'** , где lsn: *\<lsnNumber>*  — это строка, указывающая, что запись журнала, стоящая непосредственно перед записью журнала, содержащей номер LSN, является точкой восстановления.  
+-   Используйте предложение WITH STOPBEFOREMARK **= '** LSN:_<lsn_number>_ **'** , где lsn:*\<lsnNumber>* — это строка, указывающая, что запись журнала, которая находится непосредственно перед записью журнала, содержащей указанный номер LSN, является точкой восстановления.  
   
      Параметр STOPBEFOREMARK выполняет накат до номера LSN, не включая в него указанную запись журнала.  
   
@@ -87,19 +87,19 @@ GO
   
 -   [Восстановление резервной копии базы данных &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
   
--   [Создание резервной копии журнала транзакций (SQL Server)](back-up-a-transaction-log-sql-server.md)  
+-   [Создание резервной копии журнала транзакций &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
   
--   [Восстановление резервной копии журнала транзакций (SQL Server)](restore-a-transaction-log-backup-sql-server.md)  
+-   [Восстановление резервной копии журнала транзакций &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)  
   
--   [Восстановление базы данных до точки сбоя в модели полного восстановления (Transact-SQL)](restore-database-to-point-of-failure-full-recovery.md)  
+-   [Восстановление базы данных до точки сбоя в модели полного восстановления &#40;Transact-SQL&#41;](restore-database-to-point-of-failure-full-recovery.md)  
   
--   [Восстановление базы данных до помеченной транзакции (среда SQL Server Management Studio)](restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
+-   [Восстановление базы данных до помеченной транзакции &#40;SQL Server Management Studio&#41;](restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
   
--   [Восстановление базы данных SQL Server до определенного момента времени (модель полного восстановления)](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
+-   [Восстановление SQL Server базы данных на момент времени &#40;модель полного восстановления&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
-## <a name="see-also"></a>См. также  
- [Применение резервных копий журналов транзакций (SQL Server)](transaction-log-backups-sql-server.md)   
- [Журнал транзакций (SQL Server)](../logs/the-transaction-log-sql-server.md)   
- [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql)  
+## <a name="see-also"></a>См. также:  
+ [Применение резервных копий журналов транзакций &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
+ [&#40;SQL Server журнала транзакций&#41;](../logs/the-transaction-log-sql-server.md)   
+ [Восстановление &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   
   

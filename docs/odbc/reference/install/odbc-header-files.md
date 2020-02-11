@@ -15,30 +15,30 @@ ms.assetid: 96f97ba3-7e73-4196-abfb-036c5f6d1903
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 99ac5b590fc631292c5fe8ab91e0fafd58c38c70
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68093968"
 ---
 # <a name="odbc-header-files"></a>Файлы заголовков ODBC
 > [!NOTE]  
->  Распространение файлов заголовка ODBC не является обязательным. Нет, считаются «Core».  
+>  Повторное распространение файлов заголовков ODBC не требуется. None считается "Core".  
   
  **Файлы заголовков**  
   
- Odbcinst.h  
+ Odbcinst. h  
   
- SQL.h  
+ SQL. h  
   
- Sqlext.h  
+ Sqlext. h  
   
- SqlTypes.h  
+ SqlTypes. h  
   
- Sqlucode.h  
+ Sqlucode. h  
   
- MSDASQL.h  
+ MSDASQL. h  
   
- Msdadc.h  
+ Мсдадк. h  
   
- Sqlspi.h (используется для разработки драйвера, см. в разделе [Справочник по ODBC службы поставщика интерфейса (SPI)](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md) подробнее) доступно в пакете SDK для Windows 8.
+ Склспи. h (используется для разработки драйверов, см. [Справочник по интерфейсу поставщика служб ODBC (SPI)](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md) для получения дополнительных сведений), доступных начиная с пакета SDK для Windows 8.

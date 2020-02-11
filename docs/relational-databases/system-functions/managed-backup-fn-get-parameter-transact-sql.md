@@ -1,5 +1,5 @@
 ---
-title: managed_backup.fn_get_parameter (Transact-SQL) | Документация Майкрософт
+title: managed_backup. fn_get_parameter (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 10/03/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ ms.assetid: ed94e54d-4516-4806-a8ce-f013d3a04122
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 18a42273218bb73de55694b9b54877a4f2e0f669
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68140649"
 ---
-# <a name="managedbackupfngetparameter-transact-sql"></a>managed_backup.fn_get_parameter (Transact-SQL)
+# <a name="managed_backupfn_get_parameter-transact-sql"></a>managed_backup. fn_get_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Возвращает таблицу из 0, 1 или более строк пар «параметр-значение».  
@@ -44,18 +44,18 @@ ms.locfileid: "68140649"
 managed_backup.fn_get_parameter ('parameter_name' | '' | NULL )  
 ```  
   
-##  <a name="Arguments"></a> Аргументы  
+##  <a name="Arguments"></a>Даваемых  
  parameter_name  
- Имя параметра. parameter_name — **NVARCHAR(128)** . Если в качестве аргумента этой функции предоставляется NULL или пустая строка, возвращаются пары «имя-значение» для всех настроенных параметров Smart Admin.  
+ Имя параметра. parameter_name имеет тип **nvarchar (128)**. Если в качестве аргумента этой функции предоставляется NULL или пустая строка, возвращаются пары «имя-значение» для всех настроенных параметров Smart Admin.  
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|parameter_name|NVARCHAR(128)|Имя параметра. Ниже приведен текущий список возвращаемых параметров.<br/><br/>**FileRetentionDebugXevent**<br/><br/>**SSMBackup2WADebugXevent**<br/><br/>**SSMBackup2WANotificationEmailIds**<br/><br/>**SSMBackup2WAEnableUserDefinedPolicy**<br/><br/>**SSMBackup2WAEverConfigured**<br/><br/>**StorageOperationDebugXevent**|  
+|parameter_name|NVARCHAR(128)|Имя параметра. Ниже приведен текущий список возвращаемых параметров.<br/><br/>**филеретентиондебугксевент**<br/><br/>**SSMBackup2WADebugXevent**<br/><br/>**SSMBackup2WANotificationEmailIds**<br/><br/>**SSMBackup2WAEnableUserDefinedPolicy**<br/><br/>**SSMBackup2WAEverConfigured**<br/><br/>**сторажеоператиондебугксевент**|  
 |parameter_value|NVARCHAR(128)|Текущее заданное значение параметра.|  
   
-## <a name="security"></a>Безопасность  
+## <a name="security"></a>безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  Необходимы разрешения SELECT для функции.  
@@ -81,7 +81,7 @@ FROM managed_backup.fn_get_parameter ('SSMBackup2WANotficationEmailIds')
   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Управляемое резервное копирование SQL Server в Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

@@ -19,13 +19,13 @@ ms.assetid: 0a9a7c5b-c3cc-40ca-b524-e948a8cce4e4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9aa59c95b211591ce89b3207b2bac181bb413222
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68000839"
 ---
-# <a name="spsyscollectordeleteexecutionlogtree-transact-sql"></a>sp_syscollector_delete_execution_log_tree (Transact-SQL)
+# <a name="sp_syscollector_delete_execution_log_tree-transact-sql"></a>sp_syscollector_delete_execution_log_tree (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Удаляет все записи журнала, соответствующие выполнению одного набора сбора. Также производится удаление записей журнала из таблиц служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] данного запуска.  
@@ -41,17 +41,17 @@ sp_syscollector_delete_execution_log_tree[ @log_id = ] log_id
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @log_id = ] log_id` Уникальный идентификатор для коллекции набора журналов. *log_id* — **int**.  
+`[ @log_id = ] log_id`Уникальный идентификатор для журнала набора элементов сбора. *log_id* имеет **тип int**.  
   
-`[ @from_collection_set = ] from_collection_set` — Идентификатор набора элементов сбора. *from_collection_set* — **бит = 1**.  
+`[ @from_collection_set = ] from_collection_set`Идентификатор набора сбора. *from_collection_set* имеет **бит = 1**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется членство в **dc_operator** (с разрешением EXECUTE) предопределенной роли базы данных для выполнения этой процедуры.  
+ Для выполнения этой процедуры требуется членство в предопределенной роли базы данных **dc_operator** (с разрешением EXECUTE).  
   
-## <a name="see-also"></a>См. также  
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'Зеркальное отображение базы данных: Взаимодействие и сосуществование (SQL Server) | Документация Майкрософт'
+title: 'Зеркальное отображение базы данных: взаимодействие и сосуществование (SQL Server) | Документы Майкрософт'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,16 +14,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2f38e7bac91c4d65e9c6209d693a598466096069
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807310"
 ---
-# <a name="database-mirroring-interoperability-and-coexistence-sql-server"></a>Зеркальное отображение базы данных: Взаимодействие и сосуществование (SQL Server)
+# <a name="database-mirroring-interoperability-and-coexistence-sql-server"></a>Зеркальное отображение базы данных: взаимодействие и сосуществание (SQL Server)
   Зеркальное отображение базы данных можно использовать со следующими возможностями и компонентами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
--   [Экземпляры AlwaysOn отказоустойчивого кластера (отказоустойчивая кластеризация SQL Server)](database-mirroring-and-sql-server-failover-cluster-instances.md)  
+-   [Экземпляры отказоустойчивой кластеризации AlwaysOn (отказоустойчивый кластер SQL Server)](database-mirroring-and-sql-server-failover-cluster-instances.md)  
   
 -   [Отслеживание измененных данных (и отслеживание изменений)](../../relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md)  
   
@@ -31,7 +31,7 @@ ms.locfileid: "62807310"
   
 -   [Полнотекстовые каталоги](database-mirroring-and-full-text-catalogs-sql-server.md)  
   
--   [доставка журналов;](database-mirroring-and-log-shipping-sql-server.md)  
+-   [Доставка журналов](database-mirroring-and-log-shipping-sql-server.md)  
   
 -   [Репликация](database-mirroring-and-replication-sql-server.md)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "62807310"
   
 -   [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Зеркальное отображение базы данных (SQL Server)](database-mirroring-sql-server.md)  
+## <a name="see-also"></a>См. также:  
+ [SQL Server &#40;зеркального отображения базы данных&#41;](database-mirroring-sql-server.md)  
   
   

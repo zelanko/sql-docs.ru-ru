@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f21a5f938b2dcd7b90fa71ab946d2986b0633987
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62829405"
 ---
 # <a name="web-service-task"></a>Задача «Веб-служба»
@@ -64,13 +64,13 @@ ms.locfileid: "62829405"
   
  Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующих разделах:  
   
--   [Редактор задачи "Веб-служба" (страница "Общие")](../general-page-of-integration-services-designers-options.md)  
+-   [Редактор задачи "веб-служба" &#40;страница "Общие"&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Редактор задачи "Веб-служба" (страница "Ввод")](../web-service-task-editor-input-page.md)  
+-   [Редактор задачи "веб-служба" &#40;"входная страница"&#41;](../web-service-task-editor-input-page.md)  
   
--   [Редактор задачи "Веб-служба" (страница "Вывод")](../web-service-task-editor-output-page.md)  
+-   [Редактор задачи "веб-служба" &#40;страница "выходные данные"&#41;](../web-service-task-editor-output-page.md)  
   
--   [Страница "Выражения"](../expressions/expressions-page.md)  
+-   [Страница «Выражения»](../expressions/expressions-page.md)  
   
  Дополнительные сведения об установке этих свойств в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в следующем разделе:  
   
@@ -82,8 +82,8 @@ ms.locfileid: "62829405"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WebServiceTask.WebServiceTask>  
   
 ## <a name="related-content"></a>См. также  
- Видео с руководством по [ вызвать веб-службу с помощью задачи "Веб-служба" (видеоматериал по SQL Server)](https://go.microsoft.com/fwlink/?LinkId=259642) на портале technet.microsoft.com.  
+ Видео [How to: Call a Web Service by Using the Web Service Task (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkId=259642)(Как вызвать веб-службы с помощью задачи "Веб-служба" — видеоматериал SQL Server) на technet.microsoft.com.  
   
- [Как использовать веб-службу через пакет служб SSIS](https://www.c-sharpcorner.com/article/how-to-consume-web-service-through-ssis-package/).  
+ Использование [веб-службы с помощью пакета служб SSIS](https://www.c-sharpcorner.com/article/how-to-consume-web-service-through-ssis-package/).  
   
   

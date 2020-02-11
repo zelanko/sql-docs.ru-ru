@@ -15,17 +15,17 @@ ms.assetid: b63ec31e-488c-4677-ab58-01371015e692
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d8ee6ac768cc7cb0225f78602754c64e0363786f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67952120"
 ---
 # <a name="adox-code-examples-in-microsoft-visual-c"></a>Примеры кода ADOX в Microsoft Visual C++
-В этих разделах обсуждаются образцы кода помогут вам понять, как использовать ADOX. Все примеры кода написаны с помощью Microsoft Visual C++.  
+В этих разделах содержится пример кода, который поможет понять, как использовать ADOX. Все примеры кода написаны с помощью Microsoft Visual C++.  
   
 > [!NOTE]
->  Вставьте пример весь код, от начала до конца, в редакторе кода. Пример могут выполняться неправильно при использовании частичной примеры или утери форматирование абзацев.  
+>  Вставьте весь пример кода из начала в конец в редакторе кода. Пример может работать неправильно, если используются частичные примеры или если форматирование абзаца потеряно.  
   
 ## <a name="methods"></a>Методы  
   
@@ -43,7 +43,7 @@ ms.locfileid: "67952120"
   
 -   [Пример метода Append коллекции (Visual C++)](../../../ado/reference/adox-api/indexes-append-method-example-vc.md)  
   
--   [Append коллекции Keys метод, тип ключа, RelatedColumn, RelatedTable и UpdateRule пример свойства (Visual C++)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vc.md)  
+-   [Пример свойств для добавления ключей, типа ключа, RelatedColumn, RelatedTable и UpdateRule (Visual c++)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vc.md)  
   
 ## <a name="properties"></a>Свойства  
   
@@ -55,7 +55,7 @@ ms.locfileid: "67952120"
   
 -   [Примеры свойств Command и CommandText (Visual C++)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vc.md)  
   
--   [Свойство Command, пример коллекции параметров (Visual C++)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vc.md)  
+-   [Свойство Command, пример коллекции Parameters (Visual c++)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vc.md)  
   
 -   [Примеры свойств DateCreated и DateModified (Visual C++)](../../../ado/reference/adox-api/datecreated-and-datemodified-properties-example-vc.md)  
   
@@ -65,9 +65,9 @@ ms.locfileid: "67952120"
   
 -   [Пример свойства IndexNulls (Visual C++)](../../../ado/reference/adox-api/indexnulls-property-example-vc.md)  
   
--   [Тип ключа, RelatedColumn, RelatedTable, UpdateRule свойства, ключи добавьте пример метода (Visual C++)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vc.md)  
+-   [Пример типа ключа, RelatedColumn, RelatedTable, UpdateRule свойства, метод добавления ключей (Visual c++)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vc.md)  
   
--   [Свойство Name, столбцы и таблицы Append пример метода (Visual C++)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vc.md)  
+-   [Пример свойств Name, Columns и Tables Append (Visual c++)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vc.md)  
   
 -   [Примеры свойств NumericScale и Precision (Visual C++)](../../../ado/reference/adox-api/numericscale-and-precision-properties-of-the-column-object-example-vc.md)  
   
@@ -75,7 +75,7 @@ ms.locfileid: "67952120"
   
 -   [Примеры свойств PrimaryKey и Unique (Visual C++)](../../../ado/reference/adox-api/primarykey-and-unique-properties-example-vc.md)  
   
--   [Свойство типа таблицы, соединения закрыть пример метода (Visual C++)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vc.md)  
+-   [Пример свойства типа таблицы, метод Close для соединения (VC + +)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vc.md)  
   
 ## <a name="collections"></a>Коллекции  
   

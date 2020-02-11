@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_generate_wrapper_function (Transact-SQL) | Документация Майкрософт
+title: sys. sp_cdc_generate_wrapper_function (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,13 +21,13 @@ ms.assetid: 85bc086d-8a4e-4949-a23b-bf53044b925c
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 074e114f81db6615a04240f10447a3f711a51cf7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68083755"
 ---
-# <a name="sysspcdcgeneratewrapperfunction-transact-sql"></a>sys.sp_cdc_generate_wrapper_function (Transact-SQL)
+# <a name="syssp_cdc_generate_wrapper_function-transact-sql"></a>sys.sp_cdc_generate_wrapper_function (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Формирует скрипты для создания функций-оболочек для функций запроса к системе отслеживания измененных данных, имеющихся в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. API-интерфейс, который поддерживается в формируемых оболочках, позволяет указать интервал запроса как интервал datetime. Поэтому такую функцию полезно использовать во многих приложениях хранилищ данных, включая разработанные создателями пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], использовавшими технологию системы отслеживания измененных данных для определения добавочной нагрузки.  
@@ -50,29 +50,29 @@ sys.sp_cdc_generate_wrapper_function
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @capture_instance=] '*capture_instance*"  
- Экземпляр отслеживания, для которого будут формироваться скрипты. *capture_instance* — **sysname** и имеет значение по умолчанию NULL. Если его значение пропущено либо явно определено как NULL, скрипты оболочки формируются для всех экземпляров отслеживания.  
+ [ @capture_instance= ] "*capture_instance*"  
+ Экземпляр отслеживания, для которого будут формироваться скрипты. *capture_instance* имеет тип **sysname** и имеет значение по умолчанию NULL. Если его значение пропущено либо явно определено как NULL, скрипты оболочки формируются для всех экземпляров отслеживания.  
   
- [ @closed_high_end_point=] *high_end_pt_flag*  
- Битовый флаг, указывающий, подлежат ли изменения, зафиксированные в момент времени, совпадающий с верхней конечной точкой, включению сформированной процедурой в интервал извлечения. *high_end_pt_flag* — **бит** и имеет значение по умолчанию 1, означающее, что конечная точка должны быть включены. Значение 0 указывает на то, что все значения времени фиксации должны быть строго меньше верхней конечной точки.  
+ [ @closed_high_end_point= ] *high_end_pt_flag*  
+ Битовый флаг, указывающий, подлежат ли изменения, зафиксированные в момент времени, совпадающий с верхней конечной точкой, включению сформированной процедурой в интервал извлечения. *high_end_pt_flag* имеет **бит** и имеет значение по умолчанию 1, которое указывает, что конечная точка должна быть включена. Значение 0 указывает на то, что все значения времени фиксации должны быть строго меньше верхней конечной точки.  
   
- [ @column_list=] '*column_list*"  
- Список отслеживаемых столбцов, подлежащих включению в результирующий набор, возвращаемый функцией-оболочкой. *column_list* — **nvarchar(max)** и имеет значение по умолчанию NULL. При значении NULL включаются все отслеживаемые столбцы.  
+ [ @column_list= ] "*column_list*"  
+ Список отслеживаемых столбцов, подлежащих включению в результирующий набор, возвращаемый функцией-оболочкой. *column_list* имеет тип **nvarchar (max)** и имеет значение по умолчанию NULL. При значении NULL включаются все отслеживаемые столбцы.  
   
- [ @update_flag_list=] '*update_flag_list*"  
- Список включаемых столбцов, флаг обновления для которых включается в результирующий набор, возвращаемый функцией-оболочкой. *update_flag_list* — **nvarchar(max)** и имеет значение по умолчанию NULL. При значении NULL флаги обновления не включаются.  
+ [ @update_flag_list= ] "*update_flag_list*"  
+ Список включаемых столбцов, флаг обновления для которых включается в результирующий набор, возвращаемый функцией-оболочкой. *update_flag_list* имеет тип **nvarchar (max)** и имеет значение по умолчанию NULL. При значении NULL флаги обновления не включаются.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или 1 (неуспешное завершение)  
+ 0 (успех) или 1 (сбой).  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип столбца|Описание|  
+|Имя столбца|Тип столбца|Description|  
 |-----------------|-----------------|-----------------|  
-|**function_name**|**nvarchar(145)**|Имя формируемой функции.|  
+|**function_name**|**nvarchar (145)**|Имя формируемой функции.|  
 |**create_script**|**nvarchar(max)**|Скрипт, создающий функцию-оболочку экземпляра отслеживания.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Скрипт, создающий функцию-оболочку для запроса всех изменений на экземпляре отслеживания, формируется обязательно. Если экземпляр отслеживания поддерживает запросы сетевых изменений, также формируется скрипт создания оболочки для такого запроса.  
   
 ## <a name="examples"></a>Примеры  
@@ -103,8 +103,8 @@ CLOSE #hfunctions;
 DEALLOCATE #hfunctions;  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Хранимые процедуры системы отслеживания измененных данных (Transact-SQL)](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Хранимые процедуры системы отслеживания измененных данных &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
  [Система отслеживания измененных данных &#40;служб SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md)  
   
   

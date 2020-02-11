@@ -1,5 +1,5 @@
 ---
-title: sys.fn_listextendedproperty (Transact-SQL) | Документация Майкрософт
+title: sys. fn_listextendedproperty (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -27,13 +27,13 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9a2516d24b65e509ffc04c0f9979721ad6eefa22
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68082701"
 ---
-# <a name="sysfnlistextendedproperty-transact-sql"></a>sys.fn_listextendedproperty (Transact-SQL)
+# <a name="sysfn_listextendedproperty-transact-sql"></a>sys.fn_listextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Возвращает значения расширенных свойств объектов базы данных.  
@@ -57,53 +57,53 @@ fn_listextendedproperty (
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- {значение по умолчанию | "*property_name*" | NULL}  
- Имя свойства. *property_name* — **sysname**. Допустимыми входными значениями являются default, NULL или имя свойства.  
+ {Default | '*property_name*' | ЗАКАНЧИВАЮЩ  
+ Имя свойства. *property_name* имеет тип **sysname**. Допустимыми входными значениями являются default, NULL или имя свойства.  
   
- {значение по умолчанию | "*level0_object_type*" | NULL}  
- Пользователь или тип, определяемый пользователем. *level0_object_type* — **varchar(128)** , значение по умолчанию NULL. Допустимые входные значения: ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, TRIGGER, TYPE, USER и значение NULL.  
+ {Default | '*level0_object_type*' | ЗАКАНЧИВАЮЩ  
+ Пользователь или тип, определяемый пользователем. *level0_object_type* имеет тип **varchar (128)** и значение по умолчанию NULL. Допустимые входные значения: ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, TRIGGER, TYPE, USER и значение NULL.  
   
 > [!IMPORTANT]  
 >  Типы USER и TYPE уровня 0 будут удалены в будущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Старайтесь не использовать эти функции в новых разработках и предусмотрите соответствующие изменения в приложениях, которые используют их в настоящее время. Тип SCHEMA следует использовать в качестве типа уровня 0 вместо USER. В значении аргумента TYPE следует указывать тип SCHEMA в качестве типа уровня 0 и TYPE в качестве типа уровня 1.  
   
- {значение по умолчанию | "*level0_object_name*" | NULL}  
- Имя указанного типа объекта уровня 0. *level0_object_name* — **sysname** значение по умолчанию NULL. Допустимыми входными значениями являются значение по умолчанию, NULL или имя объекта.  
+ {Default | '*level0_object_name*' | ЗАКАНЧИВАЮЩ  
+ Имя указанного типа объекта уровня 0. Аргумент *level0_object_name* имеет тип **sysname** и значение по умолчанию NULL. Допустимыми входными значениями являются значение по умолчанию, NULL или имя объекта.  
   
- {значение по умолчанию | "*level1_object_type*" | NULL}  
- Тип объекта уровня 1. *level1_object_type* — **varchar(128)** значение по умолчанию NULL. Допустимые входные значения: AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SYNONYM, TABLE, TYPE, VIEW, XML SCHEMA COLLECTION и NULL.  
+ {Default | '*level1_object_type*' | ЗАКАНЧИВАЮЩ  
+ Тип объекта уровня 1. *level1_object_type* имеет тип **varchar (128)** и значение по умолчанию NULL. Допустимые входные значения: AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SYNONYM, TABLE, TYPE, VIEW, XML SCHEMA COLLECTION и NULL.  
   
 > [!NOTE]  
 >  Значение по умолчанию сопоставлено значению NULL, и значение «default» сопоставлено типу объектов DEFAULT.  
   
- {значение по умолчанию | "*level1_object_name*" | NULL}  
- Имя указанного типа объекта уровня 1. *level1_object_name* — **sysname** значение по умолчанию NULL. Допустимыми входными значениями являются значение по умолчанию, NULL или имя объекта.  
+ {Default | '*level1_object_name*' | ЗАКАНЧИВАЮЩ  
+ Имя указанного типа объекта уровня 1. Аргумент *level1_object_name* имеет тип **sysname** и значение по умолчанию NULL. Допустимыми входными значениями являются значение по умолчанию, NULL или имя объекта.  
   
- {значение по умолчанию | "*level2_object_type*" | NULL}  
- Тип объекта уровня 2. *level2_object_type* — **varchar(128)** значение по умолчанию NULL. Допустимыми входными значениями являются DEFAULT, значение по умолчанию (сопоставленное значению NULL) и значение NULL. Допустимыми входными значениями для *level2_object_type* СТОЛБЦА, ограничения, уведомления о СОБЫТИИ, ИНДЕКСА, параметр, ТРИГГЕРА и NULL.  
+ {Default | '*level2_object_type*' | ЗАКАНЧИВАЮЩ  
+ Тип объекта уровня 2. *level2_object_type* имеет тип **varchar (128)** и значение по умолчанию NULL. Допустимыми входными значениями являются DEFAULT, значение по умолчанию (сопоставленное значению NULL) и значение NULL. Допустимыми входными данными для *level2_object_type* являются столбец, ограничение, уведомление о событии, индекс, параметр, триггер и значение null.  
   
- {значение по умолчанию | "*level2_object_name*" | NULL}  
- Имя указанного типа объекта уровня 2. *level2_object_name* — **sysname** значение по умолчанию NULL. Допустимыми входными значениями являются значение по умолчанию, NULL или имя объекта.  
+ {Default | '*level2_object_name*' | ЗАКАНЧИВАЮЩ  
+ Имя указанного типа объекта уровня 2. Аргумент *level2_object_name* имеет тип **sysname** и значение по умолчанию NULL. Допустимыми входными значениями являются значение по умолчанию, NULL или имя объекта.  
   
 ## <a name="tables-returned"></a>Возвращаемые таблицы  
  Это формат таблиц, возвращаемых функцией fn_listextendedproperty.  
   
 |Имя столбца|Тип данных|  
 |-----------------|---------------|  
-|objtype|**sysname**|  
-|objname|**sysname**|  
-|name|**sysname**|  
+|objtype|**имеет sysname**|  
+|objname|**имеет sysname**|  
+|name|**имеет sysname**|  
 |value|**sql_variant**|  
   
  Возвращение пустой таблицы означает отсутствие у объекта расширенных свойств или отсутствие у пользователя разрешений на просмотр этих свойств. При возвращении расширенных свойств самой базы данных столбцы objtype и objname принимают значения NULL.  
   
-## <a name="remarks"></a>Примечания  
- Если значение для *property_name* имеет значение NULL или значение по умолчанию, функция fn_listextendedproperty возвращает все свойства для указанного объекта.  
+## <a name="remarks"></a>Remarks  
+ Если значение для *property_name* равно null или по умолчанию, fn_listextendedproperty возвращает все свойства для указанного объекта.  
   
  Если указан тип объекта, а значение, соответствующее имени объекта, равно NULL или значению по умолчанию, функция fn_listextendedproperty возвращает все расширенные свойства всех объектов заданного типа.  
   
  Объекты различаются по уровню: нулевой уровень является наивысшим, а второй — низшим. Если для объекта низкого уровня (1 или 2) указаны тип и имя, то для родительского объекта значения типа и имени не могут иметь значение NULL или значение по умолчанию. В противном случае функция возвращает пустой результирующий набор.  
   
- **ObjName** фиксируется как Latin1_General_CI_AI. Тем не менее вы можете устранить эту путем переопределения параметров сортировки для сравнения.  
+ **objname** фиксируется как Latin1_General_CI_AI. Однако это можно обойти, переопределив параметры сортировки в сравнении.  
   
 ```  
 SELECT o.[object_id] AS 'table_id', o.[name] 'table_name',  
@@ -142,7 +142,7 @@ GO
  `(1 row(s) affected)`  
   
 ### <a name="b-displaying-extended-properties-on-all-columns-in-a-table"></a>Б. Отображение расширенных свойств для всех столбцов таблицы  
- В следующем примере перечисляются расширенные свойства для столбцов в `ScrapReason` таблицы. Она хранится в схеме `Production`.  
+ В следующем примере перечисляются расширенные свойства для столбцов в `ScrapReason` таблице. Она хранится в схеме `Production`.  
   
 ```  
 USE AdventureWorks2012;  
@@ -167,7 +167,7 @@ GO
  `(3 row(s) affected)`  
   
 ### <a name="c-displaying-extended-properties-on-all-tables-in-a-schema"></a>В. Отображение расширенных свойств для всех таблиц схемы  
- В следующем примере перечисляются расширенные свойства для всех таблиц, содержащихся в `Sales` схемы.  
+ В следующем примере перечисляются расширенные свойства для всех таблиц, `Sales` содержащихся в схеме.  
   
 ```  
 USE AdventureWorks2012;  
@@ -177,10 +177,10 @@ FROM fn_listextendedproperty (NULL, 'schema', 'Sales', 'table', default, NULL, N
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_addextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
  [sp_dropextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
  [sp_updateextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)   
- [sys.extended_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
+ [sys. extended_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
   
   
