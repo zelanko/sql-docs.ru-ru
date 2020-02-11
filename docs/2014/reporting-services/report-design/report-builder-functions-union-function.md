@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 924b450ab138df1cad3afcfa11cb9c0d1cc87a22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105122"
 ---
 # <a name="union-function-report-builder-and-ssrs"></a>Функция Union (построитель отчетов и службы SSRS)
@@ -38,12 +38,13 @@ Union(expression, scope, recursive)
  (`String`) Необязательно. Имя набора данных, группы или области данных, содержащих элементы отчета, к которым применяется агрегатная функция. Если аргумент *scope* не задан, используется текущая область.  
   
  *рекурсивные*  
- (**Перечислимый тип**) Необязательно. `Simple` (по умолчанию) или `RdlRecursive`. Указывает, нужно ли выполнять статистическую обработку рекурсивно.  
+ (**Перечислимый тип**) Необязательно. 
+  `Simple` (по умолчанию) или `RdlRecursive`. Указывает, нужно ли выполнять статистическую обработку рекурсивно.  
   
 ## <a name="return"></a>Возвращает  
- Возвращает пространственный объект, или `SqlGeometry`, или `SqlGeography`, в зависимости от типа выражения. Дополнительные сведения о `SqlGeometry` и `SqlGeography` пространственных типов данных, см. в разделе [Общие сведения о типах пространственных данных](../../relational-databases/spatial/spatial-data-types-overview.md).  
+ Возвращает пространственный объект, или `SqlGeometry`, или `SqlGeography`, в зависимости от типа выражения. Дополнительные сведения о `SqlGeometry` и `SqlGeography` пространственных типах данных см. в разделе [Общие сведения о типах пространственных данных](../../relational-databases/spatial/spatial-data-types-overview.md).  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Данные в наборе, указанном в выражении, должны иметь один и тот же тип.  
   
  Значение *scope* должно быть строковой константой и не может быть выражением. Для внешних агрегатов и агрегатов, в которых не задаются другие агрегаты, параметр *scope* должен ссылаться не текущую область или включающую область. Области наборов данных не поддерживаются. Для агрегатов, содержащих агрегаты, во вложенных агрегатах может указываться дочерняя область.  
@@ -54,7 +55,7 @@ Union(expression, scope, recursive)
   
 -   Параметр*Scope* для вложенных агрегатов не может быть именем набора данных.  
   
--   *Выражение* не может содержать `First`, `Last`, `Previous`, или `RunningValue` функции.  
+-   *Выражение* не должно содержать `First`функции `Last`, `Previous`, или `RunningValue` .  
   
 -   *Expression* не может содержать вложенные агрегаты, в которых указан параметр *recursive*.  
   
@@ -77,7 +78,7 @@ Union(expression, scope, recursive)
 =Union(Fields!PolygonDefinition.Value, "Group1")  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование выражений в отчетах (построитель отчетов и службы SSRS)](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [Типы данных в выражениях (построитель отчетов и службы SSRS)](expressions-report-builder-and-ssrs.md)   

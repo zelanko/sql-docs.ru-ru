@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7ae056d72d3966a9787ac2d52f89689ae9f6a799
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106297"
 ---
 # <a name="3d-bevel-and-other-effects-in-a-chart-report-builder-and-ssrs"></a>Эффекты рельефа, объемные и другие эффекты в диаграмме (построитель отчетов и службы SSRS)
@@ -59,7 +59,7 @@ ms.locfileid: "66106297"
 ## <a name="highlighting-3d-effects"></a>Выделение объемных эффектов  
  Можно добавить стили выделения в объемную диаграмму через свойство **Заливка** , которое отображается под Area3DStyle на панели «Свойства» при выборе области диаграмм. Простой стиль освещения применяет тот же оттенок к элементам области диаграммы. Реалистичный стиль изменяет оттенки элементов области диаграммы в зависимости от определенного угла освещения.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Форматирование меток оси на диаграмме (построитель отчетов и службы SSRS)](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Форматирование диаграммы (построитель отчетов и службы SSRS)](formatting-a-chart-report-builder-and-ssrs.md)   
  [Добавление в диаграмму объемных эффектов (построитель отчетов и службы SSRS)](chart-effects-add-3d-effects-report-builder.md)  

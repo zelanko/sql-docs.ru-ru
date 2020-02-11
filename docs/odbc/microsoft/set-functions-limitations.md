@@ -1,5 +1,5 @@
 ---
-title: Набор функций ограничения | Документация Майкрософт
+title: Ограничения функций Set | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,11 +14,11 @@ ms.assetid: 18e7a0fd-cc5d-4109-b542-cac6893a29c3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 28b6487b725a5579cc966399f8e76c7cf897df8d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68071745"
 ---
 # <a name="set-functions-limitations"></a>Ограничения функций наборов
-Ключевое слово DISTINCT не поддерживают набор функций (AVG, MAX, MIN и SUM).
+Функции Set (AVG, MAX, MIN и SUM) не поддерживают ключевое слово DISTINCT.

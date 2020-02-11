@@ -20,16 +20,16 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a6f7e9d8d9ab99ebe4a7c5749033eacf85b8feb5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68042994"
 ---
-# <a name="changetrackingiscolumninmask-transact-sql"></a>CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact-SQL)
+# <a name="change_tracking_is_column_in_mask-transact-sql"></a>CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Интерпретирует значение SYS_CHANGE_COLUMNS, возвращаемое функцией CHANGETABLE(CHANGES...). Это позволяет приложению определить, включается ли указанный столбец в набор значений, возвращаемых в качестве значения SYS_CHANGE_COLUMNS.  
+  Интерпретирует значение SYS_CHANGE_COLUMNS, возвращаемое функцией CHANGETABLE (CHANGEs...). Это позволяет приложению определить, включается ли указанный столбец в набор значений, возвращаемых в качестве значения SYS_CHANGE_COLUMNS.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,10 +42,10 @@ CHANGE_TRACKING_IS_COLUMN_IN_MASK ( column_id , change_columns )
   
 ## <a name="arguments"></a>Аргументы  
  *column_id*  
- Идентификатор проверяемого столбца. Идентификатор можно получить с помощью столбца [COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md) функции.  
+ Идентификатор проверяемого столбца. Идентификатор столбца можно получить с помощью функции [COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md) .  
   
  *change_columns*  
- Двоичные данные из столбца SYS_CHANGE_COLUMNS [CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md) данных.  
+ Двоичные данные из столбца SYS_CHANGE_COLUMNS данных [CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md) .  
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
  **bit**  
@@ -53,16 +53,16 @@ CHANGE_TRACKING_IS_COLUMN_IN_MASK ( column_id , change_columns )
 ## <a name="return-values"></a>Возвращаемые значения  
  Функция CHANGE_TRACKING_IS_COLUMN_IN_MASK возвращает следующие значения.  
   
-|Возвращаемое значение|Описание|  
+|Возвращаемое значение|Description|  
 |------------------|-----------------|  
-|0|Указанный столбец не внесен в *change_columns* списка.|  
-|1|Указанный столбец включен в *change_columns* списка.|  
+|0|Указанный столбец отсутствует в списке *change_columns* .|  
+|1|Указанный столбец находится в списке *change_columns* .|  
   
-## <a name="remarks"></a>Примечания  
- CHANGE_TRACKING_IS_COLUMN_IN_MASK не выполняет каких-либо проверок для проверки *column_id* значение или значение, *change_columns* параметра были получены из таблицы, из которой  *Идентификатор column_id* был получен.  
+## <a name="remarks"></a>Remarks  
+ CHANGE_TRACKING_IS_COLUMN_IN_MASK не выполняет никаких проверок для проверки значения *column_id* или того, что параметр *change_columns* был получен из таблицы, из которой было получено *column_id* .  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере определяется, был ли обновлен столбец `Salary` таблицы `Employees`. `COLUMNPROPERTY` Функция возвращает идентификатор столбца `Salary` столбца. Локальной переменной `@change_columns` должны быть присвоены результаты запроса с использованием результатов функции CHANGETABLE в качестве источника данных.  
+ В следующем примере определяется, был ли обновлен столбец `Salary` таблицы `Employees`. `COLUMNPROPERTY` Функция возвращает идентификатор `Salary` столбца. Локальной переменной `@change_columns` должны быть присвоены результаты запроса с использованием результатов функции CHANGETABLE в качестве источника данных.  
   
 ```sql  
 SET @SalaryChanged = CHANGE_TRACKING_IS_COLUMN_IN_MASK  
@@ -70,8 +70,8 @@ SET @SalaryChanged = CHANGE_TRACKING_IS_COLUMN_IN_MASK
     ,@change_columns);  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Функции отслеживания изменений (Transact-SQL)](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Функции Отслеживание изменений &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [CHANGETABLE (Transact-SQL)](../../relational-databases/system-functions/changetable-transact-sql.md)   
  [Отслеживание измененных данных (SQL Server)](../../relational-databases/track-changes/track-data-changes-sql-server.md)  
   

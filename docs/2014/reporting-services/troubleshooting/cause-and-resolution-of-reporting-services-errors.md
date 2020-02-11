@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fa98b9f760485b80f4fa4ac74f3b8008dc3bbec3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099382"
 ---
 # <a name="cause-and-resolution-of-reporting-services-errors"></a>Причины ошибок служб Reporting Services и способы их устранения
@@ -26,17 +26,17 @@ ms.locfileid: "66099382"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Ошибка|`Message`|  
+|Ошибка|Сообщение|  
 |-----------|-------------|  
-|[rsAccessedDenied - Ошибка службы Reporting Services](rsaccesseddenied-reporting-services-error.md)|Предоставленные пользователю 'mydomain\myAccount' разрешения недостаточны для выполнения данной операции. (rsAccessDenied) (ReportingServicesLibrary).|  
-|[rsInternalError - Ошибка службы Reporting Services](rsinternalerror-reporting-services-error.md)|Произошла внутренняя ошибка на сервере отчетов. Дополнительные подробности см. в журнале ошибок.|  
-|[rsModelGenerationError - Ошибка службы Reporting Services](rsmodelgenerationerror-reporting-services-error.md)|Во время построения модели произошла ошибка. (rsModelGenerationError) (ReportingServicesLibrary) %1.|  
-|[rsProcessingError - Ошибка службы Reporting Services](rsprocessingerror-reporting-services-error.md)|Во время обработки отчета произошли ошибки.|  
-|[rsServerConfigurationError - Ошибка службы Reporting Services](rsserverconfigurationerror-reporting-services-error.md)|Сервер отчетов обнаружил ошибку конфигурации.|  
-|[rrRenderingError - Ошибка службы Reporting Services](rrrenderingerror-reporting-services-error.md)|Во время подготовки отчета к просмотру произошла ошибка. (rrRenderingError) %1.|  
+|[rsAccessedDenied — ошибка служб Reporting Services](rsaccesseddenied-reporting-services-error.md)|Предоставленные пользователю 'mydomain\myAccount' разрешения недостаточны для выполнения данной операции. (rsAccessDenied) (ReportingServicesLibrary).|  
+|[rsInternalError — ошибка служб Reporting Services](rsinternalerror-reporting-services-error.md)|Произошла внутренняя ошибка на сервере отчетов. Дополнительные подробности см. в журнале ошибок.|  
+|[rsModelGenerationError — ошибка служб Reporting Services](rsmodelgenerationerror-reporting-services-error.md)|Во время построения модели произошла ошибка. (rsModelGenerationError) (ReportingServicesLibrary) %1.|  
+|[rsProcessingError — ошибка служб Reporting Services](rsprocessingerror-reporting-services-error.md)|Во время обработки отчета произошли ошибки.|  
+|[rsServerConfigurationError — ошибка служб Reporting Services](rsserverconfigurationerror-reporting-services-error.md)|Сервер отчетов обнаружил ошибку конфигурации.|  
+|[rrRenderingError — ошибка служб Reporting Services](rrrenderingerror-reporting-services-error.md)|Во время подготовки отчета к просмотру произошла ошибка. (rrRenderingError) %1.|  
 |[Служба Windows сервера отчетов (MSSQLServer) 107](../../relational-databases/errors-events/mssqlserver-107-database-engine-error.md)|Службе Windows сервера отчетов (MSSQLSERVER) не удается соединиться с базой данных сервера отчетов.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Файлы и источники журналов служб Reporting Services](../report-server/reporting-services-log-files-and-sources.md)   
  [Справочник по ошибкам и событиям (службы Reporting Services)](errors-and-events-reference-reporting-services.md)  
   

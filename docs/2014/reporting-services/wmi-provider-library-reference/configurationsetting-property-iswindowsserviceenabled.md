@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8014f107ca2b552bf5aef316b1aefcb283a645d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097593"
 ---
-# <a name="iswindowsserviceenabled-property-wmi-msreportserverconfigurationsetting"></a>Свойство IsWindowsServiceEnabled (WMI MSReportServer_ConfigurationSetting)
+# <a name="iswindowsserviceenabled-property-wmi-msreportserver_configurationsetting"></a>Свойство IsWindowsServiceEnabled (WMI MSReportServer_ConfigurationSetting)
   Указывает, включена ли служба Windows сервера отчетов. Только для чтения.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -39,13 +39,14 @@ public boolean IsWindowsServiceEnabled;
 ```  
   
 ## <a name="property-values"></a>Значения свойств  
- **Логическое** значение только для чтения. Значение `true` показывает, что служба Windows сервера отчетов включена.  
+ 
+  **Логическое** значение только для чтения. Значение `true` показывает, что служба Windows сервера отчетов включена.  
   
 ## <a name="example-code"></a>Пример кода  
  [Класс MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>Требования  
- **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Пространство имен:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

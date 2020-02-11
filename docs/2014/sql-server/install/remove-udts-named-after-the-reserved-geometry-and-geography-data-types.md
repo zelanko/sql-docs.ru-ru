@@ -1,5 +1,5 @@
 ---
-title: Удалите определяемые пользователем типы, названные по зарезервированными типами данных GEOMETRY и GEOGRAPHY | Документация Майкрософт
+title: Удалите определяемые пользователем типы, названные после зарезервированных геометрических и географических типов данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b5e7b5ed9d730eb51e9994a8bd068eefda9715a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66092936"
 ---
 # <a name="remove-udts-named-after-the-reserved-geometry-and-geography-data-types"></a>Удалите определяемые пользователем типы с именами, совпадающими с зарезервированными типами данных GEOMETRY и GEOGRAPHY
@@ -26,7 +26,7 @@ ms.locfileid: "66092936"
 ## <a name="component"></a>Компонент  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Description  
  Имена терминов, используемых в типах пространственных данных, не должны использоваться в качестве имен определяемых пользователем типов среды CLR или их псевдонимов.  
   
 ## <a name="corrective-action"></a>Действие по исправлению  

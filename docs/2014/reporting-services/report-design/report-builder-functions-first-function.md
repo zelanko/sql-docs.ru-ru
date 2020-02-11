@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a47169bc3c628e4bf33fb9ed6a19e612320b585c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105268"
 ---
 # <a name="first-function-report-builder-and-ssrs"></a>Функция First (построитель отчетов и службы SSRS)
@@ -40,7 +40,7 @@ First(expression, scope)
 ## <a name="return-type"></a>Тип возвращаемых данных  
  Определяется типом выражения.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Функция `First` возвращает первое значение в наборе данных после того, как для указанной области были применены сортировка и фильтрация.  
   
  Функция `First` не может использоваться в критериях фильтра группирования с какой-либо областью, кроме текущей области (по умолчанию).  
@@ -55,7 +55,7 @@ First(expression, scope)
   
 -   Параметр*Scope* для вложенных агрегатов не может быть именем набора данных.  
   
--   *Выражение* не может содержать `First`, `Last`, `Previous`, или `RunningValue` функции.  
+-   *Выражение* не должно содержать `First`функции `Last`, `Previous`, или `RunningValue` .  
   
 -   *Expression* не может содержать вложенные агрегаты, в которых указан параметр *recursive*.  
   
@@ -70,7 +70,7 @@ First(expression, scope)
 =First(Fields!ProductNumber.Value, "Category")  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование выражений в отчетах (построитель отчетов и службы SSRS)](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [Типы данных в выражениях (построитель отчетов и службы SSRS)](expressions-report-builder-and-ssrs.md)   

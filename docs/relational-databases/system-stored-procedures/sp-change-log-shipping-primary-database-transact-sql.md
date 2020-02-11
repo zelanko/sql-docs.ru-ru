@@ -18,13 +18,13 @@ ms.assetid: 8c9dce6b-d2a3-4ca7-a832-8f59a5adb214
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 244811989bd5ab58a3ab1f6ffdfcf82649af1916
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68045824"
 ---
-# <a name="spchangelogshippingprimarydatabase-transact-sql"></a>sp_change_log_shipping_primary_database (Transact-SQL)
+# <a name="sp_change_log_shipping_primary_database-transact-sql"></a>sp_change_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Изменяет настройки базы данных-источника.  
@@ -50,68 +50,68 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @database = ] 'database'` — Имя базы данных на сервере-источнике. *primary_database* — **sysname**, не имеет значения по умолчанию.  
+`[ @database = ] 'database'`Имя базы данных на сервере-источнике. Аргумент *primary_database* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @backup_directory = ] 'backup_directory'` — Это путь к папке резервного копирования на сервере-источнике. *backup_directory* — **nvarchar(500)** , не имеет значения по умолчанию и не может иметь значение NULL.  
+`[ @backup_directory = ] 'backup_directory'`Путь к папке резервного копирования на сервере-источнике. *backup_directory* имеет тип **nvarchar (500)**, не имеет значения по умолчанию и не может иметь значение null.  
   
-`[ @backup_share = ] 'backup_share'` Является сетевой путь к каталогу резервного копирования на сервере-источнике. *backup_share* — **nvarchar(500)** , не имеет значения по умолчанию и не может иметь значение NULL.  
+`[ @backup_share = ] 'backup_share'`Сетевой путь к каталогу резервного копирования на сервере-источнике. *backup_share* имеет тип **nvarchar (500)**, не имеет значения по умолчанию и не может иметь значение null.  
   
-`[ @backup_retention_period = ] 'backup_retention_period'` — Это период времени в минутах, чтобы сохранить файл резервной копии журнала в каталоге резервных копий на сервере-источнике. *backup_retention_period* — **int**, не имеет значения по умолчанию и не может иметь значение NULL.  
+`[ @backup_retention_period = ] 'backup_retention_period'`Продолжительность времени в минутах, в течение которого файл резервной копии журнала сохраняется в каталоге резервного копирования на сервере-источнике. *backup_retention_period* имеет **тип int**, не имеет значения по умолчанию и не может иметь значение null.  
   
-`[ @monitor_server_security_mode = ] 'monitor_server_security_mode'` Режим безопасности, используемый для подключения к серверу мониторинга.  
+`[ @monitor_server_security_mode = ] 'monitor_server_security_mode'`Режим безопасности, используемый для подключения к серверу мониторинга.  
   
  1 = проверка подлинности Windows.  
   
  0 = проверка подлинности SQL Server.  
   
- *monitor_server_security_mode* — **бит** и не может иметь значение NULL.  
+ *monitor_server_security_mode* имеет **бит** и не может иметь значение null.  
   
-`[ @monitor_server_login = ] 'monitor_server_login'` — Это имя пользователя учетной записи, используемой для доступа к серверу мониторинга.  
+`[ @monitor_server_login = ] 'monitor_server_login'`Имя пользователя учетной записи, используемой для доступа к серверу мониторинга.  
   
-`[ @monitor_server_password = ] 'monitor_server_password'` — Пароль учетной записи, используемой для доступа к серверу мониторинга.  
+`[ @monitor_server_password = ] 'monitor_server_password'`Пароль учетной записи, используемой для доступа к серверу мониторинга.  
   
-`[ @backup_threshold = ] 'backup_threshold'` — Это продолжительность времени в минутах после последнего резервного копирования до *threshold_alert* возникает ошибка. *backup_threshold* — **int**, значение по умолчанию 60 минут.  
+`[ @backup_threshold = ] 'backup_threshold'`Продолжительность времени (в минутах) после создания последней резервной копии до возникновения ошибки *threshold_alert* . *backup_threshold* имеет **тип int**и значение по умолчанию 60 минут.  
   
-`[ @threshold_alert = ] 'threshold_alert'` Предупреждение, создаваемое при превышении порогового значения. *threshold_alert* — **int** и не может иметь значение NULL.  
+`[ @threshold_alert = ] 'threshold_alert'`Предупреждение, создаваемое при превышении порогового значения резервного копирования. *threshold_alert* имеет **тип int** и не может иметь значение null.  
   
-`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'` Указывает, нужно ли создавать оповещение при *backup_threshold* превышено.  
+`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'`Указывает, возникает ли предупреждение при превышении *backup_threshold* .  
   
  1 = выдается.  
   
  0 = не выдается.  
   
- *threshold_alert_enabled* — **бит** и не может иметь значение NULL.  
+ *threshold_alert_enabled* имеет **бит** и не может иметь значение null.  
   
-`[ @history_retention_period = ] 'history_retention_period'` — Это продолжительность времени в минутах, в которых сохраняется журнал. *history_retention_period* — **int**. Если ничего не указано, используется значение 14 420.  
+`[ @history_retention_period = ] 'history_retention_period'`Продолжительность времени в минутах, в течение которого сохраняется журнал. *history_retention_period* имеет **тип int**. Если параметр не указан, используется значение 14420.  
   
-`[ @backup_compression = ] backup_compression_option` Указывает, использует ли конфигурация доставки журналов [сжатие резервных копий](../../relational-databases/backup-restore/backup-compression-sql-server.md). Этот параметр поддерживается только в [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (или более поздней версии).  
+`[ @backup_compression = ] backup_compression_option`Указывает, использует ли конфигурация доставки журналов [Сжатие резервных копий](../../relational-databases/backup-restore/backup-compression-sql-server.md). Этот параметр поддерживается только в [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (или более поздней версии).  
   
  0 = отключено. Не сжимать резервные копии журналов.  
   
  1 = включено. Всегда сжимать резервные копии журналов.  
   
- 2 = использовать значение параметра [Просмотр или настройка параметра сжатия резервных копий по умолчанию параметр конфигурации сервера](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md). Это значение по умолчанию.  
+ 2 = использовать параметр [конфигурации сервера «Просмотр» или «Настройка сжатия резервных копий по умолчанию](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)». Это значение по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или 1 (неуспешное завершение)  
+ 0 (успех) или 1 (сбой).  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  None  
   
-## <a name="remarks"></a>Примечания  
- **sp_change_log_shipping_primary_database** должна запускаться из **master** базы данных на сервере-источнике. Эта хранимая процедура выполняет следующее:  
+## <a name="remarks"></a>Remarks  
+ **sp_change_log_shipping_primary_database** должны быть запущены из базы данных **master** на сервере источника. Эта хранимая процедура выполняет следующее:  
   
-1.  Изменяет параметры в **log_shipping_primary_database** записи, при необходимости.  
+1.  При необходимости изменяет параметры в записи **log_shipping_primary_database** .  
   
-2.  Изменяет локальную запись в **log_shipping_monitor_primary** на сервере-источнике, используя указанные аргументы, при необходимости.  
+2.  При необходимости изменяет локальную запись в **log_shipping_monitor_primary** на сервере источника, используя указанные аргументы.  
   
-3.  Если сервер мониторинга отличается от сервера-источника, изменяет запись в **log_shipping_monitor_primary** на мониторе server, используя указанные аргументы, при необходимости.  
+3.  Если сервер мониторинга отличается от сервера-источника, при необходимости изменения записываются в **log_shipping_monitor_primary** на сервере мониторинга с помощью предоставляемых аргументов.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнять эту процедуру.  
+ Эту процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** .  
   
 ## <a name="examples"></a>Примеры  
- В этом примере показано использование **sp_change_log_shipping_primary_database** для обновления настроек, связанных с основной базой данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+ В этом примере показано использование **sp_change_log_shipping_primary_database** для обновления параметров, связанных с базой данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]источника.  
   
 ```  
 EXEC master.dbo.sp_change_log_shipping_primary_database   
@@ -127,9 +127,9 @@ EXEC master.dbo.sp_change_log_shipping_primary_database
 ,@backup_compression = 1;  
 ```  
   
-## <a name="see-also"></a>См. также  
- [О доставке журналов &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [SQL Server &#40;доставки журналов&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [log_shipping_primary_databases &#40;Transact-SQL&#41;](../../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys.fn_cdc_get_column_ordinal (Transact-SQL) | Документация Майкрософт
+title: sys. fn_cdc_get_column_ordinal (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/25/2016
 ms.prod: sql
@@ -21,16 +21,16 @@ ms.assetid: 4bb21a57-2b94-4208-8bdf-6a3e2681d881
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 893c7b0a4c7c88c0fdc7bf89b01b61bfaae6f2f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046506"
 ---
-# <a name="sysfncdcgetcolumnordinal-transact-sql"></a>sys.fn_cdc_get_column_ordinal (Transact-SQL)
+# <a name="sysfn_cdc_get_column_ordinal-transact-sql"></a>sys.fn_cdc_get_column_ordinal (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Возвращает порядковый номер указанного столбца в виде он отображается в [изменить таблицу](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) связанный с указанным экземпляром отслеживания.  
+  Возвращает порядковый номер столбца указанного столбца в том виде, в каком он отображается в [таблице изменений](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) , связанной с указанным экземпляром отслеживания.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,16 +43,16 @@ sys.fn_cdc_get_column_ordinal ( 'capture_instance','column_name')
   
 ## <a name="arguments"></a>Аргументы  
  **"** *capture_instance* **"**  
- Имя экземпляра отслеживания, в котором заданный столбец определен как отслеживаемый. *capture_instance* — **sysname**.  
+ Имя экземпляра отслеживания, в котором заданный столбец определен как отслеживаемый. *capture_instance* имеет тип **sysname**.  
   
  **"** *column_name* **"**  
- Столбец, который нужно указать в отчете. *column_name* — **sysname**.  
+ Столбец, который нужно указать в отчете. *column_name* имеет тип **sysname**.  
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
  **int**  
   
-## <a name="remarks"></a>Примечания  
- Эта функция используется для определения порядкового номера отслеживаемого столбца в маске обновления системы отслеживания измененных данных. Основном она используется в сочетании с функцией [sys.fn_cdc_is_bit_set](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md) для извлечения сведений из маски обновления при запросе данных изменений.  
+## <a name="remarks"></a>Remarks  
+ Эта функция используется для определения порядкового номера отслеживаемого столбца в маске обновления системы отслеживания измененных данных. Он используется совместно с функцией [sys. fn_cdc_is_bit_set](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md) для извлечения информации из маски обновления при запросе данных об изменениях.  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение SELECT на все отслеживаемые столбцы в исходной таблице. Если в экземпляре отслеживания задана роль для компонента системы отслеживания измененных данных, также требуется членство в этой роли.  
@@ -75,11 +75,11 @@ FROM cdc.fn_cdc_get_net_changes_HumanResources_Employee
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Функции системы отслеживания измененных данных (Transact-SQL)](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)   
- [О фиксации измененных данных (SQL Server)](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
- [sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
- [процедуру sys.sp_cdc_get_captured_columns &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-captured-columns-transact-sql.md)   
- [sys.fn_cdc_is_bit_set &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Функции системы отслеживания измененных данных &#40;языке Transact-SQL&#41;](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)   
+ [Об SQL Server &#40;системы отслеживания измененных данных&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
+ [sys. sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
+ [sys. sp_cdc_get_captured_columns &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-captured-columns-transact-sql.md)   
+ [sys. fn_cdc_is_bit_set &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md)  
   
   

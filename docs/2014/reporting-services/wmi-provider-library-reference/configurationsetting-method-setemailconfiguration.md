@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 142fd8bf2116d4cc672aeb607938ea8c1c73bf8a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097987"
 ---
-# <a name="setemailconfiguration-method-wmi-msreportserverconfigurationsetting"></a>Метод SetEmailConfiguration (WMI MSReportServer_ConfigurationSetting)
+# <a name="setemailconfiguration-method-wmi-msreportserver_configurationsetting"></a>Метод SetEmailConfiguration (WMI MSReportServer_ConfigurationSetting)
   Настраивает модуль доставки электронной почты, используемый сервером отчетов для отправки электронной почты.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -52,19 +52,19 @@ public void SetEmailConfiguration (Boolean SendUsingSMTPServer,
  *SenderEmailAddress*  
  Адрес электронной почты, используемый в поле «От:» в сообщениях, отправленных с сервера отчетов.  
   
- *HRESULT*  
+ *СОСТАВ*  
  [out] Значение, которое указывает, окончился ли вызов успехом или сбоем.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение *HRESULT* , являющееся признаком успешного или неуспешного завершение вызова метода. Значение 0 указывает, что вызов метода завершился успешно. Ненулевое значение указывает, что произошла ошибка.  
   
-## <a name="remarks"></a>Примечания  
- Когда *SendUsingSMTPServer* параметр имеет значение `true`, **SendUsing** запись в файле конфигурации сервера отчетов имеет значение 1. Когда *SendUsingSMTPServer* присваивается `false`, **SendUsing** запись не настроена.  
+## <a name="remarks"></a>Remarks  
+ Если параметр *SendUsingSMTPServer* имеет значение `true`, запись **SendUsing** в файле конфигурации сервера отчетов устанавливается в значение 1. Если *SendUsingSMTPServer* имеет значение `false`, запись **SendUsing** не настраивается.  
   
  Этот метод не позволяет пользователям задать для записи **SendUsing** в файле конфигурации сервера отчетов какое-либо значение, кроме 1. Чтобы настроить на сервере отчетов почтовый протокол, отличный от SMTP, необходимо изменить файл конфигурации вручную.  
   
 ## <a name="requirements"></a>Требования  
- **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Пространство имен:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

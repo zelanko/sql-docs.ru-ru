@@ -1,5 +1,5 @@
 ---
-title: INFORMATION_SCHEMA. Возвращает имена схем на СХЕМАХ в базе данных, не баз данных в экземпляре | Документация Майкрософт
+title: INFORMATION_SCHEMA. SCHEMATA возвращает имена схем в базе данных, а не базы данных в экземпляре | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,26 +13,26 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0e3683ee043785ec6adc349ac52301280c7bc2b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094732"
 ---
-# <a name="informationschemaschemata-returns-schema-names-in-a-database-not-databases-in-an-instance"></a>Представление INFORMATION_SCHEMA.SCHEMATA возвращает имена схем в базе данных, а не баз данных в экземпляре
+# <a name="information_schemaschemata-returns-schema-names-in-a-database-not-databases-in-an-instance"></a>Представление INFORMATION_SCHEMA.SCHEMATA возвращает имена схем в базе данных, а не баз данных в экземпляре
   Помощник по обновлению обнаружил инструкции, в которых используется представление INFORMATION_SCHEMA.SCHEMATA. В более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] это представление возвращало все базы данных в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и последующих версиях представление возвращает все схемы в базе данных.  
   
 ## <a name="component"></a>Компонент  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Description  
  В более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] представление INFORMATION_SCHEMA.SCHEMATA возвращало все базы данных в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Представление возвращает все схемы в базе данных, что соответствует стандарту языка SQL.  
   
 ## <a name="corrective-action"></a>Действие по исправлению  
- Изменить приложение, чтобы ссылаться на **sys.databases** представления, чтобы вернуть все базы данных в экземпляре каталога [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Измените приложение, чтобы оно ссылалось на представление каталога **sys. databases** , чтобы возвращались все [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]базы данных в экземпляре.  
   
-## <a name="see-also"></a>См. также  
- [Проблемы обновления компонента Database Engine](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Помощник по обновлению SQL Server 2014 &#91;new&#93;](sql-server-2014-upgrade-advisor.md)  
+## <a name="see-also"></a>См. также:  
+ [Проблемы обновления ядро СУБД](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [Советник по переходу SQL Server 2014 &#91;New&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

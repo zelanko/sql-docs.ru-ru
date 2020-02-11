@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 08fc68575e2515907f31e82cf3609d73da1c95d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099787"
 ---
 # <a name="schedule-properties-reports-page"></a>Свойства расписания (страница отчетов)
@@ -36,11 +36,11 @@ ms.locfileid: "66099787"
  **Отчет**  
  Позволяет задать имя отчета, использующего расписание.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание, изменение и удаление расписаний](../subscriptions/create-modify-and-delete-schedules.md)   
  [Расписания](../subscriptions/schedules.md)   
  [Справка F1 по использованию сервера отчетов среде Management Studio](report-server-in-management-studio-f1-help.md)   
  [Подключение к серверу отчетов в среде Management Studio](connect-to-a-report-server-in-management-studio.md)   
- [Настройка общих свойств отчета &#40;диспетчера отчетов&#41;](../configure-general-properties-for-a-report-report-manager.md)  
+ [Настройка общих свойств для диспетчер отчетов &#40;отчетов&#41;](../configure-general-properties-for-a-report-report-manager.md)  
   
   

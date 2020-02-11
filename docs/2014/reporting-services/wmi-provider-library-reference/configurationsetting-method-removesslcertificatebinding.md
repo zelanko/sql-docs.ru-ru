@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4c3e943bcf63f4bcdff22d5425bf474d8aa4d80d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098179"
 ---
-# <a name="removesslcertificatebindings-method-wmi-msreportserverconfigurationsetting"></a>Метод RemoveSSLCertificateBindings (WMI MSReportServer_ConfigurationSetting)
+# <a name="removesslcertificatebindings-method-wmi-msreportserver_configurationsetting"></a>Метод RemoveSSLCertificateBindings (WMI MSReportServer_ConfigurationSetting)
   Удаляет привязку к SSL-сертификату.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -50,23 +50,23 @@ public void RemoveSSLCertificateBindings(string Application,
  *Порт*  
  Порт SSL, связанный с привязкой.  
   
- *lcid*  
+ *намного*  
  Локаль, используемая для возвращаемых сообщений об ошибке.  
   
  *Ошибка*  
  [out] Описания возникших ошибок.  
   
- *HRESULT*  
+ *СОСТАВ*  
  [out] Значение, которое указывает, окончился ли вызов успехом или сбоем.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение *HRESULT* , являющееся признаком успешного или неуспешного завершение вызова метода. Значение 0 означает, что вызов метода завершился успешно; код ошибки означает, что произошла ошибка.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  При помощи этого метода выполняется удаление конкретной привязки, заданной в файле rsreportserver.config и, при указании дополнительных параметров, в файле HTTP.SYS.  
   
 ## <a name="requirements"></a>Требования  
- **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Пространство имен:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

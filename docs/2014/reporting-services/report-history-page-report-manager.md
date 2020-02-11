@@ -1,5 +1,5 @@
 ---
-title: Сообщить о страница "Журнал" (диспетчер отчетов) | Документация Майкрософт
+title: Страница "журнал отчета" (диспетчер отчетов) | Документация Майкрософт
 ms.prod: sql-server-2014
 ms.technology: reporting-services-native
 ms.topic: conceptual
@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 0b0841e031ee1a98f4f678406f790996a709e90f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104482"
 ---
 # <a name="report-history-page-report-manager"></a>Страница «Журнал отчета» (диспетчер отчетов)
@@ -30,7 +30,7 @@ ms.locfileid: "66104482"
 > [!NOTE]  
 >  Эта функция поддерживается не во всех выпусках [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Перечень функций, поддерживаемых в разных выпусках [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], см. в разделе [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
-## <a name="navigation"></a>Навигация  
+## <a name="navigation"></a>Навигации  
  Чтобы перейти к этому местоположению в пользовательском интерфейсе, используйте следующую процедуру.  
   
 ### <a name="to-open-the-report-history-page"></a>Открытие страницы «Журнал отчета»  
@@ -45,7 +45,7 @@ ms.locfileid: "66104482"
  **Удаление**  
  Нажмите, чтобы удалить моментальные снимки. Перед нажатием кнопки **Удалить**установите флажок рядом с каждым моментальным снимком, который необходимо удалить.  
   
- **Новый моментальный снимок**  
+ **Создать моментальный снимок**  
  Нажмите, чтобы добавить моментальный снимок в журнал отчета. Это кнопка доступна, если на странице свойств отчета «Журнал» установлен флажок **Разрешить создание журнала отчетов вручную** .  
   
  **Последний запуск**  
@@ -54,9 +54,9 @@ ms.locfileid: "66104482"
  **Размер**  
  Позволяет отобразить размер определения отчета, а также данных в отчете. Это значение указывает, сколько места в базе данных сервера отчета занято определением отчетов и данными. Отчет, готовый для просмотра, включая форматирование, имеет больший размер. Общий размер, указанный в скобках, представляет собой сумму размеров всех моментальных снимков в журнале текущего отчета.  
   
-## <a name="see-also"></a>См. также  
- [Просмотр или удаление журнала отчета &#40;диспетчера отчетов&#41;](../../2014/reporting-services/view-or-delete-report-history-report-manager.md)   
+## <a name="see-also"></a>См. также:  
+ [Просмотр или удаление &#40;журнала отчета диспетчер отчетов&#41;](../../2014/reporting-services/view-or-delete-report-history-report-manager.md)   
  [Добавление моментального снимка к журналу отчета (диспетчер отчетов)](report-server/add-a-snapshot-to-report-history-report-manager.md)   
- [Страница "Общие свойства", "Отчеты" (диспетчер отчетов)](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
- [Справка F1 диспетчера отчетов](../../2014/reporting-services/report-manager-f1-help.md)   
- [Страница Свойства параметров моментального снимка &#40;диспетчера отчетов&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)
+ [Страница «Общие свойства», отчеты &#40;диспетчер отчетов&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
+ [Справка F1 диспетчер отчетов](../../2014/reporting-services/report-manager-f1-help.md)   
+ [Страница свойств параметров моментального снимка &#40;диспетчер отчетов&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)

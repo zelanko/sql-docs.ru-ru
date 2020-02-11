@@ -15,15 +15,15 @@ ms.assetid: 0a723323-b2a6-4ac3-81d0-6ed66ec08ab8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b19265c66107e6059639663fac4f6c2ff44219f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68043790"
 ---
 # <a name="other-paradox-driver-programming-details"></a>Другие сведения о программировании драйверов для Paradox
 > [!NOTE]  
->  В этом разделе описаны специфические для драйвера для Paradox функции ODBC и другие сведения о программировании. Общие сведения о функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  В этом разделе содержатся сведения о функциях ODBC и другие сведения о программировании, относящиеся к драйверу Paradox. Общие сведения о функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
  Этот раздел содержит следующие подразделы.  
   

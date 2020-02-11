@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ce39066ca805e024c77a6bf45bcf9ce8c1302053
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097373"
 ---
-# <a name="virtualdirectoryreportserver-property-wmi-msreportserverconfigurationsetting"></a>Свойство VirtualDirectoryReportServer (WMI MSReportServer_ConfigurationSetting)
+# <a name="virtualdirectoryreportserver-property-wmi-msreportserver_configurationsetting"></a>Свойство VirtualDirectoryReportServer (WMI MSReportServer_ConfigurationSetting)
   Возвращает виртуальный каталог для приложения сервера отчетов. Только для чтения.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -39,7 +39,7 @@ public string VirtualDirectoryReportServer;
  [Класс MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>Требования  
- **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Пространство имен:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

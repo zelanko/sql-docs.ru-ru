@@ -20,17 +20,17 @@ ms.assetid: 453b21ff-3c2b-4069-8ff7-5c727f062d89
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e5b973332c2fe0fa541635d326a3a5adecf6ae91
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68076114"
 ---
 # <a name="sqlinstalltranslator-function"></a>Функция SQLInstallTranslator
-**Соответствие стандартам**  
- Представленные версии: 2.5, рекомендуется использовать ODBC  
+**Соответствия**  
+ Введенная версия: ODBC 2,5, не рекомендуется  
   
  **Сводка**  
- В ODBC 3.0 **SQLInstallTranslator** был заменен классом [SQLInstallTranslatorEx](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md). Вызовы **SQLInstallTranslator** будут сопоставлены с **SQLInstallTranslatorEx**. Дополнительные сведения см. в разделе **SQLInstallTranslatorEx**.  
+ В ODBC 3,0 **SQLInstallTranslator** был заменен на [склинсталлтранслаторекс](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md). Вызовы **SQLInstallTranslator** будут сопоставлены с **склинсталлтранслаторекс**. Дополнительные сведения см. в разделе **склинсталлтранслаторекс**.  
   
- **SQLInstallTranslator** вернет FALSE, если приложение вызывает его в ODBC *3.x* диспетчера драйверов с *lpszInfFile* аргументу присвоено значение, отличное от NULL. Файл Odbc.inf, используемый в ODBC *2.x* больше не поддерживается в ODBC *3.x*, даже если для обеспечения обратной совместимости.
+ **SQLInstallTranslator** возвращает значение false, если приложение вызывает его в ДИСПЕТЧЕРЕ драйверов ODBC *3. x* с аргументом *лпсзинффиле* , для которого задано значение, отличное от NULL. Файл ODBC. INF, используемый в ODBC *2. x* , больше не поддерживается в ODBC *3. x*, даже для обратной совместимости.

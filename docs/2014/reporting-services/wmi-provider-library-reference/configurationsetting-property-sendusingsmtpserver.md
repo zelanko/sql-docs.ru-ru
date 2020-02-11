@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: db9ed11f79ccb21a7317b6c1b59c8dc012aed299
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097519"
 ---
-# <a name="sendusingsmtpserver-property-wmi-msreportserverconfigurationsetting"></a>Свойство SendUsingSMTPServer (WMI MSReportServer_ConfigurationSetting)
+# <a name="sendusingsmtpserver-property-wmi-msreportserver_configurationsetting"></a>Свойство SendUsingSMTPServer (WMI MSReportServer_ConfigurationSetting)
   Указывает, присваивается ли элементу `SendUsing` в конфигурации электронной почты для сервера отчетов значение `true`.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -45,7 +45,7 @@ public Boolean SendUsingSMTPServer;
  [Класс MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>Требования  
- **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Пространство имен:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

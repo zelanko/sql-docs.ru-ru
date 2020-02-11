@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4d9227136ba3bd1526f8ec04476d6dc5d61ca41f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100179"
 ---
 # <a name="new-system-role-management-studio"></a>Создание системной роли (среда Management Studio)
@@ -26,10 +26,10 @@ ms.locfileid: "66100179"
 >  Определения ролей используются только на сервере отчетов, работающем в собственном режиме. Если сервер отчетов настроен для интеграции с SharePoint, эта страница недоступна.  
   
 ## <a name="options"></a>Параметры  
- **Name**  
+ **Название**  
  Имя определения роли. Имя определения роли должно быть уникальным в пределах пространства имен сервера отчетов. Имя должно содержать хотя бы одну букву или цифру. В него могут также входить пробелы и другие символы. При задании имени нельзя использовать следующие символы:  
   
- ; ? : \@ & = + , $ / * \< >  
+ ; ? : \@ & = +, $/*\< >  
   
  " /  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66100179"
  **Описание задачи**  
  Описание задачи с указанием поддерживаемых ею операций и разрешений.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справка F1 по использованию сервера отчетов среде Management Studio](report-server-in-management-studio-f1-help.md)   
  [Определение ролей](../security/role-definitions.md)  
   

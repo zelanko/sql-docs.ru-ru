@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7602ce0ef0e75c3c2eb1ee5a5a47e3fe56b87f44
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102137"
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>Настройка нестандартной проверки подлинности или проверку подлинности с помощью форм на сервере отчетов
@@ -34,7 +34,7 @@ ms.locfileid: "66102137"
   
 1.  Откройте файл конфигурации RSReportServer.config в текстовом редакторе.  
   
-2.  Найдите <`Authentication`>.  
+2.  Найдите> `Authentication` <.  
   
 3.  Скопируйте следующую структуру XML:  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66102137"
     </Authentication>  
     ```  
   
-4.  Вставьте его на место существующих элементов для <`Authentication`>.  
+4.  Вставьте его поверх существующих записей для <`Authentication`>.  
   
      Следует заметить, что `Custom` нельзя использовать с другими типами проверки подлинности.  
   
@@ -89,11 +89,11 @@ ms.locfileid: "66102137"
   
 15. Перезапустите сервер отчетов, чтобы очистить все открытые сеансы.  
   
-## <a name="see-also"></a>См. также  
- [Implementing a Security Extension](../extensions/security-extension/implementing-a-security-extension.md)   
+## <a name="see-also"></a>См. также:  
+ [Реализация модуля безопасности](../extensions/security-extension/implementing-a-security-extension.md)   
  [Проверка подлинности с использованием сервера отчетов](authentication-with-the-report-server.md)   
  [Файл конфигурации RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   
  [Настройка обычной проверки подлинности на сервере отчетов](configure-basic-authentication-on-the-report-server.md)   
- [Настройка проверки подлинности Windows на сервере отчетов](configure-windows-authentication-on-the-report-server.md)  
+ [Настройка аутентификации Windows на сервере отчетов](configure-windows-authentication-on-the-report-server.md)  
   
   

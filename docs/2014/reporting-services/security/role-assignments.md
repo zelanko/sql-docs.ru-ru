@@ -17,14 +17,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 556abc4ff00df4393c756f62072254e417653f40
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101866"
 ---
 # <a name="role-assignments"></a>Назначения ролей
-  В службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] *назначения ролей* определяют доступ к сохраненным элементам и к самому серверу отчетов. Назначение ролей состоит из следующих частей.  
+  В службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]*назначения ролей* определяют доступ к сохраненным элементам и к самому серверу отчетов. Назначение ролей состоит из следующих частей.  
   
 -   Защищаемый элемент, доступом к которому нужно управлять. Примеры защищаемых элементов — это папки, отчеты и ресурсы.  
   
@@ -60,11 +60,11 @@ ms.locfileid: "66101866"
   
  Дополнительные сведения о стандартных назначениях ролей, обеспечивающих безопасность по умолчанию, см. в разделе [Стандартные роли](role-definitions-predefined-roles.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание, удаление и изменение ролей (среда Management Studio)](role-definitions-create-delete-or-modify.md)   
  [Предоставление пользователям доступа к серверу отчетов (диспетчер отчетов)](grant-user-access-to-a-report-server.md)   
- [Изменение или удаление назначения ролей (диспетчер отчетов)](role-assignments-modify-or-delete.md)   
- [Задание разрешений для элементов сервера отчетов на сайте SharePoint (службы Reporting Services в режиме интеграции с SharePoint)](set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
+ [Изменение или удаление назначения роли &#40;диспетчер отчетов&#41;](role-assignments-modify-or-delete.md)   
+ [Установка разрешений для элементов сервера отчетов на сайте SharePoint &#40;Reporting Services в режиме интеграции с SharePoint&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
  [Предоставление разрешений на сервер отчетов в собственном режиме](granting-permissions-on-a-native-mode-report-server.md)  
   
   

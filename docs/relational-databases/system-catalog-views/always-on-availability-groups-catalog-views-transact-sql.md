@@ -1,5 +1,5 @@
 ---
-title: Группы доступности Always On каталога представления (Transact-SQL) | Документация Майкрософт
+title: Always On представления каталога групп доступности (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ ms.assetid: ff53e873-8ff6-4628-af84-4ec52fa4951c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 729374505c322a0b62e762ef27c29f04bebf3c9c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68050882"
 ---
-# <a name="always-on-availability-groups-catalog-views-transact-sql"></a>Представления каталога (Transact-SQL), группах доступности AlwaysOn
+# <a name="always-on-availability-groups-catalog-views-transact-sql"></a>Always On представления каталога групп доступности (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Этот раздел содержит представления каталога и функции, которые связаны с [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
@@ -37,13 +37,13 @@ ms.locfileid: "68050882"
 |[sys.availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)||  
   
 > [!NOTE]  
->  Сведения о присоединенных базах данных доступности, см. в разделе **replica_id** и **group_database_id** столбцов в [sys.databases (Transact-SQL);](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
+>  Сведения о присоединенных базах данных доступности см. в столбцах **replica_id** и **group_database_id** в [представлении sys. databases (Transact-SQL);](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   
-## <a name="see-also"></a>См. также  
- [sys.databases (Transact-SQL)](sys-databases-transact-sql.md)   
- [sys.database_mirroring_endpoints (Transact-SQL)](sys-database-mirroring-endpoints-transact-sql.md)   
- [Группы доступности AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [Отслеживание групп доступности (Transact-SQL);](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
- [Группах доступности AlwaysOn, динамические административные представления и функции (Transact-SQL)](../system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)  
+## <a name="see-also"></a>См. также:  
+ [sys. databases (Transact-SQL)](sys-databases-transact-sql.md)   
+ [sys. database_mirroring_endpoints (Transact-SQL)](sys-database-mirroring-endpoints-transact-sql.md)   
+ [Группы доступности Always On (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
+ [Мониторинг групп доступности (Transact-SQL);](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [Always On динамические административные представления и функции групп доступности (Transact-SQL)](../system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)  
   
   

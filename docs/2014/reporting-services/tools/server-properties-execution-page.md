@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f0ec8725a0cec9e15cb6d8402f8d654320c38471
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099601"
 ---
 # <a name="server-properties-execution-page"></a>Свойства сервера (страница «Выполнение»)
@@ -31,7 +31,7 @@ ms.locfileid: "66099601"
  **Ограничить выполнение отчета следующим количество секунд**  
  Установить ограничение по продолжительности выполнения отчета. Этот период времени начинается во время запрашивания отчета. Если этот период времени заканчивается до полной обработки отчета, то сервер отчетов отменяет процесс и все связанные с ним запросы к внешним источникам данных.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Установка свойств сервера отчетов (среда Management Studio)](set-report-server-properties-management-studio.md)   
  [Подключение к серверу отчетов в среде Management Studio](connect-to-a-report-server-in-management-studio.md)   
  [Установка свойств обработки отчетов](../report-server/set-report-processing-properties.md)   

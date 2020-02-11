@@ -1,5 +1,5 @@
 ---
-title: sys.fn_virtualservernodes (Transact-SQL) | Документация Майкрософт
+title: sys. fn_virtualservernodes (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,19 +24,19 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: da218e1afeec389d69b1727160a420c889225783
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68059198"
 ---
-# <a name="sysfnvirtualservernodes-transact-sql"></a>sys.fn_virtualservernodes (Transact-SQL)
+# <a name="sysfn_virtualservernodes-transact-sql"></a>sys.fn_virtualservernodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   Возвращает список узлов экземпляров с отказоустойчивом кластером, на которых может запускаться экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эти сведения полезны в средах отказоустойчивой кластеризации.  
   
 > [!IMPORTANT]
->  Это [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] системная функция включается для обеспечения обратной совместимости. Мы рекомендуем использовать [sys.dm_os_cluster_nodes &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md) вместо этого.  
+>  Эта [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] системная функция включена для обеспечения обратной совместимости. Вместо этого рекомендуется использовать [sys. dm_os_cluster_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md) .  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,9 +48,9 @@ fn_virtualservernodes()
 ```  
   
 ## <a name="tables-returned"></a>Возвращаемые таблицы  
- Если текущий сервер является кластеризованным, **fn_virtualservernodes** возвращает список узлов экземпляра отказоустойчивого кластера, на котором экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] был определен.  
+ Если текущий сервер является кластерным сервером, **fn_virtualservernodes** возвращает список узлов экземпляра кластера отработки отказа, на которых был [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определен данный экземпляр.  
   
- Если текущий экземпляр сервера не кластеризованный сервер, **fn_virtualservernodes** возвращает пустой набор строк.  
+ Если текущий экземпляр сервера не является кластерным сервером, **fn_virtualservernodes** возвращает пустой набор строк.  
   
 ## <a name="permissions"></a>Разрешения  
  Пользователь должен иметь разрешение VIEW SERVER STATE на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -72,8 +72,8 @@ SELECT * FROM fn_virtualservernodes();
   
  SS3-CLUSN2  
   
-## <a name="see-also"></a>См. также  
- [sys.dm_os_cluster_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md)   
- [sys.fn_servershareddrives &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-servershareddrives-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [sys. dm_os_cluster_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md)   
+ [sys. fn_servershareddrives &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-servershareddrives-transact-sql.md)  
   
   

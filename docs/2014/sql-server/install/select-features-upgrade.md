@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2d6265fd9d86b96c75fce63a265848f769253024
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66092361"
 ---
 # <a name="select-features-upgrade"></a>Выбор компонентов (обновление)
@@ -24,9 +24,9 @@ ms.locfileid: "66092361"
   
  В данном выпуске невозможно изменить компоненты для обновления. Чтобы добавить функции в этот экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], выполните обновление, перезапустите программу установки и нажмите кнопку **Новая установка и добавление компонентов к существующей установке** в центре установки.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Поддерживаемые обновления версий и выпусков](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
- [Использование помощника по обновлению для подготовки к обновлениям](../../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)   
+ [Использование советника по переходу для подготовки к обновлениям](../../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)   
  [Работа с несколькими версиями и экземплярами SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)  
   
   

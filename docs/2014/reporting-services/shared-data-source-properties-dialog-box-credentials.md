@@ -1,5 +1,5 @@
 ---
-title: Диалоговое окно свойств источника данных, учетные данные | Документация Майкрософт
+title: Диалоговое окно "свойства общего источника данных" — "учетные данные" | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cf21cc35bb41837b65d2a2b3c2c946ffae34864f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101261"
 ---
 # <a name="shared-data-source-properties-dialog-box-credentials"></a>Диалоговое окно «Свойства общего источника данных» — «Учетные данные»
@@ -29,7 +29,7 @@ ms.locfileid: "66101261"
  **Использовать имя пользователя и пароль**  
  Выберите этот параметр, чтобы использовать определенное имя пользователя и пароль. Для общих источников данных при публикации проекта сервера отчетов на целевом сервере имя пользователя и пароль сохраняются как сохраненные учетные данные для базы данных. Если необходимо использовать имя пользователя и пароль как учетные данные Windows, можно изменить свойства опубликованного общего источника данных на целевом сервере. Дополнительные сведения см. в разделе [Создание, удаление или изменение общего источника данных (диспетчер отчетов)](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md).  
   
- **Имя пользователя**  
+ **User name**  
  Введите имя пользователя для получения доступа к источнику данных.  
   
  **Пароль**  
@@ -41,12 +41,12 @@ ms.locfileid: "66101261"
  **Введите строку приглашения**  
  Введите предложение пользователю ввести учетные данные входа для источника данных.  
   
- **Без учетных данных**  
+ **Нет учетных данных**  
  Выберите этот параметр, чтобы учетные данные не запрашивались при доступе к источнику данных. Этот параметр работает, только если источник данных не принимает учетные данные или если учетные данные передаются каким-то другим способом.  
   
-## <a name="see-also"></a>См. также  
- [Подключения к данным, источники данных и строки подключения в службах Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Задание учетных данных и сведениях о соединении для источников данных отчета](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [Диалоговое окно "Свойства общего источника данных" — "Общие"](../../2014/reporting-services/shared-data-source-properties-dialog-box-general.md)  
+## <a name="see-also"></a>См. также:  
+ [Подключения к данным, источники данных и строки подключения в Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+ [Указание учетных данных и сведений о соединении для источников данных отчета](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Диалоговое окно «Свойства общего источника данных» — «Общие»](../../2014/reporting-services/shared-data-source-properties-dialog-box-general.md)  
   
   

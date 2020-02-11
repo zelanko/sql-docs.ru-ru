@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fc3cd0e7213426568a415e8b5f1b28475f0177e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105762"
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>Форматирование текста и заполнителей (построитель отчетов и службы SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "66105762"
   
  На этом рисунке границу имеет само текстовое поле, весь текст находится в одном текстовом поле, но он по-разному отформатирован.  
   
- Чтобы быстро приступить к работе, см. раздел [Учебник. Форматирование текста (построитель отчетов)](../tutorial-format-text-report-builder.md)  
+ Чтобы быстро приступить к работе, см. раздел [Учебник. Форматирование текста (построитель отчета)](../tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -70,13 +70,13 @@ ms.locfileid: "66105762"
 ## <a name="aligning-horizontal-text-using-general"></a>Выравнивание горизонтального текста с использованием общих свойств  
  В поле **Выравнивание** в диалоговом окне **Свойства текстового поля** можно указать, как текст будет выравниваться по горизонтали. Если значение для выравнивания не задано, то применяется выравнивание, определяемое значением **По умолчанию**. Это означает, что текст выравнивается с учетом типа поля применяемого значения заполнителя. Если задано выражение, вычисление которого приводит к получению нестрокового значения, то текст выравнивается по правому краю. Если при вычислении выражения получается строковое значение, то текст выравнивается по левому краю.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выражения (построитель отчетов и службы SSRS)](expressions-report-builder-and-ssrs.md)   
  [Форматирование меток оси на диаграмме (построитель отчетов и службы SSRS)](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Форматирование шкал на датчике (построитель отчетов и службы SSRS)](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
  [Списки &#40;построитель отчетов и службы SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Диалоговое окно "Свойства заполнителя" — "Общие" (построитель отчетов и службы SSRS)](../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md)   
- [Экспорт в Microsoft Excel (построитель отчетов и службы SSRS)](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)   
+ [Диалоговое окно «Свойства заполнителя», общие &#40;построитель отчетов и службы SSRS&#41;](../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md)   
+ [Экспорт в построитель отчетов &#40;Microsoft Excel и службы SSRS&#41;](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)   
  [Текстовые поля (построитель отчетов и службы SSRS)](text-boxes-report-builder-and-ssrs.md)  
   
   

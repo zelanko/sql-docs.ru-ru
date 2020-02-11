@@ -1,5 +1,5 @@
 ---
-title: Поддерживаемые функции отчетов Access (службы SSRS) | Документация Майкрософт
+title: Поддерживаемые функции отчетов Access (SSRS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9088ab3e90b4fb341cc8125e45d498783953039d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100579"
 ---
 # <a name="supported-access-report-features-ssrs"></a>Поддерживаемые функции отчетов Access (службы SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "66100579"
 ## <a name="importing-access-reports"></a>Импорт отчетов Access  
  Некоторые запросы содержат специальный код Access. Этот код не импортируется вместе с отчетом. Кроме того, если запрос содержит внедренные строки, то отчет может импортироваться неправильно. В этом случае необходимо заменить строки кодами символов. Например, запятую (,) нужно заменить на «CHAR(34)».  
   
- Импорте неправильно передаются точка с запятой (;) и символы разметки XML (\<, >, т. д.) в строке подключения. Если строка соединения содержит такой символ, то необходимо вручную задать пароль в новом отчете после импорта.  
+ В процессе импорта точка с запятой не передается должным образом (;) или символы разметки XML\<(, > и т. д.) в сведениях строки подключения. Если строка соединения содержит такой символ, то необходимо вручную задать пароль в новом отчете после импорта.  
   
  Параметры соединения и общего времени ожидания в строке соединения не импортируются. Эти параметры можно настроить после импорта отчета.  
   
@@ -49,25 +49,25 @@ ms.locfileid: "66100579"
  Службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] поддерживают источники данных OLE DB, такие как [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. При импорте отчета из файла проекта Access (ADP) строка подключения для источника данных извлекается из этого файла. При импорте отчета из файла базы данных Access (MDB или ACCDB) строка соединения может указывать на базу данных Access. В этом случае ее придется изменить после импорта. Если источником данных отчета Access является запрос, то данные запроса импортируются в RDL-файл без изменений. Если источником данных отчета Access является таблица, то в процессе преобразования запрос создается на основе имени и полей таблицы.  
   
 ## <a name="reports-with-custom-modules"></a>Отчеты с пользовательскими модулями  
- Если имеется пользовательский [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] кода, содержащегося в модули, он не преобразуется. Если конструктор отчетов обнаружит кода во время импорта, предупреждение создается и отображается в **список задач** окна.  
+ Если в модулях [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] содержится пользовательский код, он не преобразуется. Если конструктор отчетов встречает код во время импорта, создается предупреждение, которое отображается в окне **список задач** .  
   
 ## <a name="report-controls"></a>Элементы управления отчетом  
  Службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] поддерживают следующие элементы управления Access, которые помещаются в преобразованные определения отчетов.  
   
 |||||  
 |-|-|-|-|  
-|Изображение|Метка|Линия|Прямоугольник|  
-|SubForm|SubReport<br /><br /> **Примечание** элемент управления SubReport преобразуется внутри основного отчета, сам вложенный отчет преобразуется отдельно.|TextBox||  
+|Образ —|Метка|график;|Прямоугольник|  
+|SubForm|SubReport<br /><br /> **Примечание** . При преобразовании элемента управления вложенного отчета в основной отчет сам вложенный отчет преобразуется отдельно.|TextBox||  
   
  Службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] не поддерживают следующие элементы управления:  
   
 |||||  
 |-|-|-|-|  
-|BoundObjectFrame|CheckBox|ComboBox|CommandButton|  
+|BoundObjectFrame|CheckBox|Поле со списком|CommandButton|  
 |CustomControl|ListBox|ObjectFrame|OptionButton|  
 |TabControl|ToggleButton|||  
   
- Если конструктор отчетов обнаружит любой из этих элементов управления во время импорта, предупреждение создается и отображается в **список задач** окна.  
+ Если конструктор отчетов обнаруживает какой-либо из этих элементов управления во время импорта, создается предупреждение, которое отображается в окне **список задач** .  
   
  Такие элементы управления, как ActiveX и веб-компоненты Office, не импортируются. Например, если отчет Access содержит элемент управления «Диаграмма веб-компонентов Office», то этот элемент не будет преобразован при импорте.  
   
@@ -78,13 +78,13 @@ ms.locfileid: "66100579"
 |-|-|-|-|  
 |BackColor|BackStyle|BorderColor|BorderStyle|  
 |BorderWidth|BottomMargin|CanGrow (текстовое поле)|CanShrink (текстовое поле)|  
-|Заголовок|FontBold|FontItalic|FontName|  
+|Caption|FontBold|FontItalic|FontName|  
 |FontSize|FontUnderline|FontWeight|ForceNewPage|  
-|ForeColor|Высота|HideDuplicates|Hyperlink|  
+|ForeColor|Высота:|HideDuplicates|Hyperlink|  
 |IsHyperlink|IsVisible|KeepTogether (группа)|Слева|  
 |LeftMargin|LineSlant|LineSpacing|LinkChildFields|  
 |LinkMasterFields|NewRowOrCol|PageFooter|PageHeader|  
-|Pages|Рисунок|PictureTiling (отчет)|ReadingOrder|  
+|Страницы|Фотография|PictureTiling (отчет)|ReadingOrder|  
 |RepeatSection|RightMargin|RunningSum|SizeMode|  
 |TextAlign|TOP|TopMargin|Ширина|  
   
@@ -94,10 +94,10 @@ ms.locfileid: "66100579"
 |-|-|-|-|  
 |CanGrow (раздел)|CanShrink (раздел)|DecimalPlaces|FastLaserPrinting|  
 |Filter|FilterOn|Формат|FormatConditions|  
-|GrpKeepTogether|KeepTogether (раздел)|NumeralShapes|Orientation|  
+|GrpKeepTogether|KeepTogether (раздел)|NumeralShapes|Ориентация|  
 |PaintPalette|PaletteSource|PictureAlignment|PicturePages|  
 |PictureSizeMode|PictureTiling (изображение)|ScrollBars|SpecialEffect|  
-|Вертикально||||  
+|Vertical||||  
   
 ## <a name="grouping"></a>Группирование  
  В Access уровень групп определяется сочетанием трех свойств: выражением группы, свойством `GroupOn` и свойством `GroupInterval`. Группа, у которой отсутствуют верхний и нижний колонтитулы, объединяется с группой, которую она содержит. Если группа не содержит других групп, то сортировка применяется ко всему разделу и группа удаляется.  
@@ -158,9 +158,9 @@ ms.locfileid: "66100579"
 |-|-|-|-|  
 |Дата|Date$|DateAdd|DateDiff|  
 |DatePart|DateSerial|DateValue|День|  
-|Час|Минута|Месяц|MonthName|  
-|Сейчас|Вторая|Time|Time$|  
-|Timer|TimeSerial|TimeValue|День недели|  
+|Hour|Минута|Месяц|MonthName|  
+|Now|Секунда|Time|Time$|  
+|Таймер|TimeSerial|TimeValue|День недели|  
 |WeekdayName|Год|||  
   
 #### <a name="ddeole-functions"></a>Функции DDE/OLE  
@@ -198,7 +198,7 @@ ms.locfileid: "66100579"
 |-|-|-|-|  
 |DDB|FV|IPmt|IRR|  
 |MIRR|NPer|NPV|Pmt|  
-|PPmt|PV|репликации|SLN|  
+|PPmt|PV|Тариф|SLN|  
 |SYD||||  
   
 #### <a name="interaction-functions"></a>Функции взаимодействия  
@@ -206,19 +206,19 @@ ms.locfileid: "66100579"
   
 |||||  
 |-|-|-|-|  
-|Command|Command$|CurDir|CurDir$|  
+|Get-Help|Command$|CurDir|CurDir$|  
 |DeleteSetting|Dir|Dir$|Environ|  
 |Environ$|EOF|FileAttr|FileDateTime|  
 |FileLen|FreeFile|GetAllSettings|GetAttr|  
 |GetSetting|Loc|LOF|QBColor|  
 |RGB|SaveSetting|Seek|SetAttr|  
-|Shell|Spc|Вкладка||  
+|Оболочка|Spc|Tab||  
   
  Службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] не поддерживают следующие функции взаимодействия.  
   
 |||||  
 |-|-|-|-|  
-|DoEvents|In|Ввод|Input$|  
+|DoEvents|Входящий|Входные данные|Input$|  
   
 #### <a name="inspection-functions"></a>Функции проверки  
  Службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] поддерживают следующие функции проверки.  
@@ -239,8 +239,8 @@ ms.locfileid: "66100579"
 |||||  
 |-|-|-|-|  
 |Abs|Atn|Cos|Exp|  
-|Fix|int|Журнал|Rnd|  
-|Округление|Sgn|Sin|Sqr|  
+|Исправление|Int|Журнал|Rnd|  
+|Round|Sgn|Sin|Sqr|  
 |Tan||||  
   
 #### <a name="message-functions"></a>Функции сообщений  
@@ -251,11 +251,11 @@ ms.locfileid: "66100579"
 |InputBox|InputBox$|MsgBox||  
   
 #### <a name="program-flow-functions"></a>Функции управления потоком выполнения программы  
- Службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] поддерживают следующие функции управления ходом выполнения программы.  
+ Службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] поддерживают следующие функции управления программным потоком.  
   
 |||||  
 |-|-|-|-|  
-|Choose|IIf|Параметр||  
+|Выберите|IIf|Переключатель||  
   
 #### <a name="sql-aggregate-functions"></a>Агрегатные функции SQL  
  Службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] поддерживают следующие агрегатные функции SQL.  
@@ -263,7 +263,7 @@ ms.locfileid: "66100579"
 |||||  
 |-|-|-|-|  
 |Avg|Count|Max|Min|  
-|StDev|StDevP|Sum|Var|  
+|StDev|StDevP|SUM|Var|  
 |VarP||||  
   
 #### <a name="text-functions"></a>Текстовые функции  
@@ -274,7 +274,7 @@ ms.locfileid: "66100579"
 |Формат|Format$|InStr|InStrRev|  
 |LCase|LCase$|Слева|Left$|  
 |Len|LTrim|LTrim$|Mid|  
-|Mid$|Заменить|Справа|Right$|  
+|Mid$|Замените|Right|Right$|  
 |RTrim|Пробел|Space$|StrComp|  
 |StrConv|String|String$|StrReverse|  
 |Trim|Trim$|UCase|UCase$|  
@@ -288,15 +288,16 @@ ms.locfileid: "66100579"
  При импорте параметры хранимых процедур всегда преобразуются к строковому типу данных. После импорта отчета необходимо вручную восстановить для параметров нужные типы.  
   
 ### <a name="object-names"></a>Имена объектов  
- В Access поля могут иметь такое же имя, как элементы управления; в службах [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] это не так. [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 6.0 позволяет использовать пробелы в именах переменных, а Visual Basic .NET — нет. При импорте имена таких объектов заменяются допустимыми именами, а объектам с одинаковыми именами присваиваются уникальные имена. Просматриваются все выражения, и имена переменных, соответствующих переименованным объектам, заменяются новыми именами.  
+ В Access поля могут иметь такое же имя, как элементы управления; в службах [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] это не так. 
+  [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 6.0 позволяет использовать пробелы в именах переменных, а Visual Basic .NET — нет. При импорте имена таких объектов заменяются допустимыми именами, а объектам с одинаковыми именами присваиваются уникальные имена. Просматриваются все выражения, и имена переменных, соответствующих переименованным объектам, заменяются новыми именами.  
   
 ## <a name="rectangles-and-containment"></a>Прямоугольники и включение  
  В определении отчета служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] прямоугольники могут содержать другие элементы отчета. Любой прямоугольник, превышающий размеры элемента отчета и перекрывающий более 90% его поверхности, становится контейнером этого элемента.  
   
-## <a name="bitmaps"></a>Растровые изображения  
- Все битовые карты, внедренные в отчет, преобразуются при импорте в формат BMP, независимо от первоначального формата. Например, если отчет содержит файлы в формате JPG или GIF, то ресурсы, импортированные вместе с отчетом, будут преобразованы в BMP-файлы. Битовые карты хранятся в отчете в виде внедренных изображений. Сведения о внедренных изображениях см. в разделе [образы &#40;построитель отчетов и службы SSRS&#41;](report-design/images-report-builder-and-ssrs.md).  
+## <a name="bitmaps"></a>Битовые карты  
+ Все битовые карты, внедренные в отчет, преобразуются при импорте в формат BMP, независимо от первоначального формата. Например, если отчет содержит файлы в формате JPG или GIF, то ресурсы, импортированные вместе с отчетом, будут преобразованы в BMP-файлы. Битовые карты хранятся в отчете в виде внедренных изображений. Дополнительные сведения о внедренных образах см. в разделе [images &#40;построитель отчетов and SSRS&#41;](report-design/images-report-builder-and-ssrs.md).  
   
-## <a name="other-considerations"></a>Другие вопросы  
+## <a name="other-considerations"></a>Дополнительные рекомендации  
  Дополнительно к приведенным выше сведениям при импорте отчетов Access необходимо учитывать следующие замечания.  
   
 -   Условное форматирование не преобразуется.  

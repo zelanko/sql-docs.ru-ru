@@ -1,5 +1,5 @@
 ---
-title: При удалении сборки | Документация Майкрософт
+title: Удаление сборки | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ ms.assetid: 03481034-dc91-4488-ab24-ba44243e2690
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: f28f51f73faca8a72bdea3b8af70e14046d73f8d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68074338"
 ---
 # <a name="dropping-an-assembly"></a>Удаление сборки
@@ -43,7 +43,7 @@ DROP ASSEMBLY MyDotNETAssembly
 -   Функции, хранимые процедуры или триггеры, которые используют переменные или параметры определяемого пользователем типа и созданы в базе данных с помощью предложения WITH SCHEMABINDING.  
   
 ### <a name="finding-udt-dependencies"></a>Поиск зависимостей определяемого пользователем типа  
- Сначала необходимо удалить все зависимые объекты, а затем выполнить инструкцию DROP TYPE. Следующие [!INCLUDE[tsql](../../../includes/tsql-md.md)] запрос находит все столбцы и параметров, которые используют определяемый пользователем тип в **AdventureWorks** базы данных.  
+ Сначала необходимо удалить все зависимые объекты, а затем выполнить инструкцию DROP TYPE. Следующий [!INCLUDE[tsql](../../../includes/tsql-md.md)] запрос находит все столбцы и параметры, которые используют определяемый пользователем тип в базе данных **AdventureWorks** .  
   
 ```  
 USE Adventureworks;  
@@ -63,14 +63,14 @@ SELECT o.name AS major_name, o.type_desc AS major_type_desc
     ON at.user_type_id = c.user_type_id;   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Управление сборками интеграции со средой CLR](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
  [Изменение сборки](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)   
  [Создание сборки](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)   
- [DROP AGGREGATE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-aggregate-transact-sql.md)   
- [DROP FUNCTION (Transact-SQL)](../../../t-sql/statements/drop-function-transact-sql.md)   
- [DROP PROCEDURE (Transact-SQL)](../../../t-sql/statements/drop-procedure-transact-sql.md)   
- [DROP TRIGGER (Transact-SQL)](../../../t-sql/statements/drop-trigger-transact-sql.md)   
- [Тип ПЕРЕНОСА &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-type-transact-sql.md)  
+ [DROP АГРЕГАТная &#40;&#41;Transact-SQL](../../../t-sql/statements/drop-aggregate-transact-sql.md)   
+ [DROP FUNCTION &#40;&#41;Transact-SQL](../../../t-sql/statements/drop-function-transact-sql.md)   
+ [УДАЛИТЬ процедуру &#40;языке Transact-SQL&#41;](../../../t-sql/statements/drop-procedure-transact-sql.md)   
+ [УДАЛИТЬ триггер &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-trigger-transact-sql.md)   
+ [DROP TYPE &#40;&#41;Transact-SQL](../../../t-sql/statements/drop-type-transact-sql.md)  
   
   

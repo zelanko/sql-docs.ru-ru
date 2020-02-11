@@ -1,5 +1,5 @@
 ---
-title: Список зарезервированных слов Jet 4.0 использует SQL-92 для ExtendedAnsiSQL_Set | Документация Майкрософт
+title: В Jet 4,0 используется список зарезервированных слов SQL-92 при ExtendedAnsiSQL_Set | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,11 +13,11 @@ ms.assetid: 7645187e-7777-4c07-9686-0a80d5c5834d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 93d23216db950ed861449061f3e35e5e88a637fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68058787"
 ---
-# <a name="jet-40-uses-sql-92-reserved-words-list-when-extendedansisqlset"></a>Jet 4.0 использует список зарезервированных слов SQL-92 для ExtendedAnsiSQL_Set
-При включении флага ExtendedAnsiSQL Jet 4.0 использует список зарезервированных слов SQL-92. Попытка использования SQL-92 зарезервированное слово, так как имя объекта, не заключенный в кавычки вызовет синтаксическую ошибку. При выключенном флаг ExtendedAnsiSQL новые зарезервированные слова можно использовать как объект прежние имена.
+# <a name="jet-40-uses-sql-92-reserved-words-list-when-extendedansisql_set"></a>Jet 4.0 использует список зарезервированных слов SQL-92 для ExtendedAnsiSQL_Set
+Если флаг ExtendedAnsiSQL включен, Jet 4,0 использует зарезервированные слова SQL-92. Попытка использовать зарезервированное слово SQL-92 в качестве имени объекта, не заключенного в кавычки, приведет к синтаксической ошибке. Если флаг ExtendedAnsiSQL выключен, новые зарезервированные слова можно использовать в качестве имен объектов.

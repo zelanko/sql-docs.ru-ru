@@ -18,19 +18,19 @@ ms.assetid: 45b3dc1c-1cde-45b7-a248-5195c12973e9
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 6f00b788ecf6b6e4c02d4b8343ba14fa2c345e6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68056579"
 ---
-# <a name="spchangeobjectowner-transact-sql"></a>sp_changeobjectowner (Transact-SQL)
+# <a name="sp_changeobjectowner-transact-sql"></a>sp_changeobjectowner (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Изменяет владельца объекта в текущей базе данных.  
   
 > [!IMPORTANT]
->  Эта хранимая процедура работает только с объектами, доступными в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Используйте [ALTER SCHEMA](../../t-sql/statements/alter-schema-transact-sql.md) или [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) вместо этого. **sp_changeobjectowner** изменяет как схему, так и владельца. Для сохранения совместимости с более ранними версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] эта хранимая процедура изменит только владельцев объекта, если и текущий владелец, и новый владелец владеют схемами, которые имеют такое же имя, как и имена пользователей базы данных.  
+>  Эта хранимая процедура работает только с объектами, доступными [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]в. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Вместо этого используйте [ALTER SCHEMA](../../t-sql/statements/alter-schema-transact-sql.md) или [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) . **sp_changeobjectowner** изменяет как схему, так и владельца. Для сохранения совместимости с более ранними версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] эта хранимая процедура изменит только владельцев объекта, если и текущий владелец, и новый владелец владеют схемами, которые имеют такое же имя, как и имена пользователей базы данных.  
 > 
 > [!IMPORTANT]
 >  К этой хранимой процедуре было добавлено требование новых разрешений.  
@@ -45,34 +45,34 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @objname = ] 'object'` — Имя существующей таблицы, представления, определяемой пользователем функции или хранимой процедуры в текущей базе данных. *Объект* — **nvarchar(776)** , не имеет значения по умолчанию. *Объект* может быть заполнен именем владельца существующего объекта в форме _existing_owner_ **.** _объект_ Если схема и ее владелец имеют тем же именем.  
+`[ @objname = ] 'object'`Имя существующей таблицы, представления, определяемой пользователем функции или хранимой процедуры в текущей базе данных. *объект* имеет тип **nvarchar (776)** и не имеет значения по умолчанию. *объект* можно уточнить с помощью владельца существующего объекта в форме _existing_owner_**.** _объект_ , если схема и ее владелец имеют одинаковые имена.  
   
-`[ @newowner = ] 'owner_ '` — Имя учетной записи безопасности, который будет новым владельцем объекта. *владелец* — **sysname**, не имеет значения по умолчанию. *владелец* должен быть допустимым пользователем базы данных, роли сервера, [!INCLUDE[msCoName](../../includes/msconame-md.md)] имени входа Windows или группы Windows, имеющей доступ к текущей базе данных. Если владелец является пользователем Windows или членом группы Windows, для которой нет соответствующего участника уровня базы данных, пользователь базы данных будет создан.  
+`[ @newowner = ] 'owner_ '`Имя учетной записи безопасности, которая будет новым владельцем объекта. Аргумент *owner* имеет тип **sysname**и не имеет значения по умолчанию. *владельцем* должен быть допустимый пользователь базы данных, роль сервера [!INCLUDE[msCoName](../../includes/msconame-md.md)] , имя входа Windows или группа Windows с доступом к текущей базе данных. Если владелец является пользователем Windows или членом группы Windows, для которой нет соответствующего участника уровня базы данных, пользователь базы данных будет создан.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или 1 (неуспешное завершение)  
+ 0 (успех) или 1 (сбой).  
   
-## <a name="remarks"></a>Примечания  
- **sp_changeobjectowner** удаляет все существующие разрешения из объекта. Придется переназначить любые разрешения, которые требуется сохранить после запуска **sp_changeobjectowner**. Таким образом, мы рекомендуем в скрипте существующие разрешения перед запуском **sp_changeobjectowner**. После изменения владения объектом можно использовать этот скрипт для переназначения разрешений. Перед тем как выполнить скрипт разрешений, в нем необходимо изменить владельца объекта.  
+## <a name="remarks"></a>Remarks  
+ **sp_changeobjectowner** удаляет все существующие разрешения из объекта. Вам потребуется повторно применить все разрешения, которые вы хотите сохранить после выполнения **sp_changeobjectowner**. Поэтому перед запуском **sp_changeobjectowner**рекомендуется создать скрипты для существующих разрешений. После изменения владения объектом можно использовать этот скрипт для переназначения разрешений. Перед тем как выполнить скрипт разрешений, в нем необходимо изменить владельца объекта.  
   
  Чтобы изменить владельца защищенного объекта, используйте инструкцию ALTER AUTHORIZATION. Чтобы изменить схему, используйте инструкцию ALTER SCHEMA.  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется членство в **db_owner** предопределенной роли базы данных или членство в обоих **db_ddladmin** предопределенной роли базы данных и **db_securityadmin** предопределенной роли базы данных а также разрешение CONTROL на объект.  
+ Требуется членство в предопределенной роли базы данных **db_owner** или членство в предопределенной роли базы данных **db_ddladmin** и **db_securityadmin** предопределенной роли базы данных, а также разрешение CONTROL на объект.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере изменяется владелец `authors` таблицу `Corporate\GeorgeW`.  
+ В следующем примере владелец `authors` таблицы изменяется на. `Corporate\GeorgeW`  
   
 ```  
 EXEC sp_changeobjectowner 'authors', 'Corporate\GeorgeW';  
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [ALTER SCHEMA (Transact-SQL)](../../t-sql/statements/alter-schema-transact-sql.md)   
- [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
- [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md)   
- [sp_changedbowner (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [ALTER SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/alter-schema-transact-sql.md)   
+ [&#41;Transact-SQL ALTER DATABASE &#40;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
+ [sp_changedbowner &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 29b3430e4a29130c4189fbce1a9a023b7a7f26da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101640"
 ---
 # <a name="secure-shared-dataset-items"></a>Защита элементов общего набора данных
@@ -48,9 +48,9 @@ ms.locfileid: "66101640"
   
  Дополнительные сведения см. в разделах [Задачи уровня элемента](tasks-and-permissions-item-level-tasks.md) и [Стандартные роли](role-definitions-predefined-roles.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Управление общими наборами данных](../report-data/manage-shared-datasets.md)   
- [Обеспечение защиты папок](secure-folders.md)   
+ [Защита папок](secure-folders.md)   
  [Защищенные отчеты и ресурсы](secure-reports-and-resources.md)   
  [Предоставление разрешений на сервер отчетов в собственном режиме](granting-permissions-on-a-native-mode-report-server.md)   
  [Предоставление разрешений на сервер отчетов в собственном режиме](granting-permissions-on-a-native-mode-report-server.md)  

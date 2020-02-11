@@ -1,5 +1,5 @@
 ---
-title: Настройка параметров опубликованного отчета (службы Reporting Services в режиме интеграции с SharePoint) | Документация Майкрософт
+title: Установка параметров опубликованного отчета (Reporting Services в режиме интеграции с SharePoint) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: da71b511a65758483a9bf207dbe54a484f4f1b26
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105019"
 ---
 # <a name="set-parameters-on-a-published-report-reporting-services-in-sharepoint-integrated-mode"></a>настроить параметры опубликованного отчета (службы Reporting Services в режиме интеграции с SharePoint)
@@ -81,7 +81,7 @@ ms.locfileid: "66105019"
   
 7.  Нажмите кнопку **Применить**.  
   
-## <a name="see-also"></a>См. также  
- [Справочная таблица по разрешениям на сайты SharePoint и списки для элементов сервера отчетов](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
+## <a name="see-also"></a>См. также:  
+ [Справочная таблица по разрешениям на доступ к спискам и сайтам SharePoint для элементов сервера отчетов](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys.sql_dependencies (Transact-SQL) | Документация Майкрософт
+title: sys. sql_dependencies (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,39 +20,39 @@ ms.assetid: 1779aa87-a0b8-470a-a286-d7cc0b93ad2e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8742ebefab7a4b826eac0088a2d57f022a27715b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68073180"
 ---
-# <a name="syssqldependencies-transact-sql"></a>sys.sql_dependencies (Transact-SQL)
+# <a name="syssql_dependencies-transact-sql"></a>sys.sql_dependencies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Содержит по одной строке для каждой зависимости, связанной с упоминаемой сущностью с помощью выражения или инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)], определяющих какой-либо другой ссылающийся объект.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Используйте [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) вместо этого.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Вместо этого используйте представление [sys. sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) .  
 
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|**class**|**tinyint**|Идентифицирует класс упоминаемой сущности:<br /><br /> 0 = объект или столбец (только ссылки, не связанные со схемами);<br /><br /> 1 = объект или столбец (ссылки, связанные со схемами);<br /><br /> 2 = типы (ссылки, связанные со схемами);<br /><br /> 3 = коллекции XML-схем (ссылки, связанные со схемами);<br /><br /> 4 = функции секционирования (ссылки, связанные со схемами).|  
-|**class_desc**|**nvarchar(60)**|Описание класса упоминаемой сущности:<br /><br /> **OBJECT_OR_COLUMN_REFERENCE_NON_SCHEMA_BOUND**<br /><br /> **OBJECT_OR_COLUMN_REFERENCE_SCHEMA_BOUND**<br /><br /> **TYPE_REFERENCE**<br /><br /> **XML_SCHEMA_COLLECTION_REFERENCE**<br /><br /> **PARTITION_FUNCTION_REFERENCE**|  
+|**см**|**tinyint**|Идентифицирует класс упоминаемой сущности:<br /><br /> 0 = объект или столбец (только ссылки, не связанные со схемами);<br /><br /> 1 = объект или столбец (ссылки, связанные со схемами);<br /><br /> 2 = типы (ссылки, связанные со схемами);<br /><br /> 3 = коллекции XML-схем (ссылки, связанные со схемами);<br /><br /> 4 = функции секционирования (ссылки, связанные со схемами).|  
+|**class_desc**|**nvarchar (60)**|Описание класса упоминаемой сущности:<br /><br /> **OBJECT_OR_COLUMN_REFERENCE_NON_SCHEMA_BOUND;**<br /><br /> **OBJECT_OR_COLUMN_REFERENCE_SCHEMA_BOUND;**<br /><br /> **TYPE_REFERENCE**<br /><br /> **XML_SCHEMA_COLLECTION_REFERENCE;**<br /><br /> **PARTITION_FUNCTION_REFERENCE.**|  
 |**object_id**|**int**|Идентификатор ссылающегося объекта.|  
 |**column_id**|**int**|Если ссылающийся идентификатор является столбцом, то идентификатор; в противном случае 0.|  
 |**referenced_major_id**|**int**|Идентификатор упоминаемой сущности, интерпретированный по значению класса следующим образом:<br /><br /> 0, 1 = идентификатор объекта или столбца;<br /><br /> 2 = идентификатор типа;<br /><br /> 3 = идентификатор коллекции XML-схем.|  
-|**referenced_minor_id**|**int**|Вспомогательный идентификатор упоминаемой сущности, интерпретированный по значению класса, как показано ниже.<br /><br /> Когда поле «class» равно:<br /><br /> 0, **referenced_minor_id** идентификатор столбца; или если не один столбец, он равен 0.<br /><br /> 1, **referenced_minor_id** идентификатор столбца; или если не один столбец, он равен 0.<br /><br /> В противном случае **referenced_minor_id** = 0.|  
+|**referenced_minor_id**|**int**|Вспомогательный идентификатор упоминаемой сущности, интерпретированный по значению класса, как показано ниже.<br /><br /> Когда поле «class» равно:<br /><br /> 0, **referenced_minor_id** является идентификатором столбца; или, если столбец не является столбцом, он равен 0.<br /><br /> 1, **referenced_minor_id** является идентификатором столбца; или, если столбец не является столбцом, он равен 0.<br /><br /> В противном случае **referenced_minor_id** = 0.|  
 |**is_selected**|**bit**|Объект или столбец выбран.|  
-|**обновленном**|**bit**|Объект или столбец обновлен.|  
+|**is_updated**|**bit**|Объект или столбец обновлен.|  
 |**is_select_all**|**bit**|Объект используется в предложении вида SELECT * (только уровень объектов).|  
   
 ## <a name="permissions"></a>Разрешения  
- Необходимо быть членом роли **public**. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Требуется членство в роли **Public** . Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Представления каталога объектов (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Часто задаваемые вопросы о запросах к системному каталогу SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
+ [Представления каталога объектов &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [Часто задаваемые вопросы о запросах к системному каталогу сервера SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

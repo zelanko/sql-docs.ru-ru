@@ -1,5 +1,5 @@
 ---
-title: 'SQL в C: Числовые | Документация Майкрософт'
+title: 'Из SQL в C: numeric | Документация Майкрософт'
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql
@@ -15,15 +15,15 @@ ms.assetid: 76f8b5d5-4bd0-4dcb-a90a-698340e0d36e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a23e60b161c09367cfb079cea1f7ca146b4ebee5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68056849"
 ---
-# <a name="sql-to-c-numeric"></a>SQL в C: Numeric
+# <a name="sql-to-c-numeric"></a>Преобразование данных из SQL в C: числовые данные
 
-Ниже перечислены идентификаторы для числовых типов данных ODBC SQL.
+Ниже приведены идентификаторы числовых типов данных ODBC SQL.
 
 - SQL_DECIMAL  
 - SQL_BIGINT  
@@ -34,28 +34,28 @@ ms.locfileid: "68056849"
 - SQL_SMALLINT  
 - SQL_DOUBLE SQL_INTEGER  
 
-Следующая таблица показывает ODBC C типы данных, к которым можно преобразовать числовые данные SQL. Описание столбцов и условия в таблице, см. в разделе [преобразование данных из SQL в типы данных C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md).  
+В следующей таблице показаны типы данных ODBC C, к которым могут быть преобразованы числовые данные SQL. Описание столбцов и терминов в таблице см. в разделе [Преобразование данных из SQL в типы данных C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md).  
 
-|Идентификатор типа C|Тест|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
+|Идентификатор типа C|Тест|**таржетвалуептр*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|Длина байтов символьной < *BufferLength*<br /><br /> Количество цифр в целом (в отличие от долей) < *BufferLength*<br /><br /> Количество цифр в целом (в отличие от долей) > = *BufferLength*|Data<br /><br /> Усеченные данные<br /><br /> Не определено.|Длина данных в байтах<br /><br /> Длина данных в байтах<br /><br /> Не определено.|Н/Д<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|Длина символьной < *BufferLength*<br /><br /> Количество цифр в целом (в отличие от долей) < *BufferLength*<br /><br /> Количество цифр в целом (в отличие от долей) > = *BufferLength*|Data<br /><br /> Усеченные данные<br /><br /> Не определено.|Длина данных в символах<br /><br /> Длина данных в символах<br /><br /> Не определено.|Н/Д<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_STINYINT<br /><br /> SQL_C_UTINYINT<br /><br /> SQL_C_TINYINT<br /><br /> SQL_C_SBIGINT<br /><br /> SQL_C_UBIGINT<br /><br /> SQL_C_SSHORT<br /><br /> SQL_C_USHORT<br /><br /> SQL_C_SHORT<br /><br /> SQL_C_SLONG<br /><br /> SQL_C_ULONG<br /><br /> SQL_C_LONG<br /><br /> SQL_C_NUMERIC|Данные, преобразованные без усечения, [a]<br /><br /> Данные преобразуются с помощью усечения цифр дробной части [a]<br /><br /> Преобразование данных приведет к потере разрядов (в отличие от долей) []|Data<br /><br /> Усеченные данные<br /><br /> Не определено.|Размер типа данных C<br /><br /> Размер типа данных C<br /><br /> Не определено.|Н/Д<br /><br /> 01S07<br /><br /> 22003|  
-|SQL_C_FLOAT<br /><br /> SQL_C_DOUBLE|Данные не выходят за диапазон типа данных, в который преобразуется значение [a]<br /><br /> Данных находится вне диапазона типа данных, в который преобразуется значение [a]|Data<br /><br /> Не определено.|Размер типа данных C<br /><br /> Не определено.|Н/Д<br /><br /> 22003|  
-|SQL_C_BIT|Данные являются 0 или 1, [a]<br /><br /> Данные больше 0, меньше 2 и не равно 1, [a]<br /><br /> Данных меньше 0 или больше или равно 2, [a]|Data<br /><br /> Усеченные данные<br /><br /> Не определено.|1 [b]<br /><br /> 1 [b]<br /><br /> Не определено.|Н/Д<br /><br /> 01S07<br /><br /> 22003|  
-|SQL_C_BINARY|Байтовая длина данных < = *BufferLength*<br /><br /> Длину данных в байтах > *BufferLength*|Data<br /><br /> Не определено.|Длина данных<br /><br /> Не определено.|Н/Д<br /><br /> 22003|  
-|SQL_C_INTERVAL_MONTH[c] SQL_C_INTERVAL_YEAR[c] SQL_C_INTERVAL_DAY[c] SQL_C_INTERVAL_HOUR[c] SQL_C_INTERVAL_MINUTE[c] SQL_C_INTERVAL_SECOND[c]|Данные не усекаются<br /><br /> Усечены с обозначением долей секунды<br /><br /> Целая часть числа усекаются|Data<br /><br /> Усеченные данные<br /><br /> Не определено.|Длина данных в байтах<br /><br /> Длина данных в байтах<br /><br /> Не определено.|Н/Д<br /><br /> 01S07<br /><br /> 22015|  
-|SQL_C_INTERVAL_YEAR_TO_MONTH SQL_C_INTERVAL_DAY_TO_HOUR SQL_C_INTERVAL_DAY_TO_MINUTE SQL_C_INTERVAL_DAY_TO_SECOND SQL_C_INTERVAL_HOUR_TO_MINUTE SQL_C_INTERVAL_HOUR_TO_SECOND|Целая часть числа усекаются|Не определено.|Не определено.|22015|  
+|SQL_C_CHAR|Длина байта символов < *BufferLength*<br /><br /> Целое число (в отличие от дробной) цифр < *BufferLength*<br /><br /> Число целых знаков (в отличие от дробной) >= *BufferLength*|Данные<br /><br /> Усеченные данные<br /><br /> Не определено|Длина данных в байтах<br /><br /> Длина данных в байтах<br /><br /> Не определено|Недоступно<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|Символьная длина < *BufferLength*<br /><br /> Целое число (в отличие от дробной) цифр < *BufferLength*<br /><br /> Число целых знаков (в отличие от дробной) >= *BufferLength*|Данные<br /><br /> Усеченные данные<br /><br /> Не определено|Длина данных в символах<br /><br /> Длина данных в символах<br /><br /> Не определено|Недоступно<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_STINYINT<br /><br /> SQL_C_UTINYINT<br /><br /> SQL_C_TINYINT<br /><br /> SQL_C_SBIGINT<br /><br /> SQL_C_UBIGINT<br /><br /> SQL_C_SSHORT<br /><br /> SQL_C_USHORT<br /><br /> SQL_C_SHORT<br /><br /> SQL_C_SLONG<br /><br /> SQL_C_ULONG<br /><br /> SQL_C_LONG<br /><br /> SQL_C_NUMERIC|Данные, преобразованные без усечения [a]<br /><br /> Данные, преобразованные с усечением дробных разрядов [a]<br /><br /> Преобразование данных приведет к утере целых (в отличие от дробных) цифр [a]|Данные<br /><br /> Усеченные данные<br /><br /> Не определено|Размер типа данных C<br /><br /> Размер типа данных C<br /><br /> Не определено|Недоступно<br /><br /> 01S07<br /><br /> 22003|  
+|SQL_C_FLOAT<br /><br /> SQL_C_DOUBLE|Данные находятся в диапазоне типа данных, в который преобразуется число [a]<br /><br /> Данные выходят за пределы диапазона типа данных, в который преобразуется число [a]|Данные<br /><br /> Не определено|Размер типа данных C<br /><br /> Не определено|Недоступно<br /><br /> 22003|  
+|SQL_C_BIT|Данные равны 0 или 1 [a]<br /><br /> Данные больше 0, меньше 2 и не равны 1 [a]<br /><br /> Данные меньше 0 или больше или равны 2 [a]|Данные<br /><br /> Усеченные данные<br /><br /> Не определено|1 [b]<br /><br /> 1 [b]<br /><br /> Не определено|Недоступно<br /><br /> 01S07<br /><br /> 22003|  
+|SQL_C_BINARY|Длина данных в байтах <= *BufferLength*<br /><br /> Длина байта данных > *BufferLength*|Данные<br /><br /> Не определено|Длина данных<br /><br /> Не определено|Недоступно<br /><br /> 22003|  
+|SQL_C_INTERVAL_MONTH [c] SQL_C_INTERVAL_YEAR [c] SQL_C_INTERVAL_DAY [c] SQL_C_INTERVAL_HOUR [c] SQL_C_INTERVAL_MINUTE [c] SQL_C_INTERVAL_SECOND [c]|Данные не усечены<br /><br /> Часть долей секунды усечена<br /><br /> Целая часть числа усечена|Данные<br /><br /> Усеченные данные<br /><br /> Не определено|Длина данных в байтах<br /><br /> Длина данных в байтах<br /><br /> Не определено|Недоступно<br /><br /> 01S07<br /><br /> 22015|  
+|SQL_C_INTERVAL_YEAR_TO_MONTH SQL_C_INTERVAL_DAY_TO_HOUR SQL_C_INTERVAL_DAY_TO_MINUTE SQL_C_INTERVAL_DAY_TO_SECOND SQL_C_INTERVAL_HOUR_TO_MINUTE SQL_C_INTERVAL_HOUR_TO_SECOND|Целая часть числа усечена|Не определено|Не определено|22015|  
   
- [a] значение *BufferLength* игнорируется для этого преобразования. Драйвер предполагает, что размер **TargetValuePtr* — это размер типа данных C.  
+ [a] значение *BufferLength* игнорируется для этого преобразования. Драйвер предполагает, что размер **таржетвалуептр* — это размер типа данных C.  
   
  [b] это размер соответствующего типа данных C.  
   
- [c] это преобразование поддерживается только для точных числовых типов данных (SQL_DECIMAL, SQL_NUMERIC, SQL_TINYINT, SQL_SMALLINT, SQL_INTEGER и SQL_BIGINT). Не поддерживается для приблизительных числовых типов данных (SQL_REAL, SQL_FLOAT или SQL_DOUBLE).  
+ [c] это преобразование поддерживается только для точных числовых типов данных (SQL_DECIMAL, SQL_NUMERIC, SQL_TINYINT, SQL_SMALLINT, SQL_INTEGER и SQL_BIGINT). Он не поддерживается для приблизительных числовых типов данных (SQL_REAL, SQL_FLOAT или SQL_DOUBLE).  
 
-## <a name="sqlcnumeric-and-sqlsetdescfield"></a>SQL_C_NUMERIC и SQLSetDescField
+## <a name="sql_c_numeric-and-sqlsetdescfield"></a>SQL_C_NUMERIC и SQLSetDescField
 
- [Функция SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) необходим для выполнения ручной привязки со значениями SQL_C_NUMERIC. (Обратите внимание, что SQLSetDescField был добавлен в ODBC 3.0). Чтобы выполнить привязку вручную, сначала необходимо получить дескриптор.  
+ [Функция SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) необходима для выполнения привязки вручную со значениями SQL_C_NUMERIC. (Обратите внимание, что SQLSetDescField был добавлен в ODBC 3,0.) Чтобы выполнить привязку вручную, необходимо сначала получить дескриптор дескриптора.  
 
 ```cpp
 if (fCType == SQL_C_NUMERIC) {   

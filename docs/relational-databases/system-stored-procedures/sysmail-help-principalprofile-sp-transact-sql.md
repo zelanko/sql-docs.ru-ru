@@ -18,13 +18,13 @@ ms.assetid: 0cfd6464-09c7-4f03-9d25-58001c096a9e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5bc48bb3edbeaad5593f574676e61ab2ca7f727f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68044519"
 ---
-# <a name="sysmailhelpprincipalprofilesp-transact-sql"></a>sysmail_help_principalprofile_sp (Transact-SQL)
+# <a name="sysmail_help_principalprofile_sp-transact-sql"></a>sysmail_help_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Выводит сведения об взаимосвязях между профилями компонента Database Mail и участниками базы данных.  
@@ -41,33 +41,33 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @principal_id = ] principal_id` Идентификатор пользователя базы данных или роли в **msdb** базы данных для добавления взаимосвязи. *principal_id* — **int**, значение по умолчанию NULL. Либо *principal_id* или *principal_name* может быть указан.  
+`[ @principal_id = ] principal_id`Идентификатор пользователя или роли базы данных в базе данных **msdb** для списка взаимосвязей. *principal_id* имеет **тип int**и значение по умолчанию NULL. Можно указать либо *principal_id* , либо *principal_name* .  
   
-`[ @principal_name = ] 'principal_name'` Имя пользователя базы данных или роли в **msdb** базы данных для добавления взаимосвязи. *principal_name* — **sysname**, значение по умолчанию NULL. Либо *principal_id* или *principal_name* может быть указан.  
+`[ @principal_name = ] 'principal_name'`Имя пользователя или роли базы данных в базе данных **msdb** для списка взаимосвязей. Аргумент *principal_name* имеет тип **sysname**и значение по умолчанию NULL. Можно указать либо *principal_id* , либо *principal_name* .  
   
-`[ @profile_id = ] profile_id` — Идентификатор профиля для добавления взаимосвязи. *profile_id* — **int**, значение по умолчанию NULL. Либо *profile_id* или *profile_name* может быть указан.  
+`[ @profile_id = ] profile_id`Идентификатор профиля для списка взаимосвязей. *profile_id* имеет **тип int**и значение по умолчанию NULL. Можно указать либо *profile_id* , либо *profile_name* .  
   
-`[ @profile_name = ] 'profile_name'` — Имя профиля для взаимосвязи. *profile_name* — **sysname**, значение по умолчанию NULL. Либо *profile_id* или *profile_name* может быть указан.  
+`[ @profile_name = ] 'profile_name'`Имя профиля для списка взаимосвязей. Аргумент *profile_name* имеет тип **sysname**и значение по умолчанию NULL. Можно указать либо *profile_id* , либо *profile_name* .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  Возвращает результирующий набор, содержащий столбцы, перечисленные в следующей таблице.  
   
 ||||  
 |-|-|-|  
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |**principal_id**|**int**|Идентификатор пользователя базы данных.|  
-|**principal_name**|**sysname**|Имя пользователя базы данных.|  
+|**principal_name**|**имеет sysname**|Имя пользователя базы данных.|  
 |**profile_id**|**int**|Идентификатор профиля компонента Database Mail.|  
-|**profile_name**|**sysname**|Имя профиля компонента Database Mail.|  
+|**profile_name**|**имеет sysname**|Имя профиля компонента Database Mail.|  
 |**is_default**|**bit**|Флаг, который указывает, является ли профиль профилем по умолчанию для пользователя.|  
   
-## <a name="remarks"></a>Примечания  
- Если **sysmail_help_principalprofile_sp** вызывается без параметров, возвращенный результирующий набор содержит все взаимосвязи экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В противном случае результирующий набор содержит сведения об ассоциациях, которые удовлетворяют предоставленным параметрам. Например, если представлено имя профиля, процедура приводит список всех взаимосвязей для профиля.  
+## <a name="remarks"></a>Remarks  
+ Если **sysmail_help_principalprofile_sp** вызывается без параметров, то возвращаемый результирующий набор перечисляет все ассоциации в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В противном случае результирующий набор содержит сведения об ассоциациях, которые удовлетворяют предоставленным параметрам. Например, если представлено имя профиля, процедура приводит список всех взаимосвязей для профиля.  
   
- **sysmail_help_principalprofile_sp** в **msdb** базы данных и принадлежит **dbo** схемы. Процедуру необходимо выполнять с трехкомпонентным именем, если текущая база данных не **msdb**.  
+ **sysmail_help_principalprofile_sp** находится в базе данных **msdb** и принадлежит схеме **dbo** . Процедура должна быть выполнена с именем, сопоставленным с тремя частями, если текущей базой данных не является **msdb**.  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо членство в предопределенной роли сервера **sysadmin** .  
@@ -107,8 +107,8 @@ principal_id principal_name     profile_id  profile_name                   is_de
 5            danw               9           AdventureWorks Administrator   1  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
- [Хранимые процедуры Database Mail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Database Mail хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

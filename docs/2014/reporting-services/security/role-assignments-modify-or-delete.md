@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 14d0a9f95ea3abccd2d50f469fe068459baa9364
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101960"
 ---
 # <a name="modify-or-delete-a-role-assignment-report-manager"></a>Изменение или удаление назначения ролей (диспетчер отчетов)
@@ -62,10 +62,10 @@ ms.locfileid: "66101960"
   
 6.  Чтобы удалить назначение ролей, установите флажок рядом с пользователем или группой, а затем нажмите кнопку **Удалить**.  
   
-## <a name="see-also"></a>См. также  
- (Создание и управление role-assignments.md)   
+## <a name="see-also"></a>См. также:  
+ (create-and-manage-role-assignments.md)   
  [Назначения ролей](role-assignments.md)   
- [Страница "Параметры сайта" (диспетчер отчетов)](../site-settings-page-report-manager.md)   
- [Создание назначения системной роли: Страница «Изменение» назначения роли системы &#40;диспетчера отчетов&#41;](../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
+ [Страница "Параметры сайта" &#40;диспетчер отчетов&#41;](../site-settings-page-report-manager.md)   
+ [Новые назначения системных ролей: страница "изменение назначения системных ролей" &#40;диспетчер отчетов&#41;](../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
   
   

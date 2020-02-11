@@ -16,18 +16,19 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 98f7dd23615cf86e4c20a84eae6bc39ff6489bc3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094351"
 ---
-# <a name="installation-prerequisites"></a>Компоненты, необходимые для установки
+# <a name="installation-prerequisites"></a>Предварительные требования для установки
   Для успешной установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на компьютере, где она производится, необходимо наличие следующих компонентов программного обеспечения (они будут установлены программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ):  
   
--   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] версии 4.0 для всех выпусков [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+-   
+  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] версии 4.0 для всех выпусков [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Файлы поддержки программы установки  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Файлы поддержки программы установки  
   
 -   Собственный клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   

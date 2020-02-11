@@ -1,5 +1,5 @@
 ---
-title: Другие подробные сведения о программировании драйверов для Excel | Документация Майкрософт
+title: Другие сведения о программировании драйвера Excel | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ ms.assetid: 92453ef5-86d6-4d13-bdd6-a4f5cf9c453f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 464d454928b575e5151b09663d96b1f837356761
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68043773"
 ---
 # <a name="other-excel-driver-programming-details"></a>Другие сведения о программировании драйверов для Excel
 > [!NOTE]  
->  В этом разделе объясняется Excel свойственные конкретному драйверу функции ODBC и другие сведения о программировании. Общие сведения о функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  В этом разделе приводятся сведения о драйверах Excel, касающиеся функций ODBC и других сведений о программировании. Общие сведения о функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
  Этот раздел содержит следующие подразделы.  
   

@@ -1,5 +1,5 @@
 ---
-title: Страница «Общие» Выбор набора данных (диспетчер отчетов) | Документация Майкрософт
+title: Страница выбора общего набора данных (диспетчер отчетов) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9b597f8aab58d2fd9a4dd44e9361469656bec32c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101271"
 ---
 # <a name="shared-dataset-selection-page-report-manager"></a>Страница «Выбор общего набора данных» (диспетчер отчетов)
@@ -22,7 +22,7 @@ ms.locfileid: "66101271"
   
  Нельзя использовать эту страницу для добавления общих наборов данных в отчет и удаления общих наборов данных из отчета.  
   
-## <a name="navigation"></a>Навигация  
+## <a name="navigation"></a>Навигации  
  Чтобы перейти к этому местоположению в пользовательском интерфейсе, используйте следующую процедуру.  
   
 ###### <a name="to-open-the-shared-dataset-selection-page"></a>Открытие страницы «Выбор общего набора данных»  
@@ -48,12 +48,12 @@ ms.locfileid: "66101271"
  **Применить**  
  Сохраните изменения.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Диспетчер отчетов (службы Reporting Services в основном режиме)](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Страница "Содержимое" (диспетчер отчетов)](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Страница "содержимое" &#40;диспетчер отчетов&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [Управление общими наборами данных](report-data/manage-shared-datasets.md)   
- [Справка F1 диспетчера отчетов](../../2014/reporting-services/report-manager-f1-help.md)   
+ [Справка F1 диспетчер отчетов](../../2014/reporting-services/report-manager-f1-help.md)   
  [Элементы отчета и наборы данных в построителе отчетов](report-data/report-parts-and-datasets-in-report-builder.md)   
- [Внедренные и общие наборы данных (построитель отчетов и службы SSRS)](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Внедренные и общие наборы данных &#40;построитель отчетов и службы SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

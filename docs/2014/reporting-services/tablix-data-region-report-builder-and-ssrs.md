@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aeb149fe1de94e9942352ca620f26311e252b477
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100632"
 ---
 # <a name="tablix-data-region-report-builder-and-ssrs"></a>Область данных табликса (построитель отчетов и службы SSRS)
@@ -77,7 +77,7 @@ ms.locfileid: "66100632"
   
  Функция «Добавить итог» автоматически создает строку за пределами текущей группы, в которой отображаются значения, относящиеся к группе. Можно также вручную добавлять статические и динамические строки. Визуальные индикаторы помогают определить, какие строки являются статическими, а какие — динамическими. Дополнительные сведения см. в разделе [Ячейки, строки и столбцы области данных табликса (построитель отчетов и службы SSRS)](report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Связывание нескольких областей данных с одним набором данных (построитель отчетов и службы SSRS)](report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [Управление отображением области данных табликса на странице отчетов (построитель отчетов и службы SSRS)](report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)   
  [Изучение возможностей области данных табликса (построитель отчетов и службы SSRS)](report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)   

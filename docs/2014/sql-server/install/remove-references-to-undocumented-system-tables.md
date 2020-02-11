@@ -1,5 +1,5 @@
 ---
-title: Удаление ссылки на недокументированные системные таблицы | Документация Майкрософт
+title: Удалить ссылки на недокументированные системные таблицы | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 06249aa1849a1be9af40e183724e85b0f318f3dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093147"
 ---
 # <a name="remove-references-to-undocumented-system-tables"></a>Удаление ссылки на недокументированные системные таблицы
@@ -26,7 +26,7 @@ ms.locfileid: "66093147"
 ## <a name="component"></a>Компонент  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Description  
  Удалены следующие недокументированные системные таблицы.  
   
 -   **spt_datatype_info**  
@@ -80,16 +80,16 @@ ms.locfileid: "66093147"
 ## <a name="corrective-action"></a>Действие по исправлению  
  Измените приложения в соответствии со следующей таблицей.  
   
-|Вместо|Использовать|  
+|Вместо|Использование|  
 |----------------|---------|  
-|**sysfulltextnotify**|Свойство**TableFulltextPendingChanges** функции OBJECTPROPERTYEX.|  
-|**syslocks**|Динамическое административное представление**sys.dm_tran_locks** , хранимая процедура sp_lock или представление совместимости **sys.syslockinfo** .|  
-|**sysproperties**|Представление каталога**sys.extended_properties** или функция **fn_listextendedproperty** .|  
-|**sysxlogins**|Представление каталога**sys.server_principals** или представление совместимости **syslogins** .|  
+|**sysfulltextnotify**|Свойство **TableFulltextPendingChanges** функции OBJECTPROPERTYEX.|  
+|**syslocks**|**sys. dm_tran_locks** динамическое административное представление, sp_lock или представление совместимости **sys. syslockinfo** .|  
+|**sysproperties**|**sys. extended_properties** представление каталога или функция **fn_listextendedproperty**|  
+|**sysxlogins**|представление каталога **sys. server_principals** или представление совместимости **syslogins** .|  
 |Все таблицы **spt_**|Замена отсутствует|  
   
-## <a name="see-also"></a>См. также  
- [Проблемы обновления компонента Database Engine](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Помощник по обновлению SQL Server 2014 &#91;new&#93;](sql-server-2014-upgrade-advisor.md)  
+## <a name="see-also"></a>См. также:  
+ [Проблемы обновления ядро СУБД](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [Советник по переходу SQL Server 2014 &#91;New&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

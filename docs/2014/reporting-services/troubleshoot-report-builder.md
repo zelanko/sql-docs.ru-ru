@@ -1,5 +1,5 @@
 ---
-title: Устранение неполадок в построителе отчетов | Документация Майкрософт
+title: Устранение неполадок построитель отчетов | Документация Майкрософт
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aae8b41dbd3751b21a7dc015b0a8157cf650185a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099334"
 ---
 # <a name="troubleshoot-report-builder"></a>Устранение неполадок в построителе отчетов
@@ -25,9 +25,9 @@ ms.locfileid: "66099334"
  Следующие разделы помогут устранить неполадки отчетов, с точки зрения автора отчетов или администратора сервера отчетов.  
   
 ## <a name="report-authors"></a>Авторы отчетов  
- [Устранение неполадок в отчетах: отчеты-карты (построитель отчетов и службы SSRS)](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md).  
+ [Устранение неполадок в отчетах: отчеты &#40;построитель отчетов и службы SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
- [Устранение неполадок в элементах отчета &#40;построитель отчетов и службы SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
+ [Устранение неполадок элементов отчетов &#40;построитель отчетов и SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
   
  [Устранение неполадок с диаграммами (построитель отчетов и службы SSRS)](report-design/charts-report-builder-and-ssrs.md)  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66099334"
   
 -   [План поддержки отчетов-карт](../../2014/reporting-services/plan-for-map-report-support.md)  
   
--   [Планирование создания отчетов и развертывания отчетов &#40;Reporting Services 2014&#41;](plan-for-report-design-and-report-deployment-reporting-services.md)  
+-   [Планирование разработки отчетов и развертывания отчетов &#40;Reporting Services 2014&#41;](plan-for-report-design-and-report-deployment-reporting-services.md)  
   
 ## <a name="how-do-i-get-community-assistance"></a>Инструкции по получению помощи сообщества пользователей  
  Дискуссионные группы, блоги и другие ресурсы сообщества пользователей, упоминаемые в этой статье, дают разработчику возможность обратиться к опыту и навыкам других пользователей построителя отчетов.  
@@ -49,7 +49,7 @@ ms.locfileid: "66099334"
   
  Если ответ на вопрос найти не удалось, [напишите отзыв](https://go.microsoft.com/fwlink/?LinkId=118791).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Установка, удаление и поддержка построителя отчетов](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)  
   
   

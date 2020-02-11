@@ -1,5 +1,5 @@
 ---
-title: PeriodsToDate (многомерные Выражения) | Документация Майкрософт
+title: PeriodsToDate (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 812cd16a7d6b7a17d4f2f12098f22e32cf0d3363
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68055629"
 ---
 # <a name="periodstodate-mdx"></a>PeriodsToDate (многомерные выражения)
@@ -34,10 +34,10 @@ PeriodsToDate( [ Level_Expression [ ,Member_Expression ] ] )
  *Member_Expression*  
  Допустимое многомерное выражение, возвращающее элемент.  
   
-## <a name="remarks"></a>Примечания  
- В области действия заданного уровня **PeriodsToDate** функция возвращает набор периодов на том же уровне, что и указанный элемент, начиная с первого периода и заканчивая указанным элементом.  
+## <a name="remarks"></a>Remarks  
+ В пределах области указанного уровня функция **PeriodsToDate** возвращает набор периодов на том же уровне, что и указанный элемент, начиная с первого периода и заканчивая указанным элементом.  
   
--   Если уровень указан, текущий элемент иерархии определяется *иерархии*. **CurrentMember**, где *иерархии*является иерархией указанного уровня.  
+-   Если уровень указан, текущий элемент иерархии является выводимой *иерархией*. **CurrentMember**, где *Иерархия*— это иерархия указанного уровня.  
   
 -   Если не указан ни уровень, ни элемент, то уровнем становится родительский уровень текущего элемента первой иерархии первого измерения типа Time в группе мер.  
   
@@ -46,7 +46,7 @@ PeriodsToDate( [ Level_Expression [ ,Member_Expression ] ] )
  `TopCount(Descendants(Ancestor(Member_Expression, Level_Expression), Member_Expression.Level), 1):Member_Expression`  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере возвращается сумма `Measures.[Order Quantity]` член, вычисленная за первые восемь месяцев календарного 2003, которые содержатся в `Date` измерения, от **Adventure Works** куба.  
+ В следующем примере возвращается сумма `Measures.[Order Quantity]` элемента, агрегированная за первые восемь месяцев 2003 календарного года, которые содержатся в `Date` измерении, из куба **Adventure Works** .  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8Months2003] AS  
@@ -84,8 +84,8 @@ WHERE
     [Measures].[Order Quantity]  
 ```  
   
-## <a name="see-also"></a>См. также  
- [TopCount &#40;многомерных Выражений&#41;](../mdx/topcount-mdx.md)   
- [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также:  
+ [TopCount &#40;&#41;многомерных выражений](../mdx/topcount-mdx.md)   
+ [Ссылка на функцию многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-function-reference-mdx.md)  
   
   

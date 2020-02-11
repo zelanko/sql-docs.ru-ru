@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eba2db61acb691732f81dcd0fa98b0ba48cf921e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103852"
 ---
 # <a name="enable-and-disable-my-reports"></a>Включение и отключение папки «Мои отчеты»
@@ -50,7 +50,7 @@ ms.locfileid: "66103852"
   
  Имейте в виду: если папка «Мои отчеты» действительно активизируется, то сервер отчетов создает папку «Мои отчеты» для каждого пользователя с учетной записью домена, который щелкает ссылку на папку «Мои отчеты», даже если пользователь не хочет или не нуждается этой папке. Систематического способа определить, какие папки используются, не существует. Необходимо делать обзор папок вручную, чтобы просмотреть, содержат они что-нибудь или нет.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Обеспечение безопасности "Моих отчетов"](../security/secure-my-reports.md)   
  [Управление содержимым сервера отчетов (службы Reporting Services в собственном режиме)](report-server-content-management-ssrs-native-mode.md)  
   

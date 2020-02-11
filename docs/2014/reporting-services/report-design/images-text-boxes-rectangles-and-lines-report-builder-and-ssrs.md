@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e4bb06da4582b5b93f027ac49c8b761705ad4b22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105684"
 ---
 # <a name="images-text-boxes-rectangles-and-lines-report-builder-and-ssrs"></a>Изображения, текстовые поля, прямоугольники и линии (построитель отчетов и службы SSRS)
@@ -37,7 +37,7 @@ ms.locfileid: "66105684"
  [Изображения (построитель отчетов и службы SSRS)](images-report-builder-and-ssrs.md)  
  В изображениях выводятся двоичные графические данные отчета. Для изображения необходимо указать источник. Источником может служить ссылка на URL-адрес изображения, хранящегося на веб-сервере, ссылка на внедренные данные изображения или ссылка на двоичные данные изображения в базе данных. Построитель отчетов и конструктор отчетов поддерживают файлы в форматах BMP, JPEG, GIF и PNG.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Форматирование элементов отчета (построитель отчетов и службы SSRS)](formatting-report-items-report-builder-and-ssrs.md)  
   
   

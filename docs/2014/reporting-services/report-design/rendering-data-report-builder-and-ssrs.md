@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e50d9ae91ef6e21f01c585cedc6fe32a1e22ad8f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105362"
 ---
 # <a name="rendering-data-report-builder-and-ssrs"></a>Подготовка данных к просмотру (построитель отчетов и службы SSRS)
@@ -45,7 +45,7 @@ ms.locfileid: "66105362"
   
  При выборе экспорта данных отчета XML-файл сохраняет отчет как XML-файл. XML-схема уникальна для каждого отчета. Информация о макете отчета не сохраняется при экспорте в формат XML. XML-документ, созданный таким образом, можно импортировать в базу данных, использовать как сообщение XML-данных или отправить пользовательскому приложению. Дополнительные сведения о сохранении отчета в файлах формата XML см. в разделе [Экспорт в XML (построитель отчетов и службы SSRS)](../report-builder/exporting-to-xml-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Разбиение на страницы в службах Reporting Services (построитель отчетов и службы SSRS)](pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Поведение при подготовке к просмотру (построитель отчетов и службы SSRS)](rendering-behaviors-report-builder-and-ssrs.md)   
  [Интерактивные возможности различных модулей подготовки отчетов к просмотру (построитель отчетов и службы SSRS)](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   

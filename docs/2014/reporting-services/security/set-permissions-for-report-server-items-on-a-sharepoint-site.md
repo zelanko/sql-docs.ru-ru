@@ -1,5 +1,5 @@
 ---
-title: Задать разрешения для элементов сервера отчетов на сайте SharePoint (службы Reporting Services в режиме интеграции с SharePoint) | Документация Майкрософт
+title: Задание разрешений для элементов сервера отчетов на сайте SharePoint (Reporting Services в режиме интеграции с SharePoint) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9c8c0e8f0714efb337d78d4440938dcb5a332fcf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101554"
 ---
 # <a name="set-permissions-for-report-server-items-on-a-sharepoint-site-reporting-services-in-sharepoint-integrated-mode"></a>устанавливать разрешения на элементы сервера отчетов с помощью сайта SharePoint (службы Reporting Services в режиме интеграции с SharePoint)
@@ -61,7 +61,7 @@ ms.locfileid: "66101554"
   
 7.  Нажмите кнопку **Создать**.  
   
-8.  Нажмите кнопку **Добавить пользователей**.  
+8.  Щелкните **Добавить пользователей**.  
   
 9. В поле «Пользователи и группы» введите имя учетной записи пользователя.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "66101554"
   
 12. Нажмите кнопку **ОК**. После того как пользователь получил возможность изменять разрешения на конкретную модель, он может открыть модель для изменения ее внутренних разрешений.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование встроенных средств безопасности служб Windows SharePoint Services при работе с элементами сервера отчетов](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)   
  [Задание разрешений для работы сервера отчетов в веб-приложении SharePoint](set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
  [Сравнение ролей и задач служб Reporting Services с группами и разрешениями SharePoint](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   

@@ -13,20 +13,20 @@ ms.assetid: cce0c25f-fa85-4cf5-bfee-4b7a9401f585
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9151ed5bbd02cce20ebd0c817197b8921a391c16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68053830"
 ---
 # <a name="sqlexecute-visual-foxpro-odbc-driver"></a>SQLExecute (драйвер ODBC для Visual FoxPro)
 > [!NOTE]  
->  Этот раздел содержит сведения Visual FoxPro ODBC-драйвером. Общие сведения об этой функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  В этом разделе содержатся сведения, относящиеся к драйверу ODBC для Visual FoxPro. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Поддержка: Полное  
+ Поддержка: полная  
   
- Соответствие API ODBC: Уровня ядра  
+ Соответствие API ODBC: уровень ядра  
   
- Выполняет подготовленную инструкцию SQL (инструкцию, уже созданные [SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md)). Драйвер использует текущие значения переменных маркера параметра, если существует любые параметры в инструкции.  
+ Выполняет подготовленную инструкцию SQL (инструкцию, уже подготовленную [SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md)). Драйвер использует текущие значения переменных маркера параметра, если в инструкции существуют какие либо параметры.  
   
- Дополнительные сведения см. в разделе [SQLExecute](../../odbc/reference/syntax/sqlexecute-function.md) в *Справочник по программированию ODBC*.
+ Дополнительные сведения см. в разделе [SQLExecute](../../odbc/reference/syntax/sqlexecute-function.md) в *справочнике программиста по ODBC*.

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: be4fd9dc72a32c65465e3d226850eb18a494e783
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103056"
 ---
 # <a name="update-a-resource-report-manager"></a>обновить ресурс (диспетчер отчетов)
@@ -43,10 +43,10 @@ ms.locfileid: "66103056"
   
  Если обновляемый ресурс содержит изображение, используемое в отчете, необходимо обновить отчет, чтобы изображение в нем обновилось.  
   
-## <a name="see-also"></a>См. также  
- [Страница "Содержимое" (диспетчер отчетов)](../contents-page-report-manager.md)   
- [Страница "Передача файла" (диспетчер отчетов)](../upload-file-page-report-manager.md)   
- [Передача файлов в папку](upload-files-to-a-folder.md)   
+## <a name="see-also"></a>См. также:  
+ [Страница "содержимое" &#40;диспетчер отчетов&#41;](../contents-page-report-manager.md)   
+ [Страница "Отправка файла" &#40;диспетчер отчетов&#41;](../upload-file-page-report-manager.md)   
+ [Отправка файлов в папку](upload-files-to-a-folder.md)   
  [Справка F1 диспетчера отчетов](../report-manager-f1-help.md)  
   
   

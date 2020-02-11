@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5d1b3bccc8a7fee3899fa21208d83a718a33f5fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097561"
 ---
-# <a name="secureconnectionlevel-property-wmi-msreportserverconfigurationsetting"></a>Свойство SecureConnectionLevel (WMI MSReportServer_ConfigurationSetting)
+# <a name="secureconnectionlevel-property-wmi-msreportserver_configurationsetting"></a>Свойство SecureConnectionLevel (WMI MSReportServer_ConfigurationSetting)
   Возвращает уровень безопасного соединения, заданный в файле RSReportServer.config. Только для чтения.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -45,7 +45,7 @@ public Integer SecureConnectionLevel;
  [Класс MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>Требования  
- **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Пространство имен:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

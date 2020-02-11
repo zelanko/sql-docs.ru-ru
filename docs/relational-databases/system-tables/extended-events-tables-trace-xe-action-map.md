@@ -19,25 +19,25 @@ ms.assetid: 208a1413-ce7f-4521-b765-d74723627302
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 47931e56759191e8386a6890ec683adf0d5f69c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68056273"
 ---
-# <a name="extended-events-tables---tracexeactionmap"></a>Таблицы расширенных событий — trace_xe_action_map
+# <a name="extended-events-tables---trace_xe_action_map"></a>Таблицы расширенных событий — trace_xe_action_map
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Содержит одну строку для каждого действия из числа расширенных событий, сопоставленного с идентификатором столбца трассировки SQL. Эта таблица хранится в базе данных master в схеме sys.  
   
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |trace_column_id|**smallint**|Идентификатор сопоставленного столбца трассировки SQL.|  
-|package_name|**nvarchar(60)**|Имя пакета расширенных событий, в котором находится сопоставленное действие.|  
-|xe_action_name|**nvarchar(60)**|Имя действия расширенных событий, которое сопоставлено со столбцом трассировки SQL.|  
+|package_name|**nvarchar (60)**|Имя пакета расширенных событий, в котором находится сопоставленное действие.|  
+|xe_action_name|**nvarchar (60)**|Имя действия расширенных событий, которое сопоставлено со столбцом трассировки SQL.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Чтобы выявить действия расширенных событий, эквивалентные столбцам трассировки SQL, можно использовать следующий запрос.  
   
 ```  
@@ -49,7 +49,7 @@ INNER JOIN sys.trace_xe_action_map AS am
   
  Столбцы трассировки SQL, которые не соответствуют действиям, не включаются в таблицу.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [trace_xe_event_map (Transact-SQL)](../../relational-databases/system-tables/extended-events-tables-trace-xe-event-map.md)  
   
   

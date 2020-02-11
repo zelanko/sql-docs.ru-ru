@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2e92e3e0f6752ea99fe89c962ebe96e343c0195b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097745"
 ---
-# <a name="databasequerytimeout-property-wmi-msreportserverconfigurationsetting"></a>Свойство DatabaseQueryTimeout (WMI MSReportServer_ConfigurationSetting)
+# <a name="databasequerytimeout-property-wmi-msreportserver_configurationsetting"></a>Свойство DatabaseQueryTimeout (WMI MSReportServer_ConfigurationSetting)
   Задает число секунд, которое должно пройти до того, как сервер отчетов предположит, что при выполнении команды произошла ошибка или выполнение заняло слишком много времени. Сервер отчетов привязывает запросы по времени к каталогу SQL, а не к источнику данных для отчета. Read/write.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -45,7 +45,7 @@ public UInt32 DatabaseQueryTimeout;
  [Класс MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>Требования  
- **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Пространство имен:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

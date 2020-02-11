@@ -1,5 +1,5 @@
 ---
-title: Сообщить о концепция параметров (построитель отчетов и службы SSRS) | Документация Майкрософт
+title: Концепция параметров отчета (построитель отчетов и службы SSRS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 70bb740b9f5948d077f0336e7e7bc14ed9902941
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105079"
 ---
 # <a name="report-parameters-concept-report-builder-and-ssrs"></a>Концепция параметров отчета (построитель отчетов и службы SSRS)
@@ -43,8 +43,8 @@ ms.locfileid: "66105079"
   
  Для создания моментальных снимков отчета, журналов или подписок на опубликованный отчет необходимо понимать, как параметры отчета влияют на требования по разработке отчета.  
   
-## <a name="see-also"></a>См. также  
- [Основные понятия разработки отчетов (построитель отчетов и службы SSRS)](report-authoring-concepts-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>См. также:  
+ [Основные понятия разработки отчетов &#40;построитель отчетов и службы SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
  [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Учебник. Добавление параметра к отчету (построитель отчетов)](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
   

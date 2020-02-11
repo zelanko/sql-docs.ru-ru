@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 59fc4a9e46e0dbe0f88047a2804330ba1c6ba18d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106082"
 ---
 # <a name="define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs"></a>Задание цветов диаграммы с помощью палитры (построитель отчетов и службы SSRS)
@@ -42,7 +42,7 @@ ms.locfileid: "66106082"
   
 2.  Щелкните диаграмму в области конструктора. На панели «Свойства» отображаются свойства объекта диаграммы.  
   
-3.  В **диаграммы** разделе для `Palette` выберите **Custom**.  
+3.  В разделе **Диаграмма** для `Palette` свойства выберите **Пользовательская**.  
   
 4.  В области свойства CustomPaletteColors нажмите кнопку изменения коллекции ( **...** ). Будет открыто окно **Редактор коллекции ReportColorExpression** .  
   

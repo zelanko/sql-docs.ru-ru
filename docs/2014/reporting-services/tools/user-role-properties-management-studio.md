@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4413b86a9882087c01c785e5f5bfdb596f7be698
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099398"
 ---
 # <a name="user-role-properties-management-studio"></a>Свойства пользовательской роли (среда Management Studio)
@@ -30,7 +30,7 @@ ms.locfileid: "66099398"
 >  Пользовательские назначения ролей применяются только на сервере отчетов, который работает в собственном режиме. Если сервер отчетов настроен для работы в режиме интеграции с SharePoint, то на этой странице отображаются сведения только для чтения о ролях и уровнях разрешений, которые определены на сайте SharePoint.  
   
 ## <a name="options"></a>Параметры  
- **Name**  
+ **Название**  
  Название определения роли.  
   
  **Описание**  
@@ -42,7 +42,7 @@ ms.locfileid: "66099398"
  **Описание задачи**  
  Выводит сведения по каждой из задач. Нельзя изменять описания задач.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Задачи уровня элемента](../security/tasks-and-permissions-item-level-tasks.md)   
  [Определение ролей](../security/role-definitions.md)   
  [Справка F1 по использованию сервера отчетов среде Management Studio](report-server-in-management-studio-f1-help.md)   

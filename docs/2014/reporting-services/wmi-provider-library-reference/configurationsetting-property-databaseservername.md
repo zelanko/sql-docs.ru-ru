@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9d11822d656b9faa83cad15fde69ba95dffbe9df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097719"
 ---
-# <a name="databaseservername-property-wmi-msreportserverconfigurationsetting"></a>Свойство DatabaseServerName (WMI MSReportServer_ConfigurationSetting)
+# <a name="databaseservername-property-wmi-msreportserver_configurationsetting"></a>Свойство DatabaseServerName (WMI MSReportServer_ConfigurationSetting)
   Задает имя сервера, на котором установлена база данных сервера отчетов. Read/write.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -45,7 +45,7 @@ public string DatabaseServerName;
  [Класс MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>Требования  
- **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Пространство имен:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

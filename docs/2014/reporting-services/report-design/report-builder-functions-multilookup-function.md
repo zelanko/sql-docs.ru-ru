@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e6a60f1b47c7015fa0fca27cc7ce68bf4d04b15d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105205"
 ---
 # <a name="multilookup-function-report-builder-and-ssrs"></a>Функция Multilookup (построитель отчетов и службы SSRS)
@@ -38,7 +38,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
  (`Variant`) Выражение, вычисляемое для каждой строки в наборе данных и указывающее имя или ключ для сопоставления. Например, `=Fields!ID.Value`.  
   
  *result_expression*  
- (`Variant`) Выражение, вычисляемое для строки в наборе данных где *source_expression* = *destination_expression*, и указывает извлекаемого значения. Например, `=Fields!Name.Value`.  
+ (`Variant`) Выражение, которое вычисляется для строки в наборе данных, где *source_expression* = *destination_expression*и указывает извлекаемое значение. Например, `=Fields!Name.Value`.  
   
  *набор данных*  
  Константа, задающая имя набора данных в отчете. Например, «Colors».  
@@ -46,7 +46,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 ## <a name="return"></a>Возвращает  
  Возвращает значение `VariantArray` или `Nothing`, если совпадения нет.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Функция `Multilookup` служит для извлечения набора значений из набора данных, содержащего пары «имя-значение» со связью «один к одному». Функция `MultiLookup` является эквивалентом функции `Lookup` для набора имен или ключей. Например, для параметра с несколькими значениями на основе идентификаторов первичных ключей функция `Multilookup` может быть использована в выражении в текстовом поле таблицы для извлечения связанных значений из набора данных, не привязанного к параметру или таблице.  
   
  Функция `Multilookup` выполняет следующие действия.  
@@ -59,9 +59,9 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  Для извлечения единственного значения для указанного имени из набора данных, состоящего из пар "имя-значение" со связью "один к одному", используйте [функцию Lookup (построитель отчетов и службы SSRS)](report-builder-functions-lookup-function.md). Для извлечения нескольких значений для имени из набора данных, состоящего из пар "имя-значение" со связью "один ко многим", используйте [функцию LookupSet (построитель отчетов и службы SSRS)](report-builder-functions-lookupset-function.md).  
   
- Существуют следующие ограничения.  
+ Применяются следующие ограничения:  
   
--   Функция `Multilookup` вычисляется после применения всех критериев фильтра.  
+-   `Multilookup`вычисляется после применения всех критериев фильтра  
   
 -   Поддерживается только один уровень уточняющего запроса. Исходное, целевое и результирующее выражения не могут включать в себя ссылки на функцию уточняющего запроса.  
   
@@ -95,7 +95,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 |1|Accessories|  
 |2|Bikes|  
 |3|Clothing|  
-|4|Компоненты|  
+|4|Components|  
   
  Для поиска имен, соответствующих списку идентификаторов, используйте функцию `Multilookup`. Сначала необходимо разбить список на массив строк, вызвать  функцию `Multilookup` для извлечения названий категорий и объединить результаты в строку.  
   
@@ -122,7 +122,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 =Join(MultiLookup(Parameters!MyColors.Value,Fields!ColorID.Value,Fields!Color.Value,"ProductColors"),", ")  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование выражений в отчетах (построитель отчетов и службы SSRS)](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [Типы данных в выражениях (построитель отчетов и службы SSRS)](expressions-report-builder-and-ssrs.md)   

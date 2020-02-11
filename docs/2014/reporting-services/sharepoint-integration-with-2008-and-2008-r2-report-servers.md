@@ -1,5 +1,5 @@
 ---
-title: Интеграция SharePoint с 2008 и 2008 R2 серверов отчетов | Документация Майкрософт
+title: Интеграция SharePoint с серверами отчетов 2008 и 2008 R2 | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,20 +11,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d29d41069d5daca25d53477326e864720aa87ca1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101195"
 ---
 # <a name="sharepoint-integration-with-2008-and-2008-r2--report-servers"></a>Интеграция SharePoint с серверами отчетов Report Server 2008 и 2008 R2
-  В выпуске [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] была введена архитектура, в которой режим интеграции с SharePoint теперь основан на общей службе SharePoint. Управление этим осуществляется в центре администрирования SharePoint на **управление службами** и **управление приложениями служб** страниц. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Прежних версиях архитектуры для интеграции с SharePoint по-прежнему поддерживается с [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] надстройка для продуктов SharePoint 2010, поэтому вы можете интегрировать SharePoint 2010 с предыдущими версиями сервера отчетов.  
+  В выпуске [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] была введена архитектура, в которой режим интеграции с SharePoint теперь основан на общей службе SharePoint. Управление новыми функциональными возможностями осуществляется в центре администрирования SharePoint на страницах **Управление службами** и **приложениями служб Manager** . [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Предыдущая Архитектура интеграции с [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] SharePoint по-прежнему поддерживается в [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] надстройке служб для продуктов SharePoint 2010, поэтому можно интегрировать SharePoint 2010 с предыдущими версиями сервера отчетов.  
   
  Страницы центра администрирования SharePoint, которые можно использовать для администрирования более старой архитектуры, размещены в следующих местах.  
   
 1.  В центре администрирования SharePoint щелкните **Общие параметры приложения**.  
   
-2.  Группе **SQL Server Reporting Services (2008 и 2008 R2)** содержатся ссылки и страницы управления для более старой архитектуры  
+2.  SQL Server Reporting Services группы **(2008 и 2008 R2)** содержит ссылки и страницы управления для старой архитектуры.  
   
 ## <a name="server-integration-architecture"></a>Архитектура интеграции сервера  
  При интеграции сервера отчетов с экземпляром продукта SharePoint элементы и свойства хранятся в базе данных содержимого SharePoint. Это обеспечивает более глубокий уровень интеграции между технологиями сервера, которые влияют на то, как хранится, защищается и обеспечивается доступ к его содержимому.  

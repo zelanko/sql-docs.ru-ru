@@ -1,5 +1,5 @@
 ---
-title: Функция SQLPostInstallerError | Документация Майкрософт
+title: Функция Склпостинсталлереррор | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ ms.assetid: 4c60d827-b2d2-4f27-b220-daa9e1fcdd8d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0d5e0a10b8c530494fa3c026be0d36fde066a97c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68053669"
 ---
 # <a name="sqlpostinstallererror-function"></a>Функция SQLPostInstallerError
-**Соответствие стандартам**  
- Представленные версии: ODBC 3.0  
+**Соответствия**  
+ Введенная версия: ODBC 3,0  
   
  **Сводка**  
- **SQLPostInstallerError** предоставляет механизм для установки библиотеки драйвера или перевода для сообщения об ошибках для **ConfigDriver**, **ConfigDSN**, и **ConfigTranslator**  функций в очередь ошибок установщика. Приложения не используют этот API; они используют **SQLInstallerError** извлекаемой ошибки.  
+ **Склпостинсталлереррор** предоставляет механизм для драйвера или библиотеки установки переводчика, сообщающий об ошибках функций **конфигдривер**, **ConfigDSN**и **конфигтранслатор** в очередь ошибок установщика. Приложения не используют этот API; они используют **склинсталлереррор** для получения ошибки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,22 +43,22 @@ RETCODE SQLPostInstallerError(
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *fErrorCode*  
- [Вход] Код ошибки установщика.  
+ *ферроркоде*  
+ Входной Код ошибки установщика.  
   
- *szErrorMsg*  
- [Вход] Текст сообщения об ошибке.  
+ *сзеррормсг*  
+ Входной Текст сообщения об ошибке.  
   
 ## <a name="returns"></a>Возвращает  
- Значение SQL_SUCCESS или SQL_ERROR.  
+ SQL_SUCCESS или SQL_ERROR.  
   
 ## <a name="diagnostics"></a>Диагностика  
- **SQLPostInstallerError** не размещайте значения погрешности для себя. Если ошибку учтена в очередь ошибок установщика (извлекаются с помощью **SQLInstallerError**), возвращается значение SQL_SUCCESS. Возвращает значение SQL_ERROR, если значение в *dwErrorCode* аргумент не является одним из кодов ошибок указанный установщик.  
+ **Склпостинсталлереррор** не помещать значения ошибок для самого себя. Если ошибка была успешно отправлена в очередь ошибок установщика (которую можно получить с помощью **склинсталлереррор**), возвращается SQL_SUCCESS. SQL_ERROR возвращается, если значение аргумента *дверроркоде* не является одним из указанных кодов ошибок установщика.  
   
 ## <a name="related-functions"></a>Связанные функции  
   
-|Сведения о|См.|  
+|Тема|См. следующие документы.|  
 |---------------------------|---------|  
-|Добавление, изменение или удаление драйвера.|[ConfigDriver](../../../odbc/reference/syntax/configdriver-function.md)|  
-|Добавление, изменение или удаление источников данных|[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)|  
-|Установка параметра перевода|[ConfigTranslator](../../../odbc/reference/syntax/configtranslator-function.md)|
+|Добавление, изменение или удаление драйвера|[конфигдривер](../../../odbc/reference/syntax/configdriver-function.md)|  
+|Добавление, изменение и удаление источников данных|[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)|  
+|Задание параметра перевода|[конфигтранслатор](../../../odbc/reference/syntax/configtranslator-function.md)|

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 98d013126fe1db1b8101d5ae451f658546f6d1f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099740"
 ---
 # <a name="schedule-properties-general-page"></a>Свойства расписания (страница «Общие»)
@@ -32,7 +32,7 @@ ms.locfileid: "66099740"
 >  Эта функция доступна не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , и данная страница не открывается при работе с выпуском, в котором отсутствует эта функция. Дополнительные сведения о функциях, поддерживаемых выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
 ## <a name="options"></a>Параметры  
- **Name**  
+ **Название**  
  Указывает имя общего расписания.  
   
  **Начать выполнение расписания**  
@@ -59,7 +59,7 @@ ms.locfileid: "66099740"
  **Однократно**  
  Указывает расписание, выполняемое один раз в заданные дату и время.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справка F1 по использованию сервера отчетов среде Management Studio](report-server-in-management-studio-f1-help.md)   
  [Подключение к серверу отчетов в среде Management Studio](connect-to-a-report-server-in-management-studio.md)   
  [Создание, изменение и удаление расписаний](../subscriptions/create-modify-and-delete-schedules.md)   

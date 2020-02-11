@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f722ac82f839b76bfb76d21d4a23aae884ade038
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098103"
 ---
-# <a name="setdatabaseconnection-method-wmi-msreportserverconfigurationsetting"></a>Метод SetDatabaseConnection (WMI MSReportServer_ConfigurationSetting)
+# <a name="setdatabaseconnection-method-wmi-msreportserver_configurationsetting"></a>Метод SetDatabaseConnection (WMI MSReportServer_ConfigurationSetting)
   Задает подключение к определенной базе данных сервера отчетов.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -43,14 +43,14 @@ public void BackupEncryptionKey(string Server,
 ```  
   
 ## <a name="parameters"></a>Параметры  
- *Server*  
+ *Сервер*  
  Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на котором размещается база данных сервера отчетов.  
   
- *DatabaseName*  
+ *имя_базы_данных*  
  Имя базы данных сервера отчетов.  
   
  *CredentialsType*  
- Тип учетных данных, которые используются для соединения. Может принимать следующие значения:  
+ Тип учетных данных, которые используются для соединения. Значения могут быть такими:  
   
 -   0 — Windows;  
   
@@ -58,13 +58,13 @@ public void BackupEncryptionKey(string Server,
   
 -   2 — служба Windows.  
   
- *UserName*  
+ *Имен*  
  Имя учетной записи, которая используется для соединения с базой данных сервера отчетов.  
   
  *Пароль*  
  Пароль, используемый для соединения с базой данных сервера отчетов.  
   
- *HRESULT*  
+ *СОСТАВ*  
  [out] Значение, которое указывает, окончился ли вызов успехом или сбоем.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
@@ -86,7 +86,7 @@ public void BackupEncryptionKey(string Server,
  Метод SetDatabaseConnection не предоставляет разрешения указанным учетным записям. Следует вызвать метод [GenerateDatabaseRightsScript](configurationsetting-method-generatedatabaserightsscript.md) для каждой учетной записи, которой требуется доступ к базе данных сервера отчетов, и запустить получившийся скрипт.  
   
 ## <a name="requirements"></a>Требования  
- **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Пространство имен:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

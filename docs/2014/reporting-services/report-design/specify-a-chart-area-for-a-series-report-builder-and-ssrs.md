@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 14fc5556e430cf364b004cd02ebd0278da650867
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104971"
 ---
 # <a name="specify-a-chart-area-for-a-series-report-builder-and-ssrs"></a>Задание области диаграммы для ряда (построитель отчетов и службы SSRS)
@@ -42,12 +42,12 @@ ms.locfileid: "66104971"
   
 4.  Выровняйте области диаграммы по вертикали (необязательно). Для этого щелкните диаграмму правой кнопкой мыши и выберите **Свойства области диаграммы**. На вкладке **Выравнивание**выберите область диаграммы, с которой нужно выровнять выбранную область.  
   
-## <a name="see-also"></a>См. также  
- [Несколько рядов на диаграмме (построитель отчетов и службы SSRS)](multiple-series-on-a-chart-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>См. также:  
+ [Несколько рядов на диаграмме &#40;построитель отчетов и SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)   
  [Форматирование точек данных на диаграмме (построитель отчетов и службы SSRS)](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [Задание цветов диаграммы с помощью палитры &#40;построитель отчетов и службы SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
- [Полярные диаграммы (построитель отчетов и службы SSRS)](charts-report-builder-and-ssrs.md)   
- [Фигурные диаграммы (построитель отчетов и службы SSRS)](shape-charts-report-builder-and-ssrs.md)   
+ [Полярные диаграммы &#40;построитель отчетов и службы SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [Фигурные диаграммы &#40;построитель отчетов и службы SSRS&#41;](shape-charts-report-builder-and-ssrs.md)   
  [Круговые диаграммы (построитель отчетов и службы SSRS)](pie-charts-report-builder-and-ssrs.md)  
   
   

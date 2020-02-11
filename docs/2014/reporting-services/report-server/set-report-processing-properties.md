@@ -18,16 +18,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a793fa513ef13c9cafc210a411971a0363f5976d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103240"
 ---
 # <a name="set-report-processing-properties"></a>Установка свойств обработки отчетов
   Свойства выполнения отчета определяют, как отчет обрабатывается. Свойства выполнения должны быть установлены для каждого отчета отдельно.  
   
- Чтобы настроить свойства выполнения отчета, откройте отчет в диспетчере отчетов, а затем перейдите к странице свойств «Выполнение». Можно также задавать свойства [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Дополнительные сведения см. в статье [Страница "Обработка свойств параметров" (диспетчер отчетов)](../processing-options-properties-page-report-manager.md).  
+ Чтобы настроить свойства выполнения отчета, откройте отчет в диспетчере отчетов, а затем перейдите к странице свойств «Выполнение». Свойства также можно задать с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Дополнительные сведения см. в статье [Страница "Обработка свойств параметров" (диспетчер отчетов)](../processing-options-properties-page-report-manager.md).  
   
 ## <a name="report-execution-modes"></a>Режимы выполнения отчета  
  Отчет можно запустить либо по требованию, либо как моментальный снимок. Далее описываются оба этих подхода.  
@@ -55,11 +55,11 @@ ms.locfileid: "66103240"
   
  Если выполняется это условие, сервер отчетов отключит подписку в следующий раз, когда она должна выполняться по расписанию. Для повторного включения подписки откройте, а затем сохраните ее. При открытии подписки сервер отчетов обновляет значения параметров подписки теми, что указаны для моментального снимка. Дополнительные сведения о подписках см. в разделе [Подписки и доставка (службы Reporting Services)](../subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Установка параметров обработки (службы Reporting Services в режиме интеграции с SharePoint)](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
- [Настройка свойств выполнения для отчета (диспетчер отчетов)](../reports/configure-execution-properties-for-a-report-report-manager.md)   
+ [Настройка свойств выполнения для диспетчер отчетов &#40;отчетов&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)   
  [Основные понятия служб Reporting Services (SSRS)](../reporting-services-concepts-ssrs.md)   
- [Как Добавление моментального снимка к журналу отчета](add-a-snapshot-to-report-history-report-manager.md)   
+ [Как добавить моментальный снимок в журнал отчета](add-a-snapshot-to-report-history-report-manager.md)   
  [Задание учетных данных и сведениях о соединении для источников данных отчета](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   

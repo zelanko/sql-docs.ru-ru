@@ -14,19 +14,19 @@ ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a89a24ddbbe14938824819e24fd9112597168507
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68057208"
 ---
-# <a name="reserved-keywords"></a>Зарезервированные ключевые слова
-Следующие слова зарезервированы для использования в вызовах функций ODBC. Эти слова не ограничивают минимальную грамматику SQL; Тем не менее чтобы обеспечить совместимость с драйверами, поддерживающими базовую грамматику SQL, приложения следует избегать, с помощью любого из этих ключевых слов. #**Определить** значение SQL_ODBC_KEYWORDS содержит разделенный запятыми список из этих ключевых слов.  
+# <a name="reserved-keywords"></a>Зарезервированные слова
+Следующие слова зарезервированы для использования в вызовах функций ODBC. Эти слова не ограничивают минимальную грамматику SQL; Однако для обеспечения совместимости с драйверами, поддерживающими основную грамматику SQL, приложения должны избегать использования этих ключевых слов. Значение #**define** SQL_ODBC_KEYWORDS содержит список этих ключевых слов с разделителями-запятыми.  
   
 |||  
 |-|-|  
 |ABSOLUTE|IS|  
-|ACTION|ISOLATION|  
+|ДЕЙСТВИЕ|ISOLATION|  
 |ADA|JOIN|  
 |ADD|KEY|  
 |ALL|LANGUAGE|  
@@ -44,11 +44,11 @@ ms.locfileid: "68057208"
 |BEGIN|MODULE|  
 |BETWEEN|MONTH|  
 |BIT|NAMES|  
-|ФУНКЦИЯ BIT_LENGTH|NATIONAL|  
+|BIT_LENGTH|NATIONAL|  
 |BOTH|NATURAL|  
 |BY|NCHAR|  
 |CASCADE|NEXT|  
-|CASCADED|NO|  
+|CASCADED|НЕТ|  
 |CASE|None|  
 |CAST|NOT|  
 |CATALOG|NULL|  
@@ -63,22 +63,22 @@ ms.locfileid: "68057208"
 |COLLATION|OR|  
 |COLUMN|ORDER|  
 |COMMIT|OUTER|  
-|CONNECT|OUTPUT|  
-|CONNECTION|ПЕРЕКРЫТИЯ|  
+|CONNECT.|OUTPUT|  
+|CONNECTION|ПЕРЕКРЫВАЕТСЯ|  
 |CONSTRAINT|PAD|  
-|CONSTRAINTS|PARTIAL|  
+|ОГРАНИЧЕНИЯ|PARTIAL|  
 |CONTINUE|PASCAL|  
-|CONVERT|ПОЛОЖЕНИЕ|  
+|CONVERT|РАЗМЕСТИТЬ|  
 |CORRESPONDING|PRECISION|  
 |COUNT|PREPARE|  
 |CREATE|PRESERVE|  
-|CROSS|PRIMARY|  
+|CROSS|PRIMARY.|  
 |CURRENT|PRIOR|  
 |CURRENT_DATE|PRIVILEGES|  
 |CURRENT_TIME|PROCEDURE|  
 |CURRENT_TIMESTAMP|PUBLIC|  
 |CURRENT_USER|READ|  
-|CURSOR|real|  
+|CURSOR|REAL|  
 |DATE|REFERENCES|  
 |DAY|RELATIVE|  
 |DEALLOCATE|RESTRICT|  
@@ -94,9 +94,9 @@ ms.locfileid: "68057208"
 |DESCRIPTOR|SESSION|  
 |DIAGNOSTICS|SESSION_USER|  
 |DISCONNECT|SET|  
-|DISTINCT|SIZE|  
+|DISTINCT|РАЗМЕР|  
 |DOMAIN|SMALLINT|  
-|Double|SOME|  
+|DOUBLE|SOME|  
 |DROP|SPACE|  
 |ELSE|SQL|  
 |END|SQLCA|  
@@ -111,15 +111,15 @@ ms.locfileid: "68057208"
 |EXTRACT|TEMPORARY|  
 |FALSE|THEN|  
 |FETCH|TIME|  
-|FIRST|timestamp|  
+|FIRST|TIMESTAMP|  
 |FLOAT|TIMEZONE_HOUR|  
 |FOR|TIMEZONE_MINUTE|  
-|FOREIGN|TO|  
+|FOREIGN|В|  
 |FORTRAN|TRAILING|  
 |FOUND|TRANSACTION|  
 |FROM|TRANSLATE|  
 |FULL|TRANSLATION|  
-|GET|TRIM|  
+|ПОЛУЧЕНИЕ|TRIM|  
 |GLOBAL|TRUE|  
 |GO|UNION|  
 |GOTO|UNIQUE|  
@@ -127,9 +127,9 @@ ms.locfileid: "68057208"
 |GROUP|UPDATE|  
 |HAVING|UPPER|  
 |HOUR|USAGE|  
-|IDENTITY|Пользователь|  
+|Идентификация|Пользователь|  
 |IMMEDIATE|USING|  
-|IN|Value|  
+|IN|Значение|  
 |INCLUDE|VALUES|  
 |INDEX|VARCHAR|  
 |INDICATOR|VARYING|  
@@ -137,7 +137,7 @@ ms.locfileid: "68057208"
 |INNER|WHEN|  
 |INPUT|WHENEVER|  
 |INSENSITIVE|WHERE|  
-|INSERT|на|  
+|INSERT|WITH|  
 |INT|WORK|  
 |INTEGER|WRITE|  
 |INTERSECT|YEAR|  

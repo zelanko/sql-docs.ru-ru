@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ba254f3cf1e5104a4ac56ca2bed587b150ac824f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097209"
 ---
-# <a name="instanceid-property-wmi-msreportserverinstance"></a>Свойство InstanceID (WMI MSReportServer_Instance)
+# <a name="instanceid-property-wmi-msreportserver_instance"></a>Свойство InstanceID (WMI MSReportServer_Instance)
   Этот объект поддерживает инфраструктуру служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и не предназначен для использования непосредственно из программного кода.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -39,9 +39,9 @@ public string InstanceID;
 ```  
   
 ## <a name="requirements"></a>Требования  
- **Пространство имен:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
+ **Пространство имен:**[!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Элементы MSReportServer_Instance](msreportserver-instance-members.md)  
   
   

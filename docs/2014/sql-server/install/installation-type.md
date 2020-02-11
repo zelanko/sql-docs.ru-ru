@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b8812bba6d87e29ed8a4533bb87e645f42120015
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094291"
 ---
 # <a name="installation-type"></a>Тип установки
@@ -29,8 +29,8 @@ ms.locfileid: "66094291"
   
      При выборе параметра добавления компонентов в существующий экземпляр, в раскрывающемся списке выберите экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для обновления.  
   
- Можно добавлять только функции SysPrep поддерживается -[!INCLUDE[ssDE](../../includes/ssde-md.md)] и [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-к подготовленному образу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Другие функции, не поддерживаемые SysPrep, могут быть добавлены только после завершения подготовленного экземпляра.  
+ Вы можете добавить только функции, поддерживаемые SysPrep,[!INCLUDE[ssDE](../../includes/ssde-md.md)] и [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]в подготовленный образ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Другие функции, не поддерживаемые SysPrep, могут быть добавлены только после завершения подготовленного экземпляра.  
   
- **Примечание.** После установки экземпляра отказоустойчивого кластера добавить в него компоненты невозможно. Чтобы добавить компоненты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в существующий отказоустойчивый кластер, необходимо установить отдельный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ **Примечание** . Невозможно добавить компоненты в экземпляр отказоустойчивого кластера после его установки. Чтобы добавить компоненты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в существующий отказоустойчивый кластер, необходимо установить отдельный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a790f3951ce37e714346b8d280547e603cf48c23
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105445"
 ---
 # <a name="polar-charts-report-builder-and-ssrs"></a>Полярные диаграммы (построитель отчетов и службы SSRS)
@@ -23,7 +23,7 @@ ms.locfileid: "66105445"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## <a name="variations"></a>Разновидности  
+## <a name="variations"></a>Варианты  
   
 -   **Лепестковая диаграмма**. На лепестковой диаграмме ряды отображаются в виде окружностей или областей. В отличие от полярных диаграмм, на лепестковых диаграммах данные отражаются не в виде полярных координат.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66105445"
 ## <a name="example"></a>Пример  
  В следующем примере показано использование лепестковой диаграммы. В следующей таблице содержится образец данных для диаграммы.  
   
-|Имя|Продажи|  
+|Имя|Sales|  
 |----------|-----------|  
 |Кусты|61|  
 |Начальные значения|78|  
@@ -52,11 +52,11 @@ ms.locfileid: "66105445"
   
  ![Лепестковая диаграмма](../media/rs-radarchart.gif "Лепестковая диаграмма")  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Диаграммы (построитель отчетов и службы SSRS)](charts-report-builder-and-ssrs.md)   
  [Форматирование диаграммы (построитель отчетов и службы SSRS)](formatting-a-chart-report-builder-and-ssrs.md)   
  [Типы диаграмм (построитель отчетов и службы SSRS)](chart-types-report-builder-and-ssrs.md)   
- [Графики (построитель отчетов и службы SSRS)](line-charts-report-builder-and-ssrs.md)   
+ [Графики &#40;построитель отчетов и SSRS&#41;](line-charts-report-builder-and-ssrs.md)   
  [Точки данных со значением NULL и пустые точки в диаграммах (построитель отчетов и службы SSRS)](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
   
   

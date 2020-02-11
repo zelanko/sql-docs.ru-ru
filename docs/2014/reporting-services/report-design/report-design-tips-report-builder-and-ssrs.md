@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ba5cdb309d277e751c2de7fcfbce5dfc02174366
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105102"
 ---
 # <a name="report-design-tips-report-builder-and-ssrs"></a>Советы по конструированию отчетов (построитель отчетов и службы SSRS)
@@ -157,9 +157,9 @@ ms.locfileid: "66105102"
   
  В совокупности это поведение, свойства ширины и высоты элементов отчета, размер текста отчета, определения высоты и ширины страницы, параметры размера полей родительского отчета и метод разбиения на страницы, связанный с модулем подготовки отчетов, определяют то, какие элементы отчета поместятся на страницу, готовую к просмотру. Дополнительные сведения см. в статье [Разбиение на страницы в службах Reporting Services (построитель отчетов и службы SSRS)](pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>См. также  
- [Построитель отчетов в SQL Server 2014](../report-builder/report-builder-in-sql-server-2016.md)   
+## <a name="see-also"></a>См. также:  
+ [построитель отчетов в SQL Server 2014](../report-builder/report-builder-in-sql-server-2016.md)   
  [Учебники по службам Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)   
- [Учебники по &#40;построитель отчетов&#41;](../report-builder-tutorials.md)  
+ [Учебники &#40;построитель отчетов&#41;](../report-builder-tutorials.md)  
   
   

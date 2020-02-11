@@ -1,5 +1,5 @@
 ---
-title: Конфигурация клиента распределенного воспроизведения | Документация Майкрософт
+title: Конфигурация клиента распределенное воспроизведение | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3eb00922b4f6e21dd4cfc8a46d8c0c27ed9a5be1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66095476"
 ---
 # <a name="distributed-replay-client-configuration"></a>Конфигурация клиента распределенного воспроизведения
@@ -24,9 +24,9 @@ ms.locfileid: "66095476"
   
 ## <a name="options"></a>Параметры  
  **Имя контроллера**  
- Это необязательный параметр, и значение по умолчанию — \< *пустой*>.  
+ Это необязательный параметр, а значение по умолчанию \<— *пустое*>.  
   
- Введите имя контроллера, с которым будет связываться клиентский компьютер для доступа к службе клиента распределенного воспроизведения. Следует отметить следующее.  
+ Введите имя контроллера, с которым будет связываться клиентский компьютер для доступа к службе клиента распределенного воспроизведения. Обратите внимание на следующее.  
   
 -   Должно быть указано полное доменное имя (FQDN). Например, FQDN узла с именем server1 в иерархии продуктов Майкрософт может иметь вид server1.products.microsoft.com.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66095476"
   
  Рабочий каталог по умолчанию — \<*буква диска*>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\WorkingDir\\.  
   
- **Каталог результатов**  
+ **Папка результатов**  
  Укажите каталог результатов для службы клиента распределенного воспроизведения.  
   
  Каталог результатов по умолчанию — \<*буква диска*>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\ResultDir\\.  

@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7a1c799ec4fc37fa5cdbd6f3bcc72fad7f4c45ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102590"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>Открытие и закрытие отчетов (диспетчер отчетов)
@@ -32,7 +32,7 @@ ms.locfileid: "66102590"
   
 3.  Чтобы просмотреть отчет, щелкните название отчета или значок. Отчет обозначается следующим значком:  
   
-     ![Значок "Отчет"](../media/hlp-16doc.gif "Значок \"Отчет\"")  
+     ![Значок отчета](../media/hlp-16doc.gif "Значок отчета")  
   
      Для некоторых отчетов требуется ввести либо имя пользователя и пароль, либо значение параметра  
   
@@ -40,9 +40,9 @@ ms.locfileid: "66102590"
   
      Закрываемый отчет не удаляется из кэша браузера. Для отключения от отчета необходимо закрыть браузер.  
   
-## <a name="see-also"></a>См. также  
- [Поиск отчетов и других элементов (построитель отчетов и службы SSRS)](../report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
- [Страница "Содержимое" (диспетчер отчетов)](../contents-page-report-manager.md)   
+## <a name="see-also"></a>См. также:  
+ [Поиск отчетов и других элементов &#40;построитель отчетов и SSRS&#41;](../report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
+ [Страница "содержимое" &#40;диспетчер отчетов&#41;](../contents-page-report-manager.md)   
  [Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Управление содержимым сервера отчетов (службы Reporting Services в собственном режиме)](../report-server/report-server-content-management-ssrs-native-mode.md)  
   

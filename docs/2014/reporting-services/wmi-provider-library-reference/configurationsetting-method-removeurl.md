@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bdd38b66a62b3d839f89f078904f7a3a9cc82d66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098173"
 ---
-# <a name="removeurl-method-wmi-msreportserverconfigurationsetting"></a>Метод RemoveURL (WMI MSReportServer_ConfigurationSetting)
+# <a name="removeurl-method-wmi-msreportserver_configurationsetting"></a>Метод RemoveURL (WMI MSReportServer_ConfigurationSetting)
   Удаляет URL-адрес, зарезервированный для сервера отчетов. Если нужно удалить несколько URL-адресов, это должно быть сделано одним вызовом данного API.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -42,20 +42,20 @@ public void RemoveURL(string Application, string UrlString, int Lcid,
  *URLString*  
  URL-адрес для резервирования.  
   
- *lcid*  
+ *намного*  
  Локаль, используемая для возвращаемых сообщений об ошибке.  
   
  *Ошибка*  
  [out] Описания возникших ошибок.  
   
- *HRESULT*  
+ *СОСТАВ*  
  [out] Значение, которое указывает, окончился ли вызов успехом или сбоем.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение *HRESULT* , являющееся признаком успешного или неуспешного завершение вызова метода. Значение 0 означает, что вызов метода завершился успешно; код ошибки означает, что произошла ошибка.  
   
 ## <a name="remarks"></a>Remarks  
- *UrlString* не включает имя виртуального каталога — для этого есть [метод SetVirtualDirectory (WMI MSReportServer_ConfigurationSetting)](configurationsetting-method-setvirtualdirectory.md).  
+ *UrlString* не включает имя виртуального каталога — [метод SetVirtualDirectory &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-setvirtualdirectory.md) метод для этой цели.  
   
  Прежде чем вызывать метод [ReserveURL](configurationsetting-method-reserveurl.md) , необходимо задать значение свойства конфигурации VirtualDirectory для параметра *Application* . Используйте [метод SetVirtualDirectory (WMI MSReportServer_ConfigurationSetting)](configurationsetting-method-setvirtualdirectory.md) для задания свойства VirtualDirectory.  
   
@@ -64,7 +64,7 @@ public void RemoveURL(string Application, string UrlString, int Lcid,
  Во время этой операции данный метод вызывает жесткую очистку и остановку всех доменов неконфигурационных приложений; после этой операции домены приложений перезапускаются.  
   
 ## <a name="requirements"></a>Требования  
- **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Пространство имен:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

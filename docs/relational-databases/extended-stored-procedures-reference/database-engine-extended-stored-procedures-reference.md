@@ -13,19 +13,19 @@ ms.assetid: 4e9d0374-0927-4f17-bab9-2215b1b8fea8
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 013ca0abae914b511a564ee4d67bd01d398f8bb5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68064202"
 ---
 # <a name="database-engine-extended-stored-procedures---reference"></a>Справочник по расширенным хранимым процедурам ядра СУБД
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Используйте вместо этого интеграцию со средой CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Вместо этого используйте интеграцию со средой CLR.  
   
- Интерфейс API расширенных хранимых процедур [!INCLUDE[msCoName](../../includes/msconame-md.md)], который ранее являлся частью служб Open Data Services, предоставляет серверный интерфейс прикладного программного интерфейса (API) для расширения функциональности [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. API состоит из функций и макросов на языке C и C++, используемых для построения приложений.  
+ API [!INCLUDE[msCoName](../../includes/msconame-md.md)] расширенных хранимых процедур, который ранее был частью службы Open Data Services, предоставляет серверный интерфейс прикладного программирования (API) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для расширения функциональных возможностей. API состоит из функций и макросов на языке C и C++, используемых для построения приложений.  
   
  С появлением новых и более мощных технологий, таких как интеграция со средой CLR, необходимость расширенных хранимых процедур значительно уменьшилась.  
   

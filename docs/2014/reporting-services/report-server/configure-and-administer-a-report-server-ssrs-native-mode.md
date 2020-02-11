@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e31465f0f1099536e262442db894e5d6bfd6d37e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104001"
 ---
 # <a name="configure-and-administer-a-report-server-ssrs-native-mode"></a>Настройка и администрирование сервера отчетов (службы Reporting Services в собственном режиме)
@@ -49,15 +49,15 @@ ms.locfileid: "66104001"
  [Настройка подключения к базе данных сервера отчетов (диспетчер конфигураций служб Reporting Services)](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
  Описывает, как изменить строку, используемую сервером отчетов для подключения к базе данных сервера отчетов.  
   
- [Настройка сервера отчетов для доставки электронной почты &#40;диспетчер конфигурации служб SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
+ [Настройка сервера отчетов для доставки электронной почты &#40;Configuration Manager SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
  Описывает, как настроить сервер отчетов для поддержки рассылки отчетов по электронной почте.  
   
  [Настройка учетной записи автоматического выполнения (диспетчер конфигурации служб SSRS)](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)  
  Описывает, как настроить пользовательскую учетную запись для обработки отчетов в автоматическом режиме.  
   
-## <a name="see-also"></a>См. также  
- [настроить доступ к построителю отчетов](configure-report-builder-access.md)   
- [Reporting Services Configuration Files](reporting-services-configuration-files.md)   
+## <a name="see-also"></a>См. также:  
+ [Настройка доступа к построитель отчетов](configure-report-builder-access.md)   
+ [Файлы конфигурации служб Reporting Services](reporting-services-configuration-files.md)   
  [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Защита и обеспечение безопасности служб Reporting Services](../security/reporting-services-security-and-protection.md)   
  [Сервер отчетов служб Reporting Services (собственный режим)](reporting-services-report-server-native-mode.md)  

@@ -17,19 +17,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c9d14f27e1b41bf2a636f53ecb13c4fd88a9e4bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100605"
 ---
 # <a name="technical-reference-ssrs"></a>Технический справочник (службы SSRS)
-  Найдите средства и справочную документацию по PowerShell для использования или администрирования служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+  Найдите средства и справочную документацию по PowerShell для использования или [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] администрирования [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]в.  
   
- ![Маленький значок папки](../../2014/integration-services/media/filefolder-small.gif "Маленький значок папки") **Ошибки и события**  
+ ![Маленький значок папки](../../2014/integration-services/media/filefolder-small.gif "Маленький значок папки") **ошибки и события**  
  [Причины ошибок служб Reporting Services и способы их устранения](troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
   
- ![Маленький значок папки](../../2014/integration-services/media/filefolder-small.gif "Маленький значок папки") **Справочник по функциям**  
+ ![Маленький значок папки с файлами](../../2014/integration-services/media/filefolder-small.gif "Маленький значок папки") **Справочник по функциям**  
  [Справка F1 по использованию конструктора отчетов](tools/report-designer-f1-help.md)  
   
  [Справка F1 диспетчера отчетов](../../2014/reporting-services/report-manager-f1-help.md)  
@@ -38,22 +38,22 @@ ms.locfileid: "66100605"
   
  [Справка мастера отчетов](../../2014/reporting-services/report-wizard-help.md)  
   
- [Просмотра HTML-страниц и панель инструментов отчета](html-viewer-and-the-report-toolbar.md)  
+ [Средство просмотра HTML-страниц и панель инструментов отчета](html-viewer-and-the-report-toolbar.md)  
   
- [Параметры сведений об устройстве для модулей подготовки отчетов к просмотру (службы Reporting Services)](device-information-settings-for-rendering-extensions-reporting-services.md)  
+ [Параметры сведений об устройстве для модулей подготовки отчетов (службы Reporting Services)](device-information-settings-for-rendering-extensions-reporting-services.md)  
   
- ![Маленький значок папки](../../2014/integration-services/media/filefolder-small.gif "Маленький значок папки") **Программы командной строки сервера отчетов**  
- [Служебная программа RS.exe (SSRS)](tools/rs-exe-utility-ssrs.md)  
+ ![Маленький значок папки с файлами](../../2014/integration-services/media/filefolder-small.gif "Маленький значок папки") **программы командной строки сервера отчетов**  
+ [Программа RS. exe &#40;службы SSRS&#41;](tools/rs-exe-utility-ssrs.md)  
   
- [Программа rsconfig (SSRS)](tools/rsconfig-utility-ssrs.md)  
+ [Программа rsconfig &#40;службы SSRS&#41;](tools/rsconfig-utility-ssrs.md)  
   
- [Программа rskeymgmt (SSRS)](tools/rskeymgmt-utility-ssrs.md)  
+ [Программа rskeymgmt &#40;SSRS&#41;](tools/rskeymgmt-utility-ssrs.md)  
   
- ![Маленький значок папки](../../2014/integration-services/media/filefolder-small.gif "Маленький значок папки") **Библиотека классов поставщика WMI служб Reporting Services**  
+ ![Маленький значок папки с файлами](../../2014/integration-services/media/filefolder-small.gif "Маленький значок папки") **Reporting Services библиотека классов поставщика WMI**  
  [Справочник по библиотеке поставщика WMI служб Reporting Services (SSRS)](wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)  
   
-## <a name="see-also"></a>См. также  
- [Вики-статьи TechNet об устранении неполадок со службами Reporting Services](https://go.microsoft.com/fwlink/?LinkID=209153)   
- [Вики-статьи TechNet об устранении неполадок со службами Reporting Services в режиме интеграции с SharePoint](https://go.microsoft.com/fwlink/?LinkID=209158)  
+## <a name="see-also"></a>См. также:  
+ [Вики-статьи TechNet о Таублешутинг Reporting Services](https://go.microsoft.com/fwlink/?LinkID=209153)   
+ [TechNet Wiki статьи TechNet о режиме Таублешутинг Reporting Services SharePoint](https://go.microsoft.com/fwlink/?LinkID=209158)  
   
   

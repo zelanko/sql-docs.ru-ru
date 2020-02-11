@@ -18,10 +18,10 @@ ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c39665f54a915282a6c59fe7d57b24d0cde0a5e7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68045929"
 ---
 # <a name="sp_certify_removable-transact-sql"></a>sp_certify_removable (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68045929"
 
   Проверяет, правильно ли настроена база данных для установочного или съемного носителя, и сообщает обо всех проблемах пользователю.  
   
-> **ВАЖНО!** [!INCLUDE[ssNoteDepFutureAvoid](../../t-sql/statements/create-database-sql-server-transact-sql.md) instead.  
+> **ВАЖНО!** [! Включите вместо него[сснотедепфутуреавоид](../../t-sql/statements/create-database-sql-server-transact-sql.md) .  
   
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -43,15 +43,15 @@ sp_certify_removable [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @dbname = ] 'dbname'` Указывает проверяемую базу данных. *DBName* — **sysname**.  
+`[ @dbname = ] 'dbname'`Указывает проверяемую базу данных. Аргумент *dbname* имеет тип **sysname**.  
   
-`[ @autofix = ] 'auto'` Делает системного администратора владельцем базы данных и все объекты базы данных и удаляет все созданные пользователем базы данных пользователей и разрешений не по умолчанию. *Автоматическое* — **nvarchar(4)** , значение по умолчанию NULL.  
+`[ @autofix = ] 'auto'`Предоставляет системному администратору право владения базой данных и всеми объектами базы данных, а также удаляет всех пользователей базы данных, созданных пользователем, и нестандартных разрешений. *Auto* имеет тип **nvarchar (4)** и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или 1 (неуспешное завершение)  
+ 0 (успех) или 1 (сбой).  
   
-## <a name="remarks"></a>Примечания  
- Если база данных настроена правильно, **sp_certify_removable** выполняет следующее:  
+## <a name="remarks"></a>Remarks  
+ Если база данных настроена правильно, **sp_certify_removable** выполняет следующие действия:  
   
 -   Переводит базу данных в режим «вне сети», чтобы позволить копировать файлы.  
   
@@ -59,9 +59,9 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
 -   Помечает файловые группы данных как «только для чтения», чтобы эти файлы можно было скопировать на носители, предназначенные только для чтения.  
   
- Владельцем базы данных и всех объектов базы данных должен быть системный администратор. Системный администратор — это пользователь, существующая на всех серверах, работающих под управлением [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и должен существовать в базе данных распространения и установки.  
+ Владельцем базы данных и всех объектов базы данных должен быть системный администратор. Системный администратор является известным пользователем, который существует на всех выполняющихся [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] серверах и может ожидать существования при последующей распределении и установке базы данных.  
   
- При запуске **sp_certify_removable** без **автоматически** , она возвращает сведения о любом из следующих условий:  
+ Если вы запускаете **sp_certify_removable** без **автоматического** значения, он возвращает сведения о любом из следующих условий:  
   
 -   Системный администратор не является владельцем базы данных.  
   
@@ -73,14 +73,14 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
  Эти состояния можно исправить следующими способами:  
   
--   Используйте [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] средства и процедуры, а затем выполните **sp_certify_removable** еще раз.  
+-   Используйте [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] средства и процедуры, а затем снова запустите **sp_certify_removable** .  
   
--   Просто запустите **sp_certify_removable** с **автоматически** значение.  
+-   Просто запустите **sp_certify_removable** с параметром **Auto** .  
   
- Обратите внимание, что эта хранимая процедура проверяет только пользователей и разрешения пользователей. К базе данных можно добавить группы и предоставить им разрешения. Дополнительные сведения см. в статье [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md).  
+ Обратите внимание, что эта хранимая процедура проверяет только пользователей и разрешения пользователей. К базе данных можно добавить группы и предоставить им разрешения. Дополнительные сведения см. в разделе [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md).  
   
 ## <a name="permissions"></a>Разрешения  
- Выполнение разрешения ограничены членами **sysadmin** предопределенной роли сервера.  
+ Разрешения на выполнение ограничены членами предопределенной роли сервера **sysadmin** .  
   
 ## <a name="examples"></a>Примеры  
  Следующий пример подтверждает, что база данных `inventory` готова к удалению.  
@@ -89,11 +89,11 @@ sp_certify_removable [ @dbname= ] 'dbname'
 EXEC sp_certify_removable inventory, AUTO;  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Присоединение и отсоединение базы данных (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
+## <a name="see-also"></a>См. также:  
+ [Отсоединение и присоединение базы данных &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [sp_create_removable &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-removable-transact-sql.md)   
- [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
+ [&#41;Transact-SQL ALTER DATABASE &#40;](../../t-sql/statements/alter-database-transact-sql.md)   
  [sp_dbremove &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Настройка компонента Database Engine — Filestream | Документация Майкрософт
+title: Конфигурация ядро СУБД-FILESTREAM | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,15 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: aa6f1df8858f5ba9bf302eb6a415182cfa9442c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66095792"
 ---
 # <a name="database-engine-configuration---filestream"></a>Настройка компонента Database Engine — Filestream
-  Эта страница используется, чтобы включить FILESTREAM для этой установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Хранилище FILESTREAM объединяет [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] с помощью NTFS файловая система, сохраняя `varbinary(max)` данные больших двоичных объектов (BLOB) в файловой системе в виде файлов. [!INCLUDE[tsql](../../includes/tsql-md.md)] можно вставлять, обновлять, запрашивать, искать и создавать резервные копии данных FILESTREAM. Интерфейсы файловой системы Win32 предоставляют потоковый доступ к этим данным.  
+  Эта страница используется, чтобы включить FILESTREAM для этой установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Файловый поток интегрируется [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] с файловой системой NTFS путем хранения `varbinary(max)` данных больших двоичных объектов (BLOB) в виде файлов в файловой системе. 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] можно вставлять, обновлять, запрашивать, искать и создавать резервные копии данных FILESTREAM. Интерфейсы файловой системы Win32 предоставляют потоковый доступ к этим данным.  
   
 ## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
  **Разрешить FILESTREAM при доступе через Transact-SQL**  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2610534159be781e2719034b41276be5f0d7d473
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104814"
 ---
 # <a name="start-pie-chart-values-at-the-top-of-the-pie-report-builder-and-ssrs"></a>Вывод значений круговой диаграммы в верхней части диаграммы (построитель отчетов и службы SSRS)
@@ -29,13 +29,13 @@ ms.locfileid: "66104814"
   
 2.  Если панель **Свойства** не отображается, выберите на вкладке **Вид** пункт **Свойства**.  
   
-3.  На панели **Свойства** в области **Настраиваемые атрибуты**измените значение **Начальный угол круговой диаграммы** с **0** на **270**.  
+3.  В области **Свойства** в разделе **настраиваемые атрибуты**измените значение **пиестартангле** с **0** на **270**.  
   
 4.  Нажмите кнопку **Выполнить** для предварительного просмотра отчета.  
   
  Теперь первое значение круговой диаграммы отсчитывается от верхней части диаграммы.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Форматирование диаграммы (построитель отчетов и службы SSRS)](formatting-a-chart-report-builder-and-ssrs.md)   
  [Круговые диаграммы (построитель отчетов и службы SSRS)](charts-report-builder-and-ssrs.md)  
   

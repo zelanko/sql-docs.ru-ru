@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: da2eb97e5ce57a2e6a82dda3e264b33e1e3a3b11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103790"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>Управление сервером отчетов служб Reporting Services в собственном режиме
@@ -47,7 +47,7 @@ ms.locfileid: "66103790"
  [Настройка масштабного развертывания сервера отчетов в основном режиме (диспетчер конфигурации служб SSRS)](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
  Представляет шаги настройки нескольких серверов отчетов для совместного использования базы данных сервера отчетов.  
   
- [Настройка сервера отчетов для доставки электронной почты &#40;диспетчер конфигурации служб SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
+ [Настройка сервера отчетов для доставки электронной почты &#40;Configuration Manager SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
  Содержит шаги настройки сервера отчетов для доставки по электронной почте.  
   
  [настроить брандмауэр для доступа к серверу отчетов](configure-a-firewall-for-report-server-access.md)  
@@ -59,14 +59,14 @@ ms.locfileid: "66103790"
  [настроить сервер отчетов для удаленного администрирования](configure-a-report-server-for-remote-administration.md)  
  Описывает, как настроить экземпляр удаленного сервера отчетов для удаленного соединения и настройки с другого компьютера.  
   
- [включать и отключать компоненты служб Reporting Services](turn-reporting-services-features-on-or-off.md)  
+ [Включение и отключение компонентов Reporting Services](turn-reporting-services-features-on-or-off.md)  
  Объясняет, как удалить неиспользуемые компоненты после установки служб Reporting Services.  
   
  [Включение отслеживания удаленных ошибок (службы Reporting Services)](enable-remote-errors-reporting-services.md)  
  Поясняет, как задать свойства сервера на сервере отчетов для возвращения дополнительных сведений об условиях возникновения ошибок на удаленных серверах.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Настройка и администрирование сервера отчетов (службы Reporting Services в собственном режиме)](configure-and-administer-a-report-server-ssrs-native-mode.md)   
- [Настройка и администрирование сервера отчетов (режим интеграции с SharePoint служб Reporting Services)](../configure-administer-report-server-reporting-services-sharepoint-mode.md)  
+ [Настройка и администрирование сервера отчетов (службы Reporting Services в режиме интеграции с SharePoint)](../configure-administer-report-server-reporting-services-sharepoint-mode.md)  
   
   

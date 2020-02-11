@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dac2694101678f8728de4a4bcdd3db416ad4c17f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104921"
 ---
 # <a name="sort-data-in-a-data-region-report-builder-and-ssrs"></a>Сортировка данных в области данных (построитель отчетов и службы SSRS)
@@ -125,8 +125,8 @@ ms.locfileid: "66104921"
   
  Дополнительные сведения о группировании данных в датчике см. в разделе [Датчики (построитель отчетов и службы SSRS)](gauges-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>См. также  
- [Справка построителя отчетов для диалоговых окон, панелей и мастеров](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
+## <a name="see-also"></a>См. также:  
+ [Построитель отчетов справки по диалоговым окнам, панелям и мастерам](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [Диаграммы (построитель отчетов и службы SSRS)](charts-report-builder-and-ssrs.md)   
  [Форматирование меток оси на диаграмме (построитель отчетов и службы SSRS)](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Указание согласованных цветов для нескольких фигурных диаграмм (построитель отчетов и службы SSRS)](shape-charts-report-builder-and-ssrs.md)  

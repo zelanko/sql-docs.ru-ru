@@ -1,5 +1,5 @@
 ---
-title: sys.external_tables (Transact-SQL) | Документация Майкрософт
+title: sys. external_tables (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -12,40 +12,40 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c26dbafb76ecf318fa497e11ccac09e800691900
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68054315"
 ---
-# <a name="sysexternaltables-transact-sql"></a>sys.external_tables (Transact-SQL)
+# <a name="sysexternal_tables-transact-sql"></a>sys. external_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-  Содержит по строке для каждой внешней таблицы в текущей базе данных.  
+  Содержит по одной строке для каждой внешней таблицы в текущей базе данных.  
   
-|Имя столбца|Тип данных|Описание|Диапазон|  
+|Имя столбца|Тип данных|Description|Диапазонный индекс|  
 |-----------------|---------------|-----------------|-----------|  
-|\<наследуемые столбцы >||Список столбцов, наследуемых этим представлением, см. в разделе [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).||  
-|max_column_id_used|**int**|Максимальный идентификатор использовали для этой таблицы.||  
+|\<наследуемые столбцы>||Список столбцов, наследуемых этим представлением, см. в разделе [sys. objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).||  
+|max_column_id_used|**int**|Максимальный идентификатор столбца, который когда-либо использовался для этой таблицы.||  
 |uses_ansi_nulls|**bit**|Таблица была создана при установленном параметре SET ANSI_NULLS = ON.||  
 |data_source_id|**int**|Идентификатор объекта для внешнего источника данных.||  
-|file_format_id|**int**|Для внешних таблиц на внешнем источнике данных HADOOP это идентификатор объекта для формата внешнего файла.||  
-|location|**nvarchar(4000)**|Для внешних таблиц на внешнем источнике данных HADOOP это путь к внешним данным в HDFS.||  
-|Если задано reject_type|**tinyint**|Для внешних таблиц на внешнем источнике данных HADOOP это способ, отклоненных строк учитываются при запросе внешних данных.|ЗНАЧЕНИЕ — число отклоненных строк.<br /><br /> ПРОЦЕНТ - процент отклоненных строк.|  
-|reject_value|**float**|Для внешних таблиц на внешнем источнике данных HADOOP:<br /><br /> Для *reject_type =* значение, это количество отклонений строки, чтобы разрешить до ошибок в запросе.<br /><br /> Для *reject_type* = percentage, это процент отклонения строки, чтобы прежде чем он остановит запрос.||  
-|reject_sample_value|**int**|Для *reject_type* = percentage, это число строк, загружаемых, успешного или неуспешного входа, до расчета Процент отклоненных строк.|Значение NULL, если reject_type = VALUE.|  
-|distribution_type|**int**|Для внешних таблиц через источник внешних данных SHARD_MAP_MANAGER это распределение данных строк для базовых таблиц.|0 — сегментированных<br /><br /> 1 — репликация<br /><br /> 2 - циклический перебор|  
-|distribution_desc|**nvarchar(120)**|Для внешних таблиц через источник внешних данных SHARD_MAP_MANAGER это тип распределения, отображаемый в виде строки.||  
-|sharding_column_id|**int**|Для внешних таблиц через источник внешних данных SHARD_MAP_MANAGER и сегментированную распространения это идентификатор столбца, столбца, который содержит значения ключа сегментирования.||  
-|remote_schema_name|**sysname**|Для внешних таблиц через источник внешних данных SHARD_MAP_MANAGER это схема, где находится базовая таблица к удаленным базам данных (если он отличается от схемы, в которой определена внешняя таблица).||  
-|remote_object_name|**sysname**|Для внешних таблиц через SHARD_MAP_MANAGER внешнего источника данных это имя базовой таблицы к удаленным базам данных (если оно отличается от имени внешней таблицы).||  
+|file_format_id|**int**|Для внешних таблиц по внешнему источнику данных HADOOP это идентификатор объекта для формата внешнего файла.||  
+|location|**nvarchar (4000)**|Для внешних таблиц по внешнему источнику данных HADOOP это путь к внешним данным в HDFS.||  
+|reject_type|**tinyint**|Для внешних таблиц по внешнему источнику данных HADOOP это способ подсчета отклоненных строк при запросе внешних данных.|ЗНАЧЕНИЕ — количество отклоненных строк.<br /><br /> ПРОЦЕНТ — процент отклоненных строк.|  
+|reject_value|**float**|Для внешних таблиц по внешнему источнику данных HADOOP:<br /><br /> Для *reject_type =* value это число отклонений строк, которые должны быть разрешены до сбоя запроса.<br /><br /> Для *reject_type* = процент это процент отклонений строк, которые должны быть разрешены перед отправкой запроса.||  
+|reject_sample_value|**int**|Для *reject_type* = процент это число строк для загрузки (успешно или неуспешно) перед вычислением процента отклоненных строк.|NULL, если reject_type = VALUE.|  
+|distribution_type|**int**|Для внешних таблиц на SHARD_MAP_MANAGER внешнем источнике данных это распределение данных по базовым таблицам.|0 — сегментированный<br /><br /> 1 — реплицировано<br /><br /> 2 — циклический перебор|  
+|distribution_desc|**nvarchar (120)**|Для внешних таблиц на SHARD_MAP_MANAGER внешнем источнике данных это тип распределения, отображаемый в виде строки.||  
+|sharding_column_id|**int**|Для внешних таблиц по SHARD_MAP_MANAGER внешнему источнику данных и сегментированном распределении это идентификатор столбца, содержащего значения ключа сегментирования.||  
+|remote_schema_name|**имеет sysname**|Для внешних таблиц, посвященных внешнему источнику данных SHARD_MAP_MANAGER, это схема, в которой базовая таблица находится в удаленных базах данных (если она отличается от схемы, в которой определена внешняя таблица).||  
+|remote_object_name|**имеет sysname**|Для внешних таблиц, посвященных внешнему источнику данных SHARD_MAP_MANAGER, это имя базовой таблицы в удаленных базах данных (если оно отличается от имени внешней таблицы).||  
   
 ## <a name="permissions"></a>Разрешения  
  Видимость метаданных в представлениях каталогов ограничивается защищаемыми объектами, которыми пользователь владеет или на которые ему были предоставлены разрешения. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>См. также  
- [sys.external_file_formats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)   
- [sys.external_data_sources &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)   
- [CREATE EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/create-external-table-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [sys. external_file_formats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)   
+ [sys. external_data_sources &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)   
+ [Создание внешней таблицы &#40;&#41;Transact-SQL](../../t-sql/statements/create-external-table-transact-sql.md)  
   
   

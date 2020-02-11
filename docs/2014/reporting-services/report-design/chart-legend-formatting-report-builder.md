@@ -28,10 +28,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a658eeca1646488212ee8ecdf48c99818e3f9e6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106290"
 ---
 # <a name="formatting-the-legend-on-a-chart-report-builder-and-ssrs"></a>Форматирование условных обозначений на диаграмме (построитель отчетов и службы SSRS)
@@ -76,15 +76,15 @@ ms.locfileid: "66106290"
 ## <a name="formatting-the-legend-text"></a>Форматирование текста условных обозначений  
  На странице **Шрифт** диалогового окна **Свойства условных обозначений** можно изменить шрифт, размер, стиль и цвет текста условных обозначений.  
   
- По умолчанию текст условных обозначений не оптимизируется для совпадения с областью условных обозначений. Чтобы текст условных обозначений автоматически выделенного пространства, присвойте свойству AutoFitTextDisabled `False` и задайте размер шрифта для свойства MinFontSize наименьшее размер шрифта, которая будет подгонялся по-прежнему разрешить для условных обозначений Оптимизация.  
+ По умолчанию текст условных обозначений не оптимизируется для совпадения с областью условных обозначений. Чтобы текст условных обозначений автоматически соответствовал выделенному пространству, задайте для `False` свойства AutoFitTextDisabled значение и установите минимальный размер шрифта для свойства минфонтсизе, чтобы он был самым низким и по-прежнему можно было использовать оптимизацию условных обозначений.  
   
-## <a name="see-also"></a>См. также  
- [Диалоговое окно "Свойства условных обозначений"  — "Общие" (построитель отчетов и службы SSRS)](../legend-properties-dialog-box-general-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>См. также:  
+ [Диалоговое окно «Свойства условных обозначений», общие &#40;построитель отчетов и службы SSRS&#41;](../legend-properties-dialog-box-general-report-builder-and-ssrs.md)   
  [Изменение текста элемента условных обозначений (построитель отчетов и службы SSRS)](chart-legend-change-item-text-report-builder.md)   
  [Форматирование диаграммы (построитель отчетов и службы SSRS)](formatting-a-chart-report-builder-and-ssrs.md)   
  [Форматирование цветов для рядов на диаграмме (построитель отчетов и службы SSRS)](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [Диаграммы (построитель отчетов и службы SSRS)](charts-report-builder-and-ssrs.md)   
- [Скрытие элементов условных обозначений на диаграмме (построитель отчетов и службы SSRS)](chart-legend-hide-items-report-builder.md)   
- [Задание цветов диаграммы с помощью палитры (построитель отчетов и службы SSRS)](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
+ [Скрытие элементов условных обозначений на диаграмме &#40;построитель отчетов и SSRS&#41;](chart-legend-hide-items-report-builder.md)   
+ [Определение цветов на диаграмме с помощью палитры &#40;построитель отчетов и служб SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
   
   

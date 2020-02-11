@@ -20,13 +20,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a88146da815b97cecbdef598d0c75f1f95fcb54c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097221"
 ---
-# <a name="msreportserverinstance-class"></a>MSReportServer_Instance, класс
+# <a name="msreportserver_instance-class"></a>MSReportServer_Instance, класс
   Класс MSReportServer_Instance содержит основные сведения, необходимые клиенту для соединения с установленным сервером отчетов.  
   
  Список всех элементов этого типа см. в разделе [Элементы MSReportServer_Instance](msreportserver-instance-members.md).  
@@ -45,11 +45,11 @@ public class MSReportServer_Instance
  Все открытые статические (**Shared** в [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) элементы этого типа можно использовать в многопотоковых операциях. Для элементов экземпляра потокобезопасность не гарантируется.  
   
 ## <a name="requirements"></a>Требования  
- **Пространство имен:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
+ **Пространство имен:**[!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
- **Платформа:** [!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
+ **Платформа:**[!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Элементы MSReportServer_Instance](msreportserver-instance-members.md)  
   
   

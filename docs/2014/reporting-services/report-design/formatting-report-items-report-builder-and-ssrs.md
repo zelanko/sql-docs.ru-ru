@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4e1f2aeda7b835c72d06372193c37baa858c603d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105789"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>Форматирование элементов отчета (построитель отчетов и службы SSRS)
@@ -32,7 +32,7 @@ ms.locfileid: "66105789"
   
  Чтобы изменить параметры форматирования, выберите нужный элемент и откройте для него диалоговое окно «Свойства». Например, если требуется изменить форматирование всего содержимого текстового поля или отдельного слова в текстовом поле, нужно щелкнуть этот элемент правой кнопкой мыши и выбрать **Свойства текстового поля**. Затем можно применять нужные стили форматирования.  
   
- Чтобы быстро приступить к работе, см. раздел [Учебник. Форматирование текста (построитель отчетов)](../tutorial-format-text-report-builder.md)  
+ Чтобы быстро приступить к работе, см. раздел [Учебник. Форматирование текста (построитель отчета)](../tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -41,7 +41,7 @@ ms.locfileid: "66105789"
  [Форматирование текста и заполнителей (построитель отчетов и службы SSRS)](formatting-text-and-placeholders-report-builder-and-ssrs.md)  
  Описывает форматирование текста и настройки параметров форматирования для различных блоков текста в пределах одного текстового поля.  
   
- [Импорт HTML в отчет (построитель отчетов и службы SSRS)](importing-html-into-a-report-report-builder-and-ssrs.md)  
+ [Импорт HTML в построитель отчетов &#40;отчетов и службы SSRS&#41;](importing-html-into-a-report-report-builder-and-ssrs.md)  
  Описывает вставку и использование HTML в отчетах.  
   
  [Форматирование чисел и дат (построитель отчетов и службы SSRS)](formatting-numbers-and-dates-report-builder-and-ssrs.md)  
@@ -50,10 +50,10 @@ ms.locfileid: "66105789"
  [Форматирование линий, цветов и изображений (построитель отчетов и службы SSRS)](images-report-builder-and-ssrs.md)  
  Описывает форматирование линий, сетки, цветов и изображений в элементах отчета и областях данных.  
   
- [Задание локали для отчета или текстового поля (службы Reporting Services)](set-the-locale-for-a-report-or-text-box-reporting-services.md)  
+ [Задайте языковой стандарт для отчета или текстового поля &#40;Reporting Services&#41;](set-the-locale-for-a-report-or-text-box-reporting-services.md)  
  Описывает, как изменить настройки для форматов отображения данных, зависящих от языка и региона, таких как дата, валюта и числовые значения.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Форматирование диаграммы (построитель отчетов и службы SSRS)](formatting-a-chart-report-builder-and-ssrs.md)  
   
   

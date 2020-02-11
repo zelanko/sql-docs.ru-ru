@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2c7a9ad23124105443349720d2d5769fb9227db2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105028"
 ---
 # <a name="set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs"></a>Установка минимума и максимума на датчике (построитель отчетов и службы SSRS)
@@ -37,7 +37,7 @@ ms.locfileid: "66105028"
   
 4.  Если значения минимума и максимума очень большие, укажите значение для параметра **Умножить значения меток шкалы на** (необязательно). Чтобы задать множитель, сокращающий шкалу, используйте десятичное число. Например, если имеется шкала от 0 до 1000, можно задать значение множителя 0,01, чтобы уменьшить значения шкалы от 0 до 10.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Форматирование шкал на датчике (построитель отчетов и службы SSRS)](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
  [Форматирование указателей на датчике &#40;построитель отчетов и службы SSRS&#41;](formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [Датчики (построитель отчетов и службы SSRS)](gauges-report-builder-and-ssrs.md)  

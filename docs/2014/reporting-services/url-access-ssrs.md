@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0cc753f16ca9b70523fe6cb858fd167ef044087b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098734"
 ---
 # <a name="url-access-ssrs"></a>Доступ по URL-адресу (SSRS)
@@ -104,23 +104,23 @@ http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
  *value*  
  Текст URL-адреса, соответствующий значению используемого параметра.  
   
- **Примечание.** Список доступных параметров URL-адрес для доступа, см. в разделе [URL Access Parameter Reference](url-access-parameter-reference.md). Примеры передачи параметров отчета в URL-адресе см. в разделе [Pass a Report Parameter Within a URL](pass-a-report-parameter-within-a-url.md).  
+ **Примечание.** Список доступных параметров для доступа по URL-адресу см. в статье [URL Access Parameter Reference](url-access-parameter-reference.md). Примеры передачи параметров отчета в URL-адресе см. в разделе [Pass a Report Parameter Within a URL](pass-a-report-parameter-within-a-url.md).  
   
 ## <a name="related-tasks"></a>Связанные задачи  
   
 |Описания задач|Ссылки|  
 |-----------------------|-----------|  
-|Доступ к элементам сервера отчетов, например, отчетам, общим источникам данных и ресурсам.|[Доступ к элементам сервера отчетов с использованием URL-адреса](access-report-server-items-using-url-access.md)|  
-|Передача отчету параметров отчета.|[Pass a Report Parameter Within a URL](pass-a-report-parameter-within-a-url.md)|  
-|Задание локали для параметров отчета в строке доступа по URL-адресу, определяющей уникальные для локали форматы дат, валют и т.п.|[Задать язык для параметров отчета в URL-адресе](set-the-language-for-report-parameters-in-a-url.md)|  
-|Отправка настроек, уникальных для модуля подготовки отчетов, которые влияют на процесс подготовки.|[Указание настройки сведений об устройстве в URL-адресе](specify-device-information-settings-in-a-url.md)|  
-|Экспорт отчета непосредственно в формате файла, без просмотра в браузере.|[Экспорт отчета с применением доступа по URL-адресу](export-a-report-using-url-access.md)|  
+|Доступ к элементам сервера отчетов, например, отчетам, общим источникам данных и ресурсам.|[Доступ к элементам сервера отчетов с использованием URL-адресов](access-report-server-items-using-url-access.md)|  
+|Передача отчету параметров отчета.|[Передача параметра отчета в URL-адрес](pass-a-report-parameter-within-a-url.md)|  
+|Задание локали для параметров отчета в строке доступа по URL-адресу, определяющей уникальные для локали форматы дат, валют и т.п.|[Выбранный язык для параметров отчета в URL-адресе](set-the-language-for-report-parameters-in-a-url.md)|  
+|Отправка настроек, уникальных для модуля подготовки отчетов, которые влияют на процесс подготовки.|[Указание настроек сведений об устройстве в URL-адресе](specify-device-information-settings-in-a-url.md)|  
+|Экспорт отчета непосредственно в формате файла, без просмотра в браузере.|[Export a Report Using URL Access](export-a-report-using-url-access.md)|  
 |Открытие отчета и переход непосредственно к месту расположения строки.|[Поиск отчета с использованием URL-адресов](search-a-report-using-url-access.md)|  
-|Подготовка определенного моментального снимка журнала отчета.|[Обработка моментального снимка журнала отчета с использованием доступа по URL-адресу](render-a-report-history-snapshot-using-url-access.md)|  
+|Подготовка определенного моментального снимка журнала отчета.|[Обработка моментального снимка журнала отчета с помощью URL-адресов](render-a-report-history-snapshot-using-url-access.md)|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Pass a Report Parameter Within a URL](pass-a-report-parameter-within-a-url.md)   
- [Ссылка на параметр доступа по URL-адресу](url-access-parameter-reference.md)   
+ [Справочник по параметрам доступа по URL-адресу](url-access-parameter-reference.md)   
  [Интеграция служб Reporting Services с помощью доступа по URL-адресу](application-integration/integrating-reporting-services-using-url-access.md)   
  [Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   

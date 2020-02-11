@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 84f9b681ee632e922f5ab349bf1a72fbea63f911
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105252"
 ---
 # <a name="inscope-function-report-builder-and-ssrs"></a>Функция InScope (построитель отчетов и службы SSRS)
@@ -36,8 +36,8 @@ InScope(scope)
 ## <a name="return-type"></a>Тип возвращаемых данных  
  Возвращает `Boolean`.  
   
-## <a name="remarks"></a>Примечания  
- `InScope` Функция проверяет область текущего экземпляра элемента отчета на членство в области, указанной параметром *область*параметра.  
+## <a name="remarks"></a>Remarks  
+ `InScope` Функция проверяет область текущего экземпляра элемента отчета на членство в области, заданной параметром *Scope*.  
   
  Значением*Scope* не может быть выражение.  
   
@@ -64,7 +64,7 @@ InScope(scope)
 =InScope("Product")  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование выражений в отчетах (построитель отчетов и службы SSRS)](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [Типы данных в выражениях (построитель отчетов и службы SSRS)](expressions-report-builder-and-ssrs.md)   

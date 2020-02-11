@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0f8c7a4186c5236260fb27d8de107ce8c97bd363
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101971"
 ---
 # <a name="reporting-services-security-and-protection"></a>Защита и обеспечение безопасности служб Reporting Services
@@ -26,7 +26,7 @@ ms.locfileid: "66101971"
 ## <a name="extended-protection-for-authentication"></a>Расширенная защита для проверки подлинности  
  Начиная с [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], доступна поддержка расширенной защиты для проверки подлинности. Функция [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует привязку каналов и служб для повышения уровня защиты проверки подлинности. Функции [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно использовать в ОС, поддерживающей расширенную защиту. Дополнительные сведения см. в статье [Extended Protection for Authentication with Reporting Services](extended-protection-for-authentication-with-reporting-services.md).  
   
-## <a name="authentication-and-authorization"></a>Проверка подлинности и авторизация  
+## <a name="authentication-and-authorization"></a>Аутентификация и авторизация  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предусматривают несколько типов проверки подлинности клиентов и клиентских приложений для доступа к серверу отчетов. Использование правильного типа проверки подлинности для сервера отчетов обеспечивает уровень безопасности, необходимый для организации. Дополнительные сведения см. в статье [Authentication with the Report Server](authentication-with-the-report-server.md).  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] также использует роли и разрешения для контроля доступа пользователей к содержимому каталога сервера отчетов (иными словами, кто к чему имеет доступ и как этот доступ осуществляется). Дополнительные сведения см. в статье [Роли и разрешения (службы Reporting Services)](roles-and-permissions-reporting-services.md).  
@@ -35,6 +35,6 @@ ms.locfileid: "66101971"
   
 |Описания задач|Ссылки|  
 |-----------------------|-----------|  
-|Настройка протокола Socket Layer (SSL) для защиты клиентских подключений к серверу отчетов.|[Настройка соединений SSL для сервера отчетов, работающего в собственном режиме](configure-ssl-connections-on-a-native-mode-report-server.md)|  
+|Настройка протокола Socket Layer (SSL) для защиты клиентских подключений к серверу отчетов.|[Настройка подключений SSL для сервера отчетов в собственном режиме](configure-ssl-connections-on-a-native-mode-report-server.md)|  
   
   

@@ -18,16 +18,16 @@ ms.assetid: b44277c6-81e8-4b4d-85b3-a2f04d602e7a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 764b6154885dbd361f7d7d4a09d8e340b4a62ef5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68044460"
 ---
-# <a name="sysmailhelpstatussp-transact-sql"></a>sysmail_help_status_sp (Transact-SQL)
+# <a name="sysmail_help_status_sp-transact-sql"></a>sysmail_help_status_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Выводит информацию о состоянии очередей компонента Database Mail. Используйте **sysmail_start_sp** запустить очередей компонента Database Mail и **sysmail_stop_sp** для остановки очереди компонента Database Mail.  
+  Выводит информацию о состоянии очередей компонента Database Mail. Используйте **sysmail_start_sp** для запуска Database Mail очередей и **sysmail_stop_sp** для отмены очередей Database Mail.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,16 +39,16 @@ sysmail_help_status_sp
 ```  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-set"></a>Результирующий набор  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|**Состояние**|**nvarchar(7)**|Состояние компонента Database Mail. Возможные значения: **STARTED** и **остановлено**.|  
+|**Состояние**|**nvarchar (7)**|Состояние компонента Database Mail. Возможные значения: **Started** и **Stopped**.|  
   
 ## <a name="permissions"></a>Разрешения  
- По умолчанию только члены **sysadmin** предопределенной роли сервера можно получить доступ к этой процедуре.  
+ По умолчанию доступ к этой процедуре имеют только члены предопределенной роли сервера **sysadmin** .  
   
 ## <a name="examples"></a>Примеры  
  Следующий пример выводит информацию о состоянии компонента Database Mail.  
@@ -66,9 +66,9 @@ Status
 STARTED  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Внешняя программа компонента Database Mail](../../relational-databases/database-mail/database-mail-external-program.md)   
+## <a name="see-also"></a>См. также:  
+ [Внешняя программа Database Mail](../../relational-databases/database-mail/database-mail-external-program.md)   
  [sysmail_start_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql.md)   
- [sysmail_stop_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)  
+ [sysmail_stop_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)  
   
   

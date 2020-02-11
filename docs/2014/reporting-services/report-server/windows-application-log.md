@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 747a811d1d355bd182b18f4c29f2d1bf9354fa55
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103028"
 ---
 # <a name="windows-application-log"></a>Журнал приложений Windows
@@ -39,7 +39,7 @@ ms.locfileid: "66103028"
   
  Следующая таблица описывает типы событий, записываемых сервером отчетов в журнал событий приложений.  
   
-|Тип события|Описание|  
+|Тип события|Description|  
 |----------------|-----------------|  
 |Сведения|Событие, описывающее успешные операции (например, запуск службы сервера отчетов).|  
 |Предупреждение|Событие, означающее потенциальную проблему (например, нехватка места на диске).|  
@@ -47,7 +47,7 @@ ms.locfileid: "66103028"
 |Аудит успехов|Событие безопасности, регистрируемое при успешном входе в систему.|  
 |Аудит ошибок|Событие, регистрируемое при неудачной попытке входа в систему.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Файлы и источники журналов служб Reporting Services](../report-server/reporting-services-log-files-and-sources.md)   
  [Справочник по ошибкам и событиям (службы Reporting Services)](../troubleshooting/errors-and-events-reference-reporting-services.md)  
   

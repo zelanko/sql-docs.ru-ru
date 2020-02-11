@@ -13,17 +13,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 32176543c121e2559ab659030714924e7d23e1b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100102"
 ---
 # <a name="report-designer-f1-help"></a>Справка F1 конструктора отчетов
-  Этот раздел содержит справку F1 для всех мастеров, представлений и диалоговых окон конструктора отчетов служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Открыть справку F1 во время работы с диалоговым окном можно, нажав клавишу F1 или кнопку справки, расположенную в диалоговом окне.  
+  Этот раздел содержит справку F1 для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] мастеров конструктор отчетов, представлений и диалоговых окон. Открыть справку F1 во время работы с диалоговым окном можно, нажав клавишу F1 или кнопку справки, расположенную в диалоговом окне.  
   
-## <a name="see-also"></a>См. также  
- [Справочник по функциям &#40;службы Reporting Services&#41;](../feature-reference-reporting-services.md)   
+## <a name="see-also"></a>См. также:  
+ [Справочник по компонентам &#40;Reporting Services&#41;](../feature-reference-reporting-services.md)   
  [Отчеты служб Reporting Services &#40;SSRS&#41;](../reports/reporting-services-reports-ssrs.md)  
   
   

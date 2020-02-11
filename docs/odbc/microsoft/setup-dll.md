@@ -1,5 +1,5 @@
 ---
-title: Библиотеки DLL программы установки | Документация Майкрософт
+title: Библиотека DLL установки | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,11 +16,11 @@ ms.assetid: 7e036b66-2fbe-4ce2-815c-2fd03b6fce4d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ddc680dce5e4d39dd88e8677718a83ad0ea89cac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68063416"
 ---
 # <a name="setup-dll"></a>Библиотеки DLL программы установки
-Администратор ODBC вызывает функцию **ConfigDSN** при пользователям настроить источники данных.
+Администратор ODBC вызывает функцию **ConfigDSN** , когда пользователи настраивают источники данных.

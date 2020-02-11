@@ -1,5 +1,5 @@
 ---
-title: Настройка компонента Database Engine — Провизионирование учетных записей | Документация Майкрософт
+title: Настройка ядро СУБД. Подготовка учетных записей | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 300e3dd81ae7a3de2361c79864130c1361c19588
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66095864"
 ---
 # <a name="database-engine-configuration---account-provisioning"></a>Настройка компонента Database Engine — провизионирование учетных записей
@@ -24,14 +24,14 @@ ms.locfileid: "66095864"
  В предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]группа **BUILTIN\Administrators** применялась в качестве имени входа в компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] , а члены локальной группы "Администраторы" могли входить в систему с помощью своих учетных данных администратора. Использовать повышенные разрешения не рекомендуется. В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] группа **BUILTIN\Administrators** в качестве имени входа не используется. Поэтому следует создать имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для каждого административного пользователя и добавить это имя входа в предопределенную роль сервера sysadmin во время установки нового экземпляра [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Это нужно также сделать для учетных записей Windows, которые используются для запуска заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Это включает задания агента репликации.  
   
 ## <a name="options"></a>Параметры  
- **Режим безопасности** — выберите для установки параметр "Проверка подлинности Windows" или "Смешанный режим проверки подлинности".  
+ **Режим безопасности** . Выберите проверку подлинности Windows или смешанный режим проверки подлинности для установки.  
   
- **Провизионирование участников Windows** — в предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]локальная группа Windows "Builtin\Администраторы" помещалась в роль сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin, что в сущности предоставляло администраторам Windows доступ к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]не выполняется подготовка группы «Builtin\Администраторы» в роли сервера sysadmin. Вместо этого необходимо выполнить явную подготовку администраторов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для новых экземпляров во время установки.  
+ **Подготовка участников Windows** . в предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]локальная группа Windows Builtin\Administrator была помещена в роль сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin, фактически предоставляя администраторам Windows доступ к экземпляру. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]не выполняется подготовка группы «Builtin\Администраторы» в роли сервера sysadmin. Вместо этого необходимо выполнить явную подготовку администраторов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для новых экземпляров во время установки.  
   
 > [!IMPORTANT]  
 >  Во время установки необходимо явно указать администраторов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для новых экземпляров. Программа установки не позволит продолжить установку, пока это не будет сделано.  
   
- **Укажите администраторов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** — необходимо указать по крайней мере одного участника Windows для этого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Чтобы добавить учетную запись, от которой запущена программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , нажмите кнопку **Текущий пользователь** . Чтобы добавить или удалить учетные записи из списка системных администраторов, нажмите кнопку **Добавить** или **Удалить**, затем измените список пользователей, групп или компьютеров, которые будут иметь права администраторов на этот экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ **Укажите [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] администраторов** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. необходимо указать по меньшей мере одного участника Windows для экземпляра. Чтобы добавить учетную запись, от которой запущена программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , нажмите кнопку **Текущий пользователь** . Чтобы добавить или удалить учетные записи из списка системных администраторов, нажмите кнопку **Добавить** или **Удалить**и затем измените список пользователей, групп или компьютеров, которые будут иметь права администраторов на этот экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Закончив изменение списка, нажмите кнопку **ОК**и проверьте список администраторов в диалоговом окне конфигурации. После завершения работы со списком нажмите кнопку **Далее**.  
   
@@ -47,15 +47,15 @@ ms.locfileid: "66095864"
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] Никогда не указывайте пустой или простой пароль для пользователя sa.  
+>  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]Никогда не устанавливайте пустой или слабый пароль SA.  
   
- **Смешанный режим (проверка подлинности Windows или проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])**  
+ **Смешанный режим (проверка подлинности Windows или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] аутентификация)**  
  Возможность подключения пользователей с помощью режима проверки подлинности Windows или проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Пользователи, которые подключаются под учетной записью Windows, могут использовать доверенные соединения, которые проверяются Windows.  
   
  При выборе смешанного режима проверки подлинности и наличии условий для использования входных имен SQL для согласования унаследованных приложений необходимо установить надежные пароли для всех учетных записей [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
->  Проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживается только для обратной совместимости. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Проверка подлинности предоставляется только для обеспечения обратной совместимости. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
  **Введите пароль**  
  Введите и подтвердите имя входа для системного администратора (sa). Пароли являются основным способом защиты компьютера от несанкционированного доступа, поэтому для обеспечения безопасности системы обязательна настройка надежных паролей. Не оставляйте поле для ввода пароля пустым и не используйте пароль sa, который легко разгадать.  
@@ -63,12 +63,12 @@ ms.locfileid: "66095864"
 > [!NOTE]  
 >  пароли [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут содержать от 1 до 128 символов, включая любое сочетание букв, символов и цифр. При выборе смешанного режима проверки подлинности необходимо ввести надежный пароль sa, прежде чем мастер установки перейдет на следующую страницу.  
   
- **Правила создания надежных паролей**  
+ **Рекомендации по созданию надежных паролей**  
  Надежные пароли не могут быть легко расшифрованы человеком или взломаны при помощи компьютерных программ. При установке надежных паролей нельзя использовать определенные символы или готовые слова, в том числе:  
   
 -   незаполненный или ПУСТОЙ;  
   
--   Password;  
+-   "Пароль".  
   
 -   Admin;  
   
@@ -97,11 +97,11 @@ ms.locfileid: "66095864"
  Пароли, введенные на этой странице, должны отвечать требованиям политики надежных паролей. При использовании автоматизации с функцией проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] убедитесь, что пароль отвечает требованиям политики надежных паролей.  
   
 ## <a name="related-content"></a>См. также  
- Дополнительные сведения о выборе между проверкой подлинности Windows и проверкой подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе **Выбор режима проверки подлинности** электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Дополнительные сведения о выборе между проверкой подлинности Windows и проверкой подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе **Выбор режима проверки подлинности** электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Дополнительные сведения о выборе учетной записи для выполнения служб [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]приводятся в разделе **Настройка учетных записей и разрешений служб** электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Настройка учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
   
   

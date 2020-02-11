@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 40c623130b02c082b099938823ccc12950333982
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105554"
 ---
 # <a name="multiple-series-on-a-chart-report-builder-and-ssrs"></a>Несколько рядов на диаграмме (построитель отчетов и службы SSRS)
@@ -53,9 +53,9 @@ ms.locfileid: "66105554"
 ## <a name="using-range-charts"></a>Использование диаграмм диапазонов  
  В диаграммах диапазонов имеется по два значения на каждую точку данных. Если в диаграмме есть два ряда на одной оси категорий (x), то чтобы показать различие двух рядов, можно использовать диаграмму диапазонов. Диаграммы диапазонов больше всего подходят для отображения нижних и верхних значений. Например, если в первом ряду содержатся данные по самым крупным продажам по всем дням января, а во втором ряду содержатся самые мелкие продажи по всем дням января, то чтобы показать различие между самыми крупными и самыми мелкими продажами за каждый день, можно использовать диаграмму диапазонов. Дополнительные сведения см. в разделе [Диаграммы диапазонов (построитель отчетов и службы SSRS)](range-charts-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Диаграммы (построитель отчетов и службы SSRS)](charts-report-builder-and-ssrs.md)   
- [Отображение на диаграмме ряда с несколькими диапазонами данных (построитель отчетов и службы SSRS)](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)   
+ [Отображение ряда с несколькими диапазонами данных на диаграмме &#40;построитель отчетов и SSRS&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)   
  [Типы диаграмм (построитель отчетов и службы SSRS)](chart-types-report-builder-and-ssrs.md)  
   
   

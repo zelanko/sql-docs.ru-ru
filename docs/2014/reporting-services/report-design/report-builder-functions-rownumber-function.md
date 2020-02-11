@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d4a06a24525b3d9d0c4e4a5f3f0b749a7db70261
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105169"
 ---
 # <a name="rownumber-function-report-builder-and-ssrs"></a>Функция RowNumber (построитель отчетов и службы SSRS)
@@ -34,8 +34,8 @@ RowNumber(scope)
  *область*  
  (`String`) Имя набора данных, области данных, группирования или значение NULL (`Nothing` в [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]), указывающее контекст, в котором вычисляется количество строк. Значение `Nothing` указывает самый внешний контекст, обычно набор данных отчета.  
   
-## <a name="remarks"></a>Примечания  
- `RowNumber` Возвращает текущее значение количества строк в указанной области, так же, как [RunningValue](report-builder-functions-runningvalue-function.md) возвращает текущее значение агрегатной функции. При указании области указывается и момент, когда счетчик строк сбрасывается в значение 1.  
+## <a name="remarks"></a>Remarks  
+ `RowNumber`Возвращает выполняемое значение количества строк в указанной области, так же как функция [RunningValue](report-builder-functions-runningvalue-function.md) возвращает выполняющееся значение агрегатной функции. При указании области указывается и момент, когда счетчик строк сбрасывается в значение 1.  
   
  Значение*scope* не может быть выражением. Значение*scope* должно быть содержащей областью. Типичными областями — от самой внешней до самой внутренней — являются набор данных отчета, область данных, группы строк и столбцов.  
   
@@ -53,7 +53,7 @@ RowNumber(scope)
 =IIF(RowNumber("GroupbyCategory") Mod 2, "White", "PaleGreen")  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование выражений в отчетах (построитель отчетов и службы SSRS)](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [Типы данных в выражениях (построитель отчетов и службы SSRS)](expressions-report-builder-and-ssrs.md)   
