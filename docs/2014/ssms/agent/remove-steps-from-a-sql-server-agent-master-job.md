@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 12304e532643e536981001da3886460848aec069
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62650215"
 ---
 # <a name="remove-steps-from-a-sql-server-agent-master-job"></a>Remove Steps from a SQL Server Agent Master Job
@@ -26,9 +26,9 @@ ms.locfileid: "62650215"
   
      [Ограничения](#Restrictions)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
--   **Удаление шагов из главного задания агента SQL Server с помощью:**  
+-   **Удаление шагов из агент SQL Server главного задания с помощью:**  
   
      [Среда SQL Server Management Studio](#SSMSProcedure)  
   
@@ -56,7 +56,7 @@ ms.locfileid: "62650215"
   
 4.  Щелкните правой кнопкой мыши задание, шаги которого требуется удалить, и выберите пункт **Свойства**.  
   
-5.  В диалоговом окне **Свойства задания —** _имя_задания_ в разделе **Выберите страницу** выберите пункт **Шаги**.  
+5.  В диалоговом окне **Свойства задания — **_имя_задания_ в разделе **Выберите страницу** выберите пункт **Шаги**.  
   
 6.  В списке **Список шагов задания**выберите шаг задания, который необходимо удалить, и нажмите кнопку **Удалить**.  
   

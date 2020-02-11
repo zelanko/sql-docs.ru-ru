@@ -1,5 +1,5 @@
 ---
-title: Отображение ряда с несколькими диапазонами данных на диаграмме (построитель отчетов и службы SSRS) | Документация Майкрософт
+title: Отображение на диаграмме ряда с несколькими диапазонами данных (построитель отчетов и SSRS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8c226cc9603aa687616d54fa95ee82c7f2b86792
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105994"
 ---
 # <a name="displaying-a-series-with-multiple-data-ranges-on-a-chart-report-builder-and-ssrs"></a>Отображение на диаграмме ряда с несколькими диапазонами данных (построитель отчетов и службы SSRS)
@@ -30,7 +30,7 @@ ms.locfileid: "66105994"
   
 -   **Отфильтровать ненужные значения**. Если отдельные точки данных скрывают важный диапазон, выводимый на диаграмме, можно удалить ненужные точки с помощью фильтра в отчете. Сведения о добавлении фильтра к диаграмме в [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] см. в разделе [Добавление фильтров набора данных, фильтров области данных и групповых фильтров (построитель отчетов и службы SSRS)](add-dataset-filters-data-region-filters-and-group-filters.md).  
   
--   **Вывести каждый диапазон данных как отдельный ряд для сравнения нескольких рядов**. Если диапазонов больше двух, можно выделить диапазоны данных в отдельные ряды. Дополнительные сведения см. в разделе [Несколько рядов на диаграмме (построитель отчетов и службы SSRS)](multiple-series-on-a-chart-report-builder-and-ssrs.md).  
+-   Выведите **каждый диапазон данных как отдельный ряд для сравнения нескольких рядов**. Если диапазонов больше двух, можно выделить диапазоны данных в отдельные ряды. Дополнительные сведения см. в разделе [несколько рядов на диаграмме &#40;построитель отчетов и службы SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -58,14 +58,14 @@ ms.locfileid: "66105994"
   
 -   Диаграмма относится к одному из следующих типов: полярная, круговая, воронкообразная, пирамидальная или любая диаграмма с накоплением.  
   
- Пример диаграммы с разрывами шкалы доступен в виде образца отчета. Дополнительные сведения о скачивании этого и других примеров отчетов см. в статье [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][Report Builder and Report Designer sample reports](https://go.microsoft.com/fwlink/?LinkId=198283).  
+ Пример диаграммы с разрывами шкалы доступен в виде образца отчета. Дополнительные сведения о скачивании этого и других образцов отчетов см. в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]разделе [Построитель отчетов и конструктор отчетов образцы отчетов](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
-## <a name="see-also"></a>См. также  
- [Несколько рядов на диаграмме (построитель отчетов и службы SSRS)](multiple-series-on-a-chart-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>См. также:  
+ [Несколько рядов на диаграмме &#40;построитель отчетов и SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)   
  [Форматирование диаграммы (построитель отчетов и службы SSRS)](formatting-a-chart-report-builder-and-ssrs.md)   
  [Эффекты рельефа, объемные и другие эффекты в диаграмме (построитель отчетов и службы SSRS)](chart-effects-3d-bevel-and-other-report-builder.md)   
  [Диаграммы (построитель отчетов и службы SSRS)](charts-report-builder-and-ssrs.md)   
- [Диалоговое окно "Свойства оси" — "Параметры оси" (построитель отчетов и службы SSRS)](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)   
+ [Диалоговое окно "Свойства оси" — "Параметры оси" (построитель отчетов и службы SSRS)](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)   
  [Сбор мелких срезов на круговой диаграмме (построитель отчетов и службы SSRS)](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)  
   
   
