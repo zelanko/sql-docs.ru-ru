@@ -1,5 +1,5 @@
 ---
-title: Конфигурации узла кластера | Документация Майкрософт
+title: Конфигурация узла кластера | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,18 +14,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd1abb5a1bdce0e758d4f36c861917064b20fee9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66096428"
 ---
 # <a name="cluster-node-configuration"></a>Настройка узла кластера
   Для добавления или удаления узлов в экземпляре отказоустойчивого кластера используется страница «Настройка узла кластера». Чтобы установить или обновить отказоустойчивый кластер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , необходимо запустить программу установки на каждом узле кластера. Чтобы добавить узел в существующий отказоустойчивый кластер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , необходимо запустить программу установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на узле, который добавляется в экземпляр отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Параметры  
- **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Имя экземпляра** . Для выбора экземпляра отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется раскрывающийся список.  
+ Имя экземпляра — используйте раскрывающийся список, чтобы выбрать экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отказоустойчивого кластера для изменения. ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **  
   
- **Имя узла** . В этом поле отображается имя компьютера с выполняющейся программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Это узел отказоустойчивого кластера, который будет добавлен в экземпляр кластера отработки отказа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или удален из кластера.  
+ **Имя этого узла** . в этом поле будет указано имя компьютера, на котором выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] программа установки. Это узел отказоустойчивого кластера, который будет добавлен в экземпляр кластера отработки отказа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или удален из кластера.  
   
   
