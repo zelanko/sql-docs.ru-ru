@@ -1,5 +1,5 @@
 ---
-title: Хранимая процедура sp_dropmergealternatepublisher (Transact-SQL) | Документация Майкрософт
+title: sp_dropmergealternatepublisher (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ ms.assetid: a7dee4e2-2a60-41da-9d1d-6f991d7e2c5e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b6938a94b2cfe322abf55cbf663f91b4328c2120
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68054287"
 ---
-# <a name="spdropmergealternatepublisher-transact-sql"></a>Хранимая процедура sp_dropmergealternatepublisher (Transact-SQL)
+# <a name="sp_dropmergealternatepublisher-transact-sql"></a>Хранимая процедура sp_dropmergealternatepublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Удаляет альтернативный издатель из публикации слиянием. Эта хранимая процедура выполняется на подписчике в базе данных подписки.  
@@ -37,28 +37,28 @@ sp_dropmergealaternatepublisher [ @publisher = ] 'publisher'    , [ @publisher_d
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publisher = ] 'publisher'` — Имя текущего издателя. *издатель*— **sysname**, не имеет значения по умолчанию.  
+`[ @publisher = ] 'publisher'`Имя текущего издателя. параметр *Publisher*имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @publisher_db = ] 'publisher_db'` — Имя текущей базы данных публикации. *publisher_db*— **sysname**, не имеет значения по умолчанию.  
+`[ @publisher_db = ] 'publisher_db'`Имя текущей базы данных публикации. Аргумент *publisher_db*имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @publication = ] 'publication'` — Имя текущей публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'`Имя текущей публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @alternate_publisher = ] 'alternate_publisher'` — Имя альтернативного издателя, которая будет удалена как альтернативного участника синхронизации. *alternate_publisher*— **sysname**, не имеет значения по умолчанию.  
+`[ @alternate_publisher = ] 'alternate_publisher'`Имя альтернативного издателя, который следует удалить в качестве альтернативного участника синхронизации. Аргумент *alternate_publisher*имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @alternate_publisher_db = ] 'alternate_publisher_db'` — Имя базы данных публикации, которая будет удалена как базы данных публикации альтернативного партнера. *alternate_publisher_db*— **sysname**, не имеет значения по умолчанию.  
+`[ @alternate_publisher_db = ] 'alternate_publisher_db'`Имя базы данных публикации, которая будет удалена в качестве альтернативной базы данных публикации партнера по синхронизации. Аргумент *alternate_publisher_db*имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @alternate_publication = ] 'alternate_publication'` — Имя публикации, которая будет удалена как публикация альтернативного участника синхронизации. *alternate_publication*— **sysname**, не имеет значения по умолчанию.  
+`[ @alternate_publication = ] 'alternate_publication'`Имя публикации, которую нужно удалить в качестве альтернативной публикации партнера синхронизации. Аргумент *alternate_publication*имеет тип **sysname**и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
- **Хранимая процедура sp_dropmergealternatepublisher** используется в репликации слиянием.  
+## <a name="remarks"></a>Remarks  
+ **sp_dropmergealternatepublisher** используется в репликации слиянием.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_dropmergelternatepublisher**.  
+ Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_dropmergelternatepublisher**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_addmergealternatepublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergealternatepublisher-transact-sql.md)  
   
   
