@@ -11,18 +11,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9b9e442fb97245d32c398602cdfd727de8239cb8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62467907"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>Требования для использования таблиц, оптимизированных для памяти
-  В дополнение к [оборудованию и программному обеспечению для установки SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md), ниже приведены требования для использования In-Memory OLTP:  
+  Помимо [требований к оборудованию и программному обеспечению для установки SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md), ниже приведены требования к использованию выполняющейся в памяти OLTP.  
   
 -   64-разрядный выпуск [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Enterprise, Developer или Evaluation.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] требуется достаточный объем памяти для хранения данных в оптимизированных для памяти таблицах и индексах. Для учета версий строк необходим объем памяти, в два раза превышающий ожидаемый размер оптимизированных для памяти таблицах и индексов. Однако фактический необходимый объем памяти будет зависеть от вашей рабочей нагрузки. Необходимо отслеживать использование памяти и при необходимости вносить корректировки. Размер данных в таблицах, оптимизированных для памяти, не должен превышать разрешенный процент пула. Чтобы определить размер таблицы, оптимизированной для памяти, см. в разделе [sys.dm_db_xtp_table_memory_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql).  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] требуется достаточный объем памяти для хранения данных в оптимизированных для памяти таблицах и индексах. Для учета версий строк необходим объем памяти, в два раза превышающий ожидаемый размер оптимизированных для памяти таблицах и индексов. Однако фактический необходимый объем памяти будет зависеть от вашей рабочей нагрузки. Необходимо отслеживать использование памяти и при необходимости вносить корректировки. Размер данных в таблицах, оптимизированных для памяти, не должен превышать разрешенный процент пула. Чтобы узнать размер таблицы, оптимизированной для памяти, см. статью [sys. dm_db_xtp_table_memory_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql).  
   
      При наличии дисковых таблиц в базе данных нужно предоставить достаточный объем памяти для буферного пула и обработки запросов для этих таблиц.  
   
@@ -32,30 +33,31 @@ ms.locfileid: "62467907"
   
 -   Для использования In-Memory OLTP необходимо, чтобы процессор поддерживал инструкцию **cmpxchg16b** . Все современные 64-разрядные процессоры поддерживают **cmpxchg16b**.  
   
-     Если вы используете ведущее приложение виртуальной машины и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отображает ошибку, вызванную более старым процессором, проверьте, разрешена ли в приложении инструкция **cmpxchg16b**. Если нет, можно использовать Hyper-V, поддерживающую **cmpxchg16b** без изменения параметров конфигурации.  
+     Если используется ведущее приложение виртуальной машины и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отображает ошибку, вызванную более старым процессором, проверьте, разрешена ли в приложении инструкция **cmpxchg16b**Enterprise, Developer или Evaluation. Если нет, можно использовать Hyper-V, поддерживающую **cmpxchg16b** без изменения параметров конфигурации.  
   
 -   Чтобы установить OLTP в памяти, выберите **Службы компонента Database Engine** при установке [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
-     Для установки создания отчетов ([определение ли таблица или хранимая процедура должна быть перенесена в In-Memory OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) и [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] (для управления In-Memory OLTP через [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] обозреватель объектов), выберите **управления Средства Basic** или **дополнительные средства управления** при установке [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+     Чтобы установить создание отчета ([Определение, должна ли таблица или хранимая процедура быть перенесена](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)в выполняющуюся в памяти OLTP [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ) и (для управления выполняющейся в [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] памяти OLTP через обозреватель объектов), выберите **средства управления — основные** **средства или инструменты управления — дополнительно** при установке [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
-## <a name="important-notes-on-using-includehek2includeshek-2-mdmd"></a>Важные примечания относительно использования [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]  
+## <a name="important-notes-on-using-includehek_2includeshek-2-mdmd"></a>Важные примечания относительно использования [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]  
   
--   Общий объем памяти всех устойчивых таблиц в базе данных не должен превышать 250 ГБ. Дополнительные сведения см. в разделе [устойчивость таблиц, оптимизированных для памяти](durability-for-memory-optimized-tables.md).  
+-   Общий объем памяти всех устойчивых таблиц в базе данных не должен превышать 250 ГБ. Дополнительные сведения см. в разделе [устойчивость для таблиц, оптимизированных для памяти](durability-for-memory-optimized-tables.md).  
   
 -   Данный выпуск [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] направлен на оптимальную работу на системах с 2 или 4 сокетами и меньше чем с 60 ядрами.  
   
--   Файлы контрольных точек не должны удаляться вручную. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически выполняет сборку мусора по ненужным файлам контрольных точек. Дополнительные сведения см. в обсуждении по слиянию данных и разностных файлов в [устойчивость таблиц, оптимизированных для памяти](durability-for-memory-optimized-tables.md).  
+-   Файлы контрольных точек не должны удаляться вручную. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически выполняет сборку мусора по ненужным файлам контрольных точек. Дополнительные сведения см. в обсуждении о слиянии данных и разностных файлов в [устойчивости для таблиц, оптимизированных для памяти](durability-for-memory-optimized-tables.md).  
   
 -   В этой первой версии OLTP в памяти (в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) единственным способом удаления оптимизированной для памяти файловой группы является удаление базы данных.  
   
 -   Если вы пытаетесь удалить большой пакет строк, в то время как происходит одновременная вставка или обновление рабочей нагрузки, которая влияет на количество строк, которые вы стараетесь удалить, удаление, вероятно, завершиться ошибкой. Обходным приемом является остановка вставки или обновления рабочей нагрузки перед выполнением удаления. Вы также можете настроить транзакцию на мелкие транзакции, которые, скорее всего, не прервутся конкурентной рабочей нагрузкой. Как и в случае со всеми операциями записи в таблицах, оптимизированных для памяти, используйте логику повторных операций ([Guidelines for Retry Logic for Transactions on Memory-Optimized Tables](../../database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)).  
   
--   Если создается одна или несколько баз данных с таблицами, оптимизированными для памяти, необходимо включить быструю инициализацию файлов (предоставьте стартовой учетной записи служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] право SE_MANAGE_VOLUME_NAME) для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Без быстрой инициализации файлов оптимизированные для памяти файлы хранилища (файлы данных и разностные файлы) будут инициализироваться при создании и могут отрицательно повлиять на производительность рабочей нагрузки. Дополнительные сведения о быстрой инициализации файлов см. в разделе [Инициализация файлов базы данных](../databases/database-instant-file-initialization.md). Сведения о включении быстрой инициализации файлов см. в разделе [Как и зачем необходимо включать быструю инициализацию файлов](https://blogs.msdn.com/b/sql_pfe_blog/archive/2009/12/23/how-and-why-to-enable-instant-file-initialization.aspx).  
+-   Если создается одна или несколько баз данных с таблицами, оптимизированными для памяти, необходимо включить быструю инициализацию файлов (предоставьте стартовой учетной записи служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] право SE_MANAGE_VOLUME_NAME) для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Без быстрой инициализации файлов оптимизированные для памяти файлы хранилища (файлы данных и разностные файлы) будут инициализироваться при создании и могут отрицательно повлиять на производительность рабочей нагрузки. Дополнительные сведения о быстрой инициализации файлов см. в разделе [Инициализация файлов базы данных](../databases/database-instant-file-initialization.md). Сведения о включении быстрой инициализации файлов см. в разделе [Как и зачем необходимо включать быструю инициализацию файлов](https://blogs.msdn.com/b/sql_pfe_blog/archive/2009/12/23/how-and-why-to-enable-instant-file-initialization.aspx).  
   
-## <a name="did-this-article-help-you-were-listening"></a>Эта статья помогла вам? Мы будем рады вашим отзывам  
- Какие сведения вы искали и удалось ли вам их найти? Мы прислушиваемся к вашим отзывам для совершенствования содержимое. Отправляйте свои комментарии по адресу [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Requirements%20for%20Using%20Memory-Optimized%20Tables%20page).  
+## <a name="did-this-article-help-you-were-listening"></a>Эта статья помогла вам? Мы будем слушать  
+ Какие сведения вы искали и удалось ли вам их найти? Мы будем рады вашим отзывам, чтобы улучшить содержимое. Отправьте свои комментарии в [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Requirements%20for%20Using%20Memory-Optimized%20Tables%20page).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выполняющаяся в памяти OLTP (оптимизация в памяти)](in-memory-oltp-in-memory-optimization.md)  
   
   
