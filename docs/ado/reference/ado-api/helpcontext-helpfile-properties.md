@@ -1,5 +1,5 @@
 ---
-title: HelpContext, HelpFile свойства | Документация Майкрософт
+title: HelpContext, свойства HelpFile | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -22,30 +22,30 @@ ms.assetid: 2b9ef441-993c-44d4-8f87-fac0979dac1d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ba441a52958e423308e648f15dd36e14d6d1d895
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918470"
 ---
 # <a name="helpcontext-helpfile-properties"></a>Свойства HelpContext и HelpFile
-Указывает файл справки и раздел, связанный с [ошибка](../../../ado/reference/ado-api/error-object.md) объекта.  
+Указывает файл справки и раздел, связанный с объектом [Error](../../../ado/reference/ado-api/error-object.md) .  
   
 ## <a name="return-values"></a>Возвращаемые значения  
   
--   **Идентификатор справки** возвращает идентификатор контекста, в виде **Long** значение для раздела в файле справки.  
+-   **Хелпконтекстид** Возвращает идентификатор контекста в виде **длинного** значения для раздела в файле справки.  
   
--   **HelpFile** возвращает **строка** значению, которое возвращает полностью разрешенной путь к файлу справки.  
+-   **HelpFile** Возвращает **строковое** значение, результатом которого является полностью разрешенный путь к файлу справки.  
   
-## <a name="remarks"></a>Примечания  
- Если указан файл справки в **HelpFile** свойство, **HelpContext** свойство используется для автоматического отображения раздела справки идентифицирует его. Если имеется соответствующий раздел справки отсутствует, **HelpContext** свойство возвращает ноль и **HelpFile** свойство возвращает строку нулевой длины (»»).  
+## <a name="remarks"></a>Remarks  
+ Если в свойстве **HelpFile** указан файл справки, свойство **HelpContext** используется для автоматического вывода справочного раздела, который он идентифицирует. Если соответствующий раздел справки недоступен, свойство **HelpContext** возвращает нуль, а свойство **HelpFile** возвращает строку нулевой длины ("").  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  [Объект Error](../../../ado/reference/ado-api/error-object.md)  
   
-## <a name="see-also"></a>См. также  
- [Description, HelpContext, HelpFile, NativeError, номер, источника и SQLState свойства пример (Visual Basic)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
- [Описание, HelpContext, HelpFile, NativeError, номер, источника и пример свойства SQLState (Visual C++)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
+## <a name="see-also"></a>См. также:  
+ [Примеры свойств Description, HelpContext, HelpFile, NativeError, Number, Source и SQLState (Visual Basic)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
+ [Примеры свойств Description, HelpContext, HelpFile, NativeError, Number, Source и SQLState (Visual c++)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
  [Свойство Description](../../../ado/reference/ado-api/description-property.md)   
  [Свойство Number (ADO)](../../../ado/reference/ado-api/number-property-ado.md)   
  [Свойство Source (объект Error ADO)](../../../ado/reference/ado-api/source-property-ado-error.md)

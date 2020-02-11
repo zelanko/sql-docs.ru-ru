@@ -14,14 +14,14 @@ ms.assetid: 1ba0f6cc-dfa7-4fe8-8bc2-f862b386156d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1fab61517e226a0f78089d909188a275a61d0928
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036362"
 ---
 # <a name="odbc-reference"></a>Справочник по ODBC
-В следующих разделах содержатся синтаксиса и семантической информации для всех функций ODBC.  
+В следующих разделах содержатся сведения о синтаксисе и семантической информации для всех функций ODBC.  
   
 -   [Сводка по функциям](../../../odbc/reference/syntax/function-summary.md)  
   
@@ -29,8 +29,8 @@ ms.locfileid: "68036362"
   
 -   [Справочник по API библиотеки DLL установки](../../../odbc/reference/syntax/setup-dll-api-reference.md)  
   
--   [Справочник по API библиотеки DLL установщика](../../../odbc/reference/syntax/installer-dll-api-reference-function.md)  
+-   [Справочник по API DLL установщика](../../../odbc/reference/syntax/installer-dll-api-reference-function.md)  
   
--   [Справочник по функциям библиотеки DLL перевода](../../../odbc/reference/syntax/translation-dll-api-reference.md)  
+-   [Справочник по функциям DLL преобразования](../../../odbc/reference/syntax/translation-dll-api-reference.md)  
   
 -   [Справочник по интерфейсу службы доступа (SPI) ODBC](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md)

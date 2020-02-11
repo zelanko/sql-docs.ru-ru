@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 414cdedb8f2bc3dee4edc792c11b6438306818c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754546"
 ---
 # <a name="removing-database-mirroring-sql-server"></a>Удаление зеркального отображения базы данных (SQL Server)
@@ -53,7 +53,7 @@ ms.locfileid: "62754546"
   
 
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Зеркальное отображение базы данных ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
  [Зеркальное отображение базы данных (SQL Server)](database-mirroring-sql-server.md)   
  [Приостановка и возобновление зеркального отображения базы данных (SQL Server)](pausing-and-resuming-database-mirroring-sql-server.md)   

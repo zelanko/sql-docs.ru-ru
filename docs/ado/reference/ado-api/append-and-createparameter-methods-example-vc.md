@@ -1,5 +1,5 @@
 ---
-title: Append и CreateParameter методы (Visual C++) | Документация Майкрософт
+title: Примеры методов Append и CreateParameter (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: b57d144c-0a34-49c8-94cf-e5981edfcca6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f0f23598ac53e1d4d4067721487744c46d819442
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920692"
 ---
-# <a name="append-and-createparameter-methods-example-vc"></a>Append и CreateParameter методы (Visual C++)
-В этом примере используется [Append](../../../ado/reference/ado-api/append-method-ado.md) и [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) методы для выполнения хранимой процедуры с входным параметром.  
+# <a name="append-and-createparameter-methods-example-vc"></a>Пример методов Append и CreateParameter (Visual c++)
+В этом примере используются методы [append](../../../ado/reference/ado-api/append-method-ado.md) и [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) для выполнения хранимой процедуры с входным параметром.  
   
 ## <a name="example"></a>Пример  
   
@@ -188,13 +188,13 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
- Ввод  
+ Входные данные  
   
 ```  
 25  
 ```  
   
-## <a name="sample-output"></a>Образец вывода  
+## <a name="sample-output"></a>Пример вывода  
   
 ```  
 Authors with 25 percent royalty  
@@ -202,6 +202,6 @@ Authors with 25 percent royalty
 899-46-2035, Anne  Ringer  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Метод append (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
+## <a name="see-also"></a>См. также:  
+ [Метод Append (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
  [Метод CreateParameter (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)

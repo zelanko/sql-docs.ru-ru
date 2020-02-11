@@ -1,5 +1,5 @@
 ---
-title: Индекс синтаксиса Visual C++ для модели COM ADO для | Документация Майкрософт
+title: Visual C++ индекс синтаксиса для COM | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,39 +17,39 @@ ms.assetid: d02b199e-1e52-4cc9-b118-750952ae7f63
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 74562de6d4bd606e4cb9217cdd119646f51e2e47
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920981"
 ---
 # <a name="ado-for-visual-c-syntax-index-for-com"></a>Индекс синтаксиса ADO для Visual C++ для модели COM
-Этот индекс является перекрестной ссылки на Справочник по языку ADO, исходя из Microsoft Visual C++.  
+Этот индекс является перекрестной ссылкой на справочник по языку ADO на основе Microsoft Visual C++.  
   
- Если вы используете **#import** директивы в своем приложении, файл заголовка будет создаваться, позволит вам использовать синтаксис, похожий на Microsoft Visual Basic. Имена свойств формы **get_** _PropertyName_ и **put_** _PropertyName_ может рассматриваться, как если бы они были объявлены как просто *PropertyName*. Свойство можно интерпретировать как элемент данных, а не функции.  
+ При использовании директивы **#import** в приложении будет создан файл заголовка, который позволит использовать синтаксис, аналогичный Microsoft Visual Basic. Имена свойств в форме **get_**_PropertyName_ и **put_**_PropertyName_ могут рассматриваться так, как если бы они были объявлены просто как *PropertyName*. После этого свойство может рассматриваться как элемент данных, а не как функция.  
   
- Все методы, свойства и события являются функции, возвращающие **HRESULT**, который можно проверить, чтобы определить, если функция выполнена успешно.  
+ Все методы, свойства и события — это функции, возвращающие **значение HRESULT**, которое можно проверить, чтобы определить, успешно ли выполнена функция.  
   
- Синтаксис методов и свойств в Visual C++ отображается для следующих элементов:  
+ Метод и синтаксис свойства в Visual C++ перечислены для следующих элементов:  
   
 -   [Коллекции](../../../ado/reference/ado-api/collections-ado-for-visual-c-syntax.md)  
   
--   [Объект команды](../../../ado/reference/ado-api/command-ado-for-visual-c-syntax.md)  
+-   [Объект Command](../../../ado/reference/ado-api/command-ado-for-visual-c-syntax.md)  
   
--   [Объект соединения](../../../ado/reference/ado-api/connection-ado-for-visual-c-syntax.md)  
+-   [Объект Connection](../../../ado/reference/ado-api/connection-ado-for-visual-c-syntax.md)  
   
--   [Объект ошибки](../../../ado/reference/ado-api/error-ado-for-visual-c-syntax.md)  
+-   [Объект Error](../../../ado/reference/ado-api/error-ado-for-visual-c-syntax.md)  
   
--   [Объект field](../../../ado/reference/ado-api/field-ado-for-visual-c-syntax.md)  
+-   [Объект Field](../../../ado/reference/ado-api/field-ado-for-visual-c-syntax.md)  
   
--   [Объект параметра](../../../ado/reference/ado-api/parameter-ado-for-visual-c-syntax.md)  
+-   [Объект Parameter](../../../ado/reference/ado-api/parameter-ado-for-visual-c-syntax.md)  
   
--   [Объект записи](../../../ado/reference/ado-api/record-ado-for-visual-c-syntax.md)  
+-   [Объект Record](../../../ado/reference/ado-api/record-ado-for-visual-c-syntax.md)  
   
--   [Объект набора записей](../../../ado/reference/ado-api/recordset-ado-for-visual-c-syntax.md)  
+-   [Объект Recordset](../../../ado/reference/ado-api/recordset-ado-for-visual-c-syntax.md)  
   
 -   [Объект Stream](../../../ado/reference/ado-api/stream-ado-for-visual-c-syntax.md)  
   
-## <a name="see-also"></a>См. также  
- [ADO для индекс синтаксиса Visual C++ с #import](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   
+## <a name="see-also"></a>См. также:  
+ [ADO для Visual C++ индекса синтаксиса с #import](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   
  [Объекты данных Microsoft ActiveX (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)

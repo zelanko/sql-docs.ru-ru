@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4d262aab5ef79cccace154bb781417c7ff91252a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762147"
 ---
-# <a name="mssqlserver824"></a>MSSQLSERVER_824
+# <a name="mssqlserver_824"></a>MSSQLSERVER_824
     
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|824|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
@@ -49,7 +49,7 @@ ms.locfileid: "62762147"
   
  Рассмотрите вариант изменения настроек баз данных и включения параметра PAGE_VERIFY CHECKSUM. Дополнительные сведения о PAGE_VERIFY см. в статье [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Управление таблицей suspect_pages (SQL Server)](../backup-restore/manage-the-suspect-pages-table-sql-server.md)  
   
   

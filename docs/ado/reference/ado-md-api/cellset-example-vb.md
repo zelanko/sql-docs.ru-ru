@@ -1,5 +1,5 @@
 ---
-title: Пример объекта Cellset (Visual Basic) | Документация Майкрософт
+title: Пример набора ячеек (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 2666ad1c-b48e-4b2c-b269-5a9f4e4a7810
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1b099a1eb5d513285b33b26f5623f1e14b322731
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67911583"
 ---
 # <a name="cellset-example-vb"></a>Пример объекта Cellset (Visual Basic)
-Этот проект Visual Basic демонстрирует основные принципы использования многомерные Объекты ADO для доступа к данным куба. Он отображает заголовки для заголовков столбцов и строк, а затем отображает форматирования значений ячеек, определенных в наборе ячеек.  
+В этом Visual Basicном проекте демонстрируются основы использования объекты данных ActiveX (MD) для доступа к данным куба. Он отображает заголовки элементов для заголовков столбцов и строк, а затем отображает отформатированные значения конкретных ячеек в наборе ячеек.  
   
 ```  
 Private Sub cmdCellSettoDebugWindow_Click()  

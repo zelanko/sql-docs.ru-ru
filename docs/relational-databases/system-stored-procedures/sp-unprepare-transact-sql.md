@@ -1,5 +1,5 @@
 ---
-title: процедура sp_unprepare (Transact-SQL) | Документация Майкрософт
+title: sp_unprepare (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -19,16 +19,16 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ee74778b48476328b21c7bdfe4d4e5dd895d8204
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68027664"
 ---
-# <a name="spunprepare-transact-sql"></a>sp_unprepare (Transact-SQL)
+# <a name="sp_unprepare-transact-sql"></a>sp_unprepare (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  Отменяет план выполнения, созданных sp_prepare хранимой процедурой. процедура sp_unprepare вызывается указанием ID = 15 в пакете потока табличных данных.  
+  Отменяет план выполнения, созданный хранимой процедурой sp_prepare. sp_unprepare вызывается путем указания ID = 15 в пакете потока табличных данных (TDS).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,8 +39,8 @@ sp_unprepare handle
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *Дескриптор*  
- — *Обрабатывать* значение, возвращаемое хранимой процедурой sp_prepare.  
+ *справиться*  
+ Значение *обработчика* , возвращаемое sp_prepare.  
   
 ## <a name="examples"></a>Примеры  
  Следующий пример показывает, как подготовить, выполнить и отменить подготовку простой инструкции.  
@@ -66,6 +66,6 @@ EXEC sp_execute @P1, N'tempdb', N'ONLINE';
 EXEC sp_unprepare @P1;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_prepare &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)   
 

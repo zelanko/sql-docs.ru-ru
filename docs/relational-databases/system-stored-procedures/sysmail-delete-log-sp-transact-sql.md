@@ -18,13 +18,13 @@ ms.assetid: e94b37a1-70ad-46a5-86c0-721892156f7c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0a4cfa0178b04a53c3d5ea8419d063d636507a39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019930"
 ---
-# <a name="sysmaildeletelogsp-transact-sql"></a>sysmail_delete_log_sp (Transact-SQL)
+# <a name="sysmail_delete_log_sp-transact-sql"></a>sysmail_delete_log_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Удаляет события из журнала компонента Database Mail. Удаляются либо все события, либо только события, удовлетворяющие критериям даты или типа.  
@@ -41,20 +41,20 @@ sysmail_delete_log_sp  [ [ @logged_before = ] 'logged_before' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @logged_before = ] 'logged_before'` Удаляет записи до даты и времени, заданного параметром *logged_before* аргумент. *logged_before* — **datetime** и значение по умолчанию NULL. Значение NULL соответствует всем датам.  
+`[ @logged_before = ] 'logged_before'`Удаляет записи вплоть до даты и времени, указанных аргументом *logged_before* . *logged_before* имеет тип **DateTime** со значением NULL по умолчанию. Значение NULL соответствует всем датам.  
   
-`[ @event_type = ] 'event_type'` Удаляет журнальные записи определенного типа, заданного аргументом *event_type*. *event_type* — **varchar(15)** не имеет значения по умолчанию. Допустимыми значениями являются **успех**, **предупреждение**, **ошибка**, и **Информационное**. NULL соответствует всем типам событий.  
+`[ @event_type = ] 'event_type'`Удаляет записи журнала типа, указанного в качестве *event_type*. *event_type* имеет тип **varchar (15)** и не имеет значения по умолчанию. Допустимые записи: **Success**, **warning**, **Error**и **информационный**. NULL соответствует всем типам событий.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
- Используйте **sysmail_delete_log_sp** хранимую процедуру, чтобы окончательно удалить записи из журнала компонента Database Mail. Необязательный аргумент позволяет удалять записи определенной давности. Из этого следует, что удаляются события, созданные ранее даты, заданной в аргументе. Необязательный аргумент позволяет удалять только события определенного типа, заданный как **event_type** аргумент.  
+## <a name="remarks"></a>Remarks  
+ Для окончательного удаления записей из журнала Database Mail используйте хранимую процедуру **sysmail_delete_log_sp** . Необязательный аргумент позволяет удалять записи определенной давности. Из этого следует, что удаляются события, созданные ранее даты, заданной в аргументе. Необязательный аргумент позволяет удалять только события определенного типа, указанные в качестве аргумента **event_type** .  
   
- При удалении записей из журнала компонента Database Mail записи электронной почты не удаляются из таблиц Database Mail. Используйте [sysmail_delete_mailitems_sp](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md) для удаления электронной почты из таблиц компонента Database Mail.  
+ При удалении записей из журнала компонента Database Mail записи электронной почты не удаляются из таблиц Database Mail. Используйте [sysmail_delete_mailitems_sp](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md) , чтобы удалить электронную почту из Database Mail таблиц.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера можно получить доступ к этой процедуре.  
+ Только члены предопределенной роли сервера **sysadmin** могут обращаться к этой процедуре.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -84,9 +84,9 @@ EXECUTE msdb.dbo.sysmail_delete_log_sp
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sysmail_event_log &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
  [sysmail_delete_mailitems_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md)   
- [Создание задания агента SQL Server по архивации сообщений и журналов событий компонента Database Mail](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)  
+ [Создание задания агента SQL Server по архивации сообщений компонента Database Mail и журналов событий базы данных](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)  
   
   

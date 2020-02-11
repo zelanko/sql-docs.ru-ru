@@ -15,14 +15,14 @@ ms.assetid: 9f7c78bb-7bb8-4c4f-8e5a-4d3bfc8a208f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fedde638e343281c5d3810cc80c9ba8db820e839
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918461"
 ---
 # <a name="getrows-method-example-vb"></a>Пример метода GetRows (Visual Basic)
-В этом примере используется [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) метод для получения указанного числа строк из [записей](../../../ado/reference/ado-api/recordset-object-ado.md) и заполняют массив полученные данные. **GetRows** метод возвратит меньше, чем требуемое число строк в двух случаях: либо если [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) был достигнут, или если **GetRows** попытка получить запись, которая была удалена другим пользователем. Функция возвращает **False** только в том случае, если происходит второй вариант. Функция GetRowsOK является обязательным для выполнения этой процедуры.  
+В этом примере метод [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) используется для получения указанного числа строк из [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) и для заполнения массива результирующими данными. Метод **GetRows** возвращает меньше требуемого числа строк в двух случаях: или, если был достигнут [конец файла](../../../ado/reference/ado-api/bof-eof-properties-ado.md) , или если **GetRows** попытался получить запись, удаленную другим пользователем. Функция возвращает **значение false** только в том случае, если происходит второй вариант. Для выполнения этой процедуры требуется функция Жетровсок.  
   
 ```  
 'BeginGetRowsVB  
@@ -112,6 +112,6 @@ End Sub
 'EndGetRowsVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод GetRows (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -1,5 +1,5 @@
 ---
-title: SUM (многомерные Выражения) | Документация Майкрософт
+title: Sum (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: eb4e9d55ef2228404dd9113170066e4a3612a0a1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036674"
 ---
 # <a name="sum-mdx"></a>Sum (многомерные выражения)
@@ -34,7 +34,7 @@ Sum( Set_Expression [ , Numeric_Expression ] )
  *Numeric_Expression*  
  Допустимое числовое выражение (обычно многомерное выражение координат ячейки), возвращающее число.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Если числовое выражение указано, его значение вычисляется для всех элементов набора, затем эти значения суммируются. Если числовое выражение не указано, вычисления выполняются в текущем контексте элементов, затем значения суммируются. Если функция SUM применяется к нечисловому выражению, результат не определен.  
   
 > [!NOTE]  
@@ -66,7 +66,7 @@ SELECT Measures.x ON 0
 FROM [Adventure Works]  
 ```  
   
- В следующем примере используется ключевое слово WITH MEMBER и **SUM** функцию для определения вычисляемого элемента в измерении мер, содержащее сумму меры Reseller Sales Amount для элементов Canada и United States Иерархии атрибута Country в измерении Geography.  
+ В следующем примере используется ключевое слово WITH MEMBER и функция **Sum** для определения вычисляемого элемента в измерении Measures, содержащего сумму меры Товарооборот посредников для канады и США элементов иерархии атрибута Country в измерении Geography.  
   
 ```  
 WITH MEMBER Measures.NorthAmerica AS SUM   
@@ -80,7 +80,7 @@ SELECT {[Measures].[NorthAmerica]} ON 0,
 FROM [Adventure Works]  
 ```  
   
- Часто **SUM** функция используется в **CURRENTMEMBER** функции или функции, такие как **YTD** , возвращающими набор, в зависимости от currentmember иерархии. Например, приведенный ниже запрос возвращает сумму меры Internet Sales Amount для всех дат с начала календарного года до даты, отображенной по оси строк:  
+ Часто функция **Sum** используется с функцией **CurrentMember** или функциями, такими как **YTD** , которые возвращают набор, который зависит от CurrentMember иерархии. Например, приведенный ниже запрос возвращает сумму меры Internet Sales Amount для всех дат с начала календарного года до даты, отображенной по оси строк:  
   
  `WITH MEMBER MEASURES.YTDSUM AS`  
   
@@ -92,7 +92,7 @@ FROM [Adventure Works]
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также:  
+ [Ссылка на функцию многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-function-reference-mdx.md)  
   
   

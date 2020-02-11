@@ -1,5 +1,5 @@
 ---
-title: Примеры AbsolutePosition и CursorLocation свойства (Visual C++) | Документация Майкрософт
+title: Примеры свойств примеры AbsolutePosition и CursorLocation (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 48c07216-d199-4822-89f8-ce928d3d2b74
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 76ff99822c47ffc14c686b1e6703663c8e309845
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921709"
 ---
-# <a name="absoluteposition-and-cursorlocation-properties-example-vc"></a>Примеры AbsolutePosition и CursorLocation свойства (Visual C++)
-В этом примере показано, как [примеры AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) свойство можно отслеживать ход выполнения цикла, который перечисляет все записи из [записей](../../../ado/reference/ado-api/recordset-object-ado.md). Она использует [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) свойство, чтобы включить **примеры AbsolutePosition** свойства, установив курсор для клиентского курсора.  
+# <a name="absoluteposition-and-cursorlocation-properties-example-vc"></a>Пример свойств примеры AbsolutePosition и CursorLocation (Visual c++)
+В этом примере показано, как свойство [примеры AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) может отслеживать ход выполнения цикла, который перечисляет все записи [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md). Свойство [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) используется для включения свойства **примеры AbsolutePosition** путем установки курсора на клиентский курсор.  
   
 ```  
 // BeginAbsolutePositionCpp.cpp  
@@ -257,7 +257,7 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Свойство AbsolutePosition (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   
+## <a name="see-also"></a>См. также:  
+ [Свойство примеры AbsolutePosition (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   
  [Свойство CursorLocation (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

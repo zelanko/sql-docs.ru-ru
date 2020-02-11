@@ -1,5 +1,5 @@
 ---
-title: Синтаксис литерала интервала | Документация Майкрософт
+title: Синтаксис литерала Interval | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,65 +15,65 @@ ms.assetid: 2f2d22c1-51d6-4055-9f5a-53bc31e9fea0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6352a5ae894adb09f714a78386bfecfa3ce1df77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68041622"
 ---
 # <a name="interval-literal-syntax"></a>Синтаксис литерала интервала
-Для интервала литералы в ODBC используется следующий синтаксис.  
+Для литералов интервала в ODBC используется следующий синтаксис.  
   
- *interval-literal ::= INTERVAL* [+ *&#124;* -] *interval-string interval-qualifier*  
+ Interval *-литерал:: = Interval* [+*&#124;*-] интервал — *интервал строкового квалификатора*  
   
- *interval-string* ::= *quote* { *year-month-literal* &#124; *day-time-literal* } *quote*  
+ *интервал-строка* :: = *кавычка* { *year-month-литерал* &#124; *день-время-литерал* } *кавычка*  
   
- *year-month-literal* ::= *years-value* &#124; [*years-value* -] *months-value*  
+ *год-месяц-литерал* :: = *years-value* &#124; [*years-value* -] *месяцы-value*  
   
- *day-time-literal* ::= *day-time-interval* &#124; *time-interval*  
+ *день-время-литерал* :: = *день-время-интервал* &#124; интервал *времени*  
   
- *день интервала* :: = *значение дней* [*значение часов* [:*значение минут*[:*значение секунд*]]]  
+ *день-время-интервал* :: = *дни — значение* [*hours-value* [:*минуты-значение*[:*Seconds-value*]]]  
   
- *time-interval* ::= *hours-value* [:*minutes-value* [:*seconds-value* ] ]  
+ *интервал времени* :: = *hours-value* [:*минуты-значение* [:*секунды-значение* ]]  
   
- &#124;*значение минут* [:*значение секунд* ]  
+ &#124; *минут-значение* [:*секунды-значение* ]  
   
- &#124;*значение секунд*  
+ &#124; *секунды — значение*  
   
- *years-value* ::= *datetime-value*  
+ *years — значение* :: = *DateTime-value*  
   
- *months-value* ::= *datetime-value*  
+ *месяцы-значение* :: = *DateTime-value*  
   
- *days-value* ::= *datetime-value*  
+ *Days — значение* :: = *DateTime-value* .  
   
- *hours-value* ::= *datetime-value*  
+ *hours — значение* :: = *DateTime-value* .  
   
- *minutes-value* ::= *datetime-value*  
+ *минуты-значение* :: = *DateTime-value*  
   
- *seconds-value* ::= *seconds-integer-value* [.[*seconds-fraction*] ]  
+ *секунды-value* :: = *Seconds-Integer-value* [. [ *секунды-дробь*] ]  
   
- *seconds-integer-value* ::= *unsigned-integer*  
+ *секунды-целое число — значение* :: = *без знака — целое число*  
   
- *seconds-fraction* ::= *unsigned-integer*  
+ *секунды-дробь* :: = *без знака — целое число*  
   
- *datetime-value* ::= *unsigned-integer*  
+ *DateTime-value* :: = *без знака — целое число*  
   
- *interval-qualifier* ::= *start-field* TO *end-field* &#124; *single-datetime-field*  
+ *квалификатор интервала* :: = *Начало-поле* в *конец поля* &#124; *единичное значение DateTime-Field*  
   
- *поле начала* :: = *не секунду поля даты и времени* [(*интервал начальные поля точности* )]  
+ *Start-Field* :: = *не второй-DateTime-Field* [(*интервал — начальное поле-точность* )]  
   
- *end-field* ::= *non-second-datetime-field* &#124; SECOND[(*interval-fractional-seconds-precision*)]  
+ *конец поля* :: = *не второе — datetime-Field* &#124; секунды [(*Interval-долей-Seconds-Precision*)]  
   
- *поля для даты и времени одного* :: = *не секунду поля даты и времени —* [(*интервал начальные поля точности*)] &#124; второй [(*интервал начальные поля точности*  [, (*интервал--секунд — точность в долях секунды*)]  
+ *Single-DateTime-Field* :: = *не второй-DateTime-Field* [(*интервал — начальное поле*)] &#124; Second [(*интервал с начальным полем и точностью* [, (*Interval-долей-секунд-точность*)]  
   
- *datetime-field* ::= *non-second-datetime-field* &#124; SECOND  
+ *DateTime-Field* :: = *не второе — datetime-Field* &#124; секунды  
   
- *не секунду поля даты и времени* :: = год &#124; месяц &#124; день &#124; час &#124; МИНУТУ  
+ *не второй-DateTime — поле* :: = год &#124; месяц &#124; день &#124; час &#124; минуте  
   
- *interval-fractional-seconds-precision* ::= *unsigned-integer*  
+ *Interval-долей-секунды-точность* :: = *без знака — целое число*  
   
- *interval-leading-field-precision* ::= *unsigned-integer*  
+ *Interval-в начале поля-точность* :: = *без знака — целое число*  
   
- *quote* ::= '  
+ *quote* :: = '  
   
- *unsigned-integer* ::= *digit...*
+ *без знака — целое число* :: = *цифра...*

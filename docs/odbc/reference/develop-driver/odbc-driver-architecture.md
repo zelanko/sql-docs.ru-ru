@@ -13,46 +13,46 @@ ms.assetid: 21a62c7c-192e-4718-a16e-aa12b0de4419
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5d123bdf1ea3357a4846a223c41950c952c1af2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67915534"
 ---
 # <a name="odbc-driver-architecture"></a>Архитектура драйвера ODBC
-Драйвер модулей записи необходимо иметь в виду, что архитектура драйвера могут повлиять на приложения, могут ли использовать СУБД SQL.  
+Модули записи драйверов должны знать, что архитектура драйвера может повлиять на то, может ли приложение использовать специфический для СУБД SQL.  
   
- ![Архитектура драйвера ODBC](../../../odbc/reference/develop-driver/media/odbcdriverovruarch.gif "ODBCDriverOvruArch")  
+ ![Архитектура драйвера ODBC](../../../odbc/reference/develop-driver/media/odbcdriverovruarch.gif "одбкдриверовруарч")  
   
- [Драйверы на основе файла](../../../odbc/reference/file-based-drivers.md)  
+ [Драйверы на основе файлов](../../../odbc/reference/file-based-drivers.md)  
   
- Когда драйвер обращается напрямую к физических данных, драйвер выступает в качестве источника данных и драйвера. Драйвер должен обрабатывать вызовы ODBC и инструкций SQL. Разработчики драйверов на основе файлов должны создавать свои собственные модули базы данных.  
+ Когда драйвер обращается непосредственно к физическим данным, драйвер действует как драйвер, так и источник данных. Драйвер должен обрабатывать как вызовы ODBC, так и инструкции SQL. Разработчики файловых драйверов должны писать собственные ядра СУБД.  
   
  [Драйверы на основе СУБД](../../../odbc/reference/dbms-based-drivers.md)  
   
- Если отдельный механизм СУБД используется для доступа к физическим перемещением данных, драйвер обрабатывает только вызовы ODBC. Он передает инструкции SQL database engine для обработки.  
+ Если для доступа к физическим данным используется отдельное ядро СУБД, драйвер обрабатывает только вызовы ODBC. Он передает инструкции SQL ядру СУБД для обработки.  
   
- [Архитектура сети](../../../odbc/reference/network-example.md)  
+ [Сетевая архитектура](../../../odbc/reference/network-example.md)  
   
- Конфигурации файла и СУБД ODBC могут существовать в одной сети.  
+ Конфигурации файлов и СУБД ODBC могут существовать в одной сети.  
   
  [Другие архитектуры драйверов](../../../odbc/reference/other-driver-architectures.md)  
   
- Если драйвер необходим для работы с различными источниками данных, он может использоваться как по промежуточного слоя. Архитектура ядра СУБД разнородных соединения можно сделать драйвер устройства отображаются в виде диспетчера драйверов. Драйверы можно также установить на серверах, где они могут совместно использоваться ряда клиентов.  
+ Если драйвер необходим для работы с различными источниками данных, его можно использовать по промежуточного слоя. Архитектура разнородного механизма объединения может привести к отображению драйвера в качестве диспетчера драйверов. Драйверы также могут быть установлены на серверах, где они могут совместно использоваться несколькими клиентами.  
   
- Дополнительные сведения об архитектуре драйвера см. в разделе [диспетчера драйверов](../../../odbc/reference/the-driver-manager.md) и [архитектура драйвера](../../../odbc/reference/driver-architecture.md) в разделе, посвященном [архитектура ODBC](../../../odbc/reference/odbc-architecture.md).  
+ Дополнительные сведения об архитектуре драйвера см. в разделе Архитектура [диспетчера драйверов](../../../odbc/reference/the-driver-manager.md) и [драйвера](../../../odbc/reference/driver-architecture.md) раздела об [архитектуре ODBC](../../../odbc/reference/odbc-architecture.md).  
   
- Дополнительные сведения о драйверов можно найти в местах, описанных в следующей таблице.  
+ Дополнительные сведения о проблемах с драйверами можно найти в расположениях, описанных в следующей таблице.  
   
-|Проблемы|Раздел|Location|  
+|Проблема|Раздел|Location|  
 |-----------|-----------|--------------|  
-|Проблемы совместимости с приложениями и драйверами|[Совместимость приложений и драйверов](../../../odbc/reference/develop-app/application-and-driver-compatibility.md)|[Замечания по программированию](../../../odbc/reference/develop-app/programming-considerations.md), справочника по программированию ODBC|  
-|Написание драйверов ODBC|[Написание драйверов ODBC 3.x](../../../odbc/reference/develop-app/writing-odbc-3-x-drivers.md)|[Замечания по программированию](../../../odbc/reference/develop-app/programming-considerations.md), справочника по программированию ODBC|  
-|Рекомендации по драйверов для обеспечения обратной совместимости|[Рекомендации по драйверов для обеспечения обратной совместимости](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)|[Приложение ж Рекомендации по драйверов для обеспечения обратной совместимости](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md), справочника по программированию ODBC|  
-|Подключение к драйвера|[Выбор источника данных или драйвера](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)|[Подключение к данным источника или драйвер](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md), справочника по программированию ODBC|  
-|Определение драйверов|[Просмотр драйверов](../../../odbc/admin/viewing-drivers.md)|[Просмотр драйверов](../../../odbc/admin/viewing-drivers.md), интерактивной справки администратора источников данных ODBC|  
-|Включение организация пулов соединений|[Организация пулов соединений ODBC](../../../odbc/reference/develop-app/driver-manager-connection-pooling.md)|[Подключение к данным источника или драйвер](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md), справочника по программированию ODBC|  
-|Юникода/ANSI драйвера и проблем с подключением|[Драйверы Юникода](../../../odbc/reference/develop-app/unicode-drivers.md)|[Замечания по программированию](../../../odbc/reference/develop-app/programming-considerations.md), справочника по программированию ODBC|  
+|Проблемы совместимости с приложениями и драйверами|[Совместимость приложений и драйверов](../../../odbc/reference/develop-app/application-and-driver-compatibility.md)|[Рекомендации по программированию](../../../odbc/reference/develop-app/programming-considerations.md)в справочнике программиста по ODBC|  
+|Написание драйверов ODBC|[Написание драйверов ODBC 3.x](../../../odbc/reference/develop-app/writing-odbc-3-x-drivers.md)|[Рекомендации по программированию](../../../odbc/reference/develop-app/programming-considerations.md)в справочнике программиста по ODBC|  
+|Рекомендации по драйверам для обеспечения обратной совместимости|[Рекомендации по обеспечению обратной совместимости с драйвером](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)|[Приложение ж. рекомендации по использованию драйверов для обеспечения обратной совместимости](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)в справочнике программиста по ODBC|  
+|Подключение к драйверу|[Выбор источника данных или драйвера](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)|[Подключение к источнику данных или драйверу](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md), Справочник программиста по ODBC|  
+|Определение драйверов|[Просмотр драйверов](../../../odbc/admin/viewing-drivers.md)|[Просмотр драйверов](../../../odbc/admin/viewing-drivers.md)в интерактивной справке администратора источников данных Microsoft ODBC|  
+|Включение пулов соединений|[Объединение соединений ODBC](../../../odbc/reference/develop-app/driver-manager-connection-pooling.md)|[Подключение к источнику данных или драйверу](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md), Справочник программиста по ODBC|  
+|Проблемы с подключением и драйверами Юникода/ANSI|[Драйверы Юникода](../../../odbc/reference/develop-app/unicode-drivers.md)|[Рекомендации по программированию](../../../odbc/reference/develop-app/programming-considerations.md)в справочнике программиста по ODBC|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Разработка драйвера ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)

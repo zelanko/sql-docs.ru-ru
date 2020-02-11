@@ -16,32 +16,32 @@ ms.assetid: f0965617-17d8-41e0-98d0-f824274735a6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 22a8cd4bb8d1bdddbaaa68e92349d9c728557ac0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921465"
 ---
-# <a name="adcpropasyncthreadpriorityenum"></a>ADCPROP_ASYNCTHREADPRIORITY_ENUM
-Для служб удаленных рабочих СТОЛОВ [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта, задает приоритет выполнения асинхронного потока, который извлекает данные.  
+# <a name="adcprop_asyncthreadpriority_enum"></a>ADCPROP_ASYNCTHREADPRIORITY_ENUM
+Для объекта [RECORDSET](../../../ado/reference/ado-api/recordset-object-ado.md) RDS указывает приоритет выполнения асинхронного потока, который получает данные.  
   
- Использовать эти константы с **записей** "**приоритет потока фоновой**«динамические свойства, которое будет ссылаться в индексе ADO для OLE DB динамических свойств и описаны в [ Служба курсора Майкрософт для OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) документации.  
+ Используйте эти константы с динамическим свойством " **набор записей** "**приоритета фонового потока**", которое указывается в индексе динамического свойства ADO-to-OLE DB и описано в [службе курсора Майкрософт для OLE DBной](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) документации.  
   
-|Константа|Значение|Описание|  
+|Постоянно|Значение|Description|  
 |--------------|-----------|-----------------|  
-|**adPriorityAboveNormal**|4|Задает приоритет между обычной и самого высокого.|  
-|**adPriorityBelowNormal**|2|Задает приоритет между минимальной и обычным.|  
-|**adPriorityHighest**|5|Задает приоритет максимальное возможное.|  
-|**AdPriorityLowest**|1|Задает приоритет до наименьшего возможного.|  
-|**adPriorityNormal**|3|Задает приоритет в нормальное состояние.|  
+|**адприоритябовенормал**|4|Устанавливает приоритет между обычным и высшим.|  
+|**адприоритибеловнормал**|2|Устанавливает приоритет между наименьшим и нормальным.|  
+|**адприоритихигхест**|5|Устанавливает приоритет максимально возможного.|  
+|**адприоритиловест**|1|Устанавливает для приоритета наименьшее возможное значение.|  
+|**адприоритинормал**|3|Задает для приоритета значение Обычная.|  
   
-## <a name="adowfc-equivalent"></a>Эквивалент ADO и WFC  
- Пакет: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>Эквивалент ADO/WFC  
+ Пакет: **com. MS. WFC. Data**  
   
-|Константа|  
+|Постоянно|  
 |--------------|  
-|AdoEnums.AdcPropAsyncThreadPriority.ABOVENORMAL|  
-|AdoEnums.AdcPropAsyncThreadPriority.BELOWNORMAL|  
-|AdoEnums.AdcPropAsyncThreadPriority.HIGHEST|  
-|AdoEnums.AdcPropAsyncThreadPriority.LOWEST|  
-|AdoEnums.AdcPropAsyncThreadPriority.NORMAL|
+|Адоенумс. Адкпропасинксреадприорити. ABOVENORMAL|  
+|Адоенумс. Адкпропасинксреадприорити. BELOWNORMAL|  
+|Адоенумс. Адкпропасинксреадприорити. ВЫСШИй|  
+|Адоенумс. Адкпропасинксреадприорити. НИЗШИй|  
+|Адоенумс. Адкпропасинксреадприорити. Обычная|

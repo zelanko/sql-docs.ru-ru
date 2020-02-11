@@ -1,5 +1,5 @@
 ---
-title: 'Recordset (индекс синтаксиса Visual C++ с #import) | Документация Майкрософт'
+title: 'Набор записей (Visual C++ индекс синтаксиса с #import) | Документация Майкрософт'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,13 +16,13 @@ ms.assetid: fe41da71-b607-4329-94da-60964b8efcdc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: be0dd3aba94e228ce32e09660c867ca5385e755b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931277"
 ---
-# <a name="recordset-visual-c-syntax-index-with-import"></a>Recordset (индекс синтаксиса Visual C++ с #import)
+# <a name="recordset-visual-c-syntax-index-with-import"></a>Набор записей (Visual C++ индекс синтаксиса с #import)
 ## <a name="methods"></a>Методы  
   
 ```  
@@ -203,5 +203,5 @@ __declspec(property(get=GetStayInSync,put=PutStayInSync)) VARIANT_BOOL
     StayInSync;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

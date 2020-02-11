@@ -10,29 +10,29 @@ ms.assetid: 8d5a4ce6-b747-46e3-9184-645d56e8b35c
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 91a4dfcf8add3900c51e33a6e40fa874ce9f9798
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68028973"
 ---
 # <a name="installing-ssma-for-sap-ase-sybasetosql"></a>Установка SSMA для SAP ASE (SybaseToSQL)
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) для SAP Adaptive Server Enterprise (ASE) состоит из клиентского приложения, используемого для выполнения перехода с SAP ASE для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или базы данных SQL Azure. Он также содержит пакет расширения, который поддерживает перенос данных и использование функций системы ASE перенесенных баз данных.  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Помощник по миграции (SSMA) для SAP адаптивного сервера предприятия (ASE) состоит из клиентского приложения, которое используется для миграции из SAP ASE в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базу данных SQL Azure или из нее. Он также содержит пакет расширений, который поддерживает перенос данных и использование системных функций ASE в перенесенных базах данных.  
   
-Установите клиентское приложение на компьютер, из которого планируется выполнение действий по миграции. Файлы пакета расширения на компьютере, на котором выполняется установка [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должны размещаться базы данных после миграции.  
+Установите клиентское приложение на компьютер, с которого планируется выполнить миграцию. Установите файлы пакета расширения на компьютере, на котором выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] миграция переносимых баз данных.  
   
 ## <a name="upgrading-ssma-for-sap-ase"></a>Обновление SSMA для SAP ASE  
-Если требуется выполнить обновление до более поздней версии SSMA для SAP ASE, необходимо сначала удалить клиент и пакет расширения server. Затем установите новую версию.  
+Если вы хотите выполнить обновление до более поздней версии SSMA для SAP ASE, сначала необходимо удалить клиент и пакет расширений сервера. Затем установите более новую версию.  
   
-При открытии проекта из более ранней версии SSMA для SAP ASE, SSMA запрашивает, следует ли преобразовать проект до новой версии. Нажмите кнопку **Да** для работы с проектом в более новую версию SSMA.  
+Если вы откроете проект из более ранней версии SSMA для SAP ASE, SSMA запросит, хотите ли вы преобразовать проект в более новую версию. Нажмите кнопку **Да** , чтобы работать с проектом в более новой версии SSMA.  
   
-## <a name="contents"></a>Содержание  
+## <a name="contents"></a>Содержимое  
   
-|Статья|Описание|  
+|Статья|Description|  
 |---------|---------------|  
-|[Установка SSMA для клиентов SAP ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)|Предоставляет сведения и инструкции по установке SSMA для SAP ASE клиента.|  
-|[Установка компонентов SSMA в SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)|Содержит сведения и инструкции по установке пакета расширения в экземплярах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|[Удаление компонентов SAP ASE SSMA для &#40;SybaseToSQL&#41;](../../ssma/sybase/removing-ssma-for-sybase-components-sybasetosql.md)|Предоставляет инструкции по удалению клиента пакет программы и расширение.|  
+|[Установка SSMA для клиента SAP ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)|Содержит сведения и инструкции по установке SSMA для клиента SAP ASE.|  
+|[Установка компонентов SSMA на SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)|Содержит сведения и инструкции по установке пакета расширения на экземплярах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|[Удаление SSMA для компонентов SAP ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/removing-ssma-for-sybase-components-sybasetosql.md)|Содержит инструкции по удалению клиентской программы и пакета расширений.|  
   
-## <a name="see-also"></a>См. также  
-[SAP ASE, миграция базы данных в SQL Server — база данных SQL Azure &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+## <a name="see-also"></a>См. также раздел  
+[Миграция баз данных SAP ASE в SQL Server — база данных SQL Azure &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  

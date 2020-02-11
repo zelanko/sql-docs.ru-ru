@@ -1,5 +1,5 @@
 ---
-title: Свойство (объект Parameter ADO) Size | Документация Майкрософт
+title: Свойство Size (параметр ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,34 +16,34 @@ ms.assetid: e6bad449-ebdb-4dd3-886a-9e6f1e7ee5d2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3796f772dedb961ec34eb0639034350989f99142
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931053"
 ---
 # <a name="size-property-ado-parameter"></a>Свойство Size (объект Parameter ADO)
-Указывает максимальный размер, в байты или символы, из [параметр](../../../ado/reference/ado-api/parameter-object.md) объекта.  
+Указывает максимальный размер объекта [параметра](../../../ado/reference/ado-api/parameter-object.md) в байтах или символах.  
   
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
- Возвращает или задает **Long** значение, указывающее максимальный размер в байты или символы значения в **параметр** объекта.  
+ Задает или возвращает значение **типа Long** , указывающее максимальный размер в байтах или символах значения в объекте **параметра** .  
   
-## <a name="remarks"></a>Примечания  
- Используйте **размер** определить максимальный размер для значения, записи или чтения из свойства [значение](../../../ado/reference/ado-api/value-property-ado.md) свойство **параметр** объекта.  
+## <a name="remarks"></a>Remarks  
+ Свойство **size** используется для определения максимального размера значений, записываемых или считываемых из свойства [value](../../../ado/reference/ado-api/value-property-ado.md) объекта **Parameter** .  
   
- Если вы укажите тип данных переменной длины для **параметр** объекта (например, любой **строка** тип, например **adVarChar**), нужно задать объект  **Размер** свойство перед добавлением его в [параметры](../../../ado/reference/ado-api/parameters-collection-ado.md) коллекции; в противном случае возникает ошибка.  
+ Если для объекта **параметра** задан тип данных переменной длины (например, любой **строковый** тип, например **адварчар**), необходимо задать свойство **size** объекта перед его добавлением в коллекцию [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) . в противном случае возникает ошибка.  
   
- Если уже добавленные **параметр** объект **параметры** коллекцию [команда](../../../ado/reference/ado-api/command-object-ado.md) объект и изменить его тип с типом данных переменной длины, вам необходимо Задайте **параметр** объекта **размер** свойство перед выполнением **команда** объект; в противном случае возникает ошибка.  
+ Если объект **параметра** уже добавлен в коллекцию **Parameters** объекта [Command](../../../ado/reference/ado-api/command-object-ado.md) и вы измените его тип на тип данных переменной длины, необходимо задать свойство **size** объекта **Parameter** перед выполнением объекта **команды** . в противном случае возникает ошибка.  
   
- Если вы используете [обновить](../../../ado/reference/ado-api/refresh-method-ado.md) метод, чтобы получить сведения о параметрах от поставщика и он возвращает тип данных переменной длины, один или несколько **параметр** объектов ADO может выделить память для параметров, на основе на их максимальный потенциальный размер, что может вызвать ошибку во время выполнения. Чтобы предотвратить ошибку, необходимо явно указать **размер** свойства для этих параметров перед выполнением команды.  
+ Если вы используете метод [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) для получения сведений о параметрах от поставщика и возвращает один или несколько объектов **параметров** типа данных переменной длины, ADO может выделить память для параметров на основе максимального возможного размера, что может вызвать ошибку во время выполнения. Чтобы предотвратить возникновение ошибки, необходимо явно задать свойство **size** для этих параметров перед выполнением команды.  
   
- **Размер** свойство доступно для чтения/записи.  
+ Свойство **size** доступно для чтения и записи.  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  [Объект Parameter](../../../ado/reference/ado-api/parameter-object.md)  
   
-## <a name="see-also"></a>См. также  
- [ActiveConnection, CommandText, CommandTimeout, CommandType, размер и направление свойства пример (Visual Basic)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
- [ActiveConnection, CommandText, CommandTimeout, CommandType, размер и направление пример свойства (Visual C++)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
- [ActiveConnection, CommandText, CommandTimeout, CommandType, размер и направление примеры свойств (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)   
+## <a name="see-also"></a>См. также:  
+ [Пример свойств ActiveConnection, CommandText, CommandTimeout, CommandType, Size и Direction (Visual Basic)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
+ [Пример свойств ActiveConnection, CommandText, CommandTimeout, CommandType, Size и Direction (Visual c++)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
+ [Пример свойств ActiveConnection, CommandText, CommandTimeout, CommandType, Size и Direction (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)   
  [Свойство Size (объект Stream ADO)](../../../ado/reference/ado-api/size-property-ado-stream.md)

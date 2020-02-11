@@ -1,5 +1,5 @@
 ---
-title: sys.remote_data_archive_tables (Transact-SQL) | Документация Майкрософт
+title: sys. remote_data_archive_tables (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,30 +19,30 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 65e42e6303b467abd38ddadb6be0c0d0fece46e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68018194"
 ---
-# <a name="stretch-database-catalog-views---sysremotedataarchivetables"></a>Stretch Database представления каталога - sys.remote_data_archive_tables
+# <a name="stretch-database-catalog-views---sysremote_data_archive_tables"></a>Stretch Database представлений каталога — sys. remote_data_archive_tables
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Содержит по одной строке для каждой удаленной таблицы, в которой хранятся данные из локальной таблицы с поддержкой Stretch.  
+  Содержит по одной строке для каждой удаленной таблицы, в которой хранятся данные из локальной таблицы с поддержкой растяжения.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|Идентификатор объекта локальной таблицы, совместимых со Stretch.|  
+|**object_id**|**int**|Идентификатор объекта локальной таблицы с поддержкой растяжения.|  
 |**remote_database_id**|**int**|Автоматически созданный локальный идентификатор удаленной базы данных.|  
-|**remote_table_name**|**sysname**|Имя таблицы в удаленной базе данных, соответствующий локальной таблицы, совместимых со Stretch.|  
-|**filter_predicate**|**nvarchar(max)**|Предикат фильтра, если таковые имеются, для идентификации строк в таблице для миграции. Если значение равно NULL, всю таблицу можно переносить.<br /><br /> Дополнительные сведения см. в разделе [включить Stretch Database для таблицы](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) и [Выбор строк для миграции с помощью предиката фильтра](~/sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).|  
-|**migration_direction**|**tinyint**|Направление, в котором в настоящее время выполняется перенос данных. Ниже перечислены доступные значения.<br/>1 (исходящий трафик)<br/>2 (входящий трафик)|  
-|**migration_direction_desc**|**nvarchar(60)**|Описание направление, в котором в настоящее время выполняется перенос данных. Ниже перечислены доступные значения.<br/>исходящее (1)<br/>входящих подключений (2)|  
-|**is_migration_paused**|**bit**|Указывает, приостановлен ли миграции.|  
-|**is_reconciled**|**bit**| Указывает, синхронизированы ли удаленной таблицы и таблицы SQL Server.<br/><br/>Если значение **is_reconciled** -1 (true), в удаленной таблице и таблице SQL Server находятся в синхронизированном и вы можете выполнять запросы, включающие удаленные данные.<br/><br/>Если значение **is_reconciled** равно 0 (false), в удаленной таблице и таблице SQL Server не синхронизированы. Недавно перенесенных строк требуется переносить еще раз. Это происходит при восстановлении удаленной базы данных Azure, или если вручную удалить строки из удаленной таблицы. Пока выверить таблицы нельзя запускать запросы, включающие удаленные данные. Чтобы согласовать в таблицах, запустите [sys.sp_rda_reconcile_batch](../../relational-databases/system-stored-procedures/sys-sp-rda-reconcile-batch-transact-sql.md). |  
+|**remote_table_name**|**имеет sysname**|Имя таблицы в удаленной базе данных, которая соответствует локальной таблице, поддерживающей растяжение.|  
+|**filter_predicate**|**nvarchar(max)**|Предикат фильтра, если он есть, который определяет строки в таблице для переноса. Если значение равно null, то всю таблицу можно перенести.<br /><br /> Дополнительные сведения см. в разделе [включение Stretch Database для таблицы](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) и [Выбор строк для миграции с помощью предиката фильтра](~/sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).|  
+|**migration_direction**|**tinyint**|Направление, в котором данные переносятся в данный момент. Ниже приведены доступные значения.<br/>1 (исходящий трафик)<br/>2 (входящий трафик)|  
+|**migration_direction_desc**|**nvarchar (60)**|Описание направления, в котором данные переносятся в данный момент. Ниже приведены доступные значения.<br/>исходящий трафик (1)<br/>входящий трафик (2)|  
+|**is_migration_paused**|**bit**|Указывает, приостановлена ли миграция.|  
+|**is_reconciled**|**bit**| Указывает, синхронизирована ли удаленная таблица и SQL Serverная таблица.<br/><br/>Если значение **is_reconciled** равно 1 (true), то удаленная таблица и SQL Serverная таблица синхронизируются, и можно выполнять запросы, включающие удаленные данные.<br/><br/>Если значение **is_reconciled** равно 0 (false), то удаленная таблица и SQL Serverная таблица не синхронизируются. Недавно перенесенные строки необходимо перенести снова. Это происходит при восстановлении удаленной базы данных Azure или при удалении строк вручную из удаленной таблицы. До согласования таблиц нельзя выполнять запросы, содержащие удаленные данные. Чтобы согласовать таблицы, выполните [sys. sp_rda_reconcile_batch](../../relational-databases/system-stored-procedures/sys-sp-rda-reconcile-batch-transact-sql.md). |  
   
-## <a name="see-also"></a>См. также  
- [База данных Stretch](../../sql-server/stretch-database/stretch-database.md)  
+## <a name="see-also"></a>См. также:  
+ [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: Перемещение указателя записи из примера набора записей (Visual Basic) | Документация Майкрософт
+title: Пример перемещения указателя записи в наборе записей (VB) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,14 +18,14 @@ ms.assetid: 31d3b083-c677-423e-8d26-a212eaeea281
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4ade95659b1e7111ff2f3c27a04008e859ded605
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932083"
 ---
-# <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vb"></a>MoveFirst, MoveLast, MoveNext и MovePrevious методы пример (Visual Basic)
-В этом примере используется [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), и [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) методы, чтобы переместить указатель записи [Записей](../../../ado/reference/ado-api/recordset-object-ado.md) на основе предоставленного команды. Процедура MoveAny является обязательным для выполнения этой процедуры.  
+# <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vb"></a>Примеры методов MoveFirst, MoveLast, MoveNext и MovePrevious (Visual Basic)
+В этом примере используются методы [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)и [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) для перемещения указателя записи [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) на основе указанной команды. Для выполнения этой процедуры требуется процедура Мовеани.  
   
 ```  
 'BeginMoveFirstVB  
@@ -123,6 +123,6 @@ End Sub
 'EndMoveFirstVB  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Примеры MoveFirst, MoveLast, MoveNext и MovePrevious методы (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
+## <a name="see-also"></a>См. также:  
+ [Методы MoveFirst, MoveLast, MoveNext и MovePrevious (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

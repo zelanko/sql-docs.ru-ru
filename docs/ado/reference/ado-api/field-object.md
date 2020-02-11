@@ -1,5 +1,5 @@
 ---
-title: Поле объекта | Документация Майкрософт
+title: Объект Field | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,43 +16,43 @@ ms.assetid: b10a72fc-3c4b-4186-a70b-993dc9f7a092
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 04dbf3069896b9a7668d64a2f1d322f0b17ca5f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918686"
 ---
 # <a name="field-object"></a>Объект Field
-Представляет столбец данных с типом данных.  
+Представляет столбец данных с общим типом данных.  
   
-## <a name="remarks"></a>Примечания  
- Каждый **поле** соответствует столбец в [записей](../../../ado/reference/ado-api/recordset-object-ado.md). Использовании [значение](../../../ado/reference/ado-api/value-property-ado.md) свойство **поле** объекты задание или возврат данных для текущей записи. В зависимости от функции предоставляет поставщик, некоторые коллекции, методы или свойства **поле** могут оказаться недоступными.  
+## <a name="remarks"></a>Remarks  
+ Каждый объект **field** соответствует столбцу в [наборе записей](../../../ado/reference/ado-api/recordset-object-ado.md). Свойство [value](../../../ado/reference/ado-api/value-property-ado.md) объектов **field** используется для задания или возврата данных для текущей записи. В зависимости от функциональных возможностей, предоставляемых поставщиком, некоторые коллекции, методы или свойства объекта **field** могут быть недоступны.  
   
- С помощью коллекций, методы и свойства **поле** объекта, можно сделать следующее:  
+ С помощью коллекций, методов и свойств объекта **field** можно выполнять следующие действия.  
   
--   Возвращает имя поля с [имя](../../../ado/reference/ado-api/name-property-ado.md) свойство.  
+-   Возвращает имя поля со свойством [Name](../../../ado/reference/ado-api/name-property-ado.md) .  
   
--   Просмотр или изменение данных в поле с **значение** свойства. **Значение** — свойство по умолчанию **поле** объекта.  
+-   Просмотрите или измените данные в поле со свойством **значение** . **Значение** является свойством объекта **поля** по умолчанию.  
   
--   Возвращает основные характеристики поле с [тип](../../../ado/reference/ado-api/type-property-ado.md), [точности](../../../ado/reference/ado-api/precision-property-ado.md), и [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) свойства.  
+-   Возвращает основные характеристики поля с [типом](../../../ado/reference/ado-api/type-property-ado.md), [точностью](../../../ado/reference/ado-api/precision-property-ado.md)и свойствами [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) .  
   
--   Возвращать декларируемый размер поля с [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) свойство.  
+-   Возвращает объявленный размер поля с помощью свойства [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) .  
   
--   Возвращает фактический размер данных в этом поле с [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) свойство.  
+-   Возврат фактического размера данных в заданном поле с помощью свойства [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) .  
   
--   Определить, какие функции поддерживаются для заданного поля с [атрибуты](../../../ado/reference/ado-api/attributes-property-ado.md) свойство и [свойства](../../../ado/reference/ado-api/properties-collection-ado.md) коллекции.  
+-   Определите, какие типы функций поддерживаются для данного поля с помощью свойства [Attributes](../../../ado/reference/ado-api/attributes-property-ado.md) и коллекции [свойств](../../../ado/reference/ado-api/properties-collection-ado.md) .  
   
--   Изменять значения полей, содержащих двоичные или долго символьных данных с помощью [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) и [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) методы.  
+-   Изменяйте значения полей, содержащих длинные двоичные или длинные символьные данные с помощью методов [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) и методического [блока](../../../ado/reference/ado-api/getchunk-method-ado.md) .  
   
--   Если поставщик поддерживает пакетные обновления, устранить несоответствия в значения полей во время обновления пакета с [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) и [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) свойства.  
+-   Если поставщик поддерживает пакетные обновления, устраните расхождения в значениях полей во время пакетного обновления с помощью свойств [originalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) и [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) .  
   
- Все свойства метаданных (**имя**, **тип**, **DefinedSize**, **точности**, и **NumericScale**) доступны перед открытием **поле** объекта **записей**. Задание их в этот момент полезно за динамическое создание форм.  
+ Все свойства метаданных (**имя**, **Тип**, **DefinedSize**, **точность**и **NumericScale**) доступны перед открытием **набора записей**объекта **поля** . Их установка в это время полезна для динамического создания форм.  
   
- Этот раздел содержит следующие подразделы.  
+ Этот раздел содержит следующий раздел.  
   
--   [Объект свойств поля, методы и события](../../../ado/reference/ado-api/field-object-properties-methods-and-events.md)  
+-   [Свойства, методы и события объекта Field](../../../ado/reference/ado-api/field-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Коллекция Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Коллекция Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

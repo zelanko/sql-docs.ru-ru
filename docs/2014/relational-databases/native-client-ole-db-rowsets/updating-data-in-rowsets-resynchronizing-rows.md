@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7b041dc07afb30fff0c03d96fec9cd8a5d62f965
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63229013"
 ---
 # <a name="resynchronizing-rows"></a>Повторная синхронизация строк
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поддерживает поставщик OLE DB для собственного клиента **IRowsetResynch** на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживаемый курсорами только наборы строк. Интерфейс **IRowsetResynch** не предоставляется по требованию. Пользователь должен запросить этот интерфейс перед открытием набора строк.  
+  Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента поддерживает **интерфейс irowsetresynch** только для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] наборов строк, поддерживаемых курсорами. **Интерфейс irowsetresynch** недоступен по запросу. Пользователь должен запросить этот интерфейс перед открытием набора строк.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Обновление данных в наборах строк](updating-data-in-rowsets.md)  
   
   

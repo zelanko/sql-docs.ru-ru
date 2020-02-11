@@ -16,21 +16,21 @@ ms.assetid: ded4f087-87b9-4efa-8026-bde53d3e9e8a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 738f4cece8cf2355c12c0de4ac42314152c6370a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921445"
 ---
-# <a name="adcpropautorecalcenum"></a>ADCPROP_AUTORECALC_ENUM
-Указывает, когда [MSDataShape](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) поставщика повторно вычисляет статистические и вычисляемые столбцы в иерархических наборах записей.  
+# <a name="adcprop_autorecalc_enum"></a>ADCPROP_AUTORECALC_ENUM
+Указывает, когда поставщик [мсдаташапе](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) повторно вычисляет статистические и вычисляемые столбцы в иерархическом наборе записей.  
   
- Эти константы используются только с **MSDataShape** поставщика и **записей** "**автоматическое повторное вычисление**" динамического свойства, на которую ссылается [ADO Индекс динамических свойств](../../../ado/reference/ado-api/ado-dynamic-property-index.md) документированные в [служба курсора Майкрософт для OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) или [службы Microsoft Data Shaping Service для OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) документации.  
+ Эти константы используются только с поставщиком **мсдаташапе** и динамическим свойством **"автоматическое перерасчет**" **набора записей** , на которое ссылается [индекс динамического свойства ADO](../../../ado/reference/ado-api/ado-dynamic-property-index.md) и описаны в [службе курсора майкрософт для OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) или [службы формирования данных Майкрософт для OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) документации.  
   
-|Константа|Значение|Описание|  
+|Постоянно|Значение|Description|  
 |--------------|-----------|-----------------|  
-|**adRecalcAlways**|1|По умолчанию. Повторно вычисляет каждый раз, когда **MSDataShape** поставщик определяет значения, которые зависят от вычисляемых столбцов были изменены.|  
-|**adRecalcUpFront**|0|Вычисляет только в том случае, если изначально построение иерархическое **записей**.|  
+|**адрекалкалвайс**|1|По умолчанию. Повторно вычисляется каждый раз, когда поставщик **мсдаташапе** определяет значения, от которых зависит вычисляемые столбцы.|  
+|**адрекалкупфронт**|0|Вычисляет только при первоначальном построении иерархического **набора записей**.|  
   
-## <a name="adowfc-equivalent"></a>Эквивалент ADO и WFC  
- Эти константы не имеют эквивалентов ADO и WFC.
+## <a name="adowfc-equivalent"></a>Эквивалент ADO/WFC  
+ Эти константы не имеют эквивалентов ADO/WFC.

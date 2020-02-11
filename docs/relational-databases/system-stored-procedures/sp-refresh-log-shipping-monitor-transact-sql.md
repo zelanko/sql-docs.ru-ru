@@ -18,13 +18,13 @@ ms.assetid: edefb912-31c5-4d99-9aba-06629afd0171
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c19f9b99173ca04e6ce15862e22a25f8a2bf06e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68002507"
 ---
-# <a name="sprefreshlogshippingmonitor-transact-sql"></a>sp_refresh_log_shipping_monitor (Transact-SQL)
+# <a name="sp_refresh_log_shipping_monitor-transact-sql"></a>sp_refresh_log_shipping_monitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Данная хранимая процедура обновляет удаленные таблицы мониторинга последними данными с указанного сервера-источника или сервера-получателя для указанного агента отправки журналов. Эта процедура запускается только на сервере-источнике или сервере-получателе.  
@@ -43,9 +43,9 @@ sp_refresh_log_shipping_monitor
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @agent_id = ] 'agent_id'` Первичный идентификатор для резервирования или вторичный идентификатор для копирования или восстановления. *agent_id* — **uniqueidentifier** и не может иметь значение NULL.  
+`[ @agent_id = ] 'agent_id'`Основной идентификатор резервной копии или вторичный идентификатор для копирования или восстановления. *agent_id* имеет тип **uniqueidentifier** и не может иметь значение null.  
   
-`[ @agent_type = ] 'agent_type'` Тип задания доставки журналов.  
+`[ @agent_type = ] 'agent_type'`Тип задания доставки журналов.  
   
  0 = резервирование;  
   
@@ -53,32 +53,32 @@ sp_refresh_log_shipping_monitor
   
  2 = восстановление.  
   
- *agent_type* — **tinyint** и не может иметь значение NULL.  
+ *agent_type* имеет тип **tinyint** и не может иметь значение null.  
   
-`[ @database = ] 'database'` Первичный или вторичный база данных, используемые для ведения журнала агентами резервного копирования или восстановления.  
+`[ @database = ] 'database'`Первичная или вторичная база данных, используемая для ведения журнала агентами резервного копирования или восстановления.  
   
-`[ @mode ] n` Указывает, следует ли обновить данные монитора или очистить его. Тип данных *m* имеет тип tinyint и поддерживаемые значения:  
+`[ @mode ] n`Указывает, следует ли обновлять данные монитора или очищать их. Тип данных *m* — tinyint, а поддерживаемые значения:  
   
  1 = обновление (значение по умолчанию);  
   
- 2 = delete  
+ 2 = удаление (delete);  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или 1 (неуспешное завершение)  
+ 0 (успех) или 1 (сбой).  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  Нет.  
   
-## <a name="remarks"></a>Примечания  
- **sp_refresh_log_shipping_monitor** обновляет **log_shipping_monitor_primary**, **log_shipping_monitor_secondary**, **log_shipping_monitor_history_detail** , и **log_shipping_monitor_error_detail** таблицы данными сеанса, который еще не были перенесены. Это позволяет синхронизировать сервер мониторинга с сервером-источником или сервером-получателем, если в течение некоторого времени синхронизация не выполнялась. В дополнение к этому в случае необходимости разрешается очистка контрольных данных на сервере мониторинга.  
+## <a name="remarks"></a>Remarks  
+ **sp_refresh_log_shipping_monitor** обновляет таблицы **log_shipping_monitor_primary**, **log_shipping_monitor_secondary**, **log_shipping_monitor_history_detail**и **log_shipping_monitor_error_detail** с использованием сведений о сеансе, которые еще не были переданы. Это позволяет синхронизировать сервер мониторинга с сервером-источником или сервером-получателем, если в течение некоторого времени синхронизация не выполнялась. В дополнение к этому в случае необходимости разрешается очистка контрольных данных на сервере мониторинга.  
   
- **sp_refresh_log_shipping_monitor** должна запускаться из **master** базы данных на сервере первичной или вторичной.  
+ **sp_refresh_log_shipping_monitor** должны запускаться из базы данных **master** на основном или вторичном сервере.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнять эту процедуру.  
+ Эту процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** .  
   
-## <a name="see-also"></a>См. также  
- [О доставке журналов &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [SQL Server &#40;доставки журналов&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

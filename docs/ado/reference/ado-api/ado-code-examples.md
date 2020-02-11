@@ -14,17 +14,17 @@ ms.assetid: eb16724f-6fca-4873-b005-68626a8999b2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e46b5b081529d57456d1f6e8a96b057a8fc9c774
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921115"
 ---
 # <a name="ado-code-examples"></a>Примеры кода ADO
-Используйте в следующих примерах кода, чтобы узнать, как использовать объекты ADO, методы, свойства и события.  
+Используйте приведенные ниже примеры кода, чтобы научиться использовать объекты, методы, свойства и события ADO.  
   
 > [!NOTE]
->  Вставьте пример весь код в редакторе кода. Пример может работать неправильно, если используются примеры частичной или утери форматирование абзацев.  
+>  Вставьте весь пример кода в редактор кода. Пример может работать неправильно, если используются частичные примеры или если форматирование абзаца потеряно.  
   
 -   [Примеры кода ADO в Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)  
   

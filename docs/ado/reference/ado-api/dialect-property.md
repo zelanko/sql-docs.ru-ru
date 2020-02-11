@@ -1,5 +1,5 @@
 ---
-title: Свойство Dialect | Документация Майкрософт
+title: Свойство диалекта | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,25 +16,25 @@ ms.assetid: 329c3a71-ba88-4009-b04f-2f52195a5957
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3b5c5709a63183bf4c92963dafecb2cf234e2d92
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918996"
 ---
 # <a name="dialect-property"></a>Свойство Dialect
-Указывает диалект [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) или [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) свойства. Диалект определяет синтаксис и общих правил, которые поставщик использует для синтаксического анализа в строку или поток.  
+Указывает диалект свойств [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) или [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) . Диалект определяет синтаксис и общие правила, которые поставщик использует для анализа строки или потока.  
   
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
- **Диалект** свойство содержит допустимый GUID, представляющий разновидность текст команды или поток. Значение по умолчанию для этого свойства — {C8B521FB-5CF3-11CE-ADE5-00AA0044773D}, которое указывает, что поставщик следует выбрать способ интерпретации текста команды или поток.  
+ Свойство **диалекта** содержит допустимый идентификатор GUID, представляющий диалект текста команды или потока. Значение этого свойства по умолчанию — {C8B521FB-5CF3-11CE-ADE5-00AA0044773D}, которое указывает, что поставщик должен выбрать способ интерпретации текста команды или потока.  
   
-## <a name="remarks"></a>Примечания  
- ADO не запрашивает поставщика, когда он считывает значение этого свойства. Возвращает строковое представление значения, расположенные в данный момент [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта.  
+## <a name="remarks"></a>Remarks  
+ ADO не выполняет запрос к поставщику, когда пользователь считывает значение этого свойства; Он возвращает строковое представление значения, хранящегося в объекте [Command](../../../ado/reference/ado-api/command-object-ado.md) в данный момент.  
   
- Когда пользователь задает **диалект** свойство ADO проверяет идентификатор GUID и выдает ошибку, если указанное значение не является допустимым идентификатором GUID. См. в документации по поставщику для определения значений GUID, поддерживаемых **диалект** свойство.  
+ Когда пользователь задает свойство **диалекта** , ADO проверяет GUID и выдает ошибку, если переданное значение не является ДОПУСТИМЫм идентификатором GUID. См. документацию для поставщика, чтобы определить значения GUID, поддерживаемые свойством **диалекта** .  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  [Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод Execute (объект Command ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)

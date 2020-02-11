@@ -1,5 +1,5 @@
 ---
-title: Обязательные параметры клиента | Документация Майкрософт
+title: Требуемые параметры клиента | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,29 +13,29 @@ ms.assetid: e776b4e3-fcc4-4bfb-a7e8-5ffae1d83833
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bdb99cb3d792900f48ceb69c25c7ae720c339683
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922296"
 ---
 # <a name="required-client-settings"></a>Требуемые параметры клиента
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Укажите следующие параметры для использования настраиваемой **DataFactory** обработчика.  
+ Чтобы использовать пользовательский обработчик **фактов** , укажите следующие параметры.  
   
--   Укажите «поставщик = удаленное MS» в [объект соединения (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) объект [свойство Provider (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) свойство или **подключения** объекта строки подключения "**Поставщика**=» ключевое слово.  
+-   Укажите "Provider = MS Remote" [в свойстве](../../../ado/reference/ado-api/provider-property-ado.md) [объекта соединения (](../../../ado/reference/ado-api/connection-object-ado.md) ADO) или в строке подключения объекта **соединения** "**provider**=".  
   
--   Задайте [свойство CursorLocation (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md) свойства **adUseClient**.  
+-   Задайте для свойства [CursorLocation (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md) значение **адусеклиент**.  
   
--   Укажите имя обработчика, используемого в [объекта DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md) объекта **обработчик** свойство, или [объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) строки подключения объекта« **Обработчик**=» ключевое слово. (Нельзя установить в обработчике **подключения** строка подключения объекта.)  
+-   Укажите имя обработчика для использования в свойстве **обработчика** объекта данных [(RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md) или в строке соединения объекта [Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) для строки подключения "**handler**=". (Нельзя задать обработчик в строке соединения объекта **соединения** .)  
   
- RDS предоставляет обработчик по умолчанию на сервере с именем **MSDFMAP. Обработчик**. (Файл настройки по умолчанию называется MSDFMAP. INI).  
+ RDS предоставляет обработчик по умолчанию на сервере с именем **мсдфмап. Обработчик**. (Файл настройки по умолчанию называется МСДФМАП. INI.)  
   
  **Пример**  
   
- Предположим, что в следующих разделах в **MSDFMAP. INI** и имя источника данных, AdvWorks, ранее были определены:  
+ Предположим, что следующие разделы в **мсдфмап. INI** и имя источника данных адвворкс были ранее определены:  
   
 ```console
 [connect CustomerDataBase]  
@@ -46,9 +46,9 @@ Connect="DSN=AdvWorks"
 SQL="SELECT * FROM Customers WHERE CustomerID = ?"  
 ```  
   
- В следующих фрагментах кода создаются на языке Visual Basic:  
+ Следующие фрагменты кода написаны на Visual Basic:  
   
-## <a name="rdsdatacontrol-version"></a>RDS. Версия DataControl  
+## <a name="rdsdatacontrol-version"></a>Клиент. Версия элемента управления  
   
 ```vb
 Dim dc as New RDS.DataControl  
@@ -66,21 +66,21 @@ Dim rs as New ADODB.Recordset
 rs.CursorLocation = adUseClient  
 ```  
   
- Укажите либо [свойство обработчика (RDS)](../../../ado/reference/rds-api/handler-property-rds.md) свойство или ключевое слово; [свойство Provider (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) свойство или ключевое слово; и *CustomerById* и  *CustomerDatabase* идентификаторы. Затем откройте **записей** объекта  
+ Укажите свойство [обработчика (RDS)](../../../ado/reference/rds-api/handler-property-rds.md) или ключевое слово. Свойство [поставщика (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) или ключевое слово; и идентификаторы *кустомербид* и *кустомердатабасе* . Затем откройте объект **Recordset**  
   
- RS. Откройте «CustomerById(4)», «обработчик = MSDFMAP. Обработчик»; "и" _  
+ стандарт. Откройте "Кустомербид (4)", "handler = МСДФМАП. Обработчик; "& _  
   
 ```vb
 "Provider=MS Remote;Data Source=CustomerDatabase;" & _  
 "Remote Server=https://yourServer"  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Настройка раздела подключения файла](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [Настройка раздела SQL файла](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [Настройка раздела UserList файла](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
- [Настройка DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [Необходимые параметры клиентов](../../../ado/guide/remote-data-service/required-client-settings.md)   
+## <a name="see-also"></a>См. также:  
+ [Раздел "Подключение файла настройки"](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
+ [Раздел файла настройки SQL](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
+ [Раздел UserList файла настройки](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
+ [Настройка в отношении фактов](../../../ado/guide/remote-data-service/datafactory-customization.md)   
+ [Требуемые параметры клиента](../../../ado/guide/remote-data-service/required-client-settings.md)   
  [Общие сведения о файле настройки](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
- [Запись собственного настраиваемого обработчика](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
+ [Создание собственного настраиваемого обработчика](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
 

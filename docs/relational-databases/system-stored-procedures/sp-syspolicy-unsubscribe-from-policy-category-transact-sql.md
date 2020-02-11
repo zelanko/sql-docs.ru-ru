@@ -18,13 +18,13 @@ ms.assetid: 47abab63-e605-40e8-a54e-2241e2e01afd
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 63fa5b02e681309e36b0c42ec5b504d9f07228ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68035368"
 ---
-# <a name="spsyspolicyunsubscribefrompolicycategory-transact-sql"></a>sp_syspolicy_unsubscribe_from_policy_category (Transact-SQL)
+# <a name="sp_syspolicy_unsubscribe_from_policy_category-transact-sql"></a>sp_syspolicy_unsubscribe_from_policy_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Удаляет подписку на категорию политики для текущей базы данных.  
@@ -39,14 +39,14 @@ sp_syspolicy_unsubscribe_from_policy_category [ @policy_category = ] 'policy_cat
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @policy_category = ] 'policy_category'` — Имя подписки на категорию политики, необходимо будет удалить. *policy_category* — **sysname**и является обязательным.  
+`[ @policy_category = ] 'policy_category'`— Имя подписки на категорию политики, которую необходимо удалить. Аргумент *policy_category* имеет тип **sysname**и является обязательным.  
   
- Чтобы получить значения для *policy_category*, запросите системное представление msdb.dbo.syspolicy_policy_categories.  
+ Чтобы получить значения для *policy_category*, запросите системное представление msdb. dbo. syspolicy_policy_categories.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Процедура sp_syspolicy_unsubscribe_from_policy_category должна выполняться в контексте базы данных, из которой удаляется подписка на категорию политики.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -63,8 +63,8 @@ EXEC sys.sp_syspolicy_unsubscribe_from_policy_category @policy_category = N'Fina
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Хранимые процедуры управления на основе политик &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [процедура sp_syspolicy_subscribe_to_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-subscribe-to-policy-category-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Хранимые процедуры управления на основе политик &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+ [sp_syspolicy_subscribe_to_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-subscribe-to-policy-category-transact-sql.md)  
   
   

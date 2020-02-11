@@ -1,5 +1,5 @@
 ---
-title: Функции массового копирования | Документация Майкрософт
+title: Функции с массовым копированием | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2888f34c1e4c4103845d07e569a0dbabeb2e4caa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63225544"
 ---
 # <a name="bulk-copy-functions"></a>Bulk Copy Functions
@@ -65,10 +65,10 @@ ms.locfileid: "63225544"
   
 -   [bcp_setcolfmt](bcp-setcolfmt.md)  
   
--   [bcp_writefmt](bcp-writefmt.md)  
+-   [Функция bcp_writefmt](bcp-writefmt.md)  
   
-## <a name="see-also"></a>См. также  
- [Расширения драйвера SQL Server](../../database-engine/dev-guide/sql-server-driver-extensions.md)   
- [Выполнение операций массового копирования &#40;ODBC&#41;](../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
+## <a name="see-also"></a>См. также:  
+ [Расширения драйверов SQL Server](../../database-engine/dev-guide/sql-server-driver-extensions.md)   
+ [Выполнение операций с массовым копированием &#40;ODBC&#41;](../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
   

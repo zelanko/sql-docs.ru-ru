@@ -1,5 +1,5 @@
 ---
-title: Примеры IsolationLevel и Mode свойства (Visual C++) | Документация Майкрософт
+title: Пример свойств IsolationLevel и Mode (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 92ddec5d-e3dc-4e8e-997a-c5417cceab69
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fb39288499e2a78523ca29f2e1e4feff4ea9a310
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932310"
 ---
-# <a name="isolationlevel-and-mode-properties-example-vc"></a>Примеры IsolationLevel и Mode свойства (Visual C++)
-В этом примере используется [режим](../../../ado/reference/ado-api/mode-property-ado.md) свойства, чтобы открыть монопольное подключение и [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) свойства, чтобы открыть транзакцию, которая выполняется отдельно от других транзакций.  
+# <a name="isolationlevel-and-mode-properties-example-vc"></a>Пример свойств IsolationLevel и Mode (Visual c++)
+В этом примере свойство [mode](../../../ado/reference/ado-api/mode-property-ado.md) используется для открытия монопольного соединения, а свойство [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) — для открытия транзакции, которая выполняет изоляцию других транзакций.  
   
 ## <a name="example"></a>Пример  
   
@@ -223,26 +223,26 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **Монопольный режим подключения**  
-**Транзакция является изолированной**  
-**Руководство занят Executive его базы данных - бизнеса**  
-**Приготовления с компьютерами: Surreptitious бухгалтерском балансе - бизнеса**  
-**Можно борьбы с нагрузкой компьютера! -бизнеса**  
-**Рассказывают о компьютерах - бизнеса**  
-**Кремниевая Долина Gastronomic рассматривает - mod_cook**  
-**Микроволновой изысканной - mod_cook**  
-**Психологии кулинарных компьютера - РАССЫЛКУ**  
-**Но это понятное для пользователя? -popular_comp**  
-**Секреты Силиконовой долине - popular_comp**  
-**NET этикет - popular_comp**  
-**Компьютер Phobic и не боятся частных лиц: Изменений поведения - self_help**  
-**Является злоумышленником гнев? -self_help**  
-**Жизнь, не опасаясь - self_help**  
-**Deprivation длительного данных: Четыре конкретных примера - self_help**  
-**Эмоциональную безопасности: Новый алгоритм - self_help**  
-**Луковиц Ликс и чесночный: Приготовление секреты морская - trad_cook**  
-**50 лет в машины Palace Buckingham - trad_cook**  
-**Суши, любой пользователь? -trad_cook**   
-## <a name="see-also"></a>См. также  
- [Свойство IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)   
+ **Режим соединения является эксклюзивным**  
+**Транзакция изолирована**  
+**Руководство по базам данных, занятое руководителем — бизнес**  
+**Приготовление к компьютерам: Суррептитиаус балансовые листы — бизнес**  
+**Вы можете бороться с нагрузкой компьютера! — Бизнес**  
+**Прямой разговор о компьютерах — бизнес**  
+**Гастрономика Silicon впадин обрабатывает-mod_cook**  
+**Микроволновая печь Гаурмет-mod_cook**  
+**Психологии Computer кулинар — не принято**  
+**Но понятно ли это пользователю? — popular_comp**  
+**Секреты впадин Silicon-popular_comp**  
+**Сетевой этикет-popular_comp**  
+**Computer Фобик и другие пользователи: варианты поведения — self_help**  
+**Гнев ли врагов? — self_help**  
+**Жизнь, не опасаясь self_help**  
+**Деприватион данных с длительными примерами: четыре практических примера — self_help**  
+**Безопасность эмоциональном: новый алгоритм — self_help**  
+**Луковиц, ликс и чесночный: секреты кулинарных Средиземноморье-trad_cook**  
+**50 лет в Буккингхам Palace Китченс-trad_cook**  
+**Суши, кто угодно? — trad_cook**   
+## <a name="see-also"></a>См. также:  
+ [IsolationLevel, свойство](../../../ado/reference/ado-api/isolationlevel-property.md)   
  [Свойство Mode (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)

@@ -15,14 +15,14 @@ ms.assetid: e8ca40e8-459c-40e2-8dd3-3ec6d5ee7b51
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 486b76708354d4caf7e9efb2f73539b3eea9abf6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925032"
 ---
 # <a name="hybrid-commands"></a>Гибридные команды
-Гибридные команды являются частично параметризованные команды. Пример:  
+Гибридные команды являются частично параметризованными командами. Пример:  
   
 ```  
 SHAPE {select * from plants}   
@@ -31,9 +31,9 @@ SHAPE {select * from plants}
              PlantRegion TO CustomerRegion )   
 ```  
   
- Кэширования для гибридных команды происходит так же, как и для обычных параметризованные команды.  
+ Поведение кэширования для гибридной команды аналогично поведению обычных параметризованных команд.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример формирования данных](../../../ado/guide/data/data-shaping-example.md)   
- [Грамматика формального формирования данных](../../../ado/guide/data/formal-shape-grammar.md)   
+ [Грамматика формальной фигуры](../../../ado/guide/data/formal-shape-grammar.md)   
  [Общие сведения о командах формирования данных](../../../ado/guide/data/shape-commands-in-general.md)

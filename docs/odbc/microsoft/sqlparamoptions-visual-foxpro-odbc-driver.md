@@ -13,20 +13,20 @@ ms.assetid: 7f94a6e2-9c34-405c-b2b0-304d94269715
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1adbde1b3df38d2b602f1ec42a2c96f36e8bd67b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67996375"
 ---
 # <a name="sqlparamoptions-visual-foxpro-odbc-driver"></a>SQLParamOptions (драйвер ODBC для Visual FoxPro)
 > [!NOTE]  
->  Этот раздел содержит сведения Visual FoxPro ODBC-драйвером. Общие сведения об этой функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  В этом разделе содержатся сведения, относящиеся к драйверу ODBC для Visual FoxPro. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Поддержка: Полное  
+ Поддержка: полная  
   
- Соответствие API ODBC: уровне 1  
+ Соответствие API ODBC: уровень 1  
   
- Позволяет приложению указать несколько значений для набора параметров, назначенный [SQLBindParameter](../../odbc/microsoft/sqlbindparameter-visual-foxpro-odbc-driver.md). Возможность указать несколько значений для набора параметров полезно для массовой вставки и другие операции, необходимые для обработки той же инструкции SQL несколько раз с различными значениями параметров источника данных. Например, приложение может указать значения для набора параметров, связанных с **вставить** инструкции, а затем выполните **вставить** один раз для выполнения трех инструкции insert операции.  
+ Позволяет приложению указать несколько значений для набора параметров, назначенных [SQLBindParameter](../../odbc/microsoft/sqlbindparameter-visual-foxpro-odbc-driver.md). Возможность указывать несколько значений для набора параметров полезна при выполнении операций с массовыми вставками и другой работой, требующей, чтобы источник данных несколько раз обрабатывал одну и ту же инструкцию SQL с различными значениями параметров. Например, приложение может указать три набора значений для набора параметров, связанных с инструкцией **INSERT** , а затем выполнить инструкцию **INSERT** один раз для выполнения трех операций вставки.  
   
- Дополнительные сведения см. в разделе [SQLParamOptions](../../odbc/reference/syntax/sqlparamoptions-function.md) в *Справочник по программированию ODBC*.
+ Дополнительные сведения см. в разделе [SQLParamOptions](../../odbc/reference/syntax/sqlparamoptions-function.md) в *справочнике программиста по ODBC*.

@@ -1,5 +1,5 @@
 ---
-title: Массовое копирование результирующего набора SELECT (ODBC) | Документация Майкрософт
+title: Групповое копирование набора результатов SELECT (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,17 +15,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a90937eafc531612968ac4248b329ba7a0a47d83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63225528"
 ---
 # <a name="bulk-copy-a-select-result-set-odbc"></a>Выполнение массового копирования результирующего набора SELECT (ODBC)
   В данном образце показано, как осуществить массовое копирование результирующего набора инструкции SELECT с помощью функций массового копирования. Этот образец разработан для ODBC версии 3.0 или более поздней.  
   
 > [!IMPORTANT]  
->  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с помощью [API-интерфейса шифрования Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, следует зашифровать их с помощью [API шифрования Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-bulk-copy-out-the-result-set-of-a-select-statement"></a>Массовое копирование из результирующего набора инструкции SELECT  
   
@@ -35,24 +35,24 @@ ms.locfileid: "63225528"
   
 3.  Соединитесь с SQL Server.  
   
-4.  Вызовите [bcp_init](../../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) задать следующие сведения:  
+4.  Вызовите [bcp_init](../../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) , чтобы задать следующие сведения:  
   
-    -   Укажите значение NULL для *szTable* параметра.  
+    -   Укажите значение NULL для параметра *сзтабле* .  
   
     -   Имя файла данных, получающего данные результирующего набора.  
   
     -   Имя файла данных, в который сохраняются все сообщения об ошибках массового копирования (укажите значение NULL, если файл для сообщений не требуется).  
   
-    -   Направление копирования: ЗНАЧЕНИЕ DB_OUT.  
+    -   Направление копирования: DB_OUT.  
   
-5.  Вызовите [bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md), установите параметр eOption в BCPHINTS и поместите ivalue присвойте указатель на массив SQLTCHAR, содержащую инструкцию SELECT.  
+5.  Вызовите [bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md), установите EOPTION в bcphints а и поместите в iValue указатель на массив SQLTCHAR, содержащий инструкцию SELECT.  
   
-6.  Вызовите [bcp_exec](../../native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) для выполнения операции массового копирования.  
+6.  Вызовите [bcp_exec](../../native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) , чтобы выполнить операцию с массовым копированием.  
   
- При использовании этих шагов создается файл в собственном формате. Значения данных можно преобразовать в другие типы данных с помощью [bcp_colfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md). Дополнительные сведения см. в разделе [Создание файла форматирования массового копирования &#40;ODBC&#41;](create-a-bulk-copy-format-file-odbc.md).  
+ При использовании этих шагов создается файл в собственном формате. Значения данных можно преобразовать в другие типы данных с помощью [bcp_colfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md). Дополнительные сведения см. [в разделе Создание файла форматирования для копирования &#40;&#41;ODBC ](create-a-bulk-copy-format-file-odbc.md).  
   
 ## <a name="example"></a>Пример  
- Также необходим источник данных ODBC с именем AdventureWorks, для которого базой данных по умолчанию является образец базы данных AdventureWorks. (Образец базы данных AdventureWorks можно скачать с домашней страницы [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (Образцы кода и проекты сообщества Microsoft SQL Server).) Этот источник данных должен быть основан на драйвере ODBC, предоставленном операционной системой (имя драйвера — «SQL Server»). При построении и запуске этого образца как 32-разрядного приложения в 64-разрядной операционной системе необходимо создать источник данных ODBC с помощью программы администрирования ODBC (исполняемый файл %windir%\SysWOW64\odbcad32.exe).  
+ Также необходим источник данных ODBC с именем AdventureWorks, для которого базой данных по умолчанию является образец базы данных AdventureWorks. (Образец базы данных AdventureWorks можно скачать на домашней странице [Microsoft SQL Server примеры и проекты сообщества](https://go.microsoft.com/fwlink/?LinkID=85384) .) Этот источник данных должен быть основан на драйвере ODBC, предоставленном операционной системой (имя драйвера — "SQL Server"). При построении и запуске этого образца как 32-разрядного приложения в 64-разрядной операционной системе необходимо создать источник данных ODBC с помощью программы администрирования ODBC (исполняемый файл %windir%\SysWOW64\odbcad32.exe).  
   
  Этот образец соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. Чтобы соединиться с именованным экземпляром, измените определение источника данных ODBC, указав экземпляр в следующем формате: Сервер\ИменованныйЭкземпляр. По умолчанию [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] устанавливается на именованный экземпляр.  
   
@@ -162,7 +162,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Массовое копирование с помощью инструкции SQL Server ODBC драйвер &#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
+## <a name="see-also"></a>См. также:  
+ [Инструкции по групповому копированию с помощью драйвера ODBC SQL Server &#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
   
   

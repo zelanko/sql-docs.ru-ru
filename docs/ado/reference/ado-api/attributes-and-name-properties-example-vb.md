@@ -1,5 +1,5 @@
 ---
-title: Примеры Attributes и Name свойства (Visual Basic) | Документация Майкрософт
+title: Пример атрибутов и свойств имени (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 258bdce3-1819-44a2-9217-105879c789ef
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7b591da347e71b4dcb2df070df4368f825354f90
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920581"
 ---
 # <a name="attributes-and-name-properties-example-vb"></a>Примеры свойств Attributes и Name (Visual Basic)
-В этом примере отображается значение [атрибуты](../../../ado/reference/ado-api/attributes-property-ado.md) свойство для [подключения](../../../ado/reference/ado-api/connection-object-ado.md), [поле](../../../ado/reference/ado-api/field-object.md), и [свойство](../../../ado/reference/ado-api/property-object-ado.md) объектов. Она использует [имя](../../../ado/reference/ado-api/name-property-ado.md) свойство для отображения имени каждого **поле** и **свойство** объекта.  
+В этом примере отображается значение свойства [Attributes](../../../ado/reference/ado-api/attributes-property-ado.md) для объектов [соединения](../../../ado/reference/ado-api/connection-object-ado.md), [поля](../../../ado/reference/ado-api/field-object.md)и [Свойства](../../../ado/reference/ado-api/property-object-ado.md) . В нем используется свойство [Name](../../../ado/reference/ado-api/name-property-ado.md) для вывода имени каждого **поля** и объекта **Свойства** .  
   
 ```  
 ' BeginAttributesVB  
@@ -126,9 +126,9 @@ End Sub
 ' EndAttributesVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство Attributes (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)   
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Объект field](../../../ado/reference/ado-api/field-object.md)   
+ [Объект Field](../../../ado/reference/ado-api/field-object.md)   
  [Свойство Name (ADO)](../../../ado/reference/ado-api/name-property-ado.md)   
  [Объект Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)

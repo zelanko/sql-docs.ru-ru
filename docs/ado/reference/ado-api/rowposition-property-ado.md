@@ -1,5 +1,5 @@
 ---
-title: Свойство RowPosition (ADO) | Документация Майкрософт
+title: Свойство Ровпоситион (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -20,14 +20,14 @@ ms.assetid: 9d068fed-39bf-4842-afc3-686a2af2145d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a333a2be2728f3c0b412246b0a793dae64096ae5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931224"
 ---
 # <a name="rowposition-property-ado"></a>Свойство RowPosition (ADO)
-Возвращает или задает поставщика OLE DB **RowPosition** объектов или из **ADORecordsetConstruction** объекта. При использовании **put_RowPosition** присвоить **RowPosition** объект, полученный в результате **записей** объектов используют **RowPosition** объект Определите текущую строку.  
+Возвращает или задает OLE DB объект **ровпоситион** из или в объекте **адорекордсетконструктион** . При использовании **put_RowPosition** для задания объекта **ровпоситион** результирующий объект **набора записей** использует объект **ровпоситион** для определения текущей строки.  
   
  Read/write.  
   
@@ -39,17 +39,17 @@ HRESULT put_RowPosition([in] IUnknown* pRowPos);
 ```  
   
 ## <a name="parameters"></a>Параметры  
- *ppRowPos*  
- Указатель на OLE DB **RowPosition** объекта.  
+ *ппровпос*  
+ Указатель на объект OLE DB **ровпоситион** .  
   
- *PRowPos*  
- OLE DB **RowPosition** объекта.  
+ *провпос*  
+ Объект OLE DB **ровпоситион** .  
   
 ## <a name="return-values"></a>Возвращаемые значения  
- Этот метод свойство возвращает стандартные значения HRESULT, включая значение S_OK и значение E_FAIL.  
+ Этот метод свойства возвращает стандартные значения HRESULT, включая S_OK и E_FAIL.  
   
-## <a name="remarks"></a>Примечания  
- Если задано это свойство, если **набора строк** объект **RowPosition** объекта отличается от **набора строк** объект **записей**объекта, первое из них переопределяет последний. То же самое относится к текущему **глава** из **RowPosition** также.  
+## <a name="remarks"></a>Remarks  
+ Если это свойство задано, то если объект **набора строк** в объекте **ровпоситион** отличается от объекта набора **строк** в объекте **набора записей** , первый из них переопределяется последним. Такое же поведение применимо и к текущей **главе** **ровпоситион** .  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  [Интерфейс ADORecordsetConstruction](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)

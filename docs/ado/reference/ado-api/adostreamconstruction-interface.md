@@ -1,5 +1,5 @@
 ---
-title: Интерфейс ADOStreamConstruction | Документация Майкрософт
+title: Интерфейс Адостреамконструктион | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,20 +16,20 @@ ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 70a6dd02722a34159b345a83b32897aa8c38d0ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920785"
 ---
 # <a name="adostreamconstruction-interface"></a>Интерфейс ADOStreamConstruction
-**ADOStreamConstruction** интерфейс используется для создания ADO **Stream** объект из OLE DB **IStream** объекта в приложении C/C++.  
+Интерфейс **адостреамконструктион** используется для создания объекта **потока** ADO из OLE DB объекта **IStream** в приложении C/C++.  
   
 ## <a name="properties"></a>Свойства  
   
 |||  
 |-|-|  
-|[Свойство Stream](../../../ado/reference/ado-api/stream-property.md)|Чтение и запись. Получает или задает поставщика OLE DB **Stream** объекта.|  
+|[Свойство Stream](../../../ado/reference/ado-api/stream-property.md)|Чтение и запись. Возвращает или задает объект OLE DB **потока** .|  
   
 ## <a name="methods"></a>Методы  
  Нет.  
@@ -37,17 +37,17 @@ ms.locfileid: "67920785"
 ## <a name="events"></a>События  
  Нет.  
   
-## <a name="remarks"></a>Примечания  
- Учитывая OLE DB **IStream** объекта (`pStream`), конструирование объекта ADO **Stream** объекта (`adoStr`) равносильно следующие три основные операции:  
+## <a name="remarks"></a>Remarks  
+ При наличии объекта OLE DB **IStream** (`pStream`) построение объекта **потока** ADO (`adoStr`) производится в следующие три основные операции:  
   
-1.  Создайте объект ADO **Stream** объекта:  
+1.  Создайте объект **потока** ADO:  
   
     ```  
     Stream20Ptr adoStr;  
     adoStr.CreateInstance(__uuidof(Stream));  
     ```  
   
-2.  Запрос **IADOStreamConstruction** интерфейс **Stream** объекта:  
+2.  Запросите интерфейс **иадостреамконструктион** в объекте **потока** :  
   
     ```  
     adoStreamConstructionPtr adoStrConstruct=NULL;  
@@ -55,7 +55,7 @@ ms.locfileid: "67920785"
                          (void**)&adoStrConstruct);  
     ```  
   
- Вызовите `IADOStreamConstruction::get_Stream` метод свойство для задания OLE DB **IStream** объекта ADO **Stream** объекта:  
+ Вызовите `IADOStreamConstruction::get_Stream` метод Property, чтобы задать OLE DB объект **IStream** в объекте **потока** ADO:  
   
 ```  
 IUnknown *pUnk=NULL;  
@@ -63,14 +63,14 @@ pRowset->QueryInterface(IID_IUnknown, (void**)&pUnk);
 adoStrConstruct->put_Stream(pUnk);  
 ```  
   
- Полученный `adoStr` теперь представляет объект ADO **Stream** объект, созданный из OLE DB **IStream** объекта.  
+ Результирующий `adoStr` объект теперь представляет объект **потока** ADO, созданный из OLE DB объекта **IStream** .  
   
 ## <a name="requirements"></a>Требования  
- **Версия:** ADO 2.0 или более поздней версии  
+ **Версия:** ADO 2,0 или более поздняя версия  
   
- **Библиотека:** msado15.dll  
+ **Библиотека:** Msado15. dll  
   
  **UUID:** 00000283-0000-0010-8000-00AA006D2EA4  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по API ADO](../../../ado/reference/ado-api/ado-api-reference.md)

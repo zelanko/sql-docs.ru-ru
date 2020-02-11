@@ -1,5 +1,5 @@
 ---
-title: sys.sp_xtp_bind_db_resource_pool (Transact-SQL) | Документация Майкрософт
+title: sys. sp_xtp_bind_db_resource_pool (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/03/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ ms.assetid: c2a78073-626b-4159-996e-1808f6bfb6d2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: af0e10f23d376c96fd7be0a75cf713dd76a2c149
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68041008"
 ---
-# <a name="sysspxtpbinddbresourcepool-transact-sql"></a>sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
+# <a name="syssp_xtp_bind_db_resource_pool-transact-sql"></a>sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   Привязывает указанную базу данных служб [!INCLUDE[hek_2](../../includes/hek-2-md.md)] к указанному пулу ресурсов. И база данных, и пул ресурсов должны существовать до выполнения `sys.sp_xtp_bind_db_resource_pool`.  
@@ -57,16 +57,16 @@ sys.sp_xtp_bind_db_resource_pool 'database_name', 'resource_pool_name'
   
  **База данных не существует**  
  Database_name должен ссылаться на существующую базу данных. Если база данных с указанным идентификатором не существует, возвращается следующее сообщение:   
-*Базы данных с Идентификатором %d не существует.  Используйте допустимый идентификатор базы данных для этой привязки.*  
+*Идентификатор базы данных% d не существует.  Используйте допустимый идентификатор базы данных для этой привязки.*  
   
 ```  
 Msg 911, Level 16, State 18, Procedure sp_xtp_bind_db_resource_pool_internal, Line 51  
 Database 'Hekaton_DB213' does not exist. Make sure that the name is entered correctly.  
 ```  
   
-**База данных является системной базы данных**  
+**База данных является системной.**  
  Таблицы[!INCLUDE[hek_2](../../includes/hek-2-md.md)] нельзя создать в системных базах данных.  Таким образом, не допускается создание привязки памяти [!INCLUDE[hek_2](../../includes/hek-2-md.md)] для такой базы данных.  Возвращается следующая ошибка:  
-*Database_name %s ссылается на системную базу данных.  Пулы ресурсов могут быть привязаны только к пользовательской базе данных.*  
+*Database_name% s ссылается на системную базу данных.  Пулы ресурсов могут быть привязаны только к пользовательской базе данных.*  
   
 ```  
 Msg 41371, Level 16, State 1, Procedure sp_xtp_bind_db_resource_pool_internal, Line 51  
@@ -75,7 +75,7 @@ Binding to a resource pool is not supported for system database 'master'. This o
   
 **Пул ресурсов не существует**  
  Пул ресурсов, определяемый resource_pool_name, должен существовать до выполнения `sp_xtp_bind_db_resource_pool`.  Если пул с указанным идентификатором не существует, возвращается следующая ошибка:  
-*Пул ресурсов %s не существует.  Введите допустимое имя пула ресурсов.*  
+*Пул ресурсов% s не существует.  Укажите допустимое имя пула ресурсов.*  
   
 ```  
 Msg 41370, Level 16, State 1, Procedure sp_xtp_bind_db_resource_pool_internal, Line 51  
@@ -83,17 +83,17 @@ Resource pool 'Pool_Hekaton' does not exist or resource governor has not been re
 ```  
   
 **Pool_name ссылается на зарезервированный системный пул**  
- Имена пулов «INTERNAL» и «DEFAULT» зарезервированы для системных пулов.  Явная привязка базы данных к одному из этих пулов недопустима.  Если введено имя системного пула, то возвращается следующая ошибка:  
-*Пул ресурсов %s является системным.  Системные пулы ресурсов не может явно привязан к базе данных с помощью этой процедуры.*  
+ Имена пулов "INTERNAL" и "DEFAULT" зарезервированы для системных пулов.  Явная привязка базы данных к одному из этих пулов недопустима.  Если введено имя системного пула, то возвращается следующая ошибка:  
+*Пул ресурсов% s является пулом системных ресурсов.  Пулы системных ресурсов не могут быть явно привязаны к базе данных с помощью этой процедуры.*  
   
 ```  
 Msg 41373, Level 16, State 1, Procedure sp_xtp_bind_db_resource_pool_internal, Line 51  
 Database 'Hekaton_DB' cannot be explicitly bound to the resource pool 'internal'. A database can only be bound only to a user resource pool.  
 ```  
   
-**База данных уже привязана к другому пулу ресурсов**  
- База данных может быть привязана только к одному пулу ресурсов в любой момент времени. Привязки баз данных к пулам ресурсов необходимо явно удалить перед тем, как они могут быть привязаны к другому пулу. См. в разделе [sys.sp_xtp_unbind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md).  
-*База данных %s уже привязана к пулу ресурсов %s.  Необходимо отменить привязку перед созданием новой привязки.*  
+**База данных уже привязаны к другому пулу ресурсов**  
+ База данных может быть привязана только к одному пулу ресурсов в любой момент времени. Привязки баз данных к пулам ресурсов необходимо явно удалить перед тем, как они могут быть привязаны к другому пулу. См. раздел [sys. sp_xtp_unbind_db_resource_pool &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md).  
+*База данных% s уже привязана к пулу ресурсов% s.  Для создания новой привязки необходимо отменить привязку.*  
   
 ```  
 Msg 41372, Level 16, State 1, Procedure sp_xtp_bind_db_resource_pool_internal, Line 54  
@@ -104,7 +104,7 @@ Database 'Hekaton_DB' is currently bound to a resource pool. A database must be 
   
 **Привязка успешно выполнена**  
  При успешном выполнении функция возвращает следующее сообщение об успешном выполнении, которое регистрируется в SQL ERRORLOG  
-*Привязка ресурсов успешно создан между базы данных с Идентификатором %d и пулом ресурсов с Идентификатором %d.*  
+*Привязка ресурсов была успешно создана между базой данных с идентификатором %d и пулом ресурсов с идентификатором %d.*  
   
 ## <a name="examples"></a>Примеры  
 A.  В следующем примере кода выполняется привязка базы данных Hekaton_DB с пулом ресурсов Pool_Hekaton.  
@@ -115,7 +115,7 @@ sys.sp_xtp_bind_db_resource_pool N'Hekaton_DB', N'Pool_Hekaton'
  
  Привязка вступит в силу при следующем переводе базы данных в режим «в сети».  
  
- Б. Расширенный пример выше пример, включающий некоторые основные проверки.  Выполните указанные ниже команды [!INCLUDE[tsql](../../includes/tsql-md.md)] в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]\:
+ Б. Расширенный пример приведенного выше примера, который включает некоторые основные проверки.  Выполните следующую [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкцию в[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]\:
  
 ```sql
 DECLARE @resourcePool sysname = N'Pool_Hekaton';
@@ -151,8 +151,8 @@ END
   
 -   Необходимо разрешение CONTROL SERVER.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Привязка базы данных с таблицами, оптимизированными для памяти, к пулу ресурсов](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
- [sys.sp_xtp_unbind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)  
+ [sys. sp_xtp_unbind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)  
   
   

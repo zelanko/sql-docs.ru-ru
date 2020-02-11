@@ -1,5 +1,5 @@
 ---
-title: Пример свойства ActiveCommand (Visual C++) | Документация Майкрософт
+title: Пример свойства ActiveCommand (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,16 +15,16 @@ ms.assetid: 8269ea29-912a-4d20-9360-f48b3746081f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e8d189646cc421eb05d9f49d2da08dfe39d9cb34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921636"
 ---
 # <a name="activecommand-property-example-vc"></a>Пример свойства ActiveCommand (Visual C++)
-В этом примере показано [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) свойство.  
+В этом примере демонстрируется свойство [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) .  
   
- Предоставляется процедура [записей](../../../ado/reference/ado-api/recordset-object-ado.md) которого **ActiveCommand** свойство используется для отображения текста команды и параметр, который создан **записей**.  
+ Подподпрограмме присваивается объект [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) , свойство **ActiveCommand** которого используется для вывода текста команды и параметра, создавшего **набор записей**.  
   
 ## <a name="example"></a>Пример  
   
@@ -206,13 +206,13 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="sample-input"></a>Входные данные выборки  
+## <a name="sample-input"></a>Пример ввода  
   
 ```  
 Ringer  
 ```  
   
-## <a name="sample-output"></a>Образец вывода  
+## <a name="sample-output"></a>Пример вывода  
   
 ```  
 Command text = 'SELECT * FROM authors WHERE au_lname = ?'  
@@ -220,6 +220,6 @@ Parameter = 'Ringer'
 Name = 'Anne  Ringer'  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Пример свойства ActiveCommand (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
+## <a name="see-also"></a>См. также:  
+ [Свойство ActiveCommand (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

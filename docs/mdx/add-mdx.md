@@ -1,5 +1,5 @@
 ---
-title: + (Добавить) (МНОГОМЕРНЫЕ ВЫРАЖЕНИЯ) | Документация Майкрософт
+title: + Включить (МНОГОМЕРНЫЕ ВЫРАЖЕНИЯ) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 9cb5ddf37104c0de00e17bdec5946d9b39d60020
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68017210"
 ---
 # <a name="-add-mdx"></a>+ (сложение) (многомерные выражения)
@@ -34,10 +34,10 @@ Numeric_Expression + Numeric_Expression
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение с типом данных параметра, имеющего более высокий приоритет.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Оба выражения должны иметь одинаковый тип данных, или одно из выражений должно допускать неявное преобразование к типу данных другого выражения. Если результатом вычисления одного выражения является значение NULL, оператор возвращает результат вычисления другого выражения.  
   
-## <a name="see-also"></a>См. также  
- [Справочник по операторам многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>См. также:  
+ [Справочник по операторам многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-operator-reference-mdx.md)  
   
   

@@ -18,19 +18,19 @@ ms.assetid: e8a21642-8440-419a-8585-93d3d9d44f00
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 1711ec3941a5fced5ef9e0c32808d6153b673e2b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68030918"
 ---
-# <a name="spaddrole-transact-sql"></a>sp_addrole (Transact-SQL)
+# <a name="sp_addrole-transact-sql"></a>sp_addrole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Создает новую роль базы данных в текущей базе данных.  
   
 > [!IMPORTANT]
->  **sp_addrole** включен для обеспечения совместимости с более ранними версиями [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и могут не поддерживаться в будущих выпусках. Используйте [CREATE ROLE](../../t-sql/statements/create-role-transact-sql.md) вместо этого.  
+>  **sp_addrole** входит в совместимость с предыдущими версиями [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и может не поддерживаться в будущем выпуске. Вместо этого используйте [CREATE ROLE](../../t-sql/statements/create-role-transact-sql.md) .  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,25 +42,25 @@ sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @rolename = ] 'role'` — Имя новой роли базы данных. *роль* — **sysname**, не имеет значения по умолчанию. *роль* должен быть допустимым идентификатором (ID) и не должен существовать в текущей базе данных.  
+`[ @rolename = ] 'role'`Имя новой роли базы данных. *Role* имеет тип **sysname**и не имеет значения по умолчанию. *роль* должна быть допустимым идентификатором (ID) и не должна существовать в текущей базе данных.  
   
-`[ @ownername = ] 'owner'` Является владельцем новой роли базы данных. *владелец* — **sysname**, значение по умолчанию текущий пользователь. *владелец* должен быть пользователем базы данных или роли базы данных в текущей базе данных.  
+`[ @ownername = ] 'owner'`Владелец новой роли базы данных. *owner* имеет тип **sysname**и значение по умолчанию текущего выполняемого пользователя. *владелец* должен быть пользователем базы данных или ролью базы данных в текущей базе данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или 1 (неуспешное завершение)  
+ 0 (успех) или 1 (сбой).  
   
-## <a name="remarks"></a>Примечания  
- Имена ролей базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут содержать от 1 до 128 символов, включая буквы, символы и цифры. Имена ролей базы данных не могут: содержать символ обратной косой черты (\\), иметь значение NULL, или пустая строка ( **''** ).  
+## <a name="remarks"></a>Remarks  
+ Имена ролей базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут содержать от 1 до 128 символов, включая буквы, символы и цифры. Имена ролей базы данных не могут: содержать обратную косую\\черту (), иметь значение null или пустую строку (**""**).  
   
- После добавления роли базы данных, используйте [sp_addrolemember &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) Добавление участников к роли. При использовании инструкций GRANT, DENY или REVOKE для назначения разрешений роли базы данных члены данной роли наследуют эти разрешения, как если бы они были применены напрямую к их учетным записям.  
+ После добавления роли базы данных используйте [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) , чтобы добавить участников в роль. При использовании инструкций GRANT, DENY или REVOKE для назначения разрешений роли базы данных члены данной роли наследуют эти разрешения, как если бы они были применены напрямую к их учетным записям.  
   
 > [!NOTE]  
 >  Новые роли сервера создавать нельзя. Роли можно создавать только на уровне базы данных.  
   
- **sp_addrole** нельзя использовать внутри пользовательской транзакции.  
+ **sp_addrole** нельзя использовать внутри определяемой пользователем транзакции.  
   
 ## <a name="permissions"></a>Разрешения  
- Необходимо наличие разрешения CREATE ROLE в базе данных. При создании схемы необходимо наличие разрешения CREATE SCHEMA в этой базе данных. Если *владельца* указан как пользователь или группа, требует разрешения IMPERSONATE на этого пользователя или группы. Если *владельца* указан как роль, необходимо разрешение ALTER для этой роли или члена этой роли. Если владелец указан как роль приложения, то для этой роли приложения необходимо разрешение ALTER.  
+ Необходимо наличие разрешения CREATE ROLE в базе данных. При создании схемы необходимо наличие разрешения CREATE SCHEMA в этой базе данных. Если *владелец* указан как пользователь или группа, необходимо выполнить олицетворение для этого пользователя или группы. Если *владелец* указан как роль, необходимо разрешение ALTER на эту роль или член этой роли. Если владелец указан как роль приложения, то для этой роли приложения необходимо разрешение ALTER.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере в текущую базу данных добавляется новая роль с именем `Managers`.  
@@ -69,9 +69,9 @@ sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]
 EXEC sp_addrole 'Managers';  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Хранимые процедуры безопасности (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Создание роли &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)  
   
   

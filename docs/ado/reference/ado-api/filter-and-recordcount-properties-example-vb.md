@@ -1,5 +1,5 @@
 ---
-title: Filter и RecordCount свойства (Visual Basic) | Документация Майкрософт
+title: Пример свойств Filter и RecordCount (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: e8bc63c7-8967-438a-9a49-512478a87a15
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6f94440d9ddd0d0b5091f2a106f603397147ebda
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918642"
 ---
 # <a name="filter-and-recordcount-properties-example-vb"></a>Примеры свойств Filter и RecordCount (Visual Basic)
-В этом примере откройте [записей](../../../ado/reference/ado-api/recordset-object-ado.md) в таблице издателей в ***Pubs*** базы данных. Затем он использует [фильтра](../../../ado/reference/ado-api/filter-property.md) свойство, чтобы ограничить количество видимых записей на этих издателях, в определенной страны или региона. **RecordCount** свойство используется для отображения разницу между отфильтрованные и неотфильтрованные наборы записей.  
+Этот пример открывает [набор записей](../../../ado/reference/ado-api/recordset-object-ado.md) в таблице Publishers базы данных ***pubs*** . Затем используется свойство [Filter](../../../ado/reference/ado-api/filter-property.md) , чтобы ограничить количество видимых записей для издателей в определенной стране или регионе. Свойство **RecordCount** используется для отображения разницы между отфильтрованными и неотфильтрованными наборами записей.  
   
 ```  
 'BeginFilterVB  
@@ -108,13 +108,13 @@ End Sub
 ```  
   
 > [!NOTE]
->  Когда вы знаете, вы хотите выбрать данные, это обычно более эффективно, чтобы открыть **записей** с помощью инструкции SQL. В этом примере показано, как можно создать только один **записей** и получение записей из определенной страны.  
+>  Если вы знакомы с данными, которые необходимо выбрать, обычно более эффективно открывать **набор записей** с помощью инструкции SQL. В этом примере показано, как можно создать только один **набор записей** и получить записи из определенной страны.  
   
 ```  
 Attribute VB_Name = "Filter"  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Свойство фильтра](../../../ado/reference/ado-api/filter-property.md)   
+## <a name="see-also"></a>См. также:  
+ [Свойство Filter](../../../ado/reference/ado-api/filter-property.md)   
  [Свойство RecordCount (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

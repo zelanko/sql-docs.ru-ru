@@ -1,5 +1,5 @@
 ---
-title: Открытие и закрытие примеры методов (Visual Basic) | Документация Майкрософт
+title: Примеры методов Open и Close (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 1311d561-0e86-40f5-8cbc-ad8f13e626d1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1a37568f6bf4435d762d62c0475abb7d0fb8065a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917985"
 ---
 # <a name="open-and-close-methods-example-vb"></a>Примеры методов Open и Close (Visual Basic)
-В этом примере используется **откройте** и [закрыть](../../../ado/reference/ado-api/close-method-ado.md) методы на обоих [записей](../../../ado/reference/ado-api/recordset-object-ado.md) и [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекты, которые были открыты.  
+В этом примере используются методы **Open** и [Close](../../../ado/reference/ado-api/close-method-ado.md) как для [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) , так и для объектов [соединения](../../../ado/reference/ado-api/connection-object-ado.md) , которые были открыты.  
   
 ```  
 'BeginOpenVB  
@@ -101,9 +101,9 @@ End Sub
 'EndOpenVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод Close (ADO)](../../../ado/reference/ado-api/close-method-ado.md)   
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Метод Open (объект Connection ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
- [Метод Open (объект Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
+ [Метод Open (подключение ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
+ [Метод Open (набор записей ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

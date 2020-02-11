@@ -1,5 +1,5 @@
 ---
-title: Вы выполняете обновление с версии SQL Server 2005? | Документация Майкрософт
+title: Вы выполняете обновление с версии SQL Server 2005? | Документация Майкрософт
 ms.custom: ''
 ms.date: 12/15/2019
 ms.prod: sql-server-2014
@@ -10,17 +10,17 @@ ms.assetid: 3d50a66a-1845-4116-8b3a-7b5a2eeb78e6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1d5e44dac2201953858f06d834b1831aa1a22fe3
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 2db6a47de02b49397847dc9d713277ffcb152156
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75247281"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "75656581"
 ---
-# <a name="are-you-upgrading-from-sql-server-2005"></a>Вы выполняете обновление с версии SQL Server 2005?
+# <a name="are-you-upgrading-from-sql-server-2005"></a>Вы выполняете обновление с версии SQL Server 2005?
   Окончание расширенной поддержки для SQL Server 2005 — еще одна причина выполнить обновление до более новой версии SQL Server и базы данных SQL Azure. Обновление позволяет обеспечить безопасность и соответствие требованиям, достичь высокой производительности и оптимизировать инфраструктуру платформы данных.  
   
- Дополнительные сведения, руководство и средства для планирования и автоматизации обновления или миграции см. в разделе [Прекращение поддержки SQL Server 2005](https://www.microsoft.com/server-cloud/products/sql-server-2005/).  
+ Дополнительные сведения, руководство и средства для планирования и автоматизации обновления или миграции см. в разделе [Прекращение поддержки SQL Server 2005](https://www.microsoft.com/sql-server/sql-server-2005).  
   
 ## <a name="why-upgrade"></a>Причины, по которым стоит установить обновление  
   
@@ -74,14 +74,14 @@ ms.locfileid: "75247281"
   
     -   Чтобы получить подробное "Техническое руководство по обновлению" в формате PDF, [щелкните здесь](https://download.microsoft.com/download/7/1/5/715BDFA7-51B6-4D7B-AF17-61E78C7E538F/SQL_Server_2014_Upgrade_technical_guide.pdf).  
   
--   Дополнительные сведения, руководство и средства для планирования и автоматизации обновления или миграции см. в разделе [Прекращение поддержки SQL Server 2005](https://www.microsoft.com/server-cloud/products/sql-server-2005/).  
+-   Дополнительные сведения, руководство и средства для планирования и автоматизации обновления или миграции см. в разделе [Прекращение поддержки SQL Server 2005](https://www.microsoft.com/sql-server/sql-server-2005).  
   
 ## <a name="get-sql-server-2014"></a>Получить SQL Server 2014  
  Чтобы скачать ознакомительную копию SQL Server 2014, [щелкните здесь](https://www.microsoft.com/evalcenter/evaluate-sql-server-2014).  
   
-## <a name="see-also"></a>См. также  
- [SQL Server 2014](https://www.microsoft.com/server-cloud/products/sql-server/default.aspx)   
- [SQL Server 2005. Окончание поддержки](https://www.microsoft.com/server-cloud/products/sql-server-2005/)   
+## <a name="see-also"></a>См. также:  
+ [SQL Server 2014](https://docs.microsoft.com/sql/getting-started/getting-started-sql-server-2014)   
+ [SQL Server 2005. Окончание поддержки](https://www.microsoft.com/sql-server/sql-server-2005)   
  [Обновление с SQL Server 2005 до SQL Server 2016](https://msdn.microsoft.com/library/mt168847.aspx)  
   
   

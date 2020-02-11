@@ -1,5 +1,5 @@
 ---
-title: ЗНАЧЕНИЕ SQL_NO_DATA | Документация Майкрософт
+title: SQL_NO_DATA | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,11 +17,11 @@ ms.assetid: 07a4144a-a548-4578-b2be-715c3cf73bf8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1f899e7a034e1ec5fc967d834caad3a4ccc4caa1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68041834"
 ---
-# <a name="sqlnodata"></a>SQL_NO_DATA
-Когда ODBC 3. *x* приложение вызывает **SQLExecDirect**, **SQLExecute**, или **SQLParamData** в ODBC 2. *x* драйвер выполнить поисковое обновление или удалить инструкцию, которая не влияет на все строки в источнике данных, драйвер должен возвращать значение SQL_SUCCESS, а не значение SQL_NO_DATA. Когда ODBC 2. *x* или ODBC 3. *x* приложение, которое работает с ODBC 3. *x* драйвер вызывает **SQLExecDirect**, **SQLExecute**, или **SQLParamData** с тем же ODBC 3. *x* драйвер вернет значение SQL_NO_DATA.
+# <a name="sql_no_data"></a>SQL_NO_DATA
+При использовании ODBC 3. Приложение *x* вызывает **SQLExecDirect**, **SQLExecute**или **метод SQLParamData** в ODBC 2. драйвер *x* для выполнения инструкции UPDATE или DELETE, которая не влияет на строки в источнике данных, драйвер должен возвращать SQL_SUCCESS, а не SQL_NO_DATA. При использовании ODBC 2. *x* или ODBC 3. Приложение *x* , работающее с ODBC 3. драйвер *x* вызывает **SQLExecDirect**, **SQLExecute**или **метод SQLParamData** с одним и тем же результатом, ODBC 3. драйвер *x* должен возвращать SQL_NO_DATA.

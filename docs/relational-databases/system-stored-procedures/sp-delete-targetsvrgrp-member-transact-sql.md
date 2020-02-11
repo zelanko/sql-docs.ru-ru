@@ -18,13 +18,13 @@ ms.assetid: 178a38d9-9b19-4648-95d7-e1397110d14c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: dcf3788480a6e3dbb3bde20ef3f9e6a43269c9e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68026728"
 ---
-# <a name="spdeletetargetsvrgrpmember-transact-sql"></a>sp_delete_targetsvrgrp_member (Transact-SQL)
+# <a name="sp_delete_targetsvrgrp_member-transact-sql"></a>sp_delete_targetsvrgrp_member (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Удаляет целевой сервер из группы целевых серверов.  
@@ -39,18 +39,18 @@ sp_delete_targetsvrgrp_member [ @group_name = ] 'group_name' , [ server_name = ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @group_name = ] 'group_name'` Имя группы. *имя_группы* — **sysname**, не имеет значения по умолчанию.  
+`[ @group_name = ] 'group_name'`Имя группы. Аргумент *group_name* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @server_name = ] 'server_name'` Имя сервера для удаления из указанной группы. *имя_сервера* — **nvarchar(30)** , не имеет значения по умолчанию.  
+`[ @server_name = ] 'server_name'`Имя сервера, удаляемого из указанной группы. *server_name* имеет тип **nvarchar (30)** и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  None  
   
 ## <a name="permissions"></a>Разрешения  
- Чтобы выполнить эту хранимую процедуру, пользователям необходимо предоставить **sysadmin** предопределенной роли сервера.  
+ Для выполнения этой хранимой процедуры пользователям должна быть предоставлена предопределенная роль сервера **sysadmin** .  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере сервер `LONDON1` удаляется из группы «Servers Maintaining Customer Information».  
@@ -65,8 +65,8 @@ EXEC sp_delete_targetsvrgrp_member
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_add_targetsvrgrp_member &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-targetsvrgrp-member-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

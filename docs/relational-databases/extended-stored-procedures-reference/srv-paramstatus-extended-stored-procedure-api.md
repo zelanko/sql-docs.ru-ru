@@ -20,17 +20,17 @@ ms.assetid: 86cecd45-0b09-42e9-8152-32a12a1c2b7a
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9898dbde804b0c4615a5dc4ad6b8fefa79000ccb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68005571"
 ---
 # <a name="srv_paramstatus-extended-stored-procedure-api"></a>srv_paramstatus (API-интерфейс расширенных хранимых процедур)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Используйте вместо этого интеграцию со средой CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Вместо этого используйте интеграцию со средой CLR.  
   
  Возвращает состояние параметра вызова определенной хранимой процедуры.  
   
@@ -51,11 +51,11 @@ n
  *srvproc*  
  Указатель на структуру SRV_PROC, представляющую собой дескриптор соединения с клиентом (в данном случае — дескриптор, который получил вызов удаленной хранимой процедуры). Эта структура содержит сведения, которые используются библиотекой API-интерфейса расширенных хранимых процедур для управления связью и передачи данных между приложением и клиентом.  
   
- *n*  
+ *\n*  
  Указывает номер параметра. Первый параметр имеет номер 1.  
   
 ## <a name="returns"></a>Возвращает  
- Целое число **int** , содержащее флаги состояния параметра. На этот момент существует только один флаг. Если биту 0 задано значение 1, этот параметр является возвращаемым. Если отсутствует *n*-й параметр или удаленная хранимая процедура, то возвращается значение -1.  
+ Целое число **int** , содержащее флаги состояния параметра. В данный момент существует только один флаг. Если биту 0 задано значение 1, этот параметр является возвращаемым параметром. Если отсутствует *n*-й параметр или удаленная хранимая процедура, то возвращается значение -1.  
   
 ## <a name="remarks"></a>Remarks  
  Эта процедура возвращает флаги состояния для параметра вызова удаленной хранимой процедуры.  
@@ -70,6 +70,6 @@ n
 >  Необходимо тщательно просмотреть исходный код расширенных хранимых процедур и проверить скомпилированные библиотеки DLL перед их установкой на рабочий сервер. Сведения о проверке безопасности см. на следующем [веб-сайте Майкрософт](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
 ## <a name="see-also"></a>См. также:  
- [srv_rpcparams (интерфейс API расширенных хранимых процедур)](../../relational-databases/extended-stored-procedures-reference/srv-rpcparams-extended-stored-procedure-api.md)  
+ [API srv_rpcparams &#40;расширенных хранимых процедур&#41;](../../relational-databases/extended-stored-procedures-reference/srv-rpcparams-extended-stored-procedure-api.md)  
   
   

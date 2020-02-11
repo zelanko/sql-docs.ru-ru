@@ -1,5 +1,5 @@
 ---
-title: Пример метода (Visual Basic) Move | Документация Майкрософт
+title: Пример метода Move (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 55eb797a-0205-40d2-a797-55b216d1d3bb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 258f915b560bf7da9110909ada0f015fdc36af63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932120"
 ---
 # <a name="move-method-example-vb"></a>Пример метода Move (Visual Basic)
-В этом примере используется [переместить](../../../ado/reference/ado-api/move-method-ado.md) метод для записи указателя на основе ввода пользователя.  
+В этом примере метод [Move](../../../ado/reference/ado-api/move-method-ado.md) используется для позиционирования указателя записи на основе вводимых пользователем данных.  
   
 ```  
 'BeginMoveVB  
@@ -126,6 +126,6 @@ End Sub
 'EndMoveVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод Move (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

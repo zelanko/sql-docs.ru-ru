@@ -1,5 +1,5 @@
 ---
-title: Provider и Defaultdatabase свойства (Visual C++) | Документация Майкрософт
+title: Пример свойств provider и DefaultDatabase (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: d9868c99-425a-4b10-af67-1929ed513fda
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 20226c4c9c8d25541cee7fac786b85af5c12859f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931488"
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vc"></a>Примеры свойств Provider и DefaultDatabase (Visual C++)
-В этом примере показано [поставщика](../../../ado/reference/ado-api/provider-property-ado.md) свойство, открыв три [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объектов с помощью разных поставщиков. Он также использует [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) свойство, чтобы задать базу данных по умолчанию для поставщика Microsoft ODBC.  
+В этом примере демонстрируется свойство [provider](../../../ado/reference/ado-api/provider-property-ado.md) путем открытия трех объектов [соединения](../../../ado/reference/ado-api/connection-object-ado.md) с помощью разных поставщиков. Он также использует свойство [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) , чтобы задать базу данных по умолчанию для поставщика Microsoft ODBC.  
   
 ```  
 // Provider_and_DefaultDatabase_Properties.cpp  
@@ -133,7 +133,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Свойство DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)   
+ [DefaultDatabase, свойство](../../../ado/reference/ado-api/defaultdatabase-property.md)   
  [Свойство Provider (ADO)](../../../ado/reference/ado-api/provider-property-ado.md)
