@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f75298a4701f15a1fc0f3f471bf7628f4a7030c1
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782651"
 ---
 # <a name="analysis-services-powershell"></a>Analysis Services PowerShell
@@ -28,14 +28,14 @@ ms.locfileid: "72782651"
   
 -   Командлеты для отдельных задач, выполняющие типовые операции, в частности, обработку, управление ролями, управление секциями, резервное копирование и восстановление.  
   
-## <a name="in-this-article"></a>В этой статье  
+## <a name="in-this-article"></a>Содержание  
  [Предварительные требования](#bkmk_prereq)  
   
- [Поддерживаемые версии и режимы Analysis Services](#bkmk_vers)  
+ [Поддерживаемые версии и режимы служб Analysis Services](#bkmk_vers)  
   
- [Требования к проверке подлинности и вопросы безопасности](#bkmk_auth)  
+ [Требования проверки подлинности и соображения безопасности](#bkmk_auth)  
   
- [Analysis Services задач PowerShell](#bkmk_tasks)  
+ [Задачи Analysis Services PowerShell](#bkmk_tasks)  
 
 Дополнительные сведения о синтаксисе и примерах см. в [справочнике по Analysis Services PowerShell](/sql/analysis-services/powershell/analysis-services-powershell-reference).
 
@@ -46,11 +46,11 @@ ms.locfileid: "72782651"
   
  Необходимо установить компонент SQL Server, включающий модуль SQL Server PowerShell (SQLPS) и клиентские библиотеки. Проще всего это сделать, установив среду SQL Server Management Studio, которая уже включает компонент PowerShell и клиентские библиотеки. Модуль SQL Server PowerShell (SQLPS) содержит поставщики PowerShell и командлеты для всех компонентов SQL Server, включая модуль SQLASCmdlets и поставщик SQLAS, используемый для навигации по иерархии объектов служб Analysis Services.  
   
- Для использования поставщика `SQLAS` и командлетов необходимо импортировать модуль **sqlps** . Поставщик SQLAS является расширением поставщика `SQLServer`. Имеется несколько способов импорта модуля SQLPS. Дополнительные сведения см. в разделе [Импорт модуля SQLPS](../../2014/database-engine/import-the-sqlps-module.md).  
+ Для использования `SQLAS` поставщика и командлетов необходимо импортировать модуль **sqlps** . Поставщик SQLAS является расширением `SQLServer` поставщика. Имеется несколько способов импорта модуля SQLPS. Дополнительные сведения см. в разделе [Импорт модуля SQLPS](../../2014/database-engine/import-the-sqlps-module.md).  
   
  Для удаленного доступа к экземпляру служб Analysis Services требуется включить удаленное администрирование и общий доступ к файлам. Дополнительные сведения см. в разделе [Включение удаленного администрирования](#bkmk_remote) этого раздела.  
   
-##  <a name="bkmk_vers"></a> Поддерживаемые версии и режимы служб Analysis Services  
+##  <a name="bkmk_vers"></a>Поддерживаемые версии и режимы Analysis Services  
  В настоящее время Analysis Services PowerShell поддерживается всеми выпусками служб [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Analysis Services, работающими под управлением Windows Server 2008 R2, Windows Server 2008 SP1 или Windows 7.  
   
  В следующей таблице приведены данные по доступности Analysis Services PowerShell в различных контекстах.  
@@ -76,7 +76,7 @@ ms.locfileid: "72782651"
   
  Параметр-Credential принимает объект PSCredential, указывающий имя пользователя и пароль. В Analysis Services PowerShell параметр-Credential доступен для командлетов, которые делают запрос на соединение Analysis Services, в отличие от командлетов, которые выполняются в контексте существующего соединения. К командлетам, осуществляющим запрос на соединение, относятся Invoke-ASCmd, Backup-ASDatabase и Restore-ASDatabase. Для этих командлетов можно использовать параметр-Credential, если выполняются следующие условия.  
   
-1.  Сервер настроен на доступ по HTTP, то есть соединение обрабатывается сервером IIS, который считывает имя пользователя и пароль и олицетворяет соответствующий идентификатор пользователя при соединении со службами Analysis Services. Дополнительные сведения см. в разделе [Настройка HTTP-доступа к службам Analysis Services в службах Internet Information Services (IIS) 8.0](instances/configure-http-access-to-analysis-services-on-iis-8-0.md).  
+1.  Сервер настроен на доступ по HTTP, то есть соединение обрабатывается сервером IIS, который считывает имя пользователя и пароль и олицетворяет соответствующий идентификатор пользователя при соединении со службами Analysis Services. Дополнительные сведения см. в статьях [Configure HTTP Access to Analysis Services on Internet Information Services &#40;IIS&#41; 8.0](instances/configure-http-access-to-analysis-services-on-iis-8-0.md).  
   
 2.  Виртуальный каталог IIS, созданный для доступа к службам Analysis Services по HTTP, настроен на обычную проверку подлинности.  
   
@@ -93,7 +93,7 @@ Invoke-ASCmd -Inputfile:"c:\discoverconnections.xmla" -Credential:$cred
   
  Не забывайте, что учетные данные, запросы и команды, вводимые в PowerShell, передаются на транспортный уровень без изменений. Включение конфиденциальных данных в скрипты повышает вероятность вредоносной атаки типа «инъекция».  
   
- **Предоставление пароля как объекта Microsoft. Secure. String**  
+ **Указание пароля в объекте Microsoft.Secure.String**  
   
  Некоторые операции, например резервное копирование и восстановление, поддерживают параметры шифрования, которые включаются при указании в команде пароля. Указание пароля дает службам Analysis Services команду на шифрование или расшифровку файла резервной копии. В службах Analysis Services экземпляр этого пароля создается в виде объекта защищенной строки. В следующем примере показано, как получить пароль от оператора во время выполнения.  
   
@@ -116,11 +116,11 @@ Remove-Variable -Name pwd
   
  В этом разделе описываются типичные задачи, для выполнения которых используется Analysis Services PowerShell.  
   
--   [Загрузка поставщика Analysis Services и командлетов](#bkmk_load)  
+-   [Загрузка поставщика служб Analysis Services и командлетов](#bkmk_load)  
   
--   [Включить удаленное администрирование](#bkmk_remote)  
+-   [Включение удаленного администрирования](#bkmk_remote)  
   
--   [Подключение к объекту Analysis Services](#bkmk_connect)  
+-   [Подключение к объекту служб Analysis Services](#bkmk_connect)  
   
 -   [Администрирование службы](#bkmk_admin)  
   
@@ -180,9 +180,9 @@ Enable-PSRemoting
   
  Возможно подключение как к локальному, так и к удаленному экземпляру, но некоторые командлеты работают только на локальном экземпляре (например, merge-partition). Можно использовать собственное соединение или HTTP-соединение с серверами служб Analysis Services, настроенными на доступ по протоколу HTTP. На следующих рисунках показан путь навигации для собственных соединений и для соединений по протоколу HTTP. На следующих рисунках показан путь навигации для собственных соединений и для соединений по протоколу HTTP.  
   
- **Собственные подключения к Analysis Services**  
+ **Собственные соединения со службами Analysis Services**  
   
- ![Собственное подключение к Analysis Services](media/ssas-powershell-nativeconnection.gif "Собственное подключение к Analysis Services")  
+ ![Собственное соединение со службами Analysis Services](media/ssas-powershell-nativeconnection.gif "Собственное соединение со службами Analysis Services")  
   
  Следующий пример показывает использование собственного соединения для навигации по иерархии объектов. На поставщике можно воспользоваться командой `dir` для просмотра сведений об экземпляре. Команда `cd` позволяет просмотреть объекты на этом экземпляре.  
   
@@ -195,13 +195,13 @@ PS SQLSERVER\sqlas\localhost\default:> dir
   
  Должны отобразиться следующие коллекции: сборки, базы данных, роли и трассировки. Продолжая использовать `cd` и `dir`, можно просмотреть содержимое всех коллекций.  
   
- **HTTP-подключения к Analysis Services**  
+ **Соединения по протоколу HTTP со службами Analysis Services**  
   
- ![HTTP-соединение с Analysis Services](media/ssas-powershell-httpconnection.gif "HTTP-соединение с Analysis Services")  
+ ![HTTP-соединение со службами Analysis Services](media/ssas-powershell-httpconnection.gif "HTTP-соединение со службами Analysis Services")  
   
- HTTP-подключения полезны, если вы настроили сервер для доступа по протоколу HTTP, выполнив инструкции в этом разделе: [Настройка &#40;доступа&#41; по протоколу HTTP к Analysis Services на службы IIS IIS 8,0](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
+ HTTP-подключения полезны, если вы настроили сервер для доступа по протоколу HTTP, выполнив инструкции в этом разделе: [Настройка доступа по протоколу HTTP к Analysis Services на службы IIS &#40;IIS&#41; 8,0](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
- При условии, что URL-адрес сервера http://localhost/olap/msmdpump.dll, соединение может выглядеть следующим образом:  
+ Если предположить, что URL http://localhost/olap/msmdpump.dll-адрес сервера для, соединение может выглядеть следующим образом:  
   
 ```  
 PS SQLSERVER\sqlas:> cd http_ds  
@@ -234,19 +234,22 @@ Restart-Service mssqlserverolapservice
 ###  <a name="bkmk_help"></a>Получение справки по Analysis Services PowerShell  
  Используйте любой из следующих командлетов, чтобы проверить доступность командлетов и получить дополнительные сведения о службах, процессах и объектах.  
   
-1.  `Get-Help` возвращает встроенную справку для командлета служб Analysis Services, включая примеры:  
+1.  
+  `Get-Help` возвращает встроенную справку для командлета служб Analysis Services, включая примеры:  
   
     ```powershell
     Get-Help invoke-ascmd -Examples  
     ```  
   
-2.  `Get-Command` возвращает список из одиннадцати командлетов Analysis Services PowerShell:  
+2.  
+  `Get-Command` возвращает список из одиннадцати командлетов Analysis Services PowerShell:  
   
     ```powershell
     Get-Command -module SQLASCmdlets  
     ```  
   
-3.  `Get-Member` возвращает свойства или методы службы или процесса.  
+3.  
+  `Get-Member` возвращает свойства или методы службы или процесса.  
   
     ```powershell
     Get-Service mssqlserverolapservice | Get-Member -Type Property  
@@ -260,22 +263,24 @@ Restart-Service mssqlserverolapservice
     Get-Process msmdsrv | Get-Member -Type Property  
     ```  
   
-4.  `Get-Member` также может использоваться для возвращения свойств или методов объекта (например, методов AMO у серверного объекта) с применением поставщика SQLAS, задающего экземпляр сервера.  
+4.  
+  `Get-Member` также может использоваться для возвращения свойств или методов объекта (например, методов AMO у серверного объекта) с применением поставщика SQLAS, задающего экземпляр сервера.  
   
     ```
     PS SQLSERVER:\sqlas\localhost\default > $serverObj = New-Object Microsoft.AnalysisServices.Server  
     PS SQLSERVER:\sqlas\localhost\default > $serverObj = | Get-Member -Type Method  
     ```  
   
-5.  `Get-PSdrive` возвращает список поставщиков, установленных в настоящий момент. Если модуль SQLPS импортирован, в списке отобразится поставщик `SQLServer` (SQLAS входит в состав поставщика SQLServer и никогда не появляется в списке отдельно от него):  
+5.  
+  `Get-PSdrive` возвращает список поставщиков, установленных в настоящий момент. Если модуль SQLPS импортирован, в списке отобразится поставщик `SQLServer` (SQLAS входит в состав поставщика SQLServer и никогда не появляется в списке отдельно от него):  
   
     ```powershell
     Get-PSDrive  
     ```  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
  [Установка компонентов SQL Server PowerShell](../database-engine/install-windows/install-sql-server-powershell.md)   
  [Управление табличными моделями с помощью PowerShell (блог)](https://go.microsoft.com/fwlink/?linkID=227685)   
- [Настройка HTTP-доступа к службам Analysis Services в службах Internet Information Services (IIS) 8.0](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
+ [Настройка доступа по протоколу HTTP к Analysis Services на службы IIS &#40;IIS&#41; 8,0](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
   

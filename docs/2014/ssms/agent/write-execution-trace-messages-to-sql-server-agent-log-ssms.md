@@ -1,5 +1,5 @@
 ---
-title: Запись сообщений трассировки выполнения в журнал ошибок агента SQL Server (SQL Server Management Studio) | Документация Майкрософт
+title: Запись сообщений трассировки выполнения в агент SQL Server журнал ошибок (SQL Server Management Studio) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fd21f4b08bf53d4715f2b99eefed523f3853c033
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245452"
 ---
 # <a name="write-execution-trace-messages-to-the-sql-server-agent-error-log-sql-server-management-studio"></a>Запись сообщений трассировки выполнения в журнал ошибок агента SQL Server (среда SQL Server Management Studio)
-  В данном разделе содержатся инструкции по настройке агента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для включения сообщений трассировки выполнения в журнал ошибок агента в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  В этом разделе описывается настройка [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента для включения сообщений трассировки выполнения в журнал ошибок в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
  **В этом разделе**  
   
@@ -32,9 +32,9 @@ ms.locfileid: "63245452"
   
      [Ограничения](#Restrictions)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
--   [Запись сообщений трассировки выполнения в среде SQL Server Management Studio журнала ошибок агента SQL Server](#SSMSProcedure)  
+-   [Запись сообщений трассировки выполнения в журнал ошибок агента SQL Server с помощью среды SQL Server Management Studio](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
@@ -57,7 +57,7 @@ ms.locfileid: "63245452"
   
 -   Назначение квот памяти процессам (SeIncreaseQuotaPrivilege)  
   
- Дополнительные сведения о разрешениях Windows, необходимых для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учетная запись службы агента, см. в разделе [выберите учетную запись для службы агента SQL Server](select-an-account-for-the-sql-server-agent-service.md) и [Настройка учетных записей службы Windows и Разрешения](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+ Дополнительные сведения о разрешениях Windows, необходимых для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учетной записи службы агента, см. в разделе [Выбор учетной записи для службы агент SQL Server](select-an-account-for-the-sql-server-agent-service.md) и [Настройка учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
 ##  <a name="SSMSProcedure"></a>   
 #### <a name="to-write-execution-trace-messages-to-the-sql-server-agent-error-log"></a>Запись сообщений трассировки выполнения в журнал ошибок агента SQL Server  
@@ -66,7 +66,7 @@ ms.locfileid: "63245452"
   
 2.  Щелкните правой кнопкой мыши элемент **Агент SQL Server** и выберите пункт **Свойства**.  
   
-3.  В **свойства агента SQL Server -** _имя_сервера_ диалогового **журнал ошибок** на **Общие** выберите **Включить трассировочные сообщения** "флажок".  
+3.  В диалоговом окне **свойства агент SQL Server —**_server_name_ в разделе **журнал ошибок** на странице **Общие** установите флажок **включить сообщения трассировки выполнения** .  
   
 4.  Нажмите кнопку **ОК**.  
   

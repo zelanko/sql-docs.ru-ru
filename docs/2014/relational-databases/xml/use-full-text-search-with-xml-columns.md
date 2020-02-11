@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 897002d437dcee8a6c64750f964c957c18a077f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63193260"
 ---
 # <a name="use-full-text-search-with-xml-columns"></a>Полнотекстовый поиск в XML-столбцах
@@ -33,7 +33,7 @@ ms.locfileid: "63193260"
   
 2.  Затем запросите XML-значения, которые используют XML-индекс, связанный с XML-столбцом.  
   
-## <a name="example-combining-full-text-search-with-xml-querying"></a>Пример Комбинирование полнотекстового поиска с запросами XML-данных  
+## <a name="example-combining-full-text-search-with-xml-querying"></a>Пример. Комбинирование полнотекстового поиска с XML-запросами  
  После создания полнотекстового индекса для XML-столбца следующий запрос проверяет, что название книги содержит слово «custom»:  
   
 ```  
@@ -49,7 +49,7 @@ AND    xCol.exist('/book/title/text()[contains(.,"custom")]') =1
   
  Кроме того, при полнотекстовом поиске выполняется лемматизация, а метод **contains()** языка XQuery осуществляет буквальное сопоставление. Это различие поясняет следующий пример.  
   
-## <a name="example-full-text-search-on-xml-values-using-stemming"></a>Пример Полнотекстовый поиск XML-значений с использованием парадигматического модуля  
+## <a name="example-full-text-search-on-xml-values-using-stemming"></a>Пример. Полнотекстовый поиск XML-значений с использованием выделения корней  
  Проверку **contains()** языка XQuery, выполненную в предыдущем примере, обычно устранить нельзя. Рассмотрим следующий запрос:  
   
 ```  
@@ -62,7 +62,7 @@ WHERE  CONTAINS(xCol,'run')
   
  Если при помощи схем XML-данные распределены по реляционным столбцам, для которых выполнено полнотекстовое индексирование, при обработке запросов XPath, адресованных XML-представлению, полнотекстовый поиск в базовых таблицах не выполняется.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [XML-индексы (SQL Server)](xml-indexes-sql-server.md)  
   
   

@@ -19,13 +19,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8d4a5067598b475ed8fe103606088d0e4d6d0554
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62689405"
 ---
-# <a name="bcpwritefmt"></a>Функция bcp_writefmt
+# <a name="bcp_writefmt"></a>Функция bcp_writefmt
   Создает файл форматирования, содержащий описание формата текущего файла данных массового копирования.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -43,7 +43,7 @@ szFormatFile
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *HDBC*  
+ *hdbc*  
  Дескриптор соединения ODBC с поддержкой массового копирования.  
   
  *szFormatFile*  
@@ -52,10 +52,10 @@ szFormatFile
 ## <a name="returns"></a>Возвращает  
  SUCCEED или FAIL.  
   
-## <a name="remarks"></a>Примечания  
- Файл форматирования определяет формат данных, содержащихся в файле данных, создаваемом при массовом копировании. Вызовы функций [bcp_columns](bcp-columns.md) и [bcp_colfmt](bcp-colfmt.md) определяют формат файла данных. Функция**bcp_writefmt** сохраняет это определение в файле, на который ссылается аргумент *szFormatFile*. Дополнительные сведения см. в разделе [bcp_init](bcp-init.md).  
+## <a name="remarks"></a>Remarks  
+ Файл форматирования определяет формат данных, содержащихся в файле данных, создаваемом при массовом копировании. Вызовы функций [bcp_columns](bcp-columns.md) и [bcp_colfmt](bcp-colfmt.md) определяют формат файла данных. **bcp_writefmt** сохраняет это определение в файле, на который ссылается *szFormatFile*. Дополнительные сведения см. в разделе [bcp_init](bcp-init.md).  
   
- Дополнительные сведения о структуре **bcp** файлов форматирования данных, см. в разделе [массовый импорт и экспорт данных с помощью программы bcp &#40;SQL Server&#41;](../import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md).  
+ Дополнительные сведения о структуре файлов формата данных **bcp** см. [в статье Импорт и экспорт данных с помощью программы bcp &#40;SQL Server&#41;](../import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md).  
   
  Для загрузки сохраненного файла форматирования используется функция [bcp_readfmt](bcp-readfmt.md).  
   
@@ -117,7 +117,7 @@ if (bcp_exec(hdbc, &nRowsProcessed) == SUCCEED)
 // Carry on.  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Функции массового копирования](sql-server-driver-extensions-bulk-copy-functions.md)  
+## <a name="see-also"></a>См. также:  
+ [Bulk Copy Functions](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

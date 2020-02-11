@@ -1,5 +1,5 @@
 ---
-title: Пример метода (VBScript) Refresh | Документация Майкрософт
+title: Пример метода Refresh (VBScript) | Документация Майкрософт
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,17 +15,17 @@ ms.assetid: f2926578-bc60-464b-916e-ddfdb8014253
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 46e9d4d7b7e74a3e3fff1af7428714603ea6d619
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963516"
 ---
 # <a name="refresh-method-example-vbscript"></a>Пример метода Refresh (VBScript)
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Приведенный ниже показано, как задать необходимые параметры [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) во время выполнения. Способ [записей](../../../ado/reference/ado-api/recordset-object-ado.md) извлекается с использованием [обновить](../../../ado/reference/ado-api/refresh-method-ado.md) метод определяется параметрами [ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md) и [FetchOptions ](../../../ado/reference/rds-api/fetchoptions-property-rds.md) свойства. Чтобы протестировать этот пример, вырезать и вставить следующий код в обычном документ ASP и назовите его **RefreshVBS.asp**. Используйте **найти** найдите файл Adovbs.inc и поместите его в каталог, который вы планируете использовать. Сценарий ASP будет идентификации сервера.  
+ В следующем примере показано, как задать необходимые параметры [RDS. Элемент управления](../../../ado/reference/rds-api/datacontrol-object-rds.md) на этапе выполнения. Способ получения [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) с помощью метода [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) определяется параметрами свойств [ексекутеоптионс](../../../ado/reference/rds-api/executeoptions-property-rds.md) и [FetchOptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md) . Чтобы протестировать этот пример, вырежьте и вставьте следующий код в нормальный ASP-документ и назовите его **рефрешвбс. ASP**. Используйте **Find** для поиска файла адовбс. Inc и поместите его в каталог, который планируется использовать. Сценарий ASP определит ваш сервер.  
   
 ```  
 <!-- BeginRefreshVBS -->  
@@ -174,10 +174,10 @@ End Sub
 <!-- EndRefreshVBS -->  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Объект DataControl (служба удаленных рабочих СТОЛОВ)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [Свойство ExecuteOptions (служба удаленных рабочих СТОЛОВ)](../../../ado/reference/rds-api/executeoptions-property-rds.md)   
- [Свойство FetchOptions (служба удаленных рабочих СТОЛОВ)](../../../ado/reference/rds-api/fetchoptions-property-rds.md)   
+## <a name="see-also"></a>См. также:  
+ [Объект элемента управления (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
+ [Свойство Ексекутеоптионс (RDS)](../../../ado/reference/rds-api/executeoptions-property-rds.md)   
+ [Свойство FetchOptions (RDS)](../../../ado/reference/rds-api/fetchoptions-property-rds.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Метод Refresh (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)
 

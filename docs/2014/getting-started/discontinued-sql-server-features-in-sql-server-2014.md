@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b8f7ab6cdbc1b6e0e3dc7d26fb579943a0c8fa95
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637774"
 ---
 # <a name="discontinued-sql-server-features-in-sql-server-2014"></a>Функции SQL Server, больше не поддерживаемые в SQL Server 2014
@@ -40,21 +40,21 @@ ms.locfileid: "73637774"
 ## <a name="discontinued-features-in-sql-server-2008"></a>Функции, неподдерживаемые в SQL Server 2008  
   
 ### <a name="discontinued-sql-dmo-from-sql-server-express-installation"></a>Неподдерживаемые функции SQL-DMO при установке SQL Server Express  
- Распределенные управляющие объекты SQL (SQL-DMO) для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] были удалены из [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)]. Рекомендуется как можно скорее внести изменения в приложения, которые пользуют эти компоненты. Если требуется поддержка SQL-DMO для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express, установите компоненты обратной совместимости из пакета дополнительных компонентов [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] из [центра загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=24793). В дальнейшем для разработки пользуйтесь объектами SMO ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects).  
+ Распределенные управляющие объекты SQL (SQL-DMO) для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] были удалены из [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)]. Рекомендуется как можно скорее внести изменения в приложения, которые пользуют эти компоненты. Если требуется поддержка SQL-DMO для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express, установите компоненты обратной совместимости из пакета дополнительных [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] компонентов из [центра загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=24793). В дальнейшем для разработки пользуйтесь объектами SMO ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects).  
   
 ### <a name="discontinued-option-for-web-assistant"></a>Неподдерживаемый параметр для помощника Web Assistant  
- Параметр `sp_configure` для включения помощника Web Assistant удален из [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Вместо нее рекомендуется пользоваться представлением [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
+ Параметр `sp_configure` для включения помощника Web Assistant удален из [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Вместо этого рекомендуется использовать [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
 ### <a name="surface-area-configuration-tool"></a>Средство настройки контактной зоны  
  Поддержка средства настройки контактной зоны в [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] прекращена. В следующей таблице показаны средства, с помощью которых можно настраивать параметры и функции компонентов в этой версии.  
   
-|Параметры замены и компоненты|Порядок настройки|  
+|Параметры замены и компоненты|Процесс настройки|  
 |-------------------------------------------------|----------------------|  
 |Протоколы, соединение и параметры запуска|Используйте диспетчер конфигурации [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
-|Функции служб [!INCLUDE[ssDE](../includes/ssde-md.md)]|Используйте управление на уровне политик, значения свойств в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] или хранимую процедуру sp_Configure.|  
-|Функции служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|Используйте значения свойств в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
-|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] — свойство безопасности включить встроенную|Используйте значения свойств в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
-|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-"Планирование событий и доставки отчетов" и "веб-служба и доступ по HTTP"|Измените файл конфигурации RSReportServer.config.|  
+|[!INCLUDE[ssDE](../includes/ssde-md.md)]особенностей|Используйте управление на уровне политик, значения свойств в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] или хранимую процедуру sp_Configure.|  
+|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]особенностей|Используйте значения свойств в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
+|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]Службы  — свойство «Включить встроенную безопасность»|Используйте значения свойств в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
+|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]Службы  — «Планирование событий и доставка отчетов» и «Доступ к веб-службам и HTTP»|Измените файл конфигурации RSReportServer.config.|  
 |Параметры командной строки|В этой версии не поддерживается.|  
 |Конечные точки SOAP и [!INCLUDE[ssSB](../includes/sssb-md.md)]|Используйте инструкции [CREATE ENDPOINT](/sql/t-sql/statements/create-endpoint-transact-sql)и [ALTER ENDPOINT](/sql/t-sql/statements/alter-endpoint-transact-sql).|  
   
@@ -78,7 +78,7 @@ ms.locfileid: "73637774"
   
  <sup>1</sup> Эти параметры допустимы только для установки.  
   
- <sup>2</sup> При запуске [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]укажите/Action = EditionUpgrade, чтобы обновить существующий выпуск [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] до другого выпуска в любое время без использования исходного установочного носителя. Дополнительные сведения о поддерживаемой версии и обновлении выпуском см. в разделе [Supported Version and Edition Upgrades](../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
+ <sup>2</sup> Начиная [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]с, укажите/Action = EditionUpgrade, чтобы обновить существующий выпуск [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] до другого выпуска в любое время без использования исходного установочного носителя. Дополнительные сведения о поддерживаемой версии и обновлении выпуском см. в разделе [Supported Version and Edition Upgrades](../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
  Дополнительные сведения см. в статье [Установка SQL Server 2014 из командной строки](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   

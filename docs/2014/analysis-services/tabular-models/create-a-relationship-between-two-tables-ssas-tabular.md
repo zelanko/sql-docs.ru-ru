@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 98bd7f6c904207aa6d38f2ae756a207f128707a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067539"
 ---
 # <a name="create-a-relationship-between-two-tables-ssas-tabular"></a>Создание связи между двумя таблицами (табличные службы SSAS)
-  Если таблицы в источнике данных не участвуют в связях или добавляются новые таблицы, новые связи можно создать с помощью средств конструктора моделей. Сведения об использовании связей в табличных моделях см. в разделе [Relationships &#40;SSAS Tabular&#41;](relationships-ssas-tabular.md).  
+  Если таблицы в источнике данных не участвуют в связях или добавляются новые таблицы, новые связи можно создать с помощью средств конструктора моделей. Сведения об использовании связей в табличных моделях см. в разделе [Связи (табличные службы SSAS)](relationships-ssas-tabular.md).  
   
 ## <a name="create-a-relationship-between-two-tables"></a>Создание связи между двумя таблицами  
   
@@ -69,8 +69,8 @@ ms.locfileid: "66067539"
   
 6.  Нажмите кнопку **Создать**.  
   
-## <a name="see-also"></a>См. также  
- [Удаление связей (табличные службы SSAS)](delete-relationships-ssas-tabular.md)   
- [Связи (табличные службы SSAS)](relationships-ssas-tabular.md)  
+## <a name="see-also"></a>См. также:  
+ [Удаление связей &#40;табличных&#41;SSAS](delete-relationships-ssas-tabular.md)   
+ [Связи &#40;табличные&#41;SSAS](relationships-ssas-tabular.md)  
   
   

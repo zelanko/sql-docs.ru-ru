@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: af4f0f53a1822d2fd45fdbaacfd9ab05d783c237
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769331"
 ---
 # <a name="divide-ssis-expression"></a>Деление (выражение служб SSIS)
@@ -33,7 +33,7 @@ dividend / divisor
   
 ## <a name="arguments"></a>Аргументы  
  *dividend*  
- Делимое числовое выражение. *dividend* может быть любым допустимым числовым выражением. Дополнительные сведения см. в статье [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
+ Делимое числовое выражение. *dividend* может быть любым допустимым числовым выражением. Дополнительные сведения см. в разделе [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
   
  *divisor*  
  Числовое выражение, на которое делится делимое. *divisor* может быть любым допустимым числовым выражением, отличным от нуля.  
@@ -41,7 +41,7 @@ dividend / divisor
 ## <a name="result-types"></a>Типы результата  
  Определяются типами данных обоих аргументов. Дополнительные сведения см. в разделе [Integration Services Data Types in Expressions](integration-services-data-types-in-expressions.md).  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Если один из операндов равен NULL, то результатом является значение NULL.  
   
  Деление на ноль недопустимо. В зависимости от того, как вычисляется подвыражение *divisor* , возникает одна из следующих ошибок:  
@@ -65,7 +65,7 @@ dividend / divisor
 ListPrice / StandardCost  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Очередность и ассоциативность операторов](operator-precedence-and-associativity.md)   
  [Операторы (выражение служб SSIS)](operators-ssis-expression.md)  
   

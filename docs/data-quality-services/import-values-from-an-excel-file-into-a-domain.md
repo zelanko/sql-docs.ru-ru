@@ -14,10 +14,10 @@ ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 144a2b57fa671842f284445dee859e689e8adbe1
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75254821"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>Импорт значений в домен из файла Excel
@@ -32,14 +32,14 @@ ms.locfileid: "75254821"
   
 -   Импорт значений в существующий, заполненный домен. В этом варианте импортируются только новые значения. Все значения, которые уже существуют, не будут импортированы.  
   
-##  <a name="BeforeYouBegin"></a>Перед началом  
+##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Prerequisites"></a>Требований  
+###  <a name="Prerequisites"></a> Предварительные требования  
  Для импорта доменов из файла Excel необходимо установить Microsoft Excel на компьютер, на котором установлено приложение [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , чтобы импортировать значения домена или домен целиком. Необходимо создать файл Excel со значениями домена (см. раздел [How the import works](#How)). Также необходимо создать и открыть базу знаний, в которую будет импортироваться домен.  
   
-###  <a name="Security"></a>Бюллетеня  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a>Чтение  
+####  <a name="Permissions"></a> Permissions  
  Для импорта значений доменов из файла Excel необходимо иметь роль dqs_kb_editor или dqs_administrator в базе данных DQS_MAIN.  
   
 ##  <a name="Import"></a>Импорт значений из файла Excel в домен  

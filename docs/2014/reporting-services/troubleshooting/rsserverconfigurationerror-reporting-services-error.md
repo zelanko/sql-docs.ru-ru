@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 19778bce64e5779471e78b8c4305e1bd6315c0ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099211"
 ---
 # <a name="rsserverconfigurationerror---reporting-services-error"></a>rsServerConfigurationError - Ошибка службы Reporting Services
@@ -47,11 +47,11 @@ ms.locfileid: "66099211"
 ## <a name="user-action"></a>Действие пользователя  
  Если эта ошибка возникла после того, как файл конфигурации был изменен вручную, удалите внесенные изменения, вернув прежние значения, либо, при наличии резервной копии, восстановите предыдущую версию файла.  
   
- Чтобы просмотреть дополнительные сведения об ошибке, сопровождающий `rsServerConfiguration` ошибки, просмотрите файлы сервера отчетов трассировки журналов, расположенные в \Microsoft SQL Server\MSRS12.\< instancename > \Reporting Services\LogFiles. Дополнительные сведения см. в разделе [Файлы и источники журналов служб Reporting Services](../report-server/reporting-services-log-files-and-sources.md).  
+ Для просмотра дополнительных сведений об ошибке, сопровождающих `rsServerConfiguration` ошибку, просмотрите файлы журнала трассировки сервера отчетов, которые находятся в папке \Microsoft SQL Server\MSRS12. \<имя_экземпляра > \reporting Services\LogFiles. Дополнительные сведения см. в разделе [Файлы и источники журналов служб Reporting Services](../report-server/reporting-services-log-files-and-sources.md).  
   
 ## <a name="internal-only"></a>Только для внутреннего использования  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Файлы конфигурации служб Reporting Services](../report-server/reporting-services-configuration-files.md)   
  [Изменение файла конфигурации служб Reporting Services (RSreportserver.config)](../report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
   

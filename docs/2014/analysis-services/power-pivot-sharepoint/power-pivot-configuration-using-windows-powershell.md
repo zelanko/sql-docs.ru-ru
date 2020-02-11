@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9282fce8e0004495ae8c10b0b3f75fec205d6b34
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782808"
 ---
 # <a name="powerpivot-configuration-using-windows-powershell"></a>Настройка PowerPivot с помощью Windows PowerShell
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] включает в себя командлеты Windows PowerShell, которые можно использовать для настройки установки [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. Для полной настройки установки требуются командлеты и SharePoint, и PowerPivot для SharePoint. Большую часть настройки можно выполнить с помощью одного из средств [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Дополнительные сведения об этих средствах см. в разделе [PowerPivot Configuration Tools](power-pivot-configuration-tools.md).  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]включает командлеты Windows PowerShell, которые можно использовать для настройки установки [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. Для полной настройки установки требуются командлеты и SharePoint, и PowerPivot для SharePoint. Большую часть настройки можно выполнить с помощью одного из средств [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Дополнительные сведения об этих средствах см. в разделе [PowerPivot Configuration Tools](power-pivot-configuration-tools.md).  
   
 > [!IMPORTANT]  
 >  При работе с фермой SharePoint 2010 необходимо установить SharePoint 2010 с пакетом обновления 1 (SP1), чтобы иметь возможность настроить PowerPivot для SharePoint или ферму SharePoint 2010, в которой используется сервер базы данных [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] . Если пакет обновления еще не установлен, установите его, прежде чем начать настройку сервера.  
@@ -27,7 +27,7 @@ ms.locfileid: "72782808"
  Для автоматизации задач настройки можно построить файлы скриптов Windows PowerShell (PS1). Этот подход рекомендуется, если необходимо обеспечить установку и настройку с помощью скриптов, которые можно выполнить на любом сервере. В случае отказа аппаратной части подобный скрипт может потребоваться как часть плана аварийного восстановления сервера.  
   
 ## <a name="view-a-list-of-the-powerpivot-cmdlets-on-a-server"></a>Просмотр списка командлетов PowerPivot на сервере  
- Чтобы просмотреть содержимое и примеры командлетов [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], см. [Справочник по PowerShell для PowerPivot для SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint).  
+ Чтобы просмотреть содержимое и примеры [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] командлетов, см. [Справочник по PowerShell для PowerPivot для SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint).  
   
  Использование PowerShell для просмотра списка командлетов PowerPivot  
   
@@ -39,13 +39,13 @@ ms.locfileid: "72782808"
     Get-Help *powerpivot*  
     ```  
   
-     Появится список командлетов, содержащих в имени «PowerPivot». Например, `Get-PowerPivotServiceApplication`. Число доступных командлетов зависит от используемой версии служб Analysis Services.  
+     Появится список командлетов, содержащих в имени «PowerPivot». Пример: `Get-PowerPivotServiceApplication`. Число доступных командлетов зависит от используемой версии служб Analysis Services.  
   
     -   10 командлетов на сервере служб SQL Server 2012 Analysis Services с пакетом обновления 1 (SP1), работающим в режиме интеграции с SharePoint и SharePoint 2013. Версия 2012 с пакетом обновления 1 (SP1) использует новую архитектуру, которая позволяет серверу анализа данных работать за пределами фермы SharePoint и требует меньше командлетов управления Windows PowerShell.  
   
     -   17 командлетов на сервере служб Analysis Services SQL Server 2012, работающем в режиме интеграции с SharePoint и SharePoint 2010.  
   
-     Если в списке не возвращены команды или отображается сообщение об ошибке, похожее на "`get-help could not find *powerpivot* in a help file in this session.`", см. сведения о том, как включить командлеты PowerPivot на сервере в следующем разделе этого раздела.  
+     Если в списке не возвращено ни одной команды или появляется сообщение об ошибке, похожее на "`get-help could not find *powerpivot* in a help file in this session.`", см. сведения о том, как включить командлеты PowerPivot на сервере в следующем разделе этого раздела.  
   
      Для всех командлетов имеется справка в Интернете. В следующем примере показано, как посмотреть справку в Интернете для командлета `New-PowerPivotServiceApplication`.  
   
@@ -83,6 +83,6 @@ ms.locfileid: "72782808"
 ## <a name="related-content"></a>См. также  
  [Настройка и администрирование сервера PowerPivot в центре администрирования](power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
- [Средства настройки PowerPivot](power-pivot-configuration-tools.md)  
+ [PowerPivot Configuration Tools](power-pivot-configuration-tools.md)  
   
  [Справочник по PowerShell для PowerPivot для SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)  

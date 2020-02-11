@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b5f5c2385b4c58447db008544124ae9048566958
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63199942"
 ---
 # <a name="web-server-information"></a>Сведения о веб-сервере
@@ -29,11 +29,11 @@ ms.locfileid: "63199942"
  **Как будет соединяться с веб-сервером каждый подписчик**  
  Позволяет указать тип проверки подлинности, используемой для подключения к веб-серверу. Рекомендуется использовать обычную проверку подлинности для подключений к серверу IIS в сопряжении с безопасным протоколом Secure Sockets Layer (SSL). Если выбрана обычная проверка подлинности, введите имя входа и пароль, которые будут использоваться для подключения подписчика к серверу IIS.  
   
-## <a name="see-also"></a>См. также  
- [Создание подписки по запросу](create-a-pull-subscription.md)   
+## <a name="see-also"></a>См. также:  
+ [Create a Pull Subscription](create-a-pull-subscription.md)   
  [Просмотр и изменение свойств подписки по запросу](view-and-modify-pull-subscription-properties.md)   
- [Подписчики, отличные от подписчиков SQL Server](non-sql/non-sql-server-subscribers.md)   
- [Подписка на публикации](subscribe-to-publications.md)   
+ [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)   
+ [Subscribe to Publications](subscribe-to-publications.md)   
  [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md)  
   
   

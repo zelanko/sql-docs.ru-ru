@@ -16,28 +16,28 @@ ms.assetid: e57930a6-46c4-4a17-a3b6-f79e94d5c9c7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1db01010fea79d2badaf81588296391d7e2149f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931767"
 ---
 # <a name="pagesize-property-ado"></a>Свойство PageSize (ADO)
-Указывает, сколько записей составляют одну страницу в [записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
+Указывает, сколько записей составляют одну страницу в [наборе записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
- Возвращает или задает **Long** значение, указывающее, сколько записей на странице. По умолчанию используется **10**.  
+ Задает или возвращает значение **типа Long** , указывающее, сколько записей находится на странице. Значение по умолчанию — **10**.  
   
-## <a name="remarks"></a>Примечания  
- Используйте **PageSize** свойства, чтобы определить, сколько записей составляющих логической страницы данных. Создание размер страницы, позволяет использовать [примеры AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md) свойство, чтобы перейти к первой записи, определенной страницы. Это полезно в сценариях веб сервера, если вы хотите разрешить пользователю просматривать данные, Просмотр определенного числа записей за раз.  
+## <a name="remarks"></a>Remarks  
+ Используйте свойство **pageSize** , чтобы определить, сколько записей составляют логическую страницу данных. Установка размера страницы позволяет использовать свойство [примеры absolutepage](../../../ado/reference/ado-api/absolutepage-property-ado.md) для перехода к первой записи определенной страницы. Это полезно в сценариях веб-сервера, когда необходимо разрешить пользователю пролистывать данные, одновременно просматривая определенное количество записей.  
   
- Это свойство можно задать в любое время, и его значение будет использоваться для расчета расположение первой записи определенной страницы.  
+ Это свойство может быть задано в любое время, и его значение будет использоваться для вычисления расположения первой записи определенной страницы.  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
- [Примеры AbsolutePage, PageCount и PageSize свойства пример (Visual Basic)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vb.md)   
- [Примеры AbsolutePage, PageCount и PageSize пример свойства (Visual C++)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vc.md)   
- [Свойство AbsolutePage (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
+## <a name="see-also"></a>См. также:  
+ [Примеры свойств примеры absolutepage, PageCount и PageSize (Visual Basic)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vb.md)   
+ [Пример свойств примеры absolutepage, PageCount и PageSize (Visual c++)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vc.md)   
+ [Свойство примеры absolutepage (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
  [Свойство PageCount (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)
