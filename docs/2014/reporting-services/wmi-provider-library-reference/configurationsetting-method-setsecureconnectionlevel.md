@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ede290f794ab61dac62c39bc47b80516385474fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097956"
 ---
-# <a name="setsecureconnectionlevel-method-wmi-msreportserverconfigurationsetting"></a>Метод SetSecureConnectionLevel (WMI MSReportServer_ConfigurationSetting)
+# <a name="setsecureconnectionlevel-method-wmi-msreportserver_configurationsetting"></a>Метод SetSecureConnectionLevel (WMI MSReportServer_ConfigurationSetting)
   Задает уровень безопасных соединений для сервера отчетов.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -44,21 +44,21 @@ public void SetSecureConnectionLevel(Int32 Level,
  *Level*  
  Целое значение, представляющее уровень безопасного соединения.  
   
- *HRESULT*  
+ *СОСТАВ*  
  [out] Значение, которое указывает, окончился ли вызов успехом или сбоем.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение *HRESULT* , являющееся признаком успешного или неуспешного завершение вызова метода. Значение 0 указывает, что вызов метода завершился успешно. Ненулевое значение указывает, что произошла ошибка.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  При вызове метода свойство SecureConnectionLevel сервера отчетов получает заданное значение. Значение 0 указывает на то, что протокол SSL отключен. Значение, которое больше или равно 1, указывает на то, что протокол SSL включен.  
   
--   Если значение задано, то элемент SecureConnectionLevel в файле конфигурации сервера отчетов изменяется и `URLRoot` элемент в файле конфигурации настроен на использование « https://», если указанный *уровень* больше, чем или равно 1, либо « http://», если указанный *уровень* равно 0.  
+-   Если значение задано, элемент SecureConnectionLevel в файле конфигурации сервера отчетов изменяется, а `URLRoot` элемент в файле конфигурации задается как "https://", если указанный *уровень* больше или равен 1, или "http://", если указан *уровень* 0.  
   
  В [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]элемент SecureConnectionLevel является двухфазным переключателем. Значение по умолчанию равно 0. Для любого значения, которое больше или равно 1, переданного через API метода SetSecureConnectionLevel, SSL считается включенным, а свойство конфигурации SecureConnectionLevel в файле rsreportserver.config задается соответственно. Значения 2 и 3 по-прежнему разрешены для обеспечения обратной совместимости.  
   
 ## <a name="requirements"></a>Требования  
- **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Пространство имен:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

@@ -1,5 +1,5 @@
 ---
-title: Функции Upper-case (XQuery) | Документация Майкрософт
+title: Функция upper (XQuery) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 5bd01ad2-7adf-48fb-bf42-41e200419d37
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0dcbcbc0cd6c0cf479aee7a7c3fd8c5e53a53d28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68004618"
 ---
 # <a name="functions-on-string-values---upper-case"></a>Функции со строковыми значениями — upper-case
@@ -41,13 +41,13 @@ fn:upper-case($arg as xs:string?) as xs:string
 |Термин|Определение|  
 |*$arg*|Строковое значение для преобразования в верхний регистр.|  
   
-## <a name="remarks"></a>Примечания  
- Если значение *$arg* является пустым, возвращается строка нулевой длины.  
+## <a name="remarks"></a>Remarks  
+ Если значение *$arg* пустое, возвращается строка нулевой длины.  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-changing-a-string-to-upper-case"></a>A. Преобразование строки в верхний регистр  
- В следующем примере изменяется входная строка ' abcDEF! @4"в верхний регистр.  
+ Следующий пример изменяет входную строку "abcDEF! @4' в верхний регистр.  
   
 ```  
 DECLARE @x xml = N'abcDEF!@4';  
@@ -118,7 +118,7 @@ where CatalogDescription.exist('
   
  `</Prod>`  
   
-## <a name="see-also"></a>См. также  
- [Функции XQuery для типа данных XML](../xquery/xquery-functions-against-the-xml-data-type.md)  
+## <a name="see-also"></a>См. также:  
+ [Функции XQuery для типа данных xml](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7d7e92758707217a42afbd41649720907adfeaa3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211058"
 ---
 # <a name="sql-server-profiler-templates-and-permissions"></a>Шаблоны и разрешения приложения SQL Server Profiler
@@ -42,7 +42,7 @@ ms.locfileid: "68211058"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Описание|  
+|Раздел|Description|  
 |-----------|-----------------|  
 |[Шаблоны приложения SQL Server Profiler](sql-server-profiler-templates.md)|Содержит сведения о предопределенных шаблонах трассировки, которые входят в состав приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|  
 |[Разрешения, необходимые для запуска приложения SQL Server Profiler](permissions-required-to-run-sql-server-profiler.md)|Содержит сведения о разрешениях, которые требуются для работы с приложением [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|  
@@ -56,8 +56,8 @@ ms.locfileid: "68211058"
 |[Фильтрация трассировок с помощью приложения SQL Server Profiler](filter-traces-with-sql-server-profiler.md)|Содержит сведения о настройке фильтров по столбцам данных для фильтрации результатов трассировки с помощью приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|  
 |[Воспроизведение трассировок](replay-traces.md)|Содержит описание процесса воспроизведения трассировки и требования, которые к нему предъявляются.|  
   
-## <a name="see-also"></a>См. также  
- [SQL Server Profiler](sql-server-profiler.md)   
+## <a name="see-also"></a>См. также:  
+ [Приложение SQL Server Profiler](sql-server-profiler.md)   
  [Запуск приложения SQL Server Profiler](start-sql-server-profiler.md)  
   
   

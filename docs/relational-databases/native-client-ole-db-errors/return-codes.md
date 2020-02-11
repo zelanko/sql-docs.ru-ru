@@ -24,10 +24,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 36f376710dbcdd09daf664e9eee20533c5372641
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73790233"
 ---
 # <a name="return-codes"></a>Коды возврата
@@ -37,17 +37,17 @@ ms.locfileid: "73790233"
   
  Дополнительные сведения о кодах возврата OLE DB см. в статье [Коды возврата (OLE DB)](https://go.microsoft.com/fwlink/?LinkId=101631).  
   
- Когда функция-член поставщика [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB возвращает S_OK, функция прошла удачно.  
+ Когда функция [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -член поставщика собственного клиента OLE DB возвращает S_OK, функция прошла удачно.  
   
- Если функция-член поставщика [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB не возвращает S_OK, то в случае сбоя OLE/COM HRESULT-распаковки и IS_ERROR макросы могут определить общую успешность или сбой функции.  
+ Когда функция [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -член поставщика собственного клиента OLE DB не возвращает S_OK, ошибка HRESULT OLE/COM-распаковки, а IS_ERROR макросы могут определить общую успешность или сбой функции.  
   
- Если сбой или IS_ERROR возвращает значение TRUE, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственный клиент поставщика OLE DB клиента гарантирует, что выполнение функции-члена не удалось. Если сбой или IS_ERROR возвращают значение FALSE, а значение HRESULT не равно S_OK, потребитель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента OLE DB поставщика гарантирует, что функция была успешно выполнена в определенном смысле. Потребитель может получить подробные сведения об этом возвращении из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента OLE DB интерфейсах ошибок поставщика. Кроме того, в случае, когда функция явно завершается неудачей (макрос FAILed возвращает значение TRUE), расширенные сведения об ошибке доступны из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] интерфейсов ошибок поставщика собственного клиента OLE DB.  
+ Если сбой или IS_ERROR возвращает значение TRUE, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] потребитель поставщика OLE DB собственного клиента гарантирует, что выполнение функции-члена завершилось ошибкой. Если сбой или IS_ERROR возвращают значение FALSE, а значение HRESULT не равно S_OK [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , потребитель поставщика OLE DB собственного клиента гарантирует, что функция была успешно выполнена в определенном смысле. Потребитель может получить подробную информацию о возврате данных об успешном выполнении с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента OLE DB интерфейсах ошибок поставщика. Кроме того, в случае, когда функция явно завершается неудачей (макрос FAILed возвращает значение TRUE), расширенные сведения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] об ошибке можно получить из собственного клиента OLE DB интерфейсы ошибок поставщика.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DB_S_ERRORSOCCURRED для потребителей собственного клиента OLE DB поставщика обычно встречается возвращаемое значение HRESULT "Success with Information". Функции-члены, возвращающие значение DB_S_ERRORSOCCURRED, обычно определяют один или несколько параметров, предоставляющих потребителю значения состояния. Информация, возвращаемая через параметры состояния, может быть единственной информацией о состоянии, доступной потребителю; поэтому для получения значений состояния, когда они доступны, потребители должны реализовать собственную логику приложения.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Потребители собственного клиента OLE DB поставщика обычно сталкиваются с возвратом DB_S_ERRORSOCCURRED "Success with Information". Функции-члены, возвращающие значение DB_S_ERRORSOCCURRED, обычно определяют один или несколько параметров, предоставляющих потребителю значения состояния. Информация, возвращаемая через параметры состояния, может быть единственной информацией о состоянии, доступной потребителю; поэтому для получения значений состояния, когда они доступны, потребители должны реализовать собственную логику приложения.  
   
- Функции члена поставщика [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB не возвращают код успешного S_FALSE. Все функции члена поставщика [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB всегда возвращают S_OK, чтобы указать на успешное выполнение.  
+ Функции [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] члена поставщика собственного клиента OLE DB не возвращают код успешного выполнения S_FALSE. Все [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] функции члена поставщика собственного клиента OLE DB всегда возвращают S_OK, чтобы указать на успешное выполнение.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [ошибки](../../relational-databases/native-client-ole-db-errors/errors.md)  
   
   

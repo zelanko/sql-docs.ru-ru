@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 56d4f7d922c0c229b1e2126f93611670adf7c702
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63135621"
 ---
 # <a name="modify-an-existing-trace-transact-sql"></a>изменить существующую трассировку (Transact-SQL)
@@ -29,15 +29,15 @@ ms.locfileid: "63135621"
   
 2.  Чтобы изменить события трассировки, выполните процедуру **sp_trace_setevent** , указав изменения с помощью параметров. Эти параметры перечислены ниже (по порядку):  
   
-    -   **@traceid** (идентификатор трассировки)  
+    -   **@traceid**(Идентификатор трассировки)  
   
-    -   **@eventid** (идентификатор события)  
+    -   **@eventid**(ИД события)  
   
-    -   **@columnid** (идентификатор столбца)  
+    -   **@columnid**(Идентификатор столбца)  
   
-    -   **@on** (ON)  
+    -   **@on**ON  
   
-     При изменении значения параметра **@on** необходимо помнить о том, как он взаимодействует с параметром **@columnid** .  
+     При изменении **@on** параметра помните о его взаимодействии с **@columnid** параметром:  
   
     |ON|Идентификатор столбца|Результат|  
     |--------|---------------|------------|  
@@ -49,9 +49,9 @@ ms.locfileid: "63135621"
 > [!IMPORTANT]
 >  Параметры всех хранимых процедур [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] (<strong>sp_trace_*xx*</strong>), в отличие от обычных хранимых процедур, жестко типизированы и не поддерживают автоматическое преобразование типов данных. Если эти параметры не вызываются вместе с правильными типами данных входных параметров, как указано в описании аргумента, хранимая процедура возвращает ошибку.  
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Хранимая процедура sp_trace_setevent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
- [sp_trace_setstatus (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql)   
+ [Хранимая процедура sp_trace_setstatus (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql)   
  [Системные хранимые процедуры (Transact-SQL)](/sql/relational-databases/system-stored-procedures/system-stored-procedures-transact-sql)   
  [Хранимые процедуры приложения SQL Server Profiler (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql)  
   

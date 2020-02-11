@@ -26,18 +26,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a66125c6e241c75d473fa170d3de5ef9755b28e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774560"
 ---
 # <a name="about-log-shipping-sql-server"></a>Сведения о доставке журналов (SQL Server)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет автоматически отправлять резервные копии журналов транзакций из *базы данных-источника* экземпляра *сервера-источника* в одну или более *баз данных-получателей* других экземпляров *сервера-получателя* . Резервные копии журналов транзакций применяются к каждой из баз данных-получателей индивидуально. Необязательный третий экземпляр сервера, известный как *сервер мониторинга*, ведет журнал и отслеживает состояние операций резервного копирования и восстановления и при необходимости выдает предупреждение, если в этих запланированных операциях происходит сбой.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Доставка журналов позволяет автоматически отсылать резервные копии журналов транзакций из *базы данных-источника* на экземпляре *сервера-источника* в одну или несколько *баз данных получателя* на отдельных экземплярах *сервера-получателя* . Резервные копии журналов транзакций применяются к каждой из баз данных-получателей индивидуально. Необязательный третий экземпляр сервера, известный как *сервер мониторинга*, ведет журнал и отслеживает состояние операций резервного копирования и восстановления и при необходимости выдает предупреждение, если в этих запланированных операциях происходит сбой.  
   
- **В этом разделе.**  
+ **В этом разделе:**  
   
--   [Преимущества](#Benefits)  
+-   [Среди](#Benefits)  
   
 -   [Термины и определения](#TermsAndDefinitions)  
   
@@ -47,7 +47,7 @@ ms.locfileid: "62774560"
   
 -   [Связанные задачи](#RelatedTasks)  
   
-##  <a name="Benefits"></a> Преимущества  
+##  <a name="Benefits"></a>Среди  
   
 -   Предоставляет решение восстановления при аварии для одной базы данных-источника и одной или нескольких баз данных-получателей, каждая из которых расположена на отдельном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62774560"
   
 -   Позволяет пользователю задать задержку между моментом, когда сервер-источник создает резервную копию журнала базы данных-источника, и моментом, когда сервер-получатель должен восстановить (применить) резервную копию журнала. Большая задержка может быть полезной, например если данные в базе данных-источнике изменены случайно. Если случайное изменение будет замечено достаточно быстро, задержка позволит получить еще не измененные данные с базы данных-получателя до того, как изменения будут отражены в ней.  
   
-##  <a name="TermsAndDefinitions"></a> Термины и определения  
+##  <a name="TermsAndDefinitions"></a>Термины и определения  
  сервера-источника  
  Экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , являющийся рабочим сервером.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "62774560"
 > [!TIP]  
 >  Для каждого предупреждения необходимо задать номер. Также необходимо настроить предупреждение для оповещения оператора при появлении этого предупреждения.  
   
-##  <a name="ComponentsAndConcepts"></a> Общие сведения о доставке журналов  
+##  <a name="ComponentsAndConcepts"></a>Общие сведения о доставке журналов  
  Доставка журналов состоит из этих трех операций:  
   
 1.  резервное копирование журнала транзакций на экземпляре сервера-источника;  
@@ -123,43 +123,44 @@ ms.locfileid: "62774560"
   
  Экземпляры сервера-источника и сервера-получателя посылают собственный журнал и состояние экземпляру сервера мониторинга.  
   
- ![Конфигурация с отображением заданий резервного копирования, копирования и восстановления](../media/ls-typical-configuration.gif "Конфигурация с отображением заданий резервного копирования, копирования и восстановления")  
+ ![Конфигурация, демонстрирующая задания резервного копирования, копирования & восстановления](../media/ls-typical-configuration.gif "Конфигурация с отображением заданий резервного копирования, копирования и восстановления")  
   
-##  <a name="Interoperability"></a> Совместимость  
+##  <a name="Interoperability"></a>Взаимодействие  
  Доставка журналов может использоваться вместе со следующими функциями и компонентами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   [Необходимые условия для перехода от использования доставки журналов для групп доступности AlwaysOn &#40;SQL Server&#41;](../availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
+-   [Необходимые условия для перехода с доставки журналов на группы доступности AlwaysOn &#40;SQL Server&#41;](../availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
--   [Зеркальное отображение баз данных и доставка журналов (SQL Server)](../database-mirroring/database-mirroring-and-log-shipping-sql-server.md)  
+-   [&#40;SQL Server зеркального отображения базы данных и доставки журналов&#41;](../database-mirroring/database-mirroring-and-log-shipping-sql-server.md)  
   
--   [Репликация и доставка журналов (SQL Server)](log-shipping-and-replication-sql-server.md)  
+-   [SQL Server &#40;доставки журналов и репликации&#41;](log-shipping-and-replication-sql-server.md)  
   
 > [!NOTE]  
->  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] и зеркальное отображение баз данных являются взаимоисключающими. База данных, в которой настроена одна из этих функций, не может использоваться в другой функции.  
+>  
+  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] и зеркальное отображение баз данных являются взаимоисключающими. База данных, в которой настроена одна из этих функций, не может использоваться в другой функции.  
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
   
 -   [Обновление доставки журналов до SQL Server 2014 &#40;Transact-SQL&#41;](upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   
--   [Настройка доставки журналов (SQL Server)](configure-log-shipping-sql-server.md)  
+-   [Настройка SQL Server &#40;доставки журналов&#41;](configure-log-shipping-sql-server.md)  
   
--   [Добавление базы данных-получателя в конфигурацию доставки журналов (SQL Server)](add-a-secondary-database-to-a-log-shipping-configuration-sql-server.md)  
+-   [Добавьте базу данных-получатель в конфигурацию доставки журналов &#40;SQL Server&#41;](add-a-secondary-database-to-a-log-shipping-configuration-sql-server.md)  
   
--   [Удаление базы данных-получателя из конфигурации доставки журналов (SQL Server)](remove-a-secondary-database-from-a-log-shipping-configuration-sql-server.md)  
+-   [Удаление базы данных-получателя из конфигурации доставки журналов &#40;SQL Server&#41;](remove-a-secondary-database-from-a-log-shipping-configuration-sql-server.md)  
   
--   [Удаление доставки журналов (SQL Server)](remove-log-shipping-sql-server.md)  
+-   [Удалить SQL Server &#40;доставки журналов&#41;](remove-log-shipping-sql-server.md)  
   
--   [Просмотр отчета о доставке журналов (среда SQL Server Management Studio)](view-the-log-shipping-report-sql-server-management-studio.md)  
+-   [Просмотрите &#40;SQL Server Management Studio отчета о доставке журналов&#41;](view-the-log-shipping-report-sql-server-management-studio.md)  
   
--   [Наблюдение за доставкой журналов (Transact-SQL)](monitor-log-shipping-transact-sql.md)  
+-   [Мониторинг доставки журналов &#40;&#41;Transact-SQL](monitor-log-shipping-transact-sql.md)  
   
--   [Переход на вторичный сервер доставки журналов (SQL Server)](fail-over-to-a-log-shipping-secondary-sql-server.md)  
+-   [Отработка отказа на SQL Server вторичного &#40;доставки журналов&#41;](fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
--   [Переход на вторичный сервер доставки журналов (SQL Server)](fail-over-to-a-log-shipping-secondary-sql-server.md)  
+-   [Отработка отказа на SQL Server вторичного &#40;доставки журналов&#41;](fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
--   [Управление именами входа и заданиями после переключения ролей (SQL Server)](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
+-   [Управление именами входа и заданиями после переключения ролей &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
-## <a name="see-also"></a>См. также  
- [Обзор групп доступности AlwaysOn &#40;SQL Server&#41;](../availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+## <a name="see-also"></a>См. также:  
+ [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](../availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

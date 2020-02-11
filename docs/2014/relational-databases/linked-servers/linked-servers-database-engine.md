@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c2909eeebde268b52ecaeff5a20a982831e7569
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62743518"
 ---
 # <a name="linked-servers-database-engine"></a>Связанные серверы (компонент Database Engine)
@@ -35,7 +35,7 @@ ms.locfileid: "62743518"
   
 -   Возможность единообразной адресации разных источников данных.  
   
- Можно настроить связанный сервер, используя инструкцию [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [sp_addlinkedserver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql) . Поставщики OLE DB существенно различаются по типу и количеству необходимых параметров. Например, некоторые поставщики требуют предоставления контекста безопасности для соединения с помощью [sp_addlinkedsrvlogin (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql). Некоторые поставщики OLE DB разрешают использовать [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для обновления данных в источнике данных OLE DB. Другие предоставляют доступ к данным только для чтения. Для информации о каждом поставщике OLE DB обратитесь к документации об этом поставщике OLE DB.  
+ Можно настроить связанный сервер, используя инструкцию [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql) . Поставщики OLE DB существенно различаются по типу и количеству необходимых параметров. Например, некоторые поставщики требуют предоставления контекста безопасности для соединения с помощью [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql). Некоторые поставщики OLE DB разрешают использовать [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для обновления данных в источнике данных OLE DB. Другие предоставляют доступ к данным только для чтения. Для информации о каждом поставщике OLE DB обратитесь к документации об этом поставщике OLE DB.  
   
 ## <a name="linked-server-components"></a>Компоненты связанных серверов  
  Определение связанного сервера задает следующие объекты.  
@@ -44,17 +44,20 @@ ms.locfileid: "62743518"
   
 -   Источник данных OLE DB  
   
- *Поставщиком OLE DB* является динамическая библиотека, осуществляющая управление и взаимодействие с определенными источниками данных. *Источник данных OLE DB* определяет конкретную базу данных, доступ к которой выполняется через интерфейс OLE DB. Хотя источники данных, запросы к которым выполняются с помощью определений связанных серверов, являются обычными базами данных, существуют поставщики OLE DB для разнообразных файлов и форматов файлов. Сюда входят текстовые файлы, данные электронных таблиц и результаты поиска полнотекстового содержимого.  
+ 
+  *Поставщиком OLE DB* является динамическая библиотека, осуществляющая управление и взаимодействие с определенными источниками данных. 
+  *Источник данных OLE DB* определяет конкретную базу данных, доступ к которой выполняется через интерфейс OLE DB. Хотя источники данных, запросы к которым выполняются с помощью определений связанных серверов, являются обычными базами данных, существуют поставщики OLE DB для разнообразных файлов и форматов файлов. Сюда входят текстовые файлы, данные электронных таблиц и результаты поиска полнотекстового содержимого.  
   
- Поставщик OLE DB для собственного клиента [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (PROGID: SQLNCLI11) является официальным поставщиком OLE DB для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Поставщик OLE DB собственного клиента (ProgID: SQLNCLI11) является официальным поставщиком OLE DB для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предназначены для работы с поставщиком OLE DB, реализующим необходимые интерфейсы OLE DB. Однако работа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] проверялась только с поставщиком Native Client OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и некоторыми другими поставщиками.  
+>  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предназначены для работы с поставщиком OLE DB, реализующим необходимые интерфейсы OLE DB. Однако работа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] проверялась только с поставщиком Native Client OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и некоторыми другими поставщиками.  
   
 ## <a name="linked-server-details"></a>Подробности настройки связанных серверов  
  На следующей иллюстрации показаны основы настройки связанных серверов.  
   
- ![Уровень клиента, уровень сервера и уровень сервера баз данных](../../database-engine/media/lsvr.gif "Уровень клиента, уровень сервера и уровень сервера баз данных")  
+ ![Уровень клиента, уровень сервера и уровень сервера базы данных](../../database-engine/media/lsvr.gif "Уровень клиента, уровень сервера и уровень сервера баз данных")  
   
  Обычно связанные серверы используются для обработки распределенных запросов. Если клиентское приложение выполняет распределенный запрос через связанный сервер, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] проводит синтаксический анализ команды и передает запросы поставщику OLE DB. Запрос на набор строк может быть в форме выполнения запроса к поставщику или в форме открытия базовой таблицы из поставщика.  
   
@@ -78,23 +81,23 @@ ms.locfileid: "62743518"
   
  Определять связанные серверы можно также в среде [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. В обозревателе объектов щелкните правой кнопкой мыши **Объекты сервера**, выберите **Создать**и выберите **Связанный сервер**. Определение связанного сервера можно удалить, щелкнув правой кнопкой мыши имя связанного сервера и выбрав **Удалить**.  
   
- При выполнении распределенного запроса к связанному серверу необходимо указать полное, состоящее из четырех частей имя таблицы для каждого источника данных, к которому выполняется запрос. Это четырехкомпонентное имя должно быть в форме _linked_server_name.catalog_ **. _`schema`_ .** _object_name_.  
+ При выполнении распределенного запроса к связанному серверу необходимо указать полное, состоящее из четырех частей имя таблицы для каждого источника данных, к которому выполняется запрос. Это имя состоит из четырех частей в формате _linked_server_name. catalog_**_`schema`_..** _object_name_.  
   
 > [!NOTE]  
 >  Связанные серверы могут быть определены таким образом, чтобы указывать на сервер, на котором они определены (обратная связь). Серверы с обратной связью наиболее полезны для тестирования приложения, в котором используются распределенные запросы в односерверной сети. Серверы, связанные с помощью петлевого адреса, предназначены для тестирования и не поддерживаются во многих операциях, таких как распределенные транзакции.  
   
 ## <a name="related-tasks"></a>Связанные задачи  
- [Создание связанных серверов (компонент SQL Server Database Engine)](create-linked-servers-sql-server-database-engine.md)  
+ [Создание связанных серверов &#40;SQL Server ядро СУБД&#41;](create-linked-servers-sql-server-database-engine.md)  
   
- [sp_addlinkedserver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)  
+ [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)  
   
- [sp_addlinkedsrvlogin (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql)  
+ [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql)  
   
- [sp_dropserver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-dropserver-transact-sql)  
+ [sp_dropserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropserver-transact-sql)  
   
 ## <a name="related-content"></a>См. также  
- [sys.servers (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-servers-transact-sql)  
+ [sys. Servers &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-servers-transact-sql)  
   
- [sp_linkedservers (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-linkedservers-transact-sql)  
+ [sp_linkedservers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-linkedservers-transact-sql)  
   
   

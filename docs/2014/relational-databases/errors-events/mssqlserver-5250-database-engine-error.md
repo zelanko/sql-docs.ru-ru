@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 542a873b98c6fc6fde48b34d7ff44061dad5d45b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62867948"
 ---
-# <a name="mssqlserver5250"></a>MSSQLSERVER_5250
+# <a name="mssqlserver_5250"></a>MSSQLSERVER_5250
     
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|5250|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC4_CRITICAL_DATABASE_PAGE_CORRUPT|  
-|Текст сообщения|Ошибка базы данных: PAGE_TYPE страница P_ID для базы данных «NAME» (идентификатор базы данных DB_ID) неверна. Эту ошибку исправить невозможно. Необходимо восстановить из резервной копии.|  
+|Текст сообщения|Ошибка базы данных. PAGE_TYPE страница P_ID для базы данных "NAME" (идентификатор базы данных DB_ID) неверна. Эту ошибку исправить невозможно. Необходимо восстановить из резервной копии.|  
   
 ## <a name="explanation"></a>Объяснение  
  Повреждена страница заголовка файла или загрузочная страница указанной базы данных.  

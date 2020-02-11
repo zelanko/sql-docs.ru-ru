@@ -13,19 +13,19 @@ ms.assetid: 6c34e1ef-4273-4afb-a7d3-f9017ab69c5e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1b6f12b4b60e1914cab5ab1a52f48b0ac939aa8e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68073850"
 ---
 # <a name="sqlgetstmtattr-cursor-library"></a>SQLGetStmtAttr (библиотека курсоров)
 > [!IMPORTANT]  
->  Этот компонент будет удален в будущих версиях Windows. Избегайте использования этой функции в новых разработках и запланируйте изменение приложений, которые сейчас ее используют. Корпорация Майкрософт рекомендует использовать функциональные возможности драйвера курсора.  
+>  Эта функция будет удалена в следующей версии Windows. Избегайте использования этой функции в новых разработках и запланируйте изменение приложений, которые в настоящее время используют эту функцию. Корпорация Майкрософт рекомендует использовать функцию курсора драйвера.  
   
- В этом разделе рассматривается использование **SQLGetStmtAttr** функции в библиотеку курсоров. Общие сведения о **SQLGetStmtAttr**, см. в разделе [SQLGetStmtAttr, функция](../../../odbc/reference/syntax/sqlgetstmtattr-function.md).  
+ В этом разделе обсуждается использование функции **SQLGetStmtAttr** в библиотеке курсоров. Общие сведения о **SQLGetStmtAttr**см. в разделе [функция SQLGetStmtAttr](../../../odbc/reference/syntax/sqlgetstmtattr-function.md).  
   
- Библиотека курсоров поддерживает следующие атрибуты инструкций с **SQLGetStmtAttr**:  
+ Библиотека курсоров поддерживает следующие атрибуты инструкции с **SQLGetStmtAttr**:  
   
 |||  
 |-|-|  

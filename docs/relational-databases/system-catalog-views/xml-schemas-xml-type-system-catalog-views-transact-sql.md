@@ -1,5 +1,5 @@
 ---
-title: XML-схем (система типов XML) в каталог представления (Transact-SQL) | Документация Майкрософт
+title: Представления каталога XML-схем (система типов XML) (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: e92304ae-f920-4b28-8f63-6324973ba359
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6aeedf7820309c7dfbb3e715eedfd6c9d7f67701
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67929779"
 ---
 # <a name="xml-schemas-xml-type-system-catalog-views-transact-sql"></a>Представления каталога XML-схем (системы типов XML) (Transact-SQL)
@@ -38,8 +38,8 @@ ms.locfileid: "67929779"
 |[sys.xml_schema_wildcard_namespaces](../../relational-databases/system-catalog-views/sys-xml-schema-wildcard-namespaces-transact-sql.md)|[sys.xml_indexes](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)|  
 |[sys.xml_schema_wildcards](../../relational-databases/system-catalog-views/sys-xml-schema-wildcards-transact-sql.md)||  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Системные представления &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [Системные представления &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

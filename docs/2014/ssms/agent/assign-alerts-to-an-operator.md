@@ -18,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 905114d0190a7d1e8441e98249664c985a433988
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62473215"
 ---
 # <a name="assign-alerts-to-an-operator"></a>Assign Alerts to an Operator
-  В этом разделе описано, как назначать предупреждения агента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для операторов, что позволяет им получать уведомления о заданиях в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  В этом разделе описывается назначение [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предупреждений агента операторам, чтобы они могли получать уведомления о заданиях в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **В этом разделе**  
   
@@ -33,7 +33,7 @@ ms.locfileid: "62473215"
   
      [Ограничения](#Restrictions)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Назначение предупреждений оператору с помощью:**  
   
@@ -45,9 +45,9 @@ ms.locfileid: "62473215"
   
 ###  <a name="Restrictions"></a> Ограничения  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] обеспечивает простой графический способ управления всей системой предупреждений. Использование среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] рекомендуется для настройки инфраструктуры предупреждений.  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]предоставляет простой графический способ управления всей системой предупреждений. Использование среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] рекомендуется для настройки инфраструктуры предупреждений.  
   
--   Чтобы в ответ на предупреждение отправить уведомление, необходимо настроить агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для отправки почты. Дополнительные сведения см. в статье [Configure SQL Server Agent Mail to Use Database Mail](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md).  
+-   Чтобы в ответ на предупреждение отправить уведомление, необходимо настроить агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для отправки почты. Дополнительные сведения см. [в статье настройка агент SQL Server mail для использования Database Mail](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md).  
   
 -   Ошибки, возникающие при отправке сообщения по электронной почте или уведомления по пейджеру, регистрируются в журнале ошибок службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -68,9 +68,9 @@ ms.locfileid: "62473215"
   
 4.  Щелкните правой кнопкой мыши оператора, для которого нужно назначить предупреждение, выберите пункт **Свойства**и перейдите на страницу **Уведомления** .  
   
-5.  В разделе _Выбор страницы_**диалогового окна** Свойства **имя_оператора**выберите **Уведомления**.  
+5.  В диалоговом окне**свойства** _Operator_name_в разделе **Выбор страницы**выберите пункт **уведомления**.  
   
-6.  В поле **Просмотр отправленных пользователю уведомлений по**выберите **Предупреждения** , чтобы просмотреть список предупреждений, отправляемых этому оператору, либо **Задания** , чтобы просмотреть список заданий, отправляющих уведомления этому оператору. Установите перечисленные ниже флажки, чтобы выбрать способ доставки для каждого из уведомлений: **Электронная почта**, **Пейджер** или **Net send**.  
+6.  В поле **Просмотр отправленных пользователю уведомлений по**выберите **Предупреждения** , чтобы просмотреть список предупреждений, отправляемых этому оператору, либо **Задания** , чтобы просмотреть список заданий, отправляющих уведомления этому оператору. Установите один или более перечисленных ниже флажков, чтобы выбрать способ доставки для каждого из уведомлений: **Электронная почта**, **Пейджер**или **Net send**.  
   
 7.  После завершения нажмите кнопку **ОК**.  
   

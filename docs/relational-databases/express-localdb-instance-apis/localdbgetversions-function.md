@@ -1,5 +1,5 @@
 ---
-title: Функция LocalDBGetVersions | Документация Майкрософт
+title: Функция Локалдбжетверсионс | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,17 +16,17 @@ ms.assetid: 033a9c6b-0d7f-4f8a-ab60-33cd6fee0d33
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 5263215c8ccac3d9337f415fe9c279bb3f3ad3ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68091211"
 ---
 # <a name="localdbgetversions-function"></a>Функция LocalDBGetVersions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Возвращает все доступные версии SQL Server Express LocalDB на компьютере.  
   
- **Файл заголовка:** sqlncli.h  
+ **Заголовочный файл:** sqlncli. h  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,9 +36,9 @@ ms.locfileid: "68091211"
   
 ## <a name="parameters"></a>Параметры  
  *pVersionNames*  
- [Выход] Содержит имена версий LocalDB, доступные на рабочей станции пользователя.  
+ Проверки Содержит имена версий LocalDB, доступных на рабочей станции пользователя.  
   
- *lpdwNumberOfVersions*  
+ *лпдвнумберофверсионс*  
  [Вход/выход] На входе содержит число ячеек для версий в буфере *pVersionNames* .   
 На выходе содержит количество существующих версий LocalDB.  
   
@@ -58,10 +58,10 @@ ms.locfileid: "68091211"
  [LOCALDB_ERROR_INTERNAL_ERROR](../../relational-databases/express-localdb-error-messages/localdb-error-internal-error.md)  
  Произошла непредвиденная ошибка. Подробные сведения см. в журнале событий.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Образец кода, использующего API LocalDB, см. в разделе [SQL Server Express LocalDB Reference](../../relational-databases/sql-server-express-localdb-reference.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Заголовок и сведения о версии SQL Server Express LocalDB](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  
   
   

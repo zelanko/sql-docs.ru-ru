@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4f86c02acfcefba4972769367649cfd6b2075107
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103622"
 ---
 # <a name="process-large-reports"></a>Обработка больших отчетов
@@ -38,7 +38,7 @@ ms.locfileid: "66103622"
 ## <a name="configuration-recommendations"></a>Рекомендации по настройке  
  Рекомендации по выполнению и подготовке к просмотру отчетов, а также по доступу к ним включают следующее:  
   
--   Задайте в отчете поддержку разбиения на страницы. Сервер отчетов пересылает в каждый момент времени одну страницу. Если в отчете включено разбиение на страницы, можно проконтролировать объем данных, пересылаемых браузеру. Дополнительные сведения см. в разделе [Предварительная загрузка кэша (диспетчер отчетов)](preload-the-cache-report-manager.md).  
+-   Задайте в отчете поддержку разбиения на страницы. Сервер отчетов пересылает в каждый момент времени одну страницу. Если в отчете включено разбиение на страницы, можно проконтролировать объем данных, пересылаемых браузеру. Дополнительные сведения см. в разделе [Preload the Cache &#40;Report Manager&#41;](preload-the-cache-report-manager.md).  
   
 -   Для предотвращения выполнения отчета по требованию настройте его таким образом, чтобы он выполнялся как назначенный моментальный снимок отчета. Не устанавливайте значение времени ожидания выполнения отчета. Выполняйте отчеты в периоды минимальных нагрузок.  
   
@@ -68,11 +68,11 @@ ms.locfileid: "66103622"
   
  Если необходимо использовать доставку отчета по электронной почте, настройте подписку таким образом, чтобы она включала ссылку. Избегайте отправки отчетов в качестве вложений.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Подписки и доставка (службы Reporting Services)](../subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Установка свойств обработки отчетов](set-report-processing-properties.md)   
- [Задание учетных данных и сведениях о соединении для источников данных отчета](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Указание учетных данных и сведений о соединении для источников данных отчета](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Управление содержимым сервера отчетов (службы Reporting Services в основном режиме)](report-server-content-management-ssrs-native-mode.md)   
- [Предварительная загрузка кэша (диспетчер отчетов)](preload-the-cache-report-manager.md)  
+ [Предварительная загрузка диспетчер отчетов &#40;кэша&#41;](preload-the-cache-report-manager.md)  
   
   

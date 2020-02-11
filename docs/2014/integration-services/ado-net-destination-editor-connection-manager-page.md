@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: faeb72f875fd5427536ddd72db03ca71a25b293e
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70154023"
 ---
 # <a name="ado-net-destination-editor-connection-manager-page"></a>Редактор назначения «ADO.NET» (страница «Диспетчер соединений»)
@@ -40,25 +40,25 @@ ms.locfileid: "70154023"
  Создайте новый диспетчер соединений с помощью диалогового окна **Настройка диспетчера соединений ADO.NET** .  
   
  **Использовать таблицу или представление**  
- Выберите существующую таблицу или представление из списка или создайте новую таблицу, выбрав пункт **Создать**.  
+ Выберите существующую таблицу или представление из списка или создайте новую таблицу, нажав кнопку **создать**.  
   
  **Создать**  
  Создайте новую таблицу, используя диалоговое окно **Создание таблицы** .  
   
 > [!NOTE]  
->  При нажатии кнопки **Создать**службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] по умолчанию формируют инструкцию CREATE TABLE на основе подключенного источника данных. Эта инструкция CREATE TABLE не включает атрибут FILESTREAM, даже если исходная таблица содержит столбец, для которого объявлен атрибут FILESTREAM. Чтобы запустить компонент служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] с атрибутом FILESTREAM, сначала следует создать хранилище FILESTREAM в целевой базе данных. Затем добавьте атрибут FILESTREAM к инструкции CREATE TABLE в диалоговом окне **Создание таблицы** . Дополнительные сведения см. в разделе [Данные большого двоичного объекта (SQL Server)](../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
+>  При нажатии **** кнопки создать [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] создает инструкцию CREATE TABLE по умолчанию на основе подключенного источника данных. Эта инструкция CREATE TABLE не включает атрибут FILESTREAM, даже если исходная таблица содержит столбец, для которого объявлен атрибут FILESTREAM. Чтобы запустить компонент служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] с атрибутом FILESTREAM, сначала следует создать хранилище FILESTREAM в целевой базе данных. Затем добавьте атрибут FILESTREAM к инструкции CREATE TABLE в диалоговом окне **Создание таблицы** . Дополнительные сведения см. в разделе [Данные большого двоичного объекта (SQL Server)](../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
  **Предварительный просмотр**  
  Просмотрите предварительные результаты, используя диалоговое окно **Предварительный просмотр результатов запроса** . В окне «Предварительный просмотр» может отображаться до 200 строк.  
   
- **По возможности следует использовать массовую вставку**  
+ **Использовать инструкцию INSERT при наличии**  
  Укажите, следует ли использовать интерфейс <xref:System.Data.SqlClient.SqlBulkCopy> для улучшения производительности операций массовой вставки.  
   
  Только поставщики ADO.NET, возвращающие объект <xref:System.Data.SqlClient.SqlConnection> , поддерживают использование интерфейса <xref:System.Data.SqlClient.SqlBulkCopy> . Поставщик данных .NET для SQL Server (SqlClient) возвращает объект <xref:System.Data.SqlClient.SqlConnection> , а настраиваемый поставщик может возвращать объект <xref:System.Data.SqlClient.SqlConnection> .  
   
  Вы можете использовать поставщик данных .NET для SQL Server (SqlClient) для подключения к [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)].  
   
- Если был выбран параметр **По возможности использовать массовую вставку**, а для параметра **Ошибка** задано значение **Перенаправить строку**, то в пакет данных, перенаправляемый объектом назначения в вывод ошибок, могут попасть и строки, не содержащие ошибок. Дополнительные сведения об обработке ошибок в массовых операциях см. в разделе [Обработка ошибок в данных](data-flow/error-handling-in-data.md). Дополнительные сведения о параметре **Ошибка** см. в разделе [Редактор назначения ADO.NET (страница "Вывод ошибок")](../../2014/integration-services/ado-net-destination-editor-error-output-page.md).  
+ Если был выбран параметр **По возможности использовать массовую вставку**, а для параметра **Ошибка** задано значение **Перенаправить строку**, то в пакет данных, перенаправляемый объектом назначения в вывод ошибок, могут попасть и строки, не содержащие ошибок. Дополнительные сведения об обработке ошибок в массовых операциях см. в разделе [Обработка ошибок в данных](data-flow/error-handling-in-data.md). Дополнительные сведения о параметре **Ошибка** см. в разделе [ADO NET Destination Editor &#40;Ошибка Output Page&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md).  
   
 > [!NOTE]  
 >  Если исходная таблица [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или Sybase включает столбец идентификаторов, то необходимо использовать задачи «Выполнение SQL» для выполнения инструкции SET IDENTITY_INSERT до и после доступа к назначению «ADO.NET». Это свойство столбца идентификаторов указывает значение приращения для столбца. Инструкция SET IDENTITY_INSERT разрешает вставлять в столбец идентификаторов явно заданные значения. Чтобы выполнить инструкции CREATE TABLE и SET IDENTITY в одном и том же подключении к базе данных, задайте свойство `RetainSameConnection` диспетчера соединений [!INCLUDE[vstecado](../includes/vstecado-md.md)] равным `True`. Кроме того, используйте один и тот же диспетчер соединений [!INCLUDE[vstecado](../includes/vstecado-md.md)] для задач «Выполнение SQL» и назначения «ADO NET».  
@@ -68,10 +68,10 @@ ms.locfileid: "70154023"
 ## <a name="external-resources"></a>Внешние ресурсы  
  Техническая статья о [быстром способе загрузки данных в Базу данных SQL Azure](https://go.microsoft.com/fwlink/?LinkId=244333) на сайте sqlcat.com  
   
-## <a name="see-also"></a>См. также статью  
- [Редактор назначения ADO.NET (страница "Сопоставления")](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)   
- [Редактор назначения ADO.NET (страница "Вывод ошибок")](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)   
+## <a name="see-also"></a>См. также:  
+ [Редактор назначения «ADO NET» &#40;«сопоставления»&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)   
+ [Редактор назначения "ADO NET" &#40;страница "вывод ошибок"&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)   
  [Диспетчер соединений ADO.NET](connection-manager/ado-net-connection-manager.md)   
- [Задача «Выполнение SQL»](control-flow/execute-sql-task.md)  
+ [Задача "Выполнение SQL"](control-flow/execute-sql-task.md)  
   
   

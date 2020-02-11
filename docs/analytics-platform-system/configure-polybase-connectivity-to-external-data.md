@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 3b754fb2de33a230bc7d27f239b2778d2849fd5a
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401273"
 ---
 # <a name="what-is-polybase"></a>Что такое PolyBase?
@@ -32,8 +32,8 @@ Polybase на ТД поддерживает чтение и запись в фа
 > [!NOTE] 
 > Остальные статьи, связанные с Polybase, описывают способы, как настроить Polybase на ТД 2016 (AU6) и более поздних версий.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 - [Hadoop](polybase-configure-hadoop.md)
-- [Хранилище BLOB-объектов Azure](polybase-configure-azure-blob-storage.md)
+- [хранилище BLOB-объектов Azure](polybase-configure-azure-blob-storage.md)
 <!-- MISSING LINKS [PolyBase &#40;SQL Server PDW&#41;](../sqlpdw/polybase-sql-server-pdw.md)  -->  
   

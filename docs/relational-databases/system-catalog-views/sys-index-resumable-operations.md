@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d33b78710605841e4559f9c402a18210e25b2daa
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73980304"
 ---
 # <a name="sysindex_resumable_operations-transact-sql"></a>sys. index_resumable_operations (Transact-SQL)
@@ -32,25 +32,25 @@ ms.locfileid: "73980304"
 **sys. index_resumable_operations** — это системное представление, которое отслеживает и проверяет текущее состояние выполнения возобновляемого перестроения индекса или создания.  
 Область **применения**: SQL Server (2017 и более поздние версии) и база данных SQL Azure.
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Идентификатор объекта, которому принадлежит этот индекс (не допускает значения NULL).|  
 |**index_id**|**int**|Идентификатор индекса (не допускает значения NULL). **index_id** уникален только в пределах объекта.|
-|**name**|**sysname**|Имя индекса. **имя** уникально только в пределах объекта.|  
-|**sql_text**|**nvarchar(max)** ;|Текст инструкции DDL T-SQL|
+|**name**|**имеет sysname**|Имя индекса. **имя** уникально только в пределах объекта.|  
+|**sql_text**|**nvarchar(max)**|Текст инструкции DDL T-SQL|
 |**last_max_dop**|**smallint**|Использован последний MAX_DOP (по умолчанию = 0)|
 |**partition_number**|**int**|Номер секции в индексе или куче-владельце. Для несекционированных таблиц и индексов, если выполняется перестроение всех секций, значение этого столбца равно NULL.|
 |**state**|**tinyint**|Операционное состояние для возобновляемого индекса:<br /><br />0 = работает<br /><br />1 = приостановка|
-|**state_desc**|**nvarchar(60)**|Описание операционного состояния возобновляемого индекса (запущенного или приостановленного)|  
+|**state_desc**|**nvarchar (60)**|Описание операционного состояния возобновляемого индекса (запущенного или приостановленного)|  
 |**start_time**|**datetime**|Время начала операции с индексами (не допускает значения NULL)|
 |**last_pause_time**|**DataTime**| Время последней паузы операции с индексом (Nullable). Значение NULL, если операция выполняется и никогда не приостанавливается.|
-|**total_execution_time**|**int**|Общее время выполнения от времени начала в минутах (не допускает значения NULL)|
-|**percent_complete**|**real**|Выполнение операции с индексами в% (не допускает значения NULL).|
+|**total_execution_time;**|**int**|Общее время выполнения от времени начала в минутах (не допускает значения NULL)|
+|**percent_complete**|**Real**|Выполнение операции с индексами в% (не допускает значения NULL).|
 |**page_count**|**bigint**|Общее число страниц индекса, выделенных операцией построения индекса для новых и сопоставленных индексов (не допускает значения NULL).
 
 ## <a name="permissions"></a>Разрешения
 
-[!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+[!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Дополнительные сведения см. в разделе [Настройка видимости метаданных](../../relational-databases/security/metadata-visibility-configuration.md).  
 
 ## <a name="example"></a>Пример
 
@@ -60,10 +60,10 @@ ms.locfileid: "73980304"
 SELECT * FROM  sys.index_resumable_operations WHERE STATE = 1;  
 ```
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также:
 
 - [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)
-- [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)
+- [СОЗДАТЬ ИНДЕКС](../../t-sql/statements/create-index-transact-sql.md)
 - [Представления каталога](catalog-views-transact-sql.md)
 - [Представления каталога объектов](object-catalog-views-transact-sql.md)
 - [sys.indexes](sys-xml-indexes-transact-sql.md)
@@ -73,4 +73,4 @@ SELECT * FROM  sys.index_resumable_operations WHERE STATE = 1;
 - [sys.key_constraints](sys-key-constraints-transact-sql.md)
 - [sys.filegroups](sys-filegroups-transact-sql.md)
 - [sys.partition_schemes](sys-partition-schemes-transact-sql.md)
-- [Часто задаваемые вопросы о запросах к системному каталогу SQL Server](querying-the-sql-server-system-catalog-faq.md)
+- [Часто задаваемые вопросы о запросах к системному каталогу сервера SQL Server](querying-the-sql-server-system-catalog-faq.md)

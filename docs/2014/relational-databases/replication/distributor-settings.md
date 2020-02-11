@@ -1,5 +1,5 @@
 ---
-title: Диалоговое окно «Параметры распространителя» | Документация Майкрософт
+title: Диалоговое окно "Параметры распространителя" | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d910cdb4baf1d65f67ece14c20a1f384af2a843b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721348"
 ---
-# <a name="sql-server-replication-distributor-settings-dialog-box"></a>Диалоговое окно «Параметры распространителя» репликация SQL Server
+# <a name="sql-server-replication-distributor-settings-dialog-box"></a>Репликация SQL Server диалоговое окно "Параметры распространителя"
   В диалоговом окне **Настройки распространителя** можно изменить настройки распространителей, добавленных на левую панель монитора репликации.  
   
 ## <a name="options"></a>Параметры  

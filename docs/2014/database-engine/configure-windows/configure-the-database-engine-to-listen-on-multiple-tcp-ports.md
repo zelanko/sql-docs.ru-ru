@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c5f3c354a36f5a3a62120ecc40a815420393648c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62811548"
 ---
 # <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>Настройка компонента Database Engine на прослушивание нескольких портов TCP
@@ -82,7 +82,7 @@ ms.locfileid: "62811548"
   
 4.  Щелкните правой кнопкой мыши **IPAll**и выберите пункт **Свойства**.  
   
-5.  В поле **TCP-порт** введите номера портов, которые должны прослушиваться компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)] , разделяя их запятыми. В этом примере, если порт по умолчанию 1433, введите `,1500` чтобы поле содержало `1433,1500`, а затем нажмите кнопку **ОК**.  
+5.  В поле **TCP-порт** введите номера портов, которые должны прослушиваться компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)] , разделяя их запятыми. В нашем примере, если указан порт по умолчанию 1433, введите `,1500` , чтобы поле было `1433,1500`Прочитано, а затем нажмите кнопку **ОК**.  
   
     > [!NOTE]  
     >  Если порт включается не для всех IP-адресов, настройте дополнительный порт в окне свойств только для необходимого адреса. Затем на панели консоли щелкните правой кнопкой мыши **TCP/IP**, выберите пункт **Свойства**и в поле **Прослушивать все** выберите **Нет**.  
@@ -101,7 +101,7 @@ ms.locfileid: "62811548"
     sqlcmd -SACCT,1500  
     ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [CREATE ENDPOINT (Transact-SQL)](/sql/t-sql/statements/create-endpoint-transact-sql)   
  [DROP ENDPOINT (Transact-SQL)](/sql/t-sql/statements/drop-endpoint-transact-sql)   
  [GRANT, предоставление разрешений конечной точке (Transact-SQL)](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)   

@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9de758c6a54ca1993efc8873a02293331a129b33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62870982"
 ---
 # <a name="database-engine-error-severities"></a>Степени серьезности ошибок компонента Database Engine
@@ -29,7 +29,7 @@ ms.locfileid: "62870982"
 ## <a name="levels-of-severity"></a>Уровни серьезности  
  В следующей таблице описаны уровни серьезности ошибок, формируемых компонентом [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
-|Степень серьезности|Описание|  
+|Степень серьезности|Description|  
 |--------------------|-----------------|  
 |0-9|Информационные сообщения, возвращающие сведения о состоянии или оповещающие о несерьезных ошибках. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] не формирует системные ошибки с уровнем серьезности от 0 до 9.|  
 |10|Информационные сообщения, возвращающие сведения о состоянии или оповещающие о несерьезных ошибках. Для обеспечения совместимости компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] перед возвратом сведений об ошибке в вызвавшее приложение преобразует уровень серьезности 10 в уровень 0.|  

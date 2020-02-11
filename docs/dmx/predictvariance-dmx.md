@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 83bcd95d6eb946d15884d57550b826bc7379fb64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68041692"
 ---
 # <a name="predictvariance-dmx"></a>PredictVariance (расширения интеллектуального анализа данных)
@@ -27,14 +27,14 @@ ms.locfileid: "68041692"
 PredictVariance(<scalar column reference>)  
 ```  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  Скалярный столбец.  
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
- Скалярное значение типа, который задается параметром  *\<ссылка на скалярный столбец >* .  
+ Скалярное значение типа, заданное * \<скалярным справочником по столбцам>*.  
   
-## <a name="remarks"></a>Примечания  
- Если ссылка на столбец является дискретной, **PredictVariance** возвращает 0, так как невозможно вычислить дисперсию по дискретным значениям.  
+## <a name="remarks"></a>Remarks  
+ Если ссылка на столбец является дискретной, **PredictVariance** возвращает 0, так как дисперсию нельзя вычислить из дискретных значений.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере используется естественное прогнозируемое соединение для определения вероятности покупки велосипеда каким-либо человеком на основе модели интеллектуального анализа данных TM-дерева принятия решений, а также определяется дисперсия для этого предсказания.  
@@ -53,9 +53,9 @@ NATURAL PREDICTION JOIN
   0 AS [Number Children At Home]) AS t  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; справочнике по функциям](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Функции &#40;расширений интеллектуального анализа данных&#41;](../dmx/functions-dmx.md)   
- [Общие функции прогнозирования &#40;расширений интеллектуального анализа данных&#41;](../dmx/general-prediction-functions-dmx.md)  
+## <a name="see-also"></a>См. также:  
+ [Расширения интеллектуального анализа данных &#40;Справочник по функциям DMX&#41;](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Функции &#40;&#41;расширений интеллектуального анализа данных](../dmx/functions-dmx.md)   
+ [Общие прогнозирующие функции &#40;&#41;расширений интеллектуального анализа данных](../dmx/general-prediction-functions-dmx.md)  
   
   

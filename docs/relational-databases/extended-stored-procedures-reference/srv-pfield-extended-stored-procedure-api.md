@@ -20,17 +20,17 @@ ms.assetid: a61e4c1f-e65b-48ea-a7d1-3e1544af389d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 8cb43ad9128160dfbd8e943ec3db02930eb3ac53
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68131582"
 ---
 # <a name="srv_pfield-extended-stored-procedure-api"></a>srv_pfield (API-интерфейс расширенных хранимых процедур)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Используйте вместо этого интеграцию со средой CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Вместо этого используйте интеграцию со средой CLR.  
   
  Возвращает сведения о подключении к базе данных.  
   
@@ -54,7 +54,7 @@ len
  *srvproc*  
  Указатель, определяющий подключение к базе данных.  
   
- *field*  
+ *полями*  
  Задает возвращаемые сведения о соединении.  
   
 |Значение|Возвращает|  
@@ -72,7 +72,7 @@ len
 |SRV_PIPEHANDLE|Строка, содержащая дескриптор канала подключенного клиента, или NULL, если клиент подключен по сети, не использующей именованные каналы. Для использования этого дескриптора как допустимого дескриптора канала в [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows строку нужно преобразовать в числовой формат.|  
 |SRV_RMTSERVER|Сервер, с которого вошел в систему клиентский процесс. Если вход в систему выполнялся с клиента, значение представляет собой пустую строку.|  
 |SRV_ROWSENT|Количество строк, уже переданных процессом *srvproc* для текущего набора результатов.|  
-|SRV_SPID|Идентификатор серверного потока *srvproc*. Для расширенных хранимых процедур это значение совпадает со столбцом **kpid**  таблицы **sys.sysprocesses** и может изменяться со временем.|  
+|SRV_SPID|Идентификатор серверного потока *srvproc*. Для расширенных хранимых процедур это значение совпадает со столбцом **kpid ** таблицы **sys.sysprocesses** и может изменяться со временем.|  
 |SRV_SPROC_CODEPAGE|Кодовая страница, используемая сервером для интерпретации данных в многобайтовой кодировке.|  
 |SRV_STATUS|Текущее состояние *srvproc*: запущена или закрыта|  
 |SRV_TYPE|Тип соединения *srvproc*. Если возвращается значение server, *srvproc* принадлежит экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если возвращается значение client, *srvproc* принадлежит клиенту DB-Library или ODBC.|  

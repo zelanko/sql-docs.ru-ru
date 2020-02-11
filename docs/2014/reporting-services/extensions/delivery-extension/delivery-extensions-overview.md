@@ -14,18 +14,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5bbc5e58b95ffb4eebc5dfa0400a566868ae5cba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63165211"
 ---
 # <a name="delivery-extensions-overview"></a>Общие сведения о модулях доставки
-  Службы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] позволяют пользователям создавать и публиковать отчеты, которые затем могут доставляться в различные места. Кроме того, службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] содержат несколько модулей доставки и API-интерфейс доставки, который позволяет разработчикам создавать дополнительные модули доставки, расширяя возможности доставки в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] позволяет пользователям создавать и публиковать отчеты, которые после создания и публикации могут доставляться в различные места. Кроме того, службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] содержат несколько модулей доставки и API-интерфейс доставки, который позволяет разработчикам создавать дополнительные модули доставки, расширяя возможности доставки в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
  В следующей таблице перечислены модули доставки, входящие в состав служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
-|Модуль доставки|Описание|  
+|Модуль доставки|Description|  
 |------------------------|-----------------|  
 |Электронная почта сервера отчетов|Отправляет отчеты отдельным пользователям или группам пользователей по электронной почте через SMTP-сервер.|  
 |Общая папка сервера отчетов|Используется для распространения отчетов по организации с использованием сетевых общих папок. Дает возможность автоматически копировать отчет в общую папку по заданному расписанию.|  
@@ -47,15 +47,15 @@ ms.locfileid: "63165211"
   
 -   компьютер для развертывания с установленным сервером отчетов;  
   
--   компьютер для разработки с установленной средой [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)] или пакетом средств разработки программного обеспечения (пакетом SDK) для платформы [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)];  
+-   Компьютер разработчика с [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] установленным пакетом средств разработки программного обеспечения (SDK).  
   
 -   основные сведения о функциях и возможностях служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], в особенности относящихся к подписке и доставке;  
   
 -   основные сведения о [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] и веб-элементах управления, если планируется реализация собственного пользовательского интерфейса подписки для диспетчера отчетов;  
   
--   Опыт разработки на языке [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], например [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# или [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET.  
+-   Возможности разработки на таких [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] языках, как [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# или [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Реализация модуля доставки](../delivery-extension/implementing-a-delivery-extension.md)   
  [Библиотека модулей Reporting Services](../reporting-services-extension-library.md)  
   

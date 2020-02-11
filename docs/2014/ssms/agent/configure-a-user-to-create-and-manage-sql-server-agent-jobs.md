@@ -16,23 +16,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a62f6c2e1ef86a6fcd5e532b2ef413d8142698e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63253563"
 ---
-# <a name="configure-a-user-to-create-and-manage-sql-server-agent-jobs"></a>Настройка пользователя для создания заданий агента SQL Server и управления заданиями
-  В этом разделе описано, как настроить пользователя для создания или выполнения заданий агента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+# <a name="configure-a-user-to-create-and-manage-sql-server-agent-jobs"></a>Configure a User to Create and Manage SQL Server Agent Jobs
+  В этом разделе описывается настройка пользователя для создания или выполнения [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] заданий агента.  
   
 -   **Перед началом:**  [Безопасность](#Security)  
   
--   **Для настройки пользователя для создания заданий агента SQL Server и управления заданиями используется:**  [SQL Server Management Studio](#SSMS)  
+-   **Настройка пользователя для создания заданий агент SQL Server и управления ими с помощью:**  [SQL Server Management Studio](#SSMS)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
 ###  <a name="Security"></a> безопасность  
- Чтобы разрешить пользователю создавать задания агента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и управлять ими, необходимо сначала добавить существующее имя входа для SQL Server или роль базы данных msdb к одной из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных msdb: SQLAgentUserRole, SQLAgentReaderRole или SQLAgentOperatorRole.  
+ Чтобы настроить пользователя для создания или выполнения [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] заданий агента, необходимо сначала добавить существующее SQL Server имя входа или роль msdb в одну из следующих [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предопределенных ролей базы данных агента в базе данных msdb: SQLAgentUserRole, SQLAgentReaderRole или SQLAgentOperatorRole.  
   
  По умолчанию члены этих ролей базы данных могут создавать свои собственные шаги заданий, которые запускаются сами по себе. Если пользователи, не являющиеся администраторами, желают выполнить задания, которые выполняют другие типы шагов заданий, например пакеты [!INCLUDE[ssIS](../../includes/ssis-md.md)] , им необходимо будет получить доступ к учетной записи-посреднику. Все члены предопределенной роли сервера sysadmin имеют разрешения на создание, изменение и удаление учетных записей-посредников. Дополнительные сведения о разрешениях, связанных с этими предопределенными ролями баз данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , см. в разделе [Предопределенные роли базы данных агента SQL Server](sql-server-agent-fixed-database-roles.md).  
   
@@ -48,7 +48,7 @@ ms.locfileid: "63253563"
   
 3.  Щелкните правой кнопкой мыши имя входа, которое необходимо добавить к предопределенной роли базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , и выберите пункт **Свойства**.  
   
-4.  На **сопоставления пользователей** странице **свойства имени входа** диалоговом окне выберите строку, содержащую `msdb`.  
+4.  На странице **Сопоставление пользователей** диалогового окна **Свойства имени входа** выберите строку, содержащую `msdb`.  
   
 5.  На вкладке **Членство в роли базы данных для: msdb**выберите соответствующую предопределенную роль базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -60,13 +60,13 @@ ms.locfileid: "63253563"
   
 3.  Щелкните правой кнопкой мыши элемент **Учетные записи-посредники** и выберите пункт **Создать учетную запись-посредник**.  
   
-4.  На вкладке **Общие** диалогового окна **Создание учетной записи-посредника** укажите имя учетной записи-посредника, имя входа и описание. Обратите внимание, на то, что прежде чем создавать учетную запись-посредник агента SQL Server, необходимо создать учетные данные. Дополнительные сведения о создании учетных данных, см. в разделе [создать учетные данные](../../relational-databases/security/authentication-access/create-a-credential.md) и [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql).  
+4.  На вкладке **Общие** диалогового окна **Создание учетной записи-посредника** укажите имя учетной записи-посредника, имя входа и описание. Обратите внимание, на то, что прежде чем создавать учетную запись-посредник агента SQL Server, необходимо создать учетные данные. Дополнительные сведения о создании учетных данных см. в статьях [Создание учетных данных](../../relational-databases/security/authentication-access/create-a-credential.md) и [Создание учетных данных &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql).  
   
 5.  Проверьте соответствующие подсистемы для этой учетной записи-посредника.  
   
 6.  На вкладке **Участники** добавьте или удалите имена входа или роли, чтобы предоставить или отменить доступ к учетной записи-посреднику.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Обеспечение безопасности агента SQL Server](implement-sql-server-agent-security.md)  
   
   

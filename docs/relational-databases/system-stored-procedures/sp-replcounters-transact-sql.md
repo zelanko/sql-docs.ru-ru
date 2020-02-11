@@ -16,13 +16,13 @@ ms.assetid: fe585b1f-edda-421f-81d6-8a03a3a535d2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 12ddbfe11a2b1a29dadaacde845f96e70959bebb
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771002"
 ---
-# <a name="spreplcounters-transact-sql"></a>sp_replcounters (Transact-SQL)
+# <a name="sp_replcounters-transact-sql"></a>sp_replcounters (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Возвращает статистику по репликации, касающуюся задержек, пропускной способности и числа транзакций для каждой опубликованной базы данных. Эта хранимая процедура выполняется на подписчике в любой базе данных.  
@@ -39,25 +39,25 @@ sp_replcounters
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|**База данных**|**sysname**|Имя базы данных.|  
-|**Реплицированные транзакции**|**int**|Количество транзакций в журнале, ожидающих доставки в базу данных распространителя|  
-|**Скорость репликации/с**|**float**|Среднее количество транзакций, переданных в базу данных распространителя в секунду.|  
+|**База данных**|**имеет sysname**|Имя базы данных.|  
+|**Replicated transactions**|**int**|Количество транзакций в журнале, ожидающих доставки в базу данных распространителя|  
+|**Replication rate trans/sec**|**float**|Среднее количество транзакций, переданных в базу данных распространителя в секунду.|  
 |**Задержка репликации**|**float**|Среднее время в секундах, в течение которого транзакции находились в журнале и до того момента, как они были отправлены.|  
-|**Replbeginlsn**|**binary(10)**|Указывает регистрационный номер транзакции в журнале (LSN) для текущей точки усечения журнала.|  
-|**Replnextlsn**|**binary(10)**|Номер LSN следующей записи фиксации, ожидающей доставки в базу данных распространителя.|  
+|**Replbeginlsn**|**двоичный (10)**|Указывает регистрационный номер транзакции в журнале (LSN) для текущей точки усечения журнала.|  
+|**Replnextlsn**|**двоичный (10)**|Номер LSN следующей записи фиксации, ожидающей доставки в базу данных распространителя.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  **sp_replcounters** используется в репликации транзакций.  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется членство в предопределенной роли базы данных **db_owner** или предопределенной роли сервера **sysadmin** .  
   
-## <a name="see-also"></a>См. также  
- [sp_replcmds (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
- [хранимая процедура sp_repldone &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
- [sp_replflush &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
+ [sp_repldone &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
+ [sp_replflush &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: be20c79c4c44d65b4d6b1177d06cea5ef66c164b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242057"
 ---
 # <a name="tutorials-for-sql-server-2014"></a>Учебные материалы по SQL Server 2014
@@ -40,12 +40,12 @@ ms.locfileid: "75242057"
 ## <a name="in-this-section"></a>в этом разделе  
  Имеются учебники по следующим технологиям [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] .  
   
-|Технология|Описание|  
+|Технология|Description|  
 |----------------|-----------------|  
 |[Учебники по Analysis Services &#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|Сведения о разработке и развертывании табличных и многомерных моделей служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Также рассказывается об использовании таких средств, как PowerPivot для анализа данных в моделях.|  
-|[Reporting Services учебники &#40;службы SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|Научитесь создавать основные отчеты и подписки.|  
-|[Учебники по Integration Services](../integration-services/integration-services-tutorials.md)|Узнайте, как создавать и развертывать пакеты [!INCLUDE[ssIS](../includes/ssis-md.md)] .|  
-|[Учебники по ядро СУБД](../relational-databases/database-engine-tutorials.md)|Узнайте, как подключаться к экземпляру ядра СУБД, а затем создавать и выполнять инструкции Transact-SQL.|  
+|[Учебники по службам Reporting Services (SSRS)](../reporting-services/reporting-services-tutorials-ssrs.md)|Научитесь создавать основные отчеты и подписки.|  
+|[Учебники по службам Integration Services](../integration-services/integration-services-tutorials.md)|Узнайте, как создавать и развертывать пакеты [!INCLUDE[ssIS](../includes/ssis-md.md)] .|  
+|[Учебники по компоненту ядра СУБД](../relational-databases/database-engine-tutorials.md)|Узнайте, как подключаться к экземпляру ядра СУБД, а затем создавать и выполнять инструкции Transact-SQL.|  
 |[Учебники по репликации](../relational-databases/replication/replication-tutorials.md)|Сведения об установке и запуске топологий репликации с помощью [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
-|[Учебники по управлению информацией на предприятии](../../2014/tutorials/enterprise-information-management-tutorials.md)|Сведения о том, как осуществляется управление данными на предприятии с использованием технологии Microsoft EIM.|  
+|[Учебники по информационному менеджменту предприятия](../../2014/tutorials/enterprise-information-management-tutorials.md)|Сведения о том, как осуществляется управление данными на предприятии с использованием технологии Microsoft EIM.|  
   

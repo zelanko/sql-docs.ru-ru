@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ab3cdf0079d0c01d95b73339e1fce8960658f93a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62836343"
 ---
 # <a name="package-properties-dialog-box"></a>диалоговое окно «Свойства пакета»
@@ -57,7 +57,7 @@ ms.locfileid: "62836343"
  Выводит идентификатор пакета.  
   
  **Точка входа**  
- Значение `True` указывает, что пакет запущен непосредственно. Значение `False` указывает, что пакет запущен из другого пакета с помощью задачи «Выполнение пакета». Значение по умолчанию — `True`.  
+ Значение `True` указывает, что пакет запущен непосредственно. Значение `False` указывает, что пакет запущен из другого пакета с помощью задачи «Выполнение пакета». По умолчанию используется значение `True`.  
   
  Это свойство задается в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] как для родительского пакета, так и для дочерних пакетов. Для этого щелкните пакет правой кнопкой мыши в обозревателе решений, а затем выберите **Входной пакет**.  
   

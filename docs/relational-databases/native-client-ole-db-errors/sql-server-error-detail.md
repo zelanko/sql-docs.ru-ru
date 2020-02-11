@@ -19,16 +19,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3694733acb9dbf2a62aa5cb1b871cb6a3f81e09c
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73769132"
 ---
 # <a name="sql-server-error-detail"></a>Подробные сведения об ошибках SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента OLE DB определяет интерфейс ошибок, зависящий от поставщика [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1). Интерфейс возвращает более подробные сведения об ошибке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и полезен, если выполнение команды или операции работы с наборами строк завершились с ошибкой.  
+  Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента определяет определяемый поставщиком интерфейс ошибок [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1). Интерфейс возвращает более подробные сведения об ошибке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и полезен, если выполнение команды или операции работы с наборами строк завершились с ошибкой.  
   
  Существует два способа получения доступа к интерфейсу **ISQLServerErrorInfo**.  
   
@@ -47,18 +47,18 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
   
  Элементы структуры SSERRORINFO обрабатываются потребителем следующим образом.  
   
-|Member|Описание|  
+|Участник|Description|  
 |------------|-----------------|  
-|*pwszMessage*|Сообщение об ошибке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Идентично строке, возвращаемой методом **IErrorInfo::GetDescription**.|  
-|*pwszServer*|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для сеанса.|  
-|*pwszProcedure*|При необходимости, имя процедуры, в которой произошла ошибка. Пустая строка в противном случае.|  
-|*lNative*|Номер собственной ошибки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Идентичен значению, возвращаемому в параметре *plNativeError* метода **ISQLErrorInfo::GetSQLInfo**.|  
-|*bState*|Состояние сообщения об ошибке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|*bClass*|Серьезность сообщения об ошибке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|*wLineNumber*|Если применимо, номер строки хранимой процедуры, в которой возникла ошибка.|  
+|*пвсзмессаже*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]сообщение об ошибке. Идентично строке, возвращаемой методом **IErrorInfo::GetDescription**.|  
+|*пвсзсервер*|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для сеанса.|  
+|*пвсзпроцедуре*|При необходимости, имя процедуры, в которой произошла ошибка. Пустая строка в противном случае.|  
+|*лнативе*|Номер собственной ошибки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Идентичен значению, возвращаемому в параметре *plNativeError* метода **ISQLErrorInfo::GetSQLInfo**.|  
+|*бстате*|Состояние сообщения об ошибке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|*бкласс*|Серьезность сообщения об ошибке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|*влиненумбер*|Если применимо, номер строки хранимой процедуры, в которой возникла ошибка.|  
   
-## <a name="see-also"></a>См. также статью  
- [Ошибки](../../relational-databases/native-client-ole-db-errors/errors.md)   
- [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Наличии](../../relational-databases/native-client-ole-db-errors/errors.md)   
+ [&#41;инструкции RAISERROR &#40;Transact-SQL](../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   

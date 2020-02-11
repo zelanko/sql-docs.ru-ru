@@ -16,35 +16,35 @@ ms.assetid: 9920c14e-033a-4de1-8149-0ce9737a3246
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7b50ab4a6fa31ec74371b86129f30abf11a1ba6c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932257"
 ---
 # <a name="locktype-property-ado"></a>Свойство LockType (ADO)
-Указывает тип блокировки записей во время редактирования.  
+Указывает тип блокировок, помещаемых в записи во время редактирования.  
   
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
- Возвращает или задает [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) значение. Значение по умолчанию — **adLockReadOnly**.  
+ Задает или возвращает значение [локктипинум](../../../ado/reference/ado-api/locktypeenum.md) . Значение по умолчанию — **адлоккреадонли**.  
   
-## <a name="remarks"></a>Примечания  
- Задайте **LockType** свойство перед открытием [записей](../../../ado/reference/ado-api/recordset-object-ado.md) для указания, какой тип блокировки поставщик следует использовать при его открытии. Чтение свойства, чтобы оно возвращало тип блокировки используется при открытии **записей** объекта.  
+## <a name="remarks"></a>Remarks  
+ Задайте свойство **LockType** перед открытием [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) , чтобы указать, какой тип блокировки должен использоваться поставщиком при его открытии. Прочтите свойство, чтобы получить тип блокировки, используемой для открытого объекта **набора записей** .  
   
- Поставщики могут не поддерживать все типы блокировки. Если поставщик не поддерживает запрошенный **LockType** задание, он заменит другой тип блокировки. Чтобы определить фактический блокировки функциональные возможности, доступные в **записей** , используйте [поддерживает](../../../ado/reference/ado-api/supports-method.md) метод с **adUpdate** и **adUpdateBatch**.  
+ Поставщики могут не поддерживать все типы блокировок. Если поставщик не поддерживает запрошенный параметр **LockType** , он заменит другой тип блокировки. Чтобы определить фактические функциональные возможности блокировки, доступные в объекте **Recordset** , используйте метод [поддерживает](../../../ado/reference/ado-api/supports-method.md) с **адупдате** и **адупдатебатч**.  
   
- **AdLockPessimistic** параметр не поддерживается, если [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) свойству **adUseClient**. Если задано неподдерживаемое значение, сообщение об ошибке не приведет к; ближайшим поддерживается **LockType** вместо него будет использоваться.  
+ Параметр **адлоккпессимистик** не поддерживается, если свойство [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) имеет значение **адусеклиент**. Если задано неподдерживаемое значение, то ошибка не будет возникать. Вместо этого будет использоваться ближайший поддерживаемый **LockType** .  
   
- **LockType** свойство доступно для чтения/записи при **записей** является закрытым или только для чтения, когда он открыт.  
+ Свойство **LockType** доступно для чтения и записи, когда **набор записей** закрывается и только для чтения, когда он открыт.  
   
 > [!NOTE]
->  **Удаленное использование службы данных** при использовании на стороне клиента **записей** объекта, **LockType** свойство может устанавливаться только **adLockBatchOptimistic**.  
+>  **Использование удаленной службы данных** При использовании объекта **набора записей** на стороне клиента свойство **LockType** может иметь только значение **адлоккбатчоптимистик**.  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
- [Примеры CursorType, LockType и EditMode по свойства (Visual Basic)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vb.md)   
- [Примеры CursorType, LockType и EditMode пример свойства (Visual C++)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vc.md)   
+## <a name="see-also"></a>См. также:  
+ [Примеры свойств примеры CursorType, LockType и EditMode (Visual Basic)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vb.md)   
+ [Пример свойств примеры CursorType, LockType и EditMode (Visual c++)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vc.md)   
  [Метод CancelBatch (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
  [Метод UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)

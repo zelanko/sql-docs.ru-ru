@@ -18,30 +18,30 @@ ms.assetid: 0bdf2d5f-5502-44cd-aa9d-2d5006ad20ce
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d8cb78229ea20d5b4c1b01b17c9fef1d85ca83b9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68106321"
 ---
-# <a name="msmergesettingshistory-transact-sql"></a>MSmerge_settingshistory (Transact-SQL)
+# <a name="msmerge_settingshistory-transact-sql"></a>MSmerge_settingshistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSmerge_settingshistory** таблица используется для ведения журнала изменений, внесенных в свойства статьи и публикации для репликации слиянием, по одной строке для каждого изменения, внесенные в топологии репликации слиянием. Данная таблица также хранит сведения о том, когда были произведены исходные настройки свойств. Эта таблица хранится в базах данных публикации и подписки.  
+  Таблица **MSmerge_settingshistory** используется для ведения журнала изменений, внесенных в статьи и свойства публикации для репликации слиянием, с одной строкой для каждого изменения, внесенного в топологию репликации слиянием. Данная таблица также хранит сведения о том, когда были произведены исходные настройки свойств. Эта таблица хранится в базах данных публикации и подписки.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|**eventtime**|**datetime**|Дата и время события.|  
-|**pubid**|**uniqueidentifier**|Уникальный идентификатор данной публикации.|  
-|**artid**|**uniqueidentifier**|Уникальный идентификационный номер данной статьи.|  
-|**Тип события**|**tinyint**|Указывает тип зарегистрированного события, может принимать одно из следующих значений:<br /><br /> **1** — исходная установка свойства уровня публикации.<br /><br /> **2** -изменение в свойстве публикации.<br /><br /> **101** — исходная установка свойства статьи.<br /><br /> **102** -изменения в свойстве статьи.|  
-|**propertyname**|**sysname**|Имя установленного или измененного свойства|  
-|**значение previousvalue**|**sysname**|Предыдущее значение свойства, если свойство было изменено.|  
-|**новое значение**|**sysname**|Значение, присвоенное свойству при изменении или при создании.|  
-|**eventtext**|**nvarchar(2000)**|Символьная строка, описывающая событие.|  
+|**EventTime**|**datetime**|Дата и время события.|  
+|**pubid**|**UNIQUEIDENTIFIER**|Уникальный идентификатор данной публикации.|  
+|**artid**|**UNIQUEIDENTIFIER**|Уникальный идентификационный номер данной статьи.|  
+|**EventType**|**tinyint**|Указывает тип зарегистрированного события, может принимать одно из следующих значений:<br /><br /> **1** — начальное значение свойства уровня публикации.<br /><br /> **2** — изменение свойства публикации.<br /><br /> **101** — начальное значение свойства статьи.<br /><br /> **102** — изменение свойства статьи.|  
+|**PropertyName**|**имеет sysname**|Имя установленного или измененного свойства|  
+|**previousvalue**|**имеет sysname**|Предыдущее значение свойства, если свойство было изменено.|  
+|**NewValue**|**имеет sysname**|Значение, присвоенное свойству при изменении или при создании.|  
+|**eventtext**|**nvarchar (2000)**|Символьная строка, описывающая событие.|  
   
-## <a name="see-also"></a>См. также  
- [Таблицы репликации &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Представления репликации &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

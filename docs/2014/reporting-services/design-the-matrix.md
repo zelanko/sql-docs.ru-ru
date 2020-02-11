@@ -1,5 +1,5 @@
 ---
-title: Создание матрицы | Документация Майкрософт
+title: Проектирование матрицы | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1572e9fba00672b32a104cf8b8c9f5cfab66d97a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109299"
 ---
 # <a name="design-the-matrix"></a>Создание матрицы
@@ -35,13 +35,13 @@ ms.locfileid: "66109299"
  **Столбцы**  
  Просмотрите список полей, отображаемых как столбцы матрицы. Чтобы изменить порядок полей, выделите поле и нажмите кнопку со стрелкой вверх или вниз.  
   
- **Строки**  
+ **Сквоз**  
  Просмотрите список полей, отображаемых как строки матрицы. Чтобы изменить порядок полей, выделите поле и нажмите кнопку со стрелкой вверх или вниз.  
   
- **Сведения**  
+ **Дополнительно**  
  Просмотрите список полей, отображаемых в области сведений матрицы. Чтобы изменить порядок полей, выделите поле и нажмите кнопку со стрелкой вверх или вниз.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Матрицы &#40;построитель отчетов и службы SSRS&#41;](report-design/create-a-matrix-report-builder-and-ssrs.md)   
  [Справка мастера отчетов](../../2014/reporting-services/report-wizard-help.md)  
   

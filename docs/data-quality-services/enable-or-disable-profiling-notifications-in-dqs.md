@@ -14,10 +14,10 @@ ms.assetid: e439bb29-60cc-4afd-a79a-f629b8d843c1
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: d5d58777c4fe358f8536cc07b4eb1067487ab588
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251622"
 ---
 # <a name="enable-or-disable-profiling-notifications-in-dqs"></a>Включение или отключение уведомлений по профилированию в DQS
@@ -26,11 +26,11 @@ ms.locfileid: "75251622"
 
   В этом разделе описывается включение или отключение уведомлений по профилированию в [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). По умолчанию уведомления по профилированию в DQS включены. Уведомления по профилированию сообщают важные сведения об источнике данных и эффективности текущего действия, выполняемого с данными. Дополнительные сведения см. в статье [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   
-##  <a name="BeforeYouBegin"></a>Перед началом  
+##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Security"></a>Бюллетеня  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a>Чтение  
+####  <a name="Permissions"></a> Permissions  
  Для включения уведомлений необходимо иметь роль dqs_administrator в базе данных DQS_MAIN.  
   
 ##  <a name="Enable"></a>Включение или отключение уведомлений о профилировании  
@@ -43,6 +43,6 @@ ms.locfileid: "75251622"
   
 4.  Установите или снимите флажок **Включить уведомления** , чтобы отключить или включить уведомления по профилированию для различных действий в DQS.  
   
-5.  Нажмите кнопку **Закрыть**.  
+5.  Щелкните **Закрыть**.  
   
   

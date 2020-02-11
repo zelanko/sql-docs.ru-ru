@@ -1,5 +1,5 @@
 ---
-title: Таблицы агента SQL Server (Transact-SQL) | Документация Майкрософт
+title: Таблицы агент SQL Server (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 6cb39bfd-079e-4be4-9c42-2fa234c65ce1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fcc811542ad0b7884b703a02b4c983b8752ba200
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68130590"
 ---
 # <a name="sql-server-agent-tables-transact-sql"></a>Таблицы агента SQL Server (Transact-SQL)

@@ -1,5 +1,5 @@
 ---
-title: Функция LocalDBGetInstances | Документация Майкрософт
+title: Функция Локалдбжетинстанцес | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,16 +17,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 92aa65bd2d3aad71f2467efaa7a09f75f20d8f63
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63032254"
 ---
 # <a name="localdbgetinstances-function"></a>Функция LocalDBGetInstances
   Возвращает все экземпляры SQL Server Express LocalDB с данной версией.  
   
- **Файл заголовка:** sqlncli.h  
+ **Заголовочный файл:** sqlncli. h  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,9 +40,9 @@ HRESULT LocalDBGetInstances(
   
 ## <a name="parameters"></a>Параметры  
  *pInstanceNames*  
- [Выход] Когда эта функция возвращает значение, содержащий имена и именованные и экземпляров LocalDB на рабочей станции пользователя по умолчанию.  
+ Проверки При возврате этой функции содержит имена как именованных, так и экземпляров LocalDB по умолчанию на рабочей станции пользователя.  
   
- *lpdwNumberOfInstances*  
+ *лпдвнумберофинстанцес*  
  [Вход/Выход] На входе содержит число ячеек для имен экземпляров в буфере *pInstanceNames* . На выходе содержит количество экземпляров LocalDB, найденных на рабочей станции пользователя.  
   
 ## <a name="returns"></a>Возвращает  
@@ -70,10 +70,10 @@ HRESULT LocalDBGetInstances(
  [LOCALDB_ERROR_INTERNAL_ERROR](../express-localdb-error-messages/localdb-error-internal-error.md)  
  Произошла непредвиденная ошибка. Подробные сведения см. в журнале событий.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Образец кода, использующего API LocalDB, см. в разделе [SQL Server Express LocalDB Reference](../sql-server-express-localdb-reference.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Заголовок и сведения о версии SQL Server Express LocalDB](sql-server-express-localdb-header-and-version-information.md)  
   
   

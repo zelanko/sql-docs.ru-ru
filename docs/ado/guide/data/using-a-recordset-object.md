@@ -13,14 +13,14 @@ ms.assetid: 01c630d8-eb35-4bd0-a99f-7c0f85316cc1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dda89464598ddc4ecfee0078b36aadd01b4486f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923634"
 ---
 # <a name="using-a-recordset-object"></a>Использование объекта Recordset
-Кроме того, можно использовать **Recordset.Open** неявно установить подключение и команду через это подключение в рамках одной операции. Например в Visual Basic:  
+Кроме того, можно использовать **набор записей. Open** для неявного установления соединения и выполнения команды через это соединение в одной операции. Например, в Visual Basic:  
   
 ```  
 Dim oRs As ADODB.Recordset  
@@ -47,4 +47,4 @@ oRs.Close
 Set oRs = Nothing  
 ```  
   
- Обратите внимание, что **oRs.Open** принимает строку подключения (*sConn*), вместо **подключения** объекта (*oConn*), в качестве значения его  **ActiveConnection** параметра. Также применяется тип клиентский курсор, задав **CursorLocation** свойство **записей** объекта. Опять же, сравните это с **HelloData** пример.
+ Обратите внимание, что **or. Open** принимает строку подключения (*сконн*) вместо объекта **соединения** (*Оконн*) в качестве значения его параметра **ActiveConnection** . Кроме того, тип курсора на стороне клиента применяется путем задания свойства **CursorLocation** объекта **Recordset** . Опять же, Сравните это с примером **HelloData** .

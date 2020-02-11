@@ -14,10 +14,10 @@ ms.assetid: f915e89b-629d-4725-aea6-a7f051978244
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 78ba8b955fe0702a5b1737c1de24426d586f9ffa
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729364"
 ---
 # <a name="delete-an-attribute-group-master-data-services"></a>Удаление группы атрибутов (службы Master Data Services)
@@ -26,10 +26,10 @@ ms.locfileid: "73729364"
 
   В службах [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]можно удалить группу атрибутов, если больше не нужна вкладка для отображения в функциональной области **Обозреватель** в среде [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
--   **Примечание.** Если группы атрибутов существуют, то атрибуты, не принадлежащие ни к одной группе, не отображаются в окне **Обозреватель**. Если групп атрибутов не существует, то отображаются все атрибуты.  
+-   **Примечание** . Если группы атрибутов существуют, атрибуты, которые не принадлежат к группе атрибутов, не отображаются в **обозревателе**. Если групп атрибутов не существует, то отображаются все атрибуты.  
   
-## <a name="prerequisites"></a>необходимые компоненты  
- Чтобы выполнить эту процедуру:  
+## <a name="prerequisites"></a>Предварительные требования  
+ Для выполнения этой процедуры:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
   
@@ -53,8 +53,8 @@ ms.locfileid: "73729364"
   
 8.  В диалоговом окне подтверждения нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также статью  
- [Группы атрибутов (службы Master Data Services)](../master-data-services/attribute-groups-master-data-services.md)   
- [Создание группы атрибутов (службы Master Data Services)](../master-data-services/create-an-attribute-group-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Группы атрибутов &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md)   
+ [Создание группы атрибутов &#40;Master Data Services&#41;](../master-data-services/create-an-attribute-group-master-data-services.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b64c1d0d6032ce5032a92c840635fdf0c087e571
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72251953"
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
@@ -44,14 +44,14 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  Запрос пути к столбцу любого другого типа данных или для колумнсат **varbinary (max)** не имеет атрибута хранилища FILESTREAM, что вызовет ошибку во время компиляции запроса.  
   
- *\@, параметр*  
- Целочисленное [выражение](../../t-sql/language-elements/expressions-transact-sql.md) , определяющее способ форматирования серверного компонента пути. *параметр\@* может иметь одно из следующих значений. Значение по умолчанию равно 0.  
+ *\@функцию*  
+ Целочисленное [выражение](../../t-sql/language-elements/expressions-transact-sql.md) , определяющее способ форматирования серверного компонента пути. параметр может принимать одно из следующих значений. * \@* Значение по умолчанию равно 0.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
-|0|Возвращает имя сервера, преобразованное в формат BIOS, например: `\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
-|1|Возвращает имя сервера без преобразования, например: `\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
-|2|Возвращает полный путь к серверу, например: `\\ServerName.MyDomain.com\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
+|0|Возвращает имя сервера, преобразованное в формат BIOS, например:`\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
+|1|Возвращает имя сервера без преобразования, например:`\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
+|2|Возвращает полный путь к серверу, например:`\\ServerName.MyDomain.com\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
   
  *use_replica_computer_name*  
  Битовое значение, определяющее, как имя сервера должно возвращаться в группе доступности Always On.  
@@ -60,14 +60,14 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  Если база данных принадлежит к Always On группе доступности, то в выходных данных функции **PathName** значение *use_replica_computer_name* имеет следующий результат:  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |Не указано.|Функция возвращает в пути имя виртуальной сети.|  
 |0|Функция возвращает в пути имя виртуальной сети.|  
 |1|Функция возвращает в пути имя компьютера.|  
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
- **nvarchar(max)** ;  
+ **nvarchar(max)**  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращаемое значение является полным логическим путем или путем NETBIOS объекта BLOB. PathName не возвращает IP-адрес. Возвращается значение NULL, если объект FILESTREAM BLOB не создан.  
@@ -91,7 +91,7 @@ SET @PathName = (
     );  
 ```  
   
-### <a name="b-displaying-the-paths-for-filestream-blobs-in-a-table"></a>б. Отображение путей объектов FILESTREAM BLOB в таблице  
+### <a name="b-displaying-the-paths-for-filestream-blobs-in-a-table"></a>Б. Отображение путей объектов FILESTREAM BLOB в таблице  
  В следующем примере создаются и отображаются пути трех объектов FILESTREAM BLOB.  
   
 ```sql  
@@ -147,9 +147,9 @@ GO
 DROP DATABASE PathNameDB;  
 ```  
   
-## <a name="see-also"></a>См. также статью  
- [Данные большого двоичного объекта (SQL Server)](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
- [GET_FILESTREAM_TRANSACTION_CONTEXT &#40;  Transact-&#41; SQL](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Большие двоичные объекты &#40;данные&#41; &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
+ [GET_FILESTREAM_TRANSACTION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)   
  [Доступ к данным FILESTREAM с OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
   
   

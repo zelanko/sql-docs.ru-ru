@@ -10,10 +10,10 @@ ms.assetid: 88dfb9ea-6321-4eaf-b9e4-45d36ef048f6
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 2eae5415e6f6bb93501dfc7989fe180e581ae387
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75254792"
 ---
 # <a name="access-data-for-the-dqs-operations"></a>Предоставление доступа к данным для операций со службами DQS
@@ -26,7 +26,7 @@ ms.locfileid: "75254792"
   
 -   Собственная база данных может использоваться как в качестве исходных данных для операций служб DQS, так и для экспорта обработанных данных. Для этого убедитесь, что она размещена на том же экземпляре SQL Server, что и базы данных сервера служб Data Quality. В противном случае база данных не будет доступна в клиенте служб Data Quality для операций DQS. Также для учетной записи пользователя Windows должен быть предоставлен доступ к базе данных DQS_STAGING_DATA для экспорта соответствующих результатов, так как они экспортируются в два этапа: сначала экспортируются во временные таблицы в базе данных DQS_STAGING_DATA, а затем перемещаются в таблицу целевой базы данных.  
   
-## <a name="prerequisites"></a>Необходимые компоненты  
+## <a name="prerequisites"></a>Предварительные требования  
   
 -   Необходимо, чтобы установка сервера [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] , запускаемая с помощью файла DQSInstaller.exe, была завершена. Дополнительные сведения см. в разделе [Запуск файла DQSInstaller.exe для завершения установки сервера служб DQS](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md).  
   
@@ -52,10 +52,10 @@ ms.locfileid: "75254792"
   
 6.  В диалоговом окне **Свойства имени входа** нажмите кнопку **ОК** , чтобы применить изменения.  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Next Steps  
  Проверьте работоспособность операций служб DQS, использующих эту базу данных в качестве источника данных, а затем экспортирующих в нее обработанные данные.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Установка служб Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)  
   
   

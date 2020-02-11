@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c11561ac71aa72469a809ea25297d62133aa93da
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68891213"
 ---
 # <a name="identifiers-mdx"></a>Идентификаторы (многомерные выражения)
@@ -44,7 +44,7 @@ ms.locfileid: "68891213"
   
     -   Символ подчеркивания (_).  
   
-3.  В качестве идентификатора не может выступать зарезервированное ключевое слово многомерных выражений. Зарезервированные слова в многомерных выражениях не зависят от регистра. Дополнительные сведения см. в разделе [синтаксис &#40;&#41;многомерных выражений зарезервированных ключевых слов](../mdx/reserved-keywords-mdx-syntax.md).  
+3.  В качестве идентификатора не может выступать зарезервированное ключевое слово многомерных выражений. Зарезервированные слова в многомерных выражениях не зависят от регистра. Дополнительные сведения см. в разделе [зарезервированные ключевые слова &#40;синтаксис многомерных выражений&#41;](../mdx/reserved-keywords-mdx-syntax.md).  
   
 4.  Внутри идентификаторов запрещается использовать символы пробела или специальные символы.  
   
@@ -122,9 +122,9 @@ ms.locfileid: "68891213"
   
  Помимо этого, в предыдущем примере выделен идентификатор Measures, чтобы продемонстрировать разделение нескольких идентификаторов.  
   
-## <a name="see-also"></a>См. также  
- [Справочник по языку многомерных выражений (многомерные выражения)](../mdx/mdx-language-reference-mdx.md)   
- [Основные принципы запросов многомерных выражений (службы Analysis Services)](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)   
- [Многомерные выражения &#40;элементов СИНТАКСИСа многомерных выражений&#41;](../mdx/mdx-syntax-elements-mdx.md)  
+## <a name="see-also"></a>См. также:  
+ [Справочник по языку многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-language-reference-mdx.md)   
+ [Основные принципы запросов многомерных выражений &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)   
+ [Элементы синтаксиса многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-syntax-elements-mdx.md)  
   
   

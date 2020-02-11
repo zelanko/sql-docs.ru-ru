@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a160909901b265a6d07af18f6373554b036fe894
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73983048"
 ---
 # <a name="sysdm_db_file_space_usage-transact-sql"></a>sys.dm_db_file_space_usage (Transact-SQL)
@@ -33,9 +33,9 @@ ms.locfileid: "73983048"
   Возвращает сведения о пространстве, используемом каждым файлом базы данных.  
   
 > [!NOTE]  
->  Чтобы вызвать это из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте имя **sys. dm_pdw_nodes_db_file_space_usage**.  
+>  Чтобы вызвать эту функцию [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] из [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]или, используйте имя **sys. dm_pdw_nodes_db_file_space_usage**.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |database_id|**smallint**|Идентификатор базы данных.|  
 |file_id|**smallint**|Идентификатор файла.<br /><br /> file_id сопоставляется с file_id в [sys. dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) и в ИД в [представлении sys. sysfiles](../../relational-databases/system-compatibility-views/sys-sysfiles-transact-sql.md).|  
@@ -47,16 +47,16 @@ ms.locfileid: "73983048"
 |user_object_reserved_page_count|**bigint**|Общее количество страниц, выделенных из однородных экстентов для пользовательских объектов в базе данных. Неиспользуемые страницы из распределенного экстента включаются в счет.<br /><br /> IAM-страницы не включаются, так как они всегда размещаются из смешанных экстентов. PFS-cтраницы включаются, если они размещаются из однородного экстента.<br /><br /> Можно использовать столбец total_pages в представлении каталога [sys. allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md) , чтобы получить зарезервированное количество страниц каждой единицы распределения в объекте пользователя. Однако учтите, что столбец total_pages включает IAM-страницы.|  
 |internal_object_reserved_page_count|**bigint**|Общее количество страниц в однородном экстенте, размещенных для внутренних объектов в файле. Неиспользуемые страницы из распределенного экстента включаются в счет.<br /><br /> IAM-страницы не включаются, так как они всегда размещаются из смешанных экстентов. PFS-cтраницы включаются, если они размещаются из однородного экстента.<br /><br /> Не существует представления каталога или объекта DMO, возвращающего счетчик страниц каждого внутреннего объекта.|  
 |mixed_extent_page_count|**bigint**|Общее количество размещенных и освобожденных страниц в размещенном смешанном экстенте. Смешанный экстент содержит страницы, размещенные для различных объектов. Этот счетчик включает все IAM-страницы в файле.|
-|modified_extent_page_count|**bigint**|**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 и более поздних версий.<br /><br />Общее число страниц, измененных в выделенных экстентах файла с момента последнего полного резервного копирования базы данных. Измененное число страниц можно использовать для контроля количества разностных изменений в базе данных с момента последнего полного резервного копирования, чтобы решить, нужна ли разностная резервная копия.|
-|pdw_node_id|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
-|distribution_id|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Уникальный числовой идентификатор, связанный с распределением.|  
+|modified_extent_page_count|**bigint**|**Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 2 (SP2) и выше.<br /><br />Общее число страниц, измененных в выделенных экстентах файла с момента последнего полного резервного копирования базы данных. Измененное число страниц можно использовать для контроля количества разностных изменений в базе данных с момента последнего полного резервного копирования, чтобы решить, нужна ли разностная резервная копия.|
+|pdw_node_id|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
+|distribution_id|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Уникальный числовой идентификатор, связанный с распределением.|  
   
 ## <a name="remarks"></a>Remarks  
  Счетчики страниц всегда находятся на уровне экстента. Поэтому значения счетчиков страниц всегда будут кратными восьми. Экстенты, содержащие страницы глобальной карты распределения (GAM) и общей глобальной карты распределения (SGAM), являются размещенными однородными экстентами. Они не включаются в вышеописанные счетчики страниц. Дополнительные сведения о страницах и экстентах см. в разделе [рекомендации по архитектуре страниц и экстентов](../../relational-databases/pages-and-extents-architecture-guide.md). 
   
  Содержимое текущего хранилища версий находится в [представлении sys. dm_tran_version_store](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md). Страницы хранилища версий отслеживаются на уровне файла вместо уровня сеанса и уровня задачи, потому что они являются глобальными ресурсами. Сеанс может создавать версии, но версии не могут быть удалены, когда сеанс заканчивается. При очистке хранилища версий необходимо рассмотреть наиболее долго выполняющуюся транзакцию, которой нужен доступ к определенной версии. Наиболее длительная транзакция, связанная с очисткой хранилища версий, может быть обнаружена путем просмотра elapsed_time_seconds столбца в [sys. dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md).  
   
- Частые изменения в столбце mixed_extent_page_count могут указывать на затрудненное использование SGAM-страниц. Когда это происходит, можно обнаружить много ожиданий PAGELATCH_UP, в которых ресурсом ожидания является SGAM-страница. Дополнительные сведения см. в разделе [sys. &#40;dm_os_waiting_tasks Transact-&#41;SQL](../../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md), [sys. &#40;dm_os_wait_stats Transact-&#41;SQL](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)и [sys. dm_os_latch_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md).  
+ Частые изменения в столбце mixed_extent_page_count могут указывать на затрудненное использование SGAM-страниц. Когда это происходит, можно обнаружить много ожиданий PAGELATCH_UP, в которых ресурсом ожидания является SGAM-страница. Дополнительные сведения см. в статьях [sys. dm_os_waiting_tasks &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md), [sys. dm_os_wait_stats &#40;transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)и [sys. dm_os_latch_stats &#40;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)&#41;.  
   
 ## <a name="user-objects"></a>Пользовательские объекты  
  Следующие объекты включаются в счетчики страниц пользовательских объектов.  
@@ -69,7 +69,7 @@ ms.locfileid: "73983048"
   
 -   Локальные временные таблицы и индексы  
   
--   Табличные переменные  
+-   Переменные таблицы  
   
 -   Таблицы, возвращаемые в функциях с табличным значением  
   
@@ -84,14 +84,14 @@ ms.locfileid: "73983048"
   
 ## <a name="relationship-cardinalities"></a>Количество элементов связей  
   
-|От|Чтобы|Связь|  
+|С|Кому|Связь|  
 |----------|--------|------------------|  
 |sys.dm_db_file_space_usage.database_id, file_id|sys.dm_io_virtual_file_stats.database_id, file_id|Один к одному|  
   
 ## <a name="permissions"></a>Разрешения
 
-На [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]требуется `VIEW SERVER STATE` разрешение.   
-На уровнях [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium требуется разрешение `VIEW DATABASE STATE` в базе данных. На уровнях [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard и Basic требуется **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
+В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]необходимо `VIEW SERVER STATE` разрешение.   
+На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
 
 ## <a name="examples"></a>Примеры  
   
@@ -117,8 +117,8 @@ SELECT SUM(user_object_reserved_page_count) AS [user object pages used],
 FROM sys.dm_db_file_space_usage;
 ```  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Динамические административные представления &#40;, связанные с базой данных&#41; , Transact-SQL](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
- [sys. dm_db_task_space_usage &#40;  Transact-&#41; SQL](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)  
- [sys.dm_db_session_space_usage (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)  
+ [Динамические административные представления, связанные с базами данных &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
+ [sys. dm_db_task_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)   
+ [sys. dm_db_session_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)  

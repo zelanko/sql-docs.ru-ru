@@ -20,19 +20,19 @@ ms.assetid: 41bcd057-436f-4fa8-8293-fc8057a30877
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 5a5aba02a9aaead76e7c9c3340de4f568160b307
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74119394"
 ---
 # <a name="srv_message_handler-extended-stored-procedure-api"></a>srv_message_handler (API-интерфейс расширенных хранимых процедур)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Используйте вместо этого интеграцию со средой CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Вместо этого используйте интеграцию со средой CLR.  
   
- Вызывает установленный обработчик сообщений API-интерфейса расширенных хранимых процедур. Эта функция обычно используется для вызова [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из расширенной хранимой процедуры для регистрации ошибки (определенной расширенной хранимой процедурой) в файле журнала ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или журнале приложений [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
+ Вызывает установленный обработчик сообщений API-интерфейса расширенных хранимых процедур. Эта функция обычно используется для вызова [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из расширенной хранимой процедуры, чтобы зарегистрировать ошибку (определенную расширенной хранимой процедурой) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в файле журнала ошибок или [!INCLUDE[msCoName](../../includes/msconame-md.md)] журнале приложений Windows.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -72,28 +72,28 @@ oserrtextlen
  *srvproc*  
  Указатель на структуру SRV_PROC, который представляет собой дескриптор соединения с клиентом. Параметр *srvproc* содержит сведения, которые используются для управления связью и передачей данных между приложением и клиентом.  
   
- *errornum*  
+ *еррорнум*  
  Номер ошибки, определенный расширенной хранимой процедурой. Это значение должно быть от 50 001 до 2 147 483 647.  
   
- *severity*  
+ *серьезности*  
  Стандартное значение серьезности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для ошибки. Это значение должно быть от 0 до 24.  
   
  *state*  
  Значение состояния [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для ошибки.  
   
- *oserrnum*  
+ *осеррнум*  
  Номер ошибки операционной системы. Этот аргумент не учитывается.  
   
- *errtext*  
+ *ерртекст*  
  Описание ошибки *errornum* расширенной хранимой процедуры.  
   
- *errtextlen*  
+ *ерртекстлен*  
  Длина строки ошибки *errtext* расширенной хранимой процедуры.  
   
- *oserrtext*  
+ *осерртекст*  
  Описание ошибки операционной системы *oserrnum*. Этот аргумент не учитывается.  
   
- *oserrtextlen*  
+ *осерртекстлен*  
  Длина строки ошибки операционной системы *oserrtext*.  
   
 ## <a name="returns"></a>Возвращает  

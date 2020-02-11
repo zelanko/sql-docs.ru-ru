@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 96f5a873e8d172254e1ea18abbd0c570b27a35ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62918467"
 ---
 # <a name="start-or-stop-a-collection-set"></a>Запуск или остановка набора элементов сбора
@@ -33,7 +33,7 @@ ms.locfileid: "62918467"
   
      [Рекомендации](#Recommendations)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Запуск и остановка набора элементов сбора с помощью:**  
   
@@ -110,7 +110,7 @@ GO
 EXEC sp_syscollector_stop_collection_set @collection_set_id = 1;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Представления сборщика данных (Transact-SQL)](/sql/relational-databases/system-catalog-views/data-collector-views-transact-sql)   
  [Сбор данных](data-collection.md)  
   

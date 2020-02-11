@@ -17,16 +17,16 @@ ms.assetid: 9b4251f2-6fa6-49df-8abf-7cc1cc35d1c8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4364590e908688fe094da0e7687410bdda3b97cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67915768"
 ---
 # <a name="odbc-error-codes-visual-foxpro-odbc-driver"></a>Коды ошибок ODBC (драйвер ODBC для Visual FoxPro)
-Ниже перечислены коды ошибок Visual FoxPro, сопоставленных значениям ODBC SQLSTATE кода ошибки. Сопоставленные значения SQLSTATE берутся из [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md) и [SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md). Другие значения SQLSTATE из других API-Интерфейс ODBC не сопоставлены, так как **SQLExecDirect** и **SQLPrepare** приведены только функции, которые обращаются к подсистеме Visual FoxPro.  
+В следующей таблице перечислены коды ошибок Visual FoxPro, сопоставленные со значениями SQLSTATE кода ошибки ODBC. Сопоставленные значения SQLSTATE берутся из [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md) и [SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md). Другие значения SQLSTATE из других API ODBC не сопоставлены, так как **SQLExecDirect** и **SQLPrepare** являются единственными функциями, которые обращаются к подсистеме Visual FoxPro.  
   
- Дополнительные сведения о кодах ошибок ODBC см. в разделе [приложении a. Коды ошибок ODBC](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)в *Справочник по программированию ODBC*.  
+ Дополнительные сведения о кодах ошибок ODBC см. в [приложении A: коды ошибок ODBC](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)в *справочнике программиста по ODBC*.  
   
 |SQLSTATE|Код ошибки Visual FoxPro|  
 |--------------|------------------------------|  

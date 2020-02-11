@@ -11,19 +11,21 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7253264398316f2fb8bc0c1f1b4587c0e597beee
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74054831"
 ---
 # <a name="handling-large-objects-using-clr"></a>Обработка больших объектов в среде CLR
   Образец `HandlingLOBUsingCLR` для SQL Server демонстрирует передачу больших объектов между [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и файловой системой, доступной серверу, с использованием хранимых процедур CLR. Образец демонстрирует доступ к файлам в кодировке сервера и возможность вызова из хранимых процедур CLR динамических запросов и хранимых процедур. Также образец демонстрирует регистрацию и отмену регистрации методов среды CLR и сборок при помощи языка [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-## <a name="prerequisites"></a>необходимые компоненты  
+## <a name="prerequisites"></a>Предварительные требования  
  Для создания и запуска этого проекта должно быть установлено следующее программное обеспечение:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](https://www.microsoft.com/download/details.aspx?id=42299)Express.  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](https://www.microsoft.com/download/details.aspx?id=42299)Express.  
   
 -   База данных AdventureWorks, доступная на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [разработки](https://archive.codeplex.com/?p=SqlServerSamples).  
   
@@ -64,7 +66,7 @@ ms.locfileid: "74054831"
   
 3.  Поскольку этому примеру требуется подписанная сборка, создайте асимметричный ключ, выполнив следующую команду:  
   
-## <a name="sample-code"></a>Образец кода  
+## <a name="sample-code"></a>Пример кода  
  Ниже приведены листинги кода для данного образца.  
   
  C#  
@@ -628,7 +630,7 @@ USE AdventureWorks
 GO  
 ```  
   
-## <a name="see-also"></a>См. также статью  
- [Сценарии использования и примеры интеграции со средой CLR](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+## <a name="see-also"></a>См. также:  
+ [Сценарии использования и примеры для среды CLR &#40;интеграции&#41; CLR](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

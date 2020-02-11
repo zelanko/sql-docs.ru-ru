@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c14608a34c2df5a0e93fea985d8135a37d5ffa53
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63273274"
 ---
 # <a name="work-with-columns-in-aggregate-queries-visual-database-tools"></a>Работа со столбцами в агрегатных запросах (визуальные инструменты для баз данных)
@@ -66,8 +66,8 @@ ms.locfileid: "63273274"
   
 -   Если в условии поиска используется агрегатная функция, это условие затрагивает сводку и поэтому должно быть указано в предложении HAVING.  
   
-## <a name="see-also"></a>См. также  
- [Резюмирование результатов запросов &#40;визуальных инструментах баз данных&#41;](summarize-query-results-visual-database-tools.md)   
+## <a name="see-also"></a>См. также:  
+ [Суммировать результаты запроса &#40;визуальных инструментов для баз данных&#41;](summarize-query-results-visual-database-tools.md)   
  [Результаты запросов сортировки и группирования (визуальные инструменты для баз данных)](sort-and-group-query-results-visual-database-tools.md)  
   
   

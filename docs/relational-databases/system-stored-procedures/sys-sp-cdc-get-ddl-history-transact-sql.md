@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_get_ddl_history (Transact-SQL) | Документация Майкрософт
+title: sys. sp_cdc_get_ddl_history (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ ms.assetid: 4dee5e2e-d7e5-4fea-8037-a4c05c969b3a
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: bb4622b36901afc7ff04eacbfe840a9adda5b214
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68083728"
 ---
-# <a name="sysspcdcgetddlhistory-transact-sql"></a>sys.sp_cdc_get_ddl_history (Transact-SQL)
+# <a name="syssp_cdc_get_ddl_history-transact-sql"></a>sys.sp_cdc_get_ddl_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Возвращает журнал изменений языка описания данных DDL, связанный с заданным экземпляром записи, со времени включения системы отслеживания информации об изменениях данных для этого экземпляра записи. Система отслеживания измененных данных доступна не во всех выпусках [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -43,26 +43,26 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @capture_instance =] '*capture_instance*"  
- Имя экземпляра отслеживания, связанного с исходной таблицей. *capture_instance* — **sysname** и не может иметь значение NULL.  
+ [ @capture_instance = ] "*capture_instance*"  
+ Имя экземпляра отслеживания, связанного с исходной таблицей. *capture_instance* имеет тип **sysname** и не может иметь значение null.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или 1 (неуспешное завершение)  
+ 0 (успех) или 1 (сбой).  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|source_schema|**sysname**|Имя схемы исходной таблицы.|  
-|source_table|**sysname**|Имя исходной таблицы.|  
-|capture_instance|**sysname**|Имя экземпляра отслеживания.|  
+|source_schema|**имеет sysname**|Имя схемы исходной таблицы.|  
+|source_table|**имеет sysname**|Имя исходной таблицы.|  
+|capture_instance|**имеет sysname**|Имя экземпляра отслеживания.|  
 |required_column_update|**bit**|Указывает, что изменение DDL требует обновления столбца в таблице изменений, чтобы отразить изменения типа данных в исходном столбце.|  
 |ddl_command|**nvarchar(max)**|Инструкция DDL, примененная к исходной таблице.|  
-|ddl_lsn|**binary(10)**|Регистрационный номер транзакции в журнале (LSN), связанный с изменением DDL.|  
+|ddl_lsn|**двоичный (10)**|Регистрационный номер транзакции в журнале (LSN), связанный с изменением DDL.|  
 |ddl_time|**datetime**|Время изменения DDL.|  
   
-## <a name="remarks"></a>Примечания  
- Изменения DDL в исходной таблице, которые изменяют структуру столбцов, таких как добавление или удаление столбца или изменения существующего столбца, тип данных сохраняются в [cdc.ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) таблицы. Эти изменения доступны хранимым процедурам. Записи в таблицу «cdc.ddl_history» добавляются во время считывания процессом отслеживания транзакций DDL в журнале.  
+## <a name="remarks"></a>Remarks  
+ Изменения DDL в исходной таблице, которые изменяют структуру столбцов исходной таблицы, например добавление или удаление столбца или изменение типа данных существующего столбца, хранятся в таблице [CDC. ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) . Эти изменения доступны хранимым процедурам. Записи в таблицу «cdc.ddl_history» добавляются во время считывания процессом отслеживания транзакций DDL в журнале.  
   
 ## <a name="permissions"></a>Разрешения  
  Для возвращения строк всех экземпляров отслеживания в базе данных необходимо членство в предопределенной роли базы данных «db_owner». Всем остальным пользователям необходимо разрешение SELECT для всех отслеживаемых столбцов в исходной таблице. Кроме того, если для экземпляра отслеживания была определена шлюзовая роль, требуется членство в этой роли базы данных.  
@@ -84,7 +84,7 @@ EXECUTE sys.sp_cdc_get_ddl_history
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [sys. sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
   
   

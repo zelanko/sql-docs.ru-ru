@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e2d239dfc3d094f72d40ce6d020610fe1c0eabbc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103807"
 ---
 # <a name="enable-remote-errors-reporting-services"></a>Включение отслеживания удаленных ошибок (службы Reporting Services)
@@ -33,14 +33,14 @@ ms.locfileid: "66103807"
   
 -   [Изменение таблицы ConfigurationInfo (собственный режим)](#bkmk_ConfigurationInfo)  
   
-##  <a name="bkmk_sharepoint"></a> Включение отслеживания удаленных ошибок для режима SharePoint  
+##  <a name="bkmk_sharepoint"></a>Включить удаленные ошибки в режиме интеграции с SharePoint  
  Существуют две различные процедуры для включения отслеживания удаленных ошибок для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме совместимости с SharePoint. Процедуры для двух разных архитектур сервера отчетов отличаются. В выпуске [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] была представлена новая архитектура, основанная на службах SharePoint. В ней используются настройки, которые могут быть изменены для каждого приложения службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Прежняя архитектура использовала общие настройки на уровне веб-сайта.  
   
 #### <a name="enable-remote-errors-for-a-reporting-services-service-application"></a>Включение отслеживания удаленных ошибок для приложения службы Reporting Services  
   
 1.  Для сервера отчетов в режиме интеграции с SharePoint, установленном с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или обновленной версией [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], включите настройку приложения службы **Включение удаленного контроля ошибок**. Настройка может быть изменена для каждого приложения службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
-2.  В центре администрирования SharePoint в разделе **Управление приложениями** выберите **Управление приложениями служб** .  
+2.  В центре администрирования SharePoint щелкните **Управление приложениями службы** в группе **Управление приложениями** .  
   
 3.  Найдите нужное приложение службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и щелкните его название.  
   
@@ -60,9 +60,9 @@ ms.locfileid: "66103807"
   
 4.  Выберите **Включить отслеживание удаленных ошибок в локальном режиме**.  
   
-5.  Нажмите кнопку **ОК**.  
+5.  Нажмите кнопку **ОК**  
   
-##  <a name="bkmk_mgtStudio"></a> Включение отслеживания удаленных ошибок в среде SQL Server Management Studio (собственный режим)  
+##  <a name="bkmk_mgtStudio"></a>Включение удаленных ошибок с помощью SQL Server Management Studio (собственный режим)  
   
 1.  Запустите среду Management Studio и соединитесь с экземпляром сервера отчетов. Дополнительные сведения см. в разделе [Подключение к серверу отчетов в среде Management Studio](../tools/connect-to-a-report-server-in-management-studio.md) электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -74,7 +74,7 @@ ms.locfileid: "66103807"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="bkmk_script"></a> Включение отслеживания удаленных ошибок с помощью скрипта (собственный режим)  
+##  <a name="bkmk_script"></a>Включить удаленные ошибки с помощью скрипта (собственный режим)  
   
 1.  Создайте текстовый файл и скопируйте в него следующий скрипт.  
   
@@ -108,9 +108,9 @@ ms.locfileid: "66103807"
   
 6.  Дополнительные сведения см. в разделе [Программа RS.exe (SSRS)](../tools/rs-exe-utility-ssrs.md).  
   
-##  <a name="bkmk_ConfigurationInfo"></a> Изменение таблицы ConfigurationInfo (собственный режим)  
+##  <a name="bkmk_ConfigurationInfo"></a>Изменение таблицы ConfigurationInfo (собственный режим)  
   
 1.  > [!NOTE]  
-    >  Можно изменить **ConfigurationInfo** таблицы в базе данных сервера отчетов, присвоить `EnableRemoteErrors` для `True`, но если сервер отчетов активно используется, следует использовать SQL Server Management Studio или скрипт для изменения параметров. При изменении настроек базы данных необходимо перезапустить службу [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , чтобы изменения вступили в силу.  
+    >  Можно изменить таблицу **ConfigurationInfo** в базе данных сервера отчетов, чтобы задать для `EnableRemoteErrors` `True`значение, но если сервер отчетов используется активно, следует использовать SQL Server Management Studio или сценарий для изменения параметров. При изменении настроек базы данных необходимо перезапустить службу [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , чтобы изменения вступили в силу.  
   
   

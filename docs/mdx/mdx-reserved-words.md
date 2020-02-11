@@ -1,5 +1,5 @@
 ---
-title: Зарезервированные слова многомерных Выражений | Документация Майкрософт
+title: Зарезервированные слова многомерных выражений | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 4654733b2f8f0b59ee01ae881d55519d9ca48c23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68003456"
 ---
 # <a name="mdx-reserved-words"></a>Зарезервированные слова языка многомерных выражений
@@ -24,7 +24,7 @@ ms.locfileid: "68003456"
 |-|-|-|-|  
 |ABSOLUTE|DESC|LEAVES|SELF_BEFORE_AFTER|  
 |ACTIONPARAMETERSET|DESCENDANTS|LEVEL|SESSION|  
-|ADDCALCULATEDMEMBERS|DESCRIPTION|LEVELS|SET|  
+|ADDCALCULATEDMEMBERS|ОПИСАНИЕ|LEVELS|SET|  
 |AFTER|DIMENSION|LINKMEMBER|SETTOARRAY|  
 |AGGREGATE|DIMENSIONS|LINREGINTERCEPT|SETTOSTR|  
 |ALL|DISTINCT|LINREGPOINT|SORT|  
@@ -35,12 +35,12 @@ ms.locfileid: "68003456"
 |AS|DRILLDOWNMEMBER|MAX|STORAGE|  
 |ASC|DRILLDOWNMEMBERBOTTOM|MEASURE|STRIPCALCULATEDMEMBERS|  
 |ASCENDANTS|DRILLDOWNMEMBERTOP|MEDIAN|STRTOMEMBER|  
-|AVERAGE|DRILLUPLEVEL|MEMBER|STRTOSET|  
+|"AVERAGE" (Среднее)|DRILLUPLEVEL|MEMBER|STRTOSET|  
 |AXIS|DRILLUPMEMBER|MEMBERS|STRTOTUPLE|  
 |BASC|DROP|MEMBERTOSTR|STRTOVAL|  
 |BDESC|EMPTY|MIN|STRTOVALUE|  
 |BEFORE|END|MTD|SUBSET|  
-|BEFORE_AND_AFTER|ошибка|NAME|SUM|  
+|BEFORE_AND_AFTER|ОШИБКА|ИМЯ|SUM|  
 |BOTTOMCOUNT|EXCEPT|NAMETOSET|TAIL|  
 |BOTTOMPERCENT|EXCLUDEEMPTY|NEST|THIS|  
 |BOTTOMSUM|EXTRACT|NEXTMEMBER|TOGGLEDRILLSTATE|  
@@ -56,13 +56,13 @@ ms.locfileid: "68003456"
 |CELLFORMULASETLIST|GROUP|PAGES|UNIQUE|  
 |CHAPTERS|GROUPING|PARALLELPERIOD|UNIQUENAME|  
 |CHILDREN|HEAD|PARENT|UPDATE|  
-|CLEAR|HIDDEN|PASS|USE|  
+|CLEAR|HIDDEN|Проверка пройдена|USE|  
 |CLOSINGPERIOD|HIERARCHIZE|PERIODSTODATE|USE_EQUAL_ALLOCATION|  
-|COALESCEEMPTY|HIERARCHY|ПОМЕСТИТЬ|USE_WEIGHTED_ALLOCATION|  
+|COALESCEEMPTY|HIERARCHY|ПУБЛИКАЦИЯ|USE_WEIGHTED_ALLOCATION|  
 |COLUMN|IGNORE|PREDICT|USE_WEIGHTED_INCREMENT|  
 |COLUMNS|IIF|PREVMEMBER|USERNAME|  
 |CORRELATION|INCLUDEEMPTY|PROPERTIES|VALIDMEASURE|  
-|COUNT|INDEX|PROPERTY|Value|  
+|COUNT|INDEX|СВОЙСТВО|Значение|  
 |COUSIN|INTERSECT|QTD|VAR|  
 |COVARIANCE|IS|RANK|дисперсия|  
 |COVARIANCEN|ISANCESTOR|RECURSIVE|VARIANCEP|  
@@ -70,15 +70,15 @@ ms.locfileid: "68003456"
 |CREATEPROPERTYSET|ISGENERATION|ROLLUPCHILDREN|VISUAL|  
 |CREATEVIRTUALDIMENSION|ISLEAF|ROOT|VISUALTOTALS|  
 |CROSSJOIN|ISSIBLING|ROWS|WHERE|  
-|CUBE|ITEM|SCOPE|на|  
+|CUBE|ITEM|SCOPE|WITH|  
 |CURRENT|LAG|SECTIONS|WTD|  
 |CURRENTCUBE|LASTCHILD|SELECT|XOR|  
 |CURRENTMEMBER|LASTPERIODS|SELF|YTD|  
 |DEFAULT_MEMBER|LASTSIBLING|SELF_AND_AFTER||  
 |DEFAULTMEMBER|LEAD|SELF_AND_BEFORE||  
   
-## <a name="see-also"></a>См. также  
- [Зарезервированные ключевые слова &#40;синтаксис многомерных Выражений&#41;](../mdx/reserved-keywords-mdx-syntax.md)   
- [Справочник по языку многомерных выражений (многомерные выражения)](../mdx/mdx-language-reference-mdx.md)  
+## <a name="see-also"></a>См. также:  
+ [Зарезервированные ключевые слова &#40;синтаксис многомерных выражений&#41;](../mdx/reserved-keywords-mdx-syntax.md)   
+ [Справочник по языку многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-language-reference-mdx.md)  
   
   

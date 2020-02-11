@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6b31cb3bc05f9785154b89033cde2e158f204b3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62753061"
 ---
 # <a name="sql-server-agent-properties-log-on-tab"></a>Свойства агента SQL Server (вкладка «Вход в систему»)
@@ -30,7 +30,7 @@ ms.locfileid: "62753061"
  **Эта учетная запись**  
  Укажите локальную или доменную учетную запись, использующую аутентификацию Windows. [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендует использовать доменную учетную запись пользователя с минимальными правами. Дополнительные сведения о выборе учетной записи см. в разделе «Настройка учетных записей служб Windows» электронной документации.  
   
- **Имя учетной записи**  
+ **Account Name** (Имя учетной записи)  
  Укажите имя локальной или доменной учетной записи.  
   
  **Пароль**  
@@ -39,7 +39,7 @@ ms.locfileid: "62753061"
  **Подтверждение пароля**  
  Введите пароль для учетной записи еще раз.  
   
- **Запуск**  
+ **Начало**  
  Запускает службу.  
   
  **Остановить**  

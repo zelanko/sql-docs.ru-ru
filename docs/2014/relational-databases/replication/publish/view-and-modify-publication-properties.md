@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5053cc16734cc18c75e163fec4c06b1768e590cc
-ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68941065"
 ---
 # <a name="view-and-modify-publication-properties"></a>Просмотр и изменение свойств публикации
@@ -102,29 +102,29 @@ ms.locfileid: "68941065"
   
 #### <a name="to-view-the-properties-of-a-snapshot-or-transactional-publication"></a>Просмотр свойств публикации моментальных снимков или публикации транзакций  
   
-1.  Выполните [sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql), указав имя публикации для  **\@параметра публикации** . Если не указать этот параметр, будут возвращены сведения обо всех публикациях на издателе.  
+1.  Выполните хранимую процедуру [sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql), указав имя публикации в параметре **\@publication**. Если не указать этот параметр, будут возвращены сведения обо всех публикациях на издателе.  
   
 #### <a name="to-change-the-properties-of-a-snapshot-or-transactional-publication"></a>Изменение свойств публикации моментальных снимков или публикации транзакций  
   
-1.  Выполните [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), указав свойство публикации для изменения в  **\@** параметре property и новое  **\@** значение этого свойства в параметре value.  
+1.  Выполните хранимую процедуру [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), указав изменяемое свойство публикации в параметре **\@property**, а новое значение этого свойства — в параметре **\@value**.  
   
     > [!NOTE]  
-    >  Если изменение потребует создания нового моментального снимка, необходимо также указать значение **1** для  **\@параметра force_invalidate_snapshot**, а если изменение потребует повторной инициализации подписчиков, необходимо указать значение **1.**   **для\@force_reinit_subscription**. Дополнительные сведения о свойствах публикации и статьи, при изменении которых требуется создание нового моментального снимка или повторная инициализация, см. в [этой статье](change-publication-and-article-properties.md).  
+    >  Если изменение потребует создания нового моментального снимка, нужно также указать значение **1** в параметре **\@force_invalidate_snapshot**, а если изменение потребует повторной инициализации подписчиков — значение **1** в параметре **\@force_reinit_subscription**. Дополнительные сведения о свойствах публикации и статьи, при изменении которых требуется создание нового моментального снимка или повторная инициализация, см. в [этой статье](change-publication-and-article-properties.md).  
   
 #### <a name="to-view-the-properties-of-a-merge-publication"></a>Просмотр свойств публикации слиянием  
   
-1.  Выполните [sp_helpmergepublication](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql), указав имя публикации для  **\@параметра публикации** . Если не указать этот параметр, будут возвращены сведения обо всех публикациях на издателе.  
+1.  Выполните хранимую процедуру [sp_helpmergepublication](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql), указав имя публикации в параметре **\@publication**. Если не указать этот параметр, будут возвращены сведения обо всех публикациях на издателе.  
   
 #### <a name="to-change-the-properties-of-a-merge-publication"></a>Изменение свойств публикации слиянием  
   
-1.  Выполните [процедуру sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), указав изменяемое свойство публикации в  **\@** параметре property, а новое  **\@** значение этого свойства — в параметре value.  
+1.  Выполните хранимую процедуру [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), указав свойство публикации, которое нужно изменить, в параметре **\@property**, а новое значение этого свойства — в параметре **\@value**.  
   
     > [!NOTE]  
-    >  Если изменение потребует создания нового моментального снимка, необходимо также указать значение **1** для  **\@параметра force_invalidate_snapshot**, а если изменение потребует повторной инициализации подписчиков, необходимо указать значение **1.** дополнительные сведения о свойствах, при изменении которых требуется новый моментальный снимок или повторная инициализация, см. в разделе [изменение свойств публикации и статьи](change-publication-and-article-properties.md).  **\@**  
+    >  Если изменение потребует создания нового моментального снимка, нужно также указать значение **1** в параметре **\@force_invalidate_snapshot**, а если изменение потребует повторной инициализации подписчиков — значение **1** в параметре **\@force_reinit_subscription**. Дополнительные сведения о свойствах, изменение которых требует нового мгновенного снимка или повторной инициализации, см. в статье [Изменение свойств публикации и статьи](change-publication-and-article-properties.md).  
   
 #### <a name="to-view-the-properties-of-a-snapshot"></a>Просмотр свойств моментального снимка  
   
-1.  Выполните [sp_helppublication_snapshot](/sql/relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql), указав имя публикации для  **\@параметра публикации** .  
+1.  Выполните хранимую процедуру [sp_helppublication_snapshot](/sql/relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql), указав имя публикации в параметре **\@publication**.  
   
 #### <a name="to-change-the-properties-of-a-snapshot"></a>Изменение свойств моментального снимка  
   
@@ -158,9 +158,9 @@ ms.locfileid: "68941065"
   
 3.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает `false`, то либо на шаге 2 были неверно определены свойства публикации, либо публикация не существует.  
   
-4.  Чтобы изменить свойства, задайте новые значения для устанавливаемых свойств (необязательно). Чтобы определить, присвоено ли данное значение <xref:Microsoft.SqlServer.Replication.PublicationAttributes> свойству <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>, используется логический оператор AND (`&` в Microsoft Visual C# и `And` в Microsoft Visual Basic). С помощью операторов включающего логического ИЛИ (`|` в Visual C# и `Or` в Visual Basic) и исключающего логического ИЛИ (`^` в Visual C# и `Xor` в Visual Basic) измените значения <xref:Microsoft.SqlServer.Replication.PublicationAttributes> для свойства <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>.  
+4.  Чтобы изменить свойства, задайте новые значения для устанавливаемых свойств (необязательно). Чтобы определить, присвоено ли данное значение `&` свойству `And`, используется логический оператор AND (<xref:Microsoft.SqlServer.Replication.PublicationAttributes> в Microsoft Visual C# и <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> в Microsoft Visual Basic). С помощью операторов включающего логического ИЛИ (`|` в Visual C# и `Or` в Visual Basic) и исключающего логического ИЛИ (`^` в Visual C# и `Xor` в Visual Basic) измените значения <xref:Microsoft.SqlServer.Replication.PublicationAttributes> для свойства <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>.  
   
-5.  Если для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> указать значение `true`, то для фиксирования изменений на сервере необходимо вызвать метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> (необязательно). Если для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> указать значение `false` (по умолчанию), изменения будут отправлены на сервер немедленно.  
+5.  Если для свойства `true` указать значение <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, то для фиксирования изменений на сервере необходимо вызвать метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> (необязательно). Если для свойства `false` указать значение <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (по умолчанию), изменения будут отправлены на сервер немедленно.  
   
 #### <a name="to-view-or-modify-properties-of-a-merge-publication"></a>Просмотр или изменение свойств публикации слиянием  
   
@@ -170,9 +170,9 @@ ms.locfileid: "68941065"
   
 3.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает `false`, то либо на шаге 2 были неверно определены свойства публикации, либо публикация не существует.  
   
-4.  Чтобы изменить свойства, задайте новые значения для устанавливаемых свойств (необязательно). Чтобы определить, присвоено ли данное значение <xref:Microsoft.SqlServer.Replication.PublicationAttributes> свойству <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>, используется логический оператор AND (`&` в Visual C# и `And` в Visual Basic). С помощью операторов включающего логического ИЛИ (`|` в Visual C# и `Or` в Visual Basic) и исключающего логического ИЛИ (`^` в Visual C# и `Xor` в Visual Basic) измените значения <xref:Microsoft.SqlServer.Replication.PublicationAttributes> для свойства <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>.  
+4.  Чтобы изменить свойства, задайте новые значения для устанавливаемых свойств (необязательно). Чтобы определить, присвоено ли данное значение `&` свойству `And`, используется логический оператор AND (<xref:Microsoft.SqlServer.Replication.PublicationAttributes> в Visual C# и <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> в Visual Basic). С помощью операторов включающего логического ИЛИ (`|` в Visual C# и `Or` в Visual Basic) и исключающего логического ИЛИ (`^` в Visual C# и `Xor` в Visual Basic) измените значения <xref:Microsoft.SqlServer.Replication.PublicationAttributes> для свойства <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>.  
   
-5.  Если для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> указать значение `true`, то для фиксирования изменений на сервере необходимо вызвать метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> (необязательно). Если для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> указать значение `false` (по умолчанию), изменения будут отправлены на сервер немедленно.  
+5.  Если для свойства `true` указать значение <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, то для фиксирования изменений на сервере необходимо вызвать метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> (необязательно). Если для свойства `false` указать значение <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (по умолчанию), изменения будут отправлены на сервер немедленно.  
   
 ###  <a name="PShellExample"></a> Примеры (объекты RMO)  
  В этом примере устанавливаются атрибуты публикации для публикации транзакций. Изменения кэшируются до тех пор, пока явно не отправляются на сервер.  
@@ -187,7 +187,7 @@ ms.locfileid: "68941065"
   
  [!code-vb[HowTo#rmo_vb_ChangeMergePub_ddl](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_changemergepub_ddl)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Публикация данных и объектов базы данных](publish-data-and-database-objects.md)   
  [Изменение свойств публикации и статьи](change-publication-and-article-properties.md)   
  [Внесение изменений в схемы баз данных публикации](make-schema-changes-on-publication-databases.md)   

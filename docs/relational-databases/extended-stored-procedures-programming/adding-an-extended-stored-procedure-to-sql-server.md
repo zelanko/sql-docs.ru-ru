@@ -1,5 +1,5 @@
 ---
-title: Добавление расширенной хранимой процедуры SQL Server | Документация Майкрософт
+title: Добавление расширенной хранимой процедуры в SQL Server | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,19 +15,19 @@ ms.assetid: 10f1bb74-3b43-4efd-b7ab-7a85a8600a50
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: bba543dbf89cb1dd3c0eb8a456a54c3c31c51d02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67903412"
 ---
 # <a name="adding-an-extended-stored-procedure-to-sql-server"></a>Добавление на SQL Server расширенной хранимой процедуры
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Пользуйтесь вместо этого интеграцией со средой CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Вместо этого используйте интеграцию со средой CLR.  
   
- DLL-библиотека, которая содержит функции расширенных хранимых процедур, используется как расширение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Чтобы установить библиотеку DLL, скопируйте файл в каталог, например в каталог, содержащий стандартные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DLL-файлы (C:\Program Files\Microsoft SQL Server\MSSQL12.0. *x*\MSSQL\Binn по умолчанию).  
+ DLL-библиотека, которая содержит функции расширенных хранимых процедур, используется как расширение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Чтобы установить библиотеку DLL, скопируйте файл в каталог, например в тот, который содержит стандартные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] файлы DLL (C:\PROGRAM Files\Microsoft SQL Server\MSSQL12.0.* x*\MSSQL\Binn по умолчанию).  
   
  После копирования DLL-библиотеки расширенной хранимой процедуры на сервер, системному администратору [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] следует зарегистрировать в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] каждую из функций расширенной хранимой процедуры в DLL-библиотеке. Это выполняется с помощью системной хранимой процедуры sp_addextendedproc.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "67903412"
 sp_addextendedproc 'xp_hello', 'c:\Program Files\Microsoft SQL Server\MSSQL13.0.MSSQLSERVER\MSSQL\Binn\xp_hello.dll';  
 ```  
   
- Если имя функции, указанное в процедуре `sp_addextendedproc`, не соответствует в точности имени функции в DLL-библиотеке, новое имя будет зарегистрировано в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], но это имя будет непригодно для использования. Например несмотря на то что `xp_Hello` регистрируется как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] расширенной хранимой процедуры, расположенный в `xp_hello.dll`, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] нельзя будет найти функцию в библиотеке DLL, если вы используете `xp_Hello` для вызова функции в будущем.  
+ Если имя функции, указанное в процедуре `sp_addextendedproc`, не соответствует в точности имени функции в DLL-библиотеке, новое имя будет зарегистрировано в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], но это имя будет непригодно для использования. Например, `xp_Hello` хотя регистрируется как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] расширенная хранимая процедура, расположенная в `xp_hello.dll`, не сможет найти функцию в библиотеке DLL, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] если вы используете `xp_Hello` для вызова функции позже.  
   
 ```  
 --Register the function (xp_hello) with an initial upper case  
@@ -93,8 +93,8 @@ Server: Msg 2812, Level 16, State 62, Line 1
   
  Останавливать и перезапускать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не обязательно.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_addextendedproc &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)   
- [sp_dropextendedproc (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)  
+ [sp_dropextendedproc &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)  
   
   

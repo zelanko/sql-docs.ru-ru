@@ -14,18 +14,18 @@ ms.assetid: 87982955-1542-4551-9c06-447ffe8193b9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4e7d2e57b68ed9ab3ae117c543361f810952ba9c
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73761199"
 ---
 # <a name="filestream-support-odbc"></a>Поддержка FILESTREAM (ODBC)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Драйвер ODBC собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает улучшенную функциональность FILESTREAM. Дополнительные сведения об этой функции см. в разделе [Поддержка FILESTREAM](../../../relational-databases/native-client/features/filestream-support.md). Пример, демонстрирующий поддержку ODB для FILESTREAM, см. в разделе [добавочная отправка и получение данных &#40;с&#41;помощью FILESTREAM ODBC](../../../relational-databases/native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md).  
+  Драйвер ODBC собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает улучшенную функциональность FILESTREAM. Дополнительные сведения об этой функции см. в разделе [Поддержка FILESTREAM](../../../relational-databases/native-client/features/filestream-support.md). Пример, демонстрирующий поддержку ODB для FILESTREAM, см. в разделе [пошаговая отправка и получение данных с помощью FILESTREAM &#40;&#41;ODBC ](../../../relational-databases/native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md).  
   
- Чтобы отправлять и получать значения типа **varbinary (max)** , превышающие 2 ГБ, приложение должно выполнить привязку параметров с помощью SQLBindParameter с *ColumnSize* , для которого задано значение **SQL_SS_LENGTH_UNLIMITED**, и задать для *StrLen_or_IndPtr* **содержимое. SQL_DATA_AT_EXEC** до SQLExecDirect или SQLExecute.  
+ Чтобы отправлять и получать значения типа **varbinary (max)** , превышающие 2 ГБ, приложение должно выполнить привязку параметров с помощью SQLBindParameter с *ColumnSize* , для которого задано значение **SQL_SS_LENGTH_UNLIMITED**, и установить содержимое *StrLen_or_IndPtr* в **SQL_DATA_AT_EXEC** до SQLExecDirect или SQLExecute.  
   
  Как и в случае с любыми параметрами выполнения, данные будут предоставляться с помощью метод SQLParamData и SQLPutData.  
   
@@ -101,7 +101,7 @@ ODBCError(henv, hdbc, hstmt, NULL, true); exit(-1);
 }  
 ```  
   
-### <a name="insert"></a>Insert  
+### <a name="insert"></a>Вставить  
   
 ```  
 void insertFilestream(LPCWSTR srcFilePath) {  
@@ -266,7 +266,7 @@ return r;
 }  
 ```  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Программирование собственного клиента SQL Server](../../../relational-databases/native-client/sql-server-native-client-programming.md)  
   
   

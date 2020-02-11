@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 083fa7998e347b3aa3abe7aacbf9585a18047b20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100228"
 ---
 # <a name="new-shared-schedule-management-studio"></a>Создание общего расписания (среда Management Studio)
@@ -32,10 +32,10 @@ ms.locfileid: "66100228"
 >  Эта функция поддерживается не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения о функциях, поддерживаемых выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
 ## <a name="options"></a>Параметры  
- **Name**  
+ **Название**  
  Введите имя общего расписания. Это имя отображается в раскрывающихся списках, если пользователи выбирают общее расписание для отчетов и подписок. Укажите описательное имя, которое умещается в списке по ширине и позволяет легко отличить одно общее расписание от другого. Имя должно содержать хотя бы одну букву или цифру. В него могут также входить пробелы и другие символы. При задании имени нельзя использовать следующие символы:  
   
- ; ? : \@ & = + , $ / * \< >  
+ ; ? : \@ & = +, $/*\< >  
   
  " /  
   
@@ -63,7 +63,7 @@ ms.locfileid: "66100228"
  **Однократно**  
  Этот параметр выбирается для создания расписания, выполняющегося только один раз, в определенную дату и в определенное время.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справка F1 по использованию сервера отчетов среде Management Studio](report-server-in-management-studio-f1-help.md)   
  [Подключение к серверу отчетов в среде Management Studio](connect-to-a-report-server-in-management-studio.md)   
  [Создание, изменение и удаление расписаний](../subscriptions/create-modify-and-delete-schedules.md)   

@@ -1,5 +1,5 @@
 ---
-title: Редактор задач веб-служба (страница "Вывод") | Документация Майкрософт
+title: Редактор задачи «веб-служба» (страница «выходные данные») | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7924570253bf2f805d91c4dfabc3d5facf44cccc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054473"
 ---
 # <a name="web-service-task-editor-output-page"></a>Редактор задачи «Веб-служба» (страница «Вывод»)
@@ -30,29 +30,29 @@ ms.locfileid: "66054473"
  **OutputType**  
  Выберите тип хранения, используемый для хранения результатов. Это свойство имеет параметры, указанные в следующей таблице.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |**Соединение с файлом**|Хранить результаты в файле. При выборе этого значения отображается динамический параметр **Файл**.|  
-|**Переменная**|Хранить результаты в переменной. При выборе этого значения отображается динамический параметр **Переменная**.|  
+|**Перемен**|Хранить результаты в переменной. При выборе этого значения отображается динамический параметр **Переменная**.|  
   
 ## <a name="outputtype-dynamic-options"></a>Динамические параметры OutputType  
   
 ### <a name="outputtype--file-connection"></a>OutputType = Соединение с файлом  
- **Файл**  
- Выберите диспетчер подключений файлов в списке или щелкните \<**Создать соединение...** >, чтобы создать его.  
+ **File**  
+ Выберите Диспетчер подключения файлов в списке или нажмите кнопку \< **создать соединение...**>, чтобы создать новый диспетчер соединений.  
   
- **См. также:** подробные сведения о [диспетчере файловых подключений](connection-manager/file-connection-manager.md) и о [редакторе диспетчера файловых подключений](../../2014/integration-services/file-connection-manager-editor.md).  
+ **См. также:** [Диспетчер соединения файлов](connection-manager/file-connection-manager.md), [Редактор диспетчера подключения файлов](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="outputtype--variable"></a>OutputType = Переменная  
- **Переменная**  
- Выберите переменную в списке или щелкните \<**Создать переменную...** >, чтобы создать ее.  
+ **Перемен**  
+ Выберите переменную из списка или нажмите кнопку \< **создать переменную...**>, чтобы создать новую переменную.  
   
- **См. также:**  подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md) и о [добавлении переменной](../../2014/integration-services/add-variable.md).  
+ **См. также:**  [Integration Services &#40;переменные&#41; SSIS](integration-services-ssis-variables.md), [Добавить переменную](../../2014/integration-services/add-variable.md)  
   
-## <a name="see-also"></a>См. также  
- [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор задачи "Веб-служба" (страница "Общие")](general-page-of-integration-services-designers-options.md)   
- [Редактор задачи "Веб-служба" (страница "Ввод")](../../2014/integration-services/web-service-task-editor-input-page.md)   
+## <a name="see-also"></a>См. также:  
+ [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор задачи "веб-служба" &#40;страница "Общие"&#41;](general-page-of-integration-services-designers-options.md)   
+ [Редактор задачи "веб-служба" &#40;"входная страница"&#41;](../../2014/integration-services/web-service-task-editor-input-page.md)   
  [Страница «Выражения»](expressions/expressions-page.md)  
   
   

@@ -19,13 +19,13 @@ ms.assetid: 9489dc30-af29-4363-a172-4645947fc95e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4ed53c6a72b201129cf9f75214261bbdd47d6fb9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108152"
 ---
-# <a name="spdbmmonitoraddmonitoring-transact-sql"></a>sp_dbmmonitoraddmonitoring (Transact-SQL)
+# <a name="sp_dbmmonitoraddmonitoring-transact-sql"></a>sp_dbmmonitoraddmonitoring (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Создает задание монитора зеркального отображения баз данных, которое периодически обновляет состояние каждой из баз данных на экземпляре сервера, подвергнутых зеркальному отображению.  
@@ -52,13 +52,13 @@ sp_dbmmonitoraddmonitoring [ update_period ]
 ## <a name="result-sets"></a>Результирующие наборы  
  None  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Для этой процедуры требуется разрешение на выполнение агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на экземпляре сервера, а для выполнения задания монитора зеркального отображения баз данных требуется, чтобы агент был запущен.  
   
- Если зеркальное отображение базы данных запускается из [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], **sp_dbmmonitoraddmonitoring** процедура выполняется автоматически. При запуске зеркального отображения вручную с помощью инструкции ALTER DATABASE, чтобы отслеживать зеркальную базу данных на экземпляре сервера, необходимо запустить **sp_dbmmonitoraddmonitoring** вручную.  
+ Если зеркальное отображение базы данных запускается [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]из, то процедура **sp_dbmmonitoraddmonitoring** выполняется автоматически. Если вы начинаете зеркальное отображение вручную с помощью инструкций ALTER DATABASE, для наблюдения за зеркально отображаемой базой данных на экземпляре сервера необходимо запустить **sp_dbmmonitoraddmonitoring** вручную.  
   
 > [!NOTE]  
->  При запуске **sp_dbmmonitoraddmonitoring** перед настройкой зеркального отображения базы данных, задание монитора будет выполняться, но не будет обновлять таблицу состояния, в базу данных, которая будет храниться журнал монитора зеркального отображения.  
+>  При запуске **sp_dbmmonitoraddmonitoring** перед настройкой зеркального отображения базы данных задание наблюдения будет выполняться, но не будет обновлять таблицу состояния, в которой хранится журнал монитора зеркального отображения базы данных.  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо членство в предопределенной роли сервера **sysadmin** .  
@@ -70,11 +70,11 @@ sp_dbmmonitoraddmonitoring [ update_period ]
 EXEC sp_dbmmonitoraddmonitoring 3;  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Мониторинг зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
+## <a name="see-also"></a>См. также:  
+ [Мониторинг &#40;SQL Server зеркального отображения базы данных&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [sp_dbmmonitorchangemonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
  [sp_dbmmonitordropmonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)   
  [sp_dbmmonitorhelpmonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)   
- [sp_dbmmonitorresults (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)  
+ [sp_dbmmonitorresults &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: a889feac-c0e0-4635-b506-843863d86967
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 70d0965a127d8eeea22e6eedc448bab68d0bf312
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73659741"
 ---
 # <a name="setvalue-method-serversettingsgeneralflag-class"></a>Метод SetValue (класс ServerSettingsGeneralFlag)
@@ -36,21 +36,21 @@ object.SetValue(Value)
 ```  
   
 ## <a name="parts"></a>Компоненты  
- *object*  
+ *объектами*  
  Объект [класса ServerSettingsGeneralFlag](../../../relational-databases/wmi-provider-configuration-classes/serversettingsgeneralflag-class/serversettingsgeneralflag-class.md) , представляющий универсальный флаг для параметров сервера.  
   
 #### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Description|  
 |---------------|-----------------|  
-|*Значение*|Логическое значение, указывающее состояние флага.|  
+|*Value*|Логическое значение, указывающее состояние флага.|  
   
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение **uint32** , равное 0, если служба изменена успешно, и 1, если запрос не поддерживается. Любое другое значение указывает на ошибку.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также раздел  
- [Настройка сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+## <a name="see-also"></a>См. также:  
+ [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

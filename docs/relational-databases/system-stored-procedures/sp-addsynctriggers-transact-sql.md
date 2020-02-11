@@ -16,19 +16,19 @@ ms.assetid: e37d0c3b-19bf-4719-9535-96ba361372b3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2b9bdabcc11c900ae0a1cbe71280b64efb6ccdaf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68096208"
 ---
-# <a name="spaddsynctriggers-transact-sql"></a>sp_addsynctriggers (Transact-SQL)
+# <a name="sp_addsynctriggers-transact-sql"></a>sp_addsynctriggers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Создает триггеры на подписчике, которые используются всеми типами обновляемых подписок (немедленного обновления, обновления посредством очередей и немедленного обновления с переходом на обновление посредством очередей при отработке отказа). Эта хранимая процедура выполняется на подписчике в базе данных подписки.  
   
 > [!IMPORTANT]  
->  [Sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md) процедура должна использоваться вместо **sp_addsynctrigger**. [sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md) формирует скрипт, который содержит **sp_addsynctrigger** вызовов.  
+>  Вместо **sp_addsynctrigger**следует использовать [sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md) процедуру. [sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md) создает скрипт, содержащий вызовы **sp_addsynctrigger** .  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -57,54 +57,54 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @sub_table = ] 'sub_table'` — Имя таблицы подписчика. *sub_table* — **sysname**, не имеет значения по умолчанию.  
+`[ @sub_table = ] 'sub_table'`Имя таблицы подписчика. Аргумент *sub_table* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @sub_table_owner = ] 'sub_table_owner'` — Это имя владельца таблицы подписчика. *sub_table_owner* — **sysname**, не имеет значения по умолчанию.  
+`[ @sub_table_owner = ] 'sub_table_owner'`Имя владельца таблицы подписчика. Аргумент *sub_table_owner* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @publisher = ] 'publisher'` — Имя сервера издателя. *издатель* — **sysname**, не имеет значения по умолчанию.  
+`[ @publisher = ] 'publisher'`Имя сервера издателя. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @publisher_db = ] 'publisher_db'` — Имя базы данных издателя. *publisher_db* — **sysname**, не имеет значения по умолчанию. Если значение равно NULL, используется текущая база данных.  
+`[ @publisher_db = ] 'publisher_db'`Имя базы данных издателя. Аргумент *publisher_db* имеет тип **sysname**и не имеет значения по умолчанию. Если значение равно NULL, используется текущая база данных.  
   
-`[ @publication = ] 'publication'` — Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @ins_proc = ] 'ins_proc'` Это имя хранимой процедуры, которая поддерживает синхронные вставки транзакций на издателе. *ins_proc* — **sysname**, не имеет значения по умолчанию.  
+`[ @ins_proc = ] 'ins_proc'`Имя хранимой процедуры, которая поддерживает синхронные вставки транзакций на издателе. Аргумент *ins_proc* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @upd_proc = ] 'upd_proc'` Это имя хранимой процедуры, которая поддерживает синхронные обновления транзакций на издателе. *ins_proc* — **sysname**, не имеет значения по умолчанию.  
+`[ @upd_proc = ] 'upd_proc'`Имя хранимой процедуры, поддерживающей синхронные обновления транзакций на издателе. Аргумент *ins_proc* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @del_proc = ] 'del_proc'` Это имя хранимой процедуры, которая поддерживает синхронные удаления транзакций на издателе. *ins_proc* — **sysname**, не имеет значения по умолчанию.  
+`[ @del_proc = ] 'del_proc'`Имя хранимой процедуры, поддерживающей синхронное удаление транзакций на издателе. Аргумент *ins_proc* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @cftproc = ] 'cftproc'` Это имя автоматически формируемой процедуры, используемой публикациями, поддерживающими обновление посредством очередей. *cftproc* — **sysname**, не имеет значения по умолчанию. Для публикаций, поддерживающих немедленное обновление, значением этого аргумента является NULL. Этот параметр относится к публикациям, поддерживающим обновление посредством очередей (обновление посредством очередей и немедленное обновление с переходом на обновление посредством очередей при отработке отказа).  
+`[ @cftproc = ] 'cftproc'`Имя автоматически создаваемой процедуры, используемой публикациями, допускающими обновление посредством очередей. *кфтпрок* имеет тип **sysname**и не имеет значения по умолчанию. Для публикаций, поддерживающих немедленное обновление, значением этого аргумента является NULL. Этот параметр относится к публикациям, поддерживающим обновление посредством очередей (обновление посредством очередей и немедленное обновление с переходом на обновление посредством очередей при отработке отказа).  
   
-`[ @proc_owner = ] 'proc_owner'` Учетная запись пользователя на издателе, от имени которой все автоматически формируемые хранимые процедуры для обновления публикации (отложенного или немедленного) были созданы. *proc_owner* — **sysname** не имеет значения по умолчанию.  
+`[ @proc_owner = ] 'proc_owner'`Указывает учетную запись пользователя на издателе, для которой были созданы автоматически создаваемые хранимые процедуры для обновления публикации (в очереди и (или) интерпретации). *proc_owner* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @identity_col = ] 'identity_col'` — Имя столбца идентификаторов на издателе. *identity_col* — **sysname**, значение по умолчанию NULL.  
+`[ @identity_col = ] 'identity_col'`Имя столбца идентификаторов на издателе. Аргумент *identity_col* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @ts_col = ] 'timestamp_col'` Имя **timestamp** столбца на издателе. *timestamp_col* — **sysname**, значение по умолчанию NULL.  
+`[ @ts_col = ] 'timestamp_col'`Имя столбца **меток времени** на издателе. Аргумент *timestamp_col* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @filter_clause = ] 'filter_clause'` Является ограничением предложение (WHERE), которое задает горизонтальный фильтр. При вводе предложения ограничения опустите ключевое слово WHERE. *filter_clause*— **nvarchar(4000)** , значение по умолчанию NULL.  
+`[ @filter_clause = ] 'filter_clause'`Предложение ограничения (WHERE), определяющее горизонтальный фильтр. При вводе предложения ограничения опустите ключевое слово WHERE. *filter_clause*имеет тип **nvarchar (4000)** и значение по умолчанию NULL.  
   
-`[ @primary_key_bitmap = ] 'primary_key_bitmap'` — Это битовая схема первичных ключевых столбцов в таблице. *primary_key_bitmap* — **varbinary(4000)** , не имеет значения по умолчанию.  
+`[ @primary_key_bitmap = ] 'primary_key_bitmap'`Является битовой картой первичных ключевых столбцов в таблице. *primary_key_bitmap* имеет тип **varbinary (4000)** и не имеет значения по умолчанию.  
   
-`[ @identity_support = ] identity_support` Включает и выключает автоматическую обработку диапазона идентификаторов при использовании отложенного обновления. *identity_support* — **бит**, значение по умолчанию **0**. **0** поддержки, диапазона означает, что удостоверение не **1** включает автоматическую обработку диапазона идентификаторов.  
+`[ @identity_support = ] identity_support`Включает и отключает автоматическую обработку диапазона идентификаторов при использовании обновления посредством очередей. *identity_support* является **битом**и имеет значение по умолчанию **0**. **0** означает отсутствие поддержки диапазона идентификаторов, **1** включает автоматическую обработку диапазона идентификаторов.  
   
-`[ @independent_agent = ] independent_agent` Указывает, существует ли отдельный агент распространителя (независимый агент) для этой публикации, либо один агент распространителя каждой публикации базы данных и подписки базы данных пары (общий агент). Это значение отражает значение свойства independent_agent для публикации, определенной на издателе. *independent_agent* имеет тип bit и значение по умолчанию **0**. Если **0**, агент является общим. Если **1**, агент является независимым.  
+`[ @independent_agent = ] independent_agent`Указывает, существует ли один агент распространения (независимый агент) для этой публикации или один агент распространения на каждую базу данных публикации и пару баз данных подписки (общий агент). Это значение отражает значение свойства independent_agent для публикации, определенной на издателе. *independent_agent* является битом со значением по умолчанию **0**. Если значение **равно 0**, агент является общим агентом. Если значение равно **1**, то агент является независимым.  
   
-`[ @distributor = ] 'distributor'` — Имя распространителя. *распространитель* — **sysname**, не имеет значения по умолчанию.  
+`[ @distributor = ] 'distributor'`Имя распространителя. Аргумент *распространитель* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @pubversion = ] pubversion` Указывает версию издателя. *pubversion* — **int**, значение по умолчанию 1. **1** означает, что версия издателя — [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] пакет обновления 2 или более ранних версий; **2** означает, что издатель является [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] пакет обновления 3 (SP3) или более поздней версии. *pubversion* необходимо явно присвоить **2** Если версия издателя — [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] SP3 или более поздней версии.  
+`[ @pubversion = ] pubversion`Указывает версию издателя. *пубверсион* имеет **тип int**и значение по умолчанию 1. **1** означает, что версия издателя — [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] пакет обновления 2 (SP2) или более ранняя; **2** означает, что издатель является [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] пакетом обновления 3 (SP3) или более поздней версии. для *пубверсион* необходимо явно задать значение **2** , если версия издателя — [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] SP3 или более поздняя.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
- **sp_addsynctriggers** используется агентом распространителя как часть инициализации подписки. Как правило, пользователи не запускают эту хранимую процедуру, но она может быть полезной при необходимости ручной установки подписки без синхронизации.  
+## <a name="remarks"></a>Remarks  
+ **sp_addsynctriggers** используется агент распространения как часть инициализации подписки. Как правило, пользователи не запускают эту хранимую процедуру, но она может быть полезной при необходимости ручной установки подписки без синхронизации.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_addsynctriggers**.  
+ Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_addsynctriggers**.  
   
-## <a name="see-also"></a>См. также  
- [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
+## <a name="see-also"></a>См. также:  
+ [Обновляемые подписки для репликации транзакций](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
  [sp_script_synctran_commands &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

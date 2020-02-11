@@ -15,10 +15,10 @@ ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 82b906be4568b15a18c55247532bf35b6cd939a7
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69028898"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>Хранимые процедуры пространственного индекса — аргументы и свойства
@@ -31,13 +31,13 @@ ms.locfileid: "69028898"
 ## <a name="syntax"></a>Синтаксис  
  Синтаксис определенных хранимых процедур пространственного индекса см. в следующих разделах.  
   
--   [sp_help_spatial_geometry_index &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
+-   [sp_help_spatial_geometry_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
   
--   [sp_help_spatial_geometry_index_xml &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
+-   [sp_help_spatial_geometry_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
   
--   [sp_help_spatial_geography_index &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
+-   [sp_help_spatial_geography_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
   
--   [sp_help_spatial_geography_index_xml &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
+-   [sp_help_spatial_geography_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
 ## <a name="arguments"></a>Аргументы  
 `[ @tabname = ] 'tabname'`Полное или неполное имя таблицы, для которой был указан пространственный индекс.  
@@ -59,7 +59,7 @@ ms.locfileid: "69028898"
 `[ @xml_output = ] 'xml_output'`Выходной параметр, возвращающий результирующий набор в XML-фрагменте. *xml_output* имеет **Формат XML** и не имеет значения по умолчанию.  
   
 ## <a name="properties"></a>Свойства  
- Задайте verboseoutput = 0, чтобы возвращать основные свойства, как показано в таблице ниже.  **\@** verboseoutput > 0, чтобы получить все свойства пространственного индекса.  **\@**  
+ Задайте ** \@verboseoutput** = 0, чтобы возвращать основные свойства, как показано в таблице ниже. verboseoutput > 0, чтобы получить все свойства пространственного индекса. ** \@**  
   
  **Base_Table_Rows**  
  Количество строк в базовой таблице. Значение равно **bigint**.  
@@ -133,12 +133,12 @@ ms.locfileid: "69028898"
  Количество строк в индексе / количество строк в базовой таблице. Значение равно **bigint**.  
   
  **Total_Number_Of_ObjectCells_In_Level0_For_QuerySample**  
- Указывает, попадает ли образец репрезентативного запроса за пределы ограничивающего прямоугольника геометрического индекса и в корневую ячейку (ячейка уровня 0). Это либо значение 0 (не в ячейке уровня 0), либо 1. Если входит в ячейку уровня 0, то анализируемый индекс не может быть использован в образце запроса. Это свойство является основным. Значение равно **bigint**.  
+ Указывает, попадает ли образец репрезентативного запроса за пределы ограничивающего прямоугольника **геометрического** индекса и в корневую ячейку (ячейка уровня 0). Это либо значение 0 (не в ячейке уровня 0), либо 1. Если входит в ячейку уровня 0, то анализируемый индекс не может быть использован в образце запроса. Это свойство является основным. Значение равно **bigint**.  
   
  **Total_Number_Of_ObjectCells_In_Level0_In_Index**  
  Количество экземпляров ячеек индексированных объектов, которые тесселяциются на уровне 0 (корневая ячейка, за пределами ограничивающего прямоугольника для **геометрии**). Это свойство является основным. Значение равно **bigint**.  
   
- Для геометрических индексов это произойдет, если ограничивающий прямоугольник индекса меньше, чем область данных. Большое количество объектов на уровне 0 может потребовать вторичных фильтров, если окно запроса частично выходит за пределы ограничивающего прямоугольника, и снизит производительность индекса (например, **Total_Number_Of_ObjectCells_In_Level0_For_QuerySample** имеет значение 1). Если окно запроса не входит в ограничивающий прямоугольник, то большое количество объектов на уровне 0 может действительно повысить производительность индекса.  
+ Для **геометрических** индексов это произойдет, если ограничивающий прямоугольник индекса меньше, чем область данных. Большое количество объектов на уровне 0 может потребовать дополнительных фильтров, если окно запроса частично выходит за пределы ограничивающего прямоугольника, и снизит производительность индекса (например, **Total_Number_Of_ObjectCells_In_Level0_For_QuerySample** равен 1). Если окно запроса не входит в ограничивающий прямоугольник, то большое количество объектов на уровне 0 может действительно повысить производительность индекса.  
   
  NULL и пустые экземпляры считаются на уровне 0, но не влияют на производительность. На уровне 0 имеется столько же ячеек, что и для NULL, при этом пустые экземпляры входят в базовую таблицу. Для индексов **Geography** уровень 0 будет содержать столько ячеек, как null, и пустые экземпляры + 1 ячейка, так как пример запроса считается равным 1.  
   
@@ -155,28 +155,28 @@ ms.locfileid: "69028898"
  Количество экземпляров ячеек индексированных объектов тесселируются с точностью четвертого уровня. Это свойство является основным. Значение равно **bigint**.  
   
  **Total_Number_Of_interior_ObjectCells_In_Level1_In_Index**  
- Число ячеек, полностью охваченных объектом на уровне тесселяции 1 и таким, что они являются внутренними по отношению к объекту. (Cell_attributevalue — 2.) Это свойство является основным. Значение равно **bigint**.  
+ Число ячеек, полностью охваченных объектом на уровне тесселяции 1 и таким, что они являются внутренними по отношению к объекту. (Cell_attributevalue равно 2.) Это основное свойство. Значение равно **bigint**.  
   
  **Total_Number_Of_interior_ObjectCells_In_Level2_In_Index**  
- Число ячеек, полностью охваченных объектом на уровне тесселяции 2 и, таким является, внутренними объектами. (Значение Cell_attribute равно 2.) Это свойство является основным. Значение равно **bigint**.  
+ Число ячеек, полностью охваченных объектом на уровне тесселяции 2 и, таким является, внутренними объектами. (Cell_attribute значение равно 2.) Это основное свойство. Значение равно **bigint**.  
   
  **Total_Number_Of_interior_ObjectCells_In_Level3_In_Index**  
- Число ячеек, полностью охваченных объектом на уровне тесселяции 3 и, таким является, внутренними объектами. (Значение Cell_attribute равно 2.) Это свойство является основным. Значение равно **bigint**.  
+ Число ячеек, полностью охваченных объектом на уровне тесселяции 3 и, таким является, внутренними объектами. (Cell_attribute значение равно 2.) Это основное свойство. Значение равно **bigint**.  
   
  **Total_Number_Of_interior_ObjectCells_In_Level4_In_Index**  
- Количество ячеек, которые полностью входят в объект на уровне тесселяции 4 и, следовательно, являются внутренними для объекта. (Значение Cell_attribute равно 2.) Это свойство является основным. Значение равно **bigint**.  
+ Количество ячеек, которые полностью входят в объект на уровне тесселяции 4 и, следовательно, являются внутренними для объекта. (Cell_attribute значение равно 2.) Это основное свойство. Значение равно **bigint**.  
   
  **Total_Number_Of_intersecting_ObjectCells_In_Level1_In_Index**  
- Число ячеек, пересекающихся объектом, на уровне тесселяции 1. (Значение Cell_attribute равно 1.) Это свойство является основным. Значение равно **bigint**.  
+ Число ячеек, пересекающихся объектом, на уровне тесселяции 1. (Cell_attribute значение равно 1.) Это основное свойство. Значение равно **bigint**.  
   
  **Total_Number_Of_intersecting_ObjectCells_In_Level2_In_Index**  
- Число ячеек, пересекающихся объектом, на уровне тесселяции 2. (Значение Cell_attribute равно 1.) Это свойство является основным. Значение равно **bigint**.  
+ Число ячеек, пересекающихся объектом, на уровне тесселяции 2. (Cell_attribute значение равно 1.) Это основное свойство. Значение равно **bigint**.  
   
  **Total_Number_Of_intersecting_ObjectCells_In_Level3_In_Index**  
- Число ячеек, пересекающихся объектом на уровне тесселяции 3. (Значение Cell_attribute равно 1.) Это свойство является основным. Значение равно **bigint**.  
+ Число ячеек, пересекающихся объектом на уровне тесселяции 3. (Cell_attribute значение равно 1.) Это основное свойство. Значение равно **bigint**.  
   
  **Total_Number_Of_intersecting_ObjectCells_In_Level4_In_Index**  
- Число ячеек, которые пересекаются объектом на уровне тесселяции 4. (Значение Cell_attribute равно 1.) Это свойство является основным. Значение равно **bigint**.  
+ Число ячеек, которые пересекаются объектом на уровне тесселяции 4. (Cell_attribute значение равно 1.) Это основное свойство. Значение равно **bigint**.  
   
  **Total_Number_Of_Border_ObjectCells_In_Level0_For_QuerySample**  
  Указывает, находится ли образец запроса в корневой ячейке 0 вне ограничивающего прямоугольника, но на границе с ним. Это свойство является основным. Значение равно **bigint**.  
@@ -185,19 +185,19 @@ ms.locfileid: "69028898"
 >  Эти данные используются только при определении наличия объектов, которые почти соприкасаются с ограничивающим прямоугольником.  
   
  **Total_Number_Of_Border_ObjectCells_In_Level0_In_Index**  
- Количество объектов на уровне 0, которые граничат с ограничивающим прямоугольником. (Значение Cell_attribute равно 0.)  Значение равно **bigint**.  
+ Количество объектов на уровне 0, которые граничат с ограничивающим прямоугольником. (Cell_attribute значение равно 0.)  Значение равно **bigint**.  
   
  **Total_Number_Of_Border_ObjectCells_In_Level1_In_Index**  
- Число ячеек объекта, которые касаются границы ячейки сетки на уровне тесселяции 1. (Значение Cell_attribute равно 0.) Это свойство является основным. Значение равно **bigint**.  
+ Число ячеек объекта, которые касаются границы ячейки сетки на уровне тесселяции 1. (Cell_attribute значение равно 0.) Это основное свойство. Значение равно **bigint**.  
   
  **Total_Number_Of_Border_ObjectCells_In_Level2_In_Index**  
- Число ячеек объекта, которые касаются границы ячейки сетки на уровне тесселяции 2. (Значение Cell_attribute равно 0.) Это свойство является основным. Значение равно **bigint**.  
+ Число ячеек объекта, которые касаются границы ячейки сетки на уровне тесселяции 2. (Cell_attribute значение равно 0.) Это основное свойство. Значение равно **bigint**.  
   
  **Total_Number_Of_Border_ObjectCells_In_Level3_In_Index**  
- Число ячеек объекта, которые касаются границы ячейки сетки на уровне тесселяции 3. (Значение Cell_attribute равно 0.) Это свойство является основным. Значение равно **bigint**.  
+ Число ячеек объекта, которые касаются границы ячейки сетки на уровне тесселяции 3. (Cell_attribute значение равно 0.) Это основное свойство. Значение равно **bigint**.  
   
  **Total_Number_Of_Border_ObjectCells_In_Level4_In_Index**  
- Количество ячеек, которые граничат с ячейкой сетки на уровне тесселяции 4. (Значение Cell_attribute равно 0.) Это свойство является основным. Значение равно **bigint**.  
+ Количество ячеек, которые граничат с ячейкой сетки на уровне тесселяции 4. (Cell_attribute значение равно 0.) Это основное свойство. Значение равно **bigint**.  
   
  **Interior_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage**  
  Доля в процентах от общей области (общее количество конечных ячеек) сетки, в которой содержатся конечные ячейки, входящие в объект.  
@@ -210,7 +210,7 @@ ms.locfileid: "69028898"
  То же, что и **Interior_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage**, за исключением того, что они являются частично охваченными ячейками. Значение равно **float**.  
   
  **Border_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage**  
- То же, что и **Interior_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage** , за исключением того, что это ячейки границ. Значение равно **float**.  
+ То же, что и **Interior_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage** за исключением того, что они являются ячейками границ. Значение равно **float**.  
   
  **Average_Cells_Per_Object_Normalized_To_Leaf_Grid**  
  Среднее число ячеек на объект, нормализованных в сетке конечных ячеек. Это дает представление о пространственном размере объектов, то есть об их величине. Значение равно **float**.  
@@ -300,27 +300,27 @@ ms.locfileid: "69028898"
 ## <a name="permissions"></a>Разрешения  
  Пользователь должен быть членом роли **Public** . Необходимо разрешение READ ACCESS на сервере и объекте. Это относится ко всем хранимым процедурам пространственного индекса.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Свойства, которые содержат значения NULL, не включаются в набор возвращаемых значений.  
   
 ## <a name="examples"></a>Примеры  
  Примеры см. в следующих разделах:  
   
--   [sp_help_spatial_geometry_index &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
+-   [sp_help_spatial_geometry_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
   
--   [sp_help_spatial_geometry_index_xml &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
+-   [sp_help_spatial_geometry_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
   
--   [sp_help_spatial_geography_index &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
+-   [sp_help_spatial_geography_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
   
--   [sp_help_spatial_geography_index_xml &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
+-   [sp_help_spatial_geography_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
 ## <a name="requirements"></a>Требования  
   
-## <a name="see-also"></a>См. также  
- [Хранимые процедуры &#40;пространственного индекса TRANSACT-SQL&#41;](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
- [sp_help_spatial_geometry_index &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Хранимые процедуры пространственного индекса &#40;языке Transact-SQL&#41;](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
+ [sp_help_spatial_geometry_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
  [Общие сведения о пространственных индексах](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [Основы XQuery](../../xquery/xquery-basics.md)   
- [Справочник по языку XQuery (SQL Server)](../../xquery/xquery-language-reference-sql-server.md)  
+ [Справочник по языку XQuery &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)  
   
   

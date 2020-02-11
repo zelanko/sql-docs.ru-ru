@@ -16,10 +16,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: bd272abda4b22f220e3fc599111d10cb4979f42e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211970"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>Запись событий подсистемы аудита SQL Server в журнал безопасности
@@ -35,7 +35,8 @@ ms.locfileid: "68211970"
   
 -   Последующие события безопасности не будут регистрироваться  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не сможет установить, что система не регистрирует события в журнале безопасности, в результате чего возможна потеря событий аудита  
+-   
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не сможет установить, что система не регистрирует события в журнале безопасности, в результате чего возможна потеря событий аудита  
   
 -   После того как администратор настроит журнал безопасности, режим записи в журнал вернется в нормальное состояние.  
   
@@ -45,27 +46,27 @@ ms.locfileid: "68211970"
   
      [Ограничения](#Restrictions)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
--   **Чтобы записывать события подсистемы аудита SQL Server в журнал безопасности:**  
+-   **Чтобы записать SQL Server события аудита в журнал безопасности, выполните следующие действия.**  
   
-     [Настройте параметр аудита доступа к объектам в Windows с помощью средства auditpol](#auditpolAccess)  
+     [Настройка параметра аудита доступа к объектам в Windows с помощью Auditpol](#auditpolAccess)  
   
-     [Настройте параметр аудита доступа к объектам в Windows с помощью средства secpol](#secpolAccess)  
+     [Настройка параметра аудита доступа к объектам в Windows с помощью secpol](#secpolAccess)  
   
-     [Предоставьте разрешения на создание аудитов безопасности конкретной учетной записи с помощью средства secpol](#secpolPermission)  
+     [Предоставьте разрешение Создание аудитов безопасности учетной записи с помощью команды secpol.](#secpolPermission)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
 ###  <a name="Restrictions"></a> Ограничения  
- Администраторы компьютера с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] должны учитывать, что локальные параметры журнала безопасности могут быть переопределены политикой домена. В этом случае политика домена может перезаписывать параметр подкатегории (**auditpol /get /subcategory:"application generated"** ). Это может повлиять на способность [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] регистрировать события, причем будет невозможно определить, что события, для которых [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] пытается провести аудит, не регистрируются.  
+ Администраторы компьютера с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] должны учитывать, что локальные параметры журнала безопасности могут быть переопределены политикой домена. В этом случае политика домена может перезаписывать параметр подкатегории (**auditpol /get /subcategory:"application generated"**). Это может повлиять на способность [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] регистрировать события, причем будет невозможно определить, что события, для которых [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] пытается провести аудит, не регистрируются.  
   
 ###  <a name="Security"></a> безопасность  
   
 ####  <a name="Permissions"></a> Permissions  
  Для настройки этих параметров необходимо быть администратором Windows.  
   
-##  <a name="auditpolAccess"></a> Настройка параметра аудита доступа к объектам в Windows с помощью средства auditpol  
+##  <a name="auditpolAccess"></a>Настройка параметра аудита доступа к объектам в Windows с помощью Auditpol  
   
 1.  Откройте командную строку с правами администратора.  
   
@@ -81,7 +82,7 @@ ms.locfileid: "68211970"
   
 3.  Закройте окно командной строки.  
   
-##  <a name="secpolAccess"></a> Предоставление разрешения на создание аудитов безопасности конкретной учетной записи с помощью средства secpol  
+##  <a name="secpolAccess"></a>Предоставление разрешения на создание аудитов безопасности учетной записи с помощью команды secpol  
   
 1.  В любой версии операционной системы Windows в меню **Пуск** выберите пункт **Выполнить**.  
   
@@ -101,7 +102,7 @@ ms.locfileid: "68211970"
   
 9. Перезапустите [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , чтобы включить этот параметр.  
   
-##  <a name="secpolPermission"></a> Настройка параметра аудита доступа к объектам в Windows с помощью средства secpol  
+##  <a name="secpolPermission"></a>Настройка параметра аудита доступа к объектам в Windows с помощью secpol  
   
 1.  Если операционная система имеет более раннюю версию, чем [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] или Windows Server 2008, в меню **Пуск** выберите пункт **Выполнить**.  
   
@@ -117,7 +118,7 @@ ms.locfileid: "68211970"
   
 7.  Закройте средство политики безопасности.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Подсистема аудита SQL Server (компонент Database Engine)](sql-server-audit-database-engine.md)  
   
   

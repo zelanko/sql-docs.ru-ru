@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 340a3a0f44201c81eafe8717962b2894709eb65d
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73779535"
 ---
 # <a name="using-statement-parameters---binding-parameters"></a>Использование параметров инструкции — привязка параметров
@@ -49,19 +49,20 @@ ms.locfileid: "73779535"
   
      Привязка на уровне строки задается путем вызова **SQLSetStmtAttr** с *атрибутом* , для которого задано значение SQL_ATTR_PARAM_BIND_TYPE, а *ValuePtr* задает размер структуры, содержащей переменные программы.  
   
- Когда драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отправляет на сервер символьные или двоичные строковые параметры, он дополняет значения длиной, указанной в параметре *ColumnSize* **SQLBindParameter** . Если приложение ODBC 2. x указывает 0 для *ColumnSize*, драйвер устанавливает значение параметра в точность типа данных. Точность равна 8000 при соединении с сервером [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и 255 при соединении с предыдущими версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *ColumnSize* находится в байтах для столбцов типа Variant.  
+ Когда драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента отправляет на сервер символьные или двоичные строковые параметры, он дополняет значения длиной, указанной в параметре *ColumnSize* **SQLBindParameter** . Если приложение ODBC 2. x указывает 0 для *ColumnSize*, драйвер устанавливает значение параметра в точность типа данных. Точность равна 8000 при соединении с сервером [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и 255 при соединении с предыдущими версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *ColumnSize* находится в байтах для столбцов типа Variant.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает определение имен для параметров хранимых процедур. В ODBC 3.5 также появилась поддержка именованных параметров, используемых при вызове хранимых процедур [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эта поддержка может использоваться для следующих действий.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает определение имен для параметров хранимых процедур. В ODBC 3.5 также появилась поддержка именованных параметров, используемых при вызове хранимых процедур [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эта поддержка может использоваться для следующих действий.  
   
 -   Вызов хранимой процедуры и предоставление значений для подмножества параметров, заданных для хранимой процедуры.  
   
 -   Указание параметров в приложении не в той последовательности, в какой они были заданы при создании хранимой процедуры.  
   
- Именованные параметры поддерживаются только при использовании инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXECUTE** или escape-последовательности ODBC CALL для выполнения хранимой процедуры.  
+ Именованные параметры поддерживаются только при использовании [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции **EXECUTE** или escape-последовательности ODBC CALL для выполнения хранимой процедуры.  
   
  Если для параметра хранимой процедуры задано значение **SQL_DESC_NAME** , все параметры хранимых процедур в запросе также должны устанавливаться **SQL_DESC_NAME**.  Если литералы используются в вызовах хранимых процедур, где параметры имеют **SQL_DESC_NAME** заданы, литералы должны использовать формат *"имя*=*значение*", где *Name* — имя параметра хранимой процедуры (например, @p1). Дополнительные сведения см. в разделе [Привязка параметров по имени (именованные параметры)](https://go.microsoft.com/fwlink/?LinkId=167215).  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Использование параметров инструкции](../../relational-databases/native-client-odbc-queries/using-statement-parameters.md)  
   
   

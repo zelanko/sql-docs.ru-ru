@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4e0b418e44436912b5ed1368ad7a316951872266
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62519208"
 ---
 # <a name="the-role-of-soap-in-reporting-services"></a>The Role of SOAP in Reporting Services
@@ -41,7 +41,7 @@ ms.locfileid: "62519208"
 </soap:Envelope>  
 ```  
   
- Протокол SOAP требует, чтобы сообщения помещались в элемент `Envelope`, а большая часть сообщения располагалась в элементе `Body`. В этом примере элемент Body содержит вызов метода <xref:ReportService2010.ReportingService2010.DeleteItem%2A>, который принимает строковый параметр, представляющий путь к удаляемому элементу. Можно создать класс-посредник клиента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], в котором все операции SOAP инкапсулируются в методы. Следующий метод [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] представляет пример SOAP-запроса, приведенный ранее.  
+ Протокол SOAP требует, чтобы сообщения помещались в элемент `Envelope`, а большая часть сообщения располагалась в элементе `Body`. В этом примере элемент Body содержит вызов метода <xref:ReportService2010.ReportingService2010.DeleteItem%2A>, который принимает строковый параметр, представляющий путь к удаляемому элементу. Вы можете создать [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] клиентский прокси-класс, который инкапсулирует все операции SOAP в методы. Следующий [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] метод представляет пример SOAP, заданный ранее.  
   
 ```  
 public void DeleteItem(string item);  
@@ -59,10 +59,10 @@ public void DeleteItem(string item);
   
  Метод <xref:ReportService2010.ReportingService2010.DeleteItem%2A> не имеет возвращаемого значения, поэтому возвращается пустой ответ.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Доступ к API SOAP](accessing-the-soap-api.md)   
  [Диспетчер отчетов (службы Reporting Services в основном режиме)](../report-manager-ssrs-native-mode.md)   
- [Сервер отчетов служб Reporting Services](../reporting-services-report-server.md)   
+ [Сервер отчетов Reporting Services](../reporting-services-report-server.md)   
  [Веб-службы сервера отчетов](report-server-web-service.md)  
   
   

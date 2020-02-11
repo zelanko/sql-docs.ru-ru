@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8e302fe1c5a1f4bcf5f51728a866a72b993076f3
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73786722"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
@@ -34,7 +34,7 @@ ms.locfileid: "73786722"
 > [!NOTE]  
 >  Стандартный атрибут соединения ODBC SQL_ATTR_CONNECTION_DEAD возвращает последнее по времени состояние соединения. Может оказаться так, что это состояние соединения будет отличаться от текущего.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |SQL_CD_TRUE|Соединение с сервером потеряно.|  
 |SQL_CD_FALSE|Соединение открыто и доступно для обработки инструкций.|  
@@ -50,15 +50,15 @@ ms.locfileid: "73786722"
   
  Дополнительные сведения см. [в разделе доступ к диагностическим сведениям в журнале расширенных событий](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |SQL_ERROR|Ошибка соединения.|  
 |SQL_SUCCESS|Подключение выполнено успешно. Идентификатор соединения клиента будет находиться в выходном буфере.|  
   
 ## <a name="sql_copt_ss_perf_data"></a>SQL_COPT_SS_PERF_DATA  
- Атрибут SQL_COPT_SS_PERF_DATA возвращает указатель на структуру SQLPERF, содержащую текущую статистику производительности драйвера. Если ведение журнала производительности не включено, функция**SQLGetConnectAttr** возвращает значение NULL. Драйвер не обновляет статистику в структуре SQLPERF динамически. Каждый раз, когда возникает необходимость обновить статистику производительности, вызывайте функцию **SQLGetConnectAttr** .  
+ Атрибут SQL_COPT_SS_PERF_DATA возвращает указатель на структуру SQLPERF, содержащую текущую статистику производительности драйвера. **SQLGetConnectAttr** возвращает значение null, если ведение журнала производительности не включено. Драйвер не обновляет статистику в структуре SQLPERF динамически. Каждый раз, когда возникает необходимость обновить статистику производительности, вызывайте функцию **SQLGetConnectAttr** .  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |NULL|Ведение журнала производительности не включено.|  
 |Любое другое значение|Указатель на структуру SQLPERF.|  
@@ -69,7 +69,7 @@ ms.locfileid: "73786722"
 ## <a name="sql_copt_ss_user_data"></a>SQL_COPT_SS_USER_DATA  
  Атрибут SQL_COPT_SS_USER_DATA извлекает указатель на данные пользователя. Пользовательские данные хранятся в принадлежащей клиенту памяти и записываются отдельно для каждого соединения. Если указатель на данные пользователя на задан, что соответствует значению SQL_UD_NOTSET, то возвращается указатель NULL.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |SQL_UD_NOTSET|Указатель на данные пользователя не задан.|  
 |Любое другое значение|Указатель на данные пользователя.|  
@@ -81,14 +81,14 @@ ms.locfileid: "73786722"
   
  Если атрибут SQL_COPT_SS_SERVER_SPN или SQL_COPT_SS_FAILOVER_PARTNER еще не задан, возвращается значение по умолчанию (пустая строка).  
   
- Дополнительные сведения о SPN см. [в &#40;разделе имена субъектов&#41; -служб SPN &#40;в&#41;клиентских соединениях ODBC](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
+ Дополнительные сведения о SPN см. [в статье имена субъектов-служб &#40;имен участников-служб&#41; в клиентских подключениях &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
   
-## <a name="see-also"></a>См. также статью  
-   [функции SQLGetConnectAttr](https://go.microsoft.com/fwlink/?LinkId=59347)  
+## <a name="see-also"></a>См. также:  
+ [Функция SQLGetConnectAttr](https://go.microsoft.com/fwlink/?LinkId=59347)   
  [Сведения о реализации API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
- [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
- [SET ANSI_NULLS (Transact-SQL)](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
- [SET ANSI_PADDING (Transact-SQL)](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
- [ЗАДАТЬ ANSI_WARNINGS &#40;TRANSACT-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)  
+ [Настройка QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
+ [Настройка ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
+ [Настройка ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
+ [Настройка ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)  
   
   

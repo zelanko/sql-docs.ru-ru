@@ -17,10 +17,10 @@ ms.assetid: 951bf851-3e6e-4361-ae6a-2bcd5b837ebd
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c314745122f0735b2b26ac2bb021f20f637b2a28
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75256193"
 ---
 # <a name="common-language-runtime-clr-integration-programming-concepts"></a>Основные понятия о программировании интеграции со средой CLR
@@ -67,7 +67,7 @@ ms.locfileid: "75256193"
  [Сценарии использования и примеры для среды CLR &#40;интеграции&#41; CLR](https://msdn.microsoft.com/library/33aac25f-abb4-4f29-af88-4a0dacd80ae7)  
  Описывает сценарии использования и образцы кода, использующие объекты CLR.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Сборки &#40;ядро СУБД&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [Установка пакета SDK платформы .NET Framework](https://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)  
   

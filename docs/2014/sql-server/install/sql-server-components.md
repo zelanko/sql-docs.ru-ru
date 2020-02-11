@@ -22,10 +22,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 514524f063bf78ceb4862612dd8c78ce8cf78fc4
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811087"
 ---
 # <a name="sql-server-components"></a>Компоненты SQL Server
@@ -50,7 +50,7 @@ ms.locfileid: "68811087"
   
  При просмотре служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] следует указать имя локального компьютера. Помощник по обновлению просматривает только локальные серверы отчетов.  
   
- **Автоматическое**  
+ **Обнаружение**  
  Кнопка " **обнаружить** " обращается к указанному компьютеру и обнаруживает анализируемые компоненты:  
   
 -   Если выполняется анализ экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на удаленном компьютере, на этом компьютере необходимо включить службы удаленного реестра.  
@@ -64,7 +64,7 @@ ms.locfileid: "68811087"
  **Components**  
  Выберите компоненты, подлежащие анализу. Можно нажать кнопку **обнаружения** , чтобы выбрать все компоненты, установленные на компьютере. Рядом с компонентами, найденными на данном компьютере, будет установлен флажок. Можно также выбрать компоненты вручную, установив или сняв флажок рядом с каждым компонентом.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Работа с советником по переходу](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
  [Справочник по пользовательскому интерфейсу помощника по обновлению](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)  
   

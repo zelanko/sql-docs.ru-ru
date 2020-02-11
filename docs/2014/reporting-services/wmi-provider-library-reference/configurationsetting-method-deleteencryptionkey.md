@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cbf0eee13a113dff42a22da3703e60b3869b757f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098532"
 ---
-# <a name="deleteencryptionkey-method-wmi-msreportserverconfigurationsetting"></a>Метод DeleteEncryptionKey (WMI MSReportServer_ConfigurationSetting)
+# <a name="deleteencryptionkey-method-wmi-msreportserver_configurationsetting"></a>Метод DeleteEncryptionKey (WMI MSReportServer_ConfigurationSetting)
   Удаляет ключи шифрования из базы данных сервера отчетов.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -44,20 +44,20 @@ public void DeleteEncryptionKeys(string InstallationID, out Int32 HRESULT,
  *InstallationID*  
  Код установки сервера отчетов, который находится в таблице ключей в базе данных сервера отчетов.  
   
- *HRESULT*  
+ *СОСТАВ*  
  [out] Значение, которое указывает, окончился ли вызов успехом или сбоем.  
   
- *ExtendedErrors[]*  
+ *Екстендедеррорс []*  
  [out] Массив строк, содержащий дополнительные ошибки, возвращенные в результате вызова.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение HRESULT, которое является признаком успешного или неуспешного завершения вызова метода. Значение 0 указывает, что вызов метода завершился успешно. Ненулевое значение указывает, что произошла ошибка.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Метод *DeleteEncryptionKey* удаляет записи из таблицы ключей для любых серверов отчетов, у которых есть доступ к защищенным сведениям в базе данных сервера отчетов. Если указанный параметр *InstallationID* не соответствует коду установки в базе данных, то метод возвращает ошибку.  
   
 ## <a name="requirements"></a>Требования  
- **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Пространство имен:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

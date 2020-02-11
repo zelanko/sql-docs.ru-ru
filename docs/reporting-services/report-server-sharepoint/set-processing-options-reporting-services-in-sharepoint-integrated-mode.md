@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 986ae6e89727b0cef59e4d6b3bf7e5d92bd5342b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580550"
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>Установка параметров обработки (службы Reporting Services в режиме интеграции с SharePoint)
@@ -90,7 +90,7 @@ ms.locfileid: "65580550"
   
 *  Задать время ожидания базы данных сервера отчетов SharePoint с помощью Windows PowerShell. Дополнительные сведения см. в разделе "Получение и задание свойств базы данных приложения Reporting Service" статьи [PowerShell cmdlets for Reporting Services SharePoint Mode](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md) (Командлеты PowerShell для режима совместимости с SharePoint служб Reporting Services).  
   
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
  [Установка свойств обработки отчетов](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Кэширование отчетов](../../reporting-services/report-server/caching-reports-ssrs.md)   

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4dd4fba91b1507f711a66a88f40b2fa2ea35e1ae
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401361"
 ---
 # <a name="backup-and-loading-hardware-overview---parallel-data-warehouse"></a>Общие сведения о резервном копировании и загрузке оборудования — Параллельное хранилище данных
@@ -29,7 +29,7 @@ ms.locfileid: "74401361"
   
 Для загрузки данных требуется один или несколько загрузок серверов. Вы можете использовать собственные или другие серверы, а также приобрести новые серверы. Дополнительные сведения см. [в разделе Получение и настройка сервера загрузки](acquire-and-configure-loading-server.md). Эти инструкции включают в себя [таблицу по планированию загрузки сервера](loading-server-capacity-planning-worksheet.md) , которая поможет спланировать подходящее решение для загрузки.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Общие сведения о резервном копировании и восстановлении](backup-and-restore-overview.md)  
 [Общие сведения о загрузке](load-overview.md)  
   

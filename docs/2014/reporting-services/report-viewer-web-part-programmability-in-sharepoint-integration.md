@@ -11,17 +11,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4a0bc7e2d99190e142647ab8732e2d2d48b3ea2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63255133"
 ---
 # <a name="report-viewer-web-part-programmability-in-sharepoint-integration"></a>Использование программирования веб-части обозревателя в интеграции с SharePoint
   Веб-часть средства просмотра отчетов ― это серверный элемент управления `T:Microsoft.ReportingServices.SharePoint.UI.WebParts.ReportViewerWebPart`, который содержит набор открытых API, позволяющих разработчикам создавать пользовательские приложения SharePoint. Пользователь может создавать веб-части, предоставляющие путь к отчету и параметры для веб-части средства просмотра отчетов с помощью соединений веб-частей. Также можно внедрить веб-часть в пользовательскую страницу веб-части SharePoint и модифицировать ее с помощью открытого API-интерфейса.  
   
 ## <a name="connecting-to-report-viewer-web-part-with-custom-web-parts"></a>Соединение с веб-частью средства просмотра отчетов с пользовательскими веб-частями  
- Веб-часть средства просмотра отчетов ― это потребитель соединения с веб-частями SharePoint, реализующими интерфейс <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> или `T:Microsoft.SharePoint.WebPartPages.IFilterValues`. Веб-часть <xref:System.Web.UI.WebControls.WebParts.IWebPartRow>, например веб-часть **Документы**, может предоставлять веб-части средства просмотра отчетов путь к отчету, если она помещается на той же странице веб-части, что и веб-часть средства просмотра отчетов. Аналогичным образом `T:Microsoft.SharePoint.WebPartPages.IFilterValues` веб-часть, такие как **текстовый фильтр** или **Фильтр выбора**, может предоставлять параметр отчета для просмотра веб-части отчетов при размещении на той же странице веб-части, так как веб-средство просмотра отчетов Часть.  
+ Веб-часть средства просмотра отчетов ― это потребитель соединения с веб-частями SharePoint, реализующими интерфейс <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> или `T:Microsoft.SharePoint.WebPartPages.IFilterValues`. Веб-часть <xref:System.Web.UI.WebControls.WebParts.IWebPartRow>, например веб-часть **Документы**, может предоставлять веб-части средства просмотра отчетов путь к отчету, если она помещается на той же странице веб-части, что и веб-часть средства просмотра отчетов. Аналогично, `T:Microsoft.SharePoint.WebPartPages.IFilterValues` веб-часть, например **Фильтр текста** или **Фильтр выбора**, может предоставить параметр отчета веб-части средства просмотра отчетов, если она размещена на той же странице веб-части, что и веб-часть средства просмотра отчетов.  
   
 ### <a name="implementing-a-report-path-provider-with-iwebpartrow"></a>Реализация поставщика путей отчетов с интерфейсом IWebPartRow  
  Чтобы указать путь к отчету для веб-части средства просмотра отчетов через соединения веб-части, выполните следующие действия.  
@@ -58,7 +58,7 @@ ms.locfileid: "63255133"
     > [!NOTE]  
     >  Можно подключить одновременно несколько веб-частей `T:Microsoft.SharePoint.WebPartPages.IFilterValues` к веб-части средства просмотра отчетов. Однако нельзя одновременно подключить веб-часть <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> и веб-часть `T:Microsoft.SharePoint.WebPartPages.IFilterValues` к веб-части средства просмотра отчетов.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Интерфейс IFilterValues](https://msdn.microsoft.com/library/office/microsoft.sharepoint.webpartpages.ifiltervalues\(v=office.15\).aspx)  
   
   

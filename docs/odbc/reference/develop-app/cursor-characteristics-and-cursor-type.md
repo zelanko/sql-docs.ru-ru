@@ -15,37 +15,37 @@ ms.assetid: 6f67edd2-ae71-4ca0-9b2d-abf4c20dc17b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e8803e7827102f564be63454b0387df938064d84
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68002053"
 ---
 # <a name="cursor-characteristics-and-cursor-type"></a>Характеристики и тип курсора
-Приложение может указать характеристики курсора вместо указания типа курсора (однопроходный, статический, управляемые набором ключей или динамического). Для этого приложение выбирает прокрутки курсора (путем установки атрибута инструкции SQL_ATTR_CURSOR_SCROLLABLE) и чувствительности (путем установки атрибута инструкции SQL_ATTR_CURSOR_SENSITIVITY) перед открытием курсора в инструкции дескриптор. Драйвер затем выбирает тип курсора, который наиболее эффективным образом предоставляет характеристики, запрошенное приложение.  
+Приложение может указать характеристики курсора вместо того, чтобы указывать тип курсора (только последовательный, статический, управляемый набором ключей или динамический). Для этого приложение выбирает возможность прокрутки курсора (путем установки атрибута SQL_ATTR_CURSOR_SCROLLABLE оператора) и чувствительности (путем установки атрибута SQL_ATTR_CURSOR_SENSITIVITY инструкции) перед открытием курсора в операторе. справиться. Затем драйвер выбирает тип курсора, который наиболее эффективно предоставляет характеристики, запрошенные приложением.  
   
- Каждый раз, когда приложение задает атрибуты инструкции SQL_ATTR_CONCURRENCY, SQL_ATTR_CURSOR_SCROLLABLE, параметр SQL_ATTR_CURSOR_SENSITIVITY или SQL_ATTR_CURSOR_TYPE, драйвер производит любые необходимые изменения в другие атрибуты инструкции, в рамках этого курса четыре атрибутов таким образом, чтобы их значения остаются согласованными. Таким образом Если приложение задает характеристики курсора, драйвер можно изменить атрибут, указывающий тип курсора, на основе неявных выбора; Когда приложения указан тип, драйвер можно изменить другие атрибуты, для согласования с характеристики выбранного типа. Дополнительные сведения об этих атрибутах инструкции см. в разделе [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) описание функции.  
+ Каждый раз, когда приложение устанавливает любой атрибут инструкции SQL_ATTR_CONCURRENCY, SQL_ATTR_CURSOR_SCROLLABLE, SQL_ATTR_CURSOR_SENSITIVITY или SQL_ATTR_CURSOR_TYPE, драйвер вносит необходимые изменения в другие атрибуты инструкции в этом наборе четыре атрибута, чтобы их значения оставались постоянными. В результате, когда приложение задает характеристику курсора, драйвер может изменить атрибут, указывающий тип курсора на основе этого неявного выбора. Если приложение указывает тип, драйвер может изменить любые другие атрибуты в соответствии с характеристиками выбранного типа. Дополнительные сведения об этих атрибутах инструкций см. в описании функции [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) .  
   
- Приложение, которое задает атрибуты инструкции, чтобы указать тип курсора и характеристики курсора выполняется риск получения в курсор, который не является самым эффективным методом, на этот драйвер для удовлетворения требований приложения.  
+ Приложение, устанавливающее атрибуты инструкции для указания как типа курсора, так и характеристик курсора, выполняет риск получения курсора, который не является самым эффективным методом, доступным на этом драйвере для удовлетворения требований приложения.  
   
- Неявный параметр атрибуты инструкции определяется от драйвера, за исключением того, что он должен соответствовать следующим правилам:  
+ Неявный параметр атрибутов инструкции определяется драйвером, за исключением того, что он должен соответствовать следующим правилам:  
   
--   Однопроходные курсоры никогда не поддерживает прокрутку; просмотреть определение SQL_ATTR_CURSOR_SCROLLABLE в [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md).  
+-   Однонаправленные курсоры никогда не поддаются прокрутке; см. Определение SQL_ATTR_CURSOR_SCROLLABLE в [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md).  
   
--   Нечувствительных курсоров никогда не бывают обновляемыми (и таким образом их параллелизма только для чтения); Это основано на их определения нечувствительных курсоров в стандарте ISO SQL.  
+-   Нечувствительные курсоры никогда не обновляются (поэтому их параллелизм доступен только для чтения); Это основано на определении нечувствительных курсоров в стандарте ISO SQL.  
   
- Следовательно неявный параметр атрибуты инструкции происходит в случаях, описанных в следующей таблице.  
+ Следовательно, неявный параметр атрибутов инструкции происходит в случаях, описанных в следующей таблице.  
   
-|Приложение устанавливает атрибут|Неявно других атрибутов|  
+|Приложение задает для атрибута значение|Другие атрибуты заданы неявно|  
 |-----------------------------------|-------------------------------------|  
-|SQL_ATTR_CONCURRENCY для SQL_CONCUR_READ_ONLY|Параметр SQL_ATTR_CURSOR_SENSITIVITY для SQL_INSENSITIVE.|  
-|SQL_ATTR_CONCURRENCY SQL_CONCUR_LOCK, SQL_CONCUR_ROWVER или SQL_CONCUR_VALUES|SQL_ATTR_CURSOR_SENSITIVITY SQL_UNSPECIFIED или SQL_SENSITIVE, как определено с помощью драйвера. Его можно никогда не присвоить SQL_INSENSITIVE, так как без учета курсоры всегда доступны только для чтения.|  
-|SQL_ATTR_CURSOR_SCROLLABLE для SQL_NONSCROLLABLE|SQL_ATTR_CURSOR_TYPE для SQL_CURSOR_FORWARD_ONLY|  
-|SQL_ATTR_CURSOR_SCROLLABLE для SQL_SCROLLABLE|SQL_ATTR_CURSOR_TYPE SQL_CURSOR_STATIC, SQL_CURSOR_KEYSET_DRIVEN или SQL_CURSOR_DYNAMIC, как указано с помощью драйвера. Он никогда не будет присвоено SQL_CURSOR_FORWARD_ONLY.|  
-|SQL_ATTR_CURSOR_SENSITIVITY для SQL_INSENSITIVE|SQL_ATTR_CONCURRENCY для SQL_CONCUR_READ_ONLY.<br /><br /> SQL_ATTR_CURSOR_TYPE для SQL_CURSOR_STATIC.|  
-|SQL_ATTR_CURSOR_SENSITIVITY для SQL_SENSITIVE|SQL_ATTR_CONCURRENCY SQL_CONCUR_LOCK, SQL_CONCUR_ROWVER или SQL_CONCUR_VALUES, как указано с помощью драйвера. Он никогда не будет присвоено SQL_CONCUR_READ_ONLY.<br /><br /> SQL_ATTR_CURSOR_TYPE SQL_CURSOR_FORWARD_ONLY, SQL_CURSOR_STATIC, SQL_CURSOR_KEYSET_DRIVEN или SQL_CURSOR_DYNAMIC, как указано с помощью драйвера.|  
-|SQL_ATTR_CURSOR_SENSITIVITY для SQL_UNSPECIFIED|SQL_ATTR_CONCURRENCY для SQL_CONCUR_LOCK SQL_CONCUR_READ_ONLY, SQL_CONCUR_ROWVER или SQL_CONCUR_VALUES, как указано с помощью драйвера.<br /><br /> SQL_ATTR_CURSOR_TYPE SQL_CURSOR_FORWARD_ONLY, SQL_CURSOR_STATIC, SQL_CURSOR_KEYSET_DRIVEN или SQL_CURSOR_DYNAMIC, как указано с помощью драйвера.|  
-|SQL_ATTR_CURSOR_TYPE для SQL_CURSOR_DYNAMIC|SQL_ATTR_SCROLLABLE для SQL_SCROLLABLE.<br /><br /> Параметр SQL_ATTR_CURSOR_SENSITIVITY для SQL_SENSITIVE. (Но только в том случае, если не равно SQL_CONCUR_READ_ONLY SQL_ATTR_CONCURRENCY. Обновляемые динамические курсоры всегда доступны к изменениям, которые были внесены в собственную транзакцию.)|  
-|SQL_ATTR_CURSOR_TYPE для SQL_CURSOR_FORWARD_ONLY|Значением параметра SQL_ATTR_CURSOR_SCROLLABLE SQL_NONSCROLLABLE.|  
-|SQL_ATTR_CURSOR_TYPE для SQL_CURSOR_KEYSET_DRIVEN|SQL_ATTR_SCROLLABLE для SQL_SCROLLABLE.<br /><br /> SQL_ATTR_SENSITIVITY SQL_UNSPECIFIED или SQL_SENSITIVE (в соответствии с определяемым драйвером критериями, если SQL_ATTR_CONCURRENCY не SQL_CONCUR_READ_ONLY).|  
-|SQL_ATTR_CURSOR_TYPE для SQL_CURSOR_STATIC|SQL_ATTR_SCROLLABLE для SQL_SCROLLABLE.<br /><br /> SQL_ATTR_SENSITIVITY для SQL_INSENSITIVE (если SQL_ATTR_CONCURRENCY SQL_CONCUR_READ_ONLY).<br /><br /> SQL_ATTR_SENSITIVITY SQL_UNSPECIFIED или SQL_SENSITIVE (если SQL_ATTR_CONCURRENCY не SQL_CONCUR_READ_ONLY).|
+|SQL_ATTR_CONCURRENCY SQL_CONCUR_READ_ONLY|SQL_ATTR_CURSOR_SENSITIVITY SQL_INSENSITIVE.|  
+|SQL_ATTR_CONCURRENCY SQL_CONCUR_LOCK, SQL_CONCUR_ROWVER или SQL_CONCUR_VALUES|SQL_ATTR_CURSOR_SENSITIVITY SQL_UNSPECIFIED или SQL_SENSITIVE, как определено драйвером. Он не может быть установлен в SQL_INSENSITIVE, поскольку нечувствительные курсоры всегда доступны только для чтения.|  
+|SQL_ATTR_CURSOR_SCROLLABLE SQL_NONSCROLLABLE|SQL_ATTR_CURSOR_TYPE SQL_CURSOR_FORWARD_ONLY|  
+|SQL_ATTR_CURSOR_SCROLLABLE SQL_SCROLLABLE|SQL_ATTR_CURSOR_TYPE SQL_CURSOR_STATIC, SQL_CURSOR_KEYSET_DRIVEN или SQL_CURSOR_DYNAMIC, как указано в драйвере. Для него никогда не задается значение SQL_CURSOR_FORWARD_ONLY.|  
+|SQL_ATTR_CURSOR_SENSITIVITY SQL_INSENSITIVE|SQL_ATTR_CONCURRENCY SQL_CONCUR_READ_ONLY.<br /><br /> SQL_ATTR_CURSOR_TYPE SQL_CURSOR_STATIC.|  
+|SQL_ATTR_CURSOR_SENSITIVITY SQL_SENSITIVE|SQL_ATTR_CONCURRENCY SQL_CONCUR_LOCK, SQL_CONCUR_ROWVER или SQL_CONCUR_VALUES, как указано в драйвере. Для него никогда не задается значение SQL_CONCUR_READ_ONLY.<br /><br /> SQL_ATTR_CURSOR_TYPE для SQL_CURSOR_FORWARD_ONLY, SQL_CURSOR_STATIC, SQL_CURSOR_KEYSET_DRIVEN или SQL_CURSOR_DYNAMIC, как указано в драйвере.|  
+|SQL_ATTR_CURSOR_SENSITIVITY SQL_UNSPECIFIED|SQL_ATTR_CONCURRENCY для SQL_CONCUR_READ_ONLY, SQL_CONCUR_LOCK, SQL_CONCUR_ROWVER или SQL_CONCUR_VALUES, как указано в драйвере.<br /><br /> SQL_ATTR_CURSOR_TYPE для SQL_CURSOR_FORWARD_ONLY, SQL_CURSOR_STATIC, SQL_CURSOR_KEYSET_DRIVEN или SQL_CURSOR_DYNAMIC, как указано в драйвере.|  
+|SQL_ATTR_CURSOR_TYPE SQL_CURSOR_DYNAMIC|SQL_ATTR_SCROLLABLE SQL_SCROLLABLE.<br /><br /> SQL_ATTR_CURSOR_SENSITIVITY SQL_SENSITIVE. (Но только если SQL_ATTR_CONCURRENCY не равно SQL_CONCUR_READ_ONLY. Обновляемые динамические курсоры всегда чувствительны к изменениям, внесенным в их собственной транзакции.)|  
+|SQL_ATTR_CURSOR_TYPE SQL_CURSOR_FORWARD_ONLY|SQL_ATTR_CURSOR_SCROLLABLE SQL_NONSCROLLABLE.|  
+|SQL_ATTR_CURSOR_TYPE SQL_CURSOR_KEYSET_DRIVEN|SQL_ATTR_SCROLLABLE SQL_SCROLLABLE.<br /><br /> SQL_ATTR_SENSITIVITY SQL_UNSPECIFIED или SQL_SENSITIVE (в соответствии с определенными драйверами условиями, если SQL_ATTR_CONCURRENCY не SQL_CONCUR_READ_ONLY).|  
+|SQL_ATTR_CURSOR_TYPE SQL_CURSOR_STATIC|SQL_ATTR_SCROLLABLE SQL_SCROLLABLE.<br /><br /> SQL_ATTR_SENSITIVITY SQL_INSENSITIVE (если SQL_ATTR_CONCURRENCY SQL_CONCUR_READ_ONLY).<br /><br /> SQL_ATTR_SENSITIVITY SQL_UNSPECIFIED или SQL_SENSITIVE (если SQL_ATTR_CONCURRENCY не SQL_CONCUR_READ_ONLY).|

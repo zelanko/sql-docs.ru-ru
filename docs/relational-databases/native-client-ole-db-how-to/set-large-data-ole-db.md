@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5fd06c01ddbb92679bc728350850f487b1ad5db8
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73766046"
 ---
 # <a name="set-large-data-ole-db"></a>Задание данных больших объектов (OLE DB)
@@ -30,13 +30,13 @@ ms.locfileid: "73766046"
  Образцу требуется образец базы данных AdventureWorks, который можно загрузить с домашней страницы [Образцы кода и проекты сообщества Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) (возможно, на английском языке).  
   
 > [!IMPORTANT]  
->  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с помощью [API-интерфейса шифрования Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, следует зашифровать их с помощью [API шифрования Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ## <a name="procedures"></a>Процедуры  
   
 #### <a name="to-set-blob-data"></a>Для задания данных BLOB  
   
-1.  Создайте структуру DBOBJECT, описывающую, каким образом должен производиться доступ к столбцу BLOB. Установите для элемента **dwFlag** структуры DBOBJECT значение STGM_READ, а для элемента iid значение **IID_ISequentialStream** (используемого интерфейса).  
+1.  Создайте структуру DBOBJECT, описывающую, каким образом должен производиться доступ к столбцу BLOB. Задайте для элемента **dwFlag** структуры DBOBJECT значение STGM_READ и задайте для элемента iid значение **IID_ISequentialStream** (предоставляемый интерфейс).  
   
 2.  Установите свойства в группе свойств DBPROPSET_ROWSET, чтобы включить возможность обновления для набора строк.  
   
@@ -50,10 +50,10 @@ ms.locfileid: "73766046"
 
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание  
+### <a name="description"></a>Description  
  Скомпилируйте с библиотеками ole32.lib и oleaut32.lib и выполните следующий листинг кода (C++). Это приложение соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию. В некоторых операционных системах Windows придется заменить (localhost) или (local) на имя своего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы подключиться к именованному экземпляру, измените строку подключения с L"(local)" на L"(local)\\\<имя>", где <имя> — это именованный экземпляр. По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express устанавливается на именованный экземпляр. Убедитесь, что переменная среды INCLUDE включает каталог, содержащий файл sqlncli.h.  
   
-### <a name="code"></a>код  
+### <a name="code"></a>Код  
   
 ```  
 // compile with: ole32.lib oleaut32.lib  

@@ -1,5 +1,5 @@
 ---
-title: Использование дельт для изменения данных в SQLXML 4.0 | Документация Майкрософт
+title: Использование дельтами для изменения данных в SQLXML 4,0 | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -26,14 +26,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e704688537684c367bf4d8f2eec95db2affcc0e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012700"
 ---
 # <a name="using-diffgrams-to-modify-data-in-sqlxml-40"></a>Использование дельт для изменения данных в SQLXML 4.0
-  Формат DiffGram впервые появился в **набора данных** компонент [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. На платформе .NET Framework можно создать дельты и использовать их для изменения данных в таблицах в базах данных Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Формат DiffGram появился в компоненте **набора данных** [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. На платформе .NET Framework можно создать дельты и использовать их для изменения данных в таблицах в базах данных Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
 >  Этот раздел содержит краткие сведения о дельтах и примеры их использования. Предполагается знакомство с дельтами на платформе .NET Framework. В этой документации основное внимание уделяется проблемам формата дельт, специфичным для SQLXML.  
@@ -42,10 +42,10 @@ ms.locfileid: "66012700"
  [Введение в работу с дельтами в SQLXML 4.0](introduction-to-diffgrams-in-sqlxml-4-0.md)  
  Предоставляет основные сведения о дельтах.  
   
- [Примеры дельт &#40;SQLXML 4.0&#41;](diffgram-examples-sqlxml-4-0.md)  
+ [Примеры DiffGram &#40;SQLXML 4,0&#41;](diffgram-examples-sqlxml-4-0.md)  
  Предоставляет примеры использования дельт.  
   
- [Выполнение дельты с использованием ADO &#40;SQLXML 4.0&#41;](executing-a-diffgram-by-using-ado-sqlxml-4-0.md)  
+ [Запуск DiffGram с помощью ADO &#40;SQLXML 4,0&#41;](executing-a-diffgram-by-using-ado-sqlxml-4-0.md)  
  Предоставляет пример выполнения дельты с объектами ADO.  
   
  [Выполнение дельты с использованием управляемых классов SQLXML](../net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)  

@@ -1,5 +1,5 @@
 ---
-title: Хранимая процедура sp_help_operator (Transact-SQL) | Документация Майкрософт
+title: sp_help_operator (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: caedc43d-44b8-415a-897e-92923f6de3b8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e6568b15a12949180ca0e2df41063c100abc3290
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085302"
 ---
-# <a name="sphelpoperator-transact-sql"></a>Хранимая процедура sp_help_operator (Transact-SQL)
+# <a name="sp_help_operator-transact-sql"></a>Хранимая процедура sp_help_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Предоставляет сведения об определенных для сервера операторах.  
@@ -42,27 +42,27 @@ sp_help_operator
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @operator_name = ] 'operator_name'` Имя оператора. *имя_оператора* — **sysname**. Если *имя_оператора* является не указан, возвращаются сведения обо всех операторах.  
+`[ @operator_name = ] 'operator_name'`Имя оператора. *operator_name* имеет тип **sysname**. Если параметр *operator_name* не указан, возвращаются сведения обо всех операторах.  
   
-`[ @operator_id = ] operator_id` Идентификационный номер оператора, для которого запрашиваются сведения. *operator_id*— **int**, значение по умолчанию NULL.  
+`[ @operator_id = ] operator_id`Идентификационный номер оператора, для которого запрашиваются сведения. *operator_id*имеет **тип int**и значение по умолчанию NULL.  
   
 > [!NOTE]  
->  Либо *operator_id* или *имя_оператора* должен быть указан, но не оба аргумента одновременно.  
+>  Необходимо указать либо *operator_id* , либо *operator_name* , но нельзя указать оба значения.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|**идентификатор**|**int**|Идентификационный номер оператора.|  
-|**name**|**sysname**|Имя оператора.|  
-|**включен**|**tinyint**|Доступность оператора для получения уведомлений:<br /><br /> **1** = Да<br /><br /> **0** = Нет|  
-|**email_address**|**Nvarchar(100)**|Адрес электронной почты оператора.|  
+|**удостоверения**|**int**|Идентификационный номер оператора.|  
+|**name**|**имеет sysname**|Имя оператора.|  
+|**доступной**|**tinyint**|Доступность оператора для получения уведомлений:<br /><br /> **1** = да<br /><br /> **0** = нет|  
+|**email_address**|**nvarchar (100)**|Адрес электронной почты оператора.|  
 |**last_email_date**|**int**|Дата, когда оператор получил последнее уведомление по электронной почте.|  
 |**last_email_time**|**int**|Время, когда оператор получил последнее уведомление по электронной почте.|  
-|**pager_address**|**Nvarchar(100)**|Адрес пейджера оператора.|  
+|**pager_address**|**nvarchar (100)**|Адрес пейджера оператора.|  
 |**last_pager_date**|**int**|Дата, когда оператор получил последнее уведомление по пейджеру.|  
 |**last_pager_time**|**int**|Время, когда оператор получил последнее уведомление по пейджеру.|  
 |**weekday_pager_start_time**|**int**|Время начала периода, в течение которого оператор доступен для уведомлений по пейджеру в рабочие дни.|  
@@ -71,17 +71,17 @@ sp_help_operator
 |**saturday_pager_end_time**|**int**|Время окончания периода, в течение которого оператор доступен для уведомлений по пейджеру по субботам.|  
 |**sunday_pager_start_time**|**int**|Время начала периода, в течение которого оператор доступен для уведомлений по пейджеру по воскресеньям.|  
 |**sunday_pager_end_time**|**int**|Время окончания периода, в течение которого оператор доступен для уведомлений по пейджеру по воскресеньям.|  
-|**pager_days**|**tinyint**|Битовая маска (**1** = воскресенье, **64** = суббота) дней недели, указывающее, когда оператор доступен для уведомлений по пейджеру.|  
-|**netsend_address**|**Nvarchar(100)**|Адрес оператора для всплывающих сетевых уведомлений.|  
+|**pager_days**|**tinyint**|Битовая маска (**1** = воскресенье, **64** = Суббота) дней недели, указывающая, когда оператор доступен для получения уведомлений по пейджеру.|  
+|**netsend_address**|**nvarchar (100)**|Адрес оператора для всплывающих сетевых уведомлений.|  
 |**last_netsend_date**|**int**|Дата, когда оператор получил последнее всплывающее сетевое уведомление.|  
 |**last_netsend_time**|**int**|Время, когда оператор получил последнее всплывающее сетевое уведомление.|  
-|**category_name**|**sysname**|Имя категории операторов, к которой принадлежит этот оператор.|  
+|**category_name**|**имеет sysname**|Имя категории операторов, к которой принадлежит этот оператор.|  
   
-## <a name="remarks"></a>Примечания  
- **Хранимая процедура sp_help_operator** должна запускаться из **msdb** базы данных.  
+## <a name="remarks"></a>Remarks  
+ **sp_help_operator** должны запускаться из базы данных **msdb** .  
   
 ## <a name="permissions"></a>Разрешения  
- По умолчанию эту хранимую процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
+ По умолчанию эта хранимая процедура может выполняться членами предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
   
 -   **SQLAgentUserRole**  
   
@@ -103,10 +103,10 @@ EXEC dbo.sp_help_operator
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [sp_add_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
  [sp_delete_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
  [sp_update_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 02023482a2f3537872b50ac70f8bfd68d2128e1b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832969"
 ---
 # <a name="analysis-services-processing-task"></a>задача «Обработка средствами Analysis Services»
@@ -35,7 +35,8 @@ ms.locfileid: "62832969"
   
 -   Параметры пакетов не учитываются в табличных моделях.  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] содержат множество задач, выполняющих операции бизнес-аналитики, такие как выполнение инструкций языка описания данных DDL и запросов прогноза интеллектуального анализа данных. Дополнительные сведения о задачах, связанных с бизнес-аналитикой, см. в следующих разделах:  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] содержат множество задач, выполняющих операции бизнес-аналитики, такие как выполнение инструкций языка описания данных DDL и запросов прогноза интеллектуального анализа данных. Дополнительные сведения о задачах, связанных с бизнес-аналитикой, см. в следующих разделах:  
   
 -   [Задача «Выполнение инструкции DDL служб Analysis Services»](analysis-services-execute-ddl-task.md)  
   
@@ -57,7 +58,7 @@ ms.locfileid: "62832969"
   
  Задача часто применяется вместе с задачей «Массовая вставка», которая загружает данные в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , или задачей потока данных, которая выполняет поток данных, загружающий данные в таблицу. Например, задача потока данных может иметь поток данных, который извлекает данные из базы данных интерактивной обработки транзакций (OLTP) и загружает их в таблицу фактов хранилища данных, затем для обработки куба, основанного на хранилище данных, вызывается задача "Обработка службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ".  
   
- Задача «Обработка средствами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] » использует диспетчер соединений служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для подключения к экземпляру служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Дополнительные сведения см. в статье [Analysis Services Connection Manager](../connection-manager/analysis-services-connection-manager.md).  
+ Задача [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] «обработка» использует [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] диспетчер соединений для подключения к экземпляру [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Дополнительные сведения см. в статье [Analysis Services Connection Manager](../connection-manager/analysis-services-connection-manager.md).  
   
 ## <a name="error-handling"></a>Обработка ошибок  
   
@@ -66,9 +67,9 @@ ms.locfileid: "62832969"
   
  Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующих разделах:  
   
--   [Редактор задачи "Обработка средствами Analysis Services" (страница "Общие")](../general-page-of-integration-services-designers-options.md)  
+-   [Редактор задачи "обработка Analysis Services" &#40;страница "Общие"&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Редактор задачи "Обработка средствами Analysis Services" (страница "Службы Analysis Services")](../analysis-services-processing-task-editor-analysis-services-page.md)  
+-   [Редактор задачи "обработка Analysis Services" &#40;страница Analysis Services&#41;](../analysis-services-processing-task-editor-analysis-services-page.md)  
   
 -   [Страница «Выражения»](../expressions/expressions-page.md)  
   

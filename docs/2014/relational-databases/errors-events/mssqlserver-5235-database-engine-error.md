@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d6cbfac91613c2374e42da5b33e75ed5cade2bcf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913761"
 ---
-# <a name="mssqlserver5235"></a>MSSQLSERVER_5235
+# <a name="mssqlserver_5235"></a>MSSQLSERVER_5235
     
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|5235|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
@@ -49,7 +49,7 @@ ms.locfileid: "62913761"
 ## <a name="user-action"></a>Действие пользователя  
  В следующей таблице приведены действия пользователя, соответствующие указанному состоянию ошибки.  
   
-|Состояние ошибки|Действие пользователя|  
+|Состояние ошибки|Рекомендуемые действия|  
 |-----------------|-----------------|  
 |Состояние 0|Выполните восстановление из резервной копии.|  
 |Состояние 1|Обратитесь в службу поддержки пользователей [!INCLUDE[msCoName](../../includes/msconame-md.md)] (CSS).|  
@@ -58,7 +58,7 @@ ms.locfileid: "62913761"
 |Состояние 4|Обратитесь в службу поддержки пользователей.|  
 |Состояние 5|Запустите команду еще раз: если устранить неполадку не удается, обратитесь в службу поддержки пользователей.|  
   
-## <a name="see-also"></a>См. также  
- [DBCC (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-transact-sql)  
+## <a name="see-also"></a>См. также:  
+ [DBCC &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-transact-sql)  
   
   

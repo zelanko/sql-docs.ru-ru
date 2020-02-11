@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0537be8bda9c367fc381140183b10ddf383cf16a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68889527"
 ---
 # <a name="olap-engine-server-components"></a>Серверные компоненты ядра OLAP
@@ -48,22 +48,22 @@ ms.locfileid: "68889527"
   
  Следующий рисунок отображает архитектуру компонентов служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], включая все главные элементы, запущенные на экземпляре служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], и все пользовательские компоненты, взаимодействующие с этим экземпляром. Рисунок также отображает, что единственным путем доступа к экземпляру является прослушиватель XML для аналитики или использование протокола HTTP или TCP.  
   
- ![Схема архитектуры системы Analysis Services](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/analysisservicessystemarchitecture.gif "Схема архитектуры системы Analysis Services")  
+ ![Диаграмма архитектуры системы служб Analysis Services](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/analysisservicessystemarchitecture.gif "Диаграмма архитектуры системы служб Analysis Services")  
   
 ## <a name="xmla-listener"></a>Прослушиватель XML для аналитики  
- Компонент прослушивателя XML для аналитики обрабатывает все XMLA-взаимодействия между службами [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] и их клиентами. Параметр конфигурации в файле msmdsrv. ini можно использовать для указания порта, который [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] прослушивает экземпляр. `Port` [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Значение 0 указывает на то, что [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] прослушивает порт по умолчанию. По умолчанию службы [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] пользуются следующими TCP-портами:  
+ Компонент прослушивателя XML для аналитики обрабатывает все XMLA-взаимодействия между службами [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] и их клиентами. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] `Port` Параметр конфигурации в файле msmdsrv. ini можно использовать для указания порта, который прослушивает [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] экземпляр. Значение 0 указывает на то, что [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] прослушивает порт по умолчанию. По умолчанию службы [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] пользуются следующими TCP-портами:  
   
-|Port|Описание|  
+|Порт|Description|  
 |----------|-----------------|  
-|2383|Экземпляр служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]по умолчанию.|  
-|2382|Перенаправитель для других экземпляров служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
-|Динамически назначается при запуске сервера|Именованный экземпляр служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
+|2383|Экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]по умолчанию.|  
+|2382|Перенаправитель для других экземпляров [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
+|Динамически назначается при запуске сервера|Именованный экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
   
  Дополнительные сведения см. в разделе [Настройка брандмауэра Windows для разрешения Analysis Servicesного доступа](../../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) .  
   
-## <a name="see-also"></a>См. также  
- [Правила &#40;именования объектов Analysis Services&#41;](object-naming-rules-analysis-services.md)   
- [Физическая архитектура (службы Analysis Services — многомерные данные)](understanding-microsoft-olap-physical-architecture.md)   
- [Логическая архитектура &#40;Analysis Services — многомерные данные&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)  
+## <a name="see-also"></a>См. также:  
+ [Правила именования объектов &#40;Analysis Services&#41;](object-naming-rules-analysis-services.md)   
+ [Физическая архитектура &#40;Analysis Services многомерных данных&#41;](understanding-microsoft-olap-physical-architecture.md)   
+ [Логическая архитектура &#40;Analysis Services многомерных данных&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)  
   
   

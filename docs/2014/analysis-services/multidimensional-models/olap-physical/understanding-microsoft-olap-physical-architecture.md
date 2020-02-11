@@ -1,5 +1,5 @@
 ---
-title: Физическая архитектура (службы Analysis Services — многомерные данные) | Документация Майкрософт
+title: Физическая архитектура (Analysis Services-многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,21 +13,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 68e1bba4999f237d5b38ac3f475d2b67fc41959b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62724809"
 ---
 # <a name="physical-architecture-analysis-services---multidimensional-data"></a>Физическая архитектура (службы Analysis Services — многомерные данные)
     
 ## <a name="in-this-section"></a>в этом разделе  
- Следующие разделы содержат дополнительные сведения об архитектуре [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] решения.  
+ В следующих разделах приводятся дополнительные сведения об архитектуре [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] решения.  
   
-|Раздел|Описание|  
+|Раздел|Description|  
 |-----------|-----------------|  
 |[Серверные компоненты ядра OLAP](olap-engine-server-components.md)|Описывает компоненты сервера служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
-|[Локальные кубы &#40;службы Analysis Services — многомерные данные&#41;](local-cubes-analysis-services-multidimensional-data.md)|Описывает, как реализуются изолированные кубы и что представляет собой область действия такой реализации в решении служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
+|[Локальные Кубы &#40;Analysis Services многомерных данных&#41;](local-cubes-analysis-services-multidimensional-data.md)|Описывает, как реализуются изолированные кубы и что представляет собой область действия такой реализации в решении служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
 |[Требования к архитектуре клиента для разработки служб Analysis Services](client-architecture-requirements-for-analysis-services-development.md)|Описывает архитектуру клиента, предназначенного для доступа к данным и метаданным с помощью решения служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
   
   

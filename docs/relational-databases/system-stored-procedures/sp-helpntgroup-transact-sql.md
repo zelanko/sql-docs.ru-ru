@@ -18,13 +18,13 @@ ms.assetid: 02b4f7c1-480a-436c-8bae-7a2488be45d2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fcc4a42307ccb11923460bb9c01c5cf7bdd8f8df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68133680"
 ---
-# <a name="sphelpntgroup-transact-sql"></a>sp_helpntgroup (Transact-SQL)
+# <a name="sp_helpntgroup-transact-sql"></a>sp_helpntgroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Выводит сведения о группах Windows, имеющих учетные записи в текущей базе данных.  
@@ -39,25 +39,25 @@ sp_helpntgroup [ [ @ntname= ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @ntname = ] 'name'` — Имя группы Windows. *имя* — **sysname**, значение по умолчанию NULL. *имя* должен быть допустимой группе Windows с доступом к текущей базе данных. Если *имя* не указан, все группы Windows с доступом к текущей базе данных, включаются в выходные данные.  
+`[ @ntname = ] 'name'`— Имя группы Windows. Аргумент *Name* имеет тип **sysname**и значение по умолчанию NULL. *имя* должно быть допустимой группой Windows с доступом к текущей базе данных. Если параметр *Name* не указан, в выходные данные включаются все группы Windows с доступом к текущей базе данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или 1 (неуспешное завершение)  
+ 0 (успех) или 1 (сбой).  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|**NTGroupName**|**sysname**|Имя группы Windows.|  
+|**NTGroupName**|**имеет sysname**|Имя группы Windows.|  
 |**NTGroupId**|**smallint**|Идентификатор группы (ID).|  
-|**SID**|**varbinary(85)**|Идентификатор безопасности (SID) **NTGroupName**.|  
-|**HasDbAccess**|**int**|1 = группа Windows имеет разрешение на доступ к базе данных.|  
+|**ТРАНСЛЯЦИЮ**|**varbinary (85)**|Идентификатор безопасности (SID) **нтграупнаме**.|  
+|**хасдбакцесс**|**int**|1 = группа Windows имеет разрешение на доступ к базе данных.|  
   
-## <a name="remarks"></a>Примечания  
- Чтобы просмотреть список [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] роли в текущей базе данных, используют **sp_helprole**.  
+## <a name="remarks"></a>Remarks  
+ Чтобы просмотреть список [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ролей в текущей базе данных, используйте **sp_helprole**.  
   
 ## <a name="permissions"></a>Разрешения  
- Необходимо быть членом роли **public**.  
+ Требуется членство в роли **Public** .  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере выводится список групп Windows, имеющих доступ к текущей базе данных.  
@@ -66,11 +66,11 @@ sp_helpntgroup [ [ @ntname= ] 'name' ]
 EXEC sp_helpntgroup;  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Хранимые процедуры безопасности (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_grantdbaccess (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [sp_grantdbaccess &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
  [sp_helprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
- [sp_revokedbaccess (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-revokedbaccess-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [sp_revokedbaccess &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokedbaccess-transact-sql.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

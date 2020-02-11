@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 024f079d28c5ce144282bf09fff675fd308a8173
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243142"
 ---
 # <a name="transact-sql-breakpoints"></a>Точки останова Transact-SQL
@@ -39,7 +39,7 @@ ms.locfileid: "75243142"
 |Описано, как задать действие **При попадании** , т. е. пользовательскую операцию, которая выполняется при выполнении инструкции с точкой останова. Например, печать сообщения.|[Задание действия в точке останова](specify-a-breakpoint-action.md)|  
 |Описано, как изменить местоположение точки останова.|[Изменение положения точки останова](edit-a-breakpoint-location.md)|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Сведения отладчика Transact-SQL](transact-sql-debugger-information.md)  
   
   

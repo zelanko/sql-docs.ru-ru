@@ -1,5 +1,5 @@
 ---
-title: Классифицированных столбцов (интеллектуальный анализ данных) | Документация Майкрософт
+title: Классифицированные столбцы (интеллектуальный анализ данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c96ee3cbaa5ae25404d61054dccd1860c6596f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085687"
 ---
 # <a name="classified-columns-data-mining"></a>Классифицированные столбцы (интеллектуальный анализ данных)
@@ -40,10 +40,10 @@ ms.locfileid: "66085687"
   
  В следующем списке описываются типы содержимого, поддерживаемые службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для классифицированных столбцов.  
   
- **PROBABILITY**  
+ **Воспроизведение**  
  Значение в столбце является вероятностью связанного значения и представлено числом от 0 до 1.  
   
- **VARIANCE**  
+ **ВАРИАЦИЯ**  
  Значение в столбце является отклонением связанного значения.  
   
  **STDEV**  
@@ -55,12 +55,12 @@ ms.locfileid: "66085687"
  **PROBABILITY_STDEV**  
  Значение в столбце является среднеквадратичным отклонением вероятности для связанного значения.  
   
- **Псевдоним**  
+ **ТЕХНИЧЕСКОЙ**  
  Значение в столбце является весом, коэффициентом репликации объекта, связанного значения.  
   
-## <a name="see-also"></a>См. также  
- [Типы содержимого (интеллектуальный анализ данных)](content-types-data-mining.md)   
- [Структуры интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](mining-structures-analysis-services-data-mining.md)   
- [Типы данных (интеллектуальный анализ данных)](data-types-data-mining.md)  
+## <a name="see-also"></a>См. также:  
+ [Типы содержимого &#40;&#41;интеллектуального анализа данных](content-types-data-mining.md)   
+ [Структуры интеллектуального анализа данных &#40;Analysis Services — интеллектуальный анализ&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Типы данных &#40;&#41;интеллектуального анализа данных](data-types-data-mining.md)  
   
   

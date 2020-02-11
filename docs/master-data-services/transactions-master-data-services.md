@@ -14,10 +14,10 @@ ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 7ce5d8456d1857c3e62239deadf217e5d9841caa
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728900"
 ---
 # <a name="transactions-master-data-services"></a>Транзакции (службы Master Data Services)
@@ -27,7 +27,7 @@ ms.locfileid: "73728900"
 
 
 --------------------------------------------------
-  В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] транзакция регистрируется при каждом выполнении действия с элементом. Все пользователи могут просматривать транзакции, а администраторы также могут их обращать (отменять). Транзакции отображают дату, время и пользователя, выполнившего действие, а также другие сведения. Пользователь может добавить к транзакции заметку, чтобы указать причину выполнения транзакции.  
+  В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]транзакция регистрируется при каждом выполнении действия с элементом. Все пользователи могут просматривать транзакции, а администраторы также могут их обращать (отменять). Транзакции отображают дату, время и пользователя, выполнившего действие, а также другие сведения. Пользователь может добавить к транзакции заметку, чтобы указать причину выполнения транзакции.  
   
 ## <a name="when-transaction-are-recorded"></a>Время регистрации транзакций  
  Транзакции записываются, когда элементы:  
@@ -50,11 +50,11 @@ ms.locfileid: "73728900"
   
  Вы можете настроить длительность хранения данных журнала транзакций. Для этого необходимо определить свойство **Срок хранения журнала, дн.** в системных параметрах базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , а также задать значение **Хранение журнала в днях** при создании или изменении модели. Дополнительные сведения см. в разделах [Системные параметры (службы Master Data Services)](../master-data-services/system-settings-master-data-services.md) и [Создание модели (службы Master Data Services)](../master-data-services/create-a-model-master-data-services.md).  
   
- MDS_MDM_Sample_Log_Maintenace, задание агента SQL Server, запускает очистку журналов транзакций и выполняется каждую ночь. Для изменения расписания для этого задания можно использовать агент SQL Server.  
+ MDS_MDM_Sample_Log_Maintenace, задание агента SQL Server, инициирует очистку журналов транзакций и запускается каждую ночь. Для изменения расписания для этого задания можно использовать агент SQL Server.  
   
  Кроме того, для очистки журналов транзакций можно вызвать следующие хранимые процедуры.  
   
-|Хранимая процедура|Описание|  
+|Хранимая процедура|Description|  
 |----------------------|-----------------|  
 |mdm.udpTransactionsCleanup|Очищает журнал транзакций|  
 |mdm.udpValidationsCleanup|Очищает журнал проверки|  
@@ -77,7 +77,7 @@ EXEC mdm.udpEntityStagingBatchTableCleanup @ModelID, @CleanupOlderThanDate;
 ```  
   
 ## <a name="system-settings"></a>Системные настройки  
- В программе [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] имеется параметр, который определяет, записываются ли транзакции для промежуточных записей. Этот параметр можно настроить в программе [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] или непосредственно в таблице системных параметров в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Дополнительные сведения см. в разделе [Системные параметры (службы Master Data Services)](../master-data-services/system-settings-master-data-services.md).  
+ В программе [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] имеется параметр, который определяет, записываются ли транзакции для промежуточных записей. Этот параметр можно настроить в программе [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] или непосредственно в таблице системных параметров в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Дополнительные сведения см. в разделе [Системные параметры (службы Master Data Services)](../master-data-services/system-settings-master-data-services.md).  
   
  При импорте данных из этой версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]можно указать, следует ли вести журнал транзакций при инициировании хранимых процедур. Дополнительные сведения см. в разделе [Промежуточная хранимая процедура (службы Master Data Services)](../master-data-services/staging-stored-procedure-master-data-services.md).  
   
@@ -90,15 +90,15 @@ EXEC mdm.udpEntityStagingBatchTableCleanup @ModelID, @CleanupOlderThanDate;
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Отмена действия путем обращения транзакции (только администраторы).|[Отмена транзакции (службы Master Data Services)](../master-data-services/reverse-a-transaction-master-data-services.md)|  
+|Отмена действия путем обращения транзакции (только администраторы).|[Отмена Master Data Services &#40;транзакций&#41;](../master-data-services/reverse-a-transaction-master-data-services.md)|  
   
 ## <a name="external-resources"></a>Внешние ресурсы  
- Публикация блога [Transactions, Validation Issue and Staging table cleanup](https://go.microsoft.com/fwlink/p/?LinkId=615374)(Транзакции, проблема проверки и очистка промежуточной таблицы) на портале msdn.com.  
+ Публикация блога [Transactions, Validation Issue and Staging table cleanup](https://go.microsoft.com/fwlink/p/?LinkId=615374) (Транзакции, проблема проверки и очистка промежуточной таблицы) на портале msdn.com.  
   
 ## <a name="related-content"></a>См. также  
   
--   [Администраторы (службы Master Data Services)](../master-data-services/administrators-master-data-services.md)  
+-   [Администраторы &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)  
   
--   [Заметки (службы Master Data Services)](../master-data-services/annotations-master-data-services.md)  
+-   [Заметки &#40;Master Data Services&#41;](../master-data-services/annotations-master-data-services.md)  
   
   

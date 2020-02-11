@@ -13,23 +13,24 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e37dcf69a09d92236e0b8f4f97cb99541f1c7532
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783244"
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>Изменение модуля доставки отчетов служб Reporting Services по умолчанию
   Вы можете изменить настройки конфигурации [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , чтобы сменить модуль доставки по умолчанию, который отображается в списке **Доставлено** , на странице определения подписки. Например, можно изменить конфигурацию так, чтобы при создании пользователями новой подписки по умолчанию выбиралась доставка в общую папку, а не доставка по почте. Можно также изменить порядок модулей доставки в пользовательском интерфейсе.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] | режим SharePoint [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]Собственный режим | [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Режим интеграции с SharePoint  
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] включают модуль доставки по электронной почте и модуль доставки в общую папку Windows. У сервера отчетов могут быть дополнительные модули доставки, если развернуть пользовательские модули или модули сторонних производителей для поддержки пользовательской доставки. Доступность модуля доставки зависит от того, развернут ли он на сервере отчетов.  
+ 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] включают модуль доставки по электронной почте и модуль доставки в общую папку Windows. У сервера отчетов могут быть дополнительные модули доставки, если развернуть пользовательские модули или модули сторонних производителей для поддержки пользовательской доставки. Доступность модуля доставки зависит от того, развернут ли он на сервере отчетов.  
   
 ## <a name="default-native-mode-report-server-configuration"></a>Настройка сервера отчетов в собственном режиме по умолчанию  
  Порядок, в котором модули доставки отображаются в списке **Доставлено** в диспетчере отчетов, основан на порядке записей модулей доставки в файле **RSReportServer.config** . Например, на следующем рисунке электронная почта находится вначале в списке, и она выбрана по умолчанию.  
   
- ![список модулей доставки по умолчанию](../media/ssrs-default-delivery.png "список модулей доставки по умолчанию")  
+ ![заданный по умолчанию список модулей доставки](../media/ssrs-default-delivery.png "заданный по умолчанию список модулей доставки")  
   
  Ниже приведен раздел **RSReportServer.config** по умолчанию, управляющий модулем доставки по умолчанию и порядком отображения модулей в диспетчере отчетов. Обратите внимание, что электронная почта отображается в файле первой и выбрана как параметр по умолчанию.  
   
@@ -87,12 +88,13 @@ ms.locfileid: "72783244"
   
      **Идентификатор события:** 109  
   
-     **Источник:** служба Windows сервера отчетов (имя экземпляра)  
+     **Источник:** Служба Windows сервера отчетов (имя экземпляра)  
   
      Файл RSReportServer.config был изменен.  
   
 ## <a name="sharepoint-mode-report-servers"></a>Серверы отчетов в режиме интеграции с SharePoint  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] в режиме интеграции SharePoint сведения о модулях доставки хранятся в базах данных приложения-службы, а не в файле RsrReportServer.config. В режиме интеграции с SharePoint настройки модуля доставки изменяются с помощью PowerShell.  
+ 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] в режиме интеграции SharePoint сведения о модулях доставки хранятся в базах данных приложения-службы, а не в файле RsrReportServer.config. В режиме интеграции с SharePoint настройки модуля доставки изменяются с помощью PowerShell.  
   
 #### <a name="configure-the-default-delivery-extension"></a>Настройка модуля доставки по умолчанию  
   
@@ -111,9 +113,9 @@ ms.locfileid: "72783244"
     Get-SPRSExtension -Identity $app | Where {$_.ServerDirectivesXML -Like "<DefaultDelivery*"} | Format-List *
     ```  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
  [Файл конфигурации RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   
  [Файл конфигурации RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   
- [Доставка отчетов в общие папки с помощью служб Reporting Services](file-share-delivery-in-reporting-services.md)   
+ [Доставка в общую папку в Reporting Services](file-share-delivery-in-reporting-services.md)   
  [Доставка электронной почтой в службах Reporting Services](e-mail-delivery-in-reporting-services.md)   
- [Настройка сервера отчетов для доставки &#40;сообщений электронной почты с помощью служб SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
+ [Настройка сервера отчетов для доставки электронной почты &#40;Configuration Manager SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
