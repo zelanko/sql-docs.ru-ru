@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 731550d385d073c7b2f2e2758d4fcaf2353db746
-ms.sourcegitcommit: 9b8b11961b33e66fc9f433d094fc5c0f9b473772
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74908987"
 ---
 # <a name="powerpivot-availability-and-disaster-recovery-sql-server-2014"></a>Доступность и аварийное восстановление PowerPivot (SQL Server 2014)
@@ -24,7 +24,7 @@ ms.locfileid: "74908987"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 &#124; SharePoint 2010|  
   
- **Содержание раздела:**  
+ **В этом разделе:**  
   
 -   [Пример топологии SharePoint 2013 для обеспечения высокого уровня доступности PowerPivot](#bkmk_sharepoint2013)  
   
@@ -82,7 +82,7 @@ ms.locfileid: "74908987"
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]и [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] синхронное зеркальное отображение в ферме для обеспечения доступности.|Поддерживается, но не рекомендуется. Рекомендуется использовать AlwaysOn в режиме синхронной фиксации.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)] в режиме синхронной фиксации|Поддерживается и рекомендуется.|  
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]Асинхронное зеркальное отображение или доставка журналов в другую ферму для аварийного восстановления.| Поддерживается.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)] с асинхронной фиксацией для аварийного восстановления|Поддерживаются|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)] с асинхронной фиксацией для аварийного восстановления|Поддерживается|  
   
 -   [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]  
   

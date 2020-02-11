@@ -1,5 +1,5 @@
 ---
-title: StreamOpenOptionsEnum | Документация Майкрософт
+title: Стреамопеноптионсенум | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,23 +16,23 @@ ms.assetid: 85b6c57f-47ed-46ba-bd92-07882ae9e9d2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 562e79590a2a5f1f5e9bb609b9a0ad0ea8b2bfd9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67928686"
 ---
 # <a name="streamopenoptionsenum"></a>StreamOpenOptionsEnum
-Указывает параметры для открытия [Stream](../../../ado/reference/ado-api/stream-object-ado.md) объекта. Значения могут объединяться с помощью операции или.  
+Задает параметры для открытия объекта [потока](../../../ado/reference/ado-api/stream-object-ado.md) . Значения можно сочетать с операцией или.  
   
-|Константа|Значение|Описание|  
+|Постоянно|Значение|Description|  
 |--------------|-----------|-----------------|  
-|**adOpenStreamAsync**|1|Открывает **Stream** объекта в асинхронном режиме.|  
-|**adOpenStreamFromRecord**|4|Определяет содержимое *источника* параметр будет уже открытого [записи](../../../ado/reference/ado-api/record-object-ado.md) объекта. Поведение по умолчанию — обрабатывать *источника* как URL-адрес, указывающий непосредственно к узлу в виде древовидной структуры. Открытие потока по умолчанию, связанные с этим узлом.|  
-|**adOpenStreamUnspecified**|-1|По умолчанию. Указывает, открывающий **Stream** объекта с параметрами по умолчанию.|  
+|**адопенстреамасинк**|1|Открывает объект **потока** в асинхронном режиме.|  
+|**адопенстреамфромрекорд**|4|Определяет содержимое *исходного* параметра как уже открытый объект [Record](../../../ado/reference/ado-api/record-object-ado.md) . Поведение по умолчанию состоит в том, чтобы рассматривать *источник* как URL-адрес, указывающий непосредственно на узел в древовидной структуре. Открывается поток по умолчанию, связанный с этим узлом.|  
+|**адопенстреамунспеЦифиед**|-1|По умолчанию. Указывает открытие объекта **потока** с параметрами по умолчанию.|  
   
-## <a name="adowfc-equivalent"></a>Эквивалент ADO и WFC  
- Эти константы не имеют эквивалентов ADO и WFC.  
+## <a name="adowfc-equivalent"></a>Эквивалент ADO/WFC  
+ Эти константы не имеют эквивалентов ADO/WFC.  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  [Метод Open (объект Stream ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)

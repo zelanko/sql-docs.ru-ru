@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7de13f529dc0aab0c897ebe3dc1cb19220b13fd7
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70154584"
 ---
 # <a name="databases"></a>Базы данных
@@ -40,25 +40,25 @@ ms.locfileid: "70154584"
   
 |||  
 |-|-|  
-|[Системные базы данных](system-databases.md)|[Удаление файлов данных или журналов из базы данных](delete-data-or-log-files-from-a-database.md)|  
-|[Автономные базы данных](contained-databases.md)|[Отображение сведений о месте на диске, занимаемом данными и журналами базы данных](display-data-and-log-space-information-for-a-database.md)|  
-|[SQL Server файлы данных в Azure](sql-server-data-files-in-microsoft-azure.md)|[Увеличение размера базы данных](increase-the-size-of-a-database.md)|  
+|[Системные базы данных](system-databases.md)|[Удаление файлов данных или журнала из базы данных](delete-data-or-log-files-from-a-database.md)|  
+|[Автономные базы данных](contained-databases.md)|[Отображение данных и сведений о пространстве журнала для базы данных](display-data-and-log-space-information-for-a-database.md)|  
+|[Файлы данных SQL Server в Azure](sql-server-data-files-in-microsoft-azure.md)|[Увеличение размера базы данных](increase-the-size-of-a-database.md)|  
 |[Файлы и файловые группы базы данных](database-files-and-filegroups.md)|[Переименование базы данных](rename-a-database.md)|  
 |[Состояния базы данных](database-states.md)|[Установка однопользовательского режима базы данных](set-a-database-to-single-user-mode.md)|  
 |[Состояния файлов](file-states.md)|[Сжатие базы данных](shrink-a-database.md)|  
 |[Оценка размера базы данных](estimate-the-size-of-a-database.md)|[Сжатие файла](shrink-a-file.md)|  
 |[Копирование баз данных на другие серверы](copy-databases-to-other-servers.md)|[Просмотр или изменение свойств базы данных](view-or-change-the-properties-of-a-database.md)|  
-|[Присоединение и отсоединение базы данных (SQL Server)](database-detach-and-attach-sql-server.md)|[Просмотр списка баз данных в экземпляре SQL Server](view-a-list-of-databases-on-an-instance-of-sql-server.md)|  
+|[Отсоединение и присоединение базы данных &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)|[Просмотр списка баз данных в экземпляре SQL Server](view-a-list-of-databases-on-an-instance-of-sql-server.md)|  
 |[Добавление файлов данных или журналов в базу данных](add-data-or-log-files-to-a-database.md)|[Просмотр или изменение уровня совместимости базы данных](view-or-change-the-compatibility-level-of-a-database.md)|  
 |[Изменение настроек конфигурации базы данных](change-the-configuration-settings-for-a-database.md)|[Использование мастера планов обслуживания](../maintenance-plans/use-the-maintenance-plan-wizard.md)|  
-|[Создание базы данных](create-a-database.md)|[Создание псевдонима для пользовательского типа данных](create-a-user-defined-data-type-alias.md)|  
-|[Удаление базы данных](delete-a-database.md)|[Моментальные снимки базы данных (SQL Server)](database-snapshots-sql-server.md)|  
+|[Создание базы данных](create-a-database.md)|[Создание псевдонима определяемого пользователем типа данных](create-a-user-defined-data-type-alias.md)|  
+|[Удаление базы данных](delete-a-database.md)|[Моментальные снимки базы данных &#40;SQL Server&#41;](database-snapshots-sql-server.md)|  
   
 ## <a name="related-content"></a>См. также  
  [Индексы](../indexes/indexes.md)  
   
  [Представления](../views/views.md)  
   
- [Хранимые процедуры (ядро СУБД)](../stored-procedures/stored-procedures-database-engine.md)  
+ [&#40;ядро СУБД хранимых процедур&#41;](../stored-procedures/stored-procedures-database-engine.md)  
   
   

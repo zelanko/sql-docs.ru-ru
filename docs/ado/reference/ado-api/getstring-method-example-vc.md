@@ -1,5 +1,5 @@
 ---
-title: Пример метода GetString (Visual C++) | Документация Майкрософт
+title: Пример метода GetString (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,16 +15,16 @@ ms.assetid: 4daa93aa-9727-4d1c-886a-e9d22017a1ea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 501b58a0d4e69ba7ea843441d866f8580858ea5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932447"
 ---
 # <a name="getstring-method-example-vc"></a>Пример метода GetString (Visual C++)
-В этом примере показано [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) метод.  
+В этом примере показан метод [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) .  
   
- Предположим, у вас при отладке проблемы доступа данных и требуется быстрый и простой способ печати текущее содержимое с малой [записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
+ Предположим, что выполняется отладка проблемы доступа к данным и требуется быстрый и простой способ печати текущего содержимого небольшого [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
 ## <a name="example"></a>Пример  
   
@@ -169,13 +169,13 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="sample-input"></a>Входные данные выборки  
+## <a name="sample-input"></a>Пример ввода  
   
 ```  
 MD  
 ```  
   
-## <a name="sample-output"></a>Образец вывода  
+## <a name="sample-output"></a>Пример вывода  
   
 ```  
 Enter a state (CA, IN, KS, MD, MI, OR, TN, UT): State = 'md'  
@@ -183,6 +183,6 @@ Name            Address            City
 Sylvia   Panteley   1956 Arlington Pl.   Rockville  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод GetString (ADO)](../../../ado/reference/ado-api/getstring-method-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -1,5 +1,5 @@
 ---
-title: Базы данных и файлы каталога представления (Transact-SQL) | Документация Майкрософт
+title: Представления каталога баз данных и файлов (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/18/2016
 ms.prod: sql
@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: bbcfbf5dbd6d6680363c6c329d066191d22acfee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68033062"
 ---
 # <a name="databases-and-files-catalog-views-transact-sql"></a>Представления каталогов баз данных и файлов (Transact-SQL)
@@ -32,14 +32,14 @@ ms.locfileid: "68033062"
   
 |||  
 |-|-|  
-|[sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)|[sys.database_recovery_status &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-recovery-status-transact-sql.md)|  
-|[sys.database_connection_stats &#40;базы данных SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-database-connection-stats-azure-sql-database.md)|[sys.database_scoped_configurations (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)|  
-|[sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)|[sys.database_usage &#40;базы данных SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-database-usage-azure-sql-database.md)|  
-|[sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)|[sys.master_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)|  
-|[sys.database_mirroring &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)||  
+|[sys. backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)|[sys. database_recovery_status &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-recovery-status-transact-sql.md)|  
+|[sys. database_connection_stats &#40;базы данных SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-database-connection-stats-azure-sql-database.md)|[sys. database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)|  
+|[sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)|[sys. database_usage &#40;базы данных SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-database-usage-azure-sql-database.md)|  
+|[sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)|[sys. master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)|  
+|[sys. database_mirroring &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)||  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Системные представления &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [Системные представления &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

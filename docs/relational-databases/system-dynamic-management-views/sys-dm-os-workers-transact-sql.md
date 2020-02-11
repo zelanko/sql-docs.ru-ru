@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 87cc5d8dc07c0c4c927b7214bca01bfec09555e1
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72289358"
 ---
 # <a name="sysdm_os_workers-transact-sql"></a>sys.dm_os_workers (Transact-SQL)
@@ -33,19 +33,19 @@ ms.locfileid: "72289358"
   Возвращает строку для каждого исполнителя в системе. Дополнительные сведения о рабочих ролях см. в разделе " [архитектура потоков и задач](../../relational-databases/thread-and-task-architecture-guide.md)". 
   
 > [!NOTE]  
->  Чтобы вызвать это из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте имя **sys. dm_pdw_nodes_os_workers**.  
+>  Чтобы вызвать эту функцию [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] из [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]или, используйте имя **sys. dm_pdw_nodes_os_workers**.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|worker_address|**varbinary (8)**|Адрес памяти исполнителя.|  
+|worker_address|**varbinary(8)**|Адрес памяти исполнителя.|  
 |status|**int**|Только для внутреннего применения.|  
-|is_preemptive|**бит**|1 = исполнитель работает по расписанию с вытеснением. Любой исполнитель, запускающий внешний код, работает по расписанию с вытеснением.|  
-|is_fiber|**бит**|1 = исполнитель работает с использованием упрощенных пулов. Дополнительные сведения см. в подразделе [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).|  
-|is_sick|**бит**|1 = работа исполнителя приостановлена при попытке получить спин-блокировку. Такое значение этого параметра может указывать на проблему конфликта в связи с объектом, к которому часто запрашивается доступ.|  
-|is_in_cc_exception|**бит**|1 = исполнитель обрабатывает исключение, не являющееся исключением [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|is_fatal_exception|**бит**|Указывает на получение этим исполнителем неустранимого исключения.|  
-|is_inside_catch|**бит**|1 = исполнитель в настоящий момент обрабатывает исключение.|  
-|is_in_polling_io_completion_routine|**бит**|1 = исполнитель в настоящий момент выполняет подпрограмму завершения для незавершенного ввода-вывода. Дополнительные сведения см. в разделе [sys. &#40;DM_IO_PENDING_IO_REQUESTS Transact-&#41;SQL](../../relational-databases/system-dynamic-management-views/sys-dm-io-pending-io-requests-transact-sql.md).|  
+|is_preemptive|**bit**|1 = исполнитель работает по расписанию с вытеснением. Любой исполнитель, запускающий внешний код, работает по расписанию с вытеснением.|  
+|is_fiber|**bit**|1 = исполнитель работает с использованием упрощенных пулов. Дополнительные сведения см. в подразделе [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).|  
+|is_sick|**bit**|1 = работа исполнителя приостановлена при попытке получить спин-блокировку. Такое значение этого параметра может указывать на проблему конфликта в связи с объектом, к которому часто запрашивается доступ.|  
+|is_in_cc_exception|**bit**|1 = исполнитель обрабатывает исключение, не являющееся исключением [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|is_fatal_exception|**bit**|Указывает на получение этим исполнителем неустранимого исключения.|  
+|is_inside_catch|**bit**|1 = исполнитель в настоящий момент обрабатывает исключение.|  
+|is_in_polling_io_completion_routine|**bit**|1 = исполнитель в настоящий момент выполняет подпрограмму завершения для незавершенного ввода-вывода. Дополнительные сведения см. в разделе [sys. dm_io_pending_io_requests &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-io-pending-io-requests-transact-sql.md).|  
 |context_switch_count|**int**|Количество переключений контекста планировщика, выполненных этим исполнителем.|  
 |pending_io_count|**int**|Количество физических операций ввода-вывода, выполненных этим исполнителем.|  
 |pending_io_byte_count|**bigint**|Общее число байтов для всех незавершенных физических вводов-выводов для этого исполнителя.|  
@@ -56,34 +56,35 @@ ms.locfileid: "72289358"
 |worker_created_ms_ticks|**bigint**|Момент времени, в [ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), при создании рабочей роли.|  
 |exception_num|**int**|Номер ошибки последнего исключения, возникшего у этого исполнителя.|  
 |exception_severity|**int**|Серьезность последнего исключения, возникшего у этого исполнителя.|  
-|exception_address|**varbinary (8)**|Адрес кода, откуда было получено исключение|  
-|affinity|**bigint**|Сходство рабочих потоков. Соответствует сходству потока в [sys. dm_os_threads &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md).|  
-|state|**nvarchar(60)**|Состояние исполнителя. Может использоваться одно из следующих значений:<br /><br /> INIT = исполнитель в настоящий момент инициализируется.<br /><br /> RUNNING = исполнитель в настоящий момент выполняется, в режиме без приоритетного прерывания или с приоритетным прерыванием.<br /><br /> RUNNABLE = исполнитель готов к запуску в соответствии с планировщиком.<br /><br /> SUSPENDED = исполнитель в настоящий момент приостановлен, находится в режиме ожидания сигнала от события.|  
+|exception_address|**varbinary(8)**|Адрес кода, откуда было получено исключение|  
+|affinity|**bigint**|Сходство рабочих потоков. Соответствует сходству потока в [sys. dm_os_threads &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md).|  
+|state|**nvarchar (60)**|Состояние исполнителя. Принимается одно из следующих значений:<br /><br /> INIT = исполнитель в настоящий момент инициализируется.<br /><br /> RUNNING = исполнитель в настоящий момент выполняется, в режиме без приоритетного прерывания или с приоритетным прерыванием.<br /><br /> RUNNABLE = исполнитель готов к запуску в соответствии с планировщиком.<br /><br /> SUSPENDED = исполнитель в настоящий момент приостановлен, находится в режиме ожидания сигнала от события.|  
 |start_quantum|**bigint**|Время начала текущего выполнения этого исполнителя (в миллисекундах).|  
 |end_quantum|**bigint**|Время окончания текущего выполнения этого исполнителя (в миллисекундах).|  
-|last_wait_type|**nvarchar(60)**|Тип последнего ожидания. Список типов ожидания см. в разделе [sys. dm_os_wait_stats &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
-|return_code|**int**|Возвращенное значение от последнего ожидания. Может использоваться одно из следующих значений:<br /><br /> 0 =SUCCESS<br /><br /> 3 = DEADLOCK<br /><br /> 4 = PREMATURE_WAKEUP<br /><br /> 258 = TIMEOUT|  
+|last_wait_type|**nvarchar (60)**|Тип последнего ожидания. Список типов ожидания см. в разделе [sys. dm_os_wait_stats &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
+|return_code|**int**|Возвращенное значение от последнего ожидания. Принимается одно из следующих значений:<br /><br /> 0 =SUCCESS<br /><br /> 3 = DEADLOCK<br /><br /> 4 = PREMATURE_WAKEUP<br /><br /> 258 = TIMEOUT|  
 |quantum_used|**bigint**|Только для внутреннего применения.|  
 |max_quantum|**bigint**|Только для внутреннего применения.|  
 |boost_count|**int**|Только для внутреннего применения.|  
 |tasks_processed_count|**int**|Количество задач, обработанных этим исполнителем.|  
-|fiber_address|**varbinary (8)**|Адрес памяти волокна, с которым связан этот исполнитель.<br /><br /> NULL = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не настроен для использования упрощенных пулов.|  
-|task_address|**varbinary (8)**|Адрес памяти текущей задачи. Дополнительные сведения см. в разделе [sys. &#40;DM_OS_TASKS Transact-&#41;SQL](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md).|  
-|memory_object_address|**varbinary (8)**|Адрес памяти объекта памяти исполнителя. Дополнительные сведения см. в разделе [sys. &#40;DM_OS_MEMORY_OBJECTS Transact-&#41;SQL](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).|  
-|thread_address|**varbinary (8)**|Адрес памяти потока, связанного с этим исполнителем. Дополнительные сведения см. в разделе [sys. &#40;DM_OS_THREADS Transact-&#41;SQL](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md).|  
-|signal_worker_address|**varbinary (8)**|Адрес памяти исполнителя, который последним подавал сигнал этому объекту. Дополнительные сведения см. в разделе [sys. dm_os_workers](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
-|scheduler_address|**varbinary (8)**|Адрес памяти планировщика. Дополнительные сведения см. в разделе [sys. &#40;dm_os_schedulers Transact-&#41;SQL](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).|  
+|fiber_address|**varbinary(8)**|Адрес памяти волокна, с которым связан этот исполнитель.<br /><br /> NULL = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не настроен для использования упрощенных пулов.|  
+|task_address|**varbinary(8)**|Адрес памяти текущей задачи. Дополнительные сведения см. в разделе [sys. dm_os_tasks &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md).|  
+|memory_object_address|**varbinary(8)**|Адрес памяти объекта памяти исполнителя. Дополнительные сведения см. в разделе [sys. dm_os_memory_objects &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).|  
+|thread_address|**varbinary(8)**|Адрес памяти потока, связанного с этим исполнителем. Дополнительные сведения см. в разделе [sys. dm_os_threads &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md).|  
+|signal_worker_address|**varbinary(8)**|Адрес памяти исполнителя, который последним подавал сигнал этому объекту. Дополнительные сведения см. в разделе [sys. dm_os_workers](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
+|scheduler_address|**varbinary(8)**|Адрес памяти планировщика. Дополнительные сведения см. в разделе [sys. dm_os_schedulers &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).|  
 |processor_group|**smallint**|Сохраняет идентификатор группы процессоров, назначенный данному потоку.|  
-|pdw_node_id|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
+|pdw_node_id|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
   
 ## <a name="remarks"></a>Remarks  
  Если значением состояния исполнителя является RUNNING, и исполнитель выполняется в режиме без приоритетного прерывания, адрес исполнителя совпадает со значением active_worker_address в sys.dm_os_schedulers.  
   
- Когда исполнитель, ожидающий события, получает сигнал, он помещается в начало очереди готовых к работе исполнителей. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] разрешает делать это тысячу раз подряд, после чего исполнитель помещается в конец очереди. Перемещение исполнителя в конец очереди имеет некоторые последствия для производительности.  
+ Когда исполнитель, ожидающий события, получает сигнал, он помещается в начало очереди готовых к работе исполнителей. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] разрешает делать это тысячу раз подряд, после чего исполнитель помещается в конец очереди. Перемещение исполнителя в конец очереди имеет некоторые последствия для производительности.  
   
 ## <a name="permissions"></a>Разрешения
-На [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]требуется `VIEW SERVER STATE` разрешение.   
-На уровнях [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium требуется разрешение `VIEW DATABASE STATE` в базе данных. На уровнях [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard и Basic требуется членство в роли `Server Admin` или учетная запись `Azure Active Directory admin`.   
+В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]необходимо `VIEW SERVER STATE` разрешение.   
+На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется членство в `Server Admin` роли или `Azure Active Directory admin` учетная запись.   
 
 ## <a name="examples"></a>Примеры  
  Можно воспользоваться следующим запросом, чтобы определить, как долго исполнитель находился в состояниях SUSPENDED и RUNNABLE.  
@@ -135,7 +136,7 @@ SELECT
 
  На выходе, если переменные `w_runnable` и `w_suspended` равны, они представляют время, которое исполнитель находится в состоянии SUSPENDED. Иначе переменная `w_runnable` представляет время, проведенное исполнителем в состоянии RUNNABLE. На выходе, сеанс `52` находится в состоянии `SUSPENDED` в течение `35,094` миллисекунд.  
   
-## <a name="see-also"></a>См. также статью  
-[SQL Server динамическое представление &#40;управления, связанное с операционной&#41; системой,      Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+[SQL Server динамические административные представления, связанные с операционной системой &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
 [Руководство по архитектуре обработки запросов](../../relational-databases/query-processing-architecture-guide.md#DOP)       
-[Руководство по архитектуре потоков и задач](../../relational-databases/thread-and-task-architecture-guide.md)    
+[Инструкции по архитектуре потоков и задач](../../relational-databases/thread-and-task-architecture-guide.md)    
