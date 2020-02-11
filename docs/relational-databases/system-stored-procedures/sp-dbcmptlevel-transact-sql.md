@@ -18,19 +18,19 @@ ms.assetid: 508c686d-2bd4-41ba-8602-48ebca266659
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0f6ffcb7a43fbfc2a840cbbbeb95de4bbb875cbe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108212"
 ---
-# <a name="spdbcmptlevel-transact-sql"></a>sp_dbcmptlevel (Transact-SQL)
+# <a name="sp_dbcmptlevel-transact-sql"></a>sp_dbcmptlevel (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Определяет поведение конкретных баз данных для совместимости с указанной версией [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Используйте [уровень совместимости ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)вместо этого.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Используйте вместо него [уровень совместимости ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,9 +43,9 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @dbname = ] name` — Имя базы данных, для которого необходимо изменить уровень совместимости. Имена баз данных должны соответствовать правилам для идентификаторов. *имя* — **sysname**, значение по умолчанию NULL.  
+`[ @dbname = ] name`Имя базы данных, для которой необходимо изменить уровень совместимости. Имена баз данных должны соответствовать правилам для идентификаторов. Аргумент *Name* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @new_cmptlevel = ] version` — Это версия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с которой необходимо обеспечить совместимость базы данных. *версия* — **tinyint**, значение по умолчанию NULL. Это должно быть одно из следующих значений.  
+`[ @new_cmptlevel = ] version`Версия, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с которой должна быть совместима база данных. *версия* имеет тип **tinyint**и значение по умолчанию NULL. Это должно быть одно из следующих значений.  
   
  **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
   
@@ -58,23 +58,23 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
  **130** = [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или 1 (неуспешное завершение)  
+ 0 (успех) или 1 (сбой).  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Если параметры не указаны или *имя* параметр не указан, **sp_dbcmptlevel** возвращает сообщение об ошибке.  
+ Если параметры не указаны или параметр *Name* не указан, **sp_dbcmptlevel** возвращает ошибку.  
   
- Если *имя* указан без *версии*, [!INCLUDE[ssDE](../../includes/ssde-md.md)] возвращает сообщение, отображающее текущий уровень совместимости указанной базы данных.  
+ Если *имя* указано без *версии*, то [!INCLUDE[ssDE](../../includes/ssde-md.md)] возвращается сообщение, отображающее текущий уровень совместимости указанной базы данных.  
   
-## <a name="remarks"></a>Примечания  
- Описание уровней совместимости, см. в разделе [уровень совместимости ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+## <a name="remarks"></a>Remarks  
+ Описание уровней совместимости см. в разделе [уровень совместимости ALTER database &#40;&#41;Transact-SQL ](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 ## <a name="permissions"></a>Разрешения  
- Только владелец базы данных, а члены **sysadmin** предопределенной роли сервера и **db_owner** предопределенной роли базы данных (при изменении текущей базы данных) могут выполнять эту процедуру.  
+ Эту процедуру могут выполнять только владелец базы данных, члены предопределенной роли сервера **sysadmin** и предопределенная роль базы данных **db_owner** (если вы изменяете текущую базу данных).  
   
-## <a name="see-also"></a>См. также  
- [Хранимым процедурам ядра СУБД &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
- [Зарезервированные ключевые слова (Transact-SQL)](../../t-sql/language-elements/reserved-keywords-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [&#41;Transact-SQL ALTER DATABASE &#40;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [Зарезервированные ключевые слова &#40;&#41;Transact-SQL](../../t-sql/language-elements/reserved-keywords-transact-sql.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

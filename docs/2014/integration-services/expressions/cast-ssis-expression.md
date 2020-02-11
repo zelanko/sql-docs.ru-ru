@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6549e2ad8faca23e32621e1cc871a62870c9effb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62899042"
 ---
 # <a name="cast-ssis-expression"></a>Приведение (выражение служб SSIS)
@@ -44,7 +44,7 @@ ms.locfileid: "62899042"
 ## <a name="result-types"></a>Типы результата  
  Тип данных *type_spec*. Дополнительные сведения см. в разделе [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  На следующей диаграмме перечислены допустимые операторы приведения.  
   
  ![Допустимые и недопустимые приведения между типами данных](../media/data-conversion.gif "Допустимые и недопустимые приведения между типами данных")  
@@ -53,12 +53,12 @@ ms.locfileid: "62899042"
   
 |Тип данных|Параметр|Пример|  
 |---------------|---------------|-------------|  
-|DT_STR|*charcount*<br /><br /> *codepage*|Команда (DT_STR,30,1252) приводит 30 байт (или 30 символов) к значению типа DT_STR, используя кодовую страницу 1252.|  
-|DT_WSTR|*Charcount*|Команда (DT_WSTR,20) приводит 20 пар байт (или символов в формате Юникод) к значению типа DT_WSTR.|  
-|DT_BYTES|*Bytecount*|(DT_BYTES,50) приводит 50 байт к типу данных DT_BYTES.|  
-|DT_DECIMAL|*Масштаб*|(DT_DECIMAL,2) приводит числовое значение к типу данных DT_DECIMAL, используя масштаб 2.|  
-|DT_NUMERIC|*Точность*<br /><br /> *Масштаб*|(DT_NUMERIC,10,3) приводит числовое значение к типу данных DT_NUMERIC, используя точность 10 и масштаб 3.|  
-|DT_TEXT|*Codepage*|(DT_TEXT,1252) приводит значение к типу данных DT_TEXT, используя кодовую страницу 1252.|  
+|DT_STR|*параметра charCount*<br /><br /> *страница*|Команда (DT_STR,30,1252) приводит 30 байт (или 30 символов) к значению типа DT_STR, используя кодовую страницу 1252.|  
+|DT_WSTR|*Параметра charCount*|Команда (DT_WSTR,20) приводит 20 пар байт (или символов в формате Юникод) к значению типа DT_WSTR.|  
+|DT_BYTES|*ByteCount*|(DT_BYTES,50) приводит 50 байт к типу данных DT_BYTES.|  
+|DT_DECIMAL|*Масштабирование*|(DT_DECIMAL,2) приводит числовое значение к типу данных DT_DECIMAL, используя масштаб 2.|  
+|DT_NUMERIC|*Обеспечивают*<br /><br /> *Масштабирование*|(DT_NUMERIC,10,3) приводит числовое значение к типу данных DT_NUMERIC, используя точность 10 и масштаб 3.|  
+|DT_TEXT|*Страница*|(DT_TEXT,1252) приводит значение к типу данных DT_TEXT, используя кодовую страницу 1252.|  
   
  При приведении строки к значению типа DT_DATE (или обратно) используется локаль преобразования. Однако дата задается в формате ISO (ГГГГ-ММ-ДД) вне зависимости от того, используется ли в локали формат ISO.  
   
@@ -142,10 +142,10 @@ ms.locfileid: "62899042"
 (DT_DBTIMESTAMPOFFSET, 7) "1999-10-11 16:34:52.1234567 + 5:35"  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Очередность и ассоциативность операторов](operator-precedence-and-associativity.md)   
- [Операторы (выражение служб SSIS)](operators-ssis-expression.md)   
- [Выражения служб Integration Services (SSIS)](integration-services-ssis-expressions.md)   
+## <a name="see-also"></a>См. также:  
+ [Приоритет и ассоциативность операторов](operator-precedence-and-associativity.md)   
+ [Операторы &#40;&#41;выражений служб SSIS](operators-ssis-expression.md)   
+ [Выражения&#41; Integration Services &#40;SSIS](integration-services-ssis-expressions.md)   
  [Типы данных в выражениях служб Integration Services](integration-services-data-types-in-expressions.md)  
   
   

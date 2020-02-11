@@ -1,5 +1,5 @@
 ---
-title: Сетевой пример | Документация Майкрософт
+title: Пример сети | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,13 +13,13 @@ ms.assetid: e14ae90f-87b3-4bcf-b69a-1773e2c2a1c5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3454fab31de20a7d72f99a50c7dd3781ea2bc2be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67937989"
 ---
 # <a name="network-example"></a>Сетевой пример
-На этом рисунке показано, как каждый из предыдущей конфигурации могут отображаться в одной сети.  
+На этом рисунке показано, как каждая из описанных выше конфигураций может появиться в одной сети.  
   
  ![Различные конфигурации для одной сети](../../odbc/reference/media/pr08.gif "pr08")

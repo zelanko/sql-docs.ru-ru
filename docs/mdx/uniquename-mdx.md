@@ -1,5 +1,5 @@
 ---
-title: UniqueName (многомерные Выражения) | Документация Майкрософт
+title: UniqueName (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 69144341bd9cff344d4514f076517afac52e2a4b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097295"
 ---
 # <a name="uniquename-mdx"></a>UniqueName (многомерные выражения)
@@ -38,7 +38,7 @@ Member_Expression.UniqueName
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *Аргумент Dimension_Expression*  
+ *Dimension_Expression*  
  Допустимое многомерное выражение, возвращающее измерение.  
   
  *Hierarchy_Expression*  
@@ -50,8 +50,8 @@ Member_Expression.UniqueName
  *Member_Expression*  
  Допустимое многомерное выражение, возвращающее элемент.  
   
-## <a name="remarks"></a>Примечания  
- **UniqueName** функция возвращает уникальное имя объекта, а не имя, возвращаемое функцией [имя](../mdx/name-mdx.md) функции. Возвращаемое имя не включает имя куба. Возвращаемые результаты зависят от параметров сервера или от свойства многомерных выражений, задающего уникальную строку подключения.  
+## <a name="remarks"></a>Remarks  
+ Функция **UniqueName** возвращает уникальное имя объекта, а не имя, возвращаемое функцией [Name](../mdx/name-mdx.md) . Возвращаемое имя не включает имя куба. Возвращаемые результаты зависят от параметров сервера или от свойства многомерных выражений, задающего уникальную строку подключения.  
   
 ## <a name="example"></a>Пример  
  В следующем примере возвращается уникальное имя для измерения «Product», иерархии «Product Categories», уровня «Subcategory» и элемента «Bike Racks» в кубе «Adventure Works».  
@@ -74,7 +74,7 @@ SELECT
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также:  
+ [Ссылка на функцию многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-function-reference-mdx.md)  
   
   

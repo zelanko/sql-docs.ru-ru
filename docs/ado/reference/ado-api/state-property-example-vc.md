@@ -1,5 +1,5 @@
 ---
-title: Состояние пример свойства (Visual C++) | Документация Майкрософт
+title: Пример свойства State (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 1c38cd3b-e4f5-4754-b115-ef5e46d24ab9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dad78c3754fb55aa83c50d467920a611db277f13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930846"
 ---
 # <a name="state-property-example-vc"></a>Пример свойства State (Visual C++)
-В этом примере используется [состояние](../../../ado/reference/ado-api/state-property-ado.md) свойство для отображения сообщения во время открытия асинхронных подключений и выполняются асинхронные команды.  
+В этом примере свойство [State](../../../ado/reference/ado-api/state-property-ado.md) используется для отображения сообщения, в то время как асинхронные соединения открываются и выполняются асинхронные команды.  
   
 ```  
 // BeginStateCpp.cpp  
@@ -135,5 +135,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство State (ADO)](../../../ado/reference/ado-api/state-property-ado.md)

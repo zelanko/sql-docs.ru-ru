@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 09aea8e66b76103c27bdc44ade4df48a1e505e7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63021630"
 ---
 # <a name="publication-peer-to-peer-replication"></a>Публикация (одноранговая репликация)
@@ -29,7 +29,7 @@ ms.locfileid: "63021630"
  **Базы данных и публикации**  
  Отображает все базы данных на сервере, которые содержат хотя бы одну публикацию, разрешенную для одноранговой репликации. Чтобы продолжить, выберите публикацию.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Администрирование одноранговой топологии (программирование репликации на языке Transact-SQL)](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [Peer-to-Peer Transactional Replication](transactional/peer-to-peer-transactional-replication.md)  
   

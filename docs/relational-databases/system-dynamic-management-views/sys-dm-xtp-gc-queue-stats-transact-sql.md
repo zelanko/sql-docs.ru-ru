@@ -1,5 +1,5 @@
 ---
-title: sys.dm_xtp_gc_queue_stats (Transact-SQL) | Документация Майкрософт
+title: sys. dm_xtp_gc_queue_stats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: c56fe40ec6864ac48a991e155d06ce7c505ed593
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68090201"
 ---
-# <a name="sysdmxtpgcqueuestats-transact-sql"></a>sys.dm_xtp_gc_queue_stats (Transact-SQL)
+# <a name="sysdm_xtp_gc_queue_stats-transact-sql"></a>sys.dm_xtp_gc_queue_stats (Transact-SQL)
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
@@ -34,12 +34,12 @@ ms.locfileid: "68090201"
   
  Основной поток сборки мусора (бездействующий поток) отслеживает обновленные, удаленные и вставленные строки для всех транзакций, выполненных с момента последнего вызова основного потока сборки мусора. Когда поток сборки мусора начинает работать, он определяет, изменилась ли метка времени самой старой активной транзакции. Если самая старая транзакция изменилась, то бездействующий поток ставит в очередь элементы работы (фрагменты данных по 16 строк) для транзакций, наборы записи которых больше не нужны. Например, если вы удаляете 1024 строки, то спустя некоторое время в очереди появятся 64 элемента работы сборки мусора, каждый из которых будет содержать 16 удаленных строк.  Пользовательская транзакция после фиксации выбирает все поставленные в очередь элементы в своем планировщике. Если в планировщике нет помещенных в очередь элементов, пользовательская транзакция выполнит поиск во всех очередях в текущем узле NUMA.  
   
- Для определения того, высвобождает ли сборка мусора память для удаленных строк, выполните sys.dm_xtp_gc_queue_stats, чтобы видеть, обрабатывается ли поставленная в очередь работа. Если записи из current_queue_depth не обрабатываются или если новые рабочие элементы добавляются к current_queue_depth, это указывает на то что сборщик мусора не освобождает память. Например сбор мусора невозможно, если отсутствуют длительные транзакции.  
+ Для определения того, высвобождает ли сборка мусора память для удаленных строк, выполните sys.dm_xtp_gc_queue_stats, чтобы видеть, обрабатывается ли поставленная в очередь работа. Если записи в current_queue_depth не обрабатываются или в current_queue_depth не добавляются новые рабочие элементы, это означает, что сборка мусора не освобождает память. Например, сборка мусора не может быть выполнена при длительной транзакции.  
   
  Дополнительные сведения см. в разделе [In-Memory OLTP (оптимизация в памяти)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
 
-|Имя столбца|Type|Описание|  
+|Имя столбца|Тип|Description|  
 |-----------------|----------|-----------------|  
 |queue_id|**int**|Уникальный идентификатор очереди.|  
 |total_enqueues|**bigint**|Общее число рабочих элементов подсистемы сборки мусора, поставленных в эту очередь с момента запуска сервера.|  
@@ -65,7 +65,7 @@ queue_id total_enqueues total_dequeues current_queue_depth  maximum_queue_depth 
 3        15625                15625    0                    15625                1233571605761  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Оптимизированные для памяти динамические административные представления таблиц &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Динамические административные представления оптимизированной для памяти таблицы &#40;языке Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

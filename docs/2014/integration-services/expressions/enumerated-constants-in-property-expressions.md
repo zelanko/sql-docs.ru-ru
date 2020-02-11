@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b22e25ad9053ed4da0187035cff00ff7e3ca70af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62898902"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>Констант-перечислителей в выражениях свойств
@@ -29,7 +29,7 @@ ms.locfileid: "62898902"
   
  Этот раздел приводит список числовых значений, эквивалентных понятным именам перечислителей, элементы которых, как правило, используются в выражениях свойств. Объектная модель служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] включает много дополнительных перечислителей, которые используются при программировании объектной модели для программного построения пакетов или при создании кода элементов пользовательских пакетов, таких как задачи и компоненты потоков данных.  
   
- В дополнение к пользовательским свойствам пакетов и объектов пакетов окно свойств в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] включает набор свойств, которые доступны пакетам, задачам, контейнерам последовательности, «цикл по элементам» и «цикл по каждому элементу». Общие свойства, которые задаются значения из перечислителей -`ForceExecutionResult`, `LoggingMode`, `IsolationLevel`, и `Transaction Option`-перечислены в разделе общих свойств.  
+ В дополнение к пользовательским свойствам пакетов и объектов пакетов окно свойств в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] включает набор свойств, которые доступны пакетам, задачам, контейнерам последовательности, «цикл по элементам» и «цикл по каждому элементу». Общие свойства, которые задаются значениями из перечислителей`ForceExecutionResult`, `LoggingMode` `IsolationLevel` `Transaction Option`перечислены в разделе Общие свойства.  
   
  Ниже приведены сведения о перечислителях-константах.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62898902"
 ##  <a name="Package"></a> Пакет  
  В следующих таблицах приводятся списки понятных имен и эквивалентных числовых значений для свойств пакетов, которые устанавливаются с использованием значений перечислителей.  
   
- `PackageType` Набор свойств с помощью значений `DTSPackageType` перечисления.  
+ `PackageType`свойство задается с помощью значений из `DTSPackageType` перечисления.  
   
 |Понятное имя в перечислении DTSPackageType|Числовое значение|  
 |-------------------------------------|-------------------|  
@@ -57,7 +57,7 @@ ms.locfileid: "62898902"
 |DTSDesigner100|5|  
 |SQLDBMaint|6|  
   
- `CheckpointUsage` Набор свойств с помощью значений `DTSCheckpointUsage` перечисления.  
+ `CheckpointUsage`свойство задается с помощью значений из `DTSCheckpointUsage` перечисления.  
   
 |Понятное имя в перечислении DTSCheckpointUsage|Числовое значение|  
 |-----------------------------------------|-------------------|  
@@ -65,7 +65,7 @@ ms.locfileid: "62898902"
 |IfExists|1|  
 |Всегда|2|  
   
- `PackagePriorityClass` Набор свойств с помощью значений `DTSPriorityClass` перечисления.  
+ `PackagePriorityClass`свойство задается с помощью значений из `DTSPriorityClass` перечисления.  
   
 |Понятное имя в перечислении DTSPriorityClass|Числовое значение|  
 |---------------------------------------|-------------------|  
@@ -75,7 +75,7 @@ ms.locfileid: "62898902"
 |BelowNormal|3|  
 |Бездействие|4|  
   
- `ProtectionLevel` Набор свойств с помощью значений `DTSProtectionLevel` перечисления.  
+ `ProtectionLevel`свойство задается с помощью значений из `DTSProtectionLevel` перечисления.  
   
 |Понятное имя в перечислении DTSProtectionLevel|Числовое значение|  
 |-----------------------------------------|-------------------|  
@@ -87,7 +87,7 @@ ms.locfileid: "62898902"
 |ServerStorage|5|  
   
 ##  <a name="PrecedenceConstraints"></a> Управление очередностью  
- `EvalOp` Набор свойств с помощью значений `DTSPrecedenceEvalOp` перечисления.  
+ `EvalOp`свойство задается с помощью значений из `DTSPrecedenceEvalOp` перечисления.  
   
 |Понятное имя в перечислении DTSPrecedenceEvalOp|Числовое значение|  
 |------------------------------------------|-------------------|  
@@ -96,7 +96,7 @@ ms.locfileid: "62898902"
 |ExpressionAndConstraint|3|  
 |ExpressionOrConstraint|4|  
   
- `Value` Набор свойств с помощью значений `DTSExecResult` перечисления.  
+ `Value`свойство задается с помощью значений из `DTSExecResult` перечисления.  
   
 |Понятное имя|Числовое значение|  
 |-------------------|-------------------|  
@@ -109,7 +109,7 @@ ms.locfileid: "62898902"
  Контейнер «цикл по каждому элементу» включает в себя набор перечислителей со свойствами, которые могут быть установлены с помощью выражений свойств.  
   
 ### <a name="foreach-ado-enumerator"></a>Перечислитель ADO по каждой строке  
- `Type` Набор свойств с помощью значений `ADOEnumerationType` перечисления.  
+ `Type`свойство задается с помощью значений из `ADOEnumerationType` перечисления.  
   
 |Понятное имя в перечислении ADOEnumerationType|Числовое значение|  
 |-----------------------------------------|-------------------|  
@@ -118,7 +118,7 @@ ms.locfileid: "62898902"
 |EnumerateRowsInFirstTable|2|  
   
 ### <a name="foreach-nodelist-enumerator"></a>Перечислитель по набору узлов  
- `SourceDocumentType`, `InnerXPathStringSourceType`, и **OuterXPathStringSourceType** свойства набора, с помощью значений `SourceType` перечисления.  
+ `SourceDocumentType`свойства `InnerXPathStringSourceType`, и **OuterXPathStringSourceType** задаются с помощью значений из `SourceType` перечисления.  
   
 |Понятное имя в перечислении SourceType|Числовое значение|  
 |---------------------------------|-------------------|  
@@ -126,7 +126,7 @@ ms.locfileid: "62898902"
 |Переменная|1|  
 |DirectInput|2|  
   
- `EnumerationType` Набор свойств с помощью значений `EnumerationType` перечисления.  
+ `EnumerationType`свойство задается с помощью значений из `EnumerationType` перечисления.  
   
 |Понятное имя в перечислении EnumerationType|Числовое значение|  
 |--------------------------------------|-------------------|  
@@ -135,7 +135,7 @@ ms.locfileid: "62898902"
 |NodeText|2|  
 |ElementCollection|3|  
   
- `InnerElementType` Набор свойств с помощью значений `InnerElementType` перечисления.  
+ `InnerElementType`свойство задается с помощью значений из `InnerElementType` перечисления.  
   
 |Понятное имя в перечислении InnerElementType|Числовое значение|  
 |---------------------------------------|-------------------|  
@@ -147,7 +147,7 @@ ms.locfileid: "62898902"
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] включают в себя многочисленные задачи со свойствами, которые можно устанавливать с помощью выражений свойств.  
   
 ### <a name="analysis-services-execute-ddl-task"></a>Задача «Выполнение инструкции DDL служб Analysis Services»  
- `SourceType` Набор свойств с помощью значений `DDLSourceType` перечисления.  
+ `SourceType`свойство задается с помощью значений из `DDLSourceType` перечисления.  
   
 |Понятное имя в DDLSourceType|Числовое значение|  
 |------------------------------------|-------------------|  
@@ -156,7 +156,7 @@ ms.locfileid: "62898902"
 |Переменная|2|  
   
 ### <a name="bulk-insert-task"></a>задача «Массовая вставка»  
- `DataFileType` Набор свойств с помощью значений `DTSBulkInsert_DataFileType` перечисления.  
+ `DataFileType`свойство задается с помощью значений из `DTSBulkInsert_DataFileType` перечисления.  
   
 |Понятное имя в перечислении DTSBulkInsert_DataFileType|Числовое значение|  
 |--------------------------------------------------|-------------------|  
@@ -166,7 +166,7 @@ ms.locfileid: "62898902"
 |DTSBulkInsert_DataFileType_WideNative|3|  
   
 ### <a name="execute-sql-task"></a>Задача "Выполнение SQL"  
- `ResultSetType` Набор свойств с помощью значений `ResultSetType` перечисления.  
+ `ResultSetType`свойство задается с помощью значений из `ResultSetType` перечисления.  
   
 |Понятное имя в перечислении ResultSetType|Числовое значение|  
 |------------------------------------|-------------------|  
@@ -175,7 +175,7 @@ ms.locfileid: "62898902"
 |ResultSetType_Rowset|3|  
 |ResultSetType_XML|4|  
   
- `SqlStatementSourceType` Набор свойств с помощью значений `SqlStatementSourceType` перечисления.  
+ `SqlStatementSourceType`свойство задается с помощью значений из `SqlStatementSourceType` перечисления.  
   
 |Понятное имя в перечислении SqlStatementSourceType|Числовое значение|  
 |---------------------------------------------|-------------------|  
@@ -184,7 +184,7 @@ ms.locfileid: "62898902"
 |Переменная|3|  
   
 ### <a name="file-system-task"></a>Задача "Файловая система"  
- `Operation` Набор свойств с помощью значений `DTSFileSystemOperation` перечисления.  
+ `Operation`свойство задается с помощью значений из `DTSFileSystemOperation` перечисления.  
   
 |Понятное имя в перечислении DTSFileSystemOperation|Числовое значение|  
 |---------------------------------------------|-------------------|  
@@ -199,7 +199,7 @@ ms.locfileid: "62898902"
 |DeleteDirectory|8|  
 |DeleteDirectoryContent|9|  
   
- `Attributes` Набор свойств с помощью значений `DTSFileSystemAttributes` перечисления.  
+ `Attributes`свойство задается с помощью значений из `DTSFileSystemAttributes` перечисления.  
   
 |Понятное имя в перечислении DTSFileSystemAttributes|Числовое значение|  
 |----------------------------------------------|-------------------|  
@@ -210,7 +210,7 @@ ms.locfileid: "62898902"
 |Система|8|  
   
 ### <a name="ftp-task"></a>Задача «FTP»  
- `Operation` Набор свойств с помощью значений `DTSFTPOp` перечисления.  
+ `Operation`свойство задается с помощью значений из `DTSFTPOp` перечисления.  
   
 |Понятное имя в перечислении DTSFTPOp|Числовое значение|  
 |-------------------------------|-------------------|  
@@ -224,7 +224,7 @@ ms.locfileid: "62898902"
 |RemoveDirRemote|7|  
   
 ### <a name="message-queue-task"></a>Message Queue Task  
- `MessageType` Набор свойств с помощью значений `MQMessageType` перечисления.  
+ `MessageType`свойство задается с помощью значений из `MQMessageType` перечисления.  
   
 |Понятное имя в перечислении MQMessageType|Числовое значение|  
 |------------------------------------|-------------------|  
@@ -233,7 +233,7 @@ ms.locfileid: "62898902"
 |DTSMQMessageType_Variables|2|  
 |DTSMQMessagType_StringMessageToVariable|3|  
   
- `StringCompareType` Набор свойств с помощью значений `MQStringMessageCompare` перечисления.  
+ `StringCompareType`свойство задается с помощью значений из `MQStringMessageCompare` перечисления.  
   
 |Понятное имя в перечислении MQStringMessageCompare|Числовое значение|  
 |---------------------------------------------|-------------------|  
@@ -242,7 +242,7 @@ ms.locfileid: "62898902"
 |DTSMQStringMessageCompare_IgnoreCase|2|  
 |DTSMQStringMessageCompare_Contains|3|  
   
- `TaskType` Набор свойств с помощью значений `MQType` перечисления.  
+ `TaskType`свойство задается с помощью значений из `MQType` перечисления.  
   
 |Понятное имя в перечислении MQType|Числовое значение|  
 |-----------------------------|-------------------|  
@@ -250,7 +250,7 @@ ms.locfileid: "62898902"
 |DTSMQType_Receiver|1|  
   
 ### <a name="send-mail-task"></a>Задача «Отправка почты»  
- `MessageSourceType` Набор свойств с помощью значений `SendMailMessageSourceType` перечисления.  
+ `MessageSourceType`свойство задается с помощью значений из `SendMailMessageSourceType` перечисления.  
   
 |Понятное имя в перечислении SendMailMessageSourceType|Числовое значение|  
 |------------------------------------------------|-------------------|  
@@ -258,7 +258,7 @@ ms.locfileid: "62898902"
 |FileConnection|1|  
 |Переменная|2|  
   
- `Priority` Набор свойств с помощью значений `MailPriority` перечисления.  
+ `Priority`свойство задается с помощью значений из `MailPriority` перечисления.  
   
 |Понятное имя в перечислении MailPriority|Числовое значение|  
 |-----------------------------------|-------------------|  
@@ -267,14 +267,14 @@ ms.locfileid: "62898902"
 |Низкий|5|  
   
 ### <a name="transfer-database-task"></a>Задача «Передача базы данных»  
- `Action` Набор свойств с помощью значений `TransferAction` перечисления.  
+ `Action`свойство задается с помощью значений из `TransferAction` перечисления.  
   
 |Понятное имя в перечислении TransferAction|Числовое значение|  
 |-------------------------------------|-------------------|  
 |Копировать|0|  
 |Переместить|1|  
   
- `Method` Набор свойств с помощью значений `TransferMethod` перечисления.  
+ `Method`свойство задается с помощью значений из `TransferMethod` перечисления.  
   
 |Понятное имя в перечислении TransferMethod|Числовое значение|  
 |-------------------------------------|-------------------|  
@@ -282,7 +282,7 @@ ms.locfileid: "62898902"
 |DatabaseOnline|1|  
   
 ### <a name="transfer-error-messages-task"></a>Задача «Передача сообщений об ошибках»  
- `IfObjectExists` Набор свойств с помощью значений `IfObjectExists` перечисления.  
+ `IfObjectExists`свойство задается с помощью значений из `IfObjectExists` перечисления.  
   
 |Понятное имя в перечислении IfObjectExists|Числовое значение|  
 |-------------------------------------|-------------------|  
@@ -291,7 +291,7 @@ ms.locfileid: "62898902"
 |Skip|2|  
   
 ### <a name="transfer-jobs-task"></a>Задача «Передача заданий»  
- `IfObjectExists` Набор свойств с помощью значений `IfObjectExists` перечисления.  
+ `IfObjectExists`свойство задается с помощью значений из `IfObjectExists` перечисления.  
   
 |Понятное имя в перечислении IfObjectExists|Числовое значение|  
 |-------------------------------------|-------------------|  
@@ -300,7 +300,7 @@ ms.locfileid: "62898902"
 |Skip|2|  
   
 ### <a name="transfer-logins-task"></a>Задача «Передача имен входа»  
- `IfObjectExists` Набор свойств с помощью значений `IfObjectExists` перечисления.  
+ `IfObjectExists`свойство задается с помощью значений из `IfObjectExists` перечисления.  
   
 |Понятное имя в перечислении IfObjectExists|Числовое значение|  
 |-------------------------------------|-------------------|  
@@ -308,7 +308,7 @@ ms.locfileid: "62898902"
 |Overwrite|1|  
 |Skip|2|  
   
- `LoginsToTransfer` Набор свойств с помощью значений `LoginsToTransfer` перечисления.  
+ `LoginsToTransfer`свойство задается с помощью значений из `LoginsToTransfer` перечисления.  
   
 |Понятное имя в перечислении LoginsToTransfer|Числовое значение|  
 |---------------------------------------|-------------------|  
@@ -317,7 +317,7 @@ ms.locfileid: "62898902"
 |AllLoginsFromSelectedDatabases|2|  
   
 ### <a name="transfer-master-stored-procedures-task"></a>Задача «Передача главных хранимых процедур»  
- `IfObjectExists` Набор свойств с помощью значений `IfObjectExists` перечисления.  
+ `IfObjectExists`свойство задается с помощью значений из `IfObjectExists` перечисления.  
   
 |Понятное имя в перечислении IfObjectExists|Числовое значение|  
 |-------------------------------------|-------------------|  
@@ -326,7 +326,7 @@ ms.locfileid: "62898902"
 |Skip|2|  
   
 ### <a name="transfer-sql-server-objects-task"></a>Задача «Передача объектов SQL Server»  
- `ExistingData` Набор свойств с помощью значений `ExistingData` перечисления.  
+ `ExistingData`свойство задается с помощью значений из `ExistingData` перечисления.  
   
 |Понятное имя в перечислении ExistingData|Числовое значение|  
 |-----------------------------------|-------------------|  
@@ -334,7 +334,7 @@ ms.locfileid: "62898902"
 |Append|1|  
   
 ### <a name="web-service-task"></a>Задача «Веб-служба»  
- `OutputType` Набор свойств с помощью значений `DTSOutputType` перечисления.  
+ `OutputType`свойство задается с помощью значений из `DTSOutputType` перечисления.  
   
 |Понятное имя в перечислении DTSOutputType|Числовое значение|  
 |------------------------------------|-------------------|  
@@ -342,7 +342,7 @@ ms.locfileid: "62898902"
 |Переменная|1|  
   
 ### <a name="wmi-data-reader-task"></a>Задача «Модуль чтения данных WMI»  
- `OverwriteDestination` Набор свойств с помощью значений `OverwriteDestination` перечисления.  
+ `OverwriteDestination`свойство задается с помощью значений из `OverwriteDestination` перечисления.  
   
 |Понятное имя в перечислении OverwriteDestination|Числовое значение|  
 |-------------------------------------------|-------------------|  
@@ -350,7 +350,7 @@ ms.locfileid: "62898902"
 |AppendToDestination|1|  
 |KeepOriginal|2|  
   
- `OutputType` Набор свойств с помощью значений `OutputType` перечисления.  
+ `OutputType`свойство задается с помощью значений из `OutputType` перечисления.  
   
 |Понятное имя в перечислении OutputType|Числовое значение|  
 |---------------------------------|-------------------|  
@@ -358,14 +358,14 @@ ms.locfileid: "62898902"
 |PropertyValue|1|  
 |PropertyNameAndValue|2|  
   
- `DestinationType` Набор свойств с помощью значений `DestinationType` перечисления.  
+ `DestinationType`свойство задается с помощью значений из `DestinationType` перечисления.  
   
 |Понятное имя в перечислении DestinationType|Числовое значение|  
 |--------------------------------------|-------------------|  
 |FileConnection|0|  
 |Переменная|1|  
   
- `WqlQuerySourceType` Набор свойств с помощью значений `QuerySourceType` перечисления.  
+ `WqlQuerySourceType`свойство задается с помощью значений из `QuerySourceType` перечисления.  
   
 |Понятное имя в перечислении QuerySourceType|Числовое значение|  
 |--------------------------------------|-------------------|  
@@ -373,21 +373,21 @@ ms.locfileid: "62898902"
 |DirectInput|1|  
 |Переменная|2|  
   
- Отслеживание событий WMI `ActionAtEvent` набор свойств с помощью значений `ActionAtEvent` перечисления.  
+ `ActionAtEvent` Свойство "НАБЛЮДАТЕЛЬ событий WMI" задается с помощью значений `ActionAtEvent` из перечисления.  
   
 |Понятное имя в перечислении ActionAtEvent|Числовое значение|  
 |------------------------------------|-------------------|  
 |LogTheEventAndFireDTSEvent|0|  
 |LogTheEvent|1|  
   
- `ActionAtTimeout` Набор свойств с помощью значений `ActionAtTimeout` перечисления.  
+ `ActionAtTimeout`свойство задается с помощью значений из `ActionAtTimeout` перечисления.  
   
 |Понятное имя в перечислении ActionAtTimeout|Числовое значение|  
 |--------------------------------------|-------------------|  
 |LogTimeoutAndFireDTSEvent|0|  
 |LogTimeout|1|  
   
- `AfterEvent` Набор свойств с помощью значений `AfterEvent` перечисления.  
+ `AfterEvent`свойство задается с помощью значений из `AfterEvent` перечисления.  
   
 |Понятное имя в перечислении AfterEvent|Числовое значение|  
 |---------------------------------|-------------------|  
@@ -395,7 +395,7 @@ ms.locfileid: "62898902"
 |ReturnWithFailure|1|  
 |WatchfortheEventAgain|2|  
   
- `AfterTimeout` Набор свойств с помощью значений `AfterTimeout` перечисления.  
+ `AfterTimeout`свойство задается с помощью значений из `AfterTimeout` перечисления.  
   
 |Понятное имя в перечислении AfterTimeout|Числовое значение|  
 |-----------------------------------|-------------------|  
@@ -403,7 +403,7 @@ ms.locfileid: "62898902"
 |ReturnWithFailure|1|  
 |WatchfortheEventAgain|2|  
   
- `WqlQuerySourceType` Набор свойств с помощью значений `QuerySourceType` перечисления.  
+ `WqlQuerySourceType`свойство задается с помощью значений из `QuerySourceType` перечисления.  
   
 |Понятное имя в перечислении QuerySourceType|Числовое значение|  
 |--------------------------------------|-------------------|  
@@ -412,7 +412,7 @@ ms.locfileid: "62898902"
 |Переменная|2|  
   
 ### <a name="xml-task"></a>Задача «XML»  
- `OperationType` Набор свойств с помощью значений `DTSXMLOperation` перечисления.  
+ `OperationType`свойство задается с помощью значений из `DTSXMLOperation` перечисления.  
   
 |Понятное имя в перечислении DTSXMLOperation|Числовое значение|  
 |--------------------------------------|-------------------|  
@@ -423,7 +423,7 @@ ms.locfileid: "62898902"
 |Поиск различий|4|  
 |Обновление|5|  
   
- `SourceType`, `SecondOperandType`, и `XPathSourceType` свойства набора, с помощью значений `DTSXMLSourceType` перечисления.  
+ `SourceType`свойства `SecondOperandType`, и `XPathSourceType` задаются с помощью значений из `DTSXMLSourceType` перечисления.  
   
 |Понятное имя в перечислении DTSXMLSourceType|Числовое значение|  
 |---------------------------------------|-------------------|  
@@ -431,21 +431,21 @@ ms.locfileid: "62898902"
 |Переменная|1|  
 |DirectInput|2|  
   
- `DestinationType` и **DiffGramDestinationType** свойства набора, с помощью значений `DTSXMLSaveResultTo` перечисления.  
+ `DestinationType`свойства и **диффграмдестинатионтипе** задаются с помощью значений из `DTSXMLSaveResultTo` перечисления.  
   
 |Понятное имя в перечислении DTSXMLSaveResultTo|Числовое значение|  
 |-----------------------------------------|-------------------|  
 |FileConnection|0|  
 |Переменная|1|  
   
- `ValidationType` Набор свойств с помощью значений `DTSXMLValidationType` перечисления.  
+ `ValidationType`свойство задается с помощью значений из `DTSXMLValidationType` перечисления.  
   
 |Понятное имя в перечислении DTSXMLValidationType|Числовое значение|  
 |-------------------------------------------|-------------------|  
 |DTD|0|  
 |XSD|1|  
   
- `XPathOperation` Набор свойств с помощью значений `DTSXMLXPathOperation` перечисления.  
+ `XPathOperation`свойство задается с помощью значений из `DTSXMLXPathOperation` перечисления.  
   
 |Понятное имя в перечислении DTSXMLXPathOperation|Числовое значение|  
 |-------------------------------------------|-------------------|  
@@ -453,7 +453,7 @@ ms.locfileid: "62898902"
 |Значения|1|  
 |NodeList|2|  
   
- `DiffOptions` Набор свойств с помощью значений `DTSXMLDiffOptions` перечисления. Параметры в этом перечислителе взаимно не исключаемы. Чтобы использовать несколько параметров, предоставьте список параметров с разделителями-запятыми.  
+ `DiffOptions`свойство задается с помощью значений из `DTSXMLDiffOptions` перечисления. Параметры в этом перечислителе взаимно не исключаемы. Чтобы использовать несколько параметров, предоставьте список параметров с разделителями-запятыми.  
   
 |Понятное имя в перечислении DTSXMLDiffOptions|Числовое значение|  
 |----------------------------------------|-------------------|  
@@ -467,7 +467,7 @@ ms.locfileid: "62898902"
 |IgnoreXmlDecl|64|  
 |IgnoreDtd|128|  
   
- `DiffAlgorithm` Набор свойств с помощью значений `DTSXMLDiffAlgorithm` перечисления.  
+ `DiffAlgorithm`свойство задается с помощью значений из `DTSXMLDiffAlgorithm` перечисления.  
   
 |Понятное имя в перечислении DTSXMLDiffAlgorithm|Числовое значение|  
 |------------------------------------------|-------------------|  
@@ -483,7 +483,7 @@ ms.locfileid: "62898902"
 ### <a name="all-maintenance-tasks"></a>Все задачи плана обслуживания  
  Все задачи плана обслуживания для установки указанных свойств используют следующие перечисления.  
   
- `DatabaseSelectionType` Набор свойств с помощью значений `DatabaseSelection` перечисления.  
+ `DatabaseSelectionType`свойство задается с помощью значений из `DatabaseSelection` перечисления.  
   
 |Понятное имя в перечислении DatabaseSelection|Числовое значение|  
 |----------------------------------------|-------------------|  
@@ -493,7 +493,7 @@ ms.locfileid: "62898902"
 |Пользователь|3|  
 |Specific|4|  
   
- `TableSelectionType` Набор свойств с помощью значений `TableSelection` перечисления.  
+ `TableSelectionType`свойство задается с помощью значений из `TableSelection` перечисления.  
   
 |Понятное имя в перечислении TableSelection|Числовое значение|  
 |-------------------------------------|-------------------|  
@@ -501,7 +501,7 @@ ms.locfileid: "62898902"
 |All|1|  
 |Specific|2|  
   
- `ObjectTypeSelection` Набор свойств с помощью значений `ObjectType` перечисления.  
+ `ObjectTypeSelection`свойство задается с помощью значений из `ObjectType` перечисления.  
   
 |Понятное имя в перечислении ObjectType|Числовое значение|  
 |---------------------------------|-------------------|  
@@ -510,29 +510,29 @@ ms.locfileid: "62898902"
 |TableView|2|  
   
 ### <a name="back-up-database-task"></a>Задача «Создание резервной копии базы данных»  
- `DestinationCreationType` Набор свойств с помощью значений `DestinationType` перечисления.  
+ `DestinationCreationType`свойство задается с помощью значений из `DestinationType` перечисления.  
   
 |Понятное имя в перечислении DestinationType|Числовое значение|  
 |--------------------------------------|-------------------|  
 |Auto|0|  
 |Вручную|1|  
   
- `ExistingBackupsAction` Набор свойств с помощью значений `ActionForExistingBackups` перечисления.  
+ `ExistingBackupsAction`свойство задается с помощью значений из `ActionForExistingBackups` перечисления.  
   
 |Понятное имя в перечислении ActionForExistingBackups|Числовое значение|  
 |-----------------------------------------------|-------------------|  
 |Append|0|  
 |Overwrite|1|  
   
- `BackupAction` Набор свойств с помощью значений `BackupTaskType` перечисления. Это свойство работает совместно со свойством `BackupIsIncremental` для определения типа резервной копии, которую создает задача.  
+ `BackupAction`свойство задается с помощью значений из `BackupTaskType` перечисления. Это свойство работает совместно со свойством `BackupIsIncremental` для определения типа резервной копии, которую создает задача.  
   
 |Понятное имя в перечислении BackupTaskType|Числовое значение|  
 |-------------------------------------|-------------------|  
 |База данных|0|  
-|Files|1|  
+|Файлы|1|  
 |Журнал|2|  
   
- `BackupDevice` Набор свойств с помощью значений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] управляющих объектов (SMO) `DeviceType` перечисления.  
+ `BackupDevice`свойство задается с помощью значений из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] перечисления управляющих объектов ( `DeviceType` SMO).  
   
 |Понятное имя в перечислении DeviceType|Числовое значение|  
 |---------------------------------|-------------------|  
@@ -543,14 +543,14 @@ ms.locfileid: "62898902"
 |VirtualDevice|4|  
   
 ### <a name="maintenance-cleanup-task"></a>задача «Очистка после обслуживания»  
- `FileTypeSelected` Набор свойств с помощью значений `FileType` перечисления.  
+ `FileTypeSelected`свойство задается с помощью значений из `FileType` перечисления.  
   
 |Понятное имя в перечислении FileType|Числовое значение|  
 |-------------------------------|-------------------|  
 |FileBackup|0|  
 |FileReport|1|  
   
- `OlderThanTimeUnitType` Набор свойств с помощью значений `TimeUnitType` перечисления.  
+ `OlderThanTimeUnitType`свойство задается с помощью значений из `TimeUnitType` перечисления.  
   
 |Понятное имя в перечислении TimeUnitType|Числовое значение|  
 |-----------------------------------|-------------------|  
@@ -560,18 +560,18 @@ ms.locfileid: "62898902"
 |Год|3|  
   
 ### <a name="update-statistics-task"></a>Задача «Обновление статистики»  
- `UpdateType` Набор свойств с помощью значений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] управляющих объектов (SMO) `StatisticsTarget` перечисления.  
+ `UpdateType`свойство задается с помощью значений из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] перечисления управляющих объектов ( `StatisticsTarget` SMO).  
   
 |Понятное имя в перечислении StatisticsTarget|Числовое значение|  
 |---------------------------------------|-------------------|  
 |Столбец|1|  
-|Индекс |2|  
+|Индекс|2|  
 |All|3|  
   
 ##  <a name="CommonProperties"></a> Общие свойства  
  Пакеты, задачи, а также контейнеры последовательности, «цикл по каждому элементу» и «цикл по элементам» могут использовать следующие перечисления для задания специфических свойств.  
   
- `ForceExecutionResult` Набор свойств с помощью значений `DTSForcedExecResult` перечисления.  
+ `ForceExecutionResult`свойство задается с помощью значений из `DTSForcedExecResult` перечисления.  
   
 |Понятное имя в перечислении DTSForcedExecResult|Числовое значение|  
 |------------------------------------------|-------------------|  
@@ -580,9 +580,9 @@ ms.locfileid: "62898902"
 |Failure|1|  
 |Completion|2|  
   
- `IsolationLevel` Набор свойств платформой .NET Framework `IsolationLevel` перечисления. Дополнительные сведения см. в документации по библиотеке классов платформы .NET Framework в [Библиотеке MSDN](https://go.microsoft.com/fwlink?LinkId=17313).  
+ `IsolationLevel`свойство задается перечислением .NET Framework `IsolationLevel` . Дополнительные сведения см. в документации по библиотеке классов платформы .NET Framework в [Библиотеке MSDN](https://go.microsoft.com/fwlink?LinkId=17313).  
   
- `LoggingMode` Набор свойств с помощью значений `DTSLoggingMode` перечисления.  
+ `LoggingMode`свойство задается с помощью значений из `DTSLoggingMode` перечисления.  
   
 |Понятное имя в перечислении DTSLoggingMode|Числовое значение|  
 |-------------------------------------|-------------------|  
@@ -590,7 +590,7 @@ ms.locfileid: "62898902"
 |Активировано|1|  
 |Выключено|2|  
   
- `TransactionOption` Набор свойств с помощью значений `DTSTransactionOption` перечисления.  
+ `TransactionOption`свойство задается с помощью значений из `DTSTransactionOption` перечисления.  
   
 |Понятное имя в перечислении DTSTransactionOption|Числовое значение|  
 |-------------------------------------------|-------------------|  

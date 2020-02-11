@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e6d3880c4be8925e6b85a20af1324537e3977ecc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68103285"
 ---
 # <a name="parameters-transact-sql"></a>PARAMETERS (Transact-SQL)
@@ -33,19 +33,19 @@ ms.locfileid: "68103285"
   
  Чтобы получить сведения из этих представлений, укажите полное имя **INFORMATION_SCHEMA.** _view_name_.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |**SPECIFIC_CATALOG**|**nvarchar (** 128 **)**|Имя каталога процедуры, для которой это является параметром.|  
-|**SPECIFIC_SCHEMA**|**nvarchar (** 128 **)**|Имя схемы процедуры, для которой это является параметром.<br /><br /> <strong>\*\* Важные \* \*</strong>  не используйте представления INFORMATION_SCHEMA, чтобы определить схему объекта. Единственный надежный способ найти схему объекта — направить запрос к представлению каталога sys.objects.|  
+|**SPECIFIC_SCHEMA**|**nvarchar (** 128 **)**|Имя схемы процедуры, для которой это является параметром.<br /><br /> <strong> \* \* Важно \* !</strong> Не используйте INFORMATION_SCHEMA представления для определения схемы объекта. Единственный надежный способ найти схему объекта — направить запрос к представлению каталога sys.objects.|  
 |**SPECIFIC_NAME**|**nvarchar (** 128 **)**|Имя процедуры, для которой это является параметром.|  
 |**ORDINAL_POSITION**|**int**|Порядковый номер параметра, начиная с 1. Для возвращаемого значения функции это 0.|  
 |**PARAMETER_MODE**|**nvarchar (** 10 **)**|Возвращает значение IN для входного параметра, OUT для выходного параметра и INOUT для изменяемого входного параметра.|  
 |**IS_RESULT**|**nvarchar (** 10 **)**|Возвращает значение YES, если результат подпрограммы является результатом выполнения функции. В противном случае возвращается значение NO.|  
 |**AS_LOCATOR**|**nvarchar (** 10 **)**|Возвращает значение YES, если результат объявлен как указатель. В противном случае возвращается значение NO.|  
-|**ИМЯ_ПАРАМЕТРА**|**nvarchar (** 128 **)**|Имя параметра. Если соответствует результату выполнения функции, то возвращается значение NULL.|  
+|**PARAMETER_NAME**|**nvarchar (** 128 **)**|Имя параметра. Если соответствует результату выполнения функции, то возвращается значение NULL.|  
 |**DATA_TYPE**|**nvarchar (** 128 **)**|Тип данных, поддерживаемый системой.|  
-|**CHARACTER_MAXIMUM_LENGTH**|**int**|Максимальная длина в символах для двоичных или символьных данных.<br /><br /> -1 для **xml** и данные типа больших значений. В противном случае возвращается значение NULL.|  
-|**CHARACTER_OCTET_LENGTH**|**int**|Максимальная длина в байтах для двоичных или символьных данных.<br /><br /> -1 для **xml** и данные типа больших значений. В противном случае возвращается значение NULL.|  
+|**CHARACTER_MAXIMUM_LENGTH**|**int**|Максимальная длина в символах для двоичных или символьных данных.<br /><br /> -1 для данных типа **XML** и больших значений. В противном случае возвращается значение NULL.|  
+|**CHARACTER_OCTET_LENGTH**|**int**|Максимальная длина в байтах для двоичных или символьных данных.<br /><br /> -1 для данных типа **XML** и больших значений. В противном случае возвращается значение NULL.|  
 |**COLLATION_CATALOG**|**nvarchar (** 128 **)**|Всегда возвращает значение NULL.|  
 |**COLLATION_SCHEMA**|**nvarchar (** 128 **)**|Всегда возвращает значение NULL.|  
 |**COLLATION_NAME**|**nvarchar (** 128 **)**|Имя параметров сортировки параметра. Если введенные данные не принадлежат ни к одному из символьных типов, возвращает значение NULL.|  
@@ -55,21 +55,21 @@ ms.locfileid: "68103285"
 |**NUMERIC_PRECISION**|**tinyint**|Точность приблизительных числовых данных, точных числовых данных, целочисленных данных или денежных данных. В противном случае возвращается значение NULL.|  
 |**NUMERIC_PRECISION_RADIX**|**smallint**|Основание системы счисления точности приблизительных числовых данных, точных числовых данных, целочисленных данных или денежных данных. В противном случае возвращается значение NULL.|  
 |**NUMERIC_SCALE**|**tinyint**|Масштаб приблизительных числовых данных, точных числовых данных, целочисленных данных или денежных данных. В противном случае возвращается значение NULL.|  
-|**DATETIME_PRECISION**|**smallint**|Точность до долей секунды, если тип параметра — **datetime** или **smalldatetime**. В противном случае возвращается значение NULL.|  
-|**INTERVAL_TYPE**|**nvarchar (** 30 **)**|NULL. Зарезервировано для будущего использования.|  
-|**INTERVAL_PRECISION**|**smallint**|NULL. Зарезервировано для будущего использования.|  
-|**USER_DEFINED_TYPE_CATALOG**|**nvarchar (** 128 **)**|NULL. Зарезервировано для будущего использования.|  
-|**USER_DEFINED_TYPE_SCHEMA**|**nvarchar (** 128 **)**|NULL. Зарезервировано для будущего использования.|  
-|**USER_DEFINED_TYPE_NAME**|**nvarchar (** 128 **)**|NULL. Зарезервировано для будущего использования.|  
-|**SCOPE_CATALOG**|**nvarchar (** 128 **)**|NULL. Зарезервировано для будущего использования.|  
-|**SCOPE_SCHEMA**|**nvarchar (** 128 **)**|NULL. Зарезервировано для будущего использования.|  
-|**SCOPE_NAME**|**nvarchar (** 128 **)**|NULL. Зарезервировано для будущего использования.|  
+|**DATETIME_PRECISION**|**smallint**|Точность в долях секунды, если параметр имеет тип **DateTime** или **smalldatetime**. В противном случае возвращается значение NULL.|  
+|**INTERVAL_TYPE**|**nvarchar (** 30 **)**|NULL. Зарезервирован для использования в будущем.|  
+|**INTERVAL_PRECISION**|**smallint**|NULL. Зарезервирован для использования в будущем.|  
+|**USER_DEFINED_TYPE_CATALOG**|**nvarchar (** 128 **)**|NULL. Зарезервирован для использования в будущем.|  
+|**USER_DEFINED_TYPE_SCHEMA**|**nvarchar (** 128 **)**|NULL. Зарезервирован для использования в будущем.|  
+|**USER_DEFINED_TYPE_NAME**|**nvarchar (** 128 **)**|NULL. Зарезервирован для использования в будущем.|  
+|**SCOPE_CATALOG**|**nvarchar (** 128 **)**|NULL. Зарезервирован для использования в будущем.|  
+|**SCOPE_SCHEMA**|**nvarchar (** 128 **)**|NULL. Зарезервирован для использования в будущем.|  
+|**SCOPE_NAME**|**nvarchar (** 128 **)**|NULL. Зарезервирован для использования в будущем.|  
   
-## <a name="see-also"></a>См. также  
- [Системные представления &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
- [Представления информационной схемы &#40;Transact-SQL&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
- [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [sys.parameters (Transact-SQL)](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Системные представления &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [Представления информационной схемы &#40;&#41;Transact-SQL](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
+ [sys. Columns &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
+ [sys. Objects &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys. parameters &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys.sysconstraints (Transact-SQL) | Документация Майкрософт
+title: sys. таблицу sysconstraints (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,10 +21,10 @@ ms.assetid: f2b2e2ad-ba24-48a1-913c-8ee4e0895dc4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: dfd88dec92d2707b72c829aa53f2798d3d64fee3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68089192"
 ---
 # <a name="syssysconstraints-transact-sql"></a>sys.sysconstraints (Transact-SQL)
@@ -35,18 +35,18 @@ ms.locfileid: "68089192"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |**constid**|**int**|Номер ограничения.|  
-|**идентификатор**|**int**|Идентификатор таблицы, владеющей ограничением.|  
+|**удостоверения**|**int**|Идентификатор таблицы, владеющей ограничением.|  
 |**идентификатора столбца**|**smallint**|Идентификатор столбца, на котором определено ограничение.<br /><br /> 0 = ограничение таблицы|  
-|**spare1**|**tinyint**|Зарезервировано|  
-|**status**|**int**|Псевдобитовая маска, определяющая состояние. Возможные значения:<br /><br /> 1 = ограничение PRIMARY KEY;<br /><br /> 2 = ограничение UNIQUE KEY;<br /><br /> 3 = ограничение FOREIGN KEY;<br /><br /> 4 = ограничение CHECK;<br /><br /> 5 = ограничение DEFAULT;<br /><br /> 16 = ограничение на уровне столбца;<br /><br /> 32 = ограничение уровня таблицы.|  
-|**Действия**|**int**|Зарезервировано|  
-|**Ошибка**|**int**|Зарезервировано|  
+|**spare1**|**tinyint**|Reserved|  
+|**состояние**|**int**|Псевдобитовая маска, определяющая состояние. Возможные значения:<br /><br /> 1 = ограничение PRIMARY KEY;<br /><br /> 2 = ограничение UNIQUE KEY;<br /><br /> 3 = ограничение FOREIGN KEY;<br /><br /> 4 = ограничение CHECK;<br /><br /> 5 = ограничение DEFAULT;<br /><br /> 16 = ограничение на уровне столбца;<br /><br /> 32 = ограничение уровня таблицы.|  
+|**действия**|**int**|Reserved|  
+|**план**|**int**|Reserved|  
   
-## <a name="see-also"></a>См. также  
- [Сопоставление системных таблиц с системными представлениями &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Представления совместимости (Transact-SQL)](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Сопоставление системных таблиц с системными представлениями &#40;&#41;Transact-SQL](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [Представления совместимости &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

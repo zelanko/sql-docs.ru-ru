@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eac36b2aaaa5cd3b28d5476c760bab3152c460f2
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73789612"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
@@ -36,7 +36,7 @@ HRESULT BCPDone(void);
 ```  
   
 ## <a name="remarks"></a>Remarks  
- Никакая другая операция не может быть вызвана применительно к интерфейсу [IBCPSession](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md) после вызова метода **BCPDone** . Единственной возможностью является вызов метода [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) для инициализации операции массового копирования. Это аналогично вызову метода [IRowsetFastLoad::Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md) .  
+ Никакая другая операция не может быть вызвана применительно к интерфейсу [IBCPSession](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md) после вызова метода **BCPDone**. Единственной возможностью является вызов метода [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) для инициализации операции массового копирования. Это аналогично вызову метода [IRowsetFastLoad::Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md).  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  S_OK  
@@ -64,7 +64,7 @@ insert into fltest values (4, 4, 0xFAD)
   
  Чтобы вновь добавить эти данные в таблицу, можно использовать следующую команду BCP:  
   
- **bcp master..fltest in outfile.dat -n -T -S** *server*  
+ **bcp Master.. флтест в файле. dat-n-T-S** *Server*  
   
  Во время компиляции этого образца необходимо будет указать файл sqlncli11.lib.  
   
@@ -463,8 +463,8 @@ void wmain() {
 }  
 ```  
   
-## <a name="see-also"></a>См. также статью  
- [IBCPSession &#40;OLE DB&#41; ](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
+## <a name="see-also"></a>См. также:  
+ [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [Выполнение операций массового копирования](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
   
   

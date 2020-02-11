@@ -13,17 +13,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c9b8ed6778a087c2200012c6df1409b187b39329
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63199067"
 ---
 # <a name="tutorial-preparing-the-server-for-replication"></a>Учебник. Подготовка сервера к репликации
   Перед тем, как настраивать топологию репликации, важно предусмотреть средства безопасности. В этом учебнике описывается, как лучше обезопасить топологию репликации и как настроить распространение, которое является первым шагом в репликации данных. В первую очередь необходимо пройти именно этот учебник.  
   
 > [!NOTE]  
->  Чтобы безопасно выполнять репликацию данных между серверами, следует выполнять все рекомендации, приведенные в разделе [Рекомендации по защите репликации](security/replication-security-best-practices.md).  
+>  Чтобы безопасно реплицировать данные между серверами, следует реализовать все рекомендации в рекомендациях по [обеспечению безопасности репликации](security/replication-security-best-practices.md).  
   
 ## <a name="what-you-will-learn"></a>Обзор учебника  
  В этом учебнике описывается, как подготовить сервер для безопасного выполнения репликации с минимальным числом привилегий. На первом занятии создаются учетные записи службы Windows, используемые для запуска агентов репликации. На втором занятии демонстрируется настройка папки, используемой для формирования и хранения моментальных снимков публикации. На третьем занятии выполняется настройка распространения и установка разрешений.  
@@ -33,22 +33,23 @@ ms.locfileid: "63199067"
   
  Для работы с этим учебником в системе должны быть установлены следующие компоненты:  
   
--   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] с базой данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . В целях повышения безопасности образцы баз данных по умолчанию не устанавливаются.  
+-   
+  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] с базой данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . В целях повышения безопасности образцы баз данных по умолчанию не устанавливаются.  
   
  **Предполагаемое время для выполнения заданий данного учебника: 30 минут.**  
   
 ## <a name="lessons-in-this-tutorial"></a>Занятия этого учебника  
   
--   [Занятие 1. Создание Windows учетных записей для репликации](lesson-1-creating-windows-accounts-for-replication.md)  
+-   [Занятие 1. Создание учетных записей Windows для репликации](lesson-1-creating-windows-accounts-for-replication.md)  
   
 -   [Занятие 2. Подготовка папки моментальных снимков](lesson-2-preparing-the-snapshot-folder.md)  
   
--   [Занятие 3. Настройка распространения](lesson-3-configuring-distribution.md)  
+-   [Занятие 3. Настройка распространения](lesson-3-configuring-distribution.md)  
   
- [Приступить к изучению](lesson-1-creating-windows-accounts-for-replication.md)  
+ [Запуск учебника](lesson-1-creating-windows-accounts-for-replication.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Настройка распространения](configure-distribution.md)   
- [Безопасность репликации SQL Server](security/view-and-modify-replication-security-settings.md)  
+ [Безопасность Репликация SQL Server](security/view-and-modify-replication-security-settings.md)  
   
   

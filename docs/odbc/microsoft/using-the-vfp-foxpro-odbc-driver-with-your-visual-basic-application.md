@@ -1,5 +1,5 @@
 ---
-title: Использовать драйвер ODBC для VFP FoxPro с приложением Visual Basic | Документация Майкрософт
+title: Использование драйвера ODBC для VFP FoxPro с приложением Visual Basic | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,53 +16,53 @@ ms.assetid: 5223ca23-5df6-4ebc-aa3b-70682ff27a8c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 017e8e7897b2b792d7a864dc336537d76dcad8b9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68087977"
 ---
 # <a name="using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application"></a>Использование драйвера ODBC для VFP FoxPro с приложением Visual Basic
-Your Microsoft® Visual Basic® приложение может взаимодействовать с данных Visual FoxPro, создав элемент управления данных, который подключается к источнику данных Visual FoxPro.  
+Приложение Microsoft® Visual Basic® может взаимодействовать с данными Visual FoxPro путем создания элемента управления данными, который подключается к источнику данных Visual FoxPro.  
   
-#### <a name="to-connect-to-visual-foxpro-data-using-the-data-control-in-visual-basic"></a>Для подключения к данным Visual FoxPro, используя элемент управления данными в Visual Basic  
+#### <a name="to-connect-to-visual-foxpro-data-using-the-data-control-in-visual-basic"></a>Подключение к данным Visual FoxPro с помощью элемента управления данными в Visual Basic  
   
-1.  Создайте источник данных с именем «test», который подключается с образцом базы данных TasTrade, включенные в Visual FoxPro. Visual FoxPro установки по умолчанию помещает TasTrade образца базы данных в расположении:  
+1.  Создайте источник данных с именем Test, который подключается к образцу базы данных Тастраде, входящему в Visual FoxPro. Установка Visual FoxPro по умолчанию помещает образец базы данных Тастраде в расположение:  
   
     ```  
     c:\vfp\samples\mainsamp\data\tastrade.dbc  
     ```  
   
-2.  В Visual Basic создать новую форму и поместите текстовое поле и элемент управления данные на нем.  
+2.  В Visual Basic создайте новую форму и поместите на нее текстовое поле и элемент управления данными.  
   
-3.  Измените свойства элемента управления данными Connect следующим образом:  
+3.  Измените свойство Connect элемента управления данными следующим образом:  
   
     ```  
     ODBC;DATABASE=tastrade;DSN=test  
     ```  
   
-4.  Измените свойство тип набора записей на следующее:  
+4.  Измените свойство Рекордсеттипе на следующее:  
   
     ```  
     2 - Snapshot  
     ```  
   
-5.  Измените свойство источник записей на следующее:  
+5.  Измените свойство RecordSource на следующее:  
   
     ```  
     customer  
     ```  
   
-6.  Измените свойство источника данных для текстового поля на имя по умолчанию для элемента управления данными следующее:  
+6.  Измените свойство DataSource для текстового поля на имя по умолчанию для элемента управления данными следующим образом:  
   
     ```  
     data1  
     ```  
   
-7.  Измените свойство DataField текстового поля следующим образом:  
+7.  Измените свойство поля в текстовом поле на следующее:  
   
     ```  
     customer_id  
     ```  
   
-8.  Форма запуска и пропуск по полям идентификатора клиента из образца базы данных Visual FoxPro TasTrade с помощью элемента управления данных.
+8.  Запустите форму и используйте элемент управления данными для пропуска полей идентификатор клиента из образца базы данных Visual FoxPro Тастраде.

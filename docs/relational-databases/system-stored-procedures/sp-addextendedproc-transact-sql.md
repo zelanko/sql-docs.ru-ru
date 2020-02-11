@@ -18,19 +18,19 @@ ms.assetid: c0d4b47b-a855-451e-90e5-5fb2d836ebfa
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0bc8ea22699762927a026ae4cc811500c193555c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68072755"
 ---
-# <a name="spaddextendedproc-transact-sql"></a>sp_addextendedproc (Transact-SQL)
+# <a name="sp_addextendedproc-transact-sql"></a>sp_addextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Регистрирует имя новой расширенной хранимой процедуры [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Регистрирует имя новой расширенной хранимой процедуры в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Используйте вместо этого [интеграцию со средой CLR](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Вместо этого используйте [интеграцию со средой CLR](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) .  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,31 +43,31 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @functname = ] 'procedure'` — Имя функции, вызываемой в библиотеке динамической компоновки (DLL). *процедура* — **nvarchar(517)** , не имеет значения по умолчанию. *процедура* может также включать имя владельца в форме *owner.function*.  
+`[ @functname = ] 'procedure'`Имя функции для вызова в библиотеке динамической компоновки (DLL). *процедура* имеет тип **nvarchar (517)** и не имеет значения по умолчанию. При *необходимости можно* включить имя владельца в форму *owner. function*.  
   
-`[ @dllname = ] 'dll'` — Имя библиотеки DLL, содержащей функцию. *библиотеки DLL* — **varchar(255)** , не имеет значения по умолчанию. Рекомендуется указывать полный путь DLL.  
+`[ @dllname = ] 'dll'`Имя библиотеки DLL, содержащей функцию. *DLL* имеет тип **varchar (255)** и не имеет значения по умолчанию. Рекомендуется указывать полный путь DLL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или 1 (неуспешное завершение)  
+ 0 (успех) или 1 (сбой).  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  None  
   
-## <a name="remarks"></a>Примечания  
- После создания расширенной хранимой процедуры, его необходимо добавить к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью **sp_addextendedproc**. Дополнительные сведения см. в разделе [Добавление расширенную хранимую процедуру в SQL Server](../../relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md).  
+## <a name="remarks"></a>Remarks  
+ После создания расширенной хранимой процедуры ее необходимо добавить в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью **sp_addextendedproc**. Дополнительные сведения см. [в разделе Добавление расширенной хранимой процедуры в SQL Server](../../relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md).  
   
- Эта процедура может выполняться только в **master** базы данных. Для выполнения расширенной хранимой процедуры из базы данных, отличных от **master**, используйте в имени расширенной хранимой процедуры с **master**.  
+ Эту процедуру можно выполнить только в базе данных **master** . Для выполнения расширенной хранимой процедуры из базы данных, отличной от **master**, следует определить имя расширенной хранимой процедуры с помощью **master**.  
   
- **sp_addextendedproc** добавляет записи в [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) представление каталога, регистрация имени новой расширенной хранимой процедуры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Он также добавляет запись в [sys.extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) представления каталога.  
+ **sp_addextendedproc** добавляет записи в представление каталога [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) , регистрируя имя новой расширенной хранимой процедуры с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Он также добавляет запись в представление каталога [sys. extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) .  
   
 > [!IMPORTANT]  
->  Существующие DLL-библиотеки, которые зарегистрированы без указания полного пути, перестанут работать после обновления до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Чтобы устранить проблему, используйте **sp_dropextendedproc** для отмены регистрации библиотеки DLL, а затем выполните их повторную регистрацию с помощью **sp_addextendedproc**, указав полный путь.  
+>  Существующие DLL-библиотеки, которые зарегистрированы без указания полного пути, перестанут работать после обновления до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Чтобы устранить эту проблему, используйте **sp_dropextendedproc** , чтобы отменить регистрацию библиотеки DLL, а затем повторно зарегистрируйте ее с помощью **sp_addextendedproc**, указав полный путь.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнять процедуру **sp_addextendedproc**.  
+ Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_addextendedproc**.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере добавляется **xp_hello** расширенной хранимой процедуры.  
+ В следующем примере добавляется **xp_hello** расширенная хранимая процедура.  
   
 ```  
 USE master;  
@@ -75,12 +75,12 @@ GO
 EXEC sp_addextendedproc xp_hello, 'c:\xp_hello.dll';  
 ```  
   
-## <a name="see-also"></a>См. также  
- [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)   
- [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)   
- [REVOKE (Transact-SQL)](../../t-sql/statements/revoke-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [ВЫПОЛНЕНИЕ &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
+ [ПРЕДОСТАВЛЕНИЕ &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
+ [ОТОЗВАТЬ &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [sp_dropextendedproc &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)   
  [sp_helpextendedproc &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpextendedproc-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -13,17 +13,17 @@ ms.assetid: 986170b3-fba8-4323-9224-60b381c7effb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1f3749cf860463c79b5f489243544529498222a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68073821"
 ---
 # <a name="sqlgetstmtoption-cursor-library"></a>SQLGetStmtOption (библиотека курсоров)
 > [!IMPORTANT]  
->  Этот компонент будет удален в будущих версиях Windows. Избегайте использования этой функции в новых разработках и запланируйте изменение приложений, которые сейчас ее используют. Корпорация Майкрософт рекомендует использовать функциональные возможности драйвера курсора.  
+>  Эта функция будет удалена в следующей версии Windows. Избегайте использования этой функции в новых разработках и запланируйте изменение приложений, которые в настоящее время используют эту функцию. Корпорация Майкрософт рекомендует использовать функцию курсора драйвера.  
   
- В этом разделе рассматривается использование **SQLGetStmtOption** функции в библиотеку курсоров. Общие сведения о **SQLGetStmtOption**, см. в разделе [функция SQLGetStmtOption](../../../odbc/reference/syntax/sqlgetstmtoption-function.md).  
+ В этом разделе обсуждается использование функции **SQLGetStmtOption** в библиотеке курсоров. Общие сведения о **SQLGetStmtOption**см. в разделе [функция SQLGetStmtOption](../../../odbc/reference/syntax/sqlgetstmtoption-function.md).  
   
  Библиотека курсоров поддерживает следующие параметры инструкции с **SQLGetStmtOption**:  
   

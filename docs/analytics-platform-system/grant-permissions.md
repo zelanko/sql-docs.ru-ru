@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6bbe78979c393490a52e1051fe158ae138f93dcc
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401152"
 ---
 # <a name="grant-t-sql-permissions-for-parallel-data-warehouse"></a>Предоставление разрешений T-SQL для параллельного хранилища данных
@@ -245,8 +245,8 @@ GO
   
 Сведения о создании имен входа администратора см. в разделе Предопределенные [роли сервера](pdw-permissions.md#fixed-server-roles).  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)  
 [СОЗДАНИЕ ПОЛЬЗОВАТЕЛЯ](../t-sql/statements/create-user-transact-sql.md)  
-[СОЗДАНИЕ РОЛИ](../t-sql/statements/create-role-transact-sql.md)  
-[загрузить](load-overview.md)  
+[CREATE ROLE](../t-sql/statements/create-role-transact-sql.md)  
+[Загрузить](load-overview.md)  

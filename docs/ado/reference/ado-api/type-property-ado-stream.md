@@ -1,5 +1,5 @@
 ---
-title: Введите свойства (ADO Stream) | Документация Майкрософт
+title: Свойство Type (поток ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,26 +18,26 @@ ms.assetid: f6a17e8c-7a28-48d0-bded-76b9e0cf7639
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9b996ba4bedbb4ccf1ccb0453e4da33e09206a18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938232"
 ---
 # <a name="type-property-ado-stream"></a>Свойство Type (объект Stream ADO)
-Указывает тип данных, содержащихся в [Stream](../../../ado/reference/ado-api/stream-object-ado.md) (двоичные или текстовые).  
+Указывает тип данных, содержащихся в [потоке](../../../ado/reference/ado-api/stream-object-ado.md) (двоичный или текстовый).  
   
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
- Возвращает или задает [StreamTypeEnum](../../../ado/reference/ado-api/streamtypeenum.md) значение, указывающее тип данных, содержащихся в **Stream** объекта. Значение по умолчанию — **adTypeText**. Тем не менее, если изначально двоичные данные записываются в новый, пустой **Stream**, **тип** будет изменен на **adTypeBinary**.  
+ Задает или возвращает значение [стреамтипинум](../../../ado/reference/ado-api/streamtypeenum.md) , указывающее тип данных, содержащихся в объекте **потока** . Значение по умолчанию — **адтипетекст**. Однако, если двоичные данные изначально записываются в новый пустой **поток**, **Тип** изменится на **адтипебинари**.  
   
-## <a name="remarks"></a>Примечания  
- **Тип** свойство доступно для чтения/записи только в том случае, если текущая позиция находится в начале **Stream** ([позиции](../../../ado/reference/ado-api/position-property-ado.md) равно 0) и только для чтения в любом другом месте.  
+## <a name="remarks"></a>Remarks  
+ Свойство **Type** доступно только для чтения и записи, если текущая координата находится в начале **потока** (значение[позиции](../../../ado/reference/ado-api/position-property-ado.md) равно 0), а в любой другой позиции — только для чтения.  
   
- **Тип** свойство определяет, какие методы следует использовать для чтения и записи **Stream**. Для текста **потоки**, использовать [ReadText](../../../ado/reference/ado-api/readtext-method.md) и [WriteText](../../../ado/reference/ado-api/writetext-method.md). Для двоичного файла **потоки**, использовать [чтения](../../../ado/reference/ado-api/read-method.md) и [записи](../../../ado/reference/ado-api/write-method.md).  
+ Свойство**Type** определяет, какие методы следует использовать для чтения и записи **потока**. Для текстовых **потоков**используйте [ReadText](../../../ado/reference/ado-api/readtext-method.md) и [WriteText](../../../ado/reference/ado-api/writetext-method.md). Для двоичных **потоков**используйте [Чтение](../../../ado/reference/ado-api/read-method.md) и [запись](../../../ado/reference/ado-api/write-method.md).  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  [Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство RecordType (ADO)](../../../ado/reference/ado-api/recordtype-property-ado.md)   
  [Свойство Type (ADO)](../../../ado/reference/ado-api/type-property-ado.md)

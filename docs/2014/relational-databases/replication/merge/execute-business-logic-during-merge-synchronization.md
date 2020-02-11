@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 440419f1fb4670ff5bdfc2e49cd9cfe6fa5df65e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62999568"
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>Выполнение бизнес-логики при синхронизации слиянием
@@ -29,7 +29,7 @@ ms.locfileid: "62999568"
   
 -   Справочник по программным интерфейсам (API): <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>  
   
--   Инструкции по реализации обработчика бизнес-логики: [Реализация обработчика бизнес-логики для статьи публикации слиянием](../implement-a-business-logic-handler-for-a-merge-article.md)  
+-   Инструкции по реализации обработчика бизнес-логики: [Реализация обработчика бизнес-логики для статьи слияния](../implement-a-business-logic-handler-for-a-merge-article.md)  
   
 ## <a name="uses-for-business-logic-handlers"></a>Применения обработчиков бизнес-логики  
  Процесс синхронизации слиянием может вызывать обработчики бизнес-логики для выполнения следующих задач:  
@@ -59,7 +59,7 @@ ms.locfileid: "62999568"
      Это применимо для приложений, которые нуждаются в переопределении конкретных значений данных или операций. Например приложение может преобразовать строковое удаление в специальное обновление, которое устанавливает для столбца **status** в строке значение «удалено», и затем отслеживает идентификатор клиента, выполняющего удаление. Это может оказаться удобным для проведения аудита или отслеживания рабочего процесса.  
   
 ### <a name="custom-conflict-resolution"></a>устранение пользовательских конфликтов;  
- Репликация слиянием обеспечивает обнаружение и разрешение конфликтов, позволяет принять стратегию разрешений по умолчанию или выбрать пользовательское разрешение конфликтов. Дополнительные сведения см. в разделе [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md). Обработчик бизнес-логики может вызываться в течение обработки конфликтующих изменений данных и может выполнять одно из двух действий:  
+ Репликация слиянием обеспечивает обнаружение и разрешение конфликтов, позволяет принять стратегию разрешений по умолчанию или выбрать пользовательское разрешение конфликтов. Дополнительные сведения см. в разделе [Расширенная репликация слиянием: обнаружение и разрешение конфликтов](advanced-merge-replication-conflict-detection-and-resolution.md). Обработчик бизнес-логики может вызываться в течение обработки конфликтующих изменений данных и может выполнять одно из двух действий:  
   
 -   Принять разрешение по умолчанию  
   
@@ -91,8 +91,8 @@ ms.locfileid: "62999568"
   
 ## <a name="see-also"></a>См. также:  
  [Репликация слиянием](merge-replication.md)   
- [Subscribe to Publications](../subscribe-to-publications.md)   
+ [Подписка на публикации](../subscribe-to-publications.md)   
  [Синхронизация данных](../synchronize-data.md)   
- [Web Synchronization for Merge Replication](../web-synchronization-for-merge-replication.md)  
+ [Веб-синхронизация для репликации слиянием](../web-synchronization-for-merge-replication.md)  
   
   

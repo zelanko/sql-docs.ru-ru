@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0ffd514fcdf5479f91e31d3bb5f261bba7ab4cd2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62999641"
 ---
 # <a name="manage-objects-by-using-object-explorer"></a>Управление объектами с помощью обозревателя объектов
@@ -50,13 +50,13 @@ ms.locfileid: "62999641"
 ### <a name="open-a-connected-query-editor"></a>Открыть подключенный редактор запросов  
  Когда обозреватель объектов подключен к серверу, то, используя настройки соединения обозревателя объектов, можно открыть новое окно «Редактор кода». Чтобы открыть новое окно "Редактор кода", щелкните правой кнопкой мыши имя сервера в обозревателе объектов, а затем выберите пункт **Создать запрос**. Чтобы открыть окно "Редактор кода" для конкретной базы данных, щелкните правой кнопкой мыши имя базы данных, а затем выберите пункт **Создать запрос**. При открытии нового запроса к серверу служб Analysis Services можно выбирать запросы расширений интеллектуального анализа данных, многомерных выражений MDX или XML для аналитики.  
   
-### <a name="start-powershell"></a>Запустить PowerShell  
- Сеанс PowerShell можно запустить, щелкнув любую папку или объект в дереве обозревателя объектов правой кнопкой мыши и выбрав пункт **Запустить Powershell**. В результате этого запускается сеанс PowerShell с поддержкой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell, в котором установлен путь к объекту, выбранному щелчком правой кнопкой мыши в обозревателе объектов. После этого можно вводить команды PowerShell в интерактивной среде PowerShell. Дополнительные сведения см. в статье [SQL Server PowerShell](../../powershell/sql-server-powershell.md).  
+### <a name="start-powershell"></a>Запуск PowerShell  
+ Сеанс PowerShell можно запустить, щелкнув любую папку или объект в дереве обозревателя объектов правой кнопкой мыши и выбрав пункт **Запустить Powershell**. В результате этого запускается сеанс PowerShell с поддержкой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell, в котором установлен путь к объекту, выбранному щелчком правой кнопкой мыши в обозревателе объектов. После этого можно вводить команды PowerShell в интерактивной среде PowerShell. Подробные сведения см. в статье [SQL Server PowerShell](../../powershell/sql-server-powershell.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Обозреватель объектов](object-explorer.md)   
- [Открытие и настройка обозревателя объектов](open-and-configure-object-explorer.md)   
- [Подключитесь к экземпляру из обозревателя объектов](connect-to-an-instance-from-object-explorer.md)   
+ [Открытие и Настройка обозревателя объектов](open-and-configure-object-explorer.md)   
+ [Подключение к экземпляру из обозревателя объектов](connect-to-an-instance-from-object-explorer.md)   
  [Область сведений обозревателя объектов](object-explorer-details-pane.md)   
  [Пользовательские отчеты в среде Management Studio](custom-reports-in-management-studio.md)  
   

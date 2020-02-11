@@ -1,5 +1,5 @@
 ---
-title: Типы данных полей Visual FoxPro | Документация Майкрософт
+title: Типы данных поля Visual FoxPro | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,25 +14,25 @@ ms.assetid: 50b733dc-679a-4b10-bc5d-98bb474dead2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 217058bf328677bf375d346ae7201c6eb81efa4e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68087938"
 ---
 # <a name="visual-foxpro-field-data-types"></a>Типы данных полей Visual FoxPro
-В следующей таблице перечислены значения для *FieldType* аргумент в инструкции ALTER TABLE и CREATE TABLE и указывает ли *nFieldWidth* и *nPrecision* аргументы Обязательно.  
+В следующей таблице перечислены значения аргумента *FieldType* в инструкции ALTER table и CREATE TABLE и указано, требуются ли аргументы *нфиелдвидс* и *нпреЦисион* .  
   
-|*FieldType*|*NFieldWidth*|*nPrecision*|Описание|  
+|*FieldType*|*нфиелдвидс*|*нпреЦисион*|Description|  
 |-----------------|-------------------|------------------|-----------------|  
-|С|-|d|Double|  
-|В|в|-|Символ поле шириной *n*|  
-|D|-|-|Date|  
-|C|в|d|С плавающей запятой числовое поле шириной *n* с *d* десятичных разрядов|  
-|П|-|-|Общие|  
-|I|-|-|Целочисленный|  
+|B|-|d|Double|  
+|C|Нет|-|Символьное поле ширины *n*|  
+|D|-|-|Дата|  
+|F|Нет|d|Плавающее числовое поле Width *n* с *d* десятичными разрядами|  
+|G.|-|-|Общие сведения|  
+|I|-|-|Целое число|  
 |L|-|-|Логические|  
-|M|-|-|MEMO|  
-|в|в|d|Числовое поле шириной *n* с *d* десятичных разрядов|  
+|M|-|-|Получена|  
+|Нет|Нет|d|Числовое поле ширины *n* с *d* десятичными разрядами|  
 |T|-|-|DateTime|  
-|Y|-|-|Currency|
+|Да|-|-|Валюта|

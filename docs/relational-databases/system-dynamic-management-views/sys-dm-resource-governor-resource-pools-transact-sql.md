@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c39c32a907cecd8f670875fffba9f21995f2ccee
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73982301"
 ---
 # <a name="sysdm_resource_governor_resource_pools-transact-sql"></a>sys.dm_resource_governor_resource_pools (Transact-SQL)
@@ -33,12 +33,12 @@ ms.locfileid: "73982301"
   Возвращает информацию о текущем состоянии пула ресурсов, текущую конфигурацию пула ресурсов и статистику пула ресурсов.  
   
 > [!NOTE]  
->  Чтобы вызвать это из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте имя **sys. dm_pdw_nodes_resource_governor_resource_pools**.  
+>  Чтобы вызвать эту функцию [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] из [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]или, используйте имя **sys. dm_pdw_nodes_resource_governor_resource_pools**.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |pool_id|**int**|Идентификатор пула ресурсов. Не допускает значение NULL.|  
-|name|**sysname**|Имя пула ресурсов. Не допускает значение NULL.|  
+|name|**имеет sysname**|Имя пула ресурсов. Не допускает значение NULL.|  
 |statistics_start_time|**datetime**|Время, когда была очищена статистика для данного пула. Не допускает значение NULL.|  
 |total_cpu_usage_ms|**bigint**|Совокупное использование ЦП, в миллисекундах, с момента сброса статистики регулятора ресурсов. Не допускает значение NULL.|  
 |cache_memory_kb|**bigint**|Текущее общее использование памяти кэша, в килобайтах. Не допускает значение NULL.|  
@@ -76,7 +76,7 @@ ms.locfileid: "73982301"
 |write_io_stall_queued_ms|**bigint**|**Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий.<br /><br /> Общее время (в миллисекундах) между получением ввода-вывода при записи и проблемой. Допускает значение NULL. NULL, если пул ресурсов не управляется в аспекте операций ввода-вывода. Иными словами, параметры MIN_IOPS_PER_VOLUME и MAX_IOPS_PER_VOLUME пула ресурсов имеют значение 0.<br /><br /> Это задержка, вызванная регулированием ресурсов ввода-вывода.|  
 |io_issue_violations_total|**int**|**Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий.<br /><br /> Общее количество проблем с вводом-выводом. Иными словами, количество раз, когда скорость ввода-вывода при проблеме была ниже, чем резервная. Допускает значение NULL. NULL, если пул ресурсов не управляется в аспекте операций ввода-вывода. Иными словами, параметры MIN_IOPS_PER_VOLUME и MAX_IOPS_PER_VOLUME пула ресурсов имеют значение 0.|  
 |io_issue_delay_total_ms|**bigint**|**Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий.<br /><br /> Общее время (в миллисекундах) между запланированной проблемой и фактической проблемой ввода-вывода. Допускает значение NULL. NULL, если пул ресурсов не управляется в аспекте операций ввода-вывода. Иными словами, параметры MIN_IOPS_PER_VOLUME и MAX_IOPS_PER_VOLUME пула ресурсов имеют значение 0.|  
-|pdw_node_id|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
+|pdw_node_id|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
   
 ## <a name="remarks"></a>Remarks  
  Между группами рабочей нагрузки регулятора ресурсов и пулами ресурсов регулятора ресурсов существует связь «многие к одному». В результате многие статистики пула ресурсов являются производными от статистик группы рабочей нагрузки.  
@@ -86,10 +86,10 @@ ms.locfileid: "73982301"
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение VIEW SERVER STATE.  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [sys.dm_resource_governor_workload_groups (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
- [sys. resource_governor_resource_pools &#40;  Transact-&#41; SQL](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)  
+ [sys. dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
+ [sys. resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR (Transact-SQL)](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   
   

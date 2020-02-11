@@ -18,25 +18,25 @@ ms.assetid: be30abc9-c00d-446f-b1b4-1269772f37e6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 38c6bb0ae74ffe54e9637610139374e458e3649d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68095705"
 ---
-# <a name="msagentparameters-transact-sql"></a>MSagent_parameters (Transact-SQL)
+# <a name="msagent_parameters-transact-sql"></a>MSagent_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSagent_parameters** таблица содержит параметры, связанные с профилем агента. Параметры имеют те же имена, что и поддерживаемые агентом. Эта таблица хранится в **msdb** базы данных.  
+  **MSagent_parameters** таблица содержит параметры, связанные с профилем агента. Параметры имеют те же имена, что и поддерживаемые агентом. Эта таблица хранится в базе данных **msdb** .  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|**profile_id**|**int**|Идентификатор профиля из **MSagent_profiles** таблицы.|  
-|**parameter_name**|**sysname**|Имя параметра.|  
-|**value**|**nvarchar(255)**|Значение параметра.|  
+|**profile_id**|**int**|Идентификатор профиля из таблицы **MSagent_profiles** .|  
+|**parameter_name**|**имеет sysname**|Имя параметра.|  
+|**значений**|**nvarchar(255)**|Значение параметра.|  
   
-## <a name="see-also"></a>См. также  
- [Таблицы репликации &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Представления репликации &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

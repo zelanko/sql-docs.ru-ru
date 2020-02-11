@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_distributed_sql_requests (Transact-SQL) | Документация Майкрософт
+title: sys. dm_exec_distributed_sql_requests (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -23,35 +23,35 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a63d8a331163283598dd50a418f0dd32f9ac5edd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097792"
 ---
-# <a name="sysdmexecdistributedsqlrequests-transact-sql"></a>sys.dm_exec_distributed_sql_requests (Transact-SQL)
+# <a name="sysdm_exec_distributed_sql_requests-transact-sql"></a>sys. dm_exec_distributed_sql_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  Содержит сведения о всех дистрибутивов SQL-запроса как часть действия SQL в запросе.  В этом представлении отображаются данные для последней 1000 запросов; активные запросы всегда имеют данные в этом представлении.  
+  Содержит сведения обо всех распределениях SQL-запросов в рамках шага SQL в запросе.  В этом представлении отображаются данные за последние 1000 запросов. Активные запросы всегда имеют данные, представленные в этом представлении.  
   
-|Имя столбца|Тип данных|Описание|Диапазон|  
+|Имя столбца|Тип данных|Description|Диапазонный индекс|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|**nvarchar(32)**|значение execution_id и step_index составляющие ключ для этого представления. Уникальный числовой идентификатор, связанный с запросом.|См. в разделе с кодом в [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|  
-|step_index|**int**|Индекс, это распределение является частью этапа запроса.|См. в разделе step_index в [sys.dm_exec_distributed_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md).|  
-|compute_node_id|**int**|Тип операции, представленное в этом действии.|См. в разделе compute_node_id в [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
-|distribution_id|**int**|Где выполняется шаг.|Значение -1 для запросов, выполняемых на уровне узла не области распространения.|  
-|status|**nvarchar(32)**|Состояние этого шага|Active, отмененные, завершенных, неудачных, в очереди|  
-|error_id|**nvarchar(36)**|Уникальный идентификатор, связанный с этим шагом, если таковые имеются ошибки|См. в разделе идентификатор [sys.dm_exec_compute_node_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md), или значение NULL, если не возникло ошибок.|  
-|start_time|**datetime**|Время начала выполнения шага|Меньше или равным текущее время и больше или равна end_compile_time запроса, к которой принадлежит этот шаг.|  
-|end_time|**datetime**|Время, по которому этот шаг завершил выполнение, было отменено и сбой.|Меньше или равно текущего времени и размером менее start_time, очереди или значение NULL для шагов в настоящее время выполнения.|  
-|total_elapsed_time|**int**|Общее количество времени этапа запроса на выполнение, в миллисекундах|Между 0 и разница между end_time и start_time. 0 для шаги в очереди.|  
-|row_count|**bigint**|Общее число строк, измененных или возвращаемый этим запросом|для действия, которые не изменить или не возвращают данные, число строк, затронутых в противном случае — значение 0. Значение -1 для действия DMS.|  
-|spid|**int**|Идентификатор сеанса в экземпляре SQL Server, выполнив распределение запросов||  
-|command|nvarchar(4000)|Содержит полный текст команды этого шага.|Любая строка допустимым запросом для шага. Усечено, если длиной более 4000 символов.|  
+|execution_id|**nvarchar (32)**|execution_id и step_index сделать ключ для этого представления. Уникальный числовой идентификатор, связанный с запросом.|См. раздел ID в [sys. dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|  
+|step_index|**int**|Индекс шага запроса, частью которого является это распространение.|См. раздел step_index в [sys. dm_exec_distributed_request_steps &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md).|  
+|compute_node_id|**int**|Тип операции, представленной этим шагом.|См. раздел compute_node_id в [sys. dm_exec_compute_nodes &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
+|distribution_id|**int**|Место исполнения шага.|Задайте значение-1 для запросов, выполняемых в области узла, а не в области распространения.|  
+|status|**nvarchar (32)**|Состояние этого шага|Активный, отмененный, завершенный, сбой, поставлен в очередь|  
+|error_id|**nvarchar (36)**|Уникальный идентификатор ошибки, связанной с этим шагом, если таковой имеется|Ознакомьтесь с идентификатором [sys. dm_exec_compute_node_errors &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md), значение null, если ошибка не возникла.|  
+|start_time|**datetime**|Время начала выполнения этапа|Меньше или равно текущему времени и больше или равно end_compile_time запроса, к которому относится этот шаг.|  
+|end_time|**datetime**|Время, когда выполнение этого шага было завершено, было отменено или завершилось сбоем.|Меньшее или равное текущему времени и больше или равно start_time, установите значение NULL для шагов, выполняемых в данный момент или в очереди.|  
+|total_elapsed_time|**int**|Общее количество времени выполнения шага запроса (в миллисекундах)|Между 0 и разностью между end_time и start_time. 0 для шагов в очереди.|  
+|row_count|**bigint**|Общее число строк, измененных или возвращенных этим запросом|0 для шагов, которые не изменяют или возвращают данные, количество затронутых строк в противном случае. Задайте значение-1 для шагов DMS.|  
+|spid|**int**|Идентификатор сеанса на SQL Server экземпляре, который исполняет распределение запроса||  
+|command|nvarchar(4000)|Содержит полный текст команды этого шага.|Любая допустимая строка запроса для шага. Усекается, если длиннее 4000 символов.|  
   
-## <a name="see-also"></a>См. также  
- [PolyBase, устранение неполадок с помощью динамических административных представлений](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+## <a name="see-also"></a>См. также:  
+ [Устранение неполадок в Polybase с помощью динамических административных представлений](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Динамические административные представления, относящиеся к базе данных &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [Динамические административные представления, связанные с базами данных &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

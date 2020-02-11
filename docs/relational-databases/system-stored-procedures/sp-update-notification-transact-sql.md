@@ -18,13 +18,13 @@ ms.assetid: 3e1c3d40-8c24-46ce-a68e-ce6c6a237fda
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 35cfa3aeda8e296cd1a85a0e8a098aaddac90954
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68084863"
 ---
-# <a name="spupdatenotification-transact-sql"></a>sp_update_notification (Transact-SQL)
+# <a name="sp_update_notification-transact-sql"></a>sp_update_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Обновляет метод уведомления для предупреждений.  
@@ -43,32 +43,32 @@ sp_update_notification
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @alert_name = ] 'alert'` Имя предупреждения, связанное с этим уведомлением. *Предупреждение* — **sysname**, не имеет значения по умолчанию.  
+`[ @alert_name = ] 'alert'`Имя предупреждения, связанного с этим уведомлением. Аргумент *Alert* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @operator_name = ] 'operator'` Оператор, который получит уведомление при возникновении предупреждения. *оператор* — **sysname**, не имеет значения по умолчанию.  
+`[ @operator_name = ] 'operator'`Оператор, который будет получать уведомления при возникновении предупреждения. Аргумент *operator* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @notification_method = ] notification` Метод уведомления оператора. *уведомление*— **tinyint**, по умолчанию и может иметь одно или несколько из следующих значений.  
+`[ @notification_method = ] notification`Метод, по которому оператор получает уведомления. *уведомление*имеет тип **tinyint**, не имеет значения по умолчанию и может быть одним или несколькими из этих значений.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
-|**1**|электронная почта|  
+|**1**|электронная почта;|  
 |**2**|Пейджер|  
-|**4**|**команда net send.**|  
+|**4**|**NET SEND**|  
 |**7**|Все методы|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
- **sp_update_notification** должна запускаться из **msdb** базы данных.  
+## <a name="remarks"></a>Remarks  
+ **sp_update_notification** должны запускаться из базы данных **msdb** .  
   
- Можно обновлять уведомление для оператора, не имеющего необходимых адресных данных, используя указанный *notification_method*. Если при отправке сообщения по электронной почте или пейджеру происходит ошибка, она заносится в журнал ошибок агента Microsoft SQL Server.  
+ Вы можете обновить уведомление для оператора, который не имеет необходимых сведений об адресе, используя указанный *notification_method*. Если при отправке сообщения по электронной почте или пейджеру происходит ошибка, она заносится в журнал ошибок агента Microsoft SQL Server.  
   
 ## <a name="permissions"></a>Разрешения  
- Чтобы выполнить эту хранимую процедуру, пользователям необходимо предоставить **sysadmin** предопределенной роли сервера.  
+ Для выполнения этой хранимой процедуры пользователям должна быть предоставлена предопределенная роль сервера **sysadmin** .  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере изменяется метод уведомления для уведомлений, отправляемых `François Ajenstat`оповещения `Test Alert`.  
+ В следующем примере изменяется метод уведомления для уведомлений, отправляемых в `François Ajenstat`оповещение `Test Alert`.  
   
 ```  
 USE msdb ;  
@@ -81,10 +81,10 @@ EXEC dbo.sp_update_notification
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_add_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
  [sp_delete_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
  [sp_help_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

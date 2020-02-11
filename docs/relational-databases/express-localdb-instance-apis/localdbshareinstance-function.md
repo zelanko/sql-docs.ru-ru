@@ -16,17 +16,17 @@ ms.assetid: 21eb3b9a-7d32-455b-89bb-f624198cd202
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: f19226e4945d2f163247b7d94f029a6c5b6ee4af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68091263"
 ---
 # <a name="localdbshareinstance-function"></a>Функция LocalDBShareInstance
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Разделяет указанный экземпляр SQL Server Express LocalDB с другими пользователями компьютера, используя указанное общее имя.  
   
- **Файл заголовка:** sqlncli.h  
+ **Заголовочный файл:** sqlncli. h  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,13 +40,13 @@ HRESULT LocalDBShareInstance(
 ```  
   
 ## <a name="parameters"></a>Параметры  
- *pOwnerSID*  
+ *повнерсид*  
  [Вход] Идентификатор безопасности владельца экземпляра.  
   
- *pInstancePrivateName*  
+ *пинстанцеприватенаме*  
  [Вход] Частное имя разделяемого экземпляра LocalDB.  
   
- *pInstanceSharedName*  
+ *пинстанцешареднаме*  
  [Вход] Общее имя разделяемого экземпляра LocalDB.  
   
  *dwFlags*  
@@ -80,10 +80,10 @@ HRESULT LocalDBShareInstance(
  [LOCALDB_ERROR_INTERNAL_ERROR](../../relational-databases/express-localdb-error-messages/localdb-error-internal-error.md)  
  Произошла непредвиденная ошибка. Подробные сведения см. в журнале событий.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Образец кода, использующего API LocalDB, см. в разделе [SQL Server Express LocalDB Reference](../../relational-databases/sql-server-express-localdb-reference.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Заголовок и сведения о версии SQL Server Express LocalDB](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  
   
   

@@ -21,17 +21,17 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4e18f635b7bbdd8fa96a565fef6aef5be5bde87f
-ms.sourcegitcommit: 0c40843c13f67ba7d975f4fedb9d20d70747f66d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74097870"
 ---
 # <a name="sysdm_exec_input_buffer-transact-sql"></a>sys. dm_exec_input_buffer (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-2014sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2014sp2-asdb-xxxx-xxx-md.md)]
 
-Возвращает сведения о инструкциях, отправленных в экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Возвращает сведения о инструкциях, отправленных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]экземпляр.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -51,20 +51,20 @@ sys.dm_exec_input_buffer ( session_id , request_id )
 
 ## <a name="table-returned"></a>Возвращаемая таблица
 
-|Имя столбца|Data type|Описание|
+|Имя столбца|Тип данных|Description|
 |-----------------|---------------|-----------------|
 |**event_type**|**nvarchar(256)**|Тип события во входном буфере для данного SPID.|
-|**parameters**|**smallint**|Любые параметры, предоставленные для инструкции.|
-|**event_info**|**nvarchar(max)** ;|Текст инструкции во входном буфере для данного SPID.|
+|**Вход**|**smallint**|Любые параметры, предоставленные для инструкции.|
+|**event_info**|**nvarchar(max)**|Текст инструкции во входном буфере для данного SPID.|
 
 ## <a name="permissions"></a>Разрешения
 
-На [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если пользователь имеет разрешение VIEW SERVER STATE, он увидит все сеансы выполнения на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; в противном случае пользователь увидит только текущий сеанс.
+В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]случае, если пользователь имеет разрешение View Server State, он увидит все сеансы выполнения на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. в противном случае пользователь увидит только текущий сеанс.
 
 > [!IMPORTANT]
 > Выполнение этого динамического административного представления вне SQL Server Management Studio от SQL Server без разрешения VIEW SERVER STATE (например, в триггере, хранимой процедуре или функции) вызывает ошибку разрешения в базе данных master.
 
-На [!INCLUDE[ssSDS](../../includes/sssds-md.md)], если пользователь является владельцем базы данных, он увидит все выполненные сеансы на [!INCLUDE[ssSDS](../../includes/sssds-md.md)]; в противном случае пользователь увидит только текущий сеанс.
+В [!INCLUDE[ssSDS](../../includes/sssds-md.md)]случае, если пользователь является владельцем базы данных, он увидит все выполненные сеансы в [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. в противном случае пользователь увидит только текущий сеанс.
 
 > [!IMPORTANT]
 > Выполнение этого динамического административного представления вне SQL Server Management Studio в базе данных SQL Azure без разрешений владельца (например, в триггере, хранимой процедуре или функции) вызывает ошибку разрешения в базе данных master.
@@ -84,7 +84,7 @@ SELECT * FROM sys.dm_exec_input_buffer (52, 0);
 GO
 ```
 
-### <a name="b-using-cross-apply-to-additional-information"></a>б. Использование перекрестного применения к дополнительным сведениям
+### <a name="b-using-cross-apply-to-additional-information"></a>Б. Использование перекрестного применения к дополнительным сведениям
 
 В следующем примере перечисляются Входные буферы для сеансов с ИДЕНТИФИКАТОРом сеанса больше 50.
 
@@ -96,9 +96,9 @@ WHERE es.session_id > 50;
 GO
 ```
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также:
 
-- [Динамические административные представления и функции, связанные с выполнением (Transact-SQL)](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)
-- [sys.dm_exec_sessions (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)
-- [sys.dm_exec_requests (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)
-- [DBCC INPUTBUFFER (Transact-SQL)](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)
+- [Динамические административные представления и функции, связанные с выполнением &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)
+- [sys. dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)
+- [sys. dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)
+- [DBCC INPUTBUFFER &#40;&#41;Transact-SQL](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)

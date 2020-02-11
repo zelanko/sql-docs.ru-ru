@@ -1,5 +1,5 @@
 ---
-title: использованием sp_db_selective_xml_index (Transact-SQL) | Документация Майкрософт
+title: sp_db_selective_xml_index (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,19 +18,19 @@ ms.assetid: 017301a2-4a23-4e68-82af-134f3d4892b3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1648cca415f37f9c54f13857d25af90a65372c04
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108232"
 ---
-# <a name="spdbselectivexmlindex-transact-sql"></a>sp_db_selective_xml_index (Transact-SQL)
+# <a name="sp_db_selective_xml_index-transact-sql"></a>sp_db_selective_xml_index (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Включает и выключает функциональность селективного XML-индекса в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. При вызове без параметров хранимая процедура возвращает 1, если селективный XML-индекс включен в определенной базе данных.  
   
 > [!NOTE]  
->  Чтобы отключить Селективный XML-индекс, с помощью этой хранимой процедуры, базы данных должен быть помещен в режим простого восстановления с помощью [параметры ALTER DATABASE SET &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md) команды.  
+>  Чтобы отключить селективный XML-индекс с помощью этой хранимой процедуры, необходимо перевести базу данных в простой режим восстановления с помощью [параметров ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) .  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,9 +43,9 @@ ms.locfileid: "68108232"
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @ db_name = ] 'db_name'` Имя базы данных, чтобы включить или отключить Селективный XML-индекс на. Если *db_name* имеет значение NULL, предполагается текущая база данных.  
+`[ @ db_name = ] 'db_name'`Имя базы данных, для которой необходимо включить или отключить селективный XML-индекс. Если *db_name* имеет значение null, предполагается текущая база данных.  
   
-`[ @action = ] 'action'` Определяет, следует ли включить или отключить индекс. Если значение, отличное «on», «true», «off» или «ЛОЖЬ» передается, возникает ошибка.  
+`[ @action = ] 'action'`Определяет, следует ли включать или отключать индекс. Если передается другое значение, кроме on, "true", "OFF" или "false", возникнет ошибка.  
   
 ```  
   
@@ -53,7 +53,7 @@ Allowed values: 'on', 'off', 'true', 'false'
 ```  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **1** Если Селективный XML-индекс включен в определенной базе данных.  
+ **1** , если СЕЛЕКТИВНЫЙ XML-индекс включен в конкретной базе данных.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -103,7 +103,7 @@ EXECUTE sys.sp_db_selective_xml_index;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Выборочный XML-индекс (SXI)](../../relational-databases/xml/selective-xml-indexes-sxi.md)  
+## <a name="see-also"></a>См. также:  
+ [Селективные XML-индексы &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md)  
   
   

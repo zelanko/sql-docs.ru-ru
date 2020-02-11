@@ -19,20 +19,20 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e0bb7d109323f4eb4a33181ab45b4b17d15faf54
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108616"
 ---
-# <a name="spcreatestats-transact-sql"></a>Хранимая процедура sp_createstats (Transact-SQL)
+# <a name="sp_createstats-transact-sql"></a>Хранимая процедура sp_createstats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Вызовы [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) инструкцию, чтобы создать статистику по отдельным столбцам для столбцов, которые не входят в первом столбце объекта статистики. Создание статистики по отдельным столбцам увеличивает число гистограмм, что может улучшить оценку количества элементов, усовершенствовать планы запросов и повысить производительность запросов. Первый столбец объекта статистики содержит гистограмму, а прочие — не содержат.  
+  Вызывает инструкцию [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) для создания статистики по отдельным столбцам для столбцов, которые еще не являются первым столбцом в объекте статистики. Создание статистики по отдельным столбцам увеличивает число гистограмм, что может улучшить оценку количества элементов, усовершенствовать планы запросов и повысить производительность запросов. Первый столбец объекта статистики содержит гистограмму, а прочие — не содержат.  
   
- Процедура sp_createstats полезна для таких задач, как тестирование производительности, когда существенно важно время выполнения запросов и недопустимо ожидание построения статистики по отдельным столбцам оптимизатором запросов. В большинстве случаев нет необходимости использовать процедуру sp_createstats; планы запроса, оптимизатор создает статистику по отдельным столбцам для усовершенствования запросов, когда **AUTO_CREATE_STATISTICS** включен параметр.  
+ Процедура sp_createstats полезна для таких задач, как тестирование производительности, когда существенно важно время выполнения запросов и недопустимо ожидание построения статистики по отдельным столбцам оптимизатором запросов. В большинстве случаев нет необходимости использовать sp_createstats. Оптимизатор запросов создает статистику по одному столбцу, если это необходимо для улучшения планов запросов, если параметр **AUTO_CREATE_STATISTICS** имеет значение ON.  
   
- Дополнительные сведения о статистике см. в статье [Статистика](../../relational-databases/statistics/statistics.md). Дополнительные сведения о создании статистики по отдельным столбцам см. в разделе **AUTO_CREATE_STATISTICS** в диалоговом окне [параметры ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
+ Дополнительные сведения о статистике см. в статье [Статистика](../../relational-databases/statistics/statistics.md). Дополнительные сведения о формировании статистики по отдельным столбцам см. в описании параметра **AUTO_CREATE_STATISTICS** в разделе [Параметры инструкции ALTER DATABASE SET &#40;&#41;Transact-SQL ](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,24 +48,24 @@ sp_createstats
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @indexonly = ] 'indexonly'` Создает статистику только по столбцам, которые входят в существующий индекс и не является первым столбцом в определении индекса. **indexonly** — **char(9)** . Значение по умолчанию — NO.  
+`[ @indexonly = ] 'indexonly'`Создает статистику только по столбцам, которые находятся в существующем индексе и не являются первым столбцом в определении индекса. **индексонли** имеет **тип char (9)**. Значение по умолчанию — NO.  
   
-`[ @fullscan = ] 'fullscan'` Использует [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) инструкции с **FULLSCAN** параметр. **FULLSCAN** — **char(9)** .  Значение по умолчанию — NO.  
+`[ @fullscan = ] 'fullscan'`Использует инструкцию [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) с параметром **FULLSCAN** . **FULLSCAN** имеет **тип char (9)**.  Значение по умолчанию — NO.  
   
-`[ @norecompute = ] 'norecompute'` Использует [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) инструкции с **NORECOMPUTE** параметр. **NORECOMPUTE** — **char(12)** .  Значение по умолчанию — NO.  
+`[ @norecompute = ] 'norecompute'`Использует инструкцию [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) с параметром **NORECOMPUTE** . **NORECOMPUTE** имеет **тип char (12)**.  Значение по умолчанию — NO.  
   
-`[ @incremental = ] 'incremental'` Использует [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) инструкции с **INCREMENTAL = ON** параметр. **Добавочные** — **char(12)** .  Значение по умолчанию — NO.  
+`[ @incremental = ] 'incremental'`Использует инструкцию [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) с параметром **инкремент = on** . **Добавочный** — **char (12)**.  Значение по умолчанию — NO.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или 1 (неуспешное завершение)  
+ 0 (успех) или 1 (сбой).  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  Каждая новая статистика имеет имя, совпадающее со столбцом, по которому она создается.  
   
-## <a name="remarks"></a>Примечания  
- Хранимая процедура sp_createstats не создает и не обновляет статистику по столбцам, в которых является первым столбцом в существующем объекте статистики;  Это включает в себя первый столбец статистики для индексов, столбцы с статистику по отдельным столбцам, созданным параметром AUTO_CREATE_STATISTICS и первый столбец статистики, созданные с помощью инструкции CREATE STATISTICS. Хранимая процедура sp_createstats не создает статистику в первых столбцах отключенных индексов, если только этот столбец не используется другим включенным индексом. Хранимая процедура sp_createstats не создает статистику для таблиц с отключенным кластеризованным индексом.  
+## <a name="remarks"></a>Remarks  
+ sp_createstats не создает или не обновляет статистику по столбцам, которые являются первым столбцом в существующем объекте статистики;  Сюда входит первый столбец статистики, созданный для индексов, столбцы с статистикой по отдельным столбцам, созданные с помощью AUTO_CREATE_STATISTICS параметр, и первый столбец статистики, созданный с помощью инструкции CREATE STATISTICS. sp_createstats не создает статистику по первым столбцам отключенных индексов, если этот столбец не используется в другом включенном индексе. sp_createstats не создает статистику по таблицам с отключенным кластеризованным индексом.  
   
- Если таблица содержит набор столбцов, то хранимая процедура sp_createstats не создает статистику по разреженным столбцам. Дополнительные сведения о наборах столбцов и разреженные столбцы, см. в разделе [использование наборов столбцов](../../relational-databases/tables/use-column-sets.md) и [Использование разреженных столбцов](../../relational-databases/tables/use-sparse-columns.md).  
+ Если таблица содержит набор столбцов, то хранимая процедура sp_createstats не создает статистику по разреженным столбцам. Дополнительные сведения о наборах столбцов и разреженных столбцах см. в разделе [Использование наборов столбцов](../../relational-databases/tables/use-column-sets.md) и [Использование разреженных столбцов](../../relational-databases/tables/use-sparse-columns.md).  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо членство в предопределенной роли базы данных db_owner.  
@@ -88,14 +88,14 @@ EXEC sp_createstats 'indexonly';
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Статистика](../../relational-databases/statistics/statistics.md)   
- [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Статистически](../../relational-databases/statistics/statistics.md)   
+ [Создание статистики &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
  [Параметры ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
- [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [DROP STATISTICS (Transact-SQL)](../../t-sql/statements/drop-statistics-transact-sql.md)   
- [UPDATE STATISTICS (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md)   
- [Хранимым процедурам ядра СУБД &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
+ [Удаление статистики &#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   
+ [Обновление статистики &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
+ [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

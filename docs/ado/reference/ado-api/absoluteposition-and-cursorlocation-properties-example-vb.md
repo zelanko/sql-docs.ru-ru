@@ -1,5 +1,5 @@
 ---
-title: Примеры AbsolutePosition и CursorLocation свойства (Visual Basic) | Документация Майкрософт
+title: Примеры свойств примеры AbsolutePosition и CursorLocation (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: c4755799-c60a-4b5e-a01f-b85dd0e0a7f9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 29307c3764a81f60ad02108ba498daab85bc0b3f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921717"
 ---
-# <a name="absoluteposition-and-cursorlocation-properties-example-vb"></a>Примеры AbsolutePosition и CursorLocation свойства (Visual Basic)
-В этом примере показано, как [примеры AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) свойство можно отслеживать ход выполнения цикла, который перечисляет все записи из [записей](../../../ado/reference/ado-api/recordset-object-ado.md). Она использует [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) свойство, чтобы включить **примеры AbsolutePosition** свойства, установив курсор для клиентского курсора.  
+# <a name="absoluteposition-and-cursorlocation-properties-example-vb"></a>Примеры свойств примеры AbsolutePosition и CursorLocation (Visual Basic)
+В этом примере показано, как свойство [примеры AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) может отслеживать ход выполнения цикла, который перечисляет все записи [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md). Свойство [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) используется для включения свойства **примеры AbsolutePosition** путем установки курсора на клиентский курсор.  
   
 ```  
 'BeginAbsolutePositionVB  
@@ -91,7 +91,7 @@ End Sub
 'EndAbsolutePositionVB  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Свойство AbsolutePosition (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   
+## <a name="see-also"></a>См. также:  
+ [Свойство примеры AbsolutePosition (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   
  [Свойство CursorLocation (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

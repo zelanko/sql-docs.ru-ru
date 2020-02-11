@@ -1,5 +1,5 @@
 ---
-title: Состоянии свойство (ADO) | Документация Майкрософт
+title: Свойство State (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,32 +16,32 @@ ms.assetid: 0b993bac-2653-40b1-bcbb-5b57b6aae2bf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c45b9331ddd538cdf23a57eaf39b6efb71bccc4a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930852"
 ---
 # <a name="state-property-ado"></a>Свойство State (ADO)
-Указывает для всех объектов, применимо ли состояние объекта открытым или закрытым. Если объект выполняется асинхронный метод, указывает ли текущее состояние объекта подключение, выполнение или извлечения.  
+Указывает для всех применимых объектов, является ли состояние объекта открытым или закрытым. Если объект выполняет асинхронный метод, указывает, является ли текущее состояние объекта подключением, выполнением или извлечением.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает **Long** значение, которое может быть [ObjectStateEnum](../../../ado/reference/ado-api/objectstateenum.md) значение. Значение по умолчанию — **adStateClosed**.  
+ Возвращает значение **типа Long** , которое может быть значением [обжектстатинум](../../../ado/reference/ado-api/objectstateenum.md) . Значение по умолчанию — **адстатеклосед**.  
   
-## <a name="remarks"></a>Примечания  
- Можно использовать **состояние** свойства, чтобы определить текущее состояние данного объекта в любое время.  
+## <a name="remarks"></a>Remarks  
+ Свойство **State** можно использовать для определения текущего состояния данного объекта в любое время.  
   
- Объекта **состояние** свойство может иметь сочетания значений. Например, если инструкция выполняется, это свойство будет иметь общее значение **adStateOpen** и **adStateExecuting**.  
+ Свойство **State** объекта может иметь сочетание значений. Например, если выполняется инструкция, это свойство будет иметь объединенное значение **адстатеопен** и **адстатиксекутинг**.  
   
- **Состояние** свойство доступно только для чтения.  
+ Свойство **State** доступно только для чтения.  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
   
 ||||  
 |-|-|-|  
 |[Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Объект Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|  
 |[Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)||  
   
-## <a name="see-also"></a>См. также  
- [Пример свойства состояния (Visual Basic), ConnectionString и ConnectionTimeout](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
- [ConnectionString, ConnectionTimeout и пример свойства состояния (Visual C++)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
+## <a name="see-also"></a>См. также:  
+ [Пример свойств ConnectionString, ConnectionTimeout и State (Visual Basic)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
+ [Пример свойств ConnectionString, ConnectionTimeout и State (Visual c++)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   

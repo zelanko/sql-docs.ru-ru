@@ -1,5 +1,5 @@
 ---
-title: sys.fn_hadr_distributed_ag_database_replica (Transact-SQL) | Документация Майкрософт
+title: sys. fn_hadr_distributed_ag_database_replica (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/14/2016
 ms.prod: sql
@@ -20,16 +20,16 @@ ms.assetid: 0e6202a1-e872-4f53-99d7-c16b6f712efc
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2acff9f5d78549fe1e00397d566053ec19f628a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68120241"
 ---
-# <a name="sysfnhadrdistributedagdatabasereplica-transact-sql"></a>sys.fn_hadr_distributed_ag_database_replica (Transact-SQL)
+# <a name="sysfn_hadr_distributed_ag_database_replica-transact-sql"></a>sys. fn_hadr_distributed_ag_database_replica (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Используется для сопоставления базы данных в распределенной группе доступности с базой данных в группе доступности локальных ресурсов.  
+  Используется для преобразования базы данных в распределенной группе доступности в базу данных в локальной группе доступности.  
    
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,23 +41,23 @@ sys.fn_hadr_distributed_ag_database_replica( lag_Id, database_id )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- '*lag_Id*'  
- — Это идентификатор распределенной группы доступности. *lag_Id* является типом **uniqueidentifier**.  
+ "*lag_Id*"  
+ Идентификатор распределенной группы доступности. *lag_Id* имеет тип **uniqueidentifier**.  
   
  "*database_id*"  
- — Это идентификатор базы данных в распределенной группе доступности. *database_id* является типом **uniqueidentifier**.  
+ Идентификатор базы данных в распределенной группе доступности. *database_id* имеет тип **uniqueidentifier**.  
   
 ## <a name="tables-returned"></a>Возвращаемые таблицы  
  Возвращает следующие данные.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|**group_database_id**|**uniqueidentifier**|Идентификатор базы данных в группе доступности локальных ресурсов.|  
+|**group_database_id**|**UNIQUEIDENTIFIER**|Идентификатор базы данных в локальной группе доступности.|  
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="using-sysfnhadrdistributedagdatabasereplica"></a>С помощью sys.fn_hadr_distributed_ag_database_replica  
- В следующем примере передается в идентификатор базы данных в распределенной группе доступности. Она возвращает таблицу с Идентификатором базы данных, связанные с группой доступности локальных ресурсов.  
+### <a name="using-sysfn_hadr_distributed_ag_database_replica"></a>Использование Sys. fn_hadr_distributed_ag_database_replica  
+ В следующем примере идентификатор базы данных передается в распределенной группе доступности. Он возвращает таблицу с ИДЕНТИФИКАТОРом базы данных, связанным с локальной группой доступности.  
   
 ```  
 DECLARE @lagId uniqueidentifier = '4A03D1A8-4AE6-B153-E7E9-ED22A546008D'  
@@ -67,10 +67,10 @@ SELECT * FROM sys.fn_hadr_distributed_ag_database_replica(@lagId, @databaseId)
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функции групп доступности Always On &#40;Transact-SQL&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
- [Группы доступности AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [Распределенные группы доступности &#40;группы доступности AlwaysOn&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)   
+ [Always On группы доступности &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
+ [Распределенные группы доступности &#40;группы доступности Always On&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)   
  [CREATE AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/alter-availability-group-transact-sql.md)  
   

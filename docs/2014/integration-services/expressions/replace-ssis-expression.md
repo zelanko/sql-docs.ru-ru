@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b1970fae04a4dff260fe9eafa30125e63e9cf1a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62897478"
 ---
 # <a name="replace-ssis-expression"></a>REPLACE (выражение служб SSIS)
@@ -46,7 +46,7 @@ REPLACE(character_expression,searchstring,replacementstring)
 ## <a name="result-types"></a>Типы результата  
  DT_WSTR  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Длина *searchstring* должна быть больше нуля.  
   
  Длина *replacementstring* может быть нулевой.  
@@ -76,7 +76,7 @@ REPLACE(Product, "Bike","")
 REPLACE((DT_WSTR,8)DaysToManufacture,"6","5")  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [SUBSTRING (выражение служб SSIS)](substring-ssis-expression.md)   
  [Функции (выражение служб SSIS)](functions-ssis-expression.md)  
   

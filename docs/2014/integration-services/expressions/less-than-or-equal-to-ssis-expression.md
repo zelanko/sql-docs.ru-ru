@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 543c9580067ca94acf8c88156884d3be5c647481
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62897610"
 ---
 # <a name="lt-less-than-or-equal-to-ssis-expression"></a>&lt;= (меньше или равно) (выражение служб SSIS)
@@ -46,7 +46,7 @@ expression1 <= expression2
 ## <a name="result-types"></a>Типы результата  
  DT_BOOL  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Если какое-нибудь выражение имеет значение NULL, то результат сравнения будет NULL. Если оба выражения имеют значение NULL, то результат будет NULL.  
   
  Наборы выражений *expression1* и *expression2*должны удовлетворять одному из следующих правил:  
@@ -58,7 +58,7 @@ expression1 <= expression2
     > [!NOTE]  
     >  Сравнения строк производятся с учетом регистра, диакритических знаков, японской азбуки и ширины символов.  
   
--   **Дата, время или дата и время**. Значения выражений *expression1* и *expression2* должны иметь один из следующих типов данных: DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET или DT_FILETIME.  
+-   **Дата, время или дата-время** . Значения выражений *expression1* и *expression2* должны иметь один из следующих типов данных: DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET и DT_FILETIME.  
   
     > [!NOTE]  
     >  Система не поддерживает сравнения выражений, значения которых имеют тип данных даты, времени или даты-времени. Возникнет ошибка.  
@@ -102,7 +102,7 @@ ListPrice <= 500
 @LPrice <= 500  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [&#62; (больше чем) (выражение служб SSIS)](greater-than-ssis-expression.md)   
  [&#60; (меньше чем) (выражение служб SSIS)](less-than-ssis-expression.md)   
  [&#62;= (больше или равно) (выражение служб SSIS)](greater-than-or-equal-to-ssis-expression.md)   

@@ -13,34 +13,34 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c050efd2f309ccec76b80fd24b519e7d2389e4ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63126078"
 ---
 # <a name="add-a-data-source-odbc"></a>Добавление источника данных (ODBC)
-  Можно добавить источник данных с помощью администратора ODBC программным способом (с помощью [SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)), или путем создания файла.  
+  Источник данных можно добавить с помощью администратора ODBC, программно (с помощью [SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)) или путем создания файла.  
   
 ### <a name="to-add-a-data-source-by-using-odbc-administrator"></a>Добавление источника данных при помощи администратора ODBC  
   
-1.  Из **панели управления**, доступ **Администрирование** и затем **источники данных (ODBC)** . Можно также вызвать программу odbcad32.exe.  
+1.  В **панели управления**откройте **меню Администрирование** и выберите пункт **Источники данных (ODBC)**. Можно также вызвать программу odbcad32.exe.  
   
-2.  Нажмите кнопку **DSN пользователя**, **системный DSN**, или **файловый DSN** , а затем щелкните **добавить**.  
+2.  Щелкните вкладку **DSN пользователя**, **системное имя DSN**или **Файловый DSN** , а затем нажмите кнопку **Добавить**.  
   
-3.  Нажмите кнопку **SQL Server**, а затем нажмите кнопку **Готово**.  
+3.  Щелкните **SQL Server**и нажмите кнопку **Готово**.  
   
 4.  Выполните шаги по созданию нового источника данных в мастере SQL Server.  
   
 ### <a name="to-add-a-data-source-programmatically"></a>Добавление источника данных программно  
   
-1.  Вызовите [SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md) с второго параметра, равно либо ODBC_ADD_DSN, либо ODBC_ADD_SYS_DSN.  
+1.  Вызовите [SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md) со вторым параметром, имеющим значение ODBC_ADD_DSN или ODBC_ADD_SYS_DSN.  
   
 ### <a name="to-add-a-file-data-source"></a>Добавление файла источника данных  
   
-1.  Вызовите [SQLDriverConnect](../native-client-odbc-api/sqldriverconnect.md) SAVEFILE = file_name параметр в строке соединения. Если соединение успешно, драйвер ODBC создаст файл источника данных с параметрами соединения, место расположения которого указано параметром SAVEFILE.  
+1.  Вызовите [SQLDriverConnect](../native-client-odbc-api/sqldriverconnect.md) с параметром SAVEFILE = file_name в строке подключения. Если соединение успешно, драйвер ODBC создаст файл источника данных с параметрами соединения, место расположения которого указано параметром SAVEFILE.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Инструкции по настройке драйвера ODBC SQL Server](../../database-engine/dev-guide/configuring-the-sql-server-odbc-driver-how-to-topics.md)  
   
   

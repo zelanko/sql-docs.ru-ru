@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ce41c287105f97ce4a9cc0ce92facf9919f7ad33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035800"
 ---
 # <a name="reduce-noise-in-cpu-utilization-policies-sql-server-utility"></a>Уменьшение уровня шума в политиках загрузки ЦП (служебная программа SQL Server)
@@ -56,7 +56,7 @@ ms.locfileid: "63035800"
   
  Согласно значениям по умолчанию, еженедельно собирается 672 точки данных, а порог политики составляет 0 %. Поэтому по умолчанию эта политика не выдает сообщений о недостаточной загрузке процессора. Дополнительные сведения об изменении глобальных политик загрузки ЦП в управляемых экземплярах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или приложениях уровня данных см. в разделе [Администрирование программ (служебная программа SQL Server)](../../database-engine/utility-administration-sql-server-utility.md). Дополнительные сведения об изменении политик загрузки ЦП в отдельных экземплярах SQL Server см. в разделе [Подробные сведения об управляемом экземпляре (служебная программа SQL Server)](../../database-engine/managed-instance-details-sql-server-utility.md). Дополнительные сведения об изменении политик загрузки ЦП для отдельных приложений уровня данных см. в разделе [Подробные сведения о развернутом приложении уровня данных (служебная программа SQL Server)](../../database-engine/deployed-data-tier-application-details-sql-server-utility.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Администрирование программ (служебная программа SQL Server)](../../database-engine/utility-administration-sql-server-utility.md)   
  [Наблюдение за экземплярами SQL Server в служебной программе SQL Server](monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
  [Изменение определения политики исправности ресурсов (служебная программа SQL Server)](modify-a-resource-health-policy-definition-sql-server-utility.md)   

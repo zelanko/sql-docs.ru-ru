@@ -20,17 +20,17 @@ ms.assetid: 2115600e-5ce7-4be0-9cd3-a1dd1fab0729
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: f8904e3c08789eb0cb50b0f5a20b66c851578ac5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68064123"
 ---
-# <a name="srvdescribe-extended-stored-procedure-api"></a>srv_describe (API-интерфейс расширенных хранимых процедур)
+# <a name="srv_describe-extended-stored-procedure-api"></a>srv_describe (API-интерфейс расширенных хранимых процедур)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Используйте вместо этого интеграцию со средой CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Вместо этого используйте интеграцию со средой CLR.  
   
  Задает имя столбца, исходный и целевой типы данных для конкретного столбца в строке.  
   
@@ -72,7 +72,7 @@ srcdata
  *srvproc*  
  Указатель на структуру SRV_PROC, который представляет собой дескриптор для конкретного клиентского соединения (в данном случае подразумевается клиент, который отправил строку). В этой структуре содержатся все сведения, которые библиотека API-интерфейса расширенных хранимых процедур использует для управления обменом данными между приложением и клиентом.  
   
- *colnumber*  
+ *колнумбер*  
  Не поддерживается в текущей версии. Столбцы должны быть описаны по порядку. Все столбцы должны быть описаны до вызова **srv_sendrow**.  
   
  *column_name*  
@@ -84,16 +84,16 @@ srcdata
  *desttype*  
  Задает тип данных столбца строки назначения. Это — тип данных, передаваемых клиенту. Тип данных нужно задавать, даже если данные имеют значение NULL. Дополнительные сведения см. в разделе [Типы данных (интерфейс API расширенных хранимых процедур)](../../relational-databases/extended-stored-procedures-reference/data-types-extended-stored-procedure-api.md).  
   
- *destlen*  
+ *параметр destlen*  
  Задает длину данных (в байтах), которые должны быть переданы клиенту. Для типов данных фиксированной длины, не допускающих значений NULL, параметр *destlen* не учитывается. Для типов данных с переменной длиной и типов данных с фиксированной длиной, поддерживающих значения NULL, параметр *destlen* задает максимальную длину целевых данных.  
   
  *srctype*  
  Задает тип исходных данных.  
   
- *srclen*  
+ *срклен*  
  Задает длину исходных данных в байтах. Для типов данных с фиксированной длиной это значение не учитывается.  
   
- *srcdata*  
+ *srcData*  
  Предоставляет адрес исходных данных для конкретного столбца. Функция **srv_sendrow** после вызова ищет данные для параметра *colnumber* в параметре *srcdata*. Следовательно, этот параметр нельзя освобождать до вызова функции **srv_sendrow**. Адрес исходных данных можно изменить между вызовами функции **srv_sendrow** с помощью вызова функции **srv_setcoldata**. Память, выделенная для *srcdata*, не должна освобождаться до замены данных столбца с помощью еще одного вызова метода **srv_setcoldata** или **srv_senddone**.  
   
  Если значение параметра *desttype* равно SRVDECIMAL или SRVNUMERIC, параметр *srcdata* должен быть указателем на структуру типа DBNUMERIC или DBDECIMAL, в которой полям точности и масштаба уже присвоены требуемые значения. Параметр DEFAULTPRECISION позволяет задать точность по умолчанию, а параметр DEFAULTSCALE — масштаб по умолчанию.  
@@ -114,8 +114,8 @@ srcdata
 >  Необходимо тщательно просмотреть исходный код расширенных хранимых процедур и проверить скомпилированные библиотеки DLL перед их установкой на рабочий сервер. Сведения о проверке безопасности см. на следующем [веб-сайте Майкрософт](https://msdn.microsoft.com/security/).  
   
 ## <a name="see-also"></a>См. также:  
- [srv_sendrow (интерфейс API расширенных хранимых процедур)](../../relational-databases/extended-stored-procedures-reference/srv-sendrow-extended-stored-procedure-api.md)   
- [srv_setutype (интерфейс API расширенных хранимых процедур)](../../relational-databases/extended-stored-procedures-reference/srv-setutype-extended-stored-procedure-api.md)   
- [srv_setcoldata (интерфейс API расширенных хранимых процедур)](../../relational-databases/extended-stored-procedures-reference/srv-setcoldata-extended-stored-procedure-api.md)  
+ [API srv_sendrow &#40;расширенных хранимых процедур&#41;](../../relational-databases/extended-stored-procedures-reference/srv-sendrow-extended-stored-procedure-api.md)   
+ [API srv_setutype &#40;расширенных хранимых процедур&#41;](../../relational-databases/extended-stored-procedures-reference/srv-setutype-extended-stored-procedure-api.md)   
+ [API srv_setcoldata &#40;расширенных хранимых процедур&#41;](../../relational-databases/extended-stored-procedures-reference/srv-setcoldata-extended-stored-procedure-api.md)  
   
   

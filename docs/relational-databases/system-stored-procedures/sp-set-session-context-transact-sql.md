@@ -19,16 +19,16 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a57bf4acff6f8d0d08f86852de5ecc0411211c67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68104392"
 ---
-# <a name="spsetsessioncontext-transact-sql"></a>sp_set_session_context (Transact-SQL)
+# <a name="sp_set_session_context-transact-sql"></a>sp_set_session_context (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-Задает пару ключ значение в контексте сеанса.  
+Задает пару "ключ-значение" в контексте сеанса.  
   
 
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -42,44 +42,44 @@ sp_set_session_context [ @key= ] N'key', [ @value= ] 'value'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @key=] N'key "  
- Ключ, задаваемое типа **sysname**. Максимальный размер ключа составляет 128 байт.  
+ [ @key= ] Н'кэй "  
+ Заданный ключ типа **sysname**. Максимальный размер ключа составляет 128 байт.  
   
- [ @value=] 'value'  
- Значение для указанного ключа, типа **sql_variant**. При установке значения NULL освобождает память. Максимальный размер 8 000 байт.  
+ [ @value= ] значений  
+ Значение для указанного ключа типа **sql_variant**. При установке значения NULL освобождается память. Максимальный размер 8 000 байт.  
   
- [ @read_only= ] { 0 | 1 }  
- Флаг типа **бит**. Если значение равно 1, затем значение для указанного ключа невозможно еще раз на этом логическое соединение. Если 0 (по умолчанию), то значение может быть изменен.  
+ [ @read_only= ] {0 | 1}  
+ Флаг типа **bit**. Если значение равно 1, то в этом логическом подключении нельзя снова изменить значения для указанного ключа. При значении 0 (по умолчанию) значение может быть изменено.  
   
 ## <a name="permissions"></a>Разрешения  
- Любой пользователь может установить контекст сеанса своего сеанса.  
+ Любой пользователь может задать контекст сеанса для своего сеанса.  
   
-## <a name="remarks"></a>Примечания  
- Как и другие хранимые процедуры только литералы и переменные (не выражения или вызовы функций) могут передаваться как параметры.  
+## <a name="remarks"></a>Remarks  
+ Как и в случае с другими хранимыми процедурами, в качестве параметров могут передаваться только литералы и переменные (не выражения и вызовы функций).  
   
- Общий размер контекста сеанса ограничено до 1 МБ. Если задать значение, которое вызывает этот предел превышен, инструкция завершается неудачно. Вы можете отслеживать общее использование памяти в [sys.dm_os_memory_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).  
+ Общий размер контекста сеанса ограничен 1 МБ. Если задать значение, которое приводит к превышению этого ограничения, выполнение инструкции завершится ошибкой. Можно наблюдать за общим использованием памяти в [sys. dm_os_memory_objects &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).  
   
- Можно отслеживать общее использование памяти, запросив [sys.dm_os_memory_cache_counters &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md) следующим образом: `SELECT * FROM sys.dm_os_memory_cache_counters WHERE type = 'CACHESTORE_SESSION_CONTEXT';`  
+ Можно наблюдать за общим использованием памяти, выполняя запрос к [sys. dm_os_memory_cache_counters &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md) следующим образом:`SELECT * FROM sys.dm_os_memory_cache_counters WHERE type = 'CACHESTORE_SESSION_CONTEXT';`  
   
 ## <a name="examples"></a>Примеры  
- Приведенный ниже показано, как задать и затем вернуть ключ сеансы контекста с именем языка со значением на английском языке.  
+ В следующем примере показано, как задать и затем вернуть контекстный ключ сеансов с именем Language со значением английский.  
   
 ```  
 EXEC sys.sp_set_session_context @key = N'language', @value = 'English';  
 SELECT SESSION_CONTEXT(N'language');  
 ```  
   
- Следующий пример демонстрирует использование необязательный флаг только для чтения.  
+ В следующем примере показано использование необязательного флага только для чтения.  
   
 ```  
 EXEC sys.sp_set_session_context @key = N'user_id', @value = 4, @read_only = 1;  
 ```  
   
-## <a name="see-also"></a>См. также  
- [CURRENT_TRANSACTION_ID (Transact-SQL)](../../t-sql/functions/current-transaction-id-transact-sql.md)   
- [SESSION_CONTEXT (Transact-SQL)](../../t-sql/functions/session-context-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [CURRENT_TRANSACTION_ID &#40;Transact-SQL&#41;](../../t-sql/functions/current-transaction-id-transact-sql.md)   
+ [SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md)   
  [Безопасность на уровне строк](../../relational-databases/security/row-level-security.md)   
- [CONTEXT_INFO  (Transact-SQL)](../../t-sql/functions/context-info-transact-sql.md)   
- [SET CONTEXT_INFO (Transact-SQL)](../../t-sql/statements/set-context-info-transact-sql.md)  
+ [CONTEXT_INFO &#40;Transact-SQL&#41;](../../t-sql/functions/context-info-transact-sql.md)   
+ [Настройка CONTEXT_INFO &#40;Transact-SQL&#41;](../../t-sql/statements/set-context-info-transact-sql.md)  
   
   

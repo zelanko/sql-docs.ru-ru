@@ -1,5 +1,5 @@
 ---
-title: sys.time_zone_info (Transact-SQL) | Документация Майкрософт
+title: sys. time_zone_info (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/06/2018
 ms.prod: sql
@@ -19,26 +19,26 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 69bfcbb7e1eeaf6b456a2e10d1f3bfcc581c3d76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68106702"
 ---
-# <a name="systimezoneinfo-transact-sql"></a>sys.time_zone_info (Transact-SQL)
+# <a name="systime_zone_info-transact-sql"></a>sys. time_zone_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-  Возвращает сведения о поддерживаемых часовых поясов. Все часовые пояса, установленные на компьютере хранятся в следующем кусте реестра:  
+  Возвращает сведения о поддерживаемых часовых поясах. Все часовые пояса, установленные на компьютере, хранятся в следующем кусте реестра:  
 `KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones`.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|Имя часового пояса в стандартном формате Windows. Например **Cen. Австралия (зима)** или **центральноевропейское время Standard**.|  
-|**current_utc_offset**|**nvarchar(12)**|Текущего смещения в формат UTC. Например **+ 01:00** или **-07:00**.|  
-|**is_currently_dst**|**bit**|Значение true, если в данный момент наблюдение за летнее время.|  
+|**name**|**имеет sysname**|Имя часового пояса в стандартном формате Windows. Например, Central **. Австралия (зима** ) или **Центральноевропейское время**(зима).|  
+|**current_utc_offset**|**nvarchar (12)**|Текущее смещение до UTC. Например, **+ 01:00** или **-07:00**.|  
+|**is_currently_dst**|**bit**|Значение true, если в настоящее время выполняется наблюдение за летним временем.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [GETUTCDATE &#40;Transact-SQL&#41;](../../t-sql/functions/getutcdate-transact-sql.md)   
- [AT TIME ZONE (Transact-SQL)](../../t-sql/queries/at-time-zone-transact-sql.md)   
- [Типы данных и функции даты и времени (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)   
- [Представления каталогов конфигурации на уровне сервера &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)  
+ [НА&#41;часового пояса &#40;Transact-SQL](../../t-sql/queries/at-time-zone-transact-sql.md)   
+ [Типы данных и функции даты и времени &#40;языке Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)   
+ [Представления каталога конфигурации на уровне сервера &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)  

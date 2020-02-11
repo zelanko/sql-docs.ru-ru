@@ -1,5 +1,5 @@
 ---
-title: 'Отправка обновлений: Метод UpdateBatch | Документация Майкрософт'
+title: 'Отправка обновлений: метод UpdateBatch | Документация Майкрософт'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,16 +11,16 @@ ms.assetid: 87123797-831f-48e0-94b5-f669f9ca194a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 182e444587ce9bb3ca73166fb05dfac2506a39aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924256"
 ---
-# <a name="sending-the-updates-updatebatch-method"></a>Отправка обновлений: Метод UpdateBatch
-Следующий код открывает набор записей в пакетном режиме, задав свойство LockType adLockBatchOptimistic и CursorLocation для adUseClient. Он добавляет две новые записи и изменяет значение поля в существующую запись, сохранение исходных значений и затем вызывает метод UpdateBatch для отправки изменений обратно в источник данных.  
+# <a name="sending-the-updates-updatebatch-method"></a>Отправка обновлений: метод UpdateBatch
+Следующий код открывает набор записей в пакетном режиме, устанавливая для свойства LockType значение Адлоккбатчоптимистик, а CursorLocation — Адусеклиент. Он добавляет две новые записи и изменяет значение поля в существующей записи, сохраняет исходные значения, а затем вызывает UpdateBatch, чтобы отправить изменения обратно в источник данных.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
   
 ```  
 'BeginBatchUpdate  
@@ -52,7 +52,7 @@ ms.locfileid: "67924256"
 'EndBatchUpdate  
 ```  
   
- Если вы изменяете текущей записи или добавления новой записи, при вызове метода UpdateBatch, ADO автоматически вызывает метод Update для сохранения любых ожидающих изменений для текущей записи, прежде чем передать пакет изменений к поставщику.  
+ Если вы изменяете текущую запись или добавляете новую запись при вызове метода UpdateBatch, ADO автоматически вызывает метод Update, чтобы сохранить все ожидающие изменения в текущей записи перед передачей пакетных изменений поставщику.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пакетный режим](../../../ado/guide/data/batch-mode.md)

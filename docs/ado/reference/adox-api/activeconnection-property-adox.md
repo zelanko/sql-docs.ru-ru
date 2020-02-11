@@ -22,34 +22,34 @@ ms.assetid: 25fff69b-7556-4a28-b6f5-600a4bb0f607
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4ddd18225f8497294f1f44fa134a2d02040c8ada
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67952175"
 ---
 # <a name="activeconnection-property-adox"></a>Свойство ActiveConnection (ADOX)
-Указывает ADO [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объект, к которому [каталога](../../../ado/reference/adox-api/catalog-object-adox.md) принадлежит.  
+Указывает объект [соединения](../../../ado/reference/ado-api/connection-object-ado.md) ADO, к которому принадлежит [Каталог](../../../ado/reference/adox-api/catalog-object-adox.md) .  
   
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
- Наборы **подключения** объекта или **строка** содержится определение для подключения. Возвращает активное **подключения** объекта.  
+ Задает объект **соединения** или **строку** , содержащую определение для соединения. Возвращает активный объект **соединения** .  
   
-## <a name="remarks"></a>Примечания  
- Значение по умолчанию — пустая ссылка на объект.  
+## <a name="remarks"></a>Remarks  
+ Значением по умолчанию является пустая ссылка на объект.  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  [Объект Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)  
   
-## <a name="see-also"></a>См. также  
- [Пример свойства ActiveConnection объекта Catalog (Visual Basic)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
- [Команды и свойства CommandText (Visual Basic)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
- [Подключение примеры метода Close, таблица тип свойства (Visual Basic)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
- [Примеры коллекции Parameters, команда свойства (Visual Basic)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)   
- [Процедуры добавления пример метода (Visual Basic)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   
- [Процедуры удаления пример метода (Visual Basic)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
- [Процедуры обновления пример метода (Visual Basic)](../../../ado/reference/adox-api/procedures-refresh-method-example-vb.md)   
- [Представления и коллекции полей (Visual Basic)](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)   
- [Представления метода пример Append (Visual Basic)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
- [Коллекция Views, пример свойства CommandText (Visual Basic)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
- [Представления метод пример Refresh (Visual Basic)](../../../ado/reference/adox-api/views-refresh-method-example-vb.md)   
+## <a name="see-also"></a>См. также:  
+ [Пример свойства ActiveConnection каталога (Visual Basic)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
+ [Пример свойств Command и CommandText (Visual Basic)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
+ [Пример метода Close соединения, свойство типа таблицы (Visual Basic)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
+ [Коллекция Parameters, пример свойства Command (Visual Basic)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)   
+ [Пример метода Append для процедур (Visual Basic)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   
+ [Пример метода Delete процедур (Visual Basic)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
+ [Пример метода обновления процедур (Visual Basic)](../../../ado/reference/adox-api/procedures-refresh-method-example-vb.md)   
+ [Пример представлений и коллекций полей (Visual Basic)](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)   
+ [Пример метода Append для представлений (Visual Basic)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
+ [Пример коллекции Views, свойство CommandText (Visual Basic)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
+ [Пример метода Refresh для представлений (Visual Basic)](../../../ado/reference/adox-api/views-refresh-method-example-vb.md)   
  [Метод Create (ADOX)](../../../ado/reference/adox-api/create-method-adox.md)

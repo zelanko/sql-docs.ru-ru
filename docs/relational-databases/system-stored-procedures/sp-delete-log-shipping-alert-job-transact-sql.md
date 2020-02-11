@@ -18,13 +18,13 @@ ms.assetid: 5d6c7f07-a163-48fa-8c1f-abc252043dde
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e413b677062841dbd25e2c57e0437efe566ccf98
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085322"
 ---
-# <a name="spdeletelogshippingalertjob-transact-sql"></a>sp_delete_log_shipping_alert_job (Transact-SQL)
+# <a name="sp_delete_log_shipping_alert_job-transact-sql"></a>sp_delete_log_shipping_alert_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Удаляет задание предупреждения с сервера монитора доставки журнала, если это задание существует, и не существует больше никаких баз данных-источников или баз данных-получателей, которые должны контролироваться.  
@@ -43,16 +43,16 @@ sp_delete_log_shipping_alert_job
  Нет.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или 1 (неуспешное завершение)  
+ 0 (успех) или 1 (сбой).  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  Нет.  
   
-## <a name="remarks"></a>Примечания  
- **sp_delete_log_shipping_alert_job** должна запускаться из **master** базы данных на сервере мониторинга.  
+## <a name="remarks"></a>Remarks  
+ **sp_delete_log_shipping_alert_job** должны быть запущены из базы данных **master** на сервере мониторинга.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнять эту процедуру.  
+ Эту процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** .  
   
 ## <a name="examples"></a>Примеры  
  В этом примере показано выполнение **sp_delete_log_shipping_alert_job** для удаления задания предупреждения.  
@@ -63,8 +63,8 @@ GO
 EXEC sp_delete_log_shipping_alert_job;  
 ```  
   
-## <a name="see-also"></a>См. также  
- [О доставке журналов &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [SQL Server &#40;доставки журналов&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

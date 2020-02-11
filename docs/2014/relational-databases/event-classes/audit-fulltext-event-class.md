@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1ad7019b30555077d274af62156115cfb71944fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62938642"
 ---
 # <a name="audit-fulltext-event-class"></a>Класс событий Audit Fulltext
@@ -22,13 +22,13 @@ ms.locfileid: "62938642"
   
 ## <a name="audit-fulltext-event-class-data-columns"></a>Столбцы данных класса событий Audit Fulltext  
   
-|Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
+|Имя столбца данных|Тип данных|Description|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**Ошибка**|**int**|Код ошибки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , если событие сигнализирует об ошибке.|31|Да|  
-|**EventSequence**|**int**|Порядковый номер данного события в запросе.|51|Нет|  
+|**EventSequence**|**int**|Порядковый номер данного события в запросе.|51|нет|  
 |**EventSubClass**|**int**|Тип соединения, используемого для входа. 1 = без пула, 2 = в пуле.|21|Да|  
 |**IsSystem**|**int**|Указывает, произошло событие в системном или в пользовательском процессе. 1 = системный, 0 = пользовательский.|60|Да|  
-|**SessionLoginName**|**nvarchar**|Имя входа пользователя, создавшего этот сеанс. Например, при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по имени Имя_входа1 и при выполнении инструкции под именем Имя_входа2 **SessionLoginName** содержит значение «Имя_входа1», а **LoginName** содержит значение «Имя_входа2». В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
+|**SessionLoginName**|**nvarchar**|Имя входа пользователя, создавшего этот сеанс. Например, при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по имени "Имя_входа1" и при выполнении инструкции под именем "Имя_входа2" **SessionLoginName** содержит значение "Имя_входа1", а **LoginName** — значение "Имя_входа2". В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
 |**SPID**|**int**|Идентификатор сеанса, в котором произошло событие.|12|Да|  
 |**StartTime**|**datetime**|Время начала события, если оно известно.|14|Да|  
 |**Успешно**|**int**|1 = успешное завершение. 0 = неуспешное завершение. Например, значение 1 означает успешную проверку разрешений, а значение 0 означает, что эта проверка не пройдена.|23|Да|  
@@ -36,7 +36,7 @@ ms.locfileid: "62938642"
 |**TargetLoginSid**|**int**|Для действий с именем входа (таких как добавление нового имени входа) — идентификатор безопасности имени входа, с которым совершается действие.|43|Да|  
 |**TextData**|**ntext**|Текстовая информация о событии полнотекстового индекса. Обычно это поле предоставляет информацию о соединении между процессом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и процессом управляющей программы полнотекстовой фильтрации|1|Да|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширенные события](../extended-events/extended-events.md)   
  [Хранимая процедура sp_trace_setevent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
