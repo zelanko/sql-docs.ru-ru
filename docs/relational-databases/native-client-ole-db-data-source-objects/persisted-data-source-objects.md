@@ -17,19 +17,19 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f1c553835cc0380082821dd49f53f69e767baacb
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73771469"
 ---
 # <a name="persisted-data-source-objects"></a>Материализованные данные исходного объекта
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB поддерживает сохраненные объекты источника данных с помощью интерфейса **IPersistFile** .  
+  Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента поддерживает сохраненные объекты источника данных с помощью интерфейса **IPersistFile** .  
   
 ## <a name="examples"></a>Примеры  
- **А. Сохранение инициализации источника данных:**  
+ **А. Сохранение инициализации источника данных**  
   
  В данном примере показана функция, которая сохраняет свойства инициализации источника данных, определяющих сервер, базу данных и использование для соединения режима проверки подлинности Windows. Имена сервера и базы данных получаются в параметрах *pLocation* и *pDatasource* функции.  
   
@@ -140,7 +140,7 @@ HRESULT SetAndSaveInitProps
     }  
 ```  
   
- **Б. Используйте инициализацию сохраненного источника данных:**  
+ **Б. Использование инициализации материализованных источников данных**  
   
  Данный пример использует материализованный объект источника данных с дополнительными свойствами инициализации, который предоставляет имя входа и пароль [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -230,7 +230,7 @@ HRESULT InitFromPersistedDS
   
  Метод **IPersistFile::Save** можно вызвать до или после вызова метода **IDBInitialize::Initialize**. Вызов метода после успешного возвращения из метода **IDBInitialize::Initialize** гарантирует сохранение допустимой спецификации источника данных.  
   
-## <a name="see-also"></a>См. также раздел  
- [Объекты &#40;источника данных OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
+## <a name="see-also"></a>См. также:  
+ [Объекты источника данных &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

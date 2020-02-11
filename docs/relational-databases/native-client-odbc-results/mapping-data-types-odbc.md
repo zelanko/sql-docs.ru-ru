@@ -21,27 +21,27 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cd3bada9ea15d1104edb33024c4ab1476843c73b
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73779133"
 ---
 # <a name="mapping-data-types-odbc"></a>Сопоставление типов данных (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сопоставляет типы данных SQL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с типами данных ODBC SQL. В последующих разделах обсуждаются типы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL с типами данных ODBC SQL, с которыми они сопоставляются. В разделах также обсуждаются типы данных ODBC SQL и соответствующие им типы данных ODBC C, а также поддерживаемые преобразования и преобразования по умолчанию.  
+  Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента сопоставляет [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типы данных SQL с типами данных ODBC SQL. В последующих разделах обсуждаются типы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL с типами данных ODBC SQL, с которыми они сопоставляются. В разделах также обсуждаются типы данных ODBC SQL и соответствующие им типы данных ODBC C, а также поддерживаемые преобразования и преобразования по умолчанию.  
   
 > [!NOTE]  
->  Тип данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**timestamp** соответствует типу данных ODBC SQL_BINARY или SQL_VARBINARY, так как значения в столбцах **отметок времени** не являются значениями **DateTime** , а значения **binary (8)** или **varbinary (8)** , которые указывают на последовательность действий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в строке. Если драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] встречает значение типа SQL_C_WCHAR (Юникод), что означает нечетное число байт, то последний нечетный байт усекается.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип данных **timestamp** соответствует SQL_BINARY или SQL_VARBINARY типу данных ODBC, так как значения в столбцах **отметок времени** не являются значениями **DateTime** , а значения **binary (8)** или **varbinary (8)** , которые указывают последовательность [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] действий в строке. Если драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] встречает значение типа SQL_C_WCHAR (Юникод), что означает нечетное число байт, то последний нечетный байт усекается.  
   
 ## <a name="dealing-with-sql_variant-data-type-in-odbc"></a>Работа с типом данных sql_variant в ODBC  
- Столбец типа данных **sql_variant** может содержать любые типы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] за исключением больших объектов (LOB), таких как **Text**, **ntext**и **Image**. Например, столбец может содержать значения **smallint** для некоторых строк, значения **float** для других строк и значения **типа char/nchar** в оставшейся части.  
+ Столбец типа данных **sql_variant** может содержать любые [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типы данных, за исключением больших объектов (LOB), таких как **Text**, **ntext**и **Image**. Например, столбец может содержать значения **smallint** для некоторых строк, значения **float** для других строк и значения **типа char/nchar** в оставшейся части.  
   
  Тип данных **sql_variant** похож на тип данных **variant** в Microsoft Visual Basic®.  
   
 ### <a name="retrieving-data-from-the-server"></a>Получение данных с сервера  
- ODBC не имеет концепции типов Variant, ограничивая использование типа данных **sql_variant** с драйвером ODBC в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если указана привязка, тип данных **sql_variant** должен быть привязан к одному из документированных типов данных ODBC. **SQL_CA_SS_VARIANT_TYPE**, новый атрибут, относящийся к драйверу ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], возвращает пользователю тип данных экземпляра в столбце **sql_variant** .  
+ ODBC не имеет концепции типов Variant, ограничивая использование типа данных **sql_variant** с драйвером ODBC в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если указана привязка, **sql_variant** тип данных должен быть привязан к одному из документированных типов данных ODBC. **SQL_CA_SS_VARIANT_TYPE**, новый атрибут, относящийся к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйверу ODBC для собственного клиента, возвращает пользователю тип данных экземпляра в столбце **sql_variant** .  
   
  Если привязка не указана, можно использовать функцию [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) для определения типа данных экземпляра в столбце **sql_variant** .  
   
@@ -89,9 +89,9 @@ while ((retcode = SQLFetch (hstmt))==SQL_SUCCESS)
  Если пользователь создает привязку с помощью [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md), драйвер считывает метаданные и данные. Затем драйвер преобразует данные к соответствующему типу ODBC, указанному в привязке.  
   
 ### <a name="sending-data-to-the-server"></a>Отправка данных на сервер  
- **SQL_SS_VARIANT**, для данных, отправляемых в столбец **sql_variant** , используется новый тип данных, относящийся к драйверу ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. При отправке данных на сервер с помощью параметров (например, вставка в значения TableName (?,?)) используется [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) для указания сведений о параметрах, включая тип C и соответствующий тип [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] преобразует тип данных C в один из соответствующих подтипов **sql_variant** .  
+ **SQL_SS_VARIANT**, для данных, отправляемых в столбец [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sql_variant** , используется новый тип данных, относящийся к драйверу ODBC для собственного клиента. При отправке данных на сервер с помощью параметров (например, вставка в значения TableName (?,?)) используется [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) для указания сведений о параметрах, включая тип C и соответствующий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип. Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента преобразует тип данных C в один из соответствующих подтипов **sql_variant** .  
   
-## <a name="see-also"></a>См. также раздел  
- [Обработка результатов &#40;в ODBC&#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
+## <a name="see-also"></a>См. также:  
+ [Обработка результатов &#40;ODBC&#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   
