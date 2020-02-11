@@ -1,5 +1,5 @@
 ---
-title: Класс ServerSettings | Документация Майкрософт
+title: Класс класс serversettings | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,16 +19,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: cc1ee935e19c4f44dc1c350355edd08371ea6485
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63137314"
 ---
 # <a name="serversettings-class"></a>Класс ServerSettings
-  Serversettings [класс ServerSettings]-class.md) представляет настройки сервера на экземпляр [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  [Класс serversettings Class] класс serversettings-class.md) представляет параметры сервера в экземпляре [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Serversettings [класс ServerSettings]-class.md) позволяет выполнять следующие задачи:  
+ [Класс serversettings Class] класс serversettings-class.md) позволяет выполнять следующие задачи:  
   
 -   получать доступ к общим флагам настройки экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)];  
   
@@ -36,7 +36,7 @@ ms.locfileid: "63137314"
   
 -   задавать сертификат безопасности для экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>См. также  
- [Настройка сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+## <a name="see-also"></a>См. также:  
+ [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

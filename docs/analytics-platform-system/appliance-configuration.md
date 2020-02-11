@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 80fc899400be167badaae9d617d43a61e0d346b5
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401464"
 ---
 # <a name="appliance-configuration-checklists-for-analytics-platform-system"></a>Контрольные списки настройки устройств для системы аналитики платформы
@@ -24,7 +24,7 @@ ms.locfileid: "74401464"
   
 ## <a name="BeforeTasks"></a>Перед началом  
   
-### <a name="prerequisites"></a>Необходимые компоненты  
+### <a name="prerequisites"></a>Предварительные требования  
   
 1.  Устройство должно быть установлено в центре обработки данных и включено.  
   
@@ -49,7 +49,7 @@ SQL Server PDW**Configuration Manager** (пдвкм) — это средство
   
 Используйте **Configuration Manager** для выполнения следующих задач настройки.  
   
-|Задача конфигурации|Описание|  
+|Задача конфигурации|Description|  
 |----------------------|---------------|  
 |Познакомьтесь с именами физических компонентов|[PDW и физические компоненты фабрики устройств &#40;аналитика система&#41;](pdw-and-appliance-fabric-physical-components.md)|  
 |Запуск SQL Server PDW Configuration Manager|[Запустите систему Configuration Manager &#40;Analytics Platform&#41;](launch-the-configuration-manager.md)|  
@@ -67,7 +67,7 @@ SQL Server PDW**Configuration Manager** (пдвкм) — это средство
 ## <a name="AddTasks"></a>Выполнение дополнительных задач по настройке  
 После выполнения задач **Configuration Manager** выполните следующий список дополнительных задач настройки. Некоторые из этих задач являются необязательными.  
   
-|Задача конфигурации|Описание|  
+|Задача конфигурации|Description|  
 |----------------------|---------------|  
 |Антивирусное ПО сторонних производителей можно установить и настроить на SQL Server PDW устройстве для внешних узлов.<br /><br />(необязательный параметр)|Дополнительные сведения см. в разделе [антивирусное программное обеспечение &#40;Analytics Platform System&#41;](antivirus-software.md).|  
 |Пароль для режима DSRM можно изменить.<br /><br />(необязательный параметр)|Дополнительные сведения см. [в статье Установка пароля администратора для входа на узлы AD в режиме восстановления служб каталогов &#40;&#41;&#41; &#40;Analytics Platform System ](set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md).|  
@@ -77,7 +77,7 @@ SQL Server PDW**Configuration Manager** (пдвкм) — это средство
 |Настройка сетевых адаптеров InfiniBand при резервном копировании и загрузке серверов<br /><br />(необязательный параметр)|Чтобы настроить резервное копирование и загрузку серверов для подключения к SQL Server PDW с помощью сети InfiniBand, необходимо настроить сетевые адаптеры, чтобы разрешить DNS-устройству устройства разрешить подключение InfiniBand к текущей активной сети InfiniBand.|  
 |Настройка для отправки данных телеметрии в корпорацию Майкрософт<br /><br />(необязательный параметр)|Чтобы настроить систему аналитики для отправки данных телеметрии в корпорацию Майкрософт, необходимо запустить сценарий PowerShell на узле управления. Конкретные инструкции см. [в статье Отправка отзывов телеметрии в Microsoft &#40;SQL Server PDW&#41;](send-telemetry-feedback-to-microsoft-sql-server-pdw.md).|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Антивирусное программное обеспечение &#40;&#41;системы аналитики](antivirus-software.md)  
 [Настройка сетевых адаптеров InfiniBand &#40;SQL Server PDW&#41;](configure-infiniband-network-adapters.md)  
   

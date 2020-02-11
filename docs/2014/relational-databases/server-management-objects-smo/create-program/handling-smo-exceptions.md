@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 595da161660b60845c02d71e22411a2a4eba009c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63192105"
 ---
 # <a name="handling-smo-exceptions"></a>Обработка исключений SMO
@@ -33,14 +33,14 @@ ms.locfileid: "63192105"
  Исключения могут быть общими и конкретными. Общие исключения содержат набор конкретных исключений. Несколько инструкций `Catch` можно использовать, чтобы обработать ожидаемые ошибки и позволить остальным ошибкам пройти через обработку общих исключений. Исключения часто происходят в каскадной последовательности. Часто исключение объекта SMO может быть вызвано исключением SQL. Чтобы это обнаружить, можно последовательно использовать свойство `InnerException`, чтобы определить исходное исключение, которое вызвало конечное исключение верхнего уровня.  
   
 > [!NOTE]  
->  `SQLException` Исключение объявлено в **System.Data.SqlClient** пространства имен.  
+>  `SQLException` Исключение объявляется в пространстве имен **System. Data. SqlClient** .  
   
- ![Диаграмма, показывающая уровни, из которых могут вызываться исключения](../../../database-engine/dev-guide/media/exception-flow.gif "диаграмма, показывающая уровни, из которых могут вызываться исключения")  
+ ![Диаграмма, показывающая уровни, из которых могут вызываться исключения](../../../database-engine/dev-guide/media/exception-flow.gif "Диаграмма, показывающая уровни, из которых могут вызываться исключения")  
   
  Диаграмма показывает поток исключений по уровням приложения.  
   
 ## <a name="example"></a>Пример  
- Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в разделе [Visual C создайте&#35; проекта SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md) или [Создание проекта SMO на Visual Basic в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md).  
+ Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в статьях [Создание проекта Visual C&#35; SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md) или [Создание Visual Basic проекта SMO в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md).  
   
 ## <a name="catching-an-exception-in-visual-basic"></a>Перехват исключения на языке Visual Basic  
  В этом примере кода показано, как использовать инструкцию `Try...Catch...Finally`[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] для перехвата исключения объекта SMO. Все исключения объектов SMO имеют тип SmoException и перечислены в справке по объектам SMO. Последовательность внутренних исключений отображается, чтобы показать основание ошибки. Дополнительные сведения см. в документации по среде [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET.  

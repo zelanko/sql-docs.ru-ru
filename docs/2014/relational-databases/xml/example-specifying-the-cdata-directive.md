@@ -1,5 +1,5 @@
 ---
-title: Пример Указание директивы CDATA | Документация Майкрософт
+title: Пример. Указание директивы CDATA | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fa5cec5be4153547d60e1592c21f00470ab1a5fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287772"
 ---
-# <a name="example-specifying-the-cdata-directive"></a>Пример Определение директивы CDATA
+# <a name="example-specifying-the-cdata-directive"></a>Пример. Задание директивы CDATA
   Если указана директива **CDATA**, содержащиеся данные не будут закодированы в сущность, а будут помещены в раздел CDATA. Атрибуты **CDATA** должны быть безымянными.  
   
  Следующий запрос упаковывает описания итога модели продукта в раздел CDATA.  
@@ -38,7 +38,7 @@ WHERE   ProductModelID=19
 FOR XML EXPLICIT  
 ```  
   
- Это результат:  
+ Результат:  
   
 ```  
 <ProductModel ProdModelID="19" Name="Mountain-100">  
@@ -46,7 +46,7 @@ FOR XML EXPLICIT
 </ProductModel>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Использование режима EXPLICIT совместно с предложением FOR XML](use-explicit-mode-with-for-xml.md)  
+## <a name="see-also"></a>См. также:  
+ [Использование режима EXPLICIT с предложением FOR XML](use-explicit-mode-with-for-xml.md)  
   
   

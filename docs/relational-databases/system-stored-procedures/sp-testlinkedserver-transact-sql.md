@@ -18,13 +18,13 @@ ms.assetid: e63ca7d4-47d6-455e-9aac-421f9683dadc
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6aadde09a22d766033704dffe0ecc8b4247954c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68096044"
 ---
-# <a name="sptestlinkedserver-transact-sql"></a>sp_testlinkedserver (Transact-SQL)
+# <a name="sp_testlinkedserver-transact-sql"></a>sp_testlinkedserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Проверяет соединение со связанным сервером. Если проверка завершилась неуспешно, то процедура вызывает исключение с указанием причины сбоя.  
@@ -39,7 +39,7 @@ sp_testlinkedserver [ @servername ] = servername
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @servername = ]servername` — Имя связанного сервера. *ServerName* — **sysname**, не имеет значения по умолчанию.  
+`[ @servername = ]servername`Имя связанного сервера. *ServerName* имеет тип **sysname**и не имеет значения по умолчанию.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  None  
@@ -61,8 +61,8 @@ sp_testlinkedserver SEATTLESales;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sp_addlinkedsrvlogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
+ [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)  
   
   

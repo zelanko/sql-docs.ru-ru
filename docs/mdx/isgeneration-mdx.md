@@ -1,5 +1,5 @@
 ---
-title: IsGeneration (многомерные Выражения) | Документация Майкрософт
+title: Generation (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 401a11a10f190cda8efeaffa04e1025ef7f4e681
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68105228"
 ---
 # <a name="isgeneration-mdx"></a>IsGeneration (многомерные выражения)
@@ -34,8 +34,8 @@ IsGeneration(Member_Expression, Generation_Number)
  *Generation_Number*  
  Допустимое числовое выражение, указывающее поколение, для которого заданный элемент будет вычисляться.  
   
-## <a name="remarks"></a>Примечания  
- **IsGeneration** возвращает **true** если заданный элемент находится в указанном поколении. В противном случае функция возвращает **false**. Кроме того, если указанный элемент имеет значение empty-член **IsGeneration** возвращает **false**.  
+## <a name="remarks"></a>Remarks  
+ Функция **формирования** возвращает **значение true** , если указанный элемент имеет указанный номер поколения. В противном случае функция возвращает **значение false**. Кроме того, если указанный элемент равен пустому элементу **, функция IsEmpty** возвращает **значение false**.  
   
  При индексировании поколения конечные элементы имеют индекс поколения 0. Индекс поколения неконечных элементов определяется путем получения наибольшего индекса поколения из объединения всех потомков заданного элемента и прибавления 1 к этому значению. В зависимости от способа определения индекса поколения неконечных элементов конкретный неконечный элемент может принадлежать нескольким поколениям.  
   
@@ -52,7 +52,7 @@ IsGeneration(Member_Expression, Generation_Number)
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>См. также:  
+ [Ссылка на функцию многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ef49bb86c8e16600f2ff1bf2d1c7a92ecc5af964
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401478"
 ---
 # <a name="acquire-and-configure-a-loading-server-for-parallel-data-warehouse"></a>Получение и настройка сервера загрузки для параллельного хранилища данных
@@ -86,7 +86,7 @@ ms.locfileid: "74401478"
 --> 
   
 ## <a name="Step5"></a>Шаг 5. Запуск загрузки  
-Теперь все готово для начала загрузки данных. Дополнительная информация:  
+Теперь все готово для начала загрузки данных. Дополнительные сведения см. в разделе:  
   
 1.  [Средство загрузки из командной строки dwloader](dwloader.md)  
   
@@ -111,6 +111,6 @@ ms.locfileid: "74401478"
   
 -   Отключите мгновенную инициализацию файлов в Windows Server 2012 и более поздних версиях. Это компромисс между производительностью и безопасностью, как указано в разделе "производительность". Необходимо решить, что лучше в соответствии с вашими требованиями к безопасности.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Общие сведения о резервном копировании и восстановлении](backup-and-restore-overview.md)  
   

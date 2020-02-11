@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c1f23dad22e1d748f39b1dd390b5874806193276
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75253193"
 ---
 # <a name="migrate-a-reporting-services-installation-sharepoint-mode"></a>Перенос установки служб Reporting Services (режим интеграции с SharePoint)
@@ -71,10 +71,10 @@ ms.locfileid: "75253193"
   
 ||Объекты|Метод|Заметки|  
 |-|-------------|------------|-----------|  
-|**одного**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ключи шифрования.|**Rskeymgmt. exe** или [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager. См. статью [Резервное копирование и восстановление ключей шифрования служб Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).|Указанные инструменты можно использовать для резервного копирования. Для восстановления используйте страницы управления приложением служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] или PowerShell.|  
+|**1**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ключи шифрования.|**Rskeymgmt. exe** или [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager. См. статью [Резервное копирование и восстановление ключей шифрования служб Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).|Указанные инструменты можно использовать для резервного копирования. Для восстановления используйте страницы управления приложением служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] или PowerShell.|  
 |**2**|База данных содержимого SharePoint.||Создайте резервную копию базы данных и отсоедините базу данных.<br /><br /> Дополнительные сведения см. в разделе об обновлении присоединения баз данных в статье [Определение стратегии обновления до SharePoint 2010 (https://technet.microsoft.com/library/cc263447.aspx)](https://technet.microsoft.com/library/cc263447.aspx)).|  
-|**3-5**|База данных SQL Server, которая используется в качестве базы данных каталогов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|Резервное копирование и восстановление баз данных SQL Server<br /><br /> или<br /><br /> Присоединение и отсоединение баз данных SQL Server||  
-|**четырех**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]файлы конфигурации.|Простая копия файла.|Если выполнена настройка файла, то необходимо скопировать только rsreportserver.config. Пример местоположения файлов по умолчанию: C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting<br /><br /> RSReportServer.config<br /><br /> Rssvrpolicy.config<br /><br /> Web.config для приложения ASP.NET сервера отчетов.<br /><br /> Machine.config для ASP.NET.|  
+|**3-5**|База данных SQL Server, которая используется в качестве базы данных каталогов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|Резервное копирование и восстановление баз данных SQL Server<br /><br /> или диспетчер конфигурации служб<br /><br /> Присоединение и отсоединение баз данных SQL Server||  
+|**4**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]файлы конфигурации.|Простая копия файла.|Если выполнена настройка файла, то необходимо скопировать только rsreportserver.config. Пример местоположения файлов по умолчанию: C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting<br /><br /> RSReportServer.config<br /><br /> Rssvrpolicy.config<br /><br /> Web.config для приложения ASP.NET сервера отчетов.<br /><br /> Machine.config для ASP.NET.|  
   
 ####  <a name="bkmk_restore_operations"></a>Операции восстановления  
  В данном разделе описываются типы информации, которые необходимы для переноса, и инструменты или процессы, которые используются для восстановления. Инструменты, которые используются для восстановления, могут отличаться от инструментов, используемых при резервном копировании.  
@@ -83,10 +83,10 @@ ms.locfileid: "75253193"
   
 ||Объекты|Метод|Заметки|  
 |-|-------------|------------|-----------|  
-|**одного**|Восстановите базы данных содержимого SharePoint в новую ферму.|Метод "Обновление присоединения базы данных" SharePoint.|Основные шаги:<br /><br /> 1) Восстановите базу данных на новом сервере.<br /><br /> 2) Подключите базу данных содержимого к веб-приложению, указав URL-адрес.<br /><br /> 3) Используйте Get-SPWebapplication для вывода списка всех веб-приложений и URL-адресов.<br /><br /> Дополнительные сведения см. в разделе об обновлении присоединения баз данных в статьях [Определение стратегии обновления до SharePoint 2010 (https://technet.microsoft.com/library/cc263447.aspx)](https://technet.microsoft.com/library/cc263447.aspx)) и [Присоединение баз данных и обновление до SharePoint Server 2010 (https://technet.microsoft.com/library/cc263299.aspx)](https://technet.microsoft.com/library/cc263299.aspx)).|  
+|**1**|Восстановите базы данных содержимого SharePoint в новую ферму.|Метод "Обновление присоединения базы данных" SharePoint.|Основные шаги:<br /><br /> 1) Восстановите базу данных на новом сервере.<br /><br /> 2) Подключите базу данных содержимого к веб-приложению, указав URL-адрес.<br /><br /> 3) Используйте Get-SPWebapplication для вывода списка всех веб-приложений и URL-адресов.<br /><br /> Дополнительные сведения см. в разделе об обновлении присоединения баз данных в статьях [Определение стратегии обновления до SharePoint 2010 (https://technet.microsoft.com/library/cc263447.aspx)](https://technet.microsoft.com/library/cc263447.aspx)) и [Присоединение баз данных и обновление до SharePoint Server 2010 (https://technet.microsoft.com/library/cc263299.aspx)](https://technet.microsoft.com/library/cc263299.aspx)).|  
 |**2**|Восстановите базу данных SQL, которая является базой данных каталогов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (ReportServer).|Резервное копирование и восстановление баз данных SQL.<br /><br /> **ни**<br /><br /> Присоединение и отсоединение баз данных SQL Server.|При первом использовании базы данных службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] обновляют схему баз данных, которая требуется для работы со средой [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .|  
 |**3-5**|Создайте новое приложение службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|Центр администрирования SharePoint.|При создании нового приложения службы настройте его для использования скопированной базы данных сервера отчетов.<br /><br /> Дополнительные сведения об использовании центра администрирования SharePoint см. в подразделе "шаг 3. Создание приложения службы Reporting Services" статьи [установка Reporting Services SharePoint для sharepoint 2013](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md).<br /><br /> Примеры использования PowerShell см. в разделе "Создание приложения службы Reporting Services с помощью PowerShell" в статье [Служба и приложения службы Reporting Services в SharePoint](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md).|  
-|**четырех**|Восстановите файлы конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|Простая копия файла.|Пример расположения файлов по умолчанию: C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting\.|  
+|**4**|Восстановите файлы конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|Простая копия файла.|Пример расположения файлов по умолчанию: C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting\.|  
 |**5.0**|Восстановите ключи шифрования служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|Восстановите файл с резервной копией ключей с помощью страницы SystemSettings приложения службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].<br /><br /> **ни**<br /><br /> PowerShell.|См. раздел "Управление ключами" в статье [Управление приложением службы Reporting Services в SharePoint](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md).|  
   
 #####  <a name="bkmk_additional_configuration"></a>Дополнительная настройка  
@@ -125,7 +125,7 @@ ms.locfileid: "75253193"
   
 -   [Общие сведения о процессе обновления до SharePoint 2013 (https://technet.microsoft.com/library/cc262483.aspx)](https://technet.microsoft.com/library/cc262483.aspx).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Обновление и миграция Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
  [Миграция Reporting Services установки &#40;основном режиме&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
   

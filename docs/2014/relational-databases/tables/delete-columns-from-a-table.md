@@ -16,17 +16,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 718aeca12c90435b68fd6cedde150dfbdeb3c063
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761657"
 ---
 # <a name="delete-columns-from-a-table"></a>Удаление столбцов из таблицы
   В этом разделе приведены инструкции по удалению столбцов таблиц в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 > [!CAUTION]  
->  При удалении столбца из таблицы этот столбец и все содержащиеся в нем данные удаляются из базы данных. Отменить это действие невозможно.  
+>  При удалении столбца из таблицы этот столбец и все содержащиеся в нем данные удаляются из базы данных. Это действие невозможно отменить.  
   
  **В этом разделе**  
   
@@ -34,7 +34,7 @@ ms.locfileid: "62761657"
   
      [Ограничения](#Restrictions)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Удаление столбца из таблицы с помощью:**  
   
@@ -72,7 +72,7 @@ ms.locfileid: "62761657"
   
 2.  Щелкните правой кнопкой мыши столбец, который надо удалить, и выберите из контекстного меню пункт **Удалить столбец** .  
   
-3.  Если столбец участвует в связи (FOREIGN KEY или PRIMARY KEY), то будет выдано сообщение с запросом на подтверждение удаления выбранных столбцов и их связей. Выберите **Да**.  
+3.  Если столбец участвует в связи (FOREIGN KEY или PRIMARY KEY), то будет выдано сообщение с запросом на подтверждение удаления выбранных столбцов и их связей. выберите **Yes** (Да).  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   

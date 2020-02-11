@@ -1,5 +1,5 @@
 ---
-title: Размещает коллекцию (многомерные Объекты ADO) | Документация Майкрософт
+title: Коллекция Positions (объекты данных ActiveX (MD)) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,30 +18,30 @@ ms.assetid: 5b9e7545-cf30-464d-80ef-5c99c8306bab
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4cc293c966b044c7d580907d55c7b94f96e077dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949212"
 ---
 # <a name="positions-collection-ado-md"></a>Коллекция Positions (многомерные объекты ADO)
-Содержит [позиции](../../../ado/reference/ado-md-api/position-object-ado-md.md) объектами, которые определяют точку на оси.  
+Содержит объекты [позиции](../../../ado/reference/ado-md-api/position-object-ado-md.md) , определяющие точку на оси.  
   
-## <a name="remarks"></a>Примечания  
- **Позиций** является стандартной коллекции ADO. С помощью свойства и методы коллекции сделайте следующее:  
+## <a name="remarks"></a>Remarks  
+ **Positions** — это стандартная коллекция ADO. С помощью свойств и методов коллекции можно выполнять следующие действия.  
   
--   Получить число объектов в коллекции с [число](../../../ado/reference/ado-api/count-property-ado.md) свойство.  
+-   Получите количество объектов в коллекции со свойством [Count](../../../ado/reference/ado-api/count-property-ado.md) .  
   
--   Вернуть объект из коллекции со значением по умолчанию [элемент](../../../ado/reference/ado-api/item-property-ado.md) свойство.  
+-   Возврат объекта из коллекции со свойством [элемента](../../../ado/reference/ado-api/item-property-ado.md) по умолчанию.  
   
--   Обновление объектов в коллекции от поставщика с [обновить](../../../ado/reference/ado-api/refresh-method-ado.md) метод.  
+-   Обновите объекты в коллекции от поставщика с помощью метода [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) .  
   
- Этот раздел содержит следующие подразделы.  
+ Этот раздел содержит следующий раздел.  
   
 -   [Свойства, методы и события](../../../ado/reference/ado-md-api/positions-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
- [Пример объекта Cellset (Visual Basic)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
- [Объект Axis (многомерные Объекты ADO)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
- [Объект Cell (многомерные Объекты ADO)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
+## <a name="see-also"></a>См. также:  
+ [Пример набора ячеек (Visual Basic)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
+ [Объект Axis (объекты данных ActiveX (MD))](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
+ [Объект Cell (объекты данных ActiveX (MD))](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
  [Объект Position (многомерные объекты ADO)](../../../ado/reference/ado-md-api/position-object-ado-md.md)

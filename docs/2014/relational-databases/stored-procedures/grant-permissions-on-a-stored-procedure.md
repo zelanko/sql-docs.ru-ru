@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 47b8e4b87ab3150ae7bf67d3c3a2f9c5e0732294
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63015590"
 ---
 # <a name="grant-permissions-on-a-stored-procedure"></a>Предоставление разрешений на хранимую процедуру
@@ -28,7 +28,7 @@ ms.locfileid: "63015590"
   
      [Ограничения](#Restrictions)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Для предоставления разрешений на хранимую процедуру используется:**  
   
@@ -86,7 +86,7 @@ GRANT EXECUTE ON OBJECT::HumanResources.uspUpdateEmployeeHireInfo
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sys.fn_builtin_permissions (Transact-SQL)](/sql/relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql)   
  [GRANT, предоставление разрешений на объект (Transact-SQL)](/sql/t-sql/statements/grant-object-permissions-transact-sql)   
  [Создание хранимой процедуры](../stored-procedures/create-a-stored-procedure.md)   

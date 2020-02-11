@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 02b55465cc4aed912e6e955883ca8fdbfa4be870
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75228213"
 ---
 # <a name="implementing-the-or-operator-in-natively-compiled-stored-procedures"></a>Реализация оператора OR в скомпилированных в собственном коде хранимых процедурах
@@ -245,6 +245,6 @@ GO
 ## <a name="side-effects"></a>Побочные эффекты  
  При наличии в предложении WHERE или условии JOIN нескольких операторов OR количество запросов, которые необходимо выполнить для имитации поведения, может увеличиваться экспоненциально. Из-за этого выполнение запросов может замедлиться или же может увеличиться объем используемой памяти из-за необходимости использовать переменные оптимизированных для памяти таблиц.  
   
-## <a name="see-also"></a>См. также  
- [Проблемы миграции для хранимых процедур, скомпилированных в собственном виде](../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
+## <a name="see-also"></a>См. также:  
+ [Проблемы миграции, связанные с хранимыми процедурами, скомпилированными в собственном коде](../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
   

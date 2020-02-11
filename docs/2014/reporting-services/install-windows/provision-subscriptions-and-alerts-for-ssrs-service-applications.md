@@ -17,26 +17,27 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 69724baa3790f2b7475369c8f947a4201bcd57f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108721"
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>Подготовка подписок и предупреждений для приложений служб SSRS
+  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и предупреждения данных требуют наличия агента SQL Server, а также настройку разрешений для агента SQL Server. Если появляются сообщения об ошибках, указывающие, что необходим агент SQL Server, хотя агент SQL Server уже запущен, необходимо обновить и проверить разрешения. Этот раздел относится к [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint и здесь описаны три способа обновления разрешений агента SQL Server для подписок [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Вводимые учетные данные для шагов из данного раздела должны иметь достаточные разрешения для предоставления роли RSExecRole прав на выполнение объектов из приложения службы, баз данных msdb и master.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 #124; SharePoint 2010|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 &#124; SharePoint 2010|  
   
- ![Разрешения агента SQL для баз данных приложений служб](../../../2014/sql-server/install/media/rs-provisionsqlagent.gif "Разрешения агента SQL для баз данных приложений служб")  
+ ![Разрешение агента SQL Server на базы данных приложений служб](../../../2014/sql-server/install/media/rs-provisionsqlagent.gif "Разрешение агента SQL Server на базы данных приложений служб")  
   
-||Описание|  
+||Description|  
 |------|-----------------|  
 |**1**|Экземпляр компонента SQL Server Database Engine, на котором размещаются базы данных приложения службы Reporting Services.|  
 |**2**|Экземпляр агента SQL Server для экземпляра компонента SQL Server Database Engine.|  
-|**3**|Базы данных приложения службы Reporting Services. Имена создаются на основе сведений, которые использовались при создании приложения службы. Ниже приведены примеры имен баз данных.<br /><br /> ReportingService_2fbae157295d49df86d0b85760c704b0<br /><br /> ReportingService_2fbae157295d49df86d0b85760c704b0_Alerting<br /><br /> ReportingService_2fbae157295d49df86d0b85760c704b0TempDB|  
+|**3-5**|Базы данных приложения службы Reporting Services. Имена создаются на основе сведений, которые использовались при создании приложения службы. Ниже приведены примеры имен баз данных.<br /><br /> ReportingService_2fbae157295d49df86d0b85760c704b0<br /><br /> ReportingService_2fbae157295d49df86d0b85760c704b0_Alerting<br /><br /> ReportingService_2fbae157295d49df86d0b85760c704b0TempDB|  
 |**4**|Базы данных master и MSDB экземпляра компонента SQL Server Database Engine.|  
   
  Используйте один из следующих трех методов, чтобы обновить разрешения:  
@@ -57,9 +58,9 @@ ms.locfileid: "66108721"
   
 4.  Если администратор SharePoint имеет достаточно прав для базы данных Master и баз данных приложений служб, введите эти учетные данные.  
   
-5.  Нажмите кнопку **ОК** .  
+5.  Нажмите кнопку **ОК**.  
   
-##  <a name="bkmk_download"></a> Загрузка скрипта Transact-SQL  
+##  <a name="bkmk_download"></a>Загрузка скрипта Transact-SQL  
   
 1.  В центре администрирования SharePoint в разделе **Управление приложениями** выберите **Управление приложениями службы**.  
   
@@ -81,9 +82,9 @@ ms.locfileid: "66108721"
   
 4.  Обновите следующий командлет PowerShell, заменив имя базы данных сервера отчетов, учетную запись пула приложений и путь к инструкции.  
   
-     **Синтаксис командлета:** `Get-SPRSDatabaseRightsScript -DatabaseName <ReportingServices database name> -UserName <app pool account> -IsWindowsUser | Out-File <path of statement>`  
+     **Синтаксис командлета:**`Get-SPRSDatabaseRightsScript -DatabaseName <ReportingServices database name> -UserName <app pool account> -IsWindowsUser | Out-File <path of statement>`  
   
-     **Образец командлета:** `Get-SPRSDatabaseRightsScript -DatabaseName ReportingService_46fd00359f894b828907b254e3f6257c -UserName "NT AUTHORITY\NETWORK SERVICE" -IsWindowsUser | Out-File c:\SQLServerAgentrights.sql`  
+     **Пример командлета:**`Get-SPRSDatabaseRightsScript -DatabaseName ReportingService_46fd00359f894b828907b254e3f6257c -UserName "NT AUTHORITY\NETWORK SERVICE" -IsWindowsUser | Out-File c:\SQLServerAgentrights.sql`  
   
 ## <a name="using-the-transact-sql-script"></a>Использование скрипта Transact-SQL  
  Следующие процедуры можно использовать для скриптов, загруженных со страницы подготовки либо созданных с помощью PowerShell.  
@@ -92,7 +93,7 @@ ms.locfileid: "66108721"
   
 1.  Чтобы открыть среду SQL Server Management Studio, выберите в меню **Пуск** пункт **Microsoft SQL Server 2012** , затем среду **SQL Server Management Studio**.  
   
-2.  В диалоговом окне **Соединение с сервером** установите следующие параметры.  
+2.  В диалоговом окне **соединение с сервером** задайте следующие параметры.  
   
     -   В раскрывающемся списке **Тип сервера** выберите **Компонент Database Engine**.  
   
@@ -116,6 +117,6 @@ ms.locfileid: "66108721"
   
      Инструкция будет добавлена в окно запросов.  
   
-5.  Нажмите кнопку **Выполнить**.  
+5.  Нажмите **Execute (Выполнить)**.  
   
   

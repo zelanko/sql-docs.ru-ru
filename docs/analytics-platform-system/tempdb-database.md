@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 3772e2b4cabac84c00854eba85f7a0c2a33d48bc
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400141"
 ---
 # <a name="tempdb-database-in-parallel-data-warehouse"></a>база данных tempdb в параллельном хранилище данных
@@ -84,7 +84,7 @@ SQL Server PDW выполняет те же операции с временны
   
 ## <a name="RelatedTasks"></a>Связанные задачи  
   
-|Задачи|Описание|  
+|Задания|Description|  
 |---------|---------------|  
 |Создайте таблицу в **базе данных tempdb**.|Можно создать временную таблицу пользователя с помощью CREATE TABLE и CREATE TABLE в качестве инструкций SELECT. Дополнительные сведения см. в разделе [CREATE TABLE](../t-sql/statements/create-table-azure-sql-data-warehouse.md) и [CREATE TABLE в качестве SELECT](../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md).|  
 |Просмотр списка существующих таблиц в **базе данных tempdb**.|`SELECT * FROM tempdb.sys.tables;`|  

@@ -1,5 +1,5 @@
 ---
-title: Новые&#39;возможности Analysis Services и бизнес-аналитики | Документация Майкрософт
+title: Новые&#39;в Analysis Services и бизнес-аналитике | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/07/2019
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 59ce45ff7e02d63c3c5bf27ca209ec911de67dbd
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68889340"
 ---
-# <a name="what39s-new-in-sql-server-2014-analysis-services"></a>Новые&#39;возможности SQL Server 2014 Analysis Services
+# <a name="what39s-new-in-sql-server-2014-analysis-services"></a>Новые&#39;SQL Server 2014 Analysis Services
   С исключением для добавленной функциональности, поддерживающей Power View отчеты по многомерным моделям, [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] не изменяется из предыдущего выпуска.  
   
  Сведения о других [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] продуктах и технологиях, которые отличаются в этом выпуске, см. [в статье новые возможности SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md).  
@@ -25,9 +25,9 @@ ms.locfileid: "68889340"
 ## <a name="updates-to-design-tool-installation"></a>Изменения установки средства проектирования  
  Среда [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] для бизнес-аналитики (SSDT-BI), которая ранее называлась Business Intelligence Development Studio (BIDS), используется для создания моделей служб Analysis Services, отчетов служб Reporting Services и пакетов служб Integration Services. Загрузить SSDT-BI можно из следующих расположений:  
   
--   [Скачайте SSDT-BI для Visual Studio 2013](https://go.microsoft.com/fwlink/p/?LinkId=396526)  
+-   [Загрузка SSDT-BI для Visual Studio 2013](https://go.microsoft.com/fwlink/p/?LinkId=396526)  
   
--   [Скачать SSDT-BI для Visual Studio 2012](https://go.microsoft.com/fwlink/p/?LinkID=273673)  
+-   [Загрузка SSDT-BI для Visual Studio 2012](https://go.microsoft.com/fwlink/p/?LinkID=273673)  
   
  Если на компьютере установлена прежняя версия SSDT-BI или BIDS, то новая версия устанавливается параллельно с предыдущей. Часто новые и старые версии средств проектирования используются на одной рабочей станции, чтобы можно было работать с проектами и решениями, которые рассчитаны на определенную версию сервера.  
   
@@ -39,9 +39,9 @@ ms.locfileid: "68889340"
 ## <a name="features-recently-added-power-view-for-multidimensional-models"></a>Недавно добавленные функции: Power View для многомерных моделей  
  Возможность создания отчетов Power View на основе многомерных моделей впервые появилась в накопительном обновлении 4 с пакетом обновления 1 (SP1) для [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] . Power View для многомерных моделей теперь является частью [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
- **Power View отчет для многомерной модели**  
+ **Отчет Power View для многомерных моделей**  
   
- ![Отчет о Power View](media/powerviewreport-wn.gif "Отчет о Power View")  
+ ![Отчет Power View](media/powerviewreport-wn.gif "Отчет Power View")  
   
  Эта функция позволяет организациям максимально эффективно использовать инвестиции в средства бизнес-аналитики, позволяя использовать многомерные модели (кубы OLAP) с последними версиями клиентских средств отчетности. В зависимости от типов данных в многомерной модели пользователи могут легко создавать различные динамические визуализации данных — от таблиц и матриц до пузырьковых диаграмм и географических карт. Теперь многомерные модели также поддерживают запросы с использованием выражений анализа данных (DAX).  
   

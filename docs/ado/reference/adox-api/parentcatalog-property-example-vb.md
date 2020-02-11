@@ -15,14 +15,14 @@ ms.assetid: 448bc850-7584-4c5f-89f3-5f4fee88b259
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f87a092d20fb15a23e21a7ef9f0094e40eedeb57
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965595"
 ---
 # <a name="parentcatalog-property-example-vb"></a>Пример свойства ParentCatalog (Visual Basic)
-Следующий код демонстрирует использование [ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md) свойство доступ к свойству поставщика перед добавлением таблицы в каталог. Свойство является **AutoIncrement**, который создает поле AutoIncrement в базу данных Microsoft Jet.  
+В следующем коде показано, как использовать свойство [ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md) для доступа к свойству, зависящему от поставщика, до добавления таблицы в каталог. Свойство имеет значение **AutoIncrement**, которое создает поле автоприращения в базе данных Microsoft Jet.  
   
 ```  
 ' BeginCreateAutoIncrColumnVB  
@@ -83,13 +83,13 @@ End Sub
 ' EndCreateAutoIncrColumnVB  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Append-метод (коллекция Columns ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append-метод (коллекция Tables ADOX)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [Объект Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+## <a name="see-also"></a>См. также:  
+ [Метод Append (столбцы ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
+ [Метод Append (таблицы ADOX)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
+ [Объект каталога (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Объект Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [Коллекция Columns (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Свойство Name (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)   
- [Пример свойства ParentCatalog (ADOX)](../../../ado/reference/adox-api/parentcatalog-property-adox.md)   
+ [Свойство ParentCatalog (ADOX)](../../../ado/reference/adox-api/parentcatalog-property-adox.md)   
  [Объект Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
  [Свойство Type (Column) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)

@@ -12,16 +12,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b228a27169a506c1a1b292ee670bd08e4633201f
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73766359"
 ---
 # <a name="use-large-clr-udts-ole-db"></a>Использование определяемых пользователем типов больших данных CLR (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  В этом образце показывается выборка строк с большими, определяемыми пользователем типами из результирующего набора. Дополнительные сведения см. в разделе [большие определяемые пользователем типы &#40;данных&#41;CLR OLE DB](../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md). Данный образец работает с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или более поздней версией.  
+  В этом образце показывается выборка строк с большими, определяемыми пользователем типами из результирующего набора. Дополнительные сведения см. в разделе [большие определяемые пользователем типы данных CLR &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md). Данный образец работает с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или более поздней версией.  
   
 ## <a name="example"></a>Пример  
  В этом образце содержится два проекта. Один проект создает сборку (библиотеку DLL) из исходного кода на C#. Эта сборка содержит тип CLR. В базу данных будет добавлена таблица. Столбец в этой таблице будет иметь тип, определенный в сборке. По умолчанию в этом образце используется база данных master. Второй проект является собственным приложением C, которое считывает данные из таблицы.  

@@ -1,5 +1,5 @@
 ---
-title: Переводы (конструктор кубов) (службы Analysis Services — многомерные данные) | Документация Майкрософт
+title: Переводы (конструктор кубов) (Analysis Services-многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e5f361679d7e2e57024f0ac6859dbc3b0aac32a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065788"
 ---
 # <a name="translations-cube-designer-analysis-services---multidimensional-data"></a>Переводы (конструктор кубов) (службы Analysis Services — многомерные данные)
@@ -26,14 +26,14 @@ ms.locfileid: "66065788"
   
 ## <a name="panes"></a>Панели  
  **Панель инструментов**  
- Панель инструментов используется для выполнения общих действий на вкладке. Дополнительные сведения об этой панели см. в разделе [Панель инструментов (вкладка "Переводы", конструктор кубов) (службы Analysis Services — многомерные данные)](toolbar-translations-tab-cube-designer-analysis-services-multidimensional-data.md).  
+ Используйте панель инструментов для выполнения общих действий на вкладке. Дополнительные сведения об этой панели см. в разделе [панель инструментов &#40;вкладку переводы, конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](toolbar-translations-tab-cube-designer-analysis-services-multidimensional-data.md).  
   
  **Сведения о переводе**  
  Используйте панель **Сведения о переводе** для создания и изменения переводов для выбранного куба.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Переводы куба](multidimensional-models-olap-logical-cube-objects/cube-translations.md)   
- [Сценарии глобализации для многомерных служб Analysis Services](globalization-scenarios-for-analysis-services-multiidimensional.md)   
- [Конструктор кубов &#40;службы Analysis Services — многомерные данные&#41;](cube-designer-analysis-services-multidimensional-data.md)  
+ [Сценарии глобализации для Analysis Services многомерных](globalization-scenarios-for-analysis-services-multiidimensional.md)   
+ [Конструктор кубов &#40;Analysis Services многомерных данных&#41;](cube-designer-analysis-services-multidimensional-data.md)  
   
   

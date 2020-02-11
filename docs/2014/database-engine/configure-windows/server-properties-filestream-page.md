@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 70531800a43b0c8680dac3b0c5bd2633e5c09bce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62809155"
 ---
 # <a name="sql-server-properties-filestream-page"></a>Свойства SQL Server (страница FILESTREAM)
@@ -37,7 +37,7 @@ ms.locfileid: "62809155"
  **Разрешить удаленным клиентам потоковый доступ к данным FILESTREAM**  
  Выберите этот элемент управления, чтобы разрешить удаленным клиентам доступ к этим данным FILESTREAM на этом сервере.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [FILESTREAM (SQL Server)](../../relational-databases/blob/filestream-sql-server.md)   
  [sp_configure (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
   

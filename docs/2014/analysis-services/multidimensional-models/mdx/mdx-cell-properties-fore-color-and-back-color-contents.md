@@ -1,5 +1,5 @@
 ---
-title: Свойства ячеек FORE_COLOR и Back_color (многомерные Выражения) | Документация Майкрософт
+title: FORE_COLOR и BACK_COLOR содержимое (многомерные выражения) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,18 +19,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ecd8bb157d7b501d29230c91d87f148ae738ff45
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074412"
 ---
-# <a name="forecolor-and-backcolor-contents-mdx"></a>Свойства ячеек FORE_COLOR и BACK_COLOR (многомерные выражения)
+# <a name="fore_color-and-back_color-contents-mdx"></a>Свойства ячеек FORE_COLOR и BACK_COLOR (многомерные выражения)
   Свойства ячеек `FORE_COLOR` и `BACK_COLOR` хранят сведения о цвете соответственно текста и фона ячеек в формате операционной системы Microsoft Windows RGB (красный-зеленый-синий).  
   
  Допустимый диапазон обычных RGB-цветов: от нуля (0) до 16777215 (&H00FFFFFF). Старший байт числа в этом диапазоне всегда равен 0, следующие 3 байта (в порядке старшинства) определяют интенсивность красного, зеленого и синего компонентов соответственно. Интенсивность красного, зеленого и синего компонентов выражается числом от 0 до 255 (&HFF).  
   
-## <a name="see-also"></a>См. также  
- [Использование свойств ячеек (многомерные выражения)](mdx-cell-properties-using-cell-properties.md)  
+## <a name="see-also"></a>См. также:  
+ [Использование свойств ячеек &#40;&#41;многомерных выражений](mdx-cell-properties-using-cell-properties.md)  
   
   

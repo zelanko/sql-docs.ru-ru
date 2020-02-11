@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5c3a004d30a5edb20da77e6f93bf51a94472419b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63192168"
 ---
 # <a name="calling-methods"></a>Вызов методов
-  Методы выполняют специальные задачи, связанные с объектом, например устанавливают `Checkpoint` в базу данных или запрашивают перечисляемый список имен входа для экземпляра [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Методы выполняют определенные задачи, связанные с объектом, такие как выдача `Checkpoint` объекта в базе данных или запрос перечислимого списка входов для экземпляра [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Методы выполняют операции с объектом. Они могут принимать параметры и часто возвращают значение. Возвращаемое значение может быть простым типом данных, сложным объектом или структурой, содержащей большое число членов.  
   
@@ -207,7 +207,7 @@ foreach ( r in d.Rows) {
 }   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  <xref:Microsoft.SqlServer.Management.Smo.Server>   
  <xref:Microsoft.SqlServer.Management.Common.ServerConnection>  
   

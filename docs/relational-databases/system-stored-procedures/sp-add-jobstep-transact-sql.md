@@ -18,10 +18,10 @@ ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c312f8798ba4ad42eed327123c9adc5feacba8a8
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74412854"
 ---
 # <a name="sp_add_jobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
@@ -30,10 +30,10 @@ ms.locfileid: "74412854"
 
   Добавляет шаг (операцию) в задание агента SQL Server.  
   
- ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [соглашения о синтаксисе Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
   > [!IMPORTANT]  
-  > В [управляемый экземпляр базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)поддерживаются большинство типов заданий, но не все агент SQL Server. Дополнительные сведения см. [в разделе управляемый экземпляр базы данных SQL Azure отличий T-SQL от SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) .
+  > В [управляемый экземпляр базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)поддерживаются большинство типов заданий, но не все агент SQL Server. Подробные сведения см. в статье [Различия T-SQL между управляемым экземпляром базы данных SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -75,7 +75,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @subsystem = ] 'subsystem'`Подсистема, используемая службой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента для выполнения *команды*. *подсистема* имеет тип **nvarchar (40)** и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |"**ACTIVESCRIPTING**"|Активный скрипт.<br /><br /> ** \* \* Важно \* !**[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
 |**CMDEXEC**|Команда операционной системы или исполняемая программа.|  
@@ -93,7 +93,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 `[ @command = ] 'command'`Команды, выполняемые службой **SQLServerAgent** через *подсистему*. *команда* имеет тип **nvarchar (max)** и значение по умолчанию NULL. Агент SQL Server выполняет замену токенов, что обеспечивает такую же гибкость, что и переменные при написании программ.  
   
 > [!IMPORTANT]  
->  Все токены, используемые в шагах заданий, теперь должны сопровождаться экранирующим макросом, в противном случае они вызовут ошибку. Кроме того, теперь имена токенов нужно заключать в круглые скобки и помещать в начале синтаксиса токена знак доллара (`$`). Например:  
+>  Все токены, используемые в шагах заданий, теперь должны сопровождаться экранирующим макросом, в противном случае они вызовут ошибку. Кроме того, теперь имена токенов нужно заключать в круглые скобки и помещать в начале синтаксиса токена знак доллара (`$`). Пример:  
 >   
 >  `$(ESCAPE_`*имя макроса*`(DATE))`  
   
@@ -115,7 +115,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |**1** (по умолчанию)|Завершить с успешным выполнением.|  
 |**2**|Завершить с ошибкой.|  
 |**3-5**|Перейти к следующему шагу.|  
-|**четырех**|Перейти к шагу *on_success_step_id*|  
+|**4**|Перейти к шагу *on_success_step_id*|  
   
 `[ @on_success_step_id = ] success_step_id`Идентификатор шага в этом задании, который должен быть выполнен, если шаг выполнен, а *success_action* — **4**. *success_step_id* имеет **тип int**и значение по умолчанию **0**.  
   
@@ -123,10 +123,10 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 |Значение|Описание (действие)|  
 |-----------|----------------------------|  
-|**одного**|Завершить с успешным выполнением.|  
+|**1**|Завершить с успешным выполнением.|  
 |**2** (по умолчанию)|Завершить с ошибкой.|  
 |**3-5**|Перейти к следующему шагу.|  
-|**четырех**|Перейти к шагу *on_fail_step_id*|  
+|**4**|Перейти к шагу *on_fail_step_id*|  
   
 `[ @on_fail_step_id = ] fail_step_id`Идентификатор шага в этом задании, который будет выполнен, если шаг завершается ошибкой, а *fail_action* — **4**. *fail_step_id* имеет **тип int**и значение по умолчанию **0**.  
   
@@ -146,11 +146,11 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @flags = ] flags`Параметр, который управляет поведением. *Флаги* имеют **тип int**и могут принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |**0** (по умолчанию)|Переписать выходной файл.|  
 |**2**|Добавить к выходному файлу.|  
-|**четырех**|Записать вывод шага задания [!INCLUDE[tsql](../../includes/tsql-md.md)] в журнал шагов.|  
+|**4**|Записать вывод шага задания [!INCLUDE[tsql](../../includes/tsql-md.md)] в журнал шагов.|  
 |**8**|Записать журнал в таблицу (переписать существующий журнал).|  
 |**глубин**|Записать журнал в таблицу (добавить к существующему журналу).|  
 |**32**|Записать все выходные данные в журнал заданий.|  
@@ -164,9 +164,9 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **sp_add_jobstep** должны запускаться из базы данных **msdb** .  
   
  Среда SQL Server Management Studio обеспечивает простой и наглядный способ управления заданиями и рекомендуется для создания инфраструктуры заданий и управления ей.  
@@ -207,7 +207,7 @@ EXEC sp_add_jobstep
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Просмотр или изменение заданий](../../ssms/agent/view-or-modify-jobs.md)   
  [sp_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
  [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   

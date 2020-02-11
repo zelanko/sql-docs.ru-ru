@@ -13,10 +13,10 @@ ms.assetid: 1dc0b43a-d023-4e7d-b027-8b1459fd058c
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: d08d65d13aec3812003b8d7d70f700662a592d14
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729186"
 ---
 # <a name="how-permissions-are-determined-master-data-services"></a>Способ определения разрешений (службы Master Data Services)
@@ -49,7 +49,7 @@ ms.locfileid: "73729186"
   
 -   Всем объектам на более высоком уровне предоставляется неявное разрешение на чтение. Дополнительные сведения о неявном разрешении на чтение см. в разделе [Навигационный доступ (службы Master Data Services)](../master-data-services/navigational-access-master-data-services.md).  
   
- В этом примере сущности назначается разрешение **Чтение**. Это же разрешение наследуется и атрибутом сущности, находящимся на более низком уровне структуры модели. Модель предоставляет неявное разрешение на чтение этой сущности и ее атрибуту. Другая сущность модели не имеет явно назначенного разрешения и не наследует никаких разрешений, поэтому доступ для нее неявно закрыт.  
+ В этом примере сущности назначается разрешение **Чтение** . Это же разрешение наследуется и атрибутом сущности, находящимся на более низком уровне структуры модели. Модель предоставляет неявное разрешение на чтение этой сущности и ее атрибуту. Другая сущность модели не имеет явно назначенного разрешения и не наследует никаких разрешений, поэтому доступ для нее неявно закрыт.  
   
  ![mds_conc_inheritance_model](../master-data-services/media/mds-conc-inheritance-model.gif "mds_conc_inheritance_model")  
   
@@ -69,17 +69,17 @@ ms.locfileid: "73729186"
  ![mds_conc_inheritance_hierarchy](../master-data-services/media/mds-conc-inheritance-hierarchy.gif "mds_conc_inheritance_hierarchy")  
   
 ### <a name="step-3-the-intersection-of-attribute-and-member-permissions-is-determined"></a>Шаг 3. Определяется пересечение разрешений для атрибутов и элементов.  
- Если действующие разрешения для атрибутов отличаются от действующих разрешений для элементов, разрешения должны определяться для каждого отдельного значения атрибута. Дополнительные сведения см. в разделе [Overlapping Model and Member Permissions &#40;Master Data Services&#41;](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md).  
+ Если действующие разрешения для атрибутов отличаются от действующих разрешений для элементов, разрешения должны определяться для каждого отдельного значения атрибута. Дополнительные сведения см. в разделе [Перекрытие разрешений моделей и элементов (службы основных данных)](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md).  
   
 ## <a name="permissions-assigned-to-multiple-groups"></a>Разрешения, назначенные нескольким группам  
  Если пользователь принадлежит одной или более группам и разрешения назначены как пользователю, так и группам, рабочий процесс определения усложняется.  
   
  ![mds_conc_security_group_overlap](../master-data-services/media/mds-conc-security-group-overlap.gif "mds_conc_security_group_overlap")  
   
- В этом случае пересечения разрешений пользователя и группы должны определяться, прежде чем можно будет сравнивать разрешения для объектов модели и элементов иерархии. Дополнительные сведения см. в разделе [Overlapping User and Group Permissions &#40;Master Data Services&#41;](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md).  
+ В этом случае пересечения разрешений пользователя и группы должны определяться, прежде чем можно будет сравнивать разрешения для объектов модели и элементов иерархии. Дополнительные сведения см. в разделе [Перекрытие разрешений пользователей и групп (службы основных данных)](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md).  
   
-## <a name="see-also"></a>См. также статью  
- [Перекрытие разрешений пользователей и групп (службы основных данных)](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)   
- [Перекрытие разрешений моделей и элементов (службы Master Data Services)](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Перекрывающиеся разрешения пользователей и групп &#40;Master Data Services&#41;](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)   
+ [Перекрытие разрешений модели и элемента &#40;Master Data Services&#41;](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   
   

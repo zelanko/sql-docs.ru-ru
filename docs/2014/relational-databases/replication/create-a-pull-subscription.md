@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f8868957d7c479de3a51a599deed42c34d6676eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721596"
 ---
 # <a name="create-a-pull-subscription"></a>Создание подписки по запросу
@@ -44,7 +44,7 @@ ms.locfileid: "62721596"
   
     -   Для подписок на публикации слиянием укажите учетные данные на странице **Безопасность агента слияния** .  
   
-     Дополнительные сведения о разрешениях, необходимых каждому агенту, см. в разделе [Модель безопасности агента репликации](security/replication-agent-security-model.md).  
+     Дополнительные сведения о разрешениях, необходимых каждому агенту, см. в статье [Replication Agent Security Model](security/replication-agent-security-model.md) (Модель безопасности агента репликации).  
   
 -   Указать расписание синхронизации и время, когда подписчик должен быть инициализирован.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "62721596"
   
 #### <a name="to-create-a-pull-subscription-from-the-publisher"></a>Создание подписки по запросу с издателя  
   
-1.  Подключитесь к издателю в среде [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]и раскройте узел сервера.  
+1.  Подключитесь к издателю [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]в, а затем разверните узел сервера.  
   
 2.  Раскройте папку **Репликация** , а затем папку **Локальные публикации** .  
   
@@ -89,24 +89,24 @@ ms.locfileid: "62721596"
   
     -   Если в результирующем наборе значение параметра **allow_pull** равно **1**, подписки по запросу поддерживаются.  
   
-    -   Если значение **allow_pull** — **0**, выполнение [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), указав **allow_pull**для **@property** и `true` для **@value** .  
+    -   Если значение **allow_pull** равно **0**, выполните [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), указав **allow_pull** **@property** для и. `true` **@value**  
   
-2.  На подписчике выполните процедуру [sp_addpullsubscription (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql). Укажите параметр **@publisher** и **@publication** . Сведения об обновлении подписок см. в разделе [Создание обновляемых подписок для публикаций транзакций](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
+2.  На подписчике выполните процедуру [sp_addpullsubscription (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql). Укажите **@publisher** и **@publication**. Сведения об обновлении подписок см. в разделе [Создание обновляемых подписок для публикаций транзакций](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
-3.  На подписчике выполните процедуру [sp_addpullsubscription_agent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Укажите следующее.  
+3.  На подписчике выполните процедуру [sp_addpullsubscription_agent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Укажите следующие значения.  
   
-    -   Значения параметров **@publisher** , **@publisher_db** и **@publication** .  
+    -   Параметры **@publisher**, **@publisher_db**и **@publication** .  
   
-    -   Значения параметров [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, от имени которого на подписчике будет запущен агент распространителя, в качестве значений параметров **@job_login** и **@job_password** .  
+    -   Учетные данные [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, с которыми работает агент распространения на подписчике **@job_login** , **@job_password**для и.  
   
         > [!NOTE]  
-        >  Для соединений, производимых с использованием встроенной проверки подлинности Windows, в параметрах **@job_login** и **@job_password** . Агент распространителя всегда создает локальное соединение с подписчиком с использованием встроенной проверки подлинности Windows. По умолчанию агент установит соединение с распространителем с помощью встроенной проверки подлинности Windows.  
+        >  Соединения, выполняемые с помощью встроенной проверки подлинности Windows **@job_login** , **@job_password**всегда используют учетные данные Windows, указанные в и. Агент распространителя всегда создает локальное соединение с подписчиком с использованием встроенной проверки подлинности Windows. По умолчанию агент установит соединение с распространителем с помощью встроенной проверки подлинности Windows.  
   
-    -   (Необязательно) Значение **0** для **@distributor_security_mode** и [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сведения об имени входа **@distributor_login** и **@distributor_password** , если необходимо использовать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности при подключении к распространителю.  
+    -   (Необязательно.) Значение **0** в качестве значения параметра **@distributor_security_mode** и данные входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для параметров **@distributor_login** и **@distributor_password**, если для соединения с распространителем нужно использовать проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-    -   Расписание задания агента распространителя для этой подписки. Дополнительные сведения см. в статье [Specify Synchronization Schedules](specify-synchronization-schedules.md).  
+    -   Расписание задания агента распространителя для этой подписки. Дополнительные сведения см. в разделе [Указание расписаний синхронизации](specify-synchronization-schedules.md).  
   
-4.  Чтобы зарегистрировать подписку по запросу, выполните на издателе хранимую процедуру [sp_addsubscription (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Задайте значения для параметров **@publication** , **@subscriber** и **@destination_db** . В качестве значения параметра **@subscription_type** в качестве значения параметра **@subscription_type** .  
+4.  Чтобы зарегистрировать подписку по запросу, выполните на издателе хранимую процедуру [sp_addsubscription (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Укажите **@publication**, **@subscriber**и **@destination_db**. В качестве значения параметра **@subscription_type** в качестве значения параметра **@subscription_type**.  
   
 #### <a name="to-create-a-pull-subscription-to-a-merge-publication"></a>Создание подписки по запросу на публикацию слиянием  
   
@@ -114,34 +114,34 @@ ms.locfileid: "62721596"
   
     -   Если в результирующем наборе значение параметра **allow_pull** равно **1**, подписки по запросу поддерживаются.  
   
-    -   Если значение **allow_pull** — **0**, выполнение [sp_changemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), указав **allow_pull** для **@property** и `true` для **@value** .  
+    -   Если значение **allow_pull** равно **0**, выполните [sp_changemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), указав **allow_pull** **@property** для и. `true` **@value**  
   
-2.  На подписчике выполните процедуру [sp_addmergepullsubscription (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql). Укажите значения параметров **@publisher** , **@publisher_db** , **@publication** , а также следующих:  
+2.  На подписчике выполните процедуру [sp_addmergepullsubscription (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql). Укажите **@publisher**, **@publisher_db**, **@publication**и следующие параметры:  
   
-    -   **@subscriber_type** — укажите значение **local** для клиентской подписки или **global** — для серверной;  
+    -   **@subscriber_type**— Укажите **локальную** для клиентской подписки и **глобальную** для серверной подписки.  
   
-    -   **@subscription_priority** — укажите приоритет подписки (от**0,00** до **99,99**). Это значение необходимо указывать только для серверной подписки.  
+    -   **@subscription_priority**— Укажите приоритет подписки (**0,00** – **99,99**). Это значение необходимо указывать только для серверной подписки.  
   
-         Дополнительные сведения см. в статье [Расширенное обнаружение и разрешение конфликтов репликации слиянием](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
+         Дополнительные сведения см. в разделе [Расширенная репликация слиянием: обнаружение и разрешение конфликтов](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
-3.  На подписчике выполните процедуру [sp_addmergepullsubscription_agent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql). Укажите значения следующих параметров.  
+3.  На подписчике выполните процедуру [sp_addmergepullsubscription_agent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql). Укажите следующие параметры:  
   
-    -   **@publisher** , **@publisher_db** и **@publication** .  
+    -   **@publisher**, **@publisher_db**и **@publication**.  
   
-    -   учетные данные пользователя Windows, от имени которого на подписчике будет запущен агент слияния, в качестве значений параметров **@job_login** и **@job_password** .  
+    -   Учетные данные Windows, с которыми работает агент слияния на подписчике **@job_login** , **@job_password**для и.  
   
         > [!NOTE]  
-        >  Для соединений, производимых с использованием встроенной проверки подлинности Windows, в параметрах **@job_login** и **@job_password** . Агент слияния всегда создает локальное соединение с подписчиком с использованием встроенной проверки подлинности Windows. По умолчанию агент установит соединение с распространителем и издателем с помощью встроенной проверки подлинности Windows.  
+        >  Соединения, выполняемые с помощью встроенной проверки подлинности Windows **@job_login** , **@job_password**всегда используют учетные данные Windows, указанные в и. Агент слияния всегда создает локальное соединение с подписчиком с использованием встроенной проверки подлинности Windows. По умолчанию агент установит соединение с распространителем и издателем с помощью встроенной проверки подлинности Windows.  
   
-    -   (Необязательно.) Значение **0** в качестве значения параметра **@distributor_security_mode** и данные входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для параметров **@distributor_login** и **@distributor_password** , если для соединения с распространителем нужно использовать проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+    -   (Необязательно.) Значение **0** в качестве значения параметра **@distributor_security_mode** и данные входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для параметров **@distributor_login** и **@distributor_password**, если для соединения с распространителем нужно использовать проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-    -   (Необязательно.) Значение **0** в качестве значения параметра **@publisher_security_mode** и данные входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для параметров **@publisher_login** и **@publisher_password** , если для соединения с распространителем нужно использовать проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+    -   (Необязательно.) Значение **0** в качестве значения параметра **@publisher_security_mode** и данные входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для параметров **@publisher_login** и **@publisher_password**, если для соединения с распространителем нужно использовать проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
     -   Расписание агента слияния для данной подписки. Дополнительные сведения см. в разделе [Создание обновляемых подписок для публикаций транзакций](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
-4.  На издателе выполните процедуру [sp_addmergesubscription (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql). Укажите значения параметров **@publication** , **@subscriber** , **@subscriber_db** и значение **@subscription_type** в качестве значения параметра **@subscription_type** . После этого подписка по запросу будет зарегистрирована.  
+4.  На издателе выполните процедуру [sp_addmergesubscription (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql). Укажите **@publication**значения **@subscriber**, **@subscriber_db**, и значение **Pull** для **@subscription_type**. После этого подписка по запросу будет зарегистрирована.  
   
-###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
+###  <a name="TsqlExample"></a>Примеры (Transact-SQL)  
  В следующем примере создается подписка по запросу на публикацию транзакций. Первый пакет выполняется на подписчике, а второй — на издателе. Имя входа и пароль предоставляются во время выполнения переменными сценария sqlcmd.  
   
  [!code-sql[HowTo#sp_addtranpullsubscriptionagent](../../snippets/tsql/SQL15/replication/howto/tsql/createtranpullsub.sql#sp_addtranpullsubscriptionagent)]  
@@ -163,13 +163,13 @@ ms.locfileid: "62721596"
   
 2.  На основе соединения с издателем, созданного на шаге 1, создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.TransPublication> . Задайте свойства <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> и <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-3.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Если метод возвращает значение `false`, то либо неверно определены свойства, указанные на шаге 2, либо публикация не существует на сервере.  
+3.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если метод возвращает значение `false`, то либо неверно определены свойства, указанные на шаге 2, либо публикация не существует на сервере.  
   
 4.  Выполните операцию «поразрядное логическое И» (`&` в Visual C# и `And` в Visual Basic) над свойством <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> и флагом <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>. Если результат равен <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>, присвойте свойству <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> результат операции «поразрядное логическое ИЛИ» (`|` в Visual C# и `Or` в Visual Basic) над свойством <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> и флагом <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>. Затем вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> , чтобы включить подписку по запросу.  
   
-5.  Если база данных подписки не существует, создайте ее с помощью класса <xref:Microsoft.SqlServer.Management.Smo.Database> . Дополнительные сведения см. в статье [Creating, Altering, and Removing Databases](../server-management-objects-smo/tasks/creating-altering-and-removing-databases.md) (Создание, изменение и удаление баз данных).  
+5.  Если база данных подписки не существует, создайте ее с помощью класса <xref:Microsoft.SqlServer.Management.Smo.Database> . Дополнительные сведения см. в разделе [Создание, изменение и удаление баз данных](../server-management-objects-smo/tasks/creating-altering-and-removing-databases.md).  
   
-6.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.TransPullSubscription> .  
+6.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.TransPullSubscription>.  
   
 7.  Укажите следующие свойства подписки:  
   
@@ -183,10 +183,10 @@ ms.locfileid: "62721596"
   
     -   имя публикации в свойстве <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>;  
   
-    -   данные учетной записи пользователя [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, от имени которого на подписчике будет запущен агент распространителя, в свойствах <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A>, <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> или <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> объекта <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>. Эта учетная запись будет использоваться для создания локальных соединений с подписчиком, а также для удаленных соединений с использованием проверки подлинности Windows.  
+    -   данные учетной записи пользователя <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> Windows, от имени которого на подписчике будет запущен агент распространителя, в свойствах <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A>, <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> или <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> объекта [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Эта учетная запись будет использоваться для создания локальных соединений с подписчиком, а также для удаленных соединений с использованием проверки подлинности Windows.  
   
         > [!NOTE]  
-        >  Указывать свойство <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> необязательно, если подписка создается членом предопределенной роли сервера `sysadmin`, однако рекомендуется это сделать. В этом случае агент будет выполнять олицетворение учетную запись агента SQL Server. Дополнительные сведения см. в статье [Модель безопасности агента репликации](security/replication-agent-security-model.md).  
+        >  Указывать свойство <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> необязательно, если подписка создается членом предопределенной роли сервера `sysadmin`, однако рекомендуется это сделать. В этом случае агент будет выполнять олицетворение учетную запись агента SQL Server. Дополнительные сведения см. в разделе [модель безопасности агента репликации](security/replication-agent-security-model.md).  
   
     -   (необязательно) значение `true` в свойстве <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A>, чтобы создать задание агента, используемое для синхронизации подписки. Если указано значение `false` (значение по умолчанию), подписку можно синхронизировать только программно, и поэтому придется указывать дополнительные свойства <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent> при доступе к этому объекту из <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizationAgent%2A>. Дополнительные сведения см. в статье [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md).  
   
@@ -205,13 +205,13 @@ ms.locfileid: "62721596"
   
 2.  На основе соединения с издателем, созданного на шаге 1, создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergePublication> . Задайте свойства <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>и <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-3.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Если метод возвращает значение `false`, то либо неверно определены свойства, указанные на шаге 2, либо публикация не существует на сервере.  
+3.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если метод возвращает значение `false`, то либо неверно определены свойства, указанные на шаге 2, либо публикация не существует на сервере.  
   
 4.  Выполните операцию «поразрядное логическое И» (`&` в Visual C# и `And` в Visual Basic) над свойством <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> и флагом <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>. Если результат равен <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>, присвойте свойству <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> результат операции «поразрядное логическое ИЛИ» (`|` в Visual C# и `Or` в Visual Basic) над свойством <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> и флагом <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>. Затем вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> , чтобы включить подписку по запросу.  
   
-5.  Если база данных подписки не существует, создайте ее с помощью класса <xref:Microsoft.SqlServer.Management.Smo.Database> . Дополнительные сведения см. в статье [Creating, Altering, and Removing Databases](../server-management-objects-smo/tasks/creating-altering-and-removing-databases.md) (Создание, изменение и удаление баз данных).  
+5.  Если база данных подписки не существует, создайте ее с помощью класса <xref:Microsoft.SqlServer.Management.Smo.Database> . Дополнительные сведения см. в разделе [Создание, изменение и удаление баз данных](../server-management-objects-smo/tasks/creating-altering-and-removing-databases.md).  
   
-6.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergePullSubscription> .  
+6.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergePullSubscription>.  
   
 7.  Укажите следующие свойства подписки:  
   
@@ -225,10 +225,10 @@ ms.locfileid: "62721596"
   
     -   имя публикации в свойстве <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>;  
   
-    -   данные учетной записи пользователя [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, от имени которого на подписчике будет запущен агент слияния, в свойствах <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A>, <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> или <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> объекта <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>. Эта учетная запись будет использоваться для создания локальных соединений с подписчиком, а также для удаленных соединений с использованием проверки подлинности Windows.  
+    -   данные учетной записи пользователя <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> Windows, от имени которого на подписчике будет запущен агент слияния, в свойствах <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A>, <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> или <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> объекта [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Эта учетная запись будет использоваться для создания локальных соединений с подписчиком, а также для удаленных соединений с использованием проверки подлинности Windows.  
   
         > [!NOTE]  
-        >  Указывать свойство <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> необязательно, если подписка создается членом предопределенной роли сервера `sysadmin`, однако рекомендуется это сделать. В этом случае агент будет выполнять олицетворение учетную запись агента SQL Server. Дополнительные сведения см. в статье [Модель безопасности агента репликации](security/replication-agent-security-model.md).  
+        >  Указывать свойство <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> необязательно, если подписка создается членом предопределенной роли сервера `sysadmin`, однако рекомендуется это сделать. В этом случае агент будет выполнять олицетворение учетную запись агента SQL Server. Дополнительные сведения см. в разделе [модель безопасности агента репликации](security/replication-agent-security-model.md).  
   
     -   (необязательно) значение `true` в свойстве <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A>, чтобы создать задание агента, используемое для синхронизации подписки. Если указано значение `false` (значение по умолчанию), подписку можно синхронизировать только программно, и поэтому придется указывать дополнительные свойства <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent> при доступе к этому объекту из <xref:Microsoft.SqlServer.Replication.MergePullSubscription.SynchronizationAgent%2A>. Дополнительные сведения см. в статье [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md).  
   
@@ -240,7 +240,7 @@ ms.locfileid: "62721596"
   
 9. Используя экземпляр класса <xref:Microsoft.SqlServer.Replication.MergePublication> , созданный на шаге 2, вызовите метод <xref:Microsoft.SqlServer.Replication.MergePublication.MakePullSubscriptionWellKnown%2A> , чтобы зарегистрировать подписку по запросу для данного издателя. Если данная регистрация уже существует, возникнет исключение.  
   
-###  <a name="PShellExample"></a> Пример (объекты RMO)  
+###  <a name="PShellExample"></a>Пример (объекты RMO)  
  В следующем примере создается подписка по запросу на публикацию транзакций. Данные учетной записи [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows для задания агента распространителя предоставляются во время выполнения.  
   
  [!code-csharp[HowTo#rmo_CreateTranPullSub](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_createtranpullsub)]  
@@ -266,10 +266,10 @@ ms.locfileid: "62721596"
  [!code-vb[HowTo#rmo_vb_CreateMergePullSub_WebSync](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_createmergepullsub_websync)]  
   
 ## <a name="see-also"></a>См. также:  
- [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
+ [Основные понятия объекты Replication Management Objects](concepts/replication-management-objects-concepts.md)   
  [Просмотр и изменение свойств подписки по запросу](view-and-modify-pull-subscription-properties.md)   
- [Configure Web Synchronization](configure-web-synchronization.md)   
- [Subscribe to Publications](subscribe-to-publications.md)   
- [Рекомендации по защите репликации](security/replication-security-best-practices.md)  
+ [Настройка веб-синхронизации](configure-web-synchronization.md)   
+ [Подписка на публикации](subscribe-to-publications.md)   
+ [Рекомендации по обеспечению безопасности репликации](security/replication-security-best-practices.md)  
   
   

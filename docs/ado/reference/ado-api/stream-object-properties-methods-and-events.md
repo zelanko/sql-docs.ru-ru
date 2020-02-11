@@ -1,5 +1,5 @@
 ---
-title: Stream объект свойства, методы и события | Документация Майкрософт
+title: Свойства, методы и события объекта Stream | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,23 +13,23 @@ ms.assetid: 9b0eed90-c38c-4aa6-9040-5827f8c46b94
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 326019b8e870739954c059475d851dbac62e0b57
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930676"
 ---
-# <a name="stream-object-properties-methods-and-events"></a>Свойства объекта Stream, методы и события
+# <a name="stream-object-properties-methods-and-events"></a>Свойства, методы и события объекта Stream
 ## <a name="properties"></a>Свойства  
- [Свойство CharSet](../../../ado/reference/ado-api/charset-property-ado.md)  
+ [Charset, свойство](../../../ado/reference/ado-api/charset-property-ado.md)  
   
  [Свойство EOS](../../../ado/reference/ado-api/eos-property.md)  
   
- [Свойство LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md)  
+ [LineSeparator, свойство](../../../ado/reference/ado-api/lineseparator-property-ado.md)  
   
- [Свойство Mode](../../../ado/reference/ado-api/mode-property-ado.md)  
+ [Режим, свойство](../../../ado/reference/ado-api/mode-property-ado.md)  
   
- [Свойство position](../../../ado/reference/ado-api/position-property-ado.md)  
+ [Свойство "позиционирование"](../../../ado/reference/ado-api/position-property-ado.md)  
   
  [Свойство Size (объект Stream ADO)](../../../ado/reference/ado-api/size-property-ado-stream.md)  
   
@@ -38,15 +38,15 @@ ms.locfileid: "67930676"
  [Свойство Type (объект Stream ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)  
   
 ## <a name="methods"></a>Методы  
- [Cancel-метод](../../../ado/reference/ado-api/cancel-method-ado.md)  
+ [Метод Cancel](../../../ado/reference/ado-api/cancel-method-ado.md)  
   
  [Метод Close](../../../ado/reference/ado-api/close-method-ado.md)  
   
  [Метод CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md)  
   
- [Flush-метод](../../../ado/reference/ado-api/flush-method-ado.md)  
+ [Flush, метод](../../../ado/reference/ado-api/flush-method-ado.md)  
   
- [Loadfromfile-метод](../../../ado/reference/ado-api/loadfromfile-method-ado.md)  
+ [Метод Лоадфромфиле](../../../ado/reference/ado-api/loadfromfile-method-ado.md)  
   
  [Метод Open (объект Stream ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)  
   
@@ -69,5 +69,5 @@ ms.locfileid: "67930676"
 ## <a name="events"></a>События  
  Нет.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

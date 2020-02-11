@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 98ed499f4f2b751ef092a4091076478338173e17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081980"
 ---
 # <a name="define-time-periods-dimension-wizard"></a>Определение временных периодов (мастер измерений)
@@ -38,19 +38,19 @@ ms.locfileid: "66081980"
  **Первый день недели**  
  Выбрать день начала недели.  
   
- **Периоды времени**  
+ **Временные периоды**  
  Выбрать временные периоды для календарного года измерения времени.  
   
 > [!NOTE]  
 >  Необходимо указать временной период `Date`.  
   
- **Язык для отображения имен элементов времени**  
+ **Язык отображения имен элементов времени**  
  Выбрать язык отображения имен элементов времени.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справка F1 мастера измерений](dimension-wizard-f1-help.md)   
- [Измерения &#40;службы Analysis Services — многомерные данные&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+ [Измерения &#40;Analysis Services многомерных данных&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Измерения в многомерных моделях](multidimensional-models/dimensions-in-multidimensional-models.md)   
- [Выбор календарей &#40;мастер измерений&#41;](select-calendars-dimension-wizard.md)  
+ [Мастер выбора календарей &#40;измерения&#41;](select-calendars-dimension-wizard.md)  
   
   

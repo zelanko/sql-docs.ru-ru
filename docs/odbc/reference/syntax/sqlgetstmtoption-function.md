@@ -20,22 +20,22 @@ ms.assetid: d69c2668-4260-4722-8c34-1c51caac307f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2f99078de7fccdd662fd0056b92453780da445d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68030676"
 ---
 # <a name="sqlgetstmtoption-function"></a>Функция SQLGetStmtOption
-**Соответствие стандартам**  
- Представленные версии: Соответствие стандартам 1.0 ODBC: Устарело  
+**Соответствия**  
+ Введенная версия: соответствие стандартам ODBC 1,0: не рекомендуется  
   
  **Сводка**  
- В ODBC 3. *x*, функция ODBC 2.0 **SQLGetStmtOption** был заменен классом **SQLGetStmtAttr**. Дополнительные сведения см. в разделе [SQLGetStmtAttr](../../../odbc/reference/syntax/sqlgetstmtattr-function.md).  
+ В ODBC 3. *x*, функция ODBC 2,0 **SQLGetStmtOption** была заменена на **SQLGetStmtAttr**. Дополнительные сведения см. в разделе [SQLGetStmtAttr](../../../odbc/reference/syntax/sqlgetstmtattr-function.md).  
   
 > [!NOTE]  
->  Дополнительные сведения о какие диспетчера драйверов сопоставляет эту функцию, чтобы при ODBC 2. *x* при работе с ODBC 3. *x* драйвера, см. в разделе [сопоставление устаревшей функции](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) в приложении G: Рекомендации по драйверов для обеспечения обратной совместимости.  
+>  Дополнительные сведения о том, что диспетчер драйверов сопоставляет эту функцию при использовании ODBC 2. Приложение *x* работает с ODBC 3. драйвер *x* см. в разделе [сопоставление устаревших функций](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) в приложении G: рекомендации по драйверу для обеспечения обратной совместимости.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовков ODBC](../../../odbc/reference/install/odbc-header-files.md)

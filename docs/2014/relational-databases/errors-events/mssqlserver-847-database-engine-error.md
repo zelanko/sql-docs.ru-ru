@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6f69e72bda33f361f168c3964411c969adffaa0e
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70874542"
 ---
 # <a name="mssqlserver_847"></a>MSSQLSERVER_847
@@ -25,15 +25,15 @@ ms.locfileid: "70874542"
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|847|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
-|Символическое имя|Н/Д|  
+|Символическое имя|Недоступно|  
 |Текст сообщения|Истекло время ожидания кратковременной блокировки: класс '%ls', идентификатор %p, тип %d, задача 0x%p: %d, время ожидания %d, флаги 0x%I64x, задача-владелец 0x%p. Продолжение ожидания.|  
   
 ## <a name="explanation"></a>Объяснение  
- Компьютер может перестать отвечать на запросы, истечением времени ожидания или невозможности выполнения обычных операций в то же время, которое [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] записывает ошибки кратковременной блокировки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] буфера в журнал ошибок.  
+ Возможно, компьютер не отвечает на запросы, истекло время ожидания либо происходит какой-то сбой в тот момент, когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] записывает ошибки кратковременной блокировки буфера в журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Если в сообщении в поле состояния указано значение 0x04, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ожидает операцию ввода-вывода. Кроме того, может быть получено сообщение [MSSQLSERVER_833](mssqlserver-833-database-engine-error.md) в журнале ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

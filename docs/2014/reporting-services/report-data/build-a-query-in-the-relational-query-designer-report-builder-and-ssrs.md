@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 901abf5be70f0b3c70b89b0415c59f19a9327b29
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107438"
 ---
 # <a name="build-a-query-in-the-relational-query-designer-report-builder-and-ssrs"></a>Построение запроса в конструкторе реляционных запросов (построитель отчетов и службы SSRS)
@@ -23,7 +23,7 @@ ms.locfileid: "66107438"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- Набор данных основан на источнике данных. От типа источника данных и среды создания отчетов зависит, какой конструктор запросов открывается при определении запроса набора данных. Функции конструктора запросов различаются в зависимости от базового источника данных. Дополнительные сведения о слоях данных см. в разделе [подключения к данным, источники данных и строки подключения в построителе отчетов](../data-connections-data-sources-and-connection-strings-in-report-builder.md) или [подключения к данным, источники данных и строки подключения в службах Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) .  
+ Набор данных основан на источнике данных. От типа источника данных и среды создания отчетов зависит, какой конструктор запросов открывается при определении запроса набора данных. Функции конструктора запросов различаются в зависимости от базового источника данных. Дополнительные сведения о слоях данных см. [в разделе подключения к данным, источники данных и строки подключения в построитель отчетов](../data-connections-data-sources-and-connection-strings-in-report-builder.md) или [подключения к данным, источники данных и строки подключения в Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
  Конструктор запросов можно использовать для выполнения следующих задач:  
   
@@ -83,20 +83,20 @@ ms.locfileid: "66107438"
   
 ### <a name="to-view-a-query-result-set"></a>Просмотр результирующего набора запроса  
   
-1.  На панели инструментов конструктора запросов нажмите кнопку **Выполнить запрос (!)** .  
+1.  На панели инструментов конструктора запросов нажмите кнопку **Выполнить запрос (!)**.  
   
     > [!NOTE]  
     >  В конструкторе запросов для выполнения запроса и получения результирующего набора используются учетные данные времени разработки. Дополнительные сведения см. в разделе [Указание учетных данных в построителе отчетов](../specify-credentials-in-report-builder.md).  
   
  Будет выполнен запрос к источнику данных, и в панели результатов запроса будут возвращены данные примера.  
   
-## <a name="see-also"></a>См. также  
- [Добавление данных в отчет &#40;построитель отчетов и службы SSRS&#41;](report-datasets-ssrs.md)   
+## <a name="see-also"></a>См. также:  
+ [Добавление данных в построитель отчетов &#40;отчетов и SSRS&#41;](report-datasets-ssrs.md)   
  [Добавление данных из внешних источников данных &#40;SSRS&#41;](add-data-from-external-data-sources-ssrs.md)   
- [Конструкторы запросов (построитель отчетов)](../query-designers-report-builder.md)   
- [Создание общего или внедренного набора данных (построитель отчетов и службы SSRS)](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
+ [Конструкторы запросов &#40;построитель отчетов&#41;](../query-designers-report-builder.md)   
+ [Создание общего набора данных или внедренного набора данных &#40;построитель отчетов и служб SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [Представление конструктора отчетов (построитель отчетов)](../report-builder/report-design-view-report-builder.md)   
- [Представление конструктора общих наборов данных (построитель отчетов)](../report-builder/shared-dataset-design-view-report-builder.md)   
+ [Представление конструктора общего набора данных &#40;построитель отчетов&#41;](../report-builder/shared-dataset-design-view-report-builder.md)   
  [Конструкторы запросов служб Reporting Services](../reporting-services-query-designers.md)  
   
   

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d6256ad8ee35b17336940d92ee7b0c917cb591ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480097"
 ---
 # <a name="backward-compatibility-master-data-services"></a>Обратная совместимость (Master Data Services)
@@ -22,8 +22,8 @@ ms.locfileid: "65480097"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
--   [Устаревшие функции Master Data Services в SQL Server 2014](deprecated-master-data-services-features.md)  
+-   [Устаревшие функции Master Data Services в SQL Server «2014»](deprecated-master-data-services-features.md)  
   
--   [Неподдерживаемые функции служб Master Data Services в SQL Server 2014](discontinued-master-data-services-features.md)  
+-   [Неподдерживаемые функции служб Master Data Services в SQL Server «2014»](discontinued-master-data-services-features.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Выберите диалоговое родительского элемента (службы Analysis Services — многомерные данные) | Документация Майкрософт
+title: Диалоговое окно «Выбор родительского элемента» (Analysis Services-многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5d8407f04061075bb19aa0207595dc1fffab92c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069311"
 ---
 # <a name="select-parent-member-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Выбор родительского элемента» (службы Analysis Services — многомерные данные)
@@ -28,11 +28,11 @@ ms.locfileid: "66069311"
 >  В определенных случаях, например если иерархия, выбранная в элементе **Дерево** , определена для атрибута, в котором не указаны никакие уровни, доступные для выбора родительские элементы могут отсутствовать.  
   
 ## <a name="options"></a>Параметры  
- **Дерево**  
+ **Приклад**  
  Выберите родительский элемент, который должен использоваться для вычисляемого элемента.  
   
-## <a name="see-also"></a>См. также  
- [Редактор форм вычисляемых элементов &#40;вкладка «вычисления», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [Конструкторы и диалоговые окна служб Analysis Services &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+## <a name="see-also"></a>См. также:  
+ [Редактор форм вычисляемых элементов вкладка «вычисления» &#40;, конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
+ [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

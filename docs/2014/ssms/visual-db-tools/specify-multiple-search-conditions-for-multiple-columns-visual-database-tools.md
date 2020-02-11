@@ -1,5 +1,5 @@
 ---
-title: Указание нескольких условий поиска для нескольких столбцов (визуальные инструменты баз данных) | Документация Майкрософт
+title: Указание нескольких условий поиска для нескольких столбцов (визуальные инструменты для баз данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3580f6365866ce752191e285b14f7d793be0cad0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204946"
 ---
 # <a name="specify-multiple-search-conditions-for-multiple-columns-visual-database-tools"></a>Указание нескольких условий поиска для нескольких столбцов (визуальные инструменты для баз данных)
@@ -75,10 +75,10 @@ ms.locfileid: "63204946"
   
 4.  Повторите шаги 2 и 3 для каждого дополнительного условия, которое нужно добавить.  
   
-## <a name="see-also"></a>См. также  
- [Объединение условий, если приоритет имеет оператор AND &#40;визуальных инструментах баз данных&#41;](combine-conditions-when-and-has-precedence-visual-database-tools.md)   
- [Объединение условий, если приоритет имеет оператор OR &#40;визуальных инструментах баз данных&#41;](combine-conditions-when-or-has-precedence-visual-database-tools.md)   
- [Обозначения для объединения условий поиска на панели критериев &#40;визуальных инструментах баз данных&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
+## <a name="see-also"></a>См. также:  
+ [Объединение условий, когда и имеет приоритет &#40;визуальных инструментов для баз данных&#41;](combine-conditions-when-and-has-precedence-visual-database-tools.md)   
+ [Объединение условий, когда или имеет приоритет &#40;визуальных инструментов для баз данных&#41;](combine-conditions-when-or-has-precedence-visual-database-tools.md)   
+ [Соглашения для комбинирования условий поиска на панели критериев &#40;визуальных инструментов для баз данных&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
  [Определение критериев поиска (визуальные инструменты для баз данных)](specify-search-criteria-visual-database-tools.md)  
   
   

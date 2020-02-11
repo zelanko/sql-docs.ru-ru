@@ -17,10 +17,10 @@ ms.assetid: 2c3615d8-4a1a-4162-b096-97aefe6ddc16
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fdcf5a9dcd462562886c7815b500c43145b749a3
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75322241"
 ---
 # <a name="sp_replmonitorchangepublicationthreshold-transact-sql"></a>sp_replmonitorchangepublicationthreshold (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "75322241"
 
   Изменяет пороговые метрики наблюдения за публикацией. Эта хранимая процедура, используемая для наблюдения за репликацией, выполняется на распространителе в базе данных распространителя.  
   
- ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [соглашения о синтаксисе Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -54,10 +54,10 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
   
 `[ @publication_type = ] publication_type`Тип публикации. *publication_type* имеет **тип int**и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |**0**|Публикация транзакций.|  
-|**одного**|Публикация моментальных снимков.|  
+|**1**|Публикация моментальных снимков.|  
 |**2**|Публикация слиянием.|  
 |NULL (по умолчанию)|Репликация пытается определить тип публикации.|  
   
@@ -65,9 +65,9 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
   
 |Значение|Имя метрики|  
 |-----------|-----------------|  
-|**одного**|**истечение срока действия** — отслеживает приближающийся срок действия подписок на публикации транзакций.|  
+|**1**|**истечение срока действия** — отслеживает приближающийся срок действия подписок на публикации транзакций.|  
 |**2**|**Задержка** — отслеживает производительность подписок на публикации транзакций.|  
-|**четырех**|**mergeexpiration** — следит за приближающимся истечением срока подписки на публикации слиянием.|  
+|**4**|**mergeexpiration** — следит за приближающимся истечением срока подписки на публикации слиянием.|  
 |**5.0**|**mergeslowrunduration** — отслеживает продолжительность синхронизации слиянием через подключения с низкой пропускной способностью (коммутируемое подключение).|  
 |**6**|**mergefastrunduration** — отслеживает продолжительность синхронизации слиянием через подключения локальной сети с высокой пропускной способностью.|  
 |**7**|**mergefastrunspeed** — следит за частотой синхронизации слиянием через подключения с высокой пропускной СПОСОБНОСТЬЮ (локальная сеть).|  
@@ -86,13 +86,13 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **sp_replmonitorchangepublicationthreshold** используется со всеми типами репликации.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли базы данных **db_owner** или **replmonitor** в базе данных распространителя могут выполнять **sp_replmonitorchangepublicationthreshold**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Программный мониторинг репликации](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

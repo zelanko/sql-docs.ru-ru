@@ -1,5 +1,5 @@
 ---
-title: dbo.sysoperators (Transact-SQL) | Документация Майкрософт
+title: dbo. сисоператорс (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,10 +20,10 @@ ms.assetid: c2afa20c-b15f-46ca-ae74-2eb65909409e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e4336fdeeb0867018e9a2a630f2212cc06259482
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67984905"
 ---
 # <a name="dbosysoperators-transact-sql"></a>dbo.sysoperators (Transact-SQL)
@@ -31,15 +31,15 @@ ms.locfileid: "67984905"
 
   Содержит по одной строке для каждого оператора агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|**идентификатор**|**int**|Идентификатор оператора.|  
-|**name**|**sysname**|Имя оператора.|  
-|**включен**|**tinyint**|Состояние рассылки уведомлений по предупреждениям (логическое значение). Если **1**, этот оператор может получать уведомления при появлении предупреждения.|  
-|**email_address**|**Nvarchar(100)**|Адрес электронной почты оператора.|  
+|**удостоверения**|**int**|Идентификатор оператора.|  
+|**name**|**имеет sysname**|Имя оператора.|  
+|**доступной**|**tinyint**|Состояние рассылки уведомлений по предупреждениям (логическое значение). Если значение равно **1**, этот оператор может получать уведомления при возникновении предупреждения.|  
+|**email_address**|**nvarchar (100)**|Адрес электронной почты оператора.|  
 |**last_email_date**|**int**|Дата последнего получения оператором уведомления о предупреждении по электронной почте.|  
 |**last_email_time**|**int**|Время последнего получения оператором уведомления о предупреждении по электронной почте.|  
-|**pager_address**|**Nvarchar(100)**|Адрес пейджера для данного оператора.|  
+|**pager_address**|**nvarchar (100)**|Адрес пейджера для данного оператора.|  
 |**last_pager_date**|**int**|Дата последнего получения оператором уведомления о предупреждении на пейджер.|  
 |**last_pager_time**|**int**|Время последнего получения оператором уведомления о предупреждении на пейджер.|  
 |**weekday_pager_start_time**|**int**|Время (с понедельника по пятницу), после которого данный оператор может получать уведомления о предупреждении, отправляемые на пейджер.|  
@@ -49,12 +49,12 @@ ms.locfileid: "67984905"
 |**sunday_pager_start_time**|**int**|Время (в воскресенье), после которого данный оператор может получать уведомления о предупреждениях, отправленные на пейджер.|  
 |**sunday_pager_end_time**|**int**|Время (в воскресенье), после которого данный оператор не может получать уведомления о предупреждении, отправленные на пейджер.|  
 |**pager_days**|**tinyint**|Битовая маска, определяющая дни недели, во время которых оператор может получать уведомления о предупреждении, отправленные на пейджер.|  
-|**netsend_address**|**Nvarchar(100)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**netsend_address**|**nvarchar (100)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**last_netsend_date**|**int**|Дата отправки последнего сетевого сообщения оператору с указанным идентификатором.|  
 |**last_netsend_time**|**int**|Время отправки последнего сетевого сообщения оператору с указанным идентификатором.|  
 |**category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
-## <a name="see-also"></a>См. также  
- [Таблицы агента SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Агент SQL Serverные таблицы &#40;&#41;Transact-SQL](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)  
   
   

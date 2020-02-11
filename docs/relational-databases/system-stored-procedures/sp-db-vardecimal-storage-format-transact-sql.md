@@ -23,13 +23,13 @@ ms.assetid: 9920b2f7-b802-4003-913c-978c17ae4542
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 28628ee5dc8ff1bde7906dfea7fca60470720e11
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108224"
 ---
-# <a name="spdbvardecimalstorageformat-transact-sql"></a>sp_db_vardecimal_storage_format (Transact-SQL)
+# <a name="sp_db_vardecimal_storage_format-transact-sql"></a>sp_db_vardecimal_storage_format (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Возвращает текущее состояние формата хранения vardecimal для базы данных либо включает этот формат в базе данных.  Начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], пользовательские базы данных всегда включены. Включение формата хранения vardecimal для баз данных необходимо только в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
@@ -47,21 +47,21 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @dbname=] '*имя_базы_данных*"  
- Имя базы данных, формат хранения которой нужно изменить. *database_name* — **sysname**, не имеет значения по умолчанию. Если имя базы данных пропущено, то возвращаются состояния формата хранения vardecimal для всех баз данных в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [ @dbname= ] "*database_name*"  
+ Имя базы данных, формат хранения которой нужно изменить. Аргумент *database_name* имеет тип **sysname**и не имеет значения по умолчанию. Если имя базы данных пропущено, то возвращаются состояния формата хранения vardecimal для всех баз данных в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [ @vardecimal_storage_format=] {«ON» | " ОТКЛЮЧЕНИЕ "}  
- Указывает, включен ли формат хранения vardecimal. Аргумент @vardecimal_storage_format может иметь значение ON или OFF. Параметр — **тип varchar(3) столбцы разделяются**, не имеет значения по умолчанию. Если имя базы данных указано, но аргумент @vardecimal_storage_format пропущен, то возвращается текущий параметр указанной базы данных. Этот аргумент не действует в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или более поздних версиях.  
+ [ @vardecimal_storage_format= ] {"НА" | " OFF "}  
+ Указывает, включен ли формат хранения vardecimal. Аргумент @vardecimal_storage_format может иметь значение ON или OFF. Параметр имеет тип **varchar (3)** и не имеет значения по умолчанию. Если имя базы данных указано, но аргумент @vardecimal_storage_format пропущен, то возвращается текущий параметр указанной базы данных. Этот аргумент не действует в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или более поздних версиях.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или 1 (неуспешное завершение)  
+ 0 (успех) или 1 (сбой).  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  Если формат хранения базы данных изменить нельзя, то хранимая процедура sp_db_vardecimal_storage_format возвращает ошибку. Если база данных уже находится в указанном состоянии, то хранимая процедура не вносит никаких изменений.  
   
- Если @vardecimal_storage_format аргумент не указан, возвращаются столбцы Database Name и Vardecimal State.  
+ Если @vardecimal_storage_format аргумент не указан, возвращает имя базы данных Columns и состояние vardecimal.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Процедура sp_db_vardecimal_storage_format возвращает состояние vardecimal, но не может изменить его.  
   
  Хранимая процедура sp_db_vardecimal_storage_format завершается неуспешно в следующих случаях:  
@@ -108,7 +108,7 @@ EXEC sp_tableoption 'Sales.SalesOrderDetail', 'vardecimal storage format', 1 ;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Хранимым процедурам ядра СУБД &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

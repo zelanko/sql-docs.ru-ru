@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c15c8920d2a0188a7dbe517149dc369dea95522e
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73760709"
 ---
 # <a name="profiling-odbc-driver-performance"></a>Создание профилей производительности драйвера ODBC
@@ -67,7 +67,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 -   Профиль приложения  
   
--   Соединение  
+-   Подключение  
   
 -   Сеть  
   
@@ -77,14 +77,14 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="application-profile-statistics"></a>Статистика профиля приложения  
   
-|Поле SQLPERF|Описание|  
+|Поле SQLPERF|Description|  
 |-------------------|-----------------|  
 |TimerResolution|Минимальное разрешение времени с часов сервера в миллисекундах. Обычно возвращается 0 (ноль). Это значение учитывается только в тех случаях, когда сообщается большое число. Если минимальное разрешение часов сервера больше, чем вероятные интервалы какой-либо статистики по таймеру, эти статистические данные могут оказаться завышенными.|  
 |SQLidu|Количество инструкций INSERT, DELETE и UPDATE после SQL_PERF_START.|  
 |SQLiduRows|Количество инструкций INSERT, DELETE и UPDATE после SQL_PERF_START.|  
 |SQLSelects|Количество инструкций SELECT, обработанных после SQL_PERF_START.|  
 |SQLSelectRows|Количество строк, выбранных после SQL_PERF_START.|  
-|Транзакции|Количество пользовательских транзакций после SQL_PERF_START, включая откаты. Если приложение ODBC запущено с параметром SQL_AUTOCOMMIT_ON, каждая команда считается транзакцией.|  
+|Transactions|Количество пользовательских транзакций после SQL_PERF_START, включая откаты. Если приложение ODBC запущено с параметром SQL_AUTOCOMMIT_ON, каждая команда считается транзакцией.|  
 |SQLPrepares|Число вызовов [функций SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360) после SQL_PERF_START.|  
 |ExecDirects|Число вызовов **SQLExecDirect** после SQL_PERF_START.|  
 |SQLExecutes|Число вызовов **SQLExecute** после SQL_PERF_START.|  
@@ -100,13 +100,13 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |CurrentStmtCount|Количество дескрипторов инструкций, открытых в настоящее время для всех открытых в драйвере соединений.|  
 |MaxOpenStmt|Максимальное количество одновременно открытых дескрипторов инструкций после SQL_PERF_START.|  
 |SumOpenStmt|Количество дескрипторов инструкций, открытых после SQL_PERF_START.|  
-|**Статистика подключения:**||  
+|**Статистика соединений**||  
 |CurrentConnectionCount|Текущее количество активных дескрипторов соединений, открытых приложением для сервера.|  
 |MaxConnectionsOpened|Максимальное количество одновременно открытых дескрипторов соединений после SQL_PERF_START.|  
 |SumConnectionsOpened|Общее количество дескрипторов соединений, открытых после SQL_PERF_START.|  
 |SumConnectionTime|Общее количество времени, в течение которого были открыты соединения, после SQL_PERF_START. Например, если приложение открыло 10 соединений и поддерживало каждое соединение в течение 5 секунд, значение SumConnectionTime будет равно 50 секунд.|  
 |AvgTimeOpened|Равно SumConnectionsOpened/ SumConnectionTime.|  
-|**Статистика сети:**||  
+|**Сетевая статистика**||  
 |ServerRndTrips|Количество раз, когда драйвер отправлял команды на сервер и получал ответ.|  
 |BuffersSent|Количество пакетов потока табличных данных (TDS), отправленных драйвером в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] после SQL_PERF_START. Большие команды могут занимать несколько буферов, поэтому если на сервер отправляется большая команда, занимающая шесть пакетов, значение ServerRndTrips увеличивается на 1, а значение BuffersSent — на 6.|  
 |BuffersRec|Количество пакетов потока табличных данных, полученных драйвером от [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] после начала использования драйвера приложением.|  
@@ -115,13 +115,13 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="time-statistics"></a>Статистика по времени  
   
-|Поле SQLPERF|Описание|  
+|Поле SQLPERF|Description|  
 |-------------------|-----------------|  
 |msExecutionTime|Общее количество времени, затраченного драйвером на обработку после SQL_PERF_START, включая время на ожидание ответов от сервера.|  
 |msNetworkServerTime|Общее количество времени, затраченного драйвером на ожидание ответов от сервера.|  
   
-## <a name="see-also"></a>См. также статью  
- [SQL Server Native Client &#40; &#41; ODBC](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
- [Разделы &#40;руководства по профилированию драйверов ODBC в ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
+## <a name="see-also"></a>См. также:  
+ [SQL Server Native Client &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [Инструкции по профилированию производительности драйвера ODBC &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   
   

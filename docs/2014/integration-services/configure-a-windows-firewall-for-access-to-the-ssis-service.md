@@ -1,5 +1,5 @@
 ---
-title: Настройка брандмауэра Windows для доступа к службам SSIS | Документация Майкрософт
+title: Настройка брандмауэра Windows для доступа к службе SSIS | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -19,23 +19,23 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b2c6a19eb44b1d53fe87bef0183bdafbb3ec105b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060844"
 ---
 # <a name="configure-a-windows-firewall-for-access-to-the-ssis-service"></a>Настройка параметров брандмауэра Windows для доступа к службам SSIS
     
 > [!IMPORTANT]  
->  В данном разделе описывается компонент [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] — служба Windows для управления пакетами служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] поддерживает эту службу для обеспечения обратной совместимости с более ранними версиями служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], на сервере служб Integration Services можно управлять пакетами.  
+>  В данном разделе описывается компонент [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] — служба Windows для управления пакетами служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]поддерживает службу для обеспечения обратной совместимости с более ранними выпусками [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], на сервере служб Integration Services можно управлять пакетами.  
   
  Система брандмауэров Windows предотвращает несанкционированный доступ к ресурсам компьютера через сетевое подключение. Чтобы получить доступ к службам [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] через этот брандмауэр, необходимо настроить брандмауэр для разрешения доступа.  
   
 > [!IMPORTANT]  
 >  Чтобы управлять пакетами, которые хранятся на удаленном сервере, не нужно соединятся с экземпляром службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на этом удаленном сервере. Вместо этого измените файл конфигурации для службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] таким образом, чтобы среда [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] отображала пакеты, хранимые на удаленном сервере. Дополнительные сведения см. в разделе [Configuring the Integration Services Service &#40;SSIS Service&#41;](configuring-the-integration-services-service-ssis-service.md).  
   
- Служба [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] использует протокол DCOM. Дополнительные сведения о работе протокола DCOM через брандмауэры, см. в статье "[с помощью использование DCOM с брандмауэром](https://manualzz.com/doc/19762578/using-distributed-com-with-firewalls-by-michael-nelson-in...)«.  
+ Служба [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] использует протокол DCOM. Дополнительные сведения о работе протокола DCOM через брандмауэры см. в статье "[использование распределенного com с брандмауэрами](https://manualzz.com/doc/19762578/using-distributed-com-with-firewalls-by-michael-nelson-in...)".  
   
  Существует множество систем брандмауэров. При запуске другого брандмауэра обратитесь к конкретной документации используемого брандмауэра.  
   
@@ -52,9 +52,9 @@ ms.locfileid: "66060844"
   
 #### <a name="to-configure-a-windowsfirewall-using-the-command-prompt-window"></a>Настройка брандмауэра Windows с помощью окна командной строки  
   
-1.  Выполните команду: `netsh firewall add portopening protocol=TCP port=135 name="RPC (TCP/135)" mode=ENABLE scope=SUBNET`  
+1.  Выполните команду `netsh firewall add portopening protocol=TCP port=135 name="RPC (TCP/135)" mode=ENABLE scope=SUBNET`.  
   
-2.  Выполните команду: `netsh firewall add allowedprogram program="%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn\MsDtsSrvr.exe" name="SSIS Service" scope=SUBNET`  
+2.  Выполните команду `netsh firewall add allowedprogram program="%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn\MsDtsSrvr.exe" name="SSIS Service" scope=SUBNET`.  
   
     > [!NOTE]  
     >  Чтобы включить брандмауэр для всех компьютеров, в том числе в сети Интернет, замените предложение «scope=SUBNET» на «scope=ALL».  
@@ -74,7 +74,8 @@ ms.locfileid: "66060844"
 5.  В диалоговом окне **Добавить порт** введите **RPC(TCP/135)** или другое описательное имя в поле **Имя**, введите **135** в поле **Номер порта** и выберите **TCP**.  
   
     > [!IMPORTANT]  
-    >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] всегда использует порт 135. Другой порт указать нельзя.  
+    >  
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] всегда использует порт 135. Другой порт указать нельзя.  
   
 6.  В диалоговом окне **Добавить порт** можно нажать кнопку **Изменить область** , чтобы изменить область по умолчанию.  
   
@@ -87,8 +88,8 @@ ms.locfileid: "66060844"
     > [!NOTE]  
     >  Для настройки брандмауэра Windows эта процедура использует элемент **Брандмауэр Windows** на панели управления. Элемент **Брандмауэр Windows** настраивает брандмауэр только для текущего сетевого профиля. Брандмауэр Windows также можно настроить с помощью программы командной строки **netsh** или оснастки консоли управления [!INCLUDE[msCoName](../includes/msconame-md.md)] (MMC) "Брандмауэр Windows в режиме повышенной безопасности". Дополнительные сведения об этих средствах см. в разделе [Настройка брандмауэра Windows для разрешения доступа к SQL Server](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
-## <a name="see-also"></a>См. также  
- [Настройка служб Integration Services (службы SSIS)](service/integration-services-service-ssis-service.md)   
- [Службы Integration Services (службы SSIS)](service/integration-services-service-ssis-service.md)  
+## <a name="see-also"></a>См. также:  
+ [Настройка службы Integration Services &#40;служб SSIS&#41;](service/integration-services-service-ssis-service.md)   
+ [Служба Integration Services служб SSIS &#40;&#41;](service/integration-services-service-ssis-service.md)  
   
   

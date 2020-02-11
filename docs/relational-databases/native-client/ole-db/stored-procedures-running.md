@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6329b0ff8f4d502916d2046e404fcecac8fc5869
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73759345"
 ---
 # <a name="stored-procedures---running"></a>Выполнение хранимых процедур
@@ -37,7 +37,7 @@ ms.locfileid: "73759345"
   
 -   дополнительные возможности.  
   
- Поставщик [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB поддерживает три механизма, которые [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использовать хранимые процедуры для возврата данных:  
+ Поставщик [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB собственного клиента поддерживает три механизма, с помощью которых [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] хранимые процедуры возвращают данные:  
   
 -   Каждая инструкция SELECT в хранимой процедуре формирует результирующий набор.  
   
@@ -47,13 +47,13 @@ ms.locfileid: "73759345"
   
  Приложение должно быть способно обработать все эти данные, возвращаемые хранимыми процедурами.  
   
- Разные поставщики OLE DB возвращают выходные параметры и значения на разных этапах во время обработки результатов. В случае с поставщиком [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента OLE DB выходные параметры и коды возврата не предоставляются до тех пор, пока потребитель не извлек или не отменил результирующие наборы, возвращенные хранимой процедурой. Коды возврата и выходные параметры возвращаются сервером в последнем пакете потока табличных данных.  
+ Разные поставщики OLE DB возвращают выходные параметры и значения на разных этапах во время обработки результатов. В случае с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщиком собственного клиента OLE DB выходные параметры и коды возврата не предоставляются до тех пор, пока потребитель не извлек или не отменил результирующие наборы, возвращенные хранимой процедурой. Коды возврата и выходные параметры возвращаются сервером в последнем пакете потока табличных данных.  
   
  Поставщики используют свойство DBPROP_OUTPUTPARAMETERAVAILABILITY для сообщения о возвращении выходных параметров и возвращаемых значений. Это свойство доступно в наборе свойств DBPROPSET_DATASOURCEINFO.  
   
- Поставщик [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента OLE DB задает для свойства DBPROP_OUTPUTPARAMETERAVAILABILITY значение DBPROPVAL_OA_ATROWRELEASE, чтобы указать, что коды возврата и выходные параметры не возвращаются до тех пор, пока результирующий набор не будет обработан или освобожден.  
+ Поставщик [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB собственного клиента задает для свойства DBPROP_OUTPUTPARAMETERAVAILABILITY значение DBPROPVAL_OA_ATROWRELEASE, чтобы указать, что коды возврата и выходные параметры не возвращаются до тех пор, пока результирующий набор не будет обработан или освобожден.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Хранимые процедуры](../../../relational-databases/native-client/ole-db/stored-procedures.md)  
   
   

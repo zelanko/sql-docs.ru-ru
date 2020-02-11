@@ -14,10 +14,10 @@ ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 065a8869eff0e88cee5bf0bb110a948f709743d7
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251668"
 ---
 # <a name="dqs-administration"></a>администрирование DQS
@@ -82,7 +82,7 @@ ms.locfileid: "75251668"
 |Описывает создание резервной копии и восстановление баз данных DQS.|[Резервное копирование и восстановление баз данных DQS](../data-quality-services/backing-up-and-restoring-dqs-databases.md)|  
 |Описывает, как отсоединять и присоединять базы данных DQS.|[Присоединение и отсоединение баз данных DQS](../data-quality-services/detaching-and-attaching-dqs-databases.md)|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Службы эталонных данных в DQS](../data-quality-services/reference-data-services-in-dqs.md)   
  [Управление файлами журналов DQS](../data-quality-services/manage-dqs-log-files.md)   
  [Manage DQS Databases](../data-quality-services/manage-dqs-databases.md)  

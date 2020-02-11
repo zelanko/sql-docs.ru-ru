@@ -15,38 +15,38 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6c3e4d6a7875969e254874fa3dde101d986a9f9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781319"
 ---
 # <a name="interfaces-ole-db"></a>Интерфейсы (OLE DB)
-  Помимо базовых интерфейсов OLE DB, предоставляемые по Microsoft данных Access Components (MDAC) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента реализует следующие дополнительные интерфейсы OLE DB:  
+  Помимо основных интерфейсов OLE DB, предоставляемых компонентами Microsoft Data Access Components (MDAC), поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента OLE DB реализует следующие дополнительные интерфейсы OLE DB:  
   
 -   [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)  
   
--   [IBCPSession2 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession2-ole-db.md)  
+-   [Метода IBCPSession2 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession2-ole-db.md)  
   
 -   [IColumnsRowset](../../relational-databases/native-client-ole-db-interfaces/icolumnsrowset.md)  
   
--   [ICommand &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/icommand-ole-db.md)  
+-   [&#40;ICommand OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/icommand-ole-db.md)  
   
 -   [ICommandWithParameters](../../relational-databases/native-client-ole-db-interfaces/icommandwithparameters.md)  
   
--   [IDBProperties &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/idbproperties-ole-db.md)  
+-   [Интерфейс IDBProperties &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/idbproperties-ole-db.md)  
   
 -   [IRowsetFastLoad &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md)  
   
 -   [ISSAbort &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/issabort-ole-db.md)  
   
--   [ISSAsynchStatus &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
+-   [Метод ISSAsynchStatus &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
   
 -   [ISSCommandWithParameters &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
 -   [ISQLServerErrorInfo &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/isqlservererrorinfo-ole-db.md)  
   
-## <a name="see-also"></a>См. также  
- [Собственный клиент SQL Server &#40;OLE DB&#41; ссылки](../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)  
+## <a name="see-also"></a>См. также:  
+ [Справочник по SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)  
   
   

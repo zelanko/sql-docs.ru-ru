@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 641815e90080f7fce0499a3682e641892d6140bf
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73773377"
 ---
 # <a name="metadata---parameter-and-rowset"></a>Метаданные — параметры и наборы строк
@@ -40,10 +40,10 @@ ms.locfileid: "73773377"
   
 |Тип параметра|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|-------------------|------------------|--------------|-----------------------------------------------------|  
-|date|DBTYPE_DBDATE|6|10|0|Clear|  
+|Дата|DBTYPE_DBDATE|6|10|0|Очистить|  
 |time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Присвойте параметру|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
-|datetime|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Очистить|  
+|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Очистить|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19, 21.27|0..7|Присвойте параметру|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28.34|0..7|Присвойте параметру|  
   
@@ -57,24 +57,24 @@ ms.locfileid: "73773377"
 |*пвсздатасаурцетипе*<br /><br /> (зависит от поставщика)|*пвсздатасаурцетипе*<br /><br /> (OLE DB, обычный)|*ulParamSize*|*bScale*|  
 |----------------------------------------------------|-------------------------------------------------|-------------------|--------------|  
 ||DBTYPE_DATE|6|Не учитывается|  
-|date|DBTYPE_DBDATE|6|Не учитывается|  
+|Дата|DBTYPE_DBDATE|6|Не учитывается|  
 ||DBTYPE_DBTIME|10|Не учитывается|  
 |time|DBTYPE_DBTIME2|10|0..7|  
 |smalldatetime||16|Не учитывается|  
-|datetime||16|Не учитывается|  
+|DATETIME||16|Не учитывается|  
 |datetime2 или DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|16|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|0..7|  
   
  Параметр *бпреЦисион* игнорируется.  
   
- Значение «DBPARAMFLAGS_SS_ISVARIABLESCALE» не учитывается при отправке данных на сервер. Приложения могут принудительно использовать унаследованные типы потоков табличных данных за счет применения имен типов "**datetime**" и "**smalldatetime**", характерных для поставщика. При соединении с серверами [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (или более поздней версии) используется формат "**datetime2**", а также при необходимости происходит неявное преобразование сервера, когда тип имеет имя "**datetime2**" или "DBTYPE_DBTIMESTAMP". *bScale* игнорируется, если используются имена типов "**DateTime**" или "**smalldatetime**", определенные поставщиком. В противном случае аппикатионс должен убедиться, что *bScale* задан правильно. Приложения, обновленные с MDAC и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], использующие "DBTYPE_DBTIMESTAMP", завершатся ошибкой, если они не *bScale* правильно. При соединении с экземплярами сервера версии ниже [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] значение параметра *bScale*, отличное от 0 или 3 с именем "DBTYPE_DBTIMESTAMP", является ошибкой. В этом случае будет возвращено E_FAIL.  
+ Значение «DBPARAMFLAGS_SS_ISVARIABLESCALE» не учитывается при отправке данных на сервер. Приложения могут принудительно использовать унаследованные типы потоков табличных данных за счет применения имен типов "**datetime**" и "**smalldatetime**", характерных для поставщика. При соединении с серверами [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (или более поздней версии) используется формат "**datetime2**", а также при необходимости происходит неявное преобразование сервера, когда тип имеет имя "**datetime2**" или "DBTYPE_DBTIMESTAMP". *bScale* игнорируется, если используются имена типов "**DateTime**" или "**smalldatetime**", определенные поставщиком. В противном случае аппикатионс должен убедиться, что *bScale* задан правильно. Приложения, обновленные с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] помощью MDAC и [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Native Client с, используют "DBTYPE_DBTIMESTAMP", будут завершаться ошибкой, если они не устанавливают *bScale* правильно. При соединении с экземплярами сервера версии ниже [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] значение параметра *bScale*, отличное от 0 или 3 с именем "DBTYPE_DBTIMESTAMP", является ошибкой. В этом случае будет возвращено E_FAIL.  
   
  Если ICommandWithParameters:: SetParameterInfo не вызывается, поставщик имплес тип сервера из типа привязки, как указано в IAccessor:: CreateAccessor следующим образом:  
   
 |Тип привязки|*пвсздатасаурцетипе*<br /><br /> (зависит от поставщика)|  
 |------------------|----------------------------------------------------|  
 |DBTYPE_DATE|datetime2(0)|  
-|DBTYPE_DBDATE|date|  
+|DBTYPE_DBDATE|Дата|  
 |DBTYPE_DBTIME|time(0)|  
 |DBTYPE_DBTIME2|time(7)|  
 |DBTYPE_DBTIMESTAMP|datetime2(7)|  
@@ -85,10 +85,10 @@ ms.locfileid: "73773377"
   
 |Тип столбца|DBCOLUMN_TYPE|DBCOLUM_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE, DBCOLUMN_DATETIMEPRECISION|DBCOLUMN_FLAGS, DBCOLUMNFLAGS_SS_ISVARIABLESCALE|  
 |-----------------|--------------------|-------------------------|-------------------------|--------------------------------------------------|---------------------------------------------------------|  
-|date|DBTYPE_DBDATE|6|10|0|Clear|  
+|Дата|DBTYPE_DBDATE|6|10|0|Очистить|  
 |time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Присвойте параметру|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
-|datetime|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Очистить|  
+|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Очистить|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Присвойте параметру|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Присвойте параметру|  
   
@@ -119,10 +119,10 @@ ms.locfileid: "73773377"
   
 |Тип параметра|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------------------|  
-|date|DBTYPE_DBDATE|6|10|0|Clear|  
+|Дата|DBTYPE_DBDATE|6|10|0|Очистить|  
 |time(1..7)|DBTYPE_DBTIME2|10|8, 10..16|0..7|Присвойте параметру|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
-|datetime|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Очистить|  
+|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Очистить|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Присвойте параметру|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Присвойте параметру|  
   
@@ -142,9 +142,9 @@ ms.locfileid: "73773377"
   
  Остальные флаги (DBCOLUMNFLAGS_ISNULLABLE, DBCOLUMNFLAGS_MAYBENULL, DBCOLUMNFLAGS_WRITE и DBCOLUMNFLAGS_WRITEUNKNOWN) можно задавать.  
   
- В *dwFlags* предусмотрен новый флаг DBCOLUMNFLAGS_SS_ISVARIABLESCALE, чтобы приложения могли определять тип сервера столбцов, где *wType* является DBTYPE_DBTIMESTAMP. Кроме того, для определения типа сервера необходимо использовать *bScale*.  
+ В *dwFlags* предусмотрен новый флаг DBCOLUMNFLAGS_SS_ISVARIABLESCALE, чтобы приложения могли определять тип сервера столбцов, где *wType* является DBTYPE_DBTIMESTAMP. *bScale* также необходимо использовать для задания типа сервера.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [OLE DB &#40;метаданных&#41;](https://msdn.microsoft.com/library/605e3be5-aeea-4573-9847-b866ed3c8bff)  
   
   

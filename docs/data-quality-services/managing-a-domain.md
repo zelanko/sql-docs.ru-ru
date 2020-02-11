@@ -10,10 +10,10 @@ ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 40482e599244f0e5102195cd0e34c3718a06d149
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75258440"
 ---
 # <a name="managing-a-domain"></a>Управление доменом
@@ -52,7 +52,7 @@ ms.locfileid: "75258440"
 |Изменять или дополнять значения в базе знаний.|[Изменение значений домена](../data-quality-services/change-domain-values.md)|  
 |Использовать правила проверки и стандартизации.|[Создание правила домена](../data-quality-services/create-a-domain-rule.md)|  
 |Использовать отношения для исправления терминов, которые являются частью значений в домене.|[Создание связей на основе термина](../data-quality-services/create-term-based-relations.md)|  
-|Завершать, закрывать или отменять операцию управления доменами.|[Завершение действия по управлению доменами](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)|  
+|Завершать, закрывать или отменять операцию управления доменами.|[Завершение операции по управлению доменами](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)|  
   
 ## <a name="related-tasks"></a>Связанные задачи  
   

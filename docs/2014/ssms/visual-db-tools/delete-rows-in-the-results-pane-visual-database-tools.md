@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8afa4b2dfb2b140d67644289e93aa2d96eb1697c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63460020"
 ---
 # <a name="delete-rows-in-the-results-pane-visual-database-tools"></a>Удаление строк на панели «Результаты» (визуальные инструменты для баз данных)
@@ -42,8 +42,8 @@ ms.locfileid: "63460020"
 > [!NOTE]  
 >  Если какие-либо из выбранных строк нельзя удалить из базы данных, ни одна из них не будет удалена, при этом выводится сообщение, указывающее, какие именно строки невозможно удалить.  
   
-## <a name="see-also"></a>См. также  
- [Создание запросов на удаление &#40;визуальных инструментах баз данных&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>См. также:  
+ [Создание запросов на удаление &#40;визуальных инструментов для баз данных&#41;](visual-database-tools.md)   
  [Определение критериев поиска (визуальные инструменты для баз данных)](specify-search-criteria-visual-database-tools.md)  
   
   

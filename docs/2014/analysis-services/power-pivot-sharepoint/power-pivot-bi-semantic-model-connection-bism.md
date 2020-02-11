@@ -1,5 +1,5 @@
 ---
-title: Соединение семантической модели бизнес-Аналитики PowerPivot (bism) | Документация Майкрософт
+title: Соединение семантической модели бизнес-аналитики PowerPivot (. BISM) | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/19/2015
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 846998acaa20b572760edcc67ecd24f8346a762a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071374"
 ---
 # <a name="powerpivot-bi-semantic-model-connection-bism"></a>Соединение семантической модели бизнес-аналитики PowerPivot (BISM)
@@ -22,12 +22,12 @@ ms.locfileid: "66071374"
   
  Создание семантической модели бизнес-аналитики и доступ к ней через SharePoint. Создание соединения семантической модели бизнес-аналитики позволяет использовать команды быстрого запуска соединения семантической модели с библиотекой. Команды быстрого запуска открывают новую книгу Excel или параметры файла соединения. При установке [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] также появится команда для создания отчета [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] .  
   
- ![Команда быстрого запуска BISM экрана](../media/ssas-bism-quicklaunch.gif "BISM снимок экрана: команда быстрого запуска")  
+ ![Снимок экрана: команда быстрого запуска BISM](../media/ssas-bism-quicklaunch.gif "Снимок экрана: команда быстрого запуска BISM")  
   
-##  <a name="bkmk_prereq"></a> Поддерживаемые базы данных  
+##  <a name="bkmk_prereq"></a>Поддерживаемые базы данных  
  Соединение семантической модели бизнес-аналитики указывает на данные табличной модели. Существует три источника этих данных.  
   
--   Табличный шаблон базы данных, запущенный на отдельном экземпляре служб Analysis Services в режиме табличного сервера. Развертывание отдельного экземпляра служб Analysis Services выполняется вне пределов фермы. Доступ к источникам данных, находящимся за пределами фермы, требуются дополнительные разрешения, которых можно узнать из этой статьи: [Создание соединения семантической модели в базу данных табличной модели](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
+-   Табличный шаблон базы данных, запущенный на отдельном экземпляре служб Analysis Services в режиме табличного сервера. Развертывание отдельного экземпляра служб Analysis Services выполняется вне пределов фермы. Для доступа к источникам данных, находящимся за пределами фермы, требуются дополнительные разрешения, о которых можно прочитать в следующем разделе: [Create a BI Semantic Model Connection to a Tabular Model Database](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
   
 -   Книги PowerPivot, сохраненные в SharePoint. Базы данных PowerPivot, внедренные в книги Excel, эквивалентны табличным шаблонам баз данных, запущенным на отдельном сервере Analysis Services в табличном режиме. Если PowerPivot для Excel и PowerPivot для SharePoint уже используются, то можно определить соединение семантической модели бизнес-аналитики, указывающее на книги PowerPivot из библиотеки SharePoint, и создавать отчеты [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] с использованием существующих данных PowerPivot.  Можно использовать книги, созданные в версиях PowerPivot для Excel в SQL Server 2008 R2 или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] .  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66071374"
 ## <a name="understanding-the-connection-sequence-for-bi-semantic-connections"></a>Основные сведения о последовательности соединения для семантической модели бизнес-аналитики  
  В этом разделе описывается работа соединений между различными клиентскими приложениями, в том числе Excel или клиентом отчетов Power View в SharePoint, и базой данных табличной модели, находящейся в пределах или вне пределов фермы SharePoint.  
   
- Все соединения с базой данных табличной модели устанавливаются с учетными данными пользователя, запрашивающего данные. Однако механизм соединения различается в зависимости от того, устанавливается ли оно в пределах фермы, состоит ли из одного или двух этапов и включен ли протокол Kerberos. Дополнительные сведения о проверке подлинности соединений между SharePoint и серверными источниками данных, см. в разделе [аутентификация в два этапа: Почему сбоя NTLM и Kerberos работает](https://go.microsoft.com/fwlink/?LinkId=237137).  
+ Все соединения с базой данных табличной модели устанавливаются с учетными данными пользователя, запрашивающего данные. Однако механизм соединения различается в зависимости от того, устанавливается ли оно в пределах фермы, состоит ли из одного или двух этапов и включен ли протокол Kerberos. Дополнительные сведения об аутентификации соединений между SharePoint и серверными источниками данных см. в разделе [Double-hop authentication: Why NTLM fails and Kerberos works](https://go.microsoft.com/fwlink/?LinkId=237137)(Двухэтапная аутентификация: почему Kerberos работает, а NTLM — нет).  
   
  **Соединение с табличными данными из Excel по сети**  
   
@@ -46,9 +46,9 @@ ms.locfileid: "66071374"
   
  На следующем рисунке показана эта последовательность соединения. Она начинается с запроса BISM-соединения, затем сведения о соединении загружаются на клиент, и, наконец, устанавливается одноэтапное соединение с базой данных. Соединение устанавливается с использованием учетных данных Windows пользователя Excel, обладающего разрешениями на чтение базы данных служб Analysis Services. Поскольку соединение устанавливается в один этап, то, даже когда включен протокол Kerberos, он необязателен в таком сценарии.  
   
- ![Подключения из Excel к базе данных табличной модели](../media/ssas-powerpivotbismconnection-1.gif "соединения из Excel с базой данных табличной модели")  
+ ![Соединения из Excel с табличной моделью шаблона базы данных](../media/ssas-powerpivotbismconnection-1.gif "Соединения из Excel с табличной моделью шаблона базы данных")  
   
- **Соединение с табличными данными из Power View по сети**  
+ **Подключение из Power View к табличным данным в сети**  
   
  Когда пользователь SharePoint выбирает соединение семантической модели бизнес-аналитики в библиотеке документов, то немедленно запускается приложение Power View (если оно установлено) и открывает соединение с базой данных табличной модели.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "66071374"
   
  На следующем рисунке показана последовательность, в которой для каждого соединения используется одно и то же удостоверение пользователя Windows. Последнее соединение со службами Analysis Services устанавливается удостоверением приложения службы Reporting Services без удостоверения пользователя Windows. Для этого используется параметр `effectiveusername`.  
   
- ![Олицетворенное соединение с табличной БД](../media/ssas-powerpivotbismconnection-2.gif "олицетворенное соединение с табличной базы данных")  
+ ![Олицетворенное соединение с табличной базой данных](../media/ssas-powerpivotbismconnection-2.gif "Олицетворенное соединение с табличной базой данных")  
   
  **Соединение с данными PowerPivot в SharePoint из Power View**  
   
@@ -69,16 +69,16 @@ ms.locfileid: "66071374"
  В этом случае все соединения устанавливаются в пределах фермы и нет необходимости применять протокол Kerberos или ограниченное делегирование.  
   
 ##  <a name="bkmk_rel"></a> Связанные задачи  
- [Добавление типа содержимого соединения семантической модели бизнес-Аналитики в библиотеку &#40;PowerPivot для SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md)  
+ [Добавление типа содержимого соединения семантической модели бизнес-аналитики в библиотеку &#40;PowerPivot для SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md)  
   
- [Создание подключения семантической модели бизнес-аналитики с книгой PowerPivot](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
+ [Создание соединения семантической модели бизнес-аналитики с книгой PowerPivot](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
   
- [Создание подключения между семантической моделью бизнес-аналитики и книгой PowerPivot](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
+ [Create a BI Semantic Model Connection to a Tabular Model Database](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   
  [Использование соединения семантической модели бизнес-аналитики в службах Excel или Reporting Services](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)  
   
-## <a name="see-also"></a>См. также  
- [Определение режима работы сервера экземпляра служб Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
+## <a name="see-also"></a>См. также:  
+ [Определение режима работы сервера для экземпляра Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
  [Подключение к службам Analysis Services](../instances/connect-to-analysis-services.md)  
   
   

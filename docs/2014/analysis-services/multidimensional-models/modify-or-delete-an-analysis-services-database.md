@@ -1,5 +1,5 @@
 ---
-title: Изменение или удаление базы данных служб Analysis Services | Документация Майкрософт
+title: Изменение или удаление базы данных Analysis Services | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f806501ffbb52f3839fa343a05a8db57917533ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073684"
 ---
 # <a name="modify-or-delete-an-analysis-services-database"></a>Изменение или удаление базы данных служб Analysis Services
@@ -34,7 +34,7 @@ ms.locfileid: "66073684"
  После развертывания базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] можно использовать среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , чтобы изменить режим олицетворения, используемый службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] при подключении к источникам данных, содержащимся в этой базе данных. Режим олицетворения позволяет задать контекст безопасности, используемый службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] при попытке подключения к источнику данных для обработки, просмотра или детализации.  
   
 ## <a name="modifying-databases-using-sql-server-data-tools"></a>Изменение баз данных с помощью средств SQL Server Data Tools  
- Можно использовать среду [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] в режиме проекта, чтобы изменить переводы для заголовка и описания проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , используемого для определения базы данных. Дополнительные сведения об использовании переводов в [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базы данных, см. в разделе [сценарии глобализации для многомерных служб Analysis Services](../globalization-scenarios-for-analysis-services-multiidimensional.md).  
+ Можно использовать среду [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] в режиме проекта, чтобы изменить переводы для заголовка и описания проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , используемого для определения базы данных. Дополнительные сведения об использовании переводов в [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базе данных см. в разделе [сценарии глобализации для Analysis Services многомерных](../globalization-scenarios-for-analysis-services-multiidimensional.md).  
   
  Можно также установить псевдонимы и статистические функции, связанные с типами счетов, используемыми атрибутами счетов в измерениях, содержащихся в базе данных. Псевдонимы позволяют выбрать специфическую терминологию, используемую в организации для типов счетов в плане счетов. Типы счетов используются элементами атрибута счетов для указания способов статистической обработки мер по каждому элементу с использованием статистических функций, указанных для каждого типа счета, содержащегося в базе данных. Дополнительные сведения об атрибутах учетной записи см. в статье [Атрибуты и иерархии атрибутов](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66073684"
   
 4.  В диалоговом окне **Удаление объекта** нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Документирование и работа со скриптами в базе данных служб Analysis Services](document-and-script-an-analysis-services-database.md)  
   
   

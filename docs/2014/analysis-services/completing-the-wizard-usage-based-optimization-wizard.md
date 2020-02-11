@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 87c638b2c5455a2f3a15051b0e62ee86685d4e5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087560"
 ---
 # <a name="completing-the-wizard-usage-based-optimization-wizard"></a>Завершение работы мастера (мастер оптимизации на основе использования)
@@ -26,7 +26,7 @@ ms.locfileid: "66087560"
  **Создать новую статистическую схему**  
  Позволяет создать новую статистическую схему и ввести ее имя.  
   
- **Слияние с существующей статистической схемой**  
+ **Объединить с существующей статистической схемой**  
  Позволяет осуществить слияние с существующей статистической схемой. Выберите из списка существующую статистическую схему.  
   
  **Будут изменены следующие секции**  
@@ -35,8 +35,8 @@ ms.locfileid: "66087560"
  **Обработать секции немедленно**  
  Выполняет обработку выбранных секций после завершения работы мастера.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справка F1 мастера оптимизации с учетом использования](usage-based-optimization-wizard-f1-help.md)   
- [Мастера служб Analysis Services &#40;многомерных данных&#41;](analysis-services-wizards-multidimensional-data.md)  
+ [Analysis Services мастера &#40;многомерных данных&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

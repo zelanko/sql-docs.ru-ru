@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: da8a5e5602b877c12284d8410f6b2a1c7da6bc58
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68889146"
 ---
 # <a name="content-types-dmx"></a>Типы содержимого (расширения интеллектуального анализа данных)
@@ -22,18 +22,18 @@ ms.locfileid: "68889146"
   
  Каждый алгоритм поддерживает определенные типы содержимого. Например, в упрощенном алгоритме Байеса ([!INCLUDE[msCoName](../includes/msconame-md.md)]) не используются непрерывные столбцы. Чтобы использовать непрерывный столбец в модели упрощенного алгоритма Байеса ([!INCLUDE[msCoName](../includes/msconame-md.md)]), необходимо дискретизировать данные в столбце. Некоторые алгоритмы для правильного функционирования требуют определенных типов содержимого. Например, для работы алгоритма [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series необходим ключевой столбец времени для определения времени, в течение которого собирались данные.  
   
- Полное описание типов [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] содержимого, поддерживаемых, см. в разделе [типы &#40;содержимого интеллектуальный анализ&#41;данных](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining).  
+ Полное описание типов содержимого, которые [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] поддерживает, см. в разделе [типы содержимого &#40;&#41;интеллектуального анализа данных ](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining).  
   
-## <a name="see-also"></a>См. также  
- [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
- [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../dmx/data-mining-extensions-dmx-reference.md)   
- [Элементы&#41; синтаксиса &#40;расширений интеллектуального анализа данных](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [Справочник по &#40;функциям&#41; DMX расширений интеллектуального анализа данных](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Справочник по &#40;операторам&#41; DMX расширений интеллектуального анализа данных](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Справочник по DMX &#40;&#41; -инструкциям расширений интеллектуального анализа данных](../dmx/data-mining-extensions-dmx-statements.md)   
- [&#41; Синтаксические обозначения расширений &#40;расширений интеллектуального анализа данных](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [DMX-функции &#40;общих прогнозирующих функций&#41;](../dmx/general-prediction-functions-dmx.md)   
- [Структура и методы использования прогнозирующих запросов расширений интеллектуального анализа данных](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
- [Общие сведения об инструкции SELECT в расширении интеллектуального анализа данных](../dmx/understanding-the-dmx-select-statement.md)  
+## <a name="see-also"></a>См. также:  
+ [Алгоритмы интеллектуального анализа данных &#40;Analysis Services — интеллектуальный анализ данных&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
+ [Расширения интеллектуального анализа данных &#40;Справочник по DMX&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Расширения интеллектуального анализа данных &#40;синтаксические&#41; DMX-элементы](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [Расширения интеллектуального анализа данных &#40;Справочник по функциям DMX&#41;](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Ссылки на операторы расширений интеллектуального анализа данных &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Расширения интеллектуального анализа данных &#40;Справочник по инструкции DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Расширения интеллектуального анализа данных &#40;синтаксические обозначения&#41; DMX](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [Общие прогнозирующие функции &#40;&#41;расширений интеллектуального анализа данных](../dmx/general-prediction-functions-dmx.md)   
+ [Структура и использование прогнозирующих запросов расширений интеллектуального анализа данных](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
+ [Общие сведения об инструкции расширения интеллектуального анализа данных SELECT](../dmx/understanding-the-dmx-select-statement.md)  
   
   

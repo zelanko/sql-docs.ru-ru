@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b0db2a84b4be80fffec0f05aed11f39a3bcea7db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287362"
 ---
 # <a name="generate-siblings-with-a-nested-auto-mode-query"></a>Формирование одноуровневых элементов с помощью вложенного запроса в режиме AUTO
@@ -66,7 +66,7 @@ FOR XML AUTO, TYPE
   
 -   Запрашивает набор строк `SalesOrder`, указанный в предложении `FROM`. Результат — XML с одним или несколькими элементами <`SalesOrder`>.  
   
--   Указывает режим `AUTO` и директиву `TYPE` . `AUTO` результат запроса преобразуется в XML и `TYPE` директива возвращает результат в виде `xml` типа.  
+-   Указывает режим `AUTO` и директиву `TYPE` . `AUTO`режим преобразует результат запроса в XML, а `TYPE` директива возвращает результат в виде `xml` типа.  
   
 -   Содержит две вложенные инструкции `SELECT` , разделенные запятой. Первая вложенная инструкция `SELECT` получает сведения о заказе на продажу, заголовок и дополнительные сведения, а вторая инструкция `SELECT` получает сведения о менеджере по продажам.  
   
@@ -124,7 +124,7 @@ WHERE SalesOrderID=43659 or SalesOrderID=43660
 FOR XML AUTO, TYPE  
 ```  
   
- Это результат:  
+ Результат:  
   
 ```  
 <Sales.SalesOrderHeader SalesOrderID="43659" SalesPersonID="279" CustomerID="676">  
@@ -165,7 +165,7 @@ FOR XML AUTO, TYPE
     FOR XML AUTO, TYPE ) as T(XmlCol)  
     ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование вложенных запросов FOR XML](use-nested-for-xml-queries.md)  
   
   

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3f51e8f62a6be442c123c5a1309293e204caf08f
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783220"
 ---
 # <a name="defect-a-target-server-from-a-master-server"></a>Отключение целевого сервера от главного сервера
@@ -30,11 +30,11 @@ ms.locfileid: "72783220"
   
 -   **Перед началом работы**  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Для исключения целевого сервера используется:**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Среда SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -42,9 +42,9 @@ ms.locfileid: "72783220"
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Для выполнения этой хранимой процедуры пользователь должен быть членом предопределенной роли сервера `sysadmin`.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
@@ -71,12 +71,12 @@ ms.locfileid: "72783220"
 sp_msx_defect ;  
 ```  
   
- Дополнительные сведения см. в [разделе &#40;SP_MSX_DEFECT Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-msx-defect-transact-sql).  
+ Дополнительные сведения см. в разделе [sp_msx_defect &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-defect-transact-sql).  
   
 ##  <a name="PowerShellProcedure"></a>Использование управляющие объекты SQL Server (SMO)  
  Используйте `MsxDefect Method`.  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
  [Создание многосерверной среды](create-a-multiserver-environment.md)   
- [Автоматизация администрирования в масштабах предприятия](automated-administration-across-an-enterprise.md)   
- [Отключение нескольких целевых серверов от главного](defect-multiple-target-servers-from-a-master-server.md)  
+ [Автоматизированное администрирование в масштабах предприятия](automated-administration-across-an-enterprise.md)   
+ [Defect Multiple Target Servers from a Master Server](defect-multiple-target-servers-from-a-master-server.md)  

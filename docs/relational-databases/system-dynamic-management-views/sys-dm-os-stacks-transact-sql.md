@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_stacks (Transact-SQL) | Документация Майкрософт
+title: sys. dm_os_stacks (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -21,13 +21,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8f287c548a7ebb71b1ebf3e1bce30e43b412c755
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68265720"
 ---
-# <a name="sysdmosstacks-transact-sql"></a>sys.dm_os_stacks (Transact-SQL)
+# <a name="sysdm_os_stacks-transact-sql"></a>sys.dm_os_stacks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Это динамическое административное представление используется в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для следующих внутренних целей.  
@@ -36,22 +36,22 @@ ms.locfileid: "68265720"
   
 -   Установление или проверка логики, применяющейся компонентами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] там, где компонент предполагает определенный вызов.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |**stack_address**|**varbinary(8)**|Уникальный адрес для данного размещения в стеке. Не допускает значение NULL.|  
-|**frame_index**|**int**|Каждая строка представляет собой вызов отсортированы в порядке возрастания по индексу фреймов для конкретного **stack_address**, возвращает полный стек вызова. Не допускает значение NULL.|  
+|**frame_index**|**int**|Каждая строка представляет вызов функции, который при сортировке в возрастающем порядке по индексу кадра для конкретного **stack_address**возвращает полный стек вызовов. Не допускает значение NULL.|  
 |**frame_address**|**varbinary(8)**|Адрес вызова функции. Не допускает значение NULL.|  
   
-## <a name="remarks"></a>Примечания  
- **sys.dm_os_stacks** требуется наличие на сервере для корректного отображения сведений символов сервера и других компонентов.  
+## <a name="remarks"></a>Remarks  
+ **sys. dm_os_stacks** требует наличия на сервере символов сервера и других компонентов для правильного отображения информации.  
   
 ## <a name="permissions"></a>Разрешения
 
-На [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], требуется `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровней Premium необходимо `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровней Standard и Basic, требует **администратора сервера** или **администратор Azure Active Directory** учетной записи.   
+В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]необходимо `VIEW SERVER STATE` разрешение.   
+На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
 
 
-## <a name="see-also"></a>См. также  
-  [Динамические административные представления, относящиеся к операционной системе SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+  [SQL Server динамические административные представления, связанные с операционной системой &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   

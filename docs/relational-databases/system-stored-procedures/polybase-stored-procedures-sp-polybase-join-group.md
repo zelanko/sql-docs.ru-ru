@@ -15,10 +15,10 @@ ms.assetid: 48066431-fed2-4a8a-85af-ac704689e183
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: ba22ffe282e6b4248ed58bed850bc6ac08255df5
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72278111"
 ---
 # <a name="sp_polybase_join_group-transact-sql"></a>sp_polybase_join_group (Transact-SQL)
@@ -26,7 +26,7 @@ ms.locfileid: "72278111"
 
   Добавляет экземпляр SQL Server в качестве вычислительного узла в группу Polybase для вычислений с масштабным масштабированием.  
   
- На экземпляре SQL Server должен быть установлен компонент [polybase](../../relational-databases/polybase/polybase-guide.md) .  Polybase обеспечивает интеграцию источников данных, отличных от SQL Server, таких как Hadoop и хранилище BLOB-объектов Azure. См. [также &#40;SP_POLYBASE_LEAVE_GROUP Transact-&#41;SQL](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md).  
+ На экземпляре SQL Server должен быть установлен компонент [polybase](../../relational-databases/polybase/polybase-guide.md) .  Polybase обеспечивает интеграцию источников данных, отличных от SQL Server, таких как Hadoop и хранилище BLOB-объектов Azure. См. также [sp_polybase_leave_group &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,17 +40,17 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *\@head_node_address* = N '*head_node_address*'  
- Имя компьютера, на котором размещен головной узел SQL Server масштабируемой группы Polybase. *\@head_node_address* имеет тип nvarchar (255).  
+ head_node_address = N "*head_node_address*" * \@*  
+ Имя компьютера, на котором размещен головной узел SQL Server масштабируемой группы Polybase. head_node_address имеет тип nvarchar (255). * \@*  
   
- *\@dms_control_channel_port* = dms_control_channel_port  
- Порт, на котором работает канал управления для Перемещение данных PolyBase службы головного узла. *\@dms_control_channel_port* является неподписанным __int16. Значение по умолчанию — **16450**.  
+ * \@dms_control_channel_port* = dms_control_channel_port  
+ Порт, на котором работает канал управления для Перемещение данных PolyBase службы головного узла. dms_control_channel_port является неподписанным __int16. * \@* Значение по умолчанию — **16450**.  
   
- *\@head_node_sql_server_instance_name* = head_node_sql_server_instance_name  
- Имя SQL Serverного экземпляра головного узла в масштабируемой группе Polybase. *\@head_node_sql_server_instance_name* имеет тип nvarchar (16).  
+ * \@head_node_sql_server_instance_name* = head_node_sql_server_instance_name  
+ Имя SQL Serverного экземпляра головного узла в масштабируемой группе Polybase. head_node_sql_server_instance_name имеет тип nvarchar (16). * \@*  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или 1 (неуспешное завершение)  
+ 0 (успех) или 1 (сбой).  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение CONTROL SERVER.  
@@ -65,8 +65,8 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
 EXEC sp_polybase_join_group N'HST01', 16450, N'MSSQLSERVER'   
 ```  
   
-## <a name="see-also"></a>См. также статью  
- [Приступая к работе с PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Начало работы с Polybase](../../relational-databases/polybase/get-started-with-polybase.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

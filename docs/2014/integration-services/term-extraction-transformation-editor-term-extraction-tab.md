@@ -1,5 +1,5 @@
 ---
-title: Редактор преобразования извлечения терминов (вкладка извлечения терминов) | Документация Майкрософт
+title: Редактор преобразования "Извлечение терминов" (вкладка "Извлечение терминов") | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 37d09aa75c3f6c5dd61b257056127ca76b410487
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055138"
 ---
 # <a name="term-extraction-transformation-editor-term-extraction-tab"></a>Редактор преобразования «Извлечение терминов» (вкладка «Извлечение терминов»)
@@ -33,16 +33,16 @@ ms.locfileid: "66055138"
  **Термин**  
  Введите имя выходного столбца с извлеченными терминами.  
   
- **Оценка**  
+ **Понять**  
  Введите имя выходного столбца с оценками каждого извлеченного термина.  
   
  **Настройка вывода ошибок**  
  Используйте диалоговое окно [Настройка вывода ошибок](../../2014/integration-services/configure-error-output.md) для указания метода обработки ошибок для строк, вызвавших ошибку.  
   
 ## <a name="see-also"></a>См. также:  
- [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор преобразования "Извлечение терминов" (вкладка "Исключение")](../../2014/integration-services/term-extraction-transformation-editor-exclusion-tab.md)   
- [Редактор преобразования "Извлечение терминов" (вкладка "Дополнительно")](../../2014/integration-services/term-extraction-transformation-editor-advanced-tab.md)   
- [Преобразование "Уточняющий запрос термина"](data-flow/transformations/lookup-transformation.md)  
+ [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор преобразования "Извлечение терминов" &#40;вкладка "исключения"&#41;](../../2014/integration-services/term-extraction-transformation-editor-exclusion-tab.md)   
+ [Редактор преобразования "Извлечение терминов" &#40;вкладка "Дополнительно"&#41;](../../2014/integration-services/term-extraction-transformation-editor-advanced-tab.md)   
+ [преобразование «Уточняющий запрос термина»](data-flow/transformations/lookup-transformation.md)  
   
   

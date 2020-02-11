@@ -18,13 +18,13 @@ ms.assetid: cc438701-ad91-419d-9f23-ebc4c548c700
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 487d88a7580432bf947893920d307e2f0adffd18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68111993"
 ---
-# <a name="spdeletetargetserver-transact-sql"></a>sp_delete_targetserver (Transact-SQL)
+# <a name="sp_delete_targetserver-transact-sql"></a>sp_delete_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Удаляет указанный сервер из списка доступных целевых серверов.  
@@ -41,23 +41,23 @@ sp_delete_targetserver [ @server_name = ] 'server'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @server_name = ] 'server'` Имя сервера, необходимо удалить в качестве доступного целевого сервера. *сервер* — **nvarchar(30)** , не имеет значения по умолчанию.  
+`[ @server_name = ] 'server'`Имя сервера, который необходимо удалить в качестве доступного целевого сервера. *Server* имеет тип **nvarchar (30)** и не имеет значения по умолчанию.  
   
-`[ @clear_downloadlist = ] clear_downloadlist` Указывает, очистить ли список загрузки для целевого сервера. *clear_downloadlist* является типом **бит**, значение по умолчанию **1**. Когда *clear_downloadlist* — **1**, процедура очищает список загрузки для сервера перед удалением сервера. Когда *clear_downloadlist* — **0**, список загрузки не очищается.  
+`[ @clear_downloadlist = ] clear_downloadlist`Указывает, следует ли очистить список загрузки для целевого сервера. *clear_downloadlist* имеет тип **bit**и значение по умолчанию **1**. Если *clear_downloadlist* равен **1**, процедура очищает список загрузки для сервера перед удалением сервера. Если значение *clear_downloadlist* равно **0**, список загрузки не удаляется.  
   
-`[ @post_defection = ] post_defection` Указывает, следует ли отправлять инструкцию отключения на целевой сервер. *post_defection* является типом **бит**, значение по умолчанию 1. Когда *post_defection* — **1**, процедура посылает инструкцию отключения на целевой сервер перед удалением сервера. Когда *post_defection* — **0**, процедура не отправлять инструкцию отключения на целевой сервер.  
+`[ @post_defection = ] post_defection`Указывает, следует ли отправлять инструкцию по исключению на целевой сервер. *post_defection* имеет тип **bit**и значение по умолчанию 1. Если *post_defection* равен **1**, процедура отправляет инструкцию по исключению на целевой сервер перед удалением сервера. Если *post_defection* равен **0**, процедура не выполняет инструкцию по исключению на целевом сервере.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  None  
   
-## <a name="remarks"></a>Примечания  
- Обычным способом удаления целевого сервера является вызов **sp_msx_defect** на целевом сервере. Используйте **sp_delete_targetserver** только при необходимости ручное исключение.  
+## <a name="remarks"></a>Remarks  
+ Обычным способом удаления целевого сервера является вызов **sp_msx_defect** на целевом сервере. Используйте **sp_delete_targetserver** только в том случае, если требуется ручное исключение.  
   
 ## <a name="permissions"></a>Разрешения  
- Чтобы выполнить эту хранимую процедуру, пользователям необходимо предоставить **sysadmin** предопределенной роли сервера.  
+ Для выполнения этой хранимой процедуры пользователям должна быть предоставлена предопределенная роль сервера **sysadmin** .  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере сервер `LONDON1` удаляется из списка доступных серверов заданий.  
@@ -71,9 +71,9 @@ EXEC dbo.sp_delete_targetserver
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [sp_help_targetserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql.md)   
  [sp_msx_defect &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

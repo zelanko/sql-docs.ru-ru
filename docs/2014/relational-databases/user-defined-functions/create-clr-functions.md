@@ -14,14 +14,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1a15690eb5aff48ec0f72df16e8342ed5c0522c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62524064"
 ---
 # <a name="create-clr-functions"></a>Создание функций CLR
-  В экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно создать объект базы данных, который запрограммирован в сборке, созданной в среде CLR платформы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . К объектам базы данных, способным обогатить возможности применения многофункциональной модели программирования среды CLR, относятся агрегатные функции, функции, хранимые процедуры, триггеры и типы.  
+  Можно создать объект базы данных внутри экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , запрограммированного в сборке, созданной [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] в среде CLR. К объектам базы данных, способным обогатить возможности применения многофункциональной модели программирования среды CLR, относятся агрегатные функции, функции, хранимые процедуры, триггеры и типы.  
   
  Чтобы создать функцию CLR в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , необходимо выполнить следующие шаги:  
   
@@ -42,24 +42,24 @@ ms.locfileid: "62524064"
   
  **Создание, изменение и удаление сборок в SQL Server**  
   
--   [CREATE ASSEMBLY (Transact-SQL)](/sql/t-sql/statements/create-assembly-transact-sql)  
+-   [Создание сборки &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-assembly-transact-sql)  
   
--   [ALTER ASSEMBLY (Transact-SQL)](/sql/t-sql/statements/alter-assembly-transact-sql)  
+-   [ALTER ASSEMBLY &#40;&#41;Transact-SQL](/sql/t-sql/statements/alter-assembly-transact-sql)  
   
--   [DROP ASSEMBLY (Transact-SQL)](/sql/t-sql/statements/drop-assembly-transact-sql)  
+-   [УДАЛИТЬ СБОРКУ &#40;&#41;Transact-SQL](/sql/t-sql/statements/drop-assembly-transact-sql)  
   
  **Создание функции CLR**  
   
--   [CREATE FUNCTION (Transact-SQL)](/sql/t-sql/statements/create-function-transact-sql)  
+-   [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql)  
   
 ## <a name="accessing-native-code"></a>Доступ к машинному коду  
  Функции CLR можно использовать для доступа к собственному (неуправляемому) коду, например написанному на C или C++, посредством использования средства PInvoke из управляемого кода (подробнее см. в разделе [Вызов собственных функций из управляемого кода](https://go.microsoft.com/fwlink/?LinkID=181929) ). Это даст возможность повторно использовать устаревший код в виде определяемых пользователем функций CLR или писать критичные к производительности функции в собственном коде. Для этого потребуется использование сборки UNSAFE. Предупреждения, касающиеся использования сборок UNSAFE, см. в разделе [CLR Integration Code Access Security](../clr-integration/security/clr-integration-code-access-security.md) .  
   
-## <a name="see-also"></a>См. также  
- [Создание определяемых пользователем функций (компонент Database Engine)](create-user-defined-functions-database-engine.md)   
- [Создание определяемых пользователем агрегатных функций](create-user-defined-aggregates.md)   
+## <a name="see-also"></a>См. также:  
+ [Создание определяемых пользователем функций &#40;ядро СУБД&#41;](create-user-defined-functions-database-engine.md)   
+ [Создание определяемых пользователем статистических выражений](create-user-defined-aggregates.md)   
  [Выполнение определяемых пользователем функций](execute-user-defined-functions.md)   
  [Просмотр определяемых пользователем функций](view-user-defined-functions.md)   
- [Основные понятия о программировании интеграции со средой (CLR)](../clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
+ [Общеязыковая среда выполнения &#40;концепции программирования интеграции&#41; среды CLR](../clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
   
   

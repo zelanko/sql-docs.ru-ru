@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_table_memory_stats (Transact-SQL) | Документация Майкрософт
+title: sys. dm_db_xtp_table_memory_stats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -22,20 +22,20 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d04238e0f476f39b0158fad4aa3350875d471ecc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097945"
 ---
-# <a name="sysdmdbxtptablememorystats-transact-sql"></a>sys.dm_db_xtp_table_memory_stats (Transact-SQL)
+# <a name="sysdm_db_xtp_table_memory_stats-transact-sql"></a>sys.dm_db_xtp_table_memory_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Возвращает статистику использования памяти для каждой таблицы [!INCLUDE[hek_2](../../includes/hek-2-md.md)] (пользовательской и системной) в текущей базе данных. Системные таблицы содержат отрицательные идентификаторы объектов и используются для сохранения сведений времени выполнения для компонента [!INCLUDE[hek_2](../../includes/hek-2-md.md)]. В отличие от пользовательских объектов, системные таблицы являются внутренними и существуют только в памяти, поэтому недоступны для просмотра через представления каталога. Системные таблицы используются для хранения такой информации, как метаданные для всех файлов данных и разностных файлов в хранилище, запросы слияния, конечные точки для разностных файлов с фильтрацией строк, удаленные таблицы и соответствующие сведения для резервного копирования и восстановления. Если компонент [!INCLUDE[hek_2](../../includes/hek-2-md.md)] может содержать до 8,192 пар файлов данных и разностных файлов, то для больших баз данных в памяти может потребоваться несколько МБ памяти для системных таблиц.  
   
  Дополнительные сведения см. в разделе [In-Memory OLTP (оптимизация в памяти)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|Идентификатор объекта таблицы. NULL для системных таблиц In-Memory OLTP.|  
 |memory_allocated_for_table_kb|**bigint**|Память, выделенная для этой таблицы.|  
@@ -212,7 +212,7 @@ used_memory_mb       target_memory_mb
 1356                 3845  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Оптимизированные для памяти динамические административные представления таблиц &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Динамические административные представления оптимизированной для памяти таблицы &#40;языке Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

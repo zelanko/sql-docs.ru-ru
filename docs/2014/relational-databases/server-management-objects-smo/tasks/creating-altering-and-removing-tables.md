@@ -15,17 +15,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9a0d70b1748ddc597aa7a2676e5e2f938c235442
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782385"
 ---
 # <a name="creating-altering-and-removing-tables"></a>Создание, изменение и удаление таблиц
   В управляющих объектах [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (SMO) таблицы представлены объектом <xref:Microsoft.SqlServer.Management.Smo.Table>. В иерархии объектов SMO объект <xref:Microsoft.SqlServer.Management.Smo.Table> расположен ниже объекта <xref:Microsoft.SqlServer.Management.Smo.Database>.  
   
 ## <a name="example"></a>Пример  
- Чтобы использовать какой-либо из представленных примеров кода, необходимо выбрать среду программирования, шаблон и язык, с помощью которых будет создаваться приложение. Дополнительные сведения см. в статьях [Создание проекта Visual Basic SMO в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) или [Создание проекта Visual&#35; C SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Чтобы использовать какой-либо из представленных примеров кода, необходимо выбрать среду программирования, шаблон и язык, с помощью которых будет создаваться приложение. Дополнительные сведения см. в статьях [Создание проекта Visual Basic SMO в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) или [Создание проекта Visual C&#35; SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-table-in-visual-basic"></a>Создание, изменение и удаление таблицы на языке Visual Basic  
  В этом примере кода создается таблица с несколькими столбцами разных типов и предназначений. В этом коде также приведены примеры того, как создать поле идентификаторов, как создать первичный ключ и как изменить свойства таблицы.  
@@ -133,5 +133,5 @@ $tb.Alter()
 $tb.Drop()  
 ```  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
  <xref:Microsoft.SqlServer.Management.Smo.Table>

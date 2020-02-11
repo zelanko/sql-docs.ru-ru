@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 196d7f2bb3a227bd29ccc6fd5d427a59070d525a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770920"
 ---
 # <a name="sap-bw-destination-editor-error-output-page"></a>Редактор назначений SAP BW (страница «Вывод ошибок»)
@@ -59,7 +59,7 @@ ms.locfileid: "62770920"
  **Применить**  
  Применить параметр обработки ошибок к выбранным ячейкам.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Редактор назначений SAP BW (страница "Диспетчер подключений")](sap-bw-destination-editor-connection-manager-page.md)   
  [Редактор назначений SAP BW (страница "Сопоставления")](sap-bw-destination-editor-mappings-page.md)   
  [Редактор назначений SAP BW (страница "Дополнительно")](sap-bw-destination-editor-advanced-page.md)   

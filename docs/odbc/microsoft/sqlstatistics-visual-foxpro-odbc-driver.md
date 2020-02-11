@@ -13,20 +13,20 @@ ms.assetid: bb48c22f-1fd5-47b4-8eaa-ff69cd431cf9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cab23cb3f470ed9a0b0a1bb6dc15b411fb9b69b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68037813"
 ---
 # <a name="sqlstatistics-visual-foxpro-odbc-driver"></a>SQLStatistics (драйвер ODBC для Visual FoxPro)
 > [!NOTE]  
->  Этот раздел содержит сведения Visual FoxPro ODBC-драйвером. Общие сведения об этой функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  В этом разделе содержатся сведения, относящиеся к драйверу ODBC для Visual FoxPro. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Поддержка: Полное  
+ Поддержка: полная  
   
- Соответствие API ODBC: уровне 1  
+ Соответствие API ODBC: уровень 1  
   
- Извлекает список статистику о одной таблицы и индексы или имена тегов, связанные с таблицей. Драйвер возвращает данные в виде результирующего набора.  
+ Извлекает список статистических данных по одной таблице и индексам или именам тегов, связанным с таблицей. Драйвер возвращает сведения в виде результирующего набора.  
   
- Дополнительные сведения см. в разделе [SQLStatistics](../../odbc/reference/syntax/sqlstatistics-function.md) в *Справочник по программированию ODBC*.
+ Дополнительные сведения см. в разделе [SQLStatistics](../../odbc/reference/syntax/sqlstatistics-function.md) в *справочнике программиста по ODBC*.

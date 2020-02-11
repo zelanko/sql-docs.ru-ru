@@ -18,13 +18,13 @@ ms.assetid: 5c7f39f3-c261-4f70-8beb-08242d4ac242
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a632e6923ab3127a363650c63533fa548d1acc12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68006127"
 ---
-# <a name="sphelpsrvrole-transact-sql"></a>sp_helpsrvrole (Transact-SQL)
+# <a name="sp_helpsrvrole-transact-sql"></a>sp_helpsrvrole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Возвращает список предопределенных ролей сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -39,37 +39,37 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @srvrolename = ] 'role'` — Имя предопределенной роли сервера. *роль* — **sysname**, значение по умолчанию NULL. *роль* может принимать одно из следующих значений.  
+`[ @srvrolename = ] 'role'`Имя предопределенной роли сервера. Аргумент *Role* имеет тип **sysname**и значение по умолчанию NULL. *роль* может иметь одно из следующих значений.  
   
-|Предопределенная роль сервера|Описание|  
+|Предопределенная роль сервера|Description|  
 |-----------------------|-----------------|  
 |sysadmin|Системные администраторы|  
 |securityadmin|Администраторы безопасности.|  
-|serveradmin|Администраторы сервера.|  
+|serveradmin|Администраторы сервера|  
 |setupadmin|Администраторы установки.|  
 |processadmin|Администраторы процесса.|  
 |diskadmin|Администраторы диска.|  
-|dbcreator|Создатели баз данных.|  
+|dbcreator|Создатели баз данных|  
 |bulkadmin|Имеющие разрешение на выполнение инструкции BULK INSERT.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или 1 (неуспешное завершение)  
+ 0 (успех) или 1 (сбой).  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|ServerRole|**sysname**|Имя роли сервера|  
-|Описание|**sysname**|Описание ServerRole|  
+|ServerRole|**имеет sysname**|Имя роли сервера|  
+|Description|**имеет sysname**|Описание ServerRole|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Предопределенные роли сервера определены на уровне сервера и имеют разрешения на выполнение специальных административных действий на уровне сервера. Предопределенные роли сервера не могут быть добавлены, удалены или изменены.  
   
- Чтобы добавлять или удалять членов ролей сервера, см. в разделе [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
+ Сведения о добавлении или удалении членов из ролей сервера см. в разделе [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
   
- Все имена входа являются членами public. sp_helpsrvrole не распознает роль public, так как внутри системы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не реализует открытый как роль.  
+ Все имена входа являются членами общедоступной версии. sp_helpsrvrole не распознает общую роль, так как, внутри [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , не реализует Public как роль.  
   
- sp_helpsrvrole не принимает в качестве аргумента определяемой пользователями серверной роли. Чтобы получить список определяемых пользователями серверных ролей, см. в примерах в [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
+ sp_helpsrvrole не принимает определяемую пользователем роль сервера в качестве аргумента. Чтобы получить список определяемых пользователем ролей сервера, см. примеры в статье [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется членство в роли public.  
@@ -97,12 +97,12 @@ SELECT * FROM sys.server_principals WHERE type = 'R' ;
 sp_helpsrvrole 'diskadmin' ;  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Хранимые процедуры безопасности (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Роли уровня сервера](../../relational-databases/security/authentication-access/server-level-roles.md)   
- [sp_addsrvrolemember (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
+ [sp_addsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
  [sp_dropsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
  [sp_helpsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

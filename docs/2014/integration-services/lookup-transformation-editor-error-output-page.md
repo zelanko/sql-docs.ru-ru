@@ -1,5 +1,5 @@
 ---
-title: Редактор преобразования Уточняющий запрос (страница "Вывод ошибок") | Документация Майкрософт
+title: Редактор преобразования "Уточняющий запрос" (страница "вывод ошибок") | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 12f1a73c1d21986d2089878bfe9d29dd4450f222
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057862"
 ---
 # <a name="lookup-transformation-editor-error-output-page"></a>Редактор преобразования «Уточняющий запрос» (страница «Вывод ошибок»)
@@ -25,7 +25,7 @@ ms.locfileid: "66057862"
  Дополнительные сведения о преобразовании «Уточняющий запрос» см. в разделе [Lookup Transformation](data-flow/transformations/lookup-transformation.md).  
   
 ## <a name="options"></a>Параметры  
- **Ввод-вывод**  
+ **Входные и выходные данные**  
  Просмотрите имя входных данных.  
   
  **Столбец**  
@@ -56,7 +56,7 @@ ms.locfileid: "66057862"
  **Описание**  
  Просмотрите описание операции.  
   
- **Присвоить указанное значение выбранным ячейкам**  
+ **Задать для выбранных ячеек это значение**  
  Укажите действие, которое необходимо применить ко всем выбранным ячейкам при возникновении ошибки или усечения:  
   
 -   пропустить ошибку;  
@@ -68,7 +68,7 @@ ms.locfileid: "66057862"
  **Применить**  
  Применить параметр обработки ошибок к выбранным ячейкам.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ef1a23d21e5945e15d497bab3480b48f8cf3fe6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098212"
 ---
-# <a name="reencryptsecureinformation-method-wmi-msreportserverconfigurationsetting"></a>Метод ReencryptSecureInformation (WMI MSReportServer_ConfigurationSetting)
+# <a name="reencryptsecureinformation-method-wmi-msreportserver_configurationsetting"></a>Метод ReencryptSecureInformation (WMI MSReportServer_ConfigurationSetting)
   Создает новый ключ шифрования и повторно зашифровывает с его помощью всю защищенную информацию в каталоге.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -39,16 +39,16 @@ public void ReencryptSecureInformation (out Int32 HRESULT, out string[] Extended
 ```  
   
 ## <a name="parameters"></a>Параметры  
- *HRESULT*  
+ *СОСТАВ*  
  [out] Значение, которое указывает, окончился ли вызов успехом или сбоем.  
   
- *ExtendedErrors[]*  
+ *Екстендедеррорс []*  
  [out] Массив строк, содержащий дополнительные ошибки, возвращенные в результате вызова.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение *HRESULT* , являющееся признаком успешного или неуспешного завершение вызова метода. Значение 0 указывает, что вызов метода завершился успешно. Ненулевое значение указывает, что произошла ошибка.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Метод ReencryptSecureInformation позволяет администратору заменить существующий ключ шифрования новым ключом.  
   
  При вызове этого метода сервер отчетов создает новый ключ шифрования и проходит по всему зашифрованному содержимому для его повторного шифрования с использованием нового ключа.  
@@ -58,7 +58,7 @@ public void ReencryptSecureInformation (out Int32 HRESULT, out string[] Extended
  Если этот метод запускается на компьютерах масштабного развертывания, то каждый компьютер потребует повторной инициализации.  
   
 ## <a name="requirements"></a>Требования  
- **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Пространство имен:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

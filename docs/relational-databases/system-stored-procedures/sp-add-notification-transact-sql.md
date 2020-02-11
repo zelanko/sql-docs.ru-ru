@@ -18,13 +18,13 @@ ms.assetid: 0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 60bb289f0fd6d7b7dd1034630929998d32cc59d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68115060"
 ---
-# <a name="spaddnotification-transact-sql"></a>sp_add_notification (Transact-SQL)
+# <a name="sp_add_notification-transact-sql"></a>sp_add_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Настраивает уведомление для предупреждения.  
@@ -40,40 +40,40 @@ sp_add_notification [ @alert_name = ] 'alert' ,
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @alert_name = ] 'alert'` Предупреждение для этого уведомления. *Предупреждение* — **sysname**, не имеет значения по умолчанию.  
+`[ @alert_name = ] 'alert'`Оповещение для этого уведомления. Аргумент *Alert* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @operator_name = ] 'operator'` Оператор, чтобы получать уведомления при возникновении предупреждения. *оператор* — **sysname**, не имеет значения по умолчанию.  
+`[ @operator_name = ] 'operator'`Оператор, уведомляющий о возникновении предупреждения. Аргумент *operator* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @notification_method = ] notification_method` Метод уведомления оператора. *notification_method* — **tinyint**, не имеет значения по умолчанию. *notification_method* может иметь одно или несколько из следующих значений в сочетании с **OR** логический оператор.  
+`[ @notification_method = ] notification_method`Метод, по которому оператор получает уведомления. *notification_method* имеет тип **tinyint**и не имеет значения по умолчанию. *notification_method* может быть одним или несколькими из этих значений в сочетании с логическим оператором **or** .  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
-|**1**|электронная почта|  
+|**1**|электронная почта;|  
 |**2**|Пейджер|  
-|**4**|**команда net send.**|  
+|**4**|**NET SEND**|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  None  
   
-## <a name="remarks"></a>Примечания  
- **sp_add_notification** должна запускаться из **msdb** базы данных.  
+## <a name="remarks"></a>Remarks  
+ **sp_add_notification** должны запускаться из базы данных **msdb** .  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] обеспечивает простой графический способ управления всей системой предупреждений. Использование среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] рекомендуется для настройки инфраструктуры предупреждений.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]предоставляет простой графический способ управления всей системой предупреждений. Использование среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] рекомендуется для настройки инфраструктуры предупреждений.  
   
  Чтобы в ответ на предупреждение отправить уведомление, необходимо настроить агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для отправки почты.  
   
  Ошибки, возникающие при отправке сообщения по электронной почте или уведомления по пейджеру, регистрируются в журнале ошибок службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнять процедуру **sp_add_notification**.  
+ Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_add_notification**.  
   
 ## <a name="examples"></a>Примеры  
  Следующий код добавляет уведомление по электронной почте для предупреждения `Test Alert`.  
   
-> **ПРИМЕЧАНИЕ.** В этом примере предполагается, что `Test Alert` уже существует и что `François Ajenstat` имеет допустимое имя оператора.  
+> **Примечание.** В этом примере предполагается, что `Test Alert` уже `François Ajenstat` существует и является допустимым именем оператора.  
   
 ```  
 USE msdb ;  
@@ -86,11 +86,11 @@ EXEC dbo.sp_add_notification
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [sp_delete_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
  [sp_help_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   
  [sp_update_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   
  [sp_add_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

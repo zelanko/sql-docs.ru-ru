@@ -13,10 +13,10 @@ ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: ba53fbbbb86f40a5b93c748fcd31bf5e8d7f823d
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729571"
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>Создание администратора модели (службы Master Data Services)
@@ -28,8 +28,8 @@ ms.locfileid: "73729571"
 > [!TIP]  
 >  Чтобы упростить администрирование, создайте локальную группу или группу Windows и настройте ее в качестве администратора модели. Впоследствии добавлять пользователей в группу и удалять их из нее можно без обращения к [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
-## <a name="prerequisites"></a>необходимые компоненты  
- Чтобы выполнить эту процедуру:  
+## <a name="prerequisites"></a>Предварительные требования  
+ Для выполнения этой процедуры:  
   
 -   необходимо разрешение на доступ к функциональной области **Разрешения пользователей и групп** ;  
   
@@ -47,7 +47,7 @@ ms.locfileid: "73729571"
   
 5.  По желанию выберите модель из списка **Модель** .  
   
-6.  Нажмите кнопку **Изменить**.  
+6.  Щелкните **Правка**.  
   
 7.  Щелкните модель, разрешение на которую необходимо предоставить.  
   
@@ -55,13 +55,13 @@ ms.locfileid: "73729571"
   
 9. Выполните шаги 7 и 8 для каждой модели, для которой необходимо назначить администратором пользователя или группу.  
   
-10. Нажмите кнопку **Сохранить**.  
+10. Выберите команду **Сохранить**.  
   
-## <a name="see-also"></a>См. также статью  
- [Администраторы (службы Master Data Services)](../master-data-services/administrators-master-data-services.md)   
- [Назначение разрешения для объекта модели (службы Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)   
- [Назначение разрешений для элемента иерархии (службы Master Data Services)](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
- [Разрешения объекта модели (службы Master Data Services)](../master-data-services/model-object-permissions-master-data-services.md)   
- [Разрешения на элементы иерархии (службы Master Data Services)](../master-data-services/hierarchy-member-permissions-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Администраторы &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)   
+ [Назначение разрешений объекта модели &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
+ [Назначение разрешений элемента иерархии &#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
+ [Разрешения объекта модели &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
+ [Разрешения элемента иерархии &#40;Master Data Services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)  
   
   

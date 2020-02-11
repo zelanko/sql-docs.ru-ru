@@ -24,10 +24,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 03deab738f374716002c4d78e07078e90fb41822
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68189017"
 ---
 # <a name="operators"></a>Операторы
@@ -38,18 +38,18 @@ ms.locfileid: "68189017"
   
 -   имя оператора;  
   
--   контактная информация.  
+-   Контактные данные  
   
 ### <a name="naming-an-operator"></a>Присвоение имени оператору  
  Каждый оператор должен иметь имя. Имена операторов должны быть уникальны в пределах экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и не могут иметь длину более **128** символов.  
   
-### <a name="contact-information"></a>контактная информация.  
+### <a name="contact-information"></a>Контактные данные  
  Контактная информация оператора определяет способ уведомления оператора. Операторы могут получать уведомления по электронной почте, по пейджинговой связи или с помощью команды **net send** .  
   
 > [!IMPORTANT]  
->  Режимы отправки уведомлений с помощью пейджера и команды **net send** будут удалены из агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в следующей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Старайтесь не использовать эти функции в новых разработках и предусмотрите соответствующие изменения в приложениях, которые используют их в настоящее время.  
+>  Параметры пейджера и **команды net send** будут удалены из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента в следующей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Старайтесь не использовать эти функции в новых разработках и предусмотрите соответствующие изменения в приложениях, которые используют их в настоящее время.  
   
--   **Уведомление по электронной почте.**  
+-   **Уведомление по электронной почте**  
   
      Средства уведомления по электронной почте направляют оператору почтовое сообщение. Для уведомлений по электронной почте необходимо предоставить адрес электронной почты оператора.  
   
@@ -75,14 +75,14 @@ ms.locfileid: "68189017"
   
          **Копия**:  
   
-         **Кому**:  
+         **В**:  
   
     > [!NOTE]  
     >  Пользователи маломощных буквенно-цифровых пейджинговых систем могут сократить объем пересылаемых текстов за счет исключения из пейджинговых уведомлений текстов об ошибках. Примером маломощной буквенно-цифровой пейджинговой системы может служить система, ограниченная 64 символами на страницу.  
   
 -   **net sendnotification**  
   
-     Так сообщение передается оператору с помощью команды **net send** . Чтобы передать сообщение средствами **net send**, нужно указать получателя (компьютер или пользователя) сетевого сообщения.  
+     Так сообщение передается оператору с помощью команды **net send**. Чтобы передать сообщение средствами **net send**, нужно указать получателя (компьютер или пользователя) сетевого сообщения.  
   
     > [!NOTE]  
     >  Команда **net send** использует средства Microsoft Windows Messenger. Для успешной передачи предупреждений требуется, чтобы эта служба была запущена как на компьютере, на котором выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и на компьютере, используемом оператором.  
@@ -98,9 +98,9 @@ ms.locfileid: "68189017"
   
      В числе причин, препятствующих доставке предупреждений основным операторам, — неверно указанные адреса пейджеров и то обстоятельство, что операторы находятся не при исполнении служебных обязанностей или не включены.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Если агент не может обратиться к системным таблицам в базе данных **msdb** .  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Агент не может получить доступ к системным таблицам в базе данных **msdb** .  
   
-     Обязанности операторов, связанные с получением предупреждений, указаны в системной таблице **sysnotifications** .  
+     Обязанности операторов, связанные с получением предупреждений, указаны в системной таблице **sysnotifications**.  
   
  Резервный оператор является функцией защиты. Невозможно ни удаление оператора, назначенного для выполнения резервной функции (если только эта функция не переназначена другому оператору), ни удаление самой функции резервного оператора.  
   
@@ -118,10 +118,10 @@ ms.locfileid: "68189017"
 |||  
 |-|-|  
 |**Задания**|**Раздел**|  
-|Задачи, связанные с созданием оператора|[Создание оператора](create-an-operator.md)<br /><br /> [Designate a Fail-Safe Operator](designate-a-fail-safe-operator.md)|  
-|Задачи, связанные с назначением предупреждений|[Назначение предупреждений оператору](assign-alerts-to-an-operator.md)<br /><br /> [Определение реакция на предупреждение (среда SQL Server Management Studio)](define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br /> [sp_add_notification &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)<br /><br /> [Назначение предупреждений оператору](assign-alerts-to-an-operator.md)|  
+|Задачи, связанные с созданием оператора|[Create an Operator](create-an-operator.md)<br /><br /> [Назначение резервного оператора](designate-a-fail-safe-operator.md)|  
+|Задачи, связанные с назначением предупреждений|[Assign Alerts to an Operator](assign-alerts-to-an-operator.md)<br /><br /> [Определите ответ на &#40;предупреждений SQL Server Management Studio&#41;](define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br /> [sp_add_notification &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)<br /><br /> [Assign Alerts to an Operator](assign-alerts-to-an-operator.md)|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)  
   
   

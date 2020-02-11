@@ -1,5 +1,5 @@
 ---
-title: Функция справочника по API библиотеки DLL установщика | Документация Майкрософт
+title: Функция справочника по API DLL установщика | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ ms.assetid: 47fcadc3-f102-4989-9ee7-a1c65233142a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4478595fe34e81919a67c37a7f0a714329a5ea44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67906214"
 ---
 # <a name="installer-dll-api-reference-function"></a>Функция справочника по API библиотеки DLL установщика
-В этом разделе описывается синтаксис функций в установщик API библиотеки DLL. Установщик API библиотеки DLL состоит из 20 функций. Три из этих функций **SQLGetTranslator**, **SQLRemoveDSNFromIni**, и **SQLWriteDSNToIni**, вызываются только программой установки библиотек DLL. Другие функции вызываются программ установки и администрирования.  
+В этом разделе описывается синтаксис функций в API DLL установщика. API DLL установщика состоит из 20 функций. Три из этих функций, **склжеттранслатор**, **склремоведснфромини**и **Склвритедснтоини**, вызываются только библиотеками DLL установки. Другие функции вызываются программами установки и администрирования.  
   
- Каждая функция помечается используемая версия ODBC, в которую было включено.  
+ Каждая функция помечена версией ODBC, в которой она была представлена.  
   
  Этот раздел содержит следующие подразделы.  
   
--   [Функция SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)  
+-   [SQLConfigDataSource, функция](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)  
   
 -   [Функция SQLConfigDriver](../../../odbc/reference/syntax/sqlconfigdriver-function.md)  
   
@@ -50,7 +50,7 @@ ms.locfileid: "67906214"
   
 -   [Функция SQLInstallTranslatorEx](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md)  
   
--   [Функция SQLManageDataSources](../../../odbc/reference/syntax/sqlmanagedatasources.md)  
+-   [Функция Склманажедатасаурцес](../../../odbc/reference/syntax/sqlmanagedatasources.md)  
   
 -   [Функция SQLPostInstallerError](../../../odbc/reference/syntax/sqlpostinstallererror-function.md)  
   

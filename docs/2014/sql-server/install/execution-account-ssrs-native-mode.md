@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 0eff6dca788744b93d2d6d4a0a7175764e263f71
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952538"
 ---
 # <a name="execution-account-ssrs-native-mode"></a>Учетная запись выполнения (службы Reporting Services в собственном режиме)
@@ -26,7 +26,7 @@ ms.locfileid: "71952538"
   
 -   Когда сервер отчетов соединен с другим сервером для получения внешних файлов изображений или других ресурсов, ссылки на которые есть в отчете.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в основном режиме.  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Собственный режим.  
   
  Настраивать эту учетную запись не обязательно, но, если этого не сделать, возможности использования внешних изображений и соединений с некоторыми источниками данных будут ограничены. При получении внешних файлов изображений сервер отчетов проверяет возможность анонимного соединения. Если соединение защищено паролем, сервер отчетов использует учетную запись автоматической обработки отчетов для соединения с удаленным сервером. При получении данных для отчета сервер отчетов олицетворяет текущего пользователя, запрашивает ввод пользователем учетных данных, использует сохраненные учетные данные или использует учетную запись автоматической обработки отчетов, если в свойствах соединения с источником данных в качестве типа учетных данных задано значение **Нет** . Для сервера отчетов не допускается делегирование или олицетворение учетных данных его служб при соединении с другими компьютерами, поэтому необходимо использование учетной записи автоматической обработки отчетов в случае недоступности других учетных данных.  
   
@@ -39,22 +39,22 @@ ms.locfileid: "71952538"
   
  Чтобы открыть эту страницу, запустите диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и выберите на панели навигации пункт **Учетная запись выполнения** . Дополнительные сведения см. в разделе [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
-## <a name="options"></a>Options  
- **Задание учетной записи выполнения**  
+## <a name="options"></a>Параметры  
+ **Укажите учетную запись выполнения**  
  Выделите учетную запись.  
   
- **Учетная запись**  
- Введите учетную запись пользователя домена Windows в следующем формате: *\<домен>\\<учетная запись пользователя\>* .  
+ **Учетной записи**  
+ Введите учетную запись пользователя домена Windows Используйте следующий формат: * \<домен>\\<учетной\>записи пользователя*.  
   
  **Пароль**  
- Задайте пароль.  
+ Введите пароль.  
   
  **Подтверждение пароля**  
- Введите пароль еще раз.  
+ Повторите ввод пароля.  
   
-## <a name="see-also"></a>См. также статью  
- [Диспетчер конфигурации служб Reporting Services разделы &#40;справки F1  служб SSRS&#41; в основном режиме](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
- [Хранение зашифрованных данных сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+## <a name="see-also"></a>См. также:  
+ [Диспетчер конфигурации служб Reporting Services разделы справки F1 &#40;служб SSRS в собственном режиме&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
+ [Хранение зашифрованных данных сервера отчетов &#40;служб SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Настройка учетной записи автоматического выполнения (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Урок 2. Создание и управление данными в иерархической таблице | Документация Майкрософт
+title: Занятие 2. Создание данных и управление ими в иерархической таблице | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4553d98faf18c00fff6ad90a09d0ee9071a71d32
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62659936"
 ---
-# <a name="lesson-2-creating-and-managing-data-in-a-hierarchical-table"></a>Урок 2. Создание данных и управление ими в иерархической таблице
+# <a name="lesson-2-creating-and-managing-data-in-a-hierarchical-table"></a>Занятие 2. Создание данных и управление ими в иерархической таблице
   В занятии 1 существующая таблица была изменена, чтобы использовать тип данных `hierarchyid`, а также столбец `hierarchyid` был заполнен представлением существующих данных. На этом занятии будет создана новая таблица и вставлены данные с помощью иерархических методов. Затем с помощью иерархических методов будет выполнен запрос данных и показано управление данными.  
   
  Это занятие содержит следующие разделы:  
@@ -37,7 +37,7 @@ ms.locfileid: "62659936"
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
  [Создание таблицы с помощью типа данных hierarchyid](lesson-2-1-creating-a-table-using-the-hierarchyid-data-type.md)  
   
-## <a name="see-also"></a>См. также  
- [Занятие 1. Преобразование таблицы в иерархическую структуру](lesson-1-converting-a-table-to-a-hierarchical-structure.md)  
+## <a name="see-also"></a>См. также:  
+ [Урок 1. преобразование таблицы в иерархическую структуру](lesson-1-converting-a-table-to-a-hierarchical-structure.md)  
   
   

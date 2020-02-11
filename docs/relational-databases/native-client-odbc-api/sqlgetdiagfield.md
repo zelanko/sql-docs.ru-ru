@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f2a3d8d829794692cff6ecb9879e6f62f0b0b91b
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73786472"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
@@ -26,7 +26,7 @@ ms.locfileid: "73786472"
 
   В драйвере ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] заданы следующие дополнительные поля для функции **SQLGetDiagField**. Эти поля поддерживают множество отчетов об ошибках для приложений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и доступны во всех диагностических записях, созданных дескрипторами соединения ODBC и дескрипторами инструкций ODBC. Эти поля определены в файле sqlncli.h.  
   
-|Поля диагностических записей|Описание|  
+|Поля диагностических записей|Description|  
 |------------------------------|-----------------|  
 |SQL_DIAG_SS_LINE|Сообщает номер строки хранимой процедуры, на которой произошла ошибка. Значение SQL_DIAG_SS_LINE значимо, только если SQL_DIAG_SS_PROCNAME возвращает значение. Значение возвращается как 16-разрядное целое число без знака.|  
 |SQL_DIAG_SS_MSGSTATE|Состояние сообщения об ошибке. Сведения о состоянии сообщения об ошибке см. в разделе [RAISERROR](../../t-sql/language-elements/raiserror-transact-sql.md). Значение возвращается как 32-разрядное целое число со знаком.|  
@@ -38,9 +38,9 @@ ms.locfileid: "73786472"
   
  Драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сообщает следующие дополнительные коды динамических функций, содержащие последнюю попытку выполнения инструкции [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Код динамической функции возвращается в заголовке (запись 0) диагностического набора записей и доступен при каждом выполнении (успешном или нет).  
   
-|Код динамической функции|Source|  
+|Код динамической функции|Источник|  
 |---------------------------|------------|  
-|SQL_DIAG_DFC_SS_ALTER_DATABASE|ALTER DATABASE, инструкция|  
+|SQL_DIAG_DFC_SS_ALTER_DATABASE|Инструкция ALTER DATABASE|  
 |SQL_DIAG_DFC_SS_CHECKPOINT|CHECKPOINT, инструкция|  
 |SQL_DIAG_DFC_SS_CONDITION|Ошибка происходит в предложениях WHERE или HAVING инструкции.|  
 |SQL_DIAG_DFC_SS_CREATE_DATABASE|Инструкция CREATE DATABASE|  
@@ -75,7 +75,7 @@ ms.locfileid: "73786472"
 |SQL_DIAG_DFC_SS_READTEXT|READTEXT, инструкция|  
 |SQL_DIAG_DFC_SS_RECONFIGURE|RECONFIGURE, инструкция|  
 |SQL_DIAG_DFC_SS_RETURN|Инструкция управления потоком RETURN|  
-|SQL_DIAG_DFC_SS_SELECT_INTO|SELECT INTO, инструкция|  
+|SQL_DIAG_DFC_SS_SELECT_INTO|Инструкция SELECT INTO|  
 |SQL_DIAG_DFC_SS_SET|Инструкция SET (общая, все параметры)|  
 |SQL_DIAG_DFC_SS_SET_IDENTITY_INSERT|SET IDENTITY_INSERT, инструкция|  
 |SQL_DIAG_DFC_SS_SET_ROW_COUNT|SET ROWCOUNT, инструкция|  
@@ -101,8 +101,8 @@ ms.locfileid: "73786472"
   
  Дополнительные сведения о возвращающих табличное значение параметрах см. в разделе [возвращающие табличное значение параметры &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
-## <a name="see-also"></a>См. также статью  
-   [функции SQLGetDiagField](https://go.microsoft.com/fwlink/?LinkId=59352)  
- [Подробные сведения о реализации API-интерфейсов ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+## <a name="see-also"></a>См. также:  
+ [Функция SQLGetDiagField](https://go.microsoft.com/fwlink/?LinkId=59352)   
+ [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

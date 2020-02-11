@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f08067c55110b801cd989e0be1c9fbc6955cb61
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 54aa7db3d2c2ea0d268874f0d59c3096b8e1a0ae
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68028267"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76911088"
 ---
 # <a name="creating-user-defined-types"></a>Создание определяемых пользователем типов
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Чтобы создать определяемый пользователем тип, пригодный для установки в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], необходимо сначала создать класс в одном из поддерживаемых языков программирования среды .NET Framework, таком как Visual C# или Visual Basic, соответствующем требованиям спецификаций по созданию определяемых пользователем типов. Затем класс можно скомпилировать в виде DLL-библиотеки, которая может загружаться в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Создавать и развертывать определяемые пользователем типы также можно с помощью Visual Studio.  
   
- По умолчанию возможность выполнять код среды CLR в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отключена. Среда CLR можно включить с помощью **sp_configure** системной хранимой процедуры, как показано в следующем [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции:  
+ По умолчанию возможность выполнять код среды CLR в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отключена. Среду CLR можно включить с помощью **sp_configure** системной хранимой процедуры, как показано в следующих [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкциях:  
   
 ```  
 sp_configure 'clr enabled', 1  
@@ -40,9 +40,9 @@ Reconfigure
  Демонстрирует требования к приемам кодирования, используемым при создании определяемых пользователем типов.  
   
 ## <a name="example"></a>Пример  
- Следующий пример кода определяет определяемый пользователем тип Point, который описан подробно [программирование определяемых пользователем типов](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  
+ В следующем листинге кода определяется ОПРЕДЕЛЯЕМый пользователем тип Point, который подробно описан в разделе [Создание пользовательских типов](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  
   
- Полные листинги кода для других примеров, описываемых в этом разделе, можно получить, установив образцы из среды CLR. Инструкции по установке этих образцов см. в разделе [образцы SQL Server Database Engine](https://msftengprodsamples.codeplex.com/).  
+ Полные листинги кода для других примеров, описываемых в этом разделе, можно получить, установив образцы из среды CLR. Инструкции по установке этих образцов см. в разделе [SQL Server ядро СУБД Samples](https://msftengprodsamples.codeplex.com/).  
   
  C#  
   
@@ -84,7 +84,7 @@ public struct Point : INullable
     public override string ToString()  
     {  
         // Since InvokeIfReceiverIsNull defaults to 'true'  
-        // this test is unneccesary if Point is only being called  
+        // this test is unnecessary if Point is only being called  
         // from SQL.  
         if (this.IsNull)  
             return "NULL";  
@@ -233,7 +233,7 @@ Imports System.Text
     ' Use StringBuilder to provide string representation of UDT.  
     Public Overrides Function ToString() As String  
         ' Since InvokeIfReceiverIsNull defaults to 'true'  
-        ' this test is unneccesary if Point is only being called  
+        ' this test is unnecessary if Point is only being called  
         ' from SQL.  
         If Me.IsNull Then  
             Return "NULL"  
@@ -330,7 +330,7 @@ Imports System.Text
 End Structure  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Определяемые пользователем типы в CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
+## <a name="see-also"></a>См. также:  
+ [Определяемые пользователем типы данных CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   
   

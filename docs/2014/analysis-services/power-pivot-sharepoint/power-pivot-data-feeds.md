@@ -1,5 +1,5 @@
 ---
-title: Веб-каналов данных PowerPivot | Документация Майкрософт
+title: Веб-каналы данных PowerPivot | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b3080996eca3395e8be3cab5e17eaea7305dbfa2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071273"
 ---
 # <a name="powerpivot-data-feeds"></a>Веб-каналы данных PowerPivot
@@ -27,12 +27,12 @@ ms.locfileid: "66071273"
  В этом разделе приведены сведения, с помощью которых можно наиболее эффективно использовать потоки данных для передачи существующих корпоративных данных или данных рабочих групп в рабочие книги PowerPivot. Кроме того, даны сведения о предоставлении общего доступа для других пользователей к веб-каналам данных в организации, а также структуре веб-каналов данных и их использовании при необходимости диагностики и устранении неполадок.  
   
 ## <a name="related-tasks"></a>Связанные задачи  
- [Создание или Настройка библиотеки веб-канала данных &#40;PowerPivot для SharePoint&#41;](create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md)  
+ [Создание или Настройка библиотеки веб-каналов данных &#40;PowerPivot для SharePoint&#41;](create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md)  
   
  [Удаление библиотеки каналов данных PowerPivot](delete-a-power-pivot-data-feed-library.md)  
   
  [Использование веб-каналов данных &#40;PowerPivot для SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md)  
   
- [Совместное использование веб-каналы данных, с помощью библиотеки каналов данных &#40;PowerPivot для SharePoint&#41;](share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint.md)  
+ [Совместное использование веб-каналов данных с помощью библиотеки каналов данных &#40;PowerPivot для SharePoint&#41;](share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint.md)  
   
   

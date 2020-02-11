@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2cc9c9576a6ae2f70f2d54d48471339ec07d0e61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480536"
 ---
 # <a name="importing-and-exporting-knowledge"></a>Импорт и экспорт набора знаний
@@ -28,9 +28,9 @@ ms.locfileid: "65480536"
   
 |||  
 |-|-|  
-|Экспорт домена из базы знаний в файл данных .dqs.|[Экспорт домена в файл DQS](../../2014/data-quality-services/export-a-domain-to-a-dqs-file.md)|  
-|Импорт домена из файла данных .dqs в существующую базу знаний.|[Импорт домена из файла DQS](../../2014/data-quality-services/import-a-domain-from-a-dqs-file.md)|  
-|Экспорт всей базы знаний в файл данных .dqs.|[Экспорт базы знаний в файл DQS](../../2014/data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)|  
+|Экспорт домена из базы знаний в файл данных .dqs.|[Экспорт домена в файл .dqs](../../2014/data-quality-services/export-a-domain-to-a-dqs-file.md)|  
+|Импорт домена из файла данных .dqs в существующую базу знаний.|[Импорт домена из файла .dqs](../../2014/data-quality-services/import-a-domain-from-a-dqs-file.md)|  
+|Экспорт всей базы знаний в файл данных .dqs.|[Экспорт базы знаний в файл .dqs](../../2014/data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)|  
 |Импорт всей базы знаний в файл данных .dqs.|[Импорт базы знаний из файла .dqs](../../2014/data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)|  
 |Импорт значений в домен из файла Excel|[Импорт значений в домен из файла Excel](../../2014/data-quality-services/import-values-from-an-excel-file-into-a-domain.md)|  
 |Импорт доменов из файла Excel в базу знаний|[Импорт доменов из файла Excel при обнаружении набора знаний](../../2014/data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)|  

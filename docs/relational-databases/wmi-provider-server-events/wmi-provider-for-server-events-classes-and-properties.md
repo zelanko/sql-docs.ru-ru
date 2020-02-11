@@ -15,10 +15,10 @@ ms.assetid: e2916cd7-a3ed-41e6-97b4-2ee060754cbe
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 08b18a3a5805b37a371d6fa17850584d6f4953fd
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74164907"
 ---
 # <a name="wmi-provider-for-server-events-classes-and-properties"></a>Поставщик инструментария WMI для классов событий и свойств сервера
@@ -27,22 +27,22 @@ ms.locfileid: "74164907"
   
  Сведения о том, к каким свойствам может быть выполнен запрос из события или группы событий, см. в схеме события. По умолчанию схема событий устанавливается в следующий каталог: [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd.  
   
- Кроме того, можно обратиться к схеме событий, опубликованной по адресу [https://schemas.microsoft.com/sqlserver](https://go.microsoft.com/fwlink/?linkid=43100).  
+ Кроме того, можно обратиться к схеме событий, опубликованной [https://schemas.microsoft.com/sqlserver](https://go.microsoft.com/fwlink/?linkid=43100)по адресу.  
   
  Например, при обращении к событию ALTER_DATABASE вы узнаете, что его родительское событие DDL_SERVER_LEVEL_EVENTS, а его свойства — **тсклкомманд** и **DatabaseName**. Это событие также наследует свойства **SQLInstance**, **time**, **ComputerName**, **SPID**и **LoginName**. Это событие не имеет дочерних событий.  
   
 > [!NOTE]  
 >  Системные хранимые процедуры, выполняющие DDL-подобные операции, также могут запускать уведомления о событиях. Протестируйте свои уведомления о событиях, чтобы определить их реакцию на системные хранимые процедуры. Например, инструкция CREATE TYPE и хранимая процедура **sp_addtype** будут вызывать уведомление о событии, созданное для события CREATE_TYPE. Дополнительные сведения см. в разделе [DDL Events](../../relational-databases/triggers/ddl-events.md).  
   
- **События языка определения данных и группы событий**  
+ **События и группы событий языка описания данных DDL**  
   
  ![Дерево событий поставщика WMI для событий сервера](../../relational-databases/wmi-provider-server-events/media/sql-wmi-ddl-events-ktm.gif "Дерево событий поставщика WMI для событий сервера")  
   
  **События трассировки и группы событий**  
   
- ![События трассировки и группы событий](../../relational-databases/wmi-provider-server-events/media/sql-wmi-trc-all-events.gif "События трассировки и группы событий")  
+ ![События трассировки и группы событий](../../relational-databases/wmi-provider-server-events/media/sql-wmi-trc-all-events.gif "События трассировки и их группы")  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
  [Основные понятия о поставщике WMI для событий сервера](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)   
  [Использование WQL с поставщиком WMI для событий сервера](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)  
   

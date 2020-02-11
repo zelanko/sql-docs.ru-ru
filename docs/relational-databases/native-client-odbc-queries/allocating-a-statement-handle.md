@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5c176536675af707ec2e16fde80028beba8a019a
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73779990"
 ---
 # <a name="allocating-a-statement-handle"></a>Выделение дескриптора инструкции
@@ -39,11 +39,11 @@ ms.locfileid: "73779990"
   
  Вызов **SQLSetStmtAttr** с *параметром fOption* , установленным в значение SQL_ATTR_QUERY_TIMEOUT задает интервал времени ожидания запроса для защиты сервера и пользователя от длительных запросов.  
   
- Вызов **SQLSetStmtAttr** с *параметром fOption* , для которого задано значение SQL_ATTR_MAX_LENGTH ограничивает объем данных **текста** и **изображений** , которые может получить отдельная инструкция. Вызов **SQLSetStmtAttr** с *параметром fOption* , установленным в SQL_ATTR_MAX_ROWS, также ограничивает набор строк первыми *n* строками, если это требуется для всего приложения. Обратите внимание, что по значению SQL_ATTR_MAX_ROWS драйвер выполняет инструкцию SET ROWCOUNT на сервере. Это влияет на все инструкции [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], включая триггеры и обновления.  
+ Вызов **SQLSetStmtAttr** с *параметром fOption* , для которого задано значение SQL_ATTR_MAX_LENGTH ограничивает объем данных **текста** и **изображений** , которые может получить отдельная инструкция. Вызов **SQLSetStmtAttr** с *параметром fOption* , установленным в SQL_ATTR_MAX_ROWS, также ограничивает набор строк первыми *n* строками, если это требуется для всего приложения. Обратите внимание, что по значению SQL_ATTR_MAX_ROWS драйвер выполняет инструкцию SET ROWCOUNT на сервере. Это влияет на [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] все инструкции, включая триггеры и обновления.  
   
  Соблюдайте осторожность при установке этих параметров. Лучше, если все дескрипторы инструкций в дескрипторе соединения будут иметь одинаковые значения SQL_ATTR_MAX_LENGTH и SQL_ATTR_MAX_ROWS. Если драйвер переключается с одного дескриптора инструкции на другой с разными значениями этих параметров, то он должен для изменения значений формировать соответствующие инструкции SET TEXTSIZE и SET ROWCOUNT. Драйвер не может поместить эти инструкции в один пакет как пользовательские инструкции SQL, поскольку пользовательские инструкции SQL могут содержать инструкцию, которая должна быть первой в пакете. Драйвер должен отправлять инструкции SET TEXTSIZE и SET ROWCOUNT в отдельных пакетах, что приводит к появлению дополнительного обращения к серверу.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Выполняя запросы &#40;ODBC&#41;](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
   

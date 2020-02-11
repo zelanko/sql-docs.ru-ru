@@ -13,18 +13,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 51e5ec3832d497f342c4fc3132a75261f6c3c154
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022686"
 ---
 # <a name="new-peer-initialization-peer-to-peer-replication"></a>Инициализация нового узла (одноранговая репликация)
-  Для указания метода инициализации одноранговых баз данных служит страница **Инициализация нового узла** . (Узлы необходимо инициализировать перед завершением этого мастера). Узлы инициализируются вручную или с помощью **инициализации при помощи резервной копии** , предоставляемой репликацией транзакций. (Одноранговая репликация транзакций не поддерживает инициализацию узлов с помощью моментальных снимков). Если разные узлы необходимо инициализировать разными методами, нужно добавлять узлы по отдельности, запустив мастер несколько раз.  
+  Для указания метода инициализации одноранговых баз данных служит страница **Инициализация нового узла** . (Перед завершением работы мастера необходимо инициализировать узлы.) Одноранговые узлы инициализируются вручную или с помощью функции " **инициализировать с помощью резервного копирования** ", предоставляемой репликацией транзакций. (Одноранговая репликация транзакций не поддерживает инициализацию одноранговых узлов с помощью моментального снимка.) Если разные узлы должны быть инициализированы с помощью различных методов, необходимо добавить одноранговые узлы отдельно, запустив мастер несколько раз.  
   
 ## <a name="options"></a>Параметры  
  **Укажите способ инициализации новых одноранговых баз данных**  
- Схема и данные для всех опубликованных объектов должны присутствовать на каждом узле. Выберите один из следующих вариантов.  
+ Схема и данные для всех опубликованных объектов должны присутствовать на каждом узле. Выберите один из следующих вариантов:  
   
 -   Выберите первый вариант, если схема для опубликованных объектов была создана вручную или восстановлена резервная копия, а данные в первой базе данных публикации не изменялись со времени резервного копирования. При создании схемы вручную необходимо обеспечить присутствие всех необходимых данных на каждом узле. Этот режим соответствует значению **только поддержка репликации** для свойства подписки **sync_type**.  
   
@@ -36,16 +36,16 @@ ms.locfileid: "63022686"
   
     |Новый узел|Первый узел|Дополнительные узлы|Параметр|  
     |--------------|----------------|----------------------|------------|  
-    |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Выключено|  
-    |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|None|Выключено|  
+    |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Отключен|  
+    |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|None|Отключен|  
     |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Выключено|  
-    |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|None|Enabled|  
-    |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|None|Enabled|  
-    |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|Enabled|  
-    |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|None|Enabled|  
+    |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|None|Включен|  
+    |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|None|Включен|  
+    |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|Активировано|  
+    |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|None|Включен|  
   
-## <a name="see-also"></a>См. также  
- [Администрирование одноранговой топологии (программирование репликации на языке Transact-SQL)](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
- [Peer-to-Peer Transactional Replication](transactional/peer-to-peer-transactional-replication.md)  
+## <a name="see-also"></a>См. также:  
+ [Администрирование одноранговой топологии &#40;программирование репликации на языке Transact-SQL&#41;](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
+ [Одноранговая репликация транзакций](transactional/peer-to-peer-transactional-replication.md)  
   
   

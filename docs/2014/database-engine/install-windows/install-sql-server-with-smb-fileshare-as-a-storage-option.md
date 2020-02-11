@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3242f463e24322921b16a513c1b3a6905965b390
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62775337"
 ---
 # <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>Установка SQL Server с общей папкой SMB в качестве хранилища
@@ -32,7 +32,7 @@ ms.locfileid: "62775337"
   
 -   \\\имя_сервера\имя_папки  
   
- Дополнительные сведения о формате UNC, см. в разделе [UNC](https://go.microsoft.com/fwlink/?LinkId=245534) (https://go.microsoft.com/fwlink/?LinkId=245534).  
+ Дополнительные сведения о соглашении об универсальных именах смhttps://go.microsoft.com/fwlink/?LinkId=245534). в разделе [UNC](https://go.microsoft.com/fwlink/?LinkId=245534) (.  
   
  Путь UNC замыкания на себя (путь UNC, где именем сервера является localhost, 127.0.0.1 или имя локального компьютера) не поддерживается. В качестве особого случая [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с использованием кластера файлового сервера, размещенного на том же узле [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , также не поддерживается. Чтобы предотвратить возникновение этой ситуации, рекомендуется создавать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и кластер файлового сервера на отдельных кластерах Windows.  
   
@@ -57,11 +57,11 @@ ms.locfileid: "62775337"
   
 4.  [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)  
   
-5.  [sp_attach_db (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-attach-db-transact-sql)  
+5.  [sp_attach_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-db-transact-sql)  
   
-6.  [sp_attach_single_file_db (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql)  
+6.  [sp_attach_single_file_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql)  
   
-### <a name="installation-options"></a>Варианты установки  
+### <a name="installation-options"></a>Параметры установки  
   
 -   На странице "Настройка компонента ядра СУБД" пользовательского интерфейса программы настройки перейдите на вкладку "Каталоги данных" и задайте для параметра "Корневой каталог данных" значение "\\\fileserver1\share1\\"".  
   
@@ -79,30 +79,34 @@ ms.locfileid: "62775337"
     setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEPROGRESS /ASSYSADMINACCOUNTS="<DomainName\UserName>" /ASDATADIR=<Drive>:\OLAP\Data /ASLOGDIR=<Drive>:\OLAP\Log /ASBACKUPDIR=<Drive>:\OLAP\Backup /ASCONFIGDIR=<Drive>:\OLAP\Config /ASTEMPDIR=<Drive>:\OLAP\Temp /FAILOVERCLUSTERDISKS="<Cluster Disk Resource Name - for example, 'Disk S:'" /FAILOVERCLUSTERNETWORKNAME="<Insert Network Name>" /FAILOVERCLUSTERIPADDRESSES="IPv4;xx.xxx.xx.xx;Cluster Network;xxx.xxx.xxx.x" /FAILOVERCLUSTERGROUP="MSSQLSERVER" /Features=AS,SQL /ASSVCACCOUNT="<DomainName\UserName>" /ASSVCPASSWORD="xxxxxxxxxxx" /AGTSVCACCOUNT="<DomainName\UserName>" /AGTSVCPASSWORD="xxxxxxxxxxx" /INSTALLSQLDATADIR="\\FileServer\Share1\" /SQLCOLLATION="SQL_Latin1_General_CP1_CS_AS" /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx" /SQLSYSADMINACCOUNTS="<DomainName\UserName> /IACCEPTSQLSERVERLICENSETERMS  
     ```  
   
-     Дополнительные сведения об использовании различных параметров командной строки в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], см. в разделе [Установка SQL Server 2014 из командной строки](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
+     Дополнительные сведения об использовании различных параметров командной строки в см. в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]разделе [Install SQL Server 2014 в командной строке](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
 ## <a name="operating-system-considerations-smb-protocol-vs-includessnoversionincludesssnoversion-mdmd"></a>Рекомендации по операционным системам (сравнение протокола SMB и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
  В различных операционных системах Windows используются разные версии протокола SMB. Версия протокола SMB прозрачна для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Можно выяснить информацию о преимуществах разных версий SMB в отношении [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 |Операционная система|Версия протокола SMB2|Преимущества для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |----------------------|---------------------------|-------------------------------------------|  
-|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] с пакетом обновления 2 (SP2)|2.0|Повышенная производительность по сравнению с предыдущими версиями SMB.<br /><br /> Устойчивость, которая помогает восстанавливать данные при временных проблемах в работе сети.|  
-|[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] с пакетом обновления 1 (SP1), включая Server Core|2.1|Поддержка больших MTU, что позволяет передавать большой объем данных, например при резервном копировании и восстановлении SQL. Эту возможность должен включить пользователь. Дополнительные сведения о включении этой функции см. в разделе [Новые возможности SMB](https://go.microsoft.com/fwlink/?LinkID=237319) (https://go.microsoft.com/fwlink/?LinkID=237319).<br /><br /> Значительные улучшения производительности, в частности для рабочих нагрузок SQL OLTP. Эти улучшения производительности требуют применения исправления. Дополнительные сведения об этом исправлении см. в [этом разделе](https://go.microsoft.com/fwlink/?LinkId=237320) (https://go.microsoft.com/fwlink/?LinkId=237320).|  
-|[!INCLUDE[win8srv](../../includes/win8srv-md.md)], включая Server Core|3.0|Поддержка прозрачных обработок отказов общих папок с нулевым временем простоев и без необходимости вмешательства администраторов для изменения SQL DBA или администраторов файловых серверов для изменения конфигурации кластеров файловых серверов.<br /><br /> Поддержка ввода-вывода с одновременным использованием нескольких сетевых интерфейсов, а также устойчивость к отказу сетевых интерфейсов.<br /><br /> Поддержка сетевых интерфейсов с возможностями RDMA.<br /><br /> Дополнительные сведения об этих возможностях и протоколе SMB см. в разделе [Общие сведения о протоколе SMB](https://go.microsoft.com/fwlink/?LinkId=253174) (https://go.microsoft.com/fwlink/?LinkId=253174).<br /><br /> Поддержка для сервера SoFS с постоянной доступностью.|  
-|[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2, включая Server Core|3.2|Поддержка прозрачных обработок отказов общих папок с нулевым временем простоев и без необходимости вмешательства администраторов для изменения SQL DBA или администраторов файловых серверов для изменения конфигурации кластеров файловых серверов.<br /><br /> Поддержка ввода-вывода с одновременным использованием нескольких сетевых интерфейсов, а также устойчивость к отказу сетевых интерфейсов с помощью SMB Multichannel.<br /><br /> Поддержка сетевых интерфейсов с возможностями с помощью SMB Direct.<br /><br /> Дополнительные сведения об этих возможностях и протоколе SMB см. в разделе [Общие сведения о протоколе SMB](https://go.microsoft.com/fwlink/?LinkId=253174) (https://go.microsoft.com/fwlink/?LinkId=253174).<br /><br /> Поддержка для сервера SoFS с постоянной доступностью.<br /><br /> Оптимизировано для небольших произвольных операций ввода-вывода чтения и записи, обычных для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLTP.<br /><br /> Максимальный размер пакета (MTU) включен по умолчанию, что значительно повышает производительность в больших последовательных передачах, таких как хранилище данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или резервное копирование и восстановление базы данных.|  
+|
+  [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] с пакетом обновления 2 (SP2)|2.0|Повышенная производительность по сравнению с предыдущими версиями SMB.<br /><br /> Устойчивость, которая помогает восстанавливать данные при временных проблемах в работе сети.|  
+|
+  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] с пакетом обновления 1 (SP1), включая Server Core|2,1|Поддержка больших MTU, что позволяет передавать большой объем данных, например при резервном копировании и восстановлении SQL. Эту возможность должен включить пользователь. Дополнительные сведения о том, как включить эту возможность, см. в разделе [новые](https://go.microsoft.com/fwlink/?LinkID=237319) возможности SMBhttps://go.microsoft.com/fwlink/?LinkID=237319)(.<br /><br /> Значительные улучшения производительности, в частности для рабочих нагрузок SQL OLTP. Эти улучшения производительности требуют применения исправления. Дополнительные сведения об [этом](https://go.microsoft.com/fwlink/?LinkId=237320) исправлении смhttps://go.microsoft.com/fwlink/?LinkId=237320). в разделе.|  
+|
+  [!INCLUDE[win8srv](../../includes/win8srv-md.md)], включая Server Core|3.0|Поддержка прозрачных обработок отказов общих папок с нулевым временем простоев и без необходимости вмешательства администраторов для изменения SQL DBA или администраторов файловых серверов для изменения конфигурации кластеров файловых серверов.<br /><br /> Поддержка ввода-вывода с одновременным использованием нескольких сетевых интерфейсов, а также устойчивость к отказу сетевых интерфейсов.<br /><br /> Поддержка сетевых интерфейсов с возможностями RDMA.<br /><br /> Дополнительные сведения об этих возможностях и блоке сообщений сервера см. в разделе [Общие сведения о блоке сообщений сервера](https://go.microsoft.com/fwlink/?LinkId=253174) (https://go.microsoft.com/fwlink/?LinkId=253174).<br /><br /> Поддержка для сервера SoFS с постоянной доступностью.|  
+|
+  [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2, включая Server Core|3.2|Поддержка прозрачных обработок отказов общих папок с нулевым временем простоев и без необходимости вмешательства администраторов для изменения SQL DBA или администраторов файловых серверов для изменения конфигурации кластеров файловых серверов.<br /><br /> Поддержка ввода-вывода с одновременным использованием нескольких сетевых интерфейсов, а также устойчивость к отказу сетевых интерфейсов с помощью SMB Multichannel.<br /><br /> Поддержка сетевых интерфейсов с возможностями с помощью SMB Direct.<br /><br /> Дополнительные сведения об этих возможностях и блоке сообщений сервера см. в разделе [Общие сведения о блоке сообщений сервера](https://go.microsoft.com/fwlink/?LinkId=253174) (https://go.microsoft.com/fwlink/?LinkId=253174).<br /><br /> Поддержка для сервера SoFS с постоянной доступностью.<br /><br /> Оптимизировано для небольших произвольных операций ввода-вывода чтения и записи, обычных для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLTP.<br /><br /> Максимальный размер пакета (MTU) включен по умолчанию, что значительно повышает производительность в больших последовательных передачах, таких как хранилище данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или резервное копирование и восстановление базы данных.|  
   
 ## <a name="security-considerations"></a>Соображения безопасности  
   
--   Учетная запись службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и учетная запись агента службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должны иметь разрешения «Полный доступ» и разрешения NTFS для общих папок SMB. При использовании файлового сервера SMB в качестве учетной записи службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно использовать учетную запись домена или системы. Дополнительные сведения о разрешениях для общей папки и NTFS см. в разделе [Разрешения для общей папки и NTFS на файловом сервере](https://go.microsoft.com/fwlink/?LinkId=245535) (https://go.microsoft.com/fwlink/?LinkId=245535).  
+-   Учетная запись службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и учетная запись агента службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должны иметь разрешения «Полный доступ» и разрешения NTFS для общих папок SMB. При использовании файлового сервера SMB в качестве учетной записи службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно использовать учетную запись домена или системы. Дополнительные сведения о разрешениях общего доступа и файловой системы NTFS см. [в разделе разрешения для общего доступа и NTFS на файловом сервере](https://go.microsoft.com/fwlink/?LinkId=245535) (https://go.microsoft.com/fwlink/?LinkId=245535).  
   
     > [!NOTE]  
     >  Полный доступ для общих папок и разрешения NTFS для общих папок SMB должны действовать только для учетной записи службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , учетной записи службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и пользователей Windows, которым назначена роль администратора сервера.  
   
-     В качестве учетной записи службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] рекомендуется использовать учетную запись домена. Если в качестве учетной записи службы используется учетная запись системы, предоставьте разрешения для учетной записи компьютера в формате _<имя_домена>_ **\\** _<имя_компьютера>_ **$** .  
+     В качестве учетной записи службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] рекомендуется использовать учетную запись домена. Если системная учетная запись используется в качестве учетной записи службы, предоставьте разрешения для учетной записи компьютера в формате: _<domain_name>_ **\\** _<computer_name _ **$**>.  
   
     > [!NOTE]  
     >  -   Если в качестве хранилища задана общая папка SMB, во время установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в качестве учетной записи службы необходимо задать учетную запись домена. При использовании общей папки SMB учетную запись системы можно задать в качестве учетной записи службы только после установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
-    > -   Виртуальные учетные записи не могут проходить проверку подлинности в удаленном расположении. Все виртуальные учетные записи используют разрешение локальной учетной записи. Укажите учетную запись компьютера в формате _<имя_домена>_ **\\** _<имя_компьютера>_ **$** .  
+    > -   Виртуальные учетные записи не могут проходить проверку подлинности в удаленном расположении. Все виртуальные учетные записи используют разрешение локальной учетной записи. Подготавливает учетную запись компьютера в формате _<domain_name>_ **\\** _<computer_name _ **$**>.  
   
 -   Учетная запись, которая использовалась для установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], при установке кластера должна иметь разрешение «Полный доступ» к общей папке SMB, используемой в качестве каталога данных, или к любым другим папкам данных (каталог пользовательской базы данных, каталог журналов пользовательской базы данных, папка TempDB, каталог журналов TempDB, папка резервного копирования).  
   
@@ -110,11 +114,11 @@ ms.locfileid: "62775337"
   
 ## <a name="known-issues"></a>Известные проблемы  
   
--   После отсоединения базы данных [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , которая находится в хранилище, подключенном к сети, при попытке повторного присоединения базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возможны проблемы с разрешением доступа к базе данных. Эта проблема описывается в [этой статье базы знаний](https://go.microsoft.com/fwlink/?LinkId=237321) (https://go.microsoft.com/fwlink/?LinkId=237321). Информацию о решении этой проблемы см. в разделе **Дополнительные сведения** статьи из базы знаний.  
+-   После отсоединения базы данных [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , которая находится в хранилище, подключенном к сети, при попытке повторного присоединения базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возможны проблемы с разрешением доступа к базе данных. Эта проблема определена в [этой статье базы знаний](https://go.microsoft.com/fwlink/?LinkId=237321) (https://go.microsoft.com/fwlink/?LinkId=237321). Информацию о решении этой проблемы см. в разделе **Дополнительные сведения** статьи из базы знаний.  
   
--   Некоторые решения сторонних разработчиков, например устройство NetApp, не поддерживают все вызовы API SQL Server. С этими может появиться:   
-    2015-06-04 отображаться spid9s ошибка: 17053, Severity: 16, состояние: 1.  
-    2015-06-04 13:14:19.97 spid9s      DoDevIoCtlOut() GetOverlappedResult() : Обнаружена ошибка операционной системы 1 (Неправильная функция.).  
+-   Некоторые решения сторонних разработчиков, например устройство NetApp, не поддерживают все вызовы API SQL Server. С их помощью вы можете получить следующее:   
+    2015-06-04 13:14:19.97 spid9s ошибка: 17053, серьезность: 16, состояние: 1.  
+    2015-06-04 13:14:19.97 spid9s Додевиоктлаут () GetOverlappedResult (): обнаружена ошибка операционной системы 1 (Неверная функция.).  
   
      Для файловой системы NTFS эта ошибка неопасна,  но в случае с ReFS она может привести к существенному снижению производительности.  
   
@@ -129,9 +133,9 @@ ms.locfileid: "62775337"
         SET DIAGNOSTICS LOG PATH = 'C:\logs';  
         ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Планирование установки SQL Server](../../../2014/sql-server/install/planning-a-sql-server-installation.md)   
- [Инструкции по установке](../../../2014/sql-server/install/installation-how-to-topics.md)   
+ [Практические руководства по установке](../../../2014/sql-server/install/installation-how-to-topics.md)   
  [Настройка учетных записей службы Windows и разрешений](../configure-windows/configure-windows-service-accounts-and-permissions.md)  
   
   

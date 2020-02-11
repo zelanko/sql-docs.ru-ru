@@ -1,5 +1,5 @@
 ---
-title: Урок 2. Создания классов из RDL-схемы с помощью инструмента xsd | Документация Майкрософт
+title: Занятие 2. Создание классов из RDL-схемы с помощью средства XSD | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,28 +11,28 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: f5f74c6621d329885e9149fce9a37c7418d9c37b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62653757"
 ---
-# <a name="lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool"></a>Урок 2. Формирование классов из схемы языка определения отчетов с помощью инструмента xsd
+# <a name="lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool"></a>Урок 2. Формирование классов из RDL-схемы с помощью инструмента xsd
   После создания проекта в среде [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] следующим шагом является получение локальной копии схемы определения отчета и запуск средства определения XML-схемы (Xsd.exe).  
   
 ### <a name="to-generate-the-rdl-classes"></a>Формирование RDL-классов  
   
-1.  Откройте экземпляр [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer (или эквивалентный веб-браузер) и перейдите к следующему URL-АДРЕСУ:  
+1.  Откройте экземпляр [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer (или аналогичный веб-браузер) и перейдите по следующему URL-адресу:  
   
     ```  
     https://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition/ReportDefinition.xsd  
     ```  
   
-2.  После открытия RDL-схемы в браузере перейдите к **файл** меню и выберите **Сохранить как**.  
+2.  После открытия схемы языка определения отчетов в браузере перейдите в меню **файл** и выберите **Сохранить как**.  
   
 3.  Перейдите в папку, в которой был создан проект [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], и сохраните файл схемы под именем ReportDefinition.xsd.  
   
-4.  После сохранения файла откройте экземпляр [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] командной строки. Чтобы открыть экземпляр командной строки, щелкните меню "Пуск", выберите **все программы**, пункты **Microsoft Visual Studio 2010**, пункты **средств Visual Studio** и нажмите кнопку **Командная строка visual Studio (2010)** .  
+4.  После сохранения файла откройте экземпляр [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] командной строки. Чтобы открыть экземпляр командной строки, в меню Пуск последовательно выберите пункты **все программы**, **Microsoft Visual Studio 2010**, **инструменты Visual Studio** и щелкните **Командная строка Visual Studio (2010)**.  
   
 5.  Перейдите в папку, в которой сохранен файл ReportDefinition.xsd:  
   
@@ -46,16 +46,16 @@ ms.locfileid: "62653757"
   
      `xsd /c /l:VB /n:SampleRDLSchema ReportDefinition.xsd`  
   
-7.  Добавьте файл ReportDefinition.xsd в проект. Из **проекта** меню, щелкните **добавить существующий элемент**. Перейдите к расположению файла ReportDefinition.xsd, выделите его и нажмите кнопку **добавить**.  
+7.  Добавьте файл ReportDefinition.xsd в проект. В меню **проект** выберите команду **Добавить существующий элемент**. Перейдите к расположению файла ReportDefinition. xsd, выберите ReportDefinition. xsd и нажмите кнопку **Добавить**.  
   
     > [!NOTE]  
-    >  После добавления файла ReportDefinition.xsd в проект можно заметить в **обозревателе решений** что файл ReportDefinition.cs (VB) не существует. Чтобы отобразить файл, нажмите кнопку разворачивания или сворачивания рядом с файлом ReportDefinition.xsd.  
+    >  После добавления файла ReportDefinition. xsd в проект вы увидите в **Обозреватель решений** что файл ReportDefinition.cs (VB) отсутствует. Чтобы отобразить файл, нажмите кнопку разворачивания или сворачивания рядом с файлом ReportDefinition.xsd.  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- На следующем занятии будет написан код для загрузки определения отчета с сервера отчетов с помощью классов, сформированных из RDL-схемы. См. [Занятие 3. Загрузка определения отчета с сервера отчетов](../../2014/tutorials/lesson-3-load-a-report-definition-from-the-report-server.md).  
+ На следующем занятии будет написан код для загрузки определения отчета с сервера отчетов с помощью классов, сформированных из RDL-схемы.  См. [занятие 3. Загрузка определения отчета с сервера отчетов](../../2014/tutorials/lesson-3-load-a-report-definition-from-the-report-server.md).  
   
-## <a name="see-also"></a>См. также  
- [Обновление отчетов с помощью классов, созданных из RDL-схемы &#40;учебник по службам SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
- [Язык определения отчетов (службы SSRS)](../reporting-services/reports/report-definition-language-ssrs.md)  
+## <a name="see-also"></a>См. также:  
+ [Обновление отчетов с использованием классов, созданных из учебника по схеме языка определения отчетов &#40;SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
+ [Язык определения отчетов &#40;службы SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

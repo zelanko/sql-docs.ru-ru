@@ -1,5 +1,5 @@
 ---
-title: Редактор задачи скриптов (страница "Общие") | Документация Майкрософт
+title: Редактор задачи «Скрипт» (страница «Общие») | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5e889c4da9e20a547f5a512f4aab1ee823bde5f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056182"
 ---
 # <a name="script-task-editor-general-page"></a>Редактор задачи «Скрипт» (страница «Общие»)
@@ -36,10 +36,10 @@ ms.locfileid: "66056182"
  **Описание**  
  Введите описание задачи «Скрипт».  
   
-## <a name="see-also"></a>См. также  
- [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор задачи "Скрипт" (страница "Скрипт")](../../2014/integration-services/script-task-editor-script-page.md)   
- [Страница «Выражения»](expressions/expressions-page.md)   
+## <a name="see-also"></a>См. также:  
+ [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор задачи "Скрипт" &#40;страница "Скрипт"&#41;](../../2014/integration-services/script-task-editor-script-page.md)   
+ [Страница "выражения"](expressions/expressions-page.md)   
  [Примеры задачи «Скрипт»](extending-packages-scripting-task-examples/script-task-examples.md)  
   
   

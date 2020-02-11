@@ -1,5 +1,5 @@
 ---
-title: 'Коллекции (индекс синтаксиса Visual C++ с #import) | Документация Майкрософт'
+title: 'Коллекции (Visual C++ индекс синтаксиса с #import) | Документация Майкрософт'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -19,16 +19,16 @@ ms.assetid: 36fbca8e-1884-44b5-806b-d15e30f42fe6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 77a45203c50555168d2cd163c8b97406b8377694
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919899"
 ---
-# <a name="collections-visual-c-syntax-index-with-import"></a>Коллекции (индекс синтаксиса Visual C++ с #import)
-Это полезно знать, что коллекции наследуют некоторые распространенные методы и свойства.  
+# <a name="collections-visual-c-syntax-index-with-import"></a>Коллекции (Visual C++ индекс синтаксиса с #import)
+Полезно помнить, что коллекции наследуют определенные общие методы и свойства.  
   
- Наследовать все коллекции **число** свойство и **обновить** добавьте метод и все коллекции **элемент** свойство. **Ошибки** добавляет коллекцию **Очистить** метод. **Параметры** наследует коллекции **Append** и **удалить** методов, хотя **поля** коллекции добавляет **Append**, **удалить**, и **обновления** методы.  
+ Все коллекции наследуют свойство **Count** и метод **Refresh** , а все коллекции добавляют свойство **Item** . Коллекция **Errors** добавляет метод **clear** . Коллекция **Parameters** наследует методы **append** и **Delete** , в то время как коллекция **Fields** добавляет методы **добавления**, **удаления**и **обновления** .  
   
 ## <a name="properties-collection"></a>Коллекция Properties  
   
@@ -96,7 +96,7 @@ long GetCount( ); __declspec(property(get=GetCount)) long Count;
 PropertyPtr GetItem( const _variant_t & Index ); __declspec(property(get=GetItem)) PropertyPtr Item[];  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Коллекция Errors (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
  [Коллекция Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Коллекция Parameters (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   

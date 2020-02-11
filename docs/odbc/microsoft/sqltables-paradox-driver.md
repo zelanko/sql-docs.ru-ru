@@ -1,5 +1,5 @@
 ---
-title: SQLTables (драйвер для Paradox) | Документация Майкрософт
+title: SQLTables (Драйвер Paradox) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,21 +14,21 @@ ms.assetid: d68adad6-97bd-4b47-bcf9-0102aafb00d4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 48cbc19506a7f695433489c952f53864b614a05e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949026"
 ---
 # <a name="sqltables-paradox-driver"></a>SQLTables (драйвер для Paradox)
 > [!NOTE]  
->  Здесь приведены сведения об особенностях драйвер для Paradox. Общие сведения об этой функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  В этом разделе приводятся сведения, относящиеся к драйверу Paradox. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
 |Аргумент|Комментарии|  
 |--------------|--------------|  
-|*szTableOwner*|Единственным допустимым аргументом для *szTableOwner* имеет значение NULL, так как ни один из драйверов не поддерживает имена владельцев. С помощью *szTableOwner* присваивается значение NULL, возвращаются все таблицы. В столбце TABLE_OWNER возвращается значение NULL.|  
-|*szTableQualifier*|В столбце TABLE_QUALIFIER **SQLTables** возвращает путь к каталогу.|  
-|*SzTableType*|Для файлов, Paradox «TABLE» является единственным типом таблицы поддерживается.|  
+|*сзтаблеовнер*|Единственным допустимым аргументом для *сзтаблеовнер* является null, так как ни один из драйверов не поддерживает имена владельцев. Если для *сзтаблеовнер* ЗАДАНО значение null, возвращаются все таблицы. Значение NULL возвращается в столбец TABLE_OWNER.|  
+|*сзтаблекуалифиер*|В столбце TABLE_QUALIFIER **SQLTables** вернет путь к каталогу.|  
+|*сзтаблетипе*|Для файлов Paradox "TABLE" — это единственный поддерживаемый тип таблицы.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функция SQLTables](../../odbc/reference/syntax/sqltables-function.md)

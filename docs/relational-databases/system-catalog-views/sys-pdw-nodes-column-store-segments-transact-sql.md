@@ -14,10 +14,10 @@ ms.author: jrasnick
 manager: jrj
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: bea8e0d51b2918d7280f4afdb8b9d02f6b757827
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401668"
 ---
 # <a name="syspdw_nodes_column_store_segments-transact-sql"></a>sys. pdw_nodes_column_store_segments (Transact-SQL)
@@ -26,7 +26,7 @@ ms.locfileid: "74401668"
 
 Содержит по одной строке для каждого столбца в индексе columnstore.
 
-| Имя столбца                 | Тип данных  | Описание                                                  |
+| Имя столбца                 | Тип данных  | Description                                                  |
 | :-------------------------- | :--------- | :----------------------------------------------------------- |
 | **partition_id**            | **bigint** | Указывает идентификатор секции. Уникален в базе данных.     |
 | **hobt_id**                 | **bigint** | Идентификатор кучи или индекс сбалансированного дерева (hobt) для таблицы, в которой содержится индекс columnstore. |
@@ -37,7 +37,7 @@ ms.locfileid: "74401668"
 | **row_count**               | **int**    | Число строк в группе строк.                             |
 | **has_nulls**               | **int**    | Значение 1, если сегмент столбца содержит значения NULL.                     |
 | **base_id**                 | **bigint** | Идентификатор базового значения, если используется тип кодировки 1.  Если тип кодировки 1 не используется, base_id устанавливается в значение 1. |
-| **magnitude**               | **сделать**  | Величина, если используется тип кодировки 1.  Если тип кодировки 1 не используется, то величина устанавливается равным 1. |
+| **magnitude**               | **float**  | Величина, если используется тип кодировки 1.  Если тип кодировки 1 не используется, то величина устанавливается равным 1. |
 | **primary__dictionary_id**  | **int**    | Идентификатор основного словаря. Ненулевое значение указывает на локальный словарь для этого столбца в текущем сегменте (т. е. группы строк). Значение-1 указывает на отсутствие локального словаря для этого сегмента. |
 | **secondary_dictionary_id** | **int**    | Идентификатор дополнительного словаря. Ненулевое значение указывает на локальный словарь для этого столбца в текущем сегменте (т. е. группы строк). Значение-1 указывает на отсутствие локального словаря для этого сегмента. |
 | **min_data_id**             | **bigint** | Минимальный идентификатор данных в сегменте столбца.                       |
@@ -84,7 +84,7 @@ ORDER BY    table_nm
 
 Требуется разрешение **View Server State** .
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Хранилища данных SQL и представления каталога параллельных хранилищ данных](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
 [Создание индекса COLUMNSTORE &#40;&#41;Transact-SQL](../../t-sql/statements/create-columnstore-index-transact-sql.md)  

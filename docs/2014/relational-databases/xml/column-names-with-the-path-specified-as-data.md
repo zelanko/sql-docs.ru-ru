@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fe23dba019511137c9ad817ecdf87fae1938bbd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63288803"
 ---
 # <a name="column-names-with-the-path-specified-as-data"></a>Имена столбцов с путем, указанным как data()
@@ -37,7 +37,7 @@ WHERE ProductModelID= 7
 FOR XML PATH('ProductModelData');  
 ```  
   
- Вложенная инструкция SELECT извлекает список кодов продуктов. Имя столбца для кодов продуктов в нем указано как «data()». Поскольку режим PATH указывает для имени элемента строки пустую строку, формирования элемента строки не происходит. Вместо этого возвращаются значения, назначенные атрибуту ProductIDs элемента строки <`ProductModelData`> в родительской инструкции SELECT. Это результат:  
+ Вложенная инструкция SELECT извлекает список кодов продуктов. Имя столбца для кодов продуктов в нем указано как «data()». Поскольку режим PATH указывает для имени элемента строки пустую строку, формирования элемента строки не происходит. Вместо этого возвращаются значения, назначенные атрибуту ProductIDs элемента строки <`ProductModelData`> в родительской инструкции SELECT. Результат:  
   
  `<ProductModelData ProductModelID="7"`  
   
@@ -45,7 +45,7 @@ FOR XML PATH('ProductModelData');
   
  `ProductIDs="885 887 888 889 890 891 892 893" />`  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование режима PATH совместно с FOR XML](use-path-mode-with-for-xml.md)  
   
   

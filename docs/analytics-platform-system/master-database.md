@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: cafef8a5b702b6df4475d34e9395bb12bc9461fb
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400978"
 ---
 # <a name="master-database---parallel-data-warehouse"></a>База данных master — Параллельное хранилище данных
@@ -42,9 +42,9 @@ ms.locfileid: "74400978"
   
 ## <a name="related-tasks"></a>Связанные задачи  
   
-|Задача|Описание|  
+|Задача|Description|  
 |--------|---------------|  
-|Создайте полную резервную копию главной реплики.|Пример:<br /><br />`BACKUP DATABASE master TO backup_directory;`<br /><br />Дополнительные сведения см. в разделе [BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md).|  
+|Создайте полную резервную копию главной реплики.|Пример<br /><br />`BACKUP DATABASE master TO backup_directory;`<br /><br />Дополнительные сведения см. в разделе [BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md).|  
 |Восстановление базы данных master|Чтобы восстановить базу данных master, воспользуйтесь страницей [Восстановление базы данных master](restore-the-master-database.md) в средстве Configuration Manager.|  
 |Просмотр сведений о каталоге базы данных.|`SELECT * FROM master.sys.databases;`|  
 |Просмотр имени входа и сведений о разрешениях на уровне системы.|`SELECT * FROM master.sys.server_permissions;`<br /><br />`SELECT * FROM master.sys.server_principals;`<br /><br />`SELECT * FROM master.sys.sql_logins;`|  

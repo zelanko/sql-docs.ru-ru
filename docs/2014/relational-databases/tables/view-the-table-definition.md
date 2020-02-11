@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 308281ed30b7f0a56acbe397c0294932afeae121
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211753"
 ---
 # <a name="view-the-table-definition"></a>Просмотр определения таблицы
@@ -29,7 +29,7 @@ ms.locfileid: "68211753"
   
 -   **Перед началом работы**  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Отображение свойств таблицы с использованием:**  
   
@@ -50,7 +50,7 @@ ms.locfileid: "68211753"
   
 1.  В обозревателе объектов выберите таблицу, для которой необходимо просмотреть свойства.  
   
-2.  Щелкните таблицу правой кнопкой мыши и в контекстном меню выберите пункт **Свойства**. Дополнительные сведения см. в статье [Table Properties](table-properties-ssms.md).  
+2.  Щелкните таблицу правой кнопкой мыши и в контекстном меню выберите пункт **Свойства** . Дополнительные сведения см. в статье [Table Properties](table-properties-ssms.md).  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   

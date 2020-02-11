@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 37df9ccdd0bc2b44384bb9fd3d130c8d3bf8ca36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873433"
 ---
 # <a name="configure-properties-of-a-data-collector"></a>Настройка свойств сборщика данных
@@ -45,9 +45,9 @@ ms.locfileid: "62873433"
  Эта страница используется для настройки параметров повторных попыток соединения с хранилищем данных управления.  
   
  **Количество повторных попыток в случае ошибки передачи**  
- Указывает число повторных попыток передачи в хранилище управляющих данных, если передача завершается ошибкой. Значение по умолчанию равно 1.  
+ Указывает число повторных попыток передачи в хранилище управляющих данных, если передача завершается ошибкой. Значение по умолчанию — 1.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Управление сбором данных](data-collection.md)   
  [Настройка хранилища данных управления (среда SQL Server Management Studio)](configure-the-management-data-warehouse-sql-server-management-studio.md)  
   

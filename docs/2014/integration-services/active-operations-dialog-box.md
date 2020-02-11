@@ -1,5 +1,5 @@
 ---
-title: Диалоговое окно «активные операции» | Документация Майкрософт
+title: Диалоговое окно "активные операции" | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f930a2e6f3ce84c330a4b7292ebaaba3b2ab871e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062219"
 ---
 # <a name="active-operations-dialog-box"></a>Диалоговое окно «Активные операции»
@@ -25,25 +25,25 @@ ms.locfileid: "66062219"
   
  Дополнительные сведения о связанных представлениях [!INCLUDE[tsql](../includes/tsql-md.md)] см. в разделах [catalog.operations (база данных SSISDB)](/sql/integration-services/system-views/catalog-operations-ssisdb-database), [catalog.validations (база данных SSISDB)](/sql/integration-services/system-views/catalog-validations-ssisdb-database) и [catalog.executions (база данных SSISDB)](/sql/integration-services/system-views/catalog-executions-ssisdb-database).  
   
- **Выбор действия**  
+ **Что необходимо сделать?**  
   
-1.  [Открытие диалогового окна «Активные операции»](#open_dialog)  
+1.  [Открытие диалогового окна «активные операции»](#open_dialog)  
   
 2.  [Настройка параметров](#options)  
   
-##  <a name="open_dialog"></a> Открытие диалогового окна «Активные операции»  
+##  <a name="open_dialog"></a>Открытие диалогового окна «активные операции»  
   
-1.  Откройте [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
+1.  Откройте среду [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
 2.  Подключение компонента Microsoft SQL Server Database Engine  
   
 3.  В обозревателе объектов разверните узел **Службы Integration Services** , щелкните правой кнопкой мыши элемент **SSISDB**и выберите пункт **Активные операции**.  
   
-##  <a name="options"></a> Настройка параметров  
+##  <a name="options"></a>Настройка параметров  
   
 ### <a name="options"></a>Параметры  
  **Тип**  
- Задает тип операции. Ниже приведены возможные значения для **тип** поля и соответствующие значения в столбце operations_type Transact-SQL `catalog.operations` представления.  
+ Задает тип операции. Ниже приведены возможные значения для поля **Type** и соответствующие значения в столбце Operations_type представления TRANSACT-SQL `catalog.operations` .  
   
 |||  
 |-|-|  
@@ -58,7 +58,7 @@ ms.locfileid: "66062219"
 |Проверить пакет|301|  
 |Настроить каталог|1000|  
   
- **Остановить**  
+ **Позиции**  
  Щелкните, чтобы остановить выполняемую в настоящий момент операцию.  
   
   

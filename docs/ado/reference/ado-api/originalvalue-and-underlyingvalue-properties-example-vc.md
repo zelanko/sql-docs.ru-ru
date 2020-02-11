@@ -1,5 +1,5 @@
 ---
-title: Примеры OriginalValue и Underlyingvalue свойства (Visual C++) | Документация Майкрософт
+title: Примеры свойств OriginalValue и UnderlyingValue (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: c5762ad2-f43b-453d-b44a-9c70210eb00f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6b4950634f473ca70c26b7b2b2c8159fb9a75fb0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931828"
 ---
-# <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>Примеры OriginalValue и Underlyingvalue свойства (Visual C++)
-В этом примере показано [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) и [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) свойства, отображая сообщение, если запись основного данных был изменен в течение [записей](../../../ado/reference/ado-api/recordset-object-ado.md) пакетное обновление.  
+# <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>Пример свойств OriginalValue и UnderlyingValue (Visual c++)
+Этот пример демонстрирует свойства [originalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) и [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) , отображая сообщение, если базовые данные записи изменились во время пакетного обновления [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) .  
   
 ## <a name="example"></a>Пример  
   
@@ -194,32 +194,32 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **Данные изменились!**  
-**Идентификатор заголовка: PS1372**  
+ **Данные изменены.**  
+**ИДЕНТИФИКАТОР заголовка: PS1372**  
 **Текущее значение: self_help**   
 **Исходное значение: психологии**   
 **Базовое значение: социологии**   
-**Данные изменились!**  
-**Идентификатор заголовка: PS2091**  
+**Данные изменены.**  
+**ИДЕНТИФИКАТОР заголовка: PS2091**  
 **Текущее значение: self_help**   
 **Исходное значение: психологии**   
 **Базовое значение: социологии**   
-**Данные изменились!**  
-**Идентификатор заголовка: PS2106**  
+**Данные изменены.**  
+**ИДЕНТИФИКАТОР заголовка: PS2106**  
 **Текущее значение: self_help**   
 **Исходное значение: психологии**   
 **Базовое значение: социологии**   
-**Данные изменились!**  
-**Идентификатор заголовка: PS3333**  
+**Данные изменены.**  
+**ИДЕНТИФИКАТОР заголовка: PS3333**  
 **Текущее значение: self_help**   
 **Исходное значение: психологии**   
 **Базовое значение: социологии**   
-**Данные изменились!**  
-**Идентификатор заголовка: PS7777**  
+**Данные изменены.**  
+**ИДЕНТИФИКАТОР заголовка: PS7777**  
 **Текущее значение: self_help**   
 **Исходное значение: психологии**   
 **Базовое значение: социологии**    
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство OriginalValue (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Свойство UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)

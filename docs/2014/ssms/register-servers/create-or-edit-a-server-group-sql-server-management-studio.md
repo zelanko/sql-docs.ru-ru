@@ -18,10 +18,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: ae7d1e66d4cbd9b74ad8e58d3ac59c7ddda920a7
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244610"
 ---
 # <a name="create-or-edit-a-server-group-sql-server-management-studio"></a>Создание или изменение группы серверов (среда SQL Server Management Studio)
@@ -44,7 +44,7 @@ ms.locfileid: "75244610"
     > [!NOTE]  
     >  Также можно создать новую группу серверов при регистрации сервера. Для этого нажмите кнопку **Создать группу**и заполните параметры в диалоговом окне **Новая группа** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Регистрация серверов](register-servers.md)  
   
   

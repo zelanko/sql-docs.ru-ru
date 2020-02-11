@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3dcd239c782f53ec11970e94f89e5acfac982785
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75228805"
 ---
 # <a name="configuration-of-a-server-instance-for-always-on-availability-groups-sql-server"></a>Настройка экземпляра сервера для групп доступности AlwaysOn (SQL Server)
@@ -45,7 +45,7 @@ ms.locfileid: "75228805"
   
 2.  Убедитесь, что в экземпляре сервера есть конечная точка зеркального отображения базы данных.  
   
-##  <a name="RelatedTasks"></a>Связанные задачи  
+##  <a name="RelatedTasks"></a> Связанные задачи  
  **Включение функции «Группы доступности AlwaysOn»**  
   
 -   [Включение и отключение группы доступности AlwaysOn &#40;SQL Server&#41;](enable-and-disable-always-on-availability-groups-sql-server.md)  
@@ -62,7 +62,7 @@ ms.locfileid: "75228805"
   
 -   [Разрешить использование сертификатов для исходящих соединений в конечной точке зеркального отображения базы данных &#40;Transact-SQL&#41;](../../database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
   
-##  <a name="RelatedContent"></a>Связанное содержимое  
+##  <a name="RelatedContent"></a> См. также  
   
 -   **Тех**  
   
@@ -86,7 +86,7 @@ ms.locfileid: "75228805"
   
      [Технические документы группы консультирования клиентов SQL Server](http://sqlcat.com/)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Предварительные требования, ограничения и рекомендации для группы доступности AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [SQL Server &#40;конечной точки зеркального отображения базы данных&#41;](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)   

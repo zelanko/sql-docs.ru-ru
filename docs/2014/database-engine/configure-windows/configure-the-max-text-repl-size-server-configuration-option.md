@@ -13,14 +13,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e55268f499069fb6714aa07944997e1e92e7fc23
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62811578"
 ---
 # <a name="configure-the-max-text-repl-size-server-configuration-option"></a>Настройка параметра конфигурации сервера max text repl size
-  В этом разделе описываются способы настройки параметра конфигурации сервера **max text repl size** в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. **Max text repl Size size** параметр указывает максимальный размер (в байтах) `text`, `ntext`, `varchar(max)`, `nvarchar(max)`, `varbinary(max)`, `xml`, и `image` данные, которые могут добавляться к столбец реплицированных или отслеживаемых столбцов в одной инструкции INSERT, UPDATE, WRITETEXT или UPDATETEXT. Значение по умолчанию — 65 536 байт. Значение -1 означает отсутствие ограничений размера, кроме тех, которые налагаются типом данных.  
+  В этом разделе описываются способы настройки параметра конфигурации сервера **max text repl size** в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Параметр **max text repl size** задает максимальный размер (в байтах) `text`данных, `ntext`, `varchar(max)`, `nvarchar(max)` `varbinary(max)` `xml`,, и `image` , которые могут быть добавлены к реплицируемому или записанному столбцу в одной инструкции INSERT, Update, WRITETEXT или UPDATETEXT. Значение по умолчанию — 65 536 байт. Значение -1 означает отсутствие ограничений размера, кроме тех, которые налагаются типом данных.  
   
  **В этом разделе**  
   
@@ -28,7 +28,7 @@ ms.locfileid: "62811578"
   
      [Ограничения](#Restrictions)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Настройка параметра max text repl size с использованием следующих средств:**  
   
@@ -87,7 +87,7 @@ GO
 ##  <a name="FollowUp"></a> Дальнейшие действия. После настройки параметра max text repl size  
  Параметр вступает в силу немедленно, без перезапуска сервера.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Репликация SQL Server](../../relational-databases/replication/sql-server-replication.md)   
  [INSERT (Transact-SQL)](/sql/t-sql/statements/insert-transact-sql)   
  [RECONFIGURE (Transact-SQL)](/sql/t-sql/language-elements/reconfigure-transact-sql)   

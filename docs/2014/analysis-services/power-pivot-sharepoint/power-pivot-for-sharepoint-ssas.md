@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef00476e7c469a98532e58302c560c805669421d
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74683589"
 ---
 # <a name="powerpivot-for-sharepoint-ssas"></a>PowerPivot для SharePoint (SSAS)
@@ -53,14 +53,14 @@ ms.locfileid: "74683589"
   
  Завершает развертывание экземпляр сервера служб Analysis Service в режиме интеграции с SharePoint. Он загружает и выгружает данные и управляет запросами к ним. Он также обрабатывает данные, если для книги настроено обновление данных PowerPivot.  Каждый экземпляр тесно связан с локальной системной службой PowerPivot, которая входит в состав той же установки.  
   
-##  <a name="bkmk_RelatedContent"></a>В этом разделе  
+##  <a name="bkmk_RelatedContent"></a> в этом разделе  
  [Настройка и администрирование сервера PowerPivot в центре администрирования](power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
  [Настройка PowerPivot с помощью Windows PowerShell](power-pivot-configuration-using-windows-powershell.md)  
   
- [Средства настройки PowerPivot](power-pivot-configuration-tools.md)  
+ [PowerPivot Configuration Tools](power-pivot-configuration-tools.md)  
   
- [Аутентификация и авторизация PowerPivot](power-pivot-authentication-and-authorization.md)  
+ [Проверка подлинности и авторизация PowerPivot](power-pivot-authentication-and-authorization.md)  
   
  [Правила определения исправности PowerPivot — настройка](configure-power-pivot-health-rules.md)  
   
@@ -79,7 +79,7 @@ ms.locfileid: "74683589"
  **В других разделах**  
   
 ## <a name="additional-topics"></a>Дополнительные разделы  
- [PowerPivot для SharePoint обновления](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)  
+ [Обновление PowerPivot для SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)  
   
  [Установка PowerPivot для SharePoint 2013](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
@@ -87,7 +87,7 @@ ms.locfileid: "74683589"
   
  [Примеры топологий и стоимости лицензий для SQL Server 2014 самостоятельной бизнес-аналитики](../../sql-server/install/example-license-topologies-costs-self-service-business-intelligence.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Планирование и развертывание PowerPivot](https://go.microsoft.com/fwlink/?linkID=220972)   
  [Аварийное восстановление в PowerPivot для SharePoint](https://go.microsoft.com/fwlink/p/?LinkId=389570)  
   

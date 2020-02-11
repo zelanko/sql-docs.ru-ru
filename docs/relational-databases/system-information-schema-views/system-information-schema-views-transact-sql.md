@@ -19,10 +19,10 @@ ms.assetid: 7e9f1dfe-27e9-40e7-8fc7-bfc5cae6be10
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 9767c68f80c133a31c5ca33053731a399f1048db
-ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68670563"
 ---
 # <a name="system-information-schema-views-transact-sql"></a>Представления схемы системных сведений (Transact-SQL)
@@ -34,13 +34,14 @@ ms.locfileid: "68670563"
 > [!IMPORTANT]
 > В представления информационной схемы были внесены определенные изменения, нарушающие обратную совместимость. Эти изменения описаны в разделах, посвященных конкретным представлениям.
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает соглашения по трехкомпонентному именованию при ссылках на текущий сервер. Стандарт ISO также поддерживает соглашения по трехкомпонентному именованию. Однако имена, которые используются в обоих соглашениях, различаются. Представления информационной схемы определяются в специальной схеме с именем INFORMATION_SCHEMA. Эта схема содержится в любой базе данных. Каждое представление информационной схемы содержит метаданные для всех объектов, хранящихся в этой конкретной базе данных. В следующей таблице представлены связи между именами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и стандартными именами SQL.
+
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает соглашения по трехкомпонентному именованию при ссылках на текущий сервер. Стандарт ISO также поддерживает соглашения по трехкомпонентному именованию. Однако имена, которые используются в обоих соглашениях, различаются. Представления информационной схемы определяются в специальной схеме с именем INFORMATION_SCHEMA. Эта схема содержится в любой базе данных. Каждое представление информационной схемы содержит метаданные для всех объектов, хранящихся в этой конкретной базе данных. В следующей таблице представлены связи между именами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и стандартными именами SQL.
 
 |Имя SQL Server|Соответствует эквивалентному стандартному имени SQL|
 |---------------------|-----------------------------------------------|
 |База данных|Каталог|
 |схема|схема|
-|Object|Object|
+|Объект|Объект|
 |определяемый пользователем тип данных|Домен|
 
 Настоящее соглашение по соответствию имен применяется к следующим представлениям [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], совместимым со стандартом ISO.
@@ -68,8 +69,8 @@ FROM AdventureWorks2012.INFORMATION_SCHEMA.COLUMNS
 WHERE TABLE_NAME = N'Product';
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Системные представления &#40;— TRANSACT-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)
-- [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)
-- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md) 
+- [Системные представления &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)
+- [Типы данных &#40;&#41;Transact-SQL](../../t-sql/data-types/data-types-transact-sql.md)
+- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md) 

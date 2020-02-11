@@ -16,13 +16,13 @@ ms.assetid: 800c9c65-723e-4961-a63d-327987f129f0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0b9666c13a2e4d8183d19fade64bf49b13377b9a
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771064"
 ---
-# <a name="sphelpdatatypemap-transact-sql"></a>sp_helpdatatypemap (Transact-SQL)
+# <a name="sp_helpdatatypemap-transact-sql"></a>sp_helpdatatypemap (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Возвращает сведения об определенных сопоставлениях типов данных между [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и системами управления, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не являющимися базами данных (СУБД). Эта хранимая процедура выполняется на распространителе в любой базе данных.  
@@ -43,35 +43,35 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @source_dbms = ] 'source_dbms'`Имя СУБД, с которой сопоставляются типы данных. *source_dbms* имеет тип **sysname**и может принимать одно из следующих значений.  
+`[ @source_dbms = ] 'source_dbms'`Имя СУБД, с которой сопоставляются типы данных. Аргумент *source_dbms* имеет тип **sysname**и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|Источником является база данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**СУБД**|Источником является база данных Oracle.|  
   
-`[ @source_version = ] 'source_version'`Версия продукта исходной СУБД. *source_version*имеет тип **varchar (10)** , и если он не указан, возвращаются сопоставления типов данных для всех версий исходной СУБД. Позволяет фильтровать результирующий набор по типу данных по версии исходной СУБД.  
+`[ @source_version = ] 'source_version'`Версия продукта исходной СУБД. *source_version*имеет тип **varchar (10)**, и если он не указан, возвращаются сопоставления типов данных для всех версий исходной СУБД. Позволяет фильтровать результирующий набор по типу данных по версии исходной СУБД.  
   
-`[ @source_type = ] 'source_type'`Тип данных, указанный в исходной СУБД. *source_type* имеет тип **sysname**, и если он не указан, то возвращаются сопоставления для всех типов данных в исходной СУБД. Позволяет фильтровать результирующий набор по типу данных исходной СУБД.  
+`[ @source_type = ] 'source_type'`Тип данных, указанный в исходной СУБД. Аргумент *source_type* имеет тип **sysname**, и если он не указан, то возвращаются сопоставления для всех типов данных в исходной СУБД. Позволяет фильтровать результирующий набор по типу данных исходной СУБД.  
   
-`[ @destination_dbms = ] 'destination_dbms'`Имя целевой СУБД. *destination_dbms* имеет тип **sysname**и может принимать одно из следующих значений.  
+`[ @destination_dbms = ] 'destination_dbms'`Имя целевой СУБД. Аргумент *destination_dbms* имеет тип **sysname**и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|Целевая база данных — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**СУБД**|Целевой является база данных Oracle.|  
 |**DB2**|Целевой является база данных IBM DB2.|  
 |**SYBASE**|Целевой является база данных Sybase.|  
   
-`[ @destination_version = ] 'destination_version'`Версия продукта целевой СУБД. *destination_version*имеет тип **varchar (10)** , и если он не указан, то возвращаются сопоставления для всех версий целевой СУБД. Позволяет фильтровать результирующий набор по типу данных по версии целевой СУБД.  
+`[ @destination_version = ] 'destination_version'`Версия продукта целевой СУБД. *destination_version*имеет тип **varchar (10)**, и если он не указан, то возвращаются сопоставления для всех версий целевой СУБД. Позволяет фильтровать результирующий набор по типу данных по версии целевой СУБД.  
   
-`[ @destination_type = ] 'destination_type'`Тип данных, указанный в целевой СУБД. *destination_type*имеет тип **sysname**, и если он не указан, то возвращаются сопоставления для всех типов данных в целевой СУБД. Позволяет фильтровать результирующий набор по типу данных целевой СУБД.  
+`[ @destination_type = ] 'destination_type'`Тип данных, указанный в целевой СУБД. Аргумент *destination_type*имеет тип **sysname**, и если он не указан, то возвращаются сопоставления для всех типов данных в целевой СУБД. Позволяет фильтровать результирующий набор по типу данных целевой СУБД.  
   
 `[ @defaults_only = ] defaults_only`Имеет значение, если возвращаются только сопоставления типов данных по умолчанию. *defaults_only* имеет **бит**и значение по умолчанию **0**. **1** означает, что возвращаются только сопоставления типов данных по умолчанию. значение **0** означает, что возвращаются значения по умолчанию и любые пользовательские сопоставления типов данных.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Описание|  
+|Имя столбца|Description|  
 |-----------------|-----------------|  
 |**mapping_id**|Идентифицирует сопоставление типа данных.|  
 |**source_dbms**|Название и номер версии исходной СУБД.|  
@@ -83,16 +83,16 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
- **sp_helpdatatypemap** определяет сопоставления типов данных от издателей, отличных от SQL Server, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей до подписчиков, отличных от.  
+## <a name="remarks"></a>Remarks  
+ **sp_helpdatatypemap** определяет сопоставления типов данных как от издателей, отличных от SQL Server [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей до подписчиков, отличных от.  
   
  Если указанное сочетание исходной и целевой СУБД не поддерживается, **sp_helpdatatypemap** возвращает пустой результирующий набор.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** на распространителе или члены предопределенной роли базы данных **db_owner** в базе данных распространителя могут выполнять **sp_helpdatatypemap**.  
   
-## <a name="see-also"></a>См. также  
- [sp_getdefaultdatatypemapping &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)   
- [sp_setdefaultdatatypemapping &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [sp_getdefaultdatatypemapping &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)   
+ [sp_setdefaultdatatypemapping &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql.md)  
   
   

@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4b694af5b760ae3c1ead1e4984c35ef61c0fa602
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094339"
 ---
 # <a name="installing-upgrade-advisor-from-the-command-prompt"></a>Установка помощника по обновлению из командной строки
@@ -32,11 +32,11 @@ ms.locfileid: "66094339"
   
  В следующей таблице приведены наиболее часто применяемые параметры.  
   
-|Аргумент|Описание|  
+|Аргумент|Description|  
 |--------------|-----------------|  
 |/q [n&#124;b&#124;r&#124;f]|Задает уровень пользовательского интерфейса (UI):<br /><br /> n = без интерфейса<br /><br /> b = базовый интерфейс (только ход выполнения, без подсказок)<br /><br /> r = сокращенный интерфейс (диалоговое окно в конце установки)<br /><br /> f = полный интерфейс|  
-|/L|Определяет параметры файла журнала. Для регистрации всех сообщений для *log_file_name*, использовать **-L\*v**_log_file_name_. Чтобы записывать только сообщения об ошибках, укажите `-Le` *log_file_name*.|  
-|ADDLOCAL=ALL&#124; REMOVE=ALL&#124;REINSTALL=ALL|Определяет, нужно ли установить (ADDLOCAL), удалить (REMOVE) или переустановить (REINSTALL) помощник по обновлению.|  
+|/L|Определяет параметры файла журнала. Чтобы записывать все сообщения в *log_file_name*, используйте **-L\*v**_log_file_name_. Чтобы регистрировать только сообщения об ошибках `-Le`, используйте *log_file_name*.|  
+|ADDLOCAL = ALL&#124; REMOVE = ALL&#124;REINSTALL = ALL|Определяет, нужно ли установить (ADDLOCAL), удалить (REMOVE) или переустановить (REINSTALL) помощник по обновлению.|  
 |UAINSTALLDIR=path|Устанавливает помощник по обновлению в местоположение, указанное в параметре path.|  
   
 ## <a name="installation-examples"></a>Примеры установки  
@@ -67,7 +67,7 @@ SQLUA.msi /qn REMOVE=ALL
 Msiexec.exe /i C:\Downloads\SQLUA.msi /qn REMOVE=ALL  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Установка помощника по обновлению](../../../2014/sql-server/install/installing-upgrade-advisor.md)   
  [Компоненты, необходимые для помощника по обновлению](../../../2014/sql-server/install/upgrade-advisor-prerequisites.md)  
   

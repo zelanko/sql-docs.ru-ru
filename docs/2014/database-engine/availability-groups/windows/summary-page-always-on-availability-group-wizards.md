@@ -1,5 +1,5 @@
 ---
-title: Страница «Сводка» (мастера групп доступности AlwaysOn) | Документация Майкрософт
+title: Страница "Сводка" (мастера групп доступности AlwaysOn) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -16,20 +16,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b0bdeebb2d064bd647c19ea143474ef7738a4ab5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62814070"
 ---
 # <a name="summary-page-alwayson-availability-group-wizards"></a>Страница «Сводка» (мастера групп доступности AlwaysOn)
   В этом разделе описываются параметры, приведенные на странице **Сводка** . Эта тема относится к [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] и [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. На этой странице приведены заданные пользователем параметры новой группы доступности. Чтобы внести одно или несколько изменений, нажмите кнопку **Назад** , чтобы вернуться на нужную страницу или страницы. После внесения необходимых изменений нажмите кнопку **Далее** , чтобы вернуться на страницу **Сводка** . После проверки выбранных параметров нажмите кнопку **Готово**.  
   
-##  <a name="PageOptions"></a> Параметры страницы «Сводка»  
+##  <a name="PageOptions"></a>Параметры страницы "Сводка"  
  **Скрипт**  
  Нажмите эту кнопку для создания скрипта [!INCLUDE[tsql](../../../includes/tsql-md.md)] для действий, перечисленных в сетке сводки. Вам будет предложено указать место, в которое будет сохранен файл скрипта.  
   
- **Назад**  
+ **Прошлом**  
  Щелкните, чтобы вернуться на страницу, предшествовавшую текущей. Можно воспользоваться кнопкой **Назад** для перехода к любой из предыдущих страниц и при необходимости изменения любых значений, указанных там.  
   
  **Готово**  
@@ -42,17 +42,17 @@ ms.locfileid: "62814070"
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
   
--   [Использование диалогового окна "Создание группы доступности" (среда SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
+-   [Используйте диалоговое окно Создание группы доступности &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
--   [Использование мастера добавления реплики в группу доступности (среда SQL Server Management Studio)](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
+-   [Использование мастера добавления реплики в группу доступности &#40;SQL Server Management Studio&#41;](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   
--   [Использование мастера добавления базы данных в группу доступности (среда SQL Server Management Studio)](availability-group-add-database-to-group-wizard.md)  
+-   [Использование мастера добавления базы данных в группу доступности &#40;SQL Server Management Studio&#41;](availability-group-add-database-to-group-wizard.md)  
   
--   [Использование мастера отработки отказа группы доступности (среда SQL Server Management Studio)](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
+-   [Использование мастера отработки отказа группы доступности &#40;SQL Server Management Studio&#41;](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
   
 
   
-## <a name="see-also"></a>См. также  
- [Обзор групп доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+## <a name="see-also"></a>См. также:  
+ [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   
