@@ -1,5 +1,5 @@
 ---
-title: Просмотр записей журнала в окне журнала событий | Документация Майкрософт
+title: Просмотр записей журнала в окне "события журнала" | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ed348a4525024052946ac30bfe6ec780ca86a4b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054630"
 ---
 # <a name="view-log-entries-in-the-log-events-window"></a>Просмотр записей журнала в окне "Регистрация событий"
@@ -50,7 +50,7 @@ ms.locfileid: "66054630"
   
 9. Откройте текстовый редактор, вставьте и сохраните запись журнала в текстовом файле.  
   
-## <a name="see-also"></a>См. также  
- [Ведение журналов в службах Integration Services (SSIS)](performance/integration-services-ssis-logging.md)  
+## <a name="see-also"></a>См. также:  
+ [Ведение журнала&#41; Integration Services &#40;SSIS](performance/integration-services-ssis-logging.md)  
   
   

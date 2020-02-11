@@ -10,10 +10,10 @@ ms.author: davidph
 author: dphansen
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: ee5d6cbf9b1d5430e431cf04fb3b86ae7fb5743b
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73726228"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>Руководство. Создание моделей на основе секций в R в SQL Server
@@ -33,7 +33,7 @@ ms.locfileid: "73726228"
 > * Создание и обучение моделей в каждой секции и сохранение объектов в базе данных.
 > * Прогнозирование вероятности исходов по каждой модели секционирования с использованием выборочных данных, зарезервированных для этой цели.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
  
 Для работы с этим учебником необходимо наличие следующих компонентов.
 
@@ -332,7 +332,7 @@ SELECT *
 FROM prediction_results;
 ```
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 В этом руководстве вы использовали скрипт [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) для выполнения цикла операций по секционированным данным. Более подробно вызов внешних скриптов в хранимых процедурах и использование функций RevoScaleR рассматривается в следующем учебнике.
 

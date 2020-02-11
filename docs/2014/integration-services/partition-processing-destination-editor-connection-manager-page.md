@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 44e116ece7460787f272f0b8cc6e99a4300fc728
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056708"
 ---
 # <a name="partition-processing-destination-editor-connection-manager-page"></a>Редактор назначения обработки секций (страница «Диспетчер соединений»)
@@ -42,15 +42,15 @@ ms.locfileid: "66056708"
  **Метод обработки**  
  Выберите метод обработки. Значение этого параметра по умолчанию — **Полная**.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |Добавление (дополнительное)|Выполнить дополнительную обработку секции.|  
 |Полное|Выполнить полную обработку секции.|  
 |Только данные|Выполнить обработку обновления секции.|  
   
-## <a name="see-also"></a>См. также  
- [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор назначения "Обработка секций" (страница "Сопоставления")](../../2014/integration-services/partition-processing-destination-editor-mappings-page.md)   
- [Редактор назначения "Обработка секций" (страница "Дополнительно")](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
+## <a name="see-also"></a>См. также:  
+ [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор назначения "Обработка секций" &#40;"сопоставления"&#41;](../../2014/integration-services/partition-processing-destination-editor-mappings-page.md)   
+ [Редактор назначения обработки секций &#40;страница "Дополнительно"&#41;](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
   
   

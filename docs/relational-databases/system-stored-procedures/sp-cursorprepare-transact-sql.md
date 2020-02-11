@@ -18,10 +18,10 @@ ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2719e330ec2fde61b91ca11ef93784983c6c418c
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74165909"
 ---
 # <a name="sp_cursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
@@ -61,14 +61,14 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
  *Параметры*  
  Необязательный параметр, возвращающий описание столбцов результирующего набора курсора. для *параметров* требуется следующее входное значение **int** .  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
  *scrollopt*  
  Параметр прокрутки. *scrollopt* — это необязательный параметр, для которого требуется одно из следующих входных значений **int** .  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -90,7 +90,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
  *ccopt*  
  Параметр управления параллелизмом. *ccopt* — это необязательный параметр, для которого требуется одно из следующих входных значений **int** .  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (прежнее название — LOCKCC)|  
@@ -104,15 +104,15 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 |0x40000|OPTIMISTIC_ACCEPTABLE|  
 |0x80000|OPTIMISTIC_ACCEPTABLE|  
   
- Как и в случае с *скроллпт*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может назначить другое значение из запрошенного.  
+ Как и ** в случае [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с скроллпт, может назначить другое значение из запрошенного.  
   
 ## <a name="remarks"></a>Remarks  
  Параметр состояния RPC может иметь следующие значения.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
-|0|Успешно|  
-|0x0001|Failure|  
+|0|Успех|  
+|0x0001|Отказ|  
 |1FF6|Невозможно вернуть метаданные.<br /><br /> Примечание. Причина в том, что инструкция не создает результирующий набор; Например, это инструкция INSERT или DDL.|  
   
 ## <a name="examples"></a>Примеры  
@@ -144,12 +144,12 @@ exec sp_cursorclose @p2
  
  Если параметр *stmt* является параметризованным, а PARAMETERIZED_STMT *SCROLLOPT* имеет значение ON, формат строки выглядит следующим образом:  
   
- { *\<имя локальной переменной > * * тип данных\<>* } [ ,... *n* ]  
+ { * \<имя локальной переменной> * *\<тип данных>* } [ ,... *n* ]  
   
-## <a name="see-also"></a>См. также статью  
- [sp_cursorexecute &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)  
- [sp_cursoropen &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)  
- [sp_cursorunprepare &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-cursorunprepare-transact-sql.md)  
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [sp_cursorexecute &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   
+ [sp_cursoropen &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
+ [sp_cursorunprepare &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorunprepare-transact-sql.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
