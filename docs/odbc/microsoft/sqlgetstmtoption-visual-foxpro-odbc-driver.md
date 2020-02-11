@@ -13,28 +13,28 @@ ms.assetid: 984a8b1d-f12c-420c-8be4-f555114c764b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5521fb11cad064cf487d38562f4146fd32587993
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67898788"
 ---
 # <a name="sqlgetstmtoption-visual-foxpro-odbc-driver"></a>SQLGetStmtOption (драйвер ODBC для Visual FoxPro)
 > [!NOTE]  
->  Этот раздел содержит сведения Visual FoxPro ODBC-драйвером. Общие сведения об этой функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  В этом разделе содержатся сведения, относящиеся к драйверу ODBC для Visual FoxPro. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Поддержка: Полное  
+ Поддержка: полная  
   
- Соответствие API ODBC: Один уровень  
+ Соответствие API-интерфейса ODBC: уровень один  
   
  Возвращает текущее значение параметра инструкции.  
   
-|*fOption*|Возвращает|  
+|*Параметром fOption*|Возвращает|  
 |---------------|-------------|  
-|SQL_GET_BOOKMARK|32-разрядное целочисленное значение, — это закладка для номер текущей записи|  
-|SQL_ROW_NUMBER|установите 32-разрядное целое число, задают позицию получаемого текущей строки в результат|  
-|SQL_TRANSLATE_DLL|Ошибка: «Драйвер не поддерживает»|  
+|SQL_GET_BOOKMARK|32-разрядное целочисленное значение, которое является закладкой для номера текущей записи|  
+|SQL_ROW_NUMBER|32-разрядное целое число, указывающее расположение текущей строки в результирующем наборе|  
+|SQL_TRANSLATE_DLL|Ошибка: "драйвер не поддерживается"|  
   
- Драйвер ODBC для Visual FoxPro имеет без преобразования библиотек DLL.  
+ Драйвер ODBC для Visual FoxPro не имеет библиотек DLL для перевода.  
   
- Дополнительные сведения см. в разделе [SQLGetStmtOption](../../odbc/reference/syntax/sqlgetstmtoption-function.md) в *Справочник по программированию ODBC*.
+ Дополнительные сведения см. в разделе [SQLGetStmtOption](../../odbc/reference/syntax/sqlgetstmtoption-function.md) в *справочнике программиста по ODBC*.

@@ -1,5 +1,5 @@
 ---
-title: 'Занятие 7: Добавление действия детализации к родительскому отчету | Документация Майкрософт'
+title: Занятие 7. Добавление операции детализации к родительскому отчету | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 356ad7ed670ee13bbc6b4e2d7a86cb6095e79e10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108398"
 ---
-# <a name="lesson-7-add-drillthrough-action-on-parent-report"></a>Занятие 7: Добавление действия детализации к родительскому отчету
+# <a name="lesson-7-add-drillthrough-action-on-parent-report"></a>Занятие 7. Добавление операции детализации к родительскому отчету
   После добавления элемента управления ReportViewer в приложение веб-сайта далее необходимо добавить действие детализации в родительский отчет.  
   
 ### <a name="to-add-drillthrough-action-on-the-parent-report"></a>Добавление действия детализации в родительский отчет  

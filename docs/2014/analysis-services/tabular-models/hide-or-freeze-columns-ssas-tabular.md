@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c506b72f48206f5a68dc10d0b236aa7fb934435
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067092"
 ---
 # <a name="hide-or-freeze-columns-ssas-tabular"></a>Скрытие или закрепление столбцов (табличные службы SSAS)
@@ -57,9 +57,9 @@ ms.locfileid: "66067092"
     > [!NOTE]  
     >  При закреплении столбцов они перемещаются влево или в начало таблицы в конструкторе. При освобождении столбца он не возвращается в исходное местоположение.  
   
-## <a name="see-also"></a>См. также  
- [Таблицы и столбцы (табличные службы SSAS)](tables-and-columns-ssas-tabular.md)   
- [Перспективы (табличные службы SSAS)](perspectives-ssas-tabular.md)   
- [Роли (табличные службы SSAS)](roles-ssas-tabular.md)  
+## <a name="see-also"></a>См. также:  
+ [Таблицы и столбцы &#40;табличные&#41;SSAS](tables-and-columns-ssas-tabular.md)   
+ [Перспективы &#40;табличные&#41;SSAS](perspectives-ssas-tabular.md)   
+ [Роли &#40;табличные&#41;SSAS](roles-ssas-tabular.md)  
   
   

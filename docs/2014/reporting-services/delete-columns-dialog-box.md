@@ -1,5 +1,5 @@
 ---
-title: Удаление столбцов-диалоговое окно | Документация Майкрософт
+title: Диалоговое окно «Удаление столбцов» | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 211d5020c85c5295f195389904385981db46d315
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109340"
 ---
 # <a name="delete-columns-dialog-box"></a>Диалоговое окно «Удаление столбцов»
@@ -32,8 +32,8 @@ ms.locfileid: "66109340"
  **Удалить только столбцы**  
  Выберите этот параметр, чтобы удалить только выбранные столбцы.  
   
-## <a name="see-also"></a>См. также  
- [Справка F1 конструктора отчетов](tools/report-designer-f1-help.md)   
+## <a name="see-also"></a>См. также:  
+ [Справка F1 конструктор отчетов](tools/report-designer-f1-help.md)   
  [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Область данных табликса (построитель отчетов и службы SSRS)](../../2014/reporting-services/tablix-data-region-report-builder-and-ssrs.md)   
  [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 763d39ef4804a986fb190c3b5e9d8039a827bd63
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106582"
 ---
 # <a name="add-or-delete-an-indicator-report-builder-and-ssrs"></a>Добавление или удаление индикатора (построитель отчетов и службы SSRS)
@@ -26,11 +26,11 @@ ms.locfileid: "66106582"
   
  Можно обновить значения и состояния индикаторов. Дополнительные сведения см. в следующих разделах:  
   
--   [Изменение значков индикаторов и наборов индикаторов (построитель отчетов и службы SSRS)](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
+-   [Изменение значков индикаторов и наборов индикаторов &#40;построитель отчетов и SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
   
--   [Задание и настройка единиц измерения (построитель отчетов и службы SSRS)](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
+-   [Установка и настройка единиц измерения &#40;построитель отчетов и SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
   
--   [Задание области действия синхронизации (построитель отчетов и службы SSRS)](set-synchronization-scope-report-builder-and-ssrs.md)  
+-   [Установка построитель отчетов &#40;области синхронизации и служб SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)  
   
  Поскольку индикатор располагается внутри панели датчиков, необходимо выбрать вместо панели индикатор при необходимости настройки индикатора с помощью диалогового окна **Свойства индикатора** или панели **Свойства** . На следующем рисунке отображается выбранный индикатор на панели датчиков.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "66106582"
   
 2.  Щелкните **Удалить**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Индикаторы (построитель отчетов и службы SSRS)](indicators-report-builder-and-ssrs.md)  
   
   

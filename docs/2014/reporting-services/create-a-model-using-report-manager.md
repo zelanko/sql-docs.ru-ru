@@ -1,5 +1,5 @@
 ---
-title: Создание модели с помощью диспетчера отчетов | Документация Майкрософт
+title: Создание модели с помощью диспетчер отчетов | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7b67e2a7048520d8a411789e501dbbe545d3cc02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109669"
 ---
 # <a name="create-a-model-using-report-manager"></a>Создание модели с помощью диспетчера отчетов
@@ -26,7 +26,7 @@ ms.locfileid: "66109669"
  Создаваемая модель отчета полностью основана на схеме общего источника данных. Пользователь не может выбирать, какие части источника данных включать в модель, и не может редактировать правила или метаданные создаваемой модели. Тем не менее после создания модели можно установить ее свойства и определить назначения ролей, которые ограничивают доступ к модели или ее частям.  
   
 > [!NOTE]  
->  Модель на основе Oracle, созданная с помощью диспетчера отчетов или [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[offSPServ](../includes/offspserv-md.md)] 2007 [!INCLUDE[SPS2010](../includes/sps2010-md.md)] будет включать объекты базы данных, которые являются частью схемы для учетной записи пользователя, используемый для подключения к источнику данных Oracle. Имя учетной записи пользователя указывается в учетных данных свойств источника данных.  
+>  Модель на основе Oracle, созданная с помощью [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[offSPServ](../includes/offspserv-md.md)] диспетчер отчетов [!INCLUDE[SPS2010](../includes/sps2010-md.md)] или 2007, будет включать в себя объекты базы данных, которые являются частью схемы для учетной записи пользователя, используемой для подключения к источнику данных Oracle. Имя учетной записи пользователя указывается в учетных данных свойств источника данных.  
   
 ### <a name="to-create-a-new-data-source-for-a-report-model-using-report-manager"></a>Создание нового источника данных для модели отчета с помощью диспетчера отчетов  
   
@@ -46,9 +46,9 @@ ms.locfileid: "66109669"
   
 8.  Выберите метод подключения, с помощью которого пользователи построителя отчетов будут подключаться к базе данных.  
   
-    -   Проверка подлинности Windows: Выберите этот параметр, если нужно, чтобы в операционной системе для проверки подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] пользователей. Этот параметр позволяет [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] применять для проверки подлинности пользователей функции безопасности Windows, такие как шифрование паролей. Настоятельно рекомендуется выбрать этот параметр.  
+    -   Проверка подлинности Windows: выберите этот параметр, если проверку подлинности пользователей [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] должна проводить операционная система. Этот параметр позволяет [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] применять для проверки подлинности пользователей функции безопасности Windows, такие как шифрование паролей. Настоятельно рекомендуется выбрать этот параметр.  
   
-    -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Проверка подлинности: Выберите этот параметр, если нужно, чтобы пользователям использовать [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] созданной вами учетной записи входа. Пользователи должны вводить допустимые имена входа пользователей и пароли [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+    -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Проверка подлинности. Выберите этот параметр, если вы хотите [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , чтобы пользователи использовали созданную учетную запись входа. Пользователи должны вводить допустимые имена входа пользователей и пароли [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
         > [!CAUTION]  
         >  При возможности используйте проверку подлинности Windows.  
@@ -79,9 +79,9 @@ ms.locfileid: "66109669"
   
      Модель будет создана и сохранена в заданном расположении. Для назначения разрешений этой модели можно воспользоваться диспетчером отчетов.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Предоставление разрешений на сервер отчетов в собственном режиме](security/granting-permissions-on-a-native-mode-report-server.md)   
- [Подключения к данным, источники данных и строки подключения в службах Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Страница "Создание источника данных" (диспетчер отчетов)](../../2014/reporting-services/new-data-source-page-report-manager.md)  
+ [Подключения к данным, источники данных и строки подключения в Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+ [Страница "Создание источника данных" &#40;диспетчер отчетов&#41;](../../2014/reporting-services/new-data-source-page-report-manager.md)  
   
   

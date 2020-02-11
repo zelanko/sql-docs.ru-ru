@@ -1,5 +1,5 @@
 ---
-title: Обойти ограничения строк Excel | Документация Майкрософт
+title: Обход ограничения строки Excel | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 84f01e85a0a93ef1f2a14b2b01b4180143153865
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107551"
 ---
 # <a name="work-around-the-excel-row-limitation"></a>Обход ограничения строк Excel
@@ -26,7 +26,7 @@ ms.locfileid: "66107551"
   
 1.  Откройте отчет в [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] или в диспетчере отчетов.  
   
-2.  Щелкните правой кнопкой мыши строку данных в таблице, а затем выберите **Добавить группу** > **Родительская группа** , чтобы добавить внешнюю группу таблицы.  
+2.  Щелкните правой кнопкой мыши строку данных в таблице и выберите команду **Добавить** > **родительскую** группу группы, чтобы добавить внешнюю группу таблиц.  
   
      ![Выбор родительской группы](../media/datarow-selectparentgroup.png "Выбор родительской группы")  
   

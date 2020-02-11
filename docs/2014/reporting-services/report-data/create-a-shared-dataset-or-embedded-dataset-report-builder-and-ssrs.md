@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 208c5608037d99b9dc02f1ab7fefd151cd4bdecf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107429"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>Создание общего или внедренного набора данных (построитель отчетов и службы SSRS)
@@ -76,7 +76,7 @@ ms.locfileid: "66107429"
   
 6.  На ленте выберите **Свойства набора данных**.  
   
-7.  Нажмите **Параметры**. На этой странице задайте значение по умолчанию для константы или выражения, пометьте параметр как доступный "только для чтения", допускающий значения NULL или имеющий состояние **Не указывать в запросе**. Дополнительные сведения см. в статье [Диалоговое окно "Свойства набора данных" — "Параметры" (построитель отчетов)](../dataset-properties-dialog-box-parameters-report-builder.md).  
+7.  Щелкните **Параметры**. На этой странице задайте значение по умолчанию для константы или выражения, пометьте параметр как доступный "только для чтения", допускающий значения NULL или имеющий состояние **Не указывать в запросе**. Дополнительные сведения см. в статье [Диалоговое окно "Свойства набора данных" — "Параметры" (построитель отчетов)](../dataset-properties-dialog-box-parameters-report-builder.md).  
   
 8.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -110,13 +110,13 @@ ms.locfileid: "66107429"
   
      Набор данных и его коллекция полей появляются в области данных отчета под узлом источника данных.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Коллекция полей набора данных (построитель отчетов и службы SSRS)](dataset-fields-collection-report-builder-and-ssrs.md)   
- [Конструкторы запросов (построитель отчетов)](../query-designers-report-builder.md)   
- [Справка построителя отчетов для диалоговых окон, панелей и мастеров](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
- [Добавление данных в отчет &#40;построитель отчетов и службы SSRS&#41;](report-datasets-ssrs.md)   
- [Подключения к данным, источники данных и строки подключения в построителе отчетов](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
- [Внедренные и общие наборы данных (построитель отчетов и службы SSRS)](embedded-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Конструкторы запросов &#40;построитель отчетов&#41;](../query-designers-report-builder.md)   
+ [Построитель отчетов справки по диалоговым окнам, панелям и мастерам](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
+ [Добавление данных в построитель отчетов &#40;отчетов и SSRS&#41;](report-datasets-ssrs.md)   
+ [Подключения к данным, источники данных и строки подключения в построитель отчетов](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
+ [Внедренные и общие наборы данных &#40;построитель отчетов и службы SSRS&#41;](embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

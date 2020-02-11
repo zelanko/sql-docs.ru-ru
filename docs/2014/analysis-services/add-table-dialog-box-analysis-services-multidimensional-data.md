@@ -1,5 +1,5 @@
 ---
-title: Добавить таблицу-диалоговое окно (службы Analysis Services — многомерные данные) | Документация Майкрософт
+title: Диалоговое окно «Добавление таблицы» (Analysis Services-многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1b429f115eff1692495e1ded58fb6afadc6e5ee8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062804"
 ---
 # <a name="add-table-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Добавление таблицы» (службы Analysis Services — многомерные данные)
@@ -28,17 +28,17 @@ ms.locfileid: "66062804"
   
 |Термин|Определение|  
 |----------|----------------|  
-|**Таблицы**|Вкладка **Таблицы** используется для отображения и выбора добавляемой таблицы.|  
+|**Таблице**|Вкладка **Таблицы** используется для отображения и выбора добавляемой таблицы.|  
 |**Представления**|Вкладка **Представления** используется для отображения и выбора добавляемого представления.|  
 |**Функции**|Вкладка **Функции** используется для отображения и выбора добавляемой функции или хранимой процедуры.|  
 |**Синонимы**|Вкладка **Синонимы** используется для отображения и выбора добавляемого синонима.|  
 |**Обновить**|Нажмите для обновления всех вкладок диалогового окна.|  
-|**Добавить**|Нажмите для добавления элемента, выбранного в настоящее время. **Примечание.**  Этот параметр становится доступен только в том случае, если элемент выбран.|  
+|**Добавление**|Нажмите для добавления элемента, выбранного в настоящее время. **Примечание.**  Этот параметр доступен, только если выбран элемент.|  
   
-## <a name="see-also"></a>См. также  
- [Конструкторы и диалоговые окна служб Analysis Services &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Создание или изменение именованного запроса-диалоговое окно &#40;службы Analysis Services — многомерные данные&#41;](create-or-edit-named-query-dialog-box-analysis-services-multidimensional-data.md)   
- [Создание опрашивающего запроса-диалоговое окно &#40;службы Analysis Services — многомерные данные&#41;](create-polling-query-dialog-box-analysis-services-multidimensional-data.md)   
- [Создание обрабатывающего запроса-диалоговое окно &#40;службы Analysis Services — многомерные данные&#41;](create-processing-query-dialog-box-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>См. также:  
+ [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Диалоговое окно «Создание или изменение именованного запроса» &#40;Analysis Services многомерных данных&#41;](create-or-edit-named-query-dialog-box-analysis-services-multidimensional-data.md)   
+ [Диалоговое окно «Создание опрашивающего запроса» &#40;Analysis Services многомерных данных&#41;](create-polling-query-dialog-box-analysis-services-multidimensional-data.md)   
+ [Диалоговое окно «Создание обрабатывающего запроса» &#40;Analysis Services многомерных данных&#41;](create-processing-query-dialog-box-analysis-services-multidimensional-data.md)  
   
   

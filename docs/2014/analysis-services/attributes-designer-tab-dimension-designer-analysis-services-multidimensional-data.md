@@ -1,5 +1,5 @@
 ---
-title: Атрибуты (вкладки конструктора атрибута связи, конструктор измерений) (службы Analysis Services — многомерные данные) | Документация Майкрософт
+title: Атрибуты (вкладка «Конструктор связей атрибутов», конструктор измерений) (Analysis Services-многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2c534fc23e2bc4938349d7874c1ce1fbd9b374dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66064479"
 ---
 # <a name="attributes-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Атрибуты (вкладка «Конструктор связей атрибутов», конструктор измерений) (службы Analysis Services — многомерные данные)
   Список **Атрибуты** используется, чтобы отыскать конкретный атрибут в диаграмме связей атрибутов или определить новую связь атрибутов. Эта панель окна размещается непосредственно под панелью, содержащей диаграмму связей атрибутов.  
   
- **Для просмотра панели «атрибуты»**  
+ **Отображение панели «Атрибуты»**  
   
 1.  В обозревателе решений в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]дважды щелкните измерение, чтобы открыть конструктор измерений, а затем перейдите на вкладку **Связь атрибутов** .  
   
@@ -44,16 +44,16 @@ ms.locfileid: "66064479"
   
  Дополнительные сведения см. в разделах [Диалоговые окна "Создание связи атрибутов" и "Изменение связи атрибутов" (вкладка "Конструктор связей атрибутов", конструктор измерений) (службы Analysis Services — многомерные данные)](create-edit-attribute-relationships-dialog-boxes-analysis-services-multidimensional-data.md) и [Определение связей атрибутов](multidimensional-models/attribute-relationships-define.md).  
   
- **Переименование**  
+ **Имени**  
  Выделяет имя атрибута в списке и позволяет изменить этот текст.  
   
  **Свойства**  
  Отображает свойства атрибута в окне **Свойства** .  
   
-## <a name="see-also"></a>См. также  
- [Связи атрибутов &#40;конструктор измерений&#41; &#40;службы Analysis Services — многомерные данные&#41;](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)   
- [Панель инструментов &#40;атрибут вкладки конструктора связи, конструктор измерений&#41; &#40;службы Analysis Services — многомерные данные&#41;](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)   
- [Диаграмма связи атрибутов &#40;атрибут вкладки конструктора связи, конструктор измерений&#41; &#40;службы Analysis Services — многомерные данные&#41;](attribute-relationship-diagram-analysis-services-multidimensional-data.md)   
- [Связи атрибутов &#40;атрибут вкладки конструктора связи, конструктор измерений&#41; &#40;службы Analysis Services — многомерные данные&#41;](attribute-relationships-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>См. также:  
+ [Связи атрибутов &#40;конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Панель инструментов &#40;вкладка Конструктор связей атрибутов, конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Диаграмма связей атрибутов &#40;вкладка «Конструктор связей атрибутов», конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](attribute-relationship-diagram-analysis-services-multidimensional-data.md)   
+ [Связи атрибутов &#40;вкладка «Конструктор связей атрибутов», конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](attribute-relationships-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

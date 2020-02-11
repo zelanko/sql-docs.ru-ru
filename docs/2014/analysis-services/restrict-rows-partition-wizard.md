@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 59bff3eac690b7352b75d02bd7b266dfa8f303f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070204"
 ---
 # <a name="restrict-rows-partition-wizard"></a>Ограничение строк (мастер секционирования)
@@ -29,7 +29,7 @@ ms.locfileid: "66070204"
 >  Если задана таблица в разделе **Доступные таблицы** на странице **Определение исходных сведений** , которая используется другой секцией, необходимо задать запрос на странице **Ограничение на строки** или существует риск получить дублирующиеся данные в кубе.  
   
 ## <a name="options"></a>Параметры  
- **Укажите запрос для ограничения строк**  
+ **Определите запрос для ограничения на строки**  
  Выберите, чтобы ввести запрос, который ограничивает строки, в поле **Запрос** .  
   
  Если поле **Ввести предложение WHERE** пусто, в момент, когда этот параметр выбран, параметр заполняется инструкцией SQL, которая извлекает все столбцы и строки из предварительно выбранной таблицы.  
@@ -40,10 +40,10 @@ ms.locfileid: "66070204"
 > [!IMPORTANT]  
 >  Указав предложение WHERE, для этой секции можно использовать вложенный набор записей. Данное действие необходимо во избежание дублирования данных в случае, если несколько параллельных секций функционируют с помощью единственной таблицы фактов.  
   
- **Проверить**  
+ **Отмечен**  
  Проверка того, что инструкция в поле **Запрос** является корректной инструкцией SQL.  
   
-## <a name="see-also"></a>См. также  
- [Секции (службы Analysis Services — многомерные данные)](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>См. также:  
+ [Секции &#40;Analysis Services многомерных данных&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

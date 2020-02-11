@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ab0a4af42a6137a78d1d884d7f00dd37911f9ff4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63316841"
 ---
 # <a name="rename-queries-visual-database-tools"></a>Переименование запросов (визуальные инструменты для баз данных)
@@ -31,8 +31,8 @@ ms.locfileid: "63316841"
   
 3.  Введите новое имя для запроса и нажмите клавишу ВВОД.  
   
-## <a name="see-also"></a>См. также  
- [Проектирование запросов и представлений инструкции &#40;визуальных инструментах баз данных&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>См. также:  
+ [Разделы руководства по проектированию запросов и представлений &#40;визуальных инструментов для баз данных&#41;](visual-database-tools.md)   
  [Выполнение основных операций с запросами (визуальные инструменты для баз данных)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

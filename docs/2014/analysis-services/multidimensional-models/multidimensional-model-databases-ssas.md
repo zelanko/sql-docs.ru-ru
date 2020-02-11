@@ -1,5 +1,5 @@
 ---
-title: Многомерный шаблон баз данных (службы SSAS) | Документация Майкрософт
+title: Базы данных многомерной модели (службы SSAS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5da033881d2a993ea4be6674dcf8b228cad80bf8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073522"
 ---
 # <a name="multidimensional-model-databases-ssas"></a>Базы данных многомерной модели (службы SSAS)
@@ -36,7 +36,7 @@ ms.locfileid: "66073522"
   
 -   Создайте пустую базу данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] на экземпляре [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], а затем посредством [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] подключитесь напрямую к этой базе данных и создайте объекты в ней (а не в самом проекте). При работе с базой данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] таким образом изменения объектов вступают в силу в базе данных, подключенной на момент сохранения измененного объекта.  
   
- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] использует интеграцию с системой управления версиями, обеспечивая поддержку множества разработчиков, работающих одновременно с различными объектами в рамках одного проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Разработчик также может напрямую взаимодействовать с базой данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , а не через проект служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , однако, существует риск того, что объекты базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] перестанут синхронизироваться с проектом служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , использованным для ее развертывания. После развертывания администрирование базы данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] осуществляется с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Также некоторые изменения можно внести в базу данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Например, изменения секций и ролей, которые тоже могут привести к потере синхронизации объекта базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] с проектом служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , использованным для его развертывания.  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]использует интеграцию с программным обеспечением системы управления версиями для поддержки нескольких разработчиков, одновременно [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] работающих с разными объектами в рамках одного проекта. Разработчик также может напрямую взаимодействовать с базой данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , а не через проект служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , однако, существует риск того, что объекты базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] перестанут синхронизироваться с проектом служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , использованным для ее развертывания. После развертывания администрирование базы данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] осуществляется с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Также некоторые изменения можно внести в базу данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Например, изменения секций и ролей, которые тоже могут привести к потере синхронизации объекта базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] с проектом служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , использованным для его развертывания.  
   
 ## <a name="related-tasks"></a>Связанные задачи  
  [Подключение и отключение баз данных служб Analysis Services](attach-and-detach-analysis-services-databases.md)  
@@ -49,19 +49,19 @@ ms.locfileid: "66073522"
   
  [Перемещение базы данных служб Analysis Services](move-an-analysis-services-database.md)  
   
- [Переименование многомерной базы данных (службы Analysis Services)](rename-a-multidimensional-database-analysis-services.md)  
+ [Переименование &#40;Analysis Services многомерной базы данных&#41;](rename-a-multidimensional-database-analysis-services.md)  
   
- [Уровень совместимости многомерной базы данных &#40;служб Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)  
+ [Задайте уровень совместимости многомерной базы данных &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)  
   
- [Задание свойств многомерной базы данных (службы Analysis Services)](set-multidimensional-database-properties-analysis-services.md)  
+ [Задание свойств многомерной базы данных &#40;Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md)  
   
  [Синхронизация баз данных служб Analysis Services](synchronize-analysis-services-databases.md)  
   
  [Переключение базы данных служб Analysis Services между режимами ReadOnly и ReadWrite](switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
-## <a name="see-also"></a>См. также  
- [Подключение в режиме «в сети» к базе данных служб Analysis Services](connect-in-online-mode-to-an-analysis-services-database.md)   
- [Создание проекта служб Analysis Services (среда SSDT)](create-an-analysis-services-project-ssdt.md)   
+## <a name="see-also"></a>См. также:  
+ [Подключение к базе данных Analysis Services в режиме "в сети"](connect-in-online-mode-to-an-analysis-services-database.md)   
+ [Создание проекта Analysis Services &#40;SSDT&#41;](create-an-analysis-services-project-ssdt.md)   
  [Запрос многомерных данных с помощью многомерных выражений](mdx/querying-multidimensional-data-with-mdx.md)  
   
   

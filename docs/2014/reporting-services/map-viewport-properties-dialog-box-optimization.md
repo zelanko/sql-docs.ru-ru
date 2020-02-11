@@ -1,5 +1,5 @@
 ---
-title: Сопоставление окна просмотра свойства, оптимизация | Документация Майкрософт
+title: Диалоговое окно "Свойства окна просмотра карт", оптимизация | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1adbeccdedb8d80900047790d94ff35568460ff4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108281"
 ---
 # <a name="map-viewport-properties-dialog-box-optimization"></a>Диалоговое окно «Свойства окна просмотра карты», вкладка «Оптимизация»
@@ -31,14 +31,14 @@ ms.locfileid: "66108281"
  **Производительность**  
  Передвиньте указатель ближе к отметке **Производительность** , чтобы упростить карту и отображать меньше подробностей.  
   
- **Качество**  
+ **Повышения**  
  Передвиньте указатель ближе к отметке **Качество** , чтобы отрисовывать более подробную карту.  
   
- **разрешение карты**  
+ **Разрешение карт**  
  Укажите разрешение карты. Это значение указывает минимальный размер (в пунктах) элементов, отображаемых на карте, готовой для просмотра.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Карты (построитель отчетов и службы SSRS)](report-design/maps-report-builder-and-ssrs.md)   
- [Устранение неполадок в отчетах: отчеты-карты (построитель отчетов и службы SSRS)](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md).  
+ [Устранение неполадок в отчетах: отчеты &#40;построитель отчетов и службы SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

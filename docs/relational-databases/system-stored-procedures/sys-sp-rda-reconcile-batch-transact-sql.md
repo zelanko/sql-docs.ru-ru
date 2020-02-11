@@ -1,5 +1,5 @@
 ---
-title: sys.sp_rda_reconcile_batch (Transact-SQL) | Документация Майкрософт
+title: sys. sp_rda_reconcile_batch (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,20 +17,20 @@ ms.assetid: 6d21eac3-7b6c-4fe0-8bc4-bf503f3948a6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 98094273d37bf0622eb903b9ad177817e4bb12d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905089"
 ---
-# <a name="syssprdareconcilebatch-transact-sql"></a>sys.sp_rda_reconcile_batch (Transact-SQL)
+# <a name="syssp_rda_reconcile_batch-transact-sql"></a>sys. sp_rda_reconcile_batch (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Согласовывает идентификатор пакета, хранящиеся в таблице с включенным Stretch SQL Server с Идентификатором пакета, хранимой в удаленной таблице Azure.  
+  Согласовывает идентификатор пакета, хранящийся в таблице SQL Server с поддержкой растяжения, с ИДЕНТИФИКАТОРом пакета, хранящимся в удаленной таблице Azure.  
   
- Обычно достаточно для запуска **sp_rda_reconcile_batch** Если вы вручную удалили наиболее недавно перенесенных данных из удаленной таблицы. При удалении вручную удаленных данных, включающий последние пакета, идентификаторы пакетной службы не синхронизированы и миграции останавливается.  
+ Обычно необходимо запускать **sp_rda_reconcile_batch** только в том случае, если вы вручную удалили последние перенесенные данные из удаленной таблицы. При удалении вручную удаленных данных, содержащих самый последний пакет, идентификаторы пакетов не синхронизированы, и миграция прекращается.  
  
- Чтобы удалить данные, которые уже была перенесена в Azure, см. в разделе "Примечания" на этой странице.
+ Чтобы удалить данные, которые уже были перенесены в Azure, ознакомьтесь с примечаниями на этой странице.
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
    
@@ -43,27 +43,27 @@ sp_rda_reconcile_batch @objname = '@objname'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- \@objname = " *\@objname*"  
- Имя таблицы SQL Server с поддержкой Stretch.  
+ \@objname = '*\@objname*'  
+ Имя таблицы SQL Server с поддержкой растяжения.  
   
 ## <a name="permissions"></a>Разрешения  
- Требуются права db_owner.  
+ Требуются db_owner разрешения.  
   
-## <a name="remarks"></a>Примечания  
- Если вы хотите удалить данные, которые уже была перенесена в Azure, выполните указанные ниже действия.  
+## <a name="remarks"></a>Remarks  
+ Если вы хотите удалить данные, которые уже были перенесены в Azure, выполните следующие действия.  
   
-1.  Приостановить перенос данных. Дополнительные сведения см. в разделе [Приостановка и возобновление переноса данных (Stretch Database)](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).  
+1.  Приостановка переноса данных. Дополнительные сведения см. в разделе [Приостановка и возобновление переноса данных (Stretch Database)](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).  
   
-2.  Удалите данные из промежуточной таблицы SQL Server, выполнив команду удаления с подсказку STAGE_ONLY. Дополнительные сведения см. в разделе [выполнение административных обновлений и удалений](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md#adminHints).
+2.  Удалите данные из промежуточной таблицы SQL Server, выполнив команду DELETE с указанием STAGE_ONLY. Дополнительные сведения см. в разделе [внесение административных обновлений и удалений](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md#adminHints).
   
-3.  Удаление тех же данных из удаленной таблицы Azure, выполнив команду удаления с указанием REMOTE_ONLY.  
+3.  Удалите те же данные из удаленной таблицы Azure, выполнив команду DELETE с указанием REMOTE_ONLY.  
   
 4.  Запустите **sp_rda_reconcile_batch**.  
   
 5.  Возобновление переноса данных. Дополнительные сведения см. в разделе [Приостановка и возобновление переноса данных (Stretch Database)](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).  
   
 ## <a name="example"></a>Пример  
- Для выверки идентификаторов пакетов, выполните следующую инструкцию.  
+ Чтобы согласовать идентификаторы пакетов, выполните следующую инструкцию.  
   
 ```sql  
 EXEC sp_rda_reconcile_batch @objname = N'StretchEnabledTableName';  

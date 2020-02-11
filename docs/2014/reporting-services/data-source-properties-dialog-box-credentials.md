@@ -1,5 +1,5 @@
 ---
-title: Диалоговое окно «Свойства», учетные данные источника данных | Документация Майкрософт
+title: Диалоговое окно "Свойства источника данных" — "учетные данные" | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ed5b58aa9a4fe81a55e602fb61f673bf10059ee7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109461"
 ---
 # <a name="data-source-properties-dialog-box-credentials"></a>Диалоговое окно «Свойства источника данных» — «Учетные данные»
@@ -30,7 +30,7 @@ ms.locfileid: "66109461"
  **Использовать имя пользователя и пароль**  
  Выберите этот параметр, чтобы использовать определенное имя пользователя и пароль. Для общих источников данных при публикации проекта сервера отчетов на целевом сервере имя пользователя и пароль сохраняются как сохраненные учетные данные для базы данных. Если необходимо использовать имя пользователя и пароль как учетные данные Windows, можно изменить свойства опубликованного общего источника данных на целевом сервере. Дополнительные сведения см. в разделе [Создание, удаление или изменение общего источника данных (диспетчер отчетов)](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md).  
   
- **Имя пользователя**  
+ **User name**  
  Введите имя пользователя для получения доступа к источнику данных.  
   
  **Пароль**  
@@ -42,12 +42,12 @@ ms.locfileid: "66109461"
  **Введите строку приглашения**  
  Введите предложение пользователю ввести учетные данные входа для источника данных.  
   
- **Без учетных данных**  
+ **Нет учетных данных**  
  Выберите этот параметр, чтобы учетные данные не запрашивались при доступе к источнику данных. Этот параметр работает, только если источник данных не принимает учетные данные или если учетные данные передаются каким-то другим способом.  
   
-## <a name="see-also"></a>См. также  
- [Данные исходного свойства, общие](../../2014/reporting-services/data-source-properties-dialog-box-general.md)   
- [Задание учетных данных и сведениях о соединении для источников данных отчета](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [Подключения данных, Источники данных и Строки подключения в службе Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Диалоговое окно «Свойства источника данных» — «Общие»](../../2014/reporting-services/data-source-properties-dialog-box-general.md)   
+ [Указание учетных данных и сведений о соединении для источников данных отчета](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Data Connections, Data Sources, and Connection Strings in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
   
   

@@ -11,20 +11,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ceca9ef914afeab3420bbd35c46c582c112644dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107851"
 ---
 # <a name="generate-data-feeds-from-a-report-report-builder-and-ssrs"></a>Формирование веб-каналов данных из отчета (построитель отчетов и службы SSRS)
-  Можно формировать Atom-совместимые потоки данных из отчетов, а затем использовать эти потоки данных в приложениях, например в клиенте [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , который может использовать потоки данных.  
+  Можно создавать веб-каналы данных, совместимые с Atom, из отчетов, а затем использовать потоки данных в приложениях, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] таких как клиент, которые могут использовать потоки данных.  
   
  Модуль Atom подготовки отчетов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] формирует сервисный документ канала Atom, в котором перечислены потоки данных, доступные в отчете. Этот документ содержит сведения по меньшей мере об одном потоке данных для каждой области данных отчета. В зависимости от типа области данных и самих данных, которые отображает эта область, службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] могут сформировать из нее несколько потоков данных.  
   
  Сервисный документ Atom содержит для каждого потока данных уникальный идентификатор, который упоминается в URL-адресе для доступа к содержимому потока данных.  
   
- Дополнительные сведения см. в разделе [формирование потоков данных из отчетов &#40;построитель отчетов и службы SSRS&#41;](generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
+ Дополнительные сведения см. в разделе [Формирование веб-каналов данных из отчетов (построитель отчетов и службы SSRS)](generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -81,7 +81,7 @@ ms.locfileid: "66107851"
   
 6.  При необходимости откройте файл ATOM в браузере либо в текстовом или XML-редакторе.  
   
-## <a name="see-also"></a>См. также  
- [Экспорт отчетов &#40;построитель отчетов и службы SSRS&#41;](export-reports-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>См. также:  
+ [Экспорт отчетов &#40;построитель отчетов и SSRS&#41;](export-reports-report-builder-and-ssrs.md)  
   
   

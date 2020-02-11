@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5a839fb7253c2e66e024872b74fadc114cd58ecf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106492"
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>Линейчатые диаграммы (построитель отчетов и службы SSRS)
@@ -57,7 +57,7 @@ ms.locfileid: "66106492"
   
 -   Если в наборе данных имеется большое (относительно размеров самой диаграммы) число точек данных, то размеры столбцов или линий, а также расстояния между ними сокращаются. Чтобы вручную установить ширину столбцов диаграммы, нужно изменить их ширину в пикселях, указанную в свойстве **PointWidth** . По умолчанию это свойство имеет значение 0,8. С увеличением ширины столбцов или линий в диаграмме расстояние между отдельными столбцами или линиями уменьшается.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Диаграммы (построитель отчетов и службы SSRS)](charts-report-builder-and-ssrs.md)   
  [Типы диаграмм (построитель отчетов и службы SSRS)](chart-types-report-builder-and-ssrs.md)   
  [Точки данных со значением NULL и пустые точки в диаграммах (построитель отчетов и службы SSRS)](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   

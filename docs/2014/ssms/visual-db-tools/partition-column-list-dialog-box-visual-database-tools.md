@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ea7bd1ada1c5efcc4ce64d0703192df8ddd6d9ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63280375"
 ---
 # <a name="partition-column-list-dialog-box-visual-database-tools"></a>Диалоговое окно «Список столбцов секционирования» (визуальные инструменты для баз данных)
@@ -31,7 +31,7 @@ ms.locfileid: "63280375"
  Столбец  
  Предоставляется раскрывающийся список, из которого может быть выбран столбец, к которому применяется функция секционирования.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойства таблицы (визуальные инструменты для баз данных)](visual-database-tools.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Создание с областью действия сеанса вычисляемых элементов (многомерные Выражения) | Документация Майкрософт
+title: Создание вычисляемых элементов с областью действия сеанса (многомерные выражения) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 701d7a49f7ddda60983a03723506442eac17866b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074553"
 ---
 # <a name="creating-session-scoped-calculated-members-mdx"></a>Создание вычисляемых элементов с областью действия сеанса (многомерные выражения)
@@ -51,7 +51,7 @@ sum(([Stores].[ByLocation].Lag(3) :
 [Stores].[ByLocation].NextMember), [Measures].[Units Sold])  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Создание вычисляемых элементов с областью действия запроса (многомерные выражения)](mdx-calculated-members-query-scoped-calculated-members.md)  
+## <a name="see-also"></a>См. также:  
+ [Создание вычисляемых элементов с областью действия запроса &#40;многомерных выражениях&#41;](mdx-calculated-members-query-scoped-calculated-members.md)  
   
   

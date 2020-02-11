@@ -15,23 +15,23 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76c85de1e9e8c294ab9db1f887f2b417b321d663
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062059"
 ---
 # <a name="add-a-log-for-data-flow-performance-counters"></a>Добавление журнала для счетчиков производительности потока данных
   В этой процедуре описывается добавление журнала для счетчиков производительности, поставляемых подсистемой обработки потока данных.  
   
 > [!NOTE]  
->  Если установить службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на компьютер, на котором запущена ОС [!INCLUDE[winxpsvr](../includes/winxpsvr-md.md)], а затем обновить ОС до [!INCLUDE[firstref_longhorn](../includes/firstref-longhorn-md.md)], то в процессе обновления из компьютера будут удалены счетчики производительности [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Чтобы восстановить счетчики производительности служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на компьютере, запустите средство установки [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в режиме исправлений.  
+>  Если установить службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на компьютер, где запущена ОС [!INCLUDE[winxpsvr](../includes/winxpsvr-md.md)], а затем обновить ОС до [!INCLUDE[firstref_longhorn](../includes/firstref-longhorn-md.md)], то в процессе обновления из компьютера будут удалены счетчики производительности [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Чтобы восстановить счетчики производительности служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на компьютере, запустите средство установки [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в режиме исправлений.  
   
 ### <a name="to-add-logging-of-performance-counters"></a>Добавление ведения журнала счетчиков производительности  
   
 1.  Если используется классический вид **панели управления**, выберите **Администрирование**. Если используется вид по категориям, выберите вначале **Производительность и обслуживание** , затем **Администрирование**.  
   
-2.  Выберите **Производительность**.  
+2.  Щелкните **Производительность**.  
   
 3.  В диалоговом окне **Производительность** разверните **Оповещения и журналы производительности**, щелкните правой кнопкой мыши **Журналы счетчиков**и выберите **Новые параметры журнала**. Введите имя журнала. Например, введите **Мой_журнал**.  
   
@@ -62,8 +62,8 @@ ms.locfileid: "66062059"
     > [!NOTE]  
     >  Необходимо запустить службу «Журналы и оповещения производительности» с помощью локальной учетной записи или учетной записи домена, входящей в группу «Администраторы».  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Счетчики производительности](performance/performance-counters.md)   
- [Просмотр записей журнала в окне «Регистрация событий»](../../2014/integration-services/view-log-entries-in-the-log-events-window.md)  
+ [Просмотр записей журнала в окне "Регистрация событий"](../../2014/integration-services/view-log-entries-in-the-log-events-window.md)  
   
   

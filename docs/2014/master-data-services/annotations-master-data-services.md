@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b9906aa967f98b41df8eabf63e11fe6e518a3734
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480063"
 ---
 # <a name="annotations-master-data-services"></a>Заметки (службы Master Data Services)
@@ -35,10 +35,10 @@ ms.locfileid: "65480063"
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Добавление заметки к транзакции.|[Добавление заметки для транзакции (службы Master Data Services)](annotate-a-transaction-master-data-services.md)|  
+|Добавление заметки к транзакции.|[Добавление Аннотации &#40;Master Data Services транзакций&#41;](annotate-a-transaction-master-data-services.md)|  
   
 ## <a name="related-content"></a>См. также  
   
--   [Транзакции (службы Master Data Services)](../../2014/master-data-services/transactions-master-data-services.md)  
+-   [Master Data Services &#40;транзакций&#41;](../../2014/master-data-services/transactions-master-data-services.md)  
   
   

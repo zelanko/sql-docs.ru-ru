@@ -11,34 +11,34 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e3aec7e136b656b7f33646d50b746e410263059a
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67284988"
 ---
 # <a name="integration-management-functional-area-master-data-manager"></a>Функциональная область управления интеграцией (диспетчер основных данных)
   В функциональной области «Управление интеграцией» администраторы могут выполнять импорт данных из промежуточных таблиц и создавать представления подписки для систем подписки. Дополнительные сведения об администраторах см. в разделе [Администраторы (службы Master Data Services)](administrators-master-data-services.md).  
   
 ## <a name="import-data"></a>Импорт данных  
- [Импорт данных &#40;службы Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
+ [Master Data Services &#40;импорта данных&#41;](overview-importing-data-from-tables-master-data-services.md)  
   
- [Загрузка или обновление членов в службы Master Data Services с помощью промежуточного процесса](add-update-and-delete-data-master-data-services.md)  
+ [Загрузка или обновление элементов с помощью промежуточного процесса в службах Master Data Services](add-update-and-delete-data-master-data-services.md)  
   
- [Перемещение элементов явной иерархии с помощью промежуточного процесса &#40;службы Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)  
+ [Перемещение элементов явной иерархии с помощью промежуточного процесса &#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)  
   
- [Просмотр ошибок, возникающих в ходе промежуточного процесса &#40;службы Master Data Services&#41;](view-errors-that-occur-during-staging-master-data-services.md)  
+ [Просмотрите ошибки, возникающие во время промежуточного процесса &#40;Master Data Services&#41;](view-errors-that-occur-during-staging-master-data-services.md)  
   
  [Устранение неполадок в промежуточном процессе (службы Master Data Services)](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-the-staging-process-master-data-services.aspx)  
   
 ## <a name="export-data"></a>Экспорт данных  
- [Экспорт данных &#40;службы Master Data Services&#41;](overview-exporting-data-master-data-services.md)  
+ [Экспорт Master Data Services &#40;данных&#41;](overview-exporting-data-master-data-services.md)  
   
- [Создание представления подписки &#40;службы Master Data Services&#41;](create-a-subscription-view-to-export-data-master-data-services.md)  
+ [Создание представления подписки &#40;Master Data Services&#41;](create-a-subscription-view-to-export-data-master-data-services.md)  
   
- [Удаление представления подписки (службы Master Data Services)](../../2014/master-data-services/delete-a-subscription-view-master-data-services.md)  
+ [Удаление представления подписки &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-subscription-view-master-data-services.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Веб-приложение диспетчера основных данных](../../2014/master-data-services/master-data-manager-web-application.md)  
   
   

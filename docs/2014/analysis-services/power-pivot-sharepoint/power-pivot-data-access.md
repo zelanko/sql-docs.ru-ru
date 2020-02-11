@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97f5d2045601f72c3536fbf2d4e469eb5eb20fbe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071244"
 ---
 # <a name="powerpivot-data-access"></a>Доступ к данным PowerPivot
@@ -28,7 +28,7 @@ ms.locfileid: "66071244"
   
  На ферме SharePoint службы Excel используют локальный поставщик MSOLAP OLE DB для подключения к данным PowerPivot. Поставщик отправляет запрос соединения к PowerPivot для SharePoint на ферме. Сервер загружает данные, выполняет запрос и возвращает результирующий набор.  
   
-##  <a name="queryproc"></a> Запрос данных PowerPivot в SharePoint  
+##  <a name="queryproc"></a>Запросы к данным PowerPivot в SharePoint  
  При просмотре книги PowerPivot из библиотеки SharePoint данные PowerPivot, содержащиеся в книге, обнаруживаются, извлекаются и обрабатываются отдельными экземплярами сервера служб Analysis Services в ферме, пока службы Excel подготавливают слой представления. Полностью обработанную книгу можно просмотреть в окне браузера или в приложении для настольных компьютеров Excel 2010, имеющем надстройку PowerPivot.  
   
  Следующая диаграмма иллюстрирует путь обработки запроса в ферме. Поскольку данные PowerPivot входят в состав книги Excel 2010, обработка запроса осуществляется при открытии книги Excel из библиотеки SharePoint и обращении к компонентам PivotTable или PivotChart, содержащим данные PowerPivot.  
@@ -39,8 +39,8 @@ ms.locfileid: "66071244"
   
  Не все данные в книге PowerPivot обрабатываются компонентом PowerPivot для SharePoint. Службы Excel обрабатывают данные таблиц и ячеек листа. PowerPivot для SharePoint обрабатывает только сводные таблицы, диаграммы и срезы, связанные с данными PowerPivot.  
   
-## <a name="see-also"></a>См. также  
- [Подключение к службам Analysis Services](../instances/connect-to-analysis-services.md)   
+## <a name="see-also"></a>См. также:  
+ [Подключение к Analysis Services](../instances/connect-to-analysis-services.md)   
  [Доступ к данным табличной модели](../tabular-models/tabular-model-data-access.md)  
   
   

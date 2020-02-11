@@ -19,13 +19,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2f1c1c856cadbb4f005a99d5a5d49dc0c1280a8e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67898417"
 ---
-# <a name="spupdateextendedproperty-transact-sql"></a>sp_updateextendedproperty (Transact-SQL)
+# <a name="sp_updateextendedproperty-transact-sql"></a>sp_updateextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Обновляет значение существующего расширенного свойства.  
@@ -52,43 +52,43 @@ sp_updateextendedproperty
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @name=] {"*property_name*"}  
- Имя свойства, которое необходимо обновить. *property_name* — **sysname**, и не может иметь значение NULL.  
+ [ @name= ] {'*property_name*'}  
+ Имя свойства, которое необходимо обновить. Аргумент *property_name* имеет тип **sysname**и не может иметь значение null.  
   
- [ @value=] {"*значение*"}  
- Значение, связанное со свойством. *значение* — **sql_variant**, значение по умолчанию NULL. Размер *значение* может оказаться более чем 7 500 байт.  
+ [ @value= ] {"*значение*"}  
+ Значение, связанное со свойством. *значение* равно **sql_variant**и значение по умолчанию NULL. Размер *значения* не может превышать 7 500 байт.  
   
- [ @level0type=] {"*level0_object_type*"}  
- Пользователь или тип, определяемый пользователем. *level0_object_type* — **varchar(128)** , значение по умолчанию NULL. Допустимыми входными значениями являются сборки, КОНТРАКТА, уведомления о СОБЫТИИ, файловой группы, тип сообщений, функции СЕКЦИОНИРОВАНИЯ, СХЕМЫ СЕКЦИОНИРОВАНИЯ, СТРУКТУРЫ ПЛАНА, REMOTE SERVICE BINDING, МАРШРУТА, СХЕМЫ, службы, пользователя, триггер, тип и значение NULL.  
+ [ @level0type= ] {'*level0_object_type*'}  
+ Пользователь или тип, определяемый пользователем. *level0_object_type* имеет тип **varchar (128)** и значение по умолчанию NULL. Допустимые входные данные: сборка, контракт, уведомление о событии, ФАЙЛовая группа, тип сообщения, функция СЕКЦИОНИРОВАНия, схема СЕКЦИОНИРОВАНия, структура плана, привязка удаленной службы, маршрут, схема, служба, пользователь, триггер, тип и значение NULL.  
   
 > [!IMPORTANT]  
 >  Типы USER и TYPE уровня 0 будут удалены в будущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Старайтесь не использовать эти функции в новых разработках и предусмотрите соответствующие изменения в приложениях, которые используют их в настоящее время. Тип SCHEMA следует использовать в качестве типа уровня 0 вместо USER. В значении аргумента TYPE следует указывать тип SCHEMA в качестве типа уровня 0 и TYPE в качестве типа уровня 1.  
   
- [ @level0name=] {"*level0_object_name*"}  
- Имя указанного типа объекта уровня 1. *level0_object_name* — **sysname** значение по умолчанию NULL.  
+ [ @level0name= ] {'*level0_object_name*'}  
+ Имя указанного типа объекта уровня 1. Аргумент *level0_object_name* имеет тип **sysname** и значение по умолчанию NULL.  
   
- [ @level1type=] {"*level1_object_type*"}  
- Тип объекта уровня 1. *level1_object_type* — **varchar(128)** значение по умолчанию NULL. Допустимые входные данные: AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SYNONYM, TABLE, TABLE_TYPE, TYPE, VIEW, XML SCHEMA COLLECTION и NULL.  
+ [ @level1type= ] {'*level1_object_type*'}  
+ Тип объекта уровня 1. *level1_object_type* имеет тип **varchar (128)** и значение по умолчанию NULL. Допустимые входные данные: AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SYNONYM, TABLE, TABLE_TYPE, TYPE, VIEW, XML SCHEMA COLLECTION и NULL.  
   
- [ @level1name=] {"*level1_object_name*"}  
- Имя указанного типа объекта уровня 1. *level1_object_name* — **sysname** значение по умолчанию NULL.  
+ [ @level1name= ] {'*level1_object_name*'}  
+ Имя указанного типа объекта уровня 1. Аргумент *level1_object_name* имеет тип **sysname** и значение по умолчанию NULL.  
   
- [ @level2type=] {"*level2_object_type*"}  
- Тип объекта уровня 2. *level2_object_type* — **varchar(128)** значение по умолчанию NULL. Допустимые входные данные: COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER и NULL.  
+ [ @level2type= ] {'*level2_object_type*'}  
+ Тип объекта уровня 2. *level2_object_type* имеет тип **varchar (128)** и значение по умолчанию NULL. Допустимые входные данные: COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER и NULL.  
   
- [ @level2name=] {"*level2_object_name*"}  
- Имя указанного типа объекта уровня 2. *level2_object_name* — **sysname**, значение по умолчанию NULL.  
+ [ @level2name= ] {'*level2_object_name*'}  
+ Имя указанного типа объекта уровня 2. Аргумент *level2_object_name* имеет тип **sysname**и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или 1 (неуспешное завершение)  
+ 0 (успех) или 1 (сбой).  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  С целью указания расширенных свойств объекты в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] распределены по трем уровням (0, 1 и 2). Уровень 0 является высшим уровнем и определяется как «объекты в области базы данных». Объекты уровня 1 содержатся в схеме и в пользовательской области, а объекты уровня 2 содержатся в объектах уровня 1. Расширенные свойства могут быть определены для объектов на любом из этих уровней. Ссылки на объект определенного уровня должны быть уточнены именами объектов более высокого уровня, в которых они содержатся или которым они принадлежат.  
   
- Задан допустимый *property_name* и *значение*, если все типы и имена объектов имеют значение null, то обновляемое свойство принадлежит текущей базе данных.  
+ При наличии допустимого *property_name* и *значения*, если все типы и имена объектов имеют значение null, то обновляемое свойство принадлежит текущей базе данных.  
   
 ## <a name="permissions"></a>Разрешения  
- Члены предопределенной роли базы данных db_ddladmin и db_owner могут обновлять расширенные свойства любого объекта со следующим исключением: db_ddladmin не могут добавлять свойства к самой базе данных, пользователям или ролям.  
+ Члены предопределенных ролей базы данных db_owner и db_ddladmin могут обновлять расширенные свойства любого объекта со следующим исключением: db_ddladmin не может добавлять свойства в саму базу данных, а также для пользователей или ролей.  
   
  Пользователи могут обновлять расширенные свойства принадлежащих им объектов, а также свойства, для которых у этих пользователей есть разрешения ALTER или CONTROL.  
   
@@ -135,11 +135,11 @@ EXEC sp_updateextendedproperty
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Хранимым процедурам ядра СУБД &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sys.fn_listextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [sys. fn_listextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
  [sp_addextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
  [sp_dropextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
- [sys.extended_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
+ [sys. extended_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
   
   

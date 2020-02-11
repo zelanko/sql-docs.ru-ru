@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c293b7007ccb8a42928c02ed37bcaacb898504f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108702"
 ---
 # <a name="delete-and-re-create-encryption-keys--ssrs-configuration-manager"></a>Удаление и повторное создание ключей шифрования (диспетчер конфигурации служб SSRS)
@@ -44,7 +44,7 @@ ms.locfileid: "66108702"
   
      Если повторно создаются ключи шифрования для сервера отчетов с масштабным развертыванием, нужно отключить это свойство на всех экземплярах в развертывании.  
   
-    1.  Откройте проводник Windows и перейдите в папку " *диск*:\Program Files\Microsoft SQL Server\\*экземпляр_сервера_отчетов* \Reporting Services". Замените *диск* своей буквой диска, а *экземпляр_сервера_отчетов* — именем папки, соответствующей экземпляру сервера отчетов, для которого нужно отключить веб-службу и доступ по протоколу HTTP. Например, «C:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services».  
+    1.  Откройте проводник Windows и перейдите в папку " *диск*:\Program Files\Microsoft SQL Server\\*экземпляр_сервера_отчетов*\Reporting Services". Замените *диск* своей буквой диска, а *экземпляр_сервера_отчетов* — именем папки, соответствующей экземпляру сервера отчетов, для которого нужно отключить веб-службу и доступ по протоколу HTTP. Например, «C:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services».  
   
     2.  Откройте файл rsreportserver.config.  
   
@@ -115,8 +115,8 @@ ms.locfileid: "66108702"
   
 4.  Для подписок, которые используют зашифрованные данные (это включает модуль доставки в общую папку и любые сторонние расширения доставки, использующие шифрование), откройте каждую подписку и повторно введите учетные данные. Подписки, которые используют доставку по электронной почте сервера отчетов, не используют зашифрованные данные и не затрагиваются изменением ключа.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Настройка ключей шифрования и управление ими (диспетчер конфигурации служб SSRS)](ssrs-encryption-keys-manage-encryption-keys.md)   
- [Хранение зашифрованных данных сервера отчетов (диспетчер конфигурации служб SSRS)](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [Хранение зашифрованных данных сервера отчетов &#40;служб SSRS Configuration Manager&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Добавление типа содержимого соединения семантической модели бизнес-Аналитики в библиотеку (PowerPivot для SharePoint) | Документация Майкрософт
+title: Добавление типа содержимого соединения семантической модели бизнес-аналитики в библиотеку (PowerPivot для SharePoint) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4712aba656fa111400e41566964cbd9719f778db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071966"
 ---
 # <a name="add-a-bi-semantic-model-connection-content-type-to-a-library-powerpivot-for-sharepoint"></a>Добавление типа содержимого соединения семантической модели бизнес-аналитики в библиотеку (PowerPivot для SharePoint)
@@ -23,10 +23,10 @@ ms.locfileid: "66071966"
 > [!NOTE]  
 >  Если библиотека подключения к данным SharePoint уже используется, то тип содержимого «Соединение семантической модели бизнес-аналитики» будет автоматически добавлен в шаблон этой библиотеки. Описанное в этом разделе действие можно пропустить, если используется библиотека подключения к данным, которая уже позволяет создавать новые документы соединений семантической модели бизнес-аналитики.  
   
-##  <a name="bkmk_addtype"></a> Добавление типа содержимого в библиотеку документов  
+##  <a name="bkmk_addtype"></a>Добавление типа содержимого в библиотеку документов  
  Чтобы добавлять и настраивать тип содержимого, необходимо разрешение не ниже «Управление списками». Это разрешение встроено в разрешения уровня «Создание» и выше.  
   
- Веб-сайт, содержащий библиотеку документов, должен иметь активацию компонентов PowerPivot для SharePoint. Дополнительные сведения см. в разделе [активировать интеграцию компонента PowerPivot для семейств веб-сайтов в центре администрирования](activate-power-pivot-integration-for-site-collections-in-ca.md).  
+ Веб-сайт, содержащий библиотеку документов, должен иметь активацию компонентов PowerPivot для SharePoint. Дополнительные сведения см. [в разделе Активация интеграции функций PowerPivot для семейств веб-сайтов в центре администрирования](activate-power-pivot-integration-for-site-collections-in-ca.md).  
   
 1.  Откройте библиотеку документов, для которой необходимо включить тип содержимого «Соединение семантической модели бизнес-аналитики».  
   
@@ -52,16 +52,16 @@ ms.locfileid: "66071966"
   
 12. Чтобы проверить тип добавляемого содержимого, вернитесь к библиотеке и щелкните **Создать документ** в области «Документы» на ленте библиотеки. В списке «Создать документ» будет пункт **Файл соединения семантической модели бизнес-аналитики** .  
   
-     ![Подменю документа в библиотеке SharePoint](../media/ssas-bismconnection-new.gif "подменю новый документ в библиотеку SharePoint")  
+     ![Подменю «Создать документ» в библиотеке SharePoint](../media/ssas-bismconnection-new.gif "Подменю «Создать документ» в библиотеке SharePoint")  
   
  После включения типа файла соединения семантической модели бизнес-аналитики в библиотеке можно будет создать соединение, которое будет перенаправлять подключение к данным семантической модели, и использовать его в отчетах Excel или [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] . Выберите одну из следующих ссылок, чтобы узнать подробнее о следующем шаге.  
   
- [Создание подключения семантической модели бизнес-аналитики с книгой PowerPivot](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
+ [Создание соединения семантической модели бизнес-аналитики с книгой PowerPivot](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
   
- [Создание подключения между семантической моделью бизнес-аналитики и книгой PowerPivot](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
+ [Create a BI Semantic Model Connection to a Tabular Model Database](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   
-## <a name="see-also"></a>См. также  
- [Соединение семантической модели бизнес-Аналитики PowerPivot &#40;bism-файлы&#41;](power-pivot-bi-semantic-model-connection-bism.md)   
- [Использование подключения семантической модели бизнес-аналитики в службах Excel или Reporting Services](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Соединение семантической модели бизнес-аналитики PowerPivot &#40;. BISM&#41;](power-pivot-bi-semantic-model-connection-bism.md)   
+ [Использование соединения семантической модели бизнес-аналитики в службах Excel или Reporting Services](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)  
   
   

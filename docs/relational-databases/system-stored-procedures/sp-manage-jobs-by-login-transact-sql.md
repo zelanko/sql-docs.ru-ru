@@ -18,13 +18,13 @@ ms.assetid: 832ec15a-6e92-4eb5-8c4a-af4dba79fbaa
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ebc71c304939a977ac34cc2fad819edd463614fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67894996"
 ---
-# <a name="spmanagejobsbylogin-transact-sql"></a>sp_manage_jobs_by_login (Transact-SQL)
+# <a name="sp_manage_jobs_by_login-transact-sql"></a>sp_manage_jobs_by_login (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Удаляет или переназначает задания, принадлежащие указанному имени входа.  
@@ -42,20 +42,20 @@ sp_manage_jobs_by_login
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @action = ] 'action'` Действие, выполняемое для указанного имени входа. *Действие* — **varchar(10)** , не имеет значения по умолчанию. Когда *действие*— **удалить**, **sp_manage_jobs_by_login** удаляет все задания, принадлежащие *current_owner_login_name*. Когда *действие* — **ПЕРЕНАЗНАЧИТЬ**, все задания назначаются *new_owner_login_name*.  
+`[ @action = ] 'action'`Действие, предпринимаемое для указанного имени входа. *Action* имеет тип **varchar (10)** и не имеет значения по умолчанию. При **удалении** *действия* **sp_manage_jobs_by_login** удаляет все задания, принадлежащие *current_owner_login_name*. При **ПЕРЕназначении** *действия* всем заданиям назначаются *new_owner_login_name*.  
   
-`[ @current_owner_login_name = ] 'current_owner_login_name'` Имя входа текущего владельца задания. *current_owner_login_name* — **sysname**, не имеет значения по умолчанию.  
+`[ @current_owner_login_name = ] 'current_owner_login_name'`Имя входа текущего владельца задания. Аргумент *current_owner_login_name* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @new_owner_login_name = ] 'new_owner_login_name'` Имя входа нового владельца задания. Используйте этот параметр только в том случае, если *действие* — **ПЕРЕНАЗНАЧИТЬ**. *new_owner_login_name* — **sysname**, значение по умолчанию NULL.  
+`[ @new_owner_login_name = ] 'new_owner_login_name'`Имя входа нового владельца задания. Используйте этот параметр, только ** если действие **переназначено**. Аргумент *new_owner_login_name* имеет тип **sysname**и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  None  
   
 ## <a name="permissions"></a>Разрешения  
- Чтобы выполнить эту хранимую процедуру, пользователям необходимо предоставить **sysadmin** предопределенной роли сервера.  
+ Для выполнения этой хранимой процедуры пользователям должна быть предоставлена предопределенная роль сервера **sysadmin** .  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере производится передача всех заданий от пользователя `danw` пользователю `françoisa`.  
@@ -71,8 +71,8 @@ EXEC dbo.sp_manage_jobs_by_login
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_delete_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

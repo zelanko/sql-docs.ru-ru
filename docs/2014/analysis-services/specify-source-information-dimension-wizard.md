@@ -13,24 +13,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30234275a724dddce95cdad66e5e37a382a25e62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068181"
 ---
 # <a name="specify-source-information-dimension-wizard"></a>Определение исходных сведений (мастер измерений)
   Страница **Выбор основной таблицы измерения** позволяет выбрать представление источника данных, главную таблицу измерения, ключевые столбцы и столбец имен элементов для создаваемого измерения.  
   
- **Чтобы открыть мастер измерений**  
+ **Открытие мастера измерений**  
   
--   В **обозревателе решений** [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] щелкните правой кнопкой мыши папку **Измерения** для проекта [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , а затем выберите команду **Новое измерение**.  
+-   В [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]обозревателе решений **** щелкните правой кнопкой мыши папку **Измерения** для проекта [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , а затем выберите команду **Новое измерение**.  
   
 ## <a name="options"></a>Параметры  
  **Представление источника данных**  
  Выберите представление источника данных.  
   
- **Главная таблица**  
+ **Основная таблица**  
  Выберите таблицу из выбранного представления источников данных в качестве главной таблицы для измерения.  
   
  **Ключевые столбцы**  
@@ -39,12 +39,12 @@ ms.locfileid: "66068181"
 > [!NOTE]  
 >  Можно выбрать несколько столбцов. Если таблица содержит составной первичный ключ, выберите все столбцы, входящие в этот ключ. Важен порядок ключевых столбцов.  
   
- **Имя столбца**  
+ **Столбец имени**  
  Выберите столбец, содержащий имена членов для данного измерения, из таблицы, указанной в поле **Основная таблица** . Необходимо указать столбец имени, прежде чем составной ключ будет доступен для использования. Чтобы создать столбец имени для составного ключа, рекомендуется создать именованное вычисление в представлении источника данных, объединяющем указанные ключевые столбцы. Если используется единственный ключ, то столбец имени необязателен.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справка F1 мастера измерений](dimension-wizard-f1-help.md)   
- [Измерения &#40;службы Analysis Services — многомерные данные&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+ [Измерения &#40;Analysis Services многомерных данных&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Измерения в многомерных моделях](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

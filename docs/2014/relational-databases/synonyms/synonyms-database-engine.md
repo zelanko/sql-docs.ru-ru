@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2066eeb7d9b86228ed86aed290e69f2a0e981b95
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62736244"
 ---
 # <a name="synonyms-database-engine"></a>Синонимы (компонент Database Engine)
@@ -43,7 +43,7 @@ ms.locfileid: "62736244"
 |Возвращающая табличное значение встроенная функция SQL|Хранимая процедура SQL|  
 |Представление|Таблица<sup>1</sup> (пользовательская)|  
   
- <sup>1</sup> включает локальные и глобальные временные таблицы  
+ <sup>1</sup> включает локальные и глобальные временные таблицы;  
   
 > [!NOTE]  
 >  Имена, состоящие из четырех элементов, для базовых объектов-функций не поддерживаются.  
@@ -112,7 +112,7 @@ EXEC ('ALTER TABLE dbo.MyProduct
  Дополнительные сведения о привязанных к схеме функциях см. в разделе [Создание определяемых пользователем функций (компонент Database Engine)](../user-defined-functions/create-user-defined-functions-database-engine.md).  
   
 ## <a name="getting-information-about-synonyms"></a>Получение данных о синонимах  
- Представление каталога sys.synonyms содержит запись для каждого синонима в данной базе данных. Это представление каталога обеспечивает доступ к таким метаданным, как имя синонима и имя базового объекта. Дополнительные сведения о `sys.synonyms` представления каталога, см. в разделе [sys.synonyms &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-synonyms-transact-sql).  
+ Представление каталога sys.synonyms содержит запись для каждого синонима в данной базе данных. Это представление каталога обеспечивает доступ к таким метаданным, как имя синонима и имя базового объекта. Дополнительные сведения о представлении каталога `sys.synonyms` см. в разделе [sys. synonyms &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-synonyms-transact-sql).  
   
  С помощью расширенных свойств можно добавлять описательный или управляющий текст, маски ввода и правила форматирования в виде свойств синонима. Так как свойства хранятся в базе данных, все приложения, считывающие их, могут таким же образом вычислять объект. Дополнительные сведения см. в разделе [sp_addextendedproperty (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql).  
   
@@ -145,7 +145,7 @@ GO
 ## <a name="related-content"></a>См. также  
  [Создание синонимов](create-synonyms.md)  
   
- [CREATE SYNONYM (Transact-SQL)](/sql/t-sql/statements/create-synonym-transact-sql)  
+ [Создание СИНОНИМа &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-synonym-transact-sql)  
   
  [DROP SYNONYM (Transact-SQL)](/sql/t-sql/statements/drop-synonym-transact-sql)  
   

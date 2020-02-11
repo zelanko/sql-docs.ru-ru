@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d621895212e72479090363a980ddc00fa2b5a0c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107325"
 ---
 # <a name="dataset-properties-dialog-box-parameters"></a>Диалоговое окно «Свойства набора данных» — «Настройки»
@@ -28,7 +28,7 @@ ms.locfileid: "66107325"
  Если значение по умолчанию одного параметра отчета зависит от значения по умолчанию другого параметра отчета, связанного с параметром запроса, порядок параметров отчета (тот, в котором они перечислены в диалоговом окне **Свойства параметров отчета** ) важен. Параметр, расположенный ближе к концу списка, может зависеть от параметров, расположенных ближе к началу. Дополнительные сведения о параметрах отчета см. в разделе [Параметры отчета (построитель отчетов и конструктор отчетов)](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ## <a name="options"></a>Параметры  
- **Добавить**  
+ **Добавление**  
  Добавить в список новый параметр.  
   
  **Удаление**  
@@ -46,9 +46,9 @@ ms.locfileid: "66107325"
  **Стрелка вниз**  
  Переместить выбранный параметр вниз по списку.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Параметры отчета (построитель отчетов и конструктор отчетов)](../report-design/report-parameters-report-builder-and-report-designer.md)   
- [Добавление данных в отчет &#40;построитель отчетов и службы SSRS&#41;](report-datasets-ssrs.md)   
+ [Добавление данных в построитель отчетов &#40;отчетов и SSRS&#41;](report-datasets-ssrs.md)   
  [Изменение порядка параметров отчета (построитель отчетов и службы SSRS)](../report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
   
   

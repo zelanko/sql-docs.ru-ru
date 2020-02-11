@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 68ddc4f6b42dcc53445b8afaae0bc15e666a5711
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62667286"
 ---
 # <a name="microsoft-replication-interactive-conflict-resolver"></a>Интерактивный сопоставитель конфликтов репликации (Microsoft)
@@ -47,7 +47,7 @@ ms.locfileid: "62667286"
  **Регистрация подробностей конфликта для последующего обращения**  
  Регистрация подробностей конфликта в системные таблицы.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Интерактивное разрешение конфликтов](merge/advanced-merge-replication-conflict-interactive-resolution.md)   
  [Просмотр и разрешение конфликтов данных для публикации слиянием (SQL Server Management Studio)](view-and-resolve-data-conflicts-for-merge-publications.md)   
  [Синхронизация подписки с помощью диспетчера синхронизации Windows (Windows Synchronization Manager)](synchronize-a-subscription-using-windows-synchronization-manager.md)   

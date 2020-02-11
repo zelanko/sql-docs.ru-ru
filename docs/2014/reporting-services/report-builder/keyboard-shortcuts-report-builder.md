@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 040d49e66e9feed4f8bc213c8189c8d41486b77d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107782"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>Сочетания клавиш (построитель отчетов)
@@ -32,7 +32,7 @@ ms.locfileid: "66107782"
   
 ## <a name="keyboard-shortcuts-in-report-builder"></a>Сочетания клавиш в построителе отчетов  
   
-|Описание|Сочетание клавиш|  
+|Description|Сочетание клавиш|  
 |-----------------|---------------------|  
 |Открытие меню построителя отчетов.|ALT+F|  
 |Создание отчета.|CTRL+N|  
@@ -91,9 +91,9 @@ ms.locfileid: "66107782"
 |Уменьшение масштаба области просмотра карты при выбранном окне просмотра карты|CTRL+знак минуса (-)|  
 |Режим ускорения для сдвига и масштабирования области просмотра карты при выбранном окне просмотра карты|CTRL +левая кнопка мыши|  
   
-## <a name="see-also"></a>См. также  
- [Построитель отчетов в SQL Server 2014](report-builder-in-sql-server-2016.md)   
+## <a name="see-also"></a>См. также:  
+ [построитель отчетов в SQL Server 2014](report-builder-in-sql-server-2016.md)   
  [Представление конструктора отчетов (построитель отчетов)](report-design-view-report-builder.md)   
- [Глоссарий (построитель отчетов)](glossary-report-builder.md)  
+ [Глоссарий &#40;построитель отчетов&#41;](glossary-report-builder.md)  
   
   

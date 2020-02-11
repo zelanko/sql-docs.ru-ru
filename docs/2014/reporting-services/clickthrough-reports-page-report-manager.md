@@ -1,5 +1,5 @@
 ---
-title: Отчеты с дополнительной информацией страниц (диспетчер отчетов) | Документация Майкрософт
+title: Страница «отчеты с дополнительной информацией» (диспетчер отчетов) | Документация Майкрософт
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d996463baaed3095b6866fa2da88ed811745878d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109798"
 ---
 # <a name="clickthrough-reports-page-report-manager"></a>Страница «Отчеты с дополнительной информацией» (диспетчер отчетов)
@@ -33,7 +33,7 @@ ms.locfileid: "66109798"
 > [!NOTE]  
 >  Отчеты с дополнительной информацией доступны не в каждом выпуске [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Перечень функций, поддерживаемых в разных выпусках [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], см. в разделе [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md). Если используемый выпуск [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] неизвестен, обратитесь к администратору базы данных.  
   
-## <a name="navigation"></a>Навигация  
+## <a name="navigation"></a>Навигации  
  Чтобы перейти к этому местоположению в пользовательском интерфейсе, используйте следующую процедуру.  
   
 ###### <a name="to-open-the-clickthrough-reports-page"></a>Открытие страницы «Отчеты с дополнительной информацией»  
@@ -53,10 +53,10 @@ ms.locfileid: "66109798"
  **Отчет в одном экземпляре**  
  Определяет пользовательский отчет, который будет предоставлен пользователю, если ему понадобится представление данных от одного экземпляра. Нажмите кнопку обзора, чтобы выбрать нужный отчет.  
   
- **Отчет с несколькими экземплярами**  
+ **Отчет в нескольких экземплярах**  
  Определяет пользовательский отчет, который будет предоставлен пользователю, если ему понадобится представление данных от нескольких экземпляров. Нажмите кнопку обзора, чтобы выбрать нужный отчет.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Публикация отчетов](../../2014/reporting-services/publish-reports.md)  
   
   

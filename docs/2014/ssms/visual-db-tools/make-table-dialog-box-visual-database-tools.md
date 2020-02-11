@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b9873268608072ed7f2d6cdb4d0026ba62e5d090
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63459980"
 ---
 # <a name="make-table-dialog-box-visual-database-tools"></a>Диалоговое окно «Создание таблицы» (визуальные инструменты для баз данных)
@@ -32,8 +32,8 @@ ms.locfileid: "63459980"
 > [!NOTE]  
 >  Перед выполнением запроса можно изменить свойства создаваемой таблицы, редактируя их в окне **Свойства**. Дополнительные сведения см. в разделе [Свойства запроса (визуальные инструменты для баз данных)](visual-database-tools.md).  
   
-## <a name="see-also"></a>См. также  
- [Создание запросов на создание таблицы &#40;визуальных инструментах баз данных&#41;](create-make-table-queries-visual-database-tools.md)   
+## <a name="see-also"></a>См. также:  
+ [Создание запросов Make Table &#40;визуальных инструментов для баз данных&#41;](create-make-table-queries-visual-database-tools.md)   
  [Типы запросов (визуальные инструменты для баз данных)](types-of-queries-visual-database-tools.md)  
   
   

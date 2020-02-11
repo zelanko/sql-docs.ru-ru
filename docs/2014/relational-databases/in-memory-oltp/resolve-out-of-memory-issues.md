@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: e31f36624e8923722612810836df5d2a57b6b686
-ms.sourcegitcommit: 9af07bd57b76a34d3447e9e15f8bd3b17709140a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/08/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67624411"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Устранение проблем нехватки памяти
@@ -29,7 +29,7 @@ ms.locfileid: "67624411"
 | [Устранение ошибок выделения страниц, возникших из-за нехватки памяти при наличии достаточных ресурсов памяти](#resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available) |Что делать, если вы получите сообщение об ошибке "Производится отключение выделения страниц для базы данных *\<имя_базы_данных>* из-за нехватки памяти в пуле ресурсов *\<имя_пула_ресурсов>* ", если объема доступной памяти достаточно для выполнения операции.|  
   
 ## <a name="resolve-database-restore-failures-due-to-oom"></a>устранить ошибки восстановления базы данных, возникающие из-за нехватки памяти  
- При попытке восстановить базу данных может появиться сообщение об ошибке: «Операция восстановления завершилась сбоем для базы данных " *\<databaseName >* «из-за нехватки памяти в пуле ресурсов» *\<resourcePoolName >* ".» Прежде чем можно будет восстановить базу данных, необходимо устранить проблемы нехватки памяти, увеличив объем доступной памяти.  
+ При попытке восстановить базу данных может появиться следующее сообщение об ошибке: "сбой операции восстановления для базы данных"*\<DatabaseName>*"из-за нехватки памяти в пуле ресурсов"*\<resourcePoolName>*". Чтобы успешно восстановить базу данных, необходимо устранить проблему нехватки памяти, сделав доступной больший объем памяти.  
   
  Чтобы устранить ошибку восстановления из-за OOM, нужно увеличить объем доступной памяти с помощью любого из следующих средств, чтобы временно увеличить объем памяти, доступной для операции восстановления.  
   
@@ -37,11 +37,11 @@ ms.locfileid: "67624411"
     Закрыв одно или несколько выполняющихся приложений, например Visual Studio, Internet Explorer, OneNote и другие программы, можно освободить используемую ими память для операции восстановления. Эти приложения можно будет перезапустить после успешного завершения восстановления.  
   
 -   Увеличьте значение MAX_MEMORY_PERCENT.   
-    В этом фрагменте кода значение параметра MAX_MEMORY_PERCENT для пула ресурсов PoolHk увеличивается до 70 % от установленной памяти.  
+    В этом фрагменте кода значение параметра MAX_MEMORY_PERCENT для пула ресурсов PoolHk увеличивается до 70 % от установленной памяти.  
   
     > [!IMPORTANT]  
     >  Если сервер выполняется на ВМ и не выделен, установите такое же значение MIN_MEMORY_PERCENT, как и MAX_MEMORY_PERCENT.   
-    > См. в разделе [рекомендации: Использование In-Memory OLTP в среде ВМ](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) Дополнительные сведения.  
+    > Дополнительные сведения см. в статье [Использование In-Memory OLTP в среде ВМ](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) .  
   
     ```sql  
   
@@ -61,7 +61,7 @@ ms.locfileid: "67624411"
   
     ```  
   
-     Сведения о максимальных значениях для MAX_MEMORY_PERCENT см. в разделе [процент доступной памяти для оптимизированных для памяти таблиц и индексов](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#percent-of-memory-available-for-memory-optimized-tables-and-indexes)
+     Сведения о максимальных значениях для MAX_MEMORY_PERCENT см. в разделе [процент доступной памяти для оптимизированных для памяти таблиц и индексов](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#percent-of-memory-available-for-memory-optimized-tables-and-indexes) .
   
 -   Измените значение **max server memory**.  
     Дополнительные сведения о настройке **максимальной памяти сервера** см. в разделе [Оптимизация производительности сервера с помощью параметров конфигурации памяти](https://technet.microsoft.com/library/ms177455\(v=SQL.105\).aspx).  
@@ -69,14 +69,14 @@ ms.locfileid: "67624411"
 ## <a name="resolve-impact-of-low-memory-or-oom-conditions-on-the-workload"></a>устранить влияния нехватки свободной памяти на рабочую нагрузку  
  Очевидно, проще всего вообще избегать ситуаций, связанных с нехваткой памяти. Помочь в этом может хорошее планирование и отслеживание. Однако даже самое хорошее планирование не гарантирует стабильной работы, и возникновение нехватки памяти всегда возможно. Для устранения этой ситуации необходимо выполнить два действия.  
   
-1.  [Откройте выделенное административное соединение](#open-a-dac-dedicated-administrator-connection) 
+1.  [Открытие приложения уровня данных (выделенное административное соединение)](#open-a-dac-dedicated-administrator-connection) 
   
-2.  [Примените действие по исправлению](#take-corrective-action) 
+2.  [Предпринять действия по исправлению](#take-corrective-action) 
   
 ### <a name="open-a-dac-dedicated-administrator-connection"></a>Откройте выделенное административное соединение  
  В Microsoft SQL Server есть выделенное административное соединение. С помощью выделенного административного соединения администратор может обращаться к запущенному экземпляру ядра СУБД SQL Server для устранения неполадок на сервере, даже если сервер не отвечает на другие клиентские соединения. Выделенные административные соединения доступны в программе `sqlcmd` и в среде SQL Server Management Studio (SSMS).  
   
- Рекомендации по использованию `sqlcmd` и выделенных административных соединений см. в разделе [Использование выделенного административного соединения](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md). Рекомендации по использованию DAC в SSMS см. в разделе [как: Использование выделенного административного соединения с SQL Server Management Studio](https://msdn.microsoft.com/library/ms178068.aspx).  
+ Рекомендации по использованию `sqlcmd` и выделенных административных соединений см. в разделе [Использование выделенного административного соединения](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md). Использование выделенного административного соединения в среде SSMS описано в статье [Как применять выделенное административное соединение с помощью среды SQL Server Management Studio](https://msdn.microsoft.com/library/ms178068.aspx).  
   
 ### <a name="take-corrective-action"></a>Примените действие по исправлению  
  Для устранения проблемы с нехваткой памяти необходимо либо освободить имеющуюся память путем сокращения объема ее использования, либо выделить дополнительный объем памяти таблицам в памяти.  
@@ -95,7 +95,7 @@ ms.locfileid: "67624411"
   
 #### <a name="increase-available-memory"></a>Увеличение объема доступной памяти  
   
-##### <a name="increase-value-of-maxmemorypercent-on-the-resource-pool"></a>Увеличение значения MAX_MEMORY_PERCENT для пула ресурсов  
+##### <a name="increase-value-of-max_memory_percent-on-the-resource-pool"></a>Увеличение значения MAX_MEMORY_PERCENT для пула ресурсов  
  Если именованный пул ресурсов для таблиц в памяти еще не создан, то его необходимо создать и привязать к нему базы данных [!INCLUDE[hek_2](../../includes/hek-2-md.md)] . Инструкции по созданию пула ресурсов и привязки к нему баз данных [см. в разделе](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md) Привязка базы данных с таблицами, оптимизированными для памяти, к пулу ресурсов [!INCLUDE[hek_2](../../includes/hek-2-md.md)] .  
   
  Если база данных [!INCLUDE[hek_2](../../includes/hek-2-md.md)] привязана к пулу ресурсов, то пользователь может увеличить процент памяти, доступной для пула. Инструкции по изменению значения MIN_MEMORY_PERCENT и MAX_MEMORY_PERCENT для пула ресурсов см. в подразделе [Изменение параметров MIN_MEMORY_PERCENT и MAX_MEMORY_PERCENT для существующего пула](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#change-min-memory-percent-and-max-memory-percent-on-an-existing-pool) .  
@@ -105,7 +105,7 @@ ms.locfileid: "67624411"
   
 > [!IMPORTANT]  
 >  Если сервер выполняется на ВМ и не выделен, установите такое же значение MIN_MEMORY_PERCENT, как и MAX_MEMORY_PERCENT.   
-> См. в разделе [рекомендации: Использование In-Memory OLTP в среде ВМ](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) Дополнительные сведения.  
+> Дополнительные сведения см. в статье [Использование In-Memory OLTP в среде ВМ](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) .  
   
 ```sql  
   
@@ -132,19 +132,19 @@ GO
   
 > [!IMPORTANT]  
 >  Если сервер выполняется на ВМ и не выделен, установите такое же значение MIN_MEMORY_PERCENT, как и MAX_MEMORY_PERCENT.   
-> См. в разделе [рекомендации: Использование In-Memory OLTP в среде ВМ](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) Дополнительные сведения.  
+> Дополнительные сведения см. в статье [Использование In-Memory OLTP в среде ВМ](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) .  
   
 ## <a name="resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available"></a>Устранение ошибок выделения страниц, возникших из-за нехватки памяти при наличии достаточных ресурсов памяти  
- Если вы получаете сообщение об ошибке «запрет распределения страниц для базы данных " *\<databaseName >* «из-за нехватки памяти в пуле ресурсов» *\<resourcePoolName >* '. См. в разделе "<https://go.microsoft.com/fwlink/?LinkId=330673>" Дополнительные сведения.» а доступной физической памяти достаточно для выделения страницы, это может быть связано с отключенным регулятором ресурсов. Если регулятор ресурсов отключен, то MEMORYBROKER_FOR_RESERVE вызывает искусственную нагрузку на ресурсы памяти.  
+ Если появляется сообщение об ошибке "запрещение выделения страниц для базы данных"*\<DatabaseName>*"из-за нехватки памяти в пуле ресурсов"*\<resourcePoolName>*". Дополнительные сведения<https://go.microsoft.com/fwlink/?LinkId=330673>см. в разделе "". а доступной физической памяти достаточно для выделения страницы, это может быть связано с отключенным регулятором ресурсов. Если регулятор ресурсов отключен, то MEMORYBROKER_FOR_RESERVE вызывает искусственную нагрузку на ресурсы памяти.  
   
  Для устранения этой ошибки необходимо включить регулятор ресурсов.  
   
  См. в разделе [Включение регулятора ресурсов](https://technet.microsoft.com/library/bb895149.aspx) дополнительные сведения об ограничениях, а также рекомендации по включению регулятора ресурсов через обозреватель объектов, свойства регулятора ресурсов или Transact-SQL.  
   
-## <a name="see-also"></a>См. также  
- [Управление памятью для компонента In-Memory OLTP](../../database-engine/managing-memory-for-in-memory-oltp.md)   
- [Наблюдение и устранение неисправностей при использовании памяти](monitor-and-troubleshoot-memory-usage.md)   
+## <a name="see-also"></a>См. также:  
+ [Управление памятью для выполняющейся в памяти OLTP](../../database-engine/managing-memory-for-in-memory-oltp.md)   
+ [Мониторинг и устранение неполадок использования памяти](monitor-and-troubleshoot-memory-usage.md)   
  [Привязка базы данных с таблицами, оптимизированными для памяти, к пулу ресурсов](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
- [Советы и рекомендации: Использование In-Memory OLTP в среде ВМ](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)  
+ [Рекомендации. Использование выполняющейся в памяти OLTP в среде виртуальной машины](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)  
   
   

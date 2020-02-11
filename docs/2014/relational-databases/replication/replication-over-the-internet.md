@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 91def0dda11d1a16ceaac4d12a3c9294a084d247
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250381"
 ---
 # <a name="replication-over-the-internet"></a>Репликация через Интернет
@@ -27,8 +27,8 @@ ms.locfileid: "63250381"
   
 -   Виртуальная частная сеть. Дополнительные сведения см. в статье [Публикация данных через Интернет с помощью виртуальных частных сетей](publish-data-over-the-internet-using-vpn.md).  
   
--   Параметр веб-синхронизации для репликации слиянием. Дополнительные сведения см. в статье [Веб-синхронизация для репликации слиянием](web-synchronization-for-merge-replication.md).  
+-   Параметр веб-синхронизации для репликации слиянием. Дополнительные сведения см. в статье [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md).  
   
- Репликации [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] всех типов могут реплицировать данные через виртуальную частную сеть, но для репликации слиянием необходимо предусмотреть веб-синхронизацию.  
+ Репликации [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] всех типов могут реплицировать данные через виртуальную частную сеть, но для репликации слиянием необходимо предусмотреть веб-синхронизацию.  
   
   

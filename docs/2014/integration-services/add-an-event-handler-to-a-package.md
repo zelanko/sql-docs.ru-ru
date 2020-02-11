@@ -1,5 +1,5 @@
 ---
-title: Добавление обработчика событий к пакету | Документация Майкрософт
+title: Добавление обработчика событий в пакет | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 589d90b52647241b22929473efc9c6e54eb3b75f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062027"
 ---
 # <a name="add-an-event-handler-to-a-package"></a>Добавление к пакету обработчик событий
@@ -54,8 +54,8 @@ ms.locfileid: "66062027"
   
 9. Чтобы сохранить пакет, в меню **Файл** выберите пункт **Сохранить выбранные элементы** .  
   
-## <a name="see-also"></a>См. также  
- [службы SQL Server Integration Services](../../2014/integration-services/sql-server-integration-services.md)   
- [Ведение журналов в службах Integration Services (SSIS)](performance/integration-services-ssis-logging.md)  
+## <a name="see-also"></a>См. также:  
+ [SQL Server Integration Services](../../2014/integration-services/sql-server-integration-services.md)   
+ [Ведение журнала&#41; Integration Services &#40;SSIS](performance/integration-services-ssis-logging.md)  
   
   

@@ -14,20 +14,21 @@ author: yualan
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c835f42fdbcc43309a0235f8ad862bee9c230e33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66462697"
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Диспетчер подключений Azure Data Lake Store
-  **Диспетчер подключений Azure Data Lake Store** позволяет пакету служб SSIS для подключения к службе Azure Data Lake Store через два типа проверки подлинности: Удостоверение пользователя Azure AD и удостоверение службы Azure AD.  
+  
+  **Диспетчер подключений Azure Data Lake Store** позволяет пакету служб SSIS подключаться к службе Azure Data Lake Store с помощью двух типов проверки подлинности: удостоверение пользователя Azure AD и удостоверение службы Azure AD.  
 
 ## <a name="configure-the-azure-data-lake-store-connection-manager"></a>Настройка диспетчера подключений Azure Data Lake Store 
   
 1.  В диалоговом окне **Добавление диспетчера соединений со службами SSIS** выберите **AzureDataLake**и щелкните **Добавить**.   
   
-2.  В диалоговом окне "Редактор диспетчера подключений Azure Data Lake Store" введите URL-адрес узла Azure Data Lake Store в поле **Узел ADLS** . Например: https:\//test.azuredatalakestore.net или test.azuredatalakestore.net.
+2.  В диалоговом окне "Редактор диспетчера подключений Azure Data Lake Store" введите URL-адрес узла Azure Data Lake Store в поле **Узел ADLS** . Например: https:\//test.azuredatalakestore.net или Test.azuredatalakestore.NET.
   
 3.  Выберите соответствующий тип проверки подлинности для доступа к данным Azure Data Lake Store.
 
@@ -49,7 +50,7 @@ ms.locfileid: "66462697"
     
         4. Щелкните **Проверить подключение** для проверки подключения.  
   
-4.  Чтобы закрыть диалоговое окно, нажмите кнопку **ОК** .  
+4.  Нажмите кнопку **ОК**, чтобы закрыть диалоговое окно.  
   
     Свойства созданного диспетчера соединений можно просмотреть в окне **Свойства** .  
   

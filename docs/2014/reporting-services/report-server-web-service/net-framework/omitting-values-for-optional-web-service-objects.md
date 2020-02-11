@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3858f73e1b332acfa1a1bbc640007f6f0884abff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63260713"
 ---
 # <a name="omitting-values-for-optional-web-service-objects"></a>Пропуск значений для необязательных объектов веб-службы
@@ -28,11 +28,11 @@ ms.locfileid: "63260713"
 > [!IMPORTANT]  
 >  Ошибка в указании свойства с помощью вышеприведенной методики может привести к непредсказуемому поведению веб-службы.  
   
- Типы данных, обычно требующие обработки дополнительного свойства Specified: `Boolean`, `DateTime`, и `Enumeration`.  
+ Типы данных, которые обычно нуждаются в обработке дополнительного указанного свойства, — это `Boolean`, `DateTime`и `Enumeration`.  
   
  Пример см. в описании метода <xref:ReportService2010.ReportingService2010.CreateDataSource%2A>.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание приложений с помощью веб-службы и .NET Framework](building-applications-using-the-web-service-and-the-net-framework.md)   
  [Технический справочник (службы SSRS)](../../technical-reference-ssrs.md)  
   

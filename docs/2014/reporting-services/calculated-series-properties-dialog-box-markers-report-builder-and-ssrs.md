@@ -1,5 +1,5 @@
 ---
-title: Вычисляемый ряд свойства, маркеры (построитель отчетов и службы SSRS) | Документация Майкрософт
+title: Диалоговое окно "Свойства вычисляемого ряда", "маркеры" (построитель отчетов и службы SSRS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0a3cbe076564d1ce24cbe606485462cbfe012407
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109890"
 ---
 # <a name="calculated-series-properties-dialog-box-markers-report-builder-and-ssrs"></a>Диалоговое окно «Свойства вычисляемого ряда» — «Маркеры» (построитель отчетов и службы SSRS)
-  Чтобы определить, как будут отображаться маркеры в каждой точке данных рядов, перейдите на вкладку **Маркеры** в диалоговом окне **Свойства вычисляемого ряда** . Маркеры доступны только для некоторых типов диаграмм. Маркеры поддерживаются следующие диаграммы: Область, строки, столбца, линейный график, Полярная и Точечная. Дополнительные сведения о функциях диаграмм см. в статье [Типы диаграмм (построитель отчетов и службы SSRS)](report-design/chart-types-report-builder-and-ssrs.md).  
+  Чтобы определить, как будут отображаться маркеры в каждой точке данных рядов, перейдите на вкладку **Маркеры** в диалоговом окне **Свойства вычисляемого ряда** . Маркеры доступны только для некоторых типов диаграмм. Маркеры поддерживаются в следующих типах диаграмм: диаграмма с областями, линейчатая, гистограмма, линейный график, полярная и точечная диаграммы. Дополнительные сведения о функциях диаграмм см. в статье [Типы диаграмм (построитель отчетов и службы SSRS)](report-design/chart-types-report-builder-and-ssrs.md).  
   
 ## <a name="options"></a>Параметры  
  **Тип маркера**  
@@ -39,12 +39,12 @@ ms.locfileid: "66109890"
  **Цвет границы маркера**  
  Выберите цвет границы маркеров для точек данных.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Диаграммы (построитель отчетов и службы SSRS)](report-design/charts-report-builder-and-ssrs.md)   
  [Форматирование цветов для рядов на диаграмме (построитель отчетов и службы SSRS)](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [Форматирование меток оси на диаграмме (построитель отчетов и службы SSRS)](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Задание цветов диаграммы с помощью палитры &#40;построитель отчетов и службы SSRS&#41;](report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
- [Построение данных на вспомогательной оси &#40;построитель отчетов и службы SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
+ [Построение данных на вспомогательной оси &#40;построитель отчетов и SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
  [Форматирование точек данных на диаграмме (построитель отчетов и службы SSRS)](report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [Добавление скользящего среднего в диаграмму (построитель отчетов и службы SSRS)](report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
   

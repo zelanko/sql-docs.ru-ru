@@ -16,35 +16,35 @@ ms.assetid: 2c143020-0403-4592-80e0-84229f3d40be
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 20d4c7d47f2d541efdb1afbb9d757642b5ac83ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67901507"
 ---
 # <a name="accessing-a-visual-foxpro-data-source-from-microsoft-excel"></a>Доступ к источнику данных Visual FoxPro из Microsoft Excel
-Если у вас установлен Microsoft Query, можно создать источник данных в Microsoft Excel, которая подключается к данным Visual FoxPro.  
+Если установлен Microsoft Query, можно создать источник данных в Microsoft Excel, который подключается к данным Visual FoxPro.  
   
 ### <a name="to-access-visual-foxpro-data-from-microsoft-excel"></a>Доступ к данным Visual FoxPro из Microsoft Excel  
   
 1.  Откройте электронную таблицу Microsoft Excel.  
   
-2.  В меню «Данные» выберите получение внешних данных. Откроется Microsoft Query.  
+2.  В меню Данные выберите получить внешние данные. Откроется Microsoft Query.  
   
-3.  В диалоговом окне Выбор источника данных выберите другой.  
+3.  В диалоговом окне Выбор источника данных нажмите кнопку другие.  
   
-4.  В диалоговом окне источников данных ODBC нажмите кнопку "Создать".  
+4.  В диалоговом окне Источники данных ODBC нажмите кнопку Создать.  
   
-5.  В диалоговом окне Добавить источник данных выберите Microsoft Visual FoxPro драйвер из списка установлены драйверы ODBC и нажмите кнопку ОК.  
+5.  В диалоговом окне Добавление источника данных выберите драйвер Microsoft Visual FoxPro в списке установленные драйверы ODBC и нажмите кнопку ОК.  
   
-6.  В [диалоговое окно настройки ODBC для Visual FoxPro](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md), введите имя источника данных, выберите тип базы данных, введите путь к базе данных или каталог и нажмите кнопку ОК.  
+6.  В [диалоговом окне Установка ODBC Visual FoxPro](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)введите имя источника данных, выберите тип базы данных, введите путь к базе данных или каталогу и нажмите кнопку ОК.  
   
-     Имя источника данных отображается в текстовом поле введите источник данных диалогового окна "Источники данных ODBC".  
+     Новое имя источника данных отображается в текстовом поле введите источник данных диалогового окна Источники данных ODBC.  
   
-7.  Нажмите кнопку «ОК».  
+7.  Нажмите кнопку ОК.  
   
-     Имя источника данных выбран в поле доступные источники данных в диалоговом окне Выбор источника данных.  
+     Новое имя источника данных выбирается в текстовом поле Доступные источники данных диалогового окна Выбор источника данных.  
   
-8.  Вариант.  
+8.  Нажмите кнопку Использовать.  
   
- Теперь можно добавить таблицы, чтобы открыть запрос. Дополнительные сведения о построении запроса, см. в разделе [импорта данных в Microsoft Excel из базы данных Visual FoxPro](../../odbc/microsoft/importing-data-into-microsoft-excel-from-a-visual-foxpro-database.md).
+ Теперь можно добавлять таблицы в открытый запрос. Дополнительные сведения о построении запроса см. в разделе [Импорт данных в Microsoft Excel из базы данных Visual FoxPro](../../odbc/microsoft/importing-data-into-microsoft-excel-from-a-visual-foxpro-database.md).

@@ -1,5 +1,5 @@
 ---
-title: Обновить диалоговое окно представления источника данных | Документация Майкрософт
+title: Диалоговое окно «Обновление представления источника данных» | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5ac09961db83c8c0f8906f2bd04ea20638e39b22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070508"
 ---
 # <a name="refresh-data-source-view-dialog-box"></a>Диалоговое окно «Обновление представления источников данных»
@@ -29,14 +29,14 @@ ms.locfileid: "66070508"
 -   Щелкнув правой кнопкой мыши панель **Диаграмма** конструктора представлений источников данных и выбрав пункт **Обновить**.  
   
 ## <a name="options"></a>Параметры  
- **Будут внесены следующие изменения**  
+ **Будут произведены следующие изменения**  
  Позволяет отобразить изменения (обновления, добавления и удаления), которые будут внесены в представление источника данных при нажатии кнопки **ОК**.  
   
- **Сохранение отчета**  
- Выберите этот параметр, чтобы отобразить диалоговое окно **Сохранить как** и сохранить HTML-отчет в файл.  
+ **Сохранить отчет**  
+ Выберите этот параметр, чтобы отобразить диалоговое окно **Сохранение** и сохранить HTML-отчет в файл.  
   
-## <a name="see-also"></a>См. также  
- [Конструкторы и диалоговые окна служб Analysis Services &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Конструктор представлений источников данных (службы Analysis Services — многомерные данные)](data-source-view-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>См. также:  
+ [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Конструктор представлений источников данных &#40;Analysis Services многомерных данных&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

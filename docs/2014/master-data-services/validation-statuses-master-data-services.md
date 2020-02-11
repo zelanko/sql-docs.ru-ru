@@ -11,16 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b4ad97a783781596fccbbc2c159140d819586b38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478544"
 ---
 # <a name="validation-statuses-master-data-services"></a>Состояния проверки (службы Master Data Services)
   В функциональной области **Управление версиями** на странице **Проверка версии** возможны следующие состояния.  
   
-|Состояние|Описание|  
+|Состояние|Description|  
 |------------|-----------------|  
 |Ожидание проверки|Все новые элементы, ожидающие проверки.|  
 |Ожидание повторной проверки|Существующие элементы, ожидающие проверки.|  
@@ -28,8 +28,8 @@ ms.locfileid: "65478544"
 |Проверка завершена с ошибкой|Элементы, не прошедшие проверку на соответствие бизнес-правилам.|  
 |Ожидание повторной проверки зависимого элемента|Обновленные консолидированные элементы, ожидающие проверки вместе с дочерними элементами.|  
   
-## <a name="see-also"></a>См. также  
- [Подтверждение исправления проблемы, обнаруженной при проверке на соответствие бизнес-правилам (службы Master Data Services)](validate-a-version-against-business-rules-master-data-services.md)   
- [Версии (службы Master Data Services)](../../2014/master-data-services/versions-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Проверка версии на соответствие бизнес-правилам &#40;Master Data Services&#41;](validate-a-version-against-business-rules-master-data-services.md)   
+ [Версии &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Редактор формы именованных наборов (вкладка «вычисления», конструктор кубов) (службы Analysis Services — многомерные данные) | Документация Майкрософт
+title: Редактор формы именованных наборов (вкладка «вычисления», конструктор кубов) (Analysis Services-многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 861824359ff1cd9700f5acaa64d0b2155c870add
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072345"
 ---
 # <a name="named-set-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Редактор формы именованного набора (вкладка «Вычисления», конструктор кубов) (службы Analysis Services — многомерные данные)
@@ -26,7 +26,7 @@ ms.locfileid: "66072345"
 >  Данная панель отображается только в представлении формы.  
   
 ## <a name="options"></a>Параметры  
- **Name**  
+ **Название**  
  Введите имя именованного набора.  
   
  **Выражение**  
@@ -37,15 +37,15 @@ ms.locfileid: "66072345"
 > [!NOTE]  
 >  Этот параметр должен содержать допустимое выражение набора.  
   
-## <a name="see-also"></a>См. также  
- [Вычисления](multidimensional-models-olap-logical-cube-objects/calculations.md)   
- [Для создания именованных наборов](multidimensional-models/create-named-sets.md)   
- [Конструктор кубов &#40;службы Analysis Services — многомерные данные&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Вычисления &#40;конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)   
- [Панель инструментов &#40;вкладка «вычисления», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Организатор скриптов &#40;вкладка «вычисления», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](script-organizer-cube-designer-analysis-services-multidimensional-data.md)   
- [Средства вычисления &#40;вкладка «вычисления», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](calculation-tools-cube-designer-analysis-services-multidimensional-data.md)   
- [Редактор форм вычисляемых элементов &#40;вкладка «вычисления», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [Редактор скриптов &#40;вкладка «вычисления», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>См. также:  
+ [Времен](multidimensional-models-olap-logical-cube-objects/calculations.md)   
+ [Создание именованных наборов](multidimensional-models/create-named-sets.md)   
+ [Конструктор кубов &#40;Analysis Services многомерных данных&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Вычисления &#40;конструкторе кубов&#41; &#40;Analysis Services многомерных данных&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)   
+ [Панель инструментов &#40;вкладка «вычисления», конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Коллекция скриптов &#40;вкладка «вычисления», конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](script-organizer-cube-designer-analysis-services-multidimensional-data.md)   
+ [Средства вычисления &#40;вкладка «вычисления», конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](calculation-tools-cube-designer-analysis-services-multidimensional-data.md)   
+ [Редактор форм вычисляемых элементов вкладка «вычисления» &#40;, конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
+ [Редактор скриптов &#40;вкладка «вычисления», конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)  
   
   

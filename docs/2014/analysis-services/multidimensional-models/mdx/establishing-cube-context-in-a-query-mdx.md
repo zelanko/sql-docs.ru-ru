@@ -1,5 +1,5 @@
 ---
-title: Определение контекста куба в запросе (многомерные Выражения) | Документация Майкрософт
+title: Установка контекста куба в запросе (многомерные выражения) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f9f0f960c531fac8bae8f03479bacd507ffc3078
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074603"
 ---
 # <a name="establishing-cube-context-in-a-query-mdx"></a>Определение контекста куба в запросе (многомерные выражения)
@@ -58,7 +58,7 @@ FROM [Adventure Works]
   
  Для получения данных из кубов, которые не входят в заданный контекст куба, применяется функция многомерных выражений [LookupCube](/sql/mdx/lookupcube-mdx) . Кроме того, для временного сужения контекста при вычислении запроса можно использовать такие функции как [Filter](/sql/mdx/filter-mdx) .  
   
-## <a name="see-also"></a>См. также  
- [Основные принципы запросов многомерных выражений (службы Analysis Services)](mdx-query-fundamentals-analysis-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Основные принципы запросов многомерных выражений &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

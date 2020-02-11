@@ -1,5 +1,5 @@
 ---
-title: Анализ в Excel (вкладка «браузер», конструктор кубов) (службы Analysis Services — многомерные данные) | Документация Майкрософт
+title: Анализ в Excel (вкладка «браузер», конструктор кубов) (Analysis Services-многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b2833fb2ecbbac269442ce149cd5673abedcf83c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062368"
 ---
 # <a name="analyze-in-excel-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Анализ в Excel (вкладка «Браузер», конструктор кубов) (службы Analysis Services — многомерные данные)
-  Функция**Анализ в Excel** позволяет разработчику куба быстро определить, как проект будут видеть конечные пользователи. Функция **Анализ в Excel** открывает Microsoft Excel, создает соединение с источником данных, которым выступает база данных рабочей области, и автоматически добавляет сводную таблицу на лист. Эта функция заменяет веб-элемент управления Office на вкладке «Браузер», который в предыдущих версиях содержал внедренную сводную таблицу.  
+  **Анализ в Excel** предоставляет разработчику кубов возможность быстро просмотреть, как будет выглядеть проект для конечного пользователя. Функция **Анализ в Excel** открывает Microsoft Excel, создает соединение с источником данных, которым выступает база данных рабочей области, и автоматически добавляет сводную таблицу на лист. Эта функция заменяет веб-элемент управления Office на вкладке «Браузер», который в предыдущих версиях содержал внедренную сводную таблицу.  
   
- **Для просмотра данных куба:**  
+ **Для просмотра данных куба выполните следующие действия.**  
   
 1.  В среде [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]в обозревателе решений дважды щелкните куб, чтобы открыть его в конструкторе кубов.  
   
@@ -44,16 +44,16 @@ ms.locfileid: "66062368"
   
  Дополнительные сведения о функции **Анализ в Excel** см. в следующих ресурсах:  
   
- [Анализ в Excel (табличные службы SSAS)](tabular-models/analyze-in-excel-ssas-tabular.md)  
+ [Анализ в Excel &#40;табличные&#41;SSAS](tabular-models/analyze-in-excel-ssas-tabular.md)  
   
- [Анализ табличной модели в Excel (табличные службы SSAS)](tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)  
+ [Анализ табличной модели в Excel &#40;табличные&#41;SSAS](tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)  
   
  [Просмотр данных и метаданных в кубе](multidimensional-models/browse-data-and-metadata-in-cube.md)  
   
-## <a name="see-also"></a>См. также  
- [Браузер &#40;конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)   
- [Панель инструментов &#40;вкладка «браузер», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Метаданные &#40;вкладка «браузер», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Запрос и фильтр &#40;вкладка «браузер», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](query-filter-browser-cube-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>См. также:  
+ [Обозреватель &#40;конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)   
+ [Панель инструментов &#40;вкладка «браузер», конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Вкладка браузера &#40;метаданных, конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Вкладка «браузер запросов и фильтров &#40;», конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](query-filter-browser-cube-designer-analysis-services-multidimensional-data.md)  
   
   

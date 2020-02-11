@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 236600f0a4ff2b77daaab2266b7e927e6858447b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106726"
 ---
 # <a name="add-an-external-image-report-builder-and-ssrs"></a>Добавление внешнего изображения (построитель отчетов и службы SSRS)
@@ -37,7 +37,7 @@ ms.locfileid: "66106726"
   
      Для изображения, расположенного на сервере отчетов в собственном режиме, введите относительный путь к изображению в поле **Использовать это изображение**, например ../images/image1.jpg.  
   
-     Для изображения на сервере отчетов в режиме интеграции с SharePoint или веб-сайт, введите полный URL-адрес изображения в **использовать это изображение** поле-например, http://\<SharePointservername > /\<узел > / Documents/Images/Image1.jpg.  
+     Для изображения на сервере отчетов в режиме интеграции с SharePoint или любого другого веб-сайта введите полный URL-адрес изображения в поле **использовать это изображение** , например http://\<шарепоинтсервернаме>/\<site>/Documents/images/image1.jpg.  
   
      Дополнительные сведения см. в разделе [Указание путей к внешним элементам (построитель отчетов и службы SSRS)](specifying-paths-to-external-items-report-builder-and-ssrs.md).  
   

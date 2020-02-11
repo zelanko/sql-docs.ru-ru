@@ -14,14 +14,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 69f340855e37ffde49aec0af096c094a142659d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109186"
 ---
 # <a name="export-a-report-using-url-access"></a>Экспорт отчета с применением доступа по URL-адресу
-  При необходимости можно указать формат, в котором будет подготовлен отчет с помощью *rs: Format* параметра. Например, чтобы получить копию отчета в формате PDF прямо с сервера отчетов, работающего в собственном режиме:  
+  При необходимости можно указать формат отображения отчета с помощью параметра *RS: Format* . Например, чтобы получить копию отчета в формате PDF прямо с сервера отчетов, работающего в собственном режиме:  
   
 ```  
 http://myrshost/ReportServer?/myreport&rs:Format=PDF  
@@ -37,7 +37,7 @@ http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/myrereport
   
  Если в URL-адрес не включен параметр *Format* , то сервер отчетов определяет браузер и подготавливает для него отчет в соответствующем HTML-формате.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Доступ по URL-адресу (службы SSRS)](url-access-ssrs.md)   
  [Ссылка на параметр доступа по URL-адресу](url-access-parameter-reference.md)  
   

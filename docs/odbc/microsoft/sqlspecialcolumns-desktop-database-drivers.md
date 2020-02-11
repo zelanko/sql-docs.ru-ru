@@ -1,5 +1,5 @@
 ---
-title: SQLSpecialColumns (драйверы для настольных систем баз данных) | Документация Майкрософт
+title: SQLSpecialColumns (драйверы баз данных для настольных систем) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,15 +13,15 @@ ms.assetid: 3de66fdf-053b-4354-979d-e76a5a5e975f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e530d0b16811cdf25a5bc1d99f5386efdb55ccd4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905319"
 ---
 # <a name="sqlspecialcolumns-desktop-database-drivers"></a>SQLSpecialColumns (драйверы для баз данных на настольном компьютере)
-Уникальный индекс будет возвращаться (если он существует) SQL_BEST_ROWID флажка в *fColType*. Результирующий набор не возвращается для флага SQL_ROWVER.  
+Будет возвращен уникальный индекс (если он существует) для флага SQL_BEST_ROWID в *фколтипе*. Для флага SQL_ROWVER не будет возвращен результирующий набор.  
   
- Все идентификаторы строк имеют область SQL_SCOPE_CURROW.  
+ Все идентификаторы строк имеют область действия SQL_SCOPE_CURROW.  
   
- Сопоставление шаблонов не поддерживается для либо *szTableQualifier* или *szTableName* аргумент.
+ Сопоставление шаблонов не поддерживается для аргумента *сзтаблекуалифиер* или *сзтабленаме* .

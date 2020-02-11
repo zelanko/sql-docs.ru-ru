@@ -1,5 +1,5 @@
 ---
-title: Параметры выполнения (страница "Общие") запроса служб Analysis Services | Документация Майкрософт
+title: Параметры выполнения запроса Analysis Services (страница «Общие») | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5b2d8d7b20a7a3a5230d8441eb1f72f19e978eb4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065300"
 ---
 # <a name="analysis-services-query-execution-options-general-page"></a>Параметры выполнения запросов служб Analysis Services (страница «Общие»)
@@ -25,7 +25,7 @@ ms.locfileid: "66065300"
  **Время ожидания выполнения**  
  Указывает число секунд ожидания перед отменой запроса. Значение, равное 0, указывает на неограниченное время ожидания или отсутствие времени ожидания.  
   
- **Сброс до значений по умолчанию**  
+ **Восстановить значения по умолчанию**  
  Сброс всех значений на этой странице и установка исходных значений по умолчанию.  
   
   

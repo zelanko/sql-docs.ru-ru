@@ -1,5 +1,5 @@
 ---
-title: Возвращаемые значения SQLGetInfo для текстовых файлов | Документация Майкрософт
+title: SQLGetInfo вернул значения для текстовых файлов | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,24 +17,24 @@ ms.assetid: 739a9d72-26aa-42dd-b9fd-76c679976d09
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3d2578c9abe6e2e3b1f99b0e680fc0fcf8c104f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67898811"
 ---
 # <a name="sqlgetinfo-returned-values-for-text-files"></a>Возвращаемые значения SQLGetInfo для текстовых файлов
-В следующей таблице перечислены языка C# defines для *fInfoType* аргумент и соответствующие значения, возвращаемые методом **SQLGetInfo**. Эти сведения можно получить, передав перечисленных языка C# defines **SQLGetInfo** в *fInfoType* аргумент. Дополнительные сведения о значениях, возвращаемых **SQLGetInfo**, см. в разделе [Справочник по программированию ODBC](../../odbc/reference/odbc-programmer-s-reference.md).  
+В следующей таблице перечислены #defines *для аргумента* языка C и соответствующие значения, возвращаемые **SQLGetInfo**. Эти сведения можно получить, передав перечисленный #defines C-Language в **SQLGetInfo** в аргументе *финфотипе* . Дополнительные сведения о значениях, возвращаемых функцией **SQLGetInfo**, см. в [справочнике программиста по ODBC](../../odbc/reference/odbc-programmer-s-reference.md).  
   
 > [!NOTE]  
->  Где **SQLGetInfo** возвращает битовую маску, 32-разрядной, вертикальная черта (&#124;) представляет операцию побитового или.  
+>  Где **SQLGetInfo** возвращает 32-разрядную битовую маску, вертикальная черта (&#124;) представляет побитовое или.  
   
-|Свойство|Возвращаемое значение|  
+|инфотипе|Возвращаемое значение|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"N"|  
 |SQL_ACCESSIBLE_TABLES|«Y»|  
 |SQL_ACTIVE_ENVIRONMENTS|0|  
-|SQL_AGGREGATE_FUNCTIONS|Все готово|  
+|SQL_AGGREGATE_FUNCTIONS|Все наборы|  
 |SQL_ALTER_DOMAIN|0|  
 |SQL_ALTER_TABLE|0|  
 |SQL_ASYNC_MODE|0|  
@@ -44,7 +44,7 @@ ms.locfileid: "67898811"
 |SQL_CATALOG_LOCATION|SQL_QL_START|  
 |SQL_CATALOG_NAME|«Y»|  
 |SQL_CATALOG_NAME_SEPARATOR|"\\"|  
-|SQL_CATALOG_TERM|«Каталог»|  
+|SQL_CATALOG_TERM|Каталоги|  
 |SQL_CATALOG_USAGE|Несколько значений|  
 |SQL_COLLATION_SEQ|""|  
 |SQL_COLUMN_ALIAS|«Y»|  
@@ -81,22 +81,22 @@ ms.locfileid: "67898811"
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_DATA_SOURCE_NAME|Имя источника данных из файла Odbc.ini, или «» если в Odbc.ini используется ключевое слово DRIVER|  
+|SQL_DATA_SOURCE_NAME|DSN из ODBC. ini или "", если в ODBC. ini используется ключевое слово DRIVER|  
 |SQL_DATA_SOURCE_READ_ONLY|«Y»|  
 |SQL_DATABASE_NAME|Текущий каталог базы данных|  
 |SQL_DATETIME_LITERALS|0|  
-|SQL_DBMS_NAME|«ТЕКСТ»|  
-|SQL_DBMS_VER|ISAM: Text<br /><br /> Версия: 1.0<br /><br /> Формат номера версии: 01.00.0000|  
+|SQL_DBMS_NAME|ПОЛНОТЕКСТОВЫМ|  
+|SQL_DBMS_VER|ISAM: текст<br /><br /> Версия: 1,0<br /><br /> Формат номера версии: 01.00.0000|  
 |SQL_DDL_INDEX|0|  
 |SQL_DEFAULT_TXN_ISOLATION|0|  
 |SQL_DESCRIBE_PARAMETER|0|  
-|SQL_DRIVER_HDBC|Обрабатываются диспетчером драйверов.|  
-|SQL_DRIVER_HENV|Обрабатываются диспетчером драйверов.|  
-|SQL_DRIVER_HLIB|Обрабатываются диспетчером драйверов.|  
-|SQL_DRIVER_HSTMT|Обрабатываются диспетчером драйверов.|  
-|SQL_DRIVER_NAME|"OdbcJt32.dll"|  
+|SQL_DRIVER_HDBC|Обрабатывается диспетчером драйверов.|  
+|SQL_DRIVER_HENV|Обрабатывается диспетчером драйверов.|  
+|SQL_DRIVER_HLIB|Обрабатывается диспетчером драйверов.|  
+|SQL_DRIVER_HSTMT|Обрабатывается диспетчером драйверов.|  
+|SQL_DRIVER_NAME|"OdbcJt32. dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
-|SQL_DRIVER_VER|«4.00.*nnnn*"(*nnnn* Дата сборки)|  
+|SQL_DRIVER_VER|"4,00.*nnnn*" (*nnnn* указывает дату сборки)|  
 |SQL_DROP_ASSERTION|0|  
 |SQL_DROP_CHARACTER_SET|0|  
 |SQL_DROP_COLLATION|0|  
@@ -141,7 +141,7 @@ ms.locfileid: "67898811"
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|Несколько значений|  
-|SQL_ODBC_SAG_CLI_ CONFORMANCE|SQL_OSCC_COMPLIANT|  
+|СООТВЕТСТВИЕ SQL_ODBC_SAG_CLI_|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
 |SQL_ODBC_VER|Из диспетчера драйверов|  
 |SQL_OJ_CAPABILITIES|Несколько значений|  
@@ -155,12 +155,12 @@ ms.locfileid: "67898811"
 |SQL_SCHEMA_USAGE|0|  
 |SQL_SCROLL_OPTIONS|Несколько значений|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
-|SQL_SERVER_NAME|«ТЕКСТ»|  
-|SQL_SPECIAL_CHARACTERS|«~\`@# $% ^ & * _-+=\\} {"";:? / ><,.! " []&#124;"|  
+|SQL_SERVER_NAME|ПОЛНОТЕКСТОВЫМ|  
+|SQL_SPECIAL_CHARACTERS|"~\`@ # $% ^& * _-+ =\\} {" ";:?/><,.!" [] &#124; "|  
 |SQL_STRING_FUNCTIONS|Несколько значений|  
 |SQL_SUBQUERIES|Несколько значений|  
 |SQL_SYSTEM_FUNCTIONS|0|  
-|SQL_TABLE_TERM|«ТАБЛИЦА»|  
+|SQL_TABLE_TERM|Таблица|  
 |SQL_TIMEDATE_ADD_INTERVALS|0|  
 |SQL_TIMEDATE_DIFF_INTERVALS|0|  
 |SQL_TIMEDATE_FUNCTIONS|Несколько значений|  

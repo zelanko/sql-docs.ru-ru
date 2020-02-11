@@ -1,5 +1,5 @@
 ---
-title: Укажите интеллектуального анализа данных использование столбцов для модели (мастер интеллектуального анализа данных) | Документация Майкрософт
+title: Определение использования столбцов модели интеллектуального анализа данных (мастер интеллектуального анализа данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fb9f57e7918e7ef283255bf8ff947cc4493e9a87
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068361"
 ---
 # <a name="specify-mining-model-column-usage-data-mining-wizard"></a>Использование столбцов для модели (мастер интеллектуального анализа данных)
@@ -25,13 +25,13 @@ ms.locfileid: "66068361"
 > [!NOTE]  
 >  Данная страница появляется только в случае выбора пункта **На основе существующего куба** на странице мастера **Выбор метода определения**.  
   
- **Дополнительные сведения:** [Мастер интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Создание реляционной структуры](data-mining/create-a-relational-mining-structure.md)  
+ Дополнительные **сведения:** [Мастер интеллектуального анализа данных &#40;Analysis Services&#41;интеллектуального анализа данных ](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Создание реляционной структуры интеллектуального анализа](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Параметры  
  **Таблицы и столбцы**  
  Отображает имена таблиц и столбцов, ранее определенных в мастере.  
   
- **Ввод**  
+ **Входной**  
  Выберите для использования таблицы или столбца в качестве ввода в модель интеллектуального анализа данных.  
   
  **Прогнозируемый**  
@@ -43,9 +43,9 @@ ms.locfileid: "66068361"
  **Удалить вложенную таблицу**  
  Нажмите эту кнопку для удаления выбранной вложенной таблицы. Данная кнопка действует, только если выбрана вложенная таблица.  
   
-## <a name="see-also"></a>См. также  
- [Справка F1 мастера интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Столбцы уровня вариантов выберите &#40;мастер интеллектуального анализа данных&#41;](select-case-level-columns-data-mining-wizard.md)   
- [Определение содержимого и типа данных столбца &#40;мастер интеллектуального анализа данных&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
+## <a name="see-also"></a>См. также:  
+ [Справка F1 мастера интеллектуального анализа данных &#40;Analysis Services — интеллектуальный анализ данных&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Выбор столбцов уровня вариантов &#40;мастера интеллектуального анализа данных&#41;](select-case-level-columns-data-mining-wizard.md)   
+ [Укажите содержимое столбца и тип данных &#40;мастер интеллектуального анализа данных&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
   
   

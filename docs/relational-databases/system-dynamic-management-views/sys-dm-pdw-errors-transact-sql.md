@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_errors (Transact-SQL) | Документация Майкрософт
+title: sys. dm_pdw_errors (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,33 +13,33 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 06f905b4750801080c6b645601261bfe96f1ee0f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67899436"
 ---
-# <a name="sysdmpdwerrors-transact-sql"></a>sys.dm_pdw_errors (Transact-SQL)
+# <a name="sysdm_pdw_errors-transact-sql"></a>sys. dm_pdw_errors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Содержит сведения о все ошибки, обнаруженные во время выполнения запроса или запроса.  
+  Содержит сведения обо всех ошибках, обнаруженных при выполнении запроса или запроса.  
   
-|Имя столбца|Тип данных|Описание|Диапазон|  
+|Имя столбца|Тип данных|Description|Диапазонный индекс|  
 |-----------------|---------------|-----------------|-----------|  
-|error_id|**nvarchar(36)**|Ключ для этого представления.<br /><br /> Уникальный числовой идентификатор, связанный с ошибкой.|Уникальными среди всех ошибок запросов в системе.|  
-|источник|**Nvarchar(64)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
-|type|**nvarchar(4000)**|Тип произошедшей ошибки.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
-|create_time|**datetime**|Время возникновения ошибки.|Меньше или равна текущее время.|  
-|pwd_node_id|**int**|Идентификатор определенного узла, сложной, если таковые имеются. Дополнительные сведения о идентификаторы узлов, см. в разделе [sys.dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).||  
-|session_id|**nvarchar(32)**|Идентификатор сеанса, сложной, если таковые имеются. Дополнительные сведения о идентификаторов сеансов см. в разделе [sys.dm_pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).||  
-|request_id|**nvarchar(32)**|Идентификатор запроса сложной, если таковые имеются. Дополнительные сведения о идентификаторов запросов, см. в разделе [sys.dm_pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).||  
-|spid|**int**|Идентификатор SPID сеанса SQL Server, сложной, если таковые имеются.||  
+|error_id|**nvarchar (36)**|Ключ для этого представления.<br /><br /> Уникальный числовой идентификатор, связанный с ошибкой.|Уникальные для всех ошибок запросов в системе.|  
+|источник|**nvarchar (64)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
+|type|**nvarchar (4000)**|Тип произошедшей ошибки.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
+|create_time|**datetime**|Время возникновения ошибки.|Меньше или равно текущему времени.|  
+|pwd_node_id|**int**|Идентификатор конкретного узла, если он есть. Дополнительные сведения об идентификаторах узлов см. в разделе [sys. dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).||  
+|session_id|**nvarchar (32)**|Идентификатор вовлеченного сеанса, если таковой имеется. Дополнительные сведения об идентификаторах сеансов см. в разделе [sys. dm_pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).||  
+|request_id|**nvarchar (32)**|Идентификатор вовлеченного запроса, если он есть. Дополнительные сведения о кодах запросов см. в разделе [sys. dm_pdw_exec_requests &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).||  
+|spid|**int**|SPID связанного SQL Server сеанса, если таковой имеется.||  
 |thread_id|**int**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
-|details|**nvarchar(4000)**|Содержит полное текстовое описание ошибки.||  
+|подробности|**nvarchar (4000)**|Содержит полное описание ошибки.||  
   
- Сведения о максимальное число строк, сохраняемых в этом представлении см. в разделе метаданных в [ограничения емкости](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) раздела.  
+ Сведения о максимальном объеме строк, хранящихся в этом представлении, см. в разделе метаданные статьи [ограничения емкости](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .  
   
-## <a name="see-also"></a>См. также  
- [Хранилище данных SQL и параллельные хранилища данных динамические административные представления &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+## <a name="see-also"></a>См. также:  
+ [Динамические административные представления хранилища данных SQL и параллельного хранилища данных &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

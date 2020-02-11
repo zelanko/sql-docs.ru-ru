@@ -15,23 +15,23 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e3ba4d9ee2e0b92617c2d2bcadae3bf87c8b5414
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108640"
 ---
 # <a name="upgrade-a-report-server-database"></a>Обновление базы данных сервера отчетов
   База данных сервера отчетов обеспечивает хранение одного или нескольких экземпляров сервера отчетов. Схема базы данных сервера отчетов с каждым новым выпуском служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]может меняться, поэтому версия базы данных должна совпадать с версией используемого экземпляра сервера отчетов. В большинстве случаев обновление базы данных сервера отчетов может быть выполнено автоматически, без необходимости выполнения каких-либо действий со стороны пользователя.  
   
- **Собственный режим**: В [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] собственный режим сервера отчетов фактически состоит из двух баз данных с именами по умолчанию «ReportServer и ReportServerTempDB».  
+ **Основной режим:** В [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] собственном режиме база данных сервера отчетов на самом деле состоит из двух баз данных с именами по умолчанию ReportServer и reportservertempdb.  
   
- **Режим интеграции с SharePoint:** В [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] режиме интеграции с SharePoint в базе данных сервера отчетов является фактически является коллекцией баз данных, которая создается для каждого экземпляра [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] приложения службы.  
+ **Режим интеграции с SharePoint:** В [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] режиме интеграции с SharePoint база данных сервера отчетов фактически является коллекцией баз данных, создаваемых для каждого экземпляра [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] приложения службы.  
   
 ## <a name="ways-to-upgrade-a-native-mode-report-server-database"></a>Способы обновления базы данных сервера отчетов в собственном режиме  
  В следующем списке приведены условия, при соблюдении которых происходит обновление базы данных сервера отчетов.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Программа установки обновит одиночный экземпляр сервера отчетов. Схема базы данных сервера отчетов будет автоматически обновлена, после того как служба запустится и сервер отчетов определит, что версия схемы базы данных не совпадает с версией сервера.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Программа установки обновляет один экземпляр сервера отчетов. Схема базы данных сервера отчетов будет автоматически обновлена, после того как служба запустится и сервер отчетов определит, что версия схемы базы данных не совпадает с версией сервера.  
   
      При запуске службы сервер отчетов проверяет версию схемы базы данных, чтобы определить, соответствует ли она версии сервера. Если у схемы базы данных более старая версия, то она будет автоматически обновлена до версии, необходимой серверу отчетов. Функция автоматического обновления особенно полезна при восстановлении из резервной копии или подключении старой базы данных сервера отчетов. В файл журнала трассировки сервера отчетов выводится сообщение об обновлении версии схемы базы данных.  
   
@@ -64,11 +64,11 @@ ms.locfileid: "66108640"
 #### <a name="to-upgrade-a-native-mode-database-with-scripts"></a>Обновление базы данных в собственном режиме с помощью скриптов  
  Для обновления базы данных сервера отчетов можно использовать скрипты WMI. Дополнительные сведения см. в статье [Метод GenerateDatabaseUpgradeScript (WMI MSReportServer_ConfigurationSetting)](../wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Создание базы данных сервера отчетов (диспетчер конфигурации служб SSRS)](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
- [Мастер изменения базы данных &#40;собственный режим служб SSRS&#41;](../../sql-server/install/change-database-wizard-ssrs-native-mode.md)   
- [Upgrade and Migrate Reporting Services](upgrade-and-migrate-reporting-services.md)   
- [Перенос установки служб Reporting Services (собственный режим)](migrate-a-reporting-services-installation-native-mode.md)  
+ [Мастер изменения базы данных &#40;&#41;служб SSRS в собственном режиме](../../sql-server/install/change-database-wizard-ssrs-native-mode.md)   
+ [Обновление и миграция Reporting Services](upgrade-and-migrate-reporting-services.md)   
+ [Миграция Reporting Services установки &#40;основном режиме&#41;](migrate-a-reporting-services-installation-native-mode.md)  
   
   

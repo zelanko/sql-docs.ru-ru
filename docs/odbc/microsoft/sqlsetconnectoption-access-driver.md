@@ -14,28 +14,28 @@ ms.assetid: 58399bc4-d0b1-4eaa-a474-c92b2d5855ea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bea124a78e2a180180c59de3577fe1db7637e110
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67897788"
 ---
 # <a name="sqlsetconnectoption-access-driver"></a>SQLSetConnectOption (драйвер для Access)
 > [!NOTE]  
->  В этом разделе сведения конкретного драйвера доступа. Общие сведения об этой функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  В этом разделе содержатся сведения, относящиеся к драйверу. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
-|fOption|Комментарий|  
+|Параметром fOption|Комментарий|  
 |-------------|-------------|  
-|SQL_ACCESS_MODE|Можно задать SQL_ACCESS_MODE fOption SQL_MODE_READ_ONLY или SQL_MODE_READ_WRITE. Тем не менее драйвер не запрещает обновление, если задано значение SQL_ACCESS_MODE SQL_MODE_READ_ONLY.|  
-|SQL_AUTOCOMMIT|Когда используется драйвером Microsoft Access, параметр SQL_AUTOCOMMIT может задаваться к SQL_AUTOCOMMIT_OFF, либо параметром SQL_AUTOCOMMIT_ON, поскольку драйвером Microsoft Access поддерживает транзакции [1].|  
-|SQL_CURRENT_QUALIFIER|Поддерживается.|  
+|SQL_ACCESS_MODE|SQL_ACCESS_MODE параметром fOption можно задать как SQL_MODE_READ_ONLY, так и SQL_MODE_READ_WRITE. Однако драйвер не запрещает обновление, если для SQL_ACCESS_MODE установлено значение SQL_MODE_READ_ONLY.|  
+|SQL_AUTOCOMMIT|При использовании драйвера Microsoft Access параметру SQL_AUTOCOMMIT может быть присвоено значение SQL_AUTOCOMMIT_ON или SQL_AUTOCOMMIT_OFF, поскольку драйвер Microsoft Access поддерживает транзакции [1].|  
+|SQL_CURRENT_QUALIFIER| Поддерживается.|  
 |SQL_LOGIN_TIMEOUT|Не поддерживается.|  
-|SQL_OPT_TRACE|Поддерживается.|  
-|SQL_OPT_TRACEFILE|Поддерживается.|  
+|SQL_OPT_TRACE| Поддерживается.|  
+|SQL_OPT_TRACEFILE| Поддерживается.|  
 |SQL_PACKET_SIZE|Не поддерживается.|  
 |SQL_QUIET_MODE|Не поддерживается.|  
 |SQL_TRANSLATE_DLL|Не поддерживается.|  
 |SQL_TRANSLATION_OPTION|Не поддерживается.|  
-|SQL_TXN_ISOLATION|SQL_TXN_ISOLATION всегда является SQL_TXN_READ_COMMITTED.|  
+|SQL_TXN_ISOLATION|SQL_TXN_ISOLATION всегда SQL_TXN_READ_COMMITTED.|  
   
- [1] атомарные транзакции не поддерживается драйвером Microsoft Access. Существует при фиксации транзакции с помощью драйвера Microsoft Access, конечное задержка между временем, транзакция фиксируется и времени, значения записываются на диск. Эта задержка определяется задержка, встроенные в ядро Microsoft Jet. Время ожидания страницы не будет меньше, чем минимальное значение, даже если параметр PageTimeout имеет значение ниже этого значения. Таким образом, нет никакой гарантии, что зафиксированные данные стабильна, так как во время задержки могут вноситься изменения.
+ [1] неатомарные транзакции не поддерживаются драйвером Microsoft Access. При фиксации транзакции с помощью драйвера Microsoft Access существует конечная задержка между временем фиксации транзакции и записью значений на диск. Эта задержка определяется задержкой, присущей ядру Microsoft Jet. Время ожидания страницы не будет меньше минимального значения, даже если параметр Пажетимеаут задан ниже этого значения. В результате нет никакой гарантии, что зафиксированные данные будут стабильными, так как изменения могут быть сделаны во время задержки.

@@ -1,5 +1,5 @@
 ---
-title: Управление службами разделы руководства, посвященные (диспетчер конфигурации SQL Server) | Документация Майкрософт
+title: Инструкции по управлению службами (диспетчер конфигурации SQL Server) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: e376b59404b6666a142c66cb96265fd66076ea3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66064641"
 ---
 # <a name="managing-services-how-to-topics-sql-server-configuration-manager"></a>Инструкции по управлению службами (диспетчер конфигурации SQL Server)
@@ -24,17 +24,17 @@ ms.locfileid: "66064641"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
--   [Подключение к другому компьютеру (диспетчер конфигурации SQL Server)](configure-windows/scm-services-connect-to-another-computer.md)  
+-   [Подключение к другому компьютеру &#40;диспетчер конфигурации SQL Server&#41;](configure-windows/scm-services-connect-to-another-computer.md)  
   
--   [Настройка автоматического запуска экземпляра SQL Server (диспетчер конфигурации SQL Server)](configure-windows/scm-services-set-an-instance-to-start-automatically.md)  
+-   [Задайте для экземпляра SQL Server автоматический запуск &#40;диспетчер конфигурации SQL Server&#41;](configure-windows/scm-services-set-an-instance-to-start-automatically.md)  
   
--   [Отключение автоматического запуска экземпляра SQL Server (диспетчер конфигурации SQL Server)](configure-windows/scm-services-prevent-automatic-startup-of-an-instance.md)  
+-   [Предотвращение автоматического запуска экземпляра SQL Server &#40;диспетчер конфигурации SQL Server&#41;](configure-windows/scm-services-prevent-automatic-startup-of-an-instance.md)  
   
--   [Изменение стартовой учетной записи службы для SQL Server (диспетчер конфигурации SQL Server)](configure-windows/scm-services-change-the-service-startup-account.md)  
+-   [Измените стартовую учетную запись службы для SQL Server &#40;диспетчер конфигурации SQL Server&#41;](configure-windows/scm-services-change-the-service-startup-account.md)  
   
--   [Настройка параметров запуска сервера (диспетчер конфигурации SQL Server)](configure-windows/scm-services-configure-server-startup-options.md)  
+-   [Настройка параметров запуска сервера &#40;диспетчер конфигурации SQL Server&#41;](configure-windows/scm-services-configure-server-startup-options.md)  
   
--   [Изменение пароля учетных записей, используемых SQL Server (диспетчер конфигурации SQL Server)](configure-windows/scm-services-change-the-password-of-the-accounts-used.md)  
+-   [Изменение пароля учетных записей, используемых SQL Server &#40;диспетчер конфигурации SQL Server&#41;](configure-windows/scm-services-change-the-password-of-the-accounts-used.md)  
   
 -   [Настройка журналов ошибок SQL Server](configure-windows/scm-services-configure-sql-server-error-logs.md)  
   

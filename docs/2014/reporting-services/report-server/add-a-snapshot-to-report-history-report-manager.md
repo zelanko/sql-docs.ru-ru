@@ -16,10 +16,10 @@ helpviewer_keywords:
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 00b1caa2f68da0a3a38d98cf35f959f83257b99e
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67413119"
 ---
 # <a name="add-a-snapshot-to-report-history-report-manager"></a>добавить моментальный снимок к журналу отчета (диспетчер отчетов)
@@ -32,12 +32,12 @@ ms.locfileid: "67413119"
 
 1. В диспетчере отчетов перейдите на страницу **Оглавление** , наведите курсор на элемент, журнал которого необходимо просмотреть, и щелкните стрелку раскрывающегося списка.
   
-2. В раскрывающемся меню выберите **Просмотр журнала отчета**.  
+2. В раскрывающемся меню выберите **Просмотреть журнал отчета**.  
   
 3. Выберите **Создать моментальный снимок**. Новый моментальный снимок будет создан в столбце **Время запуска** .  
   
     > [!NOTE]
-    > Для данной задачи администратор должен выбрать **Разрешить создание журнала вручную**. Дополнительные сведения см. в разделе [Ограничение размеров журнала отчета (диспетчер отчетов)](../reports/limit-report-history-report-manager.md).
+    > Для данной задачи администратор должен выбрать **Разрешить создание журнала вручную**. Дополнительные сведения см. в разделе [Limit Report History &#40;Report Manager&#41;](../reports/limit-report-history-report-manager.md).
 
 4. Нажмите кнопку **Применить**.
 
@@ -71,10 +71,10 @@ ms.locfileid: "67413119"
   
 5. Нажмите кнопку **Применить**.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Настройка свойств выполнения для отчета (диспетчер отчетов)](../reports/configure-execution-properties-for-a-report-report-manager.md)
-- [Открытие и закрытие отчетов (диспетчер отчетов)](../reports/open-and-close-a-report-report-manager.md)
+- [Настройка свойств выполнения для диспетчер отчетов &#40;отчетов&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)
+- [Открытие и закрытие диспетчер отчетов &#40;отчетов&#41;](../reports/open-and-close-a-report-report-manager.md)
 - [Ограничение размеров журнала отчета (диспетчер отчетов)](../reports/limit-report-history-report-manager.md)
 - [Расписания](../subscriptions/schedules.md)   
 - [Диспетчер отчетов (службы SSRS в собственном режиме)](../report-manager-ssrs-native-mode.md)

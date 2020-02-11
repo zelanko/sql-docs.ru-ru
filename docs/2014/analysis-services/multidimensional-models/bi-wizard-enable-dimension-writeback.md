@@ -1,5 +1,5 @@
 ---
-title: Включение обратной записи в измерение | Документация Майкрософт
+title: Включить обратную запись в измерение | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6051f62caac2878b689a50e5773b047cb8df7afe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076851"
 ---
 # <a name="enable-dimension-writeback"></a>Разрешение обратной записи в измерение
@@ -40,7 +40,7 @@ ms.locfileid: "66076851"
 ## <a name="setting-dimension-writeback-capability"></a>Установка возможности обратной записи в измерение  
  На второй странице мастера — **Включение обратной записи в измерение** — непосредственно задается параметр **Включить обратную запись в измерение** . При выборе этого параметра свойство `WriteEnabled` измерения автоматически устанавливается равным `True`. При снятии этого флажка это свойство автоматически устанавливается равным `False`.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  при создании нового элемента необходимо включить в измерение каждый атрибут. Нельзя вставить элемент, не указав значение ключевого атрибута измерения. Следовательно, на создание элементов оказывают влияние любые ограничения (такие как ключевые значения, отличные от NULL), установленные в таблице измерений; Необходимо также учитывать столбцы, дополнительно задаваемые такими свойствами измерения, как `CustomRollupColumn`, `CustomRollupPropertiesColumn` или `UnaryOperatorColumn`.  
   
 > [!WARNING]  
@@ -50,9 +50,9 @@ ms.locfileid: "66076851"
 >   
 >  `"MultipleActiveResultSets=True"`  
 >   
->  Дополнительные сведения см. в разделе [Использование множественных активных результирующих наборов (MARS)](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
+>  Дополнительные сведения см. [в разделе Использование нескольких активных результирующих наборов &#40;режиме MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Измерения, доступные для записи](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)  
   
   

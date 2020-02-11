@@ -1,5 +1,5 @@
 ---
-title: Редактор источника «CDC» (страница "столбцы") | Документация Майкрософт
+title: Редактор источника «CDC» (страница «Столбцы») | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 980b9cf22e2c50cd1de3eb90a06e6496c01cc093
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061028"
 ---
 # <a name="cdc-source-editor-columns-page"></a>Редактор источника «CDC» (страница «Столбцы»)
@@ -43,8 +43,8 @@ ms.locfileid: "66061028"
  **Выходной столбец**  
  Введите уникальное имя для каждого выходного столбца. По умолчанию используется имя выбранного внешнего (исходного) столбца, но можно выбрать любое уникальное описательное имя. Введенное имя отображается в конструкторе служб SSIS.  
   
-## <a name="see-also"></a>См. также  
- [Редактор источника "CDC" (страница "Диспетчер соединений")](../../2014/integration-services/cdc-source-editor-connection-manager-page.md)   
- [Редактор источника "CDC" (страница "Вывод ошибок")](../../2014/integration-services/cdc-source-editor-error-output-page.md)  
+## <a name="see-also"></a>См. также:  
+ [Редактор источника "CDC" &#40;страница "Диспетчер соединений"&#41;](../../2014/integration-services/cdc-source-editor-connection-manager-page.md)   
+ [Редактор источника "CDC" &#40;страница "вывод ошибок"&#41;](../../2014/integration-services/cdc-source-editor-error-output-page.md)  
   
   

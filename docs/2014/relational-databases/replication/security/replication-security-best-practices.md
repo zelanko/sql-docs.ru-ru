@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7db85ce6d63cd6c3eb458434357fa5a2d8127dec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63268664"
 ---
 # <a name="replication-security-best-practices"></a>Рекомендации по защите репликации
@@ -33,7 +33,7 @@ ms.locfileid: "63268664"
   
     -   [Работа с профилями агента репликации](../agents/replication-agent-profiles.md)  
   
-    -   [Просмотр и изменение параметров командной строки агента репликации (SQL Server Management Studio)](../agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
+    -   [Просмотр и изменение параметров командной строки агента репликации (среда SQL Server Management Studio)](../agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
     -   [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md)  
   
@@ -67,12 +67,12 @@ ms.locfileid: "63268664"
   
     -   В ситуациях, требующих проверки подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , часто не предоставляется доступ к хранилищу моментального снимка UNC (например, доступ может быть заблокирован брандмауэром). В таком случае моментальный снимок может быть передан подписчикам при помощи протокола передачи данных (FTP). Дополнительные сведения см. в статье [Передача моментальных снимков через FTP](../transfer-snapshots-through-ftp.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Включение шифрования соединений в ядре СУБД (диспетчер конфигурации SQL Server)](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Репликация через Интернет](../replication-over-the-internet.md)   
  [Защита подписчика](secure-the-subscriber.md)   
  [Организация безопасности распространителя](secure-the-distributor.md)   
  [Организация безопасности издателя](secure-the-publisher.md)   
- [Безопасность репликации SQL Server](view-and-modify-replication-security-settings.md)  
+ [Безопасность Репликация SQL Server](view-and-modify-replication-security-settings.md)  
   
   

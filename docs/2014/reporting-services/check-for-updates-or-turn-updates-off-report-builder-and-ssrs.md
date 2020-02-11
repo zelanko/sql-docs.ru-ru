@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 27942be9c32d4537f729adbd69df1c64a9c9ff6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109855"
 ---
 # <a name="check-for-updates-or-turn-updates-off-report-builder-and-ssrs"></a>Проверка наличия обновлений или отключение обновлений (построитель отчетов и службы SSRS)
@@ -24,22 +24,22 @@ ms.locfileid: "66109855"
   
 ### <a name="to-turn-on-and-off-report-part-updates"></a>Включение и выключение обновлений элементов отчетов  
   
-1.  Нажмите кнопку «Построитель отчетов» и нажмите кнопку **параметры**.  
+1.  Нажмите кнопку построитель отчетов и выберите **Параметры**.  
   
-2.  В **параметры** диалоговом окне **ресурсы** установите или снимите **Показать обновления элементов отчетов в моих отчетах** "флажок".  
+2.  В диалоговом окне **Параметры** на вкладке **ресурсы** установите или снимите флажок **Показывать обновления для элементов отчета в папках "Мои отчеты** ".  
   
 > [!NOTE]  
 >  Это пользовательский параметр. Он будет отключен для всех отчетов, открываемых пользователем.  
   
 ### <a name="to-check-for-updates"></a>Проверка обновлений  
   
--   Щелкните правой кнопкой мыши в области конструктора за пределами отчета или в тексте отчета, а затем нажмите кнопку **проверять наличие обновлений**.  
+-   Щелкните правой кнопкой мыши область конструктора за пределами отчета или в тексте отчета и выберите пункт **проверить наличие обновлений**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Элементы отчета (построитель отчетов и службы SSRS)](report-parts-report-builder-and-ssrs.md)   
- [Опубликовать и переиздать элементы отчета &#40;построитель отчетов и службы SSRS&#41;](report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)   
- [Просмотр элементов отчета и назначение папки по умолчанию &#40;построитель отчетов и службы SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)   
- [Устранение неполадок в элементах отчета &#40;построитель отчетов и службы SSRS&#41;](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   
+ [Публикация и повторная публикация элементов отчетов &#40;построитель отчетов и SSRS&#41;](report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)   
+ [Поиск элементов отчета и задание папки по умолчанию &#40;построитель отчетов и SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)   
+ [Устранение неполадок элементов отчетов &#40;построитель отчетов и SSRS&#41;](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   
  [Элементы отчета и наборы данных в построителе отчетов](report-data/report-parts-and-datasets-in-report-builder.md)  
   
   

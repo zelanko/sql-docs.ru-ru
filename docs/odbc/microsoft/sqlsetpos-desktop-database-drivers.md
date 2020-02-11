@@ -1,5 +1,5 @@
 ---
-title: SQLSetPos (драйверы для настольных систем баз данных) | Документация Майкрософт
+title: SQLSetPos (драйверы базы данных для настольных систем) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,15 +13,15 @@ ms.assetid: 8ef027ec-8512-48fe-8fe2-2ff7cd81e331
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d35a282acf3b672113ec71b534b4087aa3549285
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905466"
 ---
 # <a name="sqlsetpos-desktop-database-drivers"></a>SQLSetPos (драйверы для баз данных на настольном компьютере)
-Семантика модель массовой для **SQLSetPos** вызывает с *irow* поддерживаются аргумента равно 0.  
+Поддерживается семантика с массовыми моделями для вызовов **SQLSetPos** с аргументом *IRow* , равным 0.  
   
- Обеспечивается поддержка SQL_LOCK_NO_CHANGE *fLock*. SQL_LOCK_EXCLUSIVE и SQL_LOCK_UNLOCK не поддерживаются.  
+ SQL_LOCK_NO_CHANGE поддерживается для *флокк*. SQL_LOCK_EXCLUSIVE и SQL_LOCK_UNLOCK не поддерживаются.  
   
- **SQLSetPos** поддерживает обновляемые соединения. (Дополнительные сведения см. в разделе *Microsoft Jet Database Engine Programmer's Guide*.)
+ **SQLSetPos** поддерживает обновляемые объединения. (Дополнительные сведения см. в *справочнике программиста по Microsoft Jet ядро СУБД*.)

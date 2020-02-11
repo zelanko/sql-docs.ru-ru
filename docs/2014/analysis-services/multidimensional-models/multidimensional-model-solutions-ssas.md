@@ -1,5 +1,5 @@
 ---
-title: Решения многомерной модели (службы SSAS) | Документация Майкрософт
+title: Решения многомерных моделей (SSAS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 703080418566b761741575c69fb6be6a7572988e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073567"
 ---
 # <a name="multidimensional-model-solutions-ssas"></a>Решения многомерной модели (службы SSAS)
@@ -25,10 +25,10 @@ ms.locfileid: "66073567"
 ## <a name="in-this-section"></a>в этом разделе  
  Следующие разделы представляют собой справочник по проектированию объектов в многомерных базах данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
- [Базы данных многомерных моделей (службы SSAS)](multidimensional-model-databases-ssas.md)  
+ [Базы данных многомерной модели &#40;SSAS&#41;](multidimensional-model-databases-ssas.md)  
  Содержит инструкции по определению базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
- [Источники данных, поддерживаемые &#40;многомерные службы SSAS&#41;](supported-data-sources-ssas-multidimensional.md)  
+ [Поддерживаемые источники данных &#40;многомерные&#41;SSAS](supported-data-sources-ssas-multidimensional.md)  
  Содержит инструкции по определению объектов источников данных в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
  [Представления источников данных в многомерных моделях](data-source-views-in-multidimensional-models.md)  
@@ -40,10 +40,10 @@ ms.locfileid: "66073567"
  [Кубы в многомерных моделях](cubes-in-multidimensional-models.md)  
  Содержит инструкции по определению объектов кубов в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
- [Мастер формирования схем (службы Analysis Services)](schema-generation-wizard-analysis-services.md)  
+ [Мастер формирования схем &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)  
  Содержит инструкции по конструированию многомерных объектов баз данных без использования существующих реляционных схем.  
   
  [Модули персонализации служб Analysis Services](extending-olap/analysis-services-personalization-extensions.md)  
- Содержит описание проектирования модулей персонализации для служб [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+ Описывает, как проектировать расширения персонализации для [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
   

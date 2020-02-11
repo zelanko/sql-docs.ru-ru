@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d478fa9203988d043212e4187792d816a69c0402
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62724794"
 ---
 # <a name="tracing-and-replaying-events"></a>Трассировка и воспроизведение событий
@@ -51,7 +51,7 @@ ms.locfileid: "62724794"
   
 -   воспроизвести файлы и таблицы трассировки.  
   
- Данные трассировки из `Trace` и `Replay` можно использовать объекты SMO-приложении или исследовать их вручную с помощью [SQL Server Profiler](../../../tools/sql-server-profiler/sql-server-profiler.md). Данные трассировки также совместимы с хранимыми процедурами [SQL Trace](../../sql-trace/sql-trace.md) , которые также обеспечивают возможности трассировки.  
+ Данные трассировки из объектов `Trace` и `Replay` могут использоваться приложением SMO или могут быть проверены вручную с помощью [SQL Server Profiler](../../../tools/sql-server-profiler/sql-server-profiler.md). Данные трассировки также совместимы с хранимыми процедурами [SQL Trace](../../sql-trace/sql-trace.md) , которые также обеспечивают возможности трассировки.  
   
  Объекты трассировки SMO находятся в пространстве имен <xref:Microsoft.SqlServer.Management.Trace>, для использования которого необходима ссылка на файл Microsoft.SQLServer.ConnectionInfo.dll.  
   

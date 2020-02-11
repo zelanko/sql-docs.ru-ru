@@ -13,43 +13,43 @@ ms.assetid: 5f25e20b-a4ef-42da-aeb6-00e0510fb1cc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f29be5e03a6cc9c1c91809db2b8ec7c686e90f11
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67898630"
 ---
 # <a name="sqlgettypeinfo-visual-foxpro-odbc-driver"></a>SQLGetTypeInfo (драйвер ODBC для Visual FoxPro)
 > [!NOTE]  
->  Этот раздел содержит сведения Visual FoxPro ODBC-драйвером. Общие сведения об этой функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  В этом разделе содержатся сведения, относящиеся к драйверу ODBC для Visual FoxPro. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Поддержка: Полное  
+ Поддержка: полная  
   
- Соответствие API ODBC: уровне 1  
+ Соответствие API ODBC: уровень 1  
   
- Возвращает сведения о типах данных, поддерживаемых источником данных. Драйвер возвращает сведения в результирующем наборе SQL. В следующей таблице перечислены типы данных ODBC и соответствующие типы данных Visual FoxPro.  
+ Возвращает сведения о типах данных, поддерживаемых источником данных. Драйвер возвращает сведения в результирующем наборе SQL. В следующей таблице перечислены типы данных ODBC и соответствующий тип данных Visual FoxPro.  
   
 |Тип ODBC|Тип Visual FoxPro|  
 |---------------|------------------------|  
-|SQL_BIGINT|Не поддерживается. Отсутствует тип Visual FoxPro 64-разрядной.|  
+|SQL_BIGINT|Не поддерживается. Отсутствует 64-разрядный тип Visual FoxPro.|  
 |SQL_BIT|Логические|  
-|SQL_CHAR|Символ|  
-|SQL_DATE|Date|  
-|SQL_DECIMAL|Numeric|  
+|SQL_CHAR|Character|  
+|SQL_DATE|Дата|  
+|SQL_DECIMAL|Числовой|  
 |SQL_DOUBLE|Double|  
 |SQL_FLOAT|Double|  
-|SQL_INTEGER|Целочисленный|  
-|SQL_LONGVARBINARY|MEMO (двоичный)|  
-|SQL_LONGVARCHAR|MEMO|  
-|SQL_NUMERIC|Числовые *, валюты, в число с плавающей запятой|  
+|SQL_INTEGER|Целое число|  
+|SQL_LONGVARBINARY|МЕМО (двоичный)|  
+|SQL_LONGVARCHAR|Получена|  
+|SQL_NUMERIC|Числовой *, денежный, float|  
 |SQL_REAL|Double|  
-|SQL_SMALLINT|Целочисленный|  
-|SQL_TIME|Не поддерживается. Имеется не Visual FoxPro *время* типа.|  
+|SQL_SMALLINT|Целое число|  
+|SQL_TIME|Не поддерживается. Тип *времени* Visual FoxPro отсутствует.|  
 |SQL_TIMESTAMP|DateTime|  
-|SQL_TINYINT|Целочисленный|  
-|SQL_VARBINARY|MEMO (двоичный) *, общие|  
-|SQL_VARCHAR|Символ|  
+|SQL_TINYINT|Целое число|  
+|SQL_VARBINARY|MEMO (двоичная) *, общие|  
+|SQL_VARCHAR|Character|  
   
- \* Тип по умолчанию  
+ * Тип по умолчанию  
   
- Дополнительные сведения о типах данных Visual FoxPro, см. в разделе [CREATE TABLE](../../odbc/microsoft/create-table-sql-command.md). Дополнительные сведения об этой функции см. в разделе [SQLGetTypeInfo](../../odbc/reference/syntax/sqlgettypeinfo-function.md) в *Справочник по программированию ODBC*.
+ Дополнительные сведения о типах данных Visual FoxPro см. в разделе [CREATE TABLE](../../odbc/microsoft/create-table-sql-command.md). Дополнительные сведения об этой функции см. в разделе [SQLGetTypeInfo](../../odbc/reference/syntax/sqlgettypeinfo-function.md) в *справочнике программиста по ODBC*.

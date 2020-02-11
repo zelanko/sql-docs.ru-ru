@@ -13,36 +13,36 @@ ms.assetid: 76b813e3-c7dc-4bb2-a710-d2aa9dcfdc36
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a026922cb98fdb520c9eeab223c8b34a231a179e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905330"
 ---
 # <a name="sqlsetstmtoption-visual-foxpro-odbc-driver"></a>SQLSetStmtOption (драйвер ODBC для Visual FoxPro)
 > [!NOTE]  
->  Этот раздел содержит сведения Visual FoxPro ODBC-драйвером. Общие сведения об этой функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  В этом разделе содержатся сведения, относящиеся к драйверу ODBC для Visual FoxPro. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Поддержка: Полное  
+ Поддержка: полная  
   
- Соответствие API ODBC: уровне 1  
+ Соответствие API ODBC: уровень 1  
   
- Задает параметры, связанные с дескриптор инструкции *hstmt*.  
+ Задает параметры, связанные с маркером инструкции, *хстмт*.  
   
-|*fOption*|Допустимые значения|Комментарии|  
+|*Параметром fOption*|Допустимые значения|Комментарии|  
 |---------------|--------------------|--------------|  
-|SQL_ASYNC_ENABLE|SQL_ASYNC_ENABLE_OFF|При попытке задать это *fOption*, драйвер возвращает ошибку: «Драйвер не поддерживает». Visual FoxPro не поддерживает асинхронное выполнение.|  
-|SQL_BIND_TYPE|Значение sql_bind_bind_by_column или 32-разрядное значение, обозначающее длины структуры или экземпляра буфера, в какой результат будет привязан столбцы.||  
-|SQL_CONCURRENCY|SQL_CONCUR_READ_ONLY<br /><br /> SQL_CONCUR_LOCK<br /><br /> SQL_CONCUR_VALUES|Драйвер не допускает SQL_CONCUR_ROWVER, поскольку Visual FoxPro не поддерживает управление версиями строк, зависимости от меток времени.|  
-|SQL_CURSOR_TYPE|SQL_CURSOR_FORWARD_ONLY<br /><br /> SQL_CURSOR_STATIC|Драйвер не поддерживает SQL_CURSOR_KEYSET_DRIVEN или SQL_CURSOR_DYNAMIC; см. в разделе [SQLSetScrollOptions](../../odbc/microsoft/sqlsetscrolloptions-visual-foxpro-odbc-driver.md) Дополнительные сведения.|  
-|SQL_KEYSET_SIZE|Ошибка: «Драйвер не поддерживает»|Visual FoxPro не поддерживает модель курсора keyset.|  
-|SQL_MAX_LENGTH|0|При попытке задать это *fOption* значение, драйвер возвращает ошибку «Драйвер не поддерживает».|  
-|SQL_MAX_ROWS|0|При попытке задать это *fOption* значение, драйвер возвращает ошибку «Драйвер не поддерживает».|  
+|SQL_ASYNC_ENABLE|SQL_ASYNC_ENABLE_OFF|При попытке установить этот *параметром fOption*драйвер возвращает ошибку: "драйвер не поддерживается". Visual FoxPro не поддерживает асинхронное выполнение.|  
+|SQL_BIND_TYPE|SQL_BIND_BY_COLUMN или 32-разрядное значение, указывающее длину структуры или экземпляра буфера, к которому будут привязаны результирующие столбцы.||  
+|SQL_CONCURRENCY|SQL_CONCUR_READ_ONLY<br /><br /> SQL_CONCUR_LOCK<br /><br /> SQL_CONCUR_VALUES|Драйвер не допускает SQL_CONCUR_ROWVER, так как Visual FoxPro не поддерживает управление версиями строк на основе отметок времени.|  
+|SQL_CURSOR_TYPE|SQL_CURSOR_FORWARD_ONLY<br /><br /> SQL_CURSOR_STATIC|Драйвер не допускает SQL_CURSOR_KEYSET_DRIVEN или SQL_CURSOR_DYNAMIC; Дополнительные сведения см. в разделе [SQLSetScrollOptions](../../odbc/microsoft/sqlsetscrolloptions-visual-foxpro-odbc-driver.md) .|  
+|SQL_KEYSET_SIZE|Ошибка: "драйвер не поддерживается"|Visual FoxPro не поддерживает модель курсора набора ключей.|  
+|SQL_MAX_LENGTH|0|При попытке установить это значение *параметром fOption* драйвер возвращает ошибку "драйвер не поддерживается".|  
+|SQL_MAX_ROWS|0|При попытке установить это значение *параметром fOption* драйвер возвращает ошибку "драйвер не поддерживается".|  
 |SQL_NOSCAN|SQL_NOSCAN_OFF||  
-|SQL_QUERY_TIMEOUT|0|При попытке задать это *fOption* значение, драйвер возвращает ошибку «Драйвер не поддерживает».|  
-|SQL_RETRIEVE_DATA|SQL_RD_ON SQL_RD_OFF||  
-|SQL_ROWSET_SIZE|1 для 4 294 967 296||  
-|SQL_SIMULATE_CURSOR|Ошибка: «Драйвер не поддерживает»||  
+|SQL_QUERY_TIMEOUT|0|При попытке установить это значение *параметром fOption* драйвер возвращает ошибку "драйвер не поддерживается".|  
+|SQL_RETRIEVE_DATA|SQL_RD_ON, SQL_RD_OFF||  
+|SQL_ROWSET_SIZE|от 1 до 4 294 967 296||  
+|SQL_SIMULATE_CURSOR|Ошибка: "драйвер не поддерживается"||  
 |SQL_USE_BOOKMARKS|SQL_UB_OFF<br /><br /> SQL_UB_ON||  
   
- Дополнительные сведения см. в разделе [SQLSetStmtOption](../../odbc/reference/syntax/sqlsetstmtoption-function.md) в *Справочник по программированию ODBC*.
+ Дополнительные сведения см. в разделе [SQLSetStmtOption](../../odbc/reference/syntax/sqlsetstmtoption-function.md) в *справочнике программиста по ODBC*.

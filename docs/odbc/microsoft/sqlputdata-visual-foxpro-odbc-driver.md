@@ -13,20 +13,20 @@ ms.assetid: 8c79e9ba-afa0-4e20-9c53-371cc42b4a97
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ef2ca2e365eb8f65fca8cd37a6668e32dab2c209
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67895945"
 ---
 # <a name="sqlputdata-visual-foxpro-odbc-driver"></a>SQLPutData (драйвер ODBC для Visual FoxPro)
 > [!NOTE]  
->  Этот раздел содержит сведения Visual FoxPro ODBC-драйвером. Общие сведения об этой функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  В этом разделе содержатся сведения, относящиеся к драйверу ODBC для Visual FoxPro. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Поддержка: Полное  
+ Поддержка: полная  
   
- Соответствие API ODBC: уровне 1  
+ Соответствие API ODBC: уровень 1  
   
- Позволяет приложению отправлять данные для параметра или столбца к драйверу во время выполнения инструкции.  
+ Позволяет приложению передавать данные для параметра или столбца в драйвер во время выполнения инструкции.  
   
- Дополнительные сведения см. в разделе [SQLPutData](../../odbc/reference/syntax/sqlputdata-function.md) в *Справочник по программированию ODBC*.
+ Дополнительные сведения см. в разделе [SQLPutData](../../odbc/reference/syntax/sqlputdata-function.md) в *справочнике программиста по ODBC*.

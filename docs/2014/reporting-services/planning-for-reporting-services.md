@@ -11,29 +11,29 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3a4dc8e890f2b23319afcc02c628410d5264c6a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108019"
 ---
 # <a name="planning"></a>Планирование
-  Эти подразделы помогут лучше понять работу служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Сведения об установке и настройке среды служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в соответствии с потребностями пользователя.  
+  Используйте эти разделы для лучшего понимания [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Сведения об установке и настройке среды служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в соответствии с потребностями пользователя.  
   
- ![Маленький значок папки](../../2014/integration-services/media/filefolder-small.gif "Маленький значок папки") **Планирование и архитектура общих компонентов служб Reporting Services**  
- [Планирование служб Reporting Services и поддержки Power View в браузерах &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)  
+ ![Маленький значок папки с файлами](../../2014/integration-services/media/filefolder-small.gif "Маленький значок папки") **Общие Reporting Services планирование и архитектура компонентов**  
+ [Планирование поддержки Reporting Services и Power View в браузере &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)  
   
- [Планирование создания отчетов и развертывания отчетов &#40;Reporting Services 2014&#41;](plan-for-report-design-and-report-deployment-reporting-services.md)  
+ [Планирование разработки отчетов и развертывания отчетов &#40;Reporting Services 2014&#41;](plan-for-report-design-and-report-deployment-reporting-services.md)  
   
  [Просмотр отчетов служб Reporting Services на устройствах с Microsoft Surface и Apple iOS](../../2014/reporting-services/view-reporting-services-reports-surface-ios-devices.md)  
   
- [Сравнение возможностей бизнес-аналитики в разных средах (Майкрософт)](../../2014/reporting-services/compare-business-intelligence-capabilities-in-different-microsoft-environments.md)  
+ [Сравнение возможностей бизнес-аналитики в разных средах Microsoft](../../2014/reporting-services/compare-business-intelligence-capabilities-in-different-microsoft-environments.md)  
   
- ![Маленький значок папки](../../2014/integration-services/media/filefolder-small.gif "Маленький значок папки") **Установка служб Reporting Services**  
+ ![Маленький значок папки с файлами](../../2014/integration-services/media/filefolder-small.gif "Маленький значок папки") **Reporting Services установки**  
  [Сервер отчетов служб Reporting Services](../../2014/reporting-services/reporting-services-report-server.md)  
   
- [Контрольный список развертывания: Установка служб Reporting Services в существующей ферме SharePoint](../../2014/sql-server/install/deployment-checklist-install-reporting-services-existing-sharepoint-farm.md)  
+ [Контрольный список развертывания: установка служб Reporting Services в существующей ферме SharePoint](../../2014/sql-server/install/deployment-checklist-install-reporting-services-existing-sharepoint-farm.md)  
   
- [Топологии развертывания для компонентов бизнес-аналитики SQL Server в SharePoint](../sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md)    
+ [Deployment Topologies for SQL Server BI Features in SharePoint](../sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md)    
   
   

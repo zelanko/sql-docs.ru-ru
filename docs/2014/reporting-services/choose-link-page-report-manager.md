@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 910b06a5cd7af69cc668fb3054dfdfd98c3ae036
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109876"
 ---
 # <a name="choose-link-page-report-manager"></a>Страница «Выбор ссылки» (диспетчер отчетов)
@@ -22,7 +22,7 @@ ms.locfileid: "66109876"
   
  Страница «Выбор ссылки» позволяет выбрать для использования со связанным отчетом другой опубликованный отчет. Другие параметры связанного отчета (такие как безопасность и настройки параметров) не зависят от изменений данных о ссылках. Сервер отчетов не проверяет правильность этого выбора, поэтому следует обязательно выбирать отчет с такими же параметрами, какие были заданы для связанного отчета.  
   
-## <a name="navigation"></a>Навигация  
+## <a name="navigation"></a>Навигации  
  Чтобы перейти к этому местоположению в пользовательском интерфейсе, используйте следующую процедуру.  
   
 ###### <a name="to-open-the-choose-link-page"></a>Открытие страницы «Выбор ссылки»  
@@ -42,9 +42,9 @@ ms.locfileid: "66109876"
  **Представление в виде дерева**  
  Показывает все папки в иерархии папок сервера отчетов. Чтобы использовать древовидное представление для заполнения поля **Размещение** , щелкните имя отчета.  
   
-## <a name="see-also"></a>См. также  
- [Страница "Общие свойства", "Отчеты" (диспетчер отчетов)](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
- [Страница "Создание связанного отчета" (диспетчер отчетов)](../../2014/reporting-services/new-linked-report-page-report-manager.md)   
+## <a name="see-also"></a>См. также:  
+ [Страница «Общие свойства», отчеты &#40;диспетчер отчетов&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
+ [Страница создания связанного отчета &#40;диспетчер отчетов&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md)   
  [Справка F1 диспетчера отчетов](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

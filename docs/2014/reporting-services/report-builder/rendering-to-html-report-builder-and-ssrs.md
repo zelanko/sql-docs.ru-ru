@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 26f2b31728fec77a6b94a64f35d0fb37096a1b41
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107721"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>Подготовка к просмотру в виде HTML (построитель отчетов и службы SSRS)
@@ -26,15 +26,15 @@ ms.locfileid: "66107721"
   
  В некоторых сценариях параметры отчета могут использоваться для запуска атак с внедрением скрипта при подготовке отчетов к просмотру в формате HTML. Дополнительные сведения о защите отчетов см. в разделе [Обеспечение безопасности отчетов и ресурсов](../security/secure-reports-and-resources.md).  
   
- Дополнительные сведения о браузерах см. в разделе [планирование служб Reporting Services и поддержки Power View в браузерах &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md).  
+ Дополнительные сведения о браузерах см. в статьях [Планирование поддержки Reporting Services и Power View браузера &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="RenderingMHTML"></a> Подготовка к просмотру в виде MHTML  
+##  <a name="RenderingMHTML"></a>Подготовка к просмотру в формате MHTML  
  Модуль подготовки отчетов HTML может формировать отчеты в формате MHTML (инкапсуляции MIME в статистических документах HTML). MHTML расширяет HTML для внедрения в документ HTML кодированных объектов, таких как рисунки. С помощью модуля подготовки отчетов MHTML можно внедрить такие ресурсы, как изображения, документы или другие двоичные файлы, например структуры MIME, в отчет HTML, в один файл. Отчеты MHTML также можно применять для внедрения в электронные сообщения, поскольку все ресурсы включены в отчет. Хотя на самом деле MHTML создается модулем подготовки отчетов HTML, эту функциональность можно называть модулем подготовки отчетов MHTML.  
   
-##  <a name="BrowserSupport"></a> Поддержка браузеров  
+##  <a name="BrowserSupport"></a>Поддержка браузера  
  Этот модуль подготовки отчетов поддерживает следующие версии браузеров:  
   
 -   Internet Explorer 5.5 и более поздние версии;  
@@ -45,7 +45,7 @@ ms.locfileid: "66107721"
   
  Из-за проблем совместимости отчеты, готовые для просмотра, могут слегка различаться при просмотре в различных браузерах. Например, текстовое поле содержит свойство WritingMode. Это свойство не поддерживается в обозревателе Firefox.  
   
-##  <a name="HTMLSpecificRenderingRules"></a> Правила подготовки отчетов, специфичные для формата HTML  
+##  <a name="HTMLSpecificRenderingRules"></a>Правила отрисовки, специфичные для HTML  
  При подготовке отчетов действуют следующие правила, специфичные для формата HTML.  
   
 -   Модуль подготовки отчетов строит табличную структуру HTML, содержащую все элементы для каждой коллекции элементов `ReportItems`, если их несколько.  
@@ -88,9 +88,9 @@ ms.locfileid: "66107721"
 ##  <a name="DeviceInfo"></a> Настройки сведений об устройстве  
  Некоторые настройки по умолчанию для этого модуля подготовки отчетов, в том числе режим подготовки отчета, можно изменить с помощью настройки сведений об устройстве. Дополнительные сведения см. в статье [HTML Device Information Settings](../html-device-information-settings.md).  
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Разбиение на страницы в службах Reporting Services (построитель отчетов и службы SSRS)](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Поведение при подготовке к просмотру (построитель отчетов и службы SSRS)](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Интерактивные возможности различных модулей подготовки отчетов к просмотру (построитель отчетов и службы SSRS)](interactive-functionality-different-report-rendering-extensions.md)   
  [Подготовка к просмотру элементов отчета (построитель отчетов и службы SSRS)](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [Таблицы, матрицы, списки (построитель отчетов и службы SSRS)](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
+ [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  

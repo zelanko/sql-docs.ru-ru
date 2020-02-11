@@ -1,5 +1,5 @@
 ---
-title: Урок 1. Создание нового веб-сайта | Документация Майкрософт
+title: Занятие 1. Создание нового веб-сайта | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 65426162fc7cd7ada9e66c591420ac64040a4391
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108550"
 ---
-# <a name="lesson-1-create-a-new-web-site"></a>Урок 1. Создание веб-сайта
+# <a name="lesson-1-create-a-new-web-site"></a>Урок 1. Создание нового веб-сайта
   На этом занятии показано, как создать новый проект веб-сайта с использованием шаблона веб-сайта ASP.NET для Visual C#.  
   
 ### <a name="to-create-a-new-website"></a>Создание нового веб-сайта  
@@ -33,6 +33,6 @@ ms.locfileid: "66108550"
  Откроется проект веб-сайта.  
   
 ## <a name="next-task"></a>Следующая задача  
- Вы успешно создали новый проект веб-сайта. Затем необходимо создать подключение к данным и таблицу данных для родительского отчета. См. [Занятие 2. Определение подключения к данным и таблицы данных для родительского отчета](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).  
+ Вы успешно создали новый проект веб-сайта. Затем необходимо создать подключение к данным и таблицу данных для родительского отчета. См. [Занятие 2. Определение подключения к данным и таблицы данных для родительского отчета](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).  
   
   

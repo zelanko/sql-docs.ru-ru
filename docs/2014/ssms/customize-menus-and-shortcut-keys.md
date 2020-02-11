@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1e0f635cc6eb6d985bb75f87583397d6f4c2baa4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245784"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>Настройка меню и сочетаний клавиш
@@ -160,7 +160,7 @@ ms.locfileid: "63245784"
 > [!NOTE]  
 >  Некоторые команды доступны только при отображении в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] соответствующего содержимого. Если команды в меню недоступны, элемент меню будет также недоступен.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Сочетания клавиш среды SQL Server Management Studio](sql-server-management-studio-keyboard-shortcuts.md)  
   
   

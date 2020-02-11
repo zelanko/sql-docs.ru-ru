@@ -1,5 +1,5 @@
 ---
-title: Введите диалоговое окно учетных данных источника данных | Документация Майкрософт
+title: Диалоговое окно "ввод учетных данных источника данных" | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,24 +14,24 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e7fa4658b0a784b854023975234218d1a58f936c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109238"
 ---
 # <a name="enter-data-source-credentials-dialog-box"></a>Диалоговое окно «Ввод учетных данных для источника данных»
-  Чтобы получить возможность выборки данных из источника данных, в диалоговом окне **Ввод учетных данных для источника данных** укажите учетные данные [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+  Диалоговое окно **Ввод учетных данных источника данных** используется для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] предоставления учетных данных, чтобы можно было получать данные из источника данных.  
   
 ## <a name="options"></a>Параметры  
- **Имя пользователя**  
+ **User name**  
  Введите имя пользователя для входа в источник данных.  
   
  **Пароль**  
  Введите пароль для входа в источник данных.  
   
-## <a name="see-also"></a>См. также  
- [Подключения к данным, источники данных и строки подключения в службах Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+## <a name="see-also"></a>См. также:  
+ [Подключения к данным, источники данных и строки подключения в Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Справка F1 по использованию конструктора отчетов](tools/report-designer-f1-help.md)  
   
   

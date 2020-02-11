@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6b46b7d020e7a9ebd8bd0ac96d0971b63230c2b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480765"
 ---
 # <a name="data-quality-client-application"></a>Клиентское приложение DQS
@@ -36,11 +36,11 @@ ms.locfileid: "65480765"
 |Описание содержимого|Раздел|  
 |-------------------------|-----------|  
 |Описывает использование баз знаний и доменов в DQS.|[Базы знаний и домены DQS](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md)|  
-|Описывает очистку данных в DQS.|[Очистка данных](../../2014/data-quality-services/data-cleansing.md)|  
-|Описывает выполнение сопоставления в DQS.|[Data Matching](../../2014/data-quality-services/data-matching.md)|  
-|Описывает администрирование DQS.|[Администрирование DQS](../../2014/data-quality-services/dqs-administration.md)|  
+|Описывает очистку данных в DQS.|[Data Cleansing](../../2014/data-quality-services/data-cleansing.md)|  
+|Описывает выполнение сопоставления в DQS.|[Сопоставление данных](../../2014/data-quality-services/data-matching.md)|  
+|Описывает администрирование DQS.|[администрирование DQS](../../2014/data-quality-services/dqs-administration.md)|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Главный экран клиента DQS](../../2014/data-quality-services/data-quality-client-home-screen.md)  
   
   

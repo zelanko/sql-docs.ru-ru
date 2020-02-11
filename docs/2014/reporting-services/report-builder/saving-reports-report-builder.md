@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e21b1c9e48dcccf8b72a60fbd381aac3d878c0dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107632"
 ---
 # <a name="saving-reports-report-builder"></a>Сохранение отчетов (построитель отчетов)
@@ -30,7 +30,7 @@ ms.locfileid: "66107632"
   
  Дополнительные сведения о просмотре отчетов и управлении ими напрямую на сервере отчетов см. в разделе [Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)](finding-viewing-and-managing-reports-report-builder-and-ssrs.md) и [Сервер отчетов служб Reporting Services (собственный режим)](../report-server/reporting-services-report-server-native-mode.md) в разделе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [электронной документации](https://go.microsoft.com/fwlink/?LinkId=154888) на сайте msdn.microsoft.com.  
   
-##  <a name="SavingReportDefinitions"></a> Сохранение определений отчета  
+##  <a name="SavingReportDefinitions"></a>Сохранение определений отчетов  
  Хотя отчеты можно сохранить на компьютере, сохранение отчетов на сервере отчетов имеет множество преимуществ.  
   
  Сохранение отчетов на сервере отчетов предоставляет следующие преимущества.  
@@ -52,7 +52,7 @@ ms.locfileid: "66107632"
 
   
 ##  <a name="ExportingAndSavingReports"></a> Экспорт и сохранение отчетов  
- Если нужно выполнить архивацию небольшого количества отчетов, попробуйте экспортировать отчет и сохранить его как файл. После экспорта отчета в формат какого-либо приложения (например, PDF или Excel) можно сохранить его в файле и поместить в защищенный общий каталог в сети. Кроме того, сохраненный файл в формате PDF или Excel можно передать, как ресурс (если нужно хранить все копии отчета, вне зависимости от формата, в базе данных сервера отчетов). Дополнительные сведения об экспорте отчета см. в разделе [экспорт отчетов &#40;построитель отчетов и службы SSRS&#41; ](export-reports-report-builder-and-ssrs.md) и [передача файла или отчета &#40;диспетчера отчетов&#41;](../reports/upload-a-file-or-report-report-manager.md).  
+ Если нужно выполнить архивацию небольшого количества отчетов, попробуйте экспортировать отчет и сохранить его как файл. После экспорта отчета в формат какого-либо приложения (например, PDF или Excel) можно сохранить его в файле и поместить в защищенный общий каталог в сети. Кроме того, сохраненный файл в формате PDF или Excel можно передать, как ресурс (если нужно хранить все копии отчета, вне зависимости от формата, в базе данных сервера отчетов). Дополнительные сведения об экспорте отчета см. в статьях [Экспорт отчетов &#40;построитель отчетов и службы SSRS&#41;](export-reports-report-builder-and-ssrs.md) и [Передача файла или отчета &#40;диспетчер отчетов&#41;](../reports/upload-a-file-or-report-report-manager.md).  
   
 
   
@@ -76,11 +76,11 @@ ms.locfileid: "66107632"
   
 
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Отчеты, элементы отчетов и определения отчетов (построитель отчетов и службы SSRS)](../report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
- [Установка, удаление и поддержка построителя отчетов](../install-uninstall-and-report-builder-support.md)   
+ [Поддержка установки, удаления и построитель отчетов](../install-uninstall-and-report-builder-support.md)   
  [Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Экспорт отчетов &#40;построитель отчетов и службы SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
+ [Экспорт отчетов &#40;построитель отчетов и SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
  [Печать отчетов (построитель отчетов и службы SSRS)](print-reports-report-builder-and-ssrs.md)  
   
   

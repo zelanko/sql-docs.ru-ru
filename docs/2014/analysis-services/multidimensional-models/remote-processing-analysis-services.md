@@ -1,5 +1,5 @@
 ---
-title: Удаленной обработки (службы Analysis Services) | Документация Майкрософт
+title: Удаленная обработка (Analysis Services) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b383621408cc84a65e5f9c5adb711dd9f047be64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073204"
 ---
 # <a name="remote-processing-analysis-services"></a>Удаленная обработка (службы Analysis Services)
   Можно выполнять запланированную или автоматическую обработку на удаленном экземпляре [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , при этом запрос на обработку приходит с одного компьютера, но выполняется на другом компьютере из той же сети.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
   
 -   Если на каждом компьютере запущены разные версии SQL Server, то клиентские библиотеки должны иметь ту же версию, что и экземпляр [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , обрабатывающий модель. Например, если обработка ведется в экземпляре [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] , то компьютер, от которого исходит запрос, должен иметь клиентскую библиотеку, соответствующую [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]. Дополнительные сведения см. в разделе [Поставщики данных, используемые для соединений со службами Analysis Services](../instances/data-providers-used-for-analysis-services-connections.md).  
   
@@ -31,7 +31,8 @@ ms.locfileid: "66073204"
 -   Устраните все ошибки локальной обработки перед попыткой проведения удаленной обработки. Проверьте, чтобы при получении локального запроса на обработку данные успешно извлекались из внешнего реляционного источника данных. Инструкции по настройке учетных данных для получения данных см. в разделе [Задание параметров олицетворения (службы SSAS — многомерные)](set-impersonation-options-ssas-multidimensional.md).  
   
 ## <a name="on-demand-remote-processing"></a>Удаленная обработка по запросу  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] принимает запросы на обработку от учетных записей пользователей или приложений с правами администратора [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Если вы являетесь администратором, проверьте возможность подключения к удаленному экземпляру и обработайте базу данных вручную через удаленное соединение.  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] принимает запросы на обработку от учетных записей пользователей или приложений с правами администратора [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Если вы являетесь администратором, проверьте возможность подключения к удаленному экземпляру и обработайте базу данных вручную через удаленное соединение.  
   
 1.  На компьютере, который будет использоваться для планирования обработки, запустите [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и подключитесь к удаленному экземпляру [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
@@ -48,9 +49,9 @@ ms.locfileid: "66073204"
   
  Используйте следующие ссылки для указания разрешений:  
   
--   [Настройка агента SQL Server](../../ssms/agent/configure-sql-server-agent.md)  
+-   [Configure SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md)  
   
--   Если предоставление разрешений[SQL Server Agent Components](../../ssms/agent/sql-server-agent.md#Components) не поддерживается, **SQL Server Agent Components** предлагает альтернативные предопределенные роли сервера.  
+-   [Агент SQL Server компоненты](../../ssms/agent/sql-server-agent.md#Components) предлагают альтернативные предопределенные роли сервера, если предоставление разрешений **sysadmin** невозможно.  
   
  После настройки разрешений учетной записи выполните следующие действия.  
   
@@ -84,17 +85,17 @@ ms.locfileid: "66073204"
   
 2.  Дополнительно можно задать свойства трассировки так, чтобы события сохранялись в файл или таблицу базы данных.  
   
-#### <a name="run-the-job"></a>Запуск задания  
+#### <a name="run-the-job"></a>Выполнение задания  
   
 1.  На компьютере, где запускается задание, проверьте, может ли задание выполнить базовую операцию. В обозревателе объектов агента SQL Server разверните узел **Задания**, щелкните правой кнопкой мыши только что созданное задание и выберите команду **Запустить задание по этапам**. Задание будет запущено немедленно. Ход его выполнения можно наблюдать в приложении SQL Server Profiler.  
   
 2.  В качестве последнего шага измените задание так, чтобы оно выполнялось по вашему расписанию, добавив необходимые предупреждения и уведомления. Также, возможно, потребуется доработать скрипт обработки или создать несколько этапов в задании, чтобы объекты обрабатывались независимо.  
   
-## <a name="see-also"></a>См. также  
- [SQL Server Agent Components](../../ssms/agent/sql-server-agent.md#Components)   
- [Планирование задач администрирования служб SSAS с помощью агента SQL Server](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
- [Пакетная обработка (службы Analysis Services)](batch-processing-analysis-services.md)   
+## <a name="see-also"></a>См. также:  
+ [Компоненты агент SQL Server](../../ssms/agent/sql-server-agent.md#Components)   
+ [Планирование административных задач SSAS с помощью агент SQL Server](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
+ [Пакетная обработка &#40;Analysis Services&#41;](batch-processing-analysis-services.md)   
  [Обработка объектов многомерной модели](processing-a-multidimensional-model-analysis-services.md)   
- [Обработка объектов (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects)  
+ [Обработка объектов &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects)  
   
   

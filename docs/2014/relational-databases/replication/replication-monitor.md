@@ -15,76 +15,76 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fcb3a7ccfc5e0b5da01d3976f3c9f13e06df7ee7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250378"
 ---
 # <a name="replication-monitor"></a>монитор репликации
-  В данном разделе документации содержатся сведения о мониторе репликации. Страницы и диалоговые окна, отображаемые в мониторе, различаются в зависимости от типа репликации и версии [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , мониторинг которой осуществляется.  
+  В данном разделе документации содержатся сведения о мониторе репликации. Страницы и диалоговые окна, отображаемые в мониторе, различаются в зависимости от типа репликации и отслеживаемой [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии.  
   
--   [Replication Monitor, Main Page](replication-monitor-main-page.md) (Монитор репликации, страница "Общие")  
+-   [Монитор репликации, Главная страница](replication-monitor-main-page.md)  
   
 -   [Добавление издателя](add-publisher.md)  
   
 -   [Параметры распространителя](distributor-settings.md)  
   
--   [Сведения о распространителе, вкладка "Публикации"](distributor-information-publications.md)  
+-   [Сведения о распространителе, публикации](distributor-information-publications.md)  
 
 -   [Настройки издателя](publisher-settings.md)  
   
--   [Publisher Information, Publications](publisher-information-publications.md) (Данные об издателе, вкладка "Публикации")  
+-   [Сведения об издателе, публикации](publisher-information-publications.md)  
   
--   [Publisher Information, Subscription Watch List (Transactional Publication, SQL Server 2005 and Later)](publisher-information-subscription-watch-list-transactional.md) (Сведения об издателе, вкладка "Список наблюдения за подписками" (публикация транзакций, SQL Server 2005 и более поздние версии))  
+-   [Сведения об издателе, список наблюдения за подписками &#40;публикации транзакций SQL Server 2005 и более поздних версий&#41;](publisher-information-subscription-watch-list-transactional.md)  
   
--   [Publisher Information, Subscription Watch List (Merge Publication, SQL Server 2005 and Later)](publisher-information-subscription-watch-list-merge-publication.md) (Сведения об издателе, вкладка "Список наблюдения за подписками" (публикация слиянием, SQL Server 2005 и более поздние версии))  
+-   [Сведения об издателе, список наблюдения за подписками &#40;публикация слиянием, SQL Server 2005 и более поздних&#41;](publisher-information-subscription-watch-list-merge-publication.md)  
   
--   [Publisher Information, Subscription Watch List (Snapshot Publication, SQL Server 2005 and Later)](publisher-information-subscription-watch-list-snapshot.md) Сведения об издателе, вкладка "Список наблюдения за подписками" (публикация моментальных снимков, SQL Server 2005 и более поздние версии)  
+-   [Сведения об издателе, список наблюдения за подписками &#40;публикация моментальных снимков, SQL Server 2005 и более поздних&#41;](publisher-information-subscription-watch-list-snapshot.md)  
   
--   [Publisher Information, Agents](publisher-information-agents.md) (Данные об издателе, вкладка "Агенты")  
+-   [Сведения об издателе, агенты](publisher-information-agents.md)  
   
--   [Publication Information, All Subscriptions (Transactional Publication)](publication-information-all-subscriptions-transactional-publication.md) (Сведения о публикации, вкладка "Все подписки" (публикация транзакций))  
+-   [Сведения о публикации, все подписки &#40;публикации транзакций&#41;](publication-information-all-subscriptions-transactional-publication.md)  
   
--   [Publication Information, All Subscriptions (Merge Publication)](publication-information-all-subscriptions-merge-publication.md) (Сведения о публикации, вкладка "Все подписки" (публикация слиянием))  
+-   [Сведения о публикации, все подписки &#40;публикации слиянием&#41;](publication-information-all-subscriptions-merge-publication.md)  
   
--   [Publication Information, All Subscriptions (Snapshot Publication)](publication-information-all-subscriptions-snapshot-publication.md) (Сведения о публикации, вкладка "Все подписки" (публикация моментальных снимков))  
+-   [Сведения о публикации, все подписки &#40;публикации моментальных снимков&#41;](publication-information-all-subscriptions-snapshot-publication.md)  
   
--   [Publication Information, Warnings (Transactional Publication, SQL Server 2005 and Later)](publication-information-warnings-transactional-publication.md) (Сведения о публикации, вкладка "Предупреждения" (публикация транзакций, SQL Server 2005 и более поздние версии))  
+-   [Сведения о публикации, предупреждения &#40;публикации транзакций, SQL Server 2005 и более поздних версий&#41;](publication-information-warnings-transactional-publication.md)  
   
--   [Publication Information, Warnings (Merge Publication, SQL Server 2005 and Later)](publication-information-warnings-merge-publication-sql-server-2005-and-later.md) (Сведения о публикации, вкладка "Предупреждения" (публикации слиянием, SQL Server 2005 и более поздние версии))  
+-   [Сведения о публикации, предупреждения &#40;публикации слиянием, SQL Server 2005 и более поздних&#41;](publication-information-warnings-merge-publication-sql-server-2005-and-later.md)  
   
--   [Сведения о публикации, вкладка "Предупреждения" (публикация моментальных снимков, SQL Server 2005 и более поздние версии)](publication-information-warnings-snapshot-publication-sql-server-2005-and-later.md)  
+-   [Сведения о публикации, предупреждения &#40;публикации моментальных снимков, SQL Server 2005 и более поздних&#41;](publication-information-warnings-snapshot-publication-sql-server-2005-and-later.md)  
   
--   [Publication Information, Agents (Transactional Publication)](publication-information-agents-transactional-publication.md) (Сведения о публикации, вкладка "Агенты" (публикация транзакций))  
+-   [Сведения о публикации, агенты &#40;публикацию транзакций&#41;](publication-information-agents-transactional-publication.md)  
   
--   [Publication Information, Agents (Merge Publication)](publication-information-agents-merge-publication.md) (Сведения о публикации, вкладка "Агенты" (публикация слиянием))  
+-   [Сведения о публикации, агенты &#40;публикацию слиянием&#41;](publication-information-agents-merge-publication.md)  
   
--   [Publication Information, Agents (Snapshot Publication)](publication-information-agents-snapshot-publication.md) (Сведения о публикации, вкладка "Агенты" (публикация моментальных снимков))  
+-   [Сведения о публикации, агенты &#40;публикации моментальных снимков&#41;](publication-information-agents-snapshot-publication.md)  
   
--   [Publication Information, Tracer Tokens (Transactional Publication, SQL Server 2005 and Later)](publication-information-tracer-tokens-sql-server-2005-and-later.md) (Сведения о публикации, вкладка "Трассировочные токены" (публикация транзакций, SQL Server 2005 и более поздние версии))  
+-   [Сведения о публикации, трассировочные токены &#40;публикации транзакций SQL Server 2005 и более поздних версий&#41;](publication-information-tracer-tokens-sql-server-2005-and-later.md)  
   
--   [Subscription, Undistributed Commands (Transactional Subscription, SQL Server 2005 and Later)](subscription-undistributed-commands-transactional-subscription.md) (Подписка, вкладка "Нераспространенные команды" (подписка на публикацию транзакций, SQL Server 2005 и более поздние версии))  
+-   [Подписка, нераспространенные команды &#40;подписка на публикацию транзакций SQL Server 2005 и более поздних версий&#41;](subscription-undistributed-commands-transactional-subscription.md)  
   
--   [Subscription, Publisher to Distributor History (Transactional Subscription)](subscription-publisher-to-distributor-history-transactional-subscription.md) (Подписка, вкладка "Журнал издателя для распространителя" (подписка на публикацию транзакций))  
+-   [Подписка, журнал от издателя к распространителю &#40;подписка на публикацию транзакций&#41;](subscription-publisher-to-distributor-history-transactional-subscription.md)  
   
--   [Subscription, Distributor to Subscriber History (Transactional Subscription)](subscription-distributor-to-subscriber-history-transactional-subscription.md) (Подписка, вкладка "Журнал операций от распространителя к подписчику" (подписка на публикацию транзакций))  
+-   [Подписка, журнал от распространителя к подписчику &#40;подписка на публикацию транзакций&#41;](subscription-distributor-to-subscriber-history-transactional-subscription.md)  
   
--   [Subscription, Synchronization History (Merge Subscription, SQL Server 2005 and Later)](subscription-synchronization-history.md) (Подписка, вкладка "Журнал синхронизации" (подписка на публикацию слиянием, SQL Server 2005 и более поздние версии))  
+-   [Подписка, журнал синхронизации &#40;подписка слиянием, SQL Server 2005 и более поздних версий&#41;](subscription-synchronization-history.md)  
   
--   [Subscription, Distributor to Subscriber History (Snapshot Subscription)](subscription-distributor-to-subscriber-history-snapshot-subscription.md) (Подписка, вкладка "Журнал операций от распространителя к подписчику" (подписка на моментальные снимки))  
+-   [Подписка, журнал от распространителя к подписчику &#40;подписка моментальных снимков&#41;](subscription-distributor-to-subscriber-history-snapshot-subscription.md)  
   
--   [Log Reader Agent](log-reader-agent.md) (Диалоговое окно "Агент чтения журнала")  
+-   [агент чтения журнала](log-reader-agent.md)  
   
--   [Агент чтения очереди](queue-reader-agent.md)  
+-   [агент чтения очереди](queue-reader-agent.md)  
   
--   [Агент моментальных снимков](snapshot-agent.md)  
+-   [агент моментальных снимков](snapshot-agent.md)  
   
--   [Настройки фильтра](filter-settings.md)  
+-   [Параметры фильтра](filter-settings.md)  
   
--   [Sort Columns](sort-columns.md) (Диалоговое окно "Сортировка столбцов")  
+-   [Сортировка столбцов](sort-columns.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Запуск монитора репликации](monitor/start-the-replication-monitor.md)   
  [Наблюдение за репликацией](monitoring-replication.md)   
   

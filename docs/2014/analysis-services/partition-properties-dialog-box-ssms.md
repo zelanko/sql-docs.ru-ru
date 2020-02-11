@@ -1,5 +1,5 @@
 ---
-title: Секции диалоговое окно «Свойства» (SSMS) | Документация Майкрософт
+title: Диалоговое окно «Свойства секции» (SSMS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bfc0de04be668ea3d1ab5633049e6f81d971b4cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072160"
 ---
 # <a name="partition-properties-dialog-box-ssms"></a>Диалоговое окно «Свойства секции» (среда SSMS)
@@ -26,18 +26,18 @@ ms.locfileid: "66072160"
   
  В диалоговом окне **Свойства секции** содержатся следующие страницы.  
   
-## <a name="pages"></a>Pages  
+## <a name="pages"></a>Страницы  
   
-|Страница|Описание|  
+|Страница|Description|  
 |----------|-----------------|  
 |**Выбор**|На странице **Выбор** можно выбрать секцию в группе мер, свойства которой нужно просмотреть или изменить. Дополнительные сведения об этой странице см. в разделе [Выбор (диалоговое окно "Свойства секции") (среда SSMS)](selection-partition-properties-dialog-box-ssms.md).|  
 |**Общие сведения**|На странице **Общие** можно просмотреть и изменить общие свойства секции, выбранной на странице **Выбор** . Дополнительные сведения об этой странице см. в разделе [Общие (диалоговое окно "Свойства секции") (среда SSMS)](general-partition-properties-dialog-box-ssms.md).|  
 |**Упреждающее кэширование**|На странице **Упреждающее кэширование** можно просмотреть и изменить настройки хранения и упреждающего кэширования для секции, выбранной на странице **Выбор** . Дополнительные сведения об этой странице см. в разделе [Упреждающее кэширование (диалоговое окно "Свойства секции") (среда SSMS)](proactive-caching-partition-properties-dialog-box-ssms.md).|  
 |**Конфигурация ошибок**|На странице **Конфигурация ошибок** можно просмотреть и изменить настройки конфигурации ошибок при обработке секции, выбранной на странице **Выбор** . Дополнительные сведения об этой странице см. в разделе [Конфигурация ошибок при обработке кубов, секций и измерений (службы SSAS — многомерные данные)](multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md).|  
   
-## <a name="see-also"></a>См. также  
- [Секции (службы Analysis Services — многомерные данные)](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>См. также:  
+ [Секции &#40;Analysis Services многомерных данных&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [Удаленные секции](multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)   
- [Конструкторы и диалоговые окна служб Analysis Services &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+ [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

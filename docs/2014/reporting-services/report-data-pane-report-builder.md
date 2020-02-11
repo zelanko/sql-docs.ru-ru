@@ -1,5 +1,5 @@
 ---
-title: Область данных (построитель отчетов) отчета | Документация Майкрософт
+title: Область данных отчета (построитель отчетов) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fa8ae6d36ddd7c23b48ec65f8fab387e690f1d83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107555"
 ---
 # <a name="report-data-pane-report-builder"></a>Область данных отчета (построитель отчетов)
@@ -31,18 +31,18 @@ ms.locfileid: "66107555"
  **Параметры**  
  Представляет коллекцию параметров отчета, каждый из которых может быть однозначным или многозначным. Дополнительные сведения см. в разделе [Параметры отчета (построитель отчетов и конструктор отчетов)](report-design/report-parameters-report-builder-and-report-designer.md).  
   
- **Изображения**  
+ **Фотографий**  
  Представляет набор изображений, используемых в отчете. Дополнительные сведения см. в разделе [Изображения (построитель отчетов и службы SSRS)](report-design/images-report-builder-and-ssrs.md).  
   
  **Источники данных**  
- Представляет внедренный источник данных или ссылку на общий источник данных. Источник данных предоставляет данные для отчета. Источник данных служит родительским узлом для коллекции использующих его наборов данных. Дополнительные сведения см. в разделе [Добавление данных в отчет &#40;построитель отчетов и службы SSRS&#41; ](report-data/report-datasets-ssrs.md) и [подключения к данным, источники данных и строки подключения в построителе отчетов](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md).  
+ Представляет внедренный источник данных или ссылку на общий источник данных. Источник данных предоставляет данные для отчета. Источник данных служит родительским узлом для коллекции использующих его наборов данных. Дополнительные сведения см. в разделе [Добавление данных в отчет &#40;построитель отчетов и SSRS&#41;](report-data/report-datasets-ssrs.md) и [подключения к данным, источники данных и строки подключения в построитель отчетов](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md).  
   
  **Наборы данных**  
  Представляет данные, которые возвращаются из источника данных путем выполнения одной команды, например запроса [!INCLUDE[tsql](../includes/tsql-md.md)], который получает данные из базы данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Набор данных служит родительским узлом для коллекции полей, указанных в запросе и включающей вычисляемые поля. Построитель отчетов поддерживает конструкторы запросов, чтобы помочь пользователям составлять запросы. Дополнительные сведения см. в разделе [Добавление данных в отчет &#40;построитель отчетов и службы SSRS&#41;](report-data/report-datasets-ssrs.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Коллекция полей набора данных (построитель отчетов и службы SSRS)](report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [Справка построителя отчетов для диалоговых окон, панелей и мастеров](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
+ [Построитель отчетов справки по диалоговым окнам, панелям и мастерам](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [Панель группировки (построитель отчетов)](report-design/grouping-pane-report-builder.md)   
  [Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   

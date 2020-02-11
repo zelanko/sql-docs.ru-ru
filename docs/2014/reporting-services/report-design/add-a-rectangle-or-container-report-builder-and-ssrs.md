@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f1f9750813d305834fe36f2c6ab7abfaa1d95075
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106771"
 ---
 # <a name="add-a-rectangle-or-container-report-builder-and-ssrs"></a>Добавление прямоугольника или контейнера (построитель отчетов и службы SSRS)
@@ -50,9 +50,9 @@ ms.locfileid: "66106771"
 2.  Для задания того, какие стороны прямоугольника изменять, нажмите стрелку рядом с кнопкой **Граница** .  
   
     > [!NOTE]  
-    >  Если установить для линии стиль **двойные** и толщина линии равна 1 1/2 пт или уже, линия может не отображаться двойной при запуске отчета в построителе отчетов, конструктора отчетов или диспетчера отчетов. После экспорта отчета в другие форматы, такие как Microsoft Word и Acrobat PDF, линия будет отображаться двойной.  
+    >  Если для стиля линии задано значение **Double** , а ширина линии — 1 1/2 пт или более, то при запуске отчета в построитель отчетов, конструктор отчетов или диспетчер отчетов строка может не отображаться двойной. После экспорта отчета в другие форматы, такие как Microsoft Word и Acrobat PDF, линия будет отображаться двойной.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Прямоугольники и линии (построитель отчетов и службы SSRS)](rectangles-and-lines-report-builder-and-ssrs.md)   
  [Поведение при подготовке к просмотру (построитель отчетов и службы SSRS)](rendering-behaviors-report-builder-and-ssrs.md)  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a345b0ed36fde93a3bc94ff4075233c6c24728af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106870"
 ---
 # <a name="add-a-drillthrough-action-on-a-report-report-builder-and-ssrs"></a>Добавление действия детализации в отчет (построитель отчетов и службы SSRS)
@@ -59,7 +59,7 @@ ms.locfileid: "66106870"
   
 7.  Для проверки ссылки надо запустить отчет и щелкнуть элемент отчета, для которого была задана ссылка.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Диалоговое окно "Свойства действия" (построитель отчетов и службы SSRS)](../action-properties-dialog-box-report-builder-and-ssrs.md)   
  [Форматирование точек данных на диаграмме (построитель отчетов и службы SSRS)](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [Отображение всплывающих подсказок для ряда (построитель отчетов и службы SSRS)](show-tooltips-on-a-series-report-builder-and-ssrs.md)  

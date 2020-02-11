@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 60b081b96ae54885a6f1968706903b13fb7505a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106389"
 ---
 # <a name="reportitems-collection-references-report-builder-and-ssrs"></a>Ссылки на коллекцию ReportItems (построитель отчетов и службы SSRS)
@@ -24,7 +24,7 @@ ms.locfileid: "66106389"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="using-the-reportitems-value-property"></a>Использования свойства значения ReportItems  
- Элементы в `ReportItems` коллекции имеют только одно свойство: Значение. Значение элемента `ReportItems` может использоваться для отображения или вычисления данных из другого поля отчета. Чтобы получить доступ к значению текущего текстового поля, можно использовать встроенное в [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] глобальное выражение Me.Value или просто Value. Однако в функциях отчета, таких как First и агрегатных функциях, необходимо использовать полный синтаксис.  
+ Элементы коллекции `ReportItems` имеют только одно свойство: Value. Значение элемента `ReportItems` может использоваться для отображения или вычисления данных из другого поля отчета. Чтобы получить доступ к значению текущего текстового поля, можно использовать встроенное в [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] глобальное выражение Me.Value или просто Value. Однако в функциях отчета, таких как First и агрегатных функциях, необходимо использовать полный синтаксис.  
   
  Пример:  
   
@@ -32,7 +32,7 @@ ms.locfileid: "66106389"
   
      `=ReportItems!Textbox1.Value`  
   
--   Это выражение, помещенное в `ReportItem` текстовое поле свойства Color, отображает текст черным цветом, если значение равно > 0; в противном случае — значение отображается красным цветом:  
+-   Это выражение, помещенное в `ReportItem` свойство цвета текстового поля, отображает текст в черном виде, если значение равно > 0; в противном случае значение отображается красным цветом:  
   
      `=IIF(Me.Value > 0,"Black","Red")`  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66106389"
   
  Например, текстовое поле в строке, находящейся в родительской группе, не должно содержать выражение, ссылающееся на имя текстового поля в строке дочерней группы. Результат вычисления такого выражения отличается от значения в отчете, т. к. текстовое поле дочерней строки расположено вне этой области. Дополнительные сведения см. в разделах [Справочник по агрегатным функциям (построитель отчетов и службы SSRS)](report-builder-functions-aggregate-functions-reference.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Встроенные коллекции в выражениях (построитель отчетов и службы SSRS)](built-in-collections-in-expressions-report-builder.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [Разбиение на страницы в службах Reporting Services (построитель отчетов и службы SSRS)](pagination-in-reporting-services-report-builder-and-ssrs.md)   

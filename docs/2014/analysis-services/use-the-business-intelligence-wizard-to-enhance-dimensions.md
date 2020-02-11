@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 331820704691d86ab06c1a46934f7aca6154e1cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065511"
 ---
 # <a name="use-the-business-intelligence-wizard-to-enhance-dimensions"></a>Использование мастера бизнес-аналитики для улучшения измерений
@@ -32,12 +32,12 @@ ms.locfileid: "66065511"
   
 -   [Определение упорядочивания для измерения](multidimensional-models/bi-wizard-define-the-ordering-for-a-dimension.md)  
   
--   [Включение обратной записи в измерение](multidimensional-models/bi-wizard-enable-dimension-writeback.md)  
+-   [Разрешение обратной записи в измерение](multidimensional-models/bi-wizard-enable-dimension-writeback.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Определение измерений базы данных](multidimensional-models/define-database-dimensions.md)   
- [Справочник по свойствам атрибута измерения](multidimensional-models/dimension-attribute-properties-reference.md)   
- [Создание пользовательских иерархий](multidimensional-models/user-defined-hierarchies-create.md)   
+ [Справочник по свойствам атрибутов измерения](multidimensional-models/dimension-attribute-properties-reference.md)   
+ [Создание определяемых пользователем иерархий](multidimensional-models/user-defined-hierarchies-create.md)   
  [Определение связей атрибутов](multidimensional-models/attribute-relationships-define.md)   
  [Измерения в многомерных моделях](multidimensional-models/dimensions-in-multidimensional-models.md)  
   

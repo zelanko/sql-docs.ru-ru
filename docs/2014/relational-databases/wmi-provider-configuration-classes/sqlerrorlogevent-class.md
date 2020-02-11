@@ -1,5 +1,5 @@
 ---
-title: SqlErrorLogEvent, класс | Документация Майкрософт
+title: Класс SqlErrorLogEvent | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 558e60a5638ab3af75c5450e3f6fc22c6f9d9601
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721069"
 ---
 # <a name="sqlerrorlogevent-class"></a>SqlErrorLogEvent, класс
@@ -38,17 +38,17 @@ class SQLErrorLogEvent
 ```  
   
 ## <a name="properties"></a>Свойства  
- SQLErrorLogEvent, класс определяет следующие свойства.  
+ Класс SQLErrorLogEvent определяет следующие свойства.  
   
 |||  
 |-|-|  
-|FileName|Тип данных: `string`<br /><br /> Тип доступа: Только для чтения<br /><br /> <br /><br /> Имя файла журнала ошибок.|  
-|InstanceName|Тип данных: `string`<br /><br /> Тип доступа: Только для чтения<br /><br /> Квалификаторы: Ключ<br /><br /> Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], на котором хранится файл журнала.|  
-|LogDate|Тип данных: `datetime`<br /><br /> Тип доступа: Только для чтения<br /><br /> Квалификаторы: Ключ<br /><br /> <br /><br /> Дата и время записи события в файл журнала.|  
-|`Message`|Тип данных: `string`<br /><br /> Тип доступа: Только для чтения<br /><br /> <br /><br /> Сообщение о событии.|  
-|ProcessInfo|Тип данных: `string`<br /><br /> Тип доступа: Только для чтения<br /><br /> <br /><br /> Сведения об идентификаторе процесса сервера источника (SPID) события.|  
+|FileName|Тип данных:`string`<br /><br /> Тип доступа: только для чтения<br /><br /> <br /><br /> Имя файла журнала ошибок.|  
+|InstanceName|Тип данных:`string`<br /><br /> Тип доступа: только для чтения<br /><br /> Квалификаторы: ключ<br /><br /> Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], на котором хранится файл журнала.|  
+|логдате|Тип данных:`datetime`<br /><br /> Тип доступа: только для чтения<br /><br /> Квалификаторы: ключ<br /><br /> <br /><br /> Дата и время записи события в файл журнала.|  
+|Сообщение|Тип данных:`string`<br /><br /> Тип доступа: только для чтения<br /><br /> <br /><br /> Сообщение о событии.|  
+|процессинфо|Тип данных:`string`<br /><br /> Тип доступа: только для чтения<br /><br /> <br /><br /> Сведения об идентификаторе процесса сервера источника (SPID) события.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
   
 |||  
 |-|-|  
@@ -57,7 +57,7 @@ class SQLErrorLogEvent
 |Пространство имен|\root\Microsoft\SqlServer\ComputerManagement10|  
   
 ## <a name="example"></a>Пример  
- В этом примере рассматривается извлечение значений для всех записанных событий в указанном файле журнала. Чтобы запустить пример, замените \< *имя_экземпляра*> с именем экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], например «Экземпляр1», а «Имя_файла» — Имя файла журнала ошибок, например «ErrorLog.1».  
+ В этом примере рассматривается извлечение значений для всех записанных событий в указанном файле журнала. Чтобы выполнить пример, замените \< *Instance_Name*> именем экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], например "instance1", и замените "File_Name" именем файла журнала ошибок, например "ErrorLog. 1".  
   
 ```  
 on error resume next  
@@ -78,25 +78,25 @@ Next
 ```  
   
 ## <a name="comments"></a>Комментарии  
- Когда *InstanceName* или *FileName* не указаны в инструкции WQL, запрос вернет сведения для экземпляра по умолчанию и текущий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] файл журнала. Например следующая инструкция WQL вернет все события журнала из текущего файла журнала (ERRORLOG) на экземпляре по умолчанию (MSSQLSERVER).  
+ Если имя *instanceName* или *filename* не указаны в инструкции WQL, запрос возвратит сведения для экземпляра по умолчанию и текущего [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] файла журнала. Например, следующая инструкция WQL вернет все события журнала из текущего файла журнала (ERRORLOG) в текущем экземпляре (MSSQLSERVER).  
   
 ```  
 "SELECT * FROM SqlErrorLogEvent"  
 ```  
   
 ## <a name="security"></a>безопасность  
- Для подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] файла журнала посредством инструментария WMI, необходимо иметь следующие разрешения как на локальных и удаленных компьютерах:  
+ Для подключения к файлу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] журнала через инструментарий WMI необходимо иметь следующие разрешения на локальном и на удаленном компьютерах:  
   
--   Доступ на чтение к **Root\Microsoft\SqlServer\ComputerManagement10** пространство имен WMI. По умолчанию доступ для чтения задается для всех с помощью разрешения «Включить учетную запись».  
+-   Доступ на чтение к пространству имен WMI **Root\Microsoft\SqlServer\ComputerManagement10** . По умолчанию доступ для чтения задается для всех с помощью разрешения «Включить учетную запись».  
   
--   Разрешение для чтения на папку, содержащую журналы ошибок. По умолчанию ошибки журналы находятся по следующему пути (где \< *диска >* представляет диск, на котором установлен [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и \< *InstanceName*> — Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]):  
+-   Разрешение для чтения на папку, содержащую журналы ошибок. По умолчанию журналы ошибок расположены по следующему пути (где \< *диск>* представляет диск, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на котором установлен, а \< *instanceName*> — имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]):  
   
-     **\<Диск >: \Program Files\Microsoft SQL Server\MSSQL12** **.\< Имя_экземпляра > \MSSQL\Log**  
+     **Диск>: \Program Files\Microsoft SQL Server\MSSQL12. \<** **\< Имя_экземпляра> \MSSQL\Log**  
   
- При соединении с использованием брандмауэра убедитесь, что в брандмауэре задано исключение для WMI на удаленных целевых компьютерах. Дополнительные сведения см. в разделе [подключение к WMI Remotely Starting with Windows Vista](https://go.microsoft.com/fwlink/?LinkId=178848).  
+ При соединении с использованием брандмауэра убедитесь, что в брандмауэре задано исключение для WMI на удаленных целевых компьютерах. Дополнительные сведения см. [в статье удаленное подключение к WMI, начиная с Windows Vista](https://go.microsoft.com/fwlink/?LinkId=178848).  
   
-## <a name="see-also"></a>См. также  
- [SqlErrorLogFile, класс](sqlerrorlogfile-class.md)   
- [Просмотр автономных файлов журнала](../logs/view-offline-log-files.md)  
+## <a name="see-also"></a>См. также:  
+ [Класс SqlErrorLogFile](sqlerrorlogfile-class.md)   
+ [просматривать файлы журнала в режиме «вне сети»](../logs/view-offline-log-files.md)  
   
   

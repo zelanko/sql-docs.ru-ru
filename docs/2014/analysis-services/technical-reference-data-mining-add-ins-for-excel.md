@@ -1,5 +1,5 @@
 ---
-title: Технический справочник (надстройки интеллектуального анализа для Excel данных) | Документация Майкрософт
+title: Технический справочник (надстройки интеллектуального анализа данных для Excel) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cdf32878788bd68f9f0da36500be75fed5b96691
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066219"
 ---
 # <a name="technical-reference-data-mining-add-ins-for-excel"></a>Технический справочник (надстройки интеллектуального анализа данных для Excel)
@@ -26,22 +26,22 @@ ms.locfileid: "66066219"
   
 -   [Шаблоны расширений интеллектуального анализа данных](dmx-templates.md)  
   
- **Алгоритмы интеллектуального анализа данных и параметров алгоритма**  
+ **Алгоритмы интеллектуального анализа данных и параметры алгоритмов**  
   
  При использовании мастера в клиенте интеллектуального анализа данных для Excel можно изменить параметры алгоритма и установить дополнительные параметры для настройки способа обработки данных алгоритмом.  
   
--   [Параметры алгоритма &#40;надстройки интеллектуального анализа данных SQL Server&#41;](algorithm-parameters-sql-server-data-mining-add-ins.md)  
+-   [Параметры алгоритма &#40;SQL Server надстройки интеллектуального анализа данных&#41;](algorithm-parameters-sql-server-data-mining-add-ins.md)  
   
- **Справка мастера настройки**  
+ **Справка по мастеру настройки**  
   
  Мастер настройки запускается при первом открытии надстройки и помогает установить соединение с сервером [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Столкнувшись с трудностями при выполнении любого из этих действий, см. дополнительную справку в этом разделе.  
   
--   [Средство настройки сервера &#40;интеллектуального анализа данных надстройки для Excel&#41;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
+-   [Служебная программа настройки сервера &#40;надстройки интеллектуального анализа данных для Excel&#41;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
   
 ## <a name="in-this-section"></a>в этом разделе  
- [Алгоритмы интеллектуального анализа данных &#40;надстройки интеллектуального анализа данных SQL Server&#41;](data-mining-algorithms-sql-server-data-mining-add-ins.md)  
+ [Алгоритмы интеллектуального анализа данных &#40;SQL Server надстройки интеллектуального анализа данных&#41;](data-mining-algorithms-sql-server-data-mining-add-ins.md)  
   
- [Средство настройки сервера &#40;интеллектуального анализа данных надстройки для Excel&#41;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
+ [Служебная программа настройки сервера &#40;надстройки интеллектуального анализа данных для Excel&#41;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
   
 ## <a name="related-sections"></a>См. также  
   
