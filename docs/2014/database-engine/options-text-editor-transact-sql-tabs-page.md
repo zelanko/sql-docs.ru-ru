@@ -1,5 +1,5 @@
 ---
-title: Параметры (текстовый редактор-Transact SQL — страница "Табуляция") | Документация Майкрософт
+title: Параметры (текстовый редактор — Transact-SQL — страница «вкладки») | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: cc649ee021012774a0f199b97ea3cbf6bae4adef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089138"
 ---
-# <a name="options-text-editor---transact-sql---tabs-page"></a>Параметры (текстовый редактор-Transact SQL — страница "вкладки")
+# <a name="options-text-editor---transact-sql---tabs-page"></a>Параметры (текстовый редактор — Transact-SQL — страница «вкладки»)
   Используйте это диалоговое окно, чтобы изменить действия редактора запросов компонента [!INCLUDE[ssDE](../includes/ssde-md.md)], который используется для скриптов программы [!INCLUDE[tsql](../includes/tsql-md.md)], при нажатии клавиши TAB. Для вывода этих параметров выберите пункт **Параметры** в меню **Сервис**, раскройте узел **Текстовый редактор**, раскройте вложенную папку **Transact-SQL** и щелкните **Вкладки**.  
   
 ## <a name="setting-options-in-multiple-locations"></a>Настройка параметров в нескольких местах  
@@ -34,7 +34,7 @@ ms.locfileid: "66089138"
  **Блок**  
  Если выбран данный режим, то новая строка, создаваемая при нажатии клавиши ВВОД, будет автоматически перемещена на такое же расстояние, что и предыдущая.  
   
- **Смарт-**  
+ **Структура**  
  Этот параметр недоступен.  
   
 ## <a name="tabs"></a>Вкладки  

@@ -11,17 +11,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 97e9280512b75aebfccb93c0e11e5402136fa6f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105565"
 ---
 # <a name="merge-cells-in-a-data-region-report-builder-and-ssrs"></a>Объединение ячеек в области данных (построитель отчетов и службы SSRS)
   Можно объединить ячейки в области данных, чтобы соединить их, улучшить внешний вид области данных или сформировать метки для групп столбцов и строк.  
   
 > [!NOTE]  
->  Объединить можно только ячейки в пределах одной области в области данных: угла, заголовка столбца, определения (или заголовка) группы и текста отчета. Ячейки, относящиеся к разным областям, объединить нельзя. Например, нельзя объединить ячейку из угловой области в области данных с ячейкой из области группы строк. Дополнительные сведения об областях табликса см. в разделе [перечислены &#40;построитель отчетов и службы SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md).  
+>  Объединить можно только ячейки в пределах одной области в области данных: угла, заголовка столбца, определения (или заголовка) группы и текста отчета. Ячейки, относящиеся к разным областям, объединить нельзя. Например, нельзя объединить ячейку из угловой области в области данных с ячейкой из области группы строк. Дополнительные сведения об областях табликса см. в разделе [lists &#40;построитель отчетов and SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -34,11 +34,11 @@ ms.locfileid: "66105565"
   
 3.  Повторяйте шаги 1 и 2, чтобы объединить другие смежные ячейки в области данных.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Область данных табликса (построитель отчетов и службы SSRS)](../tablix-data-region-report-builder-and-ssrs.md)   
  [Таблицы &#40;построитель отчетов и службы SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [Матрицы &#40;построитель отчетов и службы SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   
  [Списки &#40;построитель отчетов и службы SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [Списки (построитель отчетов и службы SSRS)](tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Списки &#40;построитель отчетов и службы SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

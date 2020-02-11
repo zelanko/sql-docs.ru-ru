@@ -15,14 +15,14 @@ ms.assetid: 3675f641-b4b1-48ff-ba33-8d9ea064cd04
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ac48cd3397905a3ab0d14d65006cbd4a7656555b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920260"
 ---
 # <a name="cachesize-property-example-jscript"></a>Пример свойства CacheSize (JScript)
-В этом примере используется [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) свойство показывается разница в производительности для операции выполняется с и без 30 записи кэша. Вырежьте и вставьте следующий код в блокноте или другом текстовом редакторе и сохраните его в **CacheSizeJS.asp**.  
+В этом примере используется свойство [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) , чтобы продемонстрировать разницу в производительности для операции, выполняемой с 30-записывающим кэшем и без него. Вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **качесизежс. ASP**.  
   
 ```  
 <!-- BeginCacheSizeJS -->  
@@ -148,6 +148,6 @@ body {
 <!-- EndCacheSizeJS -->  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Пример свойства CacheSize (ADO)](../../../ado/reference/ado-api/cachesize-property-ado.md)   
+## <a name="see-also"></a>См. также:  
+ [Свойство CacheSize (ADO)](../../../ado/reference/ado-api/cachesize-property-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

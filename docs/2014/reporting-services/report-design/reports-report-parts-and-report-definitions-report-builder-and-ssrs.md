@@ -14,14 +14,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d22c8c22170ecef301eacd553f15c16091c9a6e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105045"
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>Отчеты, элементы отчетов и определения отчетов (построитель отчетов и службы SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] использует различные термины, описывающие отчет в разных состояниях, включая время начального определения, опубликованного отчета и отчета, просматриваемого, как оно отображается для пользователя.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]использует различные термины для описания отчета в различных состояниях, включая начальное определение, опубликованный отчет и отчет, просматриваемый пользователем.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -60,13 +60,13 @@ ms.locfileid: "66105045"
   
 -   Подпишитесь на отчет, который доставляется в папку «Входящие» электронной почты или в указанную общую папку в выбранном формате.  
   
- Подпишитесь на отчет, который доставляется в папку «Входящие» электронной почты или в указанную общую папку в выбранном формате. Формат подготовки отчетов по умолчанию — HTML 4.0. Помимо HTML, отчеты можно подготавливать к просмотру и во многих других форматах, например в форматах Excel, Word, XML, PDF, TIFF и CSV. Как и опубликованные отчеты, отчеты, готовые для просмотра, нельзя отредактировать и снова сохранить на сервере отчетов. Дополнительные сведения см. в разделе [экспорт отчетов &#40;построитель отчетов и службы SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md).  
+ Подпишитесь на отчет, который доставляется в папку «Входящие» электронной почты или в указанную общую папку в выбранном формате. Формат подготовки отчетов по умолчанию — HTML 4.0. Помимо HTML, отчеты можно подготавливать к просмотру и во многих других форматах, например в форматах Excel, Word, XML, PDF, TIFF и CSV. Как и опубликованные отчеты, отчеты, готовые для просмотра, нельзя отредактировать и снова сохранить на сервере отчетов. Дополнительные сведения см. в разделе [Экспорт отчетов &#40;построитель отчетов и службы SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>См. также  
- [Основные понятия разработки отчетов (построитель отчетов и службы SSRS)](report-authoring-concepts-report-builder-and-ssrs.md)   
- [Построитель отчетов в SQL Server 2014](../report-builder/report-builder-in-sql-server-2016.md)   
- [Установка, удаление и поддержка построителя отчетов](../install-uninstall-and-report-builder-support.md)   
+## <a name="see-also"></a>См. также:  
+ [Основные понятия разработки отчетов &#40;построитель отчетов и службы SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
+ [построитель отчетов в SQL Server 2014](../report-builder/report-builder-in-sql-server-2016.md)   
+ [Поддержка установки, удаления и построитель отчетов](../install-uninstall-and-report-builder-support.md)   
  [Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Экспорт отчетов &#40;построитель отчетов и службы SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)  
+ [Экспорт отчетов &#40;построитель отчетов и SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

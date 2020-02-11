@@ -18,16 +18,16 @@ ms.assetid: 23b3e100-5318-410e-b8f3-51c89b2dd777
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1b3ea170f07eaea32306e0453d492e510062c9b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046270"
 ---
-# <a name="spaddlogshippingprimarysecondary-transact-sql"></a>sp_add_log_shipping_primary_secondary (Transact-SQL)
+# <a name="sp_add_log_shipping_primary_secondary-transact-sql"></a>sp_add_log_shipping_primary_secondary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Эта хранимая процедура добавляет запись в базу данных-получатель, размещенную на сервере-источнике.  
+  Эта хранимая процедура добавляет запись в базу данных-получатель, размещенную на сервере-источнике.   
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,26 +42,26 @@ sp_add_log_shipping_primary_secondary
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @primary_database = ] 'primary_database'` — Имя базы данных на сервере-источнике. *primary_database* — **sysname**, не имеет значения по умолчанию.  
+`[ @primary_database = ] 'primary_database'`Имя базы данных на сервере-источнике. Аргумент *primary_database* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @secondary_server = ] 'secondary_server',` — Имя сервера-получателя. *сервер_получатель* — **sysname**, не имеет значения по умолчанию.  
+`[ @secondary_server = ] 'secondary_server',`Имя сервера-получателя. Аргумент *secondary_server* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @secondary_database = ] 'secondary_database'` — Имя базы данных-получателя. *secondary_database* — **sysname**, не имеет значения по умолчанию.  
+`[ @secondary_database = ] 'secondary_database'`Имя базы данных-получателя. Аргумент *secondary_database* имеет тип **sysname**и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или 1 (неуспешное завершение)  
+ 0 (успех) или 1 (сбой).  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  None  
   
-## <a name="remarks"></a>Примечания  
- **sp_add_log_shipping_primary_secondary** должна запускаться из **master** базы данных на сервере-источнике.  
+## <a name="remarks"></a>Remarks  
+ **sp_add_log_shipping_primary_secondary** должны быть запущены из базы данных **master** на сервере источника.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнять эту процедуру.  
+ Эту процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** .  
   
 ## <a name="examples"></a>Примеры  
- Этот пример иллюстрирует использование **sp_add_log_shipping_primary_secondary** Добавление записи для базы данных-получателя **LogShipAdventureWorks** на сервер-получатель FLATIRON.  
+ В этом примере показано использование **sp_add_log_shipping_primary_secondary** для добавления записи для базы данных-получателя **LogShipAdventureWorks** на сервер-получатель Флатирон.  
   
 ```  
 EXEC master.dbo.sp_add_log_shipping_primary_secondary   
@@ -71,8 +71,8 @@ EXEC master.dbo.sp_add_log_shipping_primary_secondary
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [О доставке журналов &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [SQL Server &#40;доставки журналов&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

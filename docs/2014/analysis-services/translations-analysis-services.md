@@ -1,5 +1,5 @@
 ---
-title: Переводы (службы Analysis Services) | Документация Майкрософт
+title: Переводы (Analysis Services) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,14 +18,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e97c9ba15aab664e9f0c77f9eb84152f75c3e3d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065879"
 ---
 # <a name="translations-analysis-services"></a>Переводы (службы Analysis Services)
-  **[!INCLUDE[applies](../includes/applies-md.md)]**  Только многомерные  
+  **[!INCLUDE[applies](../includes/applies-md.md)]** Только многомерные  
   
  В многомерной модели данных [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] можно внедрять несколько переводов заголовка для предоставления строк, связанных с определенным языковым стандартом, в зависимости от кода языка. Переводы можно добавлять для имени базы данных, объектов куба и объектов измерений базы данных.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66065879"
   
 1.  Откройте многомерную модель Adventure Works в конструкторе.  
   
-2.  В обозревателе решений откройте представления источников данных и дважды щелкните файл Adventure Works DW\<версия > .dsv.  
+2.  В обозреватель решений откройте представление источника данных и дважды щелкните Adventure Works DW\<версия>. DSV.  
   
 3.  Найдите dimDate, dimProduct, dimProductCategory или dimProductSubcateogry. Все эти измерения содержат атрибуты для преобразованных элементов месяца, дня недели, названия продукта, имени категории и т. д.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66065879"
   
  Форматы даты, времени и валюты не реализуются с помощью переводов. Для динамического предоставления определенных форматов на основе языкового стандарта клиента используйте мастер преобразования валюты и свойство `FormatString`. Дополнительные сведения см. в разделах [Конвертация валюты (службы Analysis Services)](currency-conversions-analysis-services.md) и [Элемент FormatString (ASSL)](https://docs.microsoft.com/bi-reference/assl/properties/formatstring-element-assl).  
   
- [Занятие 9. Определение перспектив и переводов](lesson-9-defining-perspectives-and-translations.md) в учебнике по службам Analysis Services поможет выполнить шаги для создания и тестирования переводов.  
+ [Занятие 9. определение перспектив и переводов](lesson-9-defining-perspectives-and-translations.md) в Analysis Services руководстве поможет вам выполнить шаги по созданию и тестированию переводов.  
   
 ## <a name="defining-translations"></a>Определение переводов  
  При определении перевода создается объект `Translation` в качестве дочернего элемента базы данных [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], измерения или объекта куба. Используйте [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] , чтобы открыть решение и определить переводы.  
@@ -63,7 +63,7 @@ ms.locfileid: "66065879"
   
 1.  В обозревателе решений дважды щелкните имя куба, чтобы открыть конструктор кубов.  
   
-2.  Перейдите на вкладку **Переводы** . На этой странице перечислены все объекты, которые поддерживают переводы.  
+2.  Перейдите на вкладку **переводы** . На этой странице перечислены все объекты, поддерживающие переводы.  
   
 3.  Для каждого объекта укажите целевой язык (автоматически преобразуется в код языка), переведенный заголовок и переведенное описание. Список языков в службах Analysis Services согласован как для языка сервера в Management Studio, так и при добавлении переопределения перевода для одного атрибута.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "66065879"
   
 4.  Постройте и разверните проект.  
   
-5.  Подключитесь к базе данных с помощью клиентского приложения, например Excel, добавив в строку подключения код языка. Дополнительные сведения см. в разделе [Советы и рекомендации по глобализации (службы Analysis Services)](globalization-tips-and-best-practices-analysis-services.md) .  
+5.  Подключитесь к базе данных с помощью клиентского приложения, например Excel, добавив в строку подключения код языка. Дополнительные сведения см. в разделе [Globalization Tips and Best Practices &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) .  
   
 ### <a name="add-translations-to-a-dimension-and-attributes"></a>Добавление переводов в измерение и атрибуты  
  Переводы можно добавить в измерения базы данных, атрибуты, иерархии и уровни в иерархии.  
@@ -82,7 +82,7 @@ ms.locfileid: "66065879"
   
 1.  В обозревателе решений дважды щелкните имя измерения, чтобы открыть конструктор измерений.  
   
-2.  Перейдите на вкладку **Переводы** . На этой странице перечислены все объекты измерений, которые поддерживают переводы.  
+2.  Перейдите на вкладку **переводы** . На этой странице перечислены все объекты измерений, поддерживающие переводы.  
   
      Для каждого объекта укажите целевой язык (автоматически преобразуется в код языка), переведенный заголовок и переведенное описание. Список языков в службах Analysis Services согласован как для языка сервера в Management Studio, так и при добавлении переопределения перевода для одного атрибута.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "66065879"
   
 4.  Постройте и разверните проект.  
   
-5.  Подключитесь к базе данных с помощью клиентского приложения, например Excel, добавив в строку подключения код языка. Дополнительные сведения см. в разделе [Советы и рекомендации по глобализации (службы Analysis Services)](globalization-tips-and-best-practices-analysis-services.md).  
+5.  Подключитесь к базе данных с помощью клиентского приложения, например Excel, добавив в строку подключения код языка. Дополнительные сведения см. в разделе [Globalization Tips and Best Practices &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) .  
   
 ### <a name="add-a-translation-of-the-database-name"></a>Добавление перевода имени базы данных  
  На уровне базы данных можно добавлять переводы имени и описания. Переведенное имя базы данных может быть видимо для клиентских подключений, которые указывают код языка, но это зависит от используемого средства. Например, при просмотре базы данных в среде Management Studio не покажется переведенное имя сортировки, даже если указать код языка для соединения. Интерфейс API, используемый в Management Studio для подключения к службам Analysis Services, не поддерживает чтение свойства `Language`.  
@@ -116,10 +116,10 @@ ms.locfileid: "66065879"
 ## <a name="resolving-translations"></a>Разрешение переводов  
  Если клиентское приложение запрашивает код языка, экземпляр [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] пытается разрешить данные и метаданные для объектов [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] в ближайший соответствующий код языка. Если клиентское приложение не задает язык по умолчанию или задает нейтральный код локали (0) или идентификатор языка процесса по умолчанию (1024), то службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] используют язык по умолчанию для экземпляра, чтобы вернуть данные и метаданные для объектов служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
-## <a name="see-also"></a>См. также  
- [Сценарии глобализации для многомерных служб Analysis Services](globalization-scenarios-for-analysis-services-multiidimensional.md)   
- [Языки и параметры сортировки (службы Analysis Services)](languages-and-collations-analysis-services.md)   
+## <a name="see-also"></a>См. также:  
+ [Сценарии глобализации для Analysis Services многомерных](globalization-scenarios-for-analysis-services-multiidimensional.md)   
+ [Языки и параметры сортировки &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)   
  [Задание или изменение параметров сортировки столбца](../relational-databases/collations/set-or-change-the-column-collation.md)   
- [Советы и рекомендации по глобализации (службы Analysis Services)](globalization-tips-and-best-practices-analysis-services.md)  
+ [Советы и рекомендации по глобализации &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)  
   
   

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cf44b6af30d5db32c006c5a7d9b59d1810840d18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103190"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>Включение и отключение компонентов служб Reporting Services
@@ -25,7 +25,7 @@ ms.locfileid: "66103190"
   
  В процедурах, приведенных в данном разделе, показывается, как можно отключать функции служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в собственном режиме. Настройку функций можно выполнить разными способами, например, напрямую изменив файл `RsReportServer.config` или используя аспект **Настройка контактной зоны для служб Reporting Services** управления на основе политик в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Используйте ссылки, чтобы найти одну или несколько процедур, в которых объясняется, как можно включить или выключить функцию.  
   
--   [веб-служба сервера отчетов](#RSWebSvc)  
+-   [Веб-служба сервера отчетов](#RSWebSvc)  
   
 -   [запланированные события и обработка;](#Sched)  
   
@@ -33,9 +33,9 @@ ms.locfileid: "66103190"
   
 -   [построитель отчетов](#ReportBuilder)  
   
--   [встроенная безопасность Windows для источников данных для отчетов](#WinIntSec)  
+-   [Встроенная безопасность Windows для источников данных для отчетов](#WinIntSec)  
   
-##  <a name="RSWebSvc"></a> Report Server Web Service  
+##  <a name="RSWebSvc"></a>Веб-служба сервера отчетов  
   
 #### <a name="to-turn-on-or-off-the-report-server-web-service-by-editing-configuration"></a>Включение или выключение веб-службы сервера отчетов методом изменения конфигурации  
   
@@ -59,19 +59,19 @@ ms.locfileid: "66103190"
   
 1.  Откройте среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и установите соединение с экземпляром служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , который следует настроить.  
   
-2.  В обозревателе объектов щелкните правой кнопкой узел служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , укажите пункт **Политики**и выберите **Аспекты**.  
+2.  В обозревателе объектов щелкните правой кнопкой мыши [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] узел, укажите пункт **политики**и выберите пункт **аспекты**.  
   
 3.  В списке **Аспект** выберите **Настройка контактной зоны для служб Reporting Services**.  
   
 4.  В разделе **Свойства аспекта**можно выполнить следующие действия.  
   
-    -   Чтобы включить сервер веб-службы отчетов, присвойте **WebServiceAndHTTPAccessEnabled** для `True`.  
+    -   Чтобы включить веб-службу сервера отчетов, задайте `True`для **webserviceandhttpaccessenabled присвоено** значение.  
   
-    -   Чтобы отключить сервер веб-службы отчетов, присвойте **WebServiceAndHTTPAccessEnabled** для `False`.  
+    -   Чтобы отключить веб-службу сервера отчетов, задайте `False`для **webserviceandhttpaccessenabled присвоено** значение.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="Sched"></a> Запланированные события и доставка  
+##  <a name="Sched"></a>Запланированные события и доставка  
   
 #### <a name="to-turn-on-or-off-scheduled-events-and-delivery-by-editing-configuration"></a>Включение или выключение запланированных событий и доставки методом изменения конфигурации  
   
@@ -102,22 +102,22 @@ ms.locfileid: "66103190"
   
 1.  Откройте среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и установите соединение с экземпляром служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , который следует настроить.  
   
-2.  В обозревателе объектов щелкните правой кнопкой узел служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , укажите пункт **Политики**и выберите **Аспекты**.  
+2.  В обозревателе объектов щелкните правой кнопкой мыши [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] узел, укажите пункт **политики**и выберите пункт **аспекты**.  
   
 3.  В списке **Аспект** выберите **Настройка контактной зоны для служб Reporting Services**.  
   
 4.  В разделе **Свойства аспекта**можно выполнить следующие действия.  
   
-    -   Чтобы включить запланированные события и доставку, присвойте **ScheduleEventsAndReportDeliveryEnabled** для `True`.  
+    -   Чтобы включить запланированные события и доставку, задайте **** для `True`присвойте scheduleeventsandreportdeliveryenabled значение.  
   
-    -   Чтобы отключить запланированные события и доставку, присвойте **ScheduleEventsAndReportDeliveryEnabled** для `False`.  
+    -   Чтобы отключить запланированные события и доставку, задайте **** для `False`присвойте scheduleeventsandreportdeliveryenabled значение.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 > [!NOTE]  
 >  Фоновую обработку нельзя отключить полностью, поскольку она обеспечивает функциональные возможности обслуживания базы данных, необходимые для операций сервера.  
   
-##  <a name="ReportManager"></a> Диспетчер отчетов  
+##  <a name="ReportManager"></a>диспетчер отчетов  
   
 #### <a name="to-turn-on-or-off-report-manager-by-editing-configuration"></a>Включение или отключение диспетчера отчетов методом изменения конфигурации  
   
@@ -147,13 +147,13 @@ ms.locfileid: "66103190"
   
 4.  В разделе **Свойства аспекта**можно выполнить следующие действия.  
   
-    -   Чтобы включить диспетчер отчетов, присвойте **ReportManagerEnabled** для `True`.  
+    -   Чтобы включить диспетчер отчетов, задайте `True`для **присвойте reportmanagerenabled** значение.  
   
-    -   Чтобы отключить диспетчер отчетов, задайте **ReportManagerEnabled** для `False`.  
+    -   Чтобы отключить диспетчер отчетов, задайте `False`для **присвойте reportmanagerenabled** значение.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="ReportBuilder"></a> построитель отчетов  
+##  <a name="ReportBuilder"></a>построитель отчетов  
   
 #### <a name="to-turn-on-or-off-report-builder-by-using-sql-server-management-studio"></a>Включение или отключение построителя отчетов с использованием среды SQL Server Management Studio  
   
@@ -169,7 +169,7 @@ ms.locfileid: "66103190"
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="WinIntSec"></a> Встроенная безопасность Windows  
+##  <a name="WinIntSec"></a>Встроенная безопасность Windows  
   
 #### <a name="to-turn-on-or-off-windows-integrated-security-by-using-sql-server-management-studio"></a>Включение или отключение встроенной безопасности Windows с использованием среды SQL Server Management Studio  
   
@@ -179,13 +179,13 @@ ms.locfileid: "66103190"
   
 3.  В диалоговом окне **Свойства сервера** в области **Выбор страницы**щелкните **Безопасность**.  
   
-    -   Чтобы включить встроенную безопасность Windows, установите флажок **Использовать встроенную безопасность Windows для источников данных для отчетов** .  
+    -   Чтобы включить встроенную безопасность Windows, установите флажок **включить встроенную безопасность Windows для источников данных отчета** .  
   
-    -   Чтобы отключить встроенную безопасность Windows, снимите флажок **Использовать встроенную безопасность Windows для источников данных для отчетов** .  
+    -   Чтобы отключить встроенную безопасность Windows, снимите флажок **включить встроенную безопасность Windows для источников данных отчета** .  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   
   

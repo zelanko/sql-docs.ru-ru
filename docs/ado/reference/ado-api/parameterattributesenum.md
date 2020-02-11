@@ -1,5 +1,5 @@
 ---
-title: ParameterAttributesEnum | Документация Майкрософт
+title: Параметераттрибутесенум | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,29 +16,29 @@ ms.assetid: 7ef6c728-5eda-4bde-8052-02d2db1d2cfe
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 95ba0d84d99d2f0cd51b363a42b8620b55459b7d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917757"
 ---
 # <a name="parameterattributesenum"></a>ParameterAttributesEnum
-Указывает атрибуты [параметр](../../../ado/reference/ado-api/parameter-object.md) объекта.  
+Задает атрибуты объекта [параметра](../../../ado/reference/ado-api/parameter-object.md) .  
   
-|Константа|Значение|Описание|  
+|Постоянно|Значение|Description|  
 |--------------|-----------|-----------------|  
-|**adParamSigned**|16|Указывает, что параметр допускает значения со знаком.|  
-|**adParamNullable**|64|Указывает, что параметр допускает значения null.|  
-|**adParamLong**|128|Указывает, что параметр допускает длинные двоичные данные.|  
+|**адпарамсигнед**|16|Указывает, что параметр принимает значения со знаком.|  
+|**адпарамнуллабле**|64|Указывает, что параметр принимает значения NULL.|  
+|**адпарамлонг**|128|Указывает, что параметр принимает длинные двоичные данные.|  
   
-## <a name="adowfc-equivalent"></a>Эквивалент ADO и WFC  
- Пакет: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>Эквивалент ADO/WFC  
+ Пакет: **com. MS. WFC. Data**  
   
-|Константа|  
+|Постоянно|  
 |--------------|  
-|AdoEnums.ParameterAttributes.SIGNED|  
-|AdoEnums.ParameterAttributes.NULLABLE|  
-|AdoEnums.ParameterAttributes.LONG|  
+|Адоенумс. Параметераттрибутес. со знаком|  
+|Адоенумс. Параметераттрибутес. NULLABLE|  
+|Адоенумс. Параметераттрибутес. LONG|  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  [Свойство Attributes (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 433dc3dcde3a0cee2652baa5f1a59997ec7bf55b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066453"
 ---
 # <a name="tabular-model-roles-ssas-tabular"></a>Роли табличных моделей (табличные службы SSAS)
@@ -24,8 +24,8 @@ ms.locfileid: "66066453"
   
 ## <a name="related-tasks"></a>Связанные задачи  
   
-|Задача|Описание|  
+|Задача|Description|  
 |----------|-----------------|  
-|[Управление ролями с помощью среды SSMS (табличные службы SSAS)](manage-roles-by-using-ssms-ssas-tabular.md)|Описывает, как создавать роли, добавлять члены в роль и исключать их из роли, изменять разрешения для роли, а также добавлять, редактировать или удалять фильтры уровня строк с помощью DAX.|  
+|[Управление ролями с помощью SSMS &#40;табличные&#41;SSAS](manage-roles-by-using-ssms-ssas-tabular.md)|Описывает, как создавать роли, добавлять члены в роль и исключать их из роли, изменять разрешения для роли, а также добавлять, редактировать или удалять фильтры уровня строк с помощью DAX.|  
   
   

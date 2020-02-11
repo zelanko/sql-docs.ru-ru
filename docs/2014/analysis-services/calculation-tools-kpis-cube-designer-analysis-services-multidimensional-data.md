@@ -1,5 +1,5 @@
 ---
-title: Средства вычисления (вкладка Ключевые показатели эффективности, конструктор кубов) (службы Analysis Services — многомерные данные) | Документация Майкрософт
+title: Средства вычисления (вкладка «Ключевые показатели эффективности», конструктор кубов) (Analysis Services-многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ecd16965c81ccb091d70320bd91c56112d3c15a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088272"
 ---
 # <a name="calculation-tools-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Средства вычисления (вкладка «Ключевые показатели эффективности», конструктор кубов) (службы Analysis Services — многомерные данные)
@@ -39,7 +39,7 @@ ms.locfileid: "66088272"
 > [!NOTE]  
 >  В режиме проекта диалоговое окно **Средства вычисления** считывает сведения для этого параметра из XML-файла с именем MDXFunctions.xml, который имеется в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. В режиме «в сети» сведения для этого параметра извлекаются из набора строк схемы MDSCHEMA_FUNCTIONS для этого экземпляра.  
   
- **Шаблоны**  
+ **См**  
  Отображает предопределенные шаблоны, доступные для ключевых показателей эффективности.  
   
  Перетащите выбранный элемент на панели **Редактор форм ключевого показателя эффективности** , чтобы включить синтаксис многомерных выражений для этого элемента в выбранном размещении на панели.  
@@ -71,12 +71,12 @@ ms.locfileid: "66088272"
 > [!NOTE]  
 >  Этот параметр доступен только в том случае, если выбран параметр **Метаданные** .  
   
-## <a name="see-also"></a>См. также  
- [Конструктор кубов &#40;службы Analysis Services — многомерные данные&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Ключевые показатели эффективности &#40;конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)   
- [Панель инструментов &#40;вкладка «Ключевые показатели эффективности», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](toolbar-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Организатор ключевых показателей Эффективности &#40;вкладка «Ключевые показатели эффективности», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](kpi-organizer-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Редактор формы ключевого показателя Эффективности &#40;вкладка «Ключевые показатели эффективности», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Браузер ключевых показателей Эффективности &#40;вкладка «Ключевые показатели эффективности», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](kpi-browser-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>См. также:  
+ [Конструктор кубов &#40;Analysis Services многомерных данных&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Ключевые показатели эффективности &#40;конструктора кубов&#41; &#40;Analysis Services многомерных данных&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)   
+ [Панель инструментов &#40;вкладка «Ключевые показатели эффективности», конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](toolbar-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Организатор ключевых показателей эффективности &#40;вкладка "ключевые показатели эффективности", конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](kpi-organizer-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Редактор форм ключевых показателей эффективности &#40;вкладка "ключевые показатели эффективности", конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Обозреватель ключевых показателей эффективности &#40;вкладка "ключевые показатели эффективности", конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](kpi-browser-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)  
   
   

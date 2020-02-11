@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ac2b8ca912f02aecc5e1b3e76d04d84b501db89b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63253487"
 ---
 # <a name="remove-joins-visual-database-tools"></a>Удаление соединений (визуальные инструменты для баз данных)
@@ -35,9 +35,9 @@ ms.locfileid: "63253487"
   
  Конструктор запросов и представлений удаляет линию соединения и изменяет инструкцию на [панели SQL](sql-pane-visual-database-tools.md).  
   
-## <a name="see-also"></a>См. также  
- [Автоматическое соединение таблиц &#40;визуальных инструментах баз данных&#41;](join-tables-automatically-visual-database-tools.md)   
- [Соединение таблиц вручную &#40;визуальных инструментах баз данных&#41;](join-tables-manually-visual-database-tools.md)   
+## <a name="see-also"></a>См. также:  
+ [Автоматическое соединение таблиц &#40;визуальных инструментов для баз данных&#41;](join-tables-automatically-visual-database-tools.md)   
+ [Соединение таблиц вручную &#40;визуальных инструментов для баз данных&#41;](join-tables-manually-visual-database-tools.md)   
  [Запросы с соединениями (визуальные инструменты для баз данных)](query-with-joins-visual-database-tools.md)  
   
   

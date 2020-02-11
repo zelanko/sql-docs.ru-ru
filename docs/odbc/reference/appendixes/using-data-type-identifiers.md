@@ -14,25 +14,25 @@ ms.assetid: 467e0c0c-a818-4737-8a24-3d8e15c7e162
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2b5e9fea64986bf595676540d74bb87a6e62521c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68070008"
 ---
 # <a name="using-data-type-identifiers"></a>Использование идентификаторов типов данных
-Приложения используют идентификаторы типа данных двумя способами: для описания свои буферы на драйвер и для получения метаданных о результирующем наборе от драйвера, чтобы определить, какой тип C помещает в буфер для хранения данных. Приложения вызывают следующие функции для выполнения следующих задач:  
+Приложения используют идентификаторы типов данных двумя способами: для описания их буферов в драйвере и для получения метаданных о результирующем наборе из драйвера, чтобы они могли определить тип буферов C, используемых для хранения данных. Приложения вызывают следующие функции для выполнения следующих задач:  
   
--   **SQLBindParameter**, **SQLBindCol**, и **SQLGetData** - для описания типа данных C буферов приложения.  
+-   **SQLBindParameter**, **SQLBindCol**и **SQLGetData** — описывают тип данных C буферов приложений.  
   
--   **SQLBindParameter** - для описания типа данных SQL динамических параметров.  
+-   **SQLBindParameter** — описание типа данных SQL динамических параметров.  
   
--   **SQLColAttribute** и **SQLDescribeCol** — для извлечения типов данных SQL столбцы результирующего набора.  
+-   **SQLColAttribute** и **SQLDescribeCol** — для получения типов данных SQL для столбцов результирующего набора.  
   
--   **SQLDescribeParameter** — для извлечения типов данных SQL из параметров.  
+-   **SQLDescribeParameter** — получение типов данных SQL для параметров.  
   
--   **SQLColumns**, **SQLProcedureColumns**, и **SQLSpecialColumns** — для получения различных сведений о схеме типы данных SQL  
+-   **SQLColumns**, **SQLProcedureColumns**и **SQLSPECIALCOLUMNS** — получение типов данных SQL различных сведений о схеме  
   
--   **SQLGetTypeInfo** — для получения списка поддерживаемых типов данных  
+-   **SQLGetTypeInfo** — получение списка поддерживаемых типов данных  
   
- Идентификаторы типа данных, хранятся в поле SQL_DESC_CONCISE_TYPE дескриптора. Дескриптор функции **SQLSetDescField** и **SQLSetDescRec** может использоваться с соответствующих типов для выполнения задачи, перечисленные в списке выше. Дополнительные сведения см. в разделе [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).
+ Идентификаторы типов данных хранятся в SQL_DESC_CONCISE_TYPE поле дескриптора. Функции дескриптора **SQLSetDescField** и **SQLSetDescRec** можно использовать с соответствующими типами для выполнения задач, перечисленных в предыдущем списке. Дополнительные сведения см. в разделе [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).

@@ -16,31 +16,31 @@ ms.assetid: f78f61b6-87e0-48dc-961e-83d0e20da58e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 23ec65380bfea16d38f02cab0a070ab69f85d525
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919748"
 ---
 # <a name="commandstream-property-ado"></a>Свойство CommandStream (ADO)
-Указывает поток, используемый в качестве входных данных для [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта.  
+Указывает поток, используемый в качестве входных данных для объекта [команды](../../../ado/reference/ado-api/command-object-ado.md) .  
   
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
- Задает или возвращает поток, используемый в качестве входных данных для **команда** объекта. Формат для этого потока от поставщика; см. сведения о документации вашего поставщика. Это свойство похоже на [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) свойство, которое используется для указания строка ввода **команда**.  
+ Задает или возвращает поток, используемый в качестве входных данных для объекта **команды** . Формат этого потока зависит от поставщика. Дополнительные сведения см. в документации поставщика. Это свойство аналогично свойству [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) , которое используется для указания строки для входных данных **команды**.  
   
-## <a name="remarks"></a>Примечания  
- **CommandStream** и **CommandText** взаимно исключают друг друга. Когда пользователь задает **CommandStream** свойство, **CommandText** свойство устанавливается в пустую строку (»»). Если пользователь задает **CommandText** свойство, **CommandStream** свойству будет присвоено **ничего не**.  
+## <a name="remarks"></a>Remarks  
+ **CommandStream** и **CommandText** являются взаимоисключающими. Когда пользователь задает свойство **CommandStream** , свойству **CommandText** присваивается пустая строка (""). Если пользователь задает свойство **CommandText** , свойству **CommandStream** будет присвоено значение **Nothing**.  
   
- Поведение **Command.Parameters.Refresh** и **Command.Prepare** методы определяются поставщиком. Значения параметров в потоке не могут быть обновлены.  
+ Поведение методов **Command. parameters. Refresh** и **Command. Prepare** определяется поставщиком. Значения параметров в потоке не могут быть обновлены.  
   
- Входной поток недоступен для других объектов ADO, которые возвращают источник **команда**. Например если [источника](../../../ado/reference/ado-api/source-property-ado-recordset.md) из [набор записей](../../../ado/reference/ado-api/recordset-object-ado.md) присваивается **команда** объект, имеющий поток в качестве входных данных, **Recordset.Source** продолжает возвращать **CommandText** свойство, которое содержит пустую строку ("»), а не содержимое потока **CommandStream** свойство.  
+ Входной поток недоступен для других объектов ADO, возвращающих источник **команды**. Например, если [источнику](../../../ado/reference/ado-api/source-property-ado-recordset.md) [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) присваивается объект **Command** , имеющий поток в качестве входных данных, то **набор записей. Source** продолжит возвращать свойство **CommandText** , которое содержит пустую строку (""), а не содержимое потока свойства **CommandStream** .  
   
- При использовании поток команды (как указано **CommandStream**), единственным допустимым [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) значений в параметре [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) свойства  **adCmdText** и **adCmdUnknown**. Любое другое значение приводит к ошибке.  
+ При использовании потока команд (как указано в **CommandStream**) единственными допустимыми значениями [Коммандтипинум](../../../ado/reference/ado-api/commandtypeenum.md) для свойства [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) являются **адкмдтекст** и **адкмдункновн**. Любое другое значение приводит к возникновению ошибки.  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  [Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство CommandText (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)   
- [Свойство Dialect](../../../ado/reference/ado-api/dialect-property.md)   
+ [Свойство диалекта](../../../ado/reference/ado-api/dialect-property.md)   
  [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)

@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f78dba913c4daa1c2e47682b282721b5f0fe27d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63260684"
 ---
 # <a name="report-history-methods"></a>Методы журнала отчета
@@ -34,7 +34,7 @@ ms.locfileid: "63260684"
 |<xref:ReportService2010.ReportingService2010.SetItemHistoryLimit%2A>|Указывает, сколько моментальных снимков элемента сохраняет сервер отчетов.|  
 |<xref:ReportService2010.ReportingService2010.SetItemHistoryOptions%2A>|Устанавливает параметры журнала элементов, указанные при создании моментального снимка журнала элементов для указанного элемента каталога.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание приложений с помощью веб-службы и .NET Framework](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Веб-служба сервера отчетов](../report-server-web-service.md)   
  [Методы веб-службы сервера отчетов](report-server-web-service-methods.md)   

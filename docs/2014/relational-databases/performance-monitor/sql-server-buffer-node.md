@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7e99c6e4f28ecef032ff3b793393e5465740156d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250743"
 ---
 # <a name="sql-serverbuffer-node"></a>SQL Server:Buffer Node
@@ -26,12 +26,12 @@ ms.locfileid: "63250743"
 ## <a name="buffer-node-performance-objects"></a>Объекты производительности узла буфера  
  Объекты производительности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **узла буфера** описаны в следующей таблице.  
   
-|Счетчики узла буфера SQL Server|Описание|  
+|Счетчики узла буфера SQL Server|Description|  
 |-------------------------------------|-----------------|  
-|**Страниц базы данных**|Указывает число страниц с содержимым базы данных в буферном пуле этого узла.|  
+|**Страницы базы данных**|Указывает число страниц с содержимым базы данных в буферном пуле этого узла.|  
 |**Ожидаемый срок жизни страницы**|Указывает минимальное количество секунд, в течение которых страница остается в буферном пуле этого узла без ссылок на нее.|  
 |**Поисков страниц на локальном узле/с**|Указывает число запросов поиска с этого узла, которые были удовлетворены с этого узла.|  
-|**Поисков страниц на удаленных узлах/с**|Указывает число запросов поиска с этого узла, которые были удовлетворены с других узлов.|  
+|**Поисков страниц удаленной заметки/с**|Указывает число запросов поиска с этого узла, которые были удовлетворены с других узлов.|  
   
  Если SQL Server выполняется на оборудовании, отличном от NUMA, то счетчики объектов **узел буфера** и **диспетчер буферов** должны иметь одинаковые значения.  
   
@@ -40,10 +40,10 @@ ms.locfileid: "63250743"
 > [!NOTE]  
 >  Значения и суммы счетчиков могут точно не совпадать по причине динамической природы счетчиков и точности отбора значений.  
   
-## <a name="see-also"></a>См. также  
- [SQL Server, объект Buffer Manager](sql-server-buffer-manager-object.md)   
+## <a name="see-also"></a>См. также:  
+ [SQL Server, объект диспетчера буферов](sql-server-buffer-manager-object.md)   
  [Параметры конфигурации сервера «Server Memory»](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
- [Наблюдение за использованием ресурсов (системный монитор)](monitor-resource-usage-system-monitor.md)   
- [sys.dm_os_performance_counters (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)  
+ [Мониторинг использования ресурсов &#40;системном мониторе&#41;](monitor-resource-usage-system-monitor.md)   
+ [sys. dm_os_performance_counters &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)  
   
   

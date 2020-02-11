@@ -14,23 +14,23 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 65ac3c0c590a3b5d1fc03ab17625f039c163ac57
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480031"
 ---
 # <a name="commit-a-version-master-data-services"></a>Фиксация версии (службы Master Data Services)
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]фиксация версии модели препятствует изменениям элементов модели и их атрибутов. Открыть зафиксированную версию нельзя.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения этой процедуры:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Управление версиями** ;  
   
 -   необходимо быть администратором модели. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](administrators-master-data-services.md).  
   
--   Версия должна иметь состояние **Заблокирована**. Дополнительные сведения см. в статье [Блокировка версии (службы Master Data Services)](../../2014/master-data-services/lock-a-version-master-data-services.md).  
+-   Версия должна иметь состояние **Заблокирована**. Дополнительные сведения см. в статье [Lock a Version &#40;Master Data Services&#41;](../../2014/master-data-services/lock-a-version-master-data-services.md).  
   
 -   Все элементы должны пройти проверку.  
   
@@ -46,15 +46,15 @@ ms.locfileid: "65480031"
   
 5.  В диалоговом окне подтверждения нажмите кнопку **ОК**.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
   
--   [Создание флага версии (службы Master Data Services)](../../2014/master-data-services/create-a-version-flag-master-data-services.md)  
+-   [Создание флага версии &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-version-flag-master-data-services.md)  
   
--   [Назначение флага версии (службы Master Data Services)](../../2014/master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
+-   [Назначение флага версии &#40;Master Data Services&#41;](../../2014/master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   
--   [Копирование версии (службы Master Data Services)](../../2014/master-data-services/copy-a-version-master-data-services.md)  
+-   [Копирование Master Data Services &#40;версии&#41;](../../2014/master-data-services/copy-a-version-master-data-services.md)  
   
-## <a name="see-also"></a>См. также  
- [Версии (службы Master Data Services)](../../2014/master-data-services/versions-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Версии &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)  
   
   

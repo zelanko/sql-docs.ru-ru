@@ -1,5 +1,5 @@
 ---
-title: Показать диалоговое окно «таблицы» (службы Analysis Services — многомерные данные) | Документация Майкрософт
+title: Диалоговое окно «Отображение таблицы» (Analysis Services-многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d21063bf403d9973ac4ff09725545e47e84a7cd2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068663"
 ---
 # <a name="show-table-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Отображение таблицы» (службы Analysis Services — многомерные данные)
@@ -35,15 +35,15 @@ ms.locfileid: "66068663"
 -   Щелкните правой кнопкой мыши фон панели **Представление источника данных** на странице **Структура интеллектуального анализа данных** в **конструкторе моделей интеллектуального анализа данных** и выберите в контекстном меню пункт **Показать таблицы**.  
   
 ## <a name="options"></a>Параметры  
- **Выбор дополнительных таблиц для отображения**  
+ **Выбор дополнительных таблиц для просмотра**  
  Выберите таблицы для добавления на панель **Представление источника данных** . Данный параметр отображает сетку доступных объектов и их типы, совпадающие с фильтром, заданным на странице **Фильтр** (или все таблицы, если **Фильтр** не установлен), которые пока не отображаются в данной диаграмме.  
   
- **Фильтр**  
+ **Filter**  
  Задайте фильтр ограничения для объектов в списке, затем нажмите кнопку, чтобы отфильтровать таблицы в списке **Выбор дополнительных таблиц для просмотра**.  
   
-## <a name="see-also"></a>См. также  
- [Конструкторы и диалоговые окна служб Analysis Services &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Представление источника данных &#40;вкладка «Структура измерения» конструктора измерений&#41; &#40;службы Analysis Services — многомерные данные&#41;](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)   
- [Представление источника данных &#40;вкладка «Структура куба» конструктора кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>См. также:  
+ [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Представление источника данных &#40;вкладка «Структура измерения», конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Представление источника данных &#40;вкладка «Структура куба», конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md)  
   
   

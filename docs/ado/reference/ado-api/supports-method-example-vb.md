@@ -1,5 +1,5 @@
 ---
-title: Поддерживает метод пример (Visual Basic) | Документация Майкрософт
+title: Пример метода поддержки (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 135aab26-ff5c-4fd9-910f-65cdead0b47e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e3bcea9183d44b02e5f45b7bdb977573f283815b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67911700"
 ---
 # <a name="supports-method-example-vb"></a>Пример метода Supports (Visual Basic)
-В этом примере используется [поддерживает](../../../ado/reference/ado-api/supports-method.md) метод для отображения параметров, поддерживаемых набор записей открыт с различные типы курсоров. Процедура DisplaySupport является обязательным для выполнения этой процедуры.  
+В этом примере используется [метод](../../../ado/reference/ado-api/supports-method.md) Supports для вывода параметров, поддерживаемых набором записей, открытым с разными типами курсоров. Для выполнения этой процедуры требуется процедура Дисплайсуппорт.  
   
 ```  
 'BeginSupportsVB  
@@ -161,6 +161,6 @@ End Sub
 'EndSupports2VB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Метод Supports](../../../ado/reference/ado-api/supports-method.md)

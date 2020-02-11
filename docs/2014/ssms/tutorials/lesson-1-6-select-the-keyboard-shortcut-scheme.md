@@ -11,18 +11,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0aada3a83a29a921584a204f51695e6598131e0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63312568"
 ---
 # <a name="select-the-keyboard-shortcut-scheme"></a>Выбор схемы сочетаний клавиш
   Вместо стандартной схемы сочетаний клавиш среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] можно настроить [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] на использование схемы сочетаний клавиш, совместимой с [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)].  
   
-## <a name="changing-to-the-includevsdev10longincludesvs-dev10-long-mdmd-keyboard-scheme"></a>Переключение на схему сочетаний клавиш [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)]  
+## <a name="changing-to-the-includevs_dev10_longincludesvs-dev10-long-mdmd-keyboard-scheme"></a>Переключение на схему сочетаний клавиш [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)]  
   
-#### <a name="to-apply-includevsdev10longincludesvs-dev10-long-mdmd-compatible-keyboard-scheme"></a>Чтобы установить схему сочетаний клавиш, совместимую с [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)] , выполните следующие действия.  
+#### <a name="to-apply-includevs_dev10_longincludesvs-dev10-long-mdmd-compatible-keyboard-scheme"></a>Чтобы установить схему сочетаний клавиш, совместимую с [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)] , выполните следующие действия.  
   
 1.  В меню **Сервис** выберите команду **Параметры**.  
   
@@ -35,8 +35,8 @@ ms.locfileid: "63312568"
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
  [Настройка параметров запуска](lesson-1-7-set-the-startup-options.md)  
   
-## <a name="see-also"></a>См. также  
- [SQL Server Management Studio сочетания клавиш](../sql-server-management-studio-keyboard-shortcuts.md)   
+## <a name="see-also"></a>См. также:  
+ [SQL Server Management Studio сочетаний клавиш](../sql-server-management-studio-keyboard-shortcuts.md)   
  [Настройка меню и сочетаний клавиш](../customize-menus-and-shortcut-keys.md)  
   
   

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 657116e00b6905964f8cc65c28dff383c3cc9ad0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63261686"
 ---
 # <a name="queue-reader-agent-security"></a>Безопасность агента чтения очереди
@@ -33,8 +33,8 @@ ms.locfileid: "63261686"
  **Пароль** и **Подтверждение пароля**  
  Введите пароль для учетной записи Windows.  
   
-## <a name="see-also"></a>См. также  
- [Управление именами для входа и паролями при репликации](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
+## <a name="see-also"></a>См. также:  
+ [Управление именами входа и паролями в репликации](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [Replication Agent Security Model](security/replication-agent-security-model.md)  (Модель безопасности агента репликации)  
  [Обзор агентов репликации](agents/replication-agents-overview.md)   
  [Рекомендации по защите репликации](security/replication-security-best-practices.md)  

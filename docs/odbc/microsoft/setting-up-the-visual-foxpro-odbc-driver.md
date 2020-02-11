@@ -15,23 +15,23 @@ ms.assetid: d0aedaa1-ed24-4aa6-92c8-83b0fa8c86fb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 921e9bce35ce9dc2ae91afb2c4cea5badafeaf2e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68063435"
 ---
 # <a name="setting-up-the-visual-foxpro-odbc-driver"></a>Настройка драйвера ODBC для Visual FoxPro
-Сведения о загрузке и установке драйвера Visual FoxPro ODBC, см. в разделе [драйвер ODBC для Visual FoxPro](https://go.microsoft.com/fwlink/?LinkId=121318) для MSDN.  
+Сведения о скачивании и установке драйвера ODBC для Visual FoxPro см. в статье Загрузка [драйверов ODBC для Visual FoxPro](https://go.microsoft.com/fwlink/?LinkId=121318) на сайте MSDN.  
   
- Использовать программу Microsoft Visual FoxPro настройки драйвера ODBC для осуществлять следующее.  
+ Используйте программу установки драйвера ODBC для Microsoft Visual FoxPro, чтобы выполнить следующие действия.  
   
--   Добавьте новые компоненты.  
+-   Добавление новых компонентов.  
   
--   Удалите установленные компоненты.  
+-   Удаление установленных компонентов.  
   
 -   Переустановите, чтобы восстановить отсутствующие файлы и параметры.  
   
 -   Удалите все ранее установленные компоненты.  
   
- Установив драйвер в системе, программа установки распознает установленного драйвера компоненты и дополнительные диалоговые окна, которые позволяют изменить конфигурацию драйвера.
+ После установки драйвера в системе программа установки распознает установленные компоненты драйверов и предоставляет дополнительные диалоговые окна, позволяющие изменить конфигурацию драйвера.

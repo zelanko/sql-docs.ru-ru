@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5435c2a48417156abd6d4f831bf61c9ba6440fab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482574"
 ---
 # <a name="reserved-words-master-data-services"></a>Зарезервированные слова (службы Master Data Services)
@@ -36,22 +36,22 @@ ms.locfileid: "65482574"
   
 -   [Члены](#members)  
   
-##  <a name="models"></a> Модели  
- При создании модели с именем **имя**, не устанавливайте **создать сущность с именем модели** поскольку **имя** не может использоваться в качестве имени сущности.  
+##  <a name="models"></a>Моделью  
+ Если вы создаете модель с именем **Name, не**выбирайте параметр **создать сущность с тем же именем, что и модель** , поскольку **имя** не может использоваться для имени сущности.  
   
-##  <a name="entities"></a> Сущности  
+##  <a name="entities"></a>Объектах  
  В качестве имен сущностей нельзя указывать **Name** и **Code**.  
   
-##  <a name="exhierarchies"></a> Явные иерархии  
+##  <a name="exhierarchies"></a>Явные иерархии  
  В качестве имен явных иерархий нельзя указывать **Name** и **Code**.  
   
-##  <a name="attributes"></a> Атрибуты  
+##  <a name="attributes"></a>Атрибута  
   
--   **Идентификатор**  
+-   **УДОСТОВЕРЕНИЯ**  
   
--   **Code**  
+-   **Код**  
   
--   **Name**  
+-   **Название**  
   
 -   **EnterDTM**  
   
@@ -69,10 +69,10 @@ ms.locfileid: "65482574"
   
 -   **Version_ID**  
   
-##  <a name="members"></a> Члены  
- Для элементов нельзя использовать **MDMMemberStatus** или **КОРНЕВОЙ** для **код** значение атрибута.  
+##  <a name="members"></a>Участниками  
+ Для элементов нельзя использовать **MDMMemberStatus** или **root** в качестве значения атрибута **Code** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Общие сведения о службах Master Data Services](master-data-services-overview-mds.md)  
   
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c30c6a4f746ae9aa81b8c1a71c0e380bdd26df03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63268161"
 ---
 # <a name="tuningtimeinmin-element-dta"></a>Элемент TuningTimeInMin (DTA)
@@ -36,9 +36,10 @@ ms.locfileid: "63268161"
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
-|**Тип данных и длина**|`unsignedInt`, неограниченная длина|  
+|**Тип данных и длина**|
+  `unsignedInt`, неограниченная длина|  
 |**Значение по умолчанию**|480 минут (8 часов)|  
 |**Наличие**|Требуется в случае, если не задано значение элемента `NumberOfEvents`.|  
   
@@ -51,7 +52,7 @@ ms.locfileid: "63268161"
   
 ## <a name="example"></a>Пример  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Description  
  В следующем примере кода показано, как установить максимальное время настройки — 12 часов:  
   
 ## <a name="code"></a>Код  
@@ -66,7 +67,7 @@ ms.locfileid: "63268161"
 </DTAInput>  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по входным XML-файлам (помощник по настройке ядра СУБД)](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

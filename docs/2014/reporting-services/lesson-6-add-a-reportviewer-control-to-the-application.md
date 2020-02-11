@@ -1,5 +1,5 @@
 ---
-title: 'Занятие 6: Добавить элемент управления ReportViewer в приложение | Документация Майкрософт'
+title: Занятие 6. Добавление в приложение элемента управления ReportViewer | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dfce5e2bdf71dfb58481fedf05794d3603285449
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108419"
 ---
-# <a name="lesson-6-add-a-reportviewer-control-to-the-application"></a>Занятие 6: Добавление в приложение элемента управления ReportViewer
+# <a name="lesson-6-add-a-reportviewer-control-to-the-application"></a>Урок 6. Добавление в приложение элемента управления ReportViewer
   После завершения проектирования дочернего отчета с помощью мастера отчетов далее необходимо добавить в приложение веб-сайта элемент управления ReportViewer.  
   
 ### <a name="to-add-a-reportviewer-control-to-the-application"></a>Добавление элемента управления ReportViewer в приложение  
@@ -34,7 +34,7 @@ ms.locfileid: "66108419"
   
      После выбора отчета экземпляры источников данных, используемых в отчете, будут созданы автоматически. Будет сформирован код для создания экземпляра каждого объекта DataTable (и его контейнера [DataSet](https://msdn.microsoft.com/library/system.data.dataset\(v=vs.100\).aspx) ). В область конструктора будут добавлены элементы управления [ObjectDataSource](https://msdn.microsoft.com/library/system.web.ui.webcontrols.objectdatasource\(v=vs.100\).aspx) , соответствующие каждому источнику данных, который используется в отчете. Настройка этих элементов управления источником данных осуществляется автоматически.  
   
-     Если вы используете Microsoft Visual Studio 2012, убедитесь, что элемент управления ObjectDataSource привязан к набору данных DataSet1, в пространстве имен проекта. это полное доменное имя должно содержаться в **выберите бизнес-объекта**стрелку раскрывающегося списка (например, projectnamespace.dataset1tableadapters.ProductTableAdapter). Доступ к этому списку можно получить, щелкнув правой кнопкой мыши ObjectDataSource и выбрав пункт **Настройка источника данных**.  
+     Если вы используете Microsoft Visual Studio 2012, убедитесь, что элемент управления ObjectDataSource привязан к приложению DataSet1 с полным именем в пространстве имен проекта, если полное имя указано в раскрывающемся списке **выберите бизнес-объект** (например, Projectnamespace. DataSet1TableAdapters. ProductTableAdapter). Доступ к этому списку можно получить, щелкнув правой кнопкой мыши ObjectDataSource и выбрав пункт **Настройка источника данных**.  
   
 6.  В меню «Построение» выберите команду «Построить веб-сайт».  
   

@@ -1,5 +1,5 @@
 ---
-title: Поля (ADO — синтаксис WFC) | Документация Майкрософт
+title: Field (ADO-синтаксис WFC) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,14 +14,14 @@ ms.assetid: 7e01cb24-2338-4f92-ad46-8d97248e1a4d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 583e6de7dc8c3ea05d61dda53c3e630d05e4d5f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918753"
 ---
 # <a name="field-ado---wfc-syntax"></a>Field (ADO — синтаксис WFC)
-## <a name="package-commswfcdata"></a>com.ms.wfc.data пакета  
+## <a name="package-commswfcdata"></a>упаковать com. MS. WFC. Data  
   
 ### <a name="methods"></a>Методы  
   
@@ -44,7 +44,7 @@ public com.ms.com.IUnknown getDataFormat()
 public void setDataFormat(com.ms.com.IUnknown format)  
 ```  
   
- (Дополнительные сведения см. документацию по интерфейсу com.ms.wfc.data.IDataFormat).  
+ (Дополнительные сведения см. в документации по интерфейсу COM. MS. WFC. Data. Идатаформат.)  
   
 ```  
 public int getDefinedSize()  
@@ -63,14 +63,14 @@ public void setValue(Variant value)
 public AdoProperties getProperties()  
 ```  
   
-### <a name="field-accessor-methods"></a>Методы доступа к полю  
- [Значение](../../../ado/reference/ado-api/value-property-ado.md) свойство [поле](../../../ado/reference/ado-api/field-object.md) объект получает или задает содержимое этого объекта. Содержимое представляется как значение типа VARIANT, тип объекта, который может быть присвоено значение и любой из нескольких типов данных.  
+### <a name="field-accessor-methods"></a>Методы доступа к полям  
+ Свойство [value](../../../ado/reference/ado-api/value-property-ado.md) объекта [field](../../../ado/reference/ado-api/field-object.md) Возвращает или задает содержимое этого объекта. Содержимое представляется как вариант, тип объекта, которому можно присвоить значение и любой из нескольких типов данных.  
   
- Реализует ADO и WFC **значение** свойство с **getValue** метод, который возвращает объект типа VARIANT; и **setValue** метод, который принимает в качестве аргумента типа VARIANT. Варианты высокой эффективны в некоторых языках, таких как Microsoft Visual Basic.  
+ ADO/WFC реализует свойство **value** с помощью метода **GetValue** , который возвращает объект Variant; и метод **SetValue** , принимающий вариант в качестве аргумента. Варианты в некоторых языках очень эффективны, например в Microsoft Visual Basic.  
   
- В дополнение к **значение** предоставляет свойство, ADO и WFC *доступа* методы, которые используют типы данных Java для получения и задания содержание **поле** объектов. Большинство этих методов имеют имена вида **получить**_DataType_ или **задать**_DataType_.  
+ В дополнение к свойству **value** , ADO/WFC предоставляет методы *доступа* , которые используют типы данных Java для получения и задания содержимого объектов **field** . Большинство этих методов имеют имена в форме **получить**_DataType_ или **задать**_DataType_.  
   
- Существует два исключения из заслуживающих внимания. Один из **getObject** методы возвращают объект преобразуется в заданный класс. Существует не **getNull** свойства; вместо этого используется **isNull** свойство, которое возвращает логическое значение, указывающее, является ли поле значение null.  
+ Существует два значимых исключения: один из методов **GetObject** возвращает объект, приведенный к указанному классу. Отсутствует свойство **со значением NULL** ; Вместо этого существует свойство **isNull** , возвращающее логическое значение, указывающее, имеет ли поле значение null.  
   
 ```  
 public native boolean getBoolean();  
@@ -98,5 +98,5 @@ public Object getObject(Class c)
 public void setObject(Object value)  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Field](../../../ado/reference/ado-api/field-object.md)

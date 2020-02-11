@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8fcb3e8c423e629a33a0c173e3264ee11ee178f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104175"
 ---
 # <a name="cache-shared-datasets-ssrs"></a>Общий набор данных в кэше (служба SSRS)
@@ -95,7 +95,7 @@ ms.locfileid: "66104175"
   
  Внесение изменений в планы обновления кэша для общих наборов данных не затрагивает отчеты, которые уже обрабатываются. Изменение плана обновления кэша затрагивает только будущие запуски отчетов, которые ссылаются на рассматриваемый общий набор данных.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Управление общими наборами данных](../report-data/manage-shared-datasets.md)  
   
   

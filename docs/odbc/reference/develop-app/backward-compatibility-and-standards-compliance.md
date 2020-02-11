@@ -1,5 +1,5 @@
 ---
-title: Обратной совместимости и соответствия стандартам | Документация Майкрософт
+title: Обратная совместимость и соответствие стандартам | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: b5eee7be-28ed-4467-8cf1-2205e2010a53
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7588859abb8298a9191409e5c05df1949e85ba89
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67909870"
 ---
 # <a name="backward-compatibility-and-standards-compliance"></a>Обратная совместимость и соответствие стандартам
-Обратная совместимость — это способность новых компонентов ODBC для работы с старые компоненты ODBC. В следующих разделах рассматривается, как эти компоненты были затронуты изменениями в ODBC *3.x*. Сведения, содержащиеся в них, в основном устраняет записи ODBC *3.x* приложения и как назад обрабатываются проблемы совместимости с драйверами ODBC. Дополнительные инструкции о том, как обратной совместимости неполадках записи ODBC *3.x* драйвера, см. в разделе [приложение G: Рекомендации по драйверов для обеспечения обратной совместимости](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md).  
+Обратная совместимость — это возможность более новых компонентов ODBC работать с старыми компонентами ODBC. В следующих разделах рассматривается влияние этих компонентов на изменения в ODBC *3. x*. Сведения, содержащиеся в них, в первую очередь предназначены для написания приложения ODBC *3. x* и того, как драйверы ODBC обрабатывают проблемы обратной совместимости. Конкретные рекомендации о том, как проблемы обратной совместимости влияют на написание драйвера ODBC *3. x* , см. в [приложении G: рекомендации по драйверу для обеспечения обратной совместимости](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md).  
   
  Этот раздел содержит следующие подразделы.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "67909870"
   
 -   [Новые возможности](../../../odbc/reference/develop-app/new-features.md)  
   
--   [Повторяющийся функции](../../../odbc/reference/develop-app/duplicated-features.md)  
+-   [Повторяющиеся функции](../../../odbc/reference/develop-app/duplicated-features.md)  
   
 -   [Изменения в поведении](../../../odbc/reference/develop-app/behavioral-changes.md)  
   

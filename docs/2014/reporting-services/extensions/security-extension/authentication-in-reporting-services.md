@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c4fc4d98eb32fb07def2fd317ebb7f5a6f6332cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63282154"
 ---
 # <a name="authentication-in-reporting-services"></a>Проверка подлинности в службах Reporting Services
@@ -28,7 +28,7 @@ ms.locfileid: "63282154"
 ## <a name="custom-authentication-in-reporting-services"></a>Нестандартная проверка подлинности в службах Reporting Services  
  Операционная система Windows в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] выполняет проверку подлинности пользователей с помощью встроенной безопасности Windows или путем явного получения и проверки учетных данных пользователя. В службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] можно разработать нестандартную проверку подлинности, чтобы обеспечить поддержку дополнительных схем проверки подлинности. Это возможно с помощью интерфейса модуля безопасности <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension>. Все модули, развертываемые и используемые на сервере отчетов, наследуют базовый интерфейс <xref:Microsoft.ReportingServices.Interfaces.IExtension>. Интерфейсы <xref:Microsoft.ReportingServices.Interfaces.IExtension> и <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension> входят в пространство имен <xref:Microsoft.ReportingServices.Interfaces>.  
   
- Основным способом проверки подлинности на сервере отчетов в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] служит метод <xref:ReportService2010.ReportingService2010.LogonUser%2A>. Этот элемент веб-службы Reporting Services можно использовать для передачи учетных данных пользователя на сервер отчетов для проверки. Пользовательский базовый модуль безопасности реализует **IAuthenticationExtension.LogonUser** которого содержит код нестандартной проверки подлинности. В образце проверки подлинности с помощью форм метод **LogonUser** выполняет проверку подлинности по переданным учетным данным и хранилищу пользователей в базе данных. Пример реализации метода **LogonUser** имеет следующий вид:  
+ Основным способом проверки подлинности на сервере отчетов в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] служит метод <xref:ReportService2010.ReportingService2010.LogonUser%2A>. Этот элемент веб-службы Reporting Services можно использовать для передачи учетных данных пользователя на сервер отчетов для проверки. Базовый модуль безопасности реализует **иаусентикатионекстенсион. LogonUser** , который содержит пользовательский код проверки подлинности. В образце проверки подлинности с помощью форм метод **LogonUser** выполняет проверку подлинности по переданным учетным данным и хранилищу пользователей в базе данных. Пример реализации метода **LogonUser** имеет следующий вид:  
   
 ```  
 public bool LogonUser(string userName, string password, string authority)  
@@ -95,7 +95,7 @@ internal static bool VerifyPassword(string suppliedUserName,
 }  
 ```  
   
-## <a name="authentication-flow"></a>Поток проверки подлинности  
+## <a name="authentication-flow"></a>Поток аутентификации  
  Веб-служба Reporting Services предоставляет нестандартные модули проверки подлинности, позволяющие реализовать проверку подлинности с помощью форм в диспетчере отчетов и на сервере отчетов.  
   
  Метод <xref:ReportService2010.ReportingService2010.LogonUser%2A> веб-службы Reporting Services позволяет отправлять учетные данные на сервер отчетов для проверки подлинности. Веб-служба использует заголовки HTTP для передачи билета проверки подлинности (называемого куки-файлом) с сервера на клиент для проверяемых запросов входа в систему.  
@@ -108,7 +108,7 @@ internal static bool VerifyPassword(string suppliedUserName,
   
 1.  Клиентское приложение вызывает метод <xref:ReportService2010.ReportingService2010.LogonUser%2A> веб-службы для проверки подлинности пользователя.  
   
-2.  Веб-служба выполняет вызов <xref:ReportService2010.ReportingService2010.LogonUser%2A> метод расширения безопасности, в частности, класс, реализующий **IAuthenticationExtension**.  
+2.  Веб-служба выполняет вызов <xref:ReportService2010.ReportingService2010.LogonUser%2A> метода модуля безопасности, в частности класс, реализующий **иаусентикатионекстенсион**.  
   
 3.  Реализация метода <xref:ReportService2010.ReportingService2010.LogonUser%2A> проверяет имя пользователя и пароль в хранилище пользователей или в центре безопасности.  
   
@@ -146,7 +146,7 @@ internal static bool VerifyPassword(string suppliedUserName,
   
 -   Службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] могут проверять подлинность и авторизовывать пользователей с помощью проверки подлинности Windows или нестандартной проверки подлинности, но оба метода не могут использоваться одновременно. Службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] не поддерживают одновременное использование нескольких модулей безопасности.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Реализация модуля безопасности](../security-extension/implementing-a-security-extension.md)  
   
   

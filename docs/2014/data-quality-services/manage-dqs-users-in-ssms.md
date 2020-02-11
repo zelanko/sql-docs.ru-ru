@@ -1,5 +1,5 @@
 ---
-title: Управление пользователями DQS в среде SSMS | Документация Майкрософт
+title: Управление пользователями DQS в SSMS | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: eccb3ea2ec046a84a2735c310c8b80c5e88cf96e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480338"
 ---
 # <a name="manage-dqs-users-in-ssms"></a>Управление пользователями DQS в среде SSMS
@@ -27,7 +27,7 @@ ms.locfileid: "65480338"
 ####  <a name="Permissions"></a> Permissions  
  Учетная запись пользователя Windows должна быть членом соответствующей предопределенной роли сервера (например, securityadmin, serveradmin или sysadmin) для создания имен входа SQL Server и предоставления соответствующих ролей DQS.  
   
-##  <a name="GrantRoles"></a> Создайте имя входа SQL и предоставление ролей DQS  
+##  <a name="GrantRoles"></a>Создание имени входа SQL и предоставление роли DQS  
   
 1.  Запустите среду Microsoft SQL Server Management Studio.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "65480338"
   
 5.  После проверки пользователя щелкните страницу **Сопоставление пользователей** в левой части окна.  
   
-6.  В области справа установите флажок в столбце **Сопоставление** для базы данных **DQS_MAIN**, а затем установите флажок **dqs_administrator**, **dqs_kb_editor** или **dqs_kb_operator** на панели **Членство в роли базы данных для: DQS_MAIN** в зависимости от уровня доступа, необходимого пользователю.  
+6.  В правой области установите флажок в столбце **Сопоставление** для базы данных **DQS_MAIN** , а затем на панели **Членство в роли базы данных для: DQS_MAIN**установите флажок **dqs_administrator**, **dqs_kb_editor** или **dqs_kb_operator** в зависимости от уровня доступа, который требуется пользователю.  
   
 7.  В диалоговом окне **Создание имени входа** нажмите кнопку **ОК**, чтобы применить изменения.  
   

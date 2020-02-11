@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: af5bbc51420d8f32144bc91f687ae58b86d10d52
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479405"
 ---
 # <a name="derived-hierarchies-master-data-services"></a>Производные иерархии (Master Data Services)
@@ -57,11 +57,11 @@ ms.locfileid: "65479405"
   
  В производной иерархии можно выделить связь между «Продуктом» и «Подкатегорией» и затем между «Подкатегорией» и «Категорией». При просмотре элементов в этой иерархии каждый уровень дерева содержит элементы из одной сущности.  
   
- ![Пример производной иерархии от узла "Горный велосипед"](../../2014/master-data-services/media/mds-conc-derived-hierarchy-example.gif "Пример производной иерархии от узла \"Горный велосипед\"")  
+ ![Пример производной иерархии от узла «Горный велосипед»](../../2014/master-data-services/media/mds-conc-derived-hierarchy-example.gif "Пример производной иерархии от узла «Горный велосипед»")  
   
  Иерархия такого типа предотвращает перемещение элемента на недопустимый уровень. Например, можно переместить велосипед Road-650 из одной подкатегории, «Дорожные велосипеды», в другую, «Горные велосипеды». Нельзя перенести Road-650 напрямую внутри категории, например 1 {велосипеды}. Каждый раз при перемещении элемента в дереве иерархии значение атрибута на основе домена для элемента изменяется, отражая это перемещение.  
   
-## <a name="notes"></a>Примечания  
+## <a name="notes"></a>Заметки  
  Все элементы в производной иерархии сортируются по коду. Нельзя менять порядок сортировки.  
   
  Если атрибут на основе домена для элемента пуст и атрибут используется в производной иерархии, то элемент не отображается в иерархии. Можно создать бизнес-правила, которые требуют заполнения атрибутов. Дополнительные сведения см. в разделе [Запрос значений атрибута (службы Master Data Services)](require-attribute-values-master-data-services.md).  
@@ -70,22 +70,22 @@ ms.locfileid: "65479405"
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Создание новой производной иерархии.|[Создание производной иерархии (службы Master Data Services)](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
-|Скрытие или удаление уровней в существующей производной иерархии.|[Скрытие или удаление уровней в производной иерархии (службы Master Data Services)](../../2014/master-data-services/hide-or-delete-levels-in-a-derived-hierarchy-master-data-services.md)|  
-|Изменение имени существующей производной иерархии.|[Изменение имени производной иерархии (службы Master Data Services)](../../2014/master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|  
-|Удаление существующей производной иерархии.|[Удаление производной иерархии (службы Master Data Services)](../../2014/master-data-services/delete-a-derived-hierarchy-master-data-services.md)|  
+|Создание новой производной иерархии.|[Создание производной иерархии &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
+|Скрытие или удаление уровней в существующей производной иерархии.|[Скрытие или удаление уровней в производной иерархии &#40;Master Data Services&#41;](../../2014/master-data-services/hide-or-delete-levels-in-a-derived-hierarchy-master-data-services.md)|  
+|Изменение имени существующей производной иерархии.|[Изменение имени производной иерархии &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|  
+|Удаление существующей производной иерархии.|[Удаление производной иерархии &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-derived-hierarchy-master-data-services.md)|  
 |||  
   
 ## <a name="related-content"></a>См. также  
   
--   [Атрибуты на основе домена (службы Master Data Services)](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
+-   [Атрибуты на основе домена &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
   
--   [Явные иерархии (службы Master Data Services)](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
+-   [Явные иерархии &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
   
--   [Рекурсивные иерархии (службы Master Data Services)](../../2014/master-data-services/recursive-hierarchies-master-data-services.md)  
+-   [Рекурсивные иерархии &#40;Master Data Services&#41;](../../2014/master-data-services/recursive-hierarchies-master-data-services.md)  
   
--   [Производные иерархии с явными ограничениями (службы Master Data Services)](../../2014/master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)  
+-   [Производные иерархии с явно заданными ограничениями &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)  
   
--   [Коллекции (службы Master Data Services)](../../2014/master-data-services/collections-master-data-services.md)  
+-   [&#40;коллекций Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Оптимизация пример свойства (Visual Basic) | Документация Майкрософт
+title: Пример свойства optimize (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 652194af-cfa4-4aa0-a6d6-fa409bbc3f98
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f36c0c574917e4f73533a400ea60f363aeb9d74b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917817"
 ---
 # <a name="optimize-property-example-vb"></a>Пример свойства Optimize (Visual Basic)
-В этом примере показано [поле](../../../ado/reference/ado-api/field-object.md) этого динамического объекта **оптимизировать** свойство. ***Zip*** поле ***авторов*** в таблицу ***Pubs*** базы данных не индексируется. Установка [оптимизировать](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) свойства **True** на ***zip*** поле авторизует ADO для создания индекса, который повышает производительность [найти](../../../ado/reference/ado-api/find-method-ado.md)метод.  
+В этом примере демонстрируется динамическое свойство **optimize** объекта [field](../../../ado/reference/ado-api/field-object.md) . Поле ***ZIP*** таблицы ***authors*** в базе данных ***pubs*** не индексируется. Присвоение свойству [optimize](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) значения **true** в поле ***ZIP*** разрешает ADO создавать индексы, повышающие производительность метода [Find](../../../ado/reference/ado-api/find-method-ado.md) .  
   
 ```  
 'BeginOptimizeVB  
@@ -86,6 +86,6 @@ End Sub
 'EndOptimizeVB  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Объект field](../../../ado/reference/ado-api/field-object.md)   
+## <a name="see-also"></a>См. также:  
+ [Объект Field](../../../ado/reference/ado-api/field-object.md)   
  [Свойство Optimize (динамическое) (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)

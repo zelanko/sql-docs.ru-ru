@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 17d2b9fee3c4e733ed46f9b975e69f84f05b93f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067763"
 ---
 # <a name="analyze-a-tabular-model-in-excel-ssas-tabular"></a>Анализ табличной модели в Excel (табличные службы SSAS)
@@ -45,12 +45,12 @@ ms.locfileid: "66067763"
   
 3.  Чтобы воспользоваться перспективой, выберите нужную в поле со списком **Перспектива** .  
   
-     Перспективы (за исключением заданных по умолчанию) должны определяться в диалоговом окне «Перспективы». Дополнительные сведения см. в разделе [Создание перспектив и управление ими (табличные службы SSAS)](perspectives-ssas-tabular.md).  
+     Перспективы (за исключением заданных по умолчанию) должны определяться в диалоговом окне «Перспективы». Дополнительные сведения см. в статье [Создание и управление перспективами &#40;табличных&#41;SSAS ](perspectives-ssas-tabular.md).  
   
 > [!NOTE]  
 >  Список полей сводной таблицы в Excel не обновляется автоматически при внесении изменений в проект модели в конструкторе моделей. Чтобы обновить список полей сводной таблицы в Excel, нажмите кнопку **Обновить** на ленте **Параметры**.  
   
-## <a name="see-also"></a>См. также  
- [Анализ в Excel (табличные службы SSAS)](analyze-in-excel-ssas-tabular.md)  
+## <a name="see-also"></a>См. также:  
+ [Анализ в Excel &#40;табличные&#41;SSAS](analyze-in-excel-ssas-tabular.md)  
   
   

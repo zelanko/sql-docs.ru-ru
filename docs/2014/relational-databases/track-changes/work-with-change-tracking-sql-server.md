@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 5ed0a510a6b74e3c33e9cb7ed9d789ad8242a499
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63270231"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>Работа с отслеживанием изменений (SQL Server)
@@ -48,7 +48,7 @@ ms.locfileid: "63270231"
   
      Ниже показано, как функция CHANGETABLE(CHANGES ...) используется для получения изменений.  
   
-     ![Пример выходных данных запроса на отслеживание изменений](../../database-engine/media/queryoutput.gif "Пример выходных данных запроса на отслеживание изменений")  
+     ![Пример вывода результатов запроса на отслеживание изменений](../../database-engine/media/queryoutput.gif "Пример вывода результатов запроса на отслеживание изменений")  
   
  Функция CHANGE_TRACKING_CURRENT_VERSION()  
  Используется для получения текущей версии, которая будет применяться при следующем запросе изменений. Эта версия представляет версию последней зафиксированной транзакции.  

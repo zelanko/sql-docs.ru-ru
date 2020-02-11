@@ -1,5 +1,5 @@
 ---
-title: ParameterDirectionEnum | Документация Майкрософт
+title: Параметердиректионенум | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,35 +16,35 @@ ms.assetid: c66aa6e6-d4f0-4f0f-9640-e08ae6cfdef3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 68aaa0bfb8aa72c9e94a8b5db65768fe85895f0e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917740"
 ---
 # <a name="parameterdirectionenum"></a>ParameterDirectionEnum
-Указывает ли [параметр](../../../ado/reference/ado-api/parameter-object.md) представляет входного параметра, выходного параметра, как входные, так и выходной параметр или возвращаемое значение из хранимой процедуры.  
+Указывает, представляет ли [параметр](../../../ado/reference/ado-api/parameter-object.md) входной параметр, выходной параметр, как входной, так и выходной параметр, или возвращаемое значение из хранимой процедуры.  
   
-|Константа|Значение|Описание|  
+|Постоянно|Значение|Description|  
 |--------------|-----------|-----------------|  
-|**adParamInput**|1|По умолчанию. Указывает, что данная строка представляет входной параметр.|  
-|**adParamInputOutput**|3|Указывает, что данная строка представляет входных и выходных параметров.|  
-|**adParamOutput**|2|Указывает, что данная строка представляет выходной параметр.|  
-|**adParamReturnValue**|4|Указывает, что параметр представляет возвращаемое значение.|  
-|**adParamUnknown**|0|Указывает, что направление параметра неизвестно.|  
+|**адпараминпут**|1|По умолчанию. Указывает, что параметр представляет входной параметр.|  
+|**адпараминпутаутпут**|3|Указывает, что параметр представляет как входной, так и выходной параметр.|  
+|**адпарамаутпут**|2|Указывает, что параметр представляет выходной параметр.|  
+|**адпарамретурнвалуе**|4|Указывает, что параметр представляет возвращаемое значение.|  
+|**адпарамункновн**|0|Указывает, что направление параметра неизвестно.|  
   
-## <a name="adowfc-equivalent"></a>Эквивалент ADO и WFC  
- Пакет: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>Эквивалент ADO/WFC  
+ Пакет: **com. MS. WFC. Data**  
   
-|Константа|  
+|Постоянно|  
 |--------------|  
-|AdoEnums.ParameterDirection.INPUT|  
-|AdoEnums.ParameterDirection.INPUTOUTPUT|  
-|AdoEnums.ParameterDirection.OUTPUT|  
-|AdoEnums.ParameterDirection.RETURNVALUE|  
-|AdoEnums.ParameterDirection.UNKNOWN|  
+|Адоенумс. Параметердиректион. INPUT|  
+|Адоенумс. Параметердиректион. ИНПУТАУТПУТ|  
+|Адоенумс. Параметердиректион. OUTPUT|  
+|Адоенумс. Параметердиректион. RETURNVALUE|  
+|Адоенумс. Параметердиректион. UNKNOWN|  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
   
 |||  
 |-|-|  

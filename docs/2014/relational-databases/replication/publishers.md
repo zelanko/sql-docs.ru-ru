@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3b28a0543208ab28414fb93def15adf904e2c078
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63261727"
 ---
 # <a name="publishers"></a>Издатели
@@ -28,13 +28,13 @@ ms.locfileid: "63261727"
  **Издатели**  
  Выберите серверы, которым разрешено использование данного распространителя. Нажмите кнопку свойств ( **...** ) рядом с издателем для просмотра и задания дополнительных свойств.  
   
- **Добавить**  
- Если нужный сервер не представлен в списке, нажмите кнопку **Добавить** , чтобы добавить издателей [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или Oracle к списку доступных издателей.  
+ **Добавление**  
+ Если нужный сервер не представлен в списке, нажмите кнопку **Добавить**, чтобы добавить издателей [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или Oracle к списку доступных издателей.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Настройка распространения](configure-distribution.md)   
  [Настройка публикации и распространения](configure-publishing-and-distribution.md)   
  [Просмотр и изменение свойств издателя и распространителя](view-and-modify-distributor-and-publisher-properties.md)   
- [Создание публикации](publish/create-a-publication.md)  
+ [Create a Publication](publish/create-a-publication.md)  
   
   

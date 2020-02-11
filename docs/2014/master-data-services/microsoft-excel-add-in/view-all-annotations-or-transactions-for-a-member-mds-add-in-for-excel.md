@@ -11,16 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8de36a4d7929ddba4fcb2a7e046ee81db8d08520
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482702"
 ---
 # <a name="view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel"></a>Просмотр всех заметок или транзакций для элемента (надстройка MDS для Excel)
   В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]можно просмотреть заметки (комментарии) и транзакции для строк данных (элементов), если необходимо узнать, как менялись данные с течением времени.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения этой процедуры:  
   
 -   Необходимо иметь активный лист, содержащий данные, управляемые MDS.  
@@ -29,11 +29,11 @@ ms.locfileid: "65482702"
   
 1.  Щелкните ячейку в строке, которая содержит транзакции, подлежащие просмотру.  
   
-2.  Щелкните правой кнопкой мыши и в контекстном меню выберите **Просмотр транзакций**.  
+2.  Щелкните правой кнопкой мыши и в открывшемся меню выберите **Просмотр транзакций**.  
   
 3.  В диалоговом окне **Просмотр транзакций** будет показан список транзакций. Чтобы просмотреть все заметки, связанные с транзакцией, щелкните строку в сетке.  
   
-## <a name="see-also"></a>См. также  
- [Публикация данных &#40;надстройка MDS для Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+## <a name="see-also"></a>См. также:  
+ [Публикация &#40;данных надстройка MDS для Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   

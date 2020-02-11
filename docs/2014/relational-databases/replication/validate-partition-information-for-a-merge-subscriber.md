@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3bada5fc49dc344510164260330699b60a3288cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63255309"
 ---
 # <a name="validate-partition-information-for-a-merge-subscriber"></a>Проверка сведений о секции для подписчика на публикацию слиянием
@@ -33,9 +33,9 @@ ms.locfileid: "63255309"
   
  Когда агент слияния проверяет секцию, наряду с проверкой значений секции, возвращаемых функциями, используемыми в выражениях фильтрации, агент проверяет также, сформирован ли моментальный снимок перед изменениями, которые сделали его недействительным, например перед выполнением операций очистки метаданных или изменениями схемы. Если секционированный моментальный снимок слишком стар, агент слияния возвращает ошибку, и пользователь должен вновь сформировать секционированный моментальный снимок для этого подписчика на основании текущего стандартного моментального снимка.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Вопросы и ответы об администрировании репликации](administration/frequently-asked-questions-for-replication-administrators.md)   
- [Best Practices for Replication Administration](administration/best-practices-for-replication-administration.md)   
+ [Рекомендации по администрированию репликации](administration/best-practices-for-replication-administration.md)   
  [Повторная инициализация подписок](reinitialize-subscriptions.md)   
  [Проверка реплицированных данных](validate-data-at-the-subscriber.md)  
   

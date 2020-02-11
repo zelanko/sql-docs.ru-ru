@@ -1,5 +1,5 @@
 ---
-title: Сохраните файл как диалоговое окно (службы Analysis Services — многомерные данные) | Документация Майкрософт
+title: Диалоговое окно «Сохранение файла» (Analysis Services-многомерные данные) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 007e37c7e093828cb3ea452a2bea5972f9ee5b9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070053"
 ---
 # <a name="save-file-as-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Сохранение файла» (службы Analysis Services — многомерные данные)
@@ -24,7 +24,7 @@ ms.locfileid: "66070053"
   
 -   Нажав кнопку **Обзор** в диалоговом окне **Создание резервной копии базы данных** ;  
   
--   Нажав кнопку с многоточием ( **...** ) в столбце **Файл удаленной резервной копии** сетки для параметра **Местонахождение резервной копии удаленных секций** в диалоговом окне **Создание резервной копии базы данных** .  
+-   Нажав кнопку с многоточием (**...**) в столбце **Файл удаленной резервной копии** сетки для параметра **Местонахождение резервной копии удаленных секций** в диалоговом окне **Создание резервной копии базы данных** .  
   
 ## <a name="options"></a>Параметры  
  **Выберите папку**  
@@ -36,8 +36,8 @@ ms.locfileid: "66070053"
  **Имя файла**  
  Введите для изменения имени файла, выбранного из списка **Выберите папку**, или для выбора файла, отсутствующего в списке **Выберите папку**.  
   
-## <a name="see-also"></a>См. также  
- [Конструкторы и диалоговые окна служб Analysis Services &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Создать резервную копию базы данных-диалоговое окно &#40;службы Analysis Services — многомерные данные&#41;](backup-database-dialog-box-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>См. также:  
+ [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Диалоговое окно "резервное копирование базы данных" &#40;Analysis Services многомерных данных&#41;](backup-database-dialog-box-analysis-services-multidimensional-data.md)  
   
   

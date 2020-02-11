@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6fa7b0d32a62e5e2d729e05c88b892ccaffc0fc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106818"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Добавление гиперссылки на URL-адрес (построитель отчетов и службы SSRS)
@@ -23,14 +23,14 @@ ms.locfileid: "66106818"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- Можно также задавать URL-адреса отчетов на любом сервере отчетов, на котором имеется разрешение на чтение с помощью URL-запросов к серверу отчетов. Например, можно указать отчет и скрыть схему документа, когда пользователь впервые просматривает этот отчет. Дополнительные сведения см. в разделе [Доступ по URL-адресу (SSRS)](../url-access-ssrs.md) [документации по службам Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312), входящей в состав электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Можно также задавать URL-адреса отчетов на любом сервере отчетов, на котором имеется разрешение на чтение с помощью URL-запросов к серверу отчетов. Например, можно указать отчет и скрыть схему документа, когда пользователь впервые просматривает этот отчет. Дополнительные сведения см. в разделе [Доступ по URL-адресу (SSRS)](../url-access-ssrs.md)[документации по службам Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312), входящей в состав электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Гиперссылку на URL-адрес можно добавить к любому элементу, у которого есть свойство **Действие** , — текстовому полю, изображению или вычисляемому ряду в диаграмме. Когда пользователь щелкает этот элемент отчета, выполняется действие, которое было определено. Дополнительные сведения см. в разделах [Диалоговое окно "Свойства действия" (построитель отчетов и службы SSRS)](../action-properties-dialog-box-report-builder-and-ssrs.md) и [Указание путей к внешним элементам (построитель отчетов и службы SSRS)](specifying-paths-to-external-items-report-builder-and-ssrs.md).  
   
- Чтобы быстро приступить к работе, см. раздел [Учебник. Форматирование текста (построитель отчетов)](../tutorial-format-text-report-builder.md)  
+ Чтобы быстро приступить к работе, см. раздел [Учебник. Форматирование текста (построитель отчета)](../tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
->  Ссылки, привязанные к полям набора данных, могут стать мишенью для злонамеренного вторжения. Дополнительные сведения см. в разделе [Защищенные отчеты и ресурсы](../security/secure-reports-and-resources.md) [электронной документации](https://go.microsoft.com/fwlink/?LinkId=154888) по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на сайте msdn.microsoft.com.  
+>  Ссылки, привязанные к полям набора данных, могут стать мишенью для злонамеренного вторжения. Дополнительные сведения см. в разделе [Защищенные отчеты и ресурсы](../security/secure-reports-and-resources.md)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]электронной документации[ по ](https://go.microsoft.com/fwlink/?LinkId=154888) на сайте msdn.microsoft.com.  
   
 ### <a name="to-add-a-hyperlink"></a>Добавление гиперссылки  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66106818"
   
 7.  Для проверки ссылки нажмите кнопку **Выполнить** , чтобы выполнить предварительный просмотр отчета, а затем щелкните элемент отчета, для которого была создана ссылка.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Интерактивная сортировка, схемы документов и ссылки (построитель отчетов и службы SSRS)](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [Создание схемы документа (построитель отчетов и службы SSRS)](create-a-document-map-report-builder-and-ssrs.md)  
   

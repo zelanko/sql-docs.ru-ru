@@ -18,32 +18,32 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e9352910554e5f946f21eae3b51a7d87ff1106bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479757"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>Имена входа, пользователи и роли базы данных (службы Master Data Services)
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] включает имена входа, пользователей и роли, которые автоматически устанавливаются на экземпляр [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] , где размещена база данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Изменять этих пользователей, имена входа и роли не рекомендуется.  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]включает имена входа, пользователей и роли, которые автоматически устанавливаются в [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] экземпляре, на котором [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] размещена база данных. Изменять этих пользователей, имена входа и роли не рекомендуется.  
   
 ## <a name="logins"></a>Имена входа  
   
-|Имя входа|Описание|  
+|Имя входа|Description|  
 |-----------|-----------------|  
 |`mds_dlp_login`|Разрешает создание сборок UNSAFE.<br /><br /> — Отключенное имя входа со случайно созданным паролем.<br /><br /> — Сопоставляет со схемой dbo для базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .<br /><br /> — Для msdb это имя входа сопоставляется с mds_clr_user.<br /><br /> <br /><br /> Дополнительные сведения см. в статье [Creating an Assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md).|  
 |`mds_email_login`|Включенное имя входа, используемое для уведомлений.<br /><br /> Для msdb и базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] это имя входа сопоставляется с mds_email_user.|  
   
 ## <a name="msdb-users"></a>Пользователи msdb  
   
-|Пользовательская|Описание|  
+|User|Description|  
 |----------|-----------------|  
 |`mds_clr_user`|Не используется.<br /><br /> Сопоставляется с mds_dlp_login.|  
 |`mds_email_user`|Используется для уведомлений.<br /><br /> Сопоставляется с mds_email_login.<br /><br /> Является членом роли: DatabaseMailUserRole.|  
   
 ## <a name="master-data-services-database-users"></a>Пользователи базы данных Master Data Services  
   
-|Пользовательская|Описание|  
+|User|Description|  
 |----------|-----------------|  
 |`mds_email_user`|Используется для уведомлений.<br /><br /> Имеет разрешение SELECT для схемы mdm.<br /><br /> Имеет разрешение EXECUTE для определяемого пользователем табличного типа mdm.MemberGetCriteria.<br /><br /> Имеет разрешение EXECUTE для хранимой процедуры mdm.udpNotificationQueueActivate.|  
 |**mds_schema_user**|Владеет схемами mdm и mdq. Схема по умолчанию — mdm.<br /><br /> Не имеет сопоставленного имени входа.|  
@@ -51,19 +51,19 @@ ms.locfileid: "65479757"
   
 ## <a name="master-data-services-database-role"></a>Роль базы данных служб Master Data Services  
   
-|Роль|Описание|  
+|Роль|Description|  
 |----------|-----------------|  
-|`mds_exec`|Эта роль содержит учетную запись, создаваемую в службах [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] при создании веб-приложения [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] и учетной записи для пула приложений. Роль mds_exec имеет следующие разрешения:<br /><br /> **EXECUTE** разрешение для всех схем.<br /><br /> **ALTER**, **вставить**, и **ВЫБЕРИТЕ** разрешения для следующих таблиц:<br />mdm.tblStgMember<br />mdm.tblStgMemberAttribute<br />mdm.tbleStgRelationship<br /><br /> **ВЫБЕРИТЕ** разрешения для следующих таблиц:<br />mdm.tblUser<br />mdm.tblUserGroup<br />mdm.tblUserPreference<br /><br /> **ВЫБЕРИТЕ** разрешения для следующих представлений:<br />mdm.viw_SYSTEM_SECURITY_NAVIGATION<br />mdm.viw_SYSTEM_SECURITY_ROLE_ACCCESSCONTROL<br />mdm.viw_SYSTEM_SECURITY_ROLE_ACCCESSCONTROL_MEMBER<br />mdm.viw_SYSTEM_SECURITY_USER_MODEL|  
+|`mds_exec`|Эта роль содержит учетную запись, создаваемую в службах [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] при создании веб-приложения [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] и учетной записи для пула приложений. Роль mds_exec имеет следующие разрешения:<br /><br /> Разрешение **EXECUTE** для всех схем.<br /><br /> Разрешения **ALTER**, **INSERT**и **SELECT** для этих таблиц:<br />mdm.tblStgMember<br />mdm.tblStgMemberAttribute<br />mdm.tbleStgRelationship<br /><br /> Разрешение **SELECT** для этих таблиц:<br />mdm.tblUser<br />mdm.tblUserGroup<br />mdm.tblUserPreference<br /><br /> Разрешение **SELECT** для этих представлений:<br />mdm.viw_SYSTEM_SECURITY_NAVIGATION<br />mdm.viw_SYSTEM_SECURITY_ROLE_ACCCESSCONTROL<br />mdm.viw_SYSTEM_SECURITY_ROLE_ACCCESSCONTROL_MEMBER<br />mdm.viw_SYSTEM_SECURITY_USER_MODEL|  
   
 ## <a name="schemas"></a>Схемы  
   
-|Роль|Описание|  
+|Роль|Description|  
 |----------|-----------------|  
 |`mdm`|Содержит все объекты базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] и компонента Service Broker кроме функций, содержащихся в схеме mdq.|  
 |`mdq`|Содержит функции базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , относящиеся к фильтрации результирующих элементов на основе регулярных выражений или подобия, а также для форматирования уведомлений по электронной почте.|  
-|**stg**|Содержит таблицы базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , хранимые процедуры и представления, связанные с промежуточным процессом. Запрещается удалять любые из этих объектов. Дополнительные сведения о промежуточном процессе см. в разделе [импорта данных &#40;службы Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md).|  
+|**stg**|Содержит таблицы базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , хранимые процедуры и представления, связанные с промежуточным процессом. Запрещается удалять любые из этих объектов. Дополнительные сведения о промежуточном процессе см. в разделе [Data Import &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md).|  
   
-## <a name="see-also"></a>См. также  
- [Защита объектов базы данных (службы Master Data Services)](../../2014/master-data-services/database-object-security-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [&#40;Master Data Services безопасности объектов базы данных&#41;](../../2014/master-data-services/database-object-security-master-data-services.md)  
   
   

@@ -13,20 +13,20 @@ ms.assetid: ec8e5a9d-7aac-4e7f-a75f-cf670c036f33
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1d420a1591840029a2a468f747c033ad4bcdb7f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905412"
 ---
 # <a name="sqlsetpos-visual-foxpro-odbc-driver"></a>SQLSetPos (драйвер ODBC для Visual FoxPro)
 > [!NOTE]  
->  Этот раздел содержит сведения Visual FoxPro ODBC-драйвером. Общие сведения об этой функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  В этом разделе содержатся сведения, относящиеся к драйверу ODBC для Visual FoxPro. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Поддержка: Полное  
+ Поддержка: полная  
   
- Соответствие API ODBC: Уровень 2  
+ Соответствие API-интерфейса ODBC: уровень 2  
   
- Задает положение курсора в наборе строк. Можно использовать **SQLSetPos** с [SQLGetData](../../odbc/microsoft/sqlgetdata-visual-foxpro-odbc-driver.md) для получения строк из несвязанных столбцов после позиционирования курсора в указанную строку в наборе строк.  
+ Задает позицию курсора в наборе строк. Функцию **SQLSetPos** можно использовать с [SQLGetData](../../odbc/microsoft/sqlgetdata-visual-foxpro-odbc-driver.md) для получения строк из непривязанных столбцов после позиционирования курсора на определенную строку в наборе строк.  
   
- Дополнительные сведения см. в разделе [SQLSetPos](../../odbc/reference/syntax/sqlsetpos-function.md) в *Справочник по программированию ODBC*.
+ Дополнительные сведения см. в разделе [SQLSetPos](../../odbc/reference/syntax/sqlsetpos-function.md) в *справочнике программиста по ODBC*.

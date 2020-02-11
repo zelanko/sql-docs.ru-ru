@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0378394c274e66d71eebd642188f20194d29236b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480004"
 ---
 # <a name="create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Создание пакета развертывания модели при помощи MDSModelDeploy
@@ -26,8 +26,8 @@ ms.locfileid: "65480004"
   
  Если необходимо развернуть пакет, содержащий только объекты модели, можно воспользоваться мастером развертывания моделей в веб-приложении [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Дополнительные сведения см. в разделе [Создание пакета развертывания модели с помощью мастера](../../2014/master-data-services/create-a-model-deployment-package-by-using-the-wizard.md).  
 > [!NOTE]  
-> Эта версия средства MDSModelDeploy не может использовать несколько гигабайт (ГБ) памяти. При создании или развертывании большие модели с помощью **модель объектов и данных** параметр «Out of Memory» или «Stream слишком длинна» ошибки могут возникнуть. Чтобы устранить эту проблему, используйте MDS, промежуточного хранения для развертывания данных; или обновите экземпляр до MDS 2016 или более поздней версии, который включает обновленную версию средства MDSModelDeploy.
-## <a name="prerequisites"></a>предварительные требования  
+> Эта версия средства MDSModelDeploy не может использовать больше гигабайт (ГБ) памяти. При создании или развертывании больших моделей с помощью **объектов модели и параметров данных** может возникнуть ошибка "недостаточно памяти" или "поток слишком длинный". Чтобы устранить эту проблему, используйте промежуточное развертывание MDS для развертывания данных. или обновите до версии MDS 2016 или более поздней, которая включает обновленную версию средства MDSModelDeploy.
+## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения этой процедуры:  
   
 1.  Для запуска средства MDSModelDeploy требуются следующие основные разрешения.  
@@ -62,11 +62,11 @@ ms.locfileid: "65480004"
   
 ### <a name="to-create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Создание пакета развертывания модели с помощью MDSModelDeploy  
   
-1.  Откройте командную строку.  
+1.  Откройте окно командной строки.  
   
 2.  Перейдите к расположению файла MDSModelDeploy.exe.  
   
-    -   Если службы MDS установлены в папку по умолчанию, файл находится в *диск*: \Program Files\Microsoft SQL Server\120\Master Data Services\Configuration.  
+    -   Если службы MDS установлены в расположение по умолчанию, файл находится в папке *диск*: \PROGRAM Files\Microsoft SQL Server\120\Master Data Services\Configuration.  
   
     -   Если службы MDS установлены не в папку по умолчанию, найдите файл MDSModelDeploy.exe на локальном компьютере.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "65480004"
 -   [Развертывание пакета развертывания модели при помощи MDSModelDeploy](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)  
   
 ## <a name="see-also"></a>См. также:  
- [Варианты развертывания модели (службы Master Data Services)](../../2014/master-data-services/model-deployment-options-master-data-services.md)   
- [Развертывание моделей (службы Master Data Services)](../../2014/master-data-services/deploying-models-master-data-services.md)  
+ [Параметры развертывания модели &#40;Master Data Services&#41;](../../2014/master-data-services/model-deployment-options-master-data-services.md)   
+ [Развертывание моделей &#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
   
   

@@ -19,13 +19,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7b75962019d9b39728ceff0b151e770dd0f51a25
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68075631"
 ---
-# <a name="spreleaseapplock-transact-sql"></a>sp_releaseapplock (Transact-SQL)
+# <a name="sp_releaseapplock-transact-sql"></a>sp_releaseapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Снимает блокировку ресурса приложения.  
@@ -43,24 +43,24 @@ sp_releaseapplock [ @Resource = ] 'resource_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @Resource=] '*resource_name*"  
- Имя ресурса блокировки, указанное клиентским приложением. Приложение должно убедиться в уникальности ресурса. Указанное имя внутренне хэшируется в значение, которое может быть сохранено в диспетчере блокировок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *имя_ресурса* — **nvarchar(255)** не имеет значения по умолчанию. *имя_ресурса* является сравнивается по таким образом чувствителен к регистру независимо от параметров сортировки текущей базы данных.  
+ [ @Resource= ] "*resource_name*"  
+ Имя ресурса блокировки, указанное клиентским приложением. Приложение должно убедиться в уникальности ресурса. Указанное имя внутренне хэшируется в значение, которое может быть сохранено в диспетчере блокировок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *resource_name* имеет тип **nvarchar (255)** и не имеет значения по умолчанию. *resource_name* является двоичным по сравнению с учетом регистра, независимо от параметров сортировки текущей базы данных.  
   
- [ @LockOwner=] '*lock_owner*"  
- Владелец блокировки, которая имеет значение *lock_owner* на момент запроса блокировки. Аргумент *lock_owner* имеет тип **nvarchar(32)** . Значением может быть **Transaction** (по умолчанию) или **Session**. Когда *lock_owner* значение **транзакции**, по по умолчанию или явно указан, процедура sp_getapplock должна выполняться из транзакции.  
+ [ @LockOwner= ] "*lock_owner*"  
+ Владелец блокировки, которая имеет значение *lock_owner* на момент запроса блокировки. *lock_owner* имеет тип **nvarchar (32)**. Значением может быть **Transaction** (по умолчанию) или **Session**. Если *lock_owner* значение — **Transaction**, по умолчанию или указывается явным образом, sp_getapplock необходимо выполнять в рамках транзакции.  
   
- [ @DbPrincipal=] '*database_principal*"  
+ [ @DbPrincipal= ] "*database_principal*"  
  Пользователь, роль или роль приложения, которые имеют разрешения на объект базы данных. Вызывающий эту функцию участник должен быть членом предопределенной роли базы данных *database_principal*, dbo или db_owner, чтобы успешно выполнить вызов этой функции. Значение по умолчанию: public.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- \>= 0 (успешное завершение) или < 0 (неуспешное завершение)  
+ \>= 0 (успешное завершение) или < 0 (сбой)  
   
 |Значение|Результат|  
 |-----------|------------|  
 |0|Блокировка успешно снята.|  
-|-999|Сигнализирует об ошибке проверки параметра или о другой ошибке вызова процедуры.|  
+|— 999|Сигнализирует об ошибке проверки параметра или о другой ошибке вызова процедуры.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Если приложение вызывает процедуру sp_getapplock несколько раз для одного и того же ресурса блокировки, то процедура sp_releaseapplock должна вызываться такое же количество раз для снятия блокировки.  
   
  При отключении сервера вне зависимости от причины отключения освобождаются все блокировки.  
@@ -80,9 +80,9 @@ EXEC sp_releaseapplock @DbPrincipal = 'dbo', @Resource = 'Form1';
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [APPLOCK_MODE &#40;Transact-SQL&#41;](../../t-sql/functions/applock-mode-transact-sql.md)   
  [APPLOCK_TEST &#40;Transact-SQL&#41;](../../t-sql/functions/applock-test-transact-sql.md)   
- [sp_getapplock (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
+ [sp_getapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
   
   

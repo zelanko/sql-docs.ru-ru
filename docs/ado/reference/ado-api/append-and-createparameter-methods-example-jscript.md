@@ -1,5 +1,5 @@
 ---
-title: Append и CreateParameter методы (JScript) | Документация Майкрософт
+title: Примеры методов Append и CreateParameter (JScript) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 37000833-68f4-45f1-b2dd-7f75893d09d9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 71bc18b13061b844b35314239ffe4973155a0c87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920728"
 ---
-# <a name="append-and-createparameter-methods-example-jscript"></a>Append и CreateParameter методы (JScript)
-В этом примере используется [Append](../../../ado/reference/ado-api/append-method-ado.md) и [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) методы для выполнения хранимой процедуры с входным параметром. Вырежьте и вставьте следующий код в блокноте или другом текстовом редакторе и сохраните его в **AppendJS.asp**.  
+# <a name="append-and-createparameter-methods-example-jscript"></a>Пример методов Append и CreateParameter (JScript)
+В этом примере используются методы [append](../../../ado/reference/ado-api/append-method-ado.md) и [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) для выполнения хранимой процедуры с входным параметром. Вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **аппенджс. ASP**.  
   
 ```  
 <!-- BeginAppendJS -->  
@@ -141,9 +141,9 @@ body {
 <!-- EndAppendJS -->  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Метод append (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
+## <a name="see-also"></a>См. также:  
+ [Метод Append (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
  [Метод CreateParameter (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
- [Объект field](../../../ado/reference/ado-api/field-object.md)   
+ [Объект Field](../../../ado/reference/ado-api/field-object.md)   
  [Коллекция Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Объект Parameter](../../../ado/reference/ado-api/parameter-object.md)

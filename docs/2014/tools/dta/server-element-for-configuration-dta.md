@@ -1,5 +1,5 @@
 ---
-title: Элемент Server описания конфигурации (DTA) | Документация Майкрософт
+title: Элемент Server для Configuration (DTA) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2bc763d621d15f982a2670483683d3862e678c98
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63283678"
 ---
 # <a name="server-element-for-configuration-dta"></a>Элемент Server описания конфигурации (DTA)
@@ -36,7 +36,7 @@ ms.locfileid: "63283678"
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |**Тип данных и длина**|Нет.|  
 |**Значение по умолчанию**|Нет.|  
@@ -49,13 +49,13 @@ ms.locfileid: "63283678"
 |**Родительский элемент**|[Элемент Configuration (DTA)](configuration-element-dta.md)|  
 |**Дочерние элементы**|[Элемент Name описания сервера (DTA)](name-element-for-server-dta.md)<br /><br /> [Элемент Database описания конфигурации (DTA)](database-element-for-configuration-dta.md)|  
   
-## <a name="remarks"></a>Примечания  
- Можно указать только один `Server` элемент для `Configuration` элемент. Этот элемент с именем **ServerTypecomplexType** определен в [схеме XML помощника по настройке ядра СУБД](https://go.microsoft.com/fwlink/?linkid=43100). Не следует путать данный элемент `Server` с дочерним элементом элемента `DTAInput`. Дополнительные сведения см. в разделе [Элемент Server (DTA)](server-element-dta.md).  
+## <a name="remarks"></a>Remarks  
+ Для `Configuration` элемента можно указать только `Server` один элемент. Этот элемент с именем **ServerTypecomplexType** определен в [схеме XML помощника по настройке ядра СУБД](https://go.microsoft.com/fwlink/?linkid=43100). Не следует путать данный элемент `Server` с дочерним элементом элемента `DTAInput`. Дополнительные сведения см. в разделе [Элемент Server (DTA)](server-element-dta.md).  
   
 ## <a name="example"></a>Пример  
  Пример использования см. в разделе [Образец входного XML-файла с пользовательской конфигурацией (DTA)](xml-input-file-sample-with-user-specified-configuration-dta.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по входным XML-файлам (помощник по настройке ядра СУБД)](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

@@ -11,14 +11,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3bbd3ac1bf97530d64760d1434b9e7e8f6a81d34
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482802"
 ---
 # <a name="loading-data-mds-add-in-for-excel"></a>Загрузка данных (надстройка MDS для Excel)
-  В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], необходимо загрузить данные из репозитория MDS в активный лист Excel перед началом работы с ним. Завершив работу с данными, опубликуйте их в репозитории MDS, чтобы они стали доступны другим пользователям.  
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]В необходимо загрузить данные из репозитория MDS в активный лист Excel, прежде чем можно будет работать с [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]ними. Завершив работу с данными, опубликуйте их в репозитории MDS, чтобы они стали доступны другим пользователям.  
   
  Объем данных, доступных для загрузки, ограничен данными, к которым вам разрешен доступ. Разрешение на доступ к данным задается в веб-приложении [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] или программным способом.  
   
@@ -28,7 +28,7 @@ ms.locfileid: "65482802"
 >  Книга с поддержкой MDS должна открываться и обновляться только в Excel с надстройкой MDS для Excel. Открытие книг с поддержкой MDS в Excel на компьютере, на котором надстройка MDS для Excel не установлена, не поддерживается, более того, файл книги при этом может быть поврежден. Если требуется предоставить доступ к данным другим пользователям, то вместо того, чтобы сохранять и отправлять лист, отправьте им по электронной почте файл ярлыка запроса. Дополнительные сведения о запросе см. в разделе [Отправка файла ярлыка запроса по электронной почте (надстройка MDS для Excel)](email-a-shortcut-query-file-mds-add-in-for-excel.md).  
   
 ## <a name="filtering-data"></a>Фильтрация данных  
- Перед загрузкой, чтобы ограничить объем данных, который вы собираетесь загрузить, можно фильтровать данные. Можно выбрать для загрузки атрибуты (столбцы), порядок отображения атрибутов и элементы (строки данных), с которыми вы собираетесь работать. Дополнительные сведения см. в разделе [фильтрация данных перед загрузкой &#40;надстройки MDS для Excel&#41;](filter-data-before-exporting-mds-add-in-for-excel.md).  
+ Можно отфильтровать данные перед загрузкой, чтобы ограничить объем данных, которые будут скачаны. Можно выбрать для загрузки атрибуты (столбцы), порядок отображения атрибутов и элементы (строки данных), с которыми вы собираетесь работать. Дополнительные сведения см. в разделе [Фильтрация данных перед Загрузкой &#40;надстройка MDS для Excel&#41;](filter-data-before-exporting-mds-add-in-for-excel.md).  
   
 ## <a name="connect-automatically-and-load-frequently-used-data"></a>Автоматическое соединение и загрузка часто используемых данных  
  Если вы всегда соединяетесь с одним и тем же сервером и загружаете один и тот же набор данных, то можно создать файл ярлыка запроса, который содержит сведения о соединении и фильтрах. Дополнительные сведения о файлах запросов см. в разделе [файлы ярлыков запросов &#40;надстройки MDS для Excel&#41;](shortcut-query-files-mds-add-in-for-excel.md).  
@@ -40,18 +40,18 @@ ms.locfileid: "65482802"
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Фильтрация данных MDS перед их загрузкой в Excel.|[Фильтрация данных перед загрузкой &#40;надстройка MDS для Excel&#41;](filter-data-before-exporting-mds-add-in-for-excel.md)|  
+|Фильтрация данных MDS перед их загрузкой в Excel.|[Фильтровать данные перед загрузкой &#40;надстройка MDS для Excel&#41;](filter-data-before-exporting-mds-add-in-for-excel.md)|  
 |Загрузка данных MDS в Excel.|[Загрузка данных из MDS в Excel](export-data-to-excel-from-master-data-services.md)|  
-|Изменение порядка столбцов перед загрузкой данных.|[Переупорядочение столбцов (надстройка MDS для Excel)](reorder-columns-mds-add-in-for-excel.md)|  
+|Изменение порядка столбцов перед загрузкой данных.|[Переупорядочение столбцов &#40;надстройка MDS для Excel&#41;](reorder-columns-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>См. также  
   
--   [Соединения (надстройка MDS для Excel)](connections-mds-add-in-for-excel.md)  
+-   [Подключения &#40;надстройка MDS для Excel&#41;](connections-mds-add-in-for-excel.md)  
   
--   [Файлы ярлыков запросов (надстройка MDS для Excel)](shortcut-query-files-mds-add-in-for-excel.md)  
+-   [Файлы ярлыков запросов &#40;надстройка MDS для Excel&#41;](shortcut-query-files-mds-add-in-for-excel.md)  
   
 -   [Надстройка Master Data Services для Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
   
--   [Безопасность (службы Master Data Services)](../security-master-data-services.md)  
+-   [Master Data Services &#40;безопасности&#41;](../security-master-data-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Пример метода (Visual Basic) Resync | Документация Майкрософт
+title: Пример метода Resync (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: ab95315c-fe15-458c-9e0c-937ae5596592
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f8ad898c7a02a46b12c546ae11b2387f8da0479e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917154"
 ---
 # <a name="resync-method-example-vb"></a>Пример метода Resync (Visual Basic)
-В этом примере показано использование [Resync](../../../ado/reference/ado-api/resync-method.md) метод, чтобы обновить данные в наборе статических записей.  
+В этом примере демонстрируется использование метода [Resync](../../../ado/reference/ado-api/resync-method.md) для обновления данных в статическом наборе записей.  
   
 ```  
 'BeginResyncVB  
@@ -103,6 +103,6 @@ End Sub
 'EndResyncVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Метод Resync](../../../ado/reference/ado-api/resync-method.md)

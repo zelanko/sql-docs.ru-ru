@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5ca661105c28cab2bf3e881cf262922e95da5eed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250371"
 ---
 # <a name="optimize-merge-replication-performance-with-download-only-articles"></a>Оптимизация производительности репликации слиянием при работе со статьями, доступными только для загрузки
@@ -48,6 +48,6 @@ ms.locfileid: "63250371"
   
 ## <a name="see-also"></a>См. также:  
  [Параметры статьи для репликации слиянием](article-options-for-merge-replication.md)   
- [Оптимизация производительности репликации слиянием с помощью отслеживания условного удаления](optimize-merge-replication-performance-with-conditional-delete-tracking.md)  
+ [Оптимизация производительности репликации слиянием с отслеживанием условного удаления](optimize-merge-replication-performance-with-conditional-delete-tracking.md)  
   
   

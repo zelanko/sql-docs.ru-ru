@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 36f489f25adc9746f844a6289ca8a2849ad83870
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109985"
 ---
 # <a name="alternative-ways-to-get-a-data-connection-report-builder"></a>Альтернативные способы создания подключения к данным (построитель отчетов)
@@ -37,7 +37,7 @@ ms.locfileid: "66109985"
   
 3.  Нажмите кнопку **Проверить соединение**, чтобы проверить соединение с источником данных. Отобразится сообщение «Соединение установлено успешно». [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-4.  Нажмите кнопку **Далее**.  
+4.  Щелкните **Далее**.  
   
      При необходимости введите учетные данные. Чтобы сохранить учетные данные локально, установите флажок **Сохранить пароль с соединением**. Если этот параметр не выбран, ввод учетных данных будет требоваться каждый раз при запуске отчета.  
   
@@ -65,14 +65,14 @@ ms.locfileid: "66109985"
   
      Отобразится сообщение «Соединение установлено успешно». [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  Нажмите кнопку **Далее**.  
+7.  Щелкните **Далее**.  
   
 8.  При запросе имени пользователя и пароля введите учетные данные. Чтобы сохранить учетные данные локально, установите флажок **Сохранить пароль с соединением**.  
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Добавление данных в отчет &#40;построитель отчетов и службы SSRS&#41;](report-data/report-datasets-ssrs.md)   
- [Учебники по &#40;построитель отчетов&#41;](report-builder-tutorials.md)  
+## <a name="see-also"></a>См. также:  
+ [Добавление данных в построитель отчетов &#40;отчетов и SSRS&#41;](report-data/report-datasets-ssrs.md)   
+ [Учебники &#40;построитель отчетов&#41;](report-builder-tutorials.md)  
   
   

@@ -18,13 +18,13 @@ ms.assetid: 0f76dd31-5b7b-4209-9e2e-b9ed5cac164d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ccae0385ef8c9305f4972ff6dcbd7a7960200370
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68056315"
 ---
-# <a name="spprimarykeys-transact-sql"></a>sp_primarykeys (Transact-SQL)
+# <a name="sp_primarykeys-transact-sql"></a>sp_primarykeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Возвращает столбцы первичных ключей для указанной удаленной таблицы по одной строке на ключевой столбец.  
@@ -42,32 +42,32 @@ sp_primarykeys [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @table_server = ] 'table_server'_` — Имя связанного сервера, из которой возвращаются сведения о первичном ключе. *table_server* — **sysname**, не имеет значения по умолчанию.  
+`[ @table_server = ] 'table_server'_`Имя связанного сервера, с которого возвращаются сведения о первичном ключе. Аргумент *table_server* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @table_name = ] 'table_name'` — Имя таблицы, для которого предоставляются сведения о первичном ключе. *TABLE_NAME*— **sysname**, значение по умолчанию NULL.  
+`[ @table_name = ] 'table_name'`Имя таблицы, для которой необходимо предоставить сведения о первичном ключе. Аргумент *table_name*имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @table_schema = ] 'table_schema'` Представляет схему таблицы. *table_schema* — **sysname**, значение по умолчанию NULL. В среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соответствует владельцу таблицы.  
+`[ @table_schema = ] 'table_schema'`Схема таблицы. Аргумент *table_schema* имеет тип **sysname**и значение по умолчанию NULL. В среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соответствует владельцу таблицы.  
   
-`[ @table_catalog = ] 'table_catalog'` Имя каталога, в котором указанный *table_name* находится. В среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соответствует имени базы данных. *значениям table_catalog* — **sysname**, значение по умолчанию NULL.  
+`[ @table_catalog = ] 'table_catalog'`Имя каталога, в котором находится заданный *table_name* . В среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соответствует имени базы данных. Аргумент *table_catalog* имеет тип **sysname**и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  None  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|Каталог таблицы.|  
-|**ПО ЗНАЧЕНИЯМ TABLE_SCHEM**|**sysname**|Схема таблицы.|  
-|**ИМЯ_ТАБЛИЦЫ**|**sysname**|Имя таблицы.|  
-|**COLUMN_NAME**|**sysname**|Имя столбца.|  
+|**TABLE_CAT**|**имеет sysname**|Каталог таблицы.|  
+|**TABLE_SCHEM**|**имеет sysname**|Схема таблицы.|  
+|**TABLE_NAME**|**имеет sysname**|Имя таблицы.|  
+|**COLUMN_NAME**|**имеет sysname**|Имя столбца.|  
 |**KEY_SEQ**|**int**|Порядковый номер столбца в первичном ключе, состоящем из нескольких столбцов.|  
-|**PK_NAME**|**sysname**|Идентификатор первичного ключа. Возвращает NULL, если не применим к источнику данных.|  
+|**PK_NAME**|**имеет sysname**|Идентификатор первичного ключа. Возвращает NULL, если не применим к источнику данных.|  
   
-## <a name="remarks"></a>Примечания  
- **sp_primarykeys** выполняется путем запроса набор строк PRIMARY_KEYS **IDBSchemaRowset** интерфейс поставщика OLE DB, соответствующий *table_server*. *Table_name*, *table_schema*, *значениям table_catalog*, и *столбец* параметры передаются этому интерфейсу для ограничения строк возвращается.  
+## <a name="remarks"></a>Remarks  
+ **sp_primarykeys** выполняется путем запроса набора строк PRIMARY_KEYS интерфейса **IDBSchemaRowset** поставщика OLE DB, соответствующего *table_server*. Параметры *table_name*, *table_schema*, *table_catalog*и *столбцов* передаются этому интерфейсу для ограничения возвращаемых строк.  
   
- **sp_primarykeys** возвращает пустой результирующий набор, если поставщик OLE DB указанного связанного сервера не поддерживает набор строк PRIMARY_KEYS **IDBSchemaRowset** интерфейс.  
+ **sp_primarykeys** возвращает пустой результирующий набор, если поставщик OLE DB указанного связанного сервера не поддерживает набор строк PRIMARY_KEYS интерфейса **IDBSchemaRowset** .  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение SELECT для схемы.  
@@ -82,15 +82,15 @@ EXEC sp_primarykeys @table_server = N'LONDON1',
    @table_schema = N'HumanResources';  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Распределенные запросы, хранимые процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Хранимые процедуры распределенных запросов &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
  [sp_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
  [sp_column_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
  [sp_foreignkeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
  [sp_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
- [sp_linkedservers (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
+ [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
  [sp_tables_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
  [sp_table_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

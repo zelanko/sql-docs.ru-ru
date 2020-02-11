@@ -14,20 +14,20 @@ ms.assetid: c5d795ba-70b0-420f-a944-b1894061a755
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 33f2050be5a0fb1b6d58bf00dd8c76c33219a237
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68079571"
 ---
 # <a name="using-scrollable-cursors"></a>Использование прокручиваемых курсоров
-Использования прокручиваемого курсора состоит из этих трех шагов:  
+Для использования прокручиваемого курсора необходимо выполнить следующие три шага:  
   
-1.  Определение возможностей курсора.  
+1.  Определите возможности курсора.  
   
 2.  Настройка курсора.  
   
-3.  Прокрутку и выборку строк.  
+3.  Прокрутка и выборка строк.  
   
  Этот раздел содержит следующие подразделы.  
   

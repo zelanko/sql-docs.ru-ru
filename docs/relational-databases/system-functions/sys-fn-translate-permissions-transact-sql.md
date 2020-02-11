@@ -1,5 +1,5 @@
 ---
-title: sys.fn_translate_permissions (Transact-SQL) | Документация Майкрософт
+title: sys. fn_translate_permissions (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ ms.assetid: ac97121f-2bd0-4f71-8e45-42c8584edbc5
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c08fd2235750a8a7be99b5290813331141ddf0de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68055374"
 ---
-# <a name="sysfntranslatepermissions-transact-sql"></a>sys.fn_translate_permissions (Transact-SQL)
+# <a name="sysfn_translate_permissions-transact-sql"></a>sys.fn_translate_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Преобразует битовую маску разрешений, возвращаемую трассировкой SQL, в таблицу имен разрешений.  
@@ -43,23 +43,23 @@ sys.fn_translate_permissions ( level , perms )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *level*  
- Вид защищаемого объекта, к которому применяется разрешение. *уровень* — **nvarchar(60)** .  
+ *уровню*  
+ Вид защищаемого объекта, к которому применяется разрешение. *Level* имеет тип **nvarchar (60)**.  
   
  *perms*  
- Битовая маска, возвращаемая в столбце разрешений. *perms* — **varbinary(16)** .  
+ Битовая маска, возвращаемая в столбце разрешений. *разрешение* имеет тип **varbinary (16)**.  
   
 ## <a name="returns"></a>Возвращает  
- **table**  
+ **Таблица**  
   
-## <a name="remarks"></a>Примечания  
- Значение, возвращаемое в **разрешения** столбца трассировки SQL является целочисленным представлением битовой маски, используемой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для вычисления эффективных разрешений. Каждый из 25 вида защищаемых объектов имеет собственный набор разрешений с соответствующими числовыми значениями. **sys.fn_translate_permissions** преобразует эту битовую маску в таблицу имен разрешений.  
+## <a name="remarks"></a>Remarks  
+ Значение, возвращаемое в столбце **Permissions** трассировки SQL, является целочисленным представлением битовой маски, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используемой для вычисления действующих разрешений. Каждый из 25 вида защищаемых объектов имеет собственный набор разрешений с соответствующими числовыми значениями. **sys. fn_translate_permissions** преобразует эту битовую маску в таблицу имен разрешений.  
   
 ## <a name="permissions"></a>Разрешения  
- Необходимо быть членом роли **public**.  
+ Требуется членство в роли **Public** .  
   
 ## <a name="example"></a>Пример  
- В следующем запросе используется `sys.fn_builtin_permissions` для отображения разрешений, которые применяются к сертификатам, а затем использует `sys.fn_translate_permissions` для возврата результатов битовую маска permissions.  
+ Следующий запрос использует `sys.fn_builtin_permissions` для отображения разрешений, которые применяются к сертификатам, а затем использует `sys.fn_translate_permissions` для получения результатов битовой маски разрешений.  
   
 ```  
 SELECT * FROM sys.fn_builtin_permissions('CERTIFICATE');  
@@ -68,9 +68,9 @@ SELECT '0010' AS Input, * FROM sys.fn_translate_permissions('CERTIFICATE', 0010)
 SELECT '0011' AS Input, * FROM sys.fn_translate_permissions('CERTIFICATE', 0011);  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Разрешения (ядро СУБД)](../../relational-databases/security/permissions-database-engine.md)   
- [sys.server_permissions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)   
- [sys.database_permissions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Разрешения &#40;ядро СУБД&#41;](../../relational-databases/security/permissions-database-engine.md)   
+ [sys. server_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)   
+ [sys. database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)  
   
   

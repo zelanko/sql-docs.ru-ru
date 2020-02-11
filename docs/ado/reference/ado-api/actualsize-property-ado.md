@@ -16,27 +16,27 @@ ms.assetid: 722803d0-cef5-4d4c-b79d-3f2f58052229
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6d405113044d10244d8c4fc3483c6220bf630dc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921423"
 ---
 # <a name="actualsize-property-ado"></a>Свойство ActualSize (ADO)
 Указывает фактическую длину значения поля в байтах.  
   
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
- Возвращает **Long** значение.  
+ Возвращает значение **типа Long** .  
   
-## <a name="remarks"></a>Примечания  
- Используйте **ActualSize** фактическую длину возвращаемого свойства [поле](../../../ado/reference/ado-api/field-object.md) значения объекта. Для всех полей **ActualSize** свойство доступно только для чтения. Если ADO не может определить длину **поле** значения объекта, **ActualSize** возвращает **adUnknown**.  
+## <a name="remarks"></a>Remarks  
+ Используйте свойство **ActualSize** , чтобы вернуть фактическую длину значения объекта [поля](../../../ado/reference/ado-api/field-object.md) . Для всех полей свойство **ActualSize** доступно только для чтения. Если ADO не удается определить длину значения объекта **поля** , свойство **ActualSize** возвращает **адункновн**.  
   
- **ActualSize** и [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) свойства отличаются, как показано в следующем примере. Объект **поле** объект с объявленным типом **adVarChar** и возвращает максимальную длину 50 символов **DefinedSize** значение 50, но  **Примеры ActualSize** он возвращает значение свойства представляет собой длину данных, хранящихся в поле для текущей записи. **Поля** с **DefinedSize** длиной более 255 байт, обрабатываются как столбцы переменной длины.  
+ Свойства **ActualSize** и [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) различаются, как показано в следующем примере. Объект **поля** с объявленным типом **адварчар** и максимальной длиной 50 символов возвращает значение свойства **DefinedSize** , равное 50, но возвращаемое значение свойства **ActualSize** — это длина данных, хранящихся в поле для текущей записи. **Поля** с **DefinedSize** размером более 255 байт рассматриваются как столбцы переменной длины.  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  [Объект Field](../../../ado/reference/ado-api/field-object.md)  
   
-## <a name="see-also"></a>См. также  
- [Примеры ActualSize и Definedsize свойства (Visual Basic)](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vb.md)   
- [Примеры ActualSize и Definedsize свойства (Visual C++)](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vc.md)   
+## <a name="see-also"></a>См. также:  
+ [Примеры свойств ActualSize и DefinedSize (Visual Basic)](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vb.md)   
+ [Пример свойств ActualSize и DefinedSize (Visual c++)](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vc.md)   
  [Свойство DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)

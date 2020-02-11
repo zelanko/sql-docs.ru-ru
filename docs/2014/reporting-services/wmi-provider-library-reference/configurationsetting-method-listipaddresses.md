@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e406b42346e936fe72c70e5cb13b75ffb3f1f8fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098321"
 ---
-# <a name="listipaddresses-method-wmi-msreportserverconfigurationsetting"></a>Метод ListIPAddresses (WMI MSReportServer_ConfigurationSetting)
+# <a name="listipaddresses-method-wmi-msreportserver_configurationsetting"></a>Метод ListIPAddresses (WMI MSReportServer_ConfigurationSetting)
   Список IP-адресов для компьютера, на котором размещен сервер отчетов.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -37,31 +37,31 @@ public void ListIPAddresses (out string[] IPAddress,
 ```  
   
 ## <a name="parameters"></a>Параметры  
- *IPAddress[]*  
+ *IPAddress []*  
  [out] Список IP-адресов для компьютера.  
   
- *IPVersion[]*  
+ *IPVersion []*  
  [out] Версия IP-адресов.  
   
  *IsDhcpEnabled[]*  
  [out] Показывает, используется ли для получения IP-адресов DHCP.  
   
- *Длина*  
+ *Недопустим*  
  [out] Длина массива, возвращаемого методом.  
   
- *HRESULT*  
+ *СОСТАВ*  
  [out] Значение, которое указывает, окончился ли вызов успехом или сбоем.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение *HRESULT* , являющееся признаком успешного или неуспешного завершение вызова метода. Значение 0 означает, что вызов метода завершился успешно; код ошибки означает, что произошла ошибка.  
   
-## <a name="remarks"></a>Примечания  
- Строки*IPVersion* имеют значения V4 и V6.  
+## <a name="remarks"></a>Remarks  
+ Строки *IPVersion* — V4, V6.  
   
- Если *IsDhcpEnabled* — `True`, *IPAddress* является динамическим. Его не следует использовать для привязок SSL.  
+ Если *исдхкпенаблед* имеет `True`значение, то *IPAddress* является динамическим. Его не следует использовать для привязок SSL.  
   
 ## <a name="requirements"></a>Требования  
- **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Пространство имен:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

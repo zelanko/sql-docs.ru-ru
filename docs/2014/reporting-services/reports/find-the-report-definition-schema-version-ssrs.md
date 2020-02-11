@@ -15,16 +15,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 395392908055a41a8418f02ce3510c050a3447f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102647"
 ---
 # <a name="find-the-report-definition-schema-version-ssrs"></a>Определение версии схемы определения отчета (SSRS)
   В файле определения отчета указывается пространство имен языка определения отчетов для версии схемы определения отчета, использованной для проверки RDL-файла. Если RDL-файл открывается в среде разработки отчетов, такой как конструктор в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , или построителе отчетов и если отчет был создан в предыдущем пространстве имен, автоматически создается файл резервной копии и отчет обновляется до текущего пространства имен. Если сохранить обновленное определение отчета, будет сохранен преобразованный RDL-файл. Это единственный способ обновления определения отчетов. Само определение отчетов не обновляется на сервере отчетов. Скомпилированный отчет обновляется на сервере отчетов. Дополнительные сведения см. в разделе [Upgrade Reports](../install-windows/upgrade-reports.md).  
   
-### <a name="how-to-identify-the-rdl-schema-version-of-a-report"></a>Практическое руководство. Определить версию RDL-схемы отчета  
+### <a name="how-to-identify-the-rdl-schema-version-of-a-report"></a>Инструкции. Определение версии RDL-схемы отчета  
   
 1.  Откройте файл отчета в формате RDL в приложении, таком как «Блокнот» или XML Notepad 2007, пригодном для просмотра XML-кода.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "66102647"
   
      Пространство имен определения отчета указано следующим URL-адресом: `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`.  
   
-### <a name="how-to-identify-the-rdl-schema-version-of-report-designer"></a>Практическое руководство. Определение версии схемы языка определения Отчетов из конструктора отчетов  
+### <a name="how-to-identify-the-rdl-schema-version-of-report-designer"></a>Как определить версию RDL-схемы конструктора отчетов  
   
 1.  Открыть новый проект. Версия выбранного проекта определяет версию схемы языка определения отчетов. В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]поддерживается использование нескольких версий схемы. Дополнительные сведения см. в разделе [Развертывание и поддержка версий в SQL Server Data Tools (службы SSRS)](../tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
   
@@ -60,7 +60,7 @@ ms.locfileid: "66102647"
   
      Пространство имен определения отчета указано следующим URL-адресом: `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
   
-### <a name="how-to-identify-the-rdl-schema-version-on-the-report-server"></a>Практическое руководство. Определение версии схемы языка определения Отчетов на сервере отчетов  
+### <a name="how-to-identify-the-rdl-schema-version-on-the-report-server"></a>Инструкции. Определение версии RDL-схемы отчета на сервере отчетов  
   
 -   В диспетчере отчетов введите URL-адрес сервера отчетов. Например, следующий URL-адрес указывает сервер отчетов на локальном компьютере.  
   
@@ -80,8 +80,8 @@ ms.locfileid: "66102647"
   
      Пространство имен определения отчета указано следующим URL-адресом: `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
   
-## <a name="see-also"></a>См. также  
- [Upgrade Reports](../install-windows/upgrade-reports.md)   
- [Язык определения отчетов (службы SSRS)](report-definition-language-ssrs.md)  
+## <a name="see-also"></a>См. также:  
+ [Обновление отчетов](../install-windows/upgrade-reports.md)   
+ [Язык определения отчетов &#40;службы SSRS&#41;](report-definition-language-ssrs.md)  
   
   

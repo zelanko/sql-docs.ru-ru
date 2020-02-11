@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a72673641fc0f67e22d88d5ea104089b273dedce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105160"
 ---
 # <a name="runningvalue-function-report-builder-and-ssrs"></a>Функция RunningValue (построитель отчетов и службы SSRS)
@@ -43,7 +43,7 @@ RunningValue(expression, function, scope)
 ## <a name="return-type"></a>Тип возвращаемых данных  
  Определяется агрегатной функцией, указанной параметром *function* .  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Это значение для функции `RunningValue` сбрасывается в 0 для каждого нового экземпляра этой области. Если указано группирование, то текущее значение сбрасывается при изменении выражения группы. Если указана область данных, то текущее значение сбрасывается для каждого нового экземпляра области данных. Если указан набор данных, то текущее значение не сбрасывается по всему набору данных.  
   
  Функция `RunningValue` не может быть использована в выражении фильтра или сортировки.  
@@ -58,7 +58,7 @@ RunningValue(expression, function, scope)
   
 -   Область для вложенных агрегатов не может быть именем набора данных.  
   
--   *Выражение* не может содержать `First`, `Last`, `Previous`, или `RunningValue` функции.  
+-   *Выражение* не должно содержать `First`функции `Last`, `Previous`, или `RunningValue` .  
   
 -   *Expression* не может содержать вложенные агрегаты, в которых указан параметр *recursive*.  
   
@@ -87,7 +87,7 @@ RunningValue(expression, function, scope)
 =RunningValue(Fields!Traffic Charges.Value, Sum, Nothing)  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование выражений в отчетах (построитель отчетов и службы SSRS)](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [Типы данных в выражениях (построитель отчетов и службы SSRS)](expressions-report-builder-and-ssrs.md)   

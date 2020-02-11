@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b7fc20f857f42c854fcf01947c39ea88206bb5b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63264891"
 ---
 # <a name="custom-report-item-class-libraries"></a>Библиотеки классов пользовательского элемента отчета
@@ -46,7 +46,8 @@ ms.locfileid: "63264891"
 |`AltReportItem`|Альтернативный объект — элемент отчета, который будет использоваться там, где не поддерживается элемент управления времени выполнения для пользовательского элемента отчета.|  
 |`Style`|Свойства стиля для пользовательского элемента отчета.|  
 |`Adornment`|Окно дополнения, используемое для интерактивного редактирования элемента управления.|  
-|`Site`|`ISite` компонента.|  
+|`Site`|
+  `ISite` компонента.|  
 |`DesignerVerbCollection`|Набор пользовательских команд, доступных через контекстное меню элемента управления.|  
   
 #### <a name="public-methods"></a>Открытые методы  
@@ -63,7 +64,7 @@ ms.locfileid: "63264891"
 |`OnPaint`|Вызывается в ответ на событие `Paint`.|  
   
 ### <a name="microsoftreportdesignercustomreportitemattribute"></a>Microsoft.ReportDesigner.CustomReportItemAttribute  
- Атрибут используется для выяснения типа пользовательского элемента отчета. Имя должно соответствовать значение <`Name`> атрибут `ReportItem` элемент в файле конфигурации конструктора отчетов.  
+ Атрибут используется для выяснения типа пользовательского элемента отчета. Имя должно соответствовать значению атрибута <`Name`> `ReportItem` элемента в файле конфигурации конструктор отчетов.  
   
 #### <a name="public-methods"></a>Открытые методы  
   
@@ -130,8 +131,8 @@ ms.locfileid: "63264891"
 |`DataSetName`|Имя набора данных, содержащего поля, которые предназначены для перетаскивания.|  
 |`Fields`|Коллекция полей (`Microsoft.ReportDesigner.Field`), которые предназначены для перетаскивания.|  
   
-## <a name="see-also"></a>См. также  
- [Язык определения отчетов (службы SSRS)](../reports/report-definition-language-ssrs.md)   
+## <a name="see-also"></a>См. также:  
+ [Язык определения отчетов &#40;службы SSRS&#41;](../reports/report-definition-language-ssrs.md)   
  [Создание компонента времени выполнения пользовательского элемента отчета](creating-a-custom-report-item-run-time-component.md)   
  [Создание компонента времени разработки пользовательского элемента отчета](creating-a-custom-report-item-design-time-component.md)  
   

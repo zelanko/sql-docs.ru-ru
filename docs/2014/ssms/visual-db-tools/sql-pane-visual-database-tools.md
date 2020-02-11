@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fd223c0a66b533cb2b405dd0e766f7053b7a4e89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63275967"
 ---
 # <a name="sql-pane-visual-database-tools"></a>Панель SQL (визуальные инструменты для баз данных)
@@ -53,12 +53,12 @@ ms.locfileid: "63275967"
 > [!NOTE]  
 >  Если была введена инструкция SQL, но потом были внесены изменения в запрос, с изменением панелей диаграмм и критериев, конструктор запросов и представлений перестроит и заново отобразит инструкцию SQL. В некоторых случаях это приводит к тому, что инструкция SQL строится отлично от той, которая была введена изначально (хотя результат получится одинаковый). Эта разница особенно возможна, если ведется работа с условиями поиска, содержащими несколько предложений, связанных AND и OR.  
   
-## <a name="see-also"></a>См. также  
- [Создание запросов &#40;визуальных инструментах баз данных&#41;](visual-database-tools.md)   
- [Выполнение запросов &#40;визуальных инструментах баз данных&#41;](run-queries-visual-database-tools.md)   
- [Проектирование запросов и представлений инструкции &#40;визуальных инструментах баз данных&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
- [Панель диаграмм &#40;визуальных инструментах баз данных&#41;](diagram-pane-visual-database-tools.md)   
- [Панель критериев &#40;визуальных инструментах баз данных&#41;](criteria-pane-visual-database-tools.md)   
+## <a name="see-also"></a>См. также:  
+ [Создание запросов &#40;визуальных инструментов для баз данных&#41;](visual-database-tools.md)   
+ [Выполнение запросов &#40;визуальных инструментов для баз данных&#41;](run-queries-visual-database-tools.md)   
+ [Разделы руководства по проектированию запросов и представлений &#40;визуальных инструментов для баз данных&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [Панель диаграмм &#40;визуальные инструменты для баз данных&#41;](diagram-pane-visual-database-tools.md)   
+ [Панель критериев &#40;визуальных инструментов для баз данных&#41;](criteria-pane-visual-database-tools.md)   
  [Панель результатов (визуальные инструменты для баз данных)](results-pane-visual-database-tools.md)  
   
   

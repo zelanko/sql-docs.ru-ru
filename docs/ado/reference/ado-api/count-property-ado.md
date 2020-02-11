@@ -16,26 +16,26 @@ ms.assetid: da9ccd1f-d402-41a2-940c-45556fc5340d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 292a4a8c26b3b10aa47fcbe7046a5897f601ed9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919358"
 ---
 # <a name="count-property-ado"></a>Свойство Count (ADO)
 Указывает количество объектов в коллекции.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает **Long** значение.  
+ Возвращает значение **типа Long** .  
   
-## <a name="remarks"></a>Примечания  
- Используйте **число** свойство, чтобы определить, сколько объектов в данной коллекции.  
+## <a name="remarks"></a>Remarks  
+ Для определения количества объектов в заданной коллекции используется свойство **Count** .  
   
- Поскольку нумерация для членов коллекции начинается с нуля, вам необходимо всегда кодировать циклы, начиная с нуля элемента и заканчивая значение **число** минус единица. Если вы используете Microsoft Visual Basic и хотите циклический перебор элементов коллекции без проверки **число** свойство, используйте **для каждого... Далее** команды.  
+ Поскольку нумерация элементов коллекции начинается с нуля, всегда следует создавать циклы кода, начиная с нуля и заканчивая значением свойства **Count** минус 1. Если вы используете Microsoft Visual Basic и хотите перебрать элементы коллекции, не проверяя свойство **Count** , используйте оператор **For Each... Следующая** команда.  
   
- Если **число** равно нулю, нет объектов в коллекции.  
+ Если свойство **Count** равно нулю, в коллекции отсутствуют объекты.  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
   
 ||||  
 |-|-|-|  
@@ -47,7 +47,7 @@ ms.locfileid: "67919358"
 |[Коллекция Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)|[Коллекция Tables (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)|[Коллекция Users (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)|  
 |[Коллекция Views (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)|||  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример свойства Count (Visual Basic)](../../../ado/reference/ado-api/count-property-example-vb.md)   
- [Пример свойства Count (Visual C++)](../../../ado/reference/ado-api/count-property-example-vc.md)   
+ [Пример свойства Count (Visual c++)](../../../ado/reference/ado-api/count-property-example-vc.md)   
  [Метод Refresh (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)

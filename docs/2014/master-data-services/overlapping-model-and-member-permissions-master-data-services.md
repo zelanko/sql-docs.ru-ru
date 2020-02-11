@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ca57d34a3dda2880f3882d1940c6852af0729fb7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482733"
 ---
 # <a name="overlapping-model-and-member-permissions-master-data-services"></a>Перекрытие разрешений моделей и элементов (службы основных данных)
@@ -26,9 +26,9 @@ ms.locfileid: "65482733"
   
  Если разрешение элемента отличается от разрешения соответствующего модельного объекта, то применяются следующие правила.  
   
--   **Запретить** переопределяет все остальные разрешения.  
+-   **Deny** переопределяет все остальные разрешения.  
   
--   **Только для чтения** переопределяет **обновления**.  
+-   Переопределяет **Обновление** **только для чтения** .  
   
  На следующем рисунке показано, какие разрешения влияют на отдельное значение атрибута, если разрешения для атрибутов отличаются от разрешений для элементов.  
   
@@ -41,34 +41,34 @@ ms.locfileid: "65482733"
   
  На вкладке **Элементы иерархии** узлу подкатегории Mountain Bikes в производной иерархии назначено разрешение **Обновление** .  
   
- Результат: В **обозревателе** пользователь имеет разрешение **Обновление** для всех значений атрибутов всех элементов узла Mountain Bikes. Все остальные элементы и их атрибуты скрыты.  
+ Результат: в **обозревателе**пользователь имеет разрешение **Обновление** для всех значений атрибутов всех элементов узла Mountain Bikes. Все остальные элементы и их атрибуты скрыты.  
   
  ![mds_conc_overlap_model_example_1](../../2014/master-data-services/media/mds-conc-overlap-model-example-1.gif "mds_conc_overlap_model_example_1")  
   
-## <a name="example-2"></a>Пример 2  
+## <a name="example-2"></a>Пример 2.  
  ![mds_conc_overlap_model_2](../../2014/master-data-services/media/mds-conc-overlap-model-2.gif "mds_conc_overlap_model_2")  
   
  На вкладке **Модели** для атрибута Subcategory назначено разрешение **Обновление** .  
   
- На **элементы иерархии** вкладке узлу подкатегории Mountain Bikes в производной иерархии явно назначается **только для чтения** разрешение.  
+ На вкладке **элементы иерархии** узлу Подкатегория горных велосипедов в производной иерархии явным образом назначается разрешение только для **чтения** .  
   
- Результат: В **Explorer**, у пользователя есть **только для чтения** разрешение для значений атрибута SubCategory всех элементов узла Mountain Bikes. Все остальные элементы и их атрибуты скрыты.  
+ Результат: в **обозревателе**пользователь имеет разрешение **только на чтение** для значений атрибута Подкатегория для элементов в узле Mountain велосипедов. Все остальные элементы и их атрибуты скрыты.  
   
  ![mds_conc_overlap_model_example_2](../../2014/master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   
-## <a name="example-3"></a>Пример 3  
+## <a name="example-3"></a>Пример 3  
  ![mds_conc_overlap_model_3](../../2014/master-data-services/media/mds-conc-overlap-model-3.gif "mds_conc_overlap_model_3")  
   
- На **моделей** вкладке атрибут «Подкатегория» имеет **только для чтения** назначено разрешение.  
+ На вкладке **модели** атрибут Подкатегория имеет разрешение **только чтение** .  
   
  На вкладке **Элементы иерархии** узлу подкатегории Mountain Bikes в порожденной иерархии явно назначено разрешение **Обновление** .  
   
- Результат: В **Explorer**, у пользователя есть **только для чтения** разрешение для значений атрибута. Все остальные элементы и их атрибуты скрыты.  
+ Результат: в **обозревателе**пользователь имеет разрешение **только на чтение** значений атрибутов. Все остальные элементы и их атрибуты скрыты.  
   
  ![mds_conc_overlap_model_example_2](../../2014/master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   
-## <a name="see-also"></a>См. также  
- [Способ определения разрешений (службы Master Data Services)](how-permissions-are-determined-master-data-services.md)   
- [Перекрытие разрешений пользователей и групп (службы Master Data Services)](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Как определяются разрешения &#40;Master Data Services&#41;](how-permissions-are-determined-master-data-services.md)   
+ [Перекрывающиеся разрешения пользователей и групп &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md)  
   
   

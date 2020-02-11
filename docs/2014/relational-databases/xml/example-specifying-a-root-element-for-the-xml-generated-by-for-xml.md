@@ -1,5 +1,5 @@
 ---
-title: Пример Задание корневого элемента для XML-документа, сформированного предложением FOR XML | Документация Майкрософт
+title: Пример. Задание корневого элемента для XML-документа, сформированного предложением FOR XML | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 97b1a4ecc9cfbe0f9f8b793cddc788baf81a2200
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63288375"
 ---
-# <a name="example-specifying-a-root-element-for-the-xml-generated-by-for-xml"></a>Пример Определение корневого элемента для XML-документа, созданного предложением FOR XML
+# <a name="example-specifying-a-root-element-for-the-xml-generated-by-for-xml"></a>Пример. Задание корневого элемента для XML-документа, сформированного предложением FOR XML
   Путем определения параметра `ROOT` в запросе `FOR XML` можно выполнить запрос одного элемента высшего уровня для итогового XML-документа, как показано в этом запросе. Данный аргумент, определенный для директивы `ROOT` , задает имя корневого элемента.  
   
 ## <a name="example"></a>Пример  
@@ -35,7 +35,7 @@ FOR XML RAW, ROOT('MyRoot')
 go  
 ```  
   
- Это результат:  
+ Результат:  
   
 ```  
 <MyRoot>  
@@ -45,7 +45,7 @@ go
 </MyRoot>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Использование с RAW Mode для FOR XML](use-raw-mode-with-for-xml.md)  
+## <a name="see-also"></a>См. также:  
+ [Использование RAW Mode с FOR XML](use-raw-mode-with-for-xml.md)  
   
   

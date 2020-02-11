@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ecddbed328d1625f525069fe3d502c3348eb065a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103904"
 ---
 # <a name="create-modify-and-delete-snapshots-in-report-history"></a>Создание, изменение и удаление моментальных снимков в журнале отчетов
@@ -59,7 +59,7 @@ ms.locfileid: "66103904"
   
  Но весь журнал целиком удаляется при удалении отчета. Например, при удалении месячного отчета по продажам по причине замещения его более новой версией, весь связанный с отчетом журнал будет утрачен. Однако при перемещении отчета весь журнал перемещается вместе с ним.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание журнала отчета (службы Reporting Services в режиме интеграции с SharePoint)](create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
  [Диспетчер отчетов (службы Reporting Services в основном режиме)](../report-manager-ssrs-native-mode.md)   
  [Управление содержимым сервера отчетов (службы Reporting Services в основном режиме)](report-server-content-management-ssrs-native-mode.md)   
