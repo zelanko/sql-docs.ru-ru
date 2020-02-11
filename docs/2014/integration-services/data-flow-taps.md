@@ -1,5 +1,5 @@
 ---
-title: Отводы потоков данных | Документация Майкрософт
+title: Отвода потока данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a1938f2389f64d7a869ae924690b8b22fa209f82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059908"
 ---
 # <a name="data-flow-taps"></a>Вкладки «Поток данных»
@@ -76,7 +76,7 @@ select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid
 ## <a name="performance-consideration"></a>Вопросы производительности  
  Включение подробного уровня ведения журнала и добавление отводов данных увеличивает количество операций ввода-вывода, выполняемых решением по интеграции данных. Поэтому рекомендуется добавлять отводы данных только для устранения неполадок  
   
-## <a name="video"></a>Видеоролик  
+## <a name="video"></a>Видео  
  Этот [видеоролик в библиотеке TechNet](https://technet.microsoft.com/sqlserver/dn600163) демонстрирует добавление и использование отводов данных в каталоге SQL Server 2012 SSISDB для программной отладки пакетов и получения частичных результатов во время выполнения. Также там обсуждается вопрос перечисления или удаления отводов данных и рекомендации по их применению в пакетах SSIS.  
   
 ## <a name="related-tasks"></a>Связанные задачи  
