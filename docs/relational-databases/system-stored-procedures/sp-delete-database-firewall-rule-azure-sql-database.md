@@ -19,16 +19,16 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 660405e7e7592557422e43655c35ec27c194aad3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68130684"
 ---
-# <a name="spdeletedatabasefirewallrule-azure-sql-database"></a>sp_delete_database_firewall_rule (база данных SQL Azure)
+# <a name="sp_delete_database_firewall_rule-azure-sql-database"></a>sp_delete_database_firewall_rule (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Удаляет параметр брандмауэра уровня базы данных из вашего [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Правила брандмауэра базы данных можно настроить и удалить базу данных master и пользовательских баз данных на [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].   
+  Удаляет параметр брандмауэра уровня базы данных из [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Правила брандмауэра базы данных можно настроить и удалить для базы данных master, а также для пользовательских баз [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]данных на.   
   
  
 ## <a name="syntax"></a>Синтаксис  
@@ -40,13 +40,13 @@ sp_delete_database_firewall_rule [@name =] [N]'name'
   
 ## <a name="arguments"></a>Аргументы  
  `[@name =] [N]'name'`  
- Имя параметра брандмауэра уровня базы данных, который будет удален. *имя* — **nvarchar(128)** без значения по умолчанию. Идентификатор Юникода `N` является необязательным для [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. 
+ Имя параметра брандмауэра уровня базы данных, который будет удален. *имя* имеет тип **nvarchar (128)** без значения по умолчанию. Идентификатор `N` Юникода является необязательным для [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. 
   
 ## <a name="permissions"></a>Разрешения  
- Только на уровне сервера имя входа субъекта созданное процесс подготовки или субъекта Azure Active Directory, назначены так, как администратор может удалить правила брандмауэра уровня базы данных.  
+ Только имя входа субъекта уровня сервера, созданное процессом подготовки или участником Azure Active Directory, назначенным администратором, может удалять правила брандмауэра уровня базы данных.  
   
 ## <a name="example"></a>Пример  
- Следующий пример удаляет параметр брандмауэра уровня базы данных `Example DB Setting 1`.
+ В следующем примере удаляется параметр брандмауэра уровня базы данных с `Example DB Setting 1`именем.
   
 ```  
 -- Remove database-level firewall setting  
@@ -54,12 +54,12 @@ EXECUTE sp_delete_database_firewall_rule N'Example DB Setting 1';
   
 ```  
   
-## <a name="see-also"></a>См. также  
- [Брандмауэр базы данных Azure SQL](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)   
- [Практическое руководство. Настройка параметров брандмауэра (база данных Azure SQL)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
- [sp_set_firewall_rule &#40;базы данных SQL Azure&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
- [sp_set_database_firewall_rule &#40;базы данных SQL Azure&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)   
- [sys.database_firewall_rules &#40;базы данных SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)  
+## <a name="see-also"></a>См. также:  
+ [Брандмауэр базы данных SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)   
+ [Как настроить параметры брандмауэра (база данных SQL Azure)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
+ [sp_set_firewall_rule &#40;базе данных SQL Azure&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
+ [sp_set_database_firewall_rule &#40;базе данных SQL Azure&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)   
+ [sys. database_firewall_rules &#40;базы данных SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)  
   
   
 

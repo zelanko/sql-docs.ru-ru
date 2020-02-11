@@ -16,16 +16,16 @@ ms.assetid: e55789d1-43fb-4a37-9e5e-60ccef122a5d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a3ce46249670f9c290a07418b78c7c3296d7855b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68137628"
 ---
-# <a name="sphelppeerresponses-transact-sql"></a>sp_helppeerresponses (Transact-SQL)
+# <a name="sp_helppeerresponses-transact-sql"></a>sp_helppeerresponses (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Возвращает все ответы на запрос о состоянии, полученный от участника в топологии репликации peer-to-peer, где запрос был инициирован выполнением процедуры [sp_helppeerrequests](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) в любой публикуемой базе данных в топологии. Эта хранимая процедура выполняется в базе данных публикации при участии издателя в топологии одноранговой репликации. Дополнительные сведения см. в разделе [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
+  Возвращает все ответы на конкретный запрос состояния, полученный от участника в одноранговой топологии репликации, где запрос был инициирован путем исполнения [sp_helppeerrequests](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) в любой опубликованной базе данных в топологии. Эта хранимая процедура выполняется в базе данных публикации при участии издателя в топологии одноранговой репликации. Дополнительные сведения см. в разделе [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -37,29 +37,29 @@ sp_helppeerresponses [ @request_id = ] request_id
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @request_id = ] request_id` — Это идентификатор запроса состояния. *Идентификатор request_id* — **int**, не имеет значения по умолчанию.  
+`[ @request_id = ] request_id`Идентификатор конкретного запроса состояния. *request_id* имеет **тип int**и не имеет значения по умолчанию.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |**request_id**|**int**|Идентификатор запроса состояния.|  
-|**однорангового узла**|**sysname**|Имя узла, сформировавшего ответ.|  
-|**peer_db**|**sysname**|Имя базы данных узла, сформировавшего ответ.|  
+|**класс**|**имеет sysname**|Имя узла, сформировавшего ответ.|  
+|**peer_db**|**имеет sysname**|Имя базы данных узла, сформировавшего ответ.|  
 |**received_date**|**datetime**|Дата и время, когда запрашивающий объект получил ответ от однорангового узла, который отправил этот ответ.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
- **sp_helppeerresponses** используется в репликации транзакций peer-to-peer.  
+## <a name="remarks"></a>Remarks  
+ **sp_helppeerresponses** используется в одноранговой репликации транзакций.  
   
- **sp_helppeerresponses** процедура используется при восстановлении базы данных, опубликованной в топологии peer-to-peer.  
+ **sp_helppeerresponses** процедура используется при восстановлении базы данных, опубликованной в одноранговой топологии.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_helppeerresponses**.  
+ Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_helppeerresponses**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_deletepeerrequesthistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
  [sp_helppeerrequests &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppeerrequests-transact-sql.md)  
   

@@ -16,10 +16,10 @@ ms.assetid: 199e869b-2cd2-44ee-b2ee-69edb06a1bc4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 231796d1678a19106eb89f3039cd755e8385082c
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73633019"
 ---
 # <a name="sp_schemafilter-transact-sql"></a>sp_schemafilter (Transact-SQL)
@@ -39,13 +39,13 @@ sp_schemafilter [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publisher = ] 'publisher'` — имя издателя, не являющегося [!INCLUDE[msCoName](../../includes/msconame-md.md)]ом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publisher = ] 'publisher'`Имя [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя, не являющегося издателем. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @schema = ] 'schema'` — имя схемы. *Schema* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @schema = ] 'schema'`Имя схемы. *Schema* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @operation = ] 'operation'` — это действие, выполняемое с этой схемой. *Операция* имеет тип **nvarchar (4)** и может принимать одно из следующих значений.  
+`[ @operation = ] 'operation'`Действие, выполняемое с этой схемой. *Операция* имеет тип **nvarchar (4)** и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |**включить**|Добавляет указанную схему в список схем, не подходящих для публикации.|  
 |**тени**|Удаляет указанную схему из списка схем, не подходящих для публикации.|  
@@ -53,20 +53,20 @@ sp_schemafilter [ @publisher = ] 'publisher'
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|**SchemaName**|**sysname**|Имя схемы, не подходящей для публикации.|  
+|**SchemaName**|**имеет sysname**|Имя схемы, не подходящей для публикации.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **sp_schemafilter** следует использовать только для разнородных издателей.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** на распространителе могут выполнять **sp_schemafilter**.  
   
-## <a name="see-also"></a>См. также раздел  
- [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Хранимые процедуры репликации &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

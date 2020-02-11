@@ -1,5 +1,5 @@
 ---
-title: Урок 10. Определение административных ролей | Документация Майкрософт
+title: Занятие 10. определение административных ролей | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,25 +11,25 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 98c6db6e3c7af6f66f4d7a1496bf955a65dd5bb1
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69530870"
 ---
-# <a name="lesson-10-defining-administrative-roles"></a>Урок 10. Определение административных ролей
+# <a name="lesson-10-defining-administrative-roles"></a>Занятие 10. Определение ролей администрирования
   На данном занятии предстоит определить роли безопасности для задач администрирования.  
   
 > [!NOTE]  
->  Завершенные проекты для всех занятий в этом учебнике доступны через Интернет. Можно перейти вперед к любому занятию, используя в качестве отправной точки завершенный проект из предыдущего урока. [Щелкните здесь](https://go.microsoft.com/fwlink/?LinkID=221866) для загрузки образцов проектов, прилагаемых к этому учебнику.  
+>  Завершенные проекты для всех занятий в этом учебнике доступны через Интернет. Можно перейти вперед к любому занятию, используя в качестве отправной точки завершенный проект из предыдущего урока. [Щелкните здесь](https://go.microsoft.com/fwlink/?LinkID=221866) , чтобы скачать примеры проектов, которые можно найти в этом руководстве.  
   
  Это занятие содержит следующую задачу:  
   
  [Предоставление разрешений на обработку базы данных](lesson-10-granting-process-database-permissions.md)  
  В этой задаче будет задана роль безопасности с разрешениями на обработку базы данных служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , после чего будет выполнена проверка созданной роли безопасности.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Analysis Services сценарий учебника](analysis-services-tutorial-scenario.md)   
- [Многомерное моделирование (учебник по Adventure Works)](multidimensional-modeling-adventure-works-tutorial.md)  
+ [&#40;учебника по Adventure Works в многомерном моделировании&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

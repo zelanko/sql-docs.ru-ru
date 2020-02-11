@@ -21,18 +21,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5136c67077ff90e7bbbd66ae72fed891267ba7a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62520352"
 ---
 # <a name="building-applications-using-the-web-service-and-the-net-framework"></a>Building Applications Using the Web Service and the .NET Framework
-  В [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] можно использовать знакомые программные конструкции, например методы, типы-примитивы и определяемые пользователем сложные типы для работы с веб-службами. В платформе [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] содержится инфраструктура и средства, которые можно использовать для создания клиентов веб-службы, которые могут вызвать любую веб-службу, совместимую со стандартами консорциума World Wide Web (W3C).  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] В можно использовать знакомые конструкции программирования, такие как методы, простые типы и определяемые пользователем сложные типы, для работы с веб- [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]службами. В платформе [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] содержится инфраструктура и средства, которые можно использовать для создания клиентов веб-службы, которые могут вызвать любую веб-службу, совместимую со стандартами консорциума World Wide Web (W3C).  
   
  Клиент веб-службы сервера отчетов — это любой компонент или приложение, которое обменивается данными с сервером отчетов посредством сообщений SOAP.  
   
- **Создать клиент веб-службы сервера отчетов с помощью платформы .NET Framework можно, выполнив следующие основные шаги.**  
+ **Чтобы создать клиент веб-службы сервера отчетов с помощью .NET Framework, выполните следующие основные действия.**  
   
 1.  Создание класса-посредника для веб-службы.  
   
@@ -48,21 +48,21 @@ ms.locfileid: "62520352"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Описание|  
+|Раздел|Description|  
 |-----------|-----------------|  
-|[Создание прокси веб-службы](creating-the-web-service-proxy.md)|Описывает методы добавления класса-посредника в проект с использованием [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].|  
-|[Аутентификация веб-службы](web-service-authentication.md)|Описывает процесс проверки подлинности вызовов к веб-службе сервера отчетов.|  
-|[Вызов методов веб-службы](calling-web-service-methods.md)|Описывает процесс использования API-интерфейса SOAP для вызова методов веб-службы в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].|  
-|[Определение свойства URL-адреса веб-службы](setting-the-url-property-of-the-web-service.md)|Описывает процесс программного перенаправления учетной записи-посредника веб-службы на URL-адрес нового сервера после создания веб-ссылки.|  
-|[Передача аргументов метода веб-службы](supplying-web-service-method-arguments.md)|Описывает процесс вызова метода веб-службы и предоставления аргументов метода.|  
+|[Создание учетной записи-посредника веб-службы](creating-the-web-service-proxy.md)|Описывает способы добавления класса-посредника в проект с помощью [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].|  
+|[Проверка подлинности веб-службы](web-service-authentication.md)|Описывает процесс проверки подлинности вызовов к веб-службе сервера отчетов.|  
+|[Вызов методов веб-служб](calling-web-service-methods.md)|Описывает, как использовать API SOAP для вызова методов веб-службы в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].|  
+|[Задание свойства Url для веб-службы](setting-the-url-property-of-the-web-service.md)|Описывает процесс программного перенаправления учетной записи-посредника веб-службы на URL-адрес нового сервера после создания веб-ссылки.|  
+|[Передача аргументов методу веб-службы](supplying-web-service-method-arguments.md)|Описывает процесс вызова метода веб-службы и предоставления аргументов метода.|  
 |[Пропуск значений для необязательных объектов веб-службы](omitting-values-for-optional-web-service-objects.md)|Описывает процесс пропуска значений для необязательных объектов веб-службы.|  
 |[Использование защищенных методов веб-службы](using-secure-web-service-methods.md)|Описывает параметр **SecureConnectionLevel** и то, как он влияет на использование API-интерфейса SOAP служб Reporting Services.|  
-|[Передача параметров сведений об устройстве для модулей подготовки отчетов](passing-device-information-settings-to-rendering-extensions.md)|Описываются настройки сведений об устройстве, используемые для подготовки отчетов в различных форматах.|  
-|[Параметры модуля доставки Reporting Services](reporting-services-delivery-extension-settings.md)|Описываются параметры, используемые для доставки отчетов с использованием электронной почты сервера отчетов.|  
+|[Передача настроек сведений об устройстве модулям подготовки отчетов к просмотру](passing-device-information-settings-to-rendering-extensions.md)|Описываются настройки сведений об устройстве, используемые для подготовки отчетов в различных форматах.|  
+|[Параметры модулей доставки служб Reporting Services](reporting-services-delivery-extension-settings.md)|Описываются параметры, используемые для доставки отчетов с использованием электронной почты сервера отчетов.|  
 |[Использование заголовков SOAP в службах Reporting Services](../../report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)|Описывает использование заголовков SOAP в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
-|[Общие сведения об обработке исключений в службах Reporting Services](../../report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)|Предоставляет сведения о процессе обработки ошибок в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
+|[Знакомство с обработкой исключений в службах Reporting Services](../../report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)|Предоставляет сведения о процессе обработки ошибок в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Веб-служба сервера отчетов](../report-server-web-service.md)   
  [Технический справочник (службы SSRS)](../../technical-reference-ssrs.md)  
   

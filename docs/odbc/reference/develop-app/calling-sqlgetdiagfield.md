@@ -17,11 +17,11 @@ ms.assetid: 3c4fb606-b81c-4f11-9820-f0a54e3bc401
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2ef69704ae6984f41080aea009f17ac09bafefd2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68134977"
 ---
 # <a name="calling-sqlgetdiagfield"></a>Вызов SQLGetDiagField
-Когда ODBC *3.x* приложение вызывает **SQLGetDiagField** в ODBC *2.x* драйвера, драйвер возвращает значение SQL_SUCCESS и соответствующие сведения в  *\*DiagInfoPtr* Если *DiagIdentifier* аргумент является SQL_DIAG_CLASS_ORIGIN, SQL_DIAG_CLASS_SUBCLASS_ORIGIN, SQL_DIAG_CONNECTION_NAME, SQL_DIAG_MESSAGE_TEXT, SQL_DIAG_ NATIVE, SQL_DIAG_NUMBER, SQL_DIAG_RETURNCODE, SQL_DIAG_SERVER_NAME или SQL_DIAG_SQLSTATE. Все диагностические поля вернет значение SQL_ERROR.
+Когда приложение ODBC *3. x* вызывает **SQLGetDiagField** в драйвере ODBC *2. x* , драйвер возвратит SQL_SUCCESS и соответствующую информацию в * \*диагинфоптр* , если аргумент *диагидентифиер* имеет значение SQL_DIAG_CLASS_ORIGIN, SQL_DIAG_CLASS_SUBCLASS_ORIGIN, SQL_DIAG_CONNECTION_NAME, SQL_DIAG_MESSAGE_TEXT, SQL_DIAG_NATIVE, SQL_DIAG_NUMBER, SQL_DIAG_RETURNCODE, SQL_DIAG_SERVER_NAME или SQL_DIAG_SQLSTATE. Все остальные поля диагностики будут возвращать SQL_ERROR.

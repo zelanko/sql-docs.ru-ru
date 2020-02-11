@@ -18,10 +18,10 @@ ms.assetid: ff51a836-7cff-4ddc-a92a-893f86e637cb
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: dbcf48a0656de22465de5976bd7073e5b7556cd9
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660327"
 ---
 # <a name="protocoldisplayname-property-servernetworkprotocol-class"></a>Свойство ProtocolDisplayName (класс ServerNetworkProtocol)
@@ -36,15 +36,15 @@ object.ProtocolDisplayName [= value]
 ```  
   
 ## <a name="parts"></a>Компоненты  
- *object*  
+ *объектами*  
  A [класса ServerNetworkProtocol](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/servernetworkprotocol-class.md) , который представляет сетевой протокол, используемый экземпляром [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Строковое значение, определяющее отображаемое имя сетевого протокола сервера.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также раздел  
- [Настройка сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+## <a name="see-also"></a>См. также:  
+ [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

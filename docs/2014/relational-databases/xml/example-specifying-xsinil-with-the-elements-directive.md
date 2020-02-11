@@ -1,5 +1,5 @@
 ---
-title: Пример Указание XSINIL с директивой ELEMENTS | Документация Майкрософт
+title: Пример. Указание XSINIL с директивой ELEMENTS | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 34cc4479a26d633e689963a945095248f683993f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287278"
 ---
-# <a name="example-specifying-xsinil-with-the-elements-directive"></a>Пример Определение XSINIL с директивой ELEMENTS
+# <a name="example-specifying-xsinil-with-the-elements-directive"></a>Пример. Указание XSINIL с директивой ELEMENTS
   В этом запросе задается директива `ELEMENTS` для создания из результата запроса элементного XML-документа.  
   
 ## <a name="example"></a>Пример  
@@ -74,7 +74,7 @@ FOR XML RAW, ELEMENTS XSINIL ;
 </row>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Использование с RAW Mode для FOR XML](use-raw-mode-with-for-xml.md)  
+## <a name="see-also"></a>См. также:  
+ [Использование RAW Mode с FOR XML](use-raw-mode-with-for-xml.md)  
   
   

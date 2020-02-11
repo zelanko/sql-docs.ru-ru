@@ -1,5 +1,5 @@
 ---
-title: Приложение Г. Примеры ADO | Документация Майкрософт
+title: Приложение г. примеры ADO | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,23 +14,23 @@ ms.assetid: 1582e411-55ac-40f0-bd3d-9a10654e4b67
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5b4a1289755d04c2d9f861fbdcb704fad3d8707d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926868"
 ---
-# <a name="appendix-d-ado-samples-in-the-windows-sdk"></a>Приложение Г. Примеры ADO в Windows SDK
-Пакет Windows SDK содержит несколько примеров приложений, которые демонстрируют использование кода ADO и служб удаленных рабочих СТОЛОВ. Эти образцы помогут вам понять, как использовать ADO и RDS, но не предназначены для развертывания на производственных серверах.
+# <a name="appendix-d-ado-samples-in-the-windows-sdk"></a>Приложение г. примеры ADO в Windows SDK
+Windows SDK содержит несколько примеров приложений, демонстрирующих использование ADO и RDS Code. Эти примеры позволяют научиться использовать ADO и RDS, но не предназначены для развертывания на рабочих серверах.
 
 > [!NOTE]
->  Компании, имена и данные, используемые в примерах, являются вымышленными, если не указано иное.
+>  Компании, имена и данные, используемые в примерах, вымышлены, если не указано иное.
 
- Чтобы найти примеры ADO, перейдите к корневой папке пакета SDK для Windows, например C:\Program Files\Microsoft SDKs\Windows\v6.0. Затем перейдите во вложенную папку Samples\dataaccess\ADO.
+ Чтобы найти примеры ADO, перейдите в корневую папку Windows SDK, например C:\Program Files\Microsoft SDKs\Windows\v6.0. Затем перейдите в подпапку Самплес\датаакцесс\адо.
 
- Чтобы начать работу с образцы приложений ADO и служб удаленных рабочих СТОЛОВ, откройте default.htm из папки образцов ADO и служб удаленных рабочих СТОЛОВ, соответственно. Эти файлы описания каждого доступные примеры приложений и объясняется, как настроить и запустить примеры, как просмотреть исходный код образца.
+ Чтобы начать работу с примерами приложений ADO и RDS, откройте Default. htm в папках примеров ADO и RDS соответственно. В этих файлах описываются все доступные примеры приложений, а также объясняется, как настроить и запустить примеры, чтобы просмотреть пример исходного кода.
 
- В документации по ADO также содержатся примеры кода на нескольких языках, которые включены в качестве разделы в этой интерактивной справке. Дополнительные сведения об этих примерах, см. в разделе [примеры кода ADO](../../../ado/reference/ado-api/ado-code-examples.md).
+ Документация по ADO также содержит примеры кода на нескольких языках, которые включены в эту интерактивную справку в качестве разделов. Дополнительные сведения об этих примерах см. в разделе [примеры кода ADO](../../../ado/reference/ado-api/ado-code-examples.md).
 
-## <a name="see-also"></a>См. также
- [Объекты данных Microsoft ActiveX (ADO)](../../../ado/microsoft-activex-data-objects-ado.md) [Справочник по API ADO](../../../ado/reference/ado-api/ado-api-reference.md) [примеры кода ADO](../../../ado/reference/ado-api/ado-code-examples.md) [примеры кода ADO в Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md) [кода ADO Примеры VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md) [примеры кода ADO в Visual C++ ](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md) [приложение а. Поставщики](../../../ado/guide/appendixes/appendix-a-providers.md) [Настройка RDS](../../../ado/guide/remote-data-service/configuring-rds.md) [приложение c. Программирование с использованием ADO](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md) [журнал объектов ADO](../../../ado/guide/ado-history.md)
+## <a name="see-also"></a>См. также:
+ Примеры кода ADO [справочника по API](../../../ado/reference/ado-api/ado-api-reference.md) ADO для [Microsoft объекты данных ActiveX (ADO)](../../../ado/microsoft-activex-data-objects-ado.md) примеры [кодов ADO](../../../ado/reference/ado-api/ado-code-examples.md) [в Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md) примеров кода ado примеры кода на [языке сценариев VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md) [в Visual C++](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md) [приложении A: поставщики](../../../ado/guide/appendixes/appendix-a-providers.md) [Настройка приложения RDS](../../../ado/guide/remote-data-service/configuring-rds.md) [Приложение C: программирование с помощью](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md) [журнала](../../../ado/guide/ado-history.md) ADO ADO

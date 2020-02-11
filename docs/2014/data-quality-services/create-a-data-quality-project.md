@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f341d13995cd7a13a06e0ad7b9b380ebd0184f7d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480956"
 ---
 # <a name="create-a-data-quality-project"></a>Создание проекта служб DQS
@@ -35,9 +35,9 @@ ms.locfileid: "65480956"
 ####  <a name="Permissions"></a> Permissions  
  Для создания проекта служб DQS необходимо иметь роль dqs_kb_editor или dqs_kb_operator в базе данных DQS_MAIN.  
   
-##  <a name="Create"></a> Создание проекта служб DQS  
+##  <a name="Create"></a>Создание проекта качества данных  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Запуск клиентского приложения Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Запустите приложение Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  На главном экране [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] щелкните **Создать проект служб DQS**.  
   
@@ -51,13 +51,13 @@ ms.locfileid: "65480956"
   
     4.  В области **Выбор действия** выберите действие, которое требуется выполнить с помощью этого проекта служб DQS:  
   
-        -   **Очистка**. Выберите это действие для очистки источника данных.  
+        -   **Очистка**: выберите это действие, чтобы очистить исходные данные.  
   
-        -   **Сопоставление**. Выберите это действие для выполнения сопоставления. Это действие доступно только в том случае, если база знаний, выбранная для проекта служб DQS, содержит политику сопоставления.  
+        -   **Сопоставление**. Выберите это действие, чтобы выполнить сопоставление. Это действие доступно только в том случае, если база знаний, выбранная для проекта служб DQS, содержит политику сопоставления.  
   
 4.  Нажмите **Создать** , чтобы создать проект служб DQS.  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. После создания проекта качества данных  
+##  <a name="FollowUp"></a>Дальнейшие действия. После создания проекта качества данных  
  После того как проект качества данных создан, откроется мастер для выполнения выбранного действия: очистки или сопоставления. Дополнительные сведения о действиях по очистке и сопоставлению см. в разделах [Очистка данных](../../2014/data-quality-services/data-cleansing.md) и [Сопоставление данных](../../2014/data-quality-services/data-matching.md).  
   
   

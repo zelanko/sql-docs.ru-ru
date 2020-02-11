@@ -15,25 +15,25 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0ef94ed9e296c588b70789ace0bbbbe79bc8008f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68205963"
 ---
 # <a name="notify-operator-task-maintenance-plan"></a>Задача уведомления оператора (план обслуживания)
-  Диалоговое окно **Задача уведомления оператора** используется для добавления автоматического уведомления к данному плану обслуживания. Для использования этой задачи необходимо включить и надлежащим образом настроить компонент Database Mail в MSDB в качестве базы данных обслуживания почты, а также иметь оператора агента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с действующим адресом электронной почты.  
+  Диалоговое окно **Задача уведомления оператора** используется для добавления автоматического уведомления к данному плану обслуживания. Для использования этой задачи необходимо, чтобы Database Mail включены и правильно настроены с msdb в качестве базы данных обслуживания почты, а [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] также иметь оператор агента с допустимым адресом электронной почты.  
   
  Данная задача использует хранимую процедуру sp_notify_operator.  
   
 ## <a name="options"></a>Параметры  
- **Соединение**  
+ **Соединен**  
  Выберите соединение с сервером, которое будет использоваться для выполнения этой задачи.  
   
  **Создать**  
  Создать новое соединение с сервером для его использования при выполнении этой задачи. Диалоговое окно **Создание соединения** описано ниже.  
   
- **Уведомить операторов**  
+ **Уведомления операторов**  
  Указать получателя электронного письма.  
   
  **Тема сообщения уведомления**  
@@ -42,14 +42,14 @@ ms.locfileid: "68205963"
  **Текст сообщения уведомления**  
  Укажите текст сообщения уведомления.  
   
- **Просмотр T-SQL**  
+ **Просмотреть T-SQL**  
  Просмотрите инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] , выполняемые для данной задачи по отношению к серверу, на основе выбранных параметров.  
   
 > [!NOTE]  
 >  Если количество затронутых объектов велико, построение этого отображения может занять значительное время.  
   
 ## <a name="new-connection-dialog-box"></a>Диалоговое окно «Создание соединения»  
- **Имя соединения**  
+ **Имя подключения**  
  Введите имя нового соединения.  
   
  **Выберите или введите имя сервера**  
@@ -62,10 +62,10 @@ ms.locfileid: "68205963"
  Укажите способ проверки подлинности на сервере.  
   
  **Использовать встроенную безопасность Windows**  
- Подключиться к экземпляру компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] c проверкой подлинности [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
+ Подключитесь к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] с использованием [!INCLUDE[msCoName](../../includes/msconame-md.md)] проверки подлинности Windows.  
   
  **Использовать указанные имя пользователя и пароль**  
- Подключиться к экземпляру компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] с использованием проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Этот параметр недоступен.  
+ Соединение с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] компонента с использованием [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности. Этот параметр недоступен.  
   
  **User name**  
  Укажите имя входа, используемое при проверке подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Этот параметр недоступен.  
@@ -73,8 +73,8 @@ ms.locfileid: "68205963"
  **Пароль**  
  Укажите используемый при проверке подлинности пароль. Этот параметр недоступен.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Database Mail](../database-mail/database-mail.md)   
- [sp_notify_operator (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-notify-operator-transact-sql)  
+ [sp_notify_operator &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-notify-operator-transact-sql)  
   
   

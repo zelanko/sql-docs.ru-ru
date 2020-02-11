@@ -14,16 +14,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d85fc4c21f200bcdc5a489cfcee6b50bc9f4b98e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479915"
 ---
 # <a name="create-an-entity-master-data-services"></a>Создание сущности (службы Master Data Services)
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]сущности создаются, чтобы содержать элементы и их атрибуты.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения этой процедуры:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
@@ -42,35 +42,35 @@ ms.locfileid: "65479915"
   
 4.  Нажмите кнопку **добавить сущность**.  
   
-5.  В **имя сущности** введите имя сущности.  
+5.  В поле **имя сущности** введите имя сущности.  
   
-6.  В **имя для промежуточных таблиц** введите имя для промежуточной таблицы.  
+6.  В поле **имя для промежуточных таблиц** введите имя промежуточной таблицы.  
   
     > [!TIP]  
-    >  Используйте имя модели как часть имени промежуточной таблицы, например *Modelname_Entityname*. Это облегчит поиск таблиц в базе данных. Дополнительные сведения о промежуточных таблицах см. в разделе [импорта данных &#40;службы Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md).  
+    >  Используйте имя модели как часть имени промежуточной таблицы, например *Modelname_Entityname*. Это облегчит поиск таблиц в базе данных. Дополнительные сведения о промежуточных таблицах см. в разделе [Data Import &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md).  
   
 7.  Необязательный параметр. Установите флажок в поле **Автоматически создавать значения кода** . Дополнительные сведения см. в разделе [Автоматическое создание кодов (службы Master Data Services)](../../2014/master-data-services/automatic-code-creation-master-data-services.md).  
   
-8.  Из **включить явные иерархии и коллекции** выберите одно из следующих вариантов:  
+8.  В списке **включить явные иерархии и коллекции** выберите один из следующих вариантов.  
   
-    -   **Не**. Выберите этот параметр, если сущность не должна включать явные иерархии и коллекции. При необходимости это значение можно впоследствии изменить.  
+    -   **Нет**. Выберите этот параметр, если сущность не должна включать явные иерархии и коллекции. При необходимости это значение можно впоследствии изменить.  
   
-    -   **Да**. Выберите этот параметр, если необходимо включить использование явных иерархий и коллекций. В **имя явной иерархии** введите имя. При необходимости выберите **обязательная иерархия (все конечные элементы** чтобы сделать явную иерархию обязательной иерархии.  
+    -   **Да**. Выберите этот параметр, если необходимо включить использование явных иерархий и коллекций. В поле **имя явной иерархии** введите имя. При необходимости выберите **обязательная иерархия (все конечные элементы включены** , чтобы сделать явную иерархию обязательной иерархией.  
   
-9. Нажмите кнопку **сохранить сущность**.  
+9. Нажмите кнопку **Сохранить сущность**.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
   
--   [Создание текстового атрибута (службы Master Data Services)](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)  
+-   [Создание текстового атрибута &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)  
   
--   [Создание атрибута на основе домена (службы Master Data Services)](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)  
+-   [Создание атрибута на основе домена &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)  
   
--   [Создание файлового атрибута (службы Master Data Services)](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)  
+-   [Создание атрибута файла &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)  
   
-## <a name="see-also"></a>См. также  
- [Сущности (службы Master Data Services)](../../2014/master-data-services/entities-master-data-services.md)   
- [Явные иерархии (службы Master Data Services)](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)   
- [Изменение имени сущности &#40;службы Master Data Services&#41;](edit-an-entity-master-data-services.md)   
- [Удаление сущности (службы Master Data Services)](../../2014/master-data-services/delete-an-entity-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Сущности &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)   
+ [Явные иерархии &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)   
+ [Измените имя сущности &#40;Master Data Services&#41;](edit-an-entity-master-data-services.md)   
+ [Удаление сущности &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-entity-master-data-services.md)  
   
   

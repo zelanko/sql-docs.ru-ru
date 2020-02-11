@@ -26,17 +26,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 87d822e97a75bbd08375980fe6a6f0341d8f9c60
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755256"
 ---
 # <a name="clr-triggers"></a>Триггеры CLR
-  Благодаря тому что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] интегрирован со средой [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR, для создания триггеров CLR можно использовать любой язык [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. В настоящем разделе рассматриваются сведения, касающиеся реализации триггеров в условиях интеграции со средой CLR. Полное описание триггеров, см. в разделе [триггеры DDL](../../relational-databases/triggers/ddl-triggers.md).  
+  Благодаря тому что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] интегрирован со средой [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR, для создания триггеров CLR можно использовать любой язык [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. В настоящем разделе рассматриваются сведения, касающиеся реализации триггеров в условиях интеграции со средой CLR. Полное описание триггеров см. в разделе [триггеры DDL](../../relational-databases/triggers/ddl-triggers.md).  
   
 ## <a name="what-are-triggers"></a>Что такое триггеры?  
- Триггером называют хранимую процедуру особого типа, которая автоматически выполняется при возникновении языкового события. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает два основных типа триггеров: языка обработки данных (DML) и триггеры языка DDL для определения данных. Триггеры DML можно использовать, когда инструкция `INSERT`, `UPDATE` или `DELETE` изменяет данные в указанной таблице или представлении. Триггеры DDL вызывают срабатывание хранимых процедур в ответ на самые разнообразные инструкции DDL. Как правило, это инструкции, начинающиеся со слов `CREATE`, `ALTER` и `DROP`. Триггеры DDL могут быть использованы в административных задачах, таких как аудит и регулирование операций базы данных.  
+ Триггером называют хранимую процедуру особого типа, которая автоматически выполняется при возникновении языкового события. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]включает два общих типа триггеров: триггеры языка обработки данных DML и DDL. Триггеры DML можно использовать, когда инструкция `INSERT`, `UPDATE` или `DELETE` изменяет данные в указанной таблице или представлении. Триггеры DDL вызывают срабатывание хранимых процедур в ответ на самые разнообразные инструкции DDL. Как правило, это инструкции, начинающиеся со слов `CREATE`, `ALTER` и `DROP`. Триггеры DDL могут быть использованы в административных задачах, таких как аудит и регулирование операций базы данных.  
   
 ## <a name="unique-capabilities-of-clr-triggers"></a>Уникальные возможности триггеров CLR  
  Триггеры, код которых написан на языке [!INCLUDE[tsql](../../includes/tsql-md.md)], позволяют определить обновленные столбцы в представлении или таблице, активизировавшей триггер, с помощью функций `UPDATE(column)` и `COLUMNS_UPDATED()`.  
@@ -49,7 +49,7 @@ ms.locfileid: "62755256"
   
 -   получать доступ к сведениям об объектах базы данных, затронутых в результате выполнения инструкций языка DDL.  
   
- Эти возможности предоставляются непосредственно в языке запросов или с помощью класса `SqlTriggerContext`. Дополнительные сведения о преимуществах интеграции со средой CLR и выборе между управляемым кодом и [!INCLUDE[tsql](../../includes/tsql-md.md)], см. в разделе [Общие сведения об интеграции со средой CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
+ Эти возможности предоставляются непосредственно в языке запросов или с помощью класса `SqlTriggerContext`. Сведения о преимуществах интеграции со средой CLR и выборе между управляемым [!INCLUDE[tsql](../../includes/tsql-md.md)]кодом и см. в разделе [Обзор интеграции со средой CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
   
 ## <a name="using-the-sqltriggercontext-class"></a>Использование класса SqlTriggerContext  
  Класс `SqlTriggerContext` не может быть создан как общедоступный и может быть получен только путем доступа к свойству `SqlContext.TriggerContext` в коде триггера CLR. Класс `SqlTriggerContext` можно получить из активного контекста `SqlContext` путем вызова свойства `SqlContext.TriggerContext`:  
@@ -72,9 +72,10 @@ ms.locfileid: "62755256"
 -   Что касается триггеров DDL, то список возможных значений TriggerAction намного больше. Дополнительные сведения см. в разделе «Перечисления TriggerAction» пакета SDK для платформы .NET Framework.  
   
 ### <a name="using-the-inserted-and-deleted-tables"></a>Использование таблиц inserted и deleted  
- В инструкциях триггеров DML используются два вида специальных таблиц: **вставлены** таблицы и **удалены** таблицы. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически создает эти таблицы и управляет ими. Указанные временные таблицы можно использовать для проверки эффективности определенных операций модификации данных и для задания условий выполнения некоторых действий триггера DML; однако изменять данные в этих таблицах напрямую нельзя.  
+ В инструкциях триггеров DML используются две специальные таблицы: таблица **inserted** и таблица **deleted** . 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически создает эти таблицы и управляет ими. Указанные временные таблицы можно использовать для проверки эффективности определенных операций модификации данных и для задания условий выполнения некоторых действий триггера DML; однако изменять данные в этих таблицах напрямую нельзя.  
   
- Триггеры CLR можно получить доступ к **вставлены** и **удалены** таблиц с помощью внутрипроцессного поставщика среды CLR. Это осуществляется путем получения объекта `SqlCommand` из объекта SqlContext. Пример:  
+ Триггеры CLR могут обращаться к таблицам **inserted** и **deleted** через внутрипроцессный поставщик CLR. Это осуществляется путем получения объекта `SqlCommand` из объекта SqlContext. Пример:  
   
  C#  
   
@@ -480,7 +481,7 @@ GO CREATE TABLE UserNameAudit
 )  
 ```  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] Инструкцию, которая создает триггер в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выглядит следующим образом и предполагает, что сборка **SQLCLRTest** уже зарегистрирован в текущем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных.  
+ Инструкция, создающая триггер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в, имеет следующий вид, и предполагается, что сборка **склклртест** уже зарегистрирована [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в текущей базе данных. [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
 ```  
 CREATE TRIGGER EmailAudit  
@@ -655,12 +656,12 @@ DROP ASSEMBLY ValidationTriggers;
 DROP TABLE Table1;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [CREATE TRIGGER (Transact-SQL)](/sql/t-sql/statements/create-trigger-transact-sql)   
  [Триггеры DML](../../relational-databases/triggers/dml-triggers.md)   
  [Триггеры DDL](../../relational-databases/triggers/ddl-triggers.md)   
- [TRY...CATCH (Transact-SQL)](/sql/t-sql/language-elements/try-catch-transact-sql)   
- [Построение объектов базы данных с помощью среды CLR &#40;CLR&#41; интеграции](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)   
+ [Попробуйте... Перехватывать &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/try-catch-transact-sql)   
+ [Создание объектов базы данных с помощью среды CLR &#40;интеграция&#41; CLR](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)   
  [EVENTDATA (Transact-SQL)](/sql/t-sql/functions/eventdata-transact-sql)  
   
   
