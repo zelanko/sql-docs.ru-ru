@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: erikre
 ms.openlocfilehash: e6e2247cd3648e78df0349ec8de2b63f29e52e94
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729343"
 ---
 # <a name="deprecated-master-data-services-features"></a>Устаревшие функции Master Data Services
@@ -41,11 +41,11 @@ ms.locfileid: "73729343"
   
  Дополнительные сведения о явных иерархиях, коллекциях и консолидированных элементах см. в следующих разделах:  
   
--   [Явные иерархии (службы Master Data Services)](../master-data-services/explicit-hierarchies-master-data-services.md)  
+-   [Явные иерархии &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)  
   
--   [Коллекции (службы Master Data Services)](../master-data-services/collections-master-data-services.md)  
+-   [&#40;коллекций Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
   
--   [Элементы (службы Master Data Services)](../master-data-services/members-master-data-services.md)  
+-   [Master Data Services &#40;членов&#41;](../master-data-services/members-master-data-services.md)  
   
 ## <a name="attribute-entity-transaction-log-type"></a>Типа журнала транзакций сущности "Атрибут"  
 Тип журнала транзакций сущности "Атрибут" устарел; используйте тип "Элемент". Сведения о типах журнала транзакций сущности см. в следующем разделе:
@@ -55,7 +55,7 @@ ms.locfileid: "73729343"
 ## <a name="external-resources"></a>Внешние ресурсы  
  Запись блога [Deprecated: Explicit Hierarchies and Collections](https://go.microsoft.com/fwlink/p/?LinkId=615373)(Устарелое. Явные иерархии и коллекции) на портале msdn.com.  
   
-## <a name="see-also"></a>См. также раздел  
- [Неподдерживаемые функции служб Master Data Services](../master-data-services/discontinued-master-data-services-features.md)  
+## <a name="see-also"></a>См. также:  
+ [Неподдерживаемые функции Master Data Services](../master-data-services/discontinued-master-data-services-features.md)  
   
   

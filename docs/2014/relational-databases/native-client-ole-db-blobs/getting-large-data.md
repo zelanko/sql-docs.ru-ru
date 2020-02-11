@@ -1,5 +1,5 @@
 ---
-title: Возврат больших данных | Документация Майкрософт
+title: Получение больших данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e0c042b367cbd8a56d21ed57735f9334d24003d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63195224"
 ---
 # <a name="getting-large-data"></a>Возврат больших данных
-  Как правило, потребители должны изолировать код, создающий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объект хранилища поставщика OLE DB для собственного клиента из другого кода, который обрабатывает данные, не сослаться через **ISequentialStream** указатель на интерфейс.  
+  Как правило, потребители должны изолировать код, который создает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственный клиент OLE DB объект хранилища поставщика из другого кода, обрабатывающего данные, на которые не ссылается указатель интерфейса **ISequentialStream** .  
   
  В этом подразделе описывается функциональность, обеспечиваемая следующими функциями.  
   
@@ -33,9 +33,9 @@ ms.locfileid: "63195224"
   
 -   ICommand::Execute  
   
- Если свойство DBPROP_ACCESSORDER (в группе свойств набора строк) присвоено одно из значений DBPROPVAL_AO_SEQUENTIAL или DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS, потребитель должен получать только одну строку данных в вызове **GetNextRows**  метод так, как данные BLOB не буферизуются. Если свойство DBPROP_ACCESSORDER имеет значение DBPROPVAL_AO_RANDOM, потребитель может получать несколько строк данных в одном вызове метода **GetNextRows**.  
+ Если свойству DBPROP_ACCESSORDER (в группе свойств набора строк) присвоено одно из значений, DBPROPVAL_AO_SEQUENTIAL или DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS, потребитель должен получить только одну строку данных в вызове метода **GetNextRows** , так как данные большого двоичного объекта не буферизованы. Если свойство DBPROP_ACCESSORDER имеет значение DBPROPVAL_AO_RANDOM, потребитель может получать несколько строк данных в одном вызове метода **GetNextRows**.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщик OLE DB для собственного клиента не получает большие объемы данных из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до запроса для этого объектом-получателем. Потребитель должен связывать все короткие типы данных в методе доступа, а затем, если потребуется, использовать один или несколько временных методов доступа для получения значений больших типов данных.  
+ Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента не получает большие объемы данных, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пока не запрашивается потребителем. Потребитель должен связывать все короткие типы данных в методе доступа, а затем, если потребуется, использовать один или несколько временных методов доступа для получения значений больших типов данных.  
   
 ## <a name="example"></a>Пример  
  В этом примере значение большого типа данных получается из одного столбца.  
@@ -145,8 +145,8 @@ HRESULT GetUnboundData
     }  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Большие двоичные объекты и объекты OLE](blobs-and-ole-objects.md)   
+## <a name="see-also"></a>См. также:  
+ [Большие двоичные объекты и OLE](blobs-and-ole-objects.md)   
  [Использование типов больших значений](../native-client/features/using-large-value-types.md)  
   
   

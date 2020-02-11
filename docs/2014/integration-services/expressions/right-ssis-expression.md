@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ae56e579e96db82d538189f832001b5a80b4f72e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768800"
 ---
 # <a name="right-ssis-expression"></a>RIGHT (выражение служб SSIS)
@@ -39,7 +39,7 @@ RIGHT(character_expression,integer_expression)
 ## <a name="result-types"></a>Типы результата  
  DT_WSTR  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Если *integer_expression* длиннее, чем *character_expression*, функция возвращает *character_expression*.  
   
  Если *integer_expression* равно нулю, функция возвращает строку нулевой длины.  
@@ -71,7 +71,7 @@ RIGHT(Name, @Times)
 RIGHT(Name, (DT_I2)@Times))  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [LEFT (выражение SSIS)](left-ssis-expression.md)   
  [Функции (выражение служб SSIS)](functions-ssis-expression.md)  
   

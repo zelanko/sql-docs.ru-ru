@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4ce984303ea0a9e9a85f20e7d921a720be6ef299
-ms.sourcegitcommit: ea6603e20c723553c89827a6b8731a9e7b560b9c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74479242"
 ---
 # <a name="manage-logins-in-the-publication-access-list"></a>Управление именами входа в списке доступа к публикации
@@ -30,22 +30,22 @@ ms.locfileid: "74479242"
   
 -   **Перед началом работы**  
   
-     [Необходимые компоненты](#Prerequisites)  
+     [Предварительные требования](#Prerequisites)  
   
 -   **Для управления именами входа в списке доступа к публикации используется:**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Среда SQL Server Management Studio](#SSMSProcedure)  
   
-     [Язык Transact-SQL](#TsqlProcedure)  
+     [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a>Перед началом  
+##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Prerequisites"></a>Требований  
+###  <a name="Prerequisites"></a> Предварительные требования  
   
 -   Перед добавлением имени входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в список доступа к публикации необходимо связать его с пользователем базы данных публикации.  
   
-##  <a name="SSMSProcedure"></a>Использование SQL Server Management Studio  
- Управление именами для входа в списке доступа к публикации (PAL) осуществляется на странице **Список доступа к публикации** диалогового окна **Свойства публикации — \<публикация>**. Дополнительные сведения о доступе к этому диалоговому окну см. в статье [Просмотр и изменение свойств публикации](../publish/view-and-modify-publication-properties.md).  
+##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+ Управление именами для входа в списке доступа к публикации (PAL) осуществляется на странице **Список доступа к публикации** диалогового окна **Свойства публикации — \<публикация>** . Дополнительные сведения о доступе к этому диалоговому окну см. в статье [Просмотр и изменение свойств публикации](../publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-manage-logins-in-the-pal"></a>Управление именами входа в списке доступа к публикации (PAL)  
   
@@ -56,7 +56,7 @@ ms.locfileid: "74479242"
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a>Использование Transact-SQL  
+##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-view-groups-and-logins-that-belong-to-the-pal"></a>Просмотр групп и имен входа из списка доступа к публикации  
   
@@ -70,7 +70,7 @@ ms.locfileid: "74479242"
   
 1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_revoke_publication_access](/sql/relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql). В поле ** \@публикация**укажите имя публикации. а для параметра ** \@login**укажите имя удаляемого имени входа или группы.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Модель безопасности агента репликации](replication-agent-security-model.md)   
  [Защита топологии репликации](view-and-modify-replication-security-settings.md)   
  [Защита издателя](secure-the-publisher.md)  

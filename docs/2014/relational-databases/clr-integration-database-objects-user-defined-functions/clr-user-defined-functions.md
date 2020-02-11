@@ -1,5 +1,5 @@
 ---
-title: Определяемые пользователем функции среды CLR | Документация Майкрософт
+title: Определяемые пользователем функции CLR | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f48a62e1dff2fbc1d226077c2271e8a8a71efb2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874489"
 ---
 # <a name="clr-user-defined-functions"></a>Определяемые пользователем функции среды CLR
@@ -33,13 +33,13 @@ ms.locfileid: "62874489"
  [Скалярные функции среды CLR](clr-scalar-valued-functions.md)  
  Приводит сведения о требованиях реализации и примеры скалярных функций.  
   
- [Функции среды CLR, возвращающие табличное значение](clr-table-valued-functions.md)  
+ [Функции среды CLR с табличным значением](clr-table-valued-functions.md)  
  Объясняет реализацию и использование функций с табличным значением (TVF), а также разницу между возвращающими табличные значения функциями в [!INCLUDE[tsql](../../includes/tsql-md.md)] и в среде CLR.  
   
- [Определяемые пользователем агрегатные функции среды CLR](clr-user-defined-aggregates.md)  
+ [Пользовательские агрегатные функции среды CLR](clr-user-defined-aggregates.md)  
  Объясняет реализацию и использование определяемых пользователем статистических функций.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Определяемые пользователем функции](../user-defined-functions/user-defined-functions.md)  
   
   

@@ -18,27 +18,27 @@ ms.assetid: 1d539aa8-ce0d-4418-ab03-8d0a3c1e9d82
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 01c2ea6b885ed2619b79413beb09ca4bf2835162
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917577"
 ---
 # <a name="properties-collection-ado"></a>Коллекция Properties (ADO)
-Содержит все [свойство](../../../ado/reference/ado-api/property-object-ado.md) объекты для конкретного экземпляра объекта.  
+Содержит все объекты [свойств](../../../ado/reference/ado-api/property-object-ado.md) для конкретного экземпляра объекта.  
   
-## <a name="remarks"></a>Примечания  
- Некоторые объекты ADO имеют **свойства** состоит из коллекции **свойство** объектов. Каждый **свойство** соответствует характеристика объекта ADO конкретного поставщика.  
+## <a name="remarks"></a>Remarks  
+ Некоторые объекты ADO имеют коллекцию **свойств** , состоящие из объектов **свойств** . Каждый объект **Свойства** соответствует характеристике объекта ADO, относящегося к поставщику.  
   
 > [!NOTE]
->  См. в разделе [свойство](../../../ado/reference/ado-api/property-object-ado.md) разделе объекта более подробное описание способов использования **свойство** объектов.  
+>  Более подробное описание использования объектов **свойств** см. в разделе объект [Свойства](../../../ado/reference/ado-api/property-object-ado.md) .  
   
- **Динамические свойства** из **записей** объекта перейдите за пределы области действия (становятся недоступными) при **записей** закрыт.  
+ **Динамические свойства** объекта **Recordset** выходят за пределы области видимости (становятся недоступными) при закрытии **набора записей** .  
   
  Этот раздел содержит следующие подразделы.  
   
--   [Свойства коллекции свойств, методов и событий](../../../ado/reference/ado-api/properties-collection-properties-methods-and-events.md)  
+-   [Свойства, методы и события коллекции свойств](../../../ado/reference/ado-api/properties-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
- [Приложение а. Поставщики](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Приложение А. Поставщики](../../../ado/guide/appendixes/appendix-a-providers.md)

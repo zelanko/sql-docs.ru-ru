@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e7c4dd9e592a4a5790630664bc67eb906f9e960b
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73790720"
 ---
 # <a name="table-valued-parameter-diagnostic-record-fields"></a>Поля диагностических записей для возвращающих табличные значения параметров
@@ -25,7 +25,7 @@ ms.locfileid: "73790720"
 
   В диагностические записи добавлено два новых поля диагностики, SQL_DIAG_SS_TABLE_COLUMN_NUMBER и SQL_DIAG_SS_TABLE_ROW_NUMBER. С их помощью можно определить, какие значения столбцов параметров, возвращающих табличные значения, связаны с ошибками и предупреждениями.  
   
-## <a name="see-also"></a>См. также раздел  
- [Возвращающие табличные значения параметры &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+## <a name="see-also"></a>См. также:  
+ [Возвращающие табличное значение параметры &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

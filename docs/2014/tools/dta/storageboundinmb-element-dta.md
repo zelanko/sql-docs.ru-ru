@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 33dbfad3c3774abe3de74d4dbf1d67575630b21e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63460112"
 ---
 # <a name="storageboundinmb-element-dta"></a>Элемент StorageBoundInMB (DTA)
@@ -36,11 +36,12 @@ ms.locfileid: "63460112"
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
-|**Тип данных и длина**|`unsignedInt`, неограниченная длина|  
+|**Тип данных и длина**|
+  `unsignedInt`, неограниченная длина|  
 |**Значение по умолчанию**|Нет.|  
-|**Наличие**|Необязательный. Может быть использован только один раз для элемента `TuningOptions`.|  
+|**Наличие**|Необязательный параметр. Может быть использован только один раз для элемента `TuningOptions`.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
@@ -49,7 +50,7 @@ ms.locfileid: "63460112"
 |**Родительский элемент**|[Элемент TuningOptions (DTA)](tuningoptions-element-dta.md)|  
 |**Дочерние элементы**|None|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  При настройке нескольких баз данных учитываются рекомендации по пространству всех баз данных. По умолчанию помощник по настройке ядра СУБД принимает минимальный из следующих размеров хранилищ:  
   
 -   в 3 раза больше текущего размера необработанных данных, включая общий размер кучи и кластеризованных индексов таблиц;  
@@ -62,7 +63,7 @@ ms.locfileid: "63460112"
   
 ## <a name="example"></a>Пример  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Description  
  В следующем примере кода показано, как установить предел в 1 500 мегабайт в качестве максимального места на диске, которое может быть занято согласно рекомендациям.  
   
 ## <a name="code"></a>Код  
@@ -77,7 +78,7 @@ ms.locfileid: "63460112"
 </DTAInput>  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по входным XML-файлам (помощник по настройке ядра СУБД)](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

@@ -18,16 +18,16 @@ ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d506d7ea841e211d9ab6fb0715a6a9359cefa83d
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72305219"
 ---
 # <a name="sysmail_help_queue_sp-transact-sql"></a>sysmail_help_queue_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Существует две очереди в компоненте Database Mail: очередь почты и очередь состояний. Очередь почты содержит почтовые сообщения, ожидающие отправки. Очередь состояний содержит информацию о состоянии сообщений, которые уже были отправлены. Эта хранимая процедура позволяет просмотреть состояние очередей почты и состояний. Если параметр **\@queue_type** не указан, хранимая процедура возвращает по одной строке для каждой из очередей.  
+  Существует две очереди в компоненте Database Mail: очередь почты и очередь состояний. Очередь почты содержит почтовые сообщения, ожидающие отправки. Очередь состояний содержит информацию о состоянии сообщений, которые уже были отправлены. Эта хранимая процедура позволяет просмотреть состояние очередей почты и состояний. Если параметр ** \@queue_type** не указан, хранимая процедура возвращает по одной строке для каждой из очередей.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,14 +39,14 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @queue_type = ] 'queue_type'` необязательный аргумент удаляет сообщения электронной почты типа, указанного в качестве *queue_type*. *queue_type* имеет тип **nvarchar (6)** и не имеет значения по умолчанию. Допустимые значения: **mail** и **Status**.  
+`[ @queue_type = ] 'queue_type'`Необязательный аргумент удаляет адреса электронной почты типа, указанного в качестве *queue_type*. *queue_type* имеет тип **nvarchar (6)** и не имеет значения по умолчанию. Допустимые значения: **mail** и **Status**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-set"></a>Результирующий набор  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |**queue_type**|**nvarchar (6)**|Тип очереди. Возможные значения: **mail** и **Status**.|  
 |**length**|**int**|Номер почтового сообщения в указанной очереди.|  
@@ -54,7 +54,7 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 |**last_empty_rowset_time**|**DATETIME**|Дата и время, когда очередь в последний раз была пуста. Указывается в военном формате времени относительно часового пояса GMT.|  
 |**last_activated_time**|**DATETIME**|Дата и время, когда очередь в последний раз была активирована. Указывается в военном формате времени относительно часового пояса GMT.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  При устранении неполадок Database Mail используйте **sysmail_help_queue_sp** , чтобы увидеть количество элементов в очереди, состояние очереди и время последней активации.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -80,7 +80,7 @@ status     0        INACTIVE           2005-10-07 21:04:47.003 2005-10-10 21:04:
   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)  
   
   

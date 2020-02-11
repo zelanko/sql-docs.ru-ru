@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9ee3228eea9970563540be9bc6a4c3b9a3677112
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68189327"
 ---
 # <a name="edit-an-operator"></a>Изменение оператора
@@ -31,7 +31,7 @@ ms.locfileid: "68189327"
   
      [Ограничения](#Restrictions)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Изменение данных оператора с помощью:**  
   
@@ -43,11 +43,12 @@ ms.locfileid: "68189327"
   
 ###  <a name="Restrictions"></a> Ограничения  
   
--   Режимы отправки уведомлений с помощью пейджера и команды **net send** будут удалены из агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в следующей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Старайтесь не использовать эти функции в новых разработках и предусмотрите соответствующие изменения в приложениях, которые используют их в настоящее время.  
+-   Параметры пейджера и **команды net send** будут удалены из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента в следующей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Старайтесь не использовать эти функции в новых разработках и предусмотрите соответствующие изменения в приложениях, которые используют их в настоящее время.  
   
 -   Обратите внимание, что для использования компонента Database Mail для отправки операторам уведомлений по электронной почте и на пейджер агент SQL Server необходимо настроить для использования компонента Database Mail. Дополнительные сведения см. в разделе [Назначить предупреждения для оператора](assign-alerts-to-an-operator.md).  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] обеспечивает доступный графический способ управления заданиями и рекомендуется для создания и управления инфраструктурой заданий.  
+-   
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] обеспечивает доступный графический способ управления заданиями и рекомендуется для создания и управления инфраструктурой заданий.  
   
 ###  <a name="Security"></a> безопасность  
   
@@ -66,13 +67,13 @@ ms.locfileid: "68189327"
   
 4.  Щелкните правой кнопкой оператора, данные которого нужно изменить, и выберите пункт **Свойства**.  
   
-     Дополнительные сведения о доступных параметрах, содержащихся в диалоговом окне _Свойства_**имя_оператора** , см. в разделе:  
+     Дополнительные сведения о доступных параметрах, содержащихся в диалоговом окне**свойства** _operator_name_, см. в следующих статьях:  
   
-    -   [Свойства оператора и оператора New &#40;страница "Общие"&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
+    -   [Свойства оператора и новый оператор &#40;общие&#41;страницы](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
-    -   [Свойства оператора: Оператор New &#40;страница "уведомления"&#41;](operator-properties-new-operator-notifications-page.md)  
+    -   [Свойства оператора: Новая страница &#40;уведомлений оператора&#41;](operator-properties-new-operator-notifications-page.md)  
   
-    -   [Свойства оператора (страница "Журнал")](operator-properties-history-page.md)  
+    -   [Свойства оператора &#40;страница журнала&#41;](operator-properties-history-page.md)  
   
 5.  После завершения нажмите кнопку **ОК**.  
   

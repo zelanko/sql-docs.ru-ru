@@ -20,18 +20,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: b6ec5de74d2da2a94c25ef121abc0157348554d5
-ms.sourcegitcommit: ef830f565ee07dc7d4388925cc3c86c5d2cfb4c7
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74947079"
 ---
 # <a name="sysdm_cluster_endpoints-transact-sql"></a>sys. dm_cluster_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|название|`sysname`|Имя службы, предоставляемой извне в кластере больших данных SQL. Уникальный идентификатор для конечной точки. Ключ для этого представления. Не допускает значение NULL. |  
+|name|`sysname`|Имя службы, предоставляемой извне в кластере больших данных SQL. Уникальный идентификатор для конечной точки. Ключ для этого представления. Не допускает значение NULL. |  
 |description|`nvarchar(4000)`|Описание службы. Не допускает значение NULL. |
 |endpoint|`sysname`|URL-адрес конечной точки или атрибут соединения. Не допускает значение NULL. |
 |protocol_desc|`sysname`|Описание протокола конечной точки |
@@ -40,6 +40,6 @@ ms.locfileid: "74947079"
 
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]необходимо `VIEW SERVER STATE` разрешение.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Что [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ss-nover.md)] ](../../big-data-cluster/big-data-cluster-overview.md)?

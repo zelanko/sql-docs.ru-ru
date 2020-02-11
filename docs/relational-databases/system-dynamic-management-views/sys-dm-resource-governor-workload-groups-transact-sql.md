@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 73da0ee5a47cf5b1c7443729e2a9b71dc01d18a7
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73982292"
 ---
 # <a name="sysdm_resource_governor_workload_groups-transact-sql"></a>sys.dm_resource_governor_workload_groups (Transact-SQL)
@@ -33,12 +33,12 @@ ms.locfileid: "73982292"
   Возвращает статистику группы рабочей нагрузки и текущую конфигурацию группы рабочей нагрузки в памяти. Это представление можно объединить с представлением sys.dm_resource_governor_resource_pools для получения имени пула ресурсов.  
   
 > [!NOTE]  
->  Чтобы вызвать это из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте имя **sys. dm_pdw_nodes_resource_governor_workload_groups**.  
+>  Чтобы вызвать эту функцию [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] из [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]или, используйте имя **sys. dm_pdw_nodes_resource_governor_workload_groups**.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |group_id|**int**|Идентификатор группы рабочей нагрузки. Не допускает значение NULL.|  
-|name|**sysname**|Имя группы рабочей нагрузки. Не допускает значение NULL.|  
+|name|**имеет sysname**|Имя группы рабочей нагрузки. Не допускает значение NULL.|  
 |pool_id|**int**|Идентификатор пула ресурсов. Не допускает значение NULL.|  
 |external_pool_id|**int**|**Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версий.<br /><br /> ИДЕНТИФИКАТОР внешнего пула ресурсов. Не допускает значение NULL.|  
 |statistics_start_time|**datetime**|Время, когда был выполнен сброс коллекции статистики для группы рабочей нагрузки. Не допускает значение NULL.|  
@@ -57,13 +57,13 @@ ms.locfileid: "73982292"
 |total_reduced_memgrant_count|**bigint**|Совокупное количество операций предоставления памяти, достигших максимально допустимого размера запроса. Не допускает значение NULL.|  
 |max_request_grant_memory_kb|**bigint**|Максимальный объем предоставленной памяти, в килобайтах, для отдельного запроса после сброса статистики. Не допускает значение NULL.|  
 |active_parallel_thread_count|**bigint**|Текущее количество используемых параллельных потоков. Не допускает значение NULL.|  
-|importance|**sysname**|Текущее значение конфигурации для относительной важности запроса в данной группе рабочей нагрузки. Параметр важность имеет одно из следующих значений, где Medium — это значение по умолчанию: низкий, средний или высокий.<br /><br /> Не допускает значение NULL.|  
+|importance|**имеет sysname**|Текущее значение конфигурации для относительной важности запроса в данной группе рабочей нагрузки. Параметр важность имеет одно из следующих значений, где Medium — это значение по умолчанию: низкий, средний или высокий.<br /><br /> Не допускает значение NULL.|  
 |request_max_memory_grant_percent|**int**|Текущее значение параметра максимального объема предоставляемой памяти, в процентах, для отдельного запроса. Не допускает значение NULL.|  
 |request_max_cpu_time_sec|**int**|Текущее значение параметра максимально допустимого использования ЦП, в секундах, для отдельного запроса. Не допускает значение NULL.|  
 |request_memory_grant_timeout_sec|**int**|Текущее значение параметра времени ожидания предоставления, в секундах, для отдельного запроса. Не допускает значение NULL.|  
 |group_max_requests|**int**|Текущее значение параметра максимального числа параллельных запросов. Не допускает значение NULL.|  
 |max_dop|**int**|Максимальная степень параллелизма для группы рабочей нагрузки. Для значения по умолчанию 0 используются глобальные параметры. Не допускает значение NULL.|  
-|pdw_node_id|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
+|pdw_node_id|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
   
 ## <a name="remarks"></a>Remarks  
  Данное динамическое административное представление отображает конфигурацию, хранимую в памяти. Чтобы просмотреть сохраненные метаданные конфигурации, используйте представление каталога sys.resource_governor_workload_groups.  
@@ -73,10 +73,10 @@ ms.locfileid: "73982292"
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение VIEW SERVER STATE.  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [sys. dm_resource_governor_resource_pools &#40;  Transact-&#41; SQL](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)  
- [sys. resource_governor_workload_groups &#40;  Transact-&#41; SQL](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md)  
+ [sys. dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)   
+ [sys. resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR (Transact-SQL)](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   
   

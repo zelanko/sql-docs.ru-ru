@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dd5046c9a307f498ffb585c99cba8044c7b18b3f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479031"
 ---
 # <a name="publishing-data-mds-add-in-for-excel"></a>Публикация данных (надстройка MDS для Excel)
@@ -35,11 +35,11 @@ ms.locfileid: "65479031"
   
 -   Заметки к операциям удаления не добавляются, хотя они сохраняются в виде транзакций, которые могут использоваться для выполнения обратной операции администратором.  
   
--   При изменении **код** значение для элемента, он не регистрируется как транзакции, а все предыдущие транзакции для элемента будут недоступны.  
+-   Если изменить значение **кода** для элемента, оно не будет записано как транзакция, а все предыдущие транзакции для этого элемента будут недоступны.  
   
 -   Можно просмотреть транзакции для элемента, сделанные другими пользователями. Можно также просмотреть все свои транзакции для элемента, даже если вы больше не имеете разрешений на определенные атрибуты.  
   
- Можно просмотреть все транзакции, выполненные для элемента. Дополнительные сведения см. в разделе [Просмотр всех заметок или транзакций для элемента &#40;надстройки MDS для Excel&#41;](view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md).  
+ Можно просмотреть все транзакции, выполненные для элемента. Дополнительные сведения см. в разделе [Просмотр всех заметок или транзакций для элемента (надстройка MDS для Excel)](view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md).  
   
 > [!IMPORTANT]  
 >  Если введена заметка длиной более 500 символов, то она автоматически усекается.  
@@ -51,12 +51,12 @@ ms.locfileid: "65479031"
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Публикация данных из активного листа в репозитории MDS.|[Публикация данных из Excel в MDS &#40;надстройка MDS для Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)|  
-|Одновременное удаление строки из репозитория MDS и с листа.|[Удаление строки (надстройка MDS для Excel)](delete-a-row-mds-add-in-for-excel.md)|  
+|Публикация данных из активного листа в репозитории MDS.|[Публикация данных из Excel в службах MDS &#40;надстройка MDS для Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)|  
+|Одновременное удаление строки из репозитория MDS и с листа.|[Удаление строки &#40;надстройка MDS для Excel&#41;](delete-a-row-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>См. также  
   
--   [Обновление данных (надстройка MDS для Excel)](refreshing-data-mds-add-in-for-excel.md)  
+-   [Обновление надстройка MDS для Excel &#40;данных&#41;](refreshing-data-mds-add-in-for-excel.md)  
   
 -   [Надстройка Master Data Services для Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
   

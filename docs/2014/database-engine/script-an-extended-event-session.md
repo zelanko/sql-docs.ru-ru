@@ -1,5 +1,5 @@
 ---
-title: Скрипта сеанса расширенных событий | Документация Майкрософт
+title: Создание скрипта для сеанса расширенных событий | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 072a3220ba5c6997c463031733bbbe0ce2587fe1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088908"
 ---
 # <a name="script-an-extended-event-session"></a>создать скрипт сеанса расширенных событий
@@ -22,11 +22,11 @@ ms.locfileid: "66088908"
   
 -   **Новое окно редактора запросов**  
   
--   **Файл**  
+-   **File**  
   
 -   **Буфер обмена**  
   
--   **Задание агента**  
+-   **Задании агента**  
   
 ### <a name="to-script-an-existing-event-session"></a>Создание скрипта для существующего сеанса событий  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66088908"
   
 3.  В диалоговом окне **Свойства сеанса** измените сеанс событий и выберите в раскрывающемся списке **Скрипт** , где нужно создать скрипт измененного сеанса из списка.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширенные события](../relational-databases/extended-events/extended-events.md)  
   
   

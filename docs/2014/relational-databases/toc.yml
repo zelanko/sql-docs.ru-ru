@@ -156,17 +156,17 @@
 - name: Учебники по компоненту ядра СУБД
   href: database-engine-tutorials.md
   items:
-    - name: Руководство. Начало работы с ядром СУБД
+    - name: Учебник. Приступая к работе с компонентом Database Engine
       href: tutorial-getting-started-with-the-database-engine.md
       items:
-        - name: Урок 1. Подключение к ядру СУБД
+        - name: Урок 1. Соединение с компонентом Database Engine
           href: lesson-1-connecting-to-the-database-engine.md
-        - name: Урок 2. Подключение с другого компьютера
+        - name: Занятие 2. Соединение с другого компьютера
           href: lesson-2-connecting-from-another-computer.md
-    - name: Руководство. Использование типа данных hierarchyid
+    - name: Учебник. Использование типа данных hierarchyid
       href: tables/tutorial-using-the-hierarchyid-data-type.md
       items:
-        - name: Урок 1. Преобразование таблицы в иерархическую структуру
+        - name: Урок 1. преобразование таблицы в иерархическую структуру
           href: tables/lesson-1-converting-a-table-to-a-hierarchical-structure.md
           items:
             - name: Изучение текущей структуры таблицы сотрудников
@@ -175,9 +175,9 @@
               href: tables/lesson-1-2-populating-a-table-with-existing-hierarchical-data.md
             - name: Оптимизация таблицы NewOrg
               href: tables/lesson-1-3-optimizing-the-neworg-table.md
-            - name: Сводка. Преобразование таблицы в иерархическую структуру
+            - name: Сводка. преобразование таблицы в иерархическую структуру
               href: tables/lesson-1-4-summary-converting-a-table-to-a-hierarchical-structure.md
-        - name: Урок 2. Создание данных и управление ими в иерархической таблице
+        - name: Занятие 2. Создание данных и управление ими в иерархической таблице
           href: tables/lesson-2-creating-and-managing-data-in-a-hierarchical-table.md
           items:
             - name: Создание таблицы с помощью типа данных hierarchyid
@@ -190,11 +190,11 @@
               href: tables/lesson-2-4-reordering-data-in-a-hierarchical-table-using-hierarchical-methods.md
             - name: Сводка. Управление данными в иерархической таблице
               href: tables/lesson-2-5-summary-managing-data-in-a-hierarchical-table.md
-    - name: Руководство. Подписывание хранимых процедур с помощью сертификата
+    - name: Учебник. Подписывание хранимых процедур с помощью сертификата
       href: tutorial-signing-stored-procedures-with-a-certificate.md
-    - name: Руководство. Цепочки владения и переключение контекста
+    - name: 'Tutorial: Ownership Chains and Context Switching'
       href: tutorial-ownership-chains-and-context-switching.md
-    - name: Руководство. Администрирование серверов с помощью управления на основе политик
+    - name: Учебник. Администрирование серверов с помощью управления на основе политик
       href: policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md
       items:
         - name: 'Урок 1. Создание и применение политики, отключенной по умолчанию'
@@ -204,14 +204,14 @@
               href: policy-based-management/lesson-1-1-create-the-off-by-default-policy.md
             - name: Настройка сервера для выполнения политики «Отключено по умолчанию»
               href: policy-based-management/lesson-1-2-configure-a-server-to-run-the-off-by-default-policy.md
-        - name: Урок 2. Создание и применение политики стандартов именования
+        - name: Занятие 2. Создание и применение политики стандартов именования
           href: policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md
           items:
             - name: Создание политики имен финансов
               href: policy-based-management/lesson-2-1-create-the-finance-name-policy.md
             - name: Подписка на политику имен финансов и ее проверка
               href: policy-based-management/lesson-2-2-subscribe-to-and-check-the-finance-name-policy.md
-    - name: Руководство. Выполнение политик рекомендаций с помощью управления на основе политик
+    - name: Учебник. Выполнение политик рекомендаций с помощью управления на основе политик
       href: ../tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md
       items:
         - name: Урок 1. Выполнение политик рекомендаций по запросу
@@ -221,7 +221,7 @@
               href: ../tutorials/perform-an-on-demand-evaluation-by-using-object-explorer.md
             - name: выполнить политику по запросу с помощью зарегистрированных серверов
               href: ../tutorials/perform-an-on-demand-evaluation-by-using-registered-servers.md
-        - name: Урок 2. Выполнение политик рекомендаций по расписанию
+        - name: Занятие 2. Выполнение политик рекомендаций по расписанию
           href: ../tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md
           items:
             - name: Импорт политик в один экземпляр
@@ -230,33 +230,33 @@
               href: ../tutorials/schedule-the-policies.md
             - name: Развертывание запланированных политик на нескольких экзмплярах
               href: ../tutorials/deploy-scheduled-policies-to-multiple-instances.md
-    - name: Руководство. Резервное копирование и восстановление SQL Server с помощью службы хранилищ BLOB-объектов Azure
+    - name: Руководство по резервному копированию и восстановлению SQL Server с помощью службы хранилища BLOB-объектов Azure
       href: tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md
       items:
-        - name: Урок 1. Создание объектов службы хранилища Azure
+        - name: "Занятие\_1. Создание объектов службы хранилища Azure"
           href: ../tutorials/lesson-1-create-windows-azure-storage-objects.md
-        - name: Урок 2. Создание учетных данных SQL Server
+        - name: 'Lesson 2: Create a SQL Server Credential'
           href: ../tutorials/lesson-2-create-a-sql-server-credential.md
-        - name: Урок 3. Запись полной резервной копии базы данных в службу хранилища BLOB-объектов Azure
+        - name: "Занятие\_3. Запись полной резервной копии базы данных в службу хранилища BLOB-объектов Azure"
           href: ../tutorials/lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service.md
-        - name: 'Занятие 4: Восстановление базы данных из полной резервной копии'
+        - name: "Урок\_4. Восстановление базы данных из полной резервной копии"
           href: ../tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md
-    - name: Руководство. Файлы данных SQL Server в службе хранилища Azure
+    - name: Учебник. Файлы данных SQL Server в службе хранилища Azure
       href: tutorial-use-azure-blob-storage-service-with-sql-server-2016.md
       items:
-        - name: Урок 1. Создание учетной записи службы хранилища Azure и контейнера
+        - name: "Занятие\_1. Создание учетной записи службы хранилища Azure и контейнера"
           href: ../tutorials/lesson-1-create-windows-azure-storage-account-and-container.md
         - name: Занятие 2. Создание политики в контейнере ключа и ключа подписанного URL-адреса
           href: lesson-1-create-stored-access-policy-and-shared-access-signature.md
-        - name: Урок 3. Создание учетных данных SQL Server
+        - name: Занятие 3. Создание учетных данных SQL Server
           href: lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md
-        - name: 'Занятие 4: Создание базы данных в службе хранилища Azure'
+        - name: "Занятие\_4. Создание базы данных в службе хранилища Azure"
           href: lesson-3-database-backup-to-url.md
         - name: Занятие 5. (Необязательно) Шифрование базы данных с помощью TDE
           href: lesson-4-restore-database-to-virtual-machine-from-url.md
-        - name: 'Занятие 6: Перенос базы данных с исходного локального компьютера на целевой компьютер в Azure'
+        - name: "Занятие\_6. Перенос базы данных с исходного локального компьютера на целевой компьютер в Azure"
           href: lesson-5-backup-database-using-file-snapshot-backup.md
-        - name: 'Занятие 7: Перенос файлов данных в службу хранилища Azure'
+        - name: "Занятие\_7. Перенос файлов данных в службу хранилища Azure"
           href: lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md
         - name: Занятие 8. Восстановление базы данных в службу хранилища Azure
           href: lesson-7-restore-a-database-to-a-point-in-time.md

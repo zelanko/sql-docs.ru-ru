@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9235d096be513e1480dab7e23672e14011c63f0a
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73781215"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-parameters"></a>Управление столбцами text и image — использование параметров данных времени выполнения
@@ -28,7 +28,7 @@ ms.locfileid: "73781215"
   
 1.  При вызове метода [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md), чтобы привязать программный буфер к параметру инструкции:  
   
-    -   Для последнего параметра используйте SQL_LEN_DATA_AT_EXEC(*length*), где *length* — общая длина данных параметра типа **text**, **ntext** или **image** в байтах.  
+    -   Для последнего параметра используйте значение SQL_LEN_DATA_AT_EXEC(*длина*), где *длина* — это общая длина данных параметра **text**, **ntext**или **image** в байтах.  
   
     -   Используйте параметр **rgbValue** (восьмой параметр) определяемого программой идентификатора параметра.  
   
@@ -36,11 +36,11 @@ ms.locfileid: "73781215"
   
 3.  Для каждого параметра с данными времени выполнения:  
   
-    -   Для получения заданного программой идентификатора параметра вызовите метод [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405). Если существует другой параметр с данными времени выполнения, будет возвращено значение SQL_NEED_DATA.  
+    -   Для получения заданного программой идентификатора параметра вызовите метод [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) . Если существует другой параметр с данными времени выполнения, будет возвращено значение SQL_NEED_DATA.  
   
     -   Вызовите метод [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md) один или несколько раз, чтобы отправить данные параметра до отправки длины.  
   
-4.  Вызовите метод [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405), чтобы указать, что все данные для конечного параметра с данными времени выполнения отправлены. При этом не будет возвращено значение SQL_NEED_DATA.  
+4.  Вызовите метод [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) , чтобы указать, что все данные для конечного параметра с данными времени выполнения отправлены. При этом не будет возвращено значение SQL_NEED_DATA.  
   
 ## <a name="example"></a>Пример  
  Образец демонстрирует, как считывать символьные данные переменной SQL_LONG с помощью методов SQLParamData и SQLPutData. Этот образец не поддерживается на архитектуре IA64.  
@@ -49,11 +49,11 @@ ms.locfileid: "73781215"
   
  Этот образец соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию. Чтобы соединиться с именованным экземпляром, измените определение источника данных ODBC, указав экземпляр в следующем формате: Сервер\ИменованныйЭкземпляр. По умолчанию [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] устанавливается на именованный экземпляр.  
   
- Выполните первый листинг кода ([!INCLUDE[tsql](../../includes/tsql-md.md)]), чтобы создать таблицу, используемую образцом.  
+ Выполните первый листинг кода [!INCLUDE[tsql](../../includes/tsql-md.md)](), чтобы создать таблицу, используемую образцом.  
   
  Скомпилируйте второй листинг кода (C++) с библиотекой odbc32.lib. Затем запустите программу.  
   
- Выполните третий листинг кода ([!INCLUDE[tsql](../../includes/tsql-md.md)]), чтобы удалить таблицу, используемую образцом.  
+ Выполните третий листинг кода [!INCLUDE[tsql](../../includes/tsql-md.md)](), чтобы удалить таблицу, используемую образцом.  
   
 ```  
 use AdventureWorks  
@@ -224,7 +224,7 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'emp4')
 GO  
 ```  
   
-## <a name="see-also"></a>См. также раздел  
- [Разделы &#40;руководства по управлению столбцами текста и изображений в ODBC&#41;](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
+## <a name="see-also"></a>См. также:  
+ [Разделы руководства по управлению столбцами Text и Image &#40;ODBC&#41;](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
   
   

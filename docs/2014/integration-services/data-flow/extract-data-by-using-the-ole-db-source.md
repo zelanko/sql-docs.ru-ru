@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8303cc8e30a9099a11a43cc2b4bfac341873a044
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62902610"
 ---
 # <a name="extract-data-by-using-the-ole-db-source"></a>Извлечение данных с помощью источника OLE DB
@@ -34,7 +34,7 @@ ms.locfileid: "62902610"
   
 4.  Дважды щелкните источник OLE DB.  
   
-5.  В диалоговом окне **Редактор источника OLE DB** на странице **Диспетчер соединений** выберите существующий диспетчер соединений OLE DB или нажмите **Создать** , чтобы создать новый диспетчер соединений. Дополнительные сведения см. в статье [OLE DB Connection Manager](../connection-manager/ole-db-connection-manager.md).  
+5.  В диалоговом окне **Редактор источника OLE DB** на странице **Диспетчер соединений** выберите существующий диспетчер соединений OLE DB или нажмите **Создать** , чтобы создать новый диспетчер соединений. Дополнительные сведения см. в разделе [Диспетчер соединений OLE DB](../connection-manager/ole-db-connection-manager.md).  
   
 6.  Выберите метод доступа к данным.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62902610"
   
 12. Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Источник OLE DB](ole-db-source.md)   
  [Преобразования служб Integration Services](transformations/integration-services-transformations.md)   
  [Пути служб Integration Services](integration-services-paths.md)   

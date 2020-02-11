@@ -11,10 +11,10 @@ ms.assetid: 835a032c-e37c-4f35-8ab0-5e4ae25c2e9b
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: a62ad36e17fd25a922615ed4d7b8a49c12a14adf
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728612"
 ---
 # <a name="change-the-order-of-attributes"></a>Изменение порядка атрибутов
@@ -24,7 +24,7 @@ ms.locfileid: "73728612"
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]вы можете изменять порядок атрибутов.  
   
 ## <a name="prerequisites"></a>Предварительные требования  
- Чтобы выполнить эту процедуру:  
+ Для выполнения этой процедуры:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
   
@@ -55,7 +55,7 @@ ms.locfileid: "73728612"
   
 7.  Щелкните **Вверх** или **Вниз**.  
   
-## <a name="see-also"></a>См. также раздел  
- [Атрибуты (службы Master Data Services)](../master-data-services/attributes-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Master Data Services &#40;атрибутов&#41;](../master-data-services/attributes-master-data-services.md)  
   
   

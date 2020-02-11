@@ -13,16 +13,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 768a9c821c2c8f663bf65c58ed495993795b2eb9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835950"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Конструктор системы отслеживания измененных данных для Oracle компании Attunity
   Консоль конструктора CDC служит для разработки и обслуживания экземпляров Oracle CDC. Консоль конструктора CDC ― это надстройка консоли управления (MMC), состоящая из следующих элементов.  
   
--   Мастер создания экземпляра. Этот мастер создает новый экземпляр CDC Oracle Instance. Дополнительные сведения об использовании мастера создания экземпляра см. в разделе [Use the New Instance Wizard](use-the-new-instance-wizard.md).  
+-   Мастер создания экземпляра. Этот мастер создает экземпляр CDC Oracle. Дополнительные сведения об использовании мастера создания экземпляра см. в разделе [Use the New Instance Wizard](use-the-new-instance-wizard.md).  
   
 -   Средство просмотра свойств экземпляра CDC. Это закрепленное представление, в котором отображаются состояние и конфигурация выбранного экземпляра CDC. Дополнительные сведения о средстве просмотра свойств см. в разделе [Как управлять экземпляром CDC](manage-a-cdc-instance.md).  
   

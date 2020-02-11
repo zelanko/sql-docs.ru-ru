@@ -1,5 +1,5 @@
 ---
-title: Пример метода (Visual Basic) Append | Документация Майкрософт
+title: Пример метода Append для индексов (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 50f87e27-1bf9-427c-9b1d-704a672434d2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5d164c650c67498a89b784cc49779384a198c669
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966053"
 ---
 # <a name="indexes-append-method-example-vb"></a>Пример метода Append коллекции Indexes (Visual Basic)
-Следующий код демонстрирует создание нового индекса. Он расположен в два столбца в таблице.  
+В следующем коде показано, как создать новый индекс. Индекс находится в двух столбцах таблицы.  
   
 ```  
 Attribute VB_Name = "IndexesAppend"  
@@ -80,7 +80,7 @@ End Sub
 ' EndCreateIndexVB  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Append-метод (коллекция Indexes ADOX)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
- [Объект INDEX (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
+## <a name="see-also"></a>См. также:  
+ [Метод Append (индексы ADOX)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
+ [Объект index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [Коллекция Indexes (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)

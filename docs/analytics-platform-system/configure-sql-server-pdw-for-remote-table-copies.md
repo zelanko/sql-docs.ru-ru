@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6c9a0a29b543eb287c7e233d6b1ea77bb2a0d45c
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401266"
 ---
 # <a name="configure-parallel-data-warehouse-for-remote-table-copies"></a>Настройка параллельного хранилища данных для удаленных копий таблиц
@@ -21,7 +21,7 @@ ms.locfileid: "74401266"
   
 В этом разделе описывается один из шагов настройки для настройки копирования удаленной таблицы. Список всех шагов настройки см. в разделе [Удаленная копия таблицы](remote-table-copy.md).  
   
-## <a name="before-you-begin"></a>Перед началом работы  
+## <a name="before-you-begin"></a>Перед началом  
 Чтобы настроить SQL Server PDW для использования копирования из удаленной таблицы, необходимо выполнить следующие действия.  
   
 -   Иметь учетную запись администратора системы аналитики, с возможностью непосредственного входа в узлы <strong> *appliance_domain*-AD01</strong> и <strong> *appliance_domain*-AD02</strong> .  
@@ -39,7 +39,7 @@ ms.locfileid: "74401266"
   
 3.  Добавьте имя IP-адреса с помощью диспетчера DNS.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 <!-- MISSING LINKS 
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
 -->

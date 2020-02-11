@@ -18,14 +18,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 65436da64ca7c718de053dab520edad71dac6228
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68199457"
 ---
-# <a name="make-schema-changes-on-publication-databases"></a>Внесение изменений в схемы баз данных публикации
-  Репликация поддерживает широкий диапазон изменений схем для опубликованных объектов. Когда вы вносите любое из следующих изменений схемы в соответствующий опубликованный объект в издателе [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], это изменение распространяется по умолчанию на всех подписчиков [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
+# <a name="make-schema-changes-on-publication-databases"></a>Внесение изменений схем в базы данных публикации
+  Репликация поддерживает широкий диапазон изменений схем для опубликованных объектов. При внесении любого из следующих изменений схемы в соответствующий опубликованный объект на издателе [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] это изменение распространяется по умолчанию на все подписчики [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
 -   ALTER TABLE  
   
@@ -144,11 +144,12 @@ ms.locfileid: "68199457"
         ||100RTM, собственный режим моментального снимка|100RTM, символьный режим моментального снимка|Все другие уровни совместимости|  
         |-|-----------------------------|--------------------------------|------------------------------------|  
         |`hierarchyid`|Разрешить изменения|Блокировать изменения|Блокировать изменения|  
-        |`geography` и `geometry`|Разрешить изменения|Разрешить изменение<sup>1</sup>|Блокировать изменения|  
+        |`geography`перетаскивани`geometry`|Разрешить изменения|Разрешить изменение<sup>1</sup>|Блокировать изменения|  
         |`filestream`|Разрешить изменения|Блокировать изменения|Блокировать изменения|  
-        |`date`, `time`, `datetime2` и `datetimeoffset`|Разрешить изменения|Разрешить изменение<sup>1</sup>|Блокировать изменения|  
+        |
+  `date`, `time`, `datetime2` и `datetimeoffset`|Разрешить изменения|Разрешить изменение<sup>1</sup>|Блокировать изменения|  
   
-         <sup>1</sup> подписчики SQL Server Compact преобразуют эти типы данных на подписчике.  
+         <sup>1</sup> SQL Server Compact подписчики преобразуют эти типы данных на подписчике.  
   
 -   Если при применении изменения схемы возникает ошибка (например, ошибка по причине добавления внешнего ключа, ссылающегося на таблицу, которая недоступна на подписчике), синхронизация завершается ошибкой, и подписка должна быть инициализирована повторно.  
   
@@ -156,7 +157,7 @@ ms.locfileid: "68199457"
   
 -   Репликация слиянием обеспечивает игнорирование хранимыми процедурами изменений схемы во время устранения неполадок. Дополнительные сведения см. в статьях [sp_markpendingschemachange (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql) и [sp_enumeratependingschemachanges (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [ALTER TABLE (Transact-SQL)](/sql/t-sql/statements/alter-table-transact-sql)   
  [ALTER VIEW (Transact-SQL)](/sql/t-sql/statements/alter-view-transact-sql)   
  [ALTER PROCEDURE (Transact-SQL)](/sql/t-sql/statements/alter-procedure-transact-sql)   

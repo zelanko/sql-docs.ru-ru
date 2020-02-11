@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e36b6c114e7e5f2f95c0747d6e36e4dabc118daa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876224"
 ---
 # <a name="deferred-transactions-sql-server"></a>Отложенные транзакции (SQL Server)
@@ -40,7 +40,7 @@ ms.locfileid: "62876224"
 |------------|-----------------------------------------------------------------------|  
 |Запуск сервера|Отложенная транзакция|  
 |Восстановить|Отложенная транзакция|  
-|Присоединить|Присоединение завершается с ошибкой|  
+|Attach|Присоединение завершается с ошибкой|  
 |Автоматический перезапуск|Отложенная транзакция|  
 |Создание базы данных или моментального снимка базы данных|Создание завершается с ошибкой|  
 |Повтор при зеркальном отображении базы данных|Отложенная транзакция|  
@@ -84,11 +84,11 @@ ms.locfileid: "62876224"
   
          Сведения об аварийном режиме см. в разделе [Database States](../databases/database-states.md).  
   
-    -   Затем восстановите базу данных, используя параметр DBCC REPAIR_ALLOW_DATA_LOSS в одной из следующих инструкций DBCC: [Инструкция DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql), [DBCC CHECKALLOC](/sql/t-sql/database-console-commands/dbcc-checkalloc-transact-sql), или [DBCC CHECKTABLE](/sql/t-sql/database-console-commands/dbcc-checktable-transact-sql).  
+    -   Затем восстановите базу данных, используя параметр DBCC REPAIR_ALLOW_DATA_LOSS в одной из следующих инструкций DBCC: [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql), [DBCC CHECKALLOC](/sql/t-sql/database-console-commands/dbcc-checkalloc-transact-sql)или [DBCC CHECKTABLE](/sql/t-sql/database-console-commands/dbcc-checktable-transact-sql).  
   
          При возникновении страницы с поврежденными данными DBCC освобождает эту страницу и исправляет связанные с ней ошибки. Такой подход дает возможность возвратить базу данных в режиме «в сети» в физически согласованное состояние. Но при этом могут быть также потеряны дополнительные данные, поэтому этот подход должен применяться только в исключительных случаях.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Обзор процессов восстановления (SQL Server)](restore-and-recovery-overview-sql-server.md)   
  [Удаление уничтоженных файловых групп (SQL Server)](remove-defunct-filegroups-sql-server.md)   
  [Восстановления файлов (модель полного восстановления)](file-restores-full-recovery-model.md)   

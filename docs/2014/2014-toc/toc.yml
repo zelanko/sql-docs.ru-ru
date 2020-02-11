@@ -1,5 +1,5 @@
-- name: Электронная документация по SQL Server 2014
-  href: books-online-for-sql-server-2014.md
+- name: "Документация по SQL Server\_2014"
+  href: index.yml
 - name: Службы Analysis Services +
   href: ../analysis-services/analysis-services.md
 - name: Службы Data Quality Services +
@@ -56,5 +56,5 @@
   href: sql-server-transaction-locking-and-row-versioning-guide.md
 - name: Архитектура журнала транзакций и управление им
   href: sql-server-transaction-log-architecture-and-management.md
-- name: "Пример. Создание масштабируемой и высокопроизводительной экосистемы для предприятия с помощью Microsoft Dynamics\_ERP и репликации SQL Server\_2014"
+- name: Пример внедрения. Создание экосистемы для предприятия с помощью Microsoft Dynamics ERP и репликации SQL Server 2014 для обеспечения масштабируемости и производительности
   href: case-study-building-an-enterprise-ecosystem.md

@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 41f92430eecb0eb06fbca18bbb552a2e85ce6069
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761830"
 ---
-# <a name="mssqlserver8996"></a>MSSQLSERVER_8996
+# <a name="mssqlserver_8996"></a>MSSQLSERVER_8996
     
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|8996|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  

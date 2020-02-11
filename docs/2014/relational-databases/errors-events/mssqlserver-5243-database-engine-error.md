@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d6e8fd1c3ee57b1e85411eb9a546e8330ce53054
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62867858"
 ---
-# <a name="mssqlserver5243"></a>MSSQLSERVER_5243
+# <a name="mssqlserver_5243"></a>MSSQLSERVER_5243
     
 ## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Название продукта|SQL Server|  
+|Название продукта|SQL Server|  
 |Идентификатор события|5243|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
@@ -35,8 +35,8 @@ ms.locfileid: "62867858"
 ## <a name="explanation"></a>Объяснение  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обнаружил несогласованность в структуре подсистемы хранилища, встроенной в память.  
   
-## <a name="see-also"></a>См. также  
- [DBCC CHECKDB (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)   
+## <a name="see-also"></a>См. также:  
+ [DBCC CHECKDB &#40;&#41;Transact-SQL](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)   
  [Файлы и файловые группы базы данных](../databases/database-files-and-filegroups.md)  
   
   

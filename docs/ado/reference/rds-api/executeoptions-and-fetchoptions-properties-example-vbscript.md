@@ -1,5 +1,5 @@
 ---
-title: ExecuteOptions и FetchOptions примеры свойств (VBScript) | Документация Майкрософт
+title: Пример свойств Ексекутеоптионс и FetchOptions (VBScript) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,17 +16,17 @@ ms.assetid: 753a4a3d-0fba-40b8-86e7-50b34182ca69
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 782b76ca40418cd7fb8313c2b22da3a6ddd3978a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964194"
 ---
 # <a name="executeoptions-and-fetchoptions-properties-example-vbscript"></a>Примеры свойств ExecuteOptions и FetchOptions (VBScript)
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Ниже показано, как задать [ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md) и [FetchOptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md) свойств во время разработки. Если оставить заголовок не задан, **ExecuteOptions** по умолчанию используется **adcExecSync**. Этот параметр указывает, что при **RDS. Обновить** вызывается метод, он будет выполнен в текущем потоке вызывающего — то есть, синхронно. Вырежьте и вставьте следующий код в блокноте или другом текстовом редакторе и сохраните его как **ExecuteOptionsDesignVBS.asp**.  
+ В следующем коде показано, как задать свойства [ексекутеоптионс](../../../ado/reference/rds-api/executeoptions-property-rds.md) и [FetchOptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md) во время разработки. Если оставить это значение неопределенным, **ексекутеоптионс** по умолчанию будет **адцексексинк**. Этот параметр указывает, что при использовании **RDS. **Вызывается метод Refresh, который будет выполняться в текущем вызывающем потоке, т. е. синхронно. Вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **ексекутеоптионсдесигнвбс. ASP**.  
   
 ```  
 <!-- BeginExecuteOptionsDesignVBS -->  
@@ -94,7 +94,7 @@ body {
 <!-- EndExecuteOptionsDesignVBS -->  
 ```  
   
- В следующем примере показано, как задать **ExecuteOptions** и **FetchOptions** свойства во время выполнения в код VBScript. См. в разделе [обновить](../../../ado/reference/rds-api/refresh-method-rds.md) метод рабочий пример из этих свойств. Вырежьте и вставьте следующий код в блокноте или другом текстовом редакторе и сохраните его как **ExecuteOptionsRuntimeVBS.asp**.  
+ В следующем примере показано, как задать свойства **ексекутеоптионс** и **FetchOptions** во время выполнения в коде VBScript. Рабочий пример этих свойств см. в описании метода [Refresh](../../../ado/reference/rds-api/refresh-method-rds.md) . Вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **ексекутеоптионсрунтимевбс. ASP**.  
   
 ```  
 <!-- BeginExecuteOptionsRuntimeVBS -->  
@@ -169,8 +169,8 @@ End Sub
 <!-- EndExecuteOptionsRuntimeVBS -->  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Свойство ExecuteOptions (служба удаленных рабочих СТОЛОВ)](../../../ado/reference/rds-api/executeoptions-property-rds.md)   
+## <a name="see-also"></a>См. также:  
+ [Свойство Ексекутеоптионс (RDS)](../../../ado/reference/rds-api/executeoptions-property-rds.md)   
  [Свойство FetchOptions (служба удаленных рабочих столов)](../../../ado/reference/rds-api/fetchoptions-property-rds.md)
 
 

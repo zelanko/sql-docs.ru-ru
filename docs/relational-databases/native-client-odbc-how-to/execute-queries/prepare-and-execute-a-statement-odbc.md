@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ea4ce4bfe51f844d6d2916623f5a9cc3ffbe01a6
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73781393"
 ---
 # <a name="prepare-and-execute-a-statement-odbc"></a>Подготовка и выполнение инструкцию (ODBC)
@@ -43,7 +43,7 @@ ms.locfileid: "73781393"
   
     -   Вызовите функцию [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) , чтобы выполнить подготовленную инструкцию.  
   
-    -   При использовании входных параметров времени выполнения функция [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) возвращает SQL_NEED_DATA. Данные передаются фрагментами при помощи методов [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) и [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md).  
+    -   При использовании входных параметров времени выполнения функция [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) возвращает SQL_NEED_DATA. Отправьте данные по фрагментам при помощи функций [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) и [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md).  
   
 ### <a name="to-prepare-a-statement-with-column-wise-parameter-binding"></a>Подготовка инструкции с привязкой параметра на уровне столбца  
   
@@ -69,7 +69,7 @@ ms.locfileid: "73781393"
   
     -   Выделите массив из S буферов параметра для сохранения длин данных.  
   
-    -   Вызовите SQLBindParameter, чтобы связать массивы значений и длины данных параметра с параметром инструкции.  
+    -   Вызовите функцию SQLBindParameter , чтобы связать массивы значений данных и длин данных с параметром инструкции.  
   
     -   Если параметр использует данные времени выполнения типов text или image, присвойте ему значение.  
   
@@ -79,9 +79,9 @@ ms.locfileid: "73781393"
   
     -   Поместите значения и длины S-данных в массивы связанных параметров.  
   
-    -   Вызовите SQLExecute, чтобы выполнить подготовленную инструкцию.  
+    -   Вызовите функцию SQLExecute, чтобы выполнить подготовленную инструкцию.  
   
-    -   Если используются входные параметры данных при выполнении, SQLExecute возвращает SQL_NEED_DATA. Отправляйте данные в фрагментах с помощью метод SQLParamData и SQLPutData.  
+    -   При использовании входных параметров времени выполнения функция SQLExecute возвращает SQL_NEED_DATA. Отправьте данные по фрагментам при помощи функций SQLParamData и SQLPutData.  
   
 ### <a name="to-prepare-a-statement-with-row-wise-bound-parameters"></a>Подготовка инструкции с привязкой параметра на уровне строки  
   
@@ -109,11 +109,11 @@ ms.locfileid: "73781393"
   
     -   Заполните массив буфера привязанного параметра значениями данных.  
   
-    -   Вызовите SQLExecute, чтобы выполнить подготовленную инструкцию. Драйвер эффективно выполнит инструкцию SQL S раз, по одному разу для каждого набора параметров.  
+    -   Вызовите функцию SQLExecute, чтобы выполнить подготовленную инструкцию. Драйвер эффективно выполнит инструкцию SQL S раз, по одному разу для каждого набора параметров.  
   
-    -   Если используются входные параметры данных при выполнении, SQLExecute возвращает SQL_NEED_DATA. Отправляйте данные в фрагментах с помощью метод SQLParamData и SQLPutData.  
+    -   При использовании входных параметров времени выполнения функция SQLExecute возвращает SQL_NEED_DATA. Отправьте данные по фрагментам при помощи функций SQLParamData и SQLPutData.  
   
-## <a name="see-also"></a>См. также раздел  
- [Разделы &#40;руководства по выполнению запросов ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
+## <a name="see-also"></a>См. также:  
+ [Инструкции по выполнению запросов &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
   

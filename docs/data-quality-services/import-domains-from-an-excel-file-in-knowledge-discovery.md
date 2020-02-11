@@ -12,10 +12,10 @@ ms.assetid: 4d3a3940-6c2a-4dc4-90eb-86f26012c165
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 35f5c02e7206c6a9117b31c9ca9b503fb7b6875f
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75557962"
 ---
 # <a name="import-domains-from-an-excel-file-in-knowledge-discovery---data-quality-services-dqs"></a>Импорт доменов из файла Excel в ходе обнаружения знаний — службы Data Quality Services (DQS)
@@ -24,14 +24,14 @@ ms.locfileid: "75557962"
 
   В этом разделе описывается, как импортировать один или несколько доменов из файла Excel в действие обнаружения знаний [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Процесс импорта упрощает процесс формирования набора знаний, экономя время и силы. Это позволяет пользователям, у которых данные хранятся в файлах Excel или текстовых файлах, создавать базу знаний с применением этих данных. (Дополнительные сведения об импорте значений в домен существующей базы знаний см. [в разделе Импорт значений из файла Excel в домен](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md) .) Экспорт в файл Excel не поддерживается.  
   
-##  <a name="BeforeYouBegin"></a>Перед началом  
+##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Prerequisites"></a>Требований  
+###  <a name="Prerequisites"></a> Предварительные требования  
  Для импорта доменов из файла Excel необходимо установить Microsoft Excel на компьютер, на котором установлено приложение [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . Необходимо создать файл Excel со значениями домена (см. раздел [How the import works](#How)). Кроме того, необходимо создать и открыть базу знаний, в которую будет импортироваться домен.  
   
-###  <a name="Security"></a>Бюллетеня  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a>Чтение  
+####  <a name="Permissions"></a> Permissions  
  Для импорта доменов из файла Excel необходимо иметь роль dqs_kb_editor или dqs_administrator в базе данных DQS_MAIN.  
   
 ##  <a name="Import"></a>Импорт доменов из файла Excel в базу знаний  
@@ -56,7 +56,7 @@ ms.locfileid: "75557962"
   
 8.  Выберите столбец, затем либо сопоставьте с ним существующий домен, либо создайте новый домен. Для этого щелкните значок **Создать домен** , в результате чего откроется диалоговое окно **Создать домен** , затем сопоставьте домен со столбцом. Тип данных домена должен совпадать с типом данных столбца. Повторите эти действия для всех столбцов таблицы.  
   
-9. Нажмите кнопку **Далее**.  
+9. Щелкните **Далее**.  
   
 10. На странице **Обнаружение** выберите **Пуск** , чтобы запустить анализ данных в электронной таблице Excel.  
   

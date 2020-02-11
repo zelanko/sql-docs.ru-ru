@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 837d41cc929d90b2494682645127f985b5768546
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401317"
 ---
 # <a name="configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband---parallel-data-warehouse"></a>Настройка внешней системы Windows для получения копий удаленных таблиц с помощью хранилища данных с параллелизмом InfiniBand
@@ -24,7 +24,7 @@ ms.locfileid: "74401317"
   
 В этом разделе описывается один из шагов настройки для настройки копирования удаленной таблицы. Список всех этапов настройки см. в разделе [Удаленная копия таблицы](remote-table-copy.md) .  
   
-## <a name="before-you-begin"></a>Перед началом работы  
+## <a name="before-you-begin"></a>Перед началом  
 Перед настройкой внешней системы Windows необходимо:  
   
 1.  Приобретение или предоставление системы Windows, которая будет принимать удаленные копии.  

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 669983c17792d555a1310e2248c4fb98cee16f9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100341"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>Закрепление области данных отчета в конструкторе отчетов (службы SSRS)
@@ -34,16 +34,16 @@ ms.locfileid: "66100341"
   
 ### <a name="to-change-the-report-data-pane-from-a-docked-window-to-a-tabbed-window"></a>Преобразование области данных отчета из закрепленного окна в окно с вкладками  
   
--   Щелкните правой кнопкой мыши заголовок области данных отчета и нажмите кнопку **вкладка**.  
+-   Щелкните правой кнопкой мыши строку заголовка области данных отчета и выберите пункт документ с **вкладками**.  
   
 ### <a name="to-change-the-report-data-pane-from-a-tabbed-window-to-a-docked-window"></a>Преобразование области данных отчета из окна с вкладками в закрепленное окно  
   
--   Щелкните правой кнопкой мыши вкладку данные отчета и нажмите кнопку **Закрепляемое**.  
+-   Щелкните правой кнопкой мыши вкладку Данные отчета и выберите **Закрепляемое**.  
   
      Чтобы переключиться между двумя способами отображения, дважды щелкните заголовок области данных отчета.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Область данных отчета](../report-data/report-data-pane.md)   
- [Подключения данных, Источники данных и Строки подключения в службе Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
+ [Data Connections, Data Sources, and Connection Strings in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
   
   

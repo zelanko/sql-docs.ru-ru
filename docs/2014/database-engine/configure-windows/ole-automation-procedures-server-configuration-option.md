@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f00c238dfb32089261c51936b3937b0657c58b08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62782032"
 ---
 # <a name="ole-automation-procedures-server-configuration-option"></a>Параметр конфигурации сервера «Ole Automation Procedures»
@@ -32,7 +32,7 @@ ms.locfileid: "62782032"
   
  После включения процедур OLE-автоматизации процедура **sp_OACreate** запустит общую среду выполнения OLE.  
   
- Текущее значение `Ole Automation Procedures` параметр можно просмотреть и изменить с помощью **sp_configure** системной хранимой процедуры.  
+ Текущее значение `Ole Automation Procedures` параметра можно просмотреть и изменить с помощью системной хранимой процедуры **sp_configure** .  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере показан просмотр текущего значения параметра OLE Automation procedures.  
@@ -55,10 +55,10 @@ RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   
+## <a name="see-also"></a>См. также:  
+ [sp_configure (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   
  [RECONFIGURE (Transact-SQL)](/sql/t-sql/language-elements/reconfigure-transact-sql)   
- [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md)   
+ [Настройка контактной зоны](../../relational-databases/security/surface-area-configuration.md)   
  [Параметры конфигурации сервера (SQL Server)](server-configuration-options-sql-server.md)  
   
   

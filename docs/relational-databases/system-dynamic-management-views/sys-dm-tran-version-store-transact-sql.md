@@ -1,5 +1,5 @@
 ---
-title: sys.dm_tran_version_store (Transact-SQL) | Документация Майкрософт
+title: sys. dm_tran_version_store (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: sql
@@ -21,20 +21,20 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d993cd06d555a9d4136274b35242477df1b304e9
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68262603"
 ---
-# <a name="sysdmtranversionstore-transact-sql"></a>sys.dm_tran_version_store (Transact-SQL)
+# <a name="sysdm_tran_version_store-transact-sql"></a>sys.dm_tran_version_store (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Возвращает виртуальную таблицу, в которой отображаются все записи о версиях в хранилище версий. **sys.dm_tran_version_store** неэффективно, так как он запрашивает все хранилище версий и хранилище версий может быть очень большим.  
+  Возвращает виртуальную таблицу, в которой отображаются все записи о версиях в хранилище версий. выполнение процедуры **sys. dm_tran_version_store** неэффективно, так как оно запрашивает все хранилище версий, а хранилище версий может быть очень большим.  
   
  Каждая запись версии хранится в виде двоичных данных вместе с некоторыми сведениями о состоянии и отслеживании. Как и в таблицах базы данных, записи в хранилище версий хранятся в страницах размером 8192 байта. Если размер записи превышает 8192 байта, она разбивается на две различные записи.  
   
- Так как запись версии хранится в двоичном виде, не возникает проблем с разными параметрами сортировки из разных баз данных. Используйте **sys.dm_tran_version_store** для поиска предыдущих версий строк в двоичном представлении, в котором они хранятся в хранилище версий.  
+ Так как запись версии хранится в двоичном виде, не возникает проблем с разными параметрами сортировки из разных баз данных. Используйте представление **sys. dm_tran_version_store** для поиска предыдущих версий строк в двоичном представлении в том виде, в котором они существуют в хранилище версий.  
   
   
 ## <a name="syntax"></a>Синтаксис  
@@ -45,23 +45,23 @@ sys.dm_tran_version_store
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |**transaction_sequence_num**|**bigint**|Порядковый номер транзакции, формирующий номер версии записи.|  
 |**version_sequence_num**|**bigint**|Порядковый номер версии записи. Значение является уникальным в рамках сформировавшей эту версию транзакции.|  
 |**database_id**|**int**|Идентификатор базы данных версии записи.|  
 |**rowset_id**|**bigint**|Идентификатор набора строк записи.|  
-|**status**|**tinyint**|Указывает, была ли запись версии разбита на две записи. Если значение равно 0, запись хранится на одной странице. Если оно равно 1, запись разбивается на две записи, которые хранятся на двух различных страницах.|  
+|**состояние**|**tinyint**|Указывает, была ли запись версии разбита на две записи. Если значение равно 0, запись хранится на одной странице. Если оно равно 1, запись разбивается на две записи, которые хранятся на двух различных страницах.|  
 |**min_length_in_bytes**|**smallint**|Минимальная длина записи в байтах.|  
 |**record_length_first_part_in_bytes**|**smallint**|Длина первой части записи версии в байтах.|  
-|**record_image_first_part**|**varbinary(8000)**|Двоичный образ первой части записи версии.|  
+|**record_image_first_part**|**varbinary (8000)**|Двоичный образ первой части записи версии.|  
 |**record_length_second_part_in_bytes**|**smallint**|Длина второй части записи версии в байтах.|  
-|**record_image_second_part**|**varbinary(8000)**|Двоичный образ второй части записи версии.|  
+|**record_image_second_part**|**varbinary (8000)**|Двоичный образ второй части записи версии.|  
   
 ## <a name="permissions"></a>Разрешения
 
-На [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], требуется `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровней Premium необходимо `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровней Standard и Basic, требует **администратора сервера** или **администратор Azure Active Directory** учетной записи.   
+В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]необходимо `VIEW SERVER STATE` разрешение.   
+На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
   
 ## <a name="examples"></a>Примеры  
  Следующий пример использует тестовый сценарий, содержащий четыре параллельные транзакции, идентифицированные порядковыми номерами (XSN), который выполняется в базе данных с параметрами ALLOW_SNAPSHOT_ISOLATION и READ_COMMITTED_SNAPSHOT, установленными в значение ON. Следующие транзакции запущены:  
@@ -131,8 +131,8 @@ record_length_second_part_in_bytes record_image_second_part
   
  Выход показывает, что транзакция XSN-57 создала три версии строк из одной таблицы, а XSN-58 — одну версию строки из другой таблицы.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Динамические административные представления и функции, связанные с транзакциями (Transact-SQL)](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Динамические административные представления и функции, связанные с транзакциями &#40;языке Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

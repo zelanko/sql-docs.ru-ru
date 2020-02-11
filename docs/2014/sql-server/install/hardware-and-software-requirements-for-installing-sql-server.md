@@ -46,10 +46,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ce6cef69abe7c2461552229363c8334ca56555b4
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245658"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server-2014"></a>Hardware and Software Requirements for Installing SQL Server 2014
@@ -72,7 +72,7 @@ ms.locfileid: "75245658"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Программа установки устанавливает следующие компоненты программного обеспечения, необходимые для продукта:  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Собственный клиент  
+    -   Собственный клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Файлы поддержки программы установки  
   
@@ -107,7 +107,7 @@ ms.locfileid: "75245658"
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] поддерживается в средах виртуальных машин, работающих в роли Hyper-V в следующих выпусках:<br />-<br />                    Выпуски [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] с пакетом обновления 2 (SP2) Standard, Enterprise и Datacenter.<br />-[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]Выпуск с пакетом обновления 1 (SP1) Standard, Enterprise и Datacenter.<br />-<br />                    [!INCLUDE[win8srv](../../includes/win8srv-md.md)]Выпуски Datacenter и Standard.<br /><br /> Кроме ресурсов, необходимых для родительской секции, каждой виртуальной машине (дочерней секции) необходимо предоставить достаточный объем ресурсов процессора, памяти и диска для экземпляра [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Требования приведены далее в этом разделе\*<br /><br /> В роли Hyper-V в [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] с пакетом обновления 2 (SP2) или [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] с пакетом обновления 1 (SP1) можно выделить до четырех виртуальных процессоров для виртуальных машин, в которых работают 32- или 64-разрядные версии [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] с пакетом обновления 2 (SP2), [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] с пакетом обновления 1 (SP1) или 64-разрядные выпуски [!INCLUDE[win8srv](../../includes/win8srv-md.md)] .<br /><br /> В роли Hyper-V в [!INCLUDE[win8srv](../../includes/win8srv-md.md)]:<br />Не более 8 (восьми) виртуальных процессоров может быть выделено для виртуальных машин, где запускается [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] с пакетом обновления 2 (SP2) (32- или 64-разрядная версия).<br />Можно выделить до 64 (шестидесяти четырех) виртуальных процессоров для виртуальных машин, работающих с 64-разрядными версиями [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] с пакетом обновления 1 (SP1) или с 64-разрядными версиями [!INCLUDE[win8srv](../../includes/win8srv-md.md)] .<br /><br /> Дополнительные сведения об ограничениях вычислительной мощности в разных выпусках [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и различиях в их работе в физических и виртуальных средах с гиперпоточными процессорами см. в разделе [Compute Capacity Limits by Edition of SQL Server](../compute-capacity-limits-by-edition-of-sql-server.md). Дополнительные сведения о роли Hyper-V см. на [веб-сайте Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=182820).<br /><br /> ** \* \* Важно \* !** Гостевая отказоустойчивая кластеризация поддерживается [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]в. Дополнительные сведения о поддерживаемых версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и операционных системах для гостевого режима отказоустойчивой кластеризации, а также о поддержке виртуализации см. в разделе [Политика поддержки для продуктов Microsoft SQL Server, работающих в аппаратной виртуальной среде](https://go.microsoft.com/fwlink/?LinkId=151676).|  
 |Жесткий диск|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]требуется не менее 6 ГБ свободного места на жестком диске.<br /><br /> Требования к месту на диске определяются набором устанавливаемых компонентов [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Дополнительные сведения см. в подразделе [Hard Disk Space Requirements (32-Bit and 64 Bit)](hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace) далее в этом разделе. Сведения о поддерживаемых типах хранилищ для файлов данных см. в разделе [Storage Types for Data Files](hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes).|  
 |Диск|Для установки с DVD-диска необходим соответствующий дисковод.|  
-|Мониторинг|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]требуется монитор Super-VGA (800x600) или более высокого разрешения.|  
+|Монитор|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]требуется монитор Super-VGA (800x600) или более высокого разрешения.|  
 |Интернет|Для поддержки функциональных средств Интернета требуется доступ к Интернету (могут применяться дополнительные тарифы).|  
   
  * Работа [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] на виртуальной машине будет выполняться медленнее, чем в связи с нагрузкой ресурсов виртуализации.  
@@ -427,7 +427,7 @@ ms.locfileid: "75245658"
   
 -   Для SQL Server 2012 необходимо установить SQL Server 2012 с пакетом обновления 2 или более поздней версии. Дополнительные сведения см. в разделе [Как получить последний пакет обновления для SQL Server 2012](https://support.microsoft.com/kb/2755533).  
   
--   SQL Server 2008 R2  
+-   SQL Server 2008 R2  
     и SQL Server 2008 не поддерживаются в Windows 10.  
   
 ##  <a name="CrossLanguageSupport"></a>Поддержка разных языков  
@@ -441,7 +441,7 @@ ms.locfileid: "75245658"
   
  Фактические требования к объему свободного места на диске зависят от конфигурации системы, а также от набора устанавливаемых компонентов. Список функций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], поддерживаемых различными выпусками, см. [в разделе функции, поддерживаемые различными выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md). В следующей таблице представлены требования к свободному месту на диске для компонентов [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
-|**Функциями**|**Свободное место на диске**|  
+|**Компонент**|**Свободное место на диске**|  
 |-----------------|--------------------------------|  
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)]и файлы данных, репликация, полнотекстовый поиск и службы Data Quality Services|811 МБ|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]и файлы данных|345 МБ|  
@@ -484,7 +484,7 @@ ms.locfileid: "75245658"
   
 -   Программа установки[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не может создавать группы безопасности или подготавливать учетные записи служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на контроллере домена, доступном только для чтения. В такой ситуации программа установки завершается ошибкой.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Планирование установки SQL Server](planning-a-sql-server-installation.md)   
  [Вопросы безопасности при установке SQL Server](security-considerations-for-a-sql-server-installation.md)   
  [Спецификации SQL Server 2014](../../getting-started/sql-server-2014-product-specifications.md)  

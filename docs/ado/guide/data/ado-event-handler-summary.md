@@ -1,5 +1,5 @@
 ---
-title: Общие сведения об обработчике событий ADO | Документация Майкрософт
+title: Сводка по обработчику событий ADO | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,35 +14,35 @@ ms.assetid: b34f4472-5e04-4a2c-ab64-38d6eca31a69
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d4fef63ff610ad85e353c2ef1dc0f8e5987c74ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926195"
 ---
-# <a name="ado-connection-and-recordset-events"></a>Соединение ADO и события набора записей
-Два объекта ADO может порождать события: [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта и [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта. **ConnectionEvent** семейства относится к операциям на **подключения** объекта и **RecordsetEvent** семейства относится к операциям на  **Набор записей** объекта.
+# <a name="ado-connection-and-recordset-events"></a>События подключения ADO и записи в набор записей
+События могут создаваться двумя объектами ADO: объектом [соединения](../../../ado/reference/ado-api/connection-object-ado.md) и объектом [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) . Семейство **коннектионевент** относится к операциям объекта **Connection** , а семейство **рекордсетевент** относится к операциям с объектом **Recordset** .
 
--   **События подключения**: События выдаются в том случае, когда транзакции в соединении начинается, фиксируется или откатывается; При [команда](../../../ado/reference/ado-api/command-object-ado.md) выполняется; при возникновении предупреждения во время **событие соединения** операции; или когда **подключения** начинается или заканчивается.
+-   **События соединения**: события выдаются, когда начинается транзакция в соединении, фиксируется или выполняется откат. При выполнении [команды](../../../ado/reference/ado-api/command-object-ado.md) ; При возникновении предупреждения в ходе операции **события соединения** ; или при запуске или завершении **соединения** .
 
--   **Набор записей событий**: Вызываются события по операции асинхронной выборки, а также при переходе по строкам **записей** объекта, измените поле строки **набор записей**, измените строку в  **Набор записей**откройте **записей** с серверный курсор, закройте **записей**, или внести любые изменения, ни при каких обстоятельствах в **записей**.
+-   **События набора записей**. события выдаются вокруг асинхронных операций выборки, а также при переходе по строкам объекта **Recordset** , изменению поля в строке **набора записей**, изменению строки в **наборе записей**, открытию **набора** записей с серверным курсором, закрытию **набора записей**или внесению любых изменений в **набор записей**.
 
- В следующих таблицах приведены события и их описания.
+ В следующих таблицах приводится сводка по событиям и их описаниям.
 
-|ConnectionEvent|Описание|
+|коннектионевент|Description|
 |---------------------|-----------------|
-|[RollbackTransComplete BeginTransComplete CommitTransComplete,](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|**Управление транзакциями** -уведомление о запуске текущей транзакции в соединении, фиксируется, или откатывается назад.|
-|[WillConnect](../../../ado/reference/ado-api/willconnect-event-ado.md), [ConnectComplete, отключение](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|**Управление подключениями** -уведомление, которое запускается текущего соединения, запущен или завершен.|
-|[WillExecute](../../../ado/reference/ado-api/willexecute-event-ado.md), [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)|**Команды управления выполнения** -уведомление, которое выполнения текущей команды в соединении будет запущен или завершен.|
-|[InfoMessage](../../../ado/reference/ado-api/infomessage-event-ado.md)|**Информационные** -уведомление о наличии Дополнительные сведения о текущей операции.|
+|[Бегинтранскомплете, Коммиттранскомплете, Роллбакктранскомплете](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|**Управление транзакциями** — уведомление о том, что текущая транзакция соединения была запущена, зафиксирована или произведена откат.|
+|[Виллконнект](../../../ado/reference/ado-api/willconnect-event-ado.md), [коннекткомплете, отключение](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|**Управление подключением** — уведомление о том, что текущее подключение будет запущено, начато или завершено.|
+|[WillExecute](../../../ado/reference/ado-api/willexecute-event-ado.md), [ексекутекомплете](../../../ado/reference/ado-api/executecomplete-event-ado.md)|**Управление выполнением команд** — уведомление о том, что выполнение текущей команды в соединении будет начато или завершено.|
+|[InfoMessage](../../../ado/reference/ado-api/infomessage-event-ado.md)|**Информационное** уведомление о наличии дополнительных сведений о текущей операции.|
 
-|RecordsetEvent|Описание|
+|рекордсетевент|Description|
 |--------------------|-----------------|
-|[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md), [FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|**Получение состояния** -уведомление о ходе выполнения операции по извлечению данных или завершение операции по извлечению. Эти события доступны, только если **записей** был открыт с помощью клиентского курсора.|
-|[События WillChangeField, FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|**Управление изменить поле** -уведомление, которое приведет к изменению значение текущего поля или был изменен.|
-|[События WillMove, MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md), [EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|**Управления навигации** -уведомление, которое позиция текущей строки в **записей** приведет к изменению, был изменен или достигнут конец **записей**.|
-|[WillChangeRecord, RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|**Строки изменения управления** -уведомление, что нечто в текущей строке **записей** приведет к изменению или был изменен.|
-|[События WillChangeRecordset, RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|**Управления измените набор записей** -уведомление, что нечто в текущем **записей** приведет к изменению или был изменен.|
+|[Фетчпрогресс](../../../ado/reference/ado-api/fetchprogress-event-ado.md), [фетчкомплете](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|**Состояние извлечения** — уведомление о ходе выполнения операции получения данных или о завершении операции извлечения. Эти события доступны только в том случае, если **набор записей** был открыт с помощью курсора на стороне клиента.|
+|[Виллчанжефиелд, Фиелдчанжекомплете](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|**Управление изменениями полей** — уведомление о том, что значение текущего поля изменится или изменилось.|
+|[Виллмове, мовекомплете](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md), [ендофрекордсет](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|**Управление навигацией** — уведомление о том, что текущее расположение строки в **наборе записей** изменится, изменилось или достигло конца **набора записей**.|
+|[Виллчанжерекорд, Рекордчанжекомплете](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|**Управление изменениями строк** — уведомление о том, что что-то в текущей строке **набора записей** изменится или изменилось.|
+|[Виллчанжерекордсет, Рекордсетчанжекомплете](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|**Управление изменениями в наборе записей** — уведомление о том, что что-либо в текущем **наборе записей** изменится или изменилось.|
 
-## <a name="see-also"></a>См. также
- [Создание экземпляра события ADO языком](../../../ado/guide/data/ado-event-instantiation-by-language.md) [событий ADO](../../../ado/reference/ado-api/ado-events.md) [параметров события](../../../ado/guide/data/event-parameters.md) [совместная работа обработчиков событий](../../../ado/guide/data/how-event-handlers-work-together.md) [типы событий](../../../ado/guide/data/types-of-events.md)
+## <a name="see-also"></a>См. также:
+ [Параметры событий](../../../ado/guide/data/event-parameters.md) ADO " [Создание экземпляра события](../../../ado/guide/data/ado-event-instantiation-by-language.md) [ADO](../../../ado/reference/ado-api/ado-events.md) ". [как обработчики событий работают вместе](../../../ado/guide/data/how-event-handlers-work-together.md) с [типами событий](../../../ado/guide/data/types-of-events.md)

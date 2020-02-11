@@ -16,10 +16,10 @@ ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bdfe70e3df86f792d250cd7abcc3ef3013e9df19
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056232"
 ---
 # <a name="sp_publication_validation-transact-sql"></a>sp_publication_validation (Transact-SQL)
@@ -41,30 +41,30 @@ sp_publication_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` — имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @rowcount_only = ] 'rowcount_only'`, следует ли возвращать только количество строк для таблицы. *rowcount_only* имеет значение **smallint** и может принимать одно из следующих значений.  
+`[ @rowcount_only = ] 'rowcount_only'`Указывает, следует ли возвращать только ROWCOUNT для таблицы. *rowcount_only* имеет значение **smallint** и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |**0**|Рассчитать контрольную сумму в формате [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.<br /><br /> Примечание. Если статья отфильтрована горизонтально, то вместо операции контрольной суммы выполняется операция ROWCOUNT.|  
 |**1** (по умолчанию)|Выполнить проверку только количества строк.|  
-|**2**|Выполнить проверку количества строк и двоичной контрольной суммы.<br /><br /> Примечание. для подписчиков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии 7,0 выполняется только проверка количества строк.|  
+|**2**|Выполнить проверку количества строк и двоичной контрольной суммы.<br /><br /> Примечание. для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчиков версии 7,0 выполняется только проверка количества строк.|  
   
-`[ @full_or_fast = ] 'full_or_fast'` — это метод, используемый для вычисления количества строк. *full_or_fast* имеет тип **tinyint** и может принимать одно из следующих значений.  
+`[ @full_or_fast = ] 'full_or_fast'`Метод, используемый для вычисления количества строк. *full_or_fast* имеет тип **tinyint** и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |**0**|Выполняет полный подсчет с помощью функции COUNT(*).|  
 |**1**|Выполняет быстрое подсчет из **sysindexes. Rows**. Подсчет строк в [sys. sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) выполняется гораздо быстрее, чем подсчет строк в реальной таблице. Однако, поскольку представление [sys. sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) отложено обновляется, количество строк может быть неточным.|  
 |**2** (по умолчанию)|Выполняет быстрый подсчет по условию, при котором сначала используется быстрый метод. Если быстрый метод дает неточные результаты, переключается на полный подсчет. Если *expected_rowcount* имеет значение NULL и хранимая процедура используется для получения значения, всегда используется полный счетчик (*).|  
   
-`[ @shutdown_agent = ] 'shutdown_agent'` указывает, следует ли завершать работу агент распространения сразу после завершения проверки. *shutdown_agent* имеет **бит**и значение по умолчанию **0**. Если значение **равно 0**, агент репликации не завершает работу. Если значение равно **1**, агент репликации завершает работу после проверки последней статьи.  
+`[ @shutdown_agent = ] 'shutdown_agent'`Указывает, следует ли завершать работу агент распространения сразу после завершения проверки. *shutdown_agent* имеет **бит**и значение по умолчанию **0**. Если значение **равно 0**, агент репликации не завершает работу. Если значение равно **1**, агент репликации завершает работу после проверки последней статьи.  
   
-`[ @publisher = ] 'publisher'` указывает издателя, отличного от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'`Указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя, отличного от. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
   
 > [!NOTE]  
->  *Издатель* не должен использоваться при запросе проверки на издателе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+>  *Издатель* не должен использоваться при запросе проверки на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателе.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -79,10 +79,10 @@ sp_publication_validation [ @publication = ] 'publication'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_publication_validation**.  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
  [Проверка данных на подписчике](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
- [sp_article_validation &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)  
- [sp_table_validation &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)  
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
+ [sp_table_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

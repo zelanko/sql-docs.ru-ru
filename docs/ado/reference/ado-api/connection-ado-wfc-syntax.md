@@ -1,5 +1,5 @@
 ---
-title: Подключение (ADO — синтаксис WFC) | Документация Майкрософт
+title: Соединение (ADO — синтаксис WFC) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,14 +14,14 @@ ms.assetid: 8cfc35bb-91e2-47da-ad4c-982e9162cd51
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 64647d577170a79b1f600b7162a0338ea19c572e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919537"
 ---
 # <a name="connection-ado---wfc-syntax"></a>Connection (ADO — синтаксис WFC)
-## <a name="package-commswfcdata"></a>com.ms.wfc.data пакета  
+## <a name="package-commswfcdata"></a>упаковать com. MS. WFC. Data  
   
 ### <a name="constructor"></a>Конструктор  
   
@@ -44,7 +44,7 @@ public int executeUpdate(String commandText)
 public int executeUpdate(String commandText, int options)  
 ```  
   
- **ExecuteUpdate** метод — это специальный метод вариантов, который вызывает базовый ADO **выполнение** метод с помощью определенных параметров. **ExecuteUpdate** метод не поддерживает возврат **записей** объекта, поэтому **выполнение** метода *параметры* параметр было изменено с добавлением **AdoEnums.ExecuteOptions.NORECORDS**. После **выполнение** метод завершения, его обновленную *RecordsAffected* параметр передается обратно в **executeUpdate** метод, который возвращается как Наконец**int**.  
+ Метод **executeUpdate** — это особый метод Case, который вызывает базовый метод **EXECUTE** ADO с определенными параметрами. Метод **executeUpdate** не поддерживает возврат объекта **набора записей** , поэтому параметр *Options* метода **EXECUTE** изменяется с помощью **адоенумс. ексекутеоптионс.** noreturn. После завершения метода **EXECUTE** его обновленный параметр *рекордсаффектед* передается обратно в метод **executeUpdate** , который, наконец, возвращается в виде **целого**числа.  
   
 ```  
 public void open()   
@@ -86,7 +86,7 @@ public com.ms.wfc.data.Errors getErrors()
 ```  
   
 ### <a name="events"></a>События  
- Дополнительные сведения о событиях ADO и WFC см. в разделе [создание экземпляра события ADO языком](../../../ado/guide/data/ado-event-instantiation-by-language.md).  
+ Дополнительные сведения о событиях ADO/WFC см. [в разделе Создание экземпляра события ADO по языку](../../../ado/guide/data/ado-event-instantiation-by-language.md).  
   
 ```  
 public void addOnBeginTransComplete(ConnectionEventHandler handler)  
@@ -109,5 +109,5 @@ public void addOnWillExecute(ConnectionEventHandler handler)
 public void removeOnWillExecute(ConnectionEventHandler handler)  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

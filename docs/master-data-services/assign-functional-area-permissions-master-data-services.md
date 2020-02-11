@@ -14,10 +14,10 @@ ms.assetid: af6fe2f3-37d0-4413-ab27-b3a0fb95eb50
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 41ab7567a1037c2f0f625cd977a80e38a591bcee
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728760"
 ---
 # <a name="assign-functional-area-permissions-master-data-services"></a>Назначение разрешений для функциональной области (службы Master Data Services)
@@ -26,8 +26,8 @@ ms.locfileid: "73728760"
 
   Разрешения для функциональной области назначаются, чтобы предоставить пользователям или группам доступ к функциональным областям [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
-## <a name="prerequisites"></a>необходимые компоненты  
- Чтобы выполнить эту процедуру:  
+## <a name="prerequisites"></a>Предварительные требования  
+ Для выполнения этой процедуры:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Разрешения пользователей и групп** ;  
   
@@ -41,7 +41,7 @@ ms.locfileid: "73728760"
   
 4.  Перейдите на вкладку **Функции** .  
   
-5.  Нажмите кнопку **Изменить**.  
+5.  Щелкните **Правка**.  
   
 6.  Выберите функциональную область и щелкните стрелку **Добавить** .  
   
@@ -49,10 +49,10 @@ ms.locfileid: "73728760"
   
 ## <a name="next-steps"></a>Next Steps  
   
--   [Назначение разрешения для объекта модели (службы Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)  
+-   [Назначение разрешений объекта модели &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>См. также статью  
- [Создание администратора модели (службы Master Data Services)](../master-data-services/create-a-model-administrator-master-data-services.md)   
- [Безопасность (службы Master Data Services)](../master-data-services/security-master-data-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Создание администратора модели &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)   
+ [Master Data Services &#40;безопасности&#41;](../master-data-services/security-master-data-services.md)  
   
   

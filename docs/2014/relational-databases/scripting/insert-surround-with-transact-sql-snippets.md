@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fde81304117befec38844c28b6d0c434ab3606e8
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242086"
 ---
 # <a name="insert-surround-with-transact-sql-snippets"></a>Вставка фрагментов кода окружения Transact-SQL
@@ -43,7 +43,7 @@ ms.locfileid: "75242086"
   
 3.  Выберите имя фрагмента кода (BEGIN, IF или WHILE) из списка, используя мышь, или введите имя фрагмента кода и нажмите клавишу TAB или ВВОД.  
   
-## <a name="see-also"></a>См. также  
- [вставлять фрагменты кода Transact-SQL](insert-transact-sql-snippets.md)  
+## <a name="see-also"></a>См. также:  
+ [Вставка фрагментов кода Transact-SQL](insert-transact-sql-snippets.md)  
   
   

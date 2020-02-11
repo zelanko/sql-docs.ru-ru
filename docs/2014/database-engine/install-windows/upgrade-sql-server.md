@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d47c670088f088260435f9e046e0bbdbf1fb9e4a
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637705"
 ---
 # <a name="upgrade-to-sql-server-2014"></a>Обновление до SQL Server 2014
@@ -45,21 +45,21 @@ ms.locfileid: "73637705"
   
 -   [Обновление реплицируемых баз данных](../../database-engine/install-windows/upgrade-replicated-databases.md)  
   
--   [Обновление и перенос служб Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
+-   [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
   
 -   [Обновление средств управления SQL Server](upgrade-sql-server-management-tools.md)  
   
 -   [Инструкции по обновлению](../../../2014/sql-server/install/upgrade-how-to-topics.md)  
   
-## <a name="see-also"></a>См. также статью  
- [Обновление [компонент ядра СУБД]](upgrade-database-engine.md)   
- [Обновление служб Analysis Services](upgrade-analysis-services.md)   
- [Обновление и перенос служб Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
- [Обновление служб Integration Services](../../integration-services/install-windows/upgrade-integration-services.md)   
- [Обновление реплицируемых баз данных](../../database-engine/install-windows/upgrade-replicated-databases.md)   
- [Обновление служб Master Data Services](upgrade-master-data-services.md)   
+## <a name="see-also"></a>См. также:  
+ [ядро СУБД обновления](upgrade-database-engine.md)   
+ [Analysis Services обновления](upgrade-analysis-services.md)   
+ [Обновление и миграция Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
+ [Integration Services обновления](../../integration-services/install-windows/upgrade-integration-services.md)   
+ [Обновление реплицированных баз данных](../../database-engine/install-windows/upgrade-replicated-databases.md)   
+ [Master Data Services обновления](upgrade-master-data-services.md)   
  [SQL Server 2005 анализатор соответствия рекомендациям](https://www.microsoft.com/download/details.aspx?id=23864)   
- [Анализатор соответствия рекомендациям для SQL Server 2008 R2](https://www.microsoft.com/download/details.aspx?id=15289)   
+ [SQL Server 2008 R2 анализатор соответствия рекомендациям](https://www.microsoft.com/download/details.aspx?id=15289)   
  [Обратная совместимость](../../../2014/getting-started/backward-compatibility.md)  
   
   

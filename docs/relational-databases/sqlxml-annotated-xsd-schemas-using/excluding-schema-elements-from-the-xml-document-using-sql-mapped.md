@@ -24,10 +24,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6cf2f3302d4e609975ebb993e5388cbd6561c2bc
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257443"
 ---
 # <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>Исключение элементов схемы из XML-документа с помощью sql:mapped
@@ -41,7 +41,7 @@ ms.locfileid: "75257443"
 ## <a name="examples"></a>Примеры  
  Чтобы создать рабочие образцы на основе следующих примеров, необходимо выполнить определенные требования. Дополнительные сведения см. в разделе [требования для запуска примеров SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-the-sqlmapped-annotation"></a>а. Задание заметки sql:mapped  
+### <a name="a-specifying-the-sqlmapped-annotation"></a>A. Задание заметки sql:mapped  
  Предположим, существует схема XSD, полученная из другого источника. Эта схема XSD состоит из элемента ** \<Person. Contact>** с атрибутами **ContactID**, **FirstName**, **LastName**и **HomeAddress** .  
   
  При сопоставлении этой схемы XSD с таблицей Person. Contact в базе данных AdventureWorks в атрибуте **HomeAddress** указывается значение **SQL:** mappingd, поскольку в таблице Employees не хранятся домашние адреса сотрудников. В результате этот атрибут не сопоставлен с базой данных и не возвращается в результирующем XML-документе в ответ на запрос XPath к схеме сопоставления.  
@@ -105,7 +105,7 @@ ms.locfileid: "75257443"
   
  Обратите внимание, что указываются ContactID, FirstName и LastName, но HomeAddress не так, поскольку схема сопоставления задается значение 0 для атрибута **SQL:** mappingd.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Сопоставление элементов и атрибутов XSD с таблицами и столбцами по умолчанию &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Свойство ChildCount (многомерные Объекты ADO) | Документация Майкрософт
+title: Свойство ChildCount (объекты данных ActiveX (MD)) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,29 +17,29 @@ ms.assetid: 5463be22-ca50-43ea-9c92-468fc8eda280
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a8e6f6a7cb749ff2b22a1f7563b43ce07e060aab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67911556"
 ---
 # <a name="childcount-property-ado-md"></a>Свойство ChildCount (многомерные объекты ADO)
-Указывает количество элементов, для которого текущий [член](../../../ado/reference/ado-md-api/member-object-ado-md.md) объект является родительской в иерархии.  
+Указывает количество элементов, для которых текущий объект- [элемент](../../../ado/reference/ado-md-api/member-object-ado-md.md) является родительским в иерархии.  
   
 ## <a name="return-values"></a>Возвращаемые значения  
- Возвращает **Long** целое число и доступен только для чтения.  
+ Возвращает **длинное** целое число и доступно только для чтения.  
   
-## <a name="remarks"></a>Примечания  
- Используйте **ChildCount** возвращаемого приблизительное количество дочерних элементов свойства **член** имеет. Фактический дочерних элементов **член** может возвращаться [дочерние элементы](../../../ado/reference/ado-md-api/children-property-ado-md.md) свойство.  
+## <a name="remarks"></a>Remarks  
+ Используйте свойство **ChildCount** , чтобы получить оценку количества дочерних элементов, которые имеет **элемент** . Фактические дочерние **элементы элемента могут возвращаться** свойством [Children](../../../ado/reference/ado-md-api/children-property-ado-md.md) .  
   
- Для **член** объектов из [позиции](../../../ado/reference/ado-md-api/position-object-ado-md.md) объект, максимальное число возвращаемых 65536. Если фактическое число дочерних элементов превышает 65536, возвращаемое значение будет по-прежнему 65536. Таким образом, приложения должны интерпретировать **ChildCount** 65 536 как равным или больше, чем 65536 дочерних элементов.  
+ Для объектов- **членов** из объекта [расположения](../../../ado/reference/ado-md-api/position-object-ado-md.md) максимальное число, возвращаемое, равно 65536. Если фактическое число дочерних элементов превышает 65536, возвращаемое значение по-прежнему будет равно 65536. Таким образом, приложение должно интерпретировать **ChildCount** , равный 65536, как или больше, чем 65536 потомков.  
   
- Для **член** объектов из [уровень](../../../ado/reference/ado-md-api/level-object-ado-md.md) , используйте коллекции ADO [число](../../../ado/reference/ado-api/count-property-ado.md) свойство **дочерние элементы** коллекции, чтобы определить точное число дочерних элементов. Определение точное число дочерних элементов может быть медленным, если велико число дочерних объектов в коллекции.  
+ Для объектов- **членов** из объекта [уровня](../../../ado/reference/ado-md-api/level-object-ado-md.md) используйте свойство « [число](../../../ado/reference/ado-api/count-property-ado.md) коллекций ADO» в коллекции **Children** , чтобы определить точное число дочерних элементов. Определение точного числа дочерних элементов может выполняться очень долго, если количество дочерних элементов в коллекции велико.  
   
-## <a name="applies-to"></a>Объект применения  
+## <a name="applies-to"></a>Применяется к  
  [Объект Member (многомерные объекты ADO)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
   
-## <a name="see-also"></a>См. также  
- [Свойство Children (многомерные Объекты ADO)](../../../ado/reference/ado-md-api/children-property-ado-md.md)   
+## <a name="see-also"></a>См. также:  
+ [Свойство Children (объекты данных ActiveX (MD))](../../../ado/reference/ado-md-api/children-property-ado-md.md)   
  [Свойство Count (ADO)](../../../ado/reference/ado-api/count-property-ado.md)   
  [Коллекция Members (многомерные объекты ADO)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)

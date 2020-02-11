@@ -18,16 +18,16 @@ ms.assetid: 9c143b6c-27ac-4ab7-98d1-3b7b265f3963
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 279492503ba8ce31e3c5d4027d8fd184c4a81587
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68045960"
 ---
-# <a name="spcantlogbeapplied-transact-sql"></a>sp_can_tlog_be_applied (Transact-SQL)
+# <a name="sp_can_tlog_be_applied-transact-sql"></a>sp_can_tlog_be_applied (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Проверяет, может ли резервная копия журнала транзакций применяться к базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **sp_can_tlog_be_applied** требует, что база данных будет находиться в состоянии Restoring.  
+  Проверяет, может ли резервная копия журнала транзакций применяться к базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **sp_can_tlog_be_applied** требует, чтобы база данных была в состоянии восстановления.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,21 +41,21 @@ sp_can_tlog_be_applied [ @backup_file_name = ] 'backup_file_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @backup_file_name = ] 'backup_file_name'` — Имя файла резервной копии. *backup_file_name* — **nvarchar(128)** .  
+`[ @backup_file_name = ] 'backup_file_name'`Имя файла резервной копии. *backup_file_name* имеет тип **nvarchar (128)**.  
   
-`[ @database_name = ] 'database_name'` — Имя базы данных. Аргумент *database_name* имеет тип **sysname**.  
+`[ @database_name = ] 'database_name'`Имя базы данных. *database_name* имеет тип **sysname**.  
   
-`[ @result = ] _result_ OUTPUT` Указывает, может ли журнал транзакций применен к базе данных. *результат* — **бит**.  
+`[ @result = ] _result_ OUTPUT`Указывает, можно ли применить журнал транзакций к базе данных. *результат* является **битом**.  
   
  1 = журнал может быть применен;  
   
  0= Журнал не может быть применен.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или 1 (неуспешное завершение)  
+ 0 (успех) или 1 (сбой).  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнять процедуру **sp_can_tlog_be_applied**.  
+ Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_can_tlog_be_applied**.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере для хранения результата задается переменная `@MyBitVar`.  
@@ -72,7 +72,7 @@ N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\Adventu
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

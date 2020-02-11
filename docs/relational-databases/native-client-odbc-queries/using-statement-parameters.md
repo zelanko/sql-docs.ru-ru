@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2e5cec08809ffbd0d51ce017bbd5ff09f45410f4
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73779541"
 ---
 # <a name="using-statement-parameters"></a>Использование параметров инструкции
@@ -35,7 +35,7 @@ ms.locfileid: "73779541"
   
 -   Повышать степень взаимодействия с пользователем при конструировании критериев запроса.  
   
--   Управление данными типа **Text**, **ntext**и **Image** , а [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]типами данных C.  
+-   Управление данными типа **Text**, **ntext**и **Image** и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]конкретными типами данных C.  
   
  Например, таблица **Parts** содержит столбцы с именами **PartID**, **Description**и **Price**. Для добавления компонента без параметров необходимо составить инструкцию SQL, например:  
   
@@ -53,11 +53,11 @@ INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)
   
  Ссылка на каждый маркер параметра осуществляется по порядковому номеру; параметры нумеруются слева направо. Первый слева параметр в инструкции SQL имеет порядковый номер 1; следующий — 2 и т. д.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
 -   [Привязка параметров](../../relational-databases/native-client-odbc-queries/using-statement-parameters-binding-parameters.md)  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Выполняя запросы &#40;ODBC&#41;](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
   

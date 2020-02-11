@@ -15,10 +15,10 @@ author: HJToland3
 ms.author: rajpo
 ms.custom: seo-lt-2019
 ms.openlocfilehash: cc87b541b2b6ebf2f6a9068ba35ae0f62f8e9988
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056614"
 ---
 # <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>Миграция локальных SQL Server или SQL Server на виртуальные машины Azure в базу данных SQL Azure с помощью Помощник по миграции данных
@@ -27,13 +27,13 @@ ms.locfileid: "74056614"
 
 В этой статье приведены пошаговые инструкции по миграции SQL Server локальной среды в базу данных SQL Azure с помощью Помощник по миграции данных.
 
-## <a name="create-a-new-migration-project"></a>Создание нового проекта миграции
+## <a name="create-a-new-migration-project"></a>Создание проекта миграции
 
 1. На левой панели выберите **создать** (+), а затем выберите тип проекта **Миграция** .
 
 2. Задайте для параметра Тип источника значение **SQL Server** , а для параметра Тип целевого сервера — **база данных SQL Azure**.
 
-3. Выберите **Создать**.
+3. Нажмите кнопку **Создать**.
 
    ![Создание проекта миграции](../dma/media/NewCreate1.png)
 
@@ -118,7 +118,7 @@ ms.locfileid: "74056614"
 
    ![Состояние миграции](../dma/media/migration-status.png) 
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 * [Помощник по миграции данных (DMA)](../dma/dma-overview.md)
 * [Помощник по миграции данных: параметры конфигурации](../dma/dma-configurationsettings.md)

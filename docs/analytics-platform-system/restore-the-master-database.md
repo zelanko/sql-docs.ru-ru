@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6d122881f5283da86f66494ee2f049756d151551
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400456"
 ---
 # <a name="restore-the-master-database-in-analytics-platform-system-aps"></a>Восстановление базы данных master в системе аналитики (ТД)
 **Главная страница восстановления** SQL Server PDW Configuration Manager позволяет восстановить базу данных master из резервной копии.  
   
-## <a name="before-you-begin"></a>Перед началом работы  
+## <a name="before-you-begin"></a>Перед началом  
   
 > [!IMPORTANT]  
 > Чтобы выполнить восстановление, SQL Server PDW необходимо удалить текущую базу данных master, содержащую сведения о безопасности пользователя и каталог базы данных. Перед выполнением восстановления рекомендуется создать резервную копию текущей базы данных master.  

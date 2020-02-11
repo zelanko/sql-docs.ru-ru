@@ -15,15 +15,15 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 ms.openlocfilehash: 3fbf2429a384ad64b1b416e3920a193d92a6c387
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056617"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Запуск Помощник по миграции данных из командной строки
 
-В версии 2,1 и выше при установке Помощник по миграции данных также будет установлен дмакмд. exe в *% ProgramFiles%\\Помощник по миграции данных (Майкрософт)\\* . Используйте дмакмд. exe для оценки баз данных в автоматическом режиме и вывода результата в JSON-или CSV-файл. Этот метод особенно полезен при оценке нескольких баз данных или огромных баз данных. 
+В версии 2,1 и выше при установке Помощник по миграции данных также будет установлен дмакмд. exe в *% ProgramFiles%\\\\помощник по миграции данных (Майкрософт)*. Используйте дмакмд. exe для оценки баз данных в автоматическом режиме и вывода результата в JSON-или CSV-файл. Этот метод особенно полезен при оценке нескольких баз данных или огромных баз данных. 
 
 > [!NOTE]
 > Дмакмд. exe поддерживает только выполнение оценок. В настоящее время миграция не поддерживается.
@@ -40,7 +40,7 @@ DmaCmd.exe /AssessmentName="string"
 /AssessmentResultJson="file"|/AssessmentResultCsv="file"
 ```
 
-|Аргумент  |Описание  | Обязательный (Y/N)
+|Аргумент  |Description  | Обязательный (Y/N)
 |---------|---------|---------------|
 | `/help or /?`     | Использование текста справки дмакмд. exe        | Нет
 |`/AssessmentName`     |   Имя проекта оценки   | Да
@@ -248,7 +248,7 @@ DmaCmd.exe /Action=AssessTargetReadiness
 /SkuRecommendationPreventPriceRefresh=true 
 ```
 
-|Аргумент  |Описание  | Обязательный (Y/N)
+|Аргумент  |Description  | Обязательный (Y/N)
 |---------|---------|---------------|
 |`/Action=SkuRecommendation` | Выполнение оценки номера SKU с помощью командной строки DMA | Да
 |`/SkuRecommendationInputDataFilePath` | Полный путь к файлу счетчика производительности, полученному с компьютера, на котором размещены базы данных | Да
@@ -337,6 +337,6 @@ DmaCmd.exe /Action=AssessTargetReadiness
 /SkuRecommendationPreventPriceRefresh=true  
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 - [Помощник по миграции данных](https://aka.ms/get-dma) загрузить.
 - В этой статье [указывается правильный номер SKU базы данных SQL Azure для локальной базы данных](https://aka.ms/dma-sku-recommend-sqldb).

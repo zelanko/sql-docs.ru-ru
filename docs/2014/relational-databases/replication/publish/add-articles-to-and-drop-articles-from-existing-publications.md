@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 523891f2f0005c7f6e6752e5d16d3680f680fdfa
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73882339"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>Добавление и удаление статей в существующих публикациях
@@ -33,11 +33,11 @@ ms.locfileid: "73882339"
  Добавление статьи включает следующие операции: добавление статьи в публикацию, создание нового моментального снимка публикации, синхронизация подписки для применения схемы и данных для новой статьи.  
   
 > [!NOTE]
->  Если при добавлении статьи в публикацию слиянием, существующая статья зависит от новой статьи, необходимо задать порядок обработки для обеих статей с помощью параметра **\@processing_order** процедур [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) и [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Рассмотрим следующий сценарий: необходимо опубликовать таблицу без публикации функции, на которую ссылается эта таблица. Если функция не будет опубликована, то таблица не сможет быть создана на подписчике. При добавлении функции к публикации: задайте значение **1** для параметра **\@processing_order** процедуры **sp_addmergearticle** и значение **2** для параметра **\@processing_order** процедуры **sp_changemergearticle**, указав имя таблицы в параметре **\@article**. Этот порядок обработки гарантирует создание функции на подписчике до создания таблицы, которая зависит от нее. Можно использовать различные числа для каждой статьи при условии, что число для функции меньше числа для таблицы.  
+>  Если статья добавляется в публикацию слиянием, а существующая статья зависит от новой статьи, необходимо указать порядок обработки для обеих статей с помощью параметра ** \@processing_order** [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) и [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Рассмотрим следующий сценарий: необходимо опубликовать таблицу без публикации функции, на которую ссылается эта таблица. Если функция не будет опубликована, то таблица не сможет быть создана на подписчике. При добавлении функции к публикации: задайте значение **1** для параметра **\@processing_order** процедуры **sp_addmergearticle** и значение **2** для параметра **\@processing_order** процедуры **sp_changemergearticle**, указав имя таблицы в параметре **\@article**. Этот порядок обработки гарантирует создание функции на подписчике до создания таблицы, которая зависит от нее. Можно использовать различные числа для каждой статьи при условии, что число для функции меньше числа для таблицы.  
   
 1.  Добавьте одну или несколько статей с помощью следующих методов:  
   
-    -   [Добавление и удаление статей в существующих публикациях](add-articles-to-and-drop-articles-from-a-publication.md)  
+    -   [Добавление и удаление статей в &#40;публикации SQL Server Management Studio&#41;](add-articles-to-and-drop-articles-from-a-publication.md)  
   
     -   [Определение статьи](define-an-article.md)  
   
@@ -80,9 +80,9 @@ ms.locfileid: "73882339"
   
  Как указано выше, в некоторых случаях удаление статьи требует, чтобы подписки были удалены, заново созданы и синхронизированы. Дополнительные сведения см. в статьях [Подписка на публикации](../subscribe-to-publications.md) и [Синхронизация данных](../synchronize-data.md).  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
  [Публикация данных и объектов базы данных](publish-data-and-database-objects.md)   
  [Повторная инициализация подписок](../reinitialize-subscriptions.md)   
- [Внесение изменений в схемы баз данных публикации](make-schema-changes-on-publication-databases.md)  
+ [Внесение изменений схем в базы данных публикации](make-schema-changes-on-publication-databases.md)  
   
   

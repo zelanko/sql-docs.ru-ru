@@ -13,10 +13,10 @@ author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 5dca3564e8e2ccc83f0968d42c636112880f6e56
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401686"
 ---
 # <a name="syspdw_materialized_view_distribution_properties-transact-sql-preview"></a>sys. pdw_materialized_view_distribution_properties (Transact-SQL) (Предварительная версия)
@@ -25,7 +25,7 @@ ms.locfileid: "74401686"
 
 Отображаются материализованные представления сведений о распределении.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------| 
 |object_id|**int**|Идентификатор материализованных представлений, для которых были указаны свойства три.| 
 |distribution_policy |**tinyint**|2 = ХЭШ</br>4 = ROUND_ROBIN|  
@@ -35,7 +35,7 @@ ms.locfileid: "74401686"
 
 Необходимо разрешение VIEW DATABASE STATE.
  
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [СОЗДАТЬ МАТЕРИАЛИЗОВАННЫй вид как SELECT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-materialized-view-as-select-transact-sql?view=azure-sqldw-latest)   
 [ИЗМЕНЕНИЕ МАТЕРИАЛИЗОВАННЫх ПРЕДСТАВЛЕНИЙ &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-materialized-view-transact-sql?view=azure-sqldw-latest)   

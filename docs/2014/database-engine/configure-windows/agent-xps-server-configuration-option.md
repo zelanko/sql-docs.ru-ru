@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4ed2a24c72765c51e7d05fecaa5ab22c344013b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62789025"
 ---
 # <a name="agent-xps-server-configuration-option"></a>Параметр конфигурации сервера «Agent XPs»
@@ -28,7 +28,7 @@ ms.locfileid: "62789025"
 > [!NOTE]  
 >  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] В обозревателе объектов среды содержимое узла агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не отображается до тех пор, пока эти расширенные хранимые процедуры не будут включены, вне зависимости от состояния службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Возможные значения:  
+ Вы можете выбрать  
   
 -   **0**, является признаком того, что расширенные хранимые процедуры агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] недоступны (по умолчанию).  
   
@@ -37,7 +37,7 @@ ms.locfileid: "62789025"
  Новые настройки вступают в силу сразу же, без остановки или перезапуска сервера.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере включаются расширенные хранимые процедуры агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ В следующем примере включаются расширенные хранимые процедуры агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ```  
 sp_configure 'show advanced options', 1;  
@@ -50,8 +50,8 @@ RECONFIGURE
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Задачи автоматизированного администрирования (агент SQL Server)](../../ssms/agent/sql-server-agent.md)   
+## <a name="see-also"></a>См. также:  
+ [Задачи автоматического администрирования &#40;агент SQL Server&#41;](../../ssms/agent/sql-server-agent.md)   
  [Запуск, остановка или приостановка службы агента SQL Server](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)  
   
   

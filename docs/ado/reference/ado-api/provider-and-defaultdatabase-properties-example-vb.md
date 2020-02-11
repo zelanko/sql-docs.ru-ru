@@ -1,5 +1,5 @@
 ---
-title: Provider и Defaultdatabase свойства (Visual Basic) | Документация Майкрософт
+title: Пример свойств provider и DefaultDatabase (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,17 +16,17 @@ ms.assetid: 677e1dbe-bcf6-4028-a62c-e99b1c88bf7b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 46486167ab5e8bd1b063928d4ba3f6f73c893784
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931517"
 ---
-# <a name="provider-and-defaultdatabase-properties-example-vb"></a>Provider и Defaultdatabase свойства (Visual Basic)
-В этом примере показано [поставщика](../../../ado/reference/ado-api/provider-property-ado.md) свойство, открыв три [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объектов с помощью разных поставщиков. Он также использует [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) свойство, чтобы задать базу данных по умолчанию для поставщика Microsoft ODBC.  
+# <a name="provider-and-defaultdatabase-properties-example-vb"></a>Пример свойств provider и DefaultDatabase (Visual Basic)
+В этом примере демонстрируется свойство [provider](../../../ado/reference/ado-api/provider-property-ado.md) путем открытия трех объектов [соединения](../../../ado/reference/ado-api/connection-object-ado.md) с помощью разных поставщиков. Он также использует свойство [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) , чтобы задать базу данных по умолчанию для поставщика Microsoft ODBC.  
   
 > [!NOTE]
->  Если вы подключаетесь к поставщик источника данных, который поддерживает проверку подлинности Windows, следует указать **Trusted_Connection = yes** или **Integrated Security = SSPI** вместо идентификатора пользователя и пароля сведения в строке подключения.  
+>  При подключении к поставщику источника данных, который поддерживает проверку подлинности Windows, следует указать **Trusted_Connection = Yes** или **Integrated Security = SSPI** вместо сведений об идентификаторе пользователя и пароле в строке подключения.  
   
 ```  
 'BeginProviderVB  
@@ -104,7 +104,7 @@ End Sub
 'EndProviderVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Свойство DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)   
+ [DefaultDatabase, свойство](../../../ado/reference/ado-api/defaultdatabase-property.md)   
  [Свойство Provider (ADO)](../../../ado/reference/ado-api/provider-property-ado.md)

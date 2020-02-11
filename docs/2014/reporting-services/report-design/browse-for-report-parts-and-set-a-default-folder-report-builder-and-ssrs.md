@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2dd881c13b2398f3a1783f53190097653d04d78a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106463"
 ---
 # <a name="browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs"></a>Просмотр элементов отчета и назначение папки по умолчанию (построитель отчетов и службы SSRS)
@@ -62,11 +62,11 @@ ms.locfileid: "66106463"
   
  Чтобы этот параметр вступил в силу, не нужно перезапускать построитель отчетов.  
   
-## <a name="see-also"></a>См. также  
- [Снимите флажок для обновлений или отключение обновлений &#40;построитель отчетов и службы SSRS&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>См. также:  
+ [Проверка наличия обновлений или отключение обновлений &#40;построитель отчетов и служб SSRS&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
  [Элементы отчета (построитель отчетов и службы SSRS)](../report-parts-report-builder-and-ssrs.md)   
  [Элементы отчета и наборы данных в построителе отчетов](../report-data/report-parts-and-datasets-in-report-builder.md)   
- [Устранение неполадок в элементах отчета &#40;построитель отчетов и службы SSRS&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
+ [Устранение неполадок элементов отчетов &#40;построитель отчетов и SSRS&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
  [Публикация и повторная публикация элементов отчетов (построитель отчетов и службы SSRS)](publish-and-republish-report-parts-report-builder-and-ssrs.md)  
   
   

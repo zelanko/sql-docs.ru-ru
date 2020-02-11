@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 669e65a7d27b208d861a33618d889707134dfefa
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400515"
 ---
 # <a name="certificate-provisioning-in-analytics-platform-system"></a>Подготовка сертификатов в системе аналитики платформы
@@ -21,7 +21,7 @@ ms.locfileid: "74400515"
 
 С помощью сертификат для шифрования подключений может помочь защитить соединение с узлом управления через SQL Server клиентов, средства, использующие драйверы SQL Server PDW, [консоль администрирования](monitor-the-appliance-by-using-the-admin-console.md)и Integration Services нагрузки. 
   
-## <a name="prerequisites"></a>Необходимые компоненты  
+## <a name="prerequisites"></a>Предварительные требования  
 Перед установкой сертификата выполните следующие действия.  
   
 1.  Получите безопасный сертификат. Если вам нужны дополнительные сведения о получении безопасного сертификата, обратитесь в службу служба поддержки Майкрософт.  
@@ -78,5 +78,5 @@ SQL Server PDW будет продолжать шифровать текущие
   
 ![Сертификат PDW устройств DWConfig](media/dwconfig-appl-pdw-cert.png "Сертификат PDW устройства DWConfig")  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Запустите систему Configuration Manager &#40;Analytics Platform&#41;](launch-the-configuration-manager.md)  

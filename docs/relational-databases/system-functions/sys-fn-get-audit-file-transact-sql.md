@@ -22,16 +22,16 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 25d4aa1e82097dcc4027809c7292587a20862d75
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73981876"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  Возвращает сведения из файла аудита, созданного аудитом сервера в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в статье [Подсистема аудита SQL Server (компонент Database Engine)](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+  Возвращает сведения из файла аудита, созданного аудитом сервера в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в статье [Подсистема аудита SQL Server (ядро СУБД)](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,31 +45,31 @@ fn_get_audit_file ( file_pattern,
   
 ## <a name="arguments"></a>Аргументы  
  *file_pattern*  
- Указывает каталог или путь и имя файла для файла аудита, который предстоит прочитать. Тип — **nvarchar (260)** . 
+ Указывает каталог или путь и имя файла для файла аудита, который предстоит прочитать. Тип — **nvarchar (260)**. 
  
  - **SQL Server**:
     
     Этот аргумент должен содержать как путь (букву диска или сетевой ресурс), так и имя файла, которое может включать символ-шаблон. Для получения нескольких файлов из набора файлов аудита можно использовать одну звездочку (*). Пример:  
   
-    -   **\<путь >\\\*** — получение всех файлов аудита в указанном расположении.  
+    -   **путь>\\ — получение всех файлов аудита в указанном расположении. \<**  
   
-    -   **\<путь > \ LoginsAudit_ {GUID}** — получение всех файлов аудита с указанными именем и парой GUID.  
+    -   **путь> \ LoginsAudit_ {GUID} — получение всех файлов аудита с указанным именем и парой GUID. \<**  
   
-    -   **\<путь > \ LoginsAudit_ {GUID} _00_29384. sqlaudit** — получение конкретного файла аудита.  
+    -   **путь> \ LoginsAudit_ {GUID} _00_29384. sqlaudit — получение конкретного файла аудита. \<**  
   
  - **База данных SQL Azure или хранилище данных SQL Azure**:
  
     Этот аргумент используется для указания URL-адреса большого двоичного объекта (включая конечную точку хранилища и контейнер). Хотя она не поддерживает подстановочные знаки, можно использовать префикс имени файла (BLOB) (вместо полного имени большого двоичного объекта) для получения нескольких файлов (больших двоичных объектов), начинающихся с этого префикса. Пример:
  
-      - **\<Storage_endpoint\>/\<Container\>/\<ServerName\>/\<DatabaseName\>/** — собирает все файлы аудита (BLOB-объекты) для конкретной базы данных.    
+      - **/\> Storage_endpoint\>\<Container\>ServerName\>— собирает все файлы аудита (BLOB-объекты) для конкретной базы/\</ \<\<**    
       
-      - **\<Storage_endpoint\>/\<Container\>/\<имя_сервера\>/\<DatabaseName\>/\<аудитнаме\>/\<CreationDate\>/\<FileName\>. XEL-** — собирает конкретный файл аудита (BLOB-объект).
+      - **\>Storage_endpoint\>\<Container\>ServerName\>имя_базы_данных\>аудитнаме CreationDate\>— собирает конкретный файл аудита (BLOB\>)./\</\<\<///\</ \<\<**
   
 > [!NOTE]  
 >  При передаче пути без имени файла сформируется ошибка.  
   
  *initial_file_name*  
- Указывает путь и имя файла для определенного файла в наборе файлов аудита, из которого предстоит начать чтение записей аудита. Тип — **nvarchar (260)** .  
+ Указывает путь и имя файла для определенного файла в наборе файлов аудита, из которого предстоит начать чтение записей аудита. Тип — **nvarchar (260)**.  
   
 > [!NOTE]  
 >  Аргумент *initial_file_name* должен содержать допустимые записи или должен содержать значение по умолчанию: | Значение NULL.  
@@ -83,48 +83,48 @@ fn_get_audit_file ( file_pattern,
 ## <a name="tables-returned"></a>Возвращаемые таблицы  
  В следующей таблице описано содержимое файла аудита, которое может возвращаться этой функцией.  
   
-| Имя столбца | Тип | Описание |  
+| Имя столбца | Тип | Description |  
 |-------------|------|-------------|  
-| action_id | **varchar(4)** | Идентификатор действия. Не допускает значения NULL. |  
-| additional_information | **nvarchar(4000)** | Уникальные сведения, применимые только к одиночному событию, возвращаются в формате XML. Немногие действия, доступные для аудита, содержат сведения этого вида.<br /><br /> Для действий, имеющих связанный с ними стек TSQL, отображается один уровень стека TSQL в формате XML. Используется следующий формат XML:<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> Параметр «frame nest_level» указывает текущий уровень вложенности кадра. Имя модуля состоит из трех частей (имя базы данных database_name, имя схемы schema_name и имя объекта object_name).  Имя модуля будет проанализировано для экранирования недопустимых символов XML, таких как `'\<'`, `'>'`, `'/'`, `'_x'`. Они будут экранированы как `_xHHHH\_`. Здесь HHHH обозначает четырехразрядный шестнадцатеричный код символа в UCS-2.<br /><br /> Допускает значение NULL. Возвращает NULL, если событие не сообщает дополнительных сведений. |
+| action_id | **varchar (4)** | Идентификатор действия. Не допускает значения NULL. |  
+| additional_information | **nvarchar (4000)** | Уникальные сведения, применимые только к одиночному событию, возвращаются в формате XML. Немногие действия, доступные для аудита, содержат сведения этого вида.<br /><br /> Для действий, имеющих связанный с ними стек TSQL, отображается один уровень стека TSQL в формате XML. Используется следующий формат XML:<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> Параметр «frame nest_level» указывает текущий уровень вложенности кадра. Имя модуля состоит из трех частей (имя базы данных database_name, имя схемы schema_name и имя объекта object_name).  Имя модуля будет проанализировано для экранирования недопустимых символов XML `'\<'`, `'>'`таких `'/'`как `'_x'`,,,. Они будут экранированы как `_xHHHH\_`. Здесь HHHH обозначает четырехразрядный шестнадцатеричный код символа в UCS-2.<br /><br /> Допускает значение NULL. Возвращает NULL, если событие не сообщает дополнительных сведений. |
 | affected_rows | **bigint** | Область **применения**: только база данных SQL Azure<br /><br /> Количество строк, затронутых выполненной инструкцией. |  
-| application_name | **nvarchar(128)** | Область **применения**: база данных SQL Azure + SQL Server (начиная с 2017)<br /><br /> Имя клиентского приложения, выполнившего инструкцию, вызвавшую событие аудита |  
+| application_name | **nvarchar(128** | Область **применения**: база данных SQL Azure + SQL Server (начиная с 2017)<br /><br /> Имя клиентского приложения, выполнившего инструкцию, вызвавшую событие аудита |  
 | audit_file_offset | **bigint** | **Применимо к**: только SQL Server<br /><br /> Смещение буфера в файле, который содержит запись аудита. Не допускает значение NULL. |  
 | audit_schema_version | **int** | Всегда 1 |  
-| class_type | **varchar(2)** | Тип доступной для аудита сущности, для которой проводится аудит. Не допускает значение NULL. |  
-| client_ip | **nvarchar(128)** | Область **применения**: база данных SQL Azure + SQL Server (начиная с 2017)<br /><br />    Исходный IP-адрес клиентского приложения |  
+| class_type | **varchar (2)** | Тип доступной для аудита сущности, для которой проводится аудит. Не допускает значение NULL. |  
+| client_ip | **nvarchar(128** | Область **применения**: база данных SQL Azure + SQL Server (начиная с 2017)<br /><br />    Исходный IP-адрес клиентского приложения |  
 | connection_id | GUID | Область **применения**: база данных SQL Azure и управляемый экземпляр<br /><br /> Идентификатор соединения на сервере |
 | data_sensitivity_information | nvarchar(4000) | Область **применения**: только база данных SQL Azure<br /><br /> Типы сведений и метки чувствительности, возвращаемые отслеживаемым запросом, на основе классифицированных столбцов в базе данных. Дополнительные сведения об [обнаружении и классификации данных в базе данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-data-discovery-and-classification) |
-| database_name | **sysname** | Контекст базы данных, в котором выполнялось действие. Допускает значение NULL. Возвращает значение NULL для аудита, происходящих на уровне сервера. |  
+| database_name | **имеет sysname** | Контекст базы данных, в котором выполнялось действие. Допускает значение NULL. Возвращает значение NULL для аудита, происходящих на уровне сервера. |  
 | database_principal_id | **int** |Идентификатор контекста пользователя базы данных, в котором выполнено действие. Не допускает значение NULL. Поддерживает 0, если это неприменимо. Например, операция сервера.|
-| database_principal_name | **sysname** | Текущий пользователь. Допускает значение NULL. Возвращает значение NULL, если недоступно. |  
+| database_principal_name | **имеет sysname** | Текущий пользователь. Допускает значение NULL. Возвращает значение NULL, если недоступно. |  
 | duration_milliseconds | **bigint** | Область **применения**: база данных SQL Azure и управляемый экземпляр<br /><br /> Длительность выполнения запроса в миллисекундах |
 | event_time | **datetime2** | Дата и время срабатывания действия, доступного для аудита. Не допускает значение NULL. |  
 | file_name | **varchar (260)** | Путь и имя файла журнала аудита, из которого получена запись. Не допускает значение NULL. |
-| is_column_permission | **бит** | Флаг, обозначающий разрешение уровня столбца. Не допускает значение NULL. Возвращает 0, если permission_bitmask = 0.<br /> 1 = true;<br /> 0 = false. |
-| object_id | **int** | Идентификатор сущности, над которой выполнен аудит. Это включает следующие действия.<br /> Объекты сервера.<br /> Базы данных<br /> Объекты базы данных.<br /> Объекты схемы.<br /> Не допускает значение NULL. Возвращает 0, если сущностью является сам сервер или если аудит не выполняется на уровне объекта. Например, проверка подлинности. |  
-| object_name | **sysname** | Имя сущности, для которой проводился аудит. Это включает следующие действия.<br /> Объекты сервера.<br /> Базы данных<br /> Объекты базы данных.<br /> Объекты схемы.<br /> Допускает значение NULL. Возвращает NULL, если сущностью является сам сервер или если аудит не выполняется на уровне объекта. Например, проверка подлинности. |
+| is_column_permission | **bit** | Флаг, обозначающий разрешение уровня столбца. Не допускает значение NULL. Возвращает 0, если permission_bitmask = 0.<br /> 1 = true;<br /> 0 = false. |
+| object_id | **int** | Идентификатор сущности, над которой выполнен аудит. В их состав входят:<br /> Серверные объекты<br /> Базы данных<br /> Объекты базы данных<br /> Объекты схемы.<br /> Не допускает значение NULL. Возвращает 0, если сущностью является сам сервер или если аудит не выполняется на уровне объекта. Например, проверка подлинности. |  
+| object_name | **имеет sysname** | Имя сущности, для которой проводился аудит. В их состав входят:<br /> Серверные объекты<br /> Базы данных<br /> Объекты базы данных<br /> Объекты схемы.<br /> Допускает значение NULL. Возвращает NULL, если сущностью является сам сервер или если аудит не выполняется на уровне объекта. Например, проверка подлинности. |
 | permission_bitmask | **varbinary (16)** | В некоторых действиях это предоставленные, запрещенные или отмененные разрешения. |
 | response_rows | **bigint** | Область **применения**: база данных SQL Azure и управляемый экземпляр<br /><br /> Число строк, возвращаемых в результирующем наборе. |  
-| schema_name | **sysname** | Контекст схемы, в котором выполнялось действие. Допускает значение NULL. Возвращает значение NULL для аудитов, происходящих за пределами схемы. |  
+| schema_name | **имеет sysname** | Контекст схемы, в котором выполнялось действие. Допускает значение NULL. Возвращает значение NULL для аудитов, происходящих за пределами схемы. |  
 | sequence_group_id | **varbinary** | **Применимо к**: только SQL Server (начиная с 2016)<br /><br />  Уникальный идентификатор |  
 | sequence_number | **int** | Отслеживает последовательность записей в одной записи аудита, слишком большой, чтобы уместиться в буфере записи для аудитов. Не допускает значение NULL. |  
-| server_instance_name | **sysname** | Имя экземпляра сервера, где проводился аудит. Используется стандартный формат «сервер\экземпляр». |  
+| server_instance_name | **имеет sysname** | Имя экземпляра сервера, где проводился аудит. Используется стандартный формат «сервер\экземпляр». |  
 | server_principal_id | **int** | Идентификатор контекста имени входа, в котором выполнено действие. Не допускает значение NULL. |  
-| server_principal_name | **sysname** | Текущее имя входа. Допускает значение NULL. |  
+| server_principal_name | **имеет sysname** | Текущее имя входа. Допускает значение NULL. |  
 | server_principal_sid | **varbinary** | Идентификатор безопасности текущего имени входа. Допускает значение NULL. |  
 | session_id | **smallint** | Идентификатор сеанса, в котором произошло событие. Не допускает значение NULL. |  
-| session_server_principal_name | **sysname** | Участник на уровне сервера для сеанса. Допускает значение NULL. |  
-| инструкция | **nvarchar(4000)** | Инструкция TSQL (если существует). Допускает значение NULL. Если неприменимо, возвращается значение NULL. |  
-| succeeded | **бит** | Показывает, было ли успешным действие, запустившее событие. Не допускает значение NULL. Для всех событий, отличных от событий имени входа, при этом формируются только сообщения о том, была ли проверка разрешения выполнена успешно или окончилась неудачей, а не сообщения о самой операции.<br /> 1 = успешное завершение;<br /> 0 = неуспешное завершение. |
+| session_server_principal_name | **имеет sysname** | Участник на уровне сервера для сеанса. Допускает значение NULL. |  
+| инструкция | **nvarchar (4000)** | Инструкция TSQL (если существует). Допускает значение NULL. Если неприменимо, возвращается значение NULL. |  
+| succeeded | **bit** | Показывает, было ли успешным действие, запустившее событие. Не допускает значение NULL. Для всех событий, отличных от событий имени входа, при этом формируются только сообщения о том, была ли проверка разрешения выполнена успешно или окончилась неудачей, а не сообщения о самой операции.<br /> 1 = успешное завершение;<br /> 0 = неуспешное завершение. |
 | target_database_principal_id | **int** | Участник базы данных, над которым выполняется операция GRANT/DENY/REVOKE. Не допускает значение NULL. Если неприменимо, возвращается значение 0. |  
-| target_database_principal_name | **sysname** | Целевой пользователь действия. Допускает значение NULL. Если неприменимо, возвращается значение NULL. |  
+| target_database_principal_name | **имеет sysname** | Целевой пользователь действия. Допускает значение NULL. Если неприменимо, возвращается значение NULL. |  
 | target_server_principal_id | **int** | Участник на уровне сервера, над которым выполняется операция GRANT/DENY/REVOKE. Не допускает значение NULL. Если неприменимо, возвращается значение 0. |  
-| target_server_principal_name | **sysname** | Целевое имя входа действия. Допускает значение NULL. Если неприменимо, возвращается значение NULL. |  
+| target_server_principal_name | **имеет sysname** | Целевое имя входа действия. Допускает значение NULL. Если неприменимо, возвращается значение NULL. |  
 | target_server_principal_sid | **varbinary** | Идентификатор безопасности целевого имени входа. Допускает значение NULL. Если неприменимо, возвращается значение NULL. |  
 | transaction_id | **bigint** | **Применимо к**: только SQL Server (начиная с 2016)<br /><br /> Уникальный идентификатор для идентификации нескольких событий аудита в одной транзакции |  
-| user_defined_event_id | **smallint** | Область **применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздней версии, база данных SQL Azure и управляемый экземпляр<br /><br /> Определяемый пользователем идентификатор события, передаваемый в качестве аргумента для **sp_audit_write**. **Null** для системных событий (по умолчанию) и ненулевое значение для определяемого пользователем события. Дополнительные сведения см. в [разделе &#40;SP_AUDIT_WRITE Transact-&#41;SQL](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md). |  
-| user_defined_information | **nvarchar(4000)** | Область **применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздней версии, база данных SQL Azure и управляемый экземпляр<br /><br /> Используется для записи дополнительных сведений, которые пользователь хочет записать в журнал аудита с помощью хранимой процедуры **sp_audit_write** . |  
+| user_defined_event_id | **smallint** | Область **применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздней версии, база данных SQL Azure и управляемый экземпляр<br /><br /> Определяемый пользователем идентификатор события, передаваемый в качестве аргумента для **sp_audit_write**. **Null** для системных событий (по умолчанию) и ненулевое значение для определяемого пользователем события. Дополнительные сведения см. в разделе [sp_audit_write &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md). |  
+| user_defined_information | **nvarchar (4000)** | Область **применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздней версии, база данных SQL Azure и управляемый экземпляр<br /><br /> Используется для записи дополнительных сведений, которые пользователь хочет записать в журнал аудита с помощью хранимой процедуры **sp_audit_write** . |  
 
   
 ## <a name="remarks"></a>Remarks  
@@ -151,7 +151,7 @@ fn_get_audit_file ( file_pattern,
 
 - **База данных SQL Azure**
 
-  Этот пример считывает данные из файла с именем `ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel`:  
+  В этом примере считывается из файла с именем `ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel`:  
   
   ```  
   SELECT * FROM sys.fn_get_audit_file ('https://mystorage.blob.core.windows.net/sqldbauditlogs/ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel',default,default);
@@ -167,7 +167,7 @@ fn_get_audit_file ( file_pattern,
   GO
   ```  
 
-  Этот пример считывает все журналы аудита с серверов, начинающихся с `Sh`: 
+  Этот пример считывает все журналы аудита с серверов, начинающихся `Sh`с: 
   
   ```  
   SELECT * FROM sys.fn_get_audit_file ('https://mystorage.blob.core.windows.net/sqldbauditlogs/Sh',default,default);
@@ -178,26 +178,26 @@ fn_get_audit_file ( file_pattern,
 
 Сведения о настройке аудита базы данных SQL Azure см. в разделе Начало [работы с аудитом базы данных](https://docs.microsoft.com/azure/sql-database/sql-database-auditing)SQL.
   
-## <a name="see-also"></a>См. также статью  
- [CREATE SERVER AUDIT (Transact-SQL)](../../t-sql/statements/create-server-audit-transact-sql.md)   
- [ALTER SERVER AUDIT (Transact-SQL)](../../t-sql/statements/alter-server-audit-transact-sql.md)   
- [DROP SERVER AUDIT (Transact-SQL)](../../t-sql/statements/drop-server-audit-transact-sql.md)   
- [CREATE SERVER AUDIT SPECIFICATION (Transact-SQL)](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
- [ALTER SERVER AUDIT SPECIFICATION (Transact-SQL)](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
- [DROP SERVER AUDIT SPECIFICATION (Transact-SQL)](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   
- [CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL)](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
- [ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL)](../../t-sql/statements/alter-database-audit-specification-transact-sql.md)   
- [DROP DATABASE AUDIT SPECIFICATION (Transact-SQL)](../../t-sql/statements/drop-database-audit-specification-transact-sql.md)   
- [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md)   
- [sys.server_audits (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-audits-transact-sql.md)   
- [sys.server_file_audits (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)   
- [sys.server_audit_specifications (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql.md)   
- [sys.server_audit_specification_details (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql.md)   
- [sys.database_audit_specifications (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)   
- [sys.database_audit_specification_details (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   
- [sys.dm_server_audit_status (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
- [sys.dm_audit_actions (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
- [sys.dm_audit_class_type_map (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Создание аудита сервера &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
+ [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
+ [Удаление аудита сервера &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
+ [Создание спецификации аудита сервера &#40;&#41;Transact-SQL](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
+ [ALTER SERVER AUDIT SPECIFICATION &#40;&#41;Transact-SQL](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
+ [УДАЛИТЬ СПЕЦИФИКАЦИю аудита сервера &#40;&#41;Transact-SQL](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   
+ [Создание спецификации аудита базы данных &#40;&#41;Transact-SQL](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
+ [&#40;Transact-SQL&#41;спецификации ALTER DATABASE AUDIT](../../t-sql/statements/alter-database-audit-specification-transact-sql.md)   
+ [УДАЛИТЬ СПЕЦИФИКАЦИю аудита базы данных &#40;&#41;Transact-SQL](../../t-sql/statements/drop-database-audit-specification-transact-sql.md)   
+ [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
+ [sys. server_audits &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audits-transact-sql.md)   
+ [sys. server_file_audits &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)   
+ [sys. server_audit_specifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql.md)   
+ [sys. server_audit_specification_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql.md)   
+ [sys. database_audit_specifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)   
+ [sys. database_audit_specification_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   
+ [sys. dm_server_audit_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
+ [sys. dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
+ [sys. dm_audit_class_type_map &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
  [Создание аудита сервера и спецификации аудита сервера](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   
   

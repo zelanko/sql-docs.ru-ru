@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 3e5475e86582ede2e6fa7ca5a302bba7ee74faa3
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401325"
 ---
 # <a name="configure-an-external-smp-sql-server-to-receive-remote-table-copies---parallel-data-warehouse"></a>Настройка внешнего SQL Server SMP для получения копий удаленных таблиц — Параллельное хранилище данных
@@ -21,7 +21,7 @@ ms.locfileid: "74401325"
 
 В этом разделе описывается один из шагов настройки для настройки копирования удаленной таблицы. Список всех шагов настройки см. в разделе [Удаленная копия таблицы](remote-table-copy.md).  
   
-## <a name="before-you-begin"></a>Перед началом работы  
+## <a name="before-you-begin"></a>Перед началом  
 Перед настройкой внешнего SQL Server необходимо выполнить следующие действия.  
   
 -   Система Windows с SQL Server 2008 Enterprise Edition или более поздней версией, готовой к установке или уже установленной. Система Windows должна быть уже настроена в соответствии с инструкциями в разделе [Настройка внешней системы Windows для получения копий удаленных таблиц с помощью InfiniBand](configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband.md).  

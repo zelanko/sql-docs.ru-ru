@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1e966d63a2d357ad9b867e5e8bf66fbf731fc987
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75246523"
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>Привязка и передача данных возвращающих табличное значение параметров и значений столбцов
@@ -93,7 +93,7 @@ ms.locfileid: "75246523"
   
 6.  Вызывает метод SQLParamData еще раз. Если между столбцами возвращающего табличное значение параметра находятся какие-либо параметры обработки данных, они будут идентифицированы по значению *валуептрптр* , возвращаемому параметром метод SQLParamData. Когда все значения столбцов доступны, метод SQLParamData снова возвращает значение *параметервалуептр* для возвращающего табличное значения параметра, и приложение начинает снова запускаться.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Возвращающие табличное значение параметры &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

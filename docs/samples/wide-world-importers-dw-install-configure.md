@@ -11,10 +11,10 @@ ms.author: mathoma
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: d8768fec2f96c725a9ba4bbf91996e95de4c800a
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056304"
 ---
 # <a name="wideworldimportersdw-installation-and-configuration"></a>Установка и настройка WideWorldImportersDW
@@ -24,7 +24,7 @@ ms.locfileid: "74056304"
 - [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (или более поздней версии) или [базы данных SQL Azure](https://azure.microsoft.com/services/sql-database/). Чтобы использовать полную версию образца, используйте SQL Server Evaluation, Developer или Enterprise Edition.
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Для получения наилучших результатов используйте выпуск Июнь 2016 или более поздней версии.
 
-## <a name="download"></a>Загрузить
+## <a name="download"></a>Скачивание
 
 Последний выпуск примера:
 
@@ -34,12 +34,12 @@ ms.locfileid: "74056304"
 
 Исходный код для повторного создания образца базы данных доступен по следующему адресу. Обратите внимание, что заполнение данных основано на ETL из базы данных OLTP (WideWorldImporters):
 
-[wide-world-importers-source](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-dw-database-scripts)
+[широкие средства импорта данных — источник](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-dw-database-scripts)
 
-## <a name="install"></a>Установить
+## <a name="install"></a>Установка
 
 
-### <a name="sql-server"></a>SQL Server
+### <a name="sql-server"></a>SQL Server
 
 Чтобы восстановить резервную копию на SQL Server экземпляр, можно использовать Management Studio.
 
@@ -50,7 +50,7 @@ ms.locfileid: "74056304"
 5. При необходимости измените целевое расположение файлов данных и журналов в области **файлы** . Обратите внимание, что рекомендуется размещать файлы данных и журналов на разных дисках.
 6. Нажмите кнопку **ОК**. Это приведет к запуску восстановления базы данных. После завершения работы на экземпляре SQL Server будет установлена база данных WideWorldImporters.
 
-### <a name="azure-sql-database"></a>Azure SQL Database
+### <a name="azure-sql-database"></a>База данных SQL Azure
 
 Чтобы импортировать BACPAC-файл в новую базу данных SQL, можно использовать Management Studio.
 
@@ -60,7 +60,7 @@ ms.locfileid: "74056304"
 3. Щелкните правой кнопкой мыши узел **базы данных** и выберите пункт **Импорт приложения уровня данных**.
 4. В **параметрах импорта** выберите **Импорт с локального диска** и выберите BACPAC образца базы данных из файловой системы.
 5. В разделе **Параметры базы данных** измените имя базы данных на *WideWorldImportersDW* и выберите целевой выпуск и цель службы для использования.
-6. Нажмите кнопку **Далее** и **Готово** , чтобы запустить развертывание. Выполнение займет несколько минут. При указании цели обслуживания ниже S2 может потребоваться больше времени.
+6. Нажмите кнопку **Далее** и **Готово** , чтобы запустить развертывание. Этот процесс может занять несколько минут. При указании цели обслуживания ниже S2 может потребоваться больше времени.
 
 ## <a name="configuration"></a>Конфигурация
 

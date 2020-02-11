@@ -12,16 +12,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0de2c67c1a2d60903054e5098a145f4057fe6e13
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73789688"
 ---
 # <a name="use-table-valued-parameters-ole-db"></a>Использование возвращающих табличные значения параметров (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Данный образец работает с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или более поздней версией. Образец выполняет следующие действия.  
+  Данный образец работает с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или более поздней версией. Этот пример выполняет следующее.  
   
 -   Создает возвращающие табличное значение параметры с помощью динамического обнаружения через интерфейс IOpenRowset::OpenRowset.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "73789688"
   
 -   Демонстрирует обработку ошибок для ошибок SQLNCLI11.  
   
- Дополнительные сведения о возвращающих табличное значение параметрах см. в разделе [Параметры &#40;, возвращающие&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)табличное значение, SQL Server Native Client.  
+ Дополнительные сведения о возвращающих табличные значения параметрах см. в разделе [Параметры, возвращающие ](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)табличное значение, &#40;SQL Server Native Client&#41;.  
   
 ## <a name="example"></a>Пример  
  Первый листинг кода ([!INCLUDE[tsql](../../includes/tsql-md.md)]) создает базу данных, используемую в примере.  

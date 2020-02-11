@@ -16,10 +16,10 @@ ms.assetid: 242cea3e-e6ac-4f84-a072-b003b920eb33
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0fdd70480a63e334aa3e178d19287b30937e2f53
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056788"
 ---
 # <a name="sp_helpxactsetjob-transact-sql"></a>sp_helpxactsetjob (Transact-SQL)
@@ -37,25 +37,25 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publisher = ] 'publisher'` — имя издателя, отличного от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которому принадлежит задание. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publisher = ] 'publisher'`Имя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя, не являющегося издателем, которому принадлежит задание. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|**жобнумбер**|**int**|Номер задания Oracle.|  
+|**jobnumber**|**int**|Номер задания Oracle.|  
 |**LASTDATE**|**varchar (22)**|Последняя дата выполнения задания.|  
-|**сисдате**|**varchar (22)**|Время изменения.|  
-|**некстдате**|**varchar (22)**|Следующая дата, когда задание будет запущено.|  
-|**рабочие**|**varchar (1)**|Флаг, означающий неудачное выполнение задания.|  
+|**thisdate**|**varchar (22)**|Время изменения.|  
+|**nextdate**|**varchar (22)**|Следующая дата, когда задание будет запущено.|  
+|**broken**|**varchar(1)**|Флаг, означающий неудачное выполнение задания.|  
 |**пределах**|**varchar (200)**|Интервал для задания.|  
 |**сбоев**|**int**|Количество неудачных выполнений для задания.|  
-|**ксактсетжобвхат**|**varchar (200)**|Имя процедуры, выполняемой заданием.|  
-|**параметре xactsetjob**|**varchar (1)**|Показывает состояние задания, может быть одним из следующих:<br /><br /> **1** — задание включено.<br /><br /> **0** — задание отключено.|  
-|**ксактсетлонгинтервал**|**int**|Длительный интервал для задания.|  
-|**ксактсетлонгсрешолд**|**int**|Высокий порог для задания.|  
-|**ксактсетшортинтервал**|**int**|Короткий интервал для задания.|  
-|**ксактсетшортсрешолд**|**int**|Низкий порог для задания.|  
+|**xactsetjobwhat**|**varchar (200)**|Имя процедуры, выполняемой заданием.|  
+|**xactsetjob**|**varchar(1)**|Показывает состояние задания, может быть одним из следующих:<br /><br /> **1** — задание включено.<br /><br /> **0** — задание отключено.|  
+|**xactsetlonginterval**|**int**|Длительный интервал для задания.|  
+|**xactsetlongthreshold**|**int**|Высокий порог для задания.|  
+|**xactsetshortinterval**|**int**|Короткий интервал для задания.|  
+|**xactsetshortthreshold**|**int**|Низкий порог для задания.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -68,8 +68,8 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>Разрешения  
  Только член предопределенной роли сервера **sysadmin** может выполнять **sp_helpxactsetjob**.  
   
-## <a name="see-also"></a>См. также статью  
- [Configure the Transaction Set Job for an Oracle Publisher](../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)  (Настройка задания для набора транзакции в издателе Oracle)  
- [sp_publisherproperty &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Настройка задания набора транзакций для издателя Oracle &#40;программирование репликации на языке Transact-SQL&#41;](../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
+ [sp_publisherproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)  
   
   
